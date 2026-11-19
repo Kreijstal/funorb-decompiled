@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    static gn field_a;
+    static ResourceArchive field_a;
     static String field_b;
 
-    final static ql a(int param0, int param1, gn param2, gn param3, int param4) {
+    final static PaletteBitmapFont a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        ql stackIn_6_0 = null;
+        PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -21,7 +21,7 @@ final class ta {
           if (!qg.a(param0, param1, (byte) -27, param2)) {
             return null;
           }
-          stackIn_6_0 = dd.a((byte) -100, param3.a(param0, true, param1));
+          stackIn_6_0 = StraightRoadSegment.a((byte) -100, param3.a(param0, true, param1));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,11 +39,11 @@ final class ta {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 16) {
           return;
         }
@@ -53,7 +53,7 @@ final class ta {
 
     final static tn a(byte param0) {
         if (param0 != 72) {
-          field_a = (gn) null;
+          field_a = (ResourceArchive) null;
         }
         return sj.a(1, param0 ^ 19867);
     }
@@ -79,7 +79,7 @@ final class ta {
           while (true) {
             if (var5_int >= qg.field_d.length) {
               if (param3 != -83) {
-                field_a = (gn) null;
+                field_a = (ResourceArchive) null;
               }
               return;
             }
@@ -117,11 +117,11 @@ final class ta {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static String a(int param0, th param1, boolean param2) {
+    final static String a(int param0, PacketBuffer param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -135,7 +135,7 @@ final class ta {
         Throwable decompiledCaughtException = null;
         try {
           if (param2) {
-            field_a = (gn) null;
+            field_a = (ResourceArchive) null;
           }
           try {
             var3_int = param1.e(128);
@@ -143,7 +143,7 @@ final class ta {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param1.field_l = param1.field_l + ti.field_u.a(var3_int, true, 0, var4, param1.field_i, param1.field_l);
+            param1.position = param1.position + ti.field_u.a(var3_int, true, 0, var4, param1.payload, param1.position);
             var5 = sm.a(var3_int, 0, -129, var4);
             stackIn_5_0 = var5;
             return stackIn_5_0;
@@ -163,7 +163,7 @@ final class ta {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

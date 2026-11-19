@@ -4,16 +4,16 @@
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_e;
     static int field_b;
-    static hj[] field_i;
-    static bm[] field_g;
-    static bm[] field_d;
+    static Sprite[] field_i;
+    static IndexedSprite[] field_g;
+    static IndexedSprite[] field_d;
     static byte[][] field_h;
     volatile boolean field_a;
-    static gn field_c;
+    static ResourceArchive field_c;
     java.awt.Frame field_f;
     static e field_j;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_h = (byte[][]) null;
         if (param0 == 0) {
           field_c = null;
@@ -38,7 +38,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final static String c(int param0) {
         if (param0 != 4) {
-          FullscreenFocusCanvas.b(12);
+          FullscreenFocusCanvas.clearSharedReferences(12);
           if (bb.field_a == ImageProducerRasterBuffer.field_n) {
             return qd.field_k;
           }
@@ -54,39 +54,39 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_a = true;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ef.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ef.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final static void a(gn param0, byte param1, gn param2) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
         if (param1 >= -94) {
           return;
         }
         try {
-          n.field_w = param0;
-          be.field_i = param2;
+          UiWidget.field_w = param0;
+          MidiKeyUsage.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ef.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ef.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(ib param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != 50) {
             FullscreenFocusCanvas.c(62);
           }
           rd.a((byte) 118, param0, this.field_f);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ef.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ef.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static float a(float param0, wd param1, int param2, float param3) {
+    final static float a(float param0, RoadSegment param1, int param2, float param3) {
         RuntimeException var4 = null;
-        qm var5 = null;
+        Point2i var5 = null;
         float var6 = 0.0f;
         float var7 = 0.0f;
         float var8 = 0.0f;
@@ -94,7 +94,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         float var10 = 0.0f;
         float var11 = 0.0f;
         float var12 = 0.0f;
-        qm var13 = null;
+        Point2i var13 = null;
         float stackIn_3_0 = 0.0f;
         float stackIn_7_0 = 0.0f;
         RuntimeException stackIn_10_0 = null;
@@ -111,8 +111,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var13 = param1.a(false, param3);
           var5 = param1.a(false, param0);
-          var6 = (float)(var5.field_h - var13.field_h);
-          var7 = (float)(var5.field_f - var13.field_f);
+          var6 = (float)(var5.x - var13.x);
+          var7 = (float)(var5.y - var13.y);
           var8 = (-param3 + param0) * param1.f(param2 ^ 60) * param1.field_o;
           var9 = var8 * -var6;
           var10 = -var7 * var8;
@@ -132,7 +132,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -147,13 +147,13 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           throw new IllegalStateException();
         }
         bn.field_j = true;
-        ol.a(true, (byte) -90);
+        SecondaryNodeDeque.a(true, (byte) -90);
         if (param0 > 106) {
-          bk.field_w = 0;
+          DiskCacheRequest.field_w = 0;
           return;
         }
-        field_i = (hj[]) null;
-        bk.field_w = 0;
+        field_i = (Sprite[]) null;
+        DiskCacheRequest.field_w = 0;
     }
 
     static {

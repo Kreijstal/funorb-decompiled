@@ -12,18 +12,18 @@ final class hm {
         int var4;
         int var3Lifetime1;
         var4 = HoldTheLine.field_D;
-        ol.field_f = ol.field_f + 1;
+        SecondaryNodeDeque.field_f = SecondaryNodeDeque.field_f + 1;
         var2 = 116 % ((param0 + 22) / 36);
-        if (param1 != a.field_I) {
+        if (param1 != AccountCreationForm.field_I) {
           if (!va.field_k) {
-            if (ol.field_f >= HoldTheLine.field_A) {
-              stackIn_100_0 = (HoldTheLine.field_A + lc.field_h > ol.field_f) ? 1 : 0;
+            if (SecondaryNodeDeque.field_f >= HoldTheLine.field_A) {
+              stackIn_100_0 = (HoldTheLine.field_A + lc.field_h > SecondaryNodeDeque.field_f) ? 1 : 0;
             } else {
               stackIn_100_0 = 0;
             }
             var3 = stackIn_100_0;
             if (param1 == -1) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f = 0;
               if (-1 == param1) {
                 if (var3 != 0) {
                   va.field_k = true;
@@ -32,21 +32,21 @@ final class hm {
                 va.field_k = false;
               }
               if (!va.field_k &&
-                HoldTheLine.field_A > ol.field_f &&
+                HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
                 na.field_k) {
-                ol.field_f = 0;
+                SecondaryNodeDeque.field_f = 0;
               }
-              a.field_I = param1;
+              AccountCreationForm.field_I = param1;
               if (va.field_k &&
-                ol.field_f == fd.field_d) {
-                ol.field_f = 0;
+                SecondaryNodeDeque.field_f == fd.field_d) {
+                SecondaryNodeDeque.field_f = 0;
                 va.field_k = false;
               }
               return;
             }
             if (!va.field_k &&
               var3 == 0) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f = 0;
               if (-1 == param1) {
                 if (var3 != 0) {
                   va.field_k = true;
@@ -55,20 +55,20 @@ final class hm {
                 va.field_k = false;
               }
             } else {
-              ol.field_f = HoldTheLine.field_A;
+              SecondaryNodeDeque.field_f = HoldTheLine.field_A;
               if (-1 != param1) {
                 va.field_k = false;
               } else {
                 if (var3 == 0) {
                   if (!va.field_k &&
-                    HoldTheLine.field_A > ol.field_f &&
+                    HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
                     na.field_k) {
-                    ol.field_f = 0;
+                    SecondaryNodeDeque.field_f = 0;
                   }
-                  a.field_I = param1;
+                  AccountCreationForm.field_I = param1;
                   if (va.field_k &&
-                    ol.field_f == fd.field_d) {
-                    ol.field_f = 0;
+                    SecondaryNodeDeque.field_f == fd.field_d) {
+                    SecondaryNodeDeque.field_f = 0;
                     va.field_k = false;
                     return;
                   }
@@ -78,24 +78,24 @@ final class hm {
               }
             }
             if (!va.field_k &&
-              HoldTheLine.field_A > ol.field_f &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f = 0;
             }
-            a.field_I = param1;
+            AccountCreationForm.field_I = param1;
             if (!va.field_k) {
               return;
             }
-            if (ol.field_f != fd.field_d) {
+            if (SecondaryNodeDeque.field_f != fd.field_d) {
               return;
             }
-            ol.field_f = 0;
+            SecondaryNodeDeque.field_f = 0;
             va.field_k = false;
             return;
           }
           var3Lifetime1 = 0;
           if (param1 == -1) {
-            ol.field_f = 0;
+            SecondaryNodeDeque.field_f = 0;
             if (-1 == param1) {
               if (var3Lifetime1 != 0) {
                 va.field_k = true;
@@ -104,50 +104,50 @@ final class hm {
               va.field_k = false;
             }
             if (!va.field_k &&
-              HoldTheLine.field_A > ol.field_f &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f = 0;
             }
-            a.field_I = param1;
+            AccountCreationForm.field_I = param1;
             if (va.field_k &&
-              ol.field_f == fd.field_d) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f == fd.field_d) {
+              SecondaryNodeDeque.field_f = 0;
               va.field_k = false;
             }
             return;
           }
           if (!va.field_k &&
             var3Lifetime1 == 0) {
-            ol.field_f = 0;
+            SecondaryNodeDeque.field_f = 0;
             if (-1 == param1) {
             } else {
               va.field_k = false;
             }
             if (!va.field_k &&
-              HoldTheLine.field_A > ol.field_f &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f = 0;
             }
-            a.field_I = param1;
+            AccountCreationForm.field_I = param1;
             if (va.field_k &&
-              ol.field_f == fd.field_d) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f == fd.field_d) {
+              SecondaryNodeDeque.field_f = 0;
               va.field_k = false;
             }
             return;
           }
-          ol.field_f = HoldTheLine.field_A;
+          SecondaryNodeDeque.field_f = HoldTheLine.field_A;
           if (-1 != param1) {
             va.field_k = false;
             if (!va.field_k &&
-              HoldTheLine.field_A > ol.field_f &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f = 0;
             }
-            a.field_I = param1;
+            AccountCreationForm.field_I = param1;
             if (va.field_k &&
-              ol.field_f == fd.field_d) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f == fd.field_d) {
+              SecondaryNodeDeque.field_f = 0;
               va.field_k = false;
             }
             return;
@@ -155,44 +155,44 @@ final class hm {
           if (var3Lifetime1 != 0) {
             va.field_k = true;
             if (!va.field_k &&
-              HoldTheLine.field_A > ol.field_f &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f = 0;
             }
-            a.field_I = param1;
+            AccountCreationForm.field_I = param1;
             if (va.field_k &&
-              ol.field_f == fd.field_d) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f == fd.field_d) {
+              SecondaryNodeDeque.field_f = 0;
               va.field_k = false;
             }
             return;
           }
         }
         if (!va.field_k &&
-          HoldTheLine.field_A > ol.field_f) {
+          HoldTheLine.field_A > SecondaryNodeDeque.field_f) {
           if (!na.field_k) {
-            a.field_I = param1;
+            AccountCreationForm.field_I = param1;
             if (va.field_k &&
-              ol.field_f == fd.field_d) {
-              ol.field_f = 0;
+              SecondaryNodeDeque.field_f == fd.field_d) {
+              SecondaryNodeDeque.field_f = 0;
               va.field_k = false;
             }
             return;
           }
-          ol.field_f = 0;
+          SecondaryNodeDeque.field_f = 0;
         }
-        a.field_I = param1;
+        AccountCreationForm.field_I = param1;
         if (!va.field_k) {
           return;
         }
-        if (ol.field_f != fd.field_d) {
+        if (SecondaryNodeDeque.field_f != fd.field_d) {
           return;
         }
-        ol.field_f = 0;
+        SecondaryNodeDeque.field_f = 0;
         va.field_k = false;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
           field_b = (uf) null;
@@ -217,14 +217,14 @@ final class hm {
           var1_int = qg.field_d[0];
           for (var2 = 1; qg.field_d.length > var2; var2++) {
             var3 = qg.field_d[var2];
-            bc.a(al.field_b, var2 << 4, al.field_b, var1_int, var3);
+            ArrayOperations.copyInts(al.field_b, var2 << 4, al.field_b, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "hm.E(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "hm.E(" + param0 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class hm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class hm {
         Object var6 = null;
         int var7 = 0;
         byte[] var8 = null;
-        da var9 = null;
+        IsaacPacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         var7 = HoldTheLine.field_D;
@@ -278,25 +278,25 @@ final class hm {
           if (var2 != 0) {
             if (var2 == 1) {
               var4 = var9.a(-67);
-              var5 = (fl) (pd.field_e.b((byte) 85));
+              var5 = (fl) (pd.field_e.first((byte) 85));
               while (var5 != null) {
                 if (var4 != var5.field_k) {
-                  var5 = (fl) (pd.field_e.c((byte) -26));
+                  var5 = (fl) (pd.field_e.next((byte) -26));
                   continue;
                 }
                 break;
               }
               if (var5 != null) {
-                var5.d(0);
+                var5.unlink(0);
                 return;
               }
               r.a(-28036);
               return;
             }
-            bl.a((Throwable) null, (byte) 65, "A1: " + em.b(false));
+            MusicPatchPcmStream.a((Throwable) null, (byte) 65, "A1: " + em.b(false));
             r.a(-28036);
           } else {
-            var4_ref_ie = (ie) (oc.field_d.b((byte) 94));
+            var4_ref_ie = (ie) (oc.field_d.first((byte) 94));
             if (var4_ref_ie == null) {
               r.a(-28036);
               return;
@@ -311,20 +311,20 @@ final class hm {
               var6 = var8;
               var9.a(var5_int, 0, (byte) 118, var11);
             }
-            var9.field_l = var9.field_l + 4;
+            var9.position = var9.position + 4;
             if (!var9.e((byte) 78)) {
               r.a(-28036);
               return;
             }
             var4_ref_ie.field_m = true;
             var4_ref_ie.field_l = (byte[]) (var6);
-            var4_ref_ie.d(0);
+            var4_ref_ie.unlink(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "hm.B(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "hm.B(" + param0 + ')');
         }
     }
 

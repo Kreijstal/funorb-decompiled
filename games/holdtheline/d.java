@@ -10,7 +10,7 @@ final class d {
     static int field_e;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 >= 84) {
@@ -63,7 +63,7 @@ final class d {
             }
           }
           if (param0 != 90) {
-            d.a(-128);
+            d.clearSharedReferences(-128);
           }
           stackIn_24_0 = new String(var8);
           return stackIn_24_0;
@@ -77,7 +77,7 @@ final class d {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -86,8 +86,8 @@ final class d {
         int var1 = hg.a((byte) 95);
         if (!param0) {
           var2 = ml.b(20719);
-          nc.field_c.a(ie.field_j - bi.field_g, (bi.field_g << 1) + var2, -51, var1 + (em.field_j << 1), -em.field_j + mk.field_d);
-          mk.c(117);
+          NodeHashTableIterator.field_c.a(ie.field_j - WeightedLruCache.field_g, (WeightedLruCache.field_g << 1) + var2, -51, var1 + (em.field_j << 1), -em.field_j + NanoTickClock.field_d);
+          NanoTickClock.c(117);
           return;
         }
     }

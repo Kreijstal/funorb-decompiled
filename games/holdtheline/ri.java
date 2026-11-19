@@ -22,11 +22,11 @@ final class ri {
             vf.field_l.field_H.a(param1, (byte) 43);
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         field_d = null;
         field_a = null;
@@ -37,7 +37,7 @@ final class ri {
           field_c = null;
           return;
         }
-        ri.a(120);
+        ri.clearSharedReferences(120);
         field_b = null;
         field_e = null;
         field_g = (long[][]) null;
@@ -82,7 +82,7 @@ final class ri {
         field_f[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = -8 + var0 * 8;
-            field_f[var0] = en.a(en.a(gh.a(65280L, field_g[6][var1 + 6]), en.a(gh.a(16711680L, field_g[5][var1 + 5]), en.a(gh.a(field_g[4][4 + var1], 4278190080L), en.a(en.a(en.a(gh.a(field_g[1][1 + var1], 71776119061217280L), gh.a(field_g[0][var1], -72057594037927936L)), gh.a(field_g[2][2 + var1], 280375465082880L)), gh.a(1095216660480L, field_g[3][3 + var1]))))), gh.a(255L, field_g[7][7 + var1]));
+            field_f[var0] = GameKeyHandler.a(GameKeyHandler.a(gh.a(65280L, field_g[6][var1 + 6]), GameKeyHandler.a(gh.a(16711680L, field_g[5][var1 + 5]), GameKeyHandler.a(gh.a(field_g[4][4 + var1], 4278190080L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(gh.a(field_g[1][1 + var1], 71776119061217280L), gh.a(field_g[0][var1], -72057594037927936L)), gh.a(field_g[2][2 + var1], 280375465082880L)), gh.a(1095216660480L, field_g[3][3 + var1]))))), gh.a(255L, field_g[7][7 + var1]));
         }
         field_c = (rd) ((Object) new le(7, 30.0f, new int[]{16711680, 16777215}));
         field_d = "Service unavailable";

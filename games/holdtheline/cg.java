@@ -4,7 +4,7 @@
 final class cg {
     int field_h;
     static volatile boolean field_a;
-    static a field_b;
+    static AccountCreationForm field_b;
     int field_e;
     int field_k;
     int field_d;
@@ -19,15 +19,15 @@ final class cg {
         String var4Lifetime1;
         if (param0 < -87) {
           var4 = (String) null;
-          pg.$cfr$intArgs$a$87b210a2f664(param1, 121, (String) null, param2);
+          DropTargetWidget.showLoginFormWithIntGuard(param1, 121, (String) null, param2);
           return;
         }
         field_i = -67;
         var4Lifetime1 = (String) null;
-        pg.$cfr$intArgs$a$87b210a2f664(param1, 121, (String) null, param2);
+        DropTargetWidget.showLoginFormWithIntGuard(param1, 121, (String) null, param2);
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_j = null;
         field_f = null;
@@ -37,8 +37,8 @@ final class cg {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        hj[] var5 = jc.field_h;
-        hj var6 = ij.a(param3 - 8137, param2, var5, param4);
+        Sprite[] var5 = jc.field_h;
+        Sprite var6 = ij.a(param3 - 8137, param2, var5, param4);
         if (param3 == 41) {
           param0 = param0 - (var6.field_s - param2 >> 1);
           param1 = param1 - (var6.field_y - param4 >> 1);
@@ -74,7 +74,7 @@ final class cg {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -83,15 +83,15 @@ final class cg {
         Object var1 = null;
         var1 = ic.field_d;
         synchronized (var1) {
-          rd.field_f = u.field_R;
+          rd.field_f = ResizableDialog.field_R;
           uf.field_a = uf.field_a + 1;
-          nc.field_g = in.field_f;
+          NodeHashTableIterator.field_g = Vector2f.field_f;
           rf.field_X = g.field_m;
           na.field_k = sd.field_a;
           sd.field_a = false;
-          gg.field_J = DelegatingCanvas.field_a;
-          lb.field_x = im.field_e;
-          jb.field_U = nl.field_f;
+          ValidationIndicator.field_J = DelegatingCanvas.field_a;
+          TrackBoundary.field_x = IterableNodeHashTable.field_e;
+          ValidatedTextField.field_U = nl.field_f;
           DelegatingCanvas.field_a = 0;
         }
         if (param0 == 1983) {

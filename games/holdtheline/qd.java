@@ -4,7 +4,7 @@
 final class qd extends vd {
     static int[] field_l;
     static String field_g;
-    private hj field_m;
+    private Sprite field_m;
     static String field_k;
     static int field_h;
     static int[] field_f;
@@ -82,11 +82,11 @@ final class qd extends vd {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = null;
         field_g = null;
         field_l = null;
@@ -96,13 +96,13 @@ final class qd extends vd {
     }
 
     final static void a(int param0, int param1) {
-        if (null != bd.field_Q &&
+        if (null != ValidationHelpWidget.field_Q &&
           i.field_k[param1] != null) {
           lc.field_d = null;
-          gn.a(true, i.field_k[param1], (byte) 69, 30);
+          ResourceArchive.a(true, i.field_k[param1], (byte) 69, 30);
         } else {
-          bi.field_e = 0;
-          ab.field_jb = param1;
+          WeightedLruCache.field_e = 0;
+          AccountProgressDialog.field_jb = param1;
         }
         if (param0 != 20830) {
           field_l = (int[]) null;
@@ -116,35 +116,35 @@ final class qd extends vd {
         try {
           oi.field_e.b((byte) 45);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            bf.field_b[var1_int] = 0L;
+            AudioServiceThread.field_b[var1_int] = 0L;
           }
           if (param0 <= 23) {
             field_g = (String) null;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            lb.field_w[var1_intLifetime1] = 0L;
+            TrackBoundary.field_w[var1_intLifetime1] = 0L;
           }
           uj.field_h = 0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ')');
         }
     }
 
-    qd(hj param0) {
+    qd(Sprite param0) {
         try {
           this.field_m = param0;
           this.field_n = 1.0f;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    qd(hj param0, float param1) {
+    qd(Sprite param0, float param1) {
         try {
           this.field_n = param1;
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

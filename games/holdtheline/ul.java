@@ -10,7 +10,7 @@ final class ul {
     int field_c;
     int field_b;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         int var1 = -20 % ((param0 + 59) / 49);
     }
@@ -38,7 +38,7 @@ final class ul {
         var8 = HoldTheLine.field_D;
         try {
           if (!param1) {
-            ul.a((byte) -113);
+            ul.clearSharedReferences((byte) -113);
           }
           if (param3 == 1) {
             for (var6_int = 0; param0.field_e > var6_int; var6_int++) {
@@ -99,7 +99,7 @@ final class ul {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

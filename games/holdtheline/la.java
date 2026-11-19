@@ -17,15 +17,15 @@ final class la extends ej {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          var4 = (fb) (bj.field_O.b((byte) 89));
+          var4 = (fb) (AccountTermsPanel.field_O.first((byte) 89));
           while (var4 != null) {
-            dn.a(var4, param0, 111);
-            var4 = (fb) (bj.field_O.c((byte) 87));
+            VehicleDefinition.a(var4, param0, 111);
+            var4 = (fb) (AccountTermsPanel.field_O.next((byte) 87));
           }
-          var5 = (jg) (pc.field_e.b((byte) 86));
+          var5 = (jg) (pc.field_e.first((byte) 86));
           while (var5 != null) {
-            gd.a(var5, (byte) 86, param0);
-            var5 = (jg) (pc.field_e.c((byte) 90));
+            TextFieldValidator.a(var5, (byte) 86, param0);
+            var5 = (jg) (pc.field_e.next((byte) 90));
           }
           if (param1 == 0) {
             return;
@@ -35,11 +35,11 @@ final class la extends ej {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var2), "la.D(" + param0 + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var2), "la.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_j = null;
         field_f = null;
         if (param0 <= -52) {
@@ -77,7 +77,7 @@ final class la extends ej {
             field_f = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

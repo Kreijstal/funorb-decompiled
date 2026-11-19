@@ -19,28 +19,28 @@ final class co {
     final static void a(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
-        gn var3 = null;
+        ResourceArchive var3 = null;
         Throwable decompiledCaughtException = null;
-        gn var3Lifetime1;
-        if (null == tf.field_n) {
+        ResourceArchive var3Lifetime1;
+        if (null == MusicCrossfadeStream.field_n) {
           if (!param0) {
             return;
           }
-          var3 = (gn) null;
-          co.a((gn) null, (gn) null, 26);
+          var3 = (ResourceArchive) null;
+          co.a((ResourceArchive) null, (ResourceArchive) null, 26);
           return;
         }
-        var1 = tf.field_n;
+        var1 = MusicCrossfadeStream.field_n;
         synchronized (var1) {
-          tf.field_n = null;
+          MusicCrossfadeStream.field_n = null;
         }
         if (param0) {
-          var3Lifetime1 = (gn) null;
-          co.a((gn) null, (gn) null, 26);
+          var3Lifetime1 = (ResourceArchive) null;
+          co.a((ResourceArchive) null, (ResourceArchive) null, 26);
         }
     }
 
-    final static boolean a(gn param0, gn param1, int param2) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -71,7 +71,7 @@ final class co {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -83,23 +83,23 @@ final class co {
             field_a = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "co.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "co.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void c(int param0) {
-        if (cf.field_q == -lf.field_l + param0) {
-          cf.field_q = cf.field_q + 1;
+        if (StrongCacheEntry.field_q == -lf.field_l + param0) {
+          StrongCacheEntry.field_q = StrongCacheEntry.field_q + 1;
           return;
         }
-        if (cf.field_q == -lf.field_l + 250) {
-          cf.field_q = cf.field_q + 1;
+        if (StrongCacheEntry.field_q == -lf.field_l + 250) {
+          StrongCacheEntry.field_q = StrongCacheEntry.field_q + 1;
           return;
         }
-        cf.field_q = cf.field_q + 1;
+        StrongCacheEntry.field_q = StrongCacheEntry.field_q + 1;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -96 % ((param0 + 48) / 56);
         field_e = null;
         field_c = null;

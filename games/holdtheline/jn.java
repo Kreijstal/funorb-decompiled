@@ -38,11 +38,11 @@ final class jn {
           return;
         }
         try {
-          bi.field_g = param0;
+          WeightedLruCache.field_g = param0;
           em.field_j = param2;
-          nc.field_c = param1;
+          NodeHashTableIterator.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "jn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -96,16 +96,16 @@ final class jn {
         if (param2 != 4) {
           return;
         }
-        if (gg.field_J != 0) {
-          this.field_a = gg.field_J;
+        if (ValidationIndicator.field_J != 0) {
+          this.field_a = ValidationIndicator.field_J;
           this.field_e = fc.field_d;
           this.field_d = true;
-          this.field_f = gg.field_J;
+          this.field_f = ValidationIndicator.field_J;
           this.field_g = param0;
         }
         if (0 != this.field_a) {
           if (rd.field_f == 0) {
-            if (gg.field_J != 0) {
+            if (ValidationIndicator.field_J != 0) {
               if (this.field_a == 0) {
                 if (!this.field_d &&
                   !na.field_k) {
@@ -178,7 +178,7 @@ final class jn {
           }
           this.field_e = this.field_e - 1;
         }
-        if (gg.field_J == 0 &&
+        if (ValidationIndicator.field_J == 0 &&
           rd.field_f == 0) {
           this.field_a = 0;
         }
@@ -206,7 +206,7 @@ final class jn {
         if (param0 != -30) {
           return false;
         }
-        if (10 > bk.field_w) {
+        if (10 > DiskCacheRequest.field_w) {
           return false;
         }
         if (pf.field_d >= 13) {
@@ -252,32 +252,32 @@ final class jn {
         }
     }
 
-    final static void a(gn param0, int param1, gn param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           if (param1 > -8) {
             jn.a((byte) -64);
           }
-          gh.field_n = new vi[7];
+          gh.field_n = new MusicTrack[7];
           pd.field_f = param2;
           em.field_m = new String[7];
-          i.field_k = new vi[7];
-          bd.field_Q = param0;
+          i.field_k = new MusicTrack[7];
+          ValidationHelpWidget.field_Q = param0;
           em.field_m[0] = "holdtheline_title";
           em.field_m[5] = "holdtheline_alpine";
           em.field_m[1] = "holdtheline_victory_jingle";
-          ab.field_jb = -1;
+          AccountProgressDialog.field_jb = -1;
           oc.field_a = 7;
           em.field_m[4] = "holdtheline_desert";
-          bi.field_e = 0;
+          WeightedLruCache.field_e = 0;
           em.field_m[6] = "holdtheline_urban";
           em.field_m[2] = "holdtheline_lose_jingle";
           em.field_m[3] = "holdtheline_classic";
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, byte param1, da param2) {
+    final static int a(int param0, byte param1, IsaacPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -307,7 +307,7 @@ final class jn {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class ni {
     static int field_b;
-    static ql field_a;
+    static PaletteBitmapFont field_a;
 
     final static String a(char param0, byte param1, int param2) {
         int var5 = HoldTheLine.field_D;
@@ -20,9 +20,9 @@ final class ni {
         return new String(var6);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
-          ni.a(87);
+          ni.clearSharedReferences(87);
         }
         field_a = null;
     }
@@ -34,7 +34,7 @@ final class ni {
         if (pf.field_d < 2) {
           return 0;
         }
-        if (v.field_C != 0) {
+        if (WidgetContainer.field_C != 0) {
           if (null != ml.field_a) {
             if (!ml.field_a.b((byte) -107)) {
               return 14;
@@ -46,10 +46,10 @@ final class ni {
               return 29;
             }
           }
-          if (!ah.field_d.b((byte) -92)) {
+          if (!IntrusiveDeque.field_d.b((byte) -92)) {
             return 43;
           }
-          if (!ah.field_d.b("commonui", 104)) {
+          if (!IntrusiveDeque.field_d.b("commonui", 104)) {
             return 57;
           }
           if (!am.field_d.b((byte) -104)) {
@@ -58,17 +58,17 @@ final class ni {
           if (!am.field_d.b("commonui", 59)) {
             return 80;
           }
-          if (!ca.field_p.b((byte) -76)) {
+          if (!ArchiveRequest.field_p.b((byte) -76)) {
             return 82;
           }
-          if (!ca.field_p.a((byte) 77)) {
+          if (!ArchiveRequest.field_p.a((byte) 77)) {
             return 86;
           }
         } else {
-          if (!ah.field_d.b((byte) -92)) {
+          if (!IntrusiveDeque.field_d.b((byte) -92)) {
             return 20;
           }
-          if (!ah.field_d.b("commonui", -91)) {
+          if (!IntrusiveDeque.field_d.b("commonui", -91)) {
             return 40;
           }
           if (!am.field_d.b((byte) -66)) {
@@ -77,10 +77,10 @@ final class ni {
           if (!am.field_d.b("commonui", 110)) {
             return 60;
           }
-          if (!ca.field_p.b((byte) -122)) {
+          if (!ArchiveRequest.field_p.b((byte) -122)) {
             return 70;
           }
-          if (!ca.field_p.a((byte) -93)) {
+          if (!ArchiveRequest.field_p.a((byte) -93)) {
             return 80;
           }
         }

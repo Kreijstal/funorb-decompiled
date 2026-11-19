@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig extends dk {
-    static jd field_q;
+    static DraggableWidget field_q;
     private nj[] field_s;
     static int field_v;
     static float[] field_u;
     private nj field_r;
     static kg field_t;
 
-    final void a(hj[] param0, int param1, int param2) {
+    final void a(Sprite[] param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -36,12 +36,12 @@ final class ig extends dk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, n param3, int param4) {
-        n stackIn_3_0 = null;
+    public final void drawWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -49,18 +49,18 @@ final class ig extends dk {
         RuntimeException var6 = null;
         nj var7 = null;
         nj var9 = null;
-        rm var10 = null;
+        TextButton var10 = null;
         nj var11 = null;
         nj var12 = null;
         nj var13 = null;
         nj var14 = null;
         try {
-          if (!(param3 instanceof rm)) {
+          if (!(param3 instanceof TextButton)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (n) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
-          var10 = (rm) (stackIn_3_0);
+          var10 = (TextButton) (stackIn_3_0);
           td.a(param3.field_x + (param3.field_k + param1), param1 + param3.field_k, param3.field_u + param3.field_o + param4, true, param3.field_o + param4);
           if (var10 != null) {
             param0 = param0 & var10.field_D;
@@ -116,11 +116,11 @@ final class ig extends dk {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 29 / ((param0 - 7) / 56);
         field_t = null;
         field_u = null;
@@ -132,7 +132,7 @@ final class ig extends dk {
         try {
           param0.a(this, param1, 119);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class ig extends dk {
         return dupTemp$0;
     }
 
-    final void a(byte param0, hj[] param1) {
+    final void a(byte param0, Sprite[] param1) {
         nj[] var7 = null;
         int var4 = 0;
         nj var5 = null;
@@ -161,7 +161,7 @@ final class ig extends dk {
             field_u = (float[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ig.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ig.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class ig extends dk {
               }
             }
           } else {
-            bc.a(this.field_s, 0, param0.field_s, 0, 6);
+            ArrayOperations.copyObjects(this.field_s, 0, param0.field_s, 0, 6);
           }
           var4_intLifetime1 = 62 % ((param2 - 28) / 32);
           return;
@@ -219,11 +219,11 @@ final class ig extends dk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(hj param0, int param1) {
+    final void a(Sprite param0, int param1) {
         int var4 = 0;
         nj[] var3 = null;
         nj var5 = null;
@@ -255,7 +255,7 @@ final class ig extends dk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

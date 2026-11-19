@@ -11,21 +11,21 @@ final class fi extends hi {
     String field_mb;
     static String field_ib;
 
-    final static void a(int param0, gn param1, int param2, fg param3) {
+    final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
-          lf.field_l = param0 * nc.a(855) / 1000;
+          lf.field_l = param0 * NodeHashTableIterator.a(855) / 1000;
           mf.a(param1, 0);
           jk.a(param1, -64);
           aa.a(-18916, param1);
           dm.a(255);
-          jd.j(param2 ^ 0);
-          cf.field_q = param2 - lf.field_l;
+          DraggableWidget.j(param2 ^ 0);
+          StrongCacheEntry.field_q = param2 - lf.field_l;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "fi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_jb = null;
         field_kb = null;
         field_ib = null;
@@ -35,11 +35,11 @@ final class fi extends hi {
         }
     }
 
-    final static fn a(int param0, gn param1, gn param2, int param3, int param4) {
+    final static MonochromeBitmapFont a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
-        gn var6 = null;
+        ResourceArchive var6 = null;
         Object stackIn_2_0 = null;
-        fn stackIn_6_0 = null;
+        MonochromeBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -49,11 +49,11 @@ final class fi extends hi {
         try {
           if (!qg.a(param4, param3, (byte) -27, param2)) {
             stackIn_2_0 = null;
-            return (fn) (stackIn_2_0);
+            return (MonochromeBitmapFont) (stackIn_2_0);
           }
           if (param0 != -17072) {
-            var6 = (gn) null;
-            fi.a(25, (gn) null, (gn) null, 26, 41);
+            var6 = (ResourceArchive) null;
+            fi.a(25, (ResourceArchive) null, (ResourceArchive) null, 26, 41);
           }
           stackIn_6_0 = GameAppletShell.a(param0 - 7255, param1.a(param4, true, param3));
           return stackIn_6_0;
@@ -73,7 +73,7 @@ final class fi extends hi {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

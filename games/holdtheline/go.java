@@ -24,7 +24,7 @@ final class go {
         }
         boolean decompiledFrameRemainder0 = true;
         if (!pj.b((byte) 114) && (!ll.field_a ||
-          !ik.field_f)) {
+          !MusicPatchEnvelope.field_f)) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -54,7 +54,7 @@ final class go {
           if (param0 > -69) {
             field_g = (int[][]) null;
           }
-          var5 = pk.field_I;
+          var5 = LoginChoicePanel.field_I;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -72,7 +72,7 @@ final class go {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1_ref), "go.B(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1_ref), "go.B(" + param0 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class go {
         if (param0 != 0) {
           field_n = false;
         }
-        v.field_B = param1;
+        WidgetContainer.field_B = param1;
     }
 
     final static void a(int param0, int param1, String[] param2, java.applet.Applet param3, int param4, int param5) {
@@ -108,18 +108,18 @@ final class go {
           if (var6 == null) {
             le.field_r = 2;
           } else {
-            if (!ik.a((CharSequence) ((Object) var6), true)) {
+            if (!MusicPatchEnvelope.a((CharSequence) ((Object) var6), true)) {
               le.field_r = 2;
             } else {
               le.field_r = mo.a((CharSequence) ((Object) var6), (byte) -116);
             }
           }
-          ol.field_g = param0;
+          SecondaryNodeDeque.field_g = param0;
           t.field_n = param1;
-          qe.field_b = param4;
-          lf.field_a = new hj[param2.length];
+          SocketConnector.field_b = param4;
+          lf.field_a = new Sprite[param2.length];
           for (var7 = param5; var7 < param2.length; var7++) {
-            lf.field_a[var7] = new hj(317, 34);
+            lf.field_a[var7] = new Sprite(317, 34);
           }
           qh.field_b = param2;
           return;
@@ -139,7 +139,7 @@ final class go {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -148,14 +148,14 @@ final class go {
           return this.field_f;
         }
         int var3 = 8 / ((param0 + 58) / 47);
-        hj var2 = wd.b(this.field_b, (byte) -63);
+        Sprite var2 = RoadSegment.b(this.field_b, (byte) -63);
         if (var2 != null) {
           this.field_f = new mg(var2, this.field_c, this.field_h, this.field_m);
         }
         return this.field_f;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_g = (int[][]) null;
         field_l = null;
         if (param0 > -90) {
@@ -176,7 +176,7 @@ final class go {
           this.field_h = false;
           this.field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -188,7 +188,7 @@ final class go {
           this.field_f = null;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class ki extends IntrusiveNode {
     static int field_o;
-    af[] field_k;
+    PlatformTask[] field_k;
     int[] field_j;
     static String[] field_i;
     int[] field_m;
@@ -11,19 +11,19 @@ final class ki extends IntrusiveNode {
     int field_n;
     int field_p;
     byte[][][] field_q;
-    af[] field_l;
+    PlatformTask[] field_l;
 
     final static boolean a(boolean param0) {
         go.field_n = true;
         bn.field_k = 15000L + bb.b(-1);
         if (!param0) {
-          return bk.field_w == 11 ? true : false;
+          return DiskCacheRequest.field_w == 11 ? true : false;
         }
         ki.a(false);
-        return bk.field_w == 11 ? true : false;
+        return DiskCacheRequest.field_w == 11 ? true : false;
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_i = null;
         if (!param0) {
           field_i = (String[]) null;

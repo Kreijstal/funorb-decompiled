@@ -9,20 +9,20 @@ final class dm {
     static int[] field_e;
 
     final static void b(byte param0) {
-        we var1 = (we) (ug.field_g.a((byte) 74));
+        we var1 = (we) (ug.field_g.removeLast((byte) 74));
         if (param0 != -10) {
           return;
         }
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        tc.a(var1.field_k, var1.field_s, var1.field_m);
-        tc.a(var1.field_i, var1.field_r, var1.field_q, var1.field_u);
+        SoftwareRasterizer.a(var1.field_k, var1.field_s, var1.field_m);
+        SoftwareRasterizer.a(var1.field_i, var1.field_r, var1.field_q, var1.field_u);
         var1.field_k = null;
-        fl.field_i.a((byte) -101, var1);
+        fl.field_i.addLast((byte) -101, var1);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         field_d = null;
         if (param0 != -20) {
@@ -42,7 +42,7 @@ final class dm {
         int var1_intLifetime1;
         var4 = HoldTheLine.field_D;
         try {
-          li.c();
+          TriangleRasterState.c();
           il.field_c = 11;
           qf.field_i = new int[260];
           if (param0 != 255) {
@@ -62,18 +62,18 @@ final class dm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "dm.D(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "dm.D(" + param0 + ')');
         }
     }
 
-    final static void a(da param0, int param1, int param2) {
+    final static void a(IsaacPacketBuffer param0, int param1, int param2) {
         try {
           eg.a(d.field_c[param1], 16, true, param0);
           if (param2 != 255) {
             field_e = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "dm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

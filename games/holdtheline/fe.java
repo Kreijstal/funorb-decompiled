@@ -52,15 +52,15 @@ final class fe {
         var42 = HoldTheLine.field_D;
         try {
           if (param5 >= ~param1 &&
-            li.field_d > param15) {
+            TriangleRasterState.field_d > param15) {
             if (param9 < 0 &&
               0 > param3 &&
               param6 < 0) {
               return;
             }
-            if (param9 >= li.field_i &&
-              param3 >= li.field_i &&
-              li.field_i <= param6) {
+            if (param9 >= TriangleRasterState.field_i &&
+              param3 >= TriangleRasterState.field_i &&
+              TriangleRasterState.field_i <= param6) {
               return;
             }
             var34 = -param15 + param1;
@@ -125,38 +125,38 @@ final class fe {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = li.field_a[param15];
+                var36Lifetime2 = TriangleRasterState.field_a[param15];
                 while (param15 < param12) {
                   var37 = var17_int >> 16;
-                  if (li.field_i > var37) {
+                  if (TriangleRasterState.field_i > var37) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (0 == var38) {
                       if (var37 >= 0 &&
-                        li.field_i > var37) {
-                        sg.a(0, var37 + var36Lifetime2, 0, var25, 0, param8, var38, var29, param5 ^ 122, var21);
+                        TriangleRasterState.field_i > var37) {
+                        RaceWorld.a(0, var37 + var36Lifetime2, 0, var25, 0, param8, var38, var29, param5 ^ 122, var21);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (li.field_i <= var37 + var38) {
-                        var38 = -1 + (-var37 + li.field_i);
+                      if (TriangleRasterState.field_i <= var37 + var38) {
+                        var38 = -1 + (-var37 + TriangleRasterState.field_i);
                       }
                       if (var37 >= 0) {
-                        sg.a(var41, var36Lifetime2 + var37, var39, var25, var40, param8, var38, var29, -123, var21);
+                        RaceWorld.a(var41, var36Lifetime2 + var37, var39, var25, var40, param8, var38, var29, -123, var21);
                       } else {
-                        sg.a(var41, var36Lifetime2, var39, -(var37 * var40) + var25, var40, param8, var38 + var37, var29 - var41 * var37, param5 ^ 126, -(var37 * var39) + var21);
+                        RaceWorld.a(var41, var36Lifetime2, var39, -(var37 * var40) + var25, var40, param8, var38 + var37, var29 - var41 * var37, param5 ^ 126, -(var37 * var39) + var21);
                       }
                     }
                   }
                   param15++;
-                  if (li.field_d <= param15) {
+                  if (TriangleRasterState.field_d <= param15) {
                     return;
                   }
                   var17_int = var17_int + var19;
                   var30 = var30 + var32;
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + tc.field_j;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_j;
                   var26 = var26 + var28;
                   var22 = var22 + var24;
                   var25 = var25 + var27;
@@ -281,39 +281,39 @@ final class fe {
               var29 = var29 + param15 * var31;
               param15 = 0;
             }
-            var35Lifetime1 = li.field_a[param15];
+            var35Lifetime1 = TriangleRasterState.field_a[param15];
             while (param15 < param1) {
               var36Lifetime1 = var17_int >> 16;
-              if (li.field_i > var36Lifetime1) {
+              if (TriangleRasterState.field_i > var36Lifetime1) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
-                    li.field_i > var36Lifetime1) {
-                    sg.a(0, var36Lifetime1 + var35Lifetime1, 0, var25, 0, param8, var37Lifetime1, var29, -127, var21);
+                    TriangleRasterState.field_i > var36Lifetime1) {
+                    RaceWorld.a(0, var36Lifetime1 + var35Lifetime1, 0, var25, 0, param8, var37Lifetime1, var29, -127, var21);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (li.field_i <= var37Lifetime1 + var36Lifetime1) {
-                    var37Lifetime1 = li.field_i + (-var36Lifetime1 - 1);
+                  if (TriangleRasterState.field_i <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = TriangleRasterState.field_i + (-var36Lifetime1 - 1);
                   }
                   if (0 > var36Lifetime1) {
-                    sg.a(var40Lifetime1, var35Lifetime1, var38Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var39Lifetime1, param8, var37Lifetime1 + var36Lifetime1, var29 - var40Lifetime1 * var36Lifetime1, -118, var21 - var36Lifetime1 * var38Lifetime1);
+                    RaceWorld.a(var40Lifetime1, var35Lifetime1, var38Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var39Lifetime1, param8, var37Lifetime1 + var36Lifetime1, var29 - var40Lifetime1 * var36Lifetime1, -118, var21 - var36Lifetime1 * var38Lifetime1);
                   } else {
-                    sg.a(var40Lifetime1, var35Lifetime1 + var36Lifetime1, var38Lifetime1, var25, var39Lifetime1, param8, var37Lifetime1, var29, param5 ^ 121, var21);
+                    RaceWorld.a(var40Lifetime1, var35Lifetime1 + var36Lifetime1, var38Lifetime1, var25, var39Lifetime1, param8, var37Lifetime1, var29, param5 ^ 121, var21);
                   }
                 }
               }
               param15++;
-              if (param15 >= li.field_d) {
+              if (param15 >= TriangleRasterState.field_d) {
                 return;
               }
               var25 = var25 + var27;
               var29 = var29 + var31;
               var18 = var18 + var20;
               var17_int = var17_int + var19;
-              var35Lifetime1 = var35Lifetime1 + tc.field_j;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_j;
               var30 = var30 + var32;
               var21 = var21 + var23;
               var26 = var26 + var28;
@@ -332,15 +332,15 @@ final class fe {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
-    final static k a(byte[] param0, int param1) {
-        k var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        k stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -353,7 +353,7 @@ final class fe {
             var3 = (byte[]) null;
             fe.a((byte[]) null, -47);
           }
-          var2 = new k(param0, la.field_j, wb.field_g, nk.field_K, ad.field_d, dd.field_E, lk.field_e);
+          var2 = new CoverageBitmapFont(param0, la.field_j, wb.field_g, EditableTextField.field_K, ad.field_d, StraightRoadSegment.field_E, IterableSecondaryNodeDeque.field_e);
           tk.a(false);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -367,11 +367,11 @@ final class fe {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -754077296) {
           fe.a(-97, 113, 16, 125, -102, -116, 48, -40, (int[]) null, -2, -100, 114, 61, -5, 101, 85, 23);
         }

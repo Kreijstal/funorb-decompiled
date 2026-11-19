@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oc {
-    static ah field_d;
-    static nn field_c;
+    static IntrusiveDeque field_d;
+    static BufferedSocket field_c;
     static int field_a;
     static String field_b;
 
-    final static bm[] a(String param0, gn param1, byte param2, String param3) {
+    final static IndexedSprite[] a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bm[] stackIn_3_0 = null;
+        IndexedSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -50,11 +50,11 @@ final class oc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, ib param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -66,7 +66,7 @@ final class oc {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = mk.a(2, param5, param1, param2, param4, param0);
+          var9 = NanoTickClock.a(2, param5, param1, param2, param4, param0);
           var6 = var9;
           if (var9 == null) {
             return null;
@@ -90,28 +90,28 @@ final class oc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(int param0, String param1) {
-        sg.field_Y = param1;
+        RaceWorld.field_Y = param1;
         if (param0 != 16711680) {
           return;
         }
         try {
           go.a(0, 12);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "oc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "oc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_d = null;
         field_c = null;
         if (param0 != -1) {
-          oc.a(-20);
+          oc.clearSharedReferences(-20);
         }
     }
 
@@ -190,7 +190,7 @@ final class oc {
         var21 = HoldTheLine.field_D;
         try {
           if (param5 == 256) {
-            tc.c(param2, param1, param0, param3);
+            SoftwareRasterizer.c(param2, param1, param0, param3);
           }
           if (param5 != 256 &&
             param5 != 0) {
@@ -204,202 +204,202 @@ final class oc {
               var10 = var6_int;
               var11 = param3;
               var12 = param5;
-              if (tc.field_d <= var8 &&
-                tc.field_e > var8 &&
-                var9 >= tc.field_a &&
-                var9 < tc.field_i) {
-                var13 = tc.field_j * var9 + var8;
-                var14 = tc.field_b[var13];
+              if (SoftwareRasterizer.field_d <= var8 &&
+                SoftwareRasterizer.field_e > var8 &&
+                var9 >= SoftwareRasterizer.field_a &&
+                var9 < SoftwareRasterizer.field_i) {
+                var13 = SoftwareRasterizer.field_j * var9 + var8;
+                var14 = SoftwareRasterizer.field_b[var13];
                 var15 = var10 + (-16711936 & (var14 & 16711935) * var12);
                 var14 = var11 + (16711680 & var12 * (var14 & 65280));
-                tc.field_b[var13] = kc.a(var15, var14) >>> 8;
+                SoftwareRasterizer.field_b[var13] = kc.a(var15, var14) >>> 8;
               }
               return;
             }
             if (param0 < 0) {
               param0 = -param0;
             }
-            if (tc.field_d <= param0 + param2 &&
-              param2 - param0 < tc.field_e &&
-              tc.field_a <= param0 + param1 &&
-              -param0 + param1 < tc.field_i) {
-              var8Lifetime1 = param2 + tc.field_j * param1;
+            if (SoftwareRasterizer.field_d <= param0 + param2 &&
+              param2 - param0 < SoftwareRasterizer.field_e &&
+              SoftwareRasterizer.field_a <= param0 + param1 &&
+              -param0 + param1 < SoftwareRasterizer.field_i) {
+              var8Lifetime1 = param2 + SoftwareRasterizer.field_j * param1;
               var9Lifetime1 = var8Lifetime1;
-              var10Lifetime1 = var8Lifetime1 - tc.field_j * param0;
-              var11Lifetime1 = param0 * tc.field_j + var8Lifetime1;
+              var10Lifetime1 = var8Lifetime1 - SoftwareRasterizer.field_j * param0;
+              var11Lifetime1 = param0 * SoftwareRasterizer.field_j + var8Lifetime1;
               var12Lifetime1 = param0;
               var13Lifetime1 = 0;
               param0 = param0 * param0;
               var14Lifetime1 = -var12Lifetime1 + param0;
-              if (param2 - var12Lifetime1 >= tc.field_d &&
-                tc.field_a <= param1 &&
-                tc.field_i > param1) {
+              if (param2 - var12Lifetime1 >= SoftwareRasterizer.field_d &&
+                SoftwareRasterizer.field_a <= param1 &&
+                SoftwareRasterizer.field_i > param1) {
                 var15Lifetime1 = -var12Lifetime1 + var8Lifetime1;
                 var16 = var6_int;
                 var17 = param3;
                 var18 = param5;
-                var19 = tc.field_b[var15Lifetime1];
+                var19 = SoftwareRasterizer.field_b[var15Lifetime1];
                 var20 = var16 + ((var19 & 16711935) * var18 & -16711936);
                 var19 = var17 + (16711680 & (var19 & 65280) * var18);
-                tc.field_b[var15Lifetime1] = kc.a(var19, var20) >>> 8;
+                SoftwareRasterizer.field_b[var15Lifetime1] = kc.a(var19, var20) >>> 8;
               }
-              if (tc.field_e > var12Lifetime1 + param2 &&
-                tc.field_a <= param1 &&
-                param1 < tc.field_i) {
+              if (SoftwareRasterizer.field_e > var12Lifetime1 + param2 &&
+                SoftwareRasterizer.field_a <= param1 &&
+                param1 < SoftwareRasterizer.field_i) {
                 var15Lifetime1Lifetime1 = var8Lifetime1 + var12Lifetime1;
                 var16Lifetime1 = var6_int;
                 var17Lifetime1 = param3;
                 var18Lifetime1 = param5;
-                var19Lifetime1 = tc.field_b[var15Lifetime1Lifetime1];
+                var19Lifetime1 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime1];
                 var20Lifetime1 = (var18Lifetime1 * (16711935 & var19Lifetime1) & -16711936) + var16Lifetime1;
                 var19Lifetime1 = var17Lifetime1 + (16711680 & (var19Lifetime1 & 65280) * var18Lifetime1);
-                tc.field_b[var15Lifetime1Lifetime1] = kc.a(var20Lifetime1, var19Lifetime1) >>> 8;
+                SoftwareRasterizer.field_b[var15Lifetime1Lifetime1] = kc.a(var20Lifetime1, var19Lifetime1) >>> 8;
               }
-              if (tc.field_a <= param1 - var12Lifetime1 &&
-                tc.field_d <= param2 &&
-                tc.field_e > param2) {
+              if (SoftwareRasterizer.field_a <= param1 - var12Lifetime1 &&
+                SoftwareRasterizer.field_d <= param2 &&
+                SoftwareRasterizer.field_e > param2) {
                 var15Lifetime1Lifetime2 = var10Lifetime1;
                 var16Lifetime2 = var6_int;
                 var17Lifetime2 = param3;
                 var18Lifetime2 = param5;
-                var19Lifetime2 = tc.field_b[var15Lifetime1Lifetime2];
+                var19Lifetime2 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime2];
                 var20Lifetime2 = (var18Lifetime2 * (16711935 & var19Lifetime2) & -16711936) + var16Lifetime2;
                 var19Lifetime2 = (var18Lifetime2 * (var19Lifetime2 & 65280) & 16711680) + var17Lifetime2;
-                tc.field_b[var15Lifetime1Lifetime2] = kc.a(var20Lifetime2, var19Lifetime2) >>> 8;
+                SoftwareRasterizer.field_b[var15Lifetime1Lifetime2] = kc.a(var20Lifetime2, var19Lifetime2) >>> 8;
               }
-              if (var12Lifetime1 + param1 < tc.field_i &&
-                param2 >= tc.field_d &&
-                tc.field_e > param2) {
+              if (var12Lifetime1 + param1 < SoftwareRasterizer.field_i &&
+                param2 >= SoftwareRasterizer.field_d &&
+                SoftwareRasterizer.field_e > param2) {
                 var15Lifetime1Lifetime3 = var11Lifetime1;
                 var16Lifetime3 = var6_int;
                 var17Lifetime3 = param3;
                 var18Lifetime3 = param5;
-                var19Lifetime3 = tc.field_b[var15Lifetime1Lifetime3];
+                var19Lifetime3 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime3];
                 var20Lifetime3 = var16Lifetime3 + (-16711936 & var18Lifetime3 * (var19Lifetime3 & 16711935));
                 var19Lifetime3 = var17Lifetime3 + (16711680 & var18Lifetime3 * (var19Lifetime3 & 65280));
-                tc.field_b[var15Lifetime1Lifetime3] = kc.a(var19Lifetime3, var20Lifetime3) >>> 8;
+                SoftwareRasterizer.field_b[var15Lifetime1Lifetime3] = kc.a(var19Lifetime3, var20Lifetime3) >>> 8;
               }
               while (true) {
-                var9Lifetime1 = var9Lifetime1 + tc.field_j;
+                var9Lifetime1 = var9Lifetime1 + SoftwareRasterizer.field_j;
                 incrementValue$0 = var13Lifetime1;
                 var13Lifetime1++;
                 var14Lifetime1 = var14Lifetime1 + (incrementValue$0 + var13Lifetime1);
-                var8Lifetime1 = var8Lifetime1 - tc.field_j;
+                var8Lifetime1 = var8Lifetime1 - SoftwareRasterizer.field_j;
                 if (param0 < var14Lifetime1) {
-                  var11Lifetime1 = var11Lifetime1 - tc.field_j;
+                  var11Lifetime1 = var11Lifetime1 - SoftwareRasterizer.field_j;
                   var12Lifetime1--;
                   var14Lifetime1 = var14Lifetime1 - (var12Lifetime1 + var12Lifetime1);
-                  var10Lifetime1 = var10Lifetime1 + tc.field_j;
+                  var10Lifetime1 = var10Lifetime1 + SoftwareRasterizer.field_j;
                 }
                 if (var12Lifetime1 < var13Lifetime1) {
                   return;
                 }
-                if (tc.field_a <= param1 - var12Lifetime1 &&
-                  -var12Lifetime1 + param1 < tc.field_i) {
-                  if (tc.field_d <= -var13Lifetime1 + param2 &&
-                    param2 - var13Lifetime1 < tc.field_e) {
+                if (SoftwareRasterizer.field_a <= param1 - var12Lifetime1 &&
+                  -var12Lifetime1 + param1 < SoftwareRasterizer.field_i) {
+                  if (SoftwareRasterizer.field_d <= -var13Lifetime1 + param2 &&
+                    param2 - var13Lifetime1 < SoftwareRasterizer.field_e) {
                     var15Lifetime1Lifetime4 = var10Lifetime1 - var13Lifetime1;
                     var16Lifetime4 = var6_int;
                     var17Lifetime4 = param3;
                     var18Lifetime4 = param5;
-                    var19Lifetime4 = tc.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                     var20Lifetime4 = var16Lifetime4 + (-16711936 & (16711935 & var19Lifetime4) * var18Lifetime4);
                     var19Lifetime4 = var17Lifetime4 + (16711680 & (var19Lifetime4 & 65280) * var18Lifetime4);
-                    tc.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4, var20Lifetime4) >>> 8;
+                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4, var20Lifetime4) >>> 8;
                   }
-                  if (tc.field_d <= var13Lifetime1 + param2 &&
-                    var13Lifetime1 + param2 < tc.field_e) {
+                  if (SoftwareRasterizer.field_d <= var13Lifetime1 + param2 &&
+                    var13Lifetime1 + param2 < SoftwareRasterizer.field_e) {
                     var15Lifetime1Lifetime4 = var13Lifetime1 + var10Lifetime1;
                     var16Lifetime4 = var6_int;
                     var17Lifetime4 = param3;
                     var18Lifetime4 = param5;
-                    var19Lifetime4 = tc.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                     var20Lifetime4 = (-16711936 & var18Lifetime4 * (var19Lifetime4 & 16711935)) + var16Lifetime4;
                     var19Lifetime4 = var17Lifetime4 + (16711680 & (var19Lifetime4 & 65280) * var18Lifetime4);
-                    tc.field_b[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4, var19Lifetime4) >>> 8;
+                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4, var19Lifetime4) >>> 8;
                   }
                 }
-                if (-var13Lifetime1 + param1 >= tc.field_a &&
-                  param1 - var13Lifetime1 < tc.field_i) {
-                  if (tc.field_d <= param2 - var12Lifetime1 &&
-                    tc.field_e > -var12Lifetime1 + param2) {
+                if (-var13Lifetime1 + param1 >= SoftwareRasterizer.field_a &&
+                  param1 - var13Lifetime1 < SoftwareRasterizer.field_i) {
+                  if (SoftwareRasterizer.field_d <= param2 - var12Lifetime1 &&
+                    SoftwareRasterizer.field_e > -var12Lifetime1 + param2) {
                     var15Lifetime1Lifetime4 = -var12Lifetime1 + var8Lifetime1;
                     var16Lifetime4Lifetime1 = var6_int;
                     var17Lifetime4Lifetime1 = param3;
                     var18Lifetime4Lifetime1 = param5;
-                    var19Lifetime4Lifetime1 = tc.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime1 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime1 = var16Lifetime4Lifetime1 + ((16711935 & var19Lifetime4Lifetime1) * var18Lifetime4Lifetime1 & -16711936);
                     var19Lifetime4Lifetime1 = (16711680 & var18Lifetime4Lifetime1 * (var19Lifetime4Lifetime1 & 65280)) + var17Lifetime4Lifetime1;
-                    tc.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
+                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
                   }
-                  if (var12Lifetime1 + param2 >= tc.field_d &&
-                    tc.field_e > param2 + var12Lifetime1) {
+                  if (var12Lifetime1 + param2 >= SoftwareRasterizer.field_d &&
+                    SoftwareRasterizer.field_e > param2 + var12Lifetime1) {
                     var15Lifetime1Lifetime4 = var8Lifetime1 + var12Lifetime1;
                     var16Lifetime4Lifetime1 = var6_int;
                     var17Lifetime4Lifetime1 = param3;
                     var18Lifetime4Lifetime1 = param5;
-                    var19Lifetime4Lifetime1 = tc.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime1 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime1 = (-16711936 & (16711935 & var19Lifetime4Lifetime1) * var18Lifetime4Lifetime1) + var16Lifetime4Lifetime1;
                     var19Lifetime4Lifetime1 = (var18Lifetime4Lifetime1 * (var19Lifetime4Lifetime1 & 65280) & 16711680) + var17Lifetime4Lifetime1;
-                    tc.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
+                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
                   }
                 }
-                if (tc.field_a <= var13Lifetime1 + param1 &&
-                  tc.field_i > param1 + var13Lifetime1) {
-                  if (tc.field_d <= -var12Lifetime1 + param2 &&
-                    param2 - var12Lifetime1 < tc.field_e) {
+                if (SoftwareRasterizer.field_a <= var13Lifetime1 + param1 &&
+                  SoftwareRasterizer.field_i > param1 + var13Lifetime1) {
+                  if (SoftwareRasterizer.field_d <= -var12Lifetime1 + param2 &&
+                    param2 - var12Lifetime1 < SoftwareRasterizer.field_e) {
                     var15Lifetime1Lifetime4 = -var12Lifetime1 + var9Lifetime1;
                     var16Lifetime4Lifetime2 = var6_int;
                     var17Lifetime4Lifetime2 = param3;
                     var18Lifetime4Lifetime2 = param5;
-                    var19Lifetime4Lifetime2 = tc.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime2 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime2 = var16Lifetime4Lifetime2 + ((16711935 & var19Lifetime4Lifetime2) * var18Lifetime4Lifetime2 & -16711936);
                     var19Lifetime4Lifetime2 = ((65280 & var19Lifetime4Lifetime2) * var18Lifetime4Lifetime2 & 16711680) + var17Lifetime4Lifetime2;
-                    tc.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
+                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
                   }
-                  if (param2 + var12Lifetime1 >= tc.field_d &&
-                    var12Lifetime1 + param2 < tc.field_e) {
+                  if (param2 + var12Lifetime1 >= SoftwareRasterizer.field_d &&
+                    var12Lifetime1 + param2 < SoftwareRasterizer.field_e) {
                     var15Lifetime1Lifetime4 = var9Lifetime1 + var12Lifetime1;
                     var16Lifetime4Lifetime2 = var6_int;
                     var17Lifetime4Lifetime2 = param3;
                     var18Lifetime4Lifetime2 = param5;
-                    var19Lifetime4Lifetime2 = tc.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime2 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime2 = var16Lifetime4Lifetime2 + ((var19Lifetime4Lifetime2 & 16711935) * var18Lifetime4Lifetime2 & -16711936);
                     var19Lifetime4Lifetime2 = ((var19Lifetime4Lifetime2 & 65280) * var18Lifetime4Lifetime2 & 16711680) + var17Lifetime4Lifetime2;
-                    tc.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
+                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
                   }
                 }
-                if (param1 + var12Lifetime1 < tc.field_a) {
+                if (param1 + var12Lifetime1 < SoftwareRasterizer.field_a) {
                   continue;
                 }
-                if ((param1 + var12Lifetime1) >= tc.field_i) {
+                if ((param1 + var12Lifetime1) >= SoftwareRasterizer.field_i) {
                   continue;
                 }
-                if (tc.field_d <= param2 - var13Lifetime1 &&
-                  tc.field_e > param2 - var13Lifetime1) {
+                if (SoftwareRasterizer.field_d <= param2 - var13Lifetime1 &&
+                  SoftwareRasterizer.field_e > param2 - var13Lifetime1) {
                   var15Lifetime1Lifetime4 = -var13Lifetime1 + var11Lifetime1;
                   var16Lifetime4Lifetime3 = var6_int;
                   var17Lifetime4Lifetime3 = param3;
                   var18Lifetime4Lifetime3 = param5;
-                  var19Lifetime4Lifetime3 = tc.field_b[var15Lifetime1Lifetime4];
+                  var19Lifetime4Lifetime3 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                   var20Lifetime4Lifetime3 = var16Lifetime4Lifetime3 + (-16711936 & var18Lifetime4Lifetime3 * (16711935 & var19Lifetime4Lifetime3));
                   var19Lifetime4Lifetime3 = var17Lifetime4Lifetime3 + (var18Lifetime4Lifetime3 * (var19Lifetime4Lifetime3 & 65280) & 16711680);
-                  tc.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime3, var20Lifetime4Lifetime3) >>> 8;
+                  SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime3, var20Lifetime4Lifetime3) >>> 8;
                 }
-                if (tc.field_d > param2 + var13Lifetime1) {
+                if (SoftwareRasterizer.field_d > param2 + var13Lifetime1) {
                   continue;
                 }
-                if (tc.field_e <= var13Lifetime1 + param2) {
+                if (SoftwareRasterizer.field_e <= var13Lifetime1 + param2) {
                   continue;
                 }
                 var15Lifetime1Lifetime4 = var13Lifetime1 + var11Lifetime1;
                 var16Lifetime4Lifetime4 = var6_int;
                 var17Lifetime4Lifetime4 = param3;
                 var18Lifetime4Lifetime4 = param5;
-                var19Lifetime4Lifetime4 = tc.field_b[var15Lifetime1Lifetime4];
+                var19Lifetime4Lifetime4 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
                 var20Lifetime4Lifetime4 = var16Lifetime4Lifetime4 + (var18Lifetime4Lifetime4 * (16711935 & var19Lifetime4Lifetime4) & -16711936);
                 var19Lifetime4Lifetime4 = var17Lifetime4Lifetime4 + (16711680 & var18Lifetime4Lifetime4 * (var19Lifetime4Lifetime4 & 65280));
-                tc.field_b[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4Lifetime4, var19Lifetime4Lifetime4) >>> 8;
+                SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4Lifetime4, var19Lifetime4Lifetime4) >>> 8;
               }
             }
             return;
@@ -408,7 +408,7 @@ final class oc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var6), "oc.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var6), "oc.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -426,22 +426,22 @@ final class oc {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new oe(param2.field_e * (1.0f - param0), param2.field_b, param2.field_c);
-          gk.field_d[2] = (float)param2.field_m.field_h;
-          gk.field_d[1] = (float)param2.field_l.field_h;
-          gk.field_d[0] = (float)param2.field_k.field_h;
-          var4 = (int)lk.a(gk.field_d, 0, 2, param1 - 16711936, param0);
+          gk.field_d[2] = (float)param2.field_m.x;
+          gk.field_d[1] = (float)param2.field_l.x;
+          gk.field_d[0] = (float)param2.field_k.x;
+          var4 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, param1 - 16711936, param0);
           if (param1 != 16711935) {
-            field_d = (ah) null;
+            field_d = (IntrusiveDeque) null;
           }
-          var5 = (int)lk.a(gk.field_d, 1, 1, param1 - 16711936, param0);
-          gk.field_d[0] = (float)param2.field_k.field_f;
-          gk.field_d[2] = (float)param2.field_m.field_f;
-          gk.field_d[1] = (float)param2.field_l.field_f;
-          var6 = (int)lk.a(gk.field_d, 0, 2, -1, param0);
-          var7 = (int)lk.a(gk.field_d, 1, 1, param1 - 16711936, param0);
-          var3.field_k = new qm(var4, var6);
-          var3.field_l = new qm(var5, var7);
-          var3.field_m = new qm(param2.field_m);
+          var5 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 1, 1, param1 - 16711936, param0);
+          gk.field_d[0] = (float)param2.field_k.y;
+          gk.field_d[2] = (float)param2.field_m.y;
+          gk.field_d[1] = (float)param2.field_l.y;
+          var6 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, -1, param0);
+          var7 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 1, 1, param1 - 16711936, param0);
+          var3.field_k = new Point2i(var4, var6);
+          var3.field_l = new Point2i(var5, var7);
+          var3.field_m = new Point2i(param2.field_m);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -454,11 +454,11 @@ final class oc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static void a(lf param0, int param1, qi param2, int param3, String param4) {
+    final static void a(lf param0, int param1, BitmapFont param2, int param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -520,12 +520,12 @@ final class oc {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
     static {
-        field_d = new ah();
+        field_d = new IntrusiveDeque();
         field_b = "Unpacking music";
     }
 }

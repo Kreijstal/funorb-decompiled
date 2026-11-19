@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends n {
-    private hj field_E;
+final class ea extends UiWidget {
+    private Sprite field_E;
     int field_B;
     private int field_F;
     private int field_C;
-    private hj field_I;
+    private Sprite field_I;
     private int field_G;
     private int field_A;
-    private hj[] field_D;
-    private hj field_L;
+    private Sprite[] field_D;
+    private Sprite field_L;
     private int field_H;
     private int field_M;
     boolean field_K;
 
     private final void a(byte param0) {
-        this.field_D = new hj[]{this.b(127, this.field_C, this.field_A), this.b(127, this.field_M, this.field_G)};
+        this.field_D = new Sprite[]{this.b(127, this.field_C, this.field_A), this.b(127, this.field_M, this.field_G)};
         this.field_I = this.a(-127);
         this.field_E = this.field_I.d();
-        this.field_L = new hj(this.field_u >> 1, this.field_u);
+        this.field_L = new Sprite(this.field_u >> 1, this.field_u);
         int var2 = 22 % ((param0 - 6) / 63);
     }
 
@@ -40,7 +40,7 @@ final class ea extends n {
         }
     }
 
-    private final void a(int param0, int param1, hj param2, int param3) {
+    private final void a(int param0, int param1, Sprite param2, int param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -56,23 +56,23 @@ final class ea extends n {
           td.a(-this.field_I.field_s + var5_int, this.field_I.field_s + param3, this.field_u + param1, true, param1);
           var6 = -this.field_H + param3;
           if (param0 != 2) {
-            this.field_I = (hj) null;
+            this.field_I = (Sprite) null;
           }
           while (var5_int > var6) {
             param2.a(var6, param1);
             var6 = var6 + param2.field_s;
           }
           dm.b((byte) -10);
-          if (tc.field_d <= param3 + this.field_I.field_s) {
-            hf.a(this.field_L, -1);
+          if (SoftwareRasterizer.field_d <= param3 + this.field_I.field_s) {
+            ProxySocketConnector.a(this.field_L, -1);
             param2.a(-this.field_H, 0);
             param2.a(this.field_F * 2 - this.field_H, 0);
             this.field_E.d(0, 0);
             dm.b((byte) -10);
             this.field_L.a(param3, param1);
           }
-          if (-this.field_I.field_s + var5_int <= tc.field_e) {
-            hf.a(this.field_L, param0 ^ -3);
+          if (-this.field_I.field_s + var5_int <= SoftwareRasterizer.field_e) {
+            ProxySocketConnector.a(this.field_L, param0 ^ -3);
             for (var7 = this.field_x + (-this.field_I.field_s + this.field_H); var7 > this.field_F * 2; var7 = var7 - this.field_F * 2) {
             }
             param2.a(-var7, 0);
@@ -93,11 +93,11 @@ final class ea extends n {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final hj b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -106,14 +106,14 @@ final class ea extends n {
         int var11 = 0;
         int var12 = 0;
         int var13 = HoldTheLine.field_D;
-        hj var14 = new hj(this.field_F * 2, this.field_u);
+        Sprite var14 = new Sprite(this.field_F * 2, this.field_u);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         if (param0 <= 120) {
-          return (hj) null;
+          return (Sprite) null;
         }
-        hf.a(var14, -1);
+        ProxySocketConnector.a(var14, -1);
         int var5 = this.field_u >> 1;
         for (var6 = 0; this.field_u > var6; var6++) {
           var7 = (var6 >> 1) * (-1 + this.field_F * 2) % (this.field_F * 2);
@@ -122,19 +122,19 @@ final class ea extends n {
           var10 = -var5 + var6;
           var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
           var12 = var11 < 256 ? (var11 * var9 & 16711680 | -16711936 & var8 * var11) >>> 8 : var8 | var9;
-          tc.b(var7, var6, this.field_F, var12);
+          SoftwareRasterizer.b(var7, var6, this.field_F, var12);
           var9Lifetime1 = 65280 & param2;
           var8Lifetime1 = param2 & 16711935;
-          tc.b(-(this.field_F * 2) + var7, var6, this.field_F, var12);
+          SoftwareRasterizer.b(-(this.field_F * 2) + var7, var6, this.field_F, var12);
           var12Lifetime1 = var11 < 256 ? (var11 * var9Lifetime1 & 16711680 | -16711936 & var11 * var8Lifetime1) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          tc.b(var7 + this.field_F, var6, this.field_F, var12Lifetime1);
-          tc.b(var7 - this.field_F, var6, this.field_F, var12Lifetime1);
+          SoftwareRasterizer.b(var7 + this.field_F, var6, this.field_F, var12Lifetime1);
+          SoftwareRasterizer.b(var7 - this.field_F, var6, this.field_F, var12Lifetime1);
         }
         dm.b((byte) -10);
         return var14;
     }
 
-    private final hj a(int param0) {
+    private final Sprite a(int param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -142,8 +142,8 @@ final class ea extends n {
         int var10 = HoldTheLine.field_D;
         int var2 = 2 / ((-72 - param0) / 48);
         int var3 = this.field_u >> 1;
-        hj var4 = new hj(var3, this.field_u);
-        hf.a(var4, -1);
+        Sprite var4 = new Sprite(var3, this.field_u);
+        ProxySocketConnector.a(var4, -1);
         for (var5 = 0; this.field_u > var5; var5++) {
           for (var6 = 0; var6 < var3; var6++) {
             var7 = (double)var6 * (double)var6 / (double)((-var5 + this.field_u) * var5);
@@ -152,7 +152,7 @@ final class ea extends n {
               var7 = Math.sqrt(1.0 - var7);
               var9 = var7 >= 1.0 ? 255 : (int)(var7 * 255.0);
             }
-            tc.a(var6, var5, var9 << 16 | (var9 | var9 << 8));
+            SoftwareRasterizer.a(var6, var5, var9 << 16 | (var9 | var9 << 8));
           }
         }
         dm.b((byte) -10);
@@ -168,8 +168,8 @@ final class ea extends n {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    final void a(int param0, n param1, int param2, byte param3) {
-        hj discarded$1 = null;
+    final void a(int param0, UiWidget param1, int param2, byte param3) {
+        Sprite discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -196,7 +196,7 @@ final class ea extends n {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -209,30 +209,30 @@ final class ea extends n {
         int var5 = 0;
         var4 = HoldTheLine.field_D;
         try {
-          var1 = tf.field_n;
+          var1 = MusicCrossfadeStream.field_n;
           synchronized (var1) {
             cb.field_j = cb.field_j + 1;
             if (param0) {
               return;
             }
             vj.field_l = qd.field_i;
-            if (jd.field_J < 0) {
+            if (DraggableWidget.field_J < 0) {
               var5 = 0;
               var2 = var5;
               while (112 > var5) {
-                lk.field_g[var5] = false;
+                IterableSecondaryNodeDeque.field_g[var5] = false;
                 var5++;
               }
-              jd.field_J = th.field_j;
+              DraggableWidget.field_J = PacketBuffer.field_j;
             } else {
-              while (th.field_j != jd.field_J) {
-                var2 = na.field_r[th.field_j];
-                th.field_j = 127 & th.field_j + 1;
+              while (PacketBuffer.field_j != DraggableWidget.field_J) {
+                var2 = na.field_r[PacketBuffer.field_j];
+                PacketBuffer.field_j = 127 & PacketBuffer.field_j + 1;
                 if (var2 >= 0) {
-                  lk.field_g[var2] = true;
+                  IterableSecondaryNodeDeque.field_g[var2] = true;
                   continue;
                 }
-                lk.field_g[~var2] = false;
+                IterableSecondaryNodeDeque.field_g[~var2] = false;
               }
             }
             qd.field_i = lj.field_b;
@@ -241,7 +241,7 @@ final class ea extends n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1_ref), "ea.I(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1_ref), "ea.I(" + param0 + ')');
         }
     }
 
@@ -251,8 +251,8 @@ final class ea extends n {
         this.field_M = 8355711 & param0 >> 1;
         this.field_C = param0;
         if (param2) {
-          n var5 = (n) null;
-          this.a(-23, (n) null, 66, (byte) -6);
+          UiWidget var5 = (UiWidget) null;
+          this.a(-23, (UiWidget) null, 66, (byte) -6);
         }
         this.a((byte) 70);
     }

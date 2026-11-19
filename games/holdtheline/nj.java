@@ -8,11 +8,11 @@ final class nj {
     private boolean field_f;
     private int field_h;
     private int field_k;
-    hj[] field_j;
+    Sprite[] field_j;
     static float field_e;
-    hj field_b;
+    Sprite field_b;
     static uf[] field_c;
-    static hj field_i;
+    static Sprite field_i;
     private int field_g;
 
     final void a(nj param0, int param1) {
@@ -29,7 +29,7 @@ final class nj {
           param0.field_h = this.field_h;
           param0.field_b = this.field_b;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "nj.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "nj.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -59,26 +59,26 @@ final class nj {
           ak.field_b = fd.field_c;
           if (255 != param1) {
             if (100 > param1) {
-              ja.field_U = ij.a(param3, 256, param1);
+              RaceVehicle.field_U = ij.a(param3, 256, param1);
             } else {
               if (param1 <= 105) {
                 var4 = param2;
                 ri.a((byte) 102, var4);
-                ja.field_U = ca.a(param2, (byte) 123);
+                RaceVehicle.field_U = ArchiveRequest.a(param2, (byte) 123);
               } else {
-                ja.field_U = ij.a(param3, 256, param1);
+                RaceVehicle.field_U = ij.a(param3, 256, param1);
               }
             }
           } else {
-            stackIn_5_0 = !(u.field_V >= 13);
-            ja.field_U = kl.a(stackIn_5_0, 0);
+            stackIn_5_0 = !(ResizableDialog.field_V >= 13);
+            RaceVehicle.field_U = kl.a(stackIn_5_0, 0);
             var6 = (String[]) null;
             ri.a((byte) 71, (String[]) null);
           }
           if (param0 == 256) {
             return;
           }
-          nj.a(58);
+          nj.clearSharedReferences(58);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,11 +96,11 @@ final class nj {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final void a(ig param0, nj param1, int param2, int param3, int param4, n param5) {
+    final void a(ig param0, nj param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -163,7 +163,7 @@ final class nj {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class nj {
         return this;
     }
 
-    final nj a(int param0, hj[] param1) {
+    final nj a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -197,7 +197,7 @@ final class nj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -233,8 +233,8 @@ final class nj {
         }
     }
 
-    final void a(n param0, int param1, int param2, int param3, ig param4) {
-        qi stackIn_20_0 = null;
+    final void a(UiWidget param0, int param1, int param2, int param3, ig param4) {
+        BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_23_2 = 0;
@@ -304,7 +304,7 @@ final class nj {
             } else {
               stackIn_27_8 = this.field_k;
             }
-            ((qi) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param4.field_i, param4.field_d, param4.field_h);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param4.field_i, param4.field_d, param4.field_h);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,11 +323,11 @@ final class nj {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_i = null;
         field_c = null;
         if (param0 < 55) {

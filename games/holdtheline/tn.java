@@ -25,7 +25,7 @@ final class tn {
           }
           this.field_f[param1] = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "tn.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "tn.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class tn {
           return (String[]) null;
         }
         String[] var2 = new String[1 + this.field_e];
-        bc.a(this.field_f, 0, var2, 0, this.field_e + 1);
+        ArrayOperations.copyObjects(this.field_f, 0, var2, 0, this.field_e + 1);
         return var2;
     }
 
@@ -56,7 +56,7 @@ final class tn {
             field_a = 30;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "tn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "tn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class tn {
 
     final static String d(int param0) {
         if (bb.field_a == ImageProducerRasterBuffer.field_n) {
-          return ol.field_a;
+          return SecondaryNodeDeque.field_a;
         }
         if (ak.field_b == ImageProducerRasterBuffer.field_n) {
           return rd.field_j;
@@ -102,7 +102,7 @@ final class tn {
         return ec.field_v;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
           tn.a((byte) -39);
         }
@@ -111,7 +111,7 @@ final class tn {
         field_b = null;
     }
 
-    final static void a(byte param0, ib param1, th param2, int param3) {
+    final static void a(byte param0, PlatformTaskDispatcher param1, PacketBuffer param2, int param3) {
         try {
           int var11_int = 0;
           int var12_int = 0;
@@ -152,11 +152,11 @@ final class tn {
             var17.field_p = param2.f((byte) -53);
             var17.field_n = param2.a(param0 + 192);
             var17.field_m = new int[var17.field_p];
-            var17.field_l = new af[var17.field_p];
+            var17.field_l = new PlatformTask[var17.field_p];
             var17.field_j = new int[var17.field_p];
             var17.field_r = new int[var17.field_p];
             var17.field_q = new byte[var17.field_p][][];
-            var17.field_k = new af[var17.field_p];
+            var17.field_k = new PlatformTask[var17.field_p];
             var5 = 0;
             if (param0 != -107) {
               return;
@@ -235,7 +235,7 @@ final class tn {
               var5++;
               stackIn_5_0 = var17;
             }
-            sl.field_b.a((byte) -116, var17);
+            sl.field_b.addLast((byte) -116, var17);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -253,7 +253,7 @@ final class tn {
             } else {
               stackIn_44_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -264,7 +264,7 @@ final class tn {
 
     private final void b(int param0, int param1) {
         String[] var3 = new String[this.a(true, param0)];
-        bc.a(this.field_f, param1, var3, 0, this.field_f.length);
+        ArrayOperations.copyObjects(this.field_f, param1, var3, 0, this.field_f.length);
         this.field_f = var3;
     }
 
@@ -276,7 +276,7 @@ final class tn {
         if (!pj.b((byte) 85)) {
           var2 = aj.a((byte) -53);
           byte[] var1 = var2;
-          ub.a(var2, 6, param0 + 0);
+          SingleChildWidget.a(var2, 6, param0 + 0);
         } else {
           ad.field_a = true;
         }
@@ -307,20 +307,20 @@ final class tn {
         return var3;
     }
 
-    final static void a(wd[] param0, int param1, vd param2) {
+    final static void a(RoadSegment[] param0, int param1, vd param2) {
         int var13 = 0;
         RuntimeException runtimeException = null;
         uh var3 = null;
         uh var4 = null;
-        wd var5 = null;
-        qm var6 = null;
-        qm var7 = null;
+        RoadSegment var5 = null;
+        Point2i var6 = null;
+        Point2i var7 = null;
         float var8 = 0.0f;
         int var9 = 0;
         float var10 = 0.0f;
         float var11 = 0.0f;
         int var12 = 0;
-        wd var14 = null;
+        RoadSegment var14 = null;
         float var15 = 0.0f;
         int var16 = 0;
         float var17 = 0.0f;
@@ -328,17 +328,17 @@ final class tn {
         float var19 = 0.0f;
         int var20 = 0;
         uh var21 = null;
-        qm var22 = null;
+        Point2i var22 = null;
         uh var23 = null;
-        qm var24 = null;
+        Point2i var24 = null;
         uh var25 = null;
         uh var26 = null;
-        qm var27 = null;
-        qm var28 = null;
+        Point2i var27 = null;
+        Point2i var28 = null;
         uh var29 = null;
         uh var30 = null;
-        qm var31 = null;
-        qm var32 = null;
+        Point2i var31 = null;
+        Point2i var32 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -359,10 +359,10 @@ final class tn {
           }
           var24 = var5.n(param1 - 9997199);
           var7 = var24;
-          var21.a(var22.field_h, (byte) 124);
-          var21.a(var22.field_f, (byte) 62);
-          var23.a(var24.field_h, (byte) 119);
-          var23.a(var24.field_f, (byte) 72);
+          var21.a(var22.x, (byte) 124);
+          var21.a(var22.y, (byte) 62);
+          var23.a(var24.x, (byte) 119);
+          var23.a(var24.y, (byte) 72);
           var8 = ce.a(-1, param0);
           var9 = (int)(var8 / 40.0f) + 1;
           var10 = var8 / (float)var9;
@@ -376,10 +376,10 @@ final class tn {
               var3 = var25;
               var26 = o.a((byte) -112);
               var4 = var26;
-              var25.a(var6.field_h, (byte) 101);
-              var25.a(var6.field_f, (byte) 116);
-              var26.a(var7.field_h, (byte) 64);
-              var26.a(var7.field_f, (byte) 72);
+              var25.a(var6.x, (byte) 101);
+              var25.a(var6.y, (byte) 116);
+              var26.a(var7.x, (byte) 64);
+              var26.a(var7.y, (byte) 72);
               var11 = var10;
               var12 = var14.field_k;
             }
@@ -391,10 +391,10 @@ final class tn {
             while (1.0f > var19) {
               var27 = var14.c(var19, 99);
               var28 = var14.a(-851, var19);
-              var3.a(var27.field_h, (byte) 90);
-              var3.a(var27.field_f, (byte) 93);
-              var4.a(var28.field_h, (byte) 89);
-              var4.a(var28.field_f, (byte) 79);
+              var3.a(var27.x, (byte) 90);
+              var3.a(var27.y, (byte) 93);
+              var4.a(var28.x, (byte) 89);
+              var4.a(var28.y, (byte) 79);
               var11 = var11 - var17;
               var19 = var19 + var18;
               if (!(var11 < 0.0f)) {
@@ -405,18 +405,18 @@ final class tn {
               var3 = var29;
               var30 = o.a((byte) -115);
               var4 = var30;
-              var29.a(var27.field_h, (byte) 91);
-              var29.a(var27.field_f, (byte) 64);
-              var30.a(var28.field_h, (byte) 81);
+              var29.a(var27.x, (byte) 91);
+              var29.a(var27.y, (byte) 64);
+              var30.a(var28.x, (byte) 81);
               var11 = var11 + var10;
-              var30.a(var28.field_f, (byte) 69);
+              var30.a(var28.y, (byte) 69);
             }
             var31 = var14.l(param1 ^ 1579032);
             var32 = var14.m(param1 - 10000550);
-            var3.a(var31.field_h, (byte) 106);
-            var3.a(var31.field_f, (byte) 64);
-            var4.a(var32.field_h, (byte) 81);
-            var4.a(var32.field_f, (byte) 81);
+            var3.a(var31.x, (byte) 106);
+            var3.a(var31.y, (byte) 64);
+            var4.a(var32.x, (byte) 81);
+            var4.a(var32.y, (byte) 81);
           }
           param2.a(0.0f, var4.a(-39), var12, var3.a(-61), (byte) 49);
           return;
@@ -436,7 +436,7 @@ final class tn {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -451,30 +451,30 @@ final class tn {
         RuntimeException var5 = null;
         var10 = HoldTheLine.field_D;
         try {
-          tc.b(param0, param3, param1 + 1, 10000536);
+          SoftwareRasterizer.b(param0, param3, param1 + 1, 10000536);
           if (param2 != 152) {
             field_h = (int[][]) null;
           }
-          tc.b(param0, param3 + param4, 1 + param1, 12105912);
+          SoftwareRasterizer.b(param0, param3 + param4, 1 + param1, 12105912);
           var5_int = 1;
-          if (tc.field_a > var5_int + param3) {
-            var5_int = -param3 + tc.field_a;
+          if (SoftwareRasterizer.field_a > var5_int + param3) {
+            var5_int = -param3 + SoftwareRasterizer.field_a;
           }
           var6 = param4;
-          if (var6 + param3 > tc.field_i) {
-            var6 = -param3 + tc.field_i;
+          if (var6 + param3 > SoftwareRasterizer.field_i) {
+            var6 = -param3 + SoftwareRasterizer.field_i;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + 48 * var7 / param4;
             var9 = var8 << 16 | var8 << 8 | var8;
-            tc.field_b[param0 + tc.field_j * (param3 + var7)] = var9;
-            tc.field_b[tc.field_j * (var7 + param3) + (param0 + param1)] = var9;
+            SoftwareRasterizer.field_b[param0 + SoftwareRasterizer.field_j * (param3 + var7)] = var9;
+            SoftwareRasterizer.field_b[SoftwareRasterizer.field_j * (var7 + param3) + (param0 + param1)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var5), "tn.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var5), "tn.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

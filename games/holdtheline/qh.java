@@ -9,14 +9,14 @@ final class qh {
     static String field_c;
 
     final static void a(int param0, int param1) {
-        if (bd.field_Q != null &&
+        if (ValidationHelpWidget.field_Q != null &&
           null != i.field_k[param1]) {
           lc.field_d = i.field_k[param1];
-          gn.a(false, i.field_k[param1], (byte) 69, 30);
+          ResourceArchive.a(false, i.field_k[param1], (byte) 69, 30);
         } else {
-          if (ab.field_jb == -1) {
-            bi.field_e = 2;
-            ab.field_jb = param1;
+          if (AccountProgressDialog.field_jb == -1) {
+            WeightedLruCache.field_e = 2;
+            AccountProgressDialog.field_jb = param1;
           }
         }
         if (param0 != 0) {
@@ -61,11 +61,11 @@ final class qh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 30) {
           return;
@@ -76,11 +76,11 @@ final class qh {
         field_b = null;
     }
 
-    final static fg a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 < 80) {
           qh.a(67);
         }
-        return pk.field_H;
+        return LoginChoicePanel.field_H;
     }
 
     final static boolean c(int param0) {
@@ -89,13 +89,13 @@ final class qh {
         Throwable var2 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = tf.field_n;
+        var1_ref = MusicCrossfadeStream.field_n;
         synchronized (var1_ref) {
           if (qd.field_i == vj.field_l) {
             return false;
           }
-          aa.field_n = p.field_a[vj.field_l];
-          pk.field_M = d.field_b[vj.field_l];
+          aa.field_n = IndexedSpriteState.field_a[vj.field_l];
+          LoginChoicePanel.field_M = d.field_b[vj.field_l];
           if (param0 >= -23) {
             return false;
           }

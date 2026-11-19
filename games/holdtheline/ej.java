@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ej {
-    static qk[] field_c;
+    static TriangleMesh[] field_c;
     static String field_e;
-    static ah field_a;
+    static IntrusiveDeque field_a;
     static int field_b;
     static String field_d;
 
     abstract byte[] a(int param0);
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_e = null;
         field_c = null;
         if (param0 == -20) {
@@ -18,12 +18,12 @@ abstract class ej {
           field_a = null;
           return;
         }
-        field_a = (ah) null;
+        field_a = (IntrusiveDeque) null;
         field_d = null;
         field_a = null;
     }
 
-    final static boolean a(gn param0, gn param1, int param2, gn param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -74,11 +74,11 @@ abstract class ej {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    final static String a(String param0, String param1, String param2, boolean param3, gn param4) {
+    final static String a(String param0, String param1, String param2, boolean param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -98,7 +98,7 @@ abstract class ej {
             return stackIn_2_0;
           }
           if (param3) {
-            field_c = (qk[]) null;
+            field_c = (TriangleMesh[]) null;
           }
           stackIn_6_0 = param1 + " - " + param4.a(param2, 0) + "%";
           return stackIn_6_0;
@@ -130,7 +130,7 @@ abstract class ej {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

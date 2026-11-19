@@ -3,21 +3,21 @@
  */
 final class vk {
     int field_o;
-    ah field_x;
+    IntrusiveDeque field_x;
     byte field_v;
-    ah field_m;
+    IntrusiveDeque field_m;
     boolean field_r;
     private int field_f;
     int field_p;
-    ah field_k;
-    wd[] field_u;
+    IntrusiveDeque field_k;
+    RoadSegment[] field_u;
     int field_n;
     String field_b;
     private int field_w;
     static int[] field_q;
     int field_l;
     om[] field_j;
-    private hj field_g;
+    private Sprite field_g;
     static boolean field_a;
     ei field_e;
     static String field_i;
@@ -27,24 +27,24 @@ final class vk {
     ei field_t;
     String field_h;
 
-    final hj a(int param0, int param1, int param2) {
+    final Sprite a(int param0, int param1, int param2) {
         if (param0 != 9392) {
           vk.a(true, true, -63);
         }
         if (this.field_g == null) {
-          this.field_g = vg.a(param2, param1, this, -12392);
+          this.field_g = LoginForm.a(param2, param1, this, -12392);
           this.field_w = this.field_l;
           this.field_f = param1;
           return this.field_g;
         }
         if (this.field_g.field_s != param2) {
-          this.field_g = vg.a(param2, param1, this, -12392);
+          this.field_g = LoginForm.a(param2, param1, this, -12392);
           this.field_w = this.field_l;
           this.field_f = param1;
           return this.field_g;
         }
         if (param1 != this.field_f) {
-          this.field_g = vg.a(param2, param1, this, -12392);
+          this.field_g = LoginForm.a(param2, param1, this, -12392);
           this.field_w = this.field_l;
           this.field_f = param1;
           return this.field_g;
@@ -52,7 +52,7 @@ final class vk {
         if (this.field_l == this.field_w) {
           return this.field_g;
         }
-        this.field_g = vg.a(param2, param1, this, -12392);
+        this.field_g = LoginForm.a(param2, param1, this, -12392);
         this.field_w = this.field_l;
         this.field_f = param1;
         return this.field_g;
@@ -63,8 +63,8 @@ final class vk {
           if (ka.field_b != null) {
             ka.field_b.f((byte) -84);
           }
-          if (null != be.field_l) {
-            be.field_l.i((byte) 33);
+          if (null != MidiKeyUsage.field_l) {
+            MidiKeyUsage.field_l.i((byte) 33);
           }
           pj.a((byte) -96);
           return;
@@ -73,8 +73,8 @@ final class vk {
         if (ka.field_b != null) {
           ka.field_b.f((byte) -84);
         }
-        if (null != be.field_l) {
-          be.field_l.i((byte) 33);
+        if (null != MidiKeyUsage.field_l) {
+          MidiKeyUsage.field_l.i((byte) 33);
         }
         pj.a((byte) -96);
     }
@@ -85,7 +85,7 @@ final class vk {
           if (-1 == this.field_l) {
             return true;
           }
-          if (!mm.a(this, -65)) {
+          if (!RasterBuffer.a(this, -65)) {
             this.field_l = kg.a((byte) 47, this);
             return false;
           }
@@ -95,7 +95,7 @@ final class vk {
         if (-1 == this.field_l) {
           return true;
         }
-        if (!mm.a(this, -65)) {
+        if (!RasterBuffer.a(this, -65)) {
           this.field_l = kg.a((byte) 47, this);
           return false;
         }
@@ -103,7 +103,7 @@ final class vk {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 3) {
           return;
         }
@@ -115,12 +115,12 @@ final class vk {
     final static void a(boolean param0, boolean param1, int param2) {
         int var3 = 77 / ((-38 - param2) / 56);
         if (param1) {
-          tc.c(0, 0, tc.field_j, tc.field_c, 0, 192);
-          gb.a(0, param1);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c, 0, 192);
+          Bzip2State.a(0, param1);
           return;
         }
-        tc.c();
-        gb.a(0, param1);
+        SoftwareRasterizer.c();
+        Bzip2State.a(0, param1);
     }
 
     vk(byte[] param0) {
@@ -133,11 +133,11 @@ final class vk {
           this.field_e = new ei();
           this.field_t = new ei();
           this.field_c = new ei();
-          this.field_k = new ah();
-          this.field_m = new ah();
-          this.field_x = new ah();
+          this.field_k = new IntrusiveDeque();
+          this.field_m = new IntrusiveDeque();
+          this.field_x = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class vk {
           this.field_r = true;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

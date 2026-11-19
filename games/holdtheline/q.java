@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class q {
-    static qi field_a;
+    static BitmapFont field_a;
     static uf field_d;
     static int field_c;
     static int[] field_b;
@@ -15,15 +15,15 @@ final class q {
         }
         if (ml.field_a != null) {
           if (!ml.field_a.b((byte) -115)) {
-            return rg.field_f;
+            return DualNodeHashTable.field_f;
           }
           return pb.field_d;
         }
-        if (!ah.field_d.b((byte) -115)) {
-          return in.field_d;
+        if (!IntrusiveDeque.field_d.b((byte) -115)) {
+          return Vector2f.field_d;
         }
-        if (!ah.field_d.b("commonui", param0 ^ 54)) {
-          return ge.field_a + " - " + ah.field_d.a("commonui", 0) + "%";
+        if (!IntrusiveDeque.field_d.b("commonui", param0 ^ 54)) {
+          return ge.field_a + " - " + IntrusiveDeque.field_d.a("commonui", 0) + "%";
         }
         if (!am.field_d.b((byte) -63)) {
           return uf.field_d;
@@ -31,28 +31,28 @@ final class q {
         if (!am.field_d.b("commonui", 108)) {
           return wl.field_b + " - " + am.field_d.a("commonui", param0 - 118) + "%";
         }
-        if (!ca.field_p.b((byte) -102)) {
+        if (!ArchiveRequest.field_p.b((byte) -102)) {
           return g.field_l;
         }
         if (param0 != 118) {
           field_b = (int[]) null;
         }
-        if (!ca.field_p.a((byte) -63)) {
-          return uj.field_b + " - " + ca.field_p.a(param0 - 118) + "%";
+        if (!ArchiveRequest.field_p.a((byte) -63)) {
+          return uj.field_b + " - " + ArchiveRequest.field_p.a(param0 - 118) + "%";
         }
         return ng.field_b;
     }
 
-    final static void a(String param0, ql param1, int param2, int param3, byte param4, int param5) {
+    final static void a(String param0, PaletteBitmapFont param1, int param2, int param3, byte param4, int param5) {
         try {
           param1.a(param0, param3 + 1, 1 + param5, 8, -1, 114);
           if (param4 > -126) {
-            th var7 = (th) null;
-            q.a(-69, (th) null);
+            PacketBuffer var7 = (PacketBuffer) null;
+            q.a(-69, (PacketBuffer) null);
           }
           param1.b(param0, param3, param5, param2, -1);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class q {
         se var5_ref_se = null;
         int[] var6 = null;
         int var8 = 0;
-        da var9 = null;
+        IsaacPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = HoldTheLine.field_D;
@@ -78,12 +78,12 @@ final class q {
           var2 = var9.f((byte) -62);
           var3 = var9.f((byte) -86);
           if (0 == var2) {
-            var4 = (t) (ih.field_j.b((byte) 100));
+            var4 = (t) (ih.field_j.first((byte) 100));
             if (var4 == null) {
               r.a(-28036);
               return;
             }
-            var5 = -var9.field_l + ad.field_c;
+            var5 = -var9.position + ad.field_c;
             var11 = var4.field_m;
             var10 = var11;
             var6 = var10;
@@ -91,17 +91,17 @@ final class q {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.f((byte) -110) << pk.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.f((byte) -110) << LoginChoicePanel.a(var7 << 8, 768));
             }
-            var4.d(0);
+            var4.unlink(0);
           } else {
             if (var2 == 1) {
               var4_int = var9.b((byte) -84);
-              var5_ref_se = (se) (le.field_n.b((byte) 113));
+              var5_ref_se = (se) (le.field_n.first((byte) 113));
               while (var5_ref_se != null) {
                 if (~var3 != ~var5_ref_se.field_j ||
                   var5_ref_se.field_k != var4_int) {
-                  var5_ref_se = (se) (le.field_n.c((byte) -42));
+                  var5_ref_se = (se) (le.field_n.next((byte) -42));
                   continue;
                 }
                 break;
@@ -110,45 +110,45 @@ final class q {
                 r.a(-28036);
                 return;
               }
-              var5_ref_se.d(0);
+              var5_ref_se.unlink(0);
               decompiledFrameRemainder0 = false;
             }
             else {
-              bl.a((Throwable) null, (byte) 59, "LR1: " + em.b(false));
+              MusicPatchPcmStream.a((Throwable) null, (byte) 59, "LR1: " + em.b(false));
               r.a(-28036);
             }
           }
           if (param0 != -24) {
-            field_a = (qi) null;
+            field_a = (BitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "q.D(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "q.D(" + param0 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         field_d = null;
         if (param0 < 45) {
-          q.a((byte) 104);
+          q.clearSharedReferences((byte) 104);
         }
         field_a = null;
     }
 
     final static void a(int param0, int param1) {
-        da var2 = da.field_p;
+        IsaacPacketBuffer var2 = IsaacPacketBuffer.field_p;
         var2.c((byte) 33, param0);
         var2.f(111, 1);
         var2.f(111, 0);
         if (param1 < 41) {
-          q.a((byte) 110);
+          q.clearSharedReferences((byte) 110);
         }
     }
 
-    final static void a(int param0, th param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -188,7 +188,7 @@ final class q {
             }
             param1.a(24, 76, var2, 0);
             if (param0 < 25) {
-              field_a = (qi) null;
+              field_a = (BitmapFont) null;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -201,7 +201,7 @@ final class q {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

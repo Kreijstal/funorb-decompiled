@@ -3,75 +3,75 @@
  */
 import java.io.*;
 
-final class kh extends gd {
+final class kh extends TextFieldValidator {
     private String field_k;
     private boolean field_j;
     static String field_i;
-    static hj field_l;
+    static Sprite field_l;
     private qf field_m;
 
     final static void b(boolean param0) {
-        if (bk.field_w == 10) {
+        if (DiskCacheRequest.field_w == 10) {
           ka.a(-1);
-          bk.field_w = 11;
+          DiskCacheRequest.field_w = 11;
         } else {
           if (!ai.a(-91)) {
             ka.a(-1);
-            bk.field_w = 11;
+            DiskCacheRequest.field_w = 11;
           }
         }
         if (param0) {
-          field_l = (hj) null;
+          field_l = (Sprite) null;
         }
-        de.field_K = true;
+        DisplayNameForm.field_K = true;
     }
 
-    kh(nk param0, nk param1) {
+    kh(EditableTextField param0, EditableTextField param1) {
         super(param0);
         this.field_k = "";
         this.field_j = false;
         try {
           this.field_m = new qf(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static gn a(int param0, boolean param1, boolean param2, boolean param3, int param4, int param5) {
+    final static ResourceArchive a(int param0, boolean param1, boolean param2, boolean param3, int param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          rb var8 = null;
-          gn stackIn_4_0 = null;
-          gn stackIn_16_0 = null;
+          CachedArchiveProvider var8 = null;
+          ResourceArchive stackIn_4_0 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
             if (null != kl.field_v.field_u) {
-              td.field_g = new ud(kl.field_v.field_u, 5200, 0);
+              td.field_g = new BufferedRandomAccessFile(kl.field_v.field_u, 5200, 0);
               kl.field_v.field_u = null;
-              var6 = new sk(255, td.field_g, new ud(kl.field_v.field_h, 12000, 0), 2097152);
+              var6 = new DiskCacheStore(255, td.field_g, new BufferedRandomAccessFile(kl.field_v.field_h, 12000, 0), 2097152);
             }
             var7 = null;
             if (param4 != 10600) {
-              stackIn_4_0 = (gn) null;
+              stackIn_4_0 = (ResourceArchive) null;
               return stackIn_4_0;
             }
             if (null != td.field_g) {
               if (vb.field_a == null) {
-                vb.field_a = new ud[kl.field_v.field_g.length];
+                vb.field_a = new BufferedRandomAccessFile[kl.field_v.field_g.length];
               }
               if (vb.field_a[param0] == null) {
-                vb.field_a[param0] = new ud(kl.field_v.field_g[param0], 12000, 0);
+                vb.field_a[param0] = new BufferedRandomAccessFile(kl.field_v.field_g[param0], 12000, 0);
                 kl.field_v.field_g[param0] = null;
               }
-              var7 = new sk(param0, td.field_g, vb.field_a[param0], 2097152);
+              var7 = new DiskCacheStore(param0, td.field_g, vb.field_a[param0], 2097152);
             }
-            var8 = ra.field_Z.a(param0, param3, 113, (sk) (var6), (sk) (var7));
+            var8 = ra.field_Z.a(param0, param3, 113, (DiskCacheStore) (var6), (DiskCacheStore) (var7));
             if (param1) {
               var8.b((byte) -45);
             }
-            stackIn_16_0 = new gn(var8, param2, param5);
+            stackIn_16_0 = new ResourceArchive(var8, param2, param5);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class kh extends gd {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_l = null;
         if (param0 != 0) {
           kh.b(true);
@@ -113,10 +113,10 @@ final class kh extends gd {
             field_i = (String) null;
           }
           if (this.a(param0, (byte) 54) != g.field_k) {
-            stackIn_10_0 = pk.field_J;
+            stackIn_10_0 = LoginChoicePanel.field_J;
             return stackIn_10_0;
           }
-          stackIn_8_0 = gl.field_c;
+          stackIn_8_0 = IntHashTable.field_c;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,7 +128,7 @@ final class kh extends gd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -214,7 +214,7 @@ final class kh extends gd {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -25,7 +25,7 @@ final class ti extends pc {
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;
-        hj var5 = null;
+        Sprite var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -149,7 +149,7 @@ final class ti extends pc {
             var6 = -(this.field_a * 5) - 5 + (25 + this.field_r);
             var4 = (int)((double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)var6))));
           }
-          fl.a(qe.field_g[this.field_o].toUpperCase(), var4, 5, param0 - 1698, var5_int);
+          fl.a(SocketConnector.field_g[this.field_o].toUpperCase(), var4, 5, param0 - 1698, var5_int);
         }
         if (this.field_o == 0) {
           var4 = -140 + this.field_j;
@@ -160,17 +160,17 @@ final class ti extends pc {
           if (this.field_y == 3) {
             var4 = (int)((double)this.field_j * (Math.exp((double)(0.20000000298023224f * (float)(40 - this.field_w))) - 1.0) / (-1.0 + Math.exp(8.0))) - 140;
           }
-          tc.c(0, var4 + 100, 640, 5, 0, 128);
+          SoftwareRasterizer.c(0, var4 + 100, 640, 5, 0, 128);
           var5 = fd.field_e.a(8192);
           if (var5 != null) {
             var13 = new int[4];
-            tc.b(var13);
-            tc.e(0, var4, 640, var4 + 100);
+            SoftwareRasterizer.b(var13);
+            SoftwareRasterizer.e(0, var4, 640, var4 + 100);
             var7 = 0;
             do {
               if (var7 >= 11) {
-                tc.a(var13);
-                tc.b(0, -1 + var4, 640, 0);
+                SoftwareRasterizer.a(var13);
+                SoftwareRasterizer.b(0, -1 + var4, 640, 0);
                 break;
               }
               fd.field_e.a(8192).b(60 * var7, var4);
@@ -180,55 +180,55 @@ final class ti extends pc {
             var7 = 0;
             scanLoop1: while (true) {
               if (var7 < 11) {
-                tc.b(-16 + 64 * var7, var4, 32, 16777215);
-                tc.b(16 + 64 * var7, var4, 32, 16711680);
+                SoftwareRasterizer.b(-16 + 64 * var7, var4, 32, 16777215);
+                SoftwareRasterizer.b(16 + 64 * var7, var4, 32, 16711680);
                 stackIn_87_0 = 0;
                 if (var9 != 0) {
                   break scanLoop1;
                 }
                 var8 = stackIn_87_0;
                 while (var8 < 6) {
-                  tc.b(-17 + 64 * var7, var8 + var4 + 1, 32, 14737632);
-                  tc.b(15 + var7 * 64, 1 + var4 + var8, 32, 14680064);
+                  SoftwareRasterizer.b(-17 + 64 * var7, var8 + var4 + 1, 32, 14737632);
+                  SoftwareRasterizer.b(15 + var7 * 64, 1 + var4 + var8, 32, 14680064);
                   var8++;
                 }
-                tc.b(64 * var7 - 16, 7 + var4, 32, 8421504);
-                tc.b(16 + 64 * var7, 7 + var4, 32, 8388608);
+                SoftwareRasterizer.b(64 * var7 - 16, 7 + var4, 32, 8421504);
+                SoftwareRasterizer.b(16 + 64 * var7, 7 + var4, 32, 8388608);
                 var7++;
                 continue;
               }
-              tc.b(0, var4 + 8, 640, 0);
-              tc.b(0, 90 + var4, 640, 0);
+              SoftwareRasterizer.b(0, var4 + 8, 640, 0);
+              SoftwareRasterizer.b(0, 90 + var4, 640, 0);
               stackIn_87_0 = 0;
               break;
             }
             var7 = stackIn_87_0;
             scanLoop2: while (true) {
               if (var7 < 11) {
-                tc.b(var7 * 64, 91 + var4, 32, 16777215);
-                tc.b(var7 * 64 + 32, var4 + 91, 32, 16711680);
+                SoftwareRasterizer.b(var7 * 64, 91 + var4, 32, 16777215);
+                SoftwareRasterizer.b(var7 * 64 + 32, var4 + 91, 32, 16711680);
                 stackIn_98_0 = 0;
                 if (var9 != 0) {
                   break scanLoop2;
                 }
                 var8Lifetime1 = stackIn_98_0;
                 while (var8Lifetime1 < 6) {
-                  tc.b(var7 * 64 - 1, 92 + (var4 + var8Lifetime1), 32, 14737632);
-                  tc.b(31 + var7 * 64, 92 + var4 + var8Lifetime1, 32, 14680064);
+                  SoftwareRasterizer.b(var7 * 64 - 1, 92 + (var4 + var8Lifetime1), 32, 14737632);
+                  SoftwareRasterizer.b(31 + var7 * 64, 92 + var4 + var8Lifetime1, 32, 14680064);
                   var8Lifetime1++;
                 }
-                tc.b(var7 * 64, 98 + var4, 32, 8421504);
-                tc.b(var7 * 64 + 32, 98 + var4, 32, 8388608);
+                SoftwareRasterizer.b(var7 * 64, 98 + var4, 32, 8421504);
+                SoftwareRasterizer.b(var7 * 64 + 32, 98 + var4, 32, 8388608);
                 var7++;
                 continue;
               }
               stackIn_98_0 = 0;
               break;
             }
-            tc.b(stackIn_98_0, var4 + 99, 640, 0);
+            SoftwareRasterizer.b(stackIn_98_0, var4 + 99, 640, 0);
           }
           uk.field_a.d(207, -15 + var4, 128);
-          im.field_b.a(202, -20 + var4);
+          IterableNodeHashTable.field_b.a(202, -20 + var4);
         }
         oi.a(param0 ^ -56, this.field_o);
         return;
@@ -251,7 +251,7 @@ final class ti extends pc {
             regionExit3: {
               regionExit4: {
                 var4 = 132;
-                q.a(od.field_i[param0], HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
+                q.a(TextHotspotRange.field_i[param0], HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                 var4 += 40;
                 var5 = ImageProducerRasterBuffer.field_m % 180 / 5;
                 var6 = param0;
@@ -262,27 +262,27 @@ final class ti extends pc {
                   || var6 == 6
                   ) ? var6 : -1) {
                   case 0:
-                    wb.a(20, sk.field_f, 0, 0, 560, var4 - 20, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                    wb.a(20, DiskCacheStore.field_f, 0, 0, 560, var4 - 20, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                     var4 += 120;
                     q.a(am.field_c, HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                     var4 += 30;
-                    am.a(310 - param2, qm.field_a, true, HoldTheLine.field_F, var4, 1);
+                    am.a(310 - param2, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
                     am.a(-param2 + 310, ra.field_fb, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
                     am.a(310 - param2, fk.field_a, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    am.a(310 - param2, en.field_c, true, HoldTheLine.field_F, var4, 1);
+                    am.a(310 - param2, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    am.a(-param2 + 310, vm.field_xb, true, HoldTheLine.field_F, var4, 1);
+                    am.a(-param2 + 310, NameCheckProgressDialog.field_xb, true, HoldTheLine.field_F, var4, 1);
                     var4 -= 80;
                     ei.a(-param2 + 320, 1, b.field_a, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    ei.a(-param2 + 320, param1 ^ 1, pa.field_i, 0, var4, HoldTheLine.field_F);
+                    ei.a(-param2 + 320, param1 ^ 1, WhirlpoolHasher.field_i, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    ei.a(320 - param2, 1, gi.field_H, 0, var4, HoldTheLine.field_F);
+                    ei.a(320 - param2, 1, NameSuggestionsPanel.field_H, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    ei.a(320 - param2, 1, cf.field_t, 0, var4, HoldTheLine.field_F);
+                    ei.a(320 - param2, 1, StrongCacheEntry.field_t, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
                     ei.a(320 - param2, param1 + 1, kc.field_c, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
@@ -290,7 +290,7 @@ final class ti extends pc {
                       break regionExit1;
                     }
                   case 1:
-                    wb.a(20, vg.field_L, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                    wb.a(20, LoginForm.field_L, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                     if (var8 == 0) {
                       break regionExit2;
                     }
@@ -306,18 +306,18 @@ final class ti extends pc {
                           oi.field_a.b(-param2 + (168 - var6 * 20), 10 + (var4 + 5));
                           oi.field_a.b(408 - (param2 + 20 * var6), var4 + 10 + 5);
                           ha.field_k.a(16, var5, 9, 16).a(-(var6 * 20) + (-param2 + 170), -20 + (var4 + 7));
-                          pk.field_O.a(16, var5, param1 ^ 9, 16).a(-param2 + 410 - var6 * 20, 7 + var4 - 20);
+                          LoginChoicePanel.field_O.a(16, var5, param1 ^ 9, 16).a(-param2 + 410 - var6 * 20, 7 + var4 - 20);
                           na.field_q.a(16, var5, 9, 16).a(-(var6 * 20) - param2 + 170, 10 + (var4 + 7));
-                          cf.field_u.a(16, var5, param1 + 9, 16).a(-param2 + 410 - var6 * 20, 10 + (var4 + 7));
+                          StrongCacheEntry.field_u.a(16, var5, param1 + 9, 16).a(-param2 + 410 - var6 * 20, 10 + (var4 + 7));
                           var6++;
                           if (var8 == 0) {
                             continue;
                           }
                         } else {
-                          ei.a(200 - param2, param1 + 1, wn.field_k, 0, var4, HoldTheLine.field_F);
-                          ei.a(-param2 + 440, 1, gn.field_h, 0, var4, HoldTheLine.field_F);
+                          ei.a(200 - param2, param1 + 1, IsaacRandom.field_k, 0, var4, HoldTheLine.field_F);
+                          ei.a(-param2 + 440, 1, ResourceArchive.field_h, 0, var4, HoldTheLine.field_F);
                           var4 += 30;
-                          ei.a(200 - param2, 1, bf.field_a, 0, var4, HoldTheLine.field_F);
+                          ei.a(200 - param2, 1, AudioServiceThread.field_a, 0, var4, HoldTheLine.field_F);
                           ei.a(440 - param2, 1, HoldTheLine.field_B, 0, var4, HoldTheLine.field_F);
                           var4 += 30;
                         }
@@ -328,7 +328,7 @@ final class ti extends pc {
                       }
                     }
                   case 3:
-                    wb.a(20, ik.field_k, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                    wb.a(20, MusicPatchEnvelope.field_k, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, -1, 1, HoldTheLine.field_F);
                     var4 += 25;
                     var6 = 1;
                     {
@@ -344,7 +344,7 @@ final class ti extends pc {
                             oi.field_a.b(-param2 + (383 - var7 * 20), -20 + var4 - (-5 - 20 * var6));
                             oi.field_a.b(288 - param2 - var7 * 20, 20 * var6 + (60 + var4 + 5));
                             ha.field_k.a(16, var5, 9, 16).a(-(20 * var7) + (95 - param2), 20 * var6 + (var4 - 20 + 7));
-                            pk.field_O.a(16, var5, 9, 16).a(-param2 + (385 - 20 * var7), 7 + (-20 + var4) + 20 * var6);
+                            LoginChoicePanel.field_O.a(16, var5, 9, 16).a(-param2 + (385 - 20 * var7), 7 + (-20 + var4) + 20 * var6);
                             na.field_q.a(16, var5, param1 ^ 9, 16).a(290 - param2 - 20 * var7, var6 * 20 + var4 + 60 + 7);
                             var7++;
                           }
@@ -352,14 +352,14 @@ final class ti extends pc {
                           continue scanLoop6;
                         }
                         var4 += 20;
-                        ei.a(125 - param2, 1, bj.field_J, 0, var4, HoldTheLine.field_F);
+                        ei.a(125 - param2, 1, AccountTermsPanel.field_J, 0, var4, HoldTheLine.field_F);
                         ei.a(-param2 + 415, 1, uk.field_f, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        ei.a(-param2 + 125, 1, vg.field_K, 0, var4, HoldTheLine.field_F);
+                        ei.a(-param2 + 125, 1, LoginForm.field_K, 0, var4, HoldTheLine.field_F);
                         ei.a(-param2 + 415, param1 + 1, ga.field_h, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
                         ei.a(-param2 + 125, 1, oa.field_o, 0, var4, HoldTheLine.field_F);
-                        ei.a(-param2 + 415, 1, sg.field_K, 0, var4, HoldTheLine.field_F);
+                        ei.a(-param2 + 415, 1, RaceWorld.field_K, 0, var4, HoldTheLine.field_F);
                         var4 += 40;
                         ei.a(320 - param2, 1, wl.field_e, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
@@ -370,7 +370,7 @@ final class ti extends pc {
                         stackIn_37_0 = 20;
                         break;
                       }
-                      wb.a(stackIn_37_0, mk.field_o, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
+                      wb.a(stackIn_37_0, NanoTickClock.field_o, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
                       if (var8 == 0) {
                         break regionExit2;
                       }
@@ -391,7 +391,7 @@ final class ti extends pc {
                 var4 += 80;
                 wb.a(20, wb.field_b, 0, 0, 560, var4 - 20, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
-                wb.a(20, ub.field_D, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                wb.a(20, SingleChildWidget.field_D, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
                 if (var8 == 0) {
                   break regionExit2;
@@ -403,22 +403,22 @@ final class ti extends pc {
               q.a(o.field_a, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
               var4 += 20;
               q.a(gm.field_a, HoldTheLine.field_F, 2, -param2 + 160, (byte) -128, var4);
-              q.a(im.field_f, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
+              q.a(IterableNodeHashTable.field_f, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
               q.a(m.field_b, HoldTheLine.field_F, 1, -param2 + 320, (byte) -127, var4);
               var4 += 40;
-              am.a(-param2 + 200, qm.field_a, true, HoldTheLine.field_F, var4, 1);
+              am.a(-param2 + 200, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
               am.a(-param2 + 200, ra.field_fb, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
               am.a(-param2 + 200, fk.field_a, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              am.a(-param2 + 200, en.field_c, true, HoldTheLine.field_F, var4, 1);
+              am.a(-param2 + 200, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              am.a(200 - param2, cc.field_A, true, HoldTheLine.field_F, var4, 1);
+              am.a(200 - param2, NetworkArchiveRequest.field_A, true, HoldTheLine.field_F, var4, 1);
               var4 -= 80;
-              ei.a(440 - param2, 1, dj.field_H, 1, var4, HoldTheLine.field_F);
+              ei.a(440 - param2, 1, LabeledField.field_H, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              ei.a(-param2 + 440, param1 ^ 1, p.field_f, 1, var4, HoldTheLine.field_F);
+              ei.a(-param2 + 440, param1 ^ 1, IndexedSpriteState.field_f, 1, var4, HoldTheLine.field_F);
               var4 += 20;
               ei.a(-param2 + 440, 1, vd.field_e, 1, var4, HoldTheLine.field_F);
               var4 += 20;
@@ -428,11 +428,11 @@ final class ti extends pc {
               var4 -= 80;
               q.a(b.field_a, HoldTheLine.field_F, 0, -param2 + 320, (byte) -128, var4);
               var4 += 20;
-              q.a(pa.field_i, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              q.a(WhirlpoolHasher.field_i, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.a(gi.field_H, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              q.a(NameSuggestionsPanel.field_H, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.a(cf.field_t, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              q.a(StrongCacheEntry.field_t, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
               q.a(kc.field_c, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
@@ -454,14 +454,14 @@ final class ti extends pc {
         var3 = em.field_i[this.field_o][param0];
         if (18 == var3) {
           if (aa.field_n == 102) {
-            ol.field_d = 0;
+            SecondaryNodeDeque.field_d = 0;
             decompiledFrameRemainder1 = (var4 != 0);
           }
           if (decompiledFrameRemainder1) {
             if ((aa.field_n == 103) &&
-              (decompiledFrameRemainder1 = !(256 <= ol.field_d))) {
-              ol.field_d = 256;
-              qf.a(293, cf.field_r);
+              (decompiledFrameRemainder1 = !(256 <= SecondaryNodeDeque.field_d))) {
+              SecondaryNodeDeque.field_d = 256;
+              qf.a(293, StrongCacheEntry.field_r);
               decompiledFrameRemainder1 = (var4 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -519,7 +519,7 @@ final class ti extends pc {
         }
         cg.a(-var2 + 40, 140, 560, (byte) 41, 200);
         int var3 = 170;
-        nm.field_c.b(nc.field_b, 320 - var2, var3, 2, -1);
+        nm.field_c.b(NodeHashTableIterator.field_b, 320 - var2, var3, 2, -1);
         var3 += 40;
         wb.a(20, ko.field_a, 0, 0, 560, -20 + var3, 40 - var2, -var3 + 414, -1, 1, HoldTheLine.field_F);
         if (param0 != 29280) {
@@ -542,20 +542,20 @@ final class ti extends pc {
         if (this.field_y > 2) {
           var3 = 640;
         }
-        tn.field_a = this.a(rf.field_X, (byte) -128, nc.field_g, var3);
+        tn.field_a = this.a(rf.field_X, (byte) -128, NodeHashTableIterator.field_g, var3);
         if (tn.field_a != -1) {
           ci.a(0, (byte) 118, this.field_o, tn.field_a);
         }
-        ci.field_j = this.a(rf.field_X, param0 + 5465, nc.field_g, var3);
-        if (gg.field_J == 1) {
-          qf.a(293, cf.field_r);
+        ci.field_j = this.a(rf.field_X, param0 + 5465, NodeHashTableIterator.field_g, var3);
+        if (ValidationIndicator.field_J == 1) {
+          qf.a(293, StrongCacheEntry.field_r);
           if (tn.field_a != -1 &&
             ~tn.field_a != ~ha.field_p) {
-            if (pj.field_m != en.field_b ||
+            if (pj.field_m != GameKeyHandler.field_b ||
               ha.field_p != wa.field_j) {
               this.field_t = this.field_t - 640.0f;
               wa.field_j = ha.field_p;
-              en.field_b = pj.field_m;
+              GameKeyHandler.field_b = pj.field_m;
             }
             this.field_p = 640;
             ha.field_p = tn.field_a;
@@ -595,12 +595,12 @@ final class ti extends pc {
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    t.field_l = go.field_g[kn.b((byte) -49).field_p][1];
+                    t.field_l = go.field_g[ArchiveIndex.b((byte) -49).field_p][1];
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  t.field_l = go.field_g[kn.b((byte) -49).field_p][0];
+                  t.field_l = go.field_g[ArchiveIndex.b((byte) -49).field_p][0];
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
@@ -608,12 +608,12 @@ final class ti extends pc {
           }
           if (decompiledFrameRemainder0) {
             if ((this.field_c != 0) &&
-              (decompiledFrameRemainder0 = (bl.field_r != null))) {
+              (decompiledFrameRemainder0 = (MusicPatchPcmStream.field_r != null))) {
               if (t.field_l != -1) {
-                bl.field_r.field_C[0].a(20385, ge.field_c[t.field_l]);
+                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[t.field_l]);
               }
               wm.a(false, false, -1);
-              qf.a(293, cf.field_r);
+              qf.a(293, StrongCacheEntry.field_r);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -705,12 +705,12 @@ final class ti extends pc {
             var9 = var6 * 30 / 16;
             var10 = 22 + param0;
             var11 = var10 - var9;
-            tc.b(var7 + var9 / 2, -1 + var11, 10, 0);
+            SoftwareRasterizer.b(var7 + var9 / 2, -1 + var11, 10, 0);
             stackIn_39_0 = 1;
             if (var13 == 0) {
               var12 = stackIn_39_0;
               while (var12 <= var9) {
-                tc.b(var7 + (var12 / 2 - 1), -var12 + var10, 1, 0);
+                SoftwareRasterizer.b(var7 + (var12 / 2 - 1), -var12 + var10, 1, 0);
                 stackIn_47_0 = var12 / 2 + var7;
                 stackIn_47_1 = var10 - var12;
                 stackIn_47_2 = 2;
@@ -721,7 +721,7 @@ final class ti extends pc {
                 } else {
                   stackIn_12_3 = 8421504;
                 }
-                tc.b(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_12_3);
+                SoftwareRasterizer.b(stackIn_47_0, stackIn_47_1, stackIn_47_2, stackIn_12_3);
                 stackIn_16_0 = 2 + (var7 + var12 / 2);
                 stackIn_16_1 = var10 - var12;
                 stackIn_16_2 = 6;
@@ -738,11 +738,11 @@ final class ti extends pc {
                     stackIn_19_3 = 8421504;
                   }
                 }
-                tc.b(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_19_3);
-                tc.b(8 + (var12 / 2 + var7), -var12 + var10, 1, 0);
+                SoftwareRasterizer.b(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_19_3);
+                SoftwareRasterizer.b(8 + (var12 / 2 + var7), -var12 + var10, 1, 0);
                 var12++;
               }
-              tc.b(-1 + var7, var10, 10, 0);
+              SoftwareRasterizer.b(-1 + var7, var10, 10, 0);
               if (var7 <= var5 &&
                 var5 < var8) {
                 var12Lifetime1 = 1;
@@ -750,7 +750,7 @@ final class ti extends pc {
                   stackIn_4_0 = var5;
                   stackIn_4_1 = 2 + var7;
                   if (stackIn_4_0 < stackIn_4_1) {
-                    tc.b(var5 + var12Lifetime1 / 2, var10 - var12Lifetime1, var7 + (2 - var5), 4210752);
+                    SoftwareRasterizer.b(var5 + var12Lifetime1 / 2, var10 - var12Lifetime1, var7 + (2 - var5), 4210752);
                     stackIn_30_0 = var12Lifetime1 / 2 + (var7 + 2);
                     stackIn_30_1 = var10 - var12Lifetime1;
                     stackIn_30_2 = 6;
@@ -759,7 +759,7 @@ final class ti extends pc {
                     } else {
                       stackIn_31_3 = 4210752;
                     }
-                    tc.b(stackIn_30_0, stackIn_30_1, stackIn_30_2, stackIn_31_3);
+                    SoftwareRasterizer.b(stackIn_30_0, stackIn_30_1, stackIn_30_2, stackIn_31_3);
                   } else {
                     stackIn_34_0 = var5 + var12Lifetime1 / 2;
                     stackIn_34_1 = -var12Lifetime1 + var10;
@@ -769,7 +769,7 @@ final class ti extends pc {
                     } else {
                       stackIn_35_3 = 8421504;
                     }
-                    tc.b(stackIn_34_0, stackIn_34_1, stackIn_34_2, stackIn_35_3);
+                    SoftwareRasterizer.b(stackIn_34_0, stackIn_34_1, stackIn_34_2, stackIn_35_3);
                   }
                   var12Lifetime1++;
                 }
@@ -785,7 +785,7 @@ final class ti extends pc {
             if (var6 >= 4) {
               return;
             }
-            tc.b(-var6 + (param3 + param2) - 7, param0 + (var6 + 22), 1 + var6 * 2, 16711680);
+            SoftwareRasterizer.b(-var6 + (param3 + param2) - 7, param0 + (var6 + 22), 1 + var6 * 2, 16711680);
             var6++;
             if (var13 != 0) {
               return;
@@ -804,7 +804,7 @@ final class ti extends pc {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
-        hj var6 = null;
+        Sprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -814,7 +814,7 @@ final class ti extends pc {
         int var5Lifetime1;
         var12 = HoldTheLine.field_D;
         cg.a(60, 101, 520, (byte) 41, 320);
-        qe.field_a = 0;
+        SocketConnector.field_a = 0;
         var2 = 160;
         var3 = 125;
         var4 = 0;
@@ -826,10 +826,10 @@ final class ti extends pc {
         while (!(decompiledNaturalLoopExit0 = (var5 >= 16))) {
           var6_int = e.field_d[var5];
           stackIn_10_0 = 0;
-          stackIn_10_1 = 1 << var6_int & ii.field_c;
+          stackIn_10_1 = 1 << var6_int & ClientException.field_c;
           if (var12 == 0) {
             if (stackIn_10_0 != stackIn_10_1) {
-              this.a(true, var6_int, vl.field_h[var6_int], var3, 12, var2);
+              this.a(true, var6_int, SecondaryNodeDequeIterator.field_h[var6_int], var3, 12, var2);
               var2 += 40;
               var4++;
               if (9 == var4) {
@@ -849,7 +849,7 @@ final class ti extends pc {
         if (stackIn_10_0 != stackIn_10_1) {
           stackIn_13_0 = ok.field_e;
         } else {
-          stackIn_13_0 = v.field_E;
+          stackIn_13_0 = WidgetContainer.field_E;
         }
         var5Lifetime1 = stackIn_13_0;
         if (-1 != var5Lifetime1) {
@@ -886,7 +886,7 @@ final class ti extends pc {
           }
           wb.a(stackIn_25_0, lf.field_j[var5Lifetime1], 0, 0, 400, 362, 120, 80, param0 + 17, 1, HoldTheLine.field_F);
         }
-        fl.a(p.field_b, 0, 0, -1753, 448);
+        fl.a(IndexedSpriteState.field_b, 0, 0, -1753, 448);
         return;
     }
 
@@ -938,7 +938,7 @@ final class ti extends pc {
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        hj var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -954,7 +954,7 @@ final class ti extends pc {
           this.f((byte) -103);
         }
         cg.a(60 - param1, 101, 520, (byte) 41, 320);
-        qe.field_a = 0;
+        SocketConnector.field_a = 0;
         var3 = 156;
         var4 = 125;
         var5 = 0;
@@ -967,7 +967,7 @@ final class ti extends pc {
           if (var13 == 0) {
             if (stackIn_7_0) {
               var7_int = e.field_d[var6];
-              this.a(true, var7_int, vl.field_h[var7_int], var4, 12, -param1 + var3);
+              this.a(true, var7_int, SecondaryNodeDequeIterator.field_h[var7_int], var4, 12, -param1 + var3);
               var3 += 46;
               var5++;
               if (var5 == 8) {
@@ -989,7 +989,7 @@ final class ti extends pc {
         if (stackIn_15_0 != ~ok.field_e) {
           stackIn_18_0 = ok.field_e;
         } else {
-          stackIn_18_0 = v.field_E;
+          stackIn_18_0 = WidgetContainer.field_E;
         }
         var6Lifetime1 = stackIn_18_0;
         if (var6Lifetime1 != -1) {
@@ -1026,7 +1026,7 @@ final class ti extends pc {
             break;
           }
           if (stackIn_29_0 != stackIn_29_1) {
-            q.a(ln.field_j, HoldTheLine.field_F, 1, 320 - param1, (byte) -127, 357);
+            q.a(DualLinkNode.field_j, HoldTheLine.field_F, 1, 320 - param1, (byte) -127, 357);
           }
           if ((stackIn_29_0 == stackIn_29_1 ||
             var13 != 0) &&
@@ -1039,10 +1039,10 @@ final class ti extends pc {
         if ((var6Lifetime1 == -1 ||
           var13 != 0) &&
           pj.b((byte) 104)) {
-          q.a(nk.field_M, HoldTheLine.field_F, 0, 320 - param1, (byte) -127, 270);
+          q.a(EditableTextField.field_M, HoldTheLine.field_F, 0, 320 - param1, (byte) -127, 270);
           q.a(ue.field_b, HoldTheLine.field_F, 0, 320 - param1, (byte) -128, 290);
         }
-        fl.a(p.field_b, param1, 0, -1753, 448);
+        fl.a(IndexedSpriteState.field_b, param1, 0, -1753, 448);
         return;
     }
 
@@ -1057,10 +1057,10 @@ final class ti extends pc {
           discarded$1 = this.b(123, -77, -90);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (hn.field_T) {
+        if (CurvedRoadSegment.field_T) {
           stackIn_5_0 = -86;
           stackIn_6_1 = !(param1);
-          var3 = pd.$cfr$intArgs$a$b925f3f4834c(stackIn_5_0, stackIn_6_1);
+          var3 = pd.updateMembershipSlidesWithIntGuard(stackIn_5_0, stackIn_6_1);
           switch (var3) {
             default:
               break;
@@ -1075,25 +1075,25 @@ final class ti extends pc {
                 break;
               }
             case 3:
-              ch.a(en.a(99), (byte) 65);
+              MusicPatch.a(GameKeyHandler.a(99), (byte) 65);
               break;
           }
           decompiledFrameRemainder0 = (var4 != 0);
         }
         if (decompiledFrameRemainder0) {
           kc.field_a.a(180);
-          rm.field_A.a(param0 + 8192);
-          jf.field_a.a(8192);
+          TextButton.field_A.a(param0 + 8192);
+          MouseWheelInput.field_a.a(8192);
           bo.field_d.a(8192);
           if (kc.field_a.a((byte) 127) &&
-            rm.field_A.b((byte) 10) &&
-            jf.field_a.b((byte) 10) && bo.field_d.b((byte) 10)) {
-            gd.a(di.field_w, rm.field_A.field_b, 0);
-            wj.a(0, 19189, 80, 20, 50, 0, -1500, jf.field_a.field_b, 80);
+            TextButton.field_A.b((byte) 10) &&
+            MouseWheelInput.field_a.b((byte) 10) && bo.field_d.b((byte) 10)) {
+            TextFieldValidator.a(SpriteState.field_w, TextButton.field_A.field_b, 0);
+            Js5Transport.a(0, 19189, 80, 20, 50, 0, -1500, MouseWheelInput.field_a.field_b, 80);
             te.a(param0 - 4, kc.field_a.field_i);
             nm.a(bo.field_d.field_b, 22210);
             NetworkGameClient.a(true, true);
-            hn.field_T = true;
+            CurvedRoadSegment.field_T = true;
           }
         }
 
@@ -1103,11 +1103,11 @@ final class ti extends pc {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        hj stackIn_18_0 = null;
+        Sprite stackIn_18_0 = null;
         int var7;
         int var8;
         int var9;
-        hj var10;
+        Sprite var10;
         int var11;
         var11 = HoldTheLine.field_D;
         stackIn_3_0 = (0 == (1 << param1 & field_z)) ? 0 : 1;
@@ -1164,11 +1164,11 @@ final class ti extends pc {
           pe.a(param2, 4209, param5, param3);
         }
         if (param0) {
-          dm.field_e[qe.field_a] = param5;
-          co.field_d[qe.field_a] = param3;
-          kn.field_b[qe.field_a] = param2;
-          nk.field_J[qe.field_a] = param1;
-          qe.field_a = qe.field_a + 1;
+          dm.field_e[SocketConnector.field_a] = param5;
+          co.field_d[SocketConnector.field_a] = param3;
+          ArchiveIndex.field_b[SocketConnector.field_a] = param2;
+          EditableTextField.field_J[SocketConnector.field_a] = param1;
+          SocketConnector.field_a = SocketConnector.field_a + 1;
         }
     }
 
@@ -1176,7 +1176,7 @@ final class ti extends pc {
         if (param0 != 117) {
           return;
         }
-        qf.a(293, cf.field_r);
+        qf.a(293, StrongCacheEntry.field_r);
         this.a(param1, param2, param0 ^ -95);
     }
 
@@ -1190,12 +1190,12 @@ final class ti extends pc {
     }
 
     private final void f(byte param0) {
-        v.field_E = this.b(-21, nc.field_g, rf.field_X);
-        if (gg.field_J == 1) {
-          qf.a(293, cf.field_r);
-          if (~ok.field_e != ~v.field_E) {
-            if (v.field_E != -1) {
-              ok.field_e = v.field_E;
+        WidgetContainer.field_E = this.b(-21, NodeHashTableIterator.field_g, rf.field_X);
+        if (ValidationIndicator.field_J == 1) {
+          qf.a(293, StrongCacheEntry.field_r);
+          if (~ok.field_e != ~WidgetContainer.field_E) {
+            if (WidgetContainer.field_E != -1) {
+              ok.field_e = WidgetContainer.field_E;
               if (HoldTheLine.field_D != 0) {
                 ok.field_e = -1;
               }
@@ -1228,7 +1228,7 @@ final class ti extends pc {
         var3 = 0;
         do {
           if (var3 >= this.field_q.length) {
-            bd.field_S = -20;
+            ValidationHelpWidget.field_S = -20;
             ImageProducerRasterBuffer.field_m = 0;
             break;
           }
@@ -1255,9 +1255,9 @@ final class ti extends pc {
         if (decompiledFrameCompleted0) {
           stackIn_21_1 = !(param0);
           this.field_g = stackIn_21_1;
-          v.field_E = -1;
+          WidgetContainer.field_E = -1;
           this.field_t = 0.0f;
-          ca.field_s = 0;
+          ArchiveRequest.field_s = 0;
           qd.field_h = 2;
           this.field_p = 0;
           ci.field_j = -1;
@@ -1269,16 +1269,16 @@ final class ti extends pc {
           stackIn_26_1 = 1;
         }
         this.field_c = stackIn_26_1;
-        qe.field_a = 0;
+        SocketConnector.field_a = 0;
         ok.field_e = -1;
         g.field_o = 0;
         this.field_v = -1;
         if (this.field_o == 0 &&
-          cf.field_v != -1) {
-          this.field_c = cf.field_v;
+          StrongCacheEntry.field_v != -1) {
+          this.field_c = StrongCacheEntry.field_v;
         }
         this.a((byte) 117);
-        var3 = cf.field_w;
+        var3 = StrongCacheEntry.field_w;
         array$0 = new String[1][];
         stackIn_31_0 = array$0;
         stackIn_31_1 = array$0;
@@ -1294,7 +1294,7 @@ final class ti extends pc {
             }
           }
         } else {
-          stackIn_36_3 = v.field_A[var3];
+          stackIn_36_3 = WidgetContainer.field_A[var3];
         }
         stackIn_31_1[stackIn_31_2] = stackIn_36_3;
         om.a(stackIn_31_0, 79, this.field_o);
@@ -1304,12 +1304,12 @@ final class ti extends pc {
         var4 = 0;
         do {
           if (var4 >= 16) {
-            if (!hn.field_T) {
+            if (!CurvedRoadSegment.field_T) {
               return;
             }
             break;
           }
-          vl.field_h[var4] = 32;
+          SecondaryNodeDequeIterator.field_h[var4] = 32;
           var4++;
         } while (var5 == 0);
         NetworkGameClient.a(param0, true);
@@ -1354,12 +1354,12 @@ final class ti extends pc {
               break;
             }
           case 24:
-            fieldTemp$1 = ca.field_s + 1;
-            ca.field_s = ca.field_s + 1;
+            fieldTemp$1 = ArchiveRequest.field_s + 1;
+            ArchiveRequest.field_s = ArchiveRequest.field_s + 1;
             if (fieldTemp$1 <= 3) {
               break;
             }
-            ca.field_s = 0;
+            ArchiveRequest.field_s = 0;
             if (var4 == 0) {
               break;
             }
@@ -1367,7 +1367,7 @@ final class ti extends pc {
             fieldTemp$2 = qd.field_h + 1;
             qd.field_h = qd.field_h + 1;
             stackIn_24_0 = ~fieldTemp$2;
-            if (ih.field_p != -1 + od.field_i.length) {
+            if (ih.field_p != -1 + TextHotspotRange.field_i.length) {
               stackIn_25_1 = 2;
             } else {
               stackIn_25_1 = 1;
@@ -1381,24 +1381,24 @@ final class ti extends pc {
               break;
             }
           case 18:
-            if (ol.field_d >= 224) {
-              if (ol.field_d >= 256) {
+            if (SecondaryNodeDeque.field_d >= 224) {
+              if (SecondaryNodeDeque.field_d >= 256) {
                 break;
               }
-              ol.field_d = 256;
-              qf.a(293, cf.field_r);
+              SecondaryNodeDeque.field_d = 256;
+              qf.a(293, StrongCacheEntry.field_r);
               if (var4 == 0) {
                 break;
               }
             }
-            ol.field_d = 32 * (1 + ol.field_d * 8 / 256);
-            qf.a(293, cf.field_r);
+            SecondaryNodeDeque.field_d = 32 * (1 + SecondaryNodeDeque.field_d * 8 / 256);
+            qf.a(293, StrongCacheEntry.field_r);
             if (var4 == 0) {
               break;
             }
           case 19:
-            if (mk.field_e < 140) {
-              ll.a(-108, 20 * (8 * mk.field_e / 160) + 20);
+            if (NanoTickClock.field_e < 140) {
+              ll.a(-108, 20 * (8 * NanoTickClock.field_e / 160) + 20);
               if (var4 == 0) {
                 break;
               }
@@ -1408,7 +1408,7 @@ final class ti extends pc {
               break;
             }
           case 21:
-            qf.a(293, cf.field_r);
+            qf.a(293, StrongCacheEntry.field_r);
             stackIn_45_0 = !(em.field_o);
             em.field_o = stackIn_45_0;
             this.field_q[param1] = 50;
@@ -1562,7 +1562,7 @@ final class ti extends pc {
                                               break regionExit2;
                                             }
                                           }
-                                          if (null == kf.field_U) {
+                                          if (null == MidiPcmStream.field_U) {
                                             oe.b((byte) 108);
                                             if (var7 == 0) {
                                               break regionExit2;
@@ -1588,12 +1588,12 @@ final class ti extends pc {
                                           break regionExit2;
                                         }
                                       }
-                                      wm.a(param1, false, lm.field_a);
+                                      wm.a(param1, false, TextLayout.field_a);
                                       if (var7 == 0) {
                                         break regionExit2;
                                       }
                                     }
-                                    bl.field_r.field_mb = -1;
+                                    MusicPatchPcmStream.field_r.field_mb = -1;
                                     qn.a(7, param1, true);
                                     if (var7 == 0) {
                                       break regionExit2;
@@ -1636,14 +1636,14 @@ final class ti extends pc {
                             }
                             if (this.field_o == 9) {
                               if (DelegatingCanvas.field_d == 7) {
-                                stackIn_97_0 = (ii.field_c == 0) ? 3 : 7;
+                                stackIn_97_0 = (ClientException.field_c == 0) ? 3 : 7;
                                 var6 = stackIn_97_0;
                                 if (var7 != 0) {
-                                  stackIn_101_0 = (0 != ii.field_c) ? 8 : 12;
+                                  stackIn_101_0 = (0 != ClientException.field_c) ? 8 : 12;
                                   var6 = stackIn_101_0;
                                 }
                               } else {
-                                stackIn_101_0 = (0 != ii.field_c) ? 8 : 12;
+                                stackIn_101_0 = (0 != ClientException.field_c) ? 8 : 12;
                                 var6 = stackIn_101_0;
                               }
                               qf.a(var6, true, 3865, param1);
@@ -1651,7 +1651,7 @@ final class ti extends pc {
                                 break regionExit2;
                               }
                             }
-                            ch.a(en.a(98), (byte) 47);
+                            MusicPatch.a(GameKeyHandler.a(98), (byte) 47);
                             if (var7 == 0) {
                               break regionExit2;
                             }
@@ -1668,30 +1668,30 @@ final class ti extends pc {
                         }
                         eb.field_o = null;
                         field_z = 0;
-                        ii.field_c = 0;
+                        ClientException.field_c = 0;
                         wm.a(param1, false, 12);
                         if (var7 == 0) {
                           break regionExit2;
                         }
                       }
-                      if (-1 == ca.field_s &&
+                      if (-1 == ArchiveRequest.field_s &&
                         var7 == 0) {
                         break regionExit2;
                       }
-                      if (ca.field_s == 0) {
+                      if (ArchiveRequest.field_s == 0) {
                         this.a(0, param1, -125);
                         if (var7 == 0) {
                           break regionExit2;
                         }
                       }
-                      var5 = -1 + ca.field_s;
+                      var5 = -1 + ArchiveRequest.field_s;
                       if (~var5 == ~pj.field_m) {
                         break regionExit2;
                       }
-                      if (~en.field_b != ~pj.field_m ||
+                      if (~GameKeyHandler.field_b != ~pj.field_m ||
                         ~ha.field_p != ~wa.field_j) {
                         this.field_t = this.field_t - 640.0f;
-                        en.field_b = pj.field_m;
+                        GameKeyHandler.field_b = pj.field_m;
                         wa.field_j = ha.field_p;
                       }
                       pj.field_m = var5;
@@ -1718,7 +1718,7 @@ final class ti extends pc {
                       if (qd.field_h != 1) {
                         break regionExit1;
                       }
-                      wm.a(param1, false, lm.field_a);
+                      wm.a(param1, false, TextLayout.field_a);
                       if (var7 == 0) {
                         break regionExit2;
                       }
@@ -1743,7 +1743,7 @@ final class ti extends pc {
                       break regionExit2;
                     }
                   }
-                  hf.c(0);
+                  ProxySocketConnector.c(0);
                   if (var7 == 0) {
                     break regionExit2;
                   }
@@ -1758,7 +1758,7 @@ final class ti extends pc {
                     }
                   }
                   if (pj.b((byte) 108)) {
-                    if (0 != ii.field_c ||
+                    if (0 != ClientException.field_c ||
                       ad.field_a) {
                       wm.a(param1, false, 9);
                       if (var7 == 0) {
@@ -1770,7 +1770,7 @@ final class ti extends pc {
                       break regionExit2;
                     }
                   }
-                  if (ii.field_c == 0) {
+                  if (ClientException.field_c == 0) {
                     stackIn_160_0 = param1;
                     stackIn_160_1 = false;
                     if (of.a(-969)) {
@@ -1794,7 +1794,7 @@ final class ti extends pc {
                     break regionExit2;
                   }
                 }
-                if (ii.field_c == 0) {
+                if (ClientException.field_c == 0) {
                   wm.a(param1, false, 3);
                   if (var7 == 0) {
                     break regionExit2;
@@ -1805,7 +1805,7 @@ final class ti extends pc {
                   break regionExit2;
                 }
               }
-              hf.c(0);
+              ProxySocketConnector.c(0);
               if (var7 == 0) {
                 break regionExit2;
               }
@@ -1820,29 +1820,29 @@ final class ti extends pc {
           return;
         }
         mc.field_a = new om[73];
-        mc.field_a[1] = new om(5, 543, cf.field_u, i.field_j, -1);
+        mc.field_a[1] = new om(5, 543, StrongCacheEntry.field_u, i.field_j, -1);
         mc.field_a[2] = new om(5, 540, ha.field_k, i.field_j, -1);
-        mc.field_a[3] = new om(5, 541, pk.field_O, i.field_j, -1);
+        mc.field_a[3] = new om(5, 541, LoginChoicePanel.field_O, i.field_j, -1);
         mc.field_a[4] = new om(5, 542, na.field_q, i.field_j, -1);
         mc.field_a[5] = new om(12, 6, 352, 0);
         mc.field_a[6] = new om(12, 6, 352, 0);
         mc.field_a[7] = new om(12, 6, 352, 0);
         mc.field_a[8] = new om(12, 6, 352, 0);
-        mc.field_a[9] = new om(4, 1180, wn.field_f, fh.field_d, -1);
+        mc.field_a[9] = new om(4, 1180, IsaacRandom.field_f, fh.field_d, -1);
         mc.field_a[10] = null;
         mc.field_a[11] = new om(4, 8300, wb.field_d, ao.field_d, -1);
-        mc.field_a[12] = new om(10, 0, qb.field_b, 2);
+        mc.field_a[12] = new om(10, 0, DiskCacheWorker.field_b, 2);
         mc.field_a[13] = new om(15, 0, t.field_i, 2);
         mc.field_a[14] = new om(20, 0, cd.field_d, 2);
         mc.field_a[15] = new om(25, 0, ci.field_k, 2);
-        mc.field_a[16] = new om(40, 0, ud.field_o, 2);
-        mc.field_a[17] = new om(25, 50, 524320, ub.field_A, 0);
+        mc.field_a[16] = new om(40, 0, BufferedRandomAccessFile.field_o, 2);
+        mc.field_a[17] = new om(25, 50, 524320, SingleChildWidget.field_A, 0);
         mc.field_a[18] = new om(25, 50, 524320, aj.field_c, 0);
-        mc.field_a[19] = new om(25, 50, 524320, jf.field_c, 0);
+        mc.field_a[19] = new om(25, 50, 524320, MouseWheelInput.field_c, 0);
         mc.field_a[20] = new om(15, 30, 32, ie.field_k, 0);
         mc.field_a[21] = new om(15, 30, 32, sj.field_I, 0);
-        mc.field_a[22] = new om(15, 30, 32, ch.field_u, 0);
-        mc.field_a[23] = new om(10, 10, 16384, bl.field_s, 0);
+        mc.field_a[22] = new om(15, 30, 32, MusicPatch.field_u, 0);
+        mc.field_a[23] = new om(10, 10, 16384, MusicPatchPcmStream.field_s, 0);
         mc.field_a[24] = new om(5, 0, vh.field_i, 0);
         mc.field_a[25] = new om(5, 0, ae.field_b, 0);
         mc.field_a[26] = new om(5, 0, ma.field_l, 0);
@@ -1850,39 +1850,39 @@ final class ti extends pc {
         mc.field_a[28] = new om(80, 4, 32, pd.field_h, 1);
         mc.field_a[29] = new om(10, 0, aj.field_a, -1);
         mc.field_a[30] = new om(15, 25, 16416, gh.field_a, 0);
-        mc.field_a[31] = new om(15, 25, 16416, ag.field_r, 0);
-        mc.field_a[32] = new om(10, 0, 16384, w.field_a, 2);
-        mc.field_a[33] = new om(15, 0, 16384, n.field_r, 2);
-        mc.field_a[34] = new om(20, 0, 16384, tf.field_o, 2);
+        mc.field_a[31] = new om(15, 25, 16416, SocketJs5Transport.field_r, 0);
+        mc.field_a[32] = new om(10, 0, 16384, TickClock.field_a, 2);
+        mc.field_a[33] = new om(15, 0, 16384, UiWidget.field_r, 2);
+        mc.field_a[34] = new om(20, 0, 16384, MusicCrossfadeStream.field_o, 2);
         mc.field_a[35] = new om(15, 0, 16384, aa.field_q, 2);
         mc.field_a[36] = new om(20, 0, 16384, kc.field_d, 2);
         mc.field_a[37] = new om(25, 0, 16384, nd.field_c, 2);
         mc.field_a[38] = new om(50, 50, 16416, ig.field_t, ko.field_c, 0);
-        mc.field_a[39] = new om(5, 0, n.field_j, 0);
+        mc.field_a[39] = new om(5, 0, UiWidget.field_j, 0);
         mc.field_a[40] = new om(5, 0, mo.field_r, 0);
-        mc.field_a[41] = new om(10, 10, 65568, gi.field_J, 0);
+        mc.field_a[41] = new om(10, 10, 65568, NameSuggestionsPanel.field_J, 0);
         mc.field_a[42] = new om(10, 10, 65568, gk.field_b, 0);
         mc.field_a[43] = new om(10, 10, 16384, om.field_i, 0);
         if (param0) {
           return;
         }
-        mc.field_a[44] = new om(15, 15, 16384, en.field_e, 0);
+        mc.field_a[44] = new om(15, 15, 16384, GameKeyHandler.field_e, 0);
         mc.field_a[45] = new om(20, 20, 16384, q.field_d, 0);
         mc.field_a[46] = new om(10, 16384, co.field_b, 2);
-        mc.field_a[47] = new om(15, 16384, tf.field_A, 2);
+        mc.field_a[47] = new om(15, 16384, MusicCrossfadeStream.field_A, 2);
         mc.field_a[48] = new om(20, 16384, uk.field_b, 2);
         mc.field_a[49] = new om(25, 16384, ac.field_c, 2);
         mc.field_a[50] = new om(40, 16384, ri.field_a, 2);
         mc.field_a[51] = new om(15, 32, ci.field_l, 0);
         mc.field_a[52] = new om(10, 32, fj.field_s, 0);
-        mc.field_a[53] = new om(5, 25, 32, gn.field_f, 3);
+        mc.field_a[53] = new om(5, 25, 32, ResourceArchive.field_f, 3);
         mc.field_a[54] = new om(3, 40, ai.field_b, 3);
         mc.field_a[55] = new om(80, 40, 32, um.field_e, 0);
         mc.field_a[56] = new om(8, 4, 1146912, we.field_p, 0);
         mc.field_a[57] = new om(15, 7, 32, lc.field_c, 0);
         mc.field_a[58] = new om(10, 16384, jo.field_a, 2);
         mc.field_a[59] = new om(15, 16384, hm.field_b, 2);
-        mc.field_a[60] = new om(20, 16384, in.field_b, 2);
+        mc.field_a[60] = new om(20, 16384, Vector2f.field_b, 2);
         mc.field_a[61] = new om(25, 16384, ie.field_i, 2);
         mc.field_a[62] = new om(12, 6, 352, 0);
         mc.field_a[63] = new om(12, 6, 352, 0);
@@ -1892,12 +1892,12 @@ final class ti extends pc {
         mc.field_a[67] = new om(12, 6, 352, 0);
         mc.field_a[68] = new om(12, 6, 352, 0);
         mc.field_a[69] = new om(12, 6, 352, 0);
-        mc.field_a[70] = new om(10, 10, 360488, pg.field_K, fk.field_c, -1);
+        mc.field_a[70] = new om(10, 10, 360488, DropTargetWidget.field_K, fk.field_c, -1);
         mc.field_a[71] = new om(10, 10, 360489, jk.field_p, fk.field_c, -1);
         mc.field_a[72] = new om(12, 360490, la.field_g, -1);
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_u = null;
         if (param0 != -21006) {
           ti.k(-12);
@@ -1926,7 +1926,7 @@ final class ti extends pc {
               if (stackIn_18_1 == stackIn_18_2) {
                 stackIn_8_1 = 4210752;
               } else {
-                stackIn_8_1 = wd.field_l[var3];
+                stackIn_8_1 = RoadSegment.field_l[var3];
               }
               stackIn_10_2 = 2;
               if (~tn.field_a == ~var3) {
@@ -1934,7 +1934,7 @@ final class ti extends pc {
               } else {
                 stackIn_11_3 = vk.field_q[var3];
               }
-              this.a(stackIn_8_1, stackIn_10_2, stackIn_11_3, 2, var3 * 128 + 128 - param1, 110, 80, p.a(0, (byte) -83, var3), 60);
+              this.a(stackIn_8_1, stackIn_10_2, stackIn_11_3, 2, var3 * 128 + 128 - param1, 110, 80, IndexedSpriteState.a(0, (byte) -83, var3), 60);
               var3++;
               continue;
             }
@@ -1943,20 +1943,20 @@ final class ti extends pc {
             if (pj.b((byte) 118)) {
               cg.a(30 - param1, 170, 580, (byte) 41, 260);
               var3 = 280;
-              q.a(nk.field_M, nm.field_c, 0, -param1 + 320, (byte) -128, var3 - nm.field_c.field_G);
+              q.a(EditableTextField.field_M, nm.field_c, 0, -param1 + 320, (byte) -128, var3 - nm.field_c.field_G);
               q.a(ue.field_b, nm.field_c, 0, -param1 + 320, (byte) -127, var3);
               if (var4 == 0) {
                 break scanLoop1;
               }
             }
             if (1 == this.field_y) {
-              this.a(en.field_b, -(int)this.field_t + param1, wa.field_j, (byte) 116);
+              this.a(GameKeyHandler.field_b, -(int)this.field_t + param1, wa.field_j, (byte) 116);
               this.a(pj.field_m, -(int)this.field_t + (param1 + 640), ha.field_p, (byte) -108);
               if (var4 == 0) {
                 break scanLoop1;
               }
             }
-            stackIn_18_1 = en.field_b;
+            stackIn_18_1 = GameKeyHandler.field_b;
             stackIn_18_2 = param1;
           }
           this.a(stackIn_18_1, stackIn_18_2, ha.field_p, (byte) 83);
@@ -1969,8 +1969,8 @@ final class ti extends pc {
     private final void c(int param0, boolean param1) {
         bn.a(7, -119);
         b.field_c.a(param1);
-        if (hn.field_T) {
-          en.a((byte) 49);
+        if (CurvedRoadSegment.field_T) {
+          GameKeyHandler.a((byte) 49);
         }
     }
 
@@ -1987,7 +1987,7 @@ final class ti extends pc {
         return stackIn_11_0;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, hj param7, int param8) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, Sprite param7, int param8) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -2008,10 +2008,10 @@ final class ti extends pc {
           var14 = 0;
           scanLoop1: while (true) {
             if (var14 < param3) {
-              tc.b(var10_int + (-1 - var14), -var14 + (var11 - 1), var14 * 2 + (2 + param6), param2);
-              tc.b(-var14 - 1 + var10_int, var13 + var14, param6 + 2 + var14 * 2, param0);
-              tc.h(var10_int - (1 + var14), var11 - var14, 2 * var14 + param8, param2);
-              tc.h(var12 + var14, var11 - var14, 2 * var14 + param8, param0);
+              SoftwareRasterizer.b(var10_int + (-1 - var14), -var14 + (var11 - 1), var14 * 2 + (2 + param6), param2);
+              SoftwareRasterizer.b(-var14 - 1 + var10_int, var13 + var14, param6 + 2 + var14 * 2, param0);
+              SoftwareRasterizer.h(var10_int - (1 + var14), var11 - var14, 2 * var14 + param8, param2);
+              SoftwareRasterizer.h(var12 + var14, var11 - var14, 2 * var14 + param8, param0);
               var14++;
               if (var15 == 0) {
                 continue;
@@ -2040,7 +2040,7 @@ final class ti extends pc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param8).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -2062,14 +2062,14 @@ final class ti extends pc {
         int var5 = 0;
         int var3Lifetime1;
         var5 = HoldTheLine.field_D;
-        if (gg.field_J == 1) {
+        if (ValidationIndicator.field_J == 1) {
           if (0 == this.field_y) {
-            gg.field_J = 0;
+            ValidationIndicator.field_J = 0;
             this.e((byte) -116);
           }
           if (this.field_y == 2 ||
             this.field_y == 3) {
-            gg.field_J = 0;
+            ValidationIndicator.field_J = 0;
             this.b((byte) -100);
           }
         }
@@ -2093,7 +2093,7 @@ final class ti extends pc {
             }
             if (mg.field_c) {
               if (aa.field_n == 28) {
-                hn.field_T = false;
+                CurvedRoadSegment.field_T = false;
                 wm.a(false, false, 12);
               }
               if (aa.field_n == 1) {
@@ -2104,7 +2104,7 @@ final class ti extends pc {
             if (mg.field_c &&
               aa.field_n == 1 &&
               mg.field_c &&
-              lk.field_g[82]) {
+              IterableSecondaryNodeDeque.field_g[82]) {
               ao.field_b = 3;
               l.field_b = true;
               hk.field_d = -1 + pc.field_l[3];
@@ -2129,7 +2129,7 @@ final class ti extends pc {
                 continue;
               }
               if (!(2 <= qd.field_h) ||
-                ih.field_p != -1 + od.field_i.length) {
+                ih.field_p != -1 + TextHotspotRange.field_i.length) {
                 if (qd.field_h > 0) {
                   continue;
                 }
@@ -2177,8 +2177,8 @@ final class ti extends pc {
             } else {
               if (this.field_y == 0) {
                 if (this.field_s == 0) {
-                  bd.a(17405, 64, 0, j.field_c.field_f);
-                  bd.a(17405, 64, 256, j.field_c.field_h);
+                  ValidationHelpWidget.a(17405, 64, 0, j.field_c.field_f);
+                  ValidationHelpWidget.a(17405, 64, 256, j.field_c.field_h);
                 }
                 this.field_s = this.field_s + 1;
                 if (~(this.field_a * 5 + 25) != ~this.field_s) {
@@ -2221,7 +2221,7 @@ final class ti extends pc {
               this.field_o == 3)) {
               this.field_p = 0;
               this.field_t = 0.0f;
-              en.field_b = pj.field_m;
+              GameKeyHandler.field_b = pj.field_m;
               wa.field_j = ha.field_p;
             }
           }
@@ -2283,7 +2283,7 @@ final class ti extends pc {
           return var4;
         }
         if (em.field_i[this.field_o][var4] == 24) {
-          ca.field_s = fj.a(qb.field_a, (byte) -119, param2);
+          ArchiveRequest.field_s = fj.a(DiskCacheWorker.field_a, (byte) -119, param2);
           return var4;
         }
         if (em.field_i[this.field_o][var4] == 25) {
@@ -2354,24 +2354,24 @@ final class ti extends pc {
             param4 = param4 - (var9 + 165);
             if (0 < param4) {
               if (128 <= param4) {
-                ol.field_d = 256;
+                SecondaryNodeDeque.field_d = 256;
                 if (var12 != 0) {
-                  ol.field_d = 256 * param4 / 128;
-                  ol.field_d = 0;
+                  SecondaryNodeDeque.field_d = 256 * param4 / 128;
+                  SecondaryNodeDeque.field_d = 0;
                 }
               } else {
-                ol.field_d = 256 * param4 / 128;
+                SecondaryNodeDeque.field_d = 256 * param4 / 128;
                 if (var12 != 0) {
-                  ol.field_d = 0;
+                  SecondaryNodeDeque.field_d = 0;
                 }
               }
             } else {
-              ol.field_d = 0;
+              SecondaryNodeDeque.field_d = 0;
             }
-            decompiledFrameRemainder1 = !(-bd.field_S + ImageProducerRasterBuffer.field_m <= 20);
+            decompiledFrameRemainder1 = !(-ValidationHelpWidget.field_S + ImageProducerRasterBuffer.field_m <= 20);
             if (decompiledFrameRemainder1) {
-              qf.a(293, cf.field_r);
-              bd.field_S = ImageProducerRasterBuffer.field_m;
+              qf.a(293, StrongCacheEntry.field_r);
+              ValidationHelpWidget.field_S = ImageProducerRasterBuffer.field_m;
             }
           }
           if (decompiledFrameRemainder1) {
@@ -2405,9 +2405,9 @@ final class ti extends pc {
           this.field_q = (int[]) null;
         }
         if (0 == this.field_o) {
-          cf.field_v = param0;
+          StrongCacheEntry.field_v = param0;
         }
-        qf.a(293, cf.field_r);
+        qf.a(293, StrongCacheEntry.field_r);
         this.a(em.field_i[this.field_o][param0], !this.field_g ? true : false, 103);
     }
 
@@ -2426,15 +2426,15 @@ final class ti extends pc {
             if (ok.field_e == var2) {
               stackIn_9_0 = 48;
             } else {
-              stackIn_9_0 = (~v.field_E != ~var2) ? 32 : 40;
+              stackIn_9_0 = (~WidgetContainer.field_E != ~var2) ? 32 : 40;
             }
             var3 = stackIn_9_0;
-            if (vl.field_h[var2] <= var3) {
-              if (!(vl.field_h[var2] >= var3)) {
-                vl.field_h[var2] = vl.field_h[var2] + 1;
+            if (SecondaryNodeDequeIterator.field_h[var2] <= var3) {
+              if (!(SecondaryNodeDequeIterator.field_h[var2] >= var3)) {
+                SecondaryNodeDequeIterator.field_h[var2] = SecondaryNodeDequeIterator.field_h[var2] + 1;
               }
             } else {
-              vl.field_h[var2] = vl.field_h[var2] - 1;
+              SecondaryNodeDequeIterator.field_h[var2] = SecondaryNodeDequeIterator.field_h[var2] - 1;
             }
             var2++;
             continue;
@@ -2446,7 +2446,7 @@ final class ti extends pc {
     private final void a(int param0, int param1, int param2, byte param3) {
         long[] dupTemp$0 = null;
         int stackIn_23_1 = 0;
-        hj stackIn_23_2 = null;
+        Sprite stackIn_23_2 = null;
         int stackIn_24_3 = 0;
         Object stackIn_26_0;
         int stackIn_26_4;
@@ -2467,7 +2467,7 @@ final class ti extends pc {
         int var8 = 0;
         String[] var9 = null;
         String var9_ref = null;
-        hj var10_ref_hj = null;
+        Sprite var10_ref_hj = null;
         long[] var10_ref_long__ = null;
         int var10 = 0;
         int[] var11 = null;
@@ -2537,12 +2537,12 @@ final class ti extends pc {
                 stackIn_24_3 = 16777215;
               }
               stackIn_26_0 = this;
-              stackIn_26_4 = -param1 + (32 + cj.field_K[var8]);
+              stackIn_26_4 = -param1 + (32 + TextHotspotWidget.field_K[var8]);
               stackIn_26_5 = 190;
               stackIn_26_6 = 2;
               if (ci.field_j != var8) {
                 stackIn_27_0 = this;
-                stackIn_27_7 = wd.field_l[param2];
+                stackIn_27_7 = RoadSegment.field_l[param2];
               } else {
                 stackIn_27_0 = this;
                 stackIn_27_7 = 0;
@@ -2555,7 +2555,7 @@ final class ti extends pc {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          q.a(gl.field_a, HoldTheLine.field_F, 0, 280 - param1, (byte) -127, 204);
+          q.a(IntHashTable.field_a, HoldTheLine.field_F, 0, 280 - param1, (byte) -127, 204);
           var8 = 0;
         }
         boolean decompiledFrameCompleted1 = true;
@@ -2646,7 +2646,7 @@ final class ti extends pc {
                 var17 = stackIn_78_0;
                 var19 = 0;
                 while (var19 < 4) {
-                  q.a(io.a(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + cj.field_K[var19] - param1, (byte) -127, var15);
+                  q.a(io.a(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + TextHotspotWidget.field_K[var19] - param1, (byte) -127, var15);
                   var19++;
                 }
                 var8 = 1;
@@ -2662,7 +2662,7 @@ final class ti extends pc {
               ei.a(240 - param1, 1, cb.a(48, -eb.field_o.field_r[0]), 5, var15, HoldTheLine.field_F);
               var17 = 0;
               while (var17 < 4) {
-                q.a(io.a(eb.field_o.field_r[1 + var17], (byte) -61), HoldTheLine.field_F, 5, cj.field_K[var17] + (32 - param1), (byte) -127, var15);
+                q.a(io.a(eb.field_o.field_r[1 + var17], (byte) -61), HoldTheLine.field_F, 5, TextHotspotWidget.field_K[var17] + (32 - param1), (byte) -127, var15);
                 var17++;
                 if (var20 != 0) {
                   return;
@@ -2706,14 +2706,14 @@ final class ti extends pc {
           if (this.field_c != 0) {
             if (this.field_c == 1) {
               if (aa.field_n == 84) {
-                qf.a(293, cf.field_r);
+                qf.a(293, StrongCacheEntry.field_r);
                 if (tn.field_a != -1 &&
                   tn.field_a != ha.field_p) {
-                  if (~pj.field_m != ~en.field_b ||
+                  if (~pj.field_m != ~GameKeyHandler.field_b ||
                     ~wa.field_j != ~ha.field_p) {
                     wa.field_j = ha.field_p;
                     this.field_t = this.field_t - 640.0f;
-                    en.field_b = pj.field_m;
+                    GameKeyHandler.field_b = pj.field_m;
                   }
                   this.field_p = 640;
                   ha.field_p = tn.field_a;
@@ -2789,12 +2789,12 @@ final class ti extends pc {
               break;
             }
           case 24:
-            fieldTemp$1 = ca.field_s - 1;
-            ca.field_s = ca.field_s - 1;
+            fieldTemp$1 = ArchiveRequest.field_s - 1;
+            ArchiveRequest.field_s = ArchiveRequest.field_s - 1;
             if (fieldTemp$1 >= 0) {
               break;
             }
-            ca.field_s = 3;
+            ArchiveRequest.field_s = 3;
             if (var4 == 0) {
               break;
             }
@@ -2810,30 +2810,30 @@ final class ti extends pc {
             if (stackIn_25_0 <= ~stackIn_26_1) {
               break;
             }
-            stackIn_30_0 = (-1 + od.field_i.length != ih.field_p) ? 2 : 1;
+            stackIn_30_0 = (-1 + TextHotspotRange.field_i.length != ih.field_p) ? 2 : 1;
             qd.field_h = stackIn_30_0;
             if (var4 == 0) {
               break;
             }
           case 18:
-            if (ol.field_d > 32) {
-              ol.field_d = -32 + 32 * ((ol.field_d * 8 + 256 - 1) / 256);
-              qf.a(293, cf.field_r);
+            if (SecondaryNodeDeque.field_d > 32) {
+              SecondaryNodeDeque.field_d = -32 + 32 * ((SecondaryNodeDeque.field_d * 8 + 256 - 1) / 256);
+              qf.a(293, StrongCacheEntry.field_r);
               if (var4 == 0) {
                 break;
               }
             }
-            if (0 >= ol.field_d) {
+            if (0 >= SecondaryNodeDeque.field_d) {
               break;
             }
-            ol.field_d = 0;
-            qf.a(293, cf.field_r);
+            SecondaryNodeDeque.field_d = 0;
+            qf.a(293, StrongCacheEntry.field_r);
             if (var4 == 0) {
               break;
             }
           case 19:
-            if (mk.field_e > 20) {
-              ll.a(param0 ^ -123, (-1 + (-1 + (8 * mk.field_e + 160)) / 160) * 20);
+            if (NanoTickClock.field_e > 20) {
+              ll.a(param0 ^ -123, (-1 + (-1 + (8 * NanoTickClock.field_e + 160)) / 160) * 20);
               if (var4 == 0) {
                 break;
               }
@@ -2849,10 +2849,10 @@ final class ti extends pc {
         super(em.field_i[param0].length, 15, 360, 165, 35);
         this.field_o = param0;
         this.field_q = new int[em.field_i[param0].length];
-        nk.field_J = new int[16];
-        vl.field_h = new int[16];
+        EditableTextField.field_J = new int[16];
+        SecondaryNodeDequeIterator.field_h = new int[16];
         dm.field_e = new int[16];
-        kn.field_b = new int[16];
+        ArchiveIndex.field_b = new int[16];
         co.field_d = new int[16];
         this.b(false, -116);
     }
@@ -2949,11 +2949,11 @@ final class ti extends pc {
           var8 = var15.toUpperCase();
         }
         if (var5 == 3) {
-          if (lm.field_a != 0 &&
+          if (TextLayout.field_a != 0 &&
             0 != ej.field_b) {
-            if (lm.field_a == 1 ||
+            if (TextLayout.field_a == 1 ||
               ej.field_b == 1) {
-              var8 = gb.field_J;
+              var8 = Bzip2State.field_J;
               if (var14 != 0) {
                 var8 = uk.field_c[0];
               }
@@ -2966,7 +2966,7 @@ final class ti extends pc {
           if (ek.field_x != 1) {
             stackIn_35_0 = hk.field_b;
           } else {
-            stackIn_35_0 = qj.field_J;
+            stackIn_35_0 = DialogLayer.field_J;
           }
           var8 = stackIn_35_0;
         }
@@ -2975,8 +2975,8 @@ final class ti extends pc {
           var8 = eb.field_p.toUpperCase();
         }
         if (var5 == 7 &&
-          bl.field_r != null &&
-          3 == bl.field_r.field_J) {
+          MusicPatchPcmStream.field_r != null &&
+          3 == MusicPatchPcmStream.field_r.field_J) {
           var8 = sa.field_c.toUpperCase();
         }
         if (var5 == 8) {
@@ -3015,7 +3015,7 @@ final class ti extends pc {
             if (decompiledFrameRemainder0) {
               if (var5 == 0 ||
                 var5 == 3) {
-                stackIn_72_0 = th.field_k;
+                stackIn_72_0 = PacketBuffer.field_k;
                 stackIn_72_1 = new String[]{var8};
                 stackIn_72_2 = 82;
                 if (param2 &&
@@ -3030,7 +3030,7 @@ final class ti extends pc {
               if (decompiledFrameRemainder0) {
                 if (var5 == 5) {
                   stackIn_79_0 = va.field_c;
-                  stackIn_79_1 = th.field_n;
+                  stackIn_79_1 = PacketBuffer.field_n;
                   stackIn_79_2 = -120;
                   if (param2 &&
                     1 == this.field_y) {
@@ -3067,7 +3067,7 @@ final class ti extends pc {
                       decompiledFrameRemainder0 = (var14 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      v.a((byte) -122, var8, var9, var7, param0);
+                      WidgetContainer.a((byte) -122, var8, var9, var7, param0);
                       decompiledFrameRemainder0 = (var14 != 0);
                     }
                   }
@@ -3077,11 +3077,11 @@ final class ti extends pc {
           }
           if (decompiledFrameRemainder0) {
             var10_ref_String = uk.field_c[3];
-            if (0 != lm.field_a &&
+            if (0 != TextLayout.field_a &&
               ej.field_b != 0) {
-              if (lm.field_a == 1 ||
+              if (TextLayout.field_a == 1 ||
                 ej.field_b == 1) {
-                var10_ref_String = gb.field_J;
+                var10_ref_String = Bzip2State.field_J;
                 if (var14 != 0) {
                   var10_ref_String = uk.field_c[0];
                 }
@@ -3119,12 +3119,12 @@ final class ti extends pc {
             }
             fk.a(stackIn_109_0, stackIn_109_1, stackIn_109_2, stackIn_111_3, param0, -1, var7);
             if (var14 != 0) {
-              stackIn_115_0 = qb.field_a;
-              stackIn_115_1 = pg.field_L;
+              stackIn_115_0 = DiskCacheWorker.field_a;
+              stackIn_115_1 = DropTargetWidget.field_L;
               stackIn_115_2 = -121;
               if (param2 &&
                 1 == this.field_y) {
-                stackIn_117_3 = ca.field_s;
+                stackIn_117_3 = ArchiveRequest.field_s;
               } else {
                 stackIn_117_3 = -1;
               }
@@ -3132,12 +3132,12 @@ final class ti extends pc {
             }
           }
         } else {
-          stackIn_115_0 = qb.field_a;
-          stackIn_115_1 = pg.field_L;
+          stackIn_115_0 = DiskCacheWorker.field_a;
+          stackIn_115_1 = DropTargetWidget.field_L;
           stackIn_115_2 = -121;
           if (param2 &&
             1 == this.field_y) {
-            stackIn_117_3 = ca.field_s;
+            stackIn_117_3 = ArchiveRequest.field_s;
           } else {
             stackIn_117_3 = -1;
           }
@@ -3146,9 +3146,9 @@ final class ti extends pc {
         if (18 == var5 ||
           var5 == 19) {
           if (var5 == 18) {
-            stackIn_124_0 = ol.field_d * 128 / 256;
+            stackIn_124_0 = SecondaryNodeDeque.field_d * 128 / 256;
           } else {
-            stackIn_124_0 = mk.field_e * 128 / 160;
+            stackIn_124_0 = NanoTickClock.field_e * 128 / 160;
           }
           var10Lifetime1 = stackIn_124_0;
           var11Lifetime1 = 172 + var7;
@@ -3214,7 +3214,7 @@ final class ti extends pc {
             var4 = this.field_r + 25 - (this.field_a + 1) * 5;
             var3 = (int)((double)we.field_n * (-Math.exp((double)(0.20000000298023224f * (float)var4)) + 1.0));
           }
-          fl.a(ik.field_e, var3, 1, -1753, 488 - (int)this.field_t);
+          fl.a(MusicPatchEnvelope.field_e, var3, 1, -1753, 488 - (int)this.field_t);
         }
         var3Lifetime1 = 0;
         if (param0 != -10967) {
@@ -3266,19 +3266,19 @@ final class ti extends pc {
             }
           }
         }
-        var8 = kn.b((byte) -49);
+        var8 = ArchiveIndex.b((byte) -49);
         nm.field_c.b(ue.field_c + var8.field_b, var3Lifetime1 + 320, var2, 0, -1);
         var2 += 15;
         if (we.field_o == null) {
-          we.field_o = new hj(640, 480);
+          we.field_o = new Sprite(640, 480);
         }
         vb.a(-72, we.field_o);
-        vl.a(0);
+        SecondaryNodeDequeIterator.a(0);
         ug.b(param0 + 10966);
-        tc.c(var6 - 5, var7 - 5, 10 + var4Lifetime1, var5 + 10, 0, 128);
-        if (bl.field_r != null &&
-          bl.field_r.field_r == 3) {
-          tc.f(var6, var7, var4Lifetime1, var5, 0);
+        SoftwareRasterizer.c(var6 - 5, var7 - 5, 10 + var4Lifetime1, var5 + 10, 0, 128);
+        if (MusicPatchPcmStream.field_r != null &&
+          MusicPatchPcmStream.field_r.field_r == 3) {
+          SoftwareRasterizer.f(var6, var7, var4Lifetime1, var5, 0);
         }
         we.field_o.a(var6, var7, var4Lifetime1, var5);
         var2 += 247;
@@ -3295,7 +3295,7 @@ final class ti extends pc {
         } else {
           stackIn_33_4 = 0;
         }
-        tc.c(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_33_4, 128);
+        SoftwareRasterizer.c(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_33_4, 128);
         oe.field_i.a(104, var9[0], 9, 138).b(-var3Lifetime1 + 171, var2);
         stackIn_36_0 = var3Lifetime1 + 326;
         stackIn_36_1 = -5 + var2;
@@ -3307,7 +3307,7 @@ final class ti extends pc {
         } else {
           stackIn_38_4 = 0;
         }
-        tc.c(stackIn_36_0, stackIn_36_1, stackIn_36_2, stackIn_36_3, stackIn_38_4, 128);
+        SoftwareRasterizer.c(stackIn_36_0, stackIn_36_1, stackIn_36_2, stackIn_36_3, stackIn_38_4, 128);
         oe.field_i.a(104, var9[1], 9, 138).b(var3Lifetime1 + 331, var2);
         var12 = 0;
         var20 = new int[4];
@@ -3409,8 +3409,8 @@ final class ti extends pc {
             if (var6 != 0) {
               return stackIn_15_0;
             }
-            if (stackIn_15_0 <= ~(-param3 + (2 + cj.field_K[var5])) &&
-              param2 <= cj.field_K[var5] - (-62 + param3)) {
+            if (stackIn_15_0 <= ~(-param3 + (2 + TextHotspotWidget.field_K[var5])) &&
+              param2 <= TextHotspotWidget.field_K[var5] - (-62 + param3)) {
               return var5;
             }
             var5++;
@@ -3420,14 +3420,14 @@ final class ti extends pc {
         return -1;
     }
 
-    private final void a(int param0, hj param1, int param2, int param3, int param4, int param5, int param6) {
+    private final void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.a(param6, 2, param2, param5, param3, param4, param1.field_s, param1, param1.field_y);
           if (param0 != -141) {
             this.field_w = 23;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ti.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ti.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -3475,7 +3475,7 @@ final class ti extends pc {
         int var9_intLifetime1;
         int var8Lifetime3;
         var13 = HoldTheLine.field_D;
-        if (bl.field_r == null) {
+        if (MusicPatchPcmStream.field_r == null) {
           return;
         }
         var2 = 140 - (int)this.field_t;
@@ -3493,7 +3493,7 @@ final class ti extends pc {
         }
         boolean decompiledFrameRemainder0 = true;
         var7 = stackIn_7_0;
-        if (bl.field_r.field_E) {
+        if (MusicPatchPcmStream.field_r.field_E) {
           var8 = (int)((double)(300.0f * var6) * (Math.exp((double)((float)var7 * var5)) - 1.0));
           stackIn_10_0 = (double)(var6 * 300.0f);
           if (var7 > 10) {
@@ -3502,8 +3502,8 @@ final class ti extends pc {
             stackIn_11_1 = 0;
           }
           var9_int = (int)(stackIn_10_0 * (Math.exp((double)((float)stackIn_11_1 * var5)) - 1.0));
-          if (bl.field_r.field_C[0].field_R < 3) {
-            var14 = ha.field_o[bl.field_r.field_C[0].field_R];
+          if (MusicPatchPcmStream.field_r.vehicles[0].field_R < 3) {
+            var14 = ha.field_o[MusicPatchPcmStream.field_r.vehicles[0].field_R];
             if (null == var14.a(8192)) {
               ra.field_hb.a(352, var2 + (-var8 - 64));
               if (var13 != 0) {
@@ -3513,8 +3513,8 @@ final class ti extends pc {
               var14.field_b.a(336, var2 - (var8 + 64));
             }
           }
-          if (3 > bl.field_r.field_C[1].field_R) {
-            var15 = ha.field_o[bl.field_r.field_C[1].field_R];
+          if (3 > MusicPatchPcmStream.field_r.vehicles[1].field_R) {
+            var15 = ha.field_o[MusicPatchPcmStream.field_r.vehicles[1].field_R];
             if (var15.a(8192) == null) {
               ra.field_hb.a(192, var2 + (-var9_int - 64));
               if (var13 != 0) {
@@ -3528,8 +3528,8 @@ final class ti extends pc {
         }
         if (decompiledFrameRemainder0) {
           var8Lifetime3 = (int)((-1.0 + Math.exp((double)(var5 * (float)var7))) * (double)(300.0f * var6));
-          if (bl.field_r.field_C[0].field_R < 3) {
-            var16 = ha.field_o[bl.field_r.field_C[0].field_R];
+          if (MusicPatchPcmStream.field_r.vehicles[0].field_R < 3) {
+            var16 = ha.field_o[MusicPatchPcmStream.field_r.vehicles[0].field_R];
             if (var16.a(param0 + 8180) == null) {
               ra.field_hb.a(272, -64 + (-var8Lifetime3 + var2));
               if (var13 != 0) {
@@ -3555,7 +3555,7 @@ final class ti extends pc {
           var8Lifetime1 = 320 + (int)((double)(var6 * 500.0f) * (Math.exp((double)((float)var7Lifetime1 * var5)) - 1.0));
           nm.field_c.b("-", var8Lifetime1 + 2, var2, 0, -1);
           nm.field_c.c(vf.field_u, -8 + var8Lifetime1, var2, 0, -1);
-          nm.field_c.a(bl.field_o, 12 + var8Lifetime1, var2, 0, -1);
+          nm.field_c.a(MusicPatchPcmStream.field_o, 12 + var8Lifetime1, var2, 0, -1);
           var2 += 30;
         }
         var9_intLifetime1 = 0;
@@ -3566,7 +3566,7 @@ final class ti extends pc {
             stackIn_75_0 = 0;
             if (var13 == 0) {
               var10 = stackIn_75_0;
-              while (bl.field_r.field_h > var10) {
+              while (MusicPatchPcmStream.field_r.field_h > var10) {
                 stackIn_39_0 = this.field_y;
                 stackIn_39_1 = 1;
                 if (stackIn_39_0 > stackIn_39_1) {
@@ -3585,10 +3585,10 @@ final class ti extends pc {
                 } else {
                   var8Lifetime2 = -var8Lifetime2 + 320;
                 }
-                if (~var9_intLifetime1 == ~bl.field_r.field_C[var10].field_R) {
+                if (~var9_intLifetime1 == ~MusicPatchPcmStream.field_r.vehicles[var10].field_R) {
                   if (ek.field_x != 4) {
                     if (ek.field_x != 5) {
-                      var11 = ub.field_C[var9_intLifetime1];
+                      var11 = SingleChildWidget.field_C[var9_intLifetime1];
                       if (var11 == 1) {
                         stackIn_58_0 = la.field_h;
                       } else {
@@ -3598,7 +3598,7 @@ final class ti extends pc {
                       nm.field_c.a(var12, -55 + var8Lifetime2, var2, var10 + 6, -1);
                       nm.field_c.c(rf.field_Y[var9_intLifetime1], -80 + var8Lifetime2, var2, 6 + var10, -1);
                       if (pe.field_g[var10] == -1) {
-                        nm.field_c.a(ln.field_m, 40 + var8Lifetime2, var2, var10 + 6, -1);
+                        nm.field_c.a(DualLinkNode.field_m, 40 + var8Lifetime2, var2, var10 + 6, -1);
                       } else {
                         nm.field_c.a(cb.a(48, pe.field_g[var10]), 40 + var8Lifetime2, var2, var10 + 6, -1);
                       }
@@ -3606,16 +3606,16 @@ final class ti extends pc {
                       nm.field_c.c(rf.field_Y[var9_intLifetime1], var8Lifetime2 - 15, var2, var10 + 6, -1);
                       stackIn_66_0 = (kb.a(param0 + 16604, 0)) ? 3 : 1;
                       var11 = stackIn_66_0;
-                      nm.field_c.a(Integer.toString(bl.field_r.field_C[var10].field_Sb), 15 + var8Lifetime2, var2, 6 + var10, -1);
+                      nm.field_c.a(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].field_Sb), 15 + var8Lifetime2, var2, 6 + var10, -1);
                       nm.field_c.a("-", 16 + var8Lifetime2 + 14 * var11, var2, 6 + var10, -1);
-                      nm.field_c.a(Integer.toString(bl.field_r.field_C[var10].field_oc), 31 + var8Lifetime2 + var11 * 14, var2, var10 + 6, -1);
+                      nm.field_c.a(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].field_oc), 31 + var8Lifetime2 + var11 * 14, var2, var10 + 6, -1);
                     }
                   } else {
                     nm.field_c.c(rf.field_Y[var9_intLifetime1], -15 + var8Lifetime2, var2, var10 + 6, -1);
                     if (-1 != pe.field_g[var10]) {
                       nm.field_c.a(cb.a(47, pe.field_g[var10]), 15 + var8Lifetime2, var2, var10 + 6, -1);
                     } else {
-                      nm.field_c.a(ln.field_m, var8Lifetime2 + 15, var2, 6 + var10, -1);
+                      nm.field_c.a(DualLinkNode.field_m, var8Lifetime2 + 15, var2, 6 + var10, -1);
                     }
                   }
                   var3++;
@@ -3637,13 +3637,13 @@ final class ti extends pc {
               -1 != ce.field_r) {
               var9 = sd.a(kj.field_n, new String[]{gh.field_t[ce.field_r]}, true);
               if (!of.a(param0 - 981)) {
-                var9 = ub.field_E;
+                var9 = SingleChildWidget.field_E;
               }
               nm.field_c.b(var9, 320, var2, 1, -1);
             } else {
               if (ek.field_x == 1) {
-                if (kk.field_l != 1) {
-                  stackIn_90_0 = sd.a(sh.field_c, new String[]{Integer.toString(kk.field_l)}, true);
+                if (EntitySound.field_l != 1) {
+                  stackIn_90_0 = sd.a(sh.field_c, new String[]{Integer.toString(EntitySound.field_l)}, true);
                 } else {
                   stackIn_90_0 = va.field_f;
                 }
@@ -3659,7 +3659,7 @@ final class ti extends pc {
             }
           }
           if (1 == ek.field_x) {
-            var9Lifetime1 = qj.field_J;
+            var9Lifetime1 = DialogLayer.field_J;
           } else {
             if (ek.field_x == 6) {
               var9Lifetime1 = ka.field_e;
@@ -3721,12 +3721,12 @@ final class ti extends pc {
         int var3;
         int var4;
         var4 = HoldTheLine.field_D;
-        if (200 <= nc.field_g &&
-          nc.field_g < 440 &&
+        if (200 <= NodeHashTableIterator.field_g &&
+          NodeHashTableIterator.field_g < 440 &&
           (float)rf.field_X >= 430.0f - this.field_t &&
           -this.field_t + 460.0f > (float)rf.field_X) {
           this.field_c = 1;
-          if (1 == gg.field_J) {
+          if (1 == ValidationIndicator.field_J) {
             this.a((byte) 117, 6, true);
           }
         }
@@ -3741,18 +3741,18 @@ final class ti extends pc {
             }
             stackIn_13_0 = (stackIn_26_0 == stackIn_26_1) ? 240 : 400;
             var3 = stackIn_13_0;
-            if ((-69 + var3) <= nc.field_g &&
-              var3 + 69 > nc.field_g &&
+            if ((-69 + var3) <= NodeHashTableIterator.field_g &&
+              var3 + 69 > NodeHashTableIterator.field_g &&
               (float)rf.field_X >= 845.0f - this.field_t &&
               (float)rf.field_X < 949.0f - this.field_t) {
-              t.field_l = go.field_g[kn.b((byte) -49).field_p][var2];
+              t.field_l = go.field_g[ArchiveIndex.b((byte) -49).field_p][var2];
               ci.a(0, (byte) 120, this.field_o, var2);
               this.field_c = 1;
-              if (((gg.field_J == 1)) &&
-                ((null != bl.field_r))) {
-                bl.field_r.field_C[0].a(20385, ge.field_c[t.field_l]);
+              if (((ValidationIndicator.field_J == 1)) &&
+                ((null != MusicPatchPcmStream.field_r))) {
+                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[t.field_l]);
                 wm.a(true, false, -1);
-                qf.a(293, cf.field_r);
+                qf.a(293, StrongCacheEntry.field_r);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -3768,12 +3768,12 @@ final class ti extends pc {
         if (stackIn_26_0 == stackIn_26_1 &&
           this.field_t > 0.0f &&
           na.field_k &&
-          nc.field_g > this.field_m &&
-          this.field_f >= nc.field_g &&
+          NodeHashTableIterator.field_g > this.field_m &&
+          this.field_f >= NodeHashTableIterator.field_g &&
           rf.field_X >= 35 &&
           rf.field_X <= 65) {
           this.field_c = 0;
-          if (0 != gg.field_J) {
+          if (0 != ValidationIndicator.field_J) {
             this.c(this.field_c, -3565);
           }
         }
@@ -3794,10 +3794,10 @@ final class ti extends pc {
         var8 = HoldTheLine.field_D;
         var4 = 0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!(qe.field_a > var4)))) {
+        while (!(decompiledNaturalLoopExit0 = (!(SocketConnector.field_a > var4)))) {
           var5 = -param1 + dm.field_e[var4];
           var6 = -param2 + co.field_d[var4];
-          var7 = kn.field_b[var4] >> 1;
+          var7 = ArchiveIndex.field_b[var4] >> 1;
           stackIn_10_0 = -var7;
           stackIn_10_1 = var5;
           if (var8 == 0) {
@@ -3805,7 +3805,7 @@ final class ti extends pc {
               var5 <= var7 &&
               -var7 <= var6 &&
               var6 <= var7) {
-              return nk.field_J[var4];
+              return EditableTextField.field_J[var4];
             }
             var4++;
             continue;

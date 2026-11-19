@@ -23,7 +23,7 @@ final class j {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        da var11 = null;
+        IsaacPacketBuffer var11 = null;
         int var8Lifetime1;
         int var8Lifetime2;
         int var9Lifetime1;
@@ -35,9 +35,9 @@ final class j {
           if (64 != param1.length) {
             throw new RuntimeException();
           }
-          var11 = new da(0);
-          var11.field_i = param1;
-          var11.field_l = 0;
+          var11 = new IsaacPacketBuffer(0);
+          var11.payload = param1;
+          var11.position = 0;
           var11.e(true);
           stackIn_8_0 = (var11.h(1, 7) != 1) ? 0 : 1;
           var3 = stackIn_8_0;
@@ -93,37 +93,37 @@ final class j {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, ib param3, int param4, String param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, String param5, int param6, int param7, int param8) {
         kl.field_v = param3;
         fh.field_g = param7;
-        ee.field_n = param8;
+        MovingEntity.field_n = param8;
         rd.field_g = param0;
-        a.field_H = param6;
-        wd.field_r = param2;
+        AccountCreationForm.field_H = param6;
+        RoadSegment.field_r = param2;
         pe.field_c = param5;
         lg.field_e = param4;
-        ce.field_n = (wj) ((Object) new ag());
-        lk.field_d = new qb(param3);
+        ce.field_n = (Js5Transport) ((Object) new SocketJs5Transport());
+        IterableSecondaryNodeDeque.field_d = new DiskCacheWorker(param3);
         if (param1 != 24) {
           return;
         }
         try {
-          ra.field_Z = new ci(ce.field_n, lk.field_d);
+          ra.field_Z = new ci(ce.field_n, IterableSecondaryNodeDeque.field_d);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "j.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "j.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final static hj a(byte param0, int param1, int param2, int param3) {
+    final static Sprite a(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var9 = 0;
         int var4;
         int var5;
-        hj var6;
+        Sprite var6;
         float var8;
         float var10;
         float var11;
@@ -135,7 +135,7 @@ final class j {
         if (param0 < 40) {
           j.a((byte) 50, -35, -90, -15);
         }
-        var6 = new hj(var4, var5);
+        var6 = new Sprite(var4, var5);
         for (var7 = 5; var5 > var7; var7++) {
           if (param1 < var7) {
             var8 = (float)Math.sqrt((double)(-((-param1 + var7) * (var7 - param1)) + param3 * param3));
@@ -147,7 +147,7 @@ final class j {
             var11 = 1.0f - Math.abs(var10);
             if (!(0.0f >= var11)) {
               var12 = var11;
-              var6.field_z[var9 + (var7 * var4 + param3)] = lk.a(var12, -1, param2);
+              var6.field_z[var9 + (var7 * var4 + param3)] = IterableSecondaryNodeDeque.a(var12, -1, param2);
             }
           }
         }
@@ -173,20 +173,20 @@ final class j {
             j.a(-20, (byte[]) null);
           }
           if (rc.field_c.length == 0) {
-            mm.field_a = null;
+            RasterBuffer.field_a = null;
             return;
           }
-          kn.field_a = 0;
-          jf.a(4);
+          ArchiveIndex.field_a = 0;
+          MouseWheelInput.a(4);
           var2 = new ei();
-          var3 = gd.f(-117);
+          var3 = TextFieldValidator.f(-117);
           while (var3 != null) {
             var2.a(var3, (byte) 6);
-            var3 = gd.f(-117);
+            var3 = TextFieldValidator.f(-117);
           }
-          mm.field_a = new ji[var2.field_e];
+          RasterBuffer.field_a = new ji[var2.field_e];
           for (var4 = 0; var4 < var2.field_e; var4++) {
-            mm.field_a[var4] = (ji) (var2.field_b[var4]);
+            RasterBuffer.field_a[var4] = (ji) (var2.field_b[var4]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,14 +199,14 @@ final class j {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
-          j.a(68, -126, -46, (ib) null, 23, (String) null, 42, -14, 45);
+          j.a(68, -126, -46, (PlatformTaskDispatcher) null, 23, (String) null, 42, -14, 45);
         }
         field_c = null;
         field_a = (byte[][]) null;
@@ -217,7 +217,7 @@ final class j {
           return;
         }
         String var2 = (String) null;
-        ag.a((String) null, false, ij.field_k);
+        SocketJs5Transport.a((String) null, false, ij.field_k);
     }
 
     final int a(int param0, boolean param1, int param2, byte[] param3, byte[] param4, int param5) {
@@ -424,7 +424,7 @@ final class j {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -438,11 +438,11 @@ final class j {
           if (null != ao.field_c) {
             try {
               ao.field_c.a(25971, 0L);
-              ao.field_c.a((byte) 125, 24, rd.field_e.field_l, rd.field_e.field_i);
+              ao.field_c.a((byte) 125, 24, rd.field_e.position, rd.field_e.payload);
             } catch (Exception exception) {
             }
           }
-          rd.field_e.field_l = rd.field_e.field_l + 24;
+          rd.field_e.position = rd.field_e.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -474,20 +474,20 @@ final class j {
             j.a(-20, (byte[]) null);
           }
           if (rc.field_c.length == 0) {
-            mm.field_a = null;
+            RasterBuffer.field_a = null;
             return;
           }
-          kn.field_a = 0;
-          jf.a(4);
+          ArchiveIndex.field_a = 0;
+          MouseWheelInput.a(4);
           var2 = new ei();
-          var3 = gd.f(-117);
+          var3 = TextFieldValidator.f(-117);
           while (var3 != null) {
             var2.a(var3, (byte) 6);
-            var3 = gd.f(-117);
+            var3 = TextFieldValidator.f(-117);
           }
-          mm.field_a = new ji[var2.field_e];
+          RasterBuffer.field_a = new ji[var2.field_e];
           for (var4 = 0; var4 < var2.field_e; var4++) {
-            mm.field_a[var4] = (ji) (var2.field_b[var4]);
+            RasterBuffer.field_a[var4] = (ji) (var2.field_b[var4]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -500,7 +500,7 @@ final class j {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 }

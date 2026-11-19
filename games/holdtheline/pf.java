@@ -12,20 +12,20 @@ final class pf implements hd {
 
     final static void a(boolean param0) {
         ij.c(4);
-        if (null != kd.field_b) {
-          om.a(-46342, kd.field_b);
+        if (null != MouseInputHandler.field_b) {
+          om.a(-46342, MouseInputHandler.field_b);
         }
         co.a(param0);
         lg.b(true);
         jk.a(27370);
         if (cm.a(-2043140287)) {
-          da.field_p.c((byte) 33, 1);
+          IsaacPacketBuffer.field_p.c((byte) 33, 1);
           qn.a(0, 0);
         }
         r.a(-28036);
     }
 
-    final static hj a(byte param0) {
+    final static Sprite a(byte param0) {
         if (param0 >= -117) {
           field_c = (int[]) null;
           return ai.field_c;
@@ -87,16 +87,16 @@ final class pf implements hd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         field_g = null;
         field_f = null;
         if (param0 <= 8) {
-          pf.b((byte) -9);
+          pf.clearSharedReferences((byte) -9);
           field_c = null;
           return;
         }

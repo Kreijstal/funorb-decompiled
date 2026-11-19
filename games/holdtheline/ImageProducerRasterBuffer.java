@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ImageProducerRasterBuffer extends mm implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static String field_o;
     static String field_j;
     static String field_k;
@@ -34,7 +34,7 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -46,9 +46,9 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
         this.field_i.imageComplete(2);
     }
 
-    final static hj[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param3 != 14) {
-          return (hj[]) null;
+          return (Sprite[]) null;
         }
         return wa.a(1, 1, param1, param2, param0);
     }
@@ -68,7 +68,7 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
             field_o = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sf.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -80,14 +80,14 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
           param0.setColorModel(this.field_l);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_j = null;
         if (param0 != -1) {
-          ImageProducerRasterBuffer.c(-126);
+          ImageProducerRasterBuffer.clearSharedReferences(-126);
         }
         field_o = null;
         field_k = null;
@@ -103,17 +103,17 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
             this.field_i = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sf.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static hj a(int param0, byte param1, int param2) {
+    final static Sprite a(int param0, byte param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var3;
         int var4;
         int var5;
-        hj var6;
+        Sprite var6;
         int var9;
         int var11;
         float var10;
@@ -121,13 +121,13 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
         var3 = 1 + param0 * 2;
         var4 = param0 * 2 + 1;
         var5 = 29 % ((-27 - param1) / 49);
-        var6 = new hj(var3, var4);
+        var6 = new Sprite(var3, var4);
         for (var7 = -param0; var7 <= param0; var7++) {
           for (var8 = -param0; var8 <= param0; var8++) {
             var9 = param0 * param0 - (var7 * var7 + var8 * var8);
             if (var9 > 0) {
               var10 = (float)Math.sqrt((double)var9) / (float)param0;
-              var6.field_z[var3 * (var8 + param0) + (param0 + var7)] = lk.a(var10, -1, param2);
+              var6.field_z[var3 * (var8 + param0) + (param0 + var7)] = IterableSecondaryNodeDeque.a(var10, -1, param2);
             }
           }
         }
@@ -149,7 +149,7 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
           param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
           this.a(false);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,28 +166,28 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
         int var2 = HoldTheLine.field_D;
         ui var1Lifetime1;
         try {
-          pk.field_G.d();
+          LoginChoicePanel.field_G.d();
           if (param0 != -1379) {
-            ImageProducerRasterBuffer.c(-82);
+            ImageProducerRasterBuffer.clearSharedReferences(-82);
           }
-          jd.field_G.d();
-          gg.field_G = gg.field_G - 1;
-          if (0 == gg.field_G) {
-            gg.field_G = 200;
-            var1 = (ui) (ol.field_b.b((byte) 118));
+          DraggableWidget.field_G.d();
+          ValidationIndicator.field_G = ValidationIndicator.field_G - 1;
+          if (0 == ValidationIndicator.field_G) {
+            ValidationIndicator.field_G = 200;
+            var1 = (ui) (SecondaryNodeDeque.field_b.first((byte) 118));
             while (var1 != null) {
-              if (!var1.field_k.b(116)) {
-                var1.d(0);
+              if (!var1.field_k.isLinked(116)) {
+                var1.unlink(0);
               }
-              var1 = (ui) (ol.field_b.c((byte) 93));
+              var1 = (ui) (SecondaryNodeDeque.field_b.next((byte) 93));
             }
-            if (null != ob.field_b) {
-              var1Lifetime1 = (ui) (ob.field_b.b((byte) 120));
+            if (null != TimedValidator.field_b) {
+              var1Lifetime1 = (ui) (TimedValidator.field_b.first((byte) 120));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_k.b(88)) {
-                  var1Lifetime1.d(0);
+                if (!var1Lifetime1.field_k.isLinked(88)) {
+                  var1Lifetime1.unlink(0);
                 }
-                var1Lifetime1 = (ui) (ob.field_b.c((byte) -51));
+                var1Lifetime1 = (ui) (TimedValidator.field_b.next((byte) -51));
               }
             }
           }
@@ -195,7 +195,7 @@ final class ImageProducerRasterBuffer extends mm implements java.awt.image.Image
             i.field_m.c((byte) 85)) {
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ')');
         }
     }
 

@@ -7,7 +7,7 @@ class vn {
     static String field_b;
     static String field_a;
     static String field_e;
-    private hj[] field_g;
+    private Sprite[] field_g;
     static int field_f;
     static oa field_h;
 
@@ -20,7 +20,7 @@ class vn {
         hi.a(this.field_g, param1, true, param3, param4, param0);
     }
 
-    final static void a(int param0, Object param1, ib param2) {
+    final static void a(int param0, Object param1, PlatformTaskDispatcher param2) {
         java.awt.EventQueue stackIn_7_0 = null;
         java.awt.EventQueue stackIn_13_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -71,7 +71,7 @@ class vn {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 17 : -1);
                         if (statePc == -1) {
-                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw vn.<RuntimeException>rethrowUnchecked(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -102,7 +102,7 @@ class vn {
                                         } else {
                                             /* Inlined CFG state: 8. */
                                             {
-                                                qe.a(1L, (byte) 45);
+                                                SocketConnector.a(1L, (byte) 45);
                                                 var3_int++;
                                                 if (var4 == 0) {
                                                     statePc = 5;
@@ -123,7 +123,7 @@ class vn {
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 17 : -1);
                         if (statePc == -1) {
-                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                            throw vn.<RuntimeException>rethrowUnchecked(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
                         continue scanLoop1;
@@ -147,7 +147,7 @@ class vn {
                     } catch (Throwable stateCaught_10) {
                         statePc = ((Object) stateCaught_10 instanceof Exception ? 15 : ((Object) stateCaught_10 instanceof RuntimeException ? 17 : -1));
                         if (statePc == -1) {
-                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                            throw vn.<RuntimeException>rethrowUnchecked(stateCaught_10);
                         }
                         caughtException = stateCaught_10;
                         continue scanLoop1;
@@ -161,7 +161,7 @@ class vn {
                     } catch (Throwable stateCaught_13) {
                         statePc = ((Object) stateCaught_13 instanceof Exception ? 15 : ((Object) stateCaught_13 instanceof RuntimeException ? 17 : -1));
                         if (statePc == -1) {
-                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
+                            throw vn.<RuntimeException>rethrowUnchecked(stateCaught_13);
                         }
                         caughtException = stateCaught_13;
                         continue scanLoop1;
@@ -173,7 +173,7 @@ class vn {
                     } catch (Throwable stateCaught_14) {
                         statePc = ((Object) stateCaught_14 instanceof RuntimeException ? 17 : -1);
                         if (statePc == -1) {
-                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
+                            throw vn.<RuntimeException>rethrowUnchecked(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
                         continue scanLoop1;
@@ -187,7 +187,7 @@ class vn {
                     } catch (Throwable stateCaught_15) {
                         statePc = ((Object) stateCaught_15 instanceof RuntimeException ? 17 : -1);
                         if (statePc == -1) {
-                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_15);
+                            throw vn.<RuntimeException>rethrowUnchecked(stateCaught_15);
                         }
                         caughtException = stateCaught_15;
                         continue scanLoop1;
@@ -249,20 +249,20 @@ class vn {
                     }
                 }
                 case 23: {
-                    throw kk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(')').toString());
+                    throw EntitySound.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(')').toString());
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         field_h = null;
         field_a = null;
         field_b = null;
         if (param0 != -1) {
-          vn.a(30, (Object) null, (ib) null);
+          vn.a(30, (Object) null, (PlatformTaskDispatcher) null);
           return;
         }
     }
@@ -297,7 +297,7 @@ class vn {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

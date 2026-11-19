@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qf extends gd {
-    private nk field_m;
+final class qf extends TextFieldValidator {
+    private EditableTextField field_m;
     static int[] field_i;
     static long field_l;
     static float[] field_k;
@@ -25,8 +25,8 @@ final class qf extends gd {
         float var11 = 0.0f;
         float var12 = 0.0f;
         int var13 = 0;
-        lb var14 = null;
-        lb var15 = null;
+        TrackBoundary var14 = null;
+        TrackBoundary var15 = null;
         Object var16 = null;
         Object var17 = null;
         gj var17_ref = null;
@@ -34,7 +34,7 @@ final class qf extends gd {
         gj var18_ref = null;
         Object var19 = null;
         gj var19_ref = null;
-        lb var20 = null;
+        TrackBoundary var20 = null;
         var18 = null;
         var17 = null;
         var19 = null;
@@ -43,55 +43,55 @@ final class qf extends gd {
         try {
           if (param1.field_k - param5.field_k <= 1 &&
             param1.field_k - param5.field_k >= -1) {
-            if (param1 instanceof lb) {
-              var15 = (lb) (param1);
-              if (param5 instanceof lb) {
-                var20 = (lb) (param5);
-                if (th.a(-1, var15, var20)) {
-                  var10 = mm.field_d + (float)param4;
-                  var11 = (float)param6 + lk.field_b;
+            if (param1 instanceof TrackBoundary) {
+              var15 = (TrackBoundary) (param1);
+              if (param5 instanceof TrackBoundary) {
+                var20 = (TrackBoundary) (param5);
+                if (PacketBuffer.a(-1, var15, var20)) {
+                  var10 = RasterBuffer.field_d + (float)param4;
+                  var11 = (float)param6 + IterableSecondaryNodeDeque.field_b;
                   oe.a(var11, param2, param7, (byte) 63, var10, param0);
                 }
               } else {
                 var19_ref = (gj) (param5);
                 var10_int = ba.a(var15, 0, var19_ref);
                 if (var10_int >= 1) {
-                  var11 = (float)param4 + mm.field_d;
-                  var12 = (float)param6 + var19_ref.b(lk.field_b, param3 ^ 7518);
+                  var11 = (float)param4 + RasterBuffer.field_d;
+                  var12 = (float)param6 + var19_ref.b(IterableSecondaryNodeDeque.field_b, param3 ^ 7518);
                   oe.a(var12, param2, param7, (byte) 113, var11, param0);
                 }
                 if (var10_int == 2) {
-                  var11 = rb.field_g + (float)param4;
-                  var12 = var19_ref.b(cj.field_G, -7517) + (float)param6;
+                  var11 = CachedArchiveProvider.field_g + (float)param4;
+                  var12 = var19_ref.b(TextHotspotWidget.field_G, -7517) + (float)param6;
                   oe.a(var12, param2, param7, (byte) 127, var11, param0);
                 }
               }
             } else {
               var18_ref = (gj) (param1);
-              if (param5 instanceof lb) {
-                var14 = (lb) (param5);
+              if (param5 instanceof TrackBoundary) {
+                var14 = (TrackBoundary) (param5);
                 var10_int = ba.a(var14, 0, var18_ref);
                 if (var10_int >= 1) {
-                  var11 = (float)param4 + var18_ref.b(lk.field_b, -7517);
-                  var12 = mm.field_d + (float)param6;
+                  var11 = (float)param4 + var18_ref.b(IterableSecondaryNodeDeque.field_b, -7517);
+                  var12 = RasterBuffer.field_d + (float)param6;
                   oe.a(var12, param2, param7, (byte) 62, var11, param0);
                 }
                 if (var10_int == 2) {
-                  var11 = var18_ref.b(cj.field_G, -7517) + (float)param4;
-                  var12 = rb.field_g + (float)param6;
+                  var11 = var18_ref.b(TextHotspotWidget.field_G, -7517) + (float)param4;
+                  var12 = CachedArchiveProvider.field_g + (float)param6;
                   oe.a(var12, param2, param7, (byte) 78, var11, param0);
                 }
               } else {
                 var17_ref = (gj) (param5);
                 var10_int = i.a(var17_ref, var18_ref, -6218);
                 if (var10_int >= 1) {
-                  var11 = var18_ref.b(mm.field_d, -7517) + (float)param4;
-                  var12 = var17_ref.b(lk.field_b, param3 ^ 7518) + (float)param6;
+                  var11 = var18_ref.b(RasterBuffer.field_d, -7517) + (float)param4;
+                  var12 = var17_ref.b(IterableSecondaryNodeDeque.field_b, param3 ^ 7518) + (float)param6;
                   oe.a(var12, param2, param7, (byte) 110, var11, param0);
                 }
                 if (var10_int == 2) {
-                  var11 = (float)param4 + var18_ref.b(rb.field_g, param3 ^ 7518);
-                  var12 = (float)param6 + var17_ref.b(cj.field_G, param3 ^ 7518);
+                  var11 = (float)param4 + var18_ref.b(CachedArchiveProvider.field_g, param3 ^ 7518);
+                  var12 = (float)param6 + var17_ref.b(TextHotspotWidget.field_G, param3 ^ 7518);
                   oe.a(var12, param2, param7, (byte) 91, var11, param0);
                 }
               }
@@ -130,16 +130,16 @@ final class qf extends gd {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
-    qf(nk param0, nk param1) {
+    qf(EditableTextField param0, EditableTextField param1) {
         super(param0);
         try {
           this.field_m = param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -152,36 +152,36 @@ final class qf extends gd {
         if (ej.field_b == dg.field_c) {
           return;
         }
-        lm.field_a = dg.field_c;
+        TextLayout.field_a = dg.field_c;
         if (param2 != 3865) {
           field_j = 35;
           if (dg.field_c != 13) {
             if (dg.field_c != -1) {
               ((ti) (l.field_a[dg.field_c])).i(param2 ^ 3923);
             }
-            vg.field_G = 1;
-            gg.field_L = param1 ? true : false;
+            LoginForm.field_G = 1;
+            ValidationIndicator.field_L = param1 ? true : false;
             return;
           }
           ((ec) (l.field_a[dg.field_c])).d((byte) -126);
-          vg.field_G = 1;
-          gg.field_L = param1 ? true : false;
+          LoginForm.field_G = 1;
+          ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
         if (dg.field_c == 13) {
           ((ec) (l.field_a[dg.field_c])).d((byte) -126);
-          vg.field_G = 1;
-          gg.field_L = param1 ? true : false;
+          LoginForm.field_G = 1;
+          ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
         if (dg.field_c == -1) {
-          vg.field_G = 1;
-          gg.field_L = param1 ? true : false;
+          LoginForm.field_G = 1;
+          ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
         ((ti) (l.field_a[dg.field_c])).i(param2 ^ 3923);
-        vg.field_G = 1;
-        gg.field_L = param1 ? true : false;
+        LoginForm.field_G = 1;
+        ValidationIndicator.field_L = param1 ? true : false;
     }
 
     final static void a(int param0, int param1, byte[] param2) {
@@ -204,7 +204,7 @@ final class qf extends gd {
           for (var5 = 0; var5 < 256; var5++) {
             incrementValue$1 = var3_int;
             var3_int++;
-            var4[var5] = pk.a((int) param2[incrementValue$1], 255);
+            var4[var5] = LoginChoicePanel.a((int) param2[incrementValue$1], 255);
           }
           var3_int += 256;
           var7 = param0;
@@ -225,12 +225,12 @@ final class qf extends gd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final fd a(String param0, byte param1) {
-        ia var3 = null;
+        Validator var3 = null;
         RuntimeException var3_ref = null;
         fd stackIn_8_0 = null;
         fd stackIn_12_0 = null;
@@ -242,8 +242,8 @@ final class qf extends gd {
           if (param1 < 52) {
             field_k = (float[]) null;
           }
-          if (this.field_m instanceof wk) {
-            var3 = ((wk) ((Object) this.field_m)).a(1);
+          if (this.field_m instanceof ValidatorProvider) {
+            var3 = ((ValidatorProvider) ((Object) this.field_m)).getValidator(1);
             if (var3 != null &&
               var3.b(-7447) != tg.field_d) {
               stackIn_8_0 = g.field_k;
@@ -266,18 +266,18 @@ final class qf extends gd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
-        ja.a(-1848651292, en.a(95));
+        RaceVehicle.a(-1848651292, GameKeyHandler.a(95));
         if (!param0) {
-          qf.g(33);
+          qf.clearSharedReferences(33);
         }
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_k = null;
         if (param0 != -14) {
           return;
@@ -285,7 +285,7 @@ final class qf extends gd {
         field_i = null;
     }
 
-    final static ui a(int param0, el param1) {
+    final static ui a(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         ui stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -296,7 +296,7 @@ final class qf extends gd {
           if (param0 != 293) {
             field_i = (int[]) null;
           }
-          stackIn_3_0 = lg.a(db.a(param1, 100, 96), (byte) -68);
+          stackIn_3_0 = lg.a(PcmSampleStream.a(param1, 100, 96), (byte) -68);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -308,11 +308,11 @@ final class qf extends gd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static boolean a(byte param0, ee param1, ee param2) {
+    final static boolean a(byte param0, MovingEntity param1, MovingEntity param2) {
         boolean stackIn_19_0 = false;
         boolean stackIn_23_0 = false;
         boolean stackIn_27_0 = false;
@@ -335,22 +335,22 @@ final class qf extends gd {
           }
           if (param1.field_q - param2.field_q <= 1 &&
             param1.field_q - param2.field_q >= -1) {
-            if ((param2.field_A.field_f - param1.field_A.field_f) * (param2.field_A.field_f - param1.field_A.field_f) + (-param1.field_A.field_h + param2.field_A.field_h) * (-param1.field_A.field_h + param2.field_A.field_h) > (param2.field_B + param1.field_B) * (param2.field_B + param1.field_B)) {
+            if ((param2.position.y - param1.position.y) * (param2.position.y - param1.position.y) + (-param1.position.x + param2.position.x) * (-param1.position.x + param2.position.x) > (param2.field_B + param1.field_B) * (param2.field_B + param1.field_B)) {
               return false;
             }
             if (param1.field_p &&
               param2.field_p) {
-              stackIn_19_0 = jf.a(param1.field_w, param1.field_A, param2.field_i, param1.field_k, param2.field_w, param2.field_k, param1.field_i, param2.field_A, 7527);
+              stackIn_19_0 = MouseWheelInput.a(param1.direction, param1.position, param2.field_i, param1.field_k, param2.direction, param2.field_k, param1.field_i, param2.position, 7527);
               return stackIn_19_0;
             }
             if (param1.field_p) {
-              stackIn_27_0 = ck.a(param2.field_B, true, param1.field_i, param2.field_A, param1.field_A, param1.field_k, param1.field_w);
+              stackIn_27_0 = MidiNote.a(param2.field_B, true, param1.field_i, param2.position, param1.position, param1.field_k, param1.direction);
               return stackIn_27_0;
             }
             if (!param2.field_p) {
               return true;
             }
-            stackIn_23_0 = ca.a(param1.field_A, param2.field_i, param2.field_A, param1.field_B, param2.field_w, param2.field_k, 110);
+            stackIn_23_0 = ArchiveRequest.a(param1.position, param2.field_i, param2.position, param1.field_B, param2.direction, param2.field_k, 110);
             return stackIn_23_0;
           }
           return false;
@@ -370,12 +370,12 @@ final class qf extends gd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
     final String a(String param0, boolean param1) {
-        ia var3 = null;
+        Validator var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_6_0 = null;
         String stackIn_8_0 = null;
@@ -386,12 +386,12 @@ final class qf extends gd {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_m instanceof wk) {
-            var3 = ((wk) ((Object) this.field_m)).a(1);
+          if (this.field_m instanceof ValidatorProvider) {
+            var3 = ((ValidatorProvider) ((Object) this.field_m)).getValidator(1);
             if (var3 != null) {
               if (var3.b(-7447) == tg.field_d &&
                 !param0.equals(this.field_m.field_q)) {
-                stackIn_6_0 = jd.field_L;
+                stackIn_6_0 = DraggableWidget.field_L;
                 return stackIn_6_0;
               }
               stackIn_8_0 = var3.b((byte) -59);
@@ -399,7 +399,7 @@ final class qf extends gd {
             }
           }
           if (!param0.equals(this.field_m.field_q)) {
-            stackIn_12_0 = jd.field_L;
+            stackIn_12_0 = DraggableWidget.field_L;
             return stackIn_12_0;
           }
           if (param1) {
@@ -418,7 +418,7 @@ final class qf extends gd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 

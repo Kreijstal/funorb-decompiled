@@ -9,11 +9,11 @@ final class bo {
     static int field_e;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_a = null;
         field_d = null;
         if (param0) {
-          bo.a(true);
+          bo.clearSharedReferences(true);
         }
     }
 

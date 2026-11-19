@@ -15,7 +15,7 @@ abstract class pc {
     int field_m;
     private int field_d;
     static int[] field_l;
-    static ah field_e;
+    static IntrusiveDeque field_e;
 
     abstract void a(int param0, int param1);
 
@@ -48,14 +48,14 @@ abstract class pc {
         if (param0 != 12515) {
           this.a(true, 122, -88);
         }
-        if (gg.field_J != 0) {
-          var2 = this.a(false, jb.field_U, lb.field_x);
+        if (ValidationIndicator.field_J != 0) {
+          var2 = this.a(false, ValidatedTextField.field_U, TrackBoundary.field_x);
           this.field_c = var2;
           if (var2 == -1) {
             this.field_k = false;
           } else {
             this.field_k = true;
-            this.a(-(this.field_d * var2) + (jb.field_U - this.field_j), var2, gg.field_J, param0 ^ -12428, lb.field_x, false);
+            this.a(-(this.field_d * var2) + (ValidatedTextField.field_U - this.field_j), var2, ValidationIndicator.field_J, param0 ^ -12428, TrackBoundary.field_x, false);
           }
           return;
         }
@@ -65,14 +65,14 @@ abstract class pc {
           if (var2Lifetime1 == -1) {
             return;
           }
-          this.a(-(this.field_d * var2Lifetime1) + rf.field_X - this.field_j, var2Lifetime1, rd.field_f, param0 - 12639, nc.field_g, true);
+          this.a(-(this.field_d * var2Lifetime1) + rf.field_X - this.field_j, var2Lifetime1, rd.field_f, param0 - 12639, NodeHashTableIterator.field_g, true);
           return;
         }
         this.field_k = false;
         if (!na.field_k) {
           return;
         }
-        var2Lifetime2 = this.a(false, rf.field_X, nc.field_g);
+        var2Lifetime2 = this.a(false, rf.field_X, NodeHashTableIterator.field_g);
         if (var2Lifetime2 == -1 &&
           this.field_g) {
           return;
@@ -83,7 +83,7 @@ abstract class pc {
 
     abstract void d(int param0, int param1);
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == -1) {
           field_l = null;
           field_n = null;
@@ -92,7 +92,7 @@ abstract class pc {
           field_i = null;
           return;
         }
-        pc.c(-52);
+        pc.clearSharedReferences(-52);
         field_l = null;
         field_n = null;
         field_e = null;
@@ -287,6 +287,6 @@ abstract class pc {
     static {
         field_i = "This password contains your email address, and would be easy to guess";
         field_n = new an();
-        field_e = new ah();
+        field_e = new IntrusiveDeque();
     }
 }

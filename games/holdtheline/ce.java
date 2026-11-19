@@ -4,7 +4,7 @@
 final class ce extends rd {
     static int[] field_q;
     private int field_s;
-    static wj field_n;
+    static Js5Transport field_n;
     private uh field_p;
     static int field_r;
     static int field_m;
@@ -45,7 +45,7 @@ final class ce extends rd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -107,25 +107,25 @@ final class ce extends rd {
               for (var6Lifetime2 = 0; var6Lifetime2 < this.field_p.b(-117); var6Lifetime2 += 2) {
                 var9 = this.field_p.a((byte) 110, var6Lifetime2);
                 var10 = this.field_p.a((byte) 13, 1 + var6Lifetime2);
-                tc.d(var7, var8, var9, var10, 4144959);
+                SoftwareRasterizer.d(var7, var8, var9, var10, 4144959);
                 var7 = var9;
                 var8 = var10;
               }
               var9Lifetime1 = this.field_o.a((byte) 81, -2 + this.field_o.b(-111));
               var10Lifetime1 = this.field_o.a((byte) 46, this.field_o.b(-119) - 1);
-              tc.d(var7, var8, var9Lifetime1, var10Lifetime1, 4144959);
+              SoftwareRasterizer.d(var7, var8, var9Lifetime1, var10Lifetime1, 4144959);
               var8Lifetime1 = var10Lifetime1;
               var7Lifetime1 = var9Lifetime1;
               for (var6Lifetime2Lifetime1 = -2 + this.field_o.b(-115); var6Lifetime2Lifetime1 >= 0; var6Lifetime2Lifetime1 -= 2) {
                 var9Lifetime2 = this.field_o.a((byte) 19, var6Lifetime2Lifetime1);
                 var10Lifetime2 = this.field_o.a((byte) 107, var6Lifetime2Lifetime1 + 1);
-                tc.d(var7Lifetime1, var8Lifetime1, var9Lifetime2, var10Lifetime2, 4144959);
+                SoftwareRasterizer.d(var7Lifetime1, var8Lifetime1, var9Lifetime2, var10Lifetime2, 4144959);
                 var7Lifetime1 = var9Lifetime2;
                 var8Lifetime1 = var10Lifetime2;
               }
               var9Lifetime3 = this.field_p.a((byte) 28, 0);
               var10Lifetime3 = this.field_p.a((byte) 118, 1);
-              tc.d(var7Lifetime1, var8Lifetime1, var9Lifetime3, var10Lifetime3, 4144959);
+              SoftwareRasterizer.d(var7Lifetime1, var8Lifetime1, var9Lifetime3, var10Lifetime3, 4144959);
               var7Lifetime2 = var9Lifetime3;
               var8Lifetime2 = var10Lifetime3;
               this.field_p = o.a((byte) 103);
@@ -150,17 +150,17 @@ final class ce extends rd {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
-    final static ql a(int param0, byte[] param1, bm[] param2, int param3, int param4, int param5) {
+    final static PaletteBitmapFont a(int param0, byte[] param1, IndexedSprite[] param2, int param3, int param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int var26 = 0;
         int incrementValue$2 = 0;
-        ql stackIn_5_0 = null;
-        ql stackIn_31_0 = null;
+        PaletteBitmapFont stackIn_5_0 = null;
+        PaletteBitmapFont stackIn_31_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -176,7 +176,7 @@ final class ce extends rd {
         byte[][] var11 = null;
         int var13 = 0;
         int var14 = 0;
-        ql var16 = null;
+        PaletteBitmapFont var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
         int var19 = 0;
@@ -224,15 +224,15 @@ final class ce extends rd {
           var40 = new byte[256][];
           var33 = var40;
           var11 = var33;
-          var45 = tc.field_b;
-          var13 = tc.field_j;
+          var45 = SoftwareRasterizer.field_b;
+          var13 = SoftwareRasterizer.field_j;
           if (param5 != 8) {
-            stackIn_5_0 = (ql) null;
+            stackIn_5_0 = (PaletteBitmapFont) null;
             return stackIn_5_0;
           }
-          var14 = tc.field_c;
+          var14 = SoftwareRasterizer.field_c;
           var44 = new int[4];
-          tc.b(var44);
+          SoftwareRasterizer.b(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
             var6[var16_int] = param2[var16_int].field_k - param3;
             var7[var16_int] = -param3 + param2[var16_int].field_d;
@@ -245,18 +245,18 @@ final class ce extends rd {
             var19 = param2[var16_int].field_i;
             var20 = param2[var16_int].field_l;
             var21 = var37[var16_int];
-            tc.a(new int[var36[var16_int] * var37[var16_int]], var37[var16_int], var36[var16_int]);
+            SoftwareRasterizer.a(new int[var36[var16_int] * var37[var16_int]], var37[var16_int], var36[var16_int]);
             var22 = -var19 + var21;
             var23 = 0;
             for (var24 = 0; var24 < var20; var24++) {
               for (var25 = 0; var25 < var19; var25++) {
                 if (var18[var23++] != 0) {
-                  tc.d(var25 + param3, var24 + param3, param3, 2);
+                  SoftwareRasterizer.d(var25 + param3, var24 + param3, param3, 2);
                 }
               }
             }
             for (var24Lifetime1 = 0; var17.length > var24Lifetime1; var24Lifetime1++) {
-              var17[var24Lifetime1] = (byte)tc.field_b[var24Lifetime1];
+              var17[var24Lifetime1] = (byte)SoftwareRasterizer.field_b[var24Lifetime1];
             }
             var23Lifetime1 = 0;
             var24Lifetime2 = (1 + var37[var16_int]) * param3;
@@ -273,12 +273,12 @@ final class ce extends rd {
               var24Lifetime2 = var24Lifetime2 + var22;
             }
           }
-          var16 = new ql(param1, var38, var39, var37, var36, var10, var40);
+          var16 = new PaletteBitmapFont(param1, var38, var39, var37, var36, var10, var40);
           var16.field_I = var16.field_I - param3;
           var16.field_s = var16.field_s - param3;
           var16.field_G = var16.field_G - param3;
-          tc.a(var45, var13, var14);
-          tc.a(var44);
+          SoftwareRasterizer.a(var45, var13, var14);
+          SoftwareRasterizer.a(var44);
           stackIn_31_0 = var16;
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -297,11 +297,11 @@ final class ce extends rd {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         field_n = null;
         if (param0 != -10162) {
@@ -309,12 +309,12 @@ final class ce extends rd {
         }
     }
 
-    final static hj[] a(String param0, int param1, String param2, gn param3) {
+    final static Sprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hj[] stackIn_2_0 = null;
-        hj[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -325,7 +325,7 @@ final class ce extends rd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 17870) {
-            stackIn_2_0 = (hj[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param3.c(param2, 3);
@@ -354,7 +354,7 @@ final class ce extends rd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -392,7 +392,7 @@ final class ce extends rd {
           if (mc.field_a[11].field_c) {
             var2_int += 8;
           }
-          if (!nn.a(-64)) {
+          if (!BufferedSocket.a(-64)) {
             var2_int += 88;
           }
           stackIn_22_0 = 2 * var2_int / 3;
@@ -407,7 +407,7 @@ final class ce extends rd {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

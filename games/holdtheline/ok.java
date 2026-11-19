@@ -9,7 +9,7 @@ final class ok {
     static int field_e;
     String field_b;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_f = null;
         if (param0) {
           field_f = (String) null;
@@ -30,7 +30,7 @@ final class ok {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2 = kk.a(true, ko.a(param0, -13820));
+          var2 = EntitySound.a(true, ko.a(param0, -13820));
           if (var2 == null) {
             var2 = "";
           }
@@ -46,7 +46,7 @@ final class ok {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -72,7 +72,7 @@ final class ok {
           this.field_a[fieldTemp$0] = param0;
           var3_intLifetime1 = -24 % ((param1 + 5) / 37);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ok.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ok.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -84,14 +84,14 @@ final class ok {
     }
 
     final static void a(int param0) {
-        tn.field_h[kf.field_F] = tc.field_b;
-        ce.field_q[kf.field_F] = tc.field_d;
-        dm.field_b[kf.field_F] = tc.field_e;
-        m.field_c[kf.field_F] = tc.field_a;
-        mk.field_n[kf.field_F] = tc.field_i;
-        gd.field_c[kf.field_F] = tc.field_j;
-        bd.field_V[kf.field_F] = tc.field_c;
-        kf.field_F = kf.field_F + 1;
+        tn.field_h[MidiPcmStream.field_F] = SoftwareRasterizer.field_b;
+        ce.field_q[MidiPcmStream.field_F] = SoftwareRasterizer.field_d;
+        dm.field_b[MidiPcmStream.field_F] = SoftwareRasterizer.field_e;
+        m.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.field_a;
+        NanoTickClock.field_n[MidiPcmStream.field_F] = SoftwareRasterizer.field_i;
+        TextFieldValidator.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.field_j;
+        ValidationHelpWidget.field_V[MidiPcmStream.field_F] = SoftwareRasterizer.field_c;
+        MidiPcmStream.field_F = MidiPcmStream.field_F + 1;
         if (param0 != 32381) {
           field_e = 50;
         }
@@ -106,14 +106,14 @@ final class ok {
             return false;
           }
           ad.field_c = rd.field_e.f((byte) -72);
-          rd.field_e.field_l = 0;
+          rd.field_e.position = 0;
         }
         if (ad.field_c == -2) {
           if (!hi.b(2, (byte) 40)) {
             return false;
           }
           ad.field_c = rd.field_e.k(62);
-          rd.field_e.field_l = 0;
+          rd.field_e.position = 0;
         }
         return hi.b(ad.field_c, (byte) 40);
     }

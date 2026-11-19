@@ -21,12 +21,12 @@ final class jk extends IntrusiveNode {
     final void a(byte param0) {
         if (param0 >= -4) {
           this.field_i = -41;
-          this.d(0);
-          mm.field_e.a((byte) -112, (IntrusiveNode) (this));
+          this.unlink(0);
+          RasterBuffer.field_e.addLast((byte) -112, (IntrusiveNode) (this));
           return;
         }
-        this.d(0);
-        mm.field_e.a((byte) -112, (IntrusiveNode) (this));
+        this.unlink(0);
+        RasterBuffer.field_e.addLast((byte) -112, (IntrusiveNode) (this));
     }
 
     final static void a(int param0) {
@@ -42,8 +42,8 @@ final class jk extends IntrusiveNode {
             if (ce.field_n != null) {
               ce.field_n.e(param0 ^ 27371);
             }
-            if (null != lk.field_d) {
-              lk.field_d.a(true);
+            if (null != IterableSecondaryNodeDeque.field_d) {
+              IterableSecondaryNodeDeque.field_d.a(true);
             }
             if (null != td.field_g) {
               try {
@@ -66,13 +66,13 @@ final class jk extends IntrusiveNode {
               }
             }
             if (param0 != 27370) {
-              jk.a((gn) null, -66);
+              jk.a((ResourceArchive) null, -66);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw kk.a((Throwable) ((Object) var1_ref), "jk.C(" + param0 + ')');
+            throw EntitySound.wrapException((Throwable) ((Object) var1_ref), "jk.C(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -92,7 +92,7 @@ final class jk extends IntrusiveNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_r = null;
         if (param0 != 1288) {
@@ -103,16 +103,16 @@ final class jk extends IntrusiveNode {
         field_l = null;
     }
 
-    final static void a(gn param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;
-        qk var5 = null;
+        TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        da var8 = null;
+        IsaacPacketBuffer var8 = null;
         int var9 = 0;
-        da var10 = null;
+        IsaacPacketBuffer var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -121,17 +121,17 @@ final class jk extends IntrusiveNode {
         int var4Lifetime1;
         var7 = HoldTheLine.field_D;
         try {
-          var8 = new da(param0.a("", false, "logo.fo3d"));
+          var8 = new IsaacPacketBuffer(param0.a("", false, "logo.fo3d"));
           var10 = var8;
           var3 = var10.f((byte) -16);
           var10.e(true);
           kl.field_s = va.a(11658, var10);
-          ej.field_c = new qk[var3];
-          gd.field_e = new int[var3][];
+          ej.field_c = new TriangleMesh[var3];
+          TextFieldValidator.field_e = new int[var3][];
           var4 = 0;
           var5_int = -65 / ((58 - param1) / 41);
           while (var3 > var4) {
-            ej.field_c[var4] = wg.a(6, var8);
+            ej.field_c[var4] = ClientTextResources.a(6, var8);
             var4++;
           }
           var10.l(-71);
@@ -142,7 +142,7 @@ final class jk extends IntrusiveNode {
             var5.a(6, 6, 6, 2, 1);
             var5.c(0);
             var6 = new int[]{var5.field_F + var5.field_L >> 1, var5.field_H + var5.field_d >> 1, var5.field_p + var5.field_n >> 1};
-            gd.field_e[var9] = var6;
+            TextFieldValidator.field_e[var9] = var6;
             var5.a(-var6[1], -var6[0], -26608, -var6[2]);
             var9++;
           }
@@ -157,7 +157,7 @@ final class jk extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

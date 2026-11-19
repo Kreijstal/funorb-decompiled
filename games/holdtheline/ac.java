@@ -13,10 +13,10 @@ final class ac {
     private int field_d;
     static int field_e;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != -3646) {
-          ac.b(-56);
+          ac.clearSharedReferences(-56);
           field_c = null;
           field_g = null;
           return;
@@ -60,17 +60,17 @@ final class ac {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, da param3) {
+    final static void a(int param0, int param1, int param2, IsaacPacketBuffer param3) {
         try {
           eg.a(hk.field_c[param2][param1], 14, true, param3);
           eg.a(on.field_v[param2][param1], 13, true, param3);
           if (param0 >= -87) {
-            da var5 = (da) null;
-            ac.a(61, 25, -81, (da) null);
+            IsaacPacketBuffer var5 = (IsaacPacketBuffer) null;
+            ac.a(61, 25, -81, (IsaacPacketBuffer) null);
           }
           param3.a(91, 2, ha.field_j[param2][param1]);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ac.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ac.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class ac {
           }
           this.field_j = (float)this.field_d * var4_float / (float)(this.field_i + 1);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ac.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ac.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class ac {
           param0.field_g = param0.field_j;
           param0.field_j = new ul(param3, var4_int, var5, var6, var7);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ac.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

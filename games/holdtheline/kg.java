@@ -9,7 +9,7 @@ final class kg {
     private String field_f;
     private boolean field_e;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         int var1 = 80 % ((param0 - 73) / 32);
     }
@@ -45,10 +45,10 @@ final class kg {
           var2_int = 0;
           if (0 != param1.field_o) {
             if (param1.field_o == 1) {
-              if (a.field_F.b((byte) 10)) {
+              if (AccountCreationForm.field_F.b((byte) 10)) {
                 var2_int += 16;
               }
-              if (hf.field_h.b((byte) 10)) {
+              if (ProxySocketConnector.field_h.b((byte) 10)) {
                 var2_int += 16;
               }
             } else {
@@ -89,16 +89,16 @@ final class kg {
                   }
                 }
               } else {
-                if (a.field_F.b((byte) 10)) {
+                if (AccountCreationForm.field_F.b((byte) 10)) {
                   var2_int += 16;
                 }
-                if (lk.field_a.b((byte) 10)) {
+                if (IterableSecondaryNodeDeque.field_a.b((byte) 10)) {
                   var2_int += 16;
                 }
               }
             }
           } else {
-            if (ol.field_h.b((byte) 10)) {
+            if (SecondaryNodeDeque.field_h.b((byte) 10)) {
               var2_int += 16;
             }
             if (fd.field_e.b((byte) 10)) {
@@ -124,17 +124,17 @@ final class kg {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
         }
     }
 
     final mg[] a(int param0) {
-        hj[] var2;
+        Sprite[] var2;
         int var3;
         int var4;
-        hj[] var5;
+        Sprite[] var5;
         int var3Lifetime1;
-        hj[] var2Lifetime1;
+        Sprite[] var2Lifetime1;
         var4 = HoldTheLine.field_D;
         if (param0 == 16) {
           if (this.field_d != null) {
@@ -175,7 +175,7 @@ final class kg {
           this.field_f = param0;
           this.field_e = false;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class kg {
           this.field_e = param2 ? true : false;
           this.field_c = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -10,9 +10,9 @@ final class bn extends pd {
         super(param0, param1);
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -93) {
-          bn.c((byte) -69);
+          bn.clearSharedReferences((byte) -69);
           field_l = null;
           return;
         }
@@ -28,7 +28,7 @@ final class bn extends pd {
     }
 
     final static void a(int param0, int param1) {
-        pg.a(param0, (byte) 92, false);
+        DropTargetWidget.a(param0, (byte) 92, false);
         if (param1 > -106) {
           field_k = -61L;
         }

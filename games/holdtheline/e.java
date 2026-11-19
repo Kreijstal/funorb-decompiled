@@ -9,7 +9,7 @@ final class e {
     static float[] field_e;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         field_a = null;
         field_b = null;
@@ -85,7 +85,7 @@ final class e {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

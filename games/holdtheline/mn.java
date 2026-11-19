@@ -3,7 +3,7 @@
  */
 final class mn {
     static boolean field_a;
-    static hj field_c;
+    static Sprite field_c;
     static int field_b;
 
     final static void a(String param0, java.applet.Applet param1, int param2) {
@@ -24,11 +24,11 @@ final class mn {
             eo.a(param1, -31645, "document.cookie=\"" + var5 + "\"");
             if (param2 != -1) {
               vd var6 = (vd) null;
-              mn.a((wd[]) null, (vd) null, (byte) 41);
+              mn.a((RoadSegment[]) null, (vd) null, (byte) 41);
             }
             bb.a(param1, (byte) 49);
           } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "mn.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mn.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -37,25 +37,25 @@ final class mn {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 >= -102) {
           field_a = false;
         }
     }
 
-    final static void a(wd[] param0, vd param1, byte param2) {
+    final static void a(RoadSegment[] param0, vd param1, byte param2) {
         int var12 = 0;
         uh var3 = null;
         uh var4 = null;
-        wd var5 = null;
-        qm var6 = null;
-        qm var7 = null;
+        RoadSegment var5 = null;
+        Point2i var6 = null;
+        Point2i var7 = null;
         float var8 = 0.0f;
         int var9 = 0;
         float var10 = 0.0f;
         float var11 = 0.0f;
-        wd var13 = null;
+        RoadSegment var13 = null;
         float var14 = 0.0f;
         int var15 = 0;
         float var16 = 0.0f;
@@ -63,15 +63,15 @@ final class mn {
         float var18 = 0.0f;
         int var19 = 0;
         uh var20 = null;
-        qm var21 = null;
+        Point2i var21 = null;
         uh var22 = null;
-        qm var23 = null;
-        qm var24 = null;
-        qm var25 = null;
+        Point2i var23 = null;
+        Point2i var24 = null;
+        Point2i var25 = null;
         uh var26 = null;
         uh var27 = null;
-        qm var28 = null;
-        qm var29 = null;
+        Point2i var28 = null;
+        Point2i var29 = null;
         uh var30 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -80,8 +80,8 @@ final class mn {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        qm var6Lifetime1;
-        qm var7Lifetime1;
+        Point2i var6Lifetime1;
+        Point2i var7Lifetime1;
         var19 = HoldTheLine.field_D;
         try {
           var20 = o.a((byte) 80);
@@ -91,10 +91,10 @@ final class mn {
           var5 = param0[-1 + param0.length];
           var21 = var5.c(true);
           var23 = var5.o(-14);
-          var20.a(var21.field_h, (byte) 77);
-          var20.a(var21.field_f, (byte) 104);
-          var22.a(var23.field_h, (byte) 85);
-          var22.a(var23.field_f, (byte) 81);
+          var20.a(var21.x, (byte) 77);
+          var20.a(var21.y, (byte) 104);
+          var22.a(var23.x, (byte) 85);
+          var22.a(var23.y, (byte) 81);
           var8 = ce.a(-1, param0);
           var9 = 1 + (int)(var8 / 40.0f);
           var10 = var8 / (float)var9;
@@ -113,39 +113,39 @@ final class mn {
               var6 = var24;
               var25 = var13.a(var18, false);
               var7 = var25;
-              var3.a(var24.field_h, (byte) 110);
-              var3.a(var24.field_f, (byte) 122);
-              var4.a(var25.field_h, (byte) 102);
+              var3.a(var24.x, (byte) 110);
+              var3.a(var24.y, (byte) 122);
+              var4.a(var25.x, (byte) 102);
               var11 = var11 - var16;
-              var4.a(var25.field_f, (byte) 110);
+              var4.a(var25.y, (byte) 110);
               if (var11 < 0.0f) {
                 param1.a(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.a(-50), var13.field_k, var3.a(-90), (byte) 49);
                 var26 = o.a((byte) 51);
                 var3 = var26;
                 var27 = o.a((byte) 21);
                 var4 = var27;
-                var26.a(var24.field_h, (byte) 84);
-                var26.a(var24.field_f, (byte) 68);
-                var27.a(var25.field_h, (byte) 67);
+                var26.a(var24.x, (byte) 84);
+                var26.a(var24.y, (byte) 68);
+                var27.a(var25.x, (byte) 67);
                 var11 = var11 + var10;
-                var27.a(var25.field_f, (byte) 77);
+                var27.a(var25.y, (byte) 77);
               }
             }
             var28 = var13.h(7560980);
             var6Lifetime1 = var28;
             var29 = var13.a((byte) 29);
             var7Lifetime1 = var29;
-            var3.a(var28.field_h, (byte) 117);
-            var3.a(var28.field_f, (byte) 66);
-            var4.a(var29.field_h, (byte) 95);
-            var4.a(var29.field_f, (byte) 121);
+            var3.a(var28.x, (byte) 117);
+            var3.a(var28.y, (byte) 66);
+            var4.a(var29.x, (byte) 95);
+            var4.a(var29.y, (byte) 121);
             param1.a(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.a(-60), var13.field_k, var3.a(-127), (byte) 49);
             var3 = o.a((byte) 17);
             var30 = o.a((byte) -128);
-            var3.a(var6Lifetime1.field_h, (byte) 71);
-            var3.a(var6Lifetime1.field_f, (byte) 123);
-            var30.a(var7Lifetime1.field_h, (byte) 91);
-            var30.a(var7Lifetime1.field_f, (byte) 101);
+            var3.a(var6Lifetime1.x, (byte) 71);
+            var3.a(var6Lifetime1.y, (byte) 123);
+            var30.a(var7Lifetime1.x, (byte) 91);
+            var30.a(var7Lifetime1.y, (byte) 101);
             var11 = var10;
           }
           return;
@@ -165,7 +165,7 @@ final class mn {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class kc {
     static uf field_b;
     static va field_a;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_a = null;
         if (param0) {
           field_c = null;
@@ -17,7 +17,7 @@ final class kc {
           field_e = null;
           return;
         }
-        kc.a(true);
+        kc.clearSharedReferences(true);
         field_c = null;
         field_d = null;
         field_b = null;

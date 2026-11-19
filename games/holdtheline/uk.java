@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class uk extends IOException {
-    static hj field_a;
+    static Sprite field_a;
     static String field_f;
     static e field_g;
     static uf field_b;
@@ -20,21 +20,21 @@ final class uk extends IOException {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        hj var6 = null;
-        hj var7 = null;
-        hj var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = HoldTheLine.field_D;
         try {
-          tc.a(243, 197, 369, 143, 16777215);
-          tc.f(244, 198, 367, 141, 0);
-          if (qk.field_y == null) {
+          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.f(244, 198, 367, 141, 0);
+          if (TriangleMesh.field_y == null) {
             if (null != an.field_e) {
               an.field_e.a(ug.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = qk.field_y[va.field_e];
+          var6 = TriangleMesh.field_y[va.field_e];
           if (var6 != null) {
             var6.a(245, 199);
           } else {
@@ -45,12 +45,12 @@ final class uk extends IOException {
           if (param0 != 3979) {
             return;
           }
-          if (hk.field_e < bg.field_g) {
-            var7 = qk.field_y[hf.field_i];
+          if (hk.field_e < BoundedRandomAccessFile.field_g) {
+            var7 = TriangleMesh.field_y[ProxySocketConnector.field_i];
             if (var7 != null) {
-              var2_int = hk.field_e * (60 + var7.field_o) / bg.field_g;
+              var2_int = hk.field_e * (60 + var7.field_o) / BoundedRandomAccessFile.field_g;
               var3 = var2_int - 30;
-              if (rg.field_e) {
+              if (DualNodeHashTable.field_e) {
                 jg.a(199, 256 * (-var3 + var7.field_o) / 30, var7, true, 245, var3 * -256 / 30);
               } else {
                 jg.a(199, -256 * var3 / 30, var7, true, 245, (var7.field_o - var3) * 256 / 30);
@@ -61,8 +61,8 @@ final class uk extends IOException {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
-            while (var5 < qk.field_y.length) {
-              var8 = qk.field_y[var5];
+            while (var5 < TriangleMesh.field_y.length) {
+              var8 = TriangleMesh.field_y[var5];
               if (var8 != null && (var8.field_o != 365 ||
                 139 != var8.field_v)) {
                 if (var2 != null) {
@@ -83,7 +83,7 @@ final class uk extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "uk.A(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "uk.A(" + param0 + ')');
         }
     }
 
@@ -94,15 +94,15 @@ final class uk extends IOException {
         }
         aa.field_k = false;
         go.a(0, -1);
-        ak.field_b = gg.field_M;
-        bb.field_a = gg.field_M;
+        ak.field_b = ValidationIndicator.field_M;
+        bb.field_a = ValidationIndicator.field_M;
     }
 
     uk(String param0) {
         super(param0);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 97 / ((-59 - param0) / 57);
         field_c = null;
         field_f = null;
@@ -134,7 +134,7 @@ final class uk extends IOException {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

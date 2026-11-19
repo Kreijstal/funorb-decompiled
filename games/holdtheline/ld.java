@@ -2,24 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ld {
-    private gn field_a;
-    private gn field_g;
+    private ResourceArchive field_a;
+    private ResourceArchive field_g;
     static String field_f;
-    static gn field_c;
+    static ResourceArchive field_c;
     static int field_b;
-    private og field_d;
-    private og field_e;
+    private NodeHashTable field_d;
+    private NodeHashTable field_e;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         int var1 = 99 / ((param0 - 4) / 49);
         field_f = null;
     }
 
-    private final el a(int param0, int[] param1, String param2) {
+    private final PcmSample a(int param0, int[] param1, String param2) {
         RuntimeException var4 = null;
-        el stackIn_4_0 = null;
-        el stackIn_6_0 = null;
+        PcmSample stackIn_4_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -28,7 +28,7 @@ final class ld {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1610608641) {
-            ld.a(64);
+            ld.clearSharedReferences(64);
           }
           if (!this.field_a.a("", true)) {
             stackIn_6_0 = this.a(param2, param1, param0 ^ -1610592021, "");
@@ -52,7 +52,7 @@ final class ld {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -160,28 +160,28 @@ final class ld {
         return var2Lifetime1;
     }
 
-    private final el a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        el var8 = null;
-        pm var9 = null;
-        el var10 = null;
-        el stackIn_2_0 = null;
+        PcmSample var8 = null;
+        SoundEffect var9 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_9_0 = null;
-        el stackIn_12_0 = null;
-        el stackIn_17_0 = null;
+        PcmSample stackIn_12_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        el var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param3 >>> 12 | (param3 & -1610608641) << 4) ^ param1;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (el) (this.field_e.a((byte) 114, var6));
+          var8 = (PcmSample) (this.field_e.a((byte) 114, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -189,18 +189,18 @@ final class ld {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_6_0 = null;
-            return (el) (stackIn_6_0);
+            return (PcmSample) (stackIn_6_0);
           }
-          var9 = pm.a(this.field_a, param3, param1);
+          var9 = SoundEffect.load(this.field_a, param3, param1);
           if (var9 == null) {
             stackIn_9_0 = null;
-            return (el) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
-          var10 = var9.b();
+          var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
           this.field_e.a(var8Lifetime1, var6, false);
           if (param2 != -14322) {
-            stackIn_12_0 = (el) null;
+            stackIn_12_0 = (PcmSample) null;
             return stackIn_12_0;
           }
           if (param0 != null) {
@@ -218,14 +218,14 @@ final class ld {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final el a(String param0, byte param1) {
+    final PcmSample a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        el stackIn_1_0 = null;
+        PcmSample stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -244,15 +244,15 @@ final class ld {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final el a(int[] param0, int param1, byte param2) {
+    final PcmSample a(int[] param0, int param1, byte param2) {
         RuntimeException var4 = null;
         CharSequence var5 = null;
-        el stackIn_3_0 = null;
-        el stackIn_8_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -281,20 +281,20 @@ final class ld {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final el a(int param0, String param1) {
+    final PcmSample a(int param0, String param1) {
         RuntimeException var3 = null;
-        el stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -32660) {
-            ld.a(49);
+            ld.clearSharedReferences(49);
           }
           stackIn_3_0 = this.a((int[]) null, param1, -343045972);
           return stackIn_3_0;
@@ -308,15 +308,15 @@ final class ld {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final el a(int param0, byte param1, int[] param2) {
+    final PcmSample a(int param0, byte param1, int[] param2) {
         RuntimeException var4 = null;
-        el stackIn_2_0 = null;
-        el stackIn_6_0 = null;
-        el stackIn_9_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_6_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -333,7 +333,7 @@ final class ld {
           if (param1 >= 91) {
             throw new RuntimeException();
           }
-          stackIn_9_0 = (el) null;
+          stackIn_9_0 = (PcmSample) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -345,15 +345,15 @@ final class ld {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    private final el a(int[] param0, String param1, int param2) {
+    private final PcmSample a(int[] param0, String param1, int param2) {
         RuntimeException var4 = null;
         int[] var5 = null;
-        el stackIn_2_0 = null;
-        el stackIn_6_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -387,15 +387,15 @@ final class ld {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final el a(String param0, int[] param1, int param2, String param3) {
+    private final PcmSample a(String param0, int[] param1, int param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        el stackIn_9_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -440,17 +440,17 @@ final class ld {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    private final el a(String param0, int[] param1, byte param2, String param3) {
-        el discarded$1 = null;
+    private final PcmSample a(String param0, int[] param1, byte param2, String param3) {
+        PcmSample discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        el stackIn_9_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -496,7 +496,7 @@ final class ld {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -528,24 +528,24 @@ final class ld {
           if (1 <= var3_int &&
             var3_int <= 12) {
             if (param0) {
-              ld.a(18);
+              ld.clearSharedReferences(18);
             }
-            var4 = kf.a(param2, (byte) -98);
+            var4 = MidiPcmStream.a(param2, (byte) -98);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!ag.a(-2821, var4.charAt(0)) &&
-                !ag.a(-2821, var4.charAt(-1 + var4.length()))) {
+              if (!SocketJs5Transport.a(-2821, var4.charAt(0)) &&
+                !SocketJs5Transport.a(-2821, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
                   var7 = param2.charAt(var6);
-                  if (ag.a(-2821, (char) var7)) {
+                  if (SocketJs5Transport.a(-2821, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_31_0 = kd.field_a;
+                    stackIn_31_0 = MouseInputHandler.field_a;
                     return stackIn_31_0;
                   }
                 }
@@ -573,29 +573,29 @@ final class ld {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
-    private final el a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        el var8 = null;
-        sn var9 = null;
-        el stackIn_2_0 = null;
+        PcmSample var8 = null;
+        VorbisSample var9 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_15_0 = null;
-        el stackIn_17_0 = null;
+        PcmSample stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        el var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param0 ^ (param3 >>> 12 | 65531 & param3 << 4);
           var5_int = var5_int | param3 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (el) (this.field_e.a((byte) 121, var6));
+          var8 = (PcmSample) (this.field_e.a((byte) 121, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -604,20 +604,20 @@ final class ld {
             param1[0] <= 0) {
             return null;
           }
-          var9 = (sn) (this.field_d.a((byte) 120, var6));
+          var9 = (VorbisSample) (this.field_d.a((byte) 120, var6));
           if (var9 == null) {
-            var9 = sn.a(this.field_g, param3, param0);
+            var9 = VorbisSample.load(this.field_g, param3, param0);
             if (var9 == null) {
               return null;
             }
             this.field_d.a(var9, var6, false);
           }
-          var8Lifetime1 = var9.a(param1);
+          var8Lifetime1 = var9.toPcmSample(param1);
           if (var8Lifetime1 == null) {
             stackIn_15_0 = null;
-            return (el) (stackIn_15_0);
+            return (PcmSample) (stackIn_15_0);
           }
-          var9.d(param2);
+          var9.unlink(param2);
           this.field_e.a(var8Lifetime1, var6, false);
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -631,18 +631,18 @@ final class ld {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    ld(gn param0, gn param1) {
-        this.field_d = new og(256);
-        this.field_e = new og(256);
+    ld(ResourceArchive param0, ResourceArchive param1) {
+        this.field_d = new NodeHashTable(256);
+        this.field_e = new NodeHashTable(256);
         try {
           this.field_g = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

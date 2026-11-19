@@ -7,27 +7,27 @@ final class ak {
     static sa field_b;
     static int field_c;
 
-    final static hj a(int param0, boolean param1, int param2) {
-        hj stackIn_10_0 = null;
-        hj stackIn_15_0 = null;
-        hj stackIn_21_0 = null;
-        hj stackIn_31_0 = null;
+    final static Sprite a(int param0, boolean param1, int param2) {
+        Sprite stackIn_10_0 = null;
+        Sprite stackIn_15_0 = null;
+        Sprite stackIn_21_0 = null;
+        Sprite stackIn_31_0 = null;
         int var3 = 0;
         int var4 = 0;
         var4 = HoldTheLine.field_D;
         if (param0 > -24) {
-          ak.a(124);
+          ak.clearSharedReferences(124);
         }
         if (param2 == -1) {
-          if (null == vm.field_vb) {
-            vm.field_vb = dl.a(wj.field_n, "basic", false, "unachieved");
-            hi.field_N = new hj(32, 32);
+          if (null == NameCheckProgressDialog.field_vb) {
+            NameCheckProgressDialog.field_vb = UrlPacketDownloader.a(Js5Transport.field_n, "basic", false, "unachieved");
+            hi.field_N = new Sprite(32, 32);
             vb.a(-79, hi.field_N);
-            vm.field_vb.c(0, 0, 32, 32);
+            NameCheckProgressDialog.field_vb.c(0, 0, 32, 32);
             ug.b(-1);
           }
           if (!param1) {
-            stackIn_10_0 = vm.field_vb;
+            stackIn_10_0 = NameCheckProgressDialog.field_vb;
           } else {
             stackIn_10_0 = hi.field_N;
           }
@@ -49,8 +49,8 @@ final class ak {
           }
           return stackIn_21_0;
         }
-        cd.field_a = si.a(fb.field_i, 33, "achievements_128", "");
-        nl.field_h = new hj[cd.field_a.length];
+        cd.field_a = StandardContentTransitionDialog.a(fb.field_i, 33, "achievements_128", "");
+        nl.field_h = new Sprite[cd.field_a.length];
         ok.a(32381);
         var3 = 0;
         do {
@@ -58,7 +58,7 @@ final class ak {
             ug.b(-1);
             break;
           }
-          nl.field_h[var3] = new hj(32, 32);
+          nl.field_h[var3] = new Sprite(32, 32);
           nl.field_h[var3].f();
           cd.field_a[var3].c(0, 0, 32, 32);
           var3++;
@@ -71,7 +71,7 @@ final class ak {
         return stackIn_31_0;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
@@ -80,7 +80,7 @@ final class ak {
         field_d = null;
     }
 
-    final static hj[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -88,11 +88,11 @@ final class ak {
         int stackIn_35_0 = 0;
         int stackIn_46_0 = 0;
         int var9 = 0;
-        hj[] var10 = null;
-        hj[] var11_ref_hj__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_hj__ = null;
         int var11 = 0;
         int var12 = 0;
-        hj var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -102,7 +102,7 @@ final class ak {
         int var12Lifetime2Lifetime2;
         var15 = HoldTheLine.field_D;
         var9 = param8 + (param5 + param2);
-        var10 = new hj[]{new hj(var9, var9), new hj(param7, var9), new hj(var9, var9), new hj(var9, param7), new hj(64, 64), new hj(var9, param7), new hj(var9, var9), new hj(param7, var9), new hj(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9), new Sprite(var9, param7), new Sprite(64, 64), new Sprite(var9, param7), new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9)};
         var11_ref_hj__ = var10;
         var12 = 0;
         scanLoop1: while (true) {

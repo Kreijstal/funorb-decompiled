@@ -3,26 +3,26 @@
  */
 final class oe extends tg {
     static int[] field_h;
-    qm field_k;
-    qm field_l;
-    static gn field_j;
-    qm field_m;
+    Point2i field_k;
+    Point2i field_l;
+    static ResourceArchive field_j;
+    Point2i field_m;
     static va field_i;
 
-    final qm a(boolean param0, float param1) {
+    final Point2i a(boolean param0, float param1) {
         int var3 = 0;
         int var4 = 0;
         int var3Lifetime1;
         int var4Lifetime1;
         if (!param0) {
-          var3 = (int)((float)this.field_m.field_h * param1 * param1 + (param1 * ((-param1 + 1.0f) * (float)(this.field_l.field_h * 2)) + (-param1 + 1.0f) * (float)this.field_k.field_h * (1.0f - param1)));
-          var4 = (int)(param1 * ((float)this.field_m.field_f * param1) + ((1.0f - param1) * (float)(2 * this.field_l.field_f) * param1 + (-param1 + 1.0f) * ((float)this.field_k.field_f * (-param1 + 1.0f))));
-          return new qm(var3, var4);
+          var3 = (int)((float)this.field_m.x * param1 * param1 + (param1 * ((-param1 + 1.0f) * (float)(this.field_l.x * 2)) + (-param1 + 1.0f) * (float)this.field_k.x * (1.0f - param1)));
+          var4 = (int)(param1 * ((float)this.field_m.y * param1) + ((1.0f - param1) * (float)(2 * this.field_l.y) * param1 + (-param1 + 1.0f) * ((float)this.field_k.y * (-param1 + 1.0f))));
+          return new Point2i(var3, var4);
         }
-        oe.a(-65);
-        var3Lifetime1 = (int)((float)this.field_m.field_h * param1 * param1 + (param1 * ((-param1 + 1.0f) * (float)(this.field_l.field_h * 2)) + (-param1 + 1.0f) * (float)this.field_k.field_h * (1.0f - param1)));
-        var4Lifetime1 = (int)(param1 * ((float)this.field_m.field_f * param1) + ((1.0f - param1) * (float)(2 * this.field_l.field_f) * param1 + (-param1 + 1.0f) * ((float)this.field_k.field_f * (-param1 + 1.0f))));
-        return new qm(var3Lifetime1, var4Lifetime1);
+        oe.clearSharedReferences(-65);
+        var3Lifetime1 = (int)((float)this.field_m.x * param1 * param1 + (param1 * ((-param1 + 1.0f) * (float)(this.field_l.x * 2)) + (-param1 + 1.0f) * (float)this.field_k.x * (1.0f - param1)));
+        var4Lifetime1 = (int)(param1 * ((float)this.field_m.y * param1) + ((1.0f - param1) * (float)(2 * this.field_l.y) * param1 + (-param1 + 1.0f) * ((float)this.field_k.y * (-param1 + 1.0f))));
+        return new Point2i(var3Lifetime1, var4Lifetime1);
     }
 
     final static void b(byte param0) {
@@ -34,16 +34,16 @@ final class oe extends tg {
         ei var2;
         var1 = 0;
         if (param0 > 101) {
-          if (ol.d(0)) {
+          if (SecondaryNodeDeque.d(0)) {
             var1 = 1;
           } else {
             if (of.a(-969)) {
-              if (!hf.a(wi.field_b, 0)) {
-                stackIn_23_0 = (null == kf.field_U) ? 3 : 2;
+              if (!ProxySocketConnector.a(wi.field_b, 0)) {
+                stackIn_23_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
                 var1 = stackIn_23_0;
               } else {
                 em.a(-29486, true);
-                stackIn_27_0 = (null == kf.field_U) ? 3 : 2;
+                stackIn_27_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
                 var1 = stackIn_27_0;
               }
             }
@@ -53,16 +53,16 @@ final class oe extends tg {
         }
         var2 = (ei) null;
         oe.a(-1.8653900623321533f, -111, (ei) null, (byte) 86, 0.6255527138710022f, (ei) null);
-        if (ol.d(0)) {
+        if (SecondaryNodeDeque.d(0)) {
           var1 = 1;
         } else {
           if (of.a(-969)) {
-            if (!hf.a(wi.field_b, 0)) {
-              stackIn_13_0 = (null == kf.field_U) ? 3 : 2;
+            if (!ProxySocketConnector.a(wi.field_b, 0)) {
+              stackIn_13_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
               var1 = stackIn_13_0;
             } else {
               em.a(-29486, true);
-              stackIn_9_0 = (null == kf.field_U) ? 3 : 2;
+              stackIn_9_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
               var1 = stackIn_9_0;
             }
           }
@@ -98,10 +98,10 @@ final class oe extends tg {
 
     final static int a(int param0, int param1) {
         if (param1 != 2) {
-          field_j = (gn) null;
-          return li.field_e[param0 & 2047];
+          field_j = (ResourceArchive) null;
+          return TriangleRasterState.field_e[param0 & 2047];
         }
-        return li.field_e[param0 & 2047];
+        return TriangleRasterState.field_e[param0 & 2047];
     }
 
     final static void a(float param0, int param1, ei param2, byte param3, float param4, ei param5) {
@@ -173,11 +173,11 @@ final class oe extends tg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_i = null;
         if (param0 != 0) {
           return;

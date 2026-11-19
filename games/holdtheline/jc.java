@@ -7,7 +7,7 @@ final class jc {
     boolean field_e;
     String field_b;
     static boolean field_f;
-    static hj[] field_h;
+    static Sprite[] field_h;
     static String field_a;
     static String field_d;
 
@@ -42,11 +42,11 @@ final class jc {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static hj[] a(int param0, int param1, gn param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -54,7 +54,7 @@ final class jc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            jc.a((byte) 44);
+            jc.clearSharedReferences((byte) 44);
           }
           if (qg.a(param3, param1, (byte) -27, param2)) {
             return ei.a(61);
@@ -70,18 +70,18 @@ final class jc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_h = null;
         field_d = null;
         field_a = null;
         if (param0 != 5) {
-          gn var2 = (gn) null;
-          jc.a(95, -8, (gn) null, 100);
+          ResourceArchive var2 = (ResourceArchive) null;
+          jc.a(95, -8, (ResourceArchive) null, 100);
         }
     }
 

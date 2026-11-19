@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends u {
+final class ra extends ResizableDialog {
     static ci field_Z;
     static String field_fb;
     static int[] field_cb;
     private String field_gb;
     private boolean field_db;
     private String field_eb;
-    static hj[] field_X;
+    static Sprite[] field_X;
     private boolean field_Y;
     static long field_bb;
     private ea field_jb;
     static int field_ab;
     static String field_ib;
-    static hj field_hb;
+    static Sprite field_hb;
 
     final void i(byte param0) {
         this.field_jb.field_K = false;
@@ -23,8 +23,8 @@ final class ra extends u {
     }
 
     final static void m(int param0) {
-        if (bl.field_r != null) {
-          bl.field_r.f(-38);
+        if (MusicPatchPcmStream.field_r != null) {
+          MusicPatchPcmStream.field_r.f(-38);
           if (param0 < 95) {
             field_cb = (int[]) null;
             return;
@@ -62,11 +62,11 @@ final class ra extends u {
           if (var3_int > 12) {
             return false;
           }
-          var4 = kf.a(param0, (byte) 122);
+          var4 = MidiPcmStream.a(param0, (byte) 122);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!ag.a(-2821, var4.charAt(0)) &&
-              !ag.a(-2821, var4.charAt(var4.length() - 1))) {
+            if (!SocketJs5Transport.a(-2821, var4.charAt(0)) &&
+              !SocketJs5Transport.a(-2821, var4.charAt(var4.length() - 1))) {
               if (param1) {
                 var9 = (String) null;
                 ra.a((String) null, false);
@@ -74,7 +74,7 @@ final class ra extends u {
               var5 = 0;
               for (var6 = 0; param0.length() > var6; var6++) {
                 var7 = param0.charAt(var6);
-                if (ag.a(-2821, (char) var7)) {
+                if (SocketJs5Transport.a(-2821, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -102,11 +102,11 @@ final class ra extends u {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_ib = null;
         if (param0 <= -104) {
           field_fb = null;
@@ -126,10 +126,10 @@ final class ra extends u {
 
     final void a(int param0, int param1, byte param2) {
         super.a(param0, param1, param2);
-        de.field_I.b(this.field_eb, (this.field_x >> 1) + param0, param1 + 103, 16777215, -1);
+        DisplayNameForm.field_I.b(this.field_eb, (this.field_x >> 1) + param0, param1 + 103, 16777215, -1);
         if (null != this.field_gb) {
-          tc.b(20 + param0, -7 + (param1 + 120), 260, 8421504);
-          de.field_I.a(this.field_gb, 20 + param0, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, de.field_I.field_G);
+          SoftwareRasterizer.b(20 + param0, -7 + (param1 + 120), 260, 8421504);
+          DisplayNameForm.field_I.a(this.field_gb, 20 + param0, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, DisplayNameForm.field_I.field_G);
         }
     }
 
@@ -172,17 +172,17 @@ final class ra extends u {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    ra(qj param0, String param1) {
+    ra(DialogLayer param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_gb = param1;
           if (null != this.field_gb) {
-            var3_int = de.field_I.b(this.field_gb, 260, de.field_I.field_G);
+            var3_int = DisplayNameForm.field_I.b(this.field_gb, 260, DisplayNameForm.field_I.field_G);
             this.b(537342017, 300, var3_int + 150);
           }
           this.field_jb = new ea(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -191,7 +191,7 @@ final class ra extends u {
           this.field_db = false;
           this.a(true, this.field_jb);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class ra extends u {
             ra.a((String) null, -94);
           }
           var4 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = co.field_e.equals(kf.a(var4, (byte) -102));
+          stackIn_3_0 = co.field_e.equals(MidiPcmStream.a(var4, (byte) -102));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,7 +222,7 @@ final class ra extends u {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -255,21 +255,21 @@ final class ra extends u {
             return (fi) (stackIn_7_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var2 = kf.a(var7, (byte) 99);
+          var2 = MidiPcmStream.a(var7, (byte) 99);
           if (var2 == null) {
             stackIn_10_0 = null;
             return (fi) (stackIn_10_0);
           }
           var4 = 70 % ((param1 - 9) / 33);
-          var3 = (fi) (jo.field_b.a(-25839, (long)var2.hashCode()));
+          var3 = (fi) (jo.field_b.get(-25839, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
             }
             var8 = (CharSequence) ((Object) var3.field_mb);
-            var5 = kf.a(var8, (byte) 123);
+            var5 = MidiPcmStream.a(var8, (byte) 123);
             if (!var5.equals(var2)) {
-              var3 = (fi) (jo.field_b.a(20240));
+              var3 = (fi) (jo.field_b.getNextWithSameKey(20240));
               continue;
             }
             break;
@@ -286,7 +286,7 @@ final class ra extends u {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 

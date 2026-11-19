@@ -6,7 +6,7 @@ final class ec extends pc {
     private int[] field_J;
     private int[] field_V;
     int[][] field_F;
-    static vi field_D;
+    static MusicTrack field_D;
     static String field_z;
     private int[] field_S;
     private int field_W;
@@ -31,7 +31,7 @@ final class ec extends pc {
     String[][] field_G;
     private int field_M;
     private int field_q;
-    hj[][] field_o;
+    Sprite[][] field_o;
     private int field_R;
     static tk field_s;
     private int[] field_N;
@@ -183,7 +183,7 @@ final class ec extends pc {
             }
           } else {
             if (aa.field_n == 1 &&
-              lk.field_g[82] &&
+              IterableSecondaryNodeDeque.field_g[82] &&
               mg.field_c) {
               l.field_b = true;
               hk.field_d = -1 + pc.field_l[3];
@@ -250,7 +250,7 @@ final class ec extends pc {
         int var4Lifetime1;
         var8 = HoldTheLine.field_D;
         if (this.field_P == 1) {
-          var2 = this.d(rf.field_X, -110, nc.field_g);
+          var2 = this.d(rf.field_X, -110, NodeHashTableIterator.field_g);
           if (var2 != -1 ||
             !this.field_g) {
             this.field_Y = var2;
@@ -264,7 +264,7 @@ final class ec extends pc {
             if (var4 > 18 &&
               var4 < 102) {
               for (var6 = 0; this.field_F[var3].length > var6; var6++) {
-                var7 = nc.field_g - this.a(var3, 4, var6);
+                var7 = NodeHashTableIterator.field_g - this.a(var3, 4, var6);
                 if (var7 > 24 &&
                   var7 < 136) {
                   var5 = var6;
@@ -286,10 +286,10 @@ final class ec extends pc {
           }
         }
         if (this.field_a - 1 == this.field_q) {
-          var2_float = (float)nc.field_g / 640.0f;
+          var2_float = (float)NodeHashTableIterator.field_g / 640.0f;
           this.c(this.field_a - 1, -1, (int)((float)this.field_V[-1 + this.field_a] * var2_float));
         }
-        if (gg.field_J != 0) {
+        if (ValidationIndicator.field_J != 0) {
           if (0 == this.field_P) {
             this.field_W = 0;
             this.field_r = (float)this.field_M;
@@ -303,13 +303,13 @@ final class ec extends pc {
             return;
           }
           if (this.field_Y != -1) {
-            var2Lifetime1 = this.d(rf.field_X, -108, nc.field_g);
+            var2Lifetime1 = this.d(rf.field_X, -108, NodeHashTableIterator.field_g);
             if (var2Lifetime1 != this.field_Y) {
               return;
             }
             stackIn_39_1 = this.field_Y;
             stackIn_39_2 = this.field_J[this.field_Y];
-            if (1 != gg.field_J) {
+            if (1 != ValidationIndicator.field_J) {
               stackIn_40_3 = 4;
             } else {
               stackIn_40_3 = 3;
@@ -318,16 +318,16 @@ final class ec extends pc {
             return;
           }
         }
-        if (gg.field_J == 1 &&
-          nc.field_g != -1) {
-          this.field_q = this.a(jb.field_U, false);
+        if (ValidationIndicator.field_J == 1 &&
+          NodeHashTableIterator.field_g != -1) {
+          this.field_q = this.a(ValidatedTextField.field_U, false);
           if (this.field_q >= 0 &&
             this.field_q < this.field_a) {
-            var2Lifetime2 = jb.field_U - this.c((byte) -113, this.field_q);
+            var2Lifetime2 = ValidatedTextField.field_U - this.c((byte) -113, this.field_q);
             if (var2Lifetime2 > 18 &&
               94 > var2Lifetime2) {
               for (var3Lifetime1 = 0; this.field_F[this.field_q].length > var3Lifetime1; var3Lifetime1++) {
-                var4Lifetime1 = lb.field_x - this.a(this.field_q, 4, var3Lifetime1);
+                var4Lifetime1 = TrackBoundary.field_x - this.a(this.field_q, 4, var3Lifetime1);
                 if (var4Lifetime1 > 24 &&
                   136 > var4Lifetime1 && (this.field_q == -1 + this.field_a ||
                   this.field_H[this.field_q] != var3Lifetime1)) {
@@ -407,8 +407,8 @@ final class ec extends pc {
         if (var3 != null) {
           var4 = HoldTheLine.field_F.a(var3);
           var5 = this.c((byte) -113, this.field_a - 1);
-          tc.c(0, var5, 20 + var4, 28, 0, 192);
-          tc.a(0, var5, 20 + var4, 28, 16777215);
+          SoftwareRasterizer.c(0, var5, 20 + var4, 28, 0, 192);
+          SoftwareRasterizer.a(0, var5, 20 + var4, 28, 16777215);
           HoldTheLine.field_F.a(var3, 10, 18 + var5, 4, -1);
         }
         oi.a(1, 13);
@@ -497,21 +497,21 @@ final class ec extends pc {
           if (param1 != 51) {
             return;
           }
-          var4 = (fl) (pd.field_e.b((byte) 125));
+          var4 = (fl) (pd.field_e.first((byte) 125));
           while (var4 != null) {
             om.a(27391, var4, param0);
-            var4 = (fl) (pd.field_e.c((byte) -89));
+            var4 = (fl) (pd.field_e.next((byte) -89));
           }
-          var2 = oc.field_d.b((byte) 121);
+          var2 = oc.field_d.first((byte) 121);
           while (var2 != null) {
             q.a(param0, 60);
-            var2 = oc.field_d.c((byte) 124);
+            var2 = oc.field_d.next((byte) 124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var2_ref), "ec.LB(" + param0 + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var2_ref), "ec.LB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -521,7 +521,7 @@ final class ec extends pc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_y = null;
         if (param0 != -122) {
           return;
@@ -551,8 +551,8 @@ final class ec extends pc {
         }
         if (this.field_P == 0) {
           if (this.field_W == 0) {
-            bd.a(17405, 64, 0, j.field_c.field_f);
-            bd.a(param0 + 17514, 64, 256, j.field_c.field_h);
+            ValidationHelpWidget.a(17405, 64, 0, j.field_c.field_f);
+            ValidationHelpWidget.a(param0 + 17514, 64, 256, j.field_c.field_h);
           }
           fieldTemp$0 = this.field_W + 1;
           this.field_W = this.field_W + 1;
@@ -591,18 +591,18 @@ final class ec extends pc {
           var5++;
         }
         if (param0 != -109) {
-          ec.e((byte) 121);
+          ec.clearSharedReferences((byte) 121);
         }
         if (1 >= this.field_P) {
           if (na.field_k &&
-            -1 != nc.field_g) {
+            -1 != NodeHashTableIterator.field_g) {
             this.d(86);
           }
           while (qh.c(-85)) {
             this.a(true);
           }
         }
-        th.b(true);
+        PacketBuffer.b(true);
         return;
     }
 
@@ -629,7 +629,7 @@ final class ec extends pc {
         }
     }
 
-    private final void a(String param0, int param1, int[] param2, hj[] param3, boolean param4, String[] param5, String[] param6, int param7) {
+    private final void a(String param0, int param1, int[] param2, Sprite[] param3, boolean param4, String[] param5, String[] param6, int param7) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -699,13 +699,13 @@ final class ec extends pc {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param7).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param7).append(')').toString());
         }
     }
 
     private final void b(byte param0, int param1) {
         int[] var3;
-        hj[] var4;
+        Sprite[] var4;
         String[] var5;
         int var6;
         int var7;
@@ -741,16 +741,16 @@ final class ec extends pc {
           for (var10 = 0; var10 < var14.length; var10++) {
             if (var10 == this.field_H[param1] &&
               this.field_Y == -1) {
-              tc.c(var6 - 5, -5 + var8, 121, 94, 16777215, var9 >> 1);
+              SoftwareRasterizer.c(var6 - 5, -5 + var8, 121, 94, 16777215, var9 >> 1);
               var4[var10].d(var6, var8, var9);
               if (this.field_B[param1] > 0 &&
                 (-this.field_B[param1] + 90) % 30 <= 15) {
-                tc.c(var6, var8, 111, 84, 16777215, var9 >> 1);
+                SoftwareRasterizer.c(var6, var8, 111, 84, 16777215, var9 >> 1);
               }
             } else if (this.field_q == param1 &&
               this.field_R == var10 &&
               this.field_Y == -1) {
-              tc.c(-5 + var6, -5 + var8, 121, 94, 16777215, var9 >> 1);
+              SoftwareRasterizer.c(-5 + var6, -5 + var8, 121, 94, 16777215, var9 >> 1);
               var4[var10].d(var6, var8, var9);
             } else {
               var4[var10].d(var6, var8, var9);
@@ -768,15 +768,15 @@ final class ec extends pc {
           if (param1 == this.field_q &&
             this.field_R == var12 &&
             this.field_Y == -1) {
-            tc.c(-5 + var6, -5 + var8, 121, 94, 16744576, 128);
+            SoftwareRasterizer.c(-5 + var6, -5 + var8, 121, 94, 16744576, 128);
             var4[var12].b(var6, var8);
           } else if (this.field_H[param1] == var12 &&
             this.field_Y == -1) {
-            tc.c(var6 - 5, -5 + var8, 121, 94, 16777215, 128);
+            SoftwareRasterizer.c(var6 - 5, -5 + var8, 121, 94, 16777215, 128);
             var4[var12].b(var6, var8);
             if (this.field_B[param1] > 0 &&
               (-this.field_B[param1] + 90) % 30 <= 15) {
-              tc.c(var6, var8, 111, 84, 16777215, 128);
+              SoftwareRasterizer.c(var6, var8, 111, 84, 16777215, 128);
             }
           } else {
             var4[var12].b(var6, var8);
@@ -810,7 +810,7 @@ final class ec extends pc {
     final void a(int param0, int param1) {
         if (param0 != 1) {
           String[] var4 = (String[]) null;
-          this.a((String) null, 117, (int[]) null, (hj[]) null, true, (String[]) null, (String[]) null, 115);
+          this.a((String) null, 117, (int[]) null, (Sprite[]) null, true, (String[]) null, (String[]) null, 115);
         }
     }
 
@@ -866,14 +866,14 @@ final class ec extends pc {
             if (DelegatingCanvas.field_d == 0) {
               stackIn_36_0 = new StringBuilder();
               if (!wb.field_c) {
-                stackIn_37_1 = tf.field_r;
+                stackIn_37_1 = MusicCrossfadeStream.field_r;
               } else {
                 stackIn_37_1 = h.field_e;
               }
               var7 = ((StringBuilder) (Object) stackIn_36_0).append(stackIn_37_1).append(" ").append(bo.field_a).toString();
             } else {
               if (DelegatingCanvas.field_d == 1) {
-                var7 = cj.field_M;
+                var7 = TextHotspotWidget.field_M;
               } else {
                 if (DelegatingCanvas.field_d != 2) {
                   throw new RuntimeException();
@@ -882,20 +882,20 @@ final class ec extends pc {
                 if (wb.field_c) {
                   stackIn_32_1 = h.field_e;
                 } else {
-                  stackIn_32_1 = tf.field_r;
+                  stackIn_32_1 = MusicCrossfadeStream.field_r;
                 }
-                var7 = ((StringBuilder) (Object) stackIn_31_0).append(stackIn_32_1).append(" ").append(qm.field_g).toString();
+                var7 = ((StringBuilder) (Object) stackIn_31_0).append(stackIn_32_1).append(" ").append(Point2i.field_g).toString();
               }
             }
           } else {
-            var7 = pg.field_H;
+            var7 = DropTargetWidget.field_H;
           }
           var7 = uk.field_c[20] + var7;
           stackIn_40_0 = new StringBuilder().append(uk.field_c[21]);
           if (em.field_o) {
-            stackIn_41_1 = hf.field_l;
+            stackIn_41_1 = ProxySocketConnector.field_l;
           } else {
-            stackIn_41_1 = dl.field_h;
+            stackIn_41_1 = UrlPacketDownloader.field_h;
           }
           var8 = ((StringBuilder) (Object) stackIn_40_0).append(stackIn_41_1).toString();
           array$0 = new String[3];
@@ -1005,7 +1005,7 @@ final class ec extends pc {
           stackIn_27_0 = (param2 == 4) ? 1 : 0;
         }
         var11 = stackIn_27_0;
-        qf.a(293, cf.field_r);
+        qf.a(293, StrongCacheEntry.field_r);
         if (param1 != 22) {
           if (param1 == 23) {
             stackIn_97_0 = (0 < this.field_c) ? 0 : 2;
@@ -1141,7 +1141,7 @@ final class ec extends pc {
             if (var7 != 0 ||
               var8 != 0) {
               h.b((byte) 125);
-              this.field_O[param0] = cc.field_C[DelegatingCanvas.field_d];
+              this.field_O[param0] = NetworkArchiveRequest.field_C[DelegatingCanvas.field_d];
               this.a(false, 6267);
               this.a(0, (byte) -124);
               this.field_H[0] = -1;
@@ -1220,7 +1220,7 @@ final class ec extends pc {
         }
         this.field_t = this.field_t | (DelegatingCanvas.field_d == 1 ? true : false);
         this.field_t = this.field_t & (DelegatingCanvas.field_d != 7 ? true : false);
-        this.field_O = new String[]{cc.field_C[DelegatingCanvas.field_d], cd.field_c};
+        this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], cd.field_c};
     }
 
     private final void a(int param0, boolean param1, byte param2, boolean param3) {
@@ -1244,10 +1244,10 @@ final class ec extends pc {
         String var9;
         String var10;
         int var11;
-        hj[] var12;
-        hj[] var13;
-        hj[] var14;
-        hj[] var15;
+        Sprite[] var12;
+        Sprite[] var13;
+        Sprite[] var14;
+        Sprite[] var15;
         var11 = HoldTheLine.field_D;
         this.field_Y = -1;
         if (this.field_a - 1 > param0) {
@@ -1258,7 +1258,7 @@ final class ec extends pc {
           return;
         }
         this.field_u = -1;
-        qf.a(293, cf.field_r);
+        qf.a(293, StrongCacheEntry.field_r);
         var5 = this.field_H[param0];
         if (param2 != 122) {
           this.field_p = (int[]) null;
@@ -1277,8 +1277,8 @@ final class ec extends pc {
             if (var7 != 0) {
               return;
             }
-            cf.field_w = var6;
-            vg.field_P = 0;
+            StrongCacheEntry.field_w = var6;
+            LoginForm.field_P = 0;
             bn.a(var6 + 4, -107);
             stackIn_70_0 = -21383;
             stackIn_71_1 = !(param1);
@@ -1288,21 +1288,21 @@ final class ec extends pc {
           if (DelegatingCanvas.field_d != 1 &&
             DelegatingCanvas.field_d != 0) {
             if (param0 == 0) {
-              vg.field_P = var6;
-              cf.field_w = var6;
-              var7 = pf.a((byte) 92, cf.field_w);
+              LoginForm.field_P = var6;
+              StrongCacheEntry.field_w = var6;
+              var7 = pf.a((byte) 92, StrongCacheEntry.field_w);
               if (0 == var7) {
-                var8 = cf.field_w;
-                var13 = new hj[]{ua.field_b.a(84, go.field_g[var8][0], 9, 111), ua.field_b.a(84, go.field_g[var8][1], param2 ^ 115, 111)};
+                var8 = StrongCacheEntry.field_w;
+                var13 = new Sprite[]{ua.field_b.a(84, go.field_g[var8][0], 9, 111), ua.field_b.a(84, go.field_g[var8][1], param2 ^ 115, 111)};
                 if (!wb.field_c) {
                   stackIn_34_0 = ui.field_m;
                 } else {
                   stackIn_34_0 = ui.field_m + " " + ac.field_g;
                 }
                 var10 = stackIn_34_0;
-                this.a(var10, 16711680, go.field_g[var8], var13, param1, v.field_A[var8], sg.field_gb[var8], 312);
+                this.a(var10, 16711680, go.field_g[var8], var13, param1, WidgetContainer.field_A[var8], RaceWorld.field_gb[var8], 312);
               }
-              bn.a(4 + cf.field_w, param2 ^ -16);
+              bn.a(4 + StrongCacheEntry.field_w, param2 ^ -16);
               return;
             }
             if (1 != param0) {
@@ -1312,7 +1312,7 @@ final class ec extends pc {
               if (param3) {
                 return;
               }
-              ah.field_b = var6;
+              IntrusiveDeque.field_b = var6;
               stackIn_27_0 = -21383;
               stackIn_28_1 = !(param1);
               ma.a(stackIn_27_0, stackIn_28_1);
@@ -1320,9 +1320,9 @@ final class ec extends pc {
             }
             t.field_l = var6;
             if (wb.field_c) {
-              var7 = cf.field_w;
-              var12 = new hj[]{ua.field_b.a(84, go.field_g[var7][0] + 8, 9, 111), ua.field_b.a(84, 8 + go.field_g[var7][1], 9, 111)};
-              this.a(ui.field_m + " " + qe.field_e, 65280, go.field_g[var7], var12, param1, v.field_A[var7], sg.field_gb[var7], 312);
+              var7 = StrongCacheEntry.field_w;
+              var12 = new Sprite[]{ua.field_b.a(84, go.field_g[var7][0] + 8, 9, 111), ua.field_b.a(84, 8 + go.field_g[var7][1], 9, 111)};
+              this.a(ui.field_m + " " + SocketConnector.field_e, 65280, go.field_g[var7], var12, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
               return;
             }
             if (param3) {
@@ -1336,32 +1336,32 @@ final class ec extends pc {
           if (0 == param0) {
             var7 = pf.a((byte) 65, var6);
             if (var7 == 0) {
-              cf.field_w = var6;
+              StrongCacheEntry.field_w = var6;
               bn.a(4 + var6, -112);
               h.b((byte) 101);
-              this.a(nc.field_a, qm.field_i[var5], this.field_F[1], this.field_o[1], param1, this.field_G[1], this.field_X[1], 312);
+              this.a(NodeHashTableIterator.field_a, Point2i.field_i[var5], this.field_F[1], this.field_o[1], param1, this.field_G[1], this.field_X[1], 312);
             }
           }
           if (param0 == 1) {
-            vg.field_P = var6;
-            var7 = kn.b((byte) -49).field_p;
-            if (gj.a(vg.field_P, -70, cf.field_w) == 0) {
-              var14 = new hj[]{ua.field_b.a(84, go.field_g[var7][0], 9, 111), ua.field_b.a(84, go.field_g[var7][1], 9, 111)};
+            LoginForm.field_P = var6;
+            var7 = ArchiveIndex.b((byte) -49).field_p;
+            if (gj.a(LoginForm.field_P, -70, StrongCacheEntry.field_w) == 0) {
+              var14 = new Sprite[]{ua.field_b.a(84, go.field_g[var7][0], 9, 111), ua.field_b.a(84, go.field_g[var7][1], 9, 111)};
               if (wb.field_c) {
                 stackIn_47_0 = ui.field_m + " " + ac.field_g;
               } else {
                 stackIn_47_0 = ui.field_m;
               }
               var9 = stackIn_47_0;
-              this.a(var9, 16711680, go.field_g[var7], var14, param1, v.field_A[var7], sg.field_gb[var7], 312);
+              this.a(var9, 16711680, go.field_g[var7], var14, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
             }
           }
           if (param0 == 2) {
             t.field_l = var6;
-            var7 = kn.b((byte) -49).field_p;
+            var7 = ArchiveIndex.b((byte) -49).field_p;
             if (wb.field_c) {
-              var15 = new hj[]{ua.field_b.a(84, 8 + go.field_g[var7][0], 9, 111), ua.field_b.a(84, go.field_g[var7][1] + 8, 9, 111)};
-              this.a(ui.field_m + " " + qe.field_e, 65280, go.field_g[var7], var15, param1, v.field_A[var7], sg.field_gb[var7], 312);
+              var15 = new Sprite[]{ua.field_b.a(84, 8 + go.field_g[var7][0], 9, 111), ua.field_b.a(84, go.field_g[var7][1] + 8, 9, 111)};
+              this.a(ui.field_m + " " + SocketConnector.field_e, 65280, go.field_g[var7], var15, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
             } else {
               if (!param3) {
                 stackIn_54_0 = -21383;
@@ -1372,7 +1372,7 @@ final class ec extends pc {
           }
           if (param0 == 3 &&
             !param3) {
-            ah.field_b = var6;
+            IntrusiveDeque.field_b = var6;
             stackIn_61_0 = -21383;
             stackIn_62_1 = !(param1);
             ma.a(stackIn_61_0, stackIn_62_1);
@@ -1392,13 +1392,13 @@ final class ec extends pc {
         return 35 * (1 + param1) + 8;
     }
 
-    ec(int param0, int[] param1, hj[] param2, String[] param3, String[] param4, String param5, int param6) {
+    ec(int param0, int[] param1, Sprite[] param2, String[] param3, String[] param4, String param5, int param6) {
         int var8_int = 0;
         this.field_S = new int[]{0, 240, 140, 240};
         this.field_K = new int[]{0, 240, 140, 240};
         try {
           this.field_F = new int[4][];
-          this.field_o = new hj[4][];
+          this.field_o = new Sprite[4][];
           this.field_X = new String[4][];
           this.field_G = new String[4][];
           this.field_E = param0;
@@ -1413,7 +1413,7 @@ final class ec extends pc {
           this.field_H = new int[4];
           this.field_Q = new String[4];
           this.field_p = new int[4];
-          this.field_L = qe.field_g[param0];
+          this.field_L = SocketConnector.field_g[param0];
           for (var8_int = 0; var8_int < 4; var8_int++) {
             this.field_V[var8_int] = 0;
             this.field_A[var8_int] = 0.0f;
@@ -1426,9 +1426,9 @@ final class ec extends pc {
           this.field_X[0] = param3;
           this.field_G[0] = param4;
           if (pj.b((byte) 93)) {
-            this.field_O = new String[]{cc.field_C[DelegatingCanvas.field_d], null, cd.field_c};
+            this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], null, cd.field_c};
           } else {
-            this.field_O = new String[]{cc.field_C[DelegatingCanvas.field_d], cd.field_c};
+            this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], cd.field_c};
           }
           this.field_Q[0] = param5;
           this.field_T[0] = param6;
@@ -1438,7 +1438,7 @@ final class ec extends pc {
           this.a(0, (byte) -122);
           this.a((byte) 69, false);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 

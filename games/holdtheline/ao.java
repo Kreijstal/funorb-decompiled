@@ -4,8 +4,8 @@
 final class ao {
     static int[] field_d;
     static int field_a;
-    static ud field_c;
-    static fg field_f;
+    static BufferedRandomAccessFile field_c;
+    static PcmStreamMixer field_f;
     static String field_e;
     static int field_b;
 
@@ -26,7 +26,7 @@ final class ao {
           Throwable var2_ref2 = null;
           var7 = HoldTheLine.field_D;
           try {
-            if (kd.field_d) {
+            if (MouseInputHandler.field_d) {
               return true;
             }
             try {
@@ -41,7 +41,7 @@ final class ao {
                 }
               }
               if (param1) {
-                ao.a(-7);
+                ao.clearSharedReferences(-7);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,7 +59,7 @@ final class ao {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -68,7 +68,7 @@ final class ao {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         field_f = null;
         field_c = null;
@@ -93,7 +93,7 @@ final class ao {
         ei var7 = null;
         ei var8 = null;
         int var11 = 0;
-        wd var12 = null;
+        RoadSegment var12 = null;
         ei var13 = null;
         ei var14 = null;
         ha var15 = null;
@@ -150,8 +150,8 @@ final class ao {
           }
           var4_intLifetime3 = 0;
           if (param1 != 21) {
-            var12 = (wd) null;
-            ao.a(0.2928012013435364f, false, (wd) null, -0.7333778142929077f);
+            var12 = (RoadSegment) null;
+            ao.a(0.2928012013435364f, false, (RoadSegment) null, -0.7333778142929077f);
           }
           while (var4_intLifetime3 < var7.field_e - 1) {
             var17_ref = (ha) (var7.field_b[var4_intLifetime3]);
@@ -168,7 +168,7 @@ final class ao {
           }
           var4_intLifetime4 = 0;
           while (var13.field_e > var4_intLifetime4) {
-            var13.field_b[var4_intLifetime4] = mk.a((ei) (var13.field_b[var4_intLifetime4]), (byte) -127);
+            var13.field_b[var4_intLifetime4] = NanoTickClock.a((ei) (var13.field_b[var4_intLifetime4]), (byte) -127);
             if (((ei) (var13.field_b[var4_intLifetime4])).field_e != 0) {
               var4_intLifetime4++;
               continue;
@@ -193,22 +193,22 @@ final class ao {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
-    final static wd a(float param0, boolean param1, wd param2, float param3) {
+    final static RoadSegment a(float param0, boolean param1, RoadSegment param2, float param3) {
         RuntimeException var4 = null;
-        wd var5 = null;
-        wd stackIn_3_0 = null;
+        RoadSegment var5 = null;
+        RoadSegment stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            var5 = (wd) null;
-            ao.a(1.1313912868499756f, true, (wd) null, -1.3016173839569092f);
+            var5 = (RoadSegment) null;
+            ao.a(1.1313912868499756f, true, (RoadSegment) null, -1.3016173839569092f);
           }
           stackIn_3_0 = wc.a(param2, param0, param3, (byte) -115);
           return stackIn_3_0;
@@ -222,7 +222,7 @@ final class ao {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 

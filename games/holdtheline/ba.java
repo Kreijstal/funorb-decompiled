@@ -17,19 +17,19 @@ final class ba {
         var3 = HoldTheLine.field_D;
         try {
           if (param1 == ~ak.field_c &&
-            jf.field_b == -1) {
-            jf.field_b = rf.field_X;
-            ak.field_c = nc.field_g;
+            MouseWheelInput.field_b == -1) {
+            MouseWheelInput.field_b = rf.field_X;
+            ak.field_c = NodeHashTableIterator.field_g;
           }
           boolean decompiledFrameRemainder0 = true;
           dm.field_a = dm.field_a + 1;
           if (param0 == null) {
-            decompiledFrameRemainder0 = (null == n.field_s);
+            decompiledFrameRemainder0 = (null == UiWidget.field_s);
           } else {
-            decompiledFrameRemainder0 = !(param0.equals(n.field_s));
+            decompiledFrameRemainder0 = !(param0.equals(UiWidget.field_s));
           }
           if (decompiledFrameRemainder0) {
-            if (!sk.field_h) {
+            if (!DiskCacheStore.field_h) {
               if (dm.field_a >= g.field_h) {
                 stackIn_16_0 = (we.field_l + g.field_h > dm.field_a) ? 1 : 0;
               } else {
@@ -42,7 +42,7 @@ final class ba {
             if (param0 == null) {
               dm.field_a = 0;
             } else {
-              if (sk.field_h) {
+              if (DiskCacheStore.field_h) {
                 dm.field_a = g.field_h;
               } else {
                 if (var2_int == 0) {
@@ -55,29 +55,29 @@ final class ba {
             ac.field_e = ak.field_c;
             if (param0 == null) {
               if (var2_int != 0) {
-                sk.field_h = true;
+                DiskCacheStore.field_h = true;
               }
             } else {
-              sk.field_h = false;
+              DiskCacheStore.field_h = false;
             }
-            em.field_l = jf.field_b;
+            em.field_l = MouseWheelInput.field_b;
           }
-          if (!sk.field_h &&
+          if (!DiskCacheStore.field_h &&
             g.field_h > dm.field_a &&
             na.field_k) {
             ac.field_e = ak.field_c;
             dm.field_a = 0;
-            em.field_l = jf.field_b;
+            em.field_l = MouseWheelInput.field_b;
           }
-          n.field_s = param0;
-          jf.field_b = -1;
+          UiWidget.field_s = param0;
+          MouseWheelInput.field_b = -1;
           ak.field_c = -1;
-          if (sk.field_h) {
-            if (rb.field_m != dm.field_a) {
+          if (DiskCacheStore.field_h) {
+            if (CachedArchiveProvider.field_m != dm.field_a) {
               return;
             }
             dm.field_a = 0;
-            sk.field_h = false;
+            DiskCacheStore.field_h = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,11 +90,11 @@ final class ba {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static int a(lb param0, int param1, gj param2) {
+    final static int a(TrackBoundary param0, int param1, gj param2) {
         int stackIn_2_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -125,25 +125,25 @@ final class ba {
           }
           var9 = 0;
           var10 = (float)Math.sqrt((double)var8);
-          mm.field_d = ((float)var5 + var10) / (float)var7;
-          if (mm.field_d >= 0.0f &&
-            1.0f >= mm.field_d) {
-            lk.field_b = ha.a(param2.field_t, param0.a(false, mm.field_d), false);
-            if (param2.a(lk.field_b, 13012)) {
+          RasterBuffer.field_d = ((float)var5 + var10) / (float)var7;
+          if (RasterBuffer.field_d >= 0.0f &&
+            1.0f >= RasterBuffer.field_d) {
+            IterableSecondaryNodeDeque.field_b = ha.a(param2.field_t, param0.a(false, RasterBuffer.field_d), false);
+            if (param2.a(IterableSecondaryNodeDeque.field_b, 13012)) {
               var9++;
             }
           }
           if (var10 > 0.0f) {
-            rb.field_g = ((float)var5 - var10) / (float)var7;
-            if (rb.field_g >= 0.0f &&
-              rb.field_g <= 1.0f) {
-              cj.field_G = ha.a(param2.field_t, param0.a(false, rb.field_g), false);
-              if (param2.a(cj.field_G, 13012)) {
+            CachedArchiveProvider.field_g = ((float)var5 - var10) / (float)var7;
+            if (CachedArchiveProvider.field_g >= 0.0f &&
+              CachedArchiveProvider.field_g <= 1.0f) {
+              TextHotspotWidget.field_G = ha.a(param2.field_t, param0.a(false, CachedArchiveProvider.field_g), false);
+              if (param2.a(TextHotspotWidget.field_G, 13012)) {
                 var9++;
               }
               if (var9 == 1) {
-                lk.field_b = cj.field_G;
-                mm.field_d = rb.field_g;
+                IterableSecondaryNodeDeque.field_b = TextHotspotWidget.field_G;
+                RasterBuffer.field_d = CachedArchiveProvider.field_g;
               }
             }
           }
@@ -165,7 +165,7 @@ final class ba {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class ba {
         return param0 | param1;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 12031) {
@@ -430,8 +430,8 @@ final class ba {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (ib.field_s.startsWith("win") &&
-              hn.a(false, param1)) {
+            if (PlatformTaskDispatcher.field_s.startsWith("win") &&
+              CurvedRoadSegment.a(false, param1)) {
               return;
             }
             try {
@@ -442,7 +442,7 @@ final class ba {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              bl.a((Throwable) null, (byte) 79, "MGR1: " + param1);
+              MusicPatchPcmStream.a((Throwable) null, (byte) 79, "MGR1: " + param1);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -461,7 +461,7 @@ final class ba {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -8,7 +8,7 @@ final class fh extends sd {
     private String field_f;
     static int field_e;
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 7) {
           field_e = 84;
           field_d = null;
@@ -24,16 +24,16 @@ final class fh extends sd {
         return sb.field_d;
     }
 
-    final void a(int param0, th param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.a(29336, this.field_f);
           param1.b(param0, this.field_h);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "fh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, hj param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -48,7 +48,7 @@ final class fh extends sd {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        hj var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -58,30 +58,30 @@ final class fh extends sd {
           if (param7 != -24983) {
             field_d = (int[]) null;
           }
-          if (tc.field_d > param5) {
-            param2 = param2 - (-param5 + tc.field_d);
-            param5 = tc.field_d;
+          if (SoftwareRasterizer.field_d > param5) {
+            param2 = param2 - (-param5 + SoftwareRasterizer.field_d);
+            param5 = SoftwareRasterizer.field_d;
           }
-          if (param4 < tc.field_a) {
-            param1 = param1 - (tc.field_a - param4);
-            param4 = tc.field_a;
+          if (param4 < SoftwareRasterizer.field_a) {
+            param1 = param1 - (SoftwareRasterizer.field_a - param4);
+            param4 = SoftwareRasterizer.field_a;
           }
-          if (param5 + param2 > tc.field_e) {
-            param2 = -param5 + tc.field_e;
+          if (param5 + param2 > SoftwareRasterizer.field_e) {
+            param2 = -param5 + SoftwareRasterizer.field_e;
           }
-          if (param1 + param4 > tc.field_i) {
-            param1 = -param4 + tc.field_i;
+          if (param1 + param4 > SoftwareRasterizer.field_i) {
+            param1 = -param4 + SoftwareRasterizer.field_i;
           }
           if (param2 > 0 &&
             param1 > 0) {
             var21 = param3.e();
-            var30 = tc.field_b;
-            var10 = tc.field_j;
-            var11 = tc.field_c;
+            var30 = SoftwareRasterizer.field_b;
+            var10 = SoftwareRasterizer.field_j;
+            var11 = SoftwareRasterizer.field_c;
             var29 = new int[4];
-            tc.b(var29);
+            SoftwareRasterizer.b(var29);
             param3.f();
-            tc.e(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.e(var29[0], var29[1], var29[2], var29[3]);
             var13 = param3.field_s * param4 + param5;
             var14 = -param2 + param3.field_s;
             var25 = var21.field_z;
@@ -93,19 +93,19 @@ final class fh extends sd {
                 if (var18 != 0) {
                   if (var17 > 0 &&
                     var15[var13 - 1] == 0) {
-                    tc.d(var17, var16, param0, param6);
+                    SoftwareRasterizer.d(var17, var16, param0, param6);
                   } else {
                     if (0 < var16 &&
                       var15[-param3.field_s + var13] == 0) {
-                      tc.d(var17, var16, param0, param6);
+                      SoftwareRasterizer.d(var17, var16, param0, param6);
                     } else {
                       if (var17 < -1 + param3.field_s &&
                         var15[1 + var13] == 0) {
-                        tc.d(var17, var16, param0, param6);
+                        SoftwareRasterizer.d(var17, var16, param0, param6);
                       } else {
                         if (-1 + param3.field_y > var16 &&
                           var15[param3.field_s + var13] == 0) {
-                          tc.d(var17, var16, param0, param6);
+                          SoftwareRasterizer.d(var17, var16, param0, param6);
                         }
                       }
                     }
@@ -116,8 +116,8 @@ final class fh extends sd {
               var13 = var13 + var14;
             }
             var21.a(-param3.field_u, -param3.field_x);
-            tc.a(var30, var10, var11);
-            tc.a(var29);
+            SoftwareRasterizer.a(var30, var10, var11);
+            SoftwareRasterizer.a(var29);
             return;
           }
           return;
@@ -131,7 +131,7 @@ final class fh extends sd {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class fh extends sd {
           this.field_h = param1;
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

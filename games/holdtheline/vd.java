@@ -12,25 +12,25 @@ abstract class vd {
 
     final static int[] c(int param0) {
         if (param0 != 1023) {
-          vd.b(-2);
+          vd.clearSharedReferences(-2);
           return new int[8];
         }
         return new int[8];
     }
 
-    final static ch a(gn param0, int param1, int param2) {
+    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        ch stackIn_2_0 = null;
-        ch stackIn_7_0 = null;
+        MusicPatch stackIn_2_0 = null;
+        MusicPatch stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 65535) {
-            stackIn_2_0 = (ch) null;
+            stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
           var4 = param0.b(15950, param2);
@@ -38,7 +38,7 @@ abstract class vd {
           if (var4 == null) {
             return null;
           }
-          stackIn_7_0 = new ch(var4);
+          stackIn_7_0 = new MusicPatch(var4);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,7 +50,7 @@ abstract class vd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -60,10 +60,10 @@ abstract class vd {
         }
         try {
           param0.setFocusTraversalKeysEnabled(false);
-          param0.addKeyListener(tf.field_n);
-          param0.addFocusListener(tf.field_n);
+          param0.addKeyListener(MusicCrossfadeStream.field_n);
+          param0.addFocusListener(MusicCrossfadeStream.field_n);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "vd.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vd.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ abstract class vd {
         return rd.field_e.j(-1231);
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_b = null;
         if (param0 < -37) {

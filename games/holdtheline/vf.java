@@ -4,7 +4,7 @@
 final class vf extends IntrusiveNode {
     private int field_r;
     private int field_p;
-    static de field_l;
+    static DisplayNameForm field_l;
     private float field_x;
     private int field_z;
     static boolean field_v;
@@ -54,7 +54,7 @@ final class vf extends IntrusiveNode {
             va.field_d[this.field_k][var2].a(this.field_x, 27788).a(this.field_B, this.field_i);
           }
         } else {
-          field_l = (de) null;
+          field_l = (DisplayNameForm) null;
           var3 = this.field_m;
           if (3 == var3) {
             va.field_d[this.field_k][7 + this.field_s].a(this.field_x, param0 ^ -27887).a(this.field_B, this.field_i);
@@ -253,29 +253,29 @@ final class vf extends IntrusiveNode {
 
     private final void a(int param0) {
         if (param0 == 25500) {
-          vb.a(param0 - 25551, bl.field_r.field_qb);
-          p.a((byte) -61, this.field_B, this.field_i);
-          p.a((byte) -61, this.field_B + 6, this.field_i);
-          p.a((byte) -61, this.field_B - 6, this.field_i);
-          p.a((byte) -61, this.field_B, this.field_i + 6);
-          p.a((byte) -61, this.field_B, this.field_i - 6);
+          vb.a(param0 - 25551, MusicPatchPcmStream.field_r.field_qb);
+          IndexedSpriteState.a((byte) -61, this.field_B, this.field_i);
+          IndexedSpriteState.a((byte) -61, this.field_B + 6, this.field_i);
+          IndexedSpriteState.a((byte) -61, this.field_B - 6, this.field_i);
+          IndexedSpriteState.a((byte) -61, this.field_B, this.field_i + 6);
+          IndexedSpriteState.a((byte) -61, this.field_B, this.field_i - 6);
           ug.b(param0 - 25501);
           return;
         }
         this.a(-70);
-        vb.a(param0 - 25551, bl.field_r.field_qb);
-        p.a((byte) -61, this.field_B, this.field_i);
-        p.a((byte) -61, this.field_B + 6, this.field_i);
-        p.a((byte) -61, this.field_B - 6, this.field_i);
-        p.a((byte) -61, this.field_B, this.field_i + 6);
-        p.a((byte) -61, this.field_B, this.field_i - 6);
+        vb.a(param0 - 25551, MusicPatchPcmStream.field_r.field_qb);
+        IndexedSpriteState.a((byte) -61, this.field_B, this.field_i);
+        IndexedSpriteState.a((byte) -61, this.field_B + 6, this.field_i);
+        IndexedSpriteState.a((byte) -61, this.field_B - 6, this.field_i);
+        IndexedSpriteState.a((byte) -61, this.field_B, this.field_i + 6);
+        IndexedSpriteState.a((byte) -61, this.field_B, this.field_i - 6);
         ug.b(param0 - 25501);
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_l = null;
         if (param0 < 20) {
-          vf.f(-50);
+          vf.clearSharedReferences(-50);
           field_u = null;
           return;
         }
@@ -291,7 +291,7 @@ final class vf extends IntrusiveNode {
         }
     }
 
-    final void a(ja param0, int param1, byte param2, int param3) {
+    final void a(RaceVehicle param0, int param1, byte param2, int param3) {
         if (this.field_m == 3) {
           return;
         }
@@ -307,7 +307,7 @@ final class vf extends IntrusiveNode {
           this.field_n = param1;
           this.field_o = param3;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "vf.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vf.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class vf extends IntrusiveNode {
         int var2 = this.field_m != 1 ? 4096 : 16384;
         int var3 = -(this.field_p >> 8) + (this.field_q << 8);
         int var4 = (this.field_y << 8) - (this.field_r >> 8);
-        int var5 = pg.b(var4, 4805, var3);
+        int var5 = DropTargetWidget.b(var4, 4805, var3);
         if (var5 < var2 >> 8) {
           return true;
         }
@@ -356,7 +356,7 @@ final class vf extends IntrusiveNode {
         do {
           this.field_q = kj.b(2, 640);
           this.field_y = kj.b(2, 480);
-        } while (!bl.field_r.a(0, this.field_y, true, this.field_q));
+        } while (!MusicPatchPcmStream.field_r.a(0, this.field_y, true, this.field_q));
         this.a(true, 1);
         this.field_x = (float)Math.atan2((double)(this.field_i - this.field_y), (double)(-this.field_B + this.field_q));
     }

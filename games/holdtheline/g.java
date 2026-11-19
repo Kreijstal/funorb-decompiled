@@ -4,26 +4,26 @@
 final class g extends tg {
     static fd field_k;
     static volatile int field_m;
-    static gn field_p;
-    qm field_j;
-    qm field_n;
+    static ResourceArchive field_p;
+    Point2i field_j;
+    Point2i field_n;
     static int field_h;
     static int field_i;
     static String field_l;
     static int field_o;
 
-    final qm a(boolean param0, float param1) {
+    final Point2i a(boolean param0, float param1) {
         if (!param0) {
-          return new qm((int)((float)this.field_n.field_h + (float)(this.field_j.field_h - this.field_n.field_h) * param1), (int)((float)this.field_n.field_f + (float)(-this.field_n.field_f + this.field_j.field_f) * param1));
+          return new Point2i((int)((float)this.field_n.x + (float)(this.field_j.x - this.field_n.x) * param1), (int)((float)this.field_n.y + (float)(-this.field_n.y + this.field_j.y) * param1));
         }
-        return (qm) null;
+        return (Point2i) null;
     }
 
     g(float param0, int param1, boolean param2) {
         super(param0, param1, param2);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_k = null;
         if (param0 != -52) {
@@ -46,7 +46,7 @@ final class g extends tg {
           return (char)var2;
         }
         if (var2 < 160) {
-          var3Lifetime1 = ja.field_Qb[-128 + var2];
+          var3Lifetime1 = RaceVehicle.field_Qb[-128 + var2];
           if (var3Lifetime1 == 0) {
             var3Lifetime1 = 63;
           }

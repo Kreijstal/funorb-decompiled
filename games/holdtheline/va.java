@@ -8,31 +8,31 @@ final class va {
     static int[] field_c;
     static int field_e;
     static int[] field_j;
-    static dl field_a;
+    static UrlPacketDownloader field_a;
     static String field_h;
     static String field_b;
-    hj[] field_i;
+    Sprite[] field_i;
     static String field_f;
 
     final static ma a(byte param0, int param1) {
         if (param0 >= -96) {
-          da var3 = (da) null;
-          va.a(81, (da) null);
+          IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
+          va.a(81, (IsaacPacketBuffer) null);
         }
         ma var2 = new ma();
-        sg.field_v.a((byte) -126, var2);
+        RaceWorld.field_v.addLast((byte) -126, var2);
         hh.a(param1, (byte) -23);
         return var2;
     }
 
-    final hj[] a(int param0) {
+    final Sprite[] a(int param0) {
         if (null != this.field_i) {
           return this.field_i;
         }
         if (param0 != 180) {
-          return (hj[]) null;
+          return (Sprite[]) null;
         }
-        hj[] dupTemp$0 = le.a(this.field_g, 74);
+        Sprite[] dupTemp$0 = le.a(this.field_g, 74);
         this.field_i = dupTemp$0;
         return dupTemp$0;
     }
@@ -44,20 +44,20 @@ final class va {
         return null != this.field_i ? true : false;
     }
 
-    final hj a(int param0, int param1, int param2, int param3) {
+    final Sprite a(int param0, int param1, int param2, int param3) {
         if (null != this.a(180)) {
           return this.field_i[param1];
         }
         if (param2 != 9) {
-          field_a = (dl) null;
+          field_a = (UrlPacketDownloader) null;
         }
         return hi.a(param3, (byte) -108, param0);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         if (param0 >= -48) {
-          va.b((byte) 38);
+          va.clearSharedReferences((byte) 38);
         }
         field_h = null;
         field_f = null;
@@ -67,7 +67,7 @@ final class va {
         field_d = (mg[][]) null;
     }
 
-    final static uj[] a(int param0, da param1) {
+    final static uj[] a(int param0, IsaacPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -98,7 +98,7 @@ final class va {
             return stackIn_6_0;
           }
           while (var5 < var3) {
-            if (gl.a(param1, (byte) -37)) {
+            if (IntHashTable.readBooleanBit(param1, (byte) -37)) {
               var6 = new uj();
               param1.h(24, 7);
               param1.h(24, 7);
@@ -126,7 +126,7 @@ final class va {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class va {
           this.field_i = null;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "va.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "va.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

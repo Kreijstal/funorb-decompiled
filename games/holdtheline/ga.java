@@ -2,32 +2,32 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga {
-    dh field_s;
-    qi field_m;
+    WidgetRenderer field_s;
+    BitmapFont field_m;
     static String[] field_k;
     int field_n;
-    dh field_p;
+    WidgetRenderer field_p;
     static String field_h;
     int field_q;
     int field_g;
     static String field_a;
     int field_c;
     private int field_j;
-    dh field_f;
+    WidgetRenderer field_f;
     int field_b;
-    dh field_d;
+    WidgetRenderer field_d;
     int field_e;
-    dh field_r;
+    WidgetRenderer field_r;
     int field_i;
     static int field_o;
     private boolean field_l;
 
-    final static k a(String param0, String param1, gn param2, byte param3, gn param4) {
+    final static CoverageBitmapFont a(String param0, String param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        gn var7 = null;
-        k stackIn_3_0 = null;
+        ResourceArchive var7 = null;
+        CoverageBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -40,8 +40,8 @@ final class ga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 35) {
-            var7 = (gn) null;
-            ga.a((String) null, (String) null, (gn) null, (byte) -97, (gn) null);
+            var7 = (ResourceArchive) null;
+            ga.a((String) null, (String) null, (ResourceArchive) null, (byte) -97, (ResourceArchive) null);
           }
           var5_int = param4.c(param0, 3);
           var6 = param4.a(var5_int, param1, false);
@@ -75,7 +75,7 @@ final class ga {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class ga {
           if (-1 == var7) {
             var7 = this.field_m.field_G + this.field_m.field_I;
           }
-          var8 = tc.field_j >> 2;
+          var8 = SoftwareRasterizer.field_j >> 2;
           if (param0 != -90) {
             this.a(-99, -111, (byte) -11, -66, 61, 51);
           }
@@ -136,15 +136,15 @@ final class ga {
             }
           }
           var12 = param1;
-          if (tc.field_j < var5_int + var9 + var12) {
-            var12 = -var5_int + (-var9 + tc.field_j);
+          if (SoftwareRasterizer.field_j < var5_int + var9 + var12) {
+            var12 = -var5_int + (-var9 + SoftwareRasterizer.field_j);
           }
           var13Lifetime1 = 32 + (-this.field_m.field_s + param3);
-          if (tc.field_c < var6 + (var10 + var13Lifetime1)) {
+          if (SoftwareRasterizer.field_c < var6 + (var10 + var13Lifetime1)) {
             var13Lifetime1 = -var6 - var10 + param3;
           }
-          tc.a(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_c);
-          tc.f(var12 + 1, var13Lifetime1 + 1, var9 + var5_int - 2, -2 + (var10 + var6), this.field_q);
+          SoftwareRasterizer.a(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_c);
+          SoftwareRasterizer.f(var12 + 1, var13Lifetime1 + 1, var9 + var5_int - 2, -2 + (var10 + var6), this.field_q);
           this.field_m.a(param2, var12 + this.field_i, this.field_n + var13Lifetime1, var9, var10, this.field_j, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,13 +157,13 @@ final class ga {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, String param1, int param2, int param3) {
         RuntimeException var5 = null;
-        gn var6 = null;
+        ResourceArchive var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -177,8 +177,8 @@ final class ga {
           if (param0 == 7829367) {
             return;
           }
-          var6 = (gn) null;
-          ga.a((String) null, (String) null, (gn) null, (byte) 115, (gn) null);
+          var6 = (ResourceArchive) null;
+          ga.a((String) null, (String) null, (ResourceArchive) null, (byte) 115, (ResourceArchive) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,18 +190,18 @@ final class ga {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        tc.d(param5, param1, param4, param3, param0);
+        SoftwareRasterizer.d(param5, param1, param4, param3, param0);
         if (param2 != -53) {
           this.field_c = -35;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_k = null;
         field_a = null;
         if (param0 != 1) {
@@ -212,35 +212,35 @@ final class ga {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 == 13421772) {
-          tc.c(param4, param2, param6, param3, param5, param0);
+          SoftwareRasterizer.c(param4, param2, param6, param3, param5, param0);
           return;
         }
         this.a(-126, 95, 114, -63, -82, 84, 53);
-        tc.c(param4, param2, param6, param3, param5, param0);
+        SoftwareRasterizer.c(param4, param2, param6, param3, param5, param0);
     }
 
     public ga() {
         this.field_l = true;
     }
 
-    final void a(qi param0, byte param1) {
+    final void a(BitmapFont param0, byte param1) {
         dk var18 = null;
         ig var4 = null;
-        hj[] var5 = null;
-        uc var17 = null;
-        uc var19 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         ig var6 = null;
         ig var7 = null;
         vh discarded$0 = null;
         ug discarded$1 = null;
         ig var8 = null;
-        hj[] var9 = null;
-        hj[] var10 = null;
-        hj dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         ig var11 = null;
         ig var12 = null;
-        hj var13 = null;
+        Sprite var13 = null;
         ig var14 = null;
         ig var20 = null;
         int var15 = HoldTheLine.field_D;
@@ -248,7 +248,7 @@ final class ga {
         ig var14Lifetime2;
         try {
           var18 = new dk(param0, 2, 2, 2236962, 1, 1, 1, param0.field_G - (-param0.field_I - 2));
-          this.field_r = (dh) ((Object) var18);
+          this.field_r = (WidgetRenderer) ((Object) var18);
           var18.field_c = 16777215;
           var4 = new ig();
           var18.a((byte) -123, var4);
@@ -266,46 +266,46 @@ final class ga {
           var4.a(0, 62).b(15658734, -26228).a(29536, ImageProducerRasterBuffer.a(7829367, 10066329, 8947848, 14));
           var4.a(1, param1 ^ 76).a(29536, ImageProducerRasterBuffer.a(13421772, 10066329, 11184810, param1 - 25));
           var4.a(3, 122).a(29536, ImageProducerRasterBuffer.a(10066329, 7829367, 8947848, 14)).a(1, -116).a(1, true);
-          var5 = new hj[9];
-          var17 = new uc(32, 32);
+          var5 = new Sprite[9];
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var19.field_z.length > var7_int; var7_int++) {
             var17.field_z[var7_int] = 1077952576;
           }
-          var5[4] = (hj) ((Object) var19);
+          var5[4] = (Sprite) ((Object) var19);
           var4.a(4, -79).a(true, param1 ^ -2147483609).a(29536, var5);
-          var4.a(5, -97).a(29536, kk.a(0, 0, 65793, -104, 0)).a(true, -2147483648).b(-1, -26228);
-          this.field_p = (dh) ((Object) var4);
+          var4.a(5, -97).a(29536, EntitySound.a(0, 0, 65793, -104, 0)).a(true, -2147483648).b(-1, -26228);
+          this.field_p = (WidgetRenderer) ((Object) var4);
           var6 = new ig(var4, true);
           var6.field_i = 0;
           var7 = new ig(var4, true);
           var7.field_i = 0;
           var7.a((byte) -2, bb.a(8947848, (byte) -127));
           var7.a(1, param1 + 75).a(param1 + 29497, bb.a(11184810, (byte) 87)).b(2236962, -26228);
-          this.field_f = (dh) ((Object) new ek(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_f = (WidgetRenderer) ((Object) new ek(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new vh(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ug(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ig();
           var18.a((byte) -124, var8);
           var8.a(0, 61).a(29536, ImageProducerRasterBuffer.a(10066329, 7829367, 15658734, 14)).b(1118481, -26228).b(-1, false);
           var8.a(4, -90).a(true, param1 ^ -2147483609).a(29536, var5);
-          this.field_s = (dh) ((Object) var8);
-          var9 = new hj[9];
-          var9[4] = new hj(2, 1);
-          var10 = new hj[9];
-          var10[4] = new hj(1, 2);
+          this.field_s = (WidgetRenderer) ((Object) var8);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
           var11 = new ig();
           if (param1 != 39) {
-            gn var16 = (gn) null;
-            ga.a((String) null, (String) null, (gn) null, (byte) -94, (gn) null);
+            ResourceArchive var16 = (ResourceArchive) null;
+            ga.a((String) null, (String) null, (ResourceArchive) null, (byte) -94, (ResourceArchive) null);
           }
           var12 = new ig();
           var11.a(var9, 6821, 0);
           var12.a(var10, 6821, 0);
-          var13 = new hj(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ig(var4, true);
           var14.a(var13.e(), param1 - 39);
@@ -319,7 +319,7 @@ final class ga {
           var20 = new ig(var4, true);
           var20.a(var13, 0);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ga.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ga.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -337,18 +337,18 @@ final class ga {
           var5_int = this.field_m.a(param3);
           var6 = this.field_m.field_I + this.field_m.field_s;
           var7 = param1;
-          if (6 + var7 + var5_int > tc.field_j) {
-            var7 = -6 - var5_int + tc.field_j;
+          if (6 + var7 + var5_int > SoftwareRasterizer.field_j) {
+            var7 = -6 - var5_int + SoftwareRasterizer.field_j;
           }
           if (param0 >= -72) {
-            this.field_m = (qi) null;
+            this.field_m = (BitmapFont) null;
           }
           var8 = 32 + (param2 - this.field_m.field_s);
-          if (tc.field_c < var6 + var8 + 6) {
-            var8 = -6 + (-var6 + tc.field_c);
+          if (SoftwareRasterizer.field_c < var6 + var8 + 6) {
+            var8 = -6 + (-var6 + SoftwareRasterizer.field_c);
           }
-          tc.a(var7, var8, var5_int + 6, 6 + var6, this.field_j);
-          tc.f(1 + var7, var8 + 1, 4 + var5_int, 4 + var6, this.field_q);
+          SoftwareRasterizer.a(var7, var8, var5_int + 6, 6 + var6, this.field_j);
+          SoftwareRasterizer.f(1 + var7, var8 + 1, 4 + var5_int, 4 + var6, this.field_q);
           this.field_m.a(param3, 3 + var7, 3 + var8 + this.field_m.field_s, this.field_j, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -361,7 +361,7 @@ final class ga {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

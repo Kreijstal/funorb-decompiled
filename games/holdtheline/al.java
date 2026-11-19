@@ -5,7 +5,7 @@ final class al {
     static go[] field_a;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         int var1 = -117 % ((8 - param0) / 62);
         field_a = null;
@@ -23,19 +23,19 @@ final class al {
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (param0 == 100 &&
-          gd.field_g > 0) {
-          fieldTemp$3 = gd.field_g - 1;
-          gd.field_g = gd.field_g - 1;
+          TextFieldValidator.field_g > 0) {
+          fieldTemp$3 = TextFieldValidator.field_g - 1;
+          TextFieldValidator.field_g = TextFieldValidator.field_g - 1;
           var2_ref_byte__ = j.field_a[fieldTemp$3];
-          j.field_a[gd.field_g] = null;
+          j.field_a[TextFieldValidator.field_g] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
-          in.field_a > 0) {
-          fieldTemp$4 = in.field_a - 1;
-          in.field_a = in.field_a - 1;
+          Vector2f.field_a > 0) {
+          fieldTemp$4 = Vector2f.field_a - 1;
+          Vector2f.field_a = Vector2f.field_a - 1;
           var2_ref_byte__Lifetime1 = cd.field_e[fieldTemp$4];
-          cd.field_e[in.field_a] = null;
+          cd.field_e[Vector2f.field_a] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (30000 == param0 &&
@@ -50,8 +50,8 @@ final class al {
           field_a = (go[]) null;
         }
         if (ei.field_c != null) {
-          for (var2 = 0; var2 < di.field_p.length; var2++) {
-            if (di.field_p[var2] == param0 &&
+          for (var2 = 0; var2 < SpriteState.field_p.length; var2++) {
+            if (SpriteState.field_p[var2] == param0 &&
               ic.field_f[var2] > 0) {
               dupTemp$6 = ic.field_f[var2] - 1;
               arrayValue$7 = ei.field_c[var2];

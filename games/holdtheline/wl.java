@@ -13,49 +13,49 @@ final class wl {
         if (param2 == 102) {
           if (param0 < param7) {
             if (param7 < param5) {
-              qe.a(param6, param0, param5, param4, tc.field_b, false, param3, param7, param1);
+              SocketConnector.a(param6, param0, param5, param4, SoftwareRasterizer.field_b, false, param3, param7, param1);
               return;
             }
             if (param0 >= param5) {
-              qe.a(param3, param5, param7, param6, tc.field_b, false, param4, param0, param1);
+              SocketConnector.a(param3, param5, param7, param6, SoftwareRasterizer.field_b, false, param4, param0, param1);
               return;
             }
-            qe.a(param4, param0, param7, param6, tc.field_b, false, param3, param5, param1);
+            SocketConnector.a(param4, param0, param7, param6, SoftwareRasterizer.field_b, false, param3, param5, param1);
             return;
           }
           if (param5 > param0) {
-            qe.a(param3, param7, param5, param4, tc.field_b, false, param6, param0, param1);
+            SocketConnector.a(param3, param7, param5, param4, SoftwareRasterizer.field_b, false, param6, param0, param1);
             return;
           }
           if (param7 < param5) {
-            qe.a(param4, param7, param0, param3, tc.field_b, false, param6, param5, param1);
+            SocketConnector.a(param4, param7, param0, param3, SoftwareRasterizer.field_b, false, param6, param5, param1);
             return;
           }
-          qe.a(param6, param5, param0, param3, tc.field_b, false, param4, param7, param1);
+          SocketConnector.a(param6, param5, param0, param3, SoftwareRasterizer.field_b, false, param4, param7, param1);
           return;
         }
         field_a = (String[]) null;
         if (param0 < param7) {
           if (param7 < param5) {
-            qe.a(param6, param0, param5, param4, tc.field_b, false, param3, param7, param1);
+            SocketConnector.a(param6, param0, param5, param4, SoftwareRasterizer.field_b, false, param3, param7, param1);
             return;
           }
           if (param0 >= param5) {
-            qe.a(param3, param5, param7, param6, tc.field_b, false, param4, param0, param1);
+            SocketConnector.a(param3, param5, param7, param6, SoftwareRasterizer.field_b, false, param4, param0, param1);
             return;
           }
-          qe.a(param4, param0, param7, param6, tc.field_b, false, param3, param5, param1);
+          SocketConnector.a(param4, param0, param7, param6, SoftwareRasterizer.field_b, false, param3, param5, param1);
           return;
         }
         if (param5 > param0) {
-          qe.a(param3, param7, param5, param4, tc.field_b, false, param6, param0, param1);
+          SocketConnector.a(param3, param7, param5, param4, SoftwareRasterizer.field_b, false, param6, param0, param1);
           return;
         }
         if (param7 < param5) {
-          qe.a(param4, param7, param0, param3, tc.field_b, false, param6, param5, param1);
+          SocketConnector.a(param4, param7, param0, param3, SoftwareRasterizer.field_b, false, param6, param5, param1);
           return;
         }
-        qe.a(param6, param5, param0, param3, tc.field_b, false, param4, param7, param1);
+        SocketConnector.a(param6, param5, param0, param3, SoftwareRasterizer.field_b, false, param4, param7, param1);
     }
 
     final static Class a(String param0, int param1) throws ClassNotFoundException {
@@ -123,11 +123,11 @@ final class wl {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_e = null;
         field_b = null;

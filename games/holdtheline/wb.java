@@ -43,7 +43,7 @@ final class wb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -52,15 +52,15 @@ final class wb {
         return this.field_k * this.field_k + this.field_a * this.field_a;
     }
 
-    final in a(float param0, byte param1) {
+    final Vector2f a(float param0, byte param1) {
         if (param1 >= 119) {
-          return new in((float)this.field_k / param0, (float)this.field_a / param0);
+          return new Vector2f((float)this.field_k / param0, (float)this.field_a / param0);
         }
         field_e = (int[]) null;
-        return new in((float)this.field_k / param0, (float)this.field_a / param0);
+        return new Vector2f((float)this.field_k / param0, (float)this.field_a / param0);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_g = null;
         field_e = null;
         field_f = null;
@@ -97,19 +97,19 @@ final class wb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static in a(vj param0, vj param1, int param2) {
-        in var3 = null;
+    final static Vector2f a(vj param0, vj param1, int param2) {
+        Vector2f var3 = null;
         RuntimeException var3_ref = null;
-        in var4 = null;
-        in var5 = null;
-        in var6 = null;
+        Vector2f var4 = null;
+        Vector2f var5 = null;
+        Vector2f var6 = null;
         float var7 = 0.0f;
         vj var8 = null;
-        in stackIn_6_0 = null;
+        Vector2f stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -119,17 +119,17 @@ final class wb {
         try {
           var3 = param0.a(false);
           var4 = param1.g(-1);
-          var5 = var4.a((byte) -119);
-          var6 = new in(var4);
-          var6.a(var3, param2 ^ 2095);
+          var5 = var4.perpendicular((byte) -119);
+          var6 = new Vector2f(var4);
+          var6.subtract(var3, param2 ^ 2095);
           if (param2 != 3251) {
             var8 = (vj) null;
             wb.a((vj) null, (vj) null, -127);
           }
-          if (!(0.0010000000474974513f > Math.abs(var5.a(var6, (byte) -10)))) {
-            var6.a(-1);
-            var7 = var5.a(var6, (byte) -10);
-            var6.a(1.0f / var7, -1);
+          if (!(0.0010000000474974513f > Math.abs(var5.dot(var6, (byte) -10)))) {
+            var6.normalize(-1);
+            var7 = var5.dot(var6, (byte) -10);
+            var6.scale(1.0f / var7, -1);
           } else {
             var6 = var5;
           }
@@ -151,23 +151,23 @@ final class wb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, ql param10) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PaletteBitmapFont param10) {
         try {
           param10.a(param1, 1 + param6, 1 + param5, param4, param7, 8, -1, 114, param9, param3, param0);
           param10.a(param1, param6, param5, param4, param7, param2, param8, param9, param3, param0);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "wb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final in b(int param0) {
+    final Vector2f b(int param0) {
         int var3 = 11 % ((-68 - param0) / 44);
         float var2 = (float)Math.sqrt((double)(this.field_k * this.field_k + this.field_a * this.field_a));
-        return new in((float)this.field_k / var2, (float)this.field_a / var2);
+        return new Vector2f((float)this.field_k / var2, (float)this.field_a / var2);
     }
 
     wb(int param0, int param1) {
@@ -175,12 +175,12 @@ final class wb {
         this.field_a = param1;
     }
 
-    wb(qm param0, qm param1) {
+    wb(Point2i param0, Point2i param1) {
         try {
-          this.field_a = param1.field_f - param0.field_f;
-          this.field_k = -param0.field_h + param1.field_h;
+          this.field_a = param1.y - param0.y;
+          this.field_k = -param0.x + param1.x;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "wb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

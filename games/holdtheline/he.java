@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends ub {
+final class he extends SingleChildWidget {
     static tk field_G;
     int field_F;
 
@@ -69,7 +69,7 @@ final class he extends ub {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -78,23 +78,23 @@ final class he extends ub {
         }
     }
 
-    he(n param0) {
-        super(param0.field_k, param0.field_o, param0.field_x, param0.field_u, (dh) null, (tb) null);
+    he(UiWidget param0) {
+        super(param0.field_k, param0.field_o, param0.field_x, param0.field_u, (WidgetRenderer) null, (WidgetListener) null);
         try {
           param0.a(0, (byte) 122, 0, this.field_u, this.field_x);
           this.field_B = param0;
           this.field_F = 256;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public he() {
-        super(0, 0, 0, 0, (dh) null, (tb) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
         this.field_F = 256;
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_G = null;
         if (param0 != 1000) {
           String var2 = (String) null;
@@ -103,7 +103,7 @@ final class he extends ub {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        hj var6 = null;
+        Sprite var6 = null;
         if (param3 != 0) {
           return;
         }
@@ -114,8 +114,8 @@ final class he extends ub {
           return;
         }
         if (this.field_F != 256) {
-          var6 = new hj(this.field_B.field_x, this.field_B.field_u);
-          hf.a(var6, -1);
+          var6 = new Sprite(this.field_B.field_x, this.field_B.field_u);
+          ProxySocketConnector.a(var6, -1);
           this.field_B.a(param0, 0, 0, param3);
           dm.b((byte) -10);
           var6.d(param2 + this.field_k, param1 + this.field_o, this.field_F);

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends el {
-    static hj field_s;
+final class oa extends PcmSample {
+    static Sprite field_s;
     static oa field_p;
     int field_q;
     private String field_r;
@@ -12,11 +12,11 @@ final class oa extends el {
         if (param0 != 103) {
           return false;
         }
-        if (bk.field_w < 10) {
+        if (DiskCacheRequest.field_w < 10) {
           return false;
         }
         if (!mn.field_a) {
-          return !gd.e((byte) 63) ? true : false;
+          return !TextFieldValidator.e((byte) 63) ? true : false;
         }
         return false;
     }
@@ -26,7 +26,7 @@ final class oa extends el {
         try {
           this.a(-122, param0, 384 * param1 / 96);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,12 +35,12 @@ final class oa extends el {
         try {
           this.a(91, param0, 384);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(int param0, String param1, int param2) {
-        el var4 = null;
+        PcmSample var4 = null;
         try {
           this.field_q = param2;
           this.field_r = param1;
@@ -51,11 +51,11 @@ final class oa extends el {
           this.field_j = var4.field_j;
           this.field_m = var4.field_m;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 == 43) {
           field_s = null;
           field_o = null;
@@ -95,7 +95,7 @@ final class oa extends el {
               if (!param0) {
                 return;
               }
-              param1.getAppletContext().showDocument(ah.a(var2, param1, (byte) 45), "_top");
+              param1.getAppletContext().showDocument(IntrusiveDeque.a(var2, param1, (byte) 45), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class oa extends el {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

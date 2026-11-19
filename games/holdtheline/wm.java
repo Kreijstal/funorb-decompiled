@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm extends ee {
+final class wm extends MovingEntity {
     int field_P;
     private int field_K;
     private int field_Q;
@@ -12,9 +12,9 @@ final class wm extends ee {
     int field_F;
     int field_D;
     private int field_I;
-    hj field_H;
+    Sprite field_H;
     int field_C;
-    private ja field_G;
+    private RaceVehicle field_G;
     private int field_R;
     private int[] field_S;
     om field_E;
@@ -26,7 +26,7 @@ final class wm extends ee {
         if (param1) {
           field_U = (ll) null;
         }
-        lm.field_a = ej.field_b;
+        TextLayout.field_a = ej.field_b;
         if (param2 == dg.field_c) {
           if (ej.field_b == 1) {
             dg.field_c = 1;
@@ -52,7 +52,7 @@ final class wm extends ee {
         }
     }
 
-    final boolean a(int param0, qm param1) {
+    final boolean a(int param0, Point2i param1) {
         float var3_float = 0.0f;
         RuntimeException var3 = null;
         float var4 = 0.0f;
@@ -64,16 +64,16 @@ final class wm extends ee {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_E.field_d) {
-            var3_float = (float)(-this.field_A.field_h + param1.field_h);
-            var4 = (float)(param1.field_f - this.field_A.field_f);
-            var5 = this.field_w.field_g * var4 + this.field_w.field_j * var3_float;
-            var6 = var3_float * this.field_w.field_g - var4 * this.field_w.field_j;
+            var3_float = (float)(-this.position.x + param1.x);
+            var4 = (float)(param1.y - this.position.y);
+            var5 = this.direction.y * var4 + this.direction.x * var3_float;
+            var6 = var3_float * this.direction.y - var4 * this.direction.x;
             if (Math.abs(var5) < (float)this.field_E.field_m &&
               Math.abs(var6) < (float)this.field_E.field_h) {
               return true;
             }
           } else {
-            if (this.field_E.field_a * this.field_E.field_a > (param1.field_f - this.field_A.field_f) * (-this.field_A.field_f + param1.field_f) + (-this.field_A.field_h + param1.field_h) * (-this.field_A.field_h + param1.field_h)) {
+            if (this.field_E.field_a * this.field_E.field_a > (param1.y - this.position.y) * (-this.position.y + param1.y) + (-this.position.x + param1.x) * (-this.position.x + param1.x)) {
               return true;
             }
           }
@@ -92,7 +92,7 @@ final class wm extends ee {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -117,11 +117,11 @@ final class wm extends ee {
           }
         }
         if ((4 & this.field_J) != param0) {
-          this.a(0);
+          this.advanceMotion(0);
           if ((this.field_J & 16) != 0) {
-            this.field_x = this.field_x * o.field_c;
-            this.field_t = this.field_t * o.field_c;
-            if (this.field_t * this.field_t + this.field_x * this.field_x < 0.25f) {
+            this.velocityY = this.velocityY * o.field_c;
+            this.velocityX = this.velocityX * o.field_c;
+            if (this.velocityX * this.velocityX + this.velocityY * this.velocityY < 0.25f) {
               this.field_J = this.field_J & -5;
               if ((this.field_J & 1024) != 0) {
                 this.field_J = this.field_J | 2048;
@@ -144,19 +144,19 @@ final class wm extends ee {
           }
           var2 = (float)this.field_C / 150.0f;
           var3 = 0.1428571343421936f * var2 + (-(var2 * (-2.5714285373687744f * var2)) + var2 * -1.7142857313156128f * var2 * var2);
-          this.field_A.field_h = this.field_D - (int)(var3 * (float)this.field_P);
-          this.field_A.field_f = -(int)(var3 * (float)this.field_O) + this.field_F;
+          this.position.x = this.field_D - (int)(var3 * (float)this.field_P);
+          this.position.y = -(int)(var3 * (float)this.field_O) + this.field_F;
         }
     }
 
-    final hj a(byte param0) {
+    final Sprite a(byte param0) {
         if (param0 > -107) {
           this.field_K = -60;
         }
         if ((32 & this.field_J) == 0) {
           this.field_H = this.field_E.field_g[this.field_Q];
         } else {
-          this.field_H = this.field_E.field_f[this.field_Q].a(this.field_r, 27788);
+          this.field_H = this.field_E.field_f[this.field_Q].a(this.heading, 27788);
         }
         return this.field_H;
     }
@@ -167,7 +167,7 @@ final class wm extends ee {
         int var9 = 0;
         float var2;
         float var3;
-        ja var4_ref_ja;
+        RaceVehicle var4_ref_ja;
         int var4;
         float var5_float;
         int var5;
@@ -199,16 +199,16 @@ final class wm extends ee {
         if (this.field_G == null &&
           (this.field_J & 2048) != 0) {
           var2 = -1.0f;
-          for (var3_int = 0; var3_int < bl.field_r.field_h; var3_int++) {
+          for (var3_int = 0; var3_int < MusicPatchPcmStream.field_r.field_h; var3_int++) {
             if (var3_int != (this.field_J & 3)) {
-              var4_ref_ja = bl.field_r.field_C[var3_int];
+              var4_ref_ja = MusicPatchPcmStream.field_r.vehicles[var3_int];
               if (var4_ref_ja != null &&
                 -1 <= this.field_q - var4_ref_ja.field_q &&
                 this.field_q - var4_ref_ja.field_q <= 1) {
-                var5_float = var4_ref_ja.field_y - this.field_y;
-                var6_float = var4_ref_ja.field_u - this.field_u;
-                var7_float = this.field_w.field_j * var5_float + this.field_w.field_g * var6_float;
-                var8_float = var5_float * this.field_w.field_g - this.field_w.field_j * var6_float;
+                var5_float = var4_ref_ja.worldX - this.worldX;
+                var6_float = var4_ref_ja.worldY - this.worldY;
+                var7_float = this.direction.x * var5_float + this.direction.y * var6_float;
+                var8_float = var5_float * this.direction.y - this.direction.x * var6_float;
                 if (2.0f * Math.abs(var8_float) < var7_float) {
                   var9_float = Math.abs(var8_float) + var7_float;
                   if (null == this.field_G ||
@@ -222,8 +222,8 @@ final class wm extends ee {
           }
         }
         if (this.field_G != null) {
-          var2Lifetime1 = ha.a(this.field_A, this.field_G.field_A, false);
-          var3 = var2Lifetime1 - this.field_r;
+          var2Lifetime1 = ha.a(this.position, this.field_G.position, false);
+          var3 = var2Lifetime1 - this.heading;
           if ((double)var3 > 3.141592653589793) {
             var3 = (float)((double)var3 - 6.283185307179586);
           }
@@ -236,23 +236,23 @@ final class wm extends ee {
           if (var3 < -10.0f) {
             var3 = -10.0f;
           }
-          this.field_r = this.field_r + var3;
-          this.field_w.a(this.field_r, (byte) -54);
+          this.heading = this.heading + var3;
+          this.direction.setDirectionFromAngle(this.heading, (byte) -54);
         }
-        var2Lifetime2 = (float)Math.sqrt((double)(this.field_t * this.field_t + this.field_x * this.field_x));
+        var2Lifetime2 = (float)Math.sqrt((double)(this.velocityX * this.velocityX + this.velocityY * this.velocityY));
         var2Lifetime2 = var2Lifetime2 + 0.05000000074505806f * (55.0f - var2Lifetime2);
-        this.field_t = this.field_w.field_j * var2Lifetime2;
-        this.field_x = var2Lifetime2 * this.field_w.field_g;
+        this.velocityX = this.direction.x * var2Lifetime2;
+        this.velocityY = var2Lifetime2 * this.direction.y;
         var3Lifetime1 = 4.0f * (float)Math.cos((double)((float)this.field_M / 10.0f));
-        var4 = this.field_A.field_h - (int)(this.field_w.field_j * 5.0f) + (int)(this.field_w.field_g * var3Lifetime1);
-        var5 = this.field_A.field_f - ((int)(this.field_w.field_g * 5.0f) + (int)(this.field_w.field_j * var3Lifetime1));
+        var4 = this.position.x - (int)(this.direction.x * 5.0f) + (int)(this.direction.y * var3Lifetime1);
+        var5 = this.position.y - ((int)(this.direction.y * 5.0f) + (int)(this.direction.x * var3Lifetime1));
         if (param0) {
           this.field_S = (int[]) null;
         }
-        if (bl.field_r.d((byte) 47)) {
-          var6 = bl.field_r.field_C[this.field_J & 3].field_Eb;
-          var7 = (int)(-this.field_w.field_j * 1024.0f);
-          var8 = (int)(-this.field_w.field_g * 1024.0f);
+        if (MusicPatchPcmStream.field_r.d((byte) 47)) {
+          var6 = MusicPatchPcmStream.field_r.vehicles[this.field_J & 3].field_Eb;
+          var7 = (int)(-this.direction.x * 1024.0f);
+          var8 = (int)(-this.direction.y * 1024.0f);
           for (var9 = 0; var9 < 4; var9++) {
             var11 = kj.b(2, 256);
             if (var11 < 128) {
@@ -266,27 +266,27 @@ final class wm extends ee {
             var13 = dg.a(-2, -1, 2) + var5;
             var14 = var7 + dg.a(-512, -1, 512);
             var15 = dg.a(-512, -1, 512) + var8;
-            kn.a(var14, var13, 0, 16, 1, -16, var12, this.field_q, bl.field_r.field_O, var10, var15, 128, 2);
+            ArchiveIndex.a(var14, var13, 0, 16, 1, -16, var12, this.field_q, MusicPatchPcmStream.field_r.field_O, var10, var15, 128, 2);
           }
         } else {
-          if (bl.field_r.field_ab % 2 == 0) {
-            kn.a((int)(-this.field_w.field_j * 2048.0f), var5, 1, 64, 1, -2, var4, this.field_q, bl.field_r.field_O, 12632256, (int)(-this.field_w.field_g * 2048.0f), 32, 4);
+          if (MusicPatchPcmStream.field_r.field_ab % 2 == 0) {
+            ArchiveIndex.a((int)(-this.direction.x * 2048.0f), var5, 1, 64, 1, -2, var4, this.field_q, MusicPatchPcmStream.field_r.field_O, 12632256, (int)(-this.direction.y * 2048.0f), 32, 4);
           }
-          var6 = (int)(1024.0f * -this.field_w.field_j);
-          var7 = (int)(-this.field_w.field_g * 1024.0f);
+          var6 = (int)(1024.0f * -this.direction.x);
+          var7 = (int)(-this.direction.y * 1024.0f);
           var6 = var6 + (-256 + kj.b(2, 512));
           var7 = var7 + (kj.b(2, 512) - 256);
           var8 = (kj.b(2, 128) | 520159104) << 8;
-          kn.a(var6, var5, 0, 16, 1, -16, var4, this.field_q, bl.field_r.field_O, var8, var7, 128, 1);
+          ArchiveIndex.a(var6, var5, 0, 16, 1, -16, var4, this.field_q, MusicPatchPcmStream.field_r.field_O, var8, var7, 128, 1);
         }
     }
 
-    wm(qm param0, int param1, int param2) {
-        super((float)param0.field_h, (float)param0.field_f, param2);
+    wm(Point2i param0, int param1, int param2) {
+        super((float)param0.x, (float)param0.y, param2);
         try {
           this.a(-43, param1, 0.0f, 0.0f);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class wm extends ee {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -329,8 +329,8 @@ final class wm extends ee {
           this.field_J = 78;
         }
         this.field_J = this.field_E.field_b;
-        this.field_x = param3;
-        this.field_t = param2;
+        this.velocityY = param3;
+        this.velocityX = param2;
         if ((256 & this.field_J) == 0) {
           this.a(this.field_E.field_l, 71);
         }
@@ -347,19 +347,19 @@ final class wm extends ee {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_U = null;
         if (param0 != -20668) {
           field_U = (ll) null;
         }
     }
 
-    wm(qm param0, int param1, int param2, float param3, float param4, float param5) {
-        super((float)param0.field_h, (float)param0.field_f, param2, param3);
+    wm(Point2i param0, int param1, int param2, float param3, float param4, float param5) {
+        super((float)param0.x, (float)param0.y, param2, param3);
         try {
           this.a(-62, param1, param4, param5);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

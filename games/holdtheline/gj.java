@@ -5,7 +5,7 @@ final class gj extends vj {
     int field_u;
     float field_w;
     float field_r;
-    qm field_t;
+    Point2i field_t;
     static mf field_s;
     static String field_v;
 
@@ -40,41 +40,41 @@ final class gj extends vj {
         return (vj) null;
     }
 
-    final qm a(boolean param0, float param1) {
+    final Point2i a(boolean param0, float param1) {
         float var3 = 0.0f;
         float var3Lifetime1;
         if (!param0) {
           var3 = param1 * (this.field_w - this.field_r) + this.field_r;
-          return new qm((int)((double)this.field_t.field_h + (double)this.field_u * Math.cos((double)var3)), (int)((double)this.field_t.field_f - (double)this.field_u * Math.sin((double)var3)));
+          return new Point2i((int)((double)this.field_t.x + (double)this.field_u * Math.cos((double)var3)), (int)((double)this.field_t.y - (double)this.field_u * Math.sin((double)var3)));
         }
         this.a(0.47763046622276306f, 120);
         var3Lifetime1 = param1 * (this.field_w - this.field_r) + this.field_r;
-        return new qm((int)((double)this.field_t.field_h + (double)this.field_u * Math.cos((double)var3Lifetime1)), (int)((double)this.field_t.field_f - (double)this.field_u * Math.sin((double)var3Lifetime1)));
+        return new Point2i((int)((double)this.field_t.x + (double)this.field_u * Math.cos((double)var3Lifetime1)), (int)((double)this.field_t.y - (double)this.field_u * Math.sin((double)var3Lifetime1)));
     }
 
-    final qm a(int param0) {
+    final Point2i a(int param0) {
         if (param0 == 0) {
-          return new qm((int)((double)this.field_t.field_h + (double)this.field_u * Math.cos((double)this.field_w)), (int)((double)this.field_t.field_f - (double)this.field_u * Math.sin((double)this.field_w)));
+          return new Point2i((int)((double)this.field_t.x + (double)this.field_u * Math.cos((double)this.field_w)), (int)((double)this.field_t.y - (double)this.field_u * Math.sin((double)this.field_w)));
         }
         this.a(false, -0.22441181540489197f);
-        return new qm((int)((double)this.field_t.field_h + (double)this.field_u * Math.cos((double)this.field_w)), (int)((double)this.field_t.field_f - (double)this.field_u * Math.sin((double)this.field_w)));
+        return new Point2i((int)((double)this.field_t.x + (double)this.field_u * Math.cos((double)this.field_w)), (int)((double)this.field_t.y - (double)this.field_u * Math.sin((double)this.field_w)));
     }
 
-    final in g(int param0) {
+    final Vector2f g(int param0) {
         if (param0 != -1) {
           this.f(-99);
           if (!(this.field_w > this.field_r)) {
-            return new in((float)Math.sin((double)this.field_r), (float)Math.cos((double)this.field_r));
+            return new Vector2f((float)Math.sin((double)this.field_r), (float)Math.cos((double)this.field_r));
           }
-          return new in((float)(-Math.sin((double)this.field_r)), (float)(-Math.cos((double)this.field_r)));
+          return new Vector2f((float)(-Math.sin((double)this.field_r)), (float)(-Math.cos((double)this.field_r)));
         }
         if (!(this.field_w > this.field_r)) {
-          return new in((float)Math.sin((double)this.field_r), (float)Math.cos((double)this.field_r));
+          return new Vector2f((float)Math.sin((double)this.field_r), (float)Math.cos((double)this.field_r));
         }
-        return new in((float)(-Math.sin((double)this.field_r)), (float)(-Math.cos((double)this.field_r)));
+        return new Vector2f((float)(-Math.sin((double)this.field_r)), (float)(-Math.cos((double)this.field_r)));
     }
 
-    public static void d(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_v = null;
         if (param0) {
           field_s = (mf) null;
@@ -84,16 +84,16 @@ final class gj extends vj {
         field_s = null;
     }
 
-    final in a(byte param0, float param1) {
+    final Vector2f a(byte param0, float param1) {
         float var3 = 0.0f;
         float var3Lifetime1;
         if (param0 > 117) {
           var3 = this.field_r + param1 * (-this.field_r + this.field_w);
-          return new in(var3);
+          return new Vector2f(var3);
         }
         field_v = (String) null;
         var3Lifetime1 = this.field_r + param1 * (-this.field_r + this.field_w);
-        return new in(var3Lifetime1);
+        return new Vector2f(var3Lifetime1);
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -126,7 +126,7 @@ final class gj extends vj {
         return 0;
     }
 
-    gj(qm param0, int param1, float param2, float param3, int param4, boolean param5, boolean param6) {
+    gj(Point2i param0, int param1, float param2, float param3, int param4, boolean param5, boolean param6) {
         try {
           this.field_q = param6 ? true : false;
           this.field_u = param1;
@@ -136,7 +136,7 @@ final class gj extends vj {
           this.field_w = param3;
           this.field_k = param4;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -168,21 +168,21 @@ final class gj extends vj {
         return stackIn_9_0;
     }
 
-    final in a(boolean param0) {
+    final Vector2f a(boolean param0) {
         if (param0) {
-          return (in) null;
+          return (Vector2f) null;
         }
         if (this.field_r < this.field_w) {
-          return new in((float)(-Math.sin((double)this.field_w)), (float)(-Math.cos((double)this.field_w)));
+          return new Vector2f((float)(-Math.sin((double)this.field_w)), (float)(-Math.cos((double)this.field_w)));
         }
-        return new in((float)Math.sin((double)this.field_w), (float)Math.cos((double)this.field_w));
+        return new Vector2f((float)Math.sin((double)this.field_w), (float)Math.cos((double)this.field_w));
     }
 
     final float f(int param0) {
         if (param0 == 50) {
           return Math.abs(this.field_w - this.field_r) * (float)this.field_u;
         }
-        gj.d(false);
+        gj.clearSharedReferences(false);
         return Math.abs(this.field_w - this.field_r) * (float)this.field_u;
     }
 

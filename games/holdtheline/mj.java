@@ -5,7 +5,7 @@ final class mj {
     static int field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 51 % ((param0 - 19) / 52);
         field_b = null;
     }
@@ -38,18 +38,18 @@ final class mj {
             param1 = param1 + param4;
             param4 = 0;
           }
-          if (param4 + param1 > tc.field_c) {
-            param1 = -param4 + tc.field_c;
+          if (param4 + param1 > SoftwareRasterizer.field_c) {
+            param1 = -param4 + SoftwareRasterizer.field_c;
           }
-          if (tc.field_j < param0 + param2) {
-            param0 = -param2 + tc.field_j;
+          if (SoftwareRasterizer.field_j < param0 + param2) {
+            param0 = -param2 + SoftwareRasterizer.field_j;
           }
           var6_int = -param5 + 256;
           var7 = param4 + param1;
           for (var8 = param4; var7 > var8; var8++) {
-            var9 = var8 * tc.field_j + param2;
+            var9 = var8 * SoftwareRasterizer.field_j + param2;
             for (var10 = param0; var10 > 0; var10--) {
-              var11 = tc.field_b[var9];
+              var11 = SoftwareRasterizer.field_b[var9];
               var12 = (var11 & 16711680) >> 16;
               var13 = 255 & var11 >> 8;
               var14 = var11 & 255;
@@ -58,19 +58,19 @@ final class mj {
               var17 = (var6_int * var15 >> 12) + (var13 * param5 >> 8);
               var18 = (var15 * var6_int >> 12) + (var14 * param5 >> 8);
               var19 = var16 << 16 | var17 << 8 | var18;
-              tc.field_b[var9] = var19;
+              SoftwareRasterizer.field_b[var9] = var19;
               var9++;
             }
           }
           if (param3 == 0) {
             return;
           }
-          mj.a(-35);
+          mj.clearSharedReferences(-35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var6), "mj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var6), "mj.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -5,17 +5,17 @@ final class mf {
     static String field_b;
     private String field_a;
 
-    final static void a(gn param0, int param1) {
-        sn var2 = null;
+    final static void a(ResourceArchive param0, int param1) {
+        VorbisSample var2 = null;
         try {
-          sn.b(param0.a("", false, "headers.packvorbis"));
-          var2 = sn.a(param0, "jagex logo2.packvorbis", "");
+          VorbisSample.decodeSetup(param0.a("", false, "headers.packvorbis"));
+          var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           if (param1 != 0) {
             field_b = (String) null;
           }
-          var2.c();
+          var2.toPcmSampleUnbounded();
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "mf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -26,7 +26,7 @@ final class mf {
         try {
           he.a(31536000L, param0, this.field_a, -100, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "mf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class mf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class mf {
           }
           if (0 != param0.field_j ||
             param0.field_e != 0) {
-            for (var2_int = 0; in.field_e > var2_int; var2_int++) {
+            for (var2_int = 0; Vector2f.field_e > var2_int; var2_int++) {
               var3 = lj.field_a[var2_int];
               if (2 == var3.field_h &&
                 param0.field_j == var3.field_j &&
@@ -128,13 +128,13 @@ final class mf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -62) {
-          mf.a(-12);
+          mf.clearSharedReferences(-12);
           field_b = null;
           return;
         }
@@ -163,13 +163,13 @@ final class mf {
           if (NetworkGameClient.field_s[param2] > NetworkGameClient.field_s[param0]) {
             return false;
           }
-          var4 = da.field_u[param2] + (ua.field_c[param2] + fj.field_q[param2]);
-          var5 = ua.field_c[param0] + da.field_u[param0] + fj.field_q[param0];
+          var4 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + fj.field_q[param2]);
+          var5 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + fj.field_q[param0];
           if (var4 < var5) {
             return true;
           }
           if (param3 != 13234) {
-            mf.a(-89);
+            mf.clearSharedReferences(-89);
           }
           if (var5 < var4) {
             return false;
@@ -188,8 +188,8 @@ final class mf {
         if (va.field_j[param0] < va.field_j[param2]) {
           return false;
         }
-        var4Lifetime1 = da.field_u[param2] + (ua.field_c[param2] + fj.field_q[param2]);
-        var5Lifetime1 = ua.field_c[param0] + da.field_u[param0] + fj.field_q[param0];
+        var4Lifetime1 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + fj.field_q[param2]);
+        var5Lifetime1 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + fj.field_q[param0];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }
@@ -199,7 +199,7 @@ final class mf {
           }
           return !(param2 >= param0);
         }
-        mf.a(-89);
+        mf.clearSharedReferences(-89);
         if (var5Lifetime1 < var4Lifetime1) {
           return false;
         }
@@ -232,7 +232,7 @@ final class mf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class mf {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

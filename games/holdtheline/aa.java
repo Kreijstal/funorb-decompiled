@@ -14,8 +14,8 @@ final class aa extends IntrusiveNode {
 
     final static int a(boolean param0, int param1, int param2, int param3) {
         if (param2 != 1) {
-          gn var5 = (gn) null;
-          aa.a(-70, (gn) null);
+          ResourceArchive var5 = (ResourceArchive) null;
+          aa.a(-70, (ResourceArchive) null);
           return em.a(true);
         }
         return em.a(true);
@@ -55,11 +55,11 @@ final class aa extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_m = null;
         if (param0 > 30) {
           field_j = null;
@@ -67,14 +67,14 @@ final class aa extends IntrusiveNode {
           field_q = null;
           return;
         }
-        aa.a(-108);
+        aa.clearSharedReferences(-108);
         field_j = null;
         field_p = null;
         field_q = null;
     }
 
-    final static void a(int param0, gn param1) {
-        hj var2 = null;
+    final static void a(int param0, ResourceArchive param1) {
+        Sprite var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -83,22 +83,22 @@ final class aa extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new hj(param1.a("", false, "final_frame.jpg"), (java.awt.Component) ((Object) kd.field_b));
+          var2 = new Sprite(param1.a("", false, "final_frame.jpg"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
           var3 = var2.field_s;
           var4 = var2.field_y;
           lj.a((byte) -120);
-          w.field_c = new hj(var3, var4 * 3 / 4);
-          w.field_c.f();
+          TickClock.field_c = new Sprite(var3, var4 * 3 / 4);
+          TickClock.field_c.f();
           var2.b(0, 0);
-          kh.field_l = new hj(var3, var4 - w.field_c.field_y);
+          kh.field_l = new Sprite(var3, var4 - TickClock.field_c.field_y);
           kh.field_l.f();
-          var2.b(0, -w.field_c.field_y);
-          kh.field_l.field_x = w.field_c.field_y;
+          var2.b(0, -TickClock.field_c.field_y);
+          kh.field_l.field_x = TickClock.field_c.field_y;
           dm.b((byte) -10);
           if (param0 == -18916) {
             return;
           }
-          aa.a(-19);
+          aa.clearSharedReferences(-19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ final class aa extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class aa extends IntrusiveNode {
           this.field_l = param1;
           this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

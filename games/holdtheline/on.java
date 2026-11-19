@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends ln {
+final class on extends DualLinkNode {
     int[] field_o;
-    static hj field_t;
+    static Sprite field_t;
     static boolean field_s;
     static int[][] field_v;
     private int[][] field_q;
@@ -25,7 +25,7 @@ final class on extends ln {
         }
     }
 
-    final void a(int param0, th param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -55,11 +55,11 @@ final class on extends ln {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    private final void a(int param0, th param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -72,12 +72,12 @@ final class on extends ln {
         int var6 = 0;
         e var7 = null;
         int var9 = 0;
-        th var10 = null;
+        PacketBuffer var10 = null;
         var9 = HoldTheLine.field_D;
         try {
           if (param0 < 93) {
-            var10 = (th) null;
-            this.a(53, (th) null, -28);
+            var10 = (PacketBuffer) null;
+            this.a(53, (PacketBuffer) null, -28);
           }
           if (param2 == 1) {
             this.field_u = fl.a(param1.j(-1231), (byte) -29, '<');
@@ -94,7 +94,7 @@ final class on extends ln {
               this.field_q = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param1.k(120);
-                var7 = ln.a(var6, (byte) -96);
+                var7 = DualLinkNode.a(var6, (byte) -96);
                 if (var7 != null) {
                   this.field_w[var5] = var6;
                   array$0 = new int[var7.field_c];
@@ -121,11 +121,11 @@ final class on extends ln {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_t = null;
         if (param0 < 103) {

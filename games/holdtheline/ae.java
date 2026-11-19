@@ -30,14 +30,14 @@ final class ae {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(ah.a(var5, param1, (byte) 25), "_self");
+              param1.getAppletContext().showDocument(IntrusiveDeque.a(var5, param1, (byte) 25), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref.printStackTrace();
             }
             if (param0 != -16666) {
-              ae.a((byte) 11);
+              ae.clearSharedReferences((byte) 11);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -50,7 +50,7 @@ final class ae {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -131,11 +131,11 @@ final class ae {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         field_d = null;
         field_c = null;

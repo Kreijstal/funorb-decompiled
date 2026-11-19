@@ -62,8 +62,8 @@ final class gf {
         }
         gf.a(0, field_e);
         int var0 = field_d[1];
-        if (var0 < tc.field_a) {
-          var0 = tc.field_a;
+        if (var0 < SoftwareRasterizer.field_a) {
+          var0 = SoftwareRasterizer.field_a;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_e; var2 += 4) {
@@ -188,7 +188,7 @@ final class gf {
           }
           var2++;
           field_a = var2;
-          if (var2 >= tc.field_i) {
+          if (var2 >= SoftwareRasterizer.field_i) {
             return false;
           }
           var3 = field_f;
@@ -240,7 +240,7 @@ final class gf {
           var1 = field_g;
           var2 = field_b;
           var3 = field_a;
-          tc.b(var1, var3, var2 - var1, param0);
+          SoftwareRasterizer.b(var1, var3, var2 - var1, param0);
         }
     }
 
@@ -282,7 +282,7 @@ final class gf {
         gf.a(var2 + 4, param1);
     }
 
-    public static void b() {
+    public static void clearSharedReferences() {
         field_d = null;
     }
 

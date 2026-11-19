@@ -5,24 +5,24 @@ import java.util.*;
 
 final class kj extends rd {
     static String field_o;
-    static hj field_q;
+    static Sprite field_q;
     private int field_m;
     static boolean field_r;
-    static hj field_p;
+    static Sprite field_p;
     static String field_n;
 
     final static int b(int param0, int param1) {
         if (param0 != 2) {
           field_o = (String) null;
         }
-        return rf.a(param1, in.field_c, -1);
+        return rf.a(param1, Vector2f.field_c, -1);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         field_q = null;
         if (param0 <= 96) {
-          kj.a((byte) 21);
+          kj.clearSharedReferences((byte) 21);
         }
         field_n = null;
         field_p = null;
@@ -83,7 +83,7 @@ final class kj extends rd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -95,14 +95,14 @@ final class kj extends rd {
         this.field_m = param1;
     }
 
-    final static boolean a(int param0, qm param1, qm param2, ei param3) {
+    final static boolean a(int param0, Point2i param1, Point2i param2, ei param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         ei var6 = null;
         int var7 = 0;
-        lb var8 = null;
+        TrackBoundary var8 = null;
         int var9 = 0;
-        lb var10 = null;
+        TrackBoundary var10 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -113,7 +113,7 @@ final class kj extends rd {
         RuntimeException decompiledCaughtException = null;
         var9 = HoldTheLine.field_D;
         try {
-          var10 = new lb(param2, param1, 0, false, true);
+          var10 = new TrackBoundary(param2, param1, 0, false, true);
           if (param0 != 140) {
             field_o = (String) null;
           }
@@ -129,8 +129,8 @@ final class kj extends rd {
                 var5++;
                 continue scanLoop1;
               }
-              var8 = (lb) (var6.field_b[var7]);
-              if (!th.a(param0 - 141, var10, var8)) {
+              var8 = (TrackBoundary) (var6.field_b[var7]);
+              if (!PacketBuffer.a(param0 - 141, var10, var8)) {
                 var7++;
                 continue;
               }
@@ -161,13 +161,13 @@ final class kj extends rd {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
     static {
         field_o = "Waiting for music";
         field_n = "<%0> unlocked!";
-        field_p = new hj(540, 140);
+        field_p = new Sprite(540, 140);
     }
 }

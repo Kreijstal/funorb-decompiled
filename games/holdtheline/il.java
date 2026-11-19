@@ -7,18 +7,18 @@ final class il {
     static String field_b;
     static float[] field_d;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -102 % ((param0 + 9) / 36);
         field_b = null;
         field_d = null;
         field_a = null;
     }
 
-    final static bm[] a(byte param0, gn param1, int param2, int param3) {
+    final static IndexedSprite[] a(byte param0, ResourceArchive param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        bm[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -30,7 +30,7 @@ final class il {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (bm[]) (stackIn_2_0);
+          return (IndexedSprite[]) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -41,36 +41,36 @@ final class il {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static jg a(int param0, int param1, int param2, int param3, byte param4) {
         jg var10 = null;
         int var6 = HoldTheLine.field_D;
-        jg var5 = (jg) (pc.field_e.b((byte) 120));
+        jg var5 = (jg) (pc.field_e.first((byte) 120));
         while (var5 != null) {
           if (var5.field_i == param2) {
             return var5;
           }
-          var5 = (jg) (pc.field_e.c((byte) -45));
+          var5 = (jg) (pc.field_e.next((byte) -45));
         }
         if (param4 == -66) {
           var10 = new jg();
           var10.field_n = param0;
           var10.field_l = param3;
           var10.field_i = param2;
-          pc.field_e.a((byte) -114, var10);
-          gd.a(var10, (byte) 86, param1);
+          pc.field_e.addLast((byte) -114, var10);
+          TextFieldValidator.a(var10, (byte) 86, param1);
           return var10;
         }
-        il.a(-18);
+        il.clearSharedReferences(-18);
         jg var9 = new jg();
         var9.field_n = param0;
         var9.field_l = param3;
         var9.field_i = param2;
-        pc.field_e.a((byte) -114, var9);
-        gd.a(var9, (byte) 86, param1);
+        pc.field_e.addLast((byte) -114, var9);
+        TextFieldValidator.a(var9, (byte) 86, param1);
         return var9;
     }
 

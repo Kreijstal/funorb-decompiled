@@ -3,29 +3,29 @@
  */
 final class ci {
     private java.math.BigInteger field_e;
-    private qb field_m;
+    private DiskCacheWorker field_m;
     static int field_n;
     static int field_b;
     static boolean field_o;
     static boolean field_h;
     static int field_d;
-    private th field_a;
-    private rb[] field_i;
+    private PacketBuffer field_a;
+    private CachedArchiveProvider[] field_i;
     private java.math.BigInteger field_f;
-    private wj field_g;
+    private Js5Transport field_g;
     static go field_l;
     static uf field_k;
-    private cc field_c;
+    private NetworkArchiveRequest field_c;
     static int field_j;
 
-    final rb a(int param0, boolean param1, int param2, sk param3, sk param4) {
+    final CachedArchiveProvider a(int param0, boolean param1, int param2, DiskCacheStore param3, DiskCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        rb var9 = null;
+        CachedArchiveProvider var9 = null;
         byte[] var13 = null;
-        rb stackIn_9_0 = null;
-        rb stackIn_13_0 = null;
+        CachedArchiveProvider stackIn_9_0 = null;
+        CachedArchiveProvider stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -42,7 +42,7 @@ final class ci {
               stackIn_9_0 = this.field_i[param0];
               return stackIn_9_0;
             }
-            this.field_a.field_l = param0 * 72 + 6;
+            this.field_a.position = param0 * 72 + 6;
             var6_int = this.field_a.a(-101);
             if (param2 < 102) {
               field_l = (go) null;
@@ -50,7 +50,7 @@ final class ci {
             var7 = this.field_a.a(-73);
             var13 = new byte[64];
             this.field_a.a(64, 0, (byte) 68, var13);
-            var9 = new rb(param0, param4, param3, this.field_g, this.field_m, var6_int, var13, var7, param1);
+            var9 = new CachedArchiveProvider(param0, param4, param3, this.field_g, this.field_m, var6_int, var13, var7, param1);
             this.field_i[param0] = var9;
             stackIn_13_0 = var9;
             return stackIn_13_0;
@@ -72,7 +72,7 @@ final class ci {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class ci {
         return;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_l = null;
         if (param0 != 100) {
           return;
@@ -123,7 +123,7 @@ final class ci {
         if (param1 <= 49) {
           ci.b((byte) 95);
         }
-        if (ik.field_i != param2) {
+        if (MusicPatchEnvelope.field_i != param2) {
           return;
         }
         if (param3 < -1) {
@@ -131,7 +131,7 @@ final class ci {
         }
         if (ra.field_ab != param3 ||
           ld.field_b != param0) {
-          qj.field_I = -1;
+          DialogLayer.field_I = -1;
         }
         ld.field_b = param0;
         ra.field_ab = param3;
@@ -144,13 +144,13 @@ final class ci {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        da var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         ih var11 = null;
-        da var12 = null;
+        IsaacPacketBuffer var12 = null;
         ma var13 = null;
         int[] var14 = null;
         ma var15 = null;
@@ -170,11 +170,11 @@ final class ci {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((th) ((Object) var5)).f((byte) -31);
+            var6 = ((PacketBuffer) ((Object) var5)).f((byte) -31);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((th) ((Object) var5)).a(-67);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).a(-67);
             }
-            var15 = (ma) (sg.field_v.b((byte) 106));
+            var15 = (ma) (RaceWorld.field_v.first((byte) 106));
             if (var15 == null) {
               r.a(-28036);
               return;
@@ -182,19 +182,19 @@ final class ci {
             var15.field_j = var3;
             var15.field_i = true;
             var15.field_m = var16[0];
-            var15.d(0);
+            var15.unlink(0);
             return;
           }
           if (var2 == 1) {
-            var11 = (ih) (io.field_c.b((byte) 116));
+            var11 = (ih) (io.field_c.first((byte) 116));
             if (var11 == null) {
               r.a(-28036);
               return;
             }
-            var11.d(0);
+            var11.unlink(0);
           } else {
             if (var2 == 2) {
-              var13 = (ma) (sg.field_v.b((byte) 112));
+              var13 = (ma) (RaceWorld.field_v.first((byte) 112));
               if (var13 == null) {
                 r.a(-28036);
                 return;
@@ -202,9 +202,9 @@ final class ci {
               var13.field_j = vd.c(1023);
               var13.field_m = var13.field_j[0];
               var13.field_i = true;
-              var13.d(0);
+              var13.unlink(0);
             } else {
-              bl.a((Throwable) null, (byte) -52, "A1: " + em.b(false));
+              MusicPatchPcmStream.a((Throwable) null, (byte) -52, "A1: " + em.b(false));
               r.a(-28036);
             }
           }
@@ -212,7 +212,7 @@ final class ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "ci.D(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "ci.D(" + param0 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class ci {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        th var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -241,14 +241,14 @@ final class ci {
         if (this.field_c.field_u) {
           return false;
         }
-        var10 = new th(this.field_c.i(-20324));
-        var10.field_l = 5;
+        var10 = new PacketBuffer(this.field_c.i(-20324));
+        var10.position = 5;
         var3 = var10.f((byte) -40);
-        var10.field_l = var10.field_l + var3 * 72;
+        var10.position = var10.position + var3 * 72;
         if (param0 > -31) {
-          ci.a((byte) -98);
+          ci.clearSharedReferences((byte) -98);
         }
-        var13 = new byte[-var10.field_l + var10.field_i.length];
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(var13.length, 0, (byte) 71, var13);
@@ -263,18 +263,18 @@ final class ci {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = wc.a(var10.field_i, -6408, 5, -5 + (var10.field_l - var13.length));
+        var15 = wc.a(var10.payload, -6408, 5, -5 + (var10.position - var13.length));
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[var7 + 1] != var15[var7]) {
             throw new RuntimeException();
           }
         }
         this.field_a = var10;
-        this.field_i = new rb[var3];
+        this.field_i = new CachedArchiveProvider[var3];
         return true;
     }
 
-    private ci(wj param0, qb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ci(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -323,11 +323,11 @@ final class ci {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    ci(wj param0, qb param1) {
+    ci(Js5Transport param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 

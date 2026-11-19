@@ -14,10 +14,10 @@ final class wh extends vd {
         if (null != sb.field_c) {
           sb.field_c.h((byte) -93);
         }
-        String var2 = ch.a(false);
-        lh.field_a = new vg(var2, (String) null, true, false, false);
+        String var2 = MusicPatch.a(false);
+        lh.field_a = new LoginForm(var2, (String) null, true, false, false);
         ka.field_b.a(sm.field_c, false);
-        sm.field_c.a((n) (lh.field_a), (byte) 13);
+        sm.field_c.a((UiWidget) (lh.field_a), (byte) 13);
         sm.field_c.b(false);
     }
 
@@ -55,7 +55,7 @@ final class wh extends vd {
             var6[2 * var7Lifetime1 + (param3.length + 1)] = param1[-1 + (param1.length - 2 * var7Lifetime1)];
           }
           if (this.field_h != 256) {
-            dl.a(var15, (byte) -127, this.field_h, this.field_g);
+            UrlPacketDownloader.a(var15, (byte) -127, this.field_h, this.field_g);
           } else {
             gf.a(var15, this.field_g);
           }
@@ -67,7 +67,7 @@ final class wh extends vd {
           for (var7Lifetime2 = 0; var7Lifetime2 < var15.length; var7Lifetime2 += 2) {
             var10 = var15[var7Lifetime2];
             var11 = var6[var7Lifetime2 + 1];
-            tc.d(var8, var9, var10, var11, this.field_f);
+            SoftwareRasterizer.d(var8, var9, var10, var11, this.field_f);
             var8 = var10;
             var9 = var11;
           }
@@ -88,7 +88,7 @@ final class wh extends vd {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 

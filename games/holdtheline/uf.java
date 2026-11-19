@@ -3,12 +3,12 @@
  */
 final class uf {
     static volatile int field_a;
-    hj field_b;
+    Sprite field_b;
     static int[] field_c;
     static String field_d;
     private String field_e;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         if (param0 >= -29) {
           field_c = (int[]) null;
@@ -26,19 +26,19 @@ final class uf {
         return null != this.field_b ? true : false;
     }
 
-    final hj a(int param0) {
-        hj dupTemp$0 = null;
+    final Sprite a(int param0) {
+        Sprite dupTemp$0 = null;
         if (this.field_b != null) {
           return this.field_b;
         }
         if (param0 == 8192) {
-          dupTemp$0 = wd.b(this.field_e, (byte) -63);
+          dupTemp$0 = RoadSegment.b(this.field_e, (byte) -63);
           this.field_b = dupTemp$0;
           return dupTemp$0;
         }
         String var3 = (String) null;
         uf.a(-37, (String) null, (byte) 101, true, 47, (String) null, (String) null);
-        hj dupTemp$1 = wd.b(this.field_e, (byte) -63);
+        Sprite dupTemp$1 = RoadSegment.b(this.field_e, (byte) -63);
         this.field_b = dupTemp$1;
         return dupTemp$1;
     }
@@ -50,20 +50,20 @@ final class uf {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          qk.a(param1, param0, true, true, in.field_h, qf.field_j, r.field_c);
-          for (var2_int = 0; in.field_h > var2_int; var2_int++) {
-            im.field_h[param1 + var2_int] = var2_int;
+          TriangleMesh.a(param1, param0, true, true, Vector2f.field_h, qf.field_j, r.field_c);
+          for (var2_int = 0; Vector2f.field_h > var2_int; var2_int++) {
+            IterableNodeHashTable.field_h[param1 + var2_int] = var2_int;
           }
-          qk.a(param1 + param1, param1, true, false, in.field_h + param1, we.field_j, dn.field_t);
-          if (param1 >= in.field_h) {
+          TriangleMesh.a(param1 + param1, param1, true, false, Vector2f.field_h + param1, we.field_j, VehicleDefinition.field_t);
+          if (param1 >= Vector2f.field_h) {
             return;
           }
-          in.field_h = param1;
+          Vector2f.field_h = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var2), "uf.E(" + param0 + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var2), "uf.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class uf {
           this.field_e = param0;
           this.field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class uf {
           var9 = -6 / ((0 - param2) / 52);
           var7 = new io(param5);
           var8 = new io(param1);
-          stackIn_1_0 = cc.a(65500, param0, param4, var7, param3, param6, var8);
+          stackIn_1_0 = NetworkArchiveRequest.a(65500, param0, param4, var7, param3, param6, var8);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,7 +118,7 @@ final class uf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

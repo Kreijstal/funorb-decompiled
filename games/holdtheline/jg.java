@@ -12,7 +12,7 @@ final class jg extends IntrusiveNode {
     String[][] field_m;
     int field_l;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_q = null;
         if (param0 > -66) {
@@ -20,7 +20,7 @@ final class jg extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, hj param2, boolean param3, int param4, int param5) {
+    final static void a(int param0, int param1, Sprite param2, boolean param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -51,37 +51,37 @@ final class jg extends IntrusiveNode {
           var7 = (param1 << 8) + var6_int * param2.field_u;
           param0 = param0 + param2.field_x;
           param4 = param4 + param2.field_u;
-          var8 = param4 + param0 * tc.field_j;
+          var8 = param4 + param0 * SoftwareRasterizer.field_j;
           var9 = 0;
           if (!param3) {
-            jg.a(13);
+            jg.clearSharedReferences(13);
           }
           var10 = param2.field_y;
           var11 = param2.field_s;
-          var12 = -var11 + tc.field_j;
-          if (param0 < tc.field_a) {
-            var14 = -param0 + tc.field_a;
+          var12 = -var11 + SoftwareRasterizer.field_j;
+          if (param0 < SoftwareRasterizer.field_a) {
+            var14 = -param0 + SoftwareRasterizer.field_a;
             var9 = var9 + var14 * var11;
-            var8 = var8 + tc.field_j * var14;
+            var8 = var8 + SoftwareRasterizer.field_j * var14;
             var10 = var10 - var14;
-            param0 = tc.field_a;
+            param0 = SoftwareRasterizer.field_a;
           }
           var13 = 0;
-          if (param4 < tc.field_d) {
-            var14Lifetime1 = -param4 + tc.field_d;
+          if (param4 < SoftwareRasterizer.field_d) {
+            var14Lifetime1 = -param4 + SoftwareRasterizer.field_d;
             var11 = var11 - var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var7 = var7 + var14Lifetime1 * var6_int;
             var13 = var13 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
-            param4 = tc.field_d;
+            param4 = SoftwareRasterizer.field_d;
           }
-          if (tc.field_i < var10 + param0) {
-            var10 = var10 - (var10 + (param0 - tc.field_i));
+          if (SoftwareRasterizer.field_i < var10 + param0) {
+            var10 = var10 - (var10 + (param0 - SoftwareRasterizer.field_i));
           }
-          if (var11 + param4 > tc.field_e) {
-            var14Lifetime2 = param4 + (var11 - tc.field_e);
+          if (var11 + param4 > SoftwareRasterizer.field_e) {
+            var14Lifetime2 = param4 + (var11 - SoftwareRasterizer.field_e);
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -103,11 +103,11 @@ final class jg extends IntrusiveNode {
                   var17 = param2.field_z[incrementValue$0];
                   if (var17 != 0) {
                     if (var15 <= 255) {
-                      var18 = tc.field_b[var8];
+                      var18 = SoftwareRasterizer.field_b[var8];
                       var19 = 16711935 & var16 * (16711935 & var18) + (var17 & 16711935) * var15 >> 8;
-                      tc.field_b[var8] = var19 + pk.a(65280, pk.a(var18, 65280) * var16 + pk.a(65280, var17) * var15 >> 8);
+                      SoftwareRasterizer.field_b[var8] = var19 + LoginChoicePanel.a(65280, LoginChoicePanel.a(var18, 65280) * var16 + LoginChoicePanel.a(65280, var17) * var15 >> 8);
                     } else {
-                      tc.field_b[var8] = var17;
+                      SoftwareRasterizer.field_b[var8] = var17;
                     }
                   }
                   var8++;
@@ -129,15 +129,15 @@ final class jg extends IntrusiveNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(rd param0, ei param1, byte param2) {
         int var20 = 0;
         int var27 = 0;
-        qm var3 = null;
-        qm var4 = null;
+        Point2i var3 = null;
+        Point2i var4 = null;
         uh var6 = null;
         uh var7 = null;
         vj var8 = null;
@@ -157,11 +157,11 @@ final class jg extends IntrusiveNode {
         float var25 = 0.0f;
         float var26 = 0.0f;
         int var28 = 0;
-        in var29 = null;
-        in var30 = null;
-        qm var31 = null;
-        qm var32 = null;
-        qm var33 = null;
+        Vector2f var29 = null;
+        Vector2f var30 = null;
+        Point2i var31 = null;
+        Point2i var32 = null;
+        Point2i var33 = null;
         uh var34 = null;
         uh var35 = null;
         vj var36 = null;
@@ -181,28 +181,28 @@ final class jg extends IntrusiveNode {
         float var23 = 0.0f;
         uh var38 = null;
         uh var39 = null;
-        in var41 = null;
-        in var42 = null;
-        qm var43 = null;
-        qm var44 = null;
-        qm var45 = null;
-        lb var46_ref = null;
-        in var47 = null;
-        in var48 = null;
-        qm var49 = null;
-        qm var50 = null;
-        qm var51 = null;
+        Vector2f var41 = null;
+        Vector2f var42 = null;
+        Point2i var43 = null;
+        Point2i var44 = null;
+        Point2i var45 = null;
+        TrackBoundary var46_ref = null;
+        Vector2f var47 = null;
+        Vector2f var48 = null;
+        Point2i var49 = null;
+        Point2i var50 = null;
+        Point2i var51 = null;
         uh var52 = null;
         uh var53 = null;
-        in var54 = null;
-        in var55 = null;
-        qm var56 = null;
-        qm var57 = null;
-        qm var58 = null;
+        Vector2f var54 = null;
+        Vector2f var55 = null;
+        Point2i var56 = null;
+        Point2i var57 = null;
+        Point2i var58 = null;
         uh var59 = null;
         uh var60 = null;
-        qm var3Lifetime1;
-        qm var4Lifetime1;
+        Point2i var3Lifetime1;
+        Point2i var4Lifetime1;
         var17 = null;
         var18 = null;
         var40 = null;
@@ -218,19 +218,19 @@ final class jg extends IntrusiveNode {
           var9 = (vj) (param1.field_b[0]);
           var31 = var8.a(0);
           var29 = wb.a(var8, var9, 3251);
-          var30 = new in(var29);
-          var29.a((float)param0.field_c, -1);
-          var30.a((float)param0.field_h, -1);
-          var32 = new qm(var31);
+          var30 = new Vector2f(var29);
+          var29.scale((float)param0.field_c, -1);
+          var30.scale((float)param0.field_h, -1);
+          var32 = new Point2i(var31);
           var3 = var32;
-          var32.a(var29, (byte) 98);
-          var33 = new qm(var31);
+          var32.translate(var29, (byte) 98);
+          var33 = new Point2i(var31);
           var4 = var33;
-          var33.a(var30, -13201);
-          var34.a(var32.field_h, (byte) 64);
-          var34.a(var32.field_f, (byte) 127);
-          var35.a(var33.field_h, (byte) 71);
-          var35.a(var33.field_f, (byte) 68);
+          var33.subtractVector(var30, -13201);
+          var34.a(var32.x, (byte) 64);
+          var34.a(var32.y, (byte) 127);
+          var35.a(var33.x, (byte) 71);
+          var35.a(var33.y, (byte) 68);
           var12 = fb.a(param1, (byte) 115);
           var13 = (int)(var12 / param0.field_k) + 1;
           var14 = var12 / (float)(var13 * param0.field_i);
@@ -245,27 +245,27 @@ final class jg extends IntrusiveNode {
             var36 = var18_ref;
             var17_ref = var36;
             var61 = (vj) (param1.field_b[(1 + var20) % param1.field_e]);
-            if (var17_ref instanceof lb) {
-              var46_ref = (lb) (var36);
-              var47 = var46_ref.g(-1).a((byte) 77);
-              var48 = new in(var47);
-              var47.a((float)param0.field_c, -1);
-              var48.a((float)param0.field_h, -1);
+            if (var17_ref instanceof TrackBoundary) {
+              var46_ref = (TrackBoundary) (var36);
+              var47 = var46_ref.g(-1).perpendicular((byte) 77);
+              var48 = new Vector2f(var47);
+              var47.scale((float)param0.field_c, -1);
+              var48.scale((float)param0.field_h, -1);
               var22 = var14 / var46_ref.f(50);
               var16 = var15 / var46_ref.f(50);
               var23 = var46_ref.f(50);
               while (var23 > var15) {
                 var49 = var46_ref.a(false, var16);
-                var50 = new qm(var49);
+                var50 = new Point2i(var49);
                 var3Lifetime1 = var50;
-                var50.a(var47, (byte) 89);
-                var51 = new qm(var49);
+                var50.translate(var47, (byte) 89);
+                var51 = new Point2i(var49);
                 var4Lifetime1 = var51;
-                var51.a(var48, -13201);
-                var6.a(var50.field_h, (byte) 100);
-                var6.a(var50.field_f, (byte) 63);
-                var7.a(var51.field_h, (byte) 106);
-                var7.a(var51.field_f, (byte) 89);
+                var51.subtractVector(var48, -13201);
+                var6.a(var50.x, (byte) 100);
+                var6.a(var50.y, (byte) 63);
+                var7.a(var51.x, (byte) 106);
+                var7.a(var51.y, (byte) 89);
                 if (var36.field_p) {
                   param0.a(var6.a(-77), var19, (byte) -65, var7.a(-60));
                 }
@@ -274,30 +274,30 @@ final class jg extends IntrusiveNode {
                 var6 = var52;
                 var53 = o.a((byte) -125);
                 var7 = var53;
-                var52.a(var50.field_h, (byte) 97);
-                var52.a(var50.field_f, (byte) 82);
-                var53.a(var51.field_h, (byte) 71);
+                var52.a(var50.x, (byte) 97);
+                var52.a(var50.y, (byte) 82);
+                var53.a(var51.x, (byte) 71);
                 var23 = var23 - var15;
                 var16 = var16 + var22;
-                var53.a(var51.field_f, (byte) 109);
+                var53.a(var51.y, (byte) 109);
                 var15 = var14;
               }
               var56 = var46_ref.field_s;
               var54 = wb.a(var46_ref, var61, 3251);
-              var55 = new in(var54);
-              var54.a((float)param0.field_c, -1);
-              var55.a((float)param0.field_h, -1);
-              var57 = new qm(var56);
+              var55 = new Vector2f(var54);
+              var54.scale((float)param0.field_c, -1);
+              var55.scale((float)param0.field_h, -1);
+              var57 = new Point2i(var56);
               var3Lifetime1 = var57;
-              var57.a(var54, (byte) 126);
-              var58 = new qm(var56);
+              var57.translate(var54, (byte) 126);
+              var58 = new Point2i(var56);
               var4Lifetime1 = var58;
-              var58.a(var55, -13201);
-              var6.a(var57.field_h, (byte) 95);
-              var6.a(var57.field_f, (byte) 92);
-              var7.a(var58.field_h, (byte) 71);
+              var58.subtractVector(var55, -13201);
+              var6.a(var57.x, (byte) 95);
+              var6.a(var57.y, (byte) 92);
+              var7.a(var58.x, (byte) 71);
               var15 = var15 - var23;
-              var7.a(var58.field_f, (byte) 106);
+              var7.a(var58.y, (byte) 106);
             } else {
               var37_ref = (gj) (var36);
               var22 = var37_ref.f(50);
@@ -307,18 +307,18 @@ final class jg extends IntrusiveNode {
               var26 = var25 + var37_ref.field_r;
               for (var27 = 1; var23_int >= var27; var27++) {
                 if (var37_ref.field_r > var37_ref.field_w) {
-                  var3Lifetime1 = new qm((int)((double)var37_ref.field_t.field_h + (double)(param0.field_h + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.field_f - (double)(param0.field_h + var37_ref.field_u) * Math.sin((double)var26)));
-                  var4Lifetime1 = new qm((int)((double)var37_ref.field_t.field_h + (double)(-param0.field_c + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.field_f - (double)(var37_ref.field_u - param0.field_c) * Math.sin((double)var26)));
+                  var3Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(param0.field_h + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(param0.field_h + var37_ref.field_u) * Math.sin((double)var26)));
+                  var4Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(-param0.field_c + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(var37_ref.field_u - param0.field_c) * Math.sin((double)var26)));
                 } else {
-                  var3Lifetime1 = new qm((int)((double)var37_ref.field_t.field_h + (double)(-param0.field_h + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.field_f - (double)(-param0.field_h + var37_ref.field_u) * Math.sin((double)var26)));
-                  var4Lifetime1 = new qm((int)((double)var37_ref.field_t.field_h + (double)(var37_ref.field_u + param0.field_c) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.field_f - (double)(var37_ref.field_u + param0.field_c) * Math.sin((double)var26)));
+                  var3Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(-param0.field_h + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(-param0.field_h + var37_ref.field_u) * Math.sin((double)var26)));
+                  var4Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(var37_ref.field_u + param0.field_c) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(var37_ref.field_u + param0.field_c) * Math.sin((double)var26)));
                 }
                 var26 = var26 + var25;
-                var6.a(var3Lifetime1.field_h, (byte) 74);
-                var6.a(var3Lifetime1.field_f, (byte) 94);
-                var7.a(var4Lifetime1.field_h, (byte) 106);
+                var6.a(var3Lifetime1.x, (byte) 74);
+                var6.a(var3Lifetime1.y, (byte) 94);
+                var7.a(var4Lifetime1.x, (byte) 106);
                 var15 = var15 - var24;
-                var7.a(var4Lifetime1.field_f, (byte) 104);
+                var7.a(var4Lifetime1.y, (byte) 104);
                 if (var15 <= 0.0f) {
                   if (var37_ref.field_p) {
                     param0.a(var6.a(-97), var19, (byte) -79, var7.a(-90));
@@ -329,37 +329,37 @@ final class jg extends IntrusiveNode {
                   var19++;
                   var39 = o.a((byte) 55);
                   var7 = var39;
-                  var38.a(var3Lifetime1.field_h, (byte) 71);
-                  var38.a(var3Lifetime1.field_f, (byte) 69);
-                  var39.a(var4Lifetime1.field_h, (byte) 101);
-                  var39.a(var4Lifetime1.field_f, (byte) 72);
+                  var38.a(var3Lifetime1.x, (byte) 71);
+                  var38.a(var3Lifetime1.y, (byte) 69);
+                  var39.a(var4Lifetime1.x, (byte) 101);
+                  var39.a(var4Lifetime1.y, (byte) 72);
                 }
               }
               var43 = var37_ref.a(0);
               var41 = wb.a(var37_ref, var61, 3251);
-              var42 = new in(var41);
-              var41.a((float)param0.field_c, -1);
-              var42.a((float)param0.field_h, -1);
-              var44 = new qm(var43);
+              var42 = new Vector2f(var41);
+              var41.scale((float)param0.field_c, -1);
+              var42.scale((float)param0.field_h, -1);
+              var44 = new Point2i(var43);
               var3Lifetime1 = var44;
-              var44.a(var41, (byte) 117);
-              var45 = new qm(var43);
+              var44.translate(var41, (byte) 117);
+              var45 = new Point2i(var43);
               var4Lifetime1 = var45;
-              var45.a(var42, -13201);
-              var6.a(var44.field_h, (byte) 103);
-              var6.a(var44.field_f, (byte) 75);
-              var7.a(var45.field_h, (byte) 93);
-              var7.a(var45.field_f, (byte) 65);
+              var45.subtractVector(var42, -13201);
+              var6.a(var44.x, (byte) 103);
+              var6.a(var44.y, (byte) 75);
+              var7.a(var45.x, (byte) 93);
+              var7.a(var45.y, (byte) 65);
             }
             if (var36.field_p) {
               param0.a(var6.a(-88), var19, (byte) -127, var7.a(-57));
             }
             var59 = o.a((byte) 68);
             var60 = o.a((byte) -109);
-            var59.a(var3Lifetime1.field_h, (byte) 68);
-            var59.a(var3Lifetime1.field_f, (byte) 75);
-            var60.a(var4Lifetime1.field_h, (byte) 82);
-            var60.a(var4Lifetime1.field_f, (byte) 115);
+            var59.a(var3Lifetime1.x, (byte) 68);
+            var59.a(var3Lifetime1.y, (byte) 75);
+            var60.a(var4Lifetime1.x, (byte) 82);
+            var60.a(var4Lifetime1.y, (byte) 115);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -378,7 +378,7 @@ final class jg extends IntrusiveNode {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
         }
     }
 

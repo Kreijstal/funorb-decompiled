@@ -3,39 +3,39 @@
  */
 final class ic {
     String field_a;
-    gn field_e;
+    ResourceArchive field_e;
     String field_c;
     String field_g;
     static oa field_i;
     static String field_h;
     int field_b;
-    static kd field_d;
+    static MouseInputHandler field_d;
     static int[] field_f;
 
     final static void a(int param0, vn param1, vn param2, int param3, int param4, int param5) {
-        pg.field_G = param5;
-        qm.field_e = param2;
+        DropTargetWidget.field_G = param5;
+        Point2i.field_e = param2;
         if (param3 != 19362) {
           return;
         }
         try {
           na.field_p = param1;
           vf.field_w = param4;
-          dc.field_bb = param0;
+          ContentTransitionDialog.field_bb = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ic.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ic.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final static void b(byte param0) {
         kc.field_e = null;
         if (param0 != 10) {
-          field_d = (kd) null;
+          field_d = (MouseInputHandler) null;
         }
         i.field_i = null;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_i = null;
         field_f = null;
         field_d = null;
@@ -66,7 +66,7 @@ final class ic {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             ek.field_n[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < in.field_e; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < Vector2f.field_e; var2_intLifetime1++) {
             if (param1.field_h == lj.field_a[var2_intLifetime1].field_h) {
               dupTemp$3 = lj.field_a[var2_intLifetime1].a(-90);
               ek.field_n[dupTemp$3] = ek.field_n[dupTemp$3] + 1;
@@ -75,7 +75,7 @@ final class ic {
           dupTemp$0 = param1.a(-65);
           ek.field_n[dupTemp$0] = ek.field_n[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; in.field_e > var3; var3++) {
+          for (var3 = 0; Vector2f.field_e > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (~lj.field_a[var3].field_h == ~param1.field_h) {
               var4 = lj.field_a[var3].a(param0 ^ -21258);
@@ -90,12 +90,12 @@ final class ic {
               lj.field_a[incrementValue$2] = lj.field_a[var3];
             }
           }
-          in.field_e = var2_intLifetime2;
-          fieldTemp$1 = in.field_e;
-          in.field_e = in.field_e + 1;
+          Vector2f.field_e = var2_intLifetime2;
+          fieldTemp$1 = Vector2f.field_e;
+          Vector2f.field_e = Vector2f.field_e + 1;
           lj.field_a[fieldTemp$1] = param1;
           if (param0 != 21325) {
-            field_d = (kd) null;
+            field_d = (MouseInputHandler) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ final class ic {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -116,13 +116,13 @@ final class ic {
         try {
           param1.removeMouseListener(field_d);
           if (param0 != 23147) {
-            field_d = (kd) null;
+            field_d = (MouseInputHandler) null;
           }
           param1.removeMouseMotionListener(field_d);
           param1.removeFocusListener(field_d);
-          u.field_R = 0;
+          ResizableDialog.field_R = 0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ic.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ic.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -132,6 +132,6 @@ final class ic {
 
     static {
         field_h = "Player names can be up to 12 letters, numbers and underscores";
-        field_d = new kd();
+        field_d = new MouseInputHandler();
     }
 }

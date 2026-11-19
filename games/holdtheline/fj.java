@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fj extends ln {
+class fj extends DualLinkNode {
     static go field_s;
     static lc field_o;
     static String field_r;
     static int[] field_q;
     static String field_p;
 
-    final static wd a(boolean param0, float param1, wd param2) {
+    final static RoadSegment a(boolean param0, float param1, RoadSegment param2) {
         RuntimeException var3 = null;
-        wd stackIn_3_0 = null;
+        RoadSegment stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -31,7 +31,7 @@ class fj extends ln {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -86,21 +86,21 @@ class fj extends ln {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static hj a(int param0, int param1, hj param2, int param3, int param4, int param5) {
-        hj var6 = null;
+    final static Sprite a(int param0, int param1, Sprite param2, int param3, int param4, int param5) {
+        Sprite var6 = null;
         RuntimeException var6_ref = null;
-        hj stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new hj(param5, param3);
-          hj.a(param2, var6, param1, param4, 0, param0, param5, param3);
+          var6 = new Sprite(param5, param3);
+          Sprite.a(param2, var6, param1, param4, 0, param0, param5, param3);
           stackIn_1_0 = var6;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,11 +113,11 @@ class fj extends ln {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_s = null;
         field_q = null;

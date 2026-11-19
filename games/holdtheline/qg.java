@@ -35,7 +35,7 @@ final class qg {
               return null;
             }
           }
-          stackIn_13_0 = qj.field_F;
+          stackIn_13_0 = DialogLayer.field_F;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,11 +47,11 @@ final class qg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(hj param0, byte param1, int[] param2) {
+    final static void a(Sprite param0, byte param1, int[] param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_4_0 = 0;
@@ -91,19 +91,19 @@ final class qg {
               var4 = 0;
             }
             var5 = gf.field_b;
-            if (tc.field_j <= var5) {
-              var5 = -1 + tc.field_j;
+            if (SoftwareRasterizer.field_j <= var5) {
+              var5 = -1 + SoftwareRasterizer.field_j;
             }
             var6 = gf.field_a;
             if (var6 < 0) {
               var6 = 0;
             }
-            if (var6 >= tc.field_c) {
-              var6 = -1 + tc.field_c;
+            if (var6 >= SoftwareRasterizer.field_c) {
+              var6 = -1 + SoftwareRasterizer.field_c;
             }
             var7 = var4 % param0.field_s;
             var8 = var6 % param0.field_y;
-            var9 = var4 + tc.field_j * var6;
+            var9 = var4 + SoftwareRasterizer.field_j * var6;
             var10 = var7 + param0.field_s * var8;
             var11 = param0.field_s - var7;
             var12 = -var4 + var5;
@@ -116,7 +116,7 @@ final class qg {
               var9++;
               incrementValue$1 = var10;
               var10++;
-              tc.field_b[incrementValue$0] = param0.field_z[incrementValue$1];
+              SoftwareRasterizer.field_b[incrementValue$0] = param0.field_z[incrementValue$1];
               var11--;
               if (0 != var11) {
                 continue;
@@ -141,11 +141,11 @@ final class qg {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -156,7 +156,7 @@ final class qg {
         field_a = (String) null;
     }
 
-    final static jk a(int param0, int param1, int param2, int param3, int param4, ah[] param5, int param6, int param7, int param8, int param9, byte param10) {
+    final static jk a(int param0, int param1, int param2, int param3, int param4, IntrusiveDeque[] param5, int param6, int param7, int param8, int param9, byte param10) {
         int var11_int = 0;
         RuntimeException var11 = null;
         jk stackIn_1_0 = null;
@@ -166,7 +166,7 @@ final class qg {
         RuntimeException decompiledCaughtException = null;
         try {
           var11_int = -58 % ((-25 - param10) / 57);
-          stackIn_1_0 = kn.a(0, param8, param9, param6, 1, param7, param2, param1, param5, param4, 0, param3, param0);
+          stackIn_1_0 = ArchiveIndex.a(0, param8, param9, param6, 1, param7, param2, param1, param5, param4, 0, param3, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,11 +178,11 @@ final class qg {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2, gn param3) {
+    final static boolean a(int param0, int param1, byte param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -212,7 +212,7 @@ final class qg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

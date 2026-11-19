@@ -6,13 +6,13 @@ abstract class sd {
     static int field_c;
     static int[] field_b;
 
-    abstract void a(int param0, th param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     abstract kb a(boolean param0);
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -123) {
-          sd.a((byte) 102);
+          sd.clearSharedReferences((byte) 102);
         }
         field_b = null;
     }
@@ -54,13 +54,13 @@ abstract class sd {
             var6_int = param0.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var3_int > var5; var5++) {
-                if (ii.a(48, param0.charAt(var5))) {
+                if (ClientException.a(48, param0.charAt(var5))) {
                   continue;
                 }
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!ik.a((CharSequence) ((Object) var7_ref_String), true)) {
+              if (!MusicPatchEnvelope.a((CharSequence) ((Object) var7_ref_String), true)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -87,13 +87,13 @@ abstract class sd {
               return stackIn_26_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (ii.a(48, param0.charAt(var5Lifetime1))) {
+              if (ClientException.a(48, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!ik.a((CharSequence) ((Object) var9), true)) {
+            if (!MusicPatchEnvelope.a((CharSequence) ((Object) var9), true)) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -124,7 +124,7 @@ abstract class sd {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ abstract class sd {
         try {
           var3_int = -29 / ((-76 - param0) / 48);
           var4 = (String) null;
-          stackIn_1_0 = cc.a(65500, 0, 0, param2, false, (String) null, param1);
+          stackIn_1_0 = NetworkArchiveRequest.a(65500, 0, 0, param2, false, (String) null, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ abstract class sd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ abstract class sd {
           if (dg.a((byte) 78, param0)) {
             return true;
           }
-          var6 = rg.field_h;
+          var6 = DualNodeHashTable.field_h;
           var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
@@ -192,7 +192,7 @@ abstract class sd {
               return true;
             }
           }
-          var2Lifetime1 = nn.field_f;
+          var2Lifetime1 = BufferedSocket.field_f;
           if (param1 > -48) {
             return true;
           }
@@ -213,7 +213,7 @@ abstract class sd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var2_ref), "sd.J(" + param0 + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var2_ref), "sd.J(" + param0 + ',' + param1 + ')');
         }
     }
 

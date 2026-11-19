@@ -8,9 +8,9 @@ final class se extends IntrusiveNode {
     int field_j;
     int field_k;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          se.a(true);
+          se.clearSharedReferences(true);
           field_m = null;
           return;
         }

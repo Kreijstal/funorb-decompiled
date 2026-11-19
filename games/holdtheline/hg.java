@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg extends rm {
+final class hg extends TextButton {
     int field_G;
     static uf field_Q;
     static ng field_H;
@@ -14,7 +14,7 @@ final class hg extends rm {
     int field_L;
     static int field_I;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_N = null;
         field_M = null;
         field_Q = null;
@@ -26,7 +26,7 @@ final class hg extends rm {
         field_H = null;
     }
 
-    final boolean a(int param0, int param1, int param2, n param3, byte param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -71,7 +71,7 @@ final class hg extends rm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -82,9 +82,9 @@ final class hg extends rm {
     final static int a(byte param0) {
         if (param0 <= 36) {
           field_H = (ng) null;
-          return -mk.field_d + vf.field_t;
+          return -NanoTickClock.field_d + vf.field_t;
         }
-        return -mk.field_d + vf.field_t;
+        return -NanoTickClock.field_d + vf.field_t;
     }
 
     static {

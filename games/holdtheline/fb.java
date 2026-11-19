@@ -8,21 +8,21 @@ final class fb extends IntrusiveNode {
     static String field_l;
     int field_j;
     long field_m;
-    static ah field_n;
+    static IntrusiveDeque field_n;
     int field_p;
     int field_o;
     static ll field_s;
     int field_q;
-    static gn field_i;
+    static ResourceArchive field_i;
     int field_k;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_i = null;
         field_l = null;
         field_n = null;
         field_s = null;
         if (!param0) {
-          field_n = (ah) null;
+          field_n = (IntrusiveDeque) null;
         }
     }
 
@@ -40,7 +40,7 @@ final class fb extends IntrusiveNode {
         try {
           var2_float = 0.0f;
           if (param1 <= 14) {
-            fb.a(false);
+            fb.clearSharedReferences(false);
           }
           for (var3 = 0; var3 < param0.field_e; var3++) {
             var2_float = var2_float + ((wc) (param0.field_b[var3])).f(50);
@@ -57,7 +57,7 @@ final class fb extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class fb extends IntrusiveNode {
           this.field_q = param2;
           this.field_r = param6;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class we extends IntrusiveNode {
     int field_s;
     static String field_t;
     static int field_j;
-    static hj field_o;
+    static Sprite field_o;
     int field_r;
     static go field_p;
     static int field_l;
@@ -29,11 +29,11 @@ final class we extends IntrusiveNode {
           this.field_q = param3;
           this.field_r = param6;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         field_p = null;
         field_t = null;
@@ -69,7 +69,7 @@ final class we extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

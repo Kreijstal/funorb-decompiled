@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class io {
-    static ah field_c;
+    static IntrusiveDeque field_c;
     static String field_f;
     private String field_e;
     private boolean field_d;
@@ -54,13 +54,13 @@ final class io {
 
     final boolean b(byte param0) {
         if (param0 >= -22) {
-          field_c = (ah) null;
+          field_c = (IntrusiveDeque) null;
           return this.field_d;
         }
         return this.field_d;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -98,7 +98,7 @@ final class io {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class io {
 
     static {
         field_f = "You can also choose to play either <col=1>Practice</col> or <col=1>Demolition</col> games. The course selection in these modes depends on your progress through the <col=1>Championship</col>.<br><br><col=1>Practice</col> mode allows you to try out a course for as many laps as you like, with or without computer-controlled competitors, to help you improve your lap times.<br><br>In <col=1>Demolition</col> mode, use your shields, weaponry and front bumper to damage opponents. Eliminate <col=1>5</col> opponents to win the round.<br><br>";
-        field_c = new ah();
+        field_c = new IntrusiveDeque();
         field_b = 0;
         field_a = "Set";
     }

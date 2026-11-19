@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    static hj field_d;
-    long field_f;
-    static qi field_g;
+    static Sprite field_d;
+    long key;
+    static BitmapFont field_g;
     static String field_e;
     static String field_c;
-    IntrusiveNode field_h;
-    IntrusiveNode field_a;
+    IntrusiveNode next;
+    IntrusiveNode previous;
     static boolean field_b;
 
-    final static boolean a(boolean param0, int param1, wc param2, qm param3) {
+    final static boolean a(boolean param0, int param1, wc param2, Point2i param3) {
         boolean stackIn_17_0 = false;
         boolean stackIn_27_0 = false;
         RuntimeException stackIn_30_0 = null;
@@ -27,8 +27,8 @@ class IntrusiveNode {
         float var8 = 0.0f;
         float var9 = 0.0f;
         float var10 = 0.0f;
-        hn var11 = null;
-        dd var12 = null;
+        CurvedRoadSegment var11 = null;
+        StraightRoadSegment var12 = null;
         float var5Lifetime1;
         float var6Lifetime1;
         float var7Lifetime1;
@@ -40,10 +40,10 @@ class IntrusiveNode {
             if (param0) {
               return false;
             }
-            if (!(param2 instanceof dd)) {
-              var11 = (hn) (param2);
-              var5 = (float)(param3.field_h - var11.field_U.field_h);
-              var6 = (float)(param3.field_f - var11.field_U.field_f);
+            if (!(param2 instanceof StraightRoadSegment)) {
+              var11 = (CurvedRoadSegment) (param2);
+              var5 = (float)(param3.x - var11.field_U.x);
+              var6 = (float)(param3.y - var11.field_U.y);
               var7 = (float)var11.field_D;
               var8 = (float)var11.field_R;
               if (var11.field_E > var11.field_I) {
@@ -61,9 +61,9 @@ class IntrusiveNode {
               stackIn_17_0 = var11.b((byte) -113, var10);
               return stackIn_17_0;
             }
-            var12 = (dd) (param2);
-            var5Lifetime1 = (float)(-var12.field_R.field_h + param3.field_h);
-            var6Lifetime1 = (float)(param3.field_f - var12.field_R.field_f);
+            var12 = (StraightRoadSegment) (param2);
+            var5Lifetime1 = (float)(-var12.field_R.x + param3.x);
+            var6Lifetime1 = (float)(param3.y - var12.field_R.y);
             var7Lifetime1 = -(var6Lifetime1 * var12.field_D) + var5Lifetime1 * var12.field_B;
             if (!(0.0f > var7Lifetime1) &&
               !(var12.field_J < var7Lifetime1)) {
@@ -91,11 +91,11 @@ class IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == -2) {
           field_e = null;
           field_g = null;
@@ -104,36 +104,36 @@ class IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        IntrusiveNode.a((String) null, 26, true, (String) null, (a) null, (String) null, 76);
+        IntrusiveNode.a((String) null, 26, true, (String) null, (AccountCreationForm) null, (String) null, 76);
         field_e = null;
         field_g = null;
         field_c = null;
         field_d = null;
     }
 
-    final void d(int param0) {
+    final void unlink(int param0) {
         if (param0 != 0) {
-          IntrusiveNode.c(47);
-          if (null == this.field_a) {
+          IntrusiveNode.clearSharedReferences(47);
+          if (null == this.previous) {
             return;
           }
-          this.field_a.field_h = this.field_h;
-          this.field_h.field_a = this.field_a;
-          this.field_a = null;
-          this.field_h = null;
+          this.previous.next = this.next;
+          this.next.previous = this.previous;
+          this.previous = null;
+          this.next = null;
           return;
         }
-        if (null == this.field_a) {
+        if (null == this.previous) {
           return;
         }
-        this.field_a.field_h = this.field_h;
-        this.field_h.field_a = this.field_a;
-        this.field_a = null;
-        this.field_h = null;
+        this.previous.next = this.next;
+        this.next.previous = this.previous;
+        this.previous = null;
+        this.next = null;
     }
 
-    final boolean b(int param0) {
-        if (null == this.field_a) {
+    final boolean isLinked(int param0) {
+        if (null == this.previous) {
           return false;
         }
         if (param0 < 38) {
@@ -142,10 +142,10 @@ class IntrusiveNode {
         return true;
     }
 
-    final static boolean a(String param0, int param1, boolean param2, String param3, a param4, String param5, int param6) {
+    final static boolean a(String param0, int param1, boolean param2, String param3, AccountCreationForm param4, String param5, int param6) {
         RuntimeException var7 = null;
         String var8 = null;
-        vm var9 = null;
+        NameCheckProgressDialog var9 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -159,12 +159,12 @@ class IntrusiveNode {
         try {
           if (param1 != -23000) {
             var8 = (String) null;
-            IntrusiveNode.a((String) null, 49, true, (String) null, (a) null, (String) null, 51);
+            IntrusiveNode.a((String) null, 49, true, (String) null, (AccountCreationForm) null, (String) null, 51);
           }
-          if (gg.field_M != bb.field_a) {
+          if (ValidationIndicator.field_M != bb.field_a) {
             return false;
           }
-          var9 = new vm(ka.field_b, param4);
+          var9 = new NameCheckProgressDialog(ka.field_b, param4);
           ka.field_b.a(var9, false);
           if (ma.a(0)) {
             var9.q(-124);
@@ -172,11 +172,11 @@ class IntrusiveNode {
           }
           ij.field_k = param5;
           qd.field_k = param0;
-          ff.field_b = param2;
+          ArchiveProvider.field_b = param2;
           bb.field_a = ImageProducerRasterBuffer.field_n;
-          ol.field_a = param3;
-          u.field_V = param6;
-          bg.field_d = null;
+          SecondaryNodeDeque.field_a = param3;
+          ResizableDialog.field_V = param6;
+          BoundedRandomAccessFile.field_d = null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -206,7 +206,7 @@ class IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(')').toString());
         }
     }
 

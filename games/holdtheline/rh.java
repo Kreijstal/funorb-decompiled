@@ -5,7 +5,7 @@ final class rh {
     static byte[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -6 % ((-12 - param0) / 42);
         field_a = null;
     }

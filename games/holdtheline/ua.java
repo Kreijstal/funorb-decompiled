@@ -6,7 +6,7 @@ final class ua {
     static int[] field_c;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 24009) {
           return;
         }
@@ -29,23 +29,23 @@ final class ua {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new oe(param2.field_e * param1, param2.field_b, param2.field_c);
-          gk.field_d[0] = (float)param2.field_k.field_h;
-          gk.field_d[1] = (float)param2.field_l.field_h;
-          gk.field_d[2] = (float)param2.field_m.field_h;
-          var4 = (int)lk.a(gk.field_d, 0, 1, -1, param1);
-          var5 = (int)lk.a(gk.field_d, 0, 2, -1, param1);
-          gk.field_d[0] = (float)param2.field_k.field_f;
-          gk.field_d[1] = (float)param2.field_l.field_f;
-          gk.field_d[2] = (float)param2.field_m.field_f;
+          gk.field_d[0] = (float)param2.field_k.x;
+          gk.field_d[1] = (float)param2.field_l.x;
+          gk.field_d[2] = (float)param2.field_m.x;
+          var4 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 1, -1, param1);
+          var5 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, -1, param1);
+          gk.field_d[0] = (float)param2.field_k.y;
+          gk.field_d[1] = (float)param2.field_l.y;
+          gk.field_d[2] = (float)param2.field_m.y;
           if (param0) {
             stackIn_2_0 = (oe) null;
             return stackIn_2_0;
           }
-          var6 = (int)lk.a(gk.field_d, 0, 1, -1, param1);
-          var7 = (int)lk.a(gk.field_d, 0, 2, -1, param1);
-          var3.field_k = new qm(param2.field_k);
-          var3.field_l = new qm(var4, var6);
-          var3.field_m = new qm(var5, var7);
+          var6 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 1, -1, param1);
+          var7 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, -1, param1);
+          var3.field_k = new Point2i(param2.field_k);
+          var3.field_l = new Point2i(var4, var6);
+          var3.field_m = new Point2i(var5, var7);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -58,7 +58,7 @@ final class ua {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class ua {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

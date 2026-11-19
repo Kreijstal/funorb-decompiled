@@ -13,25 +13,25 @@ final class sa {
         throw new IllegalStateException();
     }
 
-    final static void a(ee param0, int param1) {
+    final static void a(MovingEntity param0, int param1) {
         try {
-          if (rl.field_J != null) {
+          if (FadingDialog.field_J != null) {
             rk.a((byte) 107);
           } else {
-            rl.field_J = new ah();
+            FadingDialog.field_J = new IntrusiveDeque();
           }
           if (param1 != -15676) {
-            sa.a((byte) 33);
+            sa.clearSharedReferences((byte) 33);
           }
-          ch.field_i = param0;
+          MusicPatch.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static wd a(wd param0, float param1, byte param2) {
+    final static RoadSegment a(RoadSegment param0, float param1, byte param2) {
         RuntimeException var3 = null;
-        wd stackIn_3_0 = null;
+        RoadSegment stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -52,11 +52,11 @@ final class sa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         field_c = null;
         field_d = null;

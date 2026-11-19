@@ -5,10 +5,10 @@ final class hk {
     static int field_e;
     static int[][] field_c;
     static String field_b;
-    static hj[] field_a;
+    static Sprite[] field_a;
     static int field_d;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = (int[][]) null;
         if (param0 >= -41) {
           hk.a(9);
@@ -20,7 +20,7 @@ final class hk {
         field_b = null;
     }
 
-    final static tg a(wd param0, int param1, boolean param2) {
+    final static tg a(RoadSegment param0, int param1, boolean param2) {
         tg stackIn_2_0 = null;
         g stackIn_5_0 = null;
         oe stackIn_16_0 = null;
@@ -33,23 +33,23 @@ final class hk {
         g var4_ref = null;
         float var5 = 0.0f;
         float var6 = 0.0f;
-        dd var7 = null;
-        hn var8 = null;
+        StraightRoadSegment var7 = null;
+        CurvedRoadSegment var8 = null;
         oe var9 = null;
         try {
           if (param1 != 1) {
             stackIn_2_0 = (tg) null;
             return stackIn_2_0;
           }
-          if (param0 instanceof dd) {
-            var7 = (dd) (param0);
+          if (param0 instanceof StraightRoadSegment) {
+            var7 = (StraightRoadSegment) (param0);
             var4_ref = new g(param0.f(50), param0.field_k, param2);
             var4_ref.field_n = var7.p(-1);
             var4_ref.field_j = var7.b((byte) -105);
             stackIn_5_0 = var4_ref;
             return (tg) ((Object) stackIn_5_0);
           }
-          var8 = (hn) (param0);
+          var8 = (CurvedRoadSegment) (param0);
           var9 = new oe(param0.f(50), param0.field_k, param2);
           var4 = var9;
           var5 = var8.field_A;
@@ -86,7 +86,7 @@ final class hk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -98,8 +98,8 @@ final class hk {
     }
 
     final static void a(boolean param0) {
-        dj.a(param0, qd.field_k, -94, ij.field_k);
-        gn.field_g = true;
+        LabeledField.a(param0, qd.field_k, -94, ij.field_k);
+        ResourceArchive.field_g = true;
     }
 
     static {

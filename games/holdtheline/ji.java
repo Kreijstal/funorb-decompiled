@@ -12,7 +12,7 @@ final class ji {
     int field_c;
     private int field_m;
     String field_f;
-    static ah field_a;
+    static IntrusiveDeque field_a;
     static oa field_i;
     ul field_j;
     static String field_n;
@@ -66,16 +66,16 @@ final class ji {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         ka.field_b.a(false);
-        if (be.field_l == null) {
-          be.field_l = new ra(ka.field_b, nl.field_c);
+        if (MidiKeyUsage.field_l == null) {
+          MidiKeyUsage.field_l = new ra(ka.field_b, nl.field_c);
         }
-        ka.field_b.a(be.field_l, false);
+        ka.field_b.a(MidiKeyUsage.field_l, false);
         if (param0 > -80) {
           field_i = (oa) null;
         }
@@ -103,15 +103,15 @@ final class ji {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_n = null;
         field_a = null;
         if (!param0) {
-          field_a = (ah) null;
+          field_a = (IntrusiveDeque) null;
         }
         field_i = null;
     }
@@ -139,7 +139,7 @@ final class ji {
           this.field_c = this.field_c + 1;
           this.field_e[fieldTemp$0] = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -156,12 +156,12 @@ final class ji {
           this.field_e = null;
           this.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ji.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ji.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_a = new ah();
+        field_a = new IntrusiveDeque();
         field_d = 0.0;
         field_n = "Two players can play simultaneously on the same machine. Select a two-player (<col=1>2P</col>) game type at the course menu.";
         field_o = -1;

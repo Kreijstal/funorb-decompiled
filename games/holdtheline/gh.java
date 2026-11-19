@@ -17,13 +17,13 @@ final class gh {
     private int field_j;
     private int field_o;
     private int field_p;
-    static vi[] field_n;
+    static MusicTrack[] field_n;
     private int field_q;
     private int field_k;
     private int field_s;
     private int field_g;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_t = null;
         if (param0 < 66) {
           return;
@@ -35,7 +35,7 @@ final class gh {
     final void b(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
-        if (cc.field_w != null) {
+        if (NetworkArchiveRequest.field_w != null) {
           return;
         }
         if (fc.field_a > 0) {
@@ -57,10 +57,10 @@ final class gh {
             return;
           }
           if (lj.field_f < this.field_j) {
-            vm.field_Bb = (this.field_j - lj.field_f) / 2;
+            NameCheckProgressDialog.field_Bb = (this.field_j - lj.field_f) / 2;
           } else {
             if (this.field_j > 0) {
-              vm.field_Bb = 0;
+              NameCheckProgressDialog.field_Bb = 0;
             }
           }
           if (lj.field_f != this.field_b) {
@@ -91,7 +91,7 @@ final class gh {
           return;
         }
         if (lj.field_f < this.field_j) {
-          vm.field_Bb = (this.field_j - lj.field_f) / 2;
+          NameCheckProgressDialog.field_Bb = (this.field_j - lj.field_f) / 2;
         } else {
           if (this.field_j <= 0) {
             if (lj.field_f != this.field_b) {
@@ -103,7 +103,7 @@ final class gh {
             }
             return;
           }
-          vm.field_Bb = 0;
+          NameCheckProgressDialog.field_Bb = 0;
         }
         if (lj.field_f == this.field_b &&
           g.field_i == this.field_c) {
@@ -118,19 +118,19 @@ final class gh {
           this.field_d = param1;
           return;
         }
-        hj var5 = (hj) null;
-        gh.a((hj) null, -45, 12, 37, 1.0888298749923706f, -97);
+        Sprite var5 = (Sprite) null;
+        gh.a((Sprite) null, -45, 12, 37, 1.0888298749923706f, -97);
         this.field_d = param1;
     }
 
-    final static void a(hj param0, int param1, int param2, int param3, float param4, int param5) {
+    final static void a(Sprite param0, int param1, int param2, int param3, float param4, int param5) {
         try {
           if (param2 != 0) {
             field_a = (go) null;
           }
-          param0.c(param1 - param0.field_o / 2, param5 - param0.field_v / 2, lk.a(param4, -1, param3));
+          param0.c(param1 - param0.field_o / 2, param5 - param0.field_v / 2, IterableSecondaryNodeDeque.a(param4, -1, param3));
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "gh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class gh {
                       }
                     }
                     if (0 < this.field_j) {
-                      vm.field_Bb = (-lj.field_f + this.field_j) / 2;
+                      NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
                     }
                     return;
                   }
@@ -246,14 +246,14 @@ final class gh {
                   if (0 >= this.field_j) {
                     return;
                   }
-                  vm.field_Bb = (-lj.field_f + this.field_j) / 2;
+                  NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
                   return;
                 }
                 this.field_r.a(79, var3, var2);
               }
             }
             if (0 < this.field_j) {
-              vm.field_Bb = (-lj.field_f + this.field_j) / 2;
+              NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
             }
             return;
           }
@@ -279,7 +279,7 @@ final class gh {
             }
           }
           if (0 < this.field_j) {
-            vm.field_Bb = (-lj.field_f + this.field_j) / 2;
+            NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
           }
           return;
         }
@@ -304,7 +304,7 @@ final class gh {
               if (var2 != lj.field_f) {
                 this.field_r.a(79, var3, var2);
                 if (0 < this.field_j) {
-                  vm.field_Bb = (-lj.field_f + this.field_j) / 2;
+                  NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
                 }
                 return;
               }
@@ -332,7 +332,7 @@ final class gh {
         if (0 >= this.field_j) {
           return;
         }
-        vm.field_Bb = (-lj.field_f + this.field_j) / 2;
+        NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
         return;
     }
 

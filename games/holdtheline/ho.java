@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ho extends gd {
+final class ho extends TextFieldValidator {
     static mf field_n;
     static int field_i;
     static byte[] field_m;
     static java.math.BigInteger field_k;
-    static ql field_j;
+    static PaletteBitmapFont field_j;
     static int field_l;
 
     final String a(String param0, boolean param1) {
@@ -25,7 +25,7 @@ final class ho extends gd {
           if (!param1) {
             field_l = -45;
           }
-          stackIn_7_0 = pk.field_J;
+          stackIn_7_0 = LoginChoicePanel.field_J;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,11 +37,11 @@ final class ho extends gd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = null;
         field_j = null;
         field_n = null;
@@ -68,7 +68,7 @@ final class ho extends gd {
             stackIn_2_0 = (fd) null;
             return stackIn_2_0;
           }
-          stackIn_6_0 = (pg.a(param0, (byte) -128) != null) ? 0 : 1;
+          stackIn_6_0 = (DropTargetWidget.a(param0, (byte) -128) != null) ? 0 : 1;
           var3_int = stackIn_6_0;
           if (var3_int != 0) {
             return tg.field_d;
@@ -85,11 +85,11 @@ final class ho extends gd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    ho(nk param0) {
+    ho(EditableTextField param0) {
         super(param0);
     }
 

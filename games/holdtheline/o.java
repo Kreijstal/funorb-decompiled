@@ -7,7 +7,7 @@ final class o {
     static String field_b;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 == 39) {
           field_a = null;
           field_d = null;
@@ -20,9 +20,9 @@ final class o {
         field_b = null;
     }
 
-    final static hj a(int param0, int param1) {
+    final static Sprite a(int param0, int param1) {
         if (param0 == param1) {
-          return ol.field_i.a(param1 + 8190);
+          return SecondaryNodeDeque.field_i.a(param1 + 8190);
         }
         if (param0 == 3) {
           return sm.field_a.a(8192);
@@ -65,22 +65,22 @@ final class o {
             param4 = param4 + param6;
             param6 = 0;
           }
-          if (tc.field_c < param1 + param2) {
-            param1 = tc.field_c - param2;
+          if (SoftwareRasterizer.field_c < param1 + param2) {
+            param1 = SoftwareRasterizer.field_c - param2;
           }
           if (param5 != -4441) {
             o.a((byte) -27);
           }
-          if (param6 + param4 > tc.field_j) {
-            param4 = -param6 + tc.field_j;
+          if (param6 + param4 > SoftwareRasterizer.field_j) {
+            param4 = -param6 + SoftwareRasterizer.field_j;
           }
           var7_int = param0 * param3 >> 8;
           var8 = param3 - var7_int;
           var9 = param2 + param1;
           for (var10 = param2; var9 > var10; var10++) {
-            var11 = param6 + var10 * tc.field_j;
+            var11 = param6 + var10 * SoftwareRasterizer.field_j;
             for (var12 = param4; 0 < var12; var12--) {
-              var13 = tc.field_b[var11];
+              var13 = SoftwareRasterizer.field_b[var11];
               var14 = var13 >> 16 & 255;
               var15 = 255 & var13 >> 8;
               var16 = 255 & var13;
@@ -89,7 +89,7 @@ final class o {
               var19 = (var7_int * var15 >> 8) + (var8 * var17 >> 12);
               var20 = (var8 * var17 >> 12) + (var16 * var7_int >> 8);
               var21 = var19 << 8 | var18 << 16 | var20;
-              tc.field_b[var11] = var21;
+              SoftwareRasterizer.field_b[var11] = var21;
               var11++;
             }
           }
@@ -97,13 +97,13 @@ final class o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var7), "o.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var7), "o.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     final static uh a(byte param0) {
         int var1 = 48 / ((param0 + 52) / 57);
-        return ub.a(1, 111);
+        return SingleChildWidget.a(1, 111);
     }
 
     static {

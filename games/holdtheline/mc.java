@@ -7,7 +7,7 @@ final class mc {
     static String[][] field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = (String[][]) null;
         field_d = null;
         field_c = null;
@@ -31,7 +31,7 @@ final class mc {
           if (param0 < 12) {
             mc.a(77, false);
           }
-          stackIn_3_0 = gl.a(true, param2, (byte) -107, param1);
+          stackIn_3_0 = IntHashTable.parseRadixInteger(true, param2, (byte) -107, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class mc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

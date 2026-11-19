@@ -25,7 +25,7 @@ final class lj {
           gf.a(param3, 0, param3.length);
           gf.c();
           while (gf.d()) {
-            tc.c(gf.field_g + param2, gf.field_a + param5, gf.field_b - gf.field_g, param0, param1);
+            SoftwareRasterizer.c(gf.field_g + param2, gf.field_a + param5, gf.field_b - gf.field_g, param0, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -38,26 +38,26 @@ final class lj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
-        we var1 = (we) (fl.field_i.a((byte) 74));
+        we var1 = (we) (fl.field_i.removeLast((byte) 74));
         if (var1 == null) {
           var1 = new we();
         }
         if (param0 <= -100) {
-          var1.a(tc.field_i, tc.field_d, tc.field_b, tc.field_e, -1, tc.field_c, tc.field_a, tc.field_j);
-          ug.field_g.a((byte) -84, var1);
+          var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -1, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j);
+          ug.field_g.addLast((byte) -84, var1);
           return;
         }
         field_f = 101;
-        var1.a(tc.field_i, tc.field_d, tc.field_b, tc.field_e, -1, tc.field_c, tc.field_a, tc.field_j);
-        ug.field_g.a((byte) -84, var1);
+        var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -1, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j);
+        ug.field_g.addLast((byte) -84, var1);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_d = null;
         if (param0 == -29208) {

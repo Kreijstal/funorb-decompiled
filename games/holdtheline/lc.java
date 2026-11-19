@@ -8,12 +8,12 @@ final class lc {
     static int field_h;
     static String field_f;
     static int field_g;
-    static vi field_d;
+    static MusicTrack field_d;
     static go field_c;
 
     final boolean a(byte param0) {
         if (param0 != -34) {
-          lc.b(-70);
+          lc.clearSharedReferences(-70);
           return this.field_b;
         }
         return this.field_b;
@@ -27,12 +27,12 @@ final class lc {
         return this.field_a;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_c = null;
         field_f = null;
         if (param0 >= -19) {
-          lc.b(38);
+          lc.clearSharedReferences(38);
         }
     }
 
@@ -50,7 +50,7 @@ final class lc {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

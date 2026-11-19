@@ -17,25 +17,25 @@ final class ha extends IntrusiveNode implements hd {
     static va field_k;
 
     final static void a(boolean param0) {
-        qj.field_N[61] = 27;
-        qj.field_N[47] = 73;
-        qj.field_N[222] = 58;
-        qj.field_N[192] = 28;
-        qj.field_N[520] = 59;
-        qj.field_N[91] = 42;
-        qj.field_N[59] = 57;
-        qj.field_N[44] = 71;
-        qj.field_N[93] = 43;
-        qj.field_N[92] = 74;
-        qj.field_N[45] = 26;
-        qj.field_N[46] = 72;
+        DialogLayer.field_N[61] = 27;
+        DialogLayer.field_N[47] = 73;
+        DialogLayer.field_N[222] = 58;
+        DialogLayer.field_N[192] = 28;
+        DialogLayer.field_N[520] = 59;
+        DialogLayer.field_N[91] = 42;
+        DialogLayer.field_N[59] = 57;
+        DialogLayer.field_N[44] = 71;
+        DialogLayer.field_N[93] = 43;
+        DialogLayer.field_N[92] = 74;
+        DialogLayer.field_N[45] = 26;
+        DialogLayer.field_N[46] = 72;
         if (param0) {
-          qm var2 = (qm) null;
-          ha.a((qm) null, (qm) null, true);
+          Point2i var2 = (Point2i) null;
+          ha.a((Point2i) null, (Point2i) null, true);
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_j = (int[][]) null;
         field_i = null;
@@ -80,11 +80,11 @@ final class ha extends IntrusiveNode implements hd {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final static float a(qm param0, qm param1, boolean param2) {
+    final static float a(Point2i param0, Point2i param1, boolean param2) {
         RuntimeException var3 = null;
         float stackIn_2_0 = 0.0f;
         float stackIn_4_0 = 0.0f;
@@ -96,7 +96,7 @@ final class ha extends IntrusiveNode implements hd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            stackIn_4_0 = (float)Math.atan2((double)(param0.field_f - param1.field_f), (double)(-param0.field_h + param1.field_h));
+            stackIn_4_0 = (float)Math.atan2((double)(param0.y - param1.y), (double)(-param0.x + param1.x));
             return stackIn_4_0;
           }
           stackIn_2_0 = -0.9188363552093506f;
@@ -117,7 +117,7 @@ final class ha extends IntrusiveNode implements hd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class ha extends IntrusiveNode implements hd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

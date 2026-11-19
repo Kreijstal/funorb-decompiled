@@ -3,8 +3,8 @@
  */
 class pd extends sd {
     private long field_d;
-    static ah field_e;
-    static gn field_f;
+    static IntrusiveDeque field_e;
+    static ResourceArchive field_f;
     static String field_g;
     static go field_h;
     private String field_i;
@@ -29,21 +29,21 @@ class pd extends sd {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        hj var6 = null;
+        Sprite var6 = null;
         var5 = HoldTheLine.field_D;
         try {
-          dl.field_i = dl.field_i + 65536;
-          while (on.a(bg.field_c, dl.field_i, (byte) -100) >= 65536) {
+          UrlPacketDownloader.field_i = UrlPacketDownloader.field_i + 65536;
+          while (on.a(BoundedRandomAccessFile.field_c, UrlPacketDownloader.field_i, (byte) -100) >= 65536) {
             io.field_b = io.field_b + 1;
-            dl.field_i = dl.field_i - bg.field_c;
+            UrlPacketDownloader.field_i = UrlPacketDownloader.field_i - BoundedRandomAccessFile.field_c;
           }
           var2_int = -1;
           if (param0 != -86) {
-            var6 = (hj) null;
-            pd.a((hj) null, 75, -15, -53, 82, 25);
+            var6 = (Sprite) null;
+            pd.a((Sprite) null, 75, -15, -53, 82, 25);
           }
-          if (qk.field_y != null) {
-            var2_int = qk.field_y.length;
+          if (TriangleMesh.field_y != null) {
+            var2_int = TriangleMesh.field_y.length;
           } else {
             if (null != lf.field_a) {
               var2_int = lf.field_a.length;
@@ -51,24 +51,24 @@ class pd extends sd {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (bg.field_f > hk.field_e) {
+            if (BoundedRandomAccessFile.field_f > hk.field_e) {
               hk.field_e = hk.field_e + 1;
-              if (hk.field_e > bg.field_g && (null == qk.field_y ||
-                null == qk.field_y[va.field_e])) {
+              if (hk.field_e > BoundedRandomAccessFile.field_g && (null == TriangleMesh.field_y ||
+                null == TriangleMesh.field_y[va.field_e])) {
                 hk.field_e = hk.field_e - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (bg.field_f <= hk.field_e &&
-                  qk.field_y[(1 + va.field_e) % var2_int] == null) {
+                if (BoundedRandomAccessFile.field_f <= hk.field_e &&
+                  TriangleMesh.field_y[(1 + va.field_e) % var2_int] == null) {
                   hk.field_e = hk.field_e - 1;
                 }
               }
             }
-            if (hk.field_e >= bg.field_f) {
-              hf.field_i = va.field_e;
-              hk.field_e = hk.field_e - bg.field_f;
-              if (!rg.field_e) {
+            if (hk.field_e >= BoundedRandomAccessFile.field_f) {
+              ProxySocketConnector.field_i = va.field_e;
+              hk.field_e = hk.field_e - BoundedRandomAccessFile.field_f;
+              if (!DualNodeHashTable.field_e) {
                 va.field_e = va.field_e - 1;
                 if (va.field_e < 0) {
                   va.field_e = va.field_e + var2_int;
@@ -80,53 +80,53 @@ class pd extends sd {
                 }
               }
             }
-            if (bg.field_g < hk.field_e) {
-              rg.field_e = true;
+            if (BoundedRandomAccessFile.field_g < hk.field_e) {
+              DualNodeHashTable.field_e = true;
             }
           }
           if (null != nl.field_i) {
             var3 = -(nl.field_i.field_v / 2) + 357;
             var4 = 0;
-            if (gg.field_J != 0 &&
-              jb.field_U > var3 &&
-              nl.field_i.field_y + var3 > jb.field_U) {
-              if (-nl.field_i.field_s + 269 < lb.field_x &&
-                lb.field_x < 269) {
+            if (ValidationIndicator.field_J != 0 &&
+              ValidatedTextField.field_U > var3 &&
+              nl.field_i.field_y + var3 > ValidatedTextField.field_U) {
+              if (-nl.field_i.field_s + 269 < TrackBoundary.field_x &&
+                TrackBoundary.field_x < 269) {
                 var4 = 1;
-                hk.field_e = bg.field_f;
-                rg.field_e = false;
+                hk.field_e = BoundedRandomAccessFile.field_f;
+                DualNodeHashTable.field_e = false;
               }
-              if (lb.field_x > 586 &&
-                lb.field_x < nl.field_i.field_s + 586) {
-                hk.field_e = bg.field_f;
-                rg.field_e = true;
+              if (TrackBoundary.field_x > 586 &&
+                TrackBoundary.field_x < nl.field_i.field_s + 586) {
+                hk.field_e = BoundedRandomAccessFile.field_f;
+                DualNodeHashTable.field_e = true;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              hk.field_e > bg.field_g &&
+              hk.field_e > BoundedRandomAccessFile.field_g &&
               rf.field_X > var3 &&
               rf.field_X < var3 + nl.field_i.field_y) {
-              if (-nl.field_i.field_s + 269 < nc.field_g &&
-                nc.field_g < 269) {
-                hk.field_e = bg.field_g;
+              if (-nl.field_i.field_s + 269 < NodeHashTableIterator.field_g &&
+                NodeHashTableIterator.field_g < 269) {
+                hk.field_e = BoundedRandomAccessFile.field_g;
               }
-              if (nc.field_g > 586 &&
-                nl.field_i.field_s + 586 > nc.field_g) {
-                hk.field_e = bg.field_g;
+              if (NodeHashTableIterator.field_g > 586 &&
+                nl.field_i.field_s + 586 > NodeHashTableIterator.field_g) {
+                hk.field_e = BoundedRandomAccessFile.field_g;
               }
             }
           }
           if (!param1) {
             return 0;
           }
-          ln.field_k.a(wa.a(116, jb.field_U, lb.field_x), wa.a(param0 + 203, rf.field_X, nc.field_g), 4);
-          if (ln.field_k.a(-1)) {
-            if (0 == ln.field_k.field_g) {
+          DualLinkNode.field_k.a(wa.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), wa.a(param0 + 203, rf.field_X, NodeHashTableIterator.field_g), 4);
+          if (DualLinkNode.field_k.a(-1)) {
+            if (0 == DualLinkNode.field_k.field_g) {
               stackIn_63_0 = 3;
               return stackIn_63_0;
             }
-            if (1 == ln.field_k.field_g) {
+            if (1 == DualLinkNode.field_k.field_g) {
               stackIn_66_0 = 2;
               return stackIn_66_0;
             }
@@ -136,13 +136,13 @@ class pd extends sd {
               stackIn_83_0 = 0;
               return stackIn_83_0;
             }
-            ln.field_k.a((byte) -21, 0);
-            if (ln.field_k.a(-1)) {
-              if (ln.field_k.field_g == 0) {
+            DualLinkNode.field_k.a((byte) -21, 0);
+            if (DualLinkNode.field_k.a(-1)) {
+              if (DualLinkNode.field_k.field_g == 0) {
                 stackIn_73_0 = 3;
                 return stackIn_73_0;
               }
-              if (ln.field_k.field_g == 1) {
+              if (DualLinkNode.field_k.field_g == 1) {
                 stackIn_77_0 = 1;
                 return stackIn_77_0;
               }
@@ -157,7 +157,7 @@ class pd extends sd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var2), "pd.B(" + param0 + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var2), "pd.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -166,8 +166,8 @@ class pd extends sd {
           vk var2 = (vk) null;
           pd.a((vk) null, true);
         }
-        Boolean var1 = wd.field_u;
-        wd.field_u = null;
+        Boolean var1 = RoadSegment.field_u;
+        RoadSegment.field_u = null;
         return var1;
     }
 
@@ -184,14 +184,14 @@ class pd extends sd {
         RuntimeException var2_ref = null;
         mg[] var3 = null;
         int[] var4 = null;
-        hj[] var5 = null;
-        hj[] var6 = null;
-        hj var8 = null;
+        Sprite[] var5 = null;
+        Sprite[] var6 = null;
+        Sprite var8 = null;
         int var9 = 0;
         int[] var10 = null;
         var9 = HoldTheLine.field_D;
         try {
-          if (!mm.a(param0, -65)) {
+          if (!RasterBuffer.a(param0, -65)) {
             return false;
           }
           var10 = go.field_g[param0.field_p];
@@ -205,7 +205,7 @@ class pd extends sd {
             }
           }
           if (!param1) {
-            field_e = (ah) null;
+            field_e = (IntrusiveDeque) null;
           }
           if (!mc.field_a[9].b((byte) 116)) {
             return false;
@@ -236,7 +236,7 @@ class pd extends sd {
               var8.a();
             }
           }
-          if (nn.a(-74)) {
+          if (BufferedSocket.a(-74)) {
             return true;
           }
           return false;
@@ -250,20 +250,20 @@ class pd extends sd {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, th param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.a((byte) -84, this.field_d);
           param1.b(param0 + param0, this.field_i);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "pd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "pd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -94) {
           return;
         }
@@ -273,7 +273,7 @@ class pd extends sd {
         field_h = null;
     }
 
-    final static void a(hj param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var13 = 0;
         RuntimeException stackIn_29_0 = null;
@@ -292,7 +292,7 @@ class pd extends sd {
         var14 = HoldTheLine.field_D;
         try {
           if (param4 == 1024) {
-            w.a(param5, param0, 109, param2, param3);
+            TickClock.a(param5, param0, 109, param2, param3);
             return;
           }
           param3 = param3 - ((param4 - 1024) * param0.field_s >> 11);
@@ -319,15 +319,15 @@ class pd extends sd {
           }
           var11 = 0;
           for (var12 = 0; var12 < var7; var12++) {
-            var10 = (var12 + param2) * tc.field_j + param3;
+            var10 = (var12 + param2) * SoftwareRasterizer.field_j + param3;
             var11Lifetime1 = var8 + ((var9 >> 10) * param0.field_s << 10);
             for (var13 = 0; var6_int > var13; var13++) {
               if (param0.field_z[var11Lifetime1 >> 10] != 16777215) {
                 if (param0.field_z[var11Lifetime1 >> 10] != 0) {
-                  tc.field_b[var10] = param0.field_z[var11Lifetime1 >> 10];
+                  SoftwareRasterizer.field_b[var10] = param0.field_z[var11Lifetime1 >> 10];
                 }
               } else {
-                tc.field_b[var10] = param5;
+                SoftwareRasterizer.field_b[var10] = param5;
               }
               var10++;
               var11Lifetime1 = var11Lifetime1 + 1048576 / param4;
@@ -348,7 +348,7 @@ class pd extends sd {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -357,17 +357,17 @@ class pd extends sd {
           this.field_d = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_e = new ah();
+        field_e = new IntrusiveDeque();
         field_g = "One kill remaining.";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$b925f3f4834c(int param0, boolean param1) {
+    final static int updateMembershipSlidesWithIntGuard(int param0, boolean param1) {
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_73_0 = 0;
@@ -380,21 +380,21 @@ class pd extends sd {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        hj var6 = null;
+        Sprite var6 = null;
         var5 = HoldTheLine.field_D;
         try {
-          dl.field_i = dl.field_i + 65536;
-          while (on.a(bg.field_c, dl.field_i, (byte) -100) >= 65536) {
+          UrlPacketDownloader.field_i = UrlPacketDownloader.field_i + 65536;
+          while (on.a(BoundedRandomAccessFile.field_c, UrlPacketDownloader.field_i, (byte) -100) >= 65536) {
             io.field_b = io.field_b + 1;
-            dl.field_i = dl.field_i - bg.field_c;
+            UrlPacketDownloader.field_i = UrlPacketDownloader.field_i - BoundedRandomAccessFile.field_c;
           }
           var2_int = -1;
           if (param0 != -86) {
-            var6 = (hj) null;
-            pd.a((hj) null, 75, -15, -53, 82, 25);
+            var6 = (Sprite) null;
+            pd.a((Sprite) null, 75, -15, -53, 82, 25);
           }
-          if (qk.field_y != null) {
-            var2_int = qk.field_y.length;
+          if (TriangleMesh.field_y != null) {
+            var2_int = TriangleMesh.field_y.length;
           } else {
             if (null != lf.field_a) {
               var2_int = lf.field_a.length;
@@ -402,24 +402,24 @@ class pd extends sd {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (bg.field_f > hk.field_e) {
+            if (BoundedRandomAccessFile.field_f > hk.field_e) {
               hk.field_e = hk.field_e + 1;
-              if (hk.field_e > bg.field_g && (null == qk.field_y ||
-                null == qk.field_y[va.field_e])) {
+              if (hk.field_e > BoundedRandomAccessFile.field_g && (null == TriangleMesh.field_y ||
+                null == TriangleMesh.field_y[va.field_e])) {
                 hk.field_e = hk.field_e - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (bg.field_f <= hk.field_e &&
-                  qk.field_y[(1 + va.field_e) % var2_int] == null) {
+                if (BoundedRandomAccessFile.field_f <= hk.field_e &&
+                  TriangleMesh.field_y[(1 + va.field_e) % var2_int] == null) {
                   hk.field_e = hk.field_e - 1;
                 }
               }
             }
-            if (hk.field_e >= bg.field_f) {
-              hf.field_i = va.field_e;
-              hk.field_e = hk.field_e - bg.field_f;
-              if (!rg.field_e) {
+            if (hk.field_e >= BoundedRandomAccessFile.field_f) {
+              ProxySocketConnector.field_i = va.field_e;
+              hk.field_e = hk.field_e - BoundedRandomAccessFile.field_f;
+              if (!DualNodeHashTable.field_e) {
                 va.field_e = va.field_e - 1;
                 if (va.field_e < 0) {
                   va.field_e = va.field_e + var2_int;
@@ -431,53 +431,53 @@ class pd extends sd {
                 }
               }
             }
-            if (bg.field_g < hk.field_e) {
-              rg.field_e = true;
+            if (BoundedRandomAccessFile.field_g < hk.field_e) {
+              DualNodeHashTable.field_e = true;
             }
           }
           if (null != nl.field_i) {
             var3 = -(nl.field_i.field_v / 2) + 357;
             var4 = 0;
-            if (gg.field_J != 0 &&
-              jb.field_U > var3 &&
-              nl.field_i.field_y + var3 > jb.field_U) {
-              if (-nl.field_i.field_s + 269 < lb.field_x &&
-                lb.field_x < 269) {
+            if (ValidationIndicator.field_J != 0 &&
+              ValidatedTextField.field_U > var3 &&
+              nl.field_i.field_y + var3 > ValidatedTextField.field_U) {
+              if (-nl.field_i.field_s + 269 < TrackBoundary.field_x &&
+                TrackBoundary.field_x < 269) {
                 var4 = 1;
-                hk.field_e = bg.field_f;
-                rg.field_e = false;
+                hk.field_e = BoundedRandomAccessFile.field_f;
+                DualNodeHashTable.field_e = false;
               }
-              if (lb.field_x > 586 &&
-                lb.field_x < nl.field_i.field_s + 586) {
-                hk.field_e = bg.field_f;
-                rg.field_e = true;
+              if (TrackBoundary.field_x > 586 &&
+                TrackBoundary.field_x < nl.field_i.field_s + 586) {
+                hk.field_e = BoundedRandomAccessFile.field_f;
+                DualNodeHashTable.field_e = true;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              hk.field_e > bg.field_g &&
+              hk.field_e > BoundedRandomAccessFile.field_g &&
               rf.field_X > var3 &&
               rf.field_X < var3 + nl.field_i.field_y) {
-              if (-nl.field_i.field_s + 269 < nc.field_g &&
-                nc.field_g < 269) {
-                hk.field_e = bg.field_g;
+              if (-nl.field_i.field_s + 269 < NodeHashTableIterator.field_g &&
+                NodeHashTableIterator.field_g < 269) {
+                hk.field_e = BoundedRandomAccessFile.field_g;
               }
-              if (nc.field_g > 586 &&
-                nl.field_i.field_s + 586 > nc.field_g) {
-                hk.field_e = bg.field_g;
+              if (NodeHashTableIterator.field_g > 586 &&
+                nl.field_i.field_s + 586 > NodeHashTableIterator.field_g) {
+                hk.field_e = BoundedRandomAccessFile.field_g;
               }
             }
           }
           if (!param1) {
             return 0;
           }
-          ln.field_k.a(wa.a(116, jb.field_U, lb.field_x), wa.a(param0 + 203, rf.field_X, nc.field_g), 4);
-          if (ln.field_k.a(-1)) {
-            if (0 == ln.field_k.field_g) {
+          DualLinkNode.field_k.a(wa.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), wa.a(param0 + 203, rf.field_X, NodeHashTableIterator.field_g), 4);
+          if (DualLinkNode.field_k.a(-1)) {
+            if (0 == DualLinkNode.field_k.field_g) {
               stackIn_63_0 = 3;
               return stackIn_63_0;
             }
-            if (1 == ln.field_k.field_g) {
+            if (1 == DualLinkNode.field_k.field_g) {
               stackIn_66_0 = 2;
               return stackIn_66_0;
             }
@@ -487,13 +487,13 @@ class pd extends sd {
               stackIn_83_0 = 0;
               return stackIn_83_0;
             }
-            ln.field_k.a((byte) -21, 0);
-            if (ln.field_k.a(-1)) {
-              if (ln.field_k.field_g == 0) {
+            DualLinkNode.field_k.a((byte) -21, 0);
+            if (DualLinkNode.field_k.a(-1)) {
+              if (DualLinkNode.field_k.field_g == 0) {
                 stackIn_73_0 = 3;
                 return stackIn_73_0;
               }
-              if (ln.field_k.field_g == 1) {
+              if (DualLinkNode.field_k.field_g == 1) {
                 stackIn_77_0 = 1;
                 return stackIn_77_0;
               }
@@ -508,7 +508,7 @@ class pd extends sd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var2), "pd.B(" + param0 + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var2), "pd.B(" + param0 + ',' + param1 + ')');
         }
     }
 }

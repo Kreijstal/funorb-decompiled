@@ -7,14 +7,14 @@ final class fm {
     static java.awt.Frame field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > 100) {
           field_c = null;
           field_a = null;
           field_b = null;
           return;
         }
-        fm.a(-112);
+        fm.clearSharedReferences(-112);
         field_c = null;
         field_a = null;
         field_b = null;

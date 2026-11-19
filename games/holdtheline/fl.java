@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fl extends IntrusiveNode {
-    static ah field_i;
+    static IntrusiveDeque field_i;
     int field_k;
     static boolean field_j;
     byte[] field_l;
@@ -56,11 +56,11 @@ final class fl extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 381) {
           String var2 = (String) null;
           fl.a((String) null, 82, 107, -78, 12);
@@ -74,10 +74,10 @@ final class fl extends IntrusiveNode {
           nj.field_i.a(381 + param1, param4);
           nm.field_c.b(param0, param1 + 320, -2 + ((30 + nm.field_c.field_G) / 2 + param4), param2, -1);
           if (param3 != -1753) {
-            field_i = (ah) null;
+            field_i = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "fl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -85,11 +85,11 @@ final class fl extends IntrusiveNode {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_i = new ah();
+        field_i = new IntrusiveDeque();
     }
 }

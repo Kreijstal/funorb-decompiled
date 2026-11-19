@@ -6,7 +6,7 @@ abstract class rd {
     float field_k;
     int field_i;
     static float[] field_b;
-    static da field_e;
+    static IsaacPacketBuffer field_e;
     static java.applet.Applet field_d;
     static int field_f;
     static int field_l;
@@ -15,7 +15,7 @@ abstract class rd {
     int field_c;
     static String field_j;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_b = null;
         field_j = null;
@@ -24,11 +24,11 @@ abstract class rd {
           field_e = null;
           return;
         }
-        field_e = (da) null;
+        field_e = (IsaacPacketBuffer) null;
         field_e = null;
     }
 
-    final static void a(int param0, qm param1, int param2, el param3) {
+    final static void a(int param0, Point2i param1, int param2, PcmSample param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -43,7 +43,7 @@ abstract class rd {
         int var8 = 0;
         int var9 = 0;
         float var10_float = 0.0f;
-        db var10 = null;
+        PcmSampleStream var10 = null;
         float var11 = 0.0f;
         float var12 = 0.0f;
         float var13 = 0.0f;
@@ -52,9 +52,9 @@ abstract class rd {
           var4_int = 0;
           var5 = 0;
           var6 = 0;
-          if (ch.field_i != null) {
-            var4_int = param1.field_h - ch.field_i.field_A.field_h;
-            var5 = -ch.field_i.field_A.field_f + param1.field_f;
+          if (MusicPatch.field_i != null) {
+            var4_int = param1.x - MusicPatch.field_i.position.x;
+            var5 = -MusicPatch.field_i.position.y + param1.y;
             var6 = var5 * var5 + var4_int * var4_int;
           }
           var9 = -68 % ((param2 - 47) / 59);
@@ -63,8 +63,8 @@ abstract class rd {
             var8 = 8192;
           } else {
             var10_float = (float)Math.sqrt((double)var6);
-            var11 = -ch.field_i.field_t;
-            var12 = -ch.field_i.field_x;
+            var11 = -MusicPatch.field_i.velocityX;
+            var12 = -MusicPatch.field_i.velocityY;
             var13 = (var12 * (float)var5 + var11 * (float)var4_int) / var10_float;
             var13 = 160.0f / (var13 + 160.0f);
             if (var13 < 0.75f) {
@@ -77,7 +77,7 @@ abstract class rd {
             var14 = (float)var4_int / var10_float;
             var8 = (int)(8192.0f * (1.0f + var14));
           }
-          var10 = db.b(param3, var7, param0 * pc.field_h >> 5, var8);
+          var10 = PcmSampleStream.b(param3, var7, param0 * pc.field_h >> 5, var8);
           lg.a(var10, (byte) -68);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,7 +96,7 @@ abstract class rd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -109,12 +109,12 @@ abstract class rd {
           nj.field_i.a(param0, param4);
           nm.field_c.a(param5, param3, (nm.field_c.field_G + 30) / 2 + (param4 - 2), param1, -1);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "rd.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "rd.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0, ib param1, java.awt.Frame param2) {
-        af var3 = null;
+    final static void a(byte param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         String var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -133,10 +133,10 @@ abstract class rd {
           while (true) {
             var3 = param1.a(param2, (byte) -95);
             while (var3.field_d == 0) {
-              qe.a(10L, (byte) 45);
+              SocketConnector.a(10L, (byte) 45);
             }
             if (1 != var3.field_d) {
-              qe.a(100L, (byte) 45);
+              SocketConnector.a(100L, (byte) 45);
               continue;
             }
             break;
@@ -160,7 +160,7 @@ abstract class rd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -183,21 +183,21 @@ abstract class rd {
 
     final static boolean b(int param0) {
         if (param0 >= -46) {
-          field_e = (da) null;
+          field_e = (IsaacPacketBuffer) null;
           return ci.field_o;
         }
         return ci.field_o;
     }
 
-    final static mm a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static RasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          mm var5 = null;
+          RasterBuffer var5 = null;
           ImageProducerRasterBuffer var5_ref = null;
           int var6 = 0;
-          mm stackIn_1_0 = null;
+          RasterBuffer stackIn_1_0 = null;
           ImageProducerRasterBuffer stackIn_3_0 = null;
           RuntimeException stackIn_6_0 = null;
           StringBuilder stackIn_6_1 = null;
@@ -205,8 +205,8 @@ abstract class rd {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("mb");
-              var5 = (mm) (var4.newInstance());
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (RasterBuffer) (var4.newInstance());
               var6 = -115 / ((param1 - 2) / 39);
               var5.a(param3, param0, param2, 0);
               stackIn_1_0 = var5;
@@ -215,9 +215,9 @@ abstract class rd {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((mm) ((Object) var5_ref)).a(param3, param0, param2, 0);
+              ((RasterBuffer) ((Object) var5_ref)).a(param3, param0, param2, 0);
               stackIn_3_0 = var5_ref;
-              return (mm) ((Object) stackIn_3_0);
+              return (RasterBuffer) ((Object) stackIn_3_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -229,7 +229,7 @@ abstract class rd {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

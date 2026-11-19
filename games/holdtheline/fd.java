@@ -8,7 +8,7 @@ final class fd {
     static String field_b;
     static int field_d;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 113 / ((-37 - param0) / 56);
         field_e = null;
         field_b = null;

@@ -44,10 +44,10 @@ final class fc {
             for (var9 = -1 + var5_int; var6 < var9; var9--) {
               param4.a(((vj) (param3.field_b[var9])).c(false), (byte) 6);
             }
-            param4.a(ik.a(119, (vj) (param3.field_b[var6]), var8).c(false), (byte) 6);
+            param4.a(MusicPatchEnvelope.a(119, (vj) (param3.field_b[var6]), var8).c(false), (byte) 6);
             return;
           }
-          param4.a(ik.a(92, (vj) (param3.field_b[var5_int]), var7), (byte) 6);
+          param4.a(MusicPatchEnvelope.a(92, (vj) (param3.field_b[var5_int]), var7), (byte) 6);
           for (var9Lifetime1 = var5_int + 1; var6 > var9Lifetime1; var9Lifetime1++) {
             param4.a(param3.field_b[var9Lifetime1], (byte) 6);
           }
@@ -71,7 +71,7 @@ final class fc {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -90,19 +90,19 @@ final class fc {
         return var5;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 15 / ((param0 + 77) / 48);
         field_b = null;
     }
 
-    final static bm a(boolean param0) {
-        bm var1 = null;
+    final static IndexedSprite a(boolean param0) {
+        IndexedSprite var1 = null;
         if (param0) {
-          var1 = new bm(bo.field_b, ih.field_o, la.field_j[0], wb.field_g[0], nk.field_K[0], ad.field_d[0], lk.field_e[0], dd.field_E);
+          var1 = new IndexedSprite(bo.field_b, ih.field_o, la.field_j[0], wb.field_g[0], EditableTextField.field_K[0], ad.field_d[0], IterableSecondaryNodeDeque.field_e[0], StraightRoadSegment.field_E);
           tk.a(false);
           return var1;
         }
-        return (bm) null;
+        return (IndexedSprite) null;
     }
 
     static {

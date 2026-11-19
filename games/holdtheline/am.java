@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am implements dh {
+final class am implements WidgetRenderer {
     static go[] field_b;
     static String field_f;
     private int field_g;
-    static gn field_d;
+    static ResourceArchive field_d;
     private int field_e;
-    private qi field_a;
+    private BitmapFont field_a;
     static String field_c;
 
-    final static void a(int param0, String param1, boolean param2, ql param3, int param4, int param5) {
+    final static void a(int param0, String param1, boolean param2, PaletteBitmapFont param3, int param4, int param5) {
         try {
           if (!param2) {
             field_f = (String) null;
@@ -18,28 +18,28 @@ final class am implements dh {
           param3.c(param1, param0 + 1, 1 + param4, 8, -1, 114);
           param3.c(param1, param0, param4, param5, -1);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "am.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "am.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
-        ql var3 = null;
+        PaletteBitmapFont var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 114) {
-            var3 = (ql) null;
-            am.a(-98, (String) null, true, (ql) null, 48, -52);
+            var3 = (PaletteBitmapFont) null;
+            am.a(-98, (String) null, true, (PaletteBitmapFont) null, 48, -52);
           }
           vd.a((java.awt.Component) ((Object) param0), -116);
           gk.a((java.awt.Component) ((Object) param0), param1 ^ 109);
-          if (null == lb.field_u) {
+          if (null == TrackBoundary.field_u) {
             return;
           }
-          lb.field_u.a((java.awt.Component) ((Object) param0), (byte) 106);
+          TrackBoundary.field_u.a((java.awt.Component) ((Object) param0), (byte) 106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,11 +51,11 @@ final class am implements dh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, n param3, int param4) {
+    public final void drawWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -113,7 +113,7 @@ final class am implements dh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -125,34 +125,34 @@ final class am implements dh {
 
     final static void a(int param0, byte param1, fb param2) {
         try {
-          bj.field_O.a((byte) -103, param2);
+          AccountTermsPanel.field_O.addLast((byte) -103, param2);
           if (param1 >= -27) {
             fb var4 = (fb) null;
             am.a(-120, (byte) -6, (fb) null);
           }
-          dn.a(param2, param0, 118);
+          VehicleDefinition.a(param2, param0, 118);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "am.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "am.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_c = null;
         field_b = null;
         field_f = null;
         if (param0 != 1) {
-          am.a(-13);
+          am.clearSharedReferences(-13);
         }
     }
 
-    am(qi param0, int param1, int param2) {
+    am(BitmapFont param0, int param1, int param2) {
         try {
           this.field_e = param1;
           this.field_a = param0;
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "am.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

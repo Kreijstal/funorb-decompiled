@@ -14,7 +14,7 @@ final class fk {
         return String.valueOf(param1);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_d = null;
         field_c = null;
@@ -26,10 +26,10 @@ final class fk {
 
     final static vj a(int param0, float param1, vj param2, float param3) {
         RuntimeException var4 = null;
-        lb var5 = null;
+        TrackBoundary var5 = null;
         gj var6 = null;
         gj stackIn_4_0 = null;
-        lb stackIn_6_0 = null;
+        TrackBoundary stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -38,9 +38,9 @@ final class fk {
           if (param0 != 1) {
             field_a = (String) null;
           }
-          if (param2 instanceof lb) {
-            var5 = (lb) (param2);
-            stackIn_6_0 = new lb(var5.a(false, param3), var5.a(false, param1), param2.field_k, param2.field_p, param2.field_q);
+          if (param2 instanceof TrackBoundary) {
+            var5 = (TrackBoundary) (param2);
+            stackIn_6_0 = new TrackBoundary(var5.a(false, param3), var5.a(false, param1), param2.field_k, param2.field_p, param2.field_q);
             return (vj) ((Object) stackIn_6_0);
           }
           var6 = (gj) (param2);
@@ -56,16 +56,16 @@ final class fk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int[] param0, String[] param1, int param2, int param3, int param4, int param5, int param6) {
         int var16 = 0;
         int stackIn_4_0 = 0;
-        hj stackIn_9_0 = null;
-        hj stackIn_12_0 = null;
-        ql stackIn_37_0;
+        Sprite stackIn_9_0 = null;
+        Sprite stackIn_12_0 = null;
+        PaletteBitmapFont stackIn_37_0;
         String stackIn_37_1;
         int stackIn_37_2;
         int stackIn_37_3;
@@ -80,10 +80,10 @@ final class fk {
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
-        hj var10_ref_hj = null;
+        Sprite var10_ref_hj = null;
         int var10 = 0;
         int var11 = 0;
-        hj var12 = null;
+        Sprite var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -103,16 +103,16 @@ final class fk {
           var9 = stackIn_4_0;
           if (param5 != -1) {
             if (var9 > param5) {
-              stackIn_9_0 = de.field_O;
+              stackIn_9_0 = DisplayNameForm.field_O;
             } else {
-              stackIn_9_0 = dc.field_ab;
+              stackIn_9_0 = ContentTransitionDialog.field_ab;
             }
             var10_ref_hj = stackIn_9_0;
             var11 = var10_ref_hj.field_s;
             if (param5 + 1 < var9) {
-              stackIn_12_0 = de.field_O;
+              stackIn_12_0 = DisplayNameForm.field_O;
             } else {
-              stackIn_12_0 = dc.field_ab;
+              stackIn_12_0 = ContentTransitionDialog.field_ab;
             }
             var12 = stackIn_12_0;
             var13 = var12.field_s;
@@ -136,16 +136,16 @@ final class fk {
                 break;
               }
               var18 = var18 + var15;
-              tc.c(var17, param4 + var16, var18 - var17, 16744576, 128);
+              SoftwareRasterizer.c(var17, param4 + var16, var18 - var17, 16744576, 128);
             }
           }
           var10 = param6;
           for (var7_intLifetime1 = 0; var7_intLifetime1 < param0.length; var7_intLifetime1++) {
             var10 = var10 + param0[var7_intLifetime1];
             if (var9 <= var7_intLifetime1) {
-              dc.field_ab.d(var10, param4, 153);
+              ContentTransitionDialog.field_ab.d(var10, param4, 153);
             } else {
-              de.field_O.d(var10, param4, 153);
+              DisplayNameForm.field_O.d(var10, param4, 153);
             }
           }
           var10Lifetime1 = param6 + 11 + param0[0];
@@ -159,7 +159,7 @@ final class fk {
             } else {
               stackIn_38_4 = 2;
             }
-            ((ql) (Object) stackIn_37_0).b(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, -1);
+            ((PaletteBitmapFont) (Object) stackIn_37_0).b(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, -1);
             var10Lifetime1 = var10Lifetime1 + param0[1 + var7_intLifetime2];
           }
           var11Lifetime1 = -75 / ((param2 + 10) / 62);
@@ -180,7 +180,7 @@ final class fk {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

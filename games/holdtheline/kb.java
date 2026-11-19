@@ -16,22 +16,22 @@ final class kb {
             ti.field_z = go.field_k.field_m;
             go.field_k = null;
             if (!ll.field_a) {
-              ii.field_c = ii.field_c & ~ti.field_z;
+              ClientException.field_c = ClientException.field_c & ~ti.field_z;
             }
             ll.field_a = true;
           }
         }
-        if (!ik.field_f) {
-          if (null == wn.field_g) {
-            wn.field_g = hi.a(6, -52);
+        if (!MusicPatchEnvelope.field_f) {
+          if (null == IsaacRandom.field_g) {
+            IsaacRandom.field_g = hi.a(6, -52);
           }
-          if (wn.field_g.field_m) {
-            j.a(param0 - 56, wn.field_g.field_l);
+          if (IsaacRandom.field_g.field_m) {
+            j.a(param0 - 56, IsaacRandom.field_g.field_l);
             if (ad.field_a) {
               tn.a(0);
             }
-            ik.field_f = true;
-            wn.field_g = null;
+            MusicPatchEnvelope.field_f = true;
+            IsaacRandom.field_g = null;
           }
         }
         if (param0 == 0) {
@@ -47,7 +47,7 @@ final class kb {
         if (param0 == 16616) {
           return 0 != (ka.field_g & 1 << param1) ? true : false;
         }
-        kb.a(113);
+        kb.clearSharedReferences(113);
         return 0 != (ka.field_g & 1 << param1) ? true : false;
     }
 
@@ -56,7 +56,7 @@ final class kb {
         return oi.field_f;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 76 % ((param0 - 71) / 40);
         field_b = null;
         field_d = null;
@@ -91,7 +91,7 @@ final class kb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

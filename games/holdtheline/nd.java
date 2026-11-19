@@ -15,7 +15,7 @@ final class nd {
     static int field_g;
     static String field_k;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_k = null;
         if (param0 != -4496) {
@@ -40,7 +40,7 @@ final class nd {
             return true;
           }
           if (param0.length == param2.length) {
-            stackIn_7_0 = kd.a(1643, param2, 0, param0, 0, param2.length);
+            stackIn_7_0 = MouseInputHandler.a(1643, param2, 0, param0, 0, param2.length);
             return stackIn_7_0;
           }
           return false;
@@ -60,7 +60,7 @@ final class nd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

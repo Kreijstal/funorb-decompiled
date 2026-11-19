@@ -6,7 +6,7 @@ final class sh {
     static String field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 11) {
@@ -33,7 +33,7 @@ final class sh {
           try {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param2);
-              var3 = ah.a(var3, param1, (byte) 73);
+              var3 = IntrusiveDeque.a(var3, param1, (byte) 73);
               ba.a(-7235, var3.toString(), true, param1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,7 +61,7 @@ final class sh {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

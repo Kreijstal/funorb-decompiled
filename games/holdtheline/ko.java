@@ -6,7 +6,7 @@ final class ko {
     static int field_b;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 108) {
           return;
         }
@@ -74,20 +74,20 @@ final class ko {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static mf[] a(int param0) {
         int var1 = -36 % ((param0 + 55) / 43);
-        return new mf[]{ja.field_Wb, gj.field_s, ho.field_n};
+        return new mf[]{RaceVehicle.field_Wb, gj.field_s, ho.field_n};
     }
 
-    final static hj[] a(boolean param0) {
+    final static Sprite[] a(boolean param0) {
         int var1 = 0;
         int var4 = HoldTheLine.field_D;
-        hj[] var2 = new hj[28];
-        hj var3 = dl.a(fb.field_i, "overlayfont", param0, "");
+        Sprite[] var2 = new Sprite[28];
+        Sprite var3 = UrlPacketDownloader.a(fb.field_i, "overlayfont", param0, "");
         int var1Lifetime1;
         int var1Lifetime2;
         for (var1 = 0; var1 < 10; var1++) {
@@ -122,15 +122,15 @@ final class ko {
               cg.field_a = false;
               var3_int = 1;
             }
-            jd.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
+            DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
           } else {
             if (!ge.a(true)) {
-              tc.c();
+              SoftwareRasterizer.c();
               vb.a(-76, 240, 320);
               hi.a(param1, 0, true, 0);
             } else {
-              if (bk.field_w != 0) {
-                ck.a((byte) -97, param1);
+              if (DiskCacheRequest.field_w != 0) {
+                MidiNote.a((byte) -97, param1);
               } else {
                 vk.a(param2, false, 86);
                 hi.a(param1, 0, true, 0);
@@ -151,7 +151,7 @@ final class ko {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class ko {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$210fc2102f3d(int param0, java.awt.Canvas param1, boolean param2) {
+    final static void drawClientLoadingOrMenuWithIntGuard(int param0, java.awt.Canvas param1, boolean param2) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -178,15 +178,15 @@ final class ko {
               cg.field_a = false;
               var3_int = 1;
             }
-            jd.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
+            DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
           } else {
             if (!ge.a(true)) {
-              tc.c();
+              SoftwareRasterizer.c();
               vb.a(-76, 240, 320);
               hi.a(param1, 0, true, 0);
             } else {
-              if (bk.field_w != 0) {
-                ck.a((byte) -97, param1);
+              if (DiskCacheRequest.field_w != 0) {
+                MidiNote.a((byte) -97, param1);
               } else {
                 vk.a(param2, false, 86);
                 hi.a(param1, 0, true, 0);
@@ -207,7 +207,7 @@ final class ko {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 }

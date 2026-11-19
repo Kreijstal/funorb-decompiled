@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class em extends gd {
+final class em extends TextFieldValidator {
     static boolean field_o;
     static int field_j;
     static String[] field_m;
@@ -12,43 +12,43 @@ final class em extends gd {
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
-          if (kf.field_U != null) {
-            om.a(-46342, kf.field_U);
-            kd.field_b.requestFocus();
-            kf.field_U.a(wi.field_b, param0 ^ -29472);
-            kf.field_U = null;
+          if (MidiPcmStream.field_U != null) {
+            om.a(-46342, MidiPcmStream.field_U);
+            MouseInputHandler.field_b.requestFocus();
+            MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
+            MidiPcmStream.field_U = null;
           }
         } else {
-          if (kf.field_U != null) {
+          if (MidiPcmStream.field_U != null) {
             if (!param1 &&
-              kf.field_U != null) {
-              om.a(-46342, kf.field_U);
-              kd.field_b.requestFocus();
-              kf.field_U.a(wi.field_b, param0 ^ -29472);
-              kf.field_U = null;
+              MidiPcmStream.field_U != null) {
+              om.a(-46342, MidiPcmStream.field_U);
+              MouseInputHandler.field_b.requestFocus();
+              MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
+              MidiPcmStream.field_U = null;
             }
           } else {
             if (!of.a(-969)) {
               if (!param1 &&
-                kf.field_U != null) {
-                om.a(-46342, kf.field_U);
-                kd.field_b.requestFocus();
-                kf.field_U.a(wi.field_b, param0 ^ -29472);
-                kf.field_U = null;
+                MidiPcmStream.field_U != null) {
+                om.a(-46342, MidiPcmStream.field_U);
+                MouseInputHandler.field_b.requestFocus();
+                MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
+                MidiPcmStream.field_U = null;
               }
             } else {
-              if (hf.a(wi.field_b, 0)) {
-                kf.field_U = oc.a(0, 0, 480, -123, wi.field_b, 640);
-                if (null != kf.field_U) {
-                  am.a(kf.field_U, 114);
+              if (ProxySocketConnector.a(wi.field_b, 0)) {
+                MidiPcmStream.field_U = oc.a(0, 0, 480, -123, wi.field_b, 640);
+                if (null != MidiPcmStream.field_U) {
+                  am.a(MidiPcmStream.field_U, 114);
                 }
               } else {
                 if (!param1 &&
-                  kf.field_U != null) {
-                  om.a(-46342, kf.field_U);
-                  kd.field_b.requestFocus();
-                  kf.field_U.a(wi.field_b, param0 ^ -29472);
-                  kf.field_U = null;
+                  MidiPcmStream.field_U != null) {
+                  om.a(-46342, MidiPcmStream.field_U);
+                  MouseInputHandler.field_b.requestFocus();
+                  MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
+                  MidiPcmStream.field_U = null;
                 }
               }
             }
@@ -75,7 +75,7 @@ final class em extends gd {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!ik.a(var5, true)) {
+          if (!MusicPatchEnvelope.a(var5, true)) {
             stackIn_3_0 = g.field_k;
             return stackIn_3_0;
           }
@@ -102,7 +102,7 @@ final class em extends gd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class em extends gd {
         String var1Lifetime3;
         var5 = HoldTheLine.field_D;
         if (!param0) {
-          var18 = "(" + ab.field_pb + " " + hc.field_e + " " + rd.field_l + ") " + vn.field_c;
+          var18 = "(" + AccountProgressDialog.field_pb + " " + hc.field_e + " " + rd.field_l + ") " + vn.field_c;
           var1 = var18;
           if (ad.field_c <= 0) {
             return var1;
@@ -134,7 +134,7 @@ final class em extends gd {
           var1Lifetime3 = var18 + ":";
           for (var2 = 0; ad.field_c > var2; var2++) {
             var19 = var1Lifetime3 + ' ';
-            var3 = rd.field_e.field_i[var2] & 255;
+            var3 = rd.field_e.payload[var2] & 255;
             var4 = var3 >> 4;
             if (10 <= var4) {
               var4 += 55;
@@ -153,7 +153,7 @@ final class em extends gd {
           return var1Lifetime3;
         }
         field_o = true;
-        var12 = "(" + ab.field_pb + " " + hc.field_e + " " + rd.field_l + ") " + vn.field_c;
+        var12 = "(" + AccountProgressDialog.field_pb + " " + hc.field_e + " " + rd.field_l + ") " + vn.field_c;
         var1Lifetime1 = var12;
         if (ad.field_c <= 0) {
           return var1Lifetime1;
@@ -161,7 +161,7 @@ final class em extends gd {
         var1Lifetime2 = var12 + ":";
         for (var2Lifetime1 = 0; ad.field_c > var2Lifetime1; var2Lifetime1++) {
           var16 = var1Lifetime2 + ' ';
-          var3Lifetime1 = rd.field_e.field_i[var2Lifetime1] & 255;
+          var3Lifetime1 = rd.field_e.payload[var2Lifetime1] & 255;
           var4Lifetime1 = var3Lifetime1 >> 4;
           if (10 <= var4Lifetime1) {
             var4Lifetime1 += 55;
@@ -180,7 +180,7 @@ final class em extends gd {
         return var1Lifetime2;
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_n = (int[][]) null;
         field_k = null;
         field_m = null;
@@ -203,10 +203,10 @@ final class em extends gd {
           ka.field_b.a(go.field_e, lh.field_b, param0, false);
           ka.field_b.g((byte) -59);
           while (qh.c(-99)) {
-            ka.field_b.a(aa.field_n, pk.field_M, (byte) 108);
+            ka.field_b.a(aa.field_n, LoginChoicePanel.field_M, (byte) 108);
           }
-          if (-1 != v.field_B) {
-            var1_int = v.field_B;
+          if (-1 != WidgetContainer.field_B) {
+            var1_int = WidgetContainer.field_B;
             go.a(0, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
@@ -231,7 +231,7 @@ final class em extends gd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "em.V(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "em.V(" + param0 + ')');
         }
     }
 
@@ -263,11 +263,11 @@ final class em extends gd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    em(nk param0) {
+    em(EditableTextField param0) {
         super(param0);
     }
 

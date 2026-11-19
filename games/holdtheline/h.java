@@ -39,7 +39,7 @@ final class h {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ final class h {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_f = null;
@@ -55,7 +55,7 @@ final class h {
         field_e = null;
         if (param0 <= 6) {
           String var2 = (String) null;
-          h.$cfr$intArgs$a$1694234bddb3((String) null, 43, false);
+          h.measureMenuTextWidthWithIntGuard((String) null, 43, false);
         }
         field_b = null;
     }
@@ -106,7 +106,7 @@ final class h {
         int var5_int = 0;
         String[] var6 = null;
         int var6_int = 0;
-        hj[] var7 = null;
+        Sprite[] var7 = null;
         int var8 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -119,21 +119,21 @@ final class h {
         StringBuilder var17 = null;
         vk var19 = null;
         String[] var20 = null;
-        hj var21 = null;
+        Sprite var21 = null;
         StringBuilder var22 = null;
         String[] var23 = null;
-        hj[] var24 = null;
+        Sprite[] var24 = null;
         vk var26 = null;
         String[] var27 = null;
-        hj var28 = null;
+        Sprite var28 = null;
         StringBuilder var29 = null;
         String[] var30 = null;
-        hj[] var31 = null;
+        Sprite[] var31 = null;
         int[] var36 = null;
         int[] var37 = null;
         String[] var5Lifetime1;
         String[] var6Lifetime1;
-        hj[] var7Lifetime1;
+        Sprite[] var7Lifetime1;
         int var5_intLifetime1;
         int var8Lifetime1;
         int var3Lifetime1;
@@ -159,9 +159,9 @@ final class h {
                   discarded$29 = var15.append("<br><br>");
                   var6_int = d.field_c[var3];
                   if (var6_int == -1) {
-                    discarded$30 = var15.append(vm.field_tb);
+                    discarded$30 = var15.append(NameCheckProgressDialog.field_tb);
                   } else {
-                    discarded$31 = var15.append(bj.field_I);
+                    discarded$31 = var15.append(AccountTermsPanel.field_I);
                     discarded$32 = var15.append(cb.a(90, var6_int));
                   }
                 }
@@ -170,7 +170,7 @@ final class h {
               }
               var16_ref.field_X[0][var3] = gh.field_t[var3];
               var16_ref.field_G[0][var3] = var15.toString();
-              var16_ref.field_o[0][var3] = p.a(pf.a((byte) 30, var3), (byte) -37, var3);
+              var16_ref.field_o[0][var3] = IndexedSpriteState.a(pf.a((byte) 30, var3), (byte) -37, var3);
             }
             var16_ref.field_Q[0] = hb.field_a;
             return;
@@ -183,7 +183,7 @@ final class h {
             var5 = var27;
             var30 = new String[var3Lifetime1];
             var6 = var30;
-            var31 = new hj[var3Lifetime1];
+            var31 = new Sprite[var3Lifetime1];
             var7 = var31;
             var14 = 0;
             var8 = var14;
@@ -213,7 +213,7 @@ final class h {
                 }
                 stackIn_49_0[stackIn_49_1] = stackIn_50_2;
                 var28 = var26.a(9392, 2, 111).e();
-                qm.a(var28, 64, -1);
+                Point2i.scaleSpriteIntensity(var28, 64, -1);
                 vb.a(-109, var28);
                 rf.field_ab.a(-rf.field_ab.field_s + var28.field_s >> 1, var28.field_y - rf.field_ab.field_y >> 1);
                 ug.b(-1);
@@ -225,7 +225,7 @@ final class h {
             var16_ref.field_X[0] = var27;
             var16_ref.field_G[0] = var30;
             var16_ref.field_o[0] = var31;
-            var16_ref.field_Q[0] = nc.field_a;
+            var16_ref.field_Q[0] = NodeHashTableIterator.field_a;
             return;
           }
           for (var3Lifetime2 = 0; var3Lifetime2 < 4; var3Lifetime2++) {
@@ -245,41 +245,41 @@ final class h {
             }
             var16_ref.field_X[0][var3Lifetime2] = gh.field_t[var3Lifetime2];
             var16_ref.field_G[0][var3Lifetime2] = var17.toString();
-            var16_ref.field_o[0][var3Lifetime2] = p.a(pf.a((byte) 41, var3Lifetime2), (byte) -109, var3Lifetime2);
+            var16_ref.field_o[0][var3Lifetime2] = IndexedSpriteState.a(pf.a((byte) 41, var3Lifetime2), (byte) -109, var3Lifetime2);
           }
-          var3Lifetime3 = pc.field_l[cf.field_w];
+          var3Lifetime3 = pc.field_l[StrongCacheEntry.field_w];
           var36 = new int[var3Lifetime3];
           var20 = new String[var3Lifetime3];
           var5Lifetime1 = var20;
           var23 = new String[var3Lifetime3];
           var6Lifetime1 = var23;
-          var24 = new hj[var3Lifetime3];
+          var24 = new Sprite[var3Lifetime3];
           var7Lifetime1 = var24;
           for (var8Lifetime1 = 0; var8Lifetime1 < var3Lifetime3; var8Lifetime1++) {
             var36[var8Lifetime1] = var8Lifetime1;
-            var19 = tk.field_c[cf.field_w][var8Lifetime1];
-            if (0 == gj.a(var8Lifetime1, -10, cf.field_w) &&
+            var19 = tk.field_c[StrongCacheEntry.field_w][var8Lifetime1];
+            if (0 == gj.a(var8Lifetime1, -10, StrongCacheEntry.field_w) &&
               !var19.field_r) {
               var5Lifetime1[var8Lifetime1] = var19.field_b;
               var22 = new StringBuilder(20);
               discarded$5 = var22.append("<col=1>");
               discarded$6 = var22.append(var19.field_b);
               discarded$7 = var22.append("</col><br><br>");
-              var11 = hk.field_c[cf.field_w][var8Lifetime1];
+              var11 = hk.field_c[StrongCacheEntry.field_w][var8Lifetime1];
               if (var11 == -1) {
                 discarded$8 = var22.append(sm.field_d);
               } else {
-                discarded$9 = var22.append(bj.field_I);
+                discarded$9 = var22.append(AccountTermsPanel.field_I);
                 discarded$10 = var22.append(cb.a(53, var11));
                 discarded$11 = var22.append(' ');
                 discarded$12 = var22.append('(');
-                if (ha.field_j[cf.field_w][var8Lifetime1] >= 0 &&
-                  ha.field_j[cf.field_w][var8Lifetime1] < 4) {
-                  discarded$13 = var22.append(rf.field_Y[ha.field_j[cf.field_w][var8Lifetime1]]);
+                if (ha.field_j[StrongCacheEntry.field_w][var8Lifetime1] >= 0 &&
+                  ha.field_j[StrongCacheEntry.field_w][var8Lifetime1] < 4) {
+                  discarded$13 = var22.append(rf.field_Y[ha.field_j[StrongCacheEntry.field_w][var8Lifetime1]]);
                 }
                 discarded$14 = var22.append(')');
-                discarded$15 = var22.append(vm.field_zb);
-                var12 = on.field_v[cf.field_w][var8Lifetime1];
+                discarded$15 = var22.append(NameCheckProgressDialog.field_zb);
+                var12 = on.field_v[StrongCacheEntry.field_w][var8Lifetime1];
                 if (var12 != -1) {
                   discarded$16 = var22.append(cb.a(61, var12));
                 } else {
@@ -290,9 +290,9 @@ final class h {
               var7Lifetime1[var8Lifetime1] = var19.a(9392, 1, 111);
             } else {
               var20[var8Lifetime1] = "";
-              var6Lifetime1[var8Lifetime1] = HoldTheLine.field_G[cf.field_w];
+              var6Lifetime1[var8Lifetime1] = HoldTheLine.field_G[StrongCacheEntry.field_w];
               var21 = var19.a(9392, DelegatingCanvas.field_d, 111).e();
-              qm.a(var21, 64, -1);
+              Point2i.scaleSpriteIntensity(var21, 64, -1);
               vb.a(-97, var21);
               rf.field_ab.a(-rf.field_ab.field_s + var21.field_s >> 1, var21.field_y - rf.field_ab.field_y >> 1);
               ug.b(-1);
@@ -308,7 +308,7 @@ final class h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1), "h.A(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "h.A(" + param0 + ')');
         }
     }
 
@@ -321,7 +321,7 @@ final class h {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$1694234bddb3(String param0, int param1, boolean param2) {
+    final static int measureMenuTextWidthWithIntGuard(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -351,7 +351,7 @@ final class h {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 }

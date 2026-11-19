@@ -8,8 +8,8 @@ final class om {
     private kg field_q;
     private static int[] field_e;
     int field_m;
-    hj[] field_g;
-    static th field_n;
+    Sprite[] field_g;
+    static PacketBuffer field_n;
     boolean field_d;
     static uf field_i;
     boolean field_c;
@@ -32,7 +32,7 @@ final class om {
           this.field_l = null;
           this.field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class om {
           this.field_f = null;
           this.field_c = false;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class om {
         mg var5 = null;
         mg var3 = null;
         mg[] var7 = null;
-        hj[] var8 = null;
+        Sprite[] var8 = null;
         int var4 = HoldTheLine.field_D;
         if (this.field_c) {
           return true;
@@ -84,7 +84,7 @@ final class om {
             return this.field_c;
           }
           var8 = this.field_o.a(180);
-          hj[] var3_array2 = var8;
+          Sprite[] var3_array2 = var8;
           if (var8 != null) {
             this.field_g = var8;
             this.field_c = true;
@@ -92,17 +92,17 @@ final class om {
           }
           return this.field_c;
         }
-        hj var6 = this.field_k.a(8192);
-        hj var3_ref = var6;
+        Sprite var6 = this.field_k.a(8192);
+        Sprite var3_ref = var6;
         if (var3_ref != null) {
-          this.field_g = new hj[]{var6};
+          this.field_g = new Sprite[]{var6};
           this.field_c = true;
           return this.field_c;
         }
         return this.field_c;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_n = null;
         if (param0 != -6) {
@@ -115,17 +115,17 @@ final class om {
     final static void a(String[][] param0, int param1, int param2) {
         try {
           ra.field_ab = -1;
-          ik.field_i = param2;
-          qj.field_I = -1;
+          MusicPatchEnvelope.field_i = param2;
+          DialogLayer.field_I = -1;
           mc.field_b = param0;
           mn.field_b = -1;
-          nh.h(0);
+          MessagePanel.h(0);
           if (param1 <= 10) {
-            gn var4 = (gn) null;
-            om.a((String) null, (gn) null, (String) null, 14, (gn) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            om.a((String) null, (ResourceArchive) null, (String) null, 14, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -140,16 +140,16 @@ final class om {
           this.field_g = null;
           this.field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static ql a(String param0, gn param1, String param2, int param3, gn param4) {
+    final static PaletteBitmapFont a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ql stackIn_2_0 = null;
-        ql stackIn_4_0 = null;
+        PaletteBitmapFont stackIn_2_0 = null;
+        PaletteBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -162,7 +162,7 @@ final class om {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 8192) {
-            stackIn_2_0 = (ql) null;
+            stackIn_2_0 = (PaletteBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param4.c(param0, 3);
@@ -197,22 +197,22 @@ final class om {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     final static void a(int param0, fl param1, int param2) {
-        da var6 = null;
+        IsaacPacketBuffer var6 = null;
         int var4 = 0;
         try {
           if (param0 != 27391) {
             fl var5 = (fl) null;
             om.a(-52, (fl) null, -89);
           }
-          var6 = da.field_p;
+          var6 = IsaacPacketBuffer.field_p;
           var6.c((byte) 33, param2);
-          var6.field_l = var6.field_l + 1;
-          var4 = var6.field_l;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.f(111, 1);
           if (null != param1.field_l) {
             var6.f(param0 - 27280, param1.field_l.length);
@@ -221,11 +221,11 @@ final class om {
             var6.f(param0 ^ 27280, 0);
           }
           var6.a(var4, (byte) 118);
-          var6.field_l = var6.field_l - 4;
+          var6.position = var6.position - 4;
           param1.field_k = var6.a(62);
-          var6.a(-268435456, var6.field_l - var4);
+          var6.a(-268435456, var6.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class om {
         try {
           this.field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class om {
           this.a(32768, param0);
           this.a(param2, param3, true);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -288,8 +288,8 @@ final class om {
         try {
           lh.a((java.awt.Component) ((Object) param1), false);
           ic.a(23147, (java.awt.Component) ((Object) param1));
-          if (lb.field_u != null) {
-            lb.field_u.a((java.awt.Component) ((Object) param1), -1);
+          if (TrackBoundary.field_u != null) {
+            TrackBoundary.field_u.a((java.awt.Component) ((Object) param1), -1);
           }
           if (param0 == -46342) {
             return;
@@ -307,7 +307,7 @@ final class om {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class om {
           this.a(32768, param0);
           this.a(4, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class om {
           this.a(92682, param1, param0);
           this.a(4, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class om {
           this.a(32768, param0);
           this.a(-103, param2);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class om {
           this.a(92682, param1, param0);
           this.a(-57, param3);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class om {
           this.a(32768, param0);
           this.a(1, param2);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class om {
           this.a(92682, param1, param0);
           this.a(1, param3);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

@@ -5,14 +5,14 @@ import java.io.*;
 
 final class ih extends IntrusiveNode {
     static int field_p;
-    static ah field_n;
-    static ah field_j;
+    static IntrusiveDeque field_n;
+    static IntrusiveDeque field_j;
     static int field_o;
     int field_r;
     int field_l;
     static int field_m;
     int field_k;
-    static hj[] field_t;
+    static Sprite[] field_t;
     int field_s;
     int field_u;
     int field_q;
@@ -27,11 +27,11 @@ final class ih extends IntrusiveNode {
         ge.field_b = param1;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_n = null;
         field_j = null;
         if (param0 < 116) {
-          field_n = (ah) null;
+          field_n = (IntrusiveDeque) null;
         }
         field_t = null;
     }
@@ -48,7 +48,7 @@ final class ih extends IntrusiveNode {
         String var11;
         int var12;
         int var13;
-        ii var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -77,8 +77,8 @@ final class ih extends IntrusiveNode {
         if (param1 != -12895) {
           field_m = -46;
         }
-        if (param0 instanceof ii) {
-          var14 = (ii) ((Object) param0);
+        if (param0 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param0);
           param0 = var14.field_f;
           var2 = var14.field_a + " | ";
           var11 = var2;
@@ -167,6 +167,6 @@ final class ih extends IntrusiveNode {
     }
 
     static {
-        field_j = new ah();
+        field_j = new IntrusiveDeque();
     }
 }

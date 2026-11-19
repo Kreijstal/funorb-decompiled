@@ -6,9 +6,9 @@ final class tk {
     oa field_d;
     oa field_e;
     static String field_b;
-    static qi field_a;
+    static BitmapFont field_a;
 
-    final static void a(int[] param0, byte param1, byte param2, bm param3) {
+    final static void a(int[] param0, byte param1, byte param2, IndexedSprite param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -76,23 +76,23 @@ final class tk {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
-        lk.field_e = (byte[][]) null;
+        IterableSecondaryNodeDeque.field_e = (byte[][]) null;
         if (param0) {
           return;
         }
-        nk.field_K = null;
+        EditableTextField.field_K = null;
         ad.field_d = null;
         wb.field_g = null;
         la.field_j = null;
-        dd.field_E = null;
+        StraightRoadSegment.field_E = null;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = (vk[][]) null;
         field_a = null;
         field_b = null;
@@ -106,7 +106,7 @@ final class tk {
           this.field_e = param0;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

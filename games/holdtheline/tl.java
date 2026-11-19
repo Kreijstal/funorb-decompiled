@@ -3,20 +3,20 @@
  */
 final class tl extends kl {
     static int[] field_z;
-    static gn field_w;
+    static ResourceArchive field_w;
     static int field_x;
-    static af field_y;
+    static PlatformTask field_y;
 
-    public static void d(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_w = null;
         if (!param0) {
-          field_y = (af) null;
+          field_y = (PlatformTask) null;
         }
         field_y = null;
         field_z = null;
     }
 
-    private tl(qi param0, int param1) {
+    private tl(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -39,21 +39,21 @@ final class tl extends kl {
             return false;
           }
           if (param1 != 31881) {
-            tl.d(false);
+            tl.clearSharedReferences(false);
           }
           var2_long = bb.b(-1);
           if (wl.field_c != 0 &&
             ji.field_o < 0) {
-            var4_ref_aa = (aa) (ej.field_a.b((byte) 111));
+            var4_ref_aa = (aa) (ej.field_a.first((byte) 111));
             if (var4_ref_aa != null &&
               var2_long > var4_ref_aa.field_o) {
-              var4_ref_aa.d(0);
+              var4_ref_aa.unlink(0);
               ad.field_c = var4_ref_aa.field_i.length;
-              rd.field_e.field_l = 0;
+              rd.field_e.position = 0;
               for (var5_int = 0; var5_int < ad.field_c; var5_int++) {
-                rd.field_e.field_i[var5_int] = var4_ref_aa.field_i[var5_int];
+                rd.field_e.payload[var5_int] = var4_ref_aa.field_i[var5_int];
               }
-              ab.field_pb = hc.field_e;
+              AccountProgressDialog.field_pb = hc.field_e;
               hc.field_e = rd.field_l;
               rd.field_l = vn.field_c;
               vn.field_c = var4_ref_aa.field_l;
@@ -62,19 +62,19 @@ final class tl extends kl {
           }
           while (true) {
             if (0 > ji.field_o) {
-              rd.field_e.field_l = 0;
+              rd.field_e.position = 0;
               if (!hi.b(1, (byte) 40)) {
                 return false;
               }
               ji.field_o = rd.field_e.g((byte) 73);
-              rd.field_e.field_l = 0;
+              rd.field_e.position = 0;
               ad.field_c = param0[ji.field_o];
             }
             if (!ok.a((byte) 55)) {
               return false;
             }
             if (0 == wl.field_c) {
-              ab.field_pb = hc.field_e;
+              AccountProgressDialog.field_pb = hc.field_e;
               hc.field_e = rd.field_l;
               rd.field_l = vn.field_c;
               vn.field_c = ji.field_o;
@@ -90,9 +90,9 @@ final class tl extends kl {
             }
             var5 = new aa((long)var4 + var2_long, ji.field_o, new byte[ad.field_c]);
             for (var6 = 0; var6 < ad.field_c; var6++) {
-              var5.field_i[var6] = rd.field_e.field_i[var6];
+              var5.field_i[var6] = rd.field_e.payload[var6];
             }
-            ej.field_a.a((byte) -70, var5);
+            ej.field_a.addLast((byte) -70, var5);
             ji.field_o = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,7 +105,7 @@ final class tl extends kl {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class tl extends kl {
         String[] var7 = null;
         var4 = HoldTheLine.field_D;
         try {
-          var6 = ca.a((byte) -127, ' ', param0);
+          var6 = ArchiveRequest.a((byte) -127, ' ', param0);
           var7 = var6;
           if (var6.length == 0) {
             throw new IllegalArgumentException();
@@ -165,7 +165,7 @@ final class tl extends kl {
                       if (2 < var7.length) {
                         throw new IllegalArgumentException();
                       }
-                      if (!ik.a((CharSequence) ((Object) var7[1]), true)) {
+                      if (!MusicPatchEnvelope.a((CharSequence) ((Object) var7[1]), true)) {
                         if (!var7[1].equalsIgnoreCase("off") &&
                           !var7[1].equalsIgnoreCase("none")) {
                           if (var7[1].equalsIgnoreCase("fade")) {
@@ -378,11 +378,11 @@ final class tl extends kl {
           } else {
             stackIn_133_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_132_0), ((StringBuilder) (Object) stackIn_132_1).append(stackIn_133_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_132_0), ((StringBuilder) (Object) stackIn_132_1).append(stackIn_133_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final String a(n param0, byte param1) {
+    final String a(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_1_0 = null;
@@ -404,7 +404,7 @@ final class tl extends kl {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -5,7 +5,7 @@ final class jh {
     static kb field_d;
     static String field_b;
     static ld field_a;
-    static hj field_c;
+    static Sprite field_c;
 
     final static String a(int[] param0, int param1, String param2) {
         RuntimeException var3 = null;
@@ -38,11 +38,11 @@ final class jh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         if (param0 <= -24) {
           field_b = null;
@@ -50,7 +50,7 @@ final class jh {
           field_c = null;
           return;
         }
-        jh.a(-125);
+        jh.clearSharedReferences(-125);
         field_b = null;
         field_a = null;
         field_c = null;
@@ -63,7 +63,7 @@ final class jh {
         field_d = (kb) null;
     }
 
-    final static void a(hj param0, byte param1, float param2, int[] param3) {
+    final static void a(Sprite param0, byte param1, float param2, int[] param3) {
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -109,19 +109,19 @@ final class jh {
               var4_int = 0;
             }
             var5 = gf.field_b;
-            if (tc.field_j <= var5) {
-              var5 = -1 + tc.field_j;
+            if (SoftwareRasterizer.field_j <= var5) {
+              var5 = -1 + SoftwareRasterizer.field_j;
             }
             var6 = gf.field_a;
             if (var6 < 0) {
               var6 = 0;
             }
-            if (tc.field_c <= var6) {
-              var6 = tc.field_c - 1;
+            if (SoftwareRasterizer.field_c <= var6) {
+              var6 = SoftwareRasterizer.field_c - 1;
             }
             var7 = var4_int % param0.field_s;
             var8 = var6 % param0.field_y;
-            var9 = var6 * tc.field_j + var4_int;
+            var9 = var6 * SoftwareRasterizer.field_j + var4_int;
             var10 = param0.field_s * var8 + var7;
             var11 = -var7 + param0.field_s;
             var12 = var5 - var4_int;
@@ -131,16 +131,16 @@ final class jh {
                 stackIn_5_0 = gf.d();
                 break;
               }
-              var13 = tc.field_b[var9] & 16711680;
-              var14 = tc.field_b[var9] & 65280;
-              var15 = 255 & tc.field_b[var9];
+              var13 = SoftwareRasterizer.field_b[var9] & 16711680;
+              var14 = SoftwareRasterizer.field_b[var9] & 65280;
+              var15 = 255 & SoftwareRasterizer.field_b[var9];
               var16 = param0.field_z[var10] & 16711680;
               var17 = 65280 & param0.field_z[var10];
               var18 = param0.field_z[var10] & 255;
               var19 = var13 + (int)(param2 * (float)(var16 - var13));
               var20 = var14 + (int)((float)(-var14 + var17) * param2);
               var21 = (int)((float)(var18 - var15) * param2) + var15;
-              tc.field_b[var9] = kc.a(kc.a(pk.a(65280, var20), pk.a(16711680, var19)), pk.a(255, var21));
+              SoftwareRasterizer.field_b[var9] = kc.a(kc.a(LoginChoicePanel.a(65280, var20), LoginChoicePanel.a(16711680, var19)), LoginChoicePanel.a(255, var21));
               var9++;
               var10++;
               var11--;
@@ -167,7 +167,7 @@ final class jh {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

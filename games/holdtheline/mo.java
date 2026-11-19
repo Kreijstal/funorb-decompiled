@@ -4,20 +4,20 @@
 final class mo extends dk {
     static int[] field_v;
     static String field_y;
-    static qm field_q;
-    private hj[] field_t;
+    static Point2i field_q;
+    private Sprite[] field_t;
     private int field_u;
     private int field_s;
     private int field_x;
-    static qi field_w;
+    static BitmapFont field_w;
     static uf field_r;
 
-    final static kk a(int param0, int param1, ee param2, el param3) {
-        kk var4 = null;
+    final static EntitySound a(int param0, int param1, MovingEntity param2, PcmSample param3) {
+        EntitySound var4 = null;
         RuntimeException var4_ref = null;
-        kk stackIn_2_0 = null;
-        kk stackIn_5_0 = null;
-        kk stackIn_7_0 = null;
+        EntitySound stackIn_2_0 = null;
+        EntitySound stackIn_5_0 = null;
+        EntitySound stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -25,17 +25,17 @@ final class mo extends dk {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (sm.field_b.b(0)) {
-            stackIn_2_0 = new kk(param3, param2, param0);
+          if (sm.field_b.isEmpty(0)) {
+            stackIn_2_0 = new EntitySound(param3, param2, param0);
             return stackIn_2_0;
           }
-          var4 = (kk) (sm.field_b.a((byte) 74));
-          var4.a(param2, (byte) -79, param0, param3);
+          var4 = (EntitySound) (sm.field_b.removeLast((byte) 74));
+          var4.initializeEmitter(param2, (byte) -79, param0, param3);
           if (param1 == 2931) {
             stackIn_7_0 = var4;
             return stackIn_7_0;
           }
-          stackIn_5_0 = (kk) null;
+          stackIn_5_0 = (EntitySound) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,11 +53,11 @@ final class mo extends dk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_r = null;
         field_w = null;
         if (param0 == -1351579448) {
@@ -109,7 +109,7 @@ final class mo extends dk {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(boolean param0, int param1, int param2, n param3, int param4) {
+    public final void drawWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -129,8 +129,8 @@ final class mo extends dk {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof rm) {
-            param0 = param0 & ((rm) (param3)).field_D;
+          if (param3 instanceof TextButton) {
+            param0 = param0 & ((TextButton) (param3)).field_D;
           }
           if (!param0) {
             stackIn_13_0 = this.field_u;
@@ -161,7 +161,7 @@ final class mo extends dk {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class mo extends dk {
             var3 = (CharSequence) null;
             mo.a((CharSequence) null, (byte) -11);
           }
-          stackIn_3_0 = gl.a(true, 10, (byte) 106, param0);
+          stackIn_3_0 = IntHashTable.parseRadixInteger(true, 10, (byte) 106, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ final class mo extends dk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -209,15 +209,15 @@ final class mo extends dk {
 
     private mo(int param0, int param1, int param2) {
         this.field_s = param1;
-        this.field_f = de.field_I;
+        this.field_f = DisplayNameForm.field_I;
         this.field_u = param2;
-        this.field_t = vm.field_Ab;
+        this.field_t = NameCheckProgressDialog.field_Ab;
         this.field_x = param0;
     }
 
     static {
         field_v = new int[]{119, 100, 180, 100};
         field_y = "Connection timed out. Please try using a different server.";
-        field_q = new qm(0, 0);
+        field_q = new Point2i(0, 0);
     }
 }

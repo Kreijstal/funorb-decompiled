@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ge {
-    static dn[] field_c;
+    static VehicleDefinition[] field_c;
     static String field_d;
     static String field_a;
     static int field_b;
@@ -13,13 +13,13 @@ final class ge {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          return 250 < cf.field_q ? true : false;
+          return 250 < StrongCacheEntry.field_q ? true : false;
         }
-        ge.a(79);
-        return 250 < cf.field_q ? true : false;
+        ge.clearSharedReferences(79);
+        return 250 < StrongCacheEntry.field_q ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != -31819) {
           field_a = (String) null;

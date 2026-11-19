@@ -7,7 +7,7 @@ final class aj {
     static go field_c;
     static uf field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 6 / ((param0 + 63) / 37);
         field_c = null;
         field_d = null;
@@ -18,7 +18,7 @@ final class aj {
         int var4 = 0;
         int var3 = 0;
         int var5 = HoldTheLine.field_D;
-        da var6 = new da(64);
+        IsaacPacketBuffer var6 = new IsaacPacketBuffer(64);
         int var3Lifetime1;
         int var3Lifetime2;
         var6.i((byte) 0);
@@ -42,7 +42,7 @@ final class aj {
           dm.a(var6, var3Lifetime2, 255);
         }
         var6.h((byte) 0);
-        return var6.field_i;
+        return var6.payload;
     }
 
     static {

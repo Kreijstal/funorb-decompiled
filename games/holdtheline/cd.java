@@ -8,23 +8,23 @@ final class cd {
     static String field_c;
     static int field_b;
     static int[] field_f;
-    static hj[] field_a;
+    static Sprite[] field_a;
     static byte[][] field_e;
 
     final static String a(int param0, long param1) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        kn.field_f.setTime(new Date(param1));
-        int var3 = kn.field_f.get(7);
-        int var4 = kn.field_f.get(5);
-        int var5 = kn.field_f.get(2);
-        int var6 = kn.field_f.get(1);
+        ArchiveIndex.field_f.setTime(new Date(param1));
+        int var3 = ArchiveIndex.field_f.get(7);
+        int var4 = ArchiveIndex.field_f.get(5);
+        int var5 = ArchiveIndex.field_f.get(2);
+        int var6 = ArchiveIndex.field_f.get(1);
         if (param0 > 43) {
-          var7 = kn.field_f.get(11);
-          var8 = kn.field_f.get(12);
-          var9 = kn.field_f.get(13);
-          return tm.field_b[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + eb.field_n[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          var7 = ArchiveIndex.field_f.get(11);
+          var8 = ArchiveIndex.field_f.get(12);
+          var9 = ArchiveIndex.field_f.get(13);
+          return IntrusiveDequeCursor.field_b[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + eb.field_n[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }
@@ -62,16 +62,16 @@ final class cd {
           ad.field_a = false;
           nd.field_e = true;
           if (param0 < 100) {
-            field_a = (hj[]) null;
+            field_a = (Sprite[]) null;
           }
           hk.field_d = 0;
           ij.field_l = true;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_f = null;
         field_c = null;
@@ -91,34 +91,34 @@ final class cd {
         }
     }
 
-    final static void a(hj param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(Sprite param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = -param7 + param2 + param8 + param0.field_u;
         int var10 = param4 + (param0.field_u + (param8 + param2));
         int var11 = param3 + param0.field_x + (param0.field_y >> 1);
-        tc.e(var9_int, 0, var10, var11 + param5);
+        SoftwareRasterizer.e(var9_int, 0, var10, var11 + param5);
         param0.b(-1 + param8, -1 + param3, param6);
         param0.b(param8 - 1, 1 + param3, param6);
-        tc.a(bd.field_R);
-        tc.e(var9_int + 1, 0, var10 + 1, param5 + var11);
+        SoftwareRasterizer.a(ValidationHelpWidget.field_R);
+        SoftwareRasterizer.e(var9_int + 1, 0, var10 + 1, param5 + var11);
         param0.b(param8 + 1, param3 - 1, param6);
         param0.b(1 + param8, param3 + 1, param6);
-        tc.a(bd.field_R);
+        SoftwareRasterizer.a(ValidationHelpWidget.field_R);
         var9_int = param8 + (param0.field_u + param0.field_s) - (param2 + param4);
         var10 = -param2 + param8 + (param0.field_u + param0.field_s) - param7;
-        tc.e(var9_int, var11 - param5, var10, 480);
+        SoftwareRasterizer.e(var9_int, var11 - param5, var10, 480);
         if (param1 <= 111) {
           return;
         }
         try {
           param0.b(-1 + param8, param3 - 1, param6);
           param0.b(param8 - 1, 1 + param3, param6);
-          tc.a(bd.field_R);
-          tc.e(1 + var9_int, var11 - param5, 1 + var10, 480);
+          SoftwareRasterizer.a(ValidationHelpWidget.field_R);
+          SoftwareRasterizer.e(1 + var9_int, var11 - param5, 1 + var10, 480);
           param0.b(param8 + 1, -1 + param3, param6);
           param0.b(1 + param8, param3 + 1, param6);
-          tc.a(bd.field_R);
+          SoftwareRasterizer.a(ValidationHelpWidget.field_R);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "cd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "cd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class cd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 1) {
-            stackIn_4_0 = tf.a((byte) 117, param2, param0) / ce.a(-1, param0);
+            stackIn_4_0 = MusicCrossfadeStream.a((byte) 117, param2, param0) / ce.a(-1, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -0.11478078365325928f;
@@ -147,7 +147,7 @@ final class cd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class cd {
           var4 = var3;
           for (var6 = 0; var4.length > var6; var6++) {
             var7 = var4[var6];
-            var8 = pk.a((byte) -102, var7);
+            var8 = LoginChoicePanel.a((byte) -102, var7);
             if (var8 != null) {
               stackIn_17_0 = var8;
               return stackIn_17_0;
@@ -208,7 +208,7 @@ final class cd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

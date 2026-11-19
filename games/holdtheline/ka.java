@@ -3,10 +3,10 @@
  */
 final class ka {
     static String field_a;
-    static hj field_f;
+    static Sprite field_f;
     static int field_g;
     static boolean field_d;
-    static qj field_b;
+    static DialogLayer field_b;
     static String field_e;
     static long field_c;
 
@@ -39,11 +39,11 @@ final class ka {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static float a(int param0, int param1, qm param2, wd[] param3) {
+    final static float a(int param0, int param1, Point2i param2, RoadSegment[] param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         float stackIn_1_0 = 0.0f;
@@ -73,7 +73,7 @@ final class ka {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -83,11 +83,11 @@ final class ka {
         fi.field_nb = true;
         field_b.a(false);
         if (param0 == -1) {
-          da.a(false, we.field_t, 22676);
+          IsaacPacketBuffer.a(false, we.field_t, 22676);
           return;
         }
         field_e = (String) null;
-        da.a(false, we.field_t, 22676);
+        IsaacPacketBuffer.a(false, we.field_t, 22676);
     }
 
     final static int a(int param0, String param1) {
@@ -141,16 +141,16 @@ final class ka {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;
         if (param0 != 5) {
-          field_b = (qj) null;
+          field_b = (DialogLayer) null;
           field_a = null;
           return;
         }
@@ -159,7 +159,7 @@ final class ka {
 
     final static boolean a(String param0, byte param1, String param2) {
         String var3 = null;
-        wd[] var4 = null;
+        RoadSegment[] var4 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -171,8 +171,8 @@ final class ka {
         try {
           var3 = hc.a(param2, (byte) 30);
           if (param1 < 97) {
-            var4 = (wd[]) null;
-            ka.a(82, -43, (qm) null, (wd[]) null);
+            var4 = (RoadSegment[]) null;
+            ka.a(82, -43, (Point2i) null, (RoadSegment[]) null);
           }
           if (param0.indexOf(param2) == -1 &&
             param0.indexOf(var3) == -1) {
@@ -196,7 +196,7 @@ final class ka {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

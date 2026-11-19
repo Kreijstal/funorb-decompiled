@@ -61,7 +61,7 @@ final class ph {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -85,13 +85,13 @@ final class ph {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        th var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new th(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.f((byte) -100);
           var4 = var9.a(-93);
           if (param0 != -1) {
@@ -115,7 +115,7 @@ final class ph {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                bh.a(var12, var5_int, param1, var4, 9);
+                Bzip2Decoder.a(var12, var5_int, param1, var4, 9);
               } else {
                 var7 = pc.field_n;
                 synchronized (var7) {
@@ -138,18 +138,18 @@ final class ph {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    final static void a(gn param0, byte param1, gn param2) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
         oa discarded$0 = null;
         oa discarded$1 = null;
         oa discarded$2 = null;
         oa discarded$3 = null;
         jh.field_a = new ld(param2, param0);
-        kn.field_r = i.a(-113, 2000, 60, "f1", 60);
-        qj.field_G = i.a(param1 ^ 51, 1000, 50, "porshe", 50);
+        ArchiveIndex.field_r = i.a(-113, 2000, 60, "f1", 60);
+        DialogLayer.field_G = i.a(param1 ^ 51, 1000, 50, "porshe", 50);
         hm.field_a = i.a(-108, 1000, 55, "dragster", 55);
         if (param1 != -66) {
           return;
@@ -157,30 +157,30 @@ final class ph {
         try {
           te.field_c = i.a(-113, 2000, 64, "dunebuggy", 64);
           he.field_G = i.a(param1 - 57, 2000, 60, "snowcat", 60);
-          gg.field_H = i.a(param1 ^ 50, 2000, 70, "snowmobile", 70);
+          ValidationIndicator.field_H = i.a(param1 ^ 50, 2000, 70, "snowmobile", 70);
           ec.field_s = i.a(param1 - 55, 2000, 40, "bmw", 40);
-          ch.field_n = i.a(param1 ^ 49, 2000, 60, "suv", 60);
+          MusicPatch.field_n = i.a(param1 ^ 49, 2000, 60, "suv", 60);
           discarded$0 = new oa("engine_start", 70);
-          cf.field_s = new oa("turbo_whistle", 140);
+          StrongCacheEntry.field_s = new oa("turbo_whistle", 140);
           pe.field_b = new oa("afterburner", 80);
-          qm.field_c = new oa("tyre_squeal", 100);
+          Point2i.field_c = new oa("tyre_squeal", 100);
           rc.field_a = new oa("off_the_track", 768);
           kl.field_t = new oa("off_the_track_alpine", 768);
           pf.field_g = new oa("alarm_test", 100);
           ic.field_i = new oa("mine_landing_and_armed", 256);
           oa.field_p = new oa("mine_explosion", 256);
           vd.field_b = new oa("machine_gun_1070ms_loop", 40);
-          jb.field_T = new oa("missile_launch", 256);
+          ValidatedTextField.field_T = new oa("missile_launch", 256);
           discarded$1 = new oa("homing_missile_beeps", 100);
-          u.field_O = new oa("explosion_and_shrapnel", 256);
+          ResizableDialog.field_O = new oa("explosion_and_shrapnel", 256);
           sj.field_K = new oa("vehicle-barrier_collision", 100);
           discarded$2 = new oa("vehicle-vehicle_collision", 120);
           vn.field_h = new oa("shield_bounce", 140);
           ij.field_g = new oa("powerup_collect_low", 92);
-          jf.field_d = new oa("powerup_collect_high", 88);
+          MouseWheelInput.field_d = new oa("powerup_collect_high", 88);
           ji.field_i = new oa("powerup_drop", 100);
-          rg.field_b = jh.field_a.a(param1 - 32594, "wacky_boom_kick");
-          cf.field_r = jh.field_a.a("menu_low_beep", (byte) 77);
+          DualNodeHashTable.field_b = jh.field_a.a(param1 - 32594, "wacky_boom_kick");
+          StrongCacheEntry.field_r = jh.field_a.a("menu_low_beep", (byte) 77);
           jh.field_a.a("menu_high_beep", (byte) 9);
           qd.field_j = new oa("ZD_update_lightning_strike");
           se.field_m = new oa("ZD_update_thunder_roll_1");
@@ -188,7 +188,7 @@ final class ph {
           discarded$3 = new oa("ZD_update_rain_loop");
           j.field_c = new td("car_pass");
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "ph.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ph.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -248,7 +248,7 @@ final class ph {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw kk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

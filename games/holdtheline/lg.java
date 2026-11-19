@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg extends lm {
+final class lg extends TextLayout {
     private int field_m;
     static int[] field_j;
     static String field_p;
     static e field_n;
     private String field_k;
-    static gn field_q;
+    static ResourceArchive field_q;
     private int field_l;
     private int field_i;
     static String field_r;
     private int field_g;
     private int field_f;
-    private qi field_o;
+    private BitmapFont field_o;
     private boolean field_h;
     static int field_e;
 
-    final void a(int param0, String param1, int param2, int param3, int param4, qi param5, int param6, int param7) {
+    final void a(int param0, String param1, int param2, int param3, int param4, BitmapFont param5, int param6, int param7) {
         lf stackIn_35_0;
         lf stackIn_35_1;
         int stackIn_35_2;
@@ -144,11 +144,11 @@ final class lg extends lm {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_p = null;
         if (!param0) {
           field_n = null;
@@ -164,7 +164,7 @@ final class lg extends lm {
         field_j = null;
     }
 
-    private final lf a(int param0, String param1, qi param2, int param3) {
+    private final lf a(int param0, String param1, BitmapFont param2, int param3) {
         lf var5 = null;
         RuntimeException var5_ref = null;
         lf var6 = null;
@@ -177,7 +177,7 @@ final class lg extends lm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 83) {
-            lg.a(true);
+            lg.clearSharedReferences(true);
           }
           var6 = new lf(-param2.field_G + param3, param3 + param2.field_I, param1.length());
           var5 = var6;
@@ -200,11 +200,11 @@ final class lg extends lm {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, qi param4) {
+    final void a(String param0, int param1, int param2, int param3, BitmapFont param4) {
         lf var7 = null;
         lf var8 = null;
         if (param0 == null) {
@@ -229,11 +229,11 @@ final class lg extends lm {
           var8.field_c[param0.length()] = param4.a(param0) + param3;
           oc.a(var8, 0, param4, 123, param0);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "lg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(String param0, int param1, qi param2, int param3, int param4) {
+    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
         lf var8 = null;
         lf var9 = null;
         if (param1 != 965) {
@@ -261,11 +261,11 @@ final class lg extends lm {
           var9.field_c[param0.length()] = param4;
           oc.a(var9, 0, param2, 113, param0);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "lg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void a(qi param0, byte param1, int param2, String param3, int param4) {
+    final void a(BitmapFont param0, byte param1, int param2, String param3, int param4) {
         lf var8 = null;
         int var7 = 0;
         if (param3 == null) {
@@ -280,7 +280,7 @@ final class lg extends lm {
           this.field_h = true;
           this.field_o = param0;
           if (param1 != -37) {
-            this.field_o = (qi) null;
+            this.field_o = (BitmapFont) null;
           }
           this.field_g = 1;
           var8 = this.a(117, param3, param0, param2);
@@ -289,17 +289,17 @@ final class lg extends lm {
           var8.field_c[param3.length()] = param4 + (var7 >> 1);
           oc.a(var8, 0, param0, param1 ^ -93, param3);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     public lg() {
     }
 
-    final static ui a(db param0, byte param1) {
+    final static ui a(PcmSampleStream param0, byte param1) {
         ui var2 = null;
         RuntimeException var2_ref = null;
-        db var3 = null;
+        PcmSampleStream var3 = null;
         ui stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -307,12 +307,12 @@ final class lg extends lm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -68) {
-            var3 = (db) null;
-            lg.a((db) null, (byte) 118);
+            var3 = (PcmSampleStream) null;
+            lg.a((PcmSampleStream) null, (byte) 118);
           }
           var2 = new ui(param0, param0);
-          ol.field_b.a((byte) -127, var2);
-          pk.field_H.a(param0);
+          SecondaryNodeDeque.field_b.addLast((byte) -127, var2);
+          LoginChoicePanel.field_H.a(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -325,7 +325,7 @@ final class lg extends lm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

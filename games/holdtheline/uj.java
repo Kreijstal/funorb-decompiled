@@ -28,7 +28,7 @@ final class uj {
         }
     }
 
-    final static String a(int param0, gn param1, String param2, String param3) {
+    final static String a(int param0, ResourceArchive param1, String param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -46,7 +46,7 @@ final class uj {
             return stackIn_2_0;
           }
           if (param0 >= -6) {
-            uj.a((byte) -56);
+            uj.clearSharedReferences((byte) -56);
           }
           stackIn_6_0 = param2 + " - " + param1.a(0) + "%";
           return stackIn_6_0;
@@ -72,11 +72,11 @@ final class uj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 == -122) {
           field_d = null;
@@ -84,7 +84,7 @@ final class uj {
           field_b = null;
           return;
         }
-        uj.a((byte) -14);
+        uj.clearSharedReferences((byte) -14);
         field_d = null;
         field_a = null;
         field_b = null;

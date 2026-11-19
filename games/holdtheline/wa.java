@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa extends gd {
+final class wa extends TextFieldValidator {
     static int field_j;
-    private nk field_l;
-    private nk field_i;
+    private EditableTextField field_l;
+    private EditableTextField field_i;
     static int field_k;
 
     final fd a(String param0, byte param1) {
@@ -50,7 +50,7 @@ final class wa extends gd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,46 +64,46 @@ final class wa extends gd {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        da var8 = null;
+        IsaacPacketBuffer var8 = null;
         on var9 = null;
         var7 = HoldTheLine.field_D;
         var8 = rd.field_e;
         var3 = var8.f((byte) -70);
         stackIn_3_0 = ((128 & var3) != 0);
         jc.field_f = stackIn_3_0;
-        ch.field_m = 127 & var3;
+        MusicPatch.field_m = 127 & var3;
         pj.field_o = var8.f((byte) -104);
         fc.field_c = var8.d(true);
-        if (ch.field_m != 2) {
-          kf.field_H = 0;
+        if (MusicPatch.field_m != 2) {
+          MidiPcmStream.field_H = 0;
           vn.field_f = 0;
         } else {
-          kf.field_H = var8.k(-108);
+          MidiPcmStream.field_H = var8.k(-108);
           vn.field_f = var8.c(false);
         }
         stackIn_9_0 = (1 != var8.f((byte) -101)) ? 0 : 1;
         var4 = stackIn_9_0;
-        wj.field_a = var8.j(-1231);
+        Js5Transport.field_a = var8.j(-1231);
         if (param1) {
           field_k = 82;
         }
         if (var4 == 0) {
-          kl.field_u = wj.field_a;
+          kl.field_u = Js5Transport.field_a;
         } else {
           kl.field_u = var8.j(-1231);
         }
-        if (1 == ch.field_m) {
+        if (1 == MusicPatch.field_m) {
           var8.k(95);
           var8.j(-1231);
         } else {
-          if (ch.field_m == 4) {
+          if (MusicPatch.field_m == 4) {
             var8.k(95);
             var8.j(-1231);
           }
         }
         if (!param0) {
           fi.field_kb = ta.a(80, var8, param1);
-          lm.field_d = null;
+          TextLayout.field_d = null;
           return new ij(param0);
         }
         var5 = var8.k(99);
@@ -115,12 +115,12 @@ final class wa extends gd {
           } else {
             stackIn_24_0 = var9.field_o;
           }
-          lm.field_d = stackIn_24_0;
+          TextLayout.field_d = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          bl.a((Throwable) ((Object) var6), (byte) -49, "CC1");
-          lm.field_d = null;
+          MusicPatchPcmStream.a((Throwable) ((Object) var6), (byte) -49, "CC1");
+          TextLayout.field_d = null;
           fi.field_kb = null;
           return new ij(param0);
         }
@@ -128,56 +128,56 @@ final class wa extends gd {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (nc.field_h == null) {
+        if (NodeHashTableIterator.field_h == null) {
           return -1;
         }
         if (param0 <= 114) {
           return -100;
         }
-        if (param2 < qm.field_b) {
-          if (vg.field_J > param2) {
+        if (param2 < Point2i.field_b) {
+          if (LoginForm.field_J > param2) {
             return -1;
           }
-          if (param2 >= nc.field_h.field_s + vg.field_J) {
-            return -1;
-          }
-          if (param1 < le.field_t) {
-            return -1;
-          }
-          if (le.field_t + nc.field_h.field_y > param1) {
-            return 1;
-          }
-          return -1;
-        }
-        if (param2 >= nc.field_h.field_s + qm.field_b) {
-          if (vg.field_J > param2) {
-            return -1;
-          }
-          if (param2 >= nc.field_h.field_s + vg.field_J) {
+          if (param2 >= NodeHashTableIterator.field_h.field_s + LoginForm.field_J) {
             return -1;
           }
           if (param1 < le.field_t) {
             return -1;
           }
-          if (le.field_t + nc.field_h.field_y > param1) {
+          if (le.field_t + NodeHashTableIterator.field_h.field_y > param1) {
             return 1;
           }
           return -1;
         }
-        if (param1 >= pk.field_L &&
-          pk.field_L + nc.field_h.field_y > param1) {
+        if (param2 >= NodeHashTableIterator.field_h.field_s + Point2i.field_b) {
+          if (LoginForm.field_J > param2) {
+            return -1;
+          }
+          if (param2 >= NodeHashTableIterator.field_h.field_s + LoginForm.field_J) {
+            return -1;
+          }
+          if (param1 < le.field_t) {
+            return -1;
+          }
+          if (le.field_t + NodeHashTableIterator.field_h.field_y > param1) {
+            return 1;
+          }
+          return -1;
+        }
+        if (param1 >= LoginChoicePanel.field_L &&
+          LoginChoicePanel.field_L + NodeHashTableIterator.field_h.field_y > param1) {
           return 0;
         }
-        if (vg.field_J > param2) {
+        if (LoginForm.field_J > param2) {
           return -1;
         }
-        if (param2 >= nc.field_h.field_s + vg.field_J) {
+        if (param2 >= NodeHashTableIterator.field_h.field_s + LoginForm.field_J) {
           return -1;
         }
         if (param1 < le.field_t) {
           return -1;
         }
-        if (le.field_t + nc.field_h.field_y <= param1) {
+        if (le.field_t + NodeHashTableIterator.field_h.field_y <= param1) {
           return -1;
         }
         return 1;
@@ -257,37 +257,37 @@ final class wa extends gd {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static hj[] a(int param0, int param1, int param2, int param3, int param4) {
-        hj[] var6 = new hj[9];
-        hj[] var5 = var6;
-        hj dupTemp$0 = mk.a(param2, 124, param0);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = NanoTickClock.a(param2, 124, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[param1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        hj dupTemp$1 = mk.a(param4, wb.a(param1, -97), param0);
+        Sprite dupTemp$1 = NanoTickClock.a(param4, wb.a(param1, -97), param0);
         var5[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 == 0) {
           return var5;
         }
-        var5[4] = mk.a(param3, param1 - 108, 64);
+        var5[4] = NanoTickClock.a(param3, param1 - 108, 64);
         return var5;
     }
 
-    wa(nk param0, nk param1, nk param2) {
+    wa(EditableTextField param0, EditableTextField param1, EditableTextField param2) {
         super(param0);
         try {
           this.field_l = param2;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class wa extends gd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -57) {
-            this.field_i = (nk) null;
+            this.field_i = (EditableTextField) null;
           }
           var3 = this.field_l.field_q.toLowerCase();
           var4 = param0.toLowerCase();
@@ -336,7 +336,7 @@ final class wa extends gd {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

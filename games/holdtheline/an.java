@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class an {
-    static qi field_e;
+    static BitmapFont field_e;
     static String field_d;
     static String[] field_c;
     private java.util.zip.Inflater field_b;
@@ -23,7 +23,7 @@ final class an {
         try {
           param2 = ua.a((byte) 110, '_', param2, "");
           if (param0 != -127) {
-            field_e = (qi) null;
+            field_e = (BitmapFont) null;
           }
           var3 = hc.a(param2, (byte) -93);
           stackIn_7_0 = (param1.indexOf(param2) != -1) || (-1 != param1.indexOf(var3));
@@ -44,7 +44,7 @@ final class an {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class an {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -86,17 +86,17 @@ final class an {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(byte param0, th param1, byte[] param2) {
+    final void a(byte param0, PacketBuffer param1, byte[] param2) {
         try {
-          if (param1.field_i[param1.field_l] != 31 ||
-            -117 != param1.field_i[1 + param1.field_l]) {
+          if (param1.payload[param1.position] != 31 ||
+            -117 != param1.payload[1 + param1.position]) {
             throw new RuntimeException("");
           }
           if (this.field_b == null) {
             this.field_b = new java.util.zip.Inflater(true);
           }
           try {
-            this.field_b.setInput(param1.field_i, 10 + param1.field_l, -8 + (-param1.field_l - 10 + param1.field_i.length));
+            this.field_b.setInput(param1.payload, 10 + param1.position, -8 + (-param1.position - 10 + param1.payload.length));
             this.field_b.inflate(param2);
           } catch (Exception exception) {
             this.field_b.reset();
@@ -108,7 +108,7 @@ final class an {
           try {
             this.field_b.reset();
           } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "an.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "an.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -117,7 +117,7 @@ final class an {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_e = null;
         field_d = null;
         if (param0 != 40) {

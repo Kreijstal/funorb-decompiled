@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends rm {
+final class sj extends TextButton {
     static go field_I;
     static double field_L;
     static String field_J;
-    static qi field_G;
-    static ah field_H;
+    static BitmapFont field_G;
+    static IntrusiveDeque field_H;
     static oa field_K;
 
-    private sj(String param0, tb param1) {
+    private sj(String param0, WidgetListener param1) {
         this(param0, pc.field_b.field_p, param1);
         try {
           this.field_l = pc.field_b.field_f;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,27 +25,27 @@ final class sj extends rm {
 
     final static void a(boolean param0, String param1, float param2, int param3) {
         try {
-          if (null == be.field_l) {
-            be.field_l = new ra(ka.field_b, nl.field_c);
-            ka.field_b.a(be.field_l, false);
+          if (null == MidiKeyUsage.field_l) {
+            MidiKeyUsage.field_l = new ra(ka.field_b, nl.field_c);
+            ka.field_b.a(MidiKeyUsage.field_l, false);
           }
-          be.field_l.a(param2, -84, param0, param1);
-          tc.c();
+          MidiKeyUsage.field_l.a(param2, -84, param0, param1);
+          SoftwareRasterizer.c();
           if (param3 > -88) {
             field_K = (oa) null;
           }
-          gb.a(0, true);
+          Bzip2State.a(0, true);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private sj(String param0, dh param1, tb param2) {
+    private sj(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
           this.field_l = pc.field_b.field_f;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class sj extends rm {
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          bc.a(param0, 0, var3, 0, var2_int);
+          ArrayOperations.copyBytes(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,16 +77,16 @@ final class sj extends rm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    sj(String param0, tb param1, boolean param2) {
+    sj(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_B = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class sj extends rm {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_J = null;
         if (param0 != 103) {
           byte[] var2 = (byte[]) null;
@@ -312,7 +312,7 @@ final class sj extends rm {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 

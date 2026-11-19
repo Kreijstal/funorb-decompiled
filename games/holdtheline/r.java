@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class r {
-    static qj field_a;
+    static DialogLayer field_a;
     static int field_c;
     static int field_b;
-    static th field_d;
+    static PacketBuffer field_d;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -14078) {
-          r.b(-16);
+          r.clearSharedReferences(-16);
           field_a = null;
           field_d = null;
           return;
@@ -22,9 +22,9 @@ final class r {
         if (param0 != -28036) {
           return;
         }
-        if (null != lk.field_h) {
-          lk.field_h.d(param0 + 49171);
-          lk.field_h = null;
+        if (null != IterableSecondaryNodeDeque.field_h) {
+          IterableSecondaryNodeDeque.field_h.close(param0 + 49171);
+          IterableSecondaryNodeDeque.field_h = null;
         }
     }
 

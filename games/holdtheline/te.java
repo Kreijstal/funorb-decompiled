@@ -5,17 +5,17 @@ import java.util.*;
 
 final class te {
     static java.util.zip.CRC32 field_a;
-    static ib field_d;
+    static PlatformTaskDispatcher field_d;
     static tk field_c;
-    static hj[] field_b;
+    static Sprite[] field_b;
 
     final static void a(boolean param0) {
-        if (null != kf.field_U) {
+        if (null != MidiPcmStream.field_U) {
           em.a(-29486, false);
-          kd.a(en.a(76), param0);
+          MouseInputHandler.a(GameKeyHandler.a(76), param0);
           return;
         }
-        kd.a(en.a(76), param0);
+        MouseInputHandler.a(GameKeyHandler.a(76), param0);
     }
 
     final static int a(int param0, byte param1, int param2) {
@@ -46,26 +46,26 @@ final class te {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var3), "te.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var3), "te.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(int param0, hj[] param1) {
+    final static void a(int param0, Sprite[] param1) {
         if (param0 != -4) {
           return;
         }
         try {
-          qk.field_y = param1;
-          if (null != qk.field_y &&
+          TriangleMesh.field_y = param1;
+          if (null != TriangleMesh.field_y &&
             param1.length < 3) {
             throw new IllegalArgumentException("");
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;
@@ -83,11 +83,11 @@ final class te {
           fk.a(var8, new String[]{param4}, 122, param5 ? 0 : -1, param3, -1, param1);
           int var7 = 21 / ((param2 - 81) / 32);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, th param2, int param3, int param4, int param5, byte[] param6) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, PacketBuffer param2, int param3, int param4, int param5, byte[] param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -121,18 +121,18 @@ final class te {
             var8[var9] = an.field_a.nextInt();
           }
           if (r.field_d == null ||
-            !(var7_int <= r.field_d.field_i.length)) {
-            r.field_d = new th(var7_int);
+            !(var7_int <= r.field_d.payload.length)) {
+            r.field_d = new PacketBuffer(var7_int);
           }
-          r.field_d.field_l = 0;
+          r.field_d.position = 0;
           r.field_d.a(param5, 13, param6, param3);
           r.field_d.b((byte) 127, var7_int);
           r.field_d.a(var14, 111);
           if (om.field_n == null ||
-            !(om.field_n.field_i.length >= 100)) {
-            om.field_n = new th(100);
+            !(om.field_n.payload.length >= 100)) {
+            om.field_n = new PacketBuffer(100);
           }
-          om.field_n.field_l = 0;
+          om.field_n.position = 0;
           om.field_n.f(111, 10);
           var12 = 0;
           var9Lifetime1 = var12;
@@ -143,8 +143,8 @@ final class te {
           }
           om.field_n.b(-652561784, param5);
           om.field_n.a(param0, param1, (byte) 114);
-          param2.a(om.field_n.field_l, 19, om.field_n.field_i, 0);
-          param2.a(r.field_d.field_l, 58, r.field_d.field_i, 0);
+          param2.a(om.field_n.position, 19, om.field_n.payload, 0);
+          param2.a(r.field_d.position, 58, r.field_d.payload, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,7 +174,7 @@ final class te {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

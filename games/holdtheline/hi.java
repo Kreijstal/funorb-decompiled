@@ -5,60 +5,60 @@ import java.io.*;
 
 class hi extends fj {
     private int field_z;
-    private qi field_V;
-    private hj field_P;
+    private BitmapFont field_V;
+    private Sprite field_P;
     private int field_E;
-    private hj field_cb;
+    private Sprite field_cb;
     private int field_U;
     static int[] field_W;
     private int field_eb;
     private int field_J;
     private boolean field_G;
-    private hj[] field_Z;
+    private Sprite[] field_Z;
     private boolean field_O;
     private boolean field_db;
-    private hj field_K;
+    private Sprite field_K;
     private int field_S;
     private boolean field_C;
     private boolean field_M;
     private int field_w;
-    private hj field_F;
-    private hj[] field_Q;
+    private Sprite field_F;
+    private Sprite[] field_Q;
     private String field_bb;
-    private hj[] field_B;
+    private Sprite[] field_B;
     private int field_A;
-    private hj field_R;
+    private Sprite field_R;
     private int field_T;
     private int field_y;
     private int field_H;
     private int field_D;
     private int field_t;
     private String field_u;
-    static hj field_N;
+    static Sprite field_N;
     private boolean field_ab;
     private int field_fb;
-    private hj[] field_Y;
+    private Sprite[] field_Y;
     private int field_I;
     private int field_L;
     private int field_X;
-    private hj[] field_v;
+    private Sprite[] field_v;
     private int field_x;
 
-    final static hj a(int param0, byte param1, int param2) {
-        hj var3;
+    final static Sprite a(int param0, byte param1, int param2) {
+        Sprite var3;
         int var4;
         int var5;
-        hj var3Lifetime1;
+        Sprite var3Lifetime1;
         var5 = HoldTheLine.field_D;
-        var3 = (hj) (hf.field_j.b((byte) 126));
+        var3 = (Sprite) (ProxySocketConnector.field_j.first((byte) 126));
         while (var3 != null) {
           if (var3.field_s == param0 &&
             param2 == var3.field_y) {
             return var3;
           }
-          var3 = (hj) (hf.field_j.c((byte) 114));
+          var3 = (Sprite) (ProxySocketConnector.field_j.next((byte) 114));
         }
-        var3Lifetime1 = new hj(param0, param2);
+        var3Lifetime1 = new Sprite(param0, param2);
         var4 = param0 * param2;
         while (0 < var4) {
           var4--;
@@ -66,19 +66,19 @@ class hi extends fj {
         }
         vb.a(-74, var3Lifetime1);
         if (param1 > -37) {
-          return (hj) null;
+          return (Sprite) null;
         }
         if (128 < param2) {
           ra.field_hb.a(param0 - 128 >> 1, -128 + param2 >> 1);
         } else {
           ra.field_hb.d(-(param2 * 3 / 4) + param0 >> 1, 0, 3 * param2 / 4, param2);
         }
-        hf.field_j.a((byte) -121, var3Lifetime1);
+        ProxySocketConnector.field_j.addLast((byte) -121, var3Lifetime1);
         ug.b(-1);
         return var3Lifetime1;
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -105 % ((param0 - 37) / 49);
         field_N = null;
         field_W = null;
@@ -87,7 +87,7 @@ class hi extends fj {
     final static void a(java.awt.Canvas param0, int param1, boolean param2, int param3) {
         java.awt.Graphics var4 = null;
         if (!param2) {
-          hi.c((byte) -49);
+          hi.clearSharedReferences((byte) -49);
         }
         try {
           var4 = param0.getGraphics();
@@ -98,7 +98,7 @@ class hi extends fj {
         }
     }
 
-    final static void a(hj[] param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static void a(Sprite[] param0, int param1, boolean param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -177,73 +177,73 @@ class hi extends fj {
             }
             var18 = var14;
             var19 = var15;
-            tc.b(bj.field_L);
+            SoftwareRasterizer.b(AccountTermsPanel.field_L);
             if (var19 < var18) {
               var19 = param1 * var8 / (var8 + var9) + param5;
               var18 = param1 * var8 / (var8 + var9) + param5;
             }
             if (null != param0[0]) {
-              tc.e(param4, param5, var16, var18);
+              SoftwareRasterizer.e(param4, param5, var16, var18);
               param0[0].a(param4, param5);
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (null != param0[2]) {
-              tc.e(var17, param5, var10, var18);
+              SoftwareRasterizer.e(var17, param5, var10, var18);
               param0[2].a(var13, param5);
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (null != param0[6]) {
-              tc.e(param4, var19, var16, var11);
+              SoftwareRasterizer.e(param4, var19, var16, var11);
               param0[6].a(param4, var15);
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (null != param0[8]) {
-              tc.e(var17, var19, var10, var11);
+              SoftwareRasterizer.e(var17, var19, var10, var11);
               param0[8].a(var13, var15);
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (null != param0[1] &&
               param0[1].field_o != 0) {
-              tc.e(var16, param5, var17, var18);
+              SoftwareRasterizer.e(var16, param5, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param0[1].field_o) {
                 param0[1].a(var20, param5);
               }
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (null != param0[7] &&
               param0[7].field_o != 0) {
-              tc.e(var16, var19, var17, var11);
+              SoftwareRasterizer.e(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param0[7].field_o) {
                 param0[7].a(var20Lifetime1, var15);
               }
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (null != param0[3] &&
               0 != param0[3].field_v) {
-              tc.e(param4, var18, var16, var19);
+              SoftwareRasterizer.e(param4, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param0[3].field_v) {
                 param0[3].a(param4, var20Lifetime2);
               }
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (param0[5] != null &&
               0 != param0[5].field_v) {
-              tc.e(var17, var18, var10, var19);
+              SoftwareRasterizer.e(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].field_v) {
                 param0[5].a(var13, var20Lifetime3);
               }
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
             }
             if (param0[4] != null &&
               param0[4].field_o != 0 &&
               0 != param0[4].field_v) {
-              tc.e(var16, var18, var17, var19);
+              SoftwareRasterizer.e(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_v) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param0[4].field_o) {
                   param0[4].a(var21, var20Lifetime4);
                 }
               }
-              tc.a(bj.field_L);
+              SoftwareRasterizer.a(AccountTermsPanel.field_L);
               return;
             }
             return;
@@ -259,7 +259,7 @@ class hi extends fj {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ class hi extends fj {
         ie var2 = null;
         if (param1 < -51) {
           var2 = new ie();
-          oc.field_d.a((byte) -104, var2);
+          oc.field_d.addLast((byte) -104, var2);
           q.a(param0, 51);
           return var2;
         }
@@ -411,11 +411,11 @@ class hi extends fj {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static float a(int param0, float param1, int param2, wd[] param3, int param4, qm param5, int param6) {
+    final static float a(int param0, float param1, int param2, RoadSegment[] param3, int param4, Point2i param5, int param6) {
         int var8 = 0;
         float stackIn_8_0 = 0.0f;
         int stackIn_13_0 = 0;
@@ -432,7 +432,7 @@ class hi extends fj {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var9 = 0;
-        wd var10 = null;
+        RoadSegment var10 = null;
         float var12 = 0.0f;
         float var13 = 0.0f;
         float var14 = 0.0f;
@@ -442,9 +442,9 @@ class hi extends fj {
         float var18 = 0.0f;
         int var19 = 0;
         Object var20 = null;
-        hn var20_ref = null;
+        CurvedRoadSegment var20_ref = null;
         Object var21 = null;
-        dd var21_ref = null;
+        StraightRoadSegment var21_ref = null;
         var20 = null;
         var21 = null;
         var19 = HoldTheLine.field_D;
@@ -482,10 +482,10 @@ class hi extends fj {
             var10 = param3[var9];
             if (-var10.field_k + param6 <= 1 &&
               -1 <= param6 - var10.field_k) {
-              if (var10 instanceof dd) {
-                var21_ref = (dd) (var10);
-                var12 = (float)(param5.field_h - var21_ref.field_R.field_h);
-                var13 = (float)(-var21_ref.field_R.field_f + param5.field_f);
+              if (var10 instanceof StraightRoadSegment) {
+                var21_ref = (StraightRoadSegment) (var10);
+                var12 = (float)(param5.x - var21_ref.field_R.x);
+                var13 = (float)(-var21_ref.field_R.y + param5.y);
                 var14 = var21_ref.field_B * var12 - var13 * var21_ref.field_D;
                 if (!(0.0f > var14) &&
                   !(var21_ref.field_J < var14)) {
@@ -500,9 +500,9 @@ class hi extends fj {
                   }
                 }
               } else {
-                var20_ref = (hn) (var10);
-                var12 = (float)(-var20_ref.field_U.field_h + param5.field_h);
-                var13 = (float)(-var20_ref.field_U.field_f + param5.field_f);
+                var20_ref = (CurvedRoadSegment) (var10);
+                var12 = (float)(-var20_ref.field_U.x + param5.x);
+                var13 = (float)(-var20_ref.field_U.y + param5.y);
                 var14 = (float)var20_ref.field_D;
                 var15 = (float)var20_ref.field_R;
                 if (var20_ref.field_E > var20_ref.field_I) {
@@ -541,7 +541,7 @@ class hi extends fj {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param6).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -550,28 +550,28 @@ class hi extends fj {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (rd.field_e.field_l >= param0) {
+          if (rd.field_e.position >= param0) {
             return true;
           }
-          if (null == lk.field_h) {
+          if (null == IterableSecondaryNodeDeque.field_h) {
             return false;
           }
           try {
             if (param1 != 40) {
               field_W = (int[]) null;
             }
-            var2_int = lk.field_h.b(false);
+            var2_int = IterableSecondaryNodeDeque.field_h.available(false);
             if (var2_int > 0) {
-              if (var2_int > param0 - rd.field_e.field_l) {
-                var2_int = -rd.field_e.field_l + param0;
+              if (var2_int > param0 - rd.field_e.position) {
+                var2_int = -rd.field_e.position + param0;
               }
-              lk.field_h.a(rd.field_e.field_i, var2_int, rd.field_e.field_l, 125);
+              IterableSecondaryNodeDeque.field_h.readFully(rd.field_e.payload, var2_int, rd.field_e.position, 125);
               cm.field_b = bb.b(-1);
-              rd.field_e.field_l = rd.field_e.field_l + var2_int;
-              if (param0 > rd.field_e.field_l) {
+              rd.field_e.position = rd.field_e.position + var2_int;
+              if (param0 > rd.field_e.position) {
                 return false;
               }
-              rd.field_e.field_l = 0;
+              rd.field_e.position = 0;
               return true;
             }
             if (var2_int >= 0 &&
@@ -614,7 +614,7 @@ class hi extends fj {
         this.field_L = -1;
         this.field_x = -2147483648;
         try {
-          this.field_f = param0;
+          this.key = param0;
           this.a(param1, -114);
           if (param6 != null) {
             this.field_bb = param6;
@@ -636,7 +636,7 @@ class hi extends fj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends rm {
+final class km extends TextButton {
     static int field_G;
     int field_H;
     private uh field_K;
@@ -15,7 +15,7 @@ final class km extends rm {
         return this.field_K.b(-123);
     }
 
-    final boolean a(int param0, int param1, int param2, n param3, byte param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -73,7 +73,7 @@ final class km extends rm {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends qm {
+final class eb extends Point2i {
     boolean field_m;
     static String field_p;
     int field_l;
@@ -11,12 +11,12 @@ final class eb extends qm {
     static String field_k;
 
     eb(eb param0) {
-        super(param0.field_h, param0.field_f);
+        super(param0.x, param0.y);
         try {
           this.field_m = false;
           this.field_l = param0.field_l;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,28 +64,28 @@ final class eb extends qm {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        da var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         String var4 = null;
         var3 = HoldTheLine.field_D;
         try {
-          var1 = da.field_p;
+          var1 = IsaacPacketBuffer.field_p;
           while (ad.a(100)) {
             var1.c((byte) 33, 8);
-            fieldTemp$0 = var1.field_l + 1;
-            var1.field_l = var1.field_l + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            dl.a(0, var1);
-            da.field_p.a(-268435456, var1.field_l - var2);
+            UrlPacketDownloader.a(0, var1);
+            IsaacPacketBuffer.field_p.a(-268435456, var1.position - var2);
           }
           if (param0 >= -67) {
             var4 = (String) null;
@@ -95,21 +95,21 @@ final class eb extends qm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1_ref), "eb.G(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1_ref), "eb.G(" + param0 + ')');
         }
     }
 
-    eb(qm param0, int param1) {
-        super(param0.field_h, param0.field_f);
+    eb(Point2i param0, int param1) {
+        super(param0.x, param0.y);
         try {
           this.field_l = param1;
           this.field_m = false;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_k = null;
         field_n = null;
@@ -120,12 +120,12 @@ final class eb extends qm {
         field_p = null;
     }
 
-    final static void a(boolean param0, ah[] param1) {
+    final static void a(boolean param0, IntrusiveDeque[] param1) {
         int var3 = 0;
-        ah[] var2 = null;
-        ah var4 = null;
+        IntrusiveDeque[] var2 = null;
+        IntrusiveDeque var4 = null;
         int var5 = 0;
-        ah[] var6 = null;
+        IntrusiveDeque[] var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -140,7 +140,7 @@ final class eb extends qm {
           }
           for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];
-            ol.a(256, var4);
+            SecondaryNodeDeque.a(256, var4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,7 +153,7 @@ final class eb extends qm {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

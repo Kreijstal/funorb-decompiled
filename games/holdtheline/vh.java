@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh implements dh {
+final class vh implements WidgetRenderer {
     private int field_b;
     private int field_k;
     private int field_j;
@@ -10,11 +10,11 @@ final class vh implements dh {
     static rd field_f;
     private int field_g;
     private int field_d;
-    private qi field_h;
+    private BitmapFont field_h;
     static ll field_a;
     static uf field_i;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_i = null;
         field_f = null;
         if (!param0) {
@@ -23,7 +23,7 @@ final class vh implements dh {
         field_a = null;
     }
 
-    vh(qi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    vh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_h = param0;
           this.field_g = param2;
@@ -34,7 +34,7 @@ final class vh implements dh {
           this.field_e = param3;
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class vh implements dh {
           if (!param1.equalsIgnoreCase("red") &&
             !param1.equalsIgnoreCase("weapons")) {
             if (param0 <= 93) {
-              vh.a(true);
+              vh.clearSharedReferences(true);
             }
             if (!param1.equalsIgnoreCase("green") &&
               !param1.equalsIgnoreCase("speed")) {
@@ -82,11 +82,11 @@ final class vh implements dh {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, n param3, int param4) {
+    public final void drawWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -95,7 +95,7 @@ final class vh implements dh {
         int var12 = 0;
         int var13 = 0;
         hg var14 = null;
-        n stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -107,29 +107,29 @@ final class vh implements dh {
           if (!(param3 instanceof hg)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (n) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var14 = (hg) (stackIn_3_0);
           if (var14 == null) {
           }
-          tc.f(param3.field_k + param1, param4 + param3.field_o, param3.field_x, param3.field_u, this.field_k);
+          SoftwareRasterizer.f(param3.field_k + param1, param4 + param3.field_o, param3.field_x, param3.field_u, this.field_k);
           var7 = var14.field_G + (param3.field_k + param1);
           var8 = var14.field_J + (param4 + param3.field_o);
-          tc.d(var7, var8, var14.field_P, this.field_j);
+          SoftwareRasterizer.d(var7, var8, var14.field_P, this.field_j);
           if (var14.field_L != -1) {
             var9 = 2.0 * ((double)var14.field_L * 3.141592653589793) / (double)var14.field_O;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_P);
             var12 = (int)(Math.cos(var9) * (double)var14.field_P);
-            tc.d(var7 + var11, var12 + var8, 1, this.field_b);
+            SoftwareRasterizer.d(var7 + var11, var12 + var8, 1, this.field_b);
           }
-          tc.d(var7, var8, 2, 1);
+          SoftwareRasterizer.d(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * ((double)var14.field_K * 3.141592653589793) / (double)var14.field_O;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_P);
           if (param2 > -48) {
             this.field_g = -87;
           }
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_P);
-          tc.d(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.d(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
           if (this.field_h == null) {
             return;
           }
@@ -146,7 +146,7 @@ final class vh implements dh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 

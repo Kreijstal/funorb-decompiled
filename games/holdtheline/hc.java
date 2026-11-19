@@ -8,42 +8,42 @@ final class hc {
     static String field_c;
     static String field_a;
 
-    final static void a(int param0, hj param1, byte param2, int param3, int param4) {
-        hj var5 = null;
+    final static void a(int param0, Sprite param1, byte param2, int param3, int param4) {
+        Sprite var5 = null;
         try {
-          var5 = new hj(param1.field_o, param1.field_v);
+          var5 = new Sprite(param1.field_o, param1.field_v);
           ok.a(32381);
           var5.f();
           param1.e(0, 0, 1);
           if (param2 > -41) {
-            hj var6 = (hj) null;
-            hc.a(20, (hj) null, (byte) -34, 96, -42);
+            Sprite var6 = (Sprite) null;
+            hc.a(20, (Sprite) null, (byte) -34, 96, -42);
           }
           ug.b(-1);
           var5.d(param3 - (param1.field_o >> 1), param4 - (param1.field_v >> 1), param0);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_c = null;
         if (param0 == 24816) {
           field_a = null;
           return;
         }
-        hj var2 = (hj) null;
-        hc.a(21, (hj) null, (byte) 110, 27, -87);
+        Sprite var2 = (Sprite) null;
+        hc.a(21, (Sprite) null, (byte) 110, 27, -87);
         field_a = null;
     }
 
-    final static bm a(String param0, gn param1, int param2, String param3) {
+    final static IndexedSprite a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        hj var6 = null;
-        bm stackIn_3_0 = null;
+        Sprite var6 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -56,10 +56,10 @@ final class hc {
           var4_int = param1.c(param3, 3);
           var5 = param1.a(var4_int, param0, false);
           if (param2 > -105) {
-            var6 = (hj) null;
-            hc.a(-78, (hj) null, (byte) -62, 68, 71);
+            var6 = (Sprite) null;
+            hc.a(-78, (Sprite) null, (byte) -62, 68, 71);
           }
-          stackIn_3_0 = de.a(var4_int, var5, param1, 25);
+          stackIn_3_0 = DisplayNameForm.a(var4_int, var5, param1, 25);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class hc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class hc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class uh {
     private int field_b;
     private int field_c;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -13) {
           return;
         }
@@ -19,7 +19,7 @@ final class uh {
         try {
           this.a(this.field_b + 1, param0, 1, param0.length, param1);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "uh.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "uh.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class uh {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
         if (param0 != this.field_b) {
-          bc.a(this.field_a, 1 + param0, this.field_a, param0, this.field_b - param0);
+          ArrayOperations.copyInts(this.field_a, 1 + param0, this.field_a, param0, this.field_b - param0);
         }
         if (param1 > 4) {
           this.field_b = this.field_b - 1;
@@ -91,7 +91,7 @@ final class uh {
         int[] var3 = new int[this.field_b + 1];
         int[] var2 = var3;
         if (param0 <= -33) {
-          bc.a(this.field_a, 0, var3, 0, this.field_b + 1);
+          ArrayOperations.copyInts(this.field_a, 0, var3, 0, this.field_b + 1);
           return var3;
         }
         return (int[]) null;
@@ -100,7 +100,7 @@ final class uh {
     private final void a(int param0, int param1) {
         int[] var4 = new int[this.c(param1, (byte) -81)];
         int[] var3 = var4;
-        bc.a(this.field_a, 0, var4, param0, this.field_a.length);
+        ArrayOperations.copyInts(this.field_a, 0, var4, param0, this.field_a.length);
         this.field_a = var4;
     }
 
@@ -119,9 +119,9 @@ final class uh {
             this.field_b = -1 + param3 + param0;
             this.a(param2 ^ 1, param3 + (param0 - 1));
           }
-          bc.a(param1, param4, this.field_a, param0, param3);
+          ArrayOperations.copyInts(param1, param4, this.field_a, param0, param3);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -146,13 +146,13 @@ final class uh {
 
     final static void a(int param0, int param1, int param2) {
         if (param1 != 0) {
-          uh.a((byte) -39);
+          uh.clearSharedReferences((byte) -39);
           ak.field_c = param2;
-          jf.field_b = param0;
+          MouseWheelInput.field_b = param0;
           return;
         }
         ak.field_c = param2;
-        jf.field_b = param0;
+        MouseWheelInput.field_b = param0;
     }
 
     uh(int param0, boolean param1) {

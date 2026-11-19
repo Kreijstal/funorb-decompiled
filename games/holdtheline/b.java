@@ -4,8 +4,8 @@
 final class b {
     static String field_b;
     static String field_a;
-    static mm field_c;
-    static gn field_d;
+    static RasterBuffer field_c;
+    static ResourceArchive field_d;
     static String field_e;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
@@ -13,11 +13,11 @@ final class b {
         int var4_int = 0;
         RuntimeException var4 = null;
         try {
-          nc.field_h.a(param1, param2);
+          NodeHashTableIterator.field_h.a(param1, param2);
           if (param3) {
-            var4_int = io.field_b % nc.field_h.field_s * 2;
-            if (nc.field_h.field_s <= var4_int) {
-              var4_int = nc.field_h.field_s + (-var4_int + nc.field_h.field_s);
+            var4_int = io.field_b % NodeHashTableIterator.field_h.field_s * 2;
+            if (NodeHashTableIterator.field_h.field_s <= var4_int) {
+              var4_int = NodeHashTableIterator.field_h.field_s + (-var4_int + NodeHashTableIterator.field_h.field_s);
             }
             boolean decompiledSharedTail0 = !(var4_int < 10);
             if (!decompiledSharedTail0) {
@@ -25,10 +25,10 @@ final class b {
               decompiledSharedTail0 = (HoldTheLine.field_D != 0);
             }
             if ((decompiledSharedTail0) &&
-              (var4_int > nc.field_h.field_s - 40)) {
-              var4_int = nc.field_h.field_s - 40;
+              (var4_int > NodeHashTableIterator.field_h.field_s - 40)) {
+              var4_int = NodeHashTableIterator.field_h.field_s - 40;
             }
-            cd.a(nc.field_h, (byte) 121, var4_int, param2, 30, 0, 80, 0, param1);
+            cd.a(NodeHashTableIterator.field_h, (byte) 121, var4_int, param2, 30, 0, 80, 0, param1);
           }
           if (param0 != 80) {
             b.a(true, 89, -61, (ei) null);
@@ -37,11 +37,11 @@ final class b {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var4), "b.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var4), "b.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         try {
           field_c = null;
           field_b = null;
@@ -50,7 +50,7 @@ final class b {
           int var1_int = -2 / ((param0 + 18) / 57);
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "b.C(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "b.C(" + param0 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class b {
         int stackIn_63_1 = 0;
         fi stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        da var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -86,8 +86,8 @@ final class b {
           var1 = rd.field_e;
           var2 = var1.f((byte) -103);
           if (var2 == 0) {
-            if (ah.field_a == null) {
-              ah.field_a = new rg(128);
+            if (IntrusiveDeque.field_a == null) {
+              IntrusiveDeque.field_a = new DualNodeHashTable(128);
               se.field_l = 0;
             }
             stackIn_14_0 = (1 != var1.f((byte) -18)) ? 0 : 1;
@@ -98,23 +98,23 @@ final class b {
             }
             var5_ref = wc.a(param0 - 10, var4_ref_String);
             var6_ref = var1.j(param0 - 1241);
-            var7_ref = kf.a((CharSequence) ((Object) var4_ref_String), (byte) 94);
+            var7_ref = MidiPcmStream.a((CharSequence) ((Object) var4_ref_String), (byte) 94);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (null == var5_ref) {
               var5_ref = wc.a(0, var6_ref);
               if (null != var5_ref) {
-                ah.field_a.a((long)var7_ref.hashCode(), (byte) -75, var5_ref);
+                IntrusiveDeque.field_a.put((long)var7_ref.hashCode(), (byte) -75, var5_ref);
               }
             }
             if (var5_ref == null) {
               var5_ref = new fi();
-              ah.field_a.a((long)var7_ref.hashCode(), (byte) -75, var5_ref);
+              IntrusiveDeque.field_a.put((long)var7_ref.hashCode(), (byte) -75, var5_ref);
               fieldTemp$1 = se.field_l;
               se.field_l = se.field_l + 1;
               var5_ref.field_gb = fieldTemp$1;
-              sj.field_H.a((byte) -128, var5_ref);
+              sj.field_H.addLast((byte) -128, var5_ref);
             }
             var5_ref.field_mb = var4_ref_String;
             return;
@@ -133,19 +133,19 @@ final class b {
               return;
             }
             if (var2 != 4) {
-              bl.a((Throwable) null, (byte) 55, "F1: " + em.b(false));
+              MusicPatchPcmStream.a((Throwable) null, (byte) 55, "F1: " + em.b(false));
               r.a(-28036);
               return;
             }
             eg.field_b = 1;
             var3 = var1.j(-1231);
-            vl.field_g = ((String) (var3)).intern();
+            SecondaryNodeDequeIterator.field_g = ((String) (var3)).intern();
             var4 = var1.f((byte) -70);
             jh.a(var4, (byte) 61);
             return;
           }
           if (jo.field_b == null) {
-            jo.field_b = new rg(128);
+            jo.field_b = new DualNodeHashTable(128);
             sl.field_a = 0;
           }
           var3Lifetime1 = var1.j(-1231);
@@ -158,24 +158,24 @@ final class b {
           if (null == var6) {
             var6 = ra.a(var5, param0 ^ 101);
             if (var6 != null) {
-              jo.field_b.a((long)kf.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
+              jo.field_b.put((long)MidiPcmStream.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
             }
           }
           if (null == var6) {
             var6 = new fi();
-            jo.field_b.a((long)kf.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
+            jo.field_b.put((long)MidiPcmStream.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
             fieldTemp$0 = sl.field_a;
             sl.field_a = sl.field_a + 1;
             var6.field_gb = fieldTemp$0;
-            be.field_j.a((byte) -105, var6);
+            MidiKeyUsage.field_j.addLast((byte) -105, var6);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6.field_mb = var4_ref_StringLifetime1;
           var6.field_hb = (String) (var3Lifetime1);
-          var6.d(param0 ^ 10);
-          var7 = (fi) (be.field_j.b((byte) 96));
+          var6.unlink(param0 ^ 10);
+          var7 = (fi) (MidiKeyUsage.field_j.first((byte) 96));
           scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_63_0 = var6;
@@ -184,13 +184,13 @@ final class b {
               if (var8 != 0) {
                 break scanLoop1;
               }
-              if (gi.a(stackIn_63_0, stackIn_63_1, stackIn_63_2)) {
-                var7 = (fi) (be.field_j.c((byte) -33));
+              if (NameSuggestionsPanel.a(stackIn_63_0, stackIn_63_1, stackIn_63_2)) {
+                var7 = (fi) (MidiKeyUsage.field_j.next((byte) -33));
                 continue;
               }
             }
             if (null == var7) {
-              be.field_j.a((byte) -125, var6);
+              MidiKeyUsage.field_j.addLast((byte) -125, var6);
               if (var8 == 0) {
                 return;
               }
@@ -200,12 +200,12 @@ final class b {
             stackIn_63_2 = var6;
             break;
           }
-          ah.a(stackIn_63_0, stackIn_63_1, stackIn_63_2);
+          IntrusiveDeque.insertBefore(stackIn_63_0, stackIn_63_1, stackIn_63_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) var1_ref), "b.E(" + param0 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) var1_ref), "b.E(" + param0 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class b {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class b {
               var7 = stackIn_16_0;
               while (var6.field_e > var7) {
                 var8 = (vj) (var6.field_b[var7]);
-                var4_int = var4_int + ah.a(var8, (byte) 78, param2, param1);
+                var4_int = var4_int + IntrusiveDeque.a(var8, (byte) 78, param2, param1);
                 var7++;
               }
               var5++;
@@ -314,7 +314,7 @@ final class b {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ final class b {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          var2 = (ih) (io.field_c.b((byte) 121));
+          var2 = (ih) (io.field_c.first((byte) 121));
           do {
             if (null == var2) {
               if (!param0) {
@@ -334,13 +334,13 @@ final class b {
               }
               break;
             }
-            mk.a(1, param1, var2);
-            var2 = (ih) (io.field_c.c((byte) -108));
+            NanoTickClock.a(1, param1, var2);
+            var2 = (ih) (io.field_c.next((byte) -108));
           } while (var3 == 0);
-          var2_ref = sg.field_v.b((byte) 127);
+          var2_ref = RaceWorld.field_v.first((byte) 127);
           while (var2_ref != null) {
             hh.a(param1, (byte) -23);
-            var2_ref = sg.field_v.c((byte) -78);
+            var2_ref = RaceWorld.field_v.next((byte) -78);
             if (var3 != 0) {
               return;
             }
@@ -349,7 +349,7 @@ final class b {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw kk.a((Throwable) ((Object) runtimeException), "b.A(" + param0 + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "b.A(" + param0 + ',' + param1 + ')');
         }
     }
 

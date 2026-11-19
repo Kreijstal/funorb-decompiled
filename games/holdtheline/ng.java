@@ -3,10 +3,10 @@
  */
 final class ng {
     static String field_e;
-    private gn field_d;
-    private bi field_c;
+    private ResourceArchive field_d;
+    private WeightedLruCache field_c;
     static String field_b;
-    private gn field_a;
+    private ResourceArchive field_a;
 
     final on a(int param0, int param1) {
         byte[] var4 = null;
@@ -24,7 +24,7 @@ final class ng {
         }
         var3 = new on();
         if (var4 != null) {
-          var3.a(120, new th(var4));
+          var3.a(120, new PacketBuffer(var4));
         }
         if (param0 < 32768) {
           this.field_c.a((long)param0, var3, false);
@@ -35,7 +35,7 @@ final class ng {
         return var3;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_e = null;
         int var1 = -98 % ((param0 - 29) / 59);
         field_b = null;

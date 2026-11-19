@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb extends gd {
+final class cb extends TextFieldValidator {
     private boolean field_m;
     static volatile int field_j;
     private String field_k;
     static boolean field_i;
     static int field_l;
 
-    cb(nk param0) {
+    cb(EditableTextField param0) {
         super(param0);
         this.field_m = false;
     }
@@ -65,7 +65,7 @@ final class cb extends gd {
             this.field_k = (String) null;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = en.a(12260, var5);
+          var3 = GameKeyHandler.a(12260, var5);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -83,10 +83,10 @@ final class cb extends gd {
             this.field_m = var4.field_f;
           }
           if (this.field_m) {
-            stackIn_16_0 = od.field_m;
+            stackIn_16_0 = TextHotspotRange.field_m;
             return stackIn_16_0;
           }
-          stackIn_14_0 = ud.field_j;
+          stackIn_14_0 = BufferedRandomAccessFile.field_j;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class cb extends gd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class cb extends gd {
             field_i = true;
           }
           var4 = (CharSequence) ((Object) param0);
-          if (!ff.a(var4, 8192)) {
+          if (!ArchiveProvider.a(var4, 8192)) {
             stackIn_5_0 = g.field_k;
             return stackIn_5_0;
           }
@@ -149,7 +149,7 @@ final class cb extends gd {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

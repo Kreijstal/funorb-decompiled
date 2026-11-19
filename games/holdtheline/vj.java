@@ -30,12 +30,12 @@ abstract class vj extends wc {
           }
           if (fd.field_c == ak.field_b &&
             param1.equals(rd.field_j)) {
-            ak.field_b = gg.field_M;
-            stackIn_8_0 = ja.field_U;
+            ak.field_b = ValidationIndicator.field_M;
+            stackIn_8_0 = RaceVehicle.field_U;
             return stackIn_8_0;
           }
           ak.field_b = ImageProducerRasterBuffer.field_n;
-          ja.field_U = null;
+          RaceVehicle.field_U = null;
           rd.field_j = param1;
           stackIn_10_0 = null;
           return (nd) (stackIn_10_0);
@@ -49,11 +49,11 @@ abstract class vj extends wc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_m = null;
         if (param0 > -43) {
           field_n = (String) null;

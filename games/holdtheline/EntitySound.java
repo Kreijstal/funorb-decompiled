@@ -1,0 +1,109 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class EntitySound extends IntrusiveNode {
+    static boolean field_j;
+    PcmSampleStream field_o;
+    int field_n;
+    static int field_l;
+    static ResourceArchive field_i;
+    static int[] field_m;
+    static float field_k;
+    MovingEntity field_q;
+    ui field_p;
+
+    final static String a(boolean param0, long param1) {
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
+        StringBuilder discarded$0 = null;
+        int var11 = HoldTheLine.field_D;
+        if (0L >= param1) {
+          return null;
+        }
+        if (6582952005840035281L <= param1) {
+          return null;
+        }
+        if (param1 % 37L == 0L) {
+          return null;
+        }
+        int var3 = 0;
+        long var4 = param1;
+        while (var4 != 0L) {
+          var3++;
+          var4 = var4 / 37L;
+        }
+        StringBuilder var6 = new StringBuilder(var3);
+        if (!param0) {
+          return (String) null;
+        }
+        while (param1 != 0L) {
+          var7 = param1;
+          param1 = param1 / 37L;
+          var9 = ne.field_a[(int)(-(param1 * 37L) + var7)];
+          if (95 == var9) {
+            var10 = var6.length() - 1;
+            var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+            var9 = 160;
+          }
+          discarded$0 = var6.append((char) var9);
+        }
+        var6.reverse();
+        var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+        return var6.toString();
+    }
+
+    public static void clearSharedReferences(int param0) {
+        field_m = null;
+        if (param0 != 0) {
+          field_m = (int[]) null;
+          field_i = null;
+          return;
+        }
+        field_i = null;
+    }
+
+    final void initializeEmitter(MovingEntity param0, byte param1, int param2, PcmSample param3) {
+        try {
+          this.field_o = PcmSampleStream.b(param3, 256, param2);
+          this.field_n = param2;
+          this.field_q = param0;
+          if (param1 >= -69) {
+            EntitySound.a(false, -7L);
+          }
+          this.field_p = null;
+        } catch (RuntimeException runtimeException) {
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static ClientException wrapException(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
+        } else {
+          var2 = (ClientException) ((Object) param0);
+          var2.field_a = var2.field_a + ' ' + param1;
+        }
+        return var2;
+    }
+
+    EntitySound(PcmSample param0, MovingEntity param1, int param2) {
+        try {
+          this.initializeEmitter(param1, (byte) -95, param2, param0);
+        } catch (RuntimeException runtimeException) {
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        if (param3 < -69) {
+          return ak.a(param1, param0, 1, param4, param2, 1, 0, 3, 1);
+        }
+        field_k = -0.09486949443817139f;
+        return ak.a(param1, param0, 1, param4, param2, 1, 0, 3, 1);
+    }
+
+    static {
+    }
+}

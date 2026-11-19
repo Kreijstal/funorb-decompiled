@@ -9,10 +9,10 @@ final class le extends rd {
     static e field_u;
     static int field_r;
     static int[][] field_o;
-    static ah field_n;
+    static IntrusiveDeque field_n;
     static String field_p;
     static int field_t;
-    static hj field_m;
+    static Sprite field_m;
 
     le(int param0, float param1, int[] param2) {
         try {
@@ -22,11 +22,11 @@ final class le extends rd {
           this.field_i = this.field_q.length;
           this.field_k = (float)this.field_i * param1;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "le.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "le.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_n = null;
         field_s = null;
         field_u = null;
@@ -106,8 +106,8 @@ final class le extends rd {
             var13 = var13 / var14;
             var12 = var12 / var14;
             var15 = (var12 - var13 + 4.0f) * 0.25f;
-            var16 = lk.a(var15, -1, var7);
-            tc.d(var8, var9, var10, var11, var16);
+            var16 = IterableSecondaryNodeDeque.a(var15, -1, var7);
+            SoftwareRasterizer.d(var8, var9, var10, var11, var16);
             var9 = var11;
             var8 = var10;
           }
@@ -122,8 +122,8 @@ final class le extends rd {
             var12Lifetime1 = var12Lifetime1 / var14Lifetime1;
             var13Lifetime1 = var13Lifetime1 / var14Lifetime1;
             var15Lifetime1 = (4.0f - var12Lifetime1 + var13Lifetime1) * 0.25f;
-            var16Lifetime1 = lk.a(var15Lifetime1, -1, var7);
-            tc.d(var8Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var16Lifetime1);
+            var16Lifetime1 = IterableSecondaryNodeDeque.a(var15Lifetime1, -1, var7);
+            SoftwareRasterizer.d(var8Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var16Lifetime1);
             var8Lifetime1 = var10Lifetime1;
             var9Lifetime1 = var11Lifetime1;
           }
@@ -144,21 +144,21 @@ final class le extends rd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
-    final static hj[] a(String param0, int param1) {
+    final static Sprite[] a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        hj[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -59 / ((-61 - param1) / 34);
-          stackIn_1_0 = si.a(fb.field_i, 33, param0, "");
+          stackIn_1_0 = StandardContentTransitionDialog.a(fb.field_i, 33, param0, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class le extends rd {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -178,47 +178,47 @@ final class le extends rd {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          da var4 = null;
-          da var5 = null;
+          IsaacPacketBuffer var4 = null;
+          IsaacPacketBuffer var5 = null;
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (param1 != 105) {
             return true;
           }
-          if (null == gg.field_N) {
-            gg.field_N = na.field_s.a(0, bo.field_e, uj.field_f);
+          if (null == ValidationIndicator.field_N) {
+            ValidationIndicator.field_N = na.field_s.a(0, bo.field_e, uj.field_f);
           }
-          if (gg.field_N.field_d == 0) {
+          if (ValidationIndicator.field_N.field_d == 0) {
             return false;
           }
           dupTemp$1 = bb.b(-1);
           qf.field_l = dupTemp$1;
           cm.field_b = dupTemp$1;
-          if (gg.field_N.field_d != 1) {
+          if (ValidationIndicator.field_N.field_d != 1) {
             d.field_f = vh.field_a;
           } else {
             try {
-              lk.field_h = new nn((java.net.Socket) (gg.field_N.field_b), na.field_s);
+              IterableSecondaryNodeDeque.field_h = new BufferedSocket((java.net.Socket) (ValidationIndicator.field_N.field_b), na.field_s);
               var4 = rd.field_e;
               var5 = var4;
-              da.field_p.field_l = 0;
-              var5.field_l = 0;
-              d.field_f = a.field_S;
+              IsaacPacketBuffer.field_p.position = 0;
+              var5.position = 0;
+              d.field_f = AccountCreationForm.field_S;
               stackIn_12_0 = (!param0) ? -1 : -2;
-              ab.field_pb = stackIn_12_0;
+              AccountProgressDialog.field_pb = stackIn_12_0;
               hc.field_e = stackIn_12_0;
               rd.field_l = stackIn_12_0;
-              ui.a(de.field_L, (byte) -95, da.field_p, ci.field_n, ce.field_m);
+              ui.a(DisplayNameForm.field_L, (byte) -95, IsaacPacketBuffer.field_p, ci.field_n, ce.field_m);
               qn.a(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               d.field_f = vh.field_a;
-              gg.field_N = null;
+              ValidationIndicator.field_N = null;
               return true;
             }
           }
-          gg.field_N = null;
+          ValidationIndicator.field_N = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -227,12 +227,12 @@ final class le extends rd {
         }
     }
 
-    final static qm a(wc[] param0, float param1, byte param2) {
+    final static Point2i a(wc[] param0, float param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         float var4 = 0.0f;
-        qm stackIn_5_0 = null;
-        qm stackIn_7_0 = null;
+        Point2i stackIn_5_0 = null;
+        Point2i stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -260,7 +260,7 @@ final class le extends rd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -268,6 +268,6 @@ final class le extends rd {
         field_u = new e(6, 0, 4, 2);
         field_o = new int[][]{new int[]{200, 2}, new int[]{500, 5}, new int[]{100, 1}, new int[]{100, 1}, new int[]{100, 1}, new int[]{100, 1}, new int[]{100, 1}, new int[]{200, 2}, new int[]{200, 2}, new int[]{200, 2}, new int[]{200, 2}, new int[]{300, 3}, new int[]{200, 2}, new int[]{300, 3}, new int[]{200, 2}, new int[]{300, 3}};
         field_p = "This password contains your Player Name, and would be easy to guess";
-        field_n = new ah();
+        field_n = new IntrusiveDeque();
     }
 }

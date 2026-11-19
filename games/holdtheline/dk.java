@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dk implements dh, vc {
+class dk implements WidgetRenderer, TextWidgetRenderer {
     int field_h;
     static String field_m;
     int field_n;
@@ -16,17 +16,17 @@ class dk implements dh, vc {
     private int field_k;
     private boolean field_o;
     int field_p;
-    qi field_f;
+    BitmapFont field_f;
     int field_e;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           return;
         }
         field_m = null;
     }
 
-    public final int a(n param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -51,7 +51,7 @@ class dk implements dh, vc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -74,13 +74,13 @@ class dk implements dh, vc {
           param1.field_o = this.field_o;
           param1.field_n = this.field_n;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "dk.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dk.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(int param0, n param1, int param2, byte param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, byte param3, int param4) {
         int var6_int = 0;
-        lm var7 = null;
+        TextLayout var7 = null;
         int var8 = 0;
         lf var9 = null;
         int var10 = 0;
@@ -99,7 +99,7 @@ class dk implements dh, vc {
         try {
           var6_int = -67 % ((param3 - 57) / 49);
           if (param1.c((byte) -20)) {
-            var7 = this.a((byte) 20, param1);
+            var7 = this.getTextLayout((byte) 20, param1);
             var8 = var7.b(param2, -22539);
             var9 = var7.field_b[var8];
             var10 = var7.a(16777215, param2);
@@ -129,22 +129,22 @@ class dk implements dh, vc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, n param2, byte param3) {
+    private final void a(int param0, int param1, UiWidget param2, byte param3) {
         if (param3 != -53) {
           return;
         }
         try {
           this.a(0, param0, this.field_k, (byte) -63, param1, this.field_c, param2, 0);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "dk.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dk.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    public void a(boolean param0, int param1, int param2, n param3, int param4) {
+    public void drawWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         if (param2 >= -48) {
           return;
         }
@@ -154,24 +154,24 @@ class dk implements dh, vc {
         try {
           this.a(param1, param4, param3, (byte) -53);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "dk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    public final lm a(byte param0, n param1) {
+    public final TextLayout getTextLayout(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        lm stackIn_5_0 = null;
-        lm stackIn_10_0 = null;
+        TextLayout stackIn_5_0 = null;
+        TextLayout stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.field_i == null) {
-            param1.field_i = (lm) ((Object) new lg());
+            param1.field_i = (TextLayout) ((Object) new lg());
           }
           if (param0 != 20) {
-            stackIn_5_0 = (lm) null;
+            stackIn_5_0 = (TextLayout) null;
             return stackIn_5_0;
           }
           if (this.field_o) {
@@ -191,23 +191,23 @@ class dk implements dh, vc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public final int b(byte param0, n param1) {
+    public final int b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        n var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a((byte) 20, param1);
+          this.getTextLayout((byte) 20, param1);
           if (param0 != -36) {
-            var4 = (n) null;
-            this.a((n) null, -60);
+            var4 = (UiWidget) null;
+            this.a((UiWidget) null, -60);
           }
           stackIn_3_0 = param1.field_i.a((byte) 108) + this.field_j + this.field_n;
           return stackIn_3_0;
@@ -221,11 +221,11 @@ class dk implements dh, vc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    String a(n param0, byte param1) {
+    String a(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_1_0 = null;
@@ -247,11 +247,11 @@ class dk implements dh, vc {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3, int param4, int param5, n param6, int param7) {
+    private final void a(int param0, int param1, int param2, byte param3, int param4, int param5, UiWidget param6, int param7) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -266,7 +266,7 @@ class dk implements dh, vc {
         var13 = HoldTheLine.field_D;
         try {
           if (param3 > -57) {
-            dk.b(true);
+            dk.clearSharedReferences(true);
           }
           boolean decompiledFrameRemainder0 = true;
           td.a(param6.field_k + (param1 + param6.field_x), param6.field_k + param1, param6.field_o + (param4 + param6.field_u), true, param6.field_o + param4);
@@ -316,11 +316,11 @@ class dk implements dh, vc {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param7).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param7).append(')').toString());
         }
     }
 
-    private final int c(byte param0, n param1) {
+    private final int c(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -329,7 +329,7 @@ class dk implements dh, vc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -59) {
-            this.field_f = (qi) null;
+            this.field_f = (BitmapFont) null;
           }
           stackIn_3_0 = -this.field_e + param1.field_u - this.field_p;
           return stackIn_3_0;
@@ -343,11 +343,11 @@ class dk implements dh, vc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final int a(int param0, n param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -370,11 +370,11 @@ class dk implements dh, vc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final int a(int param0, byte param1, int param2, int param3, n param4, int param5) {
+    public final int a(int param0, byte param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -387,7 +387,7 @@ class dk implements dh, vc {
             stackIn_2_0 = -32;
             return stackIn_2_0;
           }
-          this.a((byte) 20, param4);
+          this.getTextLayout((byte) 20, param4);
           stackIn_4_0 = param4.field_i.a(-this.a(param4, param3, 13112) + param2, 8, -this.a(-1337403295, param4, param0) + param5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -400,11 +400,11 @@ class dk implements dh, vc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final int a(int param0, byte param1, n param2, int param3) {
+    private final int a(int param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -426,7 +426,7 @@ class dk implements dh, vc {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -437,7 +437,7 @@ class dk implements dh, vc {
         return this.field_f.field_I + this.field_f.field_G;
     }
 
-    public final int a(int param0, n param1, int param2) {
+    public final int a(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -462,11 +462,11 @@ class dk implements dh, vc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final int a(n param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -474,7 +474,7 @@ class dk implements dh, vc {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a((byte) 20, param0);
+          this.getTextLayout((byte) 20, param0);
           if (param1 > -82) {
             this.field_c = 115;
           }
@@ -490,11 +490,11 @@ class dk implements dh, vc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, n param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -511,15 +511,15 @@ class dk implements dh, vc {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        lm var17 = null;
-        lm var18 = null;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
         var16 = HoldTheLine.field_D;
         try {
           if (param3 == param4) {
             return;
           }
           if (param5.c((byte) -20)) {
-            var17 = this.a((byte) 20, param5);
+            var17 = this.getTextLayout((byte) 20, param5);
             var18 = var17;
             if (param4 < param3) {
               var9 = param3;
@@ -567,11 +567,11 @@ class dk implements dh, vc {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
-    private final int a(byte param0, int param1, int param2, n param3) {
+    private final int a(byte param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -593,18 +593,18 @@ class dk implements dh, vc {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
     protected dk() {
     }
 
-    dk(qi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    dk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void b(int param0, n param1) {
+    private final void b(int param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -619,7 +619,7 @@ class dk implements dh, vc {
         var7 = HoldTheLine.field_D;
         try {
           if (param1.field_i == null) {
-            param1.field_i = (lm) ((Object) new lg());
+            param1.field_i = (TextLayout) ((Object) new lg());
           }
           var3_int = this.a(param0 ^ -1337403314, param1);
           if (param0 != -1337403295) {
@@ -670,7 +670,7 @@ class dk implements dh, vc {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -680,10 +680,10 @@ class dk implements dh, vc {
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new io(tn.d(0), ab.n(112));
+        return new io(tn.d(0), AccountProgressDialog.n(112));
     }
 
-    dk(qi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    dk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_a = param10;
           this.field_i = param7;
@@ -699,7 +699,7 @@ class dk implements dh, vc {
           this.field_h = param9;
           this.field_e = param4;
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

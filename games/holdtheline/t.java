@@ -23,7 +23,7 @@ final class t extends IntrusiveNode {
           for (var2_int = param0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!oe.a((char) var3, -125) &&
-              !ii.a(48, (char) var3)) {
+              !ClientException.a(48, (char) var3)) {
               return true;
             }
           }
@@ -38,21 +38,21 @@ final class t extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(String param0, byte param1) {
         try {
           if (param1 >= -21) {
-            t.a(10);
+            t.clearSharedReferences(10);
           }
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "t.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "t.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(gn param0, gn param1, byte param2, gn param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         RuntimeException stackIn_88_0 = null;
         StringBuilder stackIn_88_1 = null;
         String stackIn_89_2 = null;
@@ -165,7 +165,7 @@ final class t extends IntrusiveNode {
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class t extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_k = null;
         field_i = null;
         field_j = null;

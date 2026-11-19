@@ -4,8 +4,8 @@
 final class sm {
     static uf field_a;
     static String field_d;
-    static ah field_b;
-    static si field_c;
+    static IntrusiveDeque field_b;
+    static StandardContentTransitionDialog field_c;
 
     final static String a(int param0, int param1, int param2, byte[] param3) {
         int var6 = 0;
@@ -31,7 +31,7 @@ final class sm {
           var10 = var11;
           var4 = var10;
           if (param2 != -129) {
-            sm.a((byte) -10);
+            sm.clearSharedReferences((byte) -10);
           }
           var5 = 0;
           for (var6 = 0; param0 > var6; var6++) {
@@ -39,7 +39,7 @@ final class sm {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = ja.field_Qb[var7 - 128];
+                var8 = RaceVehicle.field_Qb[var7 - 128];
                 if (0 == var8) {
                   var8 = 63;
                 }
@@ -62,11 +62,11 @@ final class sm {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_d = null;
         field_c = null;
         if (param0 != 72) {
@@ -78,6 +78,6 @@ final class sm {
 
     static {
         field_d = "<col=2>Not Attempted</col>";
-        field_b = new ah();
+        field_b = new IntrusiveDeque();
     }
 }

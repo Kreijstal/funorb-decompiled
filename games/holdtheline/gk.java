@@ -7,7 +7,7 @@ final class gk {
     static go field_b;
     static float[] field_d;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 == 115) {
@@ -15,7 +15,7 @@ final class gk {
           field_d = null;
           return;
         }
-        gk.a((byte) 54);
+        gk.clearSharedReferences((byte) 54);
         field_b = null;
         field_d = null;
     }
@@ -29,7 +29,7 @@ final class gk {
           param0.addMouseMotionListener(ic.field_d);
           param0.addFocusListener(ic.field_d);
         } catch (RuntimeException runtimeException) {
-          throw kk.a((Throwable) ((Object) runtimeException), "gk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
