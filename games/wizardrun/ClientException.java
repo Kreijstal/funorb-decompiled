@@ -15,17 +15,17 @@ final class ClientException extends RuntimeException {
     }
 
     final static void a(int param0) {
-        ic.field_b = null;
+        DecodedSpritePalette.palette = null;
         MouseInputHandler.field_b = null;
         TextFieldValidator.field_j = (byte[][]) null;
         ImageProducerRasterBuffer.field_k = null;
         if (param0 == 0) {
-          ne.field_h = null;
+          AccountFormText.field_h = null;
           GameMenu.field_q = null;
           return;
         }
         field_a = false;
-        ne.field_h = null;
+        AccountFormText.field_h = null;
         GameMenu.field_q = null;
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ej {
-    static ga field_b;
+    static IntegerSyntaxHelpers field_b;
     static java.applet.Applet field_a;
     static String field_e;
     static int field_d;
@@ -197,7 +197,7 @@ final class ej {
     }
 
     static {
-        field_b = new ga();
+        field_b = new IntegerSyntaxHelpers();
         field_e = "Loading music";
     }
 }

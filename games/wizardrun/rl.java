@@ -3,7 +3,7 @@
  */
 final class rl {
     static int field_b;
-    static bh field_a;
+    static QuickChatDynamicCommand field_a;
 
     final static void a(boolean param0, boolean param1) {
         uk.a((byte) -123, param0, true);
@@ -21,11 +21,11 @@ final class rl {
 
     final static void a(int param0) {
         int var1 = -51 % ((param0 - 63) / 40);
-        uh.field_a = 0;
+        LoginCredentials.field_a = 0;
     }
 
     static {
         field_b = 9;
-        field_a = new bh(13, 0, 1, 0);
+        field_a = new QuickChatDynamicCommand(13, 0, 1, 0);
     }
 }

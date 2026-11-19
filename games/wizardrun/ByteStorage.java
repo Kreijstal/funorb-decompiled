@@ -10,11 +10,11 @@ abstract class ByteStorage {
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         try {
-          we.field_c = ql.a("", false);
-          we.field_c.a(false, 104);
+          we.field_c = HuffmanDecoder.createEmailCheck("", false);
+          we.field_c.complete(false, 104);
           PlatformActor.loadCommonWidgetSprites(param3, param0 - 2109, param1, param2);
           ExceptionSupport.a(-126);
-          fi.field_y = ej.field_b;
+          NetworkArchiveRequest.field_y = ej.field_b;
           if (param0 != 2202) {
             field_a = (String) null;
           }

@@ -4,13 +4,13 @@
 final class ih {
     static String[] field_c;
     static boolean field_a;
-    static uc field_b;
+    static ArchiveLoadingPlan field_b;
 
-    final static int a(byte param0) {
+    final static int getTickRate(byte param0) {
         if (param0 <= -77) {
           return (int)(1000000000L / NameSuggestionsPanel.field_E);
         }
-        ih.a(76, -4, -17, 16, true, -96, 63);
+        ih.isPointInsideRectangle(76, -4, -17, 16, true, -96, 63);
         return (int)(1000000000L / NameSuggestionsPanel.field_E);
     }
 
@@ -31,7 +31,7 @@ final class ih {
           if (param3 != 0) {
             field_a = true;
           }
-          if (fi.field_y != ej.field_b) {
+          if (NetworkArchiveRequest.field_y != ej.field_b) {
             return false;
           }
           var8 = new kk(GameShell.field_A, param2);
@@ -41,10 +41,10 @@ final class ih {
             return true;
           }
           LoginChoicePanel.field_F = null;
-          fi.field_y = TextButton.field_E;
+          NetworkArchiveRequest.field_y = TextButton.field_E;
           Js5Transport.field_l = param0;
           QuickChatPhraseDefinition.field_t = param4;
-          sf.field_a = param5;
+          EmailCheckRequest.field_a = param5;
           we.field_a = param6;
           UiWidget.field_m = param1;
           return true;
@@ -81,12 +81,12 @@ final class ih {
     }
 
     final static void a(int param0) {
-        if (!qb.field_p) {
+        if (!FramedButtonPainter.field_p) {
           throw new IllegalStateException();
         }
         MessagePanel.field_M = true;
-        ml.a(param0 + 11579568, true);
-        ml.field_t = param0;
+        ArchiveRequest.a(param0 + 11579568, true);
+        ArchiveRequest.field_t = param0;
     }
 
     public static void releaseStatics(int param0) {
@@ -98,7 +98,7 @@ final class ih {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static boolean isPointInsideRectangle(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         if (!param4) {
           field_a = true;
           if (param5 < param0) {

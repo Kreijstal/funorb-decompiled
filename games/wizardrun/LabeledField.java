@@ -18,18 +18,18 @@ final class LabeledField extends SingleChildWidget {
         lc.field_d = true;
         GameShell.field_A.d(false);
         int var1 = -82 / ((param0 - 71) / 54);
-        DateFormattingHelpers.a(uh.field_f, false, -124);
+        DateFormattingHelpers.a(LoginCredentials.field_f, false, -124);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        int var5 = param0 + this.field_o;
-        int var6 = param3 + this.field_l;
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        int var5 = param0 + this.x;
+        int var6 = param3 + this.y;
+        super.drawLayer(param0, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
-        int var7 = !this.field_O ? 0 : -this.field_M + this.field_r - this.field_L * 2;
-        this.field_N.a(this.field_I, var5 + var7 + this.field_L, this.field_L + var6, this.field_M - this.field_L, -(2 * this.field_L) + this.field_n, this.field_J, -1, !this.field_O ? 2 : 0, 1, this.field_N.field_M);
+        int var7 = !this.field_O ? 0 : -this.field_M + this.width - this.field_L * 2;
+        this.field_N.a(this.field_I, var5 + var7 + this.field_L, this.field_L + var6, this.field_M - this.field_L, -(2 * this.field_L) + this.height, this.field_J, -1, !this.field_O ? 2 : 0, 1, this.field_N.field_M);
     }
 
     LabeledField(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
@@ -62,7 +62,7 @@ final class LabeledField extends SingleChildWidget {
           if (param3 >= var13) {
             var13 = param3;
           } else {
-            this.a(118, param1, var13, param2, param0);
+            this.setBounds(118, param1, var13, param2, param0);
           }
           if (this.field_O) {
             stackIn_10_0 = 0;
@@ -70,7 +70,7 @@ final class LabeledField extends SingleChildWidget {
             stackIn_10_0 = this.field_M + 2 * this.field_L;
           }
           var14 = stackIn_10_0;
-          this.field_F.a(118, (var13 - param3 >> 1) + this.field_L, -(this.field_L * 2) + param3, -this.field_M + (param2 - this.field_L * 3), var14);
+          this.field_F.setBounds(118, (var13 - param3 >> 1) + this.field_L, -(this.field_L * 2) + param3, -this.field_M + (param2 - this.field_L * 3), var14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,10 +107,10 @@ final class LabeledField extends SingleChildWidget {
     }
 
     final String getTooltip(boolean param0) {
-        int var2 = this.field_F.field_v ? 1 : 0;
-        this.field_F.field_v = this.field_v;
+        int var2 = this.field_F.hovered ? 1 : 0;
+        this.field_F.hovered = this.hovered;
         String var3 = this.field_F.getTooltip(param0);
-        this.field_F.field_v = var2 != 0 ? true : false;
+        this.field_F.hovered = var2 != 0 ? true : false;
         if (!param0) {
           return var3;
         }

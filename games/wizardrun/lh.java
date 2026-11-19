@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lh {
-    static bh field_a;
+    static QuickChatDynamicCommand field_a;
     static IntrusiveDeque field_b;
     private static String field_z;
 
     public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
-          field_a = (bh) null;
+          field_a = (QuickChatDynamicCommand) null;
           field_b = null;
           return;
         }
@@ -18,7 +18,7 @@ final class lh {
 
     static {
         field_z = "lh.A(";
-        field_a = new bh(15, 0, 1, 0);
+        field_a = new QuickChatDynamicCommand(15, 0, 1, 0);
         field_b = new IntrusiveDeque();
     }
 }

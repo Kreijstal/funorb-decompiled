@@ -31,7 +31,7 @@ final class FlatTriangleRasterizer {
         var19 = wizardrun.field_H;
         try {
           if (param6 >= 0 &&
-            param8 < cj.field_d) {
+            param8 < TriangleRasterState.viewportHeight) {
             if (param7 != -20476) {
               font12 = (MonochromeBitmapFont) null;
             }
@@ -40,9 +40,9 @@ final class FlatTriangleRasterizer {
               param0 < 0) {
               return;
             }
-            if (param3 >= cj.field_b &&
-              cj.field_b <= param5 &&
-              param0 >= cj.field_b) {
+            if (param3 >= TriangleRasterState.viewportWidth &&
+              TriangleRasterState.viewportWidth <= param5 &&
+              param0 >= TriangleRasterState.viewportWidth) {
               return;
             }
             var14 = -param8 + param6;
@@ -104,19 +104,19 @@ final class FlatTriangleRasterizer {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = cj.field_a[param8];
+                var16Lifetime2 = TriangleRasterState.scanlineOffsets[param8];
                 while (param8 < param2) {
                   var17 = var9_int >> 16;
-                  if (cj.field_b > var17) {
+                  if (TriangleRasterState.viewportWidth > var17) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (var18 == 0) {
                       if (var17 >= 0 &&
-                        var17 < cj.field_b) {
+                        var17 < TriangleRasterState.viewportWidth) {
                         se.a(var17 + var16Lifetime2, 123, param1, var18, param4);
                       }
                     } else {
-                      if (var18 + var17 >= cj.field_b) {
-                        var18 = -1 + (-var17 + cj.field_b);
+                      if (var18 + var17 >= TriangleRasterState.viewportWidth) {
+                        var18 = -1 + (-var17 + TriangleRasterState.viewportWidth);
                       }
                       if (var17 < 0) {
                         se.a(var16Lifetime2, 95, param1, var17 + var18, param4);
@@ -126,7 +126,7 @@ final class FlatTriangleRasterizer {
                     }
                   }
                   param8++;
-                  if (cj.field_d <= param8) {
+                  if (TriangleRasterState.viewportHeight <= param8) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
@@ -155,19 +155,19 @@ final class FlatTriangleRasterizer {
               var10 = var10 + var12 * param8;
               param8 = 0;
             }
-            var15Lifetime1 = cj.field_a[param8];
+            var15Lifetime1 = TriangleRasterState.scanlineOffsets[param8];
             while (param6 > param8) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < cj.field_b) {
+              if (var16Lifetime1 < TriangleRasterState.viewportWidth) {
                 var17Lifetime1 = -(var9_int >> 16) + (var10 >> 16);
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < cj.field_b) {
+                    var16Lifetime1 < TriangleRasterState.viewportWidth) {
                     se.a(var15Lifetime1 + var16Lifetime1, 123, param1, var17Lifetime1, param4);
                   }
                 } else {
-                  if (cj.field_b <= var16Lifetime1 + var17Lifetime1) {
-                    var17Lifetime1 = -1 + (cj.field_b - var16Lifetime1);
+                  if (TriangleRasterState.viewportWidth <= var16Lifetime1 + var17Lifetime1) {
+                    var17Lifetime1 = -1 + (TriangleRasterState.viewportWidth - var16Lifetime1);
                   }
                   if (0 <= var16Lifetime1) {
                     se.a(var15Lifetime1 + var16Lifetime1, 89, param1, var17Lifetime1, param4);
@@ -177,7 +177,7 @@ final class FlatTriangleRasterizer {
                 }
               }
               param8++;
-              if (param8 >= cj.field_d) {
+              if (param8 >= TriangleRasterState.viewportHeight) {
                 return;
               }
               var9_int = var9_int + var11;

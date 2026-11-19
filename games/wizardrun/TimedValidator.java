@@ -24,7 +24,7 @@ abstract class TimedValidator implements Validator {
             return stackIn_2_0;
           }
           if (MusicPatch.a(param3, param0, param1, -120)) {
-            stackIn_7_0 = dc.a(19999);
+            stackIn_7_0 = ProgressSubmission.buildDecodedSprites(19999);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -53,12 +53,12 @@ abstract class TimedValidator implements Validator {
         if (!param0) {
           field_b = (LoginForm) null;
         }
-        return this.b(true);
+        return this.validateCurrentText(true);
     }
 
-    abstract String b(byte param0);
+    abstract String getCurrentValidationMessage(byte param0);
 
-    abstract ValidationState b(boolean param0);
+    abstract ValidationState validateCurrentText(boolean param0);
 
     final static void c(int param0) {
         Sprite var1 = null;
@@ -68,7 +68,7 @@ abstract class TimedValidator implements Validator {
         try {
           var1 = new Sprite(540, 140);
           UrlPacketDownloader.a(var1, false);
-          cj.c();
+          TriangleRasterState.useRasterClip();
           SoftwareRasterizer.clear();
           DualLinkNodeHashTable.field_f = 0;
           gf.k(param0 ^ -301);
@@ -82,7 +82,7 @@ abstract class TimedValidator implements Validator {
           if (param0 != 350) {
             field_a = 72;
           }
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "r.N(" + param0 + ')');
         }
@@ -98,7 +98,7 @@ abstract class TimedValidator implements Validator {
         if ((this.field_f + 350L) > MonotonicClockHelpers.monotonicMillis((byte) 29)) {
           return null;
         }
-        return this.b((byte) -82);
+        return this.getCurrentValidationMessage((byte) -82);
     }
 
     public static void releaseStatics(int param0) {

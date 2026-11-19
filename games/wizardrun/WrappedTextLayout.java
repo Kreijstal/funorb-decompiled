@@ -5,7 +5,7 @@ final class WrappedTextLayout extends TextLayout {
     static boolean field_i;
     private boolean field_g;
     private int field_p;
-    static bh field_n;
+    static QuickChatDynamicCommand field_n;
     private int field_h;
     private BitmapFont field_j;
     private String field_q;
@@ -75,7 +75,7 @@ final class WrappedTextLayout extends TextLayout {
           this.field_g = true;
           this.field_q = param4;
           if (param1 > -58) {
-            field_n = (bh) null;
+            field_n = (QuickChatDynamicCommand) null;
           }
           this.field_k = 2;
           this.field_j = param2;
@@ -101,7 +101,7 @@ final class WrappedTextLayout extends TextLayout {
 
     final static void a(byte param0) {
         if (param0 != 79) {
-          field_n = (bh) null;
+          field_n = (QuickChatDynamicCommand) null;
         }
         GameApplet.h(0);
     }
@@ -153,8 +153,8 @@ final class WrappedTextLayout extends TextLayout {
         var3 = var8.readUnsignedByte(255);
         ByteStorage.field_e = 127 & var3;
         stackIn_5_0 = ((var3 & 128) != 0);
-        rb.field_a = stackIn_5_0;
-        il.field_a = var8.readUnsignedByte(255);
+        DisplayModeInfo.field_a = stackIn_5_0;
+        RadixParsingHelpers.field_a = var8.readUnsignedByte(255);
         RadialSelectorWidget.field_N = var8.readLong((byte) 0);
         if (ByteStorage.field_e == 2) {
           NodeHashTableIterator.field_g = var8.readUnsignedShort(-14477);
@@ -179,24 +179,24 @@ final class WrappedTextLayout extends TextLayout {
         if (param1) {
           var5 = var8.readUnsignedShort(-14477);
           try {
-            var9 = il.field_b.b((byte) 47, var5);
+            var9 = RadixParsingHelpers.field_b.b((byte) 47, var5);
             vl.field_f = var9.getTemplateText(10592);
             if (!LevelData.field_b.equals(MonotonicClockHelpers.field_a)) {
               stackIn_24_0 = var9.field_p;
             } else {
               stackIn_24_0 = null;
             }
-            rh.field_m = stackIn_24_0;
+            PasswordValidator.field_m = stackIn_24_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             ResizableDialog.a((Throwable) ((Object) var6), "CC1", -562);
             vl.field_f = null;
-            rh.field_m = null;
+            PasswordValidator.field_m = null;
           }
         } else {
           vl.field_f = ol.a(80, var8, (byte) 45);
-          rh.field_m = null;
+          PasswordValidator.field_m = null;
         }
         return new wc(param1);
     }
@@ -406,7 +406,7 @@ final class WrappedTextLayout extends TextLayout {
 
     static {
         field_i = false;
-        field_n = new bh(2, 4, 4, 0);
+        field_n = new QuickChatDynamicCommand(2, 4, 4, 0);
         field_f = new lg();
         field_m = "Highscores";
     }

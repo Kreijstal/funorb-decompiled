@@ -4,7 +4,7 @@
 final class StripedProgressBar extends UiWidget {
     private Sprite field_K;
     private int field_B;
-    static uf field_C;
+    static LoginMethodPreference field_C;
     private Sprite[] field_G;
     private int field_H;
     private Sprite field_y;
@@ -24,7 +24,7 @@ final class StripedProgressBar extends UiWidget {
         if (param0 != -24060) {
           this.field_G = (Sprite[]) null;
         }
-        this.field_K = new Sprite(this.field_n >> 1, this.field_n);
+        this.field_K = new Sprite(this.height >> 1, this.height);
     }
 
     private final Sprite a(int param0, int param1, byte param2) {
@@ -36,16 +36,16 @@ final class StripedProgressBar extends UiWidget {
         int var11 = 0;
         int var12 = 0;
         int var13 = wizardrun.field_H;
-        Sprite var14 = new Sprite(this.field_J * 2, this.field_n);
+        Sprite var14 = new Sprite(this.field_J * 2, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         UrlPacketDownloader.a(var14, false);
-        int var5 = this.field_n >> 1;
+        int var5 = this.height >> 1;
         if (param2 != -11) {
           return (Sprite) null;
         }
-        for (var6 = 0; this.field_n > var6; var6++) {
+        for (var6 = 0; this.height > var6; var6++) {
           var7 = (-1 + 2 * this.field_J) * (var6 >> 1) % (this.field_J * 2);
           var8 = param1 & 16711935;
           var9 = param1 & 65280;
@@ -60,7 +60,7 @@ final class StripedProgressBar extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_J, var6, this.field_J, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(var7 - this.field_J, var6, this.field_J, var12Lifetime1);
         }
-        bb.b(4);
+        UsernameLoginCredentials.b(4);
         return var14;
     }
 
@@ -87,28 +87,28 @@ final class StripedProgressBar extends UiWidget {
         int var8 = 0;
         var8 = wizardrun.field_H;
         try {
-          var5_int = param2 + this.field_r;
-          ClientException.a(param3, param1 + this.field_n, param2 + this.field_D.width, param1, var5_int - this.field_D.width);
+          var5_int = param2 + this.width;
+          ClientException.a(param3, param1 + this.height, param2 + this.field_D.width, param1, var5_int - this.field_D.width);
           for (var6 = param2 - this.field_A; var5_int > var6; var6 = var6 + param0.width) {
             param0.drawTransparent(var6, param1);
           }
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
           if (SoftwareRasterizer.clipLeft <= param2 + this.field_D.width) {
             UrlPacketDownloader.a(this.field_K, false);
             param0.drawTransparent(-this.field_A, 0);
             param0.drawTransparent(this.field_J * 2 - this.field_A, 0);
             this.field_y.drawMultiply(0, 0);
-            bb.b(4);
+            UsernameLoginCredentials.b(4);
             this.field_K.drawTransparent(param2, param1);
           }
           if (var5_int - this.field_D.width <= SoftwareRasterizer.clipRight) {
             UrlPacketDownloader.a(this.field_K, false);
-            for (var7 = this.field_r - this.field_D.width + this.field_A; this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
+            for (var7 = this.width - this.field_D.width + this.field_A; this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
             }
             param0.drawTransparent(-var7, 0);
             param0.drawTransparent(-var7 + 2 * this.field_J, 0);
             this.field_D.drawMultiply(0, 0);
-            bb.b(4);
+            UsernameLoginCredentials.b(4);
             this.field_K.drawTransparent(var5_int - this.field_D.width, param1);
             return;
           }
@@ -133,15 +133,15 @@ final class StripedProgressBar extends UiWidget {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = wizardrun.field_H;
-        int var2 = this.field_n >> 1;
-        Sprite var3 = new Sprite(var2, this.field_n);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         if (param0 != 10706) {
           return (Sprite) null;
         }
         UrlPacketDownloader.a(var3, false);
-        for (var4 = 0; var4 < this.field_n; var4++) {
+        for (var4 = 0; var4 < this.height; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)((this.field_n - var4) * var4);
+            var6 = (double)var5 * (double)var5 / (double)((this.height - var4) * var4);
             var8 = 1;
             if (1.0 > var6) {
               var6 = Math.sqrt(-var6 + 1.0);
@@ -150,7 +150,7 @@ final class StripedProgressBar extends UiWidget {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
-        bb.b(4);
+        UsernameLoginCredentials.b(4);
         return var3;
     }
 
@@ -158,11 +158,11 @@ final class StripedProgressBar extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param0 <= 108) {
           this.field_K = (Sprite) null;
         }
-        super.a(122, param1, param2, param3, param4);
+        super.setBounds(122, param1, param2, param3, param4);
         this.a(-24060);
     }
 
@@ -174,11 +174,11 @@ final class StripedProgressBar extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          VorbisSample.decodeSetup(param0.a(-85, "", "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.getNamedFile(-85, "", "headers.packvorbis"));
           var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
           if (param1 >= -96) {
-            field_C = (uf) null;
+            field_C = (LoginMethodPreference) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,21 +195,21 @@ final class StripedProgressBar extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param2 != 0) {
           return;
         }
-        int var5 = param0 + this.field_o;
-        int var6 = param3 + this.field_l;
+        int var5 = param0 + this.x;
+        int var6 = param3 + this.y;
         this.a(this.field_G[param1], var6, var5, param1 ^ 0);
         if (this.field_z < 65536) {
-          ClientException.a(0, this.field_n + var6, var5 + (this.field_r * this.field_z >> 16), var6, var5 + this.field_r);
+          ClientException.a(0, this.height + var6, var5 + (this.width * this.field_z >> 16), var6, var5 + this.width);
           this.a(this.field_G[1], var6, var5, 0);
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updateInput(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -260,11 +260,11 @@ final class StripedProgressBar extends UiWidget {
         this.field_L = param8;
         this.field_B = param6;
         this.field_H = param5;
-        this.a(113, param1, param3, param2, param0);
+        this.setBounds(113, param1, param3, param2, param0);
     }
 
     static {
-        field_C = new uf("email");
+        field_C = new LoginMethodPreference("email");
         field_E = "to return to the normal view.";
     }
 }

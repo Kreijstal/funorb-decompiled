@@ -25,10 +25,10 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param1, param2);
-          var4.field_w = (WidgetRenderer) ((Object) new jl());
-          var5 = -2 + this.field_n;
-          this.a(param0 ^ 111, 0, this.field_n + 34, this.field_r, param0);
-          var4.a(110, var5, 30, this.field_r - 14, 7);
+          var4.renderer = (WidgetRenderer) ((Object) new jl());
+          var5 = -2 + this.height;
+          this.setBounds(param0 ^ 111, 0, this.height + 34, this.width, param0);
+          var4.setBounds(110, var5, 30, this.width - 14, 7);
           this.a((UiWidget) (var4), (byte) 98);
           stackIn_1_0 = var4;
           return stackIn_1_0;
@@ -67,9 +67,9 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1 + 0, param2, param3);
-        this.field_J.a(this.field_I, param0 + this.field_o + 14, this.field_l + (param3 + 10), this.field_r - 28, this.field_n, 16777215, -1, param1, 0, this.field_J.field_M);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1 + 0, param2, param3);
+        this.field_J.a(this.field_I, param0 + this.x + 14, this.y + (param3 + 10), this.width - 28, this.height, 16777215, -1, param1, 0, this.field_J.field_M);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -88,7 +88,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           this.field_L = param0;
           this.field_J = param1;
           var4_int = this.field_I != null ? this.field_J.measureWrappedHeight(this.field_I, 260, this.field_J.field_M) : 0;
-          this.a(123, 0, 22 + var4_int, 288, 0);
+          this.setBounds(123, 0, 22 + var4_int, 288, 0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -138,7 +138,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
     final static void a(int param0) {
         int var1 = 0;
         int var2 = wizardrun.field_H;
-        bh.field_a = null;
+        QuickChatDynamicCommand.field_a = null;
         WrappedTextLayout.field_i = false;
         if (param0 != 260) {
           field_M = false;
@@ -149,14 +149,14 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           var1 = RasterSnapshot.field_t;
           if (var1 > 0) {
             if (var1 == 1) {
-              bh.field_a = SocketConnector.field_d;
+              QuickChatDynamicCommand.field_a = SocketConnector.field_d;
             } else {
-              bh.field_a = WeightedLruCache.a(new String[]{Integer.toString(var1)}, (byte) 46, of.field_m);
+              QuickChatDynamicCommand.field_a = WeightedLruCache.a(new String[]{Integer.toString(var1)}, (byte) 46, of.field_m);
             }
-            bh.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) bh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveDequeCursor.field_c)}, 550);
+            QuickChatDynamicCommand.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) QuickChatDynamicCommand.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveDequeCursor.field_c)}, 550);
           }
           aa.field_lb.l(-27697);
-          uh.a((byte) 125);
+          LoginCredentials.a((byte) 125);
         }
     }
 
@@ -185,7 +185,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           if (param0 >= -67) {
             field_G = -79;
           }
-          DateFormattingHelpers.a(sd.field_c, false, -120);
+          DateFormattingHelpers.a(LoginCredentialKind.field_c, false, -120);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "vc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

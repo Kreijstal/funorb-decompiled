@@ -58,19 +58,19 @@ class GridActor {
             }
             if (NodeHashTableIterator.field_j == FadingDialog.field_G) {
               if (!param5) {
-                eh.field_e = qb.a(param0, false, (byte) -90, param4);
+                eh.field_e = FramedButtonPainter.createLoginCredentials(param0, false, (byte) -90, param4);
               } else {
                 var10 = (String) null;
-                eh.field_e = uk.a((String) null, 8355711, WidgetContainer.field_D, false, param0);
+                eh.field_e = uk.selectLoginCredentials((String) null, 8355711, WidgetContainer.field_D, false, param0);
               }
               n.field_b.position = 0;
               n.field_b.writeByte((byte) 11, 14);
-              n.field_b.writeByte((byte) 11, eh.field_e.a(true).field_a);
-              id.a((byte) -67, -1);
-              NodeHashTableIterator.field_j = pj.field_P;
+              n.field_b.writeByte((byte) 11, eh.field_e.getCredentialKind(true).protocolId);
+              id.flushAccountPackets((byte) -67, -1);
+              NodeHashTableIterator.field_j = DraggableWidget.field_P;
             }
-            if (NodeHashTableIterator.field_j == pj.field_P &&
-              hc.a(1, param3 ^ 28257)) {
+            if (NodeHashTableIterator.field_j == DraggableWidget.field_P &&
+              ConfirmedEmailValidator.ensureAccountResponseBytes(1, param3 ^ 28257)) {
               var6_int = AccountCreationForm.field_N.readUnsignedByte(255);
               if (var6_int == 0) {
                 NodeHashTableIterator.field_j = ExceptionSupport.field_b;
@@ -82,17 +82,17 @@ class GridActor {
               AccountCreationForm.field_N.position = 0;
             }
             if (ExceptionSupport.field_b == NodeHashTableIterator.field_j &&
-              hc.a(8, -28266)) {
+              ConfirmedEmailValidator.ensureAccountResponseBytes(8, -28266)) {
               LevelData.field_g = AccountCreationForm.field_N.readLong((byte) 0);
               AccountCreationForm.field_N.position = 0;
-              gi.a(param2, eh.field_e, true, param5, param1);
+              LoginPacketBuilder.buildLoginPacket(param2, eh.field_e, true, param5, param1);
               NodeHashTableIterator.field_j = vb.field_F;
             }
             boolean decompiledFrameRemainder0 = true;
             if (NodeHashTableIterator.field_j == vb.field_F &&
-              hc.a(1, -28266)) {
+              ConfirmedEmailValidator.ensureAccountResponseBytes(1, -28266)) {
               var6_intLifetime1 = AccountCreationForm.field_N.readUnsignedByte(255);
-              sf.field_b = null;
+              EmailCheckRequest.field_b = null;
               ra.field_k = var6_intLifetime1;
               AccountCreationForm.field_N.position = 0;
               if (var6_intLifetime1 != 0 &&
@@ -103,7 +103,7 @@ class GridActor {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ql.a(-57);
+                  HuffmanDecoder.closeAccountConnection(-57);
                   n.field_a = false;
                   stackIn_34_0 = var6_intLifetime1;
                   return stackIn_34_0;
@@ -123,7 +123,7 @@ class GridActor {
               var11 = AccountCreationForm.field_N.readNullableCp1252String(-1);
               var7 = AccountCreationForm.field_N.readUnsignedByte(255);
               if ((1 & var7) != 0) {
-                fi.f(95);
+                NetworkArchiveRequest.storeRandomSeed(95);
               }
               if (!param5) {
                 stackIn_48_0 = ((8 & var7) != 0);
@@ -133,13 +133,13 @@ class GridActor {
                 if (WidgetPainterState.field_d) {
                 }
               }
-              if (cb.field_g) {
+              if (BeveledFrameFactory.field_g) {
                 AccountCreationForm.field_N.readUnsignedByte(255);
                 AccountCreationForm.field_N.readUnsignedByte(param3 ^ -248);
                 AccountCreationForm.field_N.readInt(255);
-                ga.field_b = AccountCreationForm.field_N.readUnsignedShort(-14477);
-                DirectByteStorage.field_f = new byte[ga.field_b];
-                for (var8 = 0; ga.field_b > var8; var8++) {
+                IntegerSyntaxHelpers.field_b = AccountCreationForm.field_N.readUnsignedShort(-14477);
+                DirectByteStorage.field_f = new byte[IntegerSyntaxHelpers.field_b];
+                for (var8 = 0; IntegerSyntaxHelpers.field_b > var8; var8++) {
                   DirectByteStorage.field_f[var8] = AccountCreationForm.field_N.readByte(0);
                 }
               }
@@ -148,28 +148,28 @@ class GridActor {
               IntrusiveNode.field_a = MouseWheelInput.a(-124, var12);
               RasterSnapshot.field_t = AccountCreationForm.field_N.readUnsignedByte(255);
               NodeHashTableIterator.field_j = BufferedSocket.field_l;
-              if (eh.field_e.a(true) == Js5Index.field_v) {
-                StripedProgressBar.field_C.a(jg.f(param3 + 10), 8910);
+              if (eh.field_e.getCredentialKind(true) == Js5Index.field_v) {
+                StripedProgressBar.field_C.saveLoginMethodCookie(DisplayNameValidator.getActiveApplet(param3 + 10), 8910);
               } else {
-                if (eh.field_e.a(true) == UrlPacketDownloader.field_c) {
-                  IndexedSpriteState.field_e.a(jg.f(1), param3 ^ -8903);
+                if (eh.field_e.getCredentialKind(true) == UrlPacketDownloader.field_c) {
+                  IndexedSpriteState.field_e.saveLoginMethodCookie(DisplayNameValidator.getActiveApplet(1), param3 ^ -8903);
                 }
               }
               n.field_a = false;
               if (var11 != null) {
-                MidiEnvelope.a(26017, jg.f(1), var11);
+                MidiEnvelope.a(26017, DisplayNameValidator.getActiveApplet(1), var11);
               }
               if (ArchiveProvider.field_a <= 0 &&
                 !kd.field_c) {
                 try {
-                  BrowserScriptBridge.call(jg.f(param3 ^ -10), -3264, "unzap");
+                  BrowserScriptBridge.call(DisplayNameValidator.getActiveApplet(param3 ^ -10), -3264, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  BrowserScriptBridge.call(new Object[]{WeightedLruCache.a(WidgetContainer.field_D, param3 + 77)}, "zap", 30383, jg.f(1));
+                  BrowserScriptBridge.call(new Object[]{WeightedLruCache.a(WidgetContainer.field_D, param3 + 77)}, "zap", 30383, DisplayNameValidator.getActiveApplet(1));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -178,17 +178,17 @@ class GridActor {
               if (ArchiveProvider.field_a > 0) {
                 IntrusiveDequeCursor.field_g = true;
               }
-              n.field_b.initializeCipher(uh.field_d, (byte) 109);
+              n.field_b.initializeCipher(LoginCredentials.field_d, (byte) 109);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                uh.field_d[var8Lifetime1] = uh.field_d[var8Lifetime1] + 50;
+                LoginCredentials.field_d[var8Lifetime1] = LoginCredentials.field_d[var8Lifetime1] + 50;
               }
-              AccountCreationForm.field_N.initializeCipher(uh.field_d, (byte) 109);
+              AccountCreationForm.field_N.initializeCipher(LoginCredentials.field_d, (byte) 109);
               stackIn_79_0 = ra.field_k;
               return stackIn_79_0;
             }
             if (NodeHashTableIterator.field_j == MouseWheelInput.field_c &&
               ExceptionSupport.b(param3 + 85)) {
-              ql.a(-77);
+              HuffmanDecoder.closeAccountConnection(-77);
               if (ra.field_k == 7 &&
                 !n.field_a) {
                 n.field_a = true;
@@ -198,7 +198,7 @@ class GridActor {
               if (7 == ra.field_k) {
                 ra.field_k = 3;
               }
-              bh.field_g = AccountCreationForm.field_N.readCp1252String(0);
+              QuickChatDynamicCommand.field_g = AccountCreationForm.field_N.readCp1252String(0);
               n.field_a = false;
               stackIn_90_0 = ra.field_k;
               return stackIn_90_0;
@@ -206,9 +206,9 @@ class GridActor {
             if (jc.field_H == null) {
               if (n.field_a) {
                 if (eh.a(2) > 30000L) {
-                  bh.field_g = sa.field_b;
+                  QuickChatDynamicCommand.field_g = ArchiveLoadingStage.field_b;
                 } else {
-                  bh.field_g = TextLayoutLine.field_d;
+                  QuickChatDynamicCommand.field_g = TextLayoutLine.field_d;
                 }
                 n.field_a = false;
                 stackIn_97_0 = 3;

@@ -9,7 +9,7 @@ final class ArchiveCatalog {
     private CachedArchiveProvider[] field_i;
     private PacketBuffer field_h;
     private Js5Transport field_a;
-    private fi field_f;
+    private NetworkArchiveRequest field_f;
     static java.math.BigInteger field_d;
 
     final static int a(int param0, int param1, boolean param2, int param3) {
@@ -19,7 +19,7 @@ final class ArchiveCatalog {
         return MouseInputHandler.a(-20232);
     }
 
-    final void a(byte param0) {
+    final void serviceProviders(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -30,7 +30,7 @@ final class ArchiveCatalog {
         }
         for (var2 = 0; var2 < this.field_i.length; var2++) {
           if (null != this.field_i[var2]) {
-            this.field_i[var2].a(param0 + 81);
+            this.field_i[var2].processRequestedGroups(param0 + 81);
           }
         }
         var4 = 0;
@@ -40,14 +40,14 @@ final class ArchiveCatalog {
         }
         while (var4 < this.field_i.length) {
           if (this.field_i[var4] != null) {
-            this.field_i[var4].c((byte) 25);
+            this.field_i[var4].serviceBackgroundLoading((byte) 25);
           }
           var4++;
         }
         return;
     }
 
-    final boolean b(byte param0) {
+    final boolean ensureMasterIndex(byte param0) {
         int var7 = 0;
         int var3;
         byte[] var4;
@@ -64,15 +64,15 @@ final class ArchiveCatalog {
           return true;
         }
         if (this.field_f == null) {
-          if (this.field_a.a(param0 + 3490)) {
+          if (this.field_a.isPriorityQueueFull(param0 + 3490)) {
             return false;
           }
-          this.field_f = this.field_a.a(255, 255, (byte) -94, (byte) 0, true);
+          this.field_f = this.field_a.request(255, 255, (byte) -94, (byte) 0, true);
         }
-        if (this.field_f.field_s) {
+        if (this.field_f.pending) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_f.d(95));
+        var10 = new PacketBuffer(this.field_f.getData(95));
         var10.position = 5;
         var3 = var10.readUnsignedByte(255);
         var10.position = var10.position + 72 * var3;
@@ -91,7 +91,7 @@ final class ArchiveCatalog {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = id.a(var10.payload, 0, -5 + (-var13.length + var10.position), 5);
+        var15 = id.whirlpoolDigest(var10.payload, 0, -5 + (-var13.length + var10.position), 5);
         if (param0 != -17) {
           ArchiveCatalog.releaseStatics(-98);
         }
@@ -105,7 +105,7 @@ final class ArchiveCatalog {
         return true;
     }
 
-    final CachedArchiveProvider a(boolean param0, int param1, DiskCacheStore param2, int param3, DiskCacheStore param4) {
+    final CachedArchiveProvider getProvider(boolean param0, int param1, DiskCacheStore param2, int param3, DiskCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -160,24 +160,24 @@ final class ArchiveCatalog {
         }
     }
 
-    final static sf a(String param0, int param1) {
+    final static EmailCheckRequest a(String param0, int param1) {
         RuntimeException var2 = null;
-        sf stackIn_5_0 = null;
-        sf stackIn_7_0 = null;
+        EmailCheckRequest stackIn_5_0 = null;
+        EmailCheckRequest stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (we.field_c.a(true) &&
-            !param0.equals(we.field_c.b((byte) 8))) {
-            we.field_c = ql.a(param0, false);
+          if (we.field_c.isComplete(true) &&
+            !param0.equals(we.field_c.getEmail((byte) 8))) {
+            we.field_c = HuffmanDecoder.createEmailCheck(param0, false);
           }
           if (param1 == 6) {
             stackIn_7_0 = we.field_c;
             return stackIn_7_0;
           }
-          stackIn_5_0 = (sf) null;
+          stackIn_5_0 = (EmailCheckRequest) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ final class ArchiveCatalog {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 104) {
-            stackIn_4_0 = SingleChildWidget.a(param0, false, 0);
+            stackIn_4_0 = SingleChildWidget.isValidDisplayName(param0, false, 0);
             return stackIn_4_0;
           }
           return true;
@@ -247,8 +247,8 @@ final class ArchiveCatalog {
           this.field_g = param2;
           this.field_e = param3;
           this.field_a = param0;
-          if (!this.field_a.a(3473)) {
-            this.field_f = this.field_a.a(255, 255, (byte) -88, (byte) 0, true);
+          if (!this.field_a.isPriorityQueueFull(3473)) {
+            this.field_f = this.field_a.request(255, 255, (byte) -88, (byte) 0, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -25,7 +25,7 @@ final class WidgetTheme {
     WidgetRenderer field_u;
 
     final static void a(int param0, boolean param1) {
-        GameShell.field_A.a(true, 0, 0);
+        GameShell.field_A.drawAllLayers(true, 0, 0);
         if (param0 > -113) {
           WidgetTheme.releaseStatics(16);
         }
@@ -85,8 +85,8 @@ final class WidgetTheme {
           var6.field_l = 0;
           var7 = new StatefulWidgetPainter(var4, true);
           var7.field_l = 0;
-          var7.a((byte) 11, wg.a(8947848, 9));
-          var7.a(0, 1).a(83, wg.a(11184810, 9)).a(101, 2236962);
+          var7.a((byte) 11, HighscorePlayer.createSolidCenterFrame(8947848, 9));
+          var7.a(0, 1).a(83, HighscorePlayer.createSolidCenterFrame(11184810, 9)).a(101, 2236962);
           this.field_a = (WidgetRenderer) ((Object) new vl(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new wb(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new eh(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -175,8 +175,8 @@ final class WidgetTheme {
           var12 = 1;
           if (var10 > var9 ||
             -1 != param3.indexOf("<br>")) {
-            if (null == sd.field_b) {
-              sd.field_b = new String[16];
+            if (null == LoginCredentialKind.field_b) {
+              LoginCredentialKind.field_b = new String[16];
             }
             if (var10 <= var9) {
               var13 = var9;
@@ -184,11 +184,11 @@ final class WidgetTheme {
               var14 = var10 / var9;
               var13 = var9 + 2 * ((-1 + var14 + var10 % var9) / var14);
             }
-            var12Lifetime1 = this.field_g.wrapText(param3, new int[]{var13}, sd.field_b);
+            var12Lifetime1 = this.field_g.wrapText(param3, new int[]{var13}, LoginCredentialKind.field_b);
             var10 = 0;
             var11 = var11 + var7 * (var12Lifetime1 - 1);
             for (var14Lifetime2 = 0; var12Lifetime1 > var14Lifetime2; var14Lifetime2++) {
-              var15 = this.field_g.stringWidth(sd.field_b[var14Lifetime2]);
+              var15 = this.field_g.stringWidth(LoginCredentialKind.field_b[var14Lifetime2]);
               if (var10 < var15) {
                 var10 = var15;
               }
@@ -267,13 +267,13 @@ final class WidgetTheme {
           if (ValidatedTextField.a(false, param0)) {
             return false;
           }
-          if (UiWidget.a(param0, 94)) {
+          if (UiWidget.isPasswordLengthInvalid(param0, 94)) {
             return false;
           }
           if (param1.length() == 0) {
             return true;
           }
-          if (pd.a(param1, (byte) -109, param0)) {
+          if (DropTargetWidget.a(param1, (byte) -109, param0)) {
             return false;
           }
           if (pa.a(0, param1, param0)) {
@@ -303,11 +303,11 @@ final class WidgetTheme {
         }
     }
 
-    final static bh[] b(int param0) {
+    final static QuickChatDynamicCommand[] b(int param0) {
         if (param0 <= 106) {
           WidgetTheme.a(64, false);
         }
-        return new bh[]{nh.field_p, ProxySocketConnector.field_f, WrappedTextLayout.field_n, jk.field_a, StringPaddingHelpers.field_b, SoundCache.field_h, jg.field_q, Js5Index.field_a, SingleChildWidget.field_A, gi.field_a, AccountCreationForm.field_U, rl.field_a, DualLinkDeque.field_d, lh.field_a};
+        return new QuickChatDynamicCommand[]{AlternateUsernameLoginCredentials.field_p, ProxySocketConnector.field_f, WrappedTextLayout.field_n, jk.field_a, StringPaddingHelpers.field_b, SoundCache.field_h, DisplayNameValidator.field_q, Js5Index.field_a, SingleChildWidget.field_A, LoginPacketBuilder.field_a, AccountCreationForm.field_U, rl.field_a, DualLinkDeque.field_d, lh.field_a};
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

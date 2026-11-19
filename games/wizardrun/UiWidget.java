@@ -5,37 +5,37 @@ import java.util.*;
 
 class UiWidget extends IntrusiveNode {
     static boolean field_m;
-    int field_l;
-    int field_i;
-    WidgetRenderer field_w;
-    boolean field_v;
+    int y;
+    int textOffsetX;
+    WidgetRenderer renderer;
+    boolean hovered;
     static ResourceArchive field_x;
-    String field_p;
-    int field_q;
-    int field_r;
-    int field_n;
-    String field_k;
-    static BufferedRandomAccessFile field_t;
-    int field_o;
-    WidgetListener field_s;
-    int field_j;
-    TextLayout field_u;
+    String tooltip;
+    int pressedMouseButton;
+    int width;
+    int height;
+    String text;
+    static BufferedRandomAccessFile randomSeedFile;
+    int x;
+    WidgetListener listener;
+    int textOffsetY;
+    TextLayout textLayout;
 
-    final boolean a(int param0, int param1, char param2) {
+    final boolean dispatchKeyPress(int param0, int param1, char param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.d((byte) 53) &&
-            this.a(param2, param1, (byte) -110, this)) {
+          if (this.isFocused((byte) 53) &&
+            this.handleKeyPress(param2, param1, (byte) -110, this)) {
             return true;
           }
           var4_int = 96 % ((-42 - param0) / 45);
           var5 = param1;
           if (80 == var5) {
-            stackIn_10_0 = this.a(this, 8);
+            stackIn_10_0 = this.requestFocus(this, 8);
             return stackIn_10_0;
           }
           return false;
@@ -46,7 +46,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isPasswordLengthInvalid(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -76,7 +76,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -101,7 +101,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final void appendDebugProperties(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -120,39 +120,39 @@ class UiWidget extends IntrusiveNode {
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
-          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_o).append(",").append(this.field_l).append(" ").append(this.field_r).append("x").append(this.field_n);
-          if (null != this.field_k) {
-            discarded$1 = param3.append(" text=\"").append(this.field_k).append('"');
+          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          if (null != this.text) {
+            discarded$1 = param3.append(" text=\"").append(this.text).append('"');
           }
-          if (this.field_v) {
+          if (this.hovered) {
             discarded$2 = param3.append(" mouseover");
           }
-          if (this.d((byte) 53)) {
+          if (this.isFocused((byte) 53)) {
             discarded$3 = param3.append(" focused");
           }
-          if (this.field_w != null) {
+          if (this.renderer != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_w instanceof UiWidget)) {
-              discarded$5 = param3.append(this.field_w);
+            if (!(this.renderer instanceof UiWidget)) {
+              discarded$5 = param3.append(this.renderer);
               if (var6 != 0) {
-                param3 = this.a(param2, (byte) 102, param1 + 1, param3);
+                param3 = this.appendDebugTree(param2, (byte) 102, param1 + 1, param3);
               }
             } else {
-              param3 = this.a(param2, (byte) 102, param1 + 1, param3);
+              param3 = this.appendDebugTree(param2, (byte) 102, param1 + 1, param3);
             }
           }
           if (param0 <= 79) {
             return;
           }
-          if (null != this.field_s) {
+          if (null != this.listener) {
             discarded$6 = param3.append(" listener=");
-            if (!(this.field_s instanceof UiWidget)) {
-              discarded$7 = param3.append(this.field_s);
+            if (!(this.listener instanceof UiWidget)) {
+              discarded$7 = param3.append(this.listener);
               if (var6 == 0) {
                 return;
               }
             }
-            param3 = this.a(param2, (byte) 102, param1 + 1, param3);
+            param3 = this.appendDebugTree(param2, (byte) 102, param1 + 1, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    StringBuilder a(Hashtable param0, byte param1, int param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(Hashtable param0, byte param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -186,10 +186,10 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 102) {
-            this.field_l = -40;
+            this.y = -40;
           }
-          if (this.a(param3, param0, param2, true)) {
-            this.a(param1 - 2, param2, param0, param3);
+          if (this.beginDebugDescription(param3, param0, param2, true)) {
+            this.appendDebugProperties(param1 - 2, param2, param0, param3);
           }
           stackIn_7_0 = (StringBuilder) (param3);
           return stackIn_7_0;
@@ -213,7 +213,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -221,7 +221,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -96) {
-            this.field_o = 26;
+            this.x = 26;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -238,7 +238,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void drawAllLayers(boolean param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5_int = 0;
@@ -247,22 +247,22 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var6 = wizardrun.field_H;
         try {
-          var4_int = this.e((byte) 33);
+          var4_int = this.getLastDrawLayer((byte) 33);
           if (!param0) {
-            this.field_s = (WidgetListener) null;
+            this.listener = (WidgetListener) null;
           }
           var5_int = 0;
           while (var4_int >= var5_int) {
-            this.a(param1, 0, var5_int, param2);
+            this.drawLayer(param1, 0, var5_int, param2);
             var5_int++;
             if (var6 == 0) {
               continue;
             }
             break;
           }
-          var5 = ne.b((byte) -50);
+          var5 = AccountFormText.b((byte) -50);
           if (null != var5) {
-            ValidationIndicator.field_H.a(StrongCacheEntry.field_u, uc.field_a, var5, 91);
+            ValidationIndicator.field_H.a(StrongCacheEntry.field_u, ArchiveLoadingPlan.field_a, var5, 91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -277,7 +277,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          stackIn_1_0 = this.a(new Hashtable(), (byte) 102, 0, new StringBuilder()).toString();
+          stackIn_1_0 = this.appendDebugTree(new Hashtable(), (byte) 102, 0, new StringBuilder()).toString();
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -298,14 +298,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
+    final void refreshLayout(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 <= 108) {
             field_x = (ResourceArchive) null;
           }
-          this.a(121, this.field_l, this.field_n, this.field_r, this.field_o);
+          this.setBounds(121, this.y, this.height, this.width, this.x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -314,21 +314,21 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        this.field_r = param3;
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        this.width = param3;
         if (param0 <= 108) {
           return;
         }
         try {
-          this.field_o = param4;
-          this.field_n = param2;
-          this.field_l = param1;
+          this.x = param4;
+          this.height = param2;
+          this.y = param1;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ub.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final boolean a(StringBuilder param0, Hashtable param1, int param2, boolean param3) {
+    final boolean beginDebugDescription(StringBuilder param0, Hashtable param1, int param2, boolean param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_11_0 = null;
@@ -367,23 +367,23 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void b(boolean param0) {
+    void clearFocus(boolean param0) {
         try {
           if (param0) {
-            this.a((StringBuilder) null, (Hashtable) null, -7, false);
+            this.beginDebugDescription((StringBuilder) null, (Hashtable) null, -7, false);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ub.S(" + param0 + ')');
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
           if (param2 == param1 &&
-            this.field_w != null) {
-            this.field_w.drawWidget(param0, param3, this, true, true);
+            this.renderer != null) {
+            this.renderer.drawWidget(param0, param3, this, true, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -399,12 +399,12 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            this.a(30, 86, -9, 25, -124);
+            this.setBounds(30, 86, -9, 25, -124);
           }
-          if (!this.field_v) {
+          if (!this.hovered) {
             stackIn_7_0 = null;
           } else {
-            stackIn_7_0 = this.field_p;
+            stackIn_7_0 = this.tooltip;
           }
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -422,10 +422,10 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        hb var4_ref_hb = null;
+        DelayedServerPacket var4_ref_hb = null;
         int var4 = 0;
         int var5_int = 0;
-        hb var5 = null;
+        DelayedServerPacket var5 = null;
         int var6 = 0;
         int var7 = 0;
         var7 = wizardrun.field_H;
@@ -439,11 +439,11 @@ class UiWidget extends IntrusiveNode {
           var2_long = MonotonicClockHelpers.monotonicMillis((byte) 35);
           if (MenuController.field_j != 0 &&
             ValidatedTextField.field_W < 0) {
-            var4_ref_hb = (hb) (wg.field_c.first((byte) 125));
+            var4_ref_hb = (DelayedServerPacket) (HighscorePlayer.field_c.first((byte) 125));
             if (var4_ref_hb != null &&
-              var2_long > var4_ref_hb.field_p) {
+              var2_long > var4_ref_hb.deliveryTime) {
               var4_ref_hb.unlink(false);
-              DelegatingCanvas.field_c = var4_ref_hb.field_l.length;
+              DelegatingCanvas.field_c = var4_ref_hb.payload.length;
               AccountCreationForm.field_N.position = 0;
               var5_int = 0;
               do {
@@ -451,10 +451,10 @@ class UiWidget extends IntrusiveNode {
                   ValidationHelpWidget.field_P = wizardrun.field_E;
                   wizardrun.field_E = me.field_c;
                   me.field_c = ra.field_k;
-                  ra.field_k = var4_ref_hb.field_j;
+                  ra.field_k = var4_ref_hb.opcode;
                   break;
                 }
-                AccountCreationForm.field_N.payload[var5_int] = var4_ref_hb.field_l[var5_int];
+                AccountCreationForm.field_N.payload[var5_int] = var4_ref_hb.payload[var5_int];
                 var5_int++;
               } while (var7 == 0);
               return true;
@@ -464,7 +464,7 @@ class UiWidget extends IntrusiveNode {
             boolean decompiledFrameRemainder0 = true;
             if (ValidatedTextField.field_W < 0) {
               AccountCreationForm.field_N.position = 0;
-              stackIn_38_0 = hc.a(1, param0 ^ -28266);
+              stackIn_38_0 = ConfirmedEmailValidator.ensureAccountResponseBytes(1, param0 ^ -28266);
               decompiledFrameRemainder0 = (var7 == 0);
               if (decompiledFrameRemainder0) {
                 if (!stackIn_38_0) {
@@ -490,21 +490,21 @@ class UiWidget extends IntrusiveNode {
               return true;
             }
             var4 = MenuController.field_j;
-            if (0.0 != dc.field_j) {
-              var4 = (int)((double)var4 + IntrusiveDeque.field_c.nextGaussian() * dc.field_j);
+            if (0.0 != ProgressSubmission.field_j) {
+              var4 = (int)((double)var4 + IntrusiveDeque.field_c.nextGaussian() * ProgressSubmission.field_j);
               if (0 > var4) {
                 var4 = 0;
               }
             }
-            var5 = new hb((long)var4 + var2_long, ValidatedTextField.field_W, new byte[DelegatingCanvas.field_c]);
+            var5 = new DelayedServerPacket((long)var4 + var2_long, ValidatedTextField.field_W, new byte[DelegatingCanvas.field_c]);
             var6 = 0;
             do {
               if (!(var6 < DelegatingCanvas.field_c)) {
-                wg.field_c.addLast(var5, false);
+                HighscorePlayer.field_c.addLast(var5, false);
                 ValidatedTextField.field_W = -1;
                 break;
               }
-              var5.field_l[var6] = AccountCreationForm.field_N.payload[var6];
+              var5.payload[var6] = AccountCreationForm.field_N.payload[var6];
               var6++;
             } while (var7 == 0);
           }
@@ -522,15 +522,15 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            this.a(-68, -40, -26, -46, (UiWidget) null, -33);
+            this.handleMouseRelease(-68, -40, -26, -46, (UiWidget) null, -33);
           }
-          stackIn_16_0 = (param1 >= param3 + this.field_o) && (param0 >= this.field_l + param4) && (this.field_r + param3 + this.field_o > param1) && ((this.field_n + (param4 + this.field_l)) > param0);
+          stackIn_16_0 = (param1 >= param3 + this.x) && (param0 >= this.y + param4) && (this.width + param3 + this.x > param1) && ((this.height + (param4 + this.y)) > param0);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -539,14 +539,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
+    void handleMouseRelease(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_q = param5;
+          this.pressedMouseButton = param5;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -570,7 +570,7 @@ class UiWidget extends IntrusiveNode {
           if (param0 != 31) {
             field_x = (ResourceArchive) null;
           }
-          field_t = null;
+          randomSeedFile = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -579,7 +579,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    int e(byte param0) {
+    int getLastDrawLayer(byte param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -596,7 +596,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean handleScrollInput(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -604,7 +604,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -23023) {
-            this.a((UiWidget) null, 28, 74, 38, 125, 87, 3);
+            this.handleScrollInput((UiWidget) null, 28, 74, 38, 125, 87, 3);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -621,37 +621,37 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3) {
+    final boolean processMouseInput(int param0, boolean param1, int param2, int param3) {
         boolean stackIn_48_0 = false;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        pj var6 = null;
+        DraggableWidget var6 = null;
         int var7 = 0;
         var7 = wizardrun.field_H;
         try {
-          this.a(10000536, param3, param2, this);
+          this.updateInput(10000536, param3, param2, this);
           if (param0 <= 124) {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
-          var5_int = this.d((byte) 53) ? 1 : 0;
+          var5_int = this.isFocused((byte) 53) ? 1 : 0;
           if ((!param1) &&
             (decompiledFrameRemainder0 = (var5_int != 0)) &&
             (decompiledFrameRemainder0 = (0 != w.field_c))) {
-            this.b(false);
+            this.clearFocus(false);
           }
           if ((decompiledFrameRemainder0) &&
             (param1 ||
             var7 != 0)) {
-            if (gi.field_c != 0 &&
+            if (LoginPacketBuilder.field_c != 0 &&
               var5_int != 0) {
-              this.a(this, -23023, param2, gi.field_c, fi.field_B, param3, pg.field_n);
+              this.handleScrollInput(this, -23023, param2, LoginPacketBuilder.field_c, NetworkArchiveRequest.field_B, param3, AchievementSubmission.field_n);
             }
             if (w.field_c != 0) {
-              if (!this.a(param2, (byte) 93, MouseInputHandler.field_e, param3, w.field_c, dh.field_b, this)) {
+              if (!this.handleMousePress(param2, (byte) 93, MouseInputHandler.field_e, param3, w.field_c, EmailDomainHelpers.field_b, this)) {
                 if (var5_int != 0) {
-                  this.b(false);
+                  this.clearFocus(false);
                   if (var7 != 0) {
                     param1 = false;
                   }
@@ -661,18 +661,18 @@ class UiWidget extends IntrusiveNode {
               }
             }
             if (BrowserUrlLauncher.field_c == 0 &&
-              0 != il.field_c) {
-              this.a(param2, fi.field_B, param3, pg.field_n, this, 0);
+              0 != RadixParsingHelpers.field_c) {
+              this.handleMouseRelease(param2, NetworkArchiveRequest.field_B, param3, AchievementSubmission.field_n, this, 0);
               var6 = LevelData.field_h;
               if (var6 != null) {
-                if (var6.field_s instanceof qg) {
-                  ((qg) (var6.field_s)).a(var6, -98, (pd) null);
+                if (var6.listener instanceof DropListener) {
+                  ((DropListener) (var6.listener)).onDrop(var6, -98, (DropTargetWidget) null);
                 }
                 LevelData.field_h = null;
               }
             }
           }
-          il.field_c = BrowserUrlLauncher.field_c;
+          RadixParsingHelpers.field_c = BrowserUrlLauncher.field_c;
           MonotonicClockHelpers.a(this.getTooltip(false), 0);
           stackIn_48_0 = param1;
           return stackIn_48_0;
@@ -683,7 +683,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean d(byte param0) {
+    boolean isFocused(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -698,7 +698,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handleMousePress(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
@@ -706,8 +706,8 @@ class UiWidget extends IntrusiveNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.b(param5, param2, 0, param0, param3)) {
-            this.field_q = param4;
+          if (this.containsPoint(param5, param2, 0, param0, param3)) {
+            this.pressedMouseButton = param4;
           }
           var8_int = -45 % ((param1 - 12) / 36);
           return false;
@@ -725,7 +725,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadGameTextResources(int param0, ResourceArchive param1) {
         RuntimeException stackIn_367_0 = null;
         StringBuilder stackIn_367_1 = null;
         String stackIn_368_2 = null;
@@ -836,418 +836,418 @@ class UiWidget extends IntrusiveNode {
         byte[] var2Lifetime102;
         try {
           PacketBuffer.field_n = param1;
-          var2 = uf.a("achievement_names,0", 107);
+          var2 = LoginMethodPreference.loadNamedResource("achievement_names,0", 107);
           if (null != var2) {
             SpriteState.field_t[0] = nf.a((byte) 100, var2);
           }
-          var2Lifetime1 = uf.a("achievement_names,1", 111);
+          var2Lifetime1 = LoginMethodPreference.loadNamedResource("achievement_names,1", 111);
           if (null != var2Lifetime1) {
             SpriteState.field_t[1] = nf.a((byte) 84, var2Lifetime1);
           }
-          var2Lifetime2 = uf.a("achievement_names,2", 122);
+          var2Lifetime2 = LoginMethodPreference.loadNamedResource("achievement_names,2", 122);
           if (var2Lifetime2 != null) {
             SpriteState.field_t[2] = nf.a((byte) 94, var2Lifetime2);
           }
-          var2Lifetime3 = uf.a("achievement_names,3", 111);
+          var2Lifetime3 = LoginMethodPreference.loadNamedResource("achievement_names,3", 111);
           if (null != var2Lifetime3) {
             SpriteState.field_t[3] = nf.a((byte) 125, var2Lifetime3);
           }
-          var2Lifetime4 = uf.a("achievement_names,4", 120);
+          var2Lifetime4 = LoginMethodPreference.loadNamedResource("achievement_names,4", 120);
           if (null != var2Lifetime4) {
             SpriteState.field_t[4] = nf.a((byte) 113, var2Lifetime4);
           }
-          var2Lifetime5 = uf.a("achievement_names,5", 122);
+          var2Lifetime5 = LoginMethodPreference.loadNamedResource("achievement_names,5", 122);
           if (null != var2Lifetime5) {
             SpriteState.field_t[5] = nf.a((byte) 114, var2Lifetime5);
           }
-          var2Lifetime6 = uf.a("achievement_names,6", 110);
+          var2Lifetime6 = LoginMethodPreference.loadNamedResource("achievement_names,6", 110);
           if (var2Lifetime6 != null) {
             SpriteState.field_t[6] = nf.a((byte) 126, var2Lifetime6);
           }
-          var2Lifetime7 = uf.a("achievement_names,7", 108);
+          var2Lifetime7 = LoginMethodPreference.loadNamedResource("achievement_names,7", 108);
           if (var2Lifetime7 != null) {
             SpriteState.field_t[7] = nf.a((byte) 111, var2Lifetime7);
           }
-          var2Lifetime8 = uf.a("achievement_names,8", 119);
+          var2Lifetime8 = LoginMethodPreference.loadNamedResource("achievement_names,8", 119);
           if (null != var2Lifetime8) {
             SpriteState.field_t[8] = nf.a((byte) 86, var2Lifetime8);
           }
-          var2Lifetime9 = uf.a("achievement_names,9", 107);
+          var2Lifetime9 = LoginMethodPreference.loadNamedResource("achievement_names,9", 107);
           if (null != var2Lifetime9) {
             SpriteState.field_t[9] = nf.a((byte) 93, var2Lifetime9);
           }
-          var2Lifetime10 = uf.a("achievement_names,10", 123);
+          var2Lifetime10 = LoginMethodPreference.loadNamedResource("achievement_names,10", 123);
           if (null != var2Lifetime10) {
             SpriteState.field_t[10] = nf.a((byte) 84, var2Lifetime10);
           }
-          var2Lifetime11 = uf.a("achievement_names,11", 119);
+          var2Lifetime11 = LoginMethodPreference.loadNamedResource("achievement_names,11", 119);
           if (var2Lifetime11 != null) {
             SpriteState.field_t[11] = nf.a((byte) 109, var2Lifetime11);
           }
-          var2Lifetime12 = uf.a("achievement_criteria,0", 120);
+          var2Lifetime12 = LoginMethodPreference.loadNamedResource("achievement_criteria,0", 120);
           if (null != var2Lifetime12) {
             mh.field_sb[0] = nf.a((byte) 124, var2Lifetime12);
           }
-          var2Lifetime13 = uf.a("achievement_criteria,1", 120);
+          var2Lifetime13 = LoginMethodPreference.loadNamedResource("achievement_criteria,1", 120);
           if (null != var2Lifetime13) {
             mh.field_sb[1] = nf.a((byte) 91, var2Lifetime13);
           }
-          var2Lifetime14 = uf.a("achievement_criteria,2", 115);
+          var2Lifetime14 = LoginMethodPreference.loadNamedResource("achievement_criteria,2", 115);
           if (var2Lifetime14 != null) {
             mh.field_sb[2] = nf.a((byte) 104, var2Lifetime14);
           }
-          var2Lifetime15 = uf.a("achievement_criteria,3", 122);
+          var2Lifetime15 = LoginMethodPreference.loadNamedResource("achievement_criteria,3", 122);
           if (null != var2Lifetime15) {
             mh.field_sb[3] = nf.a((byte) 112, var2Lifetime15);
           }
-          var2Lifetime16 = uf.a("achievement_criteria,4", 107);
+          var2Lifetime16 = LoginMethodPreference.loadNamedResource("achievement_criteria,4", 107);
           if (null != var2Lifetime16) {
             mh.field_sb[4] = nf.a((byte) 112, var2Lifetime16);
           }
-          var2Lifetime17 = uf.a("achievement_criteria,5", 121);
+          var2Lifetime17 = LoginMethodPreference.loadNamedResource("achievement_criteria,5", 121);
           if (var2Lifetime17 != null) {
             mh.field_sb[5] = nf.a((byte) 112, var2Lifetime17);
           }
-          var2Lifetime18 = uf.a("achievement_criteria,6", 126);
+          var2Lifetime18 = LoginMethodPreference.loadNamedResource("achievement_criteria,6", 126);
           if (null != var2Lifetime18) {
             mh.field_sb[6] = nf.a((byte) 124, var2Lifetime18);
           }
-          var2Lifetime19 = uf.a("achievement_criteria,7", 120);
+          var2Lifetime19 = LoginMethodPreference.loadNamedResource("achievement_criteria,7", 120);
           if (null != var2Lifetime19) {
             mh.field_sb[7] = nf.a((byte) 88, var2Lifetime19);
           }
-          var2Lifetime20 = uf.a("achievement_criteria,8", 107);
+          var2Lifetime20 = LoginMethodPreference.loadNamedResource("achievement_criteria,8", 107);
           if (null != var2Lifetime20) {
             mh.field_sb[8] = nf.a((byte) 125, var2Lifetime20);
           }
-          var2Lifetime21 = uf.a("achievement_criteria,9", 115);
+          var2Lifetime21 = LoginMethodPreference.loadNamedResource("achievement_criteria,9", 115);
           if (null != var2Lifetime21) {
             mh.field_sb[9] = nf.a((byte) 98, var2Lifetime21);
           }
-          var2Lifetime22 = uf.a("achievement_criteria,10", 112);
+          var2Lifetime22 = LoginMethodPreference.loadNamedResource("achievement_criteria,10", 112);
           if (var2Lifetime22 != null) {
             mh.field_sb[10] = nf.a((byte) 105, var2Lifetime22);
           }
-          var2Lifetime23 = uf.a("achievement_criteria,11", 108);
+          var2Lifetime23 = LoginMethodPreference.loadNamedResource("achievement_criteria,11", 108);
           if (null != var2Lifetime23) {
             mh.field_sb[11] = nf.a((byte) 109, var2Lifetime23);
           }
-          var2Lifetime24 = uf.a("captions,0", 121);
+          var2Lifetime24 = LoginMethodPreference.loadNamedResource("captions,0", 121);
           if (var2Lifetime24 != null) {
             ValidationHelpWidget.field_O[0] = nf.a((byte) 88, var2Lifetime24);
           }
-          var2Lifetime25 = uf.a("captions,1", 121);
+          var2Lifetime25 = LoginMethodPreference.loadNamedResource("captions,1", 121);
           if (null != var2Lifetime25) {
             ValidationHelpWidget.field_O[1] = nf.a((byte) 91, var2Lifetime25);
           }
-          var2Lifetime26 = uf.a("captions,2", 111);
+          var2Lifetime26 = LoginMethodPreference.loadNamedResource("captions,2", 111);
           if (null != var2Lifetime26) {
             ValidationHelpWidget.field_O[2] = nf.a((byte) 94, var2Lifetime26);
           }
-          var2Lifetime27 = uf.a("captions,3", 118);
+          var2Lifetime27 = LoginMethodPreference.loadNamedResource("captions,3", 118);
           if (var2Lifetime27 != null) {
             ValidationHelpWidget.field_O[3] = nf.a((byte) 112, var2Lifetime27);
           }
-          var2Lifetime28 = uf.a("gamename", 109);
+          var2Lifetime28 = LoginMethodPreference.loadNamedResource("gamename", 109);
           if (null != var2Lifetime28) {
             MidiNote.field_u = nf.a((byte) 127, var2Lifetime28);
           }
-          var2Lifetime29 = uf.a("openmenu", 116);
+          var2Lifetime29 = LoginMethodPreference.loadNamedResource("openmenu", 116);
           if (null != var2Lifetime29) {
-            sk.field_C = nf.a((byte) 114, var2Lifetime29);
+            DiskCacheRequest.field_C = nf.a((byte) 114, var2Lifetime29);
           }
-          var2Lifetime30 = uf.a("holdtocharge", 118);
+          var2Lifetime30 = LoginMethodPreference.loadNamedResource("holdtocharge", 118);
           if (var2Lifetime30 != null) {
             IntrusiveDeque.field_d = nf.a((byte) 120, var2Lifetime30);
           }
-          var2Lifetime31 = uf.a("firestars", 111);
+          var2Lifetime31 = LoginMethodPreference.loadNamedResource("firestars", 111);
           if (var2Lifetime31 != null) {
             kj.field_e = nf.a((byte) 103, var2Lifetime31);
           }
-          var2Lifetime32 = uf.a("jump", 113);
+          var2Lifetime32 = LoginMethodPreference.loadNamedResource("jump", 113);
           if (var2Lifetime32 != null) {
             qj.field_a = nf.a((byte) 115, var2Lifetime32);
           }
-          var2Lifetime33 = uf.a("movelr", 107);
+          var2Lifetime33 = LoginMethodPreference.loadNamedResource("movelr", 107);
           if (var2Lifetime33 != null) {
             EditableTextWidget.field_P = nf.a((byte) 86, var2Lifetime33);
           }
-          var2Lifetime34 = uf.a("snd", 116);
+          var2Lifetime34 = LoginMethodPreference.loadNamedResource("snd", 116);
           if (null != var2Lifetime34) {
-            ae.field_b = nf.a((byte) 84, var2Lifetime34);
+            EmailValidationError.field_b = nf.a((byte) 84, var2Lifetime34);
           }
-          var2Lifetime35 = uf.a("mus", 113);
+          var2Lifetime35 = LoginMethodPreference.loadNamedResource("mus", 113);
           if (null != var2Lifetime35) {
             DualLinkNodeHashTable.field_a = nf.a((byte) 93, var2Lifetime35);
           }
-          var2Lifetime36 = uf.a("musbar", 107);
+          var2Lifetime36 = LoginMethodPreference.loadNamedResource("musbar", 107);
           if (null != var2Lifetime36) {
             WhirlpoolHasher.field_i = nf.a((byte) 125, var2Lifetime36);
           }
-          var2Lifetime37 = uf.a("sndbar", 121);
+          var2Lifetime37 = LoginMethodPreference.loadNamedResource("sndbar", 121);
           if (var2Lifetime37 != null) {
             LoginForm.field_N = nf.a((byte) 125, var2Lifetime37);
           }
-          var2Lifetime38 = uf.a("holdxspace", 113);
+          var2Lifetime38 = LoginMethodPreference.loadNamedResource("holdxspace", 113);
           if (var2Lifetime38 != null) {
             RasterSnapshot.field_m = nf.a((byte) 112, var2Lifetime38);
           }
-          var2Lifetime39 = uf.a("presszup", 113);
+          var2Lifetime39 = LoginMethodPreference.loadNamedResource("presszup", 113);
           if (var2Lifetime39 != null) {
             wb.field_a = nf.a((byte) 111, var2Lifetime39);
           }
-          var2Lifetime40 = uf.a("pressxspace", 112);
+          var2Lifetime40 = LoginMethodPreference.loadNamedResource("pressxspace", 112);
           if (var2Lifetime40 != null) {
-            ka.field_g = nf.a((byte) 112, var2Lifetime40);
+            EmailLoginCredentials.field_g = nf.a((byte) 112, var2Lifetime40);
           }
-          var2Lifetime41 = uf.a("gameover", 114);
+          var2Lifetime41 = LoginMethodPreference.loadNamedResource("gameover", 114);
           if (null != var2Lifetime41) {
             me.field_b = nf.a((byte) 95, var2Lifetime41);
           }
-          var2Lifetime42 = uf.a("starpower", 122);
+          var2Lifetime42 = LoginMethodPreference.loadNamedResource("starpower", 122);
           if (var2Lifetime42 != null) {
-            bb.field_g = nf.a((byte) 91, var2Lifetime42);
+            UsernameLoginCredentials.field_g = nf.a((byte) 91, var2Lifetime42);
           }
-          var2Lifetime43 = uf.a("instructiontextl", 111);
+          var2Lifetime43 = LoginMethodPreference.loadNamedResource("instructiontextl", 111);
           if (null != var2Lifetime43) {
             nf.a((byte) 94, var2Lifetime43);
           }
-          var2Lifetime44 = uf.a("instructiontextr", 117);
+          var2Lifetime44 = LoginMethodPreference.loadNamedResource("instructiontextr", 117);
           if (null != var2Lifetime44) {
             nf.a((byte) 117, var2Lifetime44);
           }
-          var2Lifetime45 = uf.a("fgc", 127);
+          var2Lifetime45 = LoginMethodPreference.loadNamedResource("fgc", 127);
           if (var2Lifetime45 != null) {
             PcmResampler.field_d = nf.a((byte) 113, var2Lifetime45);
           }
-          var2Lifetime46 = uf.a("andthat", 122);
+          var2Lifetime46 = LoginMethodPreference.loadNamedResource("andthat", 122);
           if (var2Lifetime46 != null) {
             RadialSelectorWidget.field_P = nf.a((byte) 124, var2Lifetime46);
           }
-          var2Lifetime47 = uf.a("dothis", 123);
+          var2Lifetime47 = LoginMethodPreference.loadNamedResource("dothis", 123);
           if (var2Lifetime47 != null) {
-            ql.field_a = nf.a((byte) 99, var2Lifetime47);
+            HuffmanDecoder.field_a = nf.a((byte) 99, var2Lifetime47);
           }
-          var2Lifetime48 = uf.a("todefeattheboss", 114);
+          var2Lifetime48 = LoginMethodPreference.loadNamedResource("todefeattheboss", 114);
           if (var2Lifetime48 != null) {
             DualLinkNodeHashTable.field_c = nf.a((byte) 126, var2Lifetime48);
           }
-          var2Lifetime49 = uf.a("threecreatures", 117);
+          var2Lifetime49 = LoginMethodPreference.loadNamedResource("threecreatures", 117);
           if (var2Lifetime49 != null) {
             MidiNoteMixer.field_r = nf.a((byte) 122, var2Lifetime49);
           }
-          var2Lifetime50 = uf.a("lastlevelbeforeboss", 108);
+          var2Lifetime50 = LoginMethodPreference.loadNamedResource("lastlevelbeforeboss", 108);
           if (var2Lifetime50 != null) {
             IntrusiveNodeHashTable.field_b = nf.a((byte) 87, var2Lifetime50);
           }
-          var2Lifetime51 = uf.a("becareful", 113);
+          var2Lifetime51 = LoginMethodPreference.loadNamedResource("becareful", 113);
           if (null != var2Lifetime51) {
-            sd.field_e = nf.a((byte) 101, var2Lifetime51);
+            LoginCredentialKind.field_e = nf.a((byte) 101, var2Lifetime51);
           }
-          var2Lifetime52 = uf.a("usingstarpowerisfun", 109);
+          var2Lifetime52 = LoginMethodPreference.loadNamedResource("usingstarpowerisfun", 109);
           if (var2Lifetime52 != null) {
             StrongCacheEntry.field_w = nf.a((byte) 112, var2Lifetime52);
           }
-          var2Lifetime53 = uf.a("charrrrge", 117);
+          var2Lifetime53 = LoginMethodPreference.loadNamedResource("charrrrge", 117);
           if (null != var2Lifetime53) {
             lc.field_c = nf.a((byte) 117, var2Lifetime53);
           }
-          var2Lifetime54 = uf.a("iseecolours", 108);
+          var2Lifetime54 = LoginMethodPreference.loadNamedResource("iseecolours", 108);
           if (var2Lifetime54 != null) {
             ld.field_a = nf.a((byte) 103, var2Lifetime54);
           }
-          var2Lifetime55 = uf.a("yummycrystals", 123);
+          var2Lifetime55 = LoginMethodPreference.loadNamedResource("yummycrystals", 123);
           if (null != var2Lifetime55) {
             DiskCacheWorker.field_h = nf.a((byte) 94, var2Lifetime55);
           }
-          var2Lifetime56 = uf.a("crystalsgrow", 111);
+          var2Lifetime56 = LoginMethodPreference.loadNamedResource("crystalsgrow", 111);
           if (var2Lifetime56 != null) {
             vl.field_a = nf.a((byte) 93, var2Lifetime56);
           }
-          var2Lifetime57 = uf.a("fallfrombelow", 118);
+          var2Lifetime57 = LoginMethodPreference.loadNamedResource("fallfrombelow", 118);
           if (var2Lifetime57 != null) {
             BrowserCookieHelpers.field_d = nf.a((byte) 100, var2Lifetime57);
           }
-          var2Lifetime58 = uf.a("fallfromabove", 120);
+          var2Lifetime58 = LoginMethodPreference.loadNamedResource("fallfromabove", 120);
           if (var2Lifetime58 != null) {
             MouseWheelInput.field_f = nf.a((byte) 125, var2Lifetime58);
           }
-          var2Lifetime59 = uf.a("jumpwithz", 125);
+          var2Lifetime59 = LoginMethodPreference.loadNamedResource("jumpwithz", 125);
           if (var2Lifetime59 != null) {
             pb.field_i = nf.a((byte) 111, var2Lifetime59);
           }
-          var2Lifetime60 = uf.a("pressattack", 127);
+          var2Lifetime60 = LoginMethodPreference.loadNamedResource("pressattack", 127);
           if (null != var2Lifetime60) {
             PcmResampler.field_c = nf.a((byte) 127, var2Lifetime60);
           }
-          var2Lifetime61 = uf.a("usearrows", 119);
+          var2Lifetime61 = LoginMethodPreference.loadNamedResource("usearrows", 119);
           if (null != var2Lifetime61) {
             TimedValidator.field_c = nf.a((byte) 115, var2Lifetime61);
           }
-          var2Lifetime62 = uf.a("pressenterorclick", 119);
+          var2Lifetime62 = LoginMethodPreference.loadNamedResource("pressenterorclick", 119);
           if (null != var2Lifetime62) {
             ol.field_d = nf.a((byte) 84, var2Lifetime62);
           }
-          var2Lifetime63 = uf.a("logintoaccess", 124);
+          var2Lifetime63 = LoginMethodPreference.loadNamedResource("logintoaccess", 124);
           if (null != var2Lifetime63) {
             ByteStorage.field_c = nf.a((byte) 123, var2Lifetime63);
           }
-          var2Lifetime64 = uf.a("psfhs", 111);
+          var2Lifetime64 = LoginMethodPreference.loadNamedResource("psfhs", 111);
           if (var2Lifetime64 != null) {
             lf.field_a = nf.a((byte) 91, var2Lifetime64);
           }
-          var2Lifetime65 = uf.a("hssu", 121);
+          var2Lifetime65 = LoginMethodPreference.loadNamedResource("hssu", 121);
           if (var2Lifetime65 != null) {
-            rd.field_a = nf.a((byte) 119, var2Lifetime65);
+            PowerOfTwoHelpers.field_a = nf.a((byte) 119, var2Lifetime65);
           }
-          var2Lifetime66 = uf.a("hs4", 123);
+          var2Lifetime66 = LoginMethodPreference.loadNamedResource("hs4", 123);
           if (var2Lifetime66 != null) {
-            ai.field_s = nf.a((byte) 104, var2Lifetime66);
+            ScoreSubmission.field_s = nf.a((byte) 104, var2Lifetime66);
           }
-          var2Lifetime67 = uf.a("hs3", 125);
+          var2Lifetime67 = LoginMethodPreference.loadNamedResource("hs3", 125);
           if (null != var2Lifetime67) {
             TextLayout.field_b = nf.a((byte) 124, var2Lifetime67);
           }
-          var2Lifetime68 = uf.a("hs2", 125);
+          var2Lifetime68 = LoginMethodPreference.loadNamedResource("hs2", 125);
           if (null != var2Lifetime68) {
-            ef.field_G = nf.a((byte) 103, var2Lifetime68);
+            ToggleButton.field_G = nf.a((byte) 103, var2Lifetime68);
           }
-          var2Lifetime69 = uf.a("hs1", 110);
+          var2Lifetime69 = LoginMethodPreference.loadNamedResource("hs1", 110);
           if (var2Lifetime69 != null) {
-            pd.field_G = nf.a((byte) 112, var2Lifetime69);
+            DropTargetWidget.field_G = nf.a((byte) 112, var2Lifetime69);
           }
-          var2Lifetime70 = uf.a("compltex", 121);
+          var2Lifetime70 = LoginMethodPreference.loadNamedResource("compltex", 121);
           if (null != var2Lifetime70) {
             MidiEnvelope.field_l = nf.a((byte) 119, var2Lifetime70);
           }
-          var2Lifetime71 = uf.a("lastscor", 120);
+          var2Lifetime71 = LoginMethodPreference.loadNamedResource("lastscor", 120);
           if (null != var2Lifetime71) {
             nf.a((byte) 86, var2Lifetime71);
           }
-          var2Lifetime72 = uf.a("scrtex", 119);
+          var2Lifetime72 = LoginMethodPreference.loadNamedResource("scrtex", 119);
           if (null != var2Lifetime72) {
             qj.field_f = nf.a((byte) 124, var2Lifetime72);
           }
-          var2Lifetime73 = uf.a("worldstage", 124);
+          var2Lifetime73 = LoginMethodPreference.loadNamedResource("worldstage", 124);
           if (var2Lifetime73 != null) {
-            nj.field_p = nf.a((byte) 124, var2Lifetime73);
+            HighscoreRequest.field_p = nf.a((byte) 124, var2Lifetime73);
           }
-          var2Lifetime74 = uf.a("nametex", 113);
+          var2Lifetime74 = LoginMethodPreference.loadNamedResource("nametex", 113);
           if (param0 >= -33) {
             return;
           }
           if (var2Lifetime74 != null) {
-            bb.field_l = nf.a((byte) 90, var2Lifetime74);
+            UsernameLoginCredentials.field_l = nf.a((byte) 90, var2Lifetime74);
           }
-          var2Lifetime75 = uf.a("requirementshidden", 127);
+          var2Lifetime75 = LoginMethodPreference.loadNamedResource("requirementshidden", 127);
           if (null != var2Lifetime75) {
             f.field_f = nf.a((byte) 114, var2Lifetime75);
           }
-          var2Lifetime76 = uf.a("loginn", 122);
+          var2Lifetime76 = LoginMethodPreference.loadNamedResource("loginn", 122);
           if (null != var2Lifetime76) {
             SoundCache.field_b = nf.a((byte) 100, var2Lifetime76);
           }
-          var2Lifetime77 = uf.a("levelonly", 121);
+          var2Lifetime77 = LoginMethodPreference.loadNamedResource("levelonly", 121);
           if (var2Lifetime77 != null) {
             GameKeyHandler.field_a = nf.a((byte) 117, var2Lifetime77);
           }
-          var2Lifetime78 = uf.a("levelnotyet", 110);
+          var2Lifetime78 = LoginMethodPreference.loadNamedResource("levelnotyet", 110);
           if (var2Lifetime78 != null) {
             BufferedRandomAccessFile.field_g = nf.a((byte) 89, var2Lifetime78);
           }
-          var2Lifetime79 = uf.a("worldspace", 110);
+          var2Lifetime79 = LoginMethodPreference.loadNamedResource("worldspace", 110);
           if (null != var2Lifetime79) {
             qj.field_c = nf.a((byte) 109, var2Lifetime79);
           }
-          var2Lifetime80 = uf.a("thedem", 114);
+          var2Lifetime80 = LoginMethodPreference.loadNamedResource("thedem", 114);
           if (null != var2Lifetime80) {
             kk.field_vb = nf.a((byte) 85, var2Lifetime80);
           }
-          var2Lifetime81 = uf.a("theice", 120);
+          var2Lifetime81 = LoginMethodPreference.loadNamedResource("theice", 120);
           if (null != var2Lifetime81) {
             DialogLayer.field_H = nf.a((byte) 98, var2Lifetime81);
           }
-          var2Lifetime82 = uf.a("thetro", 109);
+          var2Lifetime82 = LoginMethodPreference.loadNamedResource("thetro", 109);
           if (var2Lifetime82 != null) {
             SecondaryNodeDeque.field_c = nf.a((byte) 99, var2Lifetime82);
           }
-          var2Lifetime83 = uf.a("thepir", 109);
+          var2Lifetime83 = LoginMethodPreference.loadNamedResource("thepir", 109);
           if (null != var2Lifetime83) {
             ra.field_l = nf.a((byte) 86, var2Lifetime83);
           }
-          var2Lifetime84 = uf.a("thebea", 117);
+          var2Lifetime84 = LoginMethodPreference.loadNamedResource("thebea", 117);
           if (var2Lifetime84 != null) {
             GameShell.field_o = nf.a((byte) 89, var2Lifetime84);
           }
-          var2Lifetime85 = uf.a("thevil", 109);
+          var2Lifetime85 = LoginMethodPreference.loadNamedResource("thevil", 109);
           if (null != var2Lifetime85) {
             aa.field_kb = nf.a((byte) 127, var2Lifetime85);
           }
-          var2Lifetime86 = uf.a("worldselect", 116);
+          var2Lifetime86 = LoginMethodPreference.loadNamedResource("worldselect", 116);
           if (null != var2Lifetime86) {
-            uh.field_b = nf.a((byte) 95, var2Lifetime86);
+            LoginCredentials.field_b = nf.a((byte) 95, var2Lifetime86);
           }
-          var2Lifetime87 = uf.a("scorecolon", 115);
+          var2Lifetime87 = LoginMethodPreference.loadNamedResource("scorecolon", 115);
           if (var2Lifetime87 != null) {
             MouseInputHandler.field_d = nf.a((byte) 111, var2Lifetime87);
           }
-          var2Lifetime88 = uf.a("livescolon", 119);
+          var2Lifetime88 = LoginMethodPreference.loadNamedResource("livescolon", 119);
           if (var2Lifetime88 != null) {
             hh.field_J = nf.a((byte) 96, var2Lifetime88);
           }
-          var2Lifetime89 = uf.a("tut6", 118);
+          var2Lifetime89 = LoginMethodPreference.loadNamedResource("tut6", 118);
           if (null != var2Lifetime89) {
             nf.a((byte) 97, var2Lifetime89);
           }
-          var2Lifetime90 = uf.a("tut5", 110);
+          var2Lifetime90 = LoginMethodPreference.loadNamedResource("tut5", 110);
           if (null != var2Lifetime90) {
             nf.a((byte) 122, var2Lifetime90);
           }
-          var2Lifetime91 = uf.a("tut4", 107);
+          var2Lifetime91 = LoginMethodPreference.loadNamedResource("tut4", 107);
           if (var2Lifetime91 != null) {
             nf.a((byte) 109, var2Lifetime91);
           }
-          var2Lifetime92 = uf.a("tut3", 113);
+          var2Lifetime92 = LoginMethodPreference.loadNamedResource("tut3", 113);
           if (var2Lifetime92 != null) {
             nf.a((byte) 125, var2Lifetime92);
           }
-          var2Lifetime93 = uf.a("tut2", 113);
+          var2Lifetime93 = LoginMethodPreference.loadNamedResource("tut2", 113);
           if (var2Lifetime93 != null) {
             nf.a((byte) 123, var2Lifetime93);
           }
-          var2Lifetime94 = uf.a("tut1", 126);
+          var2Lifetime94 = LoginMethodPreference.loadNamedResource("tut1", 126);
           if (null != var2Lifetime94) {
             nf.a((byte) 106, var2Lifetime94);
           }
-          var2Lifetime95 = uf.a("pressentertocont", 116);
+          var2Lifetime95 = LoginMethodPreference.loadNamedResource("pressentertocont", 116);
           if (var2Lifetime95 != null) {
             nf.a((byte) 127, var2Lifetime95);
           }
-          var2Lifetime96 = uf.a("worldstage1", 120);
+          var2Lifetime96 = LoginMethodPreference.loadNamedResource("worldstage1", 120);
           if (var2Lifetime96 != null) {
-            cc.field_b = nf.a((byte) 125, var2Lifetime96);
+            IconButtonPainter.field_b = nf.a((byte) 125, var2Lifetime96);
           }
-          var2Lifetime97 = uf.a("tut", 109);
+          var2Lifetime97 = LoginMethodPreference.loadNamedResource("tut", 109);
           if (var2Lifetime97 != null) {
             ValidationHelpWidget.field_Q = nf.a((byte) 96, var2Lifetime97);
           }
-          var2Lifetime98 = uf.a("introtex", 114);
+          var2Lifetime98 = LoginMethodPreference.loadNamedResource("introtex", 114);
           if (var2Lifetime98 != null) {
-            ef.field_F = nf.a((byte) 84, var2Lifetime98);
+            ToggleButton.field_F = nf.a((byte) 84, var2Lifetime98);
           }
-          var2Lifetime99 = uf.a("stagecolon", 119);
+          var2Lifetime99 = LoginMethodPreference.loadNamedResource("stagecolon", 119);
           if (var2Lifetime99 != null) {
             eh.field_i = nf.a((byte) 127, var2Lifetime99);
           }
-          var2Lifetime100 = uf.a("worldcolon", 113);
+          var2Lifetime100 = LoginMethodPreference.loadNamedResource("worldcolon", 113);
           if (var2Lifetime100 != null) {
-            wg.field_f = nf.a((byte) 110, var2Lifetime100);
+            HighscorePlayer.field_f = nf.a((byte) 110, var2Lifetime100);
           }
-          var2Lifetime101 = uf.a("keycode_playerattack", 121);
+          var2Lifetime101 = LoginMethodPreference.loadNamedResource("keycode_playerattack", 121);
           if (var2Lifetime101 != null) {
             hh.field_S = 255 & var2Lifetime101[0];
           }
-          var2Lifetime102 = uf.a("keycode_playerjump", 113);
+          var2Lifetime102 = LoginMethodPreference.loadNamedResource("keycode_playerjump", 113);
           if (null != var2Lifetime102) {
             nf.field_d = var2Lifetime102[0] & 255;
           }
@@ -1267,7 +1267,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, UiWidget param3) {
+    void updateInput(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         boolean stackIn_6_0 = false;
@@ -1277,21 +1277,21 @@ class UiWidget extends IntrusiveNode {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.b(fi.field_B, pg.field_n, 0, param2, param1) ? 1 : 0;
+          var5_int = this.containsPoint(NetworkArchiveRequest.field_B, AchievementSubmission.field_n, 0, param2, param1) ? 1 : 0;
           if (param0 != 10000536) {
-            UiWidget.a(101, (ResourceArchive) null);
+            UiWidget.loadGameTextResources(101, (ResourceArchive) null);
           }
-          stackIn_6_0 = this.field_v;
+          stackIn_6_0 = this.hovered;
           if (var5_int != 0) {
             stackIn_7_1 = 0;
           } else {
             stackIn_7_1 = 1;
           }
           if ((stackIn_6_0 ? 1 : 0) == stackIn_7_1) {
-            this.field_v = var5_int != 0;
-            if (this.field_s != null &&
-              this.field_s instanceof HoverListener) {
-              ((HoverListener) (this.field_s)).onHoverChanged(var5_int != 0, -12361, this);
+            this.hovered = var5_int != 0;
+            if (this.listener != null &&
+              this.listener instanceof HoverListener) {
+              ((HoverListener) (this.listener)).onHoverChanged(var5_int != 0, -12361, this);
             }
           }
           return;
@@ -1314,13 +1314,13 @@ class UiWidget extends IntrusiveNode {
     }
 
     protected UiWidget() {
-        this.field_i = 0;
-        this.field_j = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
     }
 
     UiWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
-        qe var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -1329,16 +1329,16 @@ class UiWidget extends IntrusiveNode {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_i = 0;
-        this.field_j = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
         try {
-          this.field_s = param2;
-          this.field_k = param0;
-          this.field_w = param1;
-          if (this.field_w instanceof qe) {
-            var4 = (qe) ((Object) this.field_w);
-            this.field_r = var4.b((byte) 95, this);
-            this.field_n = var4.a((byte) 118, this);
+          this.listener = param2;
+          this.text = param0;
+          this.renderer = param1;
+          if (this.renderer instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.renderer);
+            this.width = var4.getPreferredWidth((byte) 95, this);
+            this.height = var4.getPreferredHeight((byte) 118, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1375,15 +1375,15 @@ class UiWidget extends IntrusiveNode {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_i = 0;
-        this.field_j = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
         try {
-          this.field_w = param4;
-          this.field_s = param5;
-          this.field_o = param0;
-          this.field_n = param3;
-          this.field_r = param2;
-          this.field_l = param1;
+          this.renderer = param4;
+          this.listener = param5;
+          this.x = param0;
+          this.height = param3;
+          this.width = param2;
+          this.y = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

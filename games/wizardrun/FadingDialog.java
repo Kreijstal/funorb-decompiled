@@ -3,7 +3,7 @@
  */
 abstract class FadingDialog extends WidgetContainer {
     private int field_K;
-    static rc field_G;
+    static AccountConnectionState field_G;
     static volatile boolean field_F;
     static int field_J;
     boolean field_H;
@@ -34,7 +34,7 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     final void a(int param0, int param1, int param2) {
-        this.a(110, LabeledField.field_K - param1 >> 1, param1, param2, dh.field_a - param2 >> 1);
+        this.setBounds(110, LabeledField.field_K - param1 >> 1, param1, param2, EmailDomainHelpers.field_a - param2 >> 1);
         if (param0 != 6154) {
           String var5 = (String) null;
           FadingDialog.a(-85, (String) null);
@@ -112,54 +112,54 @@ abstract class FadingDialog extends WidgetContainer {
         return false;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_K == 0) {
           return;
         }
         if (this.field_K >= 256) {
           if (param2 == 0) {
-            this.b(this.field_o + param0, -1, this.field_l + param3);
-            super.a(param0, param1 ^ 0, param2, param3);
+            this.b(this.x + param0, -1, this.y + param3);
+            super.drawLayer(param0, param1 ^ 0, param2, param3);
             return;
           }
           return;
         }
         if (RasterSnapshot.field_n == null) {
-          RasterSnapshot.field_n = new Sprite(this.field_r, this.field_n);
+          RasterSnapshot.field_n = new Sprite(this.width, this.height);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
           this.b(param1, -1, 0);
-          super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
-          bb.b(4);
-          RasterSnapshot.field_n.drawAlpha(this.field_o + param0, param3 + this.field_l, this.field_K);
+          super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
+          UsernameLoginCredentials.b(4);
+          RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
           return;
         }
-        if (this.field_r > RasterSnapshot.field_n.width) {
-          RasterSnapshot.field_n = new Sprite(this.field_r, this.field_n);
+        if (this.width > RasterSnapshot.field_n.width) {
+          RasterSnapshot.field_n = new Sprite(this.width, this.height);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
           this.b(param1, -1, 0);
-          super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
-          bb.b(4);
-          RasterSnapshot.field_n.drawAlpha(this.field_o + param0, param3 + this.field_l, this.field_K);
+          super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
+          UsernameLoginCredentials.b(4);
+          RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
           return;
         }
-        if (this.field_n > RasterSnapshot.field_n.height) {
-          RasterSnapshot.field_n = new Sprite(this.field_r, this.field_n);
+        if (this.height > RasterSnapshot.field_n.height) {
+          RasterSnapshot.field_n = new Sprite(this.width, this.height);
           UrlPacketDownloader.a(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
           this.b(param1, -1, 0);
-          super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
-          bb.b(4);
-          RasterSnapshot.field_n.drawAlpha(this.field_o + param0, param3 + this.field_l, this.field_K);
+          super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
+          UsernameLoginCredentials.b(4);
+          RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
           return;
         }
         UrlPacketDownloader.a(RasterSnapshot.field_n, false);
         SoftwareRasterizer.clear();
         this.b(param1, -1, 0);
-        super.a(-this.field_o - param0, 0, param2, -this.field_l - param3);
-        bb.b(4);
-        RasterSnapshot.field_n.drawAlpha(this.field_o + param0, param3 + this.field_l, this.field_K);
+        super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
+        UsernameLoginCredentials.b(4);
+        RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -211,7 +211,7 @@ abstract class FadingDialog extends WidgetContainer {
           var3_int = ValidationState.countCharacter(param2, var10, (byte) 75);
           var4 = new String[var3_int + 1];
           if (param1 != -22710) {
-            field_G = (rc) null;
+            field_G = (AccountConnectionState) null;
           }
           var5 = 0;
           var6 = 0;
@@ -249,7 +249,7 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     FadingDialog(DialogLayer param0, int param1, int param2) {
-        super(dh.field_a - param1 >> 1, -param2 + LabeledField.field_K >> 1, param1, param2, (WidgetRenderer) null);
+        super(EmailDomainHelpers.field_a - param1 >> 1, -param2 + LabeledField.field_K >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_H = false;
           this.field_E = param0;
@@ -262,6 +262,6 @@ abstract class FadingDialog extends WidgetContainer {
     static {
         field_F = false;
         field_I = 0;
-        field_G = new rc();
+        field_G = new AccountConnectionState();
     }
 }

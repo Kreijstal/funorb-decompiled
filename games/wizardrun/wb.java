@@ -35,9 +35,9 @@ final class wb implements WidgetRenderer {
           var15 = param2 instanceof RadialSelectorWidget ? (RadialSelectorWidget) (param2) : null;
           if (var15 == null) {
           }
-          SoftwareRasterizer.fillRect(param2.field_o + param0, param2.field_l + param1, param2.field_r, param2.field_n, this.field_g);
-          var7 = var15.field_J + param0 + param2.field_o;
-          var8 = var15.field_L + param1 + param2.field_l;
+          SoftwareRasterizer.fillRect(param2.x + param0, param2.y + param1, param2.width, param2.height, this.field_g);
+          var7 = var15.field_J + param0 + param2.x;
+          var8 = var15.field_L + param1 + param2.y;
           if (!param3) {
             UiWidget var14 = (UiWidget) null;
             this.drawWidget(121, 51, (UiWidget) null, true, false);
@@ -56,7 +56,7 @@ final class wb implements WidgetRenderer {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_d != null) {
             var13 = var15.field_G + (var15.field_J + this.field_k);
-            this.field_d.a(param2.field_k, var13 + (param2.field_o + param0), this.field_j + (param1 + param2.field_l), param2.field_r - (var13 + this.field_k), param2.field_n - (this.field_k << 1), this.field_c, this.field_i, 1, 1, 0);
+            this.field_d.a(param2.text, var13 + (param2.x + param0), this.field_j + (param1 + param2.y), param2.width - (var13 + this.field_k), param2.height - (this.field_k << 1), this.field_c, this.field_i, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

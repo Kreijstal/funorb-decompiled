@@ -41,20 +41,20 @@ final class MidiNote extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        ga.field_e = SocketJs5Transport.musicTracks[GridActor.field_l];
+        IntegerSyntaxHelpers.field_e = SocketJs5Transport.musicTracks[GridActor.field_l];
         if (tl.field_e) {
-          SingleChildWidget.field_D.a(true, -110, ga.field_e);
+          SingleChildWidget.field_D.a(true, -110, IntegerSyntaxHelpers.field_e);
         }
         if (param0 < -39) {
           oc.field_b = ValidationState.field_e[GridActor.field_l];
           lk.field_b = DiskCacheStore.field_b[GridActor.field_l];
-          wg.field_e = ExceptionSupport.field_c[GridActor.field_l];
+          HighscorePlayer.field_e = ExceptionSupport.field_c[GridActor.field_l];
           return;
         }
         MidiNote.d((byte) 8);
         oc.field_b = ValidationState.field_e[GridActor.field_l];
         lk.field_b = DiskCacheStore.field_b[GridActor.field_l];
-        wg.field_e = ExceptionSupport.field_c[GridActor.field_l];
+        HighscorePlayer.field_e = ExceptionSupport.field_c[GridActor.field_l];
     }
 
     final static String d(byte param0) {

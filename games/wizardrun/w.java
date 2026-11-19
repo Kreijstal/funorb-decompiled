@@ -47,7 +47,7 @@ final class w {
           WhirlpoolHasher.a(param12, param6, param5, 1882, param2);
           kj.a(1048576, param20, param18);
           jl.a(-122, param3, param19, param14, param17, param15);
-          bb.a(param8, param9, (byte) -13, param11);
+          UsernameLoginCredentials.a(param8, param9, (byte) -13, param11);
           MidiNote.a(-67, param1, param0, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

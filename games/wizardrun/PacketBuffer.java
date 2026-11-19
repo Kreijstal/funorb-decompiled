@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class PacketBuffer extends IntrusiveNode {
-    static rc field_l;
+    static AccountConnectionState field_l;
     static ValidationState field_o;
     byte[] payload;
     int position;
@@ -18,7 +18,7 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.payload[fieldTemp$1] = (byte)(param0 >> 8);
         if (param1) {
-          field_l = (rc) null;
+          field_l = (AccountConnectionState) null;
         }
         int fieldTemp$2 = this.position;
         this.position = this.position + 1;
@@ -137,7 +137,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return bi.a(var2, var3, this.payload, false);
+        return Cp1252DecodingHelpers.decodeCp1252(var2, var3, this.payload, false);
     }
 
     final void writeByte(byte param0, int param1) {
@@ -331,7 +331,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final int readUnsignedByte(int param0) {
         if (param0 != 255) {
-          field_l = (rc) null;
+          field_l = (AccountConnectionState) null;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
@@ -379,7 +379,7 @@ class PacketBuffer extends IntrusiveNode {
           throw new IllegalArgumentException("");
         }
         CharSequence var4 = (CharSequence) ((Object) param0);
-        this.position = this.position + pg.a(8220, this.payload, 0, var4, this.position, param0.length());
+        this.position = this.position + AchievementSubmission.encodeCp1252(8220, this.payload, 0, var4, this.position, param0.length());
         if (param1) {
           return;
         }
@@ -415,7 +415,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var4) {
           return "";
         }
-        return bi.a(var3, var4, this.payload, false);
+        return Cp1252DecodingHelpers.decodeCp1252(var3, var4, this.payload, false);
     }
 
     final static void setOptionalLoginText(int param0, String param1) {
@@ -423,7 +423,7 @@ class PacketBuffer extends IntrusiveNode {
           return;
         }
         try {
-          sf.field_b = param1;
+          EmailCheckRequest.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "va.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -497,7 +497,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + pg.a(8220, this.payload, 0, var4, this.position, param1.length());
+          this.position = this.position + AchievementSubmission.encodeCp1252(8220, this.payload, 0, var4, this.position, param1.length());
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -724,7 +724,7 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         var2 = this.payload[fieldTemp$0];
         if (param0 != -90) {
-          field_l = (rc) null;
+          field_l = (AccountConnectionState) null;
         }
         var3 = 0;
         while (var2 < 0) {
@@ -760,7 +760,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     static {
-        field_l = new rc();
+        field_l = new AccountConnectionState();
         field_o = new ValidationState();
     }
 }

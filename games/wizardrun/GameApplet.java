@@ -50,7 +50,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           se.field_b = true;
-          pk.field_o = true;
+          ReflectionCheck.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -282,7 +282,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           lc.field_b = MonotonicClockHelpers.monotonicMillis((byte) 53);
           LevelData.sleepMillis(5000L, false);
-          qf.field_m = null;
+          AgeValidator.field_m = null;
           this.b(77, false);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "da.destroy()");
@@ -348,18 +348,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           wizardrun.field_G.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == MidiNoteMixer.field_u);
           if (!decompiledSharedTail0) {
-            wizardrun.field_G.setLocation(GameMenu.field_o, hb.field_n);
+            wizardrun.field_G.setLocation(GameMenu.field_o, DelayedServerPacket.field_n);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = MidiNoteMixer.field_u.getInsets();
-            wizardrun.field_G.setLocation(var3.left + GameMenu.field_o, hb.field_n + var3.top);
+            wizardrun.field_G.setLocation(var3.left + GameMenu.field_o, DelayedServerPacket.field_n + var3.top);
           }
           wizardrun.field_G.addFocusListener((java.awt.event.FocusListener) (this));
           wizardrun.field_G.requestFocus();
-          jg.field_n = true;
+          DisplayNameValidator.field_n = true;
           se.field_b = true;
-          pk.field_o = true;
+          ReflectionCheck.field_o = true;
           FadingDialog.field_F = false;
           me.field_e = MonotonicClockHelpers.monotonicMillis((byte) 23);
           return;
@@ -385,7 +385,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !tc.field_j &&
             !e.a(-73)) {
             RasterSnapshot.field_k = param1;
-            BrowserCookieHelpers.field_a = IsaacPacketBuffer.a(wg.field_b, new int[]{param1}, ic.field_a, 3, (byte) 99, me.field_f, GridActor.field_g + BufferedSocket.field_c, 65533, 2);
+            BrowserCookieHelpers.field_a = IsaacPacketBuffer.a(HighscorePlayer.field_b, new int[]{param1}, DecodedSpritePalette.field_a, 3, (byte) 99, me.field_f, GridActor.field_g + BufferedSocket.field_c, 65533, 2);
             DualLinkDeque.field_g = HotspotTextWidget.a(10, 2, (byte) 59, 3, 1);
             if (wizardrun.field_H != 0) {
               tc.field_j = false;
@@ -427,19 +427,19 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           fieldTemp$1 = kk.field_zb;
           kk.field_zb = kk.field_zb + 1;
           if (fieldTemp$1 > 50) {
-            pk.field_o = true;
+            ReflectionCheck.field_o = true;
             kk.field_zb = kk.field_zb - 50;
             wizardrun.field_G.setSize(ResizableDialog.field_R, ResizableDialog.field_P);
             wizardrun.field_G.setVisible(true);
             boolean decompiledSharedTail0 = (null != MidiNoteMixer.field_u &&
               null == MidiPcmStream.field_H);
             if (!decompiledSharedTail0) {
-              wizardrun.field_G.setLocation(GameMenu.field_o, hb.field_n);
+              wizardrun.field_G.setLocation(GameMenu.field_o, DelayedServerPacket.field_n);
               decompiledSharedTail0 = (wizardrun.field_H != 0);
             }
             if (decompiledSharedTail0) {
               var6 = MidiNoteMixer.field_u.getInsets();
-              wizardrun.field_G.setLocation(GameMenu.field_o + var6.left, hb.field_n + var6.top);
+              wizardrun.field_G.setLocation(GameMenu.field_o + var6.left, DelayedServerPacket.field_n + var6.top);
             }
           }
           this.f(-103);
@@ -489,7 +489,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (ld.field_g != null) {
             try {
-              ld.field_g.b(-3);
+              ld.field_g.shutdown(-3);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -521,15 +521,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = MonotonicClockHelpers.monotonicMillis((byte) 69);
-          var4 = ql.field_b[GameKeyHandler.field_c];
-          ql.field_b[GameKeyHandler.field_c] = var2_long;
+          var4 = HuffmanDecoder.field_b[GameKeyHandler.field_c];
+          HuffmanDecoder.field_b[GameKeyHandler.field_c] = var2_long;
           GameKeyHandler.field_c = 31 & GameKeyHandler.field_c + 1;
           if (var4 != (long)param0 &&
             var4 < var2_long) {
           }
           var6 = this;
           synchronized (var6) {
-            jg.field_n = se.field_b;
+            DisplayNameValidator.field_n = se.field_b;
           }
           this.i(-103);
           return;
@@ -595,7 +595,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 0) {
             GameApplet.a(-116, false);
           }
-          nh.c((byte) 95);
+          AlternateUsernameLoginCredentials.c((byte) 95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -733,7 +733,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 kj.a(47);
                 this.e(81);
-                ArchiveProvider.field_b = bh.a((java.awt.Component) ((Object) wizardrun.field_G), (byte) 105, ResizableDialog.field_R, ResizableDialog.field_P);
+                ArchiveProvider.field_b = QuickChatDynamicCommand.createRasterBuffer((java.awt.Component) ((Object) wizardrun.field_G), (byte) 105, ResizableDialog.field_R, ResizableDialog.field_P);
                 this.a(6);
                 WidgetContainer.field_y = IntrusiveNode.createClock(250);
                 do {
@@ -747,14 +747,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    uh.field_c = WidgetContainer.field_y.sleepAndAdvance(NameSuggestionsPanel.field_E, 0);
+                    LoginCredentials.field_c = WidgetContainer.field_y.sleepAndAdvance(NameSuggestionsPanel.field_E, 0);
                     stackIn_107_0 = 0;
                   }
                   var3 = stackIn_107_0;
                   do {
-                    if (!(var3 < uh.field_c)) {
+                    if (!(var3 < LoginCredentials.field_c)) {
                       this.a((byte) -107);
-                      bi.a(ld.field_g, (byte) -88, wizardrun.field_G);
+                      Cp1252DecodingHelpers.pumpEventQueue(ld.field_g, (byte) -88, wizardrun.field_G);
                       break;
                     }
                     this.c(0);
@@ -853,7 +853,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ca.field_c == this &&
             !mk.field_d) {
-            pk.field_o = true;
+            ReflectionCheck.field_o = true;
             if (RadialSelectorWidget.field_Q &&
               -me.field_e + MonotonicClockHelpers.monotonicMillis((byte) 92) > 1000L) {
               var2 = param0.getClipBounds();
@@ -903,7 +903,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_c = true;
             System.out.println("error_game_" + param0);
             try {
-              BrowserScriptBridge.call(jg.f(1), -3264, "loggedout");
+              BrowserScriptBridge.call(DisplayNameValidator.getActiveApplet(1), -3264, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -1104,20 +1104,20 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               ResizableDialog.field_R = param5;
               TriangleMesh.field_b = param5;
-              fi.field_A = param0;
+              NetworkArchiveRequest.field_A = param0;
               GameMenu.field_o = 0;
-              hb.field_n = 0;
+              DelayedServerPacket.field_n = 0;
               var8_int = 118 / ((param2 + 8) / 54);
               ca.field_c = this;
               ResizableDialog.field_P = param4;
               GameKeyHandler.field_b = param4;
-              ej.field_a = jg.f(1);
+              ej.field_a = DisplayNameValidator.getActiveApplet(1);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param3, param1, true);
               ld.field_g = dupTemp$0;
-              qf.field_m = dupTemp$0;
-              var9 = ld.field_g.a((byte) -88, (Runnable) (this), 1);
+              AgeValidator.field_m = dupTemp$0;
+              var9 = ld.field_g.requestThread((byte) -88, (Runnable) (this), 1);
               while (true) {
-                if (var9.field_a == 0) {
+                if (var9.status == 0) {
                   LevelData.sleepMillis(10L, false);
                   if (var10 == 0) {
                     continue;
@@ -1163,7 +1163,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         StringBuilder stackIn_54_1 = null;
         String stackIn_55_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rb[] var6 = null;
+        DisplayModeInfo[] var6 = null;
         AsyncRequest var6_ref = null;
         RuntimeException var6_ref2 = null;
         int var7_int = 0;
@@ -1172,12 +1172,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         int var9 = 0;
         var9 = wizardrun.field_H;
         try {
-          if (!param3.a(169978736)) {
+          if (!param3.supportsFullscreen(169978736)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (param2 == param4) {
-            var6 = DiskCacheWorker.a(true, param3);
+            var6 = DiskCacheWorker.enumerateDisplayModes(true, param3);
             if (var6 == null) {
               stackIn_9_0 = null;
               return (java.awt.Frame) (stackIn_9_0);
@@ -1190,13 +1190,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 stackIn_36_0 = ~param1;
                 decompiledFrameRemainder0 = (var9 == 0);
                 if (decompiledFrameRemainder0) {
-                  if (stackIn_36_0 == ~var6[var8].field_g &&
-                    ~var6[var8].field_h == ~param0 && ((param5 == 0 ||
-                    var6[var8].field_f == param5) &&
+                  if (stackIn_36_0 == ~var6[var8].width &&
+                    ~var6[var8].height == ~param0 && ((param5 == 0 ||
+                    var6[var8].refreshRate == param5) &&
                     (var7_int == 0 ||
-                    !(var6[var8].field_c <= param4)))) {
+                    !(var6[var8].bitDepth <= param4)))) {
                     var7_int = 1;
-                    param4 = var6[var8].field_c;
+                    param4 = var6[var8].bitDepth;
                   }
                   var8++;
                   if (var9 == 0) {
@@ -1214,20 +1214,20 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               return (java.awt.Frame) (stackIn_39_0);
             }
           }
-          var6_ref = param3.a(param4, 114, param5, param1, param0);
-          while (var6_ref.field_a == 0) {
+          var6_ref = param3.requestEnterFullscreen(param4, 114, param5, param1, param0);
+          while (var6_ref.status == 0) {
             LevelData.sleepMillis(10L, false);
             if (var9 == 0) {
               continue;
             }
             break;
           }
-          var7 = (java.awt.Frame) (var6_ref.field_e);
+          var7 = (java.awt.Frame) (var6_ref.result);
           if (null == var7) {
             stackIn_45_0 = null;
             return (java.awt.Frame) (stackIn_45_0);
           }
-          if (var6_ref.field_a != 2) {
+          if (var6_ref.status != 2) {
             stackIn_50_0 = var7;
             return stackIn_50_0;
           }

@@ -60,7 +60,7 @@ final class GameMenu extends MenuController {
             (param2 != 4 ||
             !e.a(-103))) {
             if (param2 == 2) {
-              if (pk.field_s) {
+              if (ReflectionCheck.field_s) {
                 stackIn_54_0 = ee.field_p;
               } else {
                 stackIn_54_0 = 0;
@@ -91,7 +91,7 @@ final class GameMenu extends MenuController {
             else {
               if (3 == param2) {
                 if (tl.field_e) {
-                  stackIn_27_0 = hc.field_o;
+                  stackIn_27_0 = ConfirmedEmailValidator.field_o;
                 } else {
                   stackIn_27_0 = 0;
                 }
@@ -253,8 +253,8 @@ final class GameMenu extends MenuController {
               (4 != param1 ||
               !e.a(-115))) {
               if (param1 == 2) {
-                stackIn_24_0 = !(pk.field_s);
-                pk.field_s = stackIn_24_0;
+                stackIn_24_0 = !(ReflectionCheck.field_s);
+                ReflectionCheck.field_s = stackIn_24_0;
               } else {
                 if (param1 == 3) {
                   if (tl.field_e) {
@@ -262,7 +262,7 @@ final class GameMenu extends MenuController {
                     SingleChildWidget.field_D.d(-101);
                   } else {
                     tl.field_e = true;
-                    SingleChildWidget.field_D.a(true, -122, ga.field_e);
+                    SingleChildWidget.field_D.a(true, -122, IntegerSyntaxHelpers.field_e);
                   }
                 } else {
                   if (((param1 == 4)) &&
@@ -270,7 +270,7 @@ final class GameMenu extends MenuController {
                     if (LoginChoicePanel.field_E != null) {
                       WeightedLruCache.exitFullscreen((byte) 60);
                     } else {
-                      pd.a(false, false);
+                      DropTargetWidget.a(false, false);
                     }
                   }
                 }
@@ -303,7 +303,7 @@ final class GameMenu extends MenuController {
           if (param0 != 1124) {
             field_o = -19;
           }
-          stackIn_3_0 = il.a(10, (byte) -83, param1, true);
+          stackIn_3_0 = RadixParsingHelpers.parseIntRadix(10, (byte) -83, param1, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -325,13 +325,13 @@ final class GameMenu extends MenuController {
         var8 = wizardrun.field_H;
         if (param1 == 2) {
           if (260 <= param0 &&
-            pk.field_s) {
+            ReflectionCheck.field_s) {
             if (param0 <= 368) {
               ee.field_p = (param0 - 260) * 104 / 108;
             } else {
               ee.field_p = 104;
             }
-            if ((!(!pk.field_s)) &&
+            if ((!(!ReflectionCheck.field_s)) &&
               (!(SpriteState.field_y > 0))) {
               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
               SpriteState.field_y = 25;
@@ -354,30 +354,30 @@ final class GameMenu extends MenuController {
               return;
             }
             if (param0 <= 368) {
-              hc.field_o = (-52000 + param0 * 200) / 108;
+              ConfirmedEmailValidator.field_o = (-52000 + param0 * 200) / 108;
             } else {
-              hc.field_o = 200;
+              ConfirmedEmailValidator.field_o = 200;
             }
-            if (pk.field_s &&
+            if (ReflectionCheck.field_s &&
               SpriteState.field_y <= 0) {
               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
               SpriteState.field_y = 25;
             }
-            if (hc.field_o >= 10) {
+            if (ConfirmedEmailValidator.field_o >= 10) {
               if (!tl.field_e) {
                 tl.field_e = true;
-                SingleChildWidget.field_D.a(true, -76, ga.field_e);
+                SingleChildWidget.field_D.a(true, -76, IntegerSyntaxHelpers.field_e);
               }
-              SingleChildWidget.field_D.a(-1, hc.field_o);
+              SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
             } else {
-              hc.field_o = 10;
+              ConfirmedEmailValidator.field_o = 10;
               if (!tl.field_e) {
                 if (param5) {
                   this.b(-123, 44);
                 }
                 return;
               }
-              SingleChildWidget.field_D.a(-1, hc.field_o);
+              SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
               tl.field_e = false;
               SingleChildWidget.field_D.d(-123);
             }
@@ -415,7 +415,7 @@ final class GameMenu extends MenuController {
         if (param0 <= 12) {
           return true;
         }
-        stackIn_6_0 = (10 <= ml.field_t) && (BoundedRandomAccessFile.field_a >= 13);
+        stackIn_6_0 = (10 <= ArchiveRequest.field_t) && (BoundedRandomAccessFile.field_a >= 13);
         return stackIn_6_0;
     }
 
@@ -431,13 +431,13 @@ final class GameMenu extends MenuController {
           ee.field_p = ee.field_p - 13;
           if (ee.field_p <= 0) {
             ee.field_p = 0;
-            pk.field_s = false;
+            ReflectionCheck.field_s = false;
           }
         } else {
           if (param1 == 3) {
-            hc.field_o = hc.field_o - 25;
-            if (hc.field_o <= 0) {
-              hc.field_o = 0;
+            ConfirmedEmailValidator.field_o = ConfirmedEmailValidator.field_o - 25;
+            if (ConfirmedEmailValidator.field_o <= 0) {
+              ConfirmedEmailValidator.field_o = 0;
               stackIn_7_0 = 1;
               stackIn_8_1 = (tl.field_e) ? 0 : 1;
               if (stackIn_7_0 != stackIn_8_1) {
@@ -445,7 +445,7 @@ final class GameMenu extends MenuController {
                 SingleChildWidget.field_D.d(-102);
               }
             } else {
-              SingleChildWidget.field_D.a(-1, hc.field_o);
+              SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
             }
           }
         }
@@ -457,14 +457,14 @@ final class GameMenu extends MenuController {
         }
         if (param0 != 2) {
           if (param0 == 3) {
-            hc.field_o = hc.field_o + 25;
-            if (hc.field_o > 200) {
-              hc.field_o = 200;
+            ConfirmedEmailValidator.field_o = ConfirmedEmailValidator.field_o + 25;
+            if (ConfirmedEmailValidator.field_o > 200) {
+              ConfirmedEmailValidator.field_o = 200;
             }
-            SingleChildWidget.field_D.a(-1, hc.field_o);
+            SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
             if (!tl.field_e) {
               tl.field_e = true;
-              SingleChildWidget.field_D.a(true, -117, ga.field_e);
+              SingleChildWidget.field_D.a(true, -117, IntegerSyntaxHelpers.field_e);
             }
           }
         } else {
@@ -472,7 +472,7 @@ final class GameMenu extends MenuController {
           if (104 < ee.field_p) {
             ee.field_p = 104;
           }
-          pk.field_s = true;
+          ReflectionCheck.field_s = true;
         }
     }
 

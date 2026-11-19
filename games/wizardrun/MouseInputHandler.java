@@ -87,13 +87,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (tc.mouseHandler != null) {
             oc.mouseIdleTime = 0;
             mh.clickX = param0.getX();
-            dc.clickY = param0.getY();
+            ProgressSubmission.clickY = param0.getY();
             MonotonicClockHelpers.monotonicMillis((byte) 93);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              fi.field_w = 1;
+              NetworkArchiveRequest.field_w = 1;
               ve.pressedButton = 1;
             } else {
-              fi.field_w = 2;
+              NetworkArchiveRequest.field_w = 2;
               ve.pressedButton = 2;
             }
             var2_int = param0.getModifiers();
@@ -137,10 +137,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         var2 = wizardrun.field_H;
         try {
-          GameShell.field_A.a(126, true, StatefulWidgetPainter.field_s, dg.field_f);
+          GameShell.field_A.processMouseInput(126, true, StatefulWidgetPainter.field_s, dg.field_f);
           GameShell.field_A.g((byte) 105);
-          while (ae.a(param0 ^ -20316)) {
-            GameShell.field_A.a(-90, MidiNote.field_r, ae.field_a);
+          while (EmailValidationError.pollKeyboardEvent(param0 ^ -20316)) {
+            GameShell.field_A.dispatchKeyPress(-90, MidiNote.field_r, EmailValidationError.typedCharacter);
           }
           if (w.field_a != -1) {
             var1_int = w.field_a;
@@ -159,11 +159,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!we.field_c.a(true)) {
+          if (!we.field_c.isComplete(true)) {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (fi.field_y != TextButton.field_E) {
+          if (NetworkArchiveRequest.field_y != TextButton.field_E) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

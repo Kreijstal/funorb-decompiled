@@ -7,7 +7,7 @@ final class SoundEffect {
     private SynthInstrument[] field_b;
 
     final static SoundEffect loadNamed(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(-77, param2, param1);
+        byte[] var3 = param0.getNamedFile(-77, param2, param1);
         if (var3 == null) {
           return null;
         }
@@ -55,7 +55,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param2, param1, 1);
+        byte[] var3 = param0.getFile(param2, param1, 1);
         if (var3 == null) {
           return null;
         }

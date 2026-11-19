@@ -221,7 +221,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
             stackIn_3_0 = (UiWidget) (param2);
           }
           var10 = (TextButton) (stackIn_3_0);
-          ClientException.a(0, param1 - (-param2.field_l - param2.field_n), param0 + param2.field_o, param2.field_l + param1, param0 + param2.field_o + param2.field_r);
+          ClientException.a(0, param1 - (-param2.y - param2.height), param0 + param2.x, param2.y + param1, param0 + param2.x + param2.width);
           if (var10 != null) {
             param4 = param4 & var10.field_B;
           }
@@ -232,15 +232,15 @@ final class StatefulWidgetPainter extends WidgetPainter {
             StatefulWidgetPainter.releaseStatics(9);
           }
           if (var10 != null) {
-            if (var10.field_z) {
+            if (var10.selected) {
               var11 = this.field_t[1];
               if (var11 != null) {
                 var11.a(param1, 100, param0, param2, this.field_p, this);
               }
             }
-            if (var10.field_v) {
+            if (var10.hovered) {
               var12 = this.field_t[3];
-              if (var10.field_q != 0 &&
+              if (var10.pressedMouseButton != 0 &&
                 var12 != null) {
                 var12.a(param1, 90, param0, param2, this.field_p, this);
               } else {
@@ -251,7 +251,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
               }
             }
           }
-          if (param2.d((byte) 53)) {
+          if (param2.isFocused((byte) 53)) {
             var13 = this.field_t[5];
             if (var13 != null) {
               var13.a(param1, 92, param0, param2, this.field_p, this);
@@ -267,7 +267,7 @@ final class StatefulWidgetPainter extends WidgetPainter {
           stackIn_33_1 = (UiWidget) (param2);
           stackIn_34_2 = !(param3);
           ((WidgetPainterState) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_34_2, param1, this, param0);
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

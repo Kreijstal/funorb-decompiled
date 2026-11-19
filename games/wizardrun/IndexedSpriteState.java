@@ -5,7 +5,7 @@ abstract class IndexedSpriteState {
     int field_a;
     int field_h;
     int field_c;
-    static uf field_e;
+    static LoginMethodPreference field_e;
     int field_d;
     int field_b;
     int field_j;
@@ -17,22 +17,22 @@ abstract class IndexedSpriteState {
         if (param0 < 21) {
           return;
         }
-        uh.a((byte) -99);
+        LoginCredentials.a((byte) -99);
         jc.a((byte) 100, 4);
     }
 
     abstract void draw(int param0, int param1);
 
-    final static uf a(java.applet.Applet param0, byte param1) {
+    final static LoginMethodPreference a(java.applet.Applet param0, byte param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        uf[] var3 = null;
-        uf var5 = null;
+        LoginMethodPreference[] var3 = null;
+        LoginMethodPreference var5 = null;
         int var6 = 0;
-        uf stackIn_4_0 = null;
-        uf stackIn_12_0 = null;
-        uf stackIn_15_0 = null;
+        LoginMethodPreference stackIn_4_0 = null;
+        LoginMethodPreference stackIn_12_0 = null;
+        LoginMethodPreference stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -50,7 +50,7 @@ abstract class IndexedSpriteState {
           var3 = ValidatedTextField.l((byte) 100);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
-            if (var5.b(var2, 126)) {
+            if (var5.matchesLoginMethod(var2, 126)) {
               stackIn_12_0 = var5;
               return stackIn_12_0;
             }
@@ -134,7 +134,7 @@ abstract class IndexedSpriteState {
           return;
         }
         try {
-          ResourceArchive.a(0, (java.awt.Component) ((Object) param1));
+          ResourceArchive.attachKeyboardListeners(0, (java.awt.Component) ((Object) param1));
           IterableNodeHashTable.attachMouseListeners((java.awt.Component) ((Object) param1), 98);
           if (MessagePanel.field_K != null) {
             MessagePanel.field_K.b((java.awt.Component) ((Object) param1), -1);
@@ -146,7 +146,7 @@ abstract class IndexedSpriteState {
 
     static {
         field_i = false;
-        field_e = new uf("usename");
+        field_e = new LoginMethodPreference("usename");
         field_g = "Waiting for instruments";
     }
 }

@@ -7,11 +7,11 @@ final class dl {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 11052) {
-          dl.a(true);
+          dl.getCommonUiLoadProgress(true);
         }
     }
 
-    final static int a(boolean param0) {
+    final static int getCommonUiLoadProgress(boolean param0) {
         if (BoundedRandomAccessFile.field_a < 2) {
           return 0;
         }
@@ -20,19 +20,19 @@ final class dl {
             if (!UiWidget.field_x.ensureIndex(17820)) {
               return 20;
             }
-            if (!UiWidget.field_x.a((byte) 29, "commonui")) {
+            if (!UiWidget.field_x.ensureNamedGroupLoaded((byte) 29, "commonui")) {
               return 40;
             }
             if (!vj.field_b.ensureIndex(17820)) {
               return 50;
             }
-            if (!vj.field_b.a((byte) 29, "commonui")) {
+            if (!vj.field_b.ensureNamedGroupLoaded((byte) 29, "commonui")) {
               return 60;
             }
-            if (!cc.field_a.ensureIndex(17820)) {
+            if (!IconButtonPainter.field_a.ensureIndex(17820)) {
               return 70;
             }
-            if (!cc.field_a.areAllGroupsAvailable(-64)) {
+            if (!IconButtonPainter.field_a.areAllGroupsAvailable(-64)) {
               return 80;
             }
             return 100;
@@ -43,19 +43,19 @@ final class dl {
             if (!UiWidget.field_x.ensureIndex(17820)) {
               return 20;
             }
-            if (!UiWidget.field_x.a((byte) 29, "commonui")) {
+            if (!UiWidget.field_x.ensureNamedGroupLoaded((byte) 29, "commonui")) {
               return 40;
             }
             if (!vj.field_b.ensureIndex(17820)) {
               return 50;
             }
-            if (!vj.field_b.a((byte) 29, "commonui")) {
+            if (!vj.field_b.ensureNamedGroupLoaded((byte) 29, "commonui")) {
               return 60;
             }
-            if (!cc.field_a.ensureIndex(17820)) {
+            if (!IconButtonPainter.field_a.ensureIndex(17820)) {
               return 70;
             }
-            if (cc.field_a.areAllGroupsAvailable(-64)) {
+            if (IconButtonPainter.field_a.areAllGroupsAvailable(-64)) {
               return 100;
             }
             return 80;
@@ -65,29 +65,29 @@ final class dl {
           if (!GridActor.field_c.ensureIndex(17820)) {
             return 14;
           }
-          if (!GridActor.field_c.c(-1, "")) {
+          if (!GridActor.field_c.hasNamedGroup(-1, "")) {
             return 29;
           }
-          if (!GridActor.field_c.a((byte) 29, "")) {
+          if (!GridActor.field_c.ensureNamedGroupLoaded((byte) 29, "")) {
             return 29;
           }
         }
         if (!UiWidget.field_x.ensureIndex(17820)) {
           return 43;
         }
-        if (!UiWidget.field_x.a((byte) 29, "commonui")) {
+        if (!UiWidget.field_x.ensureNamedGroupLoaded((byte) 29, "commonui")) {
           return 57;
         }
         if (!vj.field_b.ensureIndex(17820)) {
           return 71;
         }
-        if (!vj.field_b.a((byte) 29, "commonui")) {
+        if (!vj.field_b.ensureNamedGroupLoaded((byte) 29, "commonui")) {
           return 80;
         }
-        if (!cc.field_a.ensureIndex(17820)) {
+        if (!IconButtonPainter.field_a.ensureIndex(17820)) {
           return 82;
         }
-        if (!cc.field_a.areAllGroupsAvailable(49)) {
+        if (!IconButtonPainter.field_a.areAllGroupsAvailable(49)) {
           return 86;
         }
         return 100;

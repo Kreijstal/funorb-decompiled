@@ -4,7 +4,7 @@
 final class we {
     static WidgetPainter field_d;
     static String field_a;
-    static sf field_c;
+    static EmailCheckRequest field_c;
     static Sprite field_b;
     static String field_e;
 

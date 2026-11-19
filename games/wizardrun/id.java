@@ -21,7 +21,7 @@ final class id {
         try {
           param1 = BrowserCookieHelpers.a((byte) 117, "", param1, '_');
           if (param2 != 0) {
-            id.a((byte) 108, 39, 2);
+            id.createSolidSquareSprite((byte) 108, 39, 2);
           }
           var3 = StrongCacheEntry.a(param1, 1);
           stackIn_7_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
@@ -46,13 +46,13 @@ final class id {
         }
     }
 
-    final static Sprite a(byte param0, int param1, int param2) {
+    final static Sprite createSolidSquareSprite(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = wizardrun.field_H;
         Sprite var6 = new Sprite(param2, param2);
         Sprite var3 = var6;
         if (param0 <= 51) {
-          id.a((byte) -66, -95, 21);
+          id.createSolidSquareSprite((byte) -66, -95, 21);
         }
         for (var4 = 0; var4 < var3.pixels.length; var4++) {
           var6.pixels[var4] = param1;
@@ -63,12 +63,12 @@ final class id {
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          id.a((byte[]) null, -117, 97, 106);
+          id.whirlpoolDigest((byte[]) null, -117, 97, 106);
         }
         field_b = null;
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+    final static byte[] whirlpoolDigest(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
@@ -113,7 +113,7 @@ final class id {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void flushAccountPackets(byte param0, int param1) {
         try {
           IOException iOException = null;
           String var3 = null;
@@ -131,7 +131,7 @@ final class id {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                ql.a(param0 ^ 17);
+                HuffmanDecoder.closeAccountConnection(param0 ^ 17);
               }
               n.field_b.position = 0;
             }

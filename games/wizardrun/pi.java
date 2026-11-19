@@ -69,7 +69,7 @@ final class pi {
           if (var45.field_x != null &&
             var45.field_n > 1) {
             var61 = var45.field_x;
-            te.a((byte) -112, var61, t.field_a, 0, 0);
+            AchievementStateRequest.a((byte) -112, var61, t.field_a, 0, 0);
           } else {
             NanoTickClock.b(0);
           }
@@ -82,8 +82,8 @@ final class pi {
           var8 = var41;
           var65 = new int[param5.field_y];
           var62 = gk.field_g;
-          var63 = hb.field_o;
-          var64 = bl.field_b;
+          var63 = DelayedServerPacket.field_o;
+          var64 = TextWrappingHelpers.field_b;
           for (var13 = 0; param5.field_y > var13; var13++) {
             var14 = param6 * var62[var13] + (var63[var13] * param2 + param4 * var64[var13]) >> 8;
             if (var14 < 0) {
@@ -114,7 +114,7 @@ final class pi {
           var44 = 0;
           var13Lifetime1 = var44;
           while (var44 < SecondaryNodeDequeIterator.field_c) {
-            var14Lifetime1 = cb.field_e[var44];
+            var14Lifetime1 = BeveledFrameFactory.field_e[var44];
             var15Lifetime1 = param5.field_p[var14Lifetime1];
             var16 = param5.field_C[var14Lifetime1];
             var17 = param5.field_I[var14Lifetime1];
@@ -166,7 +166,7 @@ final class pi {
               var32 = 65280 & var30;
               var33 = (16711720 & var32 * var28) >>> 8 | -486604545 & var28 * var31 >>> 8;
               var33 = var33 + var29 * 65793;
-              pj.a(var25, 0, var22, var24, var27, (var33 & 16711422) >> 1, var26, var23);
+              DraggableWidget.a(var25, 0, var22, var24, var27, (var33 & 16711422) >> 1, var26, var23);
             } else {
               var28 = var55[var18];
               var29 = var55[var19];
@@ -220,9 +220,9 @@ final class pi {
           var4 = TextFieldValidator.field_j[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = ic.field_b[ResourceArchive.b(255, (int) var4[var6])];
+            var5[var6] = DecodedSpritePalette.palette[ResourceArchive.bitAnd(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
+          var1[var2] = new Sprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[var2], AccountFormText.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
         }
         ClientException.a(param0 ^ 0);
         return var1;

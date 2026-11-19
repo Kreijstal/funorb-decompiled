@@ -11,12 +11,12 @@ final class IsaacRandom {
     private int field_g;
     static String field_h;
 
-    final static wd a(byte param0) {
-        if (fi.field_y == ej.field_b) {
+    final static NameAvailabilityRequest a(byte param0) {
+        if (NetworkArchiveRequest.field_y == ej.field_b) {
           throw new IllegalStateException();
         }
-        if (fi.field_y == SingleChildWidget.field_z) {
-          fi.field_y = ej.field_b;
+        if (NetworkArchiveRequest.field_y == SingleChildWidget.field_z) {
+          NetworkArchiveRequest.field_y = ej.field_b;
           return LoginChoicePanel.field_F;
         }
         int var1 = 86 / ((param0 - 59) / 38);
@@ -183,10 +183,10 @@ final class IsaacRandom {
             }
           }
           this.field_e = this.field_e + this.field_b[128 + var2 & 255];
-          dupTemp$1 = this.field_d + (this.field_e + this.field_b[ResourceArchive.b(255, var3 >> 2)]);
+          dupTemp$1 = this.field_d + (this.field_e + this.field_b[ResourceArchive.bitAnd(255, var3 >> 2)]);
           var4 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
-          dupTemp$2 = this.field_b[ResourceArchive.b(261240, var4) >> 8 >> 2] + var3;
+          dupTemp$2 = this.field_b[ResourceArchive.bitAnd(261240, var4) >> 8 >> 2] + var3;
           this.field_d = dupTemp$2;
           this.field_f[var2] = dupTemp$2;
         }
@@ -229,12 +229,12 @@ final class IsaacRandom {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.b(-1, param1);
-          var6 = param2.a(var5_int, param3, param0 - 800875572);
+          var5_int = param2.getGroupId(-1, param1);
+          var6 = param2.getFileId(var5_int, param3, param0 - 800875572);
           if (param0 != 800863586) {
             field_h = (String) null;
           }
-          stackIn_3_0 = dh.a(var6, var5_int, (byte) -119, param4, param2);
+          stackIn_3_0 = EmailDomainHelpers.loadMonochromeFont(var6, var5_int, (byte) -119, param4, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,7 +288,7 @@ final class IsaacRandom {
         RuntimeException var1 = null;
         var2 = wizardrun.field_H;
         try {
-          if (!pk.a((byte) -35)) {
+          if (!ReflectionCheck.a((byte) -35)) {
             if (LoginChoicePanel.field_E != null &&
               LoginChoicePanel.field_E.field_b) {
               WeightedLruCache.exitFullscreen((byte) 60);
@@ -299,10 +299,10 @@ final class IsaacRandom {
           if (param0 != 8) {
             return;
           }
-          kj.field_b.a(param0 + 118, true, ne.field_g, sf.field_d);
+          kj.field_b.processMouseInput(param0 + 118, true, AccountFormText.field_g, EmailCheckRequest.field_d);
           kj.field_b.g((byte) 118);
-          while (ae.a(-61)) {
-            kj.field_b.a(param0 ^ -125, MidiNote.field_r, ae.field_a);
+          while (EmailValidationError.pollKeyboardEvent(-61)) {
+            kj.field_b.dispatchKeyPress(param0 ^ -125, MidiNote.field_r, EmailValidationError.typedCharacter);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

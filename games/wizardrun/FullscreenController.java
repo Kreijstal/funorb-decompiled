@@ -16,7 +16,7 @@ final class FullscreenController {
     private int field_l;
     private int field_p;
     private int field_g;
-    private jb field_m;
+    private DisplayResizeListener field_m;
     private int field_h;
     private float field_s;
     private int field_j;
@@ -25,9 +25,9 @@ final class FullscreenController {
     final FullscreenFocusCanvas c(int param0) {
         this.field_n = ResizableDialog.field_R;
         this.field_p = ResizableDialog.field_P;
-        this.field_m.a(this.field_l, this.field_j, -93);
+        this.field_m.onDisplayResized(this.field_l, this.field_j, -93);
         FadingDialog.field_F = false;
-        FullscreenFocusCanvas var2 = hb.a(0, this.field_j, param0, this.field_l, 0, ld.field_g);
+        FullscreenFocusCanvas var2 = DelayedServerPacket.createFullscreenCanvas(0, this.field_j, param0, this.field_l, 0, ld.field_g);
         if (var2 == null) {
           this.a(122);
         }
@@ -75,7 +75,7 @@ final class FullscreenController {
         }
         if (this.field_f != ResizableDialog.field_R ||
           ResizableDialog.field_P != this.field_g) {
-          this.field_m.a(this.field_g, this.field_f, -113);
+          this.field_m.onDisplayResized(this.field_g, this.field_f, -113);
         }
     }
 
@@ -87,7 +87,7 @@ final class FullscreenController {
     }
 
     final void a(int param0) {
-        this.field_m.a(this.field_p, this.field_n, -112);
+        this.field_m.onDisplayResized(this.field_p, this.field_n, -112);
         if (param0 <= 17) {
           this.a(25);
         }
@@ -101,7 +101,7 @@ final class FullscreenController {
         this.field_k = param1;
     }
 
-    final static int a(ne param0, ne param1, String param2, int param3, int param4, boolean param5, int param6) {
+    final static int a(AccountFormText param0, AccountFormText param1, String param2, int param3, int param4, boolean param5, int param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_11_0 = null;
@@ -140,8 +140,8 @@ final class FullscreenController {
         int var9Lifetime3;
         var13 = wizardrun.field_H;
         try {
-          var14 = param0.a(160);
-          var8 = param1.a(160);
+          var14 = param0.getText(160);
+          var8 = param1.getText(160);
           var11_ref_String = var8;
           if (null == jc.field_H &&
             !ol.a(127, false)) {
@@ -162,14 +162,14 @@ final class FullscreenController {
               re.field_G.writePrefixedCp1252String(param6 - 27851, var14);
               re.field_G.writePrefixedCp1252String(param6 ^ 27851, var8);
               var15 = (CharSequence) ((Object) param2);
-              re.field_G.writePrefixedCp1252String(0, fi.a(var15, param6 - 27768));
+              re.field_G.writePrefixedCp1252String(0, NetworkArchiveRequest.normalizeAccountName(var15, param6 - 27768));
               re.field_G.writeShort(param6 - 1947107139, param4);
               re.field_G.writeByte((byte) 11, param3);
               re.field_G.writeByte((byte) 11, var9);
               n.field_b.writeByte((byte) 11, 18);
               n.field_b.position = n.field_b.position + 2;
               var10 = n.field_b.position;
-              var11_ref_StringLifetime1 = SettingsCookieReader.readSettingsCookie(jg.f(1), (byte) 102);
+              var11_ref_StringLifetime1 = SettingsCookieReader.readSettingsCookie(DisplayNameValidator.getActiveApplet(1), (byte) 102);
               if (var11_ref_StringLifetime1 == null) {
                 var11_ref_StringLifetime1 = "";
               }
@@ -182,7 +182,7 @@ final class FullscreenController {
               re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
               stackIn_11_0 = re.field_G;
               stackIn_11_1 = 0;
-              if (!param0.c((byte) 127)) {
+              if (!param0.shouldSubmitText((byte) 127)) {
                 stackIn_12_2 = "";
               } else {
                 stackIn_12_2 = var14;
@@ -190,7 +190,7 @@ final class FullscreenController {
               ((PacketBuffer) (Object) stackIn_11_0).writePrefixedCp1252String(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = re.field_G;
               stackIn_14_1 = 0;
-              if (!param1.c((byte) 125)) {
+              if (!param1.shouldSubmitText((byte) 125)) {
                 stackIn_15_2 = "";
               } else {
                 stackIn_15_2 = var8;
@@ -202,31 +202,31 @@ final class FullscreenController {
               pa.a(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, re.field_G, n.field_b);
               n.field_b.backpatchByteLength(n.field_b.position - var9, -115);
             }
-            id.a((byte) -67, -1);
+            id.flushAccountPackets((byte) -67, -1);
             NodeHashTableIterator.field_j = PacketBuffer.field_l;
           }
           if (param6 != 27851) {
             field_b = (String) null;
           }
           if (NodeHashTableIterator.field_j == PacketBuffer.field_l &&
-            hc.a(1, -28266)) {
+            ConfirmedEmailValidator.ensureAccountResponseBytes(1, -28266)) {
             var9Lifetime1 = AccountCreationForm.field_N.readUnsignedByte(255);
             AccountCreationForm.field_N.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              pd.field_I = new String[-100 + var9Lifetime1];
+              DropTargetWidget.field_I = new String[-100 + var9Lifetime1];
               NodeHashTableIterator.field_j = vj.field_a;
             } else {
               if (var9Lifetime1 == 248) {
-                FadingDialog.a(3088, jg.f(param6 ^ 27850));
-                bh.field_g = ii.field_b;
-                ql.a(-71);
+                FadingDialog.a(3088, DisplayNameValidator.getActiveApplet(param6 ^ 27850));
+                QuickChatDynamicCommand.field_g = ii.field_b;
+                HuffmanDecoder.closeAccountConnection(-71);
                 n.field_a = false;
                 stackIn_32_0 = var9Lifetime1;
                 return stackIn_32_0;
               }
               if (var9Lifetime1 == 99) {
-                hc.a(uf.a(true), param6 ^ -675);
+                ConfirmedEmailValidator.ensureAccountResponseBytes(LoginMethodPreference.getAccountResponseByteCount(true), param6 ^ -675);
                 Crc32Helpers.field_c = new Boolean(qj.a((byte) -100, AccountCreationForm.field_N));
                 AccountCreationForm.field_N.position = 0;
               } else {
@@ -238,15 +238,15 @@ final class FullscreenController {
           }
           if (NodeHashTableIterator.field_j == vj.field_a) {
             var9Lifetime2 = 2;
-            if (hc.a(var9Lifetime2, -28266)) {
+            if (ConfirmedEmailValidator.ensureAccountResponseBytes(var9Lifetime2, -28266)) {
               var10Lifetime1 = AccountCreationForm.field_N.readUnsignedShort(param6 - 42328);
               AccountCreationForm.field_N.position = 0;
-              if (hc.a(var10Lifetime1, -28266)) {
-                var11 = pd.field_I.length;
+              if (ConfirmedEmailValidator.ensureAccountResponseBytes(var10Lifetime1, -28266)) {
+                var11 = DropTargetWidget.field_I.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  pd.field_I[var12] = AccountCreationForm.field_N.readPrefixedCp1252String(727059944);
+                  DropTargetWidget.field_I[var12] = AccountCreationForm.field_N.readPrefixedCp1252String(727059944);
                 }
-                ql.a(-107);
+                HuffmanDecoder.closeAccountConnection(-107);
                 n.field_a = false;
                 stackIn_44_0 = 100 + var11;
                 return stackIn_44_0;
@@ -256,14 +256,14 @@ final class FullscreenController {
           if (gf.field_ib == NodeHashTableIterator.field_j &&
             ExceptionSupport.b(92)) {
             if (ra.field_k != 255) {
-              bh.field_g = AccountCreationForm.field_N.readCp1252String(0);
+              QuickChatDynamicCommand.field_g = AccountCreationForm.field_N.readCp1252String(0);
             } else {
               var9_ref_String = AccountCreationForm.field_N.readNullableCp1252String(-1);
               if (var9_ref_String != null) {
-                MidiEnvelope.a(26017, jg.f(1), var9_ref_String);
+                MidiEnvelope.a(26017, DisplayNameValidator.getActiveApplet(1), var9_ref_String);
               }
             }
-            ql.a(-36);
+            HuffmanDecoder.closeAccountConnection(-36);
             n.field_a = false;
             stackIn_54_0 = ra.field_k;
             return stackIn_54_0;
@@ -271,9 +271,9 @@ final class FullscreenController {
           if (jc.field_H == null) {
             if (n.field_a) {
               if (eh.a(2) > 30000L) {
-                bh.field_g = sa.field_b;
+                QuickChatDynamicCommand.field_g = ArchiveLoadingStage.field_b;
               } else {
-                bh.field_g = TextLayoutLine.field_d;
+                QuickChatDynamicCommand.field_g = TextLayoutLine.field_d;
               }
               n.field_a = false;
               stackIn_61_0 = 249;
@@ -368,7 +368,7 @@ final class FullscreenController {
         }
         if (ResizableDialog.field_R != var2 ||
           ResizableDialog.field_P != var3) {
-          this.field_m.a(var3, var2, -109);
+          this.field_m.onDisplayResized(var3, var2, -109);
         }
         if (this.field_o > 0) {
           GameMenu.field_o = (-ResizableDialog.field_R + this.field_o) / 2;

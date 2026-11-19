@@ -97,7 +97,7 @@ class AudioOutput {
                 field_q == null) {
                 field_q = new AudioServiceThread();
                 field_q.field_c = param0;
-                param0.a((byte) -68, (Runnable) ((Object) field_q), field_n);
+                param0.requestThread((byte) -68, (Runnable) ((Object) field_q), field_n);
               }
               if (field_q != null) {
                 if (field_q.field_f[param2] != null) {

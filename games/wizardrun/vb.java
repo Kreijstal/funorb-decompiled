@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb extends TextButton {
-    static rc field_F;
+    static AccountConnectionState field_F;
     static String field_I;
     private GrowableIntList field_H;
     int field_G;
     int field_J;
     private int field_K;
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handleMousePress(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var13 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -26,11 +26,11 @@ final class vb extends TextButton {
         var15 = wizardrun.field_H;
         try {
           var8_int = 49 / ((param1 - 12) / 36);
-          if (!super.a(param0, (byte) -103, param2, param3, param4, param5, param6)) {
+          if (!super.handleMousePress(param0, (byte) -103, param2, param3, param4, param5, param6)) {
             return false;
           }
           var9 = -this.field_G - param0 + param2;
-          var10 = -(2 * this.field_G) + this.field_r;
+          var10 = -(2 * this.field_G) + this.width;
           if (var9 > var10) {
             var9 = var10;
           }
@@ -95,7 +95,7 @@ final class vb extends TextButton {
         if (param0 != -3) {
           return (Sprite[]) null;
         }
-        return cb.a(param4, param2, 1, true, 1, param3, 3, param1, 1);
+        return BeveledFrameFactory.createBeveledFrame(param4, param2, 1, true, 1, param3, 3, param1, 1);
     }
 
     final int e(int param0) {
@@ -107,7 +107,7 @@ final class vb extends TextButton {
 
     public static void releaseStatics(byte param0) {
         if (param0 <= 125) {
-          field_F = (rc) null;
+          field_F = (AccountConnectionState) null;
         }
         field_I = null;
         field_F = null;
@@ -119,6 +119,6 @@ final class vb extends TextButton {
 
     static {
         field_I = null;
-        field_F = new rc();
+        field_F = new AccountConnectionState();
     }
 }

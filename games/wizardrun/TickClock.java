@@ -34,7 +34,7 @@ abstract class TickClock {
     }
 
     final static IndexedSprite buildFirstIndexedSprite(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[0], ne.field_h[0], ImageProducerRasterBuffer.field_k[0], MouseInputHandler.field_b[0], TextFieldValidator.field_j[0], ic.field_b);
+        IndexedSprite var1 = new IndexedSprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[0], AccountFormText.field_h[0], ImageProducerRasterBuffer.field_k[0], MouseInputHandler.field_b[0], TextFieldValidator.field_j[0], DecodedSpritePalette.palette);
         if (param0 == -92) {
           ClientException.a(0);
           return var1;

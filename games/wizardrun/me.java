@@ -38,7 +38,7 @@ final class me {
 
     final static void a(int param0, boolean param1) {
         IndexedSpriteState.field_f = TextFieldValidator.field_g[param0];
-        bl.field_c = TextLayout.field_c[param0];
+        TextWrappingHelpers.field_c = TextLayout.field_c[param0];
         if (param1) {
           td.field_e = NodeHashTableIterator.field_e[param0];
           return;

@@ -67,7 +67,7 @@ final class ni {
         var7 = wizardrun.field_H;
         try {
           var1 = null;
-          var1_array = MidiPcmStream.field_T[GridActor.field_l][ql.field_c];
+          var1_array = MidiPcmStream.field_T[GridActor.field_l][HuffmanDecoder.field_c];
           if (var1_array == null) {
             return;
           }
@@ -103,7 +103,7 @@ final class ni {
               tc.field_l.field_f[var6] = 1;
             }
             if (GridActor.field_l == 0 &&
-              ql.field_c == 0) {
+              HuffmanDecoder.field_c == 0) {
               var3 = 0;
             }
             if (6 <= var5 &&
@@ -131,7 +131,7 @@ final class ni {
             tc.field_l.field_a[var6] = var1_array[incrementValue$2];
           }
           MenuController.field_f = 0;
-          il.field_e = false;
+          RadixParsingHelpers.field_e = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,14 +164,14 @@ final class ni {
               param3 <= 105) {
               var4 = param2;
               f.a((byte) -117, var4);
-              kd.field_a = rc.a(param2, (byte) -106);
+              kd.field_a = AccountConnectionState.createNameSuggestions(param2, (byte) -106);
               return;
             }
-            kd.field_a = hf.a(-105, param0, param3);
+            kd.field_a = ProxyAuthenticationException.a(-105, param0, param3);
           } else {
             stackIn_6_0 = -29309;
             stackIn_7_1 = !(QuickChatPhraseDefinition.field_t >= 13);
-            kd.field_a = ii.a(stackIn_6_0, stackIn_7_1);
+            kd.field_a = ii.createAvailableNameResult(stackIn_6_0, stackIn_7_1);
             var6 = (String[]) null;
             f.a((byte) -117, (String[]) null);
           }

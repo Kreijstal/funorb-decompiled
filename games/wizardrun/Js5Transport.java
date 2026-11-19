@@ -15,31 +15,31 @@ abstract class Js5Transport {
     PacketBuffer field_g;
     byte field_h;
     volatile int field_k;
-    fi field_c;
+    NetworkArchiveRequest field_c;
 
-    final boolean a(int param0) {
+    final boolean isPriorityQueueFull(int param0) {
         if (param0 == 3473) {
-          return this.d(param0 ^ -14914) >= 20 ? true : false;
+          return this.getPriorityRequestCount(param0 ^ -14914) >= 20 ? true : false;
         }
-        this.c(23);
-        return this.d(param0 ^ -14914) >= 20 ? true : false;
+        this.isNormalQueueFull(23);
+        return this.getPriorityRequestCount(param0 ^ -14914) >= 20 ? true : false;
     }
 
-    abstract void a(boolean param0, Object param1, int param2);
+    abstract void setConnection(boolean param0, Object param1, int param2);
 
-    final boolean c(int param0) {
+    final boolean isNormalQueueFull(int param0) {
         if (param0 == -21) {
-          return this.c((byte) -120) >= 20 ? true : false;
+          return this.getNormalRequestCount((byte) -120) >= 20 ? true : false;
         }
         this.field_j = (DualLinkDeque) null;
-        return this.c((byte) -120) >= 20 ? true : false;
+        return this.getNormalRequestCount((byte) -120) >= 20 ? true : false;
     }
 
-    abstract void a(byte param0);
+    abstract void close(byte param0);
 
-    abstract boolean b(byte param0);
+    abstract boolean service(byte param0);
 
-    final int d(int param0) {
+    final int getPriorityRequestCount(int param0) {
         if (param0 == -14289) {
           return this.field_b.size(4) + this.field_a.size(param0 + 14293);
         }
@@ -47,15 +47,15 @@ abstract class Js5Transport {
         return this.field_b.size(4) + this.field_a.size(param0 + 14293);
     }
 
-    final int c(byte param0) {
+    final int getNormalRequestCount(byte param0) {
         if (param0 < -16) {
           return this.field_j.size(4) + this.field_m.size(4);
         }
-        this.a(120);
+        this.isPriorityQueueFull(120);
         return this.field_j.size(4) + this.field_m.size(4);
     }
 
-    abstract void a(boolean param0);
+    abstract void resetAfterError(boolean param0);
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
@@ -64,19 +64,19 @@ abstract class Js5Transport {
         field_l = null;
     }
 
-    final fi a(int param0, int param1, byte param2, byte param3, boolean param4) {
+    final NetworkArchiveRequest request(int param0, int param1, byte param2, byte param3, boolean param4) {
         long var6 = ((long)param0 << 32) + (long)param1;
-        fi var8 = new fi();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_r = param4 ? true : false;
         var8.secondaryKey = var6;
-        var8.field_D = param3;
+        var8.padding = param3;
         if (param4) {
-          if (this.d(-14289) >= 20) {
+          if (this.getPriorityRequestCount(-14289) >= 20) {
             throw new RuntimeException();
           }
           this.field_b.addLast(var8, 14);
         } else {
-          if (!(20 > this.c((byte) -76))) {
+          if (!(20 > this.getNormalRequestCount((byte) -76))) {
             throw new RuntimeException();
           }
           this.field_j.addLast(var8, 14);
@@ -84,7 +84,7 @@ abstract class Js5Transport {
         if (param2 < -64) {
           return var8;
         }
-        return (fi) null;
+        return (NetworkArchiveRequest) null;
     }
 
     Js5Transport() {

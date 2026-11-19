@@ -4,11 +4,11 @@
 final class DualLinkDeque {
     static byte[][][] field_a;
     static boolean resourcesLoaded;
-    static bh field_d;
+    static QuickChatDynamicCommand field_d;
     static int field_i;
     private DualLinkNode field_c;
     static String field_e;
-    static nj field_g;
+    static HighscoreRequest field_g;
     static String field_b;
     private DualLinkNode field_f;
 
@@ -19,17 +19,17 @@ final class DualLinkDeque {
         synchronized (var1) {
           BrowserUrlLauncher.field_c = ve.pressedButton;
           oc.mouseIdleTime = oc.mouseIdleTime + 1;
-          pg.field_n = wizardrun.pointerX;
-          fi.field_B = IterableNodeHashTable.pointerY;
+          AchievementSubmission.field_n = wizardrun.pointerX;
+          NetworkArchiveRequest.field_B = IterableNodeHashTable.pointerY;
           ih.field_a = IndexedSpriteState.field_i;
           if (param0 != -21) {
             DualLinkDeque.releaseStatics((byte) 88);
           }
           IndexedSpriteState.field_i = false;
-          w.field_c = fi.field_w;
+          w.field_c = NetworkArchiveRequest.field_w;
           MouseInputHandler.field_e = mh.clickX;
-          dh.field_b = dc.clickY;
-          fi.field_w = 0;
+          EmailDomainHelpers.field_b = ProgressSubmission.clickY;
+          NetworkArchiveRequest.field_w = 0;
         }
     }
 
@@ -152,7 +152,7 @@ final class DualLinkDeque {
     final DualLinkNode removeFirst(int param0) {
         DualLinkNode var2 = this.field_c.secondaryNext;
         if (param0 < 33) {
-          field_g = (nj) null;
+          field_g = (HighscoreRequest) null;
           if (this.field_c != var2) {
             var2.unlinkSecondary(false);
             return var2;
@@ -173,7 +173,7 @@ final class DualLinkDeque {
     }
 
     static {
-        field_d = new bh(14, 0, 4, 1);
+        field_d = new QuickChatDynamicCommand(14, 0, 4, 1);
         field_b = "Just play";
     }
 }

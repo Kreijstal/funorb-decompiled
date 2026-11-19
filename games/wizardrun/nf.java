@@ -18,7 +18,7 @@ final class nf {
           if (param0 <= 83) {
             field_d = 125;
           }
-          stackIn_3_0 = bi.a(0, param1.length, param1, false);
+          stackIn_3_0 = Cp1252DecodingHelpers.decodeCp1252(0, param1.length, param1, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -551,7 +551,7 @@ final class nf {
             if (var4 < 0) {
               var5 = MenuController.field_b;
             } else {
-              if (ga.field_d.field_g != var4) {
+              if (IntegerSyntaxHelpers.field_d.field_g != var4) {
                 var5 = jl.field_s;
               } else {
                 var5 = tc.field_i;
@@ -594,10 +594,10 @@ final class nf {
             if (var4 == -2) {
               var6 = Integer.toString(var2);
             }
-            var7Lifetime1 = sf.a(!(0 > var4), 110, var6);
+            var7Lifetime1 = EmailCheckRequest.measureTextWidth(!(0 > var4), 110, var6);
             var8Lifetime1 = id.field_c - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              if (var4 == ga.field_d.field_g) {
+              if (var4 == IntegerSyntaxHelpers.field_d.field_g) {
                 stackIn_44_0 = EditableTextWidget.field_N;
               } else {
                 stackIn_44_0 = EditableTextWidget.field_S;
@@ -613,7 +613,7 @@ final class nf {
               TriangleMesh.field_j.drawString(var6, var8Lifetime1, var1_int + lc.field_a, var5, -1);
               var1_int = var1_int + BufferedRandomAccessFile.field_f;
             } else {
-              uf.field_c.drawString(var6, var8Lifetime1, var1_int + LoginChoicePanel.field_I, var5, -1);
+              LoginMethodPreference.field_c.drawString(var6, var8Lifetime1, var1_int + LoginChoicePanel.field_I, var5, -1);
               var1_int = var1_int + (ec.field_c + Js5Transport.field_e + e.field_d);
             }
             var3++;
@@ -627,7 +627,7 @@ final class nf {
     }
 
     final static String a(byte param0) {
-        if (fi.field_y == TextButton.field_E) {
+        if (NetworkArchiveRequest.field_y == TextButton.field_E) {
           return Js5Transport.field_l;
         }
         if (TextButton.field_E == wc.field_j) {
@@ -636,7 +636,7 @@ final class nf {
         if (param0 < 121) {
           return (String) null;
         }
-        if (!we.field_c.a(true)) {
+        if (!we.field_c.isComplete(true)) {
           return LoginForm.field_I;
         }
         return ResizableDialog.field_S;

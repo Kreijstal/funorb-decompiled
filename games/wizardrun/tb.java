@@ -64,10 +64,10 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updateInput(int param0, int param1, int param2, UiWidget param3) {
         int discarded$0 = 0;
         try {
-          super.a(param0 ^ 0, param1, param2, param3);
+          super.updateInput(param0 ^ 0, param1, param2, param3);
           if (param0 != 10000536) {
             UiWidget var6 = (UiWidget) null;
             discarded$0 = this.a(-69, (String) null, (String) null, -121, -105, (UiWidget) null);
@@ -85,29 +85,29 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
         UiWidget var2 = new UiWidget(MouseWheelInput.field_d, var1, (WidgetListener) null);
         this.field_F = new TextButton(td.field_b, (WidgetListener) null);
         this.field_G = new TextButton(StringPaddingHelpers.field_a, (WidgetListener) null);
-        this.field_E.field_p = DiskCacheWorker.field_a;
-        this.field_E.a(0, new jg(this.field_E));
+        this.field_E.tooltip = DiskCacheWorker.field_a;
+        this.field_E.a(0, new DisplayNameValidator(this.field_E));
         this.field_F.field_B = false;
-        this.field_F.field_w = (WidgetRenderer) ((Object) new jl());
-        this.field_G.field_w = (WidgetRenderer) ((Object) new tk());
-        this.field_E.field_w = (WidgetRenderer) ((Object) new qb(10000536));
+        this.field_F.renderer = (WidgetRenderer) ((Object) new jl());
+        this.field_G.renderer = (WidgetRenderer) ((Object) new tk());
+        this.field_E.renderer = (WidgetRenderer) ((Object) new FramedButtonPainter(10000536));
         int var3 = 20;
         int var4 = 4;
-        var2.a(121, var3, 50, 270, 20);
+        var2.setBounds(121, var3, 50, 270, 20);
         int var5 = 200;
         this.a(var2, (byte) 16);
         var3 += 50;
         var3 = var3 + (5 + this.a(170, MonotonicClockHelpers.field_b, re.field_E, 29171, var3, this.field_E));
-        this.field_F.a(109, var3, 40, var5, -var5 + 496 >> 1);
-        this.field_G.a(118, 15 + var3, 40, 60, var4 + 3);
-        this.field_G.field_s = (WidgetListener) (this);
-        this.field_F.field_s = (WidgetListener) (this);
+        this.field_F.setBounds(109, var3, 40, var5, -var5 + 496 >> 1);
+        this.field_G.setBounds(118, 15 + var3, 40, 60, var4 + 3);
+        this.field_G.listener = (WidgetListener) (this);
+        this.field_F.listener = (WidgetListener) (this);
         this.a((UiWidget) (this.field_F), (byte) 105);
         this.a((UiWidget) (this.field_G), (byte) 83);
         this.field_H = new NameSuggestionsPanel((NameSelectionListener) (this));
-        this.field_H.a(125, 20, 150, this.field_r - (this.field_E.field_o - (-this.field_E.field_r - 60)), this.field_E.field_o + (this.field_E.field_r + 60));
+        this.field_H.setBounds(125, 20, 150, this.width - (this.field_E.x - (-this.field_E.width - 60)), this.field_E.x + (this.field_E.width + 60));
         this.a((UiWidget) (this.field_H), (byte) 47);
-        this.a(113, 0, 55 + var3 + var4, 496, 0);
+        this.setBounds(113, 0, 55 + var3 + var4, 496, 0);
     }
 
     final static void a(int param0, int param1, ie param2) {
@@ -138,10 +138,10 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
     final static void a(int param0, boolean param1) {
         Base37Codec.field_d = param0;
         WidgetTheme.field_j = MidiPcmStream.field_M;
-        hj.field_c = 0;
+        IndexedSpriteArrayFactory.field_c = 0;
         ej.field_c = 0;
         GameGraphicsResources.field_d = new MenuInputState(2);
-        GameGraphicsResources.field_d.a(param0 ^ -12785, wc.a(29292, fi.field_B, pg.field_n), param1, -1);
+        GameGraphicsResources.field_d.a(param0 ^ -12785, wc.a(29292, NetworkArchiveRequest.field_B, AchievementSubmission.field_n), param1, -1);
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -184,7 +184,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
         if (param0 <= 21) {
           return;
         }
-        MessagePanel.a(-125, this.field_E.field_k);
+        MessagePanel.a(-125, this.field_E.text);
     }
 
     private final boolean a(int param0, ValidatorProvider param1) {
@@ -223,12 +223,12 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
 
     public final void a(int param0) {
         if (param0 == 2147483647) {
-          ((jg) (this.field_E.getValidator((byte) 0))).g(105);
+          ((DisplayNameValidator) (this.field_E.getValidator((byte) 0))).clearCachedNameResult(105);
           return;
         }
         UiWidget var3 = (UiWidget) null;
         int discarded$0 = this.a(4, (String) null, (String) null, 24, -50, (UiWidget) null);
-        ((jg) (this.field_E.getValidator((byte) 0))).g(105);
+        ((DisplayNameValidator) (this.field_E.getValidator((byte) 0))).clearCachedNameResult(105);
     }
 
     private final int a(int param0, int param1, int param2, String param3, UiWidget param4, int param5, String param6) {
@@ -252,10 +252,10 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
             this.onButtonAction(19, (TextButton) null, -126, -50, 59);
           }
           this.a((UiWidget) (var11), (byte) 44);
-          var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param4)).getValidator((byte) 117), param3, 126, param1 + var11.field_n, 25 + param5, param2);
-          var9.field_s = (WidgetListener) (this);
+          var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param4)).getValidator((byte) 117), param3, 126, param1 + var11.height, 25 + param5, param2);
+          var9.listener = (WidgetListener) (this);
           this.a((UiWidget) (var9), (byte) 95);
-          stackIn_3_0 = var9.field_n + var11.field_n;
+          stackIn_3_0 = var9.height + var11.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -283,7 +283,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
@@ -292,7 +292,7 @@ final class tb extends WidgetContainer implements NameSelectionListener, ButtonA
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) -100, param3)) {
+          if (super.handleKeyPress(param0, param1, (byte) -100, param3)) {
             return true;
           }
           if (param1 == 98) {

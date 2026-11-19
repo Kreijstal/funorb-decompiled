@@ -19,8 +19,8 @@ final class MonotonicClockHelpers {
         try {
           if (EditableTextWidget.field_O == -1 &&
             ee.field_r == -1) {
-            EditableTextWidget.field_O = pg.field_n;
-            ee.field_r = fi.field_B;
+            EditableTextWidget.field_O = AchievementSubmission.field_n;
+            ee.field_r = NetworkArchiveRequest.field_B;
           }
           boolean decompiledFrameRemainder0 = true;
           IterableNodeHashTable.field_b = IterableNodeHashTable.field_b + 1;
@@ -53,7 +53,7 @@ final class MonotonicClockHelpers {
                 }
               }
             }
-            uc.field_a = EditableTextWidget.field_O;
+            ArchiveLoadingPlan.field_a = EditableTextWidget.field_O;
             if (param0 == null) {
               if (var2_int != 0) {
                 ol.field_b = true;
@@ -67,7 +67,7 @@ final class MonotonicClockHelpers {
             jc.field_I > IterableNodeHashTable.field_b &&
             ih.field_a) {
             StrongCacheEntry.field_u = ee.field_r;
-            uc.field_a = EditableTextWidget.field_O;
+            ArchiveLoadingPlan.field_a = EditableTextWidget.field_O;
             IterableNodeHashTable.field_b = 0;
           }
           vb.field_I = param0;
@@ -115,13 +115,13 @@ final class MonotonicClockHelpers {
           return 0L;
         }
         long var1 = System.currentTimeMillis();
-        if (var1 >= sj.field_k) {
-          sj.field_k = var1;
-          return rb.field_d + var1;
+        if (var1 >= EmailAddressValidator.field_k) {
+          EmailAddressValidator.field_k = var1;
+          return DisplayModeInfo.field_d + var1;
         }
-        rb.field_d = rb.field_d + (-var1 + sj.field_k);
-        sj.field_k = var1;
-        return rb.field_d + var1;
+        DisplayModeInfo.field_d = DisplayModeInfo.field_d + (-var1 + EmailAddressValidator.field_k);
+        EmailAddressValidator.field_k = var1;
+        return DisplayModeInfo.field_d + var1;
     }
 
     final static boolean a(boolean param0, char param1) {

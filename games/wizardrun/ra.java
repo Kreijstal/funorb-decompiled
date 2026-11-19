@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ra extends IntrusiveNode {
-    static uf field_j;
+    static LoginMethodPreference field_j;
     int field_n;
     static Sprite field_p;
     static String field_i;
@@ -30,7 +30,7 @@ final class ra extends IntrusiveNode {
         int var1_intLifetime1;
         var3 = wizardrun.field_H;
         try {
-          il.field_e = true;
+          RadixParsingHelpers.field_e = true;
           if (param0 != 2) {
             return;
           }
@@ -60,7 +60,7 @@ final class ra extends IntrusiveNode {
         this.field_n = param0;
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] loadNamedResource(String param0, byte param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -71,7 +71,7 @@ final class ra extends IntrusiveNode {
           if (param1 >= -94) {
             field_k = -114;
           }
-          stackIn_3_0 = qb.field_r.a(92, param0, "");
+          stackIn_3_0 = FramedButtonPainter.field_r.getNamedFile(92, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class ra extends IntrusiveNode {
     }
 
     static {
-        field_j = new uf("");
+        field_j = new LoginMethodPreference("");
         field_k = -1;
         field_l = "The Pirate Ship";
         field_i = "members-only content";

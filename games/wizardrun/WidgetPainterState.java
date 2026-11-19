@@ -133,21 +133,21 @@ final class WidgetPainterState {
             var8 = (StatefulWidgetPainter) null;
             this.a(41, 36, -40, (UiWidget) null, (WidgetPainterState) null, (StatefulWidgetPainter) null);
           }
-          CacheEntry.a(this.field_j, param4 + param0.field_o, (byte) -110, param0.field_n, param0.field_r, param2 + param0.field_l);
+          CacheEntry.a(this.field_j, param4 + param0.x, (byte) -110, param0.height, param0.width, param2 + param0.y);
           if (this.field_i != null) {
-            var6_int = this.field_h + (param4 + param0.field_o);
+            var6_int = this.field_h + (param4 + param0.x);
             if (param3.field_l == 1) {
-              var6_int = var6_int + (-this.field_i.fullWidth + param0.field_r) / 2;
+              var6_int = var6_int + (-this.field_i.fullWidth + param0.width) / 2;
             }
-            var7 = param2 + (param0.field_l + this.field_e);
+            var7 = param2 + (param0.y + this.field_e);
             if (param3.field_l == 2) {
-              var6_int = var6_int + (-this.field_i.fullWidth + param0.field_r);
+              var6_int = var6_int + (-this.field_i.fullWidth + param0.width);
             }
             if (param3.field_a == 1) {
-              var7 = var7 + (-this.field_i.fullHeight + param0.field_n) / 2;
+              var7 = var7 + (-this.field_i.fullHeight + param0.height) / 2;
             }
             if (param3.field_a == 2) {
-              var7 = var7 + (-this.field_i.fullHeight + param0.field_n);
+              var7 = var7 + (-this.field_i.fullHeight + param0.height);
             }
             this.field_i.drawTransparent(var6_int, var7);
           }
@@ -162,15 +162,15 @@ final class WidgetPainterState {
             } else {
               stackIn_21_2 = 0;
             }
-            stackIn_23_2 = stackIn_21_2 + param3.field_n + (param4 + param0.field_o);
+            stackIn_23_2 = stackIn_21_2 + param3.field_n + (param4 + param0.x);
             if (this.field_e != -2147483648) {
               stackIn_24_3 = this.field_e;
             } else {
               stackIn_24_3 = 0;
             }
-            stackIn_26_3 = stackIn_24_3 + (param3.field_b + (param0.field_l + param2));
-            stackIn_26_4 = -param3.field_n + (param0.field_r - param3.field_h);
-            stackIn_26_5 = -param3.field_b + param0.field_n - param3.field_j;
+            stackIn_26_3 = stackIn_24_3 + (param3.field_b + (param0.y + param2));
+            stackIn_26_4 = -param3.field_n + (param0.width - param3.field_h);
+            stackIn_26_5 = -param3.field_b + param0.height - param3.field_j;
             stackIn_26_6 = this.field_f;
             stackIn_26_7 = this.field_a;
             if (this.field_c != -2147483648) {

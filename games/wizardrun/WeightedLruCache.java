@@ -48,7 +48,7 @@ final class WeightedLruCache {
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        ai.openLoginDialogWithIntGuard(param1, 126, (String) null, param0);
+        ScoreSubmission.openLoginDialogWithIntGuard(param1, 126, (String) null, param0);
         if (param2 <= 106) {
           WeightedLruCache.a(-92L, -11);
         }
@@ -308,7 +308,7 @@ final class WeightedLruCache {
         if (LoginChoicePanel.field_E == null) {
           return;
         }
-        ka.a(LoginChoicePanel.field_E, 8053);
+        EmailLoginCredentials.a(LoginChoicePanel.field_E, 8053);
         LoginChoicePanel.field_E.a(ld.field_g, (byte) 19);
         LoginChoicePanel.field_E = null;
         if (StringPaddingHelpers.field_c != null) {

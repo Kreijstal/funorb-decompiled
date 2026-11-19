@@ -3,7 +3,7 @@
  */
 final class tl {
     static boolean field_e;
-    static ae field_d;
+    static EmailValidationError field_d;
     static String field_b;
     static PcmStreamMixer field_a;
     static qj field_c;
@@ -73,7 +73,7 @@ final class tl {
 
     static {
         field_e = true;
-        field_d = new ae();
+        field_d = new EmailValidationError();
         field_b = "Username: ";
     }
 }

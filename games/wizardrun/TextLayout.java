@@ -78,7 +78,7 @@ abstract class TextLayout {
           if (param1 != 78) {
             field_e = 119;
           }
-          stackIn_3_0 = ga.a(param0, 10, 58, true);
+          stackIn_3_0 = IntegerSyntaxHelpers.isValidInteger(param0, 10, 58, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

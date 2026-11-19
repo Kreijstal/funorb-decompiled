@@ -10,11 +10,11 @@ final class DialogLayer extends SingleChildWidget {
     static String field_G;
 
     public DialogLayer() {
-        super(0, 0, dh.field_a, LabeledField.field_K, (WidgetRenderer) null, (WidgetListener) null);
+        super(0, 0, EmailDomainHelpers.field_a, LabeledField.field_K, (WidgetRenderer) null, (WidgetListener) null);
         this.field_I = new IntrusiveDeque();
     }
 
-    final UiWidget a(byte param0) {
+    final UiWidget getFocusedChild(byte param0) {
         IntrusiveDequeCursor var2;
         FadingDialog var3;
         int var4;
@@ -22,7 +22,7 @@ final class DialogLayer extends SingleChildWidget {
         var2 = new IntrusiveDequeCursor(this.field_I);
         var3 = (FadingDialog) (var2.first((byte) 31));
         if (param0 >= -29) {
-          this.a((byte) -88);
+          this.getFocusedChild((byte) -88);
         }
         while (var3 != null) {
           if (var3.field_H) {
@@ -36,7 +36,7 @@ final class DialogLayer extends SingleChildWidget {
     final void g(int param0) {
         int var4 = wizardrun.field_H;
         if (param0 != -5903) {
-          this.a(86, 9, -39, -76);
+          this.drawLayer(86, 9, -39, -76);
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_I);
         FadingDialog var3 = (FadingDialog) (var2.first((byte) 31));
@@ -93,16 +93,16 @@ final class DialogLayer extends SingleChildWidget {
           }
           this.field_I.addFirst(var3, -5441);
           var3.field_H = true;
-          var3.a((UiWidget) (this), 8);
+          var3.requestFocus((UiWidget) (this), 8);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wi.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = wizardrun.field_H;
-        if (this.field_w != null) {
-          this.field_w.drawWidget(param0, param3, (UiWidget) (this), true, true);
+        if (this.renderer != null) {
+          this.renderer.drawWidget(param0, param3, (UiWidget) (this), true, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_I);
         if (param1 != 0) {
@@ -110,7 +110,7 @@ final class DialogLayer extends SingleChildWidget {
         }
         UiWidget var6 = (UiWidget) (var5.last((byte) 69));
         while (var6 != null) {
-          var6.a(this.field_o + param0, 0, param2, param3 + this.field_l);
+          var6.drawLayer(this.x + param0, 0, param2, param3 + this.y);
           var6 = (UiWidget) (var5.previous(true));
         }
     }

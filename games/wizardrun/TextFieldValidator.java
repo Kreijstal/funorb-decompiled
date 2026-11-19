@@ -7,12 +7,12 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
     static int[] field_h;
     private EditableTextWidget field_i;
 
-    abstract ValidationState a(int param0, String param1);
+    abstract ValidationState validateText(int param0, String param1);
 
     public final void onTextChanged(int param0, EditableTextWidget param1) {
         try {
           if (param0 > -111) {
-            this.b((byte) -122);
+            this.getCurrentValidationMessage((byte) -122);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "mf.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -22,27 +22,27 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
     public final boolean isEmpty(int param0) {
         if (param0 != 7245) {
           this.isEmpty(-4);
-          if (null != this.field_i.field_k) {
-            return this.field_i.field_k.length() == 0 ? true : false;
+          if (null != this.field_i.text) {
+            return this.field_i.text.length() == 0 ? true : false;
           }
           return true;
         }
-        if (null == this.field_i.field_k) {
+        if (null == this.field_i.text) {
           return true;
         }
-        if (this.field_i.field_k.length() != 0) {
+        if (this.field_i.text.length() != 0) {
           return false;
         }
         return true;
     }
 
-    abstract String a(String param0, int param1);
+    abstract String getTextValidationMessage(String param0, int param1);
 
-    final ValidationState b(boolean param0) {
+    final ValidationState validateCurrentText(boolean param0) {
         if (!param0) {
           return (ValidationState) null;
         }
-        return this.a(-1, this.field_i.field_k);
+        return this.validateText(-1, this.field_i.text);
     }
 
     public static void releaseStatics(int param0) {
@@ -53,18 +53,18 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        TextFieldValidator.a((String) null, (String) null, (ResourceArchive) null, (byte) 23);
+        TextFieldValidator.loadNamedIndexedSprite((String) null, (String) null, (ResourceArchive) null, (byte) 23);
         field_j = (byte[][]) null;
         field_g = null;
     }
 
-    final String b(byte param0) {
+    final String getCurrentValidationMessage(byte param0) {
         if (param0 < -12) {
-          return this.a(this.field_i.field_k, -1);
+          return this.getTextValidationMessage(this.field_i.text, -1);
         }
         EditableTextWidget var3 = (EditableTextWidget) null;
         this.onTextChanged(-1, (EditableTextWidget) null);
-        return this.a(this.field_i.field_k, -1);
+        return this.getTextValidationMessage(this.field_i.text, -1);
     }
 
     public final void onTextSubmitted(EditableTextWidget param0, int param1) {
@@ -95,7 +95,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         }
     }
 
-    final static IndexedSprite a(String param0, String param1, ResourceArchive param2, byte param3) {
+    final static IndexedSprite loadNamedIndexedSprite(String param0, String param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -111,9 +111,9 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = 91 / ((-19 - param3) / 54);
-          var4_int = param2.b(-1, param0);
-          var6 = param2.a(var4_int, param1, -11986);
-          stackIn_1_0 = of.a(param2, var6, (byte) -128, var4_int);
+          var4_int = param2.getGroupId(-1, param0);
+          var6 = param2.getFileId(var4_int, param1, -11986);
+          stackIn_1_0 = of.loadIndexedSprite(param2, var6, (byte) -128, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -75,7 +75,7 @@ final class RadialSelectorWidget extends TextButton {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handleMousePress(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -89,12 +89,12 @@ final class RadialSelectorWidget extends TextButton {
         var13 = wizardrun.field_H;
         try {
           var8_int = 11 / ((param1 - 12) / 36);
-          if (!super.a(param0, (byte) 69, param2, param3, param4, param5, param6)) {
+          if (!super.handleMousePress(param0, (byte) 69, param2, param3, param4, param5, param6)) {
             return false;
           }
           boolean decompiledFrameCompleted0 = true;
-          var9 = -param0 - this.field_o + (-this.field_J + param2);
-          var10 = param5 + (-this.field_L - param3) - this.field_l;
+          var9 = -param0 - this.x + (-this.field_J + param2);
+          var10 = param5 + (-this.field_L - param3) - this.y;
           if ((var9 * var9 + var10 * var10) < (this.field_G * this.field_G)) {
             var11 = Math.atan2((double)var10, (double)var9) - SettingsCookieReader.field_b;
             if (var11 < 0.0) {
@@ -239,7 +239,7 @@ final class RadialSelectorWidget extends TextButton {
                         stackIn_39_0Lifetime1 = var16 << 4;
                         stackIn_39_1Lifetime1 = var17;
                         var18 = stackIn_39_0Lifetime1 + stackIn_39_1Lifetime1;
-                        cb.field_e[var18] = var8;
+                        BeveledFrameFactory.field_e[var18] = var8;
                         id.field_b[var16] = var17 + 1;
                         if (0 < param4.field_n &&
                           param4.field_x != null) {
@@ -339,10 +339,10 @@ final class RadialSelectorWidget extends TextButton {
               param4 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (hg.field_b == null) {
-                hg.field_b = wizardrun.field_G.createImage(304, 34);
+              if (DisplayNameSyntaxHelpers.field_b == null) {
+                DisplayNameSyntaxHelpers.field_b = wizardrun.field_G.createImage(304, 34);
               }
-              var6 = hg.field_b.getGraphics();
+              var6 = DisplayNameSyntaxHelpers.field_b.getGraphics();
               var6.setColor(param4);
               if (param0 != 10487) {
                 RadialSelectorWidget.a(106, false, -93, (String) null, (java.awt.Color) null);
@@ -355,7 +355,7 @@ final class RadialSelectorWidget extends TextButton {
               var6.setFont(mh.field_ob);
               var6.setColor(java.awt.Color.white);
               var6.drawString(param3, (-(6 * param3.length()) + 304) / 2, 22);
-              var5.drawImage(hg.field_b, ResizableDialog.field_R / 2 - 152, -18 + ResizableDialog.field_P / 2, (java.awt.image.ImageObserver) null);
+              var5.drawImage(DisplayNameSyntaxHelpers.field_b, ResizableDialog.field_R / 2 - 152, -18 + ResizableDialog.field_P / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref = (Exception) (Object) decompiledCaughtException;
@@ -371,10 +371,10 @@ final class RadialSelectorWidget extends TextButton {
               var5.setColor(java.awt.Color.white);
               var5.drawString(param3, var7 + (304 - param3.length() * 6) / 2, 22 + var8);
             }
-            if (gi.field_e != null) {
+            if (LoginPacketBuilder.field_e != null) {
               var5.setFont(mh.field_ob);
               var5.setColor(java.awt.Color.white);
-              var5.drawString(gi.field_e, ResizableDialog.field_R / 2 - gi.field_e.length() * 6 / 2, ResizableDialog.field_P / 2 - 26);
+              var5.drawString(LoginPacketBuilder.field_e, ResizableDialog.field_R / 2 - LoginPacketBuilder.field_e.length() * 6 / 2, ResizableDialog.field_P / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -516,7 +516,7 @@ final class RadialSelectorWidget extends TextButton {
                         stackIn_39_0Lifetime1 = var16 << 4;
                         stackIn_39_1Lifetime1 = var17;
                         var18 = stackIn_39_0Lifetime1 + stackIn_39_1Lifetime1;
-                        cb.field_e[var18] = var8;
+                        BeveledFrameFactory.field_e[var18] = var8;
                         id.field_b[var16] = var17 + 1;
                         if (0 < param4.field_n &&
                           param4.field_x != null) {

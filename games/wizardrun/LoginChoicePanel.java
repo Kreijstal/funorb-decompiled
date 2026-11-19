@@ -5,14 +5,14 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     static int field_M;
     private TextButton field_H;
     private TextButton field_J;
-    static wd field_F;
+    static NameAvailabilityRequest field_F;
     static int field_I;
     static FullscreenFocusCanvas field_E;
     static String field_L;
     private TextButton field_K;
     static char[] field_G;
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -21,7 +21,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) -105, param3)) {
+          if (super.handleKeyPress(param0, param1, (byte) -105, param3)) {
             return true;
           }
           if (param2 >= -96) {
@@ -56,20 +56,20 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         this.field_H = new TextButton(v.field_c, (WidgetListener) null);
         this.field_J = new TextButton(DualLinkDeque.field_b, (WidgetListener) null);
         jl var1 = new jl();
-        this.field_K.field_w = (WidgetRenderer) ((Object) var1);
-        this.field_H.field_w = (WidgetRenderer) ((Object) var1);
-        this.field_J.field_w = (WidgetRenderer) ((Object) var1);
+        this.field_K.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_H.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_J.renderer = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_H.a(120, -48 + (this.field_n - var2), 30, var4, this.field_r - var3 >> 1);
-        this.field_J.a(117, -48 + this.field_n - var2, 30, var4, (-var3 + this.field_r >> 1) - (-var4 - var2));
-        this.field_K.a(120, this.field_n - (78 + 2 * var2), 30, var3, -var3 + this.field_r >> 1);
-        this.field_H.field_s = (WidgetListener) (this);
-        this.field_K.field_s = (WidgetListener) (this);
-        this.field_J.field_s = (WidgetListener) (this);
-        this.field_K.field_p = hb.field_i;
-        this.field_J.field_p = hf.field_a;
+        this.field_H.setBounds(120, -48 + (this.height - var2), 30, var4, this.width - var3 >> 1);
+        this.field_J.setBounds(117, -48 + this.height - var2, 30, var4, (-var3 + this.width >> 1) - (-var4 - var2));
+        this.field_K.setBounds(120, this.height - (78 + 2 * var2), 30, var3, -var3 + this.width >> 1);
+        this.field_H.listener = (WidgetListener) (this);
+        this.field_K.listener = (WidgetListener) (this);
+        this.field_J.listener = (WidgetListener) (this);
+        this.field_K.tooltip = DelayedServerPacket.field_i;
+        this.field_J.tooltip = ProxyAuthenticationException.field_a;
         this.a((UiWidget) (this.field_H), (byte) 101);
         this.a((UiWidget) (this.field_K), (byte) 47);
         this.a((UiWidget) (this.field_J), (byte) 46);
@@ -83,18 +83,18 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         field_L = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        int var5 = this.field_o + param0;
-        int var6 = this.field_l + param3;
-        Crc32Helpers.field_b.a(ci.field_c, var5 + 20, 20 + var6, this.field_r - 40, this.field_n - 50, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        int var5 = this.x + param0;
+        int var6 = this.y + param3;
+        Crc32Helpers.field_b.a(ci.field_c, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     final static void h(byte param0) {
         DialogLayer.field_J = false;
         WrappedTextLayout.field_i = false;
         jc.a((byte) 79, -1);
-        fi.field_y = ej.field_b;
+        NetworkArchiveRequest.field_y = ej.field_b;
         if (param0 > 64) {
           wc.field_j = ej.field_b;
           return;

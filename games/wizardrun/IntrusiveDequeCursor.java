@@ -12,7 +12,7 @@ final class IntrusiveDequeCursor {
 
     final static int c(byte param0) {
         int var1 = 48 / ((-9 - param0) / 52);
-        return -fe.field_l + sj.field_n;
+        return -MatchingTextValidator.field_l + EmailAddressValidator.field_n;
     }
 
     final IntrusiveNode next(int param0) {

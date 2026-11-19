@@ -46,7 +46,7 @@ public final class wizardrun extends GameShell {
         var9 = field_H;
         IntrusiveNodeHashTable.a((byte) -69);
         if (param0) {
-          QuickChatPhraseDefinition.a(0, gi.field_c);
+          QuickChatPhraseDefinition.a(0, LoginPacketBuilder.field_c);
         }
         if (SingleChildWidget.field_E.ensureIndex(17820) &&
           SingleChildWidget.field_E.areAllGroupsAvailable(-56)) {
@@ -60,21 +60,21 @@ public final class wizardrun extends GameShell {
                   PlatformActor.field_u.areAllGroupsAvailable(-67)) {
                   if (TickClock.field_b.ensureIndex(17820) &&
                     TickClock.field_b.areAllGroupsAvailable(83)) {
-                    if (bb.field_h.ensureIndex(17820) &&
-                      bb.field_h.a((byte) 29, "basic")) {
-                      if (bc.field_a.ensureIndex(param1 ^ 17842) &&
-                        bc.field_a.areAllGroupsAvailable(-85)) {
-                        ValidationState.showLoadingProgress(nh.field_o, 100.0f, 0);
+                    if (UsernameLoginCredentials.field_h.ensureIndex(17820) &&
+                      UsernameLoginCredentials.field_h.ensureNamedGroupLoaded((byte) 29, "basic")) {
+                      if (MeshWorkspaceHelpers.field_a.ensureIndex(param1 ^ 17842) &&
+                        MeshWorkspaceHelpers.field_a.areAllGroupsAvailable(-85)) {
+                        ValidationState.showLoadingProgress(AlternateUsernameLoginCredentials.field_o, 100.0f, 0);
                         if (!param0) {
                           return;
                         }
                         WrappedTextLayout.a((byte) 79);
                         this.f(-98);
-                        FlatTriangleRasterizer.font12 = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "b12", bc.field_a);
-                        hj.wizardFont = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "wizfont", bc.field_a);
-                        GameGraphicsResources.wizardFont2 = IsaacRandom.loadFont(param1 + 800863540, "", SingleChildWidget.field_E, "wizfont2", bc.field_a);
+                        FlatTriangleRasterizer.font12 = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "b12", MeshWorkspaceHelpers.field_a);
+                        IndexedSpriteArrayFactory.wizardFont = IsaacRandom.loadFont(800863586, "", SingleChildWidget.field_E, "wizfont", MeshWorkspaceHelpers.field_a);
+                        GameGraphicsResources.wizardFont2 = IsaacRandom.loadFont(param1 + 800863540, "", SingleChildWidget.field_E, "wizfont2", MeshWorkspaceHelpers.field_a);
                         lk.field_b = new Sprite[16];
-                        bc.field_a = null;
+                        MeshWorkspaceHelpers.field_a = null;
                         numberSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "numbers", param1 + 45);
                         GameGraphicsResources.gemSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "gems", 114);
                         oc.field_c = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "playerintro", 117);
@@ -83,8 +83,8 @@ public final class wizardrun extends GameShell {
                         BrowserCookieHelpers.field_b = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "screenshots", 87);
                         var12 = vg.loadSprite(15, "gamelogo", SingleChildWidget.field_E, "");
                         var4 = vg.loadSprite(15, "mbstar", SingleChildWidget.field_E, "");
-                        uc.a(-1, MidiNote.field_u, BrowserUrlLauncher.field_b);
-                        pk.a(var12, false);
+                        ArchiveLoadingPlan.setMembershipOffer(-1, MidiNote.field_u, BrowserUrlLauncher.field_b);
+                        ReflectionCheck.setMembershipOfferIcon(var12, false);
                         tk.a(0, var4, var4.fullWidth, 0, 2500, 0, 2, var4.fullHeight, 0);
                         FullscreenFocusCanvas.a(true, BrowserCookieHelpers.field_b);
                         ck.a((java.applet.Applet) (this), ValidationHelpWidget.field_O, 0, 34, 16777215, 255);
@@ -99,25 +99,25 @@ public final class wizardrun extends GameShell {
                         ra.wizardNoHatSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "wizardnohat", param1 + 42);
                         DualLinkNode.field_m = vg.loadSprite(param1 ^ 33, "explosion", SingleChildWidget.field_E, "");
                         FullscreenFocusCanvas.field_a = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "achievements", 108);
-                        sk.field_z = vg.loadSprite(15, "unachieved", bb.field_h, "basic");
-                        wc.field_f = vg.loadSprite(15, "orbcoin", bb.field_h, "basic");
-                        BrowserCookieHelpers.field_c = vg.loadSprite(15, "locked", bb.field_h, "basic");
+                        DiskCacheRequest.field_z = vg.loadSprite(15, "unachieved", UsernameLoginCredentials.field_h, "basic");
+                        wc.field_f = vg.loadSprite(15, "orbcoin", UsernameLoginCredentials.field_h, "basic");
+                        BrowserCookieHelpers.field_c = vg.loadSprite(15, "locked", UsernameLoginCredentials.field_h, "basic");
                         kk.field_Bb = new Sprite[5];
                         kk.field_Bb[0] = vg.loadSprite(15, "highscore", SingleChildWidget.field_E, "");
                         kk.field_Bb[1] = vg.loadSprite(15, "highscorebar", SingleChildWidget.field_E, "");
                         kk.field_Bb[2] = vg.loadSprite(param1 - 31, "stage", SingleChildWidget.field_E, "");
                         kk.field_Bb[3] = vg.loadSprite(DiskCacheStore.xor(param1, 33), "score", SingleChildWidget.field_E, "");
                         kk.field_Bb[4] = numberSprites[10];
-                        pd.frameSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "frame", 91);
+                        DropTargetWidget.frameSprites = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "frame", 91);
                         LoginForm.field_E = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "buttonframe", 119);
                         GridPoint.field_c = new Sprite(32, 32);
                         GridPoint.field_c.bindAsRasterTarget();
                         ve.wizardSprites[6].drawWithOffsets(-18, -18);
-                        ArchiveProvider.field_b.b(68);
+                        ArchiveProvider.field_b.bindRasterTarget(68);
                         ec.field_b = new Sprite(64, 64);
                         ec.field_b.bindAsRasterTarget();
                         SoftwareRasterizer.fillCircle(32, 32, 30, 16777215);
-                        ArchiveProvider.field_b.b(param1 + 17);
+                        ArchiveProvider.field_b.bindRasterTarget(param1 + 17);
                         gf.field_bb = ve.wizardSprites[1];
                         ld.field_d = vg.loadSprite(param1 - 31, "selector", SingleChildWidget.field_E, "");
                         GameShell.field_x = vg.loadSprite(param1 - 31, "bosshealth", SingleChildWidget.field_E, "");
@@ -135,18 +135,18 @@ public final class wizardrun extends GameShell {
                         this.drawBorderedText(-12926, var15, 15583488, 165 + GameGraphicsResources.wizardFont2.stringWidth(var15) / 2, 180 + 3 * var5_int);
                         var16 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 124, IntrusiveDeque.field_d);
                         this.drawBorderedText(-12926, var16, 15583488, GameGraphicsResources.wizardFont2.stringWidth(var16) / 2 + 165, -15 + var5_int * 4 + 180);
-                        var17 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 97, sk.field_C);
+                        var17 = WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 97, DiskCacheRequest.field_C);
                         this.drawBorderedText(-12926, var17, 15583488, GameGraphicsResources.wizardFont2.stringWidth(var17) / 2 + 165, 5 * var5_int + 180);
-                        ArchiveProvider.field_b.b(106);
+                        ArchiveProvider.field_b.bindRasterTarget(106);
                         kb.field_jb = vg.loadSprite(15, "optionscreen", SingleChildWidget.field_E, "");
                         we.field_b = vg.loadSprite(param1 - 31, "endscreen", SingleChildWidget.field_E, "");
-                        il.a(240, GameGraphicsResources.wizardFont2, pd.frameSprites, (byte) -113, pd.frameSprites, 16777215, 16777088, 12, 12, 16776960, 320, 12, pd.frameSprites, 12, 12);
+                        RadixParsingHelpers.a(240, GameGraphicsResources.wizardFont2, DropTargetWidget.frameSprites, (byte) -113, DropTargetWidget.frameSprites, 16777215, 16777088, 12, 12, 16776960, 320, 12, DropTargetWidget.frameSprites, 12, 12);
                         RadialSelectorWidget.a((byte) -94);
                         MidiPcmStream.field_T = new byte[6][6][];
                         SingleChildWidget.field_E = null;
                         for (var5_intLifetime1 = 0; var5_intLifetime1 <= 5; var5_intLifetime1++) {
                           for (var6_int = 0; var6_int <= 5; var6_int++) {
-                            MidiPcmStream.field_T[var5_intLifetime1][var6_int] = mh.field_jb.a(52, "level" + var5_intLifetime1 + var6_int + ".dat", "");
+                            MidiPcmStream.field_T[var5_intLifetime1][var6_int] = mh.field_jb.getNamedFile(52, "level" + var5_intLifetime1 + var6_int + ".dat", "");
                           }
                         }
                         mh.field_jb = null;
@@ -220,25 +220,25 @@ public final class wizardrun extends GameShell {
                         SpriteState.secondarySoundEffects[24] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "goblin_death").decodeAllToPcm().a(var10);
                         SpriteState.secondarySoundEffects[28] = VorbisSample.loadNamed(jl.bossSoundArchive, "", "horned_demon_death").decodeAllToPcm().a(var10);
                         var5 = null;
-                        pj.field_G = MidiTrack.a(TickClock.field_b, "", "wizard_run_forest");
-                        ka.field_l = MidiTrack.a(TickClock.field_b, "", "wizard_run_swamp");
-                        ml.field_u = MidiTrack.a(TickClock.field_b, "", "wizard_run_caves");
-                        ne.field_b = MidiTrack.a(TickClock.field_b, "", "wizard_run_mountains");
+                        DraggableWidget.field_G = MidiTrack.a(TickClock.field_b, "", "wizard_run_forest");
+                        EmailLoginCredentials.field_l = MidiTrack.a(TickClock.field_b, "", "wizard_run_swamp");
+                        ArchiveRequest.field_u = MidiTrack.a(TickClock.field_b, "", "wizard_run_caves");
+                        AccountFormText.field_b = MidiTrack.a(TickClock.field_b, "", "wizard_run_mountains");
                         PacketBuffer.field_j = MidiTrack.a(TickClock.field_b, "", "wizard_run_volcano");
                         ec.field_d = MidiTrack.a(TickClock.field_b, "", "wizard_run_lair");
                         SettingsCookieReader.field_a = MidiTrack.a(TickClock.field_b, "", "wizard_run_boss");
                         DirectByteStorage.field_j = MidiTrack.a(TickClock.field_b, "", "wizard_run_intro");
-                        bh.field_e = MidiTrack.a(TickClock.field_b, "", "wizard_run_cutscene");
+                        QuickChatDynamicCommand.field_e = MidiTrack.a(TickClock.field_b, "", "wizard_run_cutscene");
                         qj.field_e = MidiTrack.a(TickClock.field_b, "", "wizard_run_endscene");
                         TickClock.field_b = null;
                         SocketJs5Transport.musicTracks = new MidiTrack[7];
-                        SocketJs5Transport.musicTracks[3] = ne.field_b;
+                        SocketJs5Transport.musicTracks[3] = AccountFormText.field_b;
                         SocketJs5Transport.musicTracks[5] = ec.field_d;
                         SocketJs5Transport.musicTracks[4] = PacketBuffer.field_j;
-                        SocketJs5Transport.musicTracks[2] = ml.field_u;
+                        SocketJs5Transport.musicTracks[2] = ArchiveRequest.field_u;
                         SocketJs5Transport.musicTracks[6] = DirectByteStorage.field_j;
-                        SocketJs5Transport.musicTracks[0] = pj.field_G;
-                        SocketJs5Transport.musicTracks[1] = ka.field_l;
+                        SocketJs5Transport.musicTracks[0] = DraggableWidget.field_G;
+                        SocketJs5Transport.musicTracks[1] = EmailLoginCredentials.field_l;
                         var11 = new SoundCache(SingleChildWidget.soundArchive, jl.bossSoundArchive);
                         var18 = var11;
                         SingleChildWidget.soundArchive = null;
@@ -246,7 +246,7 @@ public final class wizardrun extends GameShell {
                         for (var7_int = 0; 7 > var7_int; var7_int++) {
                           SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var11, SocketJs5Transport.musicTracks[var7_int], 0);
                         }
-                        SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var18, bh.field_e, 0);
+                        SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var18, QuickChatDynamicCommand.field_e, 0);
                         SingleChildWidget.field_D.a(PlatformActor.field_u, -1, var18, qj.field_e, 0);
                         SingleChildWidget.field_D.a(PlatformActor.field_u, param1 ^ -47, var18, SettingsCookieReader.field_a, 0);
                         SingleChildWidget.field_D.b(true);
@@ -258,17 +258,17 @@ public final class wizardrun extends GameShell {
                         DialogLayer.field_K = 1;
                         DiskCacheWorker.field_e = 500;
                         var7 = new GridPoint();
-                        fi.field_x = 0;
+                        NetworkArchiveRequest.field_x = 0;
                         var7.row = 1;
                         var7.column = 3;
                         FadingDialog.field_I = 0;
-                        sc.field_m = new jk();
-                        uk.a((byte) 91, 50);
+                        ProgressQuery.field_m = new jk();
+                        uk.setTickRate((byte) 91, 50);
                         MidiNote.a((byte) -74);
-                        ga.field_e = SocketJs5Transport.musicTracks[6];
-                        SingleChildWidget.field_D.a(-1, hc.field_o);
+                        IntegerSyntaxHelpers.field_e = SocketJs5Transport.musicTracks[6];
+                        SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
                         if (tl.field_e) {
-                          SingleChildWidget.field_D.a(true, param1 ^ -72, ga.field_e);
+                          SingleChildWidget.field_D.a(true, param1 ^ -72, IntegerSyntaxHelpers.field_e);
                         }
                         for (var8 = 0; var8 < 300; var8++) {
                           tc.field_l.field_j[var8] = 0;
@@ -277,16 +277,16 @@ public final class wizardrun extends GameShell {
                           tc.field_l.field_a[var8] = 0;
                         }
                         DualLinkDeque.resourcesLoaded = true;
-                        sf.field_h = 0;
-                        wg.field_e = jl.field_w;
+                        EmailCheckRequest.field_h = 0;
+                        HighscorePlayer.field_e = jl.field_w;
                         TickClock.field_a = new int[100][3];
                         GameGraphicsResources.b(0);
                         return;
                       }
-                      ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, mj.field_d, bc.field_a, hj.field_d), 95.0f, 0);
+                      ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, mj.field_d, MeshWorkspaceHelpers.field_a, IndexedSpriteArrayFactory.field_d), 95.0f, 0);
                       return;
                     }
-                    ValidationState.showLoadingProgress(oh.a(qb.field_q, tk.field_e, bb.field_h, param1 ^ -90, "basic"), 85.0f, param1 ^ 46);
+                    ValidationState.showLoadingProgress(oh.a(FramedButtonPainter.field_q, tk.field_e, UsernameLoginCredentials.field_h, param1 ^ -90, "basic"), 85.0f, param1 ^ 46);
                     return;
                   }
                   ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, ej.field_e, TickClock.field_b, lj.field_d), 80.0f, 0);
@@ -295,69 +295,69 @@ public final class wizardrun extends GameShell {
                 ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, pa.field_d, PlatformActor.field_u, IndexedSpriteState.field_g), 70.0f, 0);
                 return;
               }
-              ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, jl.bossSoundArchive, il.field_d), 60.0f, 0);
+              ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, jl.bossSoundArchive, RadixParsingHelpers.field_d), 60.0f, 0);
               return;
             }
-            ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, SingleChildWidget.soundArchive, il.field_d), 50.0f, param1 - 46);
+            ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, MenuController.field_i, SingleChildWidget.soundArchive, RadixParsingHelpers.field_d), 50.0f, param1 - 46);
             return;
           }
           ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, WhirlpoolHasher.field_e, mh.field_jb, aa.field_gb), 40.0f, 0);
           return;
         }
-        ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, tk.field_e, SingleChildWidget.field_E, qb.field_q), 30.0f, param1 ^ 46);
+        ValidationState.showLoadingProgress(SecondaryNodeDeque.a(-40, tk.field_e, SingleChildWidget.field_E, FramedButtonPainter.field_q), 30.0f, param1 ^ 46);
     }
 
     private final void s(int param0) {
         boolean stackIn_6_1 = false;
-        if (5 < ql.field_c) {
-          BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
+        if (5 < HuffmanDecoder.field_c) {
+          BufferedSocket.field_c = BufferedSocket.field_c - HuffmanDecoder.field_c;
           me.field_f = me.field_f - 5;
-          ql.field_c = 5;
+          HuffmanDecoder.field_c = 5;
         }
-        GameApplet.a(7775, 64 * DiskCacheStore.field_f + (ql.field_c + 6 * GridActor.field_l));
-        rc.field_a = 0;
-        sf.field_h = 2;
+        GameApplet.a(7775, 64 * DiskCacheStore.field_f + (HuffmanDecoder.field_c + 6 * GridActor.field_l));
+        AccountConnectionState.field_a = 0;
+        EmailCheckRequest.field_h = 2;
         stackIn_6_1 = !(0 >= ArchiveProvider.field_a);
         this.field_J = stackIn_6_1;
-        rf.field_b = 0;
+        ProgressRefreshState.field_b = 0;
         tc.field_j = false;
-        wg.field_e = NodeHashTableIterator.field_d;
-        if (0 < qf.field_l) {
-          sf.field_h = 5;
-          wg.field_e = ValidationHelpWidget.field_M;
+        HighscorePlayer.field_e = NodeHashTableIterator.field_d;
+        if (0 < AgeValidator.field_l) {
+          EmailCheckRequest.field_h = 5;
+          HighscorePlayer.field_e = ValidationHelpWidget.field_M;
         }
-        ga.field_e = pj.field_G;
+        IntegerSyntaxHelpers.field_e = DraggableWidget.field_G;
         if (param0 != 208) {
           return;
         }
-        hg.field_a = 500;
+        DisplayNameSyntaxHelpers.field_a = 500;
         if (e.a(-96)) {
-          sf.field_h = 6;
+          EmailCheckRequest.field_h = 6;
         }
         if (DiskCacheStore.field_f == 0 &&
-          qf.field_l == 0 &&
+          AgeValidator.field_l == 0 &&
           ke.field_u.isEmpty(8192)) {
-          sf.field_h = 0;
+          EmailCheckRequest.field_h = 0;
           this.field_J = true;
           BufferedSocket.field_a = -350;
         }
         if (!e.a(-90)) {
-          BufferedSocket.field_c = BufferedSocket.field_c - (ql.field_c - 6);
-          wg.field_b = wg.field_b - (DiskCacheStore.field_f << 6);
+          BufferedSocket.field_c = BufferedSocket.field_c - (HuffmanDecoder.field_c - 6);
+          HighscorePlayer.field_b = HighscorePlayer.field_b - (DiskCacheStore.field_f << 6);
           me.field_f = me.field_f + (GridActor.field_l * 6 + 6);
           GridActor.field_l = -1;
           DiskCacheStore.field_f = 0;
-          ql.field_c = 6;
+          HuffmanDecoder.field_c = 6;
         }
         BufferedSocket.field_c = BufferedSocket.field_c + GridActor.field_g;
-        wg.field_b = wg.field_b - 5;
+        HighscorePlayer.field_b = HighscorePlayer.field_b - 5;
         WidgetTheme.field_k = 0;
-        ga.field_e = SocketJs5Transport.musicTracks[6];
+        IntegerSyntaxHelpers.field_e = SocketJs5Transport.musicTracks[6];
         DialogLayer.field_K = 1;
         DiskCacheWorker.field_e = 500;
         GridActor.field_g = 5;
         if (tl.field_e) {
-          SingleChildWidget.field_D.a(true, param0 - 314, ga.field_e);
+          SingleChildWidget.field_D.a(true, param0 - 314, IntegerSyntaxHelpers.field_e);
         }
         FadingDialog.field_I = 255;
         BufferedSocket.field_a = -350;
@@ -371,8 +371,8 @@ public final class wizardrun extends GameShell {
         int var2;
         int var3;
         int var4;
-        dc var5;
-        pg var6;
+        ProgressSubmission var5;
+        AchievementSubmission var6;
         int var2Lifetime1;
         var4 = field_H;
         NodeHashTableIterator.field_k.service();
@@ -380,7 +380,7 @@ public final class wizardrun extends GameShell {
         if (null != LoginChoicePanel.field_E &&
           LoginChoicePanel.field_E.field_b) {
           WeightedLruCache.exitFullscreen((byte) 60);
-          bb.b((byte) -100);
+          UsernameLoginCredentials.b((byte) -100);
         }
         stackIn_6_1 = -4114;
         stackIn_7_2 = (null != LoginChoicePanel.field_E);
@@ -401,10 +401,10 @@ public final class wizardrun extends GameShell {
         }
         if (DualLinkDeque.resourcesLoaded) {
           if (!ImageProducerRasterBuffer.c((byte) 54)) {
-            hc.c(true);
+            ConfirmedEmailValidator.c(true);
           } else {
             if (StringPaddingHelpers.a(-25231)) {
-              var2 = pg.d((byte) -48);
+              var2 = AchievementSubmission.d((byte) -48);
               if (var2 == 2) {
                 WeightedLruCache.exitFullscreen((byte) 60);
               } else {
@@ -413,7 +413,7 @@ public final class wizardrun extends GameShell {
                     gf.h((byte) 107);
                   }
                 } else {
-                  pd.a(true, false);
+                  DropTargetWidget.a(true, false);
                 }
               }
             } else {
@@ -427,7 +427,7 @@ public final class wizardrun extends GameShell {
                   var2 == 2) {
                   WeightedLruCache.exitFullscreen((byte) 60);
                   if (var2 == 2) {
-                    bc.a(127, jg.f(1));
+                    MeshWorkspaceHelpers.openQuitPage(127, DisplayNameValidator.getActiveApplet(1));
                   }
                 }
               }
@@ -438,26 +438,26 @@ public final class wizardrun extends GameShell {
         }
         if (!e.a(-81)) {
           while (true) {
-            var6 = (pg) (ie.field_l.removeFirst(114));
+            var6 = (AchievementSubmission) (ie.field_l.removeFirst(114));
             if (var6 != null) {
-              hc.a(var6, false, 4);
+              ConfirmedEmailValidator.submitAchievement(var6, false, 4);
               continue;
             }
             break;
           }
           while (true) {
-            var5 = (dc) (ke.field_u.removeFirst(109));
+            var5 = (ProgressSubmission) (ke.field_u.removeFirst(109));
             if (var5 == null) {
               break;
             }
-            ml.a(var5, 5, -1);
+            ArchiveRequest.submitProgress(var5, 5, -1);
           }
         }
         var2Lifetime1 = 40 / ((-56 - param0) / 41);
         while (UiWidget.a(0, ValidationIndicator.field_G)) {
           this.b(true);
         }
-        id.a((byte) -67, 0);
+        id.flushAccountPackets((byte) -67, 0);
         if (MusicPatch.b(true)) {
           var3 = this.o(-10618);
           if (var3 == 2) {
@@ -499,7 +499,7 @@ public final class wizardrun extends GameShell {
                         break regionExit1;
                       }
                       if (null == LoginChoicePanel.field_E) {
-                        pd.a(false, false);
+                        DropTargetWidget.a(false, false);
                         break regionExit1;
                       }
                       WeightedLruCache.exitFullscreen((byte) 60);
@@ -510,7 +510,7 @@ public final class wizardrun extends GameShell {
                       }
                       DualLinkDeque.field_i = 3;
                       pa.field_c = 32;
-                      if (!pk.field_s) {
+                      if (!ReflectionCheck.field_s) {
                         break regionExit1;
                       }
                       tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
@@ -521,7 +521,7 @@ public final class wizardrun extends GameShell {
                       }
                       DualLinkDeque.field_i = 4;
                       pa.field_c = 32;
-                      if (!pk.field_s) {
+                      if (!ReflectionCheck.field_s) {
                         break regionExit1;
                       }
                       tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
@@ -532,10 +532,10 @@ public final class wizardrun extends GameShell {
                       if (param1 != 0) {
                         break regionExit1;
                       }
-                      if (pk.field_s) {
+                      if (ReflectionCheck.field_s) {
                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
                       }
-                      bc.a(124, jg.f(1));
+                      MeshWorkspaceHelpers.openQuitPage(124, DisplayNameValidator.getActiveApplet(1));
                       break regionExit1;
                   }
                 }
@@ -553,14 +553,14 @@ public final class wizardrun extends GameShell {
                 }
                 boolean decompiledFrameRemainder1 = true;
                 if (param1 == 2) {
-                  if (pg.field_n >= 144 &&
+                  if (AchievementSubmission.field_n >= 144 &&
                     tl.field_e) {
                     param1 = 0;
-                    if (pg.field_n < (168 + 108 * hc.field_o / 200)) {
-                      param1 = 200 * (pg.field_n - (hc.field_o * 108 / 200 + 172)) / 108;
+                    if (AchievementSubmission.field_n < (168 + 108 * ConfirmedEmailValidator.field_o / 200)) {
+                      param1 = 200 * (AchievementSubmission.field_n - (ConfirmedEmailValidator.field_o * 108 / 200 + 172)) / 108;
                     }
-                    if (!(pg.field_n <= 172 + 108 * hc.field_o / 200 + 4)) {
-                      param1 = 200 * (-(hc.field_o * 108 / 200) - 172 + pg.field_n) / 108;
+                    if (!(AchievementSubmission.field_n <= 172 + 108 * ConfirmedEmailValidator.field_o / 200 + 4)) {
+                      param1 = 200 * (-(ConfirmedEmailValidator.field_o * 108 / 200) - 172 + AchievementSubmission.field_n) / 108;
                     }
                     decompiledFrameRemainder1 = false;
                   }
@@ -571,7 +571,7 @@ public final class wizardrun extends GameShell {
                       SingleChildWidget.field_D.d(-89);
                     } else {
                       tl.field_e = true;
-                      SingleChildWidget.field_D.a(true, -93, ga.field_e);
+                      SingleChildWidget.field_D.a(true, -93, IntegerSyntaxHelpers.field_e);
                     }
                     param1 = 0;
                   }
@@ -585,7 +585,7 @@ public final class wizardrun extends GameShell {
                     }
                     if (stackIn_86_0 != stackIn_87_1) {
                       tl.field_e = true;
-                      SingleChildWidget.field_D.a(true, -85, ga.field_e);
+                      SingleChildWidget.field_D.a(true, -85, IntegerSyntaxHelpers.field_e);
                     } else {
                       tl.field_e = false;
                       SingleChildWidget.field_D.d(-38);
@@ -593,11 +593,11 @@ public final class wizardrun extends GameShell {
                   }
                 }
                 if (param1 <= -1) {
-                  hc.field_o = hc.field_o + param1;
-                  if (hc.field_o > 0) {
-                    SingleChildWidget.field_D.a(-1, hc.field_o);
+                  ConfirmedEmailValidator.field_o = ConfirmedEmailValidator.field_o + param1;
+                  if (ConfirmedEmailValidator.field_o > 0) {
+                    SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
                   } else {
-                    hc.field_o = 0;
+                    ConfirmedEmailValidator.field_o = 0;
                     stackIn_108_0 = 0;
                     if (tl.field_e) {
                       stackIn_109_1 = 0;
@@ -611,17 +611,17 @@ public final class wizardrun extends GameShell {
                   }
                 }
                 if (param1 >= 1) {
-                  hc.field_o = hc.field_o + param1;
-                  if (hc.field_o > 200) {
-                    hc.field_o = 200;
+                  ConfirmedEmailValidator.field_o = ConfirmedEmailValidator.field_o + param1;
+                  if (ConfirmedEmailValidator.field_o > 200) {
+                    ConfirmedEmailValidator.field_o = 200;
                   }
-                  SingleChildWidget.field_D.a(-1, hc.field_o);
+                  SingleChildWidget.field_D.a(-1, ConfirmedEmailValidator.field_o);
                   if (!tl.field_e) {
                     tl.field_e = true;
-                    SingleChildWidget.field_D.a(true, -120, ga.field_e);
+                    SingleChildWidget.field_D.a(true, -120, IntegerSyntaxHelpers.field_e);
                   }
                 }
-                if (pk.field_s) {
+                if (ReflectionCheck.field_s) {
                   if (SpriteState.field_y <= 0) {
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
                     SpriteState.field_y = 25;
@@ -644,42 +644,42 @@ public final class wizardrun extends GameShell {
                 boolean decompiledFrameRemainder0 = true;
                 if (param1 != 2) {
                   if (param1 == 0) {
-                    stackIn_56_0 = !(pk.field_s);
-                    pk.field_s = stackIn_56_0;
+                    stackIn_56_0 = !(ReflectionCheck.field_s);
+                    ReflectionCheck.field_s = stackIn_56_0;
                   }
                 } else {
-                  if (pg.field_n >= 144 &&
-                    pk.field_s) {
+                  if (AchievementSubmission.field_n >= 144 &&
+                    ReflectionCheck.field_s) {
                     param1 = 0;
-                    if (pg.field_n < (-1 + (172 + ee.field_p * 108 / 104))) {
-                      param1 = (-(108 * ee.field_p / 104) - 172 + pg.field_n) * 104 / 108;
+                    if (AchievementSubmission.field_n < (-1 + (172 + ee.field_p * 108 / 104))) {
+                      param1 = (-(108 * ee.field_p / 104) - 172 + AchievementSubmission.field_n) * 104 / 108;
                     }
-                    if (!(108 * ee.field_p / 104 + 172 + 1 >= pg.field_n)) {
-                      param1 = 104 * (pg.field_n - (172 + ee.field_p * 108 / 104)) / 108;
+                    if (!(108 * ee.field_p / 104 + 172 + 1 >= AchievementSubmission.field_n)) {
+                      param1 = 104 * (AchievementSubmission.field_n - (172 + ee.field_p * 108 / 104)) / 108;
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
                     param1 = 0;
-                    stackIn_51_0 = !(pk.field_s);
-                    pk.field_s = stackIn_51_0;
+                    stackIn_51_0 = !(ReflectionCheck.field_s);
+                    ReflectionCheck.field_s = stackIn_51_0;
                   }
                 }
                 if (-1 >= param1) {
                   ee.field_p = ee.field_p + param1;
                   if (ee.field_p <= 0) {
-                    pk.field_s = false;
+                    ReflectionCheck.field_s = false;
                     ee.field_p = 0;
                   }
                 }
                 if (param1 >= 1) {
                   ee.field_p = ee.field_p + param1;
-                  pk.field_s = true;
+                  ReflectionCheck.field_s = true;
                   if (ee.field_p > 104) {
                     ee.field_p = 104;
                   }
                 }
-                if (pk.field_s) {
+                if (ReflectionCheck.field_s) {
                   if (0 >= SpriteState.field_y) {
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
                     SpriteState.field_y = 25;
@@ -692,24 +692,24 @@ public final class wizardrun extends GameShell {
             if (param1 == 0) {
               DualLinkDeque.field_i = 1;
               pa.field_c = 32;
-              if (pk.field_s) {
+              if (ReflectionCheck.field_s) {
                 tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
               }
             }
           } else {
-            nj.field_r = 255;
-            wg.field_b = wg.field_b - (DiskCacheStore.field_f << 6);
+            HighscoreRequest.field_r = 255;
+            HighscorePlayer.field_b = HighscorePlayer.field_b - (DiskCacheStore.field_f << 6);
             DiskCacheStore.field_f = 0;
             if (param1 == 0) {
               DualLinkDeque.field_i = 5;
               pa.field_c = 32;
-              if (pk.field_s) {
+              if (ReflectionCheck.field_s) {
                 tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
               }
             }
           }
         }
-        if (pk.field_s &&
+        if (ReflectionCheck.field_s &&
           param1 != 2) {
           tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
         }
@@ -777,7 +777,7 @@ public final class wizardrun extends GameShell {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ai var10_ref_ai = null;
+        ScoreSubmission var10_ref_ai = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -857,22 +857,22 @@ public final class wizardrun extends GameShell {
         var18 = field_H;
         var19 = BufferedSocket.activeCanvas((byte) 72);
         if (MouseWheelInput.a((byte) 60)) {
-          UrlPacketDownloader.a((byte) 38, dh.a(255), var19);
+          UrlPacketDownloader.a((byte) 38, EmailDomainHelpers.a(255), var19);
           return;
         }
         if (!DualLinkDeque.resourcesLoaded) {
-          uc.drawLoadingScreen(false, var19);
+          ArchiveLoadingPlan.drawLoadingScreen(false, var19);
           return;
         }
         if (!ImageProducerRasterBuffer.c((byte) 54)) {
           ValidationState.showLoadingProgress(WidgetTheme.field_s, 100.0f, 0);
-          uc.drawLoadingScreen(false, var19);
+          ArchiveLoadingPlan.drawLoadingScreen(false, var19);
           return;
         }
-        wg.field_e.drawWithOffsets(0, 0);
+        HighscorePlayer.field_e.drawWithOffsets(0, 0);
         if (DialogLayer.field_K != 1) {
-          fe.c((byte) 108);
-          if (ql.field_c >= 5) {
+          MatchingTextValidator.c((byte) 108);
+          if (HuffmanDecoder.field_c >= 5) {
             var3 = 0;
             var4_int = 0;
             var5 = 1;
@@ -937,11 +937,11 @@ public final class wizardrun extends GameShell {
             }
           }
           if (GridActor.field_l > -1) {
-            if (!pg.field_q) {
+            if (!AchievementSubmission.field_q) {
               var26 = new String[9];
               var3_ref_String__ = var26;
               for (var4_int = 0; 9 > var4_int; var4_int++) {
-                var3_ref_String__[var4_int] = sc.a((byte) -108, bb.field_g.charAt(var4_int));
+                var3_ref_String__[var4_int] = ProgressQuery.characterToString((byte) -108, UsernameLoginCredentials.field_g.charAt(var4_int));
               }
               var4_int = 0;
               for (var5 = 440; var5 <= 610; var5 += 20) {
@@ -954,7 +954,7 @@ public final class wizardrun extends GameShell {
                 var4_int++;
                 GameGraphicsResources.wizardFont2.drawStringCentered(var3_ref_String__[incrementValue$1], var5 + 15, 25, 16777215, -1);
               }
-              SoftwareRasterizer.setClip(440, 0, 440 + 2 * fi.field_x, 64);
+              SoftwareRasterizer.setClip(440, 0, 440 + 2 * NetworkArchiveRequest.field_x, 64);
               var4_int = 0;
               for (var5 = 440; var5 <= 610; var5 += 20) {
                 ValidationState.selectStarSprites[0].drawScaled(var5, 0, 30, 30);
@@ -962,9 +962,9 @@ public final class wizardrun extends GameShell {
                 var4_int++;
                 GameGraphicsResources.wizardFont2.drawStringCentered(var3_ref_String__[incrementValue$0], var5 + 15, 25, 0, -1);
                 stackIn_513_0 = -101;
-                stackIn_513_1 = ~fi.field_x;
+                stackIn_513_1 = ~NetworkArchiveRequest.field_x;
                 if (stackIn_513_0 > stackIn_513_1 &&
-                  fi.field_x < 110) {
+                  NetworkArchiveRequest.field_x < 110) {
                   ValidationState.selectStarSprites[0].drawScaled(var5 + 5, 5, 20, 20);
                 }
               }
@@ -1023,9 +1023,9 @@ public final class wizardrun extends GameShell {
               GameGraphicsResources.wizardFont2.drawString(var27, 8, GameGraphicsResources.wizardFont2.field_M, 16777215, -1);
             }
             if (DialogLayer.field_K == 2) {
-              if (!pg.field_q &&
+              if (!AchievementSubmission.field_q &&
                 5 == GridActor.field_l &&
-                5 <= ql.field_c) {
+                5 <= HuffmanDecoder.field_c) {
                 this.field_Q = this.field_Q + 1;
                 if (this.field_Q >= 40) {
                   this.field_Q = 0;
@@ -1036,7 +1036,7 @@ public final class wizardrun extends GameShell {
                 ii.field_e[var4_int].drawActor(true);
               }
             }
-            if (pg.field_q) {
+            if (AchievementSubmission.field_q) {
               if (this.field_R == 11) {
                 this.field_Q = this.field_Q + 1;
                 if (this.field_Q >= 40) {
@@ -1287,9 +1287,9 @@ public final class wizardrun extends GameShell {
             }
           }
         } else {
-          if (sf.field_h == 0) {
+          if (EmailCheckRequest.field_h == 0) {
             var3 = 208;
-            for (var5 = 0; rc.field_a > var5; var5++) {
+            for (var5 = 0; AccountConnectionState.field_a > var5; var5++) {
               stackIn_741_0 = var5;
               stackIn_741_1 = BufferedRandomAccessFile.field_h;
               stackIn_16_0 = (stackIn_741_0 != stackIn_741_1) ? 15583488 : 16777215;
@@ -1302,7 +1302,7 @@ public final class wizardrun extends GameShell {
               }
               this.drawBorderedText(-12926, var20, var4_int, var7, var3);
               if (var5 == 2) {
-                if (!pk.field_s) {
+                if (!ReflectionCheck.field_s) {
                   stackIn_25_0 = 0;
                 } else {
                   stackIn_25_0 = ee.field_p;
@@ -1328,7 +1328,7 @@ public final class wizardrun extends GameShell {
               }
               if (3 == var5) {
                 if (tl.field_e) {
-                  stackIn_37_0 = hc.field_o;
+                  stackIn_37_0 = ConfirmedEmailValidator.field_o;
                 } else {
                   stackIn_37_0 = 0;
                 }
@@ -1361,10 +1361,10 @@ public final class wizardrun extends GameShell {
             }
           }
           stackIn_52_0Lifetime1 = 11;
-          if (stackIn_52_0Lifetime1 == sf.field_h) {
+          if (stackIn_52_0Lifetime1 == EmailCheckRequest.field_h) {
             SoftwareRasterizer.fillRect(16, 153, 608, 311, 13158);
-            CacheEntry.a(pd.frameSprites, 16, (byte) -110, 311, 608, 153);
-            GameGraphicsResources.wizardFont2.drawStringCentered(uh.field_b, 320, GameGraphicsResources.wizardFont2.field_M + 169, 16777215, -1);
+            CacheEntry.a(DropTargetWidget.frameSprites, 16, (byte) -110, 311, 608, 153);
+            GameGraphicsResources.wizardFont2.drawStringCentered(LoginCredentials.field_b, 320, GameGraphicsResources.wizardFont2.field_M + 169, 16777215, -1);
             var3 = 96;
             if (GridActor.field_l < 0) {
               BufferedSocket.field_c = BufferedSocket.field_c - GridActor.field_l * 6;
@@ -1372,7 +1372,7 @@ public final class wizardrun extends GameShell {
             }
             var4_int = var3 * 96 / 128;
             if (GridActor.field_l > 5) {
-              wg.field_b = wg.field_b + 30;
+              HighscorePlayer.field_b = HighscorePlayer.field_b + 30;
               BufferedSocket.field_c = BufferedSocket.field_c - GridActor.field_l * 6;
               GridActor.field_l = 5;
             }
@@ -1404,14 +1404,14 @@ public final class wizardrun extends GameShell {
                   SoftwareRasterizer.drawRoundedRectangle(var3 * var5 + 32, 208, var3, var4_int, 2, 16777215);
                   SoftwareRasterizer.drawRoundedRectangle(var3 * var5 + 32, 208, var3, var4_int, 3, 16776960);
                 }
-                if (pg.field_n >= var6 &&
-                  (var6 + var3) > pg.field_n &&
-                  fi.field_B >= var7 &&
-                  (var7 + var4_int) > fi.field_B) {
+                if (AchievementSubmission.field_n >= var6 &&
+                  (var6 + var3) > AchievementSubmission.field_n &&
+                  NetworkArchiveRequest.field_B >= var7 &&
+                  (var7 + var4_int) > NetworkArchiveRequest.field_B) {
                   SoftwareRasterizer.drawRectOutline(var3 * var5 + 32, 208, var3, var4_int, 16777215);
                   if (BrowserUrlLauncher.field_c == 1) {
                     BufferedSocket.field_c = BufferedSocket.field_c - GridActor.field_l * 6;
-                    wg.field_b = wg.field_b + var5 * 6;
+                    HighscorePlayer.field_b = HighscorePlayer.field_b + var5 * 6;
                     GridActor.field_l = var5;
                   }
                 }
@@ -1459,10 +1459,10 @@ public final class wizardrun extends GameShell {
               }
               if (!e.a(-109)) {
                 if (var5 == 16777215 &&
-                  this.a(400, 128, 65535, sc.field_l, 1) &&
+                  this.a(400, 128, 65535, ProgressQuery.field_l, 1) &&
                   5 > FadingDialog.field_I &&
                   0 >= pa.field_c) {
-                  ic.field_a = ic.field_a - GridActor.field_g;
+                  DecodedSpritePalette.field_a = DecodedSpritePalette.field_a - GridActor.field_g;
                   GridActor.field_g = 0;
                   AccountCreationForm.field_T = 0;
                   if (0 < GridActor.field_l) {
@@ -1472,7 +1472,7 @@ public final class wizardrun extends GameShell {
                   }
                   WidgetTheme.field_k = 0;
                   FadingDialog.field_I = 5;
-                  sj.field_l = 0;
+                  EmailAddressValidator.field_l = 0;
                   if (GridActor.field_l > 0) {
                     AccountCreationForm.field_T = 400;
                   }
@@ -1492,10 +1492,10 @@ public final class wizardrun extends GameShell {
                   if (mh.field_tb == 2) {
                     var7 += 30;
                   }
-                  if (this.a(400, var7, 65535, sc.field_l, 1) &&
+                  if (this.a(400, var7, 65535, ProgressQuery.field_l, 1) &&
                     FadingDialog.field_I < 5 &&
                     pa.field_c <= 0) {
-                    wg.field_b = wg.field_b + GridActor.field_g;
+                    HighscorePlayer.field_b = HighscorePlayer.field_b + GridActor.field_g;
                     GridActor.field_g = 0;
                     FadingDialog.field_I = 5;
                     if (GridActor.field_l > 0) {
@@ -1508,11 +1508,11 @@ public final class wizardrun extends GameShell {
                     if (GridActor.field_l > 0) {
                       AccountCreationForm.field_T = 400;
                     }
-                    sj.field_l = 0;
+                    EmailAddressValidator.field_l = 0;
                   }
                 }
               }
-              if (!this.a(400, 556, 65535, ne.field_a, 1)) {
+              if (!this.a(400, 556, 65535, AccountFormText.field_a, 1)) {
                 break;
               }
               if (FadingDialog.field_I >= 5) {
@@ -1525,19 +1525,19 @@ public final class wizardrun extends GameShell {
               break;
             }
           }
-          if (5 == sf.field_h) {
-            cb.field_f = -1;
+          if (5 == EmailCheckRequest.field_h) {
+            BeveledFrameFactory.field_f = -1;
             var3 = 5 * GameGraphicsResources.wizardFont2.field_M / 2 + 231;
             SoftwareRasterizer.fillRect(314, 119, 254, 94, 13158);
-            CacheEntry.a(pd.frameSprites, 309, (byte) -110, 104, 264, 114);
+            CacheEntry.a(DropTargetWidget.frameSprites, 309, (byte) -110, 104, 264, 114);
             SoftwareRasterizer.fillRect(249, 5 + var3 - 68, 382, 198, 13158);
-            CacheEntry.a(pd.frameSprites, 244, (byte) -110, 208, 392, -64 + var3 - 4);
+            CacheEntry.a(DropTargetWidget.frameSprites, 244, (byte) -110, 208, 392, -64 + var3 - 4);
             var3 = 345;
             var4_int = 130;
-            if (0 >= qf.field_l) {
+            if (0 >= AgeValidator.field_l) {
               stackIn_148_0 = IsaacRandom.field_a;
             } else {
-              stackIn_148_0 = qf.field_l;
+              stackIn_148_0 = AgeValidator.field_l;
             }
             var5 = stackIn_148_0;
             if (ve.a((byte) 50, 0) ||
@@ -1566,19 +1566,19 @@ public final class wizardrun extends GameShell {
                   var11 = 2;
                   ValidationState.selectStarSprites[0].drawScaled(var3 - 8, -8 + var4_int, 48, 48);
                 }
-                if (pg.field_n >= var3 &&
-                  pg.field_n <= var3 + 32 &&
-                  fi.field_B >= var4_int &&
-                  fi.field_B <= (32 + var4_int) && (qf.field_l == 0 ||
+                if (AchievementSubmission.field_n >= var3 &&
+                  AchievementSubmission.field_n <= var3 + 32 &&
+                  NetworkArchiveRequest.field_B >= var4_int &&
+                  NetworkArchiveRequest.field_B <= (32 + var4_int) && (AgeValidator.field_l == 0 ||
                   0 != (1 << var9 & var5))) {
                   var11 = 2;
                   if (~tk.field_a != ~var9) {
                     ValidationState.selectStarSprites[0].drawScaledAlpha(-4 + var3, var4_int - 4, 40, 40, 128);
                   }
-                  cb.field_f = var9;
+                  BeveledFrameFactory.field_f = var9;
                 }
                 if (0 == (1 << var9 & var5)) {
-                  decompiledFrameRemainder0 = !(0 < qf.field_l);
+                  decompiledFrameRemainder0 = !(0 < AgeValidator.field_l);
                   if (decompiledFrameRemainder0) {
                     if (ArchiveProvider.field_a <= 0 &&
                       1 != var9 &&
@@ -1587,7 +1587,7 @@ public final class wizardrun extends GameShell {
                       var9 != 6) {
                       BrowserCookieHelpers.field_c.drawDownscaledAveraged(-var11 + var3, var4_int - var11, var11 * 2 + 32, 2 * var11 + 32);
                     } else {
-                      sk.field_z.drawDownscaledAveraged(-var11 + var3, -var11 + var4_int, var11 * 2 + 32, 32 + var11 * 2);
+                      DiskCacheRequest.field_z.drawDownscaledAveraged(-var11 + var3, -var11 + var4_int, var11 * 2 + 32, 32 + var11 * 2);
                     }
                   }
                 } else {
@@ -1595,21 +1595,21 @@ public final class wizardrun extends GameShell {
                 }
                 if (decompiledFrameRemainder0) {
                   if (~var9 == ~tk.field_a ||
-                    !(pg.field_n < var3) &&
-                    !(pg.field_n > (var3 + 32)) &&
-                    !(var4_int > fi.field_B) &&
-                    !(32 + var4_int < fi.field_B) &&
+                    !(AchievementSubmission.field_n < var3) &&
+                    !(AchievementSubmission.field_n > (var3 + 32)) &&
+                    !(var4_int > NetworkArchiveRequest.field_B) &&
+                    !(32 + var4_int < NetworkArchiveRequest.field_B) &&
                     tk.field_a == -1) {
                     var7 = 0;
                     this.drawBorderedText(-12926, SpriteState.field_t[var9], 15583488, 440, 255);
                     if ((1 << var9 & var5) == 0) {
-                      FlatTriangleRasterizer.font12.drawStringRight(uf.field_b, 620, 247 + (GameGraphicsResources.wizardFont2.field_M - 1), 0, 0);
-                      FlatTriangleRasterizer.font12.drawStringRight(uf.field_b, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
-                      FlatTriangleRasterizer.font12.drawStringRight(uf.field_b, 620, GameGraphicsResources.wizardFont2.field_M + 247, 16727871, -1);
+                      FlatTriangleRasterizer.font12.drawStringRight(LoginMethodPreference.field_b, 620, 247 + (GameGraphicsResources.wizardFont2.field_M - 1), 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(LoginMethodPreference.field_b, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(LoginMethodPreference.field_b, 620, GameGraphicsResources.wizardFont2.field_M + 247, 16727871, -1);
                     } else {
-                      FlatTriangleRasterizer.font12.drawStringRight(bc.field_c, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
-                      FlatTriangleRasterizer.font12.drawStringRight(bc.field_c, 620, 246 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
-                      FlatTriangleRasterizer.font12.drawStringRight(bc.field_c, 620, 247 + GameGraphicsResources.wizardFont2.field_M, 16777215, -1);
+                      FlatTriangleRasterizer.font12.drawStringRight(MeshWorkspaceHelpers.field_c, 619, GameGraphicsResources.wizardFont2.field_M + 247, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(MeshWorkspaceHelpers.field_c, 620, 246 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
+                      FlatTriangleRasterizer.font12.drawStringRight(MeshWorkspaceHelpers.field_c, 620, 247 + GameGraphicsResources.wizardFont2.field_M, 16777215, -1);
                     }
                     var12 = GameGraphicsResources.wizardFont2.field_M * 5 / 2 + 231;
                     if ((1 << var9 & var5) != 0) {
@@ -1622,7 +1622,7 @@ public final class wizardrun extends GameShell {
                         var9 != 6) {
                         BrowserCookieHelpers.field_c.drawTransparent(260, var12);
                       } else {
-                        sk.field_z.drawTransparent(260, var12);
+                        DiskCacheRequest.field_z.drawTransparent(260, var12);
                       }
                     }
                     var12 = var12 + GameGraphicsResources.wizardFont2.field_M;
@@ -1660,10 +1660,10 @@ public final class wizardrun extends GameShell {
               }
             }
             if (var7 != 0) {
-              if (qf.field_l > 0) {
-                GameGraphicsResources.wizardFont2.drawStringCentered(rb.field_b, 440, 230 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
-                GameGraphicsResources.wizardFont2.drawStringCentered(rb.field_b, 439, 231 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
-                GameGraphicsResources.wizardFont2.drawStringCentered(rb.field_b, 440, GameGraphicsResources.wizardFont2.field_M + 231, 16777215, -1);
+              if (AgeValidator.field_l > 0) {
+                GameGraphicsResources.wizardFont2.drawStringCentered(DisplayModeInfo.field_b, 440, 230 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
+                GameGraphicsResources.wizardFont2.drawStringCentered(DisplayModeInfo.field_b, 439, 231 + GameGraphicsResources.wizardFont2.field_M, 0, 0);
+                GameGraphicsResources.wizardFont2.drawStringCentered(DisplayModeInfo.field_b, 440, GameGraphicsResources.wizardFont2.field_M + 231, 16777215, -1);
               }
               var9 = GameGraphicsResources.wizardFont2.field_M * 5 / 2 + 231;
               var9 = var9 + GameGraphicsResources.wizardFont2.field_M;
@@ -1677,11 +1677,11 @@ public final class wizardrun extends GameShell {
               }
             }
           }
-          stackIn_224_0Lifetime1 = sf.field_h;
+          stackIn_224_0Lifetime1 = EmailCheckRequest.field_h;
           stackIn_224_1Lifetime1 = 2;
           if (stackIn_224_0Lifetime1 == stackIn_224_1Lifetime1) {
             SoftwareRasterizer.fillRect(290, 125, 340, 300, 13158);
-            CacheEntry.a(pd.frameSprites, 285, (byte) -110, 310, 350, 120);
+            CacheEntry.a(DropTargetWidget.frameSprites, 285, (byte) -110, 310, 350, 120);
             var21 = new StringBuilder(0);
             var5_ref_String = var21.toString();
             if (!e.a(-122)) {
@@ -1725,12 +1725,12 @@ public final class wizardrun extends GameShell {
                           if (var12Lifetime1 == 0 &&
                             DiskCacheWorker.field_c != 1 &&
                             var11Lifetime1 == 0) {
-                            var5_ref_String = pd.field_G;
+                            var5_ref_String = DropTargetWidget.field_G;
                           }
                           if (var12Lifetime1 == 1 &&
                             DiskCacheWorker.field_c != 1 &&
                             var11Lifetime1 == 0) {
-                            var5_ref_String = ef.field_G;
+                            var5_ref_String = ToggleButton.field_G;
                           }
                           if (var12Lifetime1 == 0 &&
                             DiskCacheWorker.field_c == 1 &&
@@ -1740,7 +1740,7 @@ public final class wizardrun extends GameShell {
                           if (var12Lifetime1 == 1 &&
                             DiskCacheWorker.field_c == 1 &&
                             var11Lifetime1 == 0) {
-                            var5_ref_String = ai.field_s;
+                            var5_ref_String = ScoreSubmission.field_s;
                           }
                           if (var11Lifetime1 != 0) {
                             FlatTriangleRasterizer.font12.drawString(var5_ref_String, 322, 10 + var3, 0, -1);
@@ -1762,21 +1762,21 @@ public final class wizardrun extends GameShell {
                       }
                       var11Lifetime1 = 1;
                       if (var12Lifetime1 == 0) {
-                        FlatTriangleRasterizer.font12.drawString(bb.field_l, 299, 16 + var3, 0, 0);
+                        FlatTriangleRasterizer.font12.drawString(UsernameLoginCredentials.field_l, 299, 16 + var3, 0, 0);
                         FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 619, var3 + 16, 0, 0);
-                        FlatTriangleRasterizer.font12.drawString(bb.field_l, 300, 16 + (var3 - 1), 0, 0);
+                        FlatTriangleRasterizer.font12.drawString(UsernameLoginCredentials.field_l, 300, 16 + (var3 - 1), 0, 0);
                         FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 620, -1 + (var3 + 16), 0, 0);
-                        FlatTriangleRasterizer.font12.drawString(bb.field_l, 300, var3 + 16, 16777215, -1);
+                        FlatTriangleRasterizer.font12.drawString(UsernameLoginCredentials.field_l, 300, var3 + 16, 16777215, -1);
                         FlatTriangleRasterizer.font12.drawStringRight(qj.field_f, 620, var3 + 16, 16777215, -1);
-                        if ((FlatTriangleRasterizer.font12.stringWidth(nj.field_p) / 2 + 510) < (620 - (FlatTriangleRasterizer.font12.stringWidth(qj.field_f) + 8))) {
-                          FlatTriangleRasterizer.font12.drawStringCentered(nj.field_p, 509, 16 + var3, 0, 0);
-                          FlatTriangleRasterizer.font12.drawStringCentered(nj.field_p, 510, -1 + var3 + 16, 0, 0);
-                          FlatTriangleRasterizer.font12.drawStringCentered(nj.field_p, 510, 16 + var3, 16777215, -1);
+                        if ((FlatTriangleRasterizer.font12.stringWidth(HighscoreRequest.field_p) / 2 + 510) < (620 - (FlatTriangleRasterizer.font12.stringWidth(qj.field_f) + 8))) {
+                          FlatTriangleRasterizer.font12.drawStringCentered(HighscoreRequest.field_p, 509, 16 + var3, 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringCentered(HighscoreRequest.field_p, 510, -1 + var3 + 16, 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringCentered(HighscoreRequest.field_p, 510, 16 + var3, 16777215, -1);
                         } else {
                           var14Lifetime1 = -FlatTriangleRasterizer.font12.stringWidth(qj.field_f) + 620 - 8;
-                          FlatTriangleRasterizer.font12.drawStringRight(nj.field_p, var14Lifetime1 - 1, var3 + 16, 0, 0);
-                          FlatTriangleRasterizer.font12.drawStringRight(nj.field_p, var14Lifetime1, 16 + (var3 - 1), 0, 0);
-                          FlatTriangleRasterizer.font12.drawStringRight(nj.field_p, var14Lifetime1, var3 + 16, 16777215, -1);
+                          FlatTriangleRasterizer.font12.drawStringRight(HighscoreRequest.field_p, var14Lifetime1 - 1, var3 + 16, 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringRight(HighscoreRequest.field_p, var14Lifetime1, 16 + (var3 - 1), 0, 0);
+                          FlatTriangleRasterizer.font12.drawStringRight(HighscoreRequest.field_p, var14Lifetime1, var3 + 16, 16777215, -1);
                         }
                       }
                       var14Lifetime1Lifetime1 = 0;
@@ -1835,7 +1835,7 @@ public final class wizardrun extends GameShell {
                     }
                   }
                 } else {
-                  FlatTriangleRasterizer.font12.drawStringCentered(rd.field_a, 466, 248, 16744448, -1);
+                  FlatTriangleRasterizer.font12.drawStringCentered(PowerOfTwoHelpers.field_a, 466, 248, 16744448, -1);
                 }
               } else {
                 FlatTriangleRasterizer.font12.drawStringCentered(lf.field_a, 466, 144, 16744448, -1);
@@ -1846,7 +1846,7 @@ public final class wizardrun extends GameShell {
             }
           }
         }
-        ArchiveProvider.field_b.b(43);
+        ArchiveProvider.field_b.bindRasterTarget(43);
         stackIn_513_0Lifetime1 = 0;
         stackIn_513_1Lifetime1 = FadingDialog.field_I;
         if (stackIn_513_0Lifetime1 < stackIn_513_1Lifetime1) {
@@ -1860,7 +1860,7 @@ public final class wizardrun extends GameShell {
           GridActor.field_l == 0) {
           var3Lifetime1 = BufferedSocket.field_a;
           if (GridActor.field_l == 0) {
-            stackIn_524_0 = (pg.field_q) ? 0 : 1;
+            stackIn_524_0 = (AchievementSubmission.field_q) ? 0 : 1;
             if (stackIn_524_0 != 1) {
             }
           }
@@ -1875,17 +1875,17 @@ public final class wizardrun extends GameShell {
             var4_intLifetime1 = -var4_intLifetime1;
           }
           var4_intLifetime1 += 240;
-          SoftwareRasterizer.fillRect(5 + (-(GameGraphicsResources.wizardFont2.stringWidth(bb.field_j) / 2) + 320 - 16), -11 - GameGraphicsResources.wizardFont2.field_M + var4_intLifetime1, GameGraphicsResources.wizardFont2.stringWidth(bb.field_j) + 32 - 10, -10 + hj.wizardFont.field_M + 16, 13158);
-          CacheEntry.a(pd.frameSprites, -16 - GameGraphicsResources.wizardFont2.stringWidth(bb.field_j) / 2 + 320, (byte) -110, 16 + hj.wizardFont.field_M, 32 + GameGraphicsResources.wizardFont2.stringWidth(bb.field_j), var4_intLifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
-          this.drawOutlinedText(var4_intLifetime1, bb.field_j, 16777215, -57, 319);
+          SoftwareRasterizer.fillRect(5 + (-(GameGraphicsResources.wizardFont2.stringWidth(UsernameLoginCredentials.field_j) / 2) + 320 - 16), -11 - GameGraphicsResources.wizardFont2.field_M + var4_intLifetime1, GameGraphicsResources.wizardFont2.stringWidth(UsernameLoginCredentials.field_j) + 32 - 10, -10 + IndexedSpriteArrayFactory.wizardFont.field_M + 16, 13158);
+          CacheEntry.a(DropTargetWidget.frameSprites, -16 - GameGraphicsResources.wizardFont2.stringWidth(UsernameLoginCredentials.field_j) / 2 + 320, (byte) -110, 16 + IndexedSpriteArrayFactory.wizardFont.field_M, 32 + GameGraphicsResources.wizardFont2.stringWidth(UsernameLoginCredentials.field_j), var4_intLifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
+          this.drawOutlinedText(var4_intLifetime1, UsernameLoginCredentials.field_j, 16777215, -57, 319);
           if (GridActor.field_l == 0 &&
             GridActor.field_g >= 0) {
             var5Lifetime1 = 64 + var4_intLifetime1;
-            if (0 == ql.field_c &&
-              ef.field_F != bb.field_j) {
+            if (0 == HuffmanDecoder.field_c &&
+              ToggleButton.field_F != UsernameLoginCredentials.field_j) {
               var6Lifetime1 = GameGraphicsResources.wizardFont2.stringWidth(ol.field_d);
-              SoftwareRasterizer.fillRect(5 + (320 - var6Lifetime1 / 2 - 16), 5 + (-GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16)), var6Lifetime1 + 32 - 10, 118 + hj.wizardFont.field_M, 13158);
-              CacheEntry.a(pd.frameSprites, -16 + (320 - var6Lifetime1 / 2), (byte) -110, hj.wizardFont.field_M + 128, var6Lifetime1 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
+              SoftwareRasterizer.fillRect(5 + (320 - var6Lifetime1 / 2 - 16), 5 + (-GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16)), var6Lifetime1 + 32 - 10, 118 + IndexedSpriteArrayFactory.wizardFont.field_M, 13158);
+              CacheEntry.a(DropTargetWidget.frameSprites, -16 + (320 - var6Lifetime1 / 2), (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 128, var6Lifetime1 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
               this.drawOutlinedText(var5Lifetime1, TimedValidator.field_c, 16777215, 123, 319);
               var5Lifetime1 += 32;
               this.drawOutlinedText(var5Lifetime1, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 45, PcmResampler.field_c), 16777215, -83, 319);
@@ -1893,23 +1893,23 @@ public final class wizardrun extends GameShell {
               this.drawOutlinedText(var5Lifetime1, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, pb.field_i), 16777215, -91, 319);
               var5Lifetime1 += 32;
             }
-            if (1 == ql.field_c) {
+            if (1 == HuffmanDecoder.field_c) {
               var6Lifetime1Lifetime1 = 500;
-              SoftwareRasterizer.fillRect(304 - var6Lifetime1Lifetime1 / 2 + 5, -GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16 + 5), -10 + var6Lifetime1Lifetime1 + 32, 96 + (hj.wizardFont.field_M - 10), 13158);
-              CacheEntry.a(pd.frameSprites, -16 + (-(var6Lifetime1Lifetime1 / 2) + 320), (byte) -110, hj.wizardFont.field_M + 96, var6Lifetime1Lifetime1 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
+              SoftwareRasterizer.fillRect(304 - var6Lifetime1Lifetime1 / 2 + 5, -GameGraphicsResources.wizardFont2.field_M + (var5Lifetime1 - 16 + 5), -10 + var6Lifetime1Lifetime1 + 32, 96 + (IndexedSpriteArrayFactory.wizardFont.field_M - 10), 13158);
+              CacheEntry.a(DropTargetWidget.frameSprites, -16 + (-(var6Lifetime1Lifetime1 / 2) + 320), (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 96, var6Lifetime1Lifetime1 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
               GameGraphicsResources.wizardFont2.a(BrowserCookieHelpers.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 + (-16 + var5Lifetime1 - (-4 - (-GameGraphicsResources.wizardFont2.field_M - 1))), var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
               GameGraphicsResources.wizardFont2.a(BrowserCookieHelpers.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 - GameGraphicsResources.wizardFont2.field_M + 4 + (var5Lifetime1 - 16) - 1, var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, GameGraphicsResources.wizardFont2.field_M);
               GameGraphicsResources.wizardFont2.a(BrowserCookieHelpers.field_d + " " + MouseWheelInput.field_f, 320 - var6Lifetime1Lifetime1 / 2, -16 - GameGraphicsResources.wizardFont2.field_M + 4 + (var5Lifetime1 + 5), var6Lifetime1Lifetime1, 480, 16777215, -1, 1, 0, GameGraphicsResources.wizardFont2.field_M);
               var5Lifetime1 += 64;
             }
-            if (2 == ql.field_c) {
+            if (2 == HuffmanDecoder.field_c) {
               var6Lifetime1Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(vl.field_a);
               if (GameGraphicsResources.wizardFont2.stringWidth(ol.field_d) > var6Lifetime1Lifetime2) {
                 var6Lifetime1Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(ol.field_d);
               }
               if (608 >= var6Lifetime1Lifetime2) {
-                SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), -10 + (32 + var6Lifetime1Lifetime2), hj.wizardFont.field_M + 150, 13158);
-                CacheEntry.a(pd.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, hj.wizardFont.field_M + 160, var6Lifetime1Lifetime2 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
+                SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), -10 + (32 + var6Lifetime1Lifetime2), IndexedSpriteArrayFactory.wizardFont.field_M + 150, 13158);
+                CacheEntry.a(DropTargetWidget.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 160, var6Lifetime1Lifetime2 + 32, var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M - 16);
                 this.drawOutlinedText(var5Lifetime1, DiskCacheWorker.field_h, 16777215, -102, 319);
                 var5Lifetime1 += 32;
                 this.drawOutlinedText(var5Lifetime1, vl.field_a, 16777215, -126, 319);
@@ -1918,8 +1918,8 @@ public final class wizardrun extends GameShell {
                 var5Lifetime1 += 32;
               } else {
                 var6Lifetime1Lifetime2 = 608;
-                SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16 + 5, -10 + (32 + var6Lifetime1Lifetime2), 128 + (hj.wizardFont.field_M - 10), 13158);
-                CacheEntry.a(pd.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, hj.wizardFont.field_M + 128, 32 + var6Lifetime1Lifetime2, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16);
+                SoftwareRasterizer.fillRect(5 - var6Lifetime1Lifetime2 / 2 + 320 - 16, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16 + 5, -10 + (32 + var6Lifetime1Lifetime2), 128 + (IndexedSpriteArrayFactory.wizardFont.field_M - 10), 13158);
+                CacheEntry.a(DropTargetWidget.frameSprites, 304 - var6Lifetime1Lifetime2 / 2, (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 128, 32 + var6Lifetime1Lifetime2, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 16);
                 var28 = DiskCacheWorker.field_h + " " + vl.field_a + " " + ld.field_a;
                 FlatTriangleRasterizer.font12.a(var28, 32, -20 + var5Lifetime1, 575, 48, 0, 0, 1, 1, 14);
                 FlatTriangleRasterizer.font12.a(var28, 32, -20 + var5Lifetime1 - 1, 576, 48, 0, 0, 1, 1, 14);
@@ -1934,10 +1934,10 @@ public final class wizardrun extends GameShell {
               GameGraphicsResources.gemSprites[6].drawTransparent(382, -20 + var5Lifetime1);
               var5Lifetime1 += 32;
             }
-            if (ql.field_c == 3) {
+            if (HuffmanDecoder.field_c == 3) {
               var6Lifetime1Lifetime3 = 600;
-              SoftwareRasterizer.fillRect(-11 + (-(var6Lifetime1Lifetime3 / 2) + 320), -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), 22 + var6Lifetime1Lifetime3, 160 + (hj.wizardFont.field_M - 10), 13158);
-              CacheEntry.a(pd.frameSprites, -16 - var6Lifetime1Lifetime3 / 2 + 320, (byte) -110, 160 + hj.wizardFont.field_M, 32 + var6Lifetime1Lifetime3, -16 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M);
+              SoftwareRasterizer.fillRect(-11 + (-(var6Lifetime1Lifetime3 / 2) + 320), -11 + (-GameGraphicsResources.wizardFont2.field_M + var5Lifetime1), 22 + var6Lifetime1Lifetime3, 160 + (IndexedSpriteArrayFactory.wizardFont.field_M - 10), 13158);
+              CacheEntry.a(DropTargetWidget.frameSprites, -16 - var6Lifetime1Lifetime3 / 2 + 320, (byte) -110, 160 + IndexedSpriteArrayFactory.wizardFont.field_M, 32 + var6Lifetime1Lifetime3, -16 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M);
               GameGraphicsResources.wizardFont2.a(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 102, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 319, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
               GameGraphicsResources.wizardFont2.a(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
               GameGraphicsResources.wizardFont2.a(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, StrongCacheEntry.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -24 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 16777215, -1, 0, 0, 20);
@@ -1946,7 +1946,7 @@ public final class wizardrun extends GameShell {
               var29 = new String[9];
               var7_ref_String__ = var29;
               for (var8Lifetime1 = 0; var8Lifetime1 < 9; var8Lifetime1++) {
-                var7_ref_String__[var8Lifetime1] = sc.a((byte) 127, bb.field_g.charAt(var8Lifetime1));
+                var7_ref_String__[var8Lifetime1] = ProgressQuery.characterToString((byte) 127, UsernameLoginCredentials.field_g.charAt(var8Lifetime1));
               }
               var8Lifetime1Lifetime1 = 0;
               var9Lifetime1 = 0;
@@ -1970,45 +1970,45 @@ public final class wizardrun extends GameShell {
                 incrementValue$3 = var8Lifetime1Lifetime2;
                 var8Lifetime1Lifetime2++;
                 GameGraphicsResources.wizardFont2.drawStringCentered(var7_ref_String__[incrementValue$3], 15 + var10Lifetime1Lifetime1 - 140, var5Lifetime1 + 25, 0, -1);
-                stackIn_567_0 = ~fi.field_x;
+                stackIn_567_0 = ~NetworkArchiveRequest.field_x;
                 stackIn_567_1 = -101;
                 if (stackIn_567_0 < stackIn_567_1 &&
-                  fi.field_x < 110) {
+                  NetworkArchiveRequest.field_x < 110) {
                   ValidationState.selectStarSprites[0].drawScaled(-140 + (var10Lifetime1Lifetime1 + 5), 5 + var5Lifetime1, 20, 20);
                 }
               }
               SoftwareRasterizer.resetClip();
               var5Lifetime1 += 24;
               var5Lifetime1 += 32;
-              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + sd.field_e, -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
-              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + sd.field_e, 319 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
-              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + sd.field_e, 320 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 16777215, -1, 1, 0, 20);
+              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + LoginCredentialKind.field_e, -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
+              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + LoginCredentialKind.field_e, 319 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 1, 0, 20);
+              GameGraphicsResources.wizardFont2.a(lc.field_c + " " + LoginCredentialKind.field_e, 320 - var6Lifetime1Lifetime3 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 16777215, -1, 1, 0, 20);
               var5Lifetime1 += 64;
             }
             stackIn_567_0Lifetime1 = -5;
-            stackIn_567_1Lifetime1 = ~ql.field_c;
+            stackIn_567_1Lifetime1 = ~HuffmanDecoder.field_c;
             if (stackIn_567_0Lifetime1 == stackIn_567_1Lifetime1) {
               var6Lifetime1Lifetime4 = GameGraphicsResources.wizardFont2.stringWidth(IntrusiveNodeHashTable.field_b);
-              SoftwareRasterizer.fillRect(-11 - var6Lifetime1Lifetime4 / 2 + 320, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 11, 22 + var6Lifetime1Lifetime4, 96 + (hj.wizardFont.field_M - 10), 13158);
-              CacheEntry.a(pd.frameSprites, -16 + (-(var6Lifetime1Lifetime4 / 2) + 320), (byte) -110, hj.wizardFont.field_M + 96, var6Lifetime1Lifetime4 + 32, -16 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M);
+              SoftwareRasterizer.fillRect(-11 - var6Lifetime1Lifetime4 / 2 + 320, -GameGraphicsResources.wizardFont2.field_M + var5Lifetime1 - 11, 22 + var6Lifetime1Lifetime4, 96 + (IndexedSpriteArrayFactory.wizardFont.field_M - 10), 13158);
+              CacheEntry.a(DropTargetWidget.frameSprites, -16 + (-(var6Lifetime1Lifetime4 / 2) + 320), (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 96, var6Lifetime1Lifetime4 + 32, -16 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M);
               GameGraphicsResources.wizardFont2.a(IntrusiveNodeHashTable.field_b + " " + MidiNoteMixer.field_r, 320 - var6Lifetime1Lifetime4 / 2, -25 + var5Lifetime1, var6Lifetime1Lifetime4, 480, 0, 0, 1, 0, 22);
               GameGraphicsResources.wizardFont2.a(IntrusiveNodeHashTable.field_b + " " + MidiNoteMixer.field_r, -(var6Lifetime1Lifetime4 / 2) + 319, -24 + var5Lifetime1, var6Lifetime1Lifetime4, 480, 0, 0, 1, 0, 22);
               GameGraphicsResources.wizardFont2.a(IntrusiveNodeHashTable.field_b + " " + MidiNoteMixer.field_r, 320 - var6Lifetime1Lifetime4 / 2, var5Lifetime1 - 24, var6Lifetime1Lifetime4, 480, 16777215, -1, 1, 0, 22);
               var5Lifetime1 += 64;
             }
-            if (ql.field_c == 5) {
+            if (HuffmanDecoder.field_c == 5) {
               var6Lifetime1Lifetime5 = GameGraphicsResources.wizardFont2.stringWidth(ol.field_d);
-              SoftwareRasterizer.fillRect(-11 - var6Lifetime1Lifetime5 / 2 + 320, -11 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M, var6Lifetime1Lifetime5 + 22, 128 + hj.wizardFont.field_M - 10, 13158);
-              CacheEntry.a(pd.frameSprites, 304 - var6Lifetime1Lifetime5 / 2, (byte) -110, hj.wizardFont.field_M + 128, var6Lifetime1Lifetime5 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
+              SoftwareRasterizer.fillRect(-11 - var6Lifetime1Lifetime5 / 2 + 320, -11 + var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M, var6Lifetime1Lifetime5 + 22, 128 + IndexedSpriteArrayFactory.wizardFont.field_M - 10, 13158);
+              CacheEntry.a(DropTargetWidget.frameSprites, 304 - var6Lifetime1Lifetime5 / 2, (byte) -110, IndexedSpriteArrayFactory.wizardFont.field_M + 128, var6Lifetime1Lifetime5 + 32, -16 + (var5Lifetime1 - GameGraphicsResources.wizardFont2.field_M));
               this.drawOutlinedText(var5Lifetime1, DualLinkNodeHashTable.field_c, 16777215, -52, 319);
               var5Lifetime1 += 32;
-              this.drawOutlinedText(var5Lifetime1, ql.field_a, 16777215, 78, 319);
+              this.drawOutlinedText(var5Lifetime1, HuffmanDecoder.field_a, 16777215, 78, 319);
               var5Lifetime1 += 32;
               this.drawOutlinedText(var5Lifetime1, RadialSelectorWidget.field_P, 16777215, 95, 319);
               var5Lifetime1 += 32;
             }
             var5Lifetime1 += 16;
-            stackIn_574_0 = !(pg.field_q);
+            stackIn_574_0 = !(AchievementSubmission.field_q);
             if (stackIn_574_0) {
               this.drawOutlinedText(var5Lifetime1, ol.field_d, 16777215, -74, 319);
             }
@@ -2018,17 +2018,17 @@ public final class wizardrun extends GameShell {
         if (GameApplet.field_e != null) {
           GameApplet.field_e.drawMenuItems(40);
         }
-        if (1 == sf.field_h ||
-          sf.field_h == 2 ||
-          sf.field_h == 5) {
-          var30 = ne.field_a;
+        if (1 == EmailCheckRequest.field_h ||
+          EmailCheckRequest.field_h == 2 ||
+          EmailCheckRequest.field_h == 5) {
+          var30 = AccountFormText.field_a;
           CacheEntry.a(LoginForm.field_E, 0, (byte) -110, 44, 88, 436);
           var4_intLifetime2 = 16776960;
           if (this.field_N != 0) {
             if ((this.field_N == -1) &&
-              (!(0 > pg.field_n)) &&
-              (!(pg.field_n >= 88)) &&
-              (!(fi.field_B < 436))) {
+              (!(0 > AchievementSubmission.field_n)) &&
+              (!(AchievementSubmission.field_n >= 88)) &&
+              (!(NetworkArchiveRequest.field_B < 436))) {
               var4_intLifetime2 = 16777215;
               if ((BrowserUrlLauncher.field_c == 1 ||
                 BufferedSocket.field_p[84]) && pa.field_c < 32) {
@@ -2043,17 +2043,17 @@ public final class wizardrun extends GameShell {
             }
           }
           this.drawBorderedText(-12926, var30, var4_intLifetime2, 44, 458 + GameGraphicsResources.wizardFont2.field_M / 4);
-          if (sf.field_h == 5 &&
-            qf.field_l > 0) {
-            var4_intLifetime2Lifetime1 = -32 - hj.wizardFont.stringWidth(var30) + 640;
+          if (EmailCheckRequest.field_h == 5 &&
+            AgeValidator.field_l > 0) {
+            var4_intLifetime2Lifetime1 = -32 - IndexedSpriteArrayFactory.wizardFont.stringWidth(var30) + 640;
             var31 = WrappedTextLayout.field_m;
             var4_intLifetime2Lifetime1 = var4_intLifetime2Lifetime1 - (GameGraphicsResources.wizardFont2.stringWidth(var31) + 32);
             CacheEntry.a(LoginForm.field_E, var4_intLifetime2Lifetime1, (byte) -110, 44, 32 + GameGraphicsResources.wizardFont2.stringWidth(var31), 436);
             var5Lifetime2 = 16776960;
             if (this.field_N == 1 ||
-              !(pg.field_n < var4_intLifetime2Lifetime1) &&
-              !(pg.field_n >= (GameGraphicsResources.wizardFont2.stringWidth(var31) + 32 + var4_intLifetime2Lifetime1)) &&
-              !(436 > fi.field_B) &&
+              !(AchievementSubmission.field_n < var4_intLifetime2Lifetime1) &&
+              !(AchievementSubmission.field_n >= (GameGraphicsResources.wizardFont2.stringWidth(var31) + 32 + var4_intLifetime2Lifetime1)) &&
+              !(436 > NetworkArchiveRequest.field_B) &&
               this.field_N == -1) {
               if ((BrowserUrlLauncher.field_c != 0 ||
                 BufferedSocket.field_p[84]) &&
@@ -2065,7 +2065,7 @@ public final class wizardrun extends GameShell {
             }
             this.drawBorderedText(-12926, var31, var5Lifetime2, 16 + var4_intLifetime2Lifetime1 + GameGraphicsResources.wizardFont2.stringWidth(var31) / 2, 458 + GameGraphicsResources.wizardFont2.field_M / 4);
           }
-          if (sf.field_h == 2 &&
+          if (EmailCheckRequest.field_h == 2 &&
             !e.a(-108)) {
             var4_intLifetime2Lifetime2 = 88;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 <= 2; var5Lifetime2Lifetime1++) {
@@ -2081,9 +2081,9 @@ public final class wizardrun extends GameShell {
               }
               if (this.field_N == var5Lifetime2Lifetime1 + 1 ||
                 this.field_N == -1 &&
-                !(pg.field_n < var4_intLifetime2Lifetime2) &&
-                !(pg.field_n >= var6Lifetime2 + var4_intLifetime2Lifetime2) &&
-                !(fi.field_B < 436)) {
+                !(AchievementSubmission.field_n < var4_intLifetime2Lifetime2) &&
+                !(AchievementSubmission.field_n >= var6Lifetime2 + var4_intLifetime2Lifetime2) &&
+                !(NetworkArchiveRequest.field_B < 436)) {
                 if (BrowserUrlLauncher.field_c != 0 ||
                   BufferedSocket.field_p[84]) {
                   DiskCacheWorker.field_c = var5Lifetime2Lifetime1;
@@ -2094,19 +2094,19 @@ public final class wizardrun extends GameShell {
               var4_intLifetime2Lifetime2 = var4_intLifetime2Lifetime2 + var6Lifetime2;
             }
           }
-          if (e.a(-128) && (2 == sf.field_h ||
-            sf.field_h == 5)) {
+          if (e.a(-128) && (2 == EmailCheckRequest.field_h ||
+            EmailCheckRequest.field_h == 5)) {
             var3_ref_StringLifetime1 = SoundCache.field_b;
             CacheEntry.a(LoginForm.field_E, 96, (byte) -110, 44, 176, 436);
             var4_intLifetime2Lifetime3 = 16776960;
             if (this.field_N == 1 ||
-              !(96 >= pg.field_n) &&
-              !(pg.field_n >= 264) &&
-              !(fi.field_B < 436) &&
+              !(96 >= AchievementSubmission.field_n) &&
+              !(AchievementSubmission.field_n >= 264) &&
+              !(NetworkArchiveRequest.field_B < 436) &&
               -1 == this.field_N) {
               if (BrowserUrlLauncher.field_c != 0 ||
                 BufferedSocket.field_p[84]) {
-                SocketJs5Transport.a(sf.field_h, sf.field_h, -128);
+                SocketJs5Transport.a(EmailCheckRequest.field_h, EmailCheckRequest.field_h, -128);
               }
               var4_intLifetime2Lifetime3 = 16777215;
             }
@@ -2114,62 +2114,62 @@ public final class wizardrun extends GameShell {
           }
         }
         stackIn_651_0Lifetime1 = -10;
-        stackIn_651_1Lifetime1 = ~sf.field_h;
+        stackIn_651_1Lifetime1 = ~EmailCheckRequest.field_h;
         if (stackIn_651_0Lifetime1 == stackIn_651_1Lifetime1) {
           SoftwareRasterizer.fillRect(0, 0, 640, 480, 0);
-          RasterBuffer.a(2);
+          RasterBuffer.loadMembershipBenefitsGraphics(2);
         }
         var3Lifetime2 = 8 / ((param0 + 43) / 50);
-        if (sf.field_h == 6) {
+        if (EmailCheckRequest.field_h == 6) {
           var32 = FlatTriangleRasterizer.font12;
           var5Lifetime3 = 180 + var32.field_M;
           var6Lifetime3 = 4 + (var32.field_B + var32.field_q);
           SoftwareRasterizer.fillRectangleBlended(40, 170, 560, 20 + (120 + 5 * var6Lifetime3), 0, 192);
-          CacheEntry.a(pd.frameSprites, 31, (byte) -110, 14 + (20 + (5 * var6Lifetime3 + 120)), 578, 163);
+          CacheEntry.a(DropTargetWidget.frameSprites, 31, (byte) -110, 14 + (20 + (5 * var6Lifetime3 + 120)), 578, 163);
           var32.drawStringCentered(vg.field_U, 320, var5Lifetime3, 16777215, -1);
           stackIn_657_0 = var32;
-          stackIn_658_1 = (0 == qf.field_l) ? false : true;
+          stackIn_658_1 = (0 == AgeValidator.field_l) ? false : true;
           stackIn_661_2 = (ke.field_u.isEmpty(8192)) ? false : true;
           stackIn_664_3 = (DiskCacheStore.field_f == 0) ? false : true;
           ((MonochromeBitmapFont) (Object) stackIn_657_0).drawStringCentered(MusicPatch.a(stackIn_658_1, stackIn_661_2, stackIn_664_3, 26505), 320, var5Lifetime3 + var6Lifetime3, 16777215, -1);
           if (this.a(var5Lifetime3 + 4 * var6Lifetime3, 320, 65535, DiskCacheWorker.field_d, 1)) {
           }
           stackIn_667_0 = var32;
-          stackIn_668_1 = (qf.field_l == 0) ? false : true;
+          stackIn_668_1 = (AgeValidator.field_l == 0) ? false : true;
           stackIn_670_2 = 2;
           stackIn_671_3 = (DiskCacheStore.field_f == 0) ? false : true;
           stackIn_674_4 = (ke.field_u.isEmpty(8192)) ? false : true;
-          ((MonochromeBitmapFont) (Object) stackIn_667_0).drawStringCentered(ka.a(stackIn_668_1, stackIn_670_2, stackIn_671_3, stackIn_674_4), 320, (int)(2.5 * (double)var6Lifetime3) + var5Lifetime3 + 60, 16777215, -1);
+          ((MonochromeBitmapFont) (Object) stackIn_667_0).drawStringCentered(EmailLoginCredentials.a(stackIn_668_1, stackIn_670_2, stackIn_671_3, stackIn_674_4), 320, (int)(2.5 * (double)var6Lifetime3) + var5Lifetime3 + 60, 16777215, -1);
           discarded$5 = this.a(60 + (var6Lifetime3 / 2 + var6Lifetime3 * 5 + var5Lifetime3), 320, 65535, gf.field_X, 1);
           stackIn_676_0 = var32;
           stackIn_677_1 = (0 == DiskCacheStore.field_f) ? false : true;
           stackIn_679_2 = -3567;
           stackIn_679_3 = false;
-          stackIn_680_4 = (0 == qf.field_l) ? false : true;
+          stackIn_680_4 = (0 == AgeValidator.field_l) ? false : true;
           ((MonochromeBitmapFont) (Object) stackIn_676_0).drawStringCentered(ValidationHelpWidget.a(stackIn_677_1, stackIn_679_2, stackIn_679_3, stackIn_680_4), 320, 120 + (var5Lifetime3 + 4 * var6Lifetime3), 16777215, -1);
         }
-        if (sf.field_h == 7) {
+        if (EmailCheckRequest.field_h == 7) {
           ih.a(0);
-          sf.field_h = 8;
+          EmailCheckRequest.field_h = 8;
         } else {
-          if (sf.field_h == 8) {
+          if (EmailCheckRequest.field_h == 8) {
             if (e.a(-113)) {
-              sf.field_h = n.field_c;
+              EmailCheckRequest.field_h = n.field_c;
             } else {
-              sf.field_h = ProgressDialog.field_Y;
-              if (sf.field_h == 10) {
-                GameApplet.a(7775, ql.field_c + GridActor.field_l * 6 + DiskCacheStore.field_f * 64);
-                ic.field_a = ic.field_a + (DiskCacheStore.field_f << 6);
-                me.field_f = me.field_f + (-6 + ql.field_c);
-                wg.field_b = wg.field_b - (6 * GridActor.field_l + 1);
+              EmailCheckRequest.field_h = ProgressDialog.field_Y;
+              if (EmailCheckRequest.field_h == 10) {
+                GameApplet.a(7775, HuffmanDecoder.field_c + GridActor.field_l * 6 + DiskCacheStore.field_f * 64);
+                DecodedSpritePalette.field_a = DecodedSpritePalette.field_a + (DiskCacheStore.field_f << 6);
+                me.field_f = me.field_f + (-6 + HuffmanDecoder.field_c);
+                HighscorePlayer.field_b = HighscorePlayer.field_b - (6 * GridActor.field_l + 1);
                 stackIn_690_1 = !(ArchiveProvider.field_a <= 0);
                 this.field_J = stackIn_690_1;
                 DiskCacheStore.field_f = 0;
                 GridActor.field_l = -1;
-                ql.field_c = 6;
-                sf.field_h = 2;
-                if (qf.field_l > 0) {
-                  sf.field_h = 5;
+                HuffmanDecoder.field_c = 6;
+                EmailCheckRequest.field_h = 2;
+                if (AgeValidator.field_l > 0) {
+                  EmailCheckRequest.field_h = 5;
                 }
               }
             }
@@ -2191,14 +2191,14 @@ public final class wizardrun extends GameShell {
         }
         if (TickClock.field_d) {
           AudioServiceThread.field_b.drawAlpha(0, 0, pa.field_c);
-          var4 = ne.field_a;
+          var4 = AccountFormText.field_a;
           CacheEntry.a(LoginForm.field_E, 0, (byte) -110, 44, 88, 436);
           var5Lifetime4 = 16776960;
           if (0 == this.field_N ||
             this.field_N == -1 &&
-            !(pg.field_n < 0) &&
-            !(88 <= pg.field_n) &&
-            !(436 > fi.field_B)) {
+            !(AchievementSubmission.field_n < 0) &&
+            !(88 <= AchievementSubmission.field_n) &&
+            !(436 > NetworkArchiveRequest.field_B)) {
             if (BrowserUrlLauncher.field_c == 1 ||
               BufferedSocket.field_p[84]) {
               TextButton.field_D = true;
@@ -2207,7 +2207,7 @@ public final class wizardrun extends GameShell {
           }
           this.drawBorderedText(-12926, var4, var5Lifetime4, 44, 458 + GameGraphicsResources.wizardFont2.field_M / 4);
         }
-        var33_ref = (ra) (uc.field_b.first((byte) 87));
+        var33_ref = (ra) (ArchiveLoadingPlan.field_b.first((byte) 87));
         if (var33_ref != null) {
           var6Lifetime4 = this.field_M;
           if (80 > var6Lifetime4) {
@@ -2220,13 +2220,13 @@ public final class wizardrun extends GameShell {
             }
           }
           SoftwareRasterizer.fillRect(4, var5Lifetime5 - 4, 48 + GameGraphicsResources.wizardFont2.stringWidth(SpriteState.field_t[var33_ref.field_n]), 40, 13158);
-          CacheEntry.a(pd.frameSprites, 0, (byte) -110, 48, 8 + (GameGraphicsResources.wizardFont2.stringWidth(SpriteState.field_t[var33_ref.field_n]) + 48), var5Lifetime5 - 8);
+          CacheEntry.a(DropTargetWidget.frameSprites, 0, (byte) -110, 48, 8 + (GameGraphicsResources.wizardFont2.stringWidth(SpriteState.field_t[var33_ref.field_n]) + 48), var5Lifetime5 - 8);
           FullscreenFocusCanvas.field_a[var33_ref.field_n].drawScaled(8, var5Lifetime5, 32, 32);
           GameGraphicsResources.wizardFont2.drawString(SpriteState.field_t[var33_ref.field_n], 48, GameGraphicsResources.wizardFont2.field_M + var5Lifetime5, 16776960, -1);
         }
         if (!StringPaddingHelpers.a(-25231)) {
           if (dg.b(70)) {
-            rl.a(dh.a(255), false);
+            rl.a(EmailDomainHelpers.a(255), false);
           }
         } else {
           SoftwareRasterizer.fillRectangleBlended(0, 0, 640, 480, 0, 128);
@@ -2242,7 +2242,7 @@ public final class wizardrun extends GameShell {
 
     private final void openResourceArchives(int param0) {
         if (null != oh.field_b) {
-          UiWidget.a(-37, oh.field_b);
+          UiWidget.loadGameTextResources(-37, oh.field_b);
           oh.field_b = null;
           GameGraphicsResources.b(0);
         }
@@ -2253,8 +2253,8 @@ public final class wizardrun extends GameShell {
         int var2 = -60 / ((param0 - 39) / 38);
         PlatformActor.field_u = BufferedRandomAccessFile.a(-106, 6);
         TickClock.field_b = BufferedRandomAccessFile.a(-90, 5);
-        bc.field_a = BufferedRandomAccessFile.a(84, 7);
-        ol.a(bb.field_h, TickClock.field_c, (byte) 109);
+        MeshWorkspaceHelpers.field_a = BufferedRandomAccessFile.a(84, 7);
+        ol.a(UsernameLoginCredentials.field_h, TickClock.field_c, (byte) 109);
     }
 
     final static int a(byte param0, int param1) {
@@ -2280,10 +2280,10 @@ public final class wizardrun extends GameShell {
           if (param4 != 1) {
             this.field_R = 17;
           }
-          if (pg.field_n > -var6_int + param1 - 16 &&
-            16 + param1 >= pg.field_n &&
-            fi.field_B > (-GameGraphicsResources.wizardFont2.field_M + param0 - 16) &&
-            16 + param0 >= fi.field_B) {
+          if (AchievementSubmission.field_n > -var6_int + param1 - 16 &&
+            16 + param1 >= AchievementSubmission.field_n &&
+            NetworkArchiveRequest.field_B > (-GameGraphicsResources.wizardFont2.field_M + param0 - 16) &&
+            16 + param0 >= NetworkArchiveRequest.field_B) {
             param2 = (65535 == param2) ? 16777215 : 0;
           }
           if (param2 == 65535) {
@@ -2407,26 +2407,26 @@ public final class wizardrun extends GameShell {
           int stackIn_855_1Lifetime2;
           int var7Lifetime1;
           var8 = field_H;
-          if (sf.field_h == 2 &&
-            0 < qf.field_l) {
-            sf.field_h = 5;
+          if (EmailCheckRequest.field_h == 2 &&
+            0 < AgeValidator.field_l) {
+            EmailCheckRequest.field_h = 5;
           }
           if (SpriteState.field_y > 0) {
             SpriteState.field_y = SpriteState.field_y - 1;
           }
-          if (sf.field_h == 0) {
+          if (EmailCheckRequest.field_h == 0) {
             this.field_N = 0;
-            this.field_K = pg.field_n;
-            this.field_S = fi.field_B;
+            this.field_K = AchievementSubmission.field_n;
+            this.field_S = NetworkArchiveRequest.field_B;
           }
-          if (pg.field_n != this.field_K ||
-            ~fi.field_B != ~this.field_S ||
+          if (AchievementSubmission.field_n != this.field_K ||
+            ~NetworkArchiveRequest.field_B != ~this.field_S ||
             BrowserUrlLauncher.field_c == 1) {
-            this.field_K = pg.field_n;
-            this.field_S = fi.field_B;
+            this.field_K = AchievementSubmission.field_n;
+            this.field_S = NetworkArchiveRequest.field_B;
             this.field_N = -1;
           }
-          if (6 == sf.field_h) {
+          if (6 == EmailCheckRequest.field_h) {
             var11 = FlatTriangleRasterizer.font12;
             var3 = 180 + var11.field_M;
             var4 = 4 + (var11.field_B + var11.field_q);
@@ -2434,10 +2434,10 @@ public final class wizardrun extends GameShell {
             var5 = GameGraphicsResources.wizardFont2.stringWidth(DiskCacheWorker.field_d);
             var7 = var4 * 4 + var3;
             var6_int = var6_int + var5 / 2;
-            if (-16 - var5 + var6_int < pg.field_n &&
-              pg.field_n <= (16 + var6_int) &&
-              (-GameGraphicsResources.wizardFont2.field_M + var7 - 16) < fi.field_B &&
-              fi.field_B <= var7 + 16 &&
+            if (-16 - var5 + var6_int < AchievementSubmission.field_n &&
+              AchievementSubmission.field_n <= (16 + var6_int) &&
+              (-GameGraphicsResources.wizardFont2.field_M + var7 - 16) < NetworkArchiveRequest.field_B &&
+              NetworkArchiveRequest.field_B <= var7 + 16 &&
               1 == w.field_c) {
               SocketJs5Transport.a(6, 10, -127);
             }
@@ -2445,17 +2445,17 @@ public final class wizardrun extends GameShell {
             var5 = GameGraphicsResources.wizardFont2.stringWidth(gf.field_X);
             var7Lifetime1 = 60 + (var4 / 2 + var3) + var4 * 5;
             var6_int = var6_int + var5 / 2;
-            if ((-var5 + var6_int - 16) < pg.field_n &&
-              pg.field_n <= (var6_int + 16) &&
-              fi.field_B > (-16 + (-GameGraphicsResources.wizardFont2.field_M + var7Lifetime1)) &&
-              16 + var7Lifetime1 >= fi.field_B &&
+            if ((-var5 + var6_int - 16) < AchievementSubmission.field_n &&
+              AchievementSubmission.field_n <= (var6_int + 16) &&
+              NetworkArchiveRequest.field_B > (-16 + (-GameGraphicsResources.wizardFont2.field_M + var7Lifetime1)) &&
+              16 + var7Lifetime1 >= NetworkArchiveRequest.field_B &&
               w.field_c == 1) {
               RasterSnapshot.field_k = 0;
-              qf.field_l = 0;
+              AgeValidator.field_l = 0;
               ke.field_u.clear(false);
               ie.field_l.clear(false);
               BufferedSocket.field_a = -350;
-              sf.field_h = 9;
+              EmailCheckRequest.field_h = 9;
               TextButton.field_A = 0;
               tb.a(0, true);
             }
@@ -2463,15 +2463,15 @@ public final class wizardrun extends GameShell {
             stackIn_31_1 = (DiskCacheStore.field_f == 0) ? false : true;
             stackIn_33_2 = -3567;
             stackIn_33_3 = false;
-            stackIn_34_4 = (qf.field_l == 0) ? false : true;
+            stackIn_34_4 = (AgeValidator.field_l == 0) ? false : true;
             ((MonochromeBitmapFont) (Object) stackIn_30_0).drawStringCentered(ValidationHelpWidget.a(stackIn_31_1, stackIn_33_2, stackIn_33_3, stackIn_34_4), 320, var4 * 4 + (var3 + 120), 16777215, -1);
           }
-          if (sf.field_h == 9) {
+          if (EmailCheckRequest.field_h == 9) {
             stackIn_38_0 = param0 - 54;
             stackIn_39_1 = (dg.b(98)) ? false : true;
             var2 = kd.a(stackIn_38_0, stackIn_39_1);
             if (var2 == 3) {
-              SpriteState.a(jg.f(param0 ^ 641), true);
+              SpriteState.a(DisplayNameValidator.getActiveApplet(param0 ^ 641), true);
             }
             if (1 == var2) {
               if (pa.field_c <= 0) {
@@ -2487,13 +2487,13 @@ public final class wizardrun extends GameShell {
               this.field_N = -1;
             }
           }
-          if (5 == sf.field_h) {
+          if (5 == EmailCheckRequest.field_h) {
             if (w.field_c != 0 &&
-              cb.field_f != -1) {
-              if (~tk.field_a == ~cb.field_f) {
+              BeveledFrameFactory.field_f != -1) {
+              if (~tk.field_a == ~BeveledFrameFactory.field_f) {
                 tk.field_a = -1;
               } else {
-                tk.field_a = cb.field_f;
+                tk.field_a = BeveledFrameFactory.field_f;
               }
             }
           } else {
@@ -2513,7 +2513,7 @@ public final class wizardrun extends GameShell {
                 TickClock.field_d = false;
               }
             }
-            while (ae.a(param0 ^ 706)) {
+            while (EmailValidationError.pollKeyboardEvent(param0 ^ 706)) {
               if (MidiNote.field_r != 13 &&
                 !BufferedSocket.field_p[84]) {
                 continue;
@@ -2525,7 +2525,7 @@ public final class wizardrun extends GameShell {
               BufferedSocket.field_a = BufferedSocket.field_a - 8;
               if (BufferedSocket.field_a < 240) {
                 if (GridActor.field_l == 0 &&
-                  !pg.field_q &&
+                  !AchievementSubmission.field_q &&
                   GridActor.field_g >= 0) {
                   BufferedSocket.field_a = 240;
                 }
@@ -2540,12 +2540,12 @@ public final class wizardrun extends GameShell {
                 BufferedSocket.field_a = BufferedSocket.field_a - 8;
               }
             }
-            if (uc.field_b.first((byte) 55) != null) {
+            if (ArchiveLoadingPlan.field_b.first((byte) 55) != null) {
               fieldTemp$0 = this.field_M + 1;
               this.field_M = this.field_M + 1;
               if (335 == fieldTemp$0) {
                 this.field_M = 0;
-                uc.field_b.removeFirst(-40);
+                ArchiveLoadingPlan.field_b.removeFirst(-40);
               }
             }
             if (this.field_I > 0) {
@@ -2554,37 +2554,37 @@ public final class wizardrun extends GameShell {
             if (0 < pa.field_c) {
               pa.field_c = pa.field_c + 32;
               if (256 == pa.field_c) {
-                if (sf.field_h == 0) {
+                if (EmailCheckRequest.field_h == 0) {
                   if (DualLinkDeque.field_i == 1) {
-                    sf.field_h = 1;
+                    EmailCheckRequest.field_h = 1;
                   }
                   if (DualLinkDeque.field_i == 3) {
-                    sf.field_h = 2;
+                    EmailCheckRequest.field_h = 2;
                   }
                   if (4 == DualLinkDeque.field_i) {
-                    sf.field_h = 5;
+                    EmailCheckRequest.field_h = 5;
                   }
                   if (DualLinkDeque.field_i == 5) {
-                    sf.field_h = 11;
+                    EmailCheckRequest.field_h = 11;
                   }
                 } else {
-                  if (sf.field_h == 5 &&
-                    qf.field_l > 0 &&
+                  if (EmailCheckRequest.field_h == 5 &&
+                    AgeValidator.field_l > 0 &&
                     DualLinkDeque.field_i == 3) {
-                    qf.field_l = 0;
-                    sf.field_h = 2;
+                    AgeValidator.field_l = 0;
+                    EmailCheckRequest.field_h = 2;
                   } else {
-                    if (5 == sf.field_h) {
-                      qf.field_l = 0;
+                    if (5 == EmailCheckRequest.field_h) {
+                      AgeValidator.field_l = 0;
                     }
-                    if (sf.field_h == 2) {
+                    if (EmailCheckRequest.field_h == 2) {
                       DualLinkDeque.field_g = null;
                     }
-                    sf.field_h = 0;
+                    EmailCheckRequest.field_h = 0;
                     if (!this.field_J) {
                       tb.a(0, true);
                       this.field_J = true;
-                      sf.field_h = 9;
+                      EmailCheckRequest.field_h = 9;
                     }
                   }
                 }
@@ -2593,14 +2593,14 @@ public final class wizardrun extends GameShell {
                 pa.field_c = 0;
               }
             } else {
-              if (sf.field_h == 0 &&
+              if (EmailCheckRequest.field_h == 0 &&
                 null == GameApplet.field_e &&
                 2 != DialogLayer.field_K) {
-                if (EditableTextWidget.field_R.length > rc.field_a) {
-                  rf.field_b = rf.field_b - 1;
+                if (EditableTextWidget.field_R.length > AccountConnectionState.field_a) {
+                  ProgressRefreshState.field_b = ProgressRefreshState.field_b - 1;
                 }
-                if (0 > rf.field_b) {
-                  rf.field_b = 8;
+                if (0 > ProgressRefreshState.field_b) {
+                  ProgressRefreshState.field_b = 8;
                   var2 = 0;
                   while (true) {
                     if (var2 < 25) {
@@ -2610,16 +2610,16 @@ public final class wizardrun extends GameShell {
                       if (stackIn_113_0 >= stackIn_113_1) {
                         pb.field_k = 0;
                       }
-                      TickClock.field_a[pb.field_k][0] = GameGraphicsResources.wizardFont2.stringWidth(EditableTextWidget.field_R[rc.field_a]) * (-13 + var2) / 25 + 177;
-                      TickClock.field_a[pb.field_k][1] = (int)(-Math.random() * (double)GameGraphicsResources.wizardFont2.field_M + 208.0 + (double)(32 * rc.field_a));
+                      TickClock.field_a[pb.field_k][0] = GameGraphicsResources.wizardFont2.stringWidth(EditableTextWidget.field_R[AccountConnectionState.field_a]) * (-13 + var2) / 25 + 177;
+                      TickClock.field_a[pb.field_k][1] = (int)(-Math.random() * (double)GameGraphicsResources.wizardFont2.field_M + 208.0 + (double)(32 * AccountConnectionState.field_a));
                       TickClock.field_a[pb.field_k][2] = 128;
                       var2++;
                       continue;
                     }
-                    stackIn_113_0Lifetime1 = rc.field_a;
+                    stackIn_113_0Lifetime1 = AccountConnectionState.field_a;
                     stackIn_113_1Lifetime1 = 1;
-                    rc.field_a = stackIn_113_0Lifetime1 + stackIn_113_1Lifetime1;
-                    if (!pk.field_s) {
+                    AccountConnectionState.field_a = stackIn_113_0Lifetime1 + stackIn_113_1Lifetime1;
+                    if (!ReflectionCheck.field_s) {
                       break;
                     }
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
@@ -2627,15 +2627,15 @@ public final class wizardrun extends GameShell {
                   }
                 }
                 var2 = 0;
-                if (~pg.field_n != ~TriangleMesh.field_i) {
-                  TriangleMesh.field_i = pg.field_n;
+                if (~AchievementSubmission.field_n != ~TriangleMesh.field_i) {
+                  TriangleMesh.field_i = AchievementSubmission.field_n;
                   var2 = 1;
                 }
-                if (fi.field_B != qj.field_d) {
+                if (NetworkArchiveRequest.field_B != qj.field_d) {
                   var2 = 1;
-                  qj.field_d = fi.field_B;
+                  qj.field_d = NetworkArchiveRequest.field_B;
                 }
-                if (rc.field_a < 2) {
+                if (AccountConnectionState.field_a < 2) {
                   var2 = 0;
                 }
                 if (w.field_c == 1) {
@@ -2647,13 +2647,13 @@ public final class wizardrun extends GameShell {
                       BufferedRandomAccessFile.field_h = -1;
                       var3 = 208;
                       var4 = 0;
-                      while (var4 < rc.field_a) {
-                        stackIn_138_0 = pg.field_n;
+                      while (var4 < AccountConnectionState.field_a) {
+                        stackIn_138_0 = AchievementSubmission.field_n;
                         stackIn_138_1 = 27;
                         if (stackIn_138_0 >= stackIn_138_1 &&
-                          pg.field_n <= 327 &&
-                          fi.field_B >= (-24 + var3) &&
-                          fi.field_B <= 8 + var3) {
+                          AchievementSubmission.field_n <= 327 &&
+                          NetworkArchiveRequest.field_B >= (-24 + var3) &&
+                          NetworkArchiveRequest.field_B <= 8 + var3) {
                           BufferedRandomAccessFile.field_h = var4;
                         }
                         var3 += 32;
@@ -2663,7 +2663,7 @@ public final class wizardrun extends GameShell {
                       stackIn_138_1Lifetime1 = -3;
                       if ((stackIn_138_0Lifetime1 == stackIn_138_1Lifetime1 ||
                         3 == BufferedRandomAccessFile.field_h) &&
-                        pg.field_n >= 144) {
+                        AchievementSubmission.field_n >= 144) {
                         if (BrowserUrlLauncher.field_c == 1) {
                           this.a(-123, 2, BufferedRandomAccessFile.field_h);
                           break regionExit1;
@@ -2677,7 +2677,7 @@ public final class wizardrun extends GameShell {
                       break regionExit1;
                     }
                     if ((2 == BufferedRandomAccessFile.field_h ||
-                      BufferedRandomAccessFile.field_h == 3) && (pg.field_n > 144 &&
+                      BufferedRandomAccessFile.field_h == 3) && (AchievementSubmission.field_n > 144 &&
                       BrowserUrlLauncher.field_c == 1)) {
                       this.a(-114, 2, BufferedRandomAccessFile.field_h);
                     }
@@ -2734,16 +2734,16 @@ public final class wizardrun extends GameShell {
                   DialogLayer.field_K != 1) {
                   this.field_P = false;
                   GameApplet.field_e = new GameMenu();
-                  rf.field_b = 0;
-                  rc.field_a = 0;
+                  ProgressRefreshState.field_b = 0;
+                  AccountConnectionState.field_a = 0;
                   return;
                 }
                 this.field_P = false;
-                if (sf.field_h == 2) {
+                if (EmailCheckRequest.field_h == 2) {
                   DualLinkDeque.field_g = null;
                 }
                 GameApplet.field_e = null;
-                sf.field_h = 0;
+                EmailCheckRequest.field_h = 0;
               }
             }
             if (LoginChoicePanel.field_E != null &&
@@ -2763,9 +2763,9 @@ public final class wizardrun extends GameShell {
                 continue;
               }
               if (this.field_L) {
-                var2 = pg.field_n / 32;
-                var3 = -(fi.field_B / 32) + 14;
-                while (ae.a(-75)) {
+                var2 = AchievementSubmission.field_n / 32;
+                var3 = -(NetworkArchiveRequest.field_B / 32) + 14;
+                while (EmailValidationError.pollKeyboardEvent(-75)) {
                   if (MidiNote.field_r == 13) {
                     this.field_L = false;
                     DialogLayer.field_K = 1;
@@ -2786,10 +2786,10 @@ public final class wizardrun extends GameShell {
                       var5++;
                       var4_ref_byte__[incrementValue$3] = (byte)tc.field_l.field_a[var6_int];
                     }
-                    MidiPcmStream.field_T[GridActor.field_l][ql.field_c] = var15;
+                    MidiPcmStream.field_T[GridActor.field_l][HuffmanDecoder.field_c] = var15;
                     try {
                       var5 = 0;
-                      AudioServiceThread.a(var4_ref_byte__, var15.length, true, new File("level" + GridActor.field_l + ql.field_c + ".dat"));
+                      AudioServiceThread.a(var4_ref_byte__, var15.length, true, new File("level" + GridActor.field_l + HuffmanDecoder.field_c + ".dat"));
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var6 = (Exception) (Object) decompiledCaughtException;
@@ -2866,22 +2866,22 @@ public final class wizardrun extends GameShell {
                   }
                   if (MidiNote.field_r == 43) {
                     BufferedSocket.field_c = BufferedSocket.field_c + 1;
-                    ql.field_c = ql.field_c + 1;
-                    if (ql.field_c == 5) {
-                      ga.field_e = SettingsCookieReader.field_a;
+                    HuffmanDecoder.field_c = HuffmanDecoder.field_c + 1;
+                    if (HuffmanDecoder.field_c == 5) {
+                      IntegerSyntaxHelpers.field_e = SettingsCookieReader.field_a;
                       if (tl.field_e) {
-                        SingleChildWidget.field_D.a(true, -101, ga.field_e);
+                        SingleChildWidget.field_D.a(true, -101, IntegerSyntaxHelpers.field_e);
                       }
                     }
-                    if (ql.field_c >= 6) {
-                      BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
-                      wg.field_b = wg.field_b + 6;
+                    if (HuffmanDecoder.field_c >= 6) {
+                      BufferedSocket.field_c = BufferedSocket.field_c - HuffmanDecoder.field_c;
+                      HighscorePlayer.field_b = HighscorePlayer.field_b + 6;
                       GridActor.field_l = GridActor.field_l + 1;
-                      ql.field_c = 0;
+                      HuffmanDecoder.field_c = 0;
                       if (5 >= GridActor.field_l) {
                         MidiNote.a((byte) -75);
                       } else {
-                        wg.field_b = wg.field_b - GridActor.field_l * 6;
+                        HighscorePlayer.field_b = HighscorePlayer.field_b - GridActor.field_l * 6;
                         me.field_f = me.field_f - 30;
                         GridActor.field_l = 5;
                       }
@@ -2895,22 +2895,22 @@ public final class wizardrun extends GameShell {
                   if (MidiNote.field_r != 42) {
                     continue;
                   }
-                  ql.field_c = ql.field_c - 1;
+                  HuffmanDecoder.field_c = HuffmanDecoder.field_c - 1;
                   BufferedSocket.field_c = BufferedSocket.field_c + 1;
-                  if (ql.field_c == 4) {
+                  if (HuffmanDecoder.field_c == 4) {
                     MidiNote.a((byte) -59);
                   }
-                  if (ql.field_c < 0) {
-                    ql.field_c = 5;
+                  if (HuffmanDecoder.field_c < 0) {
+                    HuffmanDecoder.field_c = 5;
                     GridActor.field_l = GridActor.field_l - 1;
                     if (GridActor.field_l < 0) {
                       GridActor.field_l = 0;
                     } else {
                       MidiNote.a((byte) -118);
                     }
-                    ga.field_e = SettingsCookieReader.field_a;
+                    IntegerSyntaxHelpers.field_e = SettingsCookieReader.field_a;
                     if (tl.field_e) {
-                      SingleChildWidget.field_D.a(true, param0 - 740, ga.field_e);
+                      SingleChildWidget.field_D.a(true, param0 - 740, IntegerSyntaxHelpers.field_e);
                     }
                   }
                   ni.b(7530);
@@ -2924,8 +2924,8 @@ public final class wizardrun extends GameShell {
               }
               if (null != GameApplet.field_e) {
                 this.field_I = 5;
-                sf.field_h = 3;
-                while (ae.a(-120)) {
+                EmailCheckRequest.field_h = 3;
+                while (EmailValidationError.pollKeyboardEvent(-120)) {
                   if (MidiNote.field_r == 13) {
                     GameApplet.field_e.field_p = true;
                     continue;
@@ -2961,29 +2961,29 @@ public final class wizardrun extends GameShell {
                 if (null != GameApplet.field_e) {
                   return;
                 }
-                sf.field_h = 0;
+                EmailCheckRequest.field_h = 0;
                 return;
               }
               if (DiskCacheStore.field_f > NanoTickClock.field_n) {
                 NanoTickClock.field_n = DiskCacheStore.field_f;
               }
               if (DialogLayer.field_K == 1) {
-                while (ae.a(-65)) {
+                while (EmailValidationError.pollKeyboardEvent(-65)) {
                   if (13 == MidiNote.field_r &&
-                    sf.field_h != 0) {
+                    EmailCheckRequest.field_h != 0) {
                     this.field_P = true;
-                    if (sf.field_h != 6) {
+                    if (EmailCheckRequest.field_h != 6) {
                       return;
                     }
                     this.field_P = false;
                     tb.a(0, true);
                     this.field_J = true;
-                    sf.field_h = 9;
+                    EmailCheckRequest.field_h = 9;
                     return;
                   }
                   if (MidiNote.field_r == 96 &&
                     BrowserUrlLauncher.field_c == 0) {
-                    if (2 == sf.field_h) {
+                    if (2 == EmailCheckRequest.field_h) {
                       if (!e.a(param0 - 755)) {
                         this.field_N = this.field_N - 1;
                         if (this.field_N < 0) {
@@ -2996,9 +2996,9 @@ public final class wizardrun extends GameShell {
                         }
                       }
                     }
-                    if (sf.field_h == 5) {
+                    if (EmailCheckRequest.field_h == 5) {
                       if (!e.a(param0 ^ -739) &&
-                        qf.field_l <= 0) {
+                        AgeValidator.field_l <= 0) {
                         this.field_N = 0;
                       } else {
                         this.field_N = this.field_N - 1;
@@ -3007,19 +3007,19 @@ public final class wizardrun extends GameShell {
                         }
                       }
                     }
-                    if (sf.field_h == 11 &&
+                    if (EmailCheckRequest.field_h == 11 &&
                       GridActor.field_l > 0 &&
                       FadingDialog.field_I < 5) {
                       GridActor.field_l = GridActor.field_l - 1;
-                      wg.field_b = wg.field_b - 6;
+                      HighscorePlayer.field_b = HighscorePlayer.field_b - 6;
                     }
-                    if (sf.field_h == 1) {
+                    if (EmailCheckRequest.field_h == 1) {
                       this.field_N = 0;
                     }
                   }
                   if (97 == MidiNote.field_r &&
                     0 == BrowserUrlLauncher.field_c) {
-                    if (sf.field_h == 2) {
+                    if (EmailCheckRequest.field_h == 2) {
                       if (e.a(param0 - 727)) {
                         this.field_N = this.field_N + 1;
                         if (this.field_N > 1) {
@@ -3032,9 +3032,9 @@ public final class wizardrun extends GameShell {
                         }
                       }
                     }
-                    if (sf.field_h == 5) {
+                    if (EmailCheckRequest.field_h == 5) {
                       if (!e.a(param0 - 751) &&
-                        0 >= qf.field_l) {
+                        0 >= AgeValidator.field_l) {
                         this.field_N = 0;
                       } else {
                         this.field_N = this.field_N + 1;
@@ -3043,17 +3043,17 @@ public final class wizardrun extends GameShell {
                         }
                       }
                     }
-                    if (11 == sf.field_h &&
+                    if (11 == EmailCheckRequest.field_h &&
                       5 > GridActor.field_l &&
                       5 > FadingDialog.field_I) {
                       GridActor.field_l = GridActor.field_l + 1;
                       me.field_f = me.field_f - 6;
                     }
-                    if (sf.field_h == 1) {
+                    if (EmailCheckRequest.field_h == 1) {
                       this.field_N = 0;
                     }
                   }
-                  if (sf.field_h == 0) {
+                  if (EmailCheckRequest.field_h == 0) {
                     if (98 == MidiNote.field_r) {
                       if (BufferedRandomAccessFile.field_h == -1) {
                         BufferedRandomAccessFile.field_h = 0;
@@ -3061,14 +3061,14 @@ public final class wizardrun extends GameShell {
                       fieldTemp$5 = BufferedRandomAccessFile.field_h - 1;
                       BufferedRandomAccessFile.field_h = BufferedRandomAccessFile.field_h - 1;
                       if (fieldTemp$5 < 0) {
-                        BufferedRandomAccessFile.field_h = BufferedRandomAccessFile.field_h + rc.field_a;
+                        BufferedRandomAccessFile.field_h = BufferedRandomAccessFile.field_h + AccountConnectionState.field_a;
                       }
                     }
                     if (MidiNote.field_r == 99) {
                       fieldTemp$6 = BufferedRandomAccessFile.field_h + 1;
                       BufferedRandomAccessFile.field_h = BufferedRandomAccessFile.field_h + 1;
-                      if (rc.field_a <= fieldTemp$6) {
-                        BufferedRandomAccessFile.field_h = BufferedRandomAccessFile.field_h - rc.field_a;
+                      if (AccountConnectionState.field_a <= fieldTemp$6) {
+                        BufferedRandomAccessFile.field_h = BufferedRandomAccessFile.field_h - AccountConnectionState.field_a;
                       }
                     }
                     if (MidiNote.field_r == 96) {
@@ -3095,11 +3095,11 @@ public final class wizardrun extends GameShell {
                   if (84 != MidiNote.field_r) {
                     continue;
                   }
-                  if (sf.field_h != 11) {
-                    if (sf.field_h == 2) {
+                  if (EmailCheckRequest.field_h != 11) {
+                    if (EmailCheckRequest.field_h == 2) {
                       continue;
                     }
-                    if (sf.field_h == 5) {
+                    if (EmailCheckRequest.field_h == 5) {
                       continue;
                     }
                     pa.field_c = 32;
@@ -3126,54 +3126,54 @@ public final class wizardrun extends GameShell {
                   if ((4 & IsaacRandom.field_a) > 0) {
                     AccountCreationForm.field_T = 400;
                   }
-                  sj.field_l = 0;
+                  EmailAddressValidator.field_l = 0;
                 }
-                if (sf.field_h == 0) {
-                  wg.field_e = jl.field_w;
+                if (EmailCheckRequest.field_h == 0) {
+                  HighscorePlayer.field_e = jl.field_w;
                 }
-                if (1 == sf.field_h) {
-                  wg.field_e = AudioServiceThread.field_b;
+                if (1 == EmailCheckRequest.field_h) {
+                  HighscorePlayer.field_e = AudioServiceThread.field_b;
                 }
-                if (sf.field_h == 2) {
-                  wg.field_e = NodeHashTableIterator.field_d;
+                if (EmailCheckRequest.field_h == 2) {
+                  HighscorePlayer.field_e = NodeHashTableIterator.field_d;
                 }
-                if (5 == sf.field_h) {
-                  wg.field_e = ValidationHelpWidget.field_M;
+                if (5 == EmailCheckRequest.field_h) {
+                  HighscorePlayer.field_e = ValidationHelpWidget.field_M;
                 }
                 if (FadingDialog.field_I > 0) {
                   FadingDialog.field_I = FadingDialog.field_I + 5;
                 }
-                if (4 == sf.field_h) {
-                  wg.field_e = we.field_b;
+                if (4 == EmailCheckRequest.field_h) {
+                  HighscorePlayer.field_e = we.field_b;
                 }
                 if (FadingDialog.field_I == 255) {
                   DualLinkDeque.field_g = null;
                   WidgetTheme.field_k = 0;
                   if (TextButton.field_A < GridActor.field_l &&
                     GridActor.field_l > 1) {
-                    wg.field_b = wg.field_b - 3 * GridActor.field_l;
+                    HighscorePlayer.field_b = HighscorePlayer.field_b - 3 * GridActor.field_l;
                     BufferedSocket.field_c = BufferedSocket.field_c - 3 * GridActor.field_l;
                     GridActor.field_l = 0;
                   }
                   DialogLayer.field_K = 2;
                   BrowserCookieHelpers.field_a = null;
-                  BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
-                  ql.field_c = 0;
+                  BufferedSocket.field_c = BufferedSocket.field_c - HuffmanDecoder.field_c;
+                  HuffmanDecoder.field_c = 0;
                   MidiNote.a((byte) -43);
                   ni.b(param0 ^ 8170);
                   if (GridActor.field_l == 0 &&
-                    ql.field_c == 0) {
+                    HuffmanDecoder.field_c == 0) {
                     BufferedSocket.field_a = 580;
-                    bb.field_j = ef.field_F;
+                    UsernameLoginCredentials.field_j = ToggleButton.field_F;
                   } else {
                     BufferedSocket.field_a = 580;
-                    bb.field_j = wg.field_f + (1 + GridActor.field_l) + eh.field_i + (1 + ql.field_c);
+                    UsernameLoginCredentials.field_j = HighscorePlayer.field_f + (1 + GridActor.field_l) + eh.field_i + (1 + HuffmanDecoder.field_c);
                   }
                   var9 = new GridPoint();
                   var13 = var9;
                   var13.column = 2;
                   if (4 == GridActor.field_l &&
-                    ql.field_c == 5) {
+                    HuffmanDecoder.field_c == 5) {
                     var13.column = var13.column + 1;
                   }
                   var9.row = 2;
@@ -3183,18 +3183,18 @@ public final class wizardrun extends GameShell {
                   GameApplet.field_g = false;
                   if (GridActor.field_l == 0) {
                     this.field_Q = 0;
-                    pg.field_q = true;
+                    AchievementSubmission.field_q = true;
                     this.field_R = 1;
                   } else {
-                    pg.field_q = false;
+                    AchievementSubmission.field_q = false;
                   }
                   DelegatingCanvas.field_b = false;
                   NanoTickClock.field_n = 0;
                   DiskCacheWorker.field_e = 100;
                   ol.field_e = false;
                   if (tl.field_e &&
-                    pg.field_q) {
-                    SingleChildWidget.field_D.a(true, -115, bh.field_e);
+                    AchievementSubmission.field_q) {
+                    SingleChildWidget.field_D.a(true, -115, QuickChatDynamicCommand.field_e);
                   }
                 }
                 if (510 < FadingDialog.field_I) {
@@ -3206,35 +3206,35 @@ public final class wizardrun extends GameShell {
                 }
               }
               if (2 == DialogLayer.field_K) {
-                if (((ql.field_c != 0 ||
+                if (((HuffmanDecoder.field_c != 0 ||
                   GridActor.field_l != 0) &&
-                  DiskCacheStore.field_f > hg.field_a ||
-                  ql.field_c == 0 &&
+                  DiskCacheStore.field_f > DisplayNameSyntaxHelpers.field_a ||
+                  HuffmanDecoder.field_c == 0 &&
                   GridActor.field_l == 0 &&
                   !(GridActor.field_g >= 5) &&
-                  !(GridActor.field_g <= 0)) && !pg.field_q) {
+                  !(GridActor.field_g <= 0)) && !AchievementSubmission.field_q) {
                   GridActor.field_g = GridActor.field_g + 1;
-                  if (ql.field_c != 0 ||
+                  if (HuffmanDecoder.field_c != 0 ||
                     GridActor.field_l != 0) {
-                    if (hg.field_a >= 10000) {
-                      hg.field_a = hg.field_a + 10000;
+                    if (DisplayNameSyntaxHelpers.field_a >= 10000) {
+                      DisplayNameSyntaxHelpers.field_a = DisplayNameSyntaxHelpers.field_a + 10000;
                     }
-                    if (hg.field_a == 5000) {
-                      hg.field_a = 10000;
+                    if (DisplayNameSyntaxHelpers.field_a == 5000) {
+                      DisplayNameSyntaxHelpers.field_a = 10000;
                     }
-                    if (hg.field_a == 2000) {
-                      hg.field_a = 5000;
+                    if (DisplayNameSyntaxHelpers.field_a == 2000) {
+                      DisplayNameSyntaxHelpers.field_a = 5000;
                     }
-                    if (1000 == hg.field_a) {
-                      hg.field_a = 2000;
+                    if (1000 == DisplayNameSyntaxHelpers.field_a) {
+                      DisplayNameSyntaxHelpers.field_a = 2000;
                     }
-                    if (hg.field_a <= 500) {
-                      hg.field_a = 1000;
+                    if (DisplayNameSyntaxHelpers.field_a <= 500) {
+                      DisplayNameSyntaxHelpers.field_a = 1000;
                     }
                   }
-                  ic.field_a = ic.field_a + 1;
+                  DecodedSpritePalette.field_a = DecodedSpritePalette.field_a + 1;
                   for (var2 = 0; var2 < 5; var2++) {
-                    fi.field_x = 0;
+                    NetworkArchiveRequest.field_x = 0;
                     ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
                     ii.field_e[WidgetTheme.field_k].tileOffset.set(-92, ii.field_e[0].tileOffset);
                     ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
@@ -3242,7 +3242,7 @@ public final class wizardrun extends GameShell {
                     dupTemp$7 = ii.field_e[WidgetTheme.field_k].tileOffset;
                     dupTemp$7.column = dupTemp$7.column + 80;
                     ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
-                    fi.field_x = 0;
+                    NetworkArchiveRequest.field_x = 0;
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
                     ii.field_e[WidgetTheme.field_k].initialize(param0 + 8507, 1, ii.field_e[0].tilePosition);
                     ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 - 746, ii.field_e[0].tileOffset);
@@ -3254,7 +3254,7 @@ public final class wizardrun extends GameShell {
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
                   }
                 }
-                if (!pg.field_q) {
+                if (!AchievementSubmission.field_q) {
                   var2 = 0;
                   for (var3 = 0; WidgetTheme.field_k > var3; var3++) {
                     stackIn_540_0 = ii.field_e[var3].actorType;
@@ -3267,10 +3267,10 @@ public final class wizardrun extends GameShell {
                     !(0 > GridActor.field_g) &&
                     FadingDialog.field_I == 0) {
                     if (5 == GridActor.field_l &&
-                      ql.field_c > 5) {
+                      HuffmanDecoder.field_c > 5) {
                       this.field_R = 11;
-                      pg.field_q = true;
-                      ql.a(1, 255, 0);
+                      AchievementSubmission.field_q = true;
+                      HuffmanDecoder.a(1, 255, 0);
                     } else {
                       FadingDialog.field_I = FadingDialog.field_I + 5;
                     }
@@ -3291,19 +3291,19 @@ public final class wizardrun extends GameShell {
                   if (BufferedSocket.field_p[55]) {
                     tc.field_j = true;
                     FadingDialog.field_I = 5;
-                    pg.field_q = false;
-                    ql.field_c = 4;
+                    AchievementSubmission.field_q = false;
+                    HuffmanDecoder.field_c = 4;
                   }
                   if (BufferedSocket.field_p[40]) {
-                    pg.field_q = false;
+                    AchievementSubmission.field_q = false;
                     tc.field_j = true;
                     FadingDialog.field_I = 5;
                   }
                   if (BufferedSocket.field_p[39] &&
                     5 > GridActor.field_l) {
-                    pg.field_q = false;
+                    AchievementSubmission.field_q = false;
                     FadingDialog.field_I = 5;
-                    ql.field_c = 6;
+                    HuffmanDecoder.field_c = 6;
                     tc.field_j = true;
                   }
                   if (!BufferedSocket.field_p[68]) {
@@ -3332,17 +3332,17 @@ public final class wizardrun extends GameShell {
                 if (FadingDialog.field_I > 510) {
                   FadingDialog.field_I = 0;
                 }
-                if (pg.field_q) {
+                if (AchievementSubmission.field_q) {
                   if (this.field_R == 11) {
                     if (ii.field_e[0].tilePosition.row <= 2) {
                       if (2 < ii.field_e[0].tilePosition.column) {
-                        sc.field_m.field_b = -1;
+                        ProgressQuery.field_m.field_b = -1;
                       }
                       if (ii.field_e[0].tilePosition.column < 2) {
-                        sc.field_m.field_b = 1;
+                        ProgressQuery.field_m.field_b = 1;
                       }
                     } else {
-                      sc.field_m.field_b = -1;
+                      ProgressQuery.field_m.field_b = -1;
                     }
                     ii.field_e[0].updateActor((byte) -123, tc.field_l);
                     if (ii.field_e[0].tilePosition.column == 2 &&
@@ -3368,7 +3368,7 @@ public final class wizardrun extends GameShell {
                     }
                     if (90 == this.field_Q) {
                       stackIn_594_0 = 0;
-                      if (pk.field_s) {
+                      if (ReflectionCheck.field_s) {
                         stackIn_595_1 = 0;
                       } else {
                         stackIn_595_1 = 1;
@@ -3386,7 +3386,7 @@ public final class wizardrun extends GameShell {
                   }
                   if (this.field_R == 13) {
                     if (50 == this.field_Q &&
-                      pk.field_s) {
+                      ReflectionCheck.field_s) {
                       tl.field_a.addSample(SpriteState.secondarySoundEffects[2], 100, 256 * ee.field_p / 100);
                     }
                     fieldTemp$10 = this.field_Q;
@@ -3415,12 +3415,12 @@ public final class wizardrun extends GameShell {
                   if (16 == this.field_R) {
                     if (this.field_Q == 75 &&
                       GridActor.field_g > 0) {
-                      ic.field_a = ic.field_a - 64000;
+                      DecodedSpritePalette.field_a = DecodedSpritePalette.field_a - 64000;
                       BufferedSocket.field_c = BufferedSocket.field_c + 1;
                       GridActor.field_g = GridActor.field_g - 1;
                       DiskCacheStore.field_f = DiskCacheStore.field_f + 1000;
                       var2 = GridActor.field_g % 5;
-                      fi.field_x = 0;
+                      NetworkArchiveRequest.field_x = 0;
                       ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
                       ii.field_e[WidgetTheme.field_k].tileOffset.set(-113, ii.field_e[0].tileOffset);
                       ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
@@ -3429,7 +3429,7 @@ public final class wizardrun extends GameShell {
                       dupTemp$13.column = dupTemp$13.column + 790;
                       ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 * 20;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      fi.field_x = 0;
+                      NetworkArchiveRequest.field_x = 0;
                       ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
                       ii.field_e[WidgetTheme.field_k].tileOffset.set(-98, ii.field_e[0].tileOffset);
                       ii.field_e[WidgetTheme.field_k].tileOffset.row = 0;
@@ -3453,9 +3453,9 @@ public final class wizardrun extends GameShell {
                     if (200 < fieldTemp$16) {
                       BufferedSocket.field_c = BufferedSocket.field_c + (GridActor.field_g + 1);
                       me.field_f = me.field_f - 36;
-                      ic.field_a = ic.field_a + (ql.field_c + 6 * GridActor.field_l);
+                      DecodedSpritePalette.field_a = DecodedSpritePalette.field_a + (HuffmanDecoder.field_c + 6 * GridActor.field_l);
                       GridActor.field_g = -1;
-                      ql.field_c = 0;
+                      HuffmanDecoder.field_c = 0;
                       GridActor.field_l = 6;
                     }
                   }
@@ -3476,7 +3476,7 @@ public final class wizardrun extends GameShell {
                   }
                   if (this.field_R == 3) {
                     if (this.field_Q == 5 &&
-                      pk.field_s) {
+                      ReflectionCheck.field_s) {
                       tl.field_a.addSample(SpriteState.secondarySoundEffects[0], 100, 256 * ee.field_p / 100);
                     }
                     fieldTemp$18 = this.field_Q;
@@ -3529,13 +3529,13 @@ public final class wizardrun extends GameShell {
                   if (this.field_R == 9) {
                     if (50 == this.field_Q &&
                       tl.field_e) {
-                      SingleChildWidget.field_D.a(true, param0 ^ -740, ga.field_e);
+                      SingleChildWidget.field_D.a(true, param0 ^ -740, IntegerSyntaxHelpers.field_e);
                     }
                     if (75 == this.field_Q &&
                       GridActor.field_g < 5) {
-                      wg.field_b = wg.field_b - 1;
+                      HighscorePlayer.field_b = HighscorePlayer.field_b - 1;
                       GridActor.field_g = GridActor.field_g + 1;
-                      fi.field_x = 0;
+                      NetworkArchiveRequest.field_x = 0;
                       var2 = GridActor.field_g;
                       ii.field_e[WidgetTheme.field_k].initialize(param0 ^ 8507, 1, ii.field_e[0].tilePosition);
                       ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ -751, ii.field_e[0].tileOffset);
@@ -3544,7 +3544,7 @@ public final class wizardrun extends GameShell {
                       dupTemp$24 = ii.field_e[WidgetTheme.field_k].tileOffset;
                       dupTemp$24.column = dupTemp$24.column + 40;
                       ii.field_e[WidgetTheme.field_k].verticalVelocity = var2 % 3 * 20;
-                      fi.field_x = 0;
+                      NetworkArchiveRequest.field_x = 0;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       ii.field_e[WidgetTheme.field_k].initialize(9147, 1, ii.field_e[0].tilePosition);
                       ii.field_e[WidgetTheme.field_k].tileOffset.set(-124, ii.field_e[0].tileOffset);
@@ -3564,74 +3564,74 @@ public final class wizardrun extends GameShell {
                     }
                   }
                   if (this.field_R == 10) {
-                    pg.field_q = false;
+                    AchievementSubmission.field_q = false;
                     BufferedSocket.field_a = 580;
-                    bb.field_j = ValidationHelpWidget.field_Q;
+                    UsernameLoginCredentials.field_j = ValidationHelpWidget.field_Q;
                   }
                   for (var2 = 0; WidgetTheme.field_k > var2; var2++) {
                     stackIn_688_0 = -1;
                     stackIn_688_1 = ~var2;
                     if (stackIn_688_0 != stackIn_688_1 ||
-                      !pg.field_q) {
+                      !AchievementSubmission.field_q) {
                       ii.field_e[var2].updateActor((byte) -123, tc.field_l);
                     }
                   }
                 }
-                if (!pg.field_q) {
+                if (!AchievementSubmission.field_q) {
                   stackIn_688_0Lifetime1 = FadingDialog.field_I;
                   stackIn_688_1Lifetime1 = 255;
                   if (stackIn_688_0Lifetime1 == stackIn_688_1Lifetime1) {
                     WidgetTheme.field_k = 0;
-                    ql.field_c = ql.field_c + 1;
-                    wg.field_b = wg.field_b + 1;
-                    if (ql.field_c == 5 &&
+                    HuffmanDecoder.field_c = HuffmanDecoder.field_c + 1;
+                    HighscorePlayer.field_b = HighscorePlayer.field_b + 1;
+                    if (HuffmanDecoder.field_c == 5 &&
                       GridActor.field_l == 0 &&
                       !ol.field_e) {
-                      ql.a(1, 254, 1);
+                      HuffmanDecoder.a(1, 254, 1);
                     }
-                    fi.field_x = 0;
-                    if (5 == ql.field_c) {
+                    NetworkArchiveRequest.field_x = 0;
+                    if (5 == HuffmanDecoder.field_c) {
                       w.field_b = 0;
-                      ga.field_e = SettingsCookieReader.field_a;
+                      IntegerSyntaxHelpers.field_e = SettingsCookieReader.field_a;
                       if (tl.field_e) {
-                        SingleChildWidget.field_D.a(true, -127, ga.field_e);
+                        SingleChildWidget.field_D.a(true, -127, IntegerSyntaxHelpers.field_e);
                       }
                       GameApplet.field_g = false;
                     }
-                    if (ql.field_c >= 6) {
+                    if (HuffmanDecoder.field_c >= 6) {
                       if (!GameApplet.field_g) {
                         if (GridActor.field_l == 0) {
-                          ql.a(1, 250, 5);
+                          HuffmanDecoder.a(1, 250, 5);
                         }
                         if (1 == GridActor.field_l) {
-                          ql.a(1, 249, 6);
+                          HuffmanDecoder.a(1, 249, 6);
                         }
                         if (GridActor.field_l == 2) {
-                          ql.a(1, 248, 7);
+                          HuffmanDecoder.a(1, 248, 7);
                         }
                         if (GridActor.field_l == 3) {
-                          ql.a(1, 247, 8);
+                          HuffmanDecoder.a(1, 247, 8);
                         }
                         if (GridActor.field_l == 4) {
-                          ql.a(1, 246, 9);
+                          HuffmanDecoder.a(1, 246, 9);
                         }
                       }
                       if (!DelegatingCanvas.field_b) {
                         if (2 == GridActor.field_l) {
-                          ql.a(param0 ^ 641, 252, 3);
+                          HuffmanDecoder.a(param0 ^ 641, 252, 3);
                         }
                         if (GridActor.field_l == 4) {
-                          ql.a(1, 251, 4);
+                          HuffmanDecoder.a(1, 251, 4);
                         }
                       }
                       if (GridActor.field_l == 0) {
-                        ql.a(1, 253, 2);
+                        HuffmanDecoder.a(1, 253, 2);
                       }
-                      BufferedSocket.field_c = BufferedSocket.field_c - (ql.field_c - 6);
+                      BufferedSocket.field_c = BufferedSocket.field_c - (HuffmanDecoder.field_c - 6);
                       GridActor.field_l = GridActor.field_l + 1;
-                      ql.field_c = 0;
+                      HuffmanDecoder.field_c = 0;
                       if (TextButton.field_A < GridActor.field_l) {
-                        ke.field_u.addLast(new dc(0, GridActor.field_l - 1, 0, 0, 0, 0), false);
+                        ke.field_u.addLast(new ProgressSubmission(0, GridActor.field_l - 1, 0, 0, 0, 0), false);
                         TextButton.field_A = GridActor.field_l;
                       }
                       if (GridActor.field_l < 6) {
@@ -3639,7 +3639,7 @@ public final class wizardrun extends GameShell {
                       }
                     }
                     BufferedSocket.field_a = 580;
-                    bb.field_j = wg.field_f + (GridActor.field_l + 1) + eh.field_i + (1 + ql.field_c);
+                    UsernameLoginCredentials.field_j = HighscorePlayer.field_f + (GridActor.field_l + 1) + eh.field_i + (1 + HuffmanDecoder.field_c);
                     if (-1 < GridActor.field_g) {
                       if (GridActor.field_l < 6) {
                         ni.b(7530);
@@ -3648,7 +3648,7 @@ public final class wizardrun extends GameShell {
                       var14.row = 2;
                       var14.column = 2;
                       if (GridActor.field_l == 4 &&
-                        ql.field_c == 5) {
+                        HuffmanDecoder.field_c == 5) {
                         var14.column = var14.column + 1;
                       }
                       ii.field_e[WidgetTheme.field_k].initialize(9147, 0, var14);
@@ -3668,28 +3668,28 @@ public final class wizardrun extends GameShell {
                   FadingDialog.field_I = 100;
                   this.s(208);
                 }
-                sc.field_m.field_d = false;
-                sc.field_m.field_f = false;
-                sc.field_m.field_b = 0;
-                if (pg.field_q &&
+                ProgressQuery.field_m.field_d = false;
+                ProgressQuery.field_m.field_f = false;
+                ProgressQuery.field_m.field_b = 0;
+                if (AchievementSubmission.field_q &&
                   0 == GridActor.field_l &&
-                  ql.field_c == 0) {
+                  HuffmanDecoder.field_c == 0) {
                   while (true) {
-                    if (ae.a(125)) {
+                    if (EmailValidationError.pollKeyboardEvent(125)) {
                       stackIn_759_0 = 13;
                       stackIn_759_1 = MidiNote.field_r;
                       if (stackIn_759_0 != stackIn_759_1 &&
                         MidiNote.field_r != 84) {
                         continue;
                       }
-                      bb.field_j = cc.field_b;
+                      UsernameLoginCredentials.field_j = IconButtonPainter.field_b;
                       BufferedSocket.field_a = 580;
-                      pg.field_q = false;
+                      AchievementSubmission.field_q = false;
                       if (tl.field_e) {
-                        SingleChildWidget.field_D.a(true, -93, ga.field_e);
+                        SingleChildWidget.field_D.a(true, -93, IntegerSyntaxHelpers.field_e);
                       }
                       me.field_f = me.field_f - GridActor.field_g;
-                      wg.field_b = wg.field_b - 5;
+                      HighscorePlayer.field_b = HighscorePlayer.field_b - 5;
                       GridActor.field_g = 5;
                       continue;
                     }
@@ -3698,31 +3698,31 @@ public final class wizardrun extends GameShell {
                     if (stackIn_759_0Lifetime1 != stackIn_759_1Lifetime1) {
                       break;
                     }
-                    pg.field_q = false;
+                    AchievementSubmission.field_q = false;
                     me.field_f = me.field_f - GridActor.field_g;
                     BufferedSocket.field_a = 580;
-                    wg.field_b = wg.field_b - 5;
+                    HighscorePlayer.field_b = HighscorePlayer.field_b - 5;
                     GridActor.field_g = 5;
-                    bb.field_j = cc.field_b;
+                    UsernameLoginCredentials.field_j = IconButtonPainter.field_b;
                     if (!tl.field_e) {
                       break;
                     }
-                    SingleChildWidget.field_D.a(true, -86, ga.field_e);
+                    SingleChildWidget.field_D.a(true, -86, IntegerSyntaxHelpers.field_e);
                     break;
                   }
                 }
                 if (0 == FadingDialog.field_I) {
                   stackIn_766_0 = 0;
-                  if (pg.field_q) {
+                  if (AchievementSubmission.field_q) {
                     stackIn_767_1 = 0;
                   } else {
                     stackIn_767_1 = 1;
                   }
                   if (stackIn_766_0 != stackIn_767_1) {
-                    while (ae.a(88)) {
+                    while (EmailValidationError.pollKeyboardEvent(88)) {
                       if (MidiNote.field_r == 49) {
-                        stackIn_777_0 = !(pk.field_s);
-                        pk.field_s = stackIn_777_0;
+                        stackIn_777_0 = !(ReflectionCheck.field_s);
+                        ReflectionCheck.field_s = stackIn_777_0;
                       } else {
                         if (MidiNote.field_r == 70) {
                           if (tl.field_e) {
@@ -3730,7 +3730,7 @@ public final class wizardrun extends GameShell {
                             SingleChildWidget.field_D.d(-94);
                           } else {
                             tl.field_e = true;
-                            SingleChildWidget.field_D.a(true, -101, ga.field_e);
+                            SingleChildWidget.field_D.a(true, -101, IntegerSyntaxHelpers.field_e);
                           }
                         }
                       }
@@ -3741,13 +3741,13 @@ public final class wizardrun extends GameShell {
                       stackIn_789_0 = -2;
                       stackIn_789_1 = ~DialogLayer.field_K;
                       if (stackIn_789_0 == stackIn_789_1 &&
-                        sf.field_h == 0) {
+                        EmailCheckRequest.field_h == 0) {
                         this.field_P = false;
                       }
-                      if (sf.field_h == 6) {
+                      if (EmailCheckRequest.field_h == 6) {
                         this.field_P = false;
                         tb.a(0, true);
-                        sf.field_h = 9;
+                        EmailCheckRequest.field_h = 9;
                         this.field_J = true;
                       }
                       return;
@@ -3756,49 +3756,49 @@ public final class wizardrun extends GameShell {
                     stackIn_789_1Lifetime1 = -350;
                     if (stackIn_789_0Lifetime1 <= stackIn_789_1Lifetime1) {
                       if (AccountCreationForm.field_T < 300 &&
-                        sj.field_l < 500) {
-                        sj.field_l = sj.field_l + 1;
+                        EmailAddressValidator.field_l < 500) {
+                        EmailAddressValidator.field_l = EmailAddressValidator.field_l + 1;
                       }
-                      uc.field_g = uc.field_g + 1;
+                      ArchiveLoadingPlan.field_g = ArchiveLoadingPlan.field_g + 1;
                       if (BufferedSocket.field_p[96]) {
-                        sc.field_m.field_b = -1;
+                        ProgressQuery.field_m.field_b = -1;
                         if (AccountCreationForm.field_T < 25) {
                           AccountCreationForm.field_T = 50;
-                          sj.field_l = 0;
+                          EmailAddressValidator.field_l = 0;
                           AccountCreationForm.field_T = AccountCreationForm.field_T + 1;
                         }
                       }
-                      if (uc.field_g > 40) {
-                        uc.field_g = uc.field_g - 40;
+                      if (ArchiveLoadingPlan.field_g > 40) {
+                        ArchiveLoadingPlan.field_g = ArchiveLoadingPlan.field_g - 40;
                       }
                       if (BufferedSocket.field_p[97]) {
                         if (AccountCreationForm.field_T < 25) {
                           AccountCreationForm.field_T = 50;
                           AccountCreationForm.field_T = AccountCreationForm.field_T + 1;
-                          sj.field_l = 0;
+                          EmailAddressValidator.field_l = 0;
                         }
-                        sc.field_m.field_b = 1;
+                        ProgressQuery.field_m.field_b = 1;
                       }
                       if (BufferedSocket.field_p[nf.field_d] ||
                         BufferedSocket.field_p[98]) {
-                        sc.field_m.field_f = true;
+                        ProgressQuery.field_m.field_f = true;
                         if (AccountCreationForm.field_T >= 100 &&
                           AccountCreationForm.field_T < 150) {
-                          sj.field_l = 0;
+                          EmailAddressValidator.field_l = 0;
                           AccountCreationForm.field_T = 250;
                         }
                       }
                       if (BufferedSocket.field_p[hh.field_S] ||
                         BufferedSocket.field_p[83]) {
-                        sc.field_m.field_d = true;
+                        ProgressQuery.field_m.field_d = true;
                         if (50 <= AccountCreationForm.field_T &&
                           AccountCreationForm.field_T < 100) {
                           AccountCreationForm.field_T = 100;
-                          sj.field_l = 0;
+                          EmailAddressValidator.field_l = 0;
                         }
                       }
                     }
-                    stackIn_820_0 = (!il.field_e) ? 0 : 1;
+                    stackIn_820_0 = (!RadixParsingHelpers.field_e) ? 0 : 1;
                     var3 = stackIn_820_0;
                     var2 = 0;
                     while (var2 < WidgetTheme.field_k) {
@@ -3815,16 +3815,16 @@ public final class wizardrun extends GameShell {
                       }
                       var2++;
                     }
-                    if (il.field_e) {
+                    if (RadixParsingHelpers.field_e) {
                       if (0 >= BufferedSocket.field_a) {
                         MenuController.field_f = MenuController.field_f + 1;
                       }
-                      if (ql.field_c == 5 &&
+                      if (HuffmanDecoder.field_c == 5 &&
                         GridActor.field_l == 1 &&
                         ArchiveProvider.field_a <= 0 &&
                         MenuController.field_f == 370) {
                         MenuController.field_f = MenuController.field_f + 1;
-                        bb.field_j = PcmResampler.field_d;
+                        UsernameLoginCredentials.field_j = PcmResampler.field_d;
                         BufferedSocket.field_a = 580;
                       }
                       if (375 < MenuController.field_f) {
@@ -3839,7 +3839,7 @@ public final class wizardrun extends GameShell {
                       }
                     }
                     if (var3 == 0 &&
-                      !il.field_e) {
+                      !RadixParsingHelpers.field_e) {
                       ra.a(2);
                     }
                     stackIn_855_0Lifetime2 = -1;
@@ -3886,7 +3886,7 @@ public final class wizardrun extends GameShell {
           return;
         }
         try {
-          var6 = wg.a("<col", 0, "<", param1);
+          var6 = HighscorePlayer.replaceAllLiteral("<col", 0, "<", param1);
           int var7 = -9 % ((22 - param3) / 52);
           GameGraphicsResources.wizardFont2.drawStringCentered(var6, param4, -1 + param0, 0, -1);
           GameGraphicsResources.wizardFont2.drawStringCentered(var6, param4, 1 + param0, 0, -1);
@@ -3937,7 +3937,7 @@ public final class wizardrun extends GameShell {
             var10 = param4;
             var11 = param6;
             while (var11 < param3) {
-              var12 = sj.field_m[var11];
+              var12 = EmailAddressValidator.field_m[var11];
               stackIn_34_0 = param0;
               if (stackIn_34_0) {
                 stackIn_27_0 = RadialSelectorWidget.field_I[var12];
@@ -3950,10 +3950,10 @@ public final class wizardrun extends GameShell {
                   var10 = var13;
                 }
               } else {
-                sj.field_m[var11] = sj.field_m[var8];
+                EmailAddressValidator.field_m[var11] = EmailAddressValidator.field_m[var8];
                 incrementValue$0 = var8;
                 var8++;
-                sj.field_m[incrementValue$0] = var12;
+                EmailAddressValidator.field_m[incrementValue$0] = var12;
                 if (var13 < var9) {
                   var9 = var13;
                 }
@@ -3972,14 +3972,14 @@ public final class wizardrun extends GameShell {
               return;
             }
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = sj.field_m[var8Lifetime1];
-              var10Lifetime1 = sj.field_m[1 + var8Lifetime1];
-              stackOut_15_0 = uh.a(var10Lifetime1, var9Lifetime1, param0, (byte) -54);
+              var9Lifetime1 = EmailAddressValidator.field_m[var8Lifetime1];
+              var10Lifetime1 = EmailAddressValidator.field_m[1 + var8Lifetime1];
+              stackOut_15_0 = LoginCredentials.a(var10Lifetime1, var9Lifetime1, param0, (byte) -54);
               stackIn_12_0Lifetime1 = stackOut_15_0 ? 1 : 0;
               stackIn_16_0 = stackOut_15_0;
               if (stackIn_16_0) {
-                sj.field_m[var8Lifetime1] = var10Lifetime1;
-                sj.field_m[1 + var8Lifetime1] = var9Lifetime1;
+                EmailAddressValidator.field_m[var8Lifetime1] = var10Lifetime1;
+                EmailAddressValidator.field_m[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
             var7_intLifetime1--;
@@ -4003,15 +4003,15 @@ public final class wizardrun extends GameShell {
         SingleChildWidget.field_D = new MidiPcmStream();
         SingleChildWidget.field_D.a(128, 9, (byte) 108);
         Js5Index.field_d.a(SingleChildWidget.field_D);
-        hg.field_a = 500;
+        DisplayNameSyntaxHelpers.field_a = 500;
         BufferedSocket.field_c = BufferedSocket.field_c - DiskCacheStore.field_f * 64;
-        wg.field_b = wg.field_b - ql.field_c;
+        HighscorePlayer.field_b = HighscorePlayer.field_b - HuffmanDecoder.field_c;
         me.field_f = me.field_f + GridActor.field_l * 6;
         GridActor.field_l = 0;
         DiskCacheStore.field_f = 0;
         NanoTickClock.field_n = 0;
         IntHashTable.field_d = new ol[16];
-        ql.field_c = 0;
+        HuffmanDecoder.field_c = 0;
         for (var2 = 0; 16 > var2; var2++) {
           IntHashTable.field_d[var2] = new ol();
         }
@@ -4081,8 +4081,8 @@ public final class wizardrun extends GameShell {
         mj.releaseStatics(13214);
         StringPaddingHelpers.releaseStatics(true);
         ve.releaseStatics(true);
-        ic.releaseStatics(true);
-        hj.releaseStatics((byte) -62);
+        DecodedSpritePalette.releaseStatics(true);
+        IndexedSpriteArrayFactory.releaseStatics((byte) -62);
         w.releaseStatics(-91);
         id.releaseStatics(0);
         GameShell.releaseStatics(-18084);
@@ -4098,20 +4098,20 @@ public final class wizardrun extends GameShell {
         PacketBuffer.releaseStatics((byte) 118);
         MonotonicClockHelpers.releaseStatics(-5309);
         me.releaseStatics((byte) -31);
-        bl.releaseStatics(false);
+        TextWrappingHelpers.releaseStatics(false);
         ni.releaseStatics(36);
         n.releaseStatics(-1);
         ld.releaseStatics((byte) -122);
         oh.releaseStatics(21100);
         kj.releaseStatics((byte) 64);
         wc.releaseStatics(param0 ^ 7071);
-        hg.releaseStatics(0);
-        cb.releaseStatics(param0 ^ 7127);
+        DisplayNameSyntaxHelpers.releaseStatics(0);
+        BeveledFrameFactory.releaseStatics(param0 ^ 7127);
         ci.releaseStatics(false);
         tl.releaseStatics((byte) -99);
         TickClock.releaseStatics((byte) -97);
         RasterBuffer.releaseStatics((byte) 75);
-        uc.releaseStatics((byte) 37);
+        ArchiveLoadingPlan.releaseStatics((byte) 37);
         FullscreenFocusCanvas.releaseStatics(true);
         FullscreenController.releaseStatics(false);
         Js5Transport.releaseStatics(0);
@@ -4128,12 +4128,12 @@ public final class wizardrun extends GameShell {
         AudioOutput.releaseStatics();
         GameMenu.releaseStatics(0);
         IntrusiveNode.releaseStatics((byte) 81);
-        gi.releaseStatics(false);
-        ne.releaseStatics(-1);
+        LoginPacketBuilder.releaseStatics(false);
+        AccountFormText.releaseStatics(-1);
         ExceptionSupport.releaseStatics(1);
         td.releaseStatics(param0 - 7065);
-        sd.releaseStatics(0);
-        uh.releaseStatics(8192);
+        LoginCredentialKind.releaseStatics(0);
+        LoginCredentials.releaseStatics(8192);
         IsaacPacketBuffer.releaseStatics((byte) -102);
         e.releaseStatics((byte) -2);
         IntrusiveNodeHashTable.releaseStatics(1);
@@ -4146,7 +4146,7 @@ public final class wizardrun extends GameShell {
         AudioServiceThread.releaseStatics(2);
         v.releaseStatics(102);
         BitmapFont.releaseStatics();
-        rf.releaseStatics((byte) 25);
+        ProgressRefreshState.releaseStatics((byte) 25);
         CharSequenceJoiner.releaseStatics(540);
         MenuInputState.releaseStatics(28);
         ec.releaseStatics(param0 - 7115);
@@ -4177,15 +4177,15 @@ public final class wizardrun extends GameShell {
         pa.releaseStatics(-49);
         SocketJs5Transport.releaseStatics(-1);
         DualLinkDeque.releaseStatics((byte) 92);
-        fi.releaseStatics((byte) -101);
+        NetworkArchiveRequest.releaseStatics((byte) -101);
         DiskCacheStore.releaseStatics((byte) 111);
-        sk.releaseStatics(100);
+        DiskCacheRequest.releaseStatics(100);
         CachedArchiveProvider.releaseStatics((byte) -8);
         lc.releaseStatics(param0 ^ -7105);
-        ml.releaseStatics(-86);
+        ArchiveRequest.releaseStatics(-86);
         IsaacRandom.releaseStatics((byte) -80);
         lj.releaseStatics((byte) -60);
-        rd.releaseStatics((byte) -63);
+        PowerOfTwoHelpers.releaseStatics((byte) -63);
         WidgetPainter.releaseStatics(param0 - 3055);
         f.releaseStatics(-74);
         vl.releaseStatics(param0 - 6994);
@@ -4208,14 +4208,14 @@ public final class wizardrun extends GameShell {
         HotspotTextWidget.releaseStatics(-26);
         ValidationIndicator.releaseStatics(112);
         ValidationHelpWidget.releaseStatics((byte) 101);
-        ef.releaseStatics(param0 ^ 20678);
+        ToggleButton.releaseStatics(param0 ^ 20678);
         TextFieldValidator.releaseStatics(29);
         BrowserCookieHelpers.releaseStatics((byte) 52);
         re.releaseStatics((byte) -55);
-        cj.releaseStatics();
+        TriangleRasterState.releaseStatics();
         we.releaseStatics(-7077);
         vg.releaseStatics(80);
-        bc.releaseStatics(param0 - 7067);
+        MeshWorkspaceHelpers.releaseStatics(param0 - 7067);
         ca.releaseStatics((byte) -120);
         TriangleMesh.releaseStatics(0);
         BrowserUrlLauncher.releaseStatics((byte) -125);
@@ -4230,38 +4230,38 @@ public final class wizardrun extends GameShell {
         ByteStorage.releaseStatics(16);
         li.releaseStatics();
         gk.releaseStatics(-124);
-        pk.releaseStatics(param0 ^ -10072);
+        ReflectionCheck.releaseStatics(param0 ^ -10072);
         ej.releaseStatics((byte) -43);
         Crc32Helpers.releaseStatics(-681844375);
         QuickChatPhraseDefinition.releaseStatics(0);
-        il.releaseStatics(true);
+        RadixParsingHelpers.releaseStatics(true);
         uk.releaseStatics((byte) -44);
         WeightedLruCache.releaseStatics((byte) 80);
         nf.releaseStatics(param0 - 7190);
-        ql.releaseStatics(110);
+        HuffmanDecoder.releaseStatics(110);
         SettingsCookieReader.releaseStatics(-106);
         dl.releaseStatics(param0 ^ 12465);
         SocketConnector.releaseStatics((byte) -64);
-        hf.releaseStatics(3543);
+        ProxyAuthenticationException.releaseStatics(3543);
         NanoTickClock.releaseStatics(false);
         ImageProducerRasterBuffer.releaseStatics(0);
         FlatTriangleRasterizer.releaseStatics(-331851056);
-        rb.releaseStatics(-1926289535);
+        DisplayModeInfo.releaseStatics(-1926289535);
         WhirlpoolHasher.releaseStatics((byte) 58);
         pb.releaseStatics(false);
         MusicPatch.releaseStatics(true);
         MidiEnvelope.releaseStatics(false);
-        dh.releaseStatics(false);
+        EmailDomainHelpers.releaseStatics(false);
         RadialSelectorWidget.releaseStatics(-13542);
         vb.releaseStatics((byte) 126);
         SynthFilter.releaseStatics();
         WrappedTextLayout.releaseStatics(10881);
         GrowableIntList.releaseStatics((byte) 55);
-        pj.releaseStatics(125);
-        pd.releaseStatics(-27864);
+        DraggableWidget.releaseStatics(125);
+        DropTargetWidget.releaseStatics(-27864);
         DateFormattingHelpers.releaseStatics(param0 ^ 7063);
         DirectByteStorage.releaseStatics(0);
-        bh.releaseStatics((byte) 21);
+        QuickChatDynamicCommand.releaseStatics((byte) 21);
         IterableNodeHashTable.releaseStatics((byte) 94);
         SecondaryNodeDeque.releaseStatics((byte) 5);
         CacheEntry.releaseStatics((byte) -110);
@@ -4269,45 +4269,45 @@ public final class wizardrun extends GameShell {
         ProxySocketConnector.releaseStatics(4);
         NodeHashTableIterator.releaseStatics(339);
         vf.releaseStatics(false);
-        te.releaseStatics(10615);
-        pg.releaseStatics((byte) -73);
-        sf.releaseStatics(125);
-        hb.releaseStatics(24944);
-        sc.releaseStatics((byte) -76);
-        dc.releaseStatics(param0 - 7157);
-        ga.releaseStatics(-44);
-        wd.releaseStatics((byte) 119);
+        AchievementStateRequest.releaseStatics(10615);
+        AchievementSubmission.releaseStatics((byte) -73);
+        EmailCheckRequest.releaseStatics(125);
+        DelayedServerPacket.releaseStatics(24944);
+        ProgressQuery.releaseStatics((byte) -76);
+        ProgressSubmission.releaseStatics(param0 - 7157);
+        IntegerSyntaxHelpers.releaseStatics(-44);
+        NameAvailabilityRequest.releaseStatics((byte) 119);
         jl.releaseStatics(2763306);
         tk.releaseStatics(117);
-        qb.releaseStatics(-1);
+        FramedButtonPainter.releaseStatics(-1);
         ke.releaseStatics((byte) -110);
-        cc.releaseStatics((byte) -85);
+        IconButtonPainter.releaseStatics((byte) -85);
         jc.releaseStatics((byte) -19);
-        nj.releaseStatics(-89);
-        ai.releaseStatics(65535);
-        wg.releaseStatics(true);
+        HighscoreRequest.releaseStatics(-89);
+        ScoreSubmission.releaseStatics(65535);
+        HighscorePlayer.releaseStatics(true);
         aa.releaseStatics(false);
         of.releaseStatics((byte) 118);
-        sa.releaseStatics((byte) -118);
-        uf.releaseStatics(-119);
-        bb.releaseStatics(24957);
-        nh.releaseStatics((byte) -118);
-        ka.releaseStatics(-30);
+        ArchiveLoadingStage.releaseStatics((byte) -118);
+        LoginMethodPreference.releaseStatics(-119);
+        UsernameLoginCredentials.releaseStatics(24957);
+        AlternateUsernameLoginCredentials.releaseStatics((byte) -118);
+        EmailLoginCredentials.releaseStatics(-30);
         MessagePanel.releaseStatics(false);
         RasterSnapshot.releaseStatics(1);
         TextLayoutLine.releaseStatics(0);
-        jg.releaseStatics((byte) 100);
-        rh.releaseStatics(-110);
-        sj.releaseStatics(-128);
-        hc.releaseStatics(param0 ^ 2098084476);
-        qf.releaseStatics(true);
+        DisplayNameValidator.releaseStatics((byte) 100);
+        PasswordValidator.releaseStatics(-110);
+        EmailAddressValidator.releaseStatics(-128);
+        ConfirmedEmailValidator.releaseStatics(param0 ^ 2098084476);
+        AgeValidator.releaseStatics(true);
         kd.releaseStatics(24188);
         ValidationState.releaseStatics(0);
         TimedValidator.releaseStatics(param0 - 6948);
         lg.releaseStatics((byte) 99);
         tc.releaseStatics((byte) -100);
         ie.releaseStatics(-1);
-        ae.releaseStatics(-2076560510);
+        EmailValidationError.releaseStatics(-2076560510);
         this.field_y = null;
     }
 

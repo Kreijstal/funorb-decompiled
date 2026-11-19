@@ -37,7 +37,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var3 = wizardrun.field_H;
         if (this.field_p != null) {
           for (var2 = 0; this.field_p.length > var2; var2++) {
-            this.field_p[var2] = sd.a(this.field_p[var2], 32768);
+            this.field_p[var2] = LoginCredentialKind.bitOr(this.field_p[var2], 32768);
           }
         }
         if (param0 >= -118) {
@@ -48,25 +48,25 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
 
     final static boolean a(byte param0) {
         int var2 = 0;
-        pk var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
-        pk var4 = null;
+        ReflectionCheck var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (pk) (kj.field_d.first((byte) 46));
+          var4 = (ReflectionCheck) (kj.field_d.first((byte) 46));
           var1 = var4;
           if (var1 == null) {
             return false;
           }
-          for (var2 = 0; var2 < var1.field_r; var2++) {
-            if (null != var4.field_l[var2] &&
-              var4.field_l[var2].field_a == 0) {
+          for (var2 = 0; var2 < var1.operationCount; var2++) {
+            if (null != var4.fieldTasks[var2] &&
+              var4.fieldTasks[var2].status == 0) {
               return false;
             }
-            if (null != var4.field_m[var2] &&
-              var4.field_m[var2].field_a == 0) {
+            if (null != var4.methodTasks[var2] &&
+              var4.methodTasks[var2].status == 0) {
               return false;
             }
           }
@@ -100,7 +100,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        bh var7 = null;
+        QuickChatDynamicCommand var7 = null;
         int var9 = 0;
         var9 = wizardrun.field_H;
         try {
@@ -120,12 +120,12 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               this.field_u = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param1.readUnsignedShort(-14477);
-                var7 = nh.a(0, var6);
+                var7 = AlternateUsernameLoginCredentials.findQuickChatCommand(0, var6);
                 if (var7 != null) {
                   this.field_w[var5] = var6;
-                  array$0 = new int[var7.field_f];
+                  array$0 = new int[var7.parameterCount];
                   this.field_u[var5] = array$0;
-                  for (var8 = 0; var8 < var7.field_f; var8++) {
+                  for (var8 = 0; var8 < var7.parameterCount; var8++) {
                     this.field_u[var5][var8] = param1.readUnsignedShort(-14477);
                   }
                 }

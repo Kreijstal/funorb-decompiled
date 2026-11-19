@@ -12,9 +12,9 @@ final class e {
         if (param0 >= -71) {
           Sprite[] var2 = (Sprite[]) null;
           e.a((Sprite[]) null, 123, 6, (byte) 67, 68, 39);
-          return qb.field_p;
+          return FramedButtonPainter.field_p;
         }
-        return qb.field_p;
+        return FramedButtonPainter.field_p;
     }
 
     public static void releaseStatics(byte param0) {

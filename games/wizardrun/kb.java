@@ -10,7 +10,7 @@ final class kb extends gf {
         if (param0 != 63) {
           field_jb = (Sprite) null;
         }
-        FadingDialog.a(param0 + 3025, jg.f(1));
+        FadingDialog.a(param0 + 3025, DisplayNameValidator.getActiveApplet(1));
     }
 
     kb(DialogLayer param0, UiWidget param1) {
@@ -46,10 +46,10 @@ final class kb extends gf {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          pk var13 = null;
+          ReflectionCheck var13 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          pk var17 = null;
+          ReflectionCheck var17 = null;
           Object var18 = null;
           Object var19 = null;
           java.lang.reflect.Field var20 = null;
@@ -68,26 +68,26 @@ final class kb extends gf {
           var23 = null;
           var12 = wizardrun.field_H;
           try {
-            var13 = (pk) (kj.field_d.first((byte) 60));
+            var13 = (ReflectionCheck) (kj.field_d.first((byte) 60));
             var17 = var13;
             if (var17 == null) {
               return;
             }
             var3 = 0;
-            for (var4 = 0; var4 < var17.field_r; var4++) {
-              if (null != var13.field_l[var4]) {
-                if (var13.field_l[var4].field_a == 2) {
-                  var13.field_j[var4] = -5;
+            for (var4 = 0; var4 < var17.operationCount; var4++) {
+              if (null != var13.fieldTasks[var4]) {
+                if (var13.fieldTasks[var4].status == 2) {
+                  var13.lookupErrors[var4] = -5;
                 }
-                if (var13.field_l[var4].field_a == 0) {
+                if (var13.fieldTasks[var4].status == 0) {
                   var3 = 1;
                 }
               }
-              if (var13.field_m[var4] != null) {
-                if (var13.field_m[var4].field_a == 2) {
-                  var13.field_j[var4] = -6;
+              if (var13.methodTasks[var4] != null) {
+                if (var13.methodTasks[var4].status == 2) {
+                  var13.lookupErrors[var4] = -6;
                 }
-                if (var13.field_m[var4].field_a == 0) {
+                if (var13.methodTasks[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -96,40 +96,40 @@ final class kb extends gf {
               return;
             }
             var4 = param1.position;
-            param1.writeInt(var17.field_i, 613003928);
+            param1.writeInt(var17.requestId, 613003928);
             var5 = 0;
             if (param0 < 17) {
               kb.j((byte) -60);
             }
-            while (var17.field_r > var5) {
-              if (var17.field_j[var5] != 0) {
-                param1.writeByte((byte) 11, var17.field_j[var5]);
+            while (var17.operationCount > var5) {
+              if (var17.lookupErrors[var5] != 0) {
+                param1.writeByte((byte) 11, var17.lookupErrors[var5]);
               } else {
                 try {
-                  var6_int = var17.field_t[var5];
+                  var6_int = var17.operationTypes[var5];
                   if (0 != var6_int) {
                     if (1 == var6_int) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_l[var5].field_e);
+                      var16_ref = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                       var20 = var16_ref;
-                      var20.setInt((Object) null, var17.field_p[var5]);
+                      var20.setInt((Object) null, var17.fieldWriteValues[var5]);
                       param1.writeByte((byte) 11, 0);
                     } else {
                       if (var6_int == 2) {
-                        var28 = (java.lang.reflect.Field) (var17.field_l[var5].field_e);
+                        var28 = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                         var8 = var28.getModifiers();
                         param1.writeByte((byte) 11, 0);
                         param1.writeInt(var8, 613003928);
                       }
                     }
                   } else {
-                    var27 = (java.lang.reflect.Field) (var17.field_l[var5].field_e);
+                    var27 = (java.lang.reflect.Field) (var17.fieldTasks[var5].result);
                     var8 = var27.getInt((Object) null);
                     param1.writeByte((byte) 11, 0);
                     param1.writeInt(var8, 613003928);
                   }
                   if (var6_int == 3) {
-                    var30 = (java.lang.reflect.Method) (var17.field_m[var5].field_e);
-                    var26 = var17.field_k[var5];
+                    var30 = (java.lang.reflect.Method) (var17.methodTasks[var5].result);
+                    var26 = var17.serializedArguments[var5];
                     var9 = new Object[var26.length];
                     for (var10_int = 0; var10_int < var26.length; var10_int++) {
                       var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var26[var10_int])));
@@ -149,7 +149,7 @@ final class kb extends gf {
                     }
                   } else {
                     if (4 == var6_int) {
-                      var29 = (java.lang.reflect.Method) (var17.field_m[var5].field_e);
+                      var29 = (java.lang.reflect.Method) (var17.methodTasks[var5].result);
                       var8Lifetime1 = var29.getModifiers();
                       param1.writeByte((byte) 11, 0);
                       param1.writeInt(var8Lifetime1, 613003928);

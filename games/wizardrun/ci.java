@@ -30,11 +30,11 @@ final class ci {
           lj.field_a = lj.field_a + (param1.readUnsignedShort(-14477) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(255);
           lj.field_a = lj.field_a + (var2_intLifetime1 >> 6);
-          bi.field_a = (var2_intLifetime1 & 63) << 15;
-          bi.field_a = bi.field_a + (param1.readUnsignedByte(255) << 7);
+          Cp1252DecodingHelpers.field_a = (var2_intLifetime1 & 63) << 15;
+          Cp1252DecodingHelpers.field_a = Cp1252DecodingHelpers.field_a + (param1.readUnsignedByte(255) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(param0 ^ 2026380346);
           NanoTickClock.field_j = var2_intLifetime2 << 16 & 65536;
-          bi.field_a = bi.field_a + (var2_intLifetime2 >> 1);
+          Cp1252DecodingHelpers.field_a = Cp1252DecodingHelpers.field_a + (var2_intLifetime2 >> 1);
           NanoTickClock.field_j = NanoTickClock.field_j + param1.readUnsignedShort(-14477);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -42,19 +42,19 @@ final class ci {
     }
 
     final static void a(byte param0) {
-        if (10 == ml.field_t) {
+        if (10 == ArchiveRequest.field_t) {
           LabeledField.g(5);
-          ml.field_t = 11;
+          ArchiveRequest.field_t = 11;
         } else {
           if (!StripedProgressBar.g((byte) 100)) {
             LabeledField.g(5);
-            ml.field_t = 11;
+            ArchiveRequest.field_t = 11;
           }
         }
         if (param0 >= -123) {
           field_b = (int[]) null;
         }
-        cb.field_c = true;
+        BeveledFrameFactory.field_c = true;
     }
 
     static {

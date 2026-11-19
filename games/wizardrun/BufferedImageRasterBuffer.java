@@ -6,7 +6,7 @@ import java.util.*;
 final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_j;
 
-    final void a(byte param0, int param1, java.awt.Component param2, int param3) {
+    final void initialize(byte param0, int param1, java.awt.Component param2, int param3) {
         this.field_f = new int[param1 * param3 + 1];
         this.field_h = param1;
         this.field_d = param3;
@@ -15,7 +15,7 @@ final class BufferedImageRasterBuffer extends RasterBuffer {
         java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_d, this.field_h), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
         this.field_g = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         this.field_j = param2;
-        this.b(20);
+        this.bindRasterTarget(20);
         int var8 = 64 % ((-53 - param0) / 36);
     }
 

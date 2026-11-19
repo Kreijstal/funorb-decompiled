@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BrowserCookieHelpers {
-    static ai field_a;
+    static ScoreSubmission field_a;
     static Sprite field_c;
     static Sprite[] field_b;
     static String field_d;
@@ -167,7 +167,7 @@ final class BrowserCookieHelpers {
 
     final static void a(String param0, int param1) {
         try {
-          dh.field_c = param0;
+          EmailDomainHelpers.field_c = param0;
           jc.a((byte) 42, param1);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

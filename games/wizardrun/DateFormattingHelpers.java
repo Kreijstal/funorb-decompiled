@@ -5,7 +5,7 @@ import java.util.*;
 
 final class DateFormattingHelpers {
     static String field_a;
-    static rc field_b;
+    static AccountConnectionState field_b;
 
     public static void releaseStatics(int param0) {
         if (param0 != 10) {
@@ -18,14 +18,14 @@ final class DateFormattingHelpers {
         field_a = null;
     }
 
-    final static ae a(String param0, int param1) {
-        ae stackIn_4_0 = null;
-        ae stackIn_7_0 = null;
-        ae stackIn_12_0 = null;
+    final static EmailValidationError a(String param0, int param1) {
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_12_0 = null;
         int stackIn_20_0 = 0;
-        ae stackIn_24_0 = null;
-        ae stackIn_38_0 = null;
-        ae stackIn_43_0 = null;
+        EmailValidationError stackIn_24_0 = null;
+        EmailValidationError stackIn_38_0 = null;
+        EmailValidationError stackIn_43_0 = null;
         Object stackIn_52_0 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
@@ -90,7 +90,7 @@ final class DateFormattingHelpers {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (sc.field_i.indexOf(var5Lifetime1) == -1) {
+              if (ProgressQuery.field_i.indexOf(var5Lifetime1) == -1) {
                 stackIn_43_0 = tl.field_d;
                 return stackIn_43_0;
               }
@@ -102,7 +102,7 @@ final class DateFormattingHelpers {
           }
           field_a = (String) null;
           stackIn_52_0 = null;
-          return (ae) (stackIn_52_0);
+          return (EmailValidationError) (stackIn_52_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -118,9 +118,9 @@ final class DateFormattingHelpers {
     }
 
     final static void a(String param0, boolean param1, int param2) {
-        ga.field_a = param1;
+        IntegerSyntaxHelpers.field_a = param1;
         WrappedTextLayout.field_i = true;
-        aa.field_lb = new mh(GameShell.field_A, PacketBuffer.field_i, param0, DialogLayer.field_J, ga.field_a);
+        aa.field_lb = new mh(GameShell.field_A, PacketBuffer.field_i, param0, DialogLayer.field_J, IntegerSyntaxHelpers.field_a);
         if (param2 > -119) {
           return;
         }
@@ -187,6 +187,6 @@ final class DateFormattingHelpers {
 
     static {
         field_a = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
-        field_b = new rc();
+        field_b = new AccountConnectionState();
     }
 }

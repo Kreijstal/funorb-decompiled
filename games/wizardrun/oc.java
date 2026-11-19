@@ -32,8 +32,8 @@ final class oc {
           if (param3 < 36) {
             oc.releaseStatics((byte) -8);
           }
-          var5_int = param0.b(-1, param1);
-          var6 = param0.a(var5_int, param2, -11986);
+          var5_int = param0.getGroupId(-1, param1);
+          var6 = param0.getFileId(var5_int, param2, -11986);
           stackIn_3_0 = n.a(var5_int, param0, param4, -124, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

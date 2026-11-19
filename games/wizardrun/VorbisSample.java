@@ -137,7 +137,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = ByteStorage.a(false, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = ck.a(var10, var11, 1685);
+            var9[var11] = ck.reverseLowBits(var10, var11, 1685);
           }
           if (var1 == 0) {
             field_x = var6_ref_float__;
@@ -256,10 +256,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a(param1, param2, (byte) -66);
+            param0.ensureFileLoaded(param1, param2, (byte) -66);
             return null;
           }
-          byte[] var3 = param0.a(param2, param1, 1);
+          byte[] var3 = param0.getFile(param2, param1, 1);
           if (var3 == null) {
             return null;
           }
@@ -668,10 +668,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a(param2, param1, -127);
+            param0.ensureNamedFileLoaded(param2, param1, -127);
             return null;
           }
-          byte[] var3 = param0.a(-112, param2, param1);
+          byte[] var3 = param0.getNamedFile(-112, param2, param1);
           if (var3 == null) {
             return null;
           }
@@ -749,7 +749,7 @@ final class VorbisSample extends IntrusiveNode {
     private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_L) {
-          var1 = param0.a(0, 0, 1);
+          var1 = param0.getFile(0, 0, 1);
           if (var1 == null) {
             return false;
           }

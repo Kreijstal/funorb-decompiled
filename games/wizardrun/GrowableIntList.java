@@ -99,7 +99,7 @@ final class GrowableIntList {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.pixels[var8];
                       var19 = 16711935 & (16711935 & var17) * var15 + (16711935 & var18) * var16 >> 8;
-                      SoftwareRasterizer.pixels[var8] = (ResourceArchive.b(16711838, ResourceArchive.b(65280, var18) * var16 + var15 * ResourceArchive.b(var17, 65280)) >> 8) + var19;
+                      SoftwareRasterizer.pixels[var8] = (ResourceArchive.bitAnd(16711838, ResourceArchive.bitAnd(65280, var18) * var16 + var15 * ResourceArchive.bitAnd(var17, 65280)) >> 8) + var19;
                     } else {
                       SoftwareRasterizer.pixels[var8] = var17;
                     }

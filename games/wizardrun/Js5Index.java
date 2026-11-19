@@ -2,32 +2,32 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Js5Index {
-    private int field_e;
-    int[] field_q;
-    IntHashTable field_h;
-    int[] field_t;
+    private int groupCount;
+    int[] groupChecksums;
+    IntHashTable groupNames;
+    int[] fileCapacities;
     private byte[] field_b;
-    static sd field_v;
-    int[] field_n;
-    private int[][] field_g;
-    int[] field_p;
+    static LoginCredentialKind field_v;
+    int[] groupVersions;
+    private int[][] fileNameHashes;
+    int[] fileCounts;
     static String field_r;
-    IntHashTable[] field_x;
-    int[] field_c;
+    IntHashTable[] fileNames;
+    int[] groupIds;
     static String field_o;
-    byte[][] field_j;
-    private int[] field_u;
+    byte[][] groupDigests;
+    private int[] groupNameHashes;
     int field_i;
-    int field_s;
-    int field_f;
-    int[][] field_w;
-    static bh field_a;
+    int groupCapacity;
+    int revision;
+    int[][] fileIds;
+    static QuickChatDynamicCommand field_a;
     static long[] field_k;
-    static sd field_m;
+    static LoginCredentialKind field_m;
     static IntrusiveDeque field_l;
     static AudioOutput field_d;
 
-    private final void a(byte[] param0, int param1) {
+    private final void decode(byte[] param0, int param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -74,14 +74,14 @@ final class Js5Index {
         int var13Lifetime1Lifetime1;
         var16 = wizardrun.field_H;
         try {
-          var17 = new PacketBuffer(dg.a(param0, 31027));
+          var17 = new PacketBuffer(dg.decompressArchiveContainer(param0, 31027));
           var4 = var17.readUnsignedByte(param1 + 255);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_f = var17.readInt(255);
+              this.revision = var17.readInt(255);
             } else {
-              this.field_f = 0;
+              this.revision = 0;
             }
             var5 = var17.readUnsignedByte(param1 ^ 255);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
@@ -89,137 +89,137 @@ final class Js5Index {
             stackIn_14_0 = ((2 & var5) == param1) ? 0 : 1;
             var7 = stackIn_14_0;
             if (var4 >= 7) {
-              this.field_e = var17.readLargeSmart((byte) -88);
+              this.groupCount = var17.readLargeSmart((byte) -88);
             } else {
-              this.field_e = var17.readUnsignedShort(param1 - 14477);
+              this.groupCount = var17.readUnsignedShort(param1 - 14477);
             }
             var8 = 0;
-            this.field_c = new int[this.field_e];
+            this.groupIds = new int[this.groupCount];
             var9 = -1;
             if (var4 >= 7) {
-              for (var10 = 0; var10 < this.field_e; var10++) {
+              for (var10 = 0; var10 < this.groupCount; var10++) {
                 dupTemp$0 = var8 + var17.readLargeSmart((byte) -88);
                 var8 = dupTemp$0;
-                this.field_c[var10] = dupTemp$0;
-                if (var9 < this.field_c[var10]) {
-                  var9 = this.field_c[var10];
+                this.groupIds[var10] = dupTemp$0;
+                if (var9 < this.groupIds[var10]) {
+                  var9 = this.groupIds[var10];
                 }
               }
             } else {
-              for (var10 = 0; var10 < this.field_e; var10++) {
+              for (var10 = 0; var10 < this.groupCount; var10++) {
                 dupTemp$1 = var8 + var17.readUnsignedShort(-14477);
                 var8 = dupTemp$1;
-                this.field_c[var10] = dupTemp$1;
-                if (var9 < this.field_c[var10]) {
-                  var9 = this.field_c[var10];
+                this.groupIds[var10] = dupTemp$1;
+                if (var9 < this.groupIds[var10]) {
+                  var9 = this.groupIds[var10];
                 }
               }
             }
-            this.field_s = var9 + 1;
-            this.field_p = new int[this.field_s];
+            this.groupCapacity = var9 + 1;
+            this.fileCounts = new int[this.groupCapacity];
             if (var7 != 0) {
-              this.field_j = new byte[this.field_s][];
+              this.groupDigests = new byte[this.groupCapacity][];
             }
-            this.field_n = new int[this.field_s];
-            this.field_t = new int[this.field_s];
-            this.field_q = new int[this.field_s];
-            this.field_w = new int[this.field_s][];
+            this.groupVersions = new int[this.groupCapacity];
+            this.fileCapacities = new int[this.groupCapacity];
+            this.groupChecksums = new int[this.groupCapacity];
+            this.fileIds = new int[this.groupCapacity][];
             if (var6 != 0) {
-              this.field_u = new int[this.field_s];
-              for (var10Lifetime1 = 0; this.field_s > var10Lifetime1; var10Lifetime1++) {
-                this.field_u[var10Lifetime1] = -1;
+              this.groupNameHashes = new int[this.groupCapacity];
+              for (var10Lifetime1 = 0; this.groupCapacity > var10Lifetime1; var10Lifetime1++) {
+                this.groupNameHashes[var10Lifetime1] = -1;
               }
-              for (var10Lifetime1Lifetime1 = 0; this.field_e > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_u[this.field_c[var10Lifetime1Lifetime1]] = var17.readInt(param1 + 255);
+              for (var10Lifetime1Lifetime1 = 0; this.groupCount > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
+                this.groupNameHashes[this.groupIds[var10Lifetime1Lifetime1]] = var17.readInt(param1 + 255);
               }
-              this.field_h = new IntHashTable(this.field_u);
+              this.groupNames = new IntHashTable(this.groupNameHashes);
             }
-            for (var10Lifetime2 = 0; this.field_e > var10Lifetime2; var10Lifetime2++) {
-              this.field_q[this.field_c[var10Lifetime2]] = var17.readInt(255);
+            for (var10Lifetime2 = 0; this.groupCount > var10Lifetime2; var10Lifetime2++) {
+              this.groupChecksums[this.groupIds[var10Lifetime2]] = var17.readInt(255);
             }
             if (var7 != 0) {
-              for (var10Lifetime3 = 0; var10Lifetime3 < this.field_e; var10Lifetime3++) {
+              for (var10Lifetime3 = 0; var10Lifetime3 < this.groupCount; var10Lifetime3++) {
                 var21 = new byte[64];
                 var17.readBytes(true, 64, var21, 0);
-                this.field_j[this.field_c[var10Lifetime3]] = var21;
+                this.groupDigests[this.groupIds[var10Lifetime3]] = var21;
               }
             }
-            for (var10Lifetime4 = 0; var10Lifetime4 < this.field_e; var10Lifetime4++) {
-              this.field_n[this.field_c[var10Lifetime4]] = var17.readInt(255);
+            for (var10Lifetime4 = 0; var10Lifetime4 < this.groupCount; var10Lifetime4++) {
+              this.groupVersions[this.groupIds[var10Lifetime4]] = var17.readInt(255);
             }
             if (7 <= var4) {
-              for (var10Lifetime5 = 0; var10Lifetime5 < this.field_e; var10Lifetime5++) {
-                this.field_p[this.field_c[var10Lifetime5]] = var17.readLargeSmart((byte) -88);
+              for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
+                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.readLargeSmart((byte) -88);
               }
-              for (var10Lifetime5 = 0; var10Lifetime5 < this.field_e; var10Lifetime5++) {
-                var11 = this.field_c[var10Lifetime5];
-                var12 = this.field_p[var11];
+              for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
+                var11 = this.groupIds[var10Lifetime5];
+                var12 = this.fileCounts[var11];
                 var8Lifetime1 = 0;
                 var13 = -1;
                 array$2 = new int[var12];
-                this.field_w[var11] = array$2;
+                this.fileIds[var11] = array$2;
                 for (var14 = 0; var12 > var14; var14++) {
                   dupTemp$3 = var8Lifetime1 + var17.readLargeSmart((byte) -88);
                   var8Lifetime1 = dupTemp$3;
-                  dupTemp$4 = this.field_w[var11];
+                  dupTemp$4 = this.fileIds[var11];
                   dupTemp$4[var14] = dupTemp$3;
                   var15 = dupTemp$3;
                   if (var13 < var15) {
                     var13 = var15;
                   }
                 }
-                this.field_t[var11] = 1 + var13;
+                this.fileCapacities[var11] = 1 + var13;
                 if (var12 == var13 + 1) {
-                  this.field_w[var11] = null;
+                  this.fileIds[var11] = null;
                 }
               }
             } else {
-              for (var10Lifetime5 = 0; var10Lifetime5 < this.field_e; var10Lifetime5++) {
-                this.field_p[this.field_c[var10Lifetime5]] = var17.readUnsignedShort(-14477);
+              for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
+                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.readUnsignedShort(-14477);
               }
-              for (var10Lifetime5 = 0; var10Lifetime5 < this.field_e; var10Lifetime5++) {
-                var11 = this.field_c[var10Lifetime5];
-                var12 = this.field_p[var11];
+              for (var10Lifetime5 = 0; var10Lifetime5 < this.groupCount; var10Lifetime5++) {
+                var11 = this.groupIds[var10Lifetime5];
+                var12 = this.fileCounts[var11];
                 var8Lifetime1 = 0;
                 array$5 = new int[var12];
-                this.field_w[var11] = array$5;
+                this.fileIds[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
                   dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(-14477);
                   var8Lifetime1 = dupTemp$6;
-                  dupTemp$7 = this.field_w[var11];
+                  dupTemp$7 = this.fileIds[var11];
                   dupTemp$7[var14] = dupTemp$6;
                   var15 = dupTemp$6;
                   if (var13 < var15) {
                     var13 = var15;
                   }
                 }
-                this.field_t[var11] = 1 + var13;
+                this.fileCapacities[var11] = 1 + var13;
                 if (var12 == var13 + 1) {
-                  this.field_w[var11] = null;
+                  this.fileIds[var11] = null;
                 }
               }
             }
             if (var6 != 0) {
-              this.field_g = new int[1 + var9][];
-              this.field_x = new IntHashTable[var9 + 1];
-              for (var10Lifetime6 = 0; var10Lifetime6 < this.field_e; var10Lifetime6++) {
-                var11Lifetime1 = this.field_c[var10Lifetime6];
-                var12Lifetime1 = this.field_p[var11Lifetime1];
-                array$8 = new int[this.field_t[var11Lifetime1]];
-                this.field_g[var11Lifetime1] = array$8;
-                for (var13Lifetime1 = 0; this.field_t[var11Lifetime1] > var13Lifetime1; var13Lifetime1++) {
-                  this.field_g[var11Lifetime1][var13Lifetime1] = -1;
+              this.fileNameHashes = new int[1 + var9][];
+              this.fileNames = new IntHashTable[var9 + 1];
+              for (var10Lifetime6 = 0; var10Lifetime6 < this.groupCount; var10Lifetime6++) {
+                var11Lifetime1 = this.groupIds[var10Lifetime6];
+                var12Lifetime1 = this.fileCounts[var11Lifetime1];
+                array$8 = new int[this.fileCapacities[var11Lifetime1]];
+                this.fileNameHashes[var11Lifetime1] = array$8;
+                for (var13Lifetime1 = 0; this.fileCapacities[var11Lifetime1] > var13Lifetime1; var13Lifetime1++) {
+                  this.fileNameHashes[var11Lifetime1][var13Lifetime1] = -1;
                 }
                 for (var13Lifetime1Lifetime1 = 0; var12Lifetime1 > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
-                  if (null == this.field_w[var11Lifetime1]) {
+                  if (null == this.fileIds[var11Lifetime1]) {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   } else {
-                    var14Lifetime1 = this.field_w[var11Lifetime1][var13Lifetime1Lifetime1];
+                    var14Lifetime1 = this.fileIds[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_g[var11Lifetime1][var14Lifetime1] = var17.readInt(255);
+                  this.fileNameHashes[var11Lifetime1][var14Lifetime1] = var17.readInt(255);
                 }
-                this.field_x[var11Lifetime1] = new IntHashTable(this.field_g[var11Lifetime1]);
+                this.fileNames[var11Lifetime1] = new IntHashTable(this.fileNameHashes[var11Lifetime1]);
               }
               return;
             }
@@ -243,7 +243,7 @@ final class Js5Index {
     public static void releaseStatics(int param0) {
         if (param0 != 1) {
           String var2 = (String) null;
-          Js5Index.a((byte) -119, (String) null, (ResourceArchive) null, (String) null);
+          Js5Index.loadSpriteStrip((byte) -119, (String) null, (ResourceArchive) null, (String) null);
         }
         field_k = null;
         field_v = null;
@@ -266,7 +266,7 @@ final class Js5Index {
     Js5Index(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_i = bi.a(param0, 10510, param0.length);
+          this.field_i = Cp1252DecodingHelpers.crc32Prefix(param0, 10510, param0.length);
           if (this.field_i != param1) {
             throw new RuntimeException();
           }
@@ -274,20 +274,20 @@ final class Js5Index {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_b = id.a(param0, 0, param0.length, 0);
+            this.field_b = id.whirlpoolDigest(param0, 0, param0.length, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_b[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();
               }
             }
           }
-          this.a(param0, 0);
+          this.decode(param0, 0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static Sprite[] a(byte param0, String param1, ResourceArchive param2, String param3) {
+    final static Sprite[] loadSpriteStrip(byte param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -301,11 +301,11 @@ final class Js5Index {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.b(-1, param1);
+          var4_int = param2.getGroupId(-1, param1);
           if (param0 < 99) {
             Js5Index.releaseStatics(61);
           }
-          var5 = param2.a(var4_int, param3, -11986);
+          var5 = param2.getFileId(var4_int, param3, -11986);
           stackIn_3_0 = TimedValidator.a(var5, param2, 13469, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -336,10 +336,10 @@ final class Js5Index {
 
     static {
         field_o = "Updates will sent to the email address you've given";
-        field_v = new sd(3);
-        field_a = new bh(9, 0, 4, 1);
+        field_v = new LoginCredentialKind(3);
+        field_a = new QuickChatDynamicCommand(9, 0, 4, 1);
         field_k = new long[32];
-        field_m = new sd(0);
+        field_m = new LoginCredentialKind(0);
         field_l = new IntrusiveDeque();
     }
 }

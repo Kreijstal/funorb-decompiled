@@ -167,7 +167,7 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static void a(nj param0, int param1, byte param2) {
+    final static void a(HighscoreRequest param0, int param1, byte param2) {
         IsaacPacketBuffer var3 = null;
         try {
           if (param2 != 121) {
@@ -190,7 +190,7 @@ final class BoundedRandomAccessFile {
         if (param0 < 18) {
           return false;
         }
-        return SocketConnector.a((byte) 46, jg.f(1));
+        return SocketConnector.a((byte) 46, DisplayNameValidator.getActiveApplet(1));
     }
 
     static {

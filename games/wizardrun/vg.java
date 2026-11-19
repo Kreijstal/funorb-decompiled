@@ -24,23 +24,23 @@ final class vg extends ResizableDialog implements ButtonActionListener {
             if (param1 != WrappedTextLayout.field_f) {
               if (StatefulWidgetPainter.field_r == param1) {
                 var3 = DialogLayer.field_G;
-                this.field_n = this.field_n + 30;
+                this.height = this.height + 30;
               }
             } else {
-              this.field_n = this.field_n + 10;
+              this.height = this.height + 10;
               var3 = SocketConnector.field_b;
-              if (ql.a(false)) {
+              if (HuffmanDecoder.a(false)) {
                 var3 = ArchiveCatalog.field_c;
-                this.field_n = this.field_n + 20;
+                this.height = this.height + 20;
               }
             }
           }
           var4 = new UiWidget((String) (var3), (WidgetListener) null);
-          var4.field_l = 50;
-          var4.field_n = 80;
-          var4.field_r = this.field_r;
-          var4.field_o = 0;
-          var4.field_w = (WidgetRenderer) ((Object) new WidgetPainter(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.y = 50;
+          var4.height = 80;
+          var4.width = this.width;
+          var4.x = 0;
+          var4.renderer = (WidgetRenderer) ((Object) new WidgetPainter(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) 117);
           this.field_V = this.a(23813, (WidgetListener) (this), wizardrun.field_F);
           return;
@@ -77,7 +77,7 @@ final class vg extends ResizableDialog implements ButtonActionListener {
             var4 = (CharSequence) null;
             vg.a(-14, true, (CharSequence) null);
           }
-          stackIn_3_0 = il.a(param0, (byte) -22, param2, true);
+          stackIn_3_0 = RadixParsingHelpers.parseIntRadix(param0, (byte) -22, param2, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,8 +190,8 @@ final class vg extends ResizableDialog implements ButtonActionListener {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          var4_int = param2.b(param0 - 16, param3);
-          var5 = param2.a(var4_int, param1, -11986);
+          var4_int = param2.getGroupId(param0 - 16, param3);
+          var5 = param2.getFileId(var4_int, param1, -11986);
           stackIn_4_0 = se.a(var4_int, param2, var5, 104);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,7 +234,7 @@ final class vg extends ResizableDialog implements ButtonActionListener {
     }
 
     final static void a(boolean param0, int param1) {
-        we.field_c.a(param0, 126);
+        we.field_c.complete(param0, 126);
         if (param1 != 3289) {
           field_U = (String) null;
         }
@@ -255,12 +255,12 @@ final class vg extends ResizableDialog implements ButtonActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param2, param1);
-          var4.field_w = (WidgetRenderer) ((Object) new jl());
-          var5 = this.field_n - 6;
-          this.field_n = this.field_n + 38;
-          var4.a(123, var5, 30, this.field_r - 30, 15);
+          var4.renderer = (WidgetRenderer) ((Object) new jl());
+          var5 = this.height - 6;
+          this.height = this.height + 38;
+          var4.setBounds(123, var5, 30, this.width - 30, 15);
           this.a((UiWidget) (var4), (byte) 48);
-          this.c(117);
+          this.refreshLayout(117);
           if (param0 != 23813) {
             var6 = (String) null;
             discarded$1 = this.a(-111, (WidgetListener) null, (String) null);

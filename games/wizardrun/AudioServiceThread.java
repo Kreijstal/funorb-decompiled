@@ -27,7 +27,7 @@ final class AudioServiceThread implements Runnable {
             }
             LevelData.sleepMillis(10L, false);
             Object var5 = (Object) null;
-            bi.a(this.field_c, (byte) -105, (Object) null);
+            Cp1252DecodingHelpers.pumpEventQueue(this.field_c, (byte) -105, (Object) null);
           }
         } catch (Exception exception) {
           String var6 = (String) null;
@@ -92,7 +92,7 @@ final class AudioServiceThread implements Runnable {
     final static void b(int param0) {
         vf var1 = (vf) (TimedValidator.field_d.first((byte) 72));
         if (var1 == null) {
-          ql.a(-82);
+          HuffmanDecoder.closeAccountConnection(-82);
           return;
         }
         IsaacPacketBuffer var2 = AccountCreationForm.field_N;

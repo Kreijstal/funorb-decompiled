@@ -57,7 +57,7 @@ final class PlatformActor extends GridActor {
           if (param1 != 120) {
             return;
           }
-          this.moveWithGravity(20, tl.field_a, pk.field_s, BufferedRandomAccessFile.soundEffects, (byte) -15, param2);
+          this.moveWithGravity(20, tl.field_a, ReflectionCheck.field_s, BufferedRandomAccessFile.soundEffects, (byte) -15, param2);
           this.field_o = 6;
           this.field_w = this.field_w + 1;
           if (param0) {
@@ -131,7 +131,7 @@ final class PlatformActor extends GridActor {
                 var4_intLifetime2 = 5;
                 var5 = 20;
                 if (!GameApplet.field_g) {
-                  ql.a(1, 245, 10);
+                  HuffmanDecoder.a(1, 245, 10);
                 }
               }
               for (var6 = 0; var6 < var5; var6++) {
@@ -187,7 +187,7 @@ final class PlatformActor extends GridActor {
             } else {
               this.field_k = 1;
             }
-            stackIn_94_0 = (pk.field_s) ? 0 : 1;
+            stackIn_94_0 = (ReflectionCheck.field_s) ? 0 : 1;
             if (stackIn_94_0 == 1) {
               return;
             }
@@ -210,13 +210,13 @@ final class PlatformActor extends GridActor {
 
     private final void d(int param0) {
         boolean discarded$0 = false;
-        nj.field_r = nj.field_r - 1;
+        HighscoreRequest.field_r = HighscoreRequest.field_r - 1;
         if (param0 != -1569) {
           LevelData var3 = (LevelData) null;
           discarded$0 = this.a(false, (LevelData) null, 6);
         }
-        if (!(155 < nj.field_r)) {
-          ql.a(param0 ^ -1570, 244, 11);
+        if (!(155 < HighscoreRequest.field_r)) {
+          HuffmanDecoder.a(param0 ^ -1570, 244, 11);
         }
     }
 
@@ -256,7 +256,7 @@ final class PlatformActor extends GridActor {
             }
             if (this.field_o == 1) {
               DiskCacheStore.field_f = DiskCacheStore.field_f + 25;
-              wg.field_b = wg.field_b + 1600;
+              HighscorePlayer.field_b = HighscorePlayer.field_b + 1600;
             }
             if (this.field_o == 2) {
               me.field_f = me.field_f - 3200;
@@ -268,14 +268,14 @@ final class PlatformActor extends GridActor {
             }
             if (this.field_o == 3) {
               DiskCacheStore.field_f = DiskCacheStore.field_f + 75;
-              ic.field_a = ic.field_a - 4800;
+              DecodedSpritePalette.field_a = DecodedSpritePalette.field_a - 4800;
             }
             if (this.field_o == 4) {
               DiskCacheStore.field_f = DiskCacheStore.field_f + 100;
               BufferedSocket.field_c = BufferedSocket.field_c + 6400;
             }
             if (this.field_o == 5) {
-              wg.field_b = wg.field_b + 9600;
+              HighscorePlayer.field_b = HighscorePlayer.field_b + 9600;
               DiskCacheStore.field_f = DiskCacheStore.field_f + 150;
             }
             if (6 == this.field_o) {
@@ -283,10 +283,10 @@ final class PlatformActor extends GridActor {
               DiskCacheStore.field_f = DiskCacheStore.field_f + 250;
             }
             if (this.field_o == 7) {
-              ic.field_a = ic.field_a - 32000;
+              DecodedSpritePalette.field_a = DecodedSpritePalette.field_a - 32000;
               DiskCacheStore.field_f = DiskCacheStore.field_f + 500;
             }
-            stackIn_34_0 = !(pk.field_s);
+            stackIn_34_0 = !(ReflectionCheck.field_s);
             if (!stackIn_34_0) {
               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[7], 100, ee.field_p * 256 / 100);
             }
@@ -317,7 +317,7 @@ final class PlatformActor extends GridActor {
             this.field_d = 32;
             this.field_o = this.field_o + 1;
             this.field_p = 0;
-            if (pk.field_s) {
+            if (ReflectionCheck.field_s) {
               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[6], 100, 256 * ee.field_p / 100);
             }
           }
@@ -719,7 +719,7 @@ final class PlatformActor extends GridActor {
             }
           } else {
             if (0 <= GridActor.field_g &&
-              !pg.field_q) {
+              !AchievementSubmission.field_q) {
               if (this.field_h == -1) {
                 ve.wizardSprites[this.animationFrame].drawTransparent(var2, var3);
                 this.field_q = ra.wizardNoHatSprites[this.animationFrame];
@@ -733,16 +733,16 @@ final class PlatformActor extends GridActor {
               }
               if (0 <= AccountCreationForm.field_T &&
                 300 > AccountCreationForm.field_T &&
-                250 < sj.field_l) {
+                250 < EmailAddressValidator.field_l) {
                 if (AccountCreationForm.field_T >= 0 &&
                   AccountCreationForm.field_T < 50) {
-                  if (uc.field_g < 20) {
+                  if (ArchiveLoadingPlan.field_g < 20) {
                     stackIn_87_1 = 16711680;
                   } else {
                     stackIn_87_1 = 16776960;
                   }
                   this.drawOutlinedLabel(stackIn_87_1, var2, true, "(", 32 + var3);
-                  if (uc.field_g < 20) {
+                  if (ArchiveLoadingPlan.field_g < 20) {
                     stackIn_90_1 = 16711680;
                   } else {
                     stackIn_90_1 = 16776960;
@@ -751,7 +751,7 @@ final class PlatformActor extends GridActor {
                 }
                 if (AccountCreationForm.field_T >= 50 &&
                   AccountCreationForm.field_T < 100) {
-                  var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
+                  var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, EmailLoginCredentials.field_g));
                   var12 = var2 + ve.wizardSprites[this.animationFrame].fullWidth / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
@@ -759,12 +759,12 @@ final class PlatformActor extends GridActor {
                   if (var12 > 640 - var11 / 2) {
                     var12 = -(var11 / 2) + 640;
                   }
-                  if (uc.field_g < 20) {
+                  if (ArchiveLoadingPlan.field_g < 20) {
                     stackIn_103_1 = 16711680;
                   } else {
                     stackIn_103_1 = 16776960;
                   }
-                  this.drawOutlinedLabel(stackIn_103_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, ka.field_g), -4 + var3);
+                  this.drawOutlinedLabel(stackIn_103_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, EmailLoginCredentials.field_g), -4 + var3);
                 }
                 if (AccountCreationForm.field_T >= 100 &&
                   AccountCreationForm.field_T < 150) {
@@ -776,7 +776,7 @@ final class PlatformActor extends GridActor {
                   if (var12 > -(var11 / 2) + 640) {
                     var12 = -(var11 / 2) + 640;
                   }
-                  if (uc.field_g >= 20) {
+                  if (ArchiveLoadingPlan.field_g >= 20) {
                     stackIn_115_1 = 16776960;
                   } else {
                     stackIn_115_1 = 16711680;
@@ -793,7 +793,7 @@ final class PlatformActor extends GridActor {
                   if (-(var11 / 2) + 640 < var12) {
                     var12 = -(var11 / 2) + 640;
                   }
-                  if (20 > uc.field_g) {
+                  if (20 > ArchiveLoadingPlan.field_g) {
                     stackIn_125_1 = 16711680;
                   } else {
                     stackIn_125_1 = 16776960;
@@ -810,14 +810,14 @@ final class PlatformActor extends GridActor {
                   ve.wizardSprites[this.animationFrame].drawSilhouette(var2, var3, 16777215);
                 }
               }
-              if (120 > fi.field_x) {
-                var4 = 256 * fi.field_x / 120;
+              if (120 > NetworkArchiveRequest.field_x) {
+                var4 = 256 * NetworkArchiveRequest.field_x / 120;
                 var11_double = 0.0;
                 for (var13 = 0; var13 < 5; var13++) {
-                  var11_double = (double)fi.field_x + 6.28 * (double)var13 / 5.0;
+                  var11_double = (double)NetworkArchiveRequest.field_x + 6.28 * (double)var13 / 5.0;
                   var14 = 32;
-                  if (100 < fi.field_x) {
-                    var14 = var14 + (10 - Math.abs(-110 + fi.field_x));
+                  if (100 < NetworkArchiveRequest.field_x) {
+                    var14 = var14 + (10 - Math.abs(-110 + NetworkArchiveRequest.field_x));
                   }
                   GridPoint.field_c.drawScaledAlpha(-6 + var2 + (int)(Math.cos(var11_double) * (double)var14 + 32.0), -6 + ((int)(32.0 + Math.sin(var11_double) * (double)var14) + var3), 12, 12, var4);
                 }
@@ -849,12 +849,12 @@ final class PlatformActor extends GridActor {
             this.field_s = this.field_s - 1;
             this.field_p = this.field_p - 1;
             if (this.field_p > 0) {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(param2 ^ 24);
               }
             } else {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(false);
               }
@@ -964,18 +964,18 @@ final class PlatformActor extends GridActor {
           if (this.verticalVelocity == 0) {
             this.verticalVelocity = 20;
           }
-          this.a(1, BufferedRandomAccessFile.soundEffects, param2, 1, param0, 1, tl.field_a, pk.field_s, (byte) 127);
+          this.a(1, BufferedRandomAccessFile.soundEffects, param2, 1, param0, 1, tl.field_a, ReflectionCheck.field_s, (byte) 127);
           if (this.field_s > 0 &&
             !param3) {
             this.field_s = this.field_s - 1;
             this.field_p = this.field_p - 1;
             if (0 >= this.field_p) {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param3) {
                 this.c(false);
               }
             } else {
-              if (pk.field_s) {
+              if (ReflectionCheck.field_s) {
                 this.c(1);
               }
             }
@@ -1005,15 +1005,15 @@ final class PlatformActor extends GridActor {
         if (this.field_w > 1000) {
           this.field_w = 0;
           this.field_r = 0;
-          if (pk.field_s) {
+          if (ReflectionCheck.field_s) {
             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[6], 100, ee.field_p * 256 / 100);
           }
         }
-        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) -57);
+        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, ReflectionCheck.field_s, (byte) -57);
         if (1 == this.b(param1, -4) &&
           this.tileOffset.row == 0) {
           this.verticalVelocity = 20;
-          if (pk.field_s) {
+          if (ReflectionCheck.field_s) {
             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, ee.field_p * 64 / 100);
           }
         }
@@ -1326,19 +1326,19 @@ final class PlatformActor extends GridActor {
               }
               if (0 == this.field_s) {
                 var3_int = 0;
-                if (sc.field_m.field_b == 1) {
+                if (ProgressQuery.field_m.field_b == 1) {
                   var3_int = 30;
                   this.field_h = 1;
                 }
-                if (sc.field_m.field_b == -1) {
+                if (ProgressQuery.field_m.field_b == -1) {
                   var3_int = 30;
                   this.field_h = -1;
                 }
-                if (sc.field_m.field_f &&
+                if (ProgressQuery.field_m.field_f &&
                   0 == this.tileOffset.row &&
                   this.b(param1, param0 + 119) == 1) {
                   this.verticalVelocity = 70;
-                  if (pk.field_s) {
+                  if (ReflectionCheck.field_s) {
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[3], 100, ee.field_p * 256 / 100);
                   }
                 }
@@ -1391,17 +1391,17 @@ final class PlatformActor extends GridActor {
                     this.animationFrame = 5;
                   }
                 }
-                if (!sc.field_m.field_f &&
+                if (!ProgressQuery.field_m.field_f &&
                   10 < this.verticalVelocity) {
                   this.verticalVelocity = this.verticalVelocity - 4;
                 }
-                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, var3_int, 1, tl.field_a, pk.field_s, (byte) -104);
-                if (!sc.field_m.field_d) {
+                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, var3_int, 1, tl.field_a, ReflectionCheck.field_s, (byte) -104);
+                if (!ProgressQuery.field_m.field_d) {
                   if (ValidatedTextField.field_V < 10) {
-                    if (fi.field_x > 0 &&
-                      10 > fi.field_x) {
+                    if (NetworkArchiveRequest.field_x > 0 &&
+                      10 > NetworkArchiveRequest.field_x) {
                       ValidatedTextField.field_V = 25;
-                      fi.field_x = 0;
+                      NetworkArchiveRequest.field_x = 0;
                       ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
                       ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 42, this.tileOffset);
                       dupTemp$1 = ii.field_e[WidgetTheme.field_k].tileOffset;
@@ -1410,16 +1410,16 @@ final class PlatformActor extends GridActor {
                       dupTemp$2 = ii.field_e[WidgetTheme.field_k].tileOffset;
                       dupTemp$2.column = dupTemp$2.column + 40;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      if (pk.field_s) {
+                      if (ReflectionCheck.field_s) {
                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
                       }
                     }
-                    if (fi.field_x >= 10 &&
-                      fi.field_x < 40) {
+                    if (NetworkArchiveRequest.field_x >= 10 &&
+                      NetworkArchiveRequest.field_x < 40) {
                       ValidatedTextField.field_V = 5;
-                      fi.field_x = fi.field_x - 20;
-                      if (fi.field_x < 0) {
-                        fi.field_x = 0;
+                      NetworkArchiveRequest.field_x = NetworkArchiveRequest.field_x - 20;
+                      if (NetworkArchiveRequest.field_x < 0) {
+                        NetworkArchiveRequest.field_x = 0;
                       }
                       ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
                       ii.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 21, this.tileOffset);
@@ -1439,16 +1439,16 @@ final class PlatformActor extends GridActor {
                       dupTemp$6.column = dupTemp$6.column + 40;
                       ii.field_e[WidgetTheme.field_k].verticalVelocity = 10;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      if (pk.field_s) {
+                      if (ReflectionCheck.field_s) {
                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[23], 100, ee.field_p * 256 / 100);
                       }
                     }
-                    if (fi.field_x >= 40 &&
-                      fi.field_x < 100) {
+                    if (NetworkArchiveRequest.field_x >= 40 &&
+                      NetworkArchiveRequest.field_x < 100) {
                       ValidatedTextField.field_V = 5;
-                      fi.field_x = fi.field_x - 30;
-                      if (fi.field_x < 0) {
-                        fi.field_x = 0;
+                      NetworkArchiveRequest.field_x = NetworkArchiveRequest.field_x - 30;
+                      if (NetworkArchiveRequest.field_x < 0) {
+                        NetworkArchiveRequest.field_x = 0;
                       }
                       ii.field_e[WidgetTheme.field_k].initialize(9147, 1, this.tilePosition);
                       ii.field_e[WidgetTheme.field_k].tileOffset.set(-87, this.tileOffset);
@@ -1477,17 +1477,17 @@ final class PlatformActor extends GridActor {
                       dupTemp$12.column = dupTemp$12.column + 40;
                       ii.field_e[WidgetTheme.field_k].verticalVelocity = -30;
                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                      if (pk.field_s) {
+                      if (ReflectionCheck.field_s) {
                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[24], 100, ee.field_p * 256 / 100);
                       }
                     }
-                    if (fi.field_x < 100) {
+                    if (NetworkArchiveRequest.field_x < 100) {
                       this.field_d = this.field_d * 2;
                       this.tileOffset.column = this.tileOffset.column - 120;
                       this.wrapHorizontalPosition((byte) 83);
                       break regionExit1;
                     }
-                    fi.field_x = 0;
+                    NetworkArchiveRequest.field_x = 0;
                     ValidatedTextField.field_V = 25;
                     if (this.verticalVelocity >= 0) {
                       this.verticalVelocity = this.verticalVelocity - 10;
@@ -1497,22 +1497,22 @@ final class PlatformActor extends GridActor {
                     ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                     dupTemp$13 = ii.field_e[WidgetTheme.field_k].tileOffset;
                     dupTemp$13.column = dupTemp$13.column + 60 * this.field_h;
-                    ii.field_e[WidgetTheme.field_k].verticalVelocity = 5 * (fi.field_x / 10);
+                    ii.field_e[WidgetTheme.field_k].verticalVelocity = 5 * (NetworkArchiveRequest.field_x / 10);
                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                    stackIn_183_0 = !(pk.field_s);
+                    stackIn_183_0 = !(ReflectionCheck.field_s);
                     if (!stackIn_183_0) {
                       tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, 256 * ee.field_p / 100);
                     }
                   }
                 } else {
-                  if (fi.field_x < 120) {
-                    fi.field_x = fi.field_x + 1;
+                  if (NetworkArchiveRequest.field_x < 120) {
+                    NetworkArchiveRequest.field_x = NetworkArchiveRequest.field_x + 1;
                   }
-                  if (120 <= fi.field_x) {
-                    fi.field_x = fi.field_x - 20;
+                  if (120 <= NetworkArchiveRequest.field_x) {
+                    NetworkArchiveRequest.field_x = NetworkArchiveRequest.field_x - 20;
                   }
-                  if (fi.field_x % 10 == 5 &&
-                    pk.field_s) {
+                  if (NetworkArchiveRequest.field_x % 10 == 5 &&
+                    ReflectionCheck.field_s) {
                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[16], 100, 256 * ee.field_p / 100);
                   }
                 }
@@ -1521,12 +1521,12 @@ final class PlatformActor extends GridActor {
                 this.wrapHorizontalPosition((byte) 83);
               } else {
                 this.animationFrame = Math.abs(this.verticalVelocity) / 10 % 2 + 12;
-                fi.field_x = 0;
+                NetworkArchiveRequest.field_x = 0;
                 if (this.field_s == 1) {
                   this.verticalVelocity = -40;
                   this.field_s = 2;
                   stackIn_83_0 = 0;
-                  if (pk.field_s) {
+                  if (ReflectionCheck.field_s) {
                     stackIn_84_1 = 0;
                   } else {
                     stackIn_84_1 = 1;
@@ -1549,7 +1549,7 @@ final class PlatformActor extends GridActor {
                   this.tilePosition.row = 2;
                   this.tilePosition.column = 2;
                   if (4 == GridActor.field_l &&
-                    ql.field_c == 5) {
+                    HuffmanDecoder.field_c == 5) {
                     this.tilePosition.column = this.tilePosition.column + 1;
                   }
                   DelegatingCanvas.field_b = true;
@@ -1563,7 +1563,7 @@ final class PlatformActor extends GridActor {
                   this.verticalVelocity = 0;
                   this.tileOffset.column = 0;
                   if (GridActor.field_g < 0) {
-                    bb.field_j = me.field_b;
+                    UsernameLoginCredentials.field_j = me.field_b;
                     BufferedSocket.field_a = 580;
                   }
                 }
@@ -1576,7 +1576,7 @@ final class PlatformActor extends GridActor {
                   this.verticalVelocity = 30;
                   if (this.tilePosition.column >= 0 &&
                     this.tilePosition.column < 20) {
-                    stackIn_195_0 = (pk.field_s) ? 0 : 1;
+                    stackIn_195_0 = (ReflectionCheck.field_s) ? 0 : 1;
                     if (stackIn_195_0 != 1) {
                       tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[1], 100, ee.field_p * 128 / 100);
                     }
@@ -1584,8 +1584,8 @@ final class PlatformActor extends GridActor {
                 }
                 this.field_w = this.field_w + 1;
                 if (this.field_w <= 2) {
-                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) -73);
-                  if (!pg.field_q) {
+                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, tl.field_a, ReflectionCheck.field_s, (byte) -73);
+                  if (!AchievementSubmission.field_q) {
                     for (var4 = 0; WidgetTheme.field_k > var4; var4++) {
                       if (ii.field_e[var4].field_p > 0 &&
                         ii.field_e[var4].field_r == 0 &&
@@ -1600,7 +1600,7 @@ final class PlatformActor extends GridActor {
                         if (SpriteCollision.overlapsOpaquePixels(this.field_q, var8.column, var8.row, ii.field_e[var4].field_q, var9.column, var9.row)) {
                           dupTemp$14 = ii.field_e[var4];
                           dupTemp$14.field_s = dupTemp$14.field_s + 1;
-                          if (pk.field_s) {
+                          if (ReflectionCheck.field_s) {
                             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[10], 100, 256 * ee.field_p / 100);
                           }
                           ii.field_e[var4].field_m = this.field_h;
@@ -1635,7 +1635,7 @@ final class PlatformActor extends GridActor {
                       var4_ref_eg.field_h = this.field_h;
                     }
                     this.tilePosition.row = this.tilePosition.row + 1;
-                    this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 29);
+                    this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, ReflectionCheck.field_s, (byte) 29);
                     for (var4 = 0; var4 < WidgetTheme.field_k; var4++) {
                       if (ii.field_e[var4].field_p > 0 &&
                         this.field_q != null &&
@@ -1652,7 +1652,7 @@ final class PlatformActor extends GridActor {
                             ii.field_e[var4].field_m = this.field_h;
                             ii.field_e[var4].field_h = this.field_h;
                             stackIn_248_0 = 1;
-                            if (pk.field_s) {
+                            if (ReflectionCheck.field_s) {
                               stackIn_249_1 = 0;
                             } else {
                               stackIn_249_1 = 1;
@@ -1666,7 +1666,7 @@ final class PlatformActor extends GridActor {
                           } else {
                             dupTemp$15 = ii.field_e[var4];
                             dupTemp$15.field_s = dupTemp$15.field_s + 10;
-                            if (pk.field_s) {
+                            if (ReflectionCheck.field_s) {
                               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, 256 * ee.field_p / 100);
                             }
                             ii.field_e[var4].field_m = this.field_h;
@@ -1745,7 +1745,7 @@ final class PlatformActor extends GridActor {
                             if (this.field_s > 0) {
                               this.field_s = this.field_s - 1;
                               this.field_o = 0;
-                              if (pk.field_s) {
+                              if (ReflectionCheck.field_s) {
                                 tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[30], 100, 256 * ee.field_p / 100);
                               }
                             }
@@ -1791,7 +1791,7 @@ final class PlatformActor extends GridActor {
                             if (this.field_s > 0) {
                               this.field_p = this.field_p - 1;
                               this.field_s = this.field_s - 1;
-                              if (pk.field_s) {
+                              if (ReflectionCheck.field_s) {
                                 tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[25], 100, ee.field_p * 256 / 100);
                               }
                               if (this.field_p > 0) {
@@ -1870,7 +1870,7 @@ final class PlatformActor extends GridActor {
                                   ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                   ii.field_e[WidgetTheme.field_k].field_w = 10;
                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                  stackIn_440_0 = (pk.field_s) ? 0 : 1;
+                                  stackIn_440_0 = (ReflectionCheck.field_s) ? 0 : 1;
                                   if (stackIn_440_0 == 1) {
                                     this.e(false);
                                   } else {
@@ -1884,7 +1884,7 @@ final class PlatformActor extends GridActor {
                         } else {
                           if (var4 == 11) {
                             this.verticalVelocity = 2;
-                            this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 127);
+                            this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, ReflectionCheck.field_s, (byte) 127);
                             this.e(false);
                           } else {
                             if (var4 == 12) {
@@ -1965,7 +1965,7 @@ final class PlatformActor extends GridActor {
                                     ii.field_e[WidgetTheme.field_k].field_w = 10;
                                     WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                   }
-                                  if (pk.field_s) {
+                                  if (ReflectionCheck.field_s) {
                                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[25], 100, 256 * ee.field_p / 100);
                                   }
                                   if (this.field_p <= 0) {
@@ -1987,7 +1987,7 @@ final class PlatformActor extends GridActor {
                                     this.field_s = this.field_s - 1;
                                     w.field_b = 250;
                                     this.field_x = 0;
-                                    stackIn_457_0 = (pk.field_s) ? 0 : 1;
+                                    stackIn_457_0 = (ReflectionCheck.field_s) ? 0 : 1;
                                     if (stackIn_457_0 != 1) {
                                       tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[17], 100, 256 * ee.field_p / 100);
                                     }
@@ -2083,7 +2083,7 @@ final class PlatformActor extends GridActor {
                                         ii.field_e[WidgetTheme.field_k].field_w = 0;
                                         ii.field_e[WidgetTheme.field_k].field_o = 8;
                                         WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                        stackIn_535_0 = (pk.field_s) ? 0 : 1;
+                                        stackIn_535_0 = (ReflectionCheck.field_s) ? 0 : 1;
                                         if (stackIn_535_0 != 1) {
                                           tl.field_a.addSample(SpriteState.secondarySoundEffects[17], 100, ee.field_p * 256 / 100);
                                         }
@@ -2161,7 +2161,7 @@ final class PlatformActor extends GridActor {
                                           ii.field_e[WidgetTheme.field_k].verticalVelocity = 25;
                                           ii.field_e[WidgetTheme.field_k].animationFrame = 37;
                                           WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                          stackIn_574_0 = !(pk.field_s);
+                                          stackIn_574_0 = !(ReflectionCheck.field_s);
                                           if (!stackIn_574_0) {
                                             tl.field_a.addSample(SpriteState.secondarySoundEffects[18], 100, ee.field_p * 256 / 100);
                                           }
@@ -2189,7 +2189,7 @@ final class PlatformActor extends GridActor {
                                           if (this.field_s > 0) {
                                             w.field_b = 250;
                                             this.field_s = this.field_s - 1;
-                                            if (pk.field_s) {
+                                            if (ReflectionCheck.field_s) {
                                               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[29], 100, ee.field_p * 256 / 100);
                                             }
                                           }
@@ -2246,7 +2246,7 @@ final class PlatformActor extends GridActor {
                                               WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                             }
                                             this.field_o = 1;
-                                            if (pk.field_s) {
+                                            if (ReflectionCheck.field_s) {
                                               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[29], 100, 256 * ee.field_p / 100);
                                             }
                                             if (this.field_p <= 0) {
@@ -2273,7 +2273,7 @@ final class PlatformActor extends GridActor {
                                             this.animationFrame = 34;
                                           }
                                         } else {
-                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) 127);
+                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, ReflectionCheck.field_s, (byte) 127);
                                           if (36 > this.animationFrame) {
                                             this.animationFrame = 36;
                                           }
@@ -2298,7 +2298,7 @@ final class PlatformActor extends GridActor {
                                         }
                                       } else {
                                         if (var4 == 19) {
-                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 25, 0, tl.field_a, pk.field_s, (byte) -120);
+                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 25, 0, tl.field_a, ReflectionCheck.field_s, (byte) -120);
                                           this.e(false);
                                           this.animationFrame = 37;
                                           if (((this.b(param1, -4) == 1)) &&
@@ -2371,7 +2371,7 @@ final class PlatformActor extends GridActor {
                                                 this.verticalVelocity <= 0) {
                                                 this.b(5);
                                               } else {
-                                                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 1, tl.field_a, pk.field_s, (byte) 126);
+                                                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 1, tl.field_a, ReflectionCheck.field_s, (byte) 126);
                                               }
                                             } else {
                                               if (var4 == 22) {
@@ -2428,7 +2428,7 @@ final class PlatformActor extends GridActor {
                                                           w.field_b = 250;
                                                           this.field_s = this.field_s - 1;
                                                           this.field_x = 0;
-                                                          if (pk.field_s) {
+                                                          if (ReflectionCheck.field_s) {
                                                             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[26], 100, 256 * ee.field_p / 100);
                                                           }
                                                         }
@@ -2502,7 +2502,7 @@ final class PlatformActor extends GridActor {
                                                           ii.field_e[WidgetTheme.field_k].field_o = 5;
                                                           WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                           stackIn_773_0 = 0;
-                                                          if (pk.field_s) {
+                                                          if (ReflectionCheck.field_s) {
                                                             stackIn_774_1 = 0;
                                                           } else {
                                                             stackIn_774_1 = 1;
@@ -2535,7 +2535,7 @@ final class PlatformActor extends GridActor {
                                                             ii.field_e[WidgetTheme.field_k].field_w = 10;
                                                             WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                           }
-                                                          stackIn_784_0 = (pk.field_s) ? 0 : 1;
+                                                          stackIn_784_0 = (ReflectionCheck.field_s) ? 0 : 1;
                                                           if (stackIn_784_0 != 1) {
                                                             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[26], 100, ee.field_p * 256 / 100);
                                                           }
@@ -2549,7 +2549,7 @@ final class PlatformActor extends GridActor {
                                                     }
                                                   } else {
                                                     if (var4 == 27) {
-                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, tl.field_a, ReflectionCheck.field_s, (byte) 126);
                                                       this.e(false);
                                                       if (((this.b(param1, -4) == 1)) &&
                                                         ((this.tileOffset.row == 0))) {
@@ -2565,19 +2565,19 @@ final class PlatformActor extends GridActor {
                                                         ii.field_e[WidgetTheme.field_k].verticalVelocity = 50;
                                                         ii.field_e[WidgetTheme.field_k].field_o = 5;
                                                         WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                                        stackIn_808_0 = (pk.field_s) ? 0 : 1;
+                                                        stackIn_808_0 = (ReflectionCheck.field_s) ? 0 : 1;
                                                         if ((stackIn_808_0 != 1)) {
                                                           tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                         }
                                                       }
                                                     } else {
                                                       if (var4 == 28) {
-                                                        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 20, 0, tl.field_a, pk.field_s, (byte) -50);
+                                                        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 20, 0, tl.field_a, ReflectionCheck.field_s, (byte) -50);
                                                         this.e(false);
                                                         if (((this.b(param1, -4) == 1)) &&
                                                           ((this.tileOffset.row == 0))) {
                                                           this.field_k = 1;
-                                                          stackIn_817_0 = (pk.field_s) ? 0 : 1;
+                                                          stackIn_817_0 = (ReflectionCheck.field_s) ? 0 : 1;
                                                           if ((stackIn_817_0 != 1)) {
                                                             tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                           }
@@ -2647,7 +2647,7 @@ final class PlatformActor extends GridActor {
                                                                   ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                   ii.field_e[WidgetTheme.field_k].field_w = 10;
                                                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                                                  if (pk.field_s) {
+                                                                  if (ReflectionCheck.field_s) {
                                                                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, 256 * ee.field_p / 100);
                                                                   }
                                                                 }
@@ -2730,7 +2730,7 @@ final class PlatformActor extends GridActor {
                                                                   ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                   stackIn_896_0 = 0;
-                                                                  if (pk.field_s) {
+                                                                  if (ReflectionCheck.field_s) {
                                                                     stackIn_897_1 = 0;
                                                                   } else {
                                                                     stackIn_897_1 = 1;
@@ -2785,7 +2785,7 @@ final class PlatformActor extends GridActor {
                                                                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                       ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                                                      if (pk.field_s) {
+                                                                      if (ReflectionCheck.field_s) {
                                                                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, ee.field_p * 256 / 100);
                                                                       }
                                                                     }
@@ -2818,7 +2818,7 @@ final class PlatformActor extends GridActor {
                                                                     w.field_b = 250;
                                                                     this.field_s = this.field_s - 1;
                                                                     this.field_x = 0;
-                                                                    if (pk.field_s) {
+                                                                    if (ReflectionCheck.field_s) {
                                                                       tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[27], 100, ee.field_p * 256 / 100);
                                                                     }
                                                                   }
@@ -2847,7 +2847,7 @@ final class PlatformActor extends GridActor {
                                                                       ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                       ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                                                      if (pk.field_s) {
+                                                                      if (ReflectionCheck.field_s) {
                                                                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, 256 * ee.field_p / 100);
                                                                       }
                                                                     }
@@ -2898,7 +2898,7 @@ final class PlatformActor extends GridActor {
                                                                         ii.field_e[WidgetTheme.field_k].field_w = 10;
                                                                         WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                       }
-                                                                      if (pk.field_s) {
+                                                                      if (ReflectionCheck.field_s) {
                                                                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[27], 100, 256 * ee.field_p / 100);
                                                                       }
                                                                       if (!(this.field_p > 0)) {
@@ -2911,7 +2911,7 @@ final class PlatformActor extends GridActor {
                                                               } else {
                                                                 if (var4 == 34) {
                                                                   this.verticalVelocity = 2;
-                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, tl.field_a, ReflectionCheck.field_s, (byte) 126);
                                                                   this.e(false);
                                                                 } else {
                                                                   if (35 != var4 &&
@@ -3105,7 +3105,7 @@ final class PlatformActor extends GridActor {
                                                                               switch (var4) {
                                                                                 case 41:
                                                                                   this.verticalVelocity = 2;
-                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 100, 0, tl.field_a, pk.field_s, (byte) -126);
+                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 100, 0, tl.field_a, ReflectionCheck.field_s, (byte) -126);
                                                                                   this.e(false);
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (this.field_w % 10 >= 5) {
@@ -3122,7 +3122,7 @@ final class PlatformActor extends GridActor {
                                                                                   break regionExit1;
                                                                                 case 42:
                                                                                   this.verticalVelocity = 2;
-                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 50, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 50, 0, tl.field_a, ReflectionCheck.field_s, (byte) 126);
                                                                                   this.e(false);
                                                                                   break regionExit1;
                                                                                 case 44:
@@ -3151,13 +3151,13 @@ final class PlatformActor extends GridActor {
                                                                             if (this.field_p <= 0) {
                                                                               this.a(true, 120, param1);
                                                                             } else {
-                                                                              if (ql.field_c < 5) {
+                                                                              if (HuffmanDecoder.field_c < 5) {
                                                                                 me.field_f = me.field_f - 5;
-                                                                                BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
-                                                                                ql.field_c = 5;
+                                                                                BufferedSocket.field_c = BufferedSocket.field_c - HuffmanDecoder.field_c;
+                                                                                HuffmanDecoder.field_c = 5;
                                                                               }
                                                                               if (this.field_s > 0) {
-                                                                                if (ql.field_c == 6) {
+                                                                                if (HuffmanDecoder.field_c == 6) {
                                                                                   ii.field_e[WidgetTheme.field_k].initialize(param0 ^ -9154, 36, this.tilePosition);
                                                                                   ii.field_e[WidgetTheme.field_k].tileOffset.set(-110, this.tileOffset);
                                                                                   dupTemp$41 = ii.field_e[WidgetTheme.field_k].tileOffset;
@@ -3173,11 +3173,11 @@ final class PlatformActor extends GridActor {
                                                                                 if (this.field_p <= 0) {
                                                                                   this.c(false);
                                                                                 }
-                                                                                if (pk.field_s) {
+                                                                                if (ReflectionCheck.field_s) {
                                                                                   tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[28], 100, 256 * ee.field_p / 100);
                                                                                 }
                                                                               }
-                                                                              if (5 == ql.field_c) {
+                                                                              if (5 == HuffmanDecoder.field_c) {
                                                                                 this.field_w = this.field_w + 1;
                                                                                 this.field_d = 80;
                                                                                 fieldTemp$43 = this.field_z;
@@ -3209,19 +3209,19 @@ final class PlatformActor extends GridActor {
                                                                                 if (3000 < this.field_w ||
                                                                                   this.field_p < 150) {
                                                                                   this.field_d = 96;
-                                                                                  wg.field_b = wg.field_b - ql.field_c;
-                                                                                  ic.field_a = ic.field_a - 6;
+                                                                                  HighscorePlayer.field_b = HighscorePlayer.field_b - HuffmanDecoder.field_c;
+                                                                                  DecodedSpritePalette.field_a = DecodedSpritePalette.field_a - 6;
                                                                                   this.animationFrame = 0;
                                                                                   this.field_w = 0;
                                                                                   this.tileOffset.column = this.tileOffset.column - 40;
-                                                                                  ql.field_c = 6;
+                                                                                  HuffmanDecoder.field_c = 6;
                                                                                   this.field_x = 0;
-                                                                                  if (pk.field_s) {
+                                                                                  if (ReflectionCheck.field_s) {
                                                                                     tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[22], 100, ee.field_p * 256 / 100);
                                                                                   }
                                                                                 }
                                                                               }
-                                                                              if (ql.field_c == 6) {
+                                                                              if (HuffmanDecoder.field_c == 6) {
                                                                                 if (0 == this.field_x ||
                                                                                   this.field_x == 1) {
                                                                                   this.animationFrame = 0;
@@ -3268,7 +3268,7 @@ final class PlatformActor extends GridActor {
                                                                                       ii.field_e[WidgetTheme.field_k].tileOffset.set(-88, this.tileOffset);
                                                                                       ii.field_e[WidgetTheme.field_k].field_w = 0;
                                                                                       WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                                                                      if (pk.field_s) {
+                                                                                      if (ReflectionCheck.field_s) {
                                                                                         tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                                                       }
                                                                                     }
@@ -3290,17 +3290,17 @@ final class PlatformActor extends GridActor {
                                                                                       this.tilePosition.row = 2;
                                                                                       this.animationFrame = 2;
                                                                                       this.tileOffset.row = 0;
-                                                                                      me.field_f = me.field_f + ql.field_c;
+                                                                                      me.field_f = me.field_f + HuffmanDecoder.field_c;
                                                                                       w.field_b = 0;
                                                                                       BufferedSocket.field_c = BufferedSocket.field_c + 7;
                                                                                       this.field_x = 0;
                                                                                       this.field_d = 128;
                                                                                       this.field_w = 0;
-                                                                                      ql.field_c = 7;
+                                                                                      HuffmanDecoder.field_c = 7;
                                                                                       this.tileOffset.column = this.tileOffset.column - 40;
                                                                                       this.animationFrame = 0;
                                                                                       stackIn_1184_0 = 0;
-                                                                                      if (pk.field_s) {
+                                                                                      if (ReflectionCheck.field_s) {
                                                                                         stackIn_1185_1 = 0;
                                                                                       } else {
                                                                                         stackIn_1185_1 = 1;
@@ -3316,7 +3316,7 @@ final class PlatformActor extends GridActor {
                                                                                   }
                                                                                 }
                                                                               }
-                                                                              if (ql.field_c == 7) {
+                                                                              if (HuffmanDecoder.field_c == 7) {
                                                                                 if (w.field_b < 250) {
                                                                                   fieldTemp$45 = this.field_z;
                                                                                   this.field_z = this.field_z - 1;
@@ -3333,7 +3333,7 @@ final class PlatformActor extends GridActor {
                                                                                   if (200 < w.field_b) {
                                                                                     this.animationFrame = 23;
                                                                                     stackIn_1239_0 = 0;
-                                                                                    if (pk.field_s) {
+                                                                                    if (ReflectionCheck.field_s) {
                                                                                       stackIn_1240_1 = 0;
                                                                                     } else {
                                                                                       stackIn_1240_1 = 1;
@@ -3363,7 +3363,7 @@ final class PlatformActor extends GridActor {
                                                                                         ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
                                                                                         ii.field_e[WidgetTheme.field_k].field_w = (int)(Math.random() * 100.0);
                                                                                         WidgetTheme.field_k = WidgetTheme.field_k + 1;
-                                                                                        if (pk.field_s) {
+                                                                                        if (ReflectionCheck.field_s) {
                                                                                           tl.field_a.addSample(SpriteState.secondarySoundEffects[36], 100, 192 * ee.field_p / 100);
                                                                                         }
                                                                                       }
@@ -3420,7 +3420,7 @@ final class PlatformActor extends GridActor {
                                                                                       this.field_h = stackIn_1225_1;
                                                                                       this.field_x = 0;
                                                                                       stackIn_1227_0 = 0;
-                                                                                      if (pk.field_s) {
+                                                                                      if (ReflectionCheck.field_s) {
                                                                                         stackIn_1228_1 = 0;
                                                                                       } else {
                                                                                         stackIn_1228_1 = 1;
@@ -3440,7 +3440,7 @@ final class PlatformActor extends GridActor {
                                                                     }
                                                                   } else {
                                                                     if (this.field_w <= 2) {
-                                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) -123);
+                                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, tl.field_a, ReflectionCheck.field_s, (byte) -123);
                                                                     }
                                                                     this.e(false);
                                                                     if (1 == this.b(param1, -4) &&
@@ -3448,7 +3448,7 @@ final class PlatformActor extends GridActor {
                                                                       this.field_w <= 2) {
                                                                       this.verticalVelocity = 5;
                                                                       stackIn_1000_0 = 0;
-                                                                      if (pk.field_s) {
+                                                                      if (ReflectionCheck.field_s) {
                                                                         stackIn_1001_1 = 0;
                                                                       } else {
                                                                         stackIn_1001_1 = 1;
@@ -3609,7 +3609,7 @@ final class PlatformActor extends GridActor {
                               this.e(false);
                               break regionExit1;
                             }
-                            stackIn_401_0 = (pk.field_s) ? 0 : 1;
+                            stackIn_401_0 = (ReflectionCheck.field_s) ? 0 : 1;
                             if (stackIn_401_0 != 1) {
                               tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[12], 100, 256 * ee.field_p / 100);
                             }
@@ -3644,18 +3644,18 @@ final class PlatformActor extends GridActor {
                             this.field_w = this.field_w + 1;
                           }
                           stackIn_276_1 = false;
-                          if (!pg.field_q &&
-                            ql.field_c != 0) {
+                          if (!AchievementSubmission.field_q &&
+                            HuffmanDecoder.field_c != 0) {
                             stackIn_277_2 = 0;
                           } else {
                             stackIn_277_2 = 2;
                           }
                           this.a(stackIn_276_1, stackIn_277_2, 15, (byte) -63, param1);
-                          if (!pg.field_q) {
+                          if (!AchievementSubmission.field_q) {
                             fieldTemp$76 = this.field_w;
                             this.field_w = this.field_w + 1;
                             if (fieldTemp$76 > 250 &&
-                              ql.field_c != 0) {
+                              HuffmanDecoder.field_c != 0) {
                               this.field_x = 1;
                               this.field_w = 0;
                             }
@@ -3737,19 +3737,19 @@ final class PlatformActor extends GridActor {
         try {
           ValidationState.field_a = WidgetContainer.loadSpriteStrip("commonui", param3, "frame_top", 127);
           NanoTickClock.field_i = WidgetContainer.loadSpriteStrip("commonui", param3, "frame_bottom", 88);
-          hg.field_d = vg.loadSprite(15, "jagex_logo_grey", param3, "commonui");
+          DisplayNameSyntaxHelpers.field_d = vg.loadSprite(15, "jagex_logo_grey", param3, "commonui");
           vf.field_j = WidgetContainer.loadSpriteStrip("commonui", param3, "button", 121);
-          te.field_k = Js5Index.a((byte) 125, "commonui", param3, "validation");
+          AchievementStateRequest.field_k = Js5Index.loadSpriteStrip((byte) 125, "commonui", param3, "validation");
           e.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo12", 67, param0));
           Crc32Helpers.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
           PacketBuffer.field_i = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14bold", 118, param0));
-          var16 = new Sprite(param2.a(122, "", "button.gif"), (java.awt.Component) ((Object) wizardrun.field_G));
-          TextFieldValidator.a("commonui", "dropdown", param3, (byte) -108);
+          var16 = new Sprite(param2.getNamedFile(122, "", "button.gif"), (java.awt.Component) ((Object) wizardrun.field_G));
+          TextFieldValidator.loadNamedIndexedSprite("commonui", "dropdown", param3, (byte) -108);
           var5 = re.a(param3, "commonui", "screen_options", 112);
           IterableNodeHashTable.field_f = new IndexedSprite[4];
           CharSequenceJoiner.field_c = new IndexedSprite[4];
-          nj.field_k = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{IterableNodeHashTable.field_f, CharSequenceJoiner.field_c, nj.field_k};
+          HighscoreRequest.field_k = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{IterableNodeHashTable.field_f, CharSequenceJoiner.field_c, HighscoreRequest.field_k};
           var17 = new int[4][];
           var15 = var17;
           var7 = var15;
@@ -3781,7 +3781,7 @@ final class PlatformActor extends GridActor {
           var13 = new Sprite(var16.width - var9Lifetime1 * 2, var9Lifetime1);
           var13.bindAsRasterTarget();
           var16.drawWithOffsets(-var9Lifetime1, 0);
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
           vf.field_j = new Sprite[]{var11, var13, var12};
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "eg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -3807,11 +3807,11 @@ final class PlatformActor extends GridActor {
         var5 = var5 - (this.field_d - 32);
         var6 = oc.field_b[param1];
         if (param1 == 4 &&
-          ql.field_c == 6) {
+          HuffmanDecoder.field_c == 6) {
           var6 = hh.field_eb;
         }
         if (param1 == 4 &&
-          7 == ql.field_c) {
+          7 == HuffmanDecoder.field_c) {
           var6 = MusicPatch.field_j;
         }
         if (this.field_p <= 0) {
@@ -3844,9 +3844,9 @@ final class PlatformActor extends GridActor {
               this.field_A = var5;
             }
             if (!(AccountCreationForm.field_T < 250) && (GridActor.field_l == 0 &&
-              ql.field_c == 0 &&
+              HuffmanDecoder.field_c == 0 &&
               AccountCreationForm.field_T < 400)) {
-              if (uc.field_g >= 20) {
+              if (ArchiveLoadingPlan.field_g >= 20) {
                 stackIn_21_1 = 16776960;
               } else {
                 stackIn_21_1 = 16711680;
@@ -3868,7 +3868,7 @@ final class PlatformActor extends GridActor {
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
-          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param0, 1, tl.field_a, pk.field_s, (byte) 126);
+          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param0, 1, tl.field_a, ReflectionCheck.field_s, (byte) 126);
           if (param1 > -73) {
             return;
           }
@@ -3881,13 +3881,13 @@ final class PlatformActor extends GridActor {
               38 != this.actorType &&
               64 >= this.field_d) {
               stackIn_13_0 = 0;
-              if (pk.field_s) {
+              if (ReflectionCheck.field_s) {
                 stackIn_14_1 = 0;
               } else {
                 stackIn_14_1 = 1;
               }
               if (stackIn_13_0 != stackIn_14_1) {
-                if (pk.field_s) {
+                if (ReflectionCheck.field_s) {
                   if (6 == this.actorType) {
                     tl.field_a.addSample(SpriteState.secondarySoundEffects[6], 100, 256 * ee.field_p / 100);
                   } else {
@@ -3924,12 +3924,12 @@ final class PlatformActor extends GridActor {
             this.field_s = this.field_s - 1;
             this.field_p = this.field_p - 1;
             if (this.field_p > 0) {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param2) {
                 this.c(1);
               }
             } else {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param2) {
                 this.c(false);
               }
@@ -3966,7 +3966,7 @@ final class PlatformActor extends GridActor {
             var6 = (GridPoint) null;
             this.initialize(81, 113, (GridPoint) null);
           }
-          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
+          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param2, 1, tl.field_a, ReflectionCheck.field_s, (byte) -37);
           if (this.verticalVelocity <= 0) {
             this.field_x = 3;
             this.field_z = 0;
@@ -3982,12 +3982,12 @@ final class PlatformActor extends GridActor {
             this.field_s = this.field_s - 1;
             this.field_p = this.field_p - 1;
             if (this.field_p > 0) {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(1);
               }
             } else {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(false);
               }
@@ -4026,20 +4026,20 @@ final class PlatformActor extends GridActor {
             this.field_x = 3;
           }
           if (param1 == 3) {
-            this.a(2, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
+            this.a(2, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, ReflectionCheck.field_s, (byte) 126);
           }
           if (param1 == 0) {
-            this.a(1, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
+            this.a(1, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, ReflectionCheck.field_s, (byte) 126);
           }
           if (param1 == 2) {
-            this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) -117);
+            this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, ReflectionCheck.field_s, (byte) -117);
           }
           if (param1 == 1) {
             if (this.tilePosition.row <= ii.field_e[0].tilePosition.row &&
               this.verticalVelocity == 0) {
-              this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 127);
+              this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, ReflectionCheck.field_s, (byte) 127);
             } else {
-              this.a(1, BufferedRandomAccessFile.soundEffects, param4, 1, param2, 1, tl.field_a, pk.field_s, (byte) -65);
+              this.a(1, BufferedRandomAccessFile.soundEffects, param4, 1, param2, 1, tl.field_a, ReflectionCheck.field_s, (byte) -65);
             }
           }
           this.field_z = this.field_z - 1;
@@ -4072,12 +4072,12 @@ final class PlatformActor extends GridActor {
             this.field_s = this.field_s - 1;
             this.field_p = this.field_p - 1;
             if (this.field_p > 0) {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(1);
               }
             } else {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(false);
               }
@@ -4086,12 +4086,12 @@ final class PlatformActor extends GridActor {
               return;
             }
             if (this.field_p <= 0) {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(false);
               }
             } else {
-              if (pk.field_s &&
+              if (ReflectionCheck.field_s &&
                 !param0) {
                 this.c(1);
               }

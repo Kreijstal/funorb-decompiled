@@ -44,7 +44,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = wizardrun.field_H;
         try {
-          this.field_o[this.field_a] = (byte)sd.a((int) this.field_o[this.field_a], 128 >>> ResourceArchive.b(7, this.field_p));
+          this.field_o[this.field_a] = (byte)LoginCredentialKind.bitOr((int) this.field_o[this.field_a], 128 >>> ResourceArchive.bitAnd(7, this.field_p));
           this.field_a = this.field_a + 1;
           if (this.field_a > 32) {
             while (this.field_a < 64) {
@@ -94,9 +94,9 @@ final class WhirlpoolHasher {
     }
 
     final static int a(String param0, int param1, String param2, String param3, int param4, int param5, boolean param6) {
-        ne var7 = null;
+        AccountFormText var7 = null;
         RuntimeException var7_ref = null;
-        ne var8 = null;
+        AccountFormText var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -107,8 +107,8 @@ final class WhirlpoolHasher {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new ne(param2);
-          var8 = new ne(param3);
+          var7 = new AccountFormText(param2);
+          var8 = new AccountFormText(param3);
           if (param5 != 0) {
             WhirlpoolHasher.releaseStatics((byte) 13);
           }
@@ -180,7 +180,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_c[var3Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2], TriangleMesh.field_A[var4][ResourceArchive.b((int)(this.field_n[ResourceArchive.b(7, var3Lifetime2 - var4)] >>> var5), 255)]);
+              this.field_c[var3Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2], TriangleMesh.field_A[var4][ResourceArchive.bitAnd((int)(this.field_n[ResourceArchive.bitAnd(7, var3Lifetime2 - var4)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -195,7 +195,7 @@ final class WhirlpoolHasher {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_c[var3Lifetime2Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2Lifetime2], TriangleMesh.field_A[var7][ResourceArchive.b(255, (int)(this.field_k[ResourceArchive.b(7, -var7 + var3Lifetime2Lifetime2)] >>> var5Lifetime1))]);
+              this.field_c[var3Lifetime2Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2Lifetime2], TriangleMesh.field_A[var7][ResourceArchive.bitAnd(255, (int)(this.field_k[ResourceArchive.bitAnd(7, -var7 + var3Lifetime2Lifetime2)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -257,7 +257,7 @@ final class WhirlpoolHasher {
             var8 = 255 & param1[var5_int] << var6 | (param1[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_o[this.field_a] = (byte)sd.a((int) this.field_o[this.field_a], var8 >>> var7);
+              this.field_o[this.field_a] = (byte)LoginCredentialKind.bitOr((int) this.field_o[this.field_a], var8 >>> var7);
               this.field_p = this.field_p + (8 - var7);
               this.field_a = this.field_a + 1;
               if (this.field_p == 512) {
@@ -265,7 +265,7 @@ final class WhirlpoolHasher {
                 this.field_p = 0;
                 this.field_a = 0;
               }
-              this.field_o[this.field_a] = (byte)ResourceArchive.b(var8 << -var7 + 8, 255);
+              this.field_o[this.field_a] = (byte)ResourceArchive.bitAnd(var8 << -var7 + 8, 255);
               var5_int++;
               this.field_p = this.field_p + var7;
               param0 = param0 - 8L;
@@ -277,7 +277,7 @@ final class WhirlpoolHasher {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_o[this.field_a] = (byte)sd.a((int) this.field_o[this.field_a], var8Lifetime1 >>> var7);
+            this.field_o[this.field_a] = (byte)LoginCredentialKind.bitOr((int) this.field_o[this.field_a], var8Lifetime1 >>> var7);
           }
           if (8L <= param0 + (long)var7) {
             this.field_a = this.field_a + 1;
@@ -288,7 +288,7 @@ final class WhirlpoolHasher {
               this.field_a = 0;
               this.field_p = 0;
             }
-            this.field_o[this.field_a] = (byte)ResourceArchive.b(var8Lifetime1 << 8 - var7, 255);
+            this.field_o[this.field_a] = (byte)ResourceArchive.bitAnd(var8Lifetime1 << 8 - var7, 255);
             this.field_p = this.field_p + (int)param0;
           } else {
             this.field_p = (int)((long)this.field_p + param0);

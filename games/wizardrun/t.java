@@ -25,7 +25,7 @@ final class t {
               GzipDecompressor.keyEventWriteIndex = lk.keyEventReadIndex;
             } else {
               while (GzipDecompressor.keyEventWriteIndex != lk.keyEventReadIndex) {
-                var2 = wd.keyEventQueue[lk.keyEventReadIndex];
+                var2 = NameAvailabilityRequest.keyEventQueue[lk.keyEventReadIndex];
                 lk.keyEventReadIndex = 127 & lk.keyEventReadIndex + 1;
                 if (var2 >= 0) {
                   BufferedSocket.field_p[var2] = true;

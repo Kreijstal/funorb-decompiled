@@ -5,15 +5,15 @@ import java.util.*;
 
 abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
     UiWidget field_F;
-    static ga field_z;
+    static IntegerSyntaxHelpers field_z;
     static ResourceArchive soundArchive;
     static ResourceArchive field_E;
     static MidiPcmStream field_D;
     static String field_C;
     static wc[] field_B;
-    static bh field_A;
+    static QuickChatDynamicCommand field_A;
 
-    void a(int param0, int param1, int param2, UiWidget param3) {
+    void updateInput(int param0, int param1, int param2, UiWidget param3) {
         boolean discarded$1 = false;
         UiWidget var6 = null;
         RuntimeException stackIn_7_0 = null;
@@ -22,9 +22,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0 + 0, param1, param2, param3);
+          super.updateInput(param0 + 0, param1, param2, param3);
           if (this.field_F != null) {
-            this.field_F.a(10000536, param1 + this.field_l, param2 + this.field_o, param3);
+            this.field_F.updateInput(10000536, param1 + this.y, param2 + this.x, param3);
           }
           if (param0 != 10000536) {
             var6 = (UiWidget) null;
@@ -45,7 +45,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    StringBuilder a(Hashtable param0, byte param1, int param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(Hashtable param0, byte param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -55,12 +55,12 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, param0, param2, true)) {
-            this.a(124, param2, param0, param3);
-            this.a(param3, param2, param0, (byte) -84);
+          if (this.beginDebugDescription(param3, param0, param2, true)) {
+            this.appendDebugProperties(124, param2, param0, param3);
+            this.appendChildDebugTree(param3, param2, param0, (byte) -84);
           }
           if (param1 != 102) {
-            this.a(81, -127, 4, 117);
+            this.drawLayer(81, -127, 4, 117);
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -95,7 +95,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
           if (param1 != 80) {
             this.getTooltip(false);
           }
-          stackIn_7_0 = (this.field_F != null) && (!this.field_F.d((byte) 53)) && (this.field_F.a(param0, param1 ^ 88));
+          stackIn_7_0 = (this.field_F != null) && (!this.field_F.isFocused((byte) 53)) && (this.field_F.requestFocus(param0, param1 ^ 88));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handleScrollInput(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -122,7 +122,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
           if (param1 != -23023) {
             field_E = (ResourceArchive) null;
           }
-          stackIn_7_0 = (this.field_F != null) && (this.field_F.d((byte) 53)) && (this.field_F.a(param0, param1 + 0, param2, param3, param4, param5, param6));
+          stackIn_7_0 = (this.field_F != null) && (this.field_F.isFocused((byte) 53)) && (this.field_F.handleScrollInput(param0, param1 + 0, param2, param3, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -149,7 +149,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
           if (param1 != 8) {
             return true;
           }
-          stackIn_7_0 = (null != this.field_F) && (this.field_F.a(param0, 8));
+          stackIn_7_0 = (null != this.field_F) && (this.field_F.requestFocus(param0, 8));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,7 +178,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
+    final static void readReflectionCheck(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -208,26 +208,26 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
           String var15 = null;
           String var16 = null;
           int var17 = 0;
-          pk var18 = null;
+          ReflectionCheck var18 = null;
           byte[][] var19 = null;
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
           var14 = wizardrun.field_H;
           try {
-            var18 = new pk();
+            var18 = new ReflectionCheck();
             if (param0 != -21284) {
-              field_z = (ga) null;
+              field_z = (IntegerSyntaxHelpers) null;
             }
-            var18.field_r = param1.readUnsignedByte(255);
-            var18.field_i = param1.readInt(255);
-            var18.field_l = new AsyncRequest[var18.field_r];
-            var18.field_k = new byte[var18.field_r][][];
-            var18.field_m = new AsyncRequest[var18.field_r];
-            var18.field_p = new int[var18.field_r];
-            var18.field_t = new int[var18.field_r];
-            var18.field_j = new int[var18.field_r];
-            for (var5 = 0; var18.field_r > var5; var5++) {
+            var18.operationCount = param1.readUnsignedByte(255);
+            var18.requestId = param1.readInt(255);
+            var18.fieldTasks = new AsyncRequest[var18.operationCount];
+            var18.serializedArguments = new byte[var18.operationCount][][];
+            var18.methodTasks = new AsyncRequest[var18.operationCount];
+            var18.fieldWriteValues = new int[var18.operationCount];
+            var18.operationTypes = new int[var18.operationCount];
+            var18.lookupErrors = new int[var18.operationCount];
+            for (var5 = 0; var18.operationCount > var5; var5++) {
               try {
                 var6_int = param1.readUnsignedByte(255);
                 if (var6_int != 0 &&
@@ -253,7 +253,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
                         param1.readBytes(true, var13, var21[var12_int], 0);
                       }
                     }
-                    var18.field_t[var5] = var6_int;
+                    var18.operationTypes[var5] = var6_int;
                     var12 = new Class[var9];
                     var17 = 0;
                     var13Lifetime1 = var17;
@@ -261,8 +261,8 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
                       var12[var17] = LoginForm.a(var10[var17], (byte) -39);
                       var17++;
                     }
-                    var18.field_m[var5] = param2.a(var8, var12, LoginForm.a(var20, (byte) -39), 3617);
-                    var18.field_k[var5] = var21;
+                    var18.methodTasks[var5] = param2.requestMethod(var8, var12, LoginForm.a(var20, (byte) -39), 3617);
+                    var18.serializedArguments[var5] = var21;
                   }
                 } else {
                   var15 = param1.readCp1252String(0);
@@ -273,30 +273,30 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
                   if (1 == var6_int) {
                     var9 = param1.readInt(255);
                   }
-                  var18.field_t[var5] = var6_int;
-                  var18.field_p[var5] = var9;
-                  var18.field_l[var5] = param2.a(-8024, LoginForm.a(var15, (byte) -39), var16);
+                  var18.operationTypes[var5] = var6_int;
+                  var18.fieldWriteValues[var5] = var9;
+                  var18.fieldTasks[var5] = param2.requestField(-8024, LoginForm.a(var15, (byte) -39), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                var18.field_j[var5] = -1;
+                var18.lookupErrors[var5] = -1;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                var18.field_j[var5] = -2;
+                var18.lookupErrors[var5] = -2;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                var18.field_j[var5] = -3;
+                var18.lookupErrors[var5] = -3;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                var18.field_j[var5] = -4;
+                var18.lookupErrors[var5] = -4;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
                 var6_ref4 = decompiledCaughtException;
-                var18.field_j[var5] = -5;
+                var18.lookupErrors[var5] = -5;
               }
             }
             kj.field_d.addLast(var18, false);
@@ -326,24 +326,24 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final int e(byte param0) {
+    final int getLastDrawLayer(byte param0) {
         boolean discarded$0 = false;
         if (param0 <= 23) {
           UiWidget var3 = (UiWidget) null;
           discarded$0 = this.a((UiWidget) null, (byte) 92);
         }
-        return null == this.field_F ? 0 : this.field_F.e((byte) 112);
+        return null == this.field_F ? 0 : this.field_F.getLastDrawLayer((byte) 112);
     }
 
-    final boolean d(byte param0) {
+    final boolean isFocused(byte param0) {
         if (param0 != 53) {
           UiWidget var3 = (UiWidget) null;
-          this.a('i', 63, (byte) -120, (UiWidget) null);
+          this.handleKeyPress('i', 63, (byte) -120, (UiWidget) null);
         }
-        return this.a((byte) -112) != null ? true : false;
+        return this.getFocusedChild((byte) -112) != null ? true : false;
     }
 
-    final static boolean a(CharSequence param0, boolean param1, int param2) {
+    final static boolean isValidDisplayName(CharSequence param0, boolean param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -353,7 +353,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         RuntimeException decompiledCaughtException = null;
         var4 = wizardrun.field_H;
         try {
-          if (!wd.a((byte) 43, param0, param1)) {
+          if (!NameAvailabilityRequest.isValidDisplayNameStructure((byte) 43, param0, param1)) {
             return false;
           }
           for (var3_int = param2; param0.length() > var3_int; var3_int++) {
@@ -376,7 +376,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
+    void handleMouseRelease(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -384,10 +384,10 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         RuntimeException var7 = null;
         try {
           if (null != this.field_F) {
-            this.field_F.a(this.field_o + param0, param1, param2 + this.field_l, param3, param4, 0);
+            this.field_F.handleMouseRelease(this.x + param0, param1, param2 + this.y, param3, param4, 0);
           }
           if (param5 != 0) {
-            this.e(14);
+            this.refreshChildLayout(14);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -404,16 +404,16 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param2 == 0 &&
-          null != this.field_w) {
-          this.field_w.drawWidget(param0, param3, (UiWidget) (this), true, true);
+          null != this.renderer) {
+          this.renderer.drawWidget(param0, param3, (UiWidget) (this), true, true);
         }
         if (this.field_F != null) {
-          this.field_F.a(param0 + this.field_o, 0, param2, param3 + this.field_l);
+          this.field_F.drawLayer(param0 + this.x, 0, param2, param3 + this.y);
         }
         if (param1 != 0) {
-          this.e((byte) 12);
+          this.getLastDrawLayer((byte) 12);
         }
     }
 
@@ -435,12 +435,12 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    void e(int param0) {
+    void refreshChildLayout(int param0) {
         if (this.field_F != null) {
-          this.field_F.c(117);
+          this.field_F.refreshLayout(117);
         }
         if (param0 != 81) {
-          field_A = (bh) null;
+          field_A = (QuickChatDynamicCommand) null;
         }
     }
 
@@ -453,9 +453,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 53) {
-            field_z = (ga) null;
+            field_z = (IntegerSyntaxHelpers) null;
           }
-          stackIn_7_0 = (null != this.field_F) && (!this.field_F.d((byte) 53)) && (this.field_F.a(param0, 8));
+          stackIn_7_0 = (null != this.field_F) && (!this.field_F.isFocused((byte) 53)) && (this.field_F.requestFocus(param0, 8));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -471,7 +471,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handleMousePress(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
@@ -481,7 +481,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = -3 % ((12 - param1) / 36);
-          stackIn_4_0 = (null != this.field_F) && (this.field_F.a(param0 + this.field_o, (byte) -64, param2, this.field_l + param3, param4, param5, param6));
+          stackIn_4_0 = (null != this.field_F) && (this.field_F.handleMousePress(param0 + this.x, (byte) -64, param2, this.y + param3, param4, param5, param6));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -497,7 +497,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder var6 = null;
@@ -509,11 +509,11 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         try {
           if (param2 >= -96) {
             var6 = (StringBuilder) null;
-            this.a((Hashtable) null, (byte) -43, -30, (StringBuilder) null);
+            this.appendDebugTree((Hashtable) null, (byte) -43, -30, (StringBuilder) null);
           }
           if (this.field_F != null &&
-            this.field_F.d((byte) 53) &&
-            this.field_F.a(param0, param1, (byte) -101, param3)) {
+            this.field_F.isFocused((byte) 53) &&
+            this.field_F.handleKeyPress(param0, param1, (byte) -101, param3)) {
             return true;
           }
           var5_int = param1;
@@ -540,39 +540,39 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(123, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(123, param1, param2, param3, param4);
         if (param0 < 108) {
           field_B = (wc[]) null;
         }
-        this.e(81);
+        this.refreshChildLayout(81);
     }
 
-    final void b(boolean param0) {
+    final void clearFocus(boolean param0) {
         if (this.field_F != null) {
-          this.field_F.b(false);
+          this.field_F.clearFocus(false);
         }
         if (param0) {
           field_B = (wc[]) null;
         }
     }
 
-    UiWidget a(byte param0) {
+    UiWidget getFocusedChild(byte param0) {
         UiWidget var2 = this.field_F;
         if (param0 > -29) {
           UiWidget var3 = (UiWidget) null;
-          this.a(-35, (byte) -44, -59, -12, 44, -70, (UiWidget) null);
+          this.handleMousePress(-35, (byte) -44, -59, -12, 44, -70, (UiWidget) null);
         }
         if (var2 == null) {
           return null;
         }
-        if (!var2.d((byte) 53)) {
+        if (!var2.isFocused((byte) 53)) {
           return null;
         }
         return var2;
     }
 
-    final void a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    final void appendChildDebugTree(StringBuilder param0, int param1, Hashtable param2, byte param3) {
         StringBuilder discarded$10 = null;
         int var6 = 0;
         StringBuilder discarded$12 = null;
@@ -594,7 +594,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
             discarded$12 = param0.append(' ');
           }
           if (this.field_F != null) {
-            this.field_F.a(param2, (byte) 102, 1 + param1, param0);
+            this.field_F.appendDebugTree(param2, (byte) 102, 1 + param1, param0);
           } else {
             discarded$11 = param0.append("null");
           }
@@ -624,8 +624,8 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
     }
 
     static {
-        field_z = new ga();
+        field_z = new IntegerSyntaxHelpers();
         field_C = "Unable to connect to the data server. Please check any firewall you are using.";
-        field_A = new bh(10, 2, 2, 0);
+        field_A = new QuickChatDynamicCommand(10, 2, 2, 0);
     }
 }

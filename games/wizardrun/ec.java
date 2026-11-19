@@ -13,7 +13,7 @@ final class ec {
 
     final static void a(ResourceArchive param0, byte param1, int param2, PcmStreamMixer param3) {
         try {
-          WidgetContainer.field_B = ih.a((byte) -109) * param2 / 1000;
+          WidgetContainer.field_B = ih.getTickRate((byte) -109) * param2 / 1000;
           StripedProgressBar.a(param0, -125);
           if (param1 > -61) {
             ec.releaseStatics(-127);

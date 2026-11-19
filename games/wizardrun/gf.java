@@ -13,12 +13,12 @@ abstract class gf extends ResizableDialog {
     private int field_U;
     private UiWidget field_cb;
     private int field_gb;
-    static rc field_ib;
+    static AccountConnectionState field_ib;
     static String field_Y;
     static Sprite field_bb;
     static ValidationState field_V;
 
-    boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -28,17 +28,17 @@ abstract class gf extends ResizableDialog {
           if (param2 > -96) {
             this.g(13);
           }
-          if (super.a(param0, param1, (byte) -120, param3)) {
+          if (super.handleKeyPress(param0, param1, (byte) -120, param3)) {
             return true;
           }
           if (null == this.field_ab) {
             return false;
           }
           if (param1 == 98) {
-            this.field_ab.a(param3, 8);
+            this.field_ab.requestFocus(param3, 8);
           }
           if (param1 == 99) {
-            this.field_ab.a(param3, 8);
+            this.field_ab.requestFocus(param3, 8);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,7 +77,7 @@ abstract class gf extends ResizableDialog {
     }
 
     final void j(int param0) {
-        if (this.field_db == sa.field_g) {
+        if (this.field_db == ArchiveLoadingStage.field_g) {
           return;
         }
         this.field_fb = 0;
@@ -85,7 +85,7 @@ abstract class gf extends ResizableDialog {
         this.a(this.field_cb, true);
         if (param0 != -8144) {
           UiWidget var3 = (UiWidget) null;
-          this.a('ﾭ', 97, (byte) -70, (UiWidget) null);
+          this.handleKeyPress('ﾭ', 97, (byte) -70, (UiWidget) null);
         }
         this.field_ab.field_G = 0;
         this.field_cb = null;
@@ -98,7 +98,7 @@ abstract class gf extends ResizableDialog {
     final void g(byte param0) {
         if (null != this.field_db) {
           if (this.field_db != lj.field_c) {
-            this.a(6154, this.field_cb.field_n + 12 + this.field_hb, 12 + this.field_cb.field_r);
+            this.a(6154, this.field_cb.height + 12 + this.field_hb, 12 + this.field_cb.width);
             this.a(this.field_cb, true);
           }
           this.field_ab.field_G = 256;
@@ -113,7 +113,7 @@ abstract class gf extends ResizableDialog {
             this.field_ab.unlink(false);
           }
           if (param0 != null) {
-            param0.a(127, this.field_hb + 6, param0.field_n, param0.field_r, 6);
+            param0.setBounds(127, this.field_hb + 6, param0.height, param0.width, 6);
             this.field_ab = new jc(param0);
           } else {
             this.field_ab = new jc();
@@ -129,19 +129,19 @@ abstract class gf extends ResizableDialog {
     }
 
     final static void h(byte param0) {
-        if (!qb.field_p) {
+        if (!FramedButtonPainter.field_p) {
           throw new IllegalStateException();
         }
         MessagePanel.field_M = true;
-        ml.a(11579568, false);
+        ArchiveRequest.a(11579568, false);
         if (param0 < 53) {
           gf.k(90);
         }
-        ml.field_t = 0;
+        ArchiveRequest.field_t = 0;
     }
 
     gf(DialogLayer param0, UiWidget param1, int param2, int param3, int param4) {
-        super(param0, param1.field_r + 12, param1.field_n + 12 + param2);
+        super(param0, param1.width + 12, param1.height + 12 + param2);
         try {
           this.field_U = param3;
           this.field_gb = param3;
@@ -218,11 +218,11 @@ abstract class gf extends ResizableDialog {
           var7Lifetime1 = 0;
           var8Lifetime1 = qj.a(-2942, var6Lifetime1) >> 8;
           var9Lifetime1 = wizardrun.a((byte) -39, var6Lifetime1) >> 8;
-          if (-1 != pg.field_n &&
-            fi.field_B != -1) {
-            var8Lifetime1 = 240 - fi.field_B;
+          if (-1 != AchievementSubmission.field_n &&
+            NetworkArchiveRequest.field_B != -1) {
+            var8Lifetime1 = 240 - NetworkArchiveRequest.field_B;
             var9Lifetime1 = -128;
-            var7Lifetime1 = pg.field_n - 320;
+            var7Lifetime1 = AchievementSubmission.field_n - 320;
           }
           if (param0 >= -113) {
             return;
@@ -249,9 +249,9 @@ abstract class gf extends ResizableDialog {
             var17 = NanoTickClock.field_f[var16];
             IterableNodeHashTable.a((byte) 115, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              ImageProducerRasterBuffer.field_m[var18] = ImageProducerRasterBuffer.field_m[var18] + cb.field_d[var15][var18];
+              ImageProducerRasterBuffer.field_m[var18] = ImageProducerRasterBuffer.field_m[var18] + BeveledFrameFactory.field_d[var15][var18];
             }
-            ae.a(false, (byte) 106, var17, true, ImageProducerRasterBuffer.field_m, false, ci.field_a);
+            EmailValidationError.a(false, (byte) 106, var17, true, ImageProducerRasterBuffer.field_m, false, ci.field_a);
             pi.a(var14, var12Lifetime1, var8Lifetime1, false, var9Lifetime1, var17, var7Lifetime1, var13Lifetime1);
           }
           return;
@@ -284,12 +284,12 @@ abstract class gf extends ResizableDialog {
             return;
           }
           if (vg.field_W != this.field_db) {
-            if (this.field_db != sa.field_g) {
-              this.field_db = sa.field_g;
+            if (this.field_db != ArchiveLoadingStage.field_g) {
+              this.field_db = ArchiveLoadingStage.field_g;
               this.field_fb = 0;
             }
           } else {
-            this.b(this.field_cb.field_r + 12, 12 + this.field_hb + this.field_cb.field_n, 0, this.field_Z);
+            this.b(this.field_cb.width + 12, 12 + this.field_hb + this.field_cb.height, 0, this.field_Z);
             this.field_fb = 0;
           }
           return;
@@ -313,14 +313,14 @@ abstract class gf extends ResizableDialog {
         int var3;
         var3 = wizardrun.field_H;
         if (null != this.field_db) {
-          if (this.field_db == sa.field_g) {
+          if (this.field_db == ArchiveLoadingStage.field_g) {
             fieldTemp$4 = this.field_fb + 1;
             this.field_fb = this.field_fb + 1;
             if (fieldTemp$4 != this.field_gb) {
               this.field_ab.field_G = -((this.field_fb << 8) / this.field_gb) + 256;
             } else {
               this.field_db = vg.field_W;
-              this.b(12 + this.field_cb.field_r, 12 - (-this.field_hb - this.field_cb.field_n), 0, this.field_Z);
+              this.b(12 + this.field_cb.width, 12 - (-this.field_hb - this.field_cb.height), 0, this.field_Z);
               this.field_ab.field_G = 0;
               this.field_fb = 0;
             }
@@ -346,7 +346,7 @@ abstract class gf extends ResizableDialog {
     static {
         field_eb = new String[]{"Showing by rating", "Showing by win percentage"};
         field_X = "Discard";
-        field_ib = new rc();
+        field_ib = new AccountConnectionState();
         field_V = new ValidationState();
     }
 }

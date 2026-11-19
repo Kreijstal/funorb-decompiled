@@ -3,9 +3,9 @@
  */
 final class ValidationState {
     static Sprite[] selectStarSprites;
-    static ae field_f;
+    static EmailValidationError field_f;
     static Sprite[][][] field_e;
-    static te field_c;
+    static AchievementStateRequest field_c;
     static float loadingProgress;
     static Sprite[] field_a;
 
@@ -79,6 +79,6 @@ final class ValidationState {
 
     static {
         selectStarSprites = new Sprite[3];
-        field_f = new ae();
+        field_f = new EmailValidationError();
     }
 }

@@ -20,25 +20,25 @@ final class ve {
         RuntimeException decompiledCaughtException = null;
         var5 = wizardrun.field_H;
         try {
-          fi.field_y = SingleChildWidget.field_z;
+          NetworkArchiveRequest.field_y = SingleChildWidget.field_z;
           if (param2 >= -96) {
             pressedButton = -13;
           }
           if (255 != param3) {
             if (param3 < 100) {
-              LoginChoicePanel.field_F = hf.a(-105, param0, param3);
+              LoginChoicePanel.field_F = ProxyAuthenticationException.a(-105, param0, param3);
               return;
             }
             if (105 >= param3) {
-              LoginChoicePanel.field_F = rc.a(param1, (byte) -77);
+              LoginChoicePanel.field_F = AccountConnectionState.createNameSuggestions(param1, (byte) -77);
               return;
             }
-            LoginChoicePanel.field_F = hf.a(-105, param0, param3);
+            LoginChoicePanel.field_F = ProxyAuthenticationException.a(-105, param0, param3);
             return;
           }
           stackIn_12_0 = -29309;
           stackIn_13_1 = !(QuickChatPhraseDefinition.field_t >= 13);
-          LoginChoicePanel.field_F = ii.a(stackIn_12_0, stackIn_13_1);
+          LoginChoicePanel.field_F = ii.createAvailableNameResult(stackIn_12_0, stackIn_13_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,12 +85,12 @@ final class ve {
           if (param1 == -1) {
             return true;
           }
-          return (1 << param1 & uh.field_a) != 0 ? true : false;
+          return (1 << param1 & LoginCredentials.field_a) != 0 ? true : false;
         }
         if (param1 == -1) {
           return true;
         }
-        return (1 << param1 & uh.field_a) != 0 ? true : false;
+        return (1 << param1 & LoginCredentials.field_a) != 0 ? true : false;
     }
 
     static {

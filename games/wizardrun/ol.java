@@ -43,7 +43,7 @@ final class ol {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
-          pj.field_M = param1;
+          DraggableWidget.field_M = param1;
           if (param2 < 98) {
             field_e = true;
           }
@@ -75,8 +75,8 @@ final class ol {
             if (param2 < 35) {
               field_d = (String) null;
             }
-            param1.position = param1.position + SettingsCookieReader.field_d.a(false, 0, var4, var3_int, param1.position, param1.payload);
-            var5 = bi.a(0, var3_int, var4, false);
+            param1.position = param1.position + SettingsCookieReader.field_d.decode(false, 0, var4, var3_int, param1.position, param1.payload);
+            var5 = Cp1252DecodingHelpers.decodeCp1252(0, var3_int, var4, false);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -109,9 +109,9 @@ final class ol {
           int stackIn_12_0 = 0;
           Throwable decompiledCaughtException = null;
           if (IntrusiveNodeHashTable.field_h == null) {
-            IntrusiveNodeHashTable.field_h = Base37Codec.field_e.a(aa.field_nb, vl.field_d, (byte) -20);
+            IntrusiveNodeHashTable.field_h = Base37Codec.field_e.requestSocket(aa.field_nb, vl.field_d, (byte) -20);
           }
-          if (IntrusiveNodeHashTable.field_h.field_a == 0) {
+          if (IntrusiveNodeHashTable.field_h.status == 0) {
             return false;
           }
           dupTemp$1 = MonotonicClockHelpers.monotonicMillis((byte) 119);
@@ -121,11 +121,11 @@ final class ol {
             var3 = (ResourceArchive) null;
             ol.a((ResourceArchive) null, (ResourceArchive) null, (byte) -16);
           }
-          if (IntrusiveNodeHashTable.field_h.field_a != 1) {
-            NodeHashTableIterator.field_j = sf.field_i;
+          if (IntrusiveNodeHashTable.field_h.status != 1) {
+            NodeHashTableIterator.field_j = EmailCheckRequest.field_i;
           } else {
             try {
-              jc.field_H = new BufferedSocket((java.net.Socket) (IntrusiveNodeHashTable.field_h.field_e), Base37Codec.field_e);
+              jc.field_H = new BufferedSocket((java.net.Socket) (IntrusiveNodeHashTable.field_h.result), Base37Codec.field_e);
               n.field_b.position = 0;
               var5 = AccountCreationForm.field_N;
               var6 = var5;
@@ -135,12 +135,12 @@ final class ol {
               ValidationHelpWidget.field_P = stackIn_12_0;
               wizardrun.field_E = stackIn_12_0;
               me.field_c = stackIn_12_0;
-              DiskCacheWorker.a(bl.field_a, n.field_b, 20443, MidiNote.field_l, RasterBuffer.field_a);
-              id.a((byte) -67, -1);
+              DiskCacheWorker.writeConnectionPreamble(TextWrappingHelpers.field_a, n.field_b, 20443, MidiNote.field_l, RasterBuffer.field_a);
+              id.flushAccountPackets((byte) -67, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              NodeHashTableIterator.field_j = sf.field_i;
+              NodeHashTableIterator.field_j = EmailCheckRequest.field_i;
               IntrusiveNodeHashTable.field_h = null;
               return true;
             }

@@ -31,7 +31,7 @@ final class se {
             var5 = var9;
             var6 = param0;
             var7 = param2;
-            var9[var6] = var7 + (ResourceArchive.b(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (ResourceArchive.bitAnd(var9[var6], 16711422) >> 1);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ final class se {
             return stackIn_2_0;
           }
           if (MusicPatch.a(param0, param2, param1, -124)) {
-            return SocketJs5Transport.g(0);
+            return SocketJs5Transport.buildFirstDecodedSprite(0);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

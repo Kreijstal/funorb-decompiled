@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ExceptionSupport {
-    static rc field_b;
+    static AccountConnectionState field_b;
     static IntrusiveDeque field_a;
     static Sprite[] field_c;
 
@@ -22,21 +22,21 @@ final class ExceptionSupport {
           return true;
         }
         if (DelegatingCanvas.field_c == -1) {
-          if (!hc.a(1, -28266)) {
+          if (!ConfirmedEmailValidator.ensureAccountResponseBytes(1, -28266)) {
             return false;
           }
           DelegatingCanvas.field_c = AccountCreationForm.field_N.readUnsignedByte(255);
           AccountCreationForm.field_N.position = 0;
         }
         if (DelegatingCanvas.field_c == -2) {
-          if (hc.a(2, -28266)) {
+          if (ConfirmedEmailValidator.ensureAccountResponseBytes(2, -28266)) {
             DelegatingCanvas.field_c = AccountCreationForm.field_N.readUnsignedShort(-14477);
             AccountCreationForm.field_N.position = 0;
-            return hc.a(DelegatingCanvas.field_c, -28266);
+            return ConfirmedEmailValidator.ensureAccountResponseBytes(DelegatingCanvas.field_c, -28266);
           }
           return false;
         }
-        return hc.a(DelegatingCanvas.field_c, -28266);
+        return ConfirmedEmailValidator.ensureAccountResponseBytes(DelegatingCanvas.field_c, -28266);
     }
 
     public static void releaseStatics(int param0) {
@@ -60,11 +60,11 @@ final class ExceptionSupport {
           WeightedLruCache.a(true, true, 117);
           return;
         }
-        field_b = (rc) null;
+        field_b = (AccountConnectionState) null;
         WeightedLruCache.a(true, true, 117);
     }
 
     static {
-        field_b = new rc();
+        field_b = new AccountConnectionState();
     }
 }

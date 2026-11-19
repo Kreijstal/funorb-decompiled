@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
-    static bh field_f;
+    static QuickChatDynamicCommand field_f;
     static ProgressDialog field_e;
     private java.net.ProxySelector field_g;
 
@@ -35,2993 +35,2993 @@ final class ProxySocketConnector extends SocketConnector {
                 this.var3 = 0;
             }
             void loadLoginAccountAndReportTexts() throws java.lang.RuntimeException {
-                qb.field_r = param1;
-                var2 = ra.a("loginm3", (byte) -113);
+                FramedButtonPainter.field_r = param1;
+                var2 = ra.loadNamedResource("loginm3", (byte) -113);
                 if (var2 != null) {
-                  sa.field_b = nf.a((byte) 115, var2);
+                  ArchiveLoadingStage.field_b = nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("loginm2", (byte) -114);
+                var2 = ra.loadNamedResource("loginm2", (byte) -114);
                 if (var2 != null) {
                   TextLayoutLine.field_d = nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("loginm1", (byte) -108);
+                var2 = ra.loadNamedResource("loginm1", (byte) -108);
                 if (null != var2) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("idlemessage20min", (byte) -99);
+                var2 = ra.loadNamedResource("idlemessage20min", (byte) -99);
                 if (null != var2) {
                   RasterBuffer.field_e = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("error_js5crc", (byte) -115);
+                var2 = ra.loadNamedResource("error_js5crc", (byte) -115);
                 if (var2 != null) {
-                  ai.field_r = nf.a((byte) 106, var2);
+                  ScoreSubmission.field_r = nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("error_js5io", (byte) -102);
+                var2 = ra.loadNamedResource("error_js5io", (byte) -102);
                 if (var2 != null) {
                   ld.field_f = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("error_js5connect_full", (byte) -109);
+                var2 = ra.loadNamedResource("error_js5connect_full", (byte) -109);
                 if (var2 != null) {
-                  ne.field_d = nf.a((byte) 100, var2);
+                  AccountFormText.field_d = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("error_js5connect", (byte) -118);
+                var2 = ra.loadNamedResource("error_js5connect", (byte) -118);
                 if (var2 != null) {
                   SingleChildWidget.field_C = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("login_gameupdated", (byte) -110);
+                var2 = ra.loadNamedResource("login_gameupdated", (byte) -110);
                 if (var2 != null) {
                   LoginChoicePanel.field_L = nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("create_unable", (byte) -119);
+                var2 = ra.loadNamedResource("create_unable", (byte) -119);
                 if (var2 != null) {
                   ii.field_b = nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("create_ineligible", (byte) -113);
+                var2 = ra.loadNamedResource("create_ineligible", (byte) -113);
                 if (null != var2) {
                   tk.field_f = nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("usernameprompt", (byte) -106);
+                var2 = ra.loadNamedResource("usernameprompt", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("passwordprompt", (byte) -126);
+                var2 = ra.loadNamedResource("passwordprompt", (byte) -126);
                 if (var2 != null) {
                   nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("andagainprompt", (byte) -98);
+                var2 = ra.loadNamedResource("andagainprompt", (byte) -98);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("ticketing_read", (byte) -124);
+                var2 = ra.loadNamedResource("ticketing_read", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("ticketing_ignore", (byte) -117);
+                var2 = ra.loadNamedResource("ticketing_ignore", (byte) -117);
                 if (var2 != null) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("ticketing_oneunread", (byte) -121);
+                var2 = ra.loadNamedResource("ticketing_oneunread", (byte) -121);
                 if (var2 != null) {
                   SocketConnector.field_d = nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("ticketing_xunread", (byte) -115);
+                var2 = ra.loadNamedResource("ticketing_xunread", (byte) -115);
                 if (var2 != null) {
                   of.field_m = nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("ticketing_gotowebsite", (byte) -111);
+                var2 = ra.loadNamedResource("ticketing_gotowebsite", (byte) -111);
                 if (null != var2) {
                   IntrusiveDequeCursor.field_c = nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("ticketing_waitingformessages", (byte) -118);
+                var2 = ra.loadNamedResource("ticketing_waitingformessages", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("mu_chat_on", (byte) -115);
+                var2 = ra.loadNamedResource("mu_chat_on", (byte) -115);
                 if (var2 != null) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("mu_chat_friends", (byte) -120);
+                var2 = ra.loadNamedResource("mu_chat_friends", (byte) -120);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("mu_chat_off", (byte) -116);
+                var2 = ra.loadNamedResource("mu_chat_off", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("mu_chat_lobby", (byte) -117);
+                var2 = ra.loadNamedResource("mu_chat_lobby", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("mu_chat_public", (byte) -115);
+                var2 = ra.loadNamedResource("mu_chat_public", (byte) -115);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("mu_chat_ignore", (byte) -98);
+                var2 = ra.loadNamedResource("mu_chat_ignore", (byte) -98);
                 if (null != var2) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("mu_chat_tips", (byte) -127);
+                var2 = ra.loadNamedResource("mu_chat_tips", (byte) -127);
                 if (var2 != null) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("mu_chat_game", (byte) -128);
+                var2 = ra.loadNamedResource("mu_chat_game", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("mu_chat_private", (byte) -107);
+                var2 = ra.loadNamedResource("mu_chat_private", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("mu_x_entered_game", (byte) -115);
+                var2 = ra.loadNamedResource("mu_x_entered_game", (byte) -115);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("mu_x_joined_your_game", (byte) -111);
+                var2 = ra.loadNamedResource("mu_x_joined_your_game", (byte) -111);
                 if (null != var2) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("mu_x_entered_other_game", (byte) -103);
+                var2 = ra.loadNamedResource("mu_x_entered_other_game", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("mu_x_left_lobby", (byte) -95);
+                var2 = ra.loadNamedResource("mu_x_left_lobby", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mu_x_lost_con", (byte) -103);
+                var2 = ra.loadNamedResource("mu_x_lost_con", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("mu_x_cannot_join_full", (byte) -117);
+                var2 = ra.loadNamedResource("mu_x_cannot_join_full", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("mu_x_cannot_join_inprogress", (byte) -110);
+                var2 = ra.loadNamedResource("mu_x_cannot_join_inprogress", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("mu_x_declined_invite", (byte) -98);
+                var2 = ra.loadNamedResource("mu_x_declined_invite", (byte) -98);
                 if (null != var2) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("mu_x_withdrew_request", (byte) -106);
+                var2 = ra.loadNamedResource("mu_x_withdrew_request", (byte) -106);
                 if (var2 != null) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("mu_x_removed", (byte) -111);
+                var2 = ra.loadNamedResource("mu_x_removed", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("mu_x_dropped_out", (byte) -98);
+                var2 = ra.loadNamedResource("mu_x_dropped_out", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("mu_entered_other_game", (byte) -100);
+                var2 = ra.loadNamedResource("mu_entered_other_game", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("mu_game_is_full", (byte) -119);
+                var2 = ra.loadNamedResource("mu_game_is_full", (byte) -119);
                 if (null != var2) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("mu_game_has_started", (byte) -113);
+                var2 = ra.loadNamedResource("mu_game_has_started", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("mu_you_declined_invite", (byte) -108);
+                var2 = ra.loadNamedResource("mu_you_declined_invite", (byte) -108);
                 if (var2 != null) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("mu_invite_withdrawn", (byte) -119);
+                var2 = ra.loadNamedResource("mu_invite_withdrawn", (byte) -119);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("mu_request_declined", (byte) -109);
+                var2 = ra.loadNamedResource("mu_request_declined", (byte) -109);
                 if (null != var2) {
                   nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("mu_request_withdrawn", (byte) -127);
+                var2 = ra.loadNamedResource("mu_request_withdrawn", (byte) -127);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("mu_all_players_have_left", (byte) -101);
+                var2 = ra.loadNamedResource("mu_all_players_have_left", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("mu_lobby_name", (byte) -123);
+                var2 = ra.loadNamedResource("mu_lobby_name", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("mu_lobby_rating", (byte) -125);
+                var2 = ra.loadNamedResource("mu_lobby_rating", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("mu_lobby_friend_add", (byte) -106);
+                var2 = ra.loadNamedResource("mu_lobby_friend_add", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("mu_lobby_friend_rm", (byte) -122);
+                var2 = ra.loadNamedResource("mu_lobby_friend_rm", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("mu_lobby_name_add", (byte) -100);
+                var2 = ra.loadNamedResource("mu_lobby_name_add", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("mu_lobby_name_rm", (byte) -110);
+                var2 = ra.loadNamedResource("mu_lobby_name_rm", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("mu_lobby_location", (byte) -114);
+                var2 = ra.loadNamedResource("mu_lobby_location", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("mu_gamelist_all_games", (byte) -101);
+                var2 = ra.loadNamedResource("mu_gamelist_all_games", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("mu_gamelist_status", (byte) -110);
+                var2 = ra.loadNamedResource("mu_gamelist_status", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("mu_gamelist_owner", (byte) -119);
+                var2 = ra.loadNamedResource("mu_gamelist_owner", (byte) -119);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("mu_gamelist_players", (byte) -124);
+                var2 = ra.loadNamedResource("mu_gamelist_players", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("mu_gamelist_avg_rating", (byte) -118);
+                var2 = ra.loadNamedResource("mu_gamelist_avg_rating", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("mu_gamelist_options", (byte) -116);
+                var2 = ra.loadNamedResource("mu_gamelist_options", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("mu_gamelist_elapsed_time", (byte) -111);
+                var2 = ra.loadNamedResource("mu_gamelist_elapsed_time", (byte) -111);
                 if (null != var2) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("mu_play_rated", (byte) -123);
+                var2 = ra.loadNamedResource("mu_play_rated", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("mu_create_unrated", (byte) -117);
+                var2 = ra.loadNamedResource("mu_create_unrated", (byte) -117);
                 if (var2 != null) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("mu_options", (byte) -96);
+                var2 = ra.loadNamedResource("mu_options", (byte) -96);
                 if (null != var2) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("mu_options_whocanjoin", (byte) -107);
+                var2 = ra.loadNamedResource("mu_options_whocanjoin", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("mu_options_players", (byte) -109);
+                var2 = ra.loadNamedResource("mu_options_players", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("mu_options_dontmind", (byte) -126);
+                var2 = ra.loadNamedResource("mu_options_dontmind", (byte) -126);
                 if (null != var2) {
                   nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("mu_options_allow_spectate", (byte) -126);
+                var2 = ra.loadNamedResource("mu_options_allow_spectate", (byte) -126);
                 if (null != var2) {
                   nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("mu_options_ratedgametype", (byte) -115);
+                var2 = ra.loadNamedResource("mu_options_ratedgametype", (byte) -115);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("yes", (byte) -122);
+                var2 = ra.loadNamedResource("yes", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("no", (byte) -124);
+                var2 = ra.loadNamedResource("no", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("mu_invite_players", (byte) -113);
+                var2 = ra.loadNamedResource("mu_invite_players", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("close", (byte) -104);
+                var2 = ra.loadNamedResource("close", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("add_x_to_friends", (byte) -120);
+                var2 = ra.loadNamedResource("add_x_to_friends", (byte) -120);
                 if (null != var2) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("add_x_to_ignore", (byte) -114);
+                var2 = ra.loadNamedResource("add_x_to_ignore", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("rm_x_from_friends", (byte) -103);
+                var2 = ra.loadNamedResource("rm_x_from_friends", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("rm_x_from_ignore", (byte) -117);
+                var2 = ra.loadNamedResource("rm_x_from_ignore", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("send_pm_to_x", (byte) -111);
+                var2 = ra.loadNamedResource("send_pm_to_x", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("send_qc_to_x", (byte) -118);
+                var2 = ra.loadNamedResource("send_qc_to_x", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("send_pm", (byte) -111);
+                var2 = ra.loadNamedResource("send_pm", (byte) -111);
                 if (null != var2) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("invite_accept_xs_game", (byte) -101);
+                var2 = ra.loadNamedResource("invite_accept_xs_game", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("invite_decline_xs_game", (byte) -106);
+                var2 = ra.loadNamedResource("invite_decline_xs_game", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("join_xs_game", (byte) -110);
+                var2 = ra.loadNamedResource("join_xs_game", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("join_request_xs_game", (byte) -128);
+                var2 = ra.loadNamedResource("join_request_xs_game", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("join_withdraw_request_xs_game", (byte) -95);
+                var2 = ra.loadNamedResource("join_withdraw_request_xs_game", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("mu_gameopt_kick_x_from_this_game", (byte) -124);
+                var2 = ra.loadNamedResource("mu_gameopt_kick_x_from_this_game", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
                 if (param0 != 0) {
                   finished = true; return;
                 }
-                var2 = ra.a("mu_gameopt_withdraw_invite_to_x", (byte) -98);
+                var2 = ra.loadNamedResource("mu_gameopt_withdraw_invite_to_x", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("mu_gameopt_accept_x_into_game", (byte) -120);
+                var2 = ra.loadNamedResource("mu_gameopt_accept_x_into_game", (byte) -120);
                 if (null != var2) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("mu_gameopt_reject_x_from_game", (byte) -100);
+                var2 = ra.loadNamedResource("mu_gameopt_reject_x_from_game", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mu_gameopt_invite_x_to_game", (byte) -107);
+                var2 = ra.loadNamedResource("mu_gameopt_invite_x_to_game", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("report_x_for_abuse", (byte) -118);
+                var2 = ra.loadNamedResource("report_x_for_abuse", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("unable_to_send_message_password_a", (byte) -111);
+                var2 = ra.loadNamedResource("unable_to_send_message_password_a", (byte) -111);
                 if (null != var2) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("unable_to_send_message_password_b", (byte) -127);
+                var2 = ra.loadNamedResource("unable_to_send_message_password_b", (byte) -127);
                 if (null != var2) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("mu_chat_lobby_show_all", (byte) -98);
+                var2 = ra.loadNamedResource("mu_chat_lobby_show_all", (byte) -98);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mu_chat_lobby_friends_only", (byte) -128);
+                var2 = ra.loadNamedResource("mu_chat_lobby_friends_only", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("mu_chat_lobby_friends", (byte) -100);
+                var2 = ra.loadNamedResource("mu_chat_lobby_friends", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mu_chat_lobby_hide", (byte) -119);
+                var2 = ra.loadNamedResource("mu_chat_lobby_hide", (byte) -119);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mu_chat_game_show_all", (byte) -112);
+                var2 = ra.loadNamedResource("mu_chat_game_show_all", (byte) -112);
                 if (null != var2) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("mu_chat_game_friends_only", (byte) -114);
+                var2 = ra.loadNamedResource("mu_chat_game_friends_only", (byte) -114);
                 if (var2 != null) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("mu_chat_game_friends", (byte) -99);
+                var2 = ra.loadNamedResource("mu_chat_game_friends", (byte) -99);
                 if (var2 != null) {
                   nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("mu_chat_game_hide", (byte) -113);
+                var2 = ra.loadNamedResource("mu_chat_game_hide", (byte) -113);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("mu_chat_pm_show_all", (byte) -110);
+                var2 = ra.loadNamedResource("mu_chat_pm_show_all", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("mu_chat_pm_friends_only", (byte) -119);
+                var2 = ra.loadNamedResource("mu_chat_pm_friends_only", (byte) -119);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("mu_chat_pm_friends", (byte) -104);
+                var2 = ra.loadNamedResource("mu_chat_pm_friends", (byte) -104);
                 if (var2 != null) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("mu_chat_invisible_and_silent_mode", (byte) -96);
+                var2 = ra.loadNamedResource("mu_chat_invisible_and_silent_mode", (byte) -96);
                 if (null != var2) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("you_have_been_removed_from_xs_game", (byte) -100);
+                var2 = ra.loadNamedResource("you_have_been_removed_from_xs_game", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("your_rating_is_x", (byte) -110);
+                var2 = ra.loadNamedResource("your_rating_is_x", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("you_are_on_x_server", (byte) -122);
+                var2 = ra.loadNamedResource("you_are_on_x_server", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("rated_game", (byte) -122);
+                var2 = ra.loadNamedResource("rated_game", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("unrated_game", (byte) -102);
+                var2 = ra.loadNamedResource("unrated_game", (byte) -102);
                 if (var2 != null) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("rated_game_tips", (byte) -107);
+                var2 = ra.loadNamedResource("rated_game_tips", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("searching_for_opponent_singular", (byte) -122);
+                var2 = ra.loadNamedResource("searching_for_opponent_singular", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("searching_for_opponents_plural", (byte) -99);
+                var2 = ra.loadNamedResource("searching_for_opponents_plural", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("find_opponent_singular", (byte) -102);
+                var2 = ra.loadNamedResource("find_opponent_singular", (byte) -102);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("find_opponents_plural", (byte) -95);
+                var2 = ra.loadNamedResource("find_opponents_plural", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("rated_game_tips_setup_singular", (byte) -128);
+                var2 = ra.loadNamedResource("rated_game_tips_setup_singular", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("rated_game_tips_setup_plural", (byte) -99);
+                var2 = ra.loadNamedResource("rated_game_tips_setup_plural", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("waiting_to_start_hint", (byte) -123);
+                var2 = ra.loadNamedResource("waiting_to_start_hint", (byte) -123);
                 if (var2 != null) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("your_game", (byte) -107);
+                var2 = ra.loadNamedResource("your_game", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("game_full", (byte) -125);
+                var2 = ra.loadNamedResource("game_full", (byte) -125);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("join_requests_one", (byte) -100);
+                var2 = ra.loadNamedResource("join_requests_one", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("join_requests_many", (byte) -116);
+                var2 = ra.loadNamedResource("join_requests_many", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("xs_game", (byte) -99);
+                var2 = ra.loadNamedResource("xs_game", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("waiting_for_x_to_start_game", (byte) -107);
+                var2 = ra.loadNamedResource("waiting_for_x_to_start_game", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("game_options_changed", (byte) -118);
+                var2 = ra.loadNamedResource("game_options_changed", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("players_x_of_y", (byte) -118);
+                var2 = ra.loadNamedResource("players_x_of_y", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("message_lobby", (byte) -116);
+                var2 = ra.loadNamedResource("message_lobby", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("quickchat_lobby", (byte) -110);
+                var2 = ra.loadNamedResource("quickchat_lobby", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("message_game", (byte) -105);
+                var2 = ra.loadNamedResource("message_game", (byte) -105);
                 if (var2 != null) {
                   nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("message_team", (byte) -128);
+                var2 = ra.loadNamedResource("message_team", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("quickchat_game", (byte) -128);
+                var2 = ra.loadNamedResource("quickchat_game", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("kick", (byte) -125);
+                var2 = ra.loadNamedResource("kick", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("inviting_x", (byte) -101);
+                var2 = ra.loadNamedResource("inviting_x", (byte) -101);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("x_wants_to_join", (byte) -105);
+                var2 = ra.loadNamedResource("x_wants_to_join", (byte) -105);
                 if (var2 != null) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("accept", (byte) -99);
+                var2 = ra.loadNamedResource("accept", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("reject", (byte) -104);
+                var2 = ra.loadNamedResource("reject", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("invite", (byte) -108);
+                var2 = ra.loadNamedResource("invite", (byte) -108);
                 if (var2 != null) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("status_concluded", (byte) -98);
+                var2 = ra.loadNamedResource("status_concluded", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("status_spectate", (byte) -120);
+                var2 = ra.loadNamedResource("status_spectate", (byte) -120);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("status_playing", (byte) -125);
+                var2 = ra.loadNamedResource("status_playing", (byte) -125);
                 if (null != var2) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("status_join", (byte) -116);
+                var2 = ra.loadNamedResource("status_join", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("status_private", (byte) -127);
+                var2 = ra.loadNamedResource("status_private", (byte) -127);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("status_full", (byte) -97);
+                var2 = ra.loadNamedResource("status_full", (byte) -97);
                 if (var2 != null) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("players_in_game", (byte) -98);
+                var2 = ra.loadNamedResource("players_in_game", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("you_are_invited_to_xs_game", (byte) -109);
+                var2 = ra.loadNamedResource("you_are_invited_to_xs_game", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("asking_to_join_xs_game", (byte) -103);
+                var2 = ra.loadNamedResource("asking_to_join_xs_game", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("who_can_join", (byte) -97);
+                var2 = ra.loadNamedResource("who_can_join", (byte) -97);
                 if (null != var2) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("you_can_join", (byte) -113);
+                var2 = ra.loadNamedResource("you_can_join", (byte) -113);
                 if (null != var2) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("you_can_ask_to_join", (byte) -118);
+                var2 = ra.loadNamedResource("you_can_ask_to_join", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("you_cannot_join_in_progress", (byte) -95);
+                var2 = ra.loadNamedResource("you_cannot_join_in_progress", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("you_can_spectate", (byte) -96);
+                var2 = ra.loadNamedResource("you_can_spectate", (byte) -96);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("you_can_not_spectate", (byte) -124);
+                var2 = ra.loadNamedResource("you_can_not_spectate", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("spectate_xs_game", (byte) -111);
+                var2 = ra.loadNamedResource("spectate_xs_game", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("hide_players_in_xs_game", (byte) -111);
+                var2 = ra.loadNamedResource("hide_players_in_xs_game", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("show_players_in_xs_game", (byte) -115);
+                var2 = ra.loadNamedResource("show_players_in_xs_game", (byte) -115);
                 if (null != var2) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("connecting_to_friend_server_twoline", (byte) -112);
+                var2 = ra.loadNamedResource("connecting_to_friend_server_twoline", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("loading", (byte) -108);
+                var2 = ra.loadNamedResource("loading", (byte) -108);
                 if (null != var2) {
                   NameSuggestionsPanel.field_G = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("offline", (byte) -106);
+                var2 = ra.loadNamedResource("offline", (byte) -106);
                 if (var2 != null) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("multiconst_invite_only", (byte) -113);
+                var2 = ra.loadNamedResource("multiconst_invite_only", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("multiconst_clan", (byte) -103);
+                var2 = ra.loadNamedResource("multiconst_clan", (byte) -103);
                 if (null != var2) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("multiconst_friends", (byte) -111);
+                var2 = ra.loadNamedResource("multiconst_friends", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("multiconst_similar_rating", (byte) -106);
+                var2 = ra.loadNamedResource("multiconst_similar_rating", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("multiconst_open", (byte) -110);
+                var2 = ra.loadNamedResource("multiconst_open", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("no_options_available", (byte) -113);
+                var2 = ra.loadNamedResource("no_options_available", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("reportabuse", (byte) -100);
+                var2 = ra.loadNamedResource("reportabuse", (byte) -100);
                 if (var2 != null) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("presstabtochat", (byte) -124);
+                var2 = ra.loadNamedResource("presstabtochat", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("pressf10toquickchat", (byte) -98);
+                var2 = ra.loadNamedResource("pressf10toquickchat", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("dob_chatdisabled", (byte) -95);
+                var2 = ra.loadNamedResource("dob_chatdisabled", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("dob_enterforchat", (byte) -117);
+                var2 = ra.loadNamedResource("dob_enterforchat", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("tab_hidechattemporarily", (byte) -107);
+                var2 = ra.loadNamedResource("tab_hidechattemporarily", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("esc_cancelprivatemessage", (byte) -106);
+                var2 = ra.loadNamedResource("esc_cancelprivatemessage", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("esc_cancelthisline", (byte) -118);
+                var2 = ra.loadNamedResource("esc_cancelthisline", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("privatequickchat_from_x", (byte) -112);
+                var2 = ra.loadNamedResource("privatequickchat_from_x", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("privatequickchat_to_x", (byte) -121);
+                var2 = ra.loadNamedResource("privatequickchat_to_x", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("privatechat_blankarea_explanation", (byte) -118);
+                var2 = ra.loadNamedResource("privatechat_blankarea_explanation", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("publicchat_unavailable_ratedgame", (byte) -112);
+                var2 = ra.loadNamedResource("publicchat_unavailable_ratedgame", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("privatechat_friend_offline", (byte) -99);
+                var2 = ra.loadNamedResource("privatechat_friend_offline", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("privatechat_friend_notlisted", (byte) -95);
+                var2 = ra.loadNamedResource("privatechat_friend_notlisted", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("chatviewscrolledup", (byte) -121);
+                var2 = ra.loadNamedResource("chatviewscrolledup", (byte) -121);
                 if (var2 != null) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("thisisrunescapeclan", (byte) -97);
+                var2 = ra.loadNamedResource("thisisrunescapeclan", (byte) -97);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("thisisrunescapeclan_notowner", (byte) -115);
+                var2 = ra.loadNamedResource("thisisrunescapeclan_notowner", (byte) -115);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("runescapeclan", (byte) -112);
+                var2 = ra.loadNamedResource("runescapeclan", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("rated_membersonly", (byte) -125);
+                var2 = ra.loadNamedResource("rated_membersonly", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("gameopt_membersonly", (byte) -107);
+                var2 = ra.loadNamedResource("gameopt_membersonly", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("gameopt_1moreratedgame", (byte) -118);
+                var2 = ra.loadNamedResource("gameopt_1moreratedgame", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("gameopt_moreratedgames", (byte) -96);
+                var2 = ra.loadNamedResource("gameopt_moreratedgames", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("gameopt_needrating", (byte) -122);
+                var2 = ra.loadNamedResource("gameopt_needrating", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("gameopt_unratedonly", (byte) -113);
+                var2 = ra.loadNamedResource("gameopt_unratedonly", (byte) -113);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("gameopt_notunlocked", (byte) -97);
+                var2 = ra.loadNamedResource("gameopt_notunlocked", (byte) -97);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("gameopt_cannotbecombined1", (byte) -102);
+                var2 = ra.loadNamedResource("gameopt_cannotbecombined1", (byte) -102);
                 if (null != var2) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("gameopt_cannotbecombined2", (byte) -120);
+                var2 = ra.loadNamedResource("gameopt_cannotbecombined2", (byte) -120);
                 if (var2 != null) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("gameopt_playernotmember", (byte) -111);
+                var2 = ra.loadNamedResource("gameopt_playernotmember", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("gameopt_younotmember", (byte) -123);
+                var2 = ra.loadNamedResource("gameopt_younotmember", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("gameopt_playerneedsrating", (byte) -124);
+                var2 = ra.loadNamedResource("gameopt_playerneedsrating", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("gameopt_youneedrating", (byte) -95);
+                var2 = ra.loadNamedResource("gameopt_youneedrating", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("gameopt_playerneedsratedgames", (byte) -113);
+                var2 = ra.loadNamedResource("gameopt_playerneedsratedgames", (byte) -113);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("gameopt_youneedratedgames", (byte) -124);
+                var2 = ra.loadNamedResource("gameopt_youneedratedgames", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("gameopt_playerneeds1ratedgame", (byte) -104);
+                var2 = ra.loadNamedResource("gameopt_playerneeds1ratedgame", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("gameopt_youneed1ratedgame", (byte) -107);
+                var2 = ra.loadNamedResource("gameopt_youneed1ratedgame", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("gameopt_playerhasntunlocked", (byte) -114);
+                var2 = ra.loadNamedResource("gameopt_playerhasntunlocked", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("gameopt_youhaventunlocked", (byte) -103);
+                var2 = ra.loadNamedResource("gameopt_youhaventunlocked", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("gameopt_trychanging1", (byte) -107);
+                var2 = ra.loadNamedResource("gameopt_trychanging1", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("gameopt_trychanging2", (byte) -101);
+                var2 = ra.loadNamedResource("gameopt_trychanging2", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("gameopt_needchanging1", (byte) -120);
+                var2 = ra.loadNamedResource("gameopt_needchanging1", (byte) -120);
                 if (var2 != null) {
                   nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("gameopt_needchanging2", (byte) -97);
+                var2 = ra.loadNamedResource("gameopt_needchanging2", (byte) -97);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("gameopt_mightchange", (byte) -119);
+                var2 = ra.loadNamedResource("gameopt_mightchange", (byte) -119);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("gameopt_playersdontqualify", (byte) -104);
+                var2 = ra.loadNamedResource("gameopt_playersdontqualify", (byte) -104);
                 if (var2 != null) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("gameopt_playersdontqualify_selectgametab", (byte) -105);
+                var2 = ra.loadNamedResource("gameopt_playersdontqualify_selectgametab", (byte) -105);
                 if (var2 != null) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("gameopt_unselectedoptions", (byte) -108);
+                var2 = ra.loadNamedResource("gameopt_unselectedoptions", (byte) -108);
                 if (null != var2) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("gameopt_pleaseselectoption1", (byte) -109);
+                var2 = ra.loadNamedResource("gameopt_pleaseselectoption1", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("gameopt_pleaseselectoption2", (byte) -99);
+                var2 = ra.loadNamedResource("gameopt_pleaseselectoption2", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("gameopt_badnumplayers", (byte) -98);
+                var2 = ra.loadNamedResource("gameopt_badnumplayers", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("gameopt_inviteplayers_or_trychanging1", (byte) -115);
+                var2 = ra.loadNamedResource("gameopt_inviteplayers_or_trychanging1", (byte) -115);
                 if (var2 != null) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("gameopt_inviteplayers_or_trychanging2", (byte) -101);
+                var2 = ra.loadNamedResource("gameopt_inviteplayers_or_trychanging2", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("gameopt_novalidcombos", (byte) -118);
+                var2 = ra.loadNamedResource("gameopt_novalidcombos", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("gameopt_pleasetrychanging", (byte) -124);
+                var2 = ra.loadNamedResource("gameopt_pleasetrychanging", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("ra_title", (byte) -123);
+                var2 = ra.loadNamedResource("ra_title", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("ra_mutethisplayer", (byte) -103);
+                var2 = ra.loadNamedResource("ra_mutethisplayer", (byte) -103);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("ra_suggestmute", (byte) -99);
+                var2 = ra.loadNamedResource("ra_suggestmute", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("ra_intro", (byte) -95);
+                var2 = ra.loadNamedResource("ra_intro", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("ra_intro_no_name", (byte) -98);
+                var2 = ra.loadNamedResource("ra_intro_no_name", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("ra_explanation", (byte) -100);
+                var2 = ra.loadNamedResource("ra_explanation", (byte) -100);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("rule_pillar_0", (byte) -114);
+                var2 = ra.loadNamedResource("rule_pillar_0", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("rule_0_0", (byte) -128);
+                var2 = ra.loadNamedResource("rule_0_0", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("rule_0_1", (byte) -117);
+                var2 = ra.loadNamedResource("rule_0_1", (byte) -117);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("rule_0_2", (byte) -102);
+                var2 = ra.loadNamedResource("rule_0_2", (byte) -102);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("rule_0_3", (byte) -118);
+                var2 = ra.loadNamedResource("rule_0_3", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 87, var2);
                 }
             }
             void loadRuleSocialAndResourceTexts() throws java.lang.RuntimeException {
-                var2 = ra.a("rule_0_4", (byte) -127);
+                var2 = ra.loadNamedResource("rule_0_4", (byte) -127);
                 if (null != var2) {
                   nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("rule_0_5", (byte) -128);
+                var2 = ra.loadNamedResource("rule_0_5", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("rule_pillar_1", (byte) -103);
+                var2 = ra.loadNamedResource("rule_pillar_1", (byte) -103);
                 if (null != var2) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("rule_1_0", (byte) -116);
+                var2 = ra.loadNamedResource("rule_1_0", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("rule_1_1", (byte) -109);
+                var2 = ra.loadNamedResource("rule_1_1", (byte) -109);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("rule_1_2", (byte) -112);
+                var2 = ra.loadNamedResource("rule_1_2", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("rule_1_3", (byte) -104);
+                var2 = ra.loadNamedResource("rule_1_3", (byte) -104);
                 if (var2 != null) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("rule_1_4", (byte) -121);
+                var2 = ra.loadNamedResource("rule_1_4", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("rule_pillar_2", (byte) -104);
+                var2 = ra.loadNamedResource("rule_pillar_2", (byte) -104);
                 if (var2 != null) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("rule_2_0", (byte) -106);
+                var2 = ra.loadNamedResource("rule_2_0", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("rule_2_1", (byte) -127);
+                var2 = ra.loadNamedResource("rule_2_1", (byte) -127);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("rule_2_2", (byte) -98);
+                var2 = ra.loadNamedResource("rule_2_2", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("createafreeaccount", (byte) -101);
+                var2 = ra.loadNamedResource("createafreeaccount", (byte) -101);
                 if (null != var2) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("cancel", (byte) -128);
+                var2 = ra.loadNamedResource("cancel", (byte) -128);
                 if (null != var2) {
                   StringPaddingHelpers.field_a = nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("pleaselogintoplay", (byte) -123);
+                var2 = ra.loadNamedResource("pleaselogintoplay", (byte) -123);
                 if (var2 != null) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("pleaselogin", (byte) -116);
+                var2 = ra.loadNamedResource("pleaselogin", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("pleaselogin_member", (byte) -117);
+                var2 = ra.loadNamedResource("pleaselogin_member", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("invaliduserorpass", (byte) -116);
+                var2 = ra.loadNamedResource("invaliduserorpass", (byte) -116);
                 if (var2 != null) {
                   DateFormattingHelpers.field_a = nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("pleasetryagain", (byte) -121);
+                var2 = ra.loadNamedResource("pleasetryagain", (byte) -121);
                 if (var2 != null) {
                   ca.field_g = nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("pleasereenterpass", (byte) -97);
+                var2 = ra.loadNamedResource("pleasereenterpass", (byte) -97);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("playfreeversion", (byte) -113);
+                var2 = ra.loadNamedResource("playfreeversion", (byte) -113);
                 if (var2 != null) {
                   NodeHashTableIterator.field_b = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("reloadgame", (byte) -116);
+                var2 = ra.loadNamedResource("reloadgame", (byte) -116);
                 if (null != var2) {
                   GameApplet.field_j = nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("toserverlist", (byte) -109);
+                var2 = ra.loadNamedResource("toserverlist", (byte) -109);
                 if (var2 != null) {
                   vl.field_g = nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("tocustomersupport", (byte) -117);
+                var2 = ra.loadNamedResource("tocustomersupport", (byte) -117);
                 if (null != var2) {
-                  ka.field_h = nf.a((byte) 126, var2);
+                  EmailLoginCredentials.field_h = nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("changedisplayname", (byte) -120);
+                var2 = ra.loadNamedResource("changedisplayname", (byte) -120);
                 if (var2 != null) {
                   SecondaryNodeDeque.field_a = nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("returntohomepage", (byte) -104);
+                var2 = ra.loadNamedResource("returntohomepage", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("justplay", (byte) -119);
+                var2 = ra.loadNamedResource("justplay", (byte) -119);
                 if (var2 != null) {
                   DualLinkDeque.field_b = nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("justplay_excl", (byte) -111);
+                var2 = ra.loadNamedResource("justplay_excl", (byte) -111);
                 if (null != var2) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("login", (byte) -119);
+                var2 = ra.loadNamedResource("login", (byte) -119);
                 if (null != var2) {
                   ByteStorage.field_a = nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("goback", (byte) -123);
+                var2 = ra.loadNamedResource("goback", (byte) -123);
                 if (null != var2) {
                   v.field_c = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("otheroptions", (byte) -118);
+                var2 = ra.loadNamedResource("otheroptions", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("proceed", (byte) -109);
+                var2 = ra.loadNamedResource("proceed", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("connectingtoserver", (byte) -101);
+                var2 = ra.loadNamedResource("connectingtoserver", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("pleasewait", (byte) -103);
+                var2 = ra.loadNamedResource("pleasewait", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("logging_in", (byte) -102);
+                var2 = ra.loadNamedResource("logging_in", (byte) -102);
                 if (var2 != null) {
-                  sd.field_c = nf.a((byte) 104, var2);
+                  LoginCredentialKind.field_c = nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("reconnect", (byte) -123);
+                var2 = ra.loadNamedResource("reconnect", (byte) -123);
                 if (var2 != null) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("backtoerror", (byte) -112);
+                var2 = ra.loadNamedResource("backtoerror", (byte) -112);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("pleasecheckinternet", (byte) -123);
+                var2 = ra.loadNamedResource("pleasecheckinternet", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("attemptingtoreconnect", (byte) -111);
+                var2 = ra.loadNamedResource("attemptingtoreconnect", (byte) -111);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("connectionlost_reconnecting", (byte) -114);
+                var2 = ra.loadNamedResource("connectionlost_reconnecting", (byte) -114);
                 if (var2 != null) {
-                  uh.field_f = nf.a((byte) 100, var2);
+                  LoginCredentials.field_f = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("connectionlost_withreason", (byte) -119);
+                var2 = ra.loadNamedResource("connectionlost_withreason", (byte) -119);
                 if (null != var2) {
                   ca.field_d = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("passwordverificationrequired", (byte) -121);
+                var2 = ra.loadNamedResource("passwordverificationrequired", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("invalidpass", (byte) -95);
+                var2 = ra.loadNamedResource("invalidpass", (byte) -95);
                 if (null != var2) {
                   PcmResampler.field_f = nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("retry", (byte) -119);
+                var2 = ra.loadNamedResource("retry", (byte) -119);
                 if (var2 != null) {
                   me.field_a = nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("back", (byte) -104);
+                var2 = ra.loadNamedResource("back", (byte) -104);
                 if (null != var2) {
                   IsaacRandom.field_h = nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("exitfullscreenmode", (byte) -95);
+                var2 = ra.loadNamedResource("exitfullscreenmode", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("quittowebsite", (byte) -119);
+                var2 = ra.loadNamedResource("quittowebsite", (byte) -119);
                 if (var2 != null) {
-                  pk.field_q = nf.a((byte) 99, var2);
+                  ReflectionCheck.field_q = nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("connectionrestored", (byte) -105);
+                var2 = ra.loadNamedResource("connectionrestored", (byte) -105);
                 if (var2 != null) {
                   BrowserUrlLauncher.field_d = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("warning_ifyouquit", (byte) -123);
+                var2 = ra.loadNamedResource("warning_ifyouquit", (byte) -123);
                 if (var2 != null) {
                   BrowserUrlLauncher.field_a = nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("warning_ifyouquitorleavepage", (byte) -110);
+                var2 = ra.loadNamedResource("warning_ifyouquitorleavepage", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("resubscribe_withoutlosing_fs", (byte) -122);
+                var2 = ra.loadNamedResource("resubscribe_withoutlosing_fs", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("resubscribe_withoutlosing", (byte) -112);
+                var2 = ra.loadNamedResource("resubscribe_withoutlosing", (byte) -112);
                 if (null != var2) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("customersupport_withoutlosing_fs", (byte) -126);
+                var2 = ra.loadNamedResource("customersupport_withoutlosing_fs", (byte) -126);
                 if (null != var2) {
                   nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("customersupport_withoutlosing", (byte) -115);
+                var2 = ra.loadNamedResource("customersupport_withoutlosing", (byte) -115);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("js5help_withoutlosing_fs", (byte) -104);
+                var2 = ra.loadNamedResource("js5help_withoutlosing_fs", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("js5help_withoutlosing", (byte) -118);
+                var2 = ra.loadNamedResource("js5help_withoutlosing", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("checkinternet_withoutlosing_fs", (byte) -98);
+                var2 = ra.loadNamedResource("checkinternet_withoutlosing_fs", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("checkinternet_withoutlosing", (byte) -117);
+                var2 = ra.loadNamedResource("checkinternet_withoutlosing", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("create_intro", (byte) -104);
+                var2 = ra.loadNamedResource("create_intro", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("create_sameaccounttip_unnamed", (byte) -100);
+                var2 = ra.loadNamedResource("create_sameaccounttip_unnamed", (byte) -100);
                 if (var2 != null) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("dateofbirthprompt", (byte) -95);
+                var2 = ra.loadNamedResource("dateofbirthprompt", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("fetchingcountrylist", (byte) -116);
+                var2 = ra.loadNamedResource("fetchingcountrylist", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("countryprompt", (byte) -124);
+                var2 = ra.loadNamedResource("countryprompt", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("countrylisterror", (byte) -124);
+                var2 = ra.loadNamedResource("countrylisterror", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("theonlypersonalquestions", (byte) -121);
+                var2 = ra.loadNamedResource("theonlypersonalquestions", (byte) -121);
                 if (var2 != null) {
                   nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("create_submittingdata", (byte) -127);
+                var2 = ra.loadNamedResource("create_submittingdata", (byte) -127);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("check", (byte) -119);
+                var2 = ra.loadNamedResource("check", (byte) -119);
                 if (null != var2) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("create_pleasechooseausername", (byte) -102);
+                var2 = ra.loadNamedResource("create_pleasechooseausername", (byte) -102);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("create_usernameblurb", (byte) -101);
+                var2 = ra.loadNamedResource("create_usernameblurb", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("checkingavailability", (byte) -107);
+                var2 = ra.loadNamedResource("checkingavailability", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("checking", (byte) -97);
+                var2 = ra.loadNamedResource("checking", (byte) -97);
                 if (var2 != null) {
                   ke.field_v = nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("create_namealreadytaken", (byte) -107);
+                var2 = ra.loadNamedResource("create_namealreadytaken", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("create_sameaccounttip_named", (byte) -108);
+                var2 = ra.loadNamedResource("create_sameaccounttip_named", (byte) -108);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("create_nosuggestions", (byte) -116);
+                var2 = ra.loadNamedResource("create_nosuggestions", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("create_alternativelygoback", (byte) -102);
+                var2 = ra.loadNamedResource("create_alternativelygoback", (byte) -102);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("create_available", (byte) -97);
+                var2 = ra.loadNamedResource("create_available", (byte) -97);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("create_willnowshowtermsandconditions", (byte) -112);
+                var2 = ra.loadNamedResource("create_willnowshowtermsandconditions", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("fetchingterms", (byte) -112);
+                var2 = ra.loadNamedResource("fetchingterms", (byte) -112);
                 if (null != var2) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("termserror", (byte) -103);
+                var2 = ra.loadNamedResource("termserror", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("create_iagree", (byte) -107);
+                var2 = ra.loadNamedResource("create_iagree", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("create_idisagree", (byte) -104);
+                var2 = ra.loadNamedResource("create_idisagree", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("create_pleasescrolldowntoaccept", (byte) -114);
+                var2 = ra.loadNamedResource("create_pleasescrolldowntoaccept", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("create_linkaddress", (byte) -122);
+                var2 = ra.loadNamedResource("create_linkaddress", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("openinpopupwindow", (byte) -126);
+                var2 = ra.loadNamedResource("openinpopupwindow", (byte) -126);
                 if (var2 != null) {
                   AccountCreationForm.field_R = nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("create", (byte) -97);
+                var2 = ra.loadNamedResource("create", (byte) -97);
                 if (null != var2) {
                   w.field_d = nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("create_pleasechooseapassword", (byte) -96);
+                var2 = ra.loadNamedResource("create_pleasechooseapassword", (byte) -96);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("create_passwordblurb", (byte) -101);
+                var2 = ra.loadNamedResource("create_passwordblurb", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("create_nevergivepassword", (byte) -110);
+                var2 = ra.loadNamedResource("create_nevergivepassword", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("creatingyouraccount", (byte) -123);
+                var2 = ra.loadNamedResource("creatingyouraccount", (byte) -123);
                 if (var2 != null) {
-                  sc.field_o = nf.a((byte) 102, var2);
+                  ProgressQuery.field_o = nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("create_youmustaccept", (byte) -115);
+                var2 = ra.loadNamedResource("create_youmustaccept", (byte) -115);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("create_passwordsdifferent", (byte) -109);
+                var2 = ra.loadNamedResource("create_passwordsdifferent", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("create_success", (byte) -97);
+                var2 = ra.loadNamedResource("create_success", (byte) -97);
                 if (var2 != null) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("day", (byte) -126);
+                var2 = ra.loadNamedResource("day", (byte) -126);
                 if (var2 != null) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("month", (byte) -98);
+                var2 = ra.loadNamedResource("month", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("year", (byte) -112);
+                var2 = ra.loadNamedResource("year", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("monthnames,0", (byte) -110);
+                var2 = ra.loadNamedResource("monthnames,0", (byte) -110);
                 if (null != var2) {
                   IsaacPacketBuffer.field_q[0] = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("monthnames,1", (byte) -97);
+                var2 = ra.loadNamedResource("monthnames,1", (byte) -97);
                 if (var2 != null) {
                   IsaacPacketBuffer.field_q[1] = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("monthnames,2", (byte) -106);
+                var2 = ra.loadNamedResource("monthnames,2", (byte) -106);
                 if (null != var2) {
                   IsaacPacketBuffer.field_q[2] = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("monthnames,3", (byte) -112);
+                var2 = ra.loadNamedResource("monthnames,3", (byte) -112);
                 if (var2 != null) {
                   IsaacPacketBuffer.field_q[3] = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("monthnames,4", (byte) -115);
+                var2 = ra.loadNamedResource("monthnames,4", (byte) -115);
                 if (var2 != null) {
                   IsaacPacketBuffer.field_q[4] = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("monthnames,5", (byte) -96);
+                var2 = ra.loadNamedResource("monthnames,5", (byte) -96);
                 if (var2 != null) {
                   IsaacPacketBuffer.field_q[5] = nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("monthnames,6", (byte) -102);
+                var2 = ra.loadNamedResource("monthnames,6", (byte) -102);
                 if (null != var2) {
                   IsaacPacketBuffer.field_q[6] = nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("monthnames,7", (byte) -98);
+                var2 = ra.loadNamedResource("monthnames,7", (byte) -98);
                 if (var2 != null) {
                   IsaacPacketBuffer.field_q[7] = nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("monthnames,8", (byte) -103);
+                var2 = ra.loadNamedResource("monthnames,8", (byte) -103);
                 if (null != var2) {
                   IsaacPacketBuffer.field_q[8] = nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("monthnames,9", (byte) -128);
+                var2 = ra.loadNamedResource("monthnames,9", (byte) -128);
                 if (var2 != null) {
                   IsaacPacketBuffer.field_q[9] = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("monthnames,10", (byte) -106);
+                var2 = ra.loadNamedResource("monthnames,10", (byte) -106);
                 if (null != var2) {
                   IsaacPacketBuffer.field_q[10] = nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("monthnames,11", (byte) -122);
+                var2 = ra.loadNamedResource("monthnames,11", (byte) -122);
                 if (var2 != null) {
                   IsaacPacketBuffer.field_q[11] = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("create_welcome", (byte) -116);
+                var2 = ra.loadNamedResource("create_welcome", (byte) -116);
                 if (var2 != null) {
                   ci.field_c = nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("create_u13_welcome", (byte) -118);
+                var2 = ra.loadNamedResource("create_u13_welcome", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("create_createanaccount", (byte) -108);
+                var2 = ra.loadNamedResource("create_createanaccount", (byte) -108);
                 if (null != var2) {
                   WhirlpoolHasher.field_h = nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("create_username", (byte) -95);
+                var2 = ra.loadNamedResource("create_username", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("create_displayname", (byte) -123);
+                var2 = ra.loadNamedResource("create_displayname", (byte) -123);
                 if (null != var2) {
                   re.field_E = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("create_password", (byte) -104);
+                var2 = ra.loadNamedResource("create_password", (byte) -104);
                 if (var2 != null) {
                   WhirlpoolHasher.field_d = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("create_password_confirm", (byte) -107);
+                var2 = ra.loadNamedResource("create_password_confirm", (byte) -107);
                 if (var2 != null) {
                   RasterBuffer.field_i = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("create_email", (byte) -100);
+                var2 = ra.loadNamedResource("create_email", (byte) -100);
                 if (var2 != null) {
                   ii.field_d = nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("create_email_confirm", (byte) -97);
+                var2 = ra.loadNamedResource("create_email_confirm", (byte) -97);
                 if (null != var2) {
                   ve.field_b = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("create_age", (byte) -95);
+                var2 = ra.loadNamedResource("create_age", (byte) -95);
                 if (var2 != null) {
                   Base37Codec.field_a = nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("create_u13_email", (byte) -95);
+                var2 = ra.loadNamedResource("create_u13_email", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("create_u13_email_confirm", (byte) -111);
+                var2 = ra.loadNamedResource("create_u13_email_confirm", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("create_dob", (byte) -124);
+                var2 = ra.loadNamedResource("create_dob", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("create_country", (byte) -110);
+                var2 = ra.loadNamedResource("create_country", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("create_alternatives_header", (byte) -117);
+                var2 = ra.loadNamedResource("create_alternatives_header", (byte) -117);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("create_alternatives_select", (byte) -126);
+                var2 = ra.loadNamedResource("create_alternatives_select", (byte) -126);
                 if (var2 != null) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("create_suggestions", (byte) -106);
+                var2 = ra.loadNamedResource("create_suggestions", (byte) -106);
                 if (var2 != null) {
-                  ml.field_p = nf.a((byte) 119, var2);
+                  ArchiveRequest.field_p = nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("create_more_suggestions", (byte) -110);
+                var2 = ra.loadNamedResource("create_more_suggestions", (byte) -110);
                 if (var2 != null) {
                   PlatformActor.field_t = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("create_select_alternative", (byte) -112);
+                var2 = ra.loadNamedResource("create_select_alternative", (byte) -112);
                 if (null != var2) {
                   ni.field_a = nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("create_optin_news", (byte) -95);
+                var2 = ra.loadNamedResource("create_optin_news", (byte) -95);
                 if (var2 != null) {
                   SettingsCookieReader.field_e = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("create_agreeterms", (byte) -110);
+                var2 = ra.loadNamedResource("create_agreeterms", (byte) -110);
                 if (null != var2) {
                   qj.field_b = nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("create_u13terms", (byte) -118);
+                var2 = ra.loadNamedResource("create_u13terms", (byte) -118);
                 if (var2 != null) {
                   t.field_b = nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("login_username_email", (byte) -128);
+                var2 = ra.loadNamedResource("login_username_email", (byte) -128);
                 if (null != var2) {
-                  ai.field_j = nf.a((byte) 95, var2);
+                  ScoreSubmission.field_j = nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("login_username", (byte) -111);
+                var2 = ra.loadNamedResource("login_username", (byte) -111);
                 if (var2 != null) {
                   tl.field_b = nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("login_email", (byte) -120);
+                var2 = ra.loadNamedResource("login_email", (byte) -120);
                 if (null != var2) {
-                  dc.field_q = nf.a((byte) 126, var2);
+                  ProgressSubmission.field_q = nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("login_username_tooltip", (byte) -121);
+                var2 = ra.loadNamedResource("login_username_tooltip", (byte) -121);
                 if (null != var2) {
                   MouseInputHandler.field_a = nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("login_password_tooltip", (byte) -128);
+                var2 = ra.loadNamedResource("login_password_tooltip", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("login_login_tooltip", (byte) -128);
+                var2 = ra.loadNamedResource("login_login_tooltip", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("login_create_tooltip", (byte) -110);
+                var2 = ra.loadNamedResource("login_create_tooltip", (byte) -110);
                 if (var2 != null) {
-                  hb.field_i = nf.a((byte) 92, var2);
+                  DelayedServerPacket.field_i = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("login_justplay_tooltip", (byte) -128);
+                var2 = ra.loadNamedResource("login_justplay_tooltip", (byte) -128);
                 if (var2 != null) {
-                  hf.field_a = nf.a((byte) 107, var2);
+                  ProxyAuthenticationException.field_a = nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("login_back_tooltip", (byte) -111);
+                var2 = ra.loadNamedResource("login_back_tooltip", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("login_no_displayname", (byte) -112);
+                var2 = ra.loadNamedResource("login_no_displayname", (byte) -112);
                 if (null != var2) {
                   MouseWheelInput.field_d = nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("create_username_tooltip", (byte) -127);
+                var2 = ra.loadNamedResource("create_username_tooltip", (byte) -127);
                 if (null != var2) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("create_username_hint", (byte) -105);
+                var2 = ra.loadNamedResource("create_username_hint", (byte) -105);
                 if (var2 != null) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("create_displayname_tooltip", (byte) -125);
+                var2 = ra.loadNamedResource("create_displayname_tooltip", (byte) -125);
                 if (null != var2) {
                   DiskCacheWorker.field_a = nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("create_displayname_hint", (byte) -119);
+                var2 = ra.loadNamedResource("create_displayname_hint", (byte) -119);
                 if (var2 != null) {
                   MonotonicClockHelpers.field_b = nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("create_password_tooltip", (byte) -128);
+                var2 = ra.loadNamedResource("create_password_tooltip", (byte) -128);
                 if (null != var2) {
                   GameShell.field_v = nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("create_password_hint", (byte) -100);
+                var2 = ra.loadNamedResource("create_password_hint", (byte) -100);
                 if (null != var2) {
                   LabeledField.field_H = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("create_password_confirm_tooltip", (byte) -125);
+                var2 = ra.loadNamedResource("create_password_confirm_tooltip", (byte) -125);
                 if (null != var2) {
                   GameMenu.field_s = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("create_email_tooltip", (byte) -103);
+                var2 = ra.loadNamedResource("create_email_tooltip", (byte) -103);
                 if (null != var2) {
                   SettingsCookieReader.field_c = nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("create_email_confirm_tooltip", (byte) -109);
+                var2 = ra.loadNamedResource("create_email_confirm_tooltip", (byte) -109);
                 if (var2 != null) {
                   ec.field_e = nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("create_age_tooltip", (byte) -104);
+                var2 = ra.loadNamedResource("create_age_tooltip", (byte) -104);
                 if (null != var2) {
                   GameGraphicsResources.field_c = nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("create_optin_news_tooltip", (byte) -117);
+                var2 = ra.loadNamedResource("create_optin_news_tooltip", (byte) -117);
                 if (var2 != null) {
                   Js5Index.field_o = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("create_u13_email_tooltip", (byte) -98);
+                var2 = ra.loadNamedResource("create_u13_email_tooltip", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("create_u13_email_confirm_tooltip", (byte) -118);
+                var2 = ra.loadNamedResource("create_u13_email_confirm_tooltip", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("create_dob_tooltip", (byte) -106);
+                var2 = ra.loadNamedResource("create_dob_tooltip", (byte) -106);
                 if (var2 != null) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("create_country_tooltip", (byte) -104);
+                var2 = ra.loadNamedResource("create_country_tooltip", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("create_optin_tooltip", (byte) -121);
+                var2 = ra.loadNamedResource("create_optin_tooltip", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("create_continue", (byte) -109);
+                var2 = ra.loadNamedResource("create_continue", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("create_username_unavailable", (byte) -116);
+                var2 = ra.loadNamedResource("create_username_unavailable", (byte) -116);
                 if (var2 != null) {
-                  uc.field_e = nf.a((byte) 94, var2);
+                  ArchiveLoadingPlan.field_e = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("create_username_available", (byte) -105);
+                var2 = ra.loadNamedResource("create_username_available", (byte) -105);
                 if (var2 != null) {
                   GameKeyHandler.field_d = nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("create_alert_namelength", (byte) -118);
+                var2 = ra.loadNamedResource("create_alert_namelength", (byte) -118);
                 if (var2 != null) {
                   ValidationIndicator.field_J = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("create_alert_namechars", (byte) -106);
+                var2 = ra.loadNamedResource("create_alert_namechars", (byte) -106);
                 if (var2 != null) {
                   AccountCreationForm.field_Q = nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("create_alert_nameleadingspace", (byte) -126);
+                var2 = ra.loadNamedResource("create_alert_nameleadingspace", (byte) -126);
                 if (var2 != null) {
                   lg.field_c = nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("create_alert_doublespace", (byte) -96);
+                var2 = ra.loadNamedResource("create_alert_doublespace", (byte) -96);
                 if (null != var2) {
                   WidgetPainter.field_g = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("create_alert_passchars", (byte) -112);
+                var2 = ra.loadNamedResource("create_alert_passchars", (byte) -112);
                 if (var2 != null) {
-                  dc.field_o = nf.a((byte) 123, var2);
+                  ProgressSubmission.field_o = nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("create_alert_passrepeated", (byte) -126);
+                var2 = ra.loadNamedResource("create_alert_passrepeated", (byte) -126);
                 if (null != var2) {
-                  pj.field_L = nf.a((byte) 86, var2);
+                  DraggableWidget.field_L = nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("create_alert_passlength", (byte) -121);
+                var2 = ra.loadNamedResource("create_alert_passlength", (byte) -121);
                 if (var2 != null) {
-                  bh.field_d = nf.a((byte) 110, var2);
+                  QuickChatDynamicCommand.field_d = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("create_alert_passcontainsname", (byte) -100);
+                var2 = ra.loadNamedResource("create_alert_passcontainsname", (byte) -100);
                 if (var2 != null) {
-                  fi.field_v = nf.a((byte) 105, var2);
+                  NetworkArchiveRequest.field_v = nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("create_alert_passcontainsemail", (byte) -98);
+                var2 = ra.loadNamedResource("create_alert_passcontainsemail", (byte) -98);
                 if (var2 != null) {
                   NodeHashTableIterator.field_c = nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("create_alert_passcontainsname_partial", (byte) -119);
+                var2 = ra.loadNamedResource("create_alert_passcontainsname_partial", (byte) -119);
                 if (null != var2) {
-                  gi.field_d = nf.a((byte) 112, var2);
+                  LoginPacketBuilder.field_d = nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("create_alert_checkname", (byte) -104);
+                var2 = ra.loadNamedResource("create_alert_checkname", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("create_alert_invalidemail", (byte) -112);
+                var2 = ra.loadNamedResource("create_alert_invalidemail", (byte) -112);
                 if (var2 != null) {
                   kd.field_b = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("create_alert_email_unavailable", (byte) -113);
+                var2 = ra.loadNamedResource("create_alert_email_unavailable", (byte) -113);
                 if (var2 != null) {
                   IntrusiveNode.field_d = nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("create_alert_invaliddate", (byte) -95);
+                var2 = ra.loadNamedResource("create_alert_invaliddate", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("create_alert_invalidage", (byte) -107);
+                var2 = ra.loadNamedResource("create_alert_invalidage", (byte) -107);
                 if (null != var2) {
                   WeightedLruCache.field_a = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("create_alert_yearrange", (byte) -95);
+                var2 = ra.loadNamedResource("create_alert_yearrange", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("create_alert_mismatch", (byte) -108);
+                var2 = ra.loadNamedResource("create_alert_mismatch", (byte) -108);
                 if (null != var2) {
                   ec.field_h = nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("create_passwordvalid", (byte) -118);
+                var2 = ra.loadNamedResource("create_passwordvalid", (byte) -118);
                 if (var2 != null) {
                   RadialSelectorWidget.field_F = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("create_emailvalid", (byte) -115);
+                var2 = ra.loadNamedResource("create_emailvalid", (byte) -115);
                 if (null != var2) {
                   eh.field_h = nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("create_account_success", (byte) -108);
+                var2 = ra.loadNamedResource("create_account_success", (byte) -108);
                 if (var2 != null) {
                   jl.field_v = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("invalid_name", (byte) -125);
+                var2 = ra.loadNamedResource("invalid_name", (byte) -125);
                 if (null != var2) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("cannot_add_yourself", (byte) -107);
+                var2 = ra.loadNamedResource("cannot_add_yourself", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("unable_to_add_friend", (byte) -107);
+                var2 = ra.loadNamedResource("unable_to_add_friend", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("unable_to_add_ignore", (byte) -96);
+                var2 = ra.loadNamedResource("unable_to_add_ignore", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("unable_to_delete_friend", (byte) -124);
+                var2 = ra.loadNamedResource("unable_to_delete_friend", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("unable_to_delete_ignore", (byte) -99);
+                var2 = ra.loadNamedResource("unable_to_delete_ignore", (byte) -99);
                 if (var2 != null) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("friendlistfull", (byte) -103);
+                var2 = ra.loadNamedResource("friendlistfull", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("friendlistdupe", (byte) -110);
+                var2 = ra.loadNamedResource("friendlistdupe", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("friendnotfound", (byte) -118);
+                var2 = ra.loadNamedResource("friendnotfound", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("ignorelistfull", (byte) -106);
+                var2 = ra.loadNamedResource("ignorelistfull", (byte) -106);
                 if (var2 != null) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("ignorelistdupe", (byte) -109);
+                var2 = ra.loadNamedResource("ignorelistdupe", (byte) -109);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("ignorenotfound", (byte) -107);
+                var2 = ra.loadNamedResource("ignorenotfound", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("removeignorefirst", (byte) -105);
+                var2 = ra.loadNamedResource("removeignorefirst", (byte) -105);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("removefriendfirst", (byte) -122);
+                var2 = ra.loadNamedResource("removefriendfirst", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("enterfriend_add", (byte) -112);
+                var2 = ra.loadNamedResource("enterfriend_add", (byte) -112);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("enterfriend_del", (byte) -103);
+                var2 = ra.loadNamedResource("enterfriend_del", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("enterignore_add", (byte) -125);
+                var2 = ra.loadNamedResource("enterignore_add", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("enterignore_del", (byte) -113);
+                var2 = ra.loadNamedResource("enterignore_del", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("text_removed_from_game", (byte) -126);
+                var2 = ra.loadNamedResource("text_removed_from_game", (byte) -126);
                 if (null != var2) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("text_lobby_pleaselogin_free", (byte) -97);
+                var2 = ra.loadNamedResource("text_lobby_pleaselogin_free", (byte) -97);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("opengl", (byte) -109);
+                var2 = ra.loadNamedResource("opengl", (byte) -109);
                 if (null != var2) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("sse", (byte) -116);
+                var2 = ra.loadNamedResource("sse", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("purejava", (byte) -128);
+                var2 = ra.loadNamedResource("purejava", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("waitingfor_graphics", (byte) -117);
+                var2 = ra.loadNamedResource("waitingfor_graphics", (byte) -117);
                 if (var2 != null) {
-                  qb.field_q = nf.a((byte) 100, var2);
+                  FramedButtonPainter.field_q = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("waitingfor_models", (byte) -111);
+                var2 = ra.loadNamedResource("waitingfor_models", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("waitingfor_fonts", (byte) -120);
+                var2 = ra.loadNamedResource("waitingfor_fonts", (byte) -120);
                 if (var2 != null) {
-                  hj.field_d = nf.a((byte) 124, var2);
+                  IndexedSpriteArrayFactory.field_d = nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("waitingfor_soundeffects", (byte) -99);
+                var2 = ra.loadNamedResource("waitingfor_soundeffects", (byte) -99);
                 if (null != var2) {
-                  il.field_d = nf.a((byte) 110, var2);
+                  RadixParsingHelpers.field_d = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("waitingfor_music", (byte) -117);
+                var2 = ra.loadNamedResource("waitingfor_music", (byte) -117);
                 if (var2 != null) {
                   lj.field_d = nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("waitingfor_instruments", (byte) -114);
+                var2 = ra.loadNamedResource("waitingfor_instruments", (byte) -114);
                 if (var2 != null) {
                   IndexedSpriteState.field_g = nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("waitingfor_levels", (byte) -102);
+                var2 = ra.loadNamedResource("waitingfor_levels", (byte) -102);
                 if (var2 != null) {
                   aa.field_gb = nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("waitingfor_extradata", (byte) -117);
+                var2 = ra.loadNamedResource("waitingfor_extradata", (byte) -117);
                 if (null != var2) {
-                  nh.field_o = nf.a((byte) 92, var2);
+                  AlternateUsernameLoginCredentials.field_o = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("waitingfor_languages", (byte) -111);
+                var2 = ra.loadNamedResource("waitingfor_languages", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("waitingfor_textures", (byte) -122);
+                var2 = ra.loadNamedResource("waitingfor_textures", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("waitingfor_animations", (byte) -96);
+                var2 = ra.loadNamedResource("waitingfor_animations", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("loading_graphics", (byte) -97);
+                var2 = ra.loadNamedResource("loading_graphics", (byte) -97);
                 if (null != var2) {
                   tk.field_e = nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("loading_models", (byte) -111);
+                var2 = ra.loadNamedResource("loading_models", (byte) -111);
                 if (null != var2) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("loading_fonts", (byte) -123);
+                var2 = ra.loadNamedResource("loading_fonts", (byte) -123);
                 if (var2 != null) {
                   mj.field_d = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("loading_soundeffects", (byte) -126);
+                var2 = ra.loadNamedResource("loading_soundeffects", (byte) -126);
                 if (var2 != null) {
                   MenuController.field_i = nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("loading_music", (byte) -108);
+                var2 = ra.loadNamedResource("loading_music", (byte) -108);
                 if (var2 != null) {
                   ej.field_e = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("loading_instruments", (byte) -96);
+                var2 = ra.loadNamedResource("loading_instruments", (byte) -96);
                 if (null != var2) {
                   pa.field_d = nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("loading_levels", (byte) -115);
+                var2 = ra.loadNamedResource("loading_levels", (byte) -115);
                 if (var2 != null) {
                   WhirlpoolHasher.field_e = nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("loading_extradata", (byte) -109);
+                var2 = ra.loadNamedResource("loading_extradata", (byte) -109);
             }
             void loadLoadingFullscreenAndMembershipTexts() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   WidgetTheme.field_s = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("loading_languages", (byte) -99);
+                var2 = ra.loadNamedResource("loading_languages", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("loading_textures", (byte) -120);
+                var2 = ra.loadNamedResource("loading_textures", (byte) -120);
                 if (var2 != null) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("loading_animations", (byte) -122);
+                var2 = ra.loadNamedResource("loading_animations", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("unpacking_graphics", (byte) -111);
+                var2 = ra.loadNamedResource("unpacking_graphics", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("unpacking_models", (byte) -111);
+                var2 = ra.loadNamedResource("unpacking_models", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("unpacking_soundeffects", (byte) -103);
+                var2 = ra.loadNamedResource("unpacking_soundeffects", (byte) -103);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("unpacking_music", (byte) -125);
+                var2 = ra.loadNamedResource("unpacking_music", (byte) -125);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("unpacking_levels", (byte) -108);
+                var2 = ra.loadNamedResource("unpacking_levels", (byte) -108);
                 if (var2 != null) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("unpacking_languages", (byte) -116);
+                var2 = ra.loadNamedResource("unpacking_languages", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("unpacking_animations", (byte) -123);
+                var2 = ra.loadNamedResource("unpacking_animations", (byte) -123);
                 if (var2 != null) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("unpacking_toolkit", (byte) -101);
+                var2 = ra.loadNamedResource("unpacking_toolkit", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("instructions", (byte) -101);
+                var2 = ra.loadNamedResource("instructions", (byte) -101);
                 if (var2 != null) {
                   MidiNote.field_o = nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("tutorial", (byte) -125);
+                var2 = ra.loadNamedResource("tutorial", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("playtutorial", (byte) -117);
+                var2 = ra.loadNamedResource("playtutorial", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("sound_colon", (byte) -114);
+                var2 = ra.loadNamedResource("sound_colon", (byte) -114);
                 if (var2 != null) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("music_colon", (byte) -104);
+                var2 = ra.loadNamedResource("music_colon", (byte) -104);
                 if (var2 != null) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("fullscreen", (byte) -99);
+                var2 = ra.loadNamedResource("fullscreen", (byte) -99);
                 if (var2 != null) {
                   mh.field_lb = nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("screensize", (byte) -106);
+                var2 = ra.loadNamedResource("screensize", (byte) -106);
                 if (var2 != null) {
                   nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("highscores", (byte) -127);
+                var2 = ra.loadNamedResource("highscores", (byte) -127);
                 if (var2 != null) {
                   WrappedTextLayout.field_m = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("rankings", (byte) -115);
+                var2 = ra.loadNamedResource("rankings", (byte) -115);
                 if (var2 != null) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("achievements", (byte) -128);
+                var2 = ra.loadNamedResource("achievements", (byte) -128);
                 if (var2 != null) {
-                  qf.field_k = nf.a((byte) 85, var2);
+                  AgeValidator.field_k = nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("achievementsthisgame", (byte) -97);
+                var2 = ra.loadNamedResource("achievementsthisgame", (byte) -97);
                 if (null != var2) {
-                  rb.field_b = nf.a((byte) 120, var2);
+                  DisplayModeInfo.field_b = nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("achievementsthissession", (byte) -117);
+                var2 = ra.loadNamedResource("achievementsthissession", (byte) -117);
                 if (var2 != null) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("watchintroduction", (byte) -110);
+                var2 = ra.loadNamedResource("watchintroduction", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("quit", (byte) -112);
+                var2 = ra.loadNamedResource("quit", (byte) -112);
                 if (var2 != null) {
                   lj.field_e = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("login_createaccount", (byte) -100);
+                var2 = ra.loadNamedResource("login_createaccount", (byte) -100);
                 if (var2 != null) {
                   DiskCacheWorker.field_d = nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("tohighscores", (byte) -100);
+                var2 = ra.loadNamedResource("tohighscores", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("returntomainmenu", (byte) -126);
+                var2 = ra.loadNamedResource("returntomainmenu", (byte) -126);
                 if (null != var2) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("returntopausemenu", (byte) -101);
+                var2 = ra.loadNamedResource("returntopausemenu", (byte) -101);
                 if (null != var2) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("returntooptionsmenu_notpaused", (byte) -112);
+                var2 = ra.loadNamedResource("returntooptionsmenu_notpaused", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("mainmenu", (byte) -123);
+                var2 = ra.loadNamedResource("mainmenu", (byte) -123);
                 if (null != var2) {
                   EditableTextWidget.field_G = nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("pausemenu", (byte) -123);
+                var2 = ra.loadNamedResource("pausemenu", (byte) -123);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("optionsmenu_notpaused", (byte) -98);
+                var2 = ra.loadNamedResource("optionsmenu_notpaused", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("menu", (byte) -95);
+                var2 = ra.loadNamedResource("menu", (byte) -95);
                 if (var2 != null) {
-                  ne.field_a = nf.a((byte) 84, var2);
+                  AccountFormText.field_a = nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("selectlevel", (byte) -98);
+                var2 = ra.loadNamedResource("selectlevel", (byte) -98);
                 if (var2 != null) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("nextlevel", (byte) -104);
+                var2 = ra.loadNamedResource("nextlevel", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("startgame", (byte) -127);
+                var2 = ra.loadNamedResource("startgame", (byte) -127);
                 if (null != var2) {
-                  sc.field_l = nf.a((byte) 121, var2);
+                  ProgressQuery.field_l = nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("newgame", (byte) -101);
+                var2 = ra.loadNamedResource("newgame", (byte) -101);
                 if (null != var2) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("resumegame", (byte) -122);
+                var2 = ra.loadNamedResource("resumegame", (byte) -122);
                 if (null != var2) {
                   AccountCreationForm.field_K = nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("resumetutorial", (byte) -122);
+                var2 = ra.loadNamedResource("resumetutorial", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("skip", (byte) -122);
+                var2 = ra.loadNamedResource("skip", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("skiptutorial", (byte) -108);
+                var2 = ra.loadNamedResource("skiptutorial", (byte) -108);
                 if (null != var2) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("skipending", (byte) -104);
+                var2 = ra.loadNamedResource("skipending", (byte) -104);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("restartlevel", (byte) -115);
+                var2 = ra.loadNamedResource("restartlevel", (byte) -115);
                 if (var2 != null) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("endtest", (byte) -106);
+                var2 = ra.loadNamedResource("endtest", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("endgame", (byte) -127);
+                var2 = ra.loadNamedResource("endgame", (byte) -127);
                 if (var2 != null) {
                   WidgetTheme.field_o = nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("endtutorial", (byte) -113);
+                var2 = ra.loadNamedResource("endtutorial", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("ok", (byte) -100);
+                var2 = ra.loadNamedResource("ok", (byte) -100);
                 if (null != var2) {
                   td.field_b = nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("on", (byte) -109);
+                var2 = ra.loadNamedResource("on", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("off", (byte) -122);
+                var2 = ra.loadNamedResource("off", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("previous", (byte) -118);
+                var2 = ra.loadNamedResource("previous", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("prev", (byte) -123);
+                var2 = ra.loadNamedResource("prev", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("next", (byte) -117);
+                var2 = ra.loadNamedResource("next", (byte) -117);
                 if (var2 != null) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("graphics_colon", (byte) -100);
+                var2 = ra.loadNamedResource("graphics_colon", (byte) -100);
                 if (var2 != null) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("hotseatmultiplayer", (byte) -113);
+                var2 = ra.loadNamedResource("hotseatmultiplayer", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("entermultiplayerlobby", (byte) -119);
+                var2 = ra.loadNamedResource("entermultiplayerlobby", (byte) -119);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("singleplayergame", (byte) -120);
+                var2 = ra.loadNamedResource("singleplayergame", (byte) -120);
                 if (var2 != null) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("returntogame", (byte) -99);
+                var2 = ra.loadNamedResource("returntogame", (byte) -99);
                 if (var2 != null) {
                   UrlPacketDownloader.field_a = nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("endgameresign", (byte) -106);
+                var2 = ra.loadNamedResource("endgameresign", (byte) -106);
                 if (var2 != null) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("offerdraw", (byte) -108);
+                var2 = ra.loadNamedResource("offerdraw", (byte) -108);
                 if (var2 != null) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("canceldraw", (byte) -114);
+                var2 = ra.loadNamedResource("canceldraw", (byte) -114);
                 if (var2 != null) {
                   nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("acceptdraw", (byte) -116);
+                var2 = ra.loadNamedResource("acceptdraw", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("resign", (byte) -124);
+                var2 = ra.loadNamedResource("resign", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("returntolobby", (byte) -122);
+                var2 = ra.loadNamedResource("returntolobby", (byte) -122);
                 if (var2 != null) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("cont", (byte) -97);
+                var2 = ra.loadNamedResource("cont", (byte) -97);
                 if (null != var2) {
                   e.field_e = nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("continue_spectating", (byte) -95);
+                var2 = ra.loadNamedResource("continue_spectating", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("messages", (byte) -113);
+                var2 = ra.loadNamedResource("messages", (byte) -113);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("graphics_fastest", (byte) -117);
+                var2 = ra.loadNamedResource("graphics_fastest", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("graphics_medium", (byte) -128);
+                var2 = ra.loadNamedResource("graphics_medium", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("graphics_best", (byte) -113);
+                var2 = ra.loadNamedResource("graphics_best", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("graphics_directx", (byte) -125);
+                var2 = ra.loadNamedResource("graphics_directx", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("graphics_opengl", (byte) -119);
+                var2 = ra.loadNamedResource("graphics_opengl", (byte) -119);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("graphics_java", (byte) -113);
+                var2 = ra.loadNamedResource("graphics_java", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("graphics_quality_high", (byte) -101);
+                var2 = ra.loadNamedResource("graphics_quality_high", (byte) -101);
                 if (null != var2) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("graphics_quality_low", (byte) -99);
+                var2 = ra.loadNamedResource("graphics_quality_low", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("graphics_mode", (byte) -103);
+                var2 = ra.loadNamedResource("graphics_mode", (byte) -103);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("graphics_quality", (byte) -99);
+                var2 = ra.loadNamedResource("graphics_quality", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("mode", (byte) -100);
+                var2 = ra.loadNamedResource("mode", (byte) -100);
                 if (var2 != null) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("quality", (byte) -124);
+                var2 = ra.loadNamedResource("quality", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("keys", (byte) -118);
+                var2 = ra.loadNamedResource("keys", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("objective", (byte) -123);
+                var2 = ra.loadNamedResource("objective", (byte) -123);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("currentobjective", (byte) -124);
+                var2 = ra.loadNamedResource("currentobjective", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("pressescforpausemenu", (byte) -112);
+                var2 = ra.loadNamedResource("pressescforpausemenu", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("pressescforpausemenuortoskiptutorial", (byte) -110);
+                var2 = ra.loadNamedResource("pressescforpausemenuortoskiptutorial", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("pressescforoptionsmenu_doesntpause", (byte) -97);
+                var2 = ra.loadNamedResource("pressescforoptionsmenu_doesntpause", (byte) -97);
                 if (null != var2) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("pressescforoptionsmenu_doesntpause_short", (byte) -96);
+                var2 = ra.loadNamedResource("pressescforoptionsmenu_doesntpause_short", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("powerups", (byte) -114);
+                var2 = ra.loadNamedResource("powerups", (byte) -114);
                 if (var2 != null) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("latestlevel_suffix", (byte) -110);
+                var2 = ra.loadNamedResource("latestlevel_suffix", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("unreachedlevel_name", (byte) -96);
+                var2 = ra.loadNamedResource("unreachedlevel_name", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("unreachedlevel_cannotplayreason", (byte) -124);
+                var2 = ra.loadNamedResource("unreachedlevel_cannotplayreason", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("unreachedlevel_cannotplayreason_shorter", (byte) -123);
+                var2 = ra.loadNamedResource("unreachedlevel_cannotplayreason_shorter", (byte) -123);
                 if (var2 != null) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("unreachedworld_cannotplayreason", (byte) -111);
+                var2 = ra.loadNamedResource("unreachedworld_cannotplayreason", (byte) -111);
                 if (var2 != null) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("memberslevel_name", (byte) -124);
+                var2 = ra.loadNamedResource("memberslevel_name", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("memberslevel_cannotplayreason", (byte) -125);
+                var2 = ra.loadNamedResource("memberslevel_cannotplayreason", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("membersworld_cannotplayreason", (byte) -118);
+                var2 = ra.loadNamedResource("membersworld_cannotplayreason", (byte) -118);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("unreachedlevel_createtip", (byte) -95);
+                var2 = ra.loadNamedResource("unreachedlevel_createtip", (byte) -95);
                 if (var2 != null) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("unreachedlevel_createtip_line1", (byte) -113);
+                var2 = ra.loadNamedResource("unreachedlevel_createtip_line1", (byte) -113);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("unreachedlevel_createtip_line2", (byte) -114);
+                var2 = ra.loadNamedResource("unreachedlevel_createtip_line2", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("unreachedlevel_logintip", (byte) -102);
+                var2 = ra.loadNamedResource("unreachedlevel_logintip", (byte) -102);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("memberslevel_logintip", (byte) -108);
+                var2 = ra.loadNamedResource("memberslevel_logintip", (byte) -108);
                 if (null != var2) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("displayname_none", (byte) -108);
+                var2 = ra.loadNamedResource("displayname_none", (byte) -108);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("levelxofy1", (byte) -95);
+                var2 = ra.loadNamedResource("levelxofy1", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("levelxofy2", (byte) -122);
+                var2 = ra.loadNamedResource("levelxofy2", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("levelxofy", (byte) -117);
+                var2 = ra.loadNamedResource("levelxofy", (byte) -117);
                 if (var2 != null) {
                   nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("ingame_level", (byte) -99);
+                var2 = ra.loadNamedResource("ingame_level", (byte) -99);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("mouseoveranicon", (byte) -113);
+                var2 = ra.loadNamedResource("mouseoveranicon", (byte) -113);
                 if (var2 != null) {
                   gk.field_r = nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("notyetachieved", (byte) -107);
+                var2 = ra.loadNamedResource("notyetachieved", (byte) -107);
                 if (null != var2) {
-                  uf.field_b = nf.a((byte) 120, var2);
+                  LoginMethodPreference.field_b = nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("achieved", (byte) -116);
+                var2 = ra.loadNamedResource("achieved", (byte) -116);
                 if (null != var2) {
-                  bc.field_c = nf.a((byte) 99, var2);
+                  MeshWorkspaceHelpers.field_c = nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("orbpoints", (byte) -104);
+                var2 = ra.loadNamedResource("orbpoints", (byte) -104);
                 if (var2 != null) {
                   ResourceArchive.field_e = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("orbcoins", (byte) -107);
+                var2 = ra.loadNamedResource("orbcoins", (byte) -107);
                 if (var2 != null) {
                   nf.field_a = nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("orbpoints_colon", (byte) -109);
+                var2 = ra.loadNamedResource("orbpoints_colon", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("orbcoins_colon", (byte) -125);
+                var2 = ra.loadNamedResource("orbcoins_colon", (byte) -125);
                 if (null != var2) {
                   nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("achieved_colon_description", (byte) -101);
+                var2 = ra.loadNamedResource("achieved_colon_description", (byte) -101);
                 if (null != var2) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("secretachievement", (byte) -96);
+                var2 = ra.loadNamedResource("secretachievement", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("no_highscores", (byte) -123);
+                var2 = ra.loadNamedResource("no_highscores", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("hs_name", (byte) -128);
+                var2 = ra.loadNamedResource("hs_name", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("hs_level", (byte) -96);
+                var2 = ra.loadNamedResource("hs_level", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("hs_fromlevel", (byte) -96);
+                var2 = ra.loadNamedResource("hs_fromlevel", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("hs_tolevel", (byte) -108);
+                var2 = ra.loadNamedResource("hs_tolevel", (byte) -108);
                 if (var2 != null) {
                   nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("hs_score", (byte) -128);
+                var2 = ra.loadNamedResource("hs_score", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("hs_end", (byte) -125);
+                var2 = ra.loadNamedResource("hs_end", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("ingame_score", (byte) -115);
+                var2 = ra.loadNamedResource("ingame_score", (byte) -115);
                 if (null != var2) {
                   nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("score_colon", (byte) -128);
+                var2 = ra.loadNamedResource("score_colon", (byte) -128);
                 if (var2 != null) {
                   nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("mp_leavegame", (byte) -122);
+                var2 = ra.loadNamedResource("mp_leavegame", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("mp_offerrematch", (byte) -122);
+                var2 = ra.loadNamedResource("mp_offerrematch", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("mp_offerrematch_unrated", (byte) -102);
+                var2 = ra.loadNamedResource("mp_offerrematch_unrated", (byte) -102);
                 if (null != var2) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("mp_acceptrematch", (byte) -116);
+                var2 = ra.loadNamedResource("mp_acceptrematch", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("mp_acceptrematch_unrated", (byte) -126);
+                var2 = ra.loadNamedResource("mp_acceptrematch_unrated", (byte) -126);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("mp_cancelrematch", (byte) -102);
+                var2 = ra.loadNamedResource("mp_cancelrematch", (byte) -102);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("mp_cancelrematch_unrated", (byte) -108);
+                var2 = ra.loadNamedResource("mp_cancelrematch_unrated", (byte) -108);
                 if (null != var2) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("mp_rematchnewgame", (byte) -106);
+                var2 = ra.loadNamedResource("mp_rematchnewgame", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mp_rematchnewgame_unrated", (byte) -126);
+                var2 = ra.loadNamedResource("mp_rematchnewgame_unrated", (byte) -126);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("mp_x_wantstodraw", (byte) -98);
+                var2 = ra.loadNamedResource("mp_x_wantstodraw", (byte) -98);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mp_x_offersrematch", (byte) -117);
+                var2 = ra.loadNamedResource("mp_x_offersrematch", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("mp_x_offersrematch_unrated", (byte) -101);
+                var2 = ra.loadNamedResource("mp_x_offersrematch_unrated", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("mp_youofferrematch", (byte) -121);
+                var2 = ra.loadNamedResource("mp_youofferrematch", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("mp_youofferrematch_unrated", (byte) -100);
+                var2 = ra.loadNamedResource("mp_youofferrematch_unrated", (byte) -100);
                 if (var2 != null) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("mp_youofferdraw", (byte) -118);
+                var2 = ra.loadNamedResource("mp_youofferdraw", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("mp_youresigned", (byte) -116);
+                var2 = ra.loadNamedResource("mp_youresigned", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("mp_youresigned_rematch", (byte) -110);
+                var2 = ra.loadNamedResource("mp_youresigned_rematch", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("mp_x_hasresignedandleft", (byte) -124);
+                var2 = ra.loadNamedResource("mp_x_hasresignedandleft", (byte) -124);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("mp_x_hasresigned_rematch", (byte) -125);
+                var2 = ra.loadNamedResource("mp_x_hasresigned_rematch", (byte) -125);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("mp_x_hasresigned", (byte) -112);
+                var2 = ra.loadNamedResource("mp_x_hasresigned", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("mp_x_hasleft", (byte) -108);
+                var2 = ra.loadNamedResource("mp_x_hasleft", (byte) -108);
                 if (null != var2) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("mp_x_haswon", (byte) -99);
+                var2 = ra.loadNamedResource("mp_x_haswon", (byte) -99);
                 if (null != var2) {
                   nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("mp_youhavewon", (byte) -106);
+                var2 = ra.loadNamedResource("mp_youhavewon", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("mp_gamedrawn", (byte) -110);
+                var2 = ra.loadNamedResource("mp_gamedrawn", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("mp_timeremaining", (byte) -114);
+                var2 = ra.loadNamedResource("mp_timeremaining", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("mp_x_turn", (byte) -123);
+                var2 = ra.loadNamedResource("mp_x_turn", (byte) -123);
                 if (null != var2) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("mp_yourturn", (byte) -100);
+                var2 = ra.loadNamedResource("mp_yourturn", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("gameover", (byte) -112);
+                var2 = ra.loadNamedResource("gameover", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("mp_hidechat", (byte) -127);
+                var2 = ra.loadNamedResource("mp_hidechat", (byte) -127);
                 if (null != var2) {
                   nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("mp_showchat_nounread", (byte) -125);
+                var2 = ra.loadNamedResource("mp_showchat_nounread", (byte) -125);
                 if (var2 != null) {
                   nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("mp_showchat_unread1", (byte) -110);
+                var2 = ra.loadNamedResource("mp_showchat_unread1", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("mp_showchat_unread2", (byte) -108);
+                var2 = ra.loadNamedResource("mp_showchat_unread2", (byte) -108);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("click_to_quickchat", (byte) -105);
+                var2 = ra.loadNamedResource("click_to_quickchat", (byte) -105);
                 if (var2 != null) {
                   nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("autorespond", (byte) -121);
+                var2 = ra.loadNamedResource("autorespond", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("quickchat_help", (byte) -107);
+                var2 = ra.loadNamedResource("quickchat_help", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("quickchat_help_title", (byte) -95);
+                var2 = ra.loadNamedResource("quickchat_help_title", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_help,0", (byte) -107);
+                var2 = ra.loadNamedResource("quickchat_shortcut_help,0", (byte) -107);
                 if (null != var2) {
-                  sd.field_d[0] = nf.a((byte) 111, var2);
+                  LoginCredentialKind.field_d[0] = nf.a((byte) 111, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_help,1", (byte) -118);
+                var2 = ra.loadNamedResource("quickchat_shortcut_help,1", (byte) -118);
                 if (null != var2) {
-                  sd.field_d[1] = nf.a((byte) 91, var2);
+                  LoginCredentialKind.field_d[1] = nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_help,2", (byte) -106);
+                var2 = ra.loadNamedResource("quickchat_shortcut_help,2", (byte) -106);
                 if (null != var2) {
-                  sd.field_d[2] = nf.a((byte) 104, var2);
+                  LoginCredentialKind.field_d[2] = nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_help,3", (byte) -95);
+                var2 = ra.loadNamedResource("quickchat_shortcut_help,3", (byte) -95);
                 if (null != var2) {
-                  sd.field_d[3] = nf.a((byte) 85, var2);
+                  LoginCredentialKind.field_d[3] = nf.a((byte) 85, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_help,4", (byte) -114);
+                var2 = ra.loadNamedResource("quickchat_shortcut_help,4", (byte) -114);
                 if (null != var2) {
-                  sd.field_d[4] = nf.a((byte) 106, var2);
+                  LoginCredentialKind.field_d[4] = nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_help,5", (byte) -123);
+                var2 = ra.loadNamedResource("quickchat_shortcut_help,5", (byte) -123);
                 if (null != var2) {
-                  sd.field_d[5] = nf.a((byte) 102, var2);
+                  LoginCredentialKind.field_d[5] = nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_keys,0", (byte) -119);
+                var2 = ra.loadNamedResource("quickchat_shortcut_keys,0", (byte) -119);
                 if (null != var2) {
                   ImageProducerRasterBuffer.field_o[0] = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_keys,1", (byte) -122);
+                var2 = ra.loadNamedResource("quickchat_shortcut_keys,1", (byte) -122);
                 if (null != var2) {
                   ImageProducerRasterBuffer.field_o[1] = nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_keys,2", (byte) -119);
+                var2 = ra.loadNamedResource("quickchat_shortcut_keys,2", (byte) -119);
                 if (var2 != null) {
                   ImageProducerRasterBuffer.field_o[2] = nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_keys,3", (byte) -117);
+                var2 = ra.loadNamedResource("quickchat_shortcut_keys,3", (byte) -117);
                 if (var2 != null) {
                   ImageProducerRasterBuffer.field_o[3] = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_keys,4", (byte) -120);
+                var2 = ra.loadNamedResource("quickchat_shortcut_keys,4", (byte) -120);
                 if (var2 != null) {
                   ImageProducerRasterBuffer.field_o[4] = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("quickchat_shortcut_keys,5", (byte) -106);
+                var2 = ra.loadNamedResource("quickchat_shortcut_keys,5", (byte) -106);
                 if (null != var2) {
                   ImageProducerRasterBuffer.field_o[5] = nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("keychar_the_character_under_questionmark", (byte) -117);
+                var2 = ra.loadNamedResource("keychar_the_character_under_questionmark", (byte) -117);
                 if (null != var2) {
                   ie.a((byte) -26, var2[0]);
                 }
-                var2 = ra.a("rating_noratings", (byte) -107);
+                var2 = ra.loadNamedResource("rating_noratings", (byte) -107);
                 if (null != var2) {
                   nf.a((byte) 97, var2);
                 }
-                var2 = ra.a("rating_rating", (byte) -96);
+                var2 = ra.loadNamedResource("rating_rating", (byte) -96);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("rating_played", (byte) -105);
+                var2 = ra.loadNamedResource("rating_played", (byte) -105);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("rating_won", (byte) -119);
+                var2 = ra.loadNamedResource("rating_won", (byte) -119);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("rating_lost", (byte) -112);
+                var2 = ra.loadNamedResource("rating_lost", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("rating_drawn", (byte) -116);
+                var2 = ra.loadNamedResource("rating_drawn", (byte) -116);
                 if (null != var2) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("benefits_fullscreen", (byte) -101);
+                var2 = ra.loadNamedResource("benefits_fullscreen", (byte) -101);
                 if (var2 != null) {
                   nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("benefits_noadverts", (byte) -95);
+                var2 = ra.loadNamedResource("benefits_noadverts", (byte) -95);
                 if (null != var2) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("benefits_price", (byte) -104);
+                var2 = ra.loadNamedResource("benefits_price", (byte) -104);
                 if (var2 != null) {
                   BufferedRandomAccessFile.field_b = nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("members_expansion_benefits,0", (byte) -119);
+                var2 = ra.loadNamedResource("members_expansion_benefits,0", (byte) -119);
                 if (null != var2) {
                   pi.field_a[0] = nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("members_expansion_benefits,1", (byte) -111);
+                var2 = ra.loadNamedResource("members_expansion_benefits,1", (byte) -111);
                 if (null != var2) {
                   pi.field_a[1] = nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("members_expansion_benefits,2", (byte) -118);
+                var2 = ra.loadNamedResource("members_expansion_benefits,2", (byte) -118);
                 if (null != var2) {
                   pi.field_a[2] = nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("members_expansion_price_top", (byte) -112);
+                var2 = ra.loadNamedResource("members_expansion_price_top", (byte) -112);
                 if (null != var2) {
                   nf.a((byte) 90, var2);
                 }
-                var2 = ra.a("members_expansion_price_bottom", (byte) -96);
+                var2 = ra.loadNamedResource("members_expansion_price_bottom", (byte) -96);
                 if (null != var2) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("reconnect_lost_seq,0", (byte) -119);
+                var2 = ra.loadNamedResource("reconnect_lost_seq,0", (byte) -119);
                 if (null != var2) {
                   Crc32Helpers.field_a[0] = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("reconnect_lost_seq,1", (byte) -116);
+                var2 = ra.loadNamedResource("reconnect_lost_seq,1", (byte) -116);
                 if (var2 != null) {
                   Crc32Helpers.field_a[1] = nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("reconnect_lost_seq,2", (byte) -119);
+                var2 = ra.loadNamedResource("reconnect_lost_seq,2", (byte) -119);
                 if (var2 != null) {
                   Crc32Helpers.field_a[2] = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("reconnect_lost_seq,3", (byte) -102);
+                var2 = ra.loadNamedResource("reconnect_lost_seq,3", (byte) -102);
                 if (var2 != null) {
                   Crc32Helpers.field_a[3] = nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("reconnect_lost", (byte) -121);
+                var2 = ra.loadNamedResource("reconnect_lost", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("reconnect_restored", (byte) -104);
+                var2 = ra.loadNamedResource("reconnect_restored", (byte) -104);
                 if (var2 != null) {
                   nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("reconnect_please_check", (byte) -112);
+                var2 = ra.loadNamedResource("reconnect_please_check", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 117, var2);
                 }
-                var2 = ra.a("reconnect_wait", (byte) -96);
+                var2 = ra.loadNamedResource("reconnect_wait", (byte) -96);
                 if (var2 != null) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("reconnect_retry", (byte) -115);
+                var2 = ra.loadNamedResource("reconnect_retry", (byte) -115);
                 if (null != var2) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("reconnect_resume", (byte) -128);
+                var2 = ra.loadNamedResource("reconnect_resume", (byte) -128);
                 if (null != var2) {
                   nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("reconnect_or", (byte) -116);
+                var2 = ra.loadNamedResource("reconnect_or", (byte) -116);
                 if (var2 != null) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("reconnect_exitfs", (byte) -121);
+                var2 = ra.loadNamedResource("reconnect_exitfs", (byte) -121);
                 if (null != var2) {
                   nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("reconnect_exitfs_quit", (byte) -109);
+                var2 = ra.loadNamedResource("reconnect_exitfs_quit", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("reconnect_quit", (byte) -124);
+                var2 = ra.loadNamedResource("reconnect_quit", (byte) -124);
                 if (var2 != null) {
                   nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("reconnect_check_fs", (byte) -105);
+                var2 = ra.loadNamedResource("reconnect_check_fs", (byte) -105);
                 if (null != var2) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("reconnect_check_nonfs", (byte) -100);
+                var2 = ra.loadNamedResource("reconnect_check_nonfs", (byte) -100);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("fs_accept_beforeaccept", (byte) -104);
+                var2 = ra.loadNamedResource("fs_accept_beforeaccept", (byte) -104);
                 if (var2 != null) {
-                  bh.field_c = nf.a((byte) 121, var2);
+                  QuickChatDynamicCommand.field_c = nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("fs_button_accept", (byte) -95);
+                var2 = ra.loadNamedResource("fs_button_accept", (byte) -95);
                 if (var2 != null) {
                   ca.field_a = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("fs_accept_afteraccept", (byte) -106);
+                var2 = ra.loadNamedResource("fs_accept_afteraccept", (byte) -106);
                 if (var2 != null) {
                   MidiEnvelope.field_g = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("fs_button_cancel", (byte) -95);
+                var2 = ra.loadNamedResource("fs_button_cancel", (byte) -95);
                 if (null != var2) {
                   wb.field_h = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("fs_accept_aftercancel", (byte) -126);
+                var2 = ra.loadNamedResource("fs_accept_aftercancel", (byte) -126);
                 if (null != var2) {
                   StripedProgressBar.field_E = nf.a((byte) 123, var2);
                 }
-                var2 = ra.a("fs_accept_countdown_sing", (byte) -120);
+                var2 = ra.loadNamedResource("fs_accept_countdown_sing", (byte) -120);
                 if (null != var2) {
                   gk.field_e = nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("fs_accept_countdown_pl", (byte) -114);
+                var2 = ra.loadNamedResource("fs_accept_countdown_pl", (byte) -114);
                 if (var2 != null) {
                   MenuController.field_k = nf.a((byte) 110, var2);
                 }
-                var2 = ra.a("fs_nonmember", (byte) -128);
+                var2 = ra.loadNamedResource("fs_nonmember", (byte) -128);
                 if (null != var2) {
-                  qb.field_s = nf.a((byte) 102, var2);
+                  FramedButtonPainter.field_s = nf.a((byte) 102, var2);
                 }
-                var2 = ra.a("fs_button_close", (byte) -114);
+                var2 = ra.loadNamedResource("fs_button_close", (byte) -114);
                 if (null != var2) {
                   wizardrun.field_F = nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("fs_button_members", (byte) -106);
+                var2 = ra.loadNamedResource("fs_button_members", (byte) -106);
                 if (null != var2) {
                   MouseWheelInput.field_e = nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("fs_unavailable", (byte) -103);
+                var2 = ra.loadNamedResource("fs_unavailable", (byte) -103);
                 if (var2 != null) {
                   e.field_c = nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("fs_unavailable_try_signed_applet", (byte) -124);
+                var2 = ra.loadNamedResource("fs_unavailable_try_signed_applet", (byte) -124);
                 if (null != var2) {
                   FullscreenController.field_b = nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("fs_focus", (byte) -95);
+                var2 = ra.loadNamedResource("fs_focus", (byte) -95);
                 if (var2 != null) {
                   SocketConnector.field_b = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("fs_focus_or_resolution", (byte) -107);
+                var2 = ra.loadNamedResource("fs_focus_or_resolution", (byte) -107);
                 if (var2 != null) {
                   ArchiveCatalog.field_c = nf.a((byte) 126, var2);
                 }
-                var2 = ra.a("fs_timeout", (byte) -100);
+                var2 = ra.loadNamedResource("fs_timeout", (byte) -100);
                 if (null != var2) {
                   DialogLayer.field_G = nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("fs_button_tryagain", (byte) -99);
+                var2 = ra.loadNamedResource("fs_button_tryagain", (byte) -99);
                 if (null != var2) {
                   tc.field_n = nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("graphics_ui_fs_countdown", (byte) -107);
+                var2 = ra.loadNamedResource("graphics_ui_fs_countdown", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("mb_caption_title", (byte) -102);
+                var2 = ra.loadNamedResource("mb_caption_title", (byte) -102);
                 if (null != var2) {
                   lg.field_b = nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("mb_including_gamename", (byte) -112);
+                var2 = ra.loadNamedResource("mb_including_gamename", (byte) -112);
                 if (null != var2) {
                   RasterBuffer.field_b = nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("mb_full_access_1", (byte) -116);
+                var2 = ra.loadNamedResource("mb_full_access_1", (byte) -116);
                 if (var2 != null) {
                   of.field_l = nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("mb_full_access_2", (byte) -116);
+                var2 = ra.loadNamedResource("mb_full_access_2", (byte) -116);
                 if (var2 != null) {
                   PcmResampler.field_g = nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("mb_achievement_count_1", (byte) -97);
+                var2 = ra.loadNamedResource("mb_achievement_count_1", (byte) -97);
                 if (null != var2) {
-                  bc.field_b = nf.a((byte) 84, var2);
+                  MeshWorkspaceHelpers.field_b = nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("mb_achievement_count_2", (byte) -101);
+                var2 = ra.loadNamedResource("mb_achievement_count_2", (byte) -101);
                 if (var2 != null) {
-                  nh.field_q = nf.a((byte) 104, var2);
+                  AlternateUsernameLoginCredentials.field_q = nf.a((byte) 104, var2);
                 }
-                var2 = ra.a("mb_exclusive_1", (byte) -116);
+                var2 = ra.loadNamedResource("mb_exclusive_1", (byte) -116);
                 if (null != var2) {
-                  jg.field_p = nf.a((byte) 111, var2);
+                  DisplayNameValidator.field_p = nf.a((byte) 111, var2);
                 }
             }
             void loadScoresRatingsAndSubscriptionTexts() throws java.lang.RuntimeException {
-                var2 = ra.a("mb_exclusive_2", (byte) -101);
+                var2 = ra.loadNamedResource("mb_exclusive_2", (byte) -101);
                 if (var2 != null) {
                   ra.field_i = nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("me_extra_benefits", (byte) -102);
+                var2 = ra.loadNamedResource("me_extra_benefits", (byte) -102);
                 if (null != var2) {
                   nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("hs_friend_tip", (byte) -127);
+                var2 = ra.loadNamedResource("hs_friend_tip", (byte) -127);
                 if (null != var2) {
                   we.field_e = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("hs_friend_tip_multi", (byte) -106);
+                var2 = ra.loadNamedResource("hs_friend_tip_multi", (byte) -106);
                 if (null != var2) {
                   nf.a((byte) 114, var2);
                 }
-                var2 = ra.a("hs_mode_name,0", (byte) -112);
+                var2 = ra.loadNamedResource("hs_mode_name,0", (byte) -112);
                 if (var2 != null) {
                   NodeHashTableIterator.field_l[0] = nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("hs_mode_name,1", (byte) -111);
+                var2 = ra.loadNamedResource("hs_mode_name,1", (byte) -111);
                 if (var2 != null) {
                   NodeHashTableIterator.field_l[1] = nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("hs_mode_name,2", (byte) -120);
+                var2 = ra.loadNamedResource("hs_mode_name,2", (byte) -120);
                 if (null != var2) {
                   NodeHashTableIterator.field_l[2] = nf.a((byte) 125, var2);
                 }
-                var2 = ra.a("rating_mode_name,0", (byte) -107);
+                var2 = ra.loadNamedResource("rating_mode_name,0", (byte) -107);
                 if (null != var2) {
                   ih.field_c[0] = nf.a((byte) 92, var2);
                 }
-                var2 = ra.a("rating_mode_name,1", (byte) -109);
+                var2 = ra.loadNamedResource("rating_mode_name,1", (byte) -109);
                 if (null != var2) {
                   ih.field_c[1] = nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("rating_mode_long_name,0", (byte) -115);
+                var2 = ra.loadNamedResource("rating_mode_long_name,0", (byte) -115);
                 if (var2 != null) {
                   gf.field_eb[0] = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("rating_mode_long_name,1", (byte) -126);
+                var2 = ra.loadNamedResource("rating_mode_long_name,1", (byte) -126);
                 if (var2 != null) {
                   gf.field_eb[1] = nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("graphics_config_fixed_size", (byte) -115);
+                var2 = ra.loadNamedResource("graphics_config_fixed_size", (byte) -115);
                 if (var2 != null) {
                   nf.a((byte) 127, var2);
                 }
-                var2 = ra.a("graphics_config_resizable", (byte) -110);
+                var2 = ra.loadNamedResource("graphics_config_resizable", (byte) -110);
                 if (null != var2) {
                   nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("graphics_config_fullscreen", (byte) -118);
+                var2 = ra.loadNamedResource("graphics_config_fullscreen", (byte) -118);
                 if (var2 != null) {
                   nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("graphics_config_done", (byte) -122);
+                var2 = ra.loadNamedResource("graphics_config_done", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("graphics_config_apply", (byte) -122);
+                var2 = ra.loadNamedResource("graphics_config_apply", (byte) -122);
                 if (null != var2) {
                   nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("graphics_config_title", (byte) -117);
+                var2 = ra.loadNamedResource("graphics_config_title", (byte) -117);
                 if (null != var2) {
                   nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("graphics_config_instruction", (byte) -109);
+                var2 = ra.loadNamedResource("graphics_config_instruction", (byte) -109);
                 if (var2 != null) {
                   nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("graphics_config_need_memory", (byte) -127);
+                var2 = ra.loadNamedResource("graphics_config_need_memory", (byte) -127);
                 if (null != var2) {
                   nf.a((byte) 119, var2);
                 }
-                var2 = ra.a("pleasewait_dotdotdot", (byte) -102);
+                var2 = ra.loadNamedResource("pleasewait_dotdotdot", (byte) -102);
                 if (null != var2) {
                   GameShell.field_u = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("serviceunavailable", (byte) -110);
+                var2 = ra.loadNamedResource("serviceunavailable", (byte) -110);
                 if (var2 != null) {
                   nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("createtouse", (byte) -104);
+                var2 = ra.loadNamedResource("createtouse", (byte) -104);
                 if (var2 != null) {
                   vl.field_n = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("achievementsoffline", (byte) -112);
+                var2 = ra.loadNamedResource("achievementsoffline", (byte) -112);
                 if (var2 != null) {
                   nf.a((byte) 103, var2);
                 }
-                var2 = ra.a("warning", (byte) -114);
+                var2 = ra.loadNamedResource("warning", (byte) -114);
                 if (null != var2) {
                   nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("DEFAULT_PLAYER_NAME", (byte) -98);
+                var2 = ra.loadNamedResource("DEFAULT_PLAYER_NAME", (byte) -98);
                 if (null != var2) {
                   RasterSnapshot.field_i = nf.a((byte) 105, var2);
                 }
-                var2 = ra.a("mustlogin1", (byte) -126);
+                var2 = ra.loadNamedResource("mustlogin1", (byte) -126);
                 if (var2 != null) {
                   vg.field_U = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("mustlogin2,1", (byte) -96);
+                var2 = ra.loadNamedResource("mustlogin2,1", (byte) -96);
                 if (var2 != null) {
                   NanoTickClock.field_p[1] = nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("mustlogin2,2", (byte) -108);
+                var2 = ra.loadNamedResource("mustlogin2,2", (byte) -108);
                 if (null != var2) {
                   NanoTickClock.field_p[2] = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("mustlogin2,3", (byte) -117);
+                var2 = ra.loadNamedResource("mustlogin2,3", (byte) -117);
                 if (var2 != null) {
                   NanoTickClock.field_p[3] = nf.a((byte) 115, var2);
                 }
-                var2 = ra.a("mustlogin2,4", (byte) -112);
+                var2 = ra.loadNamedResource("mustlogin2,4", (byte) -112);
                 if (var2 != null) {
                   NanoTickClock.field_p[4] = nf.a((byte) 116, var2);
                 }
-                var2 = ra.a("mustlogin2,5", (byte) -125);
+                var2 = ra.loadNamedResource("mustlogin2,5", (byte) -125);
                 if (var2 != null) {
                   NanoTickClock.field_p[5] = nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("mustlogin2,6", (byte) -112);
+                var2 = ra.loadNamedResource("mustlogin2,6", (byte) -112);
                 if (null != var2) {
                   NanoTickClock.field_p[6] = nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("mustlogin2,7", (byte) -118);
+                var2 = ra.loadNamedResource("mustlogin2,7", (byte) -118);
                 if (null != var2) {
                   NanoTickClock.field_p[7] = nf.a((byte) 100, var2);
                 }
-                var2 = ra.a("mustlogin3,1", (byte) -120);
+                var2 = ra.loadNamedResource("mustlogin3,1", (byte) -120);
                 if (null != var2) {
                   IntrusiveDeque.field_e[1] = nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("mustlogin3,2", (byte) -120);
+                var2 = ra.loadNamedResource("mustlogin3,2", (byte) -120);
                 if (null != var2) {
                   IntrusiveDeque.field_e[2] = nf.a((byte) 96, var2);
                 }
-                var2 = ra.a("mustlogin3,3", (byte) -114);
+                var2 = ra.loadNamedResource("mustlogin3,3", (byte) -114);
                 if (null != var2) {
                   IntrusiveDeque.field_e[3] = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("mustlogin3,4", (byte) -120);
+                var2 = ra.loadNamedResource("mustlogin3,4", (byte) -120);
                 if (var2 != null) {
                   IntrusiveDeque.field_e[4] = nf.a((byte) 86, var2);
                 }
-                var2 = ra.a("mustlogin3,5", (byte) -105);
+                var2 = ra.loadNamedResource("mustlogin3,5", (byte) -105);
                 if (var2 != null) {
                   IntrusiveDeque.field_e[5] = nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("mustlogin3,6", (byte) -125);
+                var2 = ra.loadNamedResource("mustlogin3,6", (byte) -125);
                 if (var2 != null) {
                   IntrusiveDeque.field_e[6] = nf.a((byte) 108, var2);
                 }
-                var2 = ra.a("mustlogin3,7", (byte) -113);
+                var2 = ra.loadNamedResource("mustlogin3,7", (byte) -113);
                 if (var2 != null) {
                   IntrusiveDeque.field_e[7] = nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("discard", (byte) -109);
+                var2 = ra.loadNamedResource("discard", (byte) -109);
                 if (null != var2) {
                   gf.field_X = nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("mustlogin4,1", (byte) -98);
+                var2 = ra.loadNamedResource("mustlogin4,1", (byte) -98);
                 if (var2 != null) {
-                  sk.field_y[1] = nf.a((byte) 98, var2);
+                  DiskCacheRequest.field_y[1] = nf.a((byte) 98, var2);
                 }
-                var2 = ra.a("mustlogin4,2", (byte) -119);
+                var2 = ra.loadNamedResource("mustlogin4,2", (byte) -119);
                 if (null != var2) {
-                  sk.field_y[2] = nf.a((byte) 109, var2);
+                  DiskCacheRequest.field_y[2] = nf.a((byte) 109, var2);
                 }
-                var2 = ra.a("mustlogin4,3", (byte) -104);
+                var2 = ra.loadNamedResource("mustlogin4,3", (byte) -104);
                 if (null != var2) {
-                  sk.field_y[3] = nf.a((byte) 95, var2);
+                  DiskCacheRequest.field_y[3] = nf.a((byte) 95, var2);
                 }
-                var2 = ra.a("mustlogin4,4", (byte) -103);
+                var2 = ra.loadNamedResource("mustlogin4,4", (byte) -103);
                 if (var2 != null) {
-                  sk.field_y[4] = nf.a((byte) 124, var2);
+                  DiskCacheRequest.field_y[4] = nf.a((byte) 124, var2);
                 }
-                var2 = ra.a("mustlogin4,5", (byte) -120);
+                var2 = ra.loadNamedResource("mustlogin4,5", (byte) -120);
                 if (null != var2) {
-                  sk.field_y[5] = nf.a((byte) 99, var2);
+                  DiskCacheRequest.field_y[5] = nf.a((byte) 99, var2);
                 }
-                var2 = ra.a("mustlogin4,6", (byte) -100);
+                var2 = ra.loadNamedResource("mustlogin4,6", (byte) -100);
                 if (null != var2) {
-                  sk.field_y[6] = nf.a((byte) 107, var2);
+                  DiskCacheRequest.field_y[6] = nf.a((byte) 107, var2);
                 }
-                var2 = ra.a("mustlogin4,7", (byte) -105);
+                var2 = ra.loadNamedResource("mustlogin4,7", (byte) -105);
                 if (var2 != null) {
-                  sk.field_y[7] = nf.a((byte) 120, var2);
+                  DiskCacheRequest.field_y[7] = nf.a((byte) 120, var2);
                 }
-                var2 = ra.a("mustlogin_notloggedin", (byte) -120);
+                var2 = ra.loadNamedResource("mustlogin_notloggedin", (byte) -120);
                 if (null != var2) {
                   nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("mustlogin_alternate,1", (byte) -128);
+                var2 = ra.loadNamedResource("mustlogin_alternate,1", (byte) -128);
                 if (var2 != null) {
-                  wg.field_a[1] = nf.a((byte) 88, var2);
+                  HighscorePlayer.field_a[1] = nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("mustlogin_alternate,2", (byte) -99);
+                var2 = ra.loadNamedResource("mustlogin_alternate,2", (byte) -99);
                 if (var2 != null) {
-                  wg.field_a[2] = nf.a((byte) 89, var2);
+                  HighscorePlayer.field_a[2] = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("mustlogin_alternate,3", (byte) -96);
+                var2 = ra.loadNamedResource("mustlogin_alternate,3", (byte) -96);
                 if (var2 != null) {
-                  wg.field_a[3] = nf.a((byte) 89, var2);
+                  HighscorePlayer.field_a[3] = nf.a((byte) 89, var2);
                 }
-                var2 = ra.a("mustlogin_alternate,4", (byte) -109);
+                var2 = ra.loadNamedResource("mustlogin_alternate,4", (byte) -109);
                 if (null != var2) {
-                  wg.field_a[4] = nf.a((byte) 121, var2);
+                  HighscorePlayer.field_a[4] = nf.a((byte) 121, var2);
                 }
-                var2 = ra.a("mustlogin_alternate,5", (byte) -118);
+                var2 = ra.loadNamedResource("mustlogin_alternate,5", (byte) -118);
                 if (null != var2) {
-                  wg.field_a[5] = nf.a((byte) 113, var2);
+                  HighscorePlayer.field_a[5] = nf.a((byte) 113, var2);
                 }
-                var2 = ra.a("mustlogin_alternate,6", (byte) -111);
+                var2 = ra.loadNamedResource("mustlogin_alternate,6", (byte) -111);
                 if (null != var2) {
-                  wg.field_a[6] = nf.a((byte) 106, var2);
+                  HighscorePlayer.field_a[6] = nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("mustlogin_alternate,7", (byte) -97);
+                var2 = ra.loadNamedResource("mustlogin_alternate,7", (byte) -97);
                 if (var2 != null) {
-                  wg.field_a[7] = nf.a((byte) 101, var2);
+                  HighscorePlayer.field_a[7] = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,0", (byte) -109);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,0", (byte) -109);
                 if (null != var2) {
-                  uc.field_d[0] = nf.a((byte) 118, var2);
+                  ArchiveLoadingPlan.field_d[0] = nf.a((byte) 118, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,1", (byte) -96);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,1", (byte) -96);
                 if (null != var2) {
-                  uc.field_d[1] = nf.a((byte) 101, var2);
+                  ArchiveLoadingPlan.field_d[1] = nf.a((byte) 101, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,2", (byte) -122);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,2", (byte) -122);
                 if (null != var2) {
-                  uc.field_d[2] = nf.a((byte) 122, var2);
+                  ArchiveLoadingPlan.field_d[2] = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,3", (byte) -119);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,3", (byte) -119);
                 if (null != var2) {
-                  uc.field_d[3] = nf.a((byte) 93, var2);
+                  ArchiveLoadingPlan.field_d[3] = nf.a((byte) 93, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,4", (byte) -117);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,4", (byte) -117);
                 if (var2 != null) {
-                  uc.field_d[4] = nf.a((byte) 122, var2);
+                  ArchiveLoadingPlan.field_d[4] = nf.a((byte) 122, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,5", (byte) -108);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,5", (byte) -108);
                 if (null != var2) {
-                  uc.field_d[5] = nf.a((byte) 94, var2);
+                  ArchiveLoadingPlan.field_d[5] = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,6", (byte) -126);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,6", (byte) -126);
                 if (null != var2) {
-                  uc.field_d[6] = nf.a((byte) 106, var2);
+                  ArchiveLoadingPlan.field_d[6] = nf.a((byte) 106, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,7", (byte) -116);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,7", (byte) -116);
                 if (null != var2) {
-                  uc.field_d[7] = nf.a((byte) 84, var2);
+                  ArchiveLoadingPlan.field_d[7] = nf.a((byte) 84, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,8", (byte) -122);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,8", (byte) -122);
                 if (null != var2) {
-                  uc.field_d[8] = nf.a((byte) 94, var2);
+                  ArchiveLoadingPlan.field_d[8] = nf.a((byte) 94, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,9", (byte) -102);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,9", (byte) -102);
                 if (var2 != null) {
-                  uc.field_d[9] = nf.a((byte) 87, var2);
+                  ArchiveLoadingPlan.field_d[9] = nf.a((byte) 87, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,10", (byte) -122);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,10", (byte) -122);
                 if (var2 != null) {
-                  uc.field_d[10] = nf.a((byte) 91, var2);
+                  ArchiveLoadingPlan.field_d[10] = nf.a((byte) 91, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,11", (byte) -127);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,11", (byte) -127);
                 if (null != var2) {
-                  uc.field_d[11] = nf.a((byte) 112, var2);
+                  ArchiveLoadingPlan.field_d[11] = nf.a((byte) 112, var2);
                 }
-                var2 = ra.a("subscription_cost_monthly,12", (byte) -115);
+                var2 = ra.loadNamedResource("subscription_cost_monthly,12", (byte) -115);
                 if (var2 != null) {
-                  uc.field_d[12] = nf.a((byte) 88, var2);
+                  ArchiveLoadingPlan.field_d[12] = nf.a((byte) 88, var2);
                 }
-                var2 = ra.a("sentence_separator", (byte) -107);
+                var2 = ra.loadNamedResource("sentence_separator", (byte) -107);
                 if (var2 != null) {
                   nf.a((byte) 93, var2);
                 }
-                qb.field_r = null;
+                FramedButtonPainter.field_r = null;
             }
             void run() {
                 var3 = wizardrun.field_H;
@@ -3068,7 +3068,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final java.net.Socket a(byte param0) throws IOException {
+    final java.net.Socket connect(byte param0) throws IOException {
         int stackIn_8_0 = 0;
         java.net.ProxySelector stackIn_12_0;
         java.net.URI stackIn_12_1;
@@ -3103,7 +3103,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        hf var12_ref = null;
+        ProxyAuthenticationException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = wizardrun.field_H;
@@ -3163,7 +3163,7 @@ final class ProxySocketConnector extends SocketConnector {
               var10 = var8[var9];
               var11 = (java.net.Proxy) (var10);
               try {
-                var12 = this.a(param0 + 133, var11);
+                var12 = this.connectViaProxy(param0 + 133, var11);
                 stackIn_42_0 = var12;
                 if (var13 != 0) {
                   decompiledRegionSelector0 = 0;
@@ -3174,9 +3174,9 @@ final class ProxySocketConnector extends SocketConnector {
                   }
                   decompiledRegionSelector0 = 1;
                 }
-              } catch (hf decompiledCaughtParameter1) {
+              } catch (ProxyAuthenticationException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var12_ref = (hf) (Object) decompiledCaughtException;
+                var12_ref = (ProxyAuthenticationException) (Object) decompiledCaughtException;
                 var7 = var12_ref;
                 decompiledRegionSelector0 = 1;
               } catch (java.io.IOException decompiledCaughtParameter2) {
@@ -3217,7 +3217,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
+    private final java.net.Socket connectViaProxy(int param0, java.net.Proxy param1) throws IOException {
         java.net.Socket stackIn_2_0 = null;
         Object stackIn_9_0 = null;
         java.net.Socket stackIn_20_0 = null;
@@ -3287,7 +3287,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_20_0 = this.a((byte) 112, var4.getPort(), var4.getHostName(), (String) (var5));
+          stackIn_20_0 = this.openHttpTunnel((byte) 112, var4.getPort(), var4.getHostName(), (String) (var5));
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -3303,7 +3303,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(byte param0, int param1, String param2, String param3) throws IOException {
+    private final java.net.Socket openHttpTunnel(byte param0, int param1, String param2, String param3) throws IOException {
         java.net.Socket stackIn_20_0 = null;
         Object stackIn_41_0 = null;
         RuntimeException stackIn_45_0 = null;
@@ -3357,7 +3357,7 @@ final class ProxySocketConnector extends SocketConnector {
                     if (var11 != -1) {
                       var8 = var8.substring(0, var11);
                     }
-                    throw new hf(var8);
+                    throw new ProxyAuthenticationException(var8);
                   }
                   var8 = var7.readLine();
                   var9++;
@@ -3367,7 +3367,7 @@ final class ProxySocketConnector extends SocketConnector {
                 }
                 break;
               }
-              throw new hf("");
+              throw new ProxyAuthenticationException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_20_0 = var5;
@@ -3408,7 +3408,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     static {
-        field_f = new bh(1, 2, 2, 0);
+        field_f = new QuickChatDynamicCommand(1, 2, 2, 0);
     }
 
     @SuppressWarnings("unchecked")

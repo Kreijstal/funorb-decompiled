@@ -12,7 +12,7 @@ final class dg {
     public static void releaseStatics(int param0) {
         if (param0 != 256) {
           byte[] var2 = (byte[]) null;
-          dg.a((byte[]) null, -61);
+          dg.decompressArchiveContainer((byte[]) null, -61);
           loadingMessage = null;
           return;
         }
@@ -23,7 +23,7 @@ final class dg {
         int var1 = 118 / ((param0 + 4) / 48);
         BoundedRandomAccessFile.field_b = true;
         Base37Codec.field_c = MonotonicClockHelpers.monotonicMillis((byte) 91) + 15000L;
-        return ml.field_t == 11 ? true : false;
+        return ArchiveRequest.field_t == 11 ? true : false;
     }
 
     final static void a(int param0, int param1, byte param2) {
@@ -52,20 +52,20 @@ final class dg {
           var5 = (-DualLinkNodeHashTable.field_f + 250 << 8) / 50;
         }
         UrlPacketDownloader.a(CharSequenceJoiner.field_a, false);
-        cj.c();
+        TriangleRasterState.useRasterClip();
         var6 = 14 % ((param2 + 9) / 50);
         SoftwareRasterizer.clear();
         gf.k(-120);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleBlended(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
           if (DualLinkNodeHashTable.field_f < 150) {
             CharSequenceJoiner.field_a.drawHalfSize(var3, var4);
           } else {
             TextLayout.field_a.drawAlpha(var3 + 15, var4 + 10, var5);
           }
         } else {
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
           if (DualLinkNodeHashTable.field_f < 150) {
             CharSequenceJoiner.field_a.drawHalfSize(var3, var4);
             var7 = DualLinkNodeHashTable.field_f - 125;
@@ -157,29 +157,29 @@ final class dg {
     }
 
     final static String a(int param0) {
-        if (fi.field_y == TextButton.field_E) {
+        if (NetworkArchiveRequest.field_y == TextButton.field_E) {
           return we.field_a;
         }
         if (param0 != -21) {
           dg.releaseStatics(-90);
-          if (!we.field_c.a(true)) {
-            return we.field_c.b((byte) 8);
+          if (!we.field_c.isComplete(true)) {
+            return we.field_c.getEmail((byte) 8);
           }
           if (TextButton.field_E != wc.field_j) {
             return ResizableDialog.field_S;
           }
-          return we.field_c.b((byte) 8);
+          return we.field_c.getEmail((byte) 8);
         }
-        if (!we.field_c.a(true)) {
-          return we.field_c.b((byte) 8);
+        if (!we.field_c.isComplete(true)) {
+          return we.field_c.getEmail((byte) 8);
         }
         if (TextButton.field_E != wc.field_j) {
           return ResizableDialog.field_S;
         }
-        return we.field_c.b((byte) 8);
+        return we.field_c.getEmail((byte) 8);
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] decompressArchiveContainer(byte[] param0, int param1) {
         byte[] stackIn_2_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_24_0 = null;

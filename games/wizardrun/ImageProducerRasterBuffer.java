@@ -88,7 +88,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(byte param0, int param1, java.awt.Component param2, int param3) {
+    final void initialize(byte param0, int param1, java.awt.Component param2, int param3) {
         try {
           this.field_h = param1;
           this.field_f = new int[param1 * param3 + 1];
@@ -102,7 +102,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
           this.c(0);
           param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.b(91);
+          this.bindRasterTarget(91);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

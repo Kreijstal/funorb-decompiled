@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke extends qb {
+final class ke extends FramedButtonPainter {
     static IntrusiveDeque field_u;
     static boolean field_w;
     static String field_v;
@@ -35,7 +35,7 @@ final class ke extends qb {
           if (param1 != -57) {
             field_u = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = StringPaddingHelpers.repeatCharacter((byte) -95, '*', param0.field_k.length());
+          stackIn_3_0 = StringPaddingHelpers.repeatCharacter((byte) -95, '*', param0.text.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

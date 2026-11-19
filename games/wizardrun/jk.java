@@ -3,7 +3,7 @@
  */
 final class jk {
     boolean field_d;
-    static bh field_a;
+    static QuickChatDynamicCommand field_a;
     static int field_e;
     int field_b;
     boolean field_f;
@@ -43,7 +43,7 @@ final class jk {
           if (0 == var2) {
             if (IntrusiveNode.field_f == null) {
               IntrusiveNode.field_f = new DualLinkNodeHashTable(128);
-              hj.field_e = 0;
+              IndexedSpriteArrayFactory.field_e = 0;
             }
             stackIn_14_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
@@ -66,8 +66,8 @@ final class jk {
             if (null == var5) {
               var5 = new aa();
               IntrusiveNode.field_f.put(var5, (long)var7.hashCode(), 112);
-              fieldTemp$0 = hj.field_e;
-              hj.field_e = hj.field_e + 1;
+              fieldTemp$0 = IndexedSpriteArrayFactory.field_e;
+              IndexedSpriteArrayFactory.field_e = IndexedSpriteArrayFactory.field_e + 1;
               var5.field_ob = fieldTemp$0;
               ExceptionSupport.field_a.addLast(var5, false);
             }
@@ -76,27 +76,27 @@ final class jk {
           }
           if (1 != var2) {
             if (var2 == 2) {
-              if (jg.field_k == 1) {
-                jg.field_k = 2;
+              if (DisplayNameValidator.field_k == 1) {
+                DisplayNameValidator.field_k = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (jg.field_k == 2) {
-                jg.field_k = 1;
+              if (DisplayNameValidator.field_k == 2) {
+                DisplayNameValidator.field_k = 1;
               }
               return;
             }
             if (var2 != 4) {
               ResizableDialog.a((Throwable) null, "F1: " + ni.c(6), -562);
-              ql.a(-91);
+              HuffmanDecoder.closeAccountConnection(-91);
               return;
             }
-            jg.field_k = 1;
+            DisplayNameValidator.field_k = 1;
             var3 = var1.readCp1252String(0);
             me.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            qb.a((byte) 52, var4);
+            FramedButtonPainter.a((byte) 52, var4);
             return;
           }
           if (null == lj.field_f) {
@@ -186,7 +186,7 @@ final class jk {
     }
 
     static {
-        field_a = new bh(4, 1, 1, 1);
+        field_a = new QuickChatDynamicCommand(4, 1, 1, 1);
         field_c = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     }
 }

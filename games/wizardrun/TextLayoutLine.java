@@ -22,9 +22,9 @@ final class TextLayoutLine {
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
-        nj var4_ref_nj = null;
+        HighscoreRequest var4_ref_nj = null;
         int var5 = 0;
-        ai var6 = null;
+        ScoreSubmission var6 = null;
         int var6_int = 0;
         int var7 = 0;
         String[][] var8 = null;
@@ -57,32 +57,32 @@ final class TextLayoutLine {
           var2 = var27.readUnsignedByte(255);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(-14477);
-            var4_ref_nj = (nj) (Js5Index.field_l.first((byte) 116));
+            var4_ref_nj = (HighscoreRequest) (Js5Index.field_l.first((byte) 116));
             while (var4_ref_nj != null) {
               if (var4_ref_nj.field_l != var3) {
-                var4_ref_nj = (nj) (Js5Index.field_l.next(8192));
+                var4_ref_nj = (HighscoreRequest) (Js5Index.field_l.next(8192));
                 continue;
               }
               break;
             }
             if (var4_ref_nj == null) {
-              ql.a(-101);
+              HuffmanDecoder.closeAccountConnection(-101);
               return;
             }
             var5 = var27.readUnsignedByte(255);
             if (var5 != 0) {
               var6_int = var4_ref_nj.field_j;
-              f.field_a[0].field_g = MonotonicClockHelpers.field_a;
+              f.field_a[0].displayName = MonotonicClockHelpers.field_a;
               var7 = var4_ref_nj.field_o;
-              f.field_a[0].field_h = false;
-              f.field_a[0].field_d = null;
+              f.field_a[0].included = false;
+              f.field_a[0].alternateName = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                f.field_a[var8_int].field_g = var27.readCp1252String(0);
-                f.field_a[var8_int].field_h = false;
+                f.field_a[var8_int].displayName = var27.readCp1252String(0);
+                f.field_a[var8_int].included = false;
                 if (var27.readUnsignedByte(255) != 1) {
-                  f.field_a[var8_int].field_d = null;
+                  f.field_a[var8_int].alternateName = null;
                 } else {
-                  f.field_a[var8_int].field_d = var27.readCp1252String(0);
+                  f.field_a[var8_int].alternateName = var27.readCp1252String(0);
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -105,12 +105,12 @@ final class TextLayoutLine {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.readUnsignedByte(255);
-                  var21 = f.field_a[var20].field_g;
+                  var21 = f.field_a[var20].displayName;
                   var22 = var27.readLong((byte) 0);
                   var24 = var27.position;
                   if (var19 < var6_int) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = f.field_a[var20].field_d;
+                    var9[0][var12] = f.field_a[var20].alternateName;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var7 > var25; var25++) {
@@ -133,10 +133,10 @@ final class TextLayoutLine {
                     }
                   }
                   if (var6_int > var14 &&
-                    !f.field_a[var20].field_h) {
-                    f.field_a[var20].field_h = true;
+                    !f.field_a[var20].included) {
+                    f.field_a[var20].included = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = f.field_a[var20].field_d;
+                    var9[2][var14] = f.field_a[var20].alternateName;
                     var10[2][var14] = var22;
                     var27.position = var24;
                     var14++;
@@ -156,16 +156,16 @@ final class TextLayoutLine {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(-14477);
             var4 = var27.readLong((byte) 0);
-            var6 = (ai) (CachedArchiveProvider.field_t.first((byte) 109));
+            var6 = (ScoreSubmission) (CachedArchiveProvider.field_t.first((byte) 109));
             while (var6 != null) {
               if (var3Lifetime1 != var6.field_i) {
-                var6 = (ai) (CachedArchiveProvider.field_t.next(8192));
+                var6 = (ScoreSubmission) (CachedArchiveProvider.field_t.next(8192));
                 continue;
               }
               break;
             }
             if (var6 == null) {
-              ql.a(-102);
+              HuffmanDecoder.closeAccountConnection(-102);
               return;
             }
             var6.field_n = var4;
@@ -173,7 +173,7 @@ final class TextLayoutLine {
             return;
           }
           ResizableDialog.a((Throwable) null, "HS1: " + ni.c(6), -562);
-          ql.a(-48);
+          HuffmanDecoder.closeAccountConnection(-48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,7 +219,7 @@ final class TextLayoutLine {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (ResourceArchive.a(param0, true)) {
+          if (ResourceArchive.isAsciiAlphanumeric(param0, true)) {
             return true;
           }
           var6 = IntHashTable.field_c;

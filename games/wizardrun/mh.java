@@ -25,7 +25,7 @@ class mh extends gf implements ButtonActionListener {
         this.c(var2, param0 - 119);
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -38,7 +38,7 @@ class mh extends gf implements ButtonActionListener {
             return true;
           }
           if (param2 <= -96) {
-            stackIn_8_0 = super.a(param0, param1, (byte) -99, param3);
+            stackIn_8_0 = super.handleKeyPress(param0, param1, (byte) -99, param3);
             return stackIn_8_0;
           }
           return false;
@@ -83,35 +83,35 @@ class mh extends gf implements ButtonActionListener {
           var4 = IntHashTable.a((byte) -55, param1) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.field_L = (short)param1.readBits(16, param0 ^ 11698);
-          var5.field_P = sa.a(16, (byte) -48, param1, var5.field_P);
-          var5.field_a = sa.a(16, (byte) -48, param1, var5.field_a);
-          var5.field_w = sa.a(16, (byte) -48, param1, var5.field_w);
+          var5.field_P = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_P);
+          var5.field_a = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_a);
+          var5.field_w = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_w);
           var5.field_N = (short)param1.readBits(16, -11719);
-          var5.field_p = sa.a(16, (byte) -48, param1, var5.field_p);
-          var5.field_C = sa.a(16, (byte) -48, param1, var5.field_C);
-          var5.field_I = sa.a(16, (byte) -48, param1, var5.field_I);
+          var5.field_p = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_p);
+          var5.field_C = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_C);
+          var5.field_I = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_I);
           if (var3 != 0) {
             var5.field_y = (short)param1.readBits(16, -11719);
-            var5.field_k = sa.a(16, (byte) -48, param1, var5.field_k);
-            var5.field_R = sa.a(16, (byte) -48, param1, var5.field_R);
-            var5.field_o = sa.a(16, (byte) -48, param1, var5.field_o);
-            var5.field_c = sa.a(16, (byte) -48, param1, var5.field_c);
-            var5.field_Q = sa.a(16, (byte) -48, param1, var5.field_Q);
-            var5.field_d = sa.a(16, (byte) -48, param1, var5.field_d);
+            var5.field_k = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_k);
+            var5.field_R = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_R);
+            var5.field_o = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_o);
+            var5.field_c = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_c);
+            var5.field_Q = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_Q);
+            var5.field_d = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_d);
           }
           if (var4 != 0) {
             param1.readBits(16, -11719);
-            var5.field_G = sa.a(16, (byte) -48, param1, var5.field_G);
-            var5.field_H = sa.a(16, (byte) -48, param1, var5.field_H);
-            var5.field_m = sa.a(16, (byte) -48, param1, var5.field_m);
-            var5.field_z = sa.a(16, (byte) -48, param1, var5.field_z);
-            var5.field_v = sa.a(16, (byte) -48, param1, var5.field_v);
+            var5.field_G = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_G);
+            var5.field_H = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_H);
+            var5.field_m = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_m);
+            var5.field_z = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_z);
+            var5.field_v = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_v);
           }
           if (IntHashTable.a((byte) -55, param1)) {
-            var5.field_O = sa.a(16, (byte) -48, param1, var5.field_O);
+            var5.field_O = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_O);
           }
           if (IntHashTable.a((byte) -55, param1)) {
-            var5.field_x = sd.a(param1, var5.field_x, 16, (byte) 11);
+            var5.field_x = LoginCredentialKind.readPackedByteArray(param1, var5.field_x, 16, (byte) 11);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_x.length; var7++) {
               if (var6 < (var5.field_x[var7] & 255)) {
@@ -166,7 +166,7 @@ class mh extends gf implements ButtonActionListener {
         RuntimeException var6 = null;
         try {
           if (!this.field_mb) {
-            rb.a("tochangedisplayname.ws", -1926289535, jg.f(param0 + 18906));
+            DisplayModeInfo.a("tochangedisplayname.ws", -1926289535, DisplayNameValidator.getActiveApplet(param0 + 18906));
           } else {
             jc.a((byte) 115, 3);
             this.l(-27697);
@@ -192,7 +192,7 @@ class mh extends gf implements ButtonActionListener {
     final static int a(byte param0, int param1) {
         int var4 = wizardrun.field_H;
         wc.field_k = 0;
-        hb.field_k = null;
+        DelayedServerPacket.field_k = null;
         BufferedRandomAccessFile.field_q = null;
         int var2 = nf.field_b;
         nf.field_b = kj.field_a;
@@ -261,7 +261,7 @@ class mh extends gf implements ButtonActionListener {
             }
           } else {
             var6.a((byte) -31, GameApplet.field_j, 11);
-            var6.a((byte) -31, pk.field_q, 17);
+            var6.a((byte) -31, ReflectionCheck.field_q, 17);
           }
           if (param1 <= 12) {
             mh.m(-64);
@@ -273,7 +273,7 @@ class mh extends gf implements ButtonActionListener {
               var6.a((byte) -31, NodeHashTableIterator.field_b, 8);
             } else {
               if (param2 == 6) {
-                var6.a((byte) -31, ka.field_h, 9);
+                var6.a((byte) -31, EmailLoginCredentials.field_h, 9);
               } else {
                 if (param2 == 9) {
                   var6.a(0, SecondaryNodeDeque.field_a, (WidgetListener) (this));

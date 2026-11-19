@@ -3,7 +3,7 @@
  */
 final class StringPaddingHelpers {
     static String field_a;
-    static bh field_b;
+    static QuickChatDynamicCommand field_b;
     static FullscreenController field_c;
 
     final static boolean a(int param0) {
@@ -47,6 +47,6 @@ final class StringPaddingHelpers {
     static {
         field_a = "Cancel";
         field_c = null;
-        field_b = new bh(6, 0, 4, 2);
+        field_b = new QuickChatDynamicCommand(6, 0, 4, 2);
     }
 }

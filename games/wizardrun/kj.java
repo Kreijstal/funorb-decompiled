@@ -3,7 +3,7 @@
  */
 final class kj {
     static IntrusiveDeque field_d;
-    static ae field_c;
+    static EmailValidationError field_c;
     static String field_e;
     static DialogLayer field_b;
     static int field_a;
@@ -75,7 +75,7 @@ final class kj {
 
     static {
         field_d = new IntrusiveDeque();
-        field_c = new ae();
+        field_c = new EmailValidationError();
         field_e = "Fire stars";
     }
 }

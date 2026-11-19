@@ -6,7 +6,7 @@ final class MidiTrack extends IntrusiveNode {
     byte[] field_j;
 
     final static MidiTrack a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(79, param2, param1);
+        byte[] var3 = param0.getNamedFile(79, param2, param1);
         if (var3 == null) {
           return null;
         }

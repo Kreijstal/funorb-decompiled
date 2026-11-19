@@ -1,0 +1,67 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TriangleRasterState {
+    static int[] sineTable;
+    static int[] scanlineOffsets;
+    static int centerX;
+    static int viewportWidth;
+    private static int[] field_g;
+    static int viewportHeight;
+    static int centerY;
+    private static int[] cosineTable;
+    private static int[] field_h;
+
+    public static void releaseStatics() {
+        scanlineOffsets = null;
+        field_g = null;
+        field_h = null;
+        sineTable = null;
+        cosineTable = null;
+    }
+
+    final static void useRasterClip() {
+        TriangleRasterState.setViewport(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
+    }
+
+    private final static void setViewport(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
+        viewportWidth = param2 - param0;
+        viewportHeight = param3 - param1;
+        TriangleRasterState.updateViewportCenter();
+        if (scanlineOffsets.length < viewportHeight) {
+          scanlineOffsets = new int[PowerOfTwoHelpers.nextPowerOfTwo(viewportHeight, false)];
+        }
+        int var4 = param1 * SoftwareRasterizer.width + param0;
+        for (var5 = 0; var5 < viewportHeight; var5++) {
+          scanlineOffsets[var5] = var4;
+          var4 = var4 + SoftwareRasterizer.width;
+        }
+    }
+
+    private final static void updateViewportCenter() {
+        centerX = viewportWidth / 2;
+        centerY = viewportHeight / 2;
+    }
+
+    static {
+        int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
+        sineTable = new int[2048];
+        scanlineOffsets = new int[1024];
+        field_g = new int[512];
+        field_h = new int[2048];
+        cosineTable = new int[2048];
+        for (var0 = 1; var0 < 512; var0++) {
+          field_g[var0] = 32768 / var0;
+        }
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_h[var0Lifetime1] = 65536 / var0Lifetime1;
+        }
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          sineTable[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          cosineTable[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
+        }
+    }
+}

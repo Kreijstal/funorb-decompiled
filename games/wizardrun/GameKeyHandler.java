@@ -41,7 +41,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              ne.a((char) var2_int, 160)) {
+              AccountFormText.isCp1252Character((char) var2_int, 160)) {
               var3 = GridActor.keyQueueWriteIndex + 1 & 127;
               if (LevelData.keyQueueReadIndex != var3) {
                 MenuController.keyCodeQueue[GridActor.keyQueueWriteIndex] = -1;
@@ -98,7 +98,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (GzipDecompressor.keyEventWriteIndex >= 0 &&
               var2_int >= 0) {
-              wd.keyEventQueue[GzipDecompressor.keyEventWriteIndex] = ~var2_int;
+              NameAvailabilityRequest.keyEventQueue[GzipDecompressor.keyEventWriteIndex] = ~var2_int;
               GzipDecompressor.keyEventWriteIndex = 127 & GzipDecompressor.keyEventWriteIndex + 1;
               if (GzipDecompressor.keyEventWriteIndex == lk.keyEventReadIndex) {
                 GzipDecompressor.keyEventWriteIndex = -1;
@@ -147,7 +147,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (GzipDecompressor.keyEventWriteIndex >= 0 &&
             var2_int >= 0) {
-            wd.keyEventQueue[GzipDecompressor.keyEventWriteIndex] = var2_int;
+            NameAvailabilityRequest.keyEventQueue[GzipDecompressor.keyEventWriteIndex] = var2_int;
             GzipDecompressor.keyEventWriteIndex = 1 + GzipDecompressor.keyEventWriteIndex & 127;
             if (lk.keyEventReadIndex == GzipDecompressor.keyEventWriteIndex) {
               GzipDecompressor.keyEventWriteIndex = -1;

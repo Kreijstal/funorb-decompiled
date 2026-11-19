@@ -8,9 +8,9 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
     private ValidatedTextField field_H;
     NameSuggestionsPanel field_J;
     static String field_Q;
-    static bh field_U;
+    static QuickChatDynamicCommand field_U;
     private ValidatedTextField field_S;
-    private ef field_E;
+    private ToggleButton field_E;
     private ValidatedTextField field_G;
     static String field_R;
     private HotspotTextWidget field_L;
@@ -25,7 +25,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         if (param0 != 2147483647) {
           return;
         }
-        ((jg) (this.field_G.getValidator((byte) -114))).g(113);
+        ((DisplayNameValidator) (this.field_G.getValidator((byte) -114))).clearCachedNameResult(113);
     }
 
     public final void a(String param0, byte param1) {
@@ -53,10 +53,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           return true;
         }
         try {
-          var2 = Integer.parseInt(this.field_P.field_k);
+          var2 = Integer.parseInt(this.field_P.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return ih.a(this.field_G.field_k, this.field_E.field_z, this, 0, var2, this.field_S.field_k, this.field_F.field_k);
+        return ih.a(this.field_G.text, this.field_E.selected, this, 0, var2, this.field_S.text, this.field_F.text);
     }
 
     private final boolean g(int param0) {
@@ -148,14 +148,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            field_U = (bh) null;
+            field_U = (QuickChatDynamicCommand) null;
           }
           var8 = new LabeledField(20, param4, 120 + param0, 25, param1, false, 120, 3, Crc32Helpers.field_b, 16777215, param3);
           this.a((UiWidget) (var8), (byte) 39);
           var7 = new ValidationIndicator(((ValidatorProvider) ((Object) param1)).getValidator((byte) 120));
           this.a((UiWidget) (var7), (byte) 28);
-          var7.a(119, var8.field_l + (var8.field_n - 15 >> 1), 15, 15, 3 + var8.field_o + var8.field_r);
-          stackIn_3_0 = var8.field_n;
+          var7.setBounds(119, var8.y + (var8.height - 15 >> 1), 15, 15, 3 + var8.x + var8.width);
+          stackIn_3_0 = var8.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
               discarded$1 = this.h((byte) 107);
             }
           } else {
-            pg.a((byte) -97);
+            AchievementSubmission.showLoginChoices((byte) -97);
           }
           if (param0 == -18905) {
             return;
@@ -227,13 +227,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         try {
           var10 = new LabeledField(20, param5, 120 + param4, 25, param2, false, 120, 3, Crc32Helpers.field_b, 16777215, param1);
           this.a((UiWidget) (var10), (byte) 39);
-          var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param2)).getValidator((byte) 109), param6, 126, param5 + var10.field_n, param4 + 50, param0);
+          var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param2)).getValidator((byte) 109), param6, 126, param5 + var10.height, param4 + 50, param0);
           if (param3 != 7501) {
             this.field_P = (ValidatedTextField) null;
           }
-          var9.field_s = (WidgetListener) (this);
+          var9.listener = (WidgetListener) (this);
           this.a((UiWidget) (var9), (byte) 39);
-          stackIn_3_0 = var9.field_n + var10.field_n;
+          stackIn_3_0 = var9.height + var10.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -279,7 +279,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           }
           var6 = new LabeledField(20, param0, param2 + 120, 25, param3, false, 120, 3, Crc32Helpers.field_b, 16777215, param4);
           this.a((UiWidget) (var6), (byte) 62);
-          stackIn_4_0 = var6.field_n;
+          stackIn_4_0 = var6.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -322,34 +322,34 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.field_O = new ValidatedTextField("", (WidgetListener) null, 20);
         this.field_P = new ValidatedTextField("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_E = new ef("", (WidgetListener) null, var1 != 0);
+        this.field_E = new ToggleButton("", (WidgetListener) null, var1 != 0);
         this.field_V = new TextButton(w.field_d, (WidgetListener) null);
         this.field_I = new TextButton(v.field_c, (WidgetListener) null);
-        this.field_G.field_p = DiskCacheWorker.field_a;
-        this.field_F.field_p = SettingsCookieReader.field_c;
-        this.field_H.field_p = ec.field_e;
-        this.field_S.field_p = GameShell.field_v;
-        this.field_O.field_p = GameMenu.field_s;
-        this.field_P.field_p = GameGraphicsResources.field_c;
-        this.field_E.field_p = Js5Index.field_o;
-        this.field_G.a(0, new jg(this.field_G));
-        this.field_F.a(0, new sj(this.field_F));
-        this.field_H.a(0, new hc(this.field_H, this.field_F));
-        this.field_S.a(0, new rh(this.field_S, this.field_G, this.field_F));
-        this.field_O.a(0, new fe(this.field_O, this.field_S));
-        this.field_P.a(0, new qf(this.field_P));
+        this.field_G.tooltip = DiskCacheWorker.field_a;
+        this.field_F.tooltip = SettingsCookieReader.field_c;
+        this.field_H.tooltip = ec.field_e;
+        this.field_S.tooltip = GameShell.field_v;
+        this.field_O.tooltip = GameMenu.field_s;
+        this.field_P.tooltip = GameGraphicsResources.field_c;
+        this.field_E.tooltip = Js5Index.field_o;
+        this.field_G.a(0, new DisplayNameValidator(this.field_G));
+        this.field_F.a(0, new EmailAddressValidator(this.field_F));
+        this.field_H.a(0, new ConfirmedEmailValidator(this.field_H, this.field_F));
+        this.field_S.a(0, new PasswordValidator(this.field_S, this.field_G, this.field_F));
+        this.field_O.a(0, new MatchingTextValidator(this.field_O, this.field_S));
+        this.field_P.a(0, new AgeValidator(this.field_P));
         this.field_V.field_B = false;
-        this.field_V.field_w = (WidgetRenderer) ((Object) new jl());
-        this.field_I.field_w = (WidgetRenderer) ((Object) new tk());
-        this.field_G.field_w = (WidgetRenderer) ((Object) new qb(10000536));
-        qb dupTemp$0 = new qb(10000536);
-        this.field_H.field_w = (WidgetRenderer) ((Object) dupTemp$0);
-        this.field_F.field_w = (WidgetRenderer) ((Object) dupTemp$0);
-        this.field_P.field_w = (WidgetRenderer) ((Object) new qb(10000536));
-        this.field_E.field_w = (WidgetRenderer) ((Object) new cc());
+        this.field_V.renderer = (WidgetRenderer) ((Object) new jl());
+        this.field_I.renderer = (WidgetRenderer) ((Object) new tk());
+        this.field_G.renderer = (WidgetRenderer) ((Object) new FramedButtonPainter(10000536));
+        FramedButtonPainter dupTemp$0 = new FramedButtonPainter(10000536);
+        this.field_H.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_F.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_P.renderer = (WidgetRenderer) ((Object) new FramedButtonPainter(10000536));
+        this.field_E.renderer = (WidgetRenderer) ((Object) new IconButtonPainter());
         ke dupTemp$1 = new ke(10000536);
-        this.field_O.field_w = (WidgetRenderer) ((Object) dupTemp$1);
-        this.field_S.field_w = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_O.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_S.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = WeightedLruCache.a(new String[]{this.d(false), this.g((byte) 2)}, (byte) 76, qj.field_b);
         int var3 = 20;
         var3 = var3 + this.a(var3, true, 170, this.field_F, ii.field_d);
@@ -358,30 +358,30 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         var3 = var3 + (this.a((byte) 4, this.field_O, RasterBuffer.field_i, 170, var3, LabeledField.field_H) + 5);
         var3 = var3 + (5 + this.a((byte) 4, this.field_G, re.field_E, 170, var3, MonotonicClockHelpers.field_b));
         var3 = var3 + this.a(170, this.field_P, true, Base37Codec.field_a, var3);
-        LabeledField var4 = new LabeledField(46, var3, -90 + this.field_r, 25, this.field_E, true, -120 + this.field_r, 5, e.field_b, 11579568, SettingsCookieReader.field_e);
+        LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_E, true, -120 + this.width, 5, e.field_b, 11579568, SettingsCookieReader.field_e);
         this.a((UiWidget) (var4), (byte) 58);
-        var3 = var3 + var4.field_n;
+        var3 = var3 + var4.height;
         WidgetPainter var5 = new WidgetPainter(Crc32Helpers.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, Crc32Helpers.field_b.field_M, -1, 2147483647, true);
         this.field_L = new HotspotTextWidget(var2, var5);
-        this.field_L.field_p = "";
+        this.field_L.tooltip = "";
         this.field_L.a(1, field_R, 0);
         this.field_L.a(1, field_R, 1);
-        this.field_L.field_s = (WidgetListener) (this);
-        this.field_L.a(var3, (byte) 61, this.field_r - 90, 46);
-        var3 = var3 + (this.field_L.field_n + 15);
+        this.field_L.listener = (WidgetListener) (this);
+        this.field_L.a(var3, (byte) 61, this.width - 90, 46);
+        var3 = var3 + (this.field_L.height + 15);
         this.a((UiWidget) (this.field_L), (byte) 98);
         int var6 = 4;
         int var7 = 200;
-        this.field_V.a(110, var3, 40, var7, 496 - var7 >> 1);
-        this.field_I.a(125, 15 + var3, 40, 60, 3 + var6);
-        this.field_I.field_s = (WidgetListener) (this);
-        this.field_V.field_s = (WidgetListener) (this);
+        this.field_V.setBounds(110, var3, 40, var7, 496 - var7 >> 1);
+        this.field_I.setBounds(125, 15 + var3, 40, 60, 3 + var6);
+        this.field_I.listener = (WidgetListener) (this);
+        this.field_V.listener = (WidgetListener) (this);
         this.a((UiWidget) (this.field_V), (byte) 108);
         this.a((UiWidget) (this.field_I), (byte) 121);
         this.field_J = new NameSuggestionsPanel((NameSelectionListener) (this));
-        this.field_J.a(118, 20 + this.field_G.field_l, 150, -this.field_G.field_r + (-this.field_G.field_o + this.field_r - 60), this.field_G.field_r + this.field_G.field_o + 60);
+        this.field_J.setBounds(118, 20 + this.field_G.y, 150, -this.field_G.width + (-this.field_G.x + this.width - 60), this.field_G.width + this.field_G.x + 60);
         this.a((UiWidget) (this.field_J), (byte) 34);
-        this.a(115, 0, 55 + (var3 + var6), 496, 0);
+        this.setBounds(115, 0, 55 + (var3 + var6), 496, 0);
     }
 
     private final boolean a(byte param0, ValidatorProvider param1) {
@@ -399,7 +399,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             return true;
           }
           var4 = var3.getState(true);
-          if (hg.field_c == var4) {
+          if (DisplayNameSyntaxHelpers.field_c == var4) {
             return false;
           }
           if (nf.field_c == var4) {
@@ -471,7 +471,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         return "</col></u>";
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -480,7 +480,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) -106, param3)) {
+          if (super.handleKeyPress(param0, param1, (byte) -106, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -510,9 +510,9 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updateInput(int param0, int param1, int param2, UiWidget param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateInput(param0, param1, param2, param3);
           this.field_V.field_B = this.g(param0 - 10000586);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -522,7 +522,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
     static {
         field_R = "Open in popup window";
         field_Q = "Names can only contain letters, numbers, spaces and underscores";
-        field_U = new bh(12, 0, 1, 0);
+        field_U = new QuickChatDynamicCommand(12, 0, 1, 0);
         field_K = "Resume Game";
     }
 }

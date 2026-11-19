@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class f {
-    static wg[] field_a;
+    static HighscorePlayer[] field_a;
     static String[] field_b;
     static Sprite[] field_d;
     static boolean field_c;
@@ -115,9 +115,9 @@ final class f {
 
     static {
         int var0 = 0;
-        field_a = new wg[255];
+        field_a = new HighscorePlayer[255];
         for (var0 = 0; field_a.length > var0; var0++) {
-          field_a[var0] = new wg();
+          field_a[var0] = new HighscorePlayer();
         }
         field_f = "The requirements and rewards for this achievement are hidden until collected";
     }

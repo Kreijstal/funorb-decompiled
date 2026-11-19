@@ -19,29 +19,29 @@ final class ck {
           if (null == td.field_d) {
             td.field_d = "0";
           }
-          dc.field_n = param0.getParameter("overxachievements");
-          if (null == dc.field_n) {
-            dc.field_n = "0";
+          ProgressSubmission.field_n = param0.getParameter("overxachievements");
+          if (null == ProgressSubmission.field_n) {
+            ProgressSubmission.field_n = "0";
           }
           var6 = param0.getParameter("currency");
           if (var6 == null) {
-            bb.field_k = 2;
+            UsernameLoginCredentials.field_k = 2;
           } else {
             if (!TextLayout.a((CharSequence) ((Object) var6), (byte) 78)) {
-              bb.field_k = 2;
+              UsernameLoginCredentials.field_k = 2;
             } else {
-              bb.field_k = GameMenu.a(1124, (CharSequence) ((Object) var6));
+              UsernameLoginCredentials.field_k = GameMenu.a(1124, (CharSequence) ((Object) var6));
             }
           }
-          nh.field_n = param2;
-          wd.field_g = param5;
+          AlternateUsernameLoginCredentials.field_n = param2;
+          NameAvailabilityRequest.field_g = param5;
           RadialSelectorWidget.field_H = param4;
-          dc.field_s = new Sprite[param1.length];
+          ProgressSubmission.field_s = new Sprite[param1.length];
           if (param3 != 34) {
-            ck.a(-99, 41, 24);
+            ck.reverseLowBits(-99, 41, 24);
           }
           for (var7 = 0; param1.length > var7; var7++) {
-            dc.field_s[var7] = new Sprite(317, 34);
+            ProgressSubmission.field_s[var7] = new Sprite(317, 34);
           }
           SpriteState.field_w = param1;
           return;
@@ -74,25 +74,25 @@ final class ck {
           td.b(4);
           NodeHashTableIterator.b((byte) -104);
           jl.b(1);
-          if (ne.b(22845)) {
+          if (AccountFormText.b(22845)) {
             n.field_b.writeCipheredOpcode((byte) 88, 1);
-            id.a((byte) -67, 0);
+            id.flushAccountPackets((byte) -67, 0);
           }
-          ql.a(param0 ^ -55);
+          HuffmanDecoder.closeAccountConnection(param0 ^ -55);
           return;
         }
-        ka.a(wizardrun.field_G, 8053);
+        EmailLoginCredentials.a(wizardrun.field_G, 8053);
         td.b(4);
         NodeHashTableIterator.b((byte) -104);
         jl.b(1);
-        if (ne.b(22845)) {
+        if (AccountFormText.b(22845)) {
           n.field_b.writeCipheredOpcode((byte) 88, 1);
-          id.a((byte) -67, 0);
+          id.flushAccountPackets((byte) -67, 0);
         }
-        ql.a(param0 ^ -55);
+        HuffmanDecoder.closeAccountConnection(param0 ^ -55);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int reverseLowBits(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -107,7 +107,7 @@ final class ck {
             param1 = param1 >>> 1;
           }
           if (param2 != 1685) {
-            ck.a(-93, -128, 3);
+            ck.reverseLowBits(-93, -128, 3);
           }
           stackIn_7_0 = var3_int;
           return stackIn_7_0;

@@ -9,7 +9,7 @@ abstract class ArchiveProvider {
     static RasterBuffer field_b;
     private static String field_z;
 
-    abstract int a(boolean param0, int param1);
+    abstract int getGroupProgress(boolean param0, int param1);
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
@@ -22,9 +22,9 @@ abstract class ArchiveProvider {
         field_b = null;
     }
 
-    abstract Js5Index b(boolean param0);
+    abstract Js5Index getIndex(boolean param0);
 
-    abstract byte[] a(byte param0, int param1);
+    abstract byte[] getGroupData(byte param0, int param1);
 
     static {
         field_z = "hl.L(";

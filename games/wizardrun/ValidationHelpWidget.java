@@ -28,14 +28,14 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         if (param2) {
           var4++;
         }
-        return sk.field_y[var4];
+        return DiskCacheRequest.field_y[var4];
     }
 
     final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 != -1784753947) {
           field_M = (Sprite) null;
         }
-        return sc.a(param0, 12000, param3, false, param2, param4);
+        return ProgressQuery.createResourceArchive(param0, 12000, param3, false, param2, param4);
     }
 
     public static void releaseStatics(byte param0) {
@@ -51,11 +51,11 @@ final class ValidationHelpWidget extends HotspotTextWidget {
     }
 
     ValidationHelpWidget(Validator param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, ml.a((byte) -87));
+        super(param1, ArchiveRequest.defaultWidgetPainter((byte) -87));
         try {
           this.field_L = param1;
           this.field_T = param0;
-          this.a(125, param3, param5, param4, param2);
+          this.setBounds(125, param3, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -106,7 +106,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
                   var10 = var8 & 65280;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = 31 & var8 >> 3;
-                  SoftwareRasterizer.pixels[var6_int] = sd.a(var11, sd.a(var10, var9 << 16));
+                  SoftwareRasterizer.pixels[var6_int] = LoginCredentialKind.bitOr(var11, LoginCredentialKind.bitOr(var10, var9 << 16));
                 }
                 var6_int++;
               }
@@ -130,22 +130,22 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         return null;
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updateInput(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_U = this.field_U + 1;
           if (param0 != 10000536) {
             field_S = (ValidationState) null;
           }
-          super.a(param0 + 0, param1, param2, param3);
+          super.updateInput(param0 + 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "l.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
         ValidationState var6;
-        qe var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -166,26 +166,26 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         } else {
           var5 = ke.field_v;
         }
-        if (!var5.equals(this.field_k)) {
-          this.field_k = var5;
+        if (!var5.equals(this.text)) {
+          this.text = var5;
           this.rebuildHotspotBounds(param1 + 0);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         var6Lifetime1 = this.field_T.getState(true);
-        var8 = (qe) ((Object) this.field_w);
-        var9 = param0 + this.field_o;
-        var10 = var8.a(true, param3, (UiWidget) (this)) + (var8.a((UiWidget) (this), (byte) 96).height(126) >> 1);
+        var8 = (TextWidgetRenderer) ((Object) this.renderer);
+        var9 = param0 + this.x;
+        var10 = var8.getTextOriginY(true, param3, (UiWidget) (this)) + (var8.getTextLayout((UiWidget) (this), (byte) 96).height(126) >> 1);
         if (var6Lifetime1 != nf.field_c &&
           field_S != var6Lifetime1) {
-          if (var6Lifetime1 == hg.field_c) {
-            var14 = te.field_k[2];
+          if (var6Lifetime1 == DisplayNameSyntaxHelpers.field_c) {
+            var14 = AchievementStateRequest.field_k[2];
             var14.drawAdditive(var9, var10 - (var14.height >> 1), 256);
           } else if (gf.field_V == var6Lifetime1) {
-            var15 = te.field_k[1];
+            var15 = AchievementStateRequest.field_k[1];
             var15.drawAdditive(var9, -(var15.height >> 1) + var10, 256);
           }
         } else {
-          var16 = te.field_k[0];
+          var16 = AchievementStateRequest.field_k[0];
           var11 = var16.fullWidth << 1;
           var12 = var16.fullHeight << 1;
           if (this.field_R != null &&
@@ -198,12 +198,12 @@ final class ValidationHelpWidget extends HotspotTextWidget {
             UrlPacketDownloader.a(this.field_R, false);
           }
           var16.drawRotatedAboutPivot(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_U << 10, 4096);
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
           this.field_R.drawAdditive(-(var16.fullWidth >> 1) + var9, -var16.fullHeight + var10, 256);
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

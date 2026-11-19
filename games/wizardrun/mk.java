@@ -9,7 +9,7 @@ final class mk {
     static int[] field_c;
     static int field_b;
 
-    final static int a(ne param0, int param1, ne param2) {
+    final static int a(AccountFormText param0, int param1, AccountFormText param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_2_0 = 0;
@@ -55,8 +55,8 @@ final class mk {
           field_c = null;
           return;
         }
-        ne var2 = (ne) null;
-        mk.a((ne) null, 78, (ne) null);
+        AccountFormText var2 = (AccountFormText) null;
+        mk.a((AccountFormText) null, 78, (AccountFormText) null);
         field_e = null;
         field_a = null;
         field_c = null;

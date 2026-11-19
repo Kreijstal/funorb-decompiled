@@ -14,7 +14,7 @@ final class NodeHashTableIterator implements Iterator {
     private IntrusiveNode field_h;
     private int field_f;
     static int field_g;
-    static rc field_j;
+    static AccountConnectionState field_j;
     static AudioOutput field_k;
     private IntrusiveNode field_a;
 

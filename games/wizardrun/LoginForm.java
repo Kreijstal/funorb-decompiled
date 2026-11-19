@@ -48,20 +48,20 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           return;
         }
         if (FullscreenController.d(-1) ||
-          !(0 >= this.field_K.field_k.length()) &&
-          !(this.field_Q.field_k.length() <= 0)) {
-          w.a(this.field_Q.field_k, this.field_K.field_k, -124);
+          !(0 >= this.field_K.text.length()) &&
+          !(this.field_Q.text.length() <= 0)) {
+          w.a(this.field_Q.text, this.field_K.text, -124);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_F != null) {
-          Crc32Helpers.field_b.a(this.field_F, 20 + (param0 + this.field_o), 15 + (this.field_l + param3), this.field_r - 40, this.field_n, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
+          Crc32Helpers.field_b.a(this.field_F, 20 + (param0 + this.x), 15 + (this.y + param3), this.width - 40, this.height, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
         }
         if (null != this.field_M) {
-          SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param3, this.field_r - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param3, this.width - 20, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     final static Class a(String param0, byte param1) throws ClassNotFoundException {
@@ -131,7 +131,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
@@ -140,7 +140,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) -125, param3)) {
+          if (super.handleKeyPress(param0, param1, (byte) -125, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -177,7 +177,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         RuntimeException var3 = null;
         try {
           if (this.field_K == param1) {
-            this.field_Q.a((UiWidget) (this), 8);
+            this.field_Q.requestFocus((UiWidget) (this), 8);
           }
           if (this.field_Q == param1) {
             this.a(4210752);
@@ -221,9 +221,9 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
                   ProxySocketConnector.c(param0 ^ 12849);
                 } else {
                   if (!this.field_O) {
-                    sf.a((byte) -89);
+                    EmailCheckRequest.a((byte) -89);
                   } else {
-                    pg.a((byte) -97);
+                    AchievementSubmission.showLoginChoices((byte) -97);
                   }
                 }
               }
@@ -274,7 +274,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        uf var9 = null;
+        LoginMethodPreference var9 = null;
         LabeledField var12 = null;
         LabeledField var13 = null;
         try {
@@ -310,84 +310,84 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             }
           } else {
             this.field_H = new TextButton(me.field_a, (WidgetListener) null);
-            this.field_G = new TextButton(pk.field_q, (WidgetListener) null);
+            this.field_G = new TextButton(ReflectionCheck.field_q, (WidgetListener) null);
             this.field_K.field_B = false;
           }
-          this.field_K.field_w = (WidgetRenderer) ((Object) new qb(10000536));
-          this.field_Q.field_w = (WidgetRenderer) ((Object) new ke(10000536));
+          this.field_K.renderer = (WidgetRenderer) ((Object) new FramedButtonPainter(10000536));
+          this.field_Q.renderer = (WidgetRenderer) ((Object) new ke(10000536));
           var6 = new jl();
-          this.field_H.field_w = (WidgetRenderer) ((Object) var6);
+          this.field_H.renderer = (WidgetRenderer) ((Object) var6);
           if (null != this.field_G) {
-            this.field_G.field_w = (WidgetRenderer) ((Object) var6);
+            this.field_G.renderer = (WidgetRenderer) ((Object) var6);
           }
           if (this.field_M != null) {
-            this.field_M.field_w = (WidgetRenderer) ((Object) var6);
+            this.field_M.renderer = (WidgetRenderer) ((Object) var6);
           }
-          this.field_K.field_p = MouseInputHandler.field_a;
+          this.field_K.tooltip = MouseInputHandler.field_a;
           if (this.field_M != null) {
-            this.field_M.field_p = hb.field_i;
+            this.field_M.tooltip = DelayedServerPacket.field_i;
           }
           if (!this.field_J) {
             if (this.field_O) {
-              this.field_G.field_p = hf.field_a;
-              this.field_G.field_w = (WidgetRenderer) ((Object) new tk());
+              this.field_G.tooltip = ProxyAuthenticationException.field_a;
+              this.field_G.renderer = (WidgetRenderer) ((Object) new tk());
             } else {
-              this.field_G.field_w = (WidgetRenderer) ((Object) new tk());
+              this.field_G.renderer = (WidgetRenderer) ((Object) new tk());
             }
           } else {
-            this.field_G.field_p = BrowserUrlLauncher.field_a;
+            this.field_G.tooltip = BrowserUrlLauncher.field_a;
           }
-          this.field_l = 15;
+          this.y = 15;
           var7 = Crc32Helpers.field_b;
           if (null != this.field_F) {
-            this.field_l = this.field_l + (5 + var7.measureWrappedHeight(this.field_F, -40 + this.field_r, var7.field_M));
+            this.y = this.y + (5 + var7.measureWrappedHeight(this.field_F, -40 + this.width, var7.field_M));
           }
-          var8 = ai.field_j;
-          var9 = IndexedSpriteState.a(jg.f(1), (byte) 48);
+          var8 = ScoreSubmission.field_j;
+          var9 = IndexedSpriteState.a(DisplayNameValidator.getActiveApplet(1), (byte) 48);
           if (var9 == StripedProgressBar.field_C) {
-            var8 = dc.field_q;
+            var8 = ProgressSubmission.field_q;
           } else {
             if (var9 == IndexedSpriteState.field_e) {
               var8 = tl.field_b;
             }
           }
-          dupTemp$0 = new LabeledField(10, this.field_l, -20 + this.field_r, 25, this.field_K, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.field_K, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a((UiWidget) (dupTemp$0), (byte) 57);
-          this.field_l = this.field_l + (5 + ((UiWidget) ((Object) var12)).field_n);
-          dupTemp$1 = new LabeledField(10, this.field_l, -20 + this.field_r, 25, this.field_Q, false, 80, 3, var7, 16777215, WhirlpoolHasher.field_d);
+          this.y = this.y + (5 + ((UiWidget) ((Object) var12)).height);
+          dupTemp$1 = new LabeledField(10, this.y, -20 + this.width, 25, this.field_Q, false, 80, 3, var7, 16777215, WhirlpoolHasher.field_d);
           var13 = dupTemp$1;
           this.a((UiWidget) (dupTemp$1), (byte) 85);
-          this.field_l = this.field_l + (5 + ((UiWidget) ((Object) var13)).field_n);
-          this.field_H.field_s = (WidgetListener) (this);
+          this.y = this.y + (5 + ((UiWidget) ((Object) var13)).height);
+          this.field_H.listener = (WidgetListener) (this);
           if (this.field_M != null) {
-            this.field_M.field_s = (WidgetListener) (this);
+            this.field_M.listener = (WidgetListener) (this);
           }
           if (this.field_G != null) {
-            this.field_G.field_s = (WidgetListener) (this);
+            this.field_G.listener = (WidgetListener) (this);
           }
           if (this.field_M != null) {
-            this.field_H.a(118, this.field_l, 30, this.field_r - 95, 85);
-            this.field_l = this.field_l + 60;
+            this.field_H.setBounds(118, this.y, 30, this.width - 95, 85);
+            this.y = this.y + 60;
           } else {
-            this.field_H.a(118, this.field_l, 30, -10 + (this.field_r - 6), 8);
-            this.field_l = this.field_l + 35;
+            this.field_H.setBounds(118, this.y, 30, -10 + (this.width - 6), 8);
+            this.y = this.y + 35;
           }
           if (null != this.field_M) {
-            this.field_M.a(121, this.field_l, 30, this.field_r - 16, 8);
-            this.field_l = this.field_l + 35;
+            this.field_M.setBounds(121, this.y, 30, this.width - 16, 8);
+            this.y = this.y + 35;
           }
           if (null != this.field_G) {
             if (!this.field_J &&
               !this.field_O) {
-              this.field_G.a(121, this.field_l, 20, 40, 8);
-              this.field_l = this.field_l + 25;
+              this.field_G.setBounds(121, this.y, 20, 40, 8);
+              this.y = this.y + 25;
             } else {
-              this.field_G.a(110, this.field_l, 30, -10 + (-6 + this.field_r), 8);
-              this.field_l = this.field_l + 35;
+              this.field_G.setBounds(110, this.y, 30, -10 + (-6 + this.width), 8);
+              this.y = this.y + 35;
             }
           }
-          this.a(110, 0, this.field_l + 3, this.field_r, 0);
+          this.setBounds(110, 0, this.y + 3, this.width, 0);
           this.a((UiWidget) (this.field_H), (byte) 84);
           if (null != this.field_M) {
             this.a((UiWidget) (this.field_M), (byte) 126);
@@ -420,7 +420,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         MidiNoteMixer.field_q = param1;
         ej.field_d = param8;
         TextLayoutLine.field_c = param4;
-        pg.field_j = param7;
+        AchievementSubmission.field_j = param7;
         if (!param6) {
           return;
         }
@@ -450,10 +450,10 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         if (param0) {
           return (String) null;
         }
-        if (this.field_K.field_k == null) {
+        if (this.field_K.text == null) {
           return "";
         }
-        return this.field_K.field_k;
+        return this.field_K.text;
     }
 
     static {

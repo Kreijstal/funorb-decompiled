@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj {
-    static rc field_a;
+    static AccountConnectionState field_a;
     static ResourceArchive field_b;
 
     final static void b(int param0) {
@@ -192,6 +192,6 @@ final class vj {
     }
 
     static {
-        field_a = new rc();
+        field_a = new AccountConnectionState();
     }
 }

@@ -13,14 +13,14 @@ final class tk implements WidgetRenderer {
         try {
           TimedValidator.field_a = param7;
           MouseWheelInput.field_a = param2;
-          ka.field_i = param3;
-          cb.field_a = param8;
+          EmailLoginCredentials.field_i = param3;
+          BeveledFrameFactory.field_a = param8;
           uk.field_b = param1;
           SocketJs5Transport.field_r = param0;
           if (param6 != 2) {
             tk.releaseStatics(-15);
           }
-          jg.field_m = param5;
+          DisplayNameValidator.field_m = param5;
           kk.field_xb = param4;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
@@ -48,8 +48,8 @@ final class tk implements WidgetRenderer {
         int var11 = 0;
         var11 = wizardrun.field_H;
         try {
-          if (!param2.field_v &&
-            !param2.d((byte) 53)) {
+          if (!param2.hovered &&
+            !param2.isFocused((byte) 53)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -58,29 +58,29 @@ final class tk implements WidgetRenderer {
           if (!param3) {
             this.field_b = 65;
           }
-          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6_int, -1, this.field_c, this.field_b, this.field_d.field_M + this.field_d.field_B);
-          if (!param2.d((byte) 53)) {
+          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.text + "</u>", param2.x + param0, param1 + param2.y, param2.width, param2.height, var6_int, -1, this.field_c, this.field_b, this.field_d.field_M + this.field_d.field_B);
+          if (!param2.isFocused((byte) 53)) {
             return;
           }
-          var7 = this.field_d.stringWidth(param2.field_k);
+          var7 = this.field_d.stringWidth(param2.text);
           var8 = this.field_d.field_M + this.field_d.field_B;
-          var9 = param2.field_o + param0;
-          var10 = param2.field_l + param1;
+          var9 = param2.x + param0;
+          var10 = param2.y + param1;
           if (2 == this.field_c) {
-            var9 = var9 + (-var7 + param2.field_r);
+            var9 = var9 + (-var7 + param2.width);
           } else {
             if (this.field_c == 1) {
-              var9 = var9 + (param2.field_r - var7 >> 1);
+              var9 = var9 + (param2.width - var7 >> 1);
             }
           }
           if (this.field_b != 2) {
             if (1 == this.field_b) {
-              var10 = var10 + (param2.field_n - var8 >> 1);
+              var10 = var10 + (param2.height - var8 >> 1);
             }
           } else {
-            var10 = var10 + (param2.field_n - var8);
+            var10 = var10 + (param2.height - var8);
           }
-          nh.a((byte) 69, 4 + var7, var10 + 2, var8, var9 - 2);
+          AlternateUsernameLoginCredentials.a((byte) 69, 4 + var7, var10 + 2, var8, var9 - 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

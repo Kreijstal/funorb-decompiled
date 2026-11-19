@@ -24,7 +24,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_H == param1) {
-            hc.f(92682);
+            ConfirmedEmailValidator.f(92682);
             this.field_F.l(param0 - 8792);
           }
           if (param0 == -18905) {
@@ -53,7 +53,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
         return "</col></u>";
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_14_0 = false;
@@ -65,7 +65,7 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
           if (param2 >= -96) {
             return true;
           }
-          if (super.a(param0, param1, (byte) -104, param3)) {
+          if (super.handleKeyPress(param0, param1, (byte) -104, param3)) {
             return true;
           }
           if (98 == param1) {
@@ -101,25 +101,25 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
         try {
           this.field_F = param0;
           this.field_H = new TextButton(e.field_e, (WidgetListener) null);
-          this.field_H.field_w = (WidgetRenderer) ((Object) new jl());
+          this.field_H.renderer = (WidgetRenderer) ((Object) new jl());
           var7 = WeightedLruCache.a(new String[]{this.a(0), this.h((byte) -85)}, (byte) 79, t.field_b);
           var3 = 20;
           var4 = new WidgetPainter(Crc32Helpers.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, Crc32Helpers.field_b.field_M, -1, 2147483647, true);
           this.field_J = new HotspotTextWidget(var7, var4);
-          this.field_J.field_p = "";
+          this.field_J.tooltip = "";
           this.field_J.a(1, AccountCreationForm.field_R, 0);
           this.field_J.a(1, AccountCreationForm.field_R, 1);
-          this.field_J.field_s = (WidgetListener) (this);
-          this.field_J.field_r = -40 + this.field_r;
-          this.field_J.a(var3, (byte) 61, this.field_r - 40, 26);
-          var3 = var3 + (this.field_J.field_n + 15);
+          this.field_J.listener = (WidgetListener) (this);
+          this.field_J.width = -40 + this.width;
+          this.field_J.a(var3, (byte) 61, this.width - 40, 26);
+          var3 = var3 + (this.field_J.height + 15);
           this.a((UiWidget) (this.field_J), (byte) 83);
           var5 = 4;
           var6 = 200;
-          this.field_H.a(127, var3, 40, var6, 300 - var6 >> 1);
-          this.field_H.field_s = (WidgetListener) (this);
+          this.field_H.setBounds(127, var3, 40, var6, 300 - var6 >> 1);
+          this.field_H.listener = (WidgetListener) (this);
           this.a((UiWidget) (this.field_H), (byte) 126);
-          this.a(127, 0, var5 + var3 + 55, 300, 0);
+          this.setBounds(127, 0, var5 + var3 + 55, 300, 0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -151,9 +151,9 @@ final class re extends WidgetContainer implements HotspotClickListener, ButtonAc
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = -86 / ((18 - param3) / 59);
-          var4_int = param0.b(-1, param1);
-          var5 = param0.a(var4_int, param2, -11986);
-          stackIn_1_0 = ml.a(param0, var5, -26955, var4_int);
+          var4_int = param0.getGroupId(-1, param1);
+          var5 = param0.getFileId(var4_int, param2, -11986);
+          stackIn_1_0 = ArchiveRequest.a(param0, var5, -26955, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

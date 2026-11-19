@@ -1,0 +1,347 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class EmailValidationError {
+    static String field_b;
+    static char typedCharacter;
+    static Sprite field_c;
+
+    final static void a(boolean param0, byte param1, TriangleMesh param2, boolean param3, int[] param4, boolean param5, int[] param6) {
+        int stackIn_63_0 = 0;
+        int stackIn_63_1 = 0;
+        int stackIn_72_0 = 0;
+        int stackIn_72_1 = 0;
+        RuntimeException stackIn_77_0 = null;
+        StringBuilder stackIn_77_1 = null;
+        String stackIn_78_2 = null;
+        StringBuilder stackIn_81_1 = null;
+        String stackIn_82_2 = null;
+        StringBuilder stackIn_85_1 = null;
+        String stackIn_86_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int var21 = 0;
+        int var22 = 0;
+        int var23 = 0;
+        int var24 = 0;
+        int var25 = 0;
+        int var26 = 0;
+        int var27 = 0;
+        int var28 = 0;
+        int var29 = 0;
+        int var30 = 0;
+        int var31 = 0;
+        int stackIn_63_0Lifetime1;
+        int stackIn_63_1Lifetime1;
+        int var21Lifetime1;
+        int var21Lifetime2;
+        int var22Lifetime1;
+        int var22Lifetime2;
+        int var23Lifetime1;
+        int var23Lifetime2;
+        int var24Lifetime1;
+        int var25Lifetime1;
+        int var26Lifetime1;
+        int var27Lifetime1;
+        int var28Lifetime1;
+        int var29Lifetime1;
+        int var24Lifetime1Lifetime1;
+        int var25Lifetime1Lifetime1;
+        int var26Lifetime1Lifetime1;
+        var31 = wizardrun.field_H;
+        try {
+          var7_int = 2147483647;
+          var8 = -2147483648;
+          var21 = param6[3] >> 2;
+          var22 = param6[4] >> 2;
+          var23 = param6[5] >> 2;
+          var24 = param6[6] >> 2;
+          var25 = param6[7] >> 2;
+          var26 = param6[8] >> 2;
+          var27 = param6[9] >> 2;
+          var28 = param6[10] >> 2;
+          var12 = var23 * param4[5] + param4[4] * var22 + var21 * param4[3] >> 14;
+          var29 = param6[11] >> 2;
+          var13 = var24 * param4[3] + (var25 * param4[4] + param4[5] * var26) >> 14;
+          var18 = param4[10] * var22 + (param4[9] * var21 + var23 * param4[11]) >> 14;
+          var30 = -52 % ((10 - param1) / 59);
+          var20 = param4[11] * var29 + (param4[10] * var28 + param4[9] * var27) >> 14;
+          var15 = param4[7] * var22 + (var21 * param4[6] + var23 * param4[8]) >> 14;
+          var14 = var27 * param4[3] - (-(param4[4] * var28) - var29 * param4[5]) >> 14;
+          var19 = var24 * param4[9] + param4[10] * var25 + param4[11] * var26 >> 14;
+          var16 = var24 * param4[6] + var25 * param4[7] + var26 * param4[8] >> 14;
+          var17 = var28 * param4[7] + (param4[6] * var27 + param4[8] * var29) >> 14;
+          var21Lifetime1 = -param6[0] + param4[0];
+          var22Lifetime1 = param4[1] - param6[1];
+          var23Lifetime1 = -param6[2] + param4[2];
+          var9 = var23Lifetime1 * param6[5] + var21Lifetime1 * param6[3] + param6[4] * var22Lifetime1 >> 16 - rl.field_b;
+          var10 = param6[7] * var22Lifetime1 + (var21Lifetime1 * param6[6] + var23Lifetime1 * param6[8]) >> 16 - rl.field_b;
+          var11 = var23Lifetime1 * param6[11] + var22Lifetime1 * param6[10] + param6[9] * var21Lifetime1 >> 16;
+          var21Lifetime2 = TriangleRasterState.centerX;
+          var22Lifetime2 = TriangleRasterState.centerY;
+          var23Lifetime2 = 0;
+          scanLoop1: while (true) {
+            boolean decompiledFrameRemainder0 = true;
+            if (var23Lifetime2 < param2.field_L) {
+              var24Lifetime1 = param2.field_P[var23Lifetime2];
+              var25Lifetime1 = param2.field_a[var23Lifetime2];
+              var26Lifetime1 = param2.field_w[var23Lifetime2];
+              var27Lifetime1 = var9 + (var26Lifetime1 * var18 + var12 * var24Lifetime1 + var25Lifetime1 * var15 >> 16 - rl.field_b);
+              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> 16 - rl.field_b);
+              var29Lifetime1 = (var17 * var25Lifetime1 + var14 * var24Lifetime1 + var26Lifetime1 * var20 >> 16) + var11;
+              stackIn_63_0 = -51;
+              stackIn_63_1 = ~var29Lifetime1;
+              if (var31 != 0) {
+                if (stackIn_63_0 > stackIn_63_1) {
+                  stackIn_72_0 = ~gk.field_g.length;
+                  stackIn_72_1 = ~var18;
+                  break scanLoop1;
+                }
+                decompiledFrameRemainder0 = false;
+              }
+              else {
+                if (stackIn_63_0 >= stackIn_63_1) {
+                  SpriteState.field_A[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  MonotonicClockHelpers.field_c[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  if (var29Lifetime1 > var8) {
+                    var8 = var29Lifetime1;
+                  }
+                  dl.field_a[var23Lifetime2] = var29Lifetime1;
+                  if (var29Lifetime1 < var7_int) {
+                    var7_int = var29Lifetime1;
+                  }
+                } else {
+                  dl.field_a[var23Lifetime2] = -2147483648;
+                }
+                if (param0) {
+                  gk.field_o[var23Lifetime2] = var27Lifetime1 >> rl.field_b;
+                  AccountFormText.field_e[var23Lifetime2] = var28Lifetime1 >> rl.field_b;
+                  LoginCredentials.field_e[var23Lifetime2] = var29Lifetime1;
+                }
+                var23Lifetime2++;
+                continue;
+              }
+            }
+            if (decompiledFrameRemainder0) {
+              boolean decompiledFrameCompleted0 = true;
+              if (param2.field_e != null &&
+                null != param2.field_h &&
+                param2.field_l != null &&
+                null != param2.field_J &&
+                null != param2.field_F &&
+                null != param2.field_s &&
+                null != param2.field_t &&
+                param2.field_u != null &&
+                null != param2.field_q) {
+                var23Lifetime2 = 0;
+                while (!(param2.field_N <= var23Lifetime2)) {
+                  var24Lifetime1Lifetime1 = param2.field_e[var23Lifetime2];
+                  var25Lifetime1Lifetime1 = param2.field_h[var23Lifetime2];
+                  var26Lifetime1Lifetime1 = param2.field_l[var23Lifetime2];
+                  AchievementSubmission.field_r[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 >> 16) + var9;
+                  MidiNoteMixer.field_n[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13) >> 16);
+                  NameAvailabilityRequest.field_e[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16);
+                  var24Lifetime1Lifetime1 = param2.field_J[var23Lifetime2];
+                  var25Lifetime1Lifetime1 = param2.field_F[var23Lifetime2];
+                  var26Lifetime1Lifetime1 = param2.field_s[var23Lifetime2];
+                  WidgetTheme.field_m[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var18 * var26Lifetime1Lifetime1) >> 16);
+                  TextFieldValidator.field_h[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
+                  ImageProducerRasterBuffer.field_n[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17) >> 16);
+                  var24Lifetime1Lifetime1 = param2.field_t[var23Lifetime2];
+                  var25Lifetime1Lifetime1 = param2.field_u[var23Lifetime2];
+                  var26Lifetime1Lifetime1 = param2.field_q[var23Lifetime2];
+                  ci.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12) >> 16);
+                  IntrusiveDeque.field_f[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
+                  LoginCredentialKind.field_f[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 >> 16) + var11;
+                  var23Lifetime2++;
+                  if (var31 != 0) {
+                    decompiledFrameCompleted0 = false;
+                    break;
+                  }
+                }
+              }
+              if ((decompiledFrameCompleted0) &&
+                (decompiledFrameRemainder0 = (param3))) {
+                var9 = param4[3];
+                var10 = param4[4];
+                var11 = param4[5];
+                var12 = param4[6];
+                var13 = param4[7];
+                var14 = param4[8];
+                var15 = param4[9];
+                var16 = param4[10];
+                var17 = param4[11];
+              }
+              if (decompiledFrameRemainder0) {
+                var18 = 0;
+                while (true) {
+                  stackIn_63_0Lifetime1 = ~var18;
+                  stackIn_63_1Lifetime1 = ~param2.field_y;
+                  if (stackIn_63_0Lifetime1 <= stackIn_63_1Lifetime1) {
+                    break;
+                  }
+                  stackIn_72_0 = ~gk.field_g.length;
+                  stackIn_72_1 = ~var18;
+                  if (var31 != 0) {
+                    break scanLoop1;
+                  }
+                  if (stackIn_72_0 >= stackIn_72_1) {
+                    break;
+                  }
+                  var19 = param2.field_k[var18];
+                  var20 = param2.field_R[var18];
+                  var21Lifetime2 = param2.field_o[var18];
+                  gk.field_g[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
+                  DelayedServerPacket.field_o[var18] = var16 * var21Lifetime2 + (var20 * var13 + var19 * var10) >> 16;
+                  TextWrappingHelpers.field_b[var18] = var11 * var19 - (-(var14 * var20) - var17 * var21Lifetime2) >> 16;
+                  var18++;
+                }
+              }
+            }
+            stackIn_72_0 = param5 ? 1 : 0;
+            stackIn_72_1 = 11;
+            break;
+          }
+          RadialSelectorWidget.drawMeshWithIntGuard(stackIn_72_0 != 0, stackIn_72_1, var8, var7_int, param2);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_77_0 = var7;
+          stackIn_77_1 = new StringBuilder().append("ae.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_78_2 = "null";
+          } else {
+            stackIn_78_2 = "{...}";
+          }
+          stackIn_81_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_82_2 = "null";
+          } else {
+            stackIn_82_2 = "{...}";
+          }
+          stackIn_85_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_86_2 = "null";
+          } else {
+            stackIn_86_2 = "{...}";
+          }
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(')').toString());
+        }
+    }
+
+    final static boolean pollKeyboardEvent(int param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        Object var2 = null;
+        Object var2_ref = null;
+        Throwable var3 = null;
+        boolean stackIn_5_0 = false;
+        Throwable decompiledCaughtException = null;
+        try {
+          var1_int = 108 % ((param0 + 6) / 55);
+          var2_ref = HotspotTextWidget.keyHandler;
+          synchronized (var2_ref) {
+            if (LevelData.keyQueueReadIndex == GameMenu.field_r) {
+              return false;
+            }
+            MidiNote.field_r = MenuController.keyCodeQueue[LevelData.keyQueueReadIndex];
+            typedCharacter = ve.typedCharQueue[LevelData.keyQueueReadIndex];
+            LevelData.keyQueueReadIndex = 1 + LevelData.keyQueueReadIndex & 127;
+            stackIn_5_0 = true;
+          }
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (RuntimeException) (Object) decompiledCaughtException;
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ae.C(" + param0 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        try {
+          field_c = null;
+          field_b = null;
+          if (param0 != -2076560510) {
+            field_b = (String) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ')');
+        }
+    }
+
+    public final String toString() {
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        try {
+          throw new IllegalStateException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var1), "ae.toString()");
+        }
+    }
+
+    static long bitOrLong(long param0, long param1) {
+        long stackIn_1_0 = 0L;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        try {
+          stackIn_1_0 = param0 | param1;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          throw ExceptionSupport.wrapException((Throwable) ((Object) var4), "ae.E(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final static void checkAppletUsernameParameter(java.applet.Applet param0, int param1) {
+        String var2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
+        try {
+          if (param1 <= 8) {
+            return;
+          }
+          var2 = param0.getParameter("username");
+          if (var2 != null &&
+            Base37Codec.encodeBase37((byte) 122, (CharSequence) ((Object) var2)) != 0L) {
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_11_0 = var2_ref;
+          stackIn_11_1 = new StringBuilder().append("ae.A(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_b = "Sound";
+    }
+}

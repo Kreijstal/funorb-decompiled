@@ -601,73 +601,73 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = (param0 & 32628) >> 8;
         var6Lifetime3 = (param0 & 8367717) >> 16;
         if (var5Lifetime4 == 0) {
-          this.field_w[var4Lifetime4] = (var6Lifetime3 << 14) + ResourceArchive.b(this.field_w[var4Lifetime4], -2080769);
+          this.field_w[var4Lifetime4] = (var6Lifetime3 << 14) + ResourceArchive.bitAnd(this.field_w[var4Lifetime4], -2080769);
         }
         if (var5Lifetime4 == 32) {
-          this.field_w[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.b(this.field_w[var4Lifetime4], -16257);
+          this.field_w[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.bitAnd(this.field_w[var4Lifetime4], -16257);
         }
         if (1 == var5Lifetime4) {
-          this.field_C[var4Lifetime4] = ResourceArchive.b(this.field_C[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_C[var4Lifetime4] = ResourceArchive.bitAnd(this.field_C[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 33) {
-          this.field_C[var4Lifetime4] = var6Lifetime3 + ResourceArchive.b(-128, this.field_C[var4Lifetime4]);
+          this.field_C[var4Lifetime4] = var6Lifetime3 + ResourceArchive.bitAnd(-128, this.field_C[var4Lifetime4]);
         }
         if (var5Lifetime4 == 5) {
-          this.field_t[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.b(-16257, this.field_t[var4Lifetime4]);
+          this.field_t[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.bitAnd(-16257, this.field_t[var4Lifetime4]);
         }
         if (var5Lifetime4 == 37) {
-          this.field_t[var4Lifetime4] = var6Lifetime3 + ResourceArchive.b(-128, this.field_t[var4Lifetime4]);
+          this.field_t[var4Lifetime4] = var6Lifetime3 + ResourceArchive.bitAnd(-128, this.field_t[var4Lifetime4]);
         }
         if (7 == var5Lifetime4) {
-          this.field_N[var4Lifetime4] = ResourceArchive.b(-16257, this.field_N[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_N[var4Lifetime4] = ResourceArchive.bitAnd(-16257, this.field_N[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 39) {
-          this.field_N[var4Lifetime4] = ResourceArchive.b(-128, this.field_N[var4Lifetime4]) + var6Lifetime3;
+          this.field_N[var4Lifetime4] = ResourceArchive.bitAnd(-128, this.field_N[var4Lifetime4]) + var6Lifetime3;
         }
         if (10 == var5Lifetime4) {
-          this.field_B[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.b(this.field_B[var4Lifetime4], -16257);
+          this.field_B[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.bitAnd(this.field_B[var4Lifetime4], -16257);
         }
         if (42 == var5Lifetime4) {
-          this.field_B[var4Lifetime4] = ResourceArchive.b(this.field_B[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_B[var4Lifetime4] = ResourceArchive.bitAnd(this.field_B[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.field_v[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.b(-16257, this.field_v[var4Lifetime4]);
+          this.field_v[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.bitAnd(-16257, this.field_v[var4Lifetime4]);
         }
         if (var5Lifetime4 == 43) {
-          this.field_v[var4Lifetime4] = ResourceArchive.b(-128, this.field_v[var4Lifetime4]) + var6Lifetime3;
+          this.field_v[var4Lifetime4] = ResourceArchive.bitAnd(-128, this.field_v[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
-            this.field_y[var4Lifetime4] = sd.a(this.field_y[var4Lifetime4], 1);
+            this.field_y[var4Lifetime4] = LoginCredentialKind.bitOr(this.field_y[var4Lifetime4], 1);
             if (var8 != 0) {
-              this.field_y[var4Lifetime4] = ResourceArchive.b(this.field_y[var4Lifetime4], -2);
+              this.field_y[var4Lifetime4] = ResourceArchive.bitAnd(this.field_y[var4Lifetime4], -2);
             }
           } else {
-            this.field_y[var4Lifetime4] = ResourceArchive.b(this.field_y[var4Lifetime4], -2);
+            this.field_y[var4Lifetime4] = ResourceArchive.bitAnd(this.field_y[var4Lifetime4], -2);
           }
         }
         if (var5Lifetime4 == 65) {
           if (64 > var6Lifetime3) {
             this.c(256, var4Lifetime4);
-            this.field_y[var4Lifetime4] = ResourceArchive.b(this.field_y[var4Lifetime4], -3);
+            this.field_y[var4Lifetime4] = ResourceArchive.bitAnd(this.field_y[var4Lifetime4], -3);
             if (var8 != 0) {
-              this.field_y[var4Lifetime4] = sd.a(this.field_y[var4Lifetime4], 2);
+              this.field_y[var4Lifetime4] = LoginCredentialKind.bitOr(this.field_y[var4Lifetime4], 2);
             }
           } else {
-            this.field_y[var4Lifetime4] = sd.a(this.field_y[var4Lifetime4], 2);
+            this.field_y[var4Lifetime4] = LoginCredentialKind.bitOr(this.field_y[var4Lifetime4], 2);
           }
         }
         if (99 == var5Lifetime4) {
-          this.field_L[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.b(127, this.field_L[var4Lifetime4]);
+          this.field_L[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.bitAnd(127, this.field_L[var4Lifetime4]);
         }
         if (98 == var5Lifetime4) {
-          this.field_L[var4Lifetime4] = var6Lifetime3 + ResourceArchive.b(16256, this.field_L[var4Lifetime4]);
+          this.field_L[var4Lifetime4] = var6Lifetime3 + ResourceArchive.bitAnd(16256, this.field_L[var4Lifetime4]);
         }
         if (101 == var5Lifetime4) {
-          this.field_L[var4Lifetime4] = ResourceArchive.b(127, this.field_L[var4Lifetime4]) + (16384 + (var6Lifetime3 << 7));
+          this.field_L[var4Lifetime4] = ResourceArchive.bitAnd(127, this.field_L[var4Lifetime4]) + (16384 + (var6Lifetime3 << 7));
         }
         if (var5Lifetime4 == 100) {
-          this.field_L[var4Lifetime4] = ResourceArchive.b(this.field_L[var4Lifetime4], 16256) + (16384 + var6Lifetime3);
+          this.field_L[var4Lifetime4] = ResourceArchive.bitAnd(this.field_L[var4Lifetime4], 16256) + (16384 + var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
           this.d(param1 - 12035, var4Lifetime4);
@@ -681,31 +681,31 @@ final class MidiPcmStream extends PcmStream {
         if (6 == var5Lifetime4) {
           var7 = this.field_L[var4Lifetime4];
           if (var7 == 16384) {
-            this.field_D[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.b(this.field_D[var4Lifetime4], -16257);
+            this.field_D[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.bitAnd(this.field_D[var4Lifetime4], -16257);
           }
         }
         if (38 == var5Lifetime4) {
           var7Lifetime1 = this.field_L[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.field_D[var4Lifetime4] = ResourceArchive.b(this.field_D[var4Lifetime4], -128) + var6Lifetime3;
+            this.field_D[var4Lifetime4] = ResourceArchive.bitAnd(this.field_D[var4Lifetime4], -128) + var6Lifetime3;
           }
         }
         if (16 == var5Lifetime4) {
-          this.field_o[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.b(this.field_o[var4Lifetime4], -16257);
+          this.field_o[var4Lifetime4] = (var6Lifetime3 << 7) + ResourceArchive.bitAnd(this.field_o[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 48) {
-          this.field_o[var4Lifetime4] = ResourceArchive.b(-128, this.field_o[var4Lifetime4]) + var6Lifetime3;
+          this.field_o[var4Lifetime4] = ResourceArchive.bitAnd(-128, this.field_o[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 >= 64) {
-            this.field_y[var4Lifetime4] = sd.a(this.field_y[var4Lifetime4], 4);
+            this.field_y[var4Lifetime4] = LoginCredentialKind.bitOr(this.field_y[var4Lifetime4], 4);
             if (var8 != 0) {
               this.b(-1, var4Lifetime4);
-              this.field_y[var4Lifetime4] = ResourceArchive.b(this.field_y[var4Lifetime4], -5);
+              this.field_y[var4Lifetime4] = ResourceArchive.bitAnd(this.field_y[var4Lifetime4], -5);
             }
           } else {
             this.b(-1, var4Lifetime4);
-            this.field_y[var4Lifetime4] = ResourceArchive.b(this.field_y[var4Lifetime4], -5);
+            this.field_y[var4Lifetime4] = ResourceArchive.bitAnd(this.field_y[var4Lifetime4], -5);
           }
         }
         if (17 == var5Lifetime4) {
@@ -926,7 +926,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void f(int param0, int param1, int param2) {
         this.field_O[param1] = param0;
-        this.field_w[param1] = ResourceArchive.b(param0, -128);
+        this.field_w[param1] = ResourceArchive.bitAnd(param0, -128);
         if (param2 != 1) {
           this.field_o = (int[]) null;
         }
@@ -1177,7 +1177,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException var2 = null;
         var3 = wizardrun.field_H;
         try {
-          wizardrun.a(true, (byte) 11, param0, lg.field_d, dg.field_d, rb.field_e, 0);
+          wizardrun.a(true, (byte) 11, param0, lg.field_d, dg.field_d, DisplayModeInfo.field_e, 0);
           var2_int = 0;
           if (param1 != 16) {
             return;
@@ -1191,7 +1191,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (stackIn_5_0 <= var2_int))) {
-            sj.field_m[param0 + var2_int] = var2_int;
+            EmailAddressValidator.field_m[param0 + var2_int] = var2_int;
             var2_int++;
             if (var3 == 0) {
               stackIn_5_0 = lg.field_d;
@@ -1423,7 +1423,7 @@ final class MidiPcmStream extends PcmStream {
           this.f(-85, 122, -57);
         }
         while (16 > var3) {
-          this.field_w[var3] = ResourceArchive.b(this.field_O[var3], -128);
+          this.field_w[var3] = ResourceArchive.bitAnd(this.field_O[var3], -128);
           var3++;
           if (var4 == 0) {
             continue;
@@ -1522,6 +1522,6 @@ final class MidiPcmStream extends PcmStream {
     }
 
     static {
-        sk.a(16062, 50);
+        DiskCacheRequest.a(16062, 50);
     }
 }

@@ -49,7 +49,7 @@ final class RasterSnapshot extends IntrusiveNode {
         Sprite dupTemp$1 = null;
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = id.a((byte) 107, param1, param3);
+        Sprite dupTemp$0 = id.createSolidSquareSprite((byte) 107, param1, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
@@ -57,24 +57,24 @@ final class RasterSnapshot extends IntrusiveNode {
         var5[0] = dupTemp$0;
         if (param4 != 20230) {
           RasterSnapshot.releaseStatics(-59);
-          dupTemp$1 = id.a((byte) 76, param0, param3);
+          dupTemp$1 = id.createSolidSquareSprite((byte) 76, param0, param3);
           var6[8] = dupTemp$1;
           var5[7] = dupTemp$1;
           var5[5] = dupTemp$1;
           if (param2 != 0) {
-            var6[4] = id.a((byte) 98, param2, 64);
+            var6[4] = id.createSolidSquareSprite((byte) 98, param2, 64);
             return var5;
           }
           return var5;
         }
-        Sprite dupTemp$2 = id.a((byte) 76, param0, param3);
+        Sprite dupTemp$2 = id.createSolidSquareSprite((byte) 76, param0, param3);
         var6[8] = dupTemp$2;
         var5[7] = dupTemp$2;
         var5[5] = dupTemp$2;
         if (param2 == 0) {
           return var5;
         }
-        var6[4] = id.a((byte) 98, param2, 64);
+        var6[4] = id.createSolidSquareSprite((byte) 98, param2, 64);
         return var5;
     }
 
@@ -82,18 +82,18 @@ final class RasterSnapshot extends IntrusiveNode {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        pg var4 = null;
+        AchievementSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (pg) (sf.field_j.first((byte) 115));
+          var4 = (AchievementSubmission) (EmailCheckRequest.field_j.first((byte) 115));
           while (var4 != null) {
-            pg.a(param1, true, var4);
-            var4 = (pg) (sf.field_j.next(8192));
+            AchievementSubmission.writeAchievementSubmission(param1, true, var4);
+            var4 = (AchievementSubmission) (EmailCheckRequest.field_j.next(8192));
           }
           var2 = AudioServiceThread.field_d.first((byte) 96);
           while (var2 != null) {
-            hg.a(param1, (byte) 106);
+            DisplayNameSyntaxHelpers.requestAchievementState(param1, (byte) 106);
             var2 = AudioServiceThread.field_d.next(param0 + 8141);
           }
           if (param0 == 51) {

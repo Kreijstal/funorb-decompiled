@@ -35,11 +35,11 @@ final class PcmResampler {
           try {
             AccountCreationForm.field_N = new IsaacPacketBuffer(param8);
             n.field_b = new IsaacPacketBuffer(param9);
-            bl.field_a = param0;
+            TextWrappingHelpers.field_a = param0;
             RasterBuffer.field_a = param2;
-            bl.field_d = param5;
+            TextWrappingHelpers.field_d = param5;
             Base37Codec.field_e = param13;
-            cb.field_g = param3;
+            BeveledFrameFactory.field_g = param3;
             MidiNote.field_l = param1;
             vl.field_d = param11;
             MidiNote.field_G = param4;
@@ -51,7 +51,7 @@ final class PcmResampler {
             aa.field_nb = param7;
             if (null != Base37Codec.field_e.field_c) {
               try {
-                UiWidget.field_t = new BufferedRandomAccessFile(Base37Codec.field_e.field_c, 64, 0);
+                UiWidget.randomSeedFile = new BufferedRandomAccessFile(Base37Codec.field_e.field_c, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

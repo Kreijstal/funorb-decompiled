@@ -39,14 +39,14 @@ final class vl implements WidgetRenderer {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ef var11 = null;
+        ToggleButton var11 = null;
         try {
-          if (param2 instanceof ef) {
+          if (param2 instanceof ToggleButton) {
             stackIn_3_0 = (UiWidget) (param2);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (ef) (stackIn_3_0);
+          var11 = (ToggleButton) (stackIn_3_0);
           if (var11 != null) {
             param4 = param4 & var11.field_B;
           }
@@ -54,15 +54,15 @@ final class vl implements WidgetRenderer {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer.fillRect(param0 + param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, this.field_c);
-          var8 = param0 + param2.field_o + this.field_m;
-          var9 = param1 + param2.field_l + this.field_b;
+          SoftwareRasterizer.fillRect(param0 + param2.x, param2.y + param1, param2.width, param2.height, this.field_c);
+          var8 = param0 + param2.x + this.field_m;
+          var9 = param1 + param2.y + this.field_b;
           SoftwareRasterizer.drawDropShadow(var8, var9, this.field_l, this.field_p, 5592405);
           SoftwareRasterizer.fillRect(var8, var9, this.field_l, this.field_p, var7);
           if (!param3) {
             this.field_p = 11;
           }
-          if (var11.field_z) {
+          if (var11.selected) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_l, var9 + this.field_p, 1);
             SoftwareRasterizer.drawLine(var8 + this.field_l, var9, var8, this.field_p + var9, 1);
           }
@@ -70,7 +70,7 @@ final class vl implements WidgetRenderer {
             return;
           }
           var10 = this.field_i + this.field_l + this.field_m;
-          this.field_j.a(param2.field_k, param2.field_o + param0 + var10, this.field_o + param1 + param2.field_l, -this.field_i - (var10 - param2.field_r), param2.field_n - (this.field_i << 1), this.field_r, this.field_e, this.field_k, this.field_q, 0);
+          this.field_j.a(param2.text, param2.x + param0 + var10, this.field_o + param1 + param2.y, -this.field_i - (var10 - param2.width), param2.height - (this.field_i << 1), this.field_r, this.field_e, this.field_k, this.field_q, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

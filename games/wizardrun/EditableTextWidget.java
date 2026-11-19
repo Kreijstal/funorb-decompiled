@@ -17,20 +17,20 @@ class EditableTextWidget extends TextButton {
     private int field_J;
     private long field_K;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        qe var8 = null;
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        TextWidgetRenderer var8 = null;
         long var6 = 0L;
-        if (null != this.field_w &&
+        if (null != this.renderer &&
           param2 == 0) {
-          this.field_w.drawWidget(param0, param3, (UiWidget) (this), true, this.field_B);
-          if (this.field_w instanceof qe) {
-            var8 = (qe) ((Object) this.field_w);
+          this.renderer.drawWidget(param0, param3, (UiWidget) (this), true, this.field_B);
+          if (this.renderer instanceof TextWidgetRenderer) {
+            var8 = (TextWidgetRenderer) ((Object) this.renderer);
             if (this.field_J != this.field_L) {
-              var8.a(this.field_L, true, this.field_J, param3, param0, (UiWidget) (this));
+              var8.drawSelection(this.field_L, true, this.field_J, param3, param0, (UiWidget) (this));
             }
             var6 = MonotonicClockHelpers.monotonicMillis((byte) 54);
             if ((-this.field_I + var6) % 1000L < 500L) {
-              var8.a(param3, param0, (UiWidget) (this), 0, this.field_L);
+              var8.drawCaret(param3, param0, (UiWidget) (this), 0, this.field_L);
             }
           }
         }
@@ -52,7 +52,7 @@ class EditableTextWidget extends TextButton {
         int var3;
         int var4;
         var4 = wizardrun.field_H;
-        var2 = this.field_k.length();
+        var2 = this.text.length();
         if (this.field_L == var2) {
           return this.field_L;
         }
@@ -60,7 +60,7 @@ class EditableTextWidget extends TextButton {
           return 50;
         }
         for (var3 = 1 + this.field_L; var3 < var2; var3++) {
-          if (this.field_k.charAt(-1 + var3) != 32) {
+          if (this.text.charAt(-1 + var3) != 32) {
             continue;
           }
           break;
@@ -74,7 +74,7 @@ class EditableTextWidget extends TextButton {
         this.field_M = -1;
         this.field_K = 0L;
         try {
-          this.field_w = ValidationIndicator.field_H.field_b;
+          this.renderer = ValidationIndicator.field_H.field_b;
           this.field_H = param2;
           this.a(-1, true, param0);
           this.field_F = true;
@@ -84,7 +84,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_41_1 = 0;
         int stackIn_42_2 = 0;
@@ -108,16 +108,16 @@ class EditableTextWidget extends TextButton {
                 this.deleteSelection(-110);
               }
               if (this.field_H != -1 &&
-                this.field_k.length() >= this.field_H) {
+                this.text.length() >= this.field_H) {
                 return true;
               }
-              if (this.field_L >= this.field_k.length()) {
-                this.field_k = this.field_k + param0;
-                dupTemp$0 = this.field_k.length();
+              if (this.field_L >= this.text.length()) {
+                this.text = this.text + param0;
+                dupTemp$0 = this.text.length();
                 this.field_L = dupTemp$0;
                 this.field_J = dupTemp$0;
               } else {
-                this.field_k = this.field_k.substring(0, this.field_L) + param0 + this.field_k.substring(this.field_L, this.field_k.length());
+                this.text = this.text.substring(0, this.field_L) + param0 + this.text.substring(this.field_L, this.text.length());
                 this.field_L = this.field_L + 1;
                 this.field_J = this.field_L;
               }
@@ -148,7 +148,7 @@ class EditableTextWidget extends TextButton {
                       return true;
                     }
                     if (param1 == 103) {
-                      this.a((byte) 92, this.field_k.length());
+                      this.a((byte) 92, this.text.length());
                       return true;
                     }
                     if (param1 == 84) {
@@ -171,7 +171,7 @@ class EditableTextWidget extends TextButton {
                       return true;
                     }
                   } else {
-                    if (this.field_L < this.field_k.length()) {
+                    if (this.field_L < this.text.length()) {
                       stackIn_41_1 = -127;
                       if (!BufferedSocket.field_p[82]) {
                         stackIn_42_2 = 1 + this.field_L;
@@ -188,7 +188,7 @@ class EditableTextWidget extends TextButton {
                   this.deleteSelection(76);
                   return true;
                 }
-                if (this.field_L < this.field_k.length()) {
+                if (this.field_L < this.text.length()) {
                   this.field_J = 1 + this.field_L;
                   this.deleteSelection(-73);
                   return true;
@@ -231,16 +231,16 @@ class EditableTextWidget extends TextButton {
         RuntimeException var3 = null;
         try {
           if (this.field_H != -1) {
-            var3_int = this.field_H - this.field_k.length();
+            var3_int = this.field_H - this.text.length();
             if (var3_int >= 0) {
               return;
             }
             param0 = param0.substring(0, var3_int);
           }
-          if (this.field_L != this.field_k.length()) {
-            this.field_k = this.field_k.substring(0, this.field_L) + param0 + this.field_k.substring(this.field_L, this.field_k.length());
+          if (this.field_L != this.text.length()) {
+            this.text = this.text.substring(0, this.field_L) + param0 + this.text.substring(this.field_L, this.text.length());
           } else {
-            this.field_k = this.field_k + param0;
+            this.text = this.text + param0;
           }
           this.field_L = this.field_L + param0.length();
           if (param1 <= 76) {
@@ -264,15 +264,15 @@ class EditableTextWidget extends TextButton {
     }
 
     void i(byte param0) {
-        if (this.field_s instanceof TextChangeListener) {
-          ((TextChangeListener) (this.field_s)).onTextSubmitted(this, 5);
+        if (this.listener instanceof TextChangeListener) {
+          ((TextChangeListener) (this.listener)).onTextSubmitted(this, 5);
         }
         if (param0 >= -59) {
           this.field_Q = true;
         }
     }
 
-    final static void a(ai param0, int param1, int param2) {
+    final static void a(ScoreSubmission param0, int param1, int param2) {
         IsaacPacketBuffer var8 = null;
         IsaacPacketBuffer var9 = null;
         int var4 = 0;
@@ -306,7 +306,7 @@ class EditableTextWidget extends TextButton {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handleMousePress(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -319,9 +319,9 @@ class EditableTextWidget extends TextButton {
         RuntimeException var8 = null;
         int var8_intLifetime1;
         try {
-          if (super.a(param0, (byte) -83, param2, param3, param4, param5, param6) &&
-            this.field_w instanceof qe) {
-            var8_int = ((qe) ((Object) this.field_w)).a(9397, pg.field_n, param0, (UiWidget) (this), param3, fi.field_B);
+          if (super.handleMousePress(param0, (byte) -83, param2, param3, param4, param5, param6) &&
+            this.renderer instanceof TextWidgetRenderer) {
+            var8_int = ((TextWidgetRenderer) ((Object) this.renderer)).getTextIndexAt(9397, AchievementSubmission.field_n, param0, (UiWidget) (this), param3, NetworkArchiveRequest.field_B);
             stackIn_5_1 = -118;
             if (-1 == var8_int) {
               stackIn_6_2 = 0;
@@ -336,7 +336,7 @@ class EditableTextWidget extends TextButton {
               this.field_J = this.previousWordBoundary(31823);
               this.field_L = this.g((byte) 113);
               if (this.field_L > 0 &&
-                this.field_k.charAt(-1 + this.field_L) == 32) {
+                this.text.charAt(-1 + this.field_L) == 32) {
                 this.field_L = this.field_L - 1;
               }
               this.field_M = this.field_L;
@@ -363,23 +363,23 @@ class EditableTextWidget extends TextButton {
     final void e(boolean param0) {
         this.field_J = 0;
         this.field_L = 0;
-        this.field_k = "";
+        this.text = "";
         if (!param0) {
           return;
         }
         this.i((byte) -81);
     }
 
-    void a(int param0, int param1, int param2, UiWidget param3) {
-        qe var7 = null;
+    void updateInput(int param0, int param1, int param2, UiWidget param3) {
+        TextWidgetRenderer var7 = null;
         int var6 = 0;
         try {
-          super.a(param0 + 0, param1, param2, param3);
+          super.updateInput(param0 + 0, param1, param2, param3);
           this.e(param0 ^ param0);
-          if (this.field_q == 1) {
-            if (this.field_w instanceof qe) {
-              var7 = (qe) ((Object) this.field_w);
-              var6 = var7.a(9397, pg.field_n, param2, (UiWidget) (this), param1, fi.field_B);
+          if (this.pressedMouseButton == 1) {
+            if (this.renderer instanceof TextWidgetRenderer) {
+              var7 = (TextWidgetRenderer) ((Object) this.renderer);
+              var6 = var7.getTextIndexAt(9397, AchievementSubmission.field_n, param2, (UiWidget) (this), param1, NetworkArchiveRequest.field_B);
               if (var6 != -1) {
                 if (this.field_Q && var6 < this.field_M &&
                   var6 > this.field_J) {
@@ -399,8 +399,8 @@ class EditableTextWidget extends TextButton {
         field_S = null;
         field_G = null;
         if (param0 != 37) {
-          ai var2 = (ai) null;
-          EditableTextWidget.a((ai) null, 98, 109);
+          ScoreSubmission var2 = (ScoreSubmission) null;
+          EditableTextWidget.a((ScoreSubmission) null, 98, 109);
         }
         field_N = null;
         field_R = null;
@@ -418,7 +418,7 @@ class EditableTextWidget extends TextButton {
           field_O = -60;
         }
         for (var2 = this.field_L - 1; 0 < var2; var2--) {
-          if (this.field_k.charAt(-1 + var2) != 32) {
+          if (this.text.charAt(-1 + var2) != 32) {
             continue;
           }
           break;
@@ -428,10 +428,10 @@ class EditableTextWidget extends TextButton {
 
     private final void h(int param0) {
         if (param0 != 0) {
-          this.a(59, -78, 27, 72);
+          this.drawLayer(59, -78, 27, 72);
         }
-        if (this.field_s instanceof TextChangeListener) {
-          ((TextChangeListener) (this.field_s)).onTextChanged(param0 ^ -117, this);
+        if (this.listener instanceof TextChangeListener) {
+          ((TextChangeListener) (this.listener)).onTextChanged(param0 ^ -117, this);
         }
     }
 
@@ -449,7 +449,7 @@ class EditableTextWidget extends TextButton {
         }
         int var2 = this.field_L > this.field_J ? this.field_J : this.field_L;
         int var3 = this.field_L > this.field_J ? this.field_L : this.field_J;
-        return this.field_k.substring(var2, var3);
+        return this.text.substring(var2, var3);
     }
 
     private final void e(int param0) {
@@ -459,42 +459,42 @@ class EditableTextWidget extends TextButton {
         int var6;
         int var7;
         int var8;
-        qe var9;
+        TextWidgetRenderer var9;
         var8 = wizardrun.field_H;
         if (!this.field_F) {
-          this.field_j = 0;
-          this.field_i = 0;
+          this.textOffsetY = 0;
+          this.textOffsetX = 0;
           return;
         }
         if (param0 != 0) {
           this.field_K = 13L;
         }
-        if (!(this.field_w instanceof qe)) {
+        if (!(this.renderer instanceof TextWidgetRenderer)) {
           return;
         }
-        var9 = (qe) ((Object) this.field_w);
-        var3 = var9.a((UiWidget) (this), (byte) 78);
+        var9 = (TextWidgetRenderer) ((Object) this.renderer);
+        var3 = var9.getTextLayout((UiWidget) (this), (byte) 78);
         var4 = var3.a(-127);
-        var5 = var9.a((UiWidget) (this), param0 - 106);
-        var6 = var9.a((byte) 62) >> 1;
+        var5 = var9.getContentWidth((UiWidget) (this), param0 - 106);
+        var6 = var9.getLineHeight((byte) 62) >> 1;
         if (var4 < var5 - var6) {
-          this.field_i = 0;
-          this.field_j = 0;
+          this.textOffsetX = 0;
+          this.textOffsetY = 0;
           return;
         }
-        var7 = this.field_i + var3.a(62, this.field_L);
+        var7 = this.textOffsetX + var3.a(62, this.field_L);
         if (var5 - var6 >= var7) {
           if (var6 > var7) {
-            this.field_i = this.field_i + var6 - var7;
+            this.textOffsetX = this.textOffsetX + var6 - var7;
           }
         } else {
-          this.field_i = var5 + (-var6 - var7) + this.field_i;
+          this.textOffsetX = var5 + (-var6 - var7) + this.textOffsetX;
         }
-        if (this.field_i > 0) {
-          this.field_i = 0;
+        if (this.textOffsetX > 0) {
+          this.textOffsetX = 0;
         } else {
-          if (this.field_i < var6 - var5) {
-            this.field_i = var6 - var5;
+          if (this.textOffsetX < var6 - var5) {
+            this.textOffsetX = var6 - var5;
           }
         }
         return;
@@ -522,13 +522,13 @@ class EditableTextWidget extends TextButton {
           if (param2 == null) {
             param2 = "";
           }
-          this.field_k = param2;
+          this.text = param2;
           var4_int = param2.length();
           if (this.field_H != param0 &&
             this.field_H < var4_int) {
-            this.field_k = this.field_k.substring(0, this.field_H);
+            this.text = this.text.substring(0, this.field_H);
           }
-          dupTemp$1 = this.field_k.length();
+          dupTemp$1 = this.text.length();
           this.field_J = dupTemp$1;
           this.field_L = dupTemp$1;
           if (!param1) {
@@ -558,7 +558,7 @@ class EditableTextWidget extends TextButton {
           var3 = this.field_L <= this.field_J ? this.field_J : this.field_L;
           this.field_L = var2;
           this.field_J = var2;
-          this.field_k = this.field_k.substring(0, var2) + this.field_k.substring(var3, this.field_k.length());
+          this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
           this.i((byte) -115);
         }
         var2Lifetime1 = 47 / ((param0 + 20) / 43);
@@ -589,7 +589,7 @@ class EditableTextWidget extends TextButton {
 
     private final void j(byte param0) {
         if (param0 != 75) {
-          this.a(-59, 57, 98, 61);
+          this.drawLayer(-59, 57, 98, 61);
         }
         this.copySelection(false);
         this.deleteSelection(param0 - 145);

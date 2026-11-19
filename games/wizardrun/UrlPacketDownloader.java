@@ -7,7 +7,7 @@ final class UrlPacketDownloader implements Runnable {
     private AsyncRequest field_h;
     private int field_g;
     private java.net.URL field_d;
-    static sd field_c;
+    static LoginCredentialKind field_c;
     private DataInputStream field_f;
     private PlatformTaskDispatcher field_k;
     private AsyncRequest field_j;
@@ -34,15 +34,15 @@ final class UrlPacketDownloader implements Runnable {
         var4 = wizardrun.field_H;
         try {
           if (param0 <= 35) {
-            UrlPacketDownloader.a(-40, -128);
+            UrlPacketDownloader.resendProgressRequests(-40, -128);
           }
           if (BoundedRandomAccessFile.field_a < 10) {
             var3_int = 0;
-            if (pk.field_o) {
-              pk.field_o = false;
+            if (ReflectionCheck.field_o) {
+              ReflectionCheck.field_o = false;
               var3_int = 1;
             }
-            RadialSelectorWidget.a(10487, var3_int != 0, dl.a(true), NameSuggestionsPanel.g(17325), sa.field_e);
+            RadialSelectorWidget.a(10487, var3_int != 0, dl.getCommonUiLoadProgress(true), NameSuggestionsPanel.g(17325), ArchiveLoadingStage.field_e);
             return;
           }
           if (!w.a((byte) -117)) {
@@ -51,8 +51,8 @@ final class UrlPacketDownloader implements Runnable {
             DateFormattingHelpers.a((byte) 80, 0, param2, 0);
             return;
           }
-          if (ml.field_t != 0) {
-            uc.drawLoadingScreen(false, param2);
+          if (ArchiveRequest.field_t != 0) {
+            ArchiveLoadingPlan.drawLoadingScreen(false, param2);
             return;
           }
           uk.a((byte) -123, param1, false);
@@ -126,25 +126,25 @@ final class UrlPacketDownloader implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendProgressRequests(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        dc var5 = null;
-        sc var6 = null;
+        ProgressSubmission var5 = null;
+        ProgressQuery var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = wizardrun.field_H;
         try {
-          var5 = (dc) (v.field_d.first((byte) 111));
+          var5 = (ProgressSubmission) (v.field_d.first((byte) 111));
           while (var5 != null) {
-            SecondaryNodeDeque.a(-14149, param0, var5);
-            var5 = (dc) (v.field_d.next(8192));
+            SecondaryNodeDeque.writeProgressSubmission(-14149, param0, var5);
+            var5 = (ProgressSubmission) (v.field_d.next(8192));
           }
           var3 = 105 % ((param1 + 34) / 40);
-          var6 = (sc) (LevelData.field_c.first((byte) 118));
+          var6 = (ProgressQuery) (LevelData.field_c.first((byte) 118));
           while (var6 != null) {
-            ld.a(param0, var6, 0);
-            var6 = (sc) (LevelData.field_c.next(8192));
+            ld.writeProgressQuery(param0, var6, 0);
+            var6 = (ProgressQuery) (LevelData.field_c.next(8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,18 +156,18 @@ final class UrlPacketDownloader implements Runnable {
 
     protected final void finalize() {
         if (this.field_h != null) {
-          if (this.field_h.field_e != null) {
+          if (this.field_h.result != null) {
             try {
-              ((DataInputStream) (this.field_h.field_e)).close();
+              ((DataInputStream) (this.field_h.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_h = null;
         }
         if (null != this.field_j) {
-          if (null != this.field_j.field_e) {
+          if (null != this.field_j.result) {
             try {
-              ((java.net.Socket) (this.field_j.field_e)).close();
+              ((java.net.Socket) (this.field_j.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -194,12 +194,12 @@ final class UrlPacketDownloader implements Runnable {
         }
         if (this.field_g == 0) {
           if (this.field_h == null) {
-            this.field_h = this.field_k.a(this.field_d, 127);
+            this.field_h = this.field_k.requestUrlStream(this.field_d, 127);
           }
-          if (this.field_h.field_a == 0) {
+          if (this.field_h.status == 0) {
             return false;
           }
-          if (this.field_h.field_a != 1) {
+          if (this.field_h.status != 1) {
             this.field_h = null;
             this.field_g = this.field_g + 1;
             return false;
@@ -207,12 +207,12 @@ final class UrlPacketDownloader implements Runnable {
         }
         if (1 == this.field_g) {
           if (null == this.field_j) {
-            this.field_j = this.field_k.a(this.field_d.getHost(), 443, (byte) -20);
+            this.field_j = this.field_k.requestSocket(this.field_d.getHost(), 443, (byte) -20);
           }
-          if (this.field_j.field_a == 0) {
+          if (this.field_j.status == 0) {
             return false;
           }
-          if (this.field_j.field_a != 1) {
+          if (this.field_j.status != 1) {
             this.field_g = this.field_g + 1;
             this.field_j = null;
             return false;
@@ -220,15 +220,15 @@ final class UrlPacketDownloader implements Runnable {
         }
         if (this.field_f != null) {
           if (this.field_e == null) {
-            this.field_e = this.field_k.a((byte) -82, (Runnable) (this), 5);
+            this.field_e = this.field_k.requestThread((byte) -82, (Runnable) (this), 5);
           }
-          if (0 == this.field_e.field_a) {
+          if (0 == this.field_e.status) {
             return false;
           }
           if (param0 <= 71) {
             UrlPacketDownloader.releaseStatics(-20);
           }
-          if (this.field_e.field_a == 1) {
+          if (this.field_e.status == 1) {
             return false;
           }
           this.finalize();
@@ -237,10 +237,10 @@ final class UrlPacketDownloader implements Runnable {
         }
         try {
           if (this.field_g == 0) {
-            this.field_f = (DataInputStream) (this.field_h.field_e);
+            this.field_f = (DataInputStream) (this.field_h.result);
           }
           if (this.field_g == 1) {
-            var4 = (java.net.Socket) (this.field_j.field_e);
+            var4 = (java.net.Socket) (this.field_j.result);
             var4.setSoTimeout(10000);
             var3 = var4.getOutputStream();
             var3.write(17);
@@ -255,35 +255,35 @@ final class UrlPacketDownloader implements Runnable {
           this.finalize();
           this.field_g = this.field_g + 1;
           if (this.field_e == null) {
-            this.field_e = this.field_k.a((byte) -82, (Runnable) (this), 5);
+            this.field_e = this.field_k.requestThread((byte) -82, (Runnable) (this), 5);
           }
-          if (0 == this.field_e.field_a) {
+          if (0 == this.field_e.status) {
             return false;
           }
           if (param0 > 71) {
-            if (this.field_e.field_a != 1) {
+            if (this.field_e.status != 1) {
               this.finalize();
               this.field_g = this.field_g + 1;
             }
             return false;
           }
           UrlPacketDownloader.releaseStatics(-20);
-          if (this.field_e.field_a != 1) {
+          if (this.field_e.status != 1) {
             this.finalize();
             this.field_g = this.field_g + 1;
           }
           return false;
         }
         if (this.field_e == null) {
-          this.field_e = this.field_k.a((byte) -82, (Runnable) (this), 5);
+          this.field_e = this.field_k.requestThread((byte) -82, (Runnable) (this), 5);
         }
-        if (0 == this.field_e.field_a) {
+        if (0 == this.field_e.status) {
           return false;
         }
         if (param0 <= 71) {
           UrlPacketDownloader.releaseStatics(-20);
         }
-        if (this.field_e.field_a != 1) {
+        if (this.field_e.status != 1) {
           this.finalize();
           this.field_g = this.field_g + 1;
         }
@@ -313,7 +313,7 @@ final class UrlPacketDownloader implements Runnable {
     }
 
     static {
-        field_c = new sd(2);
+        field_c = new LoginCredentialKind(2);
         field_a = "Return to game";
     }
 

@@ -168,7 +168,7 @@ final class TriangleMesh {
           ClientException.field_a = true;
           oc.field_d = param1;
           if (oc.field_d == 0) {
-            var3_int = bl.a((byte) 59, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, qb.field_s);
+            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 59, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FramedButtonPainter.field_s);
             var4 = 3 + var3_int;
             ec.field_g = new int[var4];
             FlatTriangleRasterizer.field_b = new String[var4];
@@ -187,7 +187,7 @@ final class TriangleMesh {
             ec.field_g[var4 - 1] = 1;
             MusicPatch.field_s[1] = 5;
           } else if (oc.field_d == 1) {
-            var3_int = bl.a((byte) 41, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, qb.field_s);
+            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 41, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FramedButtonPainter.field_s);
             var4 = 2 + var3_int;
             FlatTriangleRasterizer.field_b = new String[var4];
             ec.field_g = new int[var4];
@@ -205,9 +205,9 @@ final class TriangleMesh {
           } else if (2 != oc.field_d) {
             if (oc.field_d == 3) {
               if (!ld.field_g.field_s) {
-                var3_int = bl.a((byte) -125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FullscreenController.field_b);
+                var3_int = TextWrappingHelpers.wrapBalancedLines((byte) -125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, FullscreenController.field_b);
               } else {
-                var3_int = bl.a((byte) 72, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, e.field_c);
+                var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 72, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, e.field_c);
               }
               var4 = 2 + var3_int;
               ec.field_g = new int[var4];
@@ -224,7 +224,7 @@ final class TriangleMesh {
               ec.field_g[-1 + var4] = 0;
               MusicPatch.field_s[0] = 5;
             } else if (oc.field_d == 4) {
-              var3_int = bl.a((byte) 125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, SocketConnector.field_b);
+              var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 125, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, SocketConnector.field_b);
               var4 = var3_int + 2;
               ec.field_g = new int[var4];
               FlatTriangleRasterizer.field_b = new String[var4];
@@ -243,7 +243,7 @@ final class TriangleMesh {
               if (oc.field_d != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = bl.a((byte) -100, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, DialogLayer.field_G);
+              var3_int = TextWrappingHelpers.wrapBalancedLines((byte) -100, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, DialogLayer.field_G);
               var4 = var3_int + 3;
               FlatTriangleRasterizer.field_b = new String[var4];
               ec.field_g = new int[var4];
@@ -263,7 +263,7 @@ final class TriangleMesh {
               MusicPatch.field_s[1] = 5;
             }
           } else {
-            var3_int = bl.a((byte) 39, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 108, gk.field_e));
+            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) 39, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 108, gk.field_e));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(WidgetContainer.field_z[var5])) {
@@ -279,7 +279,7 @@ final class TriangleMesh {
             ArrayOperations.copy(WidgetContainer.field_z, 0, ke.field_t, 0, var4);
             ec.field_a = new String[-var4 + (var3_int - 1)];
             ArrayOperations.copy(WidgetContainer.field_z, 1 + var4, ec.field_a, 0, -var4 + var3_int - 1);
-            var3_int = bl.a((byte) -112, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 43, MenuController.field_k));
+            var3_int = TextWrappingHelpers.wrapBalancedLines((byte) -112, field_j, WidgetContainer.field_z, ValidationIndicator.field_I, WeightedLruCache.a(new String[]{"<br><%0><br>"}, (byte) 43, MenuController.field_k));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(WidgetContainer.field_z[var5])) {
@@ -315,7 +315,7 @@ final class TriangleMesh {
             }
             ec.field_g[1] = 0;
             MusicPatch.field_s = new int[2];
-            FlatTriangleRasterizer.field_b[0] = bh.field_c;
+            FlatTriangleRasterizer.field_b[0] = QuickChatDynamicCommand.field_c;
             FlatTriangleRasterizer.field_b[1] = ca.field_a;
             MusicPatch.field_s[0] = 5;
             FlatTriangleRasterizer.field_b[4] = StripedProgressBar.field_E;
@@ -350,11 +350,11 @@ final class TriangleMesh {
             }
             DirectByteStorage.field_g = MonotonicClockHelpers.monotonicMillis((byte) 41);
           }
-          ga.field_d.field_c = MusicPatch.field_s.length;
+          IntegerSyntaxHelpers.field_d.field_c = MusicPatch.field_s.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < FlatTriangleRasterizer.field_b.length; var4Lifetime1++) {
             stackIn_91_0 = !(ec.field_g[var4Lifetime1] < 0);
-            var5Lifetime1 = sf.a(stackIn_91_0, 110, FlatTriangleRasterizer.field_b[var4Lifetime1]);
+            var5Lifetime1 = EmailCheckRequest.measureTextWidth(stackIn_91_0, 110, FlatTriangleRasterizer.field_b[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -364,7 +364,7 @@ final class TriangleMesh {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = sf.a(false, 110, var11);
+              var7Lifetime1 = EmailCheckRequest.measureTextWidth(false, 110, var11);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -372,15 +372,15 @@ final class TriangleMesh {
             var4_ref_String__Lifetime1 = ec.field_a;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = sf.a(false, 110, var12);
+              var7Lifetime1Lifetime1 = EmailCheckRequest.measureTextWidth(false, 110, var12);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
             }
           }
-          fe.field_l = id.field_c - (var3_intLifetime1 >> 1);
-          sj.field_n = var3_intLifetime1 + id.field_c - (var3_intLifetime1 >> 1);
-          CachedArchiveProvider.field_f = (e.field_d + Js5Transport.field_e << 1) * ga.field_d.field_c;
+          MatchingTextValidator.field_l = id.field_c - (var3_intLifetime1 >> 1);
+          EmailAddressValidator.field_n = var3_intLifetime1 + id.field_c - (var3_intLifetime1 >> 1);
+          CachedArchiveProvider.field_f = (e.field_d + Js5Transport.field_e << 1) * IntegerSyntaxHelpers.field_d.field_c;
           for (var4Lifetime2 = 0; FlatTriangleRasterizer.field_b.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_115_0 = CachedArchiveProvider.field_f;
             if (ec.field_g[var4Lifetime2] < 0) {
@@ -397,7 +397,7 @@ final class TriangleMesh {
           while (var4Lifetime3 < FlatTriangleRasterizer.field_b.length) {
             var6Lifetime1 = ec.field_g[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = sf.a(true, 110, FlatTriangleRasterizer.field_b[var4Lifetime3]);
+              var7Lifetime2 = EmailCheckRequest.measureTextWidth(true, 110, FlatTriangleRasterizer.field_b[var4Lifetime3]);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + id.field_c;
               var5Lifetime3 = var5Lifetime3 + Js5Transport.field_e;
               NodeHashTableIterator.field_m[var4Lifetime3] = new int[4];
@@ -412,9 +412,9 @@ final class TriangleMesh {
             var4Lifetime3++;
           }
           if (oc.field_d == 2) {
-            ga.field_d.a(-12785, -1, param0, -1);
+            IntegerSyntaxHelpers.field_d.a(-12785, -1, param0, -1);
           } else {
-            ga.field_d.a(-12785, rb.a(-578629823, pg.field_n, fi.field_B), param0, 0);
+            IntegerSyntaxHelpers.field_d.a(-12785, DisplayModeInfo.a(-578629823, AchievementSubmission.field_n, NetworkArchiveRequest.field_B), param0, 0);
           }
           if (param2 != 15991) {
             TriangleMesh.releaseStatics(20);
@@ -486,9 +486,9 @@ final class TriangleMesh {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_A[0][var0] = ae.a(ae.a(ae.a(var8 << 16, ae.a(var10 << 24, ae.a(ae.a(var6 << 40, ae.a(var2 << 56, var2 << 48)), var2 << 32))), var4 << 8), var12);
+            field_A[0][var0] = EmailValidationError.bitOrLong(EmailValidationError.bitOrLong(EmailValidationError.bitOrLong(var8 << 16, EmailValidationError.bitOrLong(var10 << 24, EmailValidationError.bitOrLong(EmailValidationError.bitOrLong(var6 << 40, EmailValidationError.bitOrLong(var2 << 56, var2 << 48)), var2 << 32))), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_A[var14][var0] = ae.a(field_A[-1 + var14][var0] >>> 8, field_A[-1 + var14][var0] << 56);
+                field_A[var14][var0] = EmailValidationError.bitOrLong(field_A[-1 + var14][var0] >>> 8, field_A[-1 + var14][var0] << 56);
             }
             var0++;
         }

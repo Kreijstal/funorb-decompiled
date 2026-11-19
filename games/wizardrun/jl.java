@@ -30,10 +30,10 @@ final class jl extends WidgetPainter {
               jl.a(74, (java.net.URL) null, (java.applet.Applet) null);
             }
             if (null != ii.field_f) {
-              ii.field_f.a((byte) -96);
+              ii.field_f.close((byte) -96);
             }
             if (null != CacheEntry.field_q) {
-              CacheEntry.field_q.a((byte) 79);
+              CacheEntry.field_q.shutdown((byte) 79);
             }
             if (null != ld.field_e) {
               try {
@@ -147,8 +147,8 @@ final class jl extends WidgetPainter {
         int var8 = 0;
         java.applet.Applet var9 = null;
         try {
-          if (!param2.field_v) {
-            stackIn_6_0 = (param2.d((byte) 53)) ? 1 : 0;
+          if (!param2.hovered) {
+            stackIn_6_0 = (param2.isFocused((byte) 53)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
@@ -172,8 +172,8 @@ final class jl extends WidgetPainter {
           var7 = stackIn_15_0;
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          e.a(this.field_x, (param2.field_n - this.field_x[0].fullHeight >> 1) + (param2.field_l + param1), var7, (byte) 118, param0 + param2.field_o, param2.field_r);
-          this.field_k.a(param2.field_k, param0 + param2.field_o, -2 + param2.field_l + param1, param2.field_r, param2.field_n, var8, -1, 1, 1, this.field_k.field_M);
+          e.a(this.field_x, (param2.height - this.field_x[0].fullHeight >> 1) + (param2.y + param1), var7, (byte) 118, param0 + param2.x, param2.width);
+          this.field_k.a(param2.text, param0 + param2.x, -2 + param2.y + param1, param2.width, param2.height, var8, -1, 1, 1, this.field_k.field_M);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,7 +7,7 @@ final class LevelData implements Serializable {
     int[] field_j;
     boolean[] field_d;
     int[] field_f;
-    static pj field_h;
+    static DraggableWidget field_h;
     static IntrusiveDeque field_c;
     int[] field_a;
     static long field_g;
@@ -15,16 +15,16 @@ final class LevelData implements Serializable {
     static int keyQueueReadIndex;
     static String field_b;
 
-    final static ae a(int param0, String param1) {
+    final static EmailValidationError a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        ae var5 = null;
-        ae stackIn_4_0 = null;
-        ae stackIn_7_0 = null;
-        ae stackIn_10_0 = null;
-        ae stackIn_12_0 = null;
+        EmailValidationError var5 = null;
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_10_0 = null;
+        EmailValidationError stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -41,13 +41,13 @@ final class LevelData implements Serializable {
             var4 = param1.substring(1 + var2_int);
             var5 = DateFormattingHelpers.a(var3, param0);
             if (var5 == null) {
-              stackIn_12_0 = dh.a(-27602, var4);
+              stackIn_12_0 = EmailDomainHelpers.validateEmailDomain(-27602, var4);
               return stackIn_12_0;
             }
             stackIn_10_0 = var5;
             return stackIn_10_0;
           }
-          stackIn_4_0 = ga.field_c;
+          stackIn_4_0 = IntegerSyntaxHelpers.field_c;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,15 +68,15 @@ final class LevelData implements Serializable {
           return;
         }
         if (param0 % 10L != 0L) {
-          pg.a(param0, 2);
+          AchievementSubmission.sleepMillisUnchecked(param0, 2);
           if (param1) {
             LevelData.releaseStatics(true);
             return;
           }
           return;
         }
-        pg.a(-1L + param0, 2);
-        pg.a(1L, 2);
+        AchievementSubmission.sleepMillisUnchecked(-1L + param0, 2);
+        AchievementSubmission.sleepMillisUnchecked(1L, 2);
         if (param1) {
           LevelData.releaseStatics(true);
           return;

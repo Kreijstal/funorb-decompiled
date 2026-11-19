@@ -52,7 +52,7 @@ class DualLinkNode extends IntrusiveNode {
           if (var2 == 0) {
             var8 = (tc) (RasterBuffer.field_c.first((byte) 107));
             if (var8 == null) {
-              ql.a(-78);
+              HuffmanDecoder.closeAccountConnection(-78);
               return;
             }
             var4 = var9.readUnsignedByte(255);
@@ -64,7 +64,7 @@ class DualLinkNode extends IntrusiveNode {
             }
             var9.position = var9.position + 4;
             if (!var9.verifyCrc(-6142)) {
-              ql.a(-97);
+              HuffmanDecoder.closeAccountConnection(-97);
               return;
             }
             var8.unlink(false);
@@ -72,7 +72,7 @@ class DualLinkNode extends IntrusiveNode {
           }
           if (var2 != 1) {
             ResizableDialog.a((Throwable) null, "A1: " + ni.c(6), -562);
-            ql.a(param0 ^ 117);
+            HuffmanDecoder.closeAccountConnection(param0 ^ 117);
             return;
           }
           var3 = var9.readInt(param0 + 257);
@@ -85,7 +85,7 @@ class DualLinkNode extends IntrusiveNode {
             break;
           }
           if (var4_ref_ie == null) {
-            ql.a(-85);
+            HuffmanDecoder.closeAccountConnection(-85);
             return;
           }
           var4_ref_ie.unlink(false);

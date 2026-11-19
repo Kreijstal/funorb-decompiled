@@ -17,9 +17,9 @@ final class GameGraphicsResources {
             Js5Index.field_k[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            ql.field_b[var1_intLifetime1] = 0L;
+            HuffmanDecoder.field_b[var1_intLifetime1] = 0L;
           }
-          uh.field_c = param0;
+          LoginCredentials.field_c = param0;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
         }
@@ -29,7 +29,7 @@ final class GameGraphicsResources {
         if (!param0) {
           return (String) null;
         }
-        return dh.field_c;
+        return EmailDomainHelpers.field_c;
     }
 
     public static void releaseStatics(int param0) {

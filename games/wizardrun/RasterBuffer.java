@@ -21,13 +21,13 @@ abstract class RasterBuffer {
         return var1;
     }
 
-    abstract void a(byte param0, int param1, java.awt.Component param2, int param3);
+    abstract void initialize(byte param0, int param1, java.awt.Component param2, int param3);
 
     final static boolean a(char param0, boolean param1) {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (ResourceArchive.a(param0, param1)) {
+        if (ResourceArchive.isAsciiAlphanumeric(param0, param1)) {
           return true;
         }
         if (45 == param0) {
@@ -88,14 +88,14 @@ abstract class RasterBuffer {
         }
     }
 
-    final void b(int param0) {
+    final void bindRasterTarget(int param0) {
         if (param0 <= 19) {
           field_a = -35;
         }
         SoftwareRasterizer.setTarget(this.field_f, this.field_d, this.field_h);
     }
 
-    final static void a(int param0) {
+    final static void loadMembershipBenefitsGraphics(int param0) {
         int stackIn_50_0 = 0;
         int stackIn_50_1 = 0;
         int stackIn_51_2 = 0;
@@ -147,19 +147,19 @@ abstract class RasterBuffer {
         try {
           if (WhirlpoolHasher.field_j != null &&
             WhirlpoolHasher.field_j.ensureIndex(param0 + 17818) &&
-            WhirlpoolHasher.field_j.a((byte) 29, "benefits") &&
-            null != pj.field_M &&
-            pj.field_M.ensureIndex(param0 + 17818) &&
-            pj.field_M.a((byte) 29, "benefits")) {
+            WhirlpoolHasher.field_j.ensureNamedGroupLoaded((byte) 29, "benefits") &&
+            null != DraggableWidget.field_M &&
+            DraggableWidget.field_M.ensureIndex(param0 + 17818) &&
+            DraggableWidget.field_M.ensureNamedGroupLoaded((byte) 29, "benefits")) {
             IntrusiveNodeHashTable.field_c = vg.loadSprite(15, "headline", WhirlpoolHasher.field_j, "benefits");
             MouseWheelInput.field_b = vg.loadSprite(15, "blurbpane", WhirlpoolHasher.field_j, "benefits");
             mj.field_b = vg.loadSprite(15, "button", WhirlpoolHasher.field_j, "benefits");
             RasterSnapshot.field_l = vg.loadSprite(15, "signup_text", WhirlpoolHasher.field_j, "benefits");
-            ae.field_c = vg.loadSprite(15, "menu_text", WhirlpoolHasher.field_j, "benefits");
-            ef.field_H = vg.loadSprite(15, "button_frame", WhirlpoolHasher.field_j, "benefits");
+            EmailValidationError.field_c = vg.loadSprite(15, "menu_text", WhirlpoolHasher.field_j, "benefits");
+            ToggleButton.field_H = vg.loadSprite(15, "button_frame", WhirlpoolHasher.field_j, "benefits");
             ra.field_p = vg.loadSprite(param0 + 13, "arrow", WhirlpoolHasher.field_j, "benefits");
-            v.field_b = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", WhirlpoolHasher.field_j, "large_font", pj.field_M));
-            AudioServiceThread.field_a = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", WhirlpoolHasher.field_j, "small_font", pj.field_M));
+            v.field_b = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", WhirlpoolHasher.field_j, "large_font", DraggableWidget.field_M));
+            AudioServiceThread.field_a = (BitmapFont) ((Object) IsaacRandom.loadFont(800863586, "benefits", WhirlpoolHasher.field_j, "small_font", DraggableWidget.field_M));
             var27 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
@@ -175,17 +175,17 @@ abstract class RasterBuffer {
             var12.bindAsRasterTarget();
             v.field_b.drawStringCentered(WeightedLruCache.a(new String[]{td.field_d}, (byte) 53, of.field_l), var6, 40, 16777215, -1);
             AudioServiceThread.field_a.drawStringCentered(WeightedLruCache.a(new String[]{td.field_d}, (byte) 43, PcmResampler.field_g), var6, 60, 16777215, -1);
-            v.field_b.drawStringCentered(WeightedLruCache.a(new String[]{dc.field_n}, (byte) 96, bc.field_b), var6, 110, 16777215, -1);
-            AudioServiceThread.field_a.drawStringCentered(WeightedLruCache.a(new String[]{dc.field_n}, (byte) 58, nh.field_q), var6, 130, 16777215, -1);
-            v.field_b.drawStringCentered(jg.field_p, var6, 180, 16777215, -1);
+            v.field_b.drawStringCentered(WeightedLruCache.a(new String[]{ProgressSubmission.field_n}, (byte) 96, MeshWorkspaceHelpers.field_b), var6, 110, 16777215, -1);
+            AudioServiceThread.field_a.drawStringCentered(WeightedLruCache.a(new String[]{ProgressSubmission.field_n}, (byte) 58, AlternateUsernameLoginCredentials.field_q), var6, 130, 16777215, -1);
+            v.field_b.drawStringCentered(DisplayNameValidator.field_p, var6, 180, 16777215, -1);
             AudioServiceThread.field_a.drawStringCentered(ra.field_i, var6, 200, 16777215, -1);
             oh.a(var12.height, var12, 0, var12.width, 3, (byte) 82, 0, 1);
             MouseWheelInput.field_b.bindAsRasterTarget();
             var12.drawTransparent(18 - MouseWheelInput.field_b.offsetX, -MouseWheelInput.field_b.offsetY + 241);
             for (var7 = 0; SpriteState.field_w.length > var7; var7++) {
-              dc.field_s[var7].bindAsRasterTarget();
-              AudioServiceThread.field_a.a(SpriteState.field_w[var7], 3, 3, dc.field_s[var7].width - 6, -6 + dc.field_s[var7].height, RadialSelectorWidget.field_H, -1, 1, 1, AudioServiceThread.field_a.field_B + AudioServiceThread.field_a.field_M);
-              oh.a(dc.field_s[var7].height, dc.field_s[var7], 0, dc.field_s[var7].width, 3, (byte) 37, 0, 1);
+              ProgressSubmission.field_s[var7].bindAsRasterTarget();
+              AudioServiceThread.field_a.a(SpriteState.field_w[var7], 3, 3, ProgressSubmission.field_s[var7].width - 6, -6 + ProgressSubmission.field_s[var7].height, RadialSelectorWidget.field_H, -1, 1, 1, AudioServiceThread.field_a.field_B + AudioServiceThread.field_a.field_M);
+              oh.a(ProgressSubmission.field_s[var7].height, ProgressSubmission.field_s[var7], 0, ProgressSubmission.field_s[var7].width, 3, (byte) 37, 0, 1);
             }
             SpriteState.field_w = null;
             pa.field_a = RasterSnapshot.field_l.copy();
@@ -193,11 +193,11 @@ abstract class RasterBuffer {
             ValidationHelpWidget.a(2 * SoftwareRasterizer.height / 3, (byte) -105, 0, 0, SoftwareRasterizer.width, 64);
             SoftwareRasterizer.setTarget(var27, var2, var3);
             SoftwareRasterizer.restoreClip(ld.field_b);
-            GzipDecompressor.field_c = 231 + (-ef.field_H.width + mj.field_b.width) / 2;
-            LoginForm.field_L = 390 + (-ef.field_H.height + mj.field_b.height) / 2;
+            GzipDecompressor.field_c = 231 + (-ToggleButton.field_H.width + mj.field_b.width) / 2;
+            LoginForm.field_L = 390 + (-ToggleButton.field_H.height + mj.field_b.height) / 2;
             WhirlpoolHasher.field_j = null;
-            hf.field_b = (mj.field_b.height - ef.field_H.height) / 2 + 390;
-            hj.field_f = (-ef.field_H.width + mj.field_b.width) / 2 + 434;
+            ProxyAuthenticationException.field_b = (mj.field_b.height - ToggleButton.field_H.height) / 2 + 390;
+            IndexedSpriteArrayFactory.field_f = (-ToggleButton.field_H.width + mj.field_b.width) / 2 + 434;
           }
           if (WidgetTheme.field_f == null) {
             return;
@@ -208,12 +208,12 @@ abstract class RasterBuffer {
             var2Lifetime1 = SoftwareRasterizer.width;
             var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ld.field_b);
-            var14 = WeightedLruCache.a(new String[]{uc.field_d[bb.field_k]}, (byte) 49, BufferedRandomAccessFile.field_b);
+            var14 = WeightedLruCache.a(new String[]{ArchiveLoadingPlan.field_d[UsernameLoginCredentials.field_k]}, (byte) 49, BufferedRandomAccessFile.field_b);
             var5 = v.field_b.maxLineWidth(var14, MouseWheelInput.field_a);
             var6Lifetime1 = v.field_b.measureWrappedHeight(var14, MouseWheelInput.field_a, v.field_b.field_B + v.field_b.field_M);
-            var7Lifetime1 = (MouseWheelInput.field_a - var5) / 2 + jg.field_m;
+            var7Lifetime1 = (MouseWheelInput.field_a - var5) / 2 + DisplayNameValidator.field_m;
             var7Lifetime1 -= 3;
-            var8 = cb.field_a + (TimedValidator.field_a - var6Lifetime1) / 2;
+            var8 = BeveledFrameFactory.field_a + (TimedValidator.field_a - var6Lifetime1) / 2;
             var5 += 6;
             var6Lifetime1 += 6;
             if (0 > var7Lifetime1) {
@@ -223,7 +223,7 @@ abstract class RasterBuffer {
               var5 = var5 + 2 * var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               uk.field_b.fullWidth = uk.field_b.fullWidth + var9_int * 2;
-              jg.field_m = jg.field_m + var9_int;
+              DisplayNameValidator.field_m = DisplayNameValidator.field_m + var9_int;
             }
             var8 -= 3;
             if (var5 + var7Lifetime1 > uk.field_b.fullWidth) {
@@ -232,7 +232,7 @@ abstract class RasterBuffer {
               uk.field_b.fullWidth = uk.field_b.fullWidth + var9_intLifetime1 * 2;
               SocketJs5Transport.field_r = SocketJs5Transport.field_r - var9_intLifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
-              jg.field_m = jg.field_m + var9_intLifetime1;
+              DisplayNameValidator.field_m = DisplayNameValidator.field_m + var9_intLifetime1;
               uk.field_b.offsetX = uk.field_b.offsetX + var9_intLifetime1;
             }
             if (0 > var8) {
@@ -240,29 +240,29 @@ abstract class RasterBuffer {
               var8 = var8 + var9_intLifetime2;
               uk.field_b.offsetY = uk.field_b.offsetY + var9_intLifetime2;
               uk.field_b.fullHeight = uk.field_b.fullHeight + 2 * var9_intLifetime2;
-              cb.field_a = cb.field_a + var9_intLifetime2;
-              ka.field_i = ka.field_i - var9_intLifetime2;
+              BeveledFrameFactory.field_a = BeveledFrameFactory.field_a + var9_intLifetime2;
+              EmailLoginCredentials.field_i = EmailLoginCredentials.field_i - var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
             }
             if (uk.field_b.fullHeight < var6Lifetime1 + var8) {
               var9_intLifetime3 = var8 + var6Lifetime1 - uk.field_b.fullHeight;
               uk.field_b.fullHeight = uk.field_b.fullHeight + 2 * var9_intLifetime3;
-              ka.field_i = ka.field_i - var9_intLifetime3;
+              EmailLoginCredentials.field_i = EmailLoginCredentials.field_i - var9_intLifetime3;
               uk.field_b.offsetY = uk.field_b.offsetY + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime3 * 2;
-              cb.field_a = cb.field_a + var9_intLifetime3;
+              BeveledFrameFactory.field_a = BeveledFrameFactory.field_a + var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
             }
             uk.field_b.expandToFullSize();
             var9 = new Sprite(uk.field_b.fullWidth, uk.field_b.fullHeight);
             var9.bindAsRasterTarget();
-            v.field_b.a(var14, jg.field_m, cb.field_a, MouseWheelInput.field_a, TimedValidator.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
+            v.field_b.a(var14, DisplayNameValidator.field_m, BeveledFrameFactory.field_a, MouseWheelInput.field_a, TimedValidator.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
             oh.a(var9.fullHeight, var9, 0, var9.fullWidth, 3, (byte) 98, 0, 1);
             uk.field_b.bindAsRasterTarget();
             var9.drawTransparent(0, 0);
             QuickChatPhraseDefinition.field_s = new Sprite(640, 480);
             QuickChatPhraseDefinition.field_s.bindAsRasterTarget();
-            uk.field_b.drawRotatedAboutCenter(SocketJs5Transport.field_r + (uk.field_b.fullWidth >> 1), ka.field_i + (uk.field_b.fullHeight >> 1), kk.field_xb, 4096);
+            uk.field_b.drawRotatedAboutCenter(SocketJs5Transport.field_r + (uk.field_b.fullWidth >> 1), EmailLoginCredentials.field_i + (uk.field_b.fullHeight >> 1), kk.field_xb, 4096);
             uk.field_b = null;
             QuickChatPhraseDefinition.field_s.trimTransparentBorders();
             SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
@@ -305,8 +305,8 @@ abstract class RasterBuffer {
             StrongCacheEntry.field_v = null;
           }
           SoftwareRasterizer.saveClip(ld.field_b);
-          SoftwareRasterizer.fillRoundedRectangleBlended(16, 16, 608, 112, 15, nh.field_n, wd.field_g);
-          SoftwareRasterizer.fillRoundedRectangleBlended(231, 144, 393, 232, 15, nh.field_n, wd.field_g);
+          SoftwareRasterizer.fillRoundedRectangleBlended(16, 16, 608, 112, 15, AlternateUsernameLoginCredentials.field_n, NameAvailabilityRequest.field_g);
+          SoftwareRasterizer.fillRoundedRectangleBlended(231, 144, 393, 232, 15, AlternateUsernameLoginCredentials.field_n, NameAvailabilityRequest.field_g);
           if (null != IntrusiveNodeHashTable.field_c) {
             IntrusiveNodeHashTable.field_c.drawTransparent(0, 0);
           }
@@ -321,7 +321,7 @@ abstract class RasterBuffer {
             QuickChatPhraseDefinition.field_s.drawTransparent(0, 0);
           }
           if (null != mj.field_b &&
-            null != ef.field_H) {
+            null != ToggleButton.field_H) {
             mj.field_b.drawTransparent(231, 390);
             var1 = RasterSnapshot.field_l;
             if (GameGraphicsResources.field_d.field_g == 0) {
@@ -329,13 +329,13 @@ abstract class RasterBuffer {
             }
             var1.drawTransparent(0, 0);
             stackIn_50_0 = 40;
-            stackIn_50_1 = hj.field_c;
+            stackIn_50_1 = IndexedSpriteArrayFactory.field_c;
             if (GameGraphicsResources.field_d.field_g == 0) {
               stackIn_51_2 = 4;
             } else {
               stackIn_51_2 = 3;
             }
-            var2Lifetime4 = (stackIn_50_0 * hg.b(stackIn_50_1 << stackIn_51_2, (byte) -89) >> 16) + 40;
+            var2Lifetime4 = (stackIn_50_0 * DisplayNameSyntaxHelpers.sine2048(stackIn_50_1 << stackIn_51_2, (byte) -89) >> 16) + 40;
             if (var2Lifetime4 > 0) {
               mj.field_b.drawAdditive(230, 389, var2Lifetime4);
               mj.field_b.drawAdditive(232, 389, var2Lifetime4);
@@ -351,33 +351,33 @@ abstract class RasterBuffer {
             SecondaryNodeDeque.a(stackIn_56_0, stackIn_57_1, GzipDecompressor.field_c, LoginForm.field_L);
           }
           if (mj.field_b != null &&
-            null != ef.field_H) {
+            null != ToggleButton.field_H) {
             mj.field_b.drawTransparent(434, 390);
-            ae.field_c.drawTransparent(0, 0);
+            EmailValidationError.field_c.drawTransparent(0, 0);
             if (GameGraphicsResources.field_d.field_g == 1) {
               ValidationHelpWidget.a(7 * mj.field_b.height / 12, (byte) -105, 392, 436, mj.field_b.width - 4, 64);
             }
             stackIn_65_0 = 2;
             stackIn_66_1 = (1 == GameGraphicsResources.field_d.field_g);
-            SecondaryNodeDeque.a(stackIn_65_0, stackIn_66_1, hj.field_f, hf.field_b);
+            SecondaryNodeDeque.a(stackIn_65_0, stackIn_66_1, IndexedSpriteArrayFactory.field_f, ProxyAuthenticationException.field_b);
           }
           if (ra.field_p != null) {
             var1_int = -(ra.field_p.fullHeight / 2) + 357;
             ra.field_p.drawTransparent(-ra.field_p.fullWidth + 269, var1_int);
             IntrusiveDequeCursor.field_b.drawTransparent(586, var1_int);
-            if (fi.field_B > var1_int &&
-              var1_int + ra.field_p.height > fi.field_B) {
-              var2Lifetime5 = 40 + (40 * hg.b(hj.field_c << 4, (byte) -89) >> 16);
+            if (NetworkArchiveRequest.field_B > var1_int &&
+              var1_int + ra.field_p.height > NetworkArchiveRequest.field_B) {
+              var2Lifetime5 = 40 + (40 * DisplayNameSyntaxHelpers.sine2048(IndexedSpriteArrayFactory.field_c << 4, (byte) -89) >> 16);
               if (var2Lifetime5 > 0) {
-                if (pg.field_n > 269 - ra.field_p.width &&
-                  269 > pg.field_n) {
+                if (AchievementSubmission.field_n > 269 - ra.field_p.width &&
+                  269 > AchievementSubmission.field_n) {
                   ra.field_p.drawAdditive(269 + (-ra.field_p.fullWidth - 1), -1 + var1_int, var2Lifetime5);
                   ra.field_p.drawAdditive(270 - ra.field_p.fullWidth, -1 + var1_int, var2Lifetime5);
                   ra.field_p.drawAdditive(268 - ra.field_p.fullWidth, var1_int + 1, var2Lifetime5);
                   ra.field_p.drawAdditive(-ra.field_p.fullWidth + 269 + 1, var1_int + 1, var2Lifetime5);
                 } else {
-                  if (pg.field_n > 586 &&
-                    pg.field_n < 586 + ra.field_p.width) {
+                  if (AchievementSubmission.field_n > 586 &&
+                    AchievementSubmission.field_n < 586 + ra.field_p.width) {
                     IntrusiveDequeCursor.field_b.drawAdditive(585, var1_int - 1, var2Lifetime5);
                     IntrusiveDequeCursor.field_b.drawAdditive(587, var1_int - 1, var2Lifetime5);
                     IntrusiveDequeCursor.field_b.drawAdditive(585, var1_int + 1, var2Lifetime5);
@@ -388,7 +388,7 @@ abstract class RasterBuffer {
             }
           }
           GridActor.drawScreenshotPreview(true);
-          dc.field_s[ej.field_c].drawTransparent(269, 340);
+          ProgressSubmission.field_s[ej.field_c].drawTransparent(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

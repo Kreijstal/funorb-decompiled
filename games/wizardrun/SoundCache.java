@@ -3,7 +3,7 @@
  */
 final class SoundCache {
     private ResourceArchive field_f;
-    static bh field_h;
+    static QuickChatDynamicCommand field_h;
     private ResourceArchive field_c;
     static String field_b;
     private IntrusiveNodeHashTable field_g;
@@ -36,7 +36,7 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.c(0) == 1) {
+          if (this.field_c.getGroupCapacity(0) == 1) {
             stackIn_3_0 = this.a(param2, true, 0, param1);
             return stackIn_3_0;
           }
@@ -44,7 +44,7 @@ final class SoundCache {
             stackIn_6_0 = (PcmSample) null;
             return stackIn_6_0;
           }
-          if (1 != this.field_c.d(param0 ^ -19719, param2)) {
+          if (1 != this.field_c.getFileCapacity(param0 ^ -19719, param2)) {
             throw new RuntimeException();
           }
           stackIn_9_0 = this.a(0, true, param2, param1);
@@ -72,11 +72,11 @@ final class SoundCache {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_f.c(param0 ^ param0) == 1) {
+          if (this.field_f.getGroupCapacity(param0 ^ param0) == 1) {
             stackIn_3_0 = this.a(param1, param0 + 29237, param2, 0);
             return stackIn_3_0;
           }
-          if (this.field_f.d(-110, param2) != 1) {
+          if (this.field_f.getFileCapacity(-110, param2) != 1) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a(param1, param0 + 29237, 0, param2);
@@ -233,6 +233,6 @@ final class SoundCache {
 
     static {
         field_b = "Log in";
-        field_h = new bh(7, 0, 1, 1);
+        field_h = new QuickChatDynamicCommand(7, 0, 1, 1);
     }
 }

@@ -6,7 +6,7 @@ final class n {
     static boolean field_a;
     static IsaacPacketBuffer field_b;
 
-    final static ne a(byte param0) {
+    final static AccountFormText a(byte param0) {
         String var1 = null;
         String var1Lifetime1;
         if (param0 != 12) {
@@ -16,19 +16,19 @@ final class n {
             if (!(var1.indexOf('@') < 0)) {
               var1 = "";
             }
-            return new ne(nf.a((byte) 122), pa.a((byte) -106));
+            return new AccountFormText(nf.a((byte) 122), pa.a((byte) -106));
           }
-          return new ne(nf.a((byte) 122), pa.a((byte) -106));
+          return new AccountFormText(nf.a((byte) 122), pa.a((byte) -106));
         }
         var1Lifetime1 = nf.a((byte) 123);
         if (var1Lifetime1 == null) {
-          return new ne(nf.a((byte) 122), pa.a((byte) -106));
+          return new AccountFormText(nf.a((byte) 122), pa.a((byte) -106));
         }
         if (var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
-          return new ne(nf.a((byte) 122), pa.a((byte) -106));
+          return new AccountFormText(nf.a((byte) 122), pa.a((byte) -106));
         }
-        return new ne(nf.a((byte) 122), pa.a((byte) -106));
+        return new AccountFormText(nf.a((byte) 122), pa.a((byte) -106));
     }
 
     public static void releaseStatics(int param0) {
@@ -55,7 +55,7 @@ final class n {
             return stackIn_2_0;
           }
           if (MusicPatch.a(param0, param4, param1, -114)) {
-            stackIn_7_0 = IsaacPacketBuffer.a(65, param2.a(param4, param0, 1));
+            stackIn_7_0 = IsaacPacketBuffer.a(65, param2.getFile(param4, param0, 1));
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

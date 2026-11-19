@@ -52,23 +52,23 @@ final class NanoTickClock extends TickClock {
         var5 = wizardrun.field_H;
         try {
           for (var2_int = 0; 3 > var2_int; var2_int++) {
-            hj.field_b[var2_int] = 0;
+            IndexedSpriteArrayFactory.field_b[var2_int] = 0;
           }
           for (var2_intLifetime1 = param0; var2_intLifetime1 < ca.field_e; var2_intLifetime1++) {
             if (param1.field_i == SingleChildWidget.field_B[var2_intLifetime1].field_i) {
               dupTemp$3 = SingleChildWidget.field_B[var2_intLifetime1].a((byte) 102);
-              hj.field_b[dupTemp$3] = hj.field_b[dupTemp$3] + 1;
+              IndexedSpriteArrayFactory.field_b[dupTemp$3] = IndexedSpriteArrayFactory.field_b[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.a((byte) 102);
-          hj.field_b[dupTemp$0] = hj.field_b[dupTemp$0] + 1;
+          IndexedSpriteArrayFactory.field_b[dupTemp$0] = IndexedSpriteArrayFactory.field_b[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; ca.field_e > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (SingleChildWidget.field_B[var3].field_i == param1.field_i) {
               var4 = SingleChildWidget.field_B[var3].a((byte) 102);
-              if (GridActor.field_j < hj.field_b[var4]) {
-                hj.field_b[var4] = hj.field_b[var4] - 1;
+              if (GridActor.field_j < IndexedSpriteArrayFactory.field_b[var4]) {
+                IndexedSpriteArrayFactory.field_b[var4] = IndexedSpriteArrayFactory.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -120,7 +120,7 @@ final class NanoTickClock extends TickClock {
           var1_int = id.field_b[param0];
           for (var2 = 1; var2 < id.field_b.length; var2++) {
             var3 = id.field_b[var2];
-            ArrayOperations.copy(cb.field_e, var2 << 4, cb.field_e, var1_int, var3);
+            ArrayOperations.copy(BeveledFrameFactory.field_e, var2 << 4, BeveledFrameFactory.field_e, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

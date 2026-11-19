@@ -144,7 +144,7 @@ final class oh {
             return stackIn_2_0;
           }
           var5_int = -16 % ((-55 - param3) / 42);
-          stackIn_4_0 = param1 + " - " + param2.a(0, param4) + "%";
+          stackIn_4_0 = param1 + " - " + param2.getNamedGroupProgress(0, param4) + "%";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

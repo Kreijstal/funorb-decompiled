@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static rc field_c;
+    static AccountConnectionState field_c;
     static String field_d;
     static int field_a;
     static String field_e;
@@ -32,7 +32,7 @@ abstract class MouseWheelInput {
         field_f = null;
         field_c = null;
         if (param0 != -1) {
-          field_c = (rc) null;
+          field_c = (AccountConnectionState) null;
         }
         field_e = null;
         field_b = null;
@@ -96,7 +96,7 @@ abstract class MouseWheelInput {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
             if (TextLayoutLine.a((char) var7, 0)) {
-              var8 = sf.a(-1514, (char) var7);
+              var8 = EmailCheckRequest.normalizeNameCharacter(-1514, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -124,6 +124,6 @@ abstract class MouseWheelInput {
         field_d = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_e = "Members";
         field_f = "take you to the top.  Beware of the rats doing this.";
-        field_c = new rc();
+        field_c = new AccountConnectionState();
     }
 }

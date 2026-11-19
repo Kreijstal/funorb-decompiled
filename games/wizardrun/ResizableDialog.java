@@ -63,11 +63,11 @@ abstract class ResizableDialog extends FadingDialog {
             if (null == ej.field_a) {
               return;
             }
-            stackIn_16_0 = qf.field_m;
+            stackIn_16_0 = AgeValidator.field_m;
             stackIn_16_1 = null;
             stackIn_16_2 = null;
             stackIn_16_3 = ej.field_a.getCodeBase();
-            stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(fi.field_A).append("&u=");
+            stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(NetworkArchiveRequest.field_A).append("&u=");
             if (null != gf.field_Y) {
               stackIn_17_1 = null;
               stackIn_17_2 = null;
@@ -77,12 +77,12 @@ abstract class ResizableDialog extends FadingDialog {
               stackIn_17_2 = null;
               stackIn_17_5 = "" + MusicPatch.field_m;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_p).append("&v2=").append(PlatformTaskDispatcher.field_b).append("&e=").append(var10).toString()), 123);
-            while (var4.field_a == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).requestUrlStream(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_p).append("&v2=").append(PlatformTaskDispatcher.field_b).append("&e=").append(var10).toString()), 123);
+            while (var4.status == 0) {
               LevelData.sleepMillis(1L, false);
             }
-            if (var4.field_a == 1) {
-              var5 = (DataInputStream) (var4.field_e);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }
@@ -152,7 +152,7 @@ abstract class ResizableDialog extends FadingDialog {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = wizardrun.field_H;
-        SoftwareRasterizer.fillVerticalGradient(param0 + 6, param2 + 35, this.field_r - 12, this.field_n - 40, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param0 + 6, param2 + 35, this.width - 12, this.height - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -163,7 +163,7 @@ abstract class ResizableDialog extends FadingDialog {
             SoftwareRasterizer.clipBottom > var8) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
-            var11 = this.field_r;
+            var11 = this.width;
             if (20 >= var7) {
               while (var10 <= 20) {
                 var12 = (20 - var10) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
@@ -215,16 +215,16 @@ abstract class ResizableDialog extends FadingDialog {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
           SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.drawHorizontalLine(this.field_r + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.width + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        hg.field_d.drawTransparent(-90 + (this.field_r + param0), param2 + 10);
-        nf.a(5 + param0, param2 + 35, -10 + this.field_r, (byte) -106, ValidationState.field_a);
-        nf.a(param0, param2 - (-this.field_n + 22), this.field_r, (byte) -114, NanoTickClock.field_i);
+        DisplayNameSyntaxHelpers.field_d.drawTransparent(-90 + (this.width + param0), param2 + 10);
+        nf.a(5 + param0, param2 + 35, -10 + this.width, (byte) -106, ValidationState.field_a);
+        nf.a(param0, param2 - (-this.height + 22), this.width, (byte) -114, NanoTickClock.field_i);
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
-        var4Lifetime2 = this.field_n - 79;
+        var4Lifetime2 = this.height - 79;
         var7Lifetime2 = 0;
         var8Lifetime2 = param2 + 57;
         if (param1 != -1) {
@@ -234,7 +234,7 @@ abstract class ResizableDialog extends FadingDialog {
           var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
           SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.drawHorizontalLine(-6 + (param0 + this.field_r), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param0 + this.width), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -283,10 +283,10 @@ abstract class ResizableDialog extends FadingDialog {
           return;
         }
         this.field_T = 0;
-        this.field_Q = this.field_n;
+        this.field_Q = this.height;
         this.field_M = param1;
         this.field_O = param3;
-        this.field_L = this.field_r;
+        this.field_L = this.width;
         this.field_N = param0;
     }
 

@@ -92,9 +92,9 @@ final class IntrusiveNodeHashTable {
     }
 
     final static int c(int param0) {
-        DialogLayer.field_L.a((byte) -84);
-        if (!ii.field_f.b((byte) 0)) {
-          return DiskCacheWorker.a(-18067);
+        DialogLayer.field_L.serviceProviders((byte) -84);
+        if (!ii.field_f.service((byte) 0)) {
+          return DiskCacheWorker.pollJs5Connection(-18067);
         }
         if (param0 == 14326) {
           return 0;
@@ -109,7 +109,7 @@ final class IntrusiveNodeHashTable {
         int var5 = 0;
         try {
           int var3 = -63 % ((param1 + 44) / 42);
-          var2 = new Sprite(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
+          var2 = new Sprite(param0.getNamedFile(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
           var4 = var2.width;
           var5 = var2.height;
           GameMenu.d(-31782);
@@ -120,7 +120,7 @@ final class IntrusiveNodeHashTable {
           ee.field_q.bindAsRasterTarget();
           var2.drawWithOffsets(0, -TextLayout.field_a.height);
           ee.field_q.offsetY = TextLayout.field_a.height;
-          bb.b(4);
+          UsernameLoginCredentials.b(4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -129,9 +129,9 @@ final class IntrusiveNodeHashTable {
     final static boolean d(int param0) {
         if (param0 >= -13) {
           IntrusiveNodeHashTable.releaseStatics(-73);
-          return DialogLayer.field_L.b((byte) -17);
+          return DialogLayer.field_L.ensureMasterIndex((byte) -17);
         }
-        return DialogLayer.field_L.b((byte) -17);
+        return DialogLayer.field_L.ensureMasterIndex((byte) -17);
     }
 
     final IntrusiveNode first(byte param0) {
@@ -182,9 +182,9 @@ final class IntrusiveNodeHashTable {
           EditableTextWidget.field_R[1] = MidiNote.field_o;
           EditableTextWidget.field_R[3] = DualLinkNodeHashTable.field_a;
           EditableTextWidget.field_R[4] = mh.field_lb;
-          EditableTextWidget.field_R[2] = ae.field_b;
-          EditableTextWidget.field_R[0] = sc.field_l;
-          EditableTextWidget.field_R[6] = qf.field_k;
+          EditableTextWidget.field_R[2] = EmailValidationError.field_b;
+          EditableTextWidget.field_R[0] = ProgressQuery.field_l;
+          EditableTextWidget.field_R[6] = AgeValidator.field_k;
           EditableTextWidget.field_R[5] = WrappedTextLayout.field_m;
           return;
         }
@@ -194,9 +194,9 @@ final class IntrusiveNodeHashTable {
         EditableTextWidget.field_R[1] = MidiNote.field_o;
         EditableTextWidget.field_R[3] = DualLinkNodeHashTable.field_a;
         EditableTextWidget.field_R[4] = mh.field_lb;
-        EditableTextWidget.field_R[2] = ae.field_b;
-        EditableTextWidget.field_R[0] = sc.field_l;
-        EditableTextWidget.field_R[6] = qf.field_k;
+        EditableTextWidget.field_R[2] = EmailValidationError.field_b;
+        EditableTextWidget.field_R[0] = ProgressQuery.field_l;
+        EditableTextWidget.field_R[6] = AgeValidator.field_k;
         EditableTextWidget.field_R[5] = WrappedTextLayout.field_m;
     }
 

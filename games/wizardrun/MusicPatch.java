@@ -96,7 +96,7 @@ final class MusicPatch extends IntrusiveNode {
         if (!param0) {
           return false;
         }
-        stackIn_7_0 = (ml.field_t >= 10) && (!qb.field_p) && (!NameSuggestionsPanel.a(0));
+        stackIn_7_0 = (ArchiveRequest.field_t >= 10) && (!FramedButtonPainter.field_p) && (!NameSuggestionsPanel.a(0));
         return stackIn_7_0;
     }
 
@@ -112,12 +112,12 @@ final class MusicPatch extends IntrusiveNode {
           if (param3 > -113) {
             return true;
           }
-          var5 = param2.a(param1, param0, 1);
+          var5 = param2.getFile(param1, param0, 1);
           var4 = var5;
           if (var5 == null) {
             return false;
           }
-          jg.a(var5, true);
+          DisplayNameValidator.decodeSpriteSheet(var5, true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -422,7 +422,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt((byte) -90);
             }
-            this.field_r[var23] = (short)(this.field_r[var23] + ResourceArchive.b(32768, -1 + var22 << 14));
+            this.field_r[var23] = (short)(this.field_r[var23] + ResourceArchive.bitAnd(32768, -1 + var22 << 14));
             this.field_i[var23] = var22;
             var20Lifetime2--;
           }

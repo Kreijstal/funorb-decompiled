@@ -3,7 +3,7 @@
  */
 final class kd {
     static String field_b;
-    static wd field_a;
+    static NameAvailabilityRequest field_a;
     static boolean field_c;
 
     final static int a(int param0, boolean param1) {
@@ -35,17 +35,17 @@ final class kd {
         }
         stackIn_6_0 = Base37Codec.field_d;
         try {
-          while (uf.a(stackIn_6_0, MidiPcmStream.field_V, 65535) >= 65536) {
+          while (LoginMethodPreference.a(stackIn_6_0, MidiPcmStream.field_V, 65535) >= 65536) {
             Base37Codec.field_d = Base37Codec.field_d - MidiPcmStream.field_V;
-            hj.field_c = hj.field_c + 1;
+            IndexedSpriteArrayFactory.field_c = IndexedSpriteArrayFactory.field_c + 1;
             stackIn_6_0 = Base37Codec.field_d;
           }
           var2_int = -1;
           if (null != f.field_d) {
             var2_int = f.field_d.length;
           } else {
-            if (dc.field_s != null) {
-              var2_int = dc.field_s.length;
+            if (ProgressSubmission.field_s != null) {
+              var2_int = ProgressSubmission.field_s.length;
             }
           }
           if (-1 != var2_int) {
@@ -87,8 +87,8 @@ final class kd {
             var3 = 357 - ra.field_p.fullHeight / 2;
             var4 = 0;
             if (w.field_c != 0 &&
-              dh.field_b > var3 &&
-              var3 + ra.field_p.height > dh.field_b) {
+              EmailDomainHelpers.field_b > var3 &&
+              var3 + ra.field_p.height > EmailDomainHelpers.field_b) {
               if (MouseInputHandler.field_e > -ra.field_p.width + 269 &&
                 MouseInputHandler.field_e < 269) {
                 WidgetTheme.field_j = MidiPcmStream.field_u;
@@ -104,20 +104,20 @@ final class kd {
             }
             if (var4 == 0 &&
               MidiPcmStream.field_M < WidgetTheme.field_j &&
-              fi.field_B > var3 &&
-              ra.field_p.height + var3 > fi.field_B) {
-              if (pg.field_n > -ra.field_p.width + 269 &&
-                pg.field_n < 269) {
+              NetworkArchiveRequest.field_B > var3 &&
+              ra.field_p.height + var3 > NetworkArchiveRequest.field_B) {
+              if (AchievementSubmission.field_n > -ra.field_p.width + 269 &&
+                AchievementSubmission.field_n < 269) {
                 WidgetTheme.field_j = MidiPcmStream.field_M;
               }
-              if (586 < pg.field_n &&
-                ra.field_p.width + 586 > pg.field_n) {
+              if (586 < AchievementSubmission.field_n &&
+                ra.field_p.width + 586 > AchievementSubmission.field_n) {
                 WidgetTheme.field_j = MidiPcmStream.field_M;
               }
             }
           }
           if (param1) {
-            GameGraphicsResources.field_d.a(wc.a(29292, fi.field_B, pg.field_n), param0 - 668, wc.a(29292, dh.field_b, MouseInputHandler.field_e));
+            GameGraphicsResources.field_d.a(wc.a(29292, NetworkArchiveRequest.field_B, AchievementSubmission.field_n), param0 - 668, wc.a(29292, EmailDomainHelpers.field_b, MouseInputHandler.field_e));
             if (GameGraphicsResources.field_d.b(param0 ^ -587)) {
               if (GameGraphicsResources.field_d.field_g == 0) {
                 stackIn_66_0 = 3;
@@ -128,7 +128,7 @@ final class kd {
                 return stackIn_69_0;
               }
             }
-            while (ae.a(103)) {
+            while (EmailValidationError.pollKeyboardEvent(103)) {
               GameGraphicsResources.field_d.a((byte) 11, 0);
               if (GameGraphicsResources.field_d.b(-1)) {
                 if (GameGraphicsResources.field_d.field_g == 0) {

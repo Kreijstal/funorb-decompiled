@@ -19,16 +19,16 @@ final class ii {
         field_e = null;
     }
 
-    final static wd a(int param0, boolean param1) {
-        wd var2 = null;
-        wd var2Lifetime1;
+    final static NameAvailabilityRequest createAvailableNameResult(int param0, boolean param1) {
+        NameAvailabilityRequest var2 = null;
+        NameAvailabilityRequest var2Lifetime1;
         if (param0 == -29309) {
-          var2 = new wd(true);
+          var2 = new NameAvailabilityRequest(true);
           var2.field_d = param1 ? true : false;
           return var2;
         }
-        ii.a(123, false);
-        var2Lifetime1 = new wd(true);
+        ii.createAvailableNameResult(123, false);
+        var2Lifetime1 = new NameAvailabilityRequest(true);
         var2Lifetime1.field_d = param1 ? true : false;
         return var2Lifetime1;
     }

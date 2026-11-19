@@ -17,7 +17,7 @@ final class BufferedSocket implements Runnable {
     private boolean field_f;
     private int field_d;
     private PlatformTaskDispatcher field_j;
-    static rc field_l;
+    static AccountConnectionState field_l;
     static long field_k;
     static int field_a;
 
@@ -69,7 +69,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_e) {
-              this.field_e = this.field_j.a((byte) -118, (Runnable) (this), 3);
+              this.field_e = this.field_j.requestThread((byte) -118, (Runnable) (this), 3);
             }
             this.notifyAll();
           }
@@ -135,12 +135,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_e) {
-            while (this.field_e.field_a == 0) {
+            while (this.field_e.status == 0) {
               LevelData.sleepMillis(1L, false);
             }
-            if (1 == this.field_e.field_a) {
+            if (1 == this.field_e.status) {
               try {
-                ((Thread) (this.field_e.field_e)).join();
+                ((Thread) (this.field_e.result)).join();
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -342,7 +342,7 @@ final class BufferedSocket implements Runnable {
 
     static {
         field_p = new boolean[112];
-        field_l = new rc();
+        field_l = new AccountConnectionState();
         field_a = -480;
     }
 }

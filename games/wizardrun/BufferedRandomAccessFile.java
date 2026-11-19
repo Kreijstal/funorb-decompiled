@@ -258,7 +258,7 @@ final class BufferedRandomAccessFile {
 
     final static ResourceArchive a(int param0, int param1) {
         int var2 = -72 / ((-23 - param0) / 63);
-        return sc.a(param1, 12000, 1, false, false, true);
+        return ProgressQuery.createResourceArchive(param1, 12000, 1, false, false, true);
     }
 
     final void close(int param0) throws IOException {

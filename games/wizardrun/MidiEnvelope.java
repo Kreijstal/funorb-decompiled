@@ -112,11 +112,11 @@ final class MidiEnvelope {
         var4 = wizardrun.field_H;
         try {
           while (true) {
-            var3 = param2.a(7, param1);
-            while (var3.field_a == 0) {
+            var3 = param2.requestExitFullscreen(7, param1);
+            while (var3.status == 0) {
               LevelData.sleepMillis(10L, false);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               LevelData.sleepMillis(100L, false);
               continue;
             }

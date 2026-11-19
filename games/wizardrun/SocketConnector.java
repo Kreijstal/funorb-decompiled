@@ -9,7 +9,7 @@ abstract class SocketConnector {
     int field_c;
     static String field_b;
 
-    abstract java.net.Socket a(byte param0) throws IOException;
+    abstract java.net.Socket connect(byte param0) throws IOException;
 
     final java.net.Socket openSocket(int param0) throws IOException {
         if (param0 != -14394) {

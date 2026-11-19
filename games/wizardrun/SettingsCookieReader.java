@@ -3,7 +3,7 @@
  */
 final class SettingsCookieReader {
     static double field_b;
-    static ql field_d;
+    static HuffmanDecoder field_d;
     static String field_e;
     static String field_c;
     static MidiTrack field_a;
@@ -12,7 +12,7 @@ final class SettingsCookieReader {
         field_c = null;
         field_d = null;
         if (param0 >= -95) {
-          field_d = (ql) null;
+          field_d = (HuffmanDecoder) null;
         }
         field_e = null;
         field_a = null;

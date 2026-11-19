@@ -49,13 +49,13 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
         }
     }
 
-    final void a(int param0, int param1, int param2, UiWidget param3) {
+    final void updateInput(int param0, int param1, int param2, UiWidget param3) {
         if (param0 != 10000536) {
           return;
         }
         try {
-          super.a(param0 + 0, param1, param2, param3);
-          this.field_X = -param2 + (pg.field_n - this.field_o);
+          super.updateInput(param0 + 0, param1, param2, param3);
+          this.field_X = -param2 + (AchievementSubmission.field_n - this.x);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -91,7 +91,7 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
     final static void drawProgressBar(byte param0, String param1, boolean param2, float param3) {
         try {
           if (ProxySocketConnector.field_e == null) {
-            ProxySocketConnector.field_e = new ProgressDialog(GameShell.field_A, bh.field_a);
+            ProxySocketConnector.field_e = new ProgressDialog(GameShell.field_A, QuickChatDynamicCommand.field_a);
             GameShell.field_A.b((UiWidget) (ProxySocketConnector.field_e), (byte) 126);
           }
           int var4_int = 25 % ((param0 + 75) / 34);
@@ -103,25 +103,25 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
         }
     }
 
-    final static uf[] l(byte param0) {
+    final static LoginMethodPreference[] l(byte param0) {
         if (param0 != 100) {
-          return (uf[]) null;
+          return (LoginMethodPreference[]) null;
         }
-        return new uf[]{StripedProgressBar.field_C, IndexedSpriteState.field_e, ra.field_j};
+        return new LoginMethodPreference[]{StripedProgressBar.field_C, IndexedSpriteState.field_e, ra.field_j};
     }
 
     final String getTooltip(boolean param0) {
-        if (!this.field_v) {
+        if (!this.hovered) {
           return null;
         }
-        if (null == this.field_p) {
+        if (null == this.tooltip) {
           return null;
         }
         if (param0) {
           this.getValidator((byte) -27);
         }
-        EditableTextWidget.a(pg.field_n - this.field_X + this.field_r, fi.field_B, -91);
-        return this.field_p;
+        EditableTextWidget.a(AchievementSubmission.field_n - this.field_X + this.width, NetworkArchiveRequest.field_B, -91);
+        return this.tooltip;
     }
 
     static {

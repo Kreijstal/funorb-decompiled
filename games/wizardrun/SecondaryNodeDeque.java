@@ -15,7 +15,7 @@ final class SecondaryNodeDeque implements Iterable {
           return;
         }
         try {
-          DateFormattingHelpers.a(sd.field_c, param3, -122);
+          DateFormattingHelpers.a(LoginCredentialKind.field_c, param3, -122);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -53,7 +53,7 @@ final class SecondaryNodeDeque implements Iterable {
           if (param0 != -40) {
             field_c = (String) null;
           }
-          stackIn_7_0 = param1 + " - " + param2.a((byte) 75) + "%";
+          stackIn_7_0 = param1 + " - " + param2.getLoadProgress((byte) 75) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static void a(int param0, int param1, dc param2) {
+    final static void writeProgressSubmission(int param0, int param1, ProgressSubmission param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         IsaacPacketBuffer var5 = null;
@@ -95,8 +95,8 @@ final class SecondaryNodeDeque implements Iterable {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte((byte) 11, 1);
-          var5.writeByte((byte) 11, param2.field_k);
-          var5.writeSignedSmart(1710370149, param2.field_m);
+          var5.writeByte((byte) 11, param2.category);
+          var5.writeSignedSmart(1710370149, param2.recordId);
           var5.writeInt(param2.field_r, param0 ^ -612992477);
           var5.writeInt(param2.field_l, 613003928);
           var5.writeInt(param2.field_i, 613003928);
@@ -162,22 +162,22 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 != 2) {
           return;
         }
-        ef.field_H.drawTransparent(param2, param3);
+        ToggleButton.field_H.drawTransparent(param2, param3);
         if (!param1) {
           return;
         }
-        var4 = hj.field_c % ef.field_H.width * 2;
-        if (ef.field_H.width <= var4) {
-          var4 = ef.field_H.width - (var4 - ef.field_H.width);
+        var4 = IndexedSpriteArrayFactory.field_c % ToggleButton.field_H.width * 2;
+        if (ToggleButton.field_H.width <= var4) {
+          var4 = ToggleButton.field_H.width - (var4 - ToggleButton.field_H.width);
         }
         if (var4 < 10) {
           var4 = 10;
         } else {
-          if (ef.field_H.width - 40 < var4) {
-            var4 = -40 + ef.field_H.width;
+          if (ToggleButton.field_H.width - 40 < var4) {
+            var4 = -40 + ToggleButton.field_H.width;
           }
         }
-        RasterBuffer.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);
+        RasterBuffer.a(30, 0, ToggleButton.field_H, 0, 80, param3, param2, var4, 0);
     }
 
     static {

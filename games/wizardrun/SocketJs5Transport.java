@@ -9,7 +9,7 @@ final class SocketJs5Transport extends Js5Transport {
     static int field_r;
     static MidiTrack[] musicTracks;
 
-    final void a(boolean param0) {
+    final void resetAfterError(boolean param0) {
         try {
           this.field_p.close((byte) 76);
         } catch (Exception exception) {
@@ -23,21 +23,21 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final static PcmStreamMixer d(byte param0) {
+    final static PcmStreamMixer getAudioMixer(byte param0) {
         if (param0 <= 124) {
           SocketJs5Transport.releaseStatics(-10);
         }
         return ol.field_c;
     }
 
-    final boolean b(byte param0) {
+    final boolean service(byte param0) {
         try {
           int var2_int = 0;
           int stackIn_47_0 = 0;
           int stackIn_63_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          fi var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -52,11 +52,11 @@ final class SocketJs5Transport extends Js5Transport {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          fi var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var17 = 0;
-          fi var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = wizardrun.field_H;
           if (null != this.field_p) {
             var2_long = MonotonicClockHelpers.monotonicMillis((byte) 79);
@@ -77,36 +77,36 @@ final class SocketJs5Transport extends Js5Transport {
             }
           }
           if (null == this.field_p) {
-            if (this.d(-14289) != 0) {
+            if (this.getPriorityRequestCount(-14289) != 0) {
               return false;
             }
-            if (this.c((byte) -96) == 0) {
+            if (this.getNormalRequestCount((byte) -96) == 0) {
               return true;
             }
             return false;
           }
           try {
             this.field_p.checkWriteError(param0 ^ 0);
-            var2 = (fi) (this.field_b.first(0));
+            var2 = (NetworkArchiveRequest) (this.field_b.first(0));
             while (var2 != null) {
               this.field_i.position = 0;
               this.field_i.writeByte((byte) 11, 1);
               this.field_i.writeLong40(var2.secondaryKey, (byte) 122);
               this.field_p.write(this.field_i.payload.length, this.field_i.payload, 1, 0);
               this.field_a.addLast(var2, 14);
-              var2 = (fi) (this.field_b.next(14));
+              var2 = (NetworkArchiveRequest) (this.field_b.next(14));
             }
             if (param0 != 0) {
               return false;
             }
-            var2Lifetime1 = (fi) (this.field_j.first(0));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_j.first(0));
             while (var2Lifetime1 != null) {
               this.field_i.position = 0;
               this.field_i.writeByte((byte) 11, 0);
               this.field_i.writeLong40(var2Lifetime1.secondaryKey, (byte) 123);
               this.field_p.write(this.field_i.payload.length, this.field_i.payload, 1, 0);
               this.field_m.addLast(var2Lifetime1, 14);
-              var2Lifetime1 = (fi) (this.field_j.next(94));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_j.next(94));
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_int = this.field_p.available((byte) 89);
@@ -119,37 +119,37 @@ final class SocketJs5Transport extends Js5Transport {
                 if (null == this.field_c) {
                   var4 = 10;
                 } else {
-                  if (0 == this.field_c.field_z) {
+                  if (0 == this.field_c.blockOffset) {
                     var4 = 1;
                   }
                 }
                 if (var4 <= 0) {
-                  var5 = this.field_c.field_C.payload.length - this.field_c.field_D;
-                  var6 = 512 - this.field_c.field_z;
-                  if (var5 - this.field_c.field_C.position < var6) {
-                    var6 = var5 - this.field_c.field_C.position;
+                  var5 = this.field_c.packet.payload.length - this.field_c.padding;
+                  var6 = 512 - this.field_c.blockOffset;
+                  if (var5 - this.field_c.packet.position < var6) {
+                    var6 = var5 - this.field_c.packet.position;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_p.readFully(this.field_c.field_C.payload, -124, var6, this.field_c.field_C.position);
+                  this.field_p.readFully(this.field_c.packet.payload, -124, var6, this.field_c.packet.position);
                   if (this.field_h != 0) {
                     var17 = 0;
                     var7 = var17;
                     while (var17 < var6) {
-                      this.field_c.field_C.payload[this.field_c.field_C.position + var17] = (byte)DiskCacheStore.xor((int) this.field_c.field_C.payload[this.field_c.field_C.position + var17], (int) this.field_h);
+                      this.field_c.packet.payload[this.field_c.packet.position + var17] = (byte)DiskCacheStore.xor((int) this.field_c.packet.payload[this.field_c.packet.position + var17], (int) this.field_h);
                       var17++;
                     }
                   }
-                  this.field_c.field_C.position = this.field_c.field_C.position + var6;
-                  this.field_c.field_z = this.field_c.field_z + var6;
-                  if (this.field_c.field_C.position != var5) {
-                    if (this.field_c.field_z == 512) {
-                      this.field_c.field_z = 0;
+                  this.field_c.packet.position = this.field_c.packet.position + var6;
+                  this.field_c.blockOffset = this.field_c.blockOffset + var6;
+                  if (this.field_c.packet.position != var5) {
+                    if (this.field_c.blockOffset == 512) {
+                      this.field_c.blockOffset = 0;
                     }
                   } else {
                     this.field_c.unlinkSecondary(false);
-                    this.field_c.field_s = false;
+                    this.field_c.pending = false;
                     this.field_c = null;
                   }
                 } else {
@@ -179,24 +179,24 @@ final class SocketJs5Transport extends Js5Transport {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (fi) (this.field_a.first(0));
+                        var14_ref = (NetworkArchiveRequest) (this.field_a.first(0));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (fi) (this.field_a.next(42));
+                          var14_ref = (NetworkArchiveRequest) (this.field_a.next(42));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (fi) (this.field_m.first(0));
+                        var14_ref = (NetworkArchiveRequest) (this.field_m.first(0));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (fi) (this.field_m.next(87));
+                          var14_ref = (NetworkArchiveRequest) (this.field_m.next(87));
                         }
                       }
                       if (var14_ref == null) {
@@ -205,18 +205,18 @@ final class SocketJs5Transport extends Js5Transport {
                       stackIn_63_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_63_0;
                       this.field_c = var14_ref;
-                      this.field_c.field_C = new PacketBuffer(this.field_c.field_D + var9 + var15);
-                      this.field_c.field_C.writeByte((byte) 11, var10);
-                      this.field_c.field_C.writeInt(var9, 613003928);
-                      this.field_c.field_z = 10;
+                      this.field_c.packet = new PacketBuffer(this.field_c.padding + var9 + var15);
+                      this.field_c.packet.writeByte((byte) 11, var10);
+                      this.field_c.packet.writeInt(var9, 613003928);
+                      this.field_c.blockOffset = 10;
                       this.field_g.position = 0;
                     } else {
-                      if (0 != this.field_c.field_z) {
+                      if (0 != this.field_c.blockOffset) {
                         throw new IOException();
                       }
                       if (this.field_g.payload[0] == -1) {
                         this.field_g.position = 0;
-                        this.field_c.field_z = 1;
+                        this.field_c.blockOffset = 1;
                       } else {
                         this.field_c = null;
                       }
@@ -240,8 +240,8 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_k = this.field_k + 1;
             this.field_p = null;
             this.field_n = -2;
-            if (0 == this.d(param0 - 14289) &&
-              this.c((byte) -74) == 0) {
+            if (0 == this.getPriorityRequestCount(param0 - 14289) &&
+              this.getNormalRequestCount((byte) -74) == 0) {
               return true;
             }
             return false;
@@ -253,7 +253,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    private final void f(int param0) {
+    private final void sendSetupPacket(int param0) {
         try {
           IOException iOException = null;
           int var2 = 0;
@@ -293,12 +293,12 @@ final class SocketJs5Transport extends Js5Transport {
         if (param2 >= -126) {
           return;
         }
-        sf.field_h = 7;
+        EmailCheckRequest.field_h = 7;
         ProgressDialog.field_Y = param1;
         n.field_c = param0;
     }
 
-    final void a(byte param0) {
+    final void close(byte param0) {
         if (null != this.field_p) {
           this.field_p.close((byte) 76);
         }
@@ -315,21 +315,21 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final static Sprite g(int param0) {
+    final static Sprite buildFirstDecodedSprite(int param0) {
         int var4_int = 0;
         int var5 = wizardrun.field_H;
         int var1 = MouseInputHandler.field_b[0] * ImageProducerRasterBuffer.field_k[0];
         byte[] var2 = TextFieldValidator.field_j[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = ic.field_b[ResourceArchive.b((int) var2[var4_int], 255)];
+          var3[var4_int] = DecodedSpritePalette.palette[ResourceArchive.bitAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[0], ne.field_h[0], ImageProducerRasterBuffer.field_k[param0], MouseInputHandler.field_b[0], var3);
+        Sprite var4 = new Sprite(ProgressDialog.field_bb, PlatformActor.field_v, GameMenu.field_q[0], AccountFormText.field_h[0], ImageProducerRasterBuffer.field_k[param0], MouseInputHandler.field_b[0], var3);
         ClientException.a(param0 ^ 0);
         return var4;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void sendLoginState(int param0, boolean param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_6_0 = null;
@@ -378,19 +378,19 @@ final class SocketJs5Transport extends Js5Transport {
     public SocketJs5Transport() {
     }
 
-    final void a(boolean param0, Object param1, int param2) {
+    final void setConnection(boolean param0, Object param1, int param2) {
         try {
           RuntimeException stackIn_27_0 = null;
           StringBuilder stackIn_27_1 = null;
           String stackIn_28_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          fi var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          fi var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = wizardrun.field_H;
           try {
             if (null != this.field_p) {
@@ -406,12 +406,12 @@ final class SocketJs5Transport extends Js5Transport {
               return;
             }
             this.field_p = (BufferedSocket) (param1);
-            this.f(-73);
-            this.a(3, param0);
+            this.sendSetupPacket(-73);
+            this.sendLoginState(3, param0);
             this.field_g.position = 0;
             this.field_c = null;
             while (true) {
-              var4_ref = (fi) (this.field_a.removeFirst(58));
+              var4_ref = (NetworkArchiveRequest) (this.field_a.removeFirst(58));
               if (var4_ref != null) {
                 this.field_b.addLast(var4_ref, 14);
                 continue;
@@ -419,7 +419,7 @@ final class SocketJs5Transport extends Js5Transport {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (fi) (this.field_m.removeFirst(70));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_m.removeFirst(70));
               if (var4_refLifetime1 != null) {
                 this.field_j.addLast(var4_refLifetime1, 14);
                 continue;

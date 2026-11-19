@@ -1,0 +1,112 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LoginMethodPreference {
+    static BitmapFont field_c;
+    static String field_b;
+    private String loginMethod;
+
+    final boolean matchesLoginMethod(String param0, int param1) {
+        RuntimeException var3 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 <= 114) {
+            this.toString();
+          }
+          stackIn_3_0 = this.loginMethod.equals(param0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("uf.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 > -113) {
+          return;
+        }
+        field_b = null;
+        field_c = null;
+    }
+
+    final static int a(int param0, int param1, int param2) {
+        int var3 = param0 >> 16;
+        int var4 = param0 & param2;
+        int var5 = param1 >> 16;
+        int var6 = 65535 & param1;
+        return var5 * var4 + (var3 * param1 + (var6 * var4 >> 16));
+    }
+
+    final void saveLoginMethodCookie(java.applet.Applet param0, int param1) {
+        try {
+          if (param1 != 8910) {
+            this.toString();
+          }
+          BrowserCookieHelpers.writeCookie(31536000L, "jagex-last-login-method", false, this.loginMethod, param0);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "uf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static int getAccountResponseByteCount(boolean param0) {
+        if (!param0) {
+          return -94;
+        }
+        return 1;
+    }
+
+    final static byte[] loadNamedResource(String param0, int param1) {
+        RuntimeException var2 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 < 106) {
+            LoginMethodPreference.a(28, -119, 3);
+          }
+          stackIn_3_0 = PacketBuffer.field_n.getNamedFile(85, param0, "");
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("uf.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ExceptionSupport.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    LoginMethodPreference(String param0) {
+        try {
+          this.loginMethod = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_b = "Not yet achieved";
+    }
+}

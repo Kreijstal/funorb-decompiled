@@ -88,7 +88,7 @@ final class MenuInputState {
           return;
         }
         this.field_b = w.field_c;
-        this.field_a = hb.field_m;
+        this.field_a = DelayedServerPacket.field_m;
         this.field_d = true;
         this.field_h = w.field_c;
         this.field_g = param2;

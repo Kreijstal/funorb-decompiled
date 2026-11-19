@@ -22,7 +22,7 @@ final class jc extends SingleChildWidget {
         w.field_a = param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var6 = null;
         if (param2 != param1) {
           return;
@@ -34,14 +34,14 @@ final class jc extends SingleChildWidget {
           return;
         }
         if (this.field_G != 256) {
-          var6 = new Sprite(this.field_F.field_r, this.field_F.field_n);
+          var6 = new Sprite(this.field_F.width, this.field_F.height);
           UrlPacketDownloader.a(var6, false);
-          this.field_F.a(0, 0, param2, 0);
-          bb.b(4);
-          var6.drawAlpha(param0 + this.field_o, this.field_l + param3, this.field_G);
+          this.field_F.drawLayer(0, 0, param2, 0);
+          UsernameLoginCredentials.b(4);
+          var6.drawAlpha(param0 + this.x, this.y + param3, this.field_G);
           return;
         }
-        this.field_F.a(this.field_o + param0, 0, param2, this.field_l + param3);
+        this.field_F.drawLayer(this.x + param0, 0, param2, this.y + param3);
     }
 
     public jc() {
@@ -50,9 +50,9 @@ final class jc extends SingleChildWidget {
     }
 
     jc(UiWidget param0) {
-        super(param0.field_o, param0.field_l, param0.field_r, param0.field_n, (WidgetRenderer) null, (WidgetListener) null);
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (WidgetListener) null);
         try {
-          param0.a(114, 0, this.field_n, this.field_r, 0);
+          param0.setBounds(114, 0, this.height, this.width, 0);
           this.field_F = param0;
           this.field_G = 256;
         } catch (RuntimeException runtimeException) {

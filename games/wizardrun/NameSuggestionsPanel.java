@@ -83,7 +83,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    final boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -92,7 +92,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, (byte) -97, param3)) {
+          if (super.handleKeyPress(param0, param1, (byte) -97, param3)) {
             return true;
           }
           if (98 == param1) {
@@ -128,30 +128,30 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
         if (GridActor.field_c != null) {
           if (!GridActor.field_c.ensureIndex(param0 + 495)) {
-            return bl.field_c;
+            return TextWrappingHelpers.field_c;
           }
           return td.field_e;
         }
         if (!UiWidget.field_x.ensureIndex(17820)) {
-          return qb.field_q;
+          return FramedButtonPainter.field_q;
         }
-        if (!UiWidget.field_x.a((byte) 29, "commonui")) {
-          return tk.field_e + " - " + UiWidget.field_x.a(0, "commonui") + "%";
+        if (!UiWidget.field_x.ensureNamedGroupLoaded((byte) 29, "commonui")) {
+          return tk.field_e + " - " + UiWidget.field_x.getNamedGroupProgress(0, "commonui") + "%";
         }
         if (!vj.field_b.ensureIndex(param0 ^ 1585)) {
-          return hj.field_d;
+          return IndexedSpriteArrayFactory.field_d;
         }
-        if (!vj.field_b.a((byte) 29, "commonui")) {
-          return mj.field_d + " - " + vj.field_b.a(0, "commonui") + "%";
+        if (!vj.field_b.ensureNamedGroupLoaded((byte) 29, "commonui")) {
+          return mj.field_d + " - " + vj.field_b.getNamedGroupProgress(0, "commonui") + "%";
         }
-        if (!cc.field_a.ensureIndex(17820)) {
-          return nh.field_o;
+        if (!IconButtonPainter.field_a.ensureIndex(17820)) {
+          return AlternateUsernameLoginCredentials.field_o;
         }
         if (param0 != 17325) {
           NameSuggestionsPanel.a(113);
         }
-        if (!cc.field_a.areAllGroupsAvailable(-97)) {
-          return WidgetTheme.field_s + " - " + cc.field_a.a((byte) 75) + "%";
+        if (!IconButtonPainter.field_a.areAllGroupsAvailable(-97)) {
+          return WidgetTheme.field_s + " - " + IconButtonPainter.field_a.getLoadProgress((byte) 75) + "%";
         }
         return GameShell.field_u;
     }
@@ -185,7 +185,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         if (param0 >= -77) {
           NameSuggestionsPanel.g(-18);
         }
-        return !we.field_c.a(true) ? true : false;
+        return !we.field_c.isComplete(true) ? true : false;
     }
 
     NameSuggestionsPanel(NameSelectionListener param0) {
@@ -197,14 +197,14 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
         BitmapFont var5 = Crc32Helpers.field_b;
         if (null != this.field_F) {
-          var5.a(ml.field_p, param0 + this.field_o, param3 + this.field_l, this.field_r, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_M);
+          var5.a(ArchiveRequest.field_p, param0 + this.x, param3 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_M);
         }
     }
 
@@ -227,7 +227,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             var3_int = param1.length;
             this.field_F = new String[var3_int];
             if (param0 != 87) {
-              this.a(-86, 120, 101, 56);
+              this.drawLayer(-86, 120, 101, 56);
             }
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_F[var4_int] = IntHashTable.a((byte) 27, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
@@ -236,14 +236,14 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             this.field_I = new TextButton[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new TextButton(this.field_F[var5], (WidgetListener) (this));
-              this.field_I[var5].field_w = (WidgetRenderer) ((Object) var4);
-              this.field_I[var5].field_p = ni.field_a;
-              this.field_I[var5].a(109, 20 + var5 * 16, 15, 80, 0);
+              this.field_I[var5].renderer = (WidgetRenderer) ((Object) var4);
+              this.field_I[var5].tooltip = ni.field_a;
+              this.field_I[var5].setBounds(109, 20 + var5 * 16, 15, 80, 0);
               this.a((UiWidget) (this.field_I[var5]), (byte) 64);
             }
             this.field_I[var3_int] = new TextButton(PlatformActor.field_t, (WidgetListener) (this));
-            this.field_I[var3_int].field_w = (WidgetRenderer) ((Object) var4);
-            this.field_I[var3_int].a(param0 ^ 44, 16 * var3_int + 36, 15, 100, 0);
+            this.field_I[var3_int].renderer = (WidgetRenderer) ((Object) var4);
+            this.field_I[var3_int].setBounds(param0 ^ 44, 16 * var3_int + 36, 15, 100, 0);
             this.a((UiWidget) (this.field_I[var3_int]), (byte) 71);
             return;
           }

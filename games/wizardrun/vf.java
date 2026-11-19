@@ -6,9 +6,9 @@ final class vf extends IntrusiveNode {
     int field_k;
     static Sprite[] field_j;
 
-    final static ne a(byte param0) {
+    final static AccountFormText a(byte param0) {
         int var1 = 61 / ((param0 - 19) / 39);
-        return new ne(dg.a(-21), NameSuggestionsPanel.g((byte) -115));
+        return new AccountFormText(dg.a(-21), NameSuggestionsPanel.g((byte) -115));
     }
 
     public static void releaseStatics(boolean param0) {
@@ -30,7 +30,7 @@ final class vf extends IntrusiveNode {
         int var1_intLifetime1;
         var4 = wizardrun.field_H;
         try {
-          cj.c();
+          TriangleRasterState.useRasterClip();
           rl.field_b = 11;
           WhirlpoolHasher.field_f = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {

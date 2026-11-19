@@ -45,7 +45,7 @@ final class ld {
             var4 = (ResourceArchive) null;
             ld.a(91, -108, (ResourceArchive) null);
           }
-          var5 = param2.a((byte) -128, param1);
+          var5 = param2.getFileFlat((byte) -128, param1);
           var3 = var5;
           if (var5 != null) {
             stackIn_6_0 = new MusicPatch(var5);
@@ -67,14 +67,14 @@ final class ld {
         }
     }
 
-    final static void a(int param0, sc param1, int param2) {
+    final static void writeProgressQuery(int param0, ProgressQuery param1, int param2) {
         IsaacPacketBuffer var3 = null;
         try {
           var3 = n.field_b;
           var3.writeCipheredOpcode((byte) 87, param0);
           var3.writeByte((byte) 11, 2);
           var3.writeByte((byte) 11, param2);
-          var3.writeByte((byte) 11, param1.field_k);
+          var3.writeByte((byte) 11, param1.category);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ld.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

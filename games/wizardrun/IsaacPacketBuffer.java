@@ -7,17 +7,17 @@ final class IsaacPacketBuffer extends PacketBuffer {
     static Sprite field_s;
     private IsaacRandom field_r;
 
-    final static ai a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
-        ai var9 = null;
+    final static ScoreSubmission a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+        ScoreSubmission var9 = null;
         RuntimeException var9_ref = null;
         byte[] var10 = null;
-        ai stackIn_3_0 = null;
+        ScoreSubmission stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new ai(param8, param7, param6, param0, param5, param2, param1);
+          var9 = new ScoreSubmission(param8, param7, param6, param0, param5, param2, param1);
           CachedArchiveProvider.field_t.addLast(var9, false);
           EditableTextWidget.a(var9, param3, param4 - 160);
           if (param4 != 99) {
@@ -56,7 +56,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var3 = new CoverageBitmapFont(param1, GameMenu.field_q, ne.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, ic.field_b, TextFieldValidator.field_j);
+          var3 = new CoverageBitmapFont(param1, GameMenu.field_q, AccountFormText.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, DecodedSpritePalette.palette, TextFieldValidator.field_j);
           ClientException.a(0);
           stackIn_4_0 = var3;
           return stackIn_4_0;

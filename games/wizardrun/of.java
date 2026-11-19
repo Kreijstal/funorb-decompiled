@@ -8,7 +8,7 @@ final class of extends IntrusiveNode {
     static String field_l;
     static String[] field_k;
 
-    final static IndexedSprite a(ResourceArchive param0, int param1, byte param2, int param3) {
+    final static IndexedSprite loadIndexedSprite(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
         RuntimeException stackIn_8_0 = null;
@@ -18,7 +18,7 @@ final class of extends IntrusiveNode {
         try {
           if (param2 != -128) {
             var5 = (ResourceArchive) null;
-            of.a((ResourceArchive) null, 20, (byte) -110, 17);
+            of.loadIndexedSprite((ResourceArchive) null, 20, (byte) -110, 17);
           }
           if (MusicPatch.a(param3, param1, param0, -128)) {
             return TickClock.buildFirstIndexedSprite((byte) -92);
@@ -55,13 +55,13 @@ final class of extends IntrusiveNode {
           if (!param0.ensureIndex(17820)) {
             return false;
           }
-          if (!param0.a((byte) 29, "commonui")) {
+          if (!param0.ensureNamedGroupLoaded((byte) 29, "commonui")) {
             return false;
           }
           if (param3.ensureIndex(param2 ^ -17821) &&
-            param3.a((byte) 29, "commonui")) {
+            param3.ensureNamedGroupLoaded((byte) 29, "commonui")) {
             if (param1.ensureIndex(17820) &&
-              param1.a((byte) 29, "button.gif")) {
+              param1.ensureNamedGroupLoaded((byte) 29, "button.gif")) {
               return true;
             }
             return false;
@@ -130,7 +130,7 @@ final class of extends IntrusiveNode {
         if (param0 == 72) {
           var1 = IntrusiveDequeCursor.c((byte) -89);
           var2 = GrowableIntList.a((byte) 47);
-          tl.field_c.a(IntrusiveDequeCursor.field_f - ic.field_c, var2 + (ic.field_c << 1), var1 + (ii.field_c << 1), 1, fe.field_l - ii.field_c);
+          tl.field_c.a(IntrusiveDequeCursor.field_f - DecodedSpritePalette.field_c, var2 + (DecodedSpritePalette.field_c << 1), var1 + (ii.field_c << 1), 1, MatchingTextValidator.field_l - ii.field_c);
           nf.a(99);
           return;
         }

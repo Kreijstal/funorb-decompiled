@@ -8,7 +8,7 @@ final class eh implements WidgetRenderer {
     static String field_h;
     private int field_j;
     private int field_d;
-    static uh field_e;
+    static LoginCredentials field_e;
     private int field_a;
     private int field_c;
     private int field_g;
@@ -34,15 +34,15 @@ final class eh implements WidgetRenderer {
             stackIn_4_0 = (UiWidget) (param2);
           }
           var12 = (vb) (stackIn_4_0);
-          SoftwareRasterizer.fillRect(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, this.field_a);
+          SoftwareRasterizer.fillRect(param2.x + param0, param1 + param2.y, param2.width, param2.height, this.field_a);
           if (var12 != null) {
           }
-          var7 = -(2 * var12.field_G) + param2.field_r;
-          var8 = var12.field_G + (param2.field_o + param0);
+          var7 = -(2 * var12.field_G) + param2.width;
+          var8 = var12.field_G + (param2.x + param0);
           if (!param3) {
             return;
           }
-          var9 = param2.field_l + param1 + var12.field_J;
+          var9 = param2.y + param1 + var12.field_J;
           SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_j);
           for (var10 = -1 + var12.d(0); var10 >= 0; var10--) {
             SoftwareRasterizer.fillCircle(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, this.field_d, this.field_f);
@@ -50,7 +50,7 @@ final class eh implements WidgetRenderer {
           if (this.field_b == null) {
             return;
           }
-          this.field_b.drawStringCentered(var12.field_k, var8 + var7 / 2, var12.field_J + var9 + this.field_b.field_E, this.field_c, this.field_g);
+          this.field_b.drawStringCentered(var12.text, var8 + var7 / 2, var12.field_J + var9 + this.field_b.field_E, this.field_c, this.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ final class eh implements WidgetRenderer {
 
     final static long a(int param0) {
         if (param0 != 2) {
-          field_e = (uh) null;
+          field_e = (LoginCredentials) null;
           return MonotonicClockHelpers.monotonicMillis((byte) 75) - PlatformActor.field_C;
         }
         return MonotonicClockHelpers.monotonicMillis((byte) 75) - PlatformActor.field_C;

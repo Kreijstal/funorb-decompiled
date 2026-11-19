@@ -5,14 +5,14 @@ import java.util.*;
 
 class TextButton extends UiWidget {
     private boolean field_y;
-    static ga field_E;
+    static IntegerSyntaxHelpers field_E;
     static int field_A;
     boolean field_B;
-    private boolean field_C;
-    boolean field_z;
+    private boolean focused;
+    boolean selected;
     static boolean field_D;
 
-    final StringBuilder a(Hashtable param0, byte param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, byte param1, int param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -24,9 +24,9 @@ class TextButton extends UiWidget {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param3, param0, param2, true)) {
-            this.a(115, param2, param0, param3);
-            if (this.field_z) {
+          if (this.beginDebugDescription(param3, param0, param2, true)) {
+            this.appendDebugProperties(115, param2, param0, param3);
+            if (this.selected) {
               discarded$2 = param3.append(" active");
             }
             if (!this.field_B) {
@@ -34,7 +34,7 @@ class TextButton extends UiWidget {
             }
           }
           if (param1 != 102) {
-            this.field_C = true;
+            this.focused = true;
           }
           stackIn_9_0 = (StringBuilder) (param3);
           return stackIn_9_0;
@@ -58,13 +58,13 @@ class TextButton extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
+    final void handleMouseRelease(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         try {
-          if (this.field_s != null &&
-            this.field_s instanceof ja) {
-            ((ja) (this.field_s)).a(param0, this, param1, param2, true, param3);
+          if (this.listener != null &&
+            this.listener instanceof ButtonPointerListener) {
+            ((ButtonPointerListener) (this.listener)).onPointerReleased(param0, this, param1, param2, true, param3);
           }
-          this.field_q = param5;
+          this.pressedMouseButton = param5;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pl.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -74,24 +74,24 @@ class TextButton extends UiWidget {
         this(param0, ValidationIndicator.field_H.field_c, param1);
     }
 
-    final static wd a(int param0, String param1) {
+    final static NameAvailabilityRequest a(int param0, String param1) {
         RuntimeException var2 = null;
-        wd stackIn_2_0 = null;
+        NameAvailabilityRequest stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_10_0 = null;
-        wd stackIn_12_0 = null;
+        NameAvailabilityRequest stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            stackIn_2_0 = (wd) null;
+            stackIn_2_0 = (NameAvailabilityRequest) null;
             return stackIn_2_0;
           }
           if (wc.field_j == field_E) {
             stackIn_5_0 = null;
-            return (wd) (stackIn_5_0);
+            return (NameAvailabilityRequest) (stackIn_5_0);
           }
           if (wc.field_j == SingleChildWidget.field_z &&
             param1.equals(LoginForm.field_I)) {
@@ -103,7 +103,7 @@ class TextButton extends UiWidget {
           LoginForm.field_I = param1;
           wc.field_j = field_E;
           stackIn_10_0 = null;
-          return (wd) (stackIn_10_0);
+          return (NameAvailabilityRequest) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -118,27 +118,27 @@ class TextButton extends UiWidget {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void fireButtonAction(int param0, int param1, int param2, int param3) {
         if (param0 >= -45) {
-          this.d((byte) -65);
-          if (this.field_s != null) {
-            if (this.field_s instanceof ButtonActionListener) {
-              ((ButtonActionListener) (this.field_s)).onButtonAction(-18905, this, param3, param2, param1);
+          this.isFocused((byte) -65);
+          if (this.listener != null) {
+            if (this.listener instanceof ButtonActionListener) {
+              ((ButtonActionListener) (this.listener)).onButtonAction(-18905, this, param3, param2, param1);
             }
             return;
           }
           return;
         }
-        if (this.field_s == null) {
+        if (this.listener == null) {
           return;
         }
-        if (this.field_s instanceof ButtonActionListener) {
-          ((ButtonActionListener) (this.field_s)).onButtonAction(-18905, this, param3, param2, param1);
+        if (this.listener instanceof ButtonActionListener) {
+          ((ButtonActionListener) (this.listener)).onButtonAction(-18905, this, param3, param2, param1);
           return;
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -151,11 +151,11 @@ class TextButton extends UiWidget {
           if (!this.field_y) {
             return false;
           }
-          param0.b(false);
-          this.field_C = true;
-          if (this.field_s != null &&
-            this.field_s instanceof ButtonPressListener) {
-            ((ButtonPressListener) (this.field_s)).onPressedChanged((UiWidget) (this), param1 ^ -19983, this.field_C);
+          param0.clearFocus(false);
+          this.focused = true;
+          if (this.listener != null &&
+            this.listener instanceof ButtonPressListener) {
+            ((ButtonPressListener) (this.listener)).onPressedChanged((UiWidget) (this), param1 ^ -19983, this.focused);
           }
           if (param1 != 8) {
             TextButton.a(92);
@@ -175,7 +175,7 @@ class TextButton extends UiWidget {
         }
     }
 
-    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handleMousePress(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         RuntimeException stackIn_12_0 = null;
@@ -185,14 +185,14 @@ class TextButton extends UiWidget {
         try {
           var8_int = 16 / ((param1 - 12) / 36);
           if (this.field_B &&
-            this.b(param5, param2, 0, param0, param3)) {
-            this.a(param6, 8);
-            this.field_q = param4;
-            if (this.field_s != null) {
-              if (!(this.field_s instanceof ja)) {
+            this.containsPoint(param5, param2, 0, param0, param3)) {
+            this.requestFocus(param6, 8);
+            this.pressedMouseButton = param4;
+            if (this.listener != null) {
+              if (!(this.listener instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((ja) (this.field_s)).a(this, param4, param5, (byte) -17, param0, param2, param3);
+              ((ButtonPointerListener) (this.listener)).onPointerPressed(this, param4, param5, (byte) -17, param0, param2, param3);
             }
             return true;
           }
@@ -211,33 +211,33 @@ class TextButton extends UiWidget {
         }
     }
 
-    void a(int param0, int param1, int param2, UiWidget param3) {
+    void updateInput(int param0, int param1, int param2, UiWidget param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          if (this.field_q != 0) {
-            if (BrowserUrlLauncher.field_c == this.field_q) {
+          super.updateInput(param0, param1, param2, param3);
+          if (this.pressedMouseButton != 0) {
+            if (BrowserUrlLauncher.field_c == this.pressedMouseButton) {
               return;
             }
-            if (this.b(fi.field_B, pg.field_n, 0, param2, param1) &&
+            if (this.containsPoint(NetworkArchiveRequest.field_B, AchievementSubmission.field_n, 0, param2, param1) &&
               0 == BrowserUrlLauncher.field_c) {
-              this.b(-88, pg.field_n - param2, -param1 + fi.field_B, this.field_q);
+              this.fireButtonAction(-88, AchievementSubmission.field_n - param2, -param1 + NetworkArchiveRequest.field_B, this.pressedMouseButton);
             }
-            this.a(param2, fi.field_B, param1, pg.field_n, param3, 0);
+            this.handleMouseRelease(param2, NetworkArchiveRequest.field_B, param1, AchievementSubmission.field_n, param3, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "pl.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean isFocused(byte param0) {
         if (param0 != 53) {
           TextButton.a(49);
-          return this.field_C;
+          return this.focused;
         }
-        return this.field_C;
+        return this.focused;
     }
 
-    boolean a(char param0, int param1, byte param2, UiWidget param3) {
+    boolean handleKeyPress(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -247,14 +247,14 @@ class TextButton extends UiWidget {
           if (param2 > -96) {
             return true;
           }
-          if (!this.d((byte) 53)) {
+          if (!this.isFocused((byte) 53)) {
             return false;
           }
           if (84 != param1 &&
             param1 != 83) {
             return false;
           }
-          this.b(-117, -1, -1, 1);
+          this.fireButtonAction(-117, -1, -1, 1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,25 +274,25 @@ class TextButton extends UiWidget {
         if (param0 != 0) {
           return (String) null;
         }
-        if (fi.field_y == field_E) {
-          return sf.field_a;
+        if (NetworkArchiveRequest.field_y == field_E) {
+          return EmailCheckRequest.field_a;
         }
         return GrowableIntList.field_e;
     }
 
-    final void b(boolean param0) {
+    final void clearFocus(boolean param0) {
         if (param0) {
           return;
         }
-        if (!this.field_C) {
+        if (!this.focused) {
           return;
         }
-        this.field_C = false;
-        if (this.field_s == null) {
+        this.focused = false;
+        if (this.listener == null) {
           return;
         }
-        if (this.field_s instanceof ButtonPressListener) {
-          ((ButtonPressListener) (this.field_s)).onPressedChanged((UiWidget) (this), -19975, this.field_C);
+        if (this.listener instanceof ButtonPressListener) {
+          ((ButtonPressListener) (this.listener)).onPressedChanged((UiWidget) (this), -19975, this.focused);
           return;
         }
     }
@@ -307,20 +307,20 @@ class TextButton extends UiWidget {
     protected TextButton() {
         this.field_y = true;
         this.field_B = true;
-        this.field_C = false;
-        this.field_w = ValidationIndicator.field_H.field_n;
+        this.focused = false;
+        this.renderer = ValidationIndicator.field_H.field_n;
     }
 
     TextButton(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         this.field_y = true;
         this.field_B = true;
-        this.field_C = false;
+        this.focused = false;
     }
 
     static {
         field_A = 0;
         field_D = false;
-        field_E = new ga();
+        field_E = new IntegerSyntaxHelpers();
     }
 }
