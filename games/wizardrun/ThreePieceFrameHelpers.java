@@ -8,10 +8,10 @@ final class ThreePieceFrameHelpers {
     static String field_c;
     static String field_e;
 
-    final static boolean a(int param0) {
+    final static boolean isGuestMode(int param0) {
         if (param0 >= -71) {
           Sprite[] var2 = (Sprite[]) null;
-          ThreePieceFrameHelpers.a((Sprite[]) null, 123, 6, (byte) 67, 68, 39);
+          ThreePieceFrameHelpers.drawRecoloredThreePieceFrame((Sprite[]) null, 123, 6, (byte) 67, 68, 39);
           return FramedButtonPainter.field_p;
         }
         return FramedButtonPainter.field_p;
@@ -28,7 +28,7 @@ final class ThreePieceFrameHelpers {
         field_b = null;
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void drawRecoloredThreePieceFrame(Sprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -45,7 +45,7 @@ final class ThreePieceFrameHelpers {
           if (param0 != null &&
             param5 > 0) {
             if (param3 <= 27) {
-              ThreePieceFrameHelpers.a(59);
+              ThreePieceFrameHelpers.isGuestMode(59);
             }
             var6_int = param0[0].fullWidth;
             var7 = param0[2].fullWidth;

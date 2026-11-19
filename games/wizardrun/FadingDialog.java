@@ -126,7 +126,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (RasterSnapshot.field_n == null) {
           RasterSnapshot.field_n = new Sprite(this.width, this.height);
-          UrlPacketDownloader.a(RasterSnapshot.field_n, false);
+          UrlPacketDownloader.pushSpriteRaster(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(param1, -1, 0);
           super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
@@ -136,7 +136,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (this.width > RasterSnapshot.field_n.width) {
           RasterSnapshot.field_n = new Sprite(this.width, this.height);
-          UrlPacketDownloader.a(RasterSnapshot.field_n, false);
+          UrlPacketDownloader.pushSpriteRaster(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(param1, -1, 0);
           super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
@@ -146,7 +146,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (this.height > RasterSnapshot.field_n.height) {
           RasterSnapshot.field_n = new Sprite(this.width, this.height);
-          UrlPacketDownloader.a(RasterSnapshot.field_n, false);
+          UrlPacketDownloader.pushSpriteRaster(RasterSnapshot.field_n, false);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(param1, -1, 0);
           super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
@@ -154,7 +154,7 @@ abstract class FadingDialog extends WidgetContainer {
           RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
           return;
         }
-        UrlPacketDownloader.a(RasterSnapshot.field_n, false);
+        UrlPacketDownloader.pushSpriteRaster(RasterSnapshot.field_n, false);
         SoftwareRasterizer.clear();
         this.drawDialogFrame(param1, -1, 0);
         super.drawLayer(-this.x - param0, 0, param2, -this.y - param3);
@@ -162,7 +162,7 @@ abstract class FadingDialog extends WidgetContainer {
         RasterSnapshot.field_n.drawAlpha(this.x + param0, param3 + this.y, this.field_K);
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void writeAccountEligibilityCookie(int param0, java.applet.Applet param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
@@ -185,7 +185,7 @@ abstract class FadingDialog extends WidgetContainer {
         field_G = null;
         if (!param0) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          FadingDialog.a(82, (java.applet.Applet) null);
+          FadingDialog.writeAccountEligibilityCookie(82, (java.applet.Applet) null);
         }
     }
 

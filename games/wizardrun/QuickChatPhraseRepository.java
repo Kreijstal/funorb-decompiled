@@ -32,7 +32,7 @@ final class QuickChatPhraseRepository {
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, boolean param7, int param8, int param9) {
+    final static void fillHalfBlendGouraudSpan(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, boolean param7, int param8, int param9) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -211,11 +211,11 @@ final class QuickChatPhraseRepository {
           var4Lifetime1 = var9;
           while (var9 < var3) {
             var5 = NanoTickClock.field_f[var9];
-            var5.a(6, (byte) 108, 6, 6, 1);
-            var5.b(-109);
+            var5.scaleVertices(6, (byte) 108, 6, 6, 1);
+            var5.calculateBounds(-109);
             var6 = new int[]{var5.field_g + var5.field_r >> 1, var5.field_D + var5.field_K >> 1, var5.field_E + var5.field_M >> 1};
             BeveledFrameFactory.field_d[var9] = var6;
-            var5.a(-var6[2], -var6[1], -var6[0], 0);
+            var5.translateVertices(-var6[2], -var6[1], -var6[0], 0);
             var9++;
           }
           return;

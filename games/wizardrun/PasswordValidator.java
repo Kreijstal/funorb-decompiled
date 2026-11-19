@@ -161,7 +161,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_33_0 = RadialSelectorWidget.field_F;
             return stackIn_33_0;
           }
-          if (DropTargetWidget.a(var7, (byte) -117, var5)) {
+          if (DropTargetWidget.passwordContainsUsername(var7, (byte) -117, var5)) {
             stackIn_23_0 = NetworkArchiveRequest.field_v;
             return stackIn_23_0;
           }

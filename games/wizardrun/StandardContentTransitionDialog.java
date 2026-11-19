@@ -6,11 +6,11 @@ import java.io.*;
 final class StandardContentTransitionDialog extends ContentTransitionDialog {
     static Sprite field_jb;
 
-    final static void j(byte param0) {
+    final static void writeAccountEligibilityCookie(byte param0) {
         if (param0 != 63) {
           field_jb = (Sprite) null;
         }
-        FadingDialog.a(param0 + 3025, DisplayNameValidator.getActiveApplet(1));
+        FadingDialog.writeAccountEligibilityCookie(param0 + 3025, DisplayNameValidator.getActiveApplet(1));
     }
 
     StandardContentTransitionDialog(DialogLayer param0, UiWidget param1) {
@@ -99,7 +99,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
             param1.writeInt(var17.requestId, 613003928);
             var5 = 0;
             if (param0 < 17) {
-              StandardContentTransitionDialog.j((byte) -60);
+              StandardContentTransitionDialog.writeAccountEligibilityCookie((byte) -60);
             }
             while (var17.operationCount > var5) {
               if (var17.lookupErrors[var5] != 0) {

@@ -37,7 +37,7 @@ final class LoginPacketBuilder {
           AccountConsentPanel.field_G.writeInt(LoginCredentials.field_d[1], 613003928);
           AccountConsentPanel.field_G.writeInt(LoginCredentials.field_d[2], 613003928);
           AccountConsentPanel.field_G.writeInt(LoginCredentials.field_d[3], 613003928);
-          GameShell.a(AccountConsentPanel.field_G, -18);
+          GameShell.writeRandomSeed(AccountConsentPanel.field_G, -18);
           AccountConsentPanel.field_G.writeShort(-1947079288, param4);
           param1.writeCredentials(4, AccountConsentPanel.field_G);
           AccountPacketState.field_b.position = 0;

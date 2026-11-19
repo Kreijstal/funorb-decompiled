@@ -28,7 +28,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
           }
           if (param0 != 10000536) {
             var6 = (UiWidget) null;
-            discarded$1 = this.b((UiWidget) null, -77);
+            discarded$1 = this.focusChildIfUnfocusedWithIntGuard((UiWidget) null, -77);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +84,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    private final boolean a(UiWidget param0, byte param1) {
+    private final boolean focusChildIfUnfocused(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -330,7 +330,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         boolean discarded$0 = false;
         if (param0 <= 23) {
           UiWidget var3 = (UiWidget) null;
-          discarded$0 = this.a((UiWidget) null, (byte) 92);
+          discarded$0 = this.focusChildIfUnfocused((UiWidget) null, (byte) 92);
         }
         return null == this.field_F ? 0 : this.field_F.getLastDrawLayer((byte) 112);
     }
@@ -429,7 +429,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         return var2;
     }
 
-    final static void d(int param0) {
+    final static void releaseSoundArchiveWithGuard(int param0) {
         if (param0 != 3) {
           soundArchive = (ResourceArchive) null;
         }
@@ -444,7 +444,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
         }
     }
 
-    private final boolean b(UiWidget param0, int param1) {
+    private final boolean focusChildIfUnfocusedWithIntGuard(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -521,9 +521,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetGroupMarker {
             return false;
           }
           if (!BufferedSocket.field_p[81]) {
-            stackIn_11_0 = this.a(param3, (byte) 80);
+            stackIn_11_0 = this.focusChildIfUnfocused(param3, (byte) 80);
           } else {
-            stackIn_11_0 = this.b(param3, 125);
+            stackIn_11_0 = this.focusChildIfUnfocusedWithIntGuard(param3, 125);
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

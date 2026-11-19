@@ -9,14 +9,14 @@ final class EmailLoginCredentials extends LoginCredentials {
     static String field_h;
     private String password;
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void detachCanvasInput(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ThrowableFormattingHelpers.a((java.awt.Component) ((Object) param0), (byte) 96);
+          ThrowableFormattingHelpers.detachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) 96);
           StyleNode.detachMouseListeners((java.awt.Component) ((Object) param0), 6769);
           if (MessagePanel.field_K != null) {
             MessagePanel.field_K.detach((java.awt.Component) ((Object) param0), param1 ^ -8058);

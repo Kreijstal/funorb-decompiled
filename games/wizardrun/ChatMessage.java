@@ -15,7 +15,7 @@ final class ChatMessage {
     private String senderName;
     private boolean field_a;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int hitTestMembershipButton(int param0, int param1, int param2) {
         if (param0 != 29292) {
           field_j = (IntegerSyntaxHelpers) null;
         }

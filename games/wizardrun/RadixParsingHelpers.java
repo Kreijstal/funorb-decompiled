@@ -90,7 +90,7 @@ final class RadixParsingHelpers {
         }
     }
 
-    final static void a(int param0, BitmapFont param1, Sprite[] param2, byte param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, Sprite[] param12, int param13, int param14) {
+    final static void configureUiThemeFromFont(int param0, BitmapFont param1, Sprite[] param2, byte param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, Sprite[] param12, int param13, int param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -148,7 +148,7 @@ final class RadixParsingHelpers {
         field_b = null;
         if (!param0) {
           Sprite[] var2 = (Sprite[]) null;
-          RadixParsingHelpers.a(38, (BitmapFont) null, (Sprite[]) null, (byte) 32, (Sprite[]) null, 126, -35, -34, -69, 83, 52, -119, (Sprite[]) null, -69, -124);
+          RadixParsingHelpers.configureUiThemeFromFont(38, (BitmapFont) null, (Sprite[]) null, (byte) 32, (Sprite[]) null, 126, -35, -34, -69, 83, 52, -119, (Sprite[]) null, -69, -124);
         }
     }
 

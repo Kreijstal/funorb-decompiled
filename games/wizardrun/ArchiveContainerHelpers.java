@@ -19,14 +19,14 @@ final class ArchiveContainerHelpers {
         loadingMessage = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean requestSessionReconnect(int param0) {
         int var1 = 118 / ((param0 + 4) / 48);
         BoundedRandomAccessFile.field_b = true;
         Base37Codec.field_c = MonotonicClockHelpers.monotonicMillis((byte) 91) + 15000L;
         return ArchiveRequest.field_t == 11 ? true : false;
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void drawLogoAnimation(int param0, int param1, byte param2) {
         int var3;
         int var4;
         int var5;
@@ -51,7 +51,7 @@ final class ArchiveContainerHelpers {
         if (DualLinkNodeHashTable.field_f > 200) {
           var5 = (-DualLinkNodeHashTable.field_f + 250 << 8) / 50;
         }
-        UrlPacketDownloader.a(CharSequenceJoiner.field_a, false);
+        UrlPacketDownloader.pushSpriteRaster(CharSequenceJoiner.field_a, false);
         TriangleRasterState.useRasterClip();
         var6 = 14 % ((param2 + 9) / 50);
         SoftwareRasterizer.clear();
@@ -156,7 +156,7 @@ final class ArchiveContainerHelpers {
         return;
     }
 
-    final static String a(int param0) {
+    final static String getAccountEmail(int param0) {
         if (NetworkArchiveRequest.field_y == TextButton.field_E) {
           return UiSpriteThemeHelpers.field_a;
         }

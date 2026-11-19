@@ -53,14 +53,14 @@ final class HighscorePlayerState {
         return false;
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createTwoAngleTransform(int param0, int param1, int param2) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var3 = NineSliceFrame.a(param2 - 27210, param0);
-        int var4 = wizardrun.a((byte) -110, param0);
-        int var5 = NineSliceFrame.a(-2942, param1);
-        int var6 = wizardrun.a((byte) 119, param1);
+        int var3 = NineSliceFrame.sine8192(param2 - 27210, param0);
+        int var4 = wizardrun.cosine8192((byte) -110, param0);
+        int var5 = NineSliceFrame.sine8192(-2942, param1);
+        int var6 = wizardrun.cosine8192((byte) 119, param1);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         if (param2 == 24268) {
           var8 = (int)((long)var3 * (long)var6 >> 16);
@@ -71,7 +71,7 @@ final class HighscorePlayerState {
         return (int[]) null;
     }
 
-    final static void a(byte param0, String[] param1) {
+    final static void updateNameSuggestions(byte param0, String[] param1) {
         RuntimeException var2 = null;
         String[] var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -89,7 +89,7 @@ final class HighscorePlayerState {
             return;
           }
           var3 = (String[]) null;
-          HighscorePlayerState.a((byte) -120, (String[]) null);
+          HighscorePlayerState.updateNameSuggestions((byte) -120, (String[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

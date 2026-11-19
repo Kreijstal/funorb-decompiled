@@ -10,7 +10,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
     private boolean emailAvailable;
     private String checkedEmail;
 
-    final static void f(int param0) {
+    final static void beginCreatedAccountLogin(int param0) {
         if (param0 != 92682) {
           field_l = (int[]) null;
         }
@@ -35,7 +35,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
           }
           int var2_int = OpacityWidget.field_H.available((byte) 89);
           if (param1 != -28266) {
-            ConfirmedEmailValidator.f(-28);
+            ConfirmedEmailValidator.beginCreatedAccountLogin(-28);
           }
           if (var2_int > 0) {
             if (-AccountCreationForm.field_N.position + param0 < var2_int) {
@@ -131,7 +131,7 @@ final class ConfirmedEmailValidator extends TextFieldValidator {
         }
         if (HighscorePlayerState.field_e &&
           ThreePieceFrameHelpers.field_a) {
-          WrappedTextLayout.a((byte) 79);
+          WrappedTextLayout.finishUiTransitionsWithByteGuard((byte) 79);
         }
     }
 

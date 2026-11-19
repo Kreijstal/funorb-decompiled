@@ -47,7 +47,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         if (param0 != 4210752) {
           return;
         }
-        if (FullscreenController.d(-1) ||
+        if (FullscreenController.isGameLoginFlow(-1) ||
           !(0 >= this.field_K.text.length()) &&
           !(this.field_Q.text.length() <= 0)) {
           UiThemeSetupHelpers.beginLogin(this.field_Q.text, this.field_K.text, -124);
@@ -56,7 +56,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_F != null) {
-          Crc32Helpers.field_b.a(this.field_F, 20 + (param0 + this.x), 15 + (this.y + param3), this.width - 40, this.height, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
+          Crc32Helpers.field_b.drawParagraph(this.field_F, 20 + (param0 + this.x), 15 + (this.y + param3), this.width - 40, this.height, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
         }
         if (null != this.field_M) {
           SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param3, this.width - 20, 4210752);
@@ -218,7 +218,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             if (this.field_M != param1) {
               if (this.field_G == param1) {
                 if (this.field_J) {
-                  ProxySocketConnector.c(param0 ^ 12849);
+                  ProxySocketConnector.showAccountWorkflowError(param0 ^ 12849);
                 } else {
                   if (!this.field_O) {
                     EmailCheckRequest.requestAccountCreation((byte) -89);
@@ -343,7 +343,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             this.y = this.y + (5 + var7.measureWrappedHeight(this.field_F, -40 + this.width, var7.field_M));
           }
           var8 = ScoreSubmission.field_j;
-          var9 = IndexedSpriteState.a(DisplayNameValidator.getActiveApplet(1), (byte) 48);
+          var9 = IndexedSpriteState.readLastLoginMethod(DisplayNameValidator.getActiveApplet(1), (byte) 48);
           if (var9 == StripedProgressBar.field_C) {
             var8 = ProgressSubmission.field_q;
           } else {

@@ -36,7 +36,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_G[AccountFormTextHelpers.a(26614, param0) & 255];
+        return this.field_G[AccountFormTextHelpers.encodeCp1252Character(26614, param0) & 255];
     }
 
     final int maxLineWidth(String param0, int param1) {
@@ -64,7 +64,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        this.a(param5, param6, param7);
+        this.resetTextStyle(param5, param6, param7);
         if (param10 == 0) {
           param10 = this.field_E;
         }
@@ -126,7 +126,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final int drawParagraph(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         return this.drawParagraphAlpha(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
@@ -228,7 +228,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(AccountFormTextHelpers.a(26614, (char) var8) & 255);
+              var8 = (char)(AccountFormTextHelpers.encodeCp1252Character(26614, (char) var8) & 255);
               if (this.field_u != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_u[(var5 << 8) + var8];
@@ -270,7 +270,7 @@ abstract class BitmapFont extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void resetTextStyle(int param0, int param1, int param2) {
         field_D = -1;
         field_H = -1;
         field_z = param1;
@@ -358,7 +358,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(AccountFormTextHelpers.a(26614, (char) var7) & 255);
+              var7 = (char)(AccountFormTextHelpers.encodeCp1252Character(26614, (char) var7) & 255);
               var4 = var4 + this.field_G[var7];
               if (this.field_u != null &&
                 var3 != 0) {
@@ -586,7 +586,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(field_x, field_z, field_r);
+                                      this.resetTextStyle(field_x, field_z, field_r);
                                     }
                                   } else {
                                     field_A = field_z;
@@ -647,7 +647,7 @@ abstract class BitmapFont extends DualLinkNode {
         return this.field_M + var5 + this.field_B;
     }
 
-    final int b(String param0, int param1) {
+    final int countWrappedLines(String param0, int param1) {
         return this.wrapText(param0, new int[]{param1}, field_K);
     }
 
@@ -797,7 +797,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_p.append((char) var14);
-                var14 = (char)(AccountFormTextHelpers.a(26614, (char) var14) & 255);
+                var14 = (char)(AccountFormTextHelpers.encodeCp1252Character(26614, (char) var14) & 255);
                 var4 = var4 + this.field_G[var14];
                 if (this.field_u != null &&
                   var10 != 0) {

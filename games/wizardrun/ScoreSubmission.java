@@ -26,7 +26,7 @@ final class ScoreSubmission extends IntrusiveNode {
 
     final static void showLoginDialog(boolean param0, byte param1, String param2, boolean param3) {
         try {
-          LoginChoicePanel.h((byte) 98);
+          LoginChoicePanel.resetAccountWorkflow((byte) 98);
           GameShell.field_A.hideAllDialogs(false);
           TimedValidator.field_b = new LoginForm(ResizableDialog.field_S, (String) null, DialogLayer.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);
@@ -64,7 +64,7 @@ final class ScoreSubmission extends IntrusiveNode {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void openLoginDialogWithIntGuard(boolean param0, int param1, String param2, boolean param3) {
         try {
-          LoginChoicePanel.h((byte) 98);
+          LoginChoicePanel.resetAccountWorkflow((byte) 98);
           GameShell.field_A.hideAllDialogs(false);
           TimedValidator.field_b = new LoginForm(ResizableDialog.field_S, (String) null, DialogLayer.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);

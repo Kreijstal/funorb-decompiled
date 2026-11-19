@@ -22,26 +22,26 @@ final class FullscreenController {
     private int field_j;
     private int field_k;
 
-    final FullscreenFocusCanvas c(int param0) {
+    final FullscreenFocusCanvas createFullscreenCanvas(int param0) {
         this.field_n = ResizableDialog.field_R;
         this.field_p = ResizableDialog.field_P;
         this.field_m.onDisplayResized(this.field_l, this.field_j, -93);
         FadingDialog.field_F = false;
         FullscreenFocusCanvas var2 = DelayedServerPacket.createFullscreenCanvas(0, this.field_j, param0, this.field_l, 0, MusicPatchLoader.field_g);
         if (var2 == null) {
-          this.a(122);
+          this.restorePreviousSize(122);
         }
         return var2;
     }
 
-    final static boolean d(int param0) {
+    final static boolean isGameLoginFlow(int param0) {
         if (param0 != -1) {
           field_b = (String) null;
         }
         return DialogLayer.field_J;
     }
 
-    final void a(boolean param0) {
+    final void updateResponsiveSize(boolean param0) {
         int fieldTemp$1 = 0;
         if (null != LoginChoicePanel.field_E) {
           return;
@@ -56,13 +56,13 @@ final class FullscreenController {
             return;
           }
           if (!param0) {
-            this.a(true);
+            this.updateResponsiveSize(true);
           }
           this.field_e = this.field_c;
           if (this.field_q > DualLinkNodeHashTable.field_b) {
             this.field_d = false;
           } else {
-            this.a((byte) 99);
+            this.applyResponsiveSize((byte) 99);
           }
           return;
         }
@@ -86,14 +86,14 @@ final class FullscreenController {
         }
     }
 
-    final void a(int param0) {
+    final void restorePreviousSize(int param0) {
         this.field_m.onDisplayResized(this.field_p, this.field_n, -112);
         if (param0 <= 17) {
-          this.a(25);
+          this.restorePreviousSize(25);
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setAvailableSize(byte param0, int param1, int param2) {
         if (param0 >= -56) {
           this.field_i = -13;
         }
@@ -101,7 +101,7 @@ final class FullscreenController {
         this.field_k = param1;
     }
 
-    final static int a(AccountFormText param0, AccountFormText param1, String param2, int param3, int param4, boolean param5, int param6) {
+    final static int advanceAccountCreationRequest(AccountFormText param0, AccountFormText param1, String param2, int param3, int param4, boolean param5, int param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_11_0 = null;
@@ -218,7 +218,7 @@ final class FullscreenController {
               NodeHashTableIterator.field_j = LevelActorSpawner.field_a;
             } else {
               if (var9Lifetime1 == 248) {
-                FadingDialog.a(3088, DisplayNameValidator.getActiveApplet(param6 ^ 27850));
+                FadingDialog.writeAccountEligibilityCookie(3088, DisplayNameValidator.getActiveApplet(param6 ^ 27850));
                 QuickChatDynamicCommand.field_g = NameAvailabilityFactory.field_b;
                 HuffmanDecoder.closeAccountConnection(-71);
                 AccountPacketState.field_a = false;
@@ -312,22 +312,22 @@ final class FullscreenController {
         }
     }
 
-    final static void e(int param0) {
+    final static void readAccountNamePacket(int param0) {
         MonotonicClockHelpers.field_a = AccountCreationForm.field_N.readCp1252String(param0 ^ param0);
         CharSequence var2 = (CharSequence) ((Object) MonotonicClockHelpers.field_a);
         IntrusiveNode.field_a = MouseWheelInput.normalizePlayerName(-49, var2);
     }
 
-    final boolean b(int param0) {
+    final boolean canResizeResponsively(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          FullscreenController.e(61);
+          FullscreenController.readAccountNamePacket(61);
         }
         stackIn_6_0 = (DualLinkNodeHashTable.field_b >= this.field_q) && (0 < ArchiveProvider.field_a);
         return stackIn_6_0;
     }
 
-    private final void a(byte param0) {
+    private final void applyResponsiveSize(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -338,7 +338,7 @@ final class FullscreenController {
         }
         var2 = this.field_o;
         var3 = this.field_k;
-        if (!this.b(0)) {
+        if (!this.canResizeResponsively(0)) {
           this.field_d = false;
           return;
         }

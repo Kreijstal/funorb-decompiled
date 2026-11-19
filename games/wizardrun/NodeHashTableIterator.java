@@ -32,10 +32,10 @@ final class NodeHashTableIterator implements Iterator {
         field_j = null;
     }
 
-    private final void a(byte param0) {
+    private final void resetIterator(byte param0) {
         this.field_f = 1;
         if (param0 > -41) {
-          NodeHashTableIterator.b((byte) -23);
+          NodeHashTableIterator.releaseMouseHandler((byte) -23);
         }
         this.field_h = null;
         this.field_a = this.field_i.field_c[0].next;
@@ -49,7 +49,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_h = null;
     }
 
-    final static byte[] a(byte param0, CharSequence param1) {
+    final static byte[] encodeCp1252(byte param0, CharSequence param1) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -181,7 +181,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    final static void b(byte param0) {
+    final static void releaseMouseHandler(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 >= -28) {
@@ -242,7 +242,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_h = null;
         try {
           this.field_i = param0;
-          this.a((byte) -67);
+          this.resetIterator((byte) -67);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

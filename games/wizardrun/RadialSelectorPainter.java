@@ -56,7 +56,7 @@ final class RadialSelectorPainter implements WidgetRenderer {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_d != null) {
             var13 = var15.field_G + (var15.field_J + this.field_k);
-            this.field_d.a(param2.text, var13 + (param2.x + param0), this.field_j + (param1 + param2.y), param2.width - (var13 + this.field_k), param2.height - (this.field_k << 1), this.field_c, this.field_i, 1, 1, 0);
+            this.field_d.drawParagraph(param2.text, var13 + (param2.x + param0), this.field_j + (param1 + param2.y), param2.width - (var13 + this.field_k), param2.height - (this.field_k << 1), this.field_c, this.field_i, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

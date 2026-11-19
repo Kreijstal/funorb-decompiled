@@ -20,7 +20,7 @@ final class UiThemeSetupHelpers {
         return DualLinkNodeHashTable.field_f > 250 ? true : false;
     }
 
-    final static boolean c(int param0) {
+    final static boolean getAccountCreationConsent(int param0) {
         int var1 = -99 % ((-61 - param0) / 59);
         return UiWidget.field_m;
     }
@@ -40,15 +40,15 @@ final class UiThemeSetupHelpers {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          Bzip2State.a(95, param7, param10, param4);
+          Bzip2State.configureMenuFonts(95, param7, param10, param4);
           if (param13 > -107) {
             return;
           }
-          WhirlpoolHasher.a(param12, param6, param5, 1882, param2);
+          WhirlpoolHasher.configureMenuLineMetrics(param12, param6, param5, 1882, param2);
           SystemMemoryHelpers.setMenuCenter(1048576, param20, param18);
-          SpriteButtonPainter.a(-122, param3, param19, param14, param17, param15);
-          UsernameLoginCredentials.a(param8, param9, (byte) -13, param11);
-          MidiNote.a(-67, param1, param0, param16);
+          SpriteButtonPainter.configureMenuOptionFrames(-122, param3, param19, param14, param17, param15);
+          UsernameLoginCredentials.configureMenuFrame(param8, param9, (byte) -13, param11);
+          MidiNote.configureMenuTextColors(-67, param1, param0, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

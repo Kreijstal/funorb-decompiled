@@ -116,7 +116,7 @@ class HotspotTextWidget extends TextButton {
           var7 = var5.getTextOriginX((UiWidget) (this), param1 + 0, param0);
           var8 = var5.getTextOriginY(true, param3, (UiWidget) (this));
           do {
-            AlternateUsernameLoginCredentials.a((byte) 69, 2 + var6.field_o, var6.field_j + (var8 - 2), 2 + var6.field_n, var7 + (var6.field_i - 2));
+            AlternateUsernameLoginCredentials.drawDottedFocusRect((byte) 69, 2 + var6.field_o, var6.field_j + (var8 - 2), 2 + var6.field_n, var7 + (var6.field_i - 2));
             var6 = var6.field_l;
           } while (var6 != null);
         }

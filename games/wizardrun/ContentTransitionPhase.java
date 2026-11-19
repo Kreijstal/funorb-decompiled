@@ -6,7 +6,7 @@ final class ContentTransitionPhase {
     static NameAvailabilityRequest field_a;
     static boolean field_c;
 
-    final static int a(int param0, boolean param1) {
+    final static int updateMembershipSlides(int param0, boolean param1) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_66_0 = 0;
@@ -35,7 +35,7 @@ final class ContentTransitionPhase {
         }
         stackIn_6_0 = Base37Codec.field_d;
         try {
-          while (LoginMethodPreference.a(stackIn_6_0, MidiPcmStream.field_V, 65535) >= 65536) {
+          while (LoginMethodPreference.multiplyFixed16(stackIn_6_0, MidiPcmStream.field_V, 65535) >= 65536) {
             Base37Codec.field_d = Base37Codec.field_d - MidiPcmStream.field_V;
             IndexedSpriteArrayFactory.field_c = IndexedSpriteArrayFactory.field_c + 1;
             stackIn_6_0 = Base37Codec.field_d;
@@ -117,7 +117,7 @@ final class ContentTransitionPhase {
             }
           }
           if (param1) {
-            GameGraphicsResources.field_d.updatePointer(ChatMessage.a(29292, NetworkArchiveRequest.field_B, AchievementSubmission.field_n), param0 - 668, ChatMessage.a(29292, EmailDomainHelpers.field_b, MouseInputHandler.field_e));
+            GameGraphicsResources.field_d.updatePointer(ChatMessage.hitTestMembershipButton(29292, NetworkArchiveRequest.field_B, AchievementSubmission.field_n), param0 - 668, ChatMessage.hitTestMembershipButton(29292, EmailDomainHelpers.field_b, MouseInputHandler.field_e));
             if (GameGraphicsResources.field_d.wasActivated(param0 ^ -587)) {
               if (GameGraphicsResources.field_d.field_g == 0) {
                 stackIn_66_0 = 3;
@@ -162,7 +162,7 @@ final class ContentTransitionPhase {
 
     public static void releaseStatics(int param0) {
         if (param0 != 24188) {
-          ContentTransitionPhase.a(58, false);
+          ContentTransitionPhase.updateMembershipSlides(58, false);
           field_b = null;
           field_a = null;
           return;

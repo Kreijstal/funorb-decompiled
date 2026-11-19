@@ -11,7 +11,7 @@ final class RankingStatsDecoder {
         field_a = null;
         field_b = null;
         if (param0) {
-          RankingStatsDecoder.a((byte) 31);
+          RankingStatsDecoder.beginAccountReconnect((byte) 31);
         }
     }
 
@@ -41,13 +41,13 @@ final class RankingStatsDecoder {
         }
     }
 
-    final static void a(byte param0) {
+    final static void beginAccountReconnect(byte param0) {
         if (10 == ArchiveRequest.field_t) {
-          LabeledField.g(5);
+          LabeledField.beginGameLogin(5);
           ArchiveRequest.field_t = 11;
         } else {
-          if (!StripedProgressBar.g((byte) 100)) {
-            LabeledField.g(5);
+          if (!StripedProgressBar.supportsAccountReconnect((byte) 100)) {
+            LabeledField.beginGameLogin(5);
             ArchiveRequest.field_t = 11;
           }
         }

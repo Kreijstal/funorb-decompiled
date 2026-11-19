@@ -11,7 +11,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     byte[] data;
     static int[] field_B;
 
-    final static void a(int param0, int param1) {
+    final static void configureMembershipSlideTiming(int param0, int param1) {
         MidiPcmStream.field_M = param1 * 100 / 150;
         MidiPcmStream.field_V = (param1 << 16) / 150;
         MidiPcmStream.field_u = 400 * param1 / 150;
@@ -36,7 +36,7 @@ final class DiskCacheRequest extends ArchiveRequest {
 
     final int getProgress(boolean param0) {
         if (param0) {
-          DiskCacheRequest.a(16, 86);
+          DiskCacheRequest.configureMembershipSlideTiming(16, 86);
           if (!this.pending) {
             return 100;
           }
@@ -56,7 +56,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           field_C = null;
           return;
         }
-        DiskCacheRequest.a(-127, -122);
+        DiskCacheRequest.configureMembershipSlideTiming(-127, -122);
         field_B = null;
         field_z = null;
         field_C = null;

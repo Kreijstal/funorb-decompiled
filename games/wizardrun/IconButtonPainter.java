@@ -31,7 +31,7 @@ final class IconButtonPainter implements WidgetRenderer {
           if (!param2.isFocused((byte) 53)) {
             return;
           }
-          AlternateUsernameLoginCredentials.a((byte) 69, param2.width - 4, var7 + 2, param2.height - 4, 2 + var6_int);
+          AlternateUsernameLoginCredentials.drawDottedFocusRect((byte) 69, param2.width - 4, var7 + 2, param2.height - 4, 2 + var6_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -47,7 +47,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
               var4 = param1.field_h;
               if (param1.field_b == 248) {
                 if (!param0) {
-                  StandardContentTransitionDialog.j((byte) 63);
+                  StandardContentTransitionDialog.writeAccountEligibilityCookie((byte) 63);
                 }
                 var4 = HyperlinkPainter.field_f;
                 this.field_Ab = true;
@@ -63,19 +63,19 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
           if (!param1.available) {
             if (!this.field_Ab) {
               if (param1.field_b != 5) {
-                var5.a((byte) -31, IsaacRandom.field_h, -1);
+                var5.addActionButton((byte) -31, IsaacRandom.field_h, -1);
               } else {
-                var5.a((byte) -31, GameApplet.field_j, 11);
-                var5.a((byte) -31, ReflectionCheck.field_q, 17);
+                var5.addActionButton((byte) -31, GameApplet.field_j, 11);
+                var5.addActionButton((byte) -31, ReflectionCheck.field_q, 17);
               }
             } else {
-              var5.a(0, ThreePieceFrameHelpers.field_e, (WidgetListener) (this));
+              var5.appendTextButton(0, ThreePieceFrameHelpers.field_e, (WidgetListener) (this));
             }
             if (3 == param1.field_b) {
-              var5.a((byte) -31, CheckboxPainter.field_g, 7);
+              var5.addActionButton((byte) -31, CheckboxPainter.field_g, 7);
             } else {
               if (param1.field_b == 6) {
-                var5.a((byte) -31, EmailLoginCredentials.field_h, 9);
+                var5.addActionButton((byte) -31, EmailLoginCredentials.field_h, 9);
               }
             }
           } else {
@@ -83,7 +83,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
               this.transitionToContent(new AccountConsentPanel(this), -128);
               return;
             }
-            var5.a(0, ThreePieceFrameHelpers.field_e, (WidgetListener) (this));
+            var5.appendTextButton(0, ThreePieceFrameHelpers.field_e, (WidgetListener) (this));
           }
           if (param2 != 3899) {
             this.showUnavailableAccountResult(-101);
@@ -226,7 +226,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
           return;
         }
         try {
-          ConfirmedEmailValidator.f(92682);
+          ConfirmedEmailValidator.beginCreatedAccountLogin(92682);
           if (param0 != -18905) {
             this.field_Ab = false;
           }

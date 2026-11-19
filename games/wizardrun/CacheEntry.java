@@ -7,7 +7,7 @@ abstract class CacheEntry extends DualLinkNode {
 
     abstract Object getValue(int param0);
 
-    final static void a(Sprite[] param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void drawNineSliceFrame(Sprite[] param0, int param1, byte param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;

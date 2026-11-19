@@ -27,7 +27,7 @@ class UsernameLoginCredentials extends LoginCredentials {
         field_h = null;
     }
 
-    final static void a(int param0, int param1, byte param2, NineSliceFrame param3) {
+    final static void configureMenuFrame(int param0, int param1, byte param2, NineSliceFrame param3) {
         try {
           NameAvailabilityFactory.field_c = param0;
           if (param2 != -13) {
@@ -40,13 +40,13 @@ class UsernameLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static void b(byte param0) {
+    final static void showFullscreenExitMenu(byte param0) {
         if (!StringPaddingHelpers.isMenuScreenActive(param0 ^ 25325)) {
           return;
         }
-        TriangleMesh.a(false, 4, 15991);
+        TriangleMesh.configureMenuScreen(false, 4, 15991);
         if (param0 != -100) {
-          UsernameLoginCredentials.b((byte) 126);
+          UsernameLoginCredentials.showFullscreenExitMenu((byte) 126);
         }
     }
 
@@ -107,7 +107,7 @@ class UsernameLoginCredentials extends LoginCredentials {
         if (param0 == 4) {
           return;
         }
-        UsernameLoginCredentials.b((byte) -18);
+        UsernameLoginCredentials.showFullscreenExitMenu((byte) -18);
     }
 
     final void writeCredentials(int param0, PacketBuffer param1) {

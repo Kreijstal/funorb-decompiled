@@ -7,7 +7,7 @@ final class HuffmanDecoder {
     static long[] field_b;
     static int field_c;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void unlockAchievement(int param0, int param1, int param2) {
         int var3 = param0 << param2;
         if (0 != (IsaacRandom.field_a & var3)) {
           return;
@@ -62,13 +62,13 @@ final class HuffmanDecoder {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean canResizeUsingController(boolean param0) {
         if (param0) {
-          HuffmanDecoder.a(-48, 28, 36);
+          HuffmanDecoder.unlockAchievement(-48, 28, 36);
           if (StringPaddingHelpers.field_c == null) {
             return false;
           }
-          if (StringPaddingHelpers.field_c.b(0)) {
+          if (StringPaddingHelpers.field_c.canResizeResponsively(0)) {
             return true;
           }
           return false;
@@ -76,7 +76,7 @@ final class HuffmanDecoder {
         if (StringPaddingHelpers.field_c == null) {
           return false;
         }
-        if (StringPaddingHelpers.field_c.b(0)) {
+        if (StringPaddingHelpers.field_c.canResizeResponsively(0)) {
           return true;
         }
         return false;

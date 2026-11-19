@@ -72,7 +72,7 @@ final class ClientShutdownHelpers {
         }
         if (wizardrun.field_G == null) {
           KeyboardShutdownHelpers.clearKeyHandler(4);
-          NodeHashTableIterator.b((byte) -104);
+          NodeHashTableIterator.releaseMouseHandler((byte) -104);
           SpriteButtonPainter.closeCacheResources(1);
           if (AccountFormText.canSendAccountPackets(22845)) {
             AccountPacketState.field_b.writeCipheredOpcode((byte) 88, 1);
@@ -81,9 +81,9 @@ final class ClientShutdownHelpers {
           HuffmanDecoder.closeAccountConnection(param0 ^ -55);
           return;
         }
-        EmailLoginCredentials.a(wizardrun.field_G, 8053);
+        EmailLoginCredentials.detachCanvasInput(wizardrun.field_G, 8053);
         KeyboardShutdownHelpers.clearKeyHandler(4);
-        NodeHashTableIterator.b((byte) -104);
+        NodeHashTableIterator.releaseMouseHandler((byte) -104);
         SpriteButtonPainter.closeCacheResources(1);
         if (AccountFormText.canSendAccountPackets(22845)) {
           AccountPacketState.field_b.writeCipheredOpcode((byte) 88, 1);
@@ -118,7 +118,7 @@ final class ClientShutdownHelpers {
         }
     }
 
-    final static void a(int param0) {
+    final static void readLoginFlagResetPacket(int param0) {
         WidgetPainterState.field_d = false;
         AccountCreationForm.field_N.readUnsignedByte(255);
         if (param0 != 2046877441) {

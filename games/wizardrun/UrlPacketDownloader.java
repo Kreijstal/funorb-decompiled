@@ -16,14 +16,14 @@ final class UrlPacketDownloader implements Runnable {
     static PacketBuffer field_b;
     private PacketBuffer field_i;
 
-    final PacketBuffer b(int param0) {
+    final PacketBuffer getDownloadedPacket(int param0) {
         if (~this.field_g != param0) {
           return null;
         }
         return this.field_i;
     }
 
-    final static void a(byte param0, boolean param1, java.awt.Canvas param2) {
+    final static void drawClientLoadingOrMenu(byte param0, boolean param1, java.awt.Canvas param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -42,12 +42,12 @@ final class UrlPacketDownloader implements Runnable {
               ReflectionCheck.field_o = false;
               var3_int = 1;
             }
-            RadialSelectorWidget.a(10487, var3_int != 0, CommonUiLoadingProgress.getCommonUiLoadProgress(true), NameSuggestionsPanel.getAccountUiLoadMessage(17325), ArchiveLoadingStage.field_e);
+            RadialSelectorWidget.drawAwtLoadingProgress(10487, var3_int != 0, CommonUiLoadingProgress.getCommonUiLoadProgress(true), NameSuggestionsPanel.getAccountUiLoadMessage(17325), ArchiveLoadingStage.field_e);
             return;
           }
           if (!UiThemeSetupHelpers.isLogoAnimationComplete((byte) -117)) {
             SoftwareRasterizer.clear();
-            ArchiveContainerHelpers.a(320, 240, (byte) -97);
+            ArchiveContainerHelpers.drawLogoAnimation(320, 240, (byte) -97);
             DateFormattingHelpers.presentRaster((byte) 80, 0, param2, 0);
             return;
           }
@@ -78,7 +78,7 @@ final class UrlPacketDownloader implements Runnable {
         field_c = null;
         if (param0 != 240) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          UrlPacketDownloader.a((byte) -25, true, (java.awt.Canvas) null);
+          UrlPacketDownloader.drawClientLoadingOrMenu((byte) -25, true, (java.awt.Canvas) null);
         }
     }
 
@@ -183,7 +183,7 @@ final class UrlPacketDownloader implements Runnable {
         this.field_e = null;
     }
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean pollDownload(int param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -245,7 +245,7 @@ final class UrlPacketDownloader implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_d.getFile() + "\n\n"));
-            var3.write(NodeHashTableIterator.a((byte) -111, var5));
+            var3.write(NodeHashTableIterator.encodeCp1252((byte) -111, var5));
             this.field_f = new DataInputStream(var4.getInputStream());
           }
           this.field_i.position = 0;
@@ -290,7 +290,7 @@ final class UrlPacketDownloader implements Runnable {
         return false;
     }
 
-    final static void a(Sprite param0, boolean param1) {
+    final static void pushSpriteRaster(Sprite param0, boolean param1) {
         if (param1) {
           return;
         }

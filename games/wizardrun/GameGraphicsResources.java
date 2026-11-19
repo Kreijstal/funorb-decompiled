@@ -7,7 +7,7 @@ final class GameGraphicsResources {
     static String field_c;
     static MenuInputState field_d;
 
-    final static void b(int param0) {
+    final static void resetFrameTiming(int param0) {
         int var1_int = 0;
         int var2 = wizardrun.field_H;
         int var1_intLifetime1;
@@ -25,7 +25,7 @@ final class GameGraphicsResources {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String getAccountWorkflowResult(boolean param0) {
         if (!param0) {
           return (String) null;
         }

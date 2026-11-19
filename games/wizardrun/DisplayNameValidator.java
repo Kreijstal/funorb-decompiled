@@ -309,7 +309,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {
-            var4 = TextButton.a(param1 ^ 0, param0);
+            var4 = TextButton.requestNameAvailability(param1 ^ 0, param0);
             if (var4 != null &&
               null == var4.field_h) {
               this.checkedName = param0;
@@ -376,7 +376,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param1.equals(this.checkedName)) {
-            var3 = TextButton.a(param0 ^ 0, param1);
+            var3 = TextButton.requestNameAvailability(param0 ^ 0, param1);
             if (null != var3 &&
               null == var3.field_h) {
               this.checkedName = param1;

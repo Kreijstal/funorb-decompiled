@@ -128,12 +128,12 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final static void h(byte param0) {
+    final static void openGuestLoginDialog(byte param0) {
         if (!FramedButtonPainter.field_p) {
           throw new IllegalStateException();
         }
         MessagePanel.field_M = true;
-        ArchiveRequest.a(11579568, false);
+        ArchiveRequest.showLoginDialogWithGuard(11579568, false);
         if (param0 < 53) {
           ContentTransitionDialog.drawLogoMeshes(90);
         }
@@ -198,7 +198,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_le = NanoTickClock.field_f[var3];
-            var4_ref_le.b(-119);
+            var4_ref_le.calculateBounds(-119);
             IterableNodeHashTable.setLogoPieceTransform((byte) 115, var3);
             var5 = var4_ref_le.field_r + var4_ref_le.field_g >> 1;
             var6 = var4_ref_le.field_D + var4_ref_le.field_K >> 1;
@@ -216,8 +216,8 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var5Lifetime1 = RankingStatsDecoder.field_a[11] >> 8;
           var6Lifetime1 = DualLinkNodeHashTable.field_f << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = NineSliceFrame.a(-2942, var6Lifetime1) >> 8;
-          var9Lifetime1 = wizardrun.a((byte) -39, var6Lifetime1) >> 8;
+          var8Lifetime1 = NineSliceFrame.sine8192(-2942, var6Lifetime1) >> 8;
+          var9Lifetime1 = wizardrun.cosine8192((byte) -39, var6Lifetime1) >> 8;
           if (-1 != AchievementSubmission.field_n &&
             NetworkArchiveRequest.field_B != -1) {
             var8Lifetime1 = 240 - NetworkArchiveRequest.field_B;
@@ -251,8 +251,8 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             for (var18 = 0; var18 < 3; var18++) {
               ImageProducerRasterBuffer.field_m[var18] = ImageProducerRasterBuffer.field_m[var18] + BeveledFrameFactory.field_d[var15][var18];
             }
-            EmailValidationError.a(false, (byte) 106, var17, true, ImageProducerRasterBuffer.field_m, false, RankingStatsDecoder.field_a);
-            MeshLightingHelpers.a(var14, var12Lifetime1, var8Lifetime1, false, var9Lifetime1, var17, var7Lifetime1, var13Lifetime1);
+            EmailValidationError.transformAndProjectMesh(false, (byte) 106, var17, true, ImageProducerRasterBuffer.field_m, false, RankingStatsDecoder.field_a);
+            MeshLightingHelpers.drawLitMeshFaces(var14, var12Lifetime1, var8Lifetime1, false, var9Lifetime1, var17, var7Lifetime1, var13Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -262,7 +262,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final static void b(int param0, String param1) {
+    final static void ignoreCountryListResponse(int param0, String param1) {
         try {
           if (param0 != 9) {
             field_V = (ValidationState) null;

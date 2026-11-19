@@ -7,7 +7,7 @@ final class AccountFormTextHelpers {
     static int field_b;
     static String field_a;
 
-    final static String a(byte param0, byte[] param1) {
+    final static String decodeCp1252Bytes(byte param0, byte[] param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -34,7 +34,7 @@ final class AccountFormTextHelpers {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, Sprite[] param4) {
+    final static void drawThreePieceFrame(int param0, int param1, int param2, byte param3, Sprite[] param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -85,7 +85,7 @@ final class AccountFormTextHelpers {
 
     public static void releaseStatics(int param0) {
         if (param0 >= -120) {
-          AccountFormTextHelpers.a(-101, ' ');
+          AccountFormTextHelpers.encodeCp1252Character(-101, ' ');
           field_c = null;
           field_a = null;
           return;
@@ -94,7 +94,7 @@ final class AccountFormTextHelpers {
         field_a = null;
     }
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int param0, char param1) {
         int var2;
         int var3;
         var3 = wizardrun.field_H;
@@ -510,7 +510,7 @@ final class AccountFormTextHelpers {
         return (byte) var2;
     }
 
-    final static void a(int param0) {
+    final static void drawMenuScreen(int param0) {
         int stackIn_17_0 = 0;
         int stackIn_20_0 = 0;
         String stackIn_26_0 = null;
@@ -544,7 +544,7 @@ final class AccountFormTextHelpers {
           }
           var3 = 0;
           if (param0 <= 83) {
-            AccountFormTextHelpers.a((byte) -49);
+            AccountFormTextHelpers.getAccountLoginIdentifier((byte) -49);
           }
           while (FlatTriangleRasterizer.field_b.length > var3) {
             var4 = LogoAnimationLoader.field_g[var3];
@@ -626,7 +626,7 @@ final class AccountFormTextHelpers {
         }
     }
 
-    final static String a(byte param0) {
+    final static String getAccountLoginIdentifier(byte param0) {
         if (NetworkArchiveRequest.field_y == TextButton.field_E) {
           return Js5Transport.field_l;
         }

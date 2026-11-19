@@ -256,7 +256,7 @@ class WidgetPainter implements WidgetRenderer, TextWidgetRenderer {
           var9_int = this.getContentWidth(param3, -57);
           var10 = this.getContentHeight(-119, param3);
           if (this.field_c) {
-            this.field_k.a(this.getDisplayText(param3, (byte) -57), this.getTextX(param3, param5, param1, 31456), this.getTextY(-28235359, param2, param3, param7), var9_int, var10, param4, param0, this.field_l, this.field_a, this.field_d);
+            this.field_k.drawParagraph(this.getDisplayText(param3, (byte) -57), this.getTextX(param3, param5, param1, 31456), this.getTextY(-28235359, param2, param3, param7), var9_int, var10, param4, param0, this.field_l, this.field_a, this.field_d);
           } else {
             var12 = this.field_a;
             if (0 != var12) {

@@ -81,7 +81,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             }
           }
           if (param1 != -1) {
-            MatchingTextValidator.c((byte) -51);
+            MatchingTextValidator.drawLevelTiles((byte) -51);
           }
           if (param0.equals(this.matchingField.text)) {
             return null;
@@ -102,7 +102,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static void c(byte param0) {
+    final static void drawLevelTiles(byte param0) {
         GridPoint stackIn_5_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;

@@ -15,10 +15,10 @@ abstract class SpriteState extends DualLinkNode {
     static String[] field_t;
     static PcmSample[] secondarySoundEffects;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.a(param4 << 8, param1, param0, (byte) -103, param3 << 5);
+    final void drawRotatedScaled(int param0, int param1, int param2, int param3, int param4) {
+        this.drawRotatedAboutCenter(param4 << 8, param1, param0, (byte) -103, param3 << 5);
         if (param2 >= -84) {
-          this.a(-50, 83, -33, -127, -16);
+          this.drawRotatedScaled(-50, 83, -33, -127, -16);
         }
     }
 
@@ -32,7 +32,7 @@ abstract class SpriteState extends DualLinkNode {
         secondarySoundEffects = null;
     }
 
-    private final void a(int param0, int param1, int param2, byte param3, int param4) {
+    private final void drawRotatedAboutCenter(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = this.fullWidth << 3;
         int var7 = this.fullHeight << 3;
         param2 = (var6 & 15) + (param2 << 4);

@@ -66,7 +66,7 @@ final class MidiEnvelope {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            IndexedSpriteState.a((byte) 76, param1);
+            IndexedSpriteState.updateBrowserNavigationLinks((byte) 76, param1);
             if (param0 == 26017) {
               return;
             }

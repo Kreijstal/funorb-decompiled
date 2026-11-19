@@ -11,7 +11,7 @@ final class DisplayModeInfo {
     int bitDepth;
     static boolean field_a;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int hitTestMenuOption(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int var8 = 0;

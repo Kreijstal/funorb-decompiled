@@ -15,7 +15,7 @@ final class RadialSelectorWidget extends TextButton {
     static String field_F;
     static long field_N;
 
-    final static void a(byte param0) {
+    final static void loadWorldSprites(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -184,10 +184,10 @@ final class RadialSelectorWidget extends TextButton {
           var5_int = ByteStorage.bitLength(false, 3 * (param2 - param3));
           var6 = 3 * param3;
           var7 = -10 + var5_int;
-          LevelActorSpawner.b(0);
+          LevelActorSpawner.clearFaceBucketCounts(0);
           if (0 < param4.field_n &&
             null != param4.field_x) {
-            RankingRequest.c(45);
+            RankingRequest.clearFaceDepthCounts(45);
           }
           SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;
@@ -311,7 +311,7 @@ final class RadialSelectorWidget extends TextButton {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, String param3, java.awt.Color param4) {
+    final static void drawAwtLoadingProgress(int param0, boolean param1, int param2, String param3, java.awt.Color param4) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -345,7 +345,7 @@ final class RadialSelectorWidget extends TextButton {
               var6 = DisplayNameSyntaxHelpers.field_b.getGraphics();
               var6.setColor(param4);
               if (param0 != 10487) {
-                RadialSelectorWidget.a(106, false, -93, (String) null, (java.awt.Color) null);
+                RadialSelectorWidget.drawAwtLoadingProgress(106, false, -93, (String) null, (java.awt.Color) null);
               }
               var6.drawRect(0, 0, 303, 33);
               var6.fillRect(2, 2, param2 * 3, 30);
@@ -461,10 +461,10 @@ final class RadialSelectorWidget extends TextButton {
           var5_int = ByteStorage.bitLength(false, 3 * (param2 - param3));
           var6 = 3 * param3;
           var7 = -10 + var5_int;
-          LevelActorSpawner.b(0);
+          LevelActorSpawner.clearFaceBucketCounts(0);
           if (0 < param4.field_n &&
             null != param4.field_x) {
-            RankingRequest.c(45);
+            RankingRequest.clearFaceDepthCounts(45);
           }
           SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;

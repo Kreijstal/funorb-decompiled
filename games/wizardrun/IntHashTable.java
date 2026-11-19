@@ -30,7 +30,7 @@ final class IntHashTable {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendSavedDataRequests(byte param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         SavedDataSubmission var4 = null;
@@ -48,7 +48,7 @@ final class IntHashTable {
           }
           var2 = RasterBuffer.field_c.first((byte) 49);
           while (var2 != null) {
-            UiWidget.a(0, param1);
+            UiWidget.writeSavedDataQuery(0, param1);
             var2 = RasterBuffer.field_c.next(8192);
           }
           return;
@@ -59,7 +59,7 @@ final class IntHashTable {
         }
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String normalizeBase37DisplayName(byte param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
@@ -100,7 +100,7 @@ final class IntHashTable {
         int var1 = -88 / ((param0 + 38) / 59);
     }
 
-    final static boolean a(byte param0, IsaacPacketBuffer param1) {
+    final static boolean readBooleanBit(byte param0, IsaacPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

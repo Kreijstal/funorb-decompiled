@@ -16,11 +16,11 @@ final class ProgressDialog extends ResizableDialog {
         PacketBuffer.field_i.drawStringCentered(this.field_X, (this.width >> 1) + param0, 103 + param2, 16777215, param1);
         if (null != this.field_cb) {
           SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
-          PacketBuffer.field_i.a(this.field_cb, 20 + param0, param2 + 128, 260, 100, 16777215, -1, 1, 0, PacketBuffer.field_i.field_M);
+          PacketBuffer.field_i.drawParagraph(this.field_cb, 20 + param0, param2 + 128, 260, 100, 16777215, -1, 1, 0, PacketBuffer.field_i.field_M);
         }
     }
 
-    final void k(int param0) {
+    final void stopProgressAnimation(int param0) {
         this.field_ab = true;
         this.field_Z.field_I = false;
         if (param0 < 11) {
@@ -28,7 +28,7 @@ final class ProgressDialog extends ResizableDialog {
         }
     }
 
-    final void a(String param0, float param1, int param2, boolean param3) {
+    final void setLoadingProgress(String param0, float param1, int param2, boolean param3) {
         if ((!param3 ? 1 : 0) == (this.field_U ? 1 : 0)) {
           this.field_U = param3 ? true : false;
           if (this.field_U) {

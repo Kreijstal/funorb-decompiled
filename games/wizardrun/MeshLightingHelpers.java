@@ -4,7 +4,7 @@
 final class MeshLightingHelpers {
     static String[] field_a;
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, TriangleMesh param5, int param6, int param7) {
+    final static void drawLitMeshFaces(int param0, int param1, int param2, boolean param3, int param4, TriangleMesh param5, int param6, int param7) {
         int stackIn_16_0 = 0;
         int[] stackIn_18_0 = null;
         int stackIn_19_1 = 0;
@@ -69,9 +69,9 @@ final class MeshLightingHelpers {
           if (var45.field_x != null &&
             var45.field_n > 1) {
             var61 = var45.field_x;
-            AchievementStateRequest.a((byte) -112, var61, KeyboardQueueConsumer.field_a, 0, 0);
+            AchievementStateRequest.distributeFacesBySortKey((byte) -112, var61, KeyboardQueueConsumer.field_a, 0, 0);
           } else {
-            NanoTickClock.b(0);
+            NanoTickClock.compactFaceBuckets(0);
           }
           if (param3) {
             field_a = (String[]) null;
@@ -166,7 +166,7 @@ final class MeshLightingHelpers {
               var32 = 65280 & var30;
               var33 = (16711720 & var32 * var28) >>> 8 | -486604545 & var28 * var31 >>> 8;
               var33 = var33 + var29 * 65793;
-              DraggableWidget.a(var25, 0, var22, var24, var27, (var33 & 16711422) >> 1, var26, var23);
+              DraggableWidget.fillHalfBlendTriangle(var25, 0, var22, var24, var27, (var33 & 16711422) >> 1, var26, var23);
             } else {
               var28 = var55[var18];
               var29 = var55[var19];
@@ -188,7 +188,7 @@ final class MeshLightingHelpers {
               var37 = var37 + var31 * 65793;
               var39 = var30 * var35 >>> 8 & 1946091775 | var36 * var30 >>> 8 & -486473984;
               var39 = var39 + var33 * 65793;
-              Bzip2State.a(var24, var23, var39 >> 16, var22, var37 >> 16, (65401 & var37) >> 8, (var38 & 65386) >> 8, var39 >> 8 & 255, var39 & 255, var38 & 255, var27, var26, -719, var38 >> 16, var25, 255 & var37);
+              Bzip2State.fillHalfBlendGouraudTriangle(var24, var23, var39 >> 16, var22, var37 >> 16, (65401 & var37) >> 8, (var38 & 65386) >> 8, var39 >> 8 & 255, var39 & 255, var38 & 255, var27, var26, -719, var38 >> 16, var25, 255 & var37);
             }
             var44++;
           }
@@ -207,7 +207,7 @@ final class MeshLightingHelpers {
         }
     }
 
-    final static Sprite[] b(int param0) {
+    final static Sprite[] buildDecodedOpaqueSprites(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -228,7 +228,7 @@ final class MeshLightingHelpers {
         return var1;
     }
 
-    final static Object a(byte[] param0, int param1, boolean param2) {
+    final static Object wrapBytes(byte[] param0, int param1, boolean param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;

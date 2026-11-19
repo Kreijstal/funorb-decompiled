@@ -11,24 +11,24 @@ final class AccountPacketState {
         String var1Lifetime1;
         if (param0 != 12) {
           field_c = -110;
-          var1 = AccountFormTextHelpers.a((byte) 123);
+          var1 = AccountFormTextHelpers.getAccountLoginIdentifier((byte) 123);
           if (var1 != null) {
             if (!(var1.indexOf('@') < 0)) {
               var1 = "";
             }
-            return new AccountFormText(AccountFormTextHelpers.a((byte) 122), EncryptedLoginHelpers.a((byte) -106));
+            return new AccountFormText(AccountFormTextHelpers.getAccountLoginIdentifier((byte) 122), EncryptedLoginHelpers.isAccountNamePrefillSubmittable((byte) -106));
           }
-          return new AccountFormText(AccountFormTextHelpers.a((byte) 122), EncryptedLoginHelpers.a((byte) -106));
+          return new AccountFormText(AccountFormTextHelpers.getAccountLoginIdentifier((byte) 122), EncryptedLoginHelpers.isAccountNamePrefillSubmittable((byte) -106));
         }
-        var1Lifetime1 = AccountFormTextHelpers.a((byte) 123);
+        var1Lifetime1 = AccountFormTextHelpers.getAccountLoginIdentifier((byte) 123);
         if (var1Lifetime1 == null) {
-          return new AccountFormText(AccountFormTextHelpers.a((byte) 122), EncryptedLoginHelpers.a((byte) -106));
+          return new AccountFormText(AccountFormTextHelpers.getAccountLoginIdentifier((byte) 122), EncryptedLoginHelpers.isAccountNamePrefillSubmittable((byte) -106));
         }
         if (var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
-          return new AccountFormText(AccountFormTextHelpers.a((byte) 122), EncryptedLoginHelpers.a((byte) -106));
+          return new AccountFormText(AccountFormTextHelpers.getAccountLoginIdentifier((byte) 122), EncryptedLoginHelpers.isAccountNamePrefillSubmittable((byte) -106));
         }
-        return new AccountFormText(AccountFormTextHelpers.a((byte) 122), EncryptedLoginHelpers.a((byte) -106));
+        return new AccountFormText(AccountFormTextHelpers.getAccountLoginIdentifier((byte) 122), EncryptedLoginHelpers.isAccountNamePrefillSubmittable((byte) -106));
     }
 
     public static void releaseStatics(int param0) {

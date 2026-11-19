@@ -12,7 +12,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
     private int field_H;
     private TextButton[] field_F;
 
-    final TextButton a(int param0, String param1, WidgetListener param2) {
+    final TextButton appendTextButton(int param0, String param1, WidgetListener param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -52,15 +52,15 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         }
     }
 
-    final void a(byte param0, String param1, int param2) {
+    final void addActionButton(byte param0, String param1, int param2) {
         int var4_int = 0;
         try {
           if (param0 != -31) {
             this.field_E = (int[]) null;
           }
           var4_int = this.field_H;
-          this.a(1 + var4_int, (byte) 109);
-          this.field_F[var4_int] = this.a(0, param1, (WidgetListener) (this));
+          this.ensureButtonCapacity(1 + var4_int, (byte) 109);
+          this.field_F[var4_int] = this.appendTextButton(0, param1, (WidgetListener) (this));
           this.field_E[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "vc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -69,7 +69,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         super.drawLayer(param0, param1 + 0, param2, param3);
-        this.field_J.a(this.field_I, param0 + this.x + 14, this.y + (param3 + 10), this.width - 28, this.height, 16777215, -1, param1, 0, this.field_J.field_M);
+        this.field_J.drawParagraph(this.field_I, param0 + this.x + 14, this.y + (param3 + 10), this.width - 28, this.height, 16777215, -1, param1, 0, this.field_J.field_M);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -135,7 +135,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         }
     }
 
-    final static void a(int param0) {
+    final static void updateAccountProgressResult(int param0) {
         int var1 = 0;
         int var2 = wizardrun.field_H;
         QuickChatDynamicCommand.field_a = null;
@@ -144,7 +144,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           field_M = false;
         }
         if (DialogLayer.field_J) {
-          FriendEntry.field_lb.n(8);
+          FriendEntry.field_lb.showConnectionRestored(8);
         } else {
           var1 = RasterSnapshot.field_t;
           if (var1 > 0) {
@@ -156,11 +156,11 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
             QuickChatDynamicCommand.field_a = AccountSocketHelpers.joinAll(new CharSequence[]{(CharSequence) ((Object) QuickChatDynamicCommand.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveDequeCursor.field_c)}, 550);
           }
           FriendEntry.field_lb.closeProgressDialog(-27697);
-          LoginCredentials.a((byte) 125);
+          LoginCredentials.showProgressDialog((byte) 125);
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void ensureButtonCapacity(int param0, byte param1) {
         int var6 = 0;
         int var7 = wizardrun.field_H;
         if (this.field_H >= param0) {
@@ -179,7 +179,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         this.field_E = var5;
     }
 
-    final static void a(int param0, String param1) {
+    final static void showAccountProgressWithText(int param0, String param1) {
         try {
           PacketBuffer.setOptionalLoginText(-2, param1);
           if (param0 >= -67) {

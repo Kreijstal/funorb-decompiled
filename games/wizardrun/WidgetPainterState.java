@@ -133,7 +133,7 @@ final class WidgetPainterState {
             var8 = (StatefulWidgetPainter) null;
             this.applyToState(41, 36, -40, (UiWidget) null, (WidgetPainterState) null, (StatefulWidgetPainter) null);
           }
-          CacheEntry.a(this.frame, param4 + param0.x, (byte) -110, param0.height, param0.width, param2 + param0.y);
+          CacheEntry.drawNineSliceFrame(this.frame, param4 + param0.x, (byte) -110, param0.height, param0.width, param2 + param0.y);
           if (this.icon != null) {
             var6_int = this.offsetX + (param4 + param0.x);
             if (param3.field_l == 1) {

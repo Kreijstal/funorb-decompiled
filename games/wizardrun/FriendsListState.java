@@ -96,7 +96,7 @@ final class FriendsListState {
             var3 = var1.readCp1252String(0);
             LoadingMessageHelpers.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            FramedButtonPainter.a((byte) 52, var4);
+            FramedButtonPainter.decodeSocialFilterModes((byte) 52, var4);
             return;
           }
           if (null == FriendLookupState.field_f) {

@@ -19,11 +19,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         this.field_j.imageComplete(2);
     }
 
-    final static boolean c(byte param0) {
+    final static boolean isPlayerProgressReady(byte param0) {
         if (param0 != 54) {
           return false;
         }
-        if (ThreePieceFrameHelpers.a(-111)) {
+        if (ThreePieceFrameHelpers.isGuestMode(-111)) {
           return true;
         }
         if (!HighscorePlayerState.field_e) {

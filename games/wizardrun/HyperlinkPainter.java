@@ -9,7 +9,7 @@ final class HyperlinkPainter implements WidgetRenderer {
     private BitmapFont field_d;
     static int field_a;
 
-    final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void configureMembershipBadge(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           TimedValidator.field_a = param7;
           MouseWheelInput.field_a = param2;
@@ -58,7 +58,7 @@ final class HyperlinkPainter implements WidgetRenderer {
           if (!param3) {
             this.field_b = 65;
           }
-          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.text + "</u>", param2.x + param0, param1 + param2.y, param2.width, param2.height, var6_int, -1, this.field_c, this.field_b, this.field_d.field_M + this.field_d.field_B);
+          this.field_d.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param2.text + "</u>", param2.x + param0, param1 + param2.y, param2.width, param2.height, var6_int, -1, this.field_c, this.field_b, this.field_d.field_M + this.field_d.field_B);
           if (!param2.isFocused((byte) 53)) {
             return;
           }
@@ -80,7 +80,7 @@ final class HyperlinkPainter implements WidgetRenderer {
           } else {
             var10 = var10 + (param2.height - var8);
           }
-          AlternateUsernameLoginCredentials.a((byte) 69, 4 + var7, var10 + 2, var8, var9 - 2);
+          AlternateUsernameLoginCredentials.drawDottedFocusRect((byte) 69, 4 + var7, var10 + 2, var8, var9 - 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

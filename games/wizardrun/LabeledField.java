@@ -12,8 +12,8 @@ final class LabeledField extends SingleChildWidget {
     private boolean field_O;
     static int field_K;
 
-    final static void g(int param0) {
-        LoginChoicePanel.h((byte) 91);
+    final static void beginGameLogin(int param0) {
+        LoginChoicePanel.resetAccountWorkflow((byte) 91);
         DialogLayer.field_J = true;
         ArchiveReadinessHelpers.field_d = true;
         GameShell.field_A.hideAllDialogs(false);
@@ -29,7 +29,7 @@ final class LabeledField extends SingleChildWidget {
           return;
         }
         int var7 = !this.field_O ? 0 : -this.field_M + this.width - this.field_L * 2;
-        this.field_N.a(this.field_I, var5 + var7 + this.field_L, this.field_L + var6, this.field_M - this.field_L, -(2 * this.field_L) + this.height, this.field_J, -1, !this.field_O ? 2 : 0, 1, this.field_N.field_M);
+        this.field_N.drawParagraph(this.field_I, var5 + var7 + this.field_L, this.field_L + var6, this.field_M - this.field_L, -(2 * this.field_L) + this.height, this.field_J, -1, !this.field_O ? 2 : 0, 1, this.field_N.field_M);
     }
 
     LabeledField(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {

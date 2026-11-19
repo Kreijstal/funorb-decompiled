@@ -9,7 +9,7 @@ abstract class LoginCredentials {
     static int field_c;
     static int field_a;
 
-    final static boolean a(int param0, int param1, boolean param2, byte param3) {
+    final static boolean rankingEntryPrecedes(int param0, int param1, boolean param2, byte param3) {
         int var4;
         int var5;
         int var4Lifetime1;
@@ -89,7 +89,7 @@ abstract class LoginCredentials {
 
     abstract LoginCredentialKind getCredentialKind(boolean param0);
 
-    final static void a(byte param0) {
+    final static void showProgressDialog(byte param0) {
         GameShell.field_A.hideAllDialogs(false);
         if (ProxySocketConnector.field_e == null) {
           ProxySocketConnector.field_e = new ProgressDialog(GameShell.field_A, QuickChatDynamicCommand.field_a);

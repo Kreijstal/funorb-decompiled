@@ -17,7 +17,7 @@ final class EncryptedLoginHelpers {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isAccountNamePrefillSubmittable(byte param0) {
         if (param0 != -106) {
           field_a = (Sprite) null;
         }

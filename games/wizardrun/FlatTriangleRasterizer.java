@@ -5,7 +5,7 @@ final class FlatTriangleRasterizer {
     static MonochromeBitmapFont font12;
     static String[] field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
+    final static void rasterizeHalfBlendTriangle(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         String stackIn_78_2 = null;
@@ -204,7 +204,7 @@ final class FlatTriangleRasterizer {
     public static void releaseStatics(int param0) {
         if (param0 != -331851056) {
           int[] var2 = (int[]) null;
-          FlatTriangleRasterizer.a(-97, -4, 61, -122, (int[]) null, -38, 93, 89, -73);
+          FlatTriangleRasterizer.rasterizeHalfBlendTriangle(-97, -4, 61, -122, (int[]) null, -38, 93, 89, -73);
         }
         field_b = null;
         font12 = null;

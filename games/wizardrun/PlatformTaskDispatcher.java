@@ -247,7 +247,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var9.result = ThrowableFormattingHelpers.a((String) (var9.input), var9.argument, -1).connect((byte) -128);
+                      var9.result = ThrowableFormattingHelpers.createSocketConnector((String) (var9.input), var9.argument, -1).connect((byte) -128);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationException) (Object) decompiledCaughtException;

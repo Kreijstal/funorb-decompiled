@@ -49,57 +49,57 @@ final class Bzip2State {
         field_g = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void fillHalfBlendGouraudTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = wizardrun.field_H;
         if (param12 == -719) {
           if (param14 > param1) {
             if (param14 < param10) {
-              AlternateUsernameLoginCredentials.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, SoftwareRasterizer.pixels, param15, param0, param2);
+              AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, SoftwareRasterizer.pixels, param15, param0, param2);
               return;
             }
             if (param1 >= param10) {
-              AlternateUsernameLoginCredentials.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, SoftwareRasterizer.pixels, param8, param3, param13);
+              AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, SoftwareRasterizer.pixels, param8, param3, param13);
               return;
             }
-            AlternateUsernameLoginCredentials.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, SoftwareRasterizer.pixels, param15, param11, param13);
+            AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, SoftwareRasterizer.pixels, param15, param11, param13);
             return;
           }
           if (param10 > param1) {
-            AlternateUsernameLoginCredentials.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, SoftwareRasterizer.pixels, param9, param3, param2);
+            AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, SoftwareRasterizer.pixels, param9, param3, param2);
             return;
           }
           if (param10 <= param14) {
-            AlternateUsernameLoginCredentials.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, SoftwareRasterizer.pixels, param8, param0, param4);
+            AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, SoftwareRasterizer.pixels, param8, param0, param4);
             return;
           }
-          AlternateUsernameLoginCredentials.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, SoftwareRasterizer.pixels, param9, param11, param4);
+          AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, SoftwareRasterizer.pixels, param9, param11, param4);
           return;
         }
         field_g = (int[]) null;
         if (param14 > param1) {
           if (param14 < param10) {
-            AlternateUsernameLoginCredentials.a(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, SoftwareRasterizer.pixels, param15, param0, param2);
+            AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param14, param7, param8, param1, param6, param9, param4, param10, param5, param3, param13, param11, -126, SoftwareRasterizer.pixels, param15, param0, param2);
             return;
           }
           if (param1 >= param10) {
-            AlternateUsernameLoginCredentials.a(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, SoftwareRasterizer.pixels, param8, param3, param13);
+            AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param1, param6, param9, param10, param5, param15, param2, param14, param7, param11, param4, param0, param12 + 591, SoftwareRasterizer.pixels, param8, param3, param13);
             return;
           }
-          AlternateUsernameLoginCredentials.a(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, SoftwareRasterizer.pixels, param15, param11, param13);
+          AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param10, param6, param9, param1, param7, param8, param4, param14, param5, param3, param2, param0, param12 ^ 689, SoftwareRasterizer.pixels, param15, param11, param13);
           return;
         }
         if (param10 > param1) {
-          AlternateUsernameLoginCredentials.a(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, SoftwareRasterizer.pixels, param9, param3, param2);
+          AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param1, param7, param8, param14, param5, param15, param13, param10, param6, param0, param4, param11, param12 ^ 693, SoftwareRasterizer.pixels, param9, param3, param2);
           return;
         }
         if (param10 <= param14) {
-          AlternateUsernameLoginCredentials.a(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, SoftwareRasterizer.pixels, param8, param0, param4);
+          AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param14, param5, param15, param10, param6, param9, param2, param1, param7, param11, param13, param3, -120, SoftwareRasterizer.pixels, param8, param0, param4);
           return;
         }
-        AlternateUsernameLoginCredentials.a(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, SoftwareRasterizer.pixels, param9, param11, param4);
+        AlternateUsernameLoginCredentials.rasterizeHalfBlendGouraudTriangle(param10, param5, param15, param14, param7, param8, param13, param1, param6, param0, param2, param3, param12 ^ 691, SoftwareRasterizer.pixels, param9, param11, param4);
     }
 
-    final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
+    final static void configureMenuFonts(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           TriangleMesh.field_j = param2;
           LoginMethodPreference.field_c = param3;
@@ -108,7 +108,7 @@ final class Bzip2State {
           if (param0 <= 15) {
             field_o = (int[]) null;
           }
-          WhirlpoolHasher.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
+          WhirlpoolHasher.configureMenuLineMetrics(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "gk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

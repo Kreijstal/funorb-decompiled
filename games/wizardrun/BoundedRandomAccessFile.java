@@ -96,7 +96,7 @@ final class BoundedRandomAccessFile {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!HighscorePlayerState.isAsciiLetter((char) var3, true) &&
-              !CheckboxPainter.a((char) var3, -5717)) {
+              !CheckboxPainter.isAsciiDigit((char) var3, -5717)) {
               return true;
             }
           }

@@ -8,7 +8,7 @@ final class RankingStatsRequest extends IntrusiveNode {
 
     final static AccountFormText getEmailPrefill(byte param0) {
         int var1 = 61 / ((param0 - 19) / 39);
-        return new AccountFormText(ArchiveContainerHelpers.a(-21), NameSuggestionsPanel.isEmailCheckPending((byte) -115));
+        return new AccountFormText(ArchiveContainerHelpers.getAccountEmail(-21), NameSuggestionsPanel.isEmailCheckPending((byte) -115));
     }
 
     public static void releaseStatics(boolean param0) {

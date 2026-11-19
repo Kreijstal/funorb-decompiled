@@ -15,11 +15,11 @@ final class MenuOverlayHelpers {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -26035) {
-          MenuOverlayHelpers.a(52);
+          MenuOverlayHelpers.clearClientFlags(52);
         }
     }
 
-    final static void a(int param0) {
+    final static void clearClientFlags(int param0) {
         int var1 = -51 % ((param0 - 63) / 40);
         LoginCredentials.field_a = 0;
     }

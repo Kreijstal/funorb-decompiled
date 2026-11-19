@@ -106,7 +106,7 @@ final class SecondaryNodeDeque implements Iterable {
           if (param0 == -14149) {
             return;
           }
-          SecondaryNodeDeque.a(54, false, 105, -87);
+          SecondaryNodeDeque.drawMenuButtonHighlight(54, false, 105, -87);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class SecondaryNodeDeque implements Iterable {
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 5) {
-          SecondaryNodeDeque.a(-86, true, -78, -105);
+          SecondaryNodeDeque.drawMenuButtonHighlight(-86, true, -78, -105);
           field_c = null;
           return;
         }
@@ -157,7 +157,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void drawMenuButtonHighlight(int param0, boolean param1, int param2, int param3) {
         int var4;
         if (param0 != 2) {
           return;
@@ -177,7 +177,7 @@ final class SecondaryNodeDeque implements Iterable {
             var4 = -40 + ToggleButton.field_H.width;
           }
         }
-        RasterBuffer.a(30, 0, ToggleButton.field_H, 0, 80, param3, param2, var4, 0);
+        RasterBuffer.drawSpriteAdditiveEdgeHighlight(30, 0, ToggleButton.field_H, 0, 80, param3, param2, var4, 0);
     }
 
     static {

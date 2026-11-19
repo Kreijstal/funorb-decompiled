@@ -62,7 +62,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           var2_int = param0.length();
           var3 = 0;
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = AccountFormTextHelpers.a(26614, param0.charAt(var4)) + (var3 << 5) - var3;
+            var3 = AccountFormTextHelpers.encodeCp1252Character(26614, param0.charAt(var4)) + (var3 << 5) - var3;
           }
           if (param1 != 2148) {
             NameSuggestionsPanel.getAccountUiLoadMessage(-126);
@@ -106,7 +106,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           if (param2 < -96) {
             return false;
           }
-          NameSuggestionsPanel.b(35, 113, -120, 21);
+          NameSuggestionsPanel.createSolidNineSliceFrame(35, 113, -120, 21);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,11 +167,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         return stackIn_6_0;
     }
 
-    final static Sprite[] b(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createSolidNineSliceFrame(int param0, int param1, int param2, int param3) {
         if (param3 != 1) {
           return (Sprite[]) null;
         }
-        return RasterSnapshot.a(param2, param0, param1, 1, 20230);
+        return RasterSnapshot.createSolidNineSliceSprites(param2, param0, param1, 1, 20230);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -204,7 +204,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
         BitmapFont var5 = Crc32Helpers.field_b;
         if (null != this.field_F) {
-          var5.a(ArchiveRequest.field_p, param0 + this.x, param3 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_M);
+          var5.drawParagraph(ArchiveRequest.field_p, param0 + this.x, param3 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_M);
         }
     }
 
@@ -230,7 +230,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
               this.drawLayer(-86, 120, 101, 56);
             }
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_F[var4_int] = IntHashTable.a((byte) 27, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_F[var4_int] = IntHashTable.normalizeBase37DisplayName((byte) 27, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new HyperlinkPainter(Crc32Helpers.field_b, 0, 1);
             this.field_I = new TextButton[var3_int + 1];

@@ -36,7 +36,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           return;
         }
         if (param0 != -3) {
-          CachedArchiveProvider.c(16, 122);
+          CachedArchiveProvider.resendRankingRequests(16, 122);
         }
         IntrusiveNode var2 = this.field_u.first((byte) 72);
         while (var2 != null) {
@@ -425,7 +425,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         if (var3 != null) {
           var4 = var3.getData(95);
           if (param0 >= -21) {
-            CachedArchiveProvider.c(-33, -78);
+            CachedArchiveProvider.resendRankingRequests(-33, -78);
           }
           var3.unlink(false);
           return var4;
@@ -433,7 +433,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         return null;
     }
 
-    final static void c(int param0, int param1) {
+    final static void resendRankingRequests(int param0, int param1) {
         int var3 = 0;
         RankingRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -445,7 +445,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             field_f = 48;
           }
           while (var4 != null) {
-            WeightedLruCache.a(var4, param0, (byte) -81);
+            WeightedLruCache.writeRankingRequest(var4, param0, (byte) -81);
             var4 = (RankingRequest) (QuickChatDynamicCommand.field_b.next(param1 ^ 8192));
           }
           return;

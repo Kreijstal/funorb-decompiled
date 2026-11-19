@@ -25,7 +25,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         field_u = null;
     }
 
-    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSpriteStrip(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -55,7 +55,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void showLoginDialogWithGuard(int param0, boolean param1) {
         if (param0 != 11579568) {
           return;
         }

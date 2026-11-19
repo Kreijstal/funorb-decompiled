@@ -44,8 +44,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final boolean h(byte param0) {
-        if (!this.g(-50)) {
+    private final boolean submitAccountCreation(byte param0) {
+        if (!this.areFieldsReady(-50)) {
           return false;
         }
         int var2 = -1;
@@ -56,35 +56,35 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           var2 = Integer.parseInt(this.field_P.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return NameCheckHelpers.a(this.field_G.text, this.field_E.selected, this, 0, var2, this.field_S.text, this.field_F.text);
+        return NameCheckHelpers.beginAccountCreation(this.field_G.text, this.field_E.selected, this, 0, var2, this.field_S.text, this.field_F.text);
     }
 
-    private final boolean g(int param0) {
+    private final boolean areFieldsReady(int param0) {
         if (param0 != -50) {
           return true;
         }
-        if (!this.a((byte) 95, (ValidatorProvider) (this.field_G))) {
+        if (!this.isFieldReady((byte) 95, (ValidatorProvider) (this.field_G))) {
           return false;
         }
-        if (!this.a((byte) 118, (ValidatorProvider) (this.field_F))) {
+        if (!this.isFieldReady((byte) 118, (ValidatorProvider) (this.field_F))) {
           return false;
         }
-        if (!this.a((byte) 92, (ValidatorProvider) (this.field_H))) {
+        if (!this.isFieldReady((byte) 92, (ValidatorProvider) (this.field_H))) {
           return false;
         }
-        if (!this.a((byte) 111, (ValidatorProvider) (this.field_S))) {
+        if (!this.isFieldReady((byte) 111, (ValidatorProvider) (this.field_S))) {
           return false;
         }
-        if (!this.a((byte) 119, (ValidatorProvider) (this.field_O))) {
+        if (!this.isFieldReady((byte) 119, (ValidatorProvider) (this.field_O))) {
           return false;
         }
-        if (this.a((byte) 105, (ValidatorProvider) (this.field_P))) {
+        if (this.isFieldReady((byte) 105, (ValidatorProvider) (this.field_P))) {
           return true;
         }
         return false;
     }
 
-    private final String d(boolean param0) {
+    private final String getLinkOpeningMarkup(boolean param0) {
         if (param0) {
           this.field_F = (ValidatedTextField) null;
           return "<u=2164A2><col=2164A2>";
@@ -92,7 +92,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(byte param0, UiWidget param1, String param2, int param3, int param4, String param5) {
+    private final int addFieldWithHelp(byte param0, UiWidget param1, String param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -107,7 +107,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           if (param0 != 4) {
             this.field_F = (ValidatedTextField) null;
           }
-          stackIn_3_0 = this.a(35, param2, param1, 7501, param3, param4, param5);
+          stackIn_3_0 = this.addFieldWithHelpAtWidth(35, param2, param1, 7501, param3, param4, param5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final int a(int param0, UiWidget param1, boolean param2, String param3, int param4) {
+    private final int addFieldWithIndicator(int param0, UiWidget param1, boolean param2, String param3, int param4) {
         RuntimeException var6 = null;
         ValidationIndicator var7 = null;
         LabeledField var8 = null;
@@ -187,7 +187,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         try {
           if (param1 != this.field_I) {
             if (param1 == this.field_V) {
-              discarded$1 = this.h((byte) 107);
+              discarded$1 = this.submitAccountCreation((byte) 107);
             }
           } else {
             AchievementSubmission.showLoginChoices((byte) -97);
@@ -211,7 +211,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final int a(int param0, String param1, UiWidget param2, int param3, int param4, int param5, String param6) {
+    private final int addFieldWithHelpAtWidth(int param0, String param1, UiWidget param2, int param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         LabeledField var10 = null;
@@ -261,7 +261,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final int a(int param0, boolean param1, int param2, UiWidget param3, String param4) {
+    private final int addLabeledField(int param0, boolean param1, int param2, UiWidget param3, String param4) {
         LabeledField var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -350,14 +350,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_O.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_S.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = WeightedLruCache.formatPlaceholders(new String[]{this.d(false), this.g((byte) 2)}, (byte) 76, NineSliceFrame.field_b);
+        String var2 = WeightedLruCache.formatPlaceholders(new String[]{this.getLinkOpeningMarkup(false), this.getLinkClosingMarkup((byte) 2)}, (byte) 76, NineSliceFrame.field_b);
         int var3 = 20;
-        var3 = var3 + this.a(var3, true, 170, this.field_F, NameAvailabilityFactory.field_d);
-        var3 = var3 + (5 + this.a(20, ErrorReportingHelpers.field_b, this.field_H, 7501, 170, var3, ""));
-        var3 = var3 + this.a(var3, true, 170, this.field_S, WhirlpoolHasher.field_d);
-        var3 = var3 + (this.a((byte) 4, this.field_O, RasterBuffer.field_i, 170, var3, LabeledField.field_H) + 5);
-        var3 = var3 + (5 + this.a((byte) 4, this.field_G, AccountConsentPanel.field_E, 170, var3, MonotonicClockHelpers.field_b));
-        var3 = var3 + this.a(170, this.field_P, true, Base37Codec.field_a, var3);
+        var3 = var3 + this.addLabeledField(var3, true, 170, this.field_F, NameAvailabilityFactory.field_d);
+        var3 = var3 + (5 + this.addFieldWithHelpAtWidth(20, ErrorReportingHelpers.field_b, this.field_H, 7501, 170, var3, ""));
+        var3 = var3 + this.addLabeledField(var3, true, 170, this.field_S, WhirlpoolHasher.field_d);
+        var3 = var3 + (this.addFieldWithHelp((byte) 4, this.field_O, RasterBuffer.field_i, 170, var3, LabeledField.field_H) + 5);
+        var3 = var3 + (5 + this.addFieldWithHelp((byte) 4, this.field_G, AccountConsentPanel.field_E, 170, var3, MonotonicClockHelpers.field_b));
+        var3 = var3 + this.addFieldWithIndicator(170, this.field_P, true, Base37Codec.field_a, var3);
         LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_E, true, -120 + this.width, 5, ThreePieceFrameHelpers.field_b, 11579568, SettingsCookieReader.field_e);
         this.addChild((UiWidget) (var4), (byte) 58);
         var3 = var3 + var4.height;
@@ -384,7 +384,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.setBounds(115, 0, 55 + (var3 + var6), 496, 0);
     }
 
-    private final boolean a(byte param0, ValidatorProvider param1) {
+    private final boolean isFieldReady(byte param0, ValidatorProvider param1) {
         Validator var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -464,7 +464,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final String g(byte param0) {
+    private final String getLinkClosingMarkup(byte param0) {
         if (param0 < 1) {
           return (String) null;
         }
@@ -513,7 +513,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
     final void updateInput(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.updateInput(param0, param1, param2, param3);
-          this.field_V.field_B = this.g(param0 - 10000586);
+          this.field_V.field_B = this.areFieldsReady(param0 - 10000586);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "nk.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

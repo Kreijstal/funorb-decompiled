@@ -7,7 +7,7 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
     static int field_n;
     static String field_q;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int[] param13, int param14, int param15, int param16) {
+    final static void rasterizeHalfBlendGouraudTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int[] param13, int param14, int param15, int param16) {
         RuntimeException stackIn_83_0 = null;
         StringBuilder stackIn_83_1 = null;
         String stackIn_84_2 = null;
@@ -143,14 +143,14 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
                         var38 = TriangleRasterState.viewportWidth - (var37 + 1);
                       }
                       if (var37 < 0) {
-                        QuickChatPhraseRepository.a(var38 + var37, var39, var41, var21 - var37 * var39, var36Lifetime2, var40, param13, true, var25 - var40 * var37, var29 - var41 * var37);
+                        QuickChatPhraseRepository.fillHalfBlendGouraudSpan(var38 + var37, var39, var41, var21 - var37 * var39, var36Lifetime2, var40, param13, true, var25 - var40 * var37, var29 - var41 * var37);
                       } else {
-                        QuickChatPhraseRepository.a(var38, var39, var41, var21, var37 + var36Lifetime2, var40, param13, true, var25, var29);
+                        QuickChatPhraseRepository.fillHalfBlendGouraudSpan(var38, var39, var41, var21, var37 + var36Lifetime2, var40, param13, true, var25, var29);
                       }
                     } else {
                       if (var37 >= 0 &&
                         TriangleRasterState.viewportWidth > var37) {
-                        QuickChatPhraseRepository.a(var38, 0, 0, var21, var37 + var36Lifetime2, 0, param13, true, var25, var29);
+                        QuickChatPhraseRepository.fillHalfBlendGouraudSpan(var38, 0, 0, var21, var37 + var36Lifetime2, 0, param13, true, var25, var29);
                       }
                     }
                   }
@@ -299,14 +299,14 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
                     var37Lifetime1 = TriangleRasterState.viewportWidth + (-var36Lifetime1 - 1);
                   }
                   if (0 <= var36Lifetime1) {
-                    QuickChatPhraseRepository.a(var37Lifetime1, var38Lifetime1, var40Lifetime1, var21, var35Lifetime1 + var36Lifetime1, var39Lifetime1, param13, true, var25, var29);
+                    QuickChatPhraseRepository.fillHalfBlendGouraudSpan(var37Lifetime1, var38Lifetime1, var40Lifetime1, var21, var35Lifetime1 + var36Lifetime1, var39Lifetime1, param13, true, var25, var29);
                   } else {
-                    QuickChatPhraseRepository.a(var36Lifetime1 + var37Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var35Lifetime1, var39Lifetime1, param13, true, var25 - var36Lifetime1 * var39Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29);
+                    QuickChatPhraseRepository.fillHalfBlendGouraudSpan(var36Lifetime1 + var37Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var38Lifetime1) + var21, var35Lifetime1, var39Lifetime1, param13, true, var25 - var36Lifetime1 * var39Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29);
                   }
                 } else {
                   if (0 <= var36Lifetime1 &&
                     var36Lifetime1 < TriangleRasterState.viewportWidth) {
-                    QuickChatPhraseRepository.a(var37Lifetime1, 0, 0, var21, var35Lifetime1 + var36Lifetime1, 0, param13, true, var25, var29);
+                    QuickChatPhraseRepository.fillHalfBlendGouraudSpan(var37Lifetime1, 0, 0, var21, var35Lifetime1 + var36Lifetime1, 0, param13, true, var25, var29);
                   }
                 }
               }
@@ -368,7 +368,7 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
         return Js5Index.field_m;
     }
 
-    final static void c(byte param0) {
+    final static void resetTooltipState(byte param0) {
         IterableNodeHashTable.field_b = 0;
         StrongCacheEntry.field_u = -1;
         MarkerSliderWidget.field_I = null;
@@ -377,7 +377,7 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
         int var1 = 71 / ((25 - param0) / 57);
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedFocusRect(byte param0, int param1, int param2, int param3, int param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;

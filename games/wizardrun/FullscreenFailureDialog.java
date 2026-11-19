@@ -29,7 +29,7 @@ final class FullscreenFailureDialog extends ResizableDialog implements ButtonAct
             } else {
               this.height = this.height + 10;
               var3 = SocketConnector.field_b;
-              if (HuffmanDecoder.a(false)) {
+              if (HuffmanDecoder.canResizeUsingController(false)) {
                 var3 = ArchiveCatalog.field_c;
                 this.height = this.height + 20;
               }

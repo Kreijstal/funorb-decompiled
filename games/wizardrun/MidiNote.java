@@ -59,7 +59,7 @@ final class MidiNote extends IntrusiveNode {
 
     final static String getCurrentPlayerName(byte param0) {
         if (param0 > -79) {
-          MidiNote.a(107, 125, 75, 15);
+          MidiNote.configureMenuTextColors(107, 125, 75, 15);
           if (MonotonicClockHelpers.field_a != null) {
             return MonotonicClockHelpers.field_a;
           }
@@ -174,7 +174,7 @@ final class MidiNote extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void configureMenuTextColors(int param0, int param1, int param2, int param3) {
         MenuController.field_b = param2;
         SavedDataRequest.field_i = param3;
         int var4 = -91 / ((param0 - 9) / 62);

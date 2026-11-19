@@ -95,7 +95,7 @@ final class SpriteButtonPainter extends WidgetPainter {
           if (param0 > -60) {
             SpriteButtonPainter.releaseStatics(-41);
           }
-          stackIn_11_0 = GameApplet.a(121, -1, (String) (var4), param1, (String) (var3));
+          stackIn_11_0 = GameApplet.rewriteAppletUrl(121, -1, (String) (var4), param1, (String) (var3));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ final class SpriteButtonPainter extends WidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, int param2, NineSliceFrame param3, NineSliceFrame param4, int param5) {
+    final static void configureMenuOptionFrames(int param0, int param1, int param2, NineSliceFrame param3, NineSliceFrame param4, int param5) {
         try {
           EditableTextWidget.field_N = param4;
           if (param0 > -104) {
@@ -172,8 +172,8 @@ final class SpriteButtonPainter extends WidgetPainter {
           var7 = stackIn_15_0;
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          ThreePieceFrameHelpers.a(this.field_x, (param2.height - this.field_x[0].fullHeight >> 1) + (param2.y + param1), var7, (byte) 118, param0 + param2.x, param2.width);
-          this.field_k.a(param2.text, param0 + param2.x, -2 + param2.y + param1, param2.width, param2.height, var8, -1, 1, 1, this.field_k.field_M);
+          ThreePieceFrameHelpers.drawRecoloredThreePieceFrame(this.field_x, (param2.height - this.field_x[0].fullHeight >> 1) + (param2.y + param1), var7, (byte) 118, param0 + param2.x, param2.width);
+          this.field_k.drawParagraph(param2.text, param0 + param2.x, -2 + param2.y + param1, param2.width, param2.height, var8, -1, 1, 1, this.field_k.field_M);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

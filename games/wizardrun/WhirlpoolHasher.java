@@ -19,7 +19,7 @@ final class WhirlpoolHasher {
     private byte[] field_o;
     static String field_h;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void configureMenuLineMetrics(int param0, int param1, int param2, int param3, int param4) {
         LogoAnimationLoader.field_c = param4;
         ArchiveReadinessHelpers.field_a = param2;
         if (param3 != 1882) {
@@ -93,7 +93,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static int a(String param0, int param1, String param2, String param3, int param4, int param5, boolean param6) {
+    final static int advanceAccountCreation(String param0, int param1, String param2, String param3, int param4, int param5, boolean param6) {
         AccountFormText var7 = null;
         RuntimeException var7_ref = null;
         AccountFormText var8 = null;
@@ -112,7 +112,7 @@ final class WhirlpoolHasher {
           if (param5 != 0) {
             WhirlpoolHasher.releaseStatics((byte) 13);
           }
-          stackIn_3_0 = FullscreenController.a(var7, var8, param0, param4, param1, param6, param5 ^ 27851);
+          stackIn_3_0 = FullscreenController.advanceAccountCreationRequest(var7, var8, param0, param4, param1, param6, param5 ^ 27851);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_b[var2] = GameApplet.a(ContentTransitionDialog.bitAndLong(255L, (long)this.field_o[var3 + 7]), GameApplet.a(ContentTransitionDialog.bitAndLong((long)this.field_o[var3 + 6] << 8, 65280L), GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong((long)this.field_o[4 + var3] << 24, 4278190080L), GameApplet.a(GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong((long)this.field_o[var3 + 1] << 48, 71776119061217280L), (long)this.field_o[var3] << 56), ContentTransitionDialog.bitAndLong(280375465082880L, (long)this.field_o[2 + var3] << 40)), ContentTransitionDialog.bitAndLong(255L, (long)this.field_o[var3 + 3]) << 32)), ContentTransitionDialog.bitAndLong(16711680L, (long)this.field_o[var3 + 5] << 16))));
+          this.field_b[var2] = GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong(255L, (long)this.field_o[var3 + 7]), GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong((long)this.field_o[var3 + 6] << 8, 65280L), GameApplet.bitXorLong(GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong((long)this.field_o[4 + var3] << 24, 4278190080L), GameApplet.bitXorLong(GameApplet.bitXorLong(GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong((long)this.field_o[var3 + 1] << 48, 71776119061217280L), (long)this.field_o[var3] << 56), ContentTransitionDialog.bitAndLong(280375465082880L, (long)this.field_o[2 + var3] << 40)), ContentTransitionDialog.bitAndLong(255L, (long)this.field_o[var3 + 3]) << 32)), ContentTransitionDialog.bitAndLong(16711680L, (long)this.field_o[var3 + 5] << 16))));
           var3 += 8;
           var2++;
         }
@@ -171,7 +171,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_b[var2Lifetime1];
           this.field_n[var2Lifetime1] = dupTemp$0;
-          this.field_k[var2Lifetime1] = GameApplet.a(arrayValue$1, dupTemp$0);
+          this.field_k[var2Lifetime1] = GameApplet.bitXorLong(arrayValue$1, dupTemp$0);
         }
         var3Lifetime1 = 107 % ((param0 - 19) / 44);
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
@@ -180,7 +180,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_c[var3Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2], TriangleMesh.field_A[var4][ResourceArchive.bitAnd((int)(this.field_n[ResourceArchive.bitAnd(7, var3Lifetime2 - var4)] >>> var5), 255)]);
+              this.field_c[var3Lifetime2] = GameApplet.bitXorLong(this.field_c[var3Lifetime2], TriangleMesh.field_A[var4][ResourceArchive.bitAnd((int)(this.field_n[ResourceArchive.bitAnd(7, var3Lifetime2 - var4)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -188,14 +188,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime2Lifetime1 = 0; 8 > var3Lifetime2Lifetime1; var3Lifetime2Lifetime1++) {
             this.field_n[var3Lifetime2Lifetime1] = this.field_c[var3Lifetime2Lifetime1];
           }
-          this.field_n[0] = GameApplet.a(this.field_n[0], TriangleMesh.field_f[var2Lifetime2]);
+          this.field_n[0] = GameApplet.bitXorLong(this.field_n[0], TriangleMesh.field_f[var2Lifetime2]);
           for (var3Lifetime2Lifetime2 = 0; var3Lifetime2Lifetime2 < 8; var3Lifetime2Lifetime2++) {
             this.field_c[var3Lifetime2Lifetime2] = this.field_n[var3Lifetime2Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_c[var3Lifetime2Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2Lifetime2], TriangleMesh.field_A[var7][ResourceArchive.bitAnd(255, (int)(this.field_k[ResourceArchive.bitAnd(7, -var7 + var3Lifetime2Lifetime2)] >>> var5Lifetime1))]);
+              this.field_c[var3Lifetime2Lifetime2] = GameApplet.bitXorLong(this.field_c[var3Lifetime2Lifetime2], TriangleMesh.field_A[var7][ResourceArchive.bitAnd(255, (int)(this.field_k[ResourceArchive.bitAnd(7, -var7 + var3Lifetime2Lifetime2)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -205,7 +205,7 @@ final class WhirlpoolHasher {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = GameApplet.a(this.field_l[var2Lifetime3], GameApplet.a(this.field_b[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = GameApplet.bitXorLong(this.field_l[var2Lifetime3], GameApplet.bitXorLong(this.field_b[var2Lifetime3], this.field_k[var2Lifetime3]));
         }
     }
 

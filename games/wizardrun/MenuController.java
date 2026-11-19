@@ -17,7 +17,7 @@ abstract class MenuController {
     static String field_i;
     private int field_d;
 
-    private final void a(int param0, byte param1) {
+    private final void handleMenuKey(int param0, byte param1) {
         int var4 = wizardrun.field_H;
         if (param1 != 81) {
           this.activateMenuItem(-42, -78);
@@ -80,7 +80,7 @@ abstract class MenuController {
         int var3;
         var3 = wizardrun.field_H;
         if (param0 != 0) {
-          this.a(123, (byte) -33);
+          this.handleMenuKey(123, (byte) -33);
         }
         if (this.field_m) {
           return;
@@ -95,7 +95,7 @@ abstract class MenuController {
             if (this.field_a < 0) {
               return;
             }
-            this.a(this.field_a, (byte) 81);
+            this.handleMenuKey(this.field_a, (byte) 81);
             return;
           }
           this.field_a = this.field_a + 1;
@@ -158,20 +158,20 @@ abstract class MenuController {
           if (var2Lifetime3 == -1) {
             return;
           }
-          this.a(AchievementSubmission.field_n, var2Lifetime3, -this.field_d + (NetworkArchiveRequest.field_B - this.field_c * var2Lifetime3), BrowserUrlLauncher.field_c, true, false);
+          this.handleMenuPointer(AchievementSubmission.field_n, var2Lifetime3, -this.field_d + (NetworkArchiveRequest.field_B - this.field_c * var2Lifetime3), BrowserUrlLauncher.field_c, true, false);
           return;
         }
         var2Lifetime1 = this.hitTestOption(MouseInputHandler.field_e, param0 - 57, EmailDomainHelpers.field_b);
         this.field_a = var2Lifetime1;
         if (var2Lifetime1 != -1) {
           this.field_m = true;
-          this.a(MouseInputHandler.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + EmailDomainHelpers.field_b - this.field_d, UiThemeSetupHelpers.field_c, false, false);
+          this.handleMenuPointer(MouseInputHandler.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + EmailDomainHelpers.field_b - this.field_d, UiThemeSetupHelpers.field_c, false, false);
           return;
         }
         this.field_m = false;
     }
 
-    void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+    void handleMenuPointer(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         int var8;
         var8 = wizardrun.field_H;
         if (!param4) {
@@ -195,7 +195,7 @@ abstract class MenuController {
         if (!param5) {
           return;
         }
-        this.a(-72, -13, 38, -1, true, true);
+        this.handleMenuPointer(-72, -13, 38, -1, true, true);
     }
 
     abstract void drawMenuItem(int param0, boolean param1, int param2, byte param3);

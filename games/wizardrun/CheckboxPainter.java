@@ -21,7 +21,7 @@ final class CheckboxPainter implements WidgetRenderer {
     private int field_c;
     private int field_m;
 
-    final static String a(int param0) {
+    final static String readAccountResponseString(int param0) {
         if (param0 >= -29) {
           return (String) null;
         }
@@ -70,7 +70,7 @@ final class CheckboxPainter implements WidgetRenderer {
             return;
           }
           var10 = this.field_i + this.field_l + this.field_m;
-          this.field_j.a(param2.text, param2.x + param0 + var10, this.field_o + param1 + param2.y, -this.field_i - (var10 - param2.width), param2.height - (this.field_i << 1), this.field_r, this.field_e, this.field_k, this.field_q, 0);
+          this.field_j.drawParagraph(param2.text, param2.x + param0 + var10, this.field_o + param1 + param2.y, -this.field_i - (var10 - param2.width), param2.height - (this.field_i << 1), this.field_r, this.field_e, this.field_k, this.field_q, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,9 +101,9 @@ final class CheckboxPainter implements WidgetRenderer {
         field_f = null;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAsciiDigit(char param0, int param1) {
         if (param1 != -5717) {
-          CheckboxPainter.a(-107);
+          CheckboxPainter.readAccountResponseString(-107);
           if (param0 < 48) {
             return false;
           }

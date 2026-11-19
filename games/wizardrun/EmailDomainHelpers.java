@@ -59,7 +59,7 @@ final class EmailDomainHelpers {
               return stackIn_18_0;
             }
           }
-          stackIn_21_0 = GameShell.b(var3[var3.length - 1], (byte) -125);
+          stackIn_21_0 = GameShell.validateEmailTopLevelDomain(var3[var3.length - 1], (byte) -125);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ final class EmailDomainHelpers {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasCanvasFocus(int param0) {
         if (param0 != 255) {
           return true;
         }

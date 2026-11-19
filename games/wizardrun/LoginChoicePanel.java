@@ -86,11 +86,11 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.x + param0;
         int var6 = this.y + param3;
-        Crc32Helpers.field_b.a(RankingStatsDecoder.field_c, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
+        Crc32Helpers.field_b.drawParagraph(RankingStatsDecoder.field_c, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, Crc32Helpers.field_b.field_M);
         super.drawLayer(param0, param1, param2, param3);
     }
 
-    final static void h(byte param0) {
+    final static void resetAccountWorkflow(byte param0) {
         DialogLayer.field_J = false;
         WrappedTextLayout.field_i = false;
         OpacityWidget.setAccountWorkflowState((byte) 79, -1);
@@ -113,13 +113,13 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         var7 = wizardrun.field_H;
         try {
           if (this.field_H == param1) {
-            Js5Index.a(-1);
+            Js5Index.showEmptyLoginForm(-1);
           } else {
             if (param1 == this.field_K) {
               UiThemeSetupHelpers.showAccountCreationForm(-1);
             } else {
               if (param1 == this.field_J) {
-                IndexedSpriteState.a(55);
+                IndexedSpriteState.showLoginWorkflow(55);
               }
             }
           }

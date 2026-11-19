@@ -13,7 +13,7 @@ final class AchievementSubmission extends IntrusiveNode {
     static int field_n;
     private int field_k;
 
-    final static int d(byte param0) {
+    final static int processMenuScreenInput(byte param0) {
         int stackIn_23_0 = 0;
         int stackIn_29_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -38,7 +38,7 @@ final class AchievementSubmission extends IntrusiveNode {
             }
             var2 = 1;
           }
-          IntegerSyntaxHelpers.field_d.updatePointer(DisplayModeInfo.a(-578629823, field_n, NetworkArchiveRequest.field_B), 83, DisplayModeInfo.a(-578629823, MouseInputHandler.field_e, EmailDomainHelpers.field_b));
+          IntegerSyntaxHelpers.field_d.updatePointer(DisplayModeInfo.hitTestMenuOption(-578629823, field_n, NetworkArchiveRequest.field_B), 83, DisplayModeInfo.hitTestMenuOption(-578629823, MouseInputHandler.field_e, EmailDomainHelpers.field_b));
           if (IntegerSyntaxHelpers.field_d.wasActivated(param0 + 47)) {
             var1_int = 1;
           }
@@ -66,7 +66,7 @@ final class AchievementSubmission extends IntrusiveNode {
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               var3 = 2;
-              TriangleMesh.a(true, 5, 15991);
+              TriangleMesh.configureMenuScreen(true, 5, 15991);
             }
           }
           stackIn_29_0 = var3;

@@ -52,7 +52,7 @@ final class ValidationIndicator extends TextButton {
           var10 = var15.fullHeight << 1;
           if (null == SoundCache.field_d) {
             SoundCache.field_d = new Sprite(var9, var10);
-            UrlPacketDownloader.a(SoundCache.field_d, false);
+            UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
             var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_K << 10, 4096);
             UsernameLoginCredentials.popRasterState(4);
             SoundCache.field_d.drawAdditive(var5 - var15.fullWidth, var6 - var15.fullHeight, 256);
@@ -60,14 +60,14 @@ final class ValidationIndicator extends TextButton {
           }
           if (SoundCache.field_d.width < var9) {
             SoundCache.field_d = new Sprite(var9, var10);
-            UrlPacketDownloader.a(SoundCache.field_d, false);
+            UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
             var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_K << 10, 4096);
             UsernameLoginCredentials.popRasterState(4);
             SoundCache.field_d.drawAdditive(var5 - var15.fullWidth, var6 - var15.fullHeight, 256);
             return;
           }
           if (SoundCache.field_d.height >= var10) {
-            UrlPacketDownloader.a(SoundCache.field_d, false);
+            UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
             SoftwareRasterizer.clear();
             var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_K << 10, 4096);
             UsernameLoginCredentials.popRasterState(4);
@@ -75,7 +75,7 @@ final class ValidationIndicator extends TextButton {
             return;
           }
           SoundCache.field_d = new Sprite(var9, var10);
-          UrlPacketDownloader.a(SoundCache.field_d, false);
+          UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
           var15.drawRotatedAboutPivot(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_K << 10, 4096);
           UsernameLoginCredentials.popRasterState(4);
           SoundCache.field_d.drawAdditive(var5 - var15.fullWidth, var6 - var15.fullHeight, 256);
@@ -87,7 +87,7 @@ final class ValidationIndicator extends TextButton {
           var10Lifetime1 = var18.fullHeight << 1;
           if (null == SoundCache.field_d) {
             SoundCache.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
-            UrlPacketDownloader.a(SoundCache.field_d, false);
+            UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
             var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_K << 10, 4096);
             UsernameLoginCredentials.popRasterState(4);
             SoundCache.field_d.drawAdditive(var5 - var18.fullWidth, var6 - var18.fullHeight, 256);
@@ -95,14 +95,14 @@ final class ValidationIndicator extends TextButton {
           }
           if (SoundCache.field_d.width < var9Lifetime1) {
             SoundCache.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
-            UrlPacketDownloader.a(SoundCache.field_d, false);
+            UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
             var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_K << 10, 4096);
             UsernameLoginCredentials.popRasterState(4);
             SoundCache.field_d.drawAdditive(var5 - var18.fullWidth, var6 - var18.fullHeight, 256);
             return;
           }
           if (SoundCache.field_d.height >= var10Lifetime1) {
-            UrlPacketDownloader.a(SoundCache.field_d, false);
+            UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
             SoftwareRasterizer.clear();
             var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_K << 10, 4096);
             UsernameLoginCredentials.popRasterState(4);
@@ -110,7 +110,7 @@ final class ValidationIndicator extends TextButton {
             return;
           }
           SoundCache.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
-          UrlPacketDownloader.a(SoundCache.field_d, false);
+          UrlPacketDownloader.pushSpriteRaster(SoundCache.field_d, false);
           var18.drawRotatedAboutPivot(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.field_K << 10, 4096);
           UsernameLoginCredentials.popRasterState(4);
           SoundCache.field_d.drawAdditive(var5 - var18.fullWidth, var6 - var18.fullHeight, 256);

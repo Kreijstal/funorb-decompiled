@@ -74,7 +74,7 @@ class TextButton extends UiWidget {
         this(param0, ValidationIndicator.field_H.field_c, param1);
     }
 
-    final static NameAvailabilityRequest a(int param0, String param1) {
+    final static NameAvailabilityRequest requestNameAvailability(int param0, String param1) {
         RuntimeException var2 = null;
         NameAvailabilityRequest stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -158,7 +158,7 @@ class TextButton extends UiWidget {
             ((ButtonPressListener) (this.listener)).onPressedChanged((UiWidget) (this), param1 ^ -19983, this.focused);
           }
           if (param1 != 8) {
-            TextButton.a(92);
+            TextButton.getAccountPassword(92);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -231,7 +231,7 @@ class TextButton extends UiWidget {
 
     final boolean isFocused(byte param0) {
         if (param0 != 53) {
-          TextButton.a(49);
+          TextButton.getAccountPassword(49);
           return this.focused;
         }
         return this.focused;
@@ -270,7 +270,7 @@ class TextButton extends UiWidget {
         }
     }
 
-    final static String a(int param0) {
+    final static String getAccountPassword(int param0) {
         if (param0 != 0) {
           return (String) null;
         }
@@ -300,7 +300,7 @@ class TextButton extends UiWidget {
     public static void releaseStatics(boolean param0) {
         field_E = null;
         if (!param0) {
-          TextButton.a(68);
+          TextButton.getAccountPassword(68);
         }
     }
 

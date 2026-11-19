@@ -57,7 +57,7 @@ class IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;
             }
-            IndexedSpriteState.a((byte) 121, param1);
+            IndexedSpriteState.updateBrowserNavigationLinks((byte) 121, param1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

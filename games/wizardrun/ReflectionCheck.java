@@ -27,7 +27,7 @@ final class ReflectionCheck extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean hasVisibleSystemDialog(byte param0) {
         if (param0 != -35) {
           ReflectionCheck.releaseStatics(63);
           if (null == SystemMemoryHelpers.field_b) {
@@ -51,7 +51,7 @@ final class ReflectionCheck extends IntrusiveNode {
         field_n = null;
         field_q = null;
         if (param0 != -15563) {
-          ReflectionCheck.a((byte) 103);
+          ReflectionCheck.hasVisibleSystemDialog((byte) 103);
         }
     }
 

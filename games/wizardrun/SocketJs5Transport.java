@@ -289,7 +289,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void beginGuestLoginTransition(int param0, int param1, int param2) {
         if (param2 >= -126) {
           return;
         }
@@ -311,7 +311,7 @@ final class SocketJs5Transport extends Js5Transport {
         musicTracks = null;
         field_o = null;
         if (param0 != -1) {
-          SocketJs5Transport.a(-54, 7, -58);
+          SocketJs5Transport.beginGuestLoginTransition(-54, 7, -58);
         }
     }
 

@@ -21,7 +21,7 @@ final class LogoAnimationLoader {
           QuickChatPhraseRepository.loadLogoMeshes(125, param0);
           IntrusiveNodeHashTable.loadEndingFrame(param0, (byte) 1);
           RankingStatsRequest.buildSpecularTable(256);
-          TimedValidator.c(350);
+          TimedValidator.prepareLogoBlur(350);
           DualLinkNodeHashTable.field_f = 0 - WidgetContainer.field_B;
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

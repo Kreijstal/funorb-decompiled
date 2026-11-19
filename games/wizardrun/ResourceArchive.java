@@ -352,7 +352,7 @@ final class ResourceArchive {
                 var18Lifetime2 = var17Lifetime3;
               }
               if (0 == this.discardUnpackedMode) {
-                var7[var18Lifetime2] = MeshLightingHelpers.a(var40[var17Lifetime3], 0, false);
+                var7[var18Lifetime2] = MeshLightingHelpers.wrapBytes(var40[var17Lifetime3], 0, false);
               } else {
                 var7[var18Lifetime2] = var40[var17Lifetime3];
               }
@@ -366,7 +366,7 @@ final class ResourceArchive {
             if (this.discardUnpackedMode != 0) {
               var7[var11] = var43;
             } else {
-              var7[var11] = MeshLightingHelpers.a(var36, 0, false);
+              var7[var11] = MeshLightingHelpers.wrapBytes(var36, 0, false);
             }
           }
           return true;
@@ -746,7 +746,7 @@ final class ResourceArchive {
           return;
         }
         if (!this.discardPacked) {
-          this.packedGroups[param0] = MeshLightingHelpers.a(this.provider.getGroupData((byte) -23, param0), 0, false);
+          this.packedGroups[param0] = MeshLightingHelpers.wrapBytes(this.provider.getGroupData((byte) -23, param0), 0, false);
         } else {
           this.packedGroups[param0] = this.provider.getGroupData((byte) -22, param0);
         }

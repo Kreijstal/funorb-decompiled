@@ -35,7 +35,7 @@ final class OpacityWidget extends SingleChildWidget {
         }
         if (this.opacity != 256) {
           var6 = new Sprite(this.field_F.width, this.field_F.height);
-          UrlPacketDownloader.a(var6, false);
+          UrlPacketDownloader.pushSpriteRaster(var6, false);
           this.field_F.drawLayer(0, 0, param2, 0);
           UsernameLoginCredentials.popRasterState(4);
           var6.drawAlpha(param0 + this.x, this.y + param3, this.opacity);

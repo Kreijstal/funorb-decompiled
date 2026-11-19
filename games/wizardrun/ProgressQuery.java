@@ -112,7 +112,7 @@ final class ProgressQuery extends IntrusiveNode {
           }
           if (param0.quickChatParameters != null) {
           }
-          NanoTickClock.a(0, param0);
+          NanoTickClock.appendChatMessage(0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

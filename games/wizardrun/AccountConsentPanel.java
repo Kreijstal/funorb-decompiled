@@ -24,7 +24,7 @@ final class AccountConsentPanel extends WidgetContainer implements HotspotClickL
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.continueButton == param1) {
-            ConfirmedEmailValidator.f(92682);
+            ConfirmedEmailValidator.beginCreatedAccountLogin(92682);
             this.progressDialog.closeProgressDialog(param0 - 8792);
           }
           if (param0 == -18905) {
@@ -153,7 +153,7 @@ final class AccountConsentPanel extends WidgetContainer implements HotspotClickL
           var6 = -86 / ((18 - param3) / 59);
           var4_int = param0.getGroupId(-1, param1);
           var5 = param0.getFileId(var4_int, param2, -11986);
-          stackIn_1_0 = ArchiveRequest.a(param0, var5, -26955, var4_int);
+          stackIn_1_0 = ArchiveRequest.loadIndexedSpriteStrip(param0, var5, -26955, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

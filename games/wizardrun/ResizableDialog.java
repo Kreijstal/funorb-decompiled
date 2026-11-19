@@ -44,7 +44,7 @@ abstract class ResizableDialog extends FadingDialog {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = ThrowableFormattingHelpers.a(param0, (byte) -91);
+              var3 = ThrowableFormattingHelpers.formatCompactStackTrace(param0, (byte) -91);
             }
             if (param1 != null) {
               if (param0 != null) {
@@ -220,8 +220,8 @@ abstract class ResizableDialog extends FadingDialog {
           var7Lifetime1++;
         }
         DisplayNameSyntaxHelpers.field_d.drawTransparent(-90 + (this.width + param0), param2 + 10);
-        AccountFormTextHelpers.a(5 + param0, param2 + 35, -10 + this.width, (byte) -106, ValidationState.field_a);
-        AccountFormTextHelpers.a(param0, param2 - (-this.height + 22), this.width, (byte) -114, NanoTickClock.field_i);
+        AccountFormTextHelpers.drawThreePieceFrame(5 + param0, param2 + 35, -10 + this.width, (byte) -106, ValidationState.field_a);
+        AccountFormTextHelpers.drawThreePieceFrame(param0, param2 - (-this.height + 22), this.width, (byte) -114, NanoTickClock.field_i);
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var4Lifetime2 = this.height - 79;

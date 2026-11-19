@@ -97,7 +97,7 @@ final class WeightedLruCache {
             var6_int = param2.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = 2 + var6_int; var3_int > var5; var5++) {
-                if (CheckboxPainter.a(param2.charAt(var5), -5717)) {
+                if (CheckboxPainter.isAsciiDigit(param2.charAt(var5), -5717)) {
                   continue;
                 }
                 break;
@@ -134,7 +134,7 @@ final class WeightedLruCache {
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (CheckboxPainter.a(param2.charAt(var5Lifetime1), -5717)) {
+              if (CheckboxPainter.isAsciiDigit(param2.charAt(var5Lifetime1), -5717)) {
                 continue;
               }
               break;
@@ -289,7 +289,7 @@ final class WeightedLruCache {
         throw new Error();
     }
 
-    final static void a(RankingRequest param0, int param1, byte param2) {
+    final static void writeRankingRequest(RankingRequest param0, int param1, byte param2) {
         IsaacPacketBuffer var3 = null;
         if (param2 > -71) {
           return;
@@ -308,11 +308,11 @@ final class WeightedLruCache {
         if (LoginChoicePanel.field_E == null) {
           return;
         }
-        EmailLoginCredentials.a(LoginChoicePanel.field_E, 8053);
+        EmailLoginCredentials.detachCanvasInput(LoginChoicePanel.field_E, 8053);
         LoginChoicePanel.field_E.disposeFullscreen(MusicPatchLoader.field_g, (byte) 19);
         LoginChoicePanel.field_E = null;
         if (StringPaddingHelpers.field_c != null) {
-          StringPaddingHelpers.field_c.a(127);
+          StringPaddingHelpers.field_c.restorePreviousSize(127);
         }
         wizardrun.field_G.requestFocus();
         if (param0 != 60) {

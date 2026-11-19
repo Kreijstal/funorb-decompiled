@@ -40,7 +40,7 @@ final class StripedProgressBar extends UiWidget {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        UrlPacketDownloader.a(var14, false);
+        UrlPacketDownloader.pushSpriteRaster(var14, false);
         int var5 = this.height >> 1;
         if (param2 != -11) {
           return (Sprite) null;
@@ -94,7 +94,7 @@ final class StripedProgressBar extends UiWidget {
           }
           UsernameLoginCredentials.popRasterState(4);
           if (SoftwareRasterizer.clipLeft <= param2 + this.field_D.width) {
-            UrlPacketDownloader.a(this.field_K, false);
+            UrlPacketDownloader.pushSpriteRaster(this.field_K, false);
             param0.drawTransparent(-this.field_A, 0);
             param0.drawTransparent(this.field_J * 2 - this.field_A, 0);
             this.field_y.drawMultiply(0, 0);
@@ -102,7 +102,7 @@ final class StripedProgressBar extends UiWidget {
             this.field_K.drawTransparent(param2, param1);
           }
           if (var5_int - this.field_D.width <= SoftwareRasterizer.clipRight) {
-            UrlPacketDownloader.a(this.field_K, false);
+            UrlPacketDownloader.pushSpriteRaster(this.field_K, false);
             for (var7 = this.width - this.field_D.width + this.field_A; this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
             }
             param0.drawTransparent(-var7, 0);
@@ -138,7 +138,7 @@ final class StripedProgressBar extends UiWidget {
         if (param0 != 10706) {
           return (Sprite) null;
         }
-        UrlPacketDownloader.a(var3, false);
+        UrlPacketDownloader.pushSpriteRaster(var3, false);
         for (var4 = 0; var4 < this.height; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
             var6 = (double)var5 * (double)var5 / (double)((this.height - var4) * var4);
@@ -241,7 +241,7 @@ final class StripedProgressBar extends UiWidget {
         }
     }
 
-    final static boolean g(byte param0) {
+    final static boolean supportsAccountReconnect(byte param0) {
         int var1 = -126 % ((param0 + 10) / 63);
         return true;
     }

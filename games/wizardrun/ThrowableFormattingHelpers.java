@@ -9,12 +9,12 @@ final class ThrowableFormattingHelpers {
     static boolean field_c;
     static int[] field_a;
 
-    final static int a(byte param0) {
+    final static int getMouseIdleTime(byte param0) {
         int var1 = 36 / ((param0 + 19) / 45);
         return CoverageFontLoader.mouseIdleTime;
     }
 
-    final static SocketConnector a(String param0, int param1, int param2) {
+    final static SocketConnector createSocketConnector(String param0, int param1, int param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         SocketConnector stackIn_2_0 = null;
@@ -47,7 +47,7 @@ final class ThrowableFormattingHelpers {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           param0.removeKeyListener(HotspotTextWidget.keyHandler);
           if (param1 <= 91) {
@@ -60,7 +60,7 @@ final class ThrowableFormattingHelpers {
         }
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String formatCompactStackTrace(Throwable param0, byte param1) throws IOException {
         String var2;
         PrintWriter var4;
         int var9;
@@ -198,7 +198,7 @@ final class ThrowableFormattingHelpers {
           }
         }
         var14 = (java.awt.Component) null;
-        ThrowableFormattingHelpers.a((java.awt.Component) null, (byte) -41);
+        ThrowableFormattingHelpers.detachKeyboardListeners((java.awt.Component) null, (byte) -41);
         var29 = var16.toString();
         var11Lifetime2 = var29;
         var2Lifetime2 = var11Lifetime2;

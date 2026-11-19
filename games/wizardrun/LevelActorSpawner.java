@@ -5,7 +5,7 @@ final class LevelActorSpawner {
     static AccountConnectionState field_a;
     static ResourceArchive field_b;
 
-    final static void b(int param0) {
+    final static void clearFaceBucketCounts(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -37,7 +37,7 @@ final class LevelActorSpawner {
         }
     }
 
-    final static void c(int param0) {
+    final static void spawnLevelEnemies(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;

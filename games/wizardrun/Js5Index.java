@@ -255,7 +255,7 @@ final class Js5Index {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void showEmptyLoginForm(int param0) {
         if (param0 != -1) {
           field_d = (AudioOutput) null;
         }
@@ -306,7 +306,7 @@ final class Js5Index {
             Js5Index.releaseStatics(61);
           }
           var5 = param2.getFileId(var4_int, param3, -11986);
-          stackIn_3_0 = TimedValidator.a(var5, param2, 13469, var4_int);
+          stackIn_3_0 = TimedValidator.loadSpriteStripById(var5, param2, 13469, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

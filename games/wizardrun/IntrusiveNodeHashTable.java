@@ -84,7 +84,7 @@ final class IntrusiveNodeHashTable {
         field_c = null;
         field_h = null;
         if (param0 != 1) {
-          IntrusiveNodeHashTable.a((byte) -30);
+          IntrusiveNodeHashTable.initializeMainMenuLabels((byte) -30);
           field_b = null;
           return;
         }
@@ -175,7 +175,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeMainMenuLabels(byte param0) {
         if (param0 == -69) {
           EditableTextWidget.field_R = new String[8];
           EditableTextWidget.field_R[7] = FriendLookupState.field_e;

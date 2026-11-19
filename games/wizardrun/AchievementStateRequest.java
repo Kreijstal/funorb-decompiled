@@ -14,7 +14,7 @@ final class AchievementStateRequest extends IntrusiveNode {
         field_k = null;
     }
 
-    final static void a(byte param0, byte[] param1, int[] param2, int param3, int param4) {
+    final static void distributeFacesBySortKey(byte param0, byte[] param1, int[] param2, int param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -34,7 +34,7 @@ final class AchievementStateRequest extends IntrusiveNode {
         try {
           if (param0 >= -91) {
             var8 = (int[]) null;
-            AchievementStateRequest.a((byte) 19, (byte[]) null, (int[]) null, 2, 7);
+            AchievementStateRequest.distributeFacesBySortKey((byte) 19, (byte[]) null, (int[]) null, 2, 7);
           }
           var5_int = 0;
           while (true) {

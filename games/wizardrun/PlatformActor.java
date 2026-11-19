@@ -35,7 +35,7 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void a(boolean param0, int param1, LevelData param2) {
+    private final void updateDefeatedEnemy(boolean param0, int param1, LevelData param2) {
         int var6 = 0;
         Object stackIn_88_0 = null;
         int stackIn_89_1 = 0;
@@ -131,7 +131,7 @@ final class PlatformActor extends GridActor {
                 var4_intLifetime2 = 5;
                 var5 = 20;
                 if (!GameApplet.field_g) {
-                  HuffmanDecoder.a(1, 245, 10);
+                  HuffmanDecoder.unlockAchievement(1, 245, 10);
                 }
               }
               for (var6 = 0; var6 < var5; var6++) {
@@ -208,15 +208,15 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void d(int param0) {
+    private final void recordHalloweenPickup(int param0) {
         boolean discarded$0 = false;
         HighscoreRequest.field_r = HighscoreRequest.field_r - 1;
         if (param0 != -1569) {
           LevelData var3 = (LevelData) null;
-          discarded$0 = this.a(false, (LevelData) null, 6);
+          discarded$0 = this.updateEnemyAttack(false, (LevelData) null, 6);
         }
         if (!(155 < HighscoreRequest.field_r)) {
-          HuffmanDecoder.a(param0 ^ -1570, 244, 11);
+          HuffmanDecoder.unlockAchievement(param0 ^ -1570, 244, 11);
         }
     }
 
@@ -226,7 +226,7 @@ final class PlatformActor extends GridActor {
         field_u = null;
     }
 
-    private final void b(int param0) {
+    private final void collectPickupOrPopEnemy(int param0) {
         boolean stackIn_34_0 = false;
         GridPoint var3;
         GridPoint var4;
@@ -239,7 +239,7 @@ final class PlatformActor extends GridActor {
         var3.column = NameAvailabilityFactory.field_e[0].field_y;
         var3.row = NameAvailabilityFactory.field_e[0].field_A;
         if (param0 != 5) {
-          this.d(69);
+          this.recordHalloweenPickup(69);
         }
         if (NameAvailabilityFactory.field_e[0].field_s == 0 &&
           this.field_q != null &&
@@ -250,8 +250,8 @@ final class PlatformActor extends GridActor {
               BufferedSocket.field_c = BufferedSocket.field_c + 640;
               DiskCacheStore.field_f = DiskCacheStore.field_f + 10;
               if (GridActor.field_l == 5 &&
-                ErrorReportingHelpers.a((byte) 110, 0)) {
-                this.d(-1569);
+                ErrorReportingHelpers.isClientFlagEnabled((byte) 110, 0)) {
+                this.recordHalloweenPickup(-1569);
               }
             }
             if (this.field_o == 1) {
@@ -262,8 +262,8 @@ final class PlatformActor extends GridActor {
               LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - 3200;
               DiskCacheStore.field_f = DiskCacheStore.field_f + 50;
               if (5 == GridActor.field_l &&
-                ErrorReportingHelpers.a((byte) 89, 0)) {
-                this.d(param0 ^ -1574);
+                ErrorReportingHelpers.isClientFlagEnabled((byte) 89, 0)) {
+                this.recordHalloweenPickup(param0 ^ -1574);
               }
             }
             if (this.field_o == 3) {
@@ -359,28 +359,28 @@ final class PlatformActor extends GridActor {
               var5 = this.tileOffset.column + (240 * this.tilePosition.column + this.field_w);
               if (0 <= this.field_w &&
                 this.field_w <= 10) {
-                GridPoint.field_c.a(12 + var2, var3 + 12, -87, 128, var5);
+                GridPoint.field_c.drawRotatedScaled(12 + var2, var3 + 12, -87, 128, var5);
               }
               if (10 < this.field_w &&
                 this.field_w <= 15) {
-                GridPoint.field_c.a(12 + var2, var3 + 12, -119, 112, var5);
+                GridPoint.field_c.drawRotatedScaled(12 + var2, var3 + 12, -119, 112, var5);
               }
               if (this.field_w > 15 &&
                 20 >= this.field_w) {
-                GridPoint.field_c.a(var2 + 12, var3 + 12, -96, 96, var5);
+                GridPoint.field_c.drawRotatedScaled(var2 + 12, var3 + 12, -96, 96, var5);
               }
               if (this.field_w > 20) {
                 if (this.field_w <= 25) {
-                  GridPoint.field_c.a(12 + var2, var3 + 12, -106, 80, var5);
+                  GridPoint.field_c.drawRotatedScaled(12 + var2, var3 + 12, -106, 80, var5);
                 }
                 if (this.field_w > 25 &&
                   30 >= this.field_w) {
-                  GridPoint.field_c.a(12 + var2, 12 + var3, -121, 64, var5);
+                  GridPoint.field_c.drawRotatedScaled(12 + var2, 12 + var3, -121, 64, var5);
                 }
               } else {
                 if (this.field_w > 25 &&
                   30 >= this.field_w) {
-                  GridPoint.field_c.a(12 + var2, 12 + var3, -121, 64, var5);
+                  GridPoint.field_c.drawRotatedScaled(12 + var2, 12 + var3, -121, 64, var5);
                 }
               }
               this.field_q = GridPoint.field_c;
@@ -518,7 +518,7 @@ final class PlatformActor extends GridActor {
                             if ((this.field_o == 0 ||
                               this.field_o == 2) &&
                               (GridActor.field_l == 5 &&
-                              ErrorReportingHelpers.a((byte) 123, 0))) {
+                              ErrorReportingHelpers.isClientFlagEnabled((byte) 123, 0))) {
                               GameGraphicsResources.gemSprites[8].drawTransparent(var2, var3);
                             } else {
                               GameGraphicsResources.gemSprites[this.field_o].drawTransparent(var2, var3);
@@ -827,15 +827,15 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void c(int param0) {
+    private final void playEnemyHitSound(int param0) {
         FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[10], 100, StyleNode.field_p * 256 / 100);
         if (param0 != 1) {
           LevelData var3 = (LevelData) null;
-          this.a(-123, (byte) -40, (LevelData) null, true);
+          this.updateBouncingEnemy(-123, (byte) -40, (LevelData) null, true);
         }
     }
 
-    private final boolean a(boolean param0, LevelData param1, int param2) {
+    private final boolean updateEnemyAttack(boolean param0, LevelData param1, int param2) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -851,12 +851,12 @@ final class PlatformActor extends GridActor {
             if (this.field_p > 0) {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(param2 ^ 24);
+                this.playEnemyHitSound(param2 ^ 24);
               }
             } else {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(false);
+                this.playEnemyDeathSound(false);
               }
             }
             if (0 >= this.field_p) {
@@ -907,7 +907,7 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void a(int param0, byte param1, LevelData param2, boolean param3) {
+    private final void updateBouncingEnemy(int param0, byte param1, LevelData param2, boolean param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
@@ -964,7 +964,7 @@ final class PlatformActor extends GridActor {
           if (this.verticalVelocity == 0) {
             this.verticalVelocity = 20;
           }
-          this.a(1, BufferedRandomAccessFile.soundEffects, param2, 1, param0, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
+          this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param2, 1, param0, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
           if (this.field_s > 0 &&
             !param3) {
             this.field_s = this.field_s - 1;
@@ -972,11 +972,11 @@ final class PlatformActor extends GridActor {
             if (0 >= this.field_p) {
               if (ReflectionCheck.field_s &&
                 !param3) {
-                this.c(false);
+                this.playEnemyDeathSound(false);
               }
             } else {
               if (ReflectionCheck.field_s) {
-                this.c(1);
+                this.playEnemyHitSound(1);
               }
             }
             if (this.field_p <= 0) {
@@ -999,7 +999,7 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void a(int param0, LevelData param1) {
+    private final void updateCapturedEnemy(int param0, LevelData param1) {
         this.verticalVelocity = this.verticalVelocity + 1;
         this.field_w = this.field_w + 1;
         if (this.field_w > 1000) {
@@ -1009,8 +1009,8 @@ final class PlatformActor extends GridActor {
             FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[6], 100, StyleNode.field_p * 256 / 100);
           }
         }
-        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -57);
-        if (1 == this.b(param1, -4) &&
+        this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -57);
+        if (1 == this.getGroundSupport(param1, -4) &&
           this.tileOffset.row == 0) {
           this.verticalVelocity = 20;
           if (ReflectionCheck.field_s) {
@@ -1023,13 +1023,13 @@ final class PlatformActor extends GridActor {
           return;
         }
         try {
-          this.b(5);
+          this.collectPickupOrPopEnemy(5);
         } catch (RuntimeException runtimeException) {
           throw ExceptionSupport.wrapException((Throwable) ((Object) runtimeException), "eg.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void e(boolean param0) {
+    private final void damageWizardOnContact(boolean param0) {
         GridPoint var2;
         GridPoint var3;
         GridPoint var4;
@@ -1052,7 +1052,7 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void playEnemyDeathSound(boolean param0) {
         String var3;
         AccountSocketHelpers.field_e = true;
         if (3 == this.actorType) {
@@ -1336,7 +1336,7 @@ final class PlatformActor extends GridActor {
                 }
                 if (ProgressQuery.field_m.field_f &&
                   0 == this.tileOffset.row &&
-                  this.b(param1, param0 + 119) == 1) {
+                  this.getGroundSupport(param1, param0 + 119) == 1) {
                   this.verticalVelocity = 70;
                   if (ReflectionCheck.field_s) {
                     FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[3], 100, StyleNode.field_p * 256 / 100);
@@ -1370,7 +1370,7 @@ final class PlatformActor extends GridActor {
                   this.animationFrame = 1;
                 }
                 if (!(0 >= this.tileOffset.row) ||
-                  this.b(param1, param0 ^ 121) == 0) {
+                  this.getGroundSupport(param1, param0 ^ 121) == 0) {
                   if (this.verticalVelocity > 0) {
                     this.animationFrame = 9;
                   }
@@ -1395,7 +1395,7 @@ final class PlatformActor extends GridActor {
                   10 < this.verticalVelocity) {
                   this.verticalVelocity = this.verticalVelocity - 4;
                 }
-                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, var3_int, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -104);
+                this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, var3_int, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -104);
                 if (!ProgressQuery.field_m.field_d) {
                   if (ValidatedTextField.field_V < 10) {
                     if (NetworkArchiveRequest.field_x > 0 &&
@@ -1571,7 +1571,7 @@ final class PlatformActor extends GridActor {
             } else {
               if (var4 == 1) {
                 if (this.verticalVelocity <= 0 &&
-                  1 == this.b(param1, param0 + 119) &&
+                  1 == this.getGroundSupport(param1, param0 + 119) &&
                   0 == this.tileOffset.row) {
                   this.verticalVelocity = 30;
                   if (this.tilePosition.column >= 0 &&
@@ -1584,7 +1584,7 @@ final class PlatformActor extends GridActor {
                 }
                 this.field_w = this.field_w + 1;
                 if (this.field_w <= 2) {
-                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -73);
+                  this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -73);
                   if (!AchievementSubmission.field_q) {
                     for (var4 = 0; WidgetTheme.field_k > var4; var4++) {
                       if (NameAvailabilityFactory.field_e[var4].field_p > 0 &&
@@ -1635,7 +1635,7 @@ final class PlatformActor extends GridActor {
                       var4_ref_eg.field_h = this.field_h;
                     }
                     this.tilePosition.row = this.tilePosition.row + 1;
-                    this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 29);
+                    this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 29);
                     for (var4 = 0; var4 < WidgetTheme.field_k; var4++) {
                       if (NameAvailabilityFactory.field_e[var4].field_p > 0 &&
                         this.field_q != null &&
@@ -1694,10 +1694,10 @@ final class PlatformActor extends GridActor {
                       24 != var4) {
                       if (var4 == 5) {
                         if (this.field_p <= 0) {
-                          this.a(false, param0 + 243, param1);
+                          this.updateDefeatedEnemy(false, param0 + 243, param1);
                         } else {
                           if (this.field_r != 0) {
-                            this.a(77, param1);
+                            this.updateCapturedEnemy(77, param1);
                           } else {
                             if (this.field_x == 0) {
                               this.animationFrame = 19;
@@ -1716,19 +1716,19 @@ final class PlatformActor extends GridActor {
                               }
                             }
                             if (this.field_x == 2) {
-                              this.a(false, param0 ^ -109, 25, param1);
+                              this.updateRisingEnemy(false, param0 ^ -109, 25, param1);
                             }
                             if (this.field_x == 3) {
-                              this.a(15, -74, false, param1);
+                              this.updateLandingEnemy(15, -74, false, param1);
                             }
-                            this.e(false);
+                            this.damageWizardOnContact(false);
                           }
                         }
                         break regionExit1;
                       }
                       if (6 == var4) {
                         if (this.field_p <= 0) {
-                          this.a(true, param0 + 243, param1);
+                          this.updateDefeatedEnemy(true, param0 + 243, param1);
                         } else {
                           if (this.field_o == 7) {
                             this.field_z = this.field_z - 1;
@@ -1751,7 +1751,7 @@ final class PlatformActor extends GridActor {
                             }
                             UiThemeSetupHelpers.field_b = UiThemeSetupHelpers.field_b + 1;
                             if (250 >= UiThemeSetupHelpers.field_b) {
-                              this.e(false);
+                              this.damageWizardOnContact(false);
                               break regionExit1;
                             }
                             this.field_o = 0;
@@ -1783,10 +1783,10 @@ final class PlatformActor extends GridActor {
                               }
                             }
                             if (this.field_x == 2) {
-                              this.a(true, 22, 20, param1);
+                              this.updateRisingEnemy(true, 22, 20, param1);
                             }
                             if (this.field_x == 3) {
-                              this.a(20, -94, true, param1);
+                              this.updateLandingEnemy(20, -94, true, param1);
                             }
                             if (this.field_s > 0) {
                               this.field_p = this.field_p - 1;
@@ -1795,14 +1795,14 @@ final class PlatformActor extends GridActor {
                                 FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[25], 100, StyleNode.field_p * 256 / 100);
                               }
                               if (this.field_p > 0) {
-                                this.e(false);
+                                this.damageWizardOnContact(false);
                                 break regionExit1;
                               }
-                              this.c(false);
+                              this.playEnemyDeathSound(false);
                               this.verticalVelocity = 80;
                             }
                           }
-                          this.e(false);
+                          this.damageWizardOnContact(false);
                         }
                         break regionExit1;
                       }
@@ -1810,16 +1810,16 @@ final class PlatformActor extends GridActor {
                         var4 != 8) {
                         if (var4 == 10) {
                           if (this.field_p <= 0) {
-                            this.a(false, 120, param1);
+                            this.updateDefeatedEnemy(false, 120, param1);
                           } else {
                             if (this.field_r != 0) {
-                              this.a(114, param1);
+                              this.updateCapturedEnemy(114, param1);
                             } else {
                               if (0 == this.field_x) {
                                 if (this.tilePosition.row < NameAvailabilityFactory.field_e[0].tilePosition.row) {
                                   this.field_w = this.field_w + 1;
                                 }
-                                this.a(false, 2, 20, (byte) -76, param1);
+                                this.updateWalkingEnemy(false, 2, 20, (byte) -76, param1);
                                 fieldTemp$69 = this.field_w;
                                 this.field_w = this.field_w + 1;
                                 if (200 < fieldTemp$69) {
@@ -1842,24 +1842,24 @@ final class PlatformActor extends GridActor {
                                 this.animationFrame = 19;
                               }
                               if (2 == this.field_x) {
-                                this.a(false, 22, 15, param1);
+                                this.updateRisingEnemy(false, 22, 15, param1);
                                 if (this.field_x == 0) {
                                   this.field_z = 0;
                                   this.field_w = (int)(100.0 * Math.random());
                                 }
                               }
                               if (this.field_x == 3) {
-                                this.a(15, -117, false, param1);
+                                this.updateLandingEnemy(15, -117, false, param1);
                                 if (this.field_x == 0) {
                                   this.field_z = 0;
                                   this.field_w = (int)(100.0 * Math.random());
                                 }
                               }
                               if (this.field_x != 4) {
-                                this.e(false);
+                                this.damageWizardOnContact(false);
                               } else {
-                                if (!this.a(false, param1, param0 + 148)) {
-                                  this.e(false);
+                                if (!this.updateEnemyAttack(false, param1, param0 + 148)) {
+                                  this.damageWizardOnContact(false);
                                 } else {
                                   NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(param0 ^ -9154, 11, this.tilePosition);
                                   NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-82, this.tileOffset);
@@ -1872,10 +1872,10 @@ final class PlatformActor extends GridActor {
                                   WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                   stackIn_440_0 = (ReflectionCheck.field_s) ? 0 : 1;
                                   if (stackIn_440_0 == 1) {
-                                    this.e(false);
+                                    this.damageWizardOnContact(false);
                                   } else {
                                     FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, 256 * StyleNode.field_p / 100);
-                                    this.e(false);
+                                    this.damageWizardOnContact(false);
                                   }
                                 }
                               }
@@ -1884,17 +1884,17 @@ final class PlatformActor extends GridActor {
                         } else {
                           if (var4 == 11) {
                             this.verticalVelocity = 2;
-                            this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
-                            this.e(false);
+                            this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
+                            this.damageWizardOnContact(false);
                           } else {
                             if (var4 == 12) {
                               if (0 >= this.field_p) {
-                                this.a(true, 120, param1);
+                                this.updateDefeatedEnemy(true, 120, param1);
                               } else {
                                 if (UiThemeSetupHelpers.field_b >= 250) {
                                   boolean decompiledFrameRemainder0 = true;
                                   if (this.field_x == 0) {
-                                    this.a(true, 3, 30, (byte) -61, param1);
+                                    this.updateWalkingEnemy(true, 3, 30, (byte) -61, param1);
                                     if (this.tilePosition.column > 1 &&
                                       17 > this.tilePosition.column) {
                                       if (((this.field_z == 1)) &&
@@ -1934,13 +1934,13 @@ final class PlatformActor extends GridActor {
                                     }
                                   }
                                   if (this.field_x == 2) {
-                                    this.a(true, 22, 0, param1);
+                                    this.updateRisingEnemy(true, 22, 0, param1);
                                   }
                                   if (this.field_x == 3) {
-                                    this.a(0, param0 + 31, true, param1);
+                                    this.updateLandingEnemy(0, param0 + 31, true, param1);
                                   }
                                   if (0 >= this.field_s) {
-                                    this.e(false);
+                                    this.damageWizardOnContact(false);
                                     break regionExit1;
                                   }
                                   this.field_p = this.field_p - 1;
@@ -1969,7 +1969,7 @@ final class PlatformActor extends GridActor {
                                     FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[25], 100, 256 * StyleNode.field_p / 100);
                                   }
                                   if (this.field_p <= 0) {
-                                    this.c(false);
+                                    this.playEnemyDeathSound(false);
                                     this.verticalVelocity = 70;
                                   }
                                 } else {
@@ -1994,21 +1994,21 @@ final class PlatformActor extends GridActor {
                                   }
                                   UiThemeSetupHelpers.field_b = UiThemeSetupHelpers.field_b + 1;
                                 }
-                                this.e(false);
+                                this.damageWizardOnContact(false);
                               }
                             } else {
                               if (14 == var4) {
                                 if (this.field_p <= 0) {
-                                  this.a(false, 120, param1);
+                                  this.updateDefeatedEnemy(false, 120, param1);
                                 } else {
                                   if (this.field_r != 0) {
-                                    this.a(54, param1);
+                                    this.updateCapturedEnemy(54, param1);
                                   } else {
                                     if (this.field_x == 0) {
                                       if (this.tilePosition.row < NameAvailabilityFactory.field_e[0].tilePosition.row) {
                                         this.field_w = this.field_w + 1;
                                       }
-                                      this.a(false, 1, 20, (byte) -66, param1);
+                                      this.updateWalkingEnemy(false, 1, 20, (byte) -66, param1);
                                       fieldTemp$67 = this.field_w;
                                       this.field_w = this.field_w + 1;
                                       if (fieldTemp$67 > 200) {
@@ -2033,32 +2033,32 @@ final class PlatformActor extends GridActor {
                                       this.animationFrame = 19;
                                     }
                                     if (2 == this.field_x) {
-                                      this.a(false, 22, 16, param1);
+                                      this.updateRisingEnemy(false, 22, 16, param1);
                                       if (this.field_x == 0) {
                                         this.field_w = (int)(Math.random() * 100.0);
                                       }
                                     }
                                     if (this.field_x == 3) {
-                                      this.a(16, -91, false, param1);
+                                      this.updateLandingEnemy(16, -91, false, param1);
                                       if (0 != this.field_x) {
-                                        this.e(false);
+                                        this.damageWizardOnContact(false);
                                         break regionExit1;
                                       }
                                       this.field_w = (int)(Math.random() * 100.0);
                                     }
-                                    this.e(false);
+                                    this.damageWizardOnContact(false);
                                   }
                                 }
                               } else {
                                 if (var4 == 15) {
                                   if (this.field_p <= 0) {
-                                    this.a(false, param0 + 243, param1);
+                                    this.updateDefeatedEnemy(false, param0 + 243, param1);
                                   } else {
                                     if (0 != this.field_r) {
-                                      this.a(46, param1);
+                                      this.updateCapturedEnemy(46, param1);
                                     } else {
                                       if (0 == this.field_x) {
-                                        this.a(15, (byte) -9, param1, false);
+                                        this.updateBouncingEnemy(15, (byte) -9, param1, false);
                                         fieldTemp$19 = this.field_w;
                                         this.field_w = this.field_w + 1;
                                         if (fieldTemp$19 > 100) {
@@ -2068,8 +2068,8 @@ final class PlatformActor extends GridActor {
                                         }
                                       }
                                       if (this.field_x == 1) {
-                                        if (!this.a(false, param1, 25)) {
-                                          this.e(false);
+                                        if (!this.updateEnemyAttack(false, param1, 25)) {
+                                          this.damageWizardOnContact(false);
                                           break regionExit1;
                                         }
                                         this.field_w = 0;
@@ -2088,22 +2088,22 @@ final class PlatformActor extends GridActor {
                                           FriendOrderingHelpers.field_a.addSample(SpriteState.secondarySoundEffects[17], 100, StyleNode.field_p * 256 / 100);
                                         }
                                       }
-                                      this.e(false);
+                                      this.damageWizardOnContact(false);
                                     }
                                   }
                                 } else {
                                   if (16 == var4) {
                                     if (this.field_p <= 0) {
-                                      this.a(false, 120, param1);
+                                      this.updateDefeatedEnemy(false, 120, param1);
                                     } else {
                                       if (0 != this.field_r) {
-                                        this.a(param0 + 163, param1);
+                                        this.updateCapturedEnemy(param0 + 163, param1);
                                       } else {
                                         if (this.field_x == 0) {
                                           if (NameAvailabilityFactory.field_e[0].tilePosition.row > this.tilePosition.row) {
                                             this.field_w = this.field_w + 1;
                                           }
-                                          this.a(false, 2, 10, (byte) -105, param1);
+                                          this.updateWalkingEnemy(false, 2, 10, (byte) -105, param1);
                                           fieldTemp$22 = this.field_w;
                                           this.field_w = this.field_w + 1;
                                           if (fieldTemp$22 > 200) {
@@ -2137,19 +2137,19 @@ final class PlatformActor extends GridActor {
                                           }
                                         }
                                         if (this.field_x == 2) {
-                                          this.a(false, 22, 15, param1);
+                                          this.updateRisingEnemy(false, 22, 15, param1);
                                           if (this.field_x == 0) {
                                             this.field_w = (int)(Math.random() * 100.0);
                                           }
                                         }
                                         if (this.field_x == 3) {
-                                          this.a(15, -102, false, param1);
+                                          this.updateLandingEnemy(15, -102, false, param1);
                                           if (this.field_x == 0) {
                                             this.field_w = (int)(100.0 * Math.random());
                                           }
                                         }
                                         if (4 == this.field_x &&
-                                          this.a(false, param1, param0 + 148)) {
+                                          this.updateEnemyAttack(false, param1, param0 + 148)) {
                                           NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 19, this.tilePosition);
                                           NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(param0 ^ 13, this.tileOffset);
                                           dupTemp$24 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
@@ -2166,13 +2166,13 @@ final class PlatformActor extends GridActor {
                                             FriendOrderingHelpers.field_a.addSample(SpriteState.secondarySoundEffects[18], 100, StyleNode.field_p * 256 / 100);
                                           }
                                         }
-                                        this.e(false);
+                                        this.damageWizardOnContact(false);
                                       }
                                     }
                                   } else {
                                     if (17 == var4) {
                                       if (0 >= this.field_p) {
-                                        this.a(true, 120, param1);
+                                        this.updateDefeatedEnemy(true, 120, param1);
                                       } else {
                                         if (UiThemeSetupHelpers.field_b < 250) {
                                           this.field_x = 0;
@@ -2199,7 +2199,7 @@ final class PlatformActor extends GridActor {
                                             if (this.tilePosition.row < NameAvailabilityFactory.field_e[0].tilePosition.row) {
                                               this.field_w = this.field_w + 1;
                                             }
-                                            this.a(true, 1, 25, (byte) -94, param1);
+                                            this.updateWalkingEnemy(true, 1, 25, (byte) -94, param1);
                                             fieldTemp$27 = this.field_w;
                                             this.field_w = this.field_w + 1;
                                             if (fieldTemp$27 > 200) {
@@ -2224,13 +2224,13 @@ final class PlatformActor extends GridActor {
                                             }
                                           }
                                           if (this.field_x == 2) {
-                                            this.a(true, 22, 16, param1);
+                                            this.updateRisingEnemy(true, 22, 16, param1);
                                             if (this.field_x == 0) {
                                               this.field_w = (int)(Math.random() * 100.0);
                                             }
                                           }
                                           if (this.field_x == 3) {
-                                            this.a(16, -99, true, param1);
+                                            this.updateLandingEnemy(16, -99, true, param1);
                                             if (0 == this.field_x) {
                                               this.field_w = (int)(100.0 * Math.random());
                                             }
@@ -2250,17 +2250,17 @@ final class PlatformActor extends GridActor {
                                               FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[29], 100, 256 * StyleNode.field_p / 100);
                                             }
                                             if (this.field_p <= 0) {
-                                              this.c(false);
+                                              this.playEnemyDeathSound(false);
                                               this.verticalVelocity = 60;
                                             }
                                           }
-                                          this.e(false);
+                                          this.damageWizardOnContact(false);
                                         }
                                       }
                                     } else {
                                       if (var4 == 18) {
-                                        this.e(false);
-                                        if (this.b(param1, -4) == 1 &&
+                                        this.damageWizardOnContact(false);
+                                        if (this.getGroundSupport(param1, -4) == 1 &&
                                           this.tileOffset.row == 0) {
                                           this.field_w = this.field_w + 1;
                                           if (35 < this.animationFrame) {
@@ -2273,7 +2273,7 @@ final class PlatformActor extends GridActor {
                                             this.animationFrame = 34;
                                           }
                                         } else {
-                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
+                                          this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
                                           if (36 > this.animationFrame) {
                                             this.animationFrame = 36;
                                           }
@@ -2292,16 +2292,16 @@ final class PlatformActor extends GridActor {
                                         if (this.tilePosition.row < 0) {
                                           this.field_w = 21;
                                         }
-                                        this.e(false);
+                                        this.damageWizardOnContact(false);
                                         if (!(20 >= this.field_w)) {
                                           this.field_k = 1;
                                         }
                                       } else {
                                         if (var4 == 19) {
-                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 25, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -120);
-                                          this.e(false);
+                                          this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 25, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -120);
+                                          this.damageWizardOnContact(false);
                                           this.animationFrame = 37;
-                                          if (((this.b(param1, -4) == 1)) &&
+                                          if (((this.getGroundSupport(param1, -4) == 1)) &&
                                             ((this.tileOffset.row == 0))) {
                                             this.verticalVelocity = 20;
                                             this.animationFrame = 37;
@@ -2348,7 +2348,7 @@ final class PlatformActor extends GridActor {
                                                 this.tileOffset.row = this.tileOffset.row - 18;
                                               }
                                             }
-                                            this.e(false);
+                                            this.damageWizardOnContact(false);
                                             if (!(this.field_z <= 300)) {
                                               this.field_k = 1;
                                             }
@@ -2366,20 +2366,20 @@ final class PlatformActor extends GridActor {
                                                 this.field_h = -1;
                                                 this.tileOffset.column = 0;
                                               }
-                                              if (this.b(param1, -4) == 1 &&
+                                              if (this.getGroundSupport(param1, -4) == 1 &&
                                                 this.tileOffset.row == 0 &&
                                                 this.verticalVelocity <= 0) {
-                                                this.b(5);
+                                                this.collectPickupOrPopEnemy(5);
                                               } else {
-                                                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
+                                                this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
                                               }
                                             } else {
                                               if (var4 == 22) {
                                                 if (this.field_p <= 0) {
-                                                  this.a(false, 120, param1);
+                                                  this.updateDefeatedEnemy(false, 120, param1);
                                                 } else {
                                                   if (0 != this.field_r) {
-                                                    this.a(113, param1);
+                                                    this.updateCapturedEnemy(113, param1);
                                                   } else {
                                                     if (this.field_x == 0) {
                                                       this.animationFrame = 19;
@@ -2398,12 +2398,12 @@ final class PlatformActor extends GridActor {
                                                       }
                                                     }
                                                     if (this.field_x == 2) {
-                                                      this.a(false, param0 ^ -109, 25, param1);
+                                                      this.updateRisingEnemy(false, param0 ^ -109, 25, param1);
                                                     }
                                                     if (this.field_x == 3) {
-                                                      this.a(25, -92, false, param1);
+                                                      this.updateLandingEnemy(25, -92, false, param1);
                                                     }
-                                                    this.e(false);
+                                                    this.damageWizardOnContact(false);
                                                   }
                                                 }
                                               } else {
@@ -2411,7 +2411,7 @@ final class PlatformActor extends GridActor {
                                                   31 != var4) {
                                                   if (var4 == 26) {
                                                     if (0 >= this.field_p) {
-                                                      this.a(true, 120, param1);
+                                                      this.updateDefeatedEnemy(true, 120, param1);
                                                     } else {
                                                       if (UiThemeSetupHelpers.field_b < 250) {
                                                         this.field_o = 7;
@@ -2460,7 +2460,7 @@ final class PlatformActor extends GridActor {
                                                             this.field_x = 4;
                                                           }
                                                           if (this.field_x == 0) {
-                                                            this.a(true, 0, 35, (byte) -120, param1);
+                                                            this.updateWalkingEnemy(true, 0, 35, (byte) -120, param1);
                                                           }
                                                           if (3 == this.field_x) {
                                                             this.field_x = 5;
@@ -2477,19 +2477,19 @@ final class PlatformActor extends GridActor {
                                                           this.animationFrame = 19;
                                                         }
                                                         if (this.field_x == 2) {
-                                                          this.a(true, 22, 0, param1);
+                                                          this.updateRisingEnemy(true, 22, 0, param1);
                                                         }
                                                         if (this.field_x == 3) {
-                                                          this.a(0, -82, true, param1);
+                                                          this.updateLandingEnemy(0, -82, true, param1);
                                                         }
                                                         if (this.field_x == 5) {
-                                                          this.a(25, param0 ^ 41, true, param1);
+                                                          this.updateLandingEnemy(25, param0 ^ 41, true, param1);
                                                           if (this.field_x == 3) {
                                                             this.field_x = 5;
                                                           }
                                                         }
                                                         if (this.field_x == 4 &&
-                                                          this.a(true, param1, 25)) {
+                                                          this.updateEnemyAttack(true, param1, 25)) {
                                                           NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 27, this.tilePosition);
                                                           NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-81, this.tileOffset);
                                                           dupTemp$62 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
@@ -2540,18 +2540,18 @@ final class PlatformActor extends GridActor {
                                                             FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[26], 100, StyleNode.field_p * 256 / 100);
                                                           }
                                                           if (this.field_p <= 0) {
-                                                            this.c(false);
+                                                            this.playEnemyDeathSound(false);
                                                             this.verticalVelocity = 70;
                                                           }
                                                         }
                                                       }
-                                                      this.e(false);
+                                                      this.damageWizardOnContact(false);
                                                     }
                                                   } else {
                                                     if (var4 == 27) {
-                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
-                                                      this.e(false);
-                                                      if (((this.b(param1, -4) == 1)) &&
+                                                      this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
+                                                      this.damageWizardOnContact(false);
+                                                      if (((this.getGroundSupport(param1, -4) == 1)) &&
                                                         ((this.tileOffset.row == 0))) {
                                                         this.field_d = 24;
                                                         this.tileOffset.column = this.tileOffset.column + 40;
@@ -2572,9 +2572,9 @@ final class PlatformActor extends GridActor {
                                                       }
                                                     } else {
                                                       if (var4 == 28) {
-                                                        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 20, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -50);
-                                                        this.e(false);
-                                                        if (((this.b(param1, -4) == 1)) &&
+                                                        this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 20, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -50);
+                                                        this.damageWizardOnContact(false);
+                                                        if (((this.getGroundSupport(param1, -4) == 1)) &&
                                                           ((this.tileOffset.row == 0))) {
                                                           this.field_k = 1;
                                                           stackIn_817_0 = (ReflectionCheck.field_s) ? 0 : 1;
@@ -2585,16 +2585,16 @@ final class PlatformActor extends GridActor {
                                                       } else {
                                                         if (29 == var4) {
                                                           if (0 >= this.field_p) {
-                                                            this.a(false, 120, param1);
+                                                            this.updateDefeatedEnemy(false, 120, param1);
                                                           } else {
                                                             if (this.field_r != 0) {
-                                                              this.a(120, param1);
+                                                              this.updateCapturedEnemy(120, param1);
                                                             } else {
                                                               if (0 == this.field_x) {
                                                                 if (NameAvailabilityFactory.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                   this.field_w = this.field_w + 1;
                                                                 }
-                                                                this.a(false, 2, 20, (byte) -88, param1);
+                                                                this.updateWalkingEnemy(false, 2, 20, (byte) -88, param1);
                                                                 fieldTemp$56 = this.field_w;
                                                                 this.field_w = this.field_w + 1;
                                                                 if (fieldTemp$56 > 200) {
@@ -2623,21 +2623,21 @@ final class PlatformActor extends GridActor {
                                                                 this.animationFrame = 19;
                                                               }
                                                               if (2 == this.field_x) {
-                                                                this.a(false, 22, 15, param1);
+                                                                this.updateRisingEnemy(false, 22, 15, param1);
                                                                 if (this.field_x == 0) {
                                                                   this.field_z = 0;
                                                                   this.field_w = (int)(Math.random() * 100.0);
                                                                 }
                                                               }
                                                               if (this.field_x == 3) {
-                                                                this.a(15, param0 + 23, false, param1);
+                                                                this.updateLandingEnemy(15, param0 + 23, false, param1);
                                                                 if (this.field_x == 0) {
                                                                   this.field_z = 0;
                                                                   this.field_w = (int)(100.0 * Math.random());
                                                                 }
                                                               }
                                                               if (4 == this.field_x) {
-                                                                if (this.a(false, param1, 25)) {
+                                                                if (this.updateEnemyAttack(false, param1, 25)) {
                                                                   NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 34, this.tilePosition);
                                                                   NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-108, this.tileOffset);
                                                                   dupTemp$58 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
@@ -2655,22 +2655,22 @@ final class PlatformActor extends GridActor {
                                                                   this.field_x = 1;
                                                                 }
                                                               }
-                                                              this.e(false);
+                                                              this.damageWizardOnContact(false);
                                                             }
                                                           }
                                                         } else {
                                                           if (var4 == 30) {
                                                             if (this.field_p <= 0) {
-                                                              this.a(false, 120, param1);
+                                                              this.updateDefeatedEnemy(false, 120, param1);
                                                             } else {
                                                               if (this.field_r != 0) {
-                                                                this.a(100, param1);
+                                                                this.updateCapturedEnemy(100, param1);
                                                               } else {
                                                                 if (this.field_x == 0) {
                                                                   if (this.tilePosition.row < NameAvailabilityFactory.field_e[0].tilePosition.row) {
                                                                     this.field_w = this.field_w + 1;
                                                                   }
-                                                                  this.a(false, 2, 20, (byte) -78, param1);
+                                                                  this.updateWalkingEnemy(false, 2, 20, (byte) -78, param1);
                                                                   fieldTemp$30 = this.field_w;
                                                                   this.field_w = this.field_w + 1;
                                                                   if (200 < fieldTemp$30) {
@@ -2705,21 +2705,21 @@ final class PlatformActor extends GridActor {
                                                                   this.animationFrame = 19;
                                                                 }
                                                                 if (2 == this.field_x) {
-                                                                  this.a(false, 22, 25, param1);
+                                                                  this.updateRisingEnemy(false, 22, 25, param1);
                                                                   if (this.field_x == 0) {
                                                                     this.field_z = 0;
                                                                     this.field_w = (int)(100.0 * Math.random());
                                                                   }
                                                                 }
                                                                 if (this.field_x == 3) {
-                                                                  this.a(25, -128, false, param1);
+                                                                  this.updateLandingEnemy(25, -128, false, param1);
                                                                   if (this.field_x == 0) {
                                                                     this.field_z = 0;
                                                                     this.field_w = (int)(Math.random() * 100.0);
                                                                   }
                                                                 }
                                                                 if (this.field_x == 4 &&
-                                                                  this.a(false, param1, param0 ^ -100)) {
+                                                                  this.updateEnemyAttack(false, param1, param0 ^ -100)) {
                                                                   NameAvailabilityFactory.field_e[WidgetTheme.field_k].initialize(9147, 35, this.tilePosition);
                                                                   NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset.set(-103, this.tileOffset);
                                                                   dupTemp$32 = NameAvailabilityFactory.field_e[WidgetTheme.field_k].tileOffset;
@@ -2739,22 +2739,22 @@ final class PlatformActor extends GridActor {
                                                                     FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, StyleNode.field_p * 256 / 100);
                                                                   }
                                                                 }
-                                                                this.e(false);
+                                                                this.damageWizardOnContact(false);
                                                               }
                                                             }
                                                           } else {
                                                             if (32 == var4) {
                                                               if (this.field_p <= 0) {
-                                                                this.a(false, param0 ^ -3, param1);
+                                                                this.updateDefeatedEnemy(false, param0 ^ -3, param1);
                                                               } else {
                                                                 if (this.field_r != 0) {
-                                                                  this.a(param0 + 150, param1);
+                                                                  this.updateCapturedEnemy(param0 + 150, param1);
                                                                 } else {
                                                                   if (this.field_x == 0) {
                                                                     if (NameAvailabilityFactory.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                       this.field_w = this.field_w + 1;
                                                                     }
-                                                                    this.a(false, 2, 20, (byte) -92, param1);
+                                                                    this.updateWalkingEnemy(false, 2, 20, (byte) -92, param1);
                                                                     fieldTemp$34 = this.field_w;
                                                                     this.field_w = this.field_w + 1;
                                                                     if (200 < fieldTemp$34) {
@@ -2765,12 +2765,12 @@ final class PlatformActor extends GridActor {
                                                                   }
                                                                   if (3 == this.field_x) {
                                                                     this.animationFrame = this.animationFrame - 4;
-                                                                    this.a(20, (byte) 116, param1, false);
+                                                                    this.updateBouncingEnemy(20, (byte) 116, param1, false);
                                                                     this.animationFrame = this.animationFrame + 4;
                                                                     fieldTemp$35 = this.field_w;
                                                                     this.field_w = this.field_w + 1;
                                                                     if (fieldTemp$35 > 300 &&
-                                                                      1 == this.b(param1, param0 ^ 121) &&
+                                                                      1 == this.getGroundSupport(param1, param0 ^ 121) &&
                                                                       this.tileOffset.row == 0) {
                                                                       this.field_x = 0;
                                                                       this.field_w = 0;
@@ -2798,7 +2798,7 @@ final class PlatformActor extends GridActor {
                                                                       }
                                                                     }
                                                                   }
-                                                                  this.e(false);
+                                                                  this.damageWizardOnContact(false);
                                                                 }
                                                               }
                                                             } else {
@@ -2825,7 +2825,7 @@ final class PlatformActor extends GridActor {
                                                                   UiThemeSetupHelpers.field_b = UiThemeSetupHelpers.field_b + 1;
                                                                 } else {
                                                                   if (this.field_p <= 0) {
-                                                                    this.a(true, 120, param1);
+                                                                    this.updateDefeatedEnemy(true, 120, param1);
                                                                   } else {
                                                                     var4 = 10;
                                                                     if (50 > this.field_p) {
@@ -2834,7 +2834,7 @@ final class PlatformActor extends GridActor {
                                                                     if (15 > this.field_p) {
                                                                       var4 = 20;
                                                                     }
-                                                                    this.a(var4, (byte) -113, param1, true);
+                                                                    this.updateBouncingEnemy(var4, (byte) -113, param1, true);
                                                                     this.field_w = this.field_w + 1;
                                                                     if (25 == this.field_w % 50 &&
                                                                       this.field_w < 250) {
@@ -2882,7 +2882,7 @@ final class PlatformActor extends GridActor {
                                                                     if (400 < this.field_w) {
                                                                       this.field_w = this.field_w - 400;
                                                                     }
-                                                                    this.e(false);
+                                                                    this.damageWizardOnContact(false);
                                                                     if (!(this.field_s <= 0)) {
                                                                       this.field_s = this.field_s - 1;
                                                                       this.field_p = this.field_p - 1;
@@ -2902,7 +2902,7 @@ final class PlatformActor extends GridActor {
                                                                         FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[27], 100, 256 * StyleNode.field_p / 100);
                                                                       }
                                                                       if (!(this.field_p > 0)) {
-                                                                        this.c(false);
+                                                                        this.playEnemyDeathSound(false);
                                                                         this.verticalVelocity = 70;
                                                                       }
                                                                     }
@@ -2911,14 +2911,14 @@ final class PlatformActor extends GridActor {
                                                               } else {
                                                                 if (var4 == 34) {
                                                                   this.verticalVelocity = 2;
-                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
-                                                                  this.e(false);
+                                                                  this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
+                                                                  this.damageWizardOnContact(false);
                                                                 } else {
                                                                   if (35 != var4 &&
                                                                     var4 != 43) {
                                                                     if (var4 == 36) {
                                                                       if (this.field_p <= 0) {
-                                                                        this.a(false, param0 ^ -3, param1);
+                                                                        this.updateDefeatedEnemy(false, param0 ^ -3, param1);
                                                                       } else {
                                                                         if (this.field_r != 0) {
                                                                           this.field_r = 0;
@@ -2936,31 +2936,31 @@ final class PlatformActor extends GridActor {
                                                                                 this.field_h = 1;
                                                                               }
                                                                             } else {
-                                                                              this.a(false, 1, 15, (byte) -102, param1);
+                                                                              this.updateWalkingEnemy(false, 1, 15, (byte) -102, param1);
                                                                             }
                                                                           }
                                                                           if (2 == this.field_x) {
-                                                                            this.a(false, 22, 10, param1);
+                                                                            this.updateRisingEnemy(false, 22, 10, param1);
                                                                           }
                                                                           if (3 == this.field_x) {
-                                                                            this.a(10, param0 ^ 26, false, param1);
+                                                                            this.updateLandingEnemy(10, param0 ^ 26, false, param1);
                                                                           }
                                                                           if (500 < this.field_w) {
                                                                             this.field_p = 0;
                                                                           }
-                                                                          this.e(false);
+                                                                          this.damageWizardOnContact(false);
                                                                         }
                                                                       }
                                                                     } else {
                                                                       if (37 == var4) {
                                                                         if (this.field_p <= 0) {
-                                                                          this.a(false, 120, param1);
+                                                                          this.updateDefeatedEnemy(false, 120, param1);
                                                                         } else {
                                                                           if (0 != this.field_r) {
-                                                                            this.a(116, param1);
+                                                                            this.updateCapturedEnemy(116, param1);
                                                                           } else {
                                                                             if (this.field_x == 0) {
-                                                                              this.a(false, 1, 15, (byte) -64, param1);
+                                                                              this.updateWalkingEnemy(false, 1, 15, (byte) -64, param1);
                                                                               if (NameAvailabilityFactory.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                                 this.field_w = this.field_w + 5;
                                                                               }
@@ -2991,33 +2991,33 @@ final class PlatformActor extends GridActor {
                                                                               }
                                                                             }
                                                                             if (this.field_x == 2) {
-                                                                              this.a(false, 22, 30, param1);
+                                                                              this.updateRisingEnemy(false, 22, 30, param1);
                                                                               if (this.field_x == 0) {
                                                                                 this.field_w = (int)(Math.random() * 100.0);
                                                                               }
                                                                             }
                                                                             if (3 == this.field_x) {
-                                                                              this.a(15, -80, false, param1);
+                                                                              this.updateLandingEnemy(15, -80, false, param1);
                                                                               if (this.field_x == 0) {
                                                                                 this.field_w = (int)(Math.random() * 100.0);
                                                                               }
                                                                             }
-                                                                            this.e(false);
+                                                                            this.damageWizardOnContact(false);
                                                                           }
                                                                         }
                                                                       } else {
                                                                         if (var4 == 38) {
                                                                           if (this.field_p <= 0) {
-                                                                            this.a(false, 120, param1);
+                                                                            this.updateDefeatedEnemy(false, 120, param1);
                                                                           } else {
                                                                             if (this.field_r != 0) {
-                                                                              this.a(60, param1);
+                                                                              this.updateCapturedEnemy(60, param1);
                                                                             } else {
                                                                               if (0 == this.field_x) {
                                                                                 if (this.tilePosition.row < NameAvailabilityFactory.field_e[0].tilePosition.row) {
                                                                                   this.field_w = this.field_w + 5;
                                                                                 }
-                                                                                this.a(false, 1, 25, (byte) -90, param1);
+                                                                                this.updateWalkingEnemy(false, 1, 25, (byte) -90, param1);
                                                                                 fieldTemp$51 = this.field_w;
                                                                                 this.field_w = this.field_w + 1;
                                                                                 if (200 < fieldTemp$51) {
@@ -3045,33 +3045,33 @@ final class PlatformActor extends GridActor {
                                                                                 }
                                                                               }
                                                                               if (2 == this.field_x) {
-                                                                                this.a(false, param0 ^ -109, 25, param1);
+                                                                                this.updateRisingEnemy(false, param0 ^ -109, 25, param1);
                                                                                 if (0 == this.field_x) {
                                                                                   this.field_w = (int)(100.0 * Math.random());
                                                                                 }
                                                                               }
                                                                               if (this.field_x == 3) {
-                                                                                this.a(25, -81, false, param1);
+                                                                                this.updateLandingEnemy(25, -81, false, param1);
                                                                                 if (this.field_x == 0) {
                                                                                   this.field_w = (int)(100.0 * Math.random());
                                                                                 }
                                                                               }
-                                                                              this.e(false);
+                                                                              this.damageWizardOnContact(false);
                                                                             }
                                                                           }
                                                                         } else {
                                                                           if (var4 == 39) {
                                                                             if (this.field_p <= 0) {
-                                                                              this.a(false, param0 ^ -3, param1);
+                                                                              this.updateDefeatedEnemy(false, param0 ^ -3, param1);
                                                                             } else {
                                                                               if (this.field_r != 0) {
-                                                                                this.a(35, param1);
+                                                                                this.updateCapturedEnemy(35, param1);
                                                                               } else {
                                                                                 if (this.field_x == 0) {
                                                                                   if (NameAvailabilityFactory.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                                                     this.field_w = this.field_w + 1;
                                                                                   }
-                                                                                  this.a(false, 2, 20, (byte) -122, param1);
+                                                                                  this.updateWalkingEnemy(false, 2, 20, (byte) -122, param1);
                                                                                   fieldTemp$49 = this.field_w;
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (200 < fieldTemp$49) {
@@ -3082,13 +3082,13 @@ final class PlatformActor extends GridActor {
                                                                                 }
                                                                                 if (this.field_x == 3) {
                                                                                   this.animationFrame = this.animationFrame - 4;
-                                                                                  this.a(10, (byte) -13, param1, false);
-                                                                                  this.a(10, (byte) 118, param1, false);
+                                                                                  this.updateBouncingEnemy(10, (byte) -13, param1, false);
+                                                                                  this.updateBouncingEnemy(10, (byte) 118, param1, false);
                                                                                   this.animationFrame = this.animationFrame + 4;
                                                                                   fieldTemp$50 = this.field_w;
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (fieldTemp$50 > 300 &&
-                                                                                    this.b(param1, -4) == 1 &&
+                                                                                    this.getGroundSupport(param1, -4) == 1 &&
                                                                                     this.tileOffset.row == 0) {
                                                                                     this.field_w = 0;
                                                                                     this.field_x = 0;
@@ -3097,7 +3097,7 @@ final class PlatformActor extends GridActor {
                                                                                     this.animationFrame = 6;
                                                                                   }
                                                                                 }
-                                                                                this.e(false);
+                                                                                this.damageWizardOnContact(false);
                                                                               }
                                                                             }
                                                                           } else {
@@ -3105,8 +3105,8 @@ final class PlatformActor extends GridActor {
                                                                               switch (var4) {
                                                                                 case 41:
                                                                                   this.verticalVelocity = 2;
-                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 100, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -126);
-                                                                                  this.e(false);
+                                                                                  this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 100, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -126);
+                                                                                  this.damageWizardOnContact(false);
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (this.field_w % 10 >= 5) {
                                                                                     this.animationFrame = 37;
@@ -3118,12 +3118,12 @@ final class PlatformActor extends GridActor {
                                                                                   } else {
                                                                                     this.tileOffset.row = this.tileOffset.row + (-25 + this.field_w % 50) / 4;
                                                                                   }
-                                                                                  this.e(false);
+                                                                                  this.damageWizardOnContact(false);
                                                                                   break regionExit1;
                                                                                 case 42:
                                                                                   this.verticalVelocity = 2;
-                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 50, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
-                                                                                  this.e(false);
+                                                                                  this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 50, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
+                                                                                  this.damageWizardOnContact(false);
                                                                                   break regionExit1;
                                                                                 case 44:
                                                                                   this.field_w = this.field_w + 1;
@@ -3144,12 +3144,12 @@ final class PlatformActor extends GridActor {
                                                                                   if (fieldTemp$40 > 50) {
                                                                                     this.field_k = 1;
                                                                                   }
-                                                                                  this.e(false);
+                                                                                  this.damageWizardOnContact(false);
                                                                                   break regionExit1;
                                                                               }
                                                                             }
                                                                             if (this.field_p <= 0) {
-                                                                              this.a(true, 120, param1);
+                                                                              this.updateDefeatedEnemy(true, 120, param1);
                                                                             } else {
                                                                               if (HuffmanDecoder.field_c < 5) {
                                                                                 LoadingMessageHelpers.field_f = LoadingMessageHelpers.field_f - 5;
@@ -3171,7 +3171,7 @@ final class PlatformActor extends GridActor {
                                                                                 this.field_p = this.field_p - 1;
                                                                                 this.field_s = this.field_s - 1;
                                                                                 if (this.field_p <= 0) {
-                                                                                  this.c(false);
+                                                                                  this.playEnemyDeathSound(false);
                                                                                 }
                                                                                 if (ReflectionCheck.field_s) {
                                                                                   FriendOrderingHelpers.field_a.addSample(BufferedRandomAccessFile.soundEffects[28], 100, 256 * StyleNode.field_p / 100);
@@ -3246,14 +3246,14 @@ final class PlatformActor extends GridActor {
                                                                                   }
                                                                                 }
                                                                                 if (2 == this.field_x) {
-                                                                                  this.a(true, 22, 15, param1);
+                                                                                  this.updateRisingEnemy(true, 22, 15, param1);
                                                                                   this.animationFrame = 1;
                                                                                   if (this.verticalVelocity < 60) {
                                                                                     this.animationFrame = 2;
                                                                                   }
                                                                                 }
                                                                                 if (3 == this.field_x) {
-                                                                                  this.a(15, param0 + 7, true, param1);
+                                                                                  this.updateLandingEnemy(15, param0 + 7, true, param1);
                                                                                   this.animationFrame = 2;
                                                                                   if (this.field_x == 0) {
                                                                                     this.field_w = -10;
@@ -3280,7 +3280,7 @@ final class PlatformActor extends GridActor {
                                                                                   this.field_x = 4;
                                                                                 }
                                                                                 if (this.field_x == 4) {
-                                                                                  this.a(10, param0 ^ 20, true, param1);
+                                                                                  this.updateLandingEnemy(10, param0 ^ 20, true, param1);
                                                                                   if (3 == this.field_x) {
                                                                                     this.field_x = 4;
                                                                                   }
@@ -3392,7 +3392,7 @@ final class PlatformActor extends GridActor {
                                                                                     }
                                                                                   }
                                                                                   if (this.field_x == 2) {
-                                                                                    this.a(false, 22, 25, param1);
+                                                                                    this.updateRisingEnemy(false, 22, 25, param1);
                                                                                     if (this.verticalVelocity <= 0) {
                                                                                       this.field_x = 3;
                                                                                     }
@@ -3403,11 +3403,11 @@ final class PlatformActor extends GridActor {
                                                                                     if (NameAvailabilityFactory.field_e[0].tilePosition.row < -2 + this.tilePosition.row) {
                                                                                       var4 = 20;
                                                                                     }
-                                                                                    this.a(var4, (byte) -82, param1, true);
+                                                                                    this.updateBouncingEnemy(var4, (byte) -82, param1, true);
                                                                                     fieldTemp$48 = this.field_w;
                                                                                     this.field_w = this.field_w + 1;
                                                                                     if (fieldTemp$48 > 25 &&
-                                                                                      this.b(param1, -4) == 1 &&
+                                                                                      this.getGroundSupport(param1, -4) == 1 &&
                                                                                       this.tileOffset.row == 0) {
                                                                                       this.animationFrame = 25;
                                                                                       this.field_w = 0;
@@ -3432,7 +3432,7 @@ final class PlatformActor extends GridActor {
                                                                                   }
                                                                                 }
                                                                               }
-                                                                              this.e(false);
+                                                                              this.damageWizardOnContact(false);
                                                                             }
                                                                           }
                                                                         }
@@ -3440,10 +3440,10 @@ final class PlatformActor extends GridActor {
                                                                     }
                                                                   } else {
                                                                     if (this.field_w <= 2) {
-                                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -123);
+                                                                      this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -123);
                                                                     }
-                                                                    this.e(false);
-                                                                    if (1 == this.b(param1, -4) &&
+                                                                    this.damageWizardOnContact(false);
+                                                                    if (1 == this.getGroundSupport(param1, -4) &&
                                                                       0 == this.tileOffset.row &&
                                                                       this.field_w <= 2) {
                                                                       this.verticalVelocity = 5;
@@ -3480,16 +3480,16 @@ final class PlatformActor extends GridActor {
                                                   }
                                                 } else {
                                                   if (this.field_p <= 0) {
-                                                    this.a(false, 120, param1);
+                                                    this.updateDefeatedEnemy(false, 120, param1);
                                                   } else {
                                                     if (this.field_r != 0) {
-                                                      this.a(param0 ^ -72, param1);
+                                                      this.updateCapturedEnemy(param0 ^ -72, param1);
                                                     } else {
                                                       if (this.field_x == 0) {
                                                         if (NameAvailabilityFactory.field_e[0].tilePosition.row > this.tilePosition.row) {
                                                           this.field_w = this.field_w + 1;
                                                         }
-                                                        this.a(false, 1, 20, (byte) -67, param1);
+                                                        this.updateWalkingEnemy(false, 1, 20, (byte) -67, param1);
                                                         fieldTemp$64 = this.field_w;
                                                         this.field_w = this.field_w + 1;
                                                         if (200 < fieldTemp$64) {
@@ -3517,18 +3517,18 @@ final class PlatformActor extends GridActor {
                                                         }
                                                       }
                                                       if (this.field_x == 2) {
-                                                        this.a(false, 22, 15, param1);
+                                                        this.updateRisingEnemy(false, 22, 15, param1);
                                                         if (this.field_x == 0) {
                                                           this.field_w = (int)(Math.random() * 100.0);
                                                         }
                                                       }
                                                       if (this.field_x == 3) {
-                                                        this.a(15, -92, false, param1);
+                                                        this.updateLandingEnemy(15, -92, false, param1);
                                                         if (this.field_x == 0) {
                                                           this.field_w = (int)(Math.random() * 100.0);
                                                         }
                                                       }
-                                                      this.e(false);
+                                                      this.damageWizardOnContact(false);
                                                     }
                                                   }
                                                 }
@@ -3547,11 +3547,11 @@ final class PlatformActor extends GridActor {
                         break regionExit1;
                       }
                       if (0 >= this.field_p) {
-                        this.a(false, 120, param1);
+                        this.updateDefeatedEnemy(false, 120, param1);
                       } else {
                         if (0 != this.field_r) {
                           if (this.actorType != 8) {
-                            this.a(98, param1);
+                            this.updateCapturedEnemy(98, param1);
                           } else {
                             this.field_p = 0;
                             this.field_r = 0;
@@ -3565,7 +3565,7 @@ final class PlatformActor extends GridActor {
                             if (this.tilePosition.row < NameAvailabilityFactory.field_e[0].tilePosition.row) {
                               this.field_w = this.field_w + 1;
                             }
-                            this.a(false, 0, var4, (byte) -68, param1);
+                            this.updateWalkingEnemy(false, 0, var4, (byte) -68, param1);
                             fieldTemp$73 = this.field_w;
                             this.field_w = this.field_w + 1;
                             if (fieldTemp$73 > 100) {
@@ -3589,24 +3589,24 @@ final class PlatformActor extends GridActor {
                             this.animationFrame = 19;
                           }
                           if (this.field_x == 2) {
-                            this.a(false, 22, var4, param1);
+                            this.updateRisingEnemy(false, 22, var4, param1);
                             if (this.field_x == 0) {
                               this.field_w = (int)(Math.random() * 100.0);
                             }
                           }
                           if (this.field_x == 3) {
-                            this.a(var4, -82, false, param1);
+                            this.updateLandingEnemy(var4, -82, false, param1);
                             if (this.field_x == 0) {
                               this.field_w = (int)(Math.random() * 100.0);
                             }
                           }
                           if (this.field_x == 4) {
-                            if (!this.a(false, param1, 25)) {
-                              this.e(false);
+                            if (!this.updateEnemyAttack(false, param1, 25)) {
+                              this.damageWizardOnContact(false);
                               break regionExit1;
                             }
                             if (WidgetTheme.field_k >= 100) {
-                              this.e(false);
+                              this.damageWizardOnContact(false);
                               break regionExit1;
                             }
                             stackIn_401_0 = (ReflectionCheck.field_s) ? 0 : 1;
@@ -3621,20 +3621,20 @@ final class PlatformActor extends GridActor {
                             NameAvailabilityFactory.field_e[WidgetTheme.field_k].field_w = 10;
                             WidgetTheme.field_k = WidgetTheme.field_k + 1;
                           }
-                          this.e(false);
+                          this.damageWizardOnContact(false);
                         }
                       }
                       break regionExit1;
                     }
                     if (this.field_p > 0) {
                       if (0 == this.field_r) {
-                        this.a(15, (byte) 127, param1, false);
-                        this.e(false);
+                        this.updateBouncingEnemy(15, (byte) 127, param1, false);
+                        this.damageWizardOnContact(false);
                       } else {
-                        this.a(param0 + 238, param1);
+                        this.updateCapturedEnemy(param0 + 238, param1);
                       }
                     } else {
-                      this.a(false, 120, param1);
+                      this.updateDefeatedEnemy(false, 120, param1);
                     }
                   } else {
                     if (this.field_p > 0) {
@@ -3650,7 +3650,7 @@ final class PlatformActor extends GridActor {
                           } else {
                             stackIn_277_2 = 2;
                           }
-                          this.a(stackIn_276_1, stackIn_277_2, 15, (byte) -63, param1);
+                          this.updateWalkingEnemy(stackIn_276_1, stackIn_277_2, 15, (byte) -63, param1);
                           if (!AchievementSubmission.field_q) {
                             fieldTemp$76 = this.field_w;
                             this.field_w = this.field_w + 1;
@@ -3672,27 +3672,27 @@ final class PlatformActor extends GridActor {
                           }
                         }
                         if (2 == this.field_x) {
-                          this.a(false, 22, 5, param1);
+                          this.updateRisingEnemy(false, 22, 5, param1);
                           if (this.field_x == 0) {
                             this.field_w = (int)(100.0 * Math.random());
                           }
                         }
                         if (this.field_x == 3) {
-                          this.a(5, param0 + 16, false, param1);
+                          this.updateLandingEnemy(5, param0 + 16, false, param1);
                           if (this.field_x == 0) {
                             this.field_w = (int)(100.0 * Math.random());
-                            this.e(false);
+                            this.damageWizardOnContact(false);
                           } else {
-                            this.e(false);
+                            this.damageWizardOnContact(false);
                           }
                         } else {
-                          this.e(false);
+                          this.damageWizardOnContact(false);
                         }
                       } else {
-                        this.a(14, param1);
+                        this.updateCapturedEnemy(14, param1);
                       }
                     } else {
-                      this.a(false, param0 + 243, param1);
+                      this.updateDefeatedEnemy(false, param0 + 243, param1);
                     }
                   }
                 }
@@ -3700,7 +3700,7 @@ final class PlatformActor extends GridActor {
             }
           }
           if (param0 != -123) {
-            this.c(-4);
+            this.playEnemyHitSound(-4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3817,12 +3817,12 @@ final class PlatformActor extends GridActor {
         if (this.field_p <= 0) {
           var7 = 240 * this.tilePosition.column + this.tileOffset.column;
           var7 = 0;
-          var6[this.animationFrame].a(var4 + this.field_d / 2, var5 + this.field_d / 2, -105, 128, var7);
+          var6[this.animationFrame].drawRotatedScaled(var4 + this.field_d / 2, var5 + this.field_d / 2, -105, 128, var7);
         } else {
           if (this.field_r != 0) {
             var7 = this.tilePosition.column * 240 + this.tileOffset.column;
             var8 = this.field_d / 2;
-            var6[this.animationFrame].a(var8 + var4, var8 + var5, -112, 128, var7);
+            var6[this.animationFrame].drawRotatedScaled(var8 + var4, var8 + var5, -112, 128, var7);
             this.field_q = var6[this.animationFrame].flipHorizontal();
             this.field_A = var5;
             this.field_y = var4;
@@ -3857,7 +3857,7 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, LevelData param3) {
+    private final void updateLandingEnemy(int param0, int param1, boolean param2, LevelData param3) {
         int stackIn_13_0 = 0;
         int stackIn_14_1 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -3868,11 +3868,11 @@ final class PlatformActor extends GridActor {
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
-          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param0, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
+          this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param3, 1, param0, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
           if (param1 > -73) {
             return;
           }
-          if (this.b(param3, -4) == 1 &&
+          if (this.getGroundSupport(param3, -4) == 1 &&
             0 == this.verticalVelocity) {
             this.field_z = 0;
             this.field_x = 0;
@@ -3926,12 +3926,12 @@ final class PlatformActor extends GridActor {
             if (this.field_p > 0) {
               if (ReflectionCheck.field_s &&
                 !param2) {
-                this.c(1);
+                this.playEnemyHitSound(1);
               }
             } else {
               if (ReflectionCheck.field_s &&
                 !param2) {
-                this.c(false);
+                this.playEnemyDeathSound(false);
               }
             }
             if (this.field_p > 0) {
@@ -3954,7 +3954,7 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, LevelData param3) {
+    private final void updateRisingEnemy(boolean param0, int param1, int param2, LevelData param3) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -3966,7 +3966,7 @@ final class PlatformActor extends GridActor {
             var6 = (GridPoint) null;
             this.initialize(81, 113, (GridPoint) null);
           }
-          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -37);
+          this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param3, 1, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -37);
           if (this.verticalVelocity <= 0) {
             this.field_x = 3;
             this.field_z = 0;
@@ -3984,12 +3984,12 @@ final class PlatformActor extends GridActor {
             if (this.field_p > 0) {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(1);
+                this.playEnemyHitSound(1);
               }
             } else {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(false);
+                this.playEnemyDeathSound(false);
               }
             }
             if (this.field_p > 0) {
@@ -4012,7 +4012,7 @@ final class PlatformActor extends GridActor {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, byte param3, LevelData param4) {
+    private final void updateWalkingEnemy(boolean param0, int param1, int param2, byte param3, LevelData param4) {
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
         String stackIn_60_2 = null;
@@ -4021,25 +4021,25 @@ final class PlatformActor extends GridActor {
         int var7 = 0;
         var7 = wizardrun.field_H;
         try {
-          if (this.b(param4, -4) == 0 &&
+          if (this.getGroundSupport(param4, -4) == 0 &&
             3 != param1) {
             this.field_x = 3;
           }
           if (param1 == 3) {
-            this.a(2, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
+            this.moveAlongPlatforms(2, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
           }
           if (param1 == 0) {
-            this.a(1, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
+            this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 126);
           }
           if (param1 == 2) {
-            this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -117);
+            this.moveAlongPlatforms(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -117);
           }
           if (param1 == 1) {
             if (this.tilePosition.row <= NameAvailabilityFactory.field_e[0].tilePosition.row &&
               this.verticalVelocity == 0) {
-              this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
+              this.moveAlongPlatforms(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) 127);
             } else {
-              this.a(1, BufferedRandomAccessFile.soundEffects, param4, 1, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -65);
+              this.moveAlongPlatforms(1, BufferedRandomAccessFile.soundEffects, param4, 1, param2, 1, FriendOrderingHelpers.field_a, ReflectionCheck.field_s, (byte) -65);
             }
           }
           this.field_z = this.field_z - 1;
@@ -4074,12 +4074,12 @@ final class PlatformActor extends GridActor {
             if (this.field_p > 0) {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(1);
+                this.playEnemyHitSound(1);
               }
             } else {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(false);
+                this.playEnemyDeathSound(false);
               }
             }
             if (this.field_p > 0) {
@@ -4088,12 +4088,12 @@ final class PlatformActor extends GridActor {
             if (this.field_p <= 0) {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(false);
+                this.playEnemyDeathSound(false);
               }
             } else {
               if (ReflectionCheck.field_s &&
                 !param0) {
-                this.c(1);
+                this.playEnemyHitSound(1);
               }
             }
             this.verticalVelocity = 60;

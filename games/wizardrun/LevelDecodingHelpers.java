@@ -163,7 +163,7 @@ final class LevelDecodingHelpers {
             if (param3 >= 100 &&
               param3 <= 105) {
               var4 = param2;
-              HighscorePlayerState.a((byte) -117, var4);
+              HighscorePlayerState.updateNameSuggestions((byte) -117, var4);
               ContentTransitionPhase.field_a = AccountConnectionState.createNameSuggestions(param2, (byte) -106);
               return;
             }
@@ -173,7 +173,7 @@ final class LevelDecodingHelpers {
             stackIn_7_1 = !(QuickChatPhraseDefinition.field_t >= 13);
             ContentTransitionPhase.field_a = NameAvailabilityFactory.createAvailableNameResult(stackIn_6_0, stackIn_7_1);
             var6 = (String[]) null;
-            HighscorePlayerState.a((byte) -117, (String[]) null);
+            HighscorePlayerState.updateNameSuggestions((byte) -117, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1522,6 +1522,6 @@ final class MidiPcmStream extends PcmStream {
     }
 
     static {
-        DiskCacheRequest.a(16062, 50);
+        DiskCacheRequest.configureMembershipSlideTiming(16062, 50);
     }
 }

@@ -288,7 +288,7 @@ final class IsaacRandom {
         RuntimeException var1 = null;
         var2 = wizardrun.field_H;
         try {
-          if (!ReflectionCheck.a((byte) -35)) {
+          if (!ReflectionCheck.hasVisibleSystemDialog((byte) -35)) {
             if (LoginChoicePanel.field_E != null &&
               LoginChoicePanel.field_E.field_b) {
               WeightedLruCache.exitFullscreen((byte) 60);

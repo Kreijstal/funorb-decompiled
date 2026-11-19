@@ -64,9 +64,9 @@ final class WidgetTheme {
         this.field_i = 3;
         var4.field_e = 15658734;
         var4.field_f = 11711154;
-        var4.createState(0, 0).setTextColor(-34, 15658734).setFrame(60, NameSuggestionsPanel.b(10066329, 8947848, 7829367, 1));
-        var4.createState(0, 1).setFrame(68, NameSuggestionsPanel.b(10066329, 11184810, 13421772, 1));
-        var4.createState(0, 3).setFrame(80, NameSuggestionsPanel.b(7829367, 8947848, 10066329, 1)).setOffsetX((byte) -85, 1).setOffsetY((byte) -124, 1);
+        var4.createState(0, 0).setTextColor(-34, 15658734).setFrame(60, NameSuggestionsPanel.createSolidNineSliceFrame(10066329, 8947848, 7829367, 1));
+        var4.createState(0, 1).setFrame(68, NameSuggestionsPanel.createSolidNineSliceFrame(10066329, 11184810, 13421772, 1));
+        var4.createState(0, 3).setFrame(80, NameSuggestionsPanel.createSolidNineSliceFrame(7829367, 8947848, 10066329, 1)).setOffsetX((byte) -85, 1).setOffsetY((byte) -124, 1);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -92,7 +92,7 @@ final class WidgetTheme {
           discarded$1 = new MarkerSliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulWidgetPainter();
           var17.copyStyleTo(var8, 0);
-          var8.createState(0, 0).setFrame(80, NameSuggestionsPanel.b(7829367, 15658734, 10066329, 1)).setTextColor(123, 1118481).setShadowColor(-1, (byte) 105);
+          var8.createState(0, 0).setFrame(80, NameSuggestionsPanel.createSolidNineSliceFrame(7829367, 15658734, 10066329, 1)).setTextColor(123, 1118481).setShadowColor(-1, (byte) 105);
           var8.createState(0, 4).setDrawBaseFirst(-119, true).setFrame(109, var5);
           this.field_b = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];
@@ -204,7 +204,7 @@ final class WidgetTheme {
           }
           SoftwareRasterizer.drawRectOutline(var13, var14Lifetime1, var10 + var5_int, var11 + var6, this.field_e);
           SoftwareRasterizer.fillRect(1 + var13, var14Lifetime1 + 1, -2 + (var5_int + var10), var6 + (var11 - 2), this.field_p);
-          this.field_g.a(param3, var13 + this.field_l, var14Lifetime1 + this.field_r, var10, var11, this.field_q, -1, 0, 0, var7);
+          this.field_g.drawParagraph(param3, var13 + this.field_l, var14Lifetime1 + this.field_r, var10, var11, this.field_q, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,7 +273,7 @@ final class WidgetTheme {
           if (param1.length() == 0) {
             return true;
           }
-          if (DropTargetWidget.a(param1, (byte) -109, param0)) {
+          if (DropTargetWidget.passwordContainsUsername(param1, (byte) -109, param0)) {
             return false;
           }
           if (EncryptedLoginHelpers.usernameContainsPassword(0, param1, param0)) {

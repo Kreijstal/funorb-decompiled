@@ -6,7 +6,7 @@ final class EmailValidationError {
     static char typedCharacter;
     static Sprite field_c;
 
-    final static void a(boolean param0, byte param1, TriangleMesh param2, boolean param3, int[] param4, boolean param5, int[] param6) {
+    final static void transformAndProjectMesh(boolean param0, byte param1, TriangleMesh param2, boolean param3, int[] param4, boolean param5, int[] param6) {
         int stackIn_63_0 = 0;
         int stackIn_63_1 = 0;
         int stackIn_72_0 = 0;

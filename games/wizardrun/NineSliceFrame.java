@@ -14,7 +14,7 @@ final class NineSliceFrame {
         if (param3 != 1) {
           return;
         }
-        CacheEntry.a(this.sprites, param4, (byte) -110, param1, param2, param0);
+        CacheEntry.drawNineSliceFrame(this.sprites, param4, (byte) -110, param1, param2, param0);
     }
 
     public static void releaseStatics(int param0) {
@@ -92,7 +92,7 @@ final class NineSliceFrame {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int sine8192(int param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;

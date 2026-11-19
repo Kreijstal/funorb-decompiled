@@ -33,7 +33,7 @@ final class NanoTickClock extends TickClock {
         field_p = null;
     }
 
-    final static void a(int param0, ChatMessage param1) {
+    final static void appendChatMessage(int param0, ChatMessage param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -108,7 +108,7 @@ final class NanoTickClock extends TickClock {
         return 0L;
     }
 
-    final static void b(int param0) {
+    final static void compactFaceBuckets(int param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;

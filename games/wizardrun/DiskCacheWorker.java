@@ -94,7 +94,7 @@ final class DiskCacheWorker implements Runnable {
             }
             if (1 == ChatMessage.field_k) {
               if (DelayedServerPacket.field_k.status == 2) {
-                stackIn_15_0 = AccountProgressDialog.a((byte) -121, -1);
+                stackIn_15_0 = AccountProgressDialog.handleJs5ConnectionFailure((byte) -121, -1);
                 return stackIn_15_0;
               }
               if (DelayedServerPacket.field_k.status == 1) {
@@ -115,13 +115,13 @@ final class DiskCacheWorker implements Runnable {
               if (BufferedRandomAccessFile.field_q.available((byte) 89) > 0) {
                 var1_int = BufferedRandomAccessFile.field_q.readByte((byte) 19);
                 if (var1_int != 0) {
-                  stackIn_29_0 = AccountProgressDialog.a((byte) 85, var1_int);
+                  stackIn_29_0 = AccountProgressDialog.handleJs5ConnectionFailure((byte) 85, var1_int);
                   return stackIn_29_0;
                 }
                 ChatMessage.field_k = ChatMessage.field_k + 1;
               } else {
                 if (WidgetPainterState.field_g < MonotonicClockHelpers.monotonicMillis((byte) 127)) {
-                  stackIn_26_0 = AccountProgressDialog.a((byte) 122, -2);
+                  stackIn_26_0 = AccountProgressDialog.handleJs5ConnectionFailure((byte) 122, -2);
                   return stackIn_26_0;
                 }
               }
@@ -138,7 +138,7 @@ final class DiskCacheWorker implements Runnable {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return AccountProgressDialog.a((byte) 87, -3);
+            return AccountProgressDialog.handleJs5ConnectionFailure((byte) 87, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

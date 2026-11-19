@@ -9,7 +9,7 @@ abstract class TimedValidator implements Validator {
     static String field_c;
     static int field_a;
 
-    final static Sprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static Sprite[] loadSpriteStripById(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -60,14 +60,14 @@ abstract class TimedValidator implements Validator {
 
     abstract ValidationState validateCurrentText(boolean param0);
 
-    final static void c(int param0) {
+    final static void prepareLogoBlur(int param0) {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;
         int var4 = wizardrun.field_H;
         try {
           var1 = new Sprite(540, 140);
-          UrlPacketDownloader.a(var1, false);
+          UrlPacketDownloader.pushSpriteRaster(var1, false);
           TriangleRasterState.useRasterClip();
           SoftwareRasterizer.clear();
           DualLinkNodeHashTable.field_f = 0;

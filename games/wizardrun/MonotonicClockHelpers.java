@@ -6,7 +6,7 @@ final class MonotonicClockHelpers {
     static String field_a;
     static int[] field_c;
 
-    final static void a(String param0, int param1) {
+    final static void updateTooltipState(String param0, int param1) {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;

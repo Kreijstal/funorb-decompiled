@@ -14,7 +14,7 @@ class FramedButtonPainter extends WidgetPainter {
           field_q = null;
           return;
         }
-        FramedButtonPainter.a((byte) 59, 86);
+        FramedButtonPainter.decodeSocialFilterModes((byte) 59, 86);
         field_r = null;
         field_s = null;
         field_q = null;
@@ -38,7 +38,7 @@ class FramedButtonPainter extends WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -82) {
-            FramedButtonPainter.a((byte) -117, -79);
+            FramedButtonPainter.decodeSocialFilterModes((byte) -117, -79);
           }
           var4_long = 0L;
           var6 = null;
@@ -81,7 +81,7 @@ class FramedButtonPainter extends WidgetPainter {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void decodeSocialFilterModes(byte param0, int param1) {
         TimedValidator.field_e = 3 & param1 >> 4;
         if (!(2 >= TimedValidator.field_e)) {
           TimedValidator.field_e = 2;

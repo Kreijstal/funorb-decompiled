@@ -79,9 +79,9 @@ final class ErrorReportingHelpers {
         wizardSprites = null;
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isClientFlagEnabled(byte param0, int param1) {
         if (param0 <= 12) {
-          ErrorReportingHelpers.a((byte) -115, 46);
+          ErrorReportingHelpers.isClientFlagEnabled((byte) -115, 46);
           if (param1 == -1) {
             return true;
           }

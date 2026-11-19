@@ -95,7 +95,7 @@ final class ValidatedTextField extends EditableTextWidget implements ValidatorPr
             GameShell.field_A.showDialog((UiWidget) (ProxySocketConnector.field_e), (byte) 126);
           }
           int var4_int = 25 % ((param0 + 75) / 34);
-          ProxySocketConnector.field_e.a(param1, param3, 2113632, param2);
+          ProxySocketConnector.field_e.setLoadingProgress(param1, param3, 2113632, param2);
           SoftwareRasterizer.clear();
           WidgetTheme.drawDialogLayer(-117, true);
         } catch (RuntimeException runtimeException) {

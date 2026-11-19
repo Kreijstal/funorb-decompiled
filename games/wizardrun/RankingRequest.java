@@ -124,19 +124,19 @@ final class RankingRequest extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void a(int param0) {
+    final static void drawFramedMenuScreen(int param0) {
         int var1 = 0;
         int var2 = 0;
         if (param0 == 72) {
           var1 = IntrusiveDequeCursor.getMenuHeight((byte) -89);
           var2 = GrowableIntList.getMenuWidth((byte) 47);
           FriendOrderingHelpers.field_c.drawFrame(IntrusiveDequeCursor.field_f - DecodedSpritePalette.field_c, var2 + (DecodedSpritePalette.field_c << 1), var1 + (NameAvailabilityFactory.field_c << 1), 1, MatchingTextValidator.field_l - NameAvailabilityFactory.field_c);
-          AccountFormTextHelpers.a(99);
+          AccountFormTextHelpers.drawMenuScreen(99);
           return;
         }
     }
 
-    final static void c(int param0) {
+    final static void clearFaceDepthCounts(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -149,7 +149,7 @@ final class RankingRequest extends IntrusiveNode {
           var5 = KeyboardQueueConsumer.field_a;
           var1 = var5;
           if (param0 != 45) {
-            RankingRequest.a(-105);
+            RankingRequest.drawFramedMenuScreen(-105);
           }
           var2 = 0;
           var3 = var5.length;

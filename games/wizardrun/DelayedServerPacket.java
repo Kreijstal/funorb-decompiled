@@ -35,7 +35,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = GameApplet.a(param3, param1, param0, param5, param2, param4);
+          var8 = GameApplet.createFullscreenFrame(param3, param1, param0, param5, param2, param4);
           var6 = var8;
           if (var8 == null) {
             return null;

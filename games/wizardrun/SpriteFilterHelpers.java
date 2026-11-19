@@ -13,7 +13,7 @@ final class SpriteFilterHelpers {
         field_b = null;
     }
 
-    final static void a(int param0, Sprite param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
+    final static void expandSpriteOutline(int param0, Sprite param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -115,7 +115,7 @@ final class SpriteFilterHelpers {
         }
     }
 
-    final static void a(byte param0) {
+    final static void resetJs5RetryState(byte param0) {
         if (param0 > -104) {
           SpriteFilterHelpers.releaseStatics(-109);
         }
@@ -123,7 +123,7 @@ final class SpriteFilterHelpers {
         NameAvailabilityFactory.field_f.field_n = 0;
     }
 
-    final static String a(String param0, String param1, ResourceArchive param2, int param3, String param4) {
+    final static String formatNamedGroupLoadingProgress(String param0, String param1, ResourceArchive param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String stackIn_2_0 = null;

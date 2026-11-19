@@ -13,17 +13,17 @@ abstract class IndexedSpriteState {
     static String field_g;
     static String field_f;
 
-    final static void a(int param0) {
+    final static void showLoginWorkflow(int param0) {
         if (param0 < 21) {
           return;
         }
-        LoginCredentials.a((byte) -99);
+        LoginCredentials.showProgressDialog((byte) -99);
         OpacityWidget.setAccountWorkflowState((byte) 100, 4);
     }
 
     abstract void draw(int param0, int param1);
 
-    final static LoginMethodPreference a(java.applet.Applet param0, byte param1) {
+    final static LoginMethodPreference readLastLoginMethod(java.applet.Applet param0, byte param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -73,7 +73,7 @@ abstract class IndexedSpriteState {
 
     abstract void drawAlpha(int param0, int param1, int param2);
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void updateBrowserNavigationLinks(byte param0, java.applet.Applet param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -122,14 +122,14 @@ abstract class IndexedSpriteState {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          IndexedSpriteState.a(-100);
+          IndexedSpriteState.showLoginWorkflow(-100);
         }
         field_f = null;
         field_e = null;
         field_g = null;
     }
 
-    final static void a(boolean param0, java.awt.Canvas param1) {
+    final static void attachCanvasInput(boolean param0, java.awt.Canvas param1) {
         if (param0) {
           return;
         }

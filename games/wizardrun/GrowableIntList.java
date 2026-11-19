@@ -17,7 +17,7 @@ final class GrowableIntList {
         return CachedArchiveProvider.field_f;
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5) {
+    final static void drawSpriteAlphaGradient(int param0, int param1, int param2, Sprite param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;

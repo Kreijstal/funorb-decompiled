@@ -61,7 +61,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void recolorGreenPixels(int param0, byte param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -126,7 +126,7 @@ final class ValidationHelpWidget extends HotspotTextWidget {
         if (!param0) {
           return null;
         }
-        ValidationHelpWidget.a(23, (byte) -128, -52, 32, 59, 33);
+        ValidationHelpWidget.recolorGreenPixels(23, (byte) -128, -52, 32, 59, 33);
         return null;
     }
 
@@ -191,11 +191,11 @@ final class ValidationHelpWidget extends HotspotTextWidget {
           if (this.field_R != null &&
             this.field_R.width >= var11 &&
             var12 <= this.field_R.height) {
-            UrlPacketDownloader.a(this.field_R, false);
+            UrlPacketDownloader.pushSpriteRaster(this.field_R, false);
             SoftwareRasterizer.clear();
           } else {
             this.field_R = new Sprite(var11, var12);
-            UrlPacketDownloader.a(this.field_R, false);
+            UrlPacketDownloader.pushSpriteRaster(this.field_R, false);
           }
           var16.drawRotatedAboutPivot(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_U << 10, 4096);
           UsernameLoginCredentials.popRasterState(4);

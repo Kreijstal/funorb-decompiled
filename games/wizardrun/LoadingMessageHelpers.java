@@ -28,7 +28,7 @@ final class LoadingMessageHelpers {
         return var3;
     }
 
-    final static void a(int param0) {
+    final static void showCreatedAccountLogin(int param0) {
         String var2 = (String) null;
         MenuInputState.showLoginWithMessage((String) null, UiSpriteThemeHelpers.field_a, true);
         if (param0 != 7) {

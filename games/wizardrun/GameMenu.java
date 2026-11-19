@@ -44,7 +44,7 @@ final class GameMenu extends MenuController {
               ValidationState.selectStarSprites[2].drawTransparent(var7 / 2 + 268, param0);
             }
             if (param3 > -98) {
-              GameMenu.a((byte) 46);
+              GameMenu.canLoadGameResources((byte) 46);
             }
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -56,9 +56,9 @@ final class GameMenu extends MenuController {
             return;
           }
           if ((param2 != 5 ||
-            ThreePieceFrameHelpers.a(-116)) &&
+            ThreePieceFrameHelpers.isGuestMode(-116)) &&
             (param2 != 4 ||
-            !ThreePieceFrameHelpers.a(-103))) {
+            !ThreePieceFrameHelpers.isGuestMode(-103))) {
             if (param2 == 2) {
               if (ReflectionCheck.field_s) {
                 stackIn_54_0 = StyleNode.field_p;
@@ -68,12 +68,12 @@ final class GameMenu extends MenuController {
               var7Lifetime2 = stackIn_54_0;
               var8 = 20 + param0;
               var9 = 260;
-              ValidationState.selectStarSprites[0].a(2 + var9 + 0, -6 + var8 - 10, -118, 20, 0);
-              ValidationState.selectStarSprites[0].a(2 + var9 - 0, -6 + (var8 + 10), -86, 20, 0);
-              ValidationState.selectStarSprites[0].a(2 + (0 + var9), -6 + var8, -105, 30, 0);
-              ValidationState.selectStarSprites[0].a(108 + var9 + 2, -10 + (-6 + var8), -98, 20, 0);
-              ValidationState.selectStarSprites[0].a(var9 + 108 + 2, var8 - 6 + 10, -121, 20, 0);
-              ValidationState.selectStarSprites[0].a(2 + var9 + 108, -6 + var8, -90, 30, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(2 + var9 + 0, -6 + var8 - 10, -118, 20, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(2 + var9 - 0, -6 + (var8 + 10), -86, 20, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(2 + (0 + var9), -6 + var8, -105, 30, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(108 + var9 + 2, -10 + (-6 + var8), -98, 20, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(var9 + 108 + 2, var8 - 6 + 10, -121, 20, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(2 + var9 + 108, -6 + var8, -90, 30, 0);
               for (var10 = var9; var10 < -12 + var9 + 108; var10 += 14) {
                 ValidationState.selectStarSprites[0].drawScaledIntensity(var10, var8 - 14 - 6, 28, 28, 64);
               }
@@ -82,9 +82,9 @@ final class GameMenu extends MenuController {
                 ValidationState.selectStarSprites[0].drawScaled(var10Lifetime2, -20 + var8, 28, 28);
               }
               SoftwareRasterizer.resetClip();
-              ValidationState.selectStarSprites[0].a(2 + var7Lifetime2 * 108 / 104 + var9, var8 - 16, -102, 30, 0);
-              ValidationState.selectStarSprites[0].a(2 + (var7Lifetime2 * 108 / 104 + var9), var8 - 6 + 10, -102, 30, 0);
-              ValidationState.selectStarSprites[0].a(108 * var7Lifetime2 / 104 + (var9 + 2), var8 - 6, -90, 40, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(2 + var7Lifetime2 * 108 / 104 + var9, var8 - 16, -102, 30, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(2 + (var7Lifetime2 * 108 / 104 + var9), var8 - 6 + 10, -102, 30, 0);
+              ValidationState.selectStarSprites[0].drawRotatedScaled(108 * var7Lifetime2 / 104 + (var9 + 2), var8 - 6, -90, 40, 0);
               var6 = LoginForm.field_N + "       ";
               decompiledFrameRemainder0 = false;
             }
@@ -98,12 +98,12 @@ final class GameMenu extends MenuController {
                 var7Lifetime2Lifetime1 = stackIn_27_0;
                 var8Lifetime1 = param0 + 20;
                 var9Lifetime1 = 260;
-                ValidationState.selectStarSprites[0].a(0 + var9Lifetime1 + 2, -16 + var8Lifetime1, -121, 20, 0);
-                ValidationState.selectStarSprites[0].a(var9Lifetime1 - 0 + 2, -6 + var8Lifetime1 + 10, -115, 20, 0);
-                ValidationState.selectStarSprites[0].a(2 + var9Lifetime1, var8Lifetime1 - 6, -125, 30, 0);
-                ValidationState.selectStarSprites[0].a(var9Lifetime1 + 110, -10 + (-6 + var8Lifetime1), -126, 20, 0);
-                ValidationState.selectStarSprites[0].a(var9Lifetime1 + 110, -6 + (var8Lifetime1 + 10), -116, 20, 0);
-                ValidationState.selectStarSprites[0].a(2 + (108 + var9Lifetime1), var8Lifetime1 - 6, -88, 30, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(0 + var9Lifetime1 + 2, -16 + var8Lifetime1, -121, 20, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(var9Lifetime1 - 0 + 2, -6 + var8Lifetime1 + 10, -115, 20, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(2 + var9Lifetime1, var8Lifetime1 - 6, -125, 30, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(var9Lifetime1 + 110, -10 + (-6 + var8Lifetime1), -126, 20, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(var9Lifetime1 + 110, -6 + (var8Lifetime1 + 10), -116, 20, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(2 + (108 + var9Lifetime1), var8Lifetime1 - 6, -88, 30, 0);
                 for (var10Lifetime1 = var9Lifetime1; 2 + (var9Lifetime1 + 108) - 14 > var10Lifetime1; var10Lifetime1 += 14) {
                   ValidationState.selectStarSprites[0].drawScaledIntensity(var10Lifetime1, -6 + (-14 + var8Lifetime1), 28, 28, 64);
                 }
@@ -112,9 +112,9 @@ final class GameMenu extends MenuController {
                   ValidationState.selectStarSprites[0].drawScaled(var10Lifetime1Lifetime1, -6 + (var8Lifetime1 - 14), 28, 28);
                 }
                 SoftwareRasterizer.resetClip();
-                ValidationState.selectStarSprites[0].a(var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200 + 2, var8Lifetime1 - 6 - 10, -122, 30, 0);
-                ValidationState.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), 10 + var8Lifetime1 - 6, -91, 30, 0);
-                ValidationState.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), -6 + var8Lifetime1, -98, 40, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200 + 2, var8Lifetime1 - 6 - 10, -122, 30, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), 10 + var8Lifetime1 - 6, -91, 30, 0);
+                ValidationState.selectStarSprites[0].drawRotatedScaled(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), -6 + var8Lifetime1, -98, 40, 0);
                 var6 = WhirlpoolHasher.field_i + "       ";
                 decompiledFrameRemainder0 = false;
               }
@@ -126,7 +126,7 @@ final class GameMenu extends MenuController {
                     ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime2Lifetime2 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
-                    GameMenu.a((byte) 46);
+                    GameMenu.canLoadGameResources((byte) 46);
                   }
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -137,7 +137,7 @@ final class GameMenu extends MenuController {
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 268, param0 + 18, var5, -1);
                   return;
                 }
-                if (!ThreePieceFrameHelpers.a(-114)) {
+                if (!ThreePieceFrameHelpers.isGuestMode(-114)) {
                   if (null == LoginChoicePanel.field_E) {
                     var6 = AccountProgressDialog.field_lb;
                   } else {
@@ -152,7 +152,7 @@ final class GameMenu extends MenuController {
                     ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime2Lifetime3 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
-                    GameMenu.a((byte) 46);
+                    GameMenu.canLoadGameResources((byte) 46);
                   }
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
                   GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -177,7 +177,7 @@ final class GameMenu extends MenuController {
               ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime3 / 2 + 268, param0);
             }
             if (param3 > -98) {
-              GameMenu.a((byte) 46);
+              GameMenu.canLoadGameResources((byte) 46);
             }
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
             GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -203,7 +203,7 @@ final class GameMenu extends MenuController {
           ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime1 / 2 + 268, param0);
         }
         if (param3 > -98) {
-          GameMenu.a((byte) 46);
+          GameMenu.canLoadGameResources((byte) 46);
         }
         GameGraphicsResources.wizardFont2.drawStringCentered(var6, 267, param0 + 18, 0, -1);
         GameGraphicsResources.wizardFont2.drawStringCentered(var6, 269, param0 + 18, 0, -1);
@@ -215,9 +215,9 @@ final class GameMenu extends MenuController {
     }
 
     GameMenu() {
-        super(ThreePieceFrameHelpers.a(-106) ? 5 : 6, 160, 392, 152, 32);
+        super(ThreePieceFrameHelpers.isGuestMode(-106) ? 5 : 6, 160, 392, 152, 32);
         int stackIn_3_1 = 0;
-        if (!ThreePieceFrameHelpers.a(-106)) {
+        if (!ThreePieceFrameHelpers.isGuestMode(-106)) {
           stackIn_3_1 = 6;
         } else {
           stackIn_3_1 = 5;
@@ -229,7 +229,7 @@ final class GameMenu extends MenuController {
         if (var1 == null) {
           var1 = new RasterSnapshot();
         }
-        var1.a(SoftwareRasterizer.pixels, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, SoftwareRasterizer.width, param0 ^ 9202, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop);
+        var1.setRasterState(SoftwareRasterizer.pixels, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, SoftwareRasterizer.width, param0 ^ 9202, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop);
         if (param0 != -31782) {
           field_o = 6;
         }
@@ -249,9 +249,9 @@ final class GameMenu extends MenuController {
             TickClock.field_d = true;
           } else {
             if ((5 != param1 ||
-              ThreePieceFrameHelpers.a(-112)) &&
+              ThreePieceFrameHelpers.isGuestMode(-112)) &&
               (4 != param1 ||
-              !ThreePieceFrameHelpers.a(-115))) {
+              !ThreePieceFrameHelpers.isGuestMode(-115))) {
               if (param1 == 2) {
                 stackIn_24_0 = !(ReflectionCheck.field_s);
                 ReflectionCheck.field_s = stackIn_24_0;
@@ -266,11 +266,11 @@ final class GameMenu extends MenuController {
                   }
                 } else {
                   if (((param1 == 4)) &&
-                    (!(ThreePieceFrameHelpers.a(-106)))) {
+                    (!(ThreePieceFrameHelpers.isGuestMode(-106)))) {
                     if (LoginChoicePanel.field_E != null) {
                       WeightedLruCache.exitFullscreen((byte) 60);
                     } else {
-                      DropTargetWidget.a(false, false);
+                      DropTargetWidget.enterGameFullscreen(false, false);
                     }
                   }
                 }
@@ -319,7 +319,7 @@ final class GameMenu extends MenuController {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+    final void handleMenuPointer(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         int var8;
         boolean decompiledFrameRemainder0 = true;
         var8 = wizardrun.field_H;
@@ -340,7 +340,7 @@ final class GameMenu extends MenuController {
           }
           else {
             if (!param4) {
-              super.a(param0, param1, param2, param3, param4, false);
+              super.handleMenuPointer(param0, param1, param2, param3, param4, false);
             }
             return;
           }
@@ -349,7 +349,7 @@ final class GameMenu extends MenuController {
           if (param1 == 3) {
             if (260 > param0) {
               if (!param4) {
-                super.a(param0, param1, param2, param3, param4, param5);
+                super.handleMenuPointer(param0, param1, param2, param3, param4, param5);
               }
               return;
             }
@@ -382,7 +382,7 @@ final class GameMenu extends MenuController {
               SingleChildWidget.field_D.stopPlayback(-123);
             }
           } else {
-            super.a(param0, param1, param2, param3, param4, false);
+            super.handleMenuPointer(param0, param1, param2, param3, param4, false);
           }
         }
         if (param5) {
@@ -410,7 +410,7 @@ final class GameMenu extends MenuController {
         super.drawMenuItems(68);
     }
 
-    final static boolean a(byte param0) {
+    final static boolean canLoadGameResources(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 12) {
           return true;

@@ -266,11 +266,11 @@ class GridActor {
         }
         if (param0 <= 51) {
           LevelData var3 = (LevelData) null;
-          this.b((LevelData) null, 94);
+          this.getGroundSupport((LevelData) null, 94);
         }
     }
 
-    final void a(int param0, PcmSample[] param1, LevelData param2, int param3, int param4, int param5, PcmStreamMixer param6, boolean param7, byte param8) {
+    final void moveAlongPlatforms(int param0, PcmSample[] param1, LevelData param2, int param3, int param4, int param5, PcmStreamMixer param6, boolean param7, byte param8) {
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
@@ -287,12 +287,12 @@ class GridActor {
         var11 = wizardrun.field_H;
         try {
           if (2 != param0) {
-            if (1 == this.b(param2, -4) &&
+            if (1 == this.getGroundSupport(param2, -4) &&
               this.tileOffset.row == 0 &&
               this.verticalVelocity < 0) {
               this.verticalVelocity = 0;
             }
-            if (this.b(param2, -4) == 0 ||
+            if (this.getGroundSupport(param2, -4) == 0 ||
               this.verticalVelocity > 0 ||
               !(this.tileOffset.row <= 0)) {
               this.applyGravity(param2, -80);
@@ -303,7 +303,7 @@ class GridActor {
             if (param0 == 0) {
               var12 = new GridPoint(this.tilePosition);
               this.tilePosition.column = this.tilePosition.column + this.field_h;
-              if (this.b(param2, -4) == 0) {
+              if (this.getGroundSupport(param2, -4) == 0) {
                 this.field_h = -this.field_h;
               }
               this.tilePosition = var12;
@@ -378,7 +378,7 @@ class GridActor {
           }
           this.tileOffset.row = this.tileOffset.row + this.verticalVelocity;
           if (this.tileOffset.row < 0) {
-            if (this.b(param0, -4) == 0) {
+            if (this.getGroundSupport(param0, -4) == 0) {
               this.tileOffset.row = this.tileOffset.row + 240;
               this.tilePosition.row = this.tilePosition.row - 1;
             } else {
@@ -473,13 +473,13 @@ class GridActor {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void refreshScreenshotPreview(boolean param0) {
         if (param0) {
           GridActor.drawScreenshotPreview(false);
         }
     }
 
-    final int b(LevelData param0, int param1) {
+    final int getGroundSupport(LevelData param0, int param1) {
         GridPoint var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -556,7 +556,7 @@ class GridActor {
           SoftwareRasterizer.fillRect(244, 198, 367, 141, 0);
           if (null == HighscorePlayerState.field_d) {
             if (null != AudioServiceThread.field_a) {
-              AudioServiceThread.field_a.a(NameSuggestionsPanel.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              AudioServiceThread.field_a.drawParagraph(NameSuggestionsPanel.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -565,7 +565,7 @@ class GridActor {
           var7Lifetime1 = var6;
           if (var6 == null) {
             if (null != AudioServiceThread.field_a) {
-              AudioServiceThread.field_a.a(NameSuggestionsPanel.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              AudioServiceThread.field_a.drawParagraph(NameSuggestionsPanel.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.drawTransparent(245, 199);
@@ -576,9 +576,9 @@ class GridActor {
               var2_int = (60 + var7Lifetime2.fullWidth) * WidgetTheme.field_j / MidiPcmStream.field_M;
               var3 = var2_int - 30;
               if (!RasterSnapshot.field_j) {
-                GrowableIntList.a((-var3 + var7Lifetime2.fullWidth) * 256 / 30, -256 * var3 / 30, 245, var7Lifetime2, 199, -107);
+                GrowableIntList.drawSpriteAlphaGradient((-var3 + var7Lifetime2.fullWidth) * 256 / 30, -256 * var3 / 30, 245, var7Lifetime2, 199, -107);
               } else {
-                GrowableIntList.a(-256 * var3 / 30, 256 * (-var3 + var7Lifetime2.fullWidth) / 30, 245, var7Lifetime2, 199, -83);
+                GrowableIntList.drawSpriteAlphaGradient(-256 * var3 / 30, 256 * (-var3 + var7Lifetime2.fullWidth) / 30, 245, var7Lifetime2, 199, -83);
               }
             }
           }
@@ -604,7 +604,7 @@ class GridActor {
             if (var2 == null) {
               return;
             }
-            AudioServiceThread.field_a.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            AudioServiceThread.field_a.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

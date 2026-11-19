@@ -135,13 +135,13 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void resetMembershipSlideState(int param0, boolean param1) {
         Base37Codec.field_d = param0;
         WidgetTheme.field_j = MidiPcmStream.field_M;
         IndexedSpriteArrayFactory.field_c = 0;
         ByteArrayPool.field_c = 0;
         GameGraphicsResources.field_d = new MenuInputState(2);
-        GameGraphicsResources.field_d.resetSelection(param0 ^ -12785, ChatMessage.a(29292, NetworkArchiveRequest.field_B, AchievementSubmission.field_n), param1, -1);
+        GameGraphicsResources.field_d.resetSelection(param0 ^ -12785, ChatMessage.hitTestMembershipButton(29292, NetworkArchiveRequest.field_B, AchievementSubmission.field_n), param1, -1);
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -155,7 +155,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             return;
           }
           if (param1 == this.field_G) {
-            Js5Index.a(-1);
+            Js5Index.showEmptyLoginForm(-1);
             return;
           }
           if (param1 != this.field_F) {
@@ -184,7 +184,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         if (param0 <= 21) {
           return;
         }
-        MessagePanel.a(-125, this.nameInput.text);
+        MessagePanel.showAccountProgressWithText(-125, this.nameInput.text);
     }
 
     private final boolean isInputValid(int param0, ValidatorProvider param1) {
@@ -300,7 +300,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             return stackIn_7_0;
           }
           if (param2 >= -96) {
-            DisplayNameForm.a(44, false);
+            DisplayNameForm.resetMembershipSlideState(44, false);
           }
           if (99 != param1) {
             return false;

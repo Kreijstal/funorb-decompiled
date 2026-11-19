@@ -14,7 +14,7 @@ final class NameCheckHelpers {
         return (int)(1000000000L / NameSuggestionsPanel.field_E);
     }
 
-    final static boolean a(String param0, boolean param1, AccountCreationForm param2, int param3, int param4, String param5, String param6) {
+    final static boolean beginAccountCreation(String param0, boolean param1, AccountCreationForm param2, int param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
         NameCheckProgressDialog var8 = null;
         RuntimeException stackIn_16_0 = null;
@@ -80,12 +80,12 @@ final class NameCheckHelpers {
         }
     }
 
-    final static void a(int param0) {
+    final static void openGuestAccountWorkflow(int param0) {
         if (!FramedButtonPainter.field_p) {
           throw new IllegalStateException();
         }
         MessagePanel.field_M = true;
-        ArchiveRequest.a(param0 + 11579568, true);
+        ArchiveRequest.showLoginDialogWithGuard(param0 + 11579568, true);
         ArchiveRequest.field_t = param0;
     }
 
@@ -94,7 +94,7 @@ final class NameCheckHelpers {
         field_b = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          NameCheckHelpers.a((String) null, false, (AccountCreationForm) null, -33, -128, (String) null, (String) null);
+          NameCheckHelpers.beginAccountCreation((String) null, false, (AccountCreationForm) null, -33, -128, (String) null, (String) null);
         }
     }
 

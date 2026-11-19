@@ -45,7 +45,7 @@ final class LoginMethodPreference {
         field_c = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int multiplyFixed16(int param0, int param1, int param2) {
         int var3 = param0 >> 16;
         int var4 = param0 & param2;
         int var5 = param1 >> 16;
@@ -80,7 +80,7 @@ final class LoginMethodPreference {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 106) {
-            LoginMethodPreference.a(28, -119, 3);
+            LoginMethodPreference.multiplyFixed16(28, -119, 3);
           }
           stackIn_3_0 = PacketBuffer.field_n.getNamedFile(85, param0, "");
           return stackIn_3_0;

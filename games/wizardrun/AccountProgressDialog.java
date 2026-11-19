@@ -15,13 +15,13 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
     private boolean field_kb;
     private boolean field_nb;
 
-    final void n(int param0) {
+    final void showConnectionRestored(int param0) {
         if (param0 != 8) {
           field_tb = 105;
         }
         this.field_ub.setBarColors(2121792, -1028717695, 4210752);
         MessagePanel var2 = new MessagePanel(this, this.field_qb, BrowserUrlLauncher.field_d);
-        var2.a((byte) -31, UrlPacketDownloader.field_a, 15);
+        var2.addActionButton((byte) -31, UrlPacketDownloader.field_a, 15);
         this.transitionToContent(var2, param0 - 119);
     }
 
@@ -76,11 +76,11 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = IntHashTable.a((byte) -55, param1) ? 1 : 0;
+          var3 = IntHashTable.readBooleanBit((byte) -55, param1) ? 1 : 0;
           if (param0 != -117) {
             field_ob = (java.awt.Font) null;
           }
-          var4 = IntHashTable.a((byte) -55, param1) ? 1 : 0;
+          var4 = IntHashTable.readBooleanBit((byte) -55, param1) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.field_L = (short)param1.readBits(16, param0 ^ 11698);
           var5.field_P = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_P);
@@ -107,10 +107,10 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
             var5.field_z = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_z);
             var5.field_v = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_v);
           }
-          if (IntHashTable.a((byte) -55, param1)) {
+          if (IntHashTable.readBooleanBit((byte) -55, param1)) {
             var5.field_O = ArchiveLoadingStage.readPackedShortArray(16, (byte) -48, param1, var5.field_O);
           }
-          if (IntHashTable.a((byte) -55, param1)) {
+          if (IntHashTable.readBooleanBit((byte) -55, param1)) {
             var5.field_x = LoginCredentialKind.readPackedByteArray(param1, var5.field_x, 16, (byte) 11);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_x.length; var7++) {
@@ -189,7 +189,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int handleJs5ConnectionFailure(byte param0, int param1) {
         int var4 = wizardrun.field_H;
         ChatMessage.field_k = 0;
         DelayedServerPacket.field_k = null;
@@ -255,28 +255,28 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
               } else {
                 stackIn_13_2 = IsaacRandom.field_h;
               }
-              ((MessagePanel) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, -1);
+              ((MessagePanel) (Object) stackIn_12_0).addActionButton((byte) stackIn_12_1, stackIn_13_2, -1);
             } else {
-              var6.a(0, LoadingMessageHelpers.field_a, (WidgetListener) (this));
+              var6.appendTextButton(0, LoadingMessageHelpers.field_a, (WidgetListener) (this));
             }
           } else {
-            var6.a((byte) -31, GameApplet.field_j, 11);
-            var6.a((byte) -31, ReflectionCheck.field_q, 17);
+            var6.addActionButton((byte) -31, GameApplet.field_j, 11);
+            var6.addActionButton((byte) -31, ReflectionCheck.field_q, 17);
           }
           if (param1 <= 12) {
             AccountProgressDialog.createAchievementStateWords(-64);
           }
           if (param2 == 3) {
-            var6.a((byte) -31, CheckboxPainter.field_g, 7);
+            var6.addActionButton((byte) -31, CheckboxPainter.field_g, 7);
           } else {
             if (param2 == 4) {
-              var6.a((byte) -31, NodeHashTableIterator.field_b, 8);
+              var6.addActionButton((byte) -31, NodeHashTableIterator.field_b, 8);
             } else {
               if (param2 == 6) {
-                var6.a((byte) -31, EmailLoginCredentials.field_h, 9);
+                var6.addActionButton((byte) -31, EmailLoginCredentials.field_h, 9);
               } else {
                 if (param2 == 9) {
-                  var6.a(0, SecondaryNodeDeque.field_a, (WidgetListener) (this));
+                  var6.appendTextButton(0, SecondaryNodeDeque.field_a, (WidgetListener) (this));
                 }
               }
             }
@@ -309,7 +309,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           QuickChatPhraseRepository.showLoginForm(19702);
         } else {
           if (this.field_nb) {
-            LoadingMessageHelpers.a(param0 ^ -27704);
+            LoadingMessageHelpers.showCreatedAccountLogin(param0 ^ -27704);
           }
         }
     }

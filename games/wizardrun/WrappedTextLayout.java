@@ -99,11 +99,11 @@ final class WrappedTextLayout extends TextLayout {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void finishUiTransitionsWithByteGuard(byte param0) {
         if (param0 != 79) {
           field_n = (QuickChatDynamicCommand) null;
         }
-        GameApplet.h(0);
+        GameApplet.finishUiTransitions(0);
     }
 
     final void layoutCenteredLine(BitmapFont param0, String param1, int param2, boolean param3, int param4) {
@@ -256,7 +256,7 @@ final class WrappedTextLayout extends TextLayout {
           this.field_k = param2;
           this.field_g = false;
           this.field_o = param7;
-          var16 = new String[param5.b(param0, param3) + 1];
+          var16 = new String[param5.countWrappedLines(param0, param3) + 1];
           var17 = var16;
           var10 = Math.max(1, param5.wrapText(param0, new int[]{param3}, var17));
           if (this.field_p == 3 &&
@@ -388,7 +388,7 @@ final class WrappedTextLayout extends TextLayout {
           if (param1 != 30736) {
             field_m = (String) null;
           }
-          stackIn_6_0 = MeshLightingHelpers.b(0);
+          stackIn_6_0 = MeshLightingHelpers.buildDecodedOpaqueSprites(0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

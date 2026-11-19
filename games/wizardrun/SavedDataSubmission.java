@@ -100,8 +100,8 @@ final class SavedDataSubmission extends IntrusiveNode {
           var3 = param1.readBits(param0, -11719);
           var4 = new MeshMaterial[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!IntHashTable.a((byte) -55, param1)) {
-              var6 = param1.readBits(GameApplet.a(var5 - 1, true), -11719);
+            if (!IntHashTable.readBooleanBit((byte) -55, param1)) {
+              var6 = param1.readBits(GameApplet.encodedIntegerBitWidth(var5 - 1, true), -11719);
               var4[var5] = var4[var6];
             } else {
               var6_ref_ca = new MeshMaterial();

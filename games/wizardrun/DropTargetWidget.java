@@ -6,7 +6,7 @@ final class DropTargetWidget extends SingleChildWidget {
     static String[] field_I;
     static Sprite[] frameSprites;
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean passwordContainsUsername(String param0, byte param1, String param2) {
         String var3 = null;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_18_0 = null;
@@ -49,29 +49,29 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void enterGameFullscreen(boolean param0, boolean param1) {
         int var2;
         int var3;
         var3 = wizardrun.field_H;
         if (ArchiveProvider.field_a <= 0) {
-          var2 = (ThreePieceFrameHelpers.a(-89)) ? 0 : 1;
+          var2 = (ThreePieceFrameHelpers.isGuestMode(-89)) ? 0 : 1;
         } else {
           if (null == StringPaddingHelpers.field_c) {
             LoginChoicePanel.field_E = DelayedServerPacket.createFullscreenCanvas(0, 640, 0, 480, 0, MusicPatchLoader.field_g);
           } else {
-            LoginChoicePanel.field_E = StringPaddingHelpers.field_c.c(0);
+            LoginChoicePanel.field_E = StringPaddingHelpers.field_c.createFullscreenCanvas(0);
             AccountConnectionState.notifyBrowserResize(0, 2);
           }
           if (LoginChoicePanel.field_E != null) {
             var2 = 2;
-            IndexedSpriteState.a(false, LoginChoicePanel.field_E);
+            IndexedSpriteState.attachCanvasInput(false, LoginChoicePanel.field_E);
           } else {
             var2 = 3;
           }
         }
         if (null == StringPaddingHelpers.field_c &&
           ArchiveContainerHelpers.field_b) {
-          TriangleMesh.a(param0, var2, 15991);
+          TriangleMesh.configureMenuScreen(param0, var2, 15991);
         }
         if (param1) {
           DropTargetWidget.releaseStatics(-89);

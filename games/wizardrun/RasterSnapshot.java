@@ -25,10 +25,10 @@ final class RasterSnapshot extends IntrusiveNode {
         if (param0 == 1) {
           return;
         }
-        RasterSnapshot.a((byte) 91, -43);
+        RasterSnapshot.resendAchievementRequests((byte) 91, -43);
     }
 
-    final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setRasterState(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_o = param1;
         this.field_v = param4;
         if (param5 != -24536) {
@@ -45,7 +45,7 @@ final class RasterSnapshot extends IntrusiveNode {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createSolidNineSliceSprites(int param0, int param1, int param2, int param3, int param4) {
         Sprite dupTemp$1 = null;
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
@@ -78,7 +78,7 @@ final class RasterSnapshot extends IntrusiveNode {
         return var5;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendAchievementRequests(byte param0, int param1) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -99,7 +99,7 @@ final class RasterSnapshot extends IntrusiveNode {
           if (param0 == 51) {
             return;
           }
-          RasterSnapshot.a(122, 75, 31, 20, 79);
+          RasterSnapshot.createSolidNineSliceSprites(122, 75, 31, 20, 79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

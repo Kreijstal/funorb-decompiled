@@ -47,7 +47,7 @@ final class TriangleMesh {
     static int field_b;
     static int field_i;
 
-    final void b(int param0) {
+    final void calculateBounds(int param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -113,14 +113,14 @@ final class TriangleMesh {
         field_A = (long[][]) null;
     }
 
-    private final void a(int param0) {
+    private final void invalidateBounds(int param0) {
         if (param0 != -5818) {
           this.field_u = (int[]) null;
         }
         this.field_B = false;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void configureMenuScreen(boolean param0, int param1, int param2) {
         int stackIn_66_0 = 0;
         int stackIn_69_0 = 0;
         String[] stackIn_76_0 = null;
@@ -414,7 +414,7 @@ final class TriangleMesh {
           if (CoverageFontLoader.field_d == 2) {
             IntegerSyntaxHelpers.field_d.resetSelection(-12785, -1, param0, -1);
           } else {
-            IntegerSyntaxHelpers.field_d.resetSelection(-12785, DisplayModeInfo.a(-578629823, AchievementSubmission.field_n, NetworkArchiveRequest.field_B), param0, 0);
+            IntegerSyntaxHelpers.field_d.resetSelection(-12785, DisplayModeInfo.hitTestMenuOption(-578629823, AchievementSubmission.field_n, NetworkArchiveRequest.field_B), param0, 0);
           }
           if (param2 != 15991) {
             TriangleMesh.releaseStatics(20);
@@ -427,7 +427,7 @@ final class TriangleMesh {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void translateVertices(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = wizardrun.field_H;
         for (var5 = param3; var5 < this.field_L; var5++) {
@@ -435,10 +435,10 @@ final class TriangleMesh {
           this.field_a[var5] = (short)(this.field_a[var5] + param1);
           this.field_w[var5] = (short)(this.field_w[var5] + param0);
         }
-        this.a(param3 - 5818);
+        this.invalidateBounds(param3 - 5818);
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void scaleVertices(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = wizardrun.field_H;
         for (var6 = 0; this.field_L > var6; var6++) {
@@ -446,9 +446,9 @@ final class TriangleMesh {
           this.field_a[var6] = (short)(this.field_a[var6] * param2 / param4);
           this.field_w[var6] = (short)(this.field_w[var6] * param0 / param4);
         }
-        this.a(-5818);
+        this.invalidateBounds(-5818);
         if (param1 != 108) {
-          this.b(93);
+          this.calculateBounds(93);
         }
     }
 
@@ -495,7 +495,7 @@ final class TriangleMesh {
         field_f[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * (-1 + var0);
-            field_f[var0] = GameApplet.a(GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong(16711680L, field_A[5][var1 + 5]), GameApplet.a(ContentTransitionDialog.bitAndLong(field_A[4][4 + var1], 4278190080L), GameApplet.a(GameApplet.a(ContentTransitionDialog.bitAndLong(field_A[2][2 + var1], 280375465082880L), GameApplet.a(ContentTransitionDialog.bitAndLong(field_A[0][var1], -72057594037927936L), ContentTransitionDialog.bitAndLong(71776119061217280L, field_A[1][var1 + 1]))), ContentTransitionDialog.bitAndLong(1095216660480L, field_A[3][var1 + 3])))), ContentTransitionDialog.bitAndLong(field_A[6][var1 + 6], 65280L)), ContentTransitionDialog.bitAndLong(field_A[7][var1 + 7], 255L));
+            field_f[var0] = GameApplet.bitXorLong(GameApplet.bitXorLong(GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong(16711680L, field_A[5][var1 + 5]), GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong(field_A[4][4 + var1], 4278190080L), GameApplet.bitXorLong(GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong(field_A[2][2 + var1], 280375465082880L), GameApplet.bitXorLong(ContentTransitionDialog.bitAndLong(field_A[0][var1], -72057594037927936L), ContentTransitionDialog.bitAndLong(71776119061217280L, field_A[1][var1 + 1]))), ContentTransitionDialog.bitAndLong(1095216660480L, field_A[3][var1 + 3])))), ContentTransitionDialog.bitAndLong(field_A[6][var1 + 6], 65280L)), ContentTransitionDialog.bitAndLong(field_A[7][var1 + 7], 255L));
         }
     }
 }

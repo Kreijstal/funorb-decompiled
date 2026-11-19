@@ -143,7 +143,7 @@ final class IterableNodeHashTable implements Iterable {
               var4 = 1;
               var5 = 1;
             }
-            ImageProducerRasterBuffer.field_m = HighscorePlayerState.a(var4 * var2, var5 * var2, 24268);
+            ImageProducerRasterBuffer.field_m = HighscorePlayerState.createTwoAngleTransform(var4 * var2, var5 * var2, 24268);
             return;
           }
           if (var3 < 120) {
@@ -202,7 +202,7 @@ final class IterableNodeHashTable implements Iterable {
           var4Lifetime1 = 1;
           var5Lifetime1 = 1;
         }
-        ImageProducerRasterBuffer.field_m = HighscorePlayerState.a(var4Lifetime1 * var2, var5Lifetime1 * var2, 24268);
+        ImageProducerRasterBuffer.field_m = HighscorePlayerState.createTwoAngleTransform(var4Lifetime1 * var2, var5Lifetime1 * var2, 24268);
     }
 
     final static FriendEntry findIgnoredPlayer(String param0, int param1) {

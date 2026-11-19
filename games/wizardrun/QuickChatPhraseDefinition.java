@@ -82,7 +82,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void processAccountUiInputWithIntGuard(int param0, int param1) {
         if (param0 != 0) {
           return;
         }

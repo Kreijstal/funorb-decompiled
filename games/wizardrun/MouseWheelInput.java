@@ -9,15 +9,15 @@ abstract class MouseWheelInput {
     static Sprite field_b;
     static String field_f;
 
-    final static boolean a(byte param0) {
+    final static boolean isIntroOrAccountScreenActive(byte param0) {
         boolean stackIn_9_0 = false;
         if (param0 != 60) {
           field_f = (String) null;
         }
         boolean decompiledFrameRemainder0 = true;
         if (BoundedRandomAccessFile.field_a >= 20 &&
-          GameMenu.a((byte) 71) && (!(0 < RasterSnapshot.field_t) ||
-          StripedProgressBar.g((byte) 80))) {
+          GameMenu.canLoadGameResources((byte) 71) && (!(0 < RasterSnapshot.field_t) ||
+          StripedProgressBar.supportsAccountReconnect((byte) 80))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
