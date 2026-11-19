@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pf implements hd {
-    static oa field_g;
+    static NamedSoundEffect field_g;
     static String field_b;
     static int[] field_c;
     int field_e;
@@ -16,10 +16,10 @@ final class pf implements hd {
           om.a(-46342, MouseInputHandler.field_b);
         }
         co.a(param0);
-        lg.b(true);
+        CachedTextLayout.b(true);
         jk.a(27370);
         if (cm.a(-2043140287)) {
-          IsaacPacketBuffer.field_p.c((byte) 33, 1);
+          IsaacPacketBuffer.field_p.writeCipheredOpcode((byte) 33, 1);
           qn.a(0, 0);
         }
         r.a(-28036);

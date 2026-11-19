@@ -24,7 +24,7 @@ final class ak {
             hi.field_N = new Sprite(32, 32);
             vb.a(-79, hi.field_N);
             NameCheckProgressDialog.field_vb.c(0, 0, 32, 32);
-            ug.b(-1);
+            MarkerSliderRenderer.restoreRasterTarget(-1);
           }
           if (!param1) {
             stackIn_10_0 = NameCheckProgressDialog.field_vb;
@@ -51,11 +51,11 @@ final class ak {
         }
         cd.field_a = StandardContentTransitionDialog.a(fb.field_i, 33, "achievements_128", "");
         nl.field_h = new Sprite[cd.field_a.length];
-        ok.a(32381);
+        TutorialTransition.a(32381);
         var3 = 0;
         do {
           if (!(var3 < cd.field_a.length)) {
-            ug.b(-1);
+            MarkerSliderRenderer.restoreRasterTarget(-1);
             break;
           }
           nl.field_h[var3] = new Sprite(32, 32);

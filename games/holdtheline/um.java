@@ -5,9 +5,9 @@ final class um {
     static ll field_d;
     static String field_b;
     static String field_c;
-    static fd field_a;
+    static ValidationState field_a;
     static String field_f;
-    static go field_e;
+    static RotatedSpriteAsset field_e;
 
     final static CoverageBitmapFont a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
@@ -109,7 +109,7 @@ final class um {
     static {
         field_c = "Go Back";
         field_d = new ll();
-        field_a = new fd();
+        field_a = new ValidationState();
         field_f = "Loading sound effects";
     }
 }

@@ -6,8 +6,8 @@ import java.io.*;
 final class uk extends IOException {
     static Sprite field_a;
     static String field_f;
-    static e field_g;
-    static uf field_b;
+    static QuickChatDynamicCommand field_g;
+    static SpriteAsset field_b;
     static String field_d;
     static String[] field_c;
     static boolean field_e;
@@ -29,17 +29,17 @@ final class uk extends IOException {
           SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.f(244, 198, 367, 141, 0);
           if (TriangleMesh.field_y == null) {
-            if (null != an.field_e) {
-              an.field_e.a(ug.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != GzipDecompressor.field_e) {
+              GzipDecompressor.field_e.a(MarkerSliderRenderer.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = TriangleMesh.field_y[va.field_e];
+          var6 = TriangleMesh.field_y[SpriteSheetAsset.field_e];
           if (var6 != null) {
             var6.a(245, 199);
           } else {
-            if (an.field_e != null) {
-              an.field_e.a(ug.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (GzipDecompressor.field_e != null) {
+              GzipDecompressor.field_e.a(MarkerSliderRenderer.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (param0 != 3979) {
@@ -57,7 +57,7 @@ final class uk extends IOException {
               }
             }
           }
-          if (an.field_e != null) {
+          if (GzipDecompressor.field_e != null) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -76,7 +76,7 @@ final class uk extends IOException {
             if (var2 == null) {
               return;
             }
-            an.field_e.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            GzipDecompressor.field_e.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;
@@ -88,12 +88,12 @@ final class uk extends IOException {
     }
 
     final static void b(int param0) {
-        ci.field_o = false;
+        ArchiveCatalog.field_o = false;
         if (param0 >= -41) {
-          field_g = (e) null;
+          field_g = (QuickChatDynamicCommand) null;
         }
-        aa.field_k = false;
-        go.a(0, -1);
+        DelayedServerPacket.field_k = false;
+        RotatedSpriteAsset.a(0, -1);
         ak.field_b = ValidationIndicator.field_M;
         bb.field_a = ValidationIndicator.field_M;
     }
@@ -112,17 +112,17 @@ final class uk extends IOException {
         field_g = null;
     }
 
-    final static kg a(String param0, boolean param1, int param2, boolean param3) {
+    final static RotatedSpriteSheetAsset a(String param0, boolean param1, int param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        kg stackIn_1_0 = null;
+        RotatedSpriteSheetAsset stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -104 % ((42 - param2) / 54);
-          stackIn_1_0 = new kg(param0, param3, param1);
+          stackIn_1_0 = new RotatedSpriteSheetAsset(param0, param3, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,6 +141,6 @@ final class uk extends IOException {
     static {
         field_f = "Minor thrust";
         field_d = "Fullscreen";
-        field_g = new e(0, 2, 2, 1);
+        field_g = new QuickChatDynamicCommand(0, 2, 2, 1);
     }
 }

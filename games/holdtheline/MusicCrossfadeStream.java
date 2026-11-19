@@ -4,7 +4,7 @@
 final class MusicCrossfadeStream extends PcmStream {
     private int field_s;
     private int[] field_u;
-    static uf field_A;
+    static SpriteAsset field_A;
     private boolean field_w;
     MidiPcmStream field_q;
     private int field_B;
@@ -19,22 +19,22 @@ final class MusicCrossfadeStream extends PcmStream {
     private boolean field_x;
     private MusicTrack field_t;
     private int[] field_v;
-    static uf field_o;
+    static SpriteAsset field_o;
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = HoldTheLine.field_D;
         if (this.field_y > 0 &&
           this.field_z != null) {
-          this.field_q.a(param0);
+          this.field_q.skip(param0);
         }
         if (1048576 > this.field_y &&
           null != this.field_m) {
-          this.field_C.a(param0);
+          this.field_C.skip(param0);
         }
         if (this.field_s > 0 &&
           null != this.field_t) {
-          this.field_p.a(param0);
+          this.field_p.skip(param0);
         }
         if (this.field_x) {
           if (0 < this.field_D &&
@@ -142,15 +142,15 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubStream() {
         return null;
     }
 
-    final synchronized int c() {
+    final synchronized int getActivityWeight() {
         return 2;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mix(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -174,7 +174,7 @@ final class MusicCrossfadeStream extends PcmStream {
         var11 = HoldTheLine.field_D;
         try {
           if (this.field_B <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_x) {
@@ -240,8 +240,8 @@ final class MusicCrossfadeStream extends PcmStream {
                   this.field_u = new int[var6];
                   this.field_v = new int[var6];
                 }
-                this.field_q.b(this.field_v, 0, param2);
-                this.field_C.b(this.field_u, 0, param2);
+                this.field_q.mix(this.field_v, 0, param2);
+                this.field_C.mix(this.field_u, 0, param2);
                 if (AudioOutput.field_t) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
@@ -254,10 +254,10 @@ final class MusicCrossfadeStream extends PcmStream {
                   param0[var8 + var7] = param0[var8 + var7] + (this.field_v[var8] * var4_int + var5 * this.field_u[var8] >> 8);
                 }
               } else {
-                this.field_C.b(param0, param1, param2);
+                this.field_C.mix(param0, param1, param2);
               }
             } else {
-              this.field_q.b(param0, param1, param2);
+              this.field_q.mix(param0, param1, param2);
             }
           }
           if (this.field_t != null &&
@@ -269,7 +269,7 @@ final class MusicCrossfadeStream extends PcmStream {
               this.field_u = new int[var6];
               this.field_v = new int[var6];
             }
-            this.field_p.b(this.field_v, 0, param2);
+            this.field_p.mix(this.field_v, 0, param2);
             if (!AudioOutput.field_t) {
               stackIn_57_0 = param1;
             } else {
@@ -302,7 +302,7 @@ final class MusicCrossfadeStream extends PcmStream {
 
     final static java.awt.Container e(int param0) {
         if (param0 != 0) {
-          field_o = (uf) null;
+          field_o = (SpriteAsset) null;
         }
         if (null != fm.field_a) {
           return (java.awt.Container) ((Object) fm.field_a);
@@ -310,14 +310,14 @@ final class MusicCrossfadeStream extends PcmStream {
         return (java.awt.Container) ((Object) GameKeyHandler.a(111));
     }
 
-    final PcmStream a() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
     final synchronized void a(int param0, int param1) {
         this.field_B = param0;
         if (param1 != -32284) {
-          this.c();
+          this.getActivityWeight();
         }
     }
 
@@ -329,7 +329,7 @@ final class MusicCrossfadeStream extends PcmStream {
         field_o = null;
     }
 
-    final static float a(byte param0, float param1, wc[] param2) {
+    final static float a(byte param0, float param1, TrackCurve[] param2) {
         int var5 = 0;
         float var3_float = 0.0f;
         RuntimeException var3 = null;
@@ -350,10 +350,10 @@ final class MusicCrossfadeStream extends PcmStream {
             MusicCrossfadeStream.a(115, (ResourceArchive) null, 72, true);
           }
           for (var5 = 0; var5 < var4; var5++) {
-            var3_float = var3_float + param2[var5].f(50);
+            var3_float = var3_float + param2[var5].length(50);
           }
           if (param1 != (float)var4) {
-            var3_float = var3_float + param2[var4].f(50) * ((float)(-var4) + param1);
+            var3_float = var3_float + param2[var4].length(50) * ((float)(-var4) + param1);
           }
           stackIn_9_0 = var3_float;
           return stackIn_9_0;

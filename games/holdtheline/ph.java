@@ -92,8 +92,8 @@ final class ph {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param1);
-          var3 = var9.f((byte) -100);
-          var4 = var9.a(-93);
+          var3 = var9.readUnsignedByte((byte) -100);
+          var4 = var9.readInt(-93);
           if (param0 != -1) {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
@@ -104,11 +104,11 @@ final class ph {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var4, 0, (byte) 101, var13);
+              var9.readBytes(var4, 0, (byte) 101, var13);
               stackIn_24_0 = var5;
               return stackIn_24_0;
             }
-            var5_int = var9.a(-76);
+            var5_int = var9.readInt(-76);
             if (var5_int >= 0 && (ec.field_C == 0 ||
               !(var5_int > ec.field_C))) {
               var12 = new byte[var5_int];
@@ -119,7 +119,7 @@ final class ph {
               } else {
                 var7 = pc.field_n;
                 synchronized (var7) {
-                  pc.field_n.a((byte) -117, var9, var12);
+                  pc.field_n.decompress((byte) -117, var9, var12);
                 }
               }
               stackIn_22_0 = var6;
@@ -143,11 +143,11 @@ final class ph {
     }
 
     final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
-        oa discarded$0 = null;
-        oa discarded$1 = null;
-        oa discarded$2 = null;
-        oa discarded$3 = null;
-        jh.field_a = new ld(param2, param0);
+        NamedSoundEffect discarded$0 = null;
+        NamedSoundEffect discarded$1 = null;
+        NamedSoundEffect discarded$2 = null;
+        NamedSoundEffect discarded$3 = null;
+        jh.field_a = new SoundCache(param2, param0);
         ArchiveIndex.field_r = i.a(-113, 2000, 60, "f1", 60);
         DialogLayer.field_G = i.a(param1 ^ 51, 1000, 50, "porshe", 50);
         hm.field_a = i.a(-108, 1000, 55, "dragster", 55);
@@ -160,33 +160,33 @@ final class ph {
           ValidationIndicator.field_H = i.a(param1 ^ 50, 2000, 70, "snowmobile", 70);
           ec.field_s = i.a(param1 - 55, 2000, 40, "bmw", 40);
           MusicPatch.field_n = i.a(param1 ^ 49, 2000, 60, "suv", 60);
-          discarded$0 = new oa("engine_start", 70);
-          StrongCacheEntry.field_s = new oa("turbo_whistle", 140);
-          pe.field_b = new oa("afterburner", 80);
-          Point2i.field_c = new oa("tyre_squeal", 100);
-          rc.field_a = new oa("off_the_track", 768);
-          kl.field_t = new oa("off_the_track_alpine", 768);
-          pf.field_g = new oa("alarm_test", 100);
-          ic.field_i = new oa("mine_landing_and_armed", 256);
-          oa.field_p = new oa("mine_explosion", 256);
-          vd.field_b = new oa("machine_gun_1070ms_loop", 40);
-          ValidatedTextField.field_T = new oa("missile_launch", 256);
-          discarded$1 = new oa("homing_missile_beeps", 100);
-          ResizableDialog.field_O = new oa("explosion_and_shrapnel", 256);
-          sj.field_K = new oa("vehicle-barrier_collision", 100);
-          discarded$2 = new oa("vehicle-vehicle_collision", 120);
-          vn.field_h = new oa("shield_bounce", 140);
-          ij.field_g = new oa("powerup_collect_low", 92);
-          MouseWheelInput.field_d = new oa("powerup_collect_high", 88);
-          ji.field_i = new oa("powerup_drop", 100);
-          DualNodeHashTable.field_b = jh.field_a.a(param1 - 32594, "wacky_boom_kick");
-          StrongCacheEntry.field_r = jh.field_a.a("menu_low_beep", (byte) 77);
-          jh.field_a.a("menu_high_beep", (byte) 9);
-          qd.field_j = new oa("ZD_update_lightning_strike");
-          se.field_m = new oa("ZD_update_thunder_roll_1");
-          uj.field_a = new oa("ZD_update_thunder_roll_2");
-          discarded$3 = new oa("ZD_update_rain_loop");
-          j.field_c = new td("car_pass");
+          discarded$0 = new NamedSoundEffect("engine_start", 70);
+          StrongCacheEntry.field_s = new NamedSoundEffect("turbo_whistle", 140);
+          pe.field_b = new NamedSoundEffect("afterburner", 80);
+          Point2i.field_c = new NamedSoundEffect("tyre_squeal", 100);
+          rc.field_a = new NamedSoundEffect("off_the_track", 768);
+          TextFieldRenderer.field_t = new NamedSoundEffect("off_the_track_alpine", 768);
+          pf.field_g = new NamedSoundEffect("alarm_test", 100);
+          ArchiveLoadStage.field_i = new NamedSoundEffect("mine_landing_and_armed", 256);
+          NamedSoundEffect.field_p = new NamedSoundEffect("mine_explosion", 256);
+          vd.field_b = new NamedSoundEffect("machine_gun_1070ms_loop", 40);
+          ValidatedTextField.field_T = new NamedSoundEffect("missile_launch", 256);
+          discarded$1 = new NamedSoundEffect("homing_missile_beeps", 100);
+          ResizableDialog.field_O = new NamedSoundEffect("explosion_and_shrapnel", 256);
+          CheckboxWidget.field_K = new NamedSoundEffect("vehicle-barrier_collision", 100);
+          discarded$2 = new NamedSoundEffect("vehicle-vehicle_collision", 120);
+          NineSlicePanel.field_h = new NamedSoundEffect("shield_bounce", 140);
+          ij.field_g = new NamedSoundEffect("powerup_collect_low", 92);
+          MouseWheelInput.field_d = new NamedSoundEffect("powerup_collect_high", 88);
+          TutorialPage.field_i = new NamedSoundEffect("powerup_drop", 100);
+          DualNodeHashTable.field_b = jh.field_a.getMusicSample(param1 - 32594, "wacky_boom_kick");
+          StrongCacheEntry.field_r = jh.field_a.getSoundEffect("menu_low_beep", (byte) 77);
+          jh.field_a.getSoundEffect("menu_high_beep", (byte) 9);
+          qd.field_j = new NamedSoundEffect("ZD_update_lightning_strike");
+          se.field_m = new NamedSoundEffect("ZD_update_thunder_roll_1");
+          uj.field_a = new NamedSoundEffect("ZD_update_thunder_roll_2");
+          discarded$3 = new NamedSoundEffect("ZD_update_rain_loop");
+          HuffmanDecoder.field_c = new StereoMusicSample("car_pass");
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ph.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

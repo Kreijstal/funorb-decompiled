@@ -14,7 +14,7 @@ final class ij {
     int field_j;
     static boolean field_l;
     private String field_i;
-    static oa field_g;
+    static NamedSoundEffect field_g;
     private int field_d;
     private boolean field_m;
 
@@ -101,7 +101,7 @@ final class ij {
             }
           }
           SoftwareRasterizer.d();
-          hi.a(param2, var7 + var6 + param3, true, var5 + (var4_int + param1), 0, 0);
+          hi.drawNineSlice(param2, var7 + var6 + param3, true, var5 + (var4_int + param1), 0, 0);
           var13Lifetime3 = (param1 * param1 + param3 * param3) / 4;
           for (var14Lifetime2 = -4; param1 + 4 > var14Lifetime2; var14Lifetime2++) {
             for (var15 = -4; 4 + param3 > var15; var15++) {
@@ -122,7 +122,7 @@ final class ij {
               SoftwareRasterizer.field_b[var18] = var19Lifetime1;
             }
           }
-          ug.b(-1);
+          MarkerSliderRenderer.restoreRasterTarget(-1);
           stackIn_40_0 = var10;
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -155,20 +155,20 @@ final class ij {
         MouseInputHandler.field_b.requestFocus();
     }
 
-    final static nd a(String param0, int param1, int param2) {
-        nd var3 = null;
+    final static NameAvailabilityResult a(String param0, int param1, int param2) {
+        NameAvailabilityResult var3 = null;
         RuntimeException var3_ref = null;
-        nd stackIn_2_0 = null;
-        nd stackIn_4_0 = null;
+        NameAvailabilityResult stackIn_2_0 = null;
+        NameAvailabilityResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new nd(false);
+          var3 = new NameAvailabilityResult(false);
           var3.field_d = param0;
           if (param1 != 256) {
-            stackIn_2_0 = (nd) null;
+            stackIn_2_0 = (NameAvailabilityResult) null;
             return stackIn_2_0;
           }
           var3.field_b = param2;
@@ -200,7 +200,7 @@ final class ij {
           if (eg.field_b != 2) {
             return 0;
           }
-          if (cg.a(2113942113, this.field_i)) {
+          if (TutorialAction.a(2113942113, this.field_i)) {
             return 1;
           }
           return 0;
@@ -221,11 +221,11 @@ final class ij {
         }
         qd.a(20830, 3 + StrongCacheEntry.field_w);
         nm.field_b = ArchiveIndex.b((byte) -49);
-        if (pd.a(nm.field_b, true)) {
+        if (UsernameLoginCredentials.a(nm.field_b, true)) {
           MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 0, false, false, t.field_l, -1);
         } else {
           ArchiveRequest.field_r = 0;
-          on.field_r = t.field_l;
+          QuickChatPhraseDefinition.field_r = t.field_l;
           fl.field_j = false;
           qn.field_k = false;
           MusicPatchPcmStream.field_r = null;
@@ -252,8 +252,8 @@ final class ij {
         this.field_j = MidiPcmStream.field_H;
         this.field_f = fc.field_c;
         this.field_h = MusicPatch.field_m;
-        this.field_i = kl.field_u;
-        this.field_e = vn.field_f;
+        this.field_i = TextFieldRenderer.field_u;
+        this.field_e = NineSlicePanel.field_f;
         this.field_o = fi.field_kb;
         this.field_d = pj.field_o;
         if (param0) {

@@ -588,15 +588,15 @@ final class VorbisSample extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_q = var2.a(-56);
-        this.field_D = var2.a(-67);
-        this.field_J = var2.a(-88);
-        this.field_u = var2.a(113);
+        this.field_q = var2.readInt(-56);
+        this.field_D = var2.readInt(-67);
+        this.field_J = var2.readInt(-88);
+        this.field_u = var2.readInt(113);
         if (this.field_u < 0) {
           this.field_u = ~this.field_u;
           this.field_E = true;
         }
-        int var3 = var2.a(47);
+        int var3 = var2.readInt(47);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -604,11 +604,11 @@ final class VorbisSample extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.f((byte) -36);
+            var6_int = var2.readUnsignedByte((byte) -36);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(var5, 0, (byte) 106, var6);
+          var2.readBytes(var5, 0, (byte) 106, var6);
           this.field_n[var4] = var6;
         }
     }

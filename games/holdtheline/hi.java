@@ -74,7 +74,7 @@ class hi extends fj {
           ra.field_hb.d(-(param2 * 3 / 4) + param0 >> 1, 0, 3 * param2 / 4, param2);
         }
         ProxySocketConnector.field_j.addLast((byte) -121, var3Lifetime1);
-        ug.b(-1);
+        MarkerSliderRenderer.restoreRasterTarget(-1);
         return var3Lifetime1;
     }
 
@@ -98,7 +98,7 @@ class hi extends fj {
         }
     }
 
-    final static void a(Sprite[] param0, int param1, boolean param2, int param3, int param4, int param5) {
+    final static void drawNineSlice(Sprite[] param0, int param1, boolean param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -550,7 +550,7 @@ class hi extends fj {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (rd.field_e.position >= param0) {
+          if (RoadStripRenderer.field_e.position >= param0) {
             return true;
           }
           if (null == IterableSecondaryNodeDeque.field_h) {
@@ -562,16 +562,16 @@ class hi extends fj {
             }
             var2_int = IterableSecondaryNodeDeque.field_h.available(false);
             if (var2_int > 0) {
-              if (var2_int > param0 - rd.field_e.position) {
-                var2_int = -rd.field_e.position + param0;
+              if (var2_int > param0 - RoadStripRenderer.field_e.position) {
+                var2_int = -RoadStripRenderer.field_e.position + param0;
               }
-              IterableSecondaryNodeDeque.field_h.readFully(rd.field_e.payload, var2_int, rd.field_e.position, 125);
+              IterableSecondaryNodeDeque.field_h.readFully(RoadStripRenderer.field_e.payload, var2_int, RoadStripRenderer.field_e.position, 125);
               cm.field_b = bb.b(-1);
-              rd.field_e.position = rd.field_e.position + var2_int;
-              if (param0 > rd.field_e.position) {
+              RoadStripRenderer.field_e.position = RoadStripRenderer.field_e.position + var2_int;
+              if (param0 > RoadStripRenderer.field_e.position) {
                 return false;
               }
-              rd.field_e.position = 0;
+              RoadStripRenderer.field_e.position = 0;
               return true;
             }
             if (var2_int >= 0 &&

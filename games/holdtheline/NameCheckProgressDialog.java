@@ -26,7 +26,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
           }
           return false;
         }
-        nd var2 = PacketBuffer.c((byte) -67);
+        NameAvailabilityResult var2 = PacketBuffer.pollNameAvailabilityResult((byte) -67);
         if (var2 == null) {
           if (param0 == 39) {
             return super.g((byte) 39);
@@ -40,7 +40,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
         return false;
     }
 
-    private final void a(byte param0, boolean param1, nd param2) {
+    private final void a(byte param0, boolean param1, NameAvailabilityResult param2) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -64,9 +64,9 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
               var4 = param2.field_d;
               if (param2.field_b == 248) {
                 if (!param1) {
-                  qf.a(true);
+                  MatchingTextValidator.a(true);
                 }
-                var4 = vn.field_e;
+                var4 = NineSlicePanel.field_e;
                 this.field_yb = true;
               }
             }
@@ -85,14 +85,14 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
               var5.a(81, (WidgetListener) (this), ImageProducerRasterBuffer.field_j);
             } else {
               if (param2.field_b == 5) {
-                var5.a(11, vn.field_b, (byte) 66);
+                var5.a(11, NineSlicePanel.field_b, (byte) 66);
                 var5.a(17, UrlPacketDownloader.field_n, (byte) 120);
               } else {
                 var5.a(-1, ArchiveIndex.field_i, (byte) 108);
               }
             }
             if (param2.field_b == 3) {
-              var5.a(7, ek.field_u, (byte) 61);
+              var5.a(7, CheckboxRenderer.field_u, (byte) 61);
             } else {
               if (param2.field_b == 6) {
                 var5.a(9, Bzip2State.field_d, (byte) 77);
@@ -134,7 +134,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
-        nd var7 = null;
+        NameAvailabilityResult var7 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -142,13 +142,13 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
         RuntimeException var6 = null;
         try {
           if (this.field_yb) {
-            cg.a((byte) -93, true, false);
+            TutorialAction.a((byte) -93, true, false);
             return;
           }
           hk.a(true);
           if (param2 != -4) {
-            var7 = (nd) null;
-            this.a((byte) 98, true, (nd) null);
+            var7 = (NameAvailabilityResult) null;
+            this.a((byte) 98, true, (NameAvailabilityResult) null);
             this.h((byte) -72);
           } else {
             this.h((byte) -72);
@@ -172,7 +172,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
         if (param0 > -113) {
           return;
         }
-        this.a((byte) -39, true, ij.a(vn.field_e, 256, 248));
+        this.a((byte) -39, true, ij.a(NineSlicePanel.field_e, 256, 248));
     }
 
     NameCheckProgressDialog(DialogLayer param0, AccountCreationForm param1) {

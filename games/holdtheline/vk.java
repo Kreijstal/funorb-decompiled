@@ -19,12 +19,12 @@ final class vk {
     om[] field_j;
     private Sprite field_g;
     static boolean field_a;
-    ei field_e;
+    GrowableObjectList field_e;
     static String field_i;
-    ei field_c;
+    GrowableObjectList field_c;
     static int[] field_d;
     byte[] field_s;
-    ei field_t;
+    GrowableObjectList field_t;
     String field_h;
 
     final Sprite a(int param0, int param1, int param2) {
@@ -86,7 +86,7 @@ final class vk {
             return true;
           }
           if (!RasterBuffer.a(this, -65)) {
-            this.field_l = kg.a((byte) 47, this);
+            this.field_l = RotatedSpriteSheetAsset.a((byte) 47, this);
             return false;
           }
           this.field_l = -1;
@@ -96,7 +96,7 @@ final class vk {
           return true;
         }
         if (!RasterBuffer.a(this, -65)) {
-          this.field_l = kg.a((byte) 47, this);
+          this.field_l = RotatedSpriteSheetAsset.a((byte) 47, this);
           return false;
         }
         this.field_l = -1;
@@ -130,9 +130,9 @@ final class vk {
           this.field_r = false;
           this.field_h = null;
           this.field_l = 0;
-          this.field_e = new ei();
-          this.field_t = new ei();
-          this.field_c = new ei();
+          this.field_e = new GrowableObjectList();
+          this.field_t = new GrowableObjectList();
+          this.field_c = new GrowableObjectList();
           this.field_k = new IntrusiveDeque();
           this.field_m = new IntrusiveDeque();
           this.field_x = new IntrusiveDeque();

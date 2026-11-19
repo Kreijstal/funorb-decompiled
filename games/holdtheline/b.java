@@ -15,7 +15,7 @@ final class b {
         try {
           NodeHashTableIterator.field_h.a(param1, param2);
           if (param3) {
-            var4_int = io.field_b % NodeHashTableIterator.field_h.field_s * 2;
+            var4_int = AccountFormText.field_b % NodeHashTableIterator.field_h.field_s * 2;
             if (NodeHashTableIterator.field_h.field_s <= var4_int) {
               var4_int = NodeHashTableIterator.field_h.field_s + (-var4_int + NodeHashTableIterator.field_h.field_s);
             }
@@ -31,7 +31,7 @@ final class b {
             cd.a(NodeHashTableIterator.field_h, (byte) 121, var4_int, param2, 30, 0, 80, 0, param1);
           }
           if (param0 != 80) {
-            b.a(true, 89, -61, (ei) null);
+            b.a(true, 89, -61, (GrowableObjectList) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,27 +83,27 @@ final class b {
           if (param0 != 10) {
             return;
           }
-          var1 = rd.field_e;
-          var2 = var1.f((byte) -103);
+          var1 = RoadStripRenderer.field_e;
+          var2 = var1.readUnsignedByte((byte) -103);
           if (var2 == 0) {
             if (IntrusiveDeque.field_a == null) {
               IntrusiveDeque.field_a = new DualNodeHashTable(128);
               se.field_l = 0;
             }
-            stackIn_14_0 = (1 != var1.f((byte) -18)) ? 0 : 1;
+            stackIn_14_0 = (1 != var1.readUnsignedByte((byte) -18)) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.j(-1231);
+            var4_ref_String = var1.readCp1252String(-1231);
             if (var3_int != 0) {
-              var1.j(-1231);
+              var1.readCp1252String(-1231);
             }
-            var5_ref = wc.a(param0 - 10, var4_ref_String);
-            var6_ref = var1.j(param0 - 1241);
+            var5_ref = TrackCurve.a(param0 - 10, var4_ref_String);
+            var6_ref = var1.readCp1252String(param0 - 1241);
             var7_ref = MidiPcmStream.a((CharSequence) ((Object) var4_ref_String), (byte) 94);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (null == var5_ref) {
-              var5_ref = wc.a(0, var6_ref);
+              var5_ref = TrackCurve.a(0, var6_ref);
               if (null != var5_ref) {
                 IntrusiveDeque.field_a.put((long)var7_ref.hashCode(), (byte) -75, var5_ref);
               }
@@ -114,7 +114,7 @@ final class b {
               fieldTemp$1 = se.field_l;
               se.field_l = se.field_l + 1;
               var5_ref.field_gb = fieldTemp$1;
-              sj.field_H.addLast((byte) -128, var5_ref);
+              CheckboxWidget.field_H.addLast((byte) -128, var5_ref);
             }
             var5_ref.field_mb = var4_ref_String;
             return;
@@ -133,14 +133,14 @@ final class b {
               return;
             }
             if (var2 != 4) {
-              MusicPatchPcmStream.a((Throwable) null, (byte) 55, "F1: " + em.b(false));
+              MusicPatchPcmStream.a((Throwable) null, (byte) 55, "F1: " + AgeValidator.b(false));
               r.a(-28036);
               return;
             }
             eg.field_b = 1;
-            var3 = var1.j(-1231);
+            var3 = var1.readCp1252String(-1231);
             SecondaryNodeDequeIterator.field_g = ((String) (var3)).intern();
-            var4 = var1.f((byte) -70);
+            var4 = var1.readUnsignedByte((byte) -70);
             jh.a(var4, (byte) 61);
             return;
           }
@@ -148,12 +148,12 @@ final class b {
             jo.field_b = new DualNodeHashTable(128);
             sl.field_a = 0;
           }
-          var3Lifetime1 = var1.j(-1231);
+          var3Lifetime1 = var1.readCp1252String(-1231);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.j(-1231);
-          var5 = var1.j(-1231);
+          var4_ref_StringLifetime1 = var1.readCp1252String(-1231);
+          var5 = var1.readCp1252String(-1231);
           var6 = ra.a(var4_ref_StringLifetime1, param0 ^ 85);
           if (null == var6) {
             var6 = ra.a(var5, param0 ^ 101);
@@ -223,7 +223,7 @@ final class b {
         var5 = HoldTheLine.field_D;
         try {
           if (param1 <= 63) {
-            b.a(true, 65, 85, (ei) null);
+            b.a(true, 65, 85, (GrowableObjectList) null);
           }
           var3 = param0[param2];
           var4 = -1 + param2;
@@ -262,13 +262,13 @@ final class b {
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2, ei param3) {
+    final static boolean a(boolean param0, int param1, int param2, GrowableObjectList param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ei var6 = null;
+        GrowableObjectList var6 = null;
         int var7 = 0;
-        vj var8 = null;
+        BoundaryCurve var8 = null;
         int var9 = 0;
         int stackIn_16_0 = 0;
         boolean stackIn_20_0 = false;
@@ -284,15 +284,15 @@ final class b {
           var4_int = 0;
           var5 = 0;
           scanLoop1: while (true) {
-            if (param3.field_e > var5) {
-              var6 = (ei) (param3.field_b[var5]);
+            if (param3.size > var5) {
+              var6 = (GrowableObjectList) (param3.elements[var5]);
               stackIn_16_0 = 0;
               if (var9 != 0) {
                 break scanLoop1;
               }
               var7 = stackIn_16_0;
-              while (var6.field_e > var7) {
-                var8 = (vj) (var6.field_b[var7]);
+              while (var6.size > var7) {
+                var8 = (BoundaryCurve) (var6.elements[var7]);
                 var4_int = var4_int + IntrusiveDeque.a(var8, (byte) 78, param2, param1);
                 var7++;
               }
@@ -326,7 +326,7 @@ final class b {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          var2 = (ih) (io.field_c.first((byte) 121));
+          var2 = (ih) (AccountFormText.field_c.first((byte) 121));
           do {
             if (null == var2) {
               if (!param0) {
@@ -335,7 +335,7 @@ final class b {
               break;
             }
             NanoTickClock.a(1, param1, var2);
-            var2 = (ih) (io.field_c.next((byte) -108));
+            var2 = (ih) (AccountFormText.field_c.next((byte) -108));
           } while (var3 == 0);
           var2_ref = RaceWorld.field_v.first((byte) 127);
           while (var2_ref != null) {

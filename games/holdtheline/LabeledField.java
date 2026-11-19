@@ -11,11 +11,11 @@ final class LabeledField extends SingleChildWidget {
     private int field_L;
     static String field_H;
 
-    final String f(int param0) {
-        int var2 = this.field_B.field_p ? 1 : 0;
-        this.field_B.field_p = this.field_p;
-        String var3 = this.field_B.f(param0);
-        this.field_B.field_p = var2 != 0 ? true : false;
+    final String getTooltip(int param0) {
+        int var2 = this.child.hovered ? 1 : 0;
+        this.child.hovered = this.hovered;
+        String var3 = this.child.getTooltip(param0);
+        this.child.hovered = var2 != 0 ? true : false;
         return var3;
     }
 
@@ -53,14 +53,14 @@ final class LabeledField extends SingleChildWidget {
           this.field_K = param10;
           this.field_I = param9;
           this.field_L = param6;
-          this.field_B = param4;
+          this.child = param4;
           this.field_G = param7;
           stackIn_4_1 = (param5);
           this.field_M = stackIn_4_1;
           var12_int = -this.field_G + this.field_L;
           var13 = this.field_J.b(param10, var12_int, this.field_J.field_G) + this.field_G * 2;
           if (var13 > param3) {
-            this.a(param0, (byte) 122, param1, var13, param2);
+            this.setBounds(param0, (byte) 122, param1, var13, param2);
           } else {
             var13 = param3;
           }
@@ -70,7 +70,7 @@ final class LabeledField extends SingleChildWidget {
             stackIn_10_0 = this.field_L + 2 * this.field_G;
           }
           var14 = stackIn_10_0;
-          this.field_B.a(var14, (byte) 122, (-param3 + var13 >> 1) + this.field_G, param3 - this.field_G * 2, param2 - this.field_L - this.field_G * 3);
+          this.child.setBounds(var14, (byte) 122, (-param3 + var13 >> 1) + this.field_G, param3 - this.field_G * 2, param2 - this.field_L - this.field_G * 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,16 +138,16 @@ final class LabeledField extends SingleChildWidget {
               } else {
                 if (param1.field_o == 3) {
                   kc.field_b.field_b.b(0, 0);
-                  mn.a(param1.field_u, new qd(ug.field_b.field_b, 0.5f), (byte) -102);
+                  mn.a(param1.field_u, new qd(MarkerSliderRenderer.field_b.field_b, 0.5f), (byte) -102);
                 } else {
                   if (4 == param1.field_o) {
-                    ug.field_b.field_b.b(0, 0);
+                    MarkerSliderRenderer.field_b.field_b.b(0, 0);
                     mn.a(param1.field_u, new qd(ha.field_i.field_b, 0.5f), (byte) -30);
                   } else {
                     if (param1.field_o != 5) {
                       if (param1.field_o == 6) {
-                        hg.field_Q.field_b.b(0, 0);
-                        tn.a(param1.field_u, 10000536, new qd(fd.field_e.field_b));
+                        DialWidget.field_Q.field_b.b(0, 0);
+                        tn.a(param1.field_u, 10000536, new qd(ValidationState.field_e.field_b));
                       }
                     } else {
                       ha.field_i.field_b.b(0, 0);
@@ -162,7 +162,7 @@ final class LabeledField extends SingleChildWidget {
             }
           } else {
             SecondaryNodeDeque.field_h.field_b.b(0, 0);
-            mn.a(param1.field_u, new qd(fd.field_e.field_b), (byte) -23);
+            mn.a(param1.field_u, new qd(ValidationState.field_e.field_b), (byte) -23);
           }
           if (param0 != 2 &&
             param0 != 6) {
@@ -299,17 +299,17 @@ final class LabeledField extends SingleChildWidget {
         fe.field_b = ti.a(var2 * var5, var4 * var2, (byte) -90);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         if (param0 != -9532) {
           this.field_K = (String) null;
         }
-        int var5 = this.field_k + param2;
-        int var6 = this.field_o + param1;
-        super.a(param0 ^ 0, param1, param2, param3);
+        int var5 = this.x + param2;
+        int var6 = this.y + param1;
+        super.drawLayer(param0 ^ 0, param1, param2, param3);
         if (param3 == 0) {
-          var7 = this.field_M ? -(this.field_G * 2) + (-this.field_L + this.field_x) : 0;
-          this.field_J.a(this.field_K, this.field_G + (var7 + var5), var6 + this.field_G, this.field_L - this.field_G, -(this.field_G * 2) + this.field_u, this.field_I, -1, this.field_M ? 0 : 2, 1, this.field_J.field_G);
+          var7 = this.field_M ? -(this.field_G * 2) + (-this.field_L + this.width) : 0;
+          this.field_J.a(this.field_K, this.field_G + (var7 + var5), var6 + this.field_G, this.field_L - this.field_G, -(this.field_G * 2) + this.height, this.field_I, -1, this.field_M ? 0 : 2, 1, this.field_J.field_G);
           return;
         }
     }

@@ -79,10 +79,10 @@ final class he extends SingleChildWidget {
     }
 
     he(UiWidget param0) {
-        super(param0.field_k, param0.field_o, param0.field_x, param0.field_u, (WidgetRenderer) null, (WidgetListener) null);
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (WidgetListener) null);
         try {
-          param0.a(0, (byte) 122, 0, this.field_u, this.field_x);
-          this.field_B = param0;
+          param0.setBounds(0, (byte) 122, 0, this.height, this.width);
+          this.child = param0;
           this.field_F = 256;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -102,26 +102,26 @@ final class he extends SingleChildWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var6 = null;
         if (param3 != 0) {
           return;
         }
-        if (null == this.field_B) {
+        if (null == this.child) {
           return;
         }
         if (0 == this.field_F) {
           return;
         }
         if (this.field_F != 256) {
-          var6 = new Sprite(this.field_B.field_x, this.field_B.field_u);
+          var6 = new Sprite(this.child.width, this.child.height);
           ProxySocketConnector.a(var6, -1);
-          this.field_B.a(param0, 0, 0, param3);
+          this.child.drawLayer(param0, 0, 0, param3);
           dm.b((byte) -10);
-          var6.d(param2 + this.field_k, param1 + this.field_o, this.field_F);
+          var6.d(param2 + this.x, param1 + this.y, this.field_F);
           return;
         }
-        this.field_B.a(-9532, this.field_o + param1, this.field_k + param2, param3);
+        this.child.drawLayer(-9532, this.y + param1, this.x + param2, param3);
     }
 
     static {

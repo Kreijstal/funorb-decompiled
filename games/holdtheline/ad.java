@@ -13,20 +13,20 @@ final class ad {
         field_b = null;
     }
 
-    final static ui a(int param0, int param1, PcmSample param2) {
+    final static SoundPlayback a(int param0, int param1, PcmSample param2) {
         RuntimeException var3 = null;
-        ui stackIn_2_0 = null;
-        ui stackIn_4_0 = null;
+        SoundPlayback stackIn_2_0 = null;
+        SoundPlayback stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 255) {
-            stackIn_4_0 = lg.a(PcmSampleStream.a(param2, 100, param1), (byte) -68);
+            stackIn_4_0 = CachedTextLayout.playSoundStream(PcmSampleStream.createAtRate(param2, 100, param1), (byte) -68);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ui) null;
+          stackIn_2_0 = (SoundPlayback) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ final class ad {
     final static void a(byte param0) {
         int var1 = 10 / ((-30 - param0) / 44);
         if (ra.field_ab != -1) {
-          mn.field_b = ld.field_b << 16 | ra.field_ab;
+          mn.field_b = SoundCache.field_b << 16 | ra.field_ab;
         } else {
           if (na.field_k) {
             mn.field_b = -1;

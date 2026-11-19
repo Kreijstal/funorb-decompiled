@@ -20,37 +20,37 @@ final class hk {
         field_b = null;
     }
 
-    final static tg a(RoadSegment param0, int param1, boolean param2) {
-        tg stackIn_2_0 = null;
-        g stackIn_5_0 = null;
-        oe stackIn_16_0 = null;
+    final static PointPath a(RoadSegment param0, int param1, boolean param2) {
+        PointPath stackIn_2_0 = null;
+        LinearPointPath stackIn_5_0 = null;
+        QuadraticPointPath stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        oe var4 = null;
-        g var4_ref = null;
+        QuadraticPointPath var4 = null;
+        LinearPointPath var4_ref = null;
         float var5 = 0.0f;
         float var6 = 0.0f;
         StraightRoadSegment var7 = null;
         CurvedRoadSegment var8 = null;
-        oe var9 = null;
+        QuadraticPointPath var9 = null;
         try {
           if (param1 != 1) {
-            stackIn_2_0 = (tg) null;
+            stackIn_2_0 = (PointPath) null;
             return stackIn_2_0;
           }
           if (param0 instanceof StraightRoadSegment) {
             var7 = (StraightRoadSegment) (param0);
-            var4_ref = new g(param0.f(50), param0.field_k, param2);
+            var4_ref = new LinearPointPath(param0.length(50), param0.field_k, param2);
             var4_ref.field_n = var7.p(-1);
             var4_ref.field_j = var7.b((byte) -105);
             stackIn_5_0 = var4_ref;
-            return (tg) ((Object) stackIn_5_0);
+            return (PointPath) ((Object) stackIn_5_0);
           }
           var8 = (CurvedRoadSegment) (param0);
-          var9 = new oe(param0.f(50), param0.field_k, param2);
+          var9 = new QuadraticPointPath(param0.length(50), param0.field_k, param2);
           var4 = var9;
           var5 = var8.field_A;
           var6 = var8.field_K;
@@ -75,7 +75,7 @@ final class hk {
             throw new RuntimeException();
           }
           stackIn_16_0 = var4;
-          return (tg) ((Object) stackIn_16_0);
+          return (PointPath) ((Object) stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -91,7 +91,7 @@ final class hk {
     }
 
     final static void a(int param0) {
-        go.a(0, 4);
+        RotatedSpriteAsset.a(0, 4);
         if (param0 != -30500) {
           field_c = (int[][]) null;
         }

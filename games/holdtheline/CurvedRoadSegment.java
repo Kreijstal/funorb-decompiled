@@ -81,7 +81,7 @@ final class CurvedRoadSegment extends RoadSegment {
         }
     }
 
-    final Vector2f g(int param0) {
+    final Vector2f getStartDirection(int param0) {
         float var2 = this.field_E;
         var2 = var2 + (this.field_I < this.field_E ? 1.5707963705062866f : -1.5707963705062866f);
         if (param0 != -1) {
@@ -97,7 +97,7 @@ final class CurvedRoadSegment extends RoadSegment {
         return new Point2i((int)((double)this.field_U.x + (double)this.field_D * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_D * Math.sin((double)this.field_I)));
     }
 
-    final Vector2f a(boolean param0) {
+    final Vector2f getEndDirection(boolean param0) {
         float var2 = this.field_I;
         var2 = var2 + (!(this.field_E > this.field_I) ? -1.5707963705062866f : 1.5707963705062866f);
         if (param0) {
@@ -129,7 +129,7 @@ final class CurvedRoadSegment extends RoadSegment {
         return new Point2i((int)((double)this.field_U.x + (double)this.field_O * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_O * Math.sin((double)this.field_I)));
     }
 
-    final Point2i a(int param0) {
+    final Point2i getEndPoint(int param0) {
         if (param0 != 0) {
           return (Point2i) null;
         }
@@ -158,7 +158,7 @@ final class CurvedRoadSegment extends RoadSegment {
         return new Point2i((int)((double)this.field_U.x + (double)this.field_S * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_S * Math.sin((double)this.field_I)));
     }
 
-    final Vector2f a(byte param0, float param1) {
+    final Vector2f directionAt(byte param0, float param1) {
         float var3 = (this.field_I - this.field_E) * param1 + this.field_E;
         var3 = var3 + (this.field_I < this.field_E ? -1.5707963705062866f : 1.5707963705062866f);
         if (param0 < 117) {
@@ -175,7 +175,7 @@ final class CurvedRoadSegment extends RoadSegment {
         return new Point2i((int)((double)this.field_U.x + (double)this.field_R * Math.cos((double)var3)), (int)((double)this.field_U.y - (double)this.field_R * Math.sin((double)var3)));
     }
 
-    final Point2i a(boolean param0, float param1) {
+    final Point2i pointAt(boolean param0, float param1) {
         float var3 = this.field_E + param1 * (-this.field_E + this.field_I);
         if (param0) {
           return (Point2i) null;
@@ -206,7 +206,7 @@ final class CurvedRoadSegment extends RoadSegment {
         return (param0 - this.field_E) / (this.field_I - this.field_E);
     }
 
-    final float f(int param0) {
+    final float length(int param0) {
         if (param0 != 50) {
           this.l(-4);
         }
@@ -237,7 +237,7 @@ final class CurvedRoadSegment extends RoadSegment {
 
     final Point2i k(int param0) {
         if (param0 != 255) {
-          this.a(true, -0.0722532868385315f);
+          this.pointAt(true, -0.0722532868385315f);
         }
         return new Point2i((int)((double)this.field_U.x + (double)this.field_D * Math.cos((double)this.field_E)), (int)((double)this.field_U.y - (double)this.field_D * Math.sin((double)this.field_E)));
     }

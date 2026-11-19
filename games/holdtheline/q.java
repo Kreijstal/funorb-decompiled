@@ -5,7 +5,7 @@ import java.io.*;
 
 final class q {
     static BitmapFont field_a;
-    static uf field_d;
+    static SpriteAsset field_d;
     static int field_c;
     static int[] field_b;
 
@@ -25,14 +25,14 @@ final class q {
         if (!IntrusiveDeque.field_d.b("commonui", param0 ^ 54)) {
           return ge.field_a + " - " + IntrusiveDeque.field_d.a("commonui", 0) + "%";
         }
-        if (!am.field_d.b((byte) -63)) {
-          return uf.field_d;
+        if (!LinkWidgetRenderer.field_d.b((byte) -63)) {
+          return SpriteAsset.field_d;
         }
-        if (!am.field_d.b("commonui", 108)) {
-          return wl.field_b + " - " + am.field_d.a("commonui", param0 - 118) + "%";
+        if (!LinkWidgetRenderer.field_d.b("commonui", 108)) {
+          return wl.field_b + " - " + LinkWidgetRenderer.field_d.a("commonui", param0 - 118) + "%";
         }
         if (!ArchiveRequest.field_p.b((byte) -102)) {
-          return g.field_l;
+          return LinearPointPath.field_l;
         }
         if (param0 != 118) {
           field_b = (int[]) null;
@@ -40,7 +40,7 @@ final class q {
         if (!ArchiveRequest.field_p.a((byte) -63)) {
           return uj.field_b + " - " + ArchiveRequest.field_p.a(param0 - 118) + "%";
         }
-        return ng.field_b;
+        return QuickChatPhraseCache.field_b;
     }
 
     final static void a(String param0, PaletteBitmapFont param1, int param2, int param3, byte param4, int param5) {
@@ -74,9 +74,9 @@ final class q {
         var8 = HoldTheLine.field_D;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var9 = rd.field_e;
-          var2 = var9.f((byte) -62);
-          var3 = var9.f((byte) -86);
+          var9 = RoadStripRenderer.field_e;
+          var2 = var9.readUnsignedByte((byte) -62);
+          var3 = var9.readUnsignedByte((byte) -86);
           if (0 == var2) {
             var4 = (t) (ih.field_j.first((byte) 100));
             if (var4 == null) {
@@ -91,17 +91,17 @@ final class q {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.f((byte) -110) << LoginChoicePanel.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -110) << LoginChoicePanel.a(var7 << 8, 768));
             }
             var4.unlink(0);
           } else {
             if (var2 == 1) {
-              var4_int = var9.b((byte) -84);
-              var5_ref_se = (se) (le.field_n.first((byte) 113));
+              var4_int = var9.readSignedSmart((byte) -84);
+              var5_ref_se = (se) (ShadedRoadStripRenderer.field_n.first((byte) 113));
               while (var5_ref_se != null) {
                 if (~var3 != ~var5_ref_se.field_j ||
                   var5_ref_se.field_k != var4_int) {
-                  var5_ref_se = (se) (le.field_n.next((byte) -42));
+                  var5_ref_se = (se) (ShadedRoadStripRenderer.field_n.next((byte) -42));
                   continue;
                 }
                 break;
@@ -114,7 +114,7 @@ final class q {
               decompiledFrameRemainder0 = false;
             }
             else {
-              MusicPatchPcmStream.a((Throwable) null, (byte) 59, "LR1: " + em.b(false));
+              MusicPatchPcmStream.a((Throwable) null, (byte) 59, "LR1: " + AgeValidator.b(false));
               r.a(-28036);
             }
           }
@@ -140,9 +140,9 @@ final class q {
 
     final static void a(int param0, int param1) {
         IsaacPacketBuffer var2 = IsaacPacketBuffer.field_p;
-        var2.c((byte) 33, param0);
-        var2.f(111, 1);
-        var2.f(111, 0);
+        var2.writeCipheredOpcode((byte) 33, param0);
+        var2.writeByte(111, 1);
+        var2.writeByte(111, 0);
         if (param1 < 41) {
           q.clearSharedReferences((byte) 110);
         }
@@ -186,7 +186,7 @@ final class q {
                 }
               }
             }
-            param1.a(24, 76, var2, 0);
+            param1.writeBytes(24, 76, var2, 0);
             if (param0 < 25) {
               field_a = (BitmapFont) null;
             }

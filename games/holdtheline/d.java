@@ -83,10 +83,10 @@ final class d {
 
     final static void a(boolean param0) {
         int var2 = 0;
-        int var1 = hg.a((byte) 95);
+        int var1 = DialWidget.a((byte) 95);
         if (!param0) {
           var2 = ml.b(20719);
-          NodeHashTableIterator.field_c.a(ie.field_j - WeightedLruCache.field_g, (WeightedLruCache.field_g << 1) + var2, -51, var1 + (em.field_j << 1), -em.field_j + NanoTickClock.field_d);
+          NodeHashTableIterator.field_c.draw(ie.field_j - WeightedLruCache.field_g, (WeightedLruCache.field_g << 1) + var2, -51, var1 + (AgeValidator.field_j << 1), -AgeValidator.field_j + NanoTickClock.field_d);
           NanoTickClock.c(117);
           return;
         }

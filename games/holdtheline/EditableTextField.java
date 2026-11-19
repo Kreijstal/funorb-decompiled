@@ -15,7 +15,7 @@ class EditableTextField extends TextButton {
     static boolean field_R;
     private int field_Q;
 
-    private final void a(boolean param0) {
+    private final void deleteSelection(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         if (this.field_O != this.field_L) {
@@ -23,8 +23,8 @@ class EditableTextField extends TextButton {
           var3 = this.field_L < this.field_O ? this.field_O : this.field_L;
           this.field_O = var2;
           this.field_L = var2;
-          this.field_q = this.field_q.substring(0, var2) + this.field_q.substring(var3, this.field_q.length());
-          this.f((byte) 100);
+          this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
+          this.notifyTextChanged((byte) 100);
         }
         if (!param0) {
           return;
@@ -32,9 +32,9 @@ class EditableTextField extends TextButton {
         this.field_G = false;
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         if (param0 != -31523) {
-          this.a(-33, -31, 0, 101);
+          this.drawLayer(-33, -31, 0, 101);
           this.field_O = param1;
           if (!IterableSecondaryNodeDeque.field_g[81]) {
             this.field_L = this.field_O;
@@ -53,10 +53,10 @@ class EditableTextField extends TextButton {
         this.j(-117);
         if (param0 <= 93) {
           EditableTextField.clearSharedReferences(-47);
-          this.a(false);
+          this.deleteSelection(false);
           return;
         }
-        this.a(false);
+        this.deleteSelection(false);
     }
 
     private final void b(boolean param0) {
@@ -66,7 +66,7 @@ class EditableTextField extends TextButton {
           Exception var2_ref = null;
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.a(false);
+            this.deleteSelection(false);
             if (!param0) {
               return;
             }
@@ -82,7 +82,7 @@ class EditableTextField extends TextButton {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
         boolean stackIn_10_1 = false;
@@ -94,20 +94,20 @@ class EditableTextField extends TextButton {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handleMousePress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_l instanceof TextWidgetRenderer)) {
+          if (!(this.renderer instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((TextWidgetRenderer) ((Object) this.field_l)).a(param2, (byte) 76, NodeHashTableIterator.field_g, param0, (UiWidget) (this), rf.field_X);
+          var8_int = ((TextWidgetRenderer) ((Object) this.renderer)).characterAtPoint(param2, (byte) 76, NodeHashTableIterator.field_g, param0, (UiWidget) (this), rf.field_X);
           stackIn_6_1 = -31523;
           if (var8_int != -1) {
             stackIn_7_2 = var8_int;
           } else {
             stackIn_7_2 = 0;
           }
-          this.a(stackIn_6_1, stackIn_7_2);
+          this.moveCaret(stackIn_6_1, stackIn_7_2);
           var8_long = bb.b(-1);
           stackIn_10_1 = !(-this.field_H + var8_long >= 250L);
           this.field_G = stackIn_10_1;
@@ -115,7 +115,7 @@ class EditableTextField extends TextButton {
             this.field_L = this.a((byte) 70);
             this.field_O = this.e((byte) -88);
             if (this.field_O > 0 &&
-              32 == this.field_q.charAt(this.field_O - 1)) {
+              32 == this.text.charAt(this.field_O - 1)) {
               this.field_O = this.field_O - 1;
             }
             this.field_Q = this.field_O;
@@ -136,16 +136,16 @@ class EditableTextField extends TextButton {
         }
     }
 
-    void a(int param0, UiWidget param1, int param2, byte param3) {
+    void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         TextWidgetRenderer var5 = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.k(-62);
-          if (this.field_v == 1) {
-            if (this.field_l instanceof TextWidgetRenderer) {
-              var5 = (TextWidgetRenderer) ((Object) this.field_l);
-              var6 = var5.a(param2, (byte) 110, NodeHashTableIterator.field_g, param0, (UiWidget) (this), rf.field_X);
+          if (this.pressedButton == 1) {
+            if (this.renderer instanceof TextWidgetRenderer) {
+              var5 = (TextWidgetRenderer) ((Object) this.renderer);
+              var6 = var5.characterAtPoint(param2, (byte) 110, NodeHashTableIterator.field_g, param0, (UiWidget) (this), rf.field_X);
               if (var6 != -1) {
                 if (this.field_G &&
                   var6 < this.field_Q &&
@@ -162,10 +162,10 @@ class EditableTextField extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         TextWidgetRenderer var8 = null;
         long var6 = 0L;
-        if (this.field_l == null) {
+        if (this.renderer == null) {
           if (param0 == -9532) {
             return;
           }
@@ -179,11 +179,11 @@ class EditableTextField extends TextButton {
           this.k(-36);
           return;
         }
-        this.field_l.drawWidget(this.field_D, param2, -101, (UiWidget) (this), param1);
-        if (this.field_l instanceof TextWidgetRenderer) {
-          var8 = (TextWidgetRenderer) ((Object) this.field_l);
+        this.renderer.drawWidget(this.field_D, param2, -101, (UiWidget) (this), param1);
+        if (this.renderer instanceof TextWidgetRenderer) {
+          var8 = (TextWidgetRenderer) ((Object) this.renderer);
           if (this.field_O != this.field_L) {
-            var8.a(-108, param1, param2, this.field_O, this.field_L, (UiWidget) (this));
+            var8.drawSelection(-108, param1, param2, this.field_O, this.field_L, (UiWidget) (this));
           }
           var6 = bb.b(-1);
           if ((var6 - this.field_P) % 1000L >= 500L) {
@@ -193,7 +193,7 @@ class EditableTextField extends TextButton {
             this.k(-36);
             return;
           }
-          var8.a(param2, (UiWidget) (this), this.field_O, (byte) -98, param1);
+          var8.drawCaret(param2, (UiWidget) (this), this.field_O, (byte) -98, param1);
         }
         if (param0 == -9532) {
           return;
@@ -205,7 +205,7 @@ class EditableTextField extends TextButton {
         int var3 = -83 / ((-74 - param0) / 45);
         int var2 = this.field_L >= this.field_O ? this.field_O : this.field_L;
         int var4 = this.field_L >= this.field_O ? this.field_L : this.field_O;
-        return this.field_q.substring(var2, var4);
+        return this.text.substring(var2, var4);
     }
 
     private final int e(byte param0) {
@@ -213,7 +213,7 @@ class EditableTextField extends TextButton {
         int var3;
         int var4;
         var4 = HoldTheLine.field_D;
-        var2 = this.field_q.length();
+        var2 = this.text.length();
         if (this.field_O == var2) {
           return this.field_O;
         }
@@ -221,7 +221,7 @@ class EditableTextField extends TextButton {
           return -8;
         }
         for (var3 = 1 + this.field_O; var2 > var3; var3++) {
-          if (this.field_q.charAt(var3 - 1) == 32) {
+          if (this.text.charAt(var3 - 1) == 32) {
             return var3;
           }
         }
@@ -235,7 +235,7 @@ class EditableTextField extends TextButton {
         this.field_H = 0L;
         try {
           this.field_N = param2;
-          this.field_l = pc.field_b.field_s;
+          this.renderer = pc.field_b.field_s;
           this.a(true, param0, 1471);
           this.field_I = true;
           this.field_P = bb.b(-1);
@@ -253,7 +253,7 @@ class EditableTextField extends TextButton {
         RuntimeException var3 = null;
         try {
           if (this.field_N != -1) {
-            var3_int = this.field_N - this.field_q.length();
+            var3_int = this.field_N - this.text.length();
             if (0 <= var3_int) {
               return;
             }
@@ -262,14 +262,14 @@ class EditableTextField extends TextButton {
           if (param0 >= -117) {
             this.field_L = -34;
           }
-          if (this.field_O != this.field_q.length()) {
-            this.field_q = this.field_q.substring(0, this.field_O) + param1 + this.field_q.substring(this.field_O, this.field_q.length());
+          if (this.field_O != this.text.length()) {
+            this.text = this.text.substring(0, this.field_O) + param1 + this.text.substring(this.field_O, this.text.length());
           } else {
-            this.field_q = this.field_q + param1;
+            this.text = this.text + param1;
           }
           this.field_O = this.field_O + param1.length();
           this.field_L = this.field_O;
-          this.f((byte) -123);
+          this.notifyTextChanged((byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -296,7 +296,7 @@ class EditableTextField extends TextButton {
         var2 = -1 + this.field_O;
         var3 = 56 / ((5 - param0) / 42);
         while (var2 > 0) {
-          if (32 == this.field_q.charAt(-1 + var2)) {
+          if (32 == this.text.charAt(-1 + var2)) {
             return var2;
           }
           var2--;
@@ -304,10 +304,10 @@ class EditableTextField extends TextButton {
         return var2;
     }
 
-    private final void l(int param0) {
+    private final void notifySubmit(int param0) {
         int discarded$0 = 0;
-        if (this.field_t instanceof TextChangeListener) {
-          ((TextChangeListener) (this.field_t)).a((byte) 19, this);
+        if (this.listener instanceof TextChangeListener) {
+          ((TextChangeListener) (this.listener)).onSubmit((byte) 19, this);
           if (param0 <= 83) {
             discarded$0 = this.e((byte) -112);
             return;
@@ -320,9 +320,9 @@ class EditableTextField extends TextButton {
         int discarded$1 = this.e((byte) -112);
     }
 
-    void f(byte param0) {
-        if (this.field_t instanceof TextChangeListener) {
-          ((TextChangeListener) (this.field_t)).a(this, -110);
+    void notifyTextChanged(byte param0) {
+        if (this.listener instanceof TextChangeListener) {
+          ((TextChangeListener) (this.listener)).onTextChanged(this, -110);
         }
         int var2 = 81 % ((param0 + 44) / 59);
     }
@@ -334,15 +334,15 @@ class EditableTextField extends TextButton {
           this.field_y = 0;
           return;
         }
-        if (!(this.field_l instanceof TextWidgetRenderer)) {
+        if (!(this.renderer instanceof TextWidgetRenderer)) {
           return;
         }
-        TextWidgetRenderer var10 = (TextWidgetRenderer) ((Object) this.field_l);
+        TextWidgetRenderer var10 = (TextWidgetRenderer) ((Object) this.renderer);
         int var3 = 14 / ((70 - param0) / 49);
         TextLayout var4 = var10.getTextLayout((byte) 20, (UiWidget) (this));
         int var5 = var4.a((byte) 98);
-        int var6 = var10.a(9, (UiWidget) (this));
-        int var7 = var10.a(true) >> 1;
+        int var6 = var10.getContentWidth(9, (UiWidget) (this));
+        int var7 = var10.getFontHeight(true) >> 1;
         if (var6 - var7 > var5) {
           this.field_y = 0;
           this.field_m = 0;
@@ -383,7 +383,7 @@ class EditableTextField extends TextButton {
         this.field_m = -var6 + var7;
     }
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         int dupTemp$0 = 0;
         int stackIn_42_1 = 0;
         int stackIn_43_2 = 0;
@@ -404,48 +404,48 @@ class EditableTextField extends TextButton {
             if (param3 >= 32 &&
               param3 <= 126) {
               if (this.field_L != this.field_O) {
-                this.a(false);
+                this.deleteSelection(false);
               }
               if (this.field_N == -1 ||
-                !(this.field_q.length() >= this.field_N)) {
-                if (this.field_O < this.field_q.length()) {
-                  this.field_q = this.field_q.substring(0, this.field_O) + param3 + this.field_q.substring(this.field_O, this.field_q.length());
+                !(this.text.length() >= this.field_N)) {
+                if (this.field_O < this.text.length()) {
+                  this.text = this.text.substring(0, this.field_O) + param3 + this.text.substring(this.field_O, this.text.length());
                   this.field_O = this.field_O + 1;
                   this.field_L = this.field_O;
                 } else {
-                  this.field_q = this.field_q + param3;
-                  dupTemp$0 = this.field_q.length();
+                  this.text = this.text + param3;
+                  dupTemp$0 = this.text.length();
                   this.field_O = dupTemp$0;
                   this.field_L = dupTemp$0;
                 }
-                this.f((byte) 126);
+                this.notifyTextChanged((byte) 126);
               }
               return true;
             }
             if (param1 == 85) {
               if (this.field_L != this.field_O) {
-                this.a(false);
+                this.deleteSelection(false);
                 return true;
               }
               if (this.field_O > 0) {
                 this.field_L = -1 + this.field_O;
-                this.a(false);
+                this.deleteSelection(false);
                 return true;
               }
             } else {
               if (param1 == 101) {
                 if (this.field_L != this.field_O) {
-                  this.a(false);
+                  this.deleteSelection(false);
                   return true;
                 }
-                if (this.field_O < this.field_q.length()) {
+                if (this.field_O < this.text.length()) {
                   this.field_L = 1 + this.field_O;
-                  this.a(false);
+                  this.deleteSelection(false);
                   return true;
                 }
               } else {
                 if (13 == param1) {
-                  this.o(1);
+                  this.clearText(1);
                   return true;
                 }
                 if (param1 == 96) {
@@ -456,32 +456,32 @@ class EditableTextField extends TextButton {
                     } else {
                       stackIn_49_2 = -1 + this.field_O;
                     }
-                    this.a(stackIn_48_1, stackIn_49_2);
+                    this.moveCaret(stackIn_48_1, stackIn_49_2);
                     return true;
                   }
                 } else {
                   if (param1 == 97) {
-                    if (this.field_O < this.field_q.length()) {
+                    if (this.field_O < this.text.length()) {
                       stackIn_42_1 = -31523;
                       if (!IterableSecondaryNodeDeque.field_g[82]) {
                         stackIn_43_2 = 1 + this.field_O;
                       } else {
                         stackIn_43_2 = this.e((byte) -88);
                       }
-                      this.a(stackIn_42_1, stackIn_43_2);
+                      this.moveCaret(stackIn_42_1, stackIn_43_2);
                       return true;
                     }
                   } else {
                     if (param1 == 102) {
-                      this.a(-31523, 0);
+                      this.moveCaret(-31523, 0);
                       return true;
                     }
                     if (103 == param1) {
-                      this.a(-31523, this.field_q.length());
+                      this.moveCaret(-31523, this.text.length());
                       return true;
                     }
                     if (84 == param1) {
-                      this.l(93);
+                      this.notifySubmit(93);
                       return true;
                     }
                     if (IterableSecondaryNodeDeque.field_g[82] &&
@@ -555,21 +555,21 @@ class EditableTextField extends TextButton {
             param1 = "";
           }
           if (param2 != 1471) {
-            this.o(114);
+            this.clearText(114);
           }
-          this.field_q = param1;
+          this.text = param1;
           var4_int = param1.length();
           if (this.field_N != -1 &&
             this.field_N < var4_int) {
-            this.field_q = this.field_q.substring(0, this.field_N);
+            this.text = this.text.substring(0, this.field_N);
           }
-          dupTemp$1 = this.field_q.length();
+          dupTemp$1 = this.text.length();
           this.field_L = dupTemp$1;
           this.field_O = dupTemp$1;
           if (param0) {
             return;
           }
-          this.f((byte) 19);
+          this.notifyTextChanged((byte) 19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -585,11 +585,11 @@ class EditableTextField extends TextButton {
         }
     }
 
-    final void o(int param0) {
+    final void clearText(int param0) {
         this.field_O = 0;
-        this.field_q = "";
+        this.text = "";
         this.field_L = 0;
-        this.f((byte) 105);
+        this.notifyTextChanged((byte) 105);
         if (param0 != 1) {
           this.b(true);
         }

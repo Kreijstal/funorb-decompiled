@@ -6,7 +6,7 @@ abstract class FadingDialog extends WidgetContainer {
     private int field_G;
     boolean field_F;
     static int field_I;
-    static go[] field_K;
+    static RotatedSpriteAsset[] field_K;
     static IntrusiveDeque field_J;
 
     private final int a(byte param0) {
@@ -117,14 +117,14 @@ abstract class FadingDialog extends WidgetContainer {
           var5_int = Math.max(param4.field_s, param3 + param2.field_s);
           var6 = Math.max(param4.field_y, param2.field_y + param1);
           var7 = new Sprite(var5_int, var6);
-          ok.a(32381);
+          TutorialTransition.a(32381);
           var7.f();
           if (param0 != -5936) {
             field_I = 52;
           }
           param4.b(0, 0);
           WhirlpoolHasher.a(param1, param3, 107, param2);
-          ug.b(-1);
+          MarkerSliderRenderer.restoreRasterTarget(-1);
           stackIn_3_0 = var7;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (0 == this.field_G) {
           return;
         }
@@ -155,52 +155,52 @@ abstract class FadingDialog extends WidgetContainer {
           if (param3 != 0) {
             return;
           }
-          this.a(param2 + this.field_k, this.field_o + param1, (byte) 20);
-          super.a(-9532, param1, param2, param3);
+          this.a(param2 + this.x, this.y + param1, (byte) 20);
+          super.drawLayer(-9532, param1, param2, param3);
           return;
         }
         if (jh.field_c == null) {
-          jh.field_c = new Sprite(this.field_x, this.field_u);
+          jh.field_c = new Sprite(this.width, this.height);
           ProxySocketConnector.a(jh.field_c, -1);
           SoftwareRasterizer.c();
           this.a(0, 0, (byte) 20);
-          super.a(param0, -param1 - this.field_o, -this.field_k - param2, param3);
+          super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
           dm.b((byte) -10);
-          jh.field_c.d(param2 + this.field_k, param1 + this.field_o, this.field_G);
+          jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
           return;
         }
-        if (jh.field_c.field_s < this.field_x) {
-          jh.field_c = new Sprite(this.field_x, this.field_u);
+        if (jh.field_c.field_s < this.width) {
+          jh.field_c = new Sprite(this.width, this.height);
           ProxySocketConnector.a(jh.field_c, -1);
           SoftwareRasterizer.c();
           this.a(0, 0, (byte) 20);
-          super.a(param0, -param1 - this.field_o, -this.field_k - param2, param3);
+          super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
           dm.b((byte) -10);
-          jh.field_c.d(param2 + this.field_k, param1 + this.field_o, this.field_G);
+          jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
           return;
         }
-        if (this.field_u > jh.field_c.field_y) {
-          jh.field_c = new Sprite(this.field_x, this.field_u);
+        if (this.height > jh.field_c.field_y) {
+          jh.field_c = new Sprite(this.width, this.height);
           ProxySocketConnector.a(jh.field_c, -1);
           SoftwareRasterizer.c();
           this.a(0, 0, (byte) 20);
-          super.a(param0, -param1 - this.field_o, -this.field_k - param2, param3);
+          super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
           dm.b((byte) -10);
-          jh.field_c.d(param2 + this.field_k, param1 + this.field_o, this.field_G);
+          jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
           return;
         }
         ProxySocketConnector.a(jh.field_c, -1);
         SoftwareRasterizer.c();
         this.a(0, 0, (byte) 20);
-        super.a(param0, -param1 - this.field_o, -this.field_k - param2, param3);
+        super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
         dm.b((byte) -10);
-        jh.field_c.d(param2 + this.field_k, param1 + this.field_o, this.field_G);
+        jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
     }
 
     abstract void a(int param0, int param1, byte param2);
 
     FadingDialog(DialogLayer param0, int param1, int param2) {
-        super(-param1 + ho.field_i >> 1, -param2 + pe.field_e >> 1, param1, param2, (WidgetRenderer) null);
+        super(-param1 + EmailAddressValidator.field_i >> 1, -param2 + pe.field_e >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_F = false;
           this.field_H = param0;
@@ -219,11 +219,11 @@ abstract class FadingDialog extends WidgetContainer {
         if (param3 < 82) {
           return;
         }
-        va.field_j[Vector2f.field_h] = param0;
+        SpriteSheetAsset.field_j[Vector2f.field_h] = param0;
         if (param0 > r.field_c) {
           VehicleDefinition.field_t = param0;
         }
-        if (param0 < qf.field_j) {
+        if (param0 < MatchingTextValidator.field_j) {
           we.field_j = param0;
         }
         IsaacPacketBuffer.field_u[Vector2f.field_h] = param5;
@@ -256,13 +256,13 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     final static void h(int param0) {
-        ji.a((byte) -126);
-        go.a(param0 + param0, 4);
+        TutorialPage.a((byte) -126);
+        RotatedSpriteAsset.a(param0 + param0, 4);
     }
 
     final void b(int param0, int param1, int param2) {
         if (param0 == 537342017) {
-          this.a(ho.field_i - param1 >> 1, (byte) 122, pe.field_e - param2 >> 1, param2, param1);
+          this.setBounds(EmailAddressValidator.field_i - param1 >> 1, (byte) 122, pe.field_e - param2 >> 1, param2, param1);
           return;
         }
     }
@@ -275,13 +275,13 @@ abstract class FadingDialog extends WidgetContainer {
         if (param0 > 73) {
           return (UiWidget) (this);
         }
-        this.a(-24, 85, 88, -106);
+        this.drawLayer(-24, 85, 88, -106);
         return (UiWidget) (this);
     }
 
     boolean a(boolean param0) {
         if (!param0) {
-          field_K = (go[]) null;
+          field_K = (RotatedSpriteAsset[]) null;
           this.field_G = this.a((byte) -31);
           if (this.field_G != 0) {
             return false;

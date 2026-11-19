@@ -19,8 +19,8 @@ final class ih extends IntrusiveNode {
     static long field_i;
 
     final static void a(int param0, int param1, int param2, int param3) {
-        hg.field_I = param3;
-        sd.field_c = param2;
+        DialWidget.field_I = param3;
+        LoginCredentials.field_c = param2;
         if (param0 != 14893) {
           ih.a(-62, -61, 42, 74);
         }

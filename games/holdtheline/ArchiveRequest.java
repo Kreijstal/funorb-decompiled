@@ -68,11 +68,11 @@ abstract class ArchiveRequest extends DualLinkNode {
     }
 
     final static void h(int param0) {
-        if (null != ec.field_D && (lc.field_d == null ||
-          !ai.field_a.a(-54, lc.field_d))) {
+        if (null != ec.field_D && (EmailValidationResult.field_d == null ||
+          !ai.field_a.a(-54, EmailValidationResult.field_d))) {
           ResourceArchive.a(true, ec.field_D, (byte) 69, 30);
           ec.field_D = null;
-          lc.field_d = null;
+          EmailValidationResult.field_d = null;
         }
         if (param0 != -11875) {
           field_s = -14;
@@ -153,16 +153,16 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    final static nd a(String[] args, byte param1) {
-        nd var2 = null;
+    final static NameAvailabilityResult a(String[] args, byte param1) {
+        NameAvailabilityResult var2 = null;
         RuntimeException var2_ref = null;
-        nd stackIn_3_0 = null;
+        NameAvailabilityResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new nd(false);
+          var2 = new NameAvailabilityResult(false);
           var2.field_j = args;
           if (param1 <= 87) {
             field_p = (ResourceArchive) null;

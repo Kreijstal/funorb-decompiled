@@ -3,7 +3,7 @@
  */
 final class gh {
     static int field_i;
-    static go field_a;
+    static RotatedSpriteAsset field_a;
     private int field_f;
     private int field_b;
     private int field_m;
@@ -66,7 +66,7 @@ final class gh {
           if (lj.field_f != this.field_b) {
             this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
           } else {
-            if (g.field_i != this.field_c) {
+            if (LinearPointPath.field_i != this.field_c) {
               this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
             }
           }
@@ -97,7 +97,7 @@ final class gh {
             if (lj.field_f != this.field_b) {
               this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
             } else {
-              if (g.field_i != this.field_c) {
+              if (LinearPointPath.field_i != this.field_c) {
                 this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
               }
             }
@@ -106,7 +106,7 @@ final class gh {
           NameCheckProgressDialog.field_Bb = 0;
         }
         if (lj.field_f == this.field_b &&
-          g.field_i == this.field_c) {
+          LinearPointPath.field_i == this.field_c) {
           return;
         }
         this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
@@ -126,7 +126,7 @@ final class gh {
     final static void a(Sprite param0, int param1, int param2, int param3, float param4, int param5) {
         try {
           if (param2 != 0) {
-            field_a = (go) null;
+            field_a = (RotatedSpriteAsset) null;
           }
           param0.c(param1 - param0.field_o / 2, param5 - param0.field_v / 2, IterableSecondaryNodeDeque.a(param4, -1, param3));
         } catch (RuntimeException runtimeException) {
@@ -196,7 +196,7 @@ final class gh {
               if (var2 != lj.field_f) {
                 this.field_r.a(79, var3, var2);
               } else {
-                if (var3 != g.field_i) {
+                if (var3 != LinearPointPath.field_i) {
                   this.field_r.a(79, var3, var2);
                 }
               }
@@ -215,7 +215,7 @@ final class gh {
                 if (var2 != lj.field_f) {
                   this.field_r.a(79, var3, var2);
                 } else {
-                  if (var3 != g.field_i) {
+                  if (var3 != LinearPointPath.field_i) {
                     this.field_r.a(79, var3, var2);
                   }
                 }
@@ -228,7 +228,7 @@ final class gh {
                     if (var2 != lj.field_f) {
                       this.field_r.a(79, var3, var2);
                     } else {
-                      if (var3 != g.field_i) {
+                      if (var3 != LinearPointPath.field_i) {
                         this.field_r.a(79, var3, var2);
                       }
                     }
@@ -242,7 +242,7 @@ final class gh {
                   }
                 }
                 if (var2 == lj.field_f &&
-                  var3 == g.field_i) {
+                  var3 == LinearPointPath.field_i) {
                   if (0 >= this.field_j) {
                     return;
                   }
@@ -274,7 +274,7 @@ final class gh {
           if (var2 != lj.field_f) {
             this.field_r.a(79, var3, var2);
           } else {
-            if (var3 != g.field_i) {
+            if (var3 != LinearPointPath.field_i) {
               this.field_r.a(79, var3, var2);
             }
           }
@@ -308,7 +308,7 @@ final class gh {
                 }
                 return;
               }
-              if (var3 != g.field_i) {
+              if (var3 != LinearPointPath.field_i) {
                 this.field_r.a(79, var3, var2);
               }
               decompiledFrameRemainder0 = false;
@@ -324,7 +324,7 @@ final class gh {
           if (var2 != lj.field_f) {
             this.field_r.a(79, var3, var2);
           } else {
-            if (var3 != g.field_i) {
+            if (var3 != LinearPointPath.field_i) {
               this.field_r.a(79, var3, var2);
             }
           }

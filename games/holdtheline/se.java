@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class se extends IntrusiveNode {
-    static oa field_m;
+    static NamedSoundEffect field_m;
     static int field_i;
     static int field_l;
     int field_j;

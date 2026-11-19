@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class fj extends DualLinkNode {
-    static go field_s;
-    static lc field_o;
+    static RotatedSpriteAsset field_s;
+    static EmailValidationResult field_o;
     static String field_r;
     static int[] field_q;
     static String field_p;
@@ -19,7 +19,7 @@ class fj extends DualLinkNode {
           if (param0) {
             field_p = (String) null;
           }
-          stackIn_3_0 = wc.a(param2, 0.0f, param1, (byte) -115);
+          stackIn_3_0 = TrackCurve.a(param2, 0.0f, param1, (byte) -115);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ class fj extends DualLinkNode {
           param2 = param2 - param0[0];
           var4 = param0.length - 1;
           if (param1 != -119) {
-            field_s = (go) null;
+            field_s = (RotatedSpriteAsset) null;
           }
           for (var3_int = 0; var3_int < var4; var3_int++) {
             var5 = param0[1 + var3_int];

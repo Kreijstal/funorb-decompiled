@@ -3,7 +3,7 @@
  */
 final class wi {
     static PlatformTaskDispatcher field_b;
-    static kg field_a;
+    static RotatedSpriteSheetAsset field_a;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 28135) {
@@ -13,12 +13,12 @@ final class wi {
         field_a = null;
     }
 
-    final static sd a(byte param0, boolean param1, String param2, String param3) {
+    final static LoginCredentials createLoginCredentials(byte param0, boolean param1, String param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        sd stackIn_6_0 = null;
+        LoginCredentials stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -29,7 +29,7 @@ final class wi {
           var4_long = 0L;
           var6 = null;
           if (param0 <= 51) {
-            field_a = (kg) null;
+            field_a = (RotatedSpriteSheetAsset) null;
           }
           if (param2.indexOf('@') != -1) {
             var6 = param2;
@@ -37,7 +37,7 @@ final class wi {
             var7 = (CharSequence) ((Object) param2);
             var4_long = ko.a(var7, -13820);
           }
-          stackIn_6_0 = eb.a((String) (var6), var4_long, param1, param3, true);
+          stackIn_6_0 = eb.createLoginCredentials((String) (var6), var4_long, param1, param3, true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

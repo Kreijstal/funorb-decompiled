@@ -100,7 +100,7 @@ final class oc {
           return;
         }
         try {
-          go.a(0, 12);
+          RotatedSpriteAsset.a(0, 12);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "oc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -412,20 +412,20 @@ final class oc {
         }
     }
 
-    final static oe a(float param0, int param1, oe param2) {
-        oe var3 = null;
+    final static QuadraticPointPath a(float param0, int param1, QuadraticPointPath param2) {
+        QuadraticPointPath var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        oe stackIn_3_0 = null;
+        QuadraticPointPath stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new oe(param2.field_e * (1.0f - param0), param2.field_b, param2.field_c);
+          var3 = new QuadraticPointPath(param2.field_e * (1.0f - param0), param2.field_b, param2.field_c);
           gk.field_d[2] = (float)param2.field_m.x;
           gk.field_d[1] = (float)param2.field_l.x;
           gk.field_d[0] = (float)param2.field_k.x;
@@ -458,7 +458,7 @@ final class oc {
         }
     }
 
-    final static void a(lf param0, int param1, BitmapFont param2, int param3, String param4) {
+    final static void a(TextLineLayout param0, int param1, BitmapFont param2, int param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

@@ -26,7 +26,7 @@ final class fb extends IntrusiveNode {
         }
     }
 
-    final static float a(ei param0, byte param1) {
+    final static float a(GrowableObjectList param0, byte param1) {
         int var3 = 0;
         float var2_float = 0.0f;
         RuntimeException var2 = null;
@@ -42,8 +42,8 @@ final class fb extends IntrusiveNode {
           if (param1 <= 14) {
             fb.clearSharedReferences(false);
           }
-          for (var3 = 0; var3 < param0.field_e; var3++) {
-            var2_float = var2_float + ((wc) (param0.field_b[var3])).f(50);
+          for (var3 = 0; var3 < param0.size; var3++) {
+            var2_float = var2_float + ((TrackCurve) (param0.elements[var3])).length(50);
           }
           stackIn_7_0 = var2_float;
           return stackIn_7_0;

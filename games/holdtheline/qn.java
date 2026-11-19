@@ -18,13 +18,13 @@ final class qn extends IntrusiveNode {
           if (IterableSecondaryNodeDeque.field_h != null && (param0 < 0 ||
             d.field_f == ad.field_b)) {
             if (param1 == IsaacPacketBuffer.field_p.position &&
-              bb.b(-1) > (10000L + qf.field_l)) {
-              IsaacPacketBuffer.field_p.c((byte) 33, param0);
+              bb.b(-1) > (10000L + MatchingTextValidator.field_l)) {
+              IsaacPacketBuffer.field_p.writeCipheredOpcode((byte) 33, param0);
             }
             if (IsaacPacketBuffer.field_p.position > 0) {
               try {
                 IterableSecondaryNodeDeque.field_h.write(IsaacPacketBuffer.field_p.position, IsaacPacketBuffer.field_p.payload, 0, 1);
-                qf.field_l = bb.b(-1);
+                MatchingTextValidator.field_l = bb.b(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -55,20 +55,20 @@ final class qn extends IntrusiveNode {
         throw new Error();
     }
 
-    final static lc a(String param0, int param1) {
+    final static EmailValidationResult createEmailValidationRequest(String param0, int param1) {
         RuntimeException var2 = null;
-        lc stackIn_2_0 = null;
-        lc stackIn_4_0 = null;
+        EmailValidationResult stackIn_2_0 = null;
+        EmailValidationResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -7079) {
-            stackIn_4_0 = new lc(param0);
+            stackIn_4_0 = new EmailValidationResult(param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (lc) null;
+          stackIn_2_0 = (EmailValidationResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,20 +110,20 @@ final class qn extends IntrusiveNode {
         int var3_intLifetime1Lifetime1;
         var8 = HoldTheLine.field_D;
         try {
-          if (nd.field_e) {
-            nd.field_e = false;
+          if (NameAvailabilityResult.field_e) {
+            NameAvailabilityResult.field_e = false;
             tn.a(param0 - 7);
           }
           if (3 == MusicPatchPcmStream.field_r.field_J) {
             wm.a(param1, false, 0);
             return;
           }
-          ce.field_r = -1;
+          OutlinedRoadStripRenderer.field_r = -1;
           if (DelegatingCanvas.field_d != 7) {
             if (MusicPatchPcmStream.field_r.field_U &&
               !param2) {
               if (0 == DelegatingCanvas.field_d) {
-                ek.field_x = 4;
+                CheckboxRenderer.field_x = 4;
                 for (var3_int = 0; var3_int < 4; var3_int++) {
                   var10 = MusicPatchPcmStream.field_r.vehicles[var3_int];
                   var12 = var10;
@@ -153,7 +153,7 @@ final class qn extends IntrusiveNode {
                 if (2 != DelegatingCanvas.field_d) {
                   throw new RuntimeException();
                 }
-                ek.field_x = 5;
+                CheckboxRenderer.field_x = 5;
               }
               wm.a(param1, false, 11);
               return;
@@ -208,11 +208,11 @@ final class qn extends IntrusiveNode {
               fieldTemp$0 = EntitySound.field_l - 1;
               EntitySound.field_l = EntitySound.field_l - 1;
               if (1 > fieldTemp$0) {
-                ek.field_x = 6;
+                CheckboxRenderer.field_x = 6;
                 wm.a(param1, false, 11);
               } else {
-                ek.field_x = 1;
-                dk.field_g = dk.field_g - 1;
+                CheckboxRenderer.field_x = 1;
+                TextWidgetStyle.field_g = TextWidgetStyle.field_g - 1;
                 wm.a(param1, false, 10);
               }
               return;
@@ -220,7 +220,7 @@ final class qn extends IntrusiveNode {
             DropTargetWidget.a(2, (byte) 116, true);
             if (param0 != 7) {
               var9 = (String) null;
-              qn.a((String) null, -40);
+              qn.createEmailValidationRequest((String) null, -40);
             }
             if (StrongCacheEntry.field_w == ao.field_b &&
               hk.field_d == LoginForm.field_P) {
@@ -253,19 +253,19 @@ final class qn extends IntrusiveNode {
                   hk.field_d = 0;
                   fieldTemp$3 = ao.field_b + 1;
                   ao.field_b = ao.field_b + 1;
-                  ce.field_r = fieldTemp$3;
+                  OutlinedRoadStripRenderer.field_r = fieldTemp$3;
                   tn.a(0);
                   h.b((byte) -125);
                 }
               }
               LoginForm.field_P = 0;
-              ek.field_x = 2;
+              CheckboxRenderer.field_x = 2;
             } else {
-              dk.field_g = 3;
-              ek.field_x = 0;
+              TextWidgetStyle.field_g = 3;
+              CheckboxRenderer.field_x = 0;
             }
-            if (ek.field_x != 0 &&
-              1 != ek.field_x) {
+            if (CheckboxRenderer.field_x != 0 &&
+              1 != CheckboxRenderer.field_x) {
               wm.a(param1, false, 11);
               return;
             }

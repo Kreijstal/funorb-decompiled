@@ -10,7 +10,7 @@ final class qd extends vd {
     static int[] field_f;
     static int field_i;
     private float field_n;
-    static oa field_j;
+    static NamedSoundEffect field_j;
 
     final void a(float param0, int[] param1, int param2, int[] param3, byte param4) {
         RuntimeException stackIn_25_0 = null;
@@ -37,7 +37,7 @@ final class qd extends vd {
             param0 = -1.0f;
           }
           if (param4 != 49) {
-            field_j = (oa) null;
+            field_j = (NamedSoundEffect) null;
           }
           if (1.0f < param0) {
             param0 = 1.0f;
@@ -98,7 +98,7 @@ final class qd extends vd {
     final static void a(int param0, int param1) {
         if (null != ValidationHelpWidget.field_Q &&
           i.field_k[param1] != null) {
-          lc.field_d = null;
+          EmailValidationResult.field_d = null;
           ResourceArchive.a(true, i.field_k[param1], (byte) 69, 30);
         } else {
           WeightedLruCache.field_e = 0;

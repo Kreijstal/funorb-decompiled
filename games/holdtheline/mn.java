@@ -13,7 +13,7 @@ final class mn {
           String var8 = null;
           String var5 = null;
           try {
-            hg.field_M = param0;
+            DialWidget.field_M = param0;
             var7 = param1.getParameter("cookieprefix");
             var4 = param1.getParameter("cookiehost");
             var8 = var7 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
@@ -46,8 +46,8 @@ final class mn {
 
     final static void a(RoadSegment[] param0, vd param1, byte param2) {
         int var12 = 0;
-        uh var3 = null;
-        uh var4 = null;
+        GrowableIntList var3 = null;
+        GrowableIntList var4 = null;
         RoadSegment var5 = null;
         Point2i var6 = null;
         Point2i var7 = null;
@@ -62,17 +62,17 @@ final class mn {
         float var17 = 0.0f;
         float var18 = 0.0f;
         int var19 = 0;
-        uh var20 = null;
+        GrowableIntList var20 = null;
         Point2i var21 = null;
-        uh var22 = null;
+        GrowableIntList var22 = null;
         Point2i var23 = null;
         Point2i var24 = null;
         Point2i var25 = null;
-        uh var26 = null;
-        uh var27 = null;
+        GrowableIntList var26 = null;
+        GrowableIntList var27 = null;
         Point2i var28 = null;
         Point2i var29 = null;
-        uh var30 = null;
+        GrowableIntList var30 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -91,11 +91,11 @@ final class mn {
           var5 = param0[-1 + param0.length];
           var21 = var5.c(true);
           var23 = var5.o(-14);
-          var20.a(var21.x, (byte) 77);
-          var20.a(var21.y, (byte) 104);
-          var22.a(var23.x, (byte) 85);
-          var22.a(var23.y, (byte) 81);
-          var8 = ce.a(-1, param0);
+          var20.add(var21.x, (byte) 77);
+          var20.add(var21.y, (byte) 104);
+          var22.add(var23.x, (byte) 85);
+          var22.add(var23.y, (byte) 81);
+          var8 = OutlinedRoadStripRenderer.totalCurveLength(-1, param0);
           var9 = 1 + (int)(var8 / 40.0f);
           var10 = var8 / (float)var9;
           if (param2 >= -13) {
@@ -104,7 +104,7 @@ final class mn {
           var11 = var10;
           for (var12 = 0; var12 < param0.length; var12++) {
             var13 = param0[var12];
-            var14 = var13.f(50);
+            var14 = var13.length(50);
             var15 = 1 + (int)(var14 / 5.0f);
             var16 = var14 / (float)var15;
             var17 = 1.0f / (float)var15;
@@ -113,39 +113,39 @@ final class mn {
               var6 = var24;
               var25 = var13.a(var18, false);
               var7 = var25;
-              var3.a(var24.x, (byte) 110);
-              var3.a(var24.y, (byte) 122);
-              var4.a(var25.x, (byte) 102);
+              var3.add(var24.x, (byte) 110);
+              var3.add(var24.y, (byte) 122);
+              var4.add(var25.x, (byte) 102);
               var11 = var11 - var16;
-              var4.a(var25.y, (byte) 110);
+              var4.add(var25.y, (byte) 110);
               if (var11 < 0.0f) {
-                param1.a(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.a(-50), var13.field_k, var3.a(-90), (byte) 49);
+                param1.a(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.toArray(-50), var13.field_k, var3.toArray(-90), (byte) 49);
                 var26 = o.a((byte) 51);
                 var3 = var26;
                 var27 = o.a((byte) 21);
                 var4 = var27;
-                var26.a(var24.x, (byte) 84);
-                var26.a(var24.y, (byte) 68);
-                var27.a(var25.x, (byte) 67);
+                var26.add(var24.x, (byte) 84);
+                var26.add(var24.y, (byte) 68);
+                var27.add(var25.x, (byte) 67);
                 var11 = var11 + var10;
-                var27.a(var25.y, (byte) 77);
+                var27.add(var25.y, (byte) 77);
               }
             }
             var28 = var13.h(7560980);
             var6Lifetime1 = var28;
             var29 = var13.a((byte) 29);
             var7Lifetime1 = var29;
-            var3.a(var28.x, (byte) 117);
-            var3.a(var28.y, (byte) 66);
-            var4.a(var29.x, (byte) 95);
-            var4.a(var29.y, (byte) 121);
-            param1.a(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.a(-60), var13.field_k, var3.a(-127), (byte) 49);
+            var3.add(var28.x, (byte) 117);
+            var3.add(var28.y, (byte) 66);
+            var4.add(var29.x, (byte) 95);
+            var4.add(var29.y, (byte) 121);
+            param1.a(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.toArray(-60), var13.field_k, var3.toArray(-127), (byte) 49);
             var3 = o.a((byte) 17);
             var30 = o.a((byte) -128);
-            var3.a(var6Lifetime1.x, (byte) 71);
-            var3.a(var6Lifetime1.y, (byte) 123);
-            var30.a(var7Lifetime1.x, (byte) 91);
-            var30.a(var7Lifetime1.y, (byte) 101);
+            var3.add(var6Lifetime1.x, (byte) 71);
+            var3.add(var6Lifetime1.y, (byte) 123);
+            var30.add(var7Lifetime1.x, (byte) 91);
+            var30.add(var7Lifetime1.y, (byte) 101);
             var11 = var10;
           }
           return;

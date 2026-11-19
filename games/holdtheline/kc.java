@@ -4,9 +4,9 @@
 final class kc {
     static java.awt.Font field_e;
     static String field_c;
-    static uf field_d;
-    static uf field_b;
-    static va field_a;
+    static SpriteAsset field_d;
+    static SpriteAsset field_b;
+    static SpriteSheetAsset field_a;
 
     public static void clearSharedReferences(boolean param0) {
         field_a = null;

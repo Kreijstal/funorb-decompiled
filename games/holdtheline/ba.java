@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ba {
-    static kb field_b;
+    static LoginCredentialType field_b;
     static int[] field_a;
 
     final static void a(String param0, int param1) {
@@ -30,8 +30,8 @@ final class ba {
           }
           if (decompiledFrameRemainder0) {
             if (!DiskCacheStore.field_h) {
-              if (dm.field_a >= g.field_h) {
-                stackIn_16_0 = (we.field_l + g.field_h > dm.field_a) ? 1 : 0;
+              if (dm.field_a >= LinearPointPath.field_h) {
+                stackIn_16_0 = (we.field_l + LinearPointPath.field_h > dm.field_a) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -43,16 +43,16 @@ final class ba {
               dm.field_a = 0;
             } else {
               if (DiskCacheStore.field_h) {
-                dm.field_a = g.field_h;
+                dm.field_a = LinearPointPath.field_h;
               } else {
                 if (var2_int == 0) {
                   dm.field_a = 0;
                 } else {
-                  dm.field_a = g.field_h;
+                  dm.field_a = LinearPointPath.field_h;
                 }
               }
             }
-            ac.field_e = ak.field_c;
+            ArchiveLoadProgress.field_e = ak.field_c;
             if (param0 == null) {
               if (var2_int != 0) {
                 DiskCacheStore.field_h = true;
@@ -60,14 +60,14 @@ final class ba {
             } else {
               DiskCacheStore.field_h = false;
             }
-            em.field_l = MouseWheelInput.field_b;
+            AgeValidator.field_l = MouseWheelInput.field_b;
           }
           if (!DiskCacheStore.field_h &&
-            g.field_h > dm.field_a &&
+            LinearPointPath.field_h > dm.field_a &&
             na.field_k) {
-            ac.field_e = ak.field_c;
+            ArchiveLoadProgress.field_e = ak.field_c;
             dm.field_a = 0;
-            em.field_l = MouseWheelInput.field_b;
+            AgeValidator.field_l = MouseWheelInput.field_b;
           }
           UiWidget.field_s = param0;
           MouseWheelInput.field_b = -1;
@@ -94,7 +94,7 @@ final class ba {
         }
     }
 
-    final static int a(TrackBoundary param0, int param1, gj param2) {
+    final static int a(TrackBoundary param0, int param1, ArcTrackBoundary param2) {
         int stackIn_2_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -104,21 +104,21 @@ final class ba {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        wb var4 = null;
+        Vector2i var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         float var8 = 0.0f;
         int var9 = 0;
         float var10 = 0.0f;
-        wb var11 = null;
+        Vector2i var11 = null;
         try {
-          var11 = new wb(param0.field_r, param0.field_s);
-          var4 = new wb(param0.field_r, param2.field_t);
-          var5 = var11.a(-105, var4);
-          var6 = var11.a(false, var4);
-          var7 = var11.a(51);
-          var8 = (float)param2.field_u * (float)var7 * (float)param2.field_u - (float)var6 * (float)var6;
+          var11 = new Vector2i(param0.start, param0.end);
+          var4 = new Vector2i(param0.start, param2.center);
+          var5 = var11.dot(-105, var4);
+          var6 = var11.cross(false, var4);
+          var7 = var11.lengthSquared(51);
+          var8 = (float)param2.radius * (float)var7 * (float)param2.radius - (float)var6 * (float)var6;
           if (var8 < (float)param1) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
@@ -128,8 +128,8 @@ final class ba {
           RasterBuffer.field_d = ((float)var5 + var10) / (float)var7;
           if (RasterBuffer.field_d >= 0.0f &&
             1.0f >= RasterBuffer.field_d) {
-            IterableSecondaryNodeDeque.field_b = ha.a(param2.field_t, param0.a(false, RasterBuffer.field_d), false);
-            if (param2.a(IterableSecondaryNodeDeque.field_b, 13012)) {
+            IterableSecondaryNodeDeque.field_b = ha.a(param2.center, param0.pointAt(false, RasterBuffer.field_d), false);
+            if (param2.containsAngle(IterableSecondaryNodeDeque.field_b, 13012)) {
               var9++;
             }
           }
@@ -137,8 +137,8 @@ final class ba {
             CachedArchiveProvider.field_g = ((float)var5 - var10) / (float)var7;
             if (CachedArchiveProvider.field_g >= 0.0f &&
               CachedArchiveProvider.field_g <= 1.0f) {
-              TextHotspotWidget.field_G = ha.a(param2.field_t, param0.a(false, CachedArchiveProvider.field_g), false);
-              if (param2.a(TextHotspotWidget.field_G, 13012)) {
+              TextHotspotWidget.field_G = ha.a(param2.center, param0.pointAt(false, CachedArchiveProvider.field_g), false);
+              if (param2.containsAngle(TextHotspotWidget.field_G, 13012)) {
                 var9++;
               }
               if (var9 == 1) {
@@ -177,7 +177,7 @@ final class ba {
         field_a = null;
         field_b = null;
         if (param0 != 12031) {
-          field_b = (kb) null;
+          field_b = (LoginCredentialType) null;
         }
     }
 
@@ -290,7 +290,7 @@ final class ba {
           }
           return param1;
         }
-        field_b = (kb) null;
+        field_b = (LoginCredentialType) null;
         var2Lifetime1 = param1;
         if (32 == var2Lifetime1) {
           return '_';
@@ -471,7 +471,7 @@ final class ba {
     }
 
     static {
-        field_b = new kb(0);
+        field_b = new LoginCredentialType(0);
         field_a = new int[8192];
     }
 }

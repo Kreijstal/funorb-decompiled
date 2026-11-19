@@ -49,12 +49,12 @@ final class lj {
         }
         if (param0 <= -100) {
           var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -1, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j);
-          ug.field_g.addLast((byte) -84, var1);
+          MarkerSliderRenderer.field_g.addLast((byte) -84, var1);
           return;
         }
         field_f = 101;
         var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -1, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j);
-        ug.field_g.addLast((byte) -84, var1);
+        MarkerSliderRenderer.field_g.addLast((byte) -84, var1);
     }
 
     public static void clearSharedReferences(int param0) {

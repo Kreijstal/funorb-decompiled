@@ -20,7 +20,7 @@ final class oj {
         }
         var1 = gh.field_n[AccountProgressDialog.field_jb];
         if (var1 == null) {
-          dupTemp$0 = MusicTrack.load(ValidationHelpWidget.field_Q, em.field_m[AccountProgressDialog.field_jb], "");
+          dupTemp$0 = MusicTrack.load(ValidationHelpWidget.field_Q, AgeValidator.field_m[AccountProgressDialog.field_jb], "");
           var3 = dupTemp$0;
           var1 = var3;
           if (dupTemp$0 == null) {
@@ -28,7 +28,7 @@ final class oj {
           }
           gh.field_n[AccountProgressDialog.field_jb] = var3;
         }
-        if (!SecondaryNodeDequeIterator.field_d.field_q.a(22050, jh.field_a, var1, false, pd.field_f)) {
+        if (!SecondaryNodeDequeIterator.field_d.field_q.a(22050, jh.field_a, var1, false, UsernameLoginCredentials.field_f)) {
           return;
         }
         i.field_k[AccountProgressDialog.field_jb] = var1;
@@ -40,22 +40,22 @@ final class oj {
           jh.field_a = null;
         }
         if (WeightedLruCache.field_e == 2) {
-          lc.field_d = var1;
+          EmailValidationResult.field_d = var1;
           ResourceArchive.a(false, var1, (byte) 69, 30);
         } else {
           if (1 != WeightedLruCache.field_e) {
             ResourceArchive.a(true, var1, (byte) 69, 30);
-            lc.field_d = null;
+            EmailValidationResult.field_d = null;
           } else {
-            if (lc.field_d == null) {
+            if (EmailValidationResult.field_d == null) {
               ResourceArchive.a(true, var1, (byte) 69, 30);
-              lc.field_d = null;
+              EmailValidationResult.field_d = null;
             } else {
-              if (ai.field_a.a(-98, lc.field_d)) {
+              if (ai.field_a.a(-98, EmailValidationResult.field_d)) {
                 ec.field_D = var1;
               } else {
                 ResourceArchive.a(true, var1, (byte) 69, 30);
-                lc.field_d = null;
+                EmailValidationResult.field_d = null;
               }
             }
           }

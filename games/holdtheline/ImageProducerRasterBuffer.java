@@ -50,7 +50,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param3 != 14) {
           return (Sprite[]) null;
         }
-        return wa.a(1, 1, param1, param2, param0);
+        return PasswordValidator.a(1, 1, param1, param2, param0);
     }
 
     final static long d(int param0) {
@@ -162,9 +162,9 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     }
 
     final static void a(int param0) {
-        ui var1 = null;
+        SoundPlayback var1 = null;
         int var2 = HoldTheLine.field_D;
-        ui var1Lifetime1;
+        SoundPlayback var1Lifetime1;
         try {
           LoginChoicePanel.field_G.d();
           if (param0 != -1379) {
@@ -174,20 +174,20 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           ValidationIndicator.field_G = ValidationIndicator.field_G - 1;
           if (0 == ValidationIndicator.field_G) {
             ValidationIndicator.field_G = 200;
-            var1 = (ui) (SecondaryNodeDeque.field_b.first((byte) 118));
+            var1 = (SoundPlayback) (SecondaryNodeDeque.field_b.first((byte) 118));
             while (var1 != null) {
               if (!var1.field_k.isLinked(116)) {
                 var1.unlink(0);
               }
-              var1 = (ui) (SecondaryNodeDeque.field_b.next((byte) 93));
+              var1 = (SoundPlayback) (SecondaryNodeDeque.field_b.next((byte) 93));
             }
             if (null != TimedValidator.field_b) {
-              var1Lifetime1 = (ui) (TimedValidator.field_b.first((byte) 120));
+              var1Lifetime1 = (SoundPlayback) (TimedValidator.field_b.first((byte) 120));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_k.isLinked(88)) {
                   var1Lifetime1.unlink(0);
                 }
-                var1Lifetime1 = (ui) (TimedValidator.field_b.next((byte) -51));
+                var1Lifetime1 = (SoundPlayback) (TimedValidator.field_b.next((byte) -51));
               }
             }
           }

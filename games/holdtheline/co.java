@@ -4,16 +4,16 @@
 final class co {
     static String[] field_a;
     static int[] field_d;
-    static uf field_b;
+    static SpriteAsset field_b;
     static String field_c;
     static String field_e;
 
     final static int a(int param0) {
         if (param0 != 0) {
-          field_b = (uf) null;
-          return cb.field_j;
+          field_b = (SpriteAsset) null;
+          return DisplayNameValidator.field_j;
         }
-        return cb.field_j;
+        return DisplayNameValidator.field_j;
     }
 
     final static void a(boolean param0) {
@@ -88,11 +88,11 @@ final class co {
     }
 
     final static void c(int param0) {
-        if (StrongCacheEntry.field_q == -lf.field_l + param0) {
+        if (StrongCacheEntry.field_q == -TextLineLayout.field_l + param0) {
           StrongCacheEntry.field_q = StrongCacheEntry.field_q + 1;
           return;
         }
-        if (StrongCacheEntry.field_q == -lf.field_l + 250) {
+        if (StrongCacheEntry.field_q == -TextLineLayout.field_l + 250) {
           StrongCacheEntry.field_q = StrongCacheEntry.field_q + 1;
           return;
         }

@@ -10,11 +10,11 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     static AudioOutput field_G;
     private TextButton field_P;
     private TextButton field_F;
-    static va field_O;
+    static SpriteSheetAsset field_O;
     static PcmStreamMixer field_H;
     static String field_J;
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -23,7 +23,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyPress(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -58,31 +58,31 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         this.field_K = new TextButton(fo.field_m, (WidgetListener) null);
         this.field_P = new TextButton(um.field_c, (WidgetListener) null);
         this.field_F = new TextButton(ue.field_a, (WidgetListener) null);
-        mo var1 = new mo();
-        this.field_K.field_l = (WidgetRenderer) ((Object) var1);
-        this.field_P.field_l = (WidgetRenderer) ((Object) var1);
-        this.field_F.field_l = (WidgetRenderer) ((Object) var1);
+        SpriteButtonRenderer var1 = new SpriteButtonRenderer();
+        this.field_K.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_P.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_F.renderer = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_P.a(-var3 + this.field_x >> 1, (byte) 122, -var2 + (-48 + this.field_u), 30, var4);
-        this.field_F.a((-var3 + this.field_x >> 1) + var4 + var2, (byte) 122, -48 + (this.field_u - var2), 30, var4);
-        this.field_K.a(this.field_x - var3 >> 1, (byte) 122, -(2 * var2) - 78 + this.field_u, 30, var3);
-        this.field_P.field_t = (WidgetListener) (this);
-        this.field_K.field_t = (WidgetListener) (this);
-        this.field_K.field_z = ml.field_b;
-        this.field_F.field_t = (WidgetListener) (this);
-        this.field_F.field_z = wc.field_j;
+        this.field_P.setBounds(-var3 + this.width >> 1, (byte) 122, -var2 + (-48 + this.height), 30, var4);
+        this.field_F.setBounds((-var3 + this.width >> 1) + var4 + var2, (byte) 122, -48 + (this.height - var2), 30, var4);
+        this.field_K.setBounds(this.width - var3 >> 1, (byte) 122, -(2 * var2) - 78 + this.height, 30, var3);
+        this.field_P.listener = (WidgetListener) (this);
+        this.field_K.listener = (WidgetListener) (this);
+        this.field_K.tooltip = ml.field_b;
+        this.field_F.listener = (WidgetListener) (this);
+        this.field_F.tooltip = TrackCurve.field_j;
         this.a(true, this.field_P);
         this.a(true, this.field_K);
         this.a(true, this.field_F);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        int var5 = this.field_k + param2;
-        int var6 = param1 + this.field_o;
-        IntrusiveNode.field_g.a(DisplayNameForm.field_P, var5 + 20, 20 + var6, this.field_x - 40, this.field_u - 50, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        int var5 = this.x + param2;
+        int var6 = param1 + this.y;
+        IntrusiveNode.field_g.a(DisplayNameForm.field_P, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -120,7 +120,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
             return stackIn_4_0;
           }
           if (63 < var2_int) {
-            stackIn_8_0 = wb.field_h;
+            stackIn_8_0 = Vector2i.field_h;
             return stackIn_8_0;
           }
           var3 = 0;

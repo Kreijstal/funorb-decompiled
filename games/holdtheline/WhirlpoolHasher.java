@@ -15,16 +15,16 @@ final class WhirlpoolHasher {
     private long[] field_b;
 
     final static void a(byte param0) {
-        fo var1 = (fo) (ji.field_a.first((byte) 87));
+        fo var1 = (fo) (TutorialPage.field_a.first((byte) 87));
         if (var1 == null) {
           r.a(-28036);
           return;
         }
-        IsaacPacketBuffer var2 = rd.field_e;
+        IsaacPacketBuffer var2 = RoadStripRenderer.field_e;
         if (param0 <= 68) {
           return;
         }
-        var1.field_i = new int[]{var2.a(45), var2.a(-72), var2.a(-47), var2.a(79)};
+        var1.field_i = new int[]{var2.readInt(45), var2.readInt(-72), var2.readInt(-47), var2.readInt(79)};
         var1.unlink(0);
     }
 
@@ -122,7 +122,7 @@ final class WhirlpoolHasher {
     }
 
     final static void a(BitmapFont param0, BitmapFont param1, byte param2, int param3) {
-        sj.field_G = param1;
+        CheckboxWidget.field_G = param1;
         q.field_a = param0;
         if (param2 > -39) {
           return;

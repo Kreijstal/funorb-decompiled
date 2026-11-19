@@ -27,7 +27,7 @@ final class ka {
             return stackIn_2_0;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_4_0 = mo.a(var3, (byte) -116);
+          stackIn_4_0 = SpriteButtonRenderer.a(var3, (byte) -116);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ final class ka {
 
     final static void a(int param0) {
         uk.b(-114);
-        ci.field_o = true;
+        ArchiveCatalog.field_o = true;
         fi.field_nb = true;
         field_b.a(false);
         if (param0 == -1) {

@@ -10,7 +10,7 @@ final class BoundedRandomAccessFile {
     static int field_g;
     static int field_c;
     private long field_e;
-    static nd field_d;
+    static NameAvailabilityResult field_d;
 
     final static boolean a(int param0, int param1) {
         if (param0 == 5) {
@@ -58,27 +58,27 @@ final class BoundedRandomAccessFile {
         BoundedRandomAccessFile.a(105, 68);
     }
 
-    final static hb a(int param0, String[] param1) {
-        hb stackIn_48_0 = null;
+    final static TutorialCondition parseTutorialCondition(int param0, String[] param1) {
+        TutorialCondition stackIn_48_0 = null;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hb var2 = null;
+        TutorialCondition var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        hb var4 = null;
-        hb var5 = null;
+        TutorialCondition var4 = null;
+        TutorialCondition var5 = null;
         var3 = HoldTheLine.field_D;
         try {
-          var4 = new hb();
+          var4 = new TutorialCondition();
           var5 = var4;
           var2 = var5;
           if (param1[param0].equalsIgnoreCase("return")) {
             if (param1.length != 1) {
               throw new IllegalArgumentException();
             }
-            var4.field_d = 0;
+            var4.opcode = 0;
           }
           if (!param1[0].equalsIgnoreCase("activate")) {
             if (!param1[0].equalsIgnoreCase("powerups")) {
@@ -88,18 +88,18 @@ final class BoundedRandomAccessFile {
                     if (param1.length != 4) {
                       throw new IllegalArgumentException();
                     }
-                    var2.field_d = 9;
-                    var2.field_c = mo.a((CharSequence) ((Object) param1[1]), (byte) -116);
+                    var2.opcode = 9;
+                    var2.field_c = SpriteButtonRenderer.a((CharSequence) ((Object) param1[1]), (byte) -116);
                     var2.field_b = ka.a(5, param1[2]);
-                    var2.field_e = mo.a((CharSequence) ((Object) param1[3]), (byte) -116);
+                    var2.field_e = SpriteButtonRenderer.a((CharSequence) ((Object) param1[3]), (byte) -116);
                   } else {
                     if (param1[0].equalsIgnoreCase("playerzone")) {
                       if (param1.length != 3) {
                         throw new IllegalArgumentException();
                       }
-                      var2.field_d = 2;
+                      var2.opcode = 2;
                       var2.field_c = ka.a(5, param1[1]);
-                      var2.field_b = mo.a((CharSequence) ((Object) param1[2]), (byte) -116);
+                      var2.field_b = SpriteButtonRenderer.a((CharSequence) ((Object) param1[2]), (byte) -116);
                     } else {
                       if (!param1[0].equalsIgnoreCase("missilehit")) {
                         if (!param1[0].equalsIgnoreCase("missilemiss")) {
@@ -107,19 +107,19 @@ final class BoundedRandomAccessFile {
                             if (param1.length != 1) {
                               throw new IllegalArgumentException();
                             }
-                            var2.field_d = 8;
+                            var2.opcode = 8;
                           }
                         } else {
                           if (1 != param1.length) {
                             throw new IllegalArgumentException();
                           }
-                          var2.field_d = 7;
+                          var2.opcode = 7;
                         }
                       } else {
                         if (param1.length != 1) {
                           throw new IllegalArgumentException();
                         }
-                        var2.field_d = 6;
+                        var2.opcode = 6;
                       }
                     }
                   }
@@ -127,19 +127,19 @@ final class BoundedRandomAccessFile {
                   if (4 != param1.length) {
                     throw new IllegalArgumentException();
                   }
-                  var2.field_d = 5;
-                  var2.field_c = mo.a((CharSequence) ((Object) param1[1]), (byte) -116);
+                  var2.opcode = 5;
+                  var2.field_c = SpriteButtonRenderer.a((CharSequence) ((Object) param1[1]), (byte) -116);
                   var2.field_b = ka.a(param0 ^ 5, param1[2]);
-                  var2.field_e = mo.a((CharSequence) ((Object) param1[3]), (byte) -116);
+                  var2.field_e = SpriteButtonRenderer.a((CharSequence) ((Object) param1[3]), (byte) -116);
                 }
               } else {
                 if (param1.length != 3) {
                   throw new IllegalArgumentException();
                 }
-                var4.field_d = 4;
-                var4.field_c = mo.a((CharSequence) ((Object) param1[1]), (byte) -116);
+                var4.opcode = 4;
+                var4.field_c = SpriteButtonRenderer.a((CharSequence) ((Object) param1[1]), (byte) -116);
                 if (!param1[2].equalsIgnoreCase("none")) {
-                  var2.field_b = vh.a(114, param1[2]);
+                  var2.field_b = DialWidgetRenderer.parsePowerupCategory(114, param1[2]);
                 } else {
                   var5.field_b = -1;
                 }
@@ -148,16 +148,16 @@ final class BoundedRandomAccessFile {
               if (param1.length != 4) {
                 throw new IllegalArgumentException();
               }
-              var4.field_d = 3;
-              var4.field_c = vh.a(122, param1[1]);
+              var4.opcode = 3;
+              var4.field_c = DialWidgetRenderer.parsePowerupCategory(122, param1[1]);
               var4.field_b = ka.a(param0 ^ 5, param1[2]);
-              var4.field_e = mo.a((CharSequence) ((Object) param1[3]), (byte) -116);
+              var4.field_e = SpriteButtonRenderer.a((CharSequence) ((Object) param1[3]), (byte) -116);
             }
           } else {
             if (param1.length != 1) {
               throw new IllegalArgumentException();
             }
-            var5.field_d = 1;
+            var5.opcode = 1;
           }
           stackIn_48_0 = var2;
           return stackIn_48_0;
@@ -257,6 +257,6 @@ final class BoundedRandomAccessFile {
     }
 
     static {
-        td.a(50, 14195);
+        StereoMusicSample.a(50, 14195);
     }
 }

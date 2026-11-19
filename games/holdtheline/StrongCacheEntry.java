@@ -8,9 +8,9 @@ final class StrongCacheEntry extends CacheEntry {
     static IntrusiveDeque field_z;
     private Object field_x;
     static int field_q;
-    static va field_u;
+    static SpriteSheetAsset field_u;
     static int field_w;
-    static oa field_s;
+    static NamedSoundEffect field_s;
     static String field_t;
 
     final boolean isSoftReference(int param0) {
@@ -50,7 +50,7 @@ final class StrongCacheEntry extends CacheEntry {
         RuntimeException decompiledCaughtException = null;
         var5 = HoldTheLine.field_D;
         try {
-          var3 = ld.a(false, param2, param0);
+          var3 = SoundCache.a(false, param2, param0);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -89,7 +89,7 @@ final class StrongCacheEntry extends CacheEntry {
 
     final static void h(int param0) {
         int var1 = -126 / ((10 - param0) / 43);
-        go.a(0, 17);
+        RotatedSpriteAsset.a(0, 17);
     }
 
     StrongCacheEntry(Object param0, int param1) {

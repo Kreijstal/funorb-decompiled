@@ -40,7 +40,7 @@ final class cm {
               var6 = h.measureMenuTextWidthWithIntGuard(ClientException.field_b[var3_int], -113, true);
               var7 = -(var6 >> 1) + NanoTickClock.field_i;
               var4 = var4 + ContentTransitionDialog.field_bb;
-              if (mo.a((vf.field_w << 1) + TickClock.field_b, param2, var6 + (DropTargetWidget.field_G << 1), param1, 27, -DropTargetWidget.field_G + var7, var4)) {
+              if (SpriteButtonRenderer.a((vf.field_w << 1) + TickClock.field_b, param2, var6 + (DropTargetWidget.field_G << 1), param1, 27, -DropTargetWidget.field_G + var7, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends vn {
+final class i extends NineSlicePanel {
     static int[] field_j;
     static MusicTrack[] field_k;
     static int[] field_l;
@@ -21,8 +21,8 @@ final class i extends vn {
         te.field_b = StandardContentTransitionDialog.a(param3, 33, "commonui", "frame_bottom");
         SpriteState.field_t = UrlPacketDownloader.a(param3, "commonui", false, "jagex_logo_grey");
         NameCheckProgressDialog.field_Ab = StandardContentTransitionDialog.a(param3, 33, "commonui", "button");
-        FullscreenFocusCanvas.field_i = ce.a("validation", 17870, "commonui", param3);
-        mo.field_w = (BitmapFont) ((Object) ga.a("commonui", "arezzo12", param1, (byte) 35, param3));
+        FullscreenFocusCanvas.field_i = OutlinedRoadStripRenderer.loadNamedSprites("validation", 17870, "commonui", param3);
+        SpriteButtonRenderer.field_w = (BitmapFont) ((Object) ga.a("commonui", "arezzo12", param1, (byte) 35, param3));
         IntrusiveNode.field_g = (BitmapFont) ((Object) ga.a("commonui", "arezzo14", param1, (byte) 35, param3));
         DisplayNameForm.field_I = (BitmapFont) ((Object) ga.a("commonui", "arezzo14bold", param1, (byte) 35, param3));
         Sprite var17 = new Sprite(param2.a("", !param0 ? true : false, "button.gif"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
@@ -30,8 +30,8 @@ final class i extends vn {
         IndexedSprite[] var5 = oc.a("screen_options", param3, (byte) 32, "commonui");
         FullscreenFocusCanvas.field_g = new IndexedSprite[4];
         FullscreenFocusCanvas.field_d = new IndexedSprite[4];
-        ug.field_d = new IndexedSprite[4];
-        IndexedSprite[][] var6 = new IndexedSprite[][]{FullscreenFocusCanvas.field_d, FullscreenFocusCanvas.field_g, ug.field_d};
+        MarkerSliderRenderer.field_d = new IndexedSprite[4];
+        IndexedSprite[][] var6 = new IndexedSprite[][]{FullscreenFocusCanvas.field_d, FullscreenFocusCanvas.field_g, MarkerSliderRenderer.field_d};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;
@@ -75,7 +75,7 @@ final class i extends vn {
         }
     }
 
-    final static int a(gj param0, gj param1, int param2) {
+    final static int a(ArcTrackBoundary param0, ArcTrackBoundary param1, int param2) {
         int stackIn_5_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
@@ -97,19 +97,19 @@ final class i extends vn {
         Point2i var11 = null;
         Point2i var12 = null;
         int var13 = 0;
-        wb var14 = null;
+        Vector2i var14 = null;
         try {
-          var14 = new wb(param1.field_t, param0.field_t);
-          var4 = var14.a(-113);
+          var14 = new Vector2i(param1.center, param0.center);
+          var4 = var14.lengthSquared(-113);
           var5 = (float)Math.sqrt((double)var4);
-          var6 = var14.a(var5, (byte) 121);
+          var6 = var14.divideToFloat(var5, (byte) 121);
           if (param2 != -6218) {
             i.a((byte) -15, true);
           }
           var7 = var6.perpendicular((byte) -41);
-          var8 = (float)(-(param0.field_u * param0.field_u) + (var4 + param1.field_u * param1.field_u));
+          var8 = (float)(-(param0.radius * param0.radius) + (var4 + param1.radius * param1.radius));
           var8 = var8 / (var5 * 2.0f);
-          var9 = -(var8 * var8) + (float)(param1.field_u * param1.field_u);
+          var9 = -(var8 * var8) + (float)(param1.radius * param1.radius);
           if (0.0f > var9) {
             stackIn_5_0 = 0;
             return stackIn_5_0;
@@ -117,13 +117,13 @@ final class i extends vn {
           var10 = (float)Math.sqrt((double)var9);
           var6.scale(var8, param2 ^ 6217);
           var7.scale(var10, -1);
-          var11 = new Point2i(param1.field_t);
+          var11 = new Point2i(param1.center);
           var11.translate(var6, (byte) 109);
           if (0.0010000000474974513f > var9) {
-            RasterBuffer.field_d = ha.a(param1.field_t, var11, false);
-            IterableSecondaryNodeDeque.field_b = ha.a(param0.field_t, var11, false);
-            if (param1.a(RasterBuffer.field_d, param2 ^ -10910) &&
-              param0.a(IterableSecondaryNodeDeque.field_b, param2 ^ -10910)) {
+            RasterBuffer.field_d = ha.a(param1.center, var11, false);
+            IterableSecondaryNodeDeque.field_b = ha.a(param0.center, var11, false);
+            if (param1.containsAngle(RasterBuffer.field_d, param2 ^ -10910) &&
+              param0.containsAngle(IterableSecondaryNodeDeque.field_b, param2 ^ -10910)) {
               stackIn_19_0 = 1;
               return stackIn_19_0;
             }
@@ -133,17 +133,17 @@ final class i extends vn {
           var12 = new Point2i(var11);
           var11.translate(var7, (byte) 122);
           var12.subtractVector(var7, -13201);
-          RasterBuffer.field_d = ha.a(param1.field_t, var11, false);
+          RasterBuffer.field_d = ha.a(param1.center, var11, false);
           var13 = 0;
-          IterableSecondaryNodeDeque.field_b = ha.a(param0.field_t, var11, false);
-          if (param1.a(RasterBuffer.field_d, 13012) &&
-            param0.a(IterableSecondaryNodeDeque.field_b, 13012)) {
+          IterableSecondaryNodeDeque.field_b = ha.a(param0.center, var11, false);
+          if (param1.containsAngle(RasterBuffer.field_d, 13012) &&
+            param0.containsAngle(IterableSecondaryNodeDeque.field_b, 13012)) {
             var13++;
           }
-          CachedArchiveProvider.field_g = ha.a(param1.field_t, var12, false);
-          TextHotspotWidget.field_G = ha.a(param0.field_t, var12, false);
-          if (param1.a(CachedArchiveProvider.field_g, param2 + 19230) &&
-            param0.a(TextHotspotWidget.field_G, 13012)) {
+          CachedArchiveProvider.field_g = ha.a(param1.center, var12, false);
+          TextHotspotWidget.field_G = ha.a(param0.center, var12, false);
+          if (param1.containsAngle(CachedArchiveProvider.field_g, param2 + 19230) &&
+            param0.containsAngle(TextHotspotWidget.field_G, 13012)) {
             var13++;
             if (var13 == 1) {
               RasterBuffer.field_d = CachedArchiveProvider.field_g;
@@ -173,7 +173,7 @@ final class i extends vn {
     }
 
     final static void a(byte param0, boolean param1) {
-        ej.field_b = dg.field_c;
+        ByteStorage.field_b = dg.field_c;
         if (param0 <= 43) {
           String var3 = (String) null;
           i.a(100, -42, -85, (String) null, -48);
@@ -193,8 +193,8 @@ final class i extends vn {
         String var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
-        oa var7 = null;
-        oa var8 = null;
+        NamedSoundEffect var7 = null;
+        NamedSoundEffect var8 = null;
         tk stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -206,8 +206,8 @@ final class i extends vn {
             field_i = (java.awt.Image) null;
           }
           var6 = param3 + "_decelerate";
-          var7 = new oa(var5, param2);
-          var8 = new oa(var6, param4);
+          var7 = new NamedSoundEffect(var5, param2);
+          var8 = new NamedSoundEffect(var6, param4);
           var7.field_m = NetworkGameClient.a(var7, param1, 89);
           var7.field_l = var7.field_n.length;
           stackIn_3_0 = new tk(var7, var8);
@@ -226,8 +226,8 @@ final class i extends vn {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        cg.a(param4, param0, param3, (byte) 41, param1);
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
+        TutorialAction.a(param4, param0, param3, (byte) 41, param1);
         if (param2 != -51) {
           ResourceArchive var7 = (ResourceArchive) null;
           i.a(true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);

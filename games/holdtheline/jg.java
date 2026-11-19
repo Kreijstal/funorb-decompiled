@@ -7,7 +7,7 @@ final class jg extends IntrusiveNode {
     int[][] field_p;
     boolean field_j;
     long[][] field_k;
-    static go[] field_o;
+    static RotatedSpriteAsset[] field_o;
     int field_n;
     String[][] field_m;
     int field_l;
@@ -133,23 +133,23 @@ final class jg extends IntrusiveNode {
         }
     }
 
-    final static void a(rd param0, ei param1, byte param2) {
+    final static void a(RoadStripRenderer param0, GrowableObjectList param1, byte param2) {
         int var20 = 0;
         int var27 = 0;
         Point2i var3 = null;
         Point2i var4 = null;
-        uh var6 = null;
-        uh var7 = null;
-        vj var8 = null;
-        vj var9 = null;
+        GrowableIntList var6 = null;
+        GrowableIntList var7 = null;
+        BoundaryCurve var8 = null;
+        BoundaryCurve var9 = null;
         float var12 = 0.0f;
         int var13 = 0;
         float var14 = 0.0f;
         float var15 = 0.0f;
         Object var17 = null;
-        vj var17_ref = null;
+        BoundaryCurve var17_ref = null;
         Object var18 = null;
-        vj var18_ref = null;
+        BoundaryCurve var18_ref = null;
         int var19 = 0;
         float var22 = 0.0f;
         int var23_int = 0;
@@ -162,14 +162,14 @@ final class jg extends IntrusiveNode {
         Point2i var31 = null;
         Point2i var32 = null;
         Point2i var33 = null;
-        uh var34 = null;
-        uh var35 = null;
-        vj var36 = null;
+        GrowableIntList var34 = null;
+        GrowableIntList var35 = null;
+        BoundaryCurve var36 = null;
         Object var37 = null;
-        gj var37_ref = null;
+        ArcTrackBoundary var37_ref = null;
         Object var40 = null;
         Object var46 = null;
-        vj var61 = null;
+        BoundaryCurve var61 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -179,8 +179,8 @@ final class jg extends IntrusiveNode {
         RuntimeException var3_ref = null;
         float var16 = 0.0f;
         float var23 = 0.0f;
-        uh var38 = null;
-        uh var39 = null;
+        GrowableIntList var38 = null;
+        GrowableIntList var39 = null;
         Vector2f var41 = null;
         Vector2f var42 = null;
         Point2i var43 = null;
@@ -192,15 +192,15 @@ final class jg extends IntrusiveNode {
         Point2i var49 = null;
         Point2i var50 = null;
         Point2i var51 = null;
-        uh var52 = null;
-        uh var53 = null;
+        GrowableIntList var52 = null;
+        GrowableIntList var53 = null;
         Vector2f var54 = null;
         Vector2f var55 = null;
         Point2i var56 = null;
         Point2i var57 = null;
         Point2i var58 = null;
-        uh var59 = null;
-        uh var60 = null;
+        GrowableIntList var59 = null;
+        GrowableIntList var60 = null;
         Point2i var3Lifetime1;
         Point2i var4Lifetime1;
         var17 = null;
@@ -214,10 +214,10 @@ final class jg extends IntrusiveNode {
           var6 = var34;
           var35 = o.a((byte) -113);
           var7 = var35;
-          var8 = (vj) (param1.field_b[-1 + param1.field_e]);
-          var9 = (vj) (param1.field_b[0]);
-          var31 = var8.a(0);
-          var29 = wb.a(var8, var9, 3251);
+          var8 = (BoundaryCurve) (param1.elements[-1 + param1.size]);
+          var9 = (BoundaryCurve) (param1.elements[0]);
+          var31 = var8.getEndPoint(0);
+          var29 = Vector2i.a(var8, var9, 3251);
           var30 = new Vector2f(var29);
           var29.scale((float)param0.field_c, -1);
           var30.scale((float)param0.field_h, -1);
@@ -227,63 +227,63 @@ final class jg extends IntrusiveNode {
           var33 = new Point2i(var31);
           var4 = var33;
           var33.subtractVector(var30, -13201);
-          var34.a(var32.x, (byte) 64);
-          var34.a(var32.y, (byte) 127);
-          var35.a(var33.x, (byte) 71);
-          var35.a(var33.y, (byte) 68);
+          var34.add(var32.x, (byte) 64);
+          var34.add(var32.y, (byte) 127);
+          var35.add(var33.x, (byte) 71);
+          var35.add(var33.y, (byte) 68);
           var12 = fb.a(param1, (byte) 115);
           var13 = (int)(var12 / param0.field_k) + 1;
           var14 = var12 / (float)(var13 * param0.field_i);
           var15 = var14;
-          var17_ref = (vj) (param1.field_b[param1.field_e - 1]);
-          var18_ref = (vj) (param1.field_b[0]);
+          var17_ref = (BoundaryCurve) (param1.elements[param1.size - 1]);
+          var18_ref = (BoundaryCurve) (param1.elements[0]);
           var19 = 0;
           if (param2 < 14) {
-            field_o = (go[]) null;
+            field_o = (RotatedSpriteAsset[]) null;
           }
-          for (var20 = 0; var20 < param1.field_e; var20++) {
+          for (var20 = 0; var20 < param1.size; var20++) {
             var36 = var18_ref;
             var17_ref = var36;
-            var61 = (vj) (param1.field_b[(1 + var20) % param1.field_e]);
+            var61 = (BoundaryCurve) (param1.elements[(1 + var20) % param1.size]);
             if (var17_ref instanceof TrackBoundary) {
               var46_ref = (TrackBoundary) (var36);
-              var47 = var46_ref.g(-1).perpendicular((byte) 77);
+              var47 = var46_ref.getStartDirection(-1).perpendicular((byte) 77);
               var48 = new Vector2f(var47);
               var47.scale((float)param0.field_c, -1);
               var48.scale((float)param0.field_h, -1);
-              var22 = var14 / var46_ref.f(50);
-              var16 = var15 / var46_ref.f(50);
-              var23 = var46_ref.f(50);
+              var22 = var14 / var46_ref.length(50);
+              var16 = var15 / var46_ref.length(50);
+              var23 = var46_ref.length(50);
               while (var23 > var15) {
-                var49 = var46_ref.a(false, var16);
+                var49 = var46_ref.pointAt(false, var16);
                 var50 = new Point2i(var49);
                 var3Lifetime1 = var50;
                 var50.translate(var47, (byte) 89);
                 var51 = new Point2i(var49);
                 var4Lifetime1 = var51;
                 var51.subtractVector(var48, -13201);
-                var6.a(var50.x, (byte) 100);
-                var6.a(var50.y, (byte) 63);
-                var7.a(var51.x, (byte) 106);
-                var7.a(var51.y, (byte) 89);
+                var6.add(var50.x, (byte) 100);
+                var6.add(var50.y, (byte) 63);
+                var7.add(var51.x, (byte) 106);
+                var7.add(var51.y, (byte) 89);
                 if (var36.field_p) {
-                  param0.a(var6.a(-77), var19, (byte) -65, var7.a(-60));
+                  param0.drawStrip(var6.toArray(-77), var19, (byte) -65, var7.toArray(-60));
                 }
                 var19++;
                 var52 = o.a((byte) -112);
                 var6 = var52;
                 var53 = o.a((byte) -125);
                 var7 = var53;
-                var52.a(var50.x, (byte) 97);
-                var52.a(var50.y, (byte) 82);
-                var53.a(var51.x, (byte) 71);
+                var52.add(var50.x, (byte) 97);
+                var52.add(var50.y, (byte) 82);
+                var53.add(var51.x, (byte) 71);
                 var23 = var23 - var15;
                 var16 = var16 + var22;
-                var53.a(var51.y, (byte) 109);
+                var53.add(var51.y, (byte) 109);
                 var15 = var14;
               }
-              var56 = var46_ref.field_s;
-              var54 = wb.a(var46_ref, var61, 3251);
+              var56 = var46_ref.end;
+              var54 = Vector2i.a(var46_ref, var61, 3251);
               var55 = new Vector2f(var54);
               var54.scale((float)param0.field_c, -1);
               var55.scale((float)param0.field_h, -1);
@@ -293,35 +293,35 @@ final class jg extends IntrusiveNode {
               var58 = new Point2i(var56);
               var4Lifetime1 = var58;
               var58.subtractVector(var55, -13201);
-              var6.a(var57.x, (byte) 95);
-              var6.a(var57.y, (byte) 92);
-              var7.a(var58.x, (byte) 71);
+              var6.add(var57.x, (byte) 95);
+              var6.add(var57.y, (byte) 92);
+              var7.add(var58.x, (byte) 71);
               var15 = var15 - var23;
-              var7.a(var58.y, (byte) 106);
+              var7.add(var58.y, (byte) 106);
             } else {
-              var37_ref = (gj) (var36);
-              var22 = var37_ref.f(50);
+              var37_ref = (ArcTrackBoundary) (var36);
+              var22 = var37_ref.length(50);
               var23_int = (int)(var22 / 5.0f) + 1;
               var24 = var22 / (float)var23_int;
-              var25 = (var37_ref.field_w - var37_ref.field_r) / (float)var23_int;
-              var26 = var25 + var37_ref.field_r;
+              var25 = (var37_ref.endAngle - var37_ref.startAngle) / (float)var23_int;
+              var26 = var25 + var37_ref.startAngle;
               for (var27 = 1; var23_int >= var27; var27++) {
-                if (var37_ref.field_r > var37_ref.field_w) {
-                  var3Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(param0.field_h + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(param0.field_h + var37_ref.field_u) * Math.sin((double)var26)));
-                  var4Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(-param0.field_c + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(var37_ref.field_u - param0.field_c) * Math.sin((double)var26)));
+                if (var37_ref.startAngle > var37_ref.endAngle) {
+                  var3Lifetime1 = new Point2i((int)((double)var37_ref.center.x + (double)(param0.field_h + var37_ref.radius) * Math.cos((double)var26)), (int)((double)var37_ref.center.y - (double)(param0.field_h + var37_ref.radius) * Math.sin((double)var26)));
+                  var4Lifetime1 = new Point2i((int)((double)var37_ref.center.x + (double)(-param0.field_c + var37_ref.radius) * Math.cos((double)var26)), (int)((double)var37_ref.center.y - (double)(var37_ref.radius - param0.field_c) * Math.sin((double)var26)));
                 } else {
-                  var3Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(-param0.field_h + var37_ref.field_u) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(-param0.field_h + var37_ref.field_u) * Math.sin((double)var26)));
-                  var4Lifetime1 = new Point2i((int)((double)var37_ref.field_t.x + (double)(var37_ref.field_u + param0.field_c) * Math.cos((double)var26)), (int)((double)var37_ref.field_t.y - (double)(var37_ref.field_u + param0.field_c) * Math.sin((double)var26)));
+                  var3Lifetime1 = new Point2i((int)((double)var37_ref.center.x + (double)(-param0.field_h + var37_ref.radius) * Math.cos((double)var26)), (int)((double)var37_ref.center.y - (double)(-param0.field_h + var37_ref.radius) * Math.sin((double)var26)));
+                  var4Lifetime1 = new Point2i((int)((double)var37_ref.center.x + (double)(var37_ref.radius + param0.field_c) * Math.cos((double)var26)), (int)((double)var37_ref.center.y - (double)(var37_ref.radius + param0.field_c) * Math.sin((double)var26)));
                 }
                 var26 = var26 + var25;
-                var6.a(var3Lifetime1.x, (byte) 74);
-                var6.a(var3Lifetime1.y, (byte) 94);
-                var7.a(var4Lifetime1.x, (byte) 106);
+                var6.add(var3Lifetime1.x, (byte) 74);
+                var6.add(var3Lifetime1.y, (byte) 94);
+                var7.add(var4Lifetime1.x, (byte) 106);
                 var15 = var15 - var24;
-                var7.a(var4Lifetime1.y, (byte) 104);
+                var7.add(var4Lifetime1.y, (byte) 104);
                 if (var15 <= 0.0f) {
                   if (var37_ref.field_p) {
-                    param0.a(var6.a(-97), var19, (byte) -79, var7.a(-90));
+                    param0.drawStrip(var6.toArray(-97), var19, (byte) -79, var7.toArray(-90));
                   }
                   var38 = o.a((byte) 78);
                   var6 = var38;
@@ -329,14 +329,14 @@ final class jg extends IntrusiveNode {
                   var19++;
                   var39 = o.a((byte) 55);
                   var7 = var39;
-                  var38.a(var3Lifetime1.x, (byte) 71);
-                  var38.a(var3Lifetime1.y, (byte) 69);
-                  var39.a(var4Lifetime1.x, (byte) 101);
-                  var39.a(var4Lifetime1.y, (byte) 72);
+                  var38.add(var3Lifetime1.x, (byte) 71);
+                  var38.add(var3Lifetime1.y, (byte) 69);
+                  var39.add(var4Lifetime1.x, (byte) 101);
+                  var39.add(var4Lifetime1.y, (byte) 72);
                 }
               }
-              var43 = var37_ref.a(0);
-              var41 = wb.a(var37_ref, var61, 3251);
+              var43 = var37_ref.getEndPoint(0);
+              var41 = Vector2i.a(var37_ref, var61, 3251);
               var42 = new Vector2f(var41);
               var41.scale((float)param0.field_c, -1);
               var42.scale((float)param0.field_h, -1);
@@ -346,20 +346,20 @@ final class jg extends IntrusiveNode {
               var45 = new Point2i(var43);
               var4Lifetime1 = var45;
               var45.subtractVector(var42, -13201);
-              var6.a(var44.x, (byte) 103);
-              var6.a(var44.y, (byte) 75);
-              var7.a(var45.x, (byte) 93);
-              var7.a(var45.y, (byte) 65);
+              var6.add(var44.x, (byte) 103);
+              var6.add(var44.y, (byte) 75);
+              var7.add(var45.x, (byte) 93);
+              var7.add(var45.y, (byte) 65);
             }
             if (var36.field_p) {
-              param0.a(var6.a(-88), var19, (byte) -127, var7.a(-57));
+              param0.drawStrip(var6.toArray(-88), var19, (byte) -127, var7.toArray(-57));
             }
             var59 = o.a((byte) 68);
             var60 = o.a((byte) -109);
-            var59.a(var3Lifetime1.x, (byte) 68);
-            var59.a(var3Lifetime1.y, (byte) 75);
-            var60.a(var4Lifetime1.x, (byte) 82);
-            var60.a(var4Lifetime1.y, (byte) 115);
+            var59.add(var3Lifetime1.x, (byte) 68);
+            var59.add(var3Lifetime1.y, (byte) 75);
+            var60.add(var4Lifetime1.x, (byte) 82);
+            var60.add(var4Lifetime1.y, (byte) 115);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

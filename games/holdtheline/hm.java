@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hm {
-    static uf field_b;
+    static SpriteAsset field_b;
     static tk field_a;
 
     final static void a(byte param0, int param1) {
@@ -15,9 +15,9 @@ final class hm {
         SecondaryNodeDeque.field_f = SecondaryNodeDeque.field_f + 1;
         var2 = 116 % ((param0 + 22) / 36);
         if (param1 != AccountCreationForm.field_I) {
-          if (!va.field_k) {
+          if (!SpriteSheetAsset.field_k) {
             if (SecondaryNodeDeque.field_f >= HoldTheLine.field_A) {
-              stackIn_100_0 = (HoldTheLine.field_A + lc.field_h > SecondaryNodeDeque.field_f) ? 1 : 0;
+              stackIn_100_0 = (HoldTheLine.field_A + EmailValidationResult.field_h > SecondaryNodeDeque.field_f) ? 1 : 0;
             } else {
               stackIn_100_0 = 0;
             }
@@ -26,71 +26,71 @@ final class hm {
               SecondaryNodeDeque.field_f = 0;
               if (-1 == param1) {
                 if (var3 != 0) {
-                  va.field_k = true;
+                  SpriteSheetAsset.field_k = true;
                 }
               } else {
-                va.field_k = false;
+                SpriteSheetAsset.field_k = false;
               }
-              if (!va.field_k &&
+              if (!SpriteSheetAsset.field_k &&
                 HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
                 na.field_k) {
                 SecondaryNodeDeque.field_f = 0;
               }
               AccountCreationForm.field_I = param1;
-              if (va.field_k &&
-                SecondaryNodeDeque.field_f == fd.field_d) {
+              if (SpriteSheetAsset.field_k &&
+                SecondaryNodeDeque.field_f == ValidationState.field_d) {
                 SecondaryNodeDeque.field_f = 0;
-                va.field_k = false;
+                SpriteSheetAsset.field_k = false;
               }
               return;
             }
-            if (!va.field_k &&
+            if (!SpriteSheetAsset.field_k &&
               var3 == 0) {
               SecondaryNodeDeque.field_f = 0;
               if (-1 == param1) {
                 if (var3 != 0) {
-                  va.field_k = true;
+                  SpriteSheetAsset.field_k = true;
                 }
               } else {
-                va.field_k = false;
+                SpriteSheetAsset.field_k = false;
               }
             } else {
               SecondaryNodeDeque.field_f = HoldTheLine.field_A;
               if (-1 != param1) {
-                va.field_k = false;
+                SpriteSheetAsset.field_k = false;
               } else {
                 if (var3 == 0) {
-                  if (!va.field_k &&
+                  if (!SpriteSheetAsset.field_k &&
                     HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
                     na.field_k) {
                     SecondaryNodeDeque.field_f = 0;
                   }
                   AccountCreationForm.field_I = param1;
-                  if (va.field_k &&
-                    SecondaryNodeDeque.field_f == fd.field_d) {
+                  if (SpriteSheetAsset.field_k &&
+                    SecondaryNodeDeque.field_f == ValidationState.field_d) {
                     SecondaryNodeDeque.field_f = 0;
-                    va.field_k = false;
+                    SpriteSheetAsset.field_k = false;
                     return;
                   }
                   return;
                 }
-                va.field_k = true;
+                SpriteSheetAsset.field_k = true;
               }
             }
-            if (!va.field_k &&
+            if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
-            if (!va.field_k) {
+            if (!SpriteSheetAsset.field_k) {
               return;
             }
-            if (SecondaryNodeDeque.field_f != fd.field_d) {
+            if (SecondaryNodeDeque.field_f != ValidationState.field_d) {
               return;
             }
             SecondaryNodeDeque.field_f = 0;
-            va.field_k = false;
+            SpriteSheetAsset.field_k = false;
             return;
           }
           var3Lifetime1 = 0;
@@ -98,104 +98,104 @@ final class hm {
             SecondaryNodeDeque.field_f = 0;
             if (-1 == param1) {
               if (var3Lifetime1 != 0) {
-                va.field_k = true;
+                SpriteSheetAsset.field_k = true;
               }
             } else {
-              va.field_k = false;
+              SpriteSheetAsset.field_k = false;
             }
-            if (!va.field_k &&
+            if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
-            if (va.field_k &&
-              SecondaryNodeDeque.field_f == fd.field_d) {
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
               SecondaryNodeDeque.field_f = 0;
-              va.field_k = false;
+              SpriteSheetAsset.field_k = false;
             }
             return;
           }
-          if (!va.field_k &&
+          if (!SpriteSheetAsset.field_k &&
             var3Lifetime1 == 0) {
             SecondaryNodeDeque.field_f = 0;
             if (-1 == param1) {
             } else {
-              va.field_k = false;
+              SpriteSheetAsset.field_k = false;
             }
-            if (!va.field_k &&
+            if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
-            if (va.field_k &&
-              SecondaryNodeDeque.field_f == fd.field_d) {
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
               SecondaryNodeDeque.field_f = 0;
-              va.field_k = false;
+              SpriteSheetAsset.field_k = false;
             }
             return;
           }
           SecondaryNodeDeque.field_f = HoldTheLine.field_A;
           if (-1 != param1) {
-            va.field_k = false;
-            if (!va.field_k &&
+            SpriteSheetAsset.field_k = false;
+            if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
-            if (va.field_k &&
-              SecondaryNodeDeque.field_f == fd.field_d) {
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
               SecondaryNodeDeque.field_f = 0;
-              va.field_k = false;
+              SpriteSheetAsset.field_k = false;
             }
             return;
           }
           if (var3Lifetime1 != 0) {
-            va.field_k = true;
-            if (!va.field_k &&
+            SpriteSheetAsset.field_k = true;
+            if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
               na.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
-            if (va.field_k &&
-              SecondaryNodeDeque.field_f == fd.field_d) {
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
               SecondaryNodeDeque.field_f = 0;
-              va.field_k = false;
+              SpriteSheetAsset.field_k = false;
             }
             return;
           }
         }
-        if (!va.field_k &&
+        if (!SpriteSheetAsset.field_k &&
           HoldTheLine.field_A > SecondaryNodeDeque.field_f) {
           if (!na.field_k) {
             AccountCreationForm.field_I = param1;
-            if (va.field_k &&
-              SecondaryNodeDeque.field_f == fd.field_d) {
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
               SecondaryNodeDeque.field_f = 0;
-              va.field_k = false;
+              SpriteSheetAsset.field_k = false;
             }
             return;
           }
           SecondaryNodeDeque.field_f = 0;
         }
         AccountCreationForm.field_I = param1;
-        if (!va.field_k) {
+        if (!SpriteSheetAsset.field_k) {
           return;
         }
-        if (SecondaryNodeDeque.field_f != fd.field_d) {
+        if (SecondaryNodeDeque.field_f != ValidationState.field_d) {
           return;
         }
         SecondaryNodeDeque.field_f = 0;
-        va.field_k = false;
+        SpriteSheetAsset.field_k = false;
     }
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
-          field_b = (uf) null;
+          field_b = (SpriteAsset) null;
           field_b = null;
           return;
         }
@@ -212,7 +212,7 @@ final class hm {
         var4 = HoldTheLine.field_D;
         try {
           if (param0 < 60) {
-            field_b = (uf) null;
+            field_b = (SpriteAsset) null;
           }
           var1_int = qg.field_d[0];
           for (var2 = 1; qg.field_d.length > var2; var2++) {
@@ -228,9 +228,9 @@ final class hm {
         }
     }
 
-    final static kg a(int param0, String param1) {
+    final static RotatedSpriteSheetAsset a(int param0, String param1) {
         RuntimeException var2 = null;
-        kg stackIn_3_0 = null;
+        RotatedSpriteSheetAsset stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -239,7 +239,7 @@ final class hm {
           if (param0 != 5499) {
             hm.a((byte) -81, 114);
           }
-          stackIn_3_0 = new kg(param1);
+          stackIn_3_0 = new RotatedSpriteSheetAsset(param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,15 +273,15 @@ final class hm {
         var7 = HoldTheLine.field_D;
         try {
           var3 = -84 % ((-58 - param0) / 61);
-          var9 = rd.field_e;
-          var2 = var9.f((byte) -32);
+          var9 = RoadStripRenderer.field_e;
+          var2 = var9.readUnsignedByte((byte) -32);
           if (var2 != 0) {
             if (var2 == 1) {
-              var4 = var9.a(-67);
-              var5 = (fl) (pd.field_e.first((byte) 85));
+              var4 = var9.readInt(-67);
+              var5 = (fl) (UsernameLoginCredentials.field_e.first((byte) 85));
               while (var5 != null) {
                 if (var4 != var5.field_k) {
-                  var5 = (fl) (pd.field_e.next((byte) -26));
+                  var5 = (fl) (UsernameLoginCredentials.field_e.next((byte) -26));
                   continue;
                 }
                 break;
@@ -293,7 +293,7 @@ final class hm {
               r.a(-28036);
               return;
             }
-            MusicPatchPcmStream.a((Throwable) null, (byte) 65, "A1: " + em.b(false));
+            MusicPatchPcmStream.a((Throwable) null, (byte) 65, "A1: " + AgeValidator.b(false));
             r.a(-28036);
           } else {
             var4_ref_ie = (ie) (oc.field_d.first((byte) 94));
@@ -301,7 +301,7 @@ final class hm {
               r.a(-28036);
               return;
             }
-            var5_int = var9.f((byte) -85);
+            var5_int = var9.readUnsignedByte((byte) -85);
             if (0 == var5_int) {
               var6 = null;
             } else {
@@ -309,10 +309,10 @@ final class hm {
               var10 = var11;
               var8 = var10;
               var6 = var8;
-              var9.a(var5_int, 0, (byte) 118, var11);
+              var9.readBytes(var5_int, 0, (byte) 118, var11);
             }
             var9.position = var9.position + 4;
-            if (!var9.e((byte) 78)) {
+            if (!var9.checkCrc32((byte) 78)) {
               r.a(-28036);
               return;
             }

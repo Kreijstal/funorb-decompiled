@@ -9,7 +9,7 @@ final class dm {
     static int[] field_e;
 
     final static void b(byte param0) {
-        we var1 = (we) (ug.field_g.removeLast((byte) 74));
+        we var1 = (we) (MarkerSliderRenderer.field_g.removeLast((byte) 74));
         if (param0 != -10) {
           return;
         }
@@ -44,18 +44,18 @@ final class dm {
         try {
           TriangleRasterState.c();
           il.field_c = 11;
-          qf.field_i = new int[260];
+          MatchingTextValidator.field_i = new int[260];
           if (param0 != 255) {
             field_a = -31;
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            qf.field_i[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+            MatchingTextValidator.field_i[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (qf.field_i.length > var5) {
-            qf.field_i[var5] = 255;
+          while (MatchingTextValidator.field_i.length > var5) {
+            MatchingTextValidator.field_i[var5] = 255;
             var5++;
           }
           return;

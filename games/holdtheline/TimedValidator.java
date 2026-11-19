@@ -5,50 +5,50 @@ abstract class TimedValidator implements Validator {
     private long field_a;
     static IntrusiveDeque field_b;
 
-    abstract String d(int param0);
+    abstract String evaluateValidationMessage(int param0);
 
     final static String d(byte param0) {
         if (bb.field_a == ImageProducerRasterBuffer.field_n) {
           return ij.field_k;
         }
-        if (!fj.field_o.a(250)) {
-          return fj.field_o.b((byte) 66);
+        if (!fj.field_o.isComplete(250)) {
+          return fj.field_o.getText((byte) 66);
         }
         if (ak.field_b != ImageProducerRasterBuffer.field_n) {
           int var1 = -82 / ((-21 - param0) / 40);
           return ec.field_v;
         }
-        return fj.field_o.b((byte) 66);
+        return fj.field_o.getText((byte) 66);
     }
 
-    public final String b(byte param0) {
+    public final String getValidationMessage(byte param0) {
         if (param0 != -59) {
           return (String) null;
         }
-        if (this.a((byte) -41)) {
+        if (this.isEmpty((byte) -41)) {
           return null;
         }
         if (bb.b(-1) >= (350L + this.field_a)) {
-          return this.d(97);
+          return this.evaluateValidationMessage(97);
         }
         return null;
     }
 
-    public final fd b(int param0) {
-        if (this.a((byte) -114)) {
+    public final ValidationState getValidationState(int param0) {
+        if (this.isEmpty((byte) -114)) {
           return SpriteState.field_q;
         }
         if (bb.b(-1) < (this.field_a + 350L)) {
           return hh.field_d;
         }
         if (param0 == -7447) {
-          return this.c((byte) -92);
+          return this.evaluateValidation((byte) -92);
         }
         TimedValidator.d((byte) -36);
-        return this.c((byte) -92);
+        return this.evaluateValidation((byte) -92);
     }
 
-    public final void a(int param0) {
+    public final void invalidate(int param0) {
         if (param0 != 21871) {
           field_b = (IntrusiveDeque) null;
           this.field_a = bb.b(-1);
@@ -64,7 +64,7 @@ abstract class TimedValidator implements Validator {
         }
     }
 
-    abstract fd c(byte param0);
+    abstract ValidationState evaluateValidation(byte param0);
 
     static {
         field_b = null;

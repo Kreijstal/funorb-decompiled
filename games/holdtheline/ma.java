@@ -3,14 +3,14 @@
  */
 final class ma extends IntrusiveNode {
     int[] field_j;
-    static uf field_l;
+    static SpriteAsset field_l;
     boolean field_i;
     static int field_k;
     int field_m;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 > -48) {
-          field_l = (uf) null;
+          field_l = (SpriteAsset) null;
         }
         field_l = null;
     }
@@ -110,34 +110,34 @@ final class ma extends IntrusiveNode {
         eb.field_o = null;
         ClientException.field_c = 0;
         qd.a(20830, 3 + StrongCacheEntry.field_w);
-        ek.field_x = 3;
+        CheckboxRenderer.field_x = 3;
         pe.field_g = new int[4];
         if (7 != DelegatingCanvas.field_d) {
           if (1 != DelegatingCanvas.field_d &&
-            !wb.field_c) {
-            em.field_o = false;
+            !Vector2i.field_c) {
+            AgeValidator.field_o = false;
           }
           bn.a(1, param0 ^ 21498);
           nm.field_b = ArchiveIndex.b((byte) -49);
-          if (pd.a(nm.field_b, true)) {
-            MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, DelegatingCanvas.field_d, wb.field_c, em.field_o, t.field_l, IntrusiveDeque.field_b);
+          if (UsernameLoginCredentials.a(nm.field_b, true)) {
+            MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, DelegatingCanvas.field_d, Vector2i.field_c, AgeValidator.field_o, t.field_l, IntrusiveDeque.field_b);
           } else {
             DiskCacheStore.field_i = IntrusiveDeque.field_b;
             ArchiveRequest.field_r = DelegatingCanvas.field_d;
             MusicPatchPcmStream.field_r = null;
-            on.field_r = t.field_l;
-            qn.field_k = em.field_o;
-            fl.field_j = wb.field_c;
+            QuickChatPhraseDefinition.field_r = t.field_l;
+            qn.field_k = AgeValidator.field_o;
+            fl.field_j = Vector2i.field_c;
           }
           EntitySound.field_j = true;
           wm.a(param1, false, -1);
         } else {
-          wb.field_c = false;
+          Vector2i.field_c = false;
           EntitySound.field_l = 4;
           t.field_j = new int[4];
-          em.field_o = false;
+          AgeValidator.field_o = false;
           IntrusiveDeque.field_b = -1;
-          dk.field_g = 3;
+          TextWidgetStyle.field_g = 3;
           eg.field_a = LoginForm.field_P;
           EntitySound.field_m = new int[pc.field_l[StrongCacheEntry.field_w]];
           ni.field_b = 859978912;
@@ -145,7 +145,7 @@ final class ma extends IntrusiveNode {
           nj.field_d = 1913842707 + ((1 & StrongCacheEntry.field_w) << 1) + ((2 & StrongCacheEntry.field_w) >> 1);
           tn.field_c = -1134004831;
           cm.field_a = -1329759026;
-          t.field_l = go.field_g[ArchiveIndex.b((byte) -49).field_p][0];
+          t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
           ij.a(param1, -79);
           ((ti) (l.field_a[10])).field_t = 480.0f;
         }

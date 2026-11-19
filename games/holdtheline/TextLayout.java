@@ -6,7 +6,7 @@ import java.io.*;
 abstract class TextLayout {
     static String field_c;
     static int field_a;
-    lf[] field_b;
+    TextLineLayout[] field_b;
     static int[] field_d;
 
     final static vk a(byte[] param0, byte param1) throws IOException {
@@ -102,7 +102,7 @@ abstract class TextLayout {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        ei var18 = null;
+        GrowableObjectList var18 = null;
         Point2i var19 = null;
         Point2i var20 = null;
         Point2i var22 = null;
@@ -152,14 +152,14 @@ abstract class TextLayout {
         StraightRoadSegment var60 = null;
         Object var61 = null;
         CurvedRoadSegment var61_ref = null;
-        ei var62 = null;
-        ei var63 = null;
-        ei var64 = null;
-        ei var65 = null;
-        ei var66 = null;
-        ei var67 = null;
-        ei var68 = null;
-        ei var69 = null;
+        GrowableObjectList var62 = null;
+        GrowableObjectList var63 = null;
+        GrowableObjectList var64 = null;
+        GrowableObjectList var65 = null;
+        GrowableObjectList var66 = null;
+        GrowableObjectList var67 = null;
+        GrowableObjectList var68 = null;
+        GrowableObjectList var69 = null;
         char[] var72 = null;
         byte[] var75 = null;
         byte[] var76 = null;
@@ -220,22 +220,22 @@ abstract class TextLayout {
           ti.c(false);
           var57 = new vk(param0);
           var3 = new PacketBuffer(param0);
-          var75 = new byte[ho.field_m.length];
-          var3.a(ho.field_m.length, 0, (byte) 113, var75);
-          if (!nd.a(ho.field_m, 0, var75)) {
+          var75 = new byte[EmailAddressValidator.field_m.length];
+          var3.readBytes(EmailAddressValidator.field_m.length, 0, (byte) 113, var75);
+          if (!NameAvailabilityResult.equalByteArrays(EmailAddressValidator.field_m, 0, var75)) {
             throw new IOException("Invalid file format!");
           }
           var76 = new byte[rh.field_a.length];
-          var3.a(rh.field_a.length, 0, (byte) 75, var76);
-          if (nd.a(WeightedLruCache.field_b, 0, var76)) {
+          var3.readBytes(rh.field_a.length, 0, (byte) 75, var76);
+          if (NameAvailabilityResult.equalByteArrays(WeightedLruCache.field_b, 0, var76)) {
             var6 = 0;
           } else {
-            if (!nd.a(NodeHashTableIterator.field_e, 0, var76)) {
+            if (!NameAvailabilityResult.equalByteArrays(NodeHashTableIterator.field_e, 0, var76)) {
               throw new IOException("Invalid file version!");
             }
             var6 = 1;
           }
-          var57.field_v = (byte)var3.f((byte) -83);
+          var57.field_v = (byte)var3.readUnsignedByte((byte) -83);
           var57.field_o = var57.field_v & 7;
           stackIn_15_0 = var57;
           if (var57.field_o == 0) {
@@ -252,33 +252,33 @@ abstract class TextLayout {
             }
           }
           stackIn_15_0.field_p = stackIn_16_1;
-          var7 = var3.f((byte) -44);
+          var7 = var3.readUnsignedByte((byte) -44);
           if (param1 < 107) {
             field_d = (int[]) null;
           }
-          var8 = var3.f((byte) -109);
+          var8 = var3.readUnsignedByte((byte) -109);
           var9 = 0;
           var10 = 0;
           if (var6 != 0) {
-            var9 = var3.f((byte) -19);
-            var10 = var3.f((byte) -33);
+            var9 = var3.readUnsignedByte((byte) -19);
+            var10 = var3.readUnsignedByte((byte) -33);
           }
-          var11 = var3.f((byte) -26);
+          var11 = var3.readUnsignedByte((byte) -26);
           var72 = new char[var7];
           var58 = var72;
           var12 = var58;
           for (var13 = 0; var7 > var13; var13++) {
-            var12[var13] = (char)kc.a(var3.f((byte) -102) << 8, var3.f((byte) -95));
+            var12[var13] = (char)kc.a(var3.readUnsignedByte((byte) -102) << 8, var3.readUnsignedByte((byte) -95));
           }
           var57.field_b = new String(var72);
-          var18 = new ei();
+          var18 = new GrowableObjectList();
           for (var13Lifetime1 = 0; var13Lifetime1 < var8; var13Lifetime1++) {
-            var19 = new Point2i(var3.k(-48), var3.k(-128));
-            var20 = new Point2i(var3.k(-114), var3.k(71));
-            var14 = var3.f(0);
-            var15 = var3.f((byte) -19);
-            var16 = var3.f(0);
-            var17 = var3.f(0);
+            var19 = new Point2i(var3.readUnsignedShort(-48), var3.readUnsignedShort(-128));
+            var20 = new Point2i(var3.readUnsignedShort(-114), var3.readUnsignedShort(71));
+            var14 = var3.readByte(0);
+            var15 = var3.readUnsignedByte((byte) -19);
+            var16 = var3.readByte(0);
+            var17 = var3.readByte(0);
             stackIn_28_0 = null;
             stackIn_28_1 = null;
             stackIn_28_2 = var19;
@@ -349,17 +349,17 @@ abstract class TextLayout {
               stackIn_44_20 = true;
             }
             var59 = new StraightRoadSegment(stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, stackIn_28_9, stackIn_28_10, stackIn_28_11, stackIn_28_12, stackIn_28_13, stackIn_28_14, stackIn_29_15, stackIn_32_16, stackIn_35_17, stackIn_38_18, stackIn_41_19, stackIn_44_20, 0.0f, 0.0f, 3.1415927410125732f);
-            var18.a(var59, (byte) 6);
-            var52 = new Point2i(var3.k(101), var3.k(-49));
+            var18.add(var59, (byte) 6);
+            var52 = new Point2i(var3.readUnsignedShort(101), var3.readUnsignedShort(-49));
             var22 = var52;
-            var23_int = var3.k(-109);
-            var53 = new int[]{-var3.f((byte) -62), -var3.f((byte) -125), var3.f((byte) -45), var3.f((byte) -120)};
+            var23_int = var3.readUnsignedShort(-109);
+            var53 = new int[]{-var3.readUnsignedByte((byte) -62), -var3.readUnsignedByte((byte) -125), var3.readUnsignedByte((byte) -45), var3.readUnsignedByte((byte) -120)};
             var24 = var53;
-            var15Lifetime2 = var3.f((byte) -127);
-            var25 = (float)var3.h(-14232) / 256.0f;
-            var26_float = (float)var3.h(-14232) / 256.0f;
-            var14Lifetime3 = var3.f(0);
-            var27_ref_qm = new Point2i(var3.k(-127), var3.k(97));
+            var15Lifetime2 = var3.readUnsignedByte((byte) -127);
+            var25 = (float)var3.readShort(-14232) / 256.0f;
+            var26_float = (float)var3.readShort(-14232) / 256.0f;
+            var14Lifetime3 = var3.readByte(0);
+            var27_ref_qm = new Point2i(var3.readUnsignedShort(-127), var3.readUnsignedShort(97));
             stackIn_46_0 = null;
             stackIn_46_1 = null;
             stackIn_46_2 = var52;
@@ -429,14 +429,14 @@ abstract class TextLayout {
               stackIn_62_19 = true;
             }
             var28_ref_hn = new CurvedRoadSegment(stackIn_46_2, stackIn_46_3, stackIn_46_4, stackIn_46_5, stackIn_46_6, stackIn_46_7, stackIn_46_8, stackIn_46_9, stackIn_46_10, (Point2i) (stackIn_46_11), (Point2i) (stackIn_46_12), stackIn_46_13, stackIn_47_14, stackIn_50_15, stackIn_53_16, stackIn_56_17, stackIn_59_18, stackIn_62_19);
-            var18.a(var28_ref_hn, (byte) 6);
+            var18.add(var28_ref_hn, (byte) 6);
           }
-          var19Lifetime1 = new Point2i(var3.h(-14232), var3.h(-14232));
-          var20Lifetime1 = new Point2i(var3.h(-14232), var3.h(-14232));
-          var14Lifetime1 = var3.f(0);
-          var15Lifetime1 = var3.f((byte) -101);
-          var16Lifetime1 = var3.f(0);
-          var17Lifetime1 = var3.f(0);
+          var19Lifetime1 = new Point2i(var3.readShort(-14232), var3.readShort(-14232));
+          var20Lifetime1 = new Point2i(var3.readShort(-14232), var3.readShort(-14232));
+          var14Lifetime1 = var3.readByte(0);
+          var15Lifetime1 = var3.readUnsignedByte((byte) -101);
+          var16Lifetime1 = var3.readByte(0);
+          var17Lifetime1 = var3.readByte(0);
           stackIn_65_0 = null;
           stackIn_65_1 = null;
           stackIn_65_2 = var19Lifetime1;
@@ -507,11 +507,11 @@ abstract class TextLayout {
             stackIn_81_20 = true;
           }
           var60 = new StraightRoadSegment(stackIn_65_2, stackIn_65_3, stackIn_65_4, stackIn_65_5, stackIn_65_6, stackIn_65_7, stackIn_65_8, stackIn_65_9, stackIn_65_10, stackIn_65_11, stackIn_65_12, stackIn_65_13, stackIn_65_14, stackIn_66_15, stackIn_69_16, stackIn_72_17, stackIn_75_18, stackIn_78_19, stackIn_81_20, 0.0f, 0.0f, 3.1415927410125732f);
-          var77 = (StraightRoadSegment) (var18.field_b[0]);
-          var23_ref = (CurvedRoadSegment) (var18.field_b[1]);
-          var61_ref = (CurvedRoadSegment) (var18.field_b[var18.field_e - 1]);
-          var18.a(var60, (byte) 6);
-          var25Lifetime1 = var60.f(50) / (var60.f(50) + var77.f(50));
+          var77 = (StraightRoadSegment) (var18.elements[0]);
+          var23_ref = (CurvedRoadSegment) (var18.elements[1]);
+          var61_ref = (CurvedRoadSegment) (var18.elements[var18.size - 1]);
+          var18.add(var60, (byte) 6);
+          var25Lifetime1 = var60.length(50) / (var60.length(50) + var77.length(50));
           var26 = var61_ref.field_N;
           var27 = var23_ref.field_N;
           var28 = var61_ref.field_P;
@@ -536,11 +536,11 @@ abstract class TextLayout {
           var60.field_K = var61_ref.field_P;
           var36 = null;
           while (true) {
-            var37_ref_dd = (StraightRoadSegment) (var18.field_b[var13Lifetime2]);
+            var37_ref_dd = (StraightRoadSegment) (var18.elements[var13Lifetime2]);
             var37_ref_dd.b(58, var35);
             if (var37_ref_dd.field_P.x == var37_ref_dd.field_R.x &&
               ~var37_ref_dd.field_R.y == ~var37_ref_dd.field_P.y) {
-              var18.a(true, var13Lifetime2);
+              var18.removeAt(true, var13Lifetime2);
             } else {
               var13Lifetime2++;
               var37_ref_dd.field_O = var26;
@@ -555,8 +555,8 @@ abstract class TextLayout {
             if (var36 != null) {
               ((CurvedRoadSegment) (var36)).field_Q = var37_ref_dd.p(-1);
             }
-            if (var13Lifetime2 < var18.field_e) {
-              var38_ref_hn = (CurvedRoadSegment) (var18.field_b[var13Lifetime2]);
+            if (var13Lifetime2 < var18.size) {
+              var38_ref_hn = (CurvedRoadSegment) (var18.elements[var13Lifetime2]);
               var38_ref_hn.field_F = var37_ref_dd.b((byte) -77);
               var13Lifetime2++;
               if (!(var38_ref_hn.field_E < var38_ref_hn.field_I)) {
@@ -565,10 +565,10 @@ abstract class TextLayout {
                 stackIn_95_0 = var38_ref_hn.field_I;
               }
               var35 = stackIn_95_0;
-              if (-1 + var18.field_e <= var13Lifetime2) {
+              if (-1 + var18.size <= var13Lifetime2) {
                 stackIn_98_0 = var23_ref;
               } else {
-                stackIn_98_0 = var18.field_b[var13Lifetime2 + 1];
+                stackIn_98_0 = var18.elements[var13Lifetime2 + 1];
               }
               var39_ref_hn = (CurvedRoadSegment) (stackIn_98_0);
               var26 = var27;
@@ -584,26 +584,26 @@ abstract class TextLayout {
             }
             break;
           }
-          var57.field_u = new RoadSegment[var18.field_e];
-          for (var13Lifetime3 = 0; var13Lifetime3 < var18.field_e; var13Lifetime3++) {
-            var57.field_u[var13Lifetime3] = (RoadSegment) (var18.field_b[var13Lifetime3]);
+          var57.field_u = new RoadSegment[var18.size];
+          for (var13Lifetime3 = 0; var13Lifetime3 < var18.size; var13Lifetime3++) {
+            var57.field_u[var13Lifetime3] = (RoadSegment) (var18.elements[var13Lifetime3]);
           }
           var37 = var57.field_u[-1 + var57.field_u.length].field_k;
           var38 = var57.field_u[0].field_k;
           for (var13Lifetime4 = 0; var13Lifetime4 < var57.field_u.length; var13Lifetime4++) {
             var39 = var57.field_u[(1 + var13Lifetime4) % var57.field_u.length].field_k;
             if (0 == var38) {
-              var57.field_u[var13Lifetime4].field_o = (float)(var39 - var37) / var57.field_u[var13Lifetime4].f(50);
+              var57.field_u[var13Lifetime4].field_o = (float)(var39 - var37) / var57.field_u[var13Lifetime4].length(50);
             }
             var37 = var38;
             var38 = var39;
           }
-          var57.field_e = new ei();
-          var64 = new ei();
-          var62 = new ei();
-          var65 = new ei();
-          var63 = new ei();
-          lf.a(var62, var63, var64, var57.field_e, var57.field_u, var65, -68);
+          var57.field_e = new GrowableObjectList();
+          var64 = new GrowableObjectList();
+          var62 = new GrowableObjectList();
+          var65 = new GrowableObjectList();
+          var63 = new GrowableObjectList();
+          TextLineLayout.a(var62, var63, var64, var57.field_e, var57.field_u, var65, -68);
           var57.field_e = NanoTickClock.a(var57.field_e, (byte) -127);
           var67 = NanoTickClock.a(var64, (byte) -127);
           var69 = NanoTickClock.a(var65, (byte) -127);
@@ -613,13 +613,13 @@ abstract class TextLayout {
           var57.field_t = ao.a(var68, (byte) 21, false, var69);
           if (var6 != 0) {
             var44_int = var10 * 8 + var9 * 3;
-            var3.a(var44_int, 0, (byte) 84, new byte[var44_int]);
+            var3.readBytes(var44_int, 0, (byte) 84, new byte[var44_int]);
           }
           for (var13Lifetime5 = 0; var13Lifetime5 < var11; var13Lifetime5++) {
-            var44 = new Point2i(var3.h(-14232), var3.h(-14232));
-            var45 = var3.f((byte) -27);
-            var46 = (float)(3.141592653589793 * (double)var3.f((byte) -55) / 128.0);
-            var14Lifetime2 = var3.f(0);
+            var44 = new Point2i(var3.readShort(-14232), var3.readShort(-14232));
+            var45 = var3.readUnsignedByte((byte) -27);
+            var46 = (float)(3.141592653589793 * (double)var3.readUnsignedByte((byte) -55) / 128.0);
+            var14Lifetime2 = var3.readByte(0);
             if ((var45 < 5 ||
               var45 > 8) && (var45 < 62 ||
               var45 > 69)) {
@@ -665,7 +665,7 @@ abstract class TextLayout {
     }
 
     final int a(int param0, int param1, int param2) {
-        lf var6 = null;
+        TextLineLayout var6 = null;
         int var7 = 0;
         int var8 = HoldTheLine.field_D;
         if (null == this.field_b ||
@@ -702,10 +702,10 @@ abstract class TextLayout {
 
     final int a(int param0, int param1) {
         int var4 = 0;
-        lf var5 = null;
+        TextLineLayout var5 = null;
         int var6 = HoldTheLine.field_D;
-        lf[] var7 = this.field_b;
-        lf[] var3 = var7;
+        TextLineLayout[] var7 = this.field_b;
+        TextLineLayout[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
           if (var5.field_c.length > param1) {
@@ -721,7 +721,7 @@ abstract class TextLayout {
 
     final int b(int param0, int param1) {
         int var3 = 0;
-        lf var4 = null;
+        TextLineLayout var4 = null;
         int var5 = HoldTheLine.field_D;
         if (param1 != -22539) {
           return 80;
@@ -774,7 +774,7 @@ abstract class TextLayout {
           var6 = 0;
           var7 = param2.length();
           if (param3 >= -37) {
-            this.field_b = (lf[]) null;
+            this.field_b = (TextLineLayout[]) null;
           }
           for (var8 = 0; var8 < var7; var8++) {
             var9 = param2.charAt(var8);
@@ -836,8 +836,8 @@ abstract class TextLayout {
         int var5 = 0;
         int var2;
         int var3;
-        lf[] var4;
-        lf var6;
+        TextLineLayout[] var4;
+        TextLineLayout var6;
         int var8;
         int var7;
         var8 = HoldTheLine.field_D;

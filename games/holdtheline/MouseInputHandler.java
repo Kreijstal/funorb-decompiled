@@ -14,7 +14,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ic.field_d != null) {
+          if (ArchiveLoadStage.field_d != null) {
             ResizableDialog.field_R = 0;
           }
           return;
@@ -34,11 +34,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (null != ic.field_d) {
-            uf.field_a = 0;
+          if (null != ArchiveLoadStage.field_d) {
+            SpriteAsset.field_a = 0;
             Vector2f.field_f = param0.getX();
-            g.field_m = param0.getY();
-            sd.field_a = true;
+            LinearPointPath.field_m = param0.getY();
+            LoginCredentials.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kd.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -116,11 +116,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ic.field_d) {
-            uf.field_a = 0;
+          if (null != ArchiveLoadStage.field_d) {
+            SpriteAsset.field_a = 0;
             Vector2f.field_f = param0.getX();
-            g.field_m = param0.getY();
-            sd.field_a = true;
+            LinearPointPath.field_m = param0.getY();
+            LoginCredentials.field_a = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -139,11 +139,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (null != ic.field_d) {
-            uf.field_a = 0;
+          if (null != ArchiveLoadStage.field_d) {
+            SpriteAsset.field_a = 0;
             Vector2f.field_f = param0.getX();
-            g.field_m = param0.getY();
-            sd.field_a = true;
+            LinearPointPath.field_m = param0.getY();
+            LoginCredentials.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kd.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -199,8 +199,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ic.field_d) {
-            uf.field_a = 0;
+          if (null != ArchiveLoadStage.field_d) {
+            SpriteAsset.field_a = 0;
             IterableNodeHashTable.field_e = param0.getX();
             nl.field_f = param0.getY();
             bb.b(-1);
@@ -218,7 +218,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             if ((var2_int & 8) != 0) {
             }
-            sd.field_a = true;
+            LoginCredentials.field_a = true;
           }
           if (param0.isPopupTrigger()) {
             param0.consume();
@@ -257,10 +257,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ic.field_d) {
-            uf.field_a = 0;
+          if (null != ArchiveLoadStage.field_d) {
+            SpriteAsset.field_a = 0;
             ResizableDialog.field_R = 0;
-            sd.field_a = true;
+            LoginCredentials.field_a = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
             }
@@ -294,11 +294,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ic.field_d != null) {
-            uf.field_a = 0;
+          if (ArchiveLoadStage.field_d != null) {
+            SpriteAsset.field_a = 0;
             Vector2f.field_f = -1;
-            g.field_m = -1;
-            sd.field_a = true;
+            LinearPointPath.field_m = -1;
+            LoginCredentials.field_a = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

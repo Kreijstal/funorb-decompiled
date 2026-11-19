@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
-    static uf field_h;
+    static SpriteAsset field_h;
     private java.net.ProxySelector field_k;
     static String field_l;
     static int field_i;
@@ -111,14 +111,14 @@ final class ProxySocketConnector extends SocketConnector {
         nm.field_b = tk.field_c[4][0];
         LoginForm.field_P = 0;
         eb.field_o = null;
-        if (pd.a(nm.field_b, true)) {
+        if (UsernameLoginCredentials.a(nm.field_b, true)) {
           MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 3, false, false, -1, -1);
           EntitySound.field_j = true;
           wm.a(false, false, -1);
           return;
         }
         qn.field_k = false;
-        on.field_r = -1;
+        QuickChatPhraseDefinition.field_r = -1;
         MusicPatchPcmStream.field_r = null;
         ArchiveRequest.field_r = 3;
         fl.field_j = false;

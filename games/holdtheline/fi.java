@@ -13,13 +13,13 @@ final class fi extends hi {
 
     final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
-          lf.field_l = param0 * NodeHashTableIterator.a(855) / 1000;
-          mf.a(param1, 0);
+          TextLineLayout.field_l = param0 * NodeHashTableIterator.a(855) / 1000;
+          LoginMethodPreference.preloadLogoAudio(param1, 0);
           jk.a(param1, -64);
-          aa.a(-18916, param1);
+          DelayedServerPacket.a(-18916, param1);
           dm.a(255);
           DraggableWidget.j(param2 ^ 0);
-          StrongCacheEntry.field_q = param2 - lf.field_l;
+          StrongCacheEntry.field_q = param2 - TextLineLayout.field_l;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

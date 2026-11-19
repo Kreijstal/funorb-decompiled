@@ -166,17 +166,17 @@ final class DiskCacheStore {
           var1_int = 0;
           var2 = 0;
           while (qh.c(-105)) {
-            kl.field_q.b(-1);
-            if (kl.field_q.a(-1)) {
+            TextFieldRenderer.field_q.b(-1);
+            if (TextFieldRenderer.field_q.a(-1)) {
               var1_int = 1;
             }
-            if (aa.field_n != 13) {
+            if (DelayedServerPacket.field_n != 13) {
               continue;
             }
             var2 = 1;
           }
-          kl.field_q.a(cm.a((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), cm.a((byte) 110, rf.field_X, NodeHashTableIterator.field_g), 4);
-          if (kl.field_q.a(-1)) {
+          TextFieldRenderer.field_q.a(cm.a((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), cm.a((byte) 110, rf.field_X, NodeHashTableIterator.field_g), 4);
+          if (TextFieldRenderer.field_q.a(-1)) {
             var1_int = 1;
           }
           if (param0 != 18) {
@@ -184,8 +184,8 @@ final class DiskCacheStore {
           }
           var3 = 0;
           if (var1_int != 0 &&
-            0 <= kl.field_q.field_g) {
-            var3 = ClientException.field_e[kl.field_q.field_g];
+            0 <= TextFieldRenderer.field_q.field_g) {
+            var3 = ClientException.field_e[TextFieldRenderer.field_q.field_g];
             if (2 == var3 ||
               5 == var3) {
               IntrusiveDeque.b(false);
@@ -198,7 +198,7 @@ final class DiskCacheStore {
           }
           if (0 == var3 &&
             WhirlpoolHasher.field_h == 2) {
-            var4 = bb.b(param0 ^ -19) - cg.field_g;
+            var4 = bb.b(param0 ^ -19) - TutorialAction.field_g;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               pe.a(5, true, (byte) -121);

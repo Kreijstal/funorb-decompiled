@@ -15,7 +15,7 @@ final class MusicPatch extends IntrusiveNode {
     static MovingEntity field_i;
     static int field_m;
     byte[] field_v;
-    static go field_u;
+    static RotatedSpriteAsset field_u;
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
@@ -58,7 +58,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int[] param1, byte[] param2, ld param3) {
+    final boolean a(int param0, int[] param1, byte[] param2, SoundCache param3) {
         int stackIn_23_0 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -92,11 +92,11 @@ final class MusicPatch extends IntrusiveNode {
                   var6 = var10;
                   var10--;
                   if (0 != (var10 & 1)) {
-                    var7 = param3.a(param1, var10 >> 2, (byte) 115);
+                    var7 = param3.getMusicSample(param1, var10 >> 2, (byte) 115);
                   }
                   if (0 == (var10 & 1) ||
                     var11 != 0) {
-                    var7 = param3.a(var10 >> 2, (byte) 127, param1);
+                    var7 = param3.getSoundEffect(var10 >> 2, (byte) 127, param1);
                   }
                   if (null == var7) {
                     var5_int = 0;
@@ -216,7 +216,7 @@ final class MusicPatch extends IntrusiveNode {
 
     final static void a(int param0) {
         try {
-          le.field_s = new float[8];
+          ShadedRoadStripRenderer.field_s = new float[8];
           if (param0 != 9) {
             field_t = (String[]) null;
           }
@@ -284,7 +284,7 @@ final class MusicPatch extends IntrusiveNode {
           var7_int = 2147483647;
           var8 = -2147483648;
           if (param3 < 77) {
-            field_u = (go) null;
+            field_u = (RotatedSpriteAsset) null;
           }
           var21 = param0[3] >> 2;
           var22 = param0[4] >> 2;
@@ -346,9 +346,9 @@ final class MusicPatch extends IntrusiveNode {
                   ArchiveProvider.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param6) {
-                  uf.field_c[var23Lifetime2] = var27Lifetime1 >> il.field_c;
-                  tl.field_z[var23Lifetime2] = var28Lifetime1 >> il.field_c;
-                  sd.field_b[var23Lifetime2] = var29Lifetime1;
+                  SpriteAsset.field_c[var23Lifetime2] = var27Lifetime1 >> il.field_c;
+                  PasswordFieldRenderer.field_z[var23Lifetime2] = var28Lifetime1 >> il.field_c;
+                  LoginCredentials.field_b[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -370,20 +370,20 @@ final class MusicPatch extends IntrusiveNode {
                   var25Lifetime1Lifetime1 = param4.field_g[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_b[var23Lifetime2];
                   ae.field_d[var23Lifetime2] = var9 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1 >> 16);
-                  wb.field_e[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var13 * var24Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1) >> 16) + var10;
+                  Vector2i.field_e[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var13 * var24Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1) >> 16) + var10;
                   ba.field_a[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var25Lifetime1Lifetime1 * var17 + var14 * var24Lifetime1Lifetime1) >> 16);
                   var24Lifetime1Lifetime1 = param4.field_M[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_R[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_v[var23Lifetime2];
                   ValidatedTextField.field_Y[var23Lifetime2] = var9 + (var15 * var25Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 >> 16);
-                  oe.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16 + var19 * var26Lifetime1Lifetime1 >> 16) + var10;
+                  QuadraticPointPath.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var13 + var25Lifetime1Lifetime1 * var16 + var19 * var26Lifetime1Lifetime1 >> 16) + var10;
                   ResizableDialog.field_U[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16);
                   var24Lifetime1Lifetime1 = param4.field_D[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_C[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_h[var23Lifetime2];
                   StandardContentTransitionDialog.field_ob[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12) >> 16) + var9;
                   pe.field_a[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13 >> 16) + var10;
-                  cg.field_j[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 + (var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
+                  TutorialAction.field_j[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 + (var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;
@@ -569,7 +569,7 @@ final class MusicPatch extends IntrusiveNode {
               var2.position = var2.position + var3;
               break;
             }
-            var4[var5] = var2.f(0);
+            var4[var5] = var2.readByte(0);
             var5++;
           } while (var36 == 0);
           var6 = 0;
@@ -590,7 +590,7 @@ final class MusicPatch extends IntrusiveNode {
               var2.position = var2.position + var6;
               break;
             }
-            var7[var8] = var2.f(0);
+            var7[var8] = var2.readByte(0);
             var8++;
           } while (var36 == 0);
           var9 = 0;
@@ -609,7 +609,7 @@ final class MusicPatch extends IntrusiveNode {
               var2.position = var2.position + 1;
               break;
             }
-            var10[var11_int] = var2.f(0);
+            var10[var11_int] = var2.readByte(0);
             var11_int++;
           } while (var36 == 0);
           boolean decompiledFrameCompleted4 = true;
@@ -620,7 +620,7 @@ final class MusicPatch extends IntrusiveNode {
             var13_int = 1;
             var14 = 2;
             while (var9 > var14) {
-              var15_int = var2.f((byte) -89);
+              var15_int = var2.readUnsignedByte((byte) -89);
               stackIn_49_0 = var15_int;
               if (var36 != 0) {
                 decompiledFrameCompleted4 = false;
@@ -654,14 +654,14 @@ final class MusicPatch extends IntrusiveNode {
               dupTemp$1 = new MusicPatchEnvelope();
               var13[var14Lifetime1] = dupTemp$1;
               var15 = dupTemp$1;
-              var16_int = var2.f((byte) -60);
+              var16_int = var2.readUnsignedByte((byte) -60);
               stackIn_65_0 = 0;
               stackIn_65_1 = var16_int;
               if (var36 == 0) {
                 if (stackIn_65_0 < stackIn_65_1) {
                   var15.field_l = new byte[2 * var16_int];
                 }
-                var16_int = var2.f((byte) -44);
+                var16_int = var2.readUnsignedByte((byte) -44);
                 if (var16_int > 0) {
                   var15.field_g = new byte[2 + 2 * var16_int];
                   var15.field_g[1] = (byte) 64;
@@ -670,7 +670,7 @@ final class MusicPatch extends IntrusiveNode {
                 continue;
               }
             } else {
-              var14Lifetime1 = var2.f((byte) -93);
+              var14Lifetime1 = var2.readUnsignedByte((byte) -93);
               if (var14Lifetime1 <= 0) {
                 stackIn_67_0 = null;
                 break scanLoop1;
@@ -682,7 +682,7 @@ final class MusicPatch extends IntrusiveNode {
             break;
           }
           var15_array = stackIn_67_0;
-          var14Lifetime2 = var2.f((byte) -29);
+          var14Lifetime2 = var2.readUnsignedByte((byte) -29);
           if (0 >= var14Lifetime2) {
             stackIn_71_0 = null;
           } else {
@@ -706,7 +706,7 @@ final class MusicPatch extends IntrusiveNode {
               var19 = 0;
               break;
             }
-            var18[var19] = var2.f(0);
+            var18[var19] = var2.readByte(0);
             var19++;
           } while (var36 == 0);
           var20 = 0;
@@ -715,7 +715,7 @@ final class MusicPatch extends IntrusiveNode {
               var19 = 0;
               break;
             }
-            var19 = var19 + var2.f((byte) -93);
+            var19 = var19 + var2.readUnsignedByte((byte) -93);
             this.field_q[var20] = (short)var19;
             var20++;
           } while (var36 == 0);
@@ -725,7 +725,7 @@ final class MusicPatch extends IntrusiveNode {
               var20 = 0;
               break;
             }
-            var19 = var19 + var2.f((byte) -86);
+            var19 = var19 + var2.readUnsignedByte((byte) -86);
             this.field_q[var20] = (short)(this.field_q[var20] + (var19 << 8));
             var20++;
           } while (var36 == 0);
@@ -742,7 +742,7 @@ final class MusicPatch extends IntrusiveNode {
                 } else {
                   var20 = var18[var21++];
                 }
-                var22 = var2.d((byte) -17);
+                var22 = var2.readVarInt((byte) -17);
               }
               this.field_q[var23] = (short)(this.field_q[var23] + LoginChoicePanel.a(-1 + var22 << 14, 32768));
               var20--;
@@ -858,7 +858,7 @@ final class MusicPatch extends IntrusiveNode {
                   var20 = var18[var21Lifetime1++];
                 }
                 if (this.field_p[var27] > 0) {
-                  var26 = 1 + var2.f((byte) -112);
+                  var26 = 1 + var2.readUnsignedByte((byte) -112);
                 }
               }
               this.field_k[var27] = (byte)var26;
@@ -869,7 +869,7 @@ final class MusicPatch extends IntrusiveNode {
             break;
           }
           if (decompiledNaturalLoopExit1) {
-            this.field_j = 1 + var2.f((byte) -54);
+            this.field_j = 1 + var2.readUnsignedByte((byte) -54);
             stackIn_176_0 = 0;
           }
           var27 = stackIn_176_0;
@@ -882,14 +882,14 @@ final class MusicPatch extends IntrusiveNode {
               if (stackIn_199_0 != stackIn_199_1) {
                 var29 = 1;
                 while (!(var28.field_l.length <= var29)) {
-                  var28.field_l[var29] = var2.f(0);
+                  var28.field_l[var29] = var2.readByte(0);
                   var29 += 2;
                 }
               }
               if (null != var28.field_g) {
                 var29 = 3;
                 while (!((-2 + var28.field_g.length) <= var29)) {
-                  var28.field_g[var29] = var2.f(0);
+                  var28.field_g[var29] = var2.readByte(0);
                   var29 += 2;
                 }
               }
@@ -907,7 +907,7 @@ final class MusicPatch extends IntrusiveNode {
           if (stackIn_199_0 != stackIn_199_1) {
             var27 = 1;
             while (var27 < var15_array.length) {
-              var15_array[var27] = var2.f(0);
+              var15_array[var27] = var2.readByte(0);
               var27 += 2;
               if (var36 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -919,7 +919,7 @@ final class MusicPatch extends IntrusiveNode {
             (var16 != null)) {
             var27 = 1;
             while (var16.length > var27) {
-              var16[var27] = var2.f(0);
+              var16[var27] = var2.readByte(0);
               var27 += 2;
               if (var36 != 0) {
                 decompiledFrameCompleted2 = false;
@@ -943,7 +943,7 @@ final class MusicPatch extends IntrusiveNode {
                     var19 = 0;
                     var29 = 2;
                     if (!(var28.field_l.length <= var29)) {
-                      var19 = 1 + var19 + var2.f((byte) -34);
+                      var19 = 1 + var19 + var2.readUnsignedByte((byte) -34);
                       var28.field_l[var29] = (byte)var19;
                       var29 += 2;
                       decompiledFrameRemainder0 = false;
@@ -962,7 +962,7 @@ final class MusicPatch extends IntrusiveNode {
                   var19 = 0;
                   var29 = 2;
                   while (!(var28.field_g.length <= var29)) {
-                    var19 = 1 + (var19 + var2.f((byte) -36));
+                    var19 = 1 + (var19 + var2.readUnsignedByte((byte) -36));
                     var28.field_g[var29] = (byte)var19;
                     var29 += 2;
                     if (var36 != 0) {
@@ -992,7 +992,7 @@ final class MusicPatch extends IntrusiveNode {
                   var19 = 0;
                   var29 = 2;
                   while (!(var28.field_l.length <= var29)) {
-                    var19 = 1 + var19 + var2.f((byte) -34);
+                    var19 = 1 + var19 + var2.readUnsignedByte((byte) -34);
                     var28.field_l[var29] = (byte)var19;
                     var29 += 2;
                   }
@@ -1001,7 +1001,7 @@ final class MusicPatch extends IntrusiveNode {
               }
             }
             if (var15_array != null) {
-              var19 = var2.f((byte) -25);
+              var19 = var2.readUnsignedByte((byte) -25);
               var15_array[0] = (byte)var19;
               var27 = 2;
               do {
@@ -1009,7 +1009,7 @@ final class MusicPatch extends IntrusiveNode {
                   var27 = var15_array[0];
                   break;
                 }
-                var19 = var2.f((byte) -30) + 1 + var19;
+                var19 = var2.readUnsignedByte((byte) -30) + 1 + var19;
                 var15_array[var27] = (byte)var19;
                 var27 += 2;
               } while (var36 == 0);
@@ -1061,7 +1061,7 @@ final class MusicPatch extends IntrusiveNode {
           }
           regionExit4: {
             if (var16 != null) {
-              var19 = var2.f((byte) -27);
+              var19 = var2.readUnsignedByte((byte) -27);
               var16[0] = (byte)var19;
               var27 = 2;
               do {
@@ -1069,7 +1069,7 @@ final class MusicPatch extends IntrusiveNode {
                   var27 = var16[0];
                   break;
                 }
-                var19 = var2.f((byte) -110) + (1 + var19);
+                var19 = var2.readUnsignedByte((byte) -110) + (1 + var19);
                 var16[var27] = (byte)var19;
                 var27 += 2;
               } while (var36 == 0);
@@ -1156,7 +1156,7 @@ final class MusicPatch extends IntrusiveNode {
               var27 = 0;
               break;
             }
-            var13[var27].field_b = var2.f((byte) -28);
+            var13[var27].field_b = var2.readUnsignedByte((byte) -28);
             var27++;
           } while (var36 == 0);
           while (var12 > var27) {
@@ -1169,13 +1169,13 @@ final class MusicPatch extends IntrusiveNode {
               }
             }
             if (stackIn_365_0.field_l != null) {
-              var28.field_d = var2.f((byte) -16);
+              var28.field_d = var2.readUnsignedByte((byte) -16);
             }
             if (var28.field_g != null) {
-              var28.field_n = var2.f((byte) -120);
+              var28.field_n = var2.readUnsignedByte((byte) -120);
             }
             if (var28.field_b > 0) {
-              var28.field_c = var2.f((byte) -81);
+              var28.field_c = var2.readUnsignedByte((byte) -81);
             }
             var27++;
             if (var36 == 0) {
@@ -1189,7 +1189,7 @@ final class MusicPatch extends IntrusiveNode {
               var27 = 0;
               break;
             }
-            var13[var27].field_m = var2.f((byte) -50);
+            var13[var27].field_m = var2.readUnsignedByte((byte) -50);
             var27++;
           } while (var36 == 0);
           while (var27 < var12) {
@@ -1205,7 +1205,7 @@ final class MusicPatch extends IntrusiveNode {
               return;
             }
             if (stackIn_362_0 < stackIn_362_1) {
-              var28.field_h = var2.f((byte) -50);
+              var28.field_h = var2.readUnsignedByte((byte) -50);
             }
             var27++;
           }
@@ -1222,7 +1222,7 @@ final class MusicPatch extends IntrusiveNode {
               return;
             }
             if (var28.field_h > 0) {
-              var28.field_j = var2.f((byte) -81);
+              var28.field_j = var2.readUnsignedByte((byte) -81);
             }
             var27++;
           }
@@ -1296,7 +1296,7 @@ final class MusicPatch extends IntrusiveNode {
             var1 = ResizableDialog.j(21);
           }
           if (0 == var1.length()) {
-            var1 = nd.field_k;
+            var1 = NameAvailabilityResult.field_k;
           }
           if (param0) {
             MusicPatch.a(100);

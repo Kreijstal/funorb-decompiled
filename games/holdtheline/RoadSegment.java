@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class RoadSegment extends wc {
+abstract class RoadSegment extends TrackCurve {
     boolean field_s;
     boolean field_m;
     static String[] field_v;
     boolean field_q;
-    static dk field_p;
+    static TextWidgetStyle field_p;
     float field_o;
     boolean field_t;
     static int field_n;
@@ -70,7 +70,7 @@ abstract class RoadSegment extends wc {
           } else {
             stackIn_4_0 = UrlPacketDownloader.field_k;
           }
-          em.field_i = stackIn_4_0;
+          AgeValidator.field_i = stackIn_4_0;
           if (param1 != 97) {
             return;
           }

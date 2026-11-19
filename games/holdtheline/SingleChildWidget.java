@@ -4,13 +4,13 @@
 import java.util.*;
 
 abstract class SingleChildWidget extends UiWidget implements WidgetContainerMarker {
-    static go field_A;
+    static RotatedSpriteAsset field_A;
     static String field_D;
-    UiWidget field_B;
+    UiWidget child;
     static int[] field_C;
     static String field_E;
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handleScrollInput(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -21,7 +21,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
           if (param6 != -24898) {
             field_D = (String) null;
           }
-          stackIn_7_0 = (this.field_B != null) && (this.field_B.c((byte) -20)) && (this.field_B.a(param0, param1, param2, param3, param4, param5, param6 + 0));
+          stackIn_7_0 = (this.child != null) && (this.child.isFocused((byte) -20)) && (this.child.handleScrollInput(param0, param1, param2, param3, param4, param5, param6 + 0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,11 +37,11 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    String f(int param0) {
+    String getTooltip(int param0) {
         String var3 = null;
-        String var2 = super.f(param0);
-        if (this.field_B != null) {
-          var3 = this.field_B.f(0);
+        String var2 = super.getTooltip(param0);
+        if (this.child != null) {
+          var3 = this.child.getTooltip(0);
           if (var3 != null) {
             return var3;
           }
@@ -49,16 +49,16 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         return var2;
     }
 
-    void a(int param0, UiWidget param1, int param2, byte param3) {
+    void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
-          if (null != this.field_B) {
-            this.field_B.a(this.field_k + param0, param1, this.field_o + param2, (byte) -3);
+          super.updateHover(param0, param1, param2, param3);
+          if (null != this.child) {
+            this.child.updateHover(this.x + param0, param1, this.y + param2, (byte) -3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,7 +75,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -86,7 +86,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
           if (param1 != -25823) {
             return false;
           }
-          stackIn_7_0 = (null != this.field_B) && (this.field_B.a(param0, -25823));
+          stackIn_7_0 = (null != this.child) && (this.child.requestFocus(param0, -25823));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
             stackIn_2_0 = (fl) null;
             return stackIn_2_0;
           }
-          pd.field_e.addLast((byte) -86, var3);
+          UsernameLoginCredentials.field_e.addLast((byte) -86, var3);
           om.a(27391, var3, param1);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -146,7 +146,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
           if (param0 != -81) {
             return true;
           }
-          stackIn_8_0 = (null != this.field_B) && (!this.field_B.c((byte) -20)) && (this.field_B.a(param1, param0 - 25742));
+          stackIn_8_0 = (null != this.child) && (!this.child.isFocused((byte) -20)) && (this.child.requestFocus(param1, param0 - 25742));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,7 +173,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
           if (param0 != 3) {
             field_C = (int[]) null;
           }
-          stackIn_7_0 = (null != this.field_B) && (!this.field_B.c((byte) -20)) && (this.field_B.a(param1, -25823));
+          stackIn_7_0 = (null != this.child) && (!this.child.isFocused((byte) -20)) && (this.child.requestFocus(param1, -25823));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,16 +190,16 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
     }
 
     void a(int param0) {
-        if (this.field_B != null) {
-          this.field_B.g(82);
+        if (this.child != null) {
+          this.child.refreshLayout(82);
         }
         int var2 = 91 / ((param0 + 68) / 32);
     }
 
     UiWidget a(byte param0) {
-        UiWidget var2 = this.field_B;
+        UiWidget var2 = this.child;
         if (var2 != null &&
-          var2.c((byte) -20)) {
+          var2.isFocused((byte) -20)) {
           return var2;
         }
         if (param0 > 120) {
@@ -208,7 +208,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         return (UiWidget) null;
     }
 
-    boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
+    boolean handleMousePress(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -219,7 +219,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
           if (param4 != -108) {
             return false;
           }
-          stackIn_7_0 = (null != this.field_B) && (this.field_B.a(this.field_k + param0, param1, param2 + this.field_o, param3, (byte) -108, param5, param6));
+          stackIn_7_0 = (null != this.child) && (this.child.handleMousePress(this.x + param0, param1, param2 + this.y, param3, (byte) -108, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,35 +235,35 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    final static uh a(int param0, int param1) {
+    final static GrowableIntList a(int param0, int param1) {
         if (param1 <= 40) {
           SingleChildWidget.clearSharedReferences((byte) 22);
         }
-        uh var2 = new uh(param0, false);
+        GrowableIntList var2 = new GrowableIntList(param0, false);
         return var2;
     }
 
-    final void e(int param0) {
-        if (null != this.field_B) {
-          this.field_B.e(112);
+    final void clearFocus(int param0) {
+        if (null != this.child) {
+          this.child.clearFocus(112);
         }
         if (param0 <= 15) {
-          field_A = (go) null;
+          field_A = (RotatedSpriteAsset) null;
         }
     }
 
-    final int d(byte param0) {
+    final int getMaxLayer(byte param0) {
         if (param0 > -66) {
           return 73;
         }
-        return this.field_B != null ? this.field_B.d((byte) -83) : 0;
+        return this.child != null ? this.child.getMaxLayer((byte) -83) : 0;
     }
 
     SingleChildWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    StringBuilder a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(int param0, byte param1, Hashtable param2, StringBuilder param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_4_0 = null;
@@ -274,8 +274,8 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(20720, param2, param3, param0)) {
-            this.a(param2, param0, true, param3);
+          if (this.beginDebugVisit(20720, param2, param3, param0)) {
+            this.appendDebugProperties(param2, param0, true, param3);
             this.a((byte) 123, param0, param3, param2);
           }
           var5_int = 107 / ((0 - param1) / 49);
@@ -301,7 +301,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         UiWidget var6 = null;
@@ -311,9 +311,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_B != null &&
-            this.field_B.c((byte) -20) &&
-            this.field_B.a(param0, param1, (byte) -78, param3)) {
+          if (this.child != null &&
+            this.child.isFocused((byte) -20) &&
+            this.child.handleKeyPress(param0, param1, (byte) -78, param3)) {
             return true;
           }
           var5_int = param1;
@@ -329,7 +329,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
             return false;
           }
           var6 = (UiWidget) null;
-          this.a((UiWidget) null, 55);
+          this.requestFocus((UiWidget) null, 55);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -345,12 +345,12 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a(117);
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
+    void handleMouseRelease(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
         UiWidget var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -358,12 +358,12 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          if (null != this.field_B) {
-            this.field_B.a(param0, param1, param2 + this.field_o, param3 + this.field_k, (byte) -9, param5);
+          if (null != this.child) {
+            this.child.handleMouseRelease(param0, param1, param2 + this.y, param3 + this.x, (byte) -9, param5);
           }
           if (param4 != -9) {
             var8 = (UiWidget) null;
-            this.a((UiWidget) null, 41, (byte) 18, '2');
+            this.handleKeyPress((UiWidget) null, 41, (byte) 18, '2');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -380,20 +380,20 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (0 == param3 &&
-          this.field_l != null) {
-          this.field_l.drawWidget(true, param2, -95, (UiWidget) (this), param1);
+          this.renderer != null) {
+          this.renderer.drawWidget(true, param2, -95, (UiWidget) (this), param1);
         }
-        if (this.field_B != null) {
-          this.field_B.a(-9532, this.field_o + param1, this.field_k + param2, param3);
+        if (this.child != null) {
+          this.child.drawLayer(-9532, this.y + param1, this.x + param2, param3);
         }
         if (param0 != -9532) {
           field_E = (String) null;
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFocused(byte param0) {
         if (param0 != -20) {
           return false;
         }
@@ -422,10 +422,10 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
           for (var5_int = 0; var5_int <= param1; var5_int++) {
             discarded$1 = param2.append(' ');
           }
-          if (null == this.field_B) {
+          if (null == this.child) {
             discarded$3 = param2.append("null");
           } else {
-            this.field_B.a(param1 + 1, (byte) -97, param3, param2);
+            this.child.appendDebugTree(param1 + 1, (byte) -97, param3, param2);
           }
           var5_intLifetime1 = 39 % ((param0 - 66) / 34);
         } catch (RuntimeException runtimeException) {

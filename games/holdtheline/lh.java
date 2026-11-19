@@ -59,7 +59,7 @@ final class lh {
           SecondaryNodeDequeIterator.field_d.field_C.d(128, -13549, 9);
           SecondaryNodeDequeIterator.field_d.field_C.a(NanoTickClock.field_e, false);
           int var3_int = -54 % ((param1 - 11) / 55);
-          wc.a((byte) -111, param0, param2, 22050, 1102, true, 22050, SecondaryNodeDequeIterator.field_d);
+          TrackCurve.a((byte) -111, param0, param2, 22050, 1102, true, 22050, SecondaryNodeDequeIterator.field_d);
           ll.a(-114, 160);
           pc.field_h = 256;
           MovingEntity var4 = (MovingEntity) null;

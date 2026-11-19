@@ -8,7 +8,7 @@ final class Vector2f {
     static int field_i;
     static Random field_c;
     static int field_e;
-    static uf field_b;
+    static SpriteAsset field_b;
     float x;
     static volatile int field_f;
     static int field_a;

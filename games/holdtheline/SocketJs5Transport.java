@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class SocketJs5Transport extends Js5Transport {
-    static go field_r;
+    static RotatedSpriteAsset field_r;
     static String field_p;
     private BufferedSocket field_q;
 
@@ -26,9 +26,9 @@ final class SocketJs5Transport extends Js5Transport {
           }
           try {
             this.field_b.position = 0;
-            this.field_b.f(111, 6);
-            this.field_b.a(3, false);
-            this.field_b.b(-652561784, 0);
+            this.field_b.writeByte(111, 6);
+            this.field_b.writeMedium(3, false);
+            this.field_b.writeShort(-652561784, 0);
             this.field_q.write(this.field_b.payload.length, this.field_b.payload, 0, 1);
             if (param0 <= 5) {
               field_p = (String) null;
@@ -73,11 +73,11 @@ final class SocketJs5Transport extends Js5Transport {
             } else {
               stackIn_5_2 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_4_0).f(stackIn_4_1, stackIn_5_2);
+            ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_4_1, stackIn_5_2);
             if (param1 != -11526) {
               SocketJs5Transport.a(77, 'J');
             }
-            this.field_b.b(-483502376, 0L);
+            this.field_b.writeLong40(-483502376, 0L);
             this.field_q.write(this.field_b.payload.length, this.field_b.payload, 0, 1);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,7 +137,7 @@ final class SocketJs5Transport extends Js5Transport {
               break;
             }
             if (param2 != 20) {
-              field_r = (go) null;
+              field_r = (RotatedSpriteAsset) null;
             }
             while (true) {
               var4_refLifetime1 = (NetworkArchiveRequest) (this.field_e.removeFirst((byte) 84));
@@ -150,9 +150,9 @@ final class SocketJs5Transport extends Js5Transport {
             if (this.field_l != 0) {
               try {
                 this.field_b.position = 0;
-                this.field_b.f(111, 4);
-                this.field_b.f(111, (int) this.field_l);
-                this.field_b.a((byte) -58, 0);
+                this.field_b.writeByte(111, 4);
+                this.field_b.writeByte(111, (int) this.field_l);
+                this.field_b.writeInt((byte) -58, 0);
                 this.field_q.write(this.field_b.payload.length, this.field_b.payload, 0, 1);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -264,8 +264,8 @@ final class SocketJs5Transport extends Js5Transport {
             var3 = (NetworkArchiveRequest) (this.field_d.first(105));
             while (var3 != null) {
               this.field_b.position = 0;
-              this.field_b.f(111, 1);
-              this.field_b.b(-483502376, var3.secondaryKey);
+              this.field_b.writeByte(111, 1);
+              this.field_b.writeLong40(-483502376, var3.secondaryKey);
               this.field_q.write(this.field_b.payload.length, this.field_b.payload, 0, 1);
               this.field_i.addLast(123, var3);
               var3 = (NetworkArchiveRequest) (this.field_d.next(-100));
@@ -273,8 +273,8 @@ final class SocketJs5Transport extends Js5Transport {
             var3Lifetime1 = (NetworkArchiveRequest) (this.field_g.first(79));
             while (var3Lifetime1 != null) {
               this.field_b.position = 0;
-              this.field_b.f(111, 0);
-              this.field_b.b(-483502376, var3Lifetime1.secondaryKey);
+              this.field_b.writeByte(111, 0);
+              this.field_b.writeLong40(-483502376, var3Lifetime1.secondaryKey);
               this.field_q.write(this.field_b.payload.length, this.field_b.payload, 0, 1);
               this.field_e.addLast(126, var3Lifetime1);
               var3Lifetime1 = (NetworkArchiveRequest) (this.field_g.next(-54));
@@ -314,7 +314,7 @@ final class SocketJs5Transport extends Js5Transport {
                   var18 = 0;
                   var8 = var18;
                   while (var7 > var18) {
-                    this.field_m.field_z.payload[this.field_m.field_z.position + var18] = (byte)wb.a((int) this.field_m.field_z.payload[this.field_m.field_z.position + var18], (int) this.field_l);
+                    this.field_m.field_z.payload[this.field_m.field_z.position + var18] = (byte)Vector2i.xor((int) this.field_m.field_z.payload[this.field_m.field_z.position + var18], (int) this.field_l);
                     var18++;
                   }
                 }
@@ -337,17 +337,17 @@ final class SocketJs5Transport extends Js5Transport {
                 this.field_q.readFully(this.field_k.payload, var6, this.field_k.position, 14);
                 if (0 != this.field_l) {
                   for (var7 = 0; var6 > var7; var7++) {
-                    this.field_k.payload[var7 + this.field_k.position] = (byte)wb.a((int) this.field_k.payload[var7 + this.field_k.position], (int) this.field_l);
+                    this.field_k.payload[var7 + this.field_k.position] = (byte)Vector2i.xor((int) this.field_k.payload[var7 + this.field_k.position], (int) this.field_l);
                   }
                 }
                 this.field_k.position = this.field_k.position + var6;
                 if (var5 <= this.field_k.position) {
                   if (null == this.field_m) {
                     this.field_k.position = 0;
-                    var7 = this.field_k.f((byte) -105);
-                    var8 = this.field_k.a(94);
-                    var9 = this.field_k.f((byte) -55);
-                    var10 = this.field_k.a(127);
+                    var7 = this.field_k.readUnsignedByte((byte) -105);
+                    var8 = this.field_k.readInt(94);
+                    var9 = this.field_k.readUnsignedByte((byte) -55);
+                    var10 = this.field_k.readInt(127);
                     var11 = 127 & var9;
                     stackIn_46_0 = ((128 & var9) == 0) ? 0 : 1;
                     boolean decompiledFrameRemainder0 = true;
@@ -383,8 +383,8 @@ final class SocketJs5Transport extends Js5Transport {
                     var16 = stackIn_60_0;
                     this.field_m = var15_ref;
                     this.field_m.field_z = new PacketBuffer(this.field_m.field_B + var10 + var16);
-                    this.field_m.field_z.f(111, var11);
-                    this.field_m.field_z.a((byte) -58, var10);
+                    this.field_m.field_z.writeByte(111, var11);
+                    this.field_m.field_z.writeInt((byte) -58, var10);
                     this.field_k.position = 0;
                     this.field_m.field_x = 10;
                   } else {

@@ -3,8 +3,8 @@
  */
 final class tk {
     static vk[][] field_c;
-    oa field_d;
-    oa field_e;
+    NamedSoundEffect field_d;
+    NamedSoundEffect field_e;
     static String field_b;
     static BitmapFont field_a;
 
@@ -87,8 +87,8 @@ final class tk {
         }
         EditableTextField.field_K = null;
         ad.field_d = null;
-        wb.field_g = null;
-        la.field_j = null;
+        Vector2i.field_g = null;
+        DirectByteStorage.field_j = null;
         StraightRoadSegment.field_E = null;
     }
 
@@ -101,7 +101,7 @@ final class tk {
         }
     }
 
-    tk(oa param0, oa param1) {
+    tk(NamedSoundEffect param0, NamedSoundEffect param1) {
         try {
           this.field_e = param0;
           this.field_d = param1;

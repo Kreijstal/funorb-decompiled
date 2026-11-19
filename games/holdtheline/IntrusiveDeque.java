@@ -8,7 +8,7 @@ final class IntrusiveDeque {
     static ResourceArchive field_d;
     private IntrusiveNode cursor;
 
-    final static int a(vj param0, byte param1, int param2, int param3) {
+    final static int a(BoundaryCurve param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -28,10 +28,10 @@ final class IntrusiveDeque {
         int var10Lifetime1;
         try {
           var11 = (TrackBoundary) (param0);
-          var5 = var11.field_r.y;
-          var6 = var11.field_s.y;
-          var7 = var11.field_r.x;
-          var8 = var11.field_s.x;
+          var5 = var11.start.y;
+          var6 = var11.end.y;
+          var7 = var11.start.x;
+          var8 = var11.end.x;
           if (var5 == var6) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
@@ -85,7 +85,7 @@ final class IntrusiveDeque {
 
     final static void b(boolean param0) {
         oi.field_f = param0 ? true : false;
-        aa.field_j = null;
+        DelayedServerPacket.field_j = null;
         dg.field_b = null;
         qg.field_b = null;
         pb.field_a = null;
@@ -205,9 +205,9 @@ final class IntrusiveDeque {
             var4 = var3;
             var4 = var3;
           }
-          if (null != hg.field_M &&
-            !hg.field_M.equals(param1.getParameter("session"))) {
-            var4 = hg.field_M;
+          if (null != DialWidget.field_M &&
+            !DialWidget.field_M.equals(param1.getParameter("session"))) {
+            var4 = DialWidget.field_M;
           }
           if (param2 > 6) {
             stackIn_10_0 = AccountProgressDialog.a((String) (var3), (String) (var4), param0, (byte) -118, -1);

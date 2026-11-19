@@ -33,13 +33,13 @@ final class jn {
         return true;
     }
 
-    final static void a(int param0, vn param1, int param2, int param3) {
+    final static void a(int param0, NineSlicePanel param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
         try {
           WeightedLruCache.field_g = param0;
-          em.field_j = param2;
+          AgeValidator.field_j = param2;
           NodeHashTableIterator.field_c = param1;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -53,10 +53,10 @@ final class jn {
         }
         this.field_c = 0;
         if (this.field_a == 0) {
-          this.field_c = aa.field_n;
+          this.field_c = DelayedServerPacket.field_n;
         }
         if (this.field_a == 0 &&
-          aa.field_n == 96) {
+          DelayedServerPacket.field_n == 96) {
           if (this.field_g <= 0) {
             this.field_g = this.field_b;
           }
@@ -64,7 +64,7 @@ final class jn {
           this.field_d = false;
         }
         if (this.field_a == 0 &&
-          aa.field_n == 97) {
+          DelayedServerPacket.field_n == 97) {
           this.field_g = this.field_g + 1;
           this.field_d = false;
           if (this.field_g >= this.field_b) {
@@ -74,8 +74,8 @@ final class jn {
         if (this.field_a != 0) {
           return;
         }
-        if (aa.field_n != 98 &&
-          99 != aa.field_n) {
+        if (DelayedServerPacket.field_n != 98 &&
+          99 != DelayedServerPacket.field_n) {
           return;
         }
         if (0 > this.field_g) {
@@ -104,7 +104,7 @@ final class jn {
           this.field_g = param0;
         }
         if (0 != this.field_a) {
-          if (rd.field_f == 0) {
+          if (RoadStripRenderer.field_f == 0) {
             if (ValidationIndicator.field_J != 0) {
               if (this.field_a == 0) {
                 if (!this.field_d &&
@@ -127,7 +127,7 @@ final class jn {
               }
               return;
             }
-            if (rd.field_f != 0) {
+            if (RoadStripRenderer.field_f != 0) {
               if (this.field_a == 0) {
                 if (!this.field_d &&
                   !na.field_k) {
@@ -174,12 +174,12 @@ final class jn {
             return;
           }
           if (this.field_e <= 0) {
-            this.field_e = tl.field_x;
+            this.field_e = PasswordFieldRenderer.field_x;
           }
           this.field_e = this.field_e - 1;
         }
         if (ValidationIndicator.field_J == 0 &&
-          rd.field_f == 0) {
+          RoadStripRenderer.field_f == 0) {
           this.field_a = 0;
         }
         if (this.field_a != 0) {
@@ -219,14 +219,14 @@ final class jn {
         this.field_f = 0;
         this.field_c = 0;
         if (param0 == ~this.field_a) {
-          this.field_c = aa.field_n;
+          this.field_c = DelayedServerPacket.field_n;
         }
         if (this.field_a == 0) {
-          if (aa.field_n != 98) {
+          if (DelayedServerPacket.field_n != 98) {
             if (0 != this.field_a) {
               return;
             }
-            if (99 != aa.field_n) {
+            if (99 != DelayedServerPacket.field_n) {
               return;
             }
             this.field_g = this.field_g + 1;
@@ -243,7 +243,7 @@ final class jn {
           this.field_d = false;
         }
         if (0 == this.field_a &&
-          99 == aa.field_n) {
+          99 == DelayedServerPacket.field_n) {
           this.field_g = this.field_g + 1;
           if (this.field_g >= this.field_b) {
             this.field_g = 0;
@@ -258,20 +258,20 @@ final class jn {
             jn.a((byte) -64);
           }
           gh.field_n = new MusicTrack[7];
-          pd.field_f = param2;
-          em.field_m = new String[7];
+          UsernameLoginCredentials.field_f = param2;
+          AgeValidator.field_m = new String[7];
           i.field_k = new MusicTrack[7];
           ValidationHelpWidget.field_Q = param0;
-          em.field_m[0] = "holdtheline_title";
-          em.field_m[5] = "holdtheline_alpine";
-          em.field_m[1] = "holdtheline_victory_jingle";
+          AgeValidator.field_m[0] = "holdtheline_title";
+          AgeValidator.field_m[5] = "holdtheline_alpine";
+          AgeValidator.field_m[1] = "holdtheline_victory_jingle";
           AccountProgressDialog.field_jb = -1;
           oc.field_a = 7;
-          em.field_m[4] = "holdtheline_desert";
+          AgeValidator.field_m[4] = "holdtheline_desert";
           WeightedLruCache.field_e = 0;
-          em.field_m[6] = "holdtheline_urban";
-          em.field_m[2] = "holdtheline_lose_jingle";
-          em.field_m[3] = "holdtheline_classic";
+          AgeValidator.field_m[6] = "holdtheline_urban";
+          AgeValidator.field_m[2] = "holdtheline_lose_jingle";
+          AgeValidator.field_m[3] = "holdtheline_classic";
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -287,7 +287,7 @@ final class jn {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.h(param0, 7);
+          var3_int = param2.readBits(param0, 7);
           if (param1 != -96) {
             stackIn_2_0 = -57;
             return stackIn_2_0;

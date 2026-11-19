@@ -37,7 +37,7 @@ final class SynthInstrument {
         this.field_r.decode(param0);
         this.field_u = new SoundEnvelope();
         this.field_u.decode(param0);
-        int var2 = param0.f((byte) -43);
+        int var2 = param0.readUnsignedByte((byte) -43);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_o = new SoundEnvelope();
@@ -45,7 +45,7 @@ final class SynthInstrument {
           this.field_q = new SoundEnvelope();
           this.field_q.decode(param0);
         }
-        var2 = param0.f((byte) -105);
+        var2 = param0.readUnsignedByte((byte) -105);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_f = new SoundEnvelope();
@@ -53,7 +53,7 @@ final class SynthInstrument {
           this.field_k = new SoundEnvelope();
           this.field_k.decode(param0);
         }
-        var2 = param0.f((byte) -30);
+        var2 = param0.readUnsignedByte((byte) -30);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_i = new SoundEnvelope();
@@ -62,18 +62,18 @@ final class SynthInstrument {
           this.field_h.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.e(128);
+          var4 = param0.readUnsignedSmart(128);
           if (var4 == 0) {
             break;
           }
           this.field_y[var3] = var4;
-          this.field_j[var3] = param0.b((byte) -84);
-          this.field_t[var3] = param0.e(128);
+          this.field_j[var3] = param0.readSignedSmart((byte) -84);
+          this.field_t[var3] = param0.readUnsignedSmart(128);
         }
-        this.field_n = param0.e(128);
-        this.field_l = param0.e(128);
-        this.field_v = param0.k(-48);
-        this.field_e = param0.k(-47);
+        this.field_n = param0.readUnsignedSmart(128);
+        this.field_l = param0.readUnsignedSmart(128);
+        this.field_v = param0.readUnsignedShort(-48);
+        this.field_e = param0.readUnsignedShort(-47);
         this.field_c = new SynthFilter();
         this.field_s = new SoundEnvelope();
         this.field_c.decode(param0, this.field_s);

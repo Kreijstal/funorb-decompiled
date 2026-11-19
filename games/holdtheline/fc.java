@@ -7,7 +7,7 @@ final class fc {
     static int field_a;
     static int field_d;
 
-    final static void a(int param0, float param1, float param2, ei param3, ei param4) {
+    final static void a(int param0, float param1, float param2, GrowableObjectList param3, GrowableObjectList param4) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -33,26 +33,26 @@ final class fc {
           var8 = (float)(-var6) + param1;
           if (var6 == var5_int) {
             if (var7 != var8) {
-              param4.a(fk.a(1, var8, (vj) (param3.field_b[var5_int]), var7), (byte) 6);
+              param4.add(fk.a(1, var8, (BoundaryCurve) (param3.elements[var5_int]), var7), (byte) 6);
             }
             return;
           }
           if (var5_int >= var6) {
             if (0.0f < var7) {
-              param4.a(td.a(150, var7, (vj) (param3.field_b[var5_int])).c(false), (byte) 6);
+              param4.add(StereoMusicSample.prefixOfBoundary(150, var7, (BoundaryCurve) (param3.elements[var5_int])).reversed(false), (byte) 6);
             }
             for (var9 = -1 + var5_int; var6 < var9; var9--) {
-              param4.a(((vj) (param3.field_b[var9])).c(false), (byte) 6);
+              param4.add(((BoundaryCurve) (param3.elements[var9])).reversed(false), (byte) 6);
             }
-            param4.a(MusicPatchEnvelope.a(119, (vj) (param3.field_b[var6]), var8).c(false), (byte) 6);
+            param4.add(MusicPatchEnvelope.a(119, (BoundaryCurve) (param3.elements[var6]), var8).reversed(false), (byte) 6);
             return;
           }
-          param4.a(MusicPatchEnvelope.a(92, (vj) (param3.field_b[var5_int]), var7), (byte) 6);
+          param4.add(MusicPatchEnvelope.a(92, (BoundaryCurve) (param3.elements[var5_int]), var7), (byte) 6);
           for (var9Lifetime1 = var5_int + 1; var6 > var9Lifetime1; var9Lifetime1++) {
-            param4.a(param3.field_b[var9Lifetime1], (byte) 6);
+            param4.add(param3.elements[var9Lifetime1], (byte) 6);
           }
           if (var8 > 0.0f) {
-            param4.a(td.a(param0 + 148, var8, (vj) (param3.field_b[var6])), (byte) 6);
+            param4.add(StereoMusicSample.prefixOfBoundary(param0 + 148, var8, (BoundaryCurve) (param3.elements[var6])), (byte) 6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class fc {
     final static IndexedSprite a(boolean param0) {
         IndexedSprite var1 = null;
         if (param0) {
-          var1 = new IndexedSprite(bo.field_b, ih.field_o, la.field_j[0], wb.field_g[0], EditableTextField.field_K[0], ad.field_d[0], IterableSecondaryNodeDeque.field_e[0], StraightRoadSegment.field_E);
+          var1 = new IndexedSprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], IterableSecondaryNodeDeque.field_e[0], StraightRoadSegment.field_E);
           tk.a(false);
           return var1;
         }

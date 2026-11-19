@@ -18,37 +18,37 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_F = new ValidatedTextField("", (WidgetListener) null, 12);
-        dk var1 = new dk(mo.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
+        TextWidgetStyle var1 = new TextWidgetStyle(SpriteButtonRenderer.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(ra.field_ib, var1, (WidgetListener) null);
         this.field_M = new TextButton(h.field_d, (WidgetListener) null);
         this.field_N = new TextButton(hh.field_b, (WidgetListener) null);
-        this.field_F.field_z = pf.field_f;
-        this.field_F.a((byte) 42, new cb(this.field_F));
+        this.field_F.tooltip = pf.field_f;
+        this.field_F.a((byte) 42, new DisplayNameValidator(this.field_F));
         this.field_M.field_D = false;
-        this.field_M.field_l = (WidgetRenderer) ((Object) new mo());
-        this.field_N.field_l = (WidgetRenderer) ((Object) new am());
-        this.field_F.field_l = (WidgetRenderer) ((Object) new kl(10000536));
+        this.field_M.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
+        this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+        this.field_F.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(20, (byte) 122, var3, 50, 270);
+        var2.setBounds(20, (byte) 122, var3, 50, 270);
         var3 += 50;
         this.a(true, var2);
-        var3 = var3 + (this.a(var3, (byte) -86, ic.field_h, sh.field_a, 170, this.field_F) + 5);
-        this.field_M.a(496 - var5 >> 1, (byte) 122, var3, 40, var5);
-        this.field_N.a(3 + var4, (byte) 122, 15 + var3, 40, 60);
-        this.field_N.field_t = (WidgetListener) (this);
-        this.field_M.field_t = (WidgetListener) (this);
+        var3 = var3 + (this.a(var3, (byte) -86, ArchiveLoadStage.field_h, sh.field_a, 170, this.field_F) + 5);
+        this.field_M.setBounds(496 - var5 >> 1, (byte) 122, var3, 40, var5);
+        this.field_N.setBounds(3 + var4, (byte) 122, 15 + var3, 40, 60);
+        this.field_N.listener = (WidgetListener) (this);
+        this.field_M.listener = (WidgetListener) (this);
         this.a(true, this.field_M);
         this.a(true, this.field_N);
         this.field_H = new NameSuggestionsPanel((NameSelectionListener) (this));
-        this.field_H.a(60 + this.field_F.field_k + this.field_F.field_x, (byte) 122, 20, 150, -60 - this.field_F.field_x + (this.field_x - this.field_F.field_k));
+        this.field_H.setBounds(60 + this.field_F.x + this.field_F.width, (byte) 122, 20, 150, -60 - this.field_F.width + (this.width - this.field_F.x));
         this.a(true, this.field_H);
-        this.a(0, (byte) 122, 0, var4 + var3 + 55, 496);
+        this.setBounds(0, (byte) 122, 0, var4 + var3 + 55, 496);
     }
 
     public final void a(byte param0) {
-        ((cb) (this.field_F.getValidator(1))).a(true);
+        ((DisplayNameValidator) (this.field_F.getValidator(1))).invalidateAvailability(true);
         if (param0 <= 124) {
           ResourceArchive var3 = (ResourceArchive) null;
           DisplayNameForm.a(91, -12, (ResourceArchive) null, -35);
@@ -58,7 +58,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
     private final boolean a(ValidatorProvider param0, byte param1) {
         Validator var3 = null;
         RuntimeException var3_ref = null;
-        fd var4 = null;
+        ValidationState var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -72,8 +72,8 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
           if (var3 == null) {
             return true;
           }
-          var4 = var3.b(-7447);
-          stackIn_10_0 = (tg.field_d == var4);
+          var4 = var3.getValidationState(-7447);
+          stackIn_10_0 = (PointPath.field_d == var4);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,9 +95,9 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         int var3;
         var3 = HoldTheLine.field_D;
         var1 = 1 % ((-31 - param0) / 39);
-        aa.field_k = false;
+        DelayedServerPacket.field_k = false;
         nl.field_c = null;
-        if (ci.field_o) {
+        if (ArchiveCatalog.field_o) {
           sb.field_c.o(-41);
         } else {
           var2 = q.field_c;
@@ -105,16 +105,16 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             if (var2 == 1) {
               nl.field_c = jc.field_c;
             } else {
-              nl.field_c = sd.a(h.field_c, new String[]{Integer.toString(var2)}, true);
+              nl.field_c = LoginCredentials.substituteIndexedTokens(h.field_c, new String[]{Integer.toString(var2)}, true);
             }
             nl.field_c = CacheEntry.a((byte) -54, new CharSequence[]{(CharSequence) ((Object) nl.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedRandomAccessFile.field_q)});
           }
           sb.field_c.h((byte) -57);
-          ji.a((byte) -124);
+          TutorialPage.a((byte) -124);
         }
     }
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -123,7 +123,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyPress(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -174,7 +174,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -25) {
-            this.a((UiWidget) null, 59, (byte) 51, 'ￕ');
+            this.handleKeyPress((UiWidget) null, 59, (byte) 51, 'ￕ');
           }
           stackIn_3_0 = this.a(param4, param3, 35, param0, 10566, param2, param5);
           return stackIn_3_0;
@@ -209,11 +209,11 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
           return;
         }
         if (param0 == 200) {
-          ValidatedTextField.a(this.field_F.field_q, -115);
+          ValidatedTextField.a(this.field_F.text, -115);
           return;
         }
         field_L = 46;
-        ValidatedTextField.a(this.field_F.field_q, -115);
+        ValidatedTextField.a(this.field_F.text, -115);
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -324,9 +324,9 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         return true;
     }
 
-    final void a(int param0, UiWidget param1, int param2, byte param3) {
+    final void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_M.field_D = this.h(-22485);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "de.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -354,10 +354,10 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             return stackIn_2_0;
           }
           this.a(true, var10);
-          var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param6)).getValidator(param4 ^ 10567), param5, 126, var10.field_u + param3, 25 + param0, param2);
-          var9.field_t = (WidgetListener) (this);
+          var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param6)).getValidator(param4 ^ 10567), param5, 126, var10.height + param3, 25 + param0, param2);
+          var9.listener = (WidgetListener) (this);
           this.a(true, var9);
-          stackIn_4_0 = var10.field_u + var9.field_u;
+          stackIn_4_0 = var10.height + var9.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

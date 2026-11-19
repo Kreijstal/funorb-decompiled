@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class pc {
-    static an field_n;
+    static GzipDecompressor field_n;
     int field_a;
     boolean field_k;
     int field_j;
@@ -59,13 +59,13 @@ abstract class pc {
           }
           return;
         }
-        if (rd.field_f != 0 &&
+        if (RoadStripRenderer.field_f != 0 &&
           this.field_k) {
           var2Lifetime1 = this.field_c;
           if (var2Lifetime1 == -1) {
             return;
           }
-          this.a(-(this.field_d * var2Lifetime1) + rf.field_X - this.field_j, var2Lifetime1, rd.field_f, param0 - 12639, NodeHashTableIterator.field_g, true);
+          this.a(-(this.field_d * var2Lifetime1) + rf.field_X - this.field_j, var2Lifetime1, RoadStripRenderer.field_f, param0 - 12639, NodeHashTableIterator.field_g, true);
           return;
         }
         this.field_k = false;
@@ -104,37 +104,37 @@ abstract class pc {
         int var4 = HoldTheLine.field_D;
         if (param1 != -24489) {
           this.field_m = -80;
-          if (aa.field_n == 96) {
+          if (DelayedServerPacket.field_n == 96) {
             this.a(1, param0);
             return;
           }
-          if (aa.field_n == 97) {
+          if (DelayedServerPacket.field_n == 97) {
             this.d(108, param0);
             return;
           }
-          if (aa.field_n == 84) {
+          if (DelayedServerPacket.field_n == 84) {
             this.c(param0, -3565);
             return;
           }
-          if (aa.field_n != 83) {
+          if (DelayedServerPacket.field_n != 83) {
             return;
           }
           this.c(param0, -3565);
           return;
         }
-        if (aa.field_n == 96) {
+        if (DelayedServerPacket.field_n == 96) {
           this.a(1, param0);
           return;
         }
-        if (aa.field_n == 97) {
+        if (DelayedServerPacket.field_n == 97) {
           this.d(108, param0);
           return;
         }
-        if (aa.field_n == 84) {
+        if (DelayedServerPacket.field_n == 84) {
           this.c(param0, -3565);
           return;
         }
-        if (aa.field_n != 83) {
+        if (DelayedServerPacket.field_n != 83) {
           return;
         }
         this.c(param0, -3565);
@@ -151,7 +151,7 @@ abstract class pc {
           } else {
             this.a(1, param1);
           }
-          r.field_b = cg.field_i;
+          r.field_b = TutorialAction.field_i;
         } else {
           r.field_b = r.field_b - 1;
           if (0 >= r.field_b) {
@@ -176,7 +176,7 @@ abstract class pc {
         if (this.field_k) {
           return;
         }
-        if (aa.field_n == 98) {
+        if (DelayedServerPacket.field_n == 98) {
           if (this.field_c <= 0) {
             this.field_c = this.field_a;
           }
@@ -184,7 +184,7 @@ abstract class pc {
           this.field_g = true;
           return;
         }
-        if (99 != aa.field_n) {
+        if (99 != DelayedServerPacket.field_n) {
           if (this.field_c < 0) {
             return;
           }
@@ -286,7 +286,7 @@ abstract class pc {
 
     static {
         field_i = "This password contains your email address, and would be easy to guess";
-        field_n = new an();
+        field_n = new GzipDecompressor();
         field_e = new IntrusiveDeque();
     }
 }

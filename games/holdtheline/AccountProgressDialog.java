@@ -21,7 +21,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           wh.a((byte) -41);
         } else {
           if (this.field_ob) {
-            j.b(58);
+            HuffmanDecoder.b(58);
           }
         }
         if (param0 <= -47) {
@@ -44,7 +44,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
             sh.a((byte) -116, GameKeyHandler.a(param2 ^ -75), "tochangedisplayname.ws");
             return;
           }
-          go.a(param2 + 4, 3);
+          RotatedSpriteAsset.a(param2 + 4, 3);
           this.h((byte) -89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,7 +234,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         }
     }
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         TextButton var6 = null;
         boolean stackIn_6_0 = false;
@@ -251,7 +251,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
             var6 = (TextButton) null;
             this.onButtonAction(-76, (TextButton) null, 64, 32, -8);
           }
-          stackIn_6_0 = super.a(param0, param1, (byte) -78, param3);
+          stackIn_6_0 = super.handleKeyPress(param0, param1, (byte) -78, param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -268,9 +268,9 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
     }
 
     final static void a(int param0, byte param1) {
-        aj.field_d = ei.field_f[param0];
+        aj.field_d = GrowableObjectList.field_f[param0];
         DualNodeHashTable.field_f = lj.field_c[param0];
-        pb.field_d = kl.field_r[param0];
+        pb.field_d = TextFieldRenderer.field_r[param0];
         if (param1 <= 76) {
           AccountProgressDialog.n(-60);
         }
@@ -304,34 +304,34 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           var4 = var6;
           if (5 != param2) {
             if (param2 == 256) {
-              var6.a(88, (WidgetListener) (this), lg.field_p);
+              var6.a(88, (WidgetListener) (this), CachedTextLayout.field_p);
             } else {
               stackIn_15_0 = var6;
               stackIn_15_1 = -1;
               if (this.field_kb) {
-                stackIn_16_2 = lg.field_p;
+                stackIn_16_2 = CachedTextLayout.field_p;
               } else {
                 stackIn_16_2 = ArchiveIndex.field_i;
               }
               ((MessagePanel) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2, (byte) 59);
             }
           } else {
-            var6.a(11, vn.field_b, (byte) 69);
+            var6.a(11, NineSlicePanel.field_b, (byte) 69);
             var6.a(17, UrlPacketDownloader.field_n, (byte) 97);
           }
           if (param2 == 3) {
-            var6.a(7, ek.field_u, (byte) 122);
+            var6.a(7, CheckboxRenderer.field_u, (byte) 122);
           } else {
             if (param2 != 4) {
               if (param2 == 6) {
                 var6.a(9, Bzip2State.field_d, (byte) 68);
               } else {
                 if (param2 == 9) {
-                  var6.a(49, (WidgetListener) (this), uh.field_e);
+                  var6.a(49, (WidgetListener) (this), GrowableIntList.field_e);
                 }
               }
             } else {
-              var6.a(8, vn.field_a, (byte) 65);
+              var6.a(8, NineSlicePanel.field_a, (byte) 65);
             }
           }
           this.a((UiWidget) (var6), (byte) 79);

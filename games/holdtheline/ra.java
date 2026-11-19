@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ra extends ResizableDialog {
-    static ci field_Z;
+    static ArchiveCatalog field_Z;
     static String field_fb;
     static int[] field_cb;
     private String field_gb;
@@ -126,7 +126,7 @@ final class ra extends ResizableDialog {
 
     final void a(int param0, int param1, byte param2) {
         super.a(param0, param1, param2);
-        DisplayNameForm.field_I.b(this.field_eb, (this.field_x >> 1) + param0, param1 + 103, 16777215, -1);
+        DisplayNameForm.field_I.b(this.field_eb, (this.width >> 1) + param0, param1 + 103, 16777215, -1);
         if (null != this.field_gb) {
           SoftwareRasterizer.b(20 + param0, -7 + (param1 + 120), 260, 8421504);
           DisplayNameForm.field_I.a(this.field_gb, 20 + param0, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, DisplayNameForm.field_I.field_G);

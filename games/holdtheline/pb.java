@@ -28,13 +28,13 @@ final class pb {
           if (param0 == 0.0f) {
             stackIn_3_0 = param2.field_R;
           } else {
-            stackIn_3_0 = param2.a(false, param0);
+            stackIn_3_0 = param2.pointAt(false, param0);
           }
           var4 = stackIn_3_0;
           if (1.0f == param3) {
             stackIn_6_0 = param2.field_P;
           } else {
-            stackIn_6_0 = param2.a(false, param3);
+            stackIn_6_0 = param2.pointAt(false, param3);
           }
           var5 = stackIn_6_0;
           var6 = (int)((float)param2.field_Q + (float)(param2.field_M - param2.field_Q) * param0);

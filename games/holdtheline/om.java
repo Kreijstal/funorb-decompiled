@@ -5,22 +5,22 @@ final class om {
     int field_h;
     int[] field_l;
     int field_a;
-    private kg field_q;
+    private RotatedSpriteSheetAsset field_q;
     private static int[] field_e;
     int field_m;
     Sprite[] field_g;
     static PacketBuffer field_n;
     boolean field_d;
-    static uf field_i;
+    static SpriteAsset field_i;
     boolean field_c;
     static int[] field_p;
-    private uf field_k;
-    private go field_j;
-    private va field_o;
+    private SpriteAsset field_k;
+    private RotatedSpriteAsset field_j;
+    private SpriteSheetAsset field_o;
     int field_b;
-    mg[] field_f;
+    RotatedSpriteCache[] field_f;
 
-    private final void a(int param0, go param1) {
+    private final void a(int param0, RotatedSpriteAsset param1) {
         try {
           this.field_j = param1;
           this.field_c = false;
@@ -36,7 +36,7 @@ final class om {
         }
     }
 
-    private final void a(int param0, uf param1) {
+    private final void a(int param0, SpriteAsset param1) {
         try {
           this.field_l = null;
           int var3_int = 125 % ((param0 + 14) / 34);
@@ -50,9 +50,9 @@ final class om {
     }
 
     final boolean b(byte param0) {
-        mg var5 = null;
-        mg var3 = null;
-        mg[] var7 = null;
+        RotatedSpriteCache var5 = null;
+        RotatedSpriteCache var3 = null;
+        RotatedSpriteCache[] var7 = null;
         Sprite[] var8 = null;
         int var4 = HoldTheLine.field_D;
         if (this.field_c) {
@@ -61,10 +61,10 @@ final class om {
         int var2 = -8 / ((-92 - param0) / 34);
         if (this.field_k == null) {
           if (this.field_j != null) {
-            var5 = this.field_j.c((byte) -105);
+            var5 = this.field_j.getRotatedSprites((byte) -105);
             var3 = var5;
             if (var3 != null) {
-              this.field_f = new mg[]{var5};
+              this.field_f = new RotatedSpriteCache[]{var5};
               this.field_c = true;
               return this.field_c;
             }
@@ -74,8 +74,8 @@ final class om {
             if (null == this.field_q) {
               return this.field_c;
             }
-            var7 = this.field_q.a(16);
-            mg[] var3_array = var7;
+            var7 = this.field_q.getRotatedSprites(16);
+            RotatedSpriteCache[] var3_array = var7;
             if (var7 != null) {
               this.field_f = var7;
               this.field_c = true;
@@ -83,7 +83,7 @@ final class om {
             }
             return this.field_c;
           }
-          var8 = this.field_o.a(180);
+          var8 = this.field_o.getSprites(180);
           Sprite[] var3_array2 = var8;
           if (var8 != null) {
             this.field_g = var8;
@@ -92,7 +92,7 @@ final class om {
           }
           return this.field_c;
         }
-        Sprite var6 = this.field_k.a(8192);
+        Sprite var6 = this.field_k.getSprite(8192);
         Sprite var3_ref = var6;
         if (var3_ref != null) {
           this.field_g = new Sprite[]{var6};
@@ -129,7 +129,7 @@ final class om {
         }
     }
 
-    private final void a(va param0, int[] param1, boolean param2) {
+    private final void a(SpriteSheetAsset param0, int[] param1, boolean param2) {
         this.field_l = param1;
         this.field_c = false;
         this.field_o = param0;
@@ -210,20 +210,20 @@ final class om {
             om.a(-52, (fl) null, -89);
           }
           var6 = IsaacPacketBuffer.field_p;
-          var6.c((byte) 33, param2);
+          var6.writeCipheredOpcode((byte) 33, param2);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.f(111, 1);
+          var6.writeByte(111, 1);
           if (null != param1.field_l) {
-            var6.f(param0 - 27280, param1.field_l.length);
-            var6.a(param1.field_l.length, 86, param1.field_l, 0);
+            var6.writeByte(param0 - 27280, param1.field_l.length);
+            var6.writeBytes(param1.field_l.length, 86, param1.field_l, 0);
           } else {
-            var6.f(param0 ^ 27280, 0);
+            var6.writeByte(param0 ^ 27280, 0);
           }
-          var6.a(var4, (byte) 118);
+          var6.appendCrc32(var4, (byte) 118);
           var6.position = var6.position - 4;
-          param1.field_k = var6.a(62);
-          var6.a(-268435456, var6.position - var4);
+          param1.field_k = var6.readInt(62);
+          var6.backpatchByteLength(-268435456, var6.position - var4);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -235,7 +235,7 @@ final class om {
           this.field_a = param1;
           return;
         }
-        field_i = (uf) null;
+        field_i = (SpriteAsset) null;
         this.field_d = false;
         this.field_a = param1;
     }
@@ -249,11 +249,11 @@ final class om {
           return;
         }
         int[] var5 = (int[]) null;
-        this.a((va) null, (int[]) null, true);
+        this.a((SpriteSheetAsset) null, (int[]) null, true);
         this.field_a = (int)Math.sqrt((double)(this.field_m * this.field_m + this.field_h * this.field_h));
     }
 
-    private final void a(int param0, kg param1, int[] param2) {
+    private final void a(int param0, RotatedSpriteSheetAsset param1, int[] param2) {
         this.field_l = param2;
         this.field_g = null;
         this.field_q = param1;
@@ -268,7 +268,7 @@ final class om {
         }
     }
 
-    om(int param0, int param1, va param2, int[] param3, int param4) {
+    om(int param0, int param1, SpriteSheetAsset param2, int[] param3, int param4) {
         try {
           this.field_b = param1;
           this.a(32768, param0);
@@ -287,7 +287,7 @@ final class om {
         RuntimeException decompiledCaughtException = null;
         try {
           lh.a((java.awt.Component) ((Object) param1), false);
-          ic.a(23147, (java.awt.Component) ((Object) param1));
+          ArchiveLoadStage.detachMouseInput(23147, (java.awt.Component) ((Object) param1));
           if (TrackBoundary.field_u != null) {
             TrackBoundary.field_u.a((java.awt.Component) ((Object) param1), -1);
           }
@@ -311,7 +311,7 @@ final class om {
         }
     }
 
-    om(int param0, int param1, kg param2, int[] param3, int param4) {
+    om(int param0, int param1, RotatedSpriteSheetAsset param2, int[] param3, int param4) {
         try {
           this.field_b = param1;
           this.a(32768, param0);
@@ -321,7 +321,7 @@ final class om {
         }
     }
 
-    om(int param0, int param1, int param2, kg param3, int[] param4, int param5) {
+    om(int param0, int param1, int param2, RotatedSpriteSheetAsset param3, int[] param4, int param5) {
         try {
           this.field_b = param2;
           this.a(92682, param1, param0);
@@ -331,7 +331,7 @@ final class om {
         }
     }
 
-    om(int param0, int param1, uf param2, int param3) {
+    om(int param0, int param1, SpriteAsset param2, int param3) {
         try {
           this.field_b = param1;
           this.a(32768, param0);
@@ -341,7 +341,7 @@ final class om {
         }
     }
 
-    om(int param0, int param1, int param2, uf param3, int param4) {
+    om(int param0, int param1, int param2, SpriteAsset param3, int param4) {
         try {
           this.field_b = param2;
           this.a(92682, param1, param0);
@@ -351,7 +351,7 @@ final class om {
         }
     }
 
-    om(int param0, int param1, go param2, int param3) {
+    om(int param0, int param1, RotatedSpriteAsset param2, int param3) {
         try {
           this.field_b = param1;
           this.a(32768, param0);
@@ -361,7 +361,7 @@ final class om {
         }
     }
 
-    om(int param0, int param1, int param2, go param3, int param4) {
+    om(int param0, int param1, int param2, RotatedSpriteAsset param3, int param4) {
         try {
           this.field_b = param2;
           this.a(92682, param1, param0);

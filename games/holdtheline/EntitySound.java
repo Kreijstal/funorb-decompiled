@@ -10,7 +10,7 @@ final class EntitySound extends IntrusiveNode {
     static int[] field_m;
     static float field_k;
     MovingEntity field_q;
-    ui field_p;
+    SoundPlayback field_p;
 
     final static String a(boolean param0, long param1) {
         long var7 = 0L;
@@ -65,7 +65,7 @@ final class EntitySound extends IntrusiveNode {
 
     final void initializeEmitter(MovingEntity param0, byte param1, int param2, PcmSample param3) {
         try {
-          this.field_o = PcmSampleStream.b(param3, 256, param2);
+          this.field_o = PcmSampleStream.createWithStep(param3, 256, param2);
           this.field_n = param2;
           this.field_q = param0;
           if (param1 >= -69) {

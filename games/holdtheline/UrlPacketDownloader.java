@@ -192,7 +192,7 @@ final class UrlPacketDownloader implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
-              var3.write(sj.a((byte) -103, var5));
+              var3.write(CheckboxWidget.encodeCp1252((byte) -103, var5));
               this.field_f = new DataInputStream(var4.getInputStream());
             }
             this.field_g.position = 0;
@@ -303,7 +303,7 @@ final class UrlPacketDownloader implements Runnable {
               return;
             }
             var4 = param1.position;
-            param1.a((byte) -58, var18.field_n);
+            param1.writeInt((byte) -58, var18.field_n);
             for (var5 = param0; var5 < var18.field_p; var5++) {
               if (0 == var18.field_r[var5]) {
                 try {
@@ -311,21 +311,21 @@ final class UrlPacketDownloader implements Runnable {
                   if (var6_int == 0) {
                     var15 = (java.lang.reflect.Field) (var18.field_k[var5].field_b);
                     var8 = var15.getInt((Object) null);
-                    param1.f(111, 0);
-                    param1.a((byte) -58, var8);
+                    param1.writeByte(111, 0);
+                    param1.writeInt((byte) -58, var8);
                   } else {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
                         var26 = (java.lang.reflect.Field) (var18.field_k[var5].field_b);
                         var8 = var26.getModifiers();
-                        param1.f(111, 0);
-                        param1.a((byte) -58, var8);
+                        param1.writeByte(111, 0);
+                        param1.writeInt((byte) -58, var8);
                       }
                     } else {
                       var17_ref = (java.lang.reflect.Field) (var18.field_k[var5].field_b);
                       var19 = var17_ref;
                       var19.setInt((Object) null, var18.field_j[var5]);
-                      param1.f(111, 0);
+                      param1.writeByte(111, 0);
                     }
                   }
                   if (var6_int == 3) {
@@ -338,78 +338,78 @@ final class UrlPacketDownloader implements Runnable {
                     }
                     var10 = var28.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param1.f(111, 0);
+                      param1.writeByte(111, 0);
                     } else if (var10 instanceof Number) {
-                      param1.f(param0 ^ 111, 1);
-                      param1.a((byte) -84, ((Number) (var10)).longValue());
+                      param1.writeByte(param0 ^ 111, 1);
+                      param1.writeLong((byte) -84, ((Number) (var10)).longValue());
                     } else if (!(var10 instanceof String)) {
-                      param1.f(111, 4);
+                      param1.writeByte(111, 4);
                     } else {
-                      param1.f(111, 2);
-                      param1.c(param0 ^ 82, (String) (var10));
+                      param1.writeByte(111, 2);
+                      param1.writeCp1252String(param0 ^ 82, (String) (var10));
                     }
                   } else {
                     if (4 == var6_int) {
                       var27 = (java.lang.reflect.Method) (var18.field_l[var5].field_b);
                       var8Lifetime1 = var27.getModifiers();
-                      param1.f(111, 0);
-                      param1.a((byte) -58, var8Lifetime1);
+                      param1.writeByte(111, 0);
+                      param1.writeInt((byte) -58, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param1.f(param0 + 111, -10);
+                  param1.writeByte(param0 + 111, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param1.f(111, -11);
+                  param1.writeByte(111, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param1.f(param0 + 111, -12);
+                  param1.writeByte(param0 + 111, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param1.f(111, -13);
+                  param1.writeByte(111, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param1.f(param0 + 111, -14);
+                  param1.writeByte(param0 + 111, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param1.f(111, -15);
+                  param1.writeByte(111, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param1.f(111, -16);
+                  param1.writeByte(111, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param1.f(param0 ^ 111, -17);
+                  param1.writeByte(param0 ^ 111, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param1.f(111, -18);
+                  param1.writeByte(111, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param1.f(111, -19);
+                  param1.writeByte(111, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param1.f(param0 ^ 111, -20);
+                  param1.writeByte(param0 ^ 111, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param1.f(111, -21);
+                  param1.writeByte(111, -21);
                 }
               } else {
-                param1.f(111, var18.field_r[var5]);
+                param1.writeByte(111, var18.field_r[var5]);
               }
             }
-            param1.a(var4, (byte) 47);
+            param1.appendCrc32(var4, (byte) 47);
             var18.unlink(param0 + 0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {

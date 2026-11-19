@@ -254,7 +254,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_l) {
                           var8.field_b = this.field_x.a(-16);
                         } else {
-                          var8.field_b = Class.forName("rj").getMethod("listmodes", new Class[]{}).invoke(this.field_e, new Object[]{});
+                          var8.field_b = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_e, new Object[]{});
                         }
                         break;
                       case 6:
@@ -264,12 +264,12 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_l) {
                           this.field_x.a(var8.field_f >> 16, 11468, var8.field_g >>> 16, var14, 65535 & var8.field_f, 65535 & var8.field_g);
                         } else {
-                          Class.forName("rj").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var14, new Integer(var8.field_g >>> 16), new Integer(var8.field_g & 65535), new Integer(var8.field_f >> 16), new Integer(65535 & var8.field_f)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var14, new Integer(var8.field_g >>> 16), new Integer(var8.field_g & 65535), new Integer(var8.field_f >> 16), new Integer(65535 & var8.field_f)});
                         }
                         break;
                       case 7:
                         if (!this.field_l) {
-                          Class.forName("rj").getMethod("exit", new Class[]{}).invoke(this.field_e, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_e, new Object[]{});
                         } else {
                           this.field_x.a(8, (java.awt.Frame) (var8.field_c));
                         }
@@ -283,7 +283,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_l) {
                             this.field_m.a(var4_int, true, var3);
                           } else {
-                            Class.forName("jl").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_d, new Object[]{new Integer(var3), new Integer(var4_int)});
+                            Class.forName("AwtCursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_d, new Object[]{new Integer(var3), new Integer(var4_int)});
                           }
                           break;
                         }
@@ -295,14 +295,14 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_l) {
                             this.field_m.a(var3 != 0, var13, 54);
                           } else {
-                            Class.forName("jl").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_d, new Object[]{var13, new Boolean(var3 != 0)});
+                            Class.forName("AwtCursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_d, new Object[]{var13, new Boolean(var3 != 0)});
                           }
                           break;
                         }
                         if (!this.field_l &&
                           var2_int == 17) {
                           var12 = (Object[]) (var8.field_c);
-                          Class.forName("jl").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_d, new Object[]{var12[0], var12[1], new Integer(var8.field_g), new Integer(var8.field_f), var12[2]});
+                          Class.forName("AwtCursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_d, new Object[]{var12[0], var12[1], new Integer(var8.field_g), new Integer(var8.field_f), var12[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
@@ -591,7 +591,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_l) {
-              this.field_e = Class.forName("rj").newInstance();
+              this.field_e = Class.forName("AwtFullscreenController").newInstance();
             } else {
               var7 = new DirectDrawFullscreenController();
               this.field_x = var7;
@@ -602,7 +602,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_l) {
-              this.field_d = Class.forName("jl").newInstance();
+              this.field_d = Class.forName("AwtCursorController").newInstance();
             } else {
               this.field_m = new MicrosoftCursorController();
             }

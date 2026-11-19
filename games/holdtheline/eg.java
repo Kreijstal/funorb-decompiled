@@ -8,7 +8,7 @@ final class eg {
 
     final static void a(int param0, int param1, boolean param2, IsaacPacketBuffer param3) {
         RuntimeException runtimeException = null;
-        vn var5 = null;
+        NineSlicePanel var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -19,10 +19,10 @@ final class eg {
             param0 = -1 + (1 << param1);
           }
           if (!param2) {
-            var5 = (vn) null;
-            eg.a(-5, 79, 39, -52, -128, -44, 49, -52, 86, (BitmapFont) null, (BitmapFont) null, -67, (vn) null, -60, -43, 119, (vn) null, 123, 73, -126, (vn) null);
+            var5 = (NineSlicePanel) null;
+            eg.a(-5, 79, 39, -52, -128, -44, 49, -52, 86, (BitmapFont) null, (BitmapFont) null, -67, (NineSlicePanel) null, -60, -43, 119, (NineSlicePanel) null, 123, 73, -126, (NineSlicePanel) null);
           }
-          param3.a(73, param1, param0);
+          param3.writeBits(73, param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,7 +45,7 @@ final class eg {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, BitmapFont param10, int param11, vn param12, int param13, int param14, int param15, vn param16, int param17, int param18, int param19, vn param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, BitmapFont param10, int param11, NineSlicePanel param12, int param13, int param14, int param15, NineSlicePanel param16, int param17, int param18, int param19, NineSlicePanel param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -63,7 +63,7 @@ final class eg {
           WhirlpoolHasher.a(param10, param9, (byte) -112, param2);
           StraightRoadSegment.a(param3, param7, param17, param0, (byte) -96);
           WhirlpoolHasher.a(-76, param15, param13);
-          ic.a(param18, param12, param16, 19362, param8, param14);
+          ArchiveLoadStage.a(param18, param12, param16, 19362, param8, param14);
           jn.a(param1, param20, param4, 0);
           ih.a(14893, param6, param19, param5);
           if (param11 != 2) {
@@ -117,9 +117,9 @@ final class eg {
         Sprite var6;
         var3 = HoldTheLine.field_D;
         var1 = 128;
-        if (0 == ej.field_b ||
-          ej.field_b == 1 ||
-          ej.field_b == -1) {
+        if (0 == ByteStorage.field_b ||
+          ByteStorage.field_b == 1 ||
+          ByteStorage.field_b == -1) {
           var1 = 256;
         }
         if (var1 > ga.field_o) {
@@ -186,14 +186,14 @@ final class eg {
     final static IndexedSprite[] b(boolean param0) {
         int var2 = 0;
         int var3 = HoldTheLine.field_D;
-        IndexedSprite[] var1 = new IndexedSprite[vn.field_d];
-        for (var2 = 0; var2 < vn.field_d; var2++) {
-          var1[var2] = new IndexedSprite(bo.field_b, ih.field_o, la.field_j[var2], wb.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], IterableSecondaryNodeDeque.field_e[var2], StraightRoadSegment.field_E);
+        IndexedSprite[] var1 = new IndexedSprite[NineSlicePanel.field_d];
+        for (var2 = 0; var2 < NineSlicePanel.field_d; var2++) {
+          var1[var2] = new IndexedSprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], IterableSecondaryNodeDeque.field_e[var2], StraightRoadSegment.field_E);
         }
         tk.a(param0);
         if (param0) {
-          vn var4 = (vn) null;
-          eg.a(-72, -10, 111, 19, -41, -54, -99, -123, -100, (BitmapFont) null, (BitmapFont) null, -127, (vn) null, 71, 19, 60, (vn) null, -44, 42, -10, (vn) null);
+          NineSlicePanel var4 = (NineSlicePanel) null;
+          eg.a(-72, -10, 111, 19, -41, -54, -99, -123, -100, (BitmapFont) null, (BitmapFont) null, -127, (NineSlicePanel) null, 71, 19, 60, (NineSlicePanel) null, -44, 42, -10, (NineSlicePanel) null);
         }
         return var1;
     }

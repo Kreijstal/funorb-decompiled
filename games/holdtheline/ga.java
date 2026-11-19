@@ -116,8 +116,8 @@ final class ga {
           var11 = 1;
           if (var8 < var9 ||
             param2.indexOf("<br>") != -1) {
-            if (em.field_k == null) {
-              em.field_k = new String[16];
+            if (AgeValidator.field_k == null) {
+              AgeValidator.field_k = new String[16];
             }
             if (var9 <= var8) {
               var12 = var8;
@@ -125,11 +125,11 @@ final class ga {
               var13 = var9 / var8;
               var12 = var8 + (var9 % var8 + var13 - 1) / var13 * 2;
             }
-            var11Lifetime1 = this.field_m.a(param2, new int[]{var12}, em.field_k);
+            var11Lifetime1 = this.field_m.a(param2, new int[]{var12}, AgeValidator.field_k);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_m.a(em.field_k[var13Lifetime2]);
+              var14 = this.field_m.a(AgeValidator.field_k[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -224,34 +224,34 @@ final class ga {
     }
 
     final void a(BitmapFont param0, byte param1) {
-        dk var18 = null;
-        ig var4 = null;
+        TextWidgetStyle var18 = null;
+        LayeredButtonRenderer var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var17 = null;
         ArgbSprite var19 = null;
         int var7_int = 0;
-        ig var6 = null;
-        ig var7 = null;
-        vh discarded$0 = null;
-        ug discarded$1 = null;
-        ig var8 = null;
+        LayeredButtonRenderer var6 = null;
+        LayeredButtonRenderer var7 = null;
+        DialWidgetRenderer discarded$0 = null;
+        MarkerSliderRenderer discarded$1 = null;
+        LayeredButtonRenderer var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
         Sprite dupTemp$2 = null;
-        ig var11 = null;
-        ig var12 = null;
+        LayeredButtonRenderer var11 = null;
+        LayeredButtonRenderer var12 = null;
         Sprite var13 = null;
-        ig var14 = null;
-        ig var20 = null;
+        LayeredButtonRenderer var14 = null;
+        LayeredButtonRenderer var20 = null;
         int var15 = HoldTheLine.field_D;
-        ig var14Lifetime1;
-        ig var14Lifetime2;
+        LayeredButtonRenderer var14Lifetime1;
+        LayeredButtonRenderer var14Lifetime2;
         try {
-          var18 = new dk(param0, 2, 2, 2236962, 1, 1, 1, param0.field_G - (-param0.field_I - 2));
+          var18 = new TextWidgetStyle(param0, 2, 2, 2236962, 1, 1, 1, param0.field_G - (-param0.field_I - 2));
           this.field_r = (WidgetRenderer) ((Object) var18);
           var18.field_c = 16777215;
-          var4 = new ig();
-          var18.a((byte) -123, var4);
+          var4 = new LayeredButtonRenderer();
+          var18.copyTo((byte) -123, var4);
           this.field_m = param0;
           this.field_j = 15658734;
           this.field_g = -1;
@@ -276,17 +276,17 @@ final class ga {
           var4.a(4, -79).a(true, param1 ^ -2147483609).a(29536, var5);
           var4.a(5, -97).a(29536, EntitySound.a(0, 0, 65793, -104, 0)).a(true, -2147483648).b(-1, -26228);
           this.field_p = (WidgetRenderer) ((Object) var4);
-          var6 = new ig(var4, true);
+          var6 = new LayeredButtonRenderer(var4, true);
           var6.field_i = 0;
-          var7 = new ig(var4, true);
+          var7 = new LayeredButtonRenderer(var4, true);
           var7.field_i = 0;
           var7.a((byte) -2, bb.a(8947848, (byte) -127));
           var7.a(1, param1 + 75).a(param1 + 29497, bb.a(11184810, (byte) 87)).b(2236962, -26228);
-          this.field_f = (WidgetRenderer) ((Object) new ek(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new vh(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new ug(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
-          var8 = new ig();
-          var18.a((byte) -124, var8);
+          this.field_f = (WidgetRenderer) ((Object) new CheckboxRenderer(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new DialWidgetRenderer(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new MarkerSliderRenderer(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          var8 = new LayeredButtonRenderer();
+          var18.copyTo((byte) -124, var8);
           var8.a(0, 61).a(29536, ImageProducerRasterBuffer.a(10066329, 7829367, 15658734, 14)).b(1118481, -26228).b(-1, false);
           var8.a(4, -90).a(true, param1 ^ -2147483609).a(29536, var5);
           this.field_s = (WidgetRenderer) ((Object) var8);
@@ -297,26 +297,26 @@ final class ga {
           dupTemp$2 = var9[4];
           dupTemp$2.field_z = new int[]{6710886, 7829367};
           var10[4].field_z = new int[]{6710886, 7829367};
-          var11 = new ig();
+          var11 = new LayeredButtonRenderer();
           if (param1 != 39) {
             ResourceArchive var16 = (ResourceArchive) null;
             ga.a((String) null, (String) null, (ResourceArchive) null, (byte) -94, (ResourceArchive) null);
           }
-          var12 = new ig();
+          var12 = new LayeredButtonRenderer();
           var11.a(var9, 6821, 0);
           var12.a(var10, 6821, 0);
           var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
-          var14 = new ig(var4, true);
+          var14 = new LayeredButtonRenderer(var4, true);
           var14.a(var13.e(), param1 - 39);
           var13.b();
-          var14Lifetime1 = new ig(var4, true);
+          var14Lifetime1 = new LayeredButtonRenderer(var4, true);
           var14Lifetime1.a(var13.e(), 0);
           var13.b();
-          var14Lifetime2 = new ig(var4, true);
+          var14Lifetime2 = new LayeredButtonRenderer(var4, true);
           var14Lifetime2.a(var13.e(), 0);
           var13.b();
-          var20 = new ig(var4, true);
+          var20 = new LayeredButtonRenderer(var4, true);
           var20.a(var13, 0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ga.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

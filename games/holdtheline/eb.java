@@ -20,12 +20,12 @@ final class eb extends Point2i {
         }
     }
 
-    final static sd a(String param0, long param1, boolean param2, String param3, boolean param4) {
+    final static LoginCredentials createLoginCredentials(String param0, long param1, boolean param2, String param3, boolean param4) {
         RuntimeException var6 = null;
-        sd stackIn_2_0 = null;
-        fh stackIn_6_0 = null;
+        LoginCredentials stackIn_2_0 = null;
+        EmailLoginCredentials stackIn_6_0 = null;
         bn stackIn_10_0 = null;
-        pd stackIn_12_0 = null;
+        UsernameLoginCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -34,20 +34,20 @@ final class eb extends Point2i {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param4) {
-            stackIn_2_0 = (sd) null;
+            stackIn_2_0 = (LoginCredentials) null;
             return stackIn_2_0;
           }
           if (0L == param1 &&
             param0 != null) {
-            stackIn_6_0 = new fh(param0, param3);
-            return (sd) ((Object) stackIn_6_0);
+            stackIn_6_0 = new EmailLoginCredentials(param0, param3);
+            return (LoginCredentials) ((Object) stackIn_6_0);
           }
           if (param2) {
             stackIn_10_0 = new bn(param1, param3);
-            return (sd) ((Object) stackIn_10_0);
+            return (LoginCredentials) ((Object) stackIn_10_0);
           }
-          stackIn_12_0 = new pd(param1, param3);
-          return (sd) ((Object) stackIn_12_0);
+          stackIn_12_0 = new UsernameLoginCredentials(param1, param3);
+          return (LoginCredentials) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -80,16 +80,16 @@ final class eb extends Point2i {
         try {
           var1 = IsaacPacketBuffer.field_p;
           while (ad.a(100)) {
-            var1.c((byte) 33, 8);
+            var1.writeCipheredOpcode((byte) 33, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             UrlPacketDownloader.a(0, var1);
-            IsaacPacketBuffer.field_p.a(-268435456, var1.position - var2);
+            IsaacPacketBuffer.field_p.backpatchByteLength(-268435456, var1.position - var2);
           }
           if (param0 >= -67) {
             var4 = (String) null;
-            eb.a((String) null, 111L, true, (String) null, true);
+            eb.createLoginCredentials((String) null, 111L, true, (String) null, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

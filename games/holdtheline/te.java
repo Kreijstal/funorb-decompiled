@@ -11,7 +11,7 @@ final class te {
 
     final static void a(boolean param0) {
         if (null != MidiPcmStream.field_U) {
-          em.a(-29486, false);
+          AgeValidator.a(-29486, false);
           MouseInputHandler.a(GameKeyHandler.a(76), param0);
           return;
         }
@@ -111,40 +111,40 @@ final class te {
         var11 = HoldTheLine.field_D;
         try {
           var7_int = jg.a(-1, param5);
-          if (an.field_a == null) {
-            an.field_a = new java.security.SecureRandom();
+          if (GzipDecompressor.field_a == null) {
+            GzipDecompressor.field_a = new java.security.SecureRandom();
           }
           var14 = new int[4];
           var13 = var14;
           var8 = var13;
           for (var9 = 0; 4 > var9; var9++) {
-            var8[var9] = an.field_a.nextInt();
+            var8[var9] = GzipDecompressor.field_a.nextInt();
           }
           if (r.field_d == null ||
             !(var7_int <= r.field_d.payload.length)) {
             r.field_d = new PacketBuffer(var7_int);
           }
           r.field_d.position = 0;
-          r.field_d.a(param5, 13, param6, param3);
-          r.field_d.b((byte) 127, var7_int);
-          r.field_d.a(var14, 111);
+          r.field_d.writeBytes(param5, 13, param6, param3);
+          r.field_d.padToPosition((byte) 127, var7_int);
+          r.field_d.xteaEncryptAll(var14, 111);
           if (om.field_n == null ||
             !(om.field_n.payload.length >= 100)) {
             om.field_n = new PacketBuffer(100);
           }
           om.field_n.position = 0;
-          om.field_n.f(111, 10);
+          om.field_n.writeByte(111, 10);
           var12 = 0;
           var9Lifetime1 = var12;
           var10 = 4 / ((param4 - 61) / 43);
           while (4 > var12) {
-            om.field_n.a((byte) -58, var14[var12]);
+            om.field_n.writeInt((byte) -58, var14[var12]);
             var12++;
           }
-          om.field_n.b(-652561784, param5);
-          om.field_n.a(param0, param1, (byte) 114);
-          param2.a(om.field_n.position, 19, om.field_n.payload, 0);
-          param2.a(r.field_d.position, 58, r.field_d.payload, 0);
+          om.field_n.writeShort(-652561784, param5);
+          om.field_n.rsaEncrypt(param0, param1, (byte) 114);
+          param2.writeBytes(om.field_n.position, 19, om.field_n.payload, 0);
+          param2.writeBytes(r.field_d.position, 58, r.field_d.payload, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

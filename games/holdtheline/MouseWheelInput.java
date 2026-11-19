@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static uf field_a;
+    static SpriteAsset field_a;
     static int field_b;
-    static go field_c;
-    static oa field_d;
+    static RotatedSpriteAsset field_c;
+    static NamedSoundEffect field_d;
 
     final static void a(int param0, int param1, byte param2, int param3) {
         IsaacPacketBuffer var5;
-        if (-1 == on.field_v[param1][param3] ||
-          !(on.field_v[param1][param3] <= param0)) {
-          on.field_v[param1][param3] = param0;
+        if (-1 == QuickChatPhraseDefinition.field_v[param1][param3] ||
+          !(QuickChatPhraseDefinition.field_v[param1][param3] <= param0)) {
+          QuickChatPhraseDefinition.field_v[param1][param3] = param0;
           tn.a(0);
         }
         if (param2 != 62) {
@@ -61,35 +61,35 @@ abstract class MouseWheelInput {
           var16 = (float)var9_int * param4.y - (float)var10 * param4.x;
           var17 = (float)var10 * param0.y + param0.x * (float)var9_int;
           var18 = param0.y * (float)var9_int - param0.x * (float)var10;
-          le.field_s[0] = (float)(-param5) + (-(var13 * (float)param6) - var11 * (float)param3 + Math.abs(var15));
+          ShadedRoadStripRenderer.field_s[0] = (float)(-param5) + (-(var13 * (float)param6) - var11 * (float)param3 + Math.abs(var15));
           if (param8 != 7527) {
-            field_a = (uf) null;
+            field_a = (SpriteAsset) null;
           }
-          if (le.field_s[0] > 0.0f) {
+          if (ShadedRoadStripRenderer.field_s[0] > 0.0f) {
             return false;
           }
-          le.field_s[1] = -(var14 * (float)param6) - var12 * (float)param3 + Math.abs(var16) - (float)param2;
-          if (le.field_s[1] > 0.0f) {
+          ShadedRoadStripRenderer.field_s[1] = -(var14 * (float)param6) - var12 * (float)param3 + Math.abs(var16) - (float)param2;
+          if (ShadedRoadStripRenderer.field_s[1] > 0.0f) {
             return false;
           }
-          le.field_s[2] = -((float)param2 * var12) - (float)param5 * var11 + Math.abs(var17) - (float)param3;
-          if (le.field_s[2] > 0.0f) {
+          ShadedRoadStripRenderer.field_s[2] = -((float)param2 * var12) - (float)param5 * var11 + Math.abs(var17) - (float)param3;
+          if (ShadedRoadStripRenderer.field_s[2] > 0.0f) {
             return false;
           }
-          le.field_s[3] = Math.abs(var18) - (var14 * (float)param2 + (float)param5 * var13) - (float)param6;
-          if (0.0f < le.field_s[3]) {
+          ShadedRoadStripRenderer.field_s[3] = Math.abs(var18) - (var14 * (float)param2 + (float)param5 * var13) - (float)param6;
+          if (0.0f < ShadedRoadStripRenderer.field_s[3]) {
             return false;
           }
-          ek.field_o = 0;
-          var19 = le.field_s[0];
+          CheckboxRenderer.field_o = 0;
+          var19 = ShadedRoadStripRenderer.field_s[0];
           for (var20_int = 1; var20_int < 4; var20_int++) {
-            if (var19 < le.field_s[var20_int]) {
-              var19 = le.field_s[var20_int];
-              ek.field_o = var20_int * 2;
+            if (var19 < ShadedRoadStripRenderer.field_s[var20_int]) {
+              var19 = ShadedRoadStripRenderer.field_s[var20_int];
+              CheckboxRenderer.field_o = var20_int * 2;
             }
           }
           EntitySound.field_k = -var19;
-          if (ek.field_o == 0) {
+          if (CheckboxRenderer.field_o == 0) {
             SecondaryNodeDequeIterator.field_c = new Vector2f(param4);
             var20 = DualLinkNode.signumFloat(-29407, param0.dot(param4, (byte) -10)) * param0.x * (float)param3 - DualLinkNode.signumFloat(-29407, param0.cross(param4, true)) * param0.y * (float)param6;
             var21 = (float)param3 * (DualLinkNode.signumFloat(-29407, param0.dot(param4, (byte) -10)) * param0.y) + DualLinkNode.signumFloat(-29407, param0.cross(param4, true)) * param0.x * (float)param6;
@@ -97,26 +97,26 @@ abstract class MouseWheelInput {
               SecondaryNodeDequeIterator.field_c.scale(-1.0f, -1);
               var21 = -var21;
               var20 = -var20;
-              ek.field_o = ek.field_o + 1;
+              CheckboxRenderer.field_o = CheckboxRenderer.field_o + 1;
             }
             RasterBuffer.field_d = var20 + (float)param1.x;
             IterableSecondaryNodeDeque.field_b = (float)param1.y + var21;
             return true;
           }
-          if (ek.field_o == 2) {
+          if (CheckboxRenderer.field_o == 2) {
             SecondaryNodeDequeIterator.field_c = param4.perpendicular((byte) -74);
             var20Lifetime1 = (float)param3 * (DualLinkNode.signumFloat(-29407, param0.cross(param4, true)) * param0.x) + (float)param6 * (DualLinkNode.signumFloat(param8 - 36934, param0.dot(param4, (byte) -10)) * param0.y);
             var21Lifetime1 = (float)param3 * (DualLinkNode.signumFloat(-29407, param0.cross(param4, true)) * param0.y) - (float)param6 * (DualLinkNode.signumFloat(-29407, param0.dot(param4, (byte) -10)) * param0.x);
             if (0.0f < var16) {
               SecondaryNodeDequeIterator.field_c.scale(-1.0f, -1);
               var21Lifetime1 = -var21Lifetime1;
-              ek.field_o = ek.field_o + 1;
+              CheckboxRenderer.field_o = CheckboxRenderer.field_o + 1;
               var20Lifetime1 = -var20Lifetime1;
             }
             RasterBuffer.field_d = (float)param1.x + var20Lifetime1;
             IterableSecondaryNodeDeque.field_b = (float)param1.y + var21Lifetime1;
           } else {
-            if (ek.field_o != 4) {
+            if (CheckboxRenderer.field_o != 4) {
               SecondaryNodeDequeIterator.field_c = param0.perpendicular((byte) -81);
               var20Lifetime1 = DualLinkNode.signumFloat(param8 ^ -28602, param4.cross(param0, true)) * param4.x * (float)param5 + (float)param2 * (DualLinkNode.signumFloat(-29407, param4.dot(param0, (byte) -10)) * param4.y);
               var21Lifetime1 = (float)param5 * (DualLinkNode.signumFloat(-29407, param4.cross(param0, true)) * param4.y) - DualLinkNode.signumFloat(param8 - 36934, param4.dot(param0, (byte) -10)) * param4.x * (float)param2;
@@ -124,7 +124,7 @@ abstract class MouseWheelInput {
                 SecondaryNodeDequeIterator.field_c.scale(-1.0f, -1);
                 var21Lifetime1 = -var21Lifetime1;
                 var20Lifetime1 = -var20Lifetime1;
-                ek.field_o = ek.field_o + 1;
+                CheckboxRenderer.field_o = CheckboxRenderer.field_o + 1;
               }
               IterableSecondaryNodeDeque.field_b = var21Lifetime1 + (float)param7.y;
               RasterBuffer.field_d = (float)param7.x + var20Lifetime1;
@@ -134,7 +134,7 @@ abstract class MouseWheelInput {
               var21Lifetime1 = (float)param5 * (DualLinkNode.signumFloat(-29407, param4.dot(param0, (byte) -10)) * param4.y) + DualLinkNode.signumFloat(-29407, param4.cross(param0, true)) * param4.x * (float)param2;
               if (0.0f < var17) {
                 SecondaryNodeDequeIterator.field_c.scale(-1.0f, param8 - 7528);
-                ek.field_o = ek.field_o + 1;
+                CheckboxRenderer.field_o = CheckboxRenderer.field_o + 1;
                 var20Lifetime1 = -var20Lifetime1;
                 var21Lifetime1 = -var21Lifetime1;
               }
@@ -196,27 +196,27 @@ abstract class MouseWheelInput {
         RuntimeException var4 = null;
         var8 = HoldTheLine.field_D;
         try {
-          var4_int = param2.h(param1, 7);
+          var4_int = param2.readBits(param1, 7);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
           }
           if (param3) {
-            field_a = (uf) null;
+            field_a = (SpriteAsset) null;
           }
           if (param0 == null ||
             param0.length != var4_int) {
             param0 = new short[var4_int];
           }
-          var5 = param2.h(4, 7);
-          var6 = (short)param2.h(16, 7);
+          var5 = param2.readBits(4, 7);
+          var6 = (short)param2.readBits(16, 7);
           if (0 >= var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param0[var7] = (short)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (short)(var6 + param2.h(var5, 7));
+              param0[var7] = (short)(var6 + param2.readBits(var5, 7));
             }
           }
           stackIn_18_0 = (short[]) (param0);
@@ -253,7 +253,7 @@ abstract class MouseWheelInput {
     final static void a(int param0) {
         int fieldTemp$1 = 0;
         if (param0 != 4) {
-          field_c = (go) null;
+          field_c = (RotatedSpriteAsset) null;
         }
         if (rc.field_c.length > ArchiveIndex.field_a) {
           fieldTemp$1 = ArchiveIndex.field_a;

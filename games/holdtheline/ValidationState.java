@@ -1,0 +1,29 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ValidationState {
+    static SpriteAsset field_e;
+    static int[][] field_a;
+    static sa field_c;
+    static String field_b;
+    static int field_d;
+
+    public static void clearSharedReferences(int param0) {
+        int var1 = 113 / ((-37 - param0) / 56);
+        field_e = null;
+        field_b = null;
+        field_a = (int[][]) null;
+        field_c = null;
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    static {
+        field_a = new int[][]{new int[]{96}, new int[]{97}, new int[]{98}, new int[]{99}, new int[]{83, 82}};
+        field_c = new sa();
+        field_b = "Warning: if you quit, you will lose any game you are in the middle of!";
+        field_d = 50;
+    }
+}

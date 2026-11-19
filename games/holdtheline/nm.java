@@ -19,10 +19,10 @@ final class nm {
 
     final static ResourceArchive a(boolean param0, int param1, int param2, boolean param3, int param4) {
         if (param2 <= -81) {
-          return kh.a(param1, param3, param0, false, 10600, param4);
+          return EmailConfirmationValidator.createResourceArchive(param1, param3, param0, false, 10600, param4);
         }
         nm.clearSharedReferences(86);
-        return kh.a(param1, param3, param0, false, 10600, param4);
+        return EmailConfirmationValidator.createResourceArchive(param1, param3, param0, false, 10600, param4);
     }
 
     public static void clearSharedReferences(int param0) {

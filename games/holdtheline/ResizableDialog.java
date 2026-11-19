@@ -4,7 +4,7 @@
 abstract class ResizableDialog extends FadingDialog {
     private int field_P;
     private int field_M;
-    static oa field_O;
+    static NamedSoundEffect field_O;
     static int field_V;
     static String field_Q;
     static int[] field_S;
@@ -44,7 +44,7 @@ abstract class ResizableDialog extends FadingDialog {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = HoldTheLine.field_D;
-        SoftwareRasterizer.a(6 + param0, param1 + 35, -12 + this.field_x, this.field_u - 40, 2105376, 0);
+        SoftwareRasterizer.a(6 + param0, param1 + 35, -12 + this.width, this.height - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -55,7 +55,7 @@ abstract class ResizableDialog extends FadingDialog {
             var8 < SoftwareRasterizer.field_i) {
             var9 = var5 + var7 * (-var5 + var6) / var4;
             var10 = 0;
-            var11 = this.field_x;
+            var11 = this.width;
             if (var7 <= 20) {
               while (20 >= var10) {
                 var12 = (-var7 + 20) * (20 - var7) + (20 - var10) * (-var10 + 20);
@@ -110,14 +110,14 @@ abstract class ResizableDialog extends FadingDialog {
           var9Lifetime1 = var5Lifetime1 + (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
           SoftwareRasterizer.b(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.b(-6 + (param0 + this.field_x), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.b(-6 + (param0 + this.width), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        SpriteState.field_t.a(param0 + this.field_x - 90, param1 + 10);
-        NameSuggestionsPanel.a(param1 + 35, 14191, param0 + 5, RaceVehicle.field_Db, -10 + this.field_x);
-        NameSuggestionsPanel.a(-22 + this.field_u + param1, 14191, param0, te.field_b, this.field_x);
-        var4Lifetime2 = this.field_u - 79;
+        SpriteState.field_t.a(param0 + this.width - 90, param1 + 10);
+        NameSuggestionsPanel.a(param1 + 35, 14191, param0 + 5, RaceVehicle.field_Db, -10 + this.width);
+        NameSuggestionsPanel.a(-22 + this.height + param1, 14191, param0, te.field_b, this.width);
+        var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var7Lifetime2 = 0;
@@ -126,7 +126,7 @@ abstract class ResizableDialog extends FadingDialog {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
           SoftwareRasterizer.b(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.b(-6 + this.field_x + param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.b(-6 + this.width + param0, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -187,8 +187,8 @@ abstract class ResizableDialog extends FadingDialog {
         this.field_L = 0;
         this.field_N = param3;
         this.field_W = param2;
-        this.field_M = this.field_u;
-        this.field_T = this.field_x;
+        this.field_M = this.height;
+        this.field_T = this.width;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -202,13 +202,13 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final static String j(int param0) {
-        if (ng.field_e == null) {
+        if (QuickChatPhraseCache.field_e == null) {
           return "";
         }
         if (param0 != 21) {
-          field_O = (oa) null;
+          field_O = (NamedSoundEffect) null;
         }
-        return ng.field_e;
+        return QuickChatPhraseCache.field_e;
     }
 
     void b(boolean param0) {

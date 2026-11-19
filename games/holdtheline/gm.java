@@ -29,18 +29,18 @@ final class gm implements WidgetRenderer {
           if (param2 >= -48) {
             gm.clearSharedReferences(36);
           }
-          var6_int = param3.field_k + param1;
-          var7 = param3.field_o + param4;
-          tn.a(var6_int, param3.field_x, 152, var7, param3.field_u);
+          var6_int = param3.x + param1;
+          var7 = param3.y + param4;
+          tn.a(var6_int, param3.width, 152, var7, param3.height);
           var8 = FullscreenFocusCanvas.field_i[1];
           if (param3 instanceof TextButton &&
             ((TextButton) (param3)).field_B) {
-            var8.b((-var8.field_o + param3.field_x >> 1) + 1 + var6_int, (-var8.field_v + param3.field_u >> 1) + (var7 + 1), 256);
+            var8.b((-var8.field_o + param3.width >> 1) + 1 + var6_int, (-var8.field_v + param3.height >> 1) + (var7 + 1), 256);
           }
-          if (!param3.c((byte) -20)) {
+          if (!param3.isFocused((byte) -20)) {
             return;
           }
-          ei.a(param3.field_u - 4, param3.field_x - 4, 2 + var6_int, var7 + 2, (byte) 19);
+          GrowableObjectList.a(param3.height - 4, param3.width - 4, 2 + var6_int, var7 + 2, (byte) 19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

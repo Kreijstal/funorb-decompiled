@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sh {
-    static e field_b;
+    static QuickChatDynamicCommand field_b;
     static String field_a;
     static String field_c;
 
@@ -73,6 +73,6 @@ final class sh {
     static {
         field_a = "Player Name: ";
         field_c = "<%0> retry attempts remaining";
-        field_b = new e(11, 0, 1, 2);
+        field_b = new QuickChatDynamicCommand(11, 0, 1, 2);
     }
 }

@@ -50,7 +50,7 @@ final class RaceVehicle extends MovingEntity {
     private int field_kc;
     private wm field_yb;
     int[] field_hc;
-    private ei field_sb;
+    private GrowableObjectList field_sb;
     int field_Q;
     private int field_Yb;
     private float field_D;
@@ -65,7 +65,7 @@ final class RaceVehicle extends MovingEntity {
     private int field_nb;
     int field_tc;
     private float field_wc;
-    static mf field_Wb;
+    static LoginMethodPreference field_Wb;
     private eb[] field_sc;
     private int field_dc;
     private int field_gc;
@@ -99,7 +99,7 @@ final class RaceVehicle extends MovingEntity {
     Sprite field_kb;
     private int field_qc;
     private int field_qb;
-    static nd field_U;
+    static NameAvailabilityResult field_U;
     private int field_gb;
     private boolean field_nc;
     private float field_wb;
@@ -335,7 +335,7 @@ final class RaceVehicle extends MovingEntity {
                           var18 = this.direction.y * (float)var17 + this.direction.x * (float)var16;
                           var19 = (float)var16 * this.direction.y - (float)var17 * this.direction.x;
                           if (var18 > Math.abs(var19) * 4.0f &&
-                            !kj.a(140, var15.position, this.position, MusicPatchPcmStream.field_r.field_nb)) {
+                            !SolidRoadStripRenderer.intersectsBoundaryGroups(140, var15.position, this.position, MusicPatchPcmStream.field_r.field_nb)) {
                             var12 = 1;
                             if (var20 == 0) {
                               break scanLoop4;
@@ -373,7 +373,7 @@ final class RaceVehicle extends MovingEntity {
                           var18Lifetime1 = this.direction.x * (float)var16Lifetime1 + this.direction.y * (float)var17Lifetime1;
                           var19Lifetime1 = -(this.direction.x * (float)var17Lifetime1) + this.direction.y * (float)var16Lifetime1;
                           if (var18Lifetime1 > 4.0f * Math.abs(var19Lifetime1) &&
-                            !kj.a(140, var15Lifetime1.position, this.position, MusicPatchPcmStream.field_r.field_nb)) {
+                            !SolidRoadStripRenderer.intersectsBoundaryGroups(140, var15Lifetime1.position, this.position, MusicPatchPcmStream.field_r.field_nb)) {
                             var12 = 1;
                             if (var20 == 0) {
                               break scanLoop5;
@@ -404,7 +404,7 @@ final class RaceVehicle extends MovingEntity {
               }
             }
             if ((decompiledFrameRemainder4) && (null == this.field_yb ||
-              kj.b(2, 250) == 0)) {
+              SolidRoadStripRenderer.b(2, 250) == 0)) {
               var12 = 1;
               var14_ref_wm = (wm) (MusicPatchPcmStream.field_r.field_d.first((byte) 115));
               scanLoop6: while (true) {
@@ -483,7 +483,7 @@ final class RaceVehicle extends MovingEntity {
             NanoTickClock.a(true, this.field_Z);
           }
           if (param0 < 97) {
-            this.field_sb = (ei) null;
+            this.field_sb = (GrowableObjectList) null;
           }
           this.field_Z = null;
           if (this.field_fb != null) {
@@ -520,7 +520,7 @@ final class RaceVehicle extends MovingEntity {
         try {
           if (null != param0 &&
             0 == this.field_rc &&
-            !kb.a(16616, 0)) {
+            !LoginCredentialType.a(16616, 0)) {
             param0.field_Sb = param0.field_Sb + 1;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -637,8 +637,8 @@ final class RaceVehicle extends MovingEntity {
         var10 = HoldTheLine.field_D;
         try {
           var2_float = (float)(-(int)this.field_vb) + this.field_vb;
-          var3 = this.field_zb.a(false, var2_float);
-          var4 = this.field_zb.a((byte) 126, var2_float);
+          var3 = this.field_zb.pointAt(false, var2_float);
+          var4 = this.field_zb.directionAt((byte) 126, var2_float);
           var5 = (float)Math.atan2((double)(-var4.y), (double)var4.x);
           var6 = -this.worldX + (float)var3.x;
           var7 = -this.worldY + (float)var3.y;
@@ -692,7 +692,7 @@ final class RaceVehicle extends MovingEntity {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_float = this.field_vb - (float)(int)this.field_vb;
-          var3 = this.field_zb.a((byte) 120, var2_float);
+          var3 = this.field_zb.directionAt((byte) 120, var2_float);
           if (param0 != 45) {
             field_Db = (Sprite[]) null;
           }
@@ -705,7 +705,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final void a(eb[] param0, ei param1, int param2) {
+    private final void a(eb[] param0, GrowableObjectList param1, int param2) {
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
         float stackIn_56_0 = 0.0f;
@@ -806,7 +806,7 @@ final class RaceVehicle extends MovingEntity {
                 var6.x = var7.position.x;
                 var6.y = var7.position.y;
                 this.a(var6, var12, var16, -1);
-                param1.a(var16, (byte) 6);
+                param1.add(var16, (byte) 6);
                 if (var11 < (var13Lifetime1 * var13Lifetime1)) {
                   if (var12 != -1 + param0.length) {
                     stackIn_56_0 = (float)param0[var12 + 1].x;
@@ -851,8 +851,8 @@ final class RaceVehicle extends MovingEntity {
                   var6.y = (int)((float)var7.position.y + var17Lifetime1 * (float)(var13Lifetime1 + 15));
                   var6.x = (int)(-((float)(-5 + (20 + var13Lifetime1)) * var18Lifetime1) + (float)var7.position.x);
                   this.a(var6, var12, var21, -1);
-                  param1.a(var20, (byte) 6);
-                  param1.a(var21, (byte) 6);
+                  param1.add(var20, (byte) 6);
+                  param1.add(var21, (byte) 6);
                   return;
                 }
                 return;
@@ -884,10 +884,10 @@ final class RaceVehicle extends MovingEntity {
     private final void g(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        oa stackIn_103_0 = null;
+        NamedSoundEffect stackIn_103_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        oa var2 = null;
+        NamedSoundEffect var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var2_intLifetime1;
@@ -898,7 +898,7 @@ final class RaceVehicle extends MovingEntity {
             if (this.field_I) {
               var2_int = 0;
               if (this.field_rb != null) {
-                var2_int = this.field_rb.field_o.i();
+                var2_int = this.field_rb.field_o.getSamplePosition();
                 boolean decompiledSharedTail0 = (var2_int != -1 &&
                   (var2_int < this.field_C.field_u.field_m));
                 if (!decompiledSharedTail0) {
@@ -915,8 +915,8 @@ final class RaceVehicle extends MovingEntity {
                 NanoTickClock.a(true, this.field_S);
               }
               this.field_S = ValidationHelpWidget.a((byte) 3, (MovingEntity) (this), this.field_C.field_L, this.field_C.field_L.field_q);
-              this.field_S.field_o.i(var2_int);
-              this.field_S.field_o.g(-1);
+              this.field_S.field_o.setSamplePosition(var2_int);
+              this.field_S.field_o.setLoopCount(-1);
               this.field_I = false;
               decompiledFrameRemainder0 = (var3 != 0);
             }
@@ -940,10 +940,10 @@ final class RaceVehicle extends MovingEntity {
           }
           if (decompiledFrameRemainder0) {
             if (this.field_I) {
-              if (this.field_rb.field_o.i() > this.field_C.field_u.field_m &&
+              if (this.field_rb.field_o.getSamplePosition() > this.field_C.field_u.field_m &&
                 0.0f != this.field_jc &&
-                kj.b(2, 50) == 0) {
-                this.field_rb.field_o.i((this.field_C.field_u.field_m + kj.b(2, this.field_C.field_u.field_m)) / 2);
+                SolidRoadStripRenderer.b(2, 50) == 0) {
+                this.field_rb.field_o.setSamplePosition((this.field_C.field_u.field_m + SolidRoadStripRenderer.b(2, this.field_C.field_u.field_m)) / 2);
               }
               if (this.field_Vb < 8) {
                 this.field_Vb = this.field_Vb + 1;
@@ -964,7 +964,7 @@ final class RaceVehicle extends MovingEntity {
             if (decompiledFrameRemainder0) {
               var2_intLifetime1 = 0;
               if (this.field_S != null) {
-                var2_intLifetime1 = this.field_S.field_o.i();
+                var2_intLifetime1 = this.field_S.field_o.getSamplePosition();
                 if (var2_intLifetime1 == -1) {
                   var2_intLifetime1 = 0;
                   if (var3 != 0) {
@@ -982,8 +982,8 @@ final class RaceVehicle extends MovingEntity {
                 NanoTickClock.a(true, this.field_rb);
               }
               this.field_rb = ValidationHelpWidget.a((byte) 114, (MovingEntity) (this), this.field_C.field_u, this.field_C.field_u.field_q);
-              this.field_rb.field_o.i(var2_intLifetime1);
-              this.field_rb.field_o.g(-1);
+              this.field_rb.field_o.setSamplePosition(var2_intLifetime1);
+              this.field_rb.field_o.setLoopCount(-1);
               this.field_I = true;
             }
           }
@@ -994,7 +994,7 @@ final class RaceVehicle extends MovingEntity {
               }
               if (this.field_Z == null) {
                 this.field_Z = ValidationHelpWidget.a((byte) 5, (MovingEntity) (this), Point2i.field_c, this.field_Kb * Point2i.field_c.field_q >> 4);
-                this.field_Z.field_o.g(-1);
+                this.field_Z.field_o.setLoopCount(-1);
                 if (var3 != 0) {
                   this.field_Z.field_n = this.field_Kb * Point2i.field_c.field_q >> 4;
                   if (this.field_Kb > 0) {
@@ -1028,7 +1028,7 @@ final class RaceVehicle extends MovingEntity {
             if (2 != MusicPatchPcmStream.field_r.field_r) {
               stackIn_103_0 = rc.field_a;
             } else {
-              stackIn_103_0 = kl.field_t;
+              stackIn_103_0 = TextFieldRenderer.field_t;
             }
             var2 = stackIn_103_0;
             if (Math.abs(this.field_jc) > 1.0f &&
@@ -1040,7 +1040,7 @@ final class RaceVehicle extends MovingEntity {
                 this.field_ub.field_n = this.field_dc * var2.field_q >> 4;
                 if (var3 != 0) {
                   this.field_ub = ValidationHelpWidget.a((byte) 38, (MovingEntity) (this), var2, this.field_dc * var2.field_q >> 4);
-                  this.field_ub.field_o.g(-1);
+                  this.field_ub.field_o.setLoopCount(-1);
                   if (this.field_dc > 0) {
                     this.field_dc = this.field_dc - 1;
                   }
@@ -1050,7 +1050,7 @@ final class RaceVehicle extends MovingEntity {
                 }
               } else {
                 this.field_ub = ValidationHelpWidget.a((byte) 38, (MovingEntity) (this), var2, this.field_dc * var2.field_q >> 4);
-                this.field_ub.field_o.g(-1);
+                this.field_ub.field_o.setLoopCount(-1);
                 if (var3 != 0) {
                   if (this.field_dc > 0) {
                     this.field_dc = this.field_dc - 1;
@@ -1080,7 +1080,7 @@ final class RaceVehicle extends MovingEntity {
             }
             if (null == this.field_fb) {
               this.field_fb = ValidationHelpWidget.a((byte) 109, (MovingEntity) (this), StrongCacheEntry.field_s, this.field_gc * StrongCacheEntry.field_s.field_q >> 4);
-              this.field_fb.field_o.g(-1);
+              this.field_fb.field_o.setLoopCount(-1);
               if (var3 == 0) {
                 return;
               }
@@ -1104,14 +1104,14 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final ei a(float param0, float param1, float param2, int param3) {
+    private final GrowableObjectList a(float param0, float param1, float param2, int param3) {
         int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
-        ei stackIn_38_0 = null;
+        GrowableObjectList stackIn_38_0 = null;
         RuntimeException decompiledCaughtException = null;
         RoadSegment[] var5 = null;
         RuntimeException var5_ref = null;
-        ei var6 = null;
+        GrowableObjectList var6 = null;
         int var7 = 0;
         float var8 = 0.0f;
         RoadSegment var9 = null;
@@ -1126,7 +1126,7 @@ final class RaceVehicle extends MovingEntity {
         var17 = HoldTheLine.field_D;
         try {
           var5 = MusicPatchPcmStream.field_r.roadSegments;
-          var6 = new ei();
+          var6 = new GrowableObjectList();
           var7 = (int)param1;
           var8 = (float)(-var7) + param1;
           if (var7 == var5.length) {
@@ -1134,7 +1134,7 @@ final class RaceVehicle extends MovingEntity {
           }
           boolean decompiledFrameCompleted0 = true;
           var9 = var5[var7];
-          var10 = var9.f(50);
+          var10 = var9.length(50);
           var11 = param0 / var10;
           if (!(1.0f > var8 + var11)) {
             param0 = param0 + var10 * var8;
@@ -1151,7 +1151,7 @@ final class RaceVehicle extends MovingEntity {
                 var7 = 0;
               }
               var9 = var5[var7];
-              var10 = var9.f(50);
+              var10 = var9.length(50);
             }
             if (decompiledFrameCompleted0) {
               var8 = param0 / var10;
@@ -1174,27 +1174,27 @@ final class RaceVehicle extends MovingEntity {
           var12 = param2 / var10;
           if (var12 + var8 < 1.0f) {
             this.field_kc = var7;
-            var6.a(hk.a(ao.a(var8, true, var9, var12 + var8), 1, false), (byte) 6);
+            var6.add(hk.a(ao.a(var8, true, var9, var12 + var8), 1, false), (byte) 6);
             decompiledFrameRemainder0 = (var17 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var6.a(hk.a(sa.a(var9, var8, (byte) -97), 1, false), (byte) 6);
+            var6.add(hk.a(sa.a(var9, var8, (byte) -97), 1, false), (byte) 6);
             param2 = param2 - var10 * (-var8 + 1.0f);
             if (0.0f < param2) {
               var13 = (var7 + 1) % var5.length;
               var14 = var5[var13];
-              var15 = var14.f(50);
+              var15 = var14.length(50);
               while (true) {
                 if (var15 <= param2) {
                   param2 = param2 - var15;
-                  var6.a(hk.a(var14, 1, false), (byte) 6);
+                  var6.add(hk.a(var14, 1, false), (byte) 6);
                   var13++;
                   if (var17 == 0) {
                     if (~var13 == ~var5.length) {
                       var13 = 0;
                     }
                     var14 = var5[var13];
-                    var15 = var14.f(50);
+                    var15 = var14.length(50);
                     continue;
                   }
                 } else {
@@ -1203,7 +1203,7 @@ final class RaceVehicle extends MovingEntity {
                 break;
               }
               var16 = param2 / var15;
-              var6.a(hk.a(fj.a(false, var16, var14), 1, false), (byte) 6);
+              var6.add(hk.a(fj.a(false, var16, var14), 1, false), (byte) 6);
             }
           }
           stackIn_38_0 = var6;
@@ -1440,8 +1440,8 @@ final class RaceVehicle extends MovingEntity {
                     }
                     var6 = stackIn_164_0;
                     do {
-                      var4_int = kj.b(2, 640);
-                      var5 = kj.b(2, 480);
+                      var4_int = SolidRoadStripRenderer.b(2, 640);
+                      var5 = SolidRoadStripRenderer.b(2, 480);
                       var6 = MusicPatchPcmStream.field_r.d(var5, var4_int, param0 ^ 1217);
                       stackIn_125_0 = -1;
                     } while (stackIn_125_0 == ~var6);
@@ -1501,8 +1501,8 @@ final class RaceVehicle extends MovingEntity {
                   }
                   this.field_yb = new wm(this.position, 9, this.field_q, this.heading, this.velocityX - this.direction.x * 50.0f, -(this.direction.y * 50.0f) + this.velocityY);
                   this.field_yb.field_J = this.field_yb.field_J | this.field_mc;
-                  this.field_yb.a(ui.field_i, 90);
-                  ValidationHelpWidget.a((byte) 91, this.field_yb, ic.field_i, ic.field_i.field_q);
+                  this.field_yb.a(SoundPlayback.field_i, 90);
+                  ValidationHelpWidget.a((byte) 91, this.field_yb, ArchiveLoadStage.field_i, ArchiveLoadStage.field_i.field_q);
                   MusicPatchPcmStream.field_r.field_W.addLast((byte) -94, this.field_yb);
                   this.field_Rb = 0;
                 }
@@ -1518,8 +1518,8 @@ final class RaceVehicle extends MovingEntity {
                 }
                 this.field_yb = new wm(this.position, 9, this.field_q, this.heading, this.velocityX - this.direction.x * 50.0f, -(this.direction.y * 50.0f) + this.velocityY);
                 this.field_yb.field_J = this.field_yb.field_J | this.field_mc;
-                this.field_yb.a(ui.field_i, 90);
-                ValidationHelpWidget.a((byte) 91, this.field_yb, ic.field_i, ic.field_i.field_q);
+                this.field_yb.a(SoundPlayback.field_i, 90);
+                ValidationHelpWidget.a((byte) 91, this.field_yb, ArchiveLoadStage.field_i, ArchiveLoadStage.field_i.field_q);
                 MusicPatchPcmStream.field_r.field_W.addLast((byte) -94, this.field_yb);
                 this.field_Rb = 0;
               }
@@ -1535,13 +1535,13 @@ final class RaceVehicle extends MovingEntity {
               if ((var9 != 0) &&
                 (null == this.field_vc)) {
                 this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), vd.field_b, vd.field_b.field_q);
-                this.field_vc.field_o.g(-1);
+                this.field_vc.field_o.setLoopCount(-1);
               }
             }
           } else {
             if (null == this.field_vc) {
               this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), vd.field_b, vd.field_b.field_q);
-              this.field_vc.field_o.g(-1);
+              this.field_vc.field_o.setLoopCount(-1);
             }
           }
           if (this.field_jc == 0.0f &&
@@ -1585,7 +1585,7 @@ final class RaceVehicle extends MovingEntity {
             if (!this.field_jb &&
               MusicPatchPcmStream.field_r.field_J != 2) {
               var3 = (float)(-(int)this.field_vb) + this.field_vb;
-              var4 = this.field_zb.a((byte) 127, var3);
+              var4 = this.field_zb.directionAt((byte) 127, var3);
               boolean decompiledSharedTail0 = !(!(0.5 > (double)this.direction.dot(var4, (byte) -10)));
               if (!decompiledSharedTail0) {
                 this.field_Jb = 0;
@@ -1826,7 +1826,7 @@ final class RaceVehicle extends MovingEntity {
           var15 = 0.0f;
           if (this.field_zb.field_o != 0.0f) {
             var16 = 60.0f * (this.field_zb.field_o * (-this.field_C.field_l * 9.8100004196167f));
-            var17_ref_in = this.field_zb.a((byte) 121, (float)(-(int)this.field_vb) + this.field_vb);
+            var17_ref_in = this.field_zb.directionAt((byte) 121, (float)(-(int)this.field_vb) + this.field_vb);
             var15 = var17_ref_in.dot(this.direction, (byte) -10) * var16;
             stackIn_47_0 = var17_ref_in;
             stackIn_47_1 = this.direction;
@@ -1858,8 +1858,8 @@ final class RaceVehicle extends MovingEntity {
             if (0 != MusicPatchPcmStream.field_r.field_r) {
               if (1 != MusicPatchPcmStream.field_r.field_r) {
                 if (MusicPatchPcmStream.field_r.field_r == 2) {
-                  var16Lifetime1 = var16Lifetime1 * qf.field_k[var18];
-                  var17 = var17 * qf.field_k[var19];
+                  var16Lifetime1 = var16Lifetime1 * MatchingTextValidator.field_k[var18];
+                  var17 = var17 * MatchingTextValidator.field_k[var19];
                   if (var32 != 0) {
                     var16Lifetime1 = var16Lifetime1 * DisplayNameForm.field_J[var18];
                     var17 = var17 * DisplayNameForm.field_J[var19];
@@ -2064,7 +2064,7 @@ final class RaceVehicle extends MovingEntity {
         int stackIn_29_0 = 0;
         float stackIn_31_0 = 0.0f;
         boolean stackIn_48_1 = false;
-        ei stackIn_53_0 = null;
+        GrowableObjectList stackIn_53_0 = null;
         int stackIn_68_0 = 0;
         int stackIn_68_1 = 0;
         RuntimeException stackIn_87_0 = null;
@@ -2076,7 +2076,7 @@ final class RaceVehicle extends MovingEntity {
         int var5_int = 0;
         float var5 = 0.0f;
         Vector2f var6 = null;
-        ei var6_ref = null;
+        GrowableObjectList var6_ref = null;
         eb[] var7 = null;
         int var8_int = 0;
         eb[] var8 = null;
@@ -2147,7 +2147,7 @@ final class RaceVehicle extends MovingEntity {
           if ((MusicPatchPcmStream.field_r.field_J == 2 ||
             MusicPatchPcmStream.field_r.field_J == 6) &&
             this.field_G == 0) {
-            var6 = this.field_zb.a((byte) 121, (float)(-(int)this.field_bb) + this.field_bb);
+            var6 = this.field_zb.directionAt((byte) 121, (float)(-(int)this.field_bb) + this.field_bb);
             stackIn_48_1 = !(!(0.0 > (double)this.direction.dot(var6, (byte) -10)));
             this.field_ib = stackIn_48_1;
           }
@@ -2157,20 +2157,20 @@ final class RaceVehicle extends MovingEntity {
             stackIn_53_0 = this.a(50.0f, var5, (float)param1 * 5.0f, 62);
           }
           var6_ref = stackIn_53_0;
-          this.field_sb = new ei();
+          this.field_sb = new GrowableObjectList();
           this.a(param2, (byte) 39, this.field_sb, var6_ref);
-          this.field_gb = this.a(89, (eb[]) (this.field_sb.field_b[0]), this.field_yc);
+          this.field_gb = this.a(89, (eb[]) (this.field_sb.elements[0]), this.field_yc);
           this.field_cc = this.field_gb;
-          this.field_Nb = new int[this.field_sb.field_e];
-          var7 = (eb[]) (this.field_sb.field_b[0]);
+          this.field_Nb = new int[this.field_sb.size];
+          var7 = (eb[]) (this.field_sb.elements[0]);
           if (param0 != 41) {
             this.field_D = -0.24020713567733765f;
           }
           this.field_Nb[0] = this.field_gb;
           var8_int = 1;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var8_int < this.field_sb.field_e)))) {
-            var9_ref_eb__ = (eb[]) (this.field_sb.field_b[var8_int]);
+          while (!(decompiledNaturalLoopExit0 = (!(var8_int < this.field_sb.size)))) {
+            var9_ref_eb__ = (eb[]) (this.field_sb.elements[var8_int]);
             var10 = this.a(param0 + 51, var9_ref_eb__, this.field_yc);
             stackIn_68_0 = ~var10;
             stackIn_68_1 = ~this.field_cc;
@@ -2277,7 +2277,7 @@ final class RaceVehicle extends MovingEntity {
             if (var6_int == 0) {
               qg.a(0, this.field_q, var19, 255, 16776960, MusicPatchPcmStream.field_r.field_O, 5, -204, var20, 0, (byte) -127);
             } else {
-              var21 = kj.b(2, 128);
+              var21 = SolidRoadStripRenderer.b(2, 128);
               var22 = (-var21 + 256) * (16711935 & this.field_Eb) & -16711936 | 16711680 & (-var21 + 256) * (this.field_Eb & 65280);
               var22 = var22 + (16711680 & 65280 * var21 | -16711936 & var21 * 16711935);
               var23 = var11 + dg.a(-var14, -1, var14);
@@ -2301,7 +2301,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final void a(int param0, ei param1, int param2) {
+    private final void a(int param0, GrowableObjectList param1, int param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -2316,17 +2316,17 @@ final class RaceVehicle extends MovingEntity {
           if (param0 <= 0) {
             return;
           }
-          var4_int = param1.field_e;
+          var4_int = param1.size;
           var5 = 0;
           while (var4_int > var5) {
-            var6 = (eb[]) (param1.field_b[var5]);
+            var6 = (eb[]) (param1.elements[var5]);
             this.a(var6, param1, 0);
             var5++;
             if (var7 != 0) {
               return;
             }
           }
-          if (~var4_int == ~param1.field_e) {
+          if (~var4_int == ~param1.size) {
             return;
           }
           this.a(param0 - 1, param1, param2);
@@ -2551,12 +2551,12 @@ final class RaceVehicle extends MovingEntity {
                 return;
               }
               if (MusicPatchPcmStream.field_r.field_r == 0) {
-                var9 = 256 * (kj.b(2, 192) + 64);
+                var9 = 256 * (SolidRoadStripRenderer.b(2, 192) + 64);
               } else if (MusicPatchPcmStream.field_r.field_r != 1) {
-                var9 = (128 | kj.b(2, 128)) * 65793;
+                var9 = (128 | SolidRoadStripRenderer.b(2, 128)) * 65793;
               } else {
                 var9 = 12888928;
-                var9 = var9 + 65792 * kj.b(2, 32);
+                var9 = var9 + 65792 * SolidRoadStripRenderer.b(2, 32);
               }
               ArchiveIndex.a(var5, param1, 0, 16, 1, -16, param2, this.field_q, MusicPatchPcmStream.field_r.field_O, var9, var6, 128, 0);
               var4_int++;
@@ -2709,14 +2709,14 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final ei a(float param0, boolean param1, float param2, float param3) {
+    private final GrowableObjectList a(float param0, boolean param1, float param2, float param3) {
         int stackIn_16_0 = 0;
-        ei stackIn_18_0 = null;
-        ei stackIn_33_0 = null;
+        GrowableObjectList stackIn_18_0 = null;
+        GrowableObjectList stackIn_33_0 = null;
         RuntimeException decompiledCaughtException = null;
         RoadSegment[] var5 = null;
         RuntimeException var5_ref = null;
-        ei var6 = null;
+        GrowableObjectList var6 = null;
         int var7 = 0;
         float var8 = 0.0f;
         RoadSegment var9 = null;
@@ -2731,7 +2731,7 @@ final class RaceVehicle extends MovingEntity {
         var17 = HoldTheLine.field_D;
         try {
           var5 = MusicPatchPcmStream.field_r.roadSegments;
-          var6 = new ei();
+          var6 = new GrowableObjectList();
           var7 = (int)param3;
           var8 = (float)(-var7) + param3;
           if (~var7 == ~var5.length) {
@@ -2740,7 +2740,7 @@ final class RaceVehicle extends MovingEntity {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           var9 = var5[var7];
-          var10 = var9.f(50);
+          var10 = var9.length(50);
           var11 = param0 / var10;
           if (0.0f < var8 - var11) {
             var8 = var8 - var11;
@@ -2760,7 +2760,7 @@ final class RaceVehicle extends MovingEntity {
                 var7 = -1 + var5.length;
               }
               var9 = var5[var7];
-              var10 = var9.f(50);
+              var10 = var9.length(50);
             }
             if (decompiledFrameCompleted0) {
               var8 = 1.0f - param0 / var10;
@@ -2771,28 +2771,28 @@ final class RaceVehicle extends MovingEntity {
             stackIn_16_0 = param1 ? 1 : 0;
           }
           if (stackIn_16_0 != 0) {
-            stackIn_18_0 = (ei) null;
+            stackIn_18_0 = (GrowableObjectList) null;
             return stackIn_18_0;
           }
           var12 = param2 / var10;
           boolean decompiledSharedTail0 = !(!(0.0f < var8 - var12));
           if (!decompiledSharedTail0) {
             param2 = param2 - var10 * var8;
-            var6.a(hk.a(ao.a(var8, true, var9, 0.0f), 1, false), (byte) 6);
+            var6.add(hk.a(ao.a(var8, true, var9, 0.0f), 1, false), (byte) 6);
             var13 = (-1 + (var7 + var5.length)) % var5.length;
             var14 = var5[var13];
-            var15 = var14.f(50);
+            var15 = var14.length(50);
             while (true) {
               if (var15 <= param2) {
                 param2 = param2 - var15;
-                var6.a(hk.a(var14, 1, false), (byte) 6);
+                var6.add(hk.a(var14, 1, false), (byte) 6);
                 if (var17 == 0) {
                   var13--;
                   if (var13 < 0) {
                     var13 = var5.length - 1;
                   }
                   var14 = var5[var13];
-                  var15 = var14.f(50);
+                  var15 = var14.length(50);
                   continue;
                 }
               } else {
@@ -2801,12 +2801,12 @@ final class RaceVehicle extends MovingEntity {
               break;
             }
             var16 = 1.0f - param2 / var15;
-            var6.a(hk.a(ao.a(1.0f, true, var14, var16), 1, false), (byte) 6);
+            var6.add(hk.a(ao.a(1.0f, true, var14, var16), 1, false), (byte) 6);
             decompiledSharedTail0 = (var17 != 0);
           }
           if (decompiledSharedTail0) {
             this.field_kc = var7;
-            var6.a(hk.a(ao.a(var8, true, var9, -var12 + var8), 1, false), (byte) 6);
+            var6.add(hk.a(ao.a(var8, true, var9, -var12 + var8), 1, false), (byte) 6);
           }
           stackIn_33_0 = var6;
           return stackIn_33_0;
@@ -3016,7 +3016,7 @@ final class RaceVehicle extends MovingEntity {
           var19 = 0.0f;
           if (0.0f != this.field_zb.field_o) {
             var20 = 9.8100004196167f * -this.field_C.field_l * this.field_zb.field_o * 60.0f;
-            var21_ref_in = this.field_zb.a((byte) 123, this.field_vb - (float)(int)this.field_vb);
+            var21_ref_in = this.field_zb.directionAt((byte) 123, this.field_vb - (float)(int)this.field_vb);
             var19 = var21_ref_in.dot(this.direction, (byte) -10) * var20;
             var18 = var21_ref_in.cross(this.direction, true) * var20;
             if (this.field_ic != 0.0f &&
@@ -3037,7 +3037,7 @@ final class RaceVehicle extends MovingEntity {
           if (MusicPatchPcmStream.field_r.field_r != 0) {
             if (1 != MusicPatchPcmStream.field_r.field_r) {
               if (2 == MusicPatchPcmStream.field_r.field_r) {
-                var20Lifetime1 = var20Lifetime1 * qf.field_k[var22];
+                var20Lifetime1 = var20Lifetime1 * MatchingTextValidator.field_k[var22];
                 if (var34 != 0) {
                   var20Lifetime1 = var20Lifetime1 * DisplayNameForm.field_J[var22];
                   if (var34 != 0) {
@@ -3306,7 +3306,7 @@ final class RaceVehicle extends MovingEntity {
         RuntimeException var1 = null;
         try {
           if (param0 != -1) {
-            field_Wb = (mf) null;
+            field_Wb = (LoginMethodPreference) null;
           }
           field_Db = null;
           field_Wb = null;
@@ -4249,9 +4249,9 @@ final class RaceVehicle extends MovingEntity {
               }
               var5 = (int)(-this.direction.x * 1024.0f);
               var6 = (int)(1024.0f * -this.direction.y);
-              var5 = var5 + (-256 + kj.b(2, 512));
-              var6 = var6 + (-256 + kj.b(2, 512));
-              var7 = (369164160 | kj.b(2, 128)) << 8;
+              var5 = var5 + (-256 + SolidRoadStripRenderer.b(2, 512));
+              var6 = var6 + (-256 + SolidRoadStripRenderer.b(2, 512));
+              var7 = (369164160 | SolidRoadStripRenderer.b(2, 128)) << 8;
               ArchiveIndex.a(var5, var4Lifetime5, 0, 16, 1, -16, var3Lifetime4, this.field_q, MusicPatchPcmStream.field_r.field_O, var7, var6, 128, 2);
             }
           }
@@ -4289,7 +4289,7 @@ final class RaceVehicle extends MovingEntity {
               stackIn_56_2 = this.direction.x;
             }
             var6Lifetime1Lifetime1 = stackIn_55_0 + (int)(stackIn_55_1 * stackIn_56_2);
-            var7 = 16744448 | kj.b(2, 128) << 8;
+            var7 = 16744448 | SolidRoadStripRenderer.b(2, 128) << 8;
             ArchiveIndex.a(var5Lifetime1Lifetime1, var4Lifetime1, 0, 16, 1, -16, var3Lifetime1, this.field_q, MusicPatchPcmStream.field_r.field_O, var7, var6Lifetime1Lifetime1, 128, 2);
           }
           if (this.field_J == 2) {
@@ -4298,7 +4298,7 @@ final class RaceVehicle extends MovingEntity {
             var5Lifetime2 = this.position.y - (int)(Math.sin((double)var3_float) * (double)this.field_C.field_d * 1.2999999523162842);
             var6Lifetime2 = (int)(0.75f * (this.velocityX * 0.019999999552965164f * 3.5f) * 1024.0f);
             var7 = (int)(0.75f * (0.019999999552965164f * this.velocityY * 3.5f) * 1024.0f);
-            var8 = 255 | kj.b(2, 255) * 1052672;
+            var8 = 255 | SolidRoadStripRenderer.b(2, 255) * 1052672;
             ArchiveIndex.a(var6Lifetime2, var5Lifetime2, 0, 25, 1, -40, var4Lifetime2, this.field_q, MusicPatchPcmStream.field_r.field_q, var8, var7, 255, 2);
           }
           boolean decompiledFrameCompleted1 = true;
@@ -4336,7 +4336,7 @@ final class RaceVehicle extends MovingEntity {
               var8_ref_wm = (wm) (MusicPatchPcmStream.field_r.field_d.next((byte) -107));
             }
             if (decompiledFrameCompleted1) {
-              ug.b(-1);
+              MarkerSliderRenderer.restoreRasterTarget(-1);
             }
           }
           if (decompiledFrameCompleted1) {
@@ -4348,7 +4348,7 @@ final class RaceVehicle extends MovingEntity {
             var7 = (this.field_Q << 8) / 50;
             SoftwareRasterizer.e(this.field_nb, this.field_Tb, var3Lifetime2, var4Lifetime3, 0, var7);
             SoftwareRasterizer.e(this.field_Xb, this.field_Ob, var5Lifetime3, var6Lifetime3, 0, var7);
-            ug.b(-1);
+            MarkerSliderRenderer.restoreRasterTarget(-1);
           }
           this.field_Xb = var5Lifetime3;
           this.field_Tb = var4Lifetime3;
@@ -4388,7 +4388,7 @@ final class RaceVehicle extends MovingEntity {
                 var9Lifetime1 < 640 &&
                 var10Lifetime2 >= 0 &&
                 var10Lifetime2 < 480) {
-                var16 = IterableSecondaryNodeDeque.field_a.a(8192);
+                var16 = IterableSecondaryNodeDeque.field_a.getSprite(8192);
                 if (var16 != null) {
                   var15 = var16.field_z[640 * var10Lifetime2 + var9Lifetime1];
                 }
@@ -4407,20 +4407,20 @@ final class RaceVehicle extends MovingEntity {
             stackIn_117_1 = -3;
           }
           if (stackIn_117_0 != stackIn_117_1) {
-            var8Lifetime3 = (-(int)this.field_lc + this.field_C.field_i) * 3 - kj.b(2, this.field_C.field_i);
+            var8Lifetime3 = (-(int)this.field_lc + this.field_C.field_i) * 3 - SolidRoadStripRenderer.b(2, this.field_C.field_i);
             var7 = var8Lifetime3 / this.field_C.field_i;
           }
           if (stackIn_117_0 == stackIn_117_1 ||
             var17 != 0) {
-            stackIn_125_0 = (kj.b(2, 18000) <= this.field_L) ? 0 : 2;
+            stackIn_125_0 = (SolidRoadStripRenderer.b(2, 18000) <= this.field_L) ? 0 : 2;
             var7 = stackIn_125_0;
           }
           if (2 == var7) {
             var8Lifetime4 = (int)(3.5f * this.velocityX * 0.019999999552965164f * 1024.0f);
             var9Lifetime2 = (int)(1024.0f * (0.019999999552965164f * (this.velocityY * 3.5f)));
-            var8Lifetime4 = var8Lifetime4 + (kj.b(2, 512) - 256);
-            var9Lifetime2 = var9Lifetime2 + (-1024 + kj.b(2, 512));
-            var10Lifetime3 = 16711680 | kj.b(2, 256) << 8;
+            var8Lifetime4 = var8Lifetime4 + (SolidRoadStripRenderer.b(2, 512) - 256);
+            var9Lifetime2 = var9Lifetime2 + (-1024 + SolidRoadStripRenderer.b(2, 512));
+            var10Lifetime3 = 16711680 | SolidRoadStripRenderer.b(2, 256) << 8;
             var11Lifetime2 = this.position.x;
             var12Lifetime1 = this.position.y;
             var13Lifetime1 = this.field_C.field_c + ((float)Math.random() * 4.0f - 2.0f);
@@ -4434,8 +4434,8 @@ final class RaceVehicle extends MovingEntity {
             1 == var7) {
             var8Lifetime5 = (int)(3.5f * this.velocityX * 0.019999999552965164f * 1024.0f);
             var9Lifetime3 = (int)(1024.0f * (0.019999999552965164f * (3.5f * this.velocityY)));
-            var8Lifetime5 = var8Lifetime5 + (kj.b(2, 512) - 256);
-            var9Lifetime3 = var9Lifetime3 + (kj.b(2, 512) - 1024);
+            var8Lifetime5 = var8Lifetime5 + (SolidRoadStripRenderer.b(2, 512) - 256);
+            var9Lifetime3 = var9Lifetime3 + (SolidRoadStripRenderer.b(2, 512) - 1024);
             var10Lifetime4 = 0;
             var11Lifetime3 = this.position.x;
             var12Lifetime2 = this.position.y;
@@ -4457,9 +4457,9 @@ final class RaceVehicle extends MovingEntity {
     }
 
     final boolean c(int param0, int param1) {
-        oa stackIn_21_0 = null;
+        NamedSoundEffect stackIn_21_0 = null;
         RuntimeException decompiledCaughtException = null;
-        oa var3 = null;
+        NamedSoundEffect var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         try {
@@ -4612,7 +4612,7 @@ final class RaceVehicle extends MovingEntity {
           var9 = 0.0f;
           if (this.field_zb.field_o != 0.0f) {
             var10 = 60.0f * (9.8100004196167f * -this.field_C.field_l * this.field_zb.field_o);
-            var11_ref_in = this.field_zb.a((byte) 125, this.field_vb - (float)(int)this.field_vb);
+            var11_ref_in = this.field_zb.directionAt((byte) 125, this.field_vb - (float)(int)this.field_vb);
             var9 = var10 * var11_ref_in.dot(this.direction, (byte) -10);
             var8 = var10 * var11_ref_in.cross(this.direction, param0);
             if (this.field_ic != 0.0f &&
@@ -4641,7 +4641,7 @@ final class RaceVehicle extends MovingEntity {
           boolean decompiledFrameRemainder3 = true;
           if (MusicPatchPcmStream.field_r.field_r == 0) {
             var11 = var11 * qg.field_c[var14];
-            var12 = var12 * ig.field_u[var14 + var13];
+            var12 = var12 * LayeredButtonRenderer.field_u[var14 + var13];
             var10Lifetime1 = var10Lifetime1 * qg.field_c[var13];
             decompiledFrameRemainder3 = (var36 != 0);
           }
@@ -4652,15 +4652,15 @@ final class RaceVehicle extends MovingEntity {
               var11 = var11 * DisplayNameForm.field_J[var14];
               if ((var36 != 0) &&
                 (MusicPatchPcmStream.field_r.field_r == 2)) {
-                var12 = var12 * e.field_e[var13 + var14];
-                var11 = var11 * qf.field_k[var14];
-                var10Lifetime1 = var10Lifetime1 * qf.field_k[var13];
+                var12 = var12 * QuickChatDynamicCommand.field_e[var13 + var14];
+                var11 = var11 * MatchingTextValidator.field_k[var14];
+                var10Lifetime1 = var10Lifetime1 * MatchingTextValidator.field_k[var13];
               }
             } else {
               if (MusicPatchPcmStream.field_r.field_r == 2) {
-                var12 = var12 * e.field_e[var13 + var14];
-                var11 = var11 * qf.field_k[var14];
-                var10Lifetime1 = var10Lifetime1 * qf.field_k[var13];
+                var12 = var12 * QuickChatDynamicCommand.field_e[var13 + var14];
+                var11 = var11 * MatchingTextValidator.field_k[var14];
+                var10Lifetime1 = var10Lifetime1 * MatchingTextValidator.field_k[var13];
               }
             }
           }
@@ -4709,7 +4709,7 @@ final class RaceVehicle extends MovingEntity {
           var26 = var25 + var24 + var7;
           var27 = var9 + var4Lifetime1;
           if (!param0) {
-            this.a(4, (ei) null, 97);
+            this.a(4, (GrowableObjectList) null, 97);
           }
           var28 = var17 + var18;
           var29 = var8;
@@ -4822,7 +4822,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final void a(Point2i param0, byte param1, ei param2, ei param3) {
+    private final void a(Point2i param0, byte param1, GrowableObjectList param2, GrowableObjectList param3) {
         float stackIn_18_0 = 0.0f;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -4832,11 +4832,11 @@ final class RaceVehicle extends MovingEntity {
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ei var5 = null;
+        GrowableObjectList var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         float var7 = 0.0f;
-        tg var8 = null;
+        PointPath var8 = null;
         float var9 = 0.0f;
         Object var10 = null;
         eb[] var10_array = null;
@@ -4846,13 +4846,13 @@ final class RaceVehicle extends MovingEntity {
         int var13 = 0;
         var13 = HoldTheLine.field_D;
         try {
-          var5 = new ei();
+          var5 = new GrowableObjectList();
           if (param1 != 39) {
             return;
           }
           var6 = 0;
           var7 = 0.0f;
-          var8 = (tg) (param3.field_b[var6]);
+          var8 = (PointPath) (param3.elements[var6]);
           var9 = var8.field_e;
           var10 = null;
           while (true) {
@@ -4861,18 +4861,18 @@ final class RaceVehicle extends MovingEntity {
               if (var13 == 0) {
                 var7 = stackIn_18_0;
                 var6++;
-                if (param3.field_e <= var6) {
-                  var10_array = new eb[var5.field_e];
+                if (param3.size <= var6) {
+                  var10_array = new eb[var5.size];
                   var11_int = 0;
-                  while (var5.field_e > var11_int) {
-                    var10_array[var11_int] = (eb) (var5.field_b[var11_int]);
+                  while (var5.size > var11_int) {
+                    var10_array[var11_int] = (eb) (var5.elements[var11_int]);
                     var11_int++;
                   }
-                  param2.a(var10_array, (byte) 6);
+                  param2.add(var10_array, (byte) 6);
                   this.a(5, param2, -1);
                   return;
                 }
-                var8 = (tg) (param3.field_b[var6]);
+                var8 = (PointPath) (param3.elements[var6]);
                 var9 = var8.field_e;
                 continue;
               }
@@ -4880,9 +4880,9 @@ final class RaceVehicle extends MovingEntity {
               stackIn_18_0 = var7 / var9;
             }
             var11 = stackIn_18_0;
-            var12 = new eb(var8.a(false, var11), var8.field_b);
-            var5.a(var12, (byte) 6);
-            if (100 <= var5.field_e) {
+            var12 = new eb(var8.pointAt(false, var11), var8.field_b);
+            var5.add(var12, (byte) 6);
+            if (100 <= var5.size) {
               throw new RuntimeException();
             }
             var7 = var7 + 5.0f;
@@ -4943,7 +4943,7 @@ final class RaceVehicle extends MovingEntity {
               return;
             }
             if (this.field_hc[var3_int] != -1) {
-              ValidationHelpWidget.a((byte) 76, (MovingEntity) (this), ji.field_i, ji.field_i.field_q);
+              ValidationHelpWidget.a((byte) 76, (MovingEntity) (this), TutorialPage.field_i, TutorialPage.field_i.field_q);
               dupTemp$0 = this.field_hc[var3_int];
               this.field_Fb[dupTemp$0] = this.field_Fb[dupTemp$0] - 1;
               var4 = new Vector2f(this.direction);
@@ -5164,7 +5164,7 @@ final class RaceVehicle extends MovingEntity {
                   MusicPatchPcmStream.field_r.a((wm) (var9), false);
                   if (var17 != 0) {
                     if (((RaceVehicle) (var8)).field_J != 2) {
-                      var14Lifetime2Lifetime1 = ((RaceVehicle) (var8)).field_C.field_a * ((RaceVehicle) (var8)).a((byte) 104, go.field_j);
+                      var14Lifetime2Lifetime1 = ((RaceVehicle) (var8)).field_C.field_a * ((RaceVehicle) (var8)).a((byte) 104, RotatedSpriteAsset.field_j);
                       ((RaceVehicle) (var8)).heading = ((RaceVehicle) (var8)).heading + var7 * 2000.0f / (var14Lifetime2Lifetime1 * var6);
                     }
                     ((RaceVehicle) (var8)).field_Yb = ((RaceVehicle) (var8)).field_Yb + 2;
@@ -5174,7 +5174,7 @@ final class RaceVehicle extends MovingEntity {
                   }
                 } else {
                   if (((RaceVehicle) (var8)).field_J != 2) {
-                    var14Lifetime2Lifetime1 = ((RaceVehicle) (var8)).field_C.field_a * ((RaceVehicle) (var8)).a((byte) 104, go.field_j);
+                    var14Lifetime2Lifetime1 = ((RaceVehicle) (var8)).field_C.field_a * ((RaceVehicle) (var8)).a((byte) 104, RotatedSpriteAsset.field_j);
                     ((RaceVehicle) (var8)).heading = ((RaceVehicle) (var8)).heading + var7 * 2000.0f / (var14Lifetime2Lifetime1 * var6);
                   }
                   ((RaceVehicle) (var8)).field_Yb = ((RaceVehicle) (var8)).field_Yb + 2;
@@ -5253,7 +5253,7 @@ final class RaceVehicle extends MovingEntity {
           var7 = 3;
           scanLoop1: while (true) {
             if (var7 > 0) {
-              stackIn_44_0 = compareFloatsNaNHigh(rd.field_b[var7 - 1], param0);
+              stackIn_44_0 = compareFloatsNaNHigh(RoadStripRenderer.field_b[var7 - 1], param0);
               if (var8 != 0) {
                 break scanLoop1;
               }
@@ -5320,7 +5320,7 @@ final class RaceVehicle extends MovingEntity {
     }
 
     static {
-        field_Wb = new mf("email");
+        field_Wb = new LoginMethodPreference("email");
         field_Qb = new char[]{'€', '\0', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', '\0', 'Ž', '\0', '\0', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', '\0', 'ž', 'Ÿ'};
     }
 

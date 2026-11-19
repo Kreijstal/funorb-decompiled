@@ -11,7 +11,7 @@ final class qh {
     final static void a(int param0, int param1) {
         if (ValidationHelpWidget.field_Q != null &&
           null != i.field_k[param1]) {
-          lc.field_d = i.field_k[param1];
+          EmailValidationResult.field_d = i.field_k[param1];
           ResourceArchive.a(false, i.field_k[param1], (byte) 69, 30);
         } else {
           if (AccountProgressDialog.field_jb == -1) {
@@ -24,11 +24,11 @@ final class qh {
         }
     }
 
-    final static boolean a(byte param0, ei param1) {
+    final static boolean a(byte param0, GrowableObjectList param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ei var4 = null;
+        GrowableObjectList var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -36,15 +36,15 @@ final class qh {
         var3 = HoldTheLine.field_D;
         try {
           if (param0 != -63) {
-            var4 = (ei) null;
-            qh.a((byte) -114, (ei) null);
+            var4 = (GrowableObjectList) null;
+            qh.a((byte) -114, (GrowableObjectList) null);
           }
           var2_int = 0;
           while (true) {
-            if (var2_int >= param1.field_e) {
+            if (var2_int >= param1.size) {
               return false;
             }
-            if (((vj) (param1.field_b[var2_int])).field_q) {
+            if (((BoundaryCurve) (param1.elements[var2_int])).field_q) {
               var2_int++;
               continue;
             }
@@ -91,15 +91,15 @@ final class qh {
         Throwable decompiledCaughtException = null;
         var1_ref = MusicCrossfadeStream.field_n;
         synchronized (var1_ref) {
-          if (qd.field_i == vj.field_l) {
+          if (qd.field_i == BoundaryCurve.field_l) {
             return false;
           }
-          aa.field_n = IndexedSpriteState.field_a[vj.field_l];
-          LoginChoicePanel.field_M = d.field_b[vj.field_l];
+          DelayedServerPacket.field_n = IndexedSpriteState.field_a[BoundaryCurve.field_l];
+          LoginChoicePanel.field_M = d.field_b[BoundaryCurve.field_l];
           if (param0 >= -23) {
             return false;
           }
-          vj.field_l = 127 & 1 + vj.field_l;
+          BoundaryCurve.field_l = 127 & 1 + BoundaryCurve.field_l;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

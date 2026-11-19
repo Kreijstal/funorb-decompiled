@@ -6,16 +6,16 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
     private String[] field_F;
     private TextButton[] field_I;
     private NameSelectionListener field_G;
-    static go field_J;
+    static RotatedSpriteAsset field_J;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
         if (0 != param3) {
           return;
         }
         BitmapFont var5 = IntrusiveNode.field_g;
         if (null != this.field_F) {
-          var5.a(tk.field_b, param2 + this.field_k, this.field_o + param1, this.field_x, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_I);
+          var5.a(tk.field_b, param2 + this.x, this.y + param1, this.width, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_I);
         }
     }
 
@@ -43,7 +43,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             SoftwareRasterizer.b(hi.field_W);
             SoftwareRasterizer.e(var5_int + param2, param0, -var6 + param4 + param2, param3[1].field_v + param0);
             if (param1 != 14191) {
-              field_J = (go) null;
+              field_J = (RotatedSpriteAsset) null;
             }
             var8 = param2 + var5_int;
             var9 = param2 - (-param4 + var6);
@@ -80,15 +80,15 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
     final static void a(byte param0) {
         vk.a(true);
         if (param0 <= 9) {
-          field_J = (go) null;
+          field_J = (RotatedSpriteAsset) null;
         }
     }
 
-    final static io i(int param0) {
+    final static AccountFormText i(int param0) {
         if (param0 >= -77) {
           NameSuggestionsPanel.i(-10);
         }
-        return new io(TimedValidator.d((byte) 41), IntrusiveDequeCursor.b(false));
+        return new AccountFormText(TimedValidator.d((byte) 41), IntrusiveDequeCursor.b(false));
     }
 
     final void a(String[] param0, byte param1) {
@@ -100,33 +100,33 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        am var4 = null;
+        LinkWidgetRenderer var4 = null;
         int var6 = 0;
         var6 = HoldTheLine.field_D;
         try {
-          this.field_D.clear(param1 + 28977);
+          this.children.clear(param1 + 28977);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
             this.field_F = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_F[var4_int] = ok.a((CharSequence) ((Object) param0[var4_int]), -6126).replace(' ', ' ');
+              this.field_F[var4_int] = TutorialTransition.a((CharSequence) ((Object) param0[var4_int]), -6126).replace(' ', ' ');
             }
-            var4 = new am(IntrusiveNode.field_g, 0, 1);
+            var4 = new LinkWidgetRenderer(IntrusiveNode.field_g, 0, 1);
             this.field_I = new TextButton[var3_int + 1];
             if (param1 != 43) {
               return;
             }
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new TextButton(this.field_F[var5], (WidgetListener) (this));
-              this.field_I[var5].field_l = (WidgetRenderer) ((Object) var4);
-              this.field_I[var5].field_z = AccountTermsPanel.field_N;
-              this.field_I[var5].a(0, (byte) 122, var5 * 16 + 20, 15, 80);
+              this.field_I[var5].renderer = (WidgetRenderer) ((Object) var4);
+              this.field_I[var5].tooltip = AccountTermsPanel.field_N;
+              this.field_I[var5].setBounds(0, (byte) 122, var5 * 16 + 20, 15, 80);
               this.a(true, this.field_I[var5]);
             }
-            this.field_I[var3_int] = new TextButton(tg.field_f, (WidgetListener) (this));
-            this.field_I[var3_int].field_l = (WidgetRenderer) ((Object) var4);
-            this.field_I[var3_int].a(0, (byte) 122, 16 * (var3_int + 1) + 20, 15, 100);
+            this.field_I[var3_int] = new TextButton(PointPath.field_f, (WidgetListener) (this));
+            this.field_I[var3_int].renderer = (WidgetRenderer) ((Object) var4);
+            this.field_I[var3_int].setBounds(0, (byte) 122, 16 * (var3_int + 1) + 20, 15, 100);
             this.a(true, this.field_I[var3_int]);
             return;
           }
@@ -146,7 +146,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -155,7 +155,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyPress(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -204,7 +204,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           var6_int = 0;
           if (param2 != -4) {
             var8 = (UiWidget) null;
-            this.a((UiWidget) null, -95, (byte) -39, 'B');
+            this.handleKeyPress((UiWidget) null, -95, (byte) -39, 'B');
           }
           while (this.field_F.length > var6_int) {
             if (param1 == this.field_I[var6_int]) {

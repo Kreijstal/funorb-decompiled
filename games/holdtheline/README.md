@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable.
 
-Resolved declarations: 157/357 classes and 560/2503 methods have readable names; 286 constructors follow their class names.
-Remaining: 200 opaque classes and 1943 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 227/357 classes and 1050/2503 methods have readable names; 286 constructors follow their class names.
+Remaining: 130 opaque classes and 1453 opaque methods. The complete naming goal is still in progress.
 
 Start at `HoldTheLine`, a `NetworkGameClient` and `GameAppletShell`. Its `initializeGame`, `loadGameResources`, `updateGameTick`, `renderGameFrame` and `shutdownGame` methods expose the client lifecycle.
 

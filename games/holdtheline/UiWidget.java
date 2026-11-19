@@ -5,89 +5,89 @@ import java.util.*;
 
 class UiWidget extends IntrusiveNode {
     static ResourceArchive field_w;
-    static uf field_j;
+    static SpriteAsset field_j;
     int field_y;
-    boolean field_p;
-    String field_z;
-    static uf field_r;
-    WidgetListener field_t;
-    int field_o;
-    TextLayout field_i;
-    int field_u;
-    WidgetRenderer field_l;
+    boolean hovered;
+    String tooltip;
+    static SpriteAsset field_r;
+    WidgetListener listener;
+    int y;
+    TextLayout textLayout;
+    int height;
+    WidgetRenderer renderer;
     static String field_s;
-    int field_k;
-    int field_v;
-    int field_x;
+    int x;
+    int pressedButton;
+    int width;
     int field_m;
-    String field_q;
+    String text;
     static volatile long field_n;
 
-    final boolean b(int param0, byte param1, int param2, int param3, int param4) {
+    final boolean containsPoint(int param0, byte param1, int param2, int param3, int param4) {
         boolean stackIn_18_0 = false;
         if (param1 != -105) {
           this.toString();
-          if (this.field_k + param0 > param2) {
+          if (this.x + param0 > param2) {
             return false;
           }
-          if (param3 + this.field_o > param4) {
+          if (param3 + this.y > param4) {
             return false;
           }
-          if (param2 >= this.field_x + this.field_k + param0) {
+          if (param2 >= this.width + this.x + param0) {
             return false;
           }
-          if (param4 >= this.field_u + this.field_o + param3) {
+          if (param4 >= this.height + this.y + param3) {
             return false;
           }
           return true;
         }
-        if (this.field_k + param0 > param2) {
+        if (this.x + param0 > param2) {
           return false;
         }
-        if (param3 + this.field_o > param4) {
+        if (param3 + this.y > param4) {
           return false;
         }
-        stackIn_18_0 = (param2 < this.field_x + this.field_k + param0) && (param4 < this.field_u + this.field_o + param3);
+        stackIn_18_0 = (param2 < this.width + this.x + param0) && (param4 < this.height + this.y + param3);
         return stackIn_18_0;
     }
 
-    void a(int param0, byte param1, int param2, int param3, int param4) {
+    void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 == 122) {
-          this.field_o = param2;
-          this.field_u = param3;
-          this.field_x = param4;
-          this.field_k = param0;
+          this.y = param2;
+          this.height = param3;
+          this.width = param4;
+          this.x = param0;
           return;
         }
-        this.d((byte) -120);
-        this.field_o = param2;
-        this.field_u = param3;
-        this.field_x = param4;
-        this.field_k = param0;
+        this.getMaxLayer((byte) -120);
+        this.y = param2;
+        this.height = param3;
+        this.width = param4;
+        this.x = param0;
     }
 
-    final boolean a(int param0, char param1, byte param2) {
+    final boolean dispatchKey(int param0, char param1, byte param2) {
         int var5 = 0;
         int var4 = 111 % ((57 - param2) / 45);
         int var5Lifetime1;
-        if (!this.c((byte) -20)) {
+        if (!this.isFocused((byte) -20)) {
           var5 = param0;
           if (var5 == 80) {
-            return this.a(this, -25823);
+            return this.requestFocus(this, -25823);
           }
           return false;
         }
-        if (this.a(this, param0, (byte) -78, param1)) {
+        if (this.handleKeyPress(this, param0, (byte) -78, param1)) {
           return true;
         }
         var5Lifetime1 = param0;
         if (var5Lifetime1 == 80) {
-          return this.a(this, -25823);
+          return this.requestFocus(this, -25823);
         }
         return false;
     }
 
-    boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean handleScrollInput(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -113,14 +113,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean c(byte param0) {
+    boolean isFocused(byte param0) {
         if (param0 != -20) {
           return false;
         }
         return false;
     }
 
-    int d(byte param0) {
+    int getMaxLayer(byte param0) {
         if (param0 >= -66) {
           this.field_y = 63;
           return 0;
@@ -128,11 +128,11 @@ class UiWidget extends IntrusiveNode {
         return 0;
     }
 
-    void a(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
+    void handleMouseRelease(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
         try {
-          this.field_v = 0;
+          this.pressedButton = 0;
           if (param4 != -9) {
-            this.field_q = (String) null;
+            this.text = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "n.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -149,21 +149,21 @@ class UiWidget extends IntrusiveNode {
         field_s = null;
     }
 
-    String f(int param0) {
+    String getTooltip(int param0) {
         if (param0 != 0) {
           return (String) null;
         }
-        if (!this.field_p) {
+        if (!this.hovered) {
           return null;
         }
-        return this.field_z;
+        return this.tooltip;
     }
 
     UiWidget(String param0, WidgetListener param1) {
         this(param0, pc.field_b.field_r, param1);
     }
 
-    void a(int param0, UiWidget param1, int param2, byte param3) {
+    void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         int var5_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_8_1 = false;
@@ -173,18 +173,18 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.b(param0, (byte) -105, NodeHashTableIterator.field_g, param2, rf.field_X) ? 1 : 0;
+          var5_int = this.containsPoint(param0, (byte) -105, NodeHashTableIterator.field_g, param2, rf.field_X) ? 1 : 0;
           stackIn_3_0 = (var5_int != 0) ? 0 : 1;
-          if (stackIn_3_0 == (this.field_p ? 1 : 0)) {
+          if (stackIn_3_0 == (this.hovered ? 1 : 0)) {
             stackIn_8_1 = (var5_int != 0);
-            this.field_p = stackIn_8_1;
-            if (this.field_t != null &&
-              this.field_t instanceof HoverListener) {
-              ((HoverListener) (this.field_t)).onHoverChanged(this, (byte) 118, var5_int != 0);
+            this.hovered = stackIn_8_1;
+            if (this.listener != null &&
+              this.listener instanceof HoverListener) {
+              ((HoverListener) (this.listener)).onHoverChanged(this, (byte) 118, var5_int != 0);
             }
           }
           if (param3 != -3) {
-            this.field_z = (String) null;
+            this.tooltip = (String) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,7 +201,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    StringBuilder a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(int param0, byte param1, Hashtable param2, StringBuilder param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
@@ -212,8 +212,8 @@ class UiWidget extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(20720, param2, param3, param0)) {
-            this.a(param2, param0, true, param3);
+          if (this.beginDebugVisit(20720, param2, param3, param0)) {
+            this.appendDebugProperties(param2, param0, true, param3);
           }
           var5_int = 127 / ((param1 - 0) / 49);
           stackIn_3_0 = (StringBuilder) (param3);
@@ -238,18 +238,18 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    void e(int param0) {
+    void clearFocus(int param0) {
         if (param0 <= 15) {
-          this.field_k = 102;
+          this.x = 102;
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param0 != -9532) {
-          field_r = (uf) null;
+          field_r = (SpriteAsset) null;
           if (param3 == 0) {
-            if (null != this.field_l) {
-              this.field_l.drawWidget(true, param2, -67, this, param1);
+            if (null != this.renderer) {
+              this.renderer.drawWidget(true, param2, -67, this, param1);
             }
             return;
           }
@@ -258,13 +258,13 @@ class UiWidget extends IntrusiveNode {
         if (param3 != 0) {
           return;
         }
-        if (null != this.field_l) {
-          this.field_l.drawWidget(true, param2, -67, this, param1);
+        if (null != this.renderer) {
+          this.renderer.drawWidget(true, param2, -67, this, param1);
           return;
         }
     }
 
-    boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
+    boolean handleMousePress(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -272,12 +272,12 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != -108) {
-            this.field_x = -39;
+            this.width = -39;
           }
-          if (!this.b(param0, (byte) -105, param5, param2, param1)) {
+          if (!this.containsPoint(param0, (byte) -105, param5, param2, param1)) {
             return false;
           }
-          this.field_v = param6;
+          this.pressedButton = param6;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,14 +293,14 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void draw(int param0, int param1, int param2) {
         int var4 = 0;
         int var5_int = 0;
         String var5 = null;
         int var6 = 0;
         String var5Lifetime1;
         var6 = HoldTheLine.field_D;
-        var4 = this.d((byte) -110);
+        var4 = this.getMaxLayer((byte) -110);
         var5_int = 0;
         while (true) {
           if (var4 < var5_int) {
@@ -311,23 +311,23 @@ class UiWidget extends IntrusiveNode {
             if (var5 == null) {
               return;
             }
-            pc.field_b.a(7829367, var5, ac.field_e, em.field_l);
+            pc.field_b.a(7829367, var5, ArchiveLoadProgress.field_e, AgeValidator.field_l);
             return;
           }
-          this.a(-9532, param1, param2, var5_int);
+          this.drawLayer(-9532, param1, param2, var5_int);
           var5_int++;
           if (var6 != 0) {
             var5Lifetime1 = DiskCacheWorker.a(100);
             if (var5Lifetime1 == null) {
               return;
             }
-            pc.field_b.a(7829367, var5Lifetime1, ac.field_e, em.field_l);
+            pc.field_b.a(7829367, var5Lifetime1, ArchiveLoadProgress.field_e, AgeValidator.field_l);
             return;
           }
         }
     }
 
-    final boolean a(int param0, Hashtable param1, StringBuilder param2, int param3) {
+    final boolean beginDebugVisit(int param0, Hashtable param1, StringBuilder param2, int param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -338,7 +338,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 20720) {
-            this.field_k = 91;
+            this.x = 91;
           }
           if (param1.containsKey(this)) {
             discarded$1 = param2.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
@@ -366,7 +366,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, boolean param3) {
+    final boolean processInput(int param0, int param1, boolean param2, boolean param3) {
         int var5;
         int var7;
         DraggableWidget var8;
@@ -376,113 +376,113 @@ class UiWidget extends IntrusiveNode {
         DraggableWidget var12;
         DraggableWidget var13;
         var7 = HoldTheLine.field_D;
-        this.a(param0, this, param1, (byte) -3);
-        var5 = this.c((byte) -20) ? 1 : 0;
+        this.updateHover(param0, this, param1, (byte) -3);
+        var5 = this.isFocused((byte) -20) ? 1 : 0;
         if (param2) {
           if (LoginForm.field_T != 0 &&
             var5 != 0) {
-            this.a(param0, this, LoginForm.field_T, param1, rf.field_X, NodeHashTableIterator.field_g, -24898);
+            this.handleScrollInput(param0, this, LoginForm.field_T, param1, rf.field_X, NodeHashTableIterator.field_g, -24898);
           }
           if (ValidationIndicator.field_J == 0) {
-            if (0 == rd.field_f &&
+            if (0 == RoadStripRenderer.field_f &&
               0 != DialogLayer.field_L) {
-              this.a(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
-              var8 = ig.field_q;
+              this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+              var8 = LayeredButtonRenderer.field_q;
               if (var8 != null) {
-                if (var8.field_t instanceof DropListener) {
-                  ((DropListener) (var8.field_t)).onDrop(var8, (byte) -3, (DropTargetWidget) null);
+                if (var8.listener instanceof DropListener) {
+                  ((DropListener) (var8.listener)).onDrop(var8, (byte) -3, (DropTargetWidget) null);
                 }
-                ig.field_q = null;
+                LayeredButtonRenderer.field_q = null;
               }
             }
           } else {
-            if (!this.a(param0, ValidatedTextField.field_U, param1, this, (byte) -108, TrackBoundary.field_x, ValidationIndicator.field_J)) {
+            if (!this.handleMousePress(param0, ValidatedTextField.field_U, param1, this, (byte) -108, TrackBoundary.field_x, ValidationIndicator.field_J)) {
               if (var5 == 0) {
-                if (0 == rd.field_f &&
+                if (0 == RoadStripRenderer.field_f &&
                   0 != DialogLayer.field_L) {
-                  this.a(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
-                  var9 = ig.field_q;
+                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+                  var9 = LayeredButtonRenderer.field_q;
                   if (var9 != null) {
-                    if (!(var9.field_t instanceof DropListener)) {
-                      ig.field_q = null;
+                    if (!(var9.listener instanceof DropListener)) {
+                      LayeredButtonRenderer.field_q = null;
                     } else {
-                      ((DropListener) (var9.field_t)).onDrop(var9, (byte) -3, (DropTargetWidget) null);
-                      ig.field_q = null;
+                      ((DropListener) (var9.listener)).onDrop(var9, (byte) -3, (DropTargetWidget) null);
+                      LayeredButtonRenderer.field_q = null;
                     }
                   }
                 }
                 if (param3) {
-                  this.a(19, 'ￚ', (byte) -73);
+                  this.dispatchKey(19, 'ￚ', (byte) -73);
                 }
-                DialogLayer.field_L = rd.field_f;
-                ba.a(this.f(0), 0);
+                DialogLayer.field_L = RoadStripRenderer.field_f;
+                ba.a(this.getTooltip(0), 0);
                 return param2;
               }
-              this.e(47);
+              this.clearFocus(47);
               if (var7 != 0) {
                 param2 = false;
               }
             } else {
               param2 = false;
             }
-            if (0 == rd.field_f &&
+            if (0 == RoadStripRenderer.field_f &&
               0 != DialogLayer.field_L) {
-              this.a(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
-              var10 = ig.field_q;
+              this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+              var10 = LayeredButtonRenderer.field_q;
               if (var10 != null) {
-                if (var10.field_t instanceof DropListener) {
-                  ((DropListener) (var10.field_t)).onDrop(var10, (byte) -3, (DropTargetWidget) null);
+                if (var10.listener instanceof DropListener) {
+                  ((DropListener) (var10.listener)).onDrop(var10, (byte) -3, (DropTargetWidget) null);
                 }
-                ig.field_q = null;
+                LayeredButtonRenderer.field_q = null;
               }
               if (param3) {
-                this.a(19, 'ￚ', (byte) -73);
+                this.dispatchKey(19, 'ￚ', (byte) -73);
               }
-              DialogLayer.field_L = rd.field_f;
-              ba.a(this.f(0), 0);
+              DialogLayer.field_L = RoadStripRenderer.field_f;
+              ba.a(this.getTooltip(0), 0);
               return param2;
             }
           }
         } else {
           if (var5 != 0 &&
             ValidationIndicator.field_J != 0) {
-            this.e(117);
+            this.clearFocus(117);
             if (var7 != 0) {
               if (LoginForm.field_T != 0) {
-                this.a(param0, this, LoginForm.field_T, param1, rf.field_X, NodeHashTableIterator.field_g, -24898);
+                this.handleScrollInput(param0, this, LoginForm.field_T, param1, rf.field_X, NodeHashTableIterator.field_g, -24898);
               }
               if (ValidationIndicator.field_J == 0) {
-                if (0 == rd.field_f &&
+                if (0 == RoadStripRenderer.field_f &&
                   0 != DialogLayer.field_L) {
-                  this.a(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
-                  var11 = ig.field_q;
+                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+                  var11 = LayeredButtonRenderer.field_q;
                   if (var11 != null) {
-                    if (var11.field_t instanceof DropListener) {
-                      ((DropListener) (var11.field_t)).onDrop(var11, (byte) -3, (DropTargetWidget) null);
+                    if (var11.listener instanceof DropListener) {
+                      ((DropListener) (var11.listener)).onDrop(var11, (byte) -3, (DropTargetWidget) null);
                     }
-                    ig.field_q = null;
+                    LayeredButtonRenderer.field_q = null;
                   }
                 }
               } else {
-                if (!this.a(param0, ValidatedTextField.field_U, param1, this, (byte) -108, TrackBoundary.field_x, ValidationIndicator.field_J)) {
-                  this.e(47);
+                if (!this.handleMousePress(param0, ValidatedTextField.field_U, param1, this, (byte) -108, TrackBoundary.field_x, ValidationIndicator.field_J)) {
+                  this.clearFocus(47);
                 }
                 param2 = false;
-                if (0 == rd.field_f &&
+                if (0 == RoadStripRenderer.field_f &&
                   0 != DialogLayer.field_L) {
-                  this.a(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
-                  var13 = ig.field_q;
+                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+                  var13 = LayeredButtonRenderer.field_q;
                   if (var13 != null) {
-                    if (var13.field_t instanceof DropListener) {
-                      ((DropListener) (var13.field_t)).onDrop(var13, (byte) -3, (DropTargetWidget) null);
+                    if (var13.listener instanceof DropListener) {
+                      ((DropListener) (var13.listener)).onDrop(var13, (byte) -3, (DropTargetWidget) null);
                     }
-                    ig.field_q = null;
+                    LayeredButtonRenderer.field_q = null;
                   }
                   if (param3) {
-                    this.a(19, 'ￚ', (byte) -73);
+                    this.dispatchKey(19, 'ￚ', (byte) -73);
                   }
-                  DialogLayer.field_L = rd.field_f;
-                  ba.a(this.f(0), 0);
+                  DialogLayer.field_L = RoadStripRenderer.field_f;
+                  ba.a(this.getTooltip(0), 0);
                   return param2;
                 }
               }
@@ -490,14 +490,14 @@ class UiWidget extends IntrusiveNode {
           }
         }
         if (param3) {
-          this.a(19, 'ￚ', (byte) -73);
+          this.dispatchKey(19, 'ￚ', (byte) -73);
         }
-        DialogLayer.field_L = rd.field_f;
-        ba.a(this.f(0), 0);
+        DialogLayer.field_L = RoadStripRenderer.field_f;
+        ba.a(this.getTooltip(0), 0);
         return param2;
     }
 
-    final void a(Hashtable param0, int param1, boolean param2, StringBuilder param3) {
+    final void appendDebugProperties(Hashtable param0, int param1, boolean param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -517,41 +517,41 @@ class UiWidget extends IntrusiveNode {
         UiWidget var7 = null;
         var6 = HoldTheLine.field_D;
         try {
-          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_k).append(",").append(this.field_o).append(" ").append(this.field_x).append("x").append(this.field_u);
-          if (null != this.field_q) {
-            discarded$1 = param3.append(" text=\"").append(this.field_q).append('"');
+          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          if (null != this.text) {
+            discarded$1 = param3.append(" text=\"").append(this.text).append('"');
           }
-          if (this.field_p) {
+          if (this.hovered) {
             discarded$2 = param3.append(" mouseover");
           }
-          if (this.c((byte) -20)) {
+          if (this.isFocused((byte) -20)) {
             discarded$3 = param3.append(" focused");
           }
-          if (null != this.field_l) {
+          if (null != this.renderer) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_l instanceof UiWidget)) {
-              discarded$5 = param3.append(this.field_l);
+            if (!(this.renderer instanceof UiWidget)) {
+              discarded$5 = param3.append(this.renderer);
               if (var6 != 0) {
-                param3 = this.a(param1 + 1, (byte) -61, param0, param3);
+                param3 = this.appendDebugTree(param1 + 1, (byte) -61, param0, param3);
               }
             } else {
-              param3 = this.a(param1 + 1, (byte) -61, param0, param3);
+              param3 = this.appendDebugTree(param1 + 1, (byte) -61, param0, param3);
             }
           }
-          if (this.field_t != null) {
+          if (this.listener != null) {
             discarded$6 = param3.append(" listener=");
-            if (this.field_t instanceof UiWidget) {
-              param3 = this.a(1 + param1, (byte) 106, param0, param3);
+            if (this.listener instanceof UiWidget) {
+              param3 = this.appendDebugTree(1 + param1, (byte) 106, param0, param3);
               if (var6 != 0) {
-                discarded$7 = param3.append(this.field_t);
+                discarded$7 = param3.append(this.listener);
               }
             } else {
-              discarded$7 = param3.append(this.field_t);
+              discarded$7 = param3.append(this.listener);
             }
           }
           if (!param2) {
             var7 = (UiWidget) null;
-            this.a((UiWidget) null, 89, (byte) -105, '8');
+            this.handleKeyPress((UiWidget) null, 89, (byte) -105, '8');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -574,18 +574,18 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final void g(int param0) {
+    final void refreshLayout(int param0) {
         if (param0 < 72) {
           return;
         }
-        this.a(this.field_k, (byte) 122, this.field_o, this.field_u, this.field_x);
+        this.setBounds(this.x, (byte) 122, this.y, this.height, this.width);
     }
 
     public final String toString() {
-        return this.a(0, (byte) -67, new Hashtable(), new StringBuilder()).toString();
+        return this.appendDebugTree(0, (byte) -67, new Hashtable(), new StringBuilder()).toString();
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -595,7 +595,7 @@ class UiWidget extends IntrusiveNode {
           if (param1 == -25823) {
             return false;
           }
-          this.field_t = (WidgetListener) null;
+          this.listener = (WidgetListener) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -611,7 +611,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -656,13 +656,13 @@ class UiWidget extends IntrusiveNode {
         this.field_y = 0;
         this.field_m = 0;
         try {
-          this.field_l = param1;
-          this.field_t = param2;
-          this.field_q = param0;
-          if (this.field_l instanceof TextWidgetRenderer) {
-            var4 = (TextWidgetRenderer) ((Object) this.field_l);
-            this.field_x = var4.b((byte) -36, this);
-            this.field_u = var4.a(this, -95);
+          this.renderer = param1;
+          this.listener = param2;
+          this.text = param0;
+          if (this.renderer instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.renderer);
+            this.width = var4.getPreferredWidth((byte) -36, this);
+            this.height = var4.getPreferredHeight(this, -95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -695,12 +695,12 @@ class UiWidget extends IntrusiveNode {
         this.field_y = 0;
         this.field_m = 0;
         try {
-          this.field_k = param0;
-          this.field_l = param4;
-          this.field_u = param3;
-          this.field_o = param1;
-          this.field_t = param5;
-          this.field_x = param2;
+          this.x = param0;
+          this.renderer = param4;
+          this.height = param3;
+          this.y = param1;
+          this.listener = param5;
+          this.width = param2;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "n.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

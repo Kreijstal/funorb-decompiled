@@ -8,8 +8,8 @@ final class na extends IntrusiveNode {
     static PlatformTaskDispatcher field_s;
     static Sprite field_t;
     int field_n;
-    static va field_q;
-    static vn field_p;
+    static SpriteSheetAsset field_q;
+    static NineSlicePanel field_p;
     int field_i;
     int field_l;
     static String field_o;
@@ -17,7 +17,7 @@ final class na extends IntrusiveNode {
 
     final static void a(int param0, ih param1, byte param2) {
         try {
-          io.field_c.addLast((byte) -105, param1);
+          AccountFormText.field_c.addLast((byte) -105, param1);
           NanoTickClock.a(1, param0, param1);
           if (param2 != -79) {
             na.clearSharedReferences(54);
@@ -35,7 +35,7 @@ final class na extends IntrusiveNode {
         field_s = null;
         field_p = null;
         if (param0 >= -70) {
-          field_q = (va) null;
+          field_q = (SpriteSheetAsset) null;
         }
     }
 

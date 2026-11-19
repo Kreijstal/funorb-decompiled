@@ -118,30 +118,30 @@ final class ArchiveIndex {
         var16 = HoldTheLine.field_D;
         try {
           var17 = new PacketBuffer(ph.a((byte) -1, param1));
-          var4 = var17.f((byte) -125);
+          var4 = var17.readUnsignedByte((byte) -125);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 < 6) {
               this.field_s = 0;
             } else {
-              this.field_s = var17.a(-59);
+              this.field_s = var17.readInt(-59);
             }
-            var5 = var17.f((byte) -43);
+            var5 = var17.readUnsignedByte((byte) -43);
             stackIn_11_0 = (0 == (1 & var5)) ? 0 : 1;
             var6 = stackIn_11_0;
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_14_0;
             if (7 > var4) {
-              this.field_q = var17.k(-69);
+              this.field_q = var17.readUnsignedShort(-69);
             } else {
-              this.field_q = var17.g(-23);
+              this.field_q = var17.readLargeSmart(-23);
             }
             var8 = 0;
             this.field_n = new int[this.field_q];
             var9 = -1;
             if (7 > var4) {
               for (var10 = 0; var10 < this.field_q; var10++) {
-                dupTemp$0 = var8 + var17.k(89);
+                dupTemp$0 = var8 + var17.readUnsignedShort(89);
                 var8 = dupTemp$0;
                 this.field_n[var10] = dupTemp$0;
                 if (var9 < this.field_n[var10]) {
@@ -150,7 +150,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; var10 < this.field_q; var10++) {
-                dupTemp$1 = var8 + var17.g(-123);
+                dupTemp$1 = var8 + var17.readLargeSmart(-123);
                 var8 = dupTemp$1;
                 this.field_n[var10] = dupTemp$1;
                 if (this.field_n[var10] > var9) {
@@ -173,17 +173,17 @@ final class ArchiveIndex {
                 this.field_j[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_q > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_j[this.field_n[var10Lifetime1Lifetime1]] = var17.a(-98);
+                this.field_j[this.field_n[var10Lifetime1Lifetime1]] = var17.readInt(-98);
               }
               this.field_h = new IntHashTable(this.field_j);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_q; var10Lifetime2++) {
-              this.field_e[this.field_n[var10Lifetime2]] = var17.a(-66);
+              this.field_e[this.field_n[var10Lifetime2]] = var17.readInt(-66);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_q > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(64, 0, (byte) 84, var21);
+                var17.readBytes(64, 0, (byte) 84, var21);
                 this.field_g[this.field_n[var10Lifetime3]] = var21;
               }
             }
@@ -191,11 +191,11 @@ final class ArchiveIndex {
               this.field_k = (int[]) null;
             }
             for (var10Lifetime4 = 0; this.field_q > var10Lifetime4; var10Lifetime4++) {
-              this.field_p[this.field_n[var10Lifetime4]] = var17.a(-63);
+              this.field_p[this.field_n[var10Lifetime4]] = var17.readInt(-63);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_q; var10Lifetime5++) {
-                this.field_u[this.field_n[var10Lifetime5]] = var17.g(-60);
+                this.field_u[this.field_n[var10Lifetime5]] = var17.readLargeSmart(-60);
               }
               for (var10Lifetime5 = 0; this.field_q > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_n[var10Lifetime5];
@@ -205,7 +205,7 @@ final class ArchiveIndex {
                 this.field_m[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.g(-54);
+                  dupTemp$3 = var8Lifetime1 + var17.readLargeSmart(-54);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_m[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -221,7 +221,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_q; var10Lifetime5++) {
-                this.field_u[this.field_n[var10Lifetime5]] = var17.k(122);
+                this.field_u[this.field_n[var10Lifetime5]] = var17.readUnsignedShort(122);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_q; var10Lifetime5++) {
                 var11 = this.field_n[var10Lifetime5];
@@ -231,7 +231,7 @@ final class ArchiveIndex {
                 array$5 = new int[var12];
                 this.field_m[var11] = array$5;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.k(-121);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(-121);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_m[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -263,7 +263,7 @@ final class ArchiveIndex {
                   } else {
                     var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
-                  this.field_l[var11Lifetime1][var14Lifetime1] = var17.a(72);
+                  this.field_l[var11Lifetime1][var14Lifetime1] = var17.readInt(72);
                 }
                 this.field_c[var11Lifetime1] = new IntHashTable(this.field_l[var11Lifetime1]);
               }
@@ -310,7 +310,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_d = wc.a(param0, -6408, 0, param0.length);
+            this.field_d = TrackCurve.a(param0, -6408, 0, param0.length);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (this.field_d[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

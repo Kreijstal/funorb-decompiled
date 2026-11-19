@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bn extends pd {
+final class bn extends UsernameLoginCredentials {
     static boolean field_j;
     static vd field_l;
     static long field_k;
@@ -19,7 +19,7 @@ final class bn extends pd {
         field_l = null;
     }
 
-    final kb a(boolean param0) {
+    final LoginCredentialType getType(boolean param0) {
         if (!param0) {
           bn.a(107, 64);
           return ba.field_b;

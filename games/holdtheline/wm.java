@@ -26,15 +26,15 @@ final class wm extends MovingEntity {
         if (param1) {
           field_U = (ll) null;
         }
-        TextLayout.field_a = ej.field_b;
+        TextLayout.field_a = ByteStorage.field_b;
         if (param2 == dg.field_c) {
-          if (ej.field_b == 1) {
+          if (ByteStorage.field_b == 1) {
             dg.field_c = 1;
             ((ti) (l.field_a[1])).f(0);
           }
-          ej.field_b = param2;
+          ByteStorage.field_b = param2;
         } else {
-          ej.field_b = param2;
+          ByteStorage.field_b = param2;
           if (13 == dg.field_c) {
             ((ec) (l.field_a[dg.field_c])).d((byte) -116);
           } else {
@@ -42,11 +42,11 @@ final class wm extends MovingEntity {
               ((ti) (l.field_a[dg.field_c])).i(123);
             }
           }
-          if (ej.field_b == 13) {
-            ((ec) (l.field_a[ej.field_b])).a((byte) 69, param0);
+          if (ByteStorage.field_b == 13) {
+            ((ec) (l.field_a[ByteStorage.field_b])).a((byte) 69, param0);
           } else {
-            if (ej.field_b != -1) {
-              ((ti) (l.field_a[ej.field_b])).b(param0, -110);
+            if (ByteStorage.field_b != -1) {
+              ((ti) (l.field_a[ByteStorage.field_b])).b(param0, -110);
             }
           }
         }
@@ -125,7 +125,7 @@ final class wm extends MovingEntity {
               this.field_J = this.field_J & -5;
               if ((this.field_J & 1024) != 0) {
                 this.field_J = this.field_J | 2048;
-                this.a(fh.field_d, 98);
+                this.a(EmailLoginCredentials.field_d, 98);
               }
             }
           }
@@ -156,7 +156,7 @@ final class wm extends MovingEntity {
         if ((32 & this.field_J) == 0) {
           this.field_H = this.field_E.field_g[this.field_Q];
         } else {
-          this.field_H = this.field_E.field_f[this.field_Q].a(this.heading, 27788);
+          this.field_H = this.field_E.field_f[this.field_Q].getByAngle(this.heading, 27788);
         }
         return this.field_H;
     }
@@ -254,7 +254,7 @@ final class wm extends MovingEntity {
           var7 = (int)(-this.direction.x * 1024.0f);
           var8 = (int)(-this.direction.y * 1024.0f);
           for (var9 = 0; var9 < 4; var9++) {
-            var11 = kj.b(2, 256);
+            var11 = SolidRoadStripRenderer.b(2, 256);
             if (var11 < 128) {
               var10 = -16711936 & (-var11 + 256) * (16711935 & var6) | 16711680 & (var6 & 65280) * (256 - var11);
               var10 = var10 + (-16711936 & var11 * 16711935 | 16711680 & 65280 * var11);
@@ -274,9 +274,9 @@ final class wm extends MovingEntity {
           }
           var6 = (int)(1024.0f * -this.direction.x);
           var7 = (int)(-this.direction.y * 1024.0f);
-          var6 = var6 + (-256 + kj.b(2, 512));
-          var7 = var7 + (kj.b(2, 512) - 256);
-          var8 = (kj.b(2, 128) | 520159104) << 8;
+          var6 = var6 + (-256 + SolidRoadStripRenderer.b(2, 512));
+          var7 = var7 + (SolidRoadStripRenderer.b(2, 512) - 256);
+          var8 = (SolidRoadStripRenderer.b(2, 128) | 520159104) << 8;
           ArchiveIndex.a(var6, var5, 0, 16, 1, -16, var4, this.field_q, MusicPatchPcmStream.field_r.field_O, var8, var7, 128, 1);
         }
     }
@@ -324,7 +324,7 @@ final class wm extends MovingEntity {
     }
 
     private final void a(int param0, int param1, float param2, float param3) {
-        this.field_E = ci.a(param1, (byte) 17);
+        this.field_E = ArchiveCatalog.a(param1, (byte) 17);
         if (param0 >= -35) {
           this.field_J = 78;
         }

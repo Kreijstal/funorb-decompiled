@@ -77,7 +77,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = mo.a(var10, (byte) -116);
+                                  var9_int = SpriteButtonRenderer.a(var10, (byte) -116);
                                   var4 = var4 + this.field_E[var9_int].field_c;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(sj.a(-101, (char) var7) & 255);
+              var7 = (char)(CheckboxWidget.encodeCp1252Char(-101, (char) var7) & 255);
               var4 = var4 + this.field_K[var7];
               if (this.field_H != null &&
                 var3 != 0) {
@@ -130,7 +130,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int a(char param0) {
-        return this.field_K[sj.a(113, param0) & 255];
+        return this.field_K[CheckboxWidget.encodeCp1252Char(113, param0) & 255];
     }
 
     final void c(String param0, int param1, int param2, int param3, int param4) {
@@ -240,7 +240,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = mo.a(var18, (byte) -116);
+                                    var16_int = SpriteButtonRenderer.a(var18, (byte) -116);
                                     var4 = var4 + this.field_E[var16_int].field_c;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -325,7 +325,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_x.append((char) var14);
-                var14 = (char)(sj.a(-98, (char) var14) & 255);
+                var14 = (char)(CheckboxWidget.encodeCp1252Char(-98, (char) var14) & 255);
                 var4 = var4 + this.field_K[var14];
                 if (this.field_H != null &&
                   var10 != 0) {
@@ -580,7 +580,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = mo.a(var13, (byte) -116);
+                                  var10 = SpriteButtonRenderer.a(var13, (byte) -116);
                                   var11_ref_p = this.field_E[var10];
                                   if (this.field_q == null) {
                                     stackIn_27_0 = var11_ref_p.field_e;
@@ -629,7 +629,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(sj.a(127, (char) var8) & 255);
+              var8 = (char)(CheckboxWidget.encodeCp1252Char(127, (char) var8) & 255);
               if (this.field_H != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_H[(var5 << 8) + var8];
@@ -875,7 +875,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_L = mo.a(var4, (byte) -116);
+                field_L = SpriteButtonRenderer.a(var4, (byte) -116);
               }
             } else {
               field_y = field_p;

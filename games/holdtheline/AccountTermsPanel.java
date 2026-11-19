@@ -110,37 +110,37 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
-        dk var4 = null;
+        TextWidgetStyle var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
           this.field_K = param0;
           this.field_M = new TextButton(ImageProducerRasterBuffer.field_j, (WidgetListener) null);
-          this.field_M.field_l = (WidgetRenderer) ((Object) new mo());
-          var7 = sd.a(ta.field_b, new String[]{this.g((byte) -120), this.a((byte) -119)}, true);
+          this.field_M.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
+          var7 = LoginCredentials.substituteIndexedTokens(ta.field_b, new String[]{this.g((byte) -120), this.a((byte) -119)}, true);
           var3 = 20;
-          var4 = new dk(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
+          var4 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
           this.field_F = new TextHotspotWidget(var7, var4);
-          this.field_F.field_z = "";
+          this.field_F.tooltip = "";
           this.field_F.a(0, m.field_d, true);
           this.field_F.a(1, m.field_d, true);
-          this.field_F.field_t = (WidgetListener) (this);
-          this.field_F.field_x = -40 + this.field_x;
-          this.field_F.a(-40 + this.field_x, (byte) -64, var3, 26);
-          var3 = var3 + (this.field_F.field_u + 15);
+          this.field_F.listener = (WidgetListener) (this);
+          this.field_F.width = -40 + this.width;
+          this.field_F.a(-40 + this.width, (byte) -64, var3, 26);
+          var3 = var3 + (this.field_F.height + 15);
           this.a(true, this.field_F);
           var5 = 4;
           var6 = 200;
-          this.field_M.a(300 - var6 >> 1, (byte) 122, var3, 40, var6);
-          this.field_M.field_t = (WidgetListener) (this);
+          this.field_M.setBounds(300 - var6 >> 1, (byte) 122, var3, 40, var6);
+          this.field_M.listener = (WidgetListener) (this);
           this.a(true, this.field_M);
-          this.a(0, (byte) 122, 0, 55 + (var3 + var5), 300);
+          this.setBounds(0, (byte) 122, 0, 55 + (var3 + var5), 300);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -149,7 +149,7 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyPress(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {

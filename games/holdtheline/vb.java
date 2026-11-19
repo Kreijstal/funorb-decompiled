@@ -31,10 +31,10 @@ final class vb {
         if (StrongCacheEntry.field_q > 200) {
           var5 = (250 - StrongCacheEntry.field_q << 8) / 50;
         }
-        ProxySocketConnector.a(kj.field_p, -1);
+        ProxySocketConnector.a(SolidRoadStripRenderer.field_p, -1);
         TriangleRasterState.c();
         SoftwareRasterizer.c();
-        td.a((byte) -111);
+        StereoMusicSample.a((byte) -111);
         if (var5 < 256) {
           SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c, 0, -var5 + 256);
         }
@@ -49,7 +49,7 @@ final class vb {
               if (var6 < 20) {
                 var7 = 256 * var6 / 20;
               }
-              kh.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+              EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
             }
           } else {
             if (50 <= var6) {
@@ -59,7 +59,7 @@ final class vb {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                kh.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
               }
             } else {
               if (var6 < 20) {
@@ -71,7 +71,7 @@ final class vb {
                   if (var6 < 20) {
                     var7 = 256 * var6 / 20;
                   }
-                  kh.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                  EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
                 }
               } else {
                 if (var6 < 30) {
@@ -82,7 +82,7 @@ final class vb {
                     if (var6 < 20) {
                       var7 = 256 * var6 / 20;
                     }
-                    kh.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                    EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
                   }
                 } else {
                   var7 = 256 * (-var6 + 50) / 20;
@@ -93,7 +93,7 @@ final class vb {
                     if (var6 < 20) {
                       var7 = 256 * var6 / 20;
                     }
-                    kh.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                    EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
                   }
                 }
               }
@@ -101,7 +101,7 @@ final class vb {
           }
           return;
         }
-        kj.field_p.c(var3, var4);
+        SolidRoadStripRenderer.field_p.c(var3, var4);
         var6Lifetime1 = -125 + StrongCacheEntry.field_q;
         if (var6Lifetime1 > 0 &&
           50 > var6Lifetime1) {
@@ -123,14 +123,14 @@ final class vb {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = 256 * var6Lifetime2 / 20;
           }
-          kh.field_l.d(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
+          EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
         }
         return;
     }
 
     final static void a(int param0, Sprite param1) {
         try {
-          ok.a(32381);
+          TutorialTransition.a(32381);
           if (param0 > -44) {
             vb.clearSharedReferences(51);
           }

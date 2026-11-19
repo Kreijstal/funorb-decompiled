@@ -26,12 +26,12 @@ final class rf extends ResizableDialog implements ButtonActionListener {
             field_X = -88;
           }
           var4 = new TextButton(param1, param0);
-          var4.field_l = (WidgetRenderer) ((Object) new mo());
-          var5 = this.field_u - 6;
-          this.field_u = this.field_u + 38;
-          var4.a(15, (byte) 122, var5, 30, -16 + (this.field_x - 14));
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
+          var5 = this.height - 6;
+          this.height = this.height + 38;
+          var4.setBounds(15, (byte) 122, var5, 30, -16 + (this.width - 14));
           this.a(true, var4);
-          this.g(113);
+          this.refreshLayout(113);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,25 +101,25 @@ final class rf extends ResizableDialog implements ButtonActionListener {
             if (DiskCacheStore.field_a != param1) {
               if (StandardContentTransitionDialog.field_nb == param1) {
                 var3 = hc.field_c;
-                this.field_u = this.field_u + 30;
+                this.height = this.height + 30;
               }
             } else {
-              var3 = dk.field_m;
-              this.field_u = this.field_u + 10;
+              var3 = TextWidgetStyle.field_m;
+              this.height = this.height + 10;
               if (LoginForm.b(true)) {
                 var3 = dm.field_c;
-                this.field_u = this.field_u + 20;
+                this.height = this.height + 20;
               }
             }
           } else {
-            var3 = ek.field_w;
+            var3 = CheckboxRenderer.field_w;
           }
           var4 = new UiWidget((String) (var3), (WidgetListener) null);
-          var4.field_o = 50;
-          var4.field_x = this.field_x;
-          var4.field_u = 80;
-          var4.field_k = 0;
-          var4.field_l = (WidgetRenderer) ((Object) new dk(mo.field_w, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.y = 50;
+          var4.width = this.width;
+          var4.height = 80;
+          var4.x = 0;
+          var4.renderer = (WidgetRenderer) ((Object) new TextWidgetStyle(SpriteButtonRenderer.field_w, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(true, var4);
           this.field_Z = this.a((WidgetListener) (this), h.field_f, 25105);
           return;
@@ -186,7 +186,7 @@ final class rf extends ResizableDialog implements ButtonActionListener {
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_10_0 = oa.a(param0, var4, param2 - 3247);
+          stackIn_10_0 = NamedSoundEffect.a(param0, var4, param2 - 3247);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

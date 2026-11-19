@@ -5,7 +5,7 @@ abstract class vd {
     static long field_a;
     static String field_e;
     static String field_d;
-    static oa field_b;
+    static NamedSoundEffect field_b;
     static int[] field_c;
 
     abstract void a(float param0, int[] param1, int param2, int[] param3, byte param4);
@@ -71,7 +71,7 @@ abstract class vd {
         if (param0 != -1) {
           return (String) null;
         }
-        return rd.field_e.j(-1231);
+        return RoadStripRenderer.field_e.readCp1252String(-1231);
     }
 
     public static void clearSharedReferences(int param0) {

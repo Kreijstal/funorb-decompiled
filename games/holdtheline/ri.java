@@ -4,15 +4,15 @@
 final class ri {
     static long[][] field_g;
     static long[] field_f;
-    static uf field_a;
-    static rd field_c;
+    static SpriteAsset field_a;
+    static RoadStripRenderer field_c;
     static String field_d;
     static String[] field_b;
-    static ac field_e;
+    static ArchiveLoadProgress field_e;
 
     final static void a(byte param0, String[] param1) {
-        if (null != cg.field_b) {
-          cg.field_b.field_R.a(param1, (byte) 43);
+        if (null != TutorialAction.field_b) {
+          TutorialAction.field_b.field_R.a(param1, (byte) 43);
         }
         if (param0 <= 33) {
           return;
@@ -84,7 +84,7 @@ final class ri {
             var1 = -8 + var0 * 8;
             field_f[var0] = GameKeyHandler.a(GameKeyHandler.a(gh.a(65280L, field_g[6][var1 + 6]), GameKeyHandler.a(gh.a(16711680L, field_g[5][var1 + 5]), GameKeyHandler.a(gh.a(field_g[4][4 + var1], 4278190080L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(gh.a(field_g[1][1 + var1], 71776119061217280L), gh.a(field_g[0][var1], -72057594037927936L)), gh.a(field_g[2][2 + var1], 280375465082880L)), gh.a(1095216660480L, field_g[3][3 + var1]))))), gh.a(255L, field_g[7][7 + var1]));
         }
-        field_c = (rd) ((Object) new le(7, 30.0f, new int[]{16711680, 16777215}));
+        field_c = (RoadStripRenderer) ((Object) new ShadedRoadStripRenderer(7, 30.0f, new int[]{16711680, 16777215}));
         field_d = "Service unavailable";
         field_b = new String[]{"Showing by rating", "Showing by win percentage"};
     }

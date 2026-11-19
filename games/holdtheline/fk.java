@@ -24,11 +24,11 @@ final class fk {
         field_b = (int[][]) null;
     }
 
-    final static vj a(int param0, float param1, vj param2, float param3) {
+    final static BoundaryCurve a(int param0, float param1, BoundaryCurve param2, float param3) {
         RuntimeException var4 = null;
         TrackBoundary var5 = null;
-        gj var6 = null;
-        gj stackIn_4_0 = null;
+        ArcTrackBoundary var6 = null;
+        ArcTrackBoundary stackIn_4_0 = null;
         TrackBoundary stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -40,12 +40,12 @@ final class fk {
           }
           if (param2 instanceof TrackBoundary) {
             var5 = (TrackBoundary) (param2);
-            stackIn_6_0 = new TrackBoundary(var5.a(false, param3), var5.a(false, param1), param2.field_k, param2.field_p, param2.field_q);
-            return (vj) ((Object) stackIn_6_0);
+            stackIn_6_0 = new TrackBoundary(var5.pointAt(false, param3), var5.pointAt(false, param1), param2.field_k, param2.field_p, param2.field_q);
+            return (BoundaryCurve) ((Object) stackIn_6_0);
           }
-          var6 = (gj) (param2);
-          stackIn_4_0 = new gj(var6.field_t, var6.field_u, var6.field_r + (-var6.field_r + var6.field_w) * param3, var6.field_r + (var6.field_w - var6.field_r) * param1, param2.field_k, param2.field_p, param2.field_q);
-          return (vj) ((Object) stackIn_4_0);
+          var6 = (ArcTrackBoundary) (param2);
+          stackIn_4_0 = new ArcTrackBoundary(var6.center, var6.radius, var6.startAngle + (-var6.startAngle + var6.endAngle) * param3, var6.startAngle + (var6.endAngle - var6.startAngle) * param1, param2.field_k, param2.field_p, param2.field_q);
+          return (BoundaryCurve) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -97,7 +97,7 @@ final class fk {
         var19 = HoldTheLine.field_D;
         try {
           var8 = param1.length;
-          on.field_t.a(param6, param4);
+          QuickChatPhraseDefinition.field_t.a(param6, param4);
           nj.field_i.a(381 + param6, param4);
           stackIn_4_0 = (var8 != 1) ? 2 : 1;
           var9 = stackIn_4_0;
@@ -121,7 +121,7 @@ final class fk {
               var14 = var14 + param0[var7_int];
             }
             var15 = var14 + param0[1 + param5];
-            for (var16 = 0; on.field_t.field_y > var16; var16++) {
+            for (var16 = 0; QuickChatPhraseDefinition.field_t.field_y > var16; var16++) {
               for (var17 = var10_ref_hj.field_s; var17 > 0; var17--) {
                 if (var10_ref_hj.field_z[-1 + (var11 * var16 + var17)] == 0) {
                   continue;

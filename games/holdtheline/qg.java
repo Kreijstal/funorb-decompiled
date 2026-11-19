@@ -196,7 +196,7 @@ final class qg {
           if (var5 == null) {
             return false;
           }
-          ug.a((byte) -97, var5);
+          MarkerSliderRenderer.decodeSpriteSheet((byte) -97, var5);
           if (param2 == -27) {
             return true;
           }

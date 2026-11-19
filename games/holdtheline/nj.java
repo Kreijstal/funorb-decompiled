@@ -11,7 +11,7 @@ final class nj {
     Sprite[] field_j;
     static float field_e;
     Sprite field_b;
-    static uf[] field_c;
+    static SpriteAsset[] field_c;
     static Sprite field_i;
     private int field_g;
 
@@ -56,7 +56,7 @@ final class nj {
         RuntimeException var4_ref = null;
         var5 = HoldTheLine.field_D;
         try {
-          ak.field_b = fd.field_c;
+          ak.field_b = ValidationState.field_c;
           if (255 != param1) {
             if (100 > param1) {
               RaceVehicle.field_U = ij.a(param3, 256, param1);
@@ -71,7 +71,7 @@ final class nj {
             }
           } else {
             stackIn_5_0 = !(ResizableDialog.field_V >= 13);
-            RaceVehicle.field_U = kl.a(stackIn_5_0, 0);
+            RaceVehicle.field_U = TextFieldRenderer.a(stackIn_5_0, 0);
             var6 = (String[]) null;
             ri.a((byte) 71, (String[]) null);
           }
@@ -100,7 +100,7 @@ final class nj {
         }
     }
 
-    final void a(ig param0, nj param1, int param2, int param3, int param4, UiWidget param5) {
+    final void a(LayeredButtonRenderer param0, nj param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -233,7 +233,7 @@ final class nj {
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, int param3, ig param4) {
+    final void a(UiWidget param0, int param1, int param2, int param3, LayeredButtonRenderer param4) {
         BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
@@ -256,28 +256,28 @@ final class nj {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          hi.a(this.field_j, param0.field_u, true, param0.field_x, param2 + param0.field_k, param1 + param0.field_o);
+          hi.drawNineSlice(this.field_j, param0.height, true, param0.width, param2 + param0.x, param1 + param0.y);
           if (null != this.field_b) {
-            var6_int = param2 + param0.field_k + this.field_a;
-            var7 = this.field_g + param0.field_o + param1;
+            var6_int = param2 + param0.x + this.field_a;
+            var7 = this.field_g + param0.y + param1;
             if (param4.field_i == 1) {
-              var6_int = var6_int + (-this.field_b.field_o + param0.field_x) / 2;
+              var6_int = var6_int + (-this.field_b.field_o + param0.width) / 2;
             }
             if (param4.field_d == 1) {
-              var7 = var7 + (-this.field_b.field_v + param0.field_u) / 2;
+              var7 = var7 + (-this.field_b.field_v + param0.height) / 2;
             }
             if (param4.field_i == 2) {
-              var6_int = var6_int + (param0.field_x - this.field_b.field_o);
+              var6_int = var6_int + (param0.width - this.field_b.field_o);
             }
             if (2 == param4.field_d) {
-              var7 = var7 + (-this.field_b.field_v + param0.field_u);
+              var7 = var7 + (-this.field_b.field_v + param0.height);
             }
             this.field_b.a(var6_int, var7);
           }
           if (param3 != -1) {
             return;
           }
-          var6 = param4.a(param0, (byte) -15);
+          var6 = param4.getDisplayText(param0, (byte) -15);
           if (var6 != null &&
             null != param4.field_f &&
             this.field_l >= 0) {
@@ -288,15 +288,15 @@ final class nj {
             } else {
               stackIn_21_2 = this.field_a;
             }
-            stackIn_23_2 = stackIn_21_2 + param4.field_j + param0.field_k + param2;
+            stackIn_23_2 = stackIn_21_2 + param4.field_j + param0.x + param2;
             if (this.field_g != -2147483648) {
               stackIn_24_3 = this.field_g;
             } else {
               stackIn_24_3 = 0;
             }
-            stackIn_26_3 = stackIn_24_3 + param4.field_p + (param0.field_o + param1);
-            stackIn_26_4 = -param4.field_n + (-param4.field_j + param0.field_x);
-            stackIn_26_5 = -param4.field_e + param0.field_u - param4.field_p;
+            stackIn_26_3 = stackIn_24_3 + param4.field_p + (param0.y + param1);
+            stackIn_26_4 = -param4.field_n + (-param4.field_j + param0.width);
+            stackIn_26_5 = -param4.field_e + param0.height - param4.field_p;
             stackIn_26_6 = this.field_l;
             stackIn_26_7 = this.field_h;
             if (this.field_k == -2147483648) {
@@ -331,7 +331,7 @@ final class nj {
         field_i = null;
         field_c = null;
         if (param0 < 55) {
-          field_c = (uf[]) null;
+          field_c = (SpriteAsset[]) null;
         }
     }
 

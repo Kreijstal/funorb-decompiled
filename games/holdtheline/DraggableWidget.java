@@ -26,15 +26,15 @@ final class DraggableWidget extends SingleChildWidget {
         if (param0 >= -127) {
           field_L = (String) null;
         }
-        Sprite[] var1 = new Sprite[vn.field_d];
-        for (var2 = 0; vn.field_d > var2; var2++) {
+        Sprite[] var1 = new Sprite[NineSlicePanel.field_d];
+        for (var2 = 0; NineSlicePanel.field_d > var2; var2++) {
           var3 = EditableTextField.field_K[var2] * ad.field_d[var2];
           var4 = IterableSecondaryNodeDeque.field_e[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = StraightRoadSegment.field_E[LoginChoicePanel.a(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(bo.field_b, ih.field_o, la.field_j[var2], wb.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var5);
+          var1[var2] = new Sprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var5);
         }
         tk.a(false);
         return var1;
@@ -42,9 +42,9 @@ final class DraggableWidget extends SingleChildWidget {
 
     final void a(int param0) {
         super.a(-122);
-        this.field_B.a(0, (byte) 122, 0, this.field_u, this.field_x);
-        this.field_K = this.field_o;
-        this.field_O = this.field_k;
+        this.child.setBounds(0, (byte) 122, 0, this.height, this.width);
+        this.field_K = this.y;
+        this.field_O = this.x;
         int var2 = -26 % ((-68 - param0) / 32);
     }
 
@@ -53,7 +53,7 @@ final class DraggableWidget extends SingleChildWidget {
         this.field_O = 2147483647;
         this.field_K = 2147483647;
         try {
-          this.field_B = param6;
+          this.child = param6;
           this.field_Q = param8 ? true : false;
           this.field_P = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -94,7 +94,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final StringBuilder a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int param0, byte param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         int var5_int = 0;
@@ -107,8 +107,8 @@ final class DraggableWidget extends SingleChildWidget {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(20720, param2, param3, param0)) {
-            this.a(param2, param0, true, param3);
+          if (this.beginDebugVisit(20720, param2, param3, param0)) {
+            this.appendDebugProperties(param2, param0, true, param3);
             this.a((byte) 126, param0, param3, param2);
             discarded$64 = param3.append(" revert=").append(this.field_P);
             if (2147483647 != this.field_O &&
@@ -139,7 +139,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, byte param3) {
+    final void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         int stackIn_9_1 = 0;
         int stackIn_12_2 = 0;
         int stackIn_19_1 = 0;
@@ -152,26 +152,26 @@ final class DraggableWidget extends SingleChildWidget {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_B instanceof TextButton) ||
-            ((TextButton) (this.field_B)).field_D) &&
-            this.field_v == 1) {
+          if ((!(this.child instanceof TextButton) ||
+            ((TextButton) (this.child)).field_D) &&
+            this.pressedButton == 1) {
             var5_int = NodeHashTableIterator.field_g - (this.field_N + param0);
             var6 = -param2 - this.field_H + rf.field_X;
-            if (var5_int == this.field_k &&
-              this.field_o == var6) {
-              super.a(param0, param1, param2, param3);
+            if (var5_int == this.x &&
+              this.y == var6) {
+              super.updateHover(param0, param1, param2, param3);
               return;
             }
-            this.field_o = var6;
-            this.field_k = var5_int;
-            if (this.field_t instanceof DragListener) {
-              ((DragListener) (this.field_t)).onDrag(param2, param0, this, (byte) 51);
+            this.y = var6;
+            this.x = var5_int;
+            if (this.listener instanceof DragListener) {
+              ((DragListener) (this.listener)).onDrag(param2, param0, this, (byte) 51);
             }
           } else {
             if (this.field_P) {
-              if (this.field_O != this.field_k) {
-                var5_int = -this.field_k + this.field_O;
-                stackIn_9_1 = this.field_k;
+              if (this.field_O != this.x) {
+                var5_int = -this.x + this.field_O;
+                stackIn_9_1 = this.x;
                 if (Math.abs(var5_int) <= 2) {
                   if (0 >= var5_int) {
                     stackIn_12_2 = -1;
@@ -181,11 +181,11 @@ final class DraggableWidget extends SingleChildWidget {
                 } else {
                   stackIn_12_2 = var5_int >> 1;
                 }
-                this.field_k = stackIn_9_1 + stackIn_12_2;
+                this.x = stackIn_9_1 + stackIn_12_2;
               }
-              if (this.field_o != this.field_K) {
-                var5_int = this.field_K - this.field_o;
-                stackIn_19_1 = this.field_o;
+              if (this.y != this.field_K) {
+                var5_int = this.field_K - this.y;
+                stackIn_19_1 = this.y;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_20_2 = var5_int >> 1;
                 } else {
@@ -195,11 +195,11 @@ final class DraggableWidget extends SingleChildWidget {
                     stackIn_20_2 = 1;
                   }
                 }
-                this.field_o = stackIn_19_1 + stackIn_20_2;
+                this.y = stackIn_19_1 + stackIn_20_2;
               }
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -215,20 +215,20 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static uf a(String param0, int param1) {
+    final static SpriteAsset a(String param0, int param1) {
         RuntimeException var2 = null;
-        uf stackIn_2_0 = null;
-        uf stackIn_4_0 = null;
+        SpriteAsset stackIn_2_0 = null;
+        SpriteAsset stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 1) {
-            stackIn_4_0 = new uf(param0);
+            stackIn_4_0 = new SpriteAsset(param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (uf) null;
+          stackIn_2_0 = (SpriteAsset) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -244,10 +244,10 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
+    final void handleMouseRelease(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
-          this.field_v = 0;
+          super.handleMouseRelease(param0, param1, param2, param3, param4, param5);
+          this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jd.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -272,7 +272,7 @@ final class DraggableWidget extends SingleChildWidget {
           TriangleRasterState.c();
           SoftwareRasterizer.c();
           StrongCacheEntry.field_q = 0;
-          td.a((byte) 121);
+          StereoMusicSample.a((byte) 121);
           var2 = var1.e();
           for (var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);
@@ -286,7 +286,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_10_0 = 0;
@@ -295,21 +295,21 @@ final class DraggableWidget extends SingleChildWidget {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8_int = super.a(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
+          var8_int = super.handleMousePress(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_Q) {
             return true;
           }
-          if (!this.b(param0, (byte) -105, param5, param2, param1)) {
+          if (!this.containsPoint(param0, (byte) -105, param5, param2, param1)) {
             stackIn_10_0 = var8_int;
             return stackIn_10_0 != 0;
           }
           if (param6 == 1) {
-            ig.field_q = this;
-            this.field_H = param1 - (this.field_o + param2);
-            this.field_N = -param0 - this.field_k + param5;
+            LayeredButtonRenderer.field_q = this;
+            this.field_H = param1 - (this.y + param2);
+            this.field_N = -param0 - this.x + param5;
           }
-          this.field_v = param6;
+          this.pressedButton = param6;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -347,7 +347,7 @@ final class DraggableWidget extends SingleChildWidget {
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, lj.field_f, g.field_i);
+              var9.fillRect(0, 0, lj.field_f, LinearPointPath.field_i);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -366,12 +366,12 @@ final class DraggableWidget extends SingleChildWidget {
               var10.setFont(kc.field_e);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
-              var9.drawImage(i.field_i, lj.field_f / 2 - 152, -18 + g.field_i / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(i.field_i, lj.field_f / 2 - 152, -18 + LinearPointPath.field_i / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = lj.field_f / 2 - 152;
-              var8 = g.field_i / 2 - 18;
+              var8 = LinearPointPath.field_i / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, 3 * param2, 30);
@@ -385,7 +385,7 @@ final class DraggableWidget extends SingleChildWidget {
             if (null != qh.field_d) {
               var9.setFont(kc.field_e);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(qh.field_d, lj.field_f / 2 - 6 * qh.field_d.length() / 2, g.field_i / 2 - 26);
+              var9.drawString(qh.field_d, lj.field_f / 2 - 6 * qh.field_d.length() / 2, LinearPointPath.field_i / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

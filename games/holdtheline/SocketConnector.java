@@ -262,7 +262,7 @@ abstract class SocketConnector {
         RuntimeException var4 = null;
         var8 = HoldTheLine.field_D;
         try {
-          var4_int = param2.h(param1, 7);
+          var4_int = param2.readBits(param1, 7);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -274,15 +274,15 @@ abstract class SocketConnector {
           if (param3 < 96) {
             SocketConnector.clearSharedReferences((byte) -29);
           }
-          var5 = param2.h(3, 7);
-          var6 = (byte)param2.h(8, 7);
+          var5 = param2.readBits(3, 7);
+          var6 = (byte)param2.readBits(8, 7);
           if (var5 <= 0) {
             for (var7 = 0; var4_int > var7; var7++) {
               param0[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (byte)(var6 + param2.h(var5, 7));
+              param0[var7] = (byte)(var6 + param2.readBits(var5, 7));
             }
           }
           stackIn_18_0 = (byte[]) (param0);
@@ -307,7 +307,7 @@ abstract class SocketConnector {
         }
     }
 
-    final static void a(long param0, byte param1) {
+    final static void sleepMillis(long param0, byte param1) {
         if (param0 <= 0L) {
           return;
         }
@@ -322,7 +322,7 @@ abstract class SocketConnector {
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte[] param3) {
+    final static int crc32(int param0, int param1, int param2, byte[] param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

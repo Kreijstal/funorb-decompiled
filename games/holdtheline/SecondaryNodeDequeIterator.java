@@ -66,11 +66,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
           SoftwareRasterizer.c();
           ra.field_hb.a(224, 112, 192, 256);
           for (var1_int = 0; 32 > var1_int; var1_int++) {
-            var2 = ce.a(-14646, nm.field_b);
+            var2 = OutlinedRoadStripRenderer.a(-14646, nm.field_b);
             SoftwareRasterizer.b(var1_int / 2 + 184, 398 - var1_int, var2, 12517567);
             SoftwareRasterizer.b(var2 + (var1_int / 2 + 184), 398 - var1_int, -var2 + 256, 7274607);
           }
-          nm.field_c.b(ek.field_q, 320, 392, 0, -1);
+          nm.field_c.b(CheckboxRenderer.field_q, 320, 392, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

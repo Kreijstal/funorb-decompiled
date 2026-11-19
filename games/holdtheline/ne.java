@@ -13,7 +13,7 @@ final class ne {
         field_a = null;
     }
 
-    final static boolean a(int param0, CharSequence param1, boolean param2, int param3) {
+    final static boolean isIntegerInRadix(int param0, CharSequence param1, boolean param2, int param3) {
         int var8 = 0;
         int stackIn_43_0 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -132,11 +132,11 @@ final class ne {
         }
     }
 
-    final static byte[] a(int param0, Object param1, boolean param2) {
+    final static byte[] unwrapByteStorage(int param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
-        ej var5 = null;
+        ByteStorage var5 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
@@ -152,14 +152,14 @@ final class ne {
           }
           if (param0 != 90) {
             var4 = (Object) null;
-            ne.a(24, (Object) null, true);
+            ne.unwrapByteStorage(24, (Object) null, true);
           }
           if (!(param1 instanceof byte[])) {
-            if (!(param1 instanceof ej)) {
+            if (!(param1 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var5 = (ej) (param1);
-            stackIn_15_0 = var5.a(62);
+            var5 = (ByteStorage) (param1);
+            stackIn_15_0 = var5.getBytes(62);
             return stackIn_15_0;
           }
           var3 = (byte[]) (param1);
@@ -167,7 +167,7 @@ final class ne {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = sj.a(var3, (byte) -69);
+          stackIn_9_0 = CheckboxWidget.copyBytes(var3, (byte) -69);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

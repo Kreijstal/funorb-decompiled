@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sb {
-    static kb field_d;
+    static LoginCredentialType field_d;
     static AccountProgressDialog field_c;
     static RoadSegment[] field_a;
     float field_b;
@@ -22,6 +22,6 @@ final class sb {
     }
 
     static {
-        field_d = new kb(3);
+        field_d = new LoginCredentialType(3);
     }
 }

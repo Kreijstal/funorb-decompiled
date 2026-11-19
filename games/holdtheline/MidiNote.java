@@ -108,7 +108,7 @@ final class MidiNote extends IntrusiveNode {
           if (DiskCacheRequest.field_w == 11) {
             BufferedSocket.a(false);
           }
-          sj.a(DisplayNameForm.field_K, aa.field_m, nj.field_e, -115);
+          CheckboxWidget.a(DisplayNameForm.field_K, DelayedServerPacket.field_m, nj.field_e, -115);
           hi.a(param1, 0, true, 0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ck.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

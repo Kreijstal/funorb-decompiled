@@ -10,12 +10,12 @@ class TextHotspotWidget extends TextButton {
     private String[] field_J;
     static String field_L;
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.j(0);
     }
 
-    String f(int param0) {
+    String getTooltip(int param0) {
         TextHotspotRange discarded$0 = null;
         if (param0 != 0) {
           discarded$0 = this.a((byte) -75, 19, 29);
@@ -80,16 +80,16 @@ class TextHotspotWidget extends TextButton {
 
     final void a(int param0, int param1, boolean param2, int param3) {
         super.a(param0, param1, param2, param3);
-        int var5 = param3 - this.field_k;
-        int var6 = param1 - this.field_o;
+        int var5 = param3 - this.x;
+        int var6 = param1 - this.y;
         TextHotspotRange var7 = this.a((byte) 124, var5, var6);
         if (var7 != null &&
-          this.field_t != null) {
-          ((HotspotClickListener) ((Object) this.field_t)).onHotspotClick(this, var7.field_k, (byte) -106, param0);
+          this.listener != null) {
+          ((HotspotClickListener) ((Object) this.listener)).onHotspotClick(this, var7.field_k, (byte) -106, param0);
         }
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -117,8 +117,8 @@ class TextHotspotWidget extends TextButton {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
         try {
-          fj.field_o = qn.a("", -7079);
-          fj.field_o.a(false, 107);
+          fj.field_o = qn.createEmailValidationRequest("", -7079);
+          fj.field_o.complete(false, 107);
           i.a(true, param0, param1, param2);
           DialogLayer.h(-1);
           ak.field_b = ValidationIndicator.field_M;
@@ -131,7 +131,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    void a(int param0, UiWidget param1, int param2, byte param3) {
+    void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -140,11 +140,11 @@ class TextHotspotWidget extends TextButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateHover(param0, param1, param2, param3);
           this.field_H = null;
-          if (this.field_p) {
-            var5_int = NodeHashTableIterator.field_g + (-param0 - this.field_k);
-            var6 = rf.field_X - param2 - this.field_o;
+          if (this.hovered) {
+            var5_int = NodeHashTableIterator.field_g + (-param0 - this.x);
+            var6 = rf.field_X - param2 - this.y;
             this.field_H = this.a((byte) 124, var5_int, var6);
           }
           return;
@@ -189,30 +189,30 @@ class TextHotspotWidget extends TextButton {
         return null;
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (param3 != 0) {
           return;
         }
-        TextWidgetRenderer var5 = (TextWidgetRenderer) ((Object) this.field_l);
+        TextWidgetRenderer var5 = (TextWidgetRenderer) ((Object) this.renderer);
         TextHotspotRange var6 = this.field_H;
         if (var6 == null) {
         } else {
-          var7 = var5.a((UiWidget) (this), param2, 13112);
-          var8 = var5.a(param0 ^ 1337393829, (UiWidget) (this), param1);
+          var7 = var5.getTextOriginX((UiWidget) (this), param2, 13112);
+          var8 = var5.getTextOriginY(param0 ^ 1337393829, (UiWidget) (this), param1);
           do {
-            ei.a(var6.field_l + 2, var6.field_n + 2, var7 + (var6.field_j - 2), -2 + var8 + var6.field_s, (byte) 19);
+            GrowableObjectList.a(var6.field_l + 2, var6.field_n + 2, var7 + (var6.field_j - 2), -2 + var8 + var6.field_s, (byte) 19);
             var6 = var6.field_p;
           } while (var6 != null);
         }
     }
 
-    final static dk k(int param0) {
+    final static TextWidgetStyle k(int param0) {
         int var1 = 31 % ((param0 - 66) / 35);
         if (RoadSegment.field_p == null) {
-          RoadSegment.field_p = new dk(mo.field_w, 20, 0, 0, 0, 11579568, -1, 0, 0, mo.field_w.field_G, -1, 2147483647, true);
+          RoadSegment.field_p = new TextWidgetStyle(SpriteButtonRenderer.field_w, 20, 0, 0, 0, 11579568, -1, 0, 0, SpriteButtonRenderer.field_w.field_G, -1, 2147483647, true);
         }
         return RoadSegment.field_p;
     }
@@ -230,7 +230,7 @@ class TextHotspotWidget extends TextButton {
         int var8;
         int var9;
         Object var10;
-        lf var12;
+        TextLineLayout var12;
         int var13;
         int var14;
         TextHotspotRange var15;
@@ -239,17 +239,17 @@ class TextHotspotWidget extends TextButton {
         var16 = HoldTheLine.field_D;
         this.field_I = new IntrusiveDeque();
         var2 = param0;
-        var3 = (TextWidgetRenderer) ((Object) this.field_l);
+        var3 = (TextWidgetRenderer) ((Object) this.renderer);
         var4 = var3.getTextLayout((byte) 20, (UiWidget) (this));
         while (true) {
-          var5 = this.field_q.indexOf("<hotspot=", var2);
+          var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             return;
           }
-          var7 = this.field_q.indexOf(">", var5);
-          var6 = this.field_q.substring(9 + var5, var7);
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(9 + var5, var7);
           var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_q.indexOf("</hotspot>", var5);
+          var2 = this.text.indexOf("</hotspot>", var5);
           var8 = var4.b(var5, param0 ^ -22539);
           var9 = var4.b(var2, -22539);
           var10 = null;
@@ -271,7 +271,7 @@ class TextHotspotWidget extends TextButton {
               stackIn_12_0 = var4.a(16777215, var2);
             }
             var14 = stackIn_12_0;
-            var15 = new TextHotspotRange(var7Lifetime1, var13, var12.field_h, var14 - var13, Math.max(var3.a(true), -var12.field_h + var12.field_k));
+            var15 = new TextHotspotRange(var7Lifetime1, var13, var12.field_h, var14 - var13, Math.max(var3.getFontHeight(true), -var12.field_h + var12.field_k));
             if (var10 != null) {
               ((TextHotspotRange) (var10)).field_p = var15;
             }
@@ -294,14 +294,14 @@ class TextHotspotWidget extends TextButton {
         super(param0, (WidgetListener) null);
         this.field_H = null;
         try {
-          this.field_l = param1;
+          this.renderer = param1;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "cj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.a(param3, (byte) 122, param2, ((TextWidgetRenderer) ((Object) this.field_l)).a((UiWidget) (this), -121), param0);
+        this.setBounds(param3, (byte) 122, param2, ((TextWidgetRenderer) ((Object) this.renderer)).getPreferredHeight((UiWidget) (this), -121), param0);
         int var5 = 51 % ((69 - param1) / 32);
     }
 

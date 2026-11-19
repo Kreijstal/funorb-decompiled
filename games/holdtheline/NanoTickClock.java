@@ -15,15 +15,15 @@ final class NanoTickClock extends TickClock {
     private long[] field_l;
     static int[] field_n;
 
-    final static ei a(ei param0, byte param1) {
+    final static GrowableObjectList a(GrowableObjectList param0, byte param1) {
         int var4 = 0;
         Point2i var3 = null;
         TrackBoundary var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ei var9 = null;
-        ei stackIn_11_0 = null;
+        GrowableObjectList var9 = null;
+        GrowableObjectList stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -34,17 +34,17 @@ final class NanoTickClock extends TickClock {
           if (param1 != -127) {
             NanoTickClock.a(67, -35, -105);
           }
-          var9 = new ei();
-          var3 = ((vj) (param0.field_b[-1 + param0.field_e])).a(0);
-          for (var4 = 0; var4 < param0.field_e; var4++) {
-            var5 = (TrackBoundary) (param0.field_b[var4]);
-            var5.field_r.x = var3.x;
-            var5.field_r.y = var3.y;
-            var6 = -var5.field_r.x + var5.field_s.x;
-            var7 = -var5.field_r.y + var5.field_s.y;
+          var9 = new GrowableObjectList();
+          var3 = ((BoundaryCurve) (param0.elements[-1 + param0.size])).getEndPoint(0);
+          for (var4 = 0; var4 < param0.size; var4++) {
+            var5 = (TrackBoundary) (param0.elements[var4]);
+            var5.start.x = var3.x;
+            var5.start.y = var3.y;
+            var6 = -var5.start.x + var5.end.x;
+            var7 = -var5.start.y + var5.end.y;
             if (4 <= var6 * var6 + var7 * var7) {
-              var3 = var5.field_s;
-              var9.a(var5, (byte) 6);
+              var3 = var5.end;
+              var9.add(var5, (byte) 6);
             }
           }
           stackIn_11_0 = var9;
@@ -112,7 +112,7 @@ final class NanoTickClock extends TickClock {
           }
           var11 = param4.a(param5, param2, param3, param1, false);
           while (var11.field_d == 0) {
-            SocketConnector.a(10L, (byte) 45);
+            SocketConnector.sleepMillis(10L, (byte) 45);
           }
           var7 = (java.awt.Frame) (var11.field_b);
           if (var7 == null) {
@@ -121,7 +121,7 @@ final class NanoTickClock extends TickClock {
           if (var11.field_d != 2) {
             return var7;
           }
-          rd.a((byte) 102, param4, var7);
+          RoadStripRenderer.a((byte) 102, param4, var7);
           stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class NanoTickClock extends TickClock {
         String stackIn_40_0 = null;
         int stackIn_40_1 = 0;
         boolean stackIn_41_2 = false;
-        vn stackIn_45_0 = null;
+        NineSlicePanel stackIn_45_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -190,7 +190,7 @@ final class NanoTickClock extends TickClock {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        vn var9 = null;
+        NineSlicePanel var9 = null;
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -199,7 +199,7 @@ final class NanoTickClock extends TickClock {
           var1_int = ie.field_j;
           var2 = 0;
           if (WhirlpoolHasher.field_h == 2) {
-            var3_long = -cg.field_g + bb.b(-1);
+            var3_long = -TutorialAction.field_g + bb.b(-1);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;
@@ -211,12 +211,12 @@ final class NanoTickClock extends TickClock {
           for (var3 = 0; var3 < ClientException.field_b.length; var3++) {
             var4 = cd.field_f[var3];
             if (var4 < 0) {
-              var5 = hg.field_I;
+              var5 = DialWidget.field_I;
             } else {
-              if (var4 == kl.field_q.field_g) {
+              if (var4 == TextFieldRenderer.field_q.field_g) {
                 var5 = ge.field_b;
               } else {
-                var5 = sd.field_c;
+                var5 = LoginCredentials.field_c;
               }
             }
             var6 = ClientException.field_b[var3];
@@ -228,10 +228,10 @@ final class NanoTickClock extends TickClock {
                 stackIn_19_0 = qg.field_b.length;
               }
               var7 = stackIn_19_0;
-              if (aa.field_j.length < pb.field_a.length) {
+              if (DelayedServerPacket.field_j.length < pb.field_a.length) {
                 stackIn_22_0 = pb.field_a.length;
               } else {
-                stackIn_22_0 = aa.field_j.length;
+                stackIn_22_0 = DelayedServerPacket.field_j.length;
               }
               var8 = stackIn_22_0;
               if (6 <= var3 &&
@@ -245,8 +245,8 @@ final class NanoTickClock extends TickClock {
               }
               if (var3 >= var7 + 7 &&
                 var3 < var8 + 7 + var7) {
-                if (aa.field_j.length > -7 + var3 - var7) {
-                  stackIn_34_0 = aa.field_j[-7 + (var3 - var7)];
+                if (DelayedServerPacket.field_j.length > -7 + var3 - var7) {
+                  stackIn_34_0 = DelayedServerPacket.field_j[-7 + (var3 - var7)];
                 } else {
                   stackIn_34_0 = "";
                 }
@@ -262,7 +262,7 @@ final class NanoTickClock extends TickClock {
             var7Lifetime1 = h.measureMenuTextWidthWithIntGuard(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + field_i;
             if (0 <= var4) {
-              if (var4 == kl.field_q.field_g) {
+              if (var4 == TextFieldRenderer.field_q.field_g) {
                 stackIn_45_0 = na.field_p;
               } else {
                 stackIn_45_0 = Point2i.field_e;
@@ -270,7 +270,7 @@ final class NanoTickClock extends TickClock {
               var9 = stackIn_45_0;
               var1_int = var1_int + ContentTransitionDialog.field_bb;
               if (var9 != null) {
-                var9.a(var1_int, TickClock.field_b + (vf.field_w << 1), -51, (DropTargetWidget.field_G << 1) + var7Lifetime1, -DropTargetWidget.field_G + var8Lifetime1);
+                var9.draw(var1_int, TickClock.field_b + (vf.field_w << 1), -51, (DropTargetWidget.field_G << 1) + var7Lifetime1, -DropTargetWidget.field_G + var8Lifetime1);
               }
               var1_int = var1_int + vf.field_w;
             }
@@ -278,7 +278,7 @@ final class NanoTickClock extends TickClock {
               q.field_a.a(var6, var8Lifetime1, var1_int + ClientTextResources.field_b, var5, -1);
               var1_int = var1_int + (TickClock.field_b + vf.field_w + ContentTransitionDialog.field_bb);
             } else {
-              sj.field_G.a(var6, var8Lifetime1, var1_int + gh.field_i, var5, -1);
+              CheckboxWidget.field_G.a(var6, var8Lifetime1, var1_int + gh.field_i, var5, -1);
               var1_int = var1_int + CurvedRoadSegment.field_M;
             }
           }
@@ -307,18 +307,18 @@ final class NanoTickClock extends TickClock {
         int var4 = 0;
         try {
           var5 = IsaacPacketBuffer.field_p;
-          var5.c((byte) 33, param1);
+          var5.writeCipheredOpcode((byte) 33, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.f(111, param0);
-          var5.f(111, param2.field_r);
-          var5.f(111, param2.field_s);
-          var5.a((byte) -58, param2.field_l);
-          var5.a((byte) -58, param2.field_q);
-          var5.a((byte) -58, param2.field_k);
-          var5.a((byte) -58, param2.field_u);
-          var5.a(var4, (byte) 85);
-          var5.a(-268435456, var5.position - var4);
+          var5.writeByte(111, param0);
+          var5.writeByte(111, param2.field_r);
+          var5.writeByte(111, param2.field_s);
+          var5.writeInt((byte) -58, param2.field_l);
+          var5.writeInt((byte) -58, param2.field_q);
+          var5.writeInt((byte) -58, param2.field_k);
+          var5.writeInt((byte) -58, param2.field_u);
+          var5.appendCrc32(var4, (byte) 85);
+          var5.backpatchByteLength(-268435456, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -391,8 +391,8 @@ final class NanoTickClock extends TickClock {
           return (-this.field_h + this.field_f) / 1000000L;
         }
         if (param0 > -25) {
-          ei var3 = (ei) null;
-          NanoTickClock.a((ei) null, (byte) -102);
+          GrowableObjectList var3 = (GrowableObjectList) null;
+          NanoTickClock.a((GrowableObjectList) null, (byte) -102);
         }
         return 0L;
     }
@@ -438,7 +438,7 @@ final class NanoTickClock extends TickClock {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          aa.field_k = false;
+          DelayedServerPacket.field_k = false;
           if (param2 != -2698) {
             return;
           }
@@ -448,8 +448,8 @@ final class NanoTickClock extends TickClock {
               return;
             }
             if (param0 == 8) {
-              if (ci.field_o) {
-                param1 = wb.field_j;
+              if (ArchiveCatalog.field_o) {
+                param1 = Vector2i.field_j;
               } else {
                 param1 = RaceWorld.field_Z;
               }
@@ -463,7 +463,7 @@ final class NanoTickClock extends TickClock {
             }
             if (var3_int != 0) {
               if (fi.field_nb) {
-                param1 = sd.a(fk.field_d, new String[]{param1}, true);
+                param1 = LoginCredentials.substituteIndexedTokens(fk.field_d, new String[]{param1}, true);
               }
               if (ResourceArchive.field_g) {
                 param1 = DelegatingCanvas.field_g;
@@ -474,7 +474,7 @@ final class NanoTickClock extends TickClock {
               if (10 == param0) {
                 return;
               }
-              if (ci.field_o) {
+              if (ArchiveCatalog.field_o) {
                 return;
               }
               lh.field_a.j(param2 ^ -2692);

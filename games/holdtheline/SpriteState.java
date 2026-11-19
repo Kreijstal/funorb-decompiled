@@ -4,7 +4,7 @@
 abstract class SpriteState extends DualLinkNode {
     int field_u;
     int field_v;
-    static fd field_q;
+    static ValidationState field_q;
     static int[] field_p;
     int field_y;
     int field_x;
@@ -40,7 +40,7 @@ abstract class SpriteState extends DualLinkNode {
     }
 
     static {
-        field_q = new fd();
+        field_q = new ValidationState();
         field_w = "Hold the Line";
     }
 }

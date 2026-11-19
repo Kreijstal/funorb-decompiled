@@ -64,14 +64,14 @@ final class SoundEffect {
         int var3;
         this.field_b = new SynthInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.f((byte) -24);
+          var3 = param0.readUnsignedByte((byte) -24);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new SynthInstrument();
             this.field_b[var2].decode(param0);
           }
         }
-        this.field_c = param0.k(-105);
-        this.field_a = param0.k(118);
+        this.field_c = param0.readUnsignedShort(-105);
+        this.field_a = param0.readUnsignedShort(118);
     }
 }

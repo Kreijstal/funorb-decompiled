@@ -31,17 +31,17 @@ final class SynthFilter {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.f((byte) -45);
+        var3 = param0.readUnsignedByte((byte) -45);
         this.field_a[0] = var3 >> 4;
         this.field_a[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_e[0] = param0.k(99);
-          this.field_e[1] = param0.k(71);
-          var4 = param0.f((byte) -104);
+          this.field_e[0] = param0.readUnsignedShort(99);
+          this.field_e[1] = param0.readUnsignedShort(71);
+          var4 = param0.readUnsignedByte((byte) -104);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_a[var5]; var6++) {
-              this.field_c[var5][0][var6] = param0.k(74);
-              this.field_b[var5][0][var6] = param0.k(118);
+              this.field_c[var5][0][var6] = param0.readUnsignedShort(74);
+              this.field_b[var5][0][var6] = param0.readUnsignedShort(118);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -52,8 +52,8 @@ final class SynthFilter {
                 this.field_c[var5Lifetime1][1][var7] = this.field_c[var5Lifetime1][0][var7];
                 this.field_b[var5Lifetime1][1][var7] = this.field_b[var5Lifetime1][0][var7];
               } else {
-                this.field_c[var5Lifetime1][1][var7] = param0.k(99);
-                this.field_b[var5Lifetime1][1][var7] = param0.k(-70);
+                this.field_c[var5Lifetime1][1][var7] = param0.readUnsignedShort(99);
+                this.field_b[var5Lifetime1][1][var7] = param0.readUnsignedShort(-70);
               }
               var7++;
             }

@@ -11,7 +11,7 @@ class IntrusiveNode {
     IntrusiveNode previous;
     static boolean field_b;
 
-    final static boolean a(boolean param0, int param1, wc param2, Point2i param3) {
+    final static boolean a(boolean param0, int param1, TrackCurve param2, Point2i param3) {
         boolean stackIn_17_0 = false;
         boolean stackIn_27_0 = false;
         RuntimeException stackIn_30_0 = null;

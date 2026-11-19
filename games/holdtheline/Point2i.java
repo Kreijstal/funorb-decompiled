@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class Point2i {
-    static oa field_c;
+    static NamedSoundEffect field_c;
     static int[] field_i;
     int y;
     int x;
     private static long[] field_d;
     static String field_g;
     static String field_a;
-    static vn field_e;
+    static NineSlicePanel field_e;
     static int field_b;
 
     public static void clearSharedReferences(int param0) {
@@ -38,7 +38,7 @@ class Point2i {
         try {
           var3_int = 0;
           if (param2 != -1) {
-            field_c = (oa) null;
+            field_c = (NamedSoundEffect) null;
           }
           while (param0.field_s * param0.field_y > var3_int) {
             var4 = param0.field_z[var3_int];
@@ -108,7 +108,7 @@ class Point2i {
         }
     }
 
-    final static boolean a(int param0, ei param1, int param2, Point2i param3, Point2i param4) {
+    final static boolean a(int param0, GrowableObjectList param1, int param2, Point2i param3, Point2i param4) {
         int var8 = 0;
         int var10 = 0;
         int stackIn_24_0 = 0;
@@ -124,7 +124,7 @@ class Point2i {
         RuntimeException var5 = null;
         int var6 = 0;
         TrackBoundary var7 = null;
-        ei var9 = null;
+        GrowableObjectList var9 = null;
         TrackBoundary var11 = null;
         int var12 = 0;
         var12 = HoldTheLine.field_D;
@@ -132,13 +132,13 @@ class Point2i {
           var5_float = 0.0f;
           var6 = 0;
           var7 = new TrackBoundary(param3, param4, 0, false, true);
-          for (var8 = 0; var8 < param1.field_e; var8++) {
-            var9 = (ei) (param1.field_b[var8]);
-            for (var10 = 0; var9.field_e > var10; var10++) {
-              var11 = (TrackBoundary) (var9.field_b[var10]);
+          for (var8 = 0; var8 < param1.size; var8++) {
+            var9 = (GrowableObjectList) (param1.elements[var8]);
+            for (var10 = 0; var9.size > var10; var10++) {
+              var11 = (TrackBoundary) (var9.elements[var10]);
               if ((param0 - 1) <= var11.field_k &&
                 param0 + 1 >= var11.field_k &&
-                PacketBuffer.a(-1, var7, var11)) {
+                PacketBuffer.intersectsSegments(-1, var7, var11)) {
                 if (var5_float > RasterBuffer.field_d ||
                   var6 == 0) {
                   var5_float = RasterBuffer.field_d;

@@ -62,10 +62,10 @@ abstract class Js5Transport {
         var27 = HoldTheLine.field_D;
         try {
           var3 = -93 % ((param0 - 21) / 43);
-          var28 = rd.field_e;
-          var2 = var28.f((byte) -22);
+          var28 = RoadStripRenderer.field_e;
+          var2 = var28.readUnsignedByte((byte) -22);
           if (var2 == 0) {
-            var4 = var28.k(106);
+            var4 = var28.readUnsignedShort(106);
             var5 = (jg) (pc.field_e.first((byte) 115));
             while (var5 != null) {
               if (var5.field_i != var4) {
@@ -78,20 +78,20 @@ abstract class Js5Transport {
               r.a(-28036);
               return;
             }
-            var6 = var28.f((byte) -98);
+            var6 = var28.readUnsignedByte((byte) -98);
             if (0 != var6) {
               var7 = var5.field_l;
-              TextFieldValidator.field_h[0].field_b = ng.field_e;
+              TextFieldValidator.field_h[0].field_b = QuickChatPhraseCache.field_e;
               TextFieldValidator.field_h[0].field_g = null;
               var8 = var5.field_n;
               TextFieldValidator.field_h[0].field_e = false;
               for (var9_int = 1; var6 > var9_int; var9_int++) {
-                TextFieldValidator.field_h[var9_int].field_b = var28.j(-1231);
+                TextFieldValidator.field_h[var9_int].field_b = var28.readCp1252String(-1231);
                 TextFieldValidator.field_h[var9_int].field_e = false;
-                if (var28.f((byte) -41) != 1) {
+                if (var28.readUnsignedByte((byte) -41) != 1) {
                   TextFieldValidator.field_h[var9_int].field_g = null;
                 } else {
-                  TextFieldValidator.field_h[var9_int].field_g = var28.j(-1231);
+                  TextFieldValidator.field_h[var9_int].field_g = var28.readCp1252String(-1231);
                 }
               }
               dupTemp$0 = new String[3][var7];
@@ -110,12 +110,12 @@ abstract class Js5Transport {
               var16 = 0;
               var17 = 0;
               var18 = 0;
-              var19 = var28.f((byte) -59);
+              var19 = var28.readUnsignedByte((byte) -59);
               if (var19 > 0) {
                 for (var20 = 0; var20 < var19; var20++) {
-                  var21 = var28.f((byte) -22);
+                  var21 = var28.readUnsignedByte((byte) -22);
                   var22 = TextFieldValidator.field_h[var21].field_b;
-                  var23 = var28.d(true);
+                  var23 = var28.readLong(true);
                   var25 = var28.position;
                   if (var20 < var7) {
                     var9[0][var13] = var22;
@@ -124,13 +124,13 @@ abstract class Js5Transport {
                     for (var26 = 0; var26 < var8; var26++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var12[0][incrementValue$3] = var28.a(-107);
+                      var12[0][incrementValue$3] = var28.readInt(-107);
                     }
                     var13++;
                   }
                   if (var22 != null &&
                     ra.a(var22, false)) {
-                    var9[1][var14] = ng.field_e;
+                    var9[1][var14] = QuickChatPhraseCache.field_e;
                     var10[1][var14] = null;
                     var11[1][var14] = var23;
                     var28.position = var25;
@@ -138,7 +138,7 @@ abstract class Js5Transport {
                     for (var26Lifetime1 = 0; var8 > var26Lifetime1; var26Lifetime1++) {
                       incrementValue$4 = var17;
                       var17++;
-                      var12[1][incrementValue$4] = var28.a(98);
+                      var12[1][incrementValue$4] = var28.readInt(98);
                     }
                   }
                   if (var7 > var15 &&
@@ -152,7 +152,7 @@ abstract class Js5Transport {
                     for (var26Lifetime2 = 0; var26Lifetime2 < var8; var26Lifetime2++) {
                       incrementValue$5 = var18;
                       var18++;
-                      var12[2][incrementValue$5] = var28.a(111);
+                      var12[2][incrementValue$5] = var28.readInt(111);
                     }
                   }
                 }
@@ -163,8 +163,8 @@ abstract class Js5Transport {
             return;
           }
           if (var2 == 1) {
-            var4Lifetime1 = var28.k(78);
-            var5_long = var28.d(true);
+            var4Lifetime1 = var28.readUnsignedShort(78);
+            var5_long = var28.readLong(true);
             var7_ref_fb = (fb) (AccountTermsPanel.field_O.first((byte) 110));
             while (var7_ref_fb != null) {
               if (var7_ref_fb.field_u != var4Lifetime1) {
@@ -181,7 +181,7 @@ abstract class Js5Transport {
             var7_ref_fb.unlink(0);
             return;
           }
-          MusicPatchPcmStream.a((Throwable) null, (byte) -120, "HS1: " + em.b(false));
+          MusicPatchPcmStream.a((Throwable) null, (byte) -120, "HS1: " + AgeValidator.b(false));
           r.a(-28036);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -244,7 +244,7 @@ abstract class Js5Transport {
           cd.field_b = param3;
           IsaacRandom.field_a = param7;
           vb.field_d = param2;
-          fh.field_e = param5;
+          EmailLoginCredentials.field_e = param5;
           if (param1 != 19189) {
             Js5Transport.clearSharedReferences(37);
           }

@@ -55,7 +55,7 @@ final class ta {
         if (param0 != 72) {
           field_a = (ResourceArchive) null;
         }
-        return sj.a(1, param0 ^ 19867);
+        return CheckboxWidget.a(1, param0 ^ 19867);
     }
 
     final static void a(int param0, int param1, int[] param2, byte param3, byte[] param4) {
@@ -138,13 +138,13 @@ final class ta {
             field_a = (ResourceArchive) null;
           }
           try {
-            var3_int = param1.e(128);
+            var3_int = param1.readUnsignedSmart(128);
             if (var3_int > param0) {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param1.position = param1.position + ti.field_u.a(var3_int, true, 0, var4, param1.payload, param1.position);
-            var5 = sm.a(var3_int, 0, -129, var4);
+            param1.position = param1.position + ti.field_u.decode(var3_int, true, 0, var4, param1.payload, param1.position);
+            var5 = sm.decodeCp1252(var3_int, 0, -129, var4);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

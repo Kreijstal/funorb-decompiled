@@ -3,7 +3,7 @@
  */
 abstract class TickClock {
     static Sprite field_c;
-    static uf field_a;
+    static SpriteAsset field_a;
     static int field_b;
 
     final static void a(int param0, Sprite param1, int param2, int param3, int param4) {
@@ -88,38 +88,38 @@ abstract class TickClock {
         field_c = null;
         if (param0 <= 68) {
           String[] var2 = (String[]) null;
-          TickClock.a((String[]) null, (byte) -85);
+          TickClock.parseTutorialTransition((String[]) null, (byte) -85);
         }
     }
 
-    final static ok a(String[] args, byte param1) {
+    final static TutorialTransition parseTutorialTransition(String[] args, byte param1) {
         int var4 = 0;
-        ok var2 = null;
+        TutorialTransition var2 = null;
         RuntimeException var2_ref = null;
         String[] var3 = null;
         String var5 = null;
         String[] var6 = null;
         int var7 = 0;
-        ok stackIn_6_0 = null;
-        ok stackIn_8_0 = null;
+        TutorialTransition stackIn_6_0 = null;
+        TutorialTransition stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = HoldTheLine.field_D;
         try {
-          var2 = new ok();
+          var2 = new TutorialTransition();
           var3 = args;
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             var6 = ArchiveRequest.a((byte) -107, ' ', var5);
-            var2.a(BoundedRandomAccessFile.a(0, var6), param1 ^ 67);
+            var2.addCondition(BoundedRandomAccessFile.parseTutorialCondition(0, var6), param1 ^ 67);
           }
           if (param1 == 55) {
             stackIn_8_0 = var2;
             return stackIn_8_0;
           }
-          stackIn_6_0 = (ok) null;
+          stackIn_6_0 = (TutorialTransition) null;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ abstract class TickClock {
     final int b(long param0, int param1) {
         long var4 = this.a(-123);
         if (0L < var4) {
-          SocketConnector.a(var4, (byte) 45);
+          SocketConnector.sleepMillis(var4, (byte) 45);
         }
         if (param1 <= 38) {
           return 20;

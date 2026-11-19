@@ -26,7 +26,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         ValidatedTextField.field_X.field_e = 4;
         ValidatedTextField.field_X.field_g = 14;
         ValidatedTextField.field_X.field_i = 6;
-        ValidatedTextField.field_X.field_m = mo.field_w;
+        ValidatedTextField.field_X.field_m = SpriteButtonRenderer.field_w;
         ValidatedTextField.field_X.field_b = 5;
         return ValidatedTextField.field_X;
     }
@@ -102,14 +102,14 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         RuntimeException decompiledCaughtException = null;
         var5 = HoldTheLine.field_D;
         try {
-          bb.field_a = fd.field_c;
+          bb.field_a = ValidationState.field_c;
           if (param2 > -53) {
             var6 = (String) null;
             StandardContentTransitionDialog.a(-106, (String) null);
           }
           if (param3 == 255) {
             stackIn_13_0 = !(13 <= ResizableDialog.field_V);
-            BoundedRandomAccessFile.field_d = kl.a(stackIn_13_0, 0);
+            BoundedRandomAccessFile.field_d = TextFieldRenderer.a(stackIn_13_0, 0);
             return;
           }
           if (param3 < 100) {
@@ -162,7 +162,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
           if (param0 != 6) {
             field_kb = (float[]) null;
           }
-          stackIn_3_0 = lg.field_q.a(param1, false, "");
+          stackIn_3_0 = CachedTextLayout.field_q.a(param1, false, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

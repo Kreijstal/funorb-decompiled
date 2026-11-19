@@ -4,7 +4,7 @@
 abstract class RasterBuffer {
     int field_f;
     int field_c;
-    static ji[] field_a;
+    static TutorialPage[] field_a;
     static float field_d;
     static IntrusiveDeque field_e;
     int[] field_h;
@@ -35,7 +35,7 @@ abstract class RasterBuffer {
         wm var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        ei var6 = null;
+        GrowableObjectList var6 = null;
         wm var3_refLifetime1;
         int var4Lifetime1;
         int var4Lifetime1Lifetime1;
@@ -49,19 +49,19 @@ abstract class RasterBuffer {
             return false;
           }
           if (param0.field_j == null) {
-            var6 = new ei();
+            var6 = new GrowableObjectList();
             var3_ref = (wm) (param0.field_m.first((byte) 85));
             while (var3_ref != null) {
               var4 = 0;
               while (true) {
-                if (!(var4 >= var6.field_e)) {
-                  if (var6.field_b[var4] != var3_ref.field_E) {
+                if (!(var4 >= var6.size)) {
+                  if (var6.elements[var4] != var3_ref.field_E) {
                     var4++;
                     continue;
                   }
                   break;
                 }
-                var6.a(var3_ref.field_E, (byte) 6);
+                var6.add(var3_ref.field_E, (byte) 6);
                 break;
               }
               var3_ref = (wm) (param0.field_m.next((byte) -70));
@@ -69,23 +69,23 @@ abstract class RasterBuffer {
             var3_refLifetime1 = (wm) (param0.field_k.first((byte) 101));
             while (true) {
               if (var3_refLifetime1 == null) {
-                param0.field_j = new om[var6.field_e];
-                for (var4Lifetime1 = 0; var6.field_e > var4Lifetime1; var4Lifetime1++) {
-                  param0.field_j[var4Lifetime1] = (om) (var6.field_b[var4Lifetime1]);
+                param0.field_j = new om[var6.size];
+                for (var4Lifetime1 = 0; var6.size > var4Lifetime1; var4Lifetime1++) {
+                  param0.field_j[var4Lifetime1] = (om) (var6.elements[var4Lifetime1]);
                 }
                 param0.field_n = 0;
                 break;
               }
               var4Lifetime1Lifetime1 = 0;
               while (true) {
-                if (!(var4Lifetime1Lifetime1 >= var6.field_e)) {
-                  if (var6.field_b[var4Lifetime1Lifetime1] != var3_refLifetime1.field_E) {
+                if (!(var4Lifetime1Lifetime1 >= var6.size)) {
+                  if (var6.elements[var4Lifetime1Lifetime1] != var3_refLifetime1.field_E) {
                     var4Lifetime1Lifetime1++;
                     continue;
                   }
                   break;
                 }
-                var6.a(var3_refLifetime1.field_E, (byte) 6);
+                var6.add(var3_refLifetime1.field_E, (byte) 6);
                 break;
               }
               var3_refLifetime1 = (wm) (param0.field_k.next((byte) 105));
@@ -99,19 +99,19 @@ abstract class RasterBuffer {
                     boolean decompiledFrameRemainder0 = true;
                     if (param0.field_o != 4) {
                       if (param0.field_o == 5) {
-                        if (null == ha.field_i.a(8192)) {
+                        if (null == ha.field_i.getSprite(8192)) {
                           return false;
                         }
-                        if (null == kc.field_b.a(8192)) {
+                        if (null == kc.field_b.getSprite(8192)) {
                           return false;
                         }
                       } else {
                         decompiledFrameRemainder0 = (param0.field_o == 6);
                         if (decompiledFrameRemainder0) {
-                          if (hg.field_Q.a(param1 ^ -8257) == null) {
+                          if (DialWidget.field_Q.getSprite(param1 ^ -8257) == null) {
                             return false;
                           }
-                          if (null == fd.field_e.a(8192)) {
+                          if (null == ValidationState.field_e.getSprite(8192)) {
                             return false;
                           }
                         }
@@ -122,44 +122,44 @@ abstract class RasterBuffer {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      if (ug.field_b.a(8192) == null) {
+                      if (MarkerSliderRenderer.field_b.getSprite(8192) == null) {
                         return false;
                       }
-                      if (ha.field_i.a(8192) == null) {
+                      if (ha.field_i.getSprite(8192) == null) {
                         return false;
                       }
                     }
                     stackIn_95_0 = (vk) (param0);
                     break regionExit1;
                   }
-                  if (null == kc.field_b.a(8192)) {
+                  if (null == kc.field_b.getSprite(8192)) {
                     return false;
                   }
-                  if (null == ug.field_b.a(8192)) {
+                  if (null == MarkerSliderRenderer.field_b.getSprite(8192)) {
                     return false;
                   }
                 } else {
-                  if (AccountCreationForm.field_F.a(8192) == null) {
+                  if (AccountCreationForm.field_F.getSprite(8192) == null) {
                     return false;
                   }
-                  if (IterableSecondaryNodeDeque.field_a.a(8192) == null) {
+                  if (IterableSecondaryNodeDeque.field_a.getSprite(8192) == null) {
                     return false;
                   }
                 }
                 stackIn_95_0 = (vk) (param0);
                 break regionExit1;
               }
-              if (AccountCreationForm.field_F.a(param1 + 8257) == null) {
+              if (AccountCreationForm.field_F.getSprite(param1 + 8257) == null) {
                 return false;
               }
-              if (ProxySocketConnector.field_h.a(8192) == null) {
+              if (ProxySocketConnector.field_h.getSprite(8192) == null) {
                 return false;
               }
             } else {
-              if (null == SecondaryNodeDeque.field_h.a(param1 ^ -8257)) {
+              if (null == SecondaryNodeDeque.field_h.getSprite(param1 ^ -8257)) {
                 return false;
               }
-              if (fd.field_e.a(param1 ^ -8257) == null) {
+              if (ValidationState.field_e.getSprite(param1 ^ -8257) == null) {
                 return false;
               }
             }
@@ -216,7 +216,7 @@ abstract class RasterBuffer {
             return stackIn_3_0;
           }
           if (var2_int > 64) {
-            stackIn_7_0 = wb.field_h;
+            stackIn_7_0 = Vector2i.field_h;
             return stackIn_7_0;
           }
           if ((char)param1 == param0.charAt(0)) {

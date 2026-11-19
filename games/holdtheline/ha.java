@@ -7,14 +7,14 @@ final class ha extends IntrusiveNode implements hd {
     int field_q;
     static Random field_n;
     float field_m;
-    static uf[] field_o;
+    static SpriteAsset[] field_o;
     static int[][] field_j;
     ha field_s;
     boolean field_r;
     boolean field_l;
     static int field_p;
-    static uf field_i;
-    static va field_k;
+    static SpriteAsset field_i;
+    static SpriteSheetAsset field_k;
 
     final static void a(boolean param0) {
         DialogLayer.field_N[61] = 27;
@@ -40,7 +40,7 @@ final class ha extends IntrusiveNode implements hd {
         field_j = (int[][]) null;
         field_i = null;
         if (param0 < 29) {
-          field_i = (uf) null;
+          field_i = (SpriteAsset) null;
         }
         field_k = null;
         field_n = null;

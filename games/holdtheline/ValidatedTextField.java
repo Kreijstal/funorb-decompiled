@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ValidatedTextField extends EditableTextField implements ValidatorProvider {
-    static oa field_T;
+    static NamedSoundEffect field_T;
     static int[] field_Y;
     private int field_V;
     static ga field_X;
@@ -10,10 +10,10 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
     private Validator field_W;
     static int field_U;
 
-    final void a(int param0, UiWidget param1, int param2, byte param3) {
+    final void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_V = -param0 + (NodeHashTableIterator.field_g - this.field_k);
+          super.updateHover(param0, param1, param2, param3);
+          this.field_V = -param0 + (NodeHashTableIterator.field_g - this.x);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jb.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -29,11 +29,11 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         field_T = null;
     }
 
-    final void f(byte param0) {
-        super.f((byte) -104);
+    final void notifyTextChanged(byte param0) {
+        super.notifyTextChanged((byte) -104);
         int var2 = -106 % ((param0 + 44) / 59);
         if (this.field_W != null) {
-          this.field_W.a(21871);
+          this.field_W.invalidate(21871);
         }
     }
 
@@ -58,7 +58,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
 
     final static void a(String param0, int param1) {
         try {
-          ug.a(param0, 0);
+          MarkerSliderRenderer.a(param0, 0);
           IsaacPacketBuffer.a(false, qd.field_g, 22676);
           if (param1 >= -46) {
             vd var3 = (vd) null;
@@ -73,13 +73,13 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         super(param0, param1, param2);
     }
 
-    final String f(int param0) {
-        if (!this.field_p) {
+    final String getTooltip(int param0) {
+        if (!this.hovered) {
           return null;
         }
-        if (null != this.field_z) {
-          uh.a(rf.field_X, param0, this.field_x - this.field_V + NodeHashTableIterator.field_g);
-          return this.field_z;
+        if (null != this.tooltip) {
+          GrowableIntList.a(rf.field_X, param0, this.width - this.field_V + NodeHashTableIterator.field_g);
+          return this.tooltip;
         }
         return null;
     }
@@ -93,9 +93,9 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uh var6 = null;
+        GrowableIntList var6 = null;
         RuntimeException var6_ref = null;
-        uh var7 = null;
+        GrowableIntList var7 = null;
         RoadSegment var8 = null;
         Point2i var9 = null;
         Point2i var10 = null;
@@ -105,12 +105,12 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         int var15 = 0;
         float var16 = 0.0f;
         int var18 = 0;
-        uh var19 = null;
+        GrowableIntList var19 = null;
         Point2i var20 = null;
-        uh var21 = null;
+        GrowableIntList var21 = null;
         Point2i var22 = null;
-        uh var23 = null;
-        uh var24 = null;
+        GrowableIntList var23 = null;
+        GrowableIntList var24 = null;
         Point2i var25 = null;
         Point2i var26 = null;
         Point2i var27 = null;
@@ -133,45 +133,45 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
           }
           var22 = var8.n(3337);
           var10 = var22;
-          var19.a(var20.x, (byte) 67);
-          var19.a(var20.y, (byte) 88);
-          var21.a(var22.x, (byte) 94);
-          var21.a(var22.y, (byte) 92);
+          var19.add(var20.x, (byte) 67);
+          var19.add(var20.y, (byte) 88);
+          var21.add(var22.x, (byte) 94);
+          var21.add(var22.y, (byte) 92);
           var11 = var8.field_k;
           for (var12 = param1; param5 > var12; var12++) {
             var13 = param0[var12];
             if (var13.field_k != var11 &&
               param2) {
-              param4.a(0.0f, var7.a(-92), var11, var6.a(-81), (byte) 49);
+              param4.a(0.0f, var7.toArray(-92), var11, var6.toArray(-81), (byte) 49);
               var23 = o.a((byte) 29);
               var6 = var23;
               var24 = o.a((byte) 105);
               var7 = var24;
-              var23.a(var9.x, (byte) 101);
-              var23.a(var9.y, (byte) 104);
-              var24.a(var10.x, (byte) 100);
-              var24.a(var10.y, (byte) 99);
+              var23.add(var9.x, (byte) 101);
+              var23.add(var9.y, (byte) 104);
+              var24.add(var10.x, (byte) 100);
+              var24.add(var10.y, (byte) 99);
               var11 = var13.field_k;
             }
-            var14 = var13.f(50);
+            var14 = var13.length(50);
             var15 = (int)(var14 / 5.0f) + 1;
             var16 = 1.0f / (float)var15;
             for (var17 = var16; 1.0f > var17; var17 = var17 + var16) {
               var25 = var13.c(var17, 109);
               var26 = var13.a(-851, var17);
-              var6.a(var25.x, (byte) 123);
-              var6.a(var25.y, (byte) 123);
-              var7.a(var26.x, (byte) 83);
-              var7.a(var26.y, (byte) 93);
+              var6.add(var25.x, (byte) 123);
+              var6.add(var25.y, (byte) 123);
+              var7.add(var26.x, (byte) 83);
+              var7.add(var26.y, (byte) 93);
             }
             var27 = var13.l(8421504);
             var28 = var13.m(-14);
-            var6.a(var27.x, (byte) 101);
-            var6.a(var27.y, (byte) 67);
-            var7.a(var28.x, (byte) 95);
-            var7.a(var28.y, (byte) 108);
+            var6.add(var27.x, (byte) 101);
+            var6.add(var27.y, (byte) 67);
+            var7.add(var28.x, (byte) 95);
+            var7.add(var28.y, (byte) 108);
           }
-          param4.a(0.0f, var7.a(-58), var11, var6.a(-52), (byte) 49);
+          param4.a(0.0f, var7.toArray(-58), var11, var6.toArray(-52), (byte) 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

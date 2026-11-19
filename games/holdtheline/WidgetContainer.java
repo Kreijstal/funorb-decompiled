@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 class WidgetContainer extends UiWidget implements WidgetContainerMarker {
-    IntrusiveDeque field_D;
+    IntrusiveDeque children;
     static int field_C;
     static String[][] field_A;
     static int field_E;
@@ -16,7 +16,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           return;
         }
         try {
-          this.field_D.addLast((byte) -94, param1);
+          this.children.addLast((byte) -94, param1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "v.FB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -41,14 +41,14 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (param1 != 0) {
             return;
           }
-          var5 = new IntrusiveDequeCursor(this.field_D);
+          var5 = new IntrusiveDequeCursor(this.children);
           var6 = (UiWidget) (var5.c((byte) -114));
           while (var6 != null) {
             discarded$3 = param3.append('\n');
             for (var7 = 0; param2 >= var7; var7++) {
               discarded$4 = param3.append(' ');
             }
-            var6.a(1 + param2, (byte) 67, param0, param3);
+            var6.appendDebugTree(1 + param2, (byte) 67, param0, param3);
             var6 = (UiWidget) (var5.next((byte) -104));
           }
           return;
@@ -114,49 +114,49 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           var9 = HoldTheLine.field_D;
           try {
             if (null == IterableSecondaryNodeDeque.field_h &&
-              !le.a(param4, (byte) 105)) {
+              !ShadedRoadStripRenderer.a(param4, (byte) 105)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
             if (AccountCreationForm.field_S == d.field_f) {
               if (param4) {
                 var10 = (String) null;
-                TriangleMesh.field_j = eb.a((String) null, vd.field_a, false, param3, true);
+                TriangleMesh.field_j = eb.createLoginCredentials((String) null, vd.field_a, false, param3, true);
               } else {
-                TriangleMesh.field_j = wi.a((byte) 126, false, param2, param3);
+                TriangleMesh.field_j = wi.createLoginCredentials((byte) 126, false, param2, param3);
               }
               IsaacPacketBuffer.field_p.position = 0;
-              IsaacPacketBuffer.field_p.f(param1 ^ 110, 14);
-              IsaacPacketBuffer.field_p.f(param1 + 110, TriangleMesh.field_j.a(true).field_a);
+              IsaacPacketBuffer.field_p.writeByte(param1 ^ 110, 14);
+              IsaacPacketBuffer.field_p.writeByte(param1 + 110, TriangleMesh.field_j.getType(true).protocolId);
               qn.a(-1, param1 ^ 1);
               d.field_f = um.field_d;
             }
             if (um.field_d == d.field_f &&
               hi.b(1, (byte) 40)) {
-              var6_int = rd.field_e.f((byte) -102);
-              rd.field_e.position = 0;
+              var6_int = RoadStripRenderer.field_e.readUnsignedByte((byte) -102);
+              RoadStripRenderer.field_e.position = 0;
               if (var6_int == 0) {
                 d.field_f = pb.field_c;
               } else {
-                vn.field_c = var6_int;
+                NineSlicePanel.field_c = var6_int;
                 d.field_f = uj.field_d;
                 ad.field_c = -1;
               }
             }
             if (pb.field_c == d.field_f &&
               hi.b(8, (byte) 40)) {
-              DialogLayer.field_H = rd.field_e.d(true);
-              rd.field_e.position = 0;
+              DialogLayer.field_H = RoadStripRenderer.field_e.readLong(true);
+              RoadStripRenderer.field_e.position = 0;
               StraightRoadSegment.a(param1 ^ 1, param5, param0, TriangleMesh.field_j, param4);
-              d.field_f = ui.field_l;
+              d.field_f = SoundPlayback.field_l;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (d.field_f == ui.field_l &&
+            if (d.field_f == SoundPlayback.field_l &&
               hi.b(1, (byte) 40)) {
-              var6_intLifetime1 = rd.field_e.f((byte) -128);
-              vn.field_c = var6_intLifetime1;
-              rd.field_e.position = 0;
-              ok.field_f = null;
+              var6_intLifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -128);
+              NineSlicePanel.field_c = var6_intLifetime1;
+              RoadStripRenderer.field_e.position = 0;
+              TutorialTransition.field_f = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -177,44 +177,44 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               }
             }
             if (fb.field_s == d.field_f &&
-              ok.a((byte) 55)) {
-              vd.field_a = rd.field_e.d(true);
-              CachedArchiveProvider.field_x = rd.field_e.f((byte) -33);
-              rd.field_e.f((byte) -43);
-              fc.field_a = rd.field_e.k(-119);
-              var6 = rd.field_e.i(-1);
-              var7 = rd.field_e.f((byte) -57);
+              TutorialTransition.a((byte) 55)) {
+              vd.field_a = RoadStripRenderer.field_e.readLong(true);
+              CachedArchiveProvider.field_x = RoadStripRenderer.field_e.readUnsignedByte((byte) -33);
+              RoadStripRenderer.field_e.readUnsignedByte((byte) -43);
+              fc.field_a = RoadStripRenderer.field_e.readUnsignedShort(-119);
+              var6 = RoadStripRenderer.field_e.readNullableCp1252String(-1);
+              var7 = RoadStripRenderer.field_e.readUnsignedByte((byte) -57);
               if (0 != (var7 & 1)) {
-                j.a((byte) 66);
+                HuffmanDecoder.persistRandomSeed((byte) 66);
               }
               if (!param4) {
                 stackIn_40_0 = ((4 & var7) != 0);
                 uj.field_c = stackIn_40_0;
                 stackIn_43_0 = ((8 & var7) != 0);
-                ci.field_h = stackIn_43_0;
-                if (!ci.field_h) {
+                ArchiveCatalog.field_h = stackIn_43_0;
+                if (!ArchiveCatalog.field_h) {
                 }
               }
               if (DelegatingCanvas.field_f) {
-                rd.field_e.f((byte) -53);
-                rd.field_e.f((byte) -82);
-                rd.field_e.a(-116);
-                ho.field_l = rd.field_e.k(-59);
-                IterableNodeHashTable.field_i = new byte[ho.field_l];
-                for (var8 = 0; ho.field_l > var8; var8++) {
-                  IterableNodeHashTable.field_i[var8] = rd.field_e.f(wb.a(param1, 1));
+                RoadStripRenderer.field_e.readUnsignedByte((byte) -53);
+                RoadStripRenderer.field_e.readUnsignedByte((byte) -82);
+                RoadStripRenderer.field_e.readInt(-116);
+                EmailAddressValidator.field_l = RoadStripRenderer.field_e.readUnsignedShort(-59);
+                IterableNodeHashTable.field_i = new byte[EmailAddressValidator.field_l];
+                for (var8 = 0; EmailAddressValidator.field_l > var8; var8++) {
+                  IterableNodeHashTable.field_i[var8] = RoadStripRenderer.field_e.readByte(Vector2i.xor(param1, 1));
                 }
               }
-              ng.field_e = rd.field_e.j(-1231);
-              var11 = (CharSequence) ((Object) ng.field_e);
+              QuickChatPhraseCache.field_e = RoadStripRenderer.field_e.readCp1252String(-1231);
+              var11 = (CharSequence) ((Object) QuickChatPhraseCache.field_e);
               co.field_e = MidiPcmStream.a(var11, (byte) -12);
-              q.field_c = rd.field_e.f((byte) -95);
+              q.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -95);
               d.field_f = ad.field_b;
-              if (TriangleMesh.field_j.a(true) == sb.field_d) {
-                RaceVehicle.field_Wb.a(GameKeyHandler.a(87), 127);
+              if (TriangleMesh.field_j.getType(true) == sb.field_d) {
+                RaceVehicle.field_Wb.writeLastLoginMethodCookie(GameKeyHandler.a(87), 127);
               } else {
-                if (TriangleMesh.field_j.a(true) == jh.field_d) {
-                  gj.field_s.a(GameKeyHandler.a(97), 125);
+                if (TriangleMesh.field_j.getType(true) == jh.field_d) {
+                  ArcTrackBoundary.field_s.writeLastLoginMethodCookie(GameKeyHandler.a(97), 125);
                 }
               }
               uk.field_e = false;
@@ -240,35 +240,35 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               if (fc.field_a > 0) {
                 hc.field_b = true;
               }
-              IsaacPacketBuffer.field_p.a(Bzip2State.field_x, false);
+              IsaacPacketBuffer.field_p.seedCipher(Bzip2State.field_x, false);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 Bzip2State.field_x[var8Lifetime1] = Bzip2State.field_x[var8Lifetime1] + 50;
               }
-              rd.field_e.a(Bzip2State.field_x, false);
-              stackIn_71_0 = vn.field_c;
+              RoadStripRenderer.field_e.seedCipher(Bzip2State.field_x, false);
+              stackIn_71_0 = NineSlicePanel.field_c;
               return stackIn_71_0;
             }
             if (d.field_f == uj.field_d &&
-              ok.a((byte) 55)) {
+              TutorialTransition.a((byte) 55)) {
               r.a(-28036);
-              if (vn.field_c == 7 &&
+              if (NineSlicePanel.field_c == 7 &&
                 !uk.field_e) {
                 uk.field_e = true;
                 stackIn_78_0 = -1;
                 return stackIn_78_0;
               }
-              if (vn.field_c == 7) {
-                vn.field_c = 3;
+              if (NineSlicePanel.field_c == 7) {
+                NineSlicePanel.field_c = 3;
               }
-              um.field_b = rd.field_e.j(param1 - 1232);
+              um.field_b = RoadStripRenderer.field_e.readCp1252String(param1 - 1232);
               uk.field_e = false;
-              stackIn_82_0 = vn.field_c;
+              stackIn_82_0 = NineSlicePanel.field_c;
               return stackIn_82_0;
             }
             if (null == IterableSecondaryNodeDeque.field_h) {
               if (uk.field_e) {
                 if (30000L < ImageProducerRasterBuffer.d(126)) {
-                  um.field_b = mo.field_y;
+                  um.field_b = SpriteButtonRenderer.field_y;
                 } else {
                   um.field_b = ContentTransitionDialog.field_hb;
                 }
@@ -277,8 +277,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 return stackIn_91_0;
               }
               var6_intLifetime2 = bo.field_e;
-              bo.field_e = ci.field_b;
-              ci.field_b = var6_intLifetime2;
+              bo.field_e = ArchiveCatalog.field_b;
+              ArchiveCatalog.field_b = var6_intLifetime2;
               uk.field_e = true;
             }
             if (param1 != 1) {
@@ -311,7 +311,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
+    final void handleMouseRelease(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
@@ -322,14 +322,14 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var9 = HoldTheLine.field_D;
         try {
-          var7 = new IntrusiveDequeCursor(this.field_D);
+          var7 = new IntrusiveDequeCursor(this.children);
           if (param4 != -9) {
             return;
           }
           var8 = (UiWidget) (var7.c((byte) -128));
           while (var8 != null) {
             if (var8.isLinked(111)) {
-              var8.a(param0, param1, param2 + this.field_o, this.field_k + param3, (byte) -9, param5);
+              var8.handleMouseRelease(param0, param1, param2 + this.y, this.x + param3, (byte) -9, param5);
               var8 = (UiWidget) (var7.next((byte) -104));
               continue;
             }
@@ -350,10 +350,10 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFocused(byte param0) {
         if (param0 != -20) {
           UiWidget var3 = (UiWidget) null;
-          this.a(25, (UiWidget) null, 78, 2, 104, 42, -126);
+          this.handleScrollInput(25, (UiWidget) null, 78, 2, 104, 42, -126);
         }
         return this.f((byte) 118) != null ? true : false;
     }
@@ -365,7 +365,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -378,12 +378,12 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var7 = HoldTheLine.field_D;
         try {
-          var9 = new IntrusiveDequeCursor(this.field_D);
+          var9 = new IntrusiveDequeCursor(this.children);
           var8 = (UiWidget) (var9.c((byte) -120));
           while (var8 != null) {
             if (var8.isLinked(68)) {
-              if (var8.c((byte) -20) &&
-                var8.a(param0, param1, (byte) -78, param3)) {
+              if (var8.isFocused((byte) -20) &&
+                var8.handleKeyPress(param0, param1, (byte) -78, param3)) {
                 return true;
               }
               var8 = (UiWidget) (var9.next((byte) -104));
@@ -419,7 +419,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -430,14 +430,14 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var10 = HoldTheLine.field_D;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_D);
+          var8 = new IntrusiveDequeCursor(this.children);
           var9 = (UiWidget) (var8.c((byte) -114));
           if (param4 != -108) {
             return false;
           }
           while (var9 != null) {
             if (var9.isLinked(param4 ^ -92)) {
-              if (!var9.a(this.field_k + param0, param1, this.field_o + param2, param3, (byte) -108, param5, param6)) {
+              if (!var9.handleMousePress(this.x + param0, param1, this.y + param2, param3, (byte) -108, param5, param6)) {
                 var9 = (UiWidget) (var8.next((byte) -104));
                 continue;
               }
@@ -460,17 +460,17 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final int d(byte param0) {
+    final int getMaxLayer(byte param0) {
         int var5 = 0;
         int var6 = HoldTheLine.field_D;
         int var2 = 0;
-        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_D);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         if (param0 >= -66) {
           field_A = (String[][]) null;
         }
         UiWidget var4 = (UiWidget) (var3.c((byte) 119));
         while (var4 != null) {
-          var5 = var4.d((byte) -123);
+          var5 = var4.getMaxLayer((byte) -123);
           if (var5 > var2) {
             var2 = var5;
           }
@@ -479,7 +479,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         return var2;
     }
 
-    void a(int param0, UiWidget param1, int param2, byte param3) {
+    void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
@@ -490,12 +490,12 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var7 = HoldTheLine.field_D;
         try {
-          super.a(param0, param1, param2, param3);
-          var5 = new IntrusiveDequeCursor(this.field_D);
+          super.updateHover(param0, param1, param2, param3);
+          var5 = new IntrusiveDequeCursor(this.children);
           var6 = (UiWidget) (var5.c((byte) -115));
           while (var6 != null) {
             if (var6.isLinked(55)) {
-              var6.a(this.field_k + param0, param1, param2 + this.field_o, (byte) -3);
+              var6.updateHover(this.x + param0, param1, param2 + this.y, (byte) -3);
               var6 = (UiWidget) (var5.next((byte) -104));
               continue;
             }
@@ -516,19 +516,19 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = HoldTheLine.field_D;
         if (param3 == 0 &&
-          null != this.field_l) {
-          this.field_l.drawWidget(true, param2, -76, (UiWidget) (this), param1);
+          null != this.renderer) {
+          this.renderer.drawWidget(true, param2, -76, (UiWidget) (this), param1);
         }
-        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_D);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
         if (param0 != -9532) {
           return;
         }
         UiWidget var6 = (UiWidget) (var5.last(8115));
         while (var6 != null) {
-          var6.a(-9532, param1 + this.field_o, param2 + this.field_k, param3);
+          var6.drawLayer(-9532, param1 + this.y, param2 + this.x, param3);
           var6 = (UiWidget) (var5.a(false));
         }
     }
@@ -544,7 +544,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.f((byte) -26);
+          var2_int = param0.readUnsignedByte((byte) -26);
           stackIn_3_0 = (1 != var2_int) ? 0 : 1;
           var3 = stackIn_3_0;
           if (param1 > 56) {
@@ -577,14 +577,14 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            rd.field_e = new IsaacPacketBuffer(param2);
+            RoadStripRenderer.field_e = new IsaacPacketBuffer(param2);
             IsaacPacketBuffer.field_p = new IsaacPacketBuffer(param3);
             DisplayNameForm.field_L = param11;
-            ci.field_n = param13;
+            ArchiveCatalog.field_n = param13;
             na.field_s = param6;
             hc.field_b = param1;
-            ce.field_m = param10;
-            ci.field_b = param4;
+            OutlinedRoadStripRenderer.field_m = param10;
+            ArchiveCatalog.field_b = param4;
             if (!param12) {
               field_E = 98;
             }
@@ -630,10 +630,10 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
 
     WidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4, (WidgetListener) null);
-        this.field_D = new IntrusiveDeque();
+        this.children = new IntrusiveDeque();
     }
 
-    final boolean a(UiWidget param0, int param1) {
+    final boolean requestFocus(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -644,7 +644,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var5 = HoldTheLine.field_D;
         try {
-          var3 = new IntrusiveDequeCursor(this.field_D);
+          var3 = new IntrusiveDequeCursor(this.children);
           if (param1 != -25823) {
             return true;
           }
@@ -653,7 +653,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             if (var4 == null) {
               return false;
             }
-            if (!var4.a(param0, -25823)) {
+            if (!var4.requestFocus(param0, -25823)) {
               var4 = (UiWidget) (var3.next((byte) -104));
               continue;
             }
@@ -715,13 +715,13 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final String f(int param0) {
+    final String getTooltip(int param0) {
         String var4 = null;
         int var5 = HoldTheLine.field_D;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var3 = (UiWidget) (var2.c((byte) -118));
         while (var3 != null) {
-          var4 = var3.f(param0 + 0);
+          var4 = var3.getTooltip(param0 + 0);
           if (var4 != null) {
             return var4;
           }
@@ -751,18 +751,18 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (param1 < 111) {
             return true;
           }
-          if (this.field_D.isEmpty(0)) {
+          if (this.children.isEmpty(0)) {
             return false;
           }
-          var8 = new IntrusiveDequeCursor(this.field_D);
+          var8 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var8.c((byte) -119));
           while (var4 != null) {
-            if (var4.c((byte) -20)) {
-              var5 = new IntrusiveDequeCursor(this.field_D);
+            if (var4.isFocused((byte) -20)) {
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.firstOrFrom(var4, (byte) -125);
               var6 = (UiWidget) (var5.next((byte) -104));
               while (var6 != null) {
-                if (!var6.a(param0, -25823)) {
+                if (!var6.requestFocus(param0, -25823)) {
                   var6 = (UiWidget) (var5.next((byte) -104));
                   continue;
                 }
@@ -788,19 +788,19 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
 
     private final void a(int param0) {
         int var4 = HoldTheLine.field_D;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != 15) {
           UiWidget var5 = (UiWidget) null;
-          this.a((UiWidget) null, 83);
+          this.requestFocus((UiWidget) null, 83);
         }
         UiWidget var3 = (UiWidget) (var2.c((byte) -114));
         while (var3 != null) {
-          var3.g(92);
+          var3.refreshLayout(92);
           var3 = (UiWidget) (var2.next((byte) -104));
         }
     }
 
-    final StringBuilder a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int param0, byte param1, Hashtable param2, StringBuilder param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_4_0 = null;
@@ -811,8 +811,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(20720, param2, param3, param0)) {
-            this.a(param2, param0, true, param3);
+          if (this.beginDebugVisit(20720, param2, param3, param0)) {
+            this.appendDebugProperties(param2, param0, true, param3);
             this.a(param2, 0, param0, param3);
           }
           var5_int = -111 % ((0 - param1) / 49);
@@ -838,7 +838,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handleScrollInput(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -849,15 +849,15 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var10 = HoldTheLine.field_D;
         try {
-          var8 = new IntrusiveDequeCursor(this.field_D);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param6 != -24898) {
             return true;
           }
           var9 = (UiWidget) (var8.c((byte) 61));
           while (var9 != null) {
             if (var9.isLinked(72)) {
-              if (var9.c((byte) -20) &&
-                var9.a(param0, param1, param2, param3, param4, param5, param6 + 0)) {
+              if (var9.isFocused((byte) -20) &&
+                var9.handleScrollInput(param0, param1, param2, param3, param4, param5, param6 + 0)) {
                 return true;
               }
               var9 = (UiWidget) (var8.next((byte) -104));
@@ -880,15 +880,15 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final void e(int param0) {
+    final void clearFocus(int param0) {
         int var4 = HoldTheLine.field_D;
-        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         UiWidget var3 = (UiWidget) (var2.c((byte) -122));
         if (param0 < 15) {
           return;
         }
         while (var3 != null) {
-          var3.e(55);
+          var3.clearFocus(55);
           var3 = (UiWidget) (var2.next((byte) -104));
         }
     }
@@ -906,21 +906,21 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         RuntimeException decompiledCaughtException = null;
         var7 = HoldTheLine.field_D;
         try {
-          if (this.field_D.isEmpty(0)) {
+          if (this.children.isEmpty(0)) {
             return false;
           }
           if (param1 != -1) {
             return true;
           }
-          var8 = new IntrusiveDequeCursor(this.field_D);
+          var8 = new IntrusiveDequeCursor(this.children);
           var4 = (UiWidget) (var8.last(8115));
           while (var4 != null) {
-            if (var4.c((byte) -20)) {
-              var5 = new IntrusiveDequeCursor(this.field_D);
+            if (var4.isFocused((byte) -20)) {
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.lastOrFrom(-10279, var4);
               var6 = (UiWidget) (var5.a(false));
               while (var6 != null) {
-                if (var6.a(param0, param1 - 25822)) {
+                if (var6.requestFocus(param0, param1 - 25822)) {
                   return true;
                 }
                 var6 = (UiWidget) (var5.a(false));
@@ -948,13 +948,13 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         UiWidget var3;
         int var4;
         var4 = HoldTheLine.field_D;
-        var2 = new IntrusiveDequeCursor(this.field_D);
+        var2 = new IntrusiveDequeCursor(this.children);
         var3 = (UiWidget) (var2.c((byte) -122));
         if (param0 <= 73) {
           field_E = 118;
         }
         while (var3 != null) {
-          if (var3.c((byte) -20)) {
+          if (var3.isFocused((byte) -20)) {
             return var3;
           }
           var3 = (UiWidget) (var2.next((byte) -104));
@@ -962,8 +962,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         return null;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a(param1 ^ 117);
     }
 
@@ -974,9 +974,9 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             field_E = -111;
           }
           var3 = IsaacPacketBuffer.field_p;
-          var3.c((byte) 33, param1);
-          var3.f(param0 + 108, param2.field_j);
-          var3.b(-652561784, param2.field_l);
+          var3.writeCipheredOpcode((byte) 33, param1);
+          var3.writeByte(param0 + 108, param2.field_j);
+          var3.writeShort(-652561784, param2.field_l);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "v.CB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

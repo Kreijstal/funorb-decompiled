@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sm {
-    static uf field_a;
+    static SpriteAsset field_a;
     static String field_d;
     static IntrusiveDeque field_b;
     static StandardContentTransitionDialog field_c;
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String decodeCp1252(int param0, int param1, int param2, byte[] param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;

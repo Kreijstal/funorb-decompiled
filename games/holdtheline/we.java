@@ -13,7 +13,7 @@ final class we extends IntrusiveNode {
     static int field_j;
     static Sprite field_o;
     int field_r;
-    static go field_p;
+    static RotatedSpriteAsset field_p;
     static int field_l;
 
     final void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7) {
@@ -42,17 +42,17 @@ final class we extends IntrusiveNode {
         }
     }
 
-    final static lc a(byte param0, String param1) {
+    final static EmailValidationResult getEmailValidationResult(byte param0, String param1) {
         RuntimeException var2 = null;
-        lc stackIn_6_0 = null;
+        EmailValidationResult stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fj.field_o.a(250) &&
-            !param1.equals(fj.field_o.b((byte) 66))) {
-            fj.field_o = qn.a(param1, -7079);
+          if (fj.field_o.isComplete(250) &&
+            !param1.equals(fj.field_o.getText((byte) 66))) {
+            fj.field_o = qn.createEmailValidationRequest(param1, -7079);
           }
           if (param0 != -85) {
             field_l = 85;

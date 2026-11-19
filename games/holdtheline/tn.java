@@ -6,7 +6,7 @@ final class tn {
     private int field_e;
     static boolean[] field_d;
     static int field_a;
-    static va field_b;
+    static SpriteSheetAsset field_b;
     static int[][] field_h;
     private int field_g;
     private String[] field_f;
@@ -91,13 +91,13 @@ final class tn {
           return SecondaryNodeDeque.field_a;
         }
         if (ak.field_b == ImageProducerRasterBuffer.field_n) {
-          return rd.field_j;
+          return RoadStripRenderer.field_j;
         }
         if (param0 != 0) {
           tn.a((byte) -82);
         }
-        if (!fj.field_o.a(250)) {
-          return rd.field_j;
+        if (!fj.field_o.isComplete(250)) {
+          return RoadStripRenderer.field_j;
         }
         return ec.field_v;
     }
@@ -149,8 +149,8 @@ final class tn {
           var14 = HoldTheLine.field_D;
           try {
             var17 = new ki();
-            var17.field_p = param2.f((byte) -53);
-            var17.field_n = param2.a(param0 + 192);
+            var17.field_p = param2.readUnsignedByte((byte) -53);
+            var17.field_n = param2.readInt(param0 + 192);
             var17.field_m = new int[var17.field_p];
             var17.field_l = new PlatformTask[var17.field_p];
             var17.field_j = new int[var17.field_p];
@@ -164,28 +164,28 @@ final class tn {
             stackIn_5_0 = var17;
             while (stackIn_5_0.field_p > var5) {
               try {
-                var6_int = param2.f((byte) -68);
+                var6_int = param2.readUnsignedByte((byte) -68);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (3 == var6_int ||
                     var6_int == 4) {
-                    var19 = param2.j(-1231);
-                    var8 = param2.j(-1231);
-                    var9 = param2.f((byte) -81);
+                    var19 = param2.readCp1252String(-1231);
+                    var8 = param2.readCp1252String(-1231);
+                    var9 = param2.readUnsignedByte((byte) -81);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param2.j(-1231);
+                      var10[var11_int] = param2.readCp1252String(-1231);
                     }
                     var20 = new byte[var9][];
                     var18 = var20;
                     var11 = var18;
                     if (3 == var6_int) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param2.a(-72);
+                        var13 = param2.readInt(-72);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(var13, 0, (byte) 116, var20[var12_int]);
+                        param2.readBytes(var13, 0, (byte) 116, var20[var12_int]);
                       }
                     }
                     var17.field_m[var5] = var6_int;
@@ -200,12 +200,12 @@ final class tn {
                     var17.field_q[var5] = var20;
                   }
                 } else {
-                  var15 = param2.j(-1231);
+                  var15 = param2.readCp1252String(-1231);
                   var7 = var15;
-                  var8 = param2.j(param0 ^ 1188);
+                  var8 = param2.readCp1252String(param0 ^ 1188);
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param2.a(param0 ^ -12);
+                    var9 = param2.readInt(param0 ^ -12);
                   }
                   var17.field_m[var5] = var6_int;
                   var17.field_j[var5] = var9;
@@ -310,8 +310,8 @@ final class tn {
     final static void a(RoadSegment[] param0, int param1, vd param2) {
         int var13 = 0;
         RuntimeException runtimeException = null;
-        uh var3 = null;
-        uh var4 = null;
+        GrowableIntList var3 = null;
+        GrowableIntList var4 = null;
         RoadSegment var5 = null;
         Point2i var6 = null;
         Point2i var7 = null;
@@ -327,16 +327,16 @@ final class tn {
         float var18 = 0.0f;
         float var19 = 0.0f;
         int var20 = 0;
-        uh var21 = null;
+        GrowableIntList var21 = null;
         Point2i var22 = null;
-        uh var23 = null;
+        GrowableIntList var23 = null;
         Point2i var24 = null;
-        uh var25 = null;
-        uh var26 = null;
+        GrowableIntList var25 = null;
+        GrowableIntList var26 = null;
         Point2i var27 = null;
         Point2i var28 = null;
-        uh var29 = null;
-        uh var30 = null;
+        GrowableIntList var29 = null;
+        GrowableIntList var30 = null;
         Point2i var31 = null;
         Point2i var32 = null;
         RuntimeException stackIn_17_0 = null;
@@ -359,11 +359,11 @@ final class tn {
           }
           var24 = var5.n(param1 - 9997199);
           var7 = var24;
-          var21.a(var22.x, (byte) 124);
-          var21.a(var22.y, (byte) 62);
-          var23.a(var24.x, (byte) 119);
-          var23.a(var24.y, (byte) 72);
-          var8 = ce.a(-1, param0);
+          var21.add(var22.x, (byte) 124);
+          var21.add(var22.y, (byte) 62);
+          var23.add(var24.x, (byte) 119);
+          var23.add(var24.y, (byte) 72);
+          var8 = OutlinedRoadStripRenderer.totalCurveLength(-1, param0);
           var9 = (int)(var8 / 40.0f) + 1;
           var10 = var8 / (float)var9;
           var11 = var10;
@@ -371,19 +371,19 @@ final class tn {
           for (var13 = 0; param0.length > var13; var13++) {
             var14 = param0[var13];
             if (var12 != var14.field_k) {
-              param2.a(0.0f, var4.a(param1 ^ -10000584), var12, var3.a(param1 ^ -10000572), (byte) 49);
+              param2.a(0.0f, var4.toArray(param1 ^ -10000584), var12, var3.toArray(param1 ^ -10000572), (byte) 49);
               var25 = o.a((byte) 26);
               var3 = var25;
               var26 = o.a((byte) -112);
               var4 = var26;
-              var25.a(var6.x, (byte) 101);
-              var25.a(var6.y, (byte) 116);
-              var26.a(var7.x, (byte) 64);
-              var26.a(var7.y, (byte) 72);
+              var25.add(var6.x, (byte) 101);
+              var25.add(var6.y, (byte) 116);
+              var26.add(var7.x, (byte) 64);
+              var26.add(var7.y, (byte) 72);
               var11 = var10;
               var12 = var14.field_k;
             }
-            var15 = var14.f(param1 - 10000486);
+            var15 = var14.length(param1 - 10000486);
             var16 = 1 + (int)(var15 / 5.0f);
             var17 = var15 / (float)var16;
             var18 = 1.0f / (float)var16;
@@ -391,34 +391,34 @@ final class tn {
             while (1.0f > var19) {
               var27 = var14.c(var19, 99);
               var28 = var14.a(-851, var19);
-              var3.a(var27.x, (byte) 90);
-              var3.a(var27.y, (byte) 93);
-              var4.a(var28.x, (byte) 89);
-              var4.a(var28.y, (byte) 79);
+              var3.add(var27.x, (byte) 90);
+              var3.add(var27.y, (byte) 93);
+              var4.add(var28.x, (byte) 89);
+              var4.add(var28.y, (byte) 79);
               var11 = var11 - var17;
               var19 = var19 + var18;
               if (!(var11 < 0.0f)) {
                 continue;
               }
-              param2.a(0.0f, var4.a(param1 ^ -10000603), var12, var3.a(-58), (byte) 49);
+              param2.a(0.0f, var4.toArray(param1 ^ -10000603), var12, var3.toArray(-58), (byte) 49);
               var29 = o.a((byte) 102);
               var3 = var29;
               var30 = o.a((byte) -115);
               var4 = var30;
-              var29.a(var27.x, (byte) 91);
-              var29.a(var27.y, (byte) 64);
-              var30.a(var28.x, (byte) 81);
+              var29.add(var27.x, (byte) 91);
+              var29.add(var27.y, (byte) 64);
+              var30.add(var28.x, (byte) 81);
               var11 = var11 + var10;
-              var30.a(var28.y, (byte) 69);
+              var30.add(var28.y, (byte) 69);
             }
             var31 = var14.l(param1 ^ 1579032);
             var32 = var14.m(param1 - 10000550);
-            var3.a(var31.x, (byte) 106);
-            var3.a(var31.y, (byte) 64);
-            var4.a(var32.x, (byte) 81);
-            var4.a(var32.y, (byte) 81);
+            var3.add(var31.x, (byte) 106);
+            var3.add(var31.y, (byte) 64);
+            var4.add(var32.x, (byte) 81);
+            var4.add(var32.y, (byte) 81);
           }
-          param2.a(0.0f, var4.a(-39), var12, var3.a(-61), (byte) 49);
+          param2.a(0.0f, var4.toArray(-39), var12, var3.toArray(-61), (byte) 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

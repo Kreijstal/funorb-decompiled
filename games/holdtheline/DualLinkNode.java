@@ -22,11 +22,11 @@ class DualLinkNode extends IntrusiveNode {
         return 0.0f;
     }
 
-    final static e a(int param0, byte param1) {
+    final static QuickChatDynamicCommand getQuickChatCommand(int param0, byte param1) {
         int var3 = 0;
-        e[] var2;
+        QuickChatDynamicCommand[] var2;
         int var4;
-        e[] var5;
+        QuickChatDynamicCommand[] var5;
         var4 = HoldTheLine.field_D;
         if (param1 >= -50) {
           field_k = (jn) null;
@@ -34,7 +34,7 @@ class DualLinkNode extends IntrusiveNode {
         var5 = ClientTextResources.a(4);
         var2 = var5;
         for (var3 = 0; var3 < var5.length; var3++) {
-          if (param0 == var5[var3].field_f) {
+          if (param0 == var5[var3].protocolId) {
             return var5[var3];
           }
         }
@@ -61,7 +61,7 @@ class DualLinkNode extends IntrusiveNode {
           if (param1 != 0) {
             DualLinkNode.signumFloat(11, 0.5669122934341431f);
           }
-          stackIn_3_0 = tl.field_w.a(param0, false, "");
+          stackIn_3_0 = PasswordFieldRenderer.field_w.a(param0, false, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,10 +100,10 @@ class DualLinkNode extends IntrusiveNode {
             DualLinkNode.signumFloat(11, -0.14343492686748505f);
           }
           if (ClientException.a((byte) -118)) {
-            r.field_a.a(AccountProgressDialog.field_lb, SpriteState.field_r, true, false);
+            r.field_a.processInput(AccountProgressDialog.field_lb, SpriteState.field_r, true, false);
             r.field_a.g((byte) -59);
             while (qh.c(-44)) {
-              r.field_a.a(aa.field_n, LoginChoicePanel.field_M, (byte) 117);
+              r.field_a.dispatchKey(DelayedServerPacket.field_n, LoginChoicePanel.field_M, (byte) 117);
             }
             return;
           }

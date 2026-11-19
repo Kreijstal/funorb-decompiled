@@ -55,16 +55,16 @@ final class bb {
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 >= -34) {
-          ei var2 = (ei) null;
-          bb.a(-19, (ei) null, -1.1091806888580322f, (ei) null, true, (byte) 52, (ei) null, (ei) null);
+          GrowableObjectList var2 = (GrowableObjectList) null;
+          bb.a(-19, (GrowableObjectList) null, -1.1091806888580322f, (GrowableObjectList) null, true, (byte) 52, (GrowableObjectList) null, (GrowableObjectList) null);
           return;
         }
     }
 
-    final static ei a(int param0, ei param1, float param2, ei param3, boolean param4, byte param5, ei param6, ei param7) {
-        ei stackIn_6_0 = null;
-        ei stackIn_9_0 = null;
-        ei stackIn_15_0 = null;
+    final static GrowableObjectList a(int param0, GrowableObjectList param1, float param2, GrowableObjectList param3, boolean param4, byte param5, GrowableObjectList param6, GrowableObjectList param7) {
+        GrowableObjectList stackIn_6_0 = null;
+        GrowableObjectList stackIn_9_0 = null;
+        GrowableObjectList stackIn_15_0 = null;
         Object stackIn_18_0 = null;
         boolean stackIn_21_0 = false;
         boolean stackIn_22_0 = false;
@@ -76,9 +76,9 @@ final class bb {
         boolean stackIn_36_0 = false;
         int stackIn_36_1 = 0;
         int stackIn_40_0 = 0;
-        ei stackIn_44_0 = null;
-        ei stackIn_47_0 = null;
-        ei stackIn_51_0 = null;
+        GrowableObjectList stackIn_44_0 = null;
+        GrowableObjectList stackIn_47_0 = null;
+        GrowableObjectList stackIn_51_0 = null;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         RuntimeException stackIn_54_0 = null;
@@ -110,16 +110,16 @@ final class bb {
         int statePc = 0;
         Throwable caughtException = null;
         RuntimeException var8 = null;
-        ei var9 = null;
+        GrowableObjectList var9 = null;
         Object var10 = null;
         int var11 = 0;
         int var12 = 0;
         ha var13 = null;
         float var14 = 0.0f;
         int var15 = 0;
-        ei var16 = null;
-        ei var17 = null;
-        ei var18 = null;
+        GrowableObjectList var16 = null;
+        GrowableObjectList var17 = null;
+        GrowableObjectList var18 = null;
         Object var19 = null;
         scanLoop1: while (true) {
             switch (statePc) {
@@ -152,7 +152,7 @@ final class bb {
                 }
                 case 3: {
                     try {
-                        var18 = new ei();
+                        var18 = new GrowableObjectList();
                         if (!param4) {
                             statePc = 5;
                         } else {
@@ -170,7 +170,7 @@ final class bb {
                 }
                 case 4: {
                     try {
-                        stackIn_6_0 = (ei) (param1);
+                        stackIn_6_0 = (GrowableObjectList) (param1);
                         statePc = 6;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_4) {
@@ -184,7 +184,7 @@ final class bb {
                 }
                 case 5: {
                     try {
-                        stackIn_6_0 = (ei) (param3);
+                        stackIn_6_0 = (GrowableObjectList) (param3);
                         statePc = 6;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_5) {
@@ -217,7 +217,7 @@ final class bb {
                 }
                 case 7: {
                     try {
-                        stackIn_9_0 = (ei) (param6);
+                        stackIn_9_0 = (GrowableObjectList) (param6);
                         statePc = 9;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_7) {
@@ -231,7 +231,7 @@ final class bb {
                 }
                 case 8: {
                     try {
-                        stackIn_9_0 = (ei) (param7);
+                        stackIn_9_0 = (GrowableObjectList) (param7);
                         statePc = 9;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_8) {
@@ -249,7 +249,7 @@ final class bb {
                         var10 = var16;
                         var11 = param4 ? 1 : 0;
                         var12 = param4 ? 1 : 0;
-                        if (var16.field_e == 0) {
+                        if (var16.size == 0) {
                             statePc = 11;
                         } else {
                             statePc = 10;
@@ -282,7 +282,7 @@ final class bb {
                         if (param0 >= 0) {
                             /* Inlined CFG state: 13. */
                             {
-                                fc.a(2, (float)var17.field_e, param2, var17, var18);
+                                fc.a(2, (float)var17.size, param2, var17, var18);
                                 statePc = 14;
                                 continue scanLoop1;
                             }
@@ -305,7 +305,7 @@ final class bb {
                 }
                 case 14: {
                     try {
-                        stackIn_15_0 = (ei) (var18);
+                        stackIn_15_0 = (GrowableObjectList) (var18);
                         statePc = 15;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_14) {
@@ -327,7 +327,7 @@ final class bb {
                 }
                 case 17: {
                     try {
-                        stackIn_18_0 = (ei) (var19);
+                        stackIn_18_0 = (GrowableObjectList) (var19);
                         statePc = 18;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_17) {
@@ -341,10 +341,10 @@ final class bb {
                 }
                 case 18: {
                     try {
-                        if (((ei) (stackIn_18_0)).field_e <= param0) {
+                        if (((GrowableObjectList) (stackIn_18_0)).size <= param0) {
                             /* Inlined CFG state: 20. */
                             {
-                                fc.a(2, (float)var9.field_e, param2, var9, var18);
+                                fc.a(2, (float)var9.size, param2, var9, var18);
                                 param2 = 0.0f;
                                 stackIn_22_0 = param4;
                                 stackIn_21_0 = stackIn_22_0;
@@ -390,8 +390,8 @@ final class bb {
                         } else {
                             /* Inlined CFG state: 24. */
                             {
-                                kj.field_r = true;
-                                param0 = param0 - ((ei) (var10)).field_e;
+                                SolidRoadStripRenderer.field_r = true;
+                                param0 = param0 - ((GrowableObjectList) (var10)).size;
                                 statePc = 25;
                                 continue scanLoop1;
                             }
@@ -411,7 +411,7 @@ final class bb {
                             /* Inlined CFG state: 27. */
                             {
                                 fc.a(2, 0.0f, param2, var9, var18);
-                                param2 = (float)var9.field_e;
+                                param2 = (float)var9.size;
                                 if (param4) {
                                     /* Inlined CFG state: 29. */
                                     {
@@ -452,8 +452,8 @@ final class bb {
                         } else {
                             /* Inlined CFG state: 31. */
                             {
-                                kj.field_r = true;
-                                param0 = param0 + ((ei) (var10)).field_e;
+                                SolidRoadStripRenderer.field_r = true;
+                                param0 = param0 + ((GrowableObjectList) (var10)).size;
                                 statePc = 32;
                                 continue scanLoop1;
                             }
@@ -469,7 +469,7 @@ final class bb {
                 }
                 case 32: {
                     try {
-                        var13 = (ha) (((ei) (var10)).field_b[param0]);
+                        var13 = (ha) (((GrowableObjectList) (var10)).elements[param0]);
                         var14 = var13.field_m;
                         fc.a(2, var14, param2, var9, var18);
                         if (var13.field_l) {
@@ -574,14 +574,14 @@ final class bb {
                         if (!param4) {
                             /* Inlined CFG state: 43. */
                             {
-                                stackIn_44_0 = (ei) (param7);
+                                stackIn_44_0 = (GrowableObjectList) (param7);
                                 statePc = 44;
                                 continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 42. */
                             {
-                                stackIn_44_0 = (ei) (param6);
+                                stackIn_44_0 = (GrowableObjectList) (param6);
                                 statePc = 44;
                                 continue scanLoop1;
                             }
@@ -616,7 +616,7 @@ final class bb {
                 }
                 case 45: {
                     try {
-                        stackIn_47_0 = (ei) (param3);
+                        stackIn_47_0 = (GrowableObjectList) (param3);
                         statePc = 47;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_45) {
@@ -630,7 +630,7 @@ final class bb {
                 }
                 case 46: {
                     try {
-                        stackIn_47_0 = (ei) (param1);
+                        stackIn_47_0 = (GrowableObjectList) (param1);
                         statePc = 47;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_46) {
@@ -672,7 +672,7 @@ final class bb {
                 }
                 case 50: {
                     try {
-                        stackIn_51_0 = (ei) (var18);
+                        stackIn_51_0 = (GrowableObjectList) (var18);
                         statePc = 51;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_50) {
@@ -801,8 +801,8 @@ final class bb {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != -1) {
-          ei var3 = (ei) null;
-          bb.a(112, (ei) null, -1.1291340589523315f, (ei) null, true, (byte) 49, (ei) null, (ei) null);
+          GrowableObjectList var3 = (GrowableObjectList) null;
+          bb.a(112, (GrowableObjectList) null, -1.1291340589523315f, (GrowableObjectList) null, true, (byte) 49, (GrowableObjectList) null, (GrowableObjectList) null);
           var1 = System.currentTimeMillis();
           if (ka.field_c > var1) {
             dg.field_d = dg.field_d + (-var1 + ka.field_c);

@@ -1,85 +1,85 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TrackBoundary extends vj {
+final class TrackBoundary extends BoundaryCurve {
     static long[] field_w;
-    Point2i field_s;
+    Point2i end;
     static int field_x;
     static MouseWheelInput field_u;
-    Point2i field_r;
+    Point2i start;
     static Sprite[] field_t;
     static int field_v;
 
-    final vj c(boolean param0) {
+    final BoundaryCurve reversed(boolean param0) {
         if (!param0) {
-          return (vj) ((Object) new TrackBoundary(this.field_s, this.field_r, this.field_k, this.field_p, this.field_q));
+          return (BoundaryCurve) ((Object) new TrackBoundary(this.end, this.start, this.field_k, this.field_p, this.field_q));
         }
-        return (vj) null;
+        return (BoundaryCurve) null;
     }
 
-    final Vector2f a(boolean param0) {
+    final Vector2f getEndDirection(boolean param0) {
         if (!param0) {
-          return new wb(this.field_r, this.field_s).b(-114);
+          return new Vector2i(this.start, this.end).normalized(-114);
         }
         field_t = (Sprite[]) null;
-        return new wb(this.field_r, this.field_s).b(-114);
+        return new Vector2i(this.start, this.end).normalized(-114);
     }
 
-    final Vector2f g(int param0) {
+    final Vector2f getStartDirection(int param0) {
         if (param0 == -1) {
-          return new wb(this.field_r, this.field_s).b(-117);
+          return new Vector2i(this.start, this.end).normalized(-117);
         }
-        this.field_s = (Point2i) null;
-        return new wb(this.field_r, this.field_s).b(-117);
+        this.end = (Point2i) null;
+        return new Vector2i(this.start, this.end).normalized(-117);
     }
 
-    final Vector2f a(byte param0, float param1) {
+    final Vector2f directionAt(byte param0, float param1) {
         if (param0 >= 117) {
-          return new wb(this.field_r, this.field_s).b(-126);
+          return new Vector2i(this.start, this.end).normalized(-126);
         }
-        this.field_r = (Point2i) null;
-        return new wb(this.field_r, this.field_s).b(-126);
+        this.start = (Point2i) null;
+        return new Vector2i(this.start, this.end).normalized(-126);
     }
 
-    final Point2i a(int param0) {
+    final Point2i getEndPoint(int param0) {
         if (param0 != 0) {
           field_x = 13;
-          return this.field_s;
+          return this.end;
         }
-        return this.field_s;
+        return this.end;
     }
 
-    final Point2i a(boolean param0, float param1) {
+    final Point2i pointAt(boolean param0, float param1) {
         if (!param0) {
-          return new Point2i((int)((float)(this.field_s.x - this.field_r.x) * param1 + (float)this.field_r.x), (int)((float)(-this.field_r.y + this.field_s.y) * param1 + (float)this.field_r.y));
+          return new Point2i((int)((float)(this.end.x - this.start.x) * param1 + (float)this.start.x), (int)((float)(-this.start.y + this.end.y) * param1 + (float)this.start.y));
         }
-        this.a((byte) -61, 1.257719874382019f);
-        return new Point2i((int)((float)(this.field_s.x - this.field_r.x) * param1 + (float)this.field_r.x), (int)((float)(-this.field_r.y + this.field_s.y) * param1 + (float)this.field_r.y));
+        this.directionAt((byte) -61, 1.257719874382019f);
+        return new Point2i((int)((float)(this.end.x - this.start.x) * param1 + (float)this.start.x), (int)((float)(-this.start.y + this.end.y) * param1 + (float)this.start.y));
     }
 
-    final float f(int param0) {
+    final float length(int param0) {
         if (param0 == 50) {
-          return (float)Math.sqrt((double)((-this.field_r.y + this.field_s.y) * (this.field_s.y - this.field_r.y) + (this.field_s.x - this.field_r.x) * (-this.field_r.x + this.field_s.x)));
+          return (float)Math.sqrt((double)((-this.start.y + this.end.y) * (this.end.y - this.start.y) + (this.end.x - this.start.x) * (-this.start.x + this.end.x)));
         }
-        this.i(31);
-        return (float)Math.sqrt((double)((-this.field_r.y + this.field_s.y) * (this.field_s.y - this.field_r.y) + (this.field_s.x - this.field_r.x) * (-this.field_r.x + this.field_s.x)));
+        this.lengthSquared(31);
+        return (float)Math.sqrt((double)((-this.start.y + this.end.y) * (this.end.y - this.start.y) + (this.end.x - this.start.x) * (-this.start.x + this.end.x)));
     }
 
-    final int i(int param0) {
+    final int lengthSquared(int param0) {
         if (param0 < -72) {
-          return (-this.field_r.x + this.field_s.x) * (this.field_s.x - this.field_r.x) + (this.field_s.y - this.field_r.y) * (-this.field_r.y + this.field_s.y);
+          return (-this.start.x + this.end.x) * (this.end.x - this.start.x) + (this.end.y - this.start.y) * (-this.start.y + this.end.y);
         }
-        this.a(true, 1.4694377183914185f);
-        return (-this.field_r.x + this.field_s.x) * (this.field_s.x - this.field_r.x) + (this.field_s.y - this.field_r.y) * (-this.field_r.y + this.field_s.y);
+        this.pointAt(true, 1.4694377183914185f);
+        return (-this.start.x + this.end.x) * (this.end.x - this.start.x) + (this.end.y - this.start.y) * (-this.start.y + this.end.y);
     }
 
     TrackBoundary(Point2i param0, Point2i param1, int param2, boolean param3, boolean param4) {
         try {
           this.field_p = param3 ? true : false;
-          this.field_s = param1;
+          this.end = param1;
           this.field_k = param2;
           this.field_q = param4 ? true : false;
-          this.field_r = param0;
+          this.start = param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -98,18 +98,18 @@ final class TrackBoundary extends vj {
         field_u = null;
     }
 
-    final static go[] b(String param0, byte param1) {
-        go[] var2 = null;
+    final static RotatedSpriteAsset[] b(String param0, byte param1) {
+        RotatedSpriteAsset[] var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
         int var4 = 0;
-        go[] stackIn_1_0 = null;
+        RotatedSpriteAsset[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new go[2];
+          var2 = new RotatedSpriteAsset[2];
           var4 = -16 / ((param1 + 14) / 63);
           var2[0] = WeightedLruCache.a(false, param0, true, false, 2048);
           var3 = param0 + "_destroyed";

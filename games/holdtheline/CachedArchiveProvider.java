@@ -114,7 +114,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (null != this.field_v.field_g &&
                 null != this.field_v.field_g[param2]) {
                 var28 = this.field_v.field_g[param2];
-                var27 = wc.a(var5, -6408, 0, var18.length - 2);
+                var27 = TrackCurve.a(var5, -6408, 0, var18.length - 2);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (~var27[var9] != ~var28[var9]) {
                     throw new RuntimeException();
@@ -164,7 +164,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (null != this.field_v.field_g &&
               null != this.field_v.field_g[param2]) {
               var29 = this.field_v.field_g[param2];
-              var30 = wc.a(var5, -6408, 0, -2 + var18.length);
+              var30 = TrackCurve.a(var5, -6408, 0, -2 + var18.length);
               var11 = 0;
               var9 = var11;
               while (var11 < 64) {

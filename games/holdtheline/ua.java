@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ua {
-    static va field_b;
+    static SpriteSheetAsset field_b;
     static int[] field_c;
     static int field_a;
 
@@ -14,21 +14,21 @@ final class ua {
         field_c = null;
     }
 
-    final static oe a(boolean param0, float param1, oe param2) {
-        oe var3 = null;
+    final static QuadraticPointPath a(boolean param0, float param1, QuadraticPointPath param2) {
+        QuadraticPointPath var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        oe stackIn_2_0 = null;
-        oe stackIn_4_0 = null;
+        QuadraticPointPath stackIn_2_0 = null;
+        QuadraticPointPath stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new oe(param2.field_e * param1, param2.field_b, param2.field_c);
+          var3 = new QuadraticPointPath(param2.field_e * param1, param2.field_b, param2.field_c);
           gk.field_d[0] = (float)param2.field_k.x;
           gk.field_d[1] = (float)param2.field_l.x;
           gk.field_d[2] = (float)param2.field_m.x;
@@ -38,7 +38,7 @@ final class ua {
           gk.field_d[1] = (float)param2.field_l.y;
           gk.field_d[2] = (float)param2.field_m.y;
           if (param0) {
-            stackIn_2_0 = (oe) null;
+            stackIn_2_0 = (QuadraticPointPath) null;
             return stackIn_2_0;
           }
           var6 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 1, -1, param1);
@@ -83,7 +83,7 @@ final class ua {
         StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
-        oe var12 = null;
+        QuadraticPointPath var12 = null;
         var11 = HoldTheLine.field_D;
         try {
           var4_int = param2.length();
@@ -102,8 +102,8 @@ final class ua {
             }
           }
           if (param0 < 17) {
-            var12 = (oe) null;
-            ua.a(false, -0.35584643483161926f, (oe) null);
+            var12 = (QuadraticPointPath) null;
+            ua.a(false, -0.35584643483161926f, (QuadraticPointPath) null);
           }
           var8 = new StringBuilder(var6);
           var9 = 0;

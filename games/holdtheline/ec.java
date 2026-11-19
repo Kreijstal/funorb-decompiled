@@ -73,10 +73,10 @@ final class ec extends pc {
         if (this.field_k) {
           return;
         }
-        if (aa.field_n == 1 &&
-          mg.field_c) {
-          stackIn_10_0 = !(kb.field_c);
-          kb.field_c = stackIn_10_0;
+        if (DelayedServerPacket.field_n == 1 &&
+          RotatedSpriteCache.field_c) {
+          stackIn_10_0 = !(LoginCredentialType.field_c);
+          LoginCredentialType.field_c = stackIn_10_0;
         }
         if (!pj.b((byte) 116) &&
           this.field_a <= 1) {
@@ -87,7 +87,7 @@ final class ec extends pc {
         var2 = stackIn_16_0;
         stackIn_19_0 = (this.field_a > 1) ? 0 : 2;
         var3 = stackIn_19_0;
-        if (aa.field_n == 98) {
+        if (DelayedServerPacket.field_n == 98) {
           fieldTemp$0 = this.field_q - 1;
           this.field_q = this.field_q - 1;
           if (0 > fieldTemp$0) {
@@ -125,7 +125,7 @@ final class ec extends pc {
             }
           }
         } else {
-          if (aa.field_n == 84) {
+          if (DelayedServerPacket.field_n == 84) {
             if (this.field_Y != -1) {
               this.a(this.field_Y, this.field_J[this.field_Y], 2, -79);
               return;
@@ -141,7 +141,7 @@ final class ec extends pc {
             this.field_g = true;
             return;
           }
-          if (99 == aa.field_n) {
+          if (99 == DelayedServerPacket.field_n) {
             if (-1 != this.field_q) {
               fieldTemp$1 = this.field_q + 1;
               this.field_q = this.field_q + 1;
@@ -182,9 +182,9 @@ final class ec extends pc {
               return;
             }
           } else {
-            if (aa.field_n == 1 &&
+            if (DelayedServerPacket.field_n == 1 &&
               IterableSecondaryNodeDeque.field_g[82] &&
-              mg.field_c) {
+              RotatedSpriteCache.field_c) {
               l.field_b = true;
               hk.field_d = -1 + pc.field_l[3];
               ao.field_b = 3;
@@ -193,10 +193,10 @@ final class ec extends pc {
               return;
             }
             if (this.field_Y != -1) {
-              if (aa.field_n == 96) {
+              if (DelayedServerPacket.field_n == 96) {
                 this.a(this.field_Y, this.field_J[this.field_Y], 1, -45);
               }
-              if (97 == aa.field_n) {
+              if (97 == DelayedServerPacket.field_n) {
                 this.a(this.field_Y, this.field_J[this.field_Y], 0, 3);
                 return;
               }
@@ -204,14 +204,14 @@ final class ec extends pc {
               if (this.field_q == -1) {
                 return;
               }
-              if (aa.field_n == 96) {
+              if (DelayedServerPacket.field_n == 96) {
                 fieldTemp$2 = this.field_R - 1;
                 this.field_R = this.field_R - 1;
                 if (fieldTemp$2 < 0) {
                   this.field_R = this.field_R + 1;
                 }
               }
-              if (97 != aa.field_n) {
+              if (97 != DelayedServerPacket.field_n) {
                 return;
               }
               fieldTemp$3 = this.field_R + 1;
@@ -280,7 +280,7 @@ final class ec extends pc {
               if (this.field_R != -1 &&
                 this.field_a - 1 == this.field_q) {
                 this.b(this.field_R, this.field_q, 16777215);
-                ci.a(1, (byte) 125, 13, this.field_R);
+                ArchiveCatalog.a(1, (byte) 125, 13, this.field_R);
               }
             }
           }
@@ -497,10 +497,10 @@ final class ec extends pc {
           if (param1 != 51) {
             return;
           }
-          var4 = (fl) (pd.field_e.first((byte) 125));
+          var4 = (fl) (UsernameLoginCredentials.field_e.first((byte) 125));
           while (var4 != null) {
             om.a(27391, var4, param0);
-            var4 = (fl) (pd.field_e.next((byte) -89));
+            var4 = (fl) (UsernameLoginCredentials.field_e.next((byte) -89));
           }
           var2 = oc.field_d.first((byte) 121);
           while (var2 != null) {
@@ -551,8 +551,8 @@ final class ec extends pc {
         }
         if (this.field_P == 0) {
           if (this.field_W == 0) {
-            ValidationHelpWidget.a(17405, 64, 0, j.field_c.field_f);
-            ValidationHelpWidget.a(param0 + 17514, 64, 256, j.field_c.field_h);
+            ValidationHelpWidget.a(17405, 64, 0, HuffmanDecoder.field_c.field_f);
+            ValidationHelpWidget.a(param0 + 17514, 64, 256, HuffmanDecoder.field_c.field_h);
           }
           fieldTemp$0 = this.field_W + 1;
           this.field_W = this.field_W + 1;
@@ -756,7 +756,7 @@ final class ec extends pc {
               var4[var10].d(var6, var8, var9);
               o.a(128, 84, var8, 128, 111, param0 - 4488, var6);
             }
-            wb.a(20, var5[var10], 4, 2, 111, var8, var6, 74, param0 ^ -48, 1, HoldTheLine.field_F);
+            Vector2i.a(20, var5[var10], 4, 2, 111, var8, var6, 74, param0 ^ -48, 1, HoldTheLine.field_F);
             var6 += 160;
           }
           return;
@@ -782,7 +782,7 @@ final class ec extends pc {
             var4[var12].b(var6, var8);
             o.a(128, 84, var8, 128, 111, -4441, var6);
           }
-          wb.a(20, var5[var12], 4, 2, 111, var8, var6, 74, -1, 1, HoldTheLine.field_F);
+          Vector2i.a(20, var5[var12], 4, 2, 111, var8, var6, 74, -1, 1, HoldTheLine.field_F);
           var6 += 160;
           var12++;
         }
@@ -865,7 +865,7 @@ final class ec extends pc {
           if (7 != DelegatingCanvas.field_d) {
             if (DelegatingCanvas.field_d == 0) {
               stackIn_36_0 = new StringBuilder();
-              if (!wb.field_c) {
+              if (!Vector2i.field_c) {
                 stackIn_37_1 = MusicCrossfadeStream.field_r;
               } else {
                 stackIn_37_1 = h.field_e;
@@ -879,7 +879,7 @@ final class ec extends pc {
                   throw new RuntimeException();
                 }
                 stackIn_31_0 = new StringBuilder();
-                if (wb.field_c) {
+                if (Vector2i.field_c) {
                   stackIn_32_1 = h.field_e;
                 } else {
                   stackIn_32_1 = MusicCrossfadeStream.field_r;
@@ -892,7 +892,7 @@ final class ec extends pc {
           }
           var7 = uk.field_c[20] + var7;
           stackIn_40_0 = new StringBuilder().append(uk.field_c[21]);
-          if (em.field_o) {
+          if (AgeValidator.field_o) {
             stackIn_41_1 = ProxySocketConnector.field_l;
           } else {
             stackIn_41_1 = UrlPacketDownloader.field_h;
@@ -921,7 +921,7 @@ final class ec extends pc {
         } else {
           if (param1 == 23) {
             if (this.field_a > 1) {
-              stackIn_16_0 = lg.field_r;
+              stackIn_16_0 = CachedTextLayout.field_r;
             } else {
               stackIn_16_0 = "";
             }
@@ -1005,7 +1005,7 @@ final class ec extends pc {
           stackIn_27_0 = (param2 == 4) ? 1 : 0;
         }
         var11 = stackIn_27_0;
-        qf.a(293, StrongCacheEntry.field_r);
+        MatchingTextValidator.a(293, StrongCacheEntry.field_r);
         if (param1 != 22) {
           if (param1 == 23) {
             stackIn_97_0 = (0 < this.field_c) ? 0 : 2;
@@ -1088,23 +1088,23 @@ final class ec extends pc {
           if (this.field_ab == 0) {
             if (var7 != 0) {
               if (DelegatingCanvas.field_d == 7) {
-                wb.field_c = false;
+                Vector2i.field_c = false;
                 DelegatingCanvas.field_d = 0;
               } else {
                 if (DelegatingCanvas.field_d == 0) {
-                  if (wb.field_c) {
+                  if (Vector2i.field_c) {
                     DelegatingCanvas.field_d = 1;
                   }
-                  stackIn_85_0 = !(wb.field_c);
-                  wb.field_c = stackIn_85_0;
+                  stackIn_85_0 = !(Vector2i.field_c);
+                  Vector2i.field_c = stackIn_85_0;
                 } else {
                   if (1 != DelegatingCanvas.field_d) {
                     if (2 == DelegatingCanvas.field_d) {
-                      if (wb.field_c) {
+                      if (Vector2i.field_c) {
                         DelegatingCanvas.field_d = 7;
                       }
-                      stackIn_78_0 = !(wb.field_c);
-                      wb.field_c = stackIn_78_0;
+                      stackIn_78_0 = !(Vector2i.field_c);
+                      Vector2i.field_c = stackIn_78_0;
                     }
                   } else {
                     DelegatingCanvas.field_d = 2;
@@ -1117,23 +1117,23 @@ final class ec extends pc {
                   if (DelegatingCanvas.field_d != 0) {
                     if (DelegatingCanvas.field_d != 1) {
                       if (DelegatingCanvas.field_d == 2) {
-                        if (!wb.field_c) {
+                        if (!Vector2i.field_c) {
                           DelegatingCanvas.field_d = 1;
                         }
-                        wb.field_c = false;
+                        Vector2i.field_c = false;
                       }
                     } else {
                       DelegatingCanvas.field_d = 0;
-                      wb.field_c = true;
+                      Vector2i.field_c = true;
                     }
                   } else {
-                    if (!wb.field_c) {
+                    if (!Vector2i.field_c) {
                       DelegatingCanvas.field_d = 7;
                     }
-                    wb.field_c = false;
+                    Vector2i.field_c = false;
                   }
                 } else {
-                  wb.field_c = true;
+                  Vector2i.field_c = true;
                   DelegatingCanvas.field_d = 2;
                 }
               }
@@ -1153,8 +1153,8 @@ final class ec extends pc {
               if (this.field_t && (var10 != 0 ||
                 var7 != 0 ||
                 var8 != 0)) {
-                stackIn_50_0 = !(em.field_o);
-                em.field_o = stackIn_50_0;
+                stackIn_50_0 = !(AgeValidator.field_o);
+                AgeValidator.field_o = stackIn_50_0;
               }
             } else {
               if (var10 != 0) {
@@ -1200,11 +1200,11 @@ final class ec extends pc {
         } else {
           this.field_ab = fj.a(this.field_K, (byte) -119, param2);
           if (this.field_ab == 0) {
-            ci.a(0, (byte) 67, 13, 0);
+            ArchiveCatalog.a(0, (byte) 67, 13, 0);
           } else {
             if (this.field_ab == 2 &&
               this.field_t) {
-              ci.a(0, (byte) 100, 13, 1);
+              ArchiveCatalog.a(0, (byte) 100, 13, 1);
             }
           }
         }
@@ -1213,8 +1213,8 @@ final class ec extends pc {
 
     final void a(boolean param0, int param1) {
         int discarded$0 = 0;
-        this.field_J = em.field_i[this.field_E];
-        this.field_t = wb.field_c;
+        this.field_J = AgeValidator.field_i[this.field_E];
+        this.field_t = Vector2i.field_c;
         if (param1 != 6267) {
           discarded$0 = this.d(20, 52, -61);
         }
@@ -1258,7 +1258,7 @@ final class ec extends pc {
           return;
         }
         this.field_u = -1;
-        qf.a(293, StrongCacheEntry.field_r);
+        MatchingTextValidator.a(293, StrongCacheEntry.field_r);
         var5 = this.field_H[param0];
         if (param2 != 122) {
           this.field_p = (int[]) null;
@@ -1293,14 +1293,14 @@ final class ec extends pc {
               var7 = pf.a((byte) 92, StrongCacheEntry.field_w);
               if (0 == var7) {
                 var8 = StrongCacheEntry.field_w;
-                var13 = new Sprite[]{ua.field_b.a(84, go.field_g[var8][0], 9, 111), ua.field_b.a(84, go.field_g[var8][1], param2 ^ 115, 111)};
-                if (!wb.field_c) {
-                  stackIn_34_0 = ui.field_m;
+                var13 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][1], param2 ^ 115, 111)};
+                if (!Vector2i.field_c) {
+                  stackIn_34_0 = SoundPlayback.field_m;
                 } else {
-                  stackIn_34_0 = ui.field_m + " " + ac.field_g;
+                  stackIn_34_0 = SoundPlayback.field_m + " " + ArchiveLoadProgress.field_g;
                 }
                 var10 = stackIn_34_0;
-                this.a(var10, 16711680, go.field_g[var8], var13, param1, WidgetContainer.field_A[var8], RaceWorld.field_gb[var8], 312);
+                this.a(var10, 16711680, RotatedSpriteAsset.field_g[var8], var13, param1, WidgetContainer.field_A[var8], RaceWorld.field_gb[var8], 312);
               }
               bn.a(4 + StrongCacheEntry.field_w, param2 ^ -16);
               return;
@@ -1319,10 +1319,10 @@ final class ec extends pc {
               return;
             }
             t.field_l = var6;
-            if (wb.field_c) {
+            if (Vector2i.field_c) {
               var7 = StrongCacheEntry.field_w;
-              var12 = new Sprite[]{ua.field_b.a(84, go.field_g[var7][0] + 8, 9, 111), ua.field_b.a(84, 8 + go.field_g[var7][1], 9, 111)};
-              this.a(ui.field_m + " " + SocketConnector.field_e, 65280, go.field_g[var7], var12, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
+              var12 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][1], 9, 111)};
+              this.a(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var12, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
               return;
             }
             if (param3) {
@@ -1345,23 +1345,23 @@ final class ec extends pc {
           if (param0 == 1) {
             LoginForm.field_P = var6;
             var7 = ArchiveIndex.b((byte) -49).field_p;
-            if (gj.a(LoginForm.field_P, -70, StrongCacheEntry.field_w) == 0) {
-              var14 = new Sprite[]{ua.field_b.a(84, go.field_g[var7][0], 9, 111), ua.field_b.a(84, go.field_g[var7][1], 9, 111)};
-              if (wb.field_c) {
-                stackIn_47_0 = ui.field_m + " " + ac.field_g;
+            if (ArcTrackBoundary.a(LoginForm.field_P, -70, StrongCacheEntry.field_w) == 0) {
+              var14 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1], 9, 111)};
+              if (Vector2i.field_c) {
+                stackIn_47_0 = SoundPlayback.field_m + " " + ArchiveLoadProgress.field_g;
               } else {
-                stackIn_47_0 = ui.field_m;
+                stackIn_47_0 = SoundPlayback.field_m;
               }
               var9 = stackIn_47_0;
-              this.a(var9, 16711680, go.field_g[var7], var14, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
+              this.a(var9, 16711680, RotatedSpriteAsset.field_g[var7], var14, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
             }
           }
           if (param0 == 2) {
             t.field_l = var6;
             var7 = ArchiveIndex.b((byte) -49).field_p;
-            if (wb.field_c) {
-              var15 = new Sprite[]{ua.field_b.a(84, 8 + go.field_g[var7][0], 9, 111), ua.field_b.a(84, go.field_g[var7][1] + 8, 9, 111)};
-              this.a(ui.field_m + " " + SocketConnector.field_e, 65280, go.field_g[var7], var15, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
+            if (Vector2i.field_c) {
+              var15 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1] + 8, 9, 111)};
+              this.a(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var15, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
             } else {
               if (!param3) {
                 stackIn_54_0 = -21383;
@@ -1402,7 +1402,7 @@ final class ec extends pc {
           this.field_X = new String[4][];
           this.field_G = new String[4][];
           this.field_E = param0;
-          this.field_J = em.field_i[param0];
+          this.field_J = AgeValidator.field_i[param0];
           this.field_x = new float[this.field_J.length];
           this.field_I = new int[this.field_J.length];
           this.field_T = new int[4];

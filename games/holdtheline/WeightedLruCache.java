@@ -46,20 +46,20 @@ final class WeightedLruCache {
         this.field_c = 79;
     }
 
-    final static go a(boolean param0, String param1, boolean param2, boolean param3, int param4) {
+    final static RotatedSpriteAsset a(boolean param0, String param1, boolean param2, boolean param3, int param4) {
         RuntimeException var5 = null;
-        go stackIn_2_0 = null;
-        go stackIn_4_0 = null;
+        RotatedSpriteAsset stackIn_2_0 = null;
+        RotatedSpriteAsset stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            stackIn_4_0 = new go(param1, param4, param3, param0);
+            stackIn_4_0 = new RotatedSpriteAsset(param1, param4, param3, param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (go) null;
+          stackIn_2_0 = (RotatedSpriteAsset) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ final class WeightedLruCache {
 
     final static ResourceArchive a(int param0, int param1) {
         int var2 = 36 / ((56 - param0) / 61);
-        return kh.a(param1, false, true, false, 10600, 1);
+        return EmailConfirmationValidator.createResourceArchive(param1, false, true, false, 10600, 1);
     }
 
     final Object a(long param0, int param1) {

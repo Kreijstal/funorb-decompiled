@@ -5,7 +5,7 @@ final class ni {
     static int field_b;
     static PaletteBitmapFont field_a;
 
-    final static String a(char param0, byte param1, int param2) {
+    final static String repeatCharacter(char param0, byte param1, int param2) {
         int var5 = HoldTheLine.field_D;
         char[] var6 = new char[param2];
         char[] var3 = var6;
@@ -52,10 +52,10 @@ final class ni {
           if (!IntrusiveDeque.field_d.b("commonui", 104)) {
             return 57;
           }
-          if (!am.field_d.b((byte) -104)) {
+          if (!LinkWidgetRenderer.field_d.b((byte) -104)) {
             return 71;
           }
-          if (!am.field_d.b("commonui", 59)) {
+          if (!LinkWidgetRenderer.field_d.b("commonui", 59)) {
             return 80;
           }
           if (!ArchiveRequest.field_p.b((byte) -76)) {
@@ -71,10 +71,10 @@ final class ni {
           if (!IntrusiveDeque.field_d.b("commonui", -91)) {
             return 40;
           }
-          if (!am.field_d.b((byte) -66)) {
+          if (!LinkWidgetRenderer.field_d.b((byte) -66)) {
             return 50;
           }
-          if (!am.field_d.b("commonui", 110)) {
+          if (!LinkWidgetRenderer.field_d.b("commonui", 110)) {
             return 60;
           }
           if (!ArchiveRequest.field_p.b((byte) -122)) {

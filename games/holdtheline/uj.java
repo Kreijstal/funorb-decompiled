@@ -8,7 +8,7 @@ final class uj {
     static String field_b;
     static String field_f;
     static int field_h;
-    static oa field_a;
+    static NamedSoundEffect field_a;
     static boolean field_c;
 
     final static void a(long param0, int param1) {
@@ -18,7 +18,7 @@ final class uj {
           } catch (InterruptedException interruptedException) {
           }
           if (param1 > -60) {
-            field_a = (oa) null;
+            field_a = (NamedSoundEffect) null;
             return;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

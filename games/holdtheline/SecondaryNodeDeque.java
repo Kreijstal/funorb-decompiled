@@ -3,9 +3,9 @@
  */
 final class SecondaryNodeDeque {
     private DualLinkNode field_e;
-    static uf field_h;
+    static SpriteAsset field_h;
     static int field_f;
-    static uf field_i;
+    static SpriteAsset field_i;
     static int field_d;
     static int field_g;
     static IntrusiveDeque field_b;
@@ -28,7 +28,7 @@ final class SecondaryNodeDeque {
     }
 
     final static void a(boolean param0, byte param1) {
-        cg.a((byte) -119, false, param0);
+        TutorialAction.a((byte) -119, false, param0);
         int var2 = 99 % ((param1 + 21) / 62);
     }
 
@@ -52,7 +52,7 @@ final class SecondaryNodeDeque {
           field_h = null;
           return;
         }
-        field_i = (uf) null;
+        field_i = (SpriteAsset) null;
         field_i = null;
         field_h = null;
     }
@@ -69,10 +69,10 @@ final class SecondaryNodeDeque {
 
     final static boolean b(byte param0) {
         if (param0 != 38) {
-          field_i = (uf) null;
-          return ra.field_Z.a(-42);
+          field_i = (SpriteAsset) null;
+          return ra.field_Z.loadMasterIndex(-42);
         }
-        return ra.field_Z.a(-42);
+        return ra.field_Z.loadMasterIndex(-42);
     }
 
     final DualLinkNode next(int param0) {

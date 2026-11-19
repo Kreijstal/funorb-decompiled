@@ -64,13 +64,13 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     public DialogLayer() {
-        super(0, 0, ho.field_i, pe.field_e, (WidgetRenderer) null, (WidgetListener) null);
+        super(0, 0, EmailAddressValidator.field_i, pe.field_e, (WidgetRenderer) null, (WidgetListener) null);
         this.field_K = new IntrusiveDeque();
     }
 
     final static void h(byte param0) {
-        cg.field_b = new AccountCreationForm();
-        sm.field_c.a((UiWidget) (cg.field_b), (byte) -99);
+        TutorialAction.field_b = new AccountCreationForm();
+        sm.field_c.a((UiWidget) (TutorialAction.field_b), (byte) -99);
         int var1 = 95 / ((param0 + 54) / 53);
     }
 
@@ -82,24 +82,24 @@ final class DialogLayer extends SingleChildWidget {
           var3.field_F = false;
           var3 = (FadingDialog) (var2.next((byte) -104));
         }
-        this.field_B = null;
+        this.child = null;
         if (param0) {
           field_H = -70L;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = HoldTheLine.field_D;
         if (param0 != -9532) {
           DialogLayer.clearSharedReferences(true);
         }
-        if (null != this.field_l) {
-          this.field_l.drawWidget(true, param2, -115, (UiWidget) (this), param1);
+        if (null != this.renderer) {
+          this.renderer.drawWidget(true, param2, -115, (UiWidget) (this), param1);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_K);
         UiWidget var6 = (UiWidget) (var5.last(8115));
         while (var6 != null) {
-          var6.a(param0 + 0, this.field_o + param1, param2 + this.field_k, param3);
+          var6.drawLayer(param0 + 0, this.y + param1, param2 + this.x, param3);
           var6 = (UiWidget) (var5.a(false));
         }
     }
@@ -113,7 +113,7 @@ final class DialogLayer extends SingleChildWidget {
           var3 = (FadingDialog) (param0);
           this.field_K.addFirst(var3, param1);
           var3.field_F = true;
-          var3.a((UiWidget) (this), -25823);
+          var3.requestFocus((UiWidget) (this), -25823);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qj.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -133,7 +133,7 @@ final class DialogLayer extends SingleChildWidget {
     final static void h(int param0) {
         pc.field_b = StandardContentTransitionDialog.n(-49);
         ka.field_b = new DialogLayer();
-        cg.a((byte) -109, true, true);
+        TutorialAction.a((byte) -109, true, true);
         if (param0 != -1) {
           DialogLayer.clearSharedReferences(true);
         }
@@ -153,7 +153,7 @@ final class DialogLayer extends SingleChildWidget {
           }
           var3 = (FadingDialog) (var2.next((byte) -104));
         }
-        this.field_B = (UiWidget) ((Object) this.i((byte) -116));
+        this.child = (UiWidget) ((Object) this.i((byte) -116));
     }
 
     static {

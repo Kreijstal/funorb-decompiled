@@ -63,7 +63,7 @@ final class ll {
         if (param0 != -1) {
           ResourceArchive var3 = (ResourceArchive) null;
           ll.a(-92, -12, -33, (ResourceArchive) null);
-          if (ui.field_l == this) {
+          if (SoundPlayback.field_l == this) {
             return true;
           }
           if (this != fb.field_s) {
@@ -71,7 +71,7 @@ final class ll {
           }
           return true;
         }
-        if (ui.field_l == this) {
+        if (SoundPlayback.field_l == this) {
           return true;
         }
         if (this == fb.field_s) {
@@ -95,10 +95,10 @@ final class ll {
           if (t.a(0, param2)) {
             return false;
           }
-          if (aa.a(param2, 1)) {
+          if (DelayedServerPacket.hasRepeatedCharacter(param2, 1)) {
             return false;
           }
-          if (wc.a(param2, (byte) -27)) {
+          if (TrackCurve.a(param2, (byte) -27)) {
             return false;
           }
           if (param1.length() == 0) {
@@ -113,7 +113,7 @@ final class ll {
           if (jc.a(param2, param1, 95)) {
             return false;
           }
-          if (!an.a((byte) -127, param2, param1)) {
+          if (!GzipDecompressor.a((byte) -127, param2, param1)) {
             return true;
           }
           return false;

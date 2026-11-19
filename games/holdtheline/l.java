@@ -12,28 +12,28 @@ abstract class l {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ei var3 = null;
+        GrowableObjectList var3 = null;
         int var4 = 0;
-        ei var5 = null;
-        ei var6 = null;
-        ei var7 = null;
+        GrowableObjectList var5 = null;
+        GrowableObjectList var6 = null;
+        GrowableObjectList var7 = null;
         int var2_intLifetime1;
         int var2_intLifetime2;
         var4 = HoldTheLine.field_D;
         try {
-          for (var2_int = 0; var2_int < param1.field_c.field_e; var2_int++) {
-            var5 = (ei) (param1.field_c.field_b[var2_int]);
+          for (var2_int = 0; var2_int < param1.field_c.size; var2_int++) {
+            var5 = (GrowableObjectList) (param1.field_c.elements[var2_int]);
             var3 = var5;
             if (param1.field_p == 0) {
               jg.a(ri.field_c, var5, (byte) 92);
             } else {
               if (param1.field_p == 2) {
-                jg.a(vh.field_f, var5, (byte) 18);
+                jg.a(DialWidgetRenderer.field_f, var5, (byte) 18);
               } else {
                 if (param1.field_p != 3) {
-                  jg.a(new kj(7, 13941600), var5, (byte) 42);
+                  jg.a(new SolidRoadStripRenderer(7, 13941600), var5, (byte) 42);
                 } else {
-                  jg.a(new kj(4, 12566272), var5, (byte) 118);
+                  jg.a(new SolidRoadStripRenderer(4, 12566272), var5, (byte) 118);
                 }
               }
             }
@@ -41,13 +41,13 @@ abstract class l {
           if (param0 != 29824) {
             field_a = (pc[]) null;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < param1.field_t.field_e; var2_intLifetime1++) {
-            var6 = (ei) (param1.field_t.field_b[var2_intLifetime1]);
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < param1.field_t.size; var2_intLifetime1++) {
+            var6 = (GrowableObjectList) (param1.field_t.elements[var2_intLifetime1]);
             jg.a(new pj(7, 20.0f), var6, (byte) 82);
           }
-          for (var2_intLifetime2 = 0; param1.field_t.field_e > var2_intLifetime2; var2_intLifetime2++) {
-            var7 = (ei) (param1.field_t.field_b[var2_intLifetime2]);
-            jg.a(new ce(7, 20.0f), var7, (byte) 41);
+          for (var2_intLifetime2 = 0; param1.field_t.size > var2_intLifetime2; var2_intLifetime2++) {
+            var7 = (GrowableObjectList) (param1.field_t.elements[var2_intLifetime2]);
+            jg.a(new OutlinedRoadStripRenderer(7, 20.0f), var7, (byte) 41);
           }
           if (param1.field_p == 3) {
             jg.a(ClientTextResources.field_c, param1.field_e, (byte) 95);
@@ -107,20 +107,20 @@ abstract class l {
           var16 = -((float)var10 * param7.x) + param7.y * (float)var9_int;
           var17 = (float)var9_int * param4.x + (float)var10 * param4.y;
           var18 = -((float)var10 * param4.x) + param4.y * (float)var9_int;
-          le.field_s[0] = (float)(-param2) + (-((float)param1 * var13) - var11 * (float)param3 + Math.abs(var15));
-          if (le.field_s[0] > 0.0f) {
+          ShadedRoadStripRenderer.field_s[0] = (float)(-param2) + (-((float)param1 * var13) - var11 * (float)param3 + Math.abs(var15));
+          if (ShadedRoadStripRenderer.field_s[0] > 0.0f) {
             return false;
           }
-          le.field_s[1] = (float)(-param5) + (Math.abs(var16) - (var12 * (float)param3 + var14 * (float)param1));
-          if (le.field_s[1] > 0.0f) {
+          ShadedRoadStripRenderer.field_s[1] = (float)(-param5) + (Math.abs(var16) - (var12 * (float)param3 + var14 * (float)param1));
+          if (ShadedRoadStripRenderer.field_s[1] > 0.0f) {
             return false;
           }
-          le.field_s[2] = Math.abs(var17) - (var11 * (float)param2 + (float)param5 * var12) - (float)param3;
-          if (0.0f < le.field_s[2]) {
+          ShadedRoadStripRenderer.field_s[2] = Math.abs(var17) - (var11 * (float)param2 + (float)param5 * var12) - (float)param3;
+          if (0.0f < ShadedRoadStripRenderer.field_s[2]) {
             return false;
           }
-          le.field_s[3] = (float)(-param1) + (Math.abs(var18) - (var14 * (float)param5 + var13 * (float)param2));
-          if (!(le.field_s[3] > (float)param0)) {
+          ShadedRoadStripRenderer.field_s[3] = (float)(-param1) + (Math.abs(var18) - (var14 * (float)param5 + var13 * (float)param2));
+          if (!(ShadedRoadStripRenderer.field_s[3] > (float)param0)) {
             return true;
           }
           return false;

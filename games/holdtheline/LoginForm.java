@@ -26,7 +26,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         field_K = null;
     }
 
-    public final void a(EditableTextField param0, int param1) {
+    public final void onTextChanged(EditableTextField param0, int param1) {
         try {
           int var3_int = -48 / ((-61 - param1) / 38);
         } catch (RuntimeException runtimeException) {
@@ -35,10 +35,10 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
     }
 
     private final void a(byte param0) {
-        if (rd.b(-106) ||
-          !(0 >= this.field_M.field_q.length()) &&
-          !(0 >= this.field_H.field_q.length())) {
-          DelegatingCanvas.a(this.field_H.field_q, (byte) -60, this.field_M.field_q);
+        if (RoadStripRenderer.b(-106) ||
+          !(0 >= this.field_M.text.length()) &&
+          !(0 >= this.field_H.text.length())) {
+          DelegatingCanvas.a(this.field_H.text, (byte) -60, this.field_M.text);
         }
         if (param0 != -23) {
           this.a(true);
@@ -112,11 +112,11 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
               var2 = (int)(8192.0f * (1.0f + var13));
             }
             if (null == var4.field_p) {
-              var4.field_p = lg.a(var4.field_o, (byte) -68);
+              var4.field_p = CachedTextLayout.playSoundStream(var4.field_o, (byte) -68);
             }
-            var4.field_p.b(pc.field_h * var4.field_n * var1_int >> 16, true);
-            var4.field_p.a(var2, -64);
-            var4.field_p.a(var3, false);
+            var4.field_p.setInternalVolume(pc.field_h * var4.field_n * var1_int >> 16, true);
+            var4.field_p.setPan(var2, -64);
+            var4.field_p.setPlaybackStep(var3, false);
             var4 = (EntitySound) (FadingDialog.field_J.next((byte) 125));
           }
           return;
@@ -137,7 +137,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           var3 = this.field_M;
           var4 = param1;
           var3.a(false, var4, 1471);
-          this.field_H.o(1);
+          this.field_H.clearText(1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -161,11 +161,11 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mo var6 = null;
+        SpriteButtonRenderer var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        mf var9 = null;
+        LoginMethodPreference var9 = null;
         LabeledField var12 = null;
         LabeledField var13 = null;
         try {
@@ -200,85 +200,85 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
               this.field_N = new TextButton(fo.field_m, (WidgetListener) (this));
             }
           } else {
-            this.field_F = new TextButton(lg.field_p, (WidgetListener) null);
+            this.field_F = new TextButton(CachedTextLayout.field_p, (WidgetListener) null);
             this.field_Q = new TextButton(UrlPacketDownloader.field_n, (WidgetListener) null);
             this.field_M.field_D = false;
           }
-          this.field_M.field_l = (WidgetRenderer) ((Object) new kl(10000536));
-          this.field_H.field_l = (WidgetRenderer) ((Object) new tl(10000536));
-          var6 = new mo();
-          this.field_F.field_l = (WidgetRenderer) ((Object) var6);
+          this.field_M.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+          this.field_H.renderer = (WidgetRenderer) ((Object) new PasswordFieldRenderer(10000536));
+          var6 = new SpriteButtonRenderer();
+          this.field_F.renderer = (WidgetRenderer) ((Object) var6);
           if (this.field_Q != null) {
-            this.field_Q.field_l = (WidgetRenderer) ((Object) var6);
+            this.field_Q.renderer = (WidgetRenderer) ((Object) var6);
           }
-          this.field_M.field_z = Bzip2State.field_a;
+          this.field_M.tooltip = Bzip2State.field_a;
           if (null != this.field_N) {
-            this.field_N.field_l = (WidgetRenderer) ((Object) var6);
+            this.field_N.renderer = (WidgetRenderer) ((Object) var6);
           }
           if (null != this.field_N) {
-            this.field_N.field_z = ml.field_b;
+            this.field_N.tooltip = ml.field_b;
           }
           if (this.field_I) {
-            this.field_Q.field_z = fd.field_b;
+            this.field_Q.tooltip = ValidationState.field_b;
           } else {
             if (this.field_S) {
-              this.field_Q.field_z = wc.field_j;
-              this.field_Q.field_l = (WidgetRenderer) ((Object) new am());
+              this.field_Q.tooltip = TrackCurve.field_j;
+              this.field_Q.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             } else {
-              this.field_Q.field_l = (WidgetRenderer) ((Object) new am());
+              this.field_Q.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             }
           }
-          this.field_o = 15;
+          this.y = 15;
           var7 = IntrusiveNode.field_g;
           if (this.field_R != null) {
-            this.field_o = this.field_o + (var7.b(this.field_R, this.field_x - 40, var7.field_G) + 5);
+            this.y = this.y + (var7.b(this.field_R, this.width - 40, var7.field_G) + 5);
           }
           var8 = rf.field_bb;
           var9 = CacheEntry.a(GameKeyHandler.a(110), (byte) 124);
           if (var9 == RaceVehicle.field_Wb) {
             var8 = rc.field_d;
           } else {
-            if (var9 == gj.field_s) {
+            if (var9 == ArcTrackBoundary.field_s) {
               var8 = co.field_c;
             }
           }
-          dupTemp$0 = new LabeledField(10, this.field_o, -20 + this.field_x, 25, this.field_M, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.field_M, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(true, dupTemp$0);
-          this.field_o = this.field_o + (((UiWidget) ((Object) var12)).field_u + 5);
-          dupTemp$1 = new LabeledField(10, this.field_o, this.field_x - 20, 25, this.field_H, false, 80, 3, var7, 16777215, lc.field_f);
+          this.y = this.y + (((UiWidget) ((Object) var12)).height + 5);
+          dupTemp$1 = new LabeledField(10, this.y, this.width - 20, 25, this.field_H, false, 80, 3, var7, 16777215, EmailValidationResult.field_f);
           var13 = dupTemp$1;
           this.a(true, dupTemp$1);
-          this.field_F.field_t = (WidgetListener) (this);
-          this.field_o = this.field_o + (((UiWidget) ((Object) var13)).field_u + 5);
+          this.field_F.listener = (WidgetListener) (this);
+          this.y = this.y + (((UiWidget) ((Object) var13)).height + 5);
           if (this.field_N != null) {
-            this.field_N.field_t = (WidgetListener) (this);
+            this.field_N.listener = (WidgetListener) (this);
           }
           if (null != this.field_Q) {
-            this.field_Q.field_t = (WidgetListener) (this);
+            this.field_Q.listener = (WidgetListener) (this);
           }
           if (this.field_N == null) {
-            this.field_F.a(8, (byte) 122, this.field_o, 30, this.field_x - 6 - 10);
-            this.field_o = this.field_o + 35;
+            this.field_F.setBounds(8, (byte) 122, this.y, 30, this.width - 6 - 10);
+            this.y = this.y + 35;
           } else {
-            this.field_F.a(85, (byte) 122, this.field_o, 30, this.field_x - 95);
-            this.field_o = this.field_o + 60;
+            this.field_F.setBounds(85, (byte) 122, this.y, 30, this.width - 95);
+            this.y = this.y + 60;
           }
           if (this.field_N != null) {
-            this.field_N.a(8, (byte) 122, this.field_o, 30, -6 + this.field_x - 10);
-            this.field_o = this.field_o + 35;
+            this.field_N.setBounds(8, (byte) 122, this.y, 30, -6 + this.width - 10);
+            this.y = this.y + 35;
           }
           if (this.field_Q != null) {
             if (!this.field_I &&
               !this.field_S) {
-              this.field_Q.a(8, (byte) 122, this.field_o, 20, 40);
-              this.field_o = this.field_o + 25;
+              this.field_Q.setBounds(8, (byte) 122, this.y, 20, 40);
+              this.y = this.y + 25;
             } else {
-              this.field_Q.a(8, (byte) 122, this.field_o, 30, this.field_x - 16);
-              this.field_o = this.field_o + 35;
+              this.field_Q.setBounds(8, (byte) 122, this.y, 30, this.width - 16);
+              this.y = this.y + 35;
             }
           }
-          this.a(0, (byte) 122, 0, this.field_o + 3, this.field_x);
+          this.setBounds(0, (byte) 122, 0, this.y + 3, this.width);
           this.a(true, this.field_F);
           if (this.field_N != null) {
             this.a(true, this.field_N);
@@ -360,12 +360,12 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
               }
             } else {
               if (var5 <= 128) {
-                kj.field_q.d(-var5 + var4_int >> 1, 0, var5, var5);
+                SolidRoadStripRenderer.field_q.d(-var5 + var4_int >> 1, 0, var5, var5);
               } else {
-                kj.field_q.a(-128 + var4_int >> 1, var5 - 128 >> 1);
+                SolidRoadStripRenderer.field_q.a(-128 + var4_int >> 1, var5 - 128 >> 1);
               }
             }
-            ug.b(-1);
+            MarkerSliderRenderer.restoreRasterTarget(-1);
             stackIn_10_0 = var16;
             return stackIn_10_0;
           }
@@ -396,7 +396,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           }
           var19.f();
           var7.c(0, 0, var4_int, var5);
-          ug.b(-1);
+          MarkerSliderRenderer.restoreRasterTarget(-1);
           stackIn_27_0 = var6;
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -414,11 +414,11 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
     }
 
     final void j(int param0) {
-        this.field_M.o(1);
+        this.field_M.clearText(1);
         if (param0 != 10) {
           this.field_M = (EditableTextField) null;
         }
-        this.field_H.o(1);
+        this.field_H.clearText(1);
     }
 
     final static boolean b(boolean param0) {
@@ -430,7 +430,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         return stackIn_6_0;
     }
 
-    final boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    final boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -439,7 +439,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyPress(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -469,10 +469,10 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         if (param0) {
           return (String) null;
         }
-        if (null == this.field_M.field_q) {
+        if (null == this.field_M.text) {
           return "";
         }
-        return this.field_M.field_q;
+        return this.field_M.text;
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -521,7 +521,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    public final void a(byte param0, EditableTextField param1) {
+    public final void onSubmit(byte param0, EditableTextField param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -532,7 +532,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             field_K = (String) null;
           }
           if (this.field_M == param1) {
-            this.field_H.a((UiWidget) (this), -25823);
+            this.field_H.requestFocus((UiWidget) (this), -25823);
           }
           if (this.field_H == param1) {
             this.a((byte) -23);
@@ -552,14 +552,14 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (null != this.field_R) {
-          IntrusiveNode.field_g.a(this.field_R, 20 + param2 + this.field_k, 15 + (param1 + this.field_o), this.field_x - 40, this.field_u, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
+          IntrusiveNode.field_g.a(this.field_R, 20 + param2 + this.x, 15 + (param1 + this.y), this.width - 40, this.height, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
         }
         if (null != this.field_N) {
-          SoftwareRasterizer.b(10 + param2, 134 + param1, -20 + this.field_x, 4210752);
+          SoftwareRasterizer.b(10 + param2, 134 + param1, -20 + this.width, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     static {

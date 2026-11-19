@@ -19,23 +19,23 @@ final class VehicleDefinition {
     float field_a;
     float field_H;
     int field_K;
-    go field_z;
+    RotatedSpriteAsset field_z;
     private float field_N;
     float field_I;
     float field_J;
     float field_e;
-    oa field_u;
-    mg field_v;
-    go field_b;
+    NamedSoundEffect field_u;
+    RotatedSpriteCache field_v;
+    RotatedSpriteAsset field_b;
     float field_A;
     float field_F;
     float field_y;
     float field_x;
-    mg field_h;
+    RotatedSpriteCache field_h;
     float field_E;
     float field_B;
     float field_r;
-    oa field_L;
+    NamedSoundEffect field_L;
     float field_g;
     float field_p;
     static int field_t;
@@ -49,27 +49,27 @@ final class VehicleDefinition {
         int var6 = HoldTheLine.field_D;
         IsaacPacketBuffer var7 = IsaacPacketBuffer.field_p;
         IsaacPacketBuffer var8 = var7;
-        var8.c((byte) 33, param1);
+        var8.writeCipheredOpcode((byte) 33, param1);
         var8.position = var8.position + 1;
         if (param2 <= 94) {
           return;
         }
         try {
           var4 = var8.position;
-          var8.f(111, 1);
-          var8.b(-652561784, param0.field_u);
-          var8.b(-652561784, param0.field_j);
-          var8.b(-652561784, param0.field_t);
-          var8.a((byte) -58, param0.field_q);
-          var8.a((byte) -58, param0.field_p);
-          var8.a((byte) -58, param0.field_o);
-          var8.a((byte) -58, param0.field_k);
-          var8.f(111, param0.field_r.length);
+          var8.writeByte(111, 1);
+          var8.writeShort(-652561784, param0.field_u);
+          var8.writeShort(-652561784, param0.field_j);
+          var8.writeShort(-652561784, param0.field_t);
+          var8.writeInt((byte) -58, param0.field_q);
+          var8.writeInt((byte) -58, param0.field_p);
+          var8.writeInt((byte) -58, param0.field_o);
+          var8.writeInt((byte) -58, param0.field_k);
+          var8.writeByte(111, param0.field_r.length);
           for (var5 = 0; var5 < param0.field_r.length; var5++) {
-            var7.a((byte) -58, param0.field_r[var5]);
+            var7.writeInt((byte) -58, param0.field_r[var5]);
           }
-          var8.a(var4, (byte) 110);
-          var8.a(-268435456, var8.position - var4);
+          var8.appendCrc32(var4, (byte) 110);
+          var8.backpatchByteLength(-268435456, var8.position - var4);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -246,7 +246,7 @@ final class VehicleDefinition {
                   this.field_E = 1.0f;
                   this.field_M = 0.10000000149011612f;
                   this.field_C = 0.25f * this.field_g;
-                  this.field_b = ei.field_a[0];
+                  this.field_b = GrowableObjectList.field_a[0];
                   this.field_f = 0.30000001192092896f;
                   this.field_L = ValidationIndicator.field_H.field_d;
                   this.field_r = 1.0f;
@@ -255,7 +255,7 @@ final class VehicleDefinition {
                   this.field_y = 80.0f;
                   this.field_I = 4.0f;
                   this.field_e = 15.0f;
-                  this.field_z = ei.field_a[1];
+                  this.field_z = GrowableObjectList.field_a[1];
                   this.field_H = 0.0f;
                   this.field_c = -16.0f;
                   this.field_j = 0.5f * this.field_g;
@@ -320,7 +320,7 @@ final class VehicleDefinition {
                       this.field_m = 4.0f;
                       this.field_c = 12.0f;
                       this.field_d = 15;
-                      this.field_z = am.field_b[1];
+                      this.field_z = LinkWidgetRenderer.field_b[1];
                       this.field_p = 3.0f;
                       this.field_f = 0.5f;
                       this.field_I = 6.0f;
@@ -328,7 +328,7 @@ final class VehicleDefinition {
                       this.field_x = 0.5f;
                       this.field_n = 0.5f;
                       this.field_e = 0.0f;
-                      this.field_b = am.field_b[0];
+                      this.field_b = LinkWidgetRenderer.field_b[0];
                       this.field_u = ec.field_s.field_e;
                       this.field_y = 12.0f / this.field_F;
                       this.field_s = 10000.0f;

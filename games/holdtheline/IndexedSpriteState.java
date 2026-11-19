@@ -5,7 +5,7 @@ abstract class IndexedSpriteState {
     int field_d;
     static String field_f;
     int field_k;
-    static e field_h;
+    static QuickChatDynamicCommand field_h;
     int field_i;
     static float[] field_g;
     int field_l;
@@ -42,7 +42,7 @@ abstract class IndexedSpriteState {
             return hi.a(111, (byte) -112, 84);
           }
           ra.field_X = StandardContentTransitionDialog.a(fb.field_i, 33, "world_images", "");
-          ok.a(32381);
+          TutorialTransition.a(32381);
           DelegatingCanvas.field_c = new Sprite[4];
           for (var3 = 0; var3 < 4; var3++) {
             DelegatingCanvas.field_c[var3] = ra.field_X[var3].e();
@@ -58,12 +58,12 @@ abstract class IndexedSpriteState {
             Point2i.scaleSpriteIntensity(ih.field_t[var6], 128, -1);
             var4 = ih.field_t[var6].e();
             var4.f();
-            kj.field_q.d(17, 0, 84, 84);
+            SolidRoadStripRenderer.field_q.d(17, 0, 84, 84);
             ih.field_t[var6].f();
             var4.d(0, 0, 64);
             var6++;
           }
-          ug.b(-1);
+          MarkerSliderRenderer.restoreRasterTarget(-1);
         }
         if (param1 >= -31) {
           return (Sprite) null;
@@ -113,7 +113,7 @@ abstract class IndexedSpriteState {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        Sprite var3 = tn.field_b.field_i[kj.b(2, 6)];
+        Sprite var3 = tn.field_b.field_i[SolidRoadStripRenderer.b(2, 6)];
         if (param0 != -61) {
           return;
         }
@@ -123,7 +123,7 @@ abstract class IndexedSpriteState {
     static {
         field_f = "<img=11>";
         field_g = new float[]{0.0f, 0.5f, 1.0f, 100.0f, 800.0f, 80.0f, 0.0f, 10.0f};
-        field_h = new e(8, 0, 4, 1);
+        field_h = new QuickChatDynamicCommand(8, 0, 4, 1);
         field_b = "Mouse over an icon for details";
         field_a = new int[128];
     }

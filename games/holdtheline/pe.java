@@ -4,7 +4,7 @@
 final class pe {
     static String field_d;
     static int field_e;
-    static oa field_b;
+    static NamedSoundEffect field_b;
     static int[] field_g;
     static String field_c;
     static int field_f;
@@ -109,7 +109,7 @@ final class pe {
           oi.field_f = true;
           WhirlpoolHasher.field_h = param0;
           if (WhirlpoolHasher.field_h == 0) {
-            var3_int = mg.a(sj.field_G, fm.field_c, an.field_c, (byte) 115, IndexedSpriteState.field_j);
+            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, fm.field_c, GzipDecompressor.field_c, (byte) 115, IndexedSpriteState.field_j);
             var4 = var3_int + 3;
             cd.field_f = new int[var4];
             ClientException.field_b = new String[var4];
@@ -118,17 +118,17 @@ final class pe {
             }
             ClientException.field_e = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              ClientException.field_b[var5] = an.field_c[var5];
+              ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
             }
             ClientException.field_b[var4 - 3] = "";
-            ClientException.field_b[var4 - 2] = mg.field_e;
+            ClientException.field_b[var4 - 2] = RotatedSpriteCache.field_e;
             cd.field_f[-2 + var4] = 0;
             ClientException.field_e[0] = 4;
             ClientException.field_b[-1 + var4] = h.field_f;
             cd.field_f[var4 - 1] = 1;
             ClientException.field_e[1] = 5;
           } else if (WhirlpoolHasher.field_h == 1) {
-            var3_int = mg.a(sj.field_G, fm.field_c, an.field_c, (byte) -95, IndexedSpriteState.field_j);
+            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, fm.field_c, GzipDecompressor.field_c, (byte) -95, IndexedSpriteState.field_j);
             var4 = 2 + var3_int;
             cd.field_f = new int[var4];
             ClientException.field_b = new String[var4];
@@ -137,7 +137,7 @@ final class pe {
             }
             ClientException.field_e = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              ClientException.field_b[var5] = an.field_c[var5];
+              ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
             }
             ClientException.field_b[var4 - 2] = "";
             ClientException.field_b[-1 + var4] = h.field_f;
@@ -146,9 +146,9 @@ final class pe {
           } else if (WhirlpoolHasher.field_h != 2) {
             if (WhirlpoolHasher.field_h == 3) {
               if (wi.field_b.field_f) {
-                var3_int = mg.a(sj.field_G, sj.field_J, an.field_c, (byte) -60, IndexedSpriteState.field_j);
+                var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, CheckboxWidget.field_J, GzipDecompressor.field_c, (byte) -60, IndexedSpriteState.field_j);
               } else {
-                var3_int = mg.a(sj.field_G, ek.field_w, an.field_c, (byte) -70, IndexedSpriteState.field_j);
+                var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, CheckboxRenderer.field_w, GzipDecompressor.field_c, (byte) -70, IndexedSpriteState.field_j);
               }
               var4 = var3_int + 2;
               cd.field_f = new int[var4];
@@ -158,14 +158,14 @@ final class pe {
               }
               ClientException.field_e = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                ClientException.field_b[var5] = an.field_c[var5];
+                ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
               }
               ClientException.field_b[-2 + var4] = "";
               ClientException.field_b[-1 + var4] = h.field_f;
               cd.field_f[-1 + var4] = 0;
               ClientException.field_e[0] = 5;
             } else if (WhirlpoolHasher.field_h == 4) {
-              var3_int = mg.a(sj.field_G, dk.field_m, an.field_c, (byte) 106, IndexedSpriteState.field_j);
+              var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, TextWidgetStyle.field_m, GzipDecompressor.field_c, (byte) 106, IndexedSpriteState.field_j);
               var4 = 2 + var3_int;
               cd.field_f = new int[var4];
               ClientException.field_b = new String[var4];
@@ -174,7 +174,7 @@ final class pe {
               }
               ClientException.field_e = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                ClientException.field_b[var5] = an.field_c[var5];
+                ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
               }
               ClientException.field_b[var4 - 2] = "";
               ClientException.field_b[var4 - 1] = h.field_f;
@@ -184,7 +184,7 @@ final class pe {
               if (5 != WhirlpoolHasher.field_h) {
                 throw new IllegalArgumentException();
               }
-              var3_int = mg.a(sj.field_G, hc.field_c, an.field_c, (byte) 119, IndexedSpriteState.field_j);
+              var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, hc.field_c, GzipDecompressor.field_c, (byte) 119, IndexedSpriteState.field_j);
               var4 = var3_int + 3;
               ClientException.field_b = new String[var4];
               cd.field_f = new int[var4];
@@ -193,7 +193,7 @@ final class pe {
               }
               ClientException.field_e = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                ClientException.field_b[var5] = an.field_c[var5];
+                ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
               }
               ClientException.field_b[var4 - 3] = "";
               ClientException.field_b[-2 + var4] = vk.field_i;
@@ -204,10 +204,10 @@ final class pe {
               ClientException.field_e[1] = 5;
             }
           } else {
-            var3_int = mg.a(sj.field_G, sd.a(qg.field_a, new String[]{"<br><%0><br>"}, true), an.field_c, (byte) -59, IndexedSpriteState.field_j);
+            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, LoginCredentials.substituteIndexedTokens(qg.field_a, new String[]{"<br><%0><br>"}, true), GzipDecompressor.field_c, (byte) -59, IndexedSpriteState.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(an.field_c[var5])) {
+              if (!"<%0>".equals(GzipDecompressor.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -217,13 +217,13 @@ final class pe {
               throw new IllegalStateException();
             }
             qg.field_b = new String[var4];
-            ArrayOperations.copyObjects(an.field_c, 0, qg.field_b, 0, var4);
-            aa.field_j = new String[-1 + (var3_int - var4)];
-            ArrayOperations.copyObjects(an.field_c, var4 + 1, aa.field_j, 0, -var4 + var3_int - 1);
-            var3_int = mg.a(sj.field_G, sd.a(b.field_b, new String[]{"<br><%0><br>"}, true), an.field_c, (byte) 118, IndexedSpriteState.field_j);
+            ArrayOperations.copyObjects(GzipDecompressor.field_c, 0, qg.field_b, 0, var4);
+            DelayedServerPacket.field_j = new String[-1 + (var3_int - var4)];
+            ArrayOperations.copyObjects(GzipDecompressor.field_c, var4 + 1, DelayedServerPacket.field_j, 0, -var4 + var3_int - 1);
+            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, LoginCredentials.substituteIndexedTokens(b.field_b, new String[]{"<br><%0><br>"}, true), GzipDecompressor.field_c, (byte) 118, IndexedSpriteState.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(an.field_c[var5])) {
+              if (!"<%0>".equals(GzipDecompressor.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -233,19 +233,19 @@ final class pe {
               throw new IllegalStateException();
             }
             dg.field_b = new String[var4];
-            ArrayOperations.copyObjects(an.field_c, 0, dg.field_b, 0, var4);
+            ArrayOperations.copyObjects(GzipDecompressor.field_c, 0, dg.field_b, 0, var4);
             pb.field_a = new String[-1 + (-var4 + var3_int)];
-            ArrayOperations.copyObjects(an.field_c, 1 + var4, pb.field_a, 0, var3_int - var4 - 1);
+            ArrayOperations.copyObjects(GzipDecompressor.field_c, 1 + var4, pb.field_a, 0, var3_int - var4 - 1);
             if (dg.field_b.length > qg.field_b.length) {
               stackIn_36_0 = dg.field_b.length;
             } else {
               stackIn_36_0 = qg.field_b.length;
             }
             var5 = stackIn_36_0;
-            if (pb.field_a.length > aa.field_j.length) {
+            if (pb.field_a.length > DelayedServerPacket.field_j.length) {
               stackIn_39_0 = pb.field_a.length;
             } else {
-              stackIn_39_0 = aa.field_j.length;
+              stackIn_39_0 = DelayedServerPacket.field_j.length;
             }
             var6 = stackIn_39_0;
             var7 = var5 + (7 + var6);
@@ -259,7 +259,7 @@ final class pe {
             cd.field_f[1] = 0;
             ClientException.field_b[0] = rc.field_b;
             cd.field_f[3] = 1;
-            ClientException.field_b[2] = mg.field_k;
+            ClientException.field_b[2] = RotatedSpriteCache.field_k;
             ClientException.field_e[0] = 5;
             ClientException.field_b[5] = "";
             ClientException.field_b[3] = d.field_d;
@@ -289,9 +289,9 @@ final class pe {
               }
               stackIn_51_0[stackIn_51_1] = stackIn_54_2;
             }
-            cg.field_g = bb.b(-1);
+            TutorialAction.field_g = bb.b(-1);
           }
-          kl.field_q.field_b = ClientException.field_e.length;
+          TextFieldRenderer.field_q.field_b = ClientException.field_e.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < ClientException.field_b.length; var4Lifetime1++) {
             stackIn_88_0 = ClientException.field_b[var4Lifetime1];
@@ -312,7 +312,7 @@ final class pe {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = aa.field_j;
+            var4_ref_String__Lifetime1 = DelayedServerPacket.field_j;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = h.measureMenuTextWidthWithIntGuard(var13, -113, false);
@@ -324,7 +324,7 @@ final class pe {
           var4Lifetime2 = 95 / ((-38 - param2) / 48);
           NanoTickClock.field_d = NanoTickClock.field_i - (var3_intLifetime1 >> 1);
           vf.field_t = var3_intLifetime1 + (NanoTickClock.field_i - (var3_intLifetime1 >> 1));
-          TrackBoundary.field_v = (vf.field_w + ContentTransitionDialog.field_bb << 1) * kl.field_q.field_b;
+          TrackBoundary.field_v = (vf.field_w + ContentTransitionDialog.field_bb << 1) * TextFieldRenderer.field_q.field_b;
           for (var5Lifetime3 = 0; var5Lifetime3 < ClientException.field_b.length; var5Lifetime3++) {
             stackIn_113_0 = TrackBoundary.field_v;
             if (0 <= cd.field_f[var5Lifetime3]) {
@@ -356,9 +356,9 @@ final class pe {
             var5Lifetime4++;
           }
           if (WhirlpoolHasher.field_h == 2) {
-            kl.field_q.a(-1, 0, param1, -1);
+            TextFieldRenderer.field_q.a(-1, 0, param1, -1);
           } else {
-            kl.field_q.a(cm.a((byte) 110, rf.field_X, NodeHashTableIterator.field_g), 0, param1, 0);
+            TextFieldRenderer.field_q.a(cm.a((byte) 110, rf.field_X, NodeHashTableIterator.field_g), 0, param1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

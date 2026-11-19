@@ -39,7 +39,7 @@ final class rk extends vd {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -128 % ((9 - param0) / 35);
-          stackIn_1_0 = sm.a(param1.length, 0, -129, param1);
+          stackIn_1_0 = sm.decodeCp1252(param1.length, 0, -129, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,14 +263,14 @@ final class rk extends vd {
         byte[] var2Lifetime198;
         var3 = HoldTheLine.field_D;
         try {
-          tl.field_w = param1;
+          PasswordFieldRenderer.field_w = param1;
           var2 = DualLinkNode.a("TEXT_GAME_NAME", 0);
           if (var2 != null) {
             SpriteState.field_w = rk.a((byte) -97, var2);
           }
           var2Lifetime1 = DualLinkNode.a("TEXT_LOADING", 0);
           if (null != var2Lifetime1) {
-            ek.field_q = rk.a((byte) 48, var2Lifetime1);
+            CheckboxRenderer.field_q = rk.a((byte) 48, var2Lifetime1);
           }
           var2Lifetime2 = DualLinkNode.a("TEXT_POSITION,0", 0);
           if (null != var2Lifetime2) {
@@ -298,7 +298,7 @@ final class rk extends vd {
           }
           var2Lifetime8 = DualLinkNode.a("TEXT_STANDINGS_1PT", 0);
           if (var2Lifetime8 != null) {
-            la.field_h = rk.a((byte) 45, var2Lifetime8);
+            DirectByteStorage.field_h = rk.a((byte) 45, var2Lifetime8);
           }
           var2Lifetime9 = DualLinkNode.a("TEXT_STANDINGS_LEADERBOARD", 0);
           if (null != var2Lifetime9) {
@@ -326,11 +326,11 @@ final class rk extends vd {
           }
           var2Lifetime15 = DualLinkNode.a("TEXT_LOGIN_REGISTER", 0);
           if (null != var2Lifetime15) {
-            ld.field_f = rk.a((byte) -58, var2Lifetime15);
+            SoundCache.field_f = rk.a((byte) -58, var2Lifetime15);
           }
           var2Lifetime16 = DualLinkNode.a("TEXT_STANDINGS", 0);
           if (var2Lifetime16 != null) {
-            va.field_h = rk.a((byte) 124, var2Lifetime16);
+            SpriteSheetAsset.field_h = rk.a((byte) 124, var2Lifetime16);
           }
           var2Lifetime17 = DualLinkNode.a("TEXT_SAVE_PROGRESS", 0);
           if (null != var2Lifetime17) {
@@ -350,7 +350,7 @@ final class rk extends vd {
           }
           var2Lifetime21 = DualLinkNode.a("TEXT_ACHIEVEMENTS_THISGAME", 0);
           if (var2Lifetime21 != null) {
-            ug.field_i = rk.a((byte) -46, var2Lifetime21);
+            MarkerSliderRenderer.field_i = rk.a((byte) -46, var2Lifetime21);
           }
           var2Lifetime22 = DualLinkNode.a("TEXT_RETRY", 0);
           if (var2Lifetime22 != null) {
@@ -362,7 +362,7 @@ final class rk extends vd {
           }
           var2Lifetime24 = DualLinkNode.a("TEXT_RETRIES_REMAINING_ONE", 0);
           if (var2Lifetime24 != null) {
-            va.field_f = rk.a((byte) 89, var2Lifetime24);
+            SpriteSheetAsset.field_f = rk.a((byte) 89, var2Lifetime24);
           }
           var2Lifetime25 = DualLinkNode.a("TEXT_RETRIES_REMAINING_MULTIPLE", 0);
           if (null != var2Lifetime25) {
@@ -386,7 +386,7 @@ final class rk extends vd {
           }
           var2Lifetime30 = DualLinkNode.a("TEXT_UNLOCKED", 0);
           if (var2Lifetime30 != null) {
-            kj.field_n = rk.a((byte) -65, var2Lifetime30);
+            SolidRoadStripRenderer.field_n = rk.a((byte) -65, var2Lifetime30);
           }
           var2Lifetime31 = DualLinkNode.a("TEXT_ENDOFFREE", 0);
           if (var2Lifetime31 != null) {
@@ -422,7 +422,7 @@ final class rk extends vd {
           }
           var2Lifetime39 = DualLinkNode.a("keycode_multi2_right", 0);
           if (var2Lifetime39 != null) {
-            km.field_G = var2Lifetime39[0] & 255;
+            MarkerSlider.field_G = var2Lifetime39[0] & 255;
           }
           var2Lifetime40 = DualLinkNode.a("keycode_multi2_accel", 0);
           if (var2Lifetime40 != null) {
@@ -430,7 +430,7 @@ final class rk extends vd {
           }
           var2Lifetime41 = DualLinkNode.a("keycode_multi2_brake", 0);
           if (null != var2Lifetime41) {
-            lf.field_g = 255 & var2Lifetime41[0];
+            TextLineLayout.field_g = 255 & var2Lifetime41[0];
           }
           var2Lifetime42 = DualLinkNode.a("TEXT_MEMBER_BENEFITS,0", 0);
           if (var2Lifetime42 != null) {
@@ -522,67 +522,67 @@ final class rk extends vd {
           }
           var2Lifetime64 = DualLinkNode.a("ACV_CRITERIA,0", 0);
           if (null != var2Lifetime64) {
-            lf.field_j[0] = rk.a((byte) 90, var2Lifetime64);
+            TextLineLayout.field_j[0] = rk.a((byte) 90, var2Lifetime64);
           }
           var2Lifetime65 = DualLinkNode.a("ACV_CRITERIA,1", 0);
           if (null != var2Lifetime65) {
-            lf.field_j[1] = rk.a((byte) 105, var2Lifetime65);
+            TextLineLayout.field_j[1] = rk.a((byte) 105, var2Lifetime65);
           }
           var2Lifetime66 = DualLinkNode.a("ACV_CRITERIA,2", 0);
           if (var2Lifetime66 != null) {
-            lf.field_j[2] = rk.a((byte) -83, var2Lifetime66);
+            TextLineLayout.field_j[2] = rk.a((byte) -83, var2Lifetime66);
           }
           var2Lifetime67 = DualLinkNode.a("ACV_CRITERIA,3", 0);
           if (var2Lifetime67 != null) {
-            lf.field_j[3] = rk.a((byte) -82, var2Lifetime67);
+            TextLineLayout.field_j[3] = rk.a((byte) -82, var2Lifetime67);
           }
           var2Lifetime68 = DualLinkNode.a("ACV_CRITERIA,4", 0);
           if (null != var2Lifetime68) {
-            lf.field_j[4] = rk.a((byte) -67, var2Lifetime68);
+            TextLineLayout.field_j[4] = rk.a((byte) -67, var2Lifetime68);
           }
           var2Lifetime69 = DualLinkNode.a("ACV_CRITERIA,5", 0);
           if (var2Lifetime69 != null) {
-            lf.field_j[5] = rk.a((byte) 119, var2Lifetime69);
+            TextLineLayout.field_j[5] = rk.a((byte) 119, var2Lifetime69);
           }
           var2Lifetime70 = DualLinkNode.a("ACV_CRITERIA,6", 0);
           if (var2Lifetime70 != null) {
-            lf.field_j[6] = rk.a((byte) 94, var2Lifetime70);
+            TextLineLayout.field_j[6] = rk.a((byte) 94, var2Lifetime70);
           }
           var2Lifetime71 = DualLinkNode.a("ACV_CRITERIA,7", 0);
           if (null != var2Lifetime71) {
-            lf.field_j[7] = rk.a((byte) -36, var2Lifetime71);
+            TextLineLayout.field_j[7] = rk.a((byte) -36, var2Lifetime71);
           }
           var2Lifetime72 = DualLinkNode.a("ACV_CRITERIA,8", 0);
           if (null != var2Lifetime72) {
-            lf.field_j[8] = rk.a((byte) -49, var2Lifetime72);
+            TextLineLayout.field_j[8] = rk.a((byte) -49, var2Lifetime72);
           }
           var2Lifetime73 = DualLinkNode.a("ACV_CRITERIA,9", 0);
           if (var2Lifetime73 != null) {
-            lf.field_j[9] = rk.a((byte) -93, var2Lifetime73);
+            TextLineLayout.field_j[9] = rk.a((byte) -93, var2Lifetime73);
           }
           var2Lifetime74 = DualLinkNode.a("ACV_CRITERIA,10", 0);
           if (var2Lifetime74 != null) {
-            lf.field_j[10] = rk.a((byte) -105, var2Lifetime74);
+            TextLineLayout.field_j[10] = rk.a((byte) -105, var2Lifetime74);
           }
           var2Lifetime75 = DualLinkNode.a("ACV_CRITERIA,11", 0);
           if (var2Lifetime75 != null) {
-            lf.field_j[11] = rk.a((byte) 87, var2Lifetime75);
+            TextLineLayout.field_j[11] = rk.a((byte) 87, var2Lifetime75);
           }
           var2Lifetime76 = DualLinkNode.a("ACV_CRITERIA,12", 0);
           if (null != var2Lifetime76) {
-            lf.field_j[12] = rk.a((byte) -112, var2Lifetime76);
+            TextLineLayout.field_j[12] = rk.a((byte) -112, var2Lifetime76);
           }
           var2Lifetime77 = DualLinkNode.a("ACV_CRITERIA,13", 0);
           if (null != var2Lifetime77) {
-            lf.field_j[13] = rk.a((byte) -40, var2Lifetime77);
+            TextLineLayout.field_j[13] = rk.a((byte) -40, var2Lifetime77);
           }
           var2Lifetime78 = DualLinkNode.a("ACV_CRITERIA,14", 0);
           if (var2Lifetime78 != null) {
-            lf.field_j[14] = rk.a((byte) 123, var2Lifetime78);
+            TextLineLayout.field_j[14] = rk.a((byte) 123, var2Lifetime78);
           }
           var2Lifetime79 = DualLinkNode.a("ACV_CRITERIA,15", 0);
           if (var2Lifetime79 != null) {
-            lf.field_j[15] = rk.a((byte) 122, var2Lifetime79);
+            TextLineLayout.field_j[15] = rk.a((byte) 122, var2Lifetime79);
           }
           var2Lifetime80 = DualLinkNode.a("TEXT_HIGHSCORES_ALL", 0);
           if (null != var2Lifetime80) {
@@ -634,7 +634,7 @@ final class rk extends vd {
           }
           var2Lifetime92 = DualLinkNode.a("TEXT_INSTRUCTIONS5_1", 0);
           if (null != var2Lifetime92) {
-            aa.field_p = rk.a((byte) 120, var2Lifetime92);
+            DelayedServerPacket.field_p = rk.a((byte) 120, var2Lifetime92);
           }
           var2Lifetime93 = DualLinkNode.a("TEXT_INSTRUCTIONS5_2", 0);
           if (null != var2Lifetime93) {
@@ -642,7 +642,7 @@ final class rk extends vd {
           }
           var2Lifetime94 = DualLinkNode.a("TEXT_INSTRUCTIONS5_3", 0);
           if (null != var2Lifetime94) {
-            wb.field_b = rk.a((byte) -41, var2Lifetime94);
+            Vector2i.field_b = rk.a((byte) -41, var2Lifetime94);
           }
           var2Lifetime95 = DualLinkNode.a("TEXT_INSTRUCTIONS5_4", 0);
           if (var2Lifetime95 != null) {
@@ -650,11 +650,11 @@ final class rk extends vd {
           }
           var2Lifetime96 = DualLinkNode.a("TEXT_INSTRUCTIONS6", 0);
           if (null != var2Lifetime96) {
-            ji.field_n = rk.a((byte) 88, var2Lifetime96);
+            TutorialPage.field_n = rk.a((byte) 88, var2Lifetime96);
           }
           var2Lifetime97 = DualLinkNode.a("TEXT_INSTRUCTIONS7", 0);
           if (var2Lifetime97 != null) {
-            io.field_f = rk.a((byte) 75, var2Lifetime97);
+            AccountFormText.field_f = rk.a((byte) 75, var2Lifetime97);
           }
           var2Lifetime98 = DualLinkNode.a("INSTR_PAGES,0", 0);
           if (null != var2Lifetime98) {
@@ -686,11 +686,11 @@ final class rk extends vd {
           }
           var2Lifetime105 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_SHIELDS3", 0);
           if (null != var2Lifetime105) {
-            gj.field_v = rk.a((byte) -67, var2Lifetime105);
+            ArcTrackBoundary.field_v = rk.a((byte) -67, var2Lifetime105);
           }
           var2Lifetime106 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_SHIELDS2", 0);
           if (var2Lifetime106 != null) {
-            kb.field_d = rk.a((byte) -36, var2Lifetime106);
+            LoginCredentialType.field_d = rk.a((byte) -36, var2Lifetime106);
           }
           var2Lifetime107 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_SHIELDS1", 0);
           if (null != var2Lifetime107) {
@@ -710,7 +710,7 @@ final class rk extends vd {
           }
           var2Lifetime111 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_WEAPONS3", 0);
           if (null != var2Lifetime111) {
-            oa.field_o = rk.a((byte) 107, var2Lifetime111);
+            NamedSoundEffect.field_o = rk.a((byte) 107, var2Lifetime111);
           }
           var2Lifetime112 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_WEAPONS2", 0);
           if (null != var2Lifetime112) {
@@ -758,7 +758,7 @@ final class rk extends vd {
           }
           var2Lifetime123 = DualLinkNode.a("TEXT_INSTRUCTIONS_CONTROLS_SINGLE", 0);
           if (var2Lifetime123 != null) {
-            am.field_c = rk.a((byte) 107, var2Lifetime123);
+            LinkWidgetRenderer.field_c = rk.a((byte) 107, var2Lifetime123);
           }
           var2Lifetime124 = DualLinkNode.a("TEXT_INSTRUCTIONS_ACTIVATE", 0);
           if (null != var2Lifetime124) {
@@ -874,11 +874,11 @@ final class rk extends vd {
           }
           var2Lifetime152 = DualLinkNode.a("TOOLTIP_VEHICLE", 0);
           if (var2Lifetime152 != null) {
-            ui.field_m = rk.a((byte) -97, var2Lifetime152);
+            SoundPlayback.field_m = rk.a((byte) -97, var2Lifetime152);
           }
           var2Lifetime153 = DualLinkNode.a("TOOLTIP_PLAYER1", 0);
           if (null != var2Lifetime153) {
-            ac.field_g = rk.a((byte) -86, var2Lifetime153);
+            ArchiveLoadProgress.field_g = rk.a((byte) -86, var2Lifetime153);
           }
           var2Lifetime154 = DualLinkNode.a("TOOLTIP_PLAYER2", 0);
           if (null != var2Lifetime154) {
@@ -894,7 +894,7 @@ final class rk extends vd {
           }
           var2Lifetime157 = DualLinkNode.a("PROFILE_NA", 0);
           if (null != var2Lifetime157) {
-            on.field_p = rk.a((byte) 120, var2Lifetime157);
+            QuickChatPhraseDefinition.field_p = rk.a((byte) 120, var2Lifetime157);
           }
           var2Lifetime158 = DualLinkNode.a("PROFILE_LAP_TIME", 0);
           if (var2Lifetime158 != null) {
@@ -902,7 +902,7 @@ final class rk extends vd {
           }
           var2Lifetime159 = DualLinkNode.a("TOOLTIP_CHAMPIONSHIP", 0);
           if (null != var2Lifetime159) {
-            hb.field_a = rk.a((byte) -104, var2Lifetime159);
+            TutorialCondition.field_a = rk.a((byte) -104, var2Lifetime159);
           }
           var2Lifetime160 = DualLinkNode.a("PROFILE_NOT_COMPLETE", 0);
           if (null != var2Lifetime160) {
@@ -918,7 +918,7 @@ final class rk extends vd {
           }
           var2Lifetime163 = DualLinkNode.a("ALERT_SET", 0);
           if (null != var2Lifetime163) {
-            io.field_a = rk.a((byte) -42, var2Lifetime163);
+            AccountFormText.field_a = rk.a((byte) -42, var2Lifetime163);
           }
           var2Lifetime164 = DualLinkNode.a("ALERT_GO", 0);
           if (var2Lifetime164 != null) {
@@ -926,7 +926,7 @@ final class rk extends vd {
           }
           var2Lifetime165 = DualLinkNode.a("ALERT_ZOMBIES", 0);
           if (var2Lifetime165 != null) {
-            vj.field_n = rk.a((byte) 111, var2Lifetime165);
+            BoundaryCurve.field_n = rk.a((byte) 111, var2Lifetime165);
           }
           var2Lifetime166 = DualLinkNode.a("ALERT_FINISH", 0);
           if (var2Lifetime166 != null) {
@@ -938,7 +938,7 @@ final class rk extends vd {
           }
           var2Lifetime168 = DualLinkNode.a("ALERT_ONE_KILL", 0);
           if (var2Lifetime168 != null) {
-            pd.field_g = rk.a((byte) 104, var2Lifetime168);
+            UsernameLoginCredentials.field_g = rk.a((byte) 104, var2Lifetime168);
           }
           var2Lifetime169 = DualLinkNode.a("ALERT_TWO_KILLS", 0);
           if (null != var2Lifetime169) {
@@ -985,27 +985,27 @@ final class rk extends vd {
           }
           var2Lifetime179 = DualLinkNode.a("SETTING_CH_NOT_QUALIFIED,1", 0);
           if (var2Lifetime179 != null) {
-            ac.field_a[1] = rk.a((byte) -106, var2Lifetime179);
+            ArchiveLoadProgress.field_a[1] = rk.a((byte) -106, var2Lifetime179);
           }
           var2Lifetime180 = DualLinkNode.a("SETTING_CH_NOT_QUALIFIED,2", 0);
           if (var2Lifetime180 != null) {
-            ac.field_a[2] = rk.a((byte) -125, var2Lifetime180);
+            ArchiveLoadProgress.field_a[2] = rk.a((byte) -125, var2Lifetime180);
           }
           var2Lifetime181 = DualLinkNode.a("SETTING_CH_NOT_QUALIFIED,3", 0);
           if (null != var2Lifetime181) {
-            ac.field_a[3] = rk.a((byte) 101, var2Lifetime181);
+            ArchiveLoadProgress.field_a[3] = rk.a((byte) 101, var2Lifetime181);
           }
           var2Lifetime182 = DualLinkNode.a("SETTING_NOT_REACHED,1", 0);
           if (var2Lifetime182 != null) {
-            lf.field_f[1] = rk.a((byte) -80, var2Lifetime182);
+            TextLineLayout.field_f[1] = rk.a((byte) -80, var2Lifetime182);
           }
           var2Lifetime183 = DualLinkNode.a("SETTING_NOT_REACHED,2", 0);
           if (var2Lifetime183 != null) {
-            lf.field_f[2] = rk.a((byte) 108, var2Lifetime183);
+            TextLineLayout.field_f[2] = rk.a((byte) 108, var2Lifetime183);
           }
           var2Lifetime184 = DualLinkNode.a("SETTING_NOT_REACHED,3", 0);
           if (var2Lifetime184 != null) {
-            lf.field_f[3] = rk.a((byte) -29, var2Lifetime184);
+            TextLineLayout.field_f[3] = rk.a((byte) -29, var2Lifetime184);
           }
           var2Lifetime185 = DualLinkNode.a("COURSE_NOT_REACHED,0", 0);
           if (null != var2Lifetime185) {
@@ -1025,7 +1025,7 @@ final class rk extends vd {
           }
           var2Lifetime189 = DualLinkNode.a("SETTING_SUBSCRIBER_ONLY", 0);
           if (var2Lifetime189 != null) {
-            ug.field_m = rk.a((byte) 62, var2Lifetime189);
+            MarkerSliderRenderer.field_m = rk.a((byte) 62, var2Lifetime189);
           }
           var2Lifetime190 = DualLinkNode.a("CARNAME_F1", 0);
           if (null != var2Lifetime190) {
@@ -1049,7 +1049,7 @@ final class rk extends vd {
           }
           var2Lifetime195 = DualLinkNode.a("CARNAME_DUNEBUGGY", 0);
           if (var2Lifetime195 != null) {
-            lf.field_d = rk.a((byte) -34, var2Lifetime195);
+            TextLineLayout.field_d = rk.a((byte) -34, var2Lifetime195);
           }
           var2Lifetime196 = DualLinkNode.a("CARNAME_HATCHBACK", 0);
           if (var2Lifetime196 != null) {
@@ -1063,7 +1063,7 @@ final class rk extends vd {
           if (null != var2Lifetime198) {
             pe.field_d = rk.a((byte) -79, var2Lifetime198);
           }
-          tl.field_w = null;
+          PasswordFieldRenderer.field_w = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

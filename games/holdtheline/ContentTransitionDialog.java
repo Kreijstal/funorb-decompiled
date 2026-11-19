@@ -8,7 +8,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     private int field_fb;
     private UiWidget field_X;
     private int field_cb;
-    static e field_ib;
+    static QuickChatDynamicCommand field_ib;
     static Sprite field_ab;
     static int field_bb;
     private int field_Y;
@@ -21,7 +21,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           return;
         }
         if (this.field_db != CurvedRoadSegment.field_G) {
-          this.b(537342017, this.field_X.field_x + 12, 12 - (-this.field_Z - this.field_X.field_u));
+          this.b(537342017, this.field_X.width + 12, 12 - (-this.field_Z - this.field_X.height));
           this.d(this.field_X, -100);
         } else {
           this.field_db = null;
@@ -48,7 +48,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.field_gb = this.field_gb + 1;
             if (this.field_fb == fieldTemp$0) {
               this.field_db = DialogLayer.field_M;
-              this.b(117, 12 + this.field_X.field_x, this.field_Y, 12 + (this.field_Z + this.field_X.field_u));
+              this.b(117, 12 + this.field_X.width, this.field_Y, 12 + (this.field_Z + this.field_X.height));
               this.field_gb = 0;
               this.field_eb.field_F = 0;
               return super.g((byte) 39);
@@ -78,7 +78,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           this.field_gb = this.field_gb + 1;
           if (this.field_fb == fieldTemp$2) {
             this.field_db = DialogLayer.field_M;
-            this.b(117, 12 + this.field_X.field_x, this.field_Y, 12 + (this.field_Z + this.field_X.field_u));
+            this.b(117, 12 + this.field_X.width, this.field_Y, 12 + (this.field_Z + this.field_X.height));
             this.field_gb = 0;
             this.field_eb.field_F = 0;
             return super.g((byte) 39);
@@ -111,7 +111,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var3_int = -27 % ((param1 + 38) / 50);
           this.field_X = param0;
           if (this.field_db == DialogLayer.field_M) {
-            this.b(67, 12 + this.field_X.field_x, this.field_Y, this.field_X.field_u + 12 + this.field_Z);
+            this.b(67, 12 + this.field_X.width, this.field_Y, this.field_X.height + 12 + this.field_Z);
             this.field_gb = 0;
             return;
           }
@@ -143,7 +143,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           if (param0 == null) {
             this.field_eb = new he();
           } else {
-            param0.a(6, (byte) 122, this.field_Z + 6, param0.field_u, param0.field_x);
+            param0.setBounds(6, (byte) 122, this.field_Z + 6, param0.height, param0.width);
             this.field_eb = new he(param0);
           }
           this.a(true, this.field_eb);
@@ -156,22 +156,22 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKeyPress(param0, param1, param2, param3)) {
             return true;
           }
           if (null != this.field_eb) {
             if (param1 == 98) {
-              this.field_eb.a(param0, -25823);
+              this.field_eb.requestFocus(param0, -25823);
             }
             if (param1 == 99) {
-              this.field_eb.a(param0, -25823);
+              this.field_eb.requestFocus(param0, -25823);
               return false;
             }
           }
@@ -236,7 +236,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     }
 
     ContentTransitionDialog(DialogLayer param0, UiWidget param1, int param2, int param3, int param4) {
-        super(param0, param1.field_x + 12, param1.field_u + (param2 + 12));
+        super(param0, param1.width + 12, param1.height + (param2 + 12));
         try {
           this.field_Y = param4;
           this.field_cb = param3;
@@ -287,7 +287,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     }
 
     static {
-        field_ib = new e(12, 0, 1, 0);
+        field_ib = new QuickChatDynamicCommand(12, 0, 1, 0);
         field_hb = "Error connecting to server. Please try using a different server.";
     }
 }

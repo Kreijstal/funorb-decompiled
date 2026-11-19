@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jh {
-    static kb field_d;
+    static LoginCredentialType field_d;
     static String field_b;
-    static ld field_a;
+    static SoundCache field_a;
     static Sprite field_c;
 
     final static String a(int[] param0, int param1, String param2) {
@@ -20,7 +20,7 @@ final class jh {
           if (param1 > -118) {
             field_b = (String) null;
           }
-          stackIn_3_0 = sd.a(pe.field_d, new String[]{param2, ih.a(param0[0], 5), ih.a(param0[1], 5), ih.a(param0[2], 5)}, true);
+          stackIn_3_0 = LoginCredentials.substituteIndexedTokens(pe.field_d, new String[]{param2, ih.a(param0[0], 5), ih.a(param0[1], 5), ih.a(param0[2], 5)}, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class jh {
         if (param0 > 67) {
           return;
         }
-        field_d = (kb) null;
+        field_d = (LoginCredentialType) null;
     }
 
     final static void a(Sprite param0, byte param1, float param2, int[] param3) {
@@ -97,7 +97,7 @@ final class jh {
           gf.a(param3, 0, param3.length);
           gf.c();
           if (param1 <= 46) {
-            field_d = (kb) null;
+            field_d = (LoginCredentialType) null;
           }
           stackIn_5_0 = gf.d();
           while (true) {
@@ -172,9 +172,9 @@ final class jh {
     }
 
     final static void a(int param0, byte param1) {
-        nd.field_l = param0 >> 4 & 3;
-        if (!(2 >= nd.field_l)) {
-          nd.field_l = 2;
+        NameAvailabilityResult.field_l = param0 >> 4 & 3;
+        if (!(2 >= NameAvailabilityResult.field_l)) {
+          NameAvailabilityResult.field_l = 2;
         }
         m.field_a = (param0 & 14) >> 2;
         if (m.field_a > 2) {
@@ -182,14 +182,14 @@ final class jh {
           pe.field_f = param0 & 3;
           if (2 >= pe.field_f) {
             if (param1 != 61) {
-              field_a = (ld) null;
+              field_a = (SoundCache) null;
               return;
             }
             return;
           }
           pe.field_f = 2;
           if (param1 != 61) {
-            field_a = (ld) null;
+            field_a = (SoundCache) null;
             return;
           }
           return;
@@ -198,19 +198,19 @@ final class jh {
         if (2 < pe.field_f) {
           pe.field_f = 2;
           if (param1 != 61) {
-            field_a = (ld) null;
+            field_a = (SoundCache) null;
             return;
           }
           return;
         }
         if (param1 != 61) {
-          field_a = (ld) null;
+          field_a = (SoundCache) null;
           return;
         }
     }
 
     static {
-        field_d = new kb(2);
+        field_d = new LoginCredentialType(2);
         field_b = "<img=8>, <img=7>, <img=9>";
     }
 }

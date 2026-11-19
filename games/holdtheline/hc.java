@@ -12,14 +12,14 @@ final class hc {
         Sprite var5 = null;
         try {
           var5 = new Sprite(param1.field_o, param1.field_v);
-          ok.a(32381);
+          TutorialTransition.a(32381);
           var5.f();
           param1.e(0, 0, 1);
           if (param2 > -41) {
             Sprite var6 = (Sprite) null;
             hc.a(20, (Sprite) null, (byte) -34, 96, -42);
           }
-          ug.b(-1);
+          MarkerSliderRenderer.restoreRasterTarget(-1);
           var5.d(param3 - (param1.field_o >> 1), param4 - (param1.field_v >> 1), param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

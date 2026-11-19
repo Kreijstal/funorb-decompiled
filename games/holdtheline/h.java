@@ -7,7 +7,7 @@ final class h {
     static String field_f;
     static String field_c;
     static String field_d;
-    static go field_b;
+    static RotatedSpriteAsset field_b;
 
     final static int a(String param0, byte param1, boolean param2) {
         RuntimeException var3 = null;
@@ -27,7 +27,7 @@ final class h {
             stackIn_7_0 = q.field_a.a(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = sj.field_G.a(param0);
+          stackIn_5_0 = CheckboxWidget.field_G.a(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ final class h {
               var5_int = pf.a((byte) 105, var3);
               if (2 != var5_int) {
                 if (var5_int == 1) {
-                  discarded$27 = var15.append(ac.field_a[var3]);
+                  discarded$27 = var15.append(ArchiveLoadProgress.field_a[var3]);
                 } else {
                   discarded$28 = var15.append(sa.field_d[var3]);
                   discarded$29 = var15.append("<br><br>");
@@ -162,17 +162,17 @@ final class h {
                     discarded$30 = var15.append(NameCheckProgressDialog.field_tb);
                   } else {
                     discarded$31 = var15.append(AccountTermsPanel.field_I);
-                    discarded$32 = var15.append(cb.a(90, var6_int));
+                    discarded$32 = var15.append(DisplayNameValidator.formatPreciseRaceTime(90, var6_int));
                   }
                 }
               } else {
-                discarded$33 = var15.append(ug.field_m);
+                discarded$33 = var15.append(MarkerSliderRenderer.field_m);
               }
               var16_ref.field_X[0][var3] = gh.field_t[var3];
               var16_ref.field_G[0][var3] = var15.toString();
               var16_ref.field_o[0][var3] = IndexedSpriteState.a(pf.a((byte) 30, var3), (byte) -37, var3);
             }
-            var16_ref.field_Q[0] = hb.field_a;
+            var16_ref.field_Q[0] = TutorialCondition.field_a;
             return;
           }
           if (1 != DelegatingCanvas.field_d &&
@@ -207,16 +207,16 @@ final class h {
                 stackIn_49_0 = var6;
                 stackIn_49_1 = var14;
                 if (1 != var10) {
-                  stackIn_50_2 = ug.field_m;
+                  stackIn_50_2 = MarkerSliderRenderer.field_m;
                 } else {
-                  stackIn_50_2 = lf.field_f[var14];
+                  stackIn_50_2 = TextLineLayout.field_f[var14];
                 }
                 stackIn_49_0[stackIn_49_1] = stackIn_50_2;
                 var28 = var26.a(9392, 2, 111).e();
                 Point2i.scaleSpriteIntensity(var28, 64, -1);
                 vb.a(-109, var28);
                 rf.field_ab.a(-rf.field_ab.field_s + var28.field_s >> 1, var28.field_y - rf.field_ab.field_y >> 1);
-                ug.b(-1);
+                MarkerSliderRenderer.restoreRasterTarget(-1);
                 var7[var14] = var28;
               }
               var14++;
@@ -238,10 +238,10 @@ final class h {
               if (var5_intLifetime1 != 1) {
                 discarded$21 = var17.append(sa.field_d[var3Lifetime2]);
               } else {
-                discarded$22 = var17.append(lf.field_f[var3Lifetime2]);
+                discarded$22 = var17.append(TextLineLayout.field_f[var3Lifetime2]);
               }
             } else {
-              discarded$23 = var17.append(ug.field_m);
+              discarded$23 = var17.append(MarkerSliderRenderer.field_m);
             }
             var16_ref.field_X[0][var3Lifetime2] = gh.field_t[var3Lifetime2];
             var16_ref.field_G[0][var3Lifetime2] = var17.toString();
@@ -258,7 +258,7 @@ final class h {
           for (var8Lifetime1 = 0; var8Lifetime1 < var3Lifetime3; var8Lifetime1++) {
             var36[var8Lifetime1] = var8Lifetime1;
             var19 = tk.field_c[StrongCacheEntry.field_w][var8Lifetime1];
-            if (0 == gj.a(var8Lifetime1, -10, StrongCacheEntry.field_w) &&
+            if (0 == ArcTrackBoundary.a(var8Lifetime1, -10, StrongCacheEntry.field_w) &&
               !var19.field_r) {
               var5Lifetime1[var8Lifetime1] = var19.field_b;
               var22 = new StringBuilder(20);
@@ -270,7 +270,7 @@ final class h {
                 discarded$8 = var22.append(sm.field_d);
               } else {
                 discarded$9 = var22.append(AccountTermsPanel.field_I);
-                discarded$10 = var22.append(cb.a(53, var11));
+                discarded$10 = var22.append(DisplayNameValidator.formatPreciseRaceTime(53, var11));
                 discarded$11 = var22.append(' ');
                 discarded$12 = var22.append('(');
                 if (ha.field_j[StrongCacheEntry.field_w][var8Lifetime1] >= 0 &&
@@ -279,11 +279,11 @@ final class h {
                 }
                 discarded$14 = var22.append(')');
                 discarded$15 = var22.append(NameCheckProgressDialog.field_zb);
-                var12 = on.field_v[StrongCacheEntry.field_w][var8Lifetime1];
+                var12 = QuickChatPhraseDefinition.field_v[StrongCacheEntry.field_w][var8Lifetime1];
                 if (var12 != -1) {
-                  discarded$16 = var22.append(cb.a(61, var12));
+                  discarded$16 = var22.append(DisplayNameValidator.formatPreciseRaceTime(61, var12));
                 } else {
-                  discarded$17 = var22.append(on.field_p);
+                  discarded$17 = var22.append(QuickChatPhraseDefinition.field_p);
                 }
               }
               var6Lifetime1[var8Lifetime1] = var22.toString();
@@ -295,7 +295,7 @@ final class h {
               Point2i.scaleSpriteIntensity(var21, 64, -1);
               vb.a(-97, var21);
               rf.field_ab.a(-rf.field_ab.field_s + var21.field_s >> 1, var21.field_y - rf.field_ab.field_y >> 1);
-              ug.b(-1);
+              MarkerSliderRenderer.restoreRasterTarget(-1);
               var7Lifetime1[var8Lifetime1] = var21;
             }
           }
@@ -339,7 +339,7 @@ final class h {
             stackIn_7_0 = q.field_a.a(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = sj.field_G.a(param0);
+          stackIn_5_0 = CheckboxWidget.field_G.a(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

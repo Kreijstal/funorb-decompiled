@@ -3,7 +3,7 @@
  */
 final class DiskCacheWorker implements Runnable {
     static float[] field_e;
-    static uf field_b;
+    static SpriteAsset field_b;
     static int[] field_a;
     private SecondaryNodeDeque field_d;
     static float[] field_f;
@@ -127,7 +127,7 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static void a(int param0, byte param1) {
-        em.a(true);
+        AgeValidator.a(true);
         if (param1 > -63) {
           field_i = 124;
         }
@@ -238,10 +238,10 @@ final class DiskCacheWorker implements Runnable {
         if (DiskCacheStore.field_h) {
           return null;
         }
-        if (g.field_h > dm.field_a) {
+        if (LinearPointPath.field_h > dm.field_a) {
           return null;
         }
-        if (we.field_l + g.field_h > dm.field_a) {
+        if (we.field_l + LinearPointPath.field_h > dm.field_a) {
           return UiWidget.field_s;
         }
         return null;
@@ -306,7 +306,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.a((byte) -28, 5, (Runnable) (this));
           while (var2.field_d == 0) {
-            SocketConnector.a(10L, (byte) 45);
+            SocketConnector.sleepMillis(10L, (byte) 45);
           }
           if (2 == var2.field_d) {
             throw new RuntimeException();

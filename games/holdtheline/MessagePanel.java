@@ -41,7 +41,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
             if (-1 == var7) {
               this.field_F.h((byte) -115);
             } else {
-              go.a(0, this.field_J[var6_int]);
+              RotatedSpriteAsset.a(0, this.field_J[var6_int]);
             }
             break;
           }
@@ -78,10 +78,10 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param2, param1);
-          var4.field_l = (WidgetRenderer) ((Object) new mo());
-          var5 = -2 + this.field_u;
-          this.a(0, (byte) 122, 0, 34 + this.field_u, this.field_x);
-          var4.a(7, (byte) 122, var5, 30, -14 + this.field_x);
+          var4.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
+          var5 = -2 + this.height;
+          this.setBounds(0, (byte) 122, 0, 34 + this.height, this.width);
+          var4.setBounds(7, (byte) 122, var5, 30, -14 + this.width);
           if (param0 < 43) {
             var6 = (TextButton) null;
             this.onButtonAction(-64, (TextButton) null, 28, 127, 42);
@@ -118,7 +118,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           this.field_F = param0;
           this.field_M = param2;
           var4_int = this.field_M == null ? 0 : this.field_I.b(this.field_M, 260, this.field_I.field_G);
-          this.a(0, (byte) 122, 0, 22 + var4_int, 288);
+          this.setBounds(0, (byte) 122, 0, 22 + var4_int, 288);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -126,7 +126,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
 
     final static void h(int param0) {
         SecondaryNodeDeque.field_f = param0;
-        va.field_k = false;
+        SpriteSheetAsset.field_k = false;
         AccountCreationForm.field_I = -1;
     }
 
@@ -151,9 +151,9 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        this.field_I.a(this.field_M, 14 + (this.field_k + param2), 10 + (this.field_o + param1), this.field_x - 28, this.field_u, 16777215, -1, 0, 0, this.field_I.field_G);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3);
+        this.field_I.a(this.field_M, 14 + (this.x + param2), 10 + (this.y + param1), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_I.field_G);
     }
 
     final void a(int param0, String param1, byte param2) {

@@ -51,7 +51,7 @@ final class StraightRoadSegment extends RoadSegment {
         return new Point2i((int)var2, (int)var3);
     }
 
-    final Point2i a(boolean param0, float param1) {
+    final Point2i pointAt(boolean param0, float param1) {
         float var3 = (float)this.field_R.x + (float)(-this.field_R.x + this.field_P.x) * param1;
         float var4 = (float)this.field_R.y + (float)(this.field_P.y - this.field_R.y) * param1;
         if (param0) {
@@ -121,7 +121,7 @@ final class StraightRoadSegment extends RoadSegment {
           if (param1 == null) {
             return null;
           }
-          var2 = new PaletteBitmapFont(param1, la.field_j, wb.field_g, EditableTextField.field_K, ad.field_d, field_E, IterableSecondaryNodeDeque.field_e);
+          var2 = new PaletteBitmapFont(param1, DirectByteStorage.field_j, Vector2i.field_g, EditableTextField.field_K, ad.field_d, field_E, IterableSecondaryNodeDeque.field_e);
           var3 = 26 / ((param0 - 56) / 51);
           tk.a(false);
           stackIn_4_0 = var2;
@@ -170,7 +170,7 @@ final class StraightRoadSegment extends RoadSegment {
         return this.a(1.0f, 255);
     }
 
-    final static void a(int param0, int param1, boolean param2, sd param3, boolean param4) {
+    final static void a(int param0, int param1, boolean param2, LoginCredentials param3, boolean param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -185,23 +185,23 @@ final class StraightRoadSegment extends RoadSegment {
           SecondaryNodeDequeIterator.field_a.position = 0;
           Bzip2State.field_x[2] = (int)(DialogLayer.field_H >> 32);
           Bzip2State.field_x[3] = (int)DialogLayer.field_H;
-          SecondaryNodeDequeIterator.field_a.a((byte) -58, Bzip2State.field_x[0]);
-          SecondaryNodeDequeIterator.field_a.a((byte) -58, Bzip2State.field_x[1]);
-          SecondaryNodeDequeIterator.field_a.a((byte) -58, Bzip2State.field_x[2]);
-          SecondaryNodeDequeIterator.field_a.a((byte) -58, Bzip2State.field_x[3]);
+          SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, Bzip2State.field_x[0]);
+          SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, Bzip2State.field_x[1]);
+          SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, Bzip2State.field_x[2]);
+          SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, Bzip2State.field_x[3]);
           q.a(125, SecondaryNodeDequeIterator.field_a);
-          SecondaryNodeDequeIterator.field_a.b(-652561784, param1);
-          param3.a(0, SecondaryNodeDequeIterator.field_a);
+          SecondaryNodeDequeIterator.field_a.writeShort(-652561784, param1);
+          param3.writeToPacket(0, SecondaryNodeDequeIterator.field_a);
           IsaacPacketBuffer.field_p.position = 0;
           if (param4) {
-            IsaacPacketBuffer.field_p.f(param0 ^ 111, 18);
+            IsaacPacketBuffer.field_p.writeByte(param0 ^ 111, 18);
           } else {
-            IsaacPacketBuffer.field_p.f(111, 16);
+            IsaacPacketBuffer.field_p.writeByte(111, 16);
           }
           IsaacPacketBuffer.field_p.position = IsaacPacketBuffer.field_p.position + 2;
           var5_int = IsaacPacketBuffer.field_p.position;
-          IsaacPacketBuffer.field_p.a((byte) -58, oi.field_b);
-          IsaacPacketBuffer.field_p.a((byte) -84, ih.field_i);
+          IsaacPacketBuffer.field_p.writeInt((byte) -58, oi.field_b);
+          IsaacPacketBuffer.field_p.writeLong((byte) -84, ih.field_i);
           var6 = param0;
           if (hc.field_b) {
             var6 = var6 | 1;
@@ -212,20 +212,20 @@ final class StraightRoadSegment extends RoadSegment {
           if (param2) {
             var6 = var6 | 8;
           }
-          if (null != ok.field_f) {
+          if (null != TutorialTransition.field_f) {
             var6 = var6 | 16;
           }
-          IsaacPacketBuffer.field_p.f(111, var6);
+          IsaacPacketBuffer.field_p.writeByte(111, var6);
           var7 = ph.a((byte) -48, GameKeyHandler.a(113));
           if (var7 == null) {
             var7 = "";
           }
-          IsaacPacketBuffer.field_p.c(-74, var7);
-          if (ok.field_f != null) {
-            IsaacPacketBuffer.field_p.a(29336, ok.field_f);
+          IsaacPacketBuffer.field_p.writeCp1252String(-74, var7);
+          if (TutorialTransition.field_f != null) {
+            IsaacPacketBuffer.field_p.writePrefixedCp1252String(29336, TutorialTransition.field_f);
           }
-          dg.a(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, ho.field_k);
-          IsaacPacketBuffer.field_p.g(-29190, IsaacPacketBuffer.field_p.position - var5_int);
+          dg.a(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
+          IsaacPacketBuffer.field_p.backpatchShortLength(-29190, IsaacPacketBuffer.field_p.position - var5_int);
           qn.a(-1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -242,7 +242,7 @@ final class StraightRoadSegment extends RoadSegment {
         }
     }
 
-    final Point2i a(int param0) {
+    final Point2i getEndPoint(int param0) {
         if (param0 != 0) {
           return (Point2i) null;
         }
@@ -312,7 +312,7 @@ final class StraightRoadSegment extends RoadSegment {
 
     final Point2i c(boolean param0) {
         if (!param0) {
-          this.g(34);
+          this.getStartDirection(34);
         }
         if (0.0f == this.field_G) {
           return new Point2i((int)(this.field_D * (float)this.field_O + (float)this.field_R.x), (int)((float)this.field_R.y + (float)this.field_O * this.field_B));
@@ -327,13 +327,13 @@ final class StraightRoadSegment extends RoadSegment {
         RuntimeException var2 = null;
         var3 = HoldTheLine.field_D;
         try {
-          var4 = (fo) (ji.field_a.first((byte) 91));
+          var4 = (fo) (TutorialPage.field_a.first((byte) 91));
           if (param1 < 8) {
             field_H = (String) null;
           }
           while (var4 != null) {
             WidgetContainer.a(3, param0, var4);
-            var4 = (fo) (ji.field_a.next((byte) -120));
+            var4 = (fo) (TutorialPage.field_a.next((byte) -120));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -382,11 +382,11 @@ final class StraightRoadSegment extends RoadSegment {
         return new Point2i((int)var4, (int)var5);
     }
 
-    final Vector2f a(boolean param0) {
+    final Vector2f getEndDirection(boolean param0) {
         if (param0) {
           this.c(93, -0.584915816783905f);
         }
-        return this.g(-1);
+        return this.getStartDirection(-1);
     }
 
     private final int b(float param0, boolean param1) {
@@ -414,11 +414,11 @@ final class StraightRoadSegment extends RoadSegment {
         return this.a(0.0f, false);
     }
 
-    final Vector2f a(byte param0, float param1) {
+    final Vector2f directionAt(byte param0, float param1) {
         if (param0 <= 117) {
           return (Vector2f) null;
         }
-        return this.g(-1);
+        return this.getStartDirection(-1);
     }
 
     final int d(float param0, int param1) {
@@ -428,7 +428,7 @@ final class StraightRoadSegment extends RoadSegment {
         return (int)((float)this.field_K + this.e(param0, param1 + 35) * (float)(this.field_L - this.field_K));
     }
 
-    final static Point2i a(int param0, Vector2f param1, ei param2, int param3, Point2i param4) {
+    final static Point2i a(int param0, Vector2f param1, GrowableObjectList param2, int param3, Point2i param4) {
         int var7 = 0;
         int var9 = 0;
         Point2i stackIn_19_0 = null;
@@ -444,7 +444,7 @@ final class StraightRoadSegment extends RoadSegment {
         float var5_float = 0.0f;
         RuntimeException var5 = null;
         Object var6 = null;
-        ei var8 = null;
+        GrowableObjectList var8 = null;
         TrackBoundary var10 = null;
         int var11 = 0;
         float var12 = 0.0f;
@@ -457,23 +457,23 @@ final class StraightRoadSegment extends RoadSegment {
         try {
           var5_float = 0.0f;
           var6 = null;
-          for (var7 = param0; param2.field_e > var7; var7++) {
-            var8 = (ei) (param2.field_b[var7]);
-            for (var9 = 0; var9 < var8.field_e; var9++) {
+          for (var7 = param0; param2.size > var7; var7++) {
+            var8 = (GrowableObjectList) (param2.elements[var7]);
+            for (var9 = 0; var9 < var8.size; var9++) {
               boolean decompiledFrameRemainder0 = true;
-              var10 = (TrackBoundary) (var8.field_b[var9]);
+              var10 = (TrackBoundary) (var8.elements[var9]);
               if (-var10.field_k + param3 >= -1 &&
                 param3 - var10.field_k <= 1) {
-                var11 = (-var10.field_r.y + param4.y) * (-var10.field_r.y + var10.field_s.y) + (param4.x - var10.field_r.x) * (var10.field_s.x - var10.field_r.x);
+                var11 = (-var10.start.y + param4.y) * (-var10.start.y + var10.end.y) + (param4.x - var10.start.x) * (var10.end.x - var10.start.x);
                 if (0 <= var11 &&
-                  var10.i(-120) >= var11) {
-                  var17 = var10.g(-1).perpendicular((byte) 64);
-                  var12 = Math.abs(var17.dot(new Vector2f(var10.field_r, param4), (byte) -10));
+                  var10.lengthSquared(-120) >= var11) {
+                  var17 = var10.getStartDirection(-1).perpendicular((byte) 64);
+                  var12 = Math.abs(var17.dot(new Vector2f(var10.start, param4), (byte) -10));
                   var13 = var12 * var12;
                   if ((var6 == null ||
                     (var5_float > var13))) {
                     var5_float = var13;
-                    var6 = var10.a(false, (float)var11 / (float)var10.i(-125));
+                    var6 = var10.pointAt(false, (float)var11 / (float)var10.lengthSquared(-125));
                     if ((param1 != null)) {
                       param1.y = var17.y;
                       param1.x = var17.x;
@@ -483,20 +483,20 @@ final class StraightRoadSegment extends RoadSegment {
                 }
                 else {
                   if (var11 >= 0) {
-                    var13Lifetime1 = (float)((param4.x - var10.field_s.x) * (param4.x - var10.field_s.x) + (param4.y - var10.field_s.y) * (-var10.field_s.y + param4.y));
+                    var13Lifetime1 = (float)((param4.x - var10.end.x) * (param4.x - var10.end.x) + (param4.y - var10.end.y) * (-var10.end.y + param4.y));
                   } else {
-                    var13Lifetime1 = (float)((param4.x - var10.field_r.x) * (-var10.field_r.x + param4.x) + (-var10.field_r.y + param4.y) * (-var10.field_r.y + param4.y));
+                    var13Lifetime1 = (float)((param4.x - var10.start.x) * (-var10.start.x + param4.x) + (-var10.start.y + param4.y) * (-var10.start.y + param4.y));
                   }
                   if (var6 == null ||
                     var13Lifetime1 < var5_float) {
                     var5_float = var13Lifetime1;
                     if (var11 < 0) {
-                      stackIn_19_0 = var10.field_r;
+                      stackIn_19_0 = var10.start;
                     } else {
-                      stackIn_19_0 = var10.field_s;
+                      stackIn_19_0 = var10.end;
                     }
                     var6 = stackIn_19_0;
-                    var16 = var10.g(-1).perpendicular((byte) -111);
+                    var16 = var10.getStartDirection(-1).perpendicular((byte) -111);
                     if (param1 != null) {
                       param1.x = var16.x;
                       param1.y = var16.y;
@@ -544,14 +544,14 @@ final class StraightRoadSegment extends RoadSegment {
         return new Point2i((int)var4, (int)var5);
     }
 
-    final float f(int param0) {
+    final float length(int param0) {
         if (param0 != 50) {
           return 1.8018358945846558f;
         }
         return this.field_J;
     }
 
-    final Vector2f g(int param0) {
+    final Vector2f getStartDirection(int param0) {
         if (param0 != -1) {
           this.field_M = 97;
         }

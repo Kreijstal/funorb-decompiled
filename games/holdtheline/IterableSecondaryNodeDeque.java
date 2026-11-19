@@ -6,13 +6,13 @@ import java.util.*;
 final class IterableSecondaryNodeDeque implements Iterable {
     static byte[][] field_e;
     static BufferedSocket field_h;
-    static go[] field_c;
+    static RotatedSpriteAsset[] field_c;
     static int field_f;
     static DiskCacheWorker field_d;
     DualLinkNode field_i;
     static float field_b;
     static boolean[] field_g;
-    static uf field_a;
+    static SpriteAsset field_a;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));

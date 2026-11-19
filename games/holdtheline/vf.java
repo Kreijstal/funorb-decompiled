@@ -30,7 +30,7 @@ final class vf extends IntrusiveNode {
         this.field_p = this.field_B << 16;
         if (param1 == 44) {
           this.a(true, 0);
-          this.field_z = kj.b(param1 - 42, 500);
+          this.field_z = SolidRoadStripRenderer.b(param1 - 42, 500);
           return;
         }
     }
@@ -43,7 +43,7 @@ final class vf extends IntrusiveNode {
         if (param0 == -99) {
           var3 = this.field_m;
           if (3 == var3) {
-            va.field_d[this.field_k][7 + this.field_s].a(this.field_x, param0 ^ -27887).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][7 + this.field_s].getByAngle(this.field_x, param0 ^ -27887).a(this.field_B, this.field_i);
           } else {
             if (this.field_s >= 6) {
               stackIn_7_0 = 11 - this.field_s;
@@ -51,13 +51,13 @@ final class vf extends IntrusiveNode {
               stackIn_7_0 = this.field_s;
             }
             var2 = stackIn_7_0;
-            va.field_d[this.field_k][var2].a(this.field_x, 27788).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][var2].getByAngle(this.field_x, 27788).a(this.field_B, this.field_i);
           }
         } else {
           field_l = (DisplayNameForm) null;
           var3 = this.field_m;
           if (3 == var3) {
-            va.field_d[this.field_k][7 + this.field_s].a(this.field_x, param0 ^ -27887).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][7 + this.field_s].getByAngle(this.field_x, param0 ^ -27887).a(this.field_B, this.field_i);
           } else {
             if (this.field_s >= 6) {
               stackIn_15_0 = 11 - this.field_s;
@@ -65,7 +65,7 @@ final class vf extends IntrusiveNode {
               stackIn_15_0 = this.field_s;
             }
             var2 = stackIn_15_0;
-            va.field_d[this.field_k][var2].a(this.field_x, 27788).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][var2].getByAngle(this.field_x, 27788).a(this.field_B, this.field_i);
           }
         }
     }
@@ -74,7 +74,7 @@ final class vf extends IntrusiveNode {
         int var2;
         int var3;
         var3 = HoldTheLine.field_D;
-        var2 = kj.b(2, 2240);
+        var2 = SolidRoadStripRenderer.b(2, 2240);
         if (param0 > -58) {
           return;
         }
@@ -93,7 +93,7 @@ final class vf extends IntrusiveNode {
             }
           }
         }
-        this.field_k = kj.b(2, 4);
+        this.field_k = SolidRoadStripRenderer.b(2, 4);
     }
 
     final void g(int param0) {
@@ -259,7 +259,7 @@ final class vf extends IntrusiveNode {
           IndexedSpriteState.a((byte) -61, this.field_B - 6, this.field_i);
           IndexedSpriteState.a((byte) -61, this.field_B, this.field_i + 6);
           IndexedSpriteState.a((byte) -61, this.field_B, this.field_i - 6);
-          ug.b(param0 - 25501);
+          MarkerSliderRenderer.restoreRasterTarget(param0 - 25501);
           return;
         }
         this.a(-70);
@@ -269,7 +269,7 @@ final class vf extends IntrusiveNode {
         IndexedSpriteState.a((byte) -61, this.field_B - 6, this.field_i);
         IndexedSpriteState.a((byte) -61, this.field_B, this.field_i + 6);
         IndexedSpriteState.a((byte) -61, this.field_B, this.field_i - 6);
-        ug.b(param0 - 25501);
+        MarkerSliderRenderer.restoreRasterTarget(param0 - 25501);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -354,8 +354,8 @@ final class vf extends IntrusiveNode {
         int var3 = HoldTheLine.field_D;
         int var2 = 56 % ((param0 - 9) / 40);
         do {
-          this.field_q = kj.b(2, 640);
-          this.field_y = kj.b(2, 480);
+          this.field_q = SolidRoadStripRenderer.b(2, 640);
+          this.field_y = SolidRoadStripRenderer.b(2, 480);
         } while (!MusicPatchPcmStream.field_r.a(0, this.field_y, true, this.field_q));
         this.a(true, 1);
         this.field_x = (float)Math.atan2((double)(this.field_i - this.field_y), (double)(-this.field_B + this.field_q));

@@ -52,7 +52,7 @@ final class Bzip2State {
     }
 
     final static void a(int param0, boolean param1) {
-        ka.field_b.a(-81, param0, 0);
+        ka.field_b.draw(-81, param0, 0);
     }
 
     Bzip2State() {

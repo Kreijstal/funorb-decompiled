@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class NodeHashTableIterator implements Iterator {
-    static vn field_c;
+    static NineSlicePanel field_c;
     private int field_i;
     private IntrusiveNode field_k;
     static int[] field_j;

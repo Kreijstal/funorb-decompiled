@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class cd {
-    static uf field_d;
+    static SpriteAsset field_d;
     static String field_c;
     static int field_b;
     static int[] field_f;
@@ -40,27 +40,27 @@ final class cd {
         try {
           hk.field_c = new int[4][];
           d.field_c = new int[4];
-          on.field_v = new int[4][];
+          QuickChatPhraseDefinition.field_v = new int[4][];
           ha.field_j = new int[4][];
           for (var1_int = 0; var1_int < 4; var1_int++) {
             var2 = pc.field_l[var1_int];
             array$0 = new int[var2];
             hk.field_c[var1_int] = array$0;
             array$1 = new int[var2];
-            on.field_v[var1_int] = array$1;
+            QuickChatPhraseDefinition.field_v[var1_int] = array$1;
             array$2 = new int[var2];
             ha.field_j[var1_int] = array$2;
             for (var3 = 0; var2 > var3; var3++) {
               hk.field_c[var1_int][var3] = -1;
-              on.field_v[var1_int][var3] = -1;
+              QuickChatPhraseDefinition.field_v[var1_int][var3] = -1;
               ha.field_j[var1_int][var3] = 3;
             }
             d.field_c[var1_int] = -1;
           }
           ao.field_b = 0;
-          on.field_s = true;
+          QuickChatPhraseDefinition.field_s = true;
           ad.field_a = false;
-          nd.field_e = true;
+          NameAvailabilityResult.field_e = true;
           if (param0 < 100) {
             field_a = (Sprite[]) null;
           }
@@ -85,7 +85,7 @@ final class cd {
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + vn.a("\n", "%0a", param0 - 75, param1));
+        System.out.println("Error: " + NineSlicePanel.replaceAllLiteral("\n", "%0a", param0 - 75, param1));
         if (param0 != 12) {
           cd.b(-37);
         }
@@ -122,7 +122,7 @@ final class cd {
         }
     }
 
-    final static float a(wc[] param0, int param1, float param2) {
+    final static float a(TrackCurve[] param0, int param1, float param2) {
         RuntimeException var3 = null;
         float stackIn_2_0 = 0.0f;
         float stackIn_4_0 = 0.0f;
@@ -132,7 +132,7 @@ final class cd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 1) {
-            stackIn_4_0 = MusicCrossfadeStream.a((byte) 117, param2, param0) / ce.a(-1, param0);
+            stackIn_4_0 = MusicCrossfadeStream.a((byte) 117, param2, param0) / OutlinedRoadStripRenderer.totalCurveLength(-1, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -0.11478078365325928f;
@@ -178,7 +178,7 @@ final class cd {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = wb.field_h;
+            stackIn_7_0 = Vector2i.field_h;
             return stackIn_7_0;
           }
           var3 = fl.a(param1, (byte) -126, '.');

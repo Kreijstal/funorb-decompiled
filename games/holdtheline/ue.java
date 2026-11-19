@@ -50,7 +50,7 @@ final class ue {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = StraightRoadSegment.field_E[LoginChoicePanel.a(255, (int) var7[var4_int])];
           }
-          var4 = new Sprite(bo.field_b, ih.field_o, la.field_j[0], wb.field_g[0], EditableTextField.field_K[0], ad.field_d[0], var3);
+          var4 = new Sprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], var3);
           tk.a(false);
           return var4;
         }
@@ -58,7 +58,7 @@ final class ue {
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = StraightRoadSegment.field_E[LoginChoicePanel.a(255, (int) var7[var4_intLifetime1])];
         }
-        var4Lifetime1 = new Sprite(bo.field_b, ih.field_o, la.field_j[0], wb.field_g[0], EditableTextField.field_K[0], ad.field_d[0], var3);
+        var4Lifetime1 = new Sprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], var3);
         tk.a(false);
         return var4Lifetime1;
     }

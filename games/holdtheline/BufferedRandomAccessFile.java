@@ -13,9 +13,9 @@ final class BufferedRandomAccessFile {
     private int field_e;
     static String field_q;
     private BoundedRandomAccessFile field_g;
-    static go[] field_h;
+    static RotatedSpriteAsset[] field_h;
     private int field_c;
-    static uf field_o;
+    static SpriteAsset field_o;
     static volatile boolean field_n;
     static String field_j;
     private long field_p;

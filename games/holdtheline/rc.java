@@ -6,7 +6,7 @@ final class rc {
     static String[] field_c;
     static String field_e;
     static String field_b;
-    static oa field_a;
+    static NamedSoundEffect field_a;
     private static String field_z;
 
     public static void clearSharedReferences(boolean param0) {

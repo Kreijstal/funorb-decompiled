@@ -57,7 +57,7 @@ final class jc {
             jc.clearSharedReferences((byte) 44);
           }
           if (qg.a(param3, param1, (byte) -27, param2)) {
-            return ei.a(61);
+            return GrowableObjectList.buildDecodedSprites(61);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

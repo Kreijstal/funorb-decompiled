@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ti extends pc {
-    static j field_u;
+    static HuffmanDecoder field_u;
     private int field_o;
     private int field_w;
     private int[] field_q;
@@ -161,7 +161,7 @@ final class ti extends pc {
             var4 = (int)((double)this.field_j * (Math.exp((double)(0.20000000298023224f * (float)(40 - this.field_w))) - 1.0) / (-1.0 + Math.exp(8.0))) - 140;
           }
           SoftwareRasterizer.c(0, var4 + 100, 640, 5, 0, 128);
-          var5 = fd.field_e.a(8192);
+          var5 = ValidationState.field_e.getSprite(8192);
           if (var5 != null) {
             var13 = new int[4];
             SoftwareRasterizer.b(var13);
@@ -173,8 +173,8 @@ final class ti extends pc {
                 SoftwareRasterizer.b(0, -1 + var4, 640, 0);
                 break;
               }
-              fd.field_e.a(8192).b(60 * var7, var4);
-              fd.field_e.a(param0 ^ -8247).b(60 * var7, 60 + var4);
+              ValidationState.field_e.getSprite(8192).b(60 * var7, var4);
+              ValidationState.field_e.getSprite(param0 ^ -8247).b(60 * var7, 60 + var4);
               var7++;
             } while (var9 == 0);
             var7 = 0;
@@ -242,7 +242,7 @@ final class ti extends pc {
         int var8 = 0;
         int stackIn_37_0 = 0;
         var8 = HoldTheLine.field_D;
-        cg.a(-param2 + 40, 102, 560, (byte) 41, 312);
+        TutorialAction.a(-param2 + 40, 102, 560, (byte) 41, 312);
         if (param1 != 0) {
           this.a(-4);
         }
@@ -262,40 +262,40 @@ final class ti extends pc {
                   || var6 == 6
                   ) ? var6 : -1) {
                   case 0:
-                    wb.a(20, DiskCacheStore.field_f, 0, 0, 560, var4 - 20, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                    Vector2i.a(20, DiskCacheStore.field_f, 0, 0, 560, var4 - 20, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                     var4 += 120;
-                    q.a(am.field_c, HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
+                    q.a(LinkWidgetRenderer.field_c, HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                     var4 += 30;
-                    am.a(310 - param2, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.a(310 - param2, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    am.a(-param2 + 310, ra.field_fb, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.a(-param2 + 310, ra.field_fb, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    am.a(310 - param2, fk.field_a, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.a(310 - param2, fk.field_a, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    am.a(310 - param2, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.a(310 - param2, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    am.a(-param2 + 310, NameCheckProgressDialog.field_xb, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.a(-param2 + 310, NameCheckProgressDialog.field_xb, true, HoldTheLine.field_F, var4, 1);
                     var4 -= 80;
-                    ei.a(-param2 + 320, 1, b.field_a, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.a(-param2 + 320, 1, b.field_a, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    ei.a(-param2 + 320, param1 ^ 1, WhirlpoolHasher.field_i, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.a(-param2 + 320, param1 ^ 1, WhirlpoolHasher.field_i, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    ei.a(320 - param2, 1, NameSuggestionsPanel.field_H, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.a(320 - param2, 1, NameSuggestionsPanel.field_H, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    ei.a(320 - param2, 1, StrongCacheEntry.field_t, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.a(320 - param2, 1, StrongCacheEntry.field_t, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    ei.a(320 - param2, param1 + 1, kc.field_c, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.a(320 - param2, param1 + 1, kc.field_c, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
                     if (var8 == 0) {
                       break regionExit1;
                     }
                   case 1:
-                    wb.a(20, LoginForm.field_L, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                    Vector2i.a(20, LoginForm.field_L, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                     if (var8 == 0) {
                       break regionExit2;
                     }
                   case 2:
-                    wb.a(20, ImageProducerRasterBuffer.field_k, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                    Vector2i.a(20, ImageProducerRasterBuffer.field_k, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                     var4 += 185;
                     var6 = 0;
                     {
@@ -305,20 +305,20 @@ final class ti extends pc {
                           oi.field_a.b(-(var6 * 20) + 408 - param2, -20 + (var4 + 5));
                           oi.field_a.b(-param2 + (168 - var6 * 20), 10 + (var4 + 5));
                           oi.field_a.b(408 - (param2 + 20 * var6), var4 + 10 + 5);
-                          ha.field_k.a(16, var5, 9, 16).a(-(var6 * 20) + (-param2 + 170), -20 + (var4 + 7));
-                          LoginChoicePanel.field_O.a(16, var5, param1 ^ 9, 16).a(-param2 + 410 - var6 * 20, 7 + var4 - 20);
-                          na.field_q.a(16, var5, 9, 16).a(-(var6 * 20) - param2 + 170, 10 + (var4 + 7));
-                          StrongCacheEntry.field_u.a(16, var5, param1 + 9, 16).a(-param2 + 410 - var6 * 20, 10 + (var4 + 7));
+                          ha.field_k.getSpriteOrPlaceholder(16, var5, 9, 16).a(-(var6 * 20) + (-param2 + 170), -20 + (var4 + 7));
+                          LoginChoicePanel.field_O.getSpriteOrPlaceholder(16, var5, param1 ^ 9, 16).a(-param2 + 410 - var6 * 20, 7 + var4 - 20);
+                          na.field_q.getSpriteOrPlaceholder(16, var5, 9, 16).a(-(var6 * 20) - param2 + 170, 10 + (var4 + 7));
+                          StrongCacheEntry.field_u.getSpriteOrPlaceholder(16, var5, param1 + 9, 16).a(-param2 + 410 - var6 * 20, 10 + (var4 + 7));
                           var6++;
                           if (var8 == 0) {
                             continue;
                           }
                         } else {
-                          ei.a(200 - param2, param1 + 1, IsaacRandom.field_k, 0, var4, HoldTheLine.field_F);
-                          ei.a(-param2 + 440, 1, ResourceArchive.field_h, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.a(200 - param2, param1 + 1, IsaacRandom.field_k, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.a(-param2 + 440, 1, ResourceArchive.field_h, 0, var4, HoldTheLine.field_F);
                           var4 += 30;
-                          ei.a(200 - param2, 1, AudioServiceThread.field_a, 0, var4, HoldTheLine.field_F);
-                          ei.a(440 - param2, 1, HoldTheLine.field_B, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.a(200 - param2, 1, AudioServiceThread.field_a, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.a(440 - param2, 1, HoldTheLine.field_B, 0, var4, HoldTheLine.field_F);
                           var4 += 30;
                         }
                         break;
@@ -328,7 +328,7 @@ final class ti extends pc {
                       }
                     }
                   case 3:
-                    wb.a(20, MusicPatchEnvelope.field_k, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                    Vector2i.a(20, MusicPatchEnvelope.field_k, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, -1, 1, HoldTheLine.field_F);
                     var4 += 25;
                     var6 = 1;
                     {
@@ -343,34 +343,34 @@ final class ti extends pc {
                             oi.field_a.b(-param2 + 93 - var7 * 20, var4 + (-20 - (-5 - 20 * var6)));
                             oi.field_a.b(-param2 + (383 - var7 * 20), -20 + var4 - (-5 - 20 * var6));
                             oi.field_a.b(288 - param2 - var7 * 20, 20 * var6 + (60 + var4 + 5));
-                            ha.field_k.a(16, var5, 9, 16).a(-(20 * var7) + (95 - param2), 20 * var6 + (var4 - 20 + 7));
-                            LoginChoicePanel.field_O.a(16, var5, 9, 16).a(-param2 + (385 - 20 * var7), 7 + (-20 + var4) + 20 * var6);
-                            na.field_q.a(16, var5, param1 ^ 9, 16).a(290 - param2 - 20 * var7, var6 * 20 + var4 + 60 + 7);
+                            ha.field_k.getSpriteOrPlaceholder(16, var5, 9, 16).a(-(20 * var7) + (95 - param2), 20 * var6 + (var4 - 20 + 7));
+                            LoginChoicePanel.field_O.getSpriteOrPlaceholder(16, var5, 9, 16).a(-param2 + (385 - 20 * var7), 7 + (-20 + var4) + 20 * var6);
+                            na.field_q.getSpriteOrPlaceholder(16, var5, param1 ^ 9, 16).a(290 - param2 - 20 * var7, var6 * 20 + var4 + 60 + 7);
                             var7++;
                           }
                           var6++;
                           continue scanLoop6;
                         }
                         var4 += 20;
-                        ei.a(125 - param2, 1, AccountTermsPanel.field_J, 0, var4, HoldTheLine.field_F);
-                        ei.a(-param2 + 415, 1, uk.field_f, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(125 - param2, 1, AccountTermsPanel.field_J, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(-param2 + 415, 1, uk.field_f, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        ei.a(-param2 + 125, 1, LoginForm.field_K, 0, var4, HoldTheLine.field_F);
-                        ei.a(-param2 + 415, param1 + 1, ga.field_h, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(-param2 + 125, 1, LoginForm.field_K, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(-param2 + 415, param1 + 1, ga.field_h, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        ei.a(-param2 + 125, 1, oa.field_o, 0, var4, HoldTheLine.field_F);
-                        ei.a(-param2 + 415, 1, RaceWorld.field_K, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(-param2 + 125, 1, NamedSoundEffect.field_o, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(-param2 + 415, 1, RaceWorld.field_K, 0, var4, HoldTheLine.field_F);
                         var4 += 40;
-                        ei.a(320 - param2, 1, wl.field_e, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(320 - param2, 1, wl.field_e, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        ei.a(-param2 + 320, 1, kb.field_d, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(-param2 + 320, 1, LoginCredentialType.field_d, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        ei.a(320 - param2, 1, gj.field_v, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.a(320 - param2, 1, ArcTrackBoundary.field_v, 0, var4, HoldTheLine.field_F);
                         var4 += 40;
                         stackIn_37_0 = 20;
                         break;
                       }
-                      wb.a(stackIn_37_0, NanoTickClock.field_o, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
+                      Vector2i.a(stackIn_37_0, NanoTickClock.field_o, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
                       if (var8 == 0) {
                         break regionExit2;
                       }
@@ -385,19 +385,19 @@ final class ti extends pc {
                   case 6:
                     break regionExit3;
                 }
-                wb.a(20, aa.field_p, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
+                Vector2i.a(20, DelayedServerPacket.field_p, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 40;
-                wb.a(20, IntrusiveNode.field_e, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
+                Vector2i.a(20, IntrusiveNode.field_e, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 80;
-                wb.a(20, wb.field_b, 0, 0, 560, var4 - 20, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                Vector2i.a(20, Vector2i.field_b, 0, 0, 560, var4 - 20, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
-                wb.a(20, SingleChildWidget.field_D, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                Vector2i.a(20, SingleChildWidget.field_D, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
                 if (var8 == 0) {
                   break regionExit2;
                 }
               }
-              wb.a(20, ji.field_n, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, ~param1, 1, HoldTheLine.field_F);
+              Vector2i.a(20, TutorialPage.field_n, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, ~param1, 1, HoldTheLine.field_F);
               var4 += 80;
               q.a(hc.field_a, HoldTheLine.field_F, 2, 160 - param2, (byte) -127, var4);
               q.a(o.field_a, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
@@ -406,25 +406,25 @@ final class ti extends pc {
               q.a(IterableNodeHashTable.field_f, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
               q.a(m.field_b, HoldTheLine.field_F, 1, -param2 + 320, (byte) -127, var4);
               var4 += 40;
-              am.a(-param2 + 200, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.a(-param2 + 200, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              am.a(-param2 + 200, ra.field_fb, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.a(-param2 + 200, ra.field_fb, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              am.a(-param2 + 200, fk.field_a, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.a(-param2 + 200, fk.field_a, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              am.a(-param2 + 200, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.a(-param2 + 200, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              am.a(200 - param2, NetworkArchiveRequest.field_A, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.a(200 - param2, NetworkArchiveRequest.field_A, true, HoldTheLine.field_F, var4, 1);
               var4 -= 80;
-              ei.a(440 - param2, 1, LabeledField.field_H, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.a(440 - param2, 1, LabeledField.field_H, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              ei.a(-param2 + 440, param1 ^ 1, IndexedSpriteState.field_f, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.a(-param2 + 440, param1 ^ 1, IndexedSpriteState.field_f, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              ei.a(-param2 + 440, 1, vd.field_e, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.a(-param2 + 440, 1, vd.field_e, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              ei.a(-param2 + 440, 1, ka.field_a, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.a(-param2 + 440, 1, ka.field_a, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              ei.a(-param2 + 440, param1 ^ 1, jh.field_b, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.a(-param2 + 440, param1 ^ 1, jh.field_b, 1, var4, HoldTheLine.field_F);
               var4 -= 80;
               q.a(b.field_a, HoldTheLine.field_F, 0, -param2 + 320, (byte) -128, var4);
               var4 += 20;
@@ -440,7 +440,7 @@ final class ti extends pc {
                 break regionExit2;
               }
             }
-            wb.a(20, io.field_f, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
+            Vector2i.a(20, AccountFormText.field_f, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
           }
         }
     }
@@ -451,17 +451,17 @@ final class ti extends pc {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
         var4 = HoldTheLine.field_D;
-        var3 = em.field_i[this.field_o][param0];
+        var3 = AgeValidator.field_i[this.field_o][param0];
         if (18 == var3) {
-          if (aa.field_n == 102) {
+          if (DelayedServerPacket.field_n == 102) {
             SecondaryNodeDeque.field_d = 0;
             decompiledFrameRemainder1 = (var4 != 0);
           }
           if (decompiledFrameRemainder1) {
-            if ((aa.field_n == 103) &&
+            if ((DelayedServerPacket.field_n == 103) &&
               (decompiledFrameRemainder1 = !(256 <= SecondaryNodeDeque.field_d))) {
               SecondaryNodeDeque.field_d = 256;
-              qf.a(293, StrongCacheEntry.field_r);
+              MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               decompiledFrameRemainder1 = (var4 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -474,12 +474,12 @@ final class ti extends pc {
         }
         if ((decompiledFrameRemainder1) &&
           (decompiledFrameRemainder0)) {
-          if (aa.field_n == 102) {
+          if (DelayedServerPacket.field_n == 102) {
             ll.a(-118, 0);
             decompiledFrameRemainder1 = (var4 != 0);
           }
           if (decompiledFrameRemainder1) {
-            if (aa.field_n == 103) {
+            if (DelayedServerPacket.field_n == 103) {
               ll.a(param1 + 24365, 160);
               decompiledFrameRemainder1 = (var4 != 0);
             }
@@ -517,11 +517,11 @@ final class ti extends pc {
         if (this.field_y > 2) {
           return;
         }
-        cg.a(-var2 + 40, 140, 560, (byte) 41, 200);
+        TutorialAction.a(-var2 + 40, 140, 560, (byte) 41, 200);
         int var3 = 170;
         nm.field_c.b(NodeHashTableIterator.field_b, 320 - var2, var3, 2, -1);
         var3 += 40;
-        wb.a(20, ko.field_a, 0, 0, 560, -20 + var3, 40 - var2, -var3 + 414, -1, 1, HoldTheLine.field_F);
+        Vector2i.a(20, ko.field_a, 0, 0, 560, -20 + var3, 40 - var2, -var3 + 414, -1, 1, HoldTheLine.field_F);
         if (param0 != 29280) {
           this.field_t = 0.7895873785018921f;
         }
@@ -544,17 +544,17 @@ final class ti extends pc {
         }
         tn.field_a = this.a(rf.field_X, (byte) -128, NodeHashTableIterator.field_g, var3);
         if (tn.field_a != -1) {
-          ci.a(0, (byte) 118, this.field_o, tn.field_a);
+          ArchiveCatalog.a(0, (byte) 118, this.field_o, tn.field_a);
         }
-        ci.field_j = this.a(rf.field_X, param0 + 5465, NodeHashTableIterator.field_g, var3);
+        ArchiveCatalog.field_j = this.a(rf.field_X, param0 + 5465, NodeHashTableIterator.field_g, var3);
         if (ValidationIndicator.field_J == 1) {
-          qf.a(293, StrongCacheEntry.field_r);
+          MatchingTextValidator.a(293, StrongCacheEntry.field_r);
           if (tn.field_a != -1 &&
             ~tn.field_a != ~ha.field_p) {
             if (pj.field_m != GameKeyHandler.field_b ||
-              ha.field_p != wa.field_j) {
+              ha.field_p != PasswordValidator.field_j) {
               this.field_t = this.field_t - 640.0f;
-              wa.field_j = ha.field_p;
+              PasswordValidator.field_j = ha.field_p;
               GameKeyHandler.field_b = pj.field_m;
             }
             this.field_p = 640;
@@ -575,32 +575,32 @@ final class ti extends pc {
         boolean decompiledFrameRemainder0 = true;
         var3 = HoldTheLine.field_D;
         if (0.0f < this.field_t) {
-          if (aa.field_n != 84) {
-            if (aa.field_n == 98) {
+          if (DelayedServerPacket.field_n != 84) {
+            if (DelayedServerPacket.field_n == 98) {
               this.field_c = 0;
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (99 == aa.field_n) {
+              if (99 == DelayedServerPacket.field_n) {
                 this.field_c = 1;
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (96 != aa.field_n ||
+                if (96 != DelayedServerPacket.field_n ||
                   this.field_c != 1) {
-                  if ((aa.field_n != 97 ||
+                  if ((DelayedServerPacket.field_n != 97 ||
                     this.field_c != 1) &&
                     (decompiledFrameRemainder0 = (this.field_c == 0))) {
                     this.a(true);
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    t.field_l = go.field_g[ArchiveIndex.b((byte) -49).field_p][1];
+                    t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][1];
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  t.field_l = go.field_g[ArchiveIndex.b((byte) -49).field_p][0];
+                  t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
@@ -613,7 +613,7 @@ final class ti extends pc {
                 MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[t.field_l]);
               }
               wm.a(false, false, -1);
-              qf.a(293, StrongCacheEntry.field_r);
+              MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -623,11 +623,11 @@ final class ti extends pc {
           }
         }
         if (decompiledFrameRemainder0) {
-          if (aa.field_n != 84 ||
+          if (DelayedServerPacket.field_n != 84 ||
             this.field_c != 1) {
-            if (aa.field_n != 98 ||
+            if (DelayedServerPacket.field_n != 98 ||
               this.field_o != 10) {
-              if (aa.field_n != 99) {
+              if (DelayedServerPacket.field_n != 99) {
                 if (this.field_c == 0) {
                   this.a(true);
                   if (var3 != 0) {
@@ -813,7 +813,7 @@ final class ti extends pc {
         int var12 = 0;
         int var5Lifetime1;
         var12 = HoldTheLine.field_D;
-        cg.a(60, 101, 520, (byte) 41, 320);
+        TutorialAction.a(60, 101, 520, (byte) 41, 320);
         SocketConnector.field_a = 0;
         var2 = 160;
         var3 = 125;
@@ -824,7 +824,7 @@ final class ti extends pc {
         var5 = 0;
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var5 >= 16))) {
-          var6_int = e.field_d[var5];
+          var6_int = QuickChatDynamicCommand.field_d[var5];
           stackIn_10_0 = 0;
           stackIn_10_1 = 1 << var6_int & ClientException.field_c;
           if (var12 == 0) {
@@ -844,21 +844,21 @@ final class ti extends pc {
         }
         if (decompiledNaturalLoopExit0) {
           stackIn_10_0 = -1;
-          stackIn_10_1 = ok.field_e;
+          stackIn_10_1 = TutorialTransition.field_e;
         }
         if (stackIn_10_0 != stackIn_10_1) {
-          stackIn_13_0 = ok.field_e;
+          stackIn_13_0 = TutorialTransition.field_e;
         } else {
           stackIn_13_0 = WidgetContainer.field_E;
         }
         var5Lifetime1 = stackIn_13_0;
         if (-1 != var5Lifetime1) {
           this.a(false, var5Lifetime1, 128, 291, param0 + 30, 320);
-          am.a(200, pf.field_b, true, HoldTheLine.field_F, 252, 0);
-          ei.a(440, 1, vj.field_o, 0, 252, HoldTheLine.field_F);
-          q.a(Integer.toString(le.field_o[var5Lifetime1][0]), HoldTheLine.field_F, 0, 140, (byte) -128, 282);
+          LinkWidgetRenderer.a(200, pf.field_b, true, HoldTheLine.field_F, 252, 0);
+          GrowableObjectList.a(440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
+          q.a(Integer.toString(ShadedRoadStripRenderer.field_o[var5Lifetime1][0]), HoldTheLine.field_F, 0, 140, (byte) -128, 282);
           var6 = pf.a((byte) -123);
-          var7 = le.field_o[var5Lifetime1][1];
+          var7 = ShadedRoadStripRenderer.field_o[var5Lifetime1][1];
           var8 = ImageProducerRasterBuffer.field_m / 15 % (var7 + 2);
           var9 = ImageProducerRasterBuffer.field_m / 5 % 3;
           var10 = 0;
@@ -884,7 +884,7 @@ final class ti extends pc {
             }
             break;
           }
-          wb.a(stackIn_25_0, lf.field_j[var5Lifetime1], 0, 0, 400, 362, 120, 80, param0 + 17, 1, HoldTheLine.field_F);
+          Vector2i.a(stackIn_25_0, TextLineLayout.field_j[var5Lifetime1], 0, 0, 400, 362, 120, 80, param0 + 17, 1, HoldTheLine.field_F);
         }
         fl.a(IndexedSpriteState.field_b, 0, 0, -1753, 448);
         return;
@@ -894,8 +894,8 @@ final class ti extends pc {
         if (param0 >= -77) {
           ti.a(56, 62, (byte) 72);
         }
-        ce.field_n.field_c = 0;
-        ce.field_n.field_f = 0;
+        OutlinedRoadStripRenderer.field_n.field_c = 0;
+        OutlinedRoadStripRenderer.field_n.field_f = 0;
     }
 
     private final void i(int param0, int param1) {
@@ -953,7 +953,7 @@ final class ti extends pc {
         if (param0 <= 4) {
           this.f((byte) -103);
         }
-        cg.a(60 - param1, 101, 520, (byte) 41, 320);
+        TutorialAction.a(60 - param1, 101, 520, (byte) 41, 320);
         SocketConnector.field_a = 0;
         var3 = 156;
         var4 = 125;
@@ -966,7 +966,7 @@ final class ti extends pc {
           stackIn_7_0 = stackOut_6_0;
           if (var13 == 0) {
             if (stackIn_7_0) {
-              var7_int = e.field_d[var6];
+              var7_int = QuickChatDynamicCommand.field_d[var6];
               this.a(true, var7_int, SecondaryNodeDequeIterator.field_h[var7_int], var4, 12, -param1 + var3);
               var3 += 46;
               var5++;
@@ -986,19 +986,19 @@ final class ti extends pc {
         if (decompiledNaturalLoopExit0) {
           stackIn_15_0 = 0;
         }
-        if (stackIn_15_0 != ~ok.field_e) {
-          stackIn_18_0 = ok.field_e;
+        if (stackIn_15_0 != ~TutorialTransition.field_e) {
+          stackIn_18_0 = TutorialTransition.field_e;
         } else {
           stackIn_18_0 = WidgetContainer.field_E;
         }
         var6Lifetime1 = stackIn_18_0;
         if (var6Lifetime1 != -1) {
           this.a(false, var6Lifetime1, 128, 276, 12, -param1 + 320);
-          am.a(200 - param1, pf.field_b, true, HoldTheLine.field_F, 252, 0);
-          ei.a(-param1 + 440, 1, vj.field_o, 0, 252, HoldTheLine.field_F);
-          q.a(Integer.toString(le.field_o[var6Lifetime1][0]), HoldTheLine.field_F, 0, -param1 + 160, (byte) -127, 282);
+          LinkWidgetRenderer.a(200 - param1, pf.field_b, true, HoldTheLine.field_F, 252, 0);
+          GrowableObjectList.a(-param1 + 440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
+          q.a(Integer.toString(ShadedRoadStripRenderer.field_o[var6Lifetime1][0]), HoldTheLine.field_F, 0, -param1 + 160, (byte) -127, 282);
           var7 = pf.a((byte) -123);
-          var8 = le.field_o[var6Lifetime1][1];
+          var8 = ShadedRoadStripRenderer.field_o[var6Lifetime1][1];
           var9 = ImageProducerRasterBuffer.field_m / 15 % (2 + var8);
           var10 = ImageProducerRasterBuffer.field_m / 5 % 3;
           var11 = 0;
@@ -1034,7 +1034,7 @@ final class ti extends pc {
             q.a(fc.field_b, HoldTheLine.field_F, 2, 320 - param1, (byte) -127, 352);
           }
           nm.field_c.b(ae.field_c[var6Lifetime1], 320 - param1, 207, 0, -1);
-          wb.a(20, lf.field_j[var6Lifetime1], 0, 0, 400, 357, 120 - param1, 80, -1, 1, HoldTheLine.field_F);
+          Vector2i.a(20, TextLineLayout.field_j[var6Lifetime1], 0, 0, 400, 357, 120 - param1, 80, -1, 1, HoldTheLine.field_F);
         }
         if ((var6Lifetime1 == -1 ||
           var13 != 0) &&
@@ -1060,7 +1060,7 @@ final class ti extends pc {
         if (CurvedRoadSegment.field_T) {
           stackIn_5_0 = -86;
           stackIn_6_1 = !(param1);
-          var3 = pd.updateMembershipSlidesWithIntGuard(stackIn_5_0, stackIn_6_1);
+          var3 = UsernameLoginCredentials.updateMembershipSlidesWithIntGuard(stackIn_5_0, stackIn_6_1);
           switch (var3) {
             default:
               break;
@@ -1081,13 +1081,13 @@ final class ti extends pc {
           decompiledFrameRemainder0 = (var4 != 0);
         }
         if (decompiledFrameRemainder0) {
-          kc.field_a.a(180);
-          TextButton.field_A.a(param0 + 8192);
-          MouseWheelInput.field_a.a(8192);
-          bo.field_d.a(8192);
-          if (kc.field_a.a((byte) 127) &&
-            TextButton.field_A.b((byte) 10) &&
-            MouseWheelInput.field_a.b((byte) 10) && bo.field_d.b((byte) 10)) {
+          kc.field_a.getSprites(180);
+          TextButton.field_A.getSprite(param0 + 8192);
+          MouseWheelInput.field_a.getSprite(8192);
+          bo.field_d.getSprite(8192);
+          if (kc.field_a.isLoaded((byte) 127) &&
+            TextButton.field_A.isLoaded((byte) 10) &&
+            MouseWheelInput.field_a.isLoaded((byte) 10) && bo.field_d.isLoaded((byte) 10)) {
             TextFieldValidator.a(SpriteState.field_w, TextButton.field_A.field_b, 0);
             Js5Transport.a(0, 19189, 80, 20, 50, 0, -1500, MouseWheelInput.field_a.field_b, 80);
             te.a(param0 - 4, kc.field_a.field_i);
@@ -1128,7 +1128,7 @@ final class ti extends pc {
             var10 = ak.a(param4 ^ -108, var9 != 0, -1);
             if (var11 != 0) {
               if (var9 == 0) {
-                stackIn_18_0 = kj.field_q;
+                stackIn_18_0 = SolidRoadStripRenderer.field_q;
               } else {
                 stackIn_18_0 = ka.field_f;
               }
@@ -1136,7 +1136,7 @@ final class ti extends pc {
             }
           } else {
             if (var9 == 0) {
-              stackIn_18_0 = kj.field_q;
+              stackIn_18_0 = SolidRoadStripRenderer.field_q;
             } else {
               stackIn_18_0 = ka.field_f;
             }
@@ -1176,7 +1176,7 @@ final class ti extends pc {
         if (param0 != 117) {
           return;
         }
-        qf.a(293, StrongCacheEntry.field_r);
+        MatchingTextValidator.a(293, StrongCacheEntry.field_r);
         this.a(param1, param2, param0 ^ -95);
     }
 
@@ -1192,16 +1192,16 @@ final class ti extends pc {
     private final void f(byte param0) {
         WidgetContainer.field_E = this.b(-21, NodeHashTableIterator.field_g, rf.field_X);
         if (ValidationIndicator.field_J == 1) {
-          qf.a(293, StrongCacheEntry.field_r);
-          if (~ok.field_e != ~WidgetContainer.field_E) {
+          MatchingTextValidator.a(293, StrongCacheEntry.field_r);
+          if (~TutorialTransition.field_e != ~WidgetContainer.field_E) {
             if (WidgetContainer.field_E != -1) {
-              ok.field_e = WidgetContainer.field_E;
+              TutorialTransition.field_e = WidgetContainer.field_E;
               if (HoldTheLine.field_D != 0) {
-                ok.field_e = -1;
+                TutorialTransition.field_e = -1;
               }
             }
           } else {
-            ok.field_e = -1;
+            TutorialTransition.field_e = -1;
           }
         }
         if (param0 <= 82) {
@@ -1244,7 +1244,7 @@ final class ti extends pc {
           this.field_o == 3) {
           var3 = 0;
           while (var3 < 4) {
-            mg.field_g[var3] = null;
+            RotatedSpriteCache.field_g[var3] = null;
             var3++;
             if (var5 != 0) {
               decompiledFrameCompleted0 = false;
@@ -1260,7 +1260,7 @@ final class ti extends pc {
           ArchiveRequest.field_s = 0;
           qd.field_h = 2;
           this.field_p = 0;
-          ci.field_j = -1;
+          ArchiveCatalog.field_j = -1;
         }
         if (10 != this.field_o &&
           this.field_o != 11) {
@@ -1270,8 +1270,8 @@ final class ti extends pc {
         }
         this.field_c = stackIn_26_1;
         SocketConnector.field_a = 0;
-        ok.field_e = -1;
-        g.field_o = 0;
+        TutorialTransition.field_e = -1;
+        LinearPointPath.field_o = 0;
         this.field_v = -1;
         if (this.field_o == 0 &&
           StrongCacheEntry.field_v != -1) {
@@ -1336,7 +1336,7 @@ final class ti extends pc {
         int var3;
         int var4;
         var4 = HoldTheLine.field_D;
-        var3 = em.field_i[this.field_o][param1];
+        var3 = AgeValidator.field_i[this.field_o][param1];
         switch ((var4 == 0
           || var3 == 10
           || var3 == 19
@@ -1344,12 +1344,12 @@ final class ti extends pc {
           ) ? var3 : -1) {
           case 10:
           case 5:
-            fieldTemp$0 = g.field_o + 1;
-            g.field_o = g.field_o + 1;
+            fieldTemp$0 = LinearPointPath.field_o + 1;
+            LinearPointPath.field_o = LinearPointPath.field_o + 1;
             if (fieldTemp$0 <= 1) {
               break;
             }
-            g.field_o = 0;
+            LinearPointPath.field_o = 0;
             if (var4 == 0) {
               break;
             }
@@ -1386,13 +1386,13 @@ final class ti extends pc {
                 break;
               }
               SecondaryNodeDeque.field_d = 256;
-              qf.a(293, StrongCacheEntry.field_r);
+              MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               if (var4 == 0) {
                 break;
               }
             }
             SecondaryNodeDeque.field_d = 32 * (1 + SecondaryNodeDeque.field_d * 8 / 256);
-            qf.a(293, StrongCacheEntry.field_r);
+            MatchingTextValidator.a(293, StrongCacheEntry.field_r);
             if (var4 == 0) {
               break;
             }
@@ -1408,9 +1408,9 @@ final class ti extends pc {
               break;
             }
           case 21:
-            qf.a(293, StrongCacheEntry.field_r);
-            stackIn_45_0 = !(em.field_o);
-            em.field_o = stackIn_45_0;
+            MatchingTextValidator.a(293, StrongCacheEntry.field_r);
+            stackIn_45_0 = !(AgeValidator.field_o);
+            AgeValidator.field_o = stackIn_45_0;
             this.field_q[param1] = 50;
           default:
             break;
@@ -1563,12 +1563,12 @@ final class ti extends pc {
                                             }
                                           }
                                           if (null == MidiPcmStream.field_U) {
-                                            oe.b((byte) 108);
+                                            QuadraticPointPath.b((byte) 108);
                                             if (var7 == 0) {
                                               break regionExit2;
                                             }
                                           }
-                                          em.a(-29486, false);
+                                          AgeValidator.a(-29486, false);
                                           if (var7 == 0) {
                                             break regionExit2;
                                           }
@@ -1601,7 +1601,7 @@ final class ti extends pc {
                                   }
                                   if (this.field_o == 10 &&
                                     0.0f < this.field_t &&
-                                    3 == ek.field_x) {
+                                    3 == CheckboxRenderer.field_x) {
                                     wm.a(param1, false, 13);
                                     if (var7 == 0) {
                                       break regionExit2;
@@ -1617,7 +1617,7 @@ final class ti extends pc {
                                   break regionExit2;
                                 }
                               }
-                              if (g.field_o != 0) {
+                              if (LinearPointPath.field_o != 0) {
                                 stackIn_86_1 = 0;
                               } else {
                                 stackIn_86_1 = 4;
@@ -1646,7 +1646,7 @@ final class ti extends pc {
                                 stackIn_101_0 = (0 != ClientException.field_c) ? 8 : 12;
                                 var6 = stackIn_101_0;
                               }
-                              qf.a(var6, true, 3865, param1);
+                              MatchingTextValidator.a(var6, true, 3865, param1);
                               if (var7 == 0) {
                                 break regionExit2;
                               }
@@ -1656,7 +1656,7 @@ final class ti extends pc {
                               break regionExit2;
                             }
                           }
-                          if (g.field_o == 0) {
+                          if (LinearPointPath.field_o == 0) {
                             stackIn_108_1 = 9;
                           } else {
                             stackIn_108_1 = 0;
@@ -1689,10 +1689,10 @@ final class ti extends pc {
                         break regionExit2;
                       }
                       if (~GameKeyHandler.field_b != ~pj.field_m ||
-                        ~ha.field_p != ~wa.field_j) {
+                        ~ha.field_p != ~PasswordValidator.field_j) {
                         this.field_t = this.field_t - 640.0f;
                         GameKeyHandler.field_b = pj.field_m;
-                        wa.field_j = ha.field_p;
+                        PasswordValidator.field_j = ha.field_p;
                       }
                       pj.field_m = var5;
                       this.field_p = 640;
@@ -1736,7 +1736,7 @@ final class ti extends pc {
                       break regionExit2;
                     }
                   }
-                  if (!nd.field_e) {
+                  if (!NameAvailabilityResult.field_e) {
                     wm.a(param1, false, 13);
                     this.field_v = param0;
                     if (var7 == 0) {
@@ -1748,10 +1748,10 @@ final class ti extends pc {
                     break regionExit2;
                   }
                 }
-                if (ek.field_x != 2 &&
-                  ek.field_x != 6) {
-                  if (ek.field_x != 4 &&
-                    ek.field_x != 5) {
+                if (CheckboxRenderer.field_x != 2 &&
+                  CheckboxRenderer.field_x != 6) {
+                  if (CheckboxRenderer.field_x != 4 &&
+                    CheckboxRenderer.field_x != 5) {
                     ij.a(param1, -81);
                     if (var7 == 0) {
                       break regionExit2;
@@ -1828,38 +1828,38 @@ final class ti extends pc {
         mc.field_a[6] = new om(12, 6, 352, 0);
         mc.field_a[7] = new om(12, 6, 352, 0);
         mc.field_a[8] = new om(12, 6, 352, 0);
-        mc.field_a[9] = new om(4, 1180, IsaacRandom.field_f, fh.field_d, -1);
+        mc.field_a[9] = new om(4, 1180, IsaacRandom.field_f, EmailLoginCredentials.field_d, -1);
         mc.field_a[10] = null;
-        mc.field_a[11] = new om(4, 8300, wb.field_d, ao.field_d, -1);
+        mc.field_a[11] = new om(4, 8300, Vector2i.field_d, ao.field_d, -1);
         mc.field_a[12] = new om(10, 0, DiskCacheWorker.field_b, 2);
         mc.field_a[13] = new om(15, 0, t.field_i, 2);
         mc.field_a[14] = new om(20, 0, cd.field_d, 2);
-        mc.field_a[15] = new om(25, 0, ci.field_k, 2);
+        mc.field_a[15] = new om(25, 0, ArchiveCatalog.field_k, 2);
         mc.field_a[16] = new om(40, 0, BufferedRandomAccessFile.field_o, 2);
         mc.field_a[17] = new om(25, 50, 524320, SingleChildWidget.field_A, 0);
         mc.field_a[18] = new om(25, 50, 524320, aj.field_c, 0);
         mc.field_a[19] = new om(25, 50, 524320, MouseWheelInput.field_c, 0);
         mc.field_a[20] = new om(15, 30, 32, ie.field_k, 0);
-        mc.field_a[21] = new om(15, 30, 32, sj.field_I, 0);
+        mc.field_a[21] = new om(15, 30, 32, CheckboxWidget.field_I, 0);
         mc.field_a[22] = new om(15, 30, 32, MusicPatch.field_u, 0);
         mc.field_a[23] = new om(10, 10, 16384, MusicPatchPcmStream.field_s, 0);
-        mc.field_a[24] = new om(5, 0, vh.field_i, 0);
+        mc.field_a[24] = new om(5, 0, DialWidgetRenderer.field_i, 0);
         mc.field_a[25] = new om(5, 0, ae.field_b, 0);
         mc.field_a[26] = new om(5, 0, ma.field_l, 0);
         mc.field_a[27] = new om(80, 40, 1081376, h.field_b, 0);
-        mc.field_a[28] = new om(80, 4, 32, pd.field_h, 1);
+        mc.field_a[28] = new om(80, 4, 32, UsernameLoginCredentials.field_h, 1);
         mc.field_a[29] = new om(10, 0, aj.field_a, -1);
         mc.field_a[30] = new om(15, 25, 16416, gh.field_a, 0);
         mc.field_a[31] = new om(15, 25, 16416, SocketJs5Transport.field_r, 0);
         mc.field_a[32] = new om(10, 0, 16384, TickClock.field_a, 2);
         mc.field_a[33] = new om(15, 0, 16384, UiWidget.field_r, 2);
         mc.field_a[34] = new om(20, 0, 16384, MusicCrossfadeStream.field_o, 2);
-        mc.field_a[35] = new om(15, 0, 16384, aa.field_q, 2);
+        mc.field_a[35] = new om(15, 0, 16384, DelayedServerPacket.field_q, 2);
         mc.field_a[36] = new om(20, 0, 16384, kc.field_d, 2);
-        mc.field_a[37] = new om(25, 0, 16384, nd.field_c, 2);
-        mc.field_a[38] = new om(50, 50, 16416, ig.field_t, ko.field_c, 0);
+        mc.field_a[37] = new om(25, 0, 16384, NameAvailabilityResult.field_c, 2);
+        mc.field_a[38] = new om(50, 50, 16416, LayeredButtonRenderer.field_t, ko.field_c, 0);
         mc.field_a[39] = new om(5, 0, UiWidget.field_j, 0);
-        mc.field_a[40] = new om(5, 0, mo.field_r, 0);
+        mc.field_a[40] = new om(5, 0, SpriteButtonRenderer.field_r, 0);
         mc.field_a[41] = new om(10, 10, 65568, NameSuggestionsPanel.field_J, 0);
         mc.field_a[42] = new om(10, 10, 65568, gk.field_b, 0);
         mc.field_a[43] = new om(10, 10, 16384, om.field_i, 0);
@@ -1871,15 +1871,15 @@ final class ti extends pc {
         mc.field_a[46] = new om(10, 16384, co.field_b, 2);
         mc.field_a[47] = new om(15, 16384, MusicCrossfadeStream.field_A, 2);
         mc.field_a[48] = new om(20, 16384, uk.field_b, 2);
-        mc.field_a[49] = new om(25, 16384, ac.field_c, 2);
+        mc.field_a[49] = new om(25, 16384, ArchiveLoadProgress.field_c, 2);
         mc.field_a[50] = new om(40, 16384, ri.field_a, 2);
-        mc.field_a[51] = new om(15, 32, ci.field_l, 0);
+        mc.field_a[51] = new om(15, 32, ArchiveCatalog.field_l, 0);
         mc.field_a[52] = new om(10, 32, fj.field_s, 0);
         mc.field_a[53] = new om(5, 25, 32, ResourceArchive.field_f, 3);
         mc.field_a[54] = new om(3, 40, ai.field_b, 3);
         mc.field_a[55] = new om(80, 40, 32, um.field_e, 0);
         mc.field_a[56] = new om(8, 4, 1146912, we.field_p, 0);
-        mc.field_a[57] = new om(15, 7, 32, lc.field_c, 0);
+        mc.field_a[57] = new om(15, 7, 32, EmailValidationResult.field_c, 0);
         mc.field_a[58] = new om(10, 16384, jo.field_a, 2);
         mc.field_a[59] = new om(15, 16384, hm.field_b, 2);
         mc.field_a[60] = new om(20, 16384, Vector2f.field_b, 2);
@@ -1894,7 +1894,7 @@ final class ti extends pc {
         mc.field_a[69] = new om(12, 6, 352, 0);
         mc.field_a[70] = new om(10, 10, 360488, DropTargetWidget.field_K, fk.field_c, -1);
         mc.field_a[71] = new om(10, 10, 360489, jk.field_p, fk.field_c, -1);
-        mc.field_a[72] = new om(12, 360490, la.field_g, -1);
+        mc.field_a[72] = new om(12, 360490, DirectByteStorage.field_g, -1);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -1941,7 +1941,7 @@ final class ti extends pc {
           } else {
             bn.a(ha.field_p + 4, -107);
             if (pj.b((byte) 118)) {
-              cg.a(30 - param1, 170, 580, (byte) 41, 260);
+              TutorialAction.a(30 - param1, 170, 580, (byte) 41, 260);
               var3 = 280;
               q.a(EditableTextField.field_M, nm.field_c, 0, -param1 + 320, (byte) -128, var3 - nm.field_c.field_G);
               q.a(ue.field_b, nm.field_c, 0, -param1 + 320, (byte) -127, var3);
@@ -1950,7 +1950,7 @@ final class ti extends pc {
               }
             }
             if (1 == this.field_y) {
-              this.a(GameKeyHandler.field_b, -(int)this.field_t + param1, wa.field_j, (byte) 116);
+              this.a(GameKeyHandler.field_b, -(int)this.field_t + param1, PasswordValidator.field_j, (byte) 116);
               this.a(pj.field_m, -(int)this.field_t + (param1 + 640), ha.field_p, (byte) -108);
               if (var4 == 0) {
                 break scanLoop1;
@@ -1962,7 +1962,7 @@ final class ti extends pc {
           this.a(stackIn_18_1, stackIn_18_2, ha.field_p, (byte) 83);
           break;
         }
-        ni.field_a.b(e.field_b, 320 + param1, 474, 0, -1);
+        ni.field_a.b(QuickChatDynamicCommand.field_b, 320 + param1, 474, 0, -1);
         return;
     }
 
@@ -1983,7 +1983,7 @@ final class ti extends pc {
         }
         stackIn_5_0 = ((1 << param0 & field_z) == 0) ? 0 : 1;
         var3 = stackIn_5_0;
-        stackIn_11_0 = (var3 != 0) || (15 != param0) || (kb.a(16616, 0));
+        stackIn_11_0 = (var3 != 0) || (15 != param0) || (LoginCredentialType.a(16616, 0));
         return stackIn_11_0;
     }
 
@@ -2045,7 +2045,7 @@ final class ti extends pc {
     }
 
     final void e(int param0) {
-        this.field_a = em.field_i[this.field_o].length;
+        this.field_a = AgeValidator.field_i[this.field_o].length;
         int var2 = 76 % ((param0 - 25) / 35);
         this.field_q = new int[this.field_a];
     }
@@ -2077,7 +2077,7 @@ final class ti extends pc {
         if (this.field_o != 12 &&
           this.field_y <= 1) {
           while (qh.c(-47)) {
-            stackIn_107_0 = aa.field_n;
+            stackIn_107_0 = DelayedServerPacket.field_n;
             stackIn_107_1 = 13;
             if (var5 != 0) {
               decompiledFrameCompleted0 = false;
@@ -2085,25 +2085,25 @@ final class ti extends pc {
             }
             if (stackIn_107_0 == stackIn_107_1 &&
               0 != this.field_o &&
-              em.field_i[this.field_o].length > 0 && (2 == em.field_i[this.field_o][0] ||
-              0 == em.field_i[this.field_o][0] ||
-              em.field_i[this.field_o][0] == 4 ||
-              em.field_i[this.field_o][0] == 3)) {
+              AgeValidator.field_i[this.field_o].length > 0 && (2 == AgeValidator.field_i[this.field_o][0] ||
+              0 == AgeValidator.field_i[this.field_o][0] ||
+              AgeValidator.field_i[this.field_o][0] == 4 ||
+              AgeValidator.field_i[this.field_o][0] == 3)) {
               this.c(0, -3565);
             }
-            if (mg.field_c) {
-              if (aa.field_n == 28) {
+            if (RotatedSpriteCache.field_c) {
+              if (DelayedServerPacket.field_n == 28) {
                 CurvedRoadSegment.field_T = false;
                 wm.a(false, false, 12);
               }
-              if (aa.field_n == 1) {
-                stackIn_33_0 = !(kb.field_c);
-                kb.field_c = stackIn_33_0;
+              if (DelayedServerPacket.field_n == 1) {
+                stackIn_33_0 = !(LoginCredentialType.field_c);
+                LoginCredentialType.field_c = stackIn_33_0;
               }
             }
-            if (mg.field_c &&
-              aa.field_n == 1 &&
-              mg.field_c &&
+            if (RotatedSpriteCache.field_c &&
+              DelayedServerPacket.field_n == 1 &&
+              RotatedSpriteCache.field_c &&
               IterableSecondaryNodeDeque.field_g[82]) {
               ao.field_b = 3;
               l.field_b = true;
@@ -2125,7 +2125,7 @@ final class ti extends pc {
               if (-1 == this.field_c) {
                 continue;
               }
-              if (em.field_i[this.field_o][this.field_c] != 25) {
+              if (AgeValidator.field_i[this.field_o][this.field_c] != 25) {
                 continue;
               }
               if (!(2 <= qd.field_h) ||
@@ -2177,8 +2177,8 @@ final class ti extends pc {
             } else {
               if (this.field_y == 0) {
                 if (this.field_s == 0) {
-                  ValidationHelpWidget.a(17405, 64, 0, j.field_c.field_f);
-                  ValidationHelpWidget.a(17405, 64, 256, j.field_c.field_h);
+                  ValidationHelpWidget.a(17405, 64, 0, HuffmanDecoder.field_c.field_f);
+                  ValidationHelpWidget.a(17405, 64, 256, HuffmanDecoder.field_c.field_h);
                 }
                 this.field_s = this.field_s + 1;
                 if (~(this.field_a * 5 + 25) != ~this.field_s) {
@@ -2222,7 +2222,7 @@ final class ti extends pc {
               this.field_p = 0;
               this.field_t = 0.0f;
               GameKeyHandler.field_b = pj.field_m;
-              wa.field_j = ha.field_p;
+              PasswordValidator.field_j = ha.field_p;
             }
           }
           stackIn_107_0 = -125;
@@ -2274,20 +2274,20 @@ final class ti extends pc {
         if (stackIn_10_0 == stackIn_10_1) {
           return -1;
         }
-        if (em.field_i[this.field_o][var4] == 5) {
-          g.field_o = fj.a(va.field_c, (byte) -119, param2);
+        if (AgeValidator.field_i[this.field_o][var4] == 5) {
+          LinearPointPath.field_o = fj.a(SpriteSheetAsset.field_c, (byte) -119, param2);
           return var4;
         }
-        if (em.field_i[this.field_o][var4] == 10) {
-          g.field_o = fj.a(qd.field_l, (byte) -119, param2);
+        if (AgeValidator.field_i[this.field_o][var4] == 10) {
+          LinearPointPath.field_o = fj.a(qd.field_l, (byte) -119, param2);
           return var4;
         }
-        if (em.field_i[this.field_o][var4] == 24) {
+        if (AgeValidator.field_i[this.field_o][var4] == 24) {
           ArchiveRequest.field_s = fj.a(DiskCacheWorker.field_a, (byte) -119, param2);
           return var4;
         }
-        if (em.field_i[this.field_o][var4] == 25) {
-          qd.field_h = fj.a(mo.field_v, (byte) -119, param2);
+        if (AgeValidator.field_i[this.field_o][var4] == 25) {
+          qd.field_h = fj.a(SpriteButtonRenderer.field_v, (byte) -119, param2);
           return var4;
         }
         if (param2 >= this.field_m &&
@@ -2303,7 +2303,7 @@ final class ti extends pc {
         if (this.field_o == 1) {
           return param0 == 0 ? 43 : 35 * (param0 - 1) + 165 - var3;
         }
-        if (em.field_i[this.field_o][param0] == 26) {
+        if (AgeValidator.field_i[this.field_o][param0] == 26) {
           return 445;
         }
         return -var3 + ((this.field_o != 0 ? 43 : 165) + 35 * param0);
@@ -2344,7 +2344,7 @@ final class ti extends pc {
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
         var9 = (int)((double)we.field_n * (-Math.exp((double)((float)var7 * 0.20000000298023224f)) + 1.0));
-        var10 = em.field_i[this.field_o][param1];
+        var10 = AgeValidator.field_i[this.field_o][param1];
         var11 = var10;
         decompiledFrameRemainder0 = ((var11 == 18 &&
           var12 == 0) || var11 == 19);
@@ -2370,7 +2370,7 @@ final class ti extends pc {
             }
             decompiledFrameRemainder1 = !(-ValidationHelpWidget.field_S + ImageProducerRasterBuffer.field_m <= 20);
             if (decompiledFrameRemainder1) {
-              qf.a(293, StrongCacheEntry.field_r);
+              MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               ValidationHelpWidget.field_S = ImageProducerRasterBuffer.field_m;
             }
           }
@@ -2407,8 +2407,8 @@ final class ti extends pc {
         if (0 == this.field_o) {
           StrongCacheEntry.field_v = param0;
         }
-        qf.a(293, StrongCacheEntry.field_r);
-        this.a(em.field_i[this.field_o][param0], !this.field_g ? true : false, 103);
+        MatchingTextValidator.a(293, StrongCacheEntry.field_r);
+        this.a(AgeValidator.field_i[this.field_o][param0], !this.field_g ? true : false, 103);
     }
 
     private final void d(int param0) {
@@ -2423,7 +2423,7 @@ final class ti extends pc {
         }
         while (var2 < 16) {
           if (var4 == 0) {
-            if (ok.field_e == var2) {
+            if (TutorialTransition.field_e == var2) {
               stackIn_9_0 = 48;
             } else {
               stackIn_9_0 = (~WidgetContainer.field_E != ~var2) ? 32 : 40;
@@ -2515,12 +2515,12 @@ final class ti extends pc {
           default:
             throw new RuntimeException();
         }
-        cg.a(30 - param1, 170, 580, (byte) 41, 260);
-        if (null == mg.field_g[param2] &&
+        TutorialAction.a(30 - param1, 170, 580, (byte) 41, 260);
+        if (null == RotatedSpriteCache.field_g[param2] &&
           -1 != var5) {
-          mg.field_g[param2] = il.a(5, 3, var5, 10, (byte) -66);
+          RotatedSpriteCache.field_g[param2] = il.a(5, 3, var5, 10, (byte) -66);
         }
-        var7 = mg.field_g[param2].field_m;
+        var7 = RotatedSpriteCache.field_g[param2].field_m;
         var8 = 0;
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var8 >= 4))) {
@@ -2531,7 +2531,7 @@ final class ti extends pc {
             if (var10_ref_hj != null) {
               stackIn_23_1 = -141;
               stackIn_23_2 = var10_ref_hj;
-              if (~var8 != ~ci.field_j) {
+              if (~var8 != ~ArchiveCatalog.field_j) {
                 stackIn_24_3 = vk.field_q[param2];
               } else {
                 stackIn_24_3 = 16777215;
@@ -2540,7 +2540,7 @@ final class ti extends pc {
               stackIn_26_4 = -param1 + (32 + TextHotspotWidget.field_K[var8]);
               stackIn_26_5 = 190;
               stackIn_26_6 = 2;
-              if (ci.field_j != var8) {
+              if (ArchiveCatalog.field_j != var8) {
                 stackIn_27_0 = this;
                 stackIn_27_7 = RoadSegment.field_l[param2];
               } else {
@@ -2563,10 +2563,10 @@ final class ti extends pc {
         if (var7 != null) {
           var21 = var7[param0];
           var9 = var21;
-          dupTemp$0 = mg.field_g[param2].field_k[param0];
+          dupTemp$0 = RotatedSpriteCache.field_g[param2].field_k[param0];
           var22 = dupTemp$0;
           var10_ref_long__ = dupTemp$0;
-          var11 = mg.field_g[param2].field_p[param0];
+          var11 = RotatedSpriteCache.field_g[param2].field_p[param0];
           var12 = -1;
           var13 = -1;
           var14 = 0;
@@ -2603,11 +2603,11 @@ final class ti extends pc {
                 }
               }
               stackIn_52_0 = 0;
-              stackIn_52_1 = ~ci.field_j;
+              stackIn_52_1 = ~ArchiveCatalog.field_j;
               if (stackIn_52_0 != stackIn_52_1 && (var13 == -1 ||
-                var14 > var11[var15 * 5 + 1 + ci.field_j])) {
+                var14 > var11[var15 * 5 + 1 + ArchiveCatalog.field_j])) {
                 var13 = var15;
-                var14 = var11[1 + 5 * var15 + ci.field_j];
+                var14 = var11[1 + 5 * var15 + ArchiveCatalog.field_j];
               }
             }
             var15++;
@@ -2629,15 +2629,15 @@ final class ti extends pc {
                 }
                 var17 = stackIn_68_0;
                 var18 = var21[var16_int];
-                am.a(-param1 + 54, 1 + var16_int + ". ", true, HoldTheLine.field_F, var15, var17);
-                ei.a(54 - param1, 1, var18, var17, var15, HoldTheLine.field_F);
+                LinkWidgetRenderer.a(-param1 + 54, 1 + var16_int + ". ", true, HoldTheLine.field_F, var15, var17);
+                GrowableObjectList.a(54 - param1, 1, var18, var17, var15, HoldTheLine.field_F);
                 if (var12 != var16_int) {
                   stackIn_73_0 = (var13 != var16_int) ? 1 : 2;
                 } else {
                   stackIn_73_0 = 5;
                 }
                 var17 = stackIn_73_0;
-                ei.a(-param1 + 235, 1, cb.a(42, -var11[5 * var16_int]), var17, var15, HoldTheLine.field_F);
+                GrowableObjectList.a(-param1 + 235, 1, DisplayNameValidator.formatPreciseRaceTime(42, -var11[5 * var16_int]), var17, var15, HoldTheLine.field_F);
                 if (~var16_int != ~var13) {
                   stackIn_78_0 = (var12 != var16_int) ? 0 : 5;
                 } else {
@@ -2646,7 +2646,7 @@ final class ti extends pc {
                 var17 = stackIn_78_0;
                 var19 = 0;
                 while (var19 < 4) {
-                  q.a(io.a(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + TextHotspotWidget.field_K[var19] - param1, (byte) -127, var15);
+                  q.a(AccountFormText.formatRaceTime(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + TextHotspotWidget.field_K[var19] - param1, (byte) -127, var15);
                   var19++;
                 }
                 var8 = 1;
@@ -2657,12 +2657,12 @@ final class ti extends pc {
             if ((decompiledFrameCompleted0) && (-1 == var12 &&
               eb.field_o != null &&
               var5 == eb.field_o.field_j)) {
-              var16 = ng.field_e;
-              ei.a(-param1 + 54, 1, var16, 5, var15, HoldTheLine.field_F);
-              ei.a(240 - param1, 1, cb.a(48, -eb.field_o.field_r[0]), 5, var15, HoldTheLine.field_F);
+              var16 = QuickChatPhraseCache.field_e;
+              GrowableObjectList.a(-param1 + 54, 1, var16, 5, var15, HoldTheLine.field_F);
+              GrowableObjectList.a(240 - param1, 1, DisplayNameValidator.formatPreciseRaceTime(48, -eb.field_o.field_r[0]), 5, var15, HoldTheLine.field_F);
               var17 = 0;
               while (var17 < 4) {
-                q.a(io.a(eb.field_o.field_r[1 + var17], (byte) -61), HoldTheLine.field_F, 5, TextHotspotWidget.field_K[var17] + (32 - param1), (byte) -127, var15);
+                q.a(AccountFormText.formatRaceTime(eb.field_o.field_r[1 + var17], (byte) -61), HoldTheLine.field_F, 5, TextHotspotWidget.field_K[var17] + (32 - param1), (byte) -127, var15);
                 var17++;
                 if (var20 != 0) {
                   return;
@@ -2682,10 +2682,10 @@ final class ti extends pc {
           if (var7 == null) {
             stackIn_102_0 = fm.field_b;
           } else {
-            if (!mg.field_g[param2].field_j) {
+            if (!RotatedSpriteCache.field_g[param2].field_j) {
               stackIn_102_0 = ri.field_d;
             } else {
-              stackIn_102_0 = an.field_d;
+              stackIn_102_0 = GzipDecompressor.field_d;
             }
           }
         }
@@ -2700,18 +2700,18 @@ final class ti extends pc {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_6_1 = 0;
-        if (99 != aa.field_n &&
-          aa.field_n != 98) {
+        if (99 != DelayedServerPacket.field_n &&
+          DelayedServerPacket.field_n != 98) {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_c != 0) {
             if (this.field_c == 1) {
-              if (aa.field_n == 84) {
-                qf.a(293, StrongCacheEntry.field_r);
+              if (DelayedServerPacket.field_n == 84) {
+                MatchingTextValidator.a(293, StrongCacheEntry.field_r);
                 if (tn.field_a != -1 &&
                   tn.field_a != ha.field_p) {
                   if (~pj.field_m != ~GameKeyHandler.field_b ||
-                    ~wa.field_j != ~ha.field_p) {
-                    wa.field_j = ha.field_p;
+                    ~PasswordValidator.field_j != ~ha.field_p) {
+                    PasswordValidator.field_j = ha.field_p;
                     this.field_t = this.field_t - 640.0f;
                     GameKeyHandler.field_b = pj.field_m;
                   }
@@ -2719,14 +2719,14 @@ final class ti extends pc {
                   ha.field_p = tn.field_a;
                 }
               }
-              if (aa.field_n == 96) {
+              if (DelayedServerPacket.field_n == 96) {
                 fieldTemp$0 = tn.field_a - 1;
                 tn.field_a = tn.field_a - 1;
                 if (fieldTemp$0 < 0) {
                   tn.field_a = 3;
                 }
               }
-              if (97 == aa.field_n) {
+              if (97 == DelayedServerPacket.field_n) {
                 fieldTemp$1 = tn.field_a + 1;
                 tn.field_a = tn.field_a + 1;
                 if (fieldTemp$1 >= 4) {
@@ -2737,7 +2737,7 @@ final class ti extends pc {
             }
             if (decompiledFrameRemainder0) {
               if (param0 != -1) {
-                field_u = (j) null;
+                field_u = (HuffmanDecoder) null;
               }
               return;
             }
@@ -2772,19 +2772,19 @@ final class ti extends pc {
         if (param0 != 1) {
           this.i(-61);
         }
-        var3 = em.field_i[this.field_o][param1];
+        var3 = AgeValidator.field_i[this.field_o][param1];
         switch ((var4 == 0
           || var3 == 19
           || var3 == 25
           ) ? var3 : -1) {
           case 10:
           case 5:
-            fieldTemp$0 = g.field_o - 1;
-            g.field_o = g.field_o - 1;
+            fieldTemp$0 = LinearPointPath.field_o - 1;
+            LinearPointPath.field_o = LinearPointPath.field_o - 1;
             if (fieldTemp$0 >= 0) {
               break;
             }
-            g.field_o = 1;
+            LinearPointPath.field_o = 1;
             if (var4 == 0) {
               break;
             }
@@ -2818,7 +2818,7 @@ final class ti extends pc {
           case 18:
             if (SecondaryNodeDeque.field_d > 32) {
               SecondaryNodeDeque.field_d = -32 + 32 * ((SecondaryNodeDeque.field_d * 8 + 256 - 1) / 256);
-              qf.a(293, StrongCacheEntry.field_r);
+              MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               if (var4 == 0) {
                 break;
               }
@@ -2827,7 +2827,7 @@ final class ti extends pc {
               break;
             }
             SecondaryNodeDeque.field_d = 0;
-            qf.a(293, StrongCacheEntry.field_r);
+            MatchingTextValidator.a(293, StrongCacheEntry.field_r);
             if (var4 == 0) {
               break;
             }
@@ -2846,9 +2846,9 @@ final class ti extends pc {
     }
 
     ti(int param0) {
-        super(em.field_i[param0].length, 15, 360, 165, 35);
+        super(AgeValidator.field_i[param0].length, 15, 360, 165, 35);
         this.field_o = param0;
-        this.field_q = new int[em.field_i[param0].length];
+        this.field_q = new int[AgeValidator.field_i[param0].length];
         EditableTextField.field_J = new int[16];
         SecondaryNodeDequeIterator.field_h = new int[16];
         dm.field_e = new int[16];
@@ -2905,7 +2905,7 @@ final class ti extends pc {
         int var10Lifetime1;
         int var11Lifetime1;
         var14 = HoldTheLine.field_D;
-        var5 = em.field_i[this.field_o][param1];
+        var5 = AgeValidator.field_i[this.field_o][param1];
         if (this.field_y >= 3 &&
           var5 != this.field_v) {
           return;
@@ -2950,9 +2950,9 @@ final class ti extends pc {
         }
         if (var5 == 3) {
           if (TextLayout.field_a != 0 &&
-            0 != ej.field_b) {
+            0 != ByteStorage.field_b) {
             if (TextLayout.field_a == 1 ||
-              ej.field_b == 1) {
+              ByteStorage.field_b == 1) {
               var8 = Bzip2State.field_J;
               if (var14 != 0) {
                 var8 = uk.field_c[0];
@@ -2963,7 +2963,7 @@ final class ti extends pc {
           }
         }
         if (var5 == 6) {
-          if (ek.field_x != 1) {
+          if (CheckboxRenderer.field_x != 1) {
             stackIn_35_0 = hk.field_b;
           } else {
             stackIn_35_0 = DialogLayer.field_J;
@@ -2971,7 +2971,7 @@ final class ti extends pc {
           var8 = stackIn_35_0;
         }
         if (12 == var5 &&
-          nd.field_e) {
+          NameAvailabilityResult.field_e) {
           var8 = eb.field_p.toUpperCase();
         }
         if (var5 == 7 &&
@@ -2982,7 +2982,7 @@ final class ti extends pc {
         if (var5 == 8) {
           if (this.field_o == 10 &&
             0.0f < this.field_t &&
-            ek.field_x == 3) {
+            CheckboxRenderer.field_x == 3) {
             var8 = IntrusiveNode.field_c.toUpperCase();
             if (var14 != 0) {
               var8 = ka.field_e.toUpperCase();
@@ -3029,12 +3029,12 @@ final class ti extends pc {
               }
               if (decompiledFrameRemainder0) {
                 if (var5 == 5) {
-                  stackIn_79_0 = va.field_c;
+                  stackIn_79_0 = SpriteSheetAsset.field_c;
                   stackIn_79_1 = PacketBuffer.field_n;
                   stackIn_79_2 = -120;
                   if (param2 &&
                     1 == this.field_y) {
-                    stackIn_80_3 = g.field_o;
+                    stackIn_80_3 = LinearPointPath.field_o;
                   } else {
                     stackIn_80_3 = -1;
                   }
@@ -3048,7 +3048,7 @@ final class ti extends pc {
                     stackIn_85_2 = -127;
                     if (param2 &&
                       this.field_y == 1) {
-                      stackIn_87_3 = g.field_o;
+                      stackIn_87_3 = LinearPointPath.field_o;
                     } else {
                       stackIn_87_3 = -1;
                     }
@@ -3063,7 +3063,7 @@ final class ti extends pc {
                       var11 = var10 * 381 / 2560000;
                       var12 = (-nm.field_c.a(var8) + 640) / 2;
                       var13 = 15 + var10 * (-15 + var12) / 2560000;
-                      rd.a(var11, var9, (byte) -83, var13, param0, var8);
+                      RoadStripRenderer.a(var11, var9, (byte) -83, var13, param0, var8);
                       decompiledFrameRemainder0 = (var14 != 0);
                     }
                     if (decompiledFrameRemainder0) {
@@ -3078,9 +3078,9 @@ final class ti extends pc {
           if (decompiledFrameRemainder0) {
             var10_ref_String = uk.field_c[3];
             if (0 != TextLayout.field_a &&
-              ej.field_b != 0) {
+              ByteStorage.field_b != 0) {
               if (TextLayout.field_a == 1 ||
-                ej.field_b == 1) {
+                ByteStorage.field_b == 1) {
                 var10_ref_String = Bzip2State.field_J;
                 if (var14 != 0) {
                   var10_ref_String = uk.field_c[0];
@@ -3096,7 +3096,7 @@ final class ti extends pc {
             if (0 >= ih.field_p) {
               stackIn_103_3 = "";
             } else {
-              stackIn_103_3 = lg.field_r;
+              stackIn_103_3 = CachedTextLayout.field_r;
             }
             stackIn_102_1[stackIn_102_2] = stackIn_103_3;
             stackIn_102_0[1] = var10_ref_String;
@@ -3104,11 +3104,11 @@ final class ti extends pc {
             if (ih.field_p >= 6) {
               stackIn_106_3 = "";
             } else {
-              stackIn_106_3 = ej.field_d;
+              stackIn_106_3 = ByteStorage.field_d;
             }
             stackIn_102_0[stackIn_105_2] = stackIn_106_3;
             var11_ref_String__ = stackIn_102_0;
-            stackIn_109_0 = mo.field_v;
+            stackIn_109_0 = SpriteButtonRenderer.field_v;
             stackIn_109_1 = var11_ref_String__;
             stackIn_109_2 = -111;
             if (param2 &&
@@ -3240,7 +3240,7 @@ final class ti extends pc {
         }
         if (decompiledFrameRemainder0) {
           if (this.field_y == 2 &&
-            ej.field_b != -1) {
+            ByteStorage.field_b != -1) {
             var8_float = 0.10000000149011612f;
             var9_floatLifetime1 = (float)Math.exp((double)(-var8_float * 80.0f));
             var10 = this.field_r + 40;
@@ -3248,11 +3248,11 @@ final class ti extends pc {
             var6 = var6 + (int)((-1.0 + Math.exp((double)(var8_float * (float)(var10 + 5)))) * (double)(var9_floatLifetime1 * 300.0f));
           } else {
             if (2 < this.field_y &&
-              ej.field_b != -1) {
+              ByteStorage.field_b != -1) {
               return;
             }
             if (1 < this.field_y &&
-              ej.field_b == -1) {
+              ByteStorage.field_b == -1) {
               var8_float = 0.20000000298023224f;
               var9_floatLifetime1 = -(float)Math.exp((double)(-var8_float * (float)ImageProducerRasterBuffer.field_m)) + 1.0f;
               var4Lifetime1 = (int)(var9_floatLifetime1 * 342.0f) + 298;
@@ -3274,7 +3274,7 @@ final class ti extends pc {
         }
         vb.a(-72, we.field_o);
         SecondaryNodeDequeIterator.a(0);
-        ug.b(param0 + 10966);
+        MarkerSliderRenderer.restoreRasterTarget(param0 + 10966);
         SoftwareRasterizer.c(var6 - 5, var7 - 5, 10 + var4Lifetime1, var5 + 10, 0, 128);
         if (MusicPatchPcmStream.field_r != null &&
           MusicPatchPcmStream.field_r.field_r == 3) {
@@ -3284,7 +3284,7 @@ final class ti extends pc {
         var2 += 247;
         nm.field_c.b(jc.field_a, -var3Lifetime1 + 320, var2, 0, -1);
         var2 += 8;
-        var9 = go.field_g[var8.field_p];
+        var9 = RotatedSpriteAsset.field_g[var8.field_p];
         stackIn_31_0 = 166 - var3Lifetime1;
         stackIn_31_1 = -5 + var2;
         stackIn_31_2 = 148;
@@ -3296,7 +3296,7 @@ final class ti extends pc {
           stackIn_33_4 = 0;
         }
         SoftwareRasterizer.c(stackIn_31_0, stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_33_4, 128);
-        oe.field_i.a(104, var9[0], 9, 138).b(-var3Lifetime1 + 171, var2);
+        QuadraticPointPath.field_i.getSpriteOrPlaceholder(104, var9[0], 9, 138).b(-var3Lifetime1 + 171, var2);
         stackIn_36_0 = var3Lifetime1 + 326;
         stackIn_36_1 = -5 + var2;
         stackIn_36_2 = 148;
@@ -3308,7 +3308,7 @@ final class ti extends pc {
           stackIn_38_4 = 0;
         }
         SoftwareRasterizer.c(stackIn_36_0, stackIn_36_1, stackIn_36_2, stackIn_36_3, stackIn_38_4, 128);
-        oe.field_i.a(104, var9[1], 9, 138).b(var3Lifetime1 + 331, var2);
+        QuadraticPointPath.field_i.getSpriteOrPlaceholder(104, var9[1], 9, 138).b(var3Lifetime1 + 331, var2);
         var12 = 0;
         var20 = new int[4];
         var19 = var20;
@@ -3359,7 +3359,7 @@ final class ti extends pc {
                   if (t.field_j[var11Lifetime1Lifetime1] != 1) {
                     stackIn_65_0 = t.field_j[var11Lifetime1Lifetime1] + ij.field_a;
                   } else {
-                    stackIn_65_0 = la.field_h;
+                    stackIn_65_0 = DirectByteStorage.field_h;
                   }
                   var14 = stackIn_65_0;
                   nm.field_c.a(var14, -var3Lifetime1 + 170, var2, var11Lifetime1Lifetime1 + 6, -1);
@@ -3462,9 +3462,9 @@ final class ti extends pc {
         int var11 = 0;
         String var12 = null;
         int var13 = 0;
-        uf var14 = null;
-        uf var15 = null;
-        uf var16 = null;
+        SpriteAsset var14 = null;
+        SpriteAsset var15 = null;
+        SpriteAsset var16 = null;
         String var17 = null;
         String var18 = null;
         String var9Lifetime1;
@@ -3504,7 +3504,7 @@ final class ti extends pc {
           var9_int = (int)(stackIn_10_0 * (Math.exp((double)((float)stackIn_11_1 * var5)) - 1.0));
           if (MusicPatchPcmStream.field_r.vehicles[0].field_R < 3) {
             var14 = ha.field_o[MusicPatchPcmStream.field_r.vehicles[0].field_R];
-            if (null == var14.a(8192)) {
+            if (null == var14.getSprite(8192)) {
               ra.field_hb.a(352, var2 + (-var8 - 64));
               if (var13 != 0) {
                 var14.field_b.a(336, var2 - (var8 + 64));
@@ -3515,7 +3515,7 @@ final class ti extends pc {
           }
           if (3 > MusicPatchPcmStream.field_r.vehicles[1].field_R) {
             var15 = ha.field_o[MusicPatchPcmStream.field_r.vehicles[1].field_R];
-            if (var15.a(8192) == null) {
+            if (var15.getSprite(8192) == null) {
               ra.field_hb.a(192, var2 + (-var9_int - 64));
               if (var13 != 0) {
                 var15.field_b.a(176, -var9_int + var2 - 64);
@@ -3530,7 +3530,7 @@ final class ti extends pc {
           var8Lifetime3 = (int)((-1.0 + Math.exp((double)(var5 * (float)var7))) * (double)(300.0f * var6));
           if (MusicPatchPcmStream.field_r.vehicles[0].field_R < 3) {
             var16 = ha.field_o[MusicPatchPcmStream.field_r.vehicles[0].field_R];
-            if (var16.a(param0 + 8180) == null) {
+            if (var16.getSprite(param0 + 8180) == null) {
               ra.field_hb.a(272, -64 + (-var8Lifetime3 + var2));
               if (var13 != 0) {
                 var16.field_b.a(256, -64 + var2 - var8Lifetime3);
@@ -3541,7 +3541,7 @@ final class ti extends pc {
           }
         }
         var2 += 120;
-        if (ek.field_x == 5) {
+        if (CheckboxRenderer.field_x == 5) {
           if (this.field_y <= 1) {
             stackIn_33_0 = -ImageProducerRasterBuffer.field_m + var4;
           } else {
@@ -3586,11 +3586,11 @@ final class ti extends pc {
                   var8Lifetime2 = -var8Lifetime2 + 320;
                 }
                 if (~var9_intLifetime1 == ~MusicPatchPcmStream.field_r.vehicles[var10].field_R) {
-                  if (ek.field_x != 4) {
-                    if (ek.field_x != 5) {
+                  if (CheckboxRenderer.field_x != 4) {
+                    if (CheckboxRenderer.field_x != 5) {
                       var11 = SingleChildWidget.field_C[var9_intLifetime1];
                       if (var11 == 1) {
-                        stackIn_58_0 = la.field_h;
+                        stackIn_58_0 = DirectByteStorage.field_h;
                       } else {
                         stackIn_58_0 = var11 + ij.field_a;
                       }
@@ -3600,11 +3600,11 @@ final class ti extends pc {
                       if (pe.field_g[var10] == -1) {
                         nm.field_c.a(DualLinkNode.field_m, 40 + var8Lifetime2, var2, var10 + 6, -1);
                       } else {
-                        nm.field_c.a(cb.a(48, pe.field_g[var10]), 40 + var8Lifetime2, var2, var10 + 6, -1);
+                        nm.field_c.a(DisplayNameValidator.formatPreciseRaceTime(48, pe.field_g[var10]), 40 + var8Lifetime2, var2, var10 + 6, -1);
                       }
                     } else {
                       nm.field_c.c(rf.field_Y[var9_intLifetime1], var8Lifetime2 - 15, var2, var10 + 6, -1);
-                      stackIn_66_0 = (kb.a(param0 + 16604, 0)) ? 3 : 1;
+                      stackIn_66_0 = (LoginCredentialType.a(param0 + 16604, 0)) ? 3 : 1;
                       var11 = stackIn_66_0;
                       nm.field_c.a(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].field_Sb), 15 + var8Lifetime2, var2, 6 + var10, -1);
                       nm.field_c.a("-", 16 + var8Lifetime2 + 14 * var11, var2, 6 + var10, -1);
@@ -3613,7 +3613,7 @@ final class ti extends pc {
                   } else {
                     nm.field_c.c(rf.field_Y[var9_intLifetime1], -15 + var8Lifetime2, var2, var10 + 6, -1);
                     if (-1 != pe.field_g[var10]) {
-                      nm.field_c.a(cb.a(47, pe.field_g[var10]), 15 + var8Lifetime2, var2, var10 + 6, -1);
+                      nm.field_c.a(DisplayNameValidator.formatPreciseRaceTime(47, pe.field_g[var10]), 15 + var8Lifetime2, var2, var10 + 6, -1);
                     } else {
                       nm.field_c.a(DualLinkNode.field_m, var8Lifetime2 + 15, var2, 6 + var10, -1);
                     }
@@ -3627,41 +3627,41 @@ final class ti extends pc {
               continue;
             }
           } else {
-            stackIn_75_0 = ek.field_x;
+            stackIn_75_0 = CheckboxRenderer.field_x;
           }
           if (stackIn_75_0 != 5) {
             var2 += 30;
           }
           if (ImageProducerRasterBuffer.field_m % 50 < 25) {
-            if (ek.field_x == 2 &&
-              -1 != ce.field_r) {
-              var9 = sd.a(kj.field_n, new String[]{gh.field_t[ce.field_r]}, true);
+            if (CheckboxRenderer.field_x == 2 &&
+              -1 != OutlinedRoadStripRenderer.field_r) {
+              var9 = LoginCredentials.substituteIndexedTokens(SolidRoadStripRenderer.field_n, new String[]{gh.field_t[OutlinedRoadStripRenderer.field_r]}, true);
               if (!of.a(param0 - 981)) {
                 var9 = SingleChildWidget.field_E;
               }
               nm.field_c.b(var9, 320, var2, 1, -1);
             } else {
-              if (ek.field_x == 1) {
+              if (CheckboxRenderer.field_x == 1) {
                 if (EntitySound.field_l != 1) {
-                  stackIn_90_0 = sd.a(sh.field_c, new String[]{Integer.toString(EntitySound.field_l)}, true);
+                  stackIn_90_0 = LoginCredentials.substituteIndexedTokens(sh.field_c, new String[]{Integer.toString(EntitySound.field_l)}, true);
                 } else {
-                  stackIn_90_0 = va.field_f;
+                  stackIn_90_0 = SpriteSheetAsset.field_f;
                 }
                 var18 = stackIn_90_0;
                 var9 = var18;
                 nm.field_c.b(var18, 320, var2, 1, -1);
               } else {
-                if (6 == ek.field_x) {
+                if (6 == CheckboxRenderer.field_x) {
                   var17 = h.field_a;
                   nm.field_c.b(var17, 320, var2, 1, -1);
                 }
               }
             }
           }
-          if (1 == ek.field_x) {
+          if (1 == CheckboxRenderer.field_x) {
             var9Lifetime1 = DialogLayer.field_J;
           } else {
-            if (ek.field_x == 6) {
+            if (CheckboxRenderer.field_x == 6) {
               var9Lifetime1 = ka.field_e;
             } else {
               var9Lifetime1 = hk.field_b;
@@ -3745,14 +3745,14 @@ final class ti extends pc {
               var3 + 69 > NodeHashTableIterator.field_g &&
               (float)rf.field_X >= 845.0f - this.field_t &&
               (float)rf.field_X < 949.0f - this.field_t) {
-              t.field_l = go.field_g[ArchiveIndex.b((byte) -49).field_p][var2];
-              ci.a(0, (byte) 120, this.field_o, var2);
+              t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][var2];
+              ArchiveCatalog.a(0, (byte) 120, this.field_o, var2);
               this.field_c = 1;
               if (((ValidationIndicator.field_J == 1)) &&
                 ((null != MusicPatchPcmStream.field_r))) {
                 MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[t.field_l]);
                 wm.a(true, false, -1);
-                qf.a(293, StrongCacheEntry.field_r);
+                MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -3826,8 +3826,8 @@ final class ti extends pc {
         this.field_p = 0;
         this.field_t = (float)param0;
         ha.field_p = param1;
-        wa.field_j = param1;
-        mg.field_g[param1] = null;
+        PasswordValidator.field_j = param1;
+        RotatedSpriteCache.field_g[param1] = null;
     }
 
     static {

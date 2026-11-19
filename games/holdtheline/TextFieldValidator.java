@@ -13,15 +13,15 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         IsaacPacketBuffer var3 = null;
         try {
           var3 = IsaacPacketBuffer.field_p;
-          var3.c((byte) 33, param2);
-          var3.f(param1 ^ 57, 5);
+          var3.writeCipheredOpcode((byte) 33, param2);
+          var3.writeByte(param1 ^ 57, 5);
           if (param1 != 86) {
             field_d = (int[]) null;
           }
-          var3.f(param1 + 25, 0);
-          var3.b(-652561784, param0.field_i);
-          var3.f(111, param0.field_l);
-          var3.f(111, param0.field_n);
+          var3.writeByte(param1 + 25, 0);
+          var3.writeShort(-652561784, param0.field_i);
+          var3.writeByte(111, param0.field_l);
+          var3.writeByte(111, param0.field_n);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gd.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -37,11 +37,11 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         }
     }
 
-    final fd c(byte param0) {
+    final ValidationState evaluateValidation(byte param0) {
         if (param0 != -92) {
-          return (fd) null;
+          return (ValidationState) null;
         }
-        return this.a(this.field_f.field_q, (byte) 70);
+        return this.validateText(this.field_f.text, (byte) 70);
     }
 
     final static void a(String param0, Sprite param1, int param2) {
@@ -49,14 +49,14 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
           if (param2 != 0) {
             TextFieldValidator.e((byte) -29);
           }
-          lf.field_e = param1;
+          TextLineLayout.field_e = param1;
           UrlPacketDownloader.field_j = param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gd.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    abstract String a(String param0, boolean param1);
+    abstract String getTextValidationMessage(String param0, boolean param1);
 
     final static int a(int param0, byte param1, int param2) {
         int var3_int = 0;
@@ -84,7 +84,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         }
     }
 
-    public final void a(byte param0, EditableTextField param1) {
+    public final void onSubmit(byte param0, EditableTextField param1) {
         try {
           if (param0 != 19) {
             field_d = (int[]) null;
@@ -94,12 +94,12 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean isEmpty(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 >= -10) {
           this.field_f = (EditableTextField) null;
         }
-        stackIn_7_0 = (this.field_f.field_q == null) || (this.field_f.field_q.length() == 0);
+        stackIn_7_0 = (this.field_f.text == null) || (this.field_f.text.length() == 0);
         return stackIn_7_0;
     }
 
@@ -111,20 +111,20 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         }
     }
 
-    public final void a(EditableTextField param0, int param1) {
+    public final void onTextChanged(EditableTextField param0, int param1) {
         try {
-          this.a(21871);
+          this.invalidate(21871);
           int var3_int = -21 % ((param1 + 61) / 38);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gd.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String d(int param0) {
+    final String evaluateValidationMessage(int param0) {
         if (param0 <= 79) {
           TextFieldValidator.clearSharedReferences(-126);
         }
-        return this.a(this.field_f.field_q, true);
+        return this.getTextValidationMessage(this.field_f.text, true);
     }
 
     final static boolean e(byte param0) {
@@ -136,9 +136,9 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         return stackIn_6_0;
     }
 
-    final static ji f(int param0) {
+    final static TutorialPage parseNextTutorialPage(int param0) {
         StringBuilder discarded$0 = null;
-        ji var2;
+        TutorialPage var2;
         StringBuilder var3;
         int var4;
         String var5;
@@ -146,7 +146,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         String[] var7;
         int var8;
         String var9;
-        ok var10;
+        TutorialTransition var10;
         int var11;
         int var12;
         String var13;
@@ -167,7 +167,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         }
         var13 = MidiPcmStream.field_q.substring(1, MidiPcmStream.field_q.indexOf(']'));
         MouseWheelInput.a(4);
-        var2 = new ji(var13);
+        var2 = new TutorialPage(var13);
         var3 = new StringBuilder();
         while (MidiPcmStream.field_q != null) {
           if (91 != MidiPcmStream.field_q.charAt(0)) {
@@ -182,22 +182,22 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
               var6 = MidiPcmStream.field_q.substring(var4);
               var7 = ArchiveRequest.a((byte) -116, ',', var6);
               if (var5.equalsIgnoreCase("left")) {
-                ac.a(var2, var7, 1, 0);
+                ArchiveLoadProgress.addTutorialCalloutAnchor(var2, var7, 1, 0);
               }
               if (var5.equalsIgnoreCase("right")) {
-                ac.a(var2, var7, 1, 1);
+                ArchiveLoadProgress.addTutorialCalloutAnchor(var2, var7, 1, 1);
               }
               if (var5.equalsIgnoreCase("top")) {
-                ac.a(var2, var7, 1, 2);
+                ArchiveLoadProgress.addTutorialCalloutAnchor(var2, var7, 1, 2);
               }
               if (var5.equalsIgnoreCase("bottom")) {
-                ac.a(var2, var7, 1, 3);
+                ArchiveLoadProgress.addTutorialCalloutAnchor(var2, var7, 1, 3);
               }
               if (var5.equalsIgnoreCase("tag")) {
                 if (1 != var7.length) {
                   throw new IllegalArgumentException();
                 }
-                var2.field_l = var7[0];
+                var2.tag = var7[0];
               }
               if (var5.equalsIgnoreCase("jump")) {
                 var8 = var7[0].indexOf(' ');
@@ -206,18 +206,18 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
                 }
                 var9 = var7[0].substring(0, var8).trim();
                 var7[0] = var7[0].substring(var8);
-                var10 = TickClock.a(var7, (byte) 55);
-                var10.field_b = var9;
-                var2.a(var10, (byte) 7);
+                var10 = TickClock.parseTutorialTransition(var7, (byte) 55);
+                var10.targetPage = var9;
+                var2.addTransition(var10, (byte) 7);
               }
               if (var5.equalsIgnoreCase("continue")) {
-                var2.a(TickClock.a(var7, (byte) 55), (byte) 7);
+                var2.addTransition(TickClock.parseTutorialTransition(var7, (byte) 55), (byte) 7);
               }
               if (var5.equalsIgnoreCase("action")) {
                 var12 = 0;
                 var8Lifetime1 = var12;
                 while (var7.length > var12) {
-                  var2.a(tl.a(var7[var12], (byte) -95), 0);
+                  var2.addAction(PasswordFieldRenderer.parseTutorialAction(var7[var12], (byte) -95), 0);
                   var12++;
                 }
               }
@@ -227,11 +227,11 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
           }
           break;
         }
-        var2.field_f = var3.toString();
+        var2.text = var3.toString();
         return var2;
     }
 
-    abstract fd a(String param0, byte param1);
+    abstract ValidationState validateText(String param0, byte param1);
 
     static {
         int var0 = 0;

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ai {
     static MusicCrossfadeStream field_a;
-    static go field_b;
+    static RotatedSpriteAsset field_b;
     static Sprite field_c;
 
     final static boolean a(int param0) {
@@ -48,10 +48,10 @@ final class ai {
         }
     }
 
-    final static void a(byte param0, ui param1) {
+    final static void a(byte param0, SoundPlayback param1) {
         try {
           if (param0 != -123) {
-            field_b = (go) null;
+            field_b = (RotatedSpriteAsset) null;
           }
           LoginChoicePanel.field_H.b(param1.field_j);
         } catch (RuntimeException runtimeException) {
@@ -103,7 +103,7 @@ final class ai {
         int var38 = 0;
         int var39 = 0;
         int var40 = 0;
-        ui var41 = null;
+        SoundPlayback var41 = null;
         int[] var42 = null;
         TriangleMesh var45 = null;
         int[] var50 = null;
@@ -135,8 +135,8 @@ final class ai {
           var65 = new int[param4.field_o];
           var63 = MidiPcmStream.field_T;
           if (param0 != -4006) {
-            var41 = (ui) null;
-            ai.a((byte) -11, (ui) null);
+            var41 = (SoundPlayback) null;
+            ai.a((byte) -11, (SoundPlayback) null);
           }
           var64 = Bzip2State.field_q;
           var62 = ResizableDialog.field_S;
@@ -156,7 +156,7 @@ final class ai {
             }
             var14Lifetime2 = stackIn_17_0;
             var15 = param7 * var62[var13] + (var63[var13] * param5 + param3 * var64[var13]) >> 8;
-            stackIn_19_0 = qf.field_i;
+            stackIn_19_0 = MatchingTextValidator.field_i;
             if (var15 >= 0) {
               stackIn_20_1 = var15;
             } else {
@@ -190,12 +190,12 @@ final class ai {
               stackIn_32_0 = param4.field_x[var14Lifetime1];
             }
             var20 = stackIn_32_0;
-            if (kl.field_s != null &&
+            if (TextFieldRenderer.field_s != null &&
               param4.field_t != null &&
               var14Lifetime1 < param4.field_t.length &&
               param4.field_t[var14Lifetime1] != -1 &&
-              param4.field_t[var14Lifetime1] < kl.field_s.length) {
-              stackIn_39_0 = kl.field_s[param4.field_t[var14Lifetime1]];
+              param4.field_t[var14Lifetime1] < TextFieldRenderer.field_s.length) {
+              stackIn_39_0 = TextFieldRenderer.field_s[param4.field_t[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }

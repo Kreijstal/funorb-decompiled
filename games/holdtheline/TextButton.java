@@ -5,30 +5,30 @@ import java.util.*;
 
 class TextButton extends UiWidget {
     static String field_E;
-    private boolean field_C;
+    private boolean focused;
     private boolean field_F;
     boolean field_B;
-    static uf field_A;
+    static SpriteAsset field_A;
     boolean field_D;
 
-    final void e(int param0) {
-        if (!this.field_C) {
+    final void clearFocus(int param0) {
+        if (!this.focused) {
           if (param0 < 15) {
             TextButton.h(-3);
             return;
           }
           return;
         }
-        this.field_C = false;
-        if (null != this.field_t) {
-          if (!(this.field_t instanceof WidgetFocusListener)) {
+        this.focused = false;
+        if (null != this.listener) {
+          if (!(this.listener instanceof WidgetFocusListener)) {
             if (param0 < 15) {
               TextButton.h(-3);
               return;
             }
             return;
           }
-          ((WidgetFocusListener) (this.field_t)).onFocusChanged((UiWidget) (this), 30154, this.field_C);
+          ((WidgetFocusListener) (this.listener)).onFocusChanged((UiWidget) (this), 30154, this.focused);
         }
         if (param0 >= 15) {
           return;
@@ -38,12 +38,12 @@ class TextButton extends UiWidget {
 
     TextButton(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
-        this.field_C = false;
+        this.focused = false;
         this.field_F = true;
         this.field_D = true;
     }
 
-    boolean a(UiWidget param0, int param1, byte param2, char param3) {
+    boolean handleKeyPress(UiWidget param0, int param1, byte param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -53,7 +53,7 @@ class TextButton extends UiWidget {
           if (param2 != -78) {
             this.field_F = true;
           }
-          if (this.c((byte) -20) && (param1 == 84 ||
+          if (this.isFocused((byte) -20) && (param1 == 84 ||
             param1 == 83)) {
             this.a(1, -1, true, -1);
             return true;
@@ -73,16 +73,16 @@ class TextButton extends UiWidget {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
+    final void handleMouseRelease(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
         try {
           if (param4 != -9) {
-            this.e(45);
+            this.clearFocus(45);
           }
-          if (null != this.field_t &&
-            this.field_t instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) (this.field_t)).a(param5, param0, param2, this, (byte) -71, param3);
+          if (null != this.listener &&
+            this.listener instanceof ButtonPointerListener) {
+            ((ButtonPointerListener) (this.listener)).a(param5, param0, param2, this, (byte) -71, param3);
           }
-          this.field_v = 0;
+          this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "rm.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -96,25 +96,25 @@ class TextButton extends UiWidget {
         field_A = null;
     }
 
-    void a(int param0, UiWidget param1, int param2, byte param3) {
+    void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          if (0 != this.field_v) {
-            if (this.field_v == rd.field_f) {
+          super.updateHover(param0, param1, param2, param3);
+          if (0 != this.pressedButton) {
+            if (this.pressedButton == RoadStripRenderer.field_f) {
               return;
             }
-            if (this.b(param0, (byte) -105, NodeHashTableIterator.field_g, param2, rf.field_X) &&
-              rd.field_f == 0) {
-              this.a(this.field_v, -param2 + rf.field_X, true, NodeHashTableIterator.field_g - param0);
+            if (this.containsPoint(param0, (byte) -105, NodeHashTableIterator.field_g, param2, rf.field_X) &&
+              RoadStripRenderer.field_f == 0) {
+              this.a(this.pressedButton, -param2 + rf.field_X, true, NodeHashTableIterator.field_g - param0);
             }
-            this.a(NodeHashTableIterator.field_g, param1, param2, param0, (byte) -9, rf.field_X);
+            this.handleMouseRelease(NodeHashTableIterator.field_g, param1, param2, param0, (byte) -9, rf.field_X);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "rm.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    boolean a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
+    boolean handleMousePress(int param0, int param1, int param2, UiWidget param3, byte param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -122,14 +122,14 @@ class TextButton extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_D &&
-            this.b(param0, (byte) -105, param5, param2, param1)) {
-            this.a(param3, param4 ^ 25781);
-            this.field_v = param6;
-            if (null != this.field_t) {
-              if (!(this.field_t instanceof ButtonPointerListener)) {
+            this.containsPoint(param0, (byte) -105, param5, param2, param1)) {
+            this.requestFocus(param3, param4 ^ 25781);
+            this.pressedButton = param6;
+            if (null != this.listener) {
+              if (!(this.listener instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((ButtonPointerListener) (this.field_t)).a((byte) -68, this, param0, param5, param2, param6, param1);
+              ((ButtonPointerListener) (this.listener)).a((byte) -68, this, param0, param5, param2, param6, param1);
             }
             return true;
           }
@@ -165,15 +165,15 @@ class TextButton extends UiWidget {
     }
 
     void a(int param0, int param1, boolean param2, int param3) {
-        if (null != this.field_t) {
-          if (!(this.field_t instanceof ButtonActionListener)) {
+        if (null != this.listener) {
+          if (!(this.listener instanceof ButtonActionListener)) {
             if (!param2) {
               field_E = (String) null;
               return;
             }
             return;
           }
-          ((ButtonActionListener) (this.field_t)).onButtonAction(param0, this, -4, param3, param1);
+          ((ButtonActionListener) (this.listener)).onButtonAction(param0, this, -4, param3, param1);
         }
         if (param2) {
           return;
@@ -185,7 +185,7 @@ class TextButton extends UiWidget {
         this(param0, pc.field_b.field_p, param1);
     }
 
-    final StringBuilder a(int param0, byte param1, Hashtable param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(int param0, byte param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         int var5_int = 0;
@@ -199,8 +199,8 @@ class TextButton extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -66 % ((param1 - 0) / 49);
-          if (this.a(20720, param2, param3, param0)) {
-            this.a(param2, param0, true, param3);
+          if (this.beginDebugVisit(20720, param2, param3, param0)) {
+            this.appendDebugProperties(param2, param0, true, param3);
             if (this.field_B) {
               discarded$2 = param3.append(" active");
             }
@@ -230,14 +230,14 @@ class TextButton extends UiWidget {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isFocused(byte param0) {
         if (param0 != -20) {
           return true;
         }
-        return this.field_C;
+        return this.focused;
     }
 
-    boolean a(UiWidget param0, int param1) {
+    boolean requestFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -250,14 +250,14 @@ class TextButton extends UiWidget {
           if (!this.field_F) {
             return false;
           }
-          param0.e(50);
-          this.field_C = true;
+          param0.clearFocus(50);
+          this.focused = true;
           if (param1 != -25823) {
             TextButton.clearSharedReferences(17);
           }
-          if (null != this.field_t &&
-            this.field_t instanceof WidgetFocusListener) {
-            ((WidgetFocusListener) (this.field_t)).onFocusChanged((UiWidget) (this), 30154, this.field_C);
+          if (null != this.listener &&
+            this.listener instanceof WidgetFocusListener) {
+            ((WidgetFocusListener) (this.listener)).onFocusChanged((UiWidget) (this), 30154, this.focused);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -275,10 +275,10 @@ class TextButton extends UiWidget {
     }
 
     protected TextButton() {
-        this.field_C = false;
+        this.focused = false;
         this.field_F = true;
         this.field_D = true;
-        this.field_l = pc.field_b.field_d;
+        this.renderer = pc.field_b.field_d;
     }
 
     static {

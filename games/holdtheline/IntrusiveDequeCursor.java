@@ -110,7 +110,7 @@ final class IntrusiveDequeCursor {
         if (param0) {
           return false;
         }
-        return !fj.field_o.a(250) ? true : false;
+        return !fj.field_o.isComplete(250) ? true : false;
     }
 
     final IntrusiveNode lastOrFrom(int param0, IntrusiveNode param1) {

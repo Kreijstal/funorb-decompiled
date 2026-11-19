@@ -78,9 +78,9 @@ final class ko {
         }
     }
 
-    final static mf[] a(int param0) {
+    final static LoginMethodPreference[] a(int param0) {
         int var1 = -36 % ((param0 + 55) / 43);
-        return new mf[]{RaceVehicle.field_Wb, gj.field_s, ho.field_n};
+        return new LoginMethodPreference[]{RaceVehicle.field_Wb, ArcTrackBoundary.field_s, EmailAddressValidator.field_n};
     }
 
     final static Sprite[] a(boolean param0) {
@@ -118,8 +118,8 @@ final class ko {
         try {
           if (10 > pf.field_d) {
             var3_int = 0;
-            if (cg.field_a) {
-              cg.field_a = false;
+            if (TutorialAction.field_a) {
+              TutorialAction.field_a = false;
               var3_int = 1;
             }
             DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
@@ -174,8 +174,8 @@ final class ko {
         try {
           if (10 > pf.field_d) {
             var3_int = 0;
-            if (cg.field_a) {
-              cg.field_a = false;
+            if (TutorialAction.field_a) {
+              TutorialAction.field_a = false;
               var3_int = 1;
             }
             DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);

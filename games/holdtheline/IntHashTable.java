@@ -70,7 +70,7 @@ final class IntHashTable {
           if (param1 != -37) {
             field_a = (String) null;
           }
-          stackIn_5_0 = (param0.h(1, param1 + 44) == 1);
+          stackIn_5_0 = (param0.readBits(1, param1 + 44) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

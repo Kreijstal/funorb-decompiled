@@ -5,7 +5,7 @@ final class ae {
     static int[] field_d;
     static String[] field_c;
     static int field_a;
-    static uf field_b;
+    static SpriteAsset field_b;
     static int[][] field_f;
     static int[] field_e;
 

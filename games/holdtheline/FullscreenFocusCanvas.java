@@ -11,7 +11,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     volatile boolean field_a;
     static ResourceArchive field_c;
     java.awt.Frame field_f;
-    static e field_j;
+    static QuickChatDynamicCommand field_j;
 
     public static void clearSharedReferences(int param0) {
         field_h = (byte[][]) null;
@@ -78,7 +78,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param1 != 50) {
             FullscreenFocusCanvas.c(62);
           }
-          rd.a((byte) 118, param0, this.field_f);
+          RoadStripRenderer.a((byte) 118, param0, this.field_f);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ef.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -109,11 +109,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param2 != 14) {
             field_h = (byte[][]) null;
           }
-          var13 = param1.a(false, param3);
-          var5 = param1.a(false, param0);
+          var13 = param1.pointAt(false, param3);
+          var5 = param1.pointAt(false, param0);
           var6 = (float)(var5.x - var13.x);
           var7 = (float)(var5.y - var13.y);
-          var8 = (-param3 + param0) * param1.f(param2 ^ 60) * param1.field_o;
+          var8 = (-param3 + param0) * param1.length(param2 ^ 60) * param1.field_o;
           var9 = var8 * -var6;
           var10 = -var7 * var8;
           var11 = var7 * var7 + var6 * var6;
@@ -159,6 +159,6 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static {
         field_e = "This game has been updated! Please reload this page.";
         field_h = new byte[50][];
-        field_j = new e(14, 0, 4, 1);
+        field_j = new QuickChatDynamicCommand(14, 0, 4, 1);
     }
 }

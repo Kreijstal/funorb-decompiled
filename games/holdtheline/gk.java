@@ -4,7 +4,7 @@
 final class gk {
     static String field_c;
     static String field_a;
-    static go field_b;
+    static RotatedSpriteAsset field_b;
     static float[] field_d;
 
     public static void clearSharedReferences(byte param0) {
@@ -22,12 +22,12 @@ final class gk {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.addMouseListener(ic.field_d);
+          param0.addMouseListener(ArchiveLoadStage.field_d);
           if (param1 <= 26) {
             field_d = (float[]) null;
           }
-          param0.addMouseMotionListener(ic.field_d);
-          param0.addFocusListener(ic.field_d);
+          param0.addMouseMotionListener(ArchiveLoadStage.field_d);
+          param0.addFocusListener(ArchiveLoadStage.field_d);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

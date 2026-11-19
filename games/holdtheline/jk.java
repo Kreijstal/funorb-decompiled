@@ -7,7 +7,7 @@ final class jk extends IntrusiveNode {
     private int field_n;
     private int field_s;
     int field_i;
-    static kg field_p;
+    static RotatedSpriteSheetAsset field_p;
     int field_o;
     static String field_r;
     private int field_m;
@@ -39,15 +39,15 @@ final class jk extends IntrusiveNode {
           int var3 = 0;
           var3 = HoldTheLine.field_D;
           try {
-            if (ce.field_n != null) {
-              ce.field_n.e(param0 ^ 27371);
+            if (OutlinedRoadStripRenderer.field_n != null) {
+              OutlinedRoadStripRenderer.field_n.e(param0 ^ 27371);
             }
             if (null != IterableSecondaryNodeDeque.field_d) {
               IterableSecondaryNodeDeque.field_d.a(true);
             }
-            if (null != td.field_g) {
+            if (null != StereoMusicSample.field_g) {
               try {
-                td.field_g.d(param0 ^ -27371);
+                StereoMusicSample.field_g.d(param0 ^ -27371);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -123,22 +123,22 @@ final class jk extends IntrusiveNode {
         try {
           var8 = new IsaacPacketBuffer(param0.a("", false, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.f((byte) -16);
-          var10.e(true);
-          kl.field_s = va.a(11658, var10);
-          ej.field_c = new TriangleMesh[var3];
+          var3 = var10.readUnsignedByte((byte) -16);
+          var10.beginBitReading(true);
+          TextFieldRenderer.field_s = SpriteSheetAsset.a(11658, var10);
+          ByteStorage.field_c = new TriangleMesh[var3];
           TextFieldValidator.field_e = new int[var3][];
           var4 = 0;
           var5_int = -65 / ((58 - param1) / 41);
           while (var3 > var4) {
-            ej.field_c[var4] = ClientTextResources.a(6, var8);
+            ByteStorage.field_c[var4] = ClientTextResources.a(6, var8);
             var4++;
           }
-          var10.l(-71);
+          var10.endBitReading(-71);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
-            var5 = ej.field_c[var9];
+            var5 = ByteStorage.field_c[var9];
             var5.a(6, 6, 6, 2, 1);
             var5.c(0);
             var6 = new int[]{var5.field_F + var5.field_L >> 1, var5.field_H + var5.field_d >> 1, var5.field_p + var5.field_n >> 1};

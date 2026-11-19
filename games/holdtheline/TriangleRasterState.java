@@ -18,7 +18,7 @@ final class TriangleRasterState {
         field_d = param3 - param1;
         TriangleRasterState.b();
         if (field_a.length < field_d) {
-          field_a = new int[mo.a((byte) 7, field_d)];
+          field_a = new int[SpriteButtonRenderer.a((byte) 7, field_d)];
         }
         int var4 = param1 * SoftwareRasterizer.field_j + param0;
         for (var5 = 0; var5 < field_d; var5++) {

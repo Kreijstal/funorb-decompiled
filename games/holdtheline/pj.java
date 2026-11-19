@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj extends rd {
+final class pj extends RoadStripRenderer {
     static int field_m;
     static boolean field_n;
     static int field_o;
@@ -13,7 +13,7 @@ final class pj extends rd {
         return mn.field_a;
     }
 
-    final void a(int[] param0, int param1, byte param2, int[] param3) {
+    final void drawStrip(int[] param0, int param1, byte param2, int[] param3) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -73,11 +73,11 @@ final class pj extends rd {
     final static void a(byte param0) {
         dm.field_a = 0;
         if (param0 > -21) {
-          wc[] var2 = (wc[]) null;
-          pj.a((wc[]) null, (byte) -53, 0.8636131286621094f, -0.5086926817893982f);
+          TrackCurve[] var2 = (TrackCurve[]) null;
+          pj.a((TrackCurve[]) null, (byte) -53, 0.8636131286621094f, -0.5086926817893982f);
         }
-        em.field_l = -1;
-        ac.field_e = -1;
+        AgeValidator.field_l = -1;
+        ArchiveLoadProgress.field_e = -1;
         DiskCacheStore.field_h = false;
         UiWidget.field_s = null;
     }
@@ -229,7 +229,7 @@ final class pj extends rd {
         this.field_i = 1;
     }
 
-    final static float a(wc[] param0, byte param1, float param2, float param3) {
+    final static float a(TrackCurve[] param0, byte param1, float param2, float param3) {
         float stackIn_28_0 = 0.0f;
         float stackIn_30_0 = 0.0f;
         RuntimeException stackIn_33_0 = null;
@@ -253,26 +253,26 @@ final class pj extends rd {
           if (var6 != var5) {
             if (var6 > var5) {
               if (param2 != (float)var5) {
-                var4_float = param0[var5].f(param1 + 155) * ((float)(var5 + 1) - param2);
+                var4_float = param0[var5].length(param1 + 155) * ((float)(var5 + 1) - param2);
               }
               for (var7 = 1 + var5; var7 < var6; var7++) {
-                var4_float = var4_float + param0[var7].f(param1 + 155);
+                var4_float = var4_float + param0[var7].length(param1 + 155);
               }
               if (param3 != (float)var6) {
-                var4_float = var4_float + (param3 - (float)var6) * param0[var6].f(param1 + 155);
+                var4_float = var4_float + (param3 - (float)var6) * param0[var6].length(param1 + 155);
               }
             } else {
               if ((float)var5 != param2) {
-                var4_float = param0[var5].f(param1 ^ -91) * ((float)(1 + var5) - param2);
+                var4_float = param0[var5].length(param1 ^ -91) * ((float)(1 + var5) - param2);
               }
               for (var7 = 1 + var5; var7 < param0.length; var7++) {
-                var4_float = var4_float + param0[var7].f(50);
+                var4_float = var4_float + param0[var7].length(50);
               }
               for (var7 = 0; var7 < var6; var7++) {
-                var4_float = var4_float + param0[var7].f(50);
+                var4_float = var4_float + param0[var7].length(50);
               }
               if ((float)var6 != param3) {
-                var4_float = var4_float + ((float)(-var6) + param3) * param0[var6].f(50);
+                var4_float = var4_float + ((float)(-var6) + param3) * param0[var6].length(50);
               }
             }
           } else {

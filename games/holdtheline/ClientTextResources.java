@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientTextResources {
-    static rd field_c;
+    static RoadStripRenderer field_c;
     static int[] field_a;
     static int field_b;
 
-    final static e[] a(int param0) {
+    final static QuickChatDynamicCommand[] a(int param0) {
         RuntimeException var1 = null;
-        e[] stackIn_4_0 = null;
+        QuickChatDynamicCommand[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4) {
             ClientTextResources.a(15, (IsaacPacketBuffer) null);
           }
-          stackIn_4_0 = new e[]{uk.field_g, fo.field_n, CacheEntry.field_p, lf.field_b, le.field_u, e.field_a, IndexedSpriteState.field_h, kg.field_a, hh.field_a, sh.field_b, ContentTransitionDialog.field_ib, lg.field_n, FullscreenFocusCanvas.field_j, la.field_k};
+          stackIn_4_0 = new QuickChatDynamicCommand[]{uk.field_g, fo.field_n, CacheEntry.field_p, TextLineLayout.field_b, ShadedRoadStripRenderer.field_u, QuickChatDynamicCommand.field_a, IndexedSpriteState.field_h, RotatedSpriteSheetAsset.field_a, hh.field_a, sh.field_b, ContentTransitionDialog.field_ib, CachedTextLayout.field_n, FullscreenFocusCanvas.field_j, DirectByteStorage.field_k};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,10 +66,10 @@ final class ClientTextResources {
                 this.var3 = 0;
             }
             void loadLobbyConnectionAndLoginText() throws java.lang.RuntimeException {
-                lg.field_q = param1;
+                CachedTextLayout.field_q = param1;
                 var2 = StandardContentTransitionDialog.a(6, "loginm3");
                 if (var2 != null) {
-                  mo.field_y = rk.a((byte) -79, var2);
+                  SpriteButtonRenderer.field_y = rk.a((byte) -79, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "loginm2");
                 if (null != var2) {
@@ -93,7 +93,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "error_js5connect_full");
                 if (null != var2) {
-                  wb.field_f = rk.a((byte) 90, var2);
+                  Vector2i.field_f = rk.a((byte) 90, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "error_js5connect");
                 if (null != var2) {
@@ -109,7 +109,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_ineligible");
                 if (var2 != null) {
-                  vn.field_e = rk.a((byte) -43, var2);
+                  NineSlicePanel.field_e = rk.a((byte) -43, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "usernameprompt");
                 if (var2 != null) {
@@ -697,7 +697,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "loading");
                 if (var2 != null) {
-                  ug.field_f = rk.a((byte) -40, var2);
+                  MarkerSliderRenderer.field_f = rk.a((byte) -40, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "offline");
                 if (null != var2) {
@@ -1063,15 +1063,15 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "playfreeversion");
                 if (null != var2) {
-                  vn.field_a = rk.a((byte) 82, var2);
+                  NineSlicePanel.field_a = rk.a((byte) 82, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "reloadgame");
                 if (var2 != null) {
-                  vn.field_b = rk.a((byte) 54, var2);
+                  NineSlicePanel.field_b = rk.a((byte) 54, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "toserverlist");
                 if (var2 != null) {
-                  ek.field_u = rk.a((byte) 51, var2);
+                  CheckboxRenderer.field_u = rk.a((byte) 51, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "tocustomersupport");
                 if (null != var2) {
@@ -1079,7 +1079,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "changedisplayname");
                 if (var2 != null) {
-                  uh.field_e = rk.a((byte) -83, var2);
+                  GrowableIntList.field_e = rk.a((byte) -83, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "returntohomepage");
                 if (null != var2) {
@@ -1151,11 +1151,11 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "invalidpass");
                 if (var2 != null) {
-                  wb.field_j = rk.a((byte) 63, var2);
+                  Vector2i.field_j = rk.a((byte) 63, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "retry");
                 if (var2 != null) {
-                  lg.field_p = rk.a((byte) -88, var2);
+                  CachedTextLayout.field_p = rk.a((byte) -88, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "back");
                 if (var2 != null) {
@@ -1175,7 +1175,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "warning_ifyouquit");
                 if (null != var2) {
-                  fd.field_b = rk.a((byte) -43, var2);
+                  ValidationState.field_b = rk.a((byte) -43, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
@@ -1263,7 +1263,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "checking");
                 if (var2 != null) {
-                  hg.field_N = rk.a((byte) 124, var2);
+                  DialWidget.field_N = rk.a((byte) 124, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1319,7 +1319,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create");
                 if (var2 != null) {
-                  ek.field_v = rk.a((byte) -102, var2);
+                  CheckboxRenderer.field_v = rk.a((byte) -102, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_pleasechooseapassword");
                 if (var2 != null) {
@@ -1363,51 +1363,51 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,0");
                 if (var2 != null) {
-                  td.field_b[0] = rk.a((byte) -60, var2);
+                  StereoMusicSample.field_b[0] = rk.a((byte) -60, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,1");
                 if (var2 != null) {
-                  td.field_b[1] = rk.a((byte) 48, var2);
+                  StereoMusicSample.field_b[1] = rk.a((byte) 48, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "monthnames,2");
                 if (null != var2) {
-                  td.field_b[2] = rk.a((byte) -49, var2);
+                  StereoMusicSample.field_b[2] = rk.a((byte) -49, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "monthnames,3");
                 if (null != var2) {
-                  td.field_b[3] = rk.a((byte) 61, var2);
+                  StereoMusicSample.field_b[3] = rk.a((byte) 61, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,4");
                 if (null != var2) {
-                  td.field_b[4] = rk.a((byte) -62, var2);
+                  StereoMusicSample.field_b[4] = rk.a((byte) -62, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,5");
                 if (var2 != null) {
-                  td.field_b[5] = rk.a((byte) 73, var2);
+                  StereoMusicSample.field_b[5] = rk.a((byte) 73, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "monthnames,6");
                 if (var2 != null) {
-                  td.field_b[6] = rk.a((byte) -124, var2);
+                  StereoMusicSample.field_b[6] = rk.a((byte) -124, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,7");
                 if (null != var2) {
-                  td.field_b[7] = rk.a((byte) 114, var2);
+                  StereoMusicSample.field_b[7] = rk.a((byte) 114, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "monthnames,8");
                 if (null != var2) {
-                  td.field_b[8] = rk.a((byte) 53, var2);
+                  StereoMusicSample.field_b[8] = rk.a((byte) 53, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,9");
                 if (null != var2) {
-                  td.field_b[9] = rk.a((byte) -38, var2);
+                  StereoMusicSample.field_b[9] = rk.a((byte) -38, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,10");
                 if (var2 != null) {
-                  td.field_b[10] = rk.a((byte) -28, var2);
+                  StereoMusicSample.field_b[10] = rk.a((byte) -28, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "monthnames,11");
                 if (null != var2) {
-                  td.field_b[11] = rk.a((byte) 61, var2);
+                  StereoMusicSample.field_b[11] = rk.a((byte) 61, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "create_welcome");
                 if (null != var2) {
@@ -1431,7 +1431,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_password");
                 if (var2 != null) {
-                  lc.field_f = rk.a((byte) -121, var2);
+                  EmailValidationResult.field_f = rk.a((byte) -121, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_password_confirm");
                 if (null != var2) {
@@ -1443,7 +1443,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_email_confirm");
                 if (null != var2) {
-                  ej.field_e = rk.a((byte) 107, var2);
+                  ByteStorage.field_e = rk.a((byte) 107, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_age");
                 if (var2 != null) {
@@ -1479,7 +1479,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "create_more_suggestions");
                 if (null != var2) {
-                  tg.field_f = rk.a((byte) -102, var2);
+                  PointPath.field_f = rk.a((byte) -102, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_select_alternative");
                 if (var2 != null) {
@@ -1527,7 +1527,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "login_justplay_tooltip");
                 if (null != var2) {
-                  wc.field_j = rk.a((byte) 95, var2);
+                  TrackCurve.field_j = rk.a((byte) 95, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "login_back_tooltip");
                 if (var2 != null) {
@@ -1551,7 +1551,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "create_displayname_hint");
                 if (null != var2) {
-                  ic.field_h = rk.a((byte) -66, var2);
+                  ArchiveLoadStage.field_h = rk.a((byte) -66, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "create_password_tooltip");
                 if (var2 != null) {
@@ -1642,11 +1642,11 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "create_alert_passlength");
                 if (var2 != null) {
-                  mf.field_b = rk.a((byte) -102, var2);
+                  LoginMethodPreference.field_b = rk.a((byte) -102, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "create_alert_passcontainsname");
                 if (null != var2) {
-                  le.field_p = rk.a((byte) -90, var2);
+                  ShadedRoadStripRenderer.field_p = rk.a((byte) -90, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_alert_passcontainsemail");
                 if (null != var2) {
@@ -1662,7 +1662,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_alert_invalidemail");
                 if (var2 != null) {
-                  nd.field_a = rk.a((byte) -57, var2);
+                  NameAvailabilityResult.field_a = rk.a((byte) -57, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_alert_email_unavailable");
                 if (null != var2) {
@@ -1686,7 +1686,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_passwordvalid");
                 if (null != var2) {
-                  vj.field_m = rk.a((byte) 62, var2);
+                  BoundaryCurve.field_m = rk.a((byte) 62, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_emailvalid");
                 if (var2 != null) {
@@ -1798,7 +1798,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "waitingfor_fonts");
                 if (var2 != null) {
-                  uf.field_d = rk.a((byte) -121, var2);
+                  SpriteAsset.field_d = rk.a((byte) -121, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "waitingfor_soundeffects");
                 if (null != var2) {
@@ -1806,7 +1806,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "waitingfor_music");
                 if (var2 != null) {
-                  kj.field_o = rk.a((byte) -54, var2);
+                  SolidRoadStripRenderer.field_o = rk.a((byte) -54, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "waitingfor_instruments");
                 if (var2 != null) {
@@ -1818,7 +1818,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "waitingfor_extradata");
                 if (null != var2) {
-                  g.field_l = rk.a((byte) -39, var2);
+                  LinearPointPath.field_l = rk.a((byte) -39, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "waitingfor_languages");
                 if (var2 != null) {
@@ -1858,7 +1858,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "loading_levels");
                 if (var2 != null) {
-                  rd.field_a = rk.a((byte) -117, var2);
+                  RoadStripRenderer.field_a = rk.a((byte) -117, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "loading_extradata");
                 if (null != var2) {
@@ -1886,7 +1886,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "unpacking_soundeffects");
                 if (null != var2) {
-                  ul.field_a = rk.a((byte) 120, var2);
+                  TutorialCalloutAnchor.field_a = rk.a((byte) 120, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "unpacking_music");
                 if (null != var2) {
@@ -1910,7 +1910,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "instructions");
                 if (var2 != null) {
-                  td.field_d = rk.a((byte) -120, var2);
+                  StereoMusicSample.field_d = rk.a((byte) -120, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "tutorial");
                 if (null != var2) {
@@ -1962,7 +1962,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "quit");
                 if (null != var2) {
-                  mg.field_i = rk.a((byte) -83, var2);
+                  RotatedSpriteCache.field_i = rk.a((byte) -83, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "login_createaccount");
                 if (null != var2) {
@@ -2072,11 +2072,11 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "prev");
                 if (null != var2) {
-                  lg.field_r = rk.a((byte) 86, var2);
+                  CachedTextLayout.field_r = rk.a((byte) 86, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "next");
                 if (var2 != null) {
-                  ej.field_d = rk.a((byte) 71, var2);
+                  ByteStorage.field_d = rk.a((byte) 71, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "graphics_colon");
                 if (null != var2) {
@@ -2304,7 +2304,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "orbcoins");
                 if (var2 != null) {
-                  vj.field_o = rk.a((byte) -42, var2);
+                  BoundaryCurve.field_o = rk.a((byte) -42, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "orbpoints_colon");
                 if (null != var2) {
@@ -2324,7 +2324,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "no_highscores");
                 if (null != var2) {
-                  an.field_d = rk.a((byte) -110, var2);
+                  GzipDecompressor.field_d = rk.a((byte) -110, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "hs_name");
                 if (null != var2) {
@@ -2528,31 +2528,31 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  td.field_e[0] = rk.a((byte) 110, var2);
+                  StereoMusicSample.field_e[0] = rk.a((byte) 110, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  td.field_e[1] = rk.a((byte) 44, var2);
+                  StereoMusicSample.field_e[1] = rk.a((byte) 44, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "quickchat_shortcut_keys,2");
                 if (null != var2) {
-                  td.field_e[2] = rk.a((byte) -80, var2);
+                  StereoMusicSample.field_e[2] = rk.a((byte) -80, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
-                  td.field_e[3] = rk.a((byte) 94, var2);
+                  StereoMusicSample.field_e[3] = rk.a((byte) 94, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  td.field_e[4] = rk.a((byte) -126, var2);
+                  StereoMusicSample.field_e[4] = rk.a((byte) -126, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  td.field_e[5] = rk.a((byte) -45, var2);
+                  StereoMusicSample.field_e[5] = rk.a((byte) -45, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "keychar_the_character_under_questionmark");
                 if (null != var2) {
-                  g.a(var2[0], -41);
+                  LinearPointPath.decodeCp1252Byte(var2[0], -41);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "rating_noratings");
                 if (null != var2) {
@@ -2588,7 +2588,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "benefits_price");
                 if (null != var2) {
-                  ek.field_d = rk.a((byte) -117, var2);
+                  CheckboxRenderer.field_d = rk.a((byte) -117, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "members_expansion_benefits,0");
                 if (var2 != null) {
@@ -2612,19 +2612,19 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "reconnect_lost_seq,0");
                 if (var2 != null) {
-                  kb.field_b[0] = rk.a((byte) -114, var2);
+                  LoginCredentialType.field_b[0] = rk.a((byte) -114, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  kb.field_b[1] = rk.a((byte) -30, var2);
+                  LoginCredentialType.field_b[1] = rk.a((byte) -30, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "reconnect_lost_seq,2");
                 if (null != var2) {
-                  kb.field_b[2] = rk.a((byte) 59, var2);
+                  LoginCredentialType.field_b[2] = rk.a((byte) 59, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "reconnect_lost_seq,3");
                 if (null != var2) {
-                  kb.field_b[3] = rk.a((byte) -91, var2);
+                  LoginCredentialType.field_b[3] = rk.a((byte) -91, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "reconnect_lost");
                 if (var2 != null) {
@@ -2684,7 +2684,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "fs_accept_afteraccept");
                 if (null != var2) {
-                  mg.field_k = rk.a((byte) -36, var2);
+                  RotatedSpriteCache.field_k = rk.a((byte) -36, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "fs_button_cancel");
                 if (var2 != null) {
@@ -2712,19 +2712,19 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "fs_button_members");
                 if (var2 != null) {
-                  mg.field_e = rk.a((byte) 127, var2);
+                  RotatedSpriteCache.field_e = rk.a((byte) 127, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "fs_unavailable");
                 if (null != var2) {
-                  sj.field_J = rk.a((byte) 67, var2);
+                  CheckboxWidget.field_J = rk.a((byte) 67, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "fs_unavailable_try_signed_applet");
                 if (var2 != null) {
-                  ek.field_w = rk.a((byte) -34, var2);
+                  CheckboxRenderer.field_w = rk.a((byte) -34, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "fs_focus");
                 if (null != var2) {
-                  dk.field_m = rk.a((byte) 62, var2);
+                  TextWidgetStyle.field_m = rk.a((byte) 62, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "fs_focus_or_resolution");
                 if (null != var2) {
@@ -2764,7 +2764,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "mb_achievement_count_2");
                 if (null != var2) {
-                  va.field_b = rk.a((byte) 102, var2);
+                  SpriteSheetAsset.field_b = rk.a((byte) 102, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "mb_exclusive_1");
                 if (var2 != null) {
@@ -2780,7 +2780,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "hs_friend_tip");
                 if (null != var2) {
-                  e.field_b = rk.a((byte) 124, var2);
+                  QuickChatDynamicCommand.field_b = rk.a((byte) 124, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "hs_friend_tip_multi");
                 if (var2 != null) {
@@ -2848,7 +2848,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "pleasewait_dotdotdot");
                 if (null != var2) {
-                  ng.field_b = rk.a((byte) -69, var2);
+                  QuickChatPhraseCache.field_b = rk.a((byte) -69, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "serviceunavailable");
                 if (null != var2) {
@@ -2868,7 +2868,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
-                  nd.field_k = rk.a((byte) -125, var2);
+                  NameAvailabilityResult.field_k = rk.a((byte) -125, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "mustlogin1");
                 if (null != var2) {
@@ -2904,31 +2904,31 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "mustlogin3,1");
                 if (var2 != null) {
-                  wb.field_i[1] = rk.a((byte) 60, var2);
+                  Vector2i.field_i[1] = rk.a((byte) 60, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "mustlogin3,2");
                 if (null != var2) {
-                  wb.field_i[2] = rk.a((byte) -46, var2);
+                  Vector2i.field_i[2] = rk.a((byte) -46, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "mustlogin3,3");
                 if (null != var2) {
-                  wb.field_i[3] = rk.a((byte) 114, var2);
+                  Vector2i.field_i[3] = rk.a((byte) 114, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "mustlogin3,4");
                 if (var2 != null) {
-                  wb.field_i[4] = rk.a((byte) 79, var2);
+                  Vector2i.field_i[4] = rk.a((byte) 79, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "mustlogin3,5");
                 if (null != var2) {
-                  wb.field_i[5] = rk.a((byte) 105, var2);
+                  Vector2i.field_i[5] = rk.a((byte) 105, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "mustlogin3,6");
                 if (null != var2) {
-                  wb.field_i[6] = rk.a((byte) 62, var2);
+                  Vector2i.field_i[6] = rk.a((byte) 62, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "mustlogin3,7");
                 if (null != var2) {
-                  wb.field_i[7] = rk.a((byte) -63, var2);
+                  Vector2i.field_i[7] = rk.a((byte) -63, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "discard");
                 if (null != var2) {
@@ -2998,61 +2998,61 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "subscription_cost_monthly,0");
                 if (null != var2) {
-                  lf.field_i[0] = rk.a((byte) -80, var2);
+                  TextLineLayout.field_i[0] = rk.a((byte) -80, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,1");
                 if (null != var2) {
-                  lf.field_i[1] = rk.a((byte) -107, var2);
+                  TextLineLayout.field_i[1] = rk.a((byte) -107, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,2");
                 if (null != var2) {
-                  lf.field_i[2] = rk.a((byte) 50, var2);
+                  TextLineLayout.field_i[2] = rk.a((byte) 50, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  lf.field_i[3] = rk.a((byte) 56, var2);
+                  TextLineLayout.field_i[3] = rk.a((byte) 56, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,4");
                 if (var2 != null) {
-                  lf.field_i[4] = rk.a((byte) -62, var2);
+                  TextLineLayout.field_i[4] = rk.a((byte) -62, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,5");
                 if (var2 != null) {
-                  lf.field_i[5] = rk.a((byte) 122, var2);
+                  TextLineLayout.field_i[5] = rk.a((byte) 122, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,6");
                 if (var2 != null) {
-                  lf.field_i[6] = rk.a((byte) 46, var2);
+                  TextLineLayout.field_i[6] = rk.a((byte) 46, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  lf.field_i[7] = rk.a((byte) -56, var2);
+                  TextLineLayout.field_i[7] = rk.a((byte) -56, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,8");
                 if (var2 != null) {
-                  lf.field_i[8] = rk.a((byte) 117, var2);
+                  TextLineLayout.field_i[8] = rk.a((byte) 117, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "subscription_cost_monthly,9");
                 if (null != var2) {
-                  lf.field_i[9] = rk.a((byte) -93, var2);
+                  TextLineLayout.field_i[9] = rk.a((byte) -93, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "subscription_cost_monthly,10");
                 if (null != var2) {
-                  lf.field_i[10] = rk.a((byte) -118, var2);
+                  TextLineLayout.field_i[10] = rk.a((byte) -118, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "subscription_cost_monthly,11");
                 if (var2 != null) {
-                  lf.field_i[11] = rk.a((byte) -45, var2);
+                  TextLineLayout.field_i[11] = rk.a((byte) -45, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "subscription_cost_monthly,12");
                 if (null != var2) {
-                  lf.field_i[12] = rk.a((byte) 82, var2);
+                  TextLineLayout.field_i[12] = rk.a((byte) 82, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "sentence_separator");
                 if (null != var2) {
                   rk.a((byte) -26, var2);
                 }
-                lg.field_q = null;
+                CachedTextLayout.field_q = null;
             }
             void loadAllText() {
                 var3 = HoldTheLine.field_D;
@@ -3106,14 +3106,14 @@ final class ClientTextResources {
         int var8 = 0;
         var8 = HoldTheLine.field_D;
         try {
-          var2_int = param1.h(8, param0 + 1);
+          var2_int = param1.readBits(8, param0 + 1);
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = IntHashTable.readBooleanBit(param1, (byte) -37) ? 1 : 0;
           var4 = IntHashTable.readBooleanBit(param1, (byte) -37) ? 1 : 0;
           var5 = new TriangleMesh();
-          var5.field_u = (short)param1.h(16, 7);
+          var5.field_u = (short)param1.readBits(16, 7);
           var5.field_m = MouseWheelInput.a(var5.field_m, 16, param1, false);
           var5.field_G = MouseWheelInput.a(var5.field_G, 16, param1, false);
           var5.field_k = MouseWheelInput.a(var5.field_k, 16, param1, false);
@@ -3121,12 +3121,12 @@ final class ClientTextResources {
             stackIn_6_0 = (TriangleMesh) null;
             return stackIn_6_0;
           }
-          var5.field_J = (short)param1.h(16, 7);
+          var5.field_J = (short)param1.readBits(16, 7);
           var5.field_w = MouseWheelInput.a(var5.field_w, 16, param1, false);
           var5.field_Q = MouseWheelInput.a(var5.field_Q, 16, param1, false);
           var5.field_P = MouseWheelInput.a(var5.field_P, 16, param1, false);
           if (var3 != 0) {
-            var5.field_o = (short)param1.h(16, 7);
+            var5.field_o = (short)param1.readBits(16, 7);
             var5.field_c = MouseWheelInput.a(var5.field_c, 16, param1, false);
             var5.field_s = MouseWheelInput.a(var5.field_s, 16, param1, false);
             var5.field_A = MouseWheelInput.a(var5.field_A, 16, param1, false);
@@ -3135,7 +3135,7 @@ final class ClientTextResources {
             var5.field_x = MouseWheelInput.a(var5.field_x, 16, param1, false);
           }
           if (var4 != 0) {
-            param1.h(16, param0 ^ 1);
+            param1.readBits(16, param0 ^ 1);
             var5.field_q = MouseWheelInput.a(var5.field_q, 16, param1, false);
             var5.field_O = MouseWheelInput.a(var5.field_O, 16, param1, false);
             var5.field_N = MouseWheelInput.a(var5.field_N, 16, param1, false);
@@ -3191,6 +3191,6 @@ final class ClientTextResources {
     }
 
     static {
-        field_c = (rd) ((Object) new le(3, 8.0f, new int[]{0, 0, 16777215, 16777215, 16777215, 16777215, 16777215, 0, 0}));
+        field_c = (RoadStripRenderer) ((Object) new ShadedRoadStripRenderer(3, 8.0f, new int[]{0, 0, 16777215, 16777215, 16777215, 16777215, 16777215, 0, 0}));
     }
 }

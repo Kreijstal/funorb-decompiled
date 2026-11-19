@@ -3,7 +3,7 @@
  */
 final class fo extends IntrusiveNode {
     int field_l;
-    static e field_n;
+    static QuickChatDynamicCommand field_n;
     int[] field_i;
     int field_j;
     static sh field_k;
@@ -24,7 +24,7 @@ final class fo extends IntrusiveNode {
 
     static {
         field_z = "fo.A(";
-        field_n = new e(1, 2, 2, 0);
+        field_n = new QuickChatDynamicCommand(1, 2, 2, 0);
         field_k = new sh();
         field_m = "Create a free Account";
     }

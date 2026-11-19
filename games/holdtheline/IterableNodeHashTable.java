@@ -137,22 +137,22 @@ final class IterableNodeHashTable implements Iterable {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          StandardContentTransitionDialog.field_jb = param1.k(-70) << 5;
-          var2_int = param1.f((byte) -28);
+          StandardContentTransitionDialog.field_jb = param1.readUnsignedShort(-70) << 5;
+          var2_int = param1.readUnsignedByte((byte) -28);
           FullscreenFocusCanvas.field_b = var2_int << 18 & 1835008;
           StandardContentTransitionDialog.field_jb = StandardContentTransitionDialog.field_jb + (var2_int >> 3);
-          FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + (param1.k(-125) << 2);
-          var2_intLifetime1 = param1.f((byte) -48);
+          FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + (param1.readUnsignedShort(-125) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte((byte) -48);
           ae.field_a = var2_intLifetime1 << 15 & 2064384;
           FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + (var2_intLifetime1 >> 6);
-          ae.field_a = ae.field_a + (param1.f((byte) -117) << 7);
-          var2_intLifetime2 = param1.f((byte) -97);
+          ae.field_a = ae.field_a + (param1.readUnsignedByte((byte) -117) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte((byte) -97);
           ae.field_a = ae.field_a + (var2_intLifetime2 >> 1);
-          dk.field_l = (1 & var2_intLifetime2) << 16;
+          TextWidgetStyle.field_l = (1 & var2_intLifetime2) << 16;
           if (param0 <= 70) {
             field_k = (Sprite) null;
           }
-          dk.field_l = dk.field_l + param1.k(82);
+          TextWidgetStyle.field_l = TextWidgetStyle.field_l + param1.readUnsignedShort(82);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "im.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

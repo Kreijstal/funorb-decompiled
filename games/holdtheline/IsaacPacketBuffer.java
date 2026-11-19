@@ -3,29 +3,29 @@
  */
 final class IsaacPacketBuffer extends PacketBuffer {
     static IsaacPacketBuffer field_p;
-    private int field_q;
-    private int field_t;
+    private int readBitPosition;
+    private int writeBitsRemaining;
     static String field_s;
-    private IsaacRandom field_r;
+    private IsaacRandom cipher;
     static int[] field_u;
 
-    final void h(byte param0) {
-        if (8 > this.field_t) {
+    final void endBitWriting(byte param0) {
+        if (8 > this.writeBitsRemaining) {
           this.position = this.position + 1;
-          this.field_t = 8;
+          this.writeBitsRemaining = 8;
         }
         if (param0 != 0) {
           field_s = (String) null;
         }
     }
 
-    final int h(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = HoldTheLine.field_D;
-        int var3 = this.field_q >> 3;
-        int var4 = 8 - (this.field_q & param1);
+        int var3 = this.readBitPosition >> 3;
+        int var4 = 8 - (this.readBitPosition & param1);
         int var5 = 0;
-        this.field_q = this.field_q + param0;
+        this.readBitPosition = this.readBitPosition + param0;
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
@@ -48,7 +48,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         field_u = null;
     }
 
-    final void a(byte[] param0, int param1, int param2, boolean param3) {
+    final void readCipheredBytes(byte[] param0, int param1, int param2, boolean param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -62,7 +62,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param1; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_r.nextInt(256));
+            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.cipher.nextInt(256));
           }
           if (!param3) {
             field_p = (IsaacPacketBuffer) null;
@@ -82,16 +82,16 @@ final class IsaacPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void c(byte param0, int param1) {
+    final void writeCipheredOpcode(byte param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_r.nextInt(wb.a((int) param0, 289)));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.cipher.nextInt(Vector2i.xor((int) param0, 289)));
         if (param0 != 33) {
-          this.field_q = -105;
+          this.readBitPosition = -105;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void writeBits(int param0, int param1, int param2) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var4;
@@ -99,79 +99,79 @@ final class IsaacPacketBuffer extends PacketBuffer {
         var5 = HoldTheLine.field_D;
         param2 = param2 & vd.field_c[param1];
         var4 = 39 % ((14 - param0) / 57);
-        while (this.field_t < param1) {
-          param1 = param1 - this.field_t;
+        while (this.writeBitsRemaining < param1) {
+          param1 = param1 - this.writeBitsRemaining;
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param2 >>> param1));
           this.payload[this.position] = (byte) 0;
-          this.field_t = 8;
+          this.writeBitsRemaining = 8;
         }
-        if (param1 != this.field_t) {
-          this.field_t = this.field_t - param1;
-          this.payload[this.position] = (byte)(this.payload[this.position] + (param2 << this.field_t));
+        if (param1 != this.writeBitsRemaining) {
+          this.writeBitsRemaining = this.writeBitsRemaining - param1;
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param2 << this.writeBitsRemaining));
         } else {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param2);
           this.payload[this.position] = (byte) 0;
-          this.field_t = 8;
+          this.writeBitsRemaining = 8;
         }
     }
 
-    final void l(int param0) {
+    final void endBitReading(int param0) {
         if (param0 > -6) {
-          this.field_r = (IsaacRandom) null;
+          this.cipher = (IsaacRandom) null;
         }
-        this.position = (this.field_q + 7) / 8;
+        this.position = (this.readBitPosition + 7) / 8;
     }
 
-    final void i(byte param0) {
+    final void beginBitWriting(byte param0) {
         this.payload[this.position] = (byte)param0;
-        this.field_t = 8;
+        this.writeBitsRemaining = 8;
     }
 
     final static void a(boolean param0, String param1, int param2) {
         ResourceArchive.field_g = param0;
-        aa.field_k = true;
+        DelayedServerPacket.field_k = true;
         if (param2 != 22676) {
           return;
         }
         try {
-          sb.field_c = new AccountProgressDialog(ka.field_b, DisplayNameForm.field_I, param1, ci.field_o, ResourceArchive.field_g);
+          sb.field_c = new AccountProgressDialog(ka.field_b, DisplayNameForm.field_I, param1, ArchiveCatalog.field_o, ResourceArchive.field_g);
           ka.field_b.a(sb.field_c, false);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "da.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int[] param0, boolean param1) {
+    final void seedCipher(int[] param0, boolean param1) {
         try {
-          this.field_r = new IsaacRandom(param0);
+          this.cipher = new IsaacRandom(param0);
           if (param1) {
-            this.g((byte) 92);
+            this.readCipheredOpcode((byte) 92);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void e(boolean param0) {
+    final void beginBitReading(boolean param0) {
         if (!param0) {
           field_u = (int[]) null;
         }
-        this.field_q = this.position * 8;
+        this.readBitPosition = this.position * 8;
     }
 
     IsaacPacketBuffer(int param0) {
         super(param0);
     }
 
-    final int g(byte param0) {
+    final int readCipheredOpcode(byte param0) {
         int var2 = 82 % ((param0 - 21) / 52);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_r.nextInt(256) & 255;
+        return this.payload[fieldTemp$0] - this.cipher.nextInt(256) & 255;
     }
 
     IsaacPacketBuffer(byte[] param0) {

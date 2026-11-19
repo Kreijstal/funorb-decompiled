@@ -17,7 +17,7 @@ final class TriangleMesh {
     int[] field_g;
     private boolean field_B;
     short[] field_w;
-    static sd field_j;
+    static LoginCredentials field_j;
     short[] field_k;
     short[] field_q;
     short[] field_Q;
@@ -27,7 +27,7 @@ final class TriangleMesh {
     int[] field_a;
     int field_n;
     static Sprite[] field_y;
-    static mg field_f;
+    static RotatedSpriteCache field_f;
     int[] field_h;
     int field_d;
     int field_L;
@@ -85,7 +85,7 @@ final class TriangleMesh {
               if (!param3) {
                 stackIn_24_0 = NetworkGameClient.field_s[var12];
               } else {
-                stackIn_24_0 = va.field_j[var12];
+                stackIn_24_0 = SpriteSheetAsset.field_j[var12];
               }
               var13 = stackIn_24_0;
               if (var13 <= var7_int) {
@@ -110,7 +110,7 @@ final class TriangleMesh {
             for (var8Lifetime1 = param1; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = IterableNodeHashTable.field_h[var8Lifetime1];
               var10Lifetime1 = IterableNodeHashTable.field_h[1 + var8Lifetime1];
-              if (mf.a(var10Lifetime1, param3, var9Lifetime1, 13234)) {
+              if (LoginMethodPreference.a(var10Lifetime1, param3, var9Lifetime1, 13234)) {
                 IterableNodeHashTable.field_h[var8Lifetime1] = var10Lifetime1;
                 IterableNodeHashTable.field_h[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -330,47 +330,47 @@ final class TriangleMesh {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (ce.field_n.field_c >= 4) {
-            if (ce.field_n.field_f == -1) {
+          if (OutlinedRoadStripRenderer.field_n.field_c >= 4) {
+            if (OutlinedRoadStripRenderer.field_n.field_f == -1) {
               return 3;
             }
-            if (ce.field_n.field_f != -2) {
+            if (OutlinedRoadStripRenderer.field_n.field_f != -2) {
               return 1;
             }
             return 4;
           }
           try {
-            if (lc.field_g == 0) {
-              tl.field_y = kl.field_v.a(0, lg.field_e, pe.field_c);
-              lc.field_g = lc.field_g + 1;
+            if (EmailValidationResult.field_g == 0) {
+              PasswordFieldRenderer.field_y = TextFieldRenderer.field_v.a(0, CachedTextLayout.field_e, pe.field_c);
+              EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
             }
-            if (lc.field_g == param0) {
-              if (2 == tl.field_y.field_d) {
+            if (EmailValidationResult.field_g == param0) {
+              if (2 == PasswordFieldRenderer.field_y.field_d) {
                 stackIn_13_0 = ValidationHelpWidget.a(-1, 8077);
                 return stackIn_13_0;
               }
-              if (1 == tl.field_y.field_d) {
-                lc.field_g = lc.field_g + 1;
+              if (1 == PasswordFieldRenderer.field_y.field_d) {
+                EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
               }
             }
-            if (2 == lc.field_g) {
-              oc.field_c = new BufferedSocket((java.net.Socket) (tl.field_y.field_b), kl.field_v);
+            if (2 == EmailValidationResult.field_g) {
+              oc.field_c = new BufferedSocket((java.net.Socket) (PasswordFieldRenderer.field_y.field_b), TextFieldRenderer.field_v);
               var2 = new PacketBuffer(13);
-              ui.a(AccountCreationForm.field_H, (byte) -95, var2, MovingEntity.field_n, RoadSegment.field_r);
-              var2.f(111, 15);
-              var2.a((byte) -58, rd.field_g);
+              SoundPlayback.a(AccountCreationForm.field_H, (byte) -95, var2, MovingEntity.field_n, RoadSegment.field_r);
+              var2.writeByte(111, 15);
+              var2.writeInt((byte) -58, RoadStripRenderer.field_g);
               oc.field_c.write(13, var2.payload, 0, 1);
-              lc.field_g = lc.field_g + 1;
+              EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
               aj.field_b = 30000L + bb.b(-1);
             }
-            if (lc.field_g == 3) {
+            if (EmailValidationResult.field_g == 3) {
               if (oc.field_c.available(false) > 0) {
                 var1_int = oc.field_c.read(-27418);
                 if (var1_int != 0) {
                   stackIn_28_0 = ValidationHelpWidget.a(var1_int, 8077);
                   return stackIn_28_0;
                 }
-                lc.field_g = lc.field_g + 1;
+                EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
               } else {
                 if (aj.field_b < bb.b(param0 ^ -2)) {
                   stackIn_24_0 = ValidationHelpWidget.a(-2, param0 + 8076);
@@ -378,14 +378,14 @@ final class TriangleMesh {
                 }
               }
             }
-            if (lc.field_g != 4) {
+            if (EmailValidationResult.field_g != 4) {
               stackIn_34_0 = -1;
               return stackIn_34_0;
             }
-            ce.field_n.a(oc.field_c, ka.field_d, 20);
+            OutlinedRoadStripRenderer.field_n.a(oc.field_c, ka.field_d, 20);
             oc.field_c = null;
-            tl.field_y = null;
-            lc.field_g = 0;
+            PasswordFieldRenderer.field_y = null;
+            EmailValidationResult.field_g = 0;
             stackIn_32_0 = 0;
             return stackIn_32_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

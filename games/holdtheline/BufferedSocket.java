@@ -34,7 +34,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_k != null) {
             while (this.field_k.field_d == 0) {
-              SocketConnector.a(1L, (byte) 45);
+              SocketConnector.sleepMillis(1L, (byte) 45);
             }
             if (this.field_k.field_d == 1) {
               try {
@@ -74,11 +74,11 @@ final class BufferedSocket implements Runnable {
         int var11Lifetime1;
         var12 = HoldTheLine.field_D;
         try {
-          var14 = rd.field_e;
+          var14 = RoadStripRenderer.field_e;
           if (param0 >= -124) {
             BufferedSocket.clearSharedReferences(25);
           }
-          var2 = var14.f((byte) -85);
+          var2 = var14.readUnsignedByte((byte) -85);
           var3 = (qn) (StrongCacheEntry.field_z.first((byte) 97));
           while (var3 != null) {
             if (var2 != var3.field_j) {
@@ -91,23 +91,23 @@ final class BufferedSocket implements Runnable {
             r.a(-28036);
             return;
           }
-          var4 = var14.f((byte) -31);
+          var4 = var14.readUnsignedByte((byte) -31);
           if (var4 != 0) {
-            RoadSegment.field_v[0] = ng.field_e;
+            RoadSegment.field_v[0] = QuickChatPhraseCache.field_e;
             var5 = var3.field_i;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              RoadSegment.field_v[var6_int] = var14.j(-1231);
+              RoadSegment.field_v[var6_int] = var14.readCp1252String(-1231);
             }
             NetworkArchiveRequest.a(var4, false, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               IterableNodeHashTable.a(76, var14);
               if (var6_intLifetime1 == 0) {
-                FadingDialog.a(dk.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 106, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
+                FadingDialog.a(TextWidgetStyle.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 106, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
               } else {
-                FadingDialog.a(dk.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 108, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
+                FadingDialog.a(TextWidgetStyle.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 108, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
               }
             }
-            uf.a(0, var5);
+            SpriteAsset.a(0, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
             var8 = Vector2f.field_h;
@@ -116,7 +116,7 @@ final class BufferedSocket implements Runnable {
             while (var8 > var9) {
               var11 = IterableNodeHashTable.field_h[var9];
               var6[0][var10] = RoadSegment.field_v[var11];
-              var18[0][var10 * 4] = va.field_j[var11];
+              var18[0][var10 * 4] = SpriteSheetAsset.field_j[var11];
               var18[0][1 + var10 * 4] = IsaacPacketBuffer.field_u[var11];
               var18[0][2 + var10 * 4] = ua.field_c[var11];
               var18[0][4 * var10 + 3] = fj.field_q[var11];
@@ -134,7 +134,7 @@ final class BufferedSocket implements Runnable {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = IterableNodeHashTable.field_h[var5 + var9Lifetime1];
               var6[1][var13] = RoadSegment.field_v[var11Lifetime1];
-              var18[1][4 * var13] = va.field_j[var11Lifetime1];
+              var18[1][4 * var13] = SpriteSheetAsset.field_j[var11Lifetime1];
               var18[1][var13 * 4 + 1] = IsaacPacketBuffer.field_u[var11Lifetime1];
               var18[1][4 * var13 + 2] = ua.field_c[var11Lifetime1];
               var18[1][var13 * 4 + 3] = fj.field_q[var11Lifetime1];
@@ -419,7 +419,7 @@ final class BufferedSocket implements Runnable {
 
     final static boolean a(int param0) {
         if (hk.field_a != null &&
-          null != ho.field_j) {
+          null != EmailAddressValidator.field_j) {
           return true;
         }
         if (param0 > -3) {
@@ -432,7 +432,7 @@ final class BufferedSocket implements Runnable {
           return false;
         }
         hk.field_a = ko.a(false);
-        ho.field_j = om.a("font24", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
+        EmailAddressValidator.field_j = om.a("font24", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
         return true;
     }
 

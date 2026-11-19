@@ -40,7 +40,7 @@ final class sa {
           if (param2 >= -69) {
             field_f = (String) null;
           }
-          stackIn_3_0 = wc.a(param0, param1, 1.0f, (byte) -115);
+          stackIn_3_0 = TrackCurve.a(param0, param1, 1.0f, (byte) -115);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

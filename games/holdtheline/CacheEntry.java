@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class CacheEntry extends DualLinkNode {
-    static e field_p;
+    static QuickChatDynamicCommand field_p;
     int field_o;
 
     final static void a(int param0, String param1, float param2) {
-        aa.field_m = param1;
+        DelayedServerPacket.field_m = param1;
         if (param0 < 79) {
           return;
         }
@@ -31,7 +31,7 @@ abstract class CacheEntry extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -53) {
-            field_p = (e) null;
+            field_p = (QuickChatDynamicCommand) null;
           }
           stackIn_3_0 = ae.a(param1, (byte) -44, param1.length, 0);
           return stackIn_3_0;
@@ -49,16 +49,16 @@ abstract class CacheEntry extends DualLinkNode {
         }
     }
 
-    final static mf a(java.applet.Applet param0, byte param1) {
+    final static LoginMethodPreference a(java.applet.Applet param0, byte param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        mf[] var3 = null;
-        mf var5 = null;
+        LoginMethodPreference[] var3 = null;
+        LoginMethodPreference var5 = null;
         int var6 = 0;
-        mf stackIn_4_0 = null;
-        mf stackIn_12_0 = null;
-        mf stackIn_15_0 = null;
+        LoginMethodPreference stackIn_4_0 = null;
+        LoginMethodPreference stackIn_12_0 = null;
+        LoginMethodPreference stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -67,21 +67,21 @@ abstract class CacheEntry extends DualLinkNode {
         try {
           var2 = ph.a("jagex-last-login-method", (byte) 30, param0);
           if (var2 == null) {
-            stackIn_4_0 = ho.field_n;
+            stackIn_4_0 = EmailAddressValidator.field_n;
             return stackIn_4_0;
           }
           if (param1 != 124) {
-            field_p = (e) null;
+            field_p = (QuickChatDynamicCommand) null;
           }
           var3 = ko.a(84);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
-            if (var5.a(param1 ^ 37, var2)) {
+            if (var5.matchesLoginMethod(param1 ^ 37, var2)) {
               stackIn_12_0 = var5;
               return stackIn_12_0;
             }
           }
-          stackIn_15_0 = ho.field_n;
+          stackIn_15_0 = EmailAddressValidator.field_n;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,6 +106,6 @@ abstract class CacheEntry extends DualLinkNode {
     }
 
     static {
-        field_p = new e(2, 4, 4, 0);
+        field_p = new QuickChatDynamicCommand(2, 4, 4, 0);
     }
 }

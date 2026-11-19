@@ -5,7 +5,7 @@ final class ResourceArchive {
     private Object[][] field_b;
     private Object[] field_c;
     static boolean field_g;
-    static go field_f;
+    static RotatedSpriteAsset field_f;
     private boolean field_d;
     private ArchiveIndex field_a;
     static String field_h;
@@ -106,7 +106,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_a.field_c[param0].get(an.a(var5, 0), (byte) 24);
+          var4_int = this.field_a.field_c[param0].get(GzipDecompressor.hashCp1252String(var5, 0), (byte) 24);
           if (this.a(var4_int, param0, 877)) {
             return var4_int;
           }
@@ -227,15 +227,15 @@ final class ResourceArchive {
             0 != param0[1] ||
             param0[2] != 0 ||
             param0[3] != 0)) {
-            var35 = ne.a(90, this.field_c[param3], true);
+            var35 = ne.unwrapByteStorage(90, this.field_c[param3], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(5, var26.payload.length, param1 ^ 12875, param0);
+            var26.xteaDecryptRange(5, var26.payload.length, param1 ^ 12875, param0);
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = ne.a(90, this.field_c[param3], false);
+            var9 = ne.unwrapByteStorage(90, this.field_c[param3], false);
           }
           try {
             var36 = ph.a((byte) -1, var9);
@@ -266,7 +266,7 @@ final class ResourceArchive {
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.a(-50);
+                  var17 = var17 + var29.readInt(-50);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -288,7 +288,7 @@ final class ResourceArchive {
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var29.a(91);
+                  var19Lifetime2 = var19Lifetime2 + var29.readInt(91);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -316,7 +316,7 @@ final class ResourceArchive {
             for (var15_intLifetime1 = 0; var12Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var5_int > var17Lifetime1; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var31.a(-83);
+                var16Lifetime1 = var16Lifetime1 + var31.readInt(-83);
                 var14[var17Lifetime1] = var14[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -333,7 +333,7 @@ final class ResourceArchive {
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var19Lifetime1 < var5_int; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var31.a(-107);
+                var18Lifetime1 = var18Lifetime1 + var31.readInt(-107);
                 ArrayOperations.copyBytes(var43, var16Lifetime3, var40[var19Lifetime1], var39[var19Lifetime1], var18Lifetime1);
                 var14[var19Lifetime1] = var14[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
@@ -348,7 +348,7 @@ final class ResourceArchive {
               if (0 != this.field_e) {
                 var7[var18Lifetime2] = var40[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = mg.a((byte) 112, var40[var17Lifetime3], false);
+                var7[var18Lifetime2] = RotatedSpriteCache.wrapByteStorage((byte) 112, var40[var17Lifetime3], false);
               }
             }
           } else {
@@ -358,7 +358,7 @@ final class ResourceArchive {
               var11 = var34[0];
             }
             if (this.field_e == 0) {
-              var7[var11] = mg.a((byte) 95, var43, false);
+              var7[var11] = RotatedSpriteCache.wrapByteStorage((byte) 95, var43, false);
             } else {
               var7[var11] = var36;
             }
@@ -401,12 +401,12 @@ final class ResourceArchive {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_a.field_h.get(an.a(var6, 0), (byte) 24);
+          var4_int = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var6, 0), (byte) 24);
           if (!this.c(-1, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_a.field_c[var4_int].get(an.a(var7, 0), (byte) 24);
+          var5 = this.field_a.field_c[var4_int].get(GzipDecompressor.hashCp1252String(var7, 0), (byte) 24);
           stackIn_11_0 = this.b(var4_int, var5, -1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -467,13 +467,13 @@ final class ResourceArchive {
           param3 = param3.toLowerCase();
           param0 = param0.toLowerCase();
           var7 = (CharSequence) ((Object) param3);
-          var5_int = this.field_a.field_h.get(an.a(var7, 0), (byte) 24);
+          var5_int = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var7, 0), (byte) 24);
           if (!this.c(-1, var5_int)) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
           }
           var8 = (CharSequence) ((Object) param0);
-          var6 = this.field_a.field_c[var5_int].get(an.a(var8, param1), (byte) 24);
+          var6 = this.field_a.field_c[var5_int].get(GzipDecompressor.hashCp1252String(var8, param1), (byte) 24);
           stackIn_7_0 = this.a(param2, var6, var5_int, -4599);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -507,7 +507,7 @@ final class ResourceArchive {
           return false;
         }
         if (param2 != 877) {
-          field_f = (go) null;
+          field_f = (RotatedSpriteAsset) null;
         }
         if (param1 < 0 ||
           0 > param0 ||
@@ -573,12 +573,12 @@ final class ResourceArchive {
             this.field_d = true;
           }
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.field_a.field_h.get(an.a(var6, 0), (byte) 24);
+          var4_int = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var6, 0), (byte) 24);
           if (var4_int < 0) {
             return false;
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_a.field_c[var4_int].get(an.a(var7, 0), (byte) 24);
+          var5 = this.field_a.field_c[var4_int].get(GzipDecompressor.hashCp1252String(var7, 0), (byte) 24);
           if (var5 >= 0) {
             return true;
           }
@@ -608,7 +608,7 @@ final class ResourceArchive {
           this.field_d = ((boolean[]) (this.field_c[2]))[3];
         }
         if (!this.field_d) {
-          this.field_c[param0] = mg.a((byte) 106, this.field_i.a((byte) -83, param0), false);
+          this.field_c[param0] = RotatedSpriteCache.wrapByteStorage((byte) 106, this.field_i.a((byte) -83, param0), false);
         } else {
           this.field_c[param0] = this.field_i.a((byte) -95, param0);
         }
@@ -646,7 +646,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_a.field_h.get(an.a(var4, param1), (byte) 24);
+          var3_int = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var4, param1), (byte) 24);
           stackIn_4_0 = this.a(param1 + 77, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -741,7 +741,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_a.field_h.get(an.a(var4, 0), (byte) 24);
+          var3_int = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var4, 0), (byte) 24);
           if (var3_int >= 0) {
             return true;
           }
@@ -788,7 +788,7 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_a.field_h.get(an.a(var6, 0), (byte) 24);
+          var4_int = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var6, 0), (byte) 24);
           if (param1) {
             this.field_i = (ArchiveProvider) (((Object[]) (this.field_c[4]))[1]);
           }
@@ -797,7 +797,7 @@ final class ResourceArchive {
             return (byte[]) (stackIn_7_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_a.field_c[var4_int].get(an.a(var7, 0), (byte) 24);
+          var5 = this.field_a.field_c[var4_int].get(GzipDecompressor.hashCp1252String(var7, 0), (byte) 24);
           stackIn_9_0 = this.a(var4_int, true, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -852,7 +852,7 @@ final class ResourceArchive {
           var3_int = -1 % ((param1 + 19) / 59);
           param0 = param0.toLowerCase();
           var5 = (CharSequence) ((Object) param0);
-          var4 = this.field_a.field_h.get(an.a(var5, 0), (byte) 24);
+          var4 = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var5, 0), (byte) 24);
           stackIn_4_0 = this.d(var4, 113);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -900,7 +900,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_b[param2][param1]) {
-            var7 = ne.a(90, this.field_b[param2][param1], false);
+            var7 = ne.unwrapByteStorage(90, this.field_b[param2][param1], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -953,7 +953,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_a.field_h.get(an.a(var4, 0), (byte) 24);
+          var3_int = this.field_a.field_h.get(GzipDecompressor.hashCp1252String(var4, 0), (byte) 24);
           if (!this.c(-1, var3_int)) {
             stackIn_7_0 = -1;
             return stackIn_7_0;

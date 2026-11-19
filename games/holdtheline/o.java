@@ -22,16 +22,16 @@ final class o {
 
     final static Sprite a(int param0, int param1) {
         if (param0 == param1) {
-          return SecondaryNodeDeque.field_i.a(param1 + 8190);
+          return SecondaryNodeDeque.field_i.getSprite(param1 + 8190);
         }
         if (param0 == 3) {
-          return sm.field_a.a(8192);
+          return sm.field_a.getSprite(8192);
         }
         if (param0 < 4) {
           throw new RuntimeException();
         }
         if (param0 < 8) {
-          return nj.field_c[param0 - 4].a(param1 + 8190);
+          return nj.field_c[param0 - 4].getSprite(param1 + 8190);
         }
         throw new RuntimeException();
     }
@@ -101,7 +101,7 @@ final class o {
         }
     }
 
-    final static uh a(byte param0) {
+    final static GrowableIntList a(byte param0) {
         int var1 = 48 / ((param0 + 52) / 57);
         return SingleChildWidget.a(1, 111);
     }

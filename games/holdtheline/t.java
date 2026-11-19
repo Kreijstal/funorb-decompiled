@@ -7,7 +7,7 @@ final class t extends IntrusiveNode {
     static int[] field_j;
     static int field_l;
     int[] field_m;
-    static uf field_i;
+    static SpriteAsset field_i;
 
     final static boolean a(int param0, String param1) {
         int var2_int = 0;
@@ -22,7 +22,7 @@ final class t extends IntrusiveNode {
         try {
           for (var2_int = param0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!oe.a((char) var3, -125) &&
+            if (!QuadraticPointPath.isAsciiLetter((char) var3, -125) &&
               !ClientException.a(48, (char) var3)) {
               return true;
             }
@@ -106,7 +106,7 @@ final class t extends IntrusiveNode {
             return false;
           }
           if (param2 != 111) {
-            field_i = (uf) null;
+            field_i = (SpriteAsset) null;
           }
           if (param1.b("keyboard_space", -98) &&
             param1.b("keyboard_esc", param2 ^ 31) &&
@@ -131,7 +131,7 @@ final class t extends IntrusiveNode {
             if (!param1.b("tarmac", -95)) {
               return false;
             }
-            if (!kb.a(16616, 0)) {
+            if (!LoginCredentialType.a(16616, 0)) {
               return true;
             }
             if (!param1.b("halloween_zombie", param2 - 70)) {

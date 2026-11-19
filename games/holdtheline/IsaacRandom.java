@@ -6,7 +6,7 @@ final class IsaacRandom {
     private int field_j;
     private int[] field_d;
     private int field_e;
-    static va field_f;
+    static SpriteSheetAsset field_f;
     static Sprite field_a;
     private int field_i;
     private int[] field_b;

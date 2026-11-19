@@ -8,7 +8,7 @@ final class MusicPatchPcmStream extends PcmStream {
     IntrusiveDeque field_q;
     static int[] field_n;
     static String field_o;
-    static uf field_s;
+    static SpriteAsset field_s;
     private MidiPcmStream field_m;
     PcmStreamMixer field_p;
 
@@ -32,9 +32,9 @@ final class MusicPatchPcmStream extends PcmStream {
             param0.field_v = var4_int * param2 + param0.field_v & 1048575;
             if (var5 <= param2) {
               if (this.field_m.field_S[param0.field_p] == 0) {
-                param0.field_t = PcmSampleStream.b(param0.field_s, param0.field_t.l(), param0.field_t.j(), param0.field_t.k());
+                param0.field_t = PcmSampleStream.createWithStep(param0.field_s, param0.field_t.getPlaybackStep(), param0.field_t.getVolume(), param0.field_t.getPan());
               } else {
-                param0.field_t = PcmSampleStream.b(param0.field_s, param0.field_t.l(), 0, param0.field_t.k());
+                param0.field_t = PcmSampleStream.createWithStep(param0.field_s, param0.field_t.getPlaybackStep(), 0, param0.field_t.getPan());
                 stackIn_8_0 = this.field_m;
                 stackIn_8_1 = 2;
                 stackIn_8_2 = (MidiNote) (param0);
@@ -42,7 +42,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_9_3);
               }
               if (param0.field_o.field_q[param0.field_u] < 0) {
-                param0.field_t.g(-1);
+                param0.field_t.setLoopCount(-1);
               }
               param2 = param0.field_v / var4_int;
             }
@@ -50,7 +50,7 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param1 > -71) {
             this.field_q = (IntrusiveDeque) null;
           }
-          param0.field_t.a(param2);
+          param0.field_t.skip(param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,7 +66,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final PcmStream a() {
+    final PcmStream firstSubStream() {
         MidiNote var1 = (MidiNote) (this.field_q.first((byte) 100));
         if (var1 == null) {
           return null;
@@ -74,7 +74,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (var1.field_t != null) {
           return (PcmStream) ((Object) var1.field_t);
         }
-        return this.b();
+        return this.nextSubStream();
     }
 
     final static void a(Throwable param0, byte param1, String param2) {
@@ -111,30 +111,30 @@ final class MusicPatchPcmStream extends PcmStream {
               var3 = var3 + param2;
             }
             cd.a(12, var3);
-            var7 = vn.a("%3a", ":", -104, var3);
-            var8 = vn.a("%40", "@", -102, var7);
-            var9 = vn.a("%26", "&", -102, var8);
-            var10 = vn.a("%23", "#", -67, var9);
-            if (null == rd.field_d) {
+            var7 = NineSlicePanel.replaceAllLiteral("%3a", ":", -104, var3);
+            var8 = NineSlicePanel.replaceAllLiteral("%40", "@", -102, var7);
+            var9 = NineSlicePanel.replaceAllLiteral("%26", "&", -102, var8);
+            var10 = NineSlicePanel.replaceAllLiteral("%23", "#", -67, var9);
+            if (null == RoadStripRenderer.field_d) {
               return;
             }
             stackIn_13_0 = te.field_d;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
-            stackIn_13_3 = rd.field_d.getCodeBase();
+            stackIn_13_3 = RoadStripRenderer.field_d.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(IterableNodeHashTable.field_a).append("&u=");
-            if (null != am.field_f) {
+            if (null != LinkWidgetRenderer.field_f) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = am.field_f;
+              stackIn_14_5 = LinkWidgetRenderer.field_f;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = "" + ul.field_e;
+              stackIn_14_5 = "" + TutorialCalloutAnchor.field_e;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_p).append("&v2=").append(PlatformTaskDispatcher.field_j).append("&e=").append(var10).toString()), 0);
             while (var4.field_d == 0) {
-              SocketConnector.a(1L, (byte) 45);
+              SocketConnector.sleepMillis(1L, (byte) 45);
             }
             if (var4.field_d == 1) {
               var5_ref_DataInputStream = (DataInputStream) (var4.field_b);
@@ -153,12 +153,12 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final void a(int param0) {
+    final void skip(int param0) {
         int var2;
         MidiNote var3;
         int var4;
         var4 = HoldTheLine.field_D;
-        this.field_p.a(param0);
+        this.field_p.skip(param0);
         var3 = (MidiNote) (this.field_q.first((byte) 120));
         while (var3 != null) {
           if (!this.field_m.a(true, var3)) {
@@ -209,7 +209,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param0.field_v = param0.field_v + var7_int * param4;
                 break;
               }
-              param0.field_t.b(param1, param3, var8);
+              param0.field_t.mix(param1, param3, var8);
               param0.field_v = param0.field_v + (-1048576 + var8 * var7_int);
               param3 = param3 + var8;
               param4 = param4 - var8;
@@ -220,28 +220,28 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var11 = param0.field_t;
               if (0 != this.field_m.field_S[param0.field_p]) {
-                param0.field_t = PcmSampleStream.b(param0.field_s, var11.l(), 0, var11.k());
+                param0.field_t = PcmSampleStream.createWithStep(param0.field_s, var11.getPlaybackStep(), 0, var11.getPan());
                 stackIn_14_0 = this.field_m;
                 stackIn_14_1 = param2 ^ -21;
                 stackIn_14_2 = (MidiNote) (param0);
                 stackIn_15_3 = !(0 <= param0.field_o.field_q[param0.field_u]);
                 ((MidiPcmStream) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_15_3);
-                param0.field_t.c(var9, var11.j());
+                param0.field_t.rampVolume(var9, var11.getVolume());
               } else {
-                param0.field_t = PcmSampleStream.b(param0.field_s, var11.l(), var11.j(), var11.k());
+                param0.field_t = PcmSampleStream.createWithStep(param0.field_s, var11.getPlaybackStep(), var11.getVolume(), var11.getPan());
               }
               if (0 > param0.field_o.field_q[param0.field_u]) {
-                param0.field_t.g(-1);
+                param0.field_t.setLoopCount(-1);
               }
-              var11.f(var9);
-              var11.b(param1, param3, param5 - param3);
-              if (!var11.g()) {
+              var11.fadeOutAndRemove(var9);
+              var11.mix(param1, param3, param5 - param3);
+              if (!var11.isRamping()) {
                 continue;
               }
               this.field_p.a(var11);
             }
           }
-          param0.field_t.b(param1, param3, param4);
+          param0.field_t.mix(param1, param3, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream nextSubStream() {
         MidiNote var1;
         int var2;
         var2 = HoldTheLine.field_D;
@@ -278,7 +278,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void mix(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -291,7 +291,7 @@ final class MusicPatchPcmStream extends PcmStream {
         int var7 = 0;
         var7 = HoldTheLine.field_D;
         try {
-          this.field_p.b(param0, param1, param2);
+          this.field_p.mix(param0, param1, param2);
           var6 = (MidiNote) (this.field_q.first((byte) 101));
           while (var6 != null) {
             stackIn_4_0 = this.field_m.a(true, var6);
@@ -335,14 +335,14 @@ final class MusicPatchPcmStream extends PcmStream {
         field_n = null;
         field_r = null;
         if (param0 != 0) {
-          field_s = (uf) null;
+          field_s = (SpriteAsset) null;
           field_s = null;
           return;
         }
         field_s = null;
     }
 
-    final int c() {
+    final int getActivityWeight() {
         return 0;
     }
 

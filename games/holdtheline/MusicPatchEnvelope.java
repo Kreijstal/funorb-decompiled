@@ -46,7 +46,7 @@ final class MusicPatchEnvelope {
               }
               break;
             }
-            var6.a((byte) 112, sm.a(-var3 + var4, var3, -129, param0));
+            var6.a((byte) 112, sm.decodeCp1252(-var3 + var4, var3, -129, param0));
             while (param0.length > var4) {
               if (param0[var4] == 13 ||
                 param0[var4] == 10) {
@@ -82,7 +82,7 @@ final class MusicPatchEnvelope {
           if (!param1) {
             field_f = false;
           }
-          stackIn_3_0 = ne.a(10, param0, true, 106);
+          stackIn_3_0 = ne.isIntegerInRadix(10, param0, true, 106);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,12 +98,12 @@ final class MusicPatchEnvelope {
         }
     }
 
-    final static vj a(int param0, vj param1, float param2) {
+    final static BoundaryCurve a(int param0, BoundaryCurve param1, float param2) {
         RuntimeException var3 = null;
-        vj var4 = null;
-        gj var5 = null;
+        BoundaryCurve var4 = null;
+        ArcTrackBoundary var5 = null;
         TrackBoundary var6 = null;
-        gj stackIn_4_0 = null;
+        ArcTrackBoundary stackIn_4_0 = null;
         TrackBoundary stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -111,17 +111,17 @@ final class MusicPatchEnvelope {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 63) {
-            var4 = (vj) null;
-            MusicPatchEnvelope.a(-87, (vj) null, -0.22468635439872742f);
+            var4 = (BoundaryCurve) null;
+            MusicPatchEnvelope.a(-87, (BoundaryCurve) null, -0.22468635439872742f);
           }
           if (param1 instanceof TrackBoundary) {
             var6 = (TrackBoundary) (param1);
-            stackIn_6_0 = new TrackBoundary(var6.a(false, param2), var6.field_s, param1.field_k, param1.field_p, param1.field_q);
-            return (vj) ((Object) stackIn_6_0);
+            stackIn_6_0 = new TrackBoundary(var6.pointAt(false, param2), var6.end, param1.field_k, param1.field_p, param1.field_q);
+            return (BoundaryCurve) ((Object) stackIn_6_0);
           }
-          var5 = (gj) (param1);
-          stackIn_4_0 = new gj(var5.field_t, var5.field_u, (-var5.field_r + var5.field_w) * param2 + var5.field_r, var5.field_w, param1.field_k, param1.field_p, param1.field_q);
-          return (vj) ((Object) stackIn_4_0);
+          var5 = (ArcTrackBoundary) (param1);
+          stackIn_4_0 = new ArcTrackBoundary(var5.center, var5.radius, (-var5.startAngle + var5.endAngle) * param2 + var5.startAngle, var5.endAngle, param1.field_k, param1.field_p, param1.field_q);
+          return (BoundaryCurve) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

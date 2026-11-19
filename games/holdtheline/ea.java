@@ -19,22 +19,22 @@ final class ea extends UiWidget {
         this.field_D = new Sprite[]{this.b(127, this.field_C, this.field_A), this.b(127, this.field_M, this.field_G)};
         this.field_I = this.a(-127);
         this.field_E = this.field_I.d();
-        this.field_L = new Sprite(this.field_u >> 1, this.field_u);
+        this.field_L = new Sprite(this.height >> 1, this.height);
         int var2 = 22 % ((param0 - 6) / 63);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (0 != param3) {
           return;
         }
         if (param0 != -9532) {
           this.field_M = -82;
         }
-        int var5 = this.field_k + param2;
-        int var6 = this.field_o + param1;
+        int var5 = this.x + param2;
+        int var6 = this.y + param1;
         this.a(2, var6, this.field_D[0], var5);
         if (65536 > this.field_B) {
-          td.a(this.field_x + var5, (this.field_x * this.field_B >> 16) + var5, this.field_u + var6, true, var6);
+          StereoMusicSample.a(this.width + var5, (this.width * this.field_B >> 16) + var5, this.height + var6, true, var6);
           this.a(param0 ^ -9530, var6, this.field_D[1], var5);
           dm.b((byte) -10);
         }
@@ -52,8 +52,8 @@ final class ea extends UiWidget {
         int var8 = 0;
         var8 = HoldTheLine.field_D;
         try {
-          var5_int = this.field_x + param3;
-          td.a(-this.field_I.field_s + var5_int, this.field_I.field_s + param3, this.field_u + param1, true, param1);
+          var5_int = this.width + param3;
+          StereoMusicSample.a(-this.field_I.field_s + var5_int, this.field_I.field_s + param3, this.height + param1, true, param1);
           var6 = -this.field_H + param3;
           if (param0 != 2) {
             this.field_I = (Sprite) null;
@@ -73,7 +73,7 @@ final class ea extends UiWidget {
           }
           if (-this.field_I.field_s + var5_int <= SoftwareRasterizer.field_e) {
             ProxySocketConnector.a(this.field_L, param0 ^ -3);
-            for (var7 = this.field_x + (-this.field_I.field_s + this.field_H); var7 > this.field_F * 2; var7 = var7 - this.field_F * 2) {
+            for (var7 = this.width + (-this.field_I.field_s + this.field_H); var7 > this.field_F * 2; var7 = var7 - this.field_F * 2) {
             }
             param2.a(-var7, 0);
             param2.a(-var7 + this.field_F * 2, 0);
@@ -106,7 +106,7 @@ final class ea extends UiWidget {
         int var11 = 0;
         int var12 = 0;
         int var13 = HoldTheLine.field_D;
-        Sprite var14 = new Sprite(this.field_F * 2, this.field_u);
+        Sprite var14 = new Sprite(this.field_F * 2, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -114,8 +114,8 @@ final class ea extends UiWidget {
           return (Sprite) null;
         }
         ProxySocketConnector.a(var14, -1);
-        int var5 = this.field_u >> 1;
-        for (var6 = 0; this.field_u > var6; var6++) {
+        int var5 = this.height >> 1;
+        for (var6 = 0; this.height > var6; var6++) {
           var7 = (var6 >> 1) * (-1 + this.field_F * 2) % (this.field_F * 2);
           var8 = param1 & 16711935;
           var9 = 65280 & param1;
@@ -141,12 +141,12 @@ final class ea extends UiWidget {
         int var9 = 0;
         int var10 = HoldTheLine.field_D;
         int var2 = 2 / ((-72 - param0) / 48);
-        int var3 = this.field_u >> 1;
-        Sprite var4 = new Sprite(var3, this.field_u);
+        int var3 = this.height >> 1;
+        Sprite var4 = new Sprite(var3, this.height);
         ProxySocketConnector.a(var4, -1);
-        for (var5 = 0; this.field_u > var5; var5++) {
+        for (var5 = 0; this.height > var5; var5++) {
           for (var6 = 0; var6 < var3; var6++) {
-            var7 = (double)var6 * (double)var6 / (double)((-var5 + this.field_u) * var5);
+            var7 = (double)var6 * (double)var6 / (double)((-var5 + this.height) * var5);
             var9 = 1;
             if (1.0 > var7) {
               var7 = Math.sqrt(1.0 - var7);
@@ -159,8 +159,8 @@ final class ea extends UiWidget {
         return var4;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a((byte) -96);
     }
 
@@ -168,7 +168,7 @@ final class ea extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    final void a(int param0, UiWidget param1, int param2, byte param3) {
+    final void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         Sprite discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -211,11 +211,11 @@ final class ea extends UiWidget {
         try {
           var1 = MusicCrossfadeStream.field_n;
           synchronized (var1) {
-            cb.field_j = cb.field_j + 1;
+            DisplayNameValidator.field_j = DisplayNameValidator.field_j + 1;
             if (param0) {
               return;
             }
-            vj.field_l = qd.field_i;
+            BoundaryCurve.field_l = qd.field_i;
             if (DraggableWidget.field_J < 0) {
               var5 = 0;
               var2 = var5;
@@ -252,7 +252,7 @@ final class ea extends UiWidget {
         this.field_C = param0;
         if (param2) {
           UiWidget var5 = (UiWidget) null;
-          this.a(-23, (UiWidget) null, 66, (byte) -6);
+          this.updateHover(-23, (UiWidget) null, 66, (byte) -6);
         }
         this.a((byte) 70);
     }
@@ -263,7 +263,7 @@ final class ea extends UiWidget {
         this.field_M = param7;
         this.field_A = param6;
         this.field_G = param8;
-        this.a(param0, (byte) 122, param1, param3, param2);
+        this.setBounds(param0, (byte) 122, param1, param3, param2);
     }
 
     static {

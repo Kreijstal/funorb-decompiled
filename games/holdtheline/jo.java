@@ -3,7 +3,7 @@
  */
 abstract class jo {
     static DualNodeHashTable field_b;
-    static uf field_a;
+    static SpriteAsset field_a;
     private static String field_z;
 
     public static void clearSharedReferences(byte param0) {
