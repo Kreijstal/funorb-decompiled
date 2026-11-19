@@ -200,7 +200,7 @@ final class SectorCacheStore {
     }
 
     final static void loadLocalizedText(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+        class SteelGameTextLoader {
             RuntimeException stackIn_4687_0;
             StringBuilder stackIn_4687_1;
             String stackIn_4688_2;
@@ -212,7 +212,7 @@ final class SectorCacheStore {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            SteelGameTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_4687_0 = null;
@@ -224,7 +224,7 @@ final class SectorCacheStore {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadCampaignAndAchievementText() throws java.lang.RuntimeException {
                 MusicCrossfadeStream.field_y = param1;
                 var2 = SentinelDesigner.readTextResourceBytes(125, "text_game_name");
                 if (var2 != null) {
@@ -1108,7 +1108,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(57, "poweruptips,15");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadEquipmentNamesAndDescriptions() throws java.lang.RuntimeException {
                 if (null != var2) {
                   UiTheme.field_p[15] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
@@ -1997,7 +1997,7 @@ final class SectorCacheStore {
                   WhirlpoolHasher.field_g[9] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadWeaponOptionsAndInstructions() throws java.lang.RuntimeException {
                 var2 = SentinelDesigner.readTextResourceBytes(68, "sentinel_descriptions,10");
                 if (var2 != null) {
                   WhirlpoolHasher.field_g[10] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
@@ -2847,7 +2847,7 @@ final class SectorCacheStore {
                   MouseInputHandler.field_g[91][2] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMissionAndTutorialText() throws java.lang.RuntimeException {
                 var2 = SentinelDesigner.readTextResourceBytes(param0 ^ 110, "instruction_set,91,3");
                 if (var2 != null) {
                   MouseInputHandler.field_g[91][3] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
@@ -3714,7 +3714,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(58, "tutorial_b,7,11");
             }
-            void runChunk4() throws java.lang.RuntimeException {
+            void loadControlsAndComponentText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   UiContainer.field_H[7][11] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
@@ -4632,7 +4632,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(72, "calamitycountdowntxt");
             }
-            void runChunk5() throws java.lang.RuntimeException {
+            void loadMatchStatisticsAndDesignerText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   LobbyGame.field_jc = IntKeyLookup.decodeWindowsCodePageString(param0 + 13, var2);
                 }
@@ -5553,7 +5553,7 @@ final class SectorCacheStore {
                 }
                 var2 = SentinelDesigner.readTextResourceBytes(124, "RANK_TXT,6");
             }
-            void runChunk6() throws java.lang.RuntimeException {
+            void loadRankAndMissionExitText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   RankingAndRasterHelpers.field_a[6] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
@@ -5595,22 +5595,22 @@ final class SectorCacheStore {
                 }
                 MusicCrossfadeStream.field_y = null;
             }
-            void run() {
+            void loadAllText() {
                 var3 = SteelSentinels.obfuscationControl;
                 try {
-                  runChunk0();
+                  loadCampaignAndAchievementText();
                   if (finished) return;
-                  runChunk1();
+                  loadEquipmentNamesAndDescriptions();
                   if (finished) return;
-                  runChunk2();
+                  loadWeaponOptionsAndInstructions();
                   if (finished) return;
-                  runChunk3();
+                  loadMissionAndTutorialText();
                   if (finished) return;
-                  runChunk4();
+                  loadControlsAndComponentText();
                   if (finished) return;
-                  runChunk5();
+                  loadMatchStatisticsAndDesignerText();
                   if (finished) return;
-                  runChunk6();
+                  loadRankAndMissionExitText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -5630,8 +5630,8 @@ final class SectorCacheStore {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
-        decompiledBody.run();
+        SteelGameTextLoader decompiledBody = new SteelGameTextLoader(param0, param1);
+        decompiledBody.loadAllText();
     }
 
     final static boolean pollGameSocketConnection(int param0, boolean param1) {

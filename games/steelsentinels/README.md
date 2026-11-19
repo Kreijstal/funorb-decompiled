@@ -2,7 +2,18 @@
 
 Java here is the single published version. Rebuild from pinned raw Git input with Deko’s `readable/reproduce-steelsentinels.mjs`. The current reverse dictionary is `../../decompilation/steelsentinels-naming.json`.
 
-This gameplay naming pass names 346 reviewed classes across 347 compiled classes. Unknown class/member purposes remain unresolved. Profile and charge names describe observed roles; finer encodings remain open. Renamed identifiers have no opaque suffixes; the dictionary preserves original identities.
+Resolved declarations: 350/350 classes and 2761/2761 methods have readable names; 283 constructors follow their class names. There are no opaque class or method names, including local loader classes and catalogue dispatcher methods. Fields and local variables are outside this complete class/method naming claim. Profile and charge names describe observed roles; finer encodings remain open. The dictionary preserves original identities.
+
+Reproduce and validate in dekobloko-work:
+
+```sh
+env -u JAVA_TOOL_OPTIONS node readable/build-steelsentinels-rules.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-steelsentinels.mjs --check
+node readable/naming-coverage.mjs steelsentinels
+node --test readable/tests/test-steelsentinels-naming.mjs readable/tests/test-naming-coverage.mjs
+```
+
+`ContextMenu.loadInterfaceText` uses a local `ClientInterfaceTextLoader` for shared client text. `SectorCacheStore.loadLocalizedText` uses `SteelGameTextLoader` for campaign, equipment, tutorial, controls, designer and statistics text. Their loading stages have names based on the resource keys they read. `BattleTerrain.buildPartCatalogue` uses `PartCatalogueBuilder` to allocate sprite storage, build sentinel bodies and equipment, and index the resulting catalogue. The regeneration check rejects opaque declarations and numbered dispatcher helpers.
 
 | Start here | Follow |
 | --- | --- |
@@ -32,4 +43,4 @@ ParticleEffect now names duration, age, effect type and its choice of terrain pr
 
 Projectile.advanceGuidedMotion exposes launch acceleration, target steering and the gravity gate. Its target and initial-direction fields and phase-dependent locals now have reviewed names. Independent launch/coasting fixtures cover zero vectors, signed motion and ages 0, 1, 19, 128 and 129 with transient visual emission suppressed. Steering helpers now expose 8192-unit angles and 16.16 sine/cosine. Fixtures cover full-turn trig values, axis/quadrant angles, bounded turning at ages 20–127, target updates/removal and the coasting boundary. The initial-direction reversal branch, rendered effects and complete projectile collisions remain unverified.
 
-The pinned raw input reconstructs Explosion.advanceExplosion with the generic compiler’s bounded node splitting, copy certificate and original-edge proof. Native bytecode/old/new Java fixtures cover 790 scenarios and 2,288 checks with visual emission suppressed. BattleTerrain.java and rl.java retain dispatcher fallbacks; large methods and full collision/rendering work remain.
+The pinned raw input reconstructs Explosion.advanceExplosion with the generic compiler’s bounded node splitting, copy certificate and original-edge proof. Native bytecode/old/new Java fixtures cover 790 scenarios and 2,288 checks with visual emission suppressed. BattleTerrain.java and PacketLoopHelpers.java retain dispatcher fallbacks; large methods and full collision/rendering work remain.

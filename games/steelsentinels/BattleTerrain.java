@@ -1191,7 +1191,7 @@ final class BattleTerrain {
     }
 
     final static void buildPartCatalogue(boolean param0) {
-        class $CfrPartitionedState {
+        class PartCatalogueBuilder {
             ArticulatedPart var1;
             Object var1_ref;
             int[] var2;
@@ -1295,7 +1295,7 @@ final class BattleTerrain {
             Throwable caughtException;
             boolean param0;
             boolean finished;
-            $CfrPartitionedState(boolean initialParam0) {
+            PartCatalogueBuilder(boolean initialParam0) {
                 this.param0 = initialParam0;
                 this.var1 = null;
                 this.var1_ref = null;
@@ -1339,7 +1339,7 @@ final class BattleTerrain {
                 this.statePc = 0;
                 this.caughtException = null;
             }
-            void runPartition0() {
+            void allocatePartSpriteStorage() {
                 scanLoop1: while (true) {
                     switch (statePc) {
                         case 0: {
@@ -1740,7 +1740,7 @@ final class BattleTerrain {
                     }
                 }
             }
-            void runPartition1() {
+            void buildSentinelBodyDefinitions() {
                 scanLoop1: while (true) {
                     switch (statePc) {
                         case 57: {
@@ -1948,7 +1948,7 @@ final class BattleTerrain {
                     }
                 }
             }
-            void runPartition2() {
+            void buildEquipmentAndIndexCatalogue() {
                 scanLoop1: while (true) {
                     switch (statePc) {
                         case 58: {
@@ -2513,16 +2513,16 @@ final class BattleTerrain {
                     }
                 }
             }
-            void run() {
+            void buildCatalogue() {
                 while (!finished) {
                     if (statePc <= 53) {
-                        runPartition0();
+                        allocatePartSpriteStorage();
                     }
                     else if (statePc <= 57) {
-                        runPartition1();
+                        buildSentinelBodyDefinitions();
                     }
                     else if (statePc <= 101) {
-                        runPartition2();
+                        buildEquipmentAndIndexCatalogue();
                     }
                     else {
                         throw new IllegalStateException("invalid CFG state " + statePc);
@@ -2530,8 +2530,8 @@ final class BattleTerrain {
                 }
             }
         }
-        $CfrPartitionedState decompiledState = new $CfrPartitionedState(param0);
-        decompiledState.run();
+        PartCatalogueBuilder decompiledState = new PartCatalogueBuilder(param0);
+        decompiledState.buildCatalogue();
     }
 
     final int getGroundHeightAt(byte obfuscationGuard, int profileIndex) {

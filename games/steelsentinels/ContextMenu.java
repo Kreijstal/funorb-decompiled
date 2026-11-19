@@ -39,7 +39,7 @@ final class ContextMenu extends SceneWidget {
     }
 
     final static void loadInterfaceText(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+        class ClientInterfaceTextLoader {
             RuntimeException stackIn_2583_0;
             StringBuilder stackIn_2583_1;
             String stackIn_2584_2;
@@ -49,7 +49,7 @@ final class ContextMenu extends SceneWidget {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            ClientInterfaceTextLoader(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2583_0 = null;
@@ -59,7 +59,7 @@ final class ContextMenu extends SceneWidget {
                 this.var2 = null;
                 this.var2_ref = null;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLobbyAndConnectionText() throws java.lang.RuntimeException {
                 ChecksumAndFrameHelpers.field_e = param0;
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "loginm3");
                 if (null != var2) {
@@ -963,7 +963,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "rule_0_1");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadRegistrationAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   LoginActionHelpers.field_e = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
@@ -1923,7 +1923,7 @@ final class ContextMenu extends SceneWidget {
                   PasswordFieldPainter.field_y = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadGameMenusAndDisplayText() throws java.lang.RuntimeException {
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "fullscreen");
                 if (var2 != null) {
                   DirectByteStorage.field_g = IntKeyLookup.decodeWindowsCodePageString(13, var2);
@@ -2902,7 +2902,7 @@ final class ContextMenu extends SceneWidget {
                 }
                 var2 = ClockAndCookieHelpers.loadNamedFile((byte) 9, "mustlogin3,2");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadLoginWarningsAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   DelegatingCanvas.field_f[2] = IntKeyLookup.decodeWindowsCodePageString(13, var2);
                 }
@@ -3049,15 +3049,15 @@ final class ContextMenu extends SceneWidget {
                 ChecksumAndFrameHelpers.field_e = null;
                 finished = true; return;
             }
-            void run() {
+            void loadAllText() {
                 try {
-                  runChunk0();
+                  loadLobbyAndConnectionText();
                   if (finished) return;
-                  runChunk1();
+                  loadRegistrationAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadGameMenusAndDisplayText();
                   if (finished) return;
-                  runChunk3();
+                  loadLoginWarningsAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3073,8 +3073,8 @@ final class ContextMenu extends SceneWidget {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
-        decompiledBody.run();
+        ClientInterfaceTextLoader decompiledBody = new ClientInterfaceTextLoader(param0, param1);
+        decompiledBody.loadAllText();
     }
 
     final void addItemWithIcon(int param0, RgbSprite param1, String param2, int param3) {

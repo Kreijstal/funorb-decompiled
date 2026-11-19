@@ -265,7 +265,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:BattleTerrain$1$CfrPartitionedState.runPartition0()V#0"
+      "renamedSymbol": "B:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#0"
     },
     {
       "symbol": "B:hd$1$CfrPartitionedState.runPartition1()V#0",
@@ -273,7 +273,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:BattleTerrain$1$CfrPartitionedState.runPartition1()V#0"
+      "renamedSymbol": "B:BattleTerrain$1PartCatalogueBuilder.buildSentinelBodyDefinitions()V#0"
     },
     {
       "symbol": "B:hd$1$CfrPartitionedState.runPartition2()V#0",
@@ -281,7 +281,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:BattleTerrain$1$CfrPartitionedState.runPartition2()V#0"
+      "renamedSymbol": "B:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#0"
     },
     {
       "symbol": "B:hd.a(III)V#0",
@@ -2204,6 +2204,14 @@
       "renamedSymbol": "C:ContextMenu"
     },
     {
+      "symbol": "C:dn$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "ClientInterfaceTextLoader",
+      "evidence": "dn$1$CfrPartitionedBody.java: Local helper in ContextMenu.loadInterfaceText; stores the archive and temporary byte array while loading client, account, lobby and display text in order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ContextMenu$1ClientInterfaceTextLoader"
+    },
+    {
       "symbol": "C:e",
       "originalName": "e",
       "to": "AccountRequestResult",
@@ -2594,6 +2602,14 @@
       "evidence": "hd.java: Seed-derived terrain profiles, clamped profile accessors and spawn positions.",
       "confidence": "reviewed",
       "renamedSymbol": "C:BattleTerrain"
+    },
+    {
+      "symbol": "C:hd$1$CfrPartitionedState",
+      "originalName": "$CfrPartitionedState",
+      "to": "PartCatalogueBuilder",
+      "evidence": "hd$1$CfrPartitionedState.java: Local state holder in BattleTerrain.buildPartCatalogue; allocates part sprite storage, builds body/equipment definitions and indexes the completed catalogue.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BattleTerrain$1PartCatalogueBuilder"
     },
     {
       "symbol": "C:he",
@@ -3778,6 +3794,14 @@
       "evidence": "rc.java: Sector-based cache file store with index and data files.",
       "confidence": "reviewed",
       "renamedSymbol": "C:SectorCacheStore"
+    },
+    {
+      "symbol": "C:rc$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "SteelGameTextLoader",
+      "evidence": "rc$1$CfrPartitionedBody.java: Local helper in SectorCacheStore.loadLocalizedText; loads Steel Sentinels campaign, equipment, tutorial, controls, designer and statistics text from named archive resources.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SectorCacheStore$1SteelGameTextLoader"
     },
     {
       "symbol": "C:rd",
@@ -9636,6 +9660,46 @@
       "renamedSymbol": "M:NameCheckResult.isAvailable(I)Z"
     },
     {
+      "symbol": "M:dn$1$CfrPartitionedBody.run()V",
+      "originalName": "run",
+      "to": "loadAllText",
+      "evidence": "dn$1$CfrPartitionedBody.java: Runs the four client text-loading stages in source order with their original exception context and finished flag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadAllText()V"
+    },
+    {
+      "symbol": "M:dn$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLobbyAndConnectionText",
+      "evidence": "dn$1$CfrPartitionedBody.java: Loads 226 named resources from loginm3 through rule_0_1: connection errors, lobby/chat/game options, social actions and the start of report-abuse rules.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadLobbyAndConnectionText()V"
+    },
+    {
+      "symbol": "M:dn$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadRegistrationAndLoadingText",
+      "evidence": "dn$1$CfrPartitionedBody.java: Loads 238 resources from rule_0_2 through music_colon: remaining rules, account/login/registration forms, validators, social errors and asset-loading messages.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadRegistrationAndLoadingText()V"
+    },
+    {
+      "symbol": "M:dn$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadGameMenusAndDisplayText",
+      "evidence": "dn$1$CfrPartitionedBody.java: Loads 245 resources from fullscreen through mustlogin3,2: menus, scores, achievements, multiplayer results, quick chat, membership, reconnect and graphics/fullscreen prompts.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadGameMenusAndDisplayText()V"
+    },
+    {
+      "symbol": "M:dn$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadLoginWarningsAndSubscriptionText",
+      "evidence": "dn$1$CfrPartitionedBody.java: Loads the remaining login/discard warning variants, thirteen monthly subscription labels and sentence_separator.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadLoginWarningsAndSubscriptionText()V"
+    },
+    {
       "symbol": "M:dn.a(CI)Z",
       "originalName": "a",
       "to": "isAsciiLetterOrDigit",
@@ -13210,6 +13274,38 @@
       "evidence": "hc.java: Nulls the static fields of LabeledField.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LabeledField.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:hd$1$CfrPartitionedState.run()V",
+      "originalName": "run",
+      "to": "buildCatalogue",
+      "evidence": "hd$1$CfrPartitionedState.java: Dispatches the catalogue builder phases according to the preserved state cursor until construction finishes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.buildCatalogue()V"
+    },
+    {
+      "symbol": "M:hd$1$CfrPartitionedState.runPartition0()V",
+      "originalName": "runPartition0",
+      "to": "allocatePartSpriteStorage",
+      "evidence": "hd$1$CfrPartitionedState.java: Catalogue states 0 through 53 create the definition deque, initialize the part sprite arrays and fill the particle-part placeholders.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V"
+    },
+    {
+      "symbol": "M:hd$1$CfrPartitionedState.runPartition1()V",
+      "originalName": "runPartition1",
+      "to": "buildSentinelBodyDefinitions",
+      "evidence": "hd$1$CfrPartitionedState.java: Catalogue state 57 constructs drone bodies and named Golem, Slave, Aghilla, Turtle, Commando and other sentinel heads, chassis, limbs and attachments, then initializes the equipment iteration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.buildSentinelBodyDefinitions()V"
+    },
+    {
+      "symbol": "M:hd$1$CfrPartitionedState.runPartition2()V",
+      "originalName": "runPartition2",
+      "to": "buildEquipmentAndIndexCatalogue",
+      "evidence": "hd$1$CfrPartitionedState.java: Catalogue states 58 through 101 build equipment/module definitions, populate the 110-entry component lookup array and preserve completion/error/guard handling.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V"
     },
     {
       "symbol": "M:hd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -22572,6 +22668,70 @@
       "renamedSymbol": "M:AngleHelpers.firstQuadrantAngle8192(III)I"
     },
     {
+      "symbol": "M:rc$1$CfrPartitionedBody.run()V",
+      "originalName": "run",
+      "to": "loadAllText",
+      "evidence": "rc$1$CfrPartitionedBody.java: Runs the seven game text-loading stages in source order with the original exception context and completion flag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadAllText()V"
+    },
+    {
+      "symbol": "M:rc$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadCampaignAndAchievementText",
+      "evidence": "rc$1$CfrPartitionedBody.java: Loads 221 resources including game/expansion names, boss dialogue, achievement names and criteria, mission briefings, module names and initial pickup tips.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadCampaignAndAchievementText()V"
+    },
+    {
+      "symbol": "M:rc$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadEquipmentNamesAndDescriptions",
+      "evidence": "rc$1$CfrPartitionedBody.java: Loads 221 resources including remaining pickup tips, module descriptions, weapon names/kill strings, command/category names, weapon statistics and initial sentinel descriptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadEquipmentNamesAndDescriptions()V"
+    },
+    {
+      "symbol": "M:rc$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadWeaponOptionsAndInstructions",
+      "evidence": "rc$1$CfrPartitionedBody.java: Loads 212 resources including remaining sentinel descriptions, weapon descriptions, game-option labels/tooltips and most instruction_set entries.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadWeaponOptionsAndInstructions()V"
+    },
+    {
+      "symbol": "M:rc$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadMissionAndTutorialText",
+      "evidence": "rc$1$CfrPartitionedBody.java: Loads 217 resources including remaining instruction entries, campaign/mission titles, tutorial page names, alternate controls and the initial tutorial paragraphs.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadMissionAndTutorialText()V"
+    },
+    {
+      "symbol": "M:rc$1$CfrPartitionedBody.runChunk4()V",
+      "originalName": "runChunk4",
+      "to": "loadControlsAndComponentText",
+      "evidence": "rc$1$CfrPartitionedBody.java: Loads 229 resources including remaining tutorial paragraphs, designer configuration tutorial, controls/key names, map/mode briefings, component names and combat-status captions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadControlsAndComponentText()V"
+    },
+    {
+      "symbol": "M:rc$1$CfrPartitionedBody.runChunk5()V",
+      "originalName": "runChunk5",
+      "to": "loadMatchStatisticsAndDesignerText",
+      "evidence": "rc$1$CfrPartitionedBody.java: Loads 229 resources including replay controls, teams/sentinel names, GAMEBEST_TIP achievements, designer slot labels/warnings, ratings/stat hints and the initial rank titles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadMatchStatisticsAndDesignerText()V"
+    },
+    {
+      "symbol": "M:rc$1$CfrPartitionedBody.runChunk6()V",
+      "originalName": "runChunk6",
+      "to": "loadRankAndMissionExitText",
+      "evidence": "rc$1$CfrPartitionedBody.java: Loads the final five RANK_TXT values, mission/test-field exit labels, reference manual and cooperative highscores labels.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadRankAndMissionExitText()V"
+    },
+    {
       "symbol": "M:rc.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -29439,7 +29599,7 @@
     },
     {
       "symbol": "B:hd$1$CfrPartitionedState.runPartition0()V#0",
-      "renamedSymbol": "B:BattleTerrain$1$CfrPartitionedState.runPartition0()V#0",
+      "renamedSymbol": "B:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#0",
       "originalName": "stateLoop",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -29450,7 +29610,7 @@
     },
     {
       "symbol": "B:hd$1$CfrPartitionedState.runPartition1()V#0",
-      "renamedSymbol": "B:BattleTerrain$1$CfrPartitionedState.runPartition1()V#0",
+      "renamedSymbol": "B:BattleTerrain$1PartCatalogueBuilder.buildSentinelBodyDefinitions()V#0",
       "originalName": "stateLoop",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -29461,7 +29621,7 @@
     },
     {
       "symbol": "B:hd$1$CfrPartitionedState.runPartition2()V#0",
-      "renamedSymbol": "B:BattleTerrain$1$CfrPartitionedState.runPartition2()V#0",
+      "renamedSymbol": "B:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#0",
       "originalName": "stateLoop",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -32123,9 +32283,9 @@
     },
     {
       "symbol": "C:dn$1$CfrPartitionedBody",
-      "renamedSymbol": "C:ContextMenu$1$CfrPartitionedBody",
+      "renamedSymbol": "C:ContextMenu$1ClientInterfaceTextLoader",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientInterfaceTextLoader",
       "declaration": {
         "file": "dn.java",
         "start": 1198,
@@ -32673,9 +32833,9 @@
     },
     {
       "symbol": "C:hd$1$CfrPartitionedState",
-      "renamedSymbol": "C:BattleTerrain$1$CfrPartitionedState",
+      "renamedSymbol": "C:BattleTerrain$1PartCatalogueBuilder",
       "originalName": "$CfrPartitionedState",
-      "renamedName": "$CfrPartitionedState",
+      "renamedName": "PartCatalogueBuilder",
       "declaration": {
         "file": "hd.java",
         "start": 49671,
@@ -34312,9 +34472,9 @@
     },
     {
       "symbol": "C:rc$1$CfrPartitionedBody",
-      "renamedSymbol": "C:SectorCacheStore$1$CfrPartitionedBody",
+      "renamedSymbol": "C:SectorCacheStore$1SteelGameTextLoader",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "SteelGameTextLoader",
       "declaration": {
         "file": "rc.java",
         "start": 6992,
@@ -41726,7 +41886,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -41737,7 +41897,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -41748,7 +41908,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.param0:Lcm;",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.param0:LResourceArchive;",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.param0:LResourceArchive;",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -41759,7 +41919,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.param1:I",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.param1:I",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.param1:I",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -41770,7 +41930,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.stackIn_2583_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.stackIn_2583_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.stackIn_2583_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2583_0",
       "renamedName": "stackIn_2583_0",
       "declaration": {
@@ -41781,7 +41941,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.stackIn_2583_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.stackIn_2583_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.stackIn_2583_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2583_1",
       "renamedName": "stackIn_2583_1",
       "declaration": {
@@ -41792,7 +41952,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.stackIn_2584_2:Ljava/lang/String;",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.stackIn_2584_2:Ljava/lang/String;",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.stackIn_2584_2:Ljava/lang/String;",
       "originalName": "stackIn_2584_2",
       "renamedName": "stackIn_2584_2",
       "declaration": {
@@ -41803,7 +41963,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -41814,7 +41974,7 @@
     },
     {
       "symbol": "F:dn$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:ContextMenu$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:ContextMenu$1ClientInterfaceTextLoader.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -47644,7 +47804,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.caughtException:Ljava/lang/Throwable;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.caughtException:Ljava/lang/Throwable;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.caughtException:Ljava/lang/Throwable;",
       "originalName": "caughtException",
       "renamedName": "caughtException",
       "declaration": {
@@ -47655,7 +47815,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -47666,7 +47826,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.finished:Z",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.finished:Z",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -47677,7 +47837,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.param0:Z",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.param0:Z",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.param0:Z",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -47688,7 +47848,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_0:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_0:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_0:LArticulatedPart;",
       "originalName": "stackIn_82_0",
       "renamedName": "stackIn_82_0",
       "declaration": {
@@ -47699,7 +47859,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_10:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_10:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_10:I",
       "originalName": "stackIn_82_10",
       "renamedName": "stackIn_82_10",
       "declaration": {
@@ -47710,7 +47870,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_11:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_11:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_11:LPartInstruction;",
       "originalName": "stackIn_82_11",
       "renamedName": "stackIn_82_11",
       "declaration": {
@@ -47721,7 +47881,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_12:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_12:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_12:LPartInstruction;",
       "originalName": "stackIn_82_12",
       "renamedName": "stackIn_82_12",
       "declaration": {
@@ -47732,7 +47892,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_13:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_13:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_13:I",
       "originalName": "stackIn_82_13",
       "renamedName": "stackIn_82_13",
       "declaration": {
@@ -47743,7 +47903,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_14:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_14:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_14:I",
       "originalName": "stackIn_82_14",
       "renamedName": "stackIn_82_14",
       "declaration": {
@@ -47754,7 +47914,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_1:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_1:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_1:LArticulatedPart;",
       "originalName": "stackIn_82_1",
       "renamedName": "stackIn_82_1",
       "declaration": {
@@ -47765,7 +47925,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_2:Lgk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_2:LIndexedSprite;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_2:LIndexedSprite;",
       "originalName": "stackIn_82_2",
       "renamedName": "stackIn_82_2",
       "declaration": {
@@ -47776,7 +47936,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_3:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_3:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_3:I",
       "originalName": "stackIn_82_3",
       "renamedName": "stackIn_82_3",
       "declaration": {
@@ -47787,7 +47947,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_4:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_4:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_4:I",
       "originalName": "stackIn_82_4",
       "renamedName": "stackIn_82_4",
       "declaration": {
@@ -47798,7 +47958,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_5:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_5:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_5:I",
       "originalName": "stackIn_82_5",
       "renamedName": "stackIn_82_5",
       "declaration": {
@@ -47809,7 +47969,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_6:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_6:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_6:I",
       "originalName": "stackIn_82_6",
       "renamedName": "stackIn_82_6",
       "declaration": {
@@ -47820,7 +47980,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_7:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_7:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_7:I",
       "originalName": "stackIn_82_7",
       "renamedName": "stackIn_82_7",
       "declaration": {
@@ -47831,7 +47991,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_8:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_8:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_8:[LPartInstruction;",
       "originalName": "stackIn_82_8",
       "renamedName": "stackIn_82_8",
       "declaration": {
@@ -47842,7 +48002,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_82_9:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_82_9:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_82_9:[LPartInstruction;",
       "originalName": "stackIn_82_9",
       "renamedName": "stackIn_82_9",
       "declaration": {
@@ -47853,7 +48013,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_0:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_0:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_0:LArticulatedPart;",
       "originalName": "stackIn_84_0",
       "renamedName": "stackIn_84_0",
       "declaration": {
@@ -47864,7 +48024,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_10:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_10:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_10:I",
       "originalName": "stackIn_84_10",
       "renamedName": "stackIn_84_10",
       "declaration": {
@@ -47875,7 +48035,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_11:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_11:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_11:LPartInstruction;",
       "originalName": "stackIn_84_11",
       "renamedName": "stackIn_84_11",
       "declaration": {
@@ -47886,7 +48046,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_12:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_12:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_12:LPartInstruction;",
       "originalName": "stackIn_84_12",
       "renamedName": "stackIn_84_12",
       "declaration": {
@@ -47897,7 +48057,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_13:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_13:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_13:I",
       "originalName": "stackIn_84_13",
       "renamedName": "stackIn_84_13",
       "declaration": {
@@ -47908,7 +48068,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_14:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_14:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_14:I",
       "originalName": "stackIn_84_14",
       "renamedName": "stackIn_84_14",
       "declaration": {
@@ -47919,7 +48079,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_1:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_1:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_1:LArticulatedPart;",
       "originalName": "stackIn_84_1",
       "renamedName": "stackIn_84_1",
       "declaration": {
@@ -47930,7 +48090,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_2:Lgk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_2:LIndexedSprite;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_2:LIndexedSprite;",
       "originalName": "stackIn_84_2",
       "renamedName": "stackIn_84_2",
       "declaration": {
@@ -47941,7 +48101,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_3:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_3:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_3:I",
       "originalName": "stackIn_84_3",
       "renamedName": "stackIn_84_3",
       "declaration": {
@@ -47952,7 +48112,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_4:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_4:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_4:I",
       "originalName": "stackIn_84_4",
       "renamedName": "stackIn_84_4",
       "declaration": {
@@ -47963,7 +48123,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_5:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_5:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_5:I",
       "originalName": "stackIn_84_5",
       "renamedName": "stackIn_84_5",
       "declaration": {
@@ -47974,7 +48134,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_6:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_6:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_6:I",
       "originalName": "stackIn_84_6",
       "renamedName": "stackIn_84_6",
       "declaration": {
@@ -47985,7 +48145,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_7:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_7:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_7:I",
       "originalName": "stackIn_84_7",
       "renamedName": "stackIn_84_7",
       "declaration": {
@@ -47996,7 +48156,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_8:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_8:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_8:[LPartInstruction;",
       "originalName": "stackIn_84_8",
       "renamedName": "stackIn_84_8",
       "declaration": {
@@ -48007,7 +48167,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_84_9:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_84_9:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_84_9:[LPartInstruction;",
       "originalName": "stackIn_84_9",
       "renamedName": "stackIn_84_9",
       "declaration": {
@@ -48018,7 +48178,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_0:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_0:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_0:LArticulatedPart;",
       "originalName": "stackIn_85_0",
       "renamedName": "stackIn_85_0",
       "declaration": {
@@ -48029,7 +48189,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_10:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_10:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_10:I",
       "originalName": "stackIn_85_10",
       "renamedName": "stackIn_85_10",
       "declaration": {
@@ -48040,7 +48200,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_11:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_11:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_11:LPartInstruction;",
       "originalName": "stackIn_85_11",
       "renamedName": "stackIn_85_11",
       "declaration": {
@@ -48051,7 +48211,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_12:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_12:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_12:LPartInstruction;",
       "originalName": "stackIn_85_12",
       "renamedName": "stackIn_85_12",
       "declaration": {
@@ -48062,7 +48222,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_13:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_13:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_13:I",
       "originalName": "stackIn_85_13",
       "renamedName": "stackIn_85_13",
       "declaration": {
@@ -48073,7 +48233,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_14:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_14:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_14:I",
       "originalName": "stackIn_85_14",
       "renamedName": "stackIn_85_14",
       "declaration": {
@@ -48084,7 +48244,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_1:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_1:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_1:LArticulatedPart;",
       "originalName": "stackIn_85_1",
       "renamedName": "stackIn_85_1",
       "declaration": {
@@ -48095,7 +48255,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_2:Lgk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_2:LIndexedSprite;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_2:LIndexedSprite;",
       "originalName": "stackIn_85_2",
       "renamedName": "stackIn_85_2",
       "declaration": {
@@ -48106,7 +48266,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_3:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_3:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_3:I",
       "originalName": "stackIn_85_3",
       "renamedName": "stackIn_85_3",
       "declaration": {
@@ -48117,7 +48277,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_4:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_4:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_4:I",
       "originalName": "stackIn_85_4",
       "renamedName": "stackIn_85_4",
       "declaration": {
@@ -48128,7 +48288,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_5:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_5:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_5:I",
       "originalName": "stackIn_85_5",
       "renamedName": "stackIn_85_5",
       "declaration": {
@@ -48139,7 +48299,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_6:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_6:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_6:I",
       "originalName": "stackIn_85_6",
       "renamedName": "stackIn_85_6",
       "declaration": {
@@ -48150,7 +48310,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_7:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_7:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_7:I",
       "originalName": "stackIn_85_7",
       "renamedName": "stackIn_85_7",
       "declaration": {
@@ -48161,7 +48321,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_8:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_8:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_8:[LPartInstruction;",
       "originalName": "stackIn_85_8",
       "renamedName": "stackIn_85_8",
       "declaration": {
@@ -48172,7 +48332,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_85_9:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_85_9:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_85_9:[LPartInstruction;",
       "originalName": "stackIn_85_9",
       "renamedName": "stackIn_85_9",
       "declaration": {
@@ -48183,7 +48343,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_0:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_0:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_0:LArticulatedPart;",
       "originalName": "stackIn_86_0",
       "renamedName": "stackIn_86_0",
       "declaration": {
@@ -48194,7 +48354,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_10:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_10:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_10:I",
       "originalName": "stackIn_86_10",
       "renamedName": "stackIn_86_10",
       "declaration": {
@@ -48205,7 +48365,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_11:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_11:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_11:LPartInstruction;",
       "originalName": "stackIn_86_11",
       "renamedName": "stackIn_86_11",
       "declaration": {
@@ -48216,7 +48376,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_12:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_12:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_12:LPartInstruction;",
       "originalName": "stackIn_86_12",
       "renamedName": "stackIn_86_12",
       "declaration": {
@@ -48227,7 +48387,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_13:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_13:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_13:I",
       "originalName": "stackIn_86_13",
       "renamedName": "stackIn_86_13",
       "declaration": {
@@ -48238,7 +48398,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_14:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_14:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_14:I",
       "originalName": "stackIn_86_14",
       "renamedName": "stackIn_86_14",
       "declaration": {
@@ -48249,7 +48409,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_1:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_1:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_1:LArticulatedPart;",
       "originalName": "stackIn_86_1",
       "renamedName": "stackIn_86_1",
       "declaration": {
@@ -48260,7 +48420,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_2:Lgk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_2:LIndexedSprite;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_2:LIndexedSprite;",
       "originalName": "stackIn_86_2",
       "renamedName": "stackIn_86_2",
       "declaration": {
@@ -48271,7 +48431,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_3:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_3:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_3:I",
       "originalName": "stackIn_86_3",
       "renamedName": "stackIn_86_3",
       "declaration": {
@@ -48282,7 +48442,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_4:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_4:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_4:I",
       "originalName": "stackIn_86_4",
       "renamedName": "stackIn_86_4",
       "declaration": {
@@ -48293,7 +48453,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_5:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_5:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_5:I",
       "originalName": "stackIn_86_5",
       "renamedName": "stackIn_86_5",
       "declaration": {
@@ -48304,7 +48464,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_6:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_6:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_6:I",
       "originalName": "stackIn_86_6",
       "renamedName": "stackIn_86_6",
       "declaration": {
@@ -48315,7 +48475,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_7:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_7:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_7:I",
       "originalName": "stackIn_86_7",
       "renamedName": "stackIn_86_7",
       "declaration": {
@@ -48326,7 +48486,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_8:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_8:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_8:[LPartInstruction;",
       "originalName": "stackIn_86_8",
       "renamedName": "stackIn_86_8",
       "declaration": {
@@ -48337,7 +48497,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_86_9:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_86_9:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_86_9:[LPartInstruction;",
       "originalName": "stackIn_86_9",
       "renamedName": "stackIn_86_9",
       "declaration": {
@@ -48348,7 +48508,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_0:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_0:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_0:LArticulatedPart;",
       "originalName": "stackIn_87_0",
       "renamedName": "stackIn_87_0",
       "declaration": {
@@ -48359,7 +48519,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_10:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_10:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_10:I",
       "originalName": "stackIn_87_10",
       "renamedName": "stackIn_87_10",
       "declaration": {
@@ -48370,7 +48530,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_11:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_11:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_11:LPartInstruction;",
       "originalName": "stackIn_87_11",
       "renamedName": "stackIn_87_11",
       "declaration": {
@@ -48381,7 +48541,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_12:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_12:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_12:LPartInstruction;",
       "originalName": "stackIn_87_12",
       "renamedName": "stackIn_87_12",
       "declaration": {
@@ -48392,7 +48552,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_13:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_13:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_13:I",
       "originalName": "stackIn_87_13",
       "renamedName": "stackIn_87_13",
       "declaration": {
@@ -48403,7 +48563,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_14:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_14:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_14:I",
       "originalName": "stackIn_87_14",
       "renamedName": "stackIn_87_14",
       "declaration": {
@@ -48414,7 +48574,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_1:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_1:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_1:LArticulatedPart;",
       "originalName": "stackIn_87_1",
       "renamedName": "stackIn_87_1",
       "declaration": {
@@ -48425,7 +48585,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_2:Lgk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_2:LIndexedSprite;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_2:LIndexedSprite;",
       "originalName": "stackIn_87_2",
       "renamedName": "stackIn_87_2",
       "declaration": {
@@ -48436,7 +48596,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_3:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_3:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_3:I",
       "originalName": "stackIn_87_3",
       "renamedName": "stackIn_87_3",
       "declaration": {
@@ -48447,7 +48607,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_4:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_4:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_4:I",
       "originalName": "stackIn_87_4",
       "renamedName": "stackIn_87_4",
       "declaration": {
@@ -48458,7 +48618,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_5:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_5:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_5:I",
       "originalName": "stackIn_87_5",
       "renamedName": "stackIn_87_5",
       "declaration": {
@@ -48469,7 +48629,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_6:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_6:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_6:I",
       "originalName": "stackIn_87_6",
       "renamedName": "stackIn_87_6",
       "declaration": {
@@ -48480,7 +48640,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_7:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_7:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_7:I",
       "originalName": "stackIn_87_7",
       "renamedName": "stackIn_87_7",
       "declaration": {
@@ -48491,7 +48651,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_8:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_8:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_8:[LPartInstruction;",
       "originalName": "stackIn_87_8",
       "renamedName": "stackIn_87_8",
       "declaration": {
@@ -48502,7 +48662,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_87_9:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_87_9:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_87_9:[LPartInstruction;",
       "originalName": "stackIn_87_9",
       "renamedName": "stackIn_87_9",
       "declaration": {
@@ -48513,7 +48673,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_0:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_0:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_0:LArticulatedPart;",
       "originalName": "stackIn_88_0",
       "renamedName": "stackIn_88_0",
       "declaration": {
@@ -48524,7 +48684,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_10:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_10:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_10:I",
       "originalName": "stackIn_88_10",
       "renamedName": "stackIn_88_10",
       "declaration": {
@@ -48535,7 +48695,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_11:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_11:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_11:LPartInstruction;",
       "originalName": "stackIn_88_11",
       "renamedName": "stackIn_88_11",
       "declaration": {
@@ -48546,7 +48706,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_12:Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_12:LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_12:LPartInstruction;",
       "originalName": "stackIn_88_12",
       "renamedName": "stackIn_88_12",
       "declaration": {
@@ -48557,7 +48717,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_13:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_13:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_13:I",
       "originalName": "stackIn_88_13",
       "renamedName": "stackIn_88_13",
       "declaration": {
@@ -48568,7 +48728,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_14:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_14:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_14:I",
       "originalName": "stackIn_88_14",
       "renamedName": "stackIn_88_14",
       "declaration": {
@@ -48579,7 +48739,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_15:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_15:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_15:I",
       "originalName": "stackIn_88_15",
       "renamedName": "stackIn_88_15",
       "declaration": {
@@ -48590,7 +48750,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_1:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_1:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_1:LArticulatedPart;",
       "originalName": "stackIn_88_1",
       "renamedName": "stackIn_88_1",
       "declaration": {
@@ -48601,7 +48761,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_2:Lgk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_2:LIndexedSprite;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_2:LIndexedSprite;",
       "originalName": "stackIn_88_2",
       "renamedName": "stackIn_88_2",
       "declaration": {
@@ -48612,7 +48772,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_3:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_3:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_3:I",
       "originalName": "stackIn_88_3",
       "renamedName": "stackIn_88_3",
       "declaration": {
@@ -48623,7 +48783,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_4:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_4:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_4:I",
       "originalName": "stackIn_88_4",
       "renamedName": "stackIn_88_4",
       "declaration": {
@@ -48634,7 +48794,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_5:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_5:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_5:I",
       "originalName": "stackIn_88_5",
       "renamedName": "stackIn_88_5",
       "declaration": {
@@ -48645,7 +48805,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_6:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_6:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_6:I",
       "originalName": "stackIn_88_6",
       "renamedName": "stackIn_88_6",
       "declaration": {
@@ -48656,7 +48816,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_7:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_7:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_7:I",
       "originalName": "stackIn_88_7",
       "renamedName": "stackIn_88_7",
       "declaration": {
@@ -48667,7 +48827,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_8:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_8:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_8:[LPartInstruction;",
       "originalName": "stackIn_88_8",
       "renamedName": "stackIn_88_8",
       "declaration": {
@@ -48678,7 +48838,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.stackIn_88_9:[Lqd;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.stackIn_88_9:[LPartInstruction;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.stackIn_88_9:[LPartInstruction;",
       "originalName": "stackIn_88_9",
       "renamedName": "stackIn_88_9",
       "declaration": {
@@ -48689,7 +48849,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.statePc:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.statePc:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.statePc:I",
       "originalName": "statePc",
       "renamedName": "statePc",
       "declaration": {
@@ -48700,7 +48860,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.var1:Lnk;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.var1:LArticulatedPart;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.var1:LArticulatedPart;",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -48711,7 +48871,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.var1_ref2:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.var1_ref2:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.var1_ref2:Ljava/lang/RuntimeException;",
       "originalName": "var1_ref2",
       "renamedName": "var1_ref2",
       "declaration": {
@@ -48722,7 +48882,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.var1_ref:Ljava/lang/Object;",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.var1_ref:Ljava/lang/Object;",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.var1_ref:Ljava/lang/Object;",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -48733,7 +48893,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.var2:[I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.var2:[I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.var2:[I",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -48744,7 +48904,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.var2_int:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.var2_int:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.var2_int:I",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -48755,7 +48915,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.var3:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.var3:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -48766,7 +48926,7 @@
     },
     {
       "symbol": "F:hd$1$CfrPartitionedState.var4:I",
-      "renamedSymbol": "F:BattleTerrain$1$CfrPartitionedState.var4:I",
+      "renamedSymbol": "F:BattleTerrain$1PartCatalogueBuilder.var4:I",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -68852,7 +69012,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68863,7 +69023,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -68874,7 +69034,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.param0:I",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.param0:I",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.param0:I",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -68885,7 +69045,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.param1:Lcm;",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.param1:LResourceArchive;",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.param1:LResourceArchive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -68896,7 +69056,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.stackIn_4687_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.stackIn_4687_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.stackIn_4687_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_4687_0",
       "renamedName": "stackIn_4687_0",
       "declaration": {
@@ -68907,7 +69067,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.stackIn_4687_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.stackIn_4687_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.stackIn_4687_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_4687_1",
       "renamedName": "stackIn_4687_1",
       "declaration": {
@@ -68918,7 +69078,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.stackIn_4688_2:Ljava/lang/String;",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.stackIn_4688_2:Ljava/lang/String;",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.stackIn_4688_2:Ljava/lang/String;",
       "originalName": "stackIn_4688_2",
       "renamedName": "stackIn_4688_2",
       "declaration": {
@@ -68929,7 +69089,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.stackIn_4696_0:Z",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.stackIn_4696_0:Z",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.stackIn_4696_0:Z",
       "originalName": "stackIn_4696_0",
       "renamedName": "stackIn_4696_0",
       "declaration": {
@@ -68940,7 +69100,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -68951,7 +69111,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -68962,7 +69122,7 @@
     },
     {
       "symbol": "F:rc$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:SectorCacheStore$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:SectorCacheStore$1SteelGameTextLoader.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -112874,7 +113034,7 @@
     },
     {
       "symbol": "L:dn$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:ContextMenu$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:ContextMenu$1ClientInterfaceTextLoader.loadAllText()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -150186,7 +150346,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#0",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#0",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#0",
       "originalName": "stateCaught_1",
       "renamedName": "stateCaught_1",
       "declaration": {
@@ -150197,7 +150357,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#1",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#1",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#1",
       "originalName": "stateCaught_4",
       "renamedName": "stateCaught_4",
       "declaration": {
@@ -150208,7 +150368,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#10",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#10",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#10",
       "originalName": "stateCaught_34",
       "renamedName": "stateCaught_34",
       "declaration": {
@@ -150219,7 +150379,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#11",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#11",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#11",
       "originalName": "stateCaught_37",
       "renamedName": "stateCaught_37",
       "declaration": {
@@ -150230,7 +150390,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#12",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#12",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#12",
       "originalName": "stateCaught_41",
       "renamedName": "stateCaught_41",
       "declaration": {
@@ -150241,7 +150401,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#13",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#13",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#13",
       "originalName": "stateCaught_45",
       "renamedName": "stateCaught_45",
       "declaration": {
@@ -150252,7 +150412,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#14",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#14",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#14",
       "originalName": "stateCaught_50",
       "renamedName": "stateCaught_50",
       "declaration": {
@@ -150263,7 +150423,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#15",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#15",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#15",
       "originalName": "stateCaught_53",
       "renamedName": "stateCaught_53",
       "declaration": {
@@ -150274,7 +150434,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#2",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#2",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#2",
       "originalName": "stateCaught_7",
       "renamedName": "stateCaught_7",
       "declaration": {
@@ -150285,7 +150445,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#3",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#3",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#3",
       "originalName": "stateCaught_10",
       "renamedName": "stateCaught_10",
       "declaration": {
@@ -150296,7 +150456,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#4",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#4",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#4",
       "originalName": "stateCaught_14",
       "renamedName": "stateCaught_14",
       "declaration": {
@@ -150307,7 +150467,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#5",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#5",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#5",
       "originalName": "stateCaught_17",
       "renamedName": "stateCaught_17",
       "declaration": {
@@ -150318,7 +150478,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#6",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#6",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#6",
       "originalName": "stateCaught_21",
       "renamedName": "stateCaught_21",
       "declaration": {
@@ -150329,7 +150489,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#7",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#7",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#7",
       "originalName": "stateCaught_24",
       "renamedName": "stateCaught_24",
       "declaration": {
@@ -150340,7 +150500,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#8",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#8",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#8",
       "originalName": "stateCaught_27",
       "renamedName": "stateCaught_27",
       "declaration": {
@@ -150351,7 +150511,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition0()V#9",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition0()V#9",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V#9",
       "originalName": "stateCaught_30",
       "renamedName": "stateCaught_30",
       "declaration": {
@@ -150362,7 +150522,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition1()V#0",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition1()V#0",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildSentinelBodyDefinitions()V#0",
       "originalName": "stateCaught_57",
       "renamedName": "stateCaught_57",
       "declaration": {
@@ -150373,7 +150533,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#0",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#0",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#0",
       "originalName": "stateCaught_58",
       "renamedName": "stateCaught_58",
       "declaration": {
@@ -150384,7 +150544,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#1",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#1",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#1",
       "originalName": "stateCaught_63",
       "renamedName": "stateCaught_63",
       "declaration": {
@@ -150395,7 +150555,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#10",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#10",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#10",
       "originalName": "stateCaught_79",
       "renamedName": "stateCaught_79",
       "declaration": {
@@ -150406,7 +150566,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#11",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#11",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#11",
       "originalName": "stateCaught_82",
       "renamedName": "stateCaught_82",
       "declaration": {
@@ -150417,7 +150577,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#12",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#12",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#12",
       "originalName": "stateCaught_85",
       "renamedName": "stateCaught_85",
       "declaration": {
@@ -150428,7 +150588,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#13",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#13",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#13",
       "originalName": "stateCaught_88",
       "renamedName": "stateCaught_88",
       "declaration": {
@@ -150439,7 +150599,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#14",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#14",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#14",
       "originalName": "stateCaught_89",
       "renamedName": "stateCaught_89",
       "declaration": {
@@ -150450,7 +150610,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#15",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#15",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#15",
       "originalName": "stateCaught_90",
       "renamedName": "stateCaught_90",
       "declaration": {
@@ -150461,7 +150621,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#16",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#16",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#16",
       "originalName": "stateCaught_91",
       "renamedName": "stateCaught_91",
       "declaration": {
@@ -150472,7 +150632,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#2",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#2",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#2",
       "originalName": "stateCaught_64",
       "renamedName": "stateCaught_64",
       "declaration": {
@@ -150483,7 +150643,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#3",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#3",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#3",
       "originalName": "stateCaught_65",
       "renamedName": "stateCaught_65",
       "declaration": {
@@ -150494,7 +150654,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#4",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#4",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#4",
       "originalName": "stateCaught_70",
       "renamedName": "stateCaught_70",
       "declaration": {
@@ -150505,7 +150665,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#5",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#5",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#5",
       "originalName": "stateCaught_71",
       "renamedName": "stateCaught_71",
       "declaration": {
@@ -150516,7 +150676,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#6",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#6",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#6",
       "originalName": "stateCaught_72",
       "renamedName": "stateCaught_72",
       "declaration": {
@@ -150527,7 +150687,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#7",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#7",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#7",
       "originalName": "stateCaught_77",
       "renamedName": "stateCaught_77",
       "declaration": {
@@ -150538,7 +150698,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#8",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#8",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#8",
       "originalName": "stateCaught_78",
       "renamedName": "stateCaught_78",
       "declaration": {
@@ -150549,7 +150709,7 @@
     },
     {
       "symbol": "L:hd$1$CfrPartitionedState.runPartition2()V#9",
-      "renamedSymbol": "L:BattleTerrain$1$CfrPartitionedState.runPartition2()V#9",
+      "renamedSymbol": "L:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V#9",
       "originalName": "array$2",
       "renamedName": "array$2",
       "declaration": {
@@ -259020,7 +259180,7 @@
     },
     {
       "symbol": "L:rc$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:SectorCacheStore$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:SectorCacheStore$1SteelGameTextLoader.loadAllText()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -312095,9 +312255,9 @@
     },
     {
       "symbol": "M:dn$1$CfrPartitionedBody.<init>(Lcm;I)V",
-      "renamedSymbol": "M:ContextMenu$1$CfrPartitionedBody.<init>(LResourceArchive;I)V",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.<init>(LResourceArchive;I)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "ClientInterfaceTextLoader",
       "declaration": {
         "file": "dn.java",
         "start": 1551,
@@ -312106,9 +312266,9 @@
     },
     {
       "symbol": "M:dn$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:ContextMenu$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadAllText()V",
       "originalName": "run",
-      "renamedName": "run",
+      "renamedName": "loadAllText",
       "declaration": {
         "file": "dn.java",
         "start": 119995,
@@ -312117,9 +312277,9 @@
     },
     {
       "symbol": "M:dn$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:ContextMenu$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadLobbyAndConnectionText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLobbyAndConnectionText",
       "declaration": {
         "file": "dn.java",
         "start": 1990,
@@ -312128,9 +312288,9 @@
     },
     {
       "symbol": "M:dn$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:ContextMenu$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadRegistrationAndLoadingText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadRegistrationAndLoadingText",
       "declaration": {
         "file": "dn.java",
         "start": 38670,
@@ -312139,9 +312299,9 @@
     },
     {
       "symbol": "M:dn$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:ContextMenu$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadGameMenusAndDisplayText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadGameMenusAndDisplayText",
       "declaration": {
         "file": "dn.java",
         "start": 76162,
@@ -312150,9 +312310,9 @@
     },
     {
       "symbol": "M:dn$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:ContextMenu$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:ContextMenu$1ClientInterfaceTextLoader.loadLoginWarningsAndSubscriptionText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadLoginWarningsAndSubscriptionText",
       "declaration": {
         "file": "dn.java",
         "start": 113919,
@@ -317617,9 +317777,9 @@
     },
     {
       "symbol": "M:hd$1$CfrPartitionedState.<init>(Z)V",
-      "renamedSymbol": "M:BattleTerrain$1$CfrPartitionedState.<init>(Z)V",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.<init>(Z)V",
       "originalName": "$CfrPartitionedState",
-      "renamedName": "$CfrPartitionedState",
+      "renamedName": "PartCatalogueBuilder",
       "declaration": {
         "file": "hd.java",
         "start": 52811,
@@ -317628,9 +317788,9 @@
     },
     {
       "symbol": "M:hd$1$CfrPartitionedState.run()V",
-      "renamedSymbol": "M:BattleTerrain$1$CfrPartitionedState.run()V",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.buildCatalogue()V",
       "originalName": "run",
-      "renamedName": "run",
+      "renamedName": "buildCatalogue",
       "declaration": {
         "file": "hd.java",
         "start": 141397,
@@ -317639,9 +317799,9 @@
     },
     {
       "symbol": "M:hd$1$CfrPartitionedState.runPartition0()V",
-      "renamedSymbol": "M:BattleTerrain$1$CfrPartitionedState.runPartition0()V",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.allocatePartSpriteStorage()V",
       "originalName": "runPartition0",
-      "renamedName": "runPartition0",
+      "renamedName": "allocatePartSpriteStorage",
       "declaration": {
         "file": "hd.java",
         "start": 54571,
@@ -317650,9 +317810,9 @@
     },
     {
       "symbol": "M:hd$1$CfrPartitionedState.runPartition1()V",
-      "renamedSymbol": "M:BattleTerrain$1$CfrPartitionedState.runPartition1()V",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.buildSentinelBodyDefinitions()V",
       "originalName": "runPartition1",
-      "renamedName": "runPartition1",
+      "renamedName": "buildSentinelBodyDefinitions",
       "declaration": {
         "file": "hd.java",
         "start": 75387,
@@ -317661,9 +317821,9 @@
     },
     {
       "symbol": "M:hd$1$CfrPartitionedState.runPartition2()V",
-      "renamedSymbol": "M:BattleTerrain$1$CfrPartitionedState.runPartition2()V",
+      "renamedSymbol": "M:BattleTerrain$1PartCatalogueBuilder.buildEquipmentAndIndexCatalogue()V",
       "originalName": "runPartition2",
-      "renamedName": "runPartition2",
+      "renamedName": "buildEquipmentAndIndexCatalogue",
       "declaration": {
         "file": "hd.java",
         "start": 108056,
@@ -332390,9 +332550,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.<init>(ILcm;)V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.<init>(ILResourceArchive;)V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.<init>(ILResourceArchive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "SteelGameTextLoader",
       "declaration": {
         "file": "rc.java",
         "start": 7403,
@@ -332401,9 +332561,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadAllText()V",
       "originalName": "run",
-      "renamedName": "run",
+      "renamedName": "loadAllText",
       "declaration": {
         "file": "rc.java",
         "start": 228388,
@@ -332412,9 +332572,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadCampaignAndAchievementText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadCampaignAndAchievementText",
       "declaration": {
         "file": "rc.java",
         "start": 7918,
@@ -332423,9 +332583,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadEquipmentNamesAndDescriptions()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadEquipmentNamesAndDescriptions",
       "declaration": {
         "file": "rc.java",
         "start": 44346,
@@ -332434,9 +332594,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadWeaponOptionsAndInstructions()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadWeaponOptionsAndInstructions",
       "declaration": {
         "file": "rc.java",
         "start": 80838,
@@ -332445,9 +332605,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadMissionAndTutorialText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadMissionAndTutorialText",
       "declaration": {
         "file": "rc.java",
         "start": 116788,
@@ -332456,9 +332616,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.runChunk4()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.runChunk4()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadControlsAndComponentText()V",
       "originalName": "runChunk4",
-      "renamedName": "runChunk4",
+      "renamedName": "loadControlsAndComponentText",
       "declaration": {
         "file": "rc.java",
         "start": 152962,
@@ -332467,9 +332627,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.runChunk5()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.runChunk5()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadMatchStatisticsAndDesignerText()V",
       "originalName": "runChunk5",
-      "renamedName": "runChunk5",
+      "renamedName": "loadMatchStatisticsAndDesignerText",
       "declaration": {
         "file": "rc.java",
         "start": 189853,
@@ -332478,9 +332638,9 @@
     },
     {
       "symbol": "M:rc$1$CfrPartitionedBody.runChunk6()V",
-      "renamedSymbol": "M:SectorCacheStore$1$CfrPartitionedBody.runChunk6()V",
+      "renamedSymbol": "M:SectorCacheStore$1SteelGameTextLoader.loadRankAndMissionExitText()V",
       "originalName": "runChunk6",
-      "renamedName": "runChunk6",
+      "renamedName": "loadRankAndMissionExitText",
       "declaration": {
         "file": "rc.java",
         "start": 226775,
@@ -353510,7 +353670,7 @@
     },
     {
       "symbol": "P:dn$1$CfrPartitionedBody.<init>(Lcm;I)V#0",
-      "renamedSymbol": "P:ContextMenu$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#0",
+      "renamedSymbol": "P:ContextMenu$1ClientInterfaceTextLoader.<init>(LResourceArchive;I)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -353521,7 +353681,7 @@
     },
     {
       "symbol": "P:dn$1$CfrPartitionedBody.<init>(Lcm;I)V#1",
-      "renamedSymbol": "P:ContextMenu$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#1",
+      "renamedSymbol": "P:ContextMenu$1ClientInterfaceTextLoader.<init>(LResourceArchive;I)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -370032,7 +370192,7 @@
     },
     {
       "symbol": "P:hd$1$CfrPartitionedState.<init>(Z)V#0",
-      "renamedSymbol": "P:BattleTerrain$1$CfrPartitionedState.<init>(Z)V#0",
+      "renamedSymbol": "P:BattleTerrain$1PartCatalogueBuilder.<init>(Z)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -406992,7 +407152,7 @@
     },
     {
       "symbol": "P:rc$1$CfrPartitionedBody.<init>(ILcm;)V#0",
-      "renamedSymbol": "P:SectorCacheStore$1$CfrPartitionedBody.<init>(ILResourceArchive;)V#0",
+      "renamedSymbol": "P:SectorCacheStore$1SteelGameTextLoader.<init>(ILResourceArchive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -407003,7 +407163,7 @@
     },
     {
       "symbol": "P:rc$1$CfrPartitionedBody.<init>(ILcm;)V#1",
-      "renamedSymbol": "P:SectorCacheStore$1$CfrPartitionedBody.<init>(ILResourceArchive;)V#1",
+      "renamedSymbol": "P:SectorCacheStore$1SteelGameTextLoader.<init>(ILResourceArchive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -501581,7 +501741,7 @@
       "original": "dn.java",
       "renamed": "ContextMenu.java",
       "inputSha256": "b7e6fcd5570b8d217a33915a6d13fc3431e5b41908d6fef9359807b743a71ad1",
-      "outputSha256": "a44644e207ca3b90d8a335092713bd5619088e66e92d8c8c4ddfa159001d693c",
+      "outputSha256": "0dba218a3f5375acee12509bc0090a638684da24188eba14e3d1f1892bdbba5c",
       "edits": [
         {
           "start": 50,
@@ -501668,6 +501828,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 1198,
+          "end": 1217,
+          "symbol": "C:dn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientInterfaceTextLoader"
+        },
+        {
           "start": 1474,
           "end": 1476,
           "symbol": "C:cm",
@@ -501675,11 +501842,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 1551,
+          "end": 1570,
+          "symbol": "M:dn$1$CfrPartitionedBody.<init>(Lcm;I)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientInterfaceTextLoader"
+        },
+        {
           "start": 1571,
           "end": 1573,
           "symbol": "C:cm",
           "original": "cm",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1990,
+          "end": 1999,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLobbyAndConnectionText"
         },
         {
           "start": 2054,
@@ -509508,6 +509689,13 @@
           "renamed": "loadNamedFile"
         },
         {
+          "start": 38670,
+          "end": 38679,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadRegistrationAndLoadingText"
+        },
+        {
           "start": 38772,
           "end": 38774,
           "symbol": "C:hh",
@@ -517180,6 +517368,13 @@
           "renamed": "decodeWindowsCodePageString"
         },
         {
+          "start": 76162,
+          "end": 76171,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadGameMenusAndDisplayText"
+        },
+        {
           "start": 76233,
           "end": 76235,
           "symbol": "C:mm",
@@ -524838,6 +525033,13 @@
           "renamed": "loadNamedFile"
         },
         {
+          "start": 113919,
+          "end": 113928,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadLoginWarningsAndSubscriptionText"
+        },
+        {
           "start": 114021,
           "end": 114023,
           "symbol": "C:pi",
@@ -526084,6 +526286,41 @@
           "renamed": "ChecksumAndFrameHelpers"
         },
         {
+          "start": 119995,
+          "end": 119998,
+          "symbol": "M:dn$1$CfrPartitionedBody.run()V",
+          "original": "run",
+          "renamed": "loadAllText"
+        },
+        {
+          "start": 120043,
+          "end": 120052,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLobbyAndConnectionText"
+        },
+        {
+          "start": 120114,
+          "end": 120123,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadRegistrationAndLoadingText"
+        },
+        {
+          "start": 120185,
+          "end": 120194,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadGameMenusAndDisplayText"
+        },
+        {
+          "start": 120256,
+          "end": 120265,
+          "symbol": "M:dn$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadLoginWarningsAndSubscriptionText"
+        },
+        {
           "start": 120861,
           "end": 120863,
           "symbol": "C:ci",
@@ -526096,6 +526333,27 @@
           "symbol": "M:ci.a(Ljava/lang/Throwable;Ljava/lang/String;)Lod;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 121072,
+          "end": 121091,
+          "symbol": "C:dn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientInterfaceTextLoader"
+        },
+        {
+          "start": 121113,
+          "end": 121132,
+          "symbol": "C:dn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "ClientInterfaceTextLoader"
+        },
+        {
+          "start": 121173,
+          "end": 121176,
+          "symbol": "M:dn$1$CfrPartitionedBody.run()V",
+          "original": "run",
+          "renamed": "loadAllText"
         },
         {
           "start": 121202,
@@ -587077,7 +587335,7 @@
       "original": "hd.java",
       "renamed": "BattleTerrain.java",
       "inputSha256": "7a8c04bd7b829f1eef7bcd1b2436eb5d606a0bd78de4fb4dc868d6d7630e08a1",
-      "outputSha256": "b4f039cfc69b9bfd71bbad3d0bf86ee4bc87bdf7a726c5cb38ec1c8b480c5c53",
+      "outputSha256": "645a1622f3587248f00b99ebcd3281619bd46935db21788e6aa3145178d5ca22",
       "edits": [
         {
           "start": 50,
@@ -590290,6 +590548,13 @@
           "renamed": "buildPartCatalogue"
         },
         {
+          "start": 49671,
+          "end": 49691,
+          "symbol": "C:hd$1$CfrPartitionedState",
+          "original": "$CfrPartitionedState",
+          "renamed": "PartCatalogueBuilder"
+        },
+        {
           "start": 49706,
           "end": 49708,
           "symbol": "C:nk",
@@ -590589,6 +590854,20 @@
           "symbol": "C:qd",
           "original": "qd",
           "renamed": "PartInstruction"
+        },
+        {
+          "start": 52811,
+          "end": 52831,
+          "symbol": "M:hd$1$CfrPartitionedState.<init>(Z)V",
+          "original": "$CfrPartitionedState",
+          "renamed": "PartCatalogueBuilder"
+        },
+        {
+          "start": 54571,
+          "end": 54584,
+          "symbol": "M:hd$1$CfrPartitionedState.runPartition0()V",
+          "original": "runPartition0",
+          "renamed": "allocatePartSpriteStorage"
         },
         {
           "start": 54605,
@@ -591579,6 +591858,13 @@
           "original": "stateLoop",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 75387,
+          "end": 75400,
+          "symbol": "M:hd$1$CfrPartitionedState.runPartition1()V",
+          "original": "runPartition1",
+          "renamed": "buildSentinelBodyDefinitions"
         },
         {
           "start": 75421,
@@ -600740,6 +601026,13 @@
           "kind": "label"
         },
         {
+          "start": 108056,
+          "end": 108069,
+          "symbol": "M:hd$1$CfrPartitionedState.runPartition2()V",
+          "original": "runPartition2",
+          "renamed": "buildEquipmentAndIndexCatalogue"
+        },
+        {
           "start": 108090,
           "end": 108099,
           "symbol": "B:hd$1$CfrPartitionedState.runPartition2()V#0",
@@ -602566,6 +602859,55 @@
           "original": "stateLoop",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 141397,
+          "end": 141400,
+          "symbol": "M:hd$1$CfrPartitionedState.run()V",
+          "original": "run",
+          "renamed": "buildCatalogue"
+        },
+        {
+          "start": 141506,
+          "end": 141519,
+          "symbol": "M:hd$1$CfrPartitionedState.runPartition0()V",
+          "original": "runPartition0",
+          "renamed": "allocatePartSpriteStorage"
+        },
+        {
+          "start": 141615,
+          "end": 141628,
+          "symbol": "M:hd$1$CfrPartitionedState.runPartition1()V",
+          "original": "runPartition1",
+          "renamed": "buildSentinelBodyDefinitions"
+        },
+        {
+          "start": 141725,
+          "end": 141738,
+          "symbol": "M:hd$1$CfrPartitionedState.runPartition2()V",
+          "original": "runPartition2",
+          "renamed": "buildEquipmentAndIndexCatalogue"
+        },
+        {
+          "start": 141952,
+          "end": 141972,
+          "symbol": "C:hd$1$CfrPartitionedState",
+          "original": "$CfrPartitionedState",
+          "renamed": "PartCatalogueBuilder"
+        },
+        {
+          "start": 141995,
+          "end": 142015,
+          "symbol": "C:hd$1$CfrPartitionedState",
+          "original": "$CfrPartitionedState",
+          "renamed": "PartCatalogueBuilder"
+        },
+        {
+          "start": 142049,
+          "end": 142052,
+          "symbol": "M:hd$1$CfrPartitionedState.run()V",
+          "original": "run",
+          "renamed": "buildCatalogue"
         },
         {
           "start": 142077,
@@ -815210,7 +815552,7 @@
       "original": "rc.java",
       "renamed": "SectorCacheStore.java",
       "inputSha256": "d360ffe1f36aee606b6f39a3f6d379ca105cfa141be4e6c187794e93a14448ab",
-      "outputSha256": "4483807be58c906ae72465892d2b6401513506c8d29a8621154afed2b6525b35",
+      "outputSha256": "781f055b7ddd08e055086d8ee9674e89ace52906518f63096722b0003399bdd0",
       "edits": [
         {
           "start": 69,
@@ -815801,6 +816143,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 6992,
+          "end": 7011,
+          "symbol": "C:rc$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SteelGameTextLoader"
+        },
+        {
           "start": 7350,
           "end": 7352,
           "symbol": "C:cm",
@@ -815808,11 +816157,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 7403,
+          "end": 7422,
+          "symbol": "M:rc$1$CfrPartitionedBody.<init>(ILcm;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SteelGameTextLoader"
+        },
+        {
           "start": 7442,
           "end": 7444,
           "symbol": "C:cm",
           "original": "cm",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 7918,
+          "end": 7927,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadCampaignAndAchievementText"
         },
         {
           "start": 7982,
@@ -823919,6 +824282,13 @@
           "symbol": "M:ji.a(ILjava/lang/String;)[B",
           "original": "a",
           "renamed": "readTextResourceBytes"
+        },
+        {
+          "start": 44346,
+          "end": 44355,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadEquipmentNamesAndDescriptions"
         },
         {
           "start": 44448,
@@ -832097,6 +832467,13 @@
           "renamed": "decodeWindowsCodePageString"
         },
         {
+          "start": 80838,
+          "end": 80847,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadWeaponOptionsAndInstructions"
+        },
+        {
           "start": 80909,
           "end": 80911,
           "symbol": "C:ji",
@@ -839865,6 +840242,13 @@
           "symbol": "M:jk.a(I[B)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeWindowsCodePageString"
+        },
+        {
+          "start": 116788,
+          "end": 116797,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMissionAndTutorialText"
         },
         {
           "start": 116859,
@@ -847656,6 +848040,13 @@
           "symbol": "M:ji.a(ILjava/lang/String;)[B",
           "original": "a",
           "renamed": "readTextResourceBytes"
+        },
+        {
+          "start": 152962,
+          "end": 152971,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk4()V",
+          "original": "runChunk4",
+          "renamed": "loadControlsAndComponentText"
         },
         {
           "start": 153064,
@@ -855643,6 +856034,13 @@
           "symbol": "M:ji.a(ILjava/lang/String;)[B",
           "original": "a",
           "renamed": "readTextResourceBytes"
+        },
+        {
+          "start": 189853,
+          "end": 189862,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk5()V",
+          "original": "runChunk5",
+          "renamed": "loadMatchStatisticsAndDesignerText"
         },
         {
           "start": 189955,
@@ -863863,6 +864261,13 @@
           "renamed": "readTextResourceBytes"
         },
         {
+          "start": 226775,
+          "end": 226784,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk6()V",
+          "original": "runChunk6",
+          "renamed": "loadRankAndMissionExitText"
+        },
+        {
           "start": 226877,
           "end": 226879,
           "symbol": "C:qf",
@@ -864206,11 +864611,67 @@
           "renamed": "MusicCrossfadeStream"
         },
         {
+          "start": 228388,
+          "end": 228391,
+          "symbol": "M:rc$1$CfrPartitionedBody.run()V",
+          "original": "run",
+          "renamed": "loadAllText"
+        },
+        {
           "start": 228434,
           "end": 228441,
           "symbol": "F:SteelSentinels.field_G:I",
           "original": "field_G",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 228483,
+          "end": 228492,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadCampaignAndAchievementText"
+        },
+        {
+          "start": 228554,
+          "end": 228563,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadEquipmentNamesAndDescriptions"
+        },
+        {
+          "start": 228625,
+          "end": 228634,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadWeaponOptionsAndInstructions"
+        },
+        {
+          "start": 228696,
+          "end": 228705,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMissionAndTutorialText"
+        },
+        {
+          "start": 228767,
+          "end": 228776,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk4()V",
+          "original": "runChunk4",
+          "renamed": "loadControlsAndComponentText"
+        },
+        {
+          "start": 228838,
+          "end": 228847,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk5()V",
+          "original": "runChunk5",
+          "renamed": "loadMatchStatisticsAndDesignerText"
+        },
+        {
+          "start": 228909,
+          "end": 228918,
+          "symbol": "M:rc$1$CfrPartitionedBody.runChunk6()V",
+          "original": "runChunk6",
+          "renamed": "loadRankAndMissionExitText"
         },
         {
           "start": 229541,
@@ -864239,6 +864700,27 @@
           "symbol": "C:lg",
           "original": "lg",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 229873,
+          "end": 229892,
+          "symbol": "C:rc$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SteelGameTextLoader"
+        },
+        {
+          "start": 229914,
+          "end": 229933,
+          "symbol": "C:rc$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "SteelGameTextLoader"
+        },
+        {
+          "start": 229974,
+          "end": 229977,
+          "symbol": "M:rc$1$CfrPartitionedBody.run()V",
+          "original": "run",
+          "renamed": "loadAllText"
         },
         {
           "start": 230013,
@@ -941549,10 +942031,10 @@
       "commit": "56c18e5fa3eda13b7324b0df50a3746fc39e3242",
       "subdirectory": "games/steelsentinels"
     },
-    "rulesSha256": "d593a9de3ec1954885347265942dddde2cc8032c5a9835a949f3192310242cdf",
+    "rulesSha256": "f469f4a18f2316a6c7b974b88b68e63972fdf2c13d8b83dacdcc444f358baba8",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1",
-    "outputTreeSha256": "2bcb2dd601ce64b27db4d3eb790189dd67d8fa8a743f4344ee30c4946c795674",
+    "outputTreeSha256": "e5a6cc3f71ea4a9ee438cd83f3f6849c4cd2df828c19abdecbca3dcd02bc5f78",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
