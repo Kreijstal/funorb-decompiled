@@ -31,7 +31,7 @@ final class se {
             var5 = var9;
             var6 = param0;
             var7 = param2;
-            var9[var6] = var7 + (kl.b(var9[var6], 16711422) >> 1);
+            var9[var6] = var7 + (ResourceArchive.b(var9[var6], 16711422) >> 1);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class se {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -80,11 +80,11 @@ final class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var3), "se.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) var3), "se.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static Sprite a(int param0, kl param1, int param2, int param3) {
+    final static Sprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -96,8 +96,8 @@ final class se {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          if (h.a(param0, param2, param1, -124)) {
-            return sl.g(0);
+          if (MusicPatch.a(param0, param2, param1, -124)) {
+            return SocketJs5Transport.g(0);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -110,7 +110,7 @@ final class se {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh implements bf {
+final class eh implements WidgetRenderer {
     private BitmapFont field_b;
     static String field_i;
     private int field_f;
@@ -13,7 +13,7 @@ final class eh implements bf {
     private int field_c;
     private int field_g;
 
-    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+    public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -43,9 +43,9 @@ final class eh implements bf {
             return;
           }
           var9 = param2.field_l + param1 + var12.field_J;
-          SoftwareRasterizer.e(var8, var9, var8 + var7, var9, this.field_j);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_j);
           for (var10 = -1 + var12.d(0); var10 >= 0; var10--) {
-            SoftwareRasterizer.a(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, this.field_d, this.field_f);
+            SoftwareRasterizer.fillCircle(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, this.field_d, this.field_f);
           }
           if (this.field_b == null) {
             return;
@@ -62,14 +62,14 @@ final class eh implements bf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != 2) {
-          eh.b(-17);
+          eh.releaseStatics(-17);
           field_e = null;
           field_i = null;
           return;
@@ -88,7 +88,7 @@ final class eh implements bf {
           this.field_b = param0;
           this.field_a = param4;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

@@ -34,7 +34,7 @@ final class tg implements Serializable {
             param1.length() != 0) {
             var2_int = param1.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_7_0 = ok.field_f;
+              stackIn_7_0 = ValidationState.field_f;
               return stackIn_7_0;
             }
             var3 = param1.substring(0, var2_int);
@@ -59,7 +59,7 @@ final class tg implements Serializable {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class tg implements Serializable {
         if (param0 % 10L != 0L) {
           pg.a(param0, 2);
           if (param1) {
-            tg.a(true);
+            tg.releaseStatics(true);
             return;
           }
           return;
@@ -78,12 +78,12 @@ final class tg implements Serializable {
         pg.a(-1L + param0, 2);
         pg.a(1L, 2);
         if (param1) {
-          tg.a(true);
+          tg.releaseStatics(true);
           return;
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         field_h = null;

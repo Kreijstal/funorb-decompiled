@@ -11,7 +11,7 @@ final class ra extends IntrusiveNode {
     static int field_o;
     static Sprite[] wizardNoHatSprites;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         int var1 = 7 / ((param0 - 64) / 46);
         field_i = null;
@@ -39,7 +39,7 @@ final class ra extends IntrusiveNode {
               tc.field_l.field_d[var1_int] = false;
             }
           }
-          var1_intLifetime1 = od.field_k;
+          var1_intLifetime1 = WidgetTheme.field_k;
           for (var2 = 0; var1_intLifetime1 > var2; var2++) {
             if (ii.field_e[var2].field_B == 21) {
               ii.field_e[var2].field_e = 20;
@@ -52,7 +52,7 @@ final class ra extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ra.C(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "ra.C(" + param0 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class ra extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

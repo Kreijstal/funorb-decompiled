@@ -11,9 +11,9 @@ final class hf extends IOException {
         super(param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3543) {
-          hf.a(-41);
+          hf.releaseStatics(-41);
           field_a = null;
           return;
         }
@@ -49,7 +49,7 @@ final class hf extends IOException {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

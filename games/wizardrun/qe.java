@@ -16,7 +16,7 @@ interface qe {
 
     public abstract int a(byte param0);
 
-    public abstract af a(UiWidget param0, byte param1);
+    public abstract TextLayout a(UiWidget param0, byte param1);
 
     public abstract int a(int param0, int param1, int param2, UiWidget param3, int param4, int param5);
 

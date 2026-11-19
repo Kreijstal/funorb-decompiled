@@ -14,9 +14,9 @@ final class ob {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 12523) {
-          ob.a(6);
+          ob.releaseStatics(6);
           field_c = null;
           return;
         }
@@ -32,7 +32,7 @@ final class ob {
           }
           this.field_a = param1.field_a;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ob.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ob.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class ob {
           this.field_b = param0.field_b;
           this.field_a = param0.field_a;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

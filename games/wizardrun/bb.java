@@ -4,7 +4,7 @@
 class bb extends uh {
     static String field_g;
     private long field_m;
-    static kl field_h;
+    static ResourceArchive field_h;
     static String field_j;
     static int field_k;
     static String field_l;
@@ -14,10 +14,10 @@ class bb extends uh {
         if (!param0) {
           return (sd) null;
         }
-        return ud.field_c;
+        return UrlPacketDownloader.field_c;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_j = null;
         if (param0 != 24957) {
@@ -36,7 +36,7 @@ class bb extends uh {
           ic.field_c = param1;
           tl.field_c = param3;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "bb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "bb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ class bb extends uh {
         if (!oa.a(param0 ^ 25325)) {
           return;
         }
-        le.a(false, 4, 15991);
+        TriangleMesh.a(false, 4, 15991);
         if (param0 != -100) {
           bb.b((byte) 126);
         }
@@ -79,7 +79,7 @@ class bb extends uh {
             }
             break;
           }
-          stackIn_10_0 = nk.field_Q;
+          stackIn_10_0 = AccountCreationForm.field_Q;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,19 +91,19 @@ class bb extends uh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void b(int param0) {
-        ei var1 = (ei) (lh.field_b.c(8192));
+        RasterSnapshot var1 = (RasterSnapshot) (lh.field_b.c(8192));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.setTarget(var1.field_q, var1.field_v, var1.field_o);
         SoftwareRasterizer.setClip(var1.field_r, var1.field_u, var1.field_s, var1.field_p);
         var1.field_q = null;
-        qa.field_q.a(var1, false);
+        StatefulWidgetPainter.field_q.a(var1, false);
         if (param0 == 4) {
           return;
         }
@@ -112,14 +112,14 @@ class bb extends uh {
 
     final void a(int param0, PacketBuffer param1) {
         try {
-          param1.b(param0 + 1290648724, this.field_m);
-          param1.a(this.field_i, -66);
+          param1.writeLong(param0 + 1290648724, this.field_m);
+          param1.writeBase38Name(this.field_i, -66);
           if (param0 != 4) {
             PacketBuffer var4 = (PacketBuffer) null;
             this.a(-43, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "bb.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "bb.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -128,7 +128,7 @@ class bb extends uh {
           this.field_m = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "bb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "bb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

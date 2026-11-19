@@ -5,7 +5,7 @@ import java.io.*;
 
 final class BufferedSocket implements Runnable {
     private int field_b;
-    private jh field_e;
+    private AsyncRequest field_e;
     private byte[] field_i;
     private boolean field_g;
     private java.net.Socket field_o;
@@ -84,7 +84,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class BufferedSocket implements Runnable {
           return;
         }
         if (param0 != 0) {
-          this.field_e = (jh) null;
+          this.field_e = (AsyncRequest) null;
           if (!this.field_f) {
             return;
           }
@@ -109,10 +109,10 @@ final class BufferedSocket implements Runnable {
 
     final static java.awt.Canvas d(byte param0) {
         if (param0 > 66) {
-          return null == ki.field_E ? wizardrun.field_G : (java.awt.Canvas) ((Object) ki.field_E);
+          return null == LoginChoicePanel.field_E ? wizardrun.field_G : (java.awt.Canvas) ((Object) LoginChoicePanel.field_E);
         }
         field_c = 115;
-        return null == ki.field_E ? wizardrun.field_G : (java.awt.Canvas) ((Object) ki.field_E);
+        return null == LoginChoicePanel.field_E ? wizardrun.field_G : (java.awt.Canvas) ((Object) LoginChoicePanel.field_E);
     }
 
     final void b(byte param0) {
@@ -212,11 +212,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -30534) {
           field_k = 39L;
           field_l = null;
@@ -313,7 +313,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            rg.a((Throwable) ((Object) var1_ref), (String) null, -562);
+            ResizableDialog.a((Throwable) ((Object) var1_ref), (String) null, -562);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -336,7 +336,7 @@ final class BufferedSocket implements Runnable {
           this.field_h = this.field_o.getOutputStream();
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s {
-    static db[] field_c;
-    static od field_b;
+    static IndexedSprite[] field_c;
+    static WidgetTheme field_b;
     static Sprite field_a;
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
@@ -78,11 +78,11 @@ final class s {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 540) {
           return;
         }

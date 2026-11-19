@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ec {
-    static ji field_d;
+    static MidiTrack field_d;
     static String field_e;
     static Sprite field_b;
     static String[] field_a;
@@ -11,24 +11,24 @@ final class ec {
     static int field_c;
     static String field_h;
 
-    final static void a(kl param0, byte param1, int param2, vi param3) {
+    final static void a(ResourceArchive param0, byte param1, int param2, PcmStreamMixer param3) {
         try {
-          pe.field_B = ih.a((byte) -109) * param2 / 1000;
-          hd.a(param0, -125);
+          WidgetContainer.field_B = ih.a((byte) -109) * param2 / 1000;
+          StripedProgressBar.a(param0, -125);
           if (param1 > -61) {
-            ec.a(-127);
+            ec.releaseStatics(-127);
           }
           uk.a(125, param0);
-          ab.a(param0, (byte) 1);
+          IntrusiveNodeHashTable.a(param0, (byte) 1);
           vf.a(256);
-          r.c(350);
-          jd.field_f = 0 - pe.field_B;
+          TimedValidator.c(350);
+          DualLinkNodeHashTable.field_f = 0 - WidgetContainer.field_B;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_d = null;
         field_f = (byte[][]) null;

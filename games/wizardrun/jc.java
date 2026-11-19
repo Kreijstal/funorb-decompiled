@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends mi {
+final class jc extends SingleChildWidget {
     int field_G;
     static int field_I;
     static BufferedSocket field_H;
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -19) {
           return;
         }
@@ -35,28 +35,28 @@ final class jc extends mi {
         }
         if (this.field_G != 256) {
           var6 = new Sprite(this.field_F.field_r, this.field_F.field_n);
-          ud.a(var6, false);
+          UrlPacketDownloader.a(var6, false);
           this.field_F.a(0, 0, param2, 0);
           bb.b(4);
-          var6.c(param0 + this.field_o, this.field_l + param3, this.field_G);
+          var6.drawAlpha(param0 + this.field_o, this.field_l + param3, this.field_G);
           return;
         }
         this.field_F.a(this.field_o + param0, 0, param2, this.field_l + param3);
     }
 
     public jc() {
-        super(0, 0, 0, 0, (bf) null, (ce) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
         this.field_G = 256;
     }
 
     jc(UiWidget param0) {
-        super(param0.field_o, param0.field_l, param0.field_r, param0.field_n, (bf) null, (ce) null);
+        super(param0.field_o, param0.field_l, param0.field_r, param0.field_n, (WidgetRenderer) null, (WidgetListener) null);
         try {
           param0.a(114, 0, this.field_n, this.field_r, 0);
           this.field_F = param0;
           this.field_G = 256;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "jc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class lc {
     static boolean field_d;
     static long field_b;
 
-    final static boolean a(int param0, kl param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -16,9 +16,9 @@ final class lc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            lc.a(-84);
+            lc.releaseStatics(-84);
           }
-          stackIn_3_0 = param1.d(param0 ^ 48);
+          stackIn_3_0 = param1.areAllGroupsAvailable(param0 ^ 48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -30,11 +30,11 @@ final class lc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         int var1 = 85 % ((30 - param0) / 62);
     }

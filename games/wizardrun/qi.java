@@ -22,12 +22,12 @@ final class qi {
     private int field_j;
     private int field_k;
 
-    final ui c(int param0) {
-        this.field_n = rg.field_R;
-        this.field_p = rg.field_P;
+    final FullscreenFocusCanvas c(int param0) {
+        this.field_n = ResizableDialog.field_R;
+        this.field_p = ResizableDialog.field_P;
         this.field_m.a(this.field_l, this.field_j, -93);
-        tj.field_F = false;
-        ui var2 = hb.a(0, this.field_j, param0, this.field_l, 0, ld.field_g);
+        FadingDialog.field_F = false;
+        FullscreenFocusCanvas var2 = hb.a(0, this.field_j, param0, this.field_l, 0, ld.field_g);
         if (var2 == null) {
           this.a(122);
         }
@@ -38,15 +38,15 @@ final class qi {
         if (param0 != -1) {
           field_b = (String) null;
         }
-        return wi.field_J;
+        return DialogLayer.field_J;
     }
 
     final void a(boolean param0) {
         int fieldTemp$1 = 0;
-        if (null != ki.field_E) {
+        if (null != LoginChoicePanel.field_E) {
           return;
         }
-        if (hl.field_a <= 0) {
+        if (ArchiveProvider.field_a <= 0) {
           this.field_d = false;
         }
         if (this.field_d) {
@@ -59,27 +59,27 @@ final class qi {
             this.a(true);
           }
           this.field_e = this.field_c;
-          if (this.field_q > jd.field_b) {
+          if (this.field_q > DualLinkNodeHashTable.field_b) {
             this.field_d = false;
           } else {
             this.a((byte) 99);
           }
           return;
         }
-        if (rg.field_R >= this.field_o) {
+        if (ResizableDialog.field_R >= this.field_o) {
           if (this.field_o > 0) {
             ph.field_o = 0;
           }
         } else {
-          ph.field_o = (-rg.field_R + this.field_o) / 2;
+          ph.field_o = (-ResizableDialog.field_R + this.field_o) / 2;
         }
-        if (this.field_f != rg.field_R ||
-          rg.field_P != this.field_g) {
+        if (this.field_f != ResizableDialog.field_R ||
+          ResizableDialog.field_P != this.field_g) {
           this.field_m.a(this.field_g, this.field_f, -113);
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
           field_b = (String) null;
@@ -148,7 +148,7 @@ final class qi {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (tj.field_G == NodeHashTableIterator.field_j) {
+          if (FadingDialog.field_G == NodeHashTableIterator.field_j) {
             gh.field_c = null;
             n.field_b.position = 0;
             if (param2 != null) {
@@ -157,29 +157,29 @@ final class qi {
               if (param5) {
                 var9 = var9 | 1;
               }
-              re.field_G.f(IntrusiveDeque.field_c.nextInt(), param6 + 612976077);
-              re.field_G.f(IntrusiveDeque.field_c.nextInt(), 613003928);
-              re.field_G.b(param6 - 27851, var14);
-              re.field_G.b(param6 ^ 27851, var8);
+              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), param6 + 612976077);
+              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
+              re.field_G.writePrefixedCp1252String(param6 - 27851, var14);
+              re.field_G.writePrefixedCp1252String(param6 ^ 27851, var8);
               var15 = (CharSequence) ((Object) param2);
-              re.field_G.b(0, fi.a(var15, param6 - 27768));
-              re.field_G.b(param6 - 1947107139, param4);
-              re.field_G.b((byte) 11, param3);
-              re.field_G.b((byte) 11, var9);
-              n.field_b.b((byte) 11, 18);
+              re.field_G.writePrefixedCp1252String(0, fi.a(var15, param6 - 27768));
+              re.field_G.writeShort(param6 - 1947107139, param4);
+              re.field_G.writeByte((byte) 11, param3);
+              re.field_G.writeByte((byte) 11, var9);
+              n.field_b.writeByte((byte) 11, 18);
               n.field_b.position = n.field_b.position + 2;
               var10 = n.field_b.position;
               var11_ref_StringLifetime1 = fb.a(jg.f(1), (byte) 102);
               if (var11_ref_StringLifetime1 == null) {
                 var11_ref_StringLifetime1 = "";
               }
-              n.field_b.a(var11_ref_StringLifetime1, false);
-              pa.a(ag.field_s, 0, ad.field_d, re.field_G, n.field_b);
-              n.field_b.a(n.field_b.position - var10, (byte) -67);
+              n.field_b.writeCp1252String(var11_ref_StringLifetime1, false);
+              pa.a(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, re.field_G, n.field_b);
+              n.field_b.backpatchShortLength(n.field_b.position - var10, (byte) -67);
             } else {
               re.field_G.position = 0;
-              re.field_G.f(IntrusiveDeque.field_c.nextInt(), 613003928);
-              re.field_G.f(IntrusiveDeque.field_c.nextInt(), 613003928);
+              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
+              re.field_G.writeInt(IntrusiveDeque.field_c.nextInt(), 613003928);
               stackIn_11_0 = re.field_G;
               stackIn_11_1 = 0;
               if (!param0.c((byte) 127)) {
@@ -187,7 +187,7 @@ final class qi {
               } else {
                 stackIn_12_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).writePrefixedCp1252String(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = re.field_G;
               stackIn_14_1 = 0;
               if (!param1.c((byte) 125)) {
@@ -195,12 +195,12 @@ final class qi {
               } else {
                 stackIn_15_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
-              n.field_b.b((byte) 11, 16);
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedCp1252String(stackIn_14_1, stackIn_15_2);
+              n.field_b.writeByte((byte) 11, 16);
               n.field_b.position = n.field_b.position + 1;
               var9 = n.field_b.position;
-              pa.a(ag.field_s, 0, ad.field_d, re.field_G, n.field_b);
-              n.field_b.a(n.field_b.position - var9, -115);
+              pa.a(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, re.field_G, n.field_b);
+              n.field_b.backpatchByteLength(n.field_b.position - var9, -115);
             }
             id.a((byte) -67, -1);
             NodeHashTableIterator.field_j = PacketBuffer.field_l;
@@ -210,15 +210,15 @@ final class qi {
           }
           if (NodeHashTableIterator.field_j == PacketBuffer.field_l &&
             hc.a(1, -28266)) {
-            var9Lifetime1 = nk.field_N.f(255);
-            nk.field_N.position = 0;
+            var9Lifetime1 = AccountCreationForm.field_N.readUnsignedByte(255);
+            AccountCreationForm.field_N.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               pd.field_I = new String[-100 + var9Lifetime1];
               NodeHashTableIterator.field_j = vj.field_a;
             } else {
               if (var9Lifetime1 == 248) {
-                tj.a(3088, jg.f(param6 ^ 27850));
+                FadingDialog.a(3088, jg.f(param6 ^ 27850));
                 bh.field_g = ii.field_b;
                 ql.a(-71);
                 n.field_a = false;
@@ -227,8 +227,8 @@ final class qi {
               }
               if (var9Lifetime1 == 99) {
                 hc.a(uf.a(true), param6 ^ -675);
-                gh.field_c = new Boolean(qj.a((byte) -100, nk.field_N));
-                nk.field_N.position = 0;
+                gh.field_c = new Boolean(qj.a((byte) -100, AccountCreationForm.field_N));
+                AccountCreationForm.field_N.position = 0;
               } else {
                 NodeHashTableIterator.field_j = gf.field_ib;
                 ra.field_k = var9Lifetime1;
@@ -239,12 +239,12 @@ final class qi {
           if (NodeHashTableIterator.field_j == vj.field_a) {
             var9Lifetime2 = 2;
             if (hc.a(var9Lifetime2, -28266)) {
-              var10Lifetime1 = nk.field_N.j(param6 - 42328);
-              nk.field_N.position = 0;
+              var10Lifetime1 = AccountCreationForm.field_N.readUnsignedShort(param6 - 42328);
+              AccountCreationForm.field_N.position = 0;
               if (hc.a(var10Lifetime1, -28266)) {
                 var11 = pd.field_I.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  pd.field_I[var12] = nk.field_N.h(727059944);
+                  pd.field_I[var12] = AccountCreationForm.field_N.readPrefixedCp1252String(727059944);
                 }
                 ql.a(-107);
                 n.field_a = false;
@@ -256,11 +256,11 @@ final class qi {
           if (gf.field_ib == NodeHashTableIterator.field_j &&
             bd.b(92)) {
             if (ra.field_k != 255) {
-              bh.field_g = nk.field_N.d(0);
+              bh.field_g = AccountCreationForm.field_N.readCp1252String(0);
             } else {
-              var9_ref_String = nk.field_N.c(-1);
+              var9_ref_String = AccountCreationForm.field_N.readNullableCp1252String(-1);
               if (var9_ref_String != null) {
-                q.a(26017, jg.f(1), var9_ref_String);
+                MidiEnvelope.a(26017, jg.f(1), var9_ref_String);
               }
             }
             ql.a(-36);
@@ -273,15 +273,15 @@ final class qi {
               if (eh.a(2) > 30000L) {
                 bh.field_g = sa.field_b;
               } else {
-                bh.field_g = fg.field_d;
+                bh.field_g = TextLayoutLine.field_d;
               }
               n.field_a = false;
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
             var9Lifetime3 = vl.field_d;
-            vl.field_d = tj.field_J;
-            tj.field_J = var9Lifetime3;
+            vl.field_d = FadingDialog.field_J;
+            FadingDialog.field_J = var9Lifetime3;
             n.field_a = true;
           }
           stackIn_64_0 = -1;
@@ -308,12 +308,12 @@ final class qi {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void e(int param0) {
-        d.field_a = nk.field_N.d(param0 ^ param0);
+        d.field_a = AccountCreationForm.field_N.readCp1252String(param0 ^ param0);
         CharSequence var2 = (CharSequence) ((Object) d.field_a);
         IntrusiveNode.field_a = MouseWheelInput.a(-49, var2);
     }
@@ -323,7 +323,7 @@ final class qi {
         if (param0 != 0) {
           qi.e(61);
         }
-        stackIn_6_0 = (jd.field_b >= this.field_q) && (0 < hl.field_a);
+        stackIn_6_0 = (DualLinkNodeHashTable.field_b >= this.field_q) && (0 < ArchiveProvider.field_a);
         return stackIn_6_0;
     }
 
@@ -366,12 +366,12 @@ final class qi {
             var3 = (int)((float)var2 / this.field_s);
           }
         }
-        if (rg.field_R != var2 ||
-          rg.field_P != var3) {
+        if (ResizableDialog.field_R != var2 ||
+          ResizableDialog.field_P != var3) {
           this.field_m.a(var3, var2, -109);
         }
         if (this.field_o > 0) {
-          ph.field_o = (-rg.field_R + this.field_o) / 2;
+          ph.field_o = (-ResizableDialog.field_R + this.field_o) / 2;
         }
     }
 

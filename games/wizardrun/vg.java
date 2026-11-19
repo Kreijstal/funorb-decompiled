@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends rg implements qd {
+final class vg extends ResizableDialog implements ButtonActionListener {
     static String field_U;
-    private pl field_V;
+    private TextButton field_V;
     static kd field_W;
 
-    vg(wi param0, lg param1) {
+    vg(DialogLayer param0, lg param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -21,28 +21,28 @@ final class vg extends rg implements qd {
           if (param1 == mk.field_e) {
             var3 = qi.field_b;
           } else {
-            if (param1 != cf.field_f) {
-              if (qa.field_r == param1) {
-                var3 = wi.field_G;
+            if (param1 != WrappedTextLayout.field_f) {
+              if (StatefulWidgetPainter.field_r == param1) {
+                var3 = DialogLayer.field_G;
                 this.field_n = this.field_n + 30;
               }
             } else {
               this.field_n = this.field_n + 10;
               var3 = SocketConnector.field_b;
               if (ql.a(false)) {
-                var3 = ad.field_c;
+                var3 = ArchiveCatalog.field_c;
                 this.field_n = this.field_n + 20;
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (ce) null);
+          var4 = new UiWidget((String) (var3), (WidgetListener) null);
           var4.field_l = 50;
           var4.field_n = 80;
           var4.field_r = this.field_r;
           var4.field_o = 0;
-          var4.field_w = (bf) ((Object) new ll(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_w = (WidgetRenderer) ((Object) new WidgetPainter(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) 117);
-          this.field_V = this.a(23813, (ce) (this), wizardrun.field_F);
+          this.field_V = this.a(23813, (WidgetListener) (this), wizardrun.field_F);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class vg extends rg implements qd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class vg extends rg implements qd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -123,12 +123,12 @@ final class vg extends rg implements qd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public final void a(int param0, pl param1, int param2, int param3, int param4) {
-        pl discarded$1 = null;
+    public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
+        TextButton discarded$1 = null;
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -138,7 +138,7 @@ final class vg extends rg implements qd {
         try {
           if (param0 != -18905) {
             var7 = (String) null;
-            discarded$1 = this.a(-124, (ce) null, (String) null);
+            discarded$1 = this.a(-124, (WidgetListener) null, (String) null);
           }
           if (this.field_V != param1) {
             return;
@@ -155,23 +155,23 @@ final class vg extends rg implements qd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 80) {
           field_U = null;
           field_W = null;
           return;
         }
         String var2 = (String) null;
-        vg.loadSprite(11, (String) null, (kl) null, (String) null);
+        vg.loadSprite(11, (String) null, (ResourceArchive) null, (String) null);
         field_U = null;
         field_W = null;
     }
 
-    final static Sprite loadSprite(int param0, String param1, kl param2, String param3) {
+    final static Sprite loadSprite(int param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -216,7 +216,7 @@ final class vg extends rg implements qd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class vg extends rg implements qd {
           return;
         }
         String var3 = (String) null;
-        vg.loadSprite(24, (String) null, (kl) null, (String) null);
+        vg.loadSprite(24, (String) null, (ResourceArchive) null, (String) null);
         this.field_H = false;
     }
 
@@ -240,13 +240,13 @@ final class vg extends rg implements qd {
         }
     }
 
-    private final pl a(int param0, ce param1, String param2) {
-        pl discarded$1 = null;
-        pl var4 = null;
+    private final TextButton a(int param0, WidgetListener param1, String param2) {
+        TextButton discarded$1 = null;
+        TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
-        pl stackIn_3_0 = null;
+        TextButton stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -254,8 +254,8 @@ final class vg extends rg implements qd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new pl(param2, param1);
-          var4.field_w = (bf) ((Object) new jl());
+          var4 = new TextButton(param2, param1);
+          var4.field_w = (WidgetRenderer) ((Object) new jl());
           var5 = this.field_n - 6;
           this.field_n = this.field_n + 38;
           var4.a(123, var5, 30, this.field_r - 30, 15);
@@ -263,7 +263,7 @@ final class vg extends rg implements qd {
           this.c(117);
           if (param0 != 23813) {
             var6 = (String) null;
-            discarded$1 = this.a(-111, (ce) null, (String) null);
+            discarded$1 = this.a(-111, (WidgetListener) null, (String) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -283,7 +283,7 @@ final class vg extends rg implements qd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

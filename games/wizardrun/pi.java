@@ -4,7 +4,7 @@
 final class pi {
     static String[] field_a;
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, le param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, TriangleMesh param5, int param6, int param7) {
         int stackIn_16_0 = 0;
         int[] stackIn_18_0 = null;
         int stackIn_19_1 = 0;
@@ -50,7 +50,7 @@ final class pi {
         int var40 = 0;
         int[] var41 = null;
         int var44 = 0;
-        le var45 = null;
+        TriangleMesh var45 = null;
         int[] var50 = null;
         int[] var55 = null;
         byte[] var61 = null;
@@ -71,7 +71,7 @@ final class pi {
             var61 = var45.field_x;
             te.a((byte) -112, var61, t.field_a, 0, 0);
           } else {
-            ia.b(0);
+            NanoTickClock.b(0);
           }
           if (param3) {
             field_a = (String[]) null;
@@ -100,7 +100,7 @@ final class pi {
             }
             var14Lifetime2 = stackIn_16_0;
             var15 = var64[var13] * param0 + param1 * var62[var13] + param7 * var63[var13] >> 8;
-            stackIn_18_0 = qk.field_f;
+            stackIn_18_0 = WhirlpoolHasher.field_f;
             if (0 <= var15) {
               stackIn_19_1 = var15;
             } else {
@@ -203,7 +203,7 @@ final class pi {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -217,22 +217,22 @@ final class pi {
         Sprite[] var1 = new Sprite[wb.field_f];
         for (var2 = param0; var2 < wb.field_f; var2++) {
           var3 = MouseInputHandler.field_b[var2] * ImageProducerRasterBuffer.field_k[var2];
-          var4 = mf.field_j[var2];
+          var4 = TextFieldValidator.field_j[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = ic.field_b[kl.b(255, (int) var4[var6])];
+            var5[var6] = ic.field_b[ResourceArchive.b(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
+          var1[var2] = new Sprite(ProgressDialog.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
         }
         ClientException.a(param0 ^ 0);
         return var1;
     }
 
     final static Object a(byte[] param0, int param1, boolean param2) {
-        kh var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        kh stackIn_5_0 = null;
+        DirectByteStorage stackIn_5_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -245,8 +245,8 @@ final class pi {
             return stackIn_2_0;
           }
           if (param0.length > 136) {
-            var3 = new kh();
-            ((dj) ((Object) var3)).a(param0, 121);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).putBytes(param0, 121);
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
@@ -269,13 +269,13 @@ final class pi {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 32348) {
-          pi.a(98);
+          pi.releaseStatics(98);
         }
         field_a = null;
     }

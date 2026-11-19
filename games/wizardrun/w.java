@@ -7,7 +7,7 @@ final class w {
     static int field_c;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 > -59) {
           String var2 = (String) null;
@@ -17,7 +17,7 @@ final class w {
 
     final static boolean a(byte param0) {
         int var1 = -24 / ((param0 + 64) / 52);
-        return jd.field_f > 250 ? true : false;
+        return DualLinkNodeHashTable.field_f > 250 ? true : false;
     }
 
     final static boolean c(int param0) {
@@ -44,11 +44,11 @@ final class w {
           if (param13 > -107) {
             return;
           }
-          qk.a(param12, param6, param5, 1882, param2);
+          WhirlpoolHasher.a(param12, param6, param5, 1882, param2);
           kj.a(1048576, param20, param18);
           jl.a(-122, param3, param19, param14, param17, param15);
           bb.a(param8, param9, (byte) -13, param11);
-          vk.a(-67, param1, param0, param16);
+          MidiNote.a(-67, param1, param0, param16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class w {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -93,12 +93,12 @@ final class w {
           int var3_int = -81 / ((35 - param2) / 44);
           SecondaryNodeDeque.a((byte) -52, param1, param0, false);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "w.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "w.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void b(int param0) {
-        DualLinkNode.field_k = new nk();
+        DualLinkNode.field_k = new AccountCreationForm();
         td.field_f.c(DualLinkNode.field_k, -125);
         if (param0 != -1) {
           field_a = -36;

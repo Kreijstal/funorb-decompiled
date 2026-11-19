@@ -6,9 +6,9 @@ final class fb {
     static ql field_d;
     static String field_e;
     static String field_c;
-    static ji field_a;
+    static MidiTrack field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_d = null;
         if (param0 >= -95) {
@@ -39,12 +39,12 @@ final class fb {
           try {
             try {
               if (param1 != 102) {
-                fb.a(78);
+                fb.releaseStatics(78);
               }
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (cl.a(param0, -3264, "getcookies"));
-              var5 = tj.a(var4, -22710, ';');
+              var5 = FadingDialog.a(var4, -22710, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&
@@ -72,7 +72,7 @@ final class fb {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

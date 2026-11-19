@@ -28,7 +28,7 @@ final class sf {
             sf.a(false, 17, (String) null);
           }
           if (!param0) {
-            stackIn_6_0 = le.field_j.stringWidth(param2);
+            stackIn_6_0 = TriangleMesh.field_j.stringWidth(param2);
             return stackIn_6_0;
           }
           stackIn_4_0 = uf.field_c.stringWidth(param2);
@@ -43,7 +43,7 @@ final class sf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class sf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_j = null;
         if (param0 <= 122) {
@@ -326,7 +326,7 @@ final class sf {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

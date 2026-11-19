@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hc extends mf {
+final class hc extends TextFieldValidator {
     private static int[] field_l;
     static int field_o;
     private fe field_k;
@@ -18,7 +18,7 @@ final class hc extends mf {
         ga.field_a = true;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 2098078177) {
           field_l = (int[]) null;
@@ -27,7 +27,7 @@ final class hc extends mf {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (!(nk.field_N.position < param0)) {
+          if (!(AccountCreationForm.field_N.position < param0)) {
             return true;
           }
           if (jc.field_H == null) {
@@ -38,16 +38,16 @@ final class hc extends mf {
             hc.f(-28);
           }
           if (var2_int > 0) {
-            if (-nk.field_N.position + param0 < var2_int) {
-              var2_int = -nk.field_N.position + param0;
+            if (-AccountCreationForm.field_N.position + param0 < var2_int) {
+              var2_int = -AccountCreationForm.field_N.position + param0;
             }
-            jc.field_H.a(nk.field_N.payload, 114, var2_int, nk.field_N.position);
+            jc.field_H.a(AccountCreationForm.field_N.payload, 114, var2_int, AccountCreationForm.field_N.position);
             eg.field_C = d.a((byte) 29);
-            nk.field_N.position = nk.field_N.position + var2_int;
-            if (param0 > nk.field_N.position) {
+            AccountCreationForm.field_N.position = AccountCreationForm.field_N.position + var2_int;
+            if (param0 > AccountCreationForm.field_N.position) {
               return false;
             }
-            nk.field_N.position = 0;
+            AccountCreationForm.field_N.position = 0;
             return true;
           }
           try {
@@ -98,7 +98,7 @@ final class hc extends mf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -107,23 +107,23 @@ final class hc extends mf {
           field_o = 35;
         }
         if (!f.field_e) {
-          if (null == ok.field_c) {
-            ok.field_c = dc.a((byte) 103, 4);
+          if (null == ValidationState.field_c) {
+            ValidationState.field_c = dc.a((byte) 103, 4);
           }
-          if (ok.field_c.field_i) {
-            qf.field_l = qf.field_l & ~ok.field_c.field_j;
-            IsaacRandom.field_a = IsaacRandom.field_a | ok.field_c.field_j;
-            ok.field_c = null;
+          if (ValidationState.field_c.field_i) {
+            qf.field_l = qf.field_l & ~ValidationState.field_c.field_j;
+            IsaacRandom.field_a = IsaacRandom.field_a | ValidationState.field_c.field_j;
+            ValidationState.field_c = null;
             f.field_e = true;
           }
         }
         if (!e.field_a) {
           if (null == rf.field_a) {
-            rf.field_a = ff.c(5, 1, 2, 0);
+            rf.field_a = HotspotTextWidget.c(5, 1, 2, 0);
           }
           if (rf.field_a.field_j) {
-            if (rf.field_a.field_n[0] > pl.field_A) {
-              pl.field_A = rf.field_a.field_n[0];
+            if (rf.field_a.field_n[0] > TextButton.field_A) {
+              TextButton.field_A = rf.field_a.field_n[0];
             }
             e.field_a = true;
             rf.field_a = null;
@@ -131,7 +131,7 @@ final class hc extends mf {
         }
         if (f.field_e &&
           e.field_a) {
-          cf.a((byte) 79);
+          WrappedTextLayout.a((byte) 79);
         }
     }
 
@@ -140,27 +140,27 @@ final class hc extends mf {
           sf.field_j.a(param0, param1);
           pg.a(param2, true, param0);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "hc.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "hc.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    hc(og param0, og param1) {
+    hc(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         this.field_n = false;
         this.field_m = "";
         try {
           this.field_k = new fe(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ok a(int param0, String param1) {
+    final ValidationState a(int param0, String param1) {
         sf var3 = null;
         RuntimeException var3_ref = null;
-        ok stackIn_3_0 = null;
-        ok stackIn_7_0 = null;
-        ok stackIn_12_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -171,9 +171,9 @@ final class hc extends mf {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_m)) {
-            var3 = ad.a(param1, 6);
+            var3 = ArchiveCatalog.a(param1, 6);
             if (!var3.a(true)) {
-              stackIn_7_0 = l.field_S;
+              stackIn_7_0 = ValidationHelpWidget.field_S;
               return stackIn_7_0;
             }
             this.field_m = param1;
@@ -195,7 +195,7 @@ final class hc extends mf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

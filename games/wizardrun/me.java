@@ -9,7 +9,7 @@ final class me {
     static String field_d;
     static int field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -30,20 +30,20 @@ final class me {
 
     final static void a(int param0) {
         String var2 = (String) null;
-        rj.a((String) null, we.field_a, true);
+        MenuInputState.a((String) null, we.field_a, true);
         if (param0 != 7) {
-          me.a((byte) -55);
+          me.releaseStatics((byte) -55);
         }
     }
 
     final static void a(int param0, boolean param1) {
-        jf.field_f = mf.field_g[param0];
-        bl.field_c = af.field_c[param0];
+        IndexedSpriteState.field_f = TextFieldValidator.field_g[param0];
+        bl.field_c = TextLayout.field_c[param0];
         if (param1) {
           td.field_e = NodeHashTableIterator.field_e[param0];
           return;
         }
-        me.a((byte) -45);
+        me.releaseStatics((byte) -45);
         td.field_e = NodeHashTableIterator.field_e[param0];
     }
 

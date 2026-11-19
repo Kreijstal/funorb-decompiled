@@ -3,25 +3,25 @@
  */
 final class GameGraphicsResources {
     static Sprite[] gemSprites;
-    static gb wizardFont2;
+    static MonochromeBitmapFont wizardFont2;
     static String field_c;
-    static rj field_d;
+    static MenuInputState field_d;
 
     final static void b(int param0) {
         int var1_int = 0;
         int var2 = wizardrun.field_H;
         int var1_intLifetime1;
         try {
-          pe.field_y.a(5);
+          WidgetContainer.field_y.a(5);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            pc.field_k[var1_int] = 0L;
+            Js5Index.field_k[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             ql.field_b[var1_intLifetime1] = 0L;
           }
           uh.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class GameGraphicsResources {
         return dh.field_c;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         wizardFont2 = null;
         if (param0 != 0) {
           return;

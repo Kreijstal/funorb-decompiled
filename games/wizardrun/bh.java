@@ -9,12 +9,12 @@ final class bh {
     static String field_c;
     static String field_g;
     static String field_d;
-    static ji field_e;
+    static MidiTrack field_e;
 
     final static byte[] a(byte param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        dj var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
@@ -40,11 +40,11 @@ final class bh {
             stackIn_12_0 = (byte[]) null;
             return stackIn_12_0;
           }
-          if (!(param1 instanceof dj)) {
+          if (!(param1 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (dj) (param1);
-          stackIn_15_0 = var4.a(-21);
+          var4 = (ByteStorage) (param1);
+          stackIn_15_0 = var4.getBytes(-21);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class bh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class bh {
           try {
             var4_int = 63 / ((param1 - 14) / 40);
             try {
-              var5 = Class.forName("fk");
+              var5 = Class.forName("BufferedImageRasterBuffer");
               var6 = (RasterBuffer) (var5.newInstance());
               var6.a((byte) 54, param3, param0, param2);
               stackIn_2_0 = var6;
@@ -104,7 +104,7 @@ final class bh {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -113,7 +113,7 @@ final class bh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -75 / ((param0 + 25) / 37);
         field_c = null;
         field_e = null;

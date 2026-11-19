@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc implements bf {
-    static kl field_a;
+final class cc implements WidgetRenderer {
+    static ResourceArchive field_a;
     static String field_b;
 
-    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+    public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -18,15 +18,15 @@ final class cc implements bf {
         try {
           var6_int = param2.field_o + param0;
           var7 = param1 + param2.field_l;
-          pe.a(param2.field_n, (byte) -14, var7, param2.field_r, var6_int);
+          WidgetContainer.a(param2.field_n, (byte) -14, var7, param2.field_r, var6_int);
           if (!param3) {
             var9 = (UiWidget) null;
-            this.a(0, 116, (UiWidget) null, true, true);
+            this.drawWidget(0, 116, (UiWidget) null, true, true);
           }
           var8 = te.field_k[1];
-          if (param2 instanceof pl &&
-            ((pl) (param2)).field_z) {
-            var8.a(1 + var6_int + (param2.field_r - var8.fullWidth >> 1), (param2.field_n - var8.fullHeight >> 1) + (var7 + 1), 256);
+          if (param2 instanceof TextButton &&
+            ((TextButton) (param2)).field_z) {
+            var8.drawAdditive(1 + var6_int + (param2.field_r - var8.fullWidth >> 1), (param2.field_n - var8.fullHeight >> 1) + (var7 + 1), 256);
           }
           if (!param2.d((byte) 53)) {
             return;
@@ -43,11 +43,11 @@ final class cc implements bf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         int var1 = 38 / ((param0 - 13) / 57);
         field_a = null;

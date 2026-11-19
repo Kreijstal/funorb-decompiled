@@ -1,0 +1,175 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class IntHashTable {
+    static Sprite field_a;
+    static ol[] field_d;
+    private int[] field_b;
+    static char[] field_c;
+
+    final int b(byte param0, int param1) {
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        var6 = wizardrun.field_H;
+        if (param0 < 25) {
+          this.field_b = (int[]) null;
+        }
+        var3 = (this.field_b.length >> 1) - 1;
+        var4 = var3 & param1;
+        while (true) {
+          var5 = this.field_b[1 + (var4 + var4)];
+          if (-1 == var5) {
+            return -1;
+          }
+          if (param1 == this.field_b[var4 + var4]) {
+            return var5;
+          }
+          var4 = var4 + 1 & var3;
+        }
+    }
+
+    final static void a(byte param0, int param1) {
+        IntrusiveNode var2 = null;
+        int var3 = 0;
+        ie var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
+        var3 = wizardrun.field_H;
+        try {
+          var4 = (ie) (pa.field_e.b((byte) 68));
+          while (var4 != null) {
+            tb.a(param1, param0 ^ 18014, var4);
+            var4 = (ie) (pa.field_e.d(8192));
+          }
+          if (param0 != -86) {
+            IntHashTable.releaseStatics(100);
+          }
+          var2 = RasterBuffer.field_c.b((byte) 49);
+          while (var2 != null) {
+            UiWidget.a(0, param1);
+            var2 = RasterBuffer.field_c.d(8192);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw bd.wrapException((Throwable) ((Object) var2_ref), "oe.B(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final static String a(byte param0, CharSequence param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        String stackIn_2_0 = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2 = WeightedLruCache.a(sb.a((byte) -75, param1), 74);
+          if (param0 != 27) {
+            stackIn_2_0 = (String) null;
+            return stackIn_2_0;
+          }
+          if (var2 == null) {
+            var2 = "";
+          }
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = var2_ref;
+          stackIn_9_1 = new StringBuilder().append("oe.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_c = null;
+        field_a = null;
+        field_d = null;
+        int var1 = -88 / ((param0 + 38) / 59);
+    }
+
+    final static boolean a(byte param0, IsaacPacketBuffer param1) {
+        RuntimeException var2 = null;
+        boolean stackIn_6_0 = false;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 == -55) {
+            stackIn_6_0 = (param1.readBits(1, -11719) == 1);
+            return stackIn_6_0;
+          }
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_9_0 = var2;
+          stackIn_9_1 = new StringBuilder().append("oe.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    IntHashTable(int[] param0) {
+        int var2_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3Lifetime1;
+        try {
+          var2_int = 1;
+          while ((param0.length >> 1) + param0.length >= var2_int) {
+            var2_int = var2_int << 1;
+          }
+          this.field_b = new int[var2_int + var2_int];
+          for (var3 = 0; var2_int + var2_int > var3; var3++) {
+            this.field_b[var3] = -1;
+          }
+          for (var3Lifetime1 = 0; var3Lifetime1 < param0.length; var3Lifetime1++) {
+            var4 = param0[var3Lifetime1] & var2_int - 1;
+            while (this.field_b[1 + (var4 + var4)] != -1) {
+              var4 = -1 + var2_int & var4 + 1;
+            }
+            this.field_b[var4 + var4] = param0[var3Lifetime1];
+            this.field_b[1 + (var4 + var4)] = var3Lifetime1;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("oe.<init>(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_c = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+    }
+}

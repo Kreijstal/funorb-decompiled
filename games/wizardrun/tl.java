@@ -5,16 +5,16 @@ final class tl {
     static boolean field_e;
     static ae field_d;
     static String field_b;
-    static vi field_a;
+    static PcmStreamMixer field_a;
     static qj field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         field_a = null;
         field_d = null;
         if (param0 >= -47) {
-          tl.a((byte) -113);
+          tl.releaseStatics((byte) -113);
         }
     }
 
@@ -67,7 +67,7 @@ final class tl {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 

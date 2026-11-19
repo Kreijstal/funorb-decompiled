@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends pl {
+final class vb extends TextButton {
     static rc field_F;
     static String field_I;
-    private lb field_H;
+    private GrowableIntList field_H;
     int field_G;
     int field_J;
     private int field_K;
@@ -53,7 +53,7 @@ final class vb extends pl {
               }
             }
             if (var12 >= 0) {
-              this.field_H.d(-1, var12);
+              this.field_H.removeAt(-1, var12);
             }
           } else {
             this.field_H.e(16711838, var9);
@@ -69,7 +69,7 @@ final class vb extends pl {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class vb extends pl {
         return this.field_K;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 125) {
           field_F = (rc) null;
         }

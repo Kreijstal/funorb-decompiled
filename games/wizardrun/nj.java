@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nj extends IntrusiveNode {
-    static db[] field_k;
+    static IndexedSprite[] field_k;
     int field_l;
     int field_o;
     String[][] field_n;
@@ -13,11 +13,11 @@ final class nj extends IntrusiveNode {
     static int field_r;
     static String field_p;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_p = null;
         if (param0 >= -86) {
-          nj.a(-51);
+          nj.releaseStatics(-51);
         }
     }
 
@@ -30,19 +30,19 @@ final class nj extends IntrusiveNode {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          cf.field_i = false;
+          WrappedTextLayout.field_i = false;
           lc.field_d = false;
           if (null != aa.field_lb &&
             aa.field_lb.field_H) {
             var3_int = 1;
             if (param2 == 8) {
-              if (wi.field_J) {
-                param1 = i.field_f;
+              if (DialogLayer.field_J) {
+                param1 = PcmResampler.field_f;
               } else {
                 param1 = fc.field_a;
               }
               param2 = 2;
-              r.field_b.a(param0 + 5980, rg.field_S);
+              TimedValidator.field_b.a(param0 + 5980, ResizableDialog.field_S);
             }
             if (param2 == 10) {
               var3_int = 0;
@@ -50,7 +50,7 @@ final class nj extends IntrusiveNode {
             }
             if (var3_int != 0) {
               if (lc.field_d) {
-                param1 = di.a(new String[]{param1}, (byte) 84, ca.field_d);
+                param1 = WeightedLruCache.a(new String[]{param1}, (byte) 84, ca.field_d);
               }
               if (ga.field_a) {
                 param1 = ca.field_g;
@@ -59,8 +59,8 @@ final class nj extends IntrusiveNode {
             }
             if (param2 != 256 &&
               10 != param2 &&
-              !wi.field_J) {
-              r.field_b.h(-71);
+              !DialogLayer.field_J) {
+              TimedValidator.field_b.h(-71);
             }
           }
           if (param0 == 10) {
@@ -79,7 +79,7 @@ final class nj extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 

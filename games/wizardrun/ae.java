@@ -6,7 +6,7 @@ final class ae {
     static char field_a;
     static Sprite field_c;
 
-    final static void a(boolean param0, byte param1, le param2, boolean param3, int[] param4, boolean param5, int[] param6) {
+    final static void a(boolean param0, byte param1, TriangleMesh param2, boolean param3, int[] param4, boolean param5, int[] param6) {
         int stackIn_63_0 = 0;
         int stackIn_63_1 = 0;
         int stackIn_72_0 = 0;
@@ -153,13 +153,13 @@ final class ae {
                   var25Lifetime1Lifetime1 = param2.field_h[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param2.field_l[var23Lifetime2];
                   pg.field_r[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1 >> 16) + var9;
-                  he.field_n[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13) >> 16);
+                  MidiNoteMixer.field_n[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13) >> 16);
                   wd.field_e[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16);
                   var24Lifetime1Lifetime1 = param2.field_J[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param2.field_F[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param2.field_s[var23Lifetime2];
-                  od.field_m[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var18 * var26Lifetime1Lifetime1) >> 16);
-                  mf.field_h[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
+                  WidgetTheme.field_m[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var18 * var26Lifetime1Lifetime1) >> 16);
+                  TextFieldValidator.field_h[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
                   ImageProducerRasterBuffer.field_n[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17) >> 16);
                   var24Lifetime1Lifetime1 = param2.field_t[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param2.field_u[var23Lifetime2];
@@ -240,7 +240,7 @@ final class ae {
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(')').toString());
         }
     }
 
@@ -254,12 +254,12 @@ final class ae {
         Throwable decompiledCaughtException = null;
         try {
           var1_int = 108 % ((param0 + 6) / 55);
-          var2_ref = ff.keyHandler;
+          var2_ref = HotspotTextWidget.keyHandler;
           synchronized (var2_ref) {
             if (tg.keyQueueReadIndex == ph.field_r) {
               return false;
             }
-            vk.field_r = ge.keyCodeQueue[tg.keyQueueReadIndex];
+            MidiNote.field_r = ge.keyCodeQueue[tg.keyQueueReadIndex];
             field_a = ve.typedCharQueue[tg.keyQueueReadIndex];
             tg.keyQueueReadIndex = 1 + tg.keyQueueReadIndex & 127;
             stackIn_5_0 = true;
@@ -268,11 +268,11 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ae.C(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "ae.C(" + param0 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_c = null;
           field_b = null;
@@ -280,7 +280,7 @@ final class ae {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ae.B(" + param0 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ae.toString()");
+          throw bd.wrapException((Throwable) ((Object) var1), "ae.toString()");
         }
     }
 
@@ -306,7 +306,7 @@ final class ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var4), "ae.E(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var4), "ae.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class ae {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

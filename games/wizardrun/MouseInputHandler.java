@@ -21,7 +21,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           oc.mouseIdleTime = 0;
           wizardrun.pointerX = param0.getX();
           IterableNodeHashTable.pointerY = param0.getY();
-          jf.field_i = true;
+          IndexedSpriteState.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,7 +33,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -43,7 +43,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ve.pressedButton = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "tf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "tf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           oc.mouseIdleTime = 0;
           wizardrun.pointerX = -1;
           IterableNodeHashTable.pointerY = -1;
-          jf.field_i = true;
+          IndexedSpriteState.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             if ((4 & var2_int) == 0) {
             }
-            jf.field_i = true;
+            IndexedSpriteState.field_i = true;
             if ((var2_int & 8) == 0) {
             }
           }
@@ -120,7 +120,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -137,10 +137,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         var2 = wizardrun.field_H;
         try {
-          GameShell.field_A.a(126, true, qa.field_s, dg.field_f);
+          GameShell.field_A.a(126, true, StatefulWidgetPainter.field_s, dg.field_f);
           GameShell.field_A.g((byte) 105);
           while (ae.a(param0 ^ -20316)) {
-            GameShell.field_A.a(-90, vk.field_r, ae.field_a);
+            GameShell.field_A.a(-90, MidiNote.field_r, ae.field_a);
           }
           if (w.field_a != -1) {
             var1_int = w.field_a;
@@ -151,11 +151,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param0 != -20232) {
             field_c = (int[]) null;
           }
-          if (cf.field_i) {
+          if (WrappedTextLayout.field_i) {
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (wc.field_j == pl.field_E) {
+          if (wc.field_j == TextButton.field_E) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
@@ -163,7 +163,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (fi.field_y != pl.field_E) {
+          if (fi.field_y != TextButton.field_E) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }
@@ -172,11 +172,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "tf.A(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "tf.A(" + param0 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;
@@ -195,10 +195,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             oc.mouseIdleTime = 0;
             wizardrun.pointerX = param0.getX();
             IterableNodeHashTable.pointerY = param0.getY();
-            jf.field_i = true;
+            IndexedSpriteState.field_i = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "tf.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "tf.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -224,7 +224,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           oc.mouseIdleTime = 0;
           wizardrun.pointerX = param0.getX();
           IterableNodeHashTable.pointerY = param0.getY();
-          jf.field_i = true;
+          IndexedSpriteState.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,7 +253,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (tc.mouseHandler != null) {
             oc.mouseIdleTime = 0;
             ve.pressedButton = 0;
-            jf.field_i = true;
+            IndexedSpriteState.field_i = true;
             var2_int = param0.getModifiers();
             if (0 == (var2_int & 16)) {
             }
@@ -292,7 +292,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

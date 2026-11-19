@@ -5,12 +5,12 @@ final class cb {
     static int field_f;
     static int[][] field_d;
     static boolean field_c;
-    static ud field_b;
+    static UrlPacketDownloader field_b;
     static int field_a;
     static int[] field_e;
     static boolean field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = (int[][]) null;
         field_b = null;
         int var1 = 96 % ((14 - param0) / 60);
@@ -44,7 +44,7 @@ final class cb {
           }
         }
         if (!param3) {
-          cb.a(-117);
+          cb.releaseStatics(-117);
         }
         for (var11 = 0; param8 > var11; var11++) {
           for (var12Lifetime1 = 0; var12Lifetime1 < var9; var12Lifetime1++) {

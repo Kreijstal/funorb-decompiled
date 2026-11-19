@@ -21,13 +21,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (he.field_u != null) {
+          if (MidiNoteMixer.field_u != null) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (null != fl.field_F &&
-            fl.field_F != this) {
-            stackIn_10_0 = fl.field_F.getDocumentBase();
+          if (null != MidiPcmStream.field_F &&
+            MidiPcmStream.field_F != this) {
+            stackIn_10_0 = MidiPcmStream.field_F.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -35,7 +35,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "da.getDocumentBase()");
+          throw bd.wrapException((Throwable) ((Object) var1), "da.getDocumentBase()");
         }
     }
 
@@ -62,7 +62,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } else {
               stackIn_73_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -245,13 +245,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (he.field_u != null) {
+          if (MidiNoteMixer.field_u != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if (fl.field_F != null &&
-            fl.field_F != this) {
-            stackIn_12_0 = fl.field_F.getParameter(param0);
+          if (MidiPcmStream.field_F != null &&
+            MidiPcmStream.field_F != this) {
+            stackIn_12_0 = MidiPcmStream.field_F.getParameter(param0);
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getParameter(param0);
@@ -266,7 +266,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -285,7 +285,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           qf.field_m = null;
           this.b(77, false);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "da.destroy()");
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "da.destroy()");
         }
     }
 
@@ -299,7 +299,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var4), "da.B(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var4), "da.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -319,40 +319,40 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             wizardrun.field_G.getParent().remove((java.awt.Component) ((Object) wizardrun.field_G));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (fl.field_H != null) {
-            var2 = fl.field_H;
+          if (MidiPcmStream.field_H != null) {
+            var2 = MidiPcmStream.field_H;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (he.field_u == null) {
-              if (null == fl.field_F) {
+            if (MidiNoteMixer.field_u == null) {
+              if (null == MidiPcmStream.field_F) {
                 var2 = ca.field_c;
                 if (var4 != 0) {
-                  var2 = fl.field_F;
-                  var2 = he.field_u;
+                  var2 = MidiPcmStream.field_F;
+                  var2 = MidiNoteMixer.field_u;
                 }
               } else {
-                var2 = fl.field_F;
+                var2 = MidiPcmStream.field_F;
                 if (var4 != 0) {
-                  var2 = he.field_u;
+                  var2 = MidiNoteMixer.field_u;
                 }
               }
             } else {
-              var2 = he.field_u;
+              var2 = MidiNoteMixer.field_u;
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           wizardrun.field_G = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) wizardrun.field_G));
-          wizardrun.field_G.setSize(rg.field_R, rg.field_P);
+          wizardrun.field_G.setSize(ResizableDialog.field_R, ResizableDialog.field_P);
           wizardrun.field_G.setVisible(true);
-          boolean decompiledSharedTail0 = (var2 == he.field_u);
+          boolean decompiledSharedTail0 = (var2 == MidiNoteMixer.field_u);
           if (!decompiledSharedTail0) {
             wizardrun.field_G.setLocation(ph.field_o, hb.field_n);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = he.field_u.getInsets();
+            var3 = MidiNoteMixer.field_u.getInsets();
             wizardrun.field_G.setLocation(var3.left + ph.field_o, hb.field_n + var3.top);
           }
           wizardrun.field_G.addFocusListener((java.awt.event.FocusListener) (this));
@@ -360,13 +360,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           jg.field_n = true;
           se.field_b = true;
           pk.field_o = true;
-          tj.field_F = false;
+          FadingDialog.field_F = false;
           me.field_e = d.a((byte) 23);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) (var2), "da.A(" + param0 + ')');
+          throw bd.wrapException((Throwable) (var2), "da.A(" + param0 + ')');
         }
     }
 
@@ -384,16 +384,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param1 > 2 &&
             !tc.field_j &&
             !e.a(-73)) {
-            ei.field_k = param1;
-            fa.field_a = mg.a(wg.field_b, new int[]{param1}, ic.field_a, 3, (byte) 99, me.field_f, qh.field_g + BufferedSocket.field_c, 65533, 2);
-            th.field_g = ff.a(10, 2, (byte) 59, 3, 1);
+            RasterSnapshot.field_k = param1;
+            fa.field_a = IsaacPacketBuffer.a(wg.field_b, new int[]{param1}, ic.field_a, 3, (byte) 99, me.field_f, qh.field_g + BufferedSocket.field_c, 65533, 2);
+            DualLinkDeque.field_g = HotspotTextWidget.a(10, 2, (byte) 59, 3, 1);
             if (wizardrun.field_H != 0) {
               tc.field_j = false;
-              ei.field_k = 0;
+              RasterSnapshot.field_k = 0;
             }
           } else {
             tc.field_j = false;
-            ei.field_k = 0;
+            RasterSnapshot.field_k = 0;
           }
           if (param0 != 7775) {
             field_j = (String) null;
@@ -402,7 +402,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "da.J(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "da.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -415,8 +415,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         try {
           var2_long = d.a((byte) 22);
-          var4 = pc.field_k[jk.field_e];
-          pc.field_k[jk.field_e] = var2_long;
+          var4 = Js5Index.field_k[jk.field_e];
+          Js5Index.field_k[jk.field_e] = var2_long;
           if (param0 != -107) {
             GameApplet.a(-58, 96, (String) null, (java.net.URL) null, (String) null);
           }
@@ -429,16 +429,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             pk.field_o = true;
             kk.field_zb = kk.field_zb - 50;
-            wizardrun.field_G.setSize(rg.field_R, rg.field_P);
+            wizardrun.field_G.setSize(ResizableDialog.field_R, ResizableDialog.field_P);
             wizardrun.field_G.setVisible(true);
-            boolean decompiledSharedTail0 = (null != he.field_u &&
-              null == fl.field_H);
+            boolean decompiledSharedTail0 = (null != MidiNoteMixer.field_u &&
+              null == MidiPcmStream.field_H);
             if (!decompiledSharedTail0) {
               wizardrun.field_G.setLocation(ph.field_o, hb.field_n);
               decompiledSharedTail0 = (wizardrun.field_H != 0);
             }
             if (decompiledSharedTail0) {
-              var6 = he.field_u.getInsets();
+              var6 = MidiNoteMixer.field_u.getInsets();
               wizardrun.field_G.setLocation(ph.field_o + var6.left, hb.field_n + var6.top);
             }
           }
@@ -447,7 +447,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) runtimeException), "da.D(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "da.D(" + param0 + ')');
         }
     }
 
@@ -469,8 +469,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             mk.field_d = true;
           }
-          if (fl.field_F != null) {
-            fl.field_F.destroy();
+          if (MidiPcmStream.field_F != null) {
+            MidiPcmStream.field_F.destroy();
           }
           try {
             this.a(false);
@@ -496,7 +496,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           this.d(7069);
-          if (null != he.field_u) {
+          if (null != MidiNoteMixer.field_u) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -509,7 +509,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -536,7 +536,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) runtimeException), "da.H(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "da.H(" + param0 + ')');
         }
     }
 
@@ -559,11 +559,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -576,7 +576,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "da.I(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "da.I(" + param0 + ')');
         }
     }
 
@@ -600,7 +600,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "da.O(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "da.O(" + param0 + ')');
         }
     }
 
@@ -612,7 +612,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           lc.field_b = 4000L + d.a((byte) 67);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "da.stop()");
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "da.stop()");
         }
     }
 
@@ -674,7 +674,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (af.a((CharSequence) ((Object) var4), (byte) 78) &&
+                      if (TextLayout.a((CharSequence) ((Object) var4), (byte) 78) &&
                         !(ph.a(1124, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a("wrongjava", (byte) 126);
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -719,8 +719,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = ca.field_c;
-                if (null != fl.field_F) {
-                  var1 = fl.field_F;
+                if (null != MidiPcmStream.field_F) {
+                  var1 = MidiPcmStream.field_F;
                 }
                 var2_ref = PlatformTaskDispatcher.field_q;
                 if (var2_ref != null) {
@@ -733,9 +733,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 kj.a(47);
                 this.e(81);
-                hl.field_b = bh.a((java.awt.Component) ((Object) wizardrun.field_G), (byte) 105, rg.field_R, rg.field_P);
+                ArchiveProvider.field_b = bh.a((java.awt.Component) ((Object) wizardrun.field_G), (byte) 105, ResizableDialog.field_R, ResizableDialog.field_P);
                 this.a(6);
-                pe.field_y = IntrusiveNode.b(250);
+                WidgetContainer.field_y = IntrusiveNode.b(250);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lc.field_b != 0L) {
@@ -747,7 +747,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    uh.field_c = pe.field_y.a(wj.field_E, 0);
+                    uh.field_c = WidgetContainer.field_y.a(NameSuggestionsPanel.field_E, 0);
                     stackIn_107_0 = 0;
                   }
                   var3 = stackIn_107_0;
@@ -765,7 +765,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              rg.a((Throwable) (var1), (String) null, -562);
+              ResizableDialog.a((Throwable) (var1), (String) null, -562);
               this.a("crash", (byte) 126);
             }
             this.b(118, true);
@@ -773,7 +773,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw bd.a((Throwable) (var1), "da.run()");
+            throw bd.wrapException((Throwable) (var1), "da.run()");
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -801,7 +801,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -824,18 +824,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != he.field_u) {
+        if (null != MidiNoteMixer.field_u) {
           return null;
         }
-        if (fl.field_F != null &&
-          this != fl.field_F) {
-          return fl.field_F.getCodeBase();
+        if (MidiPcmStream.field_F != null &&
+          this != MidiPcmStream.field_F) {
+          return MidiPcmStream.field_F.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -858,14 +858,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               -me.field_e + d.a((byte) 92) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (le.field_b > var2.width) {
+                if (TriangleMesh.field_b > var2.width) {
                   return;
                 }
                 if (GameKeyHandler.field_b > var2.height) {
                   return;
                 }
               }
-              tj.field_F = true;
+              FadingDialog.field_F = true;
             }
             return;
           }
@@ -880,7 +880,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -925,7 +925,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -950,7 +950,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          fl.field_F = param0;
+          MidiPcmStream.field_F = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -962,7 +962,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -974,7 +974,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           lc.field_b = 0L;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "da.start()");
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "da.start()");
         }
     }
 
@@ -1045,7 +1045,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "da.L(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "da.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1056,13 +1056,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (he.field_u != null) {
+          if (MidiNoteMixer.field_u != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
-          if (null != fl.field_F &&
-            fl.field_F != this) {
-            stackIn_10_0 = fl.field_F.getAppletContext();
+          if (null != MidiPcmStream.field_F &&
+            MidiPcmStream.field_F != this) {
+            stackIn_10_0 = MidiPcmStream.field_F.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();
@@ -1070,7 +1070,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "da.getAppletContext()");
+          throw bd.wrapException((Throwable) ((Object) var1), "da.getAppletContext()");
         }
     }
 
@@ -1088,7 +1088,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           int var8_int = 0;
           Throwable var8 = null;
           RuntimeException var8_ref = null;
-          jh var9 = null;
+          AsyncRequest var9 = null;
           int var10 = 0;
           var10 = wizardrun.field_H;
           try {
@@ -1102,14 +1102,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.a("alreadyloaded", (byte) 126);
                 return;
               }
-              rg.field_R = param5;
-              le.field_b = param5;
+              ResizableDialog.field_R = param5;
+              TriangleMesh.field_b = param5;
               fi.field_A = param0;
               ph.field_o = 0;
               hb.field_n = 0;
               var8_int = 118 / ((param2 + 8) / 54);
               ca.field_c = this;
-              rg.field_P = param4;
+              ResizableDialog.field_P = param4;
               GameKeyHandler.field_b = param4;
               ej.field_a = jg.f(1);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param3, param1, true);
@@ -1128,7 +1128,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
-              rg.a(var8, (String) null, -562);
+              ResizableDialog.a(var8, (String) null, -562);
               this.a("crash", (byte) 126);
             }
             return;
@@ -1142,7 +1142,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1164,7 +1164,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_55_2 = null;
         RuntimeException decompiledCaughtException = null;
         rb[] var6 = null;
-        jh var6_ref = null;
+        AsyncRequest var6_ref = null;
         RuntimeException var6_ref2 = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
@@ -1177,7 +1177,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (param2 == param4) {
-            var6 = cd.a(true, param3);
+            var6 = DiskCacheWorker.a(true, param3);
             if (var6 == null) {
               stackIn_9_0 = null;
               return (java.awt.Frame) (stackIn_9_0);
@@ -1231,7 +1231,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_50_0 = var7;
             return stackIn_50_0;
           }
-          q.a(62, var7, param3);
+          MidiEnvelope.a(62, var7, param3);
           stackIn_48_0 = null;
           return (java.awt.Frame) (stackIn_48_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1244,7 +1244,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -6,7 +6,7 @@ final class gh {
     static Boolean field_c;
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -681844375) {
           field_a = (String[]) null;
@@ -37,7 +37,7 @@ final class gh {
         try {
           var4_int = -1;
           if (param1 <= 84) {
-            gh.a(47);
+            gh.releaseStatics(47);
           }
           for (var5 = param2; var5 < param3; var5++) {
             var4_int = var4_int >>> 8 ^ wd.field_f[255 & (param0[var5] ^ var4_int)];
@@ -55,7 +55,7 @@ final class gh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

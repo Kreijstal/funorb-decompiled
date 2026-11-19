@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ef extends pl {
+final class ef extends TextButton {
     static String field_G;
     static Sprite field_H;
     static String field_F;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_F = null;
         if (param0 != 19291) {
-          ef.d(61);
+          ef.releaseStatics(61);
           field_H = null;
           return;
         }
@@ -26,30 +26,30 @@ final class ef extends pl {
         this.b(-80, 25, -112, 4);
     }
 
-    ef(String param0, ce param1, boolean param2) {
+    ef(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private ef(String param0, ce param1) {
-        this(param0, kc.field_H.field_c, param1);
+    private ef(String param0, WidgetListener param1) {
+        this(param0, ValidationIndicator.field_H.field_c, param1);
         try {
-          this.field_w = kc.field_H.field_a;
+          this.field_w = ValidationIndicator.field_H.field_a;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private ef(String param0, bf param1, ce param2) {
+    private ef(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_w = kc.field_H.field_a;
+          this.field_w = ValidationIndicator.field_H.field_a;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -15,9 +15,9 @@ final class IsaacRandom {
         if (fi.field_y == ej.field_b) {
           throw new IllegalStateException();
         }
-        if (fi.field_y == mi.field_z) {
+        if (fi.field_y == SingleChildWidget.field_z) {
           fi.field_y = ej.field_b;
-          return ki.field_F;
+          return LoginChoicePanel.field_F;
         }
         int var1 = 86 / ((param0 - 59) / 38);
         return null;
@@ -183,17 +183,17 @@ final class IsaacRandom {
             }
           }
           this.field_e = this.field_e + this.field_b[128 + var2 & 255];
-          dupTemp$1 = this.field_d + (this.field_e + this.field_b[kl.b(255, var3 >> 2)]);
+          dupTemp$1 = this.field_d + (this.field_e + this.field_b[ResourceArchive.b(255, var3 >> 2)]);
           var4 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
-          dupTemp$2 = this.field_b[kl.b(261240, var4) >> 8 >> 2] + var3;
+          dupTemp$2 = this.field_b[ResourceArchive.b(261240, var4) >> 8 >> 2] + var3;
           this.field_d = dupTemp$2;
           this.field_f[var2] = dupTemp$2;
         }
         return;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -80) {
           field_a = 73;
         }
@@ -213,11 +213,11 @@ final class IsaacRandom {
         return this.field_f[fieldTemp$0];
     }
 
-    final static gb loadFont(int param0, String param1, kl param2, String param3, kl param4) {
+    final static MonochromeBitmapFont loadFont(int param0, String param1, ResourceArchive param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        gb stackIn_3_0 = null;
+        MonochromeBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -264,7 +264,7 @@ final class IsaacRandom {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class IsaacRandom {
           }
           this.b(-97);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -289,10 +289,10 @@ final class IsaacRandom {
         var2 = wizardrun.field_H;
         try {
           if (!pk.a((byte) -35)) {
-            if (ki.field_E != null &&
-              ki.field_E.field_b) {
-              di.a((byte) 60);
-              kj.field_b.b((UiWidget) (new vg(kj.field_b, cf.field_f)), (byte) 96);
+            if (LoginChoicePanel.field_E != null &&
+              LoginChoicePanel.field_E.field_b) {
+              WeightedLruCache.a((byte) 60);
+              kj.field_b.b((UiWidget) (new vg(kj.field_b, WrappedTextLayout.field_f)), (byte) 96);
             }
             return;
           }
@@ -302,13 +302,13 @@ final class IsaacRandom {
           kj.field_b.a(param0 + 118, true, ne.field_g, sf.field_d);
           kj.field_b.g((byte) 118);
           while (ae.a(-61)) {
-            kj.field_b.a(param0 ^ -125, vk.field_r, ae.field_a);
+            kj.field_b.a(param0 ^ -125, MidiNote.field_r, ae.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ti.B(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "ti.B(" + param0 + ')');
         }
     }
 

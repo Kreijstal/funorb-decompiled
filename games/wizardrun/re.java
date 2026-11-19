@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends pe implements ng, qd {
-    private pl field_H;
+final class re extends WidgetContainer implements HotspotClickListener, ButtonActionListener {
+    private TextButton field_H;
     private kk field_F;
-    private ff field_J;
-    static wk field_I;
+    private HotspotTextWidget field_J;
+    static GzipDecompressor field_I;
     static PacketBuffer field_G;
     static String field_E;
 
@@ -16,7 +16,7 @@ final class re extends pe implements ng, qd {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, pl param1, int param2, int param3, int param4) {
+    public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -42,7 +42,7 @@ final class re extends pe implements ng, qd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -87,29 +87,29 @@ final class re extends pe implements ng, qd {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     re(kk param0) {
-        super(0, 0, 288, 0, (bf) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
-        ll var4 = null;
+        WidgetPainter var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
           this.field_F = param0;
-          this.field_H = new pl(e.field_e, (ce) null);
-          this.field_H.field_w = (bf) ((Object) new jl());
-          var7 = di.a(new String[]{this.a(0), this.h((byte) -85)}, (byte) 79, t.field_b);
+          this.field_H = new TextButton(e.field_e, (WidgetListener) null);
+          this.field_H.field_w = (WidgetRenderer) ((Object) new jl());
+          var7 = WeightedLruCache.a(new String[]{this.a(0), this.h((byte) -85)}, (byte) 79, t.field_b);
           var3 = 20;
-          var4 = new ll(gh.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
-          this.field_J = new ff(var7, var4);
+          var4 = new WidgetPainter(gh.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
+          this.field_J = new HotspotTextWidget(var7, var4);
           this.field_J.field_p = "";
-          this.field_J.a(1, nk.field_R, 0);
-          this.field_J.a(1, nk.field_R, 1);
-          this.field_J.field_s = (ce) (this);
+          this.field_J.a(1, AccountCreationForm.field_R, 0);
+          this.field_J.a(1, AccountCreationForm.field_R, 1);
+          this.field_J.field_s = (WidgetListener) (this);
           this.field_J.field_r = -40 + this.field_r;
           this.field_J.a(var3, (byte) 61, this.field_r - 40, 26);
           var3 = var3 + (this.field_J.field_n + 15);
@@ -117,30 +117,30 @@ final class re extends pe implements ng, qd {
           var5 = 4;
           var6 = 200;
           this.field_H.a(127, var3, 40, var6, 300 - var6 >> 1);
-          this.field_H.field_s = (ce) (this);
+          this.field_H.field_s = (WidgetListener) (this);
           this.a((UiWidget) (this.field_H), (byte) 126);
           this.a(127, 0, var5 + var3 + 55, 300, 0);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         field_G = null;
         field_I = null;
         if (param0 != -55) {
           String var2 = (String) null;
-          re.a((kl) null, (String) null, (String) null, -82);
+          re.a((ResourceArchive) null, (String) null, (String) null, -82);
         }
     }
 
-    final static db[] a(kl param0, String param1, String param2, int param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        db[] stackIn_1_0 = null;
+        IndexedSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -177,11 +177,11 @@ final class re extends pe implements ng, qd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final void a(int param0, ff param1, int param2, int param3) {
+    public final void onHotspotAction(int param0, HotspotTextWidget param1, int param2, int param3) {
         int var6 = wizardrun.field_H;
         try {
           if (param0 == 0) {
@@ -197,12 +197,12 @@ final class re extends pe implements ng, qd {
           }
           int var5_int = -13 / ((36 - param3) / 53);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "re.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "re.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
-        field_I = new wk();
+        field_I = new GzipDecompressor();
         field_G = new PacketBuffer(256);
         field_E = "Player Name: ";
     }

@@ -7,7 +7,7 @@ final class bl {
     static String field_c;
     static int[] field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         if (param0) {
@@ -107,7 +107,7 @@ final class bl {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class bl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

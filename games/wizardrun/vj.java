@@ -3,7 +3,7 @@
  */
 final class vj {
     static rc field_a;
-    static kl field_b;
+    static ResourceArchive field_b;
 
     final static void b(int param0) {
         int[] var1 = null;
@@ -33,7 +33,7 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1_ref), "vj.A(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1_ref), "vj.A(" + param0 + ')');
         }
     }
 
@@ -145,8 +145,8 @@ final class vj {
                     }
                     if (tc.field_l.field_a[var6.a((byte) -68)] != 5) {
                       tc.field_l.field_a[var6.a((byte) -68)] = 0;
-                      ii.field_e[od.field_k].a(9147, var2, var6);
-                      od.field_k = od.field_k + 1;
+                      ii.field_e[WidgetTheme.field_k].a(9147, var2, var6);
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       var6.field_a = var6.field_a + 1;
                       continue;
                     }
@@ -167,8 +167,8 @@ final class vj {
                   }
                 }
                 tc.field_l.field_a[var6.a((byte) -68)] = 0;
-                ii.field_e[od.field_k].a(9147, var2, var6);
-                od.field_k = od.field_k + 1;
+                ii.field_e[WidgetTheme.field_k].a(9147, var2, var6);
+                WidgetTheme.field_k = WidgetTheme.field_k + 1;
               }
               var6.field_a = var6.field_a + 1;
             }
@@ -179,15 +179,15 @@ final class vj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "vj.C(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "vj.C(" + param0 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-          vj.a(-52);
+          vj.releaseStatics(-52);
         }
     }
 

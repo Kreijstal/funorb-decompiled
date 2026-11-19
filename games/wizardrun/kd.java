@@ -31,12 +31,12 @@ final class kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
         }
         stackIn_6_0 = sb.field_d;
         try {
-          while (uf.a(stackIn_6_0, fl.field_V, 65535) >= 65536) {
-            sb.field_d = sb.field_d - fl.field_V;
+          while (uf.a(stackIn_6_0, MidiPcmStream.field_V, 65535) >= 65536) {
+            sb.field_d = sb.field_d - MidiPcmStream.field_V;
             hj.field_c = hj.field_c + 1;
             stackIn_6_0 = sb.field_d;
           }
@@ -50,23 +50,23 @@ final class kd {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (fl.field_u > od.field_j) {
-              od.field_j = od.field_j + 1;
-              if (fl.field_M < od.field_j && (null == f.field_d ||
+            if (MidiPcmStream.field_u > WidgetTheme.field_j) {
+              WidgetTheme.field_j = WidgetTheme.field_j + 1;
+              if (MidiPcmStream.field_M < WidgetTheme.field_j && (null == f.field_d ||
                 null == f.field_d[ej.field_c])) {
-                od.field_j = od.field_j - 1;
+                WidgetTheme.field_j = WidgetTheme.field_j - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (od.field_j >= fl.field_u &&
+                if (WidgetTheme.field_j >= MidiPcmStream.field_u &&
                   null == f.field_d[(1 + ej.field_c) % var2_int]) {
-                  od.field_j = od.field_j - 1;
+                  WidgetTheme.field_j = WidgetTheme.field_j - 1;
                 }
               }
             }
-            if (fl.field_u <= od.field_j) {
+            if (MidiPcmStream.field_u <= WidgetTheme.field_j) {
               ra.field_o = ej.field_c;
-              if (ei.field_j) {
+              if (RasterSnapshot.field_j) {
                 ej.field_c = ej.field_c + 1;
                 if (ej.field_c >= var2_int) {
                   ej.field_c = ej.field_c - var2_int;
@@ -77,10 +77,10 @@ final class kd {
                   ej.field_c = ej.field_c + var2_int;
                 }
               }
-              od.field_j = od.field_j - fl.field_u;
+              WidgetTheme.field_j = WidgetTheme.field_j - MidiPcmStream.field_u;
             }
-            if (fl.field_M < od.field_j) {
-              ei.field_j = true;
+            if (MidiPcmStream.field_M < WidgetTheme.field_j) {
+              RasterSnapshot.field_j = true;
             }
           }
           if (null != ra.field_p) {
@@ -91,28 +91,28 @@ final class kd {
               var3 + ra.field_p.height > dh.field_b) {
               if (MouseInputHandler.field_e > -ra.field_p.width + 269 &&
                 MouseInputHandler.field_e < 269) {
-                od.field_j = fl.field_u;
+                WidgetTheme.field_j = MidiPcmStream.field_u;
                 var4 = 1;
-                ei.field_j = false;
+                RasterSnapshot.field_j = false;
               }
               if (MouseInputHandler.field_e > 586 &&
                 586 + ra.field_p.width > MouseInputHandler.field_e) {
-                ei.field_j = true;
+                RasterSnapshot.field_j = true;
                 var4 = 1;
-                od.field_j = fl.field_u;
+                WidgetTheme.field_j = MidiPcmStream.field_u;
               }
             }
             if (var4 == 0 &&
-              fl.field_M < od.field_j &&
+              MidiPcmStream.field_M < WidgetTheme.field_j &&
               fi.field_B > var3 &&
               ra.field_p.height + var3 > fi.field_B) {
               if (pg.field_n > -ra.field_p.width + 269 &&
                 pg.field_n < 269) {
-                od.field_j = fl.field_M;
+                WidgetTheme.field_j = MidiPcmStream.field_M;
               }
               if (586 < pg.field_n &&
                 ra.field_p.width + 586 > pg.field_n) {
-                od.field_j = fl.field_M;
+                WidgetTheme.field_j = MidiPcmStream.field_M;
               }
             }
           }
@@ -140,7 +140,7 @@ final class kd {
                   return stackIn_80_0;
                 }
               }
-              if (13 != vk.field_r) {
+              if (13 != MidiNote.field_r) {
                 continue;
               }
               stackIn_84_0 = 1;
@@ -152,7 +152,7 @@ final class kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "kd.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class kd {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 24188) {
           kd.a(58, false);
           field_b = null;

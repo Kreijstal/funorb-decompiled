@@ -86,7 +86,7 @@ final class il {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -139,11 +139,11 @@ final class il {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_b = null;
         if (!param0) {

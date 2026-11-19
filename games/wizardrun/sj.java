@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends mf {
+final class sj extends TextFieldValidator {
     static int[] field_m;
     static int field_n;
     static long field_k;
     static int field_l;
 
-    final ok a(int param0, String param1) {
+    final ValidationState a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
-        ok stackIn_5_0 = null;
-        ok stackIn_7_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -36,11 +36,11 @@ final class sj extends mf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    sj(og param0) {
+    sj(EditableTextWidget param0) {
         super(param0);
     }
 
@@ -67,13 +67,13 @@ final class sj extends mf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -122) {
-          sj.f(-67);
+          sj.releaseStatics(-67);
           field_m = null;
           return;
         }

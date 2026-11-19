@@ -1,0 +1,194 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class IsaacPacketBuffer extends PacketBuffer {
+    static String[] field_q;
+    private int field_p;
+    static Sprite field_s;
+    private IsaacRandom field_r;
+
+    final static ai a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+        ai var9 = null;
+        RuntimeException var9_ref = null;
+        byte[] var10 = null;
+        ai stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var9 = new ai(param8, param7, param6, param0, param5, param2, param1);
+          CachedArchiveProvider.field_t.a(var9, false);
+          EditableTextWidget.a(var9, param3, param4 - 160);
+          if (param4 != 99) {
+            var10 = (byte[]) null;
+            IsaacPacketBuffer.a(88, (byte[]) null);
+          }
+          stackIn_3_0 = var9;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9_ref = decompiledCaughtException;
+          stackIn_6_0 = var9_ref;
+          stackIn_6_1 = new StringBuilder().append("mg.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+        }
+    }
+
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        CoverageBitmapFont var3 = null;
+        Object stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2_int = 97 / ((param0 + 30) / 48);
+          if (param1 == null) {
+            stackIn_2_0 = null;
+            return (CoverageBitmapFont) (stackIn_2_0);
+          }
+          var3 = new CoverageBitmapFont(param1, ph.field_q, ne.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, ic.field_b, TextFieldValidator.field_j);
+          ClientException.a(0);
+          stackIn_4_0 = var3;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("mg.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    IsaacPacketBuffer(int param0) {
+        super(param0);
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 != -102) {
+          field_s = (Sprite) null;
+          field_s = null;
+          field_q = null;
+          return;
+        }
+        field_s = null;
+        field_q = null;
+    }
+
+    final void i(byte param0) {
+        this.position = (this.field_p + 7) / 8;
+        if (param0 != -31) {
+          field_q = (String[]) null;
+        }
+    }
+
+    final int readCipheredOpcode(int param0) {
+        int var2 = -128 % ((param0 + 9) / 54);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0] - this.field_r.b((byte) 73);
+    }
+
+    final void c(byte param0, int param1) {
+        int var3 = -41 / ((-1 - param0) / 44);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_r.b((byte) 60) + param1);
+    }
+
+    final void l(int param0) {
+        if (param0 != 19967) {
+          return;
+        }
+        this.field_p = this.position * 8;
+    }
+
+    IsaacPacketBuffer(byte[] param0) {
+        super(param0);
+    }
+
+    final void a(int param0, int param1, int param2, byte[] param3) {
+        int var5_int = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        var6 = wizardrun.field_H;
+        try {
+          for (var5_int = param2; var5_int < param1; var5_int++) {
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_r.b((byte) 125));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = var5;
+          stackIn_7_1 = new StringBuilder().append("mg.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    final void initializeCipher(int[] param0, byte param1) {
+        if (param1 != 109) {
+          return;
+        }
+        try {
+          this.field_r = new IsaacRandom(param0);
+        } catch (RuntimeException runtimeException) {
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final int readBits(int param0, int param1) {
+        int incrementValue$0 = 0;
+        int var6 = wizardrun.field_H;
+        if (param1 != -11719) {
+          return 35;
+        }
+        int var3 = this.field_p >> 3;
+        int var4 = 8 - (this.field_p & 7);
+        int var5 = 0;
+        this.field_p = this.field_p + param0;
+        while (param0 > var4) {
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((this.payload[incrementValue$0] & lj.field_b[var4]) << param0 - var4);
+          param0 = param0 - var4;
+          var4 = 8;
+        }
+        if (var4 == param0) {
+          var5 = var5 + (lj.field_b[var4] & this.payload[var3]);
+        } else {
+          var5 = var5 + (this.payload[var3] >> var4 - param0 & lj.field_b[param0]);
+        }
+        return var5;
+    }
+
+    static {
+        field_q = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    }
+}

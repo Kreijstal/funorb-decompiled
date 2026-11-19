@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mh extends gf implements qd {
+class mh extends gf implements ButtonActionListener {
     private boolean field_mb;
     static String[] field_sb;
     static java.awt.Font field_ob;
     private boolean field_rb;
     static volatile int clickX;
-    static kl field_jb;
+    static ResourceArchive field_jb;
     static String field_lb;
     private BitmapFont field_qb;
     static int field_tb;
-    private hd field_ub;
+    private StripedProgressBar field_ub;
     private boolean field_kb;
     private boolean field_nb;
 
@@ -20,8 +20,8 @@ class mh extends gf implements qd {
           field_tb = 105;
         }
         this.field_ub.a(2121792, -1028717695, 4210752);
-        vc var2 = new vc(this, this.field_qb, sh.field_d);
-        var2.a((byte) -31, ud.field_a, 15);
+        MessagePanel var2 = new MessagePanel(this, this.field_qb, sh.field_d);
+        var2.a((byte) -31, UrlPacketDownloader.field_a, 15);
         this.c(var2, param0 - 119);
     }
 
@@ -52,13 +52,13 @@ class mh extends gf implements qd {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final static le a(byte param0, mg param1) {
+    final static TriangleMesh a(byte param0, IsaacPacketBuffer param1) {
         int var7 = 0;
-        le stackIn_26_0 = null;
+        TriangleMesh stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -67,31 +67,31 @@ class mh extends gf implements qd {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        le var5 = null;
+        TriangleMesh var5 = null;
         int var6 = 0;
         int var8 = 0;
         var8 = wizardrun.field_H;
         try {
-          var2_int = param1.g(8, -11719);
+          var2_int = param1.readBits(8, -11719);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = oe.a((byte) -55, param1) ? 1 : 0;
+          var3 = IntHashTable.a((byte) -55, param1) ? 1 : 0;
           if (param0 != -117) {
             field_ob = (java.awt.Font) null;
           }
-          var4 = oe.a((byte) -55, param1) ? 1 : 0;
-          var5 = new le();
-          var5.field_L = (short)param1.g(16, param0 ^ 11698);
+          var4 = IntHashTable.a((byte) -55, param1) ? 1 : 0;
+          var5 = new TriangleMesh();
+          var5.field_L = (short)param1.readBits(16, param0 ^ 11698);
           var5.field_P = sa.a(16, (byte) -48, param1, var5.field_P);
           var5.field_a = sa.a(16, (byte) -48, param1, var5.field_a);
           var5.field_w = sa.a(16, (byte) -48, param1, var5.field_w);
-          var5.field_N = (short)param1.g(16, -11719);
+          var5.field_N = (short)param1.readBits(16, -11719);
           var5.field_p = sa.a(16, (byte) -48, param1, var5.field_p);
           var5.field_C = sa.a(16, (byte) -48, param1, var5.field_C);
           var5.field_I = sa.a(16, (byte) -48, param1, var5.field_I);
           if (var3 != 0) {
-            var5.field_y = (short)param1.g(16, -11719);
+            var5.field_y = (short)param1.readBits(16, -11719);
             var5.field_k = sa.a(16, (byte) -48, param1, var5.field_k);
             var5.field_R = sa.a(16, (byte) -48, param1, var5.field_R);
             var5.field_o = sa.a(16, (byte) -48, param1, var5.field_o);
@@ -100,17 +100,17 @@ class mh extends gf implements qd {
             var5.field_d = sa.a(16, (byte) -48, param1, var5.field_d);
           }
           if (var4 != 0) {
-            param1.g(16, -11719);
+            param1.readBits(16, -11719);
             var5.field_G = sa.a(16, (byte) -48, param1, var5.field_G);
             var5.field_H = sa.a(16, (byte) -48, param1, var5.field_H);
             var5.field_m = sa.a(16, (byte) -48, param1, var5.field_m);
             var5.field_z = sa.a(16, (byte) -48, param1, var5.field_z);
             var5.field_v = sa.a(16, (byte) -48, param1, var5.field_v);
           }
-          if (oe.a((byte) -55, param1)) {
+          if (IntHashTable.a((byte) -55, param1)) {
             var5.field_O = sa.a(16, (byte) -48, param1, var5.field_O);
           }
-          if (oe.a((byte) -55, param1)) {
+          if (IntHashTable.a((byte) -55, param1)) {
             var5.field_x = sd.a(param1, var5.field_x, 16, (byte) 11);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_x.length; var7++) {
@@ -136,7 +136,7 @@ class mh extends gf implements qd {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -147,18 +147,18 @@ class mh extends gf implements qd {
         return new int[8];
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_lb = null;
         field_ob = null;
         field_jb = null;
         field_sb = null;
         if (!param0) {
-          mg var2 = (mg) null;
-          mh.a((byte) -60, (mg) null);
+          IsaacPacketBuffer var2 = (IsaacPacketBuffer) null;
+          mh.a((byte) -60, (IsaacPacketBuffer) null);
         }
     }
 
-    public void a(int param0, pl param1, int param2, int param3, int param4) {
+    public void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -185,7 +185,7 @@ class mh extends gf implements qd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ class mh extends gf implements qd {
         int var4 = wizardrun.field_H;
         wc.field_k = 0;
         hb.field_k = null;
-        si.field_q = null;
+        BufferedRandomAccessFile.field_q = null;
         int var2 = nf.field_b;
         nf.field_b = kj.field_a;
         ii.field_f.field_k = ii.field_f.field_k + 1;
@@ -224,17 +224,17 @@ class mh extends gf implements qd {
 
     final void a(String param0, int param1, int param2) {
         boolean stackIn_6_1 = false;
-        vc stackIn_12_0 = null;
+        MessagePanel stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         String stackIn_13_2 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vc var4 = null;
+        MessagePanel var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        vc var6 = null;
+        MessagePanel var6 = null;
         var5 = wizardrun.field_H;
         try {
           if (this.field_kb) {
@@ -244,7 +244,7 @@ class mh extends gf implements qd {
           stackIn_6_1 = (param2 == 256);
           this.field_mb = stackIn_6_1;
           this.field_ub.a(8405024, -1028717695, 4210752);
-          var6 = new vc(this, this.field_qb, param0);
+          var6 = new MessagePanel(this, this.field_qb, param0);
           var4 = var6;
           if (param2 != 5) {
             if (256 != param2) {
@@ -255,9 +255,9 @@ class mh extends gf implements qd {
               } else {
                 stackIn_13_2 = IsaacRandom.field_h;
               }
-              ((vc) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, -1);
+              ((MessagePanel) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, -1);
             } else {
-              var6.a(0, me.field_a, (ce) (this));
+              var6.a(0, me.field_a, (WidgetListener) (this));
             }
           } else {
             var6.a((byte) -31, GameApplet.field_j, 11);
@@ -276,7 +276,7 @@ class mh extends gf implements qd {
                 var6.a((byte) -31, ka.field_h, 9);
               } else {
                 if (param2 == 9) {
-                  var6.a(0, SecondaryNodeDeque.field_a, (ce) (this));
+                  var6.a(0, SecondaryNodeDeque.field_a, (WidgetListener) (this));
                 }
               }
             }
@@ -293,7 +293,7 @@ class mh extends gf implements qd {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -314,19 +314,19 @@ class mh extends gf implements qd {
         }
     }
 
-    mh(wi param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new vc((mh) null, param1, param2), 77, 10, 10);
+    mh(DialogLayer param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+        super(param0, new MessagePanel((mh) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = param1;
           this.field_mb = false;
           this.field_rb = param3 ? true : false;
           this.field_kb = false;
           this.field_nb = param4 ? true : false;
-          this.field_ub = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_ub = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ub.field_I = true;
           this.a((UiWidget) (this.field_ub), (byte) 127);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

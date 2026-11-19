@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
-    static db[] field_f;
+    static IndexedSprite[] field_f;
     private IntrusiveNode field_e;
     static volatile int pointerY;
     static int field_b;
@@ -68,7 +68,7 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class IterableNodeHashTable implements Iterable {
         int var5Lifetime1;
         var6 = wizardrun.field_H;
         var2 = 0;
-        var3 = jd.field_f;
+        var3 = DualLinkNodeHashTable.field_f;
         if (5 > var3) {
           var2 = var3 * var3 * 8192 / 1100;
         } else {
@@ -263,11 +263,11 @@ final class IterableNodeHashTable implements Iterable {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 >= 70) {
           return;
@@ -326,7 +326,7 @@ final class IterableNodeHashTable implements Iterable {
           param0.addMouseMotionListener(tc.mouseHandler);
           param0.addFocusListener(tc.mouseHandler);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "gj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "gj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -345,7 +345,7 @@ final class IterableNodeHashTable implements Iterable {
           param1.key = param0;
           param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "gj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "gj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

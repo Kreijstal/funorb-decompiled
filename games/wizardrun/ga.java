@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga {
-    static ji field_e;
+    static MidiTrack field_e;
     static ae field_c;
-    static rj field_d;
+    static MenuInputState field_d;
     static boolean field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;
@@ -100,7 +100,7 @@ final class ga {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class ga {
           try {
             try {
               if (param1 > -28) {
-                ga.a(40);
+                ga.releaseStatics(40);
               }
               var2 = param0.getDocumentBase().getFile();
               var4 = var2;
@@ -150,7 +150,7 @@ final class ga {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -162,6 +162,6 @@ final class ga {
     static {
         field_c = new ae();
         field_a = false;
-        field_d = new rj(1);
+        field_d = new MenuInputState(1);
     }
 }

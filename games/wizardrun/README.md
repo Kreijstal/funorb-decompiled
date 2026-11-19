@@ -1,5 +1,16 @@
 # Reading Wizard Run
 
-This pass names 31 reviewed classes in 298 source files. Unresolved roles keep their original names.
+Resolved declarations: 142/299 classes and 712/1865 methods have readable names; 221 constructors follow their class names.
+Remaining: 157 opaque classes and 1153 opaque methods. The complete naming goal is still in progress.
 
-Start at `wizardrun`; the shared engine (nodes, deques, packet buffer, sockets, widgets, sprites) uses the same role names as other FunOrb games.
+Start at `wizardrun`. Shared engine code includes named audio synthesis, Vorbis, PCM mixing, rasterization, sprites, archive transport and cache storage.
+
+Reproduce in dekobloko-work:
+
+```sh
+env -u JAVA_TOOL_OPTIONS node readable/build-wizardrun-rules.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-wizardrun.mjs --check
+node readable/naming-coverage.mjs wizardrun
+```
+
+Coverage checks all resolved classes, nested classes and methods. It exits unsuccessfully while opaque names remain. Reproduction verifies bindings and reversal to the pinned original source; it does not prove gameplay correctness.

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sa {
-    kl field_a;
+    ResourceArchive field_a;
     String field_f;
     String field_h;
     static String field_b;
@@ -11,7 +11,7 @@ final class sa {
     static kd field_g;
     int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         if (param0 != -118) {
@@ -20,7 +20,7 @@ final class sa {
         field_g = null;
     }
 
-    final static short[] a(int param0, byte param1, mg param2, short[] param3) {
+    final static short[] a(int param0, byte param1, IsaacPacketBuffer param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -37,7 +37,7 @@ final class sa {
         RuntimeException var4 = null;
         var8 = wizardrun.field_H;
         try {
-          var4_int = param2.g(param0, -11719);
+          var4_int = param2.readBits(param0, -11719);
           if (var4_int == 0) {
             return null;
           }
@@ -45,8 +45,8 @@ final class sa {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param2.g(4, -11719);
-          var6 = (short)param2.g(16, -11719);
+          var5 = param2.readBits(4, -11719);
+          var6 = (short)param2.readBits(16, -11719);
           if (param1 != -48) {
             stackIn_10_0 = (short[]) null;
             return stackIn_10_0;
@@ -57,7 +57,7 @@ final class sa {
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (short)(param2.g(var5, -11719) + var6);
+              param3[var7] = (short)(param2.readBits(var5, -11719) + var6);
             }
           }
           stackIn_19_0 = (short[]) (param3);
@@ -78,7 +78,7 @@ final class sa {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk implements bf {
+final class tk implements WidgetRenderer {
     static String field_e;
     private int field_c;
     static String field_f;
@@ -11,29 +11,29 @@ final class tk implements bf {
 
     final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
-          r.field_a = param7;
+          TimedValidator.field_a = param7;
           MouseWheelInput.field_a = param2;
           ka.field_i = param3;
           cb.field_a = param8;
           uk.field_b = param1;
-          sl.field_r = param0;
+          SocketJs5Transport.field_r = param0;
           if (param6 != 2) {
-            tk.a(-15);
+            tk.releaseStatics(-15);
           }
           jg.field_m = param5;
           kk.field_xb = param4;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -36 / ((param0 + 42) / 63);
         field_f = null;
         field_e = null;
     }
 
-    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+    public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -92,7 +92,7 @@ final class tk implements bf {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class tk implements bf {
           this.field_d = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

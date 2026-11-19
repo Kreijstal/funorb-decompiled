@@ -337,7 +337,7 @@ final class nh extends bb {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -351,7 +351,7 @@ final class nh extends bb {
         int var4;
         bh[] var5;
         var4 = wizardrun.field_H;
-        var5 = od.b(109);
+        var5 = WidgetTheme.b(109);
         var2 = var5;
         for (var3 = param0; var3 < var5.length; var3++) {
           if (param1 == var5[var3].field_h) {
@@ -365,12 +365,12 @@ final class nh extends bb {
         if (!param0) {
           field_q = (String) null;
         }
-        return pc.field_m;
+        return Js5Index.field_m;
     }
 
     final static void c(byte param0) {
         IterableNodeHashTable.field_b = 0;
-        ag.field_u = -1;
+        StrongCacheEntry.field_u = -1;
         vb.field_I = null;
         uc.field_a = -1;
         ol.field_b = false;
@@ -486,11 +486,11 @@ final class nh extends bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var5), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.wrapException((Throwable) ((Object) var5), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_o = null;
         field_q = null;

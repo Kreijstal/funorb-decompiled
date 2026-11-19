@@ -49,7 +49,7 @@ final class li {
         var3 = param0.field_f;
         var4 = param0.field_p;
         var5 = param0.field_u;
-        var15 = hk.field_W;
+        var15 = ProgressDialog.field_W;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_H;
@@ -151,7 +151,7 @@ final class li {
         param0.field_f = var3;
         param0.field_p = var4;
         param0.field_u = var5;
-        hk.field_W = var6;
+        ProgressDialog.field_W = var6;
         param0.field_H = var7;
         param0.field_y = var8;
         param0.field_j = var9;
@@ -239,7 +239,7 @@ final class li {
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 
@@ -307,8 +307,8 @@ final class li {
         var24 = null;
         var25 = null;
         param0.field_n = 1;
-        if (hk.field_W == null) {
-          hk.field_W = new int[param0.field_n * 100000];
+        if (ProgressDialog.field_W == null) {
+          ProgressDialog.field_W = new int[param0.field_n * 100000];
         }
         var26 = 1;
         while (true) {
@@ -479,14 +479,14 @@ final class li {
                 param0.field_x[var4] = param0.field_x[var4] + param0.field_x[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(hk.field_W[var4] & 255);
+                var1 = (byte)(ProgressDialog.field_W[var4] & 255);
                 dupTemp$1 = param0.field_x[var1 & 255];
-                hk.field_W[dupTemp$1] = hk.field_W[dupTemp$1] | var4 << 8;
+                ProgressDialog.field_W[dupTemp$1] = ProgressDialog.field_W[dupTemp$1] | var4 << 8;
                 param0.field_x[var1 & 255] = param0.field_x[var1 & 255] + 1;
               }
-              param0.field_H = hk.field_W[param0.field_A] >> 8;
+              param0.field_H = ProgressDialog.field_W[param0.field_A] >> 8;
               param0.field_p = 0;
-              param0.field_H = hk.field_W[param0.field_H];
+              param0.field_H = ProgressDialog.field_W[param0.field_H];
               param0.field_u = (byte)(param0.field_H & 255);
               param0.field_H = param0.field_H >> 8;
               param0.field_p = param0.field_p + 1;
@@ -550,7 +550,7 @@ final class li {
               }
               dupTemp$0 = param0.field_h[var1 & 255] & 255;
               param0.field_K[dupTemp$0] = param0.field_K[dupTemp$0] + 1;
-              hk.field_W[var14] = param0.field_h[var1 & 255] & 255;
+              ProgressDialog.field_W[var14] = param0.field_h[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -607,7 +607,7 @@ final class li {
             var1 = param0.field_h[param0.field_l[param0.field_b[0]] & 255];
             param0.field_K[var1 & 255] = param0.field_K[var1 & 255] + var15;
             while (var15 > 0) {
-              hk.field_W[var14] = var1 & 255;
+              ProgressDialog.field_W[var14] = var1 & 255;
               var14++;
               var15--;
             }

@@ -44,11 +44,11 @@ final class mk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -7241) {
           field_e = null;
           field_a = null;

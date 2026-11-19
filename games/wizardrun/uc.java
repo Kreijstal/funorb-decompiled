@@ -16,13 +16,13 @@ final class uc {
 
     final static void a(int param0, String param1, Sprite param2) {
         try {
-          od.field_f = param2;
-          pc.field_r = param1;
+          WidgetTheme.field_f = param2;
+          Js5Index.field_r = param1;
           if (param0 != -1) {
-            uc.a((byte) 54);
+            uc.releaseStatics((byte) 54);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "uc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "uc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class uc {
         while (this.field_f < this.field_c) {
           var4 = this.field_h[this.field_f];
           var2 = var4;
-          if (!var4.field_a.b(17820)) {
+          if (!var4.field_a.ensureIndex(17820)) {
             this.a((byte) -7, var4, 0);
             return false;
           }
@@ -54,7 +54,7 @@ final class uc {
           if (var4.field_c < 0 &&
             var4.field_f == null &&
             var4.field_h != null &&
-            !var4.field_a.d(61)) {
+            !var4.field_a.areAllGroupsAvailable(61)) {
             this.a((byte) -10, var2, var4.field_a.a((byte) 75));
             return false;
           }
@@ -72,14 +72,14 @@ final class uc {
           if (11 == ml.field_t) {
             hh.a((byte) 124);
           }
-          p.drawProgressBar((byte) 67, dg.loadingMessage, cb.field_c, ok.loadingProgress);
+          ValidatedTextField.drawProgressBar((byte) 67, dg.loadingMessage, cb.field_c, ValidationState.loadingProgress);
           fc.a((byte) 80, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_e = null;
         if (param0 != 37) {
@@ -101,7 +101,7 @@ final class uc {
           }
           this.field_k = var4_float * (float)this.field_j / (float)(this.field_c + 1);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "uc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "uc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

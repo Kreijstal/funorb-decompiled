@@ -12,7 +12,7 @@ final class wd {
     String[] field_c;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         keyEventQueue = null;
         field_f = null;
         field_e = null;
@@ -87,7 +87,7 @@ final class wd {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
         }
     }
 

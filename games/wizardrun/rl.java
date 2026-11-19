@@ -12,7 +12,7 @@ final class rl {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -26035) {
           rl.a(52);

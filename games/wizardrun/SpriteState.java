@@ -13,7 +13,7 @@ abstract class SpriteState extends DualLinkNode {
     int offsetX;
     int fullHeight;
     static String[] field_t;
-    static je[] secondarySoundEffects;
+    static PcmSample[] secondarySoundEffects;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         this.a(param4 << 8, param1, param0, (byte) -103, param3 << 5);
@@ -22,7 +22,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_w = null;
         if (param0 <= 84) {
@@ -38,7 +38,7 @@ abstract class SpriteState extends DualLinkNode {
         param2 = (var6 & 15) + (param2 << 4);
         param1 = (15 & var7) + (param1 << 4);
         int var8 = -23 % ((param3 + 55) / 40);
-        this.a(var6, var7, param2, param1, param0, param4);
+        this.rotateNearest(var6, var7, param2, param1, param0, param4);
     }
 
     final static void a(java.applet.Applet param0, boolean param1) {
@@ -52,7 +52,7 @@ abstract class SpriteState extends DualLinkNode {
           Throwable decompiledCaughtException = null;
           try {
             if (!param1) {
-              SpriteState.d(-100);
+              SpriteState.releaseStatics(-100);
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
@@ -74,7 +74,7 @@ abstract class SpriteState extends DualLinkNode {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -83,7 +83,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     SpriteState() {
     }
@@ -92,6 +92,6 @@ abstract class SpriteState extends DualLinkNode {
         field_y = 0;
         field_t = new String[]{"Master Wizard", "Hat of Wizardry", "Cloak of Wizardry", "Gown of Wizardry", "Star of the Master", "Spider's Bane", "Pygmy Catcher", "Ghost Hunter", "Troll Basher", "Dragon Tamer", "Master of Magic", "Pumpkin Collector"};
         field_A = new int[8192];
-        secondarySoundEffects = new je[38];
+        secondarySoundEffects = new PcmSample[38];
     }
 }

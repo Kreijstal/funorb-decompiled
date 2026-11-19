@@ -1,6 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface qg extends ce {
+interface qg extends WidgetListener {
     public abstract void a(pj param0, int param1, pd param2);
 }

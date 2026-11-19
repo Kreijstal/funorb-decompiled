@@ -43,20 +43,20 @@ final class mj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(java.awt.Component param0, byte param1) {
         try {
-          param0.removeKeyListener(ff.keyHandler);
+          param0.removeKeyListener(HotspotTextWidget.keyHandler);
           if (param1 <= 91) {
             field_c = true;
           }
-          param0.removeFocusListener(ff.keyHandler);
-          wk.keyEventWriteIndex = -1;
+          param0.removeFocusListener(HotspotTextWidget.keyHandler);
+          GzipDecompressor.keyEventWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "mj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "mj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -261,7 +261,7 @@ final class mj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_d = null;

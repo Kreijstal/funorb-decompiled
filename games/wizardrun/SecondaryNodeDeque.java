@@ -9,15 +9,15 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_a;
 
     final static void a(byte param0, String param1, String param2, boolean param3) {
-        rg.field_S = param1;
-        lb.field_e = param2;
+        ResizableDialog.field_S = param1;
+        GrowableIntList.field_e = param2;
         if (param0 != -52) {
           return;
         }
         try {
           fc.a(sd.field_c, param3, -122);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class SecondaryNodeDeque implements Iterable {
         return null;
     }
 
-    final static String a(int param0, String param1, kl param2, String param3) {
+    final static String a(int param0, String param1, ResourceArchive param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -46,7 +46,7 @@ final class SecondaryNodeDeque implements Iterable {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.b(17820)) {
+          if (!param2.ensureIndex(17820)) {
             stackIn_3_0 = (String) (param3);
             return stackIn_3_0;
           }
@@ -77,14 +77,14 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, dc param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        mg var5 = null;
+        IsaacPacketBuffer var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -94,15 +94,15 @@ final class SecondaryNodeDeque implements Iterable {
           var5.c((byte) -61, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b((byte) 11, 1);
-          var5.b((byte) 11, param2.field_k);
-          var5.d(1710370149, param2.field_m);
-          var5.f(param2.field_r, param0 ^ -612992477);
-          var5.f(param2.field_l, 613003928);
-          var5.f(param2.field_i, 613003928);
-          var5.f(param2.field_p, 613003928);
-          var5.e(var4, param0 ^ 1182882603);
-          var5.a(-var4 + var5.position, -127);
+          var5.writeByte((byte) 11, 1);
+          var5.writeByte((byte) 11, param2.field_k);
+          var5.writeSignedSmart(1710370149, param2.field_m);
+          var5.writeInt(param2.field_r, param0 ^ -612992477);
+          var5.writeInt(param2.field_l, 613003928);
+          var5.writeInt(param2.field_i, 613003928);
+          var5.writeInt(param2.field_p, 613003928);
+          var5.appendCrc(var4, param0 ^ 1182882603);
+          var5.backpatchByteLength(-var4 + var5.position, -127);
           if (param0 == -14149) {
             return;
           }
@@ -118,7 +118,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class SecondaryNodeDeque implements Iterable {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 5) {
           SecondaryNodeDeque.a(-86, true, -78, -105);
@@ -153,7 +153,7 @@ final class SecondaryNodeDeque implements Iterable {
         try {
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "de.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "de.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 != 2) {
           return;
         }
-        ef.field_H.e(param2, param3);
+        ef.field_H.drawTransparent(param2, param3);
         if (!param1) {
           return;
         }

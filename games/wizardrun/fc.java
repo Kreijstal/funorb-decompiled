@@ -7,7 +7,7 @@ final class fc {
     static String field_a;
     static rc field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10) {
           fc.a((byte) 69, -69L);
           field_b = null;
@@ -44,7 +44,7 @@ final class fc {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = ok.field_f;
+            stackIn_4_0 = ValidationState.field_f;
             return stackIn_4_0;
           }
           if (64 < var2_int) {
@@ -113,37 +113,37 @@ final class fc {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(String param0, boolean param1, int param2) {
         ga.field_a = param1;
-        cf.field_i = true;
-        aa.field_lb = new mh(GameShell.field_A, PacketBuffer.field_i, param0, wi.field_J, ga.field_a);
+        WrappedTextLayout.field_i = true;
+        aa.field_lb = new mh(GameShell.field_A, PacketBuffer.field_i, param0, DialogLayer.field_J, ga.field_a);
         if (param2 > -119) {
           return;
         }
         try {
           GameShell.field_A.b((UiWidget) (aa.field_lb), (byte) 55);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static String a(byte param0, long param1) {
         int var8 = 0;
         int var9 = 0;
-        hl.field_c.setTime(new Date(param1));
-        int var3 = hl.field_c.get(7);
-        int var4 = hl.field_c.get(5);
-        int var5 = hl.field_c.get(2);
-        int var6 = hl.field_c.get(1);
-        int var7 = hl.field_c.get(11);
+        ArchiveProvider.field_c.setTime(new Date(param1));
+        int var3 = ArchiveProvider.field_c.get(7);
+        int var4 = ArchiveProvider.field_c.get(5);
+        int var5 = ArchiveProvider.field_c.get(2);
+        int var6 = ArchiveProvider.field_c.get(1);
+        int var7 = ArchiveProvider.field_c.get(11);
         if (param0 <= -3) {
-          var8 = hl.field_c.get(12);
-          var9 = hl.field_c.get(13);
-          return of.field_k[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + rj.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          var8 = ArchiveProvider.field_c.get(12);
+          var9 = ArchiveProvider.field_c.get(13);
+          return of.field_k[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + MenuInputState.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }
@@ -162,7 +162,7 @@ final class fc {
               field_a = (String) null;
             }
             var4 = param2.getGraphics();
-            hl.field_b.a(var4, -29402, param1, param3);
+            ArchiveProvider.field_b.a(var4, -29402, param1, param3);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -181,7 +181,7 @@ final class fc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

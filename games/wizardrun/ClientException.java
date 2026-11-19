@@ -17,7 +17,7 @@ final class ClientException extends RuntimeException {
     final static void a(int param0) {
         ic.field_b = null;
         MouseInputHandler.field_b = null;
-        mf.field_j = (byte[][]) null;
+        TextFieldValidator.field_j = (byte[][]) null;
         ImageProducerRasterBuffer.field_k = null;
         if (param0 == 0) {
           ne.field_h = null;
@@ -34,11 +34,11 @@ final class ClientException extends RuntimeException {
         this.field_b = param1;
     }
 
-    final static db a(db param0, byte param1, int[] param2) {
-        db var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        db stackIn_2_0 = null;
-        db stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -46,14 +46,14 @@ final class ClientException extends RuntimeException {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new db(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_k = param2;
           var3.field_d = param0.field_d;
           var3.field_a = param0.field_a;
           var3.field_h = param0.field_h;
           var3.field_j = param0.field_j;
           if (param1 > -7) {
-            stackIn_2_0 = (db) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var3.field_l = param0.field_l;
@@ -77,7 +77,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

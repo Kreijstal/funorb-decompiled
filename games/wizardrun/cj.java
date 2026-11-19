@@ -12,7 +12,7 @@ final class cj {
     private static int[] field_i;
     private static int[] field_h;
 
-    public static void b() {
+    public static void releaseStatics() {
         field_a = null;
         field_g = null;
         field_h = null;

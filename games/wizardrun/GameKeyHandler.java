@@ -14,10 +14,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ff.keyHandler == null) {
+          if (HotspotTextWidget.keyHandler == null) {
             return;
           }
-          wk.keyEventWriteIndex = -1;
+          GzipDecompressor.keyEventWriteIndex = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -29,7 +29,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -37,7 +37,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (ff.keyHandler != null) {
+          if (HotspotTextWidget.keyHandler != null) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
@@ -52,11 +52,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "oj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "oj.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 < 86) {
@@ -65,17 +65,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     }
 
     final static void a(int param0, vf param1, int param2) {
-        mg var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           if (param2 >= -9) {
             field_a = (String) null;
           }
           var3 = n.field_b;
           var3.c((byte) -127, param0);
-          var3.b((byte) 11, param1.field_k);
-          var3.b(-1947079288, param1.field_i);
+          var3.writeByte((byte) 11, param1.field_k);
+          var3.writeShort(-1947079288, param1.field_i);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "oj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "oj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -87,21 +87,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ff.keyHandler) {
-            h.keyIdleTime = 0;
+          if (null != HotspotTextWidget.keyHandler) {
+            MusicPatch.keyIdleTime = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < he.field_s.length) {
-              var2_int = he.field_s[var2_int] & -129;
+              var2_int < MidiNoteMixer.field_s.length) {
+              var2_int = MidiNoteMixer.field_s[var2_int] & -129;
             } else {
               var2_int = -1;
             }
-            if (wk.keyEventWriteIndex >= 0 &&
+            if (GzipDecompressor.keyEventWriteIndex >= 0 &&
               var2_int >= 0) {
-              wd.keyEventQueue[wk.keyEventWriteIndex] = ~var2_int;
-              wk.keyEventWriteIndex = 127 & wk.keyEventWriteIndex + 1;
-              if (wk.keyEventWriteIndex == lk.keyEventReadIndex) {
-                wk.keyEventWriteIndex = -1;
+              wd.keyEventQueue[GzipDecompressor.keyEventWriteIndex] = ~var2_int;
+              GzipDecompressor.keyEventWriteIndex = 127 & GzipDecompressor.keyEventWriteIndex + 1;
+              if (GzipDecompressor.keyEventWriteIndex == lk.keyEventReadIndex) {
+                GzipDecompressor.keyEventWriteIndex = -1;
               }
             }
           }
@@ -117,7 +117,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -131,26 +131,26 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (ff.keyHandler == null) {
+          if (HotspotTextWidget.keyHandler == null) {
             return;
           }
-          h.keyIdleTime = 0;
+          MusicPatch.keyIdleTime = 0;
           var2_int = param0.getKeyCode();
           if (var2_int >= 0 &&
-            var2_int < he.field_s.length) {
-            var2_int = he.field_s[var2_int];
+            var2_int < MidiNoteMixer.field_s.length) {
+            var2_int = MidiNoteMixer.field_s[var2_int];
             if ((var2_int & 128) != 0) {
               var2_int = -1;
             }
           } else {
             var2_int = -1;
           }
-          if (wk.keyEventWriteIndex >= 0 &&
+          if (GzipDecompressor.keyEventWriteIndex >= 0 &&
             var2_int >= 0) {
-            wd.keyEventQueue[wk.keyEventWriteIndex] = var2_int;
-            wk.keyEventWriteIndex = 1 + wk.keyEventWriteIndex & 127;
-            if (lk.keyEventReadIndex == wk.keyEventWriteIndex) {
-              wk.keyEventWriteIndex = -1;
+            wd.keyEventQueue[GzipDecompressor.keyEventWriteIndex] = var2_int;
+            GzipDecompressor.keyEventWriteIndex = 1 + GzipDecompressor.keyEventWriteIndex & 127;
+            if (lk.keyEventReadIndex == GzipDecompressor.keyEventWriteIndex) {
+              GzipDecompressor.keyEventWriteIndex = -1;
             }
           }
           if (var2_int >= 0) {
@@ -179,7 +179,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

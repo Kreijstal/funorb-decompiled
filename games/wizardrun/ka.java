@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ka extends uh {
-    static ji field_l;
+    static MidiTrack field_l;
     static int field_i;
     private String field_k;
     static String field_g;
@@ -18,8 +18,8 @@ final class ka extends uh {
         try {
           mj.a((java.awt.Component) ((Object) param0), (byte) 96);
           ee.a((java.awt.Component) ((Object) param0), 6769);
-          if (vc.field_K != null) {
-            vc.field_K.a((java.awt.Component) ((Object) param0), param1 ^ -8058);
+          if (MessagePanel.field_K != null) {
+            MessagePanel.field_K.a((java.awt.Component) ((Object) param0), param1 ^ -8058);
           }
           if (param1 == 8053) {
             return;
@@ -36,7 +36,7 @@ final class ka extends uh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class ka extends uh {
           var4 += 2;
         }
         if (param1 != 2) {
-          ka.b(-47);
+          ka.releaseStatics(-47);
         }
         if (param3) {
           var4++;
@@ -58,7 +58,7 @@ final class ka extends uh {
         return IntrusiveDeque.field_e[var4];
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= -24) {
           field_h = null;
           field_l = null;
@@ -74,9 +74,9 @@ final class ka extends uh {
     final sd a(boolean param0) {
         if (!param0) {
           this.a(true);
-          return pc.field_v;
+          return Js5Index.field_v;
         }
-        return pc.field_v;
+        return Js5Index.field_v;
     }
 
     final void a(int param0, PacketBuffer param1) {
@@ -84,10 +84,10 @@ final class ka extends uh {
           if (param0 != 4) {
             field_h = (String) null;
           }
-          param1.b(0, this.field_k);
-          param1.a(this.field_j, -66);
+          param1.writePrefixedCp1252String(0, this.field_k);
+          param1.writeBase38Name(this.field_j, -66);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ka.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ka.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class ka extends uh {
           this.field_j = param1;
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

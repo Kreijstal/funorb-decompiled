@@ -5,15 +5,15 @@ final class lk {
     static int keyEventReadIndex;
     static Sprite[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -1) {
           String var2 = (String) null;
-          lk.a(47, (BitmapFont) null, 92, (fg) null, (String) null);
+          lk.a(47, (BitmapFont) null, 92, (TextLayoutLine) null, (String) null);
         }
     }
 
-    final static void a(int param0, BitmapFont param1, int param2, fg param3, String param4) {
+    final static void a(int param0, BitmapFont param1, int param2, TextLayoutLine param3, String param4) {
         int var8 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -74,7 +74,7 @@ final class lk {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

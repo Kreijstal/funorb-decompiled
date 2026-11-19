@@ -7,7 +7,7 @@ final class lg {
     static Sprite[] field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 89) {
           field_a = null;
           field_b = null;

@@ -5,7 +5,7 @@ final class ni {
     static int field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 2 / ((-46 - param0) / 47);
         field_a = null;
     }
@@ -23,13 +23,13 @@ final class ni {
         if (param0 != 6) {
           ni.b(-9);
         }
-        var6 = "(" + l.field_P + " " + wizardrun.field_E + " " + me.field_c + ") " + ra.field_k;
+        var6 = "(" + ValidationHelpWidget.field_P + " " + wizardrun.field_E + " " + me.field_c + ") " + ra.field_k;
         var1 = var6;
         if (DelegatingCanvas.field_c > 0) {
           var1 = var6 + ":";
           for (var2 = 0; DelegatingCanvas.field_c > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = nk.field_N.payload[var2] & 255;
+            var3 = AccountCreationForm.field_N.payload[var2] & 255;
             var4 = var3 >> 4;
             if (var4 >= 10) {
               var4 += 55;
@@ -67,7 +67,7 @@ final class ni {
         var7 = wizardrun.field_H;
         try {
           var1 = null;
-          var1_array = fl.field_T[qh.field_l][ql.field_c];
+          var1_array = MidiPcmStream.field_T[qh.field_l][ql.field_c];
           if (var1_array == null) {
             return;
           }
@@ -136,7 +136,7 @@ final class ni {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1_ref), "ni.C(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1_ref), "ni.C(" + param0 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class ni {
         RuntimeException var4_ref = null;
         var5 = wizardrun.field_H;
         try {
-          wc.field_j = mi.field_z;
+          wc.field_j = SingleChildWidget.field_z;
           if (param1 != -101) {
             ni.b(64);
           }
@@ -170,7 +170,7 @@ final class ni {
             kd.field_a = hf.a(-105, param0, param3);
           } else {
             stackIn_6_0 = -29309;
-            stackIn_7_1 = !(ac.field_t >= 13);
+            stackIn_7_1 = !(QuickChatPhraseDefinition.field_t >= 13);
             kd.field_a = ii.a(stackIn_6_0, stackIn_7_1);
             var6 = (String[]) null;
             f.a((byte) -117, (String[]) null);
@@ -192,7 +192,7 @@ final class ni {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 

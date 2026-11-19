@@ -41,7 +41,7 @@ abstract class SocketConnector {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (cl.a(param1, -3264, "getcookies"));
-              var4 = tj.a(var3, -22710, ';');
+              var4 = FadingDialog.a(var3, -22710, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -68,7 +68,7 @@ abstract class SocketConnector {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -77,7 +77,7 @@ abstract class SocketConnector {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_b = null;
         if (param0 != -64) {

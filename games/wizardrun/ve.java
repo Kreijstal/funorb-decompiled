@@ -20,25 +20,25 @@ final class ve {
         RuntimeException decompiledCaughtException = null;
         var5 = wizardrun.field_H;
         try {
-          fi.field_y = mi.field_z;
+          fi.field_y = SingleChildWidget.field_z;
           if (param2 >= -96) {
             pressedButton = -13;
           }
           if (255 != param3) {
             if (param3 < 100) {
-              ki.field_F = hf.a(-105, param0, param3);
+              LoginChoicePanel.field_F = hf.a(-105, param0, param3);
               return;
             }
             if (105 >= param3) {
-              ki.field_F = rc.a(param1, (byte) -77);
+              LoginChoicePanel.field_F = rc.a(param1, (byte) -77);
               return;
             }
-            ki.field_F = hf.a(-105, param0, param3);
+            LoginChoicePanel.field_F = hf.a(-105, param0, param3);
             return;
           }
           stackIn_12_0 = -29309;
-          stackIn_13_1 = !(ac.field_t >= 13);
-          ki.field_F = ii.a(stackIn_12_0, stackIn_13_1);
+          stackIn_13_1 = !(QuickChatPhraseDefinition.field_t >= 13);
+          LoginChoicePanel.field_F = ii.a(stackIn_12_0, stackIn_13_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,18 +56,18 @@ final class ve {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + md.a("%0a", param1, 28834, "\n"));
+        System.out.println("Error: " + TickClock.a("%0a", param1, 28834, "\n"));
         if (param0 < 74) {
           wizardSprites = (Sprite[]) null;
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (!param0) {
           pressedButton = -120;

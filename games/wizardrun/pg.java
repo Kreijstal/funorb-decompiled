@@ -33,7 +33,7 @@ final class pg extends IntrusiveNode {
             if (ga.field_d.b(-1)) {
               var1_int = 1;
             }
-            if (vk.field_r != 13) {
+            if (MidiNote.field_r != 13) {
               continue;
             }
             var2 = 1;
@@ -45,15 +45,15 @@ final class pg extends IntrusiveNode {
           var3 = 0;
           if (var1_int != 0 &&
             ga.field_d.field_g >= 0) {
-            var3 = h.field_s[ga.field_d.field_g];
+            var3 = MusicPatch.field_s[ga.field_d.field_g];
             if (var3 == 2 ||
               var3 == 5) {
-              sg.a((byte) 64);
+              DiskCacheStore.a((byte) 64);
             }
           } else {
             if (var2 != 0 &&
               oc.field_d != 2) {
-              sg.a((byte) 64);
+              DiskCacheStore.a((byte) 64);
             }
           }
           if (param0 != -48) {
@@ -62,11 +62,11 @@ final class pg extends IntrusiveNode {
           }
           if (var3 == 0 &&
             oc.field_d == 2) {
-            var4 = -kh.field_g + d.a((byte) 115);
+            var4 = -DirectByteStorage.field_g + d.a((byte) 115);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               var3 = 2;
-              le.a(true, 5, 15991);
+              TriangleMesh.a(true, 5, 15991);
             }
           }
           stackIn_29_0 = var3;
@@ -74,7 +74,7 @@ final class pg extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "pg.F(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "pg.F(" + param0 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class pg extends IntrusiveNode {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class pg extends IntrusiveNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         if (param0 != -73) {
           pg.a((byte) -55);
@@ -252,7 +252,7 @@ final class pg extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1, pg param2) {
-        mg var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (!param1) {
@@ -262,17 +262,17 @@ final class pg extends IntrusiveNode {
           var5.c((byte) 92, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b((byte) 11, 1);
-          var5.b((byte) 11, param2.field_o);
-          var5.b((byte) 11, param2.field_m);
-          var5.f(param2.field_l, 613003928);
-          var5.f(param2.field_i, 613003928);
-          var5.f(param2.field_p, 613003928);
-          var5.f(param2.field_k, 613003928);
-          var5.e(var4, -1182887024);
-          var5.a(-var4 + var5.position, -117);
+          var5.writeByte((byte) 11, 1);
+          var5.writeByte((byte) 11, param2.field_o);
+          var5.writeByte((byte) 11, param2.field_m);
+          var5.writeInt(param2.field_l, 613003928);
+          var5.writeInt(param2.field_i, 613003928);
+          var5.writeInt(param2.field_p, 613003928);
+          var5.writeInt(param2.field_k, 613003928);
+          var5.appendCrc(var4, -1182887024);
+          var5.backpatchByteLength(-var4 + var5.position, -117);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class pg extends IntrusiveNode {
         if (param0 != -97) {
           field_q = false;
         }
-        td.field_f.c(new ki(), -123);
+        td.field_f.c(new LoginChoicePanel(), -123);
     }
 
     pg(int param0, int param1, int param2, int param3, int param4, int param5) {

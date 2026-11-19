@@ -32,7 +32,7 @@ final class rd {
         int var6Lifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
-        he.field_m[lg.field_d] = param0;
+        MidiNoteMixer.field_m[lg.field_d] = param0;
         sj.field_m[lg.field_d] = lg.field_d;
         if (param3 > -77) {
           rd.a(58, -125, 62, 83, 51, -33);
@@ -52,7 +52,7 @@ final class rd {
             }
             var7 = stackIn_21_0;
           } else {
-            dj.field_b = param4;
+            ByteStorage.field_b = param4;
             if (param4 < dg.field_d) {
               gf.field_W = param4;
             }
@@ -71,8 +71,8 @@ final class rd {
           if (gf.field_W > var7) {
             gf.field_W = var7;
           }
-          if (dj.field_b < var7) {
-            dj.field_b = var7;
+          if (ByteStorage.field_b < var7) {
+            ByteStorage.field_b = var7;
           }
           lg.field_d = lg.field_d + 1;
           return;
@@ -96,13 +96,13 @@ final class rd {
           if (gf.field_W > var7Lifetime1) {
             gf.field_W = var7Lifetime1;
           }
-          if (dj.field_b < var7Lifetime1) {
-            dj.field_b = var7Lifetime1;
+          if (ByteStorage.field_b < var7Lifetime1) {
+            ByteStorage.field_b = var7Lifetime1;
           }
           lg.field_d = lg.field_d + 1;
           return;
         }
-        dj.field_b = param4;
+        ByteStorage.field_b = param4;
         if (param4 < dg.field_d) {
           gf.field_W = param4;
         }
@@ -120,14 +120,14 @@ final class rd {
         if (gf.field_W > var7Lifetime2) {
           gf.field_W = var7Lifetime2;
         }
-        if (dj.field_b < var7Lifetime2) {
-          dj.field_b = var7Lifetime2;
+        if (ByteStorage.field_b < var7Lifetime2) {
+          ByteStorage.field_b = var7Lifetime2;
         }
         lg.field_d = lg.field_d + 1;
         return;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -63) {
           rd.a(-6, false);
           field_a = null;

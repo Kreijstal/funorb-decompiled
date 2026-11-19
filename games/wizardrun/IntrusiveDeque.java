@@ -24,7 +24,7 @@ final class IntrusiveDeque {
           param0.previous.next = param0;
           param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 <= 9) {
           return;

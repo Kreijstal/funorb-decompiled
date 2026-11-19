@@ -22,8 +22,8 @@ final class wc {
         if (ef.field_H == null) {
           return -1;
         }
-        if (param2 >= wk.field_c && ef.field_H.width + wk.field_c > param2 && qc.field_L <= param1 &&
-          !(qc.field_L + ef.field_H.height <= param1)) {
+        if (param2 >= GzipDecompressor.field_c && ef.field_H.width + GzipDecompressor.field_c > param2 && LoginForm.field_L <= param1 &&
+          !(LoginForm.field_L + ef.field_H.height <= param1)) {
           return 0;
         }
         if (param2 >= hj.field_f && param2 < hj.field_f + ef.field_H.width && param1 >= hf.field_b &&
@@ -33,7 +33,7 @@ final class wc {
         return -1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_j = null;
         if (param0 != 2) {
@@ -60,12 +60,12 @@ final class wc {
     }
 
     wc(boolean param0) {
-        this.field_i = dj.field_e;
+        this.field_i = ByteStorage.field_e;
         this.field_g = il.field_a;
         this.field_a = rb.field_a;
         this.field_c = NodeHashTableIterator.field_g;
         this.field_h = vl.field_f;
-        this.field_d = ac.field_r;
+        this.field_d = QuickChatPhraseDefinition.field_r;
         this.field_b = tg.field_b;
         if (!param0) {
           this.field_l = null;

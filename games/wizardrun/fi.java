@@ -63,7 +63,7 @@ final class fi extends ml {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -72,11 +72,11 @@ final class fi extends ml {
           if (UiWidget.field_t != null) {
             try {
               UiWidget.field_t.a(0L, (byte) -64);
-              UiWidget.field_t.a(18729, nk.field_N.payload, 24, nk.field_N.position);
+              UiWidget.field_t.a(18729, AccountCreationForm.field_N.payload, 24, AccountCreationForm.field_N.position);
             } catch (Exception exception) {
             }
           }
-          nk.field_N.position = nk.field_N.position + 24;
+          AccountCreationForm.field_N.position = AccountCreationForm.field_N.position + 24;
           if (param0 != 95) {
             field_A = 49;
           }
@@ -87,7 +87,7 @@ final class fi extends ml {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_y = null;
         int var1 = -107 % ((-44 - param0) / 44);
         field_v = null;

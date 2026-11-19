@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends mi {
+final class pd extends SingleChildWidget {
     static String field_G;
     static String[] field_I;
     static Sprite[] frameSprites;
@@ -20,7 +20,7 @@ final class pd extends mi {
           if (param1 >= -86) {
             return true;
           }
-          var3 = ag.a(param0, 1);
+          var3 = StrongCacheEntry.a(param0, 1);
           if (-1 != param2.indexOf(param0)) {
             return true;
           }
@@ -45,7 +45,7 @@ final class pd extends mi {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -53,28 +53,28 @@ final class pd extends mi {
         int var2;
         int var3;
         var3 = wizardrun.field_H;
-        if (hl.field_a <= 0) {
+        if (ArchiveProvider.field_a <= 0) {
           var2 = (e.a(-89)) ? 0 : 1;
         } else {
           if (null == oa.field_c) {
-            ki.field_E = hb.a(0, 640, 0, 480, 0, ld.field_g);
+            LoginChoicePanel.field_E = hb.a(0, 640, 0, 480, 0, ld.field_g);
           } else {
-            ki.field_E = oa.field_c.c(0);
+            LoginChoicePanel.field_E = oa.field_c.c(0);
             rc.a(0, 2);
           }
-          if (ki.field_E != null) {
+          if (LoginChoicePanel.field_E != null) {
             var2 = 2;
-            jf.a(false, ki.field_E);
+            IndexedSpriteState.a(false, LoginChoicePanel.field_E);
           } else {
             var2 = 3;
           }
         }
         if (null == oa.field_c &&
           dg.field_b) {
-          le.a(param0, var2, 15991);
+          TriangleMesh.a(param0, var2, 15991);
         }
         if (param1) {
-          pd.f(-89);
+          pd.releaseStatics(-89);
         }
     }
 
@@ -85,13 +85,13 @@ final class pd extends mi {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        mg var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         pg var11 = null;
-        mg var12 = null;
+        IsaacPacketBuffer var12 = null;
         int[] var13 = null;
         te var14 = null;
         te var15 = null;
@@ -101,8 +101,8 @@ final class pd extends mi {
           if (param0) {
             field_I = (String[]) null;
           }
-          var12 = nk.field_N;
-          var2 = var12.f(255);
+          var12 = AccountCreationForm.field_N;
+          var2 = var12.readUnsignedByte(255);
           if (var2 == 0) {
             var10 = mh.m(-26421);
             var16 = var10;
@@ -111,11 +111,11 @@ final class pd extends mi {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((PacketBuffer) ((Object) var5)).f(255);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).i(255);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(255);
             }
-            var14 = (te) (bk.field_d.b((byte) 97));
+            var14 = (te) (AudioServiceThread.field_d.b((byte) 97));
             if (var14 == null) {
               ql.a(-113);
               return;
@@ -135,7 +135,7 @@ final class pd extends mi {
             var11.a(false);
           } else {
             if (var2 == 2) {
-              var15 = (te) (bk.field_d.b((byte) 48));
+              var15 = (te) (AudioServiceThread.field_d.b((byte) 48));
               if (var15 == null) {
                 ql.a(-34);
                 return;
@@ -145,7 +145,7 @@ final class pd extends mi {
               var15.field_j = var15.field_l[0];
               var15.a(false);
             } else {
-              rg.a((Throwable) null, "A1: " + ni.c(6), -562);
+              ResizableDialog.a((Throwable) null, "A1: " + ni.c(6), -562);
               ql.a(-109);
             }
           }
@@ -153,7 +153,7 @@ final class pd extends mi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "pd.OA(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "pd.OA(" + param0 + ')');
         }
     }
 
@@ -191,20 +191,20 @@ final class pd extends mi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    private pd(int param0, int param1, int param2, int param3, bf param4, ce param5, UiWidget param6) {
+    private pd(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_F = param6;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         field_G = null;
         if (param0 != -27864) {

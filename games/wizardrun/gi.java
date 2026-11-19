@@ -8,7 +8,7 @@ final class gi {
     static int field_c;
     static boolean field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -33,23 +33,23 @@ final class gi {
           uh.field_d[2] = (int)(tg.field_g >> 32);
           uh.field_d[3] = (int)tg.field_g;
           re.field_G.position = 0;
-          re.field_G.f(uh.field_d[0], 613003928);
-          re.field_G.f(uh.field_d[1], 613003928);
-          re.field_G.f(uh.field_d[2], 613003928);
-          re.field_G.f(uh.field_d[3], 613003928);
+          re.field_G.writeInt(uh.field_d[0], 613003928);
+          re.field_G.writeInt(uh.field_d[1], 613003928);
+          re.field_G.writeInt(uh.field_d[2], 613003928);
+          re.field_G.writeInt(uh.field_d[3], 613003928);
           GameShell.a(re.field_G, -18);
-          re.field_G.b(-1947079288, param4);
+          re.field_G.writeShort(-1947079288, param4);
           param1.a(4, re.field_G);
           n.field_b.position = 0;
           if (!param3) {
-            n.field_b.b((byte) 11, 16);
+            n.field_b.writeByte((byte) 11, 16);
           } else {
-            n.field_b.b((byte) 11, 18);
+            n.field_b.writeByte((byte) 11, 18);
           }
           n.field_b.position = n.field_b.position + 2;
           var5_int = n.field_b.position;
-          n.field_b.f(vk.field_G, 613003928);
-          n.field_b.b(1290648728, bl.field_d);
+          n.field_b.writeInt(MidiNote.field_G, 613003928);
+          n.field_b.writeLong(1290648728, bl.field_d);
           var6 = 0;
           if (IntrusiveDequeCursor.field_g) {
             var6 = var6 | 1;
@@ -63,7 +63,7 @@ final class gi {
           if (sf.field_b != null) {
             var6 = var6 | 16;
           }
-          n.field_b.b((byte) 11, var6);
+          n.field_b.writeByte((byte) 11, var6);
           if (!param2) {
             field_c = -6;
           }
@@ -71,12 +71,12 @@ final class gi {
           if (var7 == null) {
             var7 = "";
           }
-          n.field_b.a(var7, false);
+          n.field_b.writeCp1252String(var7, false);
           if (null != sf.field_b) {
-            n.field_b.b(0, sf.field_b);
+            n.field_b.writePrefixedCp1252String(0, sf.field_b);
           }
-          pa.a(ag.field_s, 0, ad.field_d, re.field_G, n.field_b);
-          n.field_b.a(n.field_b.position - var5_int, (byte) -67);
+          pa.a(StrongCacheEntry.field_s, 0, ArchiveCatalog.field_d, re.field_G, n.field_b);
+          n.field_b.backpatchShortLength(n.field_b.position - var5_int, (byte) -67);
           id.a((byte) -67, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,7 +89,7 @@ final class gi {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

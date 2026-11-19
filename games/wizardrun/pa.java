@@ -11,9 +11,9 @@ final class pa {
 
     final static void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
-          vk.a(param3.payload, param4, param2, true, param3.position, param0, param1);
+          MidiNote.a(param3.payload, param4, param2, true, param3.position, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -21,7 +21,7 @@ final class pa {
         if (param0 != -106) {
           field_a = (Sprite) null;
         }
-        return pl.field_E == wc.field_j ? true : false;
+        return TextButton.field_E == wc.field_j ? true : false;
     }
 
     final static boolean a(int param0, String param1, String param2) {
@@ -41,7 +41,7 @@ final class pa {
             pa.a((java.math.BigInteger) null, -113, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
           }
           param1 = fa.a((byte) 122, "", param1, '_');
-          var3 = ag.a(param2, 1);
+          var3 = StrongCacheEntry.a(param2, 1);
           stackIn_7_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,11 +60,11 @@ final class pa {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_f = null;
         if (param0 >= -42) {

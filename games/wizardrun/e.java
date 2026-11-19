@@ -17,7 +17,7 @@ final class e {
         return qb.field_p;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_e = null;
         if (param0 != -2) {
@@ -50,16 +50,16 @@ final class e {
             var6_int = param0[0].fullWidth;
             var7 = param0[2].fullWidth;
             var8 = param0[1].fullWidth;
-            param0[0].d(param4, param1, param2);
-            param0[2].d(param4 + param5 - var7, param1, param2);
-            SoftwareRasterizer.saveClip(ac.field_q);
+            param0[0].drawRecoloredNeutral(param4, param1, param2);
+            param0[2].drawRecoloredNeutral(param4 + param5 - var7, param1, param2);
+            SoftwareRasterizer.saveClip(QuickChatPhraseDefinition.field_q);
             SoftwareRasterizer.intersectClip(var6_int + param4, param1, param4 + param5 - var7, param1 + param0[1].fullHeight);
             var9 = param4 + var6_int;
             var10 = -var7 + param5 + param4;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
-              param0[1].d(param4, param1, param2);
+              param0[1].drawRecoloredNeutral(param4, param1, param2);
             }
-            SoftwareRasterizer.restoreClip(ac.field_q);
+            SoftwareRasterizer.restoreClip(QuickChatPhraseDefinition.field_q);
             return;
           }
           return;
@@ -73,7 +73,7 @@ final class e {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

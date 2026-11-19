@@ -6,7 +6,7 @@ final class ci {
     static int[] field_a;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -21,33 +21,33 @@ final class ci {
         int var2_intLifetime2;
         try {
           if (param0 != 2026380485) {
-            ci.a(false);
+            ci.releaseStatics(false);
           }
-          ki.field_M = param1.j(-14477) << 5;
-          var2_int = param1.f(255);
-          ki.field_M = ki.field_M + (var2_int >> 3);
+          LoginChoicePanel.field_M = param1.readUnsignedShort(-14477) << 5;
+          var2_int = param1.readUnsignedByte(255);
+          LoginChoicePanel.field_M = LoginChoicePanel.field_M + (var2_int >> 3);
           lj.field_a = 1835008 & var2_int << 18;
-          lj.field_a = lj.field_a + (param1.j(-14477) << 2);
-          var2_intLifetime1 = param1.f(255);
+          lj.field_a = lj.field_a + (param1.readUnsignedShort(-14477) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(255);
           lj.field_a = lj.field_a + (var2_intLifetime1 >> 6);
           bi.field_a = (var2_intLifetime1 & 63) << 15;
-          bi.field_a = bi.field_a + (param1.f(255) << 7);
-          var2_intLifetime2 = param1.f(param0 ^ 2026380346);
-          ia.field_j = var2_intLifetime2 << 16 & 65536;
+          bi.field_a = bi.field_a + (param1.readUnsignedByte(255) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(param0 ^ 2026380346);
+          NanoTickClock.field_j = var2_intLifetime2 << 16 & 65536;
           bi.field_a = bi.field_a + (var2_intLifetime2 >> 1);
-          ia.field_j = ia.field_j + param1.j(-14477);
+          NanoTickClock.field_j = NanoTickClock.field_j + param1.readUnsignedShort(-14477);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0) {
         if (10 == ml.field_t) {
-          ik.g(5);
+          LabeledField.g(5);
           ml.field_t = 11;
         } else {
-          if (!hd.g((byte) 100)) {
-            ik.g(5);
+          if (!StripedProgressBar.g((byte) 100)) {
+            LabeledField.g(5);
             ml.field_t = 11;
           }
         }

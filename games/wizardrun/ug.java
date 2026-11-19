@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug extends pl {
+final class ug extends TextButton {
     int field_G;
     int field_O;
     int field_L;
@@ -19,59 +19,59 @@ final class ug extends pl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          sg.field_b = new Sprite[6][];
-          ok.field_e = new Sprite[6][5][];
+          DiskCacheStore.field_b = new Sprite[6][];
+          ValidationState.field_e = new Sprite[6][5][];
           bd.field_c = new Sprite[6];
-          ok.field_e[0][0] = pe.loadSpriteStrip("", mi.field_E, "monster00", 110);
-          ok.field_e[0][1] = pe.loadSpriteStrip("", mi.field_E, "monster01", 125);
-          ok.field_e[0][2] = pe.loadSpriteStrip("", mi.field_E, "monster02", 121);
-          ok.field_e[0][4] = pe.loadSpriteStrip("", mi.field_E, "monster04", 94);
-          sg.field_b[0] = pe.loadSpriteStrip("", mi.field_E, "level1blocks", 110);
-          bd.field_c[0] = vg.loadSprite(15, "level1background", mi.field_E, "");
-          bd.field_c[1] = vg.loadSprite(15, "level2background", mi.field_E, "");
-          sg.field_b[1] = pe.loadSpriteStrip("", mi.field_E, "level2blocks", 122);
-          ok.field_e[1][0] = pe.loadSpriteStrip("", mi.field_E, "monster10", 97);
-          ok.field_e[1][1] = pe.loadSpriteStrip("", mi.field_E, "monster11", 121);
-          ok.field_e[1][2] = pe.loadSpriteStrip("", mi.field_E, "monster12", 96);
-          ok.field_e[1][3] = pe.loadSpriteStrip("", mi.field_E, "monster13", 115);
-          ok.field_e[1][4] = pe.loadSpriteStrip("", mi.field_E, "monster14", 112);
-          bd.field_c[2] = vg.loadSprite(15, "level3background", mi.field_E, "");
-          sg.field_b[2] = pe.loadSpriteStrip("", mi.field_E, "level3blocks", 102);
-          ok.field_e[2][0] = pe.loadSpriteStrip("", mi.field_E, "monster20", 89);
-          ok.field_e[2][1] = pe.loadSpriteStrip("", mi.field_E, "monster21", 124);
-          ok.field_e[2][2] = pe.loadSpriteStrip("", mi.field_E, "monster22", 118);
-          ok.field_e[2][3] = pe.loadSpriteStrip("", mi.field_E, "monster23", 97);
-          ok.field_e[2][4] = pe.loadSpriteStrip("", mi.field_E, "monster24", 119);
-          bd.field_c[3] = vg.loadSprite(15, "level4background", mi.field_E, "");
-          sg.field_b[3] = pe.loadSpriteStrip("", mi.field_E, "level4blocks", 90);
-          ok.field_e[3][0] = pe.loadSpriteStrip("", mi.field_E, "monster30", 111);
-          ok.field_e[3][1] = pe.loadSpriteStrip("", mi.field_E, "monster31", 104);
-          ok.field_e[3][2] = pe.loadSpriteStrip("", mi.field_E, "monster32", 118);
-          ok.field_e[3][4] = pe.loadSpriteStrip("", mi.field_E, "monster34", 105);
-          bd.field_c[4] = vg.loadSprite(15, "level5background", mi.field_E, "");
-          sg.field_b[4] = pe.loadSpriteStrip("", mi.field_E, "level5blocks", 92);
-          ok.field_e[4][0] = pe.loadSpriteStrip("", mi.field_E, "monster40", 125);
+          ValidationState.field_e[0][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster00", 110);
+          ValidationState.field_e[0][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster01", 125);
+          ValidationState.field_e[0][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster02", 121);
+          ValidationState.field_e[0][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster04", 94);
+          DiskCacheStore.field_b[0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level1blocks", 110);
+          bd.field_c[0] = vg.loadSprite(15, "level1background", SingleChildWidget.field_E, "");
+          bd.field_c[1] = vg.loadSprite(15, "level2background", SingleChildWidget.field_E, "");
+          DiskCacheStore.field_b[1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level2blocks", 122);
+          ValidationState.field_e[1][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster10", 97);
+          ValidationState.field_e[1][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster11", 121);
+          ValidationState.field_e[1][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster12", 96);
+          ValidationState.field_e[1][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster13", 115);
+          ValidationState.field_e[1][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster14", 112);
+          bd.field_c[2] = vg.loadSprite(15, "level3background", SingleChildWidget.field_E, "");
+          DiskCacheStore.field_b[2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level3blocks", 102);
+          ValidationState.field_e[2][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster20", 89);
+          ValidationState.field_e[2][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster21", 124);
+          ValidationState.field_e[2][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster22", 118);
+          ValidationState.field_e[2][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster23", 97);
+          ValidationState.field_e[2][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster24", 119);
+          bd.field_c[3] = vg.loadSprite(15, "level4background", SingleChildWidget.field_E, "");
+          DiskCacheStore.field_b[3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level4blocks", 90);
+          ValidationState.field_e[3][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster30", 111);
+          ValidationState.field_e[3][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster31", 104);
+          ValidationState.field_e[3][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster32", 118);
+          ValidationState.field_e[3][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster34", 105);
+          bd.field_c[4] = vg.loadSprite(15, "level5background", SingleChildWidget.field_E, "");
+          DiskCacheStore.field_b[4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level5blocks", 92);
+          ValidationState.field_e[4][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster40", 125);
           if (param0 > -27) {
-            ug.$cfr$intArgs$a$c8d31f67c1d5(false, -19, 6, -5, (le) null);
+            ug.$cfr$intArgs$a$c8d31f67c1d5(false, -19, 6, -5, (TriangleMesh) null);
           }
-          ok.field_e[4][1] = pe.loadSpriteStrip("", mi.field_E, "monster41", 91);
-          ok.field_e[4][2] = pe.loadSpriteStrip("", mi.field_E, "monster42", 119);
-          ok.field_e[4][3] = pe.loadSpriteStrip("", mi.field_E, "monster43", 121);
-          ok.field_e[4][4] = pe.loadSpriteStrip("", mi.field_E, "monster44", 114);
-          bd.field_c[5] = vg.loadSprite(15, "level6background", mi.field_E, "");
-          sg.field_b[5] = pe.loadSpriteStrip("", mi.field_E, "level6blocks", 93);
-          ok.field_e[5][0] = pe.loadSpriteStrip("", mi.field_E, "monster50", 107);
-          ok.field_e[5][1] = pe.loadSpriteStrip("", mi.field_E, "monster52", 115);
-          ok.field_e[5][2] = pe.loadSpriteStrip("", mi.field_E, "monster51", 90);
-          ok.field_e[5][3] = pe.loadSpriteStrip("", mi.field_E, "monster53", 98);
-          ok.field_e[5][4] = pe.loadSpriteStrip("", mi.field_E, "monster54", 107);
-          hh.field_eb = pe.loadSpriteStrip("", mi.field_E, "monster55", 110);
-          h.field_j = pe.loadSpriteStrip("", mi.field_E, "monster56", 125);
+          ValidationState.field_e[4][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster41", 91);
+          ValidationState.field_e[4][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster42", 119);
+          ValidationState.field_e[4][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster43", 121);
+          ValidationState.field_e[4][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster44", 114);
+          bd.field_c[5] = vg.loadSprite(15, "level6background", SingleChildWidget.field_E, "");
+          DiskCacheStore.field_b[5] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "level6blocks", 93);
+          ValidationState.field_e[5][0] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster50", 107);
+          ValidationState.field_e[5][1] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster52", 115);
+          ValidationState.field_e[5][2] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster51", 90);
+          ValidationState.field_e[5][3] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster53", 98);
+          ValidationState.field_e[5][4] = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster54", 107);
+          hh.field_eb = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster55", 110);
+          MusicPatch.field_j = WidgetContainer.loadSpriteStrip("", SingleChildWidget.field_E, "monster56", 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ug.EA(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "ug.EA(" + param0 + ')');
         }
     }
 
@@ -140,11 +140,11 @@ final class ug extends pl {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, byte param1, int param2, int param3, le param4) {
+    final static void a(boolean param0, byte param1, int param2, int param3, TriangleMesh param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_28_0 = 0;
@@ -181,7 +181,7 @@ final class ug extends pl {
         int var13Lifetime1;
         var19 = wizardrun.field_H;
         try {
-          var5_int = dj.a(false, 3 * (param2 - param3));
+          var5_int = ByteStorage.a(false, 3 * (param2 - param3));
           var6 = 3 * param3;
           var7 = -10 + var5_int;
           vj.b(0);
@@ -289,16 +289,16 @@ final class ug extends pl {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 != -13542) {
-            ug.d(-125);
+            ug.releaseStatics(-125);
           }
           field_F = null;
           field_I = null;
@@ -307,7 +307,7 @@ final class ug extends pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ug.DA(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "ug.DA(" + param0 + ')');
         }
     }
 
@@ -333,7 +333,7 @@ final class ug extends pl {
             }
             if (param1) {
               var5.setColor(java.awt.Color.black);
-              var5.fillRect(0, 0, rg.field_R, rg.field_P);
+              var5.fillRect(0, 0, ResizableDialog.field_R, ResizableDialog.field_P);
             }
             if (null == param4) {
               param4 = new java.awt.Color(140, 17, 17);
@@ -355,12 +355,12 @@ final class ug extends pl {
               var6.setFont(mh.field_ob);
               var6.setColor(java.awt.Color.white);
               var6.drawString(param3, (-(6 * param3.length()) + 304) / 2, 22);
-              var5.drawImage(hg.field_b, rg.field_R / 2 - 152, -18 + rg.field_P / 2, (java.awt.image.ImageObserver) null);
+              var5.drawImage(hg.field_b, ResizableDialog.field_R / 2 - 152, -18 + ResizableDialog.field_P / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref = (Exception) (Object) decompiledCaughtException;
-              var7 = rg.field_R / 2 - 152;
-              var8 = -18 + rg.field_P / 2;
+              var7 = ResizableDialog.field_R / 2 - 152;
+              var8 = -18 + ResizableDialog.field_P / 2;
               var5.setColor(param4);
               var5.drawRect(var7, var8, 303, 33);
               var5.fillRect(2 + var7, 2 + var8, param2 * 3, 30);
@@ -374,7 +374,7 @@ final class ug extends pl {
             if (gi.field_e != null) {
               var5.setFont(mh.field_ob);
               var5.setColor(java.awt.Color.white);
-              var5.drawString(gi.field_e, rg.field_R / 2 - gi.field_e.length() * 6 / 2, rg.field_P / 2 - 26);
+              var5.drawString(gi.field_e, ResizableDialog.field_R / 2 - gi.field_e.length() * 6 / 2, ResizableDialog.field_P / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -398,7 +398,7 @@ final class ug extends pl {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class ug extends pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ug.<init>()");
+          throw bd.wrapException((Throwable) ((Object) var1), "ug.<init>()");
         }
     }
 
@@ -421,7 +421,7 @@ final class ug extends pl {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c8d31f67c1d5(boolean param0, int param1, int param2, int param3, le param4) {
+    final static void $cfr$intArgs$a$c8d31f67c1d5(boolean param0, int param1, int param2, int param3, TriangleMesh param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_28_0 = 0;
@@ -458,7 +458,7 @@ final class ug extends pl {
         int var13Lifetime1;
         var19 = wizardrun.field_H;
         try {
-          var5_int = dj.a(false, 3 * (param2 - param3));
+          var5_int = ByteStorage.a(false, 3 * (param2 - param3));
           var6 = 3 * param3;
           var7 = -10 + var5_int;
           vj.b(0);
@@ -566,7 +566,7 @@ final class ug extends pl {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
         }
     }
 }

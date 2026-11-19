@@ -9,7 +9,7 @@ final class td {
     static String field_d;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         if (param0 == 4) {
@@ -30,16 +30,16 @@ final class td {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (ff.keyHandler == null) {
+        if (HotspotTextWidget.keyHandler == null) {
           if (param0 == 4) {
             return;
           }
           td.b(-24);
           return;
         }
-        var1 = ff.keyHandler;
+        var1 = HotspotTextWidget.keyHandler;
         synchronized (var1) {
-          ff.keyHandler = null;
+          HotspotTextWidget.keyHandler = null;
         }
         if (param0 != 4) {
           td.b(-24);

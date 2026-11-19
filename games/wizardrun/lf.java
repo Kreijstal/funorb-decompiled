@@ -5,10 +5,10 @@ final class lf {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -13078) {
-          lf.a(-16);
+          lf.releaseStatics(-16);
         }
     }
 

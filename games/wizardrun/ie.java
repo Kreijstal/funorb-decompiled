@@ -23,7 +23,7 @@ final class ie extends IntrusiveNode {
           if (var2 >= 160) {
             return (char)var2;
           }
-          var3 = ki.field_G[-128 + var2];
+          var3 = LoginChoicePanel.field_G[-128 + var2];
           if (var3 == 0) {
             var3 = 63;
           }
@@ -40,7 +40,7 @@ final class ie extends IntrusiveNode {
         if (var2 >= 160) {
           return (char)var2;
         }
-        var3Lifetime1 = ki.field_G[-128 + var2];
+        var3Lifetime1 = LoginChoicePanel.field_G[-128 + var2];
         if (var3Lifetime1 == 0) {
           var3Lifetime1 = 63;
         }
@@ -53,29 +53,29 @@ final class ie extends IntrusiveNode {
           if (aa.field_lb != null) {
             aa.field_lb.l(-27697);
           }
-          ik.field_G = new tb();
-          td.field_f.c(ik.field_G, -128);
+          LabeledField.field_G = new tb();
+          td.field_f.c(LabeledField.field_G, -128);
           return;
         }
         field_l = (IntrusiveDeque) null;
         if (aa.field_lb != null) {
           aa.field_lb.l(-27697);
         }
-        ik.field_G = new tb();
-        td.field_f.c(ik.field_G, -128);
+        LabeledField.field_G = new tb();
+        td.field_f.c(LabeledField.field_G, -128);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
-          mg var2 = (mg) null;
-          ie.a(35, (mg) null);
+          IsaacPacketBuffer var2 = (IsaacPacketBuffer) null;
+          ie.a(35, (IsaacPacketBuffer) null);
           field_l = null;
           return;
         }
         field_l = null;
     }
 
-    final static ca[] a(int param0, mg param1) {
+    final static ca[] a(int param0, IsaacPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -92,26 +92,26 @@ final class ie extends IntrusiveNode {
         RuntimeException var2 = null;
         var7 = wizardrun.field_H;
         try {
-          var2_int = param1.g(8, -11719);
+          var2_int = param1.readBits(8, -11719);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (ca[]) (stackIn_3_0);
           }
-          var3 = param1.g(param0, -11719);
+          var3 = param1.readBits(param0, -11719);
           var4 = new ca[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!oe.a((byte) -55, param1)) {
-              var6 = param1.g(GameApplet.a(var5 - 1, true), -11719);
+            if (!IntHashTable.a((byte) -55, param1)) {
+              var6 = param1.readBits(GameApplet.a(var5 - 1, true), -11719);
               var4[var5] = var4[var6];
             } else {
               var6_ref_ca = new ca();
-              param1.g(24, -11719);
-              param1.g(24, -11719);
-              var6_ref_ca.field_b = param1.g(24, param0 - 11731);
-              param1.g(9, -11719);
-              param1.g(12, -11719);
-              param1.g(12, param0 ^ -11723);
-              param1.g(12, -11719);
+              param1.readBits(24, -11719);
+              param1.readBits(24, -11719);
+              var6_ref_ca.field_b = param1.readBits(24, param0 - 11731);
+              param1.readBits(9, -11719);
+              param1.readBits(12, -11719);
+              param1.readBits(12, param0 ^ -11723);
+              param1.readBits(12, -11719);
               var4[var5] = var6_ref_ca;
             }
           }
@@ -127,7 +127,7 @@ final class ie extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

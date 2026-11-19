@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qj {
-    static ji field_e;
+    static MidiTrack field_e;
     static String field_c;
     static String field_b;
     static String field_f;
@@ -14,10 +14,10 @@ final class qj {
         if (param3 != 1) {
           return;
         }
-        ig.a(this.field_g, param4, (byte) -110, param1, param2, param0);
+        CacheEntry.a(this.field_g, param4, (byte) -110, param1, param2, param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != -6145) {
@@ -42,7 +42,7 @@ final class qj {
           if (param0 != -100) {
             qj.a(false);
           }
-          var2_int = param1.f(255);
+          var2_int = param1.readUnsignedByte(255);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;
@@ -57,7 +57,7 @@ final class qj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class qj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class qj {
           }
           return stackIn_15_0;
         }
-        qj.a(42);
+        qj.releaseStatics(42);
         param1 = param1 & 8191;
         if (param1 < 4096) {
           if (param1 < 2048) {
@@ -159,7 +159,7 @@ final class qj {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

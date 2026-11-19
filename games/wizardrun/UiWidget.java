@@ -7,19 +7,19 @@ class UiWidget extends IntrusiveNode {
     static boolean field_m;
     int field_l;
     int field_i;
-    bf field_w;
+    WidgetRenderer field_w;
     boolean field_v;
-    static kl field_x;
+    static ResourceArchive field_x;
     String field_p;
     int field_q;
     int field_r;
     int field_n;
     String field_k;
-    static si field_t;
+    static BufferedRandomAccessFile field_t;
     int field_o;
-    ce field_s;
+    WidgetListener field_s;
     int field_j;
-    af field_u;
+    TextLayout field_u;
 
     final boolean a(int param0, int param1, char param2) {
         int var4_int = 0;
@@ -42,7 +42,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var4), "ub.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) var4), "ub.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ class UiWidget extends IntrusiveNode {
         try {
           if (null != param0 &&
             param0.length() >= ca.field_f &&
-            param0.length() <= af.field_e) {
+            param0.length() <= TextLayout.field_e) {
             if (param1 <= 43) {
               UiWidget.a(117, -70);
             }
@@ -72,7 +72,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 8) {
-            field_x = (kl) null;
+            field_x = (ResourceArchive) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ class UiWidget extends IntrusiveNode {
         try {
           var4_int = this.e((byte) 33);
           if (!param0) {
-            this.field_s = (ce) null;
+            this.field_s = (WidgetListener) null;
           }
           var5_int = 0;
           while (var4_int >= var5_int) {
@@ -262,13 +262,13 @@ class UiWidget extends IntrusiveNode {
           }
           var5 = ne.b((byte) -50);
           if (null != var5) {
-            kc.field_H.a(ag.field_u, uc.field_a, var5, 91);
+            ValidationIndicator.field_H.a(StrongCacheEntry.field_u, uc.field_a, var5, 91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) runtimeException), "ub.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ub.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -282,19 +282,19 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ub.toString()");
+          throw bd.wrapException((Throwable) ((Object) var1), "ub.toString()");
         }
     }
 
     final static void a(int param0, int param1) {
-        mg var2 = null;
+        IsaacPacketBuffer var2 = null;
         try {
           var2 = n.field_b;
           var2.c((byte) -96, param1);
-          var2.b((byte) 11, 1);
-          var2.b((byte) 11, param0);
+          var2.writeByte((byte) 11, 1);
+          var2.writeByte((byte) 11, param0);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ub.D(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ub.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -303,14 +303,14 @@ class UiWidget extends IntrusiveNode {
         RuntimeException var2 = null;
         try {
           if (param0 <= 108) {
-            field_x = (kl) null;
+            field_x = (ResourceArchive) null;
           }
           this.a(121, this.field_l, this.field_n, this.field_r, this.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "ub.A(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "ub.A(" + param0 + ')');
         }
     }
 
@@ -324,7 +324,7 @@ class UiWidget extends IntrusiveNode {
           this.field_n = param2;
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ub.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ub.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -363,7 +363,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ class UiWidget extends IntrusiveNode {
             this.a((StringBuilder) null, (Hashtable) null, -7, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ub.S(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ub.S(" + param0 + ')');
         }
     }
 
@@ -383,17 +383,17 @@ class UiWidget extends IntrusiveNode {
         try {
           if (param2 == param1 &&
             this.field_w != null) {
-            this.field_w.a(param0, param3, this, true, true);
+            this.field_w.drawWidget(param0, param3, this, true, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var5), "ub.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw bd.wrapException((Throwable) ((Object) var5), "ub.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    String c(boolean param0) {
+    String getTooltip(boolean param0) {
         RuntimeException var2 = null;
         String stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -410,7 +410,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "ub.V(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "ub.V(" + param0 + ')');
         }
     }
 
@@ -438,23 +438,23 @@ class UiWidget extends IntrusiveNode {
           }
           var2_long = d.a((byte) 35);
           if (ge.field_j != 0 &&
-            p.field_W < 0) {
+            ValidatedTextField.field_W < 0) {
             var4_ref_hb = (hb) (wg.field_c.b((byte) 125));
             if (var4_ref_hb != null &&
               var2_long > var4_ref_hb.field_p) {
               var4_ref_hb.a(false);
               DelegatingCanvas.field_c = var4_ref_hb.field_l.length;
-              nk.field_N.position = 0;
+              AccountCreationForm.field_N.position = 0;
               var5_int = 0;
               do {
                 if (!(DelegatingCanvas.field_c > var5_int)) {
-                  l.field_P = wizardrun.field_E;
+                  ValidationHelpWidget.field_P = wizardrun.field_E;
                   wizardrun.field_E = me.field_c;
                   me.field_c = ra.field_k;
                   ra.field_k = var4_ref_hb.field_j;
                   break;
                 }
-                nk.field_N.payload[var5_int] = var4_ref_hb.field_l[var5_int];
+                AccountCreationForm.field_N.payload[var5_int] = var4_ref_hb.field_l[var5_int];
                 var5_int++;
               } while (var7 == 0);
               return true;
@@ -462,17 +462,17 @@ class UiWidget extends IntrusiveNode {
           }
           while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (p.field_W < 0) {
-              nk.field_N.position = 0;
+            if (ValidatedTextField.field_W < 0) {
+              AccountCreationForm.field_N.position = 0;
               stackIn_38_0 = hc.a(1, param0 ^ -28266);
               decompiledFrameRemainder0 = (var7 == 0);
               if (decompiledFrameRemainder0) {
                 if (!stackIn_38_0) {
                   return false;
                 }
-                p.field_W = nk.field_N.m(45);
-                nk.field_N.position = 0;
-                DelegatingCanvas.field_c = param1[p.field_W];
+                ValidatedTextField.field_W = AccountCreationForm.field_N.readCipheredOpcode(45);
+                AccountCreationForm.field_N.position = 0;
+                DelegatingCanvas.field_c = param1[ValidatedTextField.field_W];
               }
             }
             if (decompiledFrameRemainder0) {
@@ -482,11 +482,11 @@ class UiWidget extends IntrusiveNode {
               return false;
             }
             if (0 == ge.field_j) {
-              l.field_P = wizardrun.field_E;
+              ValidationHelpWidget.field_P = wizardrun.field_E;
               wizardrun.field_E = me.field_c;
               me.field_c = ra.field_k;
-              ra.field_k = p.field_W;
-              p.field_W = -1;
+              ra.field_k = ValidatedTextField.field_W;
+              ValidatedTextField.field_W = -1;
               return true;
             }
             var4 = ge.field_j;
@@ -496,15 +496,15 @@ class UiWidget extends IntrusiveNode {
                 var4 = 0;
               }
             }
-            var5 = new hb((long)var4 + var2_long, p.field_W, new byte[DelegatingCanvas.field_c]);
+            var5 = new hb((long)var4 + var2_long, ValidatedTextField.field_W, new byte[DelegatingCanvas.field_c]);
             var6 = 0;
             do {
               if (!(var6 < DelegatingCanvas.field_c)) {
                 wg.field_c.a(var5, false);
-                p.field_W = -1;
+                ValidatedTextField.field_W = -1;
                 break;
               }
-              var5.field_l[var6] = nk.field_N.payload[var6];
+              var5.field_l[var6] = AccountCreationForm.field_N.payload[var6];
               var6++;
             } while (var7 == 0);
           }
@@ -518,7 +518,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(')').toString());
         }
     }
 
@@ -535,7 +535,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var6), "ub.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.wrapException((Throwable) ((Object) var6), "ub.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -558,24 +558,24 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param5).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_x = null;
           if (param0 != 31) {
-            field_x = (kl) null;
+            field_x = (ResourceArchive) null;
           }
           field_t = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "ub.AA(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "ub.AA(" + param0 + ')');
         }
     }
 
@@ -585,14 +585,14 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 23) {
-            UiWidget.f((byte) 70);
+            UiWidget.releaseStatics((byte) 70);
           }
           stackIn_4_0 = 0;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "ub.I(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "ub.I(" + param0 + ')');
         }
     }
 
@@ -617,7 +617,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -673,13 +673,13 @@ class UiWidget extends IntrusiveNode {
             }
           }
           il.field_c = sh.field_c;
-          d.a(this.c(false), 0);
+          d.a(this.getTooltip(false), 0);
           stackIn_48_0 = param1;
           return stackIn_48_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var5), "ub.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw bd.wrapException((Throwable) ((Object) var5), "ub.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -694,7 +694,7 @@ class UiWidget extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "ub.O(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "ub.O(" + param0 + ')');
         }
     }
 
@@ -721,11 +721,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, kl param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_367_0 = null;
         StringBuilder stackIn_367_1 = null;
         String stackIn_368_2 = null;
@@ -934,23 +934,23 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime24 = uf.a("captions,0", 121);
           if (var2Lifetime24 != null) {
-            l.field_O[0] = nf.a((byte) 88, var2Lifetime24);
+            ValidationHelpWidget.field_O[0] = nf.a((byte) 88, var2Lifetime24);
           }
           var2Lifetime25 = uf.a("captions,1", 121);
           if (null != var2Lifetime25) {
-            l.field_O[1] = nf.a((byte) 91, var2Lifetime25);
+            ValidationHelpWidget.field_O[1] = nf.a((byte) 91, var2Lifetime25);
           }
           var2Lifetime26 = uf.a("captions,2", 111);
           if (null != var2Lifetime26) {
-            l.field_O[2] = nf.a((byte) 94, var2Lifetime26);
+            ValidationHelpWidget.field_O[2] = nf.a((byte) 94, var2Lifetime26);
           }
           var2Lifetime27 = uf.a("captions,3", 118);
           if (var2Lifetime27 != null) {
-            l.field_O[3] = nf.a((byte) 112, var2Lifetime27);
+            ValidationHelpWidget.field_O[3] = nf.a((byte) 112, var2Lifetime27);
           }
           var2Lifetime28 = uf.a("gamename", 109);
           if (null != var2Lifetime28) {
-            vk.field_u = nf.a((byte) 127, var2Lifetime28);
+            MidiNote.field_u = nf.a((byte) 127, var2Lifetime28);
           }
           var2Lifetime29 = uf.a("openmenu", 116);
           if (null != var2Lifetime29) {
@@ -970,7 +970,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime33 = uf.a("movelr", 107);
           if (var2Lifetime33 != null) {
-            og.field_P = nf.a((byte) 86, var2Lifetime33);
+            EditableTextWidget.field_P = nf.a((byte) 86, var2Lifetime33);
           }
           var2Lifetime34 = uf.a("snd", 116);
           if (null != var2Lifetime34) {
@@ -978,19 +978,19 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime35 = uf.a("mus", 113);
           if (null != var2Lifetime35) {
-            jd.field_a = nf.a((byte) 93, var2Lifetime35);
+            DualLinkNodeHashTable.field_a = nf.a((byte) 93, var2Lifetime35);
           }
           var2Lifetime36 = uf.a("musbar", 107);
           if (null != var2Lifetime36) {
-            qk.field_i = nf.a((byte) 125, var2Lifetime36);
+            WhirlpoolHasher.field_i = nf.a((byte) 125, var2Lifetime36);
           }
           var2Lifetime37 = uf.a("sndbar", 121);
           if (var2Lifetime37 != null) {
-            qc.field_N = nf.a((byte) 125, var2Lifetime37);
+            LoginForm.field_N = nf.a((byte) 125, var2Lifetime37);
           }
           var2Lifetime38 = uf.a("holdxspace", 113);
           if (var2Lifetime38 != null) {
-            ei.field_m = nf.a((byte) 112, var2Lifetime38);
+            RasterSnapshot.field_m = nf.a((byte) 112, var2Lifetime38);
           }
           var2Lifetime39 = uf.a("presszup", 113);
           if (var2Lifetime39 != null) {
@@ -1018,7 +1018,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime45 = uf.a("fgc", 127);
           if (var2Lifetime45 != null) {
-            i.field_d = nf.a((byte) 113, var2Lifetime45);
+            PcmResampler.field_d = nf.a((byte) 113, var2Lifetime45);
           }
           var2Lifetime46 = uf.a("andthat", 122);
           if (var2Lifetime46 != null) {
@@ -1030,15 +1030,15 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime48 = uf.a("todefeattheboss", 114);
           if (var2Lifetime48 != null) {
-            jd.field_c = nf.a((byte) 126, var2Lifetime48);
+            DualLinkNodeHashTable.field_c = nf.a((byte) 126, var2Lifetime48);
           }
           var2Lifetime49 = uf.a("threecreatures", 117);
           if (var2Lifetime49 != null) {
-            he.field_r = nf.a((byte) 122, var2Lifetime49);
+            MidiNoteMixer.field_r = nf.a((byte) 122, var2Lifetime49);
           }
           var2Lifetime50 = uf.a("lastlevelbeforeboss", 108);
           if (var2Lifetime50 != null) {
-            ab.field_b = nf.a((byte) 87, var2Lifetime50);
+            IntrusiveNodeHashTable.field_b = nf.a((byte) 87, var2Lifetime50);
           }
           var2Lifetime51 = uf.a("becareful", 113);
           if (null != var2Lifetime51) {
@@ -1046,7 +1046,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime52 = uf.a("usingstarpowerisfun", 109);
           if (var2Lifetime52 != null) {
-            ag.field_w = nf.a((byte) 112, var2Lifetime52);
+            StrongCacheEntry.field_w = nf.a((byte) 112, var2Lifetime52);
           }
           var2Lifetime53 = uf.a("charrrrge", 117);
           if (null != var2Lifetime53) {
@@ -1058,7 +1058,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime55 = uf.a("yummycrystals", 123);
           if (null != var2Lifetime55) {
-            cd.field_h = nf.a((byte) 94, var2Lifetime55);
+            DiskCacheWorker.field_h = nf.a((byte) 94, var2Lifetime55);
           }
           var2Lifetime56 = uf.a("crystalsgrow", 111);
           if (var2Lifetime56 != null) {
@@ -1078,11 +1078,11 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime60 = uf.a("pressattack", 127);
           if (null != var2Lifetime60) {
-            i.field_c = nf.a((byte) 127, var2Lifetime60);
+            PcmResampler.field_c = nf.a((byte) 127, var2Lifetime60);
           }
           var2Lifetime61 = uf.a("usearrows", 119);
           if (null != var2Lifetime61) {
-            r.field_c = nf.a((byte) 115, var2Lifetime61);
+            TimedValidator.field_c = nf.a((byte) 115, var2Lifetime61);
           }
           var2Lifetime62 = uf.a("pressenterorclick", 119);
           if (null != var2Lifetime62) {
@@ -1090,7 +1090,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime63 = uf.a("logintoaccess", 124);
           if (null != var2Lifetime63) {
-            dj.field_c = nf.a((byte) 123, var2Lifetime63);
+            ByteStorage.field_c = nf.a((byte) 123, var2Lifetime63);
           }
           var2Lifetime64 = uf.a("psfhs", 111);
           if (var2Lifetime64 != null) {
@@ -1106,7 +1106,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime67 = uf.a("hs3", 125);
           if (null != var2Lifetime67) {
-            af.field_b = nf.a((byte) 124, var2Lifetime67);
+            TextLayout.field_b = nf.a((byte) 124, var2Lifetime67);
           }
           var2Lifetime68 = uf.a("hs2", 125);
           if (null != var2Lifetime68) {
@@ -1118,7 +1118,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime70 = uf.a("compltex", 121);
           if (null != var2Lifetime70) {
-            q.field_l = nf.a((byte) 119, var2Lifetime70);
+            MidiEnvelope.field_l = nf.a((byte) 119, var2Lifetime70);
           }
           var2Lifetime71 = uf.a("lastscor", 120);
           if (null != var2Lifetime71) {
@@ -1145,7 +1145,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime76 = uf.a("loginn", 122);
           if (null != var2Lifetime76) {
-            ue.field_b = nf.a((byte) 100, var2Lifetime76);
+            SoundCache.field_b = nf.a((byte) 100, var2Lifetime76);
           }
           var2Lifetime77 = uf.a("levelonly", 121);
           if (var2Lifetime77 != null) {
@@ -1153,7 +1153,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime78 = uf.a("levelnotyet", 110);
           if (var2Lifetime78 != null) {
-            si.field_g = nf.a((byte) 89, var2Lifetime78);
+            BufferedRandomAccessFile.field_g = nf.a((byte) 89, var2Lifetime78);
           }
           var2Lifetime79 = uf.a("worldspace", 110);
           if (null != var2Lifetime79) {
@@ -1165,7 +1165,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime81 = uf.a("theice", 120);
           if (null != var2Lifetime81) {
-            wi.field_H = nf.a((byte) 98, var2Lifetime81);
+            DialogLayer.field_H = nf.a((byte) 98, var2Lifetime81);
           }
           var2Lifetime82 = uf.a("thetro", 109);
           if (var2Lifetime82 != null) {
@@ -1229,7 +1229,7 @@ class UiWidget extends IntrusiveNode {
           }
           var2Lifetime97 = uf.a("tut", 109);
           if (var2Lifetime97 != null) {
-            l.field_Q = nf.a((byte) 96, var2Lifetime97);
+            ValidationHelpWidget.field_Q = nf.a((byte) 96, var2Lifetime97);
           }
           var2Lifetime98 = uf.a("introtex", 114);
           if (var2Lifetime98 != null) {
@@ -1263,7 +1263,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_368_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_367_0), ((StringBuilder) (Object) stackIn_367_1).append(stackIn_368_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_367_0), ((StringBuilder) (Object) stackIn_367_1).append(stackIn_368_2).append(')').toString());
         }
     }
 
@@ -1279,7 +1279,7 @@ class UiWidget extends IntrusiveNode {
         try {
           var5_int = this.b(fi.field_B, pg.field_n, 0, param2, param1) ? 1 : 0;
           if (param0 != 10000536) {
-            UiWidget.a(101, (kl) null);
+            UiWidget.a(101, (ResourceArchive) null);
           }
           stackIn_6_0 = this.field_v;
           if (var5_int != 0) {
@@ -1290,8 +1290,8 @@ class UiWidget extends IntrusiveNode {
           if ((stackIn_6_0 ? 1 : 0) == stackIn_7_1) {
             this.field_v = var5_int != 0;
             if (this.field_s != null &&
-              this.field_s instanceof ij) {
-              ((ij) (this.field_s)).a(var5_int != 0, -12361, this);
+              this.field_s instanceof HoverListener) {
+              ((HoverListener) (this.field_s)).onHoverChanged(var5_int != 0, -12361, this);
             }
           }
           return;
@@ -1305,12 +1305,12 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    UiWidget(String param0, ce param1) {
-        this(param0, kc.field_H.field_u, param1);
+    UiWidget(String param0, WidgetListener param1) {
+        this(param0, ValidationIndicator.field_H.field_u, param1);
     }
 
     protected UiWidget() {
@@ -1318,7 +1318,7 @@ class UiWidget extends IntrusiveNode {
         this.field_j = 0;
     }
 
-    UiWidget(String param0, bf param1, ce param2) {
+    UiWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
         qe var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -1363,11 +1363,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, bf param4, ce param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1401,7 +1401,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

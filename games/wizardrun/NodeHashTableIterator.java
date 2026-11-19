@@ -15,10 +15,10 @@ final class NodeHashTableIterator implements Iterator {
     private int field_f;
     static int field_g;
     static rc field_j;
-    static c field_k;
+    static AudioOutput field_k;
     private IntrusiveNode field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_c = null;
         field_b = null;
@@ -163,7 +163,7 @@ final class NodeHashTableIterator implements Iterator {
             }
           }
           if (param0 != -111) {
-            NodeHashTableIterator.a(-75);
+            NodeHashTableIterator.releaseStatics(-75);
           }
           stackIn_69_0 = var3;
           return stackIn_69_0;
@@ -177,7 +177,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class NodeHashTableIterator implements Iterator {
           this.field_i = param0;
           this.a((byte) -67);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

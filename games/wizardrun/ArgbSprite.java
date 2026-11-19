@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends Sprite {
-    final void d(int param0, int param1, int param2) {
+    final void drawRecoloredNeutral(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -43,12 +43,12 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blendShadedGrayscaleRows(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitArgbScaledAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -80,7 +80,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void c(int param0, int param1) {
+    final void drawWithOffsets(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -121,12 +121,12 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blendArgbRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -731,7 +731,7 @@ final class ArgbSprite extends Sprite {
         return;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -798,12 +798,12 @@ final class ArgbSprite extends Sprite {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.blitArgbScaled(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawMirrored(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -844,12 +844,12 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blendArgbReversedRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -872,7 +872,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -913,12 +913,12 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendShadedGrayscaleRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$6 = 0;
@@ -972,7 +972,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledIntensity(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -989,7 +989,7 @@ final class ArgbSprite extends Sprite {
         int var16Lifetime1;
         int var16Lifetime2;
         if (param4 == 256) {
-          this.a(param0, param1, param2, param3);
+          this.drawScaled(param0, param1, param2, param3);
           return;
         }
         if (param2 > 0) {
@@ -1048,7 +1048,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void addArgbRows(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         int var14;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -1074,7 +1074,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1141,12 +1141,12 @@ final class ArgbSprite extends Sprite {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -1245,7 +1245,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawTintedGrayscale(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1286,12 +1286,12 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.blendTintedGrayscaleRows(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    final void e(int param0, int param1) {
+    final void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1332,12 +1332,12 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blendArgbRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendArgbReversedRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -1369,7 +1369,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1);
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitArgbScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1400,7 +1400,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendArgbRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -1428,7 +1428,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1469,12 +1469,12 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.addArgbRows(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blendTintedGrayscaleRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$1 = 0;
         int var12;
         int var13;
@@ -1512,7 +1512,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawQuarterSize(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int stackIn_3_0 = 0;

@@ -57,7 +57,7 @@ final class bi {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class bi {
             if (0 != var7) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = ki.field_G[var7 - 128];
+                var8 = LoginChoicePanel.field_G[var7 - 128];
                 if (var8 == 0) {
                   var8 = 63;
                 }
@@ -122,7 +122,7 @@ final class bi {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class bi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

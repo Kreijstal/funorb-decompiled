@@ -17,9 +17,9 @@ final class d {
         int var3 = 0;
         var3 = wizardrun.field_H;
         try {
-          if (og.field_O == -1 &&
+          if (EditableTextWidget.field_O == -1 &&
             ee.field_r == -1) {
-            og.field_O = pg.field_n;
+            EditableTextWidget.field_O = pg.field_n;
             ee.field_r = fi.field_B;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -32,7 +32,7 @@ final class d {
           if (decompiledFrameRemainder0) {
             if (!ol.field_b) {
               if (jc.field_I <= IterableNodeHashTable.field_b) {
-                stackIn_16_0 = (jc.field_I + ll.field_o > IterableNodeHashTable.field_b) ? 1 : 0;
+                stackIn_16_0 = (jc.field_I + WidgetPainter.field_o > IterableNodeHashTable.field_b) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -53,7 +53,7 @@ final class d {
                 }
               }
             }
-            uc.field_a = og.field_O;
+            uc.field_a = EditableTextWidget.field_O;
             if (param0 == null) {
               if (var2_int != 0) {
                 ol.field_b = true;
@@ -61,23 +61,23 @@ final class d {
             } else {
               ol.field_b = false;
             }
-            ag.field_u = ee.field_r;
+            StrongCacheEntry.field_u = ee.field_r;
           }
           if (!ol.field_b &&
             jc.field_I > IterableNodeHashTable.field_b &&
             ih.field_a) {
-            ag.field_u = ee.field_r;
-            uc.field_a = og.field_O;
+            StrongCacheEntry.field_u = ee.field_r;
+            uc.field_a = EditableTextWidget.field_O;
             IterableNodeHashTable.field_b = 0;
           }
           vb.field_I = param0;
           ee.field_r = -1;
-          og.field_O = -1;
+          EditableTextWidget.field_O = -1;
           if (param1 != 0) {
             d.a(false, 'b');
           }
           if (ol.field_b &&
-            q.field_b == IterableNodeHashTable.field_b) {
+            MidiEnvelope.field_b == IterableNodeHashTable.field_b) {
             ol.field_b = false;
             IterableNodeHashTable.field_b = 0;
             return;
@@ -93,11 +93,11 @@ final class d {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -5309) {
           field_c = null;
           field_b = null;
@@ -126,7 +126,7 @@ final class d {
 
     final static boolean a(boolean param0, char param1) {
         if (!param0) {
-          d.a(87);
+          d.releaseStatics(87);
           if (160 == param1) {
             return true;
           }

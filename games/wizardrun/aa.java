@@ -39,11 +39,11 @@ final class aa extends hh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_ib = null;
           field_kb = null;

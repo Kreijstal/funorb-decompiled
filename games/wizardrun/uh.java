@@ -40,7 +40,7 @@ abstract class uh {
             }
             return !(param0 <= param1);
           }
-          uh.a(-121);
+          uh.releaseStatics(-121);
           var5Lifetime3 = MouseInputHandler.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
           if (var5Lifetime3 > var4) {
             return true;
@@ -64,7 +64,7 @@ abstract class uh {
         }
         var4Lifetime1 = sk.field_B[param1] + MouseInputHandler.field_c[param1] + mk.field_c[param1];
         if (param3 != -54) {
-          uh.a(-121);
+          uh.releaseStatics(-121);
           var5Lifetime1 = MouseInputHandler.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
@@ -92,7 +92,7 @@ abstract class uh {
     final static void a(byte param0) {
         GameShell.field_A.d(false);
         if (ProxySocketConnector.field_e == null) {
-          ProxySocketConnector.field_e = new hk(GameShell.field_A, bh.field_a);
+          ProxySocketConnector.field_e = new ProgressDialog(GameShell.field_A, bh.field_a);
         }
         GameShell.field_A.b((UiWidget) (ProxySocketConnector.field_e), (byte) 73);
         int var1 = -118 % ((76 - param0) / 49);
@@ -100,7 +100,7 @@ abstract class uh {
 
     abstract void a(int param0, PacketBuffer param1);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 == 8192) {
           field_e = null;
@@ -108,7 +108,7 @@ abstract class uh {
           field_f = null;
           return;
         }
-        uh.a(-86);
+        uh.releaseStatics(-86);
         field_e = null;
         field_b = null;
         field_f = null;

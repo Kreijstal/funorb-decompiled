@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class we {
-    static ll field_d;
+    static WidgetPainter field_d;
     static String field_a;
     static sf field_c;
     static Sprite field_b;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -7077) {
           field_a = null;
           field_d = null;
@@ -42,7 +42,7 @@ final class we {
         try {
           w.a(param16, param11, param10, param14, param2, param5, param20, param0, param7, param6, param8, new qj(param4), param15, (byte) -118, new qj(param19), param18, param13, new qj(param17), param12, param3, param9);
           if (param1 > -44) {
-            we.a(-54);
+            we.releaseStatics(-54);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,7 +79,7 @@ final class we {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
         }
     }
 

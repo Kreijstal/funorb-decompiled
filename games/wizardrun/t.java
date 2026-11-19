@@ -14,17 +14,17 @@ final class t {
         RuntimeException var1_ref = null;
         var4 = wizardrun.field_H;
         try {
-          var1 = ff.keyHandler;
+          var1 = HotspotTextWidget.keyHandler;
           synchronized (var1) {
-            h.keyIdleTime = h.keyIdleTime + 1;
+            MusicPatch.keyIdleTime = MusicPatch.keyIdleTime + 1;
             tg.keyQueueReadIndex = ph.field_r;
-            if (param0 < ~wk.keyEventWriteIndex) {
+            if (param0 < ~GzipDecompressor.keyEventWriteIndex) {
               for (var2 = 0; var2 < 112; var2++) {
                 BufferedSocket.field_p[var2] = false;
               }
-              wk.keyEventWriteIndex = lk.keyEventReadIndex;
+              GzipDecompressor.keyEventWriteIndex = lk.keyEventReadIndex;
             } else {
-              while (wk.keyEventWriteIndex != lk.keyEventReadIndex) {
+              while (GzipDecompressor.keyEventWriteIndex != lk.keyEventReadIndex) {
                 var2 = wd.keyEventQueue[lk.keyEventReadIndex];
                 lk.keyEventReadIndex = 127 & lk.keyEventReadIndex + 1;
                 if (var2 >= 0) {
@@ -40,11 +40,11 @@ final class t {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1_ref), "t.B(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1_ref), "t.B(" + param0 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 <= 10) {
           return;

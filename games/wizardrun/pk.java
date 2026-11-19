@@ -8,11 +8,11 @@ final class pk extends IntrusiveNode {
     int[] field_p;
     int[] field_t;
     byte[][][] field_k;
-    jh[] field_l;
+    AsyncRequest[] field_l;
     static volatile boolean field_o;
     static String field_q;
-    static vi field_n;
-    jh[] field_m;
+    static PcmStreamMixer field_n;
+    AsyncRequest[] field_m;
     int[] field_j;
 
     final static void a(Sprite param0, boolean param1) {
@@ -21,15 +21,15 @@ final class pk extends IntrusiveNode {
             Sprite var3 = (Sprite) null;
             pk.a((Sprite) null, true);
           }
-          ag.field_v = param0;
+          StrongCacheEntry.field_v = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(byte param0) {
         if (param0 != -35) {
-          pk.a(63);
+          pk.releaseStatics(63);
           if (null == kj.field_b) {
             return false;
           }
@@ -47,7 +47,7 @@ final class pk extends IntrusiveNode {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_q = null;
         if (param0 != -15563) {

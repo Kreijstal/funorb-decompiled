@@ -181,7 +181,7 @@ class hh extends ee {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ class hh extends ee {
         int var1 = 38 % ((param0 - 26) / 45);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         if (param0 != 30828) {
           field_J = (String) null;
@@ -241,7 +241,7 @@ class hh extends ee {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

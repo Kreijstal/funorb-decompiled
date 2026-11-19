@@ -5,7 +5,7 @@ final class kj {
     static IntrusiveDeque field_d;
     static ae field_c;
     static String field_e;
-    static wi field_b;
+    static DialogLayer field_b;
     static int field_a;
 
     final static void a(int param0, int param1, int param2) {
@@ -34,7 +34,7 @@ final class kj {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                jd.field_b = (int)(var3.longValue() / 1048576L) + 1;
+                DualLinkNodeHashTable.field_b = (int)(var3.longValue() / 1048576L) + 1;
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class kj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 63) {
           field_b = null;
           field_c = null;
@@ -66,7 +66,7 @@ final class kj {
           field_d = null;
           return;
         }
-        field_b = (wi) null;
+        field_b = (DialogLayer) null;
         field_b = null;
         field_c = null;
         field_e = null;

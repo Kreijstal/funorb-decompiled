@@ -12,7 +12,7 @@ final class sc extends IntrusiveNode {
     static jk field_m;
     static String field_l;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -76) {
           field_l = null;
           field_i = null;
@@ -28,12 +28,12 @@ final class sc extends IntrusiveNode {
         field_m = null;
     }
 
-    final static kl a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          fh var8 = null;
-          kl stackIn_14_0 = null;
+          CachedArchiveProvider var8 = null;
+          ResourceArchive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param1 != 12000) {
@@ -41,26 +41,26 @@ final class sc extends IntrusiveNode {
             }
             var6 = null;
             var7 = null;
-            if (vk.field_p.field_m != null) {
-              ld.field_e = new si(vk.field_p.field_m, 5200, 0);
-              vk.field_p.field_m = null;
-              var6 = new sg(255, ld.field_e, new si(vk.field_p.field_i, 12000, 0), 2097152);
+            if (MidiNote.field_p.field_m != null) {
+              ld.field_e = new BufferedRandomAccessFile(MidiNote.field_p.field_m, 5200, 0);
+              MidiNote.field_p.field_m = null;
+              var6 = new DiskCacheStore(255, ld.field_e, new BufferedRandomAccessFile(MidiNote.field_p.field_i, 12000, 0), 2097152);
             }
             if (ld.field_e != null) {
-              if (null == sl.field_o) {
-                sl.field_o = new si[vk.field_p.field_f.length];
+              if (null == SocketJs5Transport.field_o) {
+                SocketJs5Transport.field_o = new BufferedRandomAccessFile[MidiNote.field_p.field_f.length];
               }
-              if (sl.field_o[param0] == null) {
-                sl.field_o[param0] = new si(vk.field_p.field_f[param0], 12000, 0);
-                vk.field_p.field_f[param0] = null;
+              if (SocketJs5Transport.field_o[param0] == null) {
+                SocketJs5Transport.field_o[param0] = new BufferedRandomAccessFile(MidiNote.field_p.field_f[param0], 12000, 0);
+                MidiNote.field_p.field_f[param0] = null;
               }
-              var7 = new sg(param0, ld.field_e, sl.field_o[param0], 2097152);
+              var7 = new DiskCacheStore(param0, ld.field_e, SocketJs5Transport.field_o[param0], 2097152);
             }
-            var8 = wi.field_L.a(param3, param1 - 11928, (sg) (var7), param0, (sg) (var6));
+            var8 = DialogLayer.field_L.a(param3, param1 - 11928, (DiskCacheStore) (var7), param0, (DiskCacheStore) (var6));
             if (param4) {
               var8.a((byte) -98);
             }
-            stackIn_14_0 = new kl(var8, param5, param2);
+            stackIn_14_0 = new ResourceArchive(var8, param5, param2);
             return stackIn_14_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,7 +102,7 @@ final class sc extends IntrusiveNode {
           if (param0.field_c != 0 ||
             param0.field_d != 0) {
             for (var2_int = 0; ca.field_e > var2_int; var2_int++) {
-              var3 = mi.field_B[var2_int];
+              var3 = SingleChildWidget.field_B[var2_int];
               if (var3.field_i == 2 &&
                 param0.field_c == var3.field_c &&
                 var3.field_d == param0.field_d) {
@@ -112,7 +112,7 @@ final class sc extends IntrusiveNode {
           }
           if (param0.field_l != null) {
           }
-          ia.a(0, param0);
+          NanoTickClock.a(0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,7 +124,7 @@ final class sc extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class sc extends IntrusiveNode {
         if (param0 != 0) {
           return 94;
         }
-        return ac.field_t;
+        return QuickChatPhraseDefinition.field_t;
     }
 
     static {

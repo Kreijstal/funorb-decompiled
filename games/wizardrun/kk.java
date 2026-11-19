@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk extends mh implements qd {
-    private nk field_wb;
+final class kk extends mh implements ButtonActionListener {
+    private AccountCreationForm field_wb;
     static int field_xb;
     static boolean field_yb;
     private boolean field_Cb;
@@ -19,12 +19,12 @@ final class kk extends mh implements qd {
         field_xb = 66;
     }
 
-    kk(wi param0, nk param1) {
+    kk(DialogLayer param0, AccountCreationForm param1) {
         super(param0, PacketBuffer.field_i, sc.field_o, false, false);
         try {
           this.field_wb = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class kk extends mh implements qd {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        vc var5 = null;
+        MessagePanel var5 = null;
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
@@ -59,7 +59,7 @@ final class kk extends mh implements qd {
               }
             }
           }
-          var5 = new vc((mh) (this), PacketBuffer.field_i, var4);
+          var5 = new MessagePanel((mh) (this), PacketBuffer.field_i, var4);
           if (!param1.field_i) {
             if (!this.field_Ab) {
               if (param1.field_b != 5) {
@@ -69,7 +69,7 @@ final class kk extends mh implements qd {
                 var5.a((byte) -31, pk.field_q, 17);
               }
             } else {
-              var5.a(0, e.field_e, (ce) (this));
+              var5.a(0, e.field_e, (WidgetListener) (this));
             }
             if (3 == param1.field_b) {
               var5.a((byte) -31, vl.field_g, 7);
@@ -83,7 +83,7 @@ final class kk extends mh implements qd {
               this.c(new re(this), -128);
               return;
             }
-            var5.a(0, e.field_e, (ce) (this));
+            var5.a(0, e.field_e, (WidgetListener) (this));
           }
           if (param2 != 3899) {
             this.p(-101);
@@ -100,11 +100,11 @@ final class kk extends mh implements qd {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_vb = null;
         field_Bb = null;
         if (param0 > 99) {
@@ -128,7 +128,7 @@ final class kk extends mh implements qd {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        mg var14 = null;
+        IsaacPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -136,11 +136,11 @@ final class kk extends mh implements qd {
         int var11Lifetime1;
         var12 = wizardrun.field_H;
         try {
-          var14 = nk.field_N;
-          var2 = var14.f(255);
+          var14 = AccountCreationForm.field_N;
+          var2 = var14.readUnsignedByte(255);
           var3 = (of) (bh.field_b.b((byte) 53));
           if (param0 > -111) {
-            kk.j((byte) -83);
+            kk.releaseStatics((byte) -83);
           }
           while (var3 != null) {
             if (var2 != var3.field_j) {
@@ -153,23 +153,23 @@ final class kk extends mh implements qd {
             ql.a(-93);
             return;
           }
-          var4 = var14.f(255);
+          var4 = var14.readUnsignedByte(255);
           if (var4 != 0) {
             var5 = var3.field_i;
             ld.field_c[0] = d.field_a;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              ld.field_c[var6_int] = var14.d(0);
+              ld.field_c[var6_int] = var14.readCp1252String(0);
             }
             bc.a((byte) -69, var5, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ci.a(2026380485, var14);
               if (var6_intLifetime1 != 0) {
-                rd.a(var6_intLifetime1, ki.field_M, lj.field_a, -82, ia.field_j, bi.field_a);
+                rd.a(var6_intLifetime1, LoginChoicePanel.field_M, lj.field_a, -82, NanoTickClock.field_j, bi.field_a);
               } else {
-                rd.a(var6_intLifetime1, ki.field_M, lj.field_a, -121, ia.field_j, bi.field_a);
+                rd.a(var6_intLifetime1, LoginChoicePanel.field_M, lj.field_a, -121, NanoTickClock.field_j, bi.field_a);
               }
             }
-            fl.f(var5, 16);
+            MidiPcmStream.f(var5, 16);
             var6 = new String[2][var5];
             var18 = new int[2][4 * var5];
             var8 = lg.field_d;
@@ -216,13 +216,13 @@ final class kk extends mh implements qd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "kk.DC(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "kk.DC(" + param0 + ')');
         }
     }
 
-    public final void a(int param0, pl param1, int param2, int param3, int param4) {
+    public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
         if (this.field_Ab) {
-          di.a(true, false, param0 + 19029);
+          WeightedLruCache.a(true, false, param0 + 19029);
           return;
         }
         try {
@@ -232,7 +232,7 @@ final class kk extends mh implements qd {
           }
           this.l(param0 ^ 9704);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "kk.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "kk.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -241,14 +241,14 @@ final class kk extends mh implements qd {
           if (param0 == 1) {
             return super.g(1);
           }
-          kk.j((byte) -27);
+          kk.releaseStatics((byte) -27);
           return super.g(1);
         }
         if (this.field_Cb) {
           if (param0 == 1) {
             return super.g(1);
           }
-          kk.j((byte) -27);
+          kk.releaseStatics((byte) -27);
           return super.g(1);
         }
         wd var2 = IsaacRandom.a((byte) -123);
@@ -257,13 +257,13 @@ final class kk extends mh implements qd {
           if (param0 == 1) {
             return super.g(1);
           }
-          kk.j((byte) -27);
+          kk.releaseStatics((byte) -27);
           return super.g(1);
         }
         if (param0 == 1) {
           return super.g(1);
         }
-        kk.j((byte) -27);
+        kk.releaseStatics((byte) -27);
         return super.g(1);
     }
 

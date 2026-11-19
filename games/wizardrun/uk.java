@@ -2,31 +2,31 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uk {
-    private kl field_a;
-    private di field_d;
+    private ResourceArchive field_a;
+    private WeightedLruCache field_d;
     static Sprite field_b;
-    private kl field_c;
+    private ResourceArchive field_c;
 
-    final ac b(byte param0, int param1) {
+    final QuickChatPhraseDefinition b(byte param0, int param1) {
         byte[] var4 = null;
-        ac var3 = (ac) (this.field_d.a((byte) 70, (long)param1));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_d.a((byte) 70, (long)param1));
         if (var3 != null) {
           return var3;
         }
         if (param0 < 27) {
-          return (ac) null;
+          return (QuickChatPhraseDefinition) null;
         }
         if (param1 >= 32768) {
           var4 = this.field_a.a(param1 & 32767, 1, 1);
         } else {
           var4 = this.field_c.a(param1, 1, 1);
         }
-        var3 = new ac();
+        var3 = new QuickChatPhraseDefinition();
         if (var4 != null) {
           var3.a(new PacketBuffer(var4), 72);
         }
         if (param1 >= 32768) {
-          var3.d((byte) -127);
+          var3.markGlobalPhraseIds((byte) -127);
         }
         this.field_d.a((long)param1, 1, var3);
         return var3;
@@ -63,7 +63,7 @@ final class uk {
             var13 = param8;
             var14 = param9;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = (kl.b(var13, 33423632) >> 9) + ((kl.b(33423361, var12) >> 1) - (-kl.b(255, var14 >> 17) - var15));
+            var10[var11] = (ResourceArchive.b(var13, 33423632) >> 9) + ((ResourceArchive.b(33423361, var12) >> 1) - (-ResourceArchive.b(255, var14 >> 17) - var15));
             param3 = param3 + param1;
             param9 = param9 + param2;
             param4++;
@@ -79,19 +79,19 @@ final class uk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
     final static void a(byte param0, int param1) {
-        wj.field_E = 1000000000L / (long)param1;
+        NameSuggestionsPanel.field_E = 1000000000L / (long)param1;
         if (param0 != 91) {
           field_b = (Sprite) null;
         }
     }
 
     final static void a(int param0) {
-        if (!wi.field_J) {
+        if (!DialogLayer.field_J) {
           throw new IllegalStateException();
         }
         if (param0 != 19702) {
@@ -101,9 +101,9 @@ final class uk {
           aa.field_lb.l(-27697);
         }
         String var1 = qf.c((byte) 77);
-        r.field_b = new qc(var1, (String) null, true, false, false);
+        TimedValidator.field_b = new LoginForm(var1, (String) null, true, false, false);
         GameShell.field_A.b((UiWidget) (td.field_f), (byte) 62);
-        td.field_f.c(r.field_b, -114);
+        td.field_f.c(TimedValidator.field_b, -114);
         td.field_f.g((byte) -3);
     }
 
@@ -149,23 +149,23 @@ final class uk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     final static void a(byte param0, boolean param1, boolean param2) {
         if (param2) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
+          SoftwareRasterizer.fillRectangleBlended(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         } else {
           SoftwareRasterizer.d();
         }
-        od.a(param0 ^ 4, param2);
+        WidgetTheme.a(param0 ^ 4, param2);
         if (param0 != -123) {
           field_b = (Sprite) null;
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -44) {
           uk.a(108);
         }
@@ -176,15 +176,15 @@ final class uk {
         throw new Error();
     }
 
-    final static void a(int param0, kl param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
-        le var5 = null;
+        TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        mg var8 = null;
+        IsaacPacketBuffer var8 = null;
         int var9 = 0;
-        mg var10 = null;
+        IsaacPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -193,24 +193,24 @@ final class uk {
         int var4Lifetime1;
         var7 = wizardrun.field_H;
         try {
-          var8 = new mg(param1.a(93, "", "logo.fo3d"));
+          var8 = new IsaacPacketBuffer(param1.a(93, "", "logo.fo3d"));
           var10 = var8;
-          var3 = var10.f(255);
+          var3 = var10.readUnsignedByte(255);
           var10.l(19967);
           oh.field_a = ie.a(12, var10);
           cb.field_d = new int[var3][];
-          ia.field_f = new le[var3];
+          NanoTickClock.field_f = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
-            ia.field_f[var4] = mh.a((byte) -117, var8);
+            NanoTickClock.field_f[var4] = mh.a((byte) -117, var8);
           }
           var10.i((byte) -31);
           if (param0 <= 115) {
-            uk.a((byte) -19);
+            uk.releaseStatics((byte) -19);
           }
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
-            var5 = ia.field_f[var9];
+            var5 = NanoTickClock.field_f[var9];
             var5.a(6, (byte) 108, 6, 6, 1);
             var5.b(-109);
             var6 = new int[]{var5.field_g + var5.field_r >> 1, var5.field_D + var5.field_K >> 1, var5.field_E + var5.field_M >> 1};
@@ -229,7 +229,7 @@ final class uk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

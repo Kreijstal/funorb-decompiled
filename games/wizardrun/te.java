@@ -7,7 +7,7 @@ final class te extends IntrusiveNode {
     int[] field_l;
     static Sprite[] field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10615) {
           return;
         }
@@ -75,7 +75,7 @@ final class te extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

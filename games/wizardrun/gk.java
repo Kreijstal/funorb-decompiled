@@ -39,7 +39,7 @@ final class gk {
     int field_k;
     static int[] field_o;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_e = null;
         if (param0 >= -69) {
@@ -101,16 +101,16 @@ final class gk {
 
     final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
-          le.field_j = param2;
+          TriangleMesh.field_j = param2;
           uf.field_c = param3;
-          kc.field_I = param1;
+          ValidationIndicator.field_I = param1;
           kj.a(1048576, SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2);
           if (param0 <= 15) {
             field_o = (int[]) null;
           }
-          qk.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
+          WhirlpoolHasher.a(param2.field_B + param2.field_q, param3.field_q, param2.field_q, 1882, param3.field_q + param3.field_B);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "gk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "gk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

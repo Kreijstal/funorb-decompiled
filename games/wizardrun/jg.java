@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends mf {
+final class jg extends TextFieldValidator {
     static boolean field_n;
     static bh field_q;
     private boolean field_s;
@@ -18,8 +18,8 @@ final class jg extends mf {
         GameApplet stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != fl.field_F) {
-            stackIn_2_0 = fl.field_F;
+          if (null != MidiPcmStream.field_F) {
+            stackIn_2_0 = MidiPcmStream.field_F;
             return stackIn_2_0;
           }
           if (param0 != 1) {
@@ -30,7 +30,7 @@ final class jg extends mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "jg.J(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "jg.J(" + param0 + ')');
         }
     }
 
@@ -84,28 +84,28 @@ final class jg extends mf {
         try {
           var2 = new PacketBuffer(param0);
           var2.position = -2 + param0.length;
-          wb.field_f = var2.j(-14477);
+          wb.field_f = var2.readUnsignedShort(-14477);
           if (!param1) {
             return;
           }
-          ue.field_e = new byte[wb.field_f][];
-          mf.field_j = new byte[wb.field_f][];
+          SoundCache.field_e = new byte[wb.field_f][];
+          TextFieldValidator.field_j = new byte[wb.field_f][];
           MouseInputHandler.field_b = new int[wb.field_f];
           ne.field_h = new int[wb.field_f];
           ImageProducerRasterBuffer.field_k = new int[wb.field_f];
           v.field_e = new boolean[wb.field_f];
           ph.field_q = new int[wb.field_f];
           var2.position = param0.length - (7 + 8 * wb.field_f);
-          hk.field_bb = var2.j(-14477);
-          eg.field_v = var2.j(-14477);
-          var3 = 1 + (255 & var2.f(255));
+          ProgressDialog.field_bb = var2.readUnsignedShort(-14477);
+          eg.field_v = var2.readUnsignedShort(-14477);
+          var3 = 1 + (255 & var2.readUnsignedByte(255));
           var4 = 0;
           do {
             if (!(wb.field_f > var4)) {
               var4 = 0;
               break;
             }
-            ph.field_q[var4] = var2.j(-14477);
+            ph.field_q[var4] = var2.readUnsignedShort(-14477);
             var4++;
           } while (var15 == 0);
           do {
@@ -113,7 +113,7 @@ final class jg extends mf {
               var4 = 0;
               break;
             }
-            ne.field_h[var4] = var2.j(-14477);
+            ne.field_h[var4] = var2.readUnsignedShort(-14477);
             var4++;
           } while (var15 == 0);
           do {
@@ -121,7 +121,7 @@ final class jg extends mf {
               var4 = 0;
               break;
             }
-            ImageProducerRasterBuffer.field_k[var4] = var2.j(-14477);
+            ImageProducerRasterBuffer.field_k[var4] = var2.readUnsignedShort(-14477);
             var4++;
           } while (var15 == 0);
           do {
@@ -130,12 +130,12 @@ final class jg extends mf {
               ic.field_b = new int[var3];
               break;
             }
-            MouseInputHandler.field_b[var4] = var2.j(-14477);
+            MouseInputHandler.field_b[var4] = var2.readUnsignedShort(-14477);
             var4++;
           } while (var15 == 0);
           var4 = 1;
           while (var3 > var4) {
-            ic.field_b[var4] = var2.d((byte) 125);
+            ic.field_b[var4] = var2.readUnsignedMedium((byte) 125);
             stackIn_46_0 = ~ic.field_b[var4];
             stackIn_46_1 = -1;
             if (var15 != 0) {
@@ -146,11 +146,11 @@ final class jg extends mf {
               var6 = MouseInputHandler.field_b[var4];
               var7 = var6 * var5;
               var8 = new byte[var7];
-              mf.field_j[var4] = var8;
+              TextFieldValidator.field_j[var4] = var8;
               var9 = new byte[var7];
-              ue.field_e[var4] = var9;
+              SoundCache.field_e[var4] = var9;
               var10 = 0;
-              var11 = var2.f(255);
+              var11 = var2.readUnsignedByte(255);
               return;
             } else {
               if (stackIn_46_0 == stackIn_46_1) {
@@ -174,11 +174,11 @@ final class jg extends mf {
               var6Lifetime1 = MouseInputHandler.field_b[var4];
               var7Lifetime1 = var6Lifetime1 * var5Lifetime1;
               var8Lifetime1 = new byte[var7Lifetime1];
-              mf.field_j[var4] = var8Lifetime1;
+              TextFieldValidator.field_j[var4] = var8Lifetime1;
               var9Lifetime1 = new byte[var7Lifetime1];
-              ue.field_e[var4] = var9Lifetime1;
+              SoundCache.field_e[var4] = var9Lifetime1;
               var10Lifetime1 = 0;
-              var11Lifetime1 = var2.f(255);
+              var11Lifetime1 = var2.readUnsignedByte(255);
               if (var15 != 0) {
                 return;
               }
@@ -190,13 +190,13 @@ final class jg extends mf {
                 if (stackIn_50_0 == (stackIn_50_1 ^ stackIn_50_2)) {
                   var12 = 0;
                   while (var7Lifetime1 > var12) {
-                    var8Lifetime1[var12] = var2.k(0);
+                    var8Lifetime1[var12] = var2.readByte(0);
                     var12++;
                   }
                   if (((2 & var11Lifetime1) != 0)) {
                     var12Lifetime3 = 0;
                     while (var12Lifetime3 < var7Lifetime1) {
-                      dupTemp$0 = var2.k(0);
+                      dupTemp$0 = var2.readByte(0);
                       var9Lifetime1[var12Lifetime3] = dupTemp$0;
                       var13 = dupTemp$0;
                       stackIn_50_0 = var10Lifetime1;
@@ -219,7 +219,7 @@ final class jg extends mf {
                     stackIn_79_0 = 0;
                     var13Lifetime1 = stackIn_79_0;
                     while (var6Lifetime1 > var13Lifetime1) {
-                      var8Lifetime1[var12Lifetime1 + var13Lifetime1 * var5Lifetime1] = var2.k(0);
+                      var8Lifetime1[var12Lifetime1 + var13Lifetime1 * var5Lifetime1] = var2.readByte(0);
                       var13Lifetime1++;
                     }
                     var12Lifetime1++;
@@ -231,7 +231,7 @@ final class jg extends mf {
                       stackIn_45_0 = 0;
                       var13Lifetime2 = stackIn_45_0;
                       while (var13Lifetime2 < var6Lifetime1) {
-                        dupTemp$1 = var2.k(0);
+                        dupTemp$1 = var2.readByte(0);
                         var9Lifetime1[var5Lifetime1 * var13Lifetime2 + var12Lifetime2] = dupTemp$1;
                         var14 = dupTemp$1;
                         stackIn_50_0 = var10Lifetime1;
@@ -265,7 +265,7 @@ final class jg extends mf {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class jg extends mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "jg.B(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "jg.B(" + param0 + ')');
         }
     }
 
@@ -309,7 +309,7 @@ final class jg extends mf {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_l)) {
-            var4 = pl.a(param1 ^ 0, param0);
+            var4 = TextButton.a(param1 ^ 0, param0);
             if (var4 != null &&
               null == var4.field_h) {
               this.field_l = param0;
@@ -335,16 +335,16 @@ final class jg extends mf {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    jg(og param0) {
+    jg(EditableTextWidget param0) {
         super(param0);
         this.field_s = false;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_p = null;
           field_r = null;
@@ -353,16 +353,16 @@ final class jg extends mf {
             field_m = 69;
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "jg.I(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "jg.I(" + param0 + ')');
         }
     }
 
-    final ok a(int param0, String param1) {
+    final ValidationState a(int param0, String param1) {
         wd var3 = null;
         RuntimeException var3_ref = null;
-        ok stackIn_5_0 = null;
-        ok stackIn_12_0 = null;
-        ok stackIn_18_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_12_0 = null;
+        ValidationState stackIn_18_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -371,18 +371,18 @@ final class jg extends mf {
           if (param0 != -1) {
             field_k = -25;
           }
-          if (!ad.a((CharSequence) ((Object) param1), (byte) 120)) {
+          if (!ArchiveCatalog.a((CharSequence) ((Object) param1), (byte) 120)) {
             stackIn_5_0 = hg.field_c;
             return stackIn_5_0;
           }
           if (!param1.equals(this.field_l)) {
-            var3 = pl.a(param0 ^ 0, param1);
+            var3 = TextButton.a(param0 ^ 0, param1);
             if (null != var3 &&
               null == var3.field_h) {
               this.field_l = param1;
               this.field_s = var3.field_i;
             } else {
-              stackIn_12_0 = l.field_S;
+              stackIn_12_0 = ValidationHelpWidget.field_S;
               return stackIn_12_0;
             }
           }
@@ -402,7 +402,7 @@ final class jg extends mf {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

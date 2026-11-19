@@ -6,11 +6,11 @@ final class ld {
     static String[] field_c;
     static String field_f;
     static String field_a;
-    static si field_e;
+    static BufferedRandomAccessFile field_e;
     static int[] field_b;
     static PlatformTaskDispatcher field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_c = null;
         if (param0 == -122) {
@@ -21,7 +21,7 @@ final class ld {
           field_e = null;
           return;
         }
-        ld.a((byte) 91);
+        ld.releaseStatics((byte) 91);
         field_b = null;
         field_a = null;
         field_d = null;
@@ -29,30 +29,30 @@ final class ld {
         field_e = null;
     }
 
-    final static h a(int param0, int param1, kl param2) {
+    final static MusicPatch a(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        kl var4 = null;
+        ResourceArchive var4 = null;
         byte[] var5 = null;
         Object stackIn_4_0 = null;
-        h stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 26) {
-            var4 = (kl) null;
-            ld.a(91, -108, (kl) null);
+            var4 = (ResourceArchive) null;
+            ld.a(91, -108, (ResourceArchive) null);
           }
           var5 = param2.a((byte) -128, param1);
           var3 = var5;
           if (var5 != null) {
-            stackIn_6_0 = new h(var5);
+            stackIn_6_0 = new MusicPatch(var5);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (h) (stackIn_4_0);
+          return (MusicPatch) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -63,20 +63,20 @@ final class ld {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final static void a(int param0, sc param1, int param2) {
-        mg var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           var3 = n.field_b;
           var3.c((byte) 87, param0);
-          var3.b((byte) 11, 2);
-          var3.b((byte) 11, param2);
-          var3.b((byte) 11, param1.field_k);
+          var3.writeByte((byte) 11, 2);
+          var3.writeByte((byte) 11, param2);
+          var3.writeByte((byte) 11, param1.field_k);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ld.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ld.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

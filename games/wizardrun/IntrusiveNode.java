@@ -8,7 +8,7 @@ class IntrusiveNode {
     static String field_a;
     IntrusiveNode previous;
     static byte[][] field_g;
-    static jd field_f;
+    static DualLinkNodeHashTable field_f;
     static String[] field_h;
 
     final boolean isLinked(byte param0) {
@@ -19,12 +19,12 @@ class IntrusiveNode {
         return false;
     }
 
-    final static md b(int param0) {
+    final static TickClock b(int param0) {
         if (param0 != 250) {
           IntrusiveNode.b(58);
-          return (md) ((Object) new ia());
+          return (TickClock) ((Object) new NanoTickClock());
         }
-        return (md) ((Object) new ia());
+        return (TickClock) ((Object) new NanoTickClock());
     }
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
@@ -41,7 +41,7 @@ class IntrusiveNode {
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
           try {
-            nk.field_M = param0;
+            AccountCreationForm.field_M = param0;
             try {
               var3 = param1.getParameter("cookieprefix");
               var4 = param1.getParameter("cookiehost");
@@ -57,7 +57,7 @@ class IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;
             }
-            jf.a((byte) 121, param1);
+            IndexedSpriteState.a((byte) 121, param1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -75,7 +75,7 @@ class IntrusiveNode {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -99,7 +99,7 @@ class IntrusiveNode {
         this.previous = null;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_h = null;
         if (param0 == 81) {

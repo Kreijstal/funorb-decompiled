@@ -6,10 +6,10 @@ final class pb extends IntrusiveNode {
     byte[] field_j;
     static String field_i;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         if (param0) {
-          pb.b(false);
+          pb.releaseStatics(false);
         }
     }
 
@@ -17,7 +17,7 @@ final class pb extends IntrusiveNode {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

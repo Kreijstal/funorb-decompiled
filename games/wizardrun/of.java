@@ -8,20 +8,20 @@ final class of extends IntrusiveNode {
     static String field_l;
     static String[] field_k;
 
-    final static db a(kl param0, int param1, byte param2, int param3) {
+    final static IndexedSprite a(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
-        kl var5 = null;
+        ResourceArchive var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -128) {
-            var5 = (kl) null;
-            of.a((kl) null, 20, (byte) -110, 17);
+            var5 = (ResourceArchive) null;
+            of.a((ResourceArchive) null, 20, (byte) -110, 17);
           }
-          if (h.a(param3, param1, param0, -128)) {
-            return md.c((byte) -92);
+          if (MusicPatch.a(param3, param1, param0, -128)) {
+            return TickClock.c((byte) -92);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -34,11 +34,11 @@ final class of extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static boolean a(kl param0, kl param1, byte param2, kl param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -52,15 +52,15 @@ final class of extends IntrusiveNode {
           if (param2 != -1) {
             field_m = (String) null;
           }
-          if (!param0.b(17820)) {
+          if (!param0.ensureIndex(17820)) {
             return false;
           }
           if (!param0.a((byte) 29, "commonui")) {
             return false;
           }
-          if (param3.b(param2 ^ -17821) &&
+          if (param3.ensureIndex(param2 ^ -17821) &&
             param3.a((byte) 29, "commonui")) {
-            if (param1.b(17820) &&
+            if (param1.ensureIndex(17820) &&
               param1.a((byte) 29, "button.gif")) {
               return true;
             }
@@ -89,11 +89,11 @@ final class of extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_l = null;
         field_m = null;
@@ -103,19 +103,19 @@ final class of extends IntrusiveNode {
     }
 
     final static void d(int param0) {
-        he.field_s[46] = 72;
-        he.field_s[44] = 71;
-        he.field_s[61] = 27;
-        he.field_s[59] = 57;
-        he.field_s[91] = 42;
-        he.field_s[45] = 26;
+        MidiNoteMixer.field_s[46] = 72;
+        MidiNoteMixer.field_s[44] = 71;
+        MidiNoteMixer.field_s[61] = 27;
+        MidiNoteMixer.field_s[59] = 57;
+        MidiNoteMixer.field_s[91] = 42;
+        MidiNoteMixer.field_s[45] = 26;
         if (param0 == 0) {
-          he.field_s[93] = 43;
-          he.field_s[192] = 28;
-          he.field_s[222] = 58;
-          he.field_s[520] = 59;
-          he.field_s[47] = 73;
-          he.field_s[92] = 74;
+          MidiNoteMixer.field_s[93] = 43;
+          MidiNoteMixer.field_s[192] = 28;
+          MidiNoteMixer.field_s[222] = 58;
+          MidiNoteMixer.field_s[520] = 59;
+          MidiNoteMixer.field_s[47] = 73;
+          MidiNoteMixer.field_s[92] = 74;
           return;
         }
     }
@@ -129,7 +129,7 @@ final class of extends IntrusiveNode {
         int var2 = 0;
         if (param0 == 72) {
           var1 = IntrusiveDequeCursor.c((byte) -89);
-          var2 = lb.a((byte) 47);
+          var2 = GrowableIntList.a((byte) 47);
           tl.field_c.a(IntrusiveDequeCursor.field_f - ic.field_c, var2 + (ic.field_c << 1), var1 + (ii.field_c << 1), 1, fe.field_l - ii.field_c);
           nf.a(99);
           return;
@@ -167,7 +167,7 @@ final class of extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1_ref), "of.C(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1_ref), "of.C(" + param0 + ')');
         }
     }
 

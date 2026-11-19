@@ -7,11 +7,11 @@ final class hb extends IntrusiveNode {
     long field_p;
     static int field_m;
     static int[] field_o;
-    static jh field_k;
+    static AsyncRequest field_k;
     byte[] field_l;
     int field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 24944) {
           field_k = null;
           field_i = null;
@@ -24,12 +24,12 @@ final class hb extends IntrusiveNode {
         field_o = null;
     }
 
-    final static ui a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ui var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        ui stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -40,7 +40,7 @@ final class hb extends IntrusiveNode {
           if (var8 == null) {
             return null;
           }
-          var7 = new ui();
+          var7 = new FullscreenFocusCanvas();
           var7.field_c = var8;
           var7.field_c.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param1, param3);
@@ -58,7 +58,7 @@ final class hb extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class hb extends IntrusiveNode {
           this.field_l = param2;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

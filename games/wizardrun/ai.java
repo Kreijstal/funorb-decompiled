@@ -15,7 +15,7 @@ final class ai extends IntrusiveNode {
     int field_o;
     static String field_r;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_s = null;
         if (param0 != 65535) {
@@ -26,14 +26,14 @@ final class ai extends IntrusiveNode {
 
     final static void a(boolean param0, byte param1, String param2, boolean param3) {
         try {
-          ki.h((byte) 98);
+          LoginChoicePanel.h((byte) 98);
           GameShell.field_A.d(false);
-          r.field_b = new qc(rg.field_S, (String) null, wi.field_J, param0, param3);
+          TimedValidator.field_b = new LoginForm(ResizableDialog.field_S, (String) null, DialogLayer.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);
-          td.field_f = new kb(GameShell.field_A, r.field_b);
+          td.field_f = new kb(GameShell.field_A, TimedValidator.field_b);
           GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ai extends IntrusiveNode {
           this.field_p = param5;
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,14 +64,14 @@ final class ai extends IntrusiveNode {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$87b210a2f664(boolean param0, int param1, String param2, boolean param3) {
         try {
-          ki.h((byte) 98);
+          LoginChoicePanel.h((byte) 98);
           GameShell.field_A.d(false);
-          r.field_b = new qc(rg.field_S, (String) null, wi.field_J, param0, param3);
+          TimedValidator.field_b = new LoginForm(ResizableDialog.field_S, (String) null, DialogLayer.field_J, param0, param3);
           int var4_int = -71 % ((param1 - 89) / 37);
-          td.field_f = new kb(GameShell.field_A, r.field_b);
+          td.field_f = new kb(GameShell.field_A, TimedValidator.field_b);
           GameShell.field_A.b((UiWidget) (td.field_f), (byte) 117);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 }

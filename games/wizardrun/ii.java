@@ -3,13 +3,13 @@
  */
 final class ii {
     static String field_d;
-    static na field_f;
+    static Js5Transport field_f;
     static eg[] field_e;
     static String field_b;
     static int field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_f = null;
         if (param0 != 1000) {

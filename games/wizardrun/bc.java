@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bc {
-    static kl field_a;
+    static ResourceArchive field_a;
     static String field_c;
     static String field_b;
 
     final static void a(byte param0, int param1, int param2) {
         int var3;
         var3 = -116 / ((-20 - param0) / 43);
-        if (null == he.field_m) {
-          he.field_m = new int[param2 * 2];
+        if (null == MidiNoteMixer.field_m) {
+          MidiNoteMixer.field_m = new int[param2 * 2];
           if (ug.field_I == null ||
             !(param2 <= ug.field_I.length)) {
             ug.field_I = new int[2 * param2];
@@ -31,9 +31,9 @@ final class bc {
                 !(sj.field_m.length >= param1 + param2)) {
                 sj.field_m = new int[2 * (param2 + param1)];
               }
-              if (di.field_g == null ||
-                !(param2 <= di.field_g.length)) {
-                di.field_g = new boolean[2 * param2];
+              if (WeightedLruCache.field_g == null ||
+                !(param2 <= WeightedLruCache.field_g.length)) {
+                WeightedLruCache.field_g = new boolean[2 * param2];
               }
             } else {
               if (td.field_c.length < param2) {
@@ -42,37 +42,37 @@ final class bc {
                   !(sj.field_m.length >= param1 + param2)) {
                   sj.field_m = new int[2 * (param2 + param1)];
                 }
-                if (di.field_g == null ||
-                  !(param2 <= di.field_g.length)) {
-                  di.field_g = new boolean[2 * param2];
+                if (WeightedLruCache.field_g == null ||
+                  !(param2 <= WeightedLruCache.field_g.length)) {
+                  WeightedLruCache.field_g = new boolean[2 * param2];
                 }
               } else {
                 if (sj.field_m == null) {
                   sj.field_m = new int[2 * (param2 + param1)];
-                  if (di.field_g == null ||
-                    !(param2 <= di.field_g.length)) {
-                    di.field_g = new boolean[2 * param2];
+                  if (WeightedLruCache.field_g == null ||
+                    !(param2 <= WeightedLruCache.field_g.length)) {
+                    WeightedLruCache.field_g = new boolean[2 * param2];
                   }
                 } else {
                   if (sj.field_m.length < param1 + param2) {
                     sj.field_m = new int[2 * (param2 + param1)];
-                    if (di.field_g == null ||
-                      !(param2 <= di.field_g.length)) {
-                      di.field_g = new boolean[2 * param2];
+                    if (WeightedLruCache.field_g == null ||
+                      !(param2 <= WeightedLruCache.field_g.length)) {
+                      WeightedLruCache.field_g = new boolean[2 * param2];
                     }
                   } else {
-                    if (di.field_g == null) {
-                      di.field_g = new boolean[2 * param2];
+                    if (WeightedLruCache.field_g == null) {
+                      WeightedLruCache.field_g = new boolean[2 * param2];
                     } else {
-                      if (param2 > di.field_g.length) {
-                        di.field_g = new boolean[2 * param2];
+                      if (param2 > WeightedLruCache.field_g.length) {
+                        WeightedLruCache.field_g = new boolean[2 * param2];
                       }
                     }
                   }
                 }
               }
             }
-            dj.field_b = -2147483648;
+            ByteStorage.field_b = -2147483648;
             lg.field_d = 0;
             dg.field_d = 2147483647;
             gf.field_W = 2147483647;
@@ -88,12 +88,12 @@ final class bc {
             !(sj.field_m.length >= param1 + param2)) {
             sj.field_m = new int[2 * (param2 + param1)];
           }
-          if (di.field_g == null ||
-            !(param2 <= di.field_g.length)) {
-            di.field_g = new boolean[2 * param2];
+          if (WeightedLruCache.field_g == null ||
+            !(param2 <= WeightedLruCache.field_g.length)) {
+            WeightedLruCache.field_g = new boolean[2 * param2];
           }
         } else {
-          if (he.field_m.length >= param2) {
+          if (MidiNoteMixer.field_m.length >= param2) {
             if (ug.field_I == null ||
               !(param2 <= ug.field_I.length)) {
               ug.field_I = new int[2 * param2];
@@ -114,9 +114,9 @@ final class bc {
                   !(sj.field_m.length >= param1 + param2)) {
                   sj.field_m = new int[2 * (param2 + param1)];
                 }
-                if (di.field_g == null ||
-                  !(param2 <= di.field_g.length)) {
-                  di.field_g = new boolean[2 * param2];
+                if (WeightedLruCache.field_g == null ||
+                  !(param2 <= WeightedLruCache.field_g.length)) {
+                  WeightedLruCache.field_g = new boolean[2 * param2];
                 }
               } else {
                 if (td.field_c.length < param2) {
@@ -125,37 +125,37 @@ final class bc {
                     !(sj.field_m.length >= param1 + param2)) {
                     sj.field_m = new int[2 * (param2 + param1)];
                   }
-                  if (di.field_g == null ||
-                    !(param2 <= di.field_g.length)) {
-                    di.field_g = new boolean[2 * param2];
+                  if (WeightedLruCache.field_g == null ||
+                    !(param2 <= WeightedLruCache.field_g.length)) {
+                    WeightedLruCache.field_g = new boolean[2 * param2];
                   }
                 } else {
                   if (sj.field_m == null) {
                     sj.field_m = new int[2 * (param2 + param1)];
-                    if (di.field_g == null ||
-                      !(param2 <= di.field_g.length)) {
-                      di.field_g = new boolean[2 * param2];
+                    if (WeightedLruCache.field_g == null ||
+                      !(param2 <= WeightedLruCache.field_g.length)) {
+                      WeightedLruCache.field_g = new boolean[2 * param2];
                     }
                   } else {
                     if (sj.field_m.length < param1 + param2) {
                       sj.field_m = new int[2 * (param2 + param1)];
-                      if (di.field_g == null ||
-                        !(param2 <= di.field_g.length)) {
-                        di.field_g = new boolean[2 * param2];
+                      if (WeightedLruCache.field_g == null ||
+                        !(param2 <= WeightedLruCache.field_g.length)) {
+                        WeightedLruCache.field_g = new boolean[2 * param2];
                       }
                     } else {
-                      if (di.field_g == null) {
-                        di.field_g = new boolean[2 * param2];
+                      if (WeightedLruCache.field_g == null) {
+                        WeightedLruCache.field_g = new boolean[2 * param2];
                       } else {
-                        if (param2 > di.field_g.length) {
-                          di.field_g = new boolean[2 * param2];
+                        if (param2 > WeightedLruCache.field_g.length) {
+                          WeightedLruCache.field_g = new boolean[2 * param2];
                         }
                       }
                     }
                   }
                 }
               }
-              dj.field_b = -2147483648;
+              ByteStorage.field_b = -2147483648;
               lg.field_d = 0;
               dg.field_d = 2147483647;
               gf.field_W = 2147483647;
@@ -171,12 +171,12 @@ final class bc {
               !(sj.field_m.length >= param1 + param2)) {
               sj.field_m = new int[2 * (param2 + param1)];
             }
-            if (di.field_g == null ||
-              !(param2 <= di.field_g.length)) {
-              di.field_g = new boolean[2 * param2];
+            if (WeightedLruCache.field_g == null ||
+              !(param2 <= WeightedLruCache.field_g.length)) {
+              WeightedLruCache.field_g = new boolean[2 * param2];
             }
           } else {
-            he.field_m = new int[param2 * 2];
+            MidiNoteMixer.field_m = new int[param2 * 2];
             if (ug.field_I == null ||
               !(param2 <= ug.field_I.length)) {
               ug.field_I = new int[2 * param2];
@@ -195,23 +195,23 @@ final class bc {
                 td.field_c = new int[param2 * 2];
                 if (sj.field_m == null) {
                   sj.field_m = new int[2 * (param2 + param1)];
-                  if (di.field_g == null ||
-                    !(param2 <= di.field_g.length)) {
-                    di.field_g = new boolean[2 * param2];
+                  if (WeightedLruCache.field_g == null ||
+                    !(param2 <= WeightedLruCache.field_g.length)) {
+                    WeightedLruCache.field_g = new boolean[2 * param2];
                   }
                 } else {
                   if (sj.field_m.length < param1 + param2) {
                     sj.field_m = new int[2 * (param2 + param1)];
-                    if (di.field_g == null ||
-                      !(param2 <= di.field_g.length)) {
-                      di.field_g = new boolean[2 * param2];
+                    if (WeightedLruCache.field_g == null ||
+                      !(param2 <= WeightedLruCache.field_g.length)) {
+                      WeightedLruCache.field_g = new boolean[2 * param2];
                     }
                   } else {
-                    if (di.field_g == null) {
-                      di.field_g = new boolean[2 * param2];
+                    if (WeightedLruCache.field_g == null) {
+                      WeightedLruCache.field_g = new boolean[2 * param2];
                     } else {
-                      if (param2 > di.field_g.length) {
-                        di.field_g = new boolean[2 * param2];
+                      if (param2 > WeightedLruCache.field_g.length) {
+                        WeightedLruCache.field_g = new boolean[2 * param2];
                       }
                     }
                   }
@@ -232,15 +232,15 @@ final class bc {
                     }
                   }
                 }
-                if (di.field_g == null) {
-                  di.field_g = new boolean[2 * param2];
+                if (WeightedLruCache.field_g == null) {
+                  WeightedLruCache.field_g = new boolean[2 * param2];
                 } else {
-                  if (param2 > di.field_g.length) {
-                    di.field_g = new boolean[2 * param2];
+                  if (param2 > WeightedLruCache.field_g.length) {
+                    WeightedLruCache.field_g = new boolean[2 * param2];
                   }
                 }
               }
-              dj.field_b = -2147483648;
+              ByteStorage.field_b = -2147483648;
               lg.field_d = 0;
               dg.field_d = 2147483647;
               gf.field_W = 2147483647;
@@ -256,33 +256,33 @@ final class bc {
               !(sj.field_m.length >= param1 + param2)) {
               sj.field_m = new int[2 * (param2 + param1)];
             }
-            if (di.field_g != null &&
-              param2 <= di.field_g.length) {
-              dj.field_b = -2147483648;
+            if (WeightedLruCache.field_g != null &&
+              param2 <= WeightedLruCache.field_g.length) {
+              ByteStorage.field_b = -2147483648;
               lg.field_d = 0;
               dg.field_d = 2147483647;
               gf.field_W = 2147483647;
               rb.field_e = -2147483648;
               return;
             }
-            di.field_g = new boolean[2 * param2];
+            WeightedLruCache.field_g = new boolean[2 * param2];
           }
         }
-        dj.field_b = -2147483648;
+        ByteStorage.field_b = -2147483648;
         lg.field_d = 0;
         dg.field_d = 2147483647;
         gf.field_W = 2147483647;
         rb.field_e = -2147483648;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 2) {
           field_a = null;
           field_b = null;
           field_c = null;
           return;
         }
-        bc.a(-78);
+        bc.releaseStatics(-78);
         field_a = null;
         field_b = null;
         field_c = null;
@@ -320,7 +320,7 @@ final class bc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

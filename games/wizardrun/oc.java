@@ -7,17 +7,17 @@ final class oc {
     static Sprite[] field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = (Sprite[][]) null;
         field_c = null;
         int var1 = 76 % ((param0 - 36) / 48);
     }
 
-    final static ua a(kl param0, String param1, String param2, int param3, kl param4) {
+    final static CoverageBitmapFont a(ResourceArchive param0, String param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ua stackIn_3_0 = null;
+        CoverageBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -30,7 +30,7 @@ final class oc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 36) {
-            oc.a((byte) -8);
+            oc.releaseStatics((byte) -8);
           }
           var5_int = param0.b(-1, param1);
           var6 = param0.a(var5_int, param2, -11986);
@@ -64,7 +64,7 @@ final class oc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -7,16 +7,16 @@ final class sk extends ml {
     static int field_v;
     static Sprite field_z;
     static String[] field_y;
-    sg field_w;
+    DiskCacheStore field_w;
     byte[] field_A;
     static int[] field_B;
 
     final static void a(int param0, int param1) {
-        fl.field_M = param1 * 100 / 150;
-        fl.field_V = (param1 << 16) / 150;
-        fl.field_u = 400 * param1 / 150;
+        MidiPcmStream.field_M = param1 * 100 / 150;
+        MidiPcmStream.field_V = (param1 << 16) / 150;
+        MidiPcmStream.field_u = 400 * param1 / 150;
         if (param0 != 16062) {
-          sk.f(79);
+          sk.releaseStatics(79);
         }
     }
 
@@ -48,7 +48,7 @@ final class sk extends ml {
         return 0;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         if (param0 == 100) {
           field_B = null;

@@ -8,13 +8,13 @@ final class ih {
 
     final static int a(byte param0) {
         if (param0 <= -77) {
-          return (int)(1000000000L / wj.field_E);
+          return (int)(1000000000L / NameSuggestionsPanel.field_E);
         }
         ih.a(76, -4, -17, 16, true, -96, 63);
-        return (int)(1000000000L / wj.field_E);
+        return (int)(1000000000L / NameSuggestionsPanel.field_E);
     }
 
-    final static boolean a(String param0, boolean param1, nk param2, int param3, int param4, String param5, String param6) {
+    final static boolean a(String param0, boolean param1, AccountCreationForm param2, int param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
         kk var8 = null;
         RuntimeException stackIn_16_0 = null;
@@ -36,14 +36,14 @@ final class ih {
           }
           var8 = new kk(GameShell.field_A, param2);
           GameShell.field_A.b((UiWidget) (var8), (byte) 94);
-          if (ri.c(42)) {
+          if (BoundedRandomAccessFile.c(42)) {
             var8.p(param3 ^ -20371);
             return true;
           }
-          ki.field_F = null;
-          fi.field_y = pl.field_E;
-          na.field_l = param0;
-          ac.field_t = param4;
+          LoginChoicePanel.field_F = null;
+          fi.field_y = TextButton.field_E;
+          Js5Transport.field_l = param0;
+          QuickChatPhraseDefinition.field_t = param4;
           sf.field_a = param5;
           we.field_a = param6;
           UiWidget.field_m = param1;
@@ -76,7 +76,7 @@ final class ih {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -84,17 +84,17 @@ final class ih {
         if (!qb.field_p) {
           throw new IllegalStateException();
         }
-        vc.field_M = true;
+        MessagePanel.field_M = true;
         ml.a(param0 + 11579568, true);
         ml.field_t = param0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          ih.a((String) null, false, (nk) null, -33, -128, (String) null, (String) null);
+          ih.a((String) null, false, (AccountCreationForm) null, -33, -128, (String) null, (String) null);
         }
     }
 

@@ -14,7 +14,7 @@ final class eg extends qh {
     static int field_v;
     int field_p;
     int field_A;
-    static kl field_u;
+    static ResourceArchive field_u;
     int field_r;
     int field_s;
     int field_B;
@@ -31,7 +31,7 @@ final class eg extends qh {
         try {
           GameGraphicsResources.wizardFont2.drawStringCentered(param3, param1, param4, param0, -1);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "eg.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "eg.CA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class eg extends qh {
           if (param1 != 120) {
             return;
           }
-          this.a(20, tl.field_a, pk.field_s, si.soundEffects, (byte) -15, param2);
+          this.a(20, tl.field_a, pk.field_s, BufferedRandomAccessFile.soundEffects, (byte) -15, param2);
           this.field_o = 6;
           this.field_w = this.field_w + 1;
           if (param0) {
@@ -137,9 +137,9 @@ final class eg extends qh {
               for (var6 = 0; var6 < var5; var6++) {
                 var7 = this;
                 if (var6 != 0) {
-                  ii.field_e[od.field_k].a(param1 + 9027, 21, new ob(this.field_i));
-                  var7 = ii.field_e[od.field_k];
-                  od.field_k = od.field_k + 1;
+                  ii.field_e[WidgetTheme.field_k].a(param1 + 9027, 21, new ob(this.field_i));
+                  var7 = ii.field_e[WidgetTheme.field_k];
+                  WidgetTheme.field_k = WidgetTheme.field_k + 1;
                 }
                 ((eg) (var7)).a(9147, 21, this.field_i);
                 ((eg) (var7)).field_f.a(param1 - 246, this.field_f);
@@ -191,7 +191,7 @@ final class eg extends qh {
             if (stackIn_94_0 == 1) {
               return;
             }
-            tl.field_a.a(si.soundEffects[6], 100, 256 * ee.field_p / 100);
+            tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[6], 100, 256 * ee.field_p / 100);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -204,7 +204,7 @@ final class eg extends qh {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class eg extends qh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         int var1 = -76 / ((param0 - 4) / 50);
         field_u = null;
@@ -248,47 +248,47 @@ final class eg extends qh {
           if (this.field_B == 21) {
             if (this.field_o == 0) {
               BufferedSocket.field_c = BufferedSocket.field_c + 640;
-              sg.field_f = sg.field_f + 10;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 10;
               if (qh.field_l == 5 &&
                 ve.a((byte) 110, 0)) {
                 this.d(-1569);
               }
             }
             if (this.field_o == 1) {
-              sg.field_f = sg.field_f + 25;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 25;
               wg.field_b = wg.field_b + 1600;
             }
             if (this.field_o == 2) {
               me.field_f = me.field_f - 3200;
-              sg.field_f = sg.field_f + 50;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 50;
               if (5 == qh.field_l &&
                 ve.a((byte) 89, 0)) {
                 this.d(param0 ^ -1574);
               }
             }
             if (this.field_o == 3) {
-              sg.field_f = sg.field_f + 75;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 75;
               ic.field_a = ic.field_a - 4800;
             }
             if (this.field_o == 4) {
-              sg.field_f = sg.field_f + 100;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 100;
               BufferedSocket.field_c = BufferedSocket.field_c + 6400;
             }
             if (this.field_o == 5) {
               wg.field_b = wg.field_b + 9600;
-              sg.field_f = sg.field_f + 150;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 150;
             }
             if (6 == this.field_o) {
               me.field_f = me.field_f - 16000;
-              sg.field_f = sg.field_f + 250;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 250;
             }
             if (this.field_o == 7) {
               ic.field_a = ic.field_a - 32000;
-              sg.field_f = sg.field_f + 500;
+              DiskCacheStore.field_f = DiskCacheStore.field_f + 500;
             }
             stackIn_34_0 = !(pk.field_s);
             if (!stackIn_34_0) {
-              tl.field_a.a(si.soundEffects[7], 100, ee.field_p * 256 / 100);
+              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[7], 100, ee.field_p * 256 / 100);
             }
             this.field_w = 0;
             this.field_B = 44;
@@ -318,7 +318,7 @@ final class eg extends qh {
             this.field_o = this.field_o + 1;
             this.field_p = 0;
             if (pk.field_s) {
-              tl.field_a.a(si.soundEffects[6], 100, 256 * ee.field_p / 100);
+              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[6], 100, 256 * ee.field_p / 100);
             }
           }
         }
@@ -390,7 +390,7 @@ final class eg extends qh {
               if (var11 == 2) {
                 for (var11 = 0; 10 > var11; var11++) {
                   var6 = 6.28 * (double)var11 / 10.0 + (double)this.field_w;
-                  ob.field_c.d(-6 + (var2 + (int)(32.0 * Math.cos(var6) + 32.0)), -6 + (var3 + (int)(32.0 + 32.0 * Math.sin(var6))), 12, 12, 255 - 10 * var11);
+                  ob.field_c.drawScaledAlpha(-6 + (var2 + (int)(32.0 * Math.cos(var6) + 32.0)), -6 + (var3 + (int)(32.0 + 32.0 * Math.sin(var6))), 12, 12, 255 - 10 * var11);
                 }
                 this.field_A = var3;
                 this.field_y = var2;
@@ -425,13 +425,13 @@ final class eg extends qh {
                         break;
                       case 11:
                         if (this.field_h != -1) {
-                          oc.field_b[3][29].d(var2, var3);
+                          oc.field_b[3][29].drawMirrored(var2, var3);
                           this.field_q = oc.field_b[3][29].flipHorizontal();
                           this.field_A = var3;
                           this.field_y = var2;
                           break;
                         }
-                        oc.field_b[3][29].e(var2, var3);
+                        oc.field_b[3][29].drawTransparent(var2, var3);
                         this.field_y = var2;
                         this.field_A = var3;
                         this.field_q = oc.field_b[3][29];
@@ -463,13 +463,13 @@ final class eg extends qh {
                           this.field_n = 34;
                         }
                         if (this.field_h == 1) {
-                          oc.field_b[2][this.field_n].e(var2, var3);
+                          oc.field_b[2][this.field_n].drawTransparent(var2, var3);
                           this.field_q = oc.field_b[2][this.field_n];
                           this.field_y = var2;
                           this.field_A = var3;
                           break;
                         }
-                        oc.field_b[2][this.field_n].d(var2 - 24, var3);
+                        oc.field_b[2][this.field_n].drawMirrored(var2 - 24, var3);
                         this.field_q = oc.field_b[2][this.field_n].flipHorizontal();
                         this.field_y = -24 + var2;
                         this.field_A = var3;
@@ -479,13 +479,13 @@ final class eg extends qh {
                           this.field_n = 37;
                         }
                         if (this.field_h != 1) {
-                          oc.field_b[3][this.field_n].d(var2, var3);
+                          oc.field_b[3][this.field_n].drawMirrored(var2, var3);
                           this.field_q = oc.field_b[3][this.field_n].flipHorizontal();
                           this.field_y = var2;
                           this.field_A = var3;
                           break;
                         }
-                        oc.field_b[3][this.field_n].e(var2, var3);
+                        oc.field_b[3][this.field_n].drawTransparent(var2, var3);
                         this.field_q = oc.field_b[3][this.field_n];
                         this.field_A = var3;
                         this.field_y = var2;
@@ -495,13 +495,13 @@ final class eg extends qh {
                           this.field_n = 36;
                         }
                         if (this.field_h != -1) {
-                          oc.field_b[4][this.field_n].d(var2, var3);
+                          oc.field_b[4][this.field_n].drawMirrored(var2, var3);
                           this.field_q = oc.field_b[4][this.field_n].flipHorizontal();
                           this.field_A = var3;
                           this.field_y = var2;
                           break;
                         }
-                        oc.field_b[4][this.field_n].e(var2, var3);
+                        oc.field_b[4][this.field_n].drawTransparent(var2, var3);
                         this.field_q = oc.field_b[4][this.field_n];
                         this.field_y = var2;
                         this.field_A = var3;
@@ -519,9 +519,9 @@ final class eg extends qh {
                               this.field_o == 2) &&
                               (qh.field_l == 5 &&
                               ve.a((byte) 123, 0))) {
-                              GameGraphicsResources.gemSprites[8].e(var2, var3);
+                              GameGraphicsResources.gemSprites[8].drawTransparent(var2, var3);
                             } else {
-                              GameGraphicsResources.gemSprites[this.field_o].e(var2, var3);
+                              GameGraphicsResources.gemSprites[this.field_o].drawTransparent(var2, var3);
                             }
                             this.field_q = GameGraphicsResources.gemSprites[this.field_o];
                             this.field_y = var2;
@@ -540,13 +540,13 @@ final class eg extends qh {
                             this.a(96, 4, (byte) 62);
                             break regionExit1;
                           case 27:
-                            oc.field_b[4][37].e(var2, var3);
+                            oc.field_b[4][37].drawTransparent(var2, var3);
                             this.field_A = var3;
                             this.field_y = var2;
                             this.field_q = oc.field_b[4][37];
                             break regionExit1;
                           case 28:
-                            oc.field_b[4][36].e(var2, var3);
+                            oc.field_b[4][36].drawTransparent(var2, var3);
                             this.field_y = var2;
                             this.field_q = oc.field_b[4][36];
                             this.field_A = var3;
@@ -570,13 +570,13 @@ final class eg extends qh {
                             break regionExit1;
                           case 34:
                             if (-1 != this.field_h) {
-                              oc.field_b[0][37].d(var2, var3);
+                              oc.field_b[0][37].drawMirrored(var2, var3);
                               this.field_q = oc.field_b[0][37].flipHorizontal();
                               this.field_y = var2;
                               this.field_A = var3;
                               break regionExit1;
                             }
-                            oc.field_b[0][37].e(var2, var3);
+                            oc.field_b[0][37].drawTransparent(var2, var3);
                             this.field_q = oc.field_b[0][37];
                             this.field_y = var2;
                             this.field_A = var3;
@@ -603,13 +603,13 @@ final class eg extends qh {
                                     var9 = 35;
                                   }
                                   if (this.field_h == 1) {
-                                    oc.field_b[4][var9].e(var2, var3);
+                                    oc.field_b[4][var9].drawTransparent(var2, var3);
                                     this.field_q = oc.field_b[4][var9];
                                     this.field_y = var2;
                                     this.field_A = var3;
                                     break regionExit1;
                                   }
-                                  oc.field_b[4][var9].d(var2, var3);
+                                  oc.field_b[4][var9].drawMirrored(var2, var3);
                                   this.field_q = oc.field_b[4][var9].flipHorizontal();
                                   this.field_y = var2;
                                   this.field_A = var3;
@@ -631,14 +631,14 @@ final class eg extends qh {
                                   break regionExit1;
                                 case 41:
                                   if (this.field_h == -1) {
-                                    h.field_j[this.field_n].e(var2, var3);
-                                    this.field_q = h.field_j[this.field_n];
+                                    MusicPatch.field_j[this.field_n].drawTransparent(var2, var3);
+                                    this.field_q = MusicPatch.field_j[this.field_n];
                                     this.field_A = var3;
                                     this.field_y = var2;
                                     break regionExit1;
                                   }
-                                  h.field_j[this.field_n].d(var2, var3);
-                                  this.field_q = h.field_j[this.field_n].flipHorizontal();
+                                  MusicPatch.field_j[this.field_n].drawMirrored(var2, var3);
+                                  this.field_q = MusicPatch.field_j[this.field_n].flipHorizontal();
                                   this.field_A = var3;
                                   this.field_y = var2;
                                   break regionExit1;
@@ -689,13 +689,13 @@ final class eg extends qh {
                               var9 = 35;
                             }
                             if (-1 == this.field_h) {
-                              oc.field_b[1][var9].e(var2, var3);
+                              oc.field_b[1][var9].drawTransparent(var2, var3);
                               this.field_q = oc.field_b[1][var9];
                               this.field_A = var3;
                               this.field_y = var2;
                               break regionExit1;
                             }
-                            oc.field_b[1][var9].d(var2, var3);
+                            oc.field_b[1][var9].drawMirrored(var2, var3);
                             this.field_q = oc.field_b[1][var9].flipHorizontal();
                             this.field_A = var3;
                             this.field_y = var2;
@@ -706,7 +706,7 @@ final class eg extends qh {
                         var8 = this.field_w;
                         var4 = -this.field_w + 128;
                         if (var4 > 0) {
-                          DualLinkNode.field_m.d(var2 - var8, var3 - var8, 2 * var8, var8 * 2, var4);
+                          DualLinkNode.field_m.drawScaledAlpha(var2 - var8, var3 - var8, 2 * var8, var8 * 2, var4);
                         }
                         if (this.field_w > 120) {
                           this.field_k = 1;
@@ -721,21 +721,21 @@ final class eg extends qh {
             if (0 <= qh.field_g &&
               !pg.field_q) {
               if (this.field_h == -1) {
-                ve.wizardSprites[this.field_n].e(var2, var3);
+                ve.wizardSprites[this.field_n].drawTransparent(var2, var3);
                 this.field_q = ra.wizardNoHatSprites[this.field_n];
                 this.field_y = var2;
                 this.field_A = var3;
               } else {
-                ve.wizardSprites[this.field_n].d(var2, var3);
+                ve.wizardSprites[this.field_n].drawMirrored(var2, var3);
                 this.field_q = ra.wizardNoHatSprites[this.field_n].flipHorizontal();
                 this.field_A = var3;
                 this.field_y = var2;
               }
-              if (0 <= nk.field_T &&
-                300 > nk.field_T &&
+              if (0 <= AccountCreationForm.field_T &&
+                300 > AccountCreationForm.field_T &&
                 250 < sj.field_l) {
-                if (nk.field_T >= 0 &&
-                  nk.field_T < 50) {
+                if (AccountCreationForm.field_T >= 0 &&
+                  AccountCreationForm.field_T < 50) {
                   if (uc.field_g < 20) {
                     stackIn_87_1 = 16711680;
                   } else {
@@ -749,9 +749,9 @@ final class eg extends qh {
                   }
                   this.a(stackIn_90_1, ve.wizardSprites[this.field_n].fullWidth + var2, true, ")", 32 + var3);
                 }
-                if (nk.field_T >= 50 &&
-                  nk.field_T < 100) {
-                  var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
+                if (AccountCreationForm.field_T >= 50 &&
+                  AccountCreationForm.field_T < 100) {
+                  var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
                   var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
@@ -764,11 +764,11 @@ final class eg extends qh {
                   } else {
                     stackIn_103_1 = 16776960;
                   }
-                  this.a(stackIn_103_1, var12, true, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, ka.field_g), -4 + var3);
+                  this.a(stackIn_103_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, ka.field_g), -4 + var3);
                 }
-                if (nk.field_T >= 100 &&
-                  nk.field_T < 150) {
-                  var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
+                if (AccountCreationForm.field_T >= 100 &&
+                  AccountCreationForm.field_T < 150) {
+                  var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
                   var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
@@ -781,11 +781,11 @@ final class eg extends qh {
                   } else {
                     stackIn_115_1 = 16711680;
                   }
-                  this.a(stackIn_115_1, var12, true, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, wb.field_a), var3 - 4);
+                  this.a(stackIn_115_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, wb.field_a), var3 - 4);
                 }
-                if (nk.field_T >= 150 &&
-                  nk.field_T < 200) {
-                  var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
+                if (AccountCreationForm.field_T >= 150 &&
+                  AccountCreationForm.field_T < 200) {
+                  var11 = GameGraphicsResources.wizardFont2.stringWidth(WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, RasterSnapshot.field_m));
                   var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
@@ -798,16 +798,16 @@ final class eg extends qh {
                   } else {
                     stackIn_125_1 = 16776960;
                   }
-                  this.a(stackIn_125_1, var12, true, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 46, ei.field_m), -4 + var3);
+                  this.a(stackIn_125_1, var12, true, WeightedLruCache.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 46, RasterSnapshot.field_m), -4 + var3);
                 }
               }
-              if (cd.field_e > 0 &&
-                7 > cd.field_e % 10 &&
-                1 < cd.field_e % 10) {
+              if (DiskCacheWorker.field_e > 0 &&
+                7 > DiskCacheWorker.field_e % 10 &&
+                1 < DiskCacheWorker.field_e % 10) {
                 if (this.field_h != -1) {
-                  ve.wizardSprites[this.field_n].flipHorizontal().b(var2, var3, 16777215);
+                  ve.wizardSprites[this.field_n].flipHorizontal().drawSilhouette(var2, var3, 16777215);
                 } else {
-                  ve.wizardSprites[this.field_n].b(var2, var3, 16777215);
+                  ve.wizardSprites[this.field_n].drawSilhouette(var2, var3, 16777215);
                 }
               }
               if (120 > fi.field_x) {
@@ -819,7 +819,7 @@ final class eg extends qh {
                   if (100 < fi.field_x) {
                     var14 = var14 + (10 - Math.abs(-110 + fi.field_x));
                   }
-                  ob.field_c.d(-6 + var2 + (int)(Math.cos(var11_double) * (double)var14 + 32.0), -6 + ((int)(32.0 + Math.sin(var11_double) * (double)var14) + var3), 12, 12, var4);
+                  ob.field_c.drawScaledAlpha(-6 + var2 + (int)(Math.cos(var11_double) * (double)var14 + 32.0), -6 + ((int)(32.0 + Math.sin(var11_double) * (double)var14) + var3), 12, 12, var4);
                 }
               }
             }
@@ -828,7 +828,7 @@ final class eg extends qh {
     }
 
     private final void c(int param0) {
-        tl.field_a.a(si.soundEffects[10], 100, ee.field_p * 256 / 100);
+        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[10], 100, ee.field_p * 256 / 100);
         if (param0 != 1) {
           tg var3 = (tg) null;
           this.a(-123, (byte) -40, (tg) null, true);
@@ -903,7 +903,7 @@ final class eg extends qh {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -964,7 +964,7 @@ final class eg extends qh {
           if (this.field_e == 0) {
             this.field_e = 20;
           }
-          this.a(1, si.soundEffects, param2, 1, param0, 1, tl.field_a, pk.field_s, (byte) 127);
+          this.a(1, BufferedRandomAccessFile.soundEffects, param2, 1, param0, 1, tl.field_a, pk.field_s, (byte) 127);
           if (this.field_s > 0 &&
             !param3) {
             this.field_s = this.field_s - 1;
@@ -995,7 +995,7 @@ final class eg extends qh {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1006,15 +1006,15 @@ final class eg extends qh {
           this.field_w = 0;
           this.field_r = 0;
           if (pk.field_s) {
-            tl.field_a.a(si.soundEffects[6], 100, ee.field_p * 256 / 100);
+            tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[6], 100, ee.field_p * 256 / 100);
           }
         }
-        this.a(1, si.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) -57);
+        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) -57);
         if (1 == this.b(param1, -4) &&
           this.field_f.field_a == 0) {
           this.field_e = 20;
           if (pk.field_s) {
-            tl.field_a.a(si.soundEffects[2], 100, ee.field_p * 64 / 100);
+            tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, ee.field_p * 64 / 100);
           }
         }
         this.field_n = 31;
@@ -1025,7 +1025,7 @@ final class eg extends qh {
         try {
           this.b(5);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "eg.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "eg.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1056,94 +1056,94 @@ final class eg extends qh {
         String var3;
         ol.field_e = true;
         if (3 == this.field_B) {
-          tl.field_a.a(SpriteState.secondarySoundEffects[3], 100, ee.field_p * 256 / 100);
+          tl.field_a.addSample(SpriteState.secondarySoundEffects[3], 100, ee.field_p * 256 / 100);
         } else {
           if (this.field_B == 4) {
-            tl.field_a.a(SpriteState.secondarySoundEffects[4], 100, ee.field_p * 256 / 100);
+            tl.field_a.addSample(SpriteState.secondarySoundEffects[4], 100, ee.field_p * 256 / 100);
           } else {
             if (5 == this.field_B) {
-              tl.field_a.a(SpriteState.secondarySoundEffects[5], 100, ee.field_p * 256 / 100);
+              tl.field_a.addSample(SpriteState.secondarySoundEffects[5], 100, ee.field_p * 256 / 100);
             } else {
               if (this.field_B == 6) {
-                tl.field_a.a(SpriteState.secondarySoundEffects[7], 100, ee.field_p * 256 / 100);
+                tl.field_a.addSample(SpriteState.secondarySoundEffects[7], 100, ee.field_p * 256 / 100);
               } else {
                 if (this.field_B == 8) {
-                  tl.field_a.a(SpriteState.secondarySoundEffects[8], 100, 256 * ee.field_p / 100);
+                  tl.field_a.addSample(SpriteState.secondarySoundEffects[8], 100, 256 * ee.field_p / 100);
                 } else {
                   if (this.field_B == 7) {
-                    tl.field_a.a(SpriteState.secondarySoundEffects[9], 100, 256 * ee.field_p / 100);
+                    tl.field_a.addSample(SpriteState.secondarySoundEffects[9], 100, 256 * ee.field_p / 100);
                   } else {
                     if (this.field_B == 9) {
-                      tl.field_a.a(SpriteState.secondarySoundEffects[10], 100, 256 * ee.field_p / 100);
+                      tl.field_a.addSample(SpriteState.secondarySoundEffects[10], 100, 256 * ee.field_p / 100);
                     } else {
                       if (this.field_B == 10) {
-                        tl.field_a.a(SpriteState.secondarySoundEffects[11], 100, 256 * ee.field_p / 100);
+                        tl.field_a.addSample(SpriteState.secondarySoundEffects[11], 100, 256 * ee.field_p / 100);
                       } else {
                         if (this.field_B == 12) {
-                          tl.field_a.a(SpriteState.secondarySoundEffects[13], 100, ee.field_p * 256 / 100);
+                          tl.field_a.addSample(SpriteState.secondarySoundEffects[13], 100, ee.field_p * 256 / 100);
                         } else {
                           if (this.field_B == 14) {
-                            tl.field_a.a(SpriteState.secondarySoundEffects[14], 100, ee.field_p * 256 / 100);
+                            tl.field_a.addSample(SpriteState.secondarySoundEffects[14], 100, ee.field_p * 256 / 100);
                           } else {
                             if (this.field_B == 13) {
-                              tl.field_a.a(SpriteState.secondarySoundEffects[15], 100, 256 * ee.field_p / 100);
+                              tl.field_a.addSample(SpriteState.secondarySoundEffects[15], 100, 256 * ee.field_p / 100);
                             } else {
                               if (this.field_B == 15) {
-                                tl.field_a.a(SpriteState.secondarySoundEffects[16], 100, 256 * ee.field_p / 100);
+                                tl.field_a.addSample(SpriteState.secondarySoundEffects[16], 100, 256 * ee.field_p / 100);
                               } else {
                                 if (this.field_B == 16) {
-                                  tl.field_a.a(SpriteState.secondarySoundEffects[19], 100, ee.field_p * 256 / 100);
+                                  tl.field_a.addSample(SpriteState.secondarySoundEffects[19], 100, ee.field_p * 256 / 100);
                                 } else {
                                   if (this.field_B == 17) {
-                                    tl.field_a.a(SpriteState.secondarySoundEffects[21], 100, 256 * ee.field_p / 100);
+                                    tl.field_a.addSample(SpriteState.secondarySoundEffects[21], 100, 256 * ee.field_p / 100);
                                   } else {
                                     if (22 == this.field_B) {
-                                      tl.field_a.a(SpriteState.secondarySoundEffects[22], 100, ee.field_p * 256 / 100);
+                                      tl.field_a.addSample(SpriteState.secondarySoundEffects[22], 100, ee.field_p * 256 / 100);
                                     } else {
                                       if (this.field_B == 24) {
-                                        tl.field_a.a(SpriteState.secondarySoundEffects[23], 100, 256 * ee.field_p / 100);
+                                        tl.field_a.addSample(SpriteState.secondarySoundEffects[23], 100, 256 * ee.field_p / 100);
                                       } else {
                                         if (this.field_B == 23) {
-                                          tl.field_a.a(SpriteState.secondarySoundEffects[24], 100, ee.field_p * 256 / 100);
+                                          tl.field_a.addSample(SpriteState.secondarySoundEffects[24], 100, ee.field_p * 256 / 100);
                                         } else {
                                           if (26 == this.field_B) {
-                                            tl.field_a.a(SpriteState.secondarySoundEffects[26], 100, ee.field_p * 256 / 100);
+                                            tl.field_a.addSample(SpriteState.secondarySoundEffects[26], 100, ee.field_p * 256 / 100);
                                           } else {
                                             if (this.field_B == 29) {
-                                              tl.field_a.a(SpriteState.secondarySoundEffects[27], 100, 256 * ee.field_p / 100);
+                                              tl.field_a.addSample(SpriteState.secondarySoundEffects[27], 100, 256 * ee.field_p / 100);
                                             } else {
                                               if (31 == this.field_B) {
-                                                tl.field_a.a(SpriteState.secondarySoundEffects[28], 100, ee.field_p * 256 / 100);
+                                                tl.field_a.addSample(SpriteState.secondarySoundEffects[28], 100, ee.field_p * 256 / 100);
                                               } else {
                                                 if (30 == this.field_B) {
-                                                  tl.field_a.a(SpriteState.secondarySoundEffects[29], 100, 256 * ee.field_p / 100);
+                                                  tl.field_a.addSample(SpriteState.secondarySoundEffects[29], 100, 256 * ee.field_p / 100);
                                                 } else {
                                                   if (this.field_B == 32) {
-                                                    tl.field_a.a(SpriteState.secondarySoundEffects[30], 100, 256 * ee.field_p / 100);
+                                                    tl.field_a.addSample(SpriteState.secondarySoundEffects[30], 100, 256 * ee.field_p / 100);
                                                   } else {
                                                     if (this.field_B == 33) {
-                                                      tl.field_a.a(SpriteState.secondarySoundEffects[31], 100, 256 * ee.field_p / 100);
+                                                      tl.field_a.addSample(SpriteState.secondarySoundEffects[31], 100, 256 * ee.field_p / 100);
                                                     } else {
                                                       if (this.field_B == 36) {
-                                                        tl.field_a.a(SpriteState.secondarySoundEffects[32], 100, 256 * ee.field_p / 100);
+                                                        tl.field_a.addSample(SpriteState.secondarySoundEffects[32], 100, 256 * ee.field_p / 100);
                                                       } else {
                                                         if (param0) {
                                                           var3 = (String) null;
                                                           this.a(-17, 111, false, (String) null, 55);
                                                         }
                                                         if (this.field_B == 38) {
-                                                          tl.field_a.a(SpriteState.secondarySoundEffects[33], 100, ee.field_p * 256 / 100);
+                                                          tl.field_a.addSample(SpriteState.secondarySoundEffects[33], 100, ee.field_p * 256 / 100);
                                                         } else {
                                                           if (this.field_B == 37) {
-                                                            tl.field_a.a(SpriteState.secondarySoundEffects[34], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.addSample(SpriteState.secondarySoundEffects[34], 100, ee.field_p * 256 / 100);
                                                           } else {
                                                             if (39 == this.field_B) {
-                                                              tl.field_a.a(SpriteState.secondarySoundEffects[35], 100, ee.field_p * 256 / 100);
+                                                              tl.field_a.addSample(SpriteState.secondarySoundEffects[35], 100, ee.field_p * 256 / 100);
                                                             } else {
                                                               if (this.field_B == 40) {
-                                                                tl.field_a.a(SpriteState.secondarySoundEffects[37], 100, 256 * ee.field_p / 100);
+                                                                tl.field_a.addSample(SpriteState.secondarySoundEffects[37], 100, 256 * ee.field_p / 100);
                                                               } else {
-                                                                tl.field_a.a(si.soundEffects[9], 100, ee.field_p * 256 / 100);
+                                                                tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[9], 100, ee.field_p * 256 / 100);
                                                               }
                                                             }
                                                           }
@@ -1320,8 +1320,8 @@ final class eg extends qh {
             var3_int = 15;
             var4 = this.field_B;
             if (var4 == 0) {
-              if (cd.field_e > 0) {
-                cd.field_e = cd.field_e - 1;
+              if (DiskCacheWorker.field_e > 0) {
+                DiskCacheWorker.field_e = DiskCacheWorker.field_e - 1;
                 this.field_s = 0;
               }
               if (0 == this.field_s) {
@@ -1339,7 +1339,7 @@ final class eg extends qh {
                   this.b(param1, param0 + 119) == 1) {
                   this.field_e = 70;
                   if (pk.field_s) {
-                    tl.field_a.a(si.soundEffects[3], 100, ee.field_p * 256 / 100);
+                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[3], 100, ee.field_p * 256 / 100);
                   }
                 }
                 this.field_f.field_b = this.field_f.field_b + 120;
@@ -1384,10 +1384,10 @@ final class eg extends qh {
                     this.field_n = 10;
                   }
                 }
-                if (0 < p.field_V) {
+                if (0 < ValidatedTextField.field_V) {
                   this.field_n = 4;
-                  p.field_V = p.field_V - 1;
-                  if (p.field_V < 15) {
+                  ValidatedTextField.field_V = ValidatedTextField.field_V - 1;
+                  if (ValidatedTextField.field_V < 15) {
                     this.field_n = 5;
                   }
                 }
@@ -1395,90 +1395,90 @@ final class eg extends qh {
                   10 < this.field_e) {
                   this.field_e = this.field_e - 4;
                 }
-                this.a(1, si.soundEffects, param1, 1, var3_int, 1, tl.field_a, pk.field_s, (byte) -104);
+                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, var3_int, 1, tl.field_a, pk.field_s, (byte) -104);
                 if (!sc.field_m.field_d) {
-                  if (p.field_V < 10) {
+                  if (ValidatedTextField.field_V < 10) {
                     if (fi.field_x > 0 &&
                       10 > fi.field_x) {
-                      p.field_V = 25;
+                      ValidatedTextField.field_V = 25;
                       fi.field_x = 0;
-                      ii.field_e[od.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[od.field_k].field_f.a(param0 ^ 42, this.field_f);
-                      dupTemp$1 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
+                      ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 42, this.field_f);
+                      dupTemp$1 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$1.field_a = dupTemp$1.field_a + 140;
-                      ii.field_e[od.field_k].field_h = this.field_h;
-                      dupTemp$2 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                      dupTemp$2 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$2.field_b = dupTemp$2.field_b + 40;
-                      od.field_k = od.field_k + 1;
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       if (pk.field_s) {
-                        tl.field_a.a(si.soundEffects[0], 100, ee.field_p * 256 / 100);
+                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
                       }
                     }
                     if (fi.field_x >= 10 &&
                       fi.field_x < 40) {
-                      p.field_V = 5;
+                      ValidatedTextField.field_V = 5;
                       fi.field_x = fi.field_x - 20;
                       if (fi.field_x < 0) {
                         fi.field_x = 0;
                       }
-                      ii.field_e[od.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[od.field_k].field_f.a(param0 ^ 21, this.field_f);
-                      dupTemp$3 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
+                      ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 21, this.field_f);
+                      dupTemp$3 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$3.field_a = dupTemp$3.field_a + 140;
-                      ii.field_e[od.field_k].field_h = this.field_h;
-                      dupTemp$4 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                      dupTemp$4 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$4.field_b = dupTemp$4.field_b + 40;
-                      ii.field_e[od.field_k].field_e = -10;
-                      od.field_k = od.field_k + 1;
-                      ii.field_e[od.field_k].a(param0 + 9270, 1, this.field_i);
-                      ii.field_e[od.field_k].field_f.a(-112, this.field_f);
-                      dupTemp$5 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_e = -10;
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
+                      ii.field_e[WidgetTheme.field_k].a(param0 + 9270, 1, this.field_i);
+                      ii.field_e[WidgetTheme.field_k].field_f.a(-112, this.field_f);
+                      dupTemp$5 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$5.field_a = dupTemp$5.field_a + 140;
-                      ii.field_e[od.field_k].field_h = this.field_h;
-                      dupTemp$6 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                      dupTemp$6 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$6.field_b = dupTemp$6.field_b + 40;
-                      ii.field_e[od.field_k].field_e = 10;
-                      od.field_k = od.field_k + 1;
+                      ii.field_e[WidgetTheme.field_k].field_e = 10;
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       if (pk.field_s) {
-                        tl.field_a.a(si.soundEffects[23], 100, ee.field_p * 256 / 100);
+                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[23], 100, ee.field_p * 256 / 100);
                       }
                     }
                     if (fi.field_x >= 40 &&
                       fi.field_x < 100) {
-                      p.field_V = 5;
+                      ValidatedTextField.field_V = 5;
                       fi.field_x = fi.field_x - 30;
                       if (fi.field_x < 0) {
                         fi.field_x = 0;
                       }
-                      ii.field_e[od.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[od.field_k].field_f.a(-87, this.field_f);
-                      dupTemp$7 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
+                      ii.field_e[WidgetTheme.field_k].field_f.a(-87, this.field_f);
+                      dupTemp$7 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$7.field_a = dupTemp$7.field_a + 140;
-                      ii.field_e[od.field_k].field_h = this.field_h;
-                      dupTemp$8 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                      dupTemp$8 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$8.field_b = dupTemp$8.field_b + 40;
-                      ii.field_e[od.field_k].field_e = 30;
-                      od.field_k = od.field_k + 1;
-                      ii.field_e[od.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[od.field_k].field_f.a(-82, this.field_f);
-                      dupTemp$9 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_e = 30;
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
+                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
+                      ii.field_e[WidgetTheme.field_k].field_f.a(-82, this.field_f);
+                      dupTemp$9 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$9.field_a = dupTemp$9.field_a + 140;
-                      ii.field_e[od.field_k].field_h = this.field_h;
-                      dupTemp$10 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                      dupTemp$10 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$10.field_b = dupTemp$10.field_b + 40;
-                      ii.field_e[od.field_k].field_e = 0;
-                      od.field_k = od.field_k + 1;
-                      ii.field_e[od.field_k].a(9147, 1, this.field_i);
-                      ii.field_e[od.field_k].field_f.a(-97, this.field_f);
-                      dupTemp$11 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_e = 0;
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
+                      ii.field_e[WidgetTheme.field_k].a(9147, 1, this.field_i);
+                      ii.field_e[WidgetTheme.field_k].field_f.a(-97, this.field_f);
+                      dupTemp$11 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$11.field_a = dupTemp$11.field_a + 140;
-                      ii.field_e[od.field_k].field_h = this.field_h;
-                      dupTemp$12 = ii.field_e[od.field_k].field_f;
+                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                      dupTemp$12 = ii.field_e[WidgetTheme.field_k].field_f;
                       dupTemp$12.field_b = dupTemp$12.field_b + 40;
-                      ii.field_e[od.field_k].field_e = -30;
-                      od.field_k = od.field_k + 1;
+                      ii.field_e[WidgetTheme.field_k].field_e = -30;
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       if (pk.field_s) {
-                        tl.field_a.a(si.soundEffects[24], 100, ee.field_p * 256 / 100);
+                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[24], 100, ee.field_p * 256 / 100);
                       }
                     }
                     if (fi.field_x < 100) {
@@ -1488,20 +1488,20 @@ final class eg extends qh {
                       break regionExit1;
                     }
                     fi.field_x = 0;
-                    p.field_V = 25;
+                    ValidatedTextField.field_V = 25;
                     if (this.field_e >= 0) {
                       this.field_e = this.field_e - 10;
                     }
-                    ii.field_e[od.field_k].a(9147, 2, this.field_i);
-                    ii.field_e[od.field_k].field_f.a(-83, this.field_f);
-                    ii.field_e[od.field_k].field_h = this.field_h;
-                    dupTemp$13 = ii.field_e[od.field_k].field_f;
+                    ii.field_e[WidgetTheme.field_k].a(9147, 2, this.field_i);
+                    ii.field_e[WidgetTheme.field_k].field_f.a(-83, this.field_f);
+                    ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                    dupTemp$13 = ii.field_e[WidgetTheme.field_k].field_f;
                     dupTemp$13.field_b = dupTemp$13.field_b + 60 * this.field_h;
-                    ii.field_e[od.field_k].field_e = 5 * (fi.field_x / 10);
-                    od.field_k = od.field_k + 1;
+                    ii.field_e[WidgetTheme.field_k].field_e = 5 * (fi.field_x / 10);
+                    WidgetTheme.field_k = WidgetTheme.field_k + 1;
                     stackIn_183_0 = !(pk.field_s);
                     if (!stackIn_183_0) {
-                      tl.field_a.a(si.soundEffects[2], 100, 256 * ee.field_p / 100);
+                      tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, 256 * ee.field_p / 100);
                     }
                   }
                 } else {
@@ -1513,7 +1513,7 @@ final class eg extends qh {
                   }
                   if (fi.field_x % 10 == 5 &&
                     pk.field_s) {
-                    tl.field_a.a(si.soundEffects[16], 100, 256 * ee.field_p / 100);
+                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[16], 100, 256 * ee.field_p / 100);
                   }
                 }
                 this.field_d = this.field_d * 2;
@@ -1532,7 +1532,7 @@ final class eg extends qh {
                     stackIn_84_1 = 1;
                   }
                   if (stackIn_83_0 == stackIn_84_1) {
-                    tl.field_a.a(si.soundEffects[8], 100, ee.field_p * 256 / 100);
+                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[8], 100, ee.field_p * 256 / 100);
                   }
                 }
                 this.field_e = this.field_e + 1;
@@ -1553,7 +1553,7 @@ final class eg extends qh {
                     this.field_i.field_b = this.field_i.field_b + 1;
                   }
                   DelegatingCanvas.field_b = true;
-                  cd.field_e = 100;
+                  DiskCacheWorker.field_e = 100;
                   this.field_f.field_a = 0;
                   this.field_s = 0;
                   GameApplet.field_g = true;
@@ -1578,15 +1578,15 @@ final class eg extends qh {
                     this.field_i.field_b < 20) {
                     stackIn_195_0 = (pk.field_s) ? 0 : 1;
                     if (stackIn_195_0 != 1) {
-                      tl.field_a.a(si.soundEffects[1], 100, ee.field_p * 128 / 100);
+                      tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[1], 100, ee.field_p * 128 / 100);
                     }
                   }
                 }
                 this.field_w = this.field_w + 1;
                 if (this.field_w <= 2) {
-                  this.a(1, si.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) -73);
+                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) -73);
                   if (!pg.field_q) {
-                    for (var4 = 0; od.field_k > var4; var4++) {
+                    for (var4 = 0; WidgetTheme.field_k > var4; var4++) {
                       if (ii.field_e[var4].field_p > 0 &&
                         ii.field_e[var4].field_r == 0 &&
                         null != ii.field_e[var4].field_q &&
@@ -1601,7 +1601,7 @@ final class eg extends qh {
                           dupTemp$14 = ii.field_e[var4];
                           dupTemp$14.field_s = dupTemp$14.field_s + 1;
                           if (pk.field_s) {
-                            tl.field_a.a(si.soundEffects[10], 100, 256 * ee.field_p / 100);
+                            tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[10], 100, 256 * ee.field_p / 100);
                           }
                           ii.field_e[var4].field_m = this.field_h;
                           this.field_B = 20;
@@ -1625,9 +1625,9 @@ final class eg extends qh {
                     this.field_i.field_a = this.field_i.field_a - 1;
                     if (param1.field_d[this.field_i.a((byte) -68)]) {
                       param1.field_d[this.field_i.a((byte) -68)] = false;
-                      ii.field_e[od.field_k].a(9147, 21, new ob(this.field_i));
-                      var4_ref_eg = ii.field_e[od.field_k];
-                      od.field_k = od.field_k + 1;
+                      ii.field_e[WidgetTheme.field_k].a(9147, 21, new ob(this.field_i));
+                      var4_ref_eg = ii.field_e[WidgetTheme.field_k];
+                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                       var4_ref_eg.field_f.a(-117, this.field_f);
                       var4_ref_eg.field_o = 0;
                       var4_ref_eg.field_e = 4;
@@ -1635,8 +1635,8 @@ final class eg extends qh {
                       var4_ref_eg.field_h = this.field_h;
                     }
                     this.field_i.field_a = this.field_i.field_a + 1;
-                    this.a(1, si.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 29);
-                    for (var4 = 0; var4 < od.field_k; var4++) {
+                    this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 29);
+                    for (var4 = 0; var4 < WidgetTheme.field_k; var4++) {
                       if (ii.field_e[var4].field_p > 0 &&
                         this.field_q != null &&
                         null != ii.field_e[var4].field_q) {
@@ -1659,7 +1659,7 @@ final class eg extends qh {
                             }
                             if (stackIn_248_0 != stackIn_249_1 &&
                               ii.field_e[var4].field_r <= 0) {
-                              tl.field_a.a(si.soundEffects[2], 100, 256 * ee.field_p / 100);
+                              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, 256 * ee.field_p / 100);
                             }
                             ii.field_e[var4].field_r = 1;
                             ii.field_e[var4].field_w = 0;
@@ -1667,7 +1667,7 @@ final class eg extends qh {
                             dupTemp$15 = ii.field_e[var4];
                             dupTemp$15.field_s = dupTemp$15.field_s + 10;
                             if (pk.field_s) {
-                              tl.field_a.a(si.soundEffects[2], 100, 256 * ee.field_p / 100);
+                              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[2], 100, 256 * ee.field_p / 100);
                             }
                             ii.field_e[var4].field_m = this.field_h;
                             if (!(ii.field_e[var4].field_p < 10) ||
@@ -1746,7 +1746,7 @@ final class eg extends qh {
                               this.field_s = this.field_s - 1;
                               this.field_o = 0;
                               if (pk.field_s) {
-                                tl.field_a.a(si.soundEffects[30], 100, 256 * ee.field_p / 100);
+                                tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[30], 100, 256 * ee.field_p / 100);
                               }
                             }
                             w.field_b = w.field_b + 1;
@@ -1792,7 +1792,7 @@ final class eg extends qh {
                               this.field_p = this.field_p - 1;
                               this.field_s = this.field_s - 1;
                               if (pk.field_s) {
-                                tl.field_a.a(si.soundEffects[25], 100, ee.field_p * 256 / 100);
+                                tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[25], 100, ee.field_p * 256 / 100);
                               }
                               if (this.field_p > 0) {
                                 this.e(false);
@@ -1861,20 +1861,20 @@ final class eg extends qh {
                                 if (!this.a(false, param1, param0 + 148)) {
                                   this.e(false);
                                 } else {
-                                  ii.field_e[od.field_k].a(param0 ^ -9154, 11, this.field_i);
-                                  ii.field_e[od.field_k].field_f.a(-82, this.field_f);
-                                  dupTemp$71 = ii.field_e[od.field_k].field_f;
+                                  ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 11, this.field_i);
+                                  ii.field_e[WidgetTheme.field_k].field_f.a(-82, this.field_f);
+                                  dupTemp$71 = ii.field_e[WidgetTheme.field_k].field_f;
                                   dupTemp$71.field_b = dupTemp$71.field_b + (this.field_h * 120 + 40);
-                                  dupTemp$72 = ii.field_e[od.field_k].field_f;
+                                  dupTemp$72 = ii.field_e[WidgetTheme.field_k].field_f;
                                   dupTemp$72.field_a = dupTemp$72.field_a + 40;
-                                  ii.field_e[od.field_k].field_h = this.field_h;
-                                  ii.field_e[od.field_k].field_w = 10;
-                                  od.field_k = od.field_k + 1;
+                                  ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                  ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                  WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                   stackIn_440_0 = (pk.field_s) ? 0 : 1;
                                   if (stackIn_440_0 == 1) {
                                     this.e(false);
                                   } else {
-                                    tl.field_a.a(si.soundEffects[13], 100, 256 * ee.field_p / 100);
+                                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, 256 * ee.field_p / 100);
                                     this.e(false);
                                   }
                                 }
@@ -1884,7 +1884,7 @@ final class eg extends qh {
                         } else {
                           if (var4 == 11) {
                             this.field_e = 2;
-                            this.a(1, si.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 127);
+                            this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 0, tl.field_a, pk.field_s, (byte) 127);
                             this.e(false);
                           } else {
                             if (var4 == 12) {
@@ -1899,7 +1899,7 @@ final class eg extends qh {
                                       17 > this.field_i.field_b) {
                                       if (((this.field_z == 1)) &&
                                         ((this.field_n == 3))) {
-                                        tl.field_a.a(SpriteState.secondarySoundEffects[12], 100, 256 * ee.field_p / 100);
+                                        tl.field_a.addSample(SpriteState.secondarySoundEffects[12], 100, 256 * ee.field_p / 100);
                                       }
                                       decompiledFrameRemainder0 = false;
                                     }
@@ -1946,27 +1946,27 @@ final class eg extends qh {
                                   this.field_p = this.field_p - 1;
                                   this.field_s = this.field_s - 1;
                                   if (25 == this.field_p) {
-                                    ii.field_e[od.field_k].a(9147, 10, this.field_i);
-                                    ii.field_e[od.field_k].field_f.a(-108, this.field_f);
-                                    ii.field_e[od.field_k].field_i.field_b = 0;
-                                    ii.field_e[od.field_k].field_i.field_a = 16;
-                                    ii.field_e[od.field_k].field_f.field_b = 0;
-                                    ii.field_e[od.field_k].field_f.field_a = 0;
-                                    ii.field_e[od.field_k].field_h = 1;
-                                    ii.field_e[od.field_k].field_w = 10;
-                                    od.field_k = od.field_k + 1;
-                                    ii.field_e[od.field_k].a(9147, 10, this.field_i);
-                                    ii.field_e[od.field_k].field_f.a(param0 + 19, this.field_f);
-                                    ii.field_e[od.field_k].field_i.field_b = 19;
-                                    ii.field_e[od.field_k].field_i.field_a = 16;
-                                    ii.field_e[od.field_k].field_f.field_b = 0;
-                                    ii.field_e[od.field_k].field_f.field_a = 0;
-                                    ii.field_e[od.field_k].field_h = -1;
-                                    ii.field_e[od.field_k].field_w = 10;
-                                    od.field_k = od.field_k + 1;
+                                    ii.field_e[WidgetTheme.field_k].a(9147, 10, this.field_i);
+                                    ii.field_e[WidgetTheme.field_k].field_f.a(-108, this.field_f);
+                                    ii.field_e[WidgetTheme.field_k].field_i.field_b = 0;
+                                    ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
+                                    ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
+                                    ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                    ii.field_e[WidgetTheme.field_k].field_h = 1;
+                                    ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                    WidgetTheme.field_k = WidgetTheme.field_k + 1;
+                                    ii.field_e[WidgetTheme.field_k].a(9147, 10, this.field_i);
+                                    ii.field_e[WidgetTheme.field_k].field_f.a(param0 + 19, this.field_f);
+                                    ii.field_e[WidgetTheme.field_k].field_i.field_b = 19;
+                                    ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
+                                    ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
+                                    ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                    ii.field_e[WidgetTheme.field_k].field_h = -1;
+                                    ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                    WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                   }
                                   if (pk.field_s) {
-                                    tl.field_a.a(si.soundEffects[25], 100, 256 * ee.field_p / 100);
+                                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[25], 100, 256 * ee.field_p / 100);
                                   }
                                   if (this.field_p <= 0) {
                                     this.c(false);
@@ -1989,7 +1989,7 @@ final class eg extends qh {
                                     this.field_x = 0;
                                     stackIn_457_0 = (pk.field_s) ? 0 : 1;
                                     if (stackIn_457_0 != 1) {
-                                      tl.field_a.a(si.soundEffects[17], 100, 256 * ee.field_p / 100);
+                                      tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[17], 100, 256 * ee.field_p / 100);
                                     }
                                   }
                                   w.field_b = w.field_b + 1;
@@ -2073,19 +2073,19 @@ final class eg extends qh {
                                           break regionExit1;
                                         }
                                         this.field_w = 0;
-                                        ii.field_e[od.field_k].a(9147, 18, this.field_i);
-                                        ii.field_e[od.field_k].field_f.a(-84, this.field_f);
-                                        dupTemp$20 = ii.field_e[od.field_k].field_f;
+                                        ii.field_e[WidgetTheme.field_k].a(9147, 18, this.field_i);
+                                        ii.field_e[WidgetTheme.field_k].field_f.a(-84, this.field_f);
+                                        dupTemp$20 = ii.field_e[WidgetTheme.field_k].field_f;
                                         dupTemp$20.field_b = dupTemp$20.field_b + (this.field_h * 200 + 120);
-                                        dupTemp$21 = ii.field_e[od.field_k].field_f;
+                                        dupTemp$21 = ii.field_e[WidgetTheme.field_k].field_f;
                                         dupTemp$21.field_a = dupTemp$21.field_a - 40;
-                                        ii.field_e[od.field_k].field_h = this.field_h;
-                                        ii.field_e[od.field_k].field_w = 0;
-                                        ii.field_e[od.field_k].field_o = 8;
-                                        od.field_k = od.field_k + 1;
+                                        ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                        ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                        ii.field_e[WidgetTheme.field_k].field_o = 8;
+                                        WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                         stackIn_535_0 = (pk.field_s) ? 0 : 1;
                                         if (stackIn_535_0 != 1) {
-                                          tl.field_a.a(SpriteState.secondarySoundEffects[17], 100, ee.field_p * 256 / 100);
+                                          tl.field_a.addSample(SpriteState.secondarySoundEffects[17], 100, ee.field_p * 256 / 100);
                                         }
                                       }
                                       this.e(false);
@@ -2150,20 +2150,20 @@ final class eg extends qh {
                                         }
                                         if (4 == this.field_x &&
                                           this.a(false, param1, param0 + 148)) {
-                                          ii.field_e[od.field_k].a(9147, 19, this.field_i);
-                                          ii.field_e[od.field_k].field_f.a(param0 ^ 13, this.field_f);
-                                          dupTemp$24 = ii.field_e[od.field_k].field_f;
+                                          ii.field_e[WidgetTheme.field_k].a(9147, 19, this.field_i);
+                                          ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 13, this.field_f);
+                                          dupTemp$24 = ii.field_e[WidgetTheme.field_k].field_f;
                                           dupTemp$24.field_b = dupTemp$24.field_b + (40 + 360 * this.field_h);
-                                          dupTemp$25 = ii.field_e[od.field_k].field_f;
+                                          dupTemp$25 = ii.field_e[WidgetTheme.field_k].field_f;
                                           dupTemp$25.field_a = dupTemp$25.field_a + 160;
-                                          ii.field_e[od.field_k].field_h = this.field_h;
-                                          ii.field_e[od.field_k].field_w = 0;
-                                          ii.field_e[od.field_k].field_e = 25;
-                                          ii.field_e[od.field_k].field_n = 37;
-                                          od.field_k = od.field_k + 1;
+                                          ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                          ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                          ii.field_e[WidgetTheme.field_k].field_e = 25;
+                                          ii.field_e[WidgetTheme.field_k].field_n = 37;
+                                          WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                           stackIn_574_0 = !(pk.field_s);
                                           if (!stackIn_574_0) {
-                                            tl.field_a.a(SpriteState.secondarySoundEffects[18], 100, ee.field_p * 256 / 100);
+                                            tl.field_a.addSample(SpriteState.secondarySoundEffects[18], 100, ee.field_p * 256 / 100);
                                           }
                                         }
                                         this.e(false);
@@ -2190,7 +2190,7 @@ final class eg extends qh {
                                             w.field_b = 250;
                                             this.field_s = this.field_s - 1;
                                             if (pk.field_s) {
-                                              tl.field_a.a(si.soundEffects[29], 100, ee.field_p * 256 / 100);
+                                              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[29], 100, ee.field_p * 256 / 100);
                                             }
                                           }
                                           w.field_b = w.field_b + 1;
@@ -2239,15 +2239,15 @@ final class eg extends qh {
                                             this.field_p = this.field_p - 1;
                                             this.field_s = this.field_s - 1;
                                             if (0 == this.field_p % 10) {
-                                              ii.field_e[od.field_k].a(9147, 14, this.field_i);
-                                              ii.field_e[od.field_k].field_f.a(-102, this.field_f);
-                                              ii.field_e[od.field_k].field_h = 1;
-                                              ii.field_e[od.field_k].field_w = 10;
-                                              od.field_k = od.field_k + 1;
+                                              ii.field_e[WidgetTheme.field_k].a(9147, 14, this.field_i);
+                                              ii.field_e[WidgetTheme.field_k].field_f.a(-102, this.field_f);
+                                              ii.field_e[WidgetTheme.field_k].field_h = 1;
+                                              ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                              WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                             }
                                             this.field_o = 1;
                                             if (pk.field_s) {
-                                              tl.field_a.a(si.soundEffects[29], 100, 256 * ee.field_p / 100);
+                                              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[29], 100, 256 * ee.field_p / 100);
                                             }
                                             if (this.field_p <= 0) {
                                               this.c(false);
@@ -2273,7 +2273,7 @@ final class eg extends qh {
                                             this.field_n = 34;
                                           }
                                         } else {
-                                          this.a(1, si.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) 127);
+                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 5, 1, tl.field_a, pk.field_s, (byte) 127);
                                           if (36 > this.field_n) {
                                             this.field_n = 36;
                                           }
@@ -2298,7 +2298,7 @@ final class eg extends qh {
                                         }
                                       } else {
                                         if (var4 == 19) {
-                                          this.a(1, si.soundEffects, param1, 1, 25, 0, tl.field_a, pk.field_s, (byte) -120);
+                                          this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 25, 0, tl.field_a, pk.field_s, (byte) -120);
                                           this.e(false);
                                           this.field_n = 37;
                                           if (((this.b(param1, -4) == 1)) &&
@@ -2371,7 +2371,7 @@ final class eg extends qh {
                                                 this.field_e <= 0) {
                                                 this.b(5);
                                               } else {
-                                                this.a(1, si.soundEffects, param1, 1, 30, 1, tl.field_a, pk.field_s, (byte) 126);
+                                                this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 30, 1, tl.field_a, pk.field_s, (byte) 126);
                                               }
                                             } else {
                                               if (var4 == 22) {
@@ -2429,7 +2429,7 @@ final class eg extends qh {
                                                           this.field_s = this.field_s - 1;
                                                           this.field_x = 0;
                                                           if (pk.field_s) {
-                                                            tl.field_a.a(si.soundEffects[26], 100, 256 * ee.field_p / 100);
+                                                            tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[26], 100, 256 * ee.field_p / 100);
                                                           }
                                                         }
                                                         w.field_b = w.field_b + 1;
@@ -2490,17 +2490,17 @@ final class eg extends qh {
                                                         }
                                                         if (this.field_x == 4 &&
                                                           this.a(true, param1, 25)) {
-                                                          ii.field_e[od.field_k].a(9147, 27, this.field_i);
-                                                          ii.field_e[od.field_k].field_f.a(-81, this.field_f);
-                                                          dupTemp$62 = ii.field_e[od.field_k].field_f;
+                                                          ii.field_e[WidgetTheme.field_k].a(9147, 27, this.field_i);
+                                                          ii.field_e[WidgetTheme.field_k].field_f.a(-81, this.field_f);
+                                                          dupTemp$62 = ii.field_e[WidgetTheme.field_k].field_f;
                                                           dupTemp$62.field_b = dupTemp$62.field_b + (40 + this.field_h * 240);
-                                                          dupTemp$63 = ii.field_e[od.field_k].field_f;
+                                                          dupTemp$63 = ii.field_e[WidgetTheme.field_k].field_f;
                                                           dupTemp$63.field_a = dupTemp$63.field_a + 80;
-                                                          ii.field_e[od.field_k].field_h = this.field_h;
-                                                          ii.field_e[od.field_k].field_w = 0;
-                                                          ii.field_e[od.field_k].field_e = 40;
-                                                          ii.field_e[od.field_k].field_o = 5;
-                                                          od.field_k = od.field_k + 1;
+                                                          ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                          ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                          ii.field_e[WidgetTheme.field_k].field_e = 40;
+                                                          ii.field_e[WidgetTheme.field_k].field_o = 5;
+                                                          WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                           stackIn_773_0 = 0;
                                                           if (pk.field_s) {
                                                             stackIn_774_1 = 0;
@@ -2508,7 +2508,7 @@ final class eg extends qh {
                                                             stackIn_774_1 = 1;
                                                           }
                                                           if (stackIn_773_0 == stackIn_774_1) {
-                                                            tl.field_a.a(SpriteState.secondarySoundEffects[25], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.addSample(SpriteState.secondarySoundEffects[25], 100, ee.field_p * 256 / 100);
                                                           }
                                                         }
                                                         if (this.field_s > 0) {
@@ -2516,28 +2516,28 @@ final class eg extends qh {
                                                           this.field_s = this.field_s - 1;
                                                           if (this.field_p == 10 ||
                                                             this.field_p == 30) {
-                                                            ii.field_e[od.field_k].a(param0 + 9270, 23, this.field_i);
-                                                            ii.field_e[od.field_k].field_f.a(-94, this.field_f);
-                                                            ii.field_e[od.field_k].field_i.field_b = 0;
-                                                            ii.field_e[od.field_k].field_i.field_a = 16;
-                                                            ii.field_e[od.field_k].field_f.field_b = 0;
-                                                            ii.field_e[od.field_k].field_f.field_a = 0;
-                                                            ii.field_e[od.field_k].field_h = 1;
-                                                            ii.field_e[od.field_k].field_w = 10;
-                                                            od.field_k = od.field_k + 1;
-                                                            ii.field_e[od.field_k].a(9147, 23, this.field_i);
-                                                            ii.field_e[od.field_k].field_f.a(-117, this.field_f);
-                                                            ii.field_e[od.field_k].field_i.field_b = 19;
-                                                            ii.field_e[od.field_k].field_i.field_a = 16;
-                                                            ii.field_e[od.field_k].field_f.field_b = 0;
-                                                            ii.field_e[od.field_k].field_f.field_a = 0;
-                                                            ii.field_e[od.field_k].field_h = -1;
-                                                            ii.field_e[od.field_k].field_w = 10;
-                                                            od.field_k = od.field_k + 1;
+                                                            ii.field_e[WidgetTheme.field_k].a(param0 + 9270, 23, this.field_i);
+                                                            ii.field_e[WidgetTheme.field_k].field_f.a(-94, this.field_f);
+                                                            ii.field_e[WidgetTheme.field_k].field_i.field_b = 0;
+                                                            ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
+                                                            ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
+                                                            ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                                            ii.field_e[WidgetTheme.field_k].field_h = 1;
+                                                            ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                                            WidgetTheme.field_k = WidgetTheme.field_k + 1;
+                                                            ii.field_e[WidgetTheme.field_k].a(9147, 23, this.field_i);
+                                                            ii.field_e[WidgetTheme.field_k].field_f.a(-117, this.field_f);
+                                                            ii.field_e[WidgetTheme.field_k].field_i.field_b = 19;
+                                                            ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
+                                                            ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
+                                                            ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                                            ii.field_e[WidgetTheme.field_k].field_h = -1;
+                                                            ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                                            WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                           }
                                                           stackIn_784_0 = (pk.field_s) ? 0 : 1;
                                                           if (stackIn_784_0 != 1) {
-                                                            tl.field_a.a(si.soundEffects[26], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[26], 100, ee.field_p * 256 / 100);
                                                           }
                                                           if (this.field_p <= 0) {
                                                             this.c(false);
@@ -2549,7 +2549,7 @@ final class eg extends qh {
                                                     }
                                                   } else {
                                                     if (var4 == 27) {
-                                                      this.a(1, si.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) 126);
                                                       this.e(false);
                                                       if (((this.b(param1, -4) == 1)) &&
                                                         ((this.field_f.field_a == 0))) {
@@ -2558,28 +2558,28 @@ final class eg extends qh {
                                                         this.field_e = 50;
                                                         this.field_B = 28;
                                                         this.field_f.field_a = this.field_f.field_a + 40;
-                                                        ii.field_e[od.field_k].a(9147, 28, this.field_i);
-                                                        ii.field_e[od.field_k].field_f.a(-116, this.field_f);
-                                                        ii.field_e[od.field_k].field_h = -this.field_h;
-                                                        ii.field_e[od.field_k].field_w = 0;
-                                                        ii.field_e[od.field_k].field_e = 50;
-                                                        ii.field_e[od.field_k].field_o = 5;
-                                                        od.field_k = od.field_k + 1;
+                                                        ii.field_e[WidgetTheme.field_k].a(9147, 28, this.field_i);
+                                                        ii.field_e[WidgetTheme.field_k].field_f.a(-116, this.field_f);
+                                                        ii.field_e[WidgetTheme.field_k].field_h = -this.field_h;
+                                                        ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                        ii.field_e[WidgetTheme.field_k].field_e = 50;
+                                                        ii.field_e[WidgetTheme.field_k].field_o = 5;
+                                                        WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                         stackIn_808_0 = (pk.field_s) ? 0 : 1;
                                                         if ((stackIn_808_0 != 1)) {
-                                                          tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
+                                                          tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                         }
                                                       }
                                                     } else {
                                                       if (var4 == 28) {
-                                                        this.a(1, si.soundEffects, param1, 1, 20, 0, tl.field_a, pk.field_s, (byte) -50);
+                                                        this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 20, 0, tl.field_a, pk.field_s, (byte) -50);
                                                         this.e(false);
                                                         if (((this.b(param1, -4) == 1)) &&
                                                           ((this.field_f.field_a == 0))) {
                                                           this.field_k = 1;
                                                           stackIn_817_0 = (pk.field_s) ? 0 : 1;
                                                           if ((stackIn_817_0 != 1)) {
-                                                            tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
+                                                            tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                           }
                                                         }
                                                       } else {
@@ -2638,17 +2638,17 @@ final class eg extends qh {
                                                               }
                                                               if (4 == this.field_x) {
                                                                 if (this.a(false, param1, 25)) {
-                                                                  ii.field_e[od.field_k].a(9147, 34, this.field_i);
-                                                                  ii.field_e[od.field_k].field_f.a(-108, this.field_f);
-                                                                  dupTemp$58 = ii.field_e[od.field_k].field_f;
+                                                                  ii.field_e[WidgetTheme.field_k].a(9147, 34, this.field_i);
+                                                                  ii.field_e[WidgetTheme.field_k].field_f.a(-108, this.field_f);
+                                                                  dupTemp$58 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                   dupTemp$58.field_b = dupTemp$58.field_b + (this.field_h * 120 + 40);
-                                                                  dupTemp$59 = ii.field_e[od.field_k].field_f;
+                                                                  dupTemp$59 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                   dupTemp$59.field_a = dupTemp$59.field_a + 40;
-                                                                  ii.field_e[od.field_k].field_h = this.field_h;
-                                                                  ii.field_e[od.field_k].field_w = 10;
-                                                                  od.field_k = od.field_k + 1;
+                                                                  ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                                  ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                                                  WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                   if (pk.field_s) {
-                                                                    tl.field_a.a(si.soundEffects[13], 100, 256 * ee.field_p / 100);
+                                                                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, 256 * ee.field_p / 100);
                                                                   }
                                                                 }
                                                                 if (this.field_x == 0) {
@@ -2720,15 +2720,15 @@ final class eg extends qh {
                                                                 }
                                                                 if (this.field_x == 4 &&
                                                                   this.a(false, param1, param0 ^ -100)) {
-                                                                  ii.field_e[od.field_k].a(9147, 35, this.field_i);
-                                                                  ii.field_e[od.field_k].field_f.a(-103, this.field_f);
-                                                                  dupTemp$32 = ii.field_e[od.field_k].field_f;
+                                                                  ii.field_e[WidgetTheme.field_k].a(9147, 35, this.field_i);
+                                                                  ii.field_e[WidgetTheme.field_k].field_f.a(-103, this.field_f);
+                                                                  dupTemp$32 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                   dupTemp$32.field_b = dupTemp$32.field_b + (40 + 120 * this.field_h);
-                                                                  dupTemp$33 = ii.field_e[od.field_k].field_f;
+                                                                  dupTemp$33 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                   dupTemp$33.field_a = dupTemp$33.field_a + 520;
-                                                                  ii.field_e[od.field_k].field_h = this.field_h;
-                                                                  ii.field_e[od.field_k].field_w = 0;
-                                                                  od.field_k = od.field_k + 1;
+                                                                  ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                                  ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                                  WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                   stackIn_896_0 = 0;
                                                                   if (pk.field_s) {
                                                                     stackIn_897_1 = 0;
@@ -2736,7 +2736,7 @@ final class eg extends qh {
                                                                     stackIn_897_1 = 1;
                                                                   }
                                                                   if (stackIn_896_0 == stackIn_897_1) {
-                                                                    tl.field_a.a(si.soundEffects[13], 100, ee.field_p * 256 / 100);
+                                                                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, ee.field_p * 256 / 100);
                                                                   }
                                                                 }
                                                                 this.e(false);
@@ -2776,17 +2776,17 @@ final class eg extends qh {
                                                                       this.field_w = 0;
                                                                     }
                                                                     if (this.field_w % 100 == 25) {
-                                                                      ii.field_e[od.field_k].a(9147, 42, this.field_i);
-                                                                      ii.field_e[od.field_k].field_f.a(param0 ^ 26, this.field_f);
-                                                                      dupTemp$36 = ii.field_e[od.field_k].field_f;
+                                                                      ii.field_e[WidgetTheme.field_k].a(9147, 42, this.field_i);
+                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 26, this.field_f);
+                                                                      dupTemp$36 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                       dupTemp$36.field_b = dupTemp$36.field_b + (this.field_h * 120 + 40);
-                                                                      dupTemp$37 = ii.field_e[od.field_k].field_f;
+                                                                      dupTemp$37 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                       dupTemp$37.field_a = dupTemp$37.field_a + 40;
-                                                                      ii.field_e[od.field_k].field_h = this.field_h;
-                                                                      ii.field_e[od.field_k].field_w = 0;
-                                                                      od.field_k = od.field_k + 1;
+                                                                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                                      ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                       if (pk.field_s) {
-                                                                        tl.field_a.a(si.soundEffects[13], 100, ee.field_p * 256 / 100);
+                                                                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, ee.field_p * 256 / 100);
                                                                       }
                                                                     }
                                                                     if (this.field_w % 100 > 20 &&
@@ -2819,7 +2819,7 @@ final class eg extends qh {
                                                                     this.field_s = this.field_s - 1;
                                                                     this.field_x = 0;
                                                                     if (pk.field_s) {
-                                                                      tl.field_a.a(si.soundEffects[27], 100, ee.field_p * 256 / 100);
+                                                                      tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[27], 100, ee.field_p * 256 / 100);
                                                                     }
                                                                   }
                                                                   w.field_b = w.field_b + 1;
@@ -2838,17 +2838,17 @@ final class eg extends qh {
                                                                     this.field_w = this.field_w + 1;
                                                                     if (25 == this.field_w % 50 &&
                                                                       this.field_w < 250) {
-                                                                      ii.field_e[od.field_k].a(9147, 43, this.field_i);
-                                                                      ii.field_e[od.field_k].field_f.a(-112, this.field_f);
-                                                                      dupTemp$53 = ii.field_e[od.field_k].field_f;
+                                                                      ii.field_e[WidgetTheme.field_k].a(9147, 43, this.field_i);
+                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(-112, this.field_f);
+                                                                      dupTemp$53 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                       dupTemp$53.field_b = dupTemp$53.field_b + (this.field_h * 120 + 40);
-                                                                      dupTemp$54 = ii.field_e[od.field_k].field_f;
+                                                                      dupTemp$54 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                       dupTemp$54.field_a = dupTemp$54.field_a + 40;
-                                                                      ii.field_e[od.field_k].field_h = this.field_h;
-                                                                      ii.field_e[od.field_k].field_w = 0;
-                                                                      od.field_k = od.field_k + 1;
+                                                                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                                      ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                       if (pk.field_s) {
-                                                                        tl.field_a.a(si.soundEffects[13], 100, 256 * ee.field_p / 100);
+                                                                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[13], 100, 256 * ee.field_p / 100);
                                                                       }
                                                                     }
                                                                     if (this.field_w < 250) {
@@ -2888,18 +2888,18 @@ final class eg extends qh {
                                                                       this.field_p = this.field_p - 1;
                                                                       if (this.field_p == 50 ||
                                                                         this.field_p == 30) {
-                                                                        ii.field_e[od.field_k].a(9147, 32, this.field_i);
-                                                                        ii.field_e[od.field_k].field_f.a(param0 ^ 2, this.field_f);
-                                                                        ii.field_e[od.field_k].field_i.field_b = 10;
-                                                                        ii.field_e[od.field_k].field_i.field_a = 16;
-                                                                        ii.field_e[od.field_k].field_f.field_b = 0;
-                                                                        ii.field_e[od.field_k].field_f.field_a = 0;
-                                                                        ii.field_e[od.field_k].field_h = 1;
-                                                                        ii.field_e[od.field_k].field_w = 10;
-                                                                        od.field_k = od.field_k + 1;
+                                                                        ii.field_e[WidgetTheme.field_k].a(9147, 32, this.field_i);
+                                                                        ii.field_e[WidgetTheme.field_k].field_f.a(param0 ^ 2, this.field_f);
+                                                                        ii.field_e[WidgetTheme.field_k].field_i.field_b = 10;
+                                                                        ii.field_e[WidgetTheme.field_k].field_i.field_a = 16;
+                                                                        ii.field_e[WidgetTheme.field_k].field_f.field_b = 0;
+                                                                        ii.field_e[WidgetTheme.field_k].field_f.field_a = 0;
+                                                                        ii.field_e[WidgetTheme.field_k].field_h = 1;
+                                                                        ii.field_e[WidgetTheme.field_k].field_w = 10;
+                                                                        WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                       }
                                                                       if (pk.field_s) {
-                                                                        tl.field_a.a(si.soundEffects[27], 100, 256 * ee.field_p / 100);
+                                                                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[27], 100, 256 * ee.field_p / 100);
                                                                       }
                                                                       if (!(this.field_p > 0)) {
                                                                         this.c(false);
@@ -2911,7 +2911,7 @@ final class eg extends qh {
                                                               } else {
                                                                 if (var4 == 34) {
                                                                   this.field_e = 2;
-                                                                  this.a(1, si.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 60, 0, tl.field_a, pk.field_s, (byte) 126);
                                                                   this.e(false);
                                                                 } else {
                                                                   if (35 != var4 &&
@@ -3105,7 +3105,7 @@ final class eg extends qh {
                                                                               switch (var4) {
                                                                                 case 41:
                                                                                   this.field_e = 2;
-                                                                                  this.a(1, si.soundEffects, param1, 1, 100, 0, tl.field_a, pk.field_s, (byte) -126);
+                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 100, 0, tl.field_a, pk.field_s, (byte) -126);
                                                                                   this.e(false);
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (this.field_w % 10 >= 5) {
@@ -3122,7 +3122,7 @@ final class eg extends qh {
                                                                                   break regionExit1;
                                                                                 case 42:
                                                                                   this.field_e = 2;
-                                                                                  this.a(1, si.soundEffects, param1, 1, 50, 0, tl.field_a, pk.field_s, (byte) 126);
+                                                                                  this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 50, 0, tl.field_a, pk.field_s, (byte) 126);
                                                                                   this.e(false);
                                                                                   break regionExit1;
                                                                                 case 44:
@@ -3158,15 +3158,15 @@ final class eg extends qh {
                                                                               }
                                                                               if (this.field_s > 0) {
                                                                                 if (ql.field_c == 6) {
-                                                                                  ii.field_e[od.field_k].a(param0 ^ -9154, 36, this.field_i);
-                                                                                  ii.field_e[od.field_k].field_f.a(-110, this.field_f);
-                                                                                  dupTemp$41 = ii.field_e[od.field_k].field_f;
+                                                                                  ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 36, this.field_i);
+                                                                                  ii.field_e[WidgetTheme.field_k].field_f.a(-110, this.field_f);
+                                                                                  dupTemp$41 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                                   dupTemp$41.field_b = dupTemp$41.field_b + (40 + this.field_h * 120);
-                                                                                  dupTemp$42 = ii.field_e[od.field_k].field_f;
+                                                                                  dupTemp$42 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                                   dupTemp$42.field_a = dupTemp$42.field_a + 40;
-                                                                                  ii.field_e[od.field_k].field_h = this.field_h;
-                                                                                  ii.field_e[od.field_k].field_w = 0;
-                                                                                  od.field_k = od.field_k + 1;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                                                  WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                                 }
                                                                                 this.field_p = this.field_p - 1;
                                                                                 this.field_s = this.field_s - 1;
@@ -3174,7 +3174,7 @@ final class eg extends qh {
                                                                                   this.c(false);
                                                                                 }
                                                                                 if (pk.field_s) {
-                                                                                  tl.field_a.a(si.soundEffects[28], 100, 256 * ee.field_p / 100);
+                                                                                  tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[28], 100, 256 * ee.field_p / 100);
                                                                                 }
                                                                               }
                                                                               if (5 == ql.field_c) {
@@ -3191,20 +3191,20 @@ final class eg extends qh {
                                                                                 }
                                                                                 if (this.field_w == 500 ||
                                                                                   this.field_w == 2500) {
-                                                                                  ii.field_e[od.field_k].a(param0 + 9270, 39, this.field_i);
-                                                                                  ii.field_e[od.field_k].field_i.field_b = 0;
-                                                                                  ii.field_e[od.field_k].field_i.field_a = 15;
-                                                                                  ii.field_e[od.field_k].field_h = 1;
-                                                                                  ii.field_e[od.field_k].field_w = 0;
-                                                                                  od.field_k = od.field_k + 1;
+                                                                                  ii.field_e[WidgetTheme.field_k].a(param0 + 9270, 39, this.field_i);
+                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_b = 0;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_a = 15;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_h = 1;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                                                  WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                                 }
                                                                                 if (this.field_w == 1500) {
-                                                                                  ii.field_e[od.field_k].a(param0 ^ -9154, 39, this.field_i);
-                                                                                  ii.field_e[od.field_k].field_i.field_b = 19;
-                                                                                  ii.field_e[od.field_k].field_i.field_a = 15;
-                                                                                  ii.field_e[od.field_k].field_h = 1;
-                                                                                  ii.field_e[od.field_k].field_w = 0;
-                                                                                  od.field_k = od.field_k + 1;
+                                                                                  ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 39, this.field_i);
+                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_b = 19;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_i.field_a = 15;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_h = 1;
+                                                                                  ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                                                  WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                                 }
                                                                                 if (3000 < this.field_w ||
                                                                                   this.field_p < 150) {
@@ -3217,7 +3217,7 @@ final class eg extends qh {
                                                                                   ql.field_c = 6;
                                                                                   this.field_x = 0;
                                                                                   if (pk.field_s) {
-                                                                                    tl.field_a.a(si.soundEffects[22], 100, ee.field_p * 256 / 100);
+                                                                                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[22], 100, ee.field_p * 256 / 100);
                                                                                   }
                                                                                 }
                                                                               }
@@ -3264,12 +3264,12 @@ final class eg extends qh {
                                                                                       this.field_x = 3;
                                                                                     } else {
                                                                                       this.field_n = 3;
-                                                                                      ii.field_e[od.field_k].a(9147, 45, this.field_i);
-                                                                                      ii.field_e[od.field_k].field_f.a(-88, this.field_f);
-                                                                                      ii.field_e[od.field_k].field_w = 0;
-                                                                                      od.field_k = od.field_k + 1;
+                                                                                      ii.field_e[WidgetTheme.field_k].a(9147, 45, this.field_i);
+                                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(-88, this.field_f);
+                                                                                      ii.field_e[WidgetTheme.field_k].field_w = 0;
+                                                                                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                                       if (pk.field_s) {
-                                                                                        tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
+                                                                                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
                                                                                       }
                                                                                     }
                                                                                   }
@@ -3306,7 +3306,7 @@ final class eg extends qh {
                                                                                         stackIn_1185_1 = 1;
                                                                                       }
                                                                                       if (stackIn_1184_0 == stackIn_1185_1) {
-                                                                                        tl.field_a.a(si.soundEffects[5], 100, 256 * ee.field_p / 100);
+                                                                                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, 256 * ee.field_p / 100);
                                                                                       }
                                                                                     } else {
                                                                                       this.field_i.field_a = this.field_i.field_a - 1;
@@ -3339,7 +3339,7 @@ final class eg extends qh {
                                                                                       stackIn_1240_1 = 1;
                                                                                     }
                                                                                     if (stackIn_1239_0 == stackIn_1240_1) {
-                                                                                      tl.field_a.a(si.soundEffects[22], 100, 256 * ee.field_p / 100);
+                                                                                      tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[22], 100, 256 * ee.field_p / 100);
                                                                                     }
                                                                                   }
                                                                                   if (250 <= w.field_b) {
@@ -3354,17 +3354,17 @@ final class eg extends qh {
                                                                                     if (10 < this.field_z) {
                                                                                       this.field_n = this.field_n + 1;
                                                                                       if (this.field_n == 27) {
-                                                                                        ii.field_e[od.field_k].a(9147, 41, this.field_i);
-                                                                                        ii.field_e[od.field_k].field_f.a(-85, this.field_f);
-                                                                                        dupTemp$46 = ii.field_e[od.field_k].field_f;
+                                                                                        ii.field_e[WidgetTheme.field_k].a(9147, 41, this.field_i);
+                                                                                        ii.field_e[WidgetTheme.field_k].field_f.a(-85, this.field_f);
+                                                                                        dupTemp$46 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                                         dupTemp$46.field_b = dupTemp$46.field_b + (40 + this.field_h * 120);
-                                                                                        dupTemp$47 = ii.field_e[od.field_k].field_f;
+                                                                                        dupTemp$47 = ii.field_e[WidgetTheme.field_k].field_f;
                                                                                         dupTemp$47.field_a = dupTemp$47.field_a + 40;
-                                                                                        ii.field_e[od.field_k].field_h = this.field_h;
-                                                                                        ii.field_e[od.field_k].field_w = (int)(Math.random() * 100.0);
-                                                                                        od.field_k = od.field_k + 1;
+                                                                                        ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                                                        ii.field_e[WidgetTheme.field_k].field_w = (int)(Math.random() * 100.0);
+                                                                                        WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                                         if (pk.field_s) {
-                                                                                          tl.field_a.a(SpriteState.secondarySoundEffects[36], 100, 192 * ee.field_p / 100);
+                                                                                          tl.field_a.addSample(SpriteState.secondarySoundEffects[36], 100, 192 * ee.field_p / 100);
                                                                                         }
                                                                                       }
                                                                                       if (25 > this.field_n) {
@@ -3426,7 +3426,7 @@ final class eg extends qh {
                                                                                         stackIn_1228_1 = 1;
                                                                                       }
                                                                                       if (stackIn_1227_0 == stackIn_1228_1) {
-                                                                                        tl.field_a.a(si.soundEffects[5], 100, 256 * ee.field_p / 100);
+                                                                                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, 256 * ee.field_p / 100);
                                                                                       }
                                                                                     }
                                                                                   }
@@ -3440,7 +3440,7 @@ final class eg extends qh {
                                                                     }
                                                                   } else {
                                                                     if (this.field_w <= 2) {
-                                                                      this.a(1, si.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) -123);
+                                                                      this.a(1, BufferedRandomAccessFile.soundEffects, param1, 1, 40, 0, tl.field_a, pk.field_s, (byte) -123);
                                                                     }
                                                                     this.e(false);
                                                                     if (1 == this.b(param1, -4) &&
@@ -3454,13 +3454,13 @@ final class eg extends qh {
                                                                         stackIn_1001_1 = 1;
                                                                       }
                                                                       if (stackIn_1000_0 == stackIn_1001_1) {
-                                                                        tl.field_a.a(si.soundEffects[14], 100, ee.field_p * 256 / 100);
+                                                                        tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[14], 100, ee.field_p * 256 / 100);
                                                                       }
-                                                                      ii.field_e[od.field_k].a(9147, this.field_B, this.field_i);
-                                                                      ii.field_e[od.field_k].field_f.a(-112, this.field_f);
-                                                                      ii.field_e[od.field_k].field_h = this.field_h;
-                                                                      ii.field_e[od.field_k].field_w = 11;
-                                                                      od.field_k = od.field_k + 1;
+                                                                      ii.field_e[WidgetTheme.field_k].a(9147, this.field_B, this.field_i);
+                                                                      ii.field_e[WidgetTheme.field_k].field_f.a(-112, this.field_f);
+                                                                      ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                                                                      ii.field_e[WidgetTheme.field_k].field_w = 11;
+                                                                      WidgetTheme.field_k = WidgetTheme.field_k + 1;
                                                                     }
                                                                     this.field_w = this.field_w + 1;
                                                                     if (this.field_w == 2) {
@@ -3605,21 +3605,21 @@ final class eg extends qh {
                               this.e(false);
                               break regionExit1;
                             }
-                            if (od.field_k >= 100) {
+                            if (WidgetTheme.field_k >= 100) {
                               this.e(false);
                               break regionExit1;
                             }
                             stackIn_401_0 = (pk.field_s) ? 0 : 1;
                             if (stackIn_401_0 != 1) {
-                              tl.field_a.a(si.soundEffects[12], 100, 256 * ee.field_p / 100);
+                              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[12], 100, 256 * ee.field_p / 100);
                             }
                             this.field_x = 0;
                             this.field_w = 0;
-                            ii.field_e[od.field_k].a(param0 ^ -9154, 8, this.field_i);
-                            ii.field_e[od.field_k].field_f.a(-88, this.field_f);
-                            ii.field_e[od.field_k].field_h = this.field_h;
-                            ii.field_e[od.field_k].field_w = 10;
-                            od.field_k = od.field_k + 1;
+                            ii.field_e[WidgetTheme.field_k].a(param0 ^ -9154, 8, this.field_i);
+                            ii.field_e[WidgetTheme.field_k].field_f.a(-88, this.field_f);
+                            ii.field_e[WidgetTheme.field_k].field_h = this.field_h;
+                            ii.field_e[WidgetTheme.field_k].field_w = 10;
+                            WidgetTheme.field_k = WidgetTheme.field_k + 1;
                           }
                           this.e(false);
                         }
@@ -3713,18 +3713,18 @@ final class eg extends qh {
           } else {
             stackIn_1270_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_1269_0), ((StringBuilder) (Object) stackIn_1269_1).append(stackIn_1270_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_1269_0), ((StringBuilder) (Object) stackIn_1269_1).append(stackIn_1270_2).append(')').toString());
         }
     }
 
-    final static void a(kl param0, int param1, kl param2, kl param3) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var16 = null;
-        db[] var5 = null;
-        db[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var17 = null;
         int[][] var15 = null;
         int[][] var7 = null;
-        db[] var10_ref_db__ = null;
+        IndexedSprite[] var10_ref_db__ = null;
         int var11_int = 0;
         Sprite var11 = null;
         Sprite var12 = null;
@@ -3735,21 +3735,21 @@ final class eg extends qh {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ok.field_a = pe.loadSpriteStrip("commonui", param3, "frame_top", 127);
-          ia.field_i = pe.loadSpriteStrip("commonui", param3, "frame_bottom", 88);
+          ValidationState.field_a = WidgetContainer.loadSpriteStrip("commonui", param3, "frame_top", 127);
+          NanoTickClock.field_i = WidgetContainer.loadSpriteStrip("commonui", param3, "frame_bottom", 88);
           hg.field_d = vg.loadSprite(15, "jagex_logo_grey", param3, "commonui");
-          vf.field_j = pe.loadSpriteStrip("commonui", param3, "button", 121);
-          te.field_k = pc.a((byte) 125, "commonui", param3, "validation");
+          vf.field_j = WidgetContainer.loadSpriteStrip("commonui", param3, "button", 121);
+          te.field_k = Js5Index.a((byte) 125, "commonui", param3, "validation");
           e.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo12", 67, param0));
           gh.field_b = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
           PacketBuffer.field_i = (BitmapFont) ((Object) oc.a(param3, "commonui", "arezzo14bold", 118, param0));
           var16 = new Sprite(param2.a(122, "", "button.gif"), (java.awt.Component) ((Object) wizardrun.field_G));
-          mf.a("commonui", "dropdown", param3, (byte) -108);
+          TextFieldValidator.a("commonui", "dropdown", param3, (byte) -108);
           var5 = re.a(param3, "commonui", "screen_options", 112);
-          IterableNodeHashTable.field_f = new db[4];
-          s.field_c = new db[4];
-          nj.field_k = new db[4];
-          var6 = new db[][]{IterableNodeHashTable.field_f, s.field_c, nj.field_k};
+          IterableNodeHashTable.field_f = new IndexedSprite[4];
+          s.field_c = new IndexedSprite[4];
+          nj.field_k = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{IterableNodeHashTable.field_f, s.field_c, nj.field_k};
           var17 = new int[4][];
           var15 = var17;
           var7 = var15;
@@ -3774,17 +3774,17 @@ final class eg extends qh {
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.bindAsRasterTarget();
-          var16.c(0, 0);
+          var16.drawWithOffsets(0, 0);
           var12 = new Sprite(var9Lifetime1, var9Lifetime1);
           var12.bindAsRasterTarget();
-          var16.c(-var16.width + var9Lifetime1, 0);
+          var16.drawWithOffsets(-var16.width + var9Lifetime1, 0);
           var13 = new Sprite(var16.width - var9Lifetime1 * 2, var9Lifetime1);
           var13.bindAsRasterTarget();
-          var16.c(-var9Lifetime1, 0);
+          var16.drawWithOffsets(-var9Lifetime1, 0);
           bb.b(4);
           vf.field_j = new Sprite[]{var11, var13, var12};
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "eg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "eg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -3812,7 +3812,7 @@ final class eg extends qh {
         }
         if (param1 == 4 &&
           7 == ql.field_c) {
-          var6 = h.field_j;
+          var6 = MusicPatch.field_j;
         }
         if (this.field_p <= 0) {
           var7 = 240 * this.field_i.field_b + this.field_f.field_b;
@@ -3828,24 +3828,24 @@ final class eg extends qh {
             this.field_y = var4;
             for (var11 = 0; -(var8 * this.field_w / 1000) + var8 > var11; var11 += 2) {
               var9 = (0.5 * (double)(this.field_f.field_b + this.field_i.field_b * 240) + 6.28 * (double)var11) / (double)var8;
-              ob.field_c.d((int)((double)var8 * Math.cos((double)this.field_h * var9) + (double)var8) + (var4 - 6), var5 + ((int)((double)var8 + Math.sin(var9 * (double)this.field_h) * (double)var8) - 6), 12, 12, 255 - var11 % 10 * 25);
-              ob.field_c.d(var4 - (int)((double)var8 * Math.cos((double)this.field_h * var9) - (double)var8) - 6, -(int)((double)(-var8) + (double)var8 * Math.sin(var9 * (double)this.field_h)) + (var5 - 6), 12, 12, 255 - 25 * (var11 % 10));
+              ob.field_c.drawScaledAlpha((int)((double)var8 * Math.cos((double)this.field_h * var9) + (double)var8) + (var4 - 6), var5 + ((int)((double)var8 + Math.sin(var9 * (double)this.field_h) * (double)var8) - 6), 12, 12, 255 - var11 % 10 * 25);
+              ob.field_c.drawScaledAlpha(var4 - (int)((double)var8 * Math.cos((double)this.field_h * var9) - (double)var8) - 6, -(int)((double)(-var8) + (double)var8 * Math.sin(var9 * (double)this.field_h)) + (var5 - 6), 12, 12, 255 - 25 * (var11 % 10));
             }
           } else {
             if (-1 == this.field_h) {
-              var6[this.field_n].e(var4, var5);
+              var6[this.field_n].drawTransparent(var4, var5);
               this.field_q = var6[this.field_n];
               this.field_A = var5;
               this.field_y = var4;
             } else {
-              var6[this.field_n].d(var4, var5);
+              var6[this.field_n].drawMirrored(var4, var5);
               this.field_q = var6[this.field_n].flipHorizontal();
               this.field_y = var4;
               this.field_A = var5;
             }
-            if (!(nk.field_T < 250) && (qh.field_l == 0 &&
+            if (!(AccountCreationForm.field_T < 250) && (qh.field_l == 0 &&
               ql.field_c == 0 &&
-              nk.field_T < 400)) {
+              AccountCreationForm.field_T < 400)) {
               if (uc.field_g >= 20) {
                 stackIn_21_1 = 16776960;
               } else {
@@ -3868,7 +3868,7 @@ final class eg extends qh {
         int var6 = 0;
         var6 = wizardrun.field_H;
         try {
-          this.a(1, si.soundEffects, param3, 1, param0, 1, tl.field_a, pk.field_s, (byte) 126);
+          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param0, 1, tl.field_a, pk.field_s, (byte) 126);
           if (param1 > -73) {
             return;
           }
@@ -3889,13 +3889,13 @@ final class eg extends qh {
               if (stackIn_13_0 != stackIn_14_1) {
                 if (pk.field_s) {
                   if (6 == this.field_B) {
-                    tl.field_a.a(SpriteState.secondarySoundEffects[6], 100, 256 * ee.field_p / 100);
+                    tl.field_a.addSample(SpriteState.secondarySoundEffects[6], 100, 256 * ee.field_p / 100);
                   } else {
-                    tl.field_a.a(si.soundEffects[5], 100, ee.field_p * 256 / 100);
+                    tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[5], 100, ee.field_p * 256 / 100);
                   }
                 }
               } else {
-                tl.field_a.a(si.soundEffects[4], 100, ee.field_p * 256 / 100);
+                tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[4], 100, ee.field_p * 256 / 100);
               }
             }
           }
@@ -3950,7 +3950,7 @@ final class eg extends qh {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
@@ -3966,7 +3966,7 @@ final class eg extends qh {
             var6 = (ob) null;
             this.a(81, 113, (ob) null);
           }
-          this.a(1, si.soundEffects, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
+          this.a(1, BufferedRandomAccessFile.soundEffects, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
           if (this.field_e <= 0) {
             this.field_x = 3;
             this.field_z = 0;
@@ -4008,7 +4008,7 @@ final class eg extends qh {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -4026,20 +4026,20 @@ final class eg extends qh {
             this.field_x = 3;
           }
           if (param1 == 3) {
-            this.a(2, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
+            this.a(2, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
           }
           if (param1 == 0) {
-            this.a(1, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
+            this.a(1, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 126);
           }
           if (param1 == 2) {
-            this.a(0, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) -117);
+            this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) -117);
           }
           if (param1 == 1) {
             if (this.field_i.field_a <= ii.field_e[0].field_i.field_a &&
               this.field_e == 0) {
-              this.a(0, si.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 127);
+              this.a(0, BufferedRandomAccessFile.soundEffects, param4, 0, param2, 1, tl.field_a, pk.field_s, (byte) 127);
             } else {
-              this.a(1, si.soundEffects, param4, 1, param2, 1, tl.field_a, pk.field_s, (byte) -65);
+              this.a(1, BufferedRandomAccessFile.soundEffects, param4, 1, param2, 1, tl.field_a, pk.field_s, (byte) -65);
             }
           }
           this.field_z = this.field_z - 1;
@@ -4109,7 +4109,7 @@ final class eg extends qh {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(')').toString());
         }
     }
 
@@ -4314,7 +4314,7 @@ final class eg extends qh {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 

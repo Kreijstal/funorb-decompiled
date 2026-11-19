@@ -13,12 +13,12 @@ final class tc extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_n = null;
         mouseHandler = null;
         if (param0 >= -90) {
-          tc.a((byte) 125);
+          tc.releaseStatics((byte) 125);
         }
     }
 

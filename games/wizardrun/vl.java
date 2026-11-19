@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl implements bf {
+final class vl implements WidgetRenderer {
     private int field_o;
     private int field_i;
     private int field_l;
@@ -25,10 +25,10 @@ final class vl implements bf {
         if (param0 >= -29) {
           return (String) null;
         }
-        return nk.field_N.d(0);
+        return AccountCreationForm.field_N.readCp1252String(0);
     }
 
-    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+    public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -57,14 +57,14 @@ final class vl implements bf {
           SoftwareRasterizer.fillRect(param0 + param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, this.field_c);
           var8 = param0 + param2.field_o + this.field_m;
           var9 = param1 + param2.field_l + this.field_b;
-          SoftwareRasterizer.b(var8, var9, this.field_l, this.field_p, 5592405);
+          SoftwareRasterizer.drawDropShadow(var8, var9, this.field_l, this.field_p, 5592405);
           SoftwareRasterizer.fillRect(var8, var9, this.field_l, this.field_p, var7);
           if (!param3) {
             this.field_p = 11;
           }
           if (var11.field_z) {
-            SoftwareRasterizer.e(var8, var9, var8 + this.field_l, var9 + this.field_p, 1);
-            SoftwareRasterizer.e(var8 + this.field_l, var9, var8, this.field_p + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_l, var9 + this.field_p, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_l, var9, var8, this.field_p + var9, 1);
           }
           if (null == this.field_j) {
             return;
@@ -82,11 +82,11 @@ final class vl implements bf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= 42) {
           field_a = null;
           field_n = null;
@@ -136,7 +136,7 @@ final class vl implements bf {
           this.field_p = param7;
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

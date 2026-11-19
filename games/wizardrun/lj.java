@@ -5,12 +5,12 @@ final class lj {
     static String field_d;
     static int[] field_b;
     static int field_a;
-    static jd field_f;
+    static DualLinkNodeHashTable field_f;
     static kd field_c;
     static String field_e;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_d = null;
         if (param0 != -60) {

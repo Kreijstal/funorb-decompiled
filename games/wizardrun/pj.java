@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class pj extends mi {
+final class pj extends SingleChildWidget {
     private int field_I;
     private int field_J;
     static rc field_P;
-    static ji field_G;
+    static MidiTrack field_G;
     private int field_N;
-    static kl field_M;
+    static ResourceArchive field_M;
     private boolean field_O;
     static String field_L;
     private boolean field_K;
@@ -42,7 +42,7 @@ final class pj extends mi {
         if (param1 == 0) {
           return;
         }
-        pj.g(24);
+        pj.releaseStatics(24);
     }
 
     final StringBuilder a(Hashtable param0, byte param1, int param2, StringBuilder param3) {
@@ -89,17 +89,17 @@ final class pj extends mi {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_L = null;
         field_M = null;
         field_G = null;
         field_P = null;
         if (param0 < 103) {
-          pj.g(-92);
+          pj.releaseStatics(-92);
         }
     }
 
@@ -115,7 +115,7 @@ final class pj extends mi {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "pj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "pj.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -132,8 +132,8 @@ final class pj extends mi {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_F instanceof pl) ||
-            ((pl) (this.field_F)).field_B) &&
+          if ((!(this.field_F instanceof TextButton) ||
+            ((TextButton) (this.field_F)).field_B) &&
             this.field_q == 1) {
             var5_int = -this.field_H + (pg.field_n - param2);
             var6 = -this.field_I + (fi.field_B - param1);
@@ -189,7 +189,7 @@ final class pj extends mi {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class pj extends mi {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -246,17 +246,17 @@ final class pj extends mi {
         dc var5_ref_dc = null;
         int[] var6 = null;
         int var8 = 0;
-        mg var9 = null;
+        IsaacPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = wizardrun.field_H;
         try {
-          var9 = nk.field_N;
+          var9 = AccountCreationForm.field_N;
           if (param0 != -17144) {
             pj.f(16);
           }
-          var2 = var9.f(255);
-          var3 = var9.f(255);
+          var2 = var9.readUnsignedByte(255);
+          var3 = var9.readUnsignedByte(255);
           if (var2 == 0) {
             var4 = (sc) (tg.field_c.b((byte) 110));
             if (var4 == null) {
@@ -271,18 +271,18 @@ final class pj extends mi {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.f(255) << kl.b(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << ResourceArchive.b(768, var7 << 8));
             }
             var4.field_j = true;
             var4.a(false);
             return;
           }
           if (var2 != 1) {
-            rg.a((Throwable) null, "LR1: " + ni.c(6), -562);
+            ResizableDialog.a((Throwable) null, "LR1: " + ni.c(6), -562);
             ql.a(-66);
             return;
           }
-          var4_int = var9.a(param0 + 37623);
+          var4_int = var9.readSignedSmart(param0 + 37623);
           var5_ref_dc = (dc) (v.field_d.b((byte) 100));
           while (var5_ref_dc != null) {
             if (var5_ref_dc.field_k != var3 ||
@@ -301,11 +301,11 @@ final class pj extends mi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "pj.NA(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "pj.NA(" + param0 + ')');
         }
     }
 
-    private pj(int param0, int param1, int param2, int param3, bf param4, ce param5, UiWidget param6, boolean param7, boolean param8) {
+    private pj(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_J = 2147483647;
         this.field_N = 2147483647;
@@ -314,7 +314,7 @@ final class pj extends mi {
           this.field_O = param8 ? true : false;
           this.field_F = param6;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "pj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "pj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 

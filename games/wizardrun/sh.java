@@ -7,7 +7,7 @@ final class sh {
     static String field_d;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 > -124) {
@@ -31,7 +31,7 @@ final class sh {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_k.startsWith("win") &&
-              tj.a(99, param2)) {
+              FadingDialog.a(99, param2)) {
               return;
             }
             var4_int = 116 / ((63 - param1) / 56);
@@ -41,7 +41,7 @@ final class sh {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              rg.a((Throwable) null, "MGR1: " + param2, -562);
+              ResizableDialog.a((Throwable) null, "MGR1: " + param2, -562);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -60,7 +60,7 @@ final class sh {
             } else {
               stackIn_14_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

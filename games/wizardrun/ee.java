@@ -17,11 +17,11 @@ class ee extends DualLinkNode {
             ee.a((java.awt.Component) null, -20);
           }
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "ee.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "ee.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 != -21880) {
           java.awt.Component var2 = (java.awt.Component) null;

@@ -6,7 +6,7 @@ import java.util.*;
 class DualLinkNode extends IntrusiveNode {
     static java.util.zip.CRC32 field_j;
     DualLinkNode secondaryPrevious;
-    static nk field_k;
+    static AccountCreationForm field_k;
     long secondaryKey;
     DualLinkNode secondaryNext;
     static Sprite field_m;
@@ -40,30 +40,30 @@ class DualLinkNode extends IntrusiveNode {
         Object var5 = null;
         int var6 = 0;
         tc var8 = null;
-        mg var9 = null;
+        IsaacPacketBuffer var9 = null;
         byte[] var13 = null;
         var6 = wizardrun.field_H;
         try {
           if (param0 != -2) {
             field_m = (Sprite) null;
           }
-          var9 = nk.field_N;
-          var2 = var9.f(param0 + 257);
+          var9 = AccountCreationForm.field_N;
+          var2 = var9.readUnsignedByte(param0 + 257);
           if (var2 == 0) {
             var8 = (tc) (RasterBuffer.field_c.b((byte) 107));
             if (var8 == null) {
               ql.a(-78);
               return;
             }
-            var4 = var9.f(255);
+            var4 = var9.readUnsignedByte(255);
             if (var4 != 0) {
               var13 = new byte[var4];
-              var9.a(true, var4, var13, 0);
+              var9.readBytes(true, var4, var13, 0);
             } else {
               var5 = null;
             }
             var9.position = var9.position + 4;
-            if (!var9.e(-6142)) {
+            if (!var9.verifyCrc(-6142)) {
               ql.a(-97);
               return;
             }
@@ -71,11 +71,11 @@ class DualLinkNode extends IntrusiveNode {
             return;
           }
           if (var2 != 1) {
-            rg.a((Throwable) null, "A1: " + ni.c(6), -562);
+            ResizableDialog.a((Throwable) null, "A1: " + ni.c(6), -562);
             ql.a(param0 ^ 117);
             return;
           }
-          var3 = var9.i(param0 + 257);
+          var3 = var9.readInt(param0 + 257);
           var4_ref_ie = (ie) (pa.field_e.b((byte) 61));
           while (var4_ref_ie != null) {
             if (var3 != var4_ref_ie.field_k) {
@@ -93,14 +93,14 @@ class DualLinkNode extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "rk.F(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "rk.F(" + param0 + ')');
         }
     }
 
     protected DualLinkNode() {
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           return;
         }

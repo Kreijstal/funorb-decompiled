@@ -9,7 +9,7 @@ final class sd {
     static String field_c;
     static String[] field_d;
 
-    final static byte[] a(mg param0, byte[] param1, int param2, byte param3) {
+    final static byte[] a(IsaacPacketBuffer param0, byte[] param1, int param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -26,7 +26,7 @@ final class sd {
         RuntimeException var4 = null;
         var8 = wizardrun.field_H;
         try {
-          var4_int = param0.g(param2, -11719);
+          var4_int = param0.readBits(param2, -11719);
           if (var4_int == 0) {
             return null;
           }
@@ -34,15 +34,15 @@ final class sd {
             var4_int != param1.length) {
             param1 = new byte[var4_int];
           }
-          var5 = param0.g(3, -11719);
-          var6 = (byte)param0.g(8, -11719);
+          var5 = param0.readBits(3, -11719);
+          var6 = (byte)param0.readBits(8, -11719);
           if (0 >= var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param1[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (byte)(param0.g(var5, param3 - 11730) + var6);
+              param1[var7] = (byte)(param0.readBits(var5, param3 - 11730) + var6);
             }
           }
           if (param3 == 11) {
@@ -67,7 +67,7 @@ final class sd {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -83,13 +83,13 @@ final class sd {
         return param0 | param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_f = null;
         field_b = null;
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          sd.a((mg) null, (byte[]) null, 19, (byte) -77);
+          sd.a((IsaacPacketBuffer) null, (byte[]) null, 19, (byte) -77);
         }
         field_e = null;
         field_c = null;

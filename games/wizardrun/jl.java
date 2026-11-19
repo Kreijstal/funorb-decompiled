@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class jl extends ll {
-    static kl bossSoundArchive;
+final class jl extends WidgetPainter {
+    static ResourceArchive bossSoundArchive;
     static int field_r;
     static int field_s;
     private Sprite[] field_x;
@@ -32,8 +32,8 @@ final class jl extends ll {
             if (null != ii.field_f) {
               ii.field_f.a((byte) -96);
             }
-            if (null != ig.field_q) {
-              ig.field_q.a((byte) 79);
+            if (null != CacheEntry.field_q) {
+              CacheEntry.field_q.a((byte) 79);
             }
             if (null != ld.field_e) {
               try {
@@ -43,11 +43,11 @@ final class jl extends ll {
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (sl.field_o != null) {
-              for (var1_int = 0; var1_int < sl.field_o.length; var1_int++) {
-                if (null != sl.field_o[var1_int]) {
+            if (SocketJs5Transport.field_o != null) {
+              for (var1_int = 0; var1_int < SocketJs5Transport.field_o.length; var1_int++) {
+                if (null != SocketJs5Transport.field_o[var1_int]) {
                   try {
-                    sl.field_o[var1_int].a(-1);
+                    SocketJs5Transport.field_o[var1_int].a(-1);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -60,7 +60,7 @@ final class jl extends ll {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw bd.a((Throwable) ((Object) var1), "jl.V(" + param0 + ')');
+            throw bd.wrapException((Throwable) ((Object) var1), "jl.V(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -88,12 +88,12 @@ final class jl extends ll {
             var4 = var3;
             var4 = var3;
           }
-          if (null != nk.field_M &&
-            !nk.field_M.equals(param2.getParameter("session"))) {
-            var4 = nk.field_M;
+          if (null != AccountCreationForm.field_M &&
+            !AccountCreationForm.field_M.equals(param2.getParameter("session"))) {
+            var4 = AccountCreationForm.field_M;
           }
           if (param0 > -60) {
-            jl.d(-41);
+            jl.releaseStatics(-41);
           }
           stackIn_11_0 = GameApplet.a(121, -1, (String) (var4), param1, (String) (var3));
           return stackIn_11_0;
@@ -113,27 +113,27 @@ final class jl extends ll {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw bd.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw bd.wrapException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, qj param3, qj param4, int param5) {
         try {
-          og.field_N = param4;
+          EditableTextWidget.field_N = param4;
           if (param0 > -104) {
             java.applet.Applet var7 = (java.applet.Applet) null;
             jl.a(4, (java.net.URL) null, (java.applet.Applet) null);
           }
           e.field_d = param2;
-          na.field_e = param1;
+          Js5Transport.field_e = param1;
           vl.field_h = param5;
-          og.field_S = param3;
+          EditableTextWidget.field_S = param3;
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "jl.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "jl.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+    public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -157,8 +157,8 @@ final class jl extends ll {
             var9 = (java.applet.Applet) null;
             jl.a(83, (java.net.URL) null, (java.applet.Applet) null);
           }
-          if (param2 instanceof pl) {
-            param4 = param4 & ((pl) (param2)).field_B;
+          if (param2 instanceof TextButton) {
+            param4 = param4 & ((TextButton) (param2)).field_B;
           }
           if (!param4) {
             stackIn_15_0 = this.field_t;
@@ -185,13 +185,13 @@ final class jl extends ll {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static od c(int param0) {
+    final static WidgetTheme c(int param0) {
         if (s.field_b == null) {
-          s.field_b = new od();
+          s.field_b = new WidgetTheme();
           s.field_b.a(gh.field_b, -120);
           s.field_b.field_e = 7697781;
           s.field_b.field_g = e.field_b;
@@ -208,7 +208,7 @@ final class jl extends ll {
         return s.field_b;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2763306) {
           field_w = (Sprite) null;
         }

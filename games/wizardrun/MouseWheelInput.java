@@ -15,9 +15,9 @@ abstract class MouseWheelInput {
           field_f = (String) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (ri.field_a >= 20 &&
-          ph.a((byte) 71) && (!(0 < ei.field_t) ||
-          hd.g((byte) 80))) {
+        if (BoundedRandomAccessFile.field_a >= 20 &&
+          ph.a((byte) 71) && (!(0 < RasterSnapshot.field_t) ||
+          StripedProgressBar.g((byte) 80))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -27,7 +27,7 @@ abstract class MouseWheelInput {
         return stackIn_9_0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_f = null;
         field_c = null;
@@ -95,7 +95,7 @@ abstract class MouseWheelInput {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (fg.a((char) var7, 0)) {
+            if (TextLayoutLine.a((char) var7, 0)) {
               var8 = sf.a(-1514, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
@@ -116,7 +116,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

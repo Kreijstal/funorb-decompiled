@@ -4,7 +4,7 @@
 final class n {
     static int field_c;
     static boolean field_a;
-    static mg field_b;
+    static IsaacPacketBuffer field_b;
 
     final static ne a(byte param0) {
         String var1 = null;
@@ -31,18 +31,18 @@ final class n {
         return new ne(nf.a((byte) 122), pa.a((byte) -106));
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -1) {
-          n.a(-8);
+          n.releaseStatics(-8);
         }
     }
 
-    final static ua a(int param0, kl param1, kl param2, int param3, int param4) {
+    final static CoverageBitmapFont a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
-        ua stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        ua stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -51,15 +51,15 @@ final class n {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 > -114) {
-            stackIn_2_0 = (ua) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
-          if (h.a(param0, param4, param1, -114)) {
-            stackIn_7_0 = mg.a(65, param2.a(param4, param0, 1));
+          if (MusicPatch.a(param0, param4, param1, -114)) {
+            stackIn_7_0 = IsaacPacketBuffer.a(65, param2.a(param4, param0, 1));
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (ua) (stackIn_5_0);
+          return (CoverageBitmapFont) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -76,7 +76,7 @@ final class n {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

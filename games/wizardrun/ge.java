@@ -21,37 +21,37 @@ abstract class ge {
         int var4 = wizardrun.field_H;
         if (param1 != 81) {
           this.b(-42, -78);
-          if (vk.field_r == 96) {
+          if (MidiNote.field_r == 96) {
             this.a(param1 - 87, param0);
             return;
           }
-          if (97 == vk.field_r) {
+          if (97 == MidiNote.field_r) {
             this.a(param0, false);
             return;
           }
-          if (vk.field_r == 84) {
+          if (MidiNote.field_r == 84) {
             this.b(-128, param0);
             return;
           }
-          if (vk.field_r == 83) {
+          if (MidiNote.field_r == 83) {
             this.b(-128, param0);
             return;
           }
           return;
         }
-        if (vk.field_r == 96) {
+        if (MidiNote.field_r == 96) {
           this.a(param1 - 87, param0);
           return;
         }
-        if (97 == vk.field_r) {
+        if (97 == MidiNote.field_r) {
           this.a(param0, false);
           return;
         }
-        if (vk.field_r == 84) {
+        if (MidiNote.field_r == 84) {
           this.b(-128, param0);
           return;
         }
-        if (vk.field_r != 83) {
+        if (MidiNote.field_r != 83) {
           return;
         }
         this.b(-128, param0);
@@ -85,13 +85,13 @@ abstract class ge {
         if (this.field_m) {
           return;
         }
-        if (vk.field_r == 98) {
+        if (MidiNote.field_r == 98) {
           if (this.field_a <= 0) {
             this.field_a = this.field_e;
           }
           this.field_a = this.field_a - 1;
         } else {
-          if (vk.field_r != 99) {
+          if (MidiNote.field_r != 99) {
             if (this.field_a < 0) {
               return;
             }
@@ -200,12 +200,12 @@ abstract class ge {
 
     abstract void a(int param0, boolean param1, int param2, byte param3);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_k = null;
         keyCodeQueue = null;
         if (!param0) {
-          ge.a(false);
+          ge.releaseStatics(false);
         }
     }
 

@@ -6,7 +6,7 @@ final class bd {
     static IntrusiveDeque field_a;
     static Sprite[] field_c;
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -25,13 +25,13 @@ final class bd {
           if (!hc.a(1, -28266)) {
             return false;
           }
-          DelegatingCanvas.field_c = nk.field_N.f(255);
-          nk.field_N.position = 0;
+          DelegatingCanvas.field_c = AccountCreationForm.field_N.readUnsignedByte(255);
+          AccountCreationForm.field_N.position = 0;
         }
         if (DelegatingCanvas.field_c == -2) {
           if (hc.a(2, -28266)) {
-            DelegatingCanvas.field_c = nk.field_N.j(-14477);
-            nk.field_N.position = 0;
+            DelegatingCanvas.field_c = AccountCreationForm.field_N.readUnsignedShort(-14477);
+            AccountCreationForm.field_N.position = 0;
             return hc.a(DelegatingCanvas.field_c, -28266);
           }
           return false;
@@ -39,7 +39,7 @@ final class bd {
         return hc.a(DelegatingCanvas.field_c, -28266);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 1) {
           field_b = null;
           field_a = null;
@@ -47,21 +47,21 @@ final class bd {
           return;
         }
         String var2 = (String) null;
-        bd.a((Throwable) null, (String) null);
+        bd.wrapException((Throwable) null, (String) null);
         field_b = null;
         field_a = null;
         field_c = null;
     }
 
     final static void a(int param0) {
-        kc.field_H = jl.c(4);
-        GameShell.field_A = new wi();
+        ValidationIndicator.field_H = jl.c(4);
+        GameShell.field_A = new DialogLayer();
         if (param0 <= -26) {
-          di.a(true, true, 117);
+          WeightedLruCache.a(true, true, 117);
           return;
         }
         field_b = (rc) null;
-        di.a(true, true, 117);
+        WeightedLruCache.a(true, true, 117);
     }
 
     static {

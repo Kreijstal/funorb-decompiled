@@ -15,7 +15,7 @@ final class ke extends qb {
         super(param0, param1);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         field_t = null;
         if (param0 >= -63) {
@@ -47,7 +47,7 @@ final class ke extends qb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

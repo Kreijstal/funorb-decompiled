@@ -4,13 +4,13 @@
 final class hj {
     static int field_a;
     static String field_d;
-    static gb wizardFont;
+    static MonochromeBitmapFont wizardFont;
     static int field_c;
     static int field_f;
     static int[] field_b;
     static int field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         wizardFont = null;
         field_d = null;
         field_b = null;
@@ -19,18 +19,18 @@ final class hj {
         }
     }
 
-    final static db[] a(int param0) {
+    final static IndexedSprite[] a(int param0) {
         int var2 = 0;
         int var3 = wizardrun.field_H;
-        db[] var1 = new db[wb.field_f];
+        IndexedSprite[] var1 = new IndexedSprite[wb.field_f];
         if (param0 >= 48) {
           for (var2 = 0; wb.field_f > var2; var2++) {
-            var1[var2] = new db(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], mf.field_j[var2], ic.field_b);
+            var1[var2] = new IndexedSprite(ProgressDialog.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], TextFieldValidator.field_j[var2], ic.field_b);
           }
           ClientException.a(0);
           return var1;
         }
-        return (db[]) null;
+        return (IndexedSprite[]) null;
     }
 
     static {

@@ -9,7 +9,7 @@ final class dg {
     static int field_d;
     static int field_e;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 256) {
           byte[] var2 = (byte[]) null;
           dg.a((byte[]) null, -61);
@@ -21,7 +21,7 @@ final class dg {
 
     final static boolean b(int param0) {
         int var1 = 118 / ((param0 + 4) / 48);
-        ri.field_b = true;
+        BoundedRandomAccessFile.field_b = true;
         sb.field_c = d.a((byte) 91) + 15000L;
         return ml.field_t == 11 ? true : false;
     }
@@ -39,88 +39,88 @@ final class dg {
         int var8Lifetime1;
         int var8Lifetime2;
         var9 = wizardrun.field_H;
-        if (jd.field_f < 0) {
+        if (DualLinkNodeHashTable.field_f < 0) {
           return;
         }
         var3 = -135 + param0;
         var4 = param1 - 35;
         var5 = 256;
-        if (jd.field_f < 75) {
-          var5 = (jd.field_f << 8) / 75;
+        if (DualLinkNodeHashTable.field_f < 75) {
+          var5 = (DualLinkNodeHashTable.field_f << 8) / 75;
         }
-        if (jd.field_f > 200) {
-          var5 = (-jd.field_f + 250 << 8) / 50;
+        if (DualLinkNodeHashTable.field_f > 200) {
+          var5 = (-DualLinkNodeHashTable.field_f + 250 << 8) / 50;
         }
-        ud.a(s.field_a, false);
+        UrlPacketDownloader.a(s.field_a, false);
         cj.c();
         var6 = 14 % ((param2 + 9) / 50);
         SoftwareRasterizer.d();
         gf.k(-120);
         if (var5 < 256) {
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleBlended(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
           bb.b(4);
-          if (jd.field_f < 150) {
-            s.field_a.a(var3, var4);
+          if (DualLinkNodeHashTable.field_f < 150) {
+            s.field_a.drawHalfSize(var3, var4);
           } else {
-            af.field_a.c(var3 + 15, var4 + 10, var5);
+            TextLayout.field_a.drawAlpha(var3 + 15, var4 + 10, var5);
           }
         } else {
           bb.b(4);
-          if (jd.field_f < 150) {
-            s.field_a.a(var3, var4);
-            var7 = jd.field_f - 125;
+          if (DualLinkNodeHashTable.field_f < 150) {
+            s.field_a.drawHalfSize(var3, var4);
+            var7 = DualLinkNodeHashTable.field_f - 125;
             if (var7 <= 0) {
-              var7 = jd.field_f - 140;
+              var7 = DualLinkNodeHashTable.field_f - 140;
               if (0 < var7) {
                 var8 = 256;
                 if (var7 < 20) {
                   var8 = 256 * var7 / 20;
                 }
-                ee.field_q.c(var3 + 15, 10 + var4, var5 * var8 >> 8);
+                ee.field_q.drawAlpha(var3 + 15, 10 + var4, var5 * var8 >> 8);
               }
             } else {
               if (50 <= var7) {
-                var7 = jd.field_f - 140;
+                var7 = DualLinkNodeHashTable.field_f - 140;
                 if (0 < var7) {
                   var8 = 256;
                   if (var7 < 20) {
                     var8 = 256 * var7 / 20;
                   }
-                  ee.field_q.c(var3 + 15, 10 + var4, var5 * var8 >> 8);
+                  ee.field_q.drawAlpha(var3 + 15, 10 + var4, var5 * var8 >> 8);
                 }
               } else {
                 if (var7 < 20) {
                   var8 = var7 * 256 / 20;
-                  ag.field_t.a(var3, var4, var8);
-                  var7 = jd.field_f - 140;
+                  StrongCacheEntry.field_t.drawAdditive(var3, var4, var8);
+                  var7 = DualLinkNodeHashTable.field_f - 140;
                   if (0 < var7) {
                     var8 = 256;
                     if (var7 < 20) {
                       var8 = 256 * var7 / 20;
                     }
-                    ee.field_q.c(var3 + 15, 10 + var4, var5 * var8 >> 8);
+                    ee.field_q.drawAlpha(var3 + 15, 10 + var4, var5 * var8 >> 8);
                   }
                 } else {
                   if (var7 < 30) {
-                    ag.field_t.a(var3, var4, 256);
-                    var7 = jd.field_f - 140;
+                    StrongCacheEntry.field_t.drawAdditive(var3, var4, 256);
+                    var7 = DualLinkNodeHashTable.field_f - 140;
                     if (0 < var7) {
                       var8 = 256;
                       if (var7 < 20) {
                         var8 = 256 * var7 / 20;
                       }
-                      ee.field_q.c(var3 + 15, 10 + var4, var5 * var8 >> 8);
+                      ee.field_q.drawAlpha(var3 + 15, 10 + var4, var5 * var8 >> 8);
                     }
                   } else {
                     var8 = (50 - var7) * 256 / 20;
-                    ag.field_t.a(var3, var4, var8);
-                    var7 = jd.field_f - 140;
+                    StrongCacheEntry.field_t.drawAdditive(var3, var4, var8);
+                    var7 = DualLinkNodeHashTable.field_f - 140;
                     if (0 < var7) {
                       var8 = 256;
                       if (var7 < 20) {
                         var8 = 256 * var7 / 20;
                       }
-                      ee.field_q.c(var3 + 15, 10 + var4, var5 * var8 >> 8);
+                      ee.field_q.drawAlpha(var3 + 15, 10 + var4, var5 * var8 >> 8);
                     }
                   }
                 }
@@ -128,53 +128,53 @@ final class dg {
             }
             return;
           }
-          af.field_a.c(var3 + 15, var4 + 10, var5);
+          TextLayout.field_a.drawAlpha(var3 + 15, var4 + 10, var5);
         }
-        var7Lifetime1 = jd.field_f - 125;
+        var7Lifetime1 = DualLinkNodeHashTable.field_f - 125;
         if (var7Lifetime1 > 0 &&
           50 > var7Lifetime1) {
           if (var7Lifetime1 < 20) {
             var8Lifetime1 = var7Lifetime1 * 256 / 20;
-            ag.field_t.a(var3, var4, var8Lifetime1);
+            StrongCacheEntry.field_t.drawAdditive(var3, var4, var8Lifetime1);
           } else {
             if (var7Lifetime1 < 30) {
-              ag.field_t.a(var3, var4, 256);
+              StrongCacheEntry.field_t.drawAdditive(var3, var4, 256);
             } else {
               var8Lifetime1 = (50 - var7Lifetime1) * 256 / 20;
-              ag.field_t.a(var3, var4, var8Lifetime1);
+              StrongCacheEntry.field_t.drawAdditive(var3, var4, var8Lifetime1);
             }
           }
         }
-        var7Lifetime2 = jd.field_f - 140;
+        var7Lifetime2 = DualLinkNodeHashTable.field_f - 140;
         if (0 < var7Lifetime2) {
           var8Lifetime2 = 256;
           if (var7Lifetime2 < 20) {
             var8Lifetime2 = 256 * var7Lifetime2 / 20;
           }
-          ee.field_q.c(var3 + 15, 10 + var4, var5 * var8Lifetime2 >> 8);
+          ee.field_q.drawAlpha(var3 + 15, 10 + var4, var5 * var8Lifetime2 >> 8);
         }
         return;
     }
 
     final static String a(int param0) {
-        if (fi.field_y == pl.field_E) {
+        if (fi.field_y == TextButton.field_E) {
           return we.field_a;
         }
         if (param0 != -21) {
-          dg.c(-90);
+          dg.releaseStatics(-90);
           if (!we.field_c.a(true)) {
             return we.field_c.b((byte) 8);
           }
-          if (pl.field_E != wc.field_j) {
-            return rg.field_S;
+          if (TextButton.field_E != wc.field_j) {
+            return ResizableDialog.field_S;
           }
           return we.field_c.b((byte) 8);
         }
         if (!we.field_c.a(true)) {
           return we.field_c.b((byte) 8);
         }
-        if (pl.field_E != wc.field_j) {
-          return rg.field_S;
+        if (TextButton.field_E != wc.field_j) {
+          return ResizableDialog.field_S;
         }
         return we.field_c.b((byte) 8);
     }
@@ -205,19 +205,19 @@ final class dg {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var3 = var9.f(255);
-          var4 = var9.i(param1 - 30772);
+          var3 = var9.readUnsignedByte(255);
+          var4 = var9.readInt(param1 - 30772);
           if (var4 >= 0 && (tc.field_k == 0 ||
             !(tc.field_k < var4))) {
             if (0 == var3) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(true, var4, var12, 0);
+              var9.readBytes(true, var4, var12, 0);
               stackIn_10_0 = var5_ref_byte__;
               return stackIn_10_0;
             }
-            var5 = var9.i(param1 ^ 31180);
+            var5 = var9.readInt(param1 ^ 31180);
             if (var5 >= 0 && (tc.field_k == 0 ||
               !(tc.field_k < var5))) {
               var13 = new byte[var5];
@@ -247,7 +247,7 @@ final class dg {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 

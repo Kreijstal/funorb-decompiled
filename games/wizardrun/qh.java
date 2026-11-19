@@ -5,7 +5,7 @@ class qh {
     ob field_i;
     static byte[][] field_a;
     int field_e;
-    static kl field_c;
+    static ResourceArchive field_c;
     static int field_j;
     ob field_f;
     static int field_g;
@@ -56,22 +56,22 @@ class qh {
               stackIn_9_0 = -113;
               return stackIn_9_0;
             }
-            if (NodeHashTableIterator.field_j == tj.field_G) {
+            if (NodeHashTableIterator.field_j == FadingDialog.field_G) {
               if (!param5) {
                 eh.field_e = qb.a(param0, false, (byte) -90, param4);
               } else {
                 var10 = (String) null;
-                eh.field_e = uk.a((String) null, 8355711, pe.field_D, false, param0);
+                eh.field_e = uk.a((String) null, 8355711, WidgetContainer.field_D, false, param0);
               }
               n.field_b.position = 0;
-              n.field_b.b((byte) 11, 14);
-              n.field_b.b((byte) 11, eh.field_e.a(true).field_a);
+              n.field_b.writeByte((byte) 11, 14);
+              n.field_b.writeByte((byte) 11, eh.field_e.a(true).field_a);
               id.a((byte) -67, -1);
               NodeHashTableIterator.field_j = pj.field_P;
             }
             if (NodeHashTableIterator.field_j == pj.field_P &&
               hc.a(1, param3 ^ 28257)) {
-              var6_int = nk.field_N.f(255);
+              var6_int = AccountCreationForm.field_N.readUnsignedByte(255);
               if (var6_int == 0) {
                 NodeHashTableIterator.field_j = bd.field_b;
               } else {
@@ -79,22 +79,22 @@ class qh {
                 ra.field_k = var6_int;
                 DelegatingCanvas.field_c = -1;
               }
-              nk.field_N.position = 0;
+              AccountCreationForm.field_N.position = 0;
             }
             if (bd.field_b == NodeHashTableIterator.field_j &&
               hc.a(8, -28266)) {
-              tg.field_g = nk.field_N.e((byte) 0);
-              nk.field_N.position = 0;
+              tg.field_g = AccountCreationForm.field_N.readLong((byte) 0);
+              AccountCreationForm.field_N.position = 0;
               gi.a(param2, eh.field_e, true, param5, param1);
               NodeHashTableIterator.field_j = vb.field_F;
             }
             boolean decompiledFrameRemainder0 = true;
             if (NodeHashTableIterator.field_j == vb.field_F &&
               hc.a(1, -28266)) {
-              var6_intLifetime1 = nk.field_N.f(255);
+              var6_intLifetime1 = AccountCreationForm.field_N.readUnsignedByte(255);
               sf.field_b = null;
               ra.field_k = var6_intLifetime1;
-              nk.field_N.position = 0;
+              AccountCreationForm.field_N.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
@@ -116,50 +116,50 @@ class qh {
             }
             if (fc.field_b == NodeHashTableIterator.field_j &&
               bd.b(param3 + 71)) {
-              pe.field_D = nk.field_N.e((byte) 0);
-              dd.field_m = nk.field_N.f(255);
-              nk.field_N.f(255);
-              hl.field_a = nk.field_N.j(-14477);
-              var11 = nk.field_N.c(-1);
-              var7 = nk.field_N.f(255);
+              WidgetContainer.field_D = AccountCreationForm.field_N.readLong((byte) 0);
+              TextHotspotRange.field_m = AccountCreationForm.field_N.readUnsignedByte(255);
+              AccountCreationForm.field_N.readUnsignedByte(255);
+              ArchiveProvider.field_a = AccountCreationForm.field_N.readUnsignedShort(-14477);
+              var11 = AccountCreationForm.field_N.readNullableCp1252String(-1);
+              var7 = AccountCreationForm.field_N.readUnsignedByte(255);
               if ((1 & var7) != 0) {
                 fi.f(95);
               }
               if (!param5) {
                 stackIn_48_0 = ((8 & var7) != 0);
-                la.field_d = stackIn_48_0;
+                WidgetPainterState.field_d = stackIn_48_0;
                 stackIn_51_0 = (0 != (4 & var7));
                 kd.field_c = stackIn_51_0;
-                if (la.field_d) {
+                if (WidgetPainterState.field_d) {
                 }
               }
               if (cb.field_g) {
-                nk.field_N.f(255);
-                nk.field_N.f(param3 ^ -248);
-                nk.field_N.i(255);
-                ga.field_b = nk.field_N.j(-14477);
-                kh.field_f = new byte[ga.field_b];
+                AccountCreationForm.field_N.readUnsignedByte(255);
+                AccountCreationForm.field_N.readUnsignedByte(param3 ^ -248);
+                AccountCreationForm.field_N.readInt(255);
+                ga.field_b = AccountCreationForm.field_N.readUnsignedShort(-14477);
+                DirectByteStorage.field_f = new byte[ga.field_b];
                 for (var8 = 0; ga.field_b > var8; var8++) {
-                  kh.field_f[var8] = nk.field_N.k(0);
+                  DirectByteStorage.field_f[var8] = AccountCreationForm.field_N.readByte(0);
                 }
               }
-              d.field_a = nk.field_N.d(0);
+              d.field_a = AccountCreationForm.field_N.readCp1252String(0);
               var12 = (CharSequence) ((Object) d.field_a);
               IntrusiveNode.field_a = MouseWheelInput.a(-124, var12);
-              ei.field_t = nk.field_N.f(255);
+              RasterSnapshot.field_t = AccountCreationForm.field_N.readUnsignedByte(255);
               NodeHashTableIterator.field_j = BufferedSocket.field_l;
-              if (eh.field_e.a(true) == pc.field_v) {
-                hd.field_C.a(jg.f(param3 + 10), 8910);
+              if (eh.field_e.a(true) == Js5Index.field_v) {
+                StripedProgressBar.field_C.a(jg.f(param3 + 10), 8910);
               } else {
-                if (eh.field_e.a(true) == ud.field_c) {
-                  jf.field_e.a(jg.f(1), param3 ^ -8903);
+                if (eh.field_e.a(true) == UrlPacketDownloader.field_c) {
+                  IndexedSpriteState.field_e.a(jg.f(1), param3 ^ -8903);
                 }
               }
               n.field_a = false;
               if (var11 != null) {
-                q.a(26017, jg.f(1), var11);
+                MidiEnvelope.a(26017, jg.f(1), var11);
               }
-              if (hl.field_a <= 0 &&
+              if (ArchiveProvider.field_a <= 0 &&
                 !kd.field_c) {
                 try {
                   cl.a(jg.f(param3 ^ -10), -3264, "unzap");
@@ -169,20 +169,20 @@ class qh {
                 }
               } else {
                 try {
-                  cl.a(new Object[]{di.a(pe.field_D, param3 + 77)}, "zap", 30383, jg.f(1));
+                  cl.a(new Object[]{WeightedLruCache.a(WidgetContainer.field_D, param3 + 77)}, "zap", 30383, jg.f(1));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (hl.field_a > 0) {
+              if (ArchiveProvider.field_a > 0) {
                 IntrusiveDequeCursor.field_g = true;
               }
-              n.field_b.a(uh.field_d, (byte) 109);
+              n.field_b.initializeCipher(uh.field_d, (byte) 109);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 uh.field_d[var8Lifetime1] = uh.field_d[var8Lifetime1] + 50;
               }
-              nk.field_N.a(uh.field_d, (byte) 109);
+              AccountCreationForm.field_N.initializeCipher(uh.field_d, (byte) 109);
               stackIn_79_0 = ra.field_k;
               return stackIn_79_0;
             }
@@ -198,7 +198,7 @@ class qh {
               if (7 == ra.field_k) {
                 ra.field_k = 3;
               }
-              bh.field_g = nk.field_N.d(0);
+              bh.field_g = AccountCreationForm.field_N.readCp1252String(0);
               n.field_a = false;
               stackIn_90_0 = ra.field_k;
               return stackIn_90_0;
@@ -208,16 +208,16 @@ class qh {
                 if (eh.a(2) > 30000L) {
                   bh.field_g = sa.field_b;
                 } else {
-                  bh.field_g = fg.field_d;
+                  bh.field_g = TextLayoutLine.field_d;
                 }
                 n.field_a = false;
                 stackIn_97_0 = 3;
                 return stackIn_97_0;
               }
               var6_intLifetime2 = vl.field_d;
-              vl.field_d = tj.field_J;
+              vl.field_d = FadingDialog.field_J;
               n.field_a = true;
-              tj.field_J = var6_intLifetime2;
+              FadingDialog.field_J = var6_intLifetime2;
             }
             stackIn_100_0 = -1;
             return stackIn_100_0;
@@ -237,7 +237,7 @@ class qh {
             } else {
               stackIn_107_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -246,7 +246,7 @@ class qh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = (byte[][]) null;
         if (param0 != -25) {
           String var2 = (String) null;
@@ -270,7 +270,7 @@ class qh {
         }
     }
 
-    final void a(int param0, je[] param1, tg param2, int param3, int param4, int param5, vi param6, boolean param7, byte param8) {
+    final void a(int param0, PcmSample[] param1, tg param2, int param3, int param4, int param5, PcmStreamMixer param6, boolean param7, byte param8) {
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
@@ -357,7 +357,7 @@ class qh {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -404,11 +404,11 @@ class qh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, vi param1, boolean param2, je[] param3, byte param4, tg param5) {
+    final void a(int param0, PcmStreamMixer param1, boolean param2, PcmSample[] param3, byte param4, tg param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -469,7 +469,7 @@ class qh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -523,7 +523,7 @@ class qh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -555,8 +555,8 @@ class qh {
           SoftwareRasterizer.drawRectOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRect(244, 198, 367, 141, 0);
           if (null == f.field_d) {
-            if (null != bk.field_a) {
-              bk.field_a.a(wj.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != AudioServiceThread.field_a) {
+              AudioServiceThread.field_a.a(NameSuggestionsPanel.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -564,28 +564,28 @@ class qh {
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
-            if (null != bk.field_a) {
-              bk.field_a.a(wj.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != AudioServiceThread.field_a) {
+              AudioServiceThread.field_a.a(NameSuggestionsPanel.field_G, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.e(245, 199);
+            var6.drawTransparent(245, 199);
           }
-          if (fl.field_M > od.field_j) {
+          if (MidiPcmStream.field_M > WidgetTheme.field_j) {
             var7Lifetime2 = f.field_d[ra.field_o];
             if (var7Lifetime2 != null) {
-              var2_int = (60 + var7Lifetime2.fullWidth) * od.field_j / fl.field_M;
+              var2_int = (60 + var7Lifetime2.fullWidth) * WidgetTheme.field_j / MidiPcmStream.field_M;
               var3 = var2_int - 30;
-              if (!ei.field_j) {
-                lb.a((-var3 + var7Lifetime2.fullWidth) * 256 / 30, -256 * var3 / 30, 245, var7Lifetime2, 199, -107);
+              if (!RasterSnapshot.field_j) {
+                GrowableIntList.a((-var3 + var7Lifetime2.fullWidth) * 256 / 30, -256 * var3 / 30, 245, var7Lifetime2, 199, -107);
               } else {
-                lb.a(-256 * var3 / 30, 256 * (-var3 + var7Lifetime2.fullWidth) / 30, 245, var7Lifetime2, 199, -83);
+                GrowableIntList.a(-256 * var3 / 30, 256 * (-var3 + var7Lifetime2.fullWidth) / 30, 245, var7Lifetime2, 199, -83);
               }
             }
           }
           if (!param0) {
-            field_c = (kl) null;
+            field_c = (ResourceArchive) null;
           }
-          if (null != bk.field_a) {
+          if (null != AudioServiceThread.field_a) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -604,14 +604,14 @@ class qh {
             if (var2 == null) {
               return;
             }
-            bk.field_a.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            AudioServiceThread.field_a.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "qh.I(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "qh.I(" + param0 + ')');
         }
     }
 

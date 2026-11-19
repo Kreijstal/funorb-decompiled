@@ -5,7 +5,7 @@ final class ne {
     static String field_d;
     static int[] field_h;
     private boolean field_c;
-    static ji field_b;
+    static MidiTrack field_b;
     static int field_g;
     static int[] field_e;
     private String field_f;
@@ -13,10 +13,10 @@ final class ne {
 
     final static int a(byte param0) {
         if (param0 != 28) {
-          field_b = (ji) null;
-          return h.keyIdleTime;
+          field_b = (MidiTrack) null;
+          return MusicPatch.keyIdleTime;
         }
-        return h.keyIdleTime;
+        return MusicPatch.keyIdleTime;
     }
 
     final static boolean b(int param0) {
@@ -44,7 +44,7 @@ final class ne {
         this(param0, false);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_h = null;
         field_d = null;
@@ -63,7 +63,7 @@ final class ne {
         if (jc.field_I > IterableNodeHashTable.field_b) {
           return null;
         }
-        if (jc.field_I + ll.field_o > IterableNodeHashTable.field_b) {
+        if (jc.field_I + WidgetPainter.field_o > IterableNodeHashTable.field_b) {
           return vb.field_I;
         }
         return null;
@@ -88,7 +88,7 @@ final class ne {
             return true;
           }
           if (param0 != 0) {
-            var6 = ki.field_G;
+            var6 = LoginChoicePanel.field_G;
             var2 = var6;
             for (var3 = 0; var6.length > var3; var3++) {
               var4 = var6[var3];
@@ -104,7 +104,7 @@ final class ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2_ref), "ne.E(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2_ref), "ne.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class ne {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

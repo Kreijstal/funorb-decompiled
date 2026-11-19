@@ -8,7 +8,7 @@ final class ej {
     static int field_d;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -43) {
           field_a = null;
           field_e = null;
@@ -52,11 +52,11 @@ final class ej {
         byte[] var3Lifetime3;
         if (param0 != 100) {
           if (param0 == 5000 &&
-            dj.field_d > 0) {
-            fieldTemp$11 = dj.field_d - 1;
-            dj.field_d = dj.field_d - 1;
+            ByteStorage.field_d > 0) {
+            fieldTemp$11 = ByteStorage.field_d - 1;
+            ByteStorage.field_d = ByteStorage.field_d - 1;
             var2_ref_byte__ = IntrusiveNode.field_g[fieldTemp$11];
-            IntrusiveNode.field_g[dj.field_d] = null;
+            IntrusiveNode.field_g[ByteStorage.field_d] = null;
             return var2_ref_byte__;
           }
           if (param0 == 30000 &&
@@ -69,52 +69,52 @@ final class ej {
             return var2_ref_byte__Lifetime4;
           }
           if (param1 == 1) {
-            if (th.field_a == null) {
+            if (DualLinkDeque.field_a == null) {
               return new byte[param0];
             }
             for (var2 = 0; mj.field_a.length > var2; var2++) {
               if (param0 == mj.field_a[var2] &&
-                0 < pe.field_C[var2]) {
-                dupTemp$14 = pe.field_C[var2] - 1;
-                arrayValue$15 = th.field_a[var2];
-                pe.field_C[var2] = dupTemp$14;
+                0 < WidgetContainer.field_C[var2]) {
+                dupTemp$14 = WidgetContainer.field_C[var2] - 1;
+                arrayValue$15 = DualLinkDeque.field_a[var2];
+                WidgetContainer.field_C[var2] = dupTemp$14;
                 var3 = arrayValue$15[dupTemp$14];
-                th.field_a[var2][pe.field_C[var2]] = null;
+                DualLinkDeque.field_a[var2][WidgetContainer.field_C[var2]] = null;
                 return var3;
               }
             }
             return new byte[param0];
           }
           field_e = (String) null;
-          if (th.field_a == null) {
+          if (DualLinkDeque.field_a == null) {
             return new byte[param0];
           }
           for (var2Lifetime3 = 0; mj.field_a.length > var2Lifetime3; var2Lifetime3++) {
             if (param0 == mj.field_a[var2Lifetime3] &&
-              0 < pe.field_C[var2Lifetime3]) {
-              dupTemp$16 = pe.field_C[var2Lifetime3] - 1;
-              arrayValue$17 = th.field_a[var2Lifetime3];
-              pe.field_C[var2Lifetime3] = dupTemp$16;
+              0 < WidgetContainer.field_C[var2Lifetime3]) {
+              dupTemp$16 = WidgetContainer.field_C[var2Lifetime3] - 1;
+              arrayValue$17 = DualLinkDeque.field_a[var2Lifetime3];
+              WidgetContainer.field_C[var2Lifetime3] = dupTemp$16;
               var3Lifetime3 = arrayValue$17[dupTemp$16];
-              th.field_a[var2Lifetime3][pe.field_C[var2Lifetime3]] = null;
+              DualLinkDeque.field_a[var2Lifetime3][WidgetContainer.field_C[var2Lifetime3]] = null;
               return var3Lifetime3;
             }
           }
           return new byte[param0];
         }
-        if (0 < p.field_U) {
-          fieldTemp$10 = p.field_U - 1;
-          p.field_U = p.field_U - 1;
+        if (0 < ValidatedTextField.field_U) {
+          fieldTemp$10 = ValidatedTextField.field_U - 1;
+          ValidatedTextField.field_U = ValidatedTextField.field_U - 1;
           var2_ref_byte__Lifetime1 = ec.field_f[fieldTemp$10];
-          ec.field_f[p.field_U] = null;
+          ec.field_f[ValidatedTextField.field_U] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 5000 &&
-          dj.field_d > 0) {
-          fieldTemp$3 = dj.field_d - 1;
-          dj.field_d = dj.field_d - 1;
+          ByteStorage.field_d > 0) {
+          fieldTemp$3 = ByteStorage.field_d - 1;
+          ByteStorage.field_d = ByteStorage.field_d - 1;
           var2_ref_byte__Lifetime2 = IntrusiveNode.field_g[fieldTemp$3];
-          IntrusiveNode.field_g[dj.field_d] = null;
+          IntrusiveNode.field_g[ByteStorage.field_d] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param0 == 30000 &&
@@ -127,34 +127,34 @@ final class ej {
           return var2_ref_byte__Lifetime3;
         }
         if (param1 == 1) {
-          if (th.field_a == null) {
+          if (DualLinkDeque.field_a == null) {
             return new byte[param0];
           }
           for (var2Lifetime1 = 0; mj.field_a.length > var2Lifetime1; var2Lifetime1++) {
             if (param0 == mj.field_a[var2Lifetime1] &&
-              0 < pe.field_C[var2Lifetime1]) {
-              dupTemp$6 = pe.field_C[var2Lifetime1] - 1;
-              arrayValue$7 = th.field_a[var2Lifetime1];
-              pe.field_C[var2Lifetime1] = dupTemp$6;
+              0 < WidgetContainer.field_C[var2Lifetime1]) {
+              dupTemp$6 = WidgetContainer.field_C[var2Lifetime1] - 1;
+              arrayValue$7 = DualLinkDeque.field_a[var2Lifetime1];
+              WidgetContainer.field_C[var2Lifetime1] = dupTemp$6;
               var3Lifetime1 = arrayValue$7[dupTemp$6];
-              th.field_a[var2Lifetime1][pe.field_C[var2Lifetime1]] = null;
+              DualLinkDeque.field_a[var2Lifetime1][WidgetContainer.field_C[var2Lifetime1]] = null;
               return var3Lifetime1;
             }
           }
           return new byte[param0];
         }
         field_e = (String) null;
-        if (th.field_a == null) {
+        if (DualLinkDeque.field_a == null) {
           return new byte[param0];
         }
         for (var2Lifetime2 = 0; mj.field_a.length > var2Lifetime2; var2Lifetime2++) {
           if (param0 == mj.field_a[var2Lifetime2] &&
-            0 < pe.field_C[var2Lifetime2]) {
-            dupTemp$8 = pe.field_C[var2Lifetime2] - 1;
-            arrayValue$9 = th.field_a[var2Lifetime2];
-            pe.field_C[var2Lifetime2] = dupTemp$8;
+            0 < WidgetContainer.field_C[var2Lifetime2]) {
+            dupTemp$8 = WidgetContainer.field_C[var2Lifetime2] - 1;
+            arrayValue$9 = DualLinkDeque.field_a[var2Lifetime2];
+            WidgetContainer.field_C[var2Lifetime2] = dupTemp$8;
             var3Lifetime2 = arrayValue$9[dupTemp$8];
-            th.field_a[var2Lifetime2][pe.field_C[var2Lifetime2]] = null;
+            DualLinkDeque.field_a[var2Lifetime2][WidgetContainer.field_C[var2Lifetime2]] = null;
             return var3Lifetime2;
           }
         }
@@ -192,7 +192,7 @@ final class ej {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var3), "ej.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) var3), "ej.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -23,7 +23,7 @@ final class id {
           if (param2 != 0) {
             id.a((byte) 108, 39, 2);
           }
-          var3 = ag.a(param1, 1);
+          var3 = StrongCacheEntry.a(param1, 1);
           stackIn_7_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -42,7 +42,7 @@ final class id {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class id {
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
           id.a((byte[]) null, -117, 97, 106);
@@ -72,7 +72,7 @@ final class id {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        qk var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
@@ -92,8 +92,8 @@ final class id {
           } else {
             var4 = param0;
           }
-          var5 = new qk();
-          var5.a(117);
+          var5 = new WhirlpoolHasher();
+          var5.reset(117);
           var5.a((long)(param2 * 8), var4, (byte) -19);
           var6 = new byte[64];
           var5.a(var6, 0, (byte) 124);
@@ -109,7 +109,7 @@ final class id {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

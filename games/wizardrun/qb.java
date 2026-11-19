@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qb extends ll {
+class qb extends WidgetPainter {
     static String field_q;
     static boolean field_p;
-    static kl field_r;
+    static ResourceArchive field_r;
     static String field_s;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_r = null;
           field_s = null;
@@ -66,48 +66,48 @@ class qb extends ll {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+    public final void drawWidget(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         try {
           if (param4) {
-            pe.a(param2.field_n, (byte) -14, param1 + param2.field_l, param2.field_r, param0 + param2.field_o);
+            WidgetContainer.a(param2.field_n, (byte) -14, param1 + param2.field_l, param2.field_r, param0 + param2.field_o);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw bd.a((Throwable) ((Object) runtimeException), "qb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw bd.wrapException((Throwable) ((Object) runtimeException), "qb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(byte param0, int param1) {
-        r.field_e = 3 & param1 >> 4;
-        if (!(2 >= r.field_e)) {
-          r.field_e = 2;
+        TimedValidator.field_e = 3 & param1 >> 4;
+        if (!(2 >= TimedValidator.field_e)) {
+          TimedValidator.field_e = 2;
         }
         if (param0 != 52) {
-          qb.b(73);
-          ff.field_J = param1 >> 2 & 3;
-          if (!(ff.field_J <= 2)) {
-            ff.field_J = 2;
+          qb.releaseStatics(73);
+          HotspotTextWidget.field_J = param1 >> 2 & 3;
+          if (!(HotspotTextWidget.field_J <= 2)) {
+            HotspotTextWidget.field_J = 2;
           }
-          di.field_e = 3 & param1;
-          if (di.field_e > 2) {
-            di.field_e = 2;
+          WeightedLruCache.field_e = 3 & param1;
+          if (WeightedLruCache.field_e > 2) {
+            WeightedLruCache.field_e = 2;
             return;
           }
           return;
         }
-        ff.field_J = param1 >> 2 & 3;
-        if (!(ff.field_J <= 2)) {
-          ff.field_J = 2;
+        HotspotTextWidget.field_J = param1 >> 2 & 3;
+        if (!(HotspotTextWidget.field_J <= 2)) {
+          HotspotTextWidget.field_J = 2;
         }
-        di.field_e = 3 & param1;
-        if (di.field_e <= 2) {
+        WeightedLruCache.field_e = 3 & param1;
+        if (WeightedLruCache.field_e <= 2) {
           return;
         }
-        di.field_e = 2;
+        WeightedLruCache.field_e = 2;
     }
 
     qb(int param0) {

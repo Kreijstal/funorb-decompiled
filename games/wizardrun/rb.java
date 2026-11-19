@@ -35,23 +35,23 @@ final class rb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var3), "rb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) var3), "rb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
         stackIn_6_0 = a.field_b;
         try {
           while (stackIn_6_0.length > var3_int) {
             var5 = ec.field_g[var3_int];
             if (0 > var5) {
-              var4 = var4 + si.field_f;
+              var4 = var4 + BufferedRandomAccessFile.field_f;
             } else {
               var6 = sf.a(true, 110, a.field_b[var3_int]);
               var7 = -(var6 >> 1) + id.field_c;
-              var4 = var4 + na.field_e;
+              var4 = var4 + Js5Transport.field_e;
               if (ih.a(-vl.field_h + var7, (vl.field_h << 1) + var6, ec.field_c + (e.field_d << 1), var4, true, param1, param2)) {
                 stackIn_11_0 = var5;
                 return stackIn_11_0;
               }
-              var4 = var4 + (ec.field_c + (na.field_e + (e.field_d << 1)));
+              var4 = var4 + (ec.field_c + (Js5Transport.field_e + (e.field_d << 1)));
             }
             var3_int++;
             stackIn_6_0 = a.field_b;
@@ -61,7 +61,7 @@ final class rb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var3), "rb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw bd.wrapException((Throwable) ((Object) var3), "rb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -72,23 +72,23 @@ final class rb {
         RuntimeException var2 = null;
         var3 = wizardrun.field_H;
         try {
-          var4 = (vf) (r.field_d.b((byte) 50));
+          var4 = (vf) (TimedValidator.field_d.b((byte) 50));
           if (param1 >= -72) {
             rb.a(57, (byte) -120);
           }
           while (var4 != null) {
             GameKeyHandler.a(param0, var4, -22);
-            var4 = (vf) (r.field_d.d(8192));
+            var4 = (vf) (TimedValidator.field_d.d(8192));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var2), "rb.A(" + param0 + ',' + param1 + ')');
+          throw bd.wrapException((Throwable) ((Object) var2), "rb.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 == -1926289535) {
           return;
@@ -138,7 +138,7 @@ final class rb {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw bd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw bd.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

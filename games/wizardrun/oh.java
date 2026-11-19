@@ -3,12 +3,12 @@
  */
 final class oh {
     static ca[] field_a;
-    static kl field_b;
+    static ResourceArchive field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 21100) {
-          oh.a(-19);
+          oh.releaseStatics(-19);
         }
         field_b = null;
     }
@@ -52,7 +52,7 @@ final class oh {
           if (param3 > 0 &&
             0 < param0) {
             if (param5 < 11) {
-              field_b = (kl) null;
+              field_b = (ResourceArchive) null;
             }
             var21 = param1.copy();
             var30 = SoftwareRasterizer.pixels;
@@ -73,19 +73,19 @@ final class oh {
                 if (0 != var18) {
                   if (var17 > 0 &&
                     var15[var13 - 1] == 0) {
-                    SoftwareRasterizer.a(var17, var16, param4, param7);
+                    SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                   } else {
                     if (var16 > 0 &&
                       var15[-param1.width + var13] == 0) {
-                      SoftwareRasterizer.a(var17, var16, param4, param7);
+                      SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                     } else {
                       if (var17 < param1.width - 1 &&
                         var15[var13 + 1] == 0) {
-                        SoftwareRasterizer.a(var17, var16, param4, param7);
+                        SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                       } else {
                         if (var16 < param1.height - 1 &&
                           var15[param1.width + var13] == 0) {
-                          SoftwareRasterizer.a(var17, var16, param4, param7);
+                          SoftwareRasterizer.fillCircle(var17, var16, param4, param7);
                         }
                       }
                     }
@@ -95,7 +95,7 @@ final class oh {
               }
               var13 = var13 + var14;
             }
-            var21.e(-param1.offsetX, -param1.offsetY);
+            var21.drawTransparent(-param1.offsetX, -param1.offsetY);
             SoftwareRasterizer.setTarget(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;
@@ -111,19 +111,19 @@ final class oh {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         if (param0 > -104) {
-          oh.a(-109);
+          oh.releaseStatics(-109);
         }
         ii.field_f.field_k = 0;
         ii.field_f.field_n = 0;
     }
 
-    final static String a(String param0, String param1, kl param2, int param3, String param4) {
+    final static String a(String param0, String param1, ResourceArchive param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
@@ -139,7 +139,7 @@ final class oh {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.b(17820)) {
+          if (!param2.ensureIndex(17820)) {
             stackIn_2_0 = (String) (param0);
             return stackIn_2_0;
           }
@@ -174,7 +174,7 @@ final class oh {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class hg {
     static Sprite field_d;
-    static ok field_c;
+    static ValidationState field_c;
     static java.awt.Image field_b;
     static int field_a;
 
@@ -28,7 +28,7 @@ final class hg {
         var8 = wizardrun.field_H;
         try {
           if (param0 == null) {
-            stackIn_4_0 = kc.field_J;
+            stackIn_4_0 = ValidationIndicator.field_J;
             return stackIn_4_0;
           }
           var3_int = param0.length();
@@ -52,7 +52,7 @@ final class hg {
                   }
                   if (var5 >= 2 &&
                     !param2) {
-                    stackIn_30_0 = ll.field_g;
+                    stackIn_30_0 = WidgetPainter.field_g;
                     return stackIn_30_0;
                   }
                 }
@@ -65,10 +65,10 @@ final class hg {
               stackIn_21_0 = lg.field_c;
               return stackIn_21_0;
             }
-            stackIn_16_0 = kc.field_J;
+            stackIn_16_0 = ValidationIndicator.field_J;
             return stackIn_16_0;
           }
-          stackIn_9_0 = kc.field_J;
+          stackIn_9_0 = ValidationIndicator.field_J;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,11 +80,11 @@ final class hg {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           hg.a(0, (byte) -66);
         }
@@ -101,16 +101,16 @@ final class hg {
     }
 
     final static void a(int param0, byte param1) {
-        mg var2 = n.field_b;
+        IsaacPacketBuffer var2 = n.field_b;
         var2.c((byte) -70, param0);
-        var2.b((byte) 11, 1);
+        var2.writeByte((byte) 11, 1);
         if (param1 != 106) {
           hg.a(-86, (byte) 34);
         }
-        var2.b((byte) 11, 2);
+        var2.writeByte((byte) 11, 2);
     }
 
     static {
-        field_c = new ok();
+        field_c = new ValidationState();
     }
 }

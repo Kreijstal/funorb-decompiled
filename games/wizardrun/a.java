@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static gb font12;
+    static MonochromeBitmapFont font12;
     static String[] field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8) {
@@ -33,7 +33,7 @@ final class a {
           if (param6 >= 0 &&
             param8 < cj.field_d) {
             if (param7 != -20476) {
-              font12 = (gb) null;
+              font12 = (MonochromeBitmapFont) null;
             }
             if (param3 < 0 &&
               param5 < 0 &&
@@ -197,11 +197,11 @@ final class a {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -331851056) {
           int[] var2 = (int[]) null;
           a.a(-97, -4, 61, -122, (int[]) null, -38, 93, 89, -73);

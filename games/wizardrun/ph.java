@@ -37,11 +37,11 @@ final class ph extends ge {
         var6 = "";
         if (param2 != 0) {
           if (param2 == 1) {
-            var6 = vk.field_o;
+            var6 = MidiNote.field_o;
             if (param1) {
               var7 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-              ok.selectStarSprites[2].e(268 - (var7 / 2 + ok.selectStarSprites[2].width), param0);
-              ok.selectStarSprites[2].e(var7 / 2 + 268, param0);
+              ValidationState.selectStarSprites[2].drawTransparent(268 - (var7 / 2 + ValidationState.selectStarSprites[2].width), param0);
+              ValidationState.selectStarSprites[2].drawTransparent(var7 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
@@ -68,24 +68,24 @@ final class ph extends ge {
               var7Lifetime2 = stackIn_54_0;
               var8 = 20 + param0;
               var9 = 260;
-              ok.selectStarSprites[0].a(2 + var9 + 0, -6 + var8 - 10, -118, 20, 0);
-              ok.selectStarSprites[0].a(2 + var9 - 0, -6 + (var8 + 10), -86, 20, 0);
-              ok.selectStarSprites[0].a(2 + (0 + var9), -6 + var8, -105, 30, 0);
-              ok.selectStarSprites[0].a(108 + var9 + 2, -10 + (-6 + var8), -98, 20, 0);
-              ok.selectStarSprites[0].a(var9 + 108 + 2, var8 - 6 + 10, -121, 20, 0);
-              ok.selectStarSprites[0].a(2 + var9 + 108, -6 + var8, -90, 30, 0);
+              ValidationState.selectStarSprites[0].a(2 + var9 + 0, -6 + var8 - 10, -118, 20, 0);
+              ValidationState.selectStarSprites[0].a(2 + var9 - 0, -6 + (var8 + 10), -86, 20, 0);
+              ValidationState.selectStarSprites[0].a(2 + (0 + var9), -6 + var8, -105, 30, 0);
+              ValidationState.selectStarSprites[0].a(108 + var9 + 2, -10 + (-6 + var8), -98, 20, 0);
+              ValidationState.selectStarSprites[0].a(var9 + 108 + 2, var8 - 6 + 10, -121, 20, 0);
+              ValidationState.selectStarSprites[0].a(2 + var9 + 108, -6 + var8, -90, 30, 0);
               for (var10 = var9; var10 < -12 + var9 + 108; var10 += 14) {
-                ok.selectStarSprites[0].b(var10, var8 - 14 - 6, 28, 28, 64);
+                ValidationState.selectStarSprites[0].drawScaledIntensity(var10, var8 - 14 - 6, 28, 28, 64);
               }
               SoftwareRasterizer.setClip(0, 0, 2 + (var7Lifetime2 * 108 / 104 + var9), 480);
               for (var10Lifetime2 = var9; 108 + var9 + 2 - 14 > var10Lifetime2; var10Lifetime2 += 14) {
-                ok.selectStarSprites[0].a(var10Lifetime2, -20 + var8, 28, 28);
+                ValidationState.selectStarSprites[0].drawScaled(var10Lifetime2, -20 + var8, 28, 28);
               }
               SoftwareRasterizer.resetClip();
-              ok.selectStarSprites[0].a(2 + var7Lifetime2 * 108 / 104 + var9, var8 - 16, -102, 30, 0);
-              ok.selectStarSprites[0].a(2 + (var7Lifetime2 * 108 / 104 + var9), var8 - 6 + 10, -102, 30, 0);
-              ok.selectStarSprites[0].a(108 * var7Lifetime2 / 104 + (var9 + 2), var8 - 6, -90, 40, 0);
-              var6 = qc.field_N + "       ";
+              ValidationState.selectStarSprites[0].a(2 + var7Lifetime2 * 108 / 104 + var9, var8 - 16, -102, 30, 0);
+              ValidationState.selectStarSprites[0].a(2 + (var7Lifetime2 * 108 / 104 + var9), var8 - 6 + 10, -102, 30, 0);
+              ValidationState.selectStarSprites[0].a(108 * var7Lifetime2 / 104 + (var9 + 2), var8 - 6, -90, 40, 0);
+              var6 = LoginForm.field_N + "       ";
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -98,32 +98,32 @@ final class ph extends ge {
                 var7Lifetime2Lifetime1 = stackIn_27_0;
                 var8Lifetime1 = param0 + 20;
                 var9Lifetime1 = 260;
-                ok.selectStarSprites[0].a(0 + var9Lifetime1 + 2, -16 + var8Lifetime1, -121, 20, 0);
-                ok.selectStarSprites[0].a(var9Lifetime1 - 0 + 2, -6 + var8Lifetime1 + 10, -115, 20, 0);
-                ok.selectStarSprites[0].a(2 + var9Lifetime1, var8Lifetime1 - 6, -125, 30, 0);
-                ok.selectStarSprites[0].a(var9Lifetime1 + 110, -10 + (-6 + var8Lifetime1), -126, 20, 0);
-                ok.selectStarSprites[0].a(var9Lifetime1 + 110, -6 + (var8Lifetime1 + 10), -116, 20, 0);
-                ok.selectStarSprites[0].a(2 + (108 + var9Lifetime1), var8Lifetime1 - 6, -88, 30, 0);
+                ValidationState.selectStarSprites[0].a(0 + var9Lifetime1 + 2, -16 + var8Lifetime1, -121, 20, 0);
+                ValidationState.selectStarSprites[0].a(var9Lifetime1 - 0 + 2, -6 + var8Lifetime1 + 10, -115, 20, 0);
+                ValidationState.selectStarSprites[0].a(2 + var9Lifetime1, var8Lifetime1 - 6, -125, 30, 0);
+                ValidationState.selectStarSprites[0].a(var9Lifetime1 + 110, -10 + (-6 + var8Lifetime1), -126, 20, 0);
+                ValidationState.selectStarSprites[0].a(var9Lifetime1 + 110, -6 + (var8Lifetime1 + 10), -116, 20, 0);
+                ValidationState.selectStarSprites[0].a(2 + (108 + var9Lifetime1), var8Lifetime1 - 6, -88, 30, 0);
                 for (var10Lifetime1 = var9Lifetime1; 2 + (var9Lifetime1 + 108) - 14 > var10Lifetime1; var10Lifetime1 += 14) {
-                  ok.selectStarSprites[0].b(var10Lifetime1, -6 + (-14 + var8Lifetime1), 28, 28, 64);
+                  ValidationState.selectStarSprites[0].drawScaledIntensity(var10Lifetime1, -6 + (-14 + var8Lifetime1), 28, 28, 64);
                 }
                 SoftwareRasterizer.setClip(0, 0, 2 + (var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200), 480);
                 for (var10Lifetime1Lifetime1 = var9Lifetime1; var10Lifetime1Lifetime1 < -14 + (110 + var9Lifetime1); var10Lifetime1Lifetime1 += 14) {
-                  ok.selectStarSprites[0].a(var10Lifetime1Lifetime1, -6 + (var8Lifetime1 - 14), 28, 28);
+                  ValidationState.selectStarSprites[0].drawScaled(var10Lifetime1Lifetime1, -6 + (var8Lifetime1 - 14), 28, 28);
                 }
                 SoftwareRasterizer.resetClip();
-                ok.selectStarSprites[0].a(var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200 + 2, var8Lifetime1 - 6 - 10, -122, 30, 0);
-                ok.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), 10 + var8Lifetime1 - 6, -91, 30, 0);
-                ok.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), -6 + var8Lifetime1, -98, 40, 0);
-                var6 = qk.field_i + "       ";
+                ValidationState.selectStarSprites[0].a(var9Lifetime1 + var7Lifetime2Lifetime1 * 108 / 200 + 2, var8Lifetime1 - 6 - 10, -122, 30, 0);
+                ValidationState.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), 10 + var8Lifetime1 - 6, -91, 30, 0);
+                ValidationState.selectStarSprites[0].a(108 * var7Lifetime2Lifetime1 / 200 + (var9Lifetime1 + 2), -6 + var8Lifetime1, -98, 40, 0);
+                var6 = WhirlpoolHasher.field_i + "       ";
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (param2 != 4) {
                   if (param1) {
                     var7Lifetime2Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime2 / 2 + ok.selectStarSprites[2].width), param0);
-                    ok.selectStarSprites[2].e(var7Lifetime2Lifetime2 / 2 + 268, param0);
+                    ValidationState.selectStarSprites[2].drawTransparent(268 - (var7Lifetime2Lifetime2 / 2 + ValidationState.selectStarSprites[2].width), param0);
+                    ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime2Lifetime2 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
@@ -138,7 +138,7 @@ final class ph extends ge {
                   return;
                 }
                 if (!e.a(-114)) {
-                  if (null == ki.field_E) {
+                  if (null == LoginChoicePanel.field_E) {
                     var6 = mh.field_lb;
                   } else {
                     var6 = mh.field_lb;
@@ -148,8 +148,8 @@ final class ph extends ge {
                 else {
                   if (param1) {
                     var7Lifetime2Lifetime3 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime3 / 2 + ok.selectStarSprites[2].width), param0);
-                    ok.selectStarSprites[2].e(var7Lifetime2Lifetime3 / 2 + 268, param0);
+                    ValidationState.selectStarSprites[2].drawTransparent(268 - (var7Lifetime2Lifetime3 / 2 + ValidationState.selectStarSprites[2].width), param0);
+                    ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime2Lifetime3 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
                     ph.a((byte) 46);
@@ -167,14 +167,14 @@ final class ph extends ge {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (wi.field_K != 2) {
+            if (DialogLayer.field_K != 2) {
               return;
             }
-            var6 = od.field_o;
+            var6 = WidgetTheme.field_o;
             if (param1) {
               var7Lifetime3 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-              ok.selectStarSprites[2].e(268 - (var7Lifetime3 / 2 + ok.selectStarSprites[2].width), param0);
-              ok.selectStarSprites[2].e(var7Lifetime3 / 2 + 268, param0);
+              ValidationState.selectStarSprites[2].drawTransparent(268 - (var7Lifetime3 / 2 + ValidationState.selectStarSprites[2].width), param0);
+              ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime3 / 2 + 268, param0);
             }
             if (param3 > -98) {
               ph.a((byte) 46);
@@ -190,17 +190,17 @@ final class ph extends ge {
           }
         }
         if (decompiledFrameRemainder0) {
-          if (1 >= wi.field_K) {
-            var6 = og.field_G;
+          if (1 >= DialogLayer.field_K) {
+            var6 = EditableTextWidget.field_G;
           }
-          if (wi.field_K == 2) {
-            var6 = nk.field_K;
+          if (DialogLayer.field_K == 2) {
+            var6 = AccountCreationForm.field_K;
           }
         }
         if (param1) {
           var7Lifetime1 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-          ok.selectStarSprites[2].e(268 - (var7Lifetime1 / 2 + ok.selectStarSprites[2].width), param0);
-          ok.selectStarSprites[2].e(var7Lifetime1 / 2 + 268, param0);
+          ValidationState.selectStarSprites[2].drawTransparent(268 - (var7Lifetime1 / 2 + ValidationState.selectStarSprites[2].width), param0);
+          ValidationState.selectStarSprites[2].drawTransparent(var7Lifetime1 / 2 + 268, param0);
         }
         if (param3 > -98) {
           ph.a((byte) 46);
@@ -225,9 +225,9 @@ final class ph extends ge {
     }
 
     final static void d(int param0) {
-        ei var1 = (ei) (qa.field_q.c(param0 + 39974));
+        RasterSnapshot var1 = (RasterSnapshot) (StatefulWidgetPainter.field_q.c(param0 + 39974));
         if (var1 == null) {
-          var1 = new ei();
+          var1 = new RasterSnapshot();
         }
         var1.a(SoftwareRasterizer.pixels, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, SoftwareRasterizer.width, param0 ^ 9202, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipTop);
         if (param0 != -31782) {
@@ -246,7 +246,7 @@ final class ph extends ge {
         boolean decompiledFrameRemainder0 = true;
         if (param1 != 0) {
           if (1 == param1) {
-            md.field_d = true;
+            TickClock.field_d = true;
           } else {
             if ((5 != param1 ||
               e.a(-112)) &&
@@ -259,16 +259,16 @@ final class ph extends ge {
                 if (param1 == 3) {
                   if (tl.field_e) {
                     tl.field_e = false;
-                    mi.field_D.d(-101);
+                    SingleChildWidget.field_D.d(-101);
                   } else {
                     tl.field_e = true;
-                    mi.field_D.a(true, -122, ga.field_e);
+                    SingleChildWidget.field_D.a(true, -122, ga.field_e);
                   }
                 } else {
                   if (((param1 == 4)) &&
                     (!(e.a(-106)))) {
-                    if (ki.field_E != null) {
-                      di.a((byte) 60);
+                    if (LoginChoicePanel.field_E != null) {
+                      WeightedLruCache.a((byte) 60);
                     } else {
                       pd.a(false, false);
                     }
@@ -278,7 +278,7 @@ final class ph extends ge {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (2 == wi.field_K) {
+              if (2 == DialogLayer.field_K) {
                 BufferedSocket.field_c = BufferedSocket.field_c + (qh.field_g + 1);
                 BufferedSocket.field_a = -350;
                 qh.field_g = -1;
@@ -315,7 +315,7 @@ final class ph extends ge {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -333,7 +333,7 @@ final class ph extends ge {
             }
             if ((!(!pk.field_s)) &&
               (!(SpriteState.field_y > 0))) {
-              tl.field_a.a(si.soundEffects[0], 100, ee.field_p * 256 / 100);
+              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, ee.field_p * 256 / 100);
               SpriteState.field_y = 25;
             }
             decompiledFrameRemainder0 = false;
@@ -360,15 +360,15 @@ final class ph extends ge {
             }
             if (pk.field_s &&
               SpriteState.field_y <= 0) {
-              tl.field_a.a(si.soundEffects[0], 100, 256 * ee.field_p / 100);
+              tl.field_a.addSample(BufferedRandomAccessFile.soundEffects[0], 100, 256 * ee.field_p / 100);
               SpriteState.field_y = 25;
             }
             if (hc.field_o >= 10) {
               if (!tl.field_e) {
                 tl.field_e = true;
-                mi.field_D.a(true, -76, ga.field_e);
+                SingleChildWidget.field_D.a(true, -76, ga.field_e);
               }
-              mi.field_D.a(-1, hc.field_o);
+              SingleChildWidget.field_D.a(-1, hc.field_o);
             } else {
               hc.field_o = 10;
               if (!tl.field_e) {
@@ -377,9 +377,9 @@ final class ph extends ge {
                 }
                 return;
               }
-              mi.field_D.a(-1, hc.field_o);
+              SingleChildWidget.field_D.a(-1, hc.field_o);
               tl.field_e = false;
-              mi.field_D.d(-123);
+              SingleChildWidget.field_D.d(-123);
             }
           } else {
             super.a(param0, param1, param2, param3, param4, false);
@@ -390,7 +390,7 @@ final class ph extends ge {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 != 0) {
           return;
@@ -402,10 +402,10 @@ final class ph extends ge {
         if (param0 <= 12) {
           return;
         }
-        if (wi.field_K == 2) {
-          oe.field_a.c(0, 0);
+        if (DialogLayer.field_K == 2) {
+          IntHashTable.field_a.drawWithOffsets(0, 0);
         } else {
-          kb.field_jb.c(0, 0);
+          kb.field_jb.drawWithOffsets(0, 0);
         }
         super.c(68);
     }
@@ -415,7 +415,7 @@ final class ph extends ge {
         if (param0 <= 12) {
           return true;
         }
-        stackIn_6_0 = (10 <= ml.field_t) && (ri.field_a >= 13);
+        stackIn_6_0 = (10 <= ml.field_t) && (BoundedRandomAccessFile.field_a >= 13);
         return stackIn_6_0;
     }
 
@@ -442,10 +442,10 @@ final class ph extends ge {
               stackIn_8_1 = (tl.field_e) ? 0 : 1;
               if (stackIn_7_0 != stackIn_8_1) {
                 tl.field_e = false;
-                mi.field_D.d(-102);
+                SingleChildWidget.field_D.d(-102);
               }
             } else {
-              mi.field_D.a(-1, hc.field_o);
+              SingleChildWidget.field_D.a(-1, hc.field_o);
             }
           }
         }
@@ -461,10 +461,10 @@ final class ph extends ge {
             if (hc.field_o > 200) {
               hc.field_o = 200;
             }
-            mi.field_D.a(-1, hc.field_o);
+            SingleChildWidget.field_D.a(-1, hc.field_o);
             if (!tl.field_e) {
               tl.field_e = true;
-              mi.field_D.a(true, -117, ga.field_e);
+              SingleChildWidget.field_D.a(true, -117, ga.field_e);
             }
           }
         } else {

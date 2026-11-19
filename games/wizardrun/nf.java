@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nf {
-    static ok field_c;
+    static ValidationState field_c;
     static int field_d;
     static int field_b;
     static String field_a;
@@ -30,7 +30,7 @@ final class nf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -53,19 +53,19 @@ final class nf {
             var5_int = param4[0].fullWidth;
             var6 = param4[2].fullWidth;
             if (param3 > -31) {
-              nf.b(38);
+              nf.releaseStatics(38);
             }
             var7 = param4[1].fullWidth;
-            param4[0].e(param0, param1);
-            param4[2].e(param2 + param0 - var6, param1);
-            SoftwareRasterizer.saveClip(ac.field_q);
+            param4[0].drawTransparent(param0, param1);
+            param4[2].drawTransparent(param2 + param0 - var6, param1);
+            SoftwareRasterizer.saveClip(QuickChatPhraseDefinition.field_q);
             SoftwareRasterizer.intersectClip(var5_int + param0, param1, param0 + param2 - var6, param4[1].fullHeight + param1);
             var8 = var5_int + param0;
             var9 = -var6 + param0 + param2;
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {
-              param4[1].e(param0, param1);
+              param4[1].drawTransparent(param0, param1);
             }
-            SoftwareRasterizer.restoreClip(ac.field_q);
+            SoftwareRasterizer.restoreClip(QuickChatPhraseDefinition.field_q);
             return;
           }
           return;
@@ -79,11 +79,11 @@ final class nf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -120) {
           nf.a(-101, ' ');
           field_c = null;
@@ -109,14 +109,14 @@ final class nf {
               if (param1 == 8218) {
                 var2 = -126;
                 if (param0 != 26614) {
-                  nf.b(57);
+                  nf.releaseStatics(57);
                 }
                 return (byte) var2;
               }
               if (param1 == 402) {
                 var2 = -125;
                 if (param0 != 26614) {
-                  nf.b(57);
+                  nf.releaseStatics(57);
                 }
                 return (byte) var2;
               }
@@ -124,7 +124,7 @@ final class nf {
                 if (8230 == param1) {
                   var2 = -123;
                   if (param0 != 26614) {
-                    nf.b(57);
+                    nf.releaseStatics(57);
                   }
                   return (byte) var2;
                 }
@@ -132,7 +132,7 @@ final class nf {
                   if (param1 == 8225) {
                     var2 = -121;
                     if (param0 != 26614) {
-                      nf.b(57);
+                      nf.releaseStatics(57);
                     }
                     return (byte) var2;
                   }
@@ -141,7 +141,7 @@ final class nf {
                       if (param1 == 352) {
                         var2 = -118;
                         if (param0 != 26614) {
-                          nf.b(57);
+                          nf.releaseStatics(57);
                         }
                         return (byte) var2;
                       }
@@ -348,7 +348,7 @@ final class nf {
                     if (param0 == 26614) {
                       return (byte) var2;
                     }
-                    nf.b(57);
+                    nf.releaseStatics(57);
                     return (byte) var2;
                   }
                   if (param1 == 402) {
@@ -356,7 +356,7 @@ final class nf {
                     if (param0 == 26614) {
                       return (byte) var2;
                     }
-                    nf.b(57);
+                    nf.releaseStatics(57);
                     return (byte) var2;
                   }
                   if (param1 != 8222) {
@@ -365,7 +365,7 @@ final class nf {
                       if (param0 == 26614) {
                         return (byte) var2;
                       }
-                      nf.b(57);
+                      nf.releaseStatics(57);
                       return (byte) var2;
                     }
                     if (8224 != param1) {
@@ -374,7 +374,7 @@ final class nf {
                         if (param0 == 26614) {
                           return (byte) var2;
                         }
-                        nf.b(57);
+                        nf.releaseStatics(57);
                         return (byte) var2;
                       }
                       if (param1 != 710) {
@@ -384,7 +384,7 @@ final class nf {
                             if (param0 == 26614) {
                               return (byte) var2;
                             }
-                            nf.b(57);
+                            nf.releaseStatics(57);
                             return (byte) var2;
                           }
                           if (8249 != param1) {
@@ -393,7 +393,7 @@ final class nf {
                               if (param0 == 26614) {
                                 return (byte) var2;
                               }
-                              nf.b(57);
+                              nf.releaseStatics(57);
                               return (byte) var2;
                             }
                             if (param1 != 381) {
@@ -402,7 +402,7 @@ final class nf {
                                 if (param0 == 26614) {
                                   return (byte) var2;
                                 }
-                                nf.b(57);
+                                nf.releaseStatics(57);
                                 return (byte) var2;
                               }
                               if (param1 != 8217) {
@@ -412,7 +412,7 @@ final class nf {
                                     if (param0 == 26614) {
                                       return (byte) var2;
                                     }
-                                    nf.b(57);
+                                    nf.releaseStatics(57);
                                     return (byte) var2;
                                   }
                                   if (param1 != 8226) {
@@ -422,7 +422,7 @@ final class nf {
                                         if (param0 == 26614) {
                                           return (byte) var2;
                                         }
-                                        nf.b(57);
+                                        nf.releaseStatics(57);
                                         return (byte) var2;
                                       }
                                       if (param1 != 732) {
@@ -433,7 +433,7 @@ final class nf {
                                               if (param0 == 26614) {
                                                 return (byte) var2;
                                               }
-                                              nf.b(57);
+                                              nf.releaseStatics(57);
                                               return (byte) var2;
                                             }
                                             if (param1 == 339) {
@@ -441,7 +441,7 @@ final class nf {
                                               if (param0 == 26614) {
                                                 return (byte) var2;
                                               }
-                                              nf.b(57);
+                                              nf.releaseStatics(57);
                                               return (byte) var2;
                                             }
                                             if (param1 != 382) {
@@ -450,7 +450,7 @@ final class nf {
                                                 if (param0 == 26614) {
                                                   return (byte) var2;
                                                 }
-                                                nf.b(57);
+                                                nf.releaseStatics(57);
                                                 return (byte) var2;
                                               }
                                               var2 = 63;
@@ -506,7 +506,7 @@ final class nf {
         if (param0 == 26614) {
           return (byte) var2;
         }
-        nf.b(57);
+        nf.releaseStatics(57);
         return (byte) var2;
     }
 
@@ -536,7 +536,7 @@ final class nf {
           var1_int = IntrusiveDequeCursor.field_f;
           var2 = 0;
           if (oc.field_d == 2) {
-            var3_long = -kh.field_g + d.a((byte) 63);
+            var3_long = -DirectByteStorage.field_g + d.a((byte) 63);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -560,8 +560,8 @@ final class nf {
             var6 = a.field_b[var3];
             if (oc.field_d == 2 &&
               var2 == 1) {
-              if (ke.field_t.length < lb.field_f.length) {
-                stackIn_17_0 = lb.field_f.length;
+              if (ke.field_t.length < GrowableIntList.field_f.length) {
+                stackIn_17_0 = GrowableIntList.field_f.length;
               } else {
                 stackIn_17_0 = ke.field_t.length;
               }
@@ -598,23 +598,23 @@ final class nf {
             var8Lifetime1 = id.field_c - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 == ga.field_d.field_g) {
-                stackIn_44_0 = og.field_N;
+                stackIn_44_0 = EditableTextWidget.field_N;
               } else {
-                stackIn_44_0 = og.field_S;
+                stackIn_44_0 = EditableTextWidget.field_S;
               }
               var9 = stackIn_44_0;
-              var1_int = var1_int + na.field_e;
+              var1_int = var1_int + Js5Transport.field_e;
               if (var9 != null) {
                 var9.a(var1_int, (e.field_d << 1) + ec.field_c, (vl.field_h << 1) + var7Lifetime1, 1, -vl.field_h + var8Lifetime1);
               }
               var1_int = var1_int + e.field_d;
             }
             if (0 > var4) {
-              le.field_j.drawString(var6, var8Lifetime1, var1_int + lc.field_a, var5, -1);
-              var1_int = var1_int + si.field_f;
+              TriangleMesh.field_j.drawString(var6, var8Lifetime1, var1_int + lc.field_a, var5, -1);
+              var1_int = var1_int + BufferedRandomAccessFile.field_f;
             } else {
-              uf.field_c.drawString(var6, var8Lifetime1, var1_int + ki.field_I, var5, -1);
-              var1_int = var1_int + (ec.field_c + na.field_e + e.field_d);
+              uf.field_c.drawString(var6, var8Lifetime1, var1_int + LoginChoicePanel.field_I, var5, -1);
+              var1_int = var1_int + (ec.field_c + Js5Transport.field_e + e.field_d);
             }
             var3++;
           }
@@ -622,28 +622,28 @@ final class nf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw bd.a((Throwable) ((Object) var1), "nf.C(" + param0 + ')');
+          throw bd.wrapException((Throwable) ((Object) var1), "nf.C(" + param0 + ')');
         }
     }
 
     final static String a(byte param0) {
-        if (fi.field_y == pl.field_E) {
-          return na.field_l;
+        if (fi.field_y == TextButton.field_E) {
+          return Js5Transport.field_l;
         }
-        if (pl.field_E == wc.field_j) {
-          return qc.field_I;
+        if (TextButton.field_E == wc.field_j) {
+          return LoginForm.field_I;
         }
         if (param0 < 121) {
           return (String) null;
         }
         if (!we.field_c.a(true)) {
-          return qc.field_I;
+          return LoginForm.field_I;
         }
-        return rg.field_S;
+        return ResizableDialog.field_S;
     }
 
     static {
-        field_c = new ok();
+        field_c = new ValidationState();
         field_d = 64;
         field_a = "Orb coins: <%0>";
     }

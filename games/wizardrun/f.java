@@ -82,8 +82,8 @@ final class f {
           if (DualLinkNode.field_k != null) {
             DualLinkNode.field_k.field_J.a((byte) 87, param1);
           }
-          if (null != ik.field_G) {
-            ik.field_G.field_H.a((byte) 87, param1);
+          if (null != LabeledField.field_G) {
+            LabeledField.field_G.field_H.a((byte) 87, param1);
           }
           if (param0 == -117) {
             return;
@@ -101,11 +101,11 @@ final class f {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw bd.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -108 % ((param0 - 13) / 52);
         field_a = null;
         field_b = null;
