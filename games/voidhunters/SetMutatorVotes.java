@@ -34,7 +34,7 @@ final class SetMutatorVotes extends ConsoleCommand {
           for (var3 = 0; var3 < GetWorldWidthUpshift.field_o.length; var3++) {
             var4 = GetSniperCannonProjectiles.field_o[var3];
             if (0 <= var4) {
-              if (var4 == ei.field_c.selectedIndex) {
+              if (var4 == UiAngleDialRenderer.field_c.selectedIndex) {
                 var5 = mb.menuSelectedItemColor;
               } else {
                 var5 = SetUsePolygonFill.menuItemColor;
@@ -49,7 +49,7 @@ final class SetMutatorVotes extends ConsoleCommand {
             var7 = lsa.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
             var8 = -(var7 >> 1) + alb.field_b;
             if (0 <= var4) {
-              if (ei.field_c.selectedIndex == var4) {
+              if (UiAngleDialRenderer.field_c.selectedIndex == var4) {
                 stackIn_18_0 = StrongCacheReference.field_o;
               } else {
                 stackIn_18_0 = vhb.field_d;

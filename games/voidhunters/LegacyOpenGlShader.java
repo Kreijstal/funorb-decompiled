@@ -18,13 +18,13 @@ final class LegacyOpenGlShader {
           uia.field_b = LegacyOpenGlSpecularEffect.field_e;
           VariableConditionFactory.field_c = MouseActivityState.changed;
           MouseActivityState.changed = false;
-          SetDebrisPartitioned.field_o = ro.field_a;
+          SetDebrisPartitioned.field_o = AppletCookieReader.field_a;
           Particle.field_H = cma.field_a;
           if (param0 != 1001) {
             return;
           }
           qs.field_a = SetBombletSprayAimarc.field_p;
-          ro.field_a = 0;
+          AppletCookieReader.field_a = 0;
           PacketBuffer.field_g = tda.field_K;
         }
     }

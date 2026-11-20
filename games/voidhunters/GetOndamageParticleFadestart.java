@@ -12,7 +12,7 @@ final class GetOndamageParticleFadestart extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(dw.field_b);
+            stackIn_4_0 = new ConsoleValue(ActiveIconBorderRenderer.field_b);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

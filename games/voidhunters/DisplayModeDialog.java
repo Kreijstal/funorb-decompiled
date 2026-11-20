@@ -357,7 +357,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new UiFocusableComponent(param0, param2);
-          var5.renderer = (UiRenderer) ((Object) new kab(param3));
+          var5.renderer = (UiRenderer) ((Object) new StateSpriteTextRenderer(param3));
           if (param1 < 105) {
             this.modeButtons = (UiFocusableComponent[]) null;
           }

@@ -136,10 +136,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             SetBombletSprayAimarc.field_p = param0.getY();
             MonotonicMillisClock.currentTimeMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              ro.field_a = 2;
+              AppletCookieReader.field_a = 2;
               GetBombletSprayAimarc.field_q = 2;
             } else {
-              ro.field_a = 1;
+              AppletCookieReader.field_a = 1;
               GetBombletSprayAimarc.field_q = 1;
             }
             var2_int = param0.getModifiers();

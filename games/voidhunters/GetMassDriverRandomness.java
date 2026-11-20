@@ -58,7 +58,7 @@ final class GetMassDriverRandomness extends ConsoleCommand {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (ia.a(param1, "getcookies", 12348));
+              var4 = (String) (AppletJavaScriptBridge.call(param1, "getcookies", 12348));
               var5 = SetFighterBayAimspeed.a((byte) -67, ';', var4);
               if (param0 != -6465) {
                 stackIn_3_0 = (String) null;

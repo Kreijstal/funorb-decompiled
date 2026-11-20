@@ -414,7 +414,7 @@ final class World implements DiffableState, CompactGameState {
                 var14 = (Ship) (var13);
                 var14.consumeEnergy((byte) 11, param0.getDamage((byte) 45) / GetPhysicsCollisionPhantomForceMultiplier.field_o);
               }
-              this.spawnParticles(RandomLinesTextureOperation.field_m, var10, var9Lifetime1, ei.field_a, 11184895, var11Lifetime1, dw.field_b);
+              this.spawnParticles(RandomLinesTextureOperation.field_m, var10, var9Lifetime1, UiAngleDialRenderer.field_a, 11184895, var11Lifetime1, ActiveIconBorderRenderer.field_b);
               AgeValidator.field_i = null;
             }
           }

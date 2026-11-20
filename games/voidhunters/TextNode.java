@@ -52,7 +52,7 @@ final class TextNode extends IntrusiveNode {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (ia.a(param1, "getcookies", 12348));
+              var3 = (String) (AppletJavaScriptBridge.call(param1, "getcookies", 12348));
               var4 = SetFighterBayAimspeed.a((byte) -67, ';', var3);
               for (var5 = param0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

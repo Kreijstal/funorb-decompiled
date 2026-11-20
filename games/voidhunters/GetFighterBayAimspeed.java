@@ -18,9 +18,9 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
           if (param6 != 21) {
             field_q = (String) null;
           }
-          kpb.field_q = new PcmStreamMixer();
+          MaskedPasswordTextStyle.field_q = new PcmStreamMixer();
           LegacyOpenGlWaveWaterEffect.field_e = param5;
-          aaa.field_b.setStream(kpb.field_q);
+          aaa.field_b.setStream(MaskedPasswordTextStyle.field_q);
           GetBurstFireMaxEnergy.field_p = param1;
           GetBurstFireMaxEnergy.field_p.setMasterGain((byte) -108, GetMutatorVotes.field_p);
           SetSelfDestructTimer.field_o.setStream(GetBurstFireMaxEnergy.field_p);

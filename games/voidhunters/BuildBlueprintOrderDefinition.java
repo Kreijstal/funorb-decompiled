@@ -52,7 +52,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
           return;
         }
         try {
-          SetCountermeasureLauncherRandomness.field_o = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
+          SetCountermeasureLauncherRandomness.field_o = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, MaskedPasswordTextStyle.field_r);
           GameKeyHandler.field_b = new Widget(0L, ObjectiveMarker.field_d, AppletRasterBuffer.field_e);
           CarouselPlayerEventFactory.field_c = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
           PlayerJoinFactory.field_c.addChild(-561, OpenGlCubeTexture.field_h);

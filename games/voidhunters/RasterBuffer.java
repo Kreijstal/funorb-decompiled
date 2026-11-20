@@ -19,7 +19,7 @@ abstract class RasterBuffer extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 114) {
-            stackIn_4_0 = kea.a(false, cd.class, param0);
+            stackIn_4_0 = NativeLibraryLoader.tryLoadForClass(false, PanelHeightQuery.class, param0);
             return stackIn_4_0;
           }
           return false;

@@ -13,7 +13,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          dw.field_b = arguments[0].intValue(90);
+          ActiveIconBorderRenderer.field_b = arguments[0].intValue(90);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

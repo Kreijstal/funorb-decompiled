@@ -53,7 +53,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ia.a((byte) -126, param0, "document.cookie=\"" + var5Lifetime6 + "\"");
+              AppletJavaScriptBridge.evaluate((byte) -126, param0, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
             PlayerLeave.a(-38, param0);

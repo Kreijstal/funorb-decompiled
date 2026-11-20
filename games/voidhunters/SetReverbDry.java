@@ -20,8 +20,8 @@ final class SetReverbDry extends ConsoleCommand {
         var14 = VoidHunters.field_G;
         try {
           var6_int = 493 + param3 + (8 + (2 + param5));
-          kea.field_a.setBounds(3, -18, var6_int - 6, 3, SetToggledScoreboard.field_o.height - 6);
-          var7 = -5 + kea.field_a.height;
+          NativeLibraryLoader.field_a.setBounds(3, -18, var6_int - 6, 3, SetToggledScoreboard.field_o.height - 6);
+          var7 = -5 + NativeLibraryLoader.field_a.height;
           jba.field_b.setBounds(5, -73, param5 + (param3 + 487), var7 - param1, param1);
           UiComboBoxRenderer.field_c.setBounds(param3, -55, -WidgetNode.field_l.width + jba.field_b.width - param3, 0, param1);
           var7 = var7 - (2 + param1);

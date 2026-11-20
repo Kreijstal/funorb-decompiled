@@ -153,7 +153,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             GetSniperCannonProjectiles.field_o[-1 + var8] = 0;
             PlayerGameData.field_e[0] = 2;
           }
-          ei.field_c.itemCount = PlayerGameData.field_e.length;
+          UiAngleDialRenderer.field_c.itemCount = PlayerGameData.field_e.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < GetWorldWidthUpshift.field_o.length; var8Lifetime1++) {
             stackIn_25_0 = GetWorldWidthUpshift.field_o[var8Lifetime1];
@@ -172,7 +172,7 @@ final class GetMessageMaxage extends ConsoleCommand {
           }
           GetMissionTerrainAsteroidProbability.field_p = -(var7Lifetime1 >> 1) + var7Lifetime1 + alb.field_b;
           ShieldBehaviour.field_d = alb.field_b - (var7Lifetime1 >> 1);
-          LoginFormNavigation.field_b = (SetPointDefenceLaserAimarc.field_q + SpawnEnemyShipOrderDefinition.field_g << 1) * ei.field_c.itemCount;
+          LoginFormNavigation.field_b = (SetPointDefenceLaserAimarc.field_q + SpawnEnemyShipOrderDefinition.field_g << 1) * UiAngleDialRenderer.field_c.itemCount;
           for (var8Lifetime2 = 0; GetWorldWidthUpshift.field_o.length > var8Lifetime2; var8Lifetime2++) {
             stackIn_40_0 = LoginFormNavigation.field_b;
             if (GetSniperCannonProjectiles.field_o[var8Lifetime2] >= 0) {
@@ -183,7 +183,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             LoginFormNavigation.field_b = stackIn_40_0 + stackIn_41_1;
           }
           LoopingSound.field_m = -(LoginFormNavigation.field_b >> 1) + SetDebrisPartitioned.field_r;
-          ei.field_c.resetSelection(param3, -1, 0, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
+          UiAngleDialRenderer.field_c.resetSelection(param3, -1, 0, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

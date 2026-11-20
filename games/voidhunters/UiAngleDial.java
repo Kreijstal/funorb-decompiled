@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ata extends UiFocusableComponent {
-    int field_J;
-    int field_B;
-    int field_I;
+final class UiAngleDial extends UiFocusableComponent {
+    int centerX;
+    int centerY;
+    int stepsPerRevolution;
     static Sprite field_K;
-    int field_F;
-    int field_E;
+    int radius;
+    int markerValue;
     static String field_L;
-    int field_D;
+    int value;
     static int field_H;
     static String field_G;
 
@@ -20,13 +20,13 @@ final class ata extends UiFocusableComponent {
           field_K = null;
           return;
         }
-        ata.e(-68);
+        UiAngleDial.pollKeyEvent(-68);
         field_G = null;
         field_L = null;
         field_K = null;
     }
 
-    final static boolean e(int param0) {
+    final static boolean pollKeyEvent(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -58,30 +58,30 @@ final class ata extends UiFocusableComponent {
         var12 = VoidHunters.field_G;
         try {
           if (param6 >= -17) {
-            this.field_E = 45;
+            this.markerValue = 45;
           }
           if (!super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -99)) {
             return false;
           }
-          var8_int = param0 + (-this.x + (-param1 - this.field_J));
-          var9 = param2 + (-this.field_B - this.y - param5);
-          if (this.field_F * this.field_F <= var9 * var9 + var8_int * var8_int) {
+          var8_int = param0 + (-this.x + (-param1 - this.centerX));
+          var9 = param2 + (-this.centerY - this.y - param5);
+          if (this.radius * this.radius <= var9 * var9 + var8_int * var8_int) {
             return true;
           }
           var10 = Math.atan2((double)var9, (double)var8_int) - SetSniperCannonEnergyUsed.field_q;
           if (!(var10 < 0.0)) {
             if (0.0 < var10) {
-              var10 = var10 + 3.141592653589793 / (double)this.field_I;
+              var10 = var10 + 3.141592653589793 / (double)this.stepsPerRevolution;
             }
           } else {
-            var10 = var10 - 3.141592653589793 / (double)this.field_I;
+            var10 = var10 - 3.141592653589793 / (double)this.stepsPerRevolution;
           }
-          this.field_D = (int)((double)this.field_I * var10 / 6.283185307179586);
-          while (this.field_D >= this.field_I) {
-            this.field_D = this.field_D - this.field_I;
+          this.value = (int)((double)this.stepsPerRevolution * var10 / 6.283185307179586);
+          while (this.value >= this.stepsPerRevolution) {
+            this.value = this.value - this.stepsPerRevolution;
           }
-          while (this.field_D < 0) {
-            this.field_D = this.field_D + this.field_I;
+          while (this.value < 0) {
+            this.value = this.value + this.stepsPerRevolution;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class ata extends UiFocusableComponent {
         }
     }
 
-    private ata() throws Throwable {
+    private UiAngleDial() throws Throwable {
         throw new Error();
     }
 

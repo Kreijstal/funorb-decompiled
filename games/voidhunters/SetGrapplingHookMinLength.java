@@ -81,7 +81,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             if (var12 >= 0 &&
               var11 >= 1) {
               var11--;
-              dw.field_a[var11] = var7_int;
+              ActiveIconBorderRenderer.field_a[var11] = var7_int;
               var12 = var12 - (var11 << 1);
             }
             var7_int++;
@@ -93,7 +93,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
               if (NebulaField.field_c <= var16Lifetime1 &&
                 var15 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
                 if (var9 < var8) {
-                  var17Lifetime1 = dw.field_a[var9];
+                  var17Lifetime1 = ActiveIconBorderRenderer.field_a[var9];
                   var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
                   var19Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
                   var20 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1 + param0);
@@ -153,7 +153,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             if (var11 >= var7_int) {
               stackIn_42_0 = var11;
             } else {
-              stackIn_42_0 = dw.field_a[var7_int];
+              stackIn_42_0 = ActiveIconBorderRenderer.field_a[var7_int];
             }
             var19Lifetime1Lifetime1 = stackIn_42_0;
             var20Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var19Lifetime1Lifetime1 + param0);

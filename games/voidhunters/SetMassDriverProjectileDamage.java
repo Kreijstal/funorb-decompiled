@@ -18,7 +18,7 @@ final class SetMassDriverProjectileDamage extends ConsoleCommand {
 
     final static void a(int param0, int param1, int param2) {
         SetOndamageParticleFadestart.field_o = param1;
-        ata.field_H = param0;
+        UiAngleDial.field_H = param0;
         if (param2 != 143) {
           SetMassDriverProjectileDamage.clearSharedReferences(-87);
         }

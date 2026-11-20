@@ -21,7 +21,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           PasswordValidator.field_m[9] = SetCountermeasureLauncherFireForce.field_q;
           PasswordValidator.field_m[0] = PlayerVoteFactory.field_a;
           PasswordValidator.field_m[4] = SetMessageFadetime.field_p;
-          PasswordValidator.field_m[6] = ro.field_b;
+          PasswordValidator.field_m[6] = AppletCookieReader.field_b;
           PasswordValidator.field_m[2] = SetMessageFadetime.field_p;
           PasswordValidator.field_m[5] = SetMissilesExplosionPower.field_o;
           PasswordValidator.field_m[1] = SetSalvoaim.field_q;
@@ -86,7 +86,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[15] = GetLaserEnergyUsed.field_q;
           SetSpinningBladeSpinupSpeed.field_o[36] = GetRepairModeActiveTime.field_q;
           SetSpinningBladeSpinupSpeed.field_o[45] = GetGrapplingHookCooldown.field_o;
-          SetSpinningBladeSpinupSpeed.field_o[40] = kab.field_p;
+          SetSpinningBladeSpinupSpeed.field_o[40] = StateSpriteTextRenderer.field_p;
           SetSpinningBladeSpinupSpeed.field_o[31] = GetWorldWidthUpshift.field_r;
           SetSpinningBladeSpinupSpeed.field_o[48] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[23] = ShieldInfoPool.field_a;
@@ -182,7 +182,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[31] = SetMassDriverReload.field_q;
           GetGrapplingHookSpringConstant.specialOrderLabels[30] = SystemNanoClock.field_d;
           GetGrapplingHookSpringConstant.specialOrderLabels[28] = LegacyOpenGlEnvironmentMappedWaterEffect.field_k;
-          GetGrapplingHookSpringConstant.specialOrderLabels[56] = cd.field_a;
+          GetGrapplingHookSpringConstant.specialOrderLabels[56] = PanelHeightQuery.field_a;
           GetGrapplingHookSpringConstant.specialOrderLabels[55] = UiTextStyle.field_l;
           GetGrapplingHookSpringConstant.specialOrderLabels[37] = GetMissileLauncherEnergyUsed.field_o;
           GetGrapplingHookSpringConstant.specialOrderLabels[10] = jw.field_d;
@@ -245,7 +245,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[13] = MovingObject.field_g;
           ShipTeamCondition.field_f[1] = SetThrusterAutobalancing.field_o;
           ShipTeamCondition.field_f[25] = ThrusterBehaviourFactory.field_b;
-          ShipTeamCondition.field_f[10] = ata.field_G;
+          ShipTeamCondition.field_f[10] = UiAngleDial.field_G;
           ShipTeamCondition.field_f[23] = cs.field_b;
           ShipTeamCondition.field_f[16] = SetPointDefenceLaserEnergyUsed.field_p;
           ShipTeamCondition.field_f[9] = GetMessageMaxage.field_o;

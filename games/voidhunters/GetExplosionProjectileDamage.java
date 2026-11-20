@@ -186,14 +186,14 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           var16 = new Sprite[9];
           var16[4] = var12;
           SetToggledScoreboard.field_o = new Widget(0L, param2);
-          kea.field_a = new Widget((long)param1, param10);
-          SetToggledScoreboard.field_o.addChild(param1 ^ -561, kea.field_a);
+          NativeLibraryLoader.field_a = new Widget((long)param1, param10);
+          SetToggledScoreboard.field_o.addChild(param1 ^ -561, NativeLibraryLoader.field_a);
           var17 = new Widget(0L, (Widget) null);
           var17.children = new IntrusiveDeque();
           GetUseLines.field_p = new ScrollPaneWidget(0L, var17, param9, param11);
-          kea.field_a.addChild(-561, GetUseLines.field_p);
+          NativeLibraryLoader.field_a.addChild(-561, GetUseLines.field_p);
           jba.field_b = new Widget(0L, param4);
-          kea.field_a.addChild(-561, jba.field_b);
+          NativeLibraryLoader.field_a.addChild(-561, jba.field_b);
           UiComboBoxRenderer.field_c = new Widget(0L, param0);
           UiComboBoxRenderer.field_c.font = DebrisFactory.field_c;
           jba.field_b.addChild(-561, UiComboBoxRenderer.field_c);

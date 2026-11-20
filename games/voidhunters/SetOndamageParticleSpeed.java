@@ -24,7 +24,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ei.field_a = arguments[0].intValue(50);
+          UiAngleDialRenderer.field_a = arguments[0].intValue(50);
           if (obfuscationGuard > -119) {
             SetOndamageParticleSpeed.a(15, 1, 90, -10, -70, -82, 78, -25);
           }

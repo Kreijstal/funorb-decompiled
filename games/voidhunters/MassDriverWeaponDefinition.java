@@ -103,7 +103,7 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
         if (!param0) {
           field_d = (byte[][]) null;
         }
-        if (dw.field_c == SetCountermeasureLauncherAimspeed.field_r) {
+        if (ActiveIconBorderRenderer.field_c == SetCountermeasureLauncherAimspeed.field_r) {
           return GrapplingHook.field_x;
         }
         return MusicPatchPcmStream.field_h;

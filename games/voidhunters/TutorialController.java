@@ -908,7 +908,7 @@ final class TutorialController {
                     var20_int = param10 / 2;
                     var21 = param5 / 4;
                     var22_ref_int__ = new int[]{var20_int, var21};
-                    this.drawHintCallout(var22_ref_int__, param3, false, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[2], 255), param0, false, ei.field_f, var16, (byte) 116);
+                    this.drawHintCallout(var22_ref_int__, param3, false, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[2], 255), param0, false, UiAngleDialRenderer.field_f, var16, (byte) 116);
                   }
                 }
                 if (this.isHintCompleteAndHidden((byte) 11, 0) &&

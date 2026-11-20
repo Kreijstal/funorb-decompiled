@@ -27,7 +27,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         if (param0 != 82) {
           SetRadialMenuRadius.a((byte) -71, -110, -57);
         }
-        SetTorpedoEnergyUsed.a(74, ata.field_K);
+        SetTorpedoEnergyUsed.a(74, UiAngleDial.field_K);
         SoftwareFlatTriangleRasterizer.setClipFromRaster();
         SoftwareRasterizer2D.clear();
         Transform3D.renderLogoMeshes((byte) 74);
@@ -36,7 +36,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         }
         bia.popRasterState((byte) 124);
         if (SetSalvoaim.field_r < 150) {
-          ata.field_K.drawHalfSize(var3, var4);
+          UiAngleDial.field_K.drawHalfSize(var3, var4);
         } else {
           GetToggledScoreboard.field_o.drawAlpha(var3 + 15, 10 + var4, var5);
         }

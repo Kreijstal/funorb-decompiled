@@ -59,21 +59,21 @@ final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
           if (param0 != -31515) {
             field_d = 3;
           }
-          while (ata.e(127)) {
-            ei.field_c.updateVerticalSelection((byte) -94);
-            if (!ei.field_c.isActivationRequested((byte) -96)) {
+          while (UiAngleDial.pollKeyEvent(127)) {
+            UiAngleDialRenderer.field_c.updateVerticalSelection((byte) -94);
+            if (!UiAngleDialRenderer.field_c.isActivationRequested((byte) -96)) {
               continue;
             }
             var1_int = 1;
           }
-          ei.field_c.updatePointerSelection(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
-          if (ei.field_c.isActivationRequested((byte) -126)) {
+          UiAngleDialRenderer.field_c.updatePointerSelection(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
+          if (UiAngleDialRenderer.field_c.isActivationRequested((byte) -126)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            0 <= ei.field_c.selectedIndex) {
-            var2 = PlayerGameData.field_e[ei.field_c.selectedIndex];
+            0 <= UiAngleDialRenderer.field_c.selectedIndex) {
+            var2 = PlayerGameData.field_e[UiAngleDialRenderer.field_c.selectedIndex];
             if (var2 == 2) {
               SetMissionTerrainSpaceProbability.b(false);
             }

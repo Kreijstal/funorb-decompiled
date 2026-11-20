@@ -59,7 +59,7 @@ final class MatchResultsFactory implements GameStateFactory {
               if (param2.length() == 0) {
                 var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ia.a((byte) -115, param0, "document.cookie=\"" + var5Lifetime4 + "\"");
+              AppletJavaScriptBridge.evaluate((byte) -115, param0, "document.cookie=\"" + var5Lifetime4 + "\"");
             } catch (Throwable throwable) {
             }
             PlayerLeave.a(-102, param0);

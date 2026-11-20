@@ -41,7 +41,7 @@ final class qs {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + SetMassDriverAimarc.a((byte) 98, param4 * 1000L + MonotonicMillisClock.currentTimeMillis(false)) + "; Max-Age=" + param4;
               }
-              ia.a((byte) -122, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
+              AppletJavaScriptBridge.evaluate((byte) -122, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

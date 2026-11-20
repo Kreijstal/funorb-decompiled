@@ -1245,7 +1245,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime177 = HuffmanCodec.fetchLocalizedResource((byte) -16, "COMPONENT_HULL_BEAM_TEXT");
           if (null != var2Lifetime177) {
-            kab.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime177);
+            StateSpriteTextRenderer.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime177);
           }
           var2Lifetime178 = HuffmanCodec.fetchLocalizedResource((byte) -120, "COMPONENT_HULL_HEXAGON_TEXT");
           if (null != var2Lifetime178) {
@@ -1501,7 +1501,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime241 = HuffmanCodec.fetchLocalizedResource((byte) -121, "VOTE_HOLD_THE_COMPONENT");
           if (var2Lifetime241 != null) {
-            ata.field_G = Cp1252Strings.decode((byte) -125, var2Lifetime241);
+            UiAngleDial.field_G = Cp1252Strings.decode((byte) -125, var2Lifetime241);
           }
           var2Lifetime242 = HuffmanCodec.fetchLocalizedResource((byte) -110, "VOTE_HOLD_THE_COMPONENT_DESC");
           if (var2Lifetime242 != null) {
@@ -1677,7 +1677,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime285 = HuffmanCodec.fetchLocalizedResource((byte) -43, "tutorial_zooming");
           if (null != var2Lifetime285) {
-            ei.field_f = Cp1252Strings.decode((byte) -125, var2Lifetime285);
+            UiAngleDialRenderer.field_f = Cp1252Strings.decode((byte) -125, var2Lifetime285);
           }
           var2Lifetime286 = HuffmanCodec.fetchLocalizedResource((byte) -95, "tutorial_fogofwar_label");
           if (null != var2Lifetime286) {
@@ -1852,7 +1852,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime328 = HuffmanCodec.fetchLocalizedResource((byte) -120, "error");
           if (var2Lifetime328 != null) {
-            ro.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime328);
+            AppletCookieReader.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime328);
           }
           var2Lifetime329 = HuffmanCodec.fetchLocalizedResource((byte) -105, "toggle_tips_on");
           if (var2Lifetime329 != null) {

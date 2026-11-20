@@ -34,7 +34,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
           var7 = 105 % ((-21 - param3) / 62);
           var6 = 0;
           for (var8 = 0; var5_int > var8; var8++) {
-            var6 = kpb.field_s[var8].collectUniqueIds(-36, param0, var6);
+            var6 = MaskedPasswordTextStyle.field_s[var8].collectUniqueIds(-36, param0, var6);
           }
           stackIn_5_0 = var6;
           return stackIn_5_0;
@@ -73,7 +73,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         try {
           var6_int = this.findZonesInBounds((byte) -102, param0, param2);
           for (var7 = param4; var7 < var6_int; var7++) {
-            var8 = kpb.field_s[var7];
+            var8 = MaskedPasswordTextStyle.field_s[var7];
             AsteroidFieldFactory.field_c[var7].markChanged(param4 ^ -126);
             this.removeBodyFromZone(1, var8, param1);
           }
@@ -113,7 +113,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         for (var3 = 1 + param0; var3 < bs.field_c; var3++) {
-          kpb.field_s[var3] = null;
+          MaskedPasswordTextStyle.field_s[var3] = null;
           AsteroidFieldFactory.field_c[var3] = null;
         }
         if (param1 <= 72) {
@@ -174,7 +174,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         try {
           var5_int = this.getOrCreateZonesInBounds((byte) -123, param0, param3);
           for (var6 = 0; var6 < var5_int; var6++) {
-            kpb.field_s[var6].addId(param2, -13251);
+            MaskedPasswordTextStyle.field_s[var6].addId(param2, -13251);
             AsteroidFieldFactory.field_c[var6].markChanged(-111);
           }
           this.markChanged(-15536);
@@ -238,7 +238,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
               AsteroidFieldFactory.field_c[var8] = ppb.field_b;
               incrementValue$1 = var8;
               var8++;
-              kpb.field_s[incrementValue$1] = var11;
+              MaskedPasswordTextStyle.field_s[incrementValue$1] = var11;
             }
           }
           this.finishZoneSelection(var8, 93);
@@ -299,7 +299,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
                 AsteroidFieldFactory.field_c[var9] = ppb.field_b;
                 incrementValue$1 = var9;
                 var9++;
-                kpb.field_s[incrementValue$1] = var12;
+                MaskedPasswordTextStyle.field_s[incrementValue$1] = var12;
               }
             }
           }
@@ -455,11 +455,11 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         if (param0 != -16) {
           this.revision = -122;
         }
-        PartitionZone[] var3 = new PartitionZone[2 * kpb.field_s.length];
-        for (var4 = 0; var4 < kpb.field_s.length; var4++) {
-          var3[var4] = kpb.field_s[var4];
+        PartitionZone[] var3 = new PartitionZone[2 * MaskedPasswordTextStyle.field_s.length];
+        for (var4 = 0; var4 < MaskedPasswordTextStyle.field_s.length; var4++) {
+          var3[var4] = MaskedPasswordTextStyle.field_s[var4];
         }
-        kpb.field_s = var3;
+        MaskedPasswordTextStyle.field_s = var3;
     }
 
     public final void copyTo(byte param0, SerializableGameState param1) {

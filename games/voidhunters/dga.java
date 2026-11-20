@@ -226,7 +226,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_lobby_name", 23100);
                 if (var2 != null) {
-                  kpb.field_r = Cp1252Strings.decode((byte) -125, var2);
+                  MaskedPasswordTextStyle.field_r = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_lobby_rating", 23100);
                 if (null != var2) {
@@ -1676,7 +1676,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("unable_to_delete_friend", 23100);
                 if (null != var2) {
-                  ei.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  UiAngleDialRenderer.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("unable_to_delete_ignore", 23100);
                 if (var2 != null) {

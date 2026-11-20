@@ -96,7 +96,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           var7 = new StringBuilder(this.name).append('(');
           var8 = var7;
           for (var5 = 0; var5 < this.parameterTypes.length; var5++) {
-            discarded$18 = var7.append(wp.a(this.parameterTypes[var5], false));
+            discarded$18 = var7.append(ClassNameFormatter.formatShortClassName(this.parameterTypes[var5], false));
             if (var5 < -1 + this.parameterTypes.length) {
               discarded$19 = var8.append(", ");
             }

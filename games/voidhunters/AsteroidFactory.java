@@ -278,7 +278,7 @@ final class AsteroidFactory implements GameStateFactory {
               }
             }
           }
-          Ship.field_E = (ColorizeTextureOperation.field_m + ro.field_c << 1) * mba.field_a.itemCount;
+          Ship.field_E = (ColorizeTextureOperation.field_m + AppletCookieReader.field_c << 1) * mba.field_a.itemCount;
           for (var4Lifetime2 = 0; ToolkitCanvasContext.menuLabels.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_111_0 = Ship.field_E;
             if (GetMessageMax.menuActionIds[var4Lifetime2] >= 0) {
@@ -299,13 +299,13 @@ final class AsteroidFactory implements GameStateFactory {
             } else {
               var7Lifetime2 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, ToolkitCanvasContext.menuLabels[var4Lifetime3]);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + PlayerVote.field_f;
-              var5Lifetime3 = var5Lifetime3 + ro.field_c;
+              var5Lifetime3 = var5Lifetime3 + AppletCookieReader.field_c;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3] = new int[4];
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][0] = var8Lifetime1 - GraphicsHeap.field_d;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][1] = var5Lifetime3;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][2] = var7Lifetime2 + (GraphicsHeap.field_d << 1);
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][3] = (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p;
-              var5Lifetime3 = var5Lifetime3 + ((ColorizeTextureOperation.field_m << 1) - (-ro.field_c - GetAngularVelocitySustain.field_p));
+              var5Lifetime3 = var5Lifetime3 + ((ColorizeTextureOperation.field_m << 1) - (-AppletCookieReader.field_c - GetAngularVelocitySustain.field_p));
             }
             var4Lifetime3++;
           }

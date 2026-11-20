@@ -35,7 +35,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             return false;
           }
           var2_long = MonotonicMillisClock.currentTimeMillis(false);
-          if (param0 != cd.field_c &&
+          if (param0 != PanelHeightQuery.field_c &&
             SetAutoDetail.field_p < 0) {
             var4_ref_c = (DelayedPacket) (GetSpinningBladeAimarc.field_q.first(param0 + 0));
             if (var4_ref_c != null &&
@@ -66,7 +66,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             if (!PlayerJoinFactory.b((byte) 51)) {
               return false;
             }
-            if (cd.field_c == 0) {
+            if (PanelHeightQuery.field_c == 0) {
               iq.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
               SetSalvoRepairTimeMultiplier.field_r = NetworkMessageState.incomingOpcode;
@@ -74,7 +74,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               SetAutoDetail.field_p = -1;
               return true;
             }
-            var4 = cd.field_c;
+            var4 = PanelHeightQuery.field_c;
             if (AsteroidField.field_c != 0.0) {
               var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * AsteroidField.field_c);
               if (var4 < 0) {

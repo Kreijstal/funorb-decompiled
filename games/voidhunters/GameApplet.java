@@ -360,7 +360,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.errorShown = true;
             System.out.println("error_game_" + param0);
             try {
-              ia.a(MissionList.b((byte) -115), "loggedout", param1 ^ 12348);
+              AppletJavaScriptBridge.call(MissionList.b((byte) -115), "loggedout", param1 ^ 12348);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;

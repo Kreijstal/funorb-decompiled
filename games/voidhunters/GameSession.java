@@ -1170,7 +1170,7 @@ final class GameSession {
               var5Lifetime2 = var8;
               if (this.blueprintSaveStatus != 0) {
                 if (1 != this.blueprintSaveStatus) {
-                  var5Lifetime3 = ro.field_b;
+                  var5Lifetime3 = AppletCookieReader.field_b;
                 } else {
                   var9 = SetArmageddonTimerStart.field_o;
                   var6 = (100 * this.blueprintSizeBytes + 96) / 192;
@@ -4360,7 +4360,7 @@ final class GameSession {
           }
           var5_int = param1.partitioningManager.findZonesInBounds((byte) -46, param3.getBoundingbox((byte) -82), param2);
           for (var6 = 0; var5_int > var6; var6++) {
-            var7 = kpb.field_s[var6];
+            var7 = MaskedPasswordTextStyle.field_s[var6];
             var8 = 0;
             if (null != var7.ids) {
               var15 = 0;
@@ -5356,7 +5356,7 @@ final class GameSession {
               if (GetPointDefenceLaserProjectiles.a(256, 11284)) {
                 var4 = var13.partitioningManager.findZonesInBounds((byte) 115, var3.getBoundingbox((byte) -60), 0);
                 for (var5 = 0; var4 > var5; var5++) {
-                  var6 = kpb.field_s[var5];
+                  var6 = MaskedPasswordTextStyle.field_s[var5];
                   for (var7 = 0; var7 < var6.ids.length; var7++) {
                     var8 = var6.ids[var7];
                     var9 = var13.getNebulae((byte) 116)[var8];
@@ -5617,13 +5617,13 @@ final class GameSession {
             var5 = GetMessageMax.menuActionIds[var3_int];
             if (var5 >= 0) {
               var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, ToolkitCanvasContext.menuLabels[var3_int]);
-              var4 = var4 + ro.field_c;
+              var4 = var4 + AppletCookieReader.field_c;
               var7 = -(var6 >> 1) + PlayerVote.field_f;
               if (SetMachineGunAimarc.a(var4, (GraphicsHeap.field_d << 1) + var6, (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - GraphicsHeap.field_d, param2)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (ro.field_c + ((ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p));
+              var4 = var4 + (AppletCookieReader.field_c + ((ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p));
             } else {
               var4 = var4 + GetSniperCannonProjectileLife.field_r;
             }

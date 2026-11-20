@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kab extends UiTextStyle {
+final class StateSpriteTextRenderer extends UiTextStyle {
     static String field_p;
-    private SoftwareIndexedSprite2D[] field_q;
+    private SoftwareIndexedSprite2D[] stateSprites;
 
     public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
@@ -46,7 +46,7 @@ final class kab extends UiTextStyle {
           if (var6_int != 0) {
             var8 = var8 | 1;
           }
-          var10 = this.field_q[var8];
+          var10 = this.stateSprites[var8];
           var12 = -89 % ((-27 - param0) / 35);
           var11 = param2 - (-param1.x - (-var10.width + param1.width) / 2);
           var13 = param3 + (param1.y + (-var10.height + param1.height) / 2);
@@ -68,10 +68,10 @@ final class kab extends UiTextStyle {
         }
     }
 
-    kab(SoftwareIndexedSprite2D[] param0) {
+    StateSpriteTextRenderer(SoftwareIndexedSprite2D[] param0) {
         try {
           this.font = SetShipToShipRamDamage.field_o;
-          this.field_q = param0;
+          this.stateSprites = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

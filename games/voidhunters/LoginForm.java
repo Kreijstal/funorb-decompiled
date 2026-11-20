@@ -218,7 +218,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
             }
           }
           this.loginField.renderer = (UiRenderer) ((Object) new GradientBorderTextStyle(10000536));
-          this.passwordField.renderer = (UiRenderer) ((Object) new kpb(10000536));
+          this.passwordField.renderer = (UiRenderer) ((Object) new MaskedPasswordTextStyle(10000536));
           var6 = new ThreeSliceButtonStyle();
           this.submitButton.renderer = (UiRenderer) ((Object) var6);
           if (null != this.alternateButton) {

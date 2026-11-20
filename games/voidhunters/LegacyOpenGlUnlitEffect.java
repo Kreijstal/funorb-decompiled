@@ -64,7 +64,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
           if (SetAutozoomAmountMultiply.f(0)) {
             var9.showAccountIneligible(false);
           } else {
-            SetCountermeasureLauncherAimspeed.field_r = dw.field_c;
+            SetCountermeasureLauncherAimspeed.field_r = ActiveIconBorderRenderer.field_c;
             SetResourceNodeCaptureTime.field_p = param6;
             GrapplingHook.field_x = param0;
             SetDebrisCarryOverPercentage.field_p = param1;

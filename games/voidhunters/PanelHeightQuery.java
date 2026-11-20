@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd {
+final class PanelHeightQuery {
     static int field_b;
     static int field_c;
     static String field_a;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 5) {
-          cd.a(true);
+          PanelHeightQuery.getMaximumPanelHeight(true);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    private cd() throws Throwable {
+    private PanelHeightQuery() throws Throwable {
         throw new Error();
     }
 
-    final static int a(boolean param0) {
+    final static int getMaximumPanelHeight(boolean param0) {
         if (!param0) {
           field_a = (String) null;
           return GetLagStandardDeviationIn.field_r.getMaximumPanelHeight(-2147483648);

@@ -35,7 +35,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
             GetDebrisCarryOver.perlinGradientDot(108, -16, -68, (byte) 20, 33);
           }
           if (param0 != null &&
-            param0.length() >= cd.field_b) {
+            param0.length() >= PanelHeightQuery.field_b) {
             if (param0.length() > HighscoreTableRequest.field_f) {
               return true;
             }

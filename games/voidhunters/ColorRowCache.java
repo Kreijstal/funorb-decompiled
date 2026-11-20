@@ -103,7 +103,7 @@ final class ColorRowCache {
         try {
           GetLagStandardDeviationIn.field_r.processPointerInput((byte) -5, ThresholdTextureOperation.field_k, MapClearanceArea.field_c, true);
           GetLagStandardDeviationIn.field_r.updatePanels(19976);
-          while (ata.e(127)) {
+          while (UiAngleDial.pollKeyEvent(127)) {
             GetLagStandardDeviationIn.field_r.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           if (PlayerJoinFactory.field_b != -1) {
@@ -116,7 +116,7 @@ final class ColorRowCache {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (dw.field_c == SetShipTeamAction.field_b) {
+          if (ActiveIconBorderRenderer.field_c == SetShipTeamAction.field_b) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -128,7 +128,7 @@ final class ColorRowCache {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (dw.field_c != SetCountermeasureLauncherAimspeed.field_r) {
+          if (ActiveIconBorderRenderer.field_c != SetCountermeasureLauncherAimspeed.field_r) {
             stackIn_26_0 = -1;
             return stackIn_26_0;
           }

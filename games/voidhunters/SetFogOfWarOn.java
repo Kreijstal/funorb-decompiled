@@ -88,9 +88,9 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_message_maxage(" + Particle.field_c + ")");
         System.out.println("set_message_fadetime(" + Particle.field_s + ")");
         System.out.println("set_message_max(" + hb.field_a + ")");
-        System.out.println("set_ondamage_particle_speed(" + ei.field_a + ")");
+        System.out.println("set_ondamage_particle_speed(" + UiAngleDialRenderer.field_a + ")");
         System.out.println("set_ondamage_particle_life(" + RandomLinesTextureOperation.field_m + ")");
-        System.out.println("set_ondamage_particle_fadestart(" + dw.field_b + ")");
+        System.out.println("set_ondamage_particle_fadestart(" + ActiveIconBorderRenderer.field_b + ")");
         System.out.println("set_shields_directional_halfarc_cuts(" + SetBuildViewAutozoomEndOnAction.field_o + ")");
         System.out.println("set_shields_directional_arc_particle_life(" + LoadSettings.field_q + ")");
         System.out.println("set_shields_directional_arc_particle_speed_downshift(" + LogoMaterial.field_b + ")");

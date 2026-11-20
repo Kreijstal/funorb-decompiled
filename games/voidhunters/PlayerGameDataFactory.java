@@ -16,9 +16,9 @@ final class PlayerGameDataFactory implements GameStateFactory {
             }
             return;
           }
-          HighscoreTableRequest.field_h.processPointerInput((byte) -5, ata.field_H, SetOndamageParticleFadestart.field_o, param0);
+          HighscoreTableRequest.field_h.processPointerInput((byte) -5, UiAngleDial.field_H, SetOndamageParticleFadestart.field_o, param0);
           HighscoreTableRequest.field_h.updatePanels(19976);
-          while (ata.e(127)) {
+          while (UiAngleDial.pollKeyEvent(127)) {
             HighscoreTableRequest.field_h.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           return;

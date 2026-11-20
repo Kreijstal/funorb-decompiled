@@ -74,7 +74,7 @@ final class ServerTickFactory implements GameStateFactory {
             return stackIn_4_0;
           }
           if (iwa.field_b != 2) {
-            stackIn_8_0 = ei.field_e;
+            stackIn_8_0 = UiAngleDialRenderer.field_e;
             return stackIn_8_0;
           }
           var8 = FlipTextureOperation.a(param1, param0 - 90);

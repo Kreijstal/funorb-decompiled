@@ -24,12 +24,12 @@ final class PlayerLeave implements DiffableState {
                 field_a = (int[]) null;
               }
               var3 = OpenGlModel.updateUrlSessionSettings(var4, (byte) -107, param1).getFile();
-              ia.a(new Object[]{"home", var3 + "home.ws"}, param1, "updatelinks", (byte) -71);
-              ia.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param1, "updatelinks", (byte) 97);
-              ia.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1, "updatelinks", (byte) 121);
-              ia.a(new Object[]{"options", var3 + "options.ws"}, param1, "updatelinks", (byte) 67);
-              ia.a(new Object[]{"terms", var3 + "terms.ws"}, param1, "updatelinks", (byte) -69);
-              ia.a(new Object[]{"privacy", var3 + "privacy.ws"}, param1, "updatelinks", (byte) 70);
+              AppletJavaScriptBridge.call(new Object[]{"home", var3 + "home.ws"}, param1, "updatelinks", (byte) -71);
+              AppletJavaScriptBridge.call(new Object[]{"gamelist", var3 + "togamelist.ws"}, param1, "updatelinks", (byte) 97);
+              AppletJavaScriptBridge.call(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1, "updatelinks", (byte) 121);
+              AppletJavaScriptBridge.call(new Object[]{"options", var3 + "options.ws"}, param1, "updatelinks", (byte) 67);
+              AppletJavaScriptBridge.call(new Object[]{"terms", var3 + "terms.ws"}, param1, "updatelinks", (byte) -69);
+              AppletJavaScriptBridge.call(new Object[]{"privacy", var3 + "privacy.ws"}, param1, "updatelinks", (byte) 70);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

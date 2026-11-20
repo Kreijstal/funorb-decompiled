@@ -6,7 +6,7 @@ final class ta {
     static int[] serverPacketLengths;
 
     final static void a(byte param0, int param1) {
-        wp.field_a = SetBombletSprayEnergyUsed.field_o;
+        ClassNameFormatter.field_a = SetBombletSprayEnergyUsed.field_o;
         if (param0 > -101) {
           ta.clearSharedReferences((byte) -35);
           Transform3D.field_a = param1;

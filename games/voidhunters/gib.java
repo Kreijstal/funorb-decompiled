@@ -45,7 +45,7 @@ final class gib {
         RuntimeException decompiledCaughtException = null;
         var6 = VoidHunters.field_G;
         try {
-          var2 = ro.a("jagex-last-login-method", param0 ^ 19227, param1);
+          var2 = AppletCookieReader.readCookie("jagex-last-login-method", param0 ^ 19227, param1);
           if (param0 != 19314) {
             field_b = (String[]) null;
           }

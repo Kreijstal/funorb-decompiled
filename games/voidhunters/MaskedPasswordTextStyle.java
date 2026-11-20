@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kpb extends GradientBorderTextStyle {
+final class MaskedPasswordTextStyle extends GradientBorderTextStyle {
     static PcmStreamMixer field_q;
     static PartitionZone[] field_s;
     static String field_r;
@@ -9,7 +9,7 @@ final class kpb extends GradientBorderTextStyle {
     public static void clearSharedReferences(int param0) {
         field_s = null;
         if (param0 != 17433) {
-          kpb.clearSharedReferences(-38);
+          MaskedPasswordTextStyle.clearSharedReferences(-38);
           field_q = null;
           field_r = null;
           return;
@@ -18,7 +18,7 @@ final class kpb extends GradientBorderTextStyle {
         field_r = null;
     }
 
-    kpb(int param0) {
+    MaskedPasswordTextStyle(int param0) {
         this(SetShipToShipRamDamage.field_o, param0);
     }
 
@@ -51,7 +51,7 @@ final class kpb extends GradientBorderTextStyle {
         }
     }
 
-    private kpb(BitmapFont param0, int param1) {
+    private MaskedPasswordTextStyle(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

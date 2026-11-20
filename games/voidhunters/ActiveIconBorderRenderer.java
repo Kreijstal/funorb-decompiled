@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dw implements UiRenderer {
+final class ActiveIconBorderRenderer implements UiRenderer {
     static int field_b;
     static int[] field_a;
     static dfa field_c;

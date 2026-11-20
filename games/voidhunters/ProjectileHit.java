@@ -140,7 +140,7 @@ final class ProjectileHit {
               var5_int = 0;
               this.projectile.setDamage(var8Lifetime1, 110);
             }
-            param0.spawnParticles(RandomLinesTextureOperation.field_m, this.impactY, this.impactX, ei.field_a, 11184895, var7, dw.field_b);
+            param0.spawnParticles(RandomLinesTextureOperation.field_m, this.impactY, this.impactX, UiAngleDialRenderer.field_a, 11184895, var7, ActiveIconBorderRenderer.field_b);
             var9 = var6;
             if (this.component.isDestroyed((byte) 99) &&
               var9.field_y > 0) {

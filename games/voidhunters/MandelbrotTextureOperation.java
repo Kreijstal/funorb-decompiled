@@ -117,7 +117,7 @@ final class MandelbrotTextureOperation extends TextureOperation {
             var12 = var12 + var14;
             if (var12 >= 0 &&
               1 <= var11) {
-              dw.field_a[var11] = var7_int;
+              ActiveIconBorderRenderer.field_a[var11] = var7_int;
               var11--;
               var12 = var12 - (var11 << 1);
             }
@@ -128,7 +128,7 @@ final class MandelbrotTextureOperation extends TextureOperation {
               if (var9 < var8) {
                 var29 = ResourceNode.field_b[var9 + param5];
                 var30 = ResourceNode.field_b[param5 - var9];
-                var20 = dw.field_a[var9];
+                var20 = ActiveIconBorderRenderer.field_a[var9];
                 var21 = param4 + var7_int;
                 var22 = -var7_int + param4;
                 var23 = var20 + param4;
@@ -158,7 +158,7 @@ final class MandelbrotTextureOperation extends TextureOperation {
               continue;
             }
             if (var7_int > var11) {
-              stackIn_20_0 = dw.field_a[var7_int];
+              stackIn_20_0 = ActiveIconBorderRenderer.field_a[var7_int];
             } else {
               stackIn_20_0 = var11;
             }

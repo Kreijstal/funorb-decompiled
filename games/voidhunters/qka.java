@@ -225,7 +225,7 @@ final class qka extends Widget {
           return this.field_wb;
         }
         while (true) {
-          if (!ata.e(127)) {
+          if (!UiAngleDial.pollKeyEvent(127)) {
             this.field_vb.text = this.field_yb.toString();
             if (!param1) {
               return this.field_wb;

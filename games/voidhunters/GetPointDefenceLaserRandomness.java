@@ -47,7 +47,7 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
     }
 
     final static String a(int param0) {
-        if (dw.field_c == SetCountermeasureLauncherAimspeed.field_r) {
+        if (ActiveIconBorderRenderer.field_c == SetCountermeasureLauncherAimspeed.field_r) {
           return SetResourceNodeCaptureTime.field_p;
         }
         if (!GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4)) {
@@ -55,12 +55,12 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
         }
         if (param0 != 52) {
           GetPointDefenceLaserRandomness.clearSharedReferences(true);
-          if (dw.field_c == SetShipTeamAction.field_b) {
+          if (ActiveIconBorderRenderer.field_c == SetShipTeamAction.field_b) {
             return GetBombletSprayPushMultiplier.emailAvailabilityCheck.getEmail(4);
           }
           return ToggleShieldsOrderDefinition.field_d;
         }
-        if (dw.field_c == SetShipTeamAction.field_b) {
+        if (ActiveIconBorderRenderer.field_c == SetShipTeamAction.field_b) {
           return GetBombletSprayPushMultiplier.emailAvailabilityCheck.getEmail(4);
         }
         return ToggleShieldsOrderDefinition.field_d;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ro {
+final class AppletCookieReader {
     static volatile int field_a;
     static int field_c;
     static String field_b;
 
-    final static String a(String param0, int param1, java.applet.Applet param2) {
+    final static String readCookie(String param0, int param1, java.applet.Applet param2) {
         try {
           int var5 = 0;
           String[] var4 = null;
@@ -29,9 +29,9 @@ final class ro {
             try {
               if (param1 < 72) {
                 var8 = (java.applet.Applet) null;
-                ro.a((String) null, 114, (java.applet.Applet) null);
+                AppletCookieReader.readCookie((String) null, 114, (java.applet.Applet) null);
               }
-              var9 = (String) (ia.a(param2, "getcookies", 12348));
+              var9 = (String) (AppletJavaScriptBridge.call(param2, "getcookies", 12348));
               var4 = SetFighterBayAimspeed.a((byte) -67, ';', var9);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

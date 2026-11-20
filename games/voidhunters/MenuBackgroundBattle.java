@@ -13,7 +13,7 @@ final class MenuBackgroundBattle {
 
     final static int getIncomingLagMillis(int param0) {
         int var1 = -61 % ((47 - param0) / 45);
-        return cd.field_c;
+        return PanelHeightQuery.field_c;
     }
 
     private final void spawnRandomShip(boolean param0, Random param1, int param2, int param3) {

@@ -1068,7 +1068,7 @@ final class GameMenuScreen {
         }
         if (!HardpointMatch.field_d &&
           !SetMassDriverFireForce.field_o) {
-          while (ata.e(127)) {
+          while (UiAngleDial.pollKeyEvent(127)) {
             if (GetSpinningBladeAimspeed.a(-22029)) {
               continue;
             }

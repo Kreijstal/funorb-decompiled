@@ -25,7 +25,7 @@ final class GetOndamageParticleSpeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(ei.field_a);
+            stackIn_4_0 = new ConsoleValue(UiAngleDialRenderer.field_a);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

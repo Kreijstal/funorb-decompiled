@@ -66,7 +66,7 @@ final class SmoothedNanoTickClock extends TickClock {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          kpb.field_q.removeSubStream(param1.stream);
+          MaskedPasswordTextStyle.field_q.removeSubStream(param1.stream);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

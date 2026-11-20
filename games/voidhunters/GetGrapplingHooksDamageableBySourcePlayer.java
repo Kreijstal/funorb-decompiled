@@ -63,7 +63,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           field_p = (ToolkitSprite) null;
         }
         try {
-          var1_ref = CacheFiles.resolveCacheFile(ata.field_L, (byte) 34);
+          var1_ref = CacheFiles.resolveCacheFile(UiAngleDial.field_L, (byte) 34);
         } catch (Exception exception) {
         }
         if (var1_ref == null) {
@@ -189,7 +189,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           }
           stackIn_68_0 = 127;
           while (true) {
-            if (!ata.e(stackIn_68_0)) {
+            if (!UiAngleDial.pollKeyEvent(stackIn_68_0)) {
               stackIn_82_0 = 0;
               return stackIn_82_0;
             }

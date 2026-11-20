@@ -70,7 +70,7 @@ final class MessageFactory implements GameStateFactory {
             if (param1[var5].primitive) {
               discarded$1 = var7.append(PolarDisplacementTextureOperation.getPrimitiveType(param1[var5].value, (byte) 119).toString());
             } else {
-              discarded$2 = var7.append(wp.a(param1[var5].value.getClass(), false));
+              discarded$2 = var7.append(ClassNameFormatter.formatShortClassName(param1[var5].value.getClass(), false));
             }
             if (-1 + param1.length > var5) {
               discarded$3 = var7.append(',');

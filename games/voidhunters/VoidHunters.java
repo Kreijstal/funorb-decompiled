@@ -158,7 +158,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (null != GetBombletSprayPushMultiplier.field_o) {
           return;
         }
-        String var2 = ro.a("fog_voidhunters_ship", 74, MissionList.b((byte) -125));
+        String var2 = AppletCookieReader.readCookie("fog_voidhunters_ship", 74, MissionList.b((byte) -125));
         GetDebrisThrowable.a(logGuard, "Ship cookie=" + var2);
         if (var2 != null) {
           SetInnateThrusters.a(0, GetResourceNodeCaptureTime.a(var2, true, true));
@@ -461,7 +461,7 @@ public final class VoidHunters extends NetworkGameClient {
                   this.updateClientStateAndInput(false, -124);
                 }
               } else {
-                if (wp.field_b == wp.field_a) {
+                if (ClassNameFormatter.field_b == ClassNameFormatter.field_a) {
                   var3 = LaunchFightersOrderDefinition.pollMenuAction(-31515);
                   if (var3 == 1) {
                     kua.field_e = true;
@@ -896,7 +896,7 @@ public final class VoidHunters extends NetworkGameClient {
         ShipComponent.clearSharedReferences(24388);
         iwa.clearSharedReferences((byte) -116);
         igb.clearSharedReferences(0);
-        ro.clearSharedReferences(-47);
+        AppletCookieReader.clearSharedReferences(-47);
         ArmBehaviour.clearSharedReferences(-58);
         GrappleLauncherBehaviour.clearSharedReferences((byte) 114);
         ThrusterBehaviour.clearSharedReferences(-69);
@@ -1031,7 +1031,7 @@ public final class VoidHunters extends NetworkGameClient {
         TextInputWidget.clearSharedReferences((byte) 124);
         pia.clearSharedReferences(-89);
         ToolkitCanvasContext.clearSharedReferences(true);
-        cd.clearSharedReferences(5);
+        PanelHeightQuery.clearSharedReferences(5);
         ebb.clearSharedReferences(23357);
         SpriteDimensions.clearSharedReferences(!param0 ? true : false);
         DisplayModeErrorDialog.clearSharedReferences((byte) -16);
@@ -1047,7 +1047,7 @@ public final class VoidHunters extends NetworkGameClient {
         alb.clearSharedReferences(6947);
         UiToggleButtonRenderer.clearSharedReferences(22089);
         UiStatefulStyle.clearSharedReferences((byte) -18);
-        ei.clearSharedReferences(false);
+        UiAngleDialRenderer.clearSharedReferences(false);
         jba.clearSharedReferences(true);
         UiTextStyle.clearSharedReferences(22540);
         UiComponent.clearSharedReferences((byte) 71);
@@ -1082,7 +1082,7 @@ public final class VoidHunters extends NetworkGameClient {
         csa.clearSharedReferences((byte) 124);
         cjb.clearSharedReferences(0);
         bd.clearSharedReferences((byte) -103);
-        kea.clearSharedReferences(115);
+        NativeLibraryLoader.clearSharedReferences(115);
         IntIndexTable.clearSharedReferences((byte) 127);
         ByteStorage.clearSharedReferences(1);
         Bzip2Decompressor.clearSharedReferences();
@@ -1124,7 +1124,7 @@ public final class VoidHunters extends NetworkGameClient {
         Under13AccountNoticePanel.clearSharedReferences((byte) 77);
         PlayerRequestPackets.clearSharedReferences(-72);
         MidiEnvelope.clearSharedReferences(-17719);
-        ata.clearSharedReferences(6344);
+        UiAngleDial.clearSharedReferences(6344);
         fj.clearSharedReferences(0);
         DateOfBirthTextFields.clearSharedReferences((byte) 106);
         DateOfBirthInput.clearSharedReferences((byte) -81);
@@ -1269,10 +1269,10 @@ public final class VoidHunters extends NetworkGameClient {
         gl.clearSharedReferences(0);
         ThreeSliceButtonStyle.clearSharedReferences((byte) 121);
         UnderlinedLinkRenderer.clearSharedReferences((byte) -52);
-        kpb.clearSharedReferences(17433);
-        dw.clearSharedReferences(118);
+        MaskedPasswordTextStyle.clearSharedReferences(17433);
+        ActiveIconBorderRenderer.clearSharedReferences(118);
         AlphaContainer.clearSharedReferences(!param0 ? true : false);
-        kab.clearSharedReferences(777);
+        StateSpriteTextRenderer.clearSharedReferences(777);
         HighscoreTableRequest.clearSharedReferences(true);
         HighscoreValueRequest.clearSharedReferences(95);
         vu.clearSharedReferences((byte) 113);
@@ -1908,8 +1908,8 @@ public final class VoidHunters extends NetworkGameClient {
           stackIn_10_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
           GetNebulaFadesOutWhenClose.a(stackIn_10_0, false, (byte) -85, -3);
         }
-        if (wp.field_b != wp.field_a) {
-          if (~wp.field_a == ~SetBombletSprayEnergyUsed.field_o) {
+        if (ClassNameFormatter.field_b != ClassNameFormatter.field_a) {
+          if (~ClassNameFormatter.field_a == ~SetBombletSprayEnergyUsed.field_o) {
             ScreenTransitionFade.progress = ScreenTransitionFade.progress + 1;
             if (16 == ScreenTransitionFade.progress) {
               if (!KaleidoscopeTextureOperation.field_i) {
@@ -1917,10 +1917,10 @@ public final class VoidHunters extends NetworkGameClient {
               } else {
                 ValidationStatusIcon.transitionGuestClientState(0);
               }
-              wp.field_a = QuickChatMenuWidget.field_wb;
+              ClassNameFormatter.field_a = QuickChatMenuWidget.field_wb;
             }
           } else {
-            if (QuickChatMenuWidget.field_wb == wp.field_a) {
+            if (QuickChatMenuWidget.field_wb == ClassNameFormatter.field_a) {
               if (!GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 102)) {
                 SetMissionTerrainSpaceProbability.b(false);
                 AgeValidator.field_f = Transform3D.field_a;
@@ -1934,11 +1934,11 @@ public final class VoidHunters extends NetworkGameClient {
                   ColorKeyScaleTextureOperation.d(991426348);
                 }
               }
-              wp.field_a = SetShieldsDirectionalIdleEnergyUsage.field_p;
+              ClassNameFormatter.field_a = SetShieldsDirectionalIdleEnergyUsage.field_p;
             } else {
               ScreenTransitionFade.progress = ScreenTransitionFade.progress - 1;
               if (ScreenTransitionFade.progress == 0) {
-                wp.field_a = wp.field_b;
+                ClassNameFormatter.field_a = ClassNameFormatter.field_b;
               }
             }
           }
@@ -2001,7 +2001,7 @@ public final class VoidHunters extends NetworkGameClient {
                   stackIn_44_2 = (var5 == 0);
                   ((GameSession) (Object) stackIn_43_0).updateSession((byte) stackIn_43_1, stackIn_44_2);
                   if (!GraphicsPresentException.field_a) {
-                    while (ata.e(127)) {
+                    while (UiAngleDial.pollKeyEvent(127)) {
                       stackOut_47_0 = GetSpinningBladeAimspeed.a(-22029);
                       stackIn_59_0 = stackOut_47_0 ? 1 : 0;
                       stackIn_48_0 = stackOut_47_0;
@@ -2059,7 +2059,7 @@ public final class VoidHunters extends NetworkGameClient {
               }
             }
             var7Lifetime2 = 0;
-            while (ata.e(127)) {
+            while (UiAngleDial.pollKeyEvent(127)) {
               if (GetSpinningBladeAimspeed.a(-22029)) {
                 continue;
               }
@@ -2367,7 +2367,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5_intLifetime2 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetPhasedEnergyBeamFireForce.a(var4_int, 32, var5_intLifetime2);
             if (!RoundResult.field_e) {
-              this.drawCachedCenteredFrame(2, 20 + cd.a(true), fk.b(-119));
+              this.drawCachedCenteredFrame(2, 20 + PanelHeightQuery.getMaximumPanelHeight(true), fk.b(-119));
             }
             PerlinNoiseTextureOperation.a(false, (byte) 71);
             RoundResult.field_e = true;
@@ -2393,7 +2393,7 @@ public final class VoidHunters extends NetworkGameClient {
               RoundResult.field_e = true;
             }
           }
-          if (wp.field_a != wp.field_b) {
+          if (ClassNameFormatter.field_a != ClassNameFormatter.field_b) {
             var4_int = 256 * ScreenTransitionFade.progress / 16;
             if (0 < var4_int) {
               SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, var4_int);

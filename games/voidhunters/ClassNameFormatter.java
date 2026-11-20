@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wp {
+final class ClassNameFormatter {
     static int field_a;
     static int field_b;
 
-    final static String a(Class param0, boolean param1) {
+    final static String formatShortClassName(Class param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -21,7 +21,7 @@ final class wp {
             stackIn_6_0 = param0.getName().substring(param0.getName().lastIndexOf(".") + 1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = wp.a(param0.getComponentType(), param1) + "[]";
+          stackIn_4_0 = ClassNameFormatter.formatShortClassName(param0.getComponentType(), param1) + "[]";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

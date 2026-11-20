@@ -115,7 +115,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
           param1 = false;
         }
         SetPhasedEnergyBeamAimspeed.a(-128, param1);
-        if (!kea.field_b) {
+        if (!NativeLibraryLoader.field_b) {
           SetMissionDebrisVotingChancestep.a(param1, 4095);
           return;
         }

@@ -298,11 +298,11 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           WaterNoiseGpuMaterialEffect.field_h.drawDownscaled(0, 0, 32, 32);
           SetClientSideDragging.field_q.bind((byte) -108);
           WaterNoiseGpuMaterialEffect.field_h = null;
-          SetTorpedoProjectileDamage.field_p = new Sprite[ei.field_i.length][];
-          var9 = new Sprite[ei.field_i.length][];
+          SetTorpedoProjectileDamage.field_p = new Sprite[UiAngleDialRenderer.field_i.length][];
+          var9 = new Sprite[UiAngleDialRenderer.field_i.length][];
           var14 = var9;
-          for (var5 = 0; var5 < ei.field_i.length; var5++) {
-            SetTorpedoProjectileDamage.field_p[var5] = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", ei.field_i[var5]);
+          for (var5 = 0; var5 < UiAngleDialRenderer.field_i.length; var5++) {
+            SetTorpedoProjectileDamage.field_p[var5] = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", UiAngleDialRenderer.field_i[var5]);
             var9[var5] = SetTorpedoProjectileDamage.field_p[var5];
           }
           OpenGlClientVertexBuffer.a(18090, false);

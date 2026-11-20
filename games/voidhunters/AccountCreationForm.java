@@ -273,8 +273,8 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         this.emailConfirmationField.renderer = (UiRenderer) ((Object) dupTemp$0);
         this.emailField.renderer = (UiRenderer) ((Object) dupTemp$0);
         this.ageField.renderer = (UiRenderer) ((Object) new GradientBorderTextStyle(10000536));
-        this.emailUpdatesToggle.renderer = (UiRenderer) ((Object) new dw());
-        kpb dupTemp$1 = new kpb(10000536);
+        this.emailUpdatesToggle.renderer = (UiRenderer) ((Object) new ActiveIconBorderRenderer());
+        MaskedPasswordTextStyle dupTemp$1 = new MaskedPasswordTextStyle(10000536);
         this.passwordConfirmationField.renderer = (UiRenderer) ((Object) dupTemp$1);
         this.passwordField.renderer = (UiRenderer) ((Object) dupTemp$1);
         String var2 = SetReverbGain.a(GetLaserProjectiles.field_o, new String[]{this.getLinkMarkupStart((byte) 50), this.getLinkMarkupEnd((byte) -121)}, 109);

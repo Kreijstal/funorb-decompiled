@@ -39,9 +39,9 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
     final static void a(int param0, int param1, double param2, int param3, double param4) {
         int var8;
         var8 = VoidHunters.field_G;
-        if (param1 != ~cd.field_c) {
+        if (param1 != ~PanelHeightQuery.field_c) {
           if (param0 != 0) {
-            cd.field_c = param0;
+            PanelHeightQuery.field_c = param0;
             AsteroidField.field_c = param4;
             if (PerlinNoiseTextureOperation.field_q == 0 &&
               param3 > 0) {
@@ -53,7 +53,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
             }
           } else {
             GetSpinningBladeAimarc.field_q = null;
-            cd.field_c = param0;
+            PanelHeightQuery.field_c = param0;
             AsteroidField.field_c = param4;
             if (PerlinNoiseTextureOperation.field_q == 0 &&
               param3 > 0) {
@@ -67,7 +67,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
         } else {
           if (param0 > 0) {
             GetSpinningBladeAimarc.field_q = new IntrusiveDeque();
-            cd.field_c = param0;
+            PanelHeightQuery.field_c = param0;
             AsteroidField.field_c = param4;
             if (PerlinNoiseTextureOperation.field_q == 0 &&
               param3 > 0) {
@@ -81,7 +81,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
             if (param0 == 0) {
               GetSpinningBladeAimarc.field_q = null;
             }
-            cd.field_c = param0;
+            PanelHeightQuery.field_c = param0;
             AsteroidField.field_c = param4;
             if (PerlinNoiseTextureOperation.field_q != 0) {
               if (param3 == 0) {

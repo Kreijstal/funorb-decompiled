@@ -193,14 +193,14 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (GetDebrisCarryOver.field_o <= 0 &&
                 !GetFightersPerPlayerMaximum.field_r) {
                 try {
-                  ia.a(MissionList.b((byte) -87), "unzap", param3 ^ 12337);
+                  AppletJavaScriptBridge.call(MissionList.b((byte) -87), "unzap", param3 ^ 12337);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ia.a(new Object[]{SecondaryNodeQueue.decodeBase37Name(SetTorpedoAimarc.field_p, -127)}, MissionList.b((byte) -92), "zap", (byte) 108);
+                  AppletJavaScriptBridge.call(new Object[]{SecondaryNodeQueue.decodeBase37Name(SetTorpedoAimarc.field_p, -127)}, MissionList.b((byte) -92), "zap", (byte) 108);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -110,7 +110,7 @@ final class mb extends PacketBuffer {
             if (param1 < 88) {
               return;
             }
-            ia.a(new Object[]{new Integer(param0)}, MissionList.b((byte) -107), "resizing", (byte) 88);
+            AppletJavaScriptBridge.call(new Object[]{new Integer(param0)}, MissionList.b((byte) -107), "resizing", (byte) 88);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

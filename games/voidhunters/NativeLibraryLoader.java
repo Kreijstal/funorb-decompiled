@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class kea {
+final class NativeLibraryLoader {
     static boolean field_b;
     static Widget field_a;
 
-    final static boolean a(boolean param0, Class param1, String param2) {
+    final static boolean tryLoadForClass(boolean param0, Class param1, String param2) {
         try {
           RuntimeException stackIn_21_0 = null;
           StringBuilder stackIn_21_1 = null;
@@ -59,7 +59,7 @@ final class kea {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
               System.load(((File) (var4)).getPath());
-              ArchiveProvider.field_c.put(param2, cd.class);
+              ArchiveProvider.field_c.put(param2, PanelHeightQuery.class);
               return true;
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

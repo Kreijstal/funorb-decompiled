@@ -24,11 +24,11 @@ final class OpenGlClientVertexBuffer extends OpenGlClientBuffer implements OpenG
     }
 
     final static void ensureIntScratchCapacity(int param0, int param1) {
-        if (null == dw.field_a) {
-          dw.field_a = new int[param0];
+        if (null == ActiveIconBorderRenderer.field_a) {
+          ActiveIconBorderRenderer.field_a = new int[param0];
         } else {
-          if (dw.field_a.length < param0) {
-            dw.field_a = new int[param0];
+          if (ActiveIconBorderRenderer.field_a.length < param0) {
+            ActiveIconBorderRenderer.field_a = new int[param0];
           }
         }
         if (param1 > 52) {

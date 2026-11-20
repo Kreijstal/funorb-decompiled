@@ -61,10 +61,10 @@ final class GetMissileLauncherRandomness extends ConsoleCommand {
 
     final static boolean e(int param0) {
         if (param0 == -3840) {
-          return SetShipTeamAction.field_b == dw.field_c ? true : false;
+          return SetShipTeamAction.field_b == ActiveIconBorderRenderer.field_c ? true : false;
         }
         field_o = (gj) null;
-        return SetShipTeamAction.field_b == dw.field_c ? true : false;
+        return SetShipTeamAction.field_b == ActiveIconBorderRenderer.field_c ? true : false;
     }
 
     static {
