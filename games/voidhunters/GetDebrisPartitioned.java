@@ -4,7 +4,7 @@
 final class GetDebrisPartitioned extends ConsoleCommand {
     static int[] field_o;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean usesSymmetricTerrain(int param0, int param1) {
         if (param1 != 9) {
           GetDebrisPartitioned.clearSharedReferences(false);
           if (4 > param0) {
@@ -39,7 +39,7 @@ final class GetDebrisPartitioned extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetDebrisPartitioned.clearSharedReferences(true);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(9, 111));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(9, 111));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class GetDebrisPartitioned extends ConsoleCommand {
     public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (param0) {
-          GetDebrisPartitioned.a(-80, 94);
+          GetDebrisPartitioned.usesSymmetricTerrain(-80, 94);
         }
     }
 

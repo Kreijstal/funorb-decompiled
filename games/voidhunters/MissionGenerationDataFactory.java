@@ -5,7 +5,7 @@ final class MissionGenerationDataFactory implements GameStateFactory {
     static String field_a;
     static int field_b;
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean matchesVertexBufferOptionMask(int param0, byte param1, int param2) {
         int var3 = 27 / ((param1 - 42) / 36);
         return (540800 & param2) != 0 ? true : false;
     }

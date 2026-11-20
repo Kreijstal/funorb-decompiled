@@ -12,7 +12,7 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(154, 85));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(154, 85));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

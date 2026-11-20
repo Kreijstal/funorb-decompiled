@@ -39,7 +39,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -79);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(12, 95));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(12, 95));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

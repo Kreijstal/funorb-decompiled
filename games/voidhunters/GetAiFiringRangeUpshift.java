@@ -18,7 +18,7 @@ final class GetAiFiringRangeUpshift extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 51);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(192, 102));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(192, 102));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

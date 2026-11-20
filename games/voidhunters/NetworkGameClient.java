@@ -56,7 +56,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (!SetAudioRangeCutoff.field_q) {
             this.showGameError("reconnect", 0);
           }
-          NetworkArchiveRequest.f((byte) -119);
+          NetworkArchiveRequest.prepareReconnectUi((byte) -119);
           SetMessageFadetime.a(GameJoinNotificationText.field_b, (byte) 72, var2);
           GetSpinningBladeAimarc.field_o = true;
           StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
@@ -147,7 +147,7 @@ abstract class NetworkGameClient extends GameApplet {
             !(NormalMapTextureOperation.getMouseIdleTicks(-2) <= var3)) {
             this.field_s = false;
             FighterBayWeaponDefinition.closeGameConnection(-123);
-            NetworkArchiveRequest.f((byte) -119);
+            NetworkArchiveRequest.prepareReconnectUi((byte) -119);
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.applyObfuscationGuard(-10560);
             GetSpinningBladeAimarc.field_o = true;
@@ -174,7 +174,7 @@ abstract class NetworkGameClient extends GameApplet {
           MapClearanceArea.field_a != 0) {
           if (10 <= UiDraggableContainer.field_z) {
             if (10 <= GetSpinningBladeAimspeed.field_q) {
-              NetworkArchiveRequest.f((byte) -119);
+              NetworkArchiveRequest.prepareReconnectUi((byte) -119);
               if (MapClearanceArea.field_a == 3) {
                 SetMessageFadetime.a(GetUseFilledPolygons.field_o, (byte) 84, 256);
               } else {
@@ -593,7 +593,7 @@ abstract class NetworkGameClient extends GameApplet {
                 PlayerLeave.receiveChatMessage((byte) 108, var3);
                 break;
               case 16:
-                SoftwareFramebuffer.a(-113);
+                SoftwareFramebuffer.handleDisplayNamePacket(-113);
                 break;
               case 8:
                 SetSalvoDamageMultiplier.decodeReflectionCheck(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, AccountNameAvailabilityReplies.field_b, false);

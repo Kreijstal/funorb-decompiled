@@ -18,7 +18,7 @@ final class GetMissionVotes extends ConsoleCommand {
             var4 = (ToolkitRasterStateStack) null;
             GetMissionVotes.a((ToolkitRasterStateStack) null, -72, 98, -34, -112, -87);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(57, 92));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(57, 92));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

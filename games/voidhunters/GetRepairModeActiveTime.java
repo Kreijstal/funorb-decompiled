@@ -35,7 +35,7 @@ final class GetRepairModeActiveTime extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 44);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(215, 101));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(215, 101));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ final class GetRepairModeActiveTime extends ConsoleCommand {
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean hasActiveLoginSocket(int param0) {
         if (param0 != 215) {
           return false;
         }

@@ -11,38 +11,38 @@ final class GetAllowShipSaving extends ConsoleCommand {
           GetLagStandardDeviationIn.modalStack.finishPanelAnimations(param0 - 4299);
           if (param0 == 4410) {
             if (null == MatchingFieldValidator.field_i) {
-              GetDebugLineLife.e(95);
+              GetDebugLineLife.resetTooltipState(95);
               return;
             }
             MatchingFieldValidator.field_i.stopProgressAnimation(25880);
-            GetDebugLineLife.e(95);
+            GetDebugLineLife.resetTooltipState(95);
             return;
           }
           field_o = (String) null;
           if (null != MatchingFieldValidator.field_i) {
             MatchingFieldValidator.field_i.stopProgressAnimation(25880);
-            GetDebugLineLife.e(95);
+            GetDebugLineLife.resetTooltipState(95);
             return;
           }
-          GetDebugLineLife.e(95);
+          GetDebugLineLife.resetTooltipState(95);
           return;
         }
         if (param0 != 4410) {
           field_o = (String) null;
           if (null == MatchingFieldValidator.field_i) {
-            GetDebugLineLife.e(95);
+            GetDebugLineLife.resetTooltipState(95);
             return;
           }
           MatchingFieldValidator.field_i.stopProgressAnimation(25880);
-          GetDebugLineLife.e(95);
+          GetDebugLineLife.resetTooltipState(95);
           return;
         }
         if (null == MatchingFieldValidator.field_i) {
-          GetDebugLineLife.e(95);
+          GetDebugLineLife.resetTooltipState(95);
           return;
         }
         MatchingFieldValidator.field_i.stopProgressAnimation(25880);
-        GetDebugLineLife.e(95);
+        GetDebugLineLife.resetTooltipState(95);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

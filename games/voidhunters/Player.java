@@ -498,7 +498,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           this.selectedTeam = -1;
           var10 = (GameSnapshot) (param0);
           if (!var10.missionState.isPreGamePhase((byte) 125) &&
-            !ConsoleCharacterStream.a(param2 + 24476, var10.world.getObjectiveType(false))) {
+            !ConsoleCharacterStream.usesTeamRules(param2 + 24476, var10.world.getObjectiveType(false))) {
             this.selectedTeam = param1;
           }
           var6 = new Message(1, param1, param1);
@@ -513,7 +513,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             return;
           }
           if (var10.missionState.getMissionPhase(8) == 5 &&
-            ConsoleCharacterStream.a(34, var10.world.getObjectiveType(false))) {
+            ConsoleCharacterStream.usesTeamRules(34, var10.world.getObjectiveType(false))) {
             var8 = new Random((long)param3);
             var10.missionState.assignUnassignedPlayersToTeams(var8, 2196, var10);
           }

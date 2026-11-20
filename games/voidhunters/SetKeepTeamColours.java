@@ -38,13 +38,13 @@ final class SetKeepTeamColours extends ConsoleCommand {
 
     final static void a(int param0) {
         if (DeveloperAccess.hasDeveloperAccess(2)) {
-          GetFullMissionSet.a(RidgedNoiseVolumeGenerator.field_r, 2182, 0);
+          GetFullMissionSet.initializeMenuScreen(RidgedNoiseVolumeGenerator.field_r, 2182, 0);
         }
-        if (!SetRepairModeActiveTime.a(-116)) {
-          GetFullMissionSet.a(SetCountermeasureLauncherEnergyUsed.field_o, 2182, 1);
-          GetFullMissionSet.a(GetBombletSprayProjectiles.field_r, 2182, 2);
-          GetFullMissionSet.a(SetNebulaFadesOutWhenClose.field_o, 2182, 3);
-          GetFullMissionSet.a(SetMissileLauncherProjectileLife.field_o, 2182, 4);
+        if (!SetRepairModeActiveTime.isGuestOrNonMember(-116)) {
+          GetFullMissionSet.initializeMenuScreen(SetCountermeasureLauncherEnergyUsed.field_o, 2182, 1);
+          GetFullMissionSet.initializeMenuScreen(GetBombletSprayProjectiles.field_r, 2182, 2);
+          GetFullMissionSet.initializeMenuScreen(SetNebulaFadesOutWhenClose.field_o, 2182, 3);
+          GetFullMissionSet.initializeMenuScreen(SetMissileLauncherProjectileLife.field_o, 2182, 4);
         }
         if (param0 == 15334) {
           return;

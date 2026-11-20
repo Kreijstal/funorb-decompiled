@@ -127,7 +127,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(86, 87));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(86, 87));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

@@ -215,7 +215,7 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetMachineGunProjectileDamage.clearSharedReferences(-113);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(146, 124));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(146, 124));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -78,7 +78,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
             var4 = (ByteIndexedRecordWriteRequest) null;
             GetCountermeasureLauncherAimspeed.sendByteIndexedRecordWrite((ByteIndexedRecordWriteRequest) null, 4, -26);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(129, 85));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(129, 85));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -179,7 +179,7 @@ final class StripesTextureOperation extends TextureOperation {
         this.stripeCount = 10;
     }
 
-    final static void a(boolean param0) {
+    final static void layoutSlidingSocialAndGamePanels(boolean param0) {
         int var1 = (GetShieldsDirectionalArcParticleLife.field_p - 640) / 2;
         int var2 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         if (!param0) {

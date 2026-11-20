@@ -66,7 +66,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             loginUiTheme = (UiTheme) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(71, 96));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(71, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         if (var1 == null) {
           return;
         }
-        if (ModelFaceAttachment.a(false)) {
+        if (ModelFaceAttachment.isGuestOrNonMember(false)) {
           var1 = new PlayerGameData();
           TooltipDisplay.field_b.copyTo((byte) 87, var1);
           var1.blueprint = null;

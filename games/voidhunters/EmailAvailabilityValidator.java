@@ -6,11 +6,11 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
     private boolean emailAvailable;
     private MatchingFieldValidator confirmationValidator;
 
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean matchesVertexBufferUpdateMask(int param0, boolean param1, int param2) {
         if (!param1) {
           return ((0 != (24 & param0) ? 1 : 0) | ((544 & param0) == 544 ? 1 : 0)) != 0;
         }
-        EmailAvailabilityValidator.a(126, true, -36);
+        EmailAvailabilityValidator.matchesVertexBufferUpdateMask(126, true, -36);
         return ((0 != (24 & param0) ? 1 : 0) | ((544 & param0) == 544 ? 1 : 0)) != 0;
     }
 

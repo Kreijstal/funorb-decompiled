@@ -36,7 +36,7 @@ final class GetFighterBayReload extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetFighterBayReload.clearSharedReferences(-101);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(115, 100));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(115, 100));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ final class GetFighterBayReload extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, int[] param1, long[] param2) {
+    final static void sortLongKeysWithIntValues(byte param0, int[] param1, long[] param2) {
         try {
           PlayerGameData.sortLongKeysWithIntValues(-14677, param2, 0, param1, param2.length - 1);
           if (param0 != -24) {

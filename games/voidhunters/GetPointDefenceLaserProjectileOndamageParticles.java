@@ -18,7 +18,7 @@ final class GetPointDefenceLaserProjectileOndamageParticles extends ConsoleComma
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(158, 108));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(158, 108));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

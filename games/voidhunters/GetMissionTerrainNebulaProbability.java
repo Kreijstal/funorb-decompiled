@@ -60,7 +60,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_r = -80;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(63, 86));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(63, 86));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

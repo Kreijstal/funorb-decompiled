@@ -17,7 +17,7 @@ final class ModelFaceAttachment {
         field_d = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isGuestOrNonMember(boolean param0) {
         boolean stackIn_7_0 = false;
         if (param0) {
           return false;

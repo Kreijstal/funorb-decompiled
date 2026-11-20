@@ -17,7 +17,7 @@ final class GetSalvoaim extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             GetSalvoaim.nextPowerOfTwo(-119, (byte) -60);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(26, 107));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(26, 107));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

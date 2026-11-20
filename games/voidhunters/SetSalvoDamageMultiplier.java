@@ -10,7 +10,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
         int var1 = 24 / ((param0 + 45) / 52);
     }
 
-    final static boolean e(int param0) {
+    final static boolean isFocusedBlinkPhase(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 9) {
           SetSalvoDamageMultiplier.clearSharedReferences(24);

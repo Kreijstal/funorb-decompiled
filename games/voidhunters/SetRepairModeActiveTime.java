@@ -6,7 +6,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0) {
+    final static boolean isGuestOrNonMember(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 >= -89) {
           return false;
@@ -24,7 +24,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetRepairModeActiveTime.a(106);
+            SetRepairModeActiveTime.isGuestOrNonMember(106);
           }
           SetMachineGunEnergyUsed.submitSettingsChange(215, 62, arguments[0].intValue(123));
           stackIn_3_0 = new ConsoleValue("void");

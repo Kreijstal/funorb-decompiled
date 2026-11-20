@@ -58,7 +58,7 @@ final class FadingMidiPcmStream extends MidiPcmStream {
         boolean stackIn_17_1 = false;
         Widget stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
-        StripesTextureOperation.a(true);
+        StripesTextureOperation.layoutSlidingSocialAndGamePanels(true);
         if (0 > SetShieldsDirectionalArcParticleSpeedDownshift.field_q) {
           DialogMessagePanel.field_v.text = null;
         } else {

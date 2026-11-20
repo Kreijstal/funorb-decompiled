@@ -4,7 +4,7 @@
 final class EnvironmentReflectionGpuMaterialEffect extends GpuMaterialEffect {
     private boolean field_f;
     static int field_k;
-    static int field_i;
+    static int rasterClipMaxY;
     static String field_j;
     static int field_h;
     static ShipComponentDefinition[] field_g;
@@ -87,7 +87,7 @@ final class EnvironmentReflectionGpuMaterialEffect extends GpuMaterialEffect {
           this.toolkit.setAlphaCombineSource(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
           this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
           if (param0 != 2543) {
-            field_i = -56;
+            rasterClipMaxY = -56;
             return;
           }
           return;
@@ -103,13 +103,13 @@ final class EnvironmentReflectionGpuMaterialEffect extends GpuMaterialEffect {
         this.field_f = false;
         this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         if (param0 != 2543) {
-          field_i = -56;
+          rasterClipMaxY = -56;
           return;
         }
     }
 
     static {
-        field_i = 100;
+        rasterClipMaxY = 100;
         field_j = null;
         field_e = "Add action (Add node info to custom variable)";
         field_h = 4;

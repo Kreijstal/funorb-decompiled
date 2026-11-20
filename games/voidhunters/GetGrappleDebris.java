@@ -27,7 +27,7 @@ final class GetGrappleDebris extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(54, 113));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(54, 113));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

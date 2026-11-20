@@ -52,7 +52,7 @@ final class GetShieldsToggleCooldown extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             GetShieldsToggleCooldown.clearSharedReferences((byte) -83);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(209, 82));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(209, 82));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

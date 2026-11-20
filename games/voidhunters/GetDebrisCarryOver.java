@@ -67,7 +67,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = 58;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(34, 91));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(34, 91));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

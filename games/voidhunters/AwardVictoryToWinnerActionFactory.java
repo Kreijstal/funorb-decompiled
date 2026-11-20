@@ -11,16 +11,16 @@ final class AwardVictoryToWinnerActionFactory implements GameStateFactory {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (-param3 + param0 < OpenGlTexture3D.field_j) {
+        if (-param3 + param0 < OpenGlTexture3D.rasterClipMinX) {
           SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);
         } else {
-          if (GetCountermeasureLauncherProjectiles.field_o < param0 + param3) {
+          if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param0 + param3) {
             SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);
           } else {
-            if (NebulaField.field_c > -param3 + param1) {
+            if (NebulaField.rasterClipMinY > -param3 + param1) {
               SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);
             } else {
-              if (EnvironmentReflectionGpuMaterialEffect.field_i >= param1 + param3) {
+              if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= param1 + param3) {
                 MandelbrotTextureOperation.a(param2, param5, (byte) -103, param3, param0, param1, param6);
               } else {
                 SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);

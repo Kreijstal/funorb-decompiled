@@ -16,7 +16,7 @@ final class GetPointDefenceLaserReload extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = true;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(116, 79));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(116, 79));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

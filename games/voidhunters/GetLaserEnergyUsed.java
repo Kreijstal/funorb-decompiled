@@ -7,7 +7,7 @@ final class GetLaserEnergyUsed extends ConsoleCommand {
     static String field_q;
     static int field_r;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void setPartitionQueryBounds(int param0, int param1, int param2, int param3, int param4) {
         SetReadyRoomMutatorTime.field_o[3] = param3;
         if (param0 >= 2) {
           SetReadyRoomMutatorTime.field_o[0] = param2;
@@ -26,7 +26,7 @@ final class GetLaserEnergyUsed extends ConsoleCommand {
         field_o = null;
         field_q = null;
         if (param0 != 0) {
-          GetLaserEnergyUsed.a(36, 75, 97, 14, 66);
+          GetLaserEnergyUsed.setPartitionQueryBounds(36, 75, 97, 14, 66);
         }
     }
 
@@ -40,7 +40,7 @@ final class GetLaserEnergyUsed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(161, 103));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(161, 103));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

@@ -189,7 +189,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetBombletSprayAimarc.clearSharedReferences(28);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(136, 77));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(136, 77));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

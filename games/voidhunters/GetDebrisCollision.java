@@ -19,7 +19,7 @@ final class GetDebrisCollision extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 5);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(8, 116));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(8, 116));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

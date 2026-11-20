@@ -7,7 +7,7 @@ final class SetSniperCannonAimarc extends ConsoleCommand {
     static String field_q;
     static int field_p;
 
-    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
+    final static void presentCanvas(java.awt.Canvas param0, int param1, int param2, int param3) {
         java.awt.Graphics var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;

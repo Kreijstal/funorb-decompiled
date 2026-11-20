@@ -24,7 +24,7 @@ final class GetDebrisCollisionDamage extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(10, 97));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(10, 97));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

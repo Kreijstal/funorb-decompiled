@@ -22,7 +22,7 @@ final class GetAngularForceDownshift extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = 91;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(178, 98));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(178, 98));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

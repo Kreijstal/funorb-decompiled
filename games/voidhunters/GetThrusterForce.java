@@ -15,9 +15,9 @@ final class GetThrusterForce extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetThrusterForce.a(-72);
+            GetThrusterForce.layoutLobbyPlayerList(-72);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(170, 112));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(170, 112));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,7 +33,7 @@ final class GetThrusterForce extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void layoutLobbyPlayerList(int param0) {
         TiledSpriteTextureOperation.field_q.setBounds(0, 123, DualLinkNode.field_f.width - (!GetGrapplingHooksDamageableBySourcePlayer.field_o ? 0 : 4 + (ResourceNode.field_a + 40)), 0, 18);
         GetDebrisGrabbingRange.field_o.setBounds(-40 + DualLinkNode.field_f.width + (-ResourceNode.field_a - 2), -29, 42 + ResourceNode.field_a, param0, 18);
         CarouselSlot.field_a.setBoundsAndLayout(DualLinkNode.field_f.width, 2, -1, DualLinkNode.field_f.height - 20, 20, 0, ResourceNode.field_a);

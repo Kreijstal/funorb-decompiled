@@ -26,7 +26,7 @@ final class GetLaserReload extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_p = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(110, 85));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(110, 85));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

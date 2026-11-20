@@ -22,7 +22,7 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_r = 64;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(79, 124));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(79, 124));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

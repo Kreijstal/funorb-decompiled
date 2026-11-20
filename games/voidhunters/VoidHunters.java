@@ -284,7 +284,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (param0 == 62) {
               GetDebrisThrowable.a(false, "Game finished packet");
               if (var3 != null) {
-                stackIn_59_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
+                stackIn_59_0 = (ModelFaceAttachment.isGuestOrNonMember(false)) ? 7 : 0;
                 GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_59_0, false, (byte) -85, -1);
               }
               return;
@@ -540,11 +540,11 @@ public final class VoidHunters extends NetworkGameClient {
                 AssassinationObjectiveText.field_b = true;
                 GetMessageFadetime.field_o = false;
                 if (!GetThrusterSmallForce.field_o) {
-                  stackIn_85_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
+                  stackIn_85_0 = (!ModelFaceAttachment.isGuestOrNonMember(false)) ? 0 : 7;
                   GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_85_0, false, (byte) -85, 0);
                 } else {
                   BodyInZoneCondition.field_c = GetMissilesDamageSourceTeam.field_o;
-                  stackIn_81_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
+                  stackIn_81_0 = (ModelFaceAttachment.isGuestOrNonMember(false)) ? 7 : 0;
                   GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_81_0, false, (byte) -85, 6);
                 }
                 ColorKeyScaleTextureOperation.d(991426348);
@@ -574,7 +574,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5 = 0;
           }
           if (var5 != 0) {
-            NetworkArchiveRequest.f((byte) -119);
+            NetworkArchiveRequest.prepareReconnectUi((byte) -119);
           }
         }
     }
@@ -1905,7 +1905,7 @@ public final class VoidHunters extends NetworkGameClient {
           GetArmageddonTimerStart.field_o == 0 &&
           0 == AgeValidator.field_f) {
           GetDebrisThrowable.a(false, "Cookie ship found, so starting game");
-          stackIn_10_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
+          stackIn_10_0 = (ModelFaceAttachment.isGuestOrNonMember(false)) ? 7 : 0;
           GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_10_0, false, (byte) -85, -3);
         }
         if (ClassNameFormatter.field_b != ClassNameFormatter.field_a) {
@@ -2204,7 +2204,7 @@ public final class VoidHunters extends NetworkGameClient {
           SetMachineGunEnergyUsed.field_o[55] &&
           SetMachineGunEnergyUsed.field_o[82]) {
           BodyInZoneCondition.field_c = "This is a forced error, you pressed some crazy button combo";
-          stackIn_200_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
+          stackIn_200_0 = (!ModelFaceAttachment.isGuestOrNonMember(false)) ? 0 : 7;
           GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_200_0, false, (byte) -85, 6);
         }
     }
@@ -2292,12 +2292,12 @@ public final class VoidHunters extends NetworkGameClient {
             return;
           }
           if (!LegacyOpenGlEnvironmentReflectionEffect.field_e) {
-            GetPhasedEnergyBeamAimspeed.a(var10, true);
+            GetPhasedEnergyBeamAimspeed.updateAndPresentProgressDialog(var10, true);
             return;
           }
           if (!Mission.isPlayerGameDataReady(-1)) {
             IncrementVariableAction.setProgressDialogStatus(QuickChatHelpWindow.loadingExtraDataText, -1, 100.0f);
-            GetPhasedEnergyBeamAimspeed.a(var10, true);
+            GetPhasedEnergyBeamAimspeed.updateAndPresentProgressDialog(var10, true);
             return;
           }
           if (OpenGlTexture1D.field_i) {
@@ -2326,7 +2326,7 @@ public final class VoidHunters extends NetworkGameClient {
             var3_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var4_int = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetBombletSprayReload.translateMouseCoordinates(-89, var4_int, var3_int);
-            SpawnPointFactory.drawLobbyAndSocialOverlays(SetSalvoDamageMultiplier.e(83), true);
+            SpawnPointFactory.drawLobbyAndSocialOverlays(SetSalvoDamageMultiplier.isFocusedBlinkPhase(83), true);
             BodyDestroyedCondition.restoreMouseCoordinates(-1);
           }
           var3 = (IntegerNode) (PlayerVote.field_c.first(0));
@@ -2375,7 +2375,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (SoftwareFaceAttachment.isMessageBoxOpen(false)) {
               IntrusiveNode.configureMenuTheme((Sprite[]) null, 8, 0, (Sprite[]) null, (Sprite[]) null, 8555923, 0, 15658751, 15658751, SetMpSandboxEnemySpawnLimit.field_p, SoftwareRasterizer2D.height / 2, 0, 0, -14109, SoftwareRasterizer2D.width / 2);
               var4_int = 16;
-              var5_intLifetime2 = var4_int + SetUseNiceTrails.a(0);
+              var5_intLifetime2 = var4_int + SetUseNiceTrails.getMenuWidth(0);
               var6 = var4_int + SetShieldsDirectionalArc.getMenuHeight(-22954);
               var7 = GetBombletSprayEnergyUsed.field_p.width / 2 - var5_intLifetime2 / 2;
               var8 = -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.height / 2;
@@ -2436,7 +2436,7 @@ public final class VoidHunters extends NetworkGameClient {
           stackIn_81_0 = 0;
           stackIn_82_1 = (GetUseDetailLines.field_o != -1) && (GetTorpedoReload.field_q != -1);
           ShieldBehaviourFactory.a(stackIn_81_0, stackIn_82_1);
-          if (GetPointDefenceLaserProjectiles.a(1024, 11284)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(1024, 11284)) {
             GetLagStandardDeviationOut.drawTextWithDefaultFont(1, "FPS: " + Integer.toString(SoftwareFaceAttachment.field_a), 16777215, 20, 160, 4266);
           }
           if (OpenGlTexture1D.field_i) {
@@ -2448,7 +2448,7 @@ public final class VoidHunters extends NetworkGameClient {
               var4.printStackTrace();
             }
           } else {
-            SetSniperCannonAimarc.a(var10, 0, 0, 0);
+            SetSniperCannonAimarc.presentCanvas(var10, 0, 0, 0);
           }
           return;
         } catch (RuntimeException | Error decompiledUncheckedException) {

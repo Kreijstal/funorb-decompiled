@@ -63,7 +63,7 @@ final class MovingObjectFactory implements GameStateFactory {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requestsIndexBuffer(int param0, int param1, int param2) {
         if (param1 != -1104) {
           return false;
         }

@@ -26,7 +26,7 @@ final class GetGrapplingHookRopeBreakLength extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_q = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(204, 121));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(204, 121));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -18,7 +18,7 @@ final class GetShieldsDamageEnergyConversion extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -12);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(213, 98));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(213, 98));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

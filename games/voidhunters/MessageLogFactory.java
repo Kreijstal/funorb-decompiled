@@ -4,7 +4,7 @@
 final class MessageLogFactory implements GameStateFactory {
     static ModelData[] field_a;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean matchesVertexBufferFlagMask(int param0, int param1, int param2) {
         if (param1 == 65536) {
           return (65536 & param2) != 0 ? true : false;
         }

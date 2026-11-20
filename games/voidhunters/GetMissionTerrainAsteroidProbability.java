@@ -61,7 +61,7 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = -10;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(64, 101));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(64, 101));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

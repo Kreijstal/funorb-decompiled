@@ -15,7 +15,7 @@ final class GetSniperCannonFireForce extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = 53;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(104, 91));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(104, 91));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

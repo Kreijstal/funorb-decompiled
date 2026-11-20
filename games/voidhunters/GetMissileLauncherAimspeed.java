@@ -33,7 +33,7 @@ final class GetMissileLauncherAimspeed extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 124);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(127, 120));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(127, 120));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

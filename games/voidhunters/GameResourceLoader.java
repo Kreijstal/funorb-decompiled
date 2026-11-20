@@ -322,7 +322,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           this.fontMetricsArchive = null;
           MidiNote.resetFrameTiming(param0 ^ 2164);
           if (DeveloperAccess.hasDeveloperAccess(2)) {
-            DialogMessagePanel.field_C = new CommandConsole(ConsoleCommandRegistry.a(16), GrapplingHookFactory.field_a, SetTorpedoProjectiles.field_o);
+            DialogMessagePanel.field_C = new CommandConsole(ConsoleCommandRegistry.createConsoleCommands(16), GrapplingHookFactory.field_a, SetTorpedoProjectiles.field_o);
           }
           MidiNote.resetFrameTiming(2096);
           return false;
@@ -354,10 +354,10 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
     }
 
     final static void fillRasterRectangle(int param0, int param1, int param2, int param3, int param4, byte param5) {
-        if (param3 >= OpenGlTexture3D.field_j &&
-          GetCountermeasureLauncherProjectiles.field_o >= param4 &&
-          NebulaField.field_c <= param2 &&
-          param1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+        if (param3 >= OpenGlTexture3D.rasterClipMinX &&
+          GetCountermeasureLauncherProjectiles.rasterClipMaxX >= param4 &&
+          NebulaField.rasterClipMinY <= param2 &&
+          param1 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
           CarouselPlayerInfoFactory.fillRasterRectangleUnchecked(param3, param4, param2, 112, param0, param1);
         } else {
           MidiChannelLevels.fillRasterRectangleClipped(-3518, param0, param1, param2, param4, param3);

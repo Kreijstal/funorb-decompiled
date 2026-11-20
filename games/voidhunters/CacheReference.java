@@ -27,20 +27,20 @@ abstract class CacheReference extends DualLinkNode {
           if (param4 != 20408) {
             CacheReference.drawClippedRectangleBorder(62, 42, -59, 39, 23, 69, 36);
           }
-          var11 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5);
-          var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param6);
-          var13 = IntrusiveNode.clamp(param4 + 10715, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param2);
-          var14 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
-          var7_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5 + param3);
-          var8 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, -param3 + param6);
+          var11 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param5);
+          var12 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param6);
+          var13 = IntrusiveNode.clamp(param4 + 10715, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param2);
+          var14 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0);
+          var7_int = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param5 + param3);
+          var8 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, -param3 + param6);
           for (var15 = var11; var15 < var7_int; var15++) {
             GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var14, ResourceNode.rasterTargetRows[var15], (byte) 75, var13);
           }
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var14, ResourceNode.rasterTargetRows[var15Lifetime1], (byte) 75, var13);
           }
-          var9 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param3 + param2);
-          var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -param3 + param0);
+          var9 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param3 + param2);
+          var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, -param3 + param0);
           for (var15Lifetime2 = var7_int; var8 >= var15Lifetime2; var15Lifetime2++) {
             var21 = ResourceNode.rasterTargetRows[var15Lifetime2];
             GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var9, var21, (byte) 75, var13);

@@ -229,7 +229,7 @@ final class GetBots extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = -92;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(23, 118));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(23, 118));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -16,7 +16,7 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_p = -18;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(102, 96));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(102, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

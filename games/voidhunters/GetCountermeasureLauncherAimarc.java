@@ -20,7 +20,7 @@ final class GetCountermeasureLauncherAimarc extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_p = -121L;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(142, 97));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(142, 97));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

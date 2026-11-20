@@ -9,16 +9,16 @@ final class SetMachineGunProjectileDamage extends ConsoleCommand {
     }
 
     final static void fillBorderedRectangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param5 < OpenGlTexture3D.field_j) {
+        if (param5 < OpenGlTexture3D.rasterClipMinX) {
           MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);
         } else {
-          if (GetCountermeasureLauncherProjectiles.field_o < param1) {
+          if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param1) {
             MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);
           } else {
-            if (NebulaField.field_c > param3) {
+            if (NebulaField.rasterClipMinY > param3) {
               MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);
             } else {
-              if (param6 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+              if (param6 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                 BeveledSpriteTileFactory.fillBorderedRectangleUnclipped(param3, param5, param2, param6, param4, param1, param7 + 7, param0);
               } else {
                 MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);

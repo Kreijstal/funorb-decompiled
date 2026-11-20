@@ -30,7 +30,7 @@ final class GetThrusterParticleSpeedDownshift extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_p = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(176, 74));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(176, 74));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

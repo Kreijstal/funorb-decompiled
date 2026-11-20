@@ -29,7 +29,7 @@ final class GetRepairModePower extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = 13;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(217, 110));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(217, 110));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

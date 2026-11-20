@@ -12,7 +12,7 @@ final class GetThrusterAutobalancing extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(22, 97));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(22, 97));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

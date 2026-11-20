@@ -51,7 +51,7 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(44, 111));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(44, 111));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

@@ -143,7 +143,7 @@ final class ServerInfoFactory implements GameStateFactory {
               stackIn_20_0 = 0;
             }
             var2 = stackIn_20_0;
-            stackIn_25_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2 == 0);
+            stackIn_25_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(51)) && (var2 == 0);
             SpawnPointFactory.drawLobbyAndSocialOverlays(stackIn_25_0, true);
             var14 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
             if (OpenGlTexture1D.field_i) {
@@ -171,7 +171,7 @@ final class ServerInfoFactory implements GameStateFactory {
               }
               var13 = stackIn_38_0;
               var4 = var13;
-              stackIn_42_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
+              stackIn_42_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(param0 + 30499));
               ModalStack.a(stackIn_42_0, var13, -73);
               if (OpenGlTexture1D.field_i) {
                 var5Lifetime2 = SetLaserEnergyUsed.getOverlayClipLeft((byte) -47);
@@ -214,7 +214,7 @@ final class ServerInfoFactory implements GameStateFactory {
                   stackIn_74_0 = 0;
                 }
                 var2Lifetime1 = stackIn_74_0;
-                stackIn_79_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1 == 0);
+                stackIn_79_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(51)) && (var2Lifetime1 == 0);
                 SpawnPointFactory.drawLobbyAndSocialOverlays(stackIn_79_0, true);
                 var16 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
                 if (OpenGlTexture1D.field_i) {
@@ -242,7 +242,7 @@ final class ServerInfoFactory implements GameStateFactory {
                   }
                   var15 = stackIn_92_0;
                   var4Lifetime1 = var15;
-                  stackIn_96_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
+                  stackIn_96_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(param0 + 30499));
                   ModalStack.a(stackIn_96_0, var15, -73);
                   if (OpenGlTexture1D.field_i) {
                     var5Lifetime1Lifetime3 = SetLaserEnergyUsed.getOverlayClipLeft((byte) -47);
@@ -269,7 +269,7 @@ final class ServerInfoFactory implements GameStateFactory {
             stackIn_108_0 = 0;
           }
           var2Lifetime1Lifetime1 = stackIn_108_0;
-          stackIn_113_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1Lifetime1 == 0);
+          stackIn_113_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(51)) && (var2Lifetime1Lifetime1 == 0);
           SpawnPointFactory.drawLobbyAndSocialOverlays(stackIn_113_0, true);
           var18 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
           var3 = var18;
@@ -299,7 +299,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 var4Lifetime1Lifetime1 = var19Lifetime3;
                 var19Lifetime4 = var4Lifetime1Lifetime1;
                 var4Lifetime1Lifetime1 = var19Lifetime4;
-                stackIn_126_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
+                stackIn_126_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(param0 + 30499));
                 ModalStack.a(stackIn_126_0, var17, -73);
                 if (OpenGlTexture1D.field_i) {
                   var5Lifetime1Lifetime1Lifetime4 = SetLaserEnergyUsed.getOverlayClipLeft((byte) -47);
@@ -334,7 +334,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 }
                 var19Lifetime1 = stackIn_140_0;
                 var4Lifetime1Lifetime1 = var19Lifetime1;
-                stackIn_144_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
+                stackIn_144_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(param0 + 30499));
                 ModalStack.a(stackIn_144_0, var19Lifetime1, -73);
                 if (!OpenGlTexture1D.field_i) {
                   if (param0 != -30428) {
@@ -371,7 +371,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 }
                 var20 = stackIn_158_0;
                 var4Lifetime1Lifetime1 = var20;
-                stackIn_162_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
+                stackIn_162_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(param0 + 30499));
                 ModalStack.a(stackIn_162_0, var20, -73);
                 if (OpenGlTexture1D.field_i) {
                   var5Lifetime1Lifetime1Lifetime2 = SetLaserEnergyUsed.getOverlayClipLeft((byte) -47);
@@ -405,7 +405,7 @@ final class ServerInfoFactory implements GameStateFactory {
             }
             var21 = stackIn_177_0;
             var4Lifetime1Lifetime2 = var21;
-            stackIn_181_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
+            stackIn_181_0 = (param1) && (SetSalvoDamageMultiplier.isFocusedBlinkPhase(param0 + 30499));
             ModalStack.a(stackIn_181_0, var21, -73);
             if (!OpenGlTexture1D.field_i) {
               if (param0 == -30428) {

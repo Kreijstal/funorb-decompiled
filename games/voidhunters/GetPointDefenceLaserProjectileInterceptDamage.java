@@ -38,7 +38,7 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
             var4 = (boolean[]) null;
             GetPointDefenceLaserProjectileInterceptDamage.a((boolean[]) null, (boolean[]) null, (byte) -94);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(151, 103));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(151, 103));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
                   var5 = var5 << 10;
                 }
                 stackIn_14_0 = var5;
-                stackIn_15_1 = !(GetPointDefenceLaserProjectiles.a(var5, 11284));
+                stackIn_15_1 = !(GetPointDefenceLaserProjectiles.isDebugFlagSet(var5, 11284));
                 WorldPoint.setDebugFlag(stackIn_14_0, stackIn_15_1, 11585);
               }
             }

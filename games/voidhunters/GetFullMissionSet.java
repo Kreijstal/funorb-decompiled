@@ -5,13 +5,13 @@ final class GetFullMissionSet extends ConsoleCommand {
     static int field_o;
     static int field_p;
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void initializeMenuScreen(int[] param0, int param1, int param2) {
         try {
           SetReloadBarWidth.menuActions[param2] = param0;
           WorldSpriteTiler.field_a[param2] = new GameMenuScreen(param2);
           if (param1 != 2182) {
             int[] var4 = (int[]) null;
-            GetFullMissionSet.a((int[]) null, 47, 101);
+            GetFullMissionSet.initializeMenuScreen((int[]) null, 47, 101);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "vc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -32,7 +32,7 @@ final class GetFullMissionSet extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(5, 104));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(5, 104));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

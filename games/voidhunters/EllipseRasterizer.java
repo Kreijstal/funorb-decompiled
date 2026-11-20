@@ -11,38 +11,38 @@ final class EllipseRasterizer {
         }
         if (param2 != 17000) {
           EllipseRasterizer.fillEllipse(-92, -40, -47, 44, 16, -23);
-          if (OpenGlTexture3D.field_j > -param3 + param0) {
+          if (OpenGlTexture3D.rasterClipMinX > -param3 + param0) {
             SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
             return;
           }
-          if (param3 + param0 > GetCountermeasureLauncherProjectiles.field_o) {
+          if (param3 + param0 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
             SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
             return;
           }
-          if (NebulaField.field_c > param5 - param1) {
+          if (NebulaField.rasterClipMinY > param5 - param1) {
             SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
             return;
           }
-          if (param1 + param5 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+          if (param1 + param5 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
             ToolkitFontMetrics.fillEllipse((byte) -117, param5, param1, param0, param4, param3);
             return;
           }
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
           return;
         }
-        if (OpenGlTexture3D.field_j > -param3 + param0) {
+        if (OpenGlTexture3D.rasterClipMinX > -param3 + param0) {
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
           return;
         }
-        if (param3 + param0 > GetCountermeasureLauncherProjectiles.field_o) {
+        if (param3 + param0 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
           return;
         }
-        if (NebulaField.field_c > param5 - param1) {
+        if (NebulaField.rasterClipMinY > param5 - param1) {
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
           return;
         }
-        if (param1 + param5 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+        if (param1 + param5 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
           ToolkitFontMetrics.fillEllipse((byte) -117, param5, param1, param0, param4, param3);
           return;
         }

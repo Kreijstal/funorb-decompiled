@@ -52,11 +52,11 @@ final class VertexStreamLayout {
         try {
           GetUsePolygonFill.field_p = param8;
           ModalPanel.field_x = param0;
-          MissionCondition.a(param6, param10, 116, param19, param5);
-          OpenGlShader.a(param15, (byte) 111, param9, param1);
+          MissionCondition.configureMenuTextMetrics(param6, param10, 116, param19, param5);
+          OpenGlShader.configureMenuStyleMetrics(param15, (byte) 111, param9, param1);
           BodyInZoneConditionFactory.configureMenuItemStyles(param17, param12, 114, param3, param18, param11);
           var20_int = 20 % ((param16 + 14) / 55);
-          SetFighterRepairAmount.a(param4, -22699, param7);
+          SetFighterRepairAmount.setMenuCenter(param4, -22699, param7);
           UiComboBox.setMenuTextColors(param13, true, param2, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

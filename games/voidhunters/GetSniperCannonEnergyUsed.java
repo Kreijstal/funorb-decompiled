@@ -15,7 +15,7 @@ final class GetSniperCannonEnergyUsed extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetSniperCannonEnergyUsed.clearSharedReferences(91);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(165, 79));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(165, 79));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

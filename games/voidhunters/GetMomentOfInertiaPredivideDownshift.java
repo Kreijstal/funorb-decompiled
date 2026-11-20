@@ -20,7 +20,7 @@ final class GetMomentOfInertiaPredivideDownshift extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -73);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(181, 75));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(181, 75));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -9,7 +9,7 @@ final class GetCountermeasureLauncherEnergyUsed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requestsThreeComponentAttribute(int param0, int param1, int param2) {
         int var3 = -46 % ((-15 - param1) / 58);
         return 0 != (2048 & param2) ? true : false;
     }
@@ -27,7 +27,7 @@ final class GetCountermeasureLauncherEnergyUsed extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 53);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(167, 115));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(167, 115));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ final class GetCountermeasureLauncherEnergyUsed extends ConsoleCommand {
     public static void clearSharedReferences(boolean param0) {
         field_p = null;
         if (param0) {
-          GetCountermeasureLauncherEnergyUsed.a(108, 71, -111);
+          GetCountermeasureLauncherEnergyUsed.requestsThreeComponentAttribute(108, 71, -111);
         }
     }
 

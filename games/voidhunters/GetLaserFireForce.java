@@ -28,7 +28,7 @@ final class GetLaserFireForce extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0, int param1) {
+    final static String getSettingValueText(int param0, int param1) {
         if (param1 <= 73) {
           PacketBuffer var3 = (PacketBuffer) null;
           GetLaserFireForce.decodeTextureLineShape((PacketBuffer) null, (byte) -91);
@@ -56,7 +56,7 @@ final class GetLaserFireForce extends ConsoleCommand {
             var4 = (PacketBuffer) null;
             GetLaserFireForce.decodeTextureLineShape((PacketBuffer) null, (byte) -82);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(100, 96));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

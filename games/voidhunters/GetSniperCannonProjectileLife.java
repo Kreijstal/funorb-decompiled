@@ -23,7 +23,7 @@ final class GetSniperCannonProjectileLife extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_q = 0.9251408576965332f;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(93, 74));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(93, 74));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

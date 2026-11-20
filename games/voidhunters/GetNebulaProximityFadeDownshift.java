@@ -17,7 +17,7 @@ final class GetNebulaProximityFadeDownshift extends ConsoleCommand {
             var4 = (Object) null;
             GetNebulaProximityFadeDownshift.printValueChange(27, (Object) null, (Object) null);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(0, 86));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(0, 86));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -29,7 +29,7 @@ final class GetWaitForPlayers extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             GetWaitForPlayers.clearSharedReferences((byte) 96);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(6, 107));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(6, 107));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

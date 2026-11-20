@@ -18,7 +18,7 @@ final class GetFighterVision extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetFighterVision.playNonSpatialSound(-97, 123, -112);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(2, 124));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(2, 124));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -20,7 +20,7 @@ final class GetBombletSprayEnergyUsed extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = (java.awt.Dimension) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(162, 82));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(162, 82));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

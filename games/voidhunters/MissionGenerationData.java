@@ -41,12 +41,12 @@ final class MissionGenerationData implements DiffableState {
         int var16Lifetime2;
         var18 = VoidHunters.field_G;
         try {
-          var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5);
-          var13 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param7);
-          var14 = IntrusiveNode.clamp(param2 ^ 31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
-          var15 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
-          var8_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5 + param1);
-          var9 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param7 - param1);
+          var12 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param5);
+          var13 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param7);
+          var14 = IntrusiveNode.clamp(param2 ^ 31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param4);
+          var15 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0);
+          var8_int = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param5 + param1);
+          var9 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param7 - param1);
           for (var16 = var12; var16 < var8_int; var16++) {
             GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var15, ResourceNode.rasterTargetRows[var16], (byte) 75, var14);
           }
@@ -56,8 +56,8 @@ final class MissionGenerationData implements DiffableState {
           for (var16Lifetime1 = var13; var16Lifetime1 > var9; var16Lifetime1--) {
             GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var15, ResourceNode.rasterTargetRows[var16Lifetime1], (byte) 75, var14);
           }
-          var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param4);
-          var11 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -param1 + param0);
+          var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param1 + param4);
+          var11 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, -param1 + param0);
           for (var16Lifetime2 = var8_int; var16Lifetime2 <= var9; var16Lifetime2++) {
             var22 = ResourceNode.rasterTargetRows[var16Lifetime2];
             GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var10, var22, (byte) 75, var14);

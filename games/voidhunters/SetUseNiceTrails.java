@@ -16,7 +16,7 @@ final class SetUseNiceTrails extends ConsoleCommand {
         try {
           GetSalvoDamageMultiplier.field_q = arguments[0].intValue(121);
           if (obfuscationGuard > -119) {
-            SetUseNiceTrails.a(-84);
+            SetUseNiceTrails.getMenuWidth(-84);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -34,9 +34,9 @@ final class SetUseNiceTrails extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0) {
+    final static int getMenuWidth(int param0) {
         if (param0 != 0) {
-          SetUseNiceTrails.a(61);
+          SetUseNiceTrails.getMenuWidth(61);
           return -ShieldBehaviour.field_d + GetMissionTerrainAsteroidProbability.field_p;
         }
         return -ShieldBehaviour.field_d + GetMissionTerrainAsteroidProbability.field_p;

@@ -36,14 +36,14 @@ final class GetUseDetailLines extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4) {
+    final static void setRasterClipBounds(int param0, int param1, boolean param2, int param3, int param4) {
         if (!param2) {
           return;
         }
-        GetCountermeasureLauncherProjectiles.field_o = param4;
-        OpenGlTexture3D.field_j = param3;
-        EnvironmentReflectionGpuMaterialEffect.field_i = param0;
-        NebulaField.field_c = param1;
+        GetCountermeasureLauncherProjectiles.rasterClipMaxX = param4;
+        OpenGlTexture3D.rasterClipMinX = param3;
+        EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY = param0;
+        NebulaField.rasterClipMinY = param1;
     }
 
     static {

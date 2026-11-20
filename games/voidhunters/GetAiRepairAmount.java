@@ -21,7 +21,7 @@ final class GetAiRepairAmount extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             GetAiRepairAmount.getCommonArchive(87);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(229, 87));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(229, 87));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

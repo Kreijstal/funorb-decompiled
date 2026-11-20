@@ -15,7 +15,7 @@ final class GetSniperCannonProjectileDamage extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 36);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(147, 112));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(147, 112));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

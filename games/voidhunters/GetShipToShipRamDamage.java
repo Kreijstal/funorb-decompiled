@@ -14,19 +14,19 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           AwardVictoryToWinnerActionFactory.a(param6, param7, param2, param5, param0 + 1512, param4, param3);
           return;
         }
-        if (OpenGlTexture3D.field_j > -param5 + param6) {
+        if (OpenGlTexture3D.rasterClipMinX > -param5 + param6) {
           SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }
-        if (param6 + param5 > GetCountermeasureLauncherProjectiles.field_o) {
+        if (param6 + param5 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
           SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }
-        if (-param1 + param7 < NebulaField.field_c) {
+        if (-param1 + param7 < NebulaField.rasterClipMinY) {
           SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }
-        if (EnvironmentReflectionGpuMaterialEffect.field_i >= param1 + param7) {
+        if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= param1 + param7) {
           GetBots.fillBorderedEllipseUnclipped(param2, param1, param5, param7, param6, param3, param4, 21601);
           return;
         }
@@ -48,7 +48,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_q = (Widget) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(3, 77));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(3, 77));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,14 +6,14 @@ final class GetDebugLineLife extends ConsoleCommand {
     static String[][] field_o;
     static String field_q;
 
-    final static void e(int param0) {
+    final static void resetTooltipState(int param0) {
         SetTestActionLag.field_o = -1;
         GetMissileLauncherAimarc.field_o = false;
         GetReadyRoomMutatorTime.field_o = null;
         OpenGlVertexAttribute.field_a = 0;
         GetBombletSprayReload.field_r = -1;
         if (param0 <= 6) {
-          GetDebugLineLife.e(-19);
+          GetDebugLineLife.resetTooltipState(-19);
         }
     }
 

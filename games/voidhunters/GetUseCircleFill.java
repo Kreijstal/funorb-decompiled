@@ -355,7 +355,7 @@ final class GetUseCircleFill extends ConsoleCommand {
         field_p = null;
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean requestsVertexBuffer(int param0, byte param1, int param2) {
         if (param1 >= -49) {
           return false;
         }

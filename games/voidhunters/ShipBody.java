@@ -463,7 +463,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             return;
           }
           this.chassis.drawTree((byte) 125, param0, this instanceof Ship, param2, param1);
-          if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(2, 11284)) {
             var5_int = this.getCenterOfMassOffsetX(995401160);
             var6 = this.getCenterOfMassOffsetY((byte) 5);
             var7 = param0.worldToScreenX(this.x, (byte) 125);
@@ -473,7 +473,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var10 = param0.worldToScreenY(true, -var6 + this.y);
             SetNumStars.drawCircle(1024.0f * param0.scale, (byte) 90, var10, 16777215, var9);
           }
-          if (GetPointDefenceLaserProjectiles.a(param3, param3 ^ 11268)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(param3, param3 ^ 11268)) {
             var5_intLifetime1 = param0.worldToScreenX(this.boundingbox[0], (byte) 121);
             var6Lifetime1 = param0.worldToScreenX(this.boundingbox[1], (byte) 112);
             var7Lifetime1 = param0.worldToScreenY(true, this.boundingbox[2]);

@@ -92,16 +92,16 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static void f(byte param0) {
+    final static void prepareReconnectUi(byte param0) {
         if (param0 != -119) {
           NetworkArchiveRequest.clearSharedReferences((byte) 33);
         }
         if (GetSpinningBladeAimspeed.field_q == 10) {
-          SpawnChoice.b(param0 ^ -108);
+          SpawnChoice.showReconnectStatusDialog(param0 ^ -108);
           GetSpinningBladeAimspeed.field_q = 11;
         } else {
           if (!SetAutoaim.b(true)) {
-            SpawnChoice.b(param0 ^ -108);
+            SpawnChoice.showReconnectStatusDialog(param0 ^ -108);
             GetSpinningBladeAimspeed.field_q = 11;
           }
         }

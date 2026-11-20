@@ -44,7 +44,7 @@ final class GetUseBackground extends ConsoleCommand {
           }
         }
         if (~SoftwareTransform3D.field_b < param0) {
-          StripesTextureOperation.a(true);
+          StripesTextureOperation.layoutSlidingSocialAndGamePanels(true);
         }
         if (CarouselPlayerEventFactory.field_a > 0) {
           EmailValidationError.layoutSlidingLobbyPanels(CarouselPlayerEventFactory.field_a, (byte) -107);

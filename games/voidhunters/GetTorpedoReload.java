@@ -17,7 +17,7 @@ final class GetTorpedoReload extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             numericCredentialType = (LoginCredentialType) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(109, 96));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(109, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

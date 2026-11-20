@@ -183,7 +183,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(119, 122));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(119, 122));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

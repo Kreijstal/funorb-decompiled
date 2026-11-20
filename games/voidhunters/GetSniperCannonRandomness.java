@@ -16,7 +16,7 @@ final class GetSniperCannonRandomness extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (int[]) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(77, 89));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(77, 89));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

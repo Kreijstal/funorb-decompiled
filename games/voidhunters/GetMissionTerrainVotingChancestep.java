@@ -18,7 +18,7 @@ final class GetMissionTerrainVotingChancestep extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -72);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(67, 98));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(67, 98));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

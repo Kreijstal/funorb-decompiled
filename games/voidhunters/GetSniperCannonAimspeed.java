@@ -18,7 +18,7 @@ final class GetSniperCannonAimspeed extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_q = (Widget) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(122, 118));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(122, 118));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

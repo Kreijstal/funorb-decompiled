@@ -140,7 +140,7 @@ final class MissionState implements DiffableState {
           var8 = new MissionBuilder();
           var9 = var8;
           var9.seed = this.getMissionGenerationSeed((byte) 120);
-          if (ConsoleCharacterStream.a(param0 + 92, this.getVotedObjective(6472))) {
+          if (ConsoleCharacterStream.usesTeamRules(param0 + 92, this.getVotedObjective(6472))) {
             var10 = new Random((long)var9.seed);
             this.rebalanceTeams(-1, param1);
             this.assignUnassignedPlayersToTeams(var10, 2196, param1);
@@ -435,11 +435,11 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean matchesVertexBufferMask(int param0, int param1, byte param2) {
         if (param2 < 15) {
           return true;
         }
-        return SocketNetworkArchiveClient.matchesGpuVertexDataMask(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | EmailAvailabilityValidator.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
+        return SocketNetworkArchiveClient.matchesGpuVertexDataMask(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | EmailAvailabilityValidator.matchesVertexBufferUpdateMask(param1, false, param0) | MessageLogFactory.matchesVertexBufferFlagMask(param0, 65536, param1));
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
@@ -708,7 +708,7 @@ final class MissionState implements DiffableState {
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          MissionState.a(111, -111, (byte) -58);
+          MissionState.matchesVertexBufferMask(111, -111, (byte) -58);
         }
         field_c = null;
         field_h = null;
@@ -1157,7 +1157,7 @@ final class MissionState implements DiffableState {
               }
               var24 = this.countOptionVotes(param0, (byte) -95);
               this.setVotedOptions(var24, false);
-              if (ConsoleCharacterStream.a(82, this.nextround.votedObjective)) {
+              if (ConsoleCharacterStream.usesTeamRules(82, this.nextround.votedObjective)) {
                 this.setMissionPhase(3, -7, Particle.field_j);
                 return;
               }
@@ -1202,7 +1202,7 @@ final class MissionState implements DiffableState {
                 }
                 if (null != this.currentMatch &&
                   !this.hasNextRound(24416) &&
-                  ConsoleCharacterStream.a(81, var14.getObjectiveType(false))) {
+                  ConsoleCharacterStream.usesTeamRules(81, var14.getObjectiveType(false))) {
                   var5Lifetime1 = this.currentMatch.resolveWinner(true);
                   if (0 <= var5Lifetime1 &&
                     this.teamscores.length > var5Lifetime1) {

@@ -23,7 +23,7 @@ final class GetBombletSprayReload extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetBombletSprayReload.translateMouseCoordinates(-46, -76, -106);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(111, 80));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(111, 80));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

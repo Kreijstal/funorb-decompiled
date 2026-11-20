@@ -15,7 +15,7 @@ final class GetCountermeasureLauncherProjectileLife extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetCountermeasureLauncherProjectileLife.clearSharedReferences(126);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(95, 90));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(95, 90));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -28,7 +28,7 @@ final class GetMissionDebrisDefaultProbability extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 54);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(68, 115));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(68, 115));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

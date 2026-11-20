@@ -12,7 +12,7 @@ final class GetDefaultFiringLeeway extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 92 % ((49 - param1) / 54);
-          stackIn_5_0 = (param0.missionState.isMultiRoundMatch(1)) && (1 == param0.missionState.getRoundsLeft((byte) -128) % 2) && (!GetDebrisPartitioned.a(param0.missionState.getVotedObjective(6472), 9));
+          stackIn_5_0 = (param0.missionState.isMultiRoundMatch(1)) && (1 == param0.missionState.getRoundsLeft((byte) -128) % 2) && (!GetDebrisPartitioned.usesSymmetricTerrain(param0.missionState.getVotedObjective(6472), 9));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,7 +38,7 @@ final class GetDefaultFiringLeeway extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(96, 89));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(96, 89));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

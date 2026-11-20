@@ -16,7 +16,7 @@ final class GetTorpedoAimspeed extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetTorpedoAimspeed.clearSharedReferences((byte) 25);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(118, 116));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(118, 116));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

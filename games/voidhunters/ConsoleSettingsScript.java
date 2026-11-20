@@ -33,7 +33,7 @@ final class ConsoleSettingsScript {
           param0 = OpenGlModel.replaceCharacter((char)param1, (byte) 119, "", param0);
           param0 = OpenGlModel.replaceCharacter('\t', (byte) 124, "", param0);
           param0 = OpenGlModel.replaceCharacter('\n', (byte) 99, ";", param0);
-          var2 = ConsoleCommandRegistry.a(16);
+          var2 = ConsoleCommandRegistry.createConsoleCommands(16);
           System.out.println("String s=" + param0);
           var3 = SetFighterBayAimspeed.a((byte) -67, ';', param0);
           for (var4 = 0; var4 < var3.length; var4++) {

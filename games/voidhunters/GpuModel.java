@@ -363,7 +363,7 @@ final class GpuModel extends Model3D {
               var9[var11_int] = (long)var15_int + ((long)var14 << 32);
             }
           }
-          GetFighterBayReload.a((byte) -24, var81, var82);
+          GetFighterBayReload.sortLongKeysWithIntValues((byte) -24, var81, var82);
           this.vertexCount = param1.field_D;
           this.vertexY = param1.vertexY;
           this.vertexZ = param1.vertexZ;
@@ -839,7 +839,7 @@ final class GpuModel extends Model3D {
           this.field_D = OpenGlGpuToolkit.copyFloatPrefix(this.field_D, this.field_L, 7353);
           this.field_y = OpenGlGpuToolkit.copyFloatPrefix(this.field_y, this.field_L, 7353);
           if (null != param1.vertexLabels &&
-            GetLaserBeamProjectileDamage.a((byte) 11, this.field_s, param2)) {
+            GetLaserBeamProjectileDamage.needsVertexLabelGroups((byte) 11, this.field_s, param2)) {
             param1.groupVertexIndices((byte) -37, false);
           }
           if (null != param1.faceAttachments &&
@@ -1118,15 +1118,15 @@ final class GpuModel extends Model3D {
             this.field_q = new GpuVertexBufferOwner(TeamObjectiveFormatter.matchesVertexBufferOptionMask(this.field_s, this.field_I, -22785));
           }
           if (param3 ||
-            GetUseCircleFill.a(this.field_I, (byte) -111, this.field_s)) {
-            this.field_C = new GpuVertexBufferOwner(GpuToolkit.a(0, this.field_I, this.field_s));
+            GetUseCircleFill.requestsVertexBuffer(this.field_I, (byte) -111, this.field_s)) {
+            this.field_C = new GpuVertexBufferOwner(GpuToolkit.matchesVertexBufferOptionMask(0, this.field_I, this.field_s));
           }
           if (param3 ||
             SocketNetworkArchiveClient.matchesGpuVertexDataMask(this.field_s, (byte) 127, this.field_I)) {
-            this.field_h = new GpuVertexBufferOwner(MissionState.a(this.field_s, this.field_I, (byte) 30));
+            this.field_h = new GpuVertexBufferOwner(MissionState.matchesVertexBufferMask(this.field_s, this.field_I, (byte) 30));
           }
           if (!param3 &&
-            !MovingObjectFactory.a(this.field_s, -1104, this.field_I)) {
+            !MovingObjectFactory.requestsIndexBuffer(this.field_s, -1104, this.field_I)) {
             return;
           }
           this.field_H = new GpuIndexBufferOwner(IntegerRecordReadQueueEntry.matchesIndexBufferMask(this.field_I, this.field_s, (byte) -106));

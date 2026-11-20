@@ -16,7 +16,7 @@ final class GetPhasedEnergyBeamPulsetime extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 108);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(186, 74));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(186, 74));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

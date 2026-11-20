@@ -29,7 +29,7 @@ final class GetPlayerRepairTime extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -2);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(226, 110));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(226, 110));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

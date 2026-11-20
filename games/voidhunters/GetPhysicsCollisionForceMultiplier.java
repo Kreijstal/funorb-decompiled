@@ -15,7 +15,7 @@ final class GetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 66);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(50, 100));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(50, 100));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

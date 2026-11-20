@@ -49,7 +49,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
               if (param3 == this.alternateButton) {
                 if (!this.reconnectMode) {
                   if (!this.showGuestOption) {
-                    OpenGlTransparentWaterEffect.e(-24248);
+                    OpenGlTransparentWaterEffect.requestGuestPlay(-24248);
                   } else {
                     GetGrapplingHookRopeBreakLength.showGuestPlayNotice((byte) -91);
                   }

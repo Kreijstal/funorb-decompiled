@@ -35,14 +35,14 @@ final class ConsoleCharacterStream {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
-          ConsoleCharacterStream.a(107, -118);
+          ConsoleCharacterStream.usesTeamRules(107, -118);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean usesTeamRules(int param0, int param1) {
         if (param0 <= 32) {
           field_a = (String) null;
           if (param1 == 11) {

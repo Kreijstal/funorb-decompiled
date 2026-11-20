@@ -40,7 +40,7 @@ final class GetBombletSprayProjectiles extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -55);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(83, 123));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(83, 123));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

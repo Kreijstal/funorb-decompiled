@@ -599,19 +599,19 @@ final class OpenGlModel extends Model3D {
         try {
           this.field_w = param2;
           this.field_u = param5;
-          if (GetCountermeasureLauncherEnergyUsed.a(param5, 82, param2)) {
+          if (GetCountermeasureLauncherEnergyUsed.requestsThreeComponentAttribute(param5, 82, param2)) {
             this.field_i = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
           }
-          if (OpenGlIndexBuffer.a(param5, param2, false)) {
+          if (OpenGlIndexBuffer.requestsTwoComponentAttribute(param5, param2, false)) {
             discarded$0 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 2, 0);
           }
           if (TextLayoutLine.matchesGpuVertexDataMask(-8636, param2, param5)) {
             discarded$1 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
           }
-          if (SocketConnector.a(-6070, param5, param2)) {
+          if (SocketConnector.requestsByteAttribute(-6070, param5, param2)) {
             discarded$2 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5121, 4, 0);
           }
-          if (GetMissionDebrisVotingChancestep.a(param2, param5, false)) {
+          if (GetMissionDebrisVotingChancestep.requestsOpenGlModelHelper(param2, param5, false)) {
             discarded$3 = new GameJoinNotificationText();
           }
           var65 = param0.field_a;
@@ -723,7 +723,7 @@ final class OpenGlModel extends Model3D {
               var9[var11_int] = ((long)var14 << 32) + (long)var15_int;
             }
           }
-          GetFighterBayReload.a((byte) -24, var81, var82);
+          GetFighterBayReload.sortLongKeysWithIntValues((byte) -24, var81, var82);
           this.vertexZ = param1.vertexZ;
           this.vertexX = param1.vertexX;
           this.vertexCount = param1.field_D;

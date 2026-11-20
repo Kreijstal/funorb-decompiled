@@ -15,7 +15,7 @@ final class GetTorpedoRandomness extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 100);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(73, 77));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(73, 77));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

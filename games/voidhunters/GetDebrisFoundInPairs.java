@@ -26,7 +26,7 @@ final class GetDebrisFoundInPairs extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetDebrisFoundInPairs.clearSharedReferences((byte) 30);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(18, 91));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(18, 91));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

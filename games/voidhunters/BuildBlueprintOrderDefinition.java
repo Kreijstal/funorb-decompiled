@@ -103,13 +103,13 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
             if (!LogoAnimationStatus.hasLogoAnimationFinished(true)) {
               SoftwareRasterizer2D.clear();
               SetRadialMenuRadius.drawLogoAnimation((byte) 82, 320, 240);
-              SetSniperCannonAimarc.a(param1, 0, 0, 0);
+              SetSniperCannonAimarc.presentCanvas(param1, 0, 0, 0);
             } else {
               if (GetSpinningBladeAimspeed.field_q == 0) {
                 QuickChatPhraseDefinition.drawModalUiBackground((byte) -70, false, param2);
-                SetSniperCannonAimarc.a(param1, 0, 0, 0);
+                SetSniperCannonAimarc.presentCanvas(param1, 0, 0, 0);
               } else {
-                GetPhasedEnergyBeamAimspeed.a(param1, true);
+                GetPhasedEnergyBeamAimspeed.updateAndPresentProgressDialog(param1, true);
               }
             }
           } else {

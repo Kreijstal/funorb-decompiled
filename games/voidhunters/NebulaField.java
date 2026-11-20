@@ -5,7 +5,7 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
     private Nebula[] nebulae;
     static int field_d;
     private int revision;
-    static int field_c;
+    static int rasterClipMinY;
 
     final Nebula removeNebula(byte param0, int param1) {
         Nebula var3 = this.nebulae[param1];
@@ -246,6 +246,6 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
 
     static {
         field_d = 1024;
-        field_c = 0;
+        rasterClipMinY = 0;
     }
 }

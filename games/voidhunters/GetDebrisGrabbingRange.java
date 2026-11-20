@@ -30,7 +30,7 @@ final class GetDebrisGrabbingRange extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -12);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(55, 116));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(55, 116));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

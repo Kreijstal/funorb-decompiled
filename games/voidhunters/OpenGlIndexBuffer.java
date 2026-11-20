@@ -31,7 +31,7 @@ final class OpenGlIndexBuffer extends OpenGlGpuBuffer implements GpuIndexBuffer 
         super.release(-119);
     }
 
-    final static boolean a(int param0, int param1, boolean param2) {
+    final static boolean requestsTwoComponentAttribute(int param0, int param1, boolean param2) {
         if (param2) {
           return false;
         }

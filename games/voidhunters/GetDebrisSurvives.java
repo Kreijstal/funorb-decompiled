@@ -21,7 +21,7 @@ final class GetDebrisSurvives extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = -73;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(36, 107));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(36, 107));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

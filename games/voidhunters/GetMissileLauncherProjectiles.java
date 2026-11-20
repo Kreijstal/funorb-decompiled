@@ -21,7 +21,7 @@ final class GetMissileLauncherProjectiles extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -107);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(87, 104));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(87, 104));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

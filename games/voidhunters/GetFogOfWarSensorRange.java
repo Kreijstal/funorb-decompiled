@@ -28,7 +28,7 @@ final class GetFogOfWarSensorRange extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 77);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(47, 111));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(47, 111));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

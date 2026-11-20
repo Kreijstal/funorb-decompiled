@@ -8,11 +8,11 @@ abstract class SocketConnector {
     int port;
     String host;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean requestsByteAttribute(int param0, int param1, int param2) {
         if (param0 == -6070) {
           return 0 != (2048 & param2) ? true : false;
         }
-        SocketConnector.a(-47, -38, 120);
+        SocketConnector.requestsByteAttribute(-47, -38, 120);
         return 0 != (2048 & param2) ? true : false;
     }
 
@@ -26,7 +26,7 @@ abstract class SocketConnector {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 >= -71) {
-          SocketConnector.a(-112, -32, -122);
+          SocketConnector.requestsByteAttribute(-112, -32, -122);
           debugArrows = null;
           return;
         }

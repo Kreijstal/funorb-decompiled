@@ -58,13 +58,13 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
           var11 = var8;
           var12 = -var8;
           var13 = -1;
-          if (param2 >= NebulaField.field_c &&
-            EnvironmentReflectionGpuMaterialEffect.field_i >= param2) {
+          if (param2 >= NebulaField.rasterClipMinY &&
+            EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= param2) {
             var39 = ResourceNode.rasterTargetRows[param2];
-            var16 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - param1);
-            var17 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param0);
-            var18 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var8 + param0);
-            var19 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var8);
+            var16 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0 - param1);
+            var17 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param1 + param0);
+            var18 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, -var8 + param0);
+            var19 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0 + var8);
             GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var18, var39, (byte) 75, var16);
             GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var19, var39, (byte) 75, var18);
             GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17, var39, (byte) 75, var19);
@@ -90,33 +90,33 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
               var10 = var10 - (var9 << 1);
               var15 = -var9 + param2;
               var16Lifetime1 = var9 + param2;
-              if (NebulaField.field_c <= var16Lifetime1 &&
-                var15 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+              if (NebulaField.rasterClipMinY <= var16Lifetime1 &&
+                var15 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                 if (var9 < var8) {
                   var17Lifetime1 = ActiveIconBorderRenderer.field_a[var9];
-                  var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
-                  var19Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
-                  var20 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1 + param0);
-                  var21 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var17Lifetime1 + param0);
-                  if (var16Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+                  var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0 + var7_int);
+                  var19Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0 - var7_int);
+                  var20 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, var17Lifetime1 + param0);
+                  var21 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, -var17Lifetime1 + param0);
+                  if (var16Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                     var40 = ResourceNode.rasterTargetRows[var16Lifetime1];
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var21, var40, (byte) 75, var19Lifetime1);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var20, var40, (byte) 75, var21);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var18Lifetime1, var40, (byte) 75, var20);
                   }
-                  if (NebulaField.field_c <= var15) {
+                  if (NebulaField.rasterClipMinY <= var15) {
                     var41 = ResourceNode.rasterTargetRows[var15];
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var21, var41, (byte) 75, var19Lifetime1);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var20, var41, (byte) 75, var21);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var18Lifetime1, var41, (byte) 75, var20);
                   }
                 } else {
-                  var17Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
-                  var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
-                  if (EnvironmentReflectionGpuMaterialEffect.field_i >= var16Lifetime1) {
+                  var17Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0 + var7_int);
+                  var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param0 - var7_int);
+                  if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= var16Lifetime1) {
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1, ResourceNode.rasterTargetRows[var16Lifetime1], (byte) 75, var18Lifetime1);
                   }
-                  if (var15 >= NebulaField.field_c) {
+                  if (var15 >= NebulaField.rasterClipMinY) {
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1, ResourceNode.rasterTargetRows[var15], (byte) 75, var18Lifetime1);
                   }
                 }
@@ -124,27 +124,27 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             }
             var15Lifetime1 = param2 - var7_int;
             var16Lifetime1Lifetime1 = var7_int + param2;
-            if (var16Lifetime1Lifetime1 < NebulaField.field_c) {
+            if (var16Lifetime1Lifetime1 < NebulaField.rasterClipMinY) {
               continue;
             }
-            if (EnvironmentReflectionGpuMaterialEffect.field_i < var15Lifetime1) {
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var15Lifetime1) {
               continue;
             }
             var17Lifetime1Lifetime1 = var9 + param0;
             var18Lifetime1Lifetime1 = -var9 + param0;
-            if (OpenGlTexture3D.field_j > var17Lifetime1Lifetime1) {
+            if (OpenGlTexture3D.rasterClipMinX > var17Lifetime1Lifetime1) {
               continue;
             }
-            if (var18Lifetime1Lifetime1 > GetCountermeasureLauncherProjectiles.field_o) {
+            if (var18Lifetime1Lifetime1 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
               continue;
             }
-            var17Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1Lifetime1);
-            var18Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var18Lifetime1Lifetime1);
+            var17Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, var17Lifetime1Lifetime1);
+            var18Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
-              if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+              if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                 GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, ResourceNode.rasterTargetRows[var16Lifetime1Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
               }
-              if (var15Lifetime1 < NebulaField.field_c) {
+              if (var15Lifetime1 < NebulaField.rasterClipMinY) {
                 continue;
               }
               GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, ResourceNode.rasterTargetRows[var15Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
@@ -156,15 +156,15 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
               stackIn_42_0 = ActiveIconBorderRenderer.field_a[var7_int];
             }
             var19Lifetime1Lifetime1 = stackIn_42_0;
-            var20Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var19Lifetime1Lifetime1 + param0);
-            var21Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var19Lifetime1Lifetime1 + param0);
-            if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+            var20Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, var19Lifetime1Lifetime1 + param0);
+            var21Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, -var19Lifetime1Lifetime1 + param0);
+            if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
               var42 = ResourceNode.rasterTargetRows[var16Lifetime1Lifetime1];
               GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var21Lifetime1, var42, (byte) 75, var18Lifetime1Lifetime1);
               GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var20Lifetime1, var42, (byte) 75, var21Lifetime1);
               GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, var42, (byte) 75, var20Lifetime1);
             }
-            if (var15Lifetime1 < NebulaField.field_c) {
+            if (var15Lifetime1 < NebulaField.rasterClipMinY) {
               continue;
             }
             var43 = ResourceNode.rasterTargetRows[var15Lifetime1];
@@ -212,12 +212,12 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
     final static void a(int param0) {
         SetGrapplingHookRopeBreakLength.field_p = SoftwareRasterizer2D.height;
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
-        StripesTextureOperation.a(true);
+        StripesTextureOperation.layoutSlidingSocialAndGamePanels(true);
         GameReleaseStatistics.field_b.layout(0, -83, -40 + (SocialPanelState.socialPanelRoot.height - 2), 0, SocialPanelState.socialPanelRoot.width);
         DialogMessagePanel.field_v.setBounds(0, -17, SpecialOrderButtonState.field_i.width, 0, DialogMessagePanel.field_w);
         int var1 = DialogMessagePanel.field_w + 2;
         DualLinkNode.field_f.setBounds(0, -26, SpecialOrderButtonState.field_i.width, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, SpecialOrderButtonState.field_i.height - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));
-        GetThrusterForce.a(0);
+        GetThrusterForce.layoutLobbyPlayerList(0);
         SpawnChoiceFactory.field_c.setBounds(0, 124, SocialPanelState.socialPanelRoot.width, -40 + SocialPanelState.socialPanelRoot.height, 40);
         AlphaContainer.field_w.setBounds(0, -65, ModelFaceAttachment.field_d.width, 0, 30);
         LobbyGameListWidgets.panel.setBounds(0, 124, ModelFaceAttachment.field_d.width, 30, -32 + ModelFaceAttachment.field_d.height - 40);

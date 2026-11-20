@@ -16,7 +16,7 @@ final class GetComponentBreakingExplosionForceMultiplier extends ConsoleCommand 
           if (obfuscationGuard > -119) {
             field_p = -102;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(49, 122));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(49, 122));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

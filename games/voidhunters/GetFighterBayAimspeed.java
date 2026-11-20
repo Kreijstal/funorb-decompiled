@@ -97,7 +97,7 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -112);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(120, 103));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(120, 103));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

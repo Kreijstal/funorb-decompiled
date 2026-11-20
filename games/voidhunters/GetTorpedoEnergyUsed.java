@@ -11,7 +11,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
         if (param4 != -2) {
           return;
         }
-        if (OpenGlTexture3D.field_j > param1) {
+        if (OpenGlTexture3D.rasterClipMinX > param1) {
           if (param6 != 1) {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
@@ -19,7 +19,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
           NebulaFieldFactory.drawRectangleBorderClipped(param5, param2, param1, 256, param3, param0);
           return;
         }
-        if (GetCountermeasureLauncherProjectiles.field_o < param5) {
+        if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param5) {
           if (param6 != 1) {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
@@ -27,7 +27,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
           NebulaFieldFactory.drawRectangleBorderClipped(param5, param2, param1, 256, param3, param0);
           return;
         }
-        if (param3 < NebulaField.field_c) {
+        if (param3 < NebulaField.rasterClipMinY) {
           if (param6 != 1) {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
@@ -35,7 +35,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
           NebulaFieldFactory.drawRectangleBorderClipped(param5, param2, param1, 256, param3, param0);
           return;
         }
-        if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
+        if (param0 > EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
           if (param6 != 1) {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
@@ -61,7 +61,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetTorpedoEnergyUsed.a(-5, -124, 5, -27, -5, 31, 53);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(160, 80));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(160, 80));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

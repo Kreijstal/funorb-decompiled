@@ -38,7 +38,7 @@ final class SetRepairModeCooldown extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int e(byte param0) {
+    final static int countVisiblePresetSpawnChoices(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;

@@ -10,7 +10,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setMenuCenter(int param0, int param1, int param2) {
         if (param1 != -22699) {
           SetFighterRepairAmount.clearSharedReferences((byte) -97);
           LobbyInviteSuggestionText.field_b = param2;

@@ -65,7 +65,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetExplosionProjectileDamage.attachPresetComponents((ShipComponent) null, -69);
           }
-          stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(149, 122));
+          stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(149, 122));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

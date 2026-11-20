@@ -14,7 +14,7 @@ final class GetLaserRandomness extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(74, 79));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(74, 79));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

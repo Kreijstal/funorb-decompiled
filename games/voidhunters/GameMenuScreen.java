@@ -590,7 +590,7 @@ final class GameMenuScreen {
                                           if (this.inputState.isActivationRequested((byte) -94)) {
                                             MatchingFieldValidator.field_g.beginPacket(60);
                                             var10_int = param1 ? 1 : 0;
-                                            stackIn_161_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
+                                            stackIn_161_0 = (!ModelFaceAttachment.isGuestOrNonMember(false)) ? 0 : 7;
                                             GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_161_0, var10_int != 0, (byte) -85, -1);
                                           }
                                         } else {
@@ -598,7 +598,7 @@ final class GameMenuScreen {
                                             if (this.inputState.isActivationRequested((byte) -96)) {
                                               MatchingFieldValidator.field_g.sendRematchAction(true);
                                               var10_int = param1 ? 1 : 0;
-                                              stackIn_166_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
+                                              stackIn_166_0 = (ModelFaceAttachment.isGuestOrNonMember(false)) ? 7 : 0;
                                               GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_166_0, var10_int != 0, (byte) -85, -1);
                                             }
                                           } else {
@@ -718,7 +718,7 @@ final class GameMenuScreen {
                                         if (this.inputState.isActivationRequested((byte) -89)) {
                                           MatchingFieldValidator.field_g.sendDrawAction(true);
                                           var10_int = param1 ? 1 : 0;
-                                          stackIn_156_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
+                                          stackIn_156_0 = (ModelFaceAttachment.isGuestOrNonMember(false)) ? 7 : 0;
                                           GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_156_0, var10_int != 0, (byte) -85, -1);
                                         }
                                       }
@@ -857,7 +857,7 @@ final class GameMenuScreen {
             } else {
               if (this.inputState.isActivationRequested((byte) -97)) {
                 var10_int = param1 ? 1 : 0;
-                stackIn_51_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
+                stackIn_51_0 = (ModelFaceAttachment.isGuestOrNonMember(false)) ? 7 : 0;
                 GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_51_0, var10_int != 0, (byte) -85, -1);
               }
             }
@@ -865,7 +865,7 @@ final class GameMenuScreen {
         } else {
           if (this.inputState.isActivationRequested((byte) -78)) {
             var10_int = param1 ? 1 : 0;
-            stackIn_40_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
+            stackIn_40_0 = (ModelFaceAttachment.isGuestOrNonMember(false)) ? 7 : 0;
             GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_40_0, var10_int != 0, (byte) -85, -3);
           }
         }
@@ -1079,7 +1079,7 @@ final class GameMenuScreen {
                 this.menuId != 4) {
                 continue;
               }
-              stackIn_41_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
+              stackIn_41_0 = (!ModelFaceAttachment.isGuestOrNonMember(false)) ? 0 : 7;
               GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_41_0, false, (byte) -85, -1);
               continue;
             }

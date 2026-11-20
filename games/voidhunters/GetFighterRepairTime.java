@@ -14,7 +14,7 @@ final class GetFighterRepairTime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(230, 99));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(230, 99));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

@@ -25,7 +25,7 @@ final class GetInnateThrusters extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -9);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(21, 112));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(21, 112));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

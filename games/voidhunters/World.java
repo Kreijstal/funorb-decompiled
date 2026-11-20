@@ -602,7 +602,7 @@ final class World implements DiffableState, CompactGameState {
                   BlendTextureOperation.playSpatialSound(20382, param0.getX(false), 4, param0.getY((byte) -94), 5);
                   if (var10.weaponbehaviour != null) {
                     param3.justAttachedSomething = true;
-                    var10.weaponbehaviour.a(true, true);
+                    var10.weaponbehaviour.setAttachmentAimPending(true, true);
                   }
                 } else {
                   if (var16Lifetime1 != 0) {
@@ -1860,7 +1860,7 @@ final class World implements DiffableState, CompactGameState {
                   var14_ref_aoa = new ShipAI();
                   var11.updateTick(this, true, (byte) 67, true);
                   var14_ref_aoa.applyAiControls(var11, (byte) -73, this);
-                  if (GetPointDefenceLaserProjectiles.a(4096, 11284)) {
+                  if (GetPointDefenceLaserProjectiles.isDebugFlagSet(4096, 11284)) {
                     var11.setAi(var14_ref_aoa, param1 + 3);
                   }
                 } else {
@@ -2516,7 +2516,7 @@ final class World implements DiffableState, CompactGameState {
             if (var9 == 10 &&
               13 == this.objectiveType) {
               var28 = new Random((long)(var8 * var7));
-              var11_int = GetRepairModeRadius.a(-101, 3, SetRepairModeCooldown.e((byte) 107), var28);
+              var11_int = GetRepairModeRadius.a(-101, 3, SetRepairModeCooldown.countVisiblePresetSpawnChoices((byte) 107), var28);
               var29 = ToolkitViewState.createPresetShip(var11_int, (byte) 47);
               var29.setAi(new ShipAI(), 4);
               var29.setTeam(17704, ToolkitRasterState.field_c);
@@ -4142,7 +4142,7 @@ final class World implements DiffableState, CompactGameState {
                       var9 = param2[var5_int].spawnChoice;
                       if (!param2[var5_int].connected &&
                         SetMissionResnetResourceTickTime.field_p == 1) {
-                        var9 = (var5_int + 1) * param1 % SetRepairModeCooldown.e((byte) 36);
+                        var9 = (var5_int + 1) * param1 % SetRepairModeCooldown.countVisiblePresetSpawnChoices((byte) 36);
                       }
                       boolean decompiledFrameRemainder0 = true;
                       var10 = 3 + var9;
@@ -5344,7 +5344,7 @@ final class World implements DiffableState, CompactGameState {
               var11 = var10;
               var10 = var8;
             }
-            GetLaserEnergyUsed.a(45, var10, var6, var11, var7);
+            GetLaserEnergyUsed.setPartitionQueryBounds(45, var10, var6, var11, var7);
             var12 = this.partitioningManager.collectBodyIdsInCurrentBounds(-128, 1);
             var13 = 0;
             while (var13 < var12) {
@@ -7384,7 +7384,7 @@ final class World implements DiffableState, CompactGameState {
           var8 = 0;
           var9 = 0;
           var10 = this.getObjectiveType(false);
-          if (ConsoleCharacterStream.a(param0 + 200051, var10)) {
+          if (ConsoleCharacterStream.usesTeamRules(param0 + 200051, var10)) {
             var11 = 0;
             var12 = 0;
             var13_int = 0;
@@ -8133,7 +8133,7 @@ final class World implements DiffableState, CompactGameState {
           if (param2 < 50) {
             discarded$0 = this.moveDebrisTowardBlueprintHardpoint(-62, (ShipComponent) null, (Hardpoint) null, true, (byte) 99, (Ship) null, (Debris) null);
           }
-          if (GetPointDefenceLaserProjectiles.a(32, 11284)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(32, 11284)) {
             var17 = "Team=" + param0.getTeam((byte) 101) + ",owner=" + param0.getOwner((byte) -117) + " ai=" + param0.hasAi((byte) -10);
             var5 = var17;
             var5Lifetime1 = var17;
@@ -8145,7 +8145,7 @@ final class World implements DiffableState, CompactGameState {
             var7Lifetime1 = param1.worldToScreenY(true, param0.getY((byte) -54) - 16384);
             GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var5Lifetime2, 16711935, var7Lifetime1, var6Lifetime1 - (GetPhasedEnergyBeamProjectiles.a(115, var5Lifetime2) >> 1), 4266);
           }
-          if (GetPointDefenceLaserProjectiles.a(4096, 11284) &&
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(4096, 11284) &&
             param0.hasAi((byte) -10)) {
             param0.getAi((byte) -108).drawSteeringDebug(param0, -11, param1, this);
           }
@@ -8235,7 +8235,7 @@ final class World implements DiffableState, CompactGameState {
                       SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(1, var16_ref_String, 13879) >> 1) + var17, -1, var18, var16_ref_String, 1, 16541441, (byte) -94);
                     }
                   }
-                  if (!GetPointDefenceLaserProjectiles.a(8, 11284)) {
+                  if (!GetPointDefenceLaserProjectiles.isDebugFlagSet(8, 11284)) {
                     break scanLoop1;
                   }
                   var15 = "Dragging debris=" + Integer.toString(var12.getDragging(param4 - 116));
@@ -8687,7 +8687,7 @@ final class World implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 22 % ((-27 - param0) / 42);
-          if (GetPointDefenceLaserProjectiles.a(8, 11284)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(8, 11284)) {
             var5 = param2.worldToScreenX(param1.getX(false), (byte) 127);
             var6 = param2.worldToScreenY(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.getCurrentFontAscent((byte) 118) / 2;
             var7 = Integer.toString(param1.id);

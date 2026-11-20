@@ -19,7 +19,7 @@ final class GetRespawnTime extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = false;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(196, 77));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(196, 77));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

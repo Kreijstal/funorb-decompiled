@@ -734,7 +734,7 @@ final class MissionBuilder implements DiffableState {
 
     private final void buildMissionWorld(GameSnapshot param0, Random param1, World param2, int param3) {
         int var5_int = param0.missionState.getVotedObjective(6472);
-        int var6 = GetDebrisPartitioned.a(var5_int, 9) ? 1 : 0;
+        int var6 = GetDebrisPartitioned.usesSymmetricTerrain(var5_int, 9) ? 1 : 0;
         this.setWorldDimensionsFromOptions(var5_int, false, param2);
         this.generateTerrain(true, var5_int, param3 ^ 31938, true, param2, var6 != 0, param1);
         param0.world.setMissionBuilder(0, this);
@@ -2332,8 +2332,8 @@ final class MissionBuilder implements DiffableState {
           var7.makeNebulaFieldMutable((byte) 80);
           this.populateObjectiveEntitiesAndEvents(0, param1, param0, param2, param3);
           this.ensureTimedVictoryEvents(param1, param2, var7, 0);
-          if (ConsoleCharacterStream.a(33, param0)) {
-            this.createTeamSpawnPoints(InvertTextureOperation.b(-100, param0), false, var7);
+          if (ConsoleCharacterStream.usesTeamRules(33, param0)) {
+            this.createTeamSpawnPoints(InvertTextureOperation.usesWideTeamSpawnLayout(-100, param0), false, var7);
           }
           if (param4 < 34) {
             discarded$1 = this.hasPolygonEdgeClearance(42, 83, (int[]) null, 99, (byte) -48, -83);
@@ -2379,7 +2379,7 @@ final class MissionBuilder implements DiffableState {
         int var9 = VoidHunters.field_G;
         try {
           var3_int = param0.getObjectiveType(false);
-          var4 = GetDebrisPartitioned.a(var3_int, 9) ? 1 : 0;
+          var4 = GetDebrisPartitioned.usesSymmetricTerrain(var3_int, 9) ? 1 : 0;
           var5 = new Random((long)this.seed);
           if (param1 != 0) {
             MissionBuilder.setIntegerPreference((byte) 80, (Object) null, -58);

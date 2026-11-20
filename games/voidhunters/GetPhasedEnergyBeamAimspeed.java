@@ -4,7 +4,7 @@
 final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
     static String field_o;
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void updateAndPresentProgressDialog(java.awt.Canvas param0, boolean param1) {
         try {
           if (GetSpinningBladeAimspeed.field_q == 11) {
             SoundPlayback.checkArithmeticGuard((byte) 111);
@@ -13,7 +13,7 @@ final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           if (!param1) {
             GetPhasedEnergyBeamAimspeed.clearSharedReferences(73);
           }
-          SetSniperCannonAimarc.a(param0, 0, 0, 0);
+          SetSniperCannonAimarc.presentCanvas(param0, 0, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -42,7 +42,7 @@ final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(124, 77));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(124, 77));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

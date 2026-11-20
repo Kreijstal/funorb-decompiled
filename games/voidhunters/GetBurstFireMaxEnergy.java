@@ -16,7 +16,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = true;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(43, 85));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(43, 85));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,73 +92,73 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         }
         var12 = (var7 << 12) / var6;
         var13 = param0 - (var12 * param3 >> 12);
-        if (param3 < OpenGlTexture3D.field_j) {
-          var8 = OpenGlTexture3D.field_j;
-          var10 = var13 + (OpenGlTexture3D.field_j * var12 >> 12);
-          if (OpenGlTexture3D.field_j > param1) {
-            var11 = (OpenGlTexture3D.field_j * var12 >> 12) + var13;
-            var9 = OpenGlTexture3D.field_j;
+        if (param3 < OpenGlTexture3D.rasterClipMinX) {
+          var8 = OpenGlTexture3D.rasterClipMinX;
+          var10 = var13 + (OpenGlTexture3D.rasterClipMinX * var12 >> 12);
+          if (OpenGlTexture3D.rasterClipMinX > param1) {
+            var11 = (OpenGlTexture3D.rasterClipMinX * var12 >> 12) + var13;
+            var9 = OpenGlTexture3D.rasterClipMinX;
           } else {
-            if (GetCountermeasureLauncherProjectiles.field_o < param1) {
-              var11 = var13 + (GetCountermeasureLauncherProjectiles.field_o * var12 >> 12);
-              var9 = GetCountermeasureLauncherProjectiles.field_o;
+            if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param1) {
+              var11 = var13 + (GetCountermeasureLauncherProjectiles.rasterClipMaxX * var12 >> 12);
+              var9 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
             } else {
               var9 = param1;
               var11 = param4;
             }
           }
-          if (NebulaField.field_c <= var11) {
-            if (EnvironmentReflectionGpuMaterialEffect.field_i < var11) {
-              var11 = EnvironmentReflectionGpuMaterialEffect.field_i;
-              var9 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+          if (NebulaField.rasterClipMinY <= var11) {
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var11) {
+              var11 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
+              var9 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
             }
           } else {
-            var11 = NebulaField.field_c;
-            var9 = (NebulaField.field_c - var13 << 12) / var12;
+            var11 = NebulaField.rasterClipMinY;
+            var9 = (NebulaField.rasterClipMinY - var13 << 12) / var12;
           }
-          if (NebulaField.field_c > var10) {
-            var10 = NebulaField.field_c;
-            var8 = (-var13 + NebulaField.field_c << 12) / var12;
+          if (NebulaField.rasterClipMinY > var10) {
+            var10 = NebulaField.rasterClipMinY;
+            var8 = (-var13 + NebulaField.rasterClipMinY << 12) / var12;
           } else {
-            if (EnvironmentReflectionGpuMaterialEffect.field_i < var10) {
-              var8 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
-              var10 = EnvironmentReflectionGpuMaterialEffect.field_i;
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var10) {
+              var8 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
+              var10 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
             }
           }
           SetOndamageParticleLife.a(param5, var9, -1, var10, var11, var8);
           return;
         }
-        if (GetCountermeasureLauncherProjectiles.field_o < param3) {
-          var10Lifetime1 = var13 + (var12 * GetCountermeasureLauncherProjectiles.field_o >> 12);
-          var8Lifetime1 = GetCountermeasureLauncherProjectiles.field_o;
-          if (OpenGlTexture3D.field_j > param1) {
-            var11Lifetime1 = (OpenGlTexture3D.field_j * var12 >> 12) + var13;
-            var9Lifetime1 = OpenGlTexture3D.field_j;
+        if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param3) {
+          var10Lifetime1 = var13 + (var12 * GetCountermeasureLauncherProjectiles.rasterClipMaxX >> 12);
+          var8Lifetime1 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
+          if (OpenGlTexture3D.rasterClipMinX > param1) {
+            var11Lifetime1 = (OpenGlTexture3D.rasterClipMinX * var12 >> 12) + var13;
+            var9Lifetime1 = OpenGlTexture3D.rasterClipMinX;
           } else {
-            if (GetCountermeasureLauncherProjectiles.field_o < param1) {
-              var11Lifetime1 = var13 + (GetCountermeasureLauncherProjectiles.field_o * var12 >> 12);
-              var9Lifetime1 = GetCountermeasureLauncherProjectiles.field_o;
+            if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param1) {
+              var11Lifetime1 = var13 + (GetCountermeasureLauncherProjectiles.rasterClipMaxX * var12 >> 12);
+              var9Lifetime1 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
             } else {
               var9Lifetime1 = param1;
               var11Lifetime1 = param4;
             }
           }
-          if (NebulaField.field_c > var11Lifetime1) {
-            var11Lifetime1 = NebulaField.field_c;
-            var9Lifetime1 = (NebulaField.field_c - var13 << 12) / var12;
+          if (NebulaField.rasterClipMinY > var11Lifetime1) {
+            var11Lifetime1 = NebulaField.rasterClipMinY;
+            var9Lifetime1 = (NebulaField.rasterClipMinY - var13 << 12) / var12;
           } else {
-            if (EnvironmentReflectionGpuMaterialEffect.field_i < var11Lifetime1) {
-              var11Lifetime1 = EnvironmentReflectionGpuMaterialEffect.field_i;
-              var9Lifetime1 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var11Lifetime1) {
+              var11Lifetime1 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
+              var9Lifetime1 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
             }
           }
-          if (NebulaField.field_c > var10Lifetime1) {
-            var10Lifetime1 = NebulaField.field_c;
-            var8Lifetime1 = (-var13 + NebulaField.field_c << 12) / var12;
+          if (NebulaField.rasterClipMinY > var10Lifetime1) {
+            var10Lifetime1 = NebulaField.rasterClipMinY;
+            var8Lifetime1 = (-var13 + NebulaField.rasterClipMinY << 12) / var12;
           } else {
-            if (EnvironmentReflectionGpuMaterialEffect.field_i < var10Lifetime1) {
-              var8Lifetime1 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
-              var10Lifetime1 = EnvironmentReflectionGpuMaterialEffect.field_i;
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var10Lifetime1) {
+              var8Lifetime1 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
+              var10Lifetime1 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
             }
           }
           SetOndamageParticleLife.a(param5, var9Lifetime1, -1, var10Lifetime1, var11Lifetime1, var8Lifetime1);
@@ -166,53 +166,53 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         }
         var8Lifetime2 = param3;
         var10Lifetime2 = param0;
-        if (OpenGlTexture3D.field_j > param1) {
-          var11Lifetime2 = (OpenGlTexture3D.field_j * var12 >> 12) + var13;
-          var9Lifetime2 = OpenGlTexture3D.field_j;
-          if (NebulaField.field_c > var11Lifetime2) {
-            var11Lifetime2 = NebulaField.field_c;
-            var9Lifetime2 = (NebulaField.field_c - var13 << 12) / var12;
+        if (OpenGlTexture3D.rasterClipMinX > param1) {
+          var11Lifetime2 = (OpenGlTexture3D.rasterClipMinX * var12 >> 12) + var13;
+          var9Lifetime2 = OpenGlTexture3D.rasterClipMinX;
+          if (NebulaField.rasterClipMinY > var11Lifetime2) {
+            var11Lifetime2 = NebulaField.rasterClipMinY;
+            var9Lifetime2 = (NebulaField.rasterClipMinY - var13 << 12) / var12;
           } else {
-            if (EnvironmentReflectionGpuMaterialEffect.field_i < var11Lifetime2) {
-              var11Lifetime2 = EnvironmentReflectionGpuMaterialEffect.field_i;
-              var9Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var11Lifetime2) {
+              var11Lifetime2 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
+              var9Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
             }
           }
-          if (NebulaField.field_c > var10Lifetime2) {
-            var10Lifetime2 = NebulaField.field_c;
-            var8Lifetime2 = (-var13 + NebulaField.field_c << 12) / var12;
+          if (NebulaField.rasterClipMinY > var10Lifetime2) {
+            var10Lifetime2 = NebulaField.rasterClipMinY;
+            var8Lifetime2 = (-var13 + NebulaField.rasterClipMinY << 12) / var12;
           } else {
-            if (EnvironmentReflectionGpuMaterialEffect.field_i < var10Lifetime2) {
-              var8Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
-              var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.field_i;
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var10Lifetime2) {
+              var8Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
+              var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
             }
           }
           SetOndamageParticleLife.a(param5, var9Lifetime2, -1, var10Lifetime2, var11Lifetime2, var8Lifetime2);
           return;
         }
-        if (GetCountermeasureLauncherProjectiles.field_o < param1) {
-          var11Lifetime3 = var13 + (GetCountermeasureLauncherProjectiles.field_o * var12 >> 12);
-          var9Lifetime3 = GetCountermeasureLauncherProjectiles.field_o;
+        if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param1) {
+          var11Lifetime3 = var13 + (GetCountermeasureLauncherProjectiles.rasterClipMaxX * var12 >> 12);
+          var9Lifetime3 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
         } else {
           var9Lifetime3 = param1;
           var11Lifetime3 = param4;
         }
-        if (NebulaField.field_c > var11Lifetime3) {
-          var11Lifetime3 = NebulaField.field_c;
-          var9Lifetime3 = (NebulaField.field_c - var13 << 12) / var12;
+        if (NebulaField.rasterClipMinY > var11Lifetime3) {
+          var11Lifetime3 = NebulaField.rasterClipMinY;
+          var9Lifetime3 = (NebulaField.rasterClipMinY - var13 << 12) / var12;
         } else {
-          if (EnvironmentReflectionGpuMaterialEffect.field_i < var11Lifetime3) {
-            var11Lifetime3 = EnvironmentReflectionGpuMaterialEffect.field_i;
-            var9Lifetime3 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+          if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var11Lifetime3) {
+            var11Lifetime3 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
+            var9Lifetime3 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
           }
         }
-        if (NebulaField.field_c > var10Lifetime2) {
-          var10Lifetime2 = NebulaField.field_c;
-          var8Lifetime2 = (-var13 + NebulaField.field_c << 12) / var12;
+        if (NebulaField.rasterClipMinY > var10Lifetime2) {
+          var10Lifetime2 = NebulaField.rasterClipMinY;
+          var8Lifetime2 = (-var13 + NebulaField.rasterClipMinY << 12) / var12;
         } else {
-          if (EnvironmentReflectionGpuMaterialEffect.field_i < var10Lifetime2) {
-            var8Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
-            var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.field_i;
+          if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < var10Lifetime2) {
+            var8Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY - var13 << 12) / var12;
+            var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
           }
         }
         SetOndamageParticleLife.a(param5, var9Lifetime3, -1, var10Lifetime2, var11Lifetime3, var8Lifetime2);

@@ -16,10 +16,10 @@ final class MidiChannelLevels {
         RuntimeException decompiledCaughtException = null;
         var11 = VoidHunters.field_G;
         try {
-          var6_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param3);
-          var7 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param2);
-          var8 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param5);
-          var9 = IntrusiveNode.clamp(param0 ^ -29743, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
+          var6_int = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param3);
+          var7 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param2);
+          var8 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param5);
+          var9 = IntrusiveNode.clamp(param0 ^ -29743, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param4);
           for (var10 = var6_int; var7 >= var10; var10++) {
             GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var9, ResourceNode.rasterTargetRows[var10], (byte) 75, var8);
           }

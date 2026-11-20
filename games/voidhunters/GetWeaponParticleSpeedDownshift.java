@@ -84,7 +84,7 @@ final class GetWeaponParticleSpeedDownshift extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (byte[]) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(194, 127));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(194, 127));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

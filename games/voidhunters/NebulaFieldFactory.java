@@ -195,24 +195,24 @@ final class NebulaFieldFactory implements GameStateFactory {
         try {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (EnvironmentReflectionGpuMaterialEffect.field_i >= param4 &&
-            param5 >= NebulaField.field_c) {
-            if (OpenGlTexture3D.field_j > param2) {
-              param2 = OpenGlTexture3D.field_j;
+          if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= param4 &&
+            param5 >= NebulaField.rasterClipMinY) {
+            if (OpenGlTexture3D.rasterClipMinX > param2) {
+              param2 = OpenGlTexture3D.rasterClipMinX;
               var6_int = 0;
               if (var10 != 0) {
-                if (param2 > GetCountermeasureLauncherProjectiles.field_o) {
+                if (param2 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
                   var6_int = 0;
-                  param2 = GetCountermeasureLauncherProjectiles.field_o;
+                  param2 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
                   var6_int = 1;
                 } else {
                   var6_int = 1;
                 }
               }
             } else {
-              if (param2 > GetCountermeasureLauncherProjectiles.field_o) {
+              if (param2 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
                 var6_int = 0;
-                param2 = GetCountermeasureLauncherProjectiles.field_o;
+                param2 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
                 if (var10 != 0) {
                   var6_int = 1;
                 }
@@ -220,34 +220,34 @@ final class NebulaFieldFactory implements GameStateFactory {
                 var6_int = 1;
               }
             }
-            if (OpenGlTexture3D.field_j > param0) {
-              param0 = OpenGlTexture3D.field_j;
+            if (OpenGlTexture3D.rasterClipMinX > param0) {
+              param0 = OpenGlTexture3D.rasterClipMinX;
               var7 = 0;
               if (var10 != 0) {
-                if (GetCountermeasureLauncherProjectiles.field_o >= param0) {
+                if (GetCountermeasureLauncherProjectiles.rasterClipMaxX >= param0) {
                   var7 = 1;
-                  param0 = GetCountermeasureLauncherProjectiles.field_o;
+                  param0 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
                   var7 = 0;
                 } else {
-                  param0 = GetCountermeasureLauncherProjectiles.field_o;
+                  param0 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
                   var7 = 0;
                 }
               }
             } else {
-              if (GetCountermeasureLauncherProjectiles.field_o >= param0) {
+              if (GetCountermeasureLauncherProjectiles.rasterClipMaxX >= param0) {
                 var7 = 1;
                 if (var10 != 0) {
-                  param0 = GetCountermeasureLauncherProjectiles.field_o;
+                  param0 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
                   var7 = 0;
                 }
               } else {
-                param0 = GetCountermeasureLauncherProjectiles.field_o;
+                param0 = GetCountermeasureLauncherProjectiles.rasterClipMaxX;
                 var7 = 0;
               }
             }
-            boolean decompiledSharedTail1 = !(param4 < NebulaField.field_c);
+            boolean decompiledSharedTail1 = !(param4 < NebulaField.rasterClipMinY);
             if (!decompiledSharedTail1) {
-              param4 = NebulaField.field_c;
+              param4 = NebulaField.rasterClipMinY;
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
@@ -255,9 +255,9 @@ final class NebulaFieldFactory implements GameStateFactory {
               param4++;
               GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param0, ResourceNode.rasterTargetRows[incrementValue$0], (byte) 75, param2);
             }
-            boolean decompiledSharedTail0 = !(param5 > EnvironmentReflectionGpuMaterialEffect.field_i);
+            boolean decompiledSharedTail0 = !(param5 > EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY);
             if (!decompiledSharedTail0) {
-              param5 = EnvironmentReflectionGpuMaterialEffect.field_i;
+              param5 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
               decompiledSharedTail0 = (var10 != 0);
             }
             if (decompiledSharedTail0) {

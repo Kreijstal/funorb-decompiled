@@ -16,7 +16,7 @@ final class GetRepairModeRadius extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(216, 101));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(216, 101));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

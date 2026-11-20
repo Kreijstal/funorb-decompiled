@@ -333,7 +333,7 @@ final class GameSession {
           GameSnapshot var11 = (GameSnapshot) null;
           discarded$0 = this.isFogOfWarActive((byte) 34, (GameSnapshot) null);
         }
-        if (GetPointDefenceLaserProjectiles.a(2048, param0 + 11163)) {
+        if (GetPointDefenceLaserProjectiles.isDebugFlagSet(2048, param0 + 11163)) {
           var12 = WorldDebugArrow.debugPolygons;
           var18 = var12;
           if (var12 != null) {
@@ -383,7 +383,7 @@ final class GameSession {
                 TooltipDisplay.field_b = new PlayerGameData();
               }
               TooltipDisplay.field_b.blueprint = var4;
-              if (!ModelFaceAttachment.a(false)) {
+              if (!ModelFaceAttachment.isGuestOrNonMember(false)) {
                 GetMissionResnetResourceTickTime.savePlayerGameData((byte) -39);
               }
             } else {
@@ -1132,7 +1132,7 @@ final class GameSession {
         this.field_K.updateEventSounds(this.localPlayerIndex, 84, var24, (Ship) (var9));
         this.drawLobbyGameEntries(91);
         var19 = SetUseTriFill.field_o.nanoTime((byte) -110);
-        if (GetPointDefenceLaserProjectiles.a(8192, 11284)) {
+        if (GetPointDefenceLaserProjectiles.isDebugFlagSet(8192, 11284)) {
           this.renderTimingGraph.addSample(var19 - var3, (byte) -115);
           this.updateTimingGraph.draw(200, 99, 200, 0, 0);
           this.renderTimingGraph.draw(200, 122, 200, 0, 340);
@@ -1637,7 +1637,7 @@ final class GameSession {
         var6 = 2;
         var7 = this.state.getVisibleSnapshot(1);
         var8 = var7.world.getObjectiveType(param0);
-        var9 = ConsoleCharacterStream.a(74, var8) ? 1 : 0;
+        var9 = ConsoleCharacterStream.usesTeamRules(74, var8) ? 1 : 0;
         var10 = new String[var32.length][1 + var3];
         var55 = new int[1 + var3];
         var46 = var55;
@@ -1920,7 +1920,7 @@ final class GameSession {
         if (param0 > -74) {
           this.updateChatControls((byte) -11, true);
         }
-        if (GetPointDefenceLaserProjectiles.a(64, 11284)) {
+        if (GetPointDefenceLaserProjectiles.isDebugFlagSet(64, 11284)) {
           var31 = this.state.getVisibleSnapshot(1).missionState;
           if (var31 != null) {
             var28 = var31.getCustomVariables(false);
@@ -2764,7 +2764,7 @@ final class GameSession {
                   var17 = 1.7999999523162842f;
                 }
                 var18 = SetWaitForPlayers.getPresetSpawnChoiceCount(9);
-                var19 = SetRepairModeCooldown.e((byte) -124);
+                var19 = SetRepairModeCooldown.countVisiblePresetSpawnChoices((byte) -124);
                 var20 = var18;
                 if (var8 != 0) {
                   stackIn_39_0 = (param0.world.getObjectiveType(false) == 13) ? 1 : 0;
@@ -4090,14 +4090,14 @@ final class GameSession {
         var27 = null;
         var15 = VoidHunters.field_G;
         for (var2 = 0; var2 < 14; var2++) {
-          if (GetPointDefenceLaserProjectiles.a(1 << var2, 11284)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(1 << var2, 11284)) {
             var3_int = 8;
             var4 = 4;
             GetMachineGunPulsetime.fillRectangle(16711680, -102, var3_int, 8, var4, var2 * var3_int + 300);
             UiToggleButtonRenderer.drawRectangle(119, 300 + var2 * var3_int, var4, 8, 16777215, var3_int);
           }
         }
-        if (GetPointDefenceLaserProjectiles.a(128, 11284)) {
+        if (GetPointDefenceLaserProjectiles.isDebugFlagSet(128, 11284)) {
           var16 = (Player[]) (this.state.getVisibleSnapshot(1).players);
           var2_ref_tfa__ = var16;
           var3 = "null";
@@ -4118,7 +4118,7 @@ final class GameSession {
           var3Lifetime5 = var19;
           GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var19, 16711935, 80, SetMassDriverReload.field_p, 4266);
         }
-        if (GetPointDefenceLaserProjectiles.a(1, 11284)) {
+        if (GetPointDefenceLaserProjectiles.isDebugFlagSet(1, 11284)) {
           this.drawCarouselDebug(-106);
         }
         if (this.state.carouselInfo.outOfSync) {
@@ -4191,7 +4191,7 @@ final class GameSession {
           }
           var3_ref = (PlayerAction) (this.state.carouselInfo.events.next((byte) 22));
         }
-        if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
+        if (GetPointDefenceLaserProjectiles.isDebugFlagSet(2, 11284)) {
           SetMachineGunFireForce.drawDebugArrows((byte) -99, ShipTeamConditionFactory.field_a);
         }
         if (this.state.carouselInfo.isReplay(1)) {
@@ -4550,7 +4550,7 @@ final class GameSession {
         if (this.localPlayerIndex >= 0) {
           var4 = this.state.getVisibleSnapshot(1);
           var2 = ((Player) (var4.players[this.localPlayerIndex])).selectedTeam;
-          if (!ConsoleCharacterStream.a(59, var4.world.getObjectiveType(false))) {
+          if (!ConsoleCharacterStream.usesTeamRules(59, var4.world.getObjectiveType(false))) {
             var2 = this.localPlayerIndex;
           }
           var5 = this.state.getVisibleWorld((byte) 33).findShipByOwner(this.localPlayerIndex, 83);
@@ -5172,10 +5172,10 @@ final class GameSession {
         } else {
           if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 118)) {
             var3 = param0 ? 1 : 0;
-            GetNebulaFadesOutWhenClose.selectMenuScreen(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(!ModelFaceAttachment.isGuestOrNonMember(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
           } else {
             var3 = param0 ? 1 : 0;
-            GetNebulaFadesOutWhenClose.selectMenuScreen(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(!ModelFaceAttachment.isGuestOrNonMember(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
           }
         }
     }
@@ -5343,8 +5343,8 @@ final class GameSession {
         int var2Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var12 = VoidHunters.field_G;
-        if (GetPointDefenceLaserProjectiles.a(256, 11284) ||
-          GetPointDefenceLaserProjectiles.a(512, 11284)) {
+        if (GetPointDefenceLaserProjectiles.isDebugFlagSet(256, 11284) ||
+          GetPointDefenceLaserProjectiles.isDebugFlagSet(512, 11284)) {
           var13 = this.state.getVisibleWorld((byte) 112);
           if (this.localPlayerIndex < 0) {
             var2 = 39 / ((param0 + 39) / 51);
@@ -5353,7 +5353,7 @@ final class GameSession {
           else {
             var3 = var13.findShipByOwner(this.localPlayerIndex, 59);
             if (var3 != null) {
-              if (GetPointDefenceLaserProjectiles.a(256, 11284)) {
+              if (GetPointDefenceLaserProjectiles.isDebugFlagSet(256, 11284)) {
                 var4 = var13.partitioningManager.findZonesInBounds((byte) 115, var3.getBoundingbox((byte) -60), 0);
                 for (var5 = 0; var4 > var5; var5++) {
                   var6 = MaskedPasswordTextStyle.field_s[var5];
@@ -5369,7 +5369,7 @@ final class GameSession {
                 this.drawPartitionBodiesDebug(-927, var13, 2, var3);
                 this.drawPartitionBodiesDebug(-927, var13, 3, var3);
               }
-              if (GetPointDefenceLaserProjectiles.a(512, 11284)) {
+              if (GetPointDefenceLaserProjectiles.isDebugFlagSet(512, 11284)) {
                 this.drawPartitionBodiesDebug(-927, var13, 1, var3);
               }
             }
@@ -6303,7 +6303,7 @@ final class GameSession {
               var7 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var6];
               stackIn_8_0 = var7.weaponbehaviour;
               stackIn_9_1 = !(param1);
-              if (((WeaponBehaviour) (Object) stackIn_8_0).a(stackIn_9_1)) {
+              if (((WeaponBehaviour) (Object) stackIn_8_0).needsAttachmentAim(stackIn_9_1)) {
                 var8 = var7.getAimArc(114);
                 if (var8 != 0) {
                   var9 = var7.getDefinition((byte) -112);
@@ -6984,7 +6984,7 @@ final class GameSession {
           }
         }
         var3 = var16.world;
-        stackIn_8_0 = (ConsoleCharacterStream.a(106, var3.getObjectiveType(false))) ? 0 : 1;
+        stackIn_8_0 = (ConsoleCharacterStream.usesTeamRules(106, var3.getObjectiveType(false))) ? 0 : 1;
         var4Lifetime1 = stackIn_8_0;
         var5 = (GameSnapshot) (this.state.carouselInfo.getStateStepsAgo(20, param0 ^ 18637));
         if (this.localPlayerIndex >= 0) {
@@ -7173,7 +7173,7 @@ final class GameSession {
           }
           var24 = this.state.getVisibleSnapshot(param1 - 199).missionState;
           if (6 == var24.getMissionPhase(param1 ^ 192)) {
-            stackIn_38_0 = (!ConsoleCharacterStream.a(36, param0.world.getObjectiveType(false))) ? 0 : 1;
+            stackIn_38_0 = (!ConsoleCharacterStream.usesTeamRules(36, param0.world.getObjectiveType(false))) ? 0 : 1;
             var8Lifetime1 = stackIn_38_0;
             var9Lifetime1 = var24.getWinner((byte) 123);
             var11Lifetime1 = 16777215;

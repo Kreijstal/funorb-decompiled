@@ -10,7 +10,7 @@ final class SoftwareFramebuffer implements Framebuffer {
     int[] pixels;
     int width;
 
-    final static void a(int param0) {
+    final static void handleDisplayNamePacket(int param0) {
         CharSequence var3 = null;
         if (param0 < -84) {
           IntIndexTable.field_a = AccountNameAvailabilityReplies.field_b.readString(-1);
@@ -75,7 +75,7 @@ final class SoftwareFramebuffer implements Framebuffer {
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          SoftwareFramebuffer.a(-57);
+          SoftwareFramebuffer.handleDisplayNamePacket(-57);
           field_f = null;
           fullscreenConfirmationText = null;
           return;

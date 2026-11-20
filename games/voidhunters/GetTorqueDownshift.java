@@ -73,7 +73,7 @@ final class GetTorqueDownshift extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(180, 119));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(180, 119));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

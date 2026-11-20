@@ -6,7 +6,7 @@ final class GetMissionDebrisVotingChancestep extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 69) {
-          GetMissionDebrisVotingChancestep.a(-33, 96, true);
+          GetMissionDebrisVotingChancestep.requestsOpenGlModelHelper(-33, 96, true);
           field_o = null;
           return;
         }
@@ -17,7 +17,7 @@ final class GetMissionDebrisVotingChancestep extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0, int param1, boolean param2) {
+    final static boolean requestsOpenGlModelHelper(int param0, int param1, boolean param2) {
         if (param2) {
           return false;
         }
@@ -35,7 +35,7 @@ final class GetMissionDebrisVotingChancestep extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetMissionDebrisVotingChancestep.clearSharedReferences(55);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(69, 96));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(69, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

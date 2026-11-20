@@ -15,7 +15,7 @@ final class GetGrapplingHookRopeChangeRate extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (MissionList) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(203, 120));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(203, 120));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

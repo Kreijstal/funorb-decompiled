@@ -45,7 +45,7 @@ final class GetSelfDestructActivateCooldown extends ConsoleCommand {
             var4 = (File) null;
             GetSelfDestructActivateCooldown.registerNativeLibraryFile((byte) -64, (String) null, (File) null);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(224, 118));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(224, 118));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

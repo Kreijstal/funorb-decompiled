@@ -5,7 +5,7 @@ final class OpenGlTexture3D extends OpenGlTexture {
     static String field_m;
     private int framebufferAttachment;
     int depth;
-    static int field_j;
+    static int rasterClipMinX;
     private int framebufferTarget;
     static String[] field_l;
     int height;
@@ -116,7 +116,7 @@ final class OpenGlTexture3D extends OpenGlTexture {
 
     static {
         field_m = "More neutrals";
-        field_j = 0;
+        rasterClipMinX = 0;
         field_l = new String[16];
     }
 }

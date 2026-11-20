@@ -17,7 +17,7 @@ final class GetTorpedoAimarc extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -21);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(131, 92));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(131, 92));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -97,16 +97,16 @@ final class ConsoleValue {
         if (param0 > -79) {
           ConsoleValue.restoreDefaultStateSerializationMode(-58);
         }
-        if (OpenGlTexture3D.field_j > param3 - param4) {
+        if (OpenGlTexture3D.rasterClipMinX > param3 - param4) {
           ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
         } else {
-          if (param3 + param4 > GetCountermeasureLauncherProjectiles.field_o) {
+          if (param3 + param4 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
             ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
           } else {
-            if (-param4 + param1 < NebulaField.field_c) {
+            if (-param4 + param1 < NebulaField.rasterClipMinY) {
               ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
             } else {
-              if (EnvironmentReflectionGpuMaterialEffect.field_i < param4 + param1) {
+              if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < param4 + param1) {
                 ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
               } else {
                 GetFixedaim.fillCircleUnclipped(param2, param3, param1, param4, 2);

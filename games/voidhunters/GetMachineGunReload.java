@@ -17,7 +17,7 @@ final class GetMachineGunReload extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             GetMachineGunReload.configureSymmetricSimulatedLag(64, -47, -50);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(113, 100));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(113, 100));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -20,7 +20,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           SmoothedNanoTickClock.clearKeyboardHandlerReference(-87);
           CarouselPlayerEventFactory.clearMouseHandlerReference(14194);
           GetPedrosRepairModeSwitchtime.closeArchiveResources(16928);
-          if (GetRepairModeActiveTime.e(215)) {
+          if (GetRepairModeActiveTime.hasActiveLoginSocket(215)) {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
             TileTextureOperation.flushSocketOutput(0, 127);
             FighterBayWeaponDefinition.closeGameConnection(-125);
@@ -32,7 +32,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         SmoothedNanoTickClock.clearKeyboardHandlerReference(-87);
         CarouselPlayerEventFactory.clearMouseHandlerReference(14194);
         GetPedrosRepairModeSwitchtime.closeArchiveResources(16928);
-        if (!GetRepairModeActiveTime.e(215)) {
+        if (!GetRepairModeActiveTime.hasActiveLoginSocket(215)) {
           FighterBayWeaponDefinition.closeGameConnection(-125);
           return;
         }

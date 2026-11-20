@@ -1751,14 +1751,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return false;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        if (!GetUseCircleFill.a(param1, (byte) -120, param2)) {
+    final static boolean matchesVertexBufferOptionMask(int param0, int param1, int param2) {
+        if (!GetUseCircleFill.requestsVertexBuffer(param1, (byte) -120, param2)) {
           return false;
         }
-        if (MissionGenerationDataFactory.a(param2, (byte) 91, param1) | (param0 != (param1 & 36864) ? true : false) | IncrementVariableAction.matchesGpuBufferDataMask(param2, param1, (byte) 9)) {
+        if (MissionGenerationDataFactory.matchesVertexBufferOptionMask(param2, (byte) 91, param1) | (param0 != (param1 & 36864) ? true : false) | IncrementVariableAction.matchesGpuBufferDataMask(param2, param1, (byte) 9)) {
           return true;
         }
-        return (EmailAvailabilityValidator.a(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | MessageLogFactory.a(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
+        return (EmailAvailabilityValidator.matchesVertexBufferUpdateMask(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | MessageLogFactory.matchesVertexBufferFlagMask(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
     }
 
     abstract void drawPrimitive(PrimitiveType param0, int param1, int param2, int param3);

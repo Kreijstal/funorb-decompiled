@@ -159,7 +159,7 @@ final class WeaponBehaviour implements DiffableState {
         return SetShipDirectionArrow.weaponDefinitions[this.weapontype];
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void setAttachmentAimPending(boolean param0, boolean param1) {
         if (!param1) {
           this.getRecoilFraction(73);
         }
@@ -778,7 +778,7 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean needsAttachmentAim(boolean param0) {
         if (!param0) {
           this.weapontype = -50;
           return false;

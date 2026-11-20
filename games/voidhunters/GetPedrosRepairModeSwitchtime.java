@@ -23,7 +23,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 8);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(32, 118));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(32, 118));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -17,7 +17,7 @@ final class GetMassDriverAimarc extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -83);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(130, 123));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(130, 123));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -13,7 +13,7 @@ final class InvertTextureOperation extends TextureOperation {
         int var11 = 0;
         int var12 = VoidHunters.field_G;
         if (param0 != 255) {
-          InvertTextureOperation.b(-104, -124);
+          InvertTextureOperation.usesWideTeamSpawnLayout(-104, -124);
         }
         int[][] var20 = this.field_d.getRow(param1, (byte) -97);
         int[][] var15 = var20;
@@ -88,7 +88,7 @@ final class InvertTextureOperation extends TextureOperation {
         super(1, false);
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean usesWideTeamSpawnLayout(int param0, int param1) {
         if (param0 > -75) {
           return true;
         }

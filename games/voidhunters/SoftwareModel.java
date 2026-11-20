@@ -386,7 +386,7 @@ final class SoftwareModel extends Model3D {
             this.field_z = true;
           }
         }
-        GetFighterBayReload.a((byte) -24, var74, var68);
+        GetFighterBayReload.sortLongKeysWithIntValues((byte) -24, var74, var68);
         if (param1.faceAttachments != null) {
           this.faceAttachmentCount = param1.faceAttachments.length;
           this.faceAttachments = new SoftwareFaceAttachment[this.faceAttachmentCount];

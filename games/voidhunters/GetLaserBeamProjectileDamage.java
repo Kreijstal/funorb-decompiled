@@ -34,7 +34,7 @@ final class GetLaserBeamProjectileDamage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(145, 98));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(145, 98));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -53,7 +53,7 @@ final class GetLaserBeamProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean needsVertexLabelGroups(byte param0, int param1, int param2) {
         if (param0 == 11) {
           return 0 != (32 & param2) ? true : false;
         }

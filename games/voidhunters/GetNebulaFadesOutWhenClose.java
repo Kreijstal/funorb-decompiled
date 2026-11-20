@@ -73,7 +73,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
             var4 = (PcmSample) null;
             GetNebulaFadesOutWhenClose.playSample(-99, (PcmSample) null);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(17, 86));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(17, 86));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

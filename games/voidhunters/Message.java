@@ -37,16 +37,16 @@ final class Message implements DiffableState {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (OpenGlTexture3D.field_j <= param1) {
-          if (param1 > GetCountermeasureLauncherProjectiles.field_o) {
+        if (OpenGlTexture3D.rasterClipMinX <= param1) {
+          if (param1 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
             if (param0 > -18) {
               Message.a(72, 80, 26, 93, -92);
               return;
             }
             return;
           }
-          param4 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param4);
-          param3 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param3);
+          param4 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param4);
+          param3 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param3);
           GetPhasedEnergyBeamProjectileOndamageParticles.a(-105, param4, param1, param3, param2);
         }
         if (param0 <= -18) {

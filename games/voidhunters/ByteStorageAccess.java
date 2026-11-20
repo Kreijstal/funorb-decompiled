@@ -93,8 +93,8 @@ final class ByteStorageAccess {
           var6 = param0;
           var7 = -param0;
           var8 = -1;
-          var9 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + param0);
-          var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - param0);
+          var9 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param4 + param0);
+          var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param4 - param0);
           GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var9, ResourceNode.rasterTargetRows[param2], (byte) 75, var10);
           while (var6 > var5_int) {
             var8 += 2;
@@ -104,14 +104,14 @@ final class ByteStorageAccess {
               var7 = var7 - (var6 << 1);
               var11 = -var6 + param2;
               var12 = param2 + var6;
-              if (NebulaField.field_c <= var12 &&
-                EnvironmentReflectionGpuMaterialEffect.field_i >= var11) {
-                var13 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var5_int + param4);
-                var14 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var5_int);
-                if (var12 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
+              if (NebulaField.rasterClipMinY <= var12 &&
+                EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= var11) {
+                var13 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, var5_int + param4);
+                var14 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param4 - var5_int);
+                if (var12 <= EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                   GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13, ResourceNode.rasterTargetRows[var12], (byte) 75, var14);
                 }
-                if (var11 >= NebulaField.field_c) {
+                if (var11 >= NebulaField.rasterClipMinY) {
                   GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13, ResourceNode.rasterTargetRows[var11], (byte) 75, var14);
                 }
               }
@@ -119,18 +119,18 @@ final class ByteStorageAccess {
             var5_int++;
             var11Lifetime1 = -var5_int + param2;
             var12Lifetime1 = var5_int + param2;
-            if (NebulaField.field_c > var12Lifetime1) {
+            if (NebulaField.rasterClipMinY > var12Lifetime1) {
               continue;
             }
-            if (var11Lifetime1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
+            if (var11Lifetime1 > EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
               continue;
             }
-            var13Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + var6);
-            var14Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var6);
-            if (EnvironmentReflectionGpuMaterialEffect.field_i >= var12Lifetime1) {
+            var13Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param4 + var6);
+            var14Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.rasterClipMinX, GetCountermeasureLauncherProjectiles.rasterClipMaxX, param4 - var6);
+            if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= var12Lifetime1) {
               GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13Lifetime1, ResourceNode.rasterTargetRows[var12Lifetime1], (byte) 75, var14Lifetime1);
             }
-            if (NebulaField.field_c > var11Lifetime1) {
+            if (NebulaField.rasterClipMinY > var11Lifetime1) {
               continue;
             }
             GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13Lifetime1, ResourceNode.rasterTargetRows[var11Lifetime1], (byte) 75, var14Lifetime1);

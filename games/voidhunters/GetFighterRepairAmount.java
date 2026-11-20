@@ -109,7 +109,7 @@ final class GetFighterRepairAmount extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(231, 107));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(231, 107));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

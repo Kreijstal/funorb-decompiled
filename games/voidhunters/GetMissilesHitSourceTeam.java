@@ -16,7 +16,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetMissilesHitSourceTeam.a(-89, 5, (byte) -112, -51, 115, 72, 68);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(13, 103));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(13, 103));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

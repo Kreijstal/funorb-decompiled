@@ -30,7 +30,7 @@ final class GetExplosionPushMultiplier extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -4);
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(191, 123));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(191, 123));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

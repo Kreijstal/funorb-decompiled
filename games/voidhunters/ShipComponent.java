@@ -275,7 +275,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   while (var12 != null) {
                     var13 = var12.getType((byte) -104);
                     if ((~var12.getFiredTeam(512) != ~var26.getTeam((byte) 73) ||
-                      !ConsoleCharacterStream.a(33, param2.getObjectiveType(false)) &&
+                      !ConsoleCharacterStream.usesTeamRules(33, param2.getObjectiveType(false)) &&
                       var12.getFiredPlayer(false) != var26.getOwner((byte) -117)) &&
                       (var13 == 6 ||
                       var13 == 1)) {
@@ -771,7 +771,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (this.componentTypeId == 45) {
             SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.worldToScreenY(true, this.finaly), (float)(int)(param3.scale * 4096.0f), 128 + (TextureLineShape.sinAngle(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.worldToScreenX(this.finalx, (byte) 127));
           }
-          if (GetPointDefenceLaserProjectiles.a(16, param1 + 11200)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(16, param1 + 11200)) {
             SetNumStars.drawCircle(param3.scale * (float)var47.boundingRadius, (byte) 113, param3.worldToScreenY(true, this.finaly), 16711680, param3.worldToScreenX(this.finalx, (byte) 126));
           }
           var13 = 1;
@@ -874,7 +874,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var13 = 0;
             }
           }
-          if (GetPointDefenceLaserProjectiles.a(4, param1 ^ 11328)) {
+          if (GetPointDefenceLaserProjectiles.isDebugFlagSet(4, param1 ^ 11328)) {
             var13 = 1;
           }
           if (var13 != 0) {
@@ -1009,14 +1009,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
               }
             }
             if (this.hardpoints != null &&
-              GetPointDefenceLaserProjectiles.a(4, 11284)) {
+              GetPointDefenceLaserProjectiles.isDebugFlagSet(4, 11284)) {
               for (var16Lifetime1Lifetime3 = 0; this.hardpoints.length > var16Lifetime1Lifetime3; var16Lifetime1Lifetime3++) {
                 if (-1 == this.hardpoints[var16Lifetime1Lifetime3].connectedComponentIdx) {
                   var17Lifetime1Lifetime3 = this.hardpoints[var16Lifetime1Lifetime3].worldx;
                   var18Lifetime1Lifetime3 = this.hardpoints[var16Lifetime1Lifetime3].worldy;
                   var19Lifetime1Lifetime3 = param3.worldToScreenX(var17Lifetime1Lifetime3, (byte) 125);
                   var20Lifetime3 = param3.worldToScreenY(true, var18Lifetime1Lifetime3);
-                  if (GetPointDefenceLaserProjectiles.a(4, 11284)) {
+                  if (GetPointDefenceLaserProjectiles.isDebugFlagSet(4, 11284)) {
                     var21Lifetime2 = GetNumStars.cosAngle(this.finalangle + var47.hardpoints[var16Lifetime1Lifetime3].field_a, (byte) -93) * 8 >> 8;
                     var22Lifetime1Lifetime2 = TextureLineShape.sinAngle(var47.hardpoints[var16Lifetime1Lifetime3].field_a + this.finalangle, 99) * 8 >> 8;
                     DelayedPacket.drawLine(param3.worldToScreenY(true, var22Lifetime1Lifetime2 + var18Lifetime1Lifetime3), param3.worldToScreenX(var17Lifetime1Lifetime3 + var21Lifetime2, (byte) 119), var19Lifetime1Lifetime3, var20Lifetime3, -16777216, 16711680);
@@ -2275,9 +2275,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var4 = this.getAimSpeed((byte) 103);
           if (SetShipTeamAction.field_e == 1) {
             if (this.weaponbehaviour != null &&
-              this.weaponbehaviour.a(true)) {
+              this.weaponbehaviour.needsAttachmentAim(true)) {
               var4 = 2048;
-              this.weaponbehaviour.a(false, true);
+              this.weaponbehaviour.setAttachmentAimPending(false, true);
             } else {
               return param1;
             }

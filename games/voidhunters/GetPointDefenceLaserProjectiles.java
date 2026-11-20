@@ -25,7 +25,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         return SetTorpedoEnergyUsed.getToolkitFont(param1, 300).ascent;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isDebugFlagSet(int param0, int param1) {
         if (param1 == 11284) {
           return 0 != (param0 & DebugMessageFactory.field_a) ? true : false;
         }
@@ -39,52 +39,52 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         if (param7 >= 59) {
-          if (param2 < OpenGlTexture3D.field_j) {
+          if (param2 < OpenGlTexture3D.rasterClipMinX) {
             TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
           } else {
-            if (GetCountermeasureLauncherProjectiles.field_o < param2) {
+            if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param2) {
               TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
             } else {
-              if (param4 < OpenGlTexture3D.field_j) {
+              if (param4 < OpenGlTexture3D.rasterClipMinX) {
                 TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
               } else {
-                if (param4 > GetCountermeasureLauncherProjectiles.field_o) {
+                if (param4 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
                   TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                 } else {
-                  if (param6 < OpenGlTexture3D.field_j) {
+                  if (param6 < OpenGlTexture3D.rasterClipMinX) {
                     TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                   } else {
-                    if (param6 > GetCountermeasureLauncherProjectiles.field_o) {
+                    if (param6 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
                       TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                     } else {
-                      if (param9 < OpenGlTexture3D.field_j) {
+                      if (param9 < OpenGlTexture3D.rasterClipMinX) {
                         TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                       } else {
-                        if (GetCountermeasureLauncherProjectiles.field_o < param9) {
+                        if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param9) {
                           TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                         } else {
-                          if (NebulaField.field_c > param1) {
+                          if (NebulaField.rasterClipMinY > param1) {
                             TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                           } else {
-                            if (param1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
+                            if (param1 > EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                               TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                             } else {
-                              if (param5 < NebulaField.field_c) {
+                              if (param5 < NebulaField.rasterClipMinY) {
                                 TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                               } else {
-                                if (EnvironmentReflectionGpuMaterialEffect.field_i < param5) {
+                                if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < param5) {
                                   TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                 } else {
-                                  if (param0 < NebulaField.field_c) {
+                                  if (param0 < NebulaField.rasterClipMinY) {
                                     TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                   } else {
-                                    if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
+                                    if (param0 > EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                                       TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                     } else {
-                                      if (param8 < NebulaField.field_c) {
+                                      if (param8 < NebulaField.rasterClipMinY) {
                                         TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                       } else {
-                                        if (EnvironmentReflectionGpuMaterialEffect.field_i < param8) {
+                                        if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < param8) {
                                           TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                         } else {
                                           SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
@@ -106,52 +106,52 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           }
         } else {
           field_p = (String) null;
-          if (param2 < OpenGlTexture3D.field_j) {
+          if (param2 < OpenGlTexture3D.rasterClipMinX) {
             TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
           } else {
-            if (GetCountermeasureLauncherProjectiles.field_o < param2) {
+            if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param2) {
               TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
             } else {
-              if (param4 < OpenGlTexture3D.field_j) {
+              if (param4 < OpenGlTexture3D.rasterClipMinX) {
                 TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
               } else {
-                if (param4 > GetCountermeasureLauncherProjectiles.field_o) {
+                if (param4 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
                   TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                 } else {
-                  if (param6 < OpenGlTexture3D.field_j) {
+                  if (param6 < OpenGlTexture3D.rasterClipMinX) {
                     TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                   } else {
-                    if (param6 > GetCountermeasureLauncherProjectiles.field_o) {
+                    if (param6 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
                       TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                     } else {
-                      if (param9 < OpenGlTexture3D.field_j) {
+                      if (param9 < OpenGlTexture3D.rasterClipMinX) {
                         TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                       } else {
-                        if (GetCountermeasureLauncherProjectiles.field_o < param9) {
+                        if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param9) {
                           TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                         } else {
-                          if (NebulaField.field_c > param1) {
+                          if (NebulaField.rasterClipMinY > param1) {
                             TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                           } else {
-                            if (param1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
+                            if (param1 > EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                               TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                             } else {
-                              if (param5 < NebulaField.field_c) {
+                              if (param5 < NebulaField.rasterClipMinY) {
                                 TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                               } else {
-                                if (EnvironmentReflectionGpuMaterialEffect.field_i < param5) {
+                                if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY < param5) {
                                   TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                 } else {
-                                  if (param0 < NebulaField.field_c) {
+                                  if (param0 < NebulaField.rasterClipMinY) {
                                     TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                   } else {
-                                    if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
+                                    if (param0 > EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY) {
                                       TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                     } else {
-                                      if (param8 < NebulaField.field_c) {
+                                      if (param8 < NebulaField.rasterClipMinY) {
                                         TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                       } else {
-                                        if (EnvironmentReflectionGpuMaterialEffect.field_i >= param8) {
+                                        if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= param8) {
                                           SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
                                         } else {
                                           TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
@@ -184,7 +184,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(88, 77));
+            stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(88, 77));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

@@ -4,7 +4,7 @@
 final class EmailSyntaxValidator extends TextFieldValidator {
     static int[] field_f;
 
-    final static String d(byte param0) {
+    final static String getActiveTooltipText(byte param0) {
         if (param0 != 106) {
           field_f = (int[]) null;
           if (GetMissileLauncherAimarc.field_o) {

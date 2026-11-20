@@ -15,7 +15,7 @@ final class GetDebrisDetachmentForceMultiplier extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (Widget) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(53, 105));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(53, 105));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

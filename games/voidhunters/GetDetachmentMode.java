@@ -15,7 +15,7 @@ final class GetDetachmentMode extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(24, 109));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(24, 109));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

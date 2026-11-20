@@ -27,7 +27,7 @@ final class SpawnChoice implements DiffableState {
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            SpawnChoice.b(40);
+            SpawnChoice.showReconnectStatusDialog(40);
           }
           this.choice = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
@@ -87,7 +87,7 @@ final class SpawnChoice implements DiffableState {
         }
     }
 
-    final static void b(int param0) {
+    final static void showReconnectStatusDialog(int param0) {
         GetUseFilledPolygons.resetAccountUiRequests(-1);
         if (param0 > 25) {
           OpenGlSprite.reconnecting = true;

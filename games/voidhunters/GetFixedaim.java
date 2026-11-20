@@ -1199,7 +1199,7 @@ final class GetFixedaim extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = 94;
           }
-          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(27, 82));
+          stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(27, 82));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

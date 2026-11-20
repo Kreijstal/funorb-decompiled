@@ -153,7 +153,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }
-          stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(48, 117));
+          stackIn_4_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(48, 117));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
