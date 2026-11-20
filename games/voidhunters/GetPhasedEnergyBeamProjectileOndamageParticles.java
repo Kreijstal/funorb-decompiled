@@ -81,7 +81,7 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillVerticalSpanUnclipped(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;

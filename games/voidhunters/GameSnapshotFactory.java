@@ -24,7 +24,7 @@ final class GameSnapshotFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new GameSnapshot[param1]);
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int atan2AngleWithScaling(int param0, byte param1, int param2) {
         if (param2 >= 16384) {
           if (param2 < 536870912 &&
             param2 >= -536870912 &&

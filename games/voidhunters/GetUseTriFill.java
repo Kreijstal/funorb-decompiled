@@ -31,7 +31,7 @@ final class GetUseTriFill extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean shouldServiceLoginUi(int param0) {
         if (param0 < 43) {
           field_o = (PrimitiveType) null;
           if (UiDraggableContainer.field_z < 20) {
@@ -43,7 +43,7 @@ final class GetUseTriFill extends ConsoleCommand {
           if (SetClientSideDragging.field_p <= 0) {
             return false;
           }
-          if (!SetAutoaim.b(true)) {
+          if (!SetAutoaim.isLoginUiFallbackSuppressed(true)) {
             return true;
           }
           return false;
@@ -57,7 +57,7 @@ final class GetUseTriFill extends ConsoleCommand {
         if (SetClientSideDragging.field_p <= 0) {
           return false;
         }
-        if (!SetAutoaim.b(true)) {
+        if (!SetAutoaim.isLoginUiFallbackSuppressed(true)) {
           return true;
         }
         return false;

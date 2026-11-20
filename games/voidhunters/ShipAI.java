@@ -108,7 +108,7 @@ final class ShipAI implements DiffableState {
                 if (var14 <= 0) {
                   var14 = 1;
                 }
-                var15 = GameSnapshotFactory.a(-var13, (byte) -77, -var12);
+                var15 = GameSnapshotFactory.atan2AngleWithScaling(-var13, (byte) -77, -var12);
                 var4_int = var4_int + GetNumStars.cosAngle(var15, (byte) -106) * var11 / (var14 * var14);
                 var5 = var5 + var11 * TextureLineShape.sinAngle(var15, 40) / (var14 * var14);
               }
@@ -333,7 +333,7 @@ final class ShipAI implements DiffableState {
             var12 = -param0.x + var10Lifetime1;
             var13 = var11 - param0.y;
             var14 = TextLayout.approximateVectorLength(var12, (byte) 109, var13);
-            var15 = GameSnapshotFactory.a(var13, (byte) -77, var12);
+            var15 = GameSnapshotFactory.atan2AngleWithScaling(var13, (byte) -77, var12);
             if (16384 + var8 >= var14) {
               var16 = 0;
               var17 = 2147483647;
@@ -364,7 +364,7 @@ final class ShipAI implements DiffableState {
             } else {
               if (0 != this.desiredVelocityX &&
                 this.desiredVelocityY != 0) {
-                var16 = GameSnapshotFactory.a(this.desiredVelocityY, (byte) -77, this.desiredVelocityX);
+                var16 = GameSnapshotFactory.atan2AngleWithScaling(this.desiredVelocityY, (byte) -77, this.desiredVelocityX);
                 this.desiredAngularVelocity = GameKeyHandler.normalizeSignedAngle(22433, var16 - param0.getAngle(param1 ^ -73)) << 8;
               }
             }
@@ -424,7 +424,7 @@ final class ShipAI implements DiffableState {
             }
             if (var14Lifetime1 != 0 ||
               var15Lifetime1 != 0) {
-              var17Lifetime1 = GameSnapshotFactory.a(var15Lifetime1, (byte) -77, var14Lifetime1);
+              var17Lifetime1 = GameSnapshotFactory.atan2AngleWithScaling(var15Lifetime1, (byte) -77, var14Lifetime1);
               var18Lifetime1 = param0.getAngle(0);
               var19Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, var17Lifetime1 - var18Lifetime1);
               var20Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, -4096 - (var18Lifetime1 - var17Lifetime1));
@@ -518,7 +518,7 @@ final class ShipAI implements DiffableState {
                 if (var14 <= 0) {
                   var14 = 1;
                 }
-                var15 = GameSnapshotFactory.a(-var13, (byte) -77, -var12);
+                var15 = GameSnapshotFactory.atan2AngleWithScaling(-var13, (byte) -77, -var12);
                 var4_int = var4_int + var11 * GetNumStars.cosAngle(var15, (byte) 85) / (var14 * var14);
                 var5 = var5 + TextureLineShape.sinAngle(var15, 107) * var11 / (var14 * var14);
               }
@@ -571,7 +571,7 @@ final class ShipAI implements DiffableState {
           if (var16 != null) {
             var6 = var16.chassis.finalx;
             var7 = var16.chassis.finaly;
-            var8 = GameSnapshotFactory.a(param2.y - var7, (byte) -77, -var6 + param2.x);
+            var8 = GameSnapshotFactory.atan2AngleWithScaling(param2.y - var7, (byte) -77, -var6 + param2.x);
             var9 = param3;
             var10 = var6 + (GetNumStars.cosAngle(var8, (byte) 38) >> 8) * (var9 >> 8);
             var11 = (var9 >> 8) * (TextureLineShape.sinAngle(var8, 127) >> 8) + var7;

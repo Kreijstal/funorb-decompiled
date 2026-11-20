@@ -53,13 +53,13 @@ abstract class NetworkGameClient extends GameApplet {
           return var2;
         }
         if (var2 != 1) {
-          if (!SetAudioRangeCutoff.field_q) {
+          if (!SetAudioRangeCutoff.suppressReconnectErrorPage) {
             this.showGameError("reconnect", 0);
           }
           NetworkArchiveRequest.prepareReconnectUi((byte) -119);
           SetMessageFadetime.a(GameJoinNotificationText.field_b, (byte) 72, var2);
           GetSpinningBladeAimarc.field_o = true;
-          StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
+          StrongCacheReference.connectionRetryDeadlineMillis = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
         } else {
           if (GetSpinningBladeAimspeed.field_q == 11 &&
             0 == MapClearanceArea.field_a) {
@@ -133,7 +133,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param1 != 9) {
           this.serverNumber = 76;
         }
-        if (!GetUseTriFill.a(45) &&
+        if (!GetUseTriFill.shouldServiceLoginUi(45) &&
           GetSpinningBladeAimspeed.field_q != 11) {
           PlayerGameDataFactory.updateCachedFrameUi(true);
         }
@@ -151,7 +151,7 @@ abstract class NetworkGameClient extends GameApplet {
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.applyObfuscationGuard(-10560);
             GetSpinningBladeAimarc.field_o = true;
-            StrongCacheReference.field_p = 15000L + MonotonicMillisClock.currentTimeMillis(false);
+            StrongCacheReference.connectionRetryDeadlineMillis = 15000L + MonotonicMillisClock.currentTimeMillis(false);
           }
         }
         if (-1 == MapClearanceArea.field_a ||
@@ -167,7 +167,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (MapClearanceArea.field_a != -1 &&
             MapClearanceArea.field_a != 0) {
-            StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
+            StrongCacheReference.connectionRetryDeadlineMillis = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
           }
         }
         if (-1 != MapClearanceArea.field_a &&
@@ -217,7 +217,7 @@ abstract class NetworkGameClient extends GameApplet {
         if ((-1 != MapClearanceArea.field_a &&
           MapClearanceArea.field_a != 0 ||
           SetWeaponProjectileSpeedMultiply.isReconnectRequired(true)) &&
-          MonotonicMillisClock.currentTimeMillis(false) >= StrongCacheReference.field_p) {
+          MonotonicMillisClock.currentTimeMillis(false) >= StrongCacheReference.connectionRetryDeadlineMillis) {
           GetSpinningBladeAimarc.field_o = false;
           if (-1 != MapClearanceArea.field_a &&
             MapClearanceArea.field_a != 0) {
@@ -263,12 +263,12 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (UiDraggableContainer.field_z == 3 &&
           SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, CommonUiArchiveResources.commonUiArchive) &&
-          GetUseOffscreenRendering.a(-20230, BufferedFile.field_i)) {
+          GetUseOffscreenRendering.loadAllArchiveGroups(-20230, BufferedFile.field_i)) {
           MissionFactory.clearLoadingBarResources((byte) 123);
           GetPhasedEnergyBeamFireForce.buildFullscreenConfirmationText(false);
           OpenGlBufferObject.progressDialogMessage = SetFighterRepairTime.field_o;
           CommandConsole.field_r = false;
-          GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, CommonUiArchiveResources.commonUiArchive, BufferedFile.field_i, false);
+          GetUseCircleOutline.initializeAccountUi(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, CommonUiArchiveResources.commonUiArchive, BufferedFile.field_i, false);
           if (BoosterOrderText.field_a ||
             PlayerReady.field_a != null) {
             stackIn_102_0 = !(BoosterOrderText.field_a);
@@ -283,7 +283,7 @@ abstract class NetworkGameClient extends GameApplet {
             SetReverbFeedback.field_p = SoftwareRasterStateRestorer.getPcmStreamMixer(true);
             EscapePod.field_j = QuickChatHelpWindow.getEffectsBufferSize((byte) 73);
           }
-          GetSpinningBladeSpindamageMultiplier.a((byte) 55, BufferedFile.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
+          GetSpinningBladeSpindamageMultiplier.initializeLogoAnimation((byte) 55, BufferedFile.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
           GetSalvoUsesAllEnergy.field_o = null;
           BufferedFile.field_i = null;
           CommonUiArchiveResources.commonUiArchive = null;
@@ -676,7 +676,7 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = ComponentAttachmentPlan.pollAccountRequest(GetFixedaim.createEmailRequestText((byte) -65), true, SetMachineGunFireForce.e(120));
+            var5 = ComponentAttachmentPlan.pollAccountRequest(GetFixedaim.createEmailRequestText((byte) -65), true, SetMachineGunFireForce.createLoginNameRequestText(120));
             if (var5 != -1) {
               AccountNameAvailabilityReplies.handleNameAvailabilityReply(GameJoinNotificationText.field_b, var5, (byte) 70, GameInvitationText.field_a);
               GameInvitationText.field_a = null;

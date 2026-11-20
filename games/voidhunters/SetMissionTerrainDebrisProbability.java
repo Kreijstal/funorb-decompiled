@@ -5,7 +5,7 @@ final class SetMissionTerrainDebrisProbability extends ConsoleCommand {
     static int[] field_o;
     static boolean field_p;
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
+    final static void drawProgressBar(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         int var8 = param3 / 2;
         if (var8 < 2 &&
           var8 < param3) {

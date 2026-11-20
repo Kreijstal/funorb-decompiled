@@ -39,7 +39,7 @@ final class SetTorpedoProjectileOndamageParticles extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isGraphicsBackendAllowed(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;

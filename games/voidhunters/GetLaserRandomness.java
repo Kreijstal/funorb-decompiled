@@ -40,7 +40,7 @@ final class GetLaserRandomness extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, SerializableGameState param1) {
+    final static void serializeGameStateToSharedBuffer(byte param0, SerializableGameState param1) {
         try {
           UiViewport.serializedStateBuffer.position = 0;
           UiViewport.serializedStateBuffer.beginBitWrite(-77);

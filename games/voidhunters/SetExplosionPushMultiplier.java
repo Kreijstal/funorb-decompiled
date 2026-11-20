@@ -51,7 +51,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             stackIn_10_0 = SetSniperCannonProjectileOndamageParticles.field_o;
             return stackIn_10_0;
           }
-          if (SetUseLines.a((byte) -94, param1)) {
+          if (SetUseLines.isIgnoredPlayer((byte) -94, param1)) {
             stackIn_14_0 = SetReverbGain.a(FloatNoiseSliceGenerator.field_c, new String[]{param1}, 100);
             return stackIn_14_0;
           }

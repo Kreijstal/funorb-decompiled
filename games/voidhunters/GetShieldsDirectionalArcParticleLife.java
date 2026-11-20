@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
-    static String[] field_q;
+    static String[] lobbyPlayerStatusLabels;
     static long[] whirlpoolRoundConstants;
     static int field_p;
     static long[][] whirlpoolTables;
@@ -46,7 +46,7 @@ final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
           return;
         }
         whirlpoolTables = (long[][]) null;
-        field_q = null;
+        lobbyPlayerStatusLabels = null;
     }
 
     static {

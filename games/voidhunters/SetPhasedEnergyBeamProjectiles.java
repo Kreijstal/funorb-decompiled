@@ -222,7 +222,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(ShipComponent param0, int param1) {
+    final static void attachPresetComponents(ShipComponent param0, int param1) {
         try {
           param0.attachToHardpoint(1, 0, new ShipComponent(13));
           param0.attachToHardpoint(1, 8, new ShipComponent(13));

@@ -32,13 +32,13 @@ final class SetComponentBreakingExplosionForceMultiplier extends ConsoleCommand 
         }
     }
 
-    final static void a(String[] args, int param1) {
+    final static void setLobbyPlayerStatusLabels(String[] args, int param1) {
         try {
           if (param1 != 29141) {
             String[] var3 = (String[]) null;
-            SetComponentBreakingExplosionForceMultiplier.a((String[]) null, -79);
+            SetComponentBreakingExplosionForceMultiplier.setLobbyPlayerStatusLabels((String[]) null, -79);
           }
-          GetShieldsDirectionalArcParticleLife.field_q = args;
+          GetShieldsDirectionalArcParticleLife.lobbyPlayerStatusLabels = args;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tna.B(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
         }

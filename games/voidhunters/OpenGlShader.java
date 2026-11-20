@@ -46,7 +46,7 @@ final class OpenGlShader {
             !LobbyThemeBuilder.hasAtMostOneBitSet(param6, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = ParticleFactory.a((byte) -120, param2);
+          var7_int = ParticleFactory.getGlFormatComponentCount((byte) -120, param2);
           var8 = param1;
           stackIn_11_0 = (param6 > param5) ? param5 : param6;
           var9 = stackIn_11_0;

@@ -149,7 +149,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               var12 = AccountNameAvailabilityReplies.field_b.readNullableString(0);
               var7 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -106);
               if ((var7 & 1) != 0) {
-                ImageProducerRasterBuffer.d((byte) 111);
+                ImageProducerRasterBuffer.persistRandomDat((byte) 111);
               }
               if (!param4) {
                 stackIn_39_0 = ((8 & var7) != 0);

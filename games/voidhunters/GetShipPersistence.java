@@ -4,9 +4,9 @@
 final class GetShipPersistence extends ConsoleCommand {
     static ValidationState validInput;
 
-    final static void a(String param0, int param1, int param2, int param3, int param4, byte param5) {
+    final static void drawRightAlignedTextWithDefaultFont(String param0, int param1, int param2, int param3, int param4, byte param5) {
         try {
-          SoftwareDepthBuffer.a(param3, param2, param1, (byte) 74, param4, SetAutoaim.field_p, param0);
+          SoftwareDepthBuffer.drawRightAlignedText(param3, param2, param1, (byte) 74, param4, SetAutoaim.field_p, param0);
           if (param5 != -103) {
             validInput = (ValidationState) null;
           }
@@ -52,7 +52,7 @@ final class GetShipPersistence extends ConsoleCommand {
         validInput = null;
         if (param0 != 33) {
           String var2 = (String) null;
-          GetShipPersistence.a((String) null, -71, 30, -95, 67, (byte) -77);
+          GetShipPersistence.drawRightAlignedTextWithDefaultFont((String) null, -71, 30, -95, 67, (byte) -77);
         }
     }
 

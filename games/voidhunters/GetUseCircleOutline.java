@@ -6,7 +6,7 @@ final class GetUseCircleOutline extends ConsoleCommand {
     static int field_p;
     static volatile int keyboardIdleTicks;
 
-    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
+    final static void initializeAccountUi(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         try {
           GetBombletSprayPushMultiplier.emailAvailabilityCheck = EmailAvailabilityCheckFactory.create("", (byte) 110);
           GetBombletSprayPushMultiplier.emailAvailabilityCheck.complete(7861, param4);
@@ -56,7 +56,7 @@ final class GetUseCircleOutline extends ConsoleCommand {
         field_o = null;
         if (param0 != -47) {
           ResourceArchive var2 = (ResourceArchive) null;
-          GetUseCircleOutline.a(true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, false);
+          GetUseCircleOutline.initializeAccountUi(true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, false);
         }
     }
 

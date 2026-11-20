@@ -40,7 +40,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static AccountRequestText e(int param0) {
+    final static AccountRequestText createLoginNameRequestText(int param0) {
         int var2 = -9 % ((param0 + 52) / 62);
         String var1 = LoadBlackboxRecording.getCurrentLoginName(87);
         if (var1 == null) {

@@ -306,7 +306,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
             var9[var5] = SetTorpedoProjectileDamage.field_p[var5];
           }
           OpenGlClientVertexBuffer.a(18090, false);
-          SetComponentBreakingExplosionForceMultiplier.a(MonochromeRowCache.field_j, param0 + 29073);
+          SetComponentBreakingExplosionForceMultiplier.setLobbyPlayerStatusLabels(MonochromeRowCache.field_j, param0 + 29073);
           var10 = GetExplosionProjectileDamage.loadNamedIndexedSprites(98, "basic", "extra_crowns", this.graphicsArchive);
           var15 = var10;
           var19 = new int[var10.length];

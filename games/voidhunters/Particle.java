@@ -186,7 +186,7 @@ final class Particle implements DiffableState {
             var10 = param1.worldToScreenX((this.dx << 2) + this.x, (byte) 124);
             var11 = param1.worldToScreenY(true, (this.dy << 2) + this.y);
             if (var9 <= 1) {
-              SetShowTutorial.a(var3_int, (byte) 66, var10, var4, var6, var11, var8);
+              SetShowTutorial.drawLineAlpha(var3_int, (byte) 66, var10, var4, var6, var11, var8);
               return;
             }
             FixedPointTrigonometry.drawThickLine(var6, var9, 16994, var4, var8, var3_int, var10, var11);

@@ -15,7 +15,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         this.pending = true;
     }
 
-    final static void a(int param0, int param1, long param2, boolean param3, String param4) {
+    final static void setChatInputContext(int param0, int param1, long param2, boolean param3, String param4) {
         try {
           GetWaitForPlayers.field_p = param1;
           ConsoleSettingsScript.field_b = param2;
@@ -24,7 +24,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           EmailAvailabilityCheckFactory.field_a = param0;
           if (param3) {
             String var7 = (String) null;
-            ArchiveRequest.a(50, -52, 121L, false, (String) null);
+            ArchiveRequest.setChatInputContext(50, -52, 121L, false, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "jtb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

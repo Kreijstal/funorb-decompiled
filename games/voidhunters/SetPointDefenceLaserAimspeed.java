@@ -8,7 +8,7 @@ final class SetPointDefenceLaserAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static String a(byte param0, int param1) {
+    final static String formatDurationMillis(byte param0, int param1) {
         int var2 = param1 % 1000;
         if (param0 != 10) {
           return (String) null;

@@ -44,15 +44,15 @@ final class GetCountermeasureLauncherAimarc extends ConsoleCommand {
         int var10Lifetime1;
         int var11Lifetime1;
         try {
-          SetShowTutorial.a(param1.worldToScreenX(param0, (byte) 127), (byte) 66, param1.worldToScreenX(param7, (byte) 123), param1.worldToScreenY(true, param4), param5, param1.worldToScreenY(true, param2), param6);
+          SetShowTutorial.drawLineAlpha(param1.worldToScreenX(param0, (byte) 127), (byte) 66, param1.worldToScreenX(param7, (byte) 123), param1.worldToScreenY(true, param4), param5, param1.worldToScreenY(true, param2), param6);
           var8_int = -param0 + param7;
           var9 = param2 - param4;
           var10 = -(var9 / 8) + param0 + var8_int * 3 / 4;
           var11 = var8_int / 8 + (3 * var9 / 4 + param4);
-          SetShowTutorial.a(param1.worldToScreenX(var10, (byte) 116), (byte) 66, param1.worldToScreenX(param7, (byte) 116), param1.worldToScreenY(true, var11), param5, param1.worldToScreenY(true, param2), param6);
+          SetShowTutorial.drawLineAlpha(param1.worldToScreenX(var10, (byte) 116), (byte) 66, param1.worldToScreenX(param7, (byte) 116), param1.worldToScreenY(true, var11), param5, param1.worldToScreenY(true, param2), param6);
           var10Lifetime1 = param0 - (-(3 * var8_int / 4) - var9 / 8);
           var11Lifetime1 = -(var8_int / 8) + param4 + param3 * var9 / 4;
-          SetShowTutorial.a(param1.worldToScreenX(var10Lifetime1, (byte) 125), (byte) 66, param1.worldToScreenX(param7, (byte) 121), param1.worldToScreenY(true, var11Lifetime1), param5, param1.worldToScreenY(true, param2), param6);
+          SetShowTutorial.drawLineAlpha(param1.worldToScreenX(var10Lifetime1, (byte) 125), (byte) 66, param1.worldToScreenX(param7, (byte) 121), param1.worldToScreenY(true, var11Lifetime1), param5, param1.worldToScreenY(true, param2), param6);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "dva.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }

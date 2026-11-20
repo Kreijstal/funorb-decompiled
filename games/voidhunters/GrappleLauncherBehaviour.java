@@ -164,7 +164,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var16 = (var14 * TextureLineShape.sinAngle(param4, 76) >> 16) + param1;
             var17 = -var12_int + param0;
             var18 = param3 - var13;
-            var19 = GameSnapshotFactory.a(var18, (byte) -77, var17);
+            var19 = GameSnapshotFactory.atan2AngleWithScaling(var18, (byte) -77, var17);
             var20 = GameKeyHandler.normalizeSignedAngle(22433, var19 - param4);
             if (Math.abs(var20) > 256) {
               return;

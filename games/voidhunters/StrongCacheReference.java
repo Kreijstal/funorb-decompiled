@@ -4,7 +4,7 @@
 final class StrongCacheReference extends CacheReference {
     static String[] field_n;
     static int[] field_m;
-    static long field_p;
+    static long connectionRetryDeadlineMillis;
     private Object value;
     static NineSliceSprite field_o;
 

@@ -35,7 +35,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           var2 = var6;
           var3 = new SerializableGameState[var6.length];
           if (param1 != 210377952) {
-            TextHotspotRegion.a(-49, (byte) -17);
+            TextHotspotRegion.atanFixed16Angle(-49, (byte) -17);
           }
           for (var4 = 0; var6.length > var4; var4++) {
             var3[var4] = (SerializableGameState) ((Object) var6[var4]);
@@ -86,7 +86,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         int var1 = 101 % ((param0 - 66) / 34);
     }
 
-    final static int a(int param0, byte param1) {
+    final static int atanFixed16Angle(int param0, byte param1) {
         if (param1 > -121) {
           field_e = (String) null;
           if (param0 >= 0) {

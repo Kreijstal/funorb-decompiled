@@ -347,13 +347,13 @@ final class TutorialController {
               var26Lifetime1 = -var27Lifetime1 + (var20 + var22);
             }
             var29 = param3 << 24;
-            GetMissilesHitSourceTeam.a(var20 - 1, -1 + var21, (byte) -128, var23 + 2, param3, 1, 2 + var22);
+            GetMissilesHitSourceTeam.drawRectangleAlpha(var20 - 1, -1 + var21, (byte) -128, var23 + 2, param3, 1, 2 + var22);
             GetDebrisCarryOver.fillGradientTriangle(8, -var27Lifetime1 + var28Lifetime1, 1, 1 | var29, var26Lifetime1, -1 + (var26Lifetime1 - var27Lifetime1) + 1, var28Lifetime1 - var27Lifetime1, var28Lifetime1 + 1, var29 | 1, 1 + (var27Lifetime1 + var26Lifetime1), 1 | var29);
             GetDebrisCarryOver.fillGradientTriangle(8, -var27Lifetime1 + var28Lifetime1, 1, var29 | 236981, var26Lifetime1, var26Lifetime1 + (1 - var27Lifetime1), -var27Lifetime1 + var28Lifetime1, var28Lifetime1, var29 | 56035, var26Lifetime1 + var27Lifetime1, 236981 | var29);
           }
           if (!param5 ||
             var30 != 0) {
-            GetMissilesHitSourceTeam.a(-1 + var20, var21 - 1, (byte) -128, 2 + var23, param3, 1, 2 + var22);
+            GetMissilesHitSourceTeam.drawRectangleAlpha(-1 + var20, var21 - 1, (byte) -128, 2 + var23, param3, 1, 2 + var22);
           }
           CachedArchiveProvider.fillRectangleAlpha(param3, false, var20, var21, var23, var22, 236981);
           var24Lifetime1 = param1.screenToWorldY(0, 4 + var16 + var19);
@@ -808,9 +808,9 @@ final class TutorialController {
                               }
                             } else {
                               var41 = 16712705;
-                              SetShowTutorial.a(var39, (byte) 66, var35, var40, 11142145, var36, var42);
+                              SetShowTutorial.drawLineAlpha(var39, (byte) 66, var35, var40, 11142145, var36, var42);
                               var22 = 1;
-                              SetShowTutorial.a(var39, (byte) 66, var37, var40, 11142145, var38, var42);
+                              SetShowTutorial.drawLineAlpha(var39, (byte) 66, var37, var40, 11142145, var38, var42);
                             }
                             GetDebrisCarryOver.fillGradientTriangle(8, var36, 1, 131586, var39, var35, var38, var40, var41 | var42 << 24, var37, 131586);
                           }

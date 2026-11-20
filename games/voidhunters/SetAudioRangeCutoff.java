@@ -4,7 +4,7 @@
 final class SetAudioRangeCutoff extends ConsoleCommand {
     static String field_p;
     static String[] field_o;
-    static boolean field_q;
+    static boolean suppressReconnectErrorPage;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

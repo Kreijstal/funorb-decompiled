@@ -8,7 +8,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
     float[] depth;
     static String field_e;
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, String param6) {
+    final static void drawRightAlignedText(int param0, int param1, int param2, byte param3, int param4, int param5, String param6) {
         RuntimeException var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

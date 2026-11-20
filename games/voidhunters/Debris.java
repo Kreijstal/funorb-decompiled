@@ -8,7 +8,7 @@ final class Debris extends ShipBody implements DiffableState, SpatialStateMarker
     boolean phantom;
     static Widget field_y;
 
-    private final void a(boolean param0, Debris param1) {
+    private final void transferForcesTo(boolean param0, Debris param1) {
         try {
           param1.forceY = this.forceY;
           param1.torque = this.torque;
@@ -158,7 +158,7 @@ final class Debris extends ShipBody implements DiffableState, SpatialStateMarker
         }
         try {
           var3.field_w = this.field_w;
-          this.a(true, var3);
+          this.transferForcesTo(true, var3);
           super.copyTo((byte) 60, param1);
           var3.phantom = this.phantom;
           if (param0 < 54) {

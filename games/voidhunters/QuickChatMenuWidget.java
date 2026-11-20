@@ -98,7 +98,7 @@ final class QuickChatMenuWidget extends Widget {
               stackIn_15_1 = var5;
               stackIn_15_2 = PendingRequest.privateChatRecipientKey;
               stackIn_16_3 = (param1) ? false : true;
-              ArchiveRequest.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, ChoosePlayerNameForm.privateChatTargetDisplayName);
+              ArchiveRequest.setChatInputContext(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, ChoosePlayerNameForm.privateChatTargetDisplayName);
               GetUseExtraBackground.closeQuickChatMenu(-1);
               SetSalvoRepairTimeMultiplier.resetQuickChatRateLimit(4907);
             } else {
@@ -274,12 +274,12 @@ final class QuickChatMenuWidget extends Widget {
         this.setAnimationStep((byte) 113, 12);
     }
 
-    final static boolean l(int param0) {
+    final static boolean refreshConnectionRetryUiStatus(int param0) {
         if (param0 != 0) {
           return false;
         }
-        SetAudioRangeCutoff.field_q = true;
-        StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
+        SetAudioRangeCutoff.suppressReconnectErrorPage = true;
+        StrongCacheReference.connectionRetryDeadlineMillis = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
         return GetSpinningBladeAimspeed.field_q == 11 ? true : false;
     }
 
@@ -342,7 +342,7 @@ final class QuickChatMenuWidget extends Widget {
           var4++;
         }
         if (param0 != -25675) {
-          QuickChatMenuWidget.l(52);
+          QuickChatMenuWidget.refreshConnectionRetryUiStatus(52);
         }
         if (var2 == 0 &&
           -1 != this.selectedItem &&

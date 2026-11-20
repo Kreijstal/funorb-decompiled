@@ -44,13 +44,13 @@ final class SetShowTutorial extends ConsoleCommand {
         field_p = null;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawLineAlpha(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         if (param6 == 255) {
           DelayedPacket.drawLine(param5, param2, param0, param3, -16777216, param4);
           return;
         }
         if (param1 != 66) {
-          SetShowTutorial.a(38, (byte) -85, -31, 24, 124, 91, -113);
+          SetShowTutorial.drawLineAlpha(38, (byte) -85, -31, 24, 124, 91, -113);
           if (OpenGlTexture1D.field_i) {
             SetMassDriverProjectileLife.drawToolkitLine(param6 << 24 | param4, (byte) 73, param3, param0, param5, param2);
             return;

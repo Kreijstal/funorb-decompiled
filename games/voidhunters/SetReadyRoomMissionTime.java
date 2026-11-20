@@ -54,7 +54,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
           if (SetMachineGunPulsetime.hasPrivilegedAccess(0)) {
             if (param1 &&
               !ShipComponentFactory.field_a) {
-              SetMassDriverReload.a(6045);
+              SetMassDriverReload.captureMousePointer(6045);
               if (!ShipComponentFactory.field_a) {
                 GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                 GetUseDetailLines.field_o = PlayerGameData.field_b;
@@ -133,7 +133,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
           } else {
             if (param1 &&
               !ShipComponentFactory.field_a) {
-              SetMassDriverReload.a(6045);
+              SetMassDriverReload.captureMousePointer(6045);
               if (!ShipComponentFactory.field_a) {
                 GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                 GetUseDetailLines.field_o = PlayerGameData.field_b;

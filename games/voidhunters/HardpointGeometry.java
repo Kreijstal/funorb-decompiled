@@ -65,7 +65,7 @@ final class HardpointGeometry {
             var11 = -var5 + var7;
             var12 = var11;
             var13 = -var10;
-            var14 = GameSnapshotFactory.a(var13, (byte) -77, var12);
+            var14 = GameSnapshotFactory.atan2AngleWithScaling(var13, (byte) -77, var12);
             var15 = 1;
             if (param2.connectionX != 0 ||
               param2.connectionY != 0) {

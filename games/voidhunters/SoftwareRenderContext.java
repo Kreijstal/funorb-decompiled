@@ -27,7 +27,7 @@ final class SoftwareRenderContext {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, float[] param5, int param6) {
+    final static void uploadFloatMipmaps(int param0, int param1, int param2, int param3, int param4, float[] param5, int param6) {
         int var17 = 0;
         int var21 = 0;
         int var22 = 0;
@@ -61,7 +61,7 @@ final class SoftwareRenderContext {
             !LobbyThemeBuilder.hasAtMostOneBitSet(param4, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = ParticleFactory.a((byte) -104, param0);
+          var7_int = ParticleFactory.getGlFormatComponentCount((byte) -104, param0);
           var8 = 0;
           stackIn_12_0 = (param2 >= param4) ? param4 : param2;
           var9 = stackIn_12_0;

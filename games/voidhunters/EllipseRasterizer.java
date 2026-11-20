@@ -6,7 +6,7 @@ final class EllipseRasterizer {
 
     final static void fillEllipse(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param1 == param3) {
-          ConsoleValue.a((byte) -90, param5, param4, param0, param3);
+          ConsoleValue.fillCircle((byte) -90, param5, param4, param0, param3);
           return;
         }
         if (param2 != 17000) {

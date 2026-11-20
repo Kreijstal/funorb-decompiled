@@ -50,7 +50,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             stackIn_24_0 = GetRepairModeCooldown.field_o;
             return stackIn_24_0;
           }
-          if (SetUseLines.a((byte) -94, param0)) {
+          if (SetUseLines.isIgnoredPlayer((byte) -94, param0)) {
             stackIn_28_0 = SetReverbGain.a(ChatPanelUpdater.removeFromIgnoreListFirstText, new String[]{param0}, 111);
             return stackIn_28_0;
           }

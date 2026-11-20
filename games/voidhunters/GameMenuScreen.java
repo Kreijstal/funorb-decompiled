@@ -737,7 +737,7 @@ final class GameMenuScreen {
                                         var11 = QuickChatHelpWindow.findGraphicsBackendIndex(GetMassDriverProjectiles.field_q, -1);
                                         var11 = (var9 + DebugSendable.graphicsBackendOrder.length + var11) % DebugSendable.graphicsBackendOrder.length;
                                         var12_int = DebugSendable.graphicsBackendOrder[var11];
-                                        if (!SetTorpedoProjectileOndamageParticles.a(-25915, var12_int)) {
+                                        if (!SetTorpedoProjectileOndamageParticles.isGraphicsBackendAllowed(-25915, var12_int)) {
                                           var10_int++;
                                           continue;
                                         }
@@ -1050,7 +1050,7 @@ final class GameMenuScreen {
           ComponentGeometryEditor.handleEditorInput(false);
         }
         if (this.menuId == 7) {
-          stackIn_10_0 = !(GetBombletSprayRandomness.a(-75));
+          stackIn_10_0 = !(GetBombletSprayRandomness.refreshConnectionRetryUiStatus(-75));
           var2 = GetGrapplingHooksDamageableBySourcePlayer.updateMenuCarousel(stackIn_10_0, (byte) 40);
           if (3 == var2) {
             if (null != EmailAvailabilityChecks.fullscreenCanvas) {

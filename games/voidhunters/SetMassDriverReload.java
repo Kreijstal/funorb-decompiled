@@ -21,7 +21,7 @@ final class SetMassDriverReload extends ConsoleCommand {
         field_o = null;
     }
 
-    final static void a(int param0) {
+    final static void captureMousePointer(int param0) {
         java.awt.Canvas var1 = null;
         if (!ShipComponentFactory.field_a) {
           ShipComponentFactory.field_a = true;

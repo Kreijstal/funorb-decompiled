@@ -35,7 +35,7 @@ final class SetMachineGunAimarc extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final static boolean isPointInHalfOpenRectangle(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         if (param4 != -65) {
           SetMachineGunAimarc.clearSharedReferences(57);
           if (param5 > param3) {

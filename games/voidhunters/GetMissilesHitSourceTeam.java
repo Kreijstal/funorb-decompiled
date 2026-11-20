@@ -14,7 +14,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetMissilesHitSourceTeam.a(-89, 5, (byte) -112, -51, 115, 72, 68);
+            GetMissilesHitSourceTeam.drawRectangleAlpha(-89, 5, (byte) -112, -51, 115, 72, 68);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(13, 103));
           return stackIn_3_0;
@@ -32,7 +32,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final static void drawRectangleAlpha(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         if (param2 != -128) {
           field_o = -36;
           if (!OpenGlTexture1D.field_i) {
@@ -57,7 +57,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 <= 57) {
-          GetMissilesHitSourceTeam.a(-77, 127, (byte) 35, -88, 55, 91, -105);
+          GetMissilesHitSourceTeam.drawRectangleAlpha(-77, 127, (byte) 35, -88, 55, 91, -105);
           field_p = null;
           return;
         }

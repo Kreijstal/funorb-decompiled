@@ -7,9 +7,9 @@ final class GetBombletSprayRandomness extends ConsoleCommand {
     static String[][] field_q;
     static String field_r;
 
-    final static boolean a(int param0) {
+    final static boolean refreshConnectionRetryUiStatus(int param0) {
         int var1 = -35 % ((-29 - param0) / 38);
-        return QuickChatMenuWidget.l(0);
+        return QuickChatMenuWidget.refreshConnectionRetryUiStatus(0);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

@@ -19,7 +19,7 @@ final class GetPhasedEnergyBeamReload extends ConsoleCommand {
         field_p = null;
     }
 
-    final static void a(int param0, float param1, int param2, int param3, int param4) {
+    final static void fillCircle(int param0, float param1, int param2, int param3, int param4) {
         if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.fillCircle(param3, param0, (int)param1, param4);
           if (param2 >= -16) {

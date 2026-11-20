@@ -112,7 +112,7 @@ final class SpawnPointFactory implements GameStateFactory {
                 stackIn_36_0 = (Camera2D) (param0);
                 stackIn_37_1 = !(param2);
                 var10 = ((Camera2D) (Object) stackIn_36_0).worldToScreenY(stackIn_37_1, var8Lifetime2);
-                GetPhasedEnergyBeamReload.a(var10, (float)(int)(param0.scale * 256.0f), -104, var9Lifetime2, 65280);
+                GetPhasedEnergyBeamReload.fillCircle(var10, (float)(int)(param0.scale * 256.0f), -104, var9Lifetime2, 65280);
                 var11 = 8 * GetNumStars.cosAngle(var5_ref_lsb__[var6Lifetime2].field_a, (byte) 61) >> 8;
                 var12 = TextureLineShape.sinAngle(var5_ref_lsb__[var6Lifetime2].field_a, 109) * 8 >> 8;
                 DelayedPacket.drawLine(param0.worldToScreenY(true, var12 + var8Lifetime2), param0.worldToScreenX(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);

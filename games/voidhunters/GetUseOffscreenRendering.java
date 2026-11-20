@@ -37,7 +37,7 @@ final class GetUseOffscreenRendering extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, ResourceArchive param1) {
+    final static boolean loadAllArchiveGroups(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

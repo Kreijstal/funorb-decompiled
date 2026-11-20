@@ -52,7 +52,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void d(byte param0) {
+    final static void persistRandomDat(byte param0) {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;

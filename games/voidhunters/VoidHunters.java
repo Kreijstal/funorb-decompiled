@@ -417,10 +417,10 @@ public final class VoidHunters extends NetworkGameClient {
         }
         var2 = -40 % ((23 - param0) / 61);
         SetMinimapWidth.field_o = SetMinimapWidth.field_o + 1;
-        if (GetUseTriFill.a(51)) {
+        if (GetUseTriFill.shouldServiceLoginUi(51)) {
           ComponentCollision.traceLoadingStatus("Servicing login...", (byte) -86);
           this.updateLoginUi(0);
-          if (GetUseTriFill.a(119)) {
+          if (GetUseTriFill.shouldServiceLoginUi(119)) {
             return;
           }
         }
@@ -440,7 +440,7 @@ public final class VoidHunters extends NetworkGameClient {
               WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
             }
           } else {
-            if (QuickChatMenuWidget.l(0)) {
+            if (QuickChatMenuWidget.refreshConnectionRetryUiStatus(0)) {
               stackIn_27_1 = (EmailAvailabilityChecks.fullscreenCanvas != null);
               var3 = this.processLoginUi(stackIn_27_1, -9288);
               if (1 == var3 ||
@@ -2287,7 +2287,7 @@ public final class VoidHunters extends NetworkGameClient {
               GetSpinningBladeSpindamageMultiplier.a(-9934);
             }
           }
-          if (GetUseTriFill.a(77)) {
+          if (GetUseTriFill.shouldServiceLoginUi(77)) {
             BuildBlueprintOrderDefinition.drawGameFrame(111, var10, SetMassDriverProjectileLife.isGameFocused(0));
             return;
           }
@@ -2362,7 +2362,7 @@ public final class VoidHunters extends NetworkGameClient {
             ScreenSizeController.drawCachedFrame(false, 20637);
             RoundResult.field_e = true;
           }
-          if (QuickChatMenuWidget.l(0)) {
+          if (QuickChatMenuWidget.refreshConnectionRetryUiStatus(0)) {
             var4_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var5_intLifetime2 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetPhasedEnergyBeamFireForce.setModalPointerPosition(var4_int, 32, var5_intLifetime2);

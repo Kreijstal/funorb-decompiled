@@ -88,7 +88,7 @@ class WeaponDefinition {
         return 0;
     }
 
-    final static void a(String[] args, int param1) {
+    final static void setPlayerNameSuggestions(String[] args, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -139,7 +139,7 @@ class WeaponDefinition {
     int getProjectileCount(boolean param0) {
         if (param0) {
           String[] var3 = (String[]) null;
-          WeaponDefinition.a((String[]) null, 41);
+          WeaponDefinition.setPlayerNameSuggestions((String[]) null, 41);
           return 1;
         }
         return 1;

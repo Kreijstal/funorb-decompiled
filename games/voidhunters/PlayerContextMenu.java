@@ -185,7 +185,7 @@ final class PlayerContextMenu {
             var8 = this.getTargetDisplayName((byte) -63);
             var4 = var8;
             var5 = FlipTextureOperation.a(this.targetName, 0);
-            var6 = SetUseLines.a((byte) -94, this.targetName) ? 1 : 0;
+            var6 = SetUseLines.isIgnoredPlayer((byte) -94, this.targetName) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.menu.addItem(SetReverbGain.a(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);

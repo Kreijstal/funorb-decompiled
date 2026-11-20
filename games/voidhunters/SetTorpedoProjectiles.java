@@ -297,15 +297,15 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               if (var12.field_Ib.field_O &&
                 var22 != 0) {
                 NebulaFieldFactory.field_a = var12.field_xb;
-                if (GetShieldsDirectionalArcParticleLife.field_q != null &&
-                  GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb] != null) {
-                  NebulaFieldFactory.field_a = NebulaFieldFactory.field_a + " - " + GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb];
+                if (GetShieldsDirectionalArcParticleLife.lobbyPlayerStatusLabels != null &&
+                  GetShieldsDirectionalArcParticleLife.lobbyPlayerStatusLabels[var12.field_vb] != null) {
+                  NebulaFieldFactory.field_a = NebulaFieldFactory.field_a + " - " + GetShieldsDirectionalArcParticleLife.lobbyPlayerStatusLabels[var12.field_vb];
                 }
               } else {
                 if (var12.field_Ib.field_O &&
-                  null != GetShieldsDirectionalArcParticleLife.field_q &&
-                  null != GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb]) {
-                  NebulaFieldFactory.field_a = GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb];
+                  null != GetShieldsDirectionalArcParticleLife.lobbyPlayerStatusLabels &&
+                  null != GetShieldsDirectionalArcParticleLife.lobbyPlayerStatusLabels[var12.field_vb]) {
+                  NebulaFieldFactory.field_a = GetShieldsDirectionalArcParticleLife.lobbyPlayerStatusLabels[var12.field_vb];
                 }
               }
               var19 = var19 + DialogMessagePanel.field_w;

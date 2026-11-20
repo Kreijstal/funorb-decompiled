@@ -79,7 +79,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         var7 = param4 - param0;
         if (var6 == 0) {
           if (var7 != 0) {
-            Message.a(-119, param3, param5, param4, param0);
+            Message.drawClippedVerticalLine(-119, param3, param5, param4, param0);
           }
           return;
         }

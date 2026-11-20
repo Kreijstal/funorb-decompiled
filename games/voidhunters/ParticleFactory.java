@@ -11,7 +11,7 @@ final class ParticleFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new Particle());
     }
 
-    final static int a(byte param0, int param1) {
+    final static int getGlFormatComponentCount(byte param0, int param1) {
         if (param1 == 6406) {
           return 1;
         }
@@ -33,7 +33,7 @@ final class ParticleFactory implements GameStateFactory {
         if (param0 < -92) {
           throw new IllegalArgumentException("");
         }
-        ParticleFactory.a((byte) -64, -74);
+        ParticleFactory.getGlFormatComponentCount((byte) -64, -74);
         throw new IllegalArgumentException("");
     }
 

@@ -100,7 +100,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           SpawnChoice.showReconnectStatusDialog(param0 ^ -108);
           GetSpinningBladeAimspeed.field_q = 11;
         } else {
-          if (!SetAutoaim.b(true)) {
+          if (!SetAutoaim.isLoginUiFallbackSuppressed(true)) {
             SpawnChoice.showReconnectStatusDialog(param0 ^ -108);
             GetSpinningBladeAimspeed.field_q = 11;
           }

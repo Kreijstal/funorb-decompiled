@@ -127,7 +127,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = SetMutatorVotes.bitLength(var5 - 1, 40);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = SetSpinningBladeSpinupSpeed.a(var10, -18644, var11);
+            var9[var11] = SetSpinningBladeSpinupSpeed.reverseLowBits(var10, -18644, var11);
           }
           if (var1 == 0) {
             field_D = var6_ref_float__;

@@ -68,7 +68,7 @@ final class SetAutoaim extends ConsoleCommand {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isLoginUiFallbackSuppressed(boolean param0) {
         if (!param0) {
           field_o = -106;
           return true;

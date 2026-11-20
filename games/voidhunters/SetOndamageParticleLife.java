@@ -120,7 +120,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
           var7 = param1 - param5;
           if (param2 == ~var7) {
             if (0 != var6_int) {
-              GetPhasedEnergyBeamProjectileOndamageParticles.a(-115, param3, param5, param4, param0);
+              GetPhasedEnergyBeamProjectileOndamageParticles.fillVerticalSpanUnclipped(-115, param3, param5, param4, param0);
             }
             return;
           }

@@ -261,20 +261,20 @@ final class Projectile extends MovingObject implements DiffableState {
               }
               SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(2.0f, param1.scale * 8.0f * (float)var8), var8 >> 1, var5);
               SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(1.0f, (float)var8 * (param1.scale * 4.0f)), var8, var5);
-              SetShowTutorial.a(var3_int, (byte) 66, var5, var4, var7, var6, var8);
+              SetShowTutorial.drawLineAlpha(var3_int, (byte) 66, var5, var4, var7, var6, var8);
               return;
             }
             if (2 == this.type) {
-              GetPhasedEnergyBeamReload.a(var4, param1.scale * 400.0f, param0 - 106, var3_int, 65280);
+              GetPhasedEnergyBeamReload.fillCircle(var4, param1.scale * 400.0f, param0 - 106, var3_int, 65280);
               return;
             }
             if (this.type == 5) {
-              GetPhasedEnergyBeamReload.a(var4, param1.scale * 400.0f, -100, var3_int, 65280);
+              GetPhasedEnergyBeamReload.fillCircle(var4, param1.scale * 400.0f, -100, var3_int, 65280);
               return;
             }
             if (1 == this.type) {
               SetNumStars.drawCircle(2400.0f * param1.scale, (byte) 96, var4, 65280, var3_int);
-              GetPhasedEnergyBeamReload.a(var4, 1600.0f * param1.scale, -110, var3_int, 65280);
+              GetPhasedEnergyBeamReload.fillCircle(var4, 1600.0f * param1.scale, -110, var3_int, 65280);
               return;
             }
             if (6 != this.type) {
@@ -288,7 +288,7 @@ final class Projectile extends MovingObject implements DiffableState {
             for (var6 = 0; var6 < 8; var6++) {
               var7Lifetime1 = (int)((float)(var5 * (GetNumStars.cosAngle(this.life + var6 << 5, (byte) 33) >> 8)) * param1.scale) + var3_int;
               var8Lifetime1 = (int)((float)((TextureLineShape.sinAngle(this.life + var6 << 5, 62) >> 8) * var5) * param1.scale) + var4;
-              SetShowTutorial.a(var3_int, (byte) 66, var7Lifetime1, var4, 65280, var8Lifetime1, 23);
+              SetShowTutorial.drawLineAlpha(var3_int, (byte) 66, var7Lifetime1, var4, 65280, var8Lifetime1, 23);
             }
           } else {
             var5 = param1.worldToScreenX(this.x - this.dx, (byte) 123);

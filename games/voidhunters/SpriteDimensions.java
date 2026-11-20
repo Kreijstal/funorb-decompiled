@@ -116,17 +116,17 @@ abstract class SpriteDimensions extends DualLinkNode {
             return 0;
           }
           if (0 <= param0) {
-            return SetNumStars.a(param0, param2, 11105);
+            return SetNumStars.atanFirstQuadrantAngle(param0, param2, 11105);
           }
-          return -SetNumStars.a(-param0, param2, 11105);
+          return -SetNumStars.atanFirstQuadrantAngle(-param0, param2, 11105);
         }
         if (0 == param0) {
           return 4096;
         }
         if (param0 < 0) {
-          return -4096 + SetNumStars.a(-param0, -param2, 11105);
+          return -4096 + SetNumStars.atanFirstQuadrantAngle(-param0, -param2, 11105);
         }
-        return -SetNumStars.a(param0, -param2, 11105) + 4096;
+        return -SetNumStars.atanFirstQuadrantAngle(param0, -param2, 11105) + 4096;
     }
 
     public static void clearSharedReferences(boolean param0) {

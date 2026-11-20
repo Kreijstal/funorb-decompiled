@@ -15,7 +15,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (255 <= param2) {
-            SoftwareDepthBuffer.a(param4, param1, param0, (byte) 74, param5, param7, param6);
+            SoftwareDepthBuffer.drawRightAlignedText(param4, param1, param0, (byte) 74, param5, param7, param6);
             return;
           }
           if (OpenGlTexture1D.field_i) {

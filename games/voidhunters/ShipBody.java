@@ -468,7 +468,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var6 = this.getCenterOfMassOffsetY((byte) 5);
             var7 = param0.worldToScreenX(this.x, (byte) 125);
             var8 = param0.worldToScreenY(true, this.y);
-            GetPhasedEnergyBeamReload.a(var8, param0.scale * 1024.0f, -81, var7, 16711680);
+            GetPhasedEnergyBeamReload.fillCircle(var8, param0.scale * 1024.0f, -81, var7, 16711680);
             var9 = param0.worldToScreenX(-var5_int + this.x, (byte) 122);
             var10 = param0.worldToScreenY(true, -var6 + this.y);
             SetNumStars.drawCircle(1024.0f * param0.scale, (byte) 90, var10, 16777215, var9);

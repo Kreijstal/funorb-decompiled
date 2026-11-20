@@ -888,7 +888,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var19Lifetime1 = this.finaly + var17Lifetime1;
               var20 = param3.worldToScreenX(var18Lifetime1, (byte) 115);
               var21 = param3.worldToScreenY(true, var19Lifetime1);
-              GetPhasedEnergyBeamReload.a(var21, (float)(int)(512.0f * param3.scale), param1 ^ -35, var20, param2);
+              GetPhasedEnergyBeamReload.fillCircle(var21, (float)(int)(512.0f * param3.scale), param1 ^ -35, var20, param2);
               var22Lifetime1 = this.currentconnectedangle - this.connectedangle;
               var23Lifetime1 = -var22Lifetime1 + this.finalangle;
               var24 = 8 * GetNumStars.cosAngle(var23Lifetime1, (byte) 104) >> 9;
@@ -3551,7 +3551,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var12Lifetime1 = this.getWorldConnectionY(-86, var10_ref_wfb);
           var13 = param0 - var11Lifetime1;
           var14 = param3 - var12Lifetime1;
-          var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
+          var15 = GameSnapshotFactory.atan2AngleWithScaling(var14, (byte) -77, var13);
           if (this.isSpinningWeapon(-77)) {
             var16 = GameKeyHandler.normalizeSignedAngle(param4 ^ 855, GameKeyHandler.normalizeSignedAngle(22433, -this.currentconnectedangle + this.finalangle) + this.connectedangle);
             var7 = GameKeyHandler.normalizeSignedAngle(22433, var15 - var16);
@@ -3914,7 +3914,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (0 == var10) {
             var10 = 1;
           }
-          var11 = GameSnapshotFactory.a(var9, (byte) -77, var8);
+          var11 = GameSnapshotFactory.atan2AngleWithScaling(var9, (byte) -77, var8);
           var12 = param2 * var13.getMass(false) / var10;
           if (param5 != null) {
             var13.dy = param5.dy;
@@ -4448,7 +4448,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             if (var14 == 0) {
               var14 = 1;
             }
-            var15 = GameSnapshotFactory.a(var13, (byte) -77, var12);
+            var15 = GameSnapshotFactory.atan2AngleWithScaling(var13, (byte) -77, var12);
             var16 = param2.getMass(false) * var9 / var14;
             param2.addDirectionalForce(this.finaly, GameKeyHandler.normalizeSignedAngle(22433, -100 + (var15 + TextHotspotRegion.randomBoundedInt(var10, 200, 123))), this.finalx, var16, 1948934248);
           }

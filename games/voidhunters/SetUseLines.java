@@ -10,7 +10,7 @@ final class SetUseLines extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isIgnoredPlayer(byte param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

@@ -93,7 +93,7 @@ final class ConsoleValue {
         GetMissionTerrainNebulaProbability.referenceTrackingEnabled = true;
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircle(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 > -79) {
           ConsoleValue.restoreDefaultStateSerializationMode(-58);
         }

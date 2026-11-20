@@ -82,7 +82,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
             var5 < EnvironmentReflectionGpuMaterialEffect.field_k) {
             var10_int = SetReverbDry.getChatFilter(var8_ref_pgb.channelType, (byte) 19);
             if (var10_int <= var8_ref_pgb.getVisibilityPriority(1) && (var8_ref_pgb.unfiltered ||
-              !SetUseLines.a((byte) -94, var8_ref_pgb.senderName))) {
+              !SetUseLines.isIgnoredPlayer((byte) -94, var8_ref_pgb.senderName))) {
               var9 = 1;
             }
           }

@@ -1634,7 +1634,7 @@ final class MissionBuilder implements DiffableState {
           var7_int = 1;
           var8 = param1 - param0;
           var9 = param3 - param5;
-          var10 = GameSnapshotFactory.a(var9, (byte) -77, var8);
+          var10 = GameSnapshotFactory.atan2AngleWithScaling(var9, (byte) -77, var8);
           if (param4 <= 43) {
             discarded$0 = this.findLargestPolygonIndex((byte) 47, (Random) null, (int[][]) null);
           }

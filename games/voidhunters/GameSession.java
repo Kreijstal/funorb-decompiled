@@ -375,7 +375,7 @@ final class GameSession {
             }
             var4 = new ShipBlueprint();
             var4.description = var5;
-            GetLaserRandomness.a((byte) 103, var4);
+            GetLaserRandomness.serializeGameStateToSharedBuffer((byte) 103, var4);
             this.blueprintSizeBytes = IntrusiveNode.copySerializedStateBuffer((byte) -6).payload.length;
             if (this.blueprintSizeBytes <= 192) {
               this.blueprintSaveStatus = 0;
@@ -3028,7 +3028,7 @@ final class GameSession {
                   if (1 == var51.length()) {
                     var34_ref = "0" + var51;
                   }
-                  SoftwareDepthBuffer.a(16541441, -var11Lifetime1 + (var15 + var16), -var11Lifetime1 + (var13 + var12 / 2), (byte) 74, -1, 1, var34_ref);
+                  SoftwareDepthBuffer.drawRightAlignedText(16541441, -var11Lifetime1 + (var15 + var16), -var11Lifetime1 + (var13 + var12 / 2), (byte) 74, -1, 1, var34_ref);
                 }
                 if (var31Lifetime1 == 0) {
                   this.hoveredRespawnOption = -1;
@@ -4154,7 +4154,7 @@ final class GameSession {
               }
               var9 = 200 + var3_intLifetime1 * OpenGlTexture.getCurrentFontAscent((byte) 118);
               var10 = -10 + PartitionZoneFactory.field_a;
-              GetShipPersistence.a(var22, var10, var9, var8, -1, (byte) -103);
+              GetShipPersistence.drawRightAlignedTextWithDefaultFont(var22, var10, var9, var8, -1, (byte) -103);
               if (var7 != 0) {
                 var11_int = 0;
                 for (var12 = var4Lifetime2; var12 <= var5; var12++) {
@@ -4165,7 +4165,7 @@ final class GameSession {
                   if (var14 != 0) {
                     var8Lifetime2 = 16777215;
                   }
-                  GetShipPersistence.a(var13, -10 + var10 - GetPhasedEnergyBeamProjectiles.a(-124, var22), var11_int * OpenGlTexture.getCurrentFontAscent((byte) 118) + 200, var8Lifetime2, -1, (byte) -103);
+                  GetShipPersistence.drawRightAlignedTextWithDefaultFont(var13, -10 + var10 - GetPhasedEnergyBeamProjectiles.a(-124, var22), var11_int * OpenGlTexture.getCurrentFontAscent((byte) 118) + 200, var8Lifetime2, -1, (byte) -103);
                   var11_int++;
                 }
               }
@@ -4657,7 +4657,7 @@ final class GameSession {
                 }
                 if (var13_int == 0) {
                   if ((GetBoostersActiveTime.field_o & param7[var16]) != 0) {
-                    GetPhasedEnergyBeamReload.a(var18, 2.0f, -52, param4 + param10, param6[var16]);
+                    GetPhasedEnergyBeamReload.fillCircle(var18, 2.0f, -52, param4 + param10, param6[var16]);
                   }
                   if ((param7[var16] & GpuVertexKeyBuffer.field_a) != 0) {
                     DelayedPacket.drawLine(var18, param9 - (-param3 - GetPhasedEnergyBeamProjectiles.a(99, var17)), param3 + param9, var18, -16777216, param6[var16]);
@@ -4887,7 +4887,7 @@ final class GameSession {
             this.drawWorldInspectionText(param1, param5, param4, (byte) -96);
             return true;
           }
-          var13Lifetime1 = GameSnapshotFactory.a(var9, (byte) -77, var8_int);
+          var13Lifetime1 = GameSnapshotFactory.atan2AngleWithScaling(var9, (byte) -77, var8_int);
           var14Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, -2048 + var13Lifetime1);
           var15Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, 2048 + var13Lifetime1);
           if (param3) {
@@ -5082,7 +5082,7 @@ final class GameSession {
             var16Lifetime3 = var8.worldToScreenX(ShipTeamConditionFactory.field_a.screenToWorldX(true, PartitionZoneFactory.field_a), (byte) 117);
             var17Lifetime2 = var8.worldToScreenY(true, ShipTeamConditionFactory.field_a.screenToWorldY(0, 0));
             var18Lifetime2 = var8.worldToScreenY(true, ShipTeamConditionFactory.field_a.screenToWorldY(param1 ^ 0, MissionVariableFactory.field_a));
-            GetMissilesHitSourceTeam.a(var6 + var15Lifetime1, var17Lifetime2 + var7, (byte) -128, var18Lifetime2 - var17Lifetime2, 100, 16777215, var16Lifetime3 - var15Lifetime1);
+            GetMissilesHitSourceTeam.drawRectangleAlpha(var6 + var15Lifetime1, var17Lifetime2 + var7, (byte) -128, var18Lifetime2 - var17Lifetime2, 100, 16777215, var16Lifetime3 - var15Lifetime1);
             GetMissionTerrainSpaceProbability.popRasterState(99);
             UiToggleButtonRenderer.drawRectangle(110, var9 + var6, var12 - var11, var7 + var11, 16777215, -var9 + var10);
             return;
@@ -5619,7 +5619,7 @@ final class GameSession {
               var6 = MapClearanceRectangle.getStringWidth(-107, true, ToolkitCanvasContext.menuLabels[var3_int]);
               var4 = var4 + AppletCookieReader.field_c;
               var7 = -(var6 >> 1) + PlayerVote.field_f;
-              if (SetMachineGunAimarc.a(var4, (GraphicsHeap.field_d << 1) + var6, (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - GraphicsHeap.field_d, param2)) {
+              if (SetMachineGunAimarc.isPointInHalfOpenRectangle(var4, (GraphicsHeap.field_d << 1) + var6, (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - GraphicsHeap.field_d, param2)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
@@ -5861,7 +5861,7 @@ final class GameSession {
               var27 = 2;
               var28 = 6;
               for (var29_int = 0; var29_int < var15; var29_int++) {
-                GetPhasedEnergyBeamReload.a(var28 + (-var21Lifetime1 + var23), (float)var27, -102, -var28 + var20Lifetime1 + var22 - var29_int * (var28 + var27), var24);
+                GetPhasedEnergyBeamReload.fillCircle(var28 + (-var21Lifetime1 + var23), (float)var27, -102, -var28 + var20Lifetime1 + var22 - var29_int * (var28 + var27), var24);
               }
             }
             if (OpenGlTexture1D.field_i) {
@@ -5959,7 +5959,7 @@ final class GameSession {
                   var15 = var10.getUnrotatedWorldAngle((byte) -127);
                   var16 = var6_int - var13;
                   var17 = var7 - var14;
-                  var18 = GameSnapshotFactory.a(var17, (byte) -77, var16);
+                  var18 = GameSnapshotFactory.atan2AngleWithScaling(var17, (byte) -77, var16);
                   var19 = GameKeyHandler.normalizeSignedAngle(param3 + 22433, var18 - var15);
                   if (var11 >= Math.abs(var19)) {
                     param2 = 2;
@@ -5983,7 +5983,7 @@ final class GameSession {
                         var28 = var17 * 255 / var22 * var26 / 255;
                         var25 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var28 + var14);
                       }
-                      SetShowTutorial.a(var20, (byte) 66, var24, var21, 16777215, var25, 30);
+                      SetShowTutorial.drawLineAlpha(var20, (byte) 66, var24, var21, 16777215, var25, 30);
                     }
                   }
                 }
@@ -6312,7 +6312,7 @@ final class GameSession {
                   var12 = var7.getUnrotatedWorldAngle((byte) -127);
                   var13 = param2 - var10;
                   var14 = param3 - var11;
-                  var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
+                  var15 = GameSnapshotFactory.atan2AngleWithScaling(var14, (byte) -77, var13);
                   var16 = GameKeyHandler.normalizeSignedAngle(22433, -var12 + var15);
                   var17 = ShipTeamConditionFactory.field_a.worldToScreenX(var10, (byte) 122);
                   var18 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var11);
@@ -6666,7 +6666,7 @@ final class GameSession {
                     if (var28 > 45) {
                       var33 = (-(var28 * 255) + 12750) / 5;
                     }
-                    GetMissilesHitSourceTeam.a(-(var31 >> 1) + var18 + (var16 >> 1), (var17 >> 1) + var19 - (var32 >> 1), (byte) -128, var32, var33, 11184810, var31);
+                    GetMissilesHitSourceTeam.drawRectangleAlpha(-(var31 >> 1) + var18 + (var16 >> 1), (var17 >> 1) + var19 - (var32 >> 1), (byte) -128, var32, var33, 11184810, var31);
                   }
                 }
                 var29Lifetime1 = var41.getCooldown((byte) 64);
@@ -7199,7 +7199,7 @@ final class GameSession {
                   var17 = var12.getTotalWinningTime(GpuSprite.swapTeamId(21957, var13Lifetime1), (byte) -88);
                   var18_int = -var16 + var17;
                   var19 = 1000 * var18_int / Particle.field_l;
-                  var20 = SetPointDefenceLaserAimspeed.a((byte) 10, var19);
+                  var20 = SetPointDefenceLaserAimspeed.formatDurationMillis((byte) 10, var19);
                   var18 = var20;
                   var10 = SetReverbGain.a(CommonArchiveId.field_b.toUpperCase(), new String[]{var23, var20}, param1 ^ 177);
                 } else {
@@ -7856,7 +7856,7 @@ final class GameSession {
               var16 = ShipTeamConditionFactory.field_a.worldToScreenX(var14, (byte) 114);
               var17 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var15);
               if (OpenGlTexture1D.field_i) {
-                var18 = GameSnapshotFactory.a(var12, (byte) -77, var11);
+                var18 = GameSnapshotFactory.atan2AngleWithScaling(var12, (byte) -77, var11);
                 var16 = var16 - (GetNumStars.cosAngle(var18, (byte) -122) * 28 >> 16);
                 var17 = var17 - (28 * TextureLineShape.sinAngle(var18, 97) >> 16);
                 var10.drawRotatedScaled((float)var16, (float)var17, 20.0f, 23.0f, 4096, -var18 << 3, 0, -1, 1);
@@ -8205,9 +8205,9 @@ final class GameSession {
                 var20Lifetime2 = AlphaContainer.getTeamColor(false, var45.getTeam((byte) 66), 13894143);
                 var21Lifetime1 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.getFontMaxDescent(var9, (byte) -121);
                 var22Lifetime1 = var7 - (-var21Lifetime1 - var10);
-                SoftwareDepthBuffer.a(var20Lifetime2, -MidiNote.getFontMaxDescent(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
+                SoftwareDepthBuffer.drawRightAlignedText(var20Lifetime2, -MidiNote.getFontMaxDescent(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
                 var10 = var10 + (var21Lifetime1 - 1);
-                SetMissionTerrainDebrisProbability.a(var20Lifetime2, var19, var22Lifetime1 - var21Lifetime1 / 2 - 2, 4, false, var12, -var12 + (var6 + 1), 2);
+                SetMissionTerrainDebrisProbability.drawProgressBar(var20Lifetime2, var19, var22Lifetime1 - var21Lifetime1 / 2 - 2, 4, false, var12, -var12 + (var6 + 1), 2);
                 if (var13 != null &&
                   var13.world != null) {
                   var23 = var13.world.getBodyById((byte) -27, var45.getId(false));
@@ -8233,7 +8233,7 @@ final class GameSession {
     private final boolean isMouseInRadialSegment(int param0, byte param1, int param2, int param3) {
         int var5 = GetUseDetailLines.field_o - this.radialMenuX;
         int var6 = GetTorpedoReload.field_q - this.radialMenuY;
-        int var7 = GameSnapshotFactory.a(var6, (byte) -77, var5);
+        int var7 = GameSnapshotFactory.atan2AngleWithScaling(var6, (byte) -77, var5);
         int var8 = TextLayout.approximateVectorLength(var5, (byte) 112, var6);
         int var9 = -41 / ((param1 - 48) / 45);
         if (var8 > param3 / 8 &&
@@ -8348,7 +8348,7 @@ final class GameSession {
                 if (var5_array[var7Lifetime1] != null &&
                   var5_array[var7Lifetime1].length() != 0) {
                   UiToggleButtonRenderer.drawRectangle(116, -GetPhasedEnergyBeamProjectiles.a(-42, var5_array[var7Lifetime1]) + 27, -1 + GetPointDefenceLaserProjectiles.getFontAscent(false, 0), var6 + 4 + GetPointDefenceLaserProjectiles.getFontAscent(false, 0) * var7Lifetime1, 11184810, GetPhasedEnergyBeamProjectiles.a(-128, var5_array[var7Lifetime1]) + 5);
-                  SoftwareDepthBuffer.a(16777215, (var7Lifetime1 + 1) * GetPointDefenceLaserProjectiles.getFontAscent(false, 0) + var6, 30, (byte) 74, -1, 0, var5_array[var7Lifetime1]);
+                  SoftwareDepthBuffer.drawRightAlignedText(16777215, (var7Lifetime1 + 1) * GetPointDefenceLaserProjectiles.getFontAscent(false, 0) + var6, 30, (byte) 74, -1, 0, var5_array[var7Lifetime1]);
                 }
               }
             }
@@ -8706,7 +8706,7 @@ final class GameSession {
               var13 = this.state.getPlayerName(1, var9.aId);
               var14 = this.state.getPlayerName(1, var9.bId);
               var12Lifetime1 = SetReverbGain.a(var17, new String[]{var13, var14}, 85);
-              SetThrusterForce.a(16777215, var11, PartitionZoneFactory.field_a - 5, 180, var12Lifetime1, (var7 >> 8) + 140, -1);
+              SetThrusterForce.drawRightAlignedTextWithDefaultFont(16777215, var11, PartitionZoneFactory.field_a - 5, 180, var12Lifetime1, (var7 >> 8) + 140, -1);
               var7 = var7 + OpenGlTexture.getCurrentFontAscent((byte) 118) * var11;
             }
             return;

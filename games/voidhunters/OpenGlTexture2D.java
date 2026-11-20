@@ -243,7 +243,7 @@ class OpenGlTexture2D extends OpenGlTexture {
             param4 = param5;
           }
           if (param8) {
-            var11_int = ParticleFactory.a((byte) -122, param1);
+            var11_int = ParticleFactory.getGlFormatComponentCount((byte) -122, param1);
             var12 = var11_int * param5;
             var13 = var11_int * param4;
             var14 = new byte[var12 * param0];
@@ -313,7 +313,7 @@ class OpenGlTexture2D extends OpenGlTexture {
           this.toolkit.bindTexture(100, (OpenGlTexture) (this));
           if (param5 &&
             this.target != 34037) {
-            SoftwareRenderContext.a(param7, param2, param3, param1, param4, param6, -29702);
+            SoftwareRenderContext.uploadFloatMipmaps(param7, param2, param3, param1, param4, param6, -29702);
             this.markMipmapsPresent((byte) 62, true);
           } else {
             jaggl.OpenGL.glTexImage2Df(this.target, 0, this.internalFormat, this.width, this.height, 0, param7, 5126, param6, 0);

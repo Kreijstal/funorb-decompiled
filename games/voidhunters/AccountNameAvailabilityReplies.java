@@ -27,7 +27,7 @@ final class AccountNameAvailabilityReplies {
             stackIn_12_0 = !(SetDebrisCarryOverPercentage.accountCreationAge >= 13);
             PrimitiveType.field_a = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_12_0, 1);
             var6 = (String[]) null;
-            WeaponDefinition.a((String[]) null, 11113);
+            WeaponDefinition.setPlayerNameSuggestions((String[]) null, 11113);
             return;
           }
           if (param1 < 100) {
@@ -39,7 +39,7 @@ final class AccountNameAvailabilityReplies {
             return;
           }
           var4 = param3;
-          WeaponDefinition.a(var4, 11113);
+          WeaponDefinition.setPlayerNameSuggestions(var4, 11113);
           PrimitiveType.field_a = MissionCondition.createAccountNameSuggestions(param3, (byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

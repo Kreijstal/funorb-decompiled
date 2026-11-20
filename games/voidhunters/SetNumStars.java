@@ -8,18 +8,18 @@ final class SetNumStars extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int atanFirstQuadrantAngle(int param0, int param1, int param2) {
         if (param2 != 11105) {
           field_o = (int[]) null;
           if (param0 > param1) {
-            return 2048 - TextHotspotRegion.a((param1 << 16) / param0, (byte) -126);
+            return 2048 - TextHotspotRegion.atanFixed16Angle((param1 << 16) / param0, (byte) -126);
           }
-          return TextHotspotRegion.a((param0 << 16) / param1, (byte) -127);
+          return TextHotspotRegion.atanFixed16Angle((param0 << 16) / param1, (byte) -127);
         }
         if (param0 > param1) {
-          return 2048 - TextHotspotRegion.a((param1 << 16) / param0, (byte) -126);
+          return 2048 - TextHotspotRegion.atanFixed16Angle((param1 << 16) / param0, (byte) -126);
         }
-        return TextHotspotRegion.a((param0 << 16) / param1, (byte) -127);
+        return TextHotspotRegion.atanFixed16Angle((param0 << 16) / param1, (byte) -127);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

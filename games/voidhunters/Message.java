@@ -36,23 +36,23 @@ final class Message implements DiffableState {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawClippedVerticalLine(int param0, int param1, int param2, int param3, int param4) {
         if (OpenGlTexture3D.rasterClipMinX <= param1) {
           if (param1 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
             if (param0 > -18) {
-              Message.a(72, 80, 26, 93, -92);
+              Message.drawClippedVerticalLine(72, 80, 26, 93, -92);
               return;
             }
             return;
           }
           param4 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param4);
           param3 = IntrusiveNode.clamp(31123, NebulaField.rasterClipMinY, EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY, param3);
-          GetPhasedEnergyBeamProjectileOndamageParticles.a(-105, param4, param1, param3, param2);
+          GetPhasedEnergyBeamProjectileOndamageParticles.fillVerticalSpanUnclipped(-105, param4, param1, param3, param2);
         }
         if (param0 <= -18) {
           return;
         }
-        Message.a(72, 80, 26, 93, -92);
+        Message.drawClippedVerticalLine(72, 80, 26, 93, -92);
     }
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {

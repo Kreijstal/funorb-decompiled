@@ -86,7 +86,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
               } else {
                 if (var5 != 9) {
                   if (10 == var5) {
-                    SetPhasedEnergyBeamProjectiles.a(var4, 116);
+                    SetPhasedEnergyBeamProjectiles.attachPresetComponents(var4, 116);
                   } else {
                     if (var5 == 11) {
                       PlayerVoteFactory.attachPresetComponents(param2, var4);

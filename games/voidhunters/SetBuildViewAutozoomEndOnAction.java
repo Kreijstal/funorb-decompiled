@@ -80,7 +80,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
               var6 = PendingRequest.getStringWidth(GetWorldWidthUpshift.field_o[var3_int], -118, true);
               var4 = var4 + SpawnEnemyShipOrderDefinition.field_g;
               var7 = -(var6 >> 1) + LobbyInviteSuggestionText.field_b;
-              if (SetMachineGunAimarc.a(var4, (ShipTeamCondition.field_e << 1) + var6, (SetPointDefenceLaserAimarc.field_q << 1) + SetExplosionPushMultiplier.field_o, param2, (byte) -65, -ShipTeamCondition.field_e + var7, param0)) {
+              if (SetMachineGunAimarc.isPointInHalfOpenRectangle(var4, (ShipTeamCondition.field_e << 1) + var6, (SetPointDefenceLaserAimarc.field_q << 1) + SetExplosionPushMultiplier.field_o, param2, (byte) -65, -ShipTeamCondition.field_e + var7, param0)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

@@ -368,7 +368,7 @@ final class World implements DiffableState, CompactGameState {
                     var16Lifetime1 = (param0.dy * var13_int >> 8) + param2;
                     var17 = var15Lifetime2 - var10_ref_uwa.x;
                     var18 = -var10_ref_uwa.y + var16Lifetime1;
-                    var19 = GameSnapshotFactory.a(var18, (byte) -77, var17);
+                    var19 = GameSnapshotFactory.atan2AngleWithScaling(var18, (byte) -77, var17);
                     var20 = GameKeyHandler.normalizeSignedAngle(22433, var19 - var10_ref_uwa.angle);
                     if (Math.abs(var20) < var10_ref_uwa.arcHalfAngle) {
                       var14_intLifetime2 = 1;
@@ -382,7 +382,7 @@ final class World implements DiffableState, CompactGameState {
                           var15Lifetime2Lifetime1 = (param0.dx * var13_int >> 8) + param1;
                           var17Lifetime1 = var15Lifetime2Lifetime1 - var10_ref_uwa.x;
                           var18Lifetime1 = var16Lifetime1Lifetime1 - var10_ref_uwa.y;
-                          var19Lifetime1 = GameSnapshotFactory.a(var18Lifetime1, (byte) -77, var17Lifetime1);
+                          var19Lifetime1 = GameSnapshotFactory.atan2AngleWithScaling(var18Lifetime1, (byte) -77, var17Lifetime1);
                           var20 = GameKeyHandler.normalizeSignedAngle(22433, -var10_ref_uwa.angle + var19Lifetime1);
                           if (Math.abs(var20) < var10_ref_uwa.arcHalfAngle) {
                             var14_intLifetime2 = 1;
@@ -6816,7 +6816,7 @@ final class World implements DiffableState, CompactGameState {
           if (param3 >= -2) {
             return;
           }
-          var11 = GameSnapshotFactory.a(var10Lifetime1, (byte) -77, var9Lifetime1);
+          var11 = GameSnapshotFactory.atan2AngleWithScaling(var10Lifetime1, (byte) -77, var9Lifetime1);
           var12 = var8_int * GetNumStars.cosAngle(var11, (byte) 101) >> 16;
           var13 = var8_int * TextureLineShape.sinAngle(var11, 65) >> 16;
           var14 = 4;
@@ -8125,7 +8125,7 @@ final class World implements DiffableState, CompactGameState {
               var12 = param1.worldToScreenX(var10, (byte) 127);
               var13 = param1.worldToScreenY(true, var11);
               var14 = AlphaContainer.getTeamColor(false, param0.getTeam((byte) 88), 13894143);
-              GetPhasedEnergyBeamReload.a(var13, var8, -109, var12, var14);
+              GetPhasedEnergyBeamReload.fillCircle(var13, var8, -109, var12, var14);
             }
             return;
           }
@@ -8805,7 +8805,7 @@ final class World implements DiffableState, CompactGameState {
                 var14 = -param3.getY((byte) -46) + var11;
                 var15 = TextLayout.approximateVectorLength(var13, (byte) 111, var14);
                 if (var15 > var12_int) {
-                  var16 = GameSnapshotFactory.a(var14, (byte) -77, var13);
+                  var16 = GameSnapshotFactory.atan2AngleWithScaling(var14, (byte) -77, var13);
                   var10_int = param3.getX(false) + (var12_int >> 8) * (GetNumStars.cosAngle(var16, (byte) -115) >> 8);
                   var11 = param3.getY((byte) 123) + (var12_int >> 8) * (TextureLineShape.sinAngle(var16, 47) >> 8);
                 }
