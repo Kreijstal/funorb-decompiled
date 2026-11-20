@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf {
-    final static int a(int param0, int param1, int[] param2) {
+final class PolygonAreaEstimator {
+    final static int estimateArea(int param0, int param1, int[] param2) {
         int var6_int = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -33,7 +33,7 @@ final class tf {
           var5 = 0;
           if (param1 > -25) {
             var13 = (int[]) null;
-            tf.a(-23, -46, (int[]) null);
+            PolygonAreaEstimator.estimateArea(-23, -46, (int[]) null);
           }
           for (var6_int = 0; param2.length > var6_int; var6_int += 2) {
             var7 = param2[var6_int];

@@ -11,7 +11,7 @@ final class MissionBuilder implements DiffableState {
     int seed;
     static int field_e;
 
-    private final int a(GameSnapshot param0, int param1, int param2, Random param3) {
+    private final int chooseRandomTeamPlayerIndex(GameSnapshot param0, int param1, int param2, Random param3) {
         int var7 = 0;
         int stackIn_13_0 = 0;
         int stackIn_26_0 = 0;
@@ -34,7 +34,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var5_int = 0;
           if (param2 != 13145) {
-            this.a(false, -19, -17, false, (World) null, false, (Random) null);
+            this.generateTerrain(false, -19, -17, false, (World) null, false, (Random) null);
           }
           for (var6 = 0; param0.players.length > var6; var6++) {
             var7_ref_tfa = param0.getPlayer(var6, (byte) 59);
@@ -95,7 +95,7 @@ final class MissionBuilder implements DiffableState {
         return var5;
     }
 
-    private final int[] a(int param0, Random param1, byte param2, int[][] param3) {
+    private final int[] chooseTerrainTypes(int param0, Random param1, byte param2, int[][] param3) {
         int var14 = 0;
         int[] stackIn_11_0 = null;
         int[] stackIn_31_0 = null;
@@ -144,8 +144,8 @@ final class MissionBuilder implements DiffableState {
             var8 = var8 + this.optionTotals[var9];
           }
           var5[2] = var5[2] + Math.min(var8, 5);
-          var9Lifetime1 = this.a(var5, 262144);
-          var10 = this.a(param1, param3, var5, var9Lifetime1, 101);
+          var9Lifetime1 = this.sumWeights(var5, 262144);
+          var10 = this.chooseWeightedPolygonTypes(param1, param3, var5, var9Lifetime1, 101);
           var11 = 0;
           for (var12 = 0; var10.length > var12; var12++) {
             if (var10[var12] == 2) {
@@ -186,7 +186,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(World param0, int param1, int param2, int param3) {
+    private final void createDataArrayScoringObjective(World param0, int param1, int param2, int param3) {
         MissionEvent var8 = null;
         MissionEvent var9 = null;
         VariableCondition var10 = null;
@@ -245,7 +245,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, Random param1, GameSnapshot param2, byte param3, int param4) {
+    private final void createTeamShipTargetObjective(int param0, Random param1, GameSnapshot param2, byte param3, int param4) {
         World var12 = null;
         Ship var7 = null;
         int var8 = 0;
@@ -257,7 +257,7 @@ final class MissionBuilder implements DiffableState {
           var7.setPosition(param0, param4, (byte) -68);
           var8 = 1;
           var7.setTeam(17704, var8);
-          var9 = this.a(param2, var8, 13145, param1);
+          var9 = this.chooseRandomTeamPlayerIndex(param2, var8, 13145, param1);
           var7.setOwner(var9, 98);
           if (var9 == -1) {
             var7.setAi(new ShipAI(), 4);
@@ -274,7 +274,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int a(int[] param0, int param1) {
+    private final int sumWeights(int[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -318,7 +318,7 @@ final class MissionBuilder implements DiffableState {
         return SetAutoAfkTimeout.a(true, false, -61, false, param1, 1);
     }
 
-    private final void a(Random param0, int param1, World param2) {
+    private final void spawnNeutralAiFleets(Random param0, int param1, World param2) {
         int var9 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -442,7 +442,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int[] a(int param0, int param1, int[] param2) {
+    private final int[] expandTerrainTypeArray(int param0, int param1, int[] param2) {
         int[] var4 = null;
         RuntimeException var4_ref = null;
         int[] var5 = null;
@@ -475,7 +475,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, Random param1, GameSnapshot param2) {
+    private final void swapMissionTeams(int param0, Random param1, GameSnapshot param2) {
         int var6_int = 0;
         int var13_int = 0;
         int var14 = 0;
@@ -519,7 +519,7 @@ final class MissionBuilder implements DiffableState {
               var8_int = GpuSprite.swapTeamId(21957, var21.getTeam((byte) 91));
               var21.setTeam(param0 + 17705, var8_int);
               if (var21.getOwner((byte) -117) >= 0) {
-                var9 = this.a(param2, var8_int, 13145, param1);
+                var9 = this.chooseRandomTeamPlayerIndex(param2, var8_int, 13145, param1);
                 var21.setOwner(var9, 98);
                 if (-1 == var9) {
                   var21.setAi(new ShipAI(), param0 ^ -5);
@@ -613,7 +613,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int a(byte param0, Random param1, int[][] param2) {
+    private final int findLargestPolygonIndex(byte param0, Random param1, int[][] param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -640,7 +640,7 @@ final class MissionBuilder implements DiffableState {
           }
           for (var6 = 0; var6 < param2.length; var6++) {
             var7 = param2[var6];
-            var8 = tf.a(14, -127, var7);
+            var8 = PolygonAreaEstimator.estimateArea(14, -127, var7);
             if (var4_int < var8) {
               var5 = var6;
               var4_int = var8;
@@ -681,7 +681,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int a(int param0, int param1, ShipBody[] param2, ShipBody[] param3) {
+    private final int remapBodyId(int param0, int param1, ShipBody[] param2, ShipBody[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -708,7 +708,7 @@ final class MissionBuilder implements DiffableState {
           if (param1 != 0) {
             stackIn_12_0 = -55;
             stackIn_12_1 = -57;
-            MissionBuilder.a(stackIn_12_0, stackIn_12_1, (LobbyGameEntry) null, -12, 46, false, 71, -25);
+            MissionBuilder.searchCompatibleLobbyOptions(stackIn_12_0, stackIn_12_1, (LobbyGameEntry) null, -12, 46, false, 71, -25);
           }
           stackIn_14_0 = param0;
           return stackIn_14_0;
@@ -735,8 +735,8 @@ final class MissionBuilder implements DiffableState {
     private final void buildMissionWorld(GameSnapshot param0, Random param1, World param2, int param3) {
         int var5_int = param0.missionState.getVotedObjective(6472);
         int var6 = GetDebrisPartitioned.a(var5_int, 9) ? 1 : 0;
-        this.a(var5_int, false, param2);
-        this.a(true, var5_int, param3 ^ 31938, true, param2, var6 != 0, param1);
+        this.setWorldDimensionsFromOptions(var5_int, false, param2);
+        this.generateTerrain(true, var5_int, param3 ^ 31938, true, param2, var6 != 0, param1);
         param0.world.setMissionBuilder(0, this);
         if (param3 != 4581) {
           return;
@@ -748,7 +748,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final ShipBody[] a(GameSnapshot param0, ShipBody[] param1, byte param2, Random param3) {
+    private final ShipBody[] duplicateOppositeTeamBodies(GameSnapshot param0, ShipBody[] param1, byte param2, Random param3) {
         Object stackIn_17_0 = null;
         Object stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -791,7 +791,7 @@ final class MissionBuilder implements DiffableState {
                 var9 = GpuSprite.swapTeamId(21957, var12.getTeam((byte) 64));
                 var12.setTeam(17704, var9);
                 if (var12.getOwner((byte) -117) >= 0) {
-                  var10 = this.a(param0, var9, 13145, param3);
+                  var10 = this.chooseRandomTeamPlayerIndex(param0, var9, 13145, param3);
                   var12.setOwner(var10, -97);
                   if (-1 == var10) {
                     var12.setAi(new ShipAI(), 4);
@@ -831,7 +831,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final ShipBody[] a(int param0, int param1, World param2, byte param3) {
+    private final ShipBody[] createModuleCollectionObjective(int param0, int param1, World param2, byte param3) {
         int var20 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -920,7 +920,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, MissionEvent[] param1, MapZone[] param2, MapZone[] param3, World param4, ShipBody[] param5, byte param6, ShipBody[] param7) {
+    private final void duplicateOppositeTeamEvents(int param0, MissionEvent[] param1, MapZone[] param2, MapZone[] param3, World param4, ShipBody[] param5, byte param6, ShipBody[] param7) {
         int var9_int = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -977,14 +977,14 @@ final class MissionBuilder implements DiffableState {
                 if (!(var15 instanceof BodyDestroyedCondition)) {
                   if (var15 instanceof BodyInZoneCondition) {
                     var25 = (BodyInZoneCondition) (var15);
-                    var17 = this.a(var25.getParameter((byte) -103, 0), 0, param5, param7);
+                    var17 = this.remapBodyId(var25.getParameter((byte) -103, 0), 0, param5, param7);
                     var25.setParameter(param4, -2, 0, var17);
-                    var18 = this.a(var25.getParameter((byte) -110, 1), -2950, param3, param4, param2);
+                    var18 = this.remapMapZoneIndex(var25.getParameter((byte) -110, 1), -2950, param3, param4, param2);
                     var25.setParameter(param4, -2, 1, var18);
                   }
                 } else {
                   var24 = (BodyDestroyedCondition) (var15);
-                  var17 = this.a(var24.getParameter((byte) -117, 0), 0, param5, param7);
+                  var17 = this.remapBodyId(var24.getParameter((byte) -117, 0), 0, param5, param7);
                   var24.setParameter(param4, param6 - 56, 0, var17);
                 }
               }
@@ -1050,7 +1050,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final ShipBody[] a(int param0, int param1, World param2, int param3) {
+    private final ShipBody[] createReinforcementCaptureObjective(int param0, int param1, World param2, int param3) {
         int var11 = 0;
         int var18 = 0;
         int var5_int = 0;
@@ -1249,7 +1249,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, int param1, MissionControl param2) {
+    private final void addTimedTeamVictoryEvents(int param0, int param1, MissionControl param2) {
         int var4_int = 0;
         MissionEvent var7 = null;
         MissionEvent var8 = null;
@@ -1278,7 +1278,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final MapZone[] a(MissionEvent[] param0, World param1, int param2, boolean param3) {
+    private final MapZone[] collectEventMapZones(MissionEvent[] param0, World param1, int param2, boolean param3) {
         int var6 = 0;
         Object var5 = null;
         MissionEvent var7 = null;
@@ -1295,7 +1295,7 @@ final class MissionBuilder implements DiffableState {
           var5 = null;
           for (var6 = param2; param0.length > var6; var6++) {
             var7 = param0[var6];
-            var5 = this.a(var7.getConditions((byte) -123), (MapZone[]) (var5), -95, param1);
+            var5 = this.collectConditionMapZones(var7.getConditions((byte) -123), (MapZone[]) (var5), -95, param1);
           }
           if (!param3) {
             this.addClearanceArea(true, (MapClearanceArea) null);
@@ -1322,7 +1322,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(World param0, int param1, int param2) {
+    private final void addTimedWinnerEvents(World param0, int param1, int param2) {
         int var4_int = 0;
         MissionEvent var5 = null;
         MissionEvent var9 = null;
@@ -1352,7 +1352,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final ShipBody[] b(int param0, int param1, World param2, int param3) {
+    private final ShipBody[] createAiShipTargetObjective(int param0, int param1, World param2, int param3) {
         Ship var5 = null;
         RuntimeException var5_ref = null;
         MissionEvent var6 = null;
@@ -1389,7 +1389,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, boolean param3, World param4, boolean param5, Random param6) {
+    private final void generateTerrain(boolean param0, int param1, int param2, boolean param3, World param4, boolean param5, Random param6) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -1415,21 +1415,21 @@ final class MissionBuilder implements DiffableState {
           var10 = (int[][]) null;
           var13 = this.createRectangleOrTriangle(0, var8_int, var9, param5);
           var10Lifetime1 = var13;
-          var10Lifetime2 = this.a(param2 ^ -27942, 50, param6, var13);
+          var10Lifetime2 = this.subdividePolygons(param2 ^ -27942, 50, param6, var13);
           if (param2 != 27943) {
             return;
           }
-          var14 = this.a(param6, var10Lifetime2, (byte) 65, param1, var8_int);
+          var14 = this.chooseTerrainTypesForObjective(param6, var10Lifetime2, (byte) 65, param1, var8_int);
           var11 = var14;
           if (param5) {
             var12 = var10Lifetime2.length;
-            var15 = this.a(var12, -88, var14);
+            var15 = this.expandTerrainTypeArray(var12, -88, var14);
             var11 = var15;
-            var10Lifetime2 = this.a(var10Lifetime2, var15, var12, (byte) 115);
+            var10Lifetime2 = this.duplicateRotatedPolygons(var10Lifetime2, var15, var12, (byte) 115);
           }
-          this.a(param6, var10Lifetime2, var11, param4, param0, 4);
+          this.populateNebulae(param6, var10Lifetime2, var11, param4, param0, 4);
           if (param3) {
-            this.a(param6, param4, var10Lifetime2, param2 - 27942, var11);
+            this.populateAsteroidsAndDebris(param6, param4, var10Lifetime2, param2 - 27942, var11);
           }
           WorldDebugArrow.debugPolygons = var10Lifetime2;
           return;
@@ -1453,7 +1453,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int[] a(Random param0, int[][] param1, int[] param2, int param3, int param4) {
+    private final int[] chooseWeightedPolygonTypes(Random param0, int[][] param1, int[] param2, int param3, int param4) {
         int[][] discarded$1 = null;
         int var7 = 0;
         int[] var6 = null;
@@ -1473,12 +1473,12 @@ final class MissionBuilder implements DiffableState {
         var9 = VoidHunters.field_G;
         try {
           if (param4 < 78) {
-            discarded$1 = this.a((int[][]) null, (int[]) null, 31, (byte) 87);
+            discarded$1 = this.duplicateRotatedPolygons((int[][]) null, (int[]) null, 31, (byte) 87);
           }
           var10 = new int[param1.length];
           var6 = var10;
           for (var7 = 0; var7 < param1.length; var7++) {
-            var8 = this.a(param3, param0, param2, (byte) 63);
+            var8 = this.chooseWeightedIndex(param3, param0, param2, (byte) 63);
             var10[var7] = var8;
           }
           stackIn_7_0 = var6;
@@ -1539,7 +1539,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int[][] a(int[][] param0, int[] param1, int param2, byte param3) {
+    private final int[][] duplicateRotatedPolygons(int[][] param0, int[] param1, int param2, byte param3) {
         int var5_int = 0;
         int var8_int = 0;
         int[][] stackIn_3_0 = null;
@@ -1607,7 +1607,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final boolean a(int param0, int param1, int[] param2, int param3, byte param4, int param5) {
+    private final boolean hasPolygonEdgeClearance(int param0, int param1, int[] param2, int param3, byte param4, int param5) {
         int discarded$0 = 0;
         int var12 = 0;
         int stackIn_11_0 = 0;
@@ -1636,7 +1636,7 @@ final class MissionBuilder implements DiffableState {
           var9 = param3 - param5;
           var10 = GameSnapshotFactory.a(var9, (byte) -77, var8);
           if (param4 <= 43) {
-            discarded$0 = this.a((byte) 47, (Random) null, (int[][]) null);
+            discarded$0 = this.findLargestPolygonIndex((byte) 47, (Random) null, (int[][]) null);
           }
           var11 = (TextureLineShape.sinAngle(var10 * 4, 103) + 65536) / 2;
           for (var12 = 0; var12 < param2.length; var12 += 2) {
@@ -1673,7 +1673,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final ShipBody[] a(byte param0, World param1, MissionCondition[] param2, ShipBody[] param3) {
+    private final ShipBody[] collectConditionBodies(byte param0, World param1, MissionCondition[] param2, ShipBody[] param3) {
         int var5_int = 0;
         MissionCondition var6 = null;
         int var9 = 0;
@@ -1772,7 +1772,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, Random param4, World param5, int param6) {
+    private final void createShipDeliveryObjective(int param0, int param1, int param2, int param3, Random param4, World param5, int param6) {
         int var21 = 0;
         int var25_int = 0;
         RuntimeException runtimeException = null;
@@ -1886,7 +1886,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int a(MissionControl param0, byte param1) {
+    private final int findTeamWithoutVictoryAction(MissionControl param0, byte param1) {
         int var8 = 0;
         int stackIn_3_0 = 0;
         int stackIn_30_0 = 0;
@@ -1960,7 +1960,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final static void a(int param0, int param1, LobbyGameEntry param2, int param3, int param4, boolean param5, int param6, int param7) {
+    final static void searchCompatibleLobbyOptions(int param0, int param1, LobbyGameEntry param2, int param3, int param4, boolean param5, int param6, int param7) {
         IconTextWidget[][] stackIn_38_0 = null;
         int stackIn_39_1 = 0;
         int stackIn_59_0 = 0;
@@ -2105,7 +2105,7 @@ final class MissionBuilder implements DiffableState {
                   } else {
                     UsernameAvailabilityValidator.field_i[param3] = (byte)var11;
                   }
-                  MissionBuilder.a(param0, param1, param2, 1 + param3, 110, param5, param6, param7);
+                  MissionBuilder.searchCompatibleLobbyOptions(param0, param1, param2, 1 + param3, 110, param5, param6, param7);
                   if (TickClock.field_b) {
                     return;
                   }
@@ -2143,7 +2143,7 @@ final class MissionBuilder implements DiffableState {
                 }
               }
               if (var12 != 0) {
-                MissionBuilder.a(param0, param1, param2, param3 + 1, 91, param5, param6, param7);
+                MissionBuilder.searchCompatibleLobbyOptions(param0, param1, param2, param3 + 1, 91, param5, param6, param7);
                 var10Lifetime1 = 1;
               }
               if (TickClock.field_b) {
@@ -2180,7 +2180,7 @@ final class MissionBuilder implements DiffableState {
           var3.seed = this.seed;
           var3.optionTotals = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.optionTotals, (byte) -117, this.optionTotals);
           if (param0 <= 54) {
-            discarded$0 = this.a(87, -72, (World) null, 18);
+            discarded$0 = this.createReinforcementCaptureObjective(87, -72, (World) null, 18);
           }
           var4 = new Class[]{MapClearanceCircle.class, MapClearanceRectangle.class};
           var5 = new GameStateFactory[]{MachineGunWeaponDefinition.field_d, GetFighterBayReload.field_q};
@@ -2190,7 +2190,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int a(int param0, Random param1, int[] param2, byte param3) {
+    private final int chooseWeightedIndex(int param0, Random param1, int[] param2, byte param3) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -2252,7 +2252,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int[] a(Random param0, int[][] param1, byte param2, int param3, int param4) {
+    private final int[] chooseTerrainTypesForObjective(Random param0, int[][] param1, byte param2, int param3, int param4) {
         int var8 = 0;
         int var10 = 0;
         int[] stackIn_21_0 = null;
@@ -2270,19 +2270,19 @@ final class MissionBuilder implements DiffableState {
         int var12 = 0;
         var12 = VoidHunters.field_G;
         try {
-          var6 = this.a(param3, param0, (byte) 94, param1);
+          var6 = this.chooseTerrainTypes(param3, param0, (byte) 94, param1);
           if (param3 == 8 &&
             param1 != null) {
             var7 = param4 / 4;
             for (var8 = 0; var8 < param1.length; var8++) {
               if (var6[var8] == 2) {
                 var9 = param1[var8];
-                if (!this.a(var9, 30506, var7)) {
+                if (!this.isPolygonCenterWithinRadius(var9, 30506, var7)) {
                   var6[var8] = 3;
                   for (var10 = 0; var10 < param1.length; var10++) {
                     var11 = param1[var8];
                     if (var6[var10] != 2 &&
-                      this.a(var11, 30506, var7)) {
+                      this.isPolygonCenterWithinRadius(var11, 30506, var7)) {
                       var6[var10] = 2;
                       break;
                     }
@@ -2330,20 +2330,20 @@ final class MissionBuilder implements DiffableState {
           var7 = param3.world;
           var7.setObjectiveType(param0, (byte) 23);
           var7.makeNebulaFieldMutable((byte) 80);
-          this.a(0, param1, param0, param2, param3);
-          this.a(param1, param2, var7, 0);
+          this.populateObjectiveEntitiesAndEvents(0, param1, param0, param2, param3);
+          this.ensureTimedVictoryEvents(param1, param2, var7, 0);
           if (ConsoleCharacterStream.a(33, param0)) {
-            this.a(InvertTextureOperation.b(-100, param0), false, var7);
+            this.createTeamSpawnPoints(InvertTextureOperation.b(-100, param0), false, var7);
           }
           if (param4 < 34) {
-            discarded$1 = this.a(42, 83, (int[]) null, 99, (byte) -48, -83);
+            discarded$1 = this.hasPolygonEdgeClearance(42, 83, (int[]) null, 99, (byte) -48, -83);
           }
           var7.clearTerrainAroundEntities(0);
           if (gj.a(param0, 22681)) {
-            this.a(param2, 90, var7);
+            this.spawnNeutralAiFleets(param2, 90, var7);
           }
           if (GetDefaultFiringLeeway.a(param3, (byte) -24)) {
-            this.a(-1, param2, param3);
+            this.swapMissionTeams(-1, param2, param3);
             var7.setTeamsSwapped(48, true);
           } else {
             var7.setTeamsSwapped(48, false);
@@ -2369,7 +2369,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final void a(World param0, int param1) {
+    final void rebuildNebulae(World param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         Random var5 = null;
@@ -2384,12 +2384,12 @@ final class MissionBuilder implements DiffableState {
           if (param1 != 0) {
             MissionBuilder.setIntegerPreference((byte) 80, (Object) null, -58);
           }
-          this.a(false, var3_int, 27943, false, param0, var4 != 0, var5);
+          this.generateTerrain(false, var3_int, 27943, false, param0, var4 != 0, var5);
           if (null != this.clearanceAreas) {
             var6 = this.clearanceAreas;
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
-              var8.a(param0, true);
+              var8.clearNebulae(param0, true);
             }
           }
         } catch (RuntimeException runtimeException) {
@@ -2397,7 +2397,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(boolean param0, boolean param1, World param2) {
+    private final void createTeamSpawnPoints(boolean param0, boolean param1, World param2) {
         ShipBody[] discarded$0 = null;
         int var9 = 0;
         int var20 = 0;
@@ -2428,7 +2428,7 @@ final class MissionBuilder implements DiffableState {
         var22 = VoidHunters.field_G;
         try {
           if (param1) {
-            discarded$0 = this.a(-44, 117, (World) null, 24);
+            discarded$0 = this.createReinforcementCaptureObjective(-44, 117, (World) null, 24);
           }
           var4_int = param2.getWidth((byte) -122);
           var5 = param2.getHeight(1);
@@ -2493,7 +2493,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final ShipBody[] a(int param0, Random param1, int param2, int param3, World param4) {
+    private final ShipBody[] createEscortObjective(int param0, Random param1, int param2, int param3, World param4) {
         RuntimeException var6 = null;
         Object var7 = null;
         int var8 = 0;
@@ -2584,7 +2584,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int[][] a(int param0, int param1, Random param2, int[][] param3) {
+    private final int[][] subdividePolygons(int param0, int param1, Random param2, int[][] param3) {
         int[][] stackIn_33_0 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -2651,9 +2651,9 @@ final class MissionBuilder implements DiffableState {
               stackIn_33_0 = (int[][]) (param3);
               return stackIn_33_0;
             }
-            var6 = this.a((byte) 52, param2, param3);
+            var6 = this.findLargestPolygonIndex((byte) 52, param2, param3);
             var7 = param3[var6];
-            var47 = GetBombletSprayProjectileOndamageParticles.a((byte) -118, var7);
+            var47 = GetBombletSprayProjectileOndamageParticles.getPolygonBounds((byte) -118, var7);
             var9 = var47[0];
             var10 = var47[1];
             var11 = var47[2];
@@ -2759,7 +2759,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final MapZone[] a(int param0, World param1, MapZone[] param2) {
+    private final MapZone[] duplicateRotatedMapZones(int param0, World param1, MapZone[] param2) {
         int var5 = 0;
         Object var4 = null;
         MapZone var6 = null;
@@ -2813,7 +2813,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, Random param3, GameSnapshot param4) {
+    private final void populateObjectiveEntitiesAndEvents(int param0, boolean param1, int param2, Random param3, GameSnapshot param4) {
         ShipBody[] discarded$0 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_52_0 = null;
@@ -2875,48 +2875,48 @@ final class MissionBuilder implements DiffableState {
               if (var16_intLifetime1 != 2 &&
                 var16_intLifetime1 != 6) {
                 if (var16_intLifetime1 == 3) {
-                  this.a(var15, var22, var7, var8, param3, 2097152);
+                  this.createRandomBlueprintTargetObjective(var15, var22, var7, var8, param3, 2097152);
                 } else if (var16_intLifetime1 == 7) {
                   var14 = 0;
-                  this.a(var8, var7, var10, -118, param3, var22, var9);
+                  this.createShipDeliveryObjective(var8, var7, var10, -118, param3, var22, var9);
                 } else if (var16_intLifetime1 == 8) {
                   var14 = 0;
-                  var13 = this.a(var8, var7, var22, (byte) -85);
+                  var13 = this.createModuleCollectionObjective(var8, var7, var22, (byte) -85);
                 } else if (var16_intLifetime1 == 9) {
-                  var13 = this.a(109, var7, var22, var8);
+                  var13 = this.createReinforcementCaptureObjective(109, var7, var22, var8);
                   var14 = 0;
                 } else if (var16_intLifetime1 == 10) {
-                  this.a(var22, 5985, var8, var7);
+                  this.createDataArrayScoringObjective(var22, 5985, var8, var7);
                   var14 = 0;
                 } else if (var16_intLifetime1 == 12) {
                   var14 = 0;
-                  this.a(var22, var8, -1, lga.getArmageddonStartTick((byte) -2, param2), 2, var15, var7);
+                  this.addReinforcementLimitEvents(var22, var8, -1, lga.getArmageddonStartTick((byte) -2, param2), 2, var15, var7);
                 } else if (var16_intLifetime1 == 11) {
-                  this.a(var22, param0 + 3, var15);
+                  this.addTimedWinnerEvents(var22, param0 + 3, var15);
                   var14 = 0;
                 }
               } else {
-                this.a(var7, param3, param4, (byte) 97, var8);
+                this.createTeamShipTargetObjective(var7, param3, param4, (byte) 97, var8);
               }
             } else {
-              var13 = this.a(0, param3, var9, var10, var22);
+              var13 = this.createEscortObjective(0, param3, var9, var10, var22);
             }
           } else {
-            var13 = this.b(122, var8, var22, var7);
+            var13 = this.createAiShipTargetObjective(122, var8, var22, var7);
           }
           if (param1) {
-            discarded$0 = this.a(param4, (ShipBody[]) (var13), (byte) 95, param3);
+            discarded$0 = this.duplicateOppositeTeamBodies(param4, (ShipBody[]) (var13), (byte) 95, param3);
           }
           if (param1 &&
             var14 != 0 &&
             var22.getMissionControl(0) != null &&
             var22.getMissionControl(0).getEvents(param0 + 1) != null) {
             var16 = var22.getMissionControl(0).getEvents(1);
-            var24 = this.a(var12, param0 ^ -18656, var22, var16);
-            var18 = this.a(var16, var22, var12, true);
-            var19 = this.a(param4, var24, (byte) 61, param3);
-            var20 = this.a(-7665, var22, var18);
-            this.a(var12, var16, var18, var20, var22, var19, (byte) 54, var24);
+            var24 = this.collectEventBodies(var12, param0 ^ -18656, var22, var16);
+            var18 = this.collectEventMapZones(var16, var22, var12, true);
+            var19 = this.duplicateOppositeTeamBodies(param4, var24, (byte) 61, param3);
+            var20 = this.duplicateRotatedMapZones(-7665, var22, var18);
+            this.duplicateOppositeTeamEvents(var12, var16, var18, var20, var22, var19, (byte) 54, var24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2939,7 +2939,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final MapZone[] a(MissionCondition[] param0, MapZone[] param1, int param2, World param3) {
+    private final MapZone[] collectConditionMapZones(MissionCondition[] param0, MapZone[] param1, int param2, World param3) {
         int var5_int = 0;
         MissionCondition var6 = null;
         int var9 = 0;
@@ -3002,7 +3002,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(Random param0, World param1, int[][] param2, int param3, int[] param4) {
+    private final void populateAsteroidsAndDebris(Random param0, World param1, int[][] param2, int param3, int[] param4) {
         int var6_int = 0;
         int var18_int = 0;
         int[] stackIn_24_0 = null;
@@ -3052,12 +3052,12 @@ final class MissionBuilder implements DiffableState {
         try {
           for (var6_int = 0; param2.length > var6_int; var6_int++) {
             var7 = param2[var6_int];
-            var34 = GetBombletSprayProjectileOndamageParticles.a((byte) -101, var7);
+            var34 = GetBombletSprayProjectileOndamageParticles.getPolygonBounds((byte) -101, var7);
             var9 = var34[0];
             var10 = var34[1];
             var11 = var34[2];
             var12 = var34[3];
-            var13 = Math.min(tf.a(14, param3 - 120, var7), 1000);
+            var13 = Math.min(PolygonAreaEstimator.estimateArea(14, param3 - 120, var7), 1000);
             var14 = var10 - var9;
             var15 = -var11 + var12;
             var16 = param4[var6_int];
@@ -3170,7 +3170,7 @@ final class MissionBuilder implements DiffableState {
                   var18[24] = var18[24] + var20;
                   var18[23] = var18[23] + var20;
                 }
-                var20 = this.a(var18, param3 + 262143);
+                var20 = this.sumWeights(var18, param3 + 262143);
                 var21 = -1;
                 var22 = 0;
                 while (var22 < var17) {
@@ -3181,7 +3181,7 @@ final class MissionBuilder implements DiffableState {
                     if (-1 != var25) {
                       var21 = -1;
                     } else {
-                      var25 = this.a(var20, param0, var18, (byte) -75);
+                      var25 = this.chooseWeightedIndex(var20, param0, var18, (byte) -75);
                       if (1 == WeaponBehaviour.field_d) {
                         var21 = var25;
                         if (38 != var25) {
@@ -3251,7 +3251,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(World param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    private final void addReinforcementLimitEvents(World param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -3388,7 +3388,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final boolean a(int[] param0, int param1, int param2) {
+    private final boolean isPolygonCenterWithinRadius(int[] param0, int param1, int param2) {
         int[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -3400,7 +3400,7 @@ final class MissionBuilder implements DiffableState {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = GetBombletSprayProjectileOndamageParticles.a((byte) -102, param0);
+          var8 = GetBombletSprayProjectileOndamageParticles.getPolygonBounds((byte) -102, param0);
           var4 = var8;
           var5 = (var8[1] + var8[0]) / 2;
           var6 = (var8[3] + var8[2]) / 2;
@@ -3468,7 +3468,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(boolean param0, Random param1, World param2, int param3) {
+    private final void ensureTimedVictoryEvents(boolean param0, Random param1, World param2, int param3) {
         MissionControl var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -3486,9 +3486,9 @@ final class MissionBuilder implements DiffableState {
           if (var5 == null) {
             return;
           }
-          var6 = this.a(var5, (byte) -66);
+          var6 = this.findTeamWithoutVictoryAction(var5, (byte) -66);
           if (var6 >= 0) {
-            this.a(-125, var6, var5);
+            this.addTimedTeamVictoryEvents(-125, var6, var5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3511,7 +3511,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final ShipBody[] a(int param0, int param1, World param2, MissionEvent[] param3) {
+    private final ShipBody[] collectEventBodies(int param0, int param1, World param2, MissionEvent[] param3) {
         int[] discarded$1 = null;
         int var6 = 0;
         Object var5 = null;
@@ -3528,11 +3528,11 @@ final class MissionBuilder implements DiffableState {
         try {
           var5 = null;
           if (param1 != -18656) {
-            discarded$1 = this.a((Random) null, (int[][]) null, (int[]) null, 44, -95);
+            discarded$1 = this.chooseWeightedPolygonTypes((Random) null, (int[][]) null, (int[]) null, 44, -95);
           }
           for (var6 = param0; param3.length > var6; var6++) {
             var7 = param3[var6];
-            var5 = this.a((byte) 127, param2, var7.getConditions((byte) -120), (ShipBody[]) (var5));
+            var5 = this.collectConditionBodies((byte) 127, param2, var7.getConditions((byte) -120), (ShipBody[]) (var5));
           }
           stackIn_7_0 = var5;
           return (ShipBody[]) (stackIn_7_0);
@@ -3556,7 +3556,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, boolean param1, World param2) {
+    private final void setWorldDimensionsFromOptions(int param0, boolean param1, World param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -3610,7 +3610,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, World param1, int param2, int param3, Random param4, int param5) {
+    private final void createRandomBlueprintTargetObjective(int param0, World param1, int param2, int param3, Random param4, int param5) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -3625,7 +3625,7 @@ final class MissionBuilder implements DiffableState {
         MissionEvent var11 = null;
         int[] var13 = null;
         try {
-          this.a(param1, param3, 1, lga.getArmageddonStartTick((byte) -2, 3), param5 - 2097150, param0, param2);
+          this.addReinforcementLimitEvents(param1, param3, 1, lga.getArmageddonStartTick((byte) -2, 3), param5 - 2097150, param0, param2);
           try {
             var7_int = TextHotspotRegion.randomBoundedInt(param4, field_a.length, 127);
             var8 = field_a[var7_int];
@@ -3668,7 +3668,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int a(int param0, int param1, MapZone[] param2, World param3, MapZone[] param4) {
+    private final int remapMapZoneIndex(int param0, int param1, MapZone[] param2, World param3, MapZone[] param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -3693,7 +3693,7 @@ final class MissionBuilder implements DiffableState {
             }
           }
           if (param1 != -2950) {
-            this.a(54, false, -51, (Random) null, (GameSnapshot) null);
+            this.populateObjectiveEntitiesAndEvents(54, false, -51, (Random) null, (GameSnapshot) null);
           }
           stackIn_13_0 = param0;
           return stackIn_13_0;
@@ -3723,7 +3723,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(Random param0, int[][] param1, int[] param2, World param3, boolean param4, int param5) {
+    private final void populateNebulae(Random param0, int[][] param1, int[] param2, World param3, boolean param4, int param5) {
         int var7_int = 0;
         int var21 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -3758,12 +3758,12 @@ final class MissionBuilder implements DiffableState {
         try {
           for (var7_int = 0; var7_int < param1.length; var7_int++) {
             var8 = param1[var7_int];
-            var28 = GetBombletSprayProjectileOndamageParticles.a((byte) -94, var8);
+            var28 = GetBombletSprayProjectileOndamageParticles.getPolygonBounds((byte) -94, var8);
             var10 = var28[0];
             var11 = var28[1];
             var12 = var28[2];
             var13 = var28[3];
-            var14 = Math.min(tf.a(14, -85, var8), 1000);
+            var14 = Math.min(PolygonAreaEstimator.estimateArea(14, -85, var8), 1000);
             var15 = var11 - var10;
             var16 = var13 - var12;
             var17 = param2[var7_int];
@@ -3775,7 +3775,7 @@ final class MissionBuilder implements DiffableState {
                 var22 = TextHotspotRegion.randomBoundedInt(param0, var15, 116) + var10;
                 var23 = TextHotspotRegion.randomBoundedInt(param0, var16, 120) + var12;
                 if (fra.a(var8, var23, 2, var22) &&
-                  this.a(var19, var22, var8, var23, (byte) 105, var20)) {
+                  this.hasPolygonEdgeClearance(var19, var22, var8, var23, (byte) 105, var20)) {
                   var25 = new Nebula(var22, var23);
                   param3.addNebula(param4, var25, (byte) -71);
                 }
@@ -3783,7 +3783,7 @@ final class MissionBuilder implements DiffableState {
             }
           }
           if (param5 != 4) {
-            this.a(15, (Random) null, (GameSnapshot) null, (byte) -65, 46);
+            this.createTeamShipTargetObjective(15, (Random) null, (GameSnapshot) null, (byte) -65, 46);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

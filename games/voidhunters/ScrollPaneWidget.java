@@ -160,7 +160,7 @@ final class ScrollPaneWidget extends Widget {
                   AudioPump.field_a[var13] = false;
                   var13++;
                 }
-                MissionBuilder.a(PasswordValidator.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
+                MissionBuilder.searchCompatibleLobbyOptions(PasswordValidator.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
                 if (!(SetAngularVelocitySustain.field_p < 2) &&
                   SetMachineGunEnergyUsed.field_o[12]) {
                   TickClock.field_b = true;

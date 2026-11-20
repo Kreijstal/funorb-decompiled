@@ -73,11 +73,11 @@ final class MapClearanceCircle extends MapClearanceArea implements DiffableState
         }
     }
 
-    final void a(World param0, boolean param1) {
+    final void clearNebulae(World param0, boolean param1) {
         try {
           if (!param1) {
             World var4 = (World) null;
-            this.a((World) null, true);
+            this.clearNebulae((World) null, true);
           }
           param0.removeNebulaeInRadius((byte) -99, false, this.y, this.x, this.radius);
         } catch (RuntimeException runtimeException) {

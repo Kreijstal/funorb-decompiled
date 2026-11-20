@@ -115,7 +115,7 @@ abstract class MapClearanceArea implements DiffableState {
         }
     }
 
-    abstract void a(World param0, boolean param1);
+    abstract void clearNebulae(World param0, boolean param1);
 
     static {
         field_b = new QuickChatDynamicCommand(7, 0, 1, 1);

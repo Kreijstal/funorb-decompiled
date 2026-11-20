@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1442/1572 classes and 7208/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 130 opaque classes and 1007 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1443/1572 classes and 7257/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 129 opaque classes and 958 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -104,6 +104,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `World` now names every method, including its remaining collision passes, player-ship/drag-preview rendering and sandbox/editor command dispatcher. `BufferedImageRasterBuffer`, `AwtRobotCursorController` and `ChatInputResetter` identify additional raster, cursor and chat helpers. Owned cursor-controller class-name literals follow the rename while reflected public method names remain intact. Original editor action IDs, random sequences, clipping, constructor failures and cursor/null behavior remain unchanged.
 
 `AppletJavaScriptBridge`, `AppletCookieReader`, `NativeLibraryLoader`, `ClassNameFormatter` and `PanelHeightQuery` name browser, reflection and panel helpers. `UiAngleDial` and its renderer expose discrete angle selection, alongside active-icon, state-sprite and masked-password styles. Original JavaScript errors, cookie parsing, native classloader checks, external reflection strings, key-event synchronization, drawing offsets and guarded failures remain unchanged.
+
+`MissionBuilder` now names every method: terrain subdivision/weights, nebula and debris population, objective entities/events, reinforcement and scoring rules, opposite-team duplication/remapping, team swaps and lobby-option compatibility. `PolygonAreaEstimator` names the original signed area approximation, and clearance areas expose their nebula-clearing contract. Original omitted closing edges, integer overflow, repeated-index relocation, weighted overwrite/retry behavior, timer labels, RNG sequences, event ordering and guards remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

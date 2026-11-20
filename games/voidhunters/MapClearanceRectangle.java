@@ -36,7 +36,7 @@ final class MapClearanceRectangle extends MapClearanceArea implements DiffableSt
         }
     }
 
-    final void a(World param0, boolean param1) {
+    final void clearNebulae(World param0, boolean param1) {
         try {
           if (!param1) {
             SerializableGameState var4 = (SerializableGameState) null;

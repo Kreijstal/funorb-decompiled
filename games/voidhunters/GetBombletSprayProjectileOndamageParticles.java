@@ -35,7 +35,7 @@ final class GetBombletSprayProjectileOndamageParticles extends ConsoleCommand {
         }
     }
 
-    final static int[] a(byte param0, int[] param1) {
+    final static int[] getPolygonBounds(byte param0, int[] param1) {
         int var3 = 0;
         int[] var2 = null;
         int var4 = 0;
@@ -63,7 +63,7 @@ final class GetBombletSprayProjectileOndamageParticles extends ConsoleCommand {
           var10[3] = -2147483648;
           if (param0 > -93) {
             var7 = (int[]) null;
-            GetBombletSprayProjectileOndamageParticles.a((byte) -43, (int[]) null);
+            GetBombletSprayProjectileOndamageParticles.getPolygonBounds((byte) -43, (int[]) null);
           }
           for (var3 = 0; var3 < param1.length; var3 += 2) {
             var4 = param1[var3];

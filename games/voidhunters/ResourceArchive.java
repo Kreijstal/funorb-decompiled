@@ -549,7 +549,7 @@ final class ResourceArchive {
                 for (var17_int = 0; var7 > var17_int; var17_int++) {
                   AudioPump.field_a[var17_int] = false;
                 }
-                MissionBuilder.a(var7, var9, param1, -1, 93, param2, 0, -1);
+                MissionBuilder.searchCompatibleLobbyOptions(var7, var9, param1, -1, 93, param2, 0, -1);
                 if (2 <= SetAngularVelocitySustain.field_p &&
                   SetMachineGunEnergyUsed.field_o[12]) {
                   TickClock.field_b = true;

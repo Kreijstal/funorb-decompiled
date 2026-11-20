@@ -6866,7 +6866,7 @@ final class World implements DiffableState, CompactGameState {
         }
         if (this.nebulaField.getNebulae(false) == null &&
           null != this.missionBuilder) {
-          this.missionBuilder.a(this, 0);
+          this.missionBuilder.rebuildNebulae(this, 0);
         }
         this.initializeSpatialPartitions(false);
     }
