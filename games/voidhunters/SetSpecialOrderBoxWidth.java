@@ -17,7 +17,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            SetSpecialOrderBoxWidth.a((byte) -16, false);
+            SetSpecialOrderBoxWidth.drawLobbyOverlays((byte) -16, false);
           }
           SocialListUpdater.field_a = arguments[0].intValue(108);
           stackIn_3_0 = new ConsoleValue("void");
@@ -36,7 +36,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
         }
     }
 
-    final static TextureMappingData a(ModelData param0, int[] param1, int param2, int param3) {
+    final static TextureMappingData buildTextureMappingData(ModelData param0, int[] param1, int param2, int param3) {
         int var18_int = 0;
         TextureMappingData stackIn_50_0 = null;
         Object stackIn_53_0 = null;
@@ -202,7 +202,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawLobbyOverlays(byte param0, boolean param1) {
         if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
           param1 = false;
         }

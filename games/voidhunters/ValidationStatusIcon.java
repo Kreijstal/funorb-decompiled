@@ -112,7 +112,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           throw new IllegalStateException();
         }
         CommandConsole.field_r = true;
-        GetSniperCannonProjectiles.a(false, param0 - 122);
+        GetSniperCannonProjectiles.showLoginForm(false, param0 - 122);
         GetSpinningBladeAimspeed.field_q = param0;
     }
 

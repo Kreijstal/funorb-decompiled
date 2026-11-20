@@ -4,7 +4,7 @@
 final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
     static String field_o;
 
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean matchesIndexDataMask(int param0, boolean param1, int param2) {
         if (param1) {
           return false;
         }
@@ -14,11 +14,11 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 16) {
-          GetPhasedEnergyBeamAimarc.a(-34, false, 111);
+          GetPhasedEnergyBeamAimarc.matchesIndexDataMask(-34, false, 111);
         }
     }
 
-    final static void a(Widget param0, Widget param1, boolean param2) {
+    final static void initializeSocialLists(Widget param0, Widget param1, boolean param2) {
         if (param1.children == null) {
           param1.children = new IntrusiveDeque();
         }
@@ -37,7 +37,7 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
         }
         try {
           SetPointDefenceLaserProjectileOndamageParticles.field_o = param0.children;
-          SoftwareSprite2D.a(85);
+          SoftwareSprite2D.resetSocialLists(85);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "plb.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -315,7 +315,7 @@ abstract class ToolkitFont {
                                 } else {
                                   try {
                                     var22 = (CharSequence) ((Object) var16_ref_String.substring(4));
-                                    var17_int = NebulaFieldFactory.a(-118, var22);
+                                    var17_int = NebulaFieldFactory.parseDecimalInt(-118, var22);
                                     var18 = param3[var17_int];
                                     if (param8 == null) {
                                       stackIn_26_0 = var18.getPaddedHeight();

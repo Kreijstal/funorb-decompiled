@@ -82,7 +82,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 3) {
-          Asteroid.a(123, true);
+          Asteroid.drawLobbyPanels(123, true);
           field_w = (int[][]) null;
           activeReportDialog = null;
           return;
@@ -107,7 +107,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawLobbyPanels(int param0, boolean param1) {
         if (param0 != 3) {
           return;
         }

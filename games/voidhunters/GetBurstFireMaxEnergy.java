@@ -32,9 +32,9 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void setTeamChatName(int param0, String param1) {
         try {
-          LoginForm.field_E = param1;
+          LoginForm.teamChatName = param1;
           if (param0 != 1043) {
             GetBurstFireMaxEnergy.clearSharedReferences(false);
           }
@@ -54,7 +54,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+    final static void drawClippedLine(int param0, int param1, byte param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;

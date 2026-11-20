@@ -1854,7 +1854,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
                         if (SetPointDefenceLaserAimarc.a(var22, 10)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
-                          var5_int = NebulaFieldFactory.a(-86, var23);
+                          var5_int = NebulaFieldFactory.parseDecimalInt(-86, var23);
                           decompiledRegionSelector0 = 1;
                           decompiledFrameRemainder0 = false;
                         }
@@ -2244,8 +2244,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         var4 = SetFighterBayAimspeed.a((byte) -67, ' ', var3.replace('.', ' '));
         if (var4.length >= 2) {
           try {
-            var5_int = NebulaFieldFactory.a(107, (CharSequence) ((Object) var4[0]));
-            var6 = NebulaFieldFactory.a(46, (CharSequence) ((Object) var4[1]));
+            var5_int = NebulaFieldFactory.parseDecimalInt(107, (CharSequence) ((Object) var4[0]));
+            var6 = NebulaFieldFactory.parseDecimalInt(46, (CharSequence) ((Object) var4[1]));
             this.field_f = 10 * var5_int + var6;
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

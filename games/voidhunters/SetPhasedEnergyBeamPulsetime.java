@@ -6,7 +6,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
     static Widget field_o;
     static String field_p;
 
-    final static String a(String param0, int param1, int param2) {
+    final static String requestAddFriend(String param0, int param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
@@ -80,7 +80,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void drawTooltip(String param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

@@ -179,7 +179,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawRectangleBorderClipped(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -318,7 +318,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         }
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int parseDecimalInt(int param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
@@ -369,7 +369,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         try {
           field_a = null;
           if (param0 <= 88) {
-            NebulaFieldFactory.a(-76, (CharSequence) null);
+            NebulaFieldFactory.parseDecimalInt(-76, (CharSequence) null);
           }
           field_c = null;
           return;

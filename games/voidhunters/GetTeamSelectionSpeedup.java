@@ -181,7 +181,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 var4_ref_mm = new LobbyGameEntry(PasswordValidator.field_l);
                 GetLaserReload.field_r.put(var4_ref_mm, (byte) -115, (long)var3);
               }
-              SetShipAimLines.a(118, var4_ref_mm, true, var1);
+              SetShipAimLines.readLobbyGameEntry(118, var4_ref_mm, true, var1);
               MovingObjectFactory.insertSortedLobbyGame((byte) 109, var4_ref_mm);
               return;
             }
@@ -270,7 +270,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     return;
                   }
                   if (var2 == 20) {
-                    SetShipAimLines.a(-41, SetSpinningBladeSpindamageMultiplier.field_o, false, var1);
+                    SetShipAimLines.readLobbyGameEntry(-41, SetSpinningBladeSpindamageMultiplier.field_o, false, var1);
                     return;
                   }
                   if (21 == var2) {
@@ -374,7 +374,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
             SetSpinningBladeSpindamageMultiplier.field_o = new LobbyGameEntry(PasswordValidator.field_l);
             SetSpinningBladeSpindamageMultiplier.field_o.setSecondaryKey((long)var3Lifetime1, (byte) 83);
-            SetShipAimLines.a(-123, SetSpinningBladeSpindamageMultiplier.field_o, false, var1);
+            SetShipAimLines.readLobbyGameEntry(-123, SetSpinningBladeSpindamageMultiplier.field_o, false, var1);
             AccountNameAvailabilityReplies.field_a = 0L;
           }
           if (var2 != 2 &&

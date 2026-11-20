@@ -37,7 +37,7 @@ final class GetFighterRepairTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int refineAxisAlignedIntersection(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10;
         int var11;
         int var10Lifetime1;
@@ -94,7 +94,7 @@ final class GetFighterRepairTime extends ConsoleCommand {
           }
           return var11Lifetime2;
         }
-        GetFighterRepairTime.a(-63, -43, 28, 28, -60, -61, 125, 10, -27, 53);
+        GetFighterRepairTime.refineAxisAlignedIntersection(-63, -43, 28, 28, -60, -61, 125, 10, -27, 53);
         var10Lifetime1 = -(param0 * param9 / param1) + param3;
         if (param8 > var10Lifetime1) {
           return param2;
@@ -133,7 +133,7 @@ final class GetFighterRepairTime extends ConsoleCommand {
         return var11Lifetime1;
     }
 
-    final static byte[] a(float param0, float param1, byte param2, int param3, FloatNoiseSliceGenerator param4, int param5, int param6, int param7, float param8, float param9, float param10) {
+    final static byte[] generateFractalNoiseVolume(float param0, float param1, byte param2, int param3, FloatNoiseSliceGenerator param4, int param5, int param6, int param7, float param8, float param9, float param10) {
         int var11_int = 0;
         RuntimeException var11 = null;
         byte[] var12 = null;

@@ -5,7 +5,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
     static boolean chatVisible;
     static int[] field_o;
 
-    final static void a(ChatMessage param0, int param1) {
+    final static void showChatMessageContextMenu(ChatMessage param0, int param1) {
         long stackIn_2_0;
         Widget stackIn_2_1;
         int stackIn_2_2;
@@ -103,7 +103,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void showLoginForm(boolean param0, int param1) {
         WaterTextures.showLoginForm(param0, false, false);
         if (param1 > -121) {
           chatVisible = true;
@@ -113,7 +113,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 >= -109) {
-          GetSniperCannonProjectiles.a(false, -67);
+          GetSniperCannonProjectiles.showLoginForm(false, -67);
         }
     }
 

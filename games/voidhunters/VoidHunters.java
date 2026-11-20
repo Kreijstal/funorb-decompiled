@@ -191,8 +191,8 @@ public final class VoidHunters extends NetworkGameClient {
         boolean decompiledFrameRemainder0 = true;
         if (param0 == 14) {
           GetDebrisThrowable.a(false, "Entering lobby");
-          GetBombletSprayAimarc.initializeLobbyState(UiComponent.field_o, SetUseOffscreenRendering.a(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.b(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
-          GetPhasedEnergyBeamAimarc.a(SetBombletSprayPushMultiplier.a(0), MissileLauncherWeaponDefinition.i((byte) -90), true);
+          GetBombletSprayAimarc.initializeLobbyState(UiComponent.field_o, SetUseOffscreenRendering.getGamePlayerListContent(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.getLobbyGameListContent(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
+          GetPhasedEnergyBeamAimarc.initializeSocialLists(SetBombletSprayPushMultiplier.a(0), MissileLauncherWeaponDefinition.i((byte) -90), true);
           GraphicsPresentException.field_a = true;
           HardpointMatch.field_d = false;
           if (MatchingFieldValidator.field_g != null &&
@@ -361,7 +361,7 @@ public final class VoidHunters extends NetworkGameClient {
             ColorKeyScaleTextureOperation.d(991426348);
             MatchingFieldValidator.field_g = null;
             ProxyAuthenticationException.field_a = null;
-            var8 = SetPointDefenceLaserProjectileDamage.a(param0, FlipTextureOperation.field_l, AccountNameAvailabilityReplies.field_b, (byte) 120);
+            var8 = SetPointDefenceLaserProjectileDamage.receiveGameSession(param0, FlipTextureOperation.field_l, AccountNameAvailabilityReplies.field_b, (byte) 120);
             var3Lifetime1 = var8;
             if (var8 != null) {
               GpuSprite.field_e = false;
@@ -406,7 +406,7 @@ public final class VoidHunters extends NetworkGameClient {
         SetReverbFeedback.updateAudioOutputs(200);
         if (EmailAvailabilityChecks.fullscreenCanvas != null &&
           EmailAvailabilityChecks.fullscreenCanvas.focusLost) {
-          VariableCondition.b((byte) 116);
+          VariableCondition.exitFullscreen((byte) 116);
           ConsoleEvaluationException.rebuildInitializedCanvasMenu((byte) -115);
         }
         stackIn_7_1 = (EmailAvailabilityChecks.fullscreenCanvas != null);
@@ -446,7 +446,7 @@ public final class VoidHunters extends NetworkGameClient {
               if (1 == var3 ||
                 var3 == 2) {
                 if (EmailAvailabilityChecks.fullscreenCanvas != null) {
-                  VariableCondition.b((byte) -56);
+                  VariableCondition.exitFullscreen((byte) -56);
                 }
                 if (2 == var3) {
                   VoidHunters.quitToWebsite(MissionList.getApplet((byte) -118), 4);
@@ -518,7 +518,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (var3Lifetime2 != 0) {
           FighterBayWeaponDefinition.closeGameConnection(-118);
         }
-        if (SetWeaponProjectileSpeedMultiply.b(true)) {
+        if (SetWeaponProjectileSpeedMultiply.isReconnectRequired(true)) {
           FlipTextureOperation.field_l.suspendServerUpdates((byte) -94);
           var4 = this.pollReconnect(109);
           if (var4 == 0 ||
@@ -570,7 +570,7 @@ public final class VoidHunters extends NetworkGameClient {
             SetMassDriverFireForce.field_o) {
             var5 = 1;
           }
-          if (!SetWeaponProjectileSpeedMultiply.b(true)) {
+          if (!SetWeaponProjectileSpeedMultiply.isReconnectRequired(true)) {
             var5 = 0;
           }
           if (var5 != 0) {
@@ -1854,7 +1854,7 @@ public final class VoidHunters extends NetworkGameClient {
     final void shutdownGame(int param0) {
         GetBurstFireRegenerationRate.shutdownAudioOutputs(false);
         if (null != EmailAvailabilityChecks.fullscreenCanvas) {
-          VariableCondition.b((byte) 86);
+          VariableCondition.exitFullscreen((byte) 86);
         }
         SecondaryNodeDequeIterator.a(1);
         if (param0 >= -102) {
@@ -2326,7 +2326,7 @@ public final class VoidHunters extends NetworkGameClient {
             var3_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var4_int = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetBombletSprayReload.a(-89, var4_int, var3_int);
-            SpawnPointFactory.a(SetSalvoDamageMultiplier.e(83), true);
+            SpawnPointFactory.drawLobbyAndSocialOverlays(SetSalvoDamageMultiplier.e(83), true);
             BodyDestroyedCondition.b(-1);
           }
           var3 = (IntegerNode) (PlayerVote.field_c.first(0));

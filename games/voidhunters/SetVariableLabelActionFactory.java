@@ -13,11 +13,11 @@ final class SetVariableLabelActionFactory implements GameStateFactory {
         field_a = null;
         if (param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          SetVariableLabelActionFactory.a(-105, (byte) 0, 18, (PacketBuffer) null, 3);
+          SetVariableLabelActionFactory.writeArchiveHandshakeHeader(-105, (byte) 0, 18, (PacketBuffer) null, 3);
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void uploadIntMipmaps(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var26 = 0;
         int var27 = 0;
         int incrementValue$9 = 0;
@@ -62,7 +62,7 @@ final class SetVariableLabelActionFactory implements GameStateFactory {
           }
           if (param2 != 29175) {
             var29 = (PacketBuffer) null;
-            SetVariableLabelActionFactory.a(-98, (byte) 61, -25, (PacketBuffer) null, -48);
+            SetVariableLabelActionFactory.writeArchiveHandshakeHeader(-98, (byte) 61, -25, (PacketBuffer) null, -48);
           }
           var8_int = 0;
           stackIn_14_0 = (param7 >= param6) ? param6 : param7;
@@ -132,7 +132,7 @@ final class SetVariableLabelActionFactory implements GameStateFactory {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, PacketBuffer param3, int param4) {
+    final static void writeArchiveHandshakeHeader(int param0, byte param1, int param2, PacketBuffer param3, int param4) {
         try {
           if (param1 != -48) {
             field_a = (String) null;

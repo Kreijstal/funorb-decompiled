@@ -90,7 +90,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
         }
     }
 
-    final static void a(World param0, Camera2D param1, boolean param2, byte param3) {
+    final static void drawWorldBackground(World param0, Camera2D param1, boolean param2, byte param3) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -282,7 +282,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void setVote(boolean param0, int param1, int param2) {
         this.specialOrderSubmessage = new SpecialOrderSubmessage();
         if (param2 != -30790) {
           this.specialOrderSubmessage = (SpecialOrderSubmessage) null;

@@ -785,7 +785,7 @@ final class OpenGlModel extends Model3D {
             var13 = var13 + var15_intLifetime2;
           }
           this.field_H[param1.field_D] = var13;
-          var75 = SetSpecialOrderBoxWidth.a(param1, var81, this.field_B, -3);
+          var75 = SetSpecialOrderBoxWidth.buildTextureMappingData(param1, var81, this.field_B, -3);
           var15 = new OpenGlFaceNormal[param1.faceCount];
           var16Lifetime2 = 0;
           while (param1.faceCount > var16Lifetime2) {

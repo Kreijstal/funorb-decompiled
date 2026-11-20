@@ -153,7 +153,7 @@ final class MissionVariable implements DiffableState {
           SetMissileLauncherProjectiles.field_o[2] = OpenGlNativeHeap.field_f;
           SetMissileLauncherProjectiles.field_o[0] = GetMassDriverAimspeed.field_p;
           SetMissileLauncherProjectiles.field_o[1] = GetBloomCoefficientPercentage.field_q;
-          GetMissileLauncherFireForce.a((byte) -35, param1, GetDebrisCarryOverPercentage.field_o);
+          GetMissileLauncherFireForce.initializeQuickChat((byte) -35, param1, GetDebrisCarryOverPercentage.field_o);
           if (param2 != 2874) {
             MissionVariable.clearSharedReferences((byte) -66);
           }

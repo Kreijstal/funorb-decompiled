@@ -427,7 +427,7 @@ final class GpuModel extends Model3D {
             var13 = var13 + var15_intLifetime2;
           }
           this.field_l[param1.field_D] = var13;
-          var75 = SetSpecialOrderBoxWidth.a(param1, var81, this.field_v, -3);
+          var75 = SetSpecialOrderBoxWidth.buildTextureMappingData(param1, var81, this.field_v, -3);
           var15 = new GpuFaceNormal[param1.faceCount];
           var16Lifetime2 = 0;
           while (var16Lifetime2 < param1.faceCount) {
@@ -1129,7 +1129,7 @@ final class GpuModel extends Model3D {
             !MovingObjectFactory.a(this.field_s, -1104, this.field_I)) {
             return;
           }
-          this.field_H = new GpuIndexBufferOwner(IntegerRecordReadQueueEntry.a(this.field_I, this.field_s, (byte) -106));
+          this.field_H = new GpuIndexBufferOwner(IntegerRecordReadQueueEntry.matchesIndexBufferMask(this.field_I, this.field_s, (byte) -106));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

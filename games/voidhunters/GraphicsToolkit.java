@@ -94,7 +94,7 @@ abstract class GraphicsToolkit {
             return stackIn_3_0;
           }
           if (param7 == 2) {
-            stackIn_7_0 = SetShipAimLines.a((byte) 113, param3, param5, param4, param0);
+            stackIn_7_0 = SetShipAimLines.createNativeSoftwareToolkit((byte) 113, param3, param5, param4, param0);
             return stackIn_7_0;
           }
           if (param6 <= 0) {

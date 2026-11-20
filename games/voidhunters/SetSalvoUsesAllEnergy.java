@@ -94,7 +94,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
 
     final static void drawSocialOverlays(boolean param0, byte param1) {
         if (NebulaFieldFactory.field_a != null) {
-          SetPhasedEnergyBeamPulsetime.a(NebulaFieldFactory.field_a, (byte) 17);
+          SetPhasedEnergyBeamPulsetime.drawTooltip(NebulaFieldFactory.field_a, (byte) 17);
         }
         if (GetLagStandardDeviationOut.field_o != null) {
           GetLagStandardDeviationOut.field_o.drawMenu(1, param0);

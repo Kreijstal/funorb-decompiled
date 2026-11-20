@@ -48,8 +48,8 @@ final class FullscreenFailureReason {
               var3Lifetime1 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{param1.field_o}, 107) + "] ";
             }
             if (param1.channelType == 4 &&
-              null != LoginForm.field_E) {
-              var3Lifetime1 = "[" + LoginForm.field_E + "] ";
+              null != LoginForm.teamChatName) {
+              var3Lifetime1 = "[" + LoginForm.teamChatName + "] ";
             }
             if (3 == param1.channelType) {
               var3Lifetime1 = "[#" + param1.field_o + "] ";

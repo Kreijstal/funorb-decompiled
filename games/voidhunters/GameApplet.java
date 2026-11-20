@@ -609,7 +609,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (SetPointDefenceLaserAimarc.a((CharSequence) ((Object) var4), 10) &&
-                        !(NebulaFieldFactory.a(-121, (CharSequence) ((Object) var4)) >= 10)) {
+                        !(NebulaFieldFactory.parseDecimalInt(-121, (CharSequence) ((Object) var4)) >= 10)) {
                         this.showGameError("wrongjava", 0);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }

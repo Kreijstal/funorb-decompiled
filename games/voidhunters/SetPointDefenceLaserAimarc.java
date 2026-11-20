@@ -18,7 +18,7 @@ final class SetPointDefenceLaserAimarc extends ConsoleCommand {
           if (param1 != 10) {
             field_p = (Sprite[][]) null;
           }
-          stackIn_3_0 = SetSniperCannonProjectiles.a(param0, true, (byte) 117, 10);
+          stackIn_3_0 = SetSniperCannonProjectiles.isValidInt(param0, true, (byte) 117, 10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

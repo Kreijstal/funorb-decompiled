@@ -90,7 +90,7 @@ final class ModalStack extends UiSingleChildContainer {
         try {
           SetExplosionProjectileDamage.drawDialogText(param1, 0, param0);
           if (NebulaFieldFactory.field_a != null) {
-            SetPhasedEnergyBeamPulsetime.a(NebulaFieldFactory.field_a, (byte) 92);
+            SetPhasedEnergyBeamPulsetime.drawTooltip(NebulaFieldFactory.field_a, (byte) 92);
           }
           if (param2 > -66) {
             var4 = (IsaacPacketBuffer) null;

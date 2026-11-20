@@ -145,7 +145,7 @@ final class TextureLineShape extends TextureRasterShape {
         int var5 = this.endX * param2 >> 12;
         int var6 = param1 * this.startY >> 12;
         int var7 = param1 * this.endY >> 12;
-        GetBurstFireMaxEnergy.a(var6, var5, (byte) 84, var4, var7, this.outlineColor);
+        GetBurstFireMaxEnergy.drawClippedLine(var6, var5, (byte) 84, var4, var7, this.outlineColor);
         int var8 = -73 / ((param0 + 48) / 40);
     }
 

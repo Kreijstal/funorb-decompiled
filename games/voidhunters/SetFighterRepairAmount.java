@@ -186,7 +186,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
                   }
                   return true;
                 }
-                if (null == LoginForm.field_E) {
+                if (null == LoginForm.teamChatName) {
                   var36 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var37 = var36 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var37);
@@ -195,7 +195,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
                   }
                   return true;
                 }
-                var7 = "[" + LoginForm.field_E + "] ";
+                var7 = "[" + LoginForm.teamChatName + "] ";
               }
               var40 = var7 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var40);
@@ -218,7 +218,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
-            if (null == LoginForm.field_E) {
+            if (null == LoginForm.teamChatName) {
               var41 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var42 = var41 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var42);
@@ -228,7 +228,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
-            var7 = "[" + LoginForm.field_E + "] ";
+            var7 = "[" + LoginForm.teamChatName + "] ";
           }
           var45 = var7 + var19 + ": ";
           var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var45);

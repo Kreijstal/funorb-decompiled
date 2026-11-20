@@ -78,9 +78,9 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                 if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
                   var6 = 1;
                   boolean decompiledSharedTail0 = (!(OpenGlRenderbuffer.field_n) ||
-                    LoginForm.field_E == null);
+                    LoginForm.teamChatName == null);
                   if (!decompiledSharedTail0) {
-                    var4 = "[" + LoginForm.field_E + "] ";
+                    var4 = "[" + LoginForm.teamChatName + "] ";
                     decompiledSharedTail0 = (var10 != 0);
                   }
                   if (decompiledSharedTail0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginForm extends UiContainer implements UiTextFieldListener, UiActionListener {
-    static String field_E;
+    static String teamChatName;
     private UiFocusableComponent submitButton;
     private boolean reconnectMode;
     private UiFocusableComponent alternateButton;
@@ -324,7 +324,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
         if (param0 != 3) {
           return;
         }
-        field_E = null;
+        teamChatName = null;
         field_C = null;
     }
 

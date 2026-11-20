@@ -113,7 +113,7 @@ final class MenuBackgroundBattle {
         this.camera.screenOriginY = GetBombletSprayEnergyUsed.field_p.height / 2;
         this.camera.screenOriginX = GetBombletSprayEnergyUsed.field_p.width / 2;
         this.camera.updateWorldBounds(GetBombletSprayEnergyUsed.field_p.height, 0, -72, GetBombletSprayEnergyUsed.field_p.width, 0);
-        PlayerAction.a(this.world, this.camera, false, (byte) -59);
+        PlayerAction.drawWorldBackground(this.world, this.camera, false, (byte) -59);
         this.world.drawWorld(this.camera, (byte) 85, this.tick, (Ship) null);
         var5 = this.camera.screenToWorldX(true, GetUseDetailLines.field_o);
         var6 = this.camera.screenToWorldY(0, GetTorpedoReload.field_q);

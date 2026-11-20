@@ -36,7 +36,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         }
     }
 
-    final static ToolkitFontMetrics a(int param0, ResourceArchive param1, String param2, String param3) {
+    final static ToolkitFontMetrics loadNamedFontMetrics(int param0, ResourceArchive param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -90,7 +90,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, Widget param1, int param2) {
+    final static void showChatFilterMenu(int param0, Widget param1, int param2) {
         PlayerContextMenu var12 = null;
         Sprite var13 = null;
         String var14 = null;

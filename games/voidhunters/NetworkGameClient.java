@@ -32,7 +32,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (this.errorShown) {
           return -1;
         }
-        if (!SetWeaponProjectileSpeedMultiply.b(true)) {
+        if (!SetWeaponProjectileSpeedMultiply.isReconnectRequired(true)) {
           return -1;
         }
         if (GetSpinningBladeAimarc.field_o) {
@@ -162,7 +162,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (var3Lifetime1 != 0 &&
             0 == MapClearanceArea.field_a &&
             GetSpinningBladeAimspeed.field_q == 11 &&
-            !SetWeaponProjectileSpeedMultiply.b(true)) {
+            !SetWeaponProjectileSpeedMultiply.isReconnectRequired(true)) {
             TeamShipComponentConditionFactory.completeLoginTransition((byte) 123);
           }
           if (MapClearanceArea.field_a != -1 &&
@@ -216,7 +216,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if ((-1 != MapClearanceArea.field_a &&
           MapClearanceArea.field_a != 0 ||
-          SetWeaponProjectileSpeedMultiply.b(true)) &&
+          SetWeaponProjectileSpeedMultiply.isReconnectRequired(true)) &&
           MonotonicMillisClock.currentTimeMillis(false) >= StrongCacheReference.field_p) {
           GetSpinningBladeAimarc.field_o = false;
           if (-1 != MapClearanceArea.field_a &&
@@ -226,7 +226,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (MapClearanceArea.field_a == 0 &&
-          !SetWeaponProjectileSpeedMultiply.b(true)) {
+          !SetWeaponProjectileSpeedMultiply.isReconnectRequired(true)) {
           OpenGlFaceAttachmentState.field_a = false;
         }
         if (0 == UiDraggableContainer.field_z &&

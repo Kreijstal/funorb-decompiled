@@ -289,8 +289,8 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           SetDebrisGroupColour.field_o = WorldPoint.loadNineSliceSprites("button_raised", -95, "basic", this.graphicsArchive);
           WorldPoint.loadNineSliceSprites("button_depressed", 80, "basic", this.graphicsArchive);
           WorldSpriteTiler.field_c = SetGrapplingHookRopeBreakLength.loadNamedSprites(this.graphicsArchive, true, "basic", "achievements_large");
-          OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
-          WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
+          OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.loadNamedSprite(var11, "unachieved", "basic", true);
+          WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.loadNamedSprite(var11, "orbcoin", "basic", true);
           AlternateNumericLoginCredentials.alignSpriteToFourPixels(OpenGlGpuTexture2D.field_j, 121);
           AlternateNumericLoginCredentials.alignSpriteToFourPixels(WaterNoiseGpuMaterialEffect.field_h, 126);
           TextureMappingData.field_a = new Sprite(32, 32);
@@ -314,7 +314,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
             var19[var7] = 9;
           }
           TeamObjectiveFormatter.initializeLobbyInterface(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.quickChatArchive, var15, UiComponent.field_o, DebugSendable.field_d);
-          ShieldInfoPool.field_c = SetSniperCannonProjectiles.a(this.graphicsArchive, "lobby_game_logo", "basic", true);
+          ShieldInfoPool.field_c = SetSniperCannonProjectiles.loadNamedSprite(this.graphicsArchive, "lobby_game_logo", "basic", true);
           EdgeMagnitudeTextureOperation.b(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);
           SetMomentOfInertiaPredivideDownshift.a(AppletRasterBuffer.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);

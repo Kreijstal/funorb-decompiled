@@ -9,7 +9,7 @@ final class SetFightersPerPlayerMaximum extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1, int[] param2, int param3, int[] param4, int param5, int param6) {
+    final static int refinePolygonPenetration(int param0, int param1, int[] param2, int param3, int[] param4, int param5, int param6) {
         int stackIn_34_0 = 0;
         int stackIn_37_0 = 0;
         RuntimeException stackIn_40_0 = null;
@@ -174,7 +174,7 @@ final class SetFightersPerPlayerMaximum extends ConsoleCommand {
         }
     }
 
-    final static String a(int[] param0, boolean param1) {
+    final static String formatIntArray(int[] param0, boolean param1) {
         int var3 = 0;
         String var2 = null;
         int var4 = 0;

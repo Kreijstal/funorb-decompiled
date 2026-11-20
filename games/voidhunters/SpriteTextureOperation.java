@@ -11,7 +11,7 @@ class SpriteTextureOperation extends TextureOperation {
     int sourceWidth;
     static String field_i;
 
-    final static void e(int param0) {
+    final static void exitFullscreenAndRestoreSize(int param0) {
         if (SetTorpedoProjectiles.field_o == null) {
           return;
         }

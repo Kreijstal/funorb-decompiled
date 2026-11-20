@@ -30,7 +30,7 @@ final class ByteStorageAccess {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            stackIn_7_0 = SetPointDefenceLaserProjectileDamage.a(var3, (byte) -116);
+            stackIn_7_0 = SetPointDefenceLaserProjectileDamage.copyByteArray(var3, (byte) -116);
             return stackIn_7_0;
           }
           if (param1 instanceof ByteStorage) {

@@ -38,7 +38,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isReconnectRequired(boolean param0) {
         boolean stackIn_7_0 = false;
         if (!param0) {
           return false;
@@ -47,7 +47,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         return stackIn_7_0;
     }
 
-    final static void e(byte param0) {
+    final static void drawComponentEditor(byte param0) {
         int var5 = 0;
         int stackIn_31_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -95,11 +95,11 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             var22 = new ShipComponentDefinition(var30, 0, 0);
             HardpointGeometry.addPolygonEdgeHardpoints(var30, param0 + 12, var22);
             var22.scaleMassDown(102, 15);
-            SpawnPointFactory.a(var2, var22, false);
+            SpawnPointFactory.drawComponentGeometry(var2, var22, false);
           } else {
             var3_ref_wfb = EnvironmentReflectionGpuMaterialEffect.field_g[SetMissileLauncherProjectileLife.field_p];
             if (var3_ref_wfb != null) {
-              SpawnPointFactory.a(var2, var3_ref_wfb, false);
+              SpawnPointFactory.drawComponentGeometry(var2, var3_ref_wfb, false);
               try {
                 if (BoundedRandomAccessFile.field_c == 1) {
                   for (var4 = 0; var4 < TimingGraph.field_d.length; var4++) {
@@ -178,7 +178,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
-          SetWeaponProjectileSpeedMultiply.e((byte) 14);
+          SetWeaponProjectileSpeedMultiply.drawComponentEditor((byte) 14);
         }
         field_o = null;
     }

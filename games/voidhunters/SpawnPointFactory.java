@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpawnPointFactory implements GameStateFactory {
-    final static void a(Camera2D param0, ShipComponentDefinition param1, boolean param2) {
+    final static void drawComponentGeometry(Camera2D param0, ShipComponentDefinition param1, boolean param2) {
         int stackIn_18_0 = 0;
         Camera2D stackIn_18_1 = null;
         boolean stackIn_19_2 = false;
@@ -146,11 +146,11 @@ final class SpawnPointFactory implements GameStateFactory {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void drawLobbyAndSocialOverlays(boolean param0, boolean param1) {
         if (!param1) {
           return;
         }
-        GpuFaceAttachment.a(param0, -24055);
+        GpuFaceAttachment.drawLobbyPanelsAndOverlays(param0, -24055);
         SetSalvoUsesAllEnergy.drawSocialOverlays(param0, (byte) -93);
     }
 

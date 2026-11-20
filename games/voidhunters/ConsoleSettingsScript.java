@@ -41,7 +41,7 @@ final class ConsoleSettingsScript {
             if (var5 != null &&
               var5.length == 2) {
               var5[1] = OpenGlModel.replaceCharacter(')', (byte) 111, "", var5[1]);
-              var6 = new ConsoleValue(NebulaFieldFactory.a(-92, (CharSequence) ((Object) var5[1])));
+              var6 = new ConsoleValue(NebulaFieldFactory.parseDecimalInt(-92, (CharSequence) ((Object) var5[1])));
               var7 = new ConsoleValue[]{var6};
               var8 = (ConsoleCommand) (var2.first(0));
               while (var8 != null) {

@@ -160,20 +160,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11 = param9 - param2;
               var12 = -1;
               if (var11 != 0) {
-                var12 = GetFighterRepairTime.a(var10Lifetime16, var11, var12, param1, param4, param8, param5, 0, 0, param2);
+                var12 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime16, var11, var12, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime16 != 0) {
-                var12 = GetFighterRepairTime.a(var11, var10Lifetime16, var12, param2, param9, param6, param5, 0, 0, param1);
+                var12 = GetFighterRepairTime.refineAxisAlignedIntersection(var11, var10Lifetime16, var12, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11 != 0) {
-                var12 = GetFighterRepairTime.a(var10Lifetime16, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
+                var12 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime16, var11, var12, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime16 != 0) {
-                var12 = GetFighterRepairTime.a(var11, var10Lifetime16, var12, param2, param9, 0, param5, 0, -param6, param1);
+                var12 = GetFighterRepairTime.refineAxisAlignedIntersection(var11, var10Lifetime16, var12, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12;
             }
@@ -200,20 +200,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime4 = param9 - param2;
               var12Lifetime4 = -1;
               if (var11Lifetime4 != 0) {
-                var12Lifetime4 = GetFighterRepairTime.a(var10Lifetime6Lifetime2, var11Lifetime4, var12Lifetime4, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime6Lifetime2, var11Lifetime4, var12Lifetime4, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime6Lifetime2 != 0) {
-                var12Lifetime4 = GetFighterRepairTime.a(var11Lifetime4, var10Lifetime6Lifetime2, var12Lifetime4, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime4, var10Lifetime6Lifetime2, var12Lifetime4, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime4 != 0) {
-                var12Lifetime4 = GetFighterRepairTime.a(var10Lifetime6Lifetime2, var11Lifetime4, var12Lifetime4, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime6Lifetime2, var11Lifetime4, var12Lifetime4, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime6Lifetime2 != 0) {
-                var12Lifetime4 = GetFighterRepairTime.a(var11Lifetime4, var10Lifetime6Lifetime2, var12Lifetime4, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime4, var10Lifetime6Lifetime2, var12Lifetime4, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime4;
             }
@@ -240,20 +240,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime5 = param9 - param2;
               var12Lifetime5 = -1;
               if (var11Lifetime5 != 0) {
-                var12Lifetime5 = GetFighterRepairTime.a(var10Lifetime7Lifetime2, var11Lifetime5, var12Lifetime5, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime7Lifetime2, var11Lifetime5, var12Lifetime5, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime7Lifetime2 != 0) {
-                var12Lifetime5 = GetFighterRepairTime.a(var11Lifetime5, var10Lifetime7Lifetime2, var12Lifetime5, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime5, var10Lifetime7Lifetime2, var12Lifetime5, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime5 != 0) {
-                var12Lifetime5 = GetFighterRepairTime.a(var10Lifetime7Lifetime2, var11Lifetime5, var12Lifetime5, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime7Lifetime2, var11Lifetime5, var12Lifetime5, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime7Lifetime2 != 0) {
-                var12Lifetime5 = GetFighterRepairTime.a(var11Lifetime5, var10Lifetime7Lifetime2, var12Lifetime5, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime5, var10Lifetime7Lifetime2, var12Lifetime5, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime5;
             }
@@ -280,20 +280,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime6 = param9 - param2;
               var12Lifetime6 = -1;
               if (var11Lifetime6 != 0) {
-                var12Lifetime6 = GetFighterRepairTime.a(var10Lifetime8Lifetime2, var11Lifetime6, var12Lifetime6, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime8Lifetime2, var11Lifetime6, var12Lifetime6, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime8Lifetime2 != 0) {
-                var12Lifetime6 = GetFighterRepairTime.a(var11Lifetime6, var10Lifetime8Lifetime2, var12Lifetime6, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime6, var10Lifetime8Lifetime2, var12Lifetime6, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime6 != 0) {
-                var12Lifetime6 = GetFighterRepairTime.a(var10Lifetime8Lifetime2, var11Lifetime6, var12Lifetime6, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime8Lifetime2, var11Lifetime6, var12Lifetime6, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime8Lifetime2 != 0) {
-                var12Lifetime6 = GetFighterRepairTime.a(var11Lifetime6, var10Lifetime8Lifetime2, var12Lifetime6, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime6, var10Lifetime8Lifetime2, var12Lifetime6, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime6;
             }
@@ -320,20 +320,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime7 = param9 - param2;
               var12Lifetime7 = -1;
               if (var11Lifetime7 != 0) {
-                var12Lifetime7 = GetFighterRepairTime.a(var10Lifetime9Lifetime2, var11Lifetime7, var12Lifetime7, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime9Lifetime2, var11Lifetime7, var12Lifetime7, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime9Lifetime2 != 0) {
-                var12Lifetime7 = GetFighterRepairTime.a(var11Lifetime7, var10Lifetime9Lifetime2, var12Lifetime7, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime7, var10Lifetime9Lifetime2, var12Lifetime7, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime7 != 0) {
-                var12Lifetime7 = GetFighterRepairTime.a(var10Lifetime9Lifetime2, var11Lifetime7, var12Lifetime7, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime9Lifetime2, var11Lifetime7, var12Lifetime7, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime9Lifetime2 != 0) {
-                var12Lifetime7 = GetFighterRepairTime.a(var11Lifetime7, var10Lifetime9Lifetime2, var12Lifetime7, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime7, var10Lifetime9Lifetime2, var12Lifetime7, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime7;
             }
@@ -360,20 +360,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime8 = param9 - param2;
               var12Lifetime8 = -1;
               if (var11Lifetime8 != 0) {
-                var12Lifetime8 = GetFighterRepairTime.a(var10Lifetime10Lifetime2, var11Lifetime8, var12Lifetime8, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime8 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime10Lifetime2, var11Lifetime8, var12Lifetime8, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime10Lifetime2 != 0) {
-                var12Lifetime8 = GetFighterRepairTime.a(var11Lifetime8, var10Lifetime10Lifetime2, var12Lifetime8, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime8 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime8, var10Lifetime10Lifetime2, var12Lifetime8, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime8 != 0) {
-                var12Lifetime8 = GetFighterRepairTime.a(var10Lifetime10Lifetime2, var11Lifetime8, var12Lifetime8, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime8 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime10Lifetime2, var11Lifetime8, var12Lifetime8, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime10Lifetime2 != 0) {
-                var12Lifetime8 = GetFighterRepairTime.a(var11Lifetime8, var10Lifetime10Lifetime2, var12Lifetime8, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime8 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime8, var10Lifetime10Lifetime2, var12Lifetime8, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime8;
             }
@@ -400,20 +400,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime9 = param9 - param2;
               var12Lifetime9 = -1;
               if (var11Lifetime9 != 0) {
-                var12Lifetime9 = GetFighterRepairTime.a(var10Lifetime11Lifetime2, var11Lifetime9, var12Lifetime9, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime9 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime11Lifetime2, var11Lifetime9, var12Lifetime9, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime11Lifetime2 != 0) {
-                var12Lifetime9 = GetFighterRepairTime.a(var11Lifetime9, var10Lifetime11Lifetime2, var12Lifetime9, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime9 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime9, var10Lifetime11Lifetime2, var12Lifetime9, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime9 != 0) {
-                var12Lifetime9 = GetFighterRepairTime.a(var10Lifetime11Lifetime2, var11Lifetime9, var12Lifetime9, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime9 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime11Lifetime2, var11Lifetime9, var12Lifetime9, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime11Lifetime2 != 0) {
-                var12Lifetime9 = GetFighterRepairTime.a(var11Lifetime9, var10Lifetime11Lifetime2, var12Lifetime9, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime9 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime9, var10Lifetime11Lifetime2, var12Lifetime9, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime9;
             }
@@ -442,20 +442,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
             var11Lifetime10 = param9 - param2;
             var12Lifetime10 = -1;
             if (var11Lifetime10 != 0) {
-              var12Lifetime10 = GetFighterRepairTime.a(var10Lifetime14, var11Lifetime10, var12Lifetime10, param1, param4, param8, param5, 0, 0, param2);
+              var12Lifetime10 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime14, var11Lifetime10, var12Lifetime10, param1, param4, param8, param5, 0, 0, param2);
             }
             if (var10Lifetime14 != 0) {
-              var12Lifetime10 = GetFighterRepairTime.a(var11Lifetime10, var10Lifetime14, var12Lifetime10, param2, param9, param6, param5, 0, 0, param1);
+              var12Lifetime10 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime10, var10Lifetime14, var12Lifetime10, param2, param9, param6, param5, 0, 0, param1);
             }
             param9 = param9 - param6;
             param2 = param2 - param6;
             param1 = param1 - param8;
             param4 = param4 - param8;
             if (var11Lifetime10 != 0) {
-              var12Lifetime10 = GetFighterRepairTime.a(var10Lifetime14, var11Lifetime10, var12Lifetime10, param1, param4, 0, param5, 0, -param8, param2);
+              var12Lifetime10 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime14, var11Lifetime10, var12Lifetime10, param1, param4, 0, param5, 0, -param8, param2);
             }
             if (var10Lifetime14 != 0) {
-              var12Lifetime10 = GetFighterRepairTime.a(var11Lifetime10, var10Lifetime14, var12Lifetime10, param2, param9, 0, param5, 0, -param6, param1);
+              var12Lifetime10 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime10, var10Lifetime14, var12Lifetime10, param2, param9, 0, param5, 0, -param6, param1);
             }
             return var12Lifetime10;
           }
@@ -492,20 +492,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime1 = param9 - param2;
               var12Lifetime1 = -1;
               if (var11Lifetime1 != 0) {
-                var12Lifetime1 = GetFighterRepairTime.a(var10Lifetime1Lifetime11, var11Lifetime1, var12Lifetime1, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime11, var11Lifetime1, var12Lifetime1, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime1Lifetime11 != 0) {
-                var12Lifetime1 = GetFighterRepairTime.a(var11Lifetime1, var10Lifetime1Lifetime11, var12Lifetime1, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1, var10Lifetime1Lifetime11, var12Lifetime1, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime1 != 0) {
-                var12Lifetime1 = GetFighterRepairTime.a(var10Lifetime1Lifetime11, var11Lifetime1, var12Lifetime1, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime11, var11Lifetime1, var12Lifetime1, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime1Lifetime11 != 0) {
-                var12Lifetime1 = GetFighterRepairTime.a(var11Lifetime1, var10Lifetime1Lifetime11, var12Lifetime1, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1, var10Lifetime1Lifetime11, var12Lifetime1, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime1;
             }
@@ -532,20 +532,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime1Lifetime1 = param9 - param2;
               var12Lifetime1Lifetime1 = -1;
               if (var11Lifetime1Lifetime1 != 0) {
-                var12Lifetime1Lifetime1 = GetFighterRepairTime.a(var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime1Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime1Lifetime1Lifetime2 != 0) {
-                var12Lifetime1Lifetime1 = GetFighterRepairTime.a(var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime1Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime1Lifetime1 != 0) {
-                var12Lifetime1Lifetime1 = GetFighterRepairTime.a(var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime1Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime1Lifetime2, var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime1Lifetime1Lifetime2 != 0) {
-                var12Lifetime1Lifetime1 = GetFighterRepairTime.a(var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime1Lifetime1 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime1, var10Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime1Lifetime1;
             }
@@ -572,20 +572,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime1Lifetime2 = param9 - param2;
               var12Lifetime1Lifetime2 = -1;
               if (var11Lifetime1Lifetime2 != 0) {
-                var12Lifetime1Lifetime2 = GetFighterRepairTime.a(var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime1Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime1Lifetime2Lifetime2 != 0) {
-                var12Lifetime1Lifetime2 = GetFighterRepairTime.a(var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, var12Lifetime1Lifetime2, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime1Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, var12Lifetime1Lifetime2, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime1Lifetime2 != 0) {
-                var12Lifetime1Lifetime2 = GetFighterRepairTime.a(var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime1Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime2Lifetime2, var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime1Lifetime2Lifetime2 != 0) {
-                var12Lifetime1Lifetime2 = GetFighterRepairTime.a(var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, var12Lifetime1Lifetime2, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime1Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime2, var10Lifetime1Lifetime2Lifetime2, var12Lifetime1Lifetime2, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime1Lifetime2;
             }
@@ -612,20 +612,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime1Lifetime3 = param9 - param2;
               var12Lifetime1Lifetime3 = -1;
               if (var11Lifetime1Lifetime3 != 0) {
-                var12Lifetime1Lifetime3 = GetFighterRepairTime.a(var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, var12Lifetime1Lifetime3, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime1Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, var12Lifetime1Lifetime3, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime1Lifetime3Lifetime2 != 0) {
-                var12Lifetime1Lifetime3 = GetFighterRepairTime.a(var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, var12Lifetime1Lifetime3, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime1Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, var12Lifetime1Lifetime3, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime1Lifetime3 != 0) {
-                var12Lifetime1Lifetime3 = GetFighterRepairTime.a(var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, var12Lifetime1Lifetime3, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime1Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime3Lifetime2, var11Lifetime1Lifetime3, var12Lifetime1Lifetime3, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime1Lifetime3Lifetime2 != 0) {
-                var12Lifetime1Lifetime3 = GetFighterRepairTime.a(var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, var12Lifetime1Lifetime3, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime1Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime3, var10Lifetime1Lifetime3Lifetime2, var12Lifetime1Lifetime3, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime1Lifetime3;
             }
@@ -652,20 +652,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime1Lifetime4 = param9 - param2;
               var12Lifetime1Lifetime4 = -1;
               if (var11Lifetime1Lifetime4 != 0) {
-                var12Lifetime1Lifetime4 = GetFighterRepairTime.a(var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, var12Lifetime1Lifetime4, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime1Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, var12Lifetime1Lifetime4, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime1Lifetime4Lifetime2 != 0) {
-                var12Lifetime1Lifetime4 = GetFighterRepairTime.a(var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, var12Lifetime1Lifetime4, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime1Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, var12Lifetime1Lifetime4, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime1Lifetime4 != 0) {
-                var12Lifetime1Lifetime4 = GetFighterRepairTime.a(var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, var12Lifetime1Lifetime4, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime1Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime4Lifetime2, var11Lifetime1Lifetime4, var12Lifetime1Lifetime4, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime1Lifetime4Lifetime2 != 0) {
-                var12Lifetime1Lifetime4 = GetFighterRepairTime.a(var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, var12Lifetime1Lifetime4, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime1Lifetime4 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime4, var10Lifetime1Lifetime4Lifetime2, var12Lifetime1Lifetime4, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime1Lifetime4;
             }
@@ -692,20 +692,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime1Lifetime5 = param9 - param2;
               var12Lifetime1Lifetime5 = -1;
               if (var11Lifetime1Lifetime5 != 0) {
-                var12Lifetime1Lifetime5 = GetFighterRepairTime.a(var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, var12Lifetime1Lifetime5, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime1Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, var12Lifetime1Lifetime5, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime1Lifetime5Lifetime2 != 0) {
-                var12Lifetime1Lifetime5 = GetFighterRepairTime.a(var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, var12Lifetime1Lifetime5, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime1Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, var12Lifetime1Lifetime5, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime1Lifetime5 != 0) {
-                var12Lifetime1Lifetime5 = GetFighterRepairTime.a(var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, var12Lifetime1Lifetime5, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime1Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime5Lifetime2, var11Lifetime1Lifetime5, var12Lifetime1Lifetime5, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime1Lifetime5Lifetime2 != 0) {
-                var12Lifetime1Lifetime5 = GetFighterRepairTime.a(var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, var12Lifetime1Lifetime5, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime1Lifetime5 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime5, var10Lifetime1Lifetime5Lifetime2, var12Lifetime1Lifetime5, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime1Lifetime5;
             }
@@ -732,20 +732,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime1Lifetime6 = param9 - param2;
               var12Lifetime1Lifetime6 = -1;
               if (var11Lifetime1Lifetime6 != 0) {
-                var12Lifetime1Lifetime6 = GetFighterRepairTime.a(var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, var12Lifetime1Lifetime6, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime1Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, var12Lifetime1Lifetime6, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime1Lifetime6Lifetime2 != 0) {
-                var12Lifetime1Lifetime6 = GetFighterRepairTime.a(var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, var12Lifetime1Lifetime6, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime1Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, var12Lifetime1Lifetime6, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime1Lifetime6 != 0) {
-                var12Lifetime1Lifetime6 = GetFighterRepairTime.a(var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, var12Lifetime1Lifetime6, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime1Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime6Lifetime2, var11Lifetime1Lifetime6, var12Lifetime1Lifetime6, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime1Lifetime6Lifetime2 != 0) {
-                var12Lifetime1Lifetime6 = GetFighterRepairTime.a(var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, var12Lifetime1Lifetime6, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime1Lifetime6 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime6, var10Lifetime1Lifetime6Lifetime2, var12Lifetime1Lifetime6, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime1Lifetime6;
             }
@@ -774,20 +774,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
             var11Lifetime1Lifetime7 = param9 - param2;
             var12Lifetime1Lifetime7 = -1;
             if (var11Lifetime1Lifetime7 != 0) {
-              var12Lifetime1Lifetime7 = GetFighterRepairTime.a(var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, var12Lifetime1Lifetime7, param1, param4, param8, param5, 0, 0, param2);
+              var12Lifetime1Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, var12Lifetime1Lifetime7, param1, param4, param8, param5, 0, 0, param2);
             }
             if (var10Lifetime1Lifetime9 != 0) {
-              var12Lifetime1Lifetime7 = GetFighterRepairTime.a(var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, var12Lifetime1Lifetime7, param2, param9, param6, param5, 0, 0, param1);
+              var12Lifetime1Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, var12Lifetime1Lifetime7, param2, param9, param6, param5, 0, 0, param1);
             }
             param9 = param9 - param6;
             param2 = param2 - param6;
             param1 = param1 - param8;
             param4 = param4 - param8;
             if (var11Lifetime1Lifetime7 != 0) {
-              var12Lifetime1Lifetime7 = GetFighterRepairTime.a(var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, var12Lifetime1Lifetime7, param1, param4, 0, param5, 0, -param8, param2);
+              var12Lifetime1Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime1Lifetime9, var11Lifetime1Lifetime7, var12Lifetime1Lifetime7, param1, param4, 0, param5, 0, -param8, param2);
             }
             if (var10Lifetime1Lifetime9 != 0) {
-              var12Lifetime1Lifetime7 = GetFighterRepairTime.a(var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, var12Lifetime1Lifetime7, param2, param9, 0, param5, 0, -param6, param1);
+              var12Lifetime1Lifetime7 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime1Lifetime7, var10Lifetime1Lifetime9, var12Lifetime1Lifetime7, param2, param9, 0, param5, 0, -param6, param1);
             }
             return var12Lifetime1Lifetime7;
           }
@@ -827,20 +827,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               var11Lifetime2 = param9 - param2;
               var12Lifetime2 = -1;
               if (var11Lifetime2 != 0) {
-                var12Lifetime2 = GetFighterRepairTime.a(var10Lifetime2Lifetime2, var11Lifetime2, var12Lifetime2, param1, param4, param8, param5, 0, 0, param2);
+                var12Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime2Lifetime2, var11Lifetime2, var12Lifetime2, param1, param4, param8, param5, 0, 0, param2);
               }
               if (var10Lifetime2Lifetime2 != 0) {
-                var12Lifetime2 = GetFighterRepairTime.a(var11Lifetime2, var10Lifetime2Lifetime2, var12Lifetime2, param2, param9, param6, param5, 0, 0, param1);
+                var12Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime2, var10Lifetime2Lifetime2, var12Lifetime2, param2, param9, param6, param5, 0, 0, param1);
               }
               param9 = param9 - param6;
               param2 = param2 - param6;
               param1 = param1 - param8;
               param4 = param4 - param8;
               if (var11Lifetime2 != 0) {
-                var12Lifetime2 = GetFighterRepairTime.a(var10Lifetime2Lifetime2, var11Lifetime2, var12Lifetime2, param1, param4, 0, param5, 0, -param8, param2);
+                var12Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime2Lifetime2, var11Lifetime2, var12Lifetime2, param1, param4, 0, param5, 0, -param8, param2);
               }
               if (var10Lifetime2Lifetime2 != 0) {
-                var12Lifetime2 = GetFighterRepairTime.a(var11Lifetime2, var10Lifetime2Lifetime2, var12Lifetime2, param2, param9, 0, param5, 0, -param6, param1);
+                var12Lifetime2 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime2, var10Lifetime2Lifetime2, var12Lifetime2, param2, param9, 0, param5, 0, -param6, param1);
               }
               return var12Lifetime2;
             }
@@ -900,20 +900,20 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
         var11Lifetime3 = param9 - param2;
         var12Lifetime3 = -1;
         if (var11Lifetime3 != 0) {
-          var12Lifetime3 = GetFighterRepairTime.a(var10Lifetime5, var11Lifetime3, var12Lifetime3, param1, param4, param8, param5, 0, 0, param2);
+          var12Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime5, var11Lifetime3, var12Lifetime3, param1, param4, param8, param5, 0, 0, param2);
         }
         if (var10Lifetime5 != 0) {
-          var12Lifetime3 = GetFighterRepairTime.a(var11Lifetime3, var10Lifetime5, var12Lifetime3, param2, param9, param6, param5, 0, 0, param1);
+          var12Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime3, var10Lifetime5, var12Lifetime3, param2, param9, param6, param5, 0, 0, param1);
         }
         param9 = param9 - param6;
         param2 = param2 - param6;
         param1 = param1 - param8;
         param4 = param4 - param8;
         if (var11Lifetime3 != 0) {
-          var12Lifetime3 = GetFighterRepairTime.a(var10Lifetime5, var11Lifetime3, var12Lifetime3, param1, param4, 0, param5, 0, -param8, param2);
+          var12Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var10Lifetime5, var11Lifetime3, var12Lifetime3, param1, param4, 0, param5, 0, -param8, param2);
         }
         if (var10Lifetime5 != 0) {
-          var12Lifetime3 = GetFighterRepairTime.a(var11Lifetime3, var10Lifetime5, var12Lifetime3, param2, param9, 0, param5, 0, -param6, param1);
+          var12Lifetime3 = GetFighterRepairTime.refineAxisAlignedIntersection(var11Lifetime3, var10Lifetime5, var12Lifetime3, param2, param9, 0, param5, 0, -param6, param1);
         }
         return var12Lifetime3;
     }

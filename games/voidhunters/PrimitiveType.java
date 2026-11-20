@@ -31,7 +31,7 @@ final class PrimitiveType {
               }
               var5Lifetime1 = null;
               if (0 == MissionGenerationDataFactory.field_b) {
-                var5Lifetime1 = SetPhasedEnergyBeamPulsetime.a(var4, param0, param2 - 10115);
+                var5Lifetime1 = SetPhasedEnergyBeamPulsetime.requestAddFriend(var4, param0, param2 - 10115);
               }
               if (MissionGenerationDataFactory.field_b == 1) {
                 var5Lifetime1 = ServerTickFactory.a((byte) 90, var4, param0);

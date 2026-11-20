@@ -5,14 +5,14 @@ final class GpuFaceAttachment {
     GpuFaceAttachment(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {
     }
 
-    final static void a(boolean param0, int param1) {
-        Asteroid.a(3, param0);
+    final static void drawLobbyPanelsAndOverlays(boolean param0, int param1) {
+        Asteroid.drawLobbyPanels(3, param0);
         if (param1 != -24055) {
           GpuFaceAttachment.getArmageddonStartTick((byte) 71, -57);
-          SetSpecialOrderBoxWidth.a((byte) 91, param0);
+          SetSpecialOrderBoxWidth.drawLobbyOverlays((byte) 91, param0);
           return;
         }
-        SetSpecialOrderBoxWidth.a((byte) 91, param0);
+        SetSpecialOrderBoxWidth.drawLobbyOverlays((byte) 91, param0);
     }
 
     final static boolean matchesVertexBufferMask(int param0, int param1, int param2) {

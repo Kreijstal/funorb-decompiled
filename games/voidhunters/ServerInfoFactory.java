@@ -144,7 +144,7 @@ final class ServerInfoFactory implements GameStateFactory {
             }
             var2 = stackIn_20_0;
             stackIn_25_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2 == 0);
-            SpawnPointFactory.a(stackIn_25_0, true);
+            SpawnPointFactory.drawLobbyAndSocialOverlays(stackIn_25_0, true);
             var14 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
             if (OpenGlTexture1D.field_i) {
               var4_int = SetToggledScoreboard.field_o.screenY;
@@ -215,7 +215,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 }
                 var2Lifetime1 = stackIn_74_0;
                 stackIn_79_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1 == 0);
-                SpawnPointFactory.a(stackIn_79_0, true);
+                SpawnPointFactory.drawLobbyAndSocialOverlays(stackIn_79_0, true);
                 var16 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
                 if (OpenGlTexture1D.field_i) {
                   var4_intLifetime1 = SetToggledScoreboard.field_o.screenY;
@@ -270,7 +270,7 @@ final class ServerInfoFactory implements GameStateFactory {
           }
           var2Lifetime1Lifetime1 = stackIn_108_0;
           stackIn_113_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1Lifetime1 == 0);
-          SpawnPointFactory.a(stackIn_113_0, true);
+          SpawnPointFactory.drawLobbyAndSocialOverlays(stackIn_113_0, true);
           var18 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
           var3 = var18;
           if (OpenGlTexture1D.field_i) {

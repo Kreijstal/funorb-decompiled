@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1572/1572 classes and 7832/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 0 opaque classes and 383 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1572/1572 classes and 7875/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 0 opaque classes and 340 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -150,6 +150,8 @@ Menu fonts, backgrounds and metrics have named configuration helpers, along with
 `SoftwareTriangleRasterizer` now names every method and field, including flat/Gouraud triangles and scanlines, depth buffers, clipping, coarse shading and blending. Its float operation order, depth-write gates and special transparency-254 neighbor copy are retained. Login submission and account-creation credential fields are traced from their forms; audio setup, overlays, listeners, cookie writing, social lookup and optional velocity serialization have named entrypoints.
 
 `NetworkGameClient` now names every method, including pending-request, scoreboard and social packet policies. Scoreboard parsing, state packets and typed arrays, menu transitions and hit testing, lobby timers, audio maintenance, password content checks and date-of-birth packet writing have named helpers. Noise volumes, radial polygons, display-mode ordering, texture/font choices and paired sorts retain their original constants, allocation, randomness and guard behavior.
+
+Chat context/filter menus, game-session reception, lobby packet decoding, loading progress, font metrics and sprite loading have named entrypoints. Component editor rendering, texture mapping, integer mipmap uploads, clipped geometry, fullscreen restoration and social-list setup expose their existing contracts. Team-chat names are traced from team selection to message prefixes; original packet layouts, masks, buffer reuse and rendering quirks are retained.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

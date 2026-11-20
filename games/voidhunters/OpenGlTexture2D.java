@@ -44,7 +44,7 @@ class OpenGlTexture2D extends OpenGlTexture {
             param5 &&
             0 == param7 &&
             param8 == 0) {
-            SetVariableLabelActionFactory.a(param6, this.toolkit.field_cc, 29175, this.internalFormat, this.target, 32993, this.height, this.width);
+            SetVariableLabelActionFactory.uploadIntMipmaps(param6, this.toolkit.field_cc, 29175, this.internalFormat, this.target, 32993, this.height, this.width);
             this.markMipmapsPresent((byte) 62, true);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);

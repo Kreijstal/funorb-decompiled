@@ -83,7 +83,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final static QuickChatCategoryDefinition d(int param0) {
+    final static QuickChatCategoryDefinition findInitialQuickChatCategory(int param0) {
         int var1_int = 0;
         QuickChatCategoryDefinition var2 = null;
         QuickChatCategoryDefinition stackIn_6_0 = null;
@@ -126,8 +126,8 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final static void b(byte param0) {
-        SpriteTextureOperation.e(-110);
+    final static void exitFullscreen(byte param0) {
+        SpriteTextureOperation.exitFullscreenAndRestoreSize(-110);
         int var1 = -25 / ((46 - param0) / 35);
     }
 

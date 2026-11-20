@@ -26,7 +26,7 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = NebulaFieldFactory.a(-73, var5);
+          var3_int = NebulaFieldFactory.parseDecimalInt(-73, var5);
           if (var3_int > 0 &&
             var3_int <= 130) {
             if (param1 != 16384) {

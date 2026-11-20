@@ -901,7 +901,7 @@ final class GameMenuScreen {
           return;
         }
         if (this.menuId == 8) {
-          SetWeaponProjectileSpeedMultiply.e((byte) 102);
+          SetWeaponProjectileSpeedMultiply.drawComponentEditor((byte) 102);
         }
         if (param0 != 65) {
           var8 = (String) null;
@@ -1054,7 +1054,7 @@ final class GameMenuScreen {
           var2 = GetGrapplingHooksDamageableBySourcePlayer.updateMenuCarousel(stackIn_10_0, (byte) 40);
           if (3 == var2) {
             if (null != EmailAvailabilityChecks.fullscreenCanvas) {
-              VariableCondition.b((byte) -42);
+              VariableCondition.exitFullscreen((byte) -42);
             }
             SetMaxShipSize.a(MissionList.getApplet((byte) -105), 0);
           }

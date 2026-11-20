@@ -412,7 +412,7 @@ final class SoftwareModel extends Model3D {
         }
         this.field_q = new float[this.field_c][];
         this.field_a = new float[this.field_c][];
-        var11 = SetSpecialOrderBoxWidth.a(param1, var74, this.field_c, -3);
+        var11 = SetSpecialOrderBoxWidth.buildTextureMappingData(param1, var74, this.field_c, -3);
         var61 = this.toolkit.getThreadContext((Runnable) ((Object) Thread.currentThread()));
         var76 = var61.field_a;
         var14Lifetime2 = 0;

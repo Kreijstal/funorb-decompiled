@@ -31,7 +31,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         }
     }
 
-    final static int e(byte param0) {
+    final static int getUiLoadingPercent(byte param0) {
         if (2 > UiDraggableContainer.field_z) {
           return 0;
         }
@@ -95,7 +95,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(byte param0, ResourceArchive param1, BitmapFont param2) {
+    final static void initializeQuickChat(byte param0, ResourceArchive param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -126,7 +126,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           param1.fileRetentionMode = 0;
           TileTextureOperation.field_i = new QuickChatCategoryLoader(var3_int, param1, param1);
           GetTorpedoAimarc.field_o = new QuickChatPhraseLoader(var3_int, param1, param1, new FeatheredLineRasterizer());
-          var4 = VariableCondition.d(10);
+          var4 = VariableCondition.findInitialQuickChatCategory(10);
           if (var4 == null) {
             var11 = (Throwable) null;
             FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "QC2", 0);

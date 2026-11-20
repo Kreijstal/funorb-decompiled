@@ -35,7 +35,7 @@ final class EscapePodFactory implements GameStateFactory {
             stackIn_14_0 = (byte[]) (param1);
             return stackIn_14_0;
           }
-          stackIn_12_0 = SetPointDefenceLaserProjectileDamage.a(param1, (byte) -100);
+          stackIn_12_0 = SetPointDefenceLaserProjectileDamage.copyByteArray(param1, (byte) -100);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

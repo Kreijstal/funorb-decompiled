@@ -35,7 +35,7 @@ final class PlayerContextMenu {
             }
           }
         } else {
-          var4_ref = SetPhasedEnergyBeamPulsetime.a(this.targetName, param0, 9602);
+          var4_ref = SetPhasedEnergyBeamPulsetime.requestAddFriend(this.targetName, param0, 9602);
         }
         if (var4_ref != null) {
           ChatMessages.appendMessage((byte) -112, 0, (String) null, this.targetName, var4_ref, 2);

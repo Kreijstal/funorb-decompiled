@@ -13,7 +13,7 @@ abstract class SoftwareSprite2D {
 
     abstract void draw(int param0, int param1);
 
-    final static void a(int param0) {
+    final static void resetSocialLists(int param0) {
         DualLinkNode var2 = null;
         int var3 = VoidHunters.field_G;
         DualLinkNode var2Lifetime1;

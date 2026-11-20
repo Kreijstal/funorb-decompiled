@@ -5,7 +5,7 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
     static String field_p;
     static int field_o;
 
-    final static Widget a(int param0) {
+    final static Widget getGamePlayerListContent(int param0) {
         if (param0 != 0) {
           return (Widget) null;
         }
@@ -28,7 +28,7 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetUseOffscreenRendering.a(24);
+            SetUseOffscreenRendering.getGamePlayerListContent(24);
           }
           CombatHelpText.field_c = arguments[0].booleanValue(false);
           stackIn_3_0 = new ConsoleValue("void");
@@ -51,9 +51,9 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static Widget b(boolean param0) {
+    final static Widget getLobbyGameListContent(boolean param0) {
         if (param0) {
-          SetUseOffscreenRendering.a(45);
+          SetUseOffscreenRendering.getGamePlayerListContent(45);
           return MapClearanceCircle.field_f.content;
         }
         return MapClearanceCircle.field_f.content;

@@ -978,7 +978,7 @@ final class GameSession {
         }
         ShipTeamConditionFactory.field_a.updateWorldBounds(MissionVariableFactory.field_a, 0, -116, PartitionZoneFactory.field_a, 0);
         var24 = this.state.getVisibleSnapshot(1);
-        PlayerAction.a(var24.world, ShipTeamConditionFactory.field_a, this.field_x, (byte) -59);
+        PlayerAction.drawWorldBackground(var24.world, ShipTeamConditionFactory.field_a, this.field_x, (byte) -59);
         var6 = this.state.getVisibleWorld((byte) 33).getShips(1000);
         var7 = this.state.getVisibleWorld((byte) 42).getResNodes(1);
         var8 = this.state.getVisibleWorld((byte) 30).getEscapePods(0);
@@ -5825,12 +5825,12 @@ final class GameSession {
               if (SetDebrisPartitioned.field_o != 1) {
                 if (SetDebrisPartitioned.field_o == 2) {
                   var35 = new PlayerAction();
-                  var35.a(true, param0, -30790);
+                  var35.setVote(true, param0, -30790);
                   this.submitPlayerAction(0, true, var35);
                 }
               } else {
                 var34 = new PlayerAction();
-                var34.a(false, param0, -30790);
+                var34.setVote(false, param0, -30790);
                 this.submitPlayerAction(0, true, var34);
               }
             }
@@ -6092,7 +6092,7 @@ final class GameSession {
               }
               if (var10 == 0) {
                 var11 = new PlayerAction();
-                var11.a(false, var8Lifetime1, -30790);
+                var11.setVote(false, var8Lifetime1, -30790);
                 this.submitPlayerAction(0, true, var11);
               }
             }
@@ -7543,7 +7543,7 @@ final class GameSession {
             var4Lifetime1 = AlphaContainer.getTeamColor(false, var3Lifetime1, 13894143);
             FireMissilesOrderDefinition.setTeamChatColor(var4Lifetime1, 124);
             var9 = VoidHunters.getTeamName(var3Lifetime1, -1);
-            GetBurstFireMaxEnergy.a(1043, var9);
+            GetBurstFireMaxEnergy.setTeamChatName(1043, var9);
           }
         }
     }
@@ -7914,7 +7914,7 @@ final class GameSession {
           if (var2 != null) {
             var3 = SetOndamageParticleLife.encodeComponentWords(var2.chassis, -111);
             if (var3 != null) {
-              var4 = SetFightersPerPlayerMaximum.a(var3, false);
+              var4 = SetFightersPerPlayerMaximum.formatIntArray(var3, false);
               GetDebrisThrowable.a(false, "Ship=new int[]" + var4 + ";");
             }
           }

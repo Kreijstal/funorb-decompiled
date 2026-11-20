@@ -42,7 +42,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
         Widget var5 = null;
         Widget var6 = null;
         Widget var3 = null;
-        SetMissileLauncherRandomness.field_o = SetSniperCannonProjectiles.a(param0, "display_name_changed", "basic", true);
+        SetMissileLauncherRandomness.field_o = SetSniperCannonProjectiles.loadNamedSprite(param0, "display_name_changed", "basic", true);
         BitmapTextLayout.field_n = new ScrollableActionPanel(0L, UiTheme.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
         AttachmentInputState.field_b = new ScrollableActionPanel(0L, UiTheme.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
         PlayerJoinFactory.field_c = new Widget(0L, (Widget) null);
@@ -118,7 +118,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
               GetShowTutorial.field_o = false;
               var3_int = 1;
             }
-            HelloCommand.drawLoadingBar(SetBlueprintSaveTime.field_p, 13, GetMissileLauncherFireForce.e((byte) 97), var3_int != 0, SetMassDriverFireForce.e((byte) -79));
+            HelloCommand.drawLoadingBar(SetBlueprintSaveTime.field_p, 13, GetMissileLauncherFireForce.getUiLoadingPercent((byte) 97), var3_int != 0, SetMassDriverFireForce.e((byte) -79));
           }
           if (param0 == 111) {
             return;

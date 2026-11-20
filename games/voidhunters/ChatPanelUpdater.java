@@ -39,7 +39,7 @@ final class ChatPanelUpdater {
             var5 = BeveledSpriteTileFactory.field_b[var4_int];
             if (var5 != null) {
               if (var5.field_o != 0) {
-                SetShieldsDirectionalArcParticleSpeedDownshift.a(101, var5, var4_int);
+                SetShieldsDirectionalArcParticleSpeedDownshift.showChatFilterMenu(101, var5, var4_int);
               }
               var6 = SetReverbDry.getChatFilter(var4_int, (byte) 19);
               SecondaryNodeDeque.field_c[var4_int].field_tb = GetGrapplingHookAimspeed.field_o[var6];
@@ -51,7 +51,7 @@ final class ChatPanelUpdater {
           }
           var9 = SetMissionDebrisDefaultProbability.b(DialogMessagePanel.field_w, AppletCookieWriter.field_c, param1, -123);
           if (var9 != null) {
-            GetSniperCannonProjectiles.a(var9, 22859);
+            GetSniperCannonProjectiles.showChatMessageContextMenu(var9, 22859);
           }
           var8 = GetThrusterBindingBalanceThreshold.a(-8037);
           var6Lifetime1 = 101 / ((param3 + 32) / 58);

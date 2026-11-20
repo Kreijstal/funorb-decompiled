@@ -1275,8 +1275,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
                 throw new RuntimeException("");
               }
               try {
-                var10_int = NebulaFieldFactory.a(-102, (CharSequence) ((Object) var9[0]));
-                var11_int = NebulaFieldFactory.a(38, (CharSequence) ((Object) var9[1]));
+                var10_int = NebulaFieldFactory.parseDecimalInt(-102, (CharSequence) ((Object) var9[0]));
+                var11_int = NebulaFieldFactory.parseDecimalInt(38, (CharSequence) ((Object) var9[1]));
                 this.field_Fc = var10_int * 10 + var11_int;
               } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -1348,7 +1348,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
                           if (SetPointDefenceLaserAimarc.a(var32, 10)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
-                            var11_int = NebulaFieldFactory.a(63, var33);
+                            var11_int = NebulaFieldFactory.parseDecimalInt(63, var33);
                             decompiledRegionSelector0 = 1;
                             decompiledFrameRemainder0 = false;
                           }

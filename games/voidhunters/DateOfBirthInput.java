@@ -126,7 +126,7 @@ abstract class DateOfBirthInput extends UiContainer implements ValidatableInput 
             if (GameInvitationText.archiveConnectionStage == 2) {
               TextureLineShape.pendingArchiveSocket = new BufferedSocket((java.net.Socket) (SoftwareSprite2D.archiveSocketRequest.result), NormalMapTextureOperation.field_k);
               var2 = new PacketBuffer(13);
-              SetVariableLabelActionFactory.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
+              SetVariableLabelActionFactory.writeArchiveHandshakeHeader(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.writeByte(0, 15);
               var2.writeInt(ByteIndexedRecordWriteRequest.field_d, 332614536);
               TextureLineShape.pendingArchiveSocket.write(0, var2.payload, 13, 0);

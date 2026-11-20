@@ -162,7 +162,7 @@ final class TabbedWidget extends Widget {
             param3 == param6 &&
             param5 == param0 &&
             param1 == param7) {
-            GetBurstFireMaxEnergy.a(param3, param5, (byte) 52, param9, param1, param8);
+            GetBurstFireMaxEnergy.drawClippedLine(param3, param5, (byte) 52, param9, param1, param8);
           } else {
             var10_int = param9;
             var11 = param3;
@@ -189,7 +189,7 @@ final class TabbedWidget extends Widget {
               var32 = var24 * var23;
               var33 = param9 + (var31 + var29 + var27 >> 12);
               var34 = param3 + (var32 + (var30 + var28) >> 12);
-              GetBurstFireMaxEnergy.a(var11, var33, (byte) 110, var10_int, var34, param8);
+              GetBurstFireMaxEnergy.drawClippedLine(var11, var33, (byte) 110, var10_int, var34, param8);
               var11 = var34;
               var10_int = var33;
             }

@@ -35,7 +35,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static GameSession a(int param0, CarouselGameClient param1, IsaacPacketBuffer param2, byte param3) {
+    final static GameSession receiveGameSession(int param0, CarouselGameClient param1, IsaacPacketBuffer param2, byte param3) {
         int var11_int = 0;
         GameSession stackIn_3_0 = null;
         int stackIn_9_0 = 0;
@@ -128,7 +128,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] copyByteArray(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

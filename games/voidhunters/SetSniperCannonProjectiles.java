@@ -38,7 +38,7 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1, byte param2, int param3) {
+    final static boolean isValidInt(CharSequence param0, boolean param1, byte param2, int param3) {
         int var8 = 0;
         int stackIn_43_0 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -125,7 +125,7 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static Sprite a(ResourceArchive param0, String param1, String param2, boolean param3) {
+    final static Sprite loadNamedSprite(ResourceArchive param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -203,7 +203,7 @@ final class ServerInfo implements DiffableState {
     }
 
     public final String toString() {
-        return "Voteoption states=" + SetFightersPerPlayerMaximum.a(this.voteoptionStates, false) + "\nComponentoption states=" + SetFightersPerPlayerMaximum.a(this.componentoptionStates, false) + "\ncopy_to_clipboard_hidden=" + this.copyToClipboardHidden + "\nServerside: " + this.releaseStatistics;
+        return "Voteoption states=" + SetFightersPerPlayerMaximum.formatIntArray(this.voteoptionStates, false) + "\nComponentoption states=" + SetFightersPerPlayerMaximum.formatIntArray(this.componentoptionStates, false) + "\ncopy_to_clipboard_hidden=" + this.copyToClipboardHidden + "\nServerside: " + this.releaseStatistics;
     }
 
     final boolean isComponentOptionComingSoon(int param0, int param1) {

@@ -236,7 +236,7 @@ final class NodeHashTable {
           throw new IllegalStateException();
         }
         CommandConsole.field_r = true;
-        GetSniperCannonProjectiles.a(true, param0 ^ -125);
+        GetSniperCannonProjectiles.showLoginForm(true, param0 ^ -125);
         GetSpinningBladeAimspeed.field_q = param0;
     }
 

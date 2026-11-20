@@ -16,7 +16,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.drawRectangleBorderClipped(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (GetCountermeasureLauncherProjectiles.field_o < param5) {
@@ -24,7 +24,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.drawRectangleBorderClipped(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (param3 < NebulaField.field_c) {
@@ -32,7 +32,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.drawRectangleBorderClipped(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
@@ -40,7 +40,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.drawRectangleBorderClipped(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (param6 != 1) {
