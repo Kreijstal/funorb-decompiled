@@ -394,7 +394,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             GetPlayerRepairTime.field_o[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -114);
           }
           Hardpoint.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -113);
-          qd.field_d = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -95);
+          TutorialProgressState.field_d = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -95);
           for (var3Lifetime3 = 0; var3Lifetime3 < GetDebrisThrowable.field_p.length; var3Lifetime3++) {
             GetDebrisThrowable.field_p[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -114);
           }

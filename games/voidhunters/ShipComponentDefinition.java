@@ -36,7 +36,7 @@ final class ShipComponentDefinition {
         if (!param1) {
           this.setSpecialOrderId((byte) -121, -90);
         }
-        this.maxHealth = lw.a((byte) -73, this.mass) * this.healthScale;
+        this.maxHealth = SpecialOrderButtonState.approximateIntegerSqrt((byte) -73, this.mass) * this.healthScale;
     }
 
     final int getCategoryColor(int param0) {
@@ -154,12 +154,12 @@ final class ShipComponentDefinition {
         if (this.mass < 0) {
           this.mass = 2147483647;
         }
-        this.maxHealth = lw.a((byte) -73, this.mass) * this.healthScale;
+        this.maxHealth = SpecialOrderButtonState.approximateIntegerSqrt((byte) -73, this.mass) * this.healthScale;
     }
 
     final void scaleMassDown(int param0, int param1) {
         this.mass = this.mass >> param1;
-        this.maxHealth = lw.a((byte) -73, this.mass) * this.healthScale;
+        this.maxHealth = SpecialOrderButtonState.approximateIntegerSqrt((byte) -73, this.mass) * this.healthScale;
         if (param0 < 100) {
           this.field_A = (int[][]) null;
         }

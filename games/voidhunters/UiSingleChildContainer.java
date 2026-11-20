@@ -115,7 +115,7 @@ abstract class UiSingleChildContainer extends UiComponent implements UiContainer
 
     final static void a(int param0, boolean param1) {
         if (!(SoftwareTransform3D.field_b <= 0) &&
-          bv.field_d) {
+          TutorialController.field_d) {
           SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.screenY);
           GetTorpedoProjectiles.field_o.draw(param1, 45);
         }

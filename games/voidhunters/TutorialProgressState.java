@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd {
+final class TutorialProgressState {
     static String field_c;
     static int field_b;
     static int field_d;
-    static boolean[] field_a;
+    static boolean[] completedHints;
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void probeAppletUsername(int param0, java.applet.Applet param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -42,13 +42,13 @@ final class qd {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_a = null;
+        completedHints = null;
         field_c = null;
         int var1 = 82 / ((-47 - param0) / 60);
     }
 
     static {
         field_c = "Repairing...";
-        field_a = new boolean[11];
+        completedHints = new boolean[11];
     }
 }

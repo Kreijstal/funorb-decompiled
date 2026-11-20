@@ -3,7 +3,7 @@
  */
 final class GetLagStandardDeviationOut extends ConsoleCommand {
     static int field_p;
-    static hqb field_o;
+    static PlayerContextMenu field_o;
 
     GetLagStandardDeviationOut(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

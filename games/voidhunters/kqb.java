@@ -8,7 +8,7 @@ final class kqb {
         int var4 = 0;
         int var5 = 0;
         try {
-          bv.field_d = true;
+          TutorialController.field_d = true;
           Debris.field_y.text = param0;
           var2_int = SetClientSideDragging.field_q.field_d;
           var3 = SetClientSideDragging.field_q.field_b;

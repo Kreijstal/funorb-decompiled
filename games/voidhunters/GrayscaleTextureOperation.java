@@ -14,8 +14,8 @@ final class GrayscaleTextureOperation extends TextureOperation {
         int var3 = VoidHunters.field_G;
         try {
           for (var2_int = 0; var2_int < 11; var2_int++) {
-            HardpointMatch.field_f[var2_int] = 0;
-            qd.field_a[var2_int] = !param0 ? true : false;
+            HardpointMatch.hintTimers[var2_int] = 0;
+            TutorialProgressState.completedHints[var2_int] = !param0 ? true : false;
           }
           if (param1 > -5) {
             GrayscaleTextureOperation.clearSharedReferences((byte) 81);
@@ -26,7 +26,7 @@ final class GrayscaleTextureOperation extends TextureOperation {
           ComponentBehaviour.field_b = !param0 ? true : false;
           OpenGlVertexDeclaration.field_d = !param0 ? true : false;
           GetPointDefenceLaserReload.field_p = !param0 ? true : false;
-          GetShieldsDirectionalRadius.a(37);
+          GetShieldsDirectionalRadius.saveCompletedHints(37);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
         }

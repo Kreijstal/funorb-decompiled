@@ -193,7 +193,7 @@ final class ScrollPaneWidget extends Widget {
                 }
               }
             } else {
-              GetTorpedoProjectileDamage.field_p.text = hqb.field_j;
+              GetTorpedoProjectileDamage.field_p.text = PlayerContextMenu.field_j;
               GetShipToShipRamDamage.field_q.enabled = false;
               if (var8 == 0) {
                 stackIn_25_0 = TickConditionFactory.field_b;

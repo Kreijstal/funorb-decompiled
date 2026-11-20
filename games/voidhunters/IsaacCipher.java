@@ -33,8 +33,8 @@ final class IsaacCipher {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        hqb var16 = null;
-        hqb var17 = null;
+        PlayerContextMenu var16 = null;
+        PlayerContextMenu var17 = null;
         var15 = VoidHunters.field_G;
         try {
           if (param0 < 17) {
@@ -114,11 +114,11 @@ final class IsaacCipher {
               pea.$cfr$intArgs$a$91f64d33677c(0L, var6, -1, (int[]) null, var6.field_Cb, vra.field_b.scrollPane, var6.field_Fb, 72, -1);
               var16 = GetLagStandardDeviationOut.field_o;
               var13_ref_String = PlayerJoinFactory.field_a;
-              var16.field_i.addItem(var13_ref_String, (byte) -53, 7);
+              var16.menu.addItem(var13_ref_String, (byte) -53, 7);
               var17 = GetLagStandardDeviationOut.field_o;
               var13 = Particle.field_H;
               var14 = qs.field_a;
-              var17.field_i.layoutPopup(var13, -29060, var14, 0, 0);
+              var17.menu.layoutPopup(var13, -29060, var14, 0, 0);
             }
             var6 = (vu) (var4.next((byte) 66));
           }

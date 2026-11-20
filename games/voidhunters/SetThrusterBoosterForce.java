@@ -50,7 +50,7 @@ final class SetThrusterBoosterForce extends ConsoleCommand {
         RuntimeException var3_ref = null;
         var6 = VoidHunters.field_G;
         try {
-          var3 = hqb.getNameFormatError(param1, (byte) 43, param2);
+          var3 = PlayerContextMenu.getNameFormatError(param1, (byte) 43, param2);
           var4 = 107 / ((param0 + 12) / 63);
           if (var3 != null) {
             stackIn_3_0 = var3;

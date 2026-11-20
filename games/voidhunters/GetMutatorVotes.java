@@ -5,14 +5,14 @@ final class GetMutatorVotes extends ConsoleCommand {
     static int field_p;
     static String field_o;
 
-    final static int a(int param0, int param1) {
+    final static int computeHintAlpha(int param0, int param1) {
         int var2 = 0;
         int var2Lifetime1;
         if (param1 == 255) {
           var2 = param0 - 50;
           return Math.min(255 * var2 / 50, 255);
         }
-        GetMutatorVotes.a(75, 111);
+        GetMutatorVotes.computeHintAlpha(75, 111);
         var2Lifetime1 = param0 - 50;
         return Math.min(255 * var2Lifetime1 / 50, 255);
     }

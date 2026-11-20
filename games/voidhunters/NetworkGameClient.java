@@ -287,7 +287,7 @@ abstract class NetworkGameClient extends GameApplet {
           GetSalvoUsesAllEnergy.field_o = null;
           BufferedFile.field_i = null;
           btb.field_b = null;
-          qd.a(0, (java.applet.Applet) (this));
+          TutorialProgressState.probeAppletUsername(0, (java.applet.Applet) (this));
           MidiNote.resetFrameTiming(2096);
           UiDraggableContainer.field_z = 10;
         }

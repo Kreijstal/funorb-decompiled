@@ -6,7 +6,7 @@ import java.util.*;
 final class GetBoostersCooldown extends ConsoleCommand {
     static BitmapFont field_r;
     static String field_q;
-    static boolean[] field_o;
+    static boolean[] savedHintCompletion;
     static int field_p;
 
     final static int a(Random param0, byte param1) {
@@ -79,7 +79,7 @@ final class GetBoostersCooldown extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         field_q = null;
-        field_o = null;
+        savedHintCompletion = null;
         int var1 = 114 % ((param0 + 51) / 61);
         field_r = null;
     }
@@ -90,6 +90,6 @@ final class GetBoostersCooldown extends ConsoleCommand {
 
     static {
         field_q = "Hydra chassis";
-        field_o = new boolean[11];
+        savedHintCompletion = new boolean[11];
     }
 }

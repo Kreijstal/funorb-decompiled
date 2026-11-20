@@ -931,7 +931,7 @@ public final class VoidHunters extends NetworkGameClient {
         ncb.clearSharedReferences(500);
         cib.clearSharedReferences(-18013);
         Widget.clearSharedReferences(-2147483648);
-        bv.clearSharedReferences(39);
+        TutorialController.clearSharedReferences(39);
         hw.clearSharedReferences(-1);
         bfb.clearSharedReferences();
         aaa.clearSharedReferences((byte) 35);
@@ -1020,7 +1020,7 @@ public final class VoidHunters extends NetworkGameClient {
         ScrollBarWidget.clearSharedReferences((byte) 22);
         PopupMenuWidget.clearSharedReferences(0);
         ScrollableActionPanel.clearSharedReferences((byte) 127);
-        hqb.clearSharedReferences((byte) -106);
+        PlayerContextMenu.clearSharedReferences((byte) -106);
         lwa.clearSharedReferences(0);
         IconTextWidget.clearSharedReferences(1);
         bs.clearSharedReferences((byte) 42);
@@ -1089,7 +1089,7 @@ public final class VoidHunters extends NetworkGameClient {
         dha.clearSharedReferences(53);
         fia.clearSharedReferences((byte) -28);
         VorbisFloor.clearSharedReferences();
-        qd.clearSharedReferences((byte) 66);
+        TutorialProgressState.clearSharedReferences((byte) 66);
         SoftLruCache.clearSharedReferences(118);
         bbb.clearSharedReferences(0);
         jw.clearSharedReferences(false);
@@ -1278,7 +1278,7 @@ public final class VoidHunters extends NetworkGameClient {
         vu.clearSharedReferences((byte) 113);
         fa.clearSharedReferences((byte) 119);
         ujb.clearSharedReferences((byte) -111);
-        lw.clearSharedReferences(false);
+        SpecialOrderButtonState.clearSharedReferences(false);
         ClientDataReadRequest.clearSharedReferences(127);
         ConsoleCommand.clearSharedReferences(true);
         ConsoleEvaluationException.clearSharedReferences(true);

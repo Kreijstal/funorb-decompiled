@@ -1,60 +1,60 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hqb {
-    Widget field_b;
-    private String field_g;
-    private int field_c;
+final class PlayerContextMenu {
+    Widget sourceWidget;
+    private String targetDisplayName;
+    private int channelType;
     static int field_f;
-    PopupMenuWidget field_i;
-    private long field_d;
+    PopupMenuWidget menu;
+    private long targetPlayerKey;
     static String[][] field_k;
-    int field_h;
-    private int[] field_e;
-    String field_a;
+    int targetGameId;
+    private int[] actionData;
+    String targetName;
     static String field_j;
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean handleSocialAction(int param0, int param1, int param2) {
         Object var4;
         String var4_ref;
         if (param2 > -64) {
-          this.b(33);
+          this.addReportOption(33);
         }
         var4 = null;
         if (param1 != 4) {
           if (param1 == 5) {
-            var4_ref = ServerTickFactory.a((byte) 90, this.field_a, param0);
+            var4_ref = ServerTickFactory.a((byte) 90, this.targetName, param0);
           } else {
             if (6 != param1) {
               if (7 != param1) {
                 return false;
               }
-              var4_ref = GameCanvasResizeListener.a(param0, this.field_g, this.field_a, (byte) -76);
+              var4_ref = GameCanvasResizeListener.a(param0, this.targetDisplayName, this.targetName, (byte) -76);
             } else {
-              var4_ref = SetExplosionPushMultiplier.a(2, this.field_a, param0);
+              var4_ref = SetExplosionPushMultiplier.a(2, this.targetName, param0);
             }
           }
         } else {
-          var4_ref = SetPhasedEnergyBeamPulsetime.a(this.field_a, param0, 9602);
+          var4_ref = SetPhasedEnergyBeamPulsetime.a(this.targetName, param0, 9602);
         }
         if (var4_ref != null) {
-          lh.a((byte) -112, 0, (String) null, this.field_a, var4_ref, 2);
+          lh.a((byte) -112, 0, (String) null, this.targetName, var4_ref, 2);
         }
         return true;
     }
 
-    private final boolean a(byte param0, int param1, int param2) {
+    private final boolean handleReportAction(byte param0, int param1, int param2) {
         if (param0 != 16) {
           field_f = 14;
         }
         if (17 != param1) {
           return false;
         }
-        Asteroid.field_v = new bwa(this.field_b.screenX, this.field_b.screenY, this.field_b.width, this.field_b.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.field_a, this.field_d);
+        Asteroid.field_v = new bwa(this.sourceWidget.screenX, this.sourceWidget.screenY, this.sourceWidget.width, this.sourceWidget.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.targetName, this.targetPlayerKey);
         return true;
     }
 
-    private final boolean b(byte param0, int param1, int param2) {
+    private final boolean handleLobbyAction(byte param0, int param1, int param2) {
         boolean discarded$1 = false;
         int var5;
         var5 = VoidHunters.field_G;
@@ -64,7 +64,7 @@ final class hqb {
               if (param2 != 3) {
                 if (param2 != 10) {
                   if (param2 == 15) {
-                    AudioPump.a(param1, this.field_h, 91);
+                    AudioPump.a(param1, this.targetGameId, 91);
                   } else {
                     if (16 != param2) {
                       return false;
@@ -72,28 +72,28 @@ final class hqb {
                     AudioPump.a(param1, 0, 53);
                   }
                 } else {
-                  ArmBehaviourFactory.a(this.field_h, param1, 20694);
+                  ArmBehaviourFactory.a(this.targetGameId, param1, 20694);
                 }
               } else {
-                sh.a(this.field_h, -1, param1);
+                sh.a(this.targetGameId, -1, param1);
               }
             } else {
-              pa.a(param1, (byte) -128, this.field_h);
+              pa.a(param1, (byte) -128, this.targetGameId);
             }
           } else {
-            World.a(param1, this.field_d, param0 ^ -25);
+            World.a(param1, this.targetPlayerKey, param0 ^ -25);
           }
         } else {
-          ut.a(6, this.field_d, param1);
+          ut.a(6, this.targetPlayerKey, param1);
         }
         if (param0 == 99) {
           return true;
         }
-        discarded$1 = this.a((byte) 32, 2, 100);
+        discarded$1 = this.handleReportAction((byte) 32, 2, 100);
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, byte param5, int param6) {
+    final static void sortScoreIndices(int param0, int param1, int param2, boolean param3, int param4, byte param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_23_0 = 0;
@@ -146,8 +146,8 @@ final class hqb {
                 }
               }
             }
-            hqb.a(param0, param1, var8, param3, param4, (byte) 24, var9);
-            hqb.a(var8, var10, param2, param3, param4, param5, param6);
+            PlayerContextMenu.sortScoreIndices(param0, param1, var8, param3, param4, (byte) 24, var9);
+            PlayerContextMenu.sortScoreIndices(var8, var10, param2, param3, param4, param5, param6);
             return;
           }
           for (var7_intLifetime1 = param2 - 1; param0 < var7_intLifetime1; var7_intLifetime1--) {
@@ -168,7 +168,7 @@ final class hqb {
         }
     }
 
-    final void a(int param0, int param1, int[] param2) {
+    final void addSocialOptions(int param0, int param1, int[] param2) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -180,44 +180,44 @@ final class hqb {
         CharSequence var7 = null;
         String var8 = null;
         try {
-          if (this.field_a != null && (~BodyInZoneConditionFactory.field_a != ~this.field_d ||
+          if (this.targetName != null && (~BodyInZoneConditionFactory.field_a != ~this.targetPlayerKey ||
             param1 == 2) && iwa.field_b == 2) {
-            var8 = this.b((byte) -63);
+            var8 = this.getTargetDisplayName((byte) -63);
             var4 = var8;
-            var5 = FlipTextureOperation.a(this.field_a, 0);
-            var6 = SetUseLines.a((byte) -94, this.field_a) ? 1 : 0;
+            var5 = FlipTextureOperation.a(this.targetName, 0);
+            var6 = SetUseLines.a((byte) -94, this.targetName) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_i.addItem(SetReverbGain.a(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);
-              this.field_i.addItem(SetReverbGain.a(GpuMaterialEffect.field_c, new String[]{var8}, 104), (byte) -53, 6);
+              this.menu.addItem(SetReverbGain.a(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);
+              this.menu.addItem(SetReverbGain.a(GpuMaterialEffect.field_c, new String[]{var8}, 104), (byte) -53, 6);
               if (param2 != null &&
                 param1 != 2 &&
                 !GetBloomThresholdPercentage.field_p) {
-                this.field_e = param2;
-                this.field_i.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 87), (byte) -53, 19);
+                this.actionData = param2;
+                this.menu.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 87), (byte) -53, 19);
               }
             }
             if (var5 != null) {
-              if (!qs.a(0, this.field_a) &&
+              if (!qs.a(0, this.targetName) &&
                 !GetBloomThresholdPercentage.field_p) {
                 if (!hb.field_c) {
-                  this.field_i.addItem(SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
+                  this.menu.addItem(SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
                 }
-                this.field_i.addItem(SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);
+                this.menu.addItem(SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);
                 if (param2 != null) {
-                  this.field_e = param2;
-                  this.field_i.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 73), (byte) -53, 19);
+                  this.actionData = param2;
+                  this.menu.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 73), (byte) -53, 19);
                 }
               }
-              this.field_i.addItem(SetReverbGain.a(GetAllowShipSaving.field_o, new String[]{var8}, 114), (byte) -53, 5);
+              this.menu.addItem(SetReverbGain.a(GetAllowShipSaving.field_o, new String[]{var8}, 114), (byte) -53, 5);
             }
             if (var6 != 0) {
-              this.field_i.addItem(SetReverbGain.a(HardpointMatch.field_c, new String[]{var8}, 80), (byte) -53, 7);
+              this.menu.addItem(SetReverbGain.a(HardpointMatch.field_c, new String[]{var8}, 80), (byte) -53, 7);
             }
           }
           if (param0 >= -13) {
             var7 = (CharSequence) null;
-            hqb.getNameFormatError(false, (byte) -9, (CharSequence) null);
+            PlayerContextMenu.getNameFormatError(false, (byte) -9, (CharSequence) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -317,43 +317,43 @@ final class hqb {
         field_k = (String[][]) null;
         if (param0 > -103) {
           CharSequence var2 = (CharSequence) null;
-          hqb.getNameFormatError(true, (byte) -64, (CharSequence) null);
+          PlayerContextMenu.getNameFormatError(true, (byte) -64, (CharSequence) null);
         }
         field_j = null;
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_i.draw(param1, 39);
+    final void drawMenu(int param0, boolean param1) {
+        this.menu.draw(param1, 39);
         if (param0 != 1) {
           field_f = 4;
         }
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean handleChatAction(int param0, int param1, int param2) {
         int var5;
         var5 = VoidHunters.field_G;
         if (param2 != -17791) {
-          this.field_a = (String) null;
+          this.targetName = (String) null;
         }
         if (param1 != 8) {
           if (18 == param1) {
-            PlayerVoteFactory.a(this.field_a, this.field_d, 63);
+            PlayerVoteFactory.a(this.targetName, this.targetPlayerKey, 63);
           } else {
             if (param1 == 11) {
-              OpenGlPostEffect.a(0, (byte) -118, param0, this.field_c);
+              OpenGlPostEffect.a(0, (byte) -118, param0, this.channelType);
             } else {
               if (param1 == 12) {
-                OpenGlPostEffect.a(1, (byte) -123, param0, this.field_c);
+                OpenGlPostEffect.a(1, (byte) -123, param0, this.channelType);
               } else {
                 if (param1 == 13) {
-                  OpenGlPostEffect.a(2, (byte) -105, param0, this.field_c);
+                  OpenGlPostEffect.a(2, (byte) -105, param0, this.channelType);
                 } else {
                   if (param1 != 14) {
                     if (param1 != 20) {
                       if (19 != param1) {
                         return false;
                       }
-                      fia.a(this.field_e, this.field_c, (byte) 105, this.field_d, this.field_a);
+                      fia.a(this.actionData, this.channelType, (byte) 105, this.targetPlayerKey, this.targetName);
                       return true;
                     }
                     or.a(0);
@@ -365,27 +365,27 @@ final class hqb {
             }
           }
         } else {
-          GetMpSandboxEnemySpawnLimit.a((byte) 39, this.field_d, this.field_a);
+          GetMpSandboxEnemySpawnLimit.a((byte) 39, this.targetPlayerKey, this.targetName);
         }
         return true;
     }
 
-    final void a(boolean param0, int param1) {
+    final void addLobbyOwnerOptions(boolean param0, int param1) {
         jk var4;
         String var5;
         int var6;
         jk var7;
         var6 = VoidHunters.field_G;
         if (param1 <= 1) {
-          this.field_b = (Widget) null;
+          this.sourceWidget = (Widget) null;
         }
-        if (this.field_a != null &&
-          BodyInZoneConditionFactory.field_a != this.field_d &&
+        if (this.targetName != null &&
+          BodyInZoneConditionFactory.field_a != this.targetPlayerKey &&
           null != SetSpinningBladeSpindamageMultiplier.field_o &&
           SmoothedNanoTickClock.isLocalLobbyOwner(-45)) {
-          var7 = SetPhasedEnergyBeamAimarc.a((byte) 80, this.field_d);
-          var4 = ScrollBarWidget.a(this.field_d, true);
-          var5 = this.b((byte) -128);
+          var7 = SetPhasedEnergyBeamAimarc.a((byte) 80, this.targetPlayerKey);
+          var4 = ScrollBarWidget.a(this.targetPlayerKey, true);
+          var5 = this.getTargetDisplayName((byte) -128);
           if (var4 == null) {
             if (var7 != null &&
               SetSpinningBladeSpindamageMultiplier.field_o.field_Gb &&
@@ -393,26 +393,26 @@ final class hqb {
               if (!var7.field_Eb) {
                 if (param0 &&
                   var7.field_Fb) {
-                  this.field_i.addItem(SetReverbGain.a(SetWaitForPlayers.field_p, new String[]{var5}, 121), (byte) -53, 0);
-                  this.field_i.addItem(SetReverbGain.a(AsteroidField.field_b, new String[]{var5}, 75), (byte) -53, 1);
+                  this.menu.addItem(SetReverbGain.a(SetWaitForPlayers.field_p, new String[]{var5}, 121), (byte) -53, 0);
+                  this.menu.addItem(SetReverbGain.a(AsteroidField.field_b, new String[]{var5}, 75), (byte) -53, 1);
                 } else {
-                  this.field_i.addItem(SetReverbGain.a(GetSalvoHoldable.field_o, new String[]{var5}, 94), (byte) -53, 0);
+                  this.menu.addItem(SetReverbGain.a(GetSalvoHoldable.field_o, new String[]{var5}, 94), (byte) -53, 0);
                 }
               } else {
-                this.field_i.addItem(SetReverbGain.a(ts.field_a, new String[]{var5}, 115), (byte) -53, 1);
+                this.menu.addItem(SetReverbGain.a(ts.field_a, new String[]{var5}, 115), (byte) -53, 1);
               }
             }
           } else {
             if (!SetSpinningBladeSpindamageMultiplier.field_o.field_fc ||
               !(SetSpinningBladeSpindamageMultiplier.field_o.field_Ub < 0)) {
-              this.field_i.addItem(SetReverbGain.a(GetRepairModeRadius.field_o, new String[]{var5}, 106), (byte) -53, 1);
+              this.menu.addItem(SetReverbGain.a(GetRepairModeRadius.field_o, new String[]{var5}, 106), (byte) -53, 1);
             }
           }
         }
 
     }
 
-    final void a(pgb param0, int param1) {
+    final void addChatFilterOptions(pgb param0, int param1) {
         if (param0.field_k) {
           return;
         }
@@ -420,44 +420,44 @@ final class hqb {
           return;
         }
         try {
-          this.field_c = param0.field_a;
+          this.channelType = param0.field_a;
           if (param0.field_a == 0) {
             if (kib.field_d == 0) {
-              this.field_i.addItem(UiVisualStyle.field_a, (byte) -53, 12);
+              this.menu.addItem(UiVisualStyle.field_a, (byte) -53, 12);
             }
-            this.field_i.addItem(tda.field_M, (byte) -53, 13);
+            this.menu.addItem(tda.field_M, (byte) -53, 13);
           }
           if (1 == param0.field_a) {
             if (0 == GetThrusterSmallForce.field_p) {
-              this.field_i.addItem(SetMassDriverEnergyUsed.field_p, (byte) -53, 12);
+              this.menu.addItem(SetMassDriverEnergyUsed.field_p, (byte) -53, 12);
             }
-            this.field_i.addItem(PasswordValidator.field_j, (byte) -53, 13);
+            this.menu.addItem(PasswordValidator.field_j, (byte) -53, 13);
           }
           if (param0.field_a == 2) {
             if (0 == lla.field_h) {
-              this.field_i.addItem(SetMissilesAcceleration.field_o, (byte) -53, 12);
+              this.menu.addItem(SetMissilesAcceleration.field_o, (byte) -53, 12);
             }
-            this.field_i.addItem(SetMissionDebrisVotingChancestep.field_o, (byte) -53, 13);
+            this.menu.addItem(SetMissionDebrisVotingChancestep.field_o, (byte) -53, 13);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hqb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final String b(byte param0) {
+    private final String getTargetDisplayName(byte param0) {
         String var2 = null;
         if (param0 >= -24) {
           return (String) null;
         }
-        if (this.field_g == null) {
-          var2 = this.field_a;
+        if (this.targetDisplayName == null) {
+          var2 = this.targetName;
         } else {
-          var2 = this.field_g;
+          var2 = this.targetDisplayName;
         }
         return var2;
     }
 
-    final void a(boolean param0) {
+    final void addGameJoinOptions(boolean param0) {
         String var3;
         int var4;
         LobbyGameEntry var5;
@@ -466,78 +466,78 @@ final class hqb {
           return;
         }
         if (SetSpinningBladeSpindamageMultiplier.field_o == null) {
-          var5 = meb.a(this.field_h, 1);
+          var5 = meb.a(this.targetGameId, 1);
           if (var5 != null) {
             var3 = var5.field_Vb;
             if (!var5.field_ac) {
               if (var5.field_cc) {
-                this.field_i.addItem(SetReverbGain.a(ti.field_g, new String[]{var3}, 101), (byte) -53, 2);
+                this.menu.addItem(SetReverbGain.a(ti.field_g, new String[]{var3}, 101), (byte) -53, 2);
               } else {
                 if (!var5.field_Qb &&
                   var5.field_Gb && (!var5.field_fc ||
                   var5.field_cc)) {
-                  this.field_i.addItem(SetReverbGain.a(OpenGlShader.field_c, new String[]{var3}, 107), (byte) -53, 2);
+                  this.menu.addItem(SetReverbGain.a(OpenGlShader.field_c, new String[]{var3}, 107), (byte) -53, 2);
                 }
               }
               if (var5.field_Qb) {
-                this.field_i.addItem(SetReverbGain.a(t.field_e, new String[]{var3}, 126), (byte) -53, 3);
+                this.menu.addItem(SetReverbGain.a(t.field_e, new String[]{var3}, 126), (byte) -53, 3);
               }
             } else {
-              this.field_i.addItem(SetReverbGain.a(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);
-              this.field_i.addItem(SetReverbGain.a(nrb.field_a, new String[]{var3}, 127), (byte) -53, 3);
+              this.menu.addItem(SetReverbGain.a(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);
+              this.menu.addItem(SetReverbGain.a(nrb.field_a, new String[]{var3}, 127), (byte) -53, 3);
             }
           }
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.field_i.updateAndGetSelection(param1 + 17, param0);
+    final boolean updateAndDispatchSelection(boolean param0, int param1, int param2, int param3, int param4) {
+        int var6 = this.menu.updateAndGetSelection(param1 + 17, param0);
         if (var6 == -2) {
           return false;
         }
-        boolean discarded$2 = this.b((byte) 99, param2, var6);
+        boolean discarded$2 = this.handleLobbyAction((byte) 99, param2, var6);
         if (param1 != -11) {
-          this.b(26);
+          this.addReportOption(26);
         }
-        boolean discarded$3 = this.a(param3, var6, -111);
-        boolean discarded$4 = this.b(param3, var6, -17791);
-        boolean discarded$5 = this.a((byte) 16, var6, param4);
+        boolean discarded$3 = this.handleSocialAction(param3, var6, -111);
+        boolean discarded$4 = this.handleChatAction(param3, var6, -17791);
+        boolean discarded$5 = this.handleReportAction((byte) 16, var6, param4);
         return true;
     }
 
-    final boolean a(int param0) {
+    final boolean pollSelectionPending(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           return true;
         }
-        stackIn_6_0 = (this.field_i != null) && (this.field_i.pollSelectionPending((byte) -126));
+        stackIn_6_0 = (this.menu != null) && (this.menu.pollSelectionPending((byte) -126));
         return stackIn_6_0;
     }
 
-    final void b(int param0) {
+    final void addReportOption(int param0) {
         String var3 = null;
-        if (this.field_a != null &&
-          BodyInZoneConditionFactory.field_a != this.field_d) {
-          var3 = this.b((byte) -110);
+        if (this.targetName != null &&
+          BodyInZoneConditionFactory.field_a != this.targetPlayerKey) {
+          var3 = this.getTargetDisplayName((byte) -110);
           String var2 = var3;
-          this.field_i.addItem(SetReverbGain.a(NetworkArchiveClient.field_l, new String[]{var3}, 83), (byte) -53, 17);
+          this.menu.addItem(SetReverbGain.a(NetworkArchiveClient.field_l, new String[]{var3}, 83), (byte) -53, 17);
         }
         if (param0 != -9923) {
-          this.a(-125, false);
+          this.drawMenu(-125, false);
         }
     }
 
-    hqb(Widget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    PlayerContextMenu(Widget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_i = new PopupMenuWidget(TextureCombineOperation.field_a);
-          this.field_d = param1;
-          this.field_b = param0;
-          this.field_g = param3;
+          this.menu = new PopupMenuWidget(TextureCombineOperation.field_a);
+          this.targetPlayerKey = param1;
+          this.sourceWidget = param0;
+          this.targetDisplayName = param3;
           param0.field_J = true;
-          this.field_a = param2;
-          this.field_c = param5;
-          this.field_h = param4;
-          this.field_e = param6;
+          this.targetName = param2;
+          this.channelType = param5;
+          this.targetGameId = param4;
+          this.actionData = param6;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hqb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

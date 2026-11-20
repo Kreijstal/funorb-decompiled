@@ -22,15 +22,15 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        hqb var5 = null;
+        PlayerContextMenu var5 = null;
         String var6 = null;
-        hqb var7 = null;
+        PlayerContextMenu var7 = null;
         String var8 = null;
-        hqb var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        hqb var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        hqb var13 = null;
+        PlayerContextMenu var13 = null;
         try {
           stackIn_2_0 = param0.field_i;
           stackIn_2_1 = param0.field_j;
@@ -53,11 +53,11 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             if (!hb.field_c) {
               var5 = GetLagStandardDeviationOut.field_o;
               var6 = FlipTextureOperation.field_k;
-              var5.field_i.addItem(var6, (byte) -53, 14);
+              var5.menu.addItem(var6, (byte) -53, 14);
             }
             var7 = GetLagStandardDeviationOut.field_o;
             var8 = GameSession.field_D;
-            var7.field_i.addItem(var8, (byte) -53, 20);
+            var7.menu.addItem(var8, (byte) -53, 20);
           }
           if (param0.field_a == 1 &&
             !spb.a(-78) &&
@@ -66,24 +66,24 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             if (!hb.field_c) {
               var9 = GetLagStandardDeviationOut.field_o;
               var10 = kia.field_b;
-              var9.field_i.addItem(var10, (byte) -53, 14);
+              var9.menu.addItem(var10, (byte) -53, 14);
             }
             var11 = GetLagStandardDeviationOut.field_o;
             var12 = CrossedWaveTextureOperation.field_k;
-            var11.field_i.addItem(var12, (byte) -53, 20);
+            var11.menu.addItem(var12, (byte) -53, 20);
           }
           if (param1 != 22859) {
             field_o = (int[]) null;
           }
-          GetLagStandardDeviationOut.field_o.a(true);
-          GetLagStandardDeviationOut.field_o.a(false, param1 ^ 22797);
-          GetLagStandardDeviationOut.field_o.a(-63, param0.field_a, param0.field_m);
-          GetLagStandardDeviationOut.field_o.b(-9923);
-          GetLagStandardDeviationOut.field_o.a(param0, param1 ^ 22805);
+          GetLagStandardDeviationOut.field_o.addGameJoinOptions(true);
+          GetLagStandardDeviationOut.field_o.addLobbyOwnerOptions(false, param1 ^ 22797);
+          GetLagStandardDeviationOut.field_o.addSocialOptions(-63, param0.field_a, param0.field_m);
+          GetLagStandardDeviationOut.field_o.addReportOption(-9923);
+          GetLagStandardDeviationOut.field_o.addChatFilterOptions(param0, param1 ^ 22805);
           var13 = GetLagStandardDeviationOut.field_o;
           var3 = Particle.field_H;
           var4 = qs.field_a;
-          var13.field_i.layoutPopup(var3, -29060, var4, 0, 0);
+          var13.menu.layoutPopup(var3, -29060, var4, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

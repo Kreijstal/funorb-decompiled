@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HardpointMatch {
-    static int[] field_f;
+    static int[] hintTimers;
     int distance;
     static boolean field_d;
     static String field_a;
@@ -12,7 +12,7 @@ final class HardpointMatch {
 
     public static void clearSharedReferences(byte param0) {
         field_c = null;
-        field_f = null;
+        hintTimers = null;
         field_a = null;
         if (param0 != 87) {
           HardpointMatch.clearSharedReferences((byte) 17);
@@ -30,7 +30,7 @@ final class HardpointMatch {
     }
 
     static {
-        field_f = new int[11];
+        hintTimers = new int[11];
         field_a = "WASD<br>QE<br>Left mouse button<br>Right mouse button<br>Mouse wheel or + and - keys";
         field_c = "Remove <%0> from ignore list";
     }

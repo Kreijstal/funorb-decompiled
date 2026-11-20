@@ -38,7 +38,7 @@ final class es {
             GetAngularVelocitySustain.field_o = GetAngularVelocitySustain.field_o + 1;
             if (ArmBehaviourFactory.field_a < GetAngularVelocitySustain.field_o) {
               if (param9 != null) {
-                usb.a(param3, param9, SpriteTextureOperation.field_o, param7, 1, param0, param5);
+                UiWeightedGridContainer.drawTextBox(param3, param9, SpriteTextureOperation.field_o, param7, 1, param0, param5);
               } else {
                 if (param4 != null) {
                   GetAutozoomSpeedDivide.a(param0, param1, SpriteTextureOperation.field_o, (byte) 100, param3, param10, param4, param6, param2, param5, param7);

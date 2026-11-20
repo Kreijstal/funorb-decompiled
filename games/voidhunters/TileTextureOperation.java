@@ -191,8 +191,8 @@ final class TileTextureOperation extends TextureOperation {
 
     final static void d(int param0) {
         if (null != GetLagStandardDeviationOut.field_o &&
-          GetLagStandardDeviationOut.field_o.field_b != null) {
-          GetLagStandardDeviationOut.field_o.field_b.field_J = false;
+          GetLagStandardDeviationOut.field_o.sourceWidget != null) {
+          GetLagStandardDeviationOut.field_o.sourceWidget.field_J = false;
         }
         qg.field_a = null;
         GetLagStandardDeviationOut.field_o = null;

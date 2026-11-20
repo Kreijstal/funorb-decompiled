@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1285/1572 classes and 6419/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 287 opaque classes and 1796 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1290/1572 classes and 6479/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 282 opaque classes and 1736 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -44,6 +44,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `AccountRequestResult` retains success, age, response codes, messages and suggested names used by name checks and account creation. `AccountCreationForm`, `AccountCreationDialog`, `Under13AccountNoticePanel` and `DialogMessagePanel` identify the account UI. `ModalStack`, `ModalPanel`, `ResizableModalPanel` and `ContentTransitionDialog` expose panel lifetime, fades, resizing and child replacement; `HotspotTextWidget` and `UiHotspotListener` name clickable text regions. Logo helpers name mesh loading, rotation, rendering and glow generation. These are source naming changes; original guards, wire bytes, layout, animation and performance settings remain.
 
 `InputValidator`, `DebouncedInputValidator`, `TextFieldValidator` and `ValidatedTextField` expose empty input, the original 350 ms delay, pending checks and value-specific validation. Username, email, confirmation, password and age validators retain the original messages and limits. `GameMenuScreen` and `MenuInputState` name item geometry, hit tests, pointer/key navigation, help pages and action handling; the original AWT key translation table establishes directional and activation keys. Settings changes, protocol writes, clipboard actions and guards remain intact.
+
+`UiWeightedGridContainer` exposes weighted rows/columns, cell alignment and retained child arrays. `PlayerContextMenu` identifies social, lobby, chat and report-menu paths. `TutorialController`, `TutorialProgressState` and `SpecialOrderButtonState` expose hint completion, timers, callouts, practice targets and special-order aggregation. Their original array mutation, status rules and packet/action helpers remain. Private `NativeSoftwareSprite` entrypoints follow their existing Java drawing, dimension, padding and initialization wrappers; source verification does not establish JNI runtime equivalence.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

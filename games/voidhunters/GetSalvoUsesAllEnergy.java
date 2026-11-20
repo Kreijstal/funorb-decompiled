@@ -10,8 +10,8 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
 
     final static void a(int param0) {
         if (es.field_b != null) {
-          es.field_b.a(0, qd.field_a);
-          GetBoostersCooldown.field_o = GetBots.a(GetBoostersCooldown.field_o, -31567, qd.field_a);
+          es.field_b.copyCompletedHintsTo(0, TutorialProgressState.completedHints);
+          GetBoostersCooldown.savedHintCompletion = GetBots.a(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
         }
         if (param0 >= -64) {
           Object[] var2 = (Object[]) null;

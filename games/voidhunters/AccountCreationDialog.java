@@ -39,16 +39,16 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
     }
 
     final static void showPlayerContextMenu(int param0, int param1, jk param2, byte param3, int param4, ScrollPaneWidget param5, int param6) {
-        hqb var13 = null;
+        PlayerContextMenu var13 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         try {
           pea.$cfr$intArgs$a$91f64d33677c(param2.field_zb, param2, -1, (int[]) null, param2.field_Hb, param5, param2.field_xb, 103, -1);
-          GetLagStandardDeviationOut.field_o.a(true, param3 - 35);
-          GetLagStandardDeviationOut.field_o.a(-70, 0, (int[]) null);
-          GetLagStandardDeviationOut.field_o.b(param3 - 9994);
+          GetLagStandardDeviationOut.field_o.addLobbyOwnerOptions(true, param3 - 35);
+          GetLagStandardDeviationOut.field_o.addSocialOptions(-70, 0, (int[]) null);
+          GetLagStandardDeviationOut.field_o.addReportOption(param3 - 9994);
           var13 = GetLagStandardDeviationOut.field_o;
           var8 = param4;
           var9 = param0;
@@ -58,7 +58,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
             AccountCreationDialog.drawWorldArrow(64, (byte) -32, -119, -6, 29, 12, (Camera2D) null);
           }
           var11 = param1;
-          var13.field_i.layoutPopup(var8, -29060, var9, var10, var11);
+          var13.menu.layoutPopup(var8, -29060, var9, var10, var11);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sn.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }

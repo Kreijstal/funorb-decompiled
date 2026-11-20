@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lw extends IntrusiveNode {
-    int field_g;
+final class SpecialOrderButtonState extends IntrusiveNode {
+    int nonPositiveStateCount;
     static boolean field_f;
-    int field_l;
-    int field_m;
-    int field_h;
-    int field_k;
+    int specialOrderId;
+    int x;
+    int y;
+    int statusCount;
     int field_d;
     int field_j;
     static String field_e;
     static Widget field_i;
 
-    final void a(int param0) {
-        this.field_g = 0;
+    final void resetStatusCounts(int param0) {
+        this.nonPositiveStateCount = 0;
         this.field_d = this.field_d + 1;
         if (param0 == -26857) {
-          this.field_k = 0;
+          this.statusCount = 0;
           this.field_j = 0;
           return;
         }
@@ -33,7 +33,7 @@ final class lw extends IntrusiveNode {
         field_i = null;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int approximateIntegerSqrt(byte param0, int param1) {
         if (param0 != -73) {
           return -8;
         }
@@ -79,7 +79,7 @@ final class lw extends IntrusiveNode {
         return GetBuildViewAutozoomEndOnAction.field_o[param1 >> 16] >> 4;
     }
 
-    final void a(int param0, int param1) {
+    final void addStatus(int param0, int param1) {
         if (this.field_j == 0) {
           this.field_j = param1;
         } else {
@@ -88,18 +88,18 @@ final class lw extends IntrusiveNode {
             this.field_j = param1;
           }
         }
-        this.field_k = this.field_k + 1;
+        this.statusCount = this.statusCount + 1;
         if (param0 != -1746542610) {
           return;
         }
         if (param1 <= 0) {
-          this.field_g = this.field_g + 1;
+          this.nonPositiveStateCount = this.nonPositiveStateCount + 1;
         }
     }
 
-    lw(int param0) {
-        this.field_l = param0;
-        if (CarouselPlayerEvent.field_i[this.field_l].c((byte) -115)) {
+    SpecialOrderButtonState(int param0) {
+        this.specialOrderId = param0;
+        if (CarouselPlayerEvent.field_i[this.specialOrderId].c((byte) -115)) {
           this.field_d = 50;
         }
     }

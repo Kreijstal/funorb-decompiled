@@ -122,8 +122,8 @@ final class bd {
           GetFighterBayReload.field_p = new Widget(0L, (Widget) null);
           GetFighterBayReload.field_p.field_tb = SetSniperCannonProjectiles.a(param3, "closebutton", "lobby", true);
           GetFighterBayReload.field_p.field_cb = SetSniperCannonProjectiles.a(param3, "closebutton_mouseover", "lobby", true);
-          bv.field_b = new Widget(0L, var8);
-          bv.field_b.field_gb = GetFighterVision.a(true, true, 2039583, 24436, 3815994, 40);
+          TutorialController.field_b = new Widget(0L, var8);
+          TutorialController.field_b.field_gb = GetFighterVision.a(true, true, 2039583, 24436, 3815994, 40);
           GetThrusterBindingBalanceThreshold.field_p = new Widget(0L, var10);
           GetThrusterBindingBalanceThreshold.field_p.field_w = 2;
           GetThrusterBindingBalanceThreshold.field_p.field_gb = GetFighterVision.a(true, false, 2039583, 24436, 3815994, 30);

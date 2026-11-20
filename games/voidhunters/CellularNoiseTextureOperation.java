@@ -156,7 +156,7 @@ final class CellularNoiseTextureOperation extends TextureOperation {
           var6 = var5 + 1;
           for (var14 = 0; TextHotspotRegion.textureWidth > var14; var14++) {
             SoftwareDepthBuffer.field_b = 2147483647;
-            qd.field_b = 2147483647;
+            TutorialProgressState.field_b = 2147483647;
             SetSalvoRepairTimeMultiplier.field_q = 2147483647;
             MissionListFactory.field_b = 2147483647;
             var15 = 2048 + BoxBlurTextureOperation.textureXCoordinates[var14] * this.horizontalFrequency;
@@ -247,23 +247,23 @@ final class CellularNoiseTextureOperation extends TextureOperation {
                   var11 = var9 * var9 + var10 * var10 >> 12;
                 }
                 if (SetSalvoRepairTimeMultiplier.field_q > var11) {
-                  SoftwareDepthBuffer.field_b = qd.field_b;
-                  qd.field_b = MissionListFactory.field_b;
+                  SoftwareDepthBuffer.field_b = TutorialProgressState.field_b;
+                  TutorialProgressState.field_b = MissionListFactory.field_b;
                   MissionListFactory.field_b = SetSalvoRepairTimeMultiplier.field_q;
                   SetSalvoRepairTimeMultiplier.field_q = var11;
                 } else {
                   if (var11 >= MissionListFactory.field_b) {
-                    if (qd.field_b <= var11) {
+                    if (TutorialProgressState.field_b <= var11) {
                       if (var11 < SoftwareDepthBuffer.field_b) {
                         SoftwareDepthBuffer.field_b = var11;
                       }
                     } else {
-                      SoftwareDepthBuffer.field_b = qd.field_b;
-                      qd.field_b = var11;
+                      SoftwareDepthBuffer.field_b = TutorialProgressState.field_b;
+                      TutorialProgressState.field_b = var11;
                     }
                   } else {
-                    SoftwareDepthBuffer.field_b = qd.field_b;
-                    qd.field_b = MissionListFactory.field_b;
+                    SoftwareDepthBuffer.field_b = TutorialProgressState.field_b;
+                    TutorialProgressState.field_b = MissionListFactory.field_b;
                     MissionListFactory.field_b = var11;
                   }
                 }
@@ -285,7 +285,7 @@ final class CellularNoiseTextureOperation extends TextureOperation {
                     var3[var14] = SoftwareDepthBuffer.field_b;
                   }
                 } else {
-                  var3[var14] = qd.field_b;
+                  var3[var14] = TutorialProgressState.field_b;
                 }
               }
             }

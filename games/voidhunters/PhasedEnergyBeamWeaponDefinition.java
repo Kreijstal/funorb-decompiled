@@ -73,11 +73,11 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
     }
 
     final static void l(int param0) {
-        lw.field_i = new Widget(0L, (Widget) null);
+        SpecialOrderButtonState.field_i = new Widget(0L, (Widget) null);
         if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
-          lw.field_i.addChild(-561, DialogMessagePanel.field_v);
-          lw.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
-          lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, lw.field_i);
+          SpecialOrderButtonState.field_i.addChild(-561, DialogMessagePanel.field_v);
+          SpecialOrderButtonState.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
+          lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
           tb.field_a = new Widget(0L, (Widget) null);
           tb.field_a.addChild(param0 ^ -9108, lc.field_b.field_a);
           tb.field_a.addChild(-561, SpawnChoiceFactory.field_c);
@@ -88,8 +88,8 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
           }
           return;
         }
-        lw.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
-        lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, lw.field_i);
+        SpecialOrderButtonState.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
+        lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
         tb.field_a = new Widget(0L, (Widget) null);
         tb.field_a.addChild(param0 ^ -9108, lc.field_b.field_a);
         tb.field_a.addChild(-561, SpawnChoiceFactory.field_c);
@@ -103,9 +103,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
     final int getEnergyCost(int param0) {
         if (param0 != 0) {
           this.hasRecoil((byte) 11);
-          return bv.field_e;
+          return TutorialController.field_e;
         }
-        return bv.field_e;
+        return TutorialController.field_e;
     }
 
     final int getAimArc(int param0) {

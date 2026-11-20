@@ -262,7 +262,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gamelist_owner", 23100);
                 if (var2 != null) {
-                  lw.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  SpecialOrderButtonState.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gamelist_players", 23100);
                 if (null != var2) {
@@ -478,7 +478,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rated_game_tips", 23100);
                 if (var2 != null) {
-                  hqb.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  PlayerContextMenu.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("searching_for_opponent_singular", 23100);
                 if (null != var2) {

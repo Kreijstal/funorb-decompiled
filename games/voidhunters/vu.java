@@ -34,7 +34,7 @@ final class vu extends Widget {
         if (var6 < 0) {
           return -1;
         }
-        var7 = lw.a((byte) -73, var6);
+        var7 = SpecialOrderButtonState.approximateIntegerSqrt((byte) -73, var6);
         var8 = (-param2 + var7 << param3) / param4;
         var9 = (-param2 - var7 << param3) / param4;
         if (var8 < param1) {

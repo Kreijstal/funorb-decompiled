@@ -423,10 +423,10 @@ final class ArchiveIndex {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        hqb var17 = null;
+        PlayerContextMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        hqb var17Lifetime1;
+        PlayerContextMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = VoidHunters.field_G;
         try {
@@ -531,16 +531,16 @@ final class ArchiveIndex {
                     var16 = var7.field_Fb;
                     pea.$cfr$intArgs$a$91f64d33677c(0L, var7, -1, (int[]) null, var16, BitmapTextLayout.field_n.scrollPane, (String) null, 87, -1);
                     if (null != var7.field_Ab &&
-                      !qs.a(0, GetLagStandardDeviationOut.field_o.field_a) &&
+                      !qs.a(0, GetLagStandardDeviationOut.field_o.targetName) &&
                       !GetBloomThresholdPercentage.field_p) {
                       if (!hb.field_c) {
                         var17 = GetLagStandardDeviationOut.field_o;
                         var18 = SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var16}, param1 + 122);
-                        var17.field_i.addItem(var18, (byte) -53, 8);
+                        var17.menu.addItem(var18, (byte) -53, 8);
                       }
                       var17Lifetime1 = GetLagStandardDeviationOut.field_o;
                       var18Lifetime1 = SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var16}, 115);
-                      var17Lifetime1.field_i.addItem(var18Lifetime1, (byte) -53, 18);
+                      var17Lifetime1.menu.addItem(var18Lifetime1, (byte) -53, 18);
                     }
                     var5 = var7;
                   } else if (var7.field_wb.field_O &&

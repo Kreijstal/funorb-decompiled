@@ -393,9 +393,9 @@ final class ResourceArchive {
                 }
               } else {
                 if (0 != var6Lifetime1) {
-                  qd.field_d = qd.field_d ^ var6Lifetime1;
+                  TutorialProgressState.field_d = TutorialProgressState.field_d ^ var6Lifetime1;
                 } else {
-                  qd.field_d = 0;
+                  TutorialProgressState.field_d = 0;
                 }
               }
             }
@@ -409,11 +409,11 @@ final class ResourceArchive {
             } else {
               if (var6Lifetime1 != 0) {
                 stackIn_132_0 = var29;
-                stackIn_133_1 = ((qd.field_d & var6Lifetime1) != 0);
+                stackIn_133_1 = ((TutorialProgressState.field_d & var6Lifetime1) != 0);
                 stackIn_132_0.field_J = stackIn_133_1;
               } else {
                 stackIn_128_0 = var29;
-                stackIn_129_1 = (0 == qd.field_d);
+                stackIn_129_1 = (0 == TutorialProgressState.field_d);
                 stackIn_128_0.field_J = stackIn_129_1;
               }
             }
@@ -583,13 +583,13 @@ final class ResourceArchive {
               }
               if (var9 >= 0 &&
                 var17.field_Q) {
-                if (hqb.field_k == null) {
+                if (PlayerContextMenu.field_k == null) {
                   var18_ref = null;
                 } else {
-                  if (null == hqb.field_k[var7]) {
+                  if (null == PlayerContextMenu.field_k[var7]) {
                     var18_ref = null;
                   } else {
-                    var18_ref = hqb.field_k[var7][var9];
+                    var18_ref = PlayerContextMenu.field_k[var7][var9];
                   }
                 }
                 if (SetShipAimLines.field_o == null) {

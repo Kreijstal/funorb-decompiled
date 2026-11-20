@@ -15,7 +15,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
     private UiFocusableComponent field_V;
     private UiComboBox field_P;
     private UiFocusableComponent field_O;
-    private usb field_S;
+    private UiWeightedGridContainer field_S;
     private boolean field_J;
 
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
@@ -150,12 +150,12 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         boolean stackIn_40_1 = false;
         int stackIn_48_0 = 0;
         Object stackIn_50_0;
-        usb stackIn_50_1;
-        usb stackIn_50_2;
+        UiWeightedGridContainer stackIn_50_1;
+        UiWeightedGridContainer stackIn_50_2;
         int stackIn_50_3;
         Object stackIn_51_0;
-        usb stackIn_52_1 = null;
-        usb stackIn_52_2 = null;
+        UiWeightedGridContainer stackIn_52_1 = null;
+        UiWeightedGridContainer stackIn_52_2 = null;
         int stackIn_52_4 = 0;
         int stackIn_57_1 = 0;
         String stackIn_74_0 = null;
@@ -177,8 +177,8 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         DisplayMode var8 = null;
         String var10 = null;
         Object stackIn_50_0Lifetime1;
-        usb stackIn_52_1Lifetime1;
-        usb stackIn_52_2Lifetime1;
+        UiWeightedGridContainer stackIn_52_1Lifetime1;
+        UiWeightedGridContainer stackIn_52_2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -259,9 +259,9 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_S = new usb(stackIn_50_3, stackIn_52_4, 410, 105, (UiRenderer) null, var3Lifetime1, 1);
+          this.field_S = new UiWeightedGridContainer(stackIn_50_3, stackIn_52_4, 410, 105, (UiRenderer) null, var3Lifetime1, 1);
           this.field_S.field_w = 83;
-          this.field_S.c(-6, 5, 5);
+          this.field_S.setCellPadding(-6, 5, 5);
           this.addChild(-18756, this.field_S);
           this.field_O = this.a(SetMissilesDamageSourceTeam.field_q, (byte) 111, (UiListener) (this), GetFighterRepairAmount.field_q);
           if (var2_intLifetime1 != 0) {
@@ -344,7 +344,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
     private final UiFocusableComponent a(String param0, byte param1, UiListener param2, SoftwareIndexedSprite2D[] param3) {
         UiFocusableComponent var5 = null;
         RuntimeException var5_ref = null;
-        usb var6 = null;
+        UiWeightedGridContainer var6 = null;
         UiFocusableComponent var7 = null;
         UiFocusableComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -363,7 +363,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
           }
           var6 = this.field_S;
           var7 = var5;
-          var6.a((UiComponent) (var7), (byte) -58, var6.field_w);
+          var6.appendCell((UiComponent) (var7), (byte) -58, var6.field_w);
           this.field_S.refreshLayout(false);
           stackIn_3_0 = var5;
           return stackIn_3_0;

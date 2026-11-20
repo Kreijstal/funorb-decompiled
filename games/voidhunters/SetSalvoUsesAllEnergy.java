@@ -97,7 +97,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
           SetPhasedEnergyBeamPulsetime.a(NebulaFieldFactory.field_a, (byte) 17);
         }
         if (GetLagStandardDeviationOut.field_o != null) {
-          GetLagStandardDeviationOut.field_o.a(1, param0);
+          GetLagStandardDeviationOut.field_o.drawMenu(1, param0);
         }
         SetLaserReload.a(79, param0);
         int var2 = 103 / ((16 - param1) / 32);

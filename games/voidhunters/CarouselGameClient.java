@@ -154,7 +154,7 @@ final class CarouselGameClient {
             stackIn_22_0.outOfSync = stackIn_23_1;
             if (param0.outOfSync &&
               !this.checksumFailureReported) {
-              if (!lw.field_f) {
+              if (!SpecialOrderButtonState.field_f) {
                 return;
               }
               this.checksumFailureReported = true;

@@ -945,7 +945,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime102 = HuffmanCodec.fetchLocalizedResource((byte) -66, "repairing");
           if (null != var2Lifetime102) {
-            qd.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime102);
+            TutorialProgressState.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime102);
           }
           var2Lifetime103 = HuffmanCodec.fetchLocalizedResource((byte) -71, "mouse_over_to_repair");
           if (null != var2Lifetime103) {

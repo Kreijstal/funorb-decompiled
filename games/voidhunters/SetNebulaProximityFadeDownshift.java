@@ -9,7 +9,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
         SetLag.a(param2, 62, 71, 64, GetSniperCannonProjectileOndamageParticles.field_o, 66, Under13AccountNoticePanel.field_v, 2000, 70, 65, 69, 72, GetPhasedEnergyBeamReload.field_p, 68, (byte) 91);
         dra.a((byte) 125, 3);
         if (param1) {
-          lw.field_f = true;
+          SpecialOrderButtonState.field_f = true;
           OpenGlToolkit.a(62, true);
           if (param0 < 68) {
             field_p = 55;

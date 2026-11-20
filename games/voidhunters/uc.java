@@ -22,7 +22,7 @@ final class uc {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          var5 = qd.field_a;
+          var5 = TutorialProgressState.completedHints;
           var1 = var5;
           var2 = 0;
           while (true) {

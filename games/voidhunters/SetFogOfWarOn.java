@@ -277,7 +277,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_torpedo_energy_used(" + SetLaserAimarc.field_o + ")");
         System.out.println("set_laser_energy_used(" + ffa.field_b + ")");
         System.out.println("set_bomblet_spray_energy_used(" + QuickChatCategoryDefinition.field_o + ")");
-        System.out.println("set_phased_energy_beam_energy_used(" + bv.field_e + ")");
+        System.out.println("set_phased_energy_beam_energy_used(" + TutorialController.field_e + ")");
         System.out.println("set_machine_gun_energy_used(" + OpenGlVertexNormal.field_g + ")");
         System.out.println("set_sniper_cannon_energy_used(" + ShieldBehaviourFactory.field_a + ")");
         System.out.println("set_missile_launcher_energy_used(" + SetShipAimLines.field_q + ")");

@@ -91,33 +91,33 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
     }
 
     final static void a(int param0, Widget param1, int param2) {
-        hqb var12 = null;
+        PlayerContextMenu var12 = null;
         Sprite var13 = null;
         String var14 = null;
-        hqb var15 = null;
+        PlayerContextMenu var15 = null;
         Sprite var16 = null;
         String var17 = null;
-        hqb var18 = null;
+        PlayerContextMenu var18 = null;
         Sprite var19 = null;
         String var20 = null;
-        hqb var21 = null;
+        PlayerContextMenu var21 = null;
         String var23 = null;
-        hqb var24 = null;
+        PlayerContextMenu var24 = null;
         Sprite var25 = null;
         String var26 = null;
-        hqb var27 = null;
+        PlayerContextMenu var27 = null;
         Sprite var28 = null;
         String var29 = null;
-        hqb var30 = null;
+        PlayerContextMenu var30 = null;
         Sprite var31 = null;
         String var32 = null;
-        hqb var33 = null;
+        PlayerContextMenu var33 = null;
         Sprite var34 = null;
         String var35 = null;
-        hqb var36 = null;
+        PlayerContextMenu var36 = null;
         Sprite var37 = null;
         String var38 = null;
-        hqb var39 = null;
+        PlayerContextMenu var39 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -137,47 +137,47 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
             var22 = var13;
             var22Lifetime2 = var13;
             var14 = GetSniperCannonProjectileLife.field_s;
-            var12.field_i.addItem(-1, 11, var13, var14);
+            var12.menu.addItem(-1, 11, var13, var14);
             var15 = GetLagStandardDeviationOut.field_o;
             var16 = GetGrapplingHookAimspeed.field_o[1];
             var22Lifetime3 = var16;
             var22Lifetime4 = var16;
             var17 = GetMissilesHitSourceTeam.field_p;
-            var15.field_i.addItem(-1, 12, var16, var17);
+            var15.menu.addItem(-1, 12, var16, var17);
             var18 = GetLagStandardDeviationOut.field_o;
             var19 = GetGrapplingHookAimspeed.field_o[2];
             var22Lifetime5 = var19;
             var22Lifetime6 = var19;
             var20 = tda.field_M;
-            var18.field_i.addItem(-1, 13, var19, var20);
+            var18.menu.addItem(-1, 13, var19, var20);
           }
           if (param2 == 1) {
             var21 = GetLagStandardDeviationOut.field_o;
             var22Lifetime1 = GetGrapplingHookAimspeed.field_o[0];
             var23 = SetBurstFireMaxEnergy.field_p;
-            var21.field_i.addItem(-1, 11, var22Lifetime1, var23);
+            var21.menu.addItem(-1, 11, var22Lifetime1, var23);
             var24 = GetLagStandardDeviationOut.field_o;
             var25 = GetGrapplingHookAimspeed.field_o[1];
             var26 = GetPointDefenceLaserEnergyUsed.field_o;
-            var24.field_i.addItem(-1, 12, var25, var26);
+            var24.menu.addItem(-1, 12, var25, var26);
             var27 = GetLagStandardDeviationOut.field_o;
             var28 = GetGrapplingHookAimspeed.field_o[2];
             var29 = PasswordValidator.field_j;
-            var27.field_i.addItem(-1, 13, var28, var29);
+            var27.menu.addItem(-1, 13, var28, var29);
           }
           if (2 == param2) {
             var30 = GetLagStandardDeviationOut.field_o;
             var31 = GetGrapplingHookAimspeed.field_o[0];
             var32 = SetMassDriverReload.field_o;
-            var30.field_i.addItem(-1, 11, var31, var32);
+            var30.menu.addItem(-1, 11, var31, var32);
             var33 = GetLagStandardDeviationOut.field_o;
             var34 = GetGrapplingHookAimspeed.field_o[1];
             var35 = GetCountermeasureLauncherEnergyUsed.field_p;
-            var33.field_i.addItem(-1, 12, var34, var35);
+            var33.menu.addItem(-1, 12, var34, var35);
             var36 = GetLagStandardDeviationOut.field_o;
             var37 = GetGrapplingHookAimspeed.field_o[2];
             var38 = SetMissionDebrisVotingChancestep.field_o;
-            var36.field_i.addItem(-1, 13, var37, var38);
+            var36.menu.addItem(-1, 13, var37, var38);
           }
           if (param0 < 35) {
             field_o = -28;
@@ -187,7 +187,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
           var5 = param1.screenY;
           var6 = param1.width;
           var7 = param1.height;
-          var39.field_i.layoutPopup(var4, -29060, var5, var6, var7);
+          var39.menu.layoutPopup(var4, -29060, var5, var6, var7);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

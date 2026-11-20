@@ -200,7 +200,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
             field_o = -43;
           }
           TextFieldValidator.field_e = param1[103];
-          bv.field_e = param1[163];
+          TutorialController.field_e = param1[163];
           Particle.field_a = param1[221];
           cia.field_a = param1[136];
           GetBombletSprayProjectileOndamageParticles.field_q = param1[229];

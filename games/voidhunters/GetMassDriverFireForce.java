@@ -4,7 +4,7 @@
 final class GetMassDriverFireForce extends ConsoleCommand {
     static GpuProjectionMode field_p;
     static String field_q;
-    static int field_o;
+    static int activeHintIndex;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

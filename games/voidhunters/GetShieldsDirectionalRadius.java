@@ -9,17 +9,17 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
-        if (!EscapePod.a(GetBoostersCooldown.field_o, qd.field_a, 32)) {
+    final static void saveCompletedHints(int param0) {
+        if (!EscapePod.a(GetBoostersCooldown.savedHintCompletion, TutorialProgressState.completedHints, 32)) {
           return;
         }
         if (es.field_b == null) {
           es.field_b = new PlayerGameData();
         }
-        es.field_b.a(qd.field_a, -28855);
+        es.field_b.setCompletedHints(TutorialProgressState.completedHints, -28855);
         GetMissionResnetResourceTickTime.savePlayerGameData((byte) -46);
         int var1 = -27 / ((1 - param0) / 32);
-        GetBoostersCooldown.field_o = GetBots.a(GetBoostersCooldown.field_o, -31567, qd.field_a);
+        GetBoostersCooldown.savedHintCompletion = GetBots.a(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
     }
 
     final static void a(byte param0, boolean param1) {
@@ -88,7 +88,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           stackIn_87_7 = (GetThrusterSmallForce.field_o) || (SetMissionTerrainDebrisProbability.field_p);
           SetGrapplingHookRopeBreakLength.a(stackIn_82_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_85_6 != 0, stackIn_87_7, param1, 13, 15, 0);
         } else {
-          GetShieldsDirectionalRadius.a(77);
+          GetShieldsDirectionalRadius.saveCompletedHints(77);
           if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
             var2 = 0;
             var3 = GetBombletSprayEnergyUsed.field_p.width;

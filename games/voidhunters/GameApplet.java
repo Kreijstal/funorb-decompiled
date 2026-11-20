@@ -322,12 +322,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           igb.field_a.setVisible(true);
           if (var2 == PointDefenceLaserWeaponDefinition.field_c) {
             var3 = PointDefenceLaserWeaponDefinition.field_c.getInsets();
-            igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o + var3.left, var3.top + hqb.field_f);
+            igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o + var3.left, var3.top + PlayerContextMenu.field_f);
             if (var4 != 0) {
-              igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, hqb.field_f);
+              igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
             }
           } else {
-            igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, hqb.field_f);
+            igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
           }
           igb.field_a.addFocusListener((java.awt.event.FocusListener) (this));
           igb.field_a.requestFocus();
@@ -440,12 +440,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (PointDefenceLaserWeaponDefinition.field_c != null &&
               null == UiTextField.field_E) {
               var6 = PointDefenceLaserWeaponDefinition.field_c.getInsets();
-              igb.field_a.setLocation(var6.left + GetCountermeasuresPulseRadius.field_o, hqb.field_f + var6.top);
+              igb.field_a.setLocation(var6.left + GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f + var6.top);
               if (VoidHunters.field_G != 0) {
-                igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, hqb.field_f);
+                igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
               }
             } else {
-              igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, hqb.field_f);
+              igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
             }
           }
           this.renderGameFrame(-105);
@@ -501,7 +501,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               SetPointDefenceLaserReload.field_p = param6;
               GetLoadingMissions.field_p = param6;
               GetCountermeasuresPulseRadius.field_o = 0;
-              hqb.field_f = 0;
+              PlayerContextMenu.field_f = 0;
               var8_int = -70 / ((-74 - param3) / 41);
               Under13AccountNoticePanel.field_y = param0;
               GetDebrisSurvives.field_p = param4;

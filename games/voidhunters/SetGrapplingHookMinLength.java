@@ -214,9 +214,9 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
         StripesTextureOperation.a(true);
         lc.field_b.a(0, -83, -40 + (tb.field_a.height - 2), 0, tb.field_a.width);
-        DialogMessagePanel.field_v.setBounds(0, -17, lw.field_i.width, 0, DialogMessagePanel.field_w);
+        DialogMessagePanel.field_v.setBounds(0, -17, SpecialOrderButtonState.field_i.width, 0, DialogMessagePanel.field_w);
         int var1 = DialogMessagePanel.field_w + 2;
-        DualLinkNode.field_f.setBounds(0, -26, lw.field_i.width, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, lw.field_i.height - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));
+        DualLinkNode.field_f.setBounds(0, -26, SpecialOrderButtonState.field_i.width, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, SpecialOrderButtonState.field_i.height - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));
         GetThrusterForce.a(0);
         SpawnChoiceFactory.field_c.setBounds(0, 124, tb.field_a.width, -40 + tb.field_a.height, 40);
         AlphaContainer.field_w.setBounds(0, -65, ModelFaceAttachment.field_d.width, 0, 30);

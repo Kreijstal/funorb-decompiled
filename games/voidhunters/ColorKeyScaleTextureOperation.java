@@ -196,7 +196,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
           }
           if (GetMachineGunAimarc.field_p) {
             SetGrapplingHookCooldown.field_o = new IntrusiveDeque();
-            var9 = bv.field_a;
+            var9 = TutorialController.field_a;
             var7 = var9;
             var4 = var7;
             var1 = var4;

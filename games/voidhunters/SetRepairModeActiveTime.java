@@ -100,7 +100,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           wja.field_c = param4;
           UiScrollPane.field_w = param2;
           GetDebrisThrowable.field_r = param7;
-          hqb.field_k = param9;
+          PlayerContextMenu.field_k = param9;
           SetMutatorVotes.field_o = param14;
           ClientException.field_c = param10;
           ea.field_k = param13;
@@ -139,7 +139,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           AlphaContainer.field_w = new Widget(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
           sra.field_a = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ArchiveIndexLoader.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
-          GetSniperCannonAimspeed.field_q = new Widget(0L, GetUseSprites.field_p, lw.field_e);
+          GetSniperCannonAimspeed.field_q = new Widget(0L, GetUseSprites.field_p, SpecialOrderButtonState.field_e);
           SettingsChangeFactory.field_b = new Widget(0L, GetUseSprites.field_p, DebouncedInputValidator.field_b);
           GrapplingHook.field_C = new Widget(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
           GetDebrisDetachmentForceMultiplier.field_o = new Widget(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
@@ -207,7 +207,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           GetShipToShipRamDamage.field_q = new Widget(0L, SetPlayerRepairAmount.field_q, tua.field_b.toUpperCase());
           GetWeaponParticleSpeedDownshift.field_q = new Widget(0L, pa.field_a);
           SetPhysicsCollisionGrapplingHookForceMultiplier.field_o = new Widget(0L, GpuEnvironmentMapSource.field_c);
-          ProxySocketConnector.field_e = new Widget(0L, bv.field_b, mr.field_J.toUpperCase());
+          ProxySocketConnector.field_e = new Widget(0L, TutorialController.field_b, mr.field_J.toUpperCase());
           GetLaserAimarc.field_o = new Widget[4 + param12];
           SetReloadBarHeight.field_q = new IconTextWidget[4 + param12][];
           GetLaserAimarc.field_o[0] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMissionTerrainSpaceProbability.field_p);
@@ -250,13 +250,13 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
                   var19_ref = SetRepairModeRadius.field_o[var17_intLifetime3][var18];
                 }
               }
-              if (null == hqb.field_k) {
+              if (null == PlayerContextMenu.field_k) {
                 var20 = null;
               } else {
-                if (null == hqb.field_k[var17_intLifetime3]) {
+                if (null == PlayerContextMenu.field_k[var17_intLifetime3]) {
                   var20 = null;
                 } else {
-                  var20 = hqb.field_k[var17_intLifetime3][var18];
+                  var20 = PlayerContextMenu.field_k[var17_intLifetime3][var18];
                 }
               }
               SetReloadBarHeight.field_q[4 + var17_intLifetime3][1 + var18] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) (var19_ref), (String) (var20));

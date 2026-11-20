@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class usb extends UiArrayContainer {
-    private int[] field_v;
-    private int[] field_y;
-    private int field_B;
-    private int field_z;
-    private int[] field_A;
+final class UiWeightedGridContainer extends UiArrayContainer {
+    private int[] cellLayoutFlags;
+    private int[] cumulativeColumnWeights;
+    private int nextCellIndex;
+    private int horizontalPadding;
+    private int[] cumulativeRowWeights;
     int field_w;
-    private int field_x;
+    private int verticalPadding;
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void resizeChildRows(int param0, byte param1, int param2) {
         int stackIn_3_0 = 0;
         int var4;
         UiComponent[] var5;
         UiComponent[] var5Lifetime1;
-        if (null != this.field_y) {
-          stackIn_3_0 = this.field_y.length;
+        if (null != this.cumulativeColumnWeights) {
+          stackIn_3_0 = this.cumulativeColumnWeights.length;
         } else {
           stackIn_3_0 = 0;
         }
@@ -32,7 +32,7 @@ final class usb extends UiArrayContainer {
           this.children = var5;
           return;
         }
-        this.field_z = 55;
+        this.horizontalPadding = 55;
         var5Lifetime1 = new UiComponent[var4 * param0];
         if (null != this.children &&
           0 < this.children.length &&
@@ -43,30 +43,30 @@ final class usb extends UiArrayContainer {
         this.children = var5Lifetime1;
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void resizeFlagColumns(int param0, int param1, int param2) {
         int var6 = 0;
         int stackIn_3_0 = 0;
         int var4;
         int[] var5;
         int var7;
         var7 = VoidHunters.field_G;
-        if (this.field_A != null) {
-          stackIn_3_0 = this.field_A.length;
+        if (this.cumulativeRowWeights != null) {
+          stackIn_3_0 = this.cumulativeRowWeights.length;
         } else {
           stackIn_3_0 = 0;
         }
         var4 = stackIn_3_0;
         var5 = new int[var4 * param0];
-        if (null == this.field_v) {
-          this.field_v = var5;
+        if (null == this.cellLayoutFlags) {
+          this.cellLayoutFlags = var5;
           if (param1 < -49) {
             return;
           }
           this.field_w = -51;
           return;
         }
-        if (this.field_v.length <= 0) {
-          this.field_v = var5;
+        if (this.cellLayoutFlags.length <= 0) {
+          this.cellLayoutFlags = var5;
           if (param1 < -49) {
             return;
           }
@@ -74,7 +74,7 @@ final class usb extends UiArrayContainer {
           return;
         }
         if (var5.length <= 0) {
-          this.field_v = var5;
+          this.cellLayoutFlags = var5;
           if (param1 < -49) {
             return;
           }
@@ -82,7 +82,7 @@ final class usb extends UiArrayContainer {
           return;
         }
         if (param2 <= 0) {
-          this.field_v = var5;
+          this.cellLayoutFlags = var5;
           if (param1 < -49) {
             return;
           }
@@ -90,9 +90,9 @@ final class usb extends UiArrayContainer {
           return;
         }
         for (var6 = 0; var4 > var6; var6++) {
-          ArrayOperations.copy(this.field_v, param2 * var6, var5, param0 * var6, Math.min(param2, param0));
+          ArrayOperations.copy(this.cellLayoutFlags, param2 * var6, var5, param0 * var6, Math.min(param2, param0));
         }
-        this.field_v = var5;
+        this.cellLayoutFlags = var5;
         if (param1 < -49) {
           return;
         }
@@ -100,20 +100,20 @@ final class usb extends UiArrayContainer {
         return;
     }
 
-    usb(int param0, int param1, int param2, int param3, UiRenderer param4, int param5, int param6) {
+    UiWeightedGridContainer(int param0, int param1, int param2, int param3, UiRenderer param4, int param5, int param6) {
         super(param0, param1, param2, param3, param4);
         int[] var10 = null;
         int[] var9 = null;
         this.field_w = 92;
-        this.field_B = 0;
+        this.nextCellIndex = 0;
         try {
           var10 = new int[param5];
           int[] var8 = var10;
           ArrayOperations.fill(var10, 0, param5, 1);
           var9 = new int[param6];
           ArrayOperations.fill(var9, 0, param6, 1);
-          this.a(0, var10);
-          this.a((byte) -115, var9);
+          this.setColumnWeights(0, var10);
+          this.setRowWeights((byte) -115, var9);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "usb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
@@ -133,17 +133,17 @@ final class usb extends UiArrayContainer {
         }
         var3 = 0;
         while (this.children.length > var2) {
-          if (var3 >= this.field_A.length) {
+          if (var3 >= this.cumulativeRowWeights.length) {
             return;
           }
           var4 = 0;
           while (var2 < this.children.length) {
-            if (var4 < this.field_y.length) {
+            if (var4 < this.cumulativeColumnWeights.length) {
               incrementValue$0 = var2;
               var2++;
               var5 = this.children[incrementValue$0];
               if (var5 != null) {
-                this.a(var3, (byte) 72, var4, var5);
+                this.layoutCell(var3, (byte) 72, var4, var5);
               }
               var4++;
               continue;
@@ -158,27 +158,27 @@ final class usb extends UiArrayContainer {
         super.setBounds(param0, param1, param2, param3, param4);
     }
 
-    final void a(UiComponent param0, byte param1, int param2) {
+    final void appendCell(UiComponent param0, byte param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
-          var4_int = this.field_B % this.field_y.length;
+          var4_int = this.nextCellIndex % this.cumulativeColumnWeights.length;
           if (param1 > -10) {
             this.field_w = 54;
           }
-          var5 = this.field_B / this.field_y.length;
-          this.field_v[this.field_B] = param2;
-          this.children[this.field_B] = param0;
+          var5 = this.nextCellIndex / this.cumulativeColumnWeights.length;
+          this.cellLayoutFlags[this.nextCellIndex] = param2;
+          this.children[this.nextCellIndex] = param0;
           if (param0 != null) {
-            this.a(var5, (byte) 104, var4_int, param0);
+            this.layoutCell(var5, (byte) 104, var4_int, param0);
           }
-          this.field_B = this.field_B + 1;
+          this.nextCellIndex = this.nextCellIndex + 1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "usb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final void a(byte param0, int[] param1) {
+    private final void setRowWeights(byte param0, int[] param1) {
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
@@ -188,9 +188,9 @@ final class usb extends UiArrayContainer {
         int var9 = VoidHunters.field_G;
         try {
           int var3_int = 9 % ((-48 - param0) / 36);
-          var4 = this.field_A == null ? 0 : this.field_A.length;
+          var4 = this.cumulativeRowWeights == null ? 0 : this.cumulativeRowWeights.length;
           var5 = param1.length;
-          this.field_A = param1;
+          this.cumulativeRowWeights = param1;
           var6 = param1;
           var7 = 0;
           var8 = 0;
@@ -200,47 +200,47 @@ final class usb extends UiArrayContainer {
             var6[var7] = dupTemp$0;
             var7++;
           }
-          this.a(var5, (byte) -83, var4);
-          this.b(var5, (byte) -100, var4);
+          this.resizeChildRows(var5, (byte) -83, var4);
+          this.resizeFlagRows(var5, (byte) -100, var4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "usb.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void setCellPadding(int param0, int param1, int param2) {
         if (param0 == -6) {
-          this.field_x = param1;
-          this.field_z = param2;
+          this.verticalPadding = param1;
+          this.horizontalPadding = param2;
           return;
         }
         UiComponent var5 = (UiComponent) null;
         this.handleMousePress(-108, 52, 75, -20, (UiComponent) null, -91, (byte) 106);
-        this.field_x = param1;
-        this.field_z = param2;
+        this.verticalPadding = param1;
+        this.horizontalPadding = param2;
     }
 
-    private final void b(int param0, byte param1, int param2) {
-        int var4 = this.field_y == null ? 0 : this.field_y.length;
+    private final void resizeFlagRows(int param0, byte param1, int param2) {
+        int var4 = this.cumulativeColumnWeights == null ? 0 : this.cumulativeColumnWeights.length;
         int[] var5 = new int[var4 * param0];
         int var6 = -71 % ((-51 - param1) / 35);
-        if (null == this.field_v) {
-          this.field_v = var5;
+        if (null == this.cellLayoutFlags) {
+          this.cellLayoutFlags = var5;
           return;
         }
-        if (this.field_v.length <= 0) {
-          this.field_v = var5;
+        if (this.cellLayoutFlags.length <= 0) {
+          this.cellLayoutFlags = var5;
           return;
         }
         if (var5.length <= 0) {
-          this.field_v = var5;
+          this.cellLayoutFlags = var5;
           return;
         }
         if (param2 > 0) {
-          ArrayOperations.copy(this.field_v, 0, var5, 0, Math.min(param2, param0) * var4);
-          this.field_v = var5;
+          ArrayOperations.copy(this.cellLayoutFlags, 0, var5, 0, Math.min(param2, param0) * var4);
+          this.cellLayoutFlags = var5;
           return;
         }
-        this.field_v = var5;
+        this.cellLayoutFlags = var5;
     }
 
     final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
@@ -252,7 +252,7 @@ final class usb extends UiArrayContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 > -17) {
-            this.field_x = 25;
+            this.verticalPadding = 25;
           }
           stackIn_3_0 = super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -120);
           return stackIn_3_0;
@@ -270,7 +270,7 @@ final class usb extends UiArrayContainer {
         }
     }
 
-    private final void a(int param0, int[] param1) {
+    private final void setColumnWeights(int param0, int[] param1) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -279,9 +279,9 @@ final class usb extends UiArrayContainer {
         int dupTemp$0 = 0;
         int var8 = VoidHunters.field_G;
         try {
-          var3_int = null != this.field_y ? this.field_y.length : 0;
+          var3_int = null != this.cumulativeColumnWeights ? this.cumulativeColumnWeights.length : 0;
           var4 = param1.length;
-          this.field_y = param1;
+          this.cumulativeColumnWeights = param1;
           var5 = param1;
           var6 = 0;
           var7 = param0;
@@ -291,14 +291,14 @@ final class usb extends UiArrayContainer {
             var5[var6] = dupTemp$0;
             var6++;
           }
-          this.c(var3_int, (byte) -86, var4);
-          this.b(var4, param0 - 70, var3_int);
+          this.resizeChildColumns(var3_int, (byte) -86, var4);
+          this.resizeFlagColumns(var4, param0 - 70, var3_int);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "usb.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, byte param1, int param2, UiComponent param3) {
+    private final void layoutCell(int param0, byte param1, int param2, UiComponent param3) {
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_1 = 0;
@@ -327,39 +327,39 @@ final class usb extends UiArrayContainer {
         int var15Lifetime1;
         var20 = VoidHunters.field_G;
         try {
-          var5_int = this.field_y[-1 + this.field_y.length];
-          var6 = this.field_A[this.field_A.length - 1];
+          var5_int = this.cumulativeColumnWeights[-1 + this.cumulativeColumnWeights.length];
+          var6 = this.cumulativeRowWeights[this.cumulativeRowWeights.length - 1];
           if (0 >= param2) {
             stackIn_4_0 = 0;
           } else {
-            stackIn_4_0 = this.field_y[param2 - 1];
+            stackIn_4_0 = this.cumulativeColumnWeights[param2 - 1];
           }
           var7 = stackIn_4_0 * this.width / var5_int;
           stackIn_6_0 = this.height;
           if (0 >= param0) {
             stackIn_7_1 = 0;
           } else {
-            stackIn_7_1 = this.field_A[param0 - 1];
+            stackIn_7_1 = this.cumulativeRowWeights[param0 - 1];
           }
           var8 = stackIn_6_0 * stackIn_7_1 / var6;
-          var9 = this.field_y[param2] * this.width / var5_int;
-          var10 = this.height * this.field_A[param0] / var6;
-          var11 = param0 * this.field_y.length + param2;
-          var12 = this.field_v[var11] & 48;
-          var13 = 192 & this.field_v[var11];
+          var9 = this.cumulativeColumnWeights[param2] * this.width / var5_int;
+          var10 = this.height * this.cumulativeRowWeights[param0] / var6;
+          var11 = param0 * this.cumulativeColumnWeights.length + param2;
+          var12 = this.cellLayoutFlags[var11] & 48;
+          var13 = 192 & this.cellLayoutFlags[var11];
           var14 = param3.x;
           if (param1 <= 45) {
-            this.c(14, 96, 93);
+            this.setCellPadding(14, 96, 93);
           }
           var15 = param3.y;
           var16 = param3.width;
           var17 = param3.height;
           if (var16 < -var7 + var9 &&
-            (1 & this.field_v[var11]) != 0) {
+            (1 & this.cellLayoutFlags[var11]) != 0) {
             var16 = -var7 + var9;
             var14Lifetime1 = var7;
           } else if (var9 - var7 < var16 &&
-            (4 & this.field_v[var11]) != 0) {
+            (4 & this.cellLayoutFlags[var11]) != 0) {
             var16 = -var7 + var9;
             var14Lifetime1 = var7;
           } else {
@@ -374,11 +374,11 @@ final class usb extends UiArrayContainer {
             }
           }
           if (var17 < var10 - var8 &&
-            (this.field_v[var11] & 2) != 0) {
+            (this.cellLayoutFlags[var11] & 2) != 0) {
             var17 = var10 - var8;
             var15Lifetime1 = var8;
           } else if (var10 - var8 < var17 &&
-            (8 & this.field_v[var11]) != 0) {
+            (8 & this.cellLayoutFlags[var11]) != 0) {
             var17 = var10 - var8;
             var15Lifetime1 = var8;
           } else {
@@ -392,8 +392,8 @@ final class usb extends UiArrayContainer {
               var15Lifetime1 = -var17 + var10 + var8 >> 1;
             }
           }
-          var18 = this.field_z;
-          var19 = this.field_x;
+          var18 = this.horizontalPadding;
+          var19 = this.verticalPadding;
           param3.setBounds(var18 + var14Lifetime1, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15Lifetime1 + var19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -428,11 +428,11 @@ final class usb extends UiArrayContainer {
           }
           var5_int = param1;
           if (var5_int == 98) {
-            stackIn_11_0 = this.focusPreviousChild(param2, 103, this.field_y.length);
+            stackIn_11_0 = this.focusPreviousChild(param2, 103, this.cumulativeColumnWeights.length);
             return stackIn_11_0;
           }
           if (var5_int == 99) {
-            stackIn_13_0 = this.focusNextChild(this.field_y.length, param2, 0);
+            stackIn_13_0 = this.focusNextChild(this.cumulativeColumnWeights.length, param2, 0);
             return stackIn_13_0;
           }
           if (96 == var5_int) {
@@ -445,7 +445,7 @@ final class usb extends UiArrayContainer {
           }
           if (param0 != -15834) {
             var6 = (String) null;
-            usb.a(-25, (BitmapFont) null, (String) null, 107, 85, 63, 106);
+            UiWeightedGridContainer.drawTextBox(-25, (BitmapFont) null, (String) null, 107, 85, 63, 106);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -462,7 +462,7 @@ final class usb extends UiArrayContainer {
         }
     }
 
-    final static void a(int param0, BitmapFont param1, String param2, int param3, int param4, int param5, int param6) {
+    final static void drawTextBox(int param0, BitmapFont param1, String param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -509,7 +509,7 @@ final class usb extends UiArrayContainer {
         }
     }
 
-    private final void c(int param0, byte param1, int param2) {
+    private final void resizeChildColumns(int param0, byte param1, int param2) {
         int var4;
         UiComponent[] var5;
         int var6;
@@ -517,8 +517,8 @@ final class usb extends UiArrayContainer {
         int stackIn_3_0 = 0;
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
-        if (null != this.field_A) {
-          stackIn_3_0 = this.field_A.length;
+        if (null != this.cumulativeRowWeights) {
+          stackIn_3_0 = this.cumulativeRowWeights.length;
         } else {
           stackIn_3_0 = 0;
         }

@@ -364,7 +364,7 @@ final class GpuSprite extends ToolkitSprite {
         var2.writeByte(0, 2);
         var2.writeBytes(0, GetPlayerRepairTime.field_o, -1, GetPlayerRepairTime.field_o.length);
         var2.writeByte(0, Hardpoint.field_a);
-        var2.writeByte(0, qd.field_d);
+        var2.writeByte(0, TutorialProgressState.field_d);
         var2.writeBytes(0, GetDebrisThrowable.field_p, -1, GetDebrisThrowable.field_p.length);
         var2.writeLengthByte(-var3 + var2.position, -129);
     }

@@ -65,13 +65,13 @@ final class fdb extends MidiPcmStream {
           DialogMessagePanel.field_v.text = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
         }
         stackIn_9_0 = tb.field_a;
-        stackIn_10_1 = (param0) && (!param1) && (!bv.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);
+        stackIn_10_1 = (param0) && (!param1) && (!TutorialController.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);
         ((Widget) (Object) stackIn_9_0).updateInput(stackIn_10_1, 1332);
         stackIn_16_0 = ModelFaceAttachment.field_d;
-        stackIn_17_1 = (param0) && (!param1) && (!bv.field_d) && (null == SetSpinningBladeSpindamageMultiplier.field_o) && (null == SetThrusterParticleSpeedDownshift.field_o);
+        stackIn_17_1 = (param0) && (!param1) && (!TutorialController.field_d) && (null == SetSpinningBladeSpindamageMultiplier.field_o) && (null == SetThrusterParticleSpeedDownshift.field_o);
         ((Widget) (Object) stackIn_16_0).updateInput(stackIn_17_1, 1332);
         stackIn_21_0 = GetTorpedoProjectiles.field_o;
-        stackIn_22_1 = (param0) && (!param1) && (bv.field_d);
+        stackIn_22_1 = (param0) && (!param1) && (TutorialController.field_d);
         ((Widget) (Object) stackIn_21_0).updateInput(stackIn_22_1, 1332);
         lc.field_b.field_a.i(10000);
         if (SpawnChoiceFactory.field_c.field_o != 0) {
@@ -102,7 +102,7 @@ final class fdb extends MidiPcmStream {
           GetMassDriverProjectiles.a((byte) 127, true, vva.field_u, 0, UiScrollPane.field_w, param2);
         }
         if (SetTorpedoAcceleration.field_o.field_o != 0) {
-          bv.field_d = false;
+          TutorialController.field_d = false;
         }
     }
 

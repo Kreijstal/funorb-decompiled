@@ -149,7 +149,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[68] = MatchResults.field_b;
         var2[97] = GetAutoAfkTimeout.field_o;
         var2[24] = GetInnateThrusters.field_p;
-        var2[163] = bv.field_e;
+        var2[163] = TutorialController.field_e;
         var2[162] = QuickChatCategoryDefinition.field_o;
         var2[169] = SetShieldsDirectionalRadius.field_o;
         var2[224] = Particle.field_e;

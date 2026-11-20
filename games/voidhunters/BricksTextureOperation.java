@@ -110,7 +110,7 @@ final class BricksTextureOperation extends TextureOperation {
 
     final static boolean b(int param0, int param1, int param2, int param3) {
         if (GetLagStandardDeviationOut.field_o != null &&
-          GetLagStandardDeviationOut.field_o.a(0)) {
+          GetLagStandardDeviationOut.field_o.pollSelectionPending(0)) {
           TileTextureOperation.d(0);
           return true;
         }

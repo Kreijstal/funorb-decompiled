@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bv {
-    private int field_c;
+final class TutorialController {
+    private int completionFadeTime;
     static int[] field_a;
     static Widget field_b;
     static boolean field_d;
     static int field_e;
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void advanceHintTimer(byte param0, int param1, int param2) {
         try {
-          this.a(param1, 127, param2, false);
+          this.advanceHintTimer(param1, 127, param2, false);
           if (param0 != 113) {
             field_d = true;
           }
@@ -19,8 +19,8 @@ final class bv {
         }
     }
 
-    private final int[] a(int param0, IntrusiveDeque param1, int param2, int param3, Camera2D param4, int param5, int param6, int param7) {
-        lw var9 = null;
+    private final int[] findOrderButtonBounds(int param0, IntrusiveDeque param1, int param2, int param3, Camera2D param4, int param5, int param6, int param7) {
+        SpecialOrderButtonState var9 = null;
         int var10 = 0;
         int var13 = 0;
         int[] stackIn_9_0 = null;
@@ -38,20 +38,20 @@ final class bv {
         int var12 = 0;
         var13 = VoidHunters.field_G;
         try {
-          var9 = (lw) (param1.first(0));
+          var9 = (SpecialOrderButtonState) (param1.first(0));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9 == null))) {
-            var10 = var9.field_l;
+            var10 = var9.specialOrderId;
             stackIn_12_0 = param0;
             stackIn_12_1 = var10;
             if (var13 == 0) {
               if (stackIn_12_0 == stackIn_12_1) {
-                var11 = var9.field_m;
-                var12 = var9.field_h;
+                var11 = var9.x;
+                var12 = var9.y;
                 stackIn_9_0 = new int[]{var11, var11 + chb.field_a, var12, CarouselSlotStateDump.field_g + var12};
                 return stackIn_9_0;
               }
-              var9 = (lw) (param1.next((byte) 39));
+              var9 = (SpecialOrderButtonState) (param1.next((byte) 39));
               continue;
             }
             break;
@@ -61,7 +61,7 @@ final class bv {
             stackIn_12_1 = 30;
           }
           if (stackIn_12_0 != stackIn_12_1) {
-            this.a(-87, (GameSnapshot) null, 37, 98, (Ship) null, 100, (Camera2D) null);
+            this.updatePracticeScenario(-87, (GameSnapshot) null, 37, 98, (Ship) null, 100, (Camera2D) null);
           }
           stackIn_16_0 = null;
           return (int[]) (stackIn_16_0);
@@ -85,24 +85,24 @@ final class bv {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void advanceHintTimer(int param0, int param1) {
         try {
-          this.a((byte) 113, 100, param1);
+          this.advanceHintTimer((byte) 113, 100, param1);
           if (param0 != -26476) {
-            this.a((GameSnapshot) null, (Camera2D) null, 111, -69, (int[]) null, (String) null, -41);
+            this.drawWorldHint((GameSnapshot) null, (Camera2D) null, 111, -69, (int[]) null, (String) null, -41);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bv.J(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean isHintVisible(int param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -4) {
-            stackIn_7_0 = !(HardpointMatch.field_f[param0] < 50);
+            stackIn_7_0 = !(HardpointMatch.hintTimers[param0] < 50);
             return stackIn_7_0;
           }
           return true;
@@ -113,7 +113,7 @@ final class bv {
         }
     }
 
-    final boolean b(byte param0, int param1) {
+    final boolean isHintCompleteAndHidden(byte param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -121,7 +121,7 @@ final class bv {
           if (param0 != 11) {
             return false;
           }
-          stackIn_10_0 = (qd.field_a[param1]) && (HardpointMatch.field_f[param1] < 50);
+          stackIn_10_0 = (TutorialProgressState.completedHints[param1]) && (HardpointMatch.hintTimers[param1] < 50);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,14 +130,14 @@ final class bv {
         }
     }
 
-    private final String a(int param0, int param1, boolean param2) {
+    private final String formatShortcutLabel(int param0, int param1, boolean param2) {
         RuntimeException var4 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -6448) {
-            this.a((GameSnapshot) null, (Camera2D) null, 32, -33, (int[]) null, (String) null, -106);
+            this.drawWorldHint((GameSnapshot) null, (Camera2D) null, 32, -33, (int[]) null, (String) null, -106);
           }
           if (!param2) {
             stackIn_7_0 = SetTorpedoProjectileDamage.field_q[param1];
@@ -152,15 +152,15 @@ final class bv {
         }
     }
 
-    final boolean a(int param0, boolean param1) {
+    final boolean isHintComplete(int param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            this.field_c = -29;
+            this.completionFadeTime = -29;
           }
-          stackIn_4_0 = qd.field_a[param0];
+          stackIn_4_0 = TutorialProgressState.completedHints[param0];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,23 +169,23 @@ final class bv {
         }
     }
 
-    final void a(byte param0) {
+    final void saveHintProgress(byte param0) {
         try {
           int var2_int = -50 / ((55 - param0) / 38);
-          GetShieldsDirectionalRadius.a(-98);
+          GetShieldsDirectionalRadius.saveCompletedHints(-98);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bv.B(" + param0 + ')');
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void completeHint(byte param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param0 <= 66) {
-            this.a((byte) -23, 1);
+            this.completeHint((byte) -23, 1);
           }
-          qd.field_a[param1] = true;
+          TutorialProgressState.completedHints[param1] = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ final class bv {
         RuntimeException var1 = null;
         try {
           if (param0 != 39) {
-            bv.clearSharedReferences(105);
+            TutorialController.clearSharedReferences(105);
           }
           field_a = null;
           field_b = null;
@@ -211,7 +211,7 @@ final class bv {
         }
     }
 
-    private final void a(int[] param0, Camera2D param1, boolean param2, int param3, GameSnapshot param4, boolean param5, String param6, int param7, byte param8) {
+    private final void drawHintCallout(int[] param0, Camera2D param1, boolean param2, int param3, GameSnapshot param4, boolean param5, String param6, int param7, byte param8) {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
@@ -408,7 +408,7 @@ final class bv {
         }
     }
 
-    private final void a(GameSnapshot param0, Camera2D param1, int param2, int param3, int[] param4, String param5, int param6) {
+    private final void drawWorldHint(GameSnapshot param0, Camera2D param1, int param2, int param3, int[] param4, String param5, int param6) {
         String discarded$1 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -422,9 +422,9 @@ final class bv {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param4, param1, false, param2, param0, true, param5, param3, (byte) -76);
+          this.drawHintCallout(param4, param1, false, param2, param0, true, param5, param3, (byte) -76);
           if (param6 != 1619) {
-            discarded$1 = this.a(-4, -53, false);
+            discarded$1 = this.formatShortcutLabel(-4, -53, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -459,19 +459,19 @@ final class bv {
         }
     }
 
-    bv() {
-        this.field_c = -1;
+    TutorialController() {
+        this.completionFadeTime = -1;
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3) {
+    private final void advanceHintTimer(int param0, int param1, int param2, boolean param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (!qd.field_a[param2] &&
-            HardpointMatch.field_f[param2] < param0 && (param3 ||
-            -1 == GetMassDriverFireForce.field_o ||
-            param2 == GetMassDriverFireForce.field_o)) {
-            HardpointMatch.field_f[param2] = HardpointMatch.field_f[param2] + 2;
+          if (!TutorialProgressState.completedHints[param2] &&
+            HardpointMatch.hintTimers[param2] < param0 && (param3 ||
+            -1 == GetMassDriverFireForce.activeHintIndex ||
+            param2 == GetMassDriverFireForce.activeHintIndex)) {
+            HardpointMatch.hintTimers[param2] = HardpointMatch.hintTimers[param2] + 2;
           }
           if (param1 <= 85) {
             field_a = (int[]) null;
@@ -484,7 +484,7 @@ final class bv {
         }
     }
 
-    final void a(int param0, GameSnapshot param1, int param2, int param3, Ship param4, int param5, Camera2D param6) {
+    final void updatePracticeScenario(int param0, GameSnapshot param1, int param2, int param3, Ship param4, int param5, Camera2D param6) {
         int stackIn_28_0 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -538,7 +538,7 @@ final class bv {
             }
             var12++;
           }
-          if (this.b((byte) 11, 1) &&
+          if (this.isHintCompleteAndHidden((byte) 11, 1) &&
             param1.world.countShips(0) <= 1) {
             var11 = param1.missionState.getCustomVariableValue(7061, 0);
             stackIn_28_0 = (0 != param1.world.countDebris(true)) ? 0 : 1;
@@ -594,7 +594,7 @@ final class bv {
         }
     }
 
-    final void a(GameSnapshot param0, int param1, boolean param2, Camera2D param3, int param4, int param5, int param6, int param7, byte param8, IntrusiveDeque param9, int param10, int param11, Ship param12) {
+    final void updateAndDrawHints(GameSnapshot param0, int param1, boolean param2, Camera2D param3, int param4, int param5, int param6, int param7, byte param8, IntrusiveDeque param9, int param10, int param11, Ship param12) {
         int stackIn_23_0 = 0;
         int stackIn_41_0 = 0;
         boolean stackIn_82_0 = false;
@@ -677,11 +677,11 @@ final class bv {
               var15 = param0.getPlayer(param11, (byte) 59);
               var17 = 0;
               boolean decompiledNaturalLoopExit1 = false;
-              while (!(decompiledNaturalLoopExit1 = (!(HardpointMatch.field_f.length > var17)))) {
-                stackIn_23_0 = HardpointMatch.field_f[var17];
+              while (!(decompiledNaturalLoopExit1 = (!(HardpointMatch.hintTimers.length > var17)))) {
+                stackIn_23_0 = HardpointMatch.hintTimers[var17];
                 if (var43 == 0) {
                   if (stackIn_23_0 > 0) {
-                    HardpointMatch.field_f[var17] = HardpointMatch.field_f[var17] - 1;
+                    HardpointMatch.hintTimers[var17] = HardpointMatch.hintTimers[var17] - 1;
                   }
                   var17++;
                   continue;
@@ -695,7 +695,7 @@ final class bv {
               var16 = 4;
               var17 = param3.screenToWorldX(true, GetUseDetailLines.field_o);
               var18 = param3.screenToWorldY(0, GetTorpedoReload.field_q);
-              GetMassDriverFireForce.field_o = -1;
+              GetMassDriverFireForce.activeHintIndex = -1;
               var19_int = 0;
               scanLoop1: while (true) {
                 if (11 > var19_int) {
@@ -704,8 +704,8 @@ final class bv {
                     break scanLoop1;
                   }
                   if (stackIn_41_0 != 4 &&
-                    HardpointMatch.field_f[var19_int] > 0) {
-                    GetMassDriverFireForce.field_o = var19_int;
+                    HardpointMatch.hintTimers[var19_int] > 0) {
+                    GetMassDriverFireForce.activeHintIndex = var19_int;
                   } else {
                     var19_int++;
                     continue;
@@ -719,12 +719,12 @@ final class bv {
               }
               if (stackIn_41_0 == 0) {
                 var19 = param12.getBoundingbox((byte) -66);
-                this.a(-26476, 0);
+                this.advanceHintTimer(-26476, 0);
                 if (SetUseTrails.field_o &&
                   ComponentBehaviour.field_b &&
                   OpenGlVertexDeclaration.field_d &&
                   WeaponDefinition.field_a) {
-                  this.a((byte) 86, 0);
+                  this.completeHint((byte) 86, 0);
                 }
                 if ((2 & var15.triggers) != 0) {
                   ComponentBehaviour.field_b = true;
@@ -738,11 +738,11 @@ final class bv {
                 if ((var15.triggers & 4) != 0) {
                   OpenGlVertexDeclaration.field_d = true;
                 }
-                if (this.b(0, -116)) {
-                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.a(-6448, UnsupportedGpuMaterialEffect.field_f, WeaponDefinition.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
-                  this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[0], 255), var16, var19, var20, 1619);
+                if (this.isHintVisible(0, -116)) {
+                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.formatShortcutLabel(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.formatShortcutLabel(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.formatShortcutLabel(-6448, UnsupportedGpuMaterialEffect.field_f, WeaponDefinition.field_a), this.formatShortcutLabel(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
+                  this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[0], 255), var16, var19, var20, 1619);
                 }
-                if (this.b((byte) 11, 0) &&
+                if (this.isHintCompleteAndHidden((byte) 11, 0) &&
                   !param12.getRepairModeOn(32)) {
                   var20_int = param12.chassis.collectWeapons(126, 0);
                   var21 = 0;
@@ -768,9 +768,9 @@ final class bv {
                       stackIn_92_0 = var21;
                     }
                     if (stackIn_92_0 != 0) {
-                      this.a(-26476, 1);
+                      this.advanceHintTimer(-26476, 1);
                     }
-                    if (!this.b(1, -60)) {
+                    if (!this.isHintVisible(1, -60)) {
                       break;
                     }
                     var22 = 0;
@@ -801,7 +801,7 @@ final class bv {
                             var39 = param3.worldToScreenX(var28, (byte) 115);
                             var40 = param3.worldToScreenY(true, var29);
                             var41 = 11142145;
-                            var42 = GetMutatorVotes.a(HardpointMatch.field_f[1], 255) >>> 2;
+                            var42 = GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[1], 255) >>> 2;
                             if (!var24.weaponbehaviour.canAimAtTarget(-26772, var18, var17, var24.getDefinition((byte) -112), var24)) {
                               if (PacketBuffer.field_g != 0) {
                                 var41 = 16712705;
@@ -832,24 +832,24 @@ final class bv {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = OpenGlVertexNormal.field_d[0];
-                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(HardpointMatch.field_f[1], 255) << 24, 1);
+                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[1], 255) << 24, 1);
                       }
                     } else {
                       if (var22 != 0) {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = OpenGlVertexNormal.field_d[0];
-                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(HardpointMatch.field_f[1], 255) << 24, 1);
+                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[1], 255) << 24, 1);
                       }
                     }
                     var23_int = 1024;
                     var24_array = new int[]{-var23_int + var17, var23_int + var17, -var23_int + var18, var23_int + var18};
-                    this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[1], 255), var16, var24_array, CarouselSlotStateDump.field_e, 1619);
+                    this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[1], 255), var16, var24_array, CarouselSlotStateDump.field_e, 1619);
                     break;
                   }
                 }
-                if (this.b((byte) 11, 0) &&
-                  this.b((byte) 11, 1) &&
+                if (this.isHintCompleteAndHidden((byte) 11, 0) &&
+                  this.isHintCompleteAndHidden((byte) 11, 1) &&
                   !param12.isSpecialOrderActive(4, 50)) {
                   if (GetUseDetailLines.field_o == -1 ||
                     -1 == GetTorpedoReload.field_q) {
@@ -859,37 +859,37 @@ final class bv {
                   var20_ref = param0.world.b(1, 2147483647, param12.getX(false), var17, var18, param12.getY((byte) 124));
                   if (var20_ref != null ||
                     param12.getDragging(-96) != -1) {
-                    this.a(-26476, 3);
+                    this.advanceHintTimer(-26476, 3);
                     if (param2 && (!(param0.world.countDebris(true) > 0) ||
                       !(param0.world.countDebris(true) > 1) &&
                       param12.getDragging(46) != -1)) {
-                      this.a((byte) 99, 3);
-                      HardpointMatch.field_f[3] = 0;
+                      this.completeHint((byte) 99, 3);
+                      HardpointMatch.hintTimers[3] = 0;
                     }
                     if (param12.getDragging(-119) != -1) {
                       if (!param2) {
-                        this.a((byte) 123, 3);
+                        this.completeHint((byte) 123, 3);
                       }
-                      HardpointMatch.field_f[3] = 0;
+                      HardpointMatch.hintTimers[3] = 0;
                     }
-                    if (this.b(3, -123)) {
+                    if (this.isHintVisible(3, -123)) {
                       var21_ref_int__ = var20_ref.getBoundingbox((byte) -82);
-                      this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[3], 255), var16, var21_ref_int__, GetMissionVotes.field_o, 1619);
-                      if ((var43 != 0) && (!qd.field_a[3] &&
-                        HardpointMatch.field_f[3] > 0)) {
-                        HardpointMatch.field_f[3] = HardpointMatch.field_f[3] - 1;
+                      this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[3], 255), var16, var21_ref_int__, GetMissionVotes.field_o, 1619);
+                      if ((var43 != 0) && (!TutorialProgressState.completedHints[3] &&
+                        HardpointMatch.hintTimers[3] > 0)) {
+                        HardpointMatch.hintTimers[3] = HardpointMatch.hintTimers[3] - 1;
                       }
                     }
                   } else {
-                    if (!qd.field_a[3] &&
-                      HardpointMatch.field_f[3] > 0) {
-                      HardpointMatch.field_f[3] = HardpointMatch.field_f[3] - 1;
+                    if (!TutorialProgressState.completedHints[3] &&
+                      HardpointMatch.hintTimers[3] > 0) {
+                      HardpointMatch.hintTimers[3] = HardpointMatch.hintTimers[3] - 1;
                     }
                   }
                 }
-                if (this.b((byte) 11, 0) &&
-                  this.b((byte) 11, 1)) {
-                  this.a(-26476, 2);
+                if (this.isHintCompleteAndHidden((byte) 11, 0) &&
+                  this.isHintCompleteAndHidden((byte) 11, 1)) {
+                  this.advanceHintTimer(-26476, 2);
                   if (!(GetPointDefenceLaserPulsetime.field_o >= 0) ||
                     SetMachineGunEnergyUsed.field_o[GetUseCircleOutline.field_p] ||
                     SetMachineGunEnergyUsed.field_o[GetPointDefenceLaserRandomness.field_r]) {
@@ -902,17 +902,17 @@ final class bv {
                   }
                   if (GetPointDefenceLaserReload.field_p &&
                     nqa.field_c) {
-                    this.a((byte) 83, 2);
+                    this.completeHint((byte) 83, 2);
                   }
-                  if (this.b(2, -104)) {
+                  if (this.isHintVisible(2, -104)) {
                     var20_int = param10 / 2;
                     var21 = param5 / 4;
                     var22_ref_int__ = new int[]{var20_int, var21};
-                    this.a(var22_ref_int__, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[2], 255), param0, false, ei.field_f, var16, (byte) 116);
+                    this.drawHintCallout(var22_ref_int__, param3, false, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[2], 255), param0, false, ei.field_f, var16, (byte) 116);
                   }
                 }
-                if (this.b((byte) 11, 0) &&
-                  this.b((byte) 11, 1) &&
+                if (this.isHintCompleteAndHidden((byte) 11, 0) &&
+                  this.isHintCompleteAndHidden((byte) 11, 1) &&
                   var14_int == 5) {
                   var20_int = GetUseNiceTrails.field_p;
                   var21_ref_int__Lifetime1 = new int[]{param12.getX(false) - var20_int, -var20_int + param12.getX(false), param12.getY((byte) 127), param12.getY((byte) 124)};
@@ -927,48 +927,48 @@ final class bv {
                   var22 = stackIn_236_0;
                   if (var22 != 0) {
                     var23_int = Particle.field_l * 5 + 100;
-                    var24_intLifetime1 = GetMassDriverFireForce.field_o;
-                    GetMassDriverFireForce.field_o = -1;
-                    this.a((byte) 113, var23_int, 4);
-                    if (~HardpointMatch.field_f[4] == ~var23_int) {
-                      this.a((byte) 113, 4);
+                    var24_intLifetime1 = GetMassDriverFireForce.activeHintIndex;
+                    GetMassDriverFireForce.activeHintIndex = -1;
+                    this.advanceHintTimer((byte) 113, var23_int, 4);
+                    if (~HardpointMatch.hintTimers[4] == ~var23_int) {
+                      this.completeHint((byte) 113, 4);
                     }
-                    if (this.b(4, -124)) {
-                      this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[4], 255), var16, var21_ref_int__Lifetime1, uia.field_a, 1619);
+                    if (this.isHintVisible(4, -124)) {
+                      this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[4], 255), var16, var21_ref_int__Lifetime1, uia.field_a, 1619);
                     }
-                    GetMassDriverFireForce.field_o = var24_intLifetime1;
+                    GetMassDriverFireForce.activeHintIndex = var24_intLifetime1;
                   }
                   var20_ref2 = new IntrusiveDeque();
                   param12.collectSpecialOrderStatuses(var20_ref2, 9, param2, param0.world.isBodyIdReserved(param12.getId(false), (byte) 21));
                   if (var20_ref2.size(3) > 1) {
-                    this.a(-26476, 9);
+                    this.advanceHintTimer(-26476, 9);
                     if (SetMachineGunEnergyUsed.field_o[81]) {
-                      this.a((byte) 127, 9);
+                      this.completeHint((byte) 127, 9);
                     }
-                    if (this.b(9, -56)) {
+                    if (this.isHintVisible(9, -56)) {
                       var21 = 172;
                       var22 = param5 - 58;
                       var23_array = new int[]{var21, var22};
-                      this.a(var23_array, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[9], 255), param0, false, TextureCombineSource.field_b, var16, (byte) -47);
+                      this.drawHintCallout(var23_array, param3, false, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[9], 255), param0, false, TextureCombineSource.field_b, var16, (byte) -47);
                     }
                   }
-                  if (this.b((byte) 11, 9)) {
-                    this.a(-26476, 10);
+                  if (this.isHintCompleteAndHidden((byte) 11, 9)) {
+                    this.advanceHintTimer(-26476, 10);
                     if (null != es.field_b &&
                       es.field_b.blueprint != null) {
-                      this.a((byte) 123, 10);
+                      this.completeHint((byte) 123, 10);
                     }
-                    if (this.b(10, -61)) {
-                      var21_ref_int__Lifetime1Lifetime1 = this.a(11, param9, 30, param4, param3, param6, param5, param1);
+                    if (this.isHintVisible(10, -61)) {
+                      var21_ref_int__Lifetime1Lifetime1 = this.findOrderButtonBounds(11, param9, 30, param4, param3, param6, param5, param1);
                       if (null != var21_ref_int__Lifetime1Lifetime1) {
                         var22_ref_String = SetReverbGain.a(SetCountermeasureLauncherAimarc.field_o, new String[]{SetTorpedoProjectileDamage.field_q[SetDetachmentMode.field_p]}, 110);
-                        this.a(var21_ref_int__Lifetime1Lifetime1, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[10], 255), param0, true, var22_ref_String, var16, (byte) -50);
+                        this.drawHintCallout(var21_ref_int__Lifetime1Lifetime1, param3, true, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[10], 255), param0, true, var22_ref_String, var16, (byte) -50);
                       }
                     }
                   }
                   if (ssa.b(2) &&
                     SetMachineGunEnergyUsed.field_o[101]) {
-                    this.a((byte) 118, 10);
+                    this.completeHint((byte) 118, 10);
                   }
                   var21_ref_int__Lifetime1Lifetime2 = new int[2];
                   param12.chassis.accumulateHealth(var21_ref_int__Lifetime1Lifetime2, (byte) -17, true);
@@ -978,60 +978,60 @@ final class bv {
                   param12.chassis.accumulateHealth(var21_ref_int__Lifetime1Lifetime2, (byte) -17, false);
                   var23_int = 256 * var21_ref_int__Lifetime1Lifetime2[0] / var21_ref_int__Lifetime1Lifetime2[1];
                   if (var22 < var23_int) {
-                    this.a(-26476, 5);
+                    this.advanceHintTimer(-26476, 5);
                   }
                   if ((var22 >= var23_int ||
                     var43 != 0) &&
-                    0 < HardpointMatch.field_f[5]) {
-                    HardpointMatch.field_f[5] = HardpointMatch.field_f[5] - 1;
+                    0 < HardpointMatch.hintTimers[5]) {
+                    HardpointMatch.hintTimers[5] = HardpointMatch.hintTimers[5] - 1;
                   }
                   if (param12.isSpecialOrderActive(4, 75)) {
-                    this.a((byte) 118, 5);
+                    this.completeHint((byte) 118, 5);
                   }
-                  if (this.b(5, -12)) {
-                    var24_arrayLifetime1 = this.a(4, param9, 30, param4, param3, param6, param5, param1);
+                  if (this.isHintVisible(5, -12)) {
+                    var24_arrayLifetime1 = this.findOrderButtonBounds(4, param9, 30, param4, param3, param6, param5, param1);
                     if (var24_arrayLifetime1 != null) {
-                      this.a(var24_arrayLifetime1, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[5], 255), param0, true, SetMissionVotes.field_o, var16, (byte) 98);
+                      this.drawHintCallout(var24_arrayLifetime1, param3, true, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[5], 255), param0, true, SetMissionVotes.field_o, var16, (byte) 98);
                     }
                   }
                   if (param12.isSpecialOrderActive(4, 72)) {
                     if (param12.isRepairModeFullyCharged(-50)) {
-                      this.a(-26476, 6);
+                      this.advanceHintTimer(-26476, 6);
                     }
                     if (!param12.getRepairModeOn(32)) {
-                      this.a((byte) 106, 6);
+                      this.completeHint((byte) 106, 6);
                     }
                   }
-                  if (this.b(6, -88)) {
-                    var21_ref_int__Lifetime1Lifetime3 = this.a(4, param9, 30, param4, param3, param6, param5, param1);
+                  if (this.isHintVisible(6, -88)) {
+                    var21_ref_int__Lifetime1Lifetime3 = this.findOrderButtonBounds(4, param9, 30, param4, param3, param6, param5, param1);
                     if (var21_ref_int__Lifetime1Lifetime3 != null) {
-                      this.a(var21_ref_int__Lifetime1Lifetime3, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[6], 255), param0, true, GetMissionTerrainVotingChancestep.field_p, var16, (byte) 102);
+                      this.drawHintCallout(var21_ref_int__Lifetime1Lifetime3, param3, true, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[6], 255), param0, true, GetMissionTerrainVotingChancestep.field_p, var16, (byte) 102);
                     }
                   }
-                  var21_ref_int__Lifetime1Lifetime4 = this.a(0, param9, 30, param4, param3, param6, param5, param1);
+                  var21_ref_int__Lifetime1Lifetime4 = this.findOrderButtonBounds(0, param9, 30, param4, param3, param6, param5, param1);
                   if (null != var21_ref_int__Lifetime1Lifetime4) {
-                    this.a(-26476, 7);
+                    this.advanceHintTimer(-26476, 7);
                     if (param7 == 0) {
-                      this.a((byte) 82, 7);
-                      if (this.b((byte) 11, 7) &&
+                      this.completeHint((byte) 82, 7);
+                      if (this.isHintCompleteAndHidden((byte) 11, 7) &&
                         GetUseDetailLines.field_o != -1 &&
                         GetTorpedoReload.field_q != -1) {
-                        this.a(-26476, 8);
-                        if (this.b(8, -43)) {
+                        this.advanceHintTimer(-26476, 8);
+                        if (this.isHintVisible(8, -43)) {
                           var22 = 1024;
                           var23_arrayLifetime1 = new int[]{var17 - var22, var17 + var22, -var22 + var18, var18 + var22};
-                          this.a(var23_arrayLifetime1, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[8], 255), param0, true, SpriteTextureOperation.field_i, var16, (byte) -115);
+                          this.drawHintCallout(var23_arrayLifetime1, param3, false, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[8], 255), param0, true, SpriteTextureOperation.field_i, var16, (byte) -115);
                         }
                       }
                     }
-                    if (this.b(7, -106)) {
-                      this.a(var21_ref_int__Lifetime1Lifetime4, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[7], 255), param0, true, OpenGlArbProgram.field_b, var16, (byte) 60);
+                    if (this.isHintVisible(7, -106)) {
+                      this.drawHintCallout(var21_ref_int__Lifetime1Lifetime4, param3, true, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[7], 255), param0, true, OpenGlArbProgram.field_b, var16, (byte) 60);
                     }
                   }
-                  if (this.b((byte) 11, 10) &&
+                  if (this.isHintCompleteAndHidden((byte) 11, 10) &&
                     param2) {
-                    this.field_c = this.field_c + 1;
-                    var21 = -100 + this.field_c;
+                    this.completionFadeTime = this.completionFadeTime + 1;
+                    var21 = -100 + this.completionFadeTime;
                     if (var21 > 0) {
                       if (var21 > 200) {
                         var21 = 200;

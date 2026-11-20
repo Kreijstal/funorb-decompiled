@@ -31,7 +31,7 @@ final class PlayerGameData implements DiffableState {
         }
     }
 
-    final void a(int param0, boolean[] param1) {
+    final void copyCompletedHintsTo(int param0, boolean[] param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -242,7 +242,7 @@ final class PlayerGameData implements DiffableState {
         }
     }
 
-    final void a(boolean[] param0, int param1) {
+    final void setCompletedHints(boolean[] param0, int param1) {
         try {
           this.tipsDone = param0;
           if (param1 != -28855) {
