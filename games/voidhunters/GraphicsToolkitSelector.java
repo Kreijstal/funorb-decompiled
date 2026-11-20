@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fab {
+final class GraphicsToolkitSelector {
     static String field_b;
-    bra field_e;
-    private fs[] field_c;
-    private boolean field_d;
-    private TextureProvider field_a;
+    ToolkitCanvasContext context;
+    private GraphicsBackendOption[] backendOptions;
+    private boolean selectionCurrent;
+    private TextureProvider textureProvider;
 
     final static void loadPlayerGameData(int param0, byte[] param1) {
         String var4 = null;
@@ -43,7 +43,7 @@ final class fab {
         }
     }
 
-    final static SoftwareMonochromeBitmapFont a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
+    final static SoftwareMonochromeBitmapFont loadSoftwareMonochromeFontByName(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -98,19 +98,19 @@ final class fab {
         }
     }
 
-    private final void a(java.awt.Canvas param0, byte param1) {
+    private final void selectForCanvas(java.awt.Canvas param0, byte param1) {
         int var5 = 0;
         Object stackIn_118_0 = null;
         StringBuilder stackIn_118_1 = null;
         String stackIn_119_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
-        fs[] var4 = null;
-        fs var6 = null;
+        GraphicsBackendOption[] var4 = null;
+        GraphicsBackendOption var6 = null;
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8_int = 0;
-        bra var8 = null;
+        ToolkitCanvasContext var8 = null;
         int var9 = 0;
         int var10 = 0;
         GraphicsToolkit var11 = null;
@@ -120,12 +120,12 @@ final class fab {
           if (param1 >= -77) {
             return;
           }
-          var4 = this.field_c;
+          var4 = this.backendOptions;
           for (var5 = 0; var5 < var4.length; var5++) {
             boolean decompiledFrameRemainder0 = true;
             var6 = var4[var5];
-            if (var6.field_b) {
-              var7_int = var6.field_a;
+            if (var6.enabled) {
+              var7_int = var6.backendId;
               if (var7_int != 0) {
                 if (var7_int != 5) {
                   if (var7_int == 1) {
@@ -134,7 +134,7 @@ final class fab {
                     }
                     var7_int = PartitionZoneListFactory.a("jaclib", true);
                     if (var7_int == -1) {
-                      var6.field_b = false;
+                      var6.enabled = false;
                       decompiledFrameRemainder0 = false;
                     }
                     else {
@@ -143,7 +143,7 @@ final class fab {
                       }
                       var8_int = PartitionZoneListFactory.a("jaggl", true);
                       if (var8_int == -1) {
-                        var6.field_b = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -159,7 +159,7 @@ final class fab {
                       }
                       var7_int = PartitionZoneListFactory.a("jaclib", true);
                       if (var7_int == -1) {
-                        var6.field_b = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -168,7 +168,7 @@ final class fab {
                         }
                         var8_int = PartitionZoneListFactory.a("jagdx", true);
                         if (-1 == var8_int) {
-                          var6.field_b = false;
+                          var6.enabled = false;
                           decompiledFrameRemainder0 = false;
                         }
                         else {
@@ -177,7 +177,7 @@ final class fab {
                           }
                           var9 = PartitionZoneListFactory.a("hw3d", true);
                           if (var9 == -1) {
-                            var6.field_b = false;
+                            var6.enabled = false;
                             decompiledFrameRemainder0 = false;
                           }
                           else {
@@ -189,14 +189,14 @@ final class fab {
                       }
                     } else {
                       if (var7_int != 2) {
-                        throw new IllegalStateException("UT" + var6.field_a);
+                        throw new IllegalStateException("UT" + var6.backendId);
                       }
                       if (!MissionEventFactory.field_a.loadIndex((byte) -83)) {
                         return;
                       }
                       var7_int = PartitionZoneListFactory.a("jaclib", true);
                       if (-1 == var7_int) {
-                        var6.field_b = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -205,7 +205,7 @@ final class fab {
                         }
                         var8_int = PartitionZoneListFactory.a("sw3d", true);
                         if (var8_int == -1) {
-                          var6.field_b = false;
+                          var6.enabled = false;
                           decompiledFrameRemainder0 = false;
                         }
                         else {
@@ -222,7 +222,7 @@ final class fab {
                   }
                   var7_int = PartitionZoneListFactory.a("hw3d", true);
                   if (var7_int == -1) {
-                    var6.field_b = false;
+                    var6.enabled = false;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -231,7 +231,7 @@ final class fab {
                     }
                     var8_int = PartitionZoneListFactory.a("jaclib", true);
                     if (-1 == var8_int) {
-                      var6.field_b = false;
+                      var6.enabled = false;
                       decompiledFrameRemainder0 = false;
                     }
                     else {
@@ -240,7 +240,7 @@ final class fab {
                       }
                       var9 = PartitionZoneListFactory.a("jaggl", true);
                       if (-1 == var9) {
-                        var6.field_b = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -253,46 +253,46 @@ final class fab {
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (null != this.field_e) {
-                  if (this.field_e.field_b.a((byte) -94, var6) &&
-                    null != this.field_e.field_g &&
-                    this.field_e.field_a == param0 &&
-                    var6.a(this.field_e, -78)) {
-                    this.field_d = true;
+                if (null != this.context) {
+                  if (this.context.backendOption.hasSameBackend((byte) -94, var6) &&
+                    null != this.context.toolkit &&
+                    this.context.canvas == param0 &&
+                    var6.isCompatibleWithContext(this.context, -78)) {
+                    this.selectionCurrent = true;
                     return;
                   }
-                  if (var6.field_a == this.field_e.field_b.field_a &&
-                    this.field_e.field_g != null) {
-                    var3 = this.field_e.a((byte) -126);
-                    this.field_e.field_g.dispose((byte) 30);
-                    this.field_e = null;
+                  if (var6.backendId == this.context.backendOption.backendId &&
+                    this.context.toolkit != null) {
+                    var3 = this.context.captureViewState((byte) -126);
+                    this.context.toolkit.dispose((byte) 30);
+                    this.context = null;
                   }
                 }
                 try {
-                  var11 = SetPhasedEnergyBeamProjectiles.createToolkitForCanvas(false, param0, var6.field_c, this.field_a, lwa.field_xb, var6.field_a);
+                  var11 = SetPhasedEnergyBeamProjectiles.createToolkitForCanvas(false, param0, var6.multisamples, this.textureProvider, lwa.field_xb, var6.backendId);
                   if (var11 != null) {
-                    var8 = new bra(var11, var6, param0);
-                    if (var6.a(var8, -97)) {
-                      if (this.field_e != null) {
-                        if (this.field_e.field_g == var8.field_g &&
-                          this.field_e.field_a == var8.field_a) {
-                          this.field_d = true;
-                          this.field_e = var8;
+                    var8 = new ToolkitCanvasContext(var11, var6, param0);
+                    if (var6.isCompatibleWithContext(var8, -97)) {
+                      if (this.context != null) {
+                        if (this.context.toolkit == var8.toolkit &&
+                          this.context.canvas == var8.canvas) {
+                          this.selectionCurrent = true;
+                          this.context = var8;
                           return;
                         }
-                        var3 = this.field_e.a((byte) -114);
-                        this.field_e.field_g.dispose((byte) 30);
+                        var3 = this.context.captureViewState((byte) -114);
+                        this.context.toolkit.dispose((byte) 30);
                       }
-                      if (var8.field_g.supportsMemoryPools()) {
-                        var8.field_g.setHeap(var8.field_g.createHeap(100663296));
+                      if (var8.toolkit.supportsMemoryPools()) {
+                        var8.toolkit.setHeap(var8.toolkit.createHeap(100663296));
                       }
                       if (var3 == null) {
-                        var8.field_e = MonotonicMillisClock.currentTimeMillis(false);
+                        var8.timeOriginMillis = MonotonicMillisClock.currentTimeMillis(false);
                       } else {
-                        ((t) (var3)).b(1, var8);
+                        ((ToolkitViewState) (var3)).restore(1, var8);
                       }
-                      this.field_e = var8;
-                      this.field_d = true;
+                      this.context = var8;
+                      this.selectionCurrent = true;
                       return;
                     }
                   }
@@ -301,7 +301,7 @@ final class fab {
                   var7 = decompiledCaughtException;
                   var7.printStackTrace();
                 }
-                var6.field_b = false;
+                var6.enabled = false;
               }
             }
           }
@@ -327,7 +327,7 @@ final class fab {
         }
     }
 
-    final static void a(int param0, int param1, PacketBuffer param2, byte[] param3, java.math.BigInteger param4, byte param5, java.math.BigInteger param6) {
+    final static void writeRsaXteaPayload(int param0, int param1, PacketBuffer param2, byte[] param3, java.math.BigInteger param4, byte param5, java.math.BigInteger param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -419,7 +419,7 @@ final class fab {
         }
     }
 
-    final void a(boolean param0, fs[] param1) {
+    final void setBackendOptions(boolean param0, GraphicsBackendOption[] param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -427,14 +427,14 @@ final class fab {
         RuntimeException var3 = null;
         try {
           if (param0) {
-            fab.clearSharedReferences(23);
+            GraphicsToolkitSelector.clearSharedReferences(23);
           }
-          if (param1 != this.field_c) {
+          if (param1 != this.backendOptions) {
             if (param1.length == 0) {
               throw new IllegalArgumentException();
             }
-            this.field_d = false;
-            this.field_c = param1;
+            this.selectionCurrent = false;
+            this.backendOptions = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -451,25 +451,25 @@ final class fab {
         }
     }
 
-    fab(TextureProvider param0, fs[] param1) {
+    GraphicsToolkitSelector(TextureProvider param0, GraphicsBackendOption[] param1) {
         this(GetAiRepairAmount.a(0), DeveloperConsole.getToolkitResourceArchive(0), param0, SetTorpedoProjectiles.field_o, param1);
     }
 
-    private fab(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformService param3, fs[] param4) {
-        this.field_d = false;
+    private GraphicsToolkitSelector(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformService param3, GraphicsBackendOption[] param4) {
+        this.selectionCurrent = false;
         try {
           lwa.field_xb = param1;
           MissionEventFactory.field_a = param0;
-          this.field_a = param2;
+          this.textureProvider = param2;
           TextureLineShape.a(param3, (byte) 127, param0);
-          this.a(false, param4);
+          this.setBackendOptions(false, param4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(byte param0, java.awt.Canvas param1) {
-        bra var3 = null;
+    final boolean updateForCanvas(byte param0, java.awt.Canvas param1) {
+        ToolkitCanvasContext var3 = null;
         RuntimeException var3_ref = null;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_18_0 = null;
@@ -480,18 +480,18 @@ final class fab {
           if (param0 >= -110) {
             field_b = (String) null;
           }
-          var3 = this.field_e;
+          var3 = this.context;
           if (var3 == null ||
-            !this.field_d ||
-            var3.field_a != param1) {
-            this.a(param1, (byte) -119);
+            !this.selectionCurrent ||
+            var3.canvas != param1) {
+            this.selectForCanvas(param1, (byte) -119);
           }
-          if (null != this.field_e) {
-            this.field_e.field_g.updateFrame((int)(MonotonicMillisClock.currentTimeMillis(false) - this.field_e.field_e));
+          if (null != this.context) {
+            this.context.toolkit.updateFrame((int)(MonotonicMillisClock.currentTimeMillis(false) - this.context.timeOriginMillis));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_e != null && (var3 == null ||
-            var3.field_g != this.field_e.field_g)) {
+          if (this.context != null && (var3 == null ||
+            var3.toolkit != this.context.toolkit)) {
             stackIn_15_0 = true;
             decompiledFrameRemainder0 = false;
           }

@@ -139,7 +139,7 @@ final class ChoosePlayerNameForm extends UiContainer implements NameSuggestionTa
         this.nameField.setValidator(6614, new UsernameAvailabilityValidator(this.nameField));
         this.okButton.enabled = false;
         this.okButton.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
-        this.cancelButton.renderer = (UiRenderer) ((Object) new meb());
+        this.cancelButton.renderer = (UiRenderer) ((Object) new UnderlinedLinkRenderer());
         this.nameField.renderer = (UiRenderer) ((Object) new GradientBorderTextStyle(10000536));
         int var3 = 20;
         int var4 = 4;

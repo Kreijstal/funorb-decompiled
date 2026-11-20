@@ -185,7 +185,7 @@ final class SpecularGpuMaterialEffect extends GpuMaterialEffect {
         } else {
           this.toolkit.setActiveTextureUnit(1, -114);
           this.toolkit.setTexture((GpuTexture) null, -123);
-          this.toolkit.setTextureCoordinateMode((byte) -111, meb.field_d);
+          this.toolkit.setTextureCoordinateMode((byte) -111, UnderlinedLinkRenderer.field_d);
           this.toolkit.resetTextureTransform((byte) 108);
           if (this.field_h) {
             this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);

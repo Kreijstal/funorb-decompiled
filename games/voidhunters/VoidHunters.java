@@ -852,7 +852,7 @@ public final class VoidHunters extends NetworkGameClient {
         veb.clearSharedReferences(1);
         oua.clearSharedReferences(true);
         CarouselGameClient.clearSharedReferences(66);
-        fab.clearSharedReferences(10970);
+        GraphicsToolkitSelector.clearSharedReferences(10970);
         pa.clearSharedReferences(2);
         FadingMidiPcmStream.clearSharedReferences(0);
         MidiCrossfadeStream.clearSharedReferences(98);
@@ -932,7 +932,7 @@ public final class VoidHunters extends NetworkGameClient {
         BaseObjectiveLabel.clearSharedReferences(-18013);
         Widget.clearSharedReferences(-2147483648);
         TutorialController.clearSharedReferences(39);
-        hw.clearSharedReferences(-1);
+        TimingGraph.clearSharedReferences(-1);
         SoftwareFlatTriangleRasterizer.clearSharedReferences();
         aaa.clearSharedReferences((byte) 35);
         SettingsInstance.clearSharedReferences(17674);
@@ -1030,7 +1030,7 @@ public final class VoidHunters extends NetworkGameClient {
         ffb.clearSharedReferences(-106);
         TextInputWidget.clearSharedReferences((byte) 124);
         pia.clearSharedReferences(-89);
-        bra.clearSharedReferences(true);
+        ToolkitCanvasContext.clearSharedReferences(true);
         cd.clearSharedReferences(5);
         ebb.clearSharedReferences(23357);
         SpriteDimensions.clearSharedReferences(!param0 ? true : false);
@@ -1268,7 +1268,7 @@ public final class VoidHunters extends NetworkGameClient {
         ServerInfoFactory.clearSharedReferences(-46);
         gl.clearSharedReferences(0);
         ThreeSliceButtonStyle.clearSharedReferences((byte) 121);
-        meb.clearSharedReferences((byte) -52);
+        UnderlinedLinkRenderer.clearSharedReferences((byte) -52);
         kpb.clearSharedReferences(17433);
         dw.clearSharedReferences(118);
         AlphaContainer.clearSharedReferences(!param0 ? true : false);
@@ -1354,7 +1354,7 @@ public final class VoidHunters extends NetworkGameClient {
         ea.clearSharedReferences(10);
         BlackBoxRecordingFactory.clearSharedReferences(false);
         IntegerArrayReadRequest.clearSharedReferences(true);
-        t.clearSharedReferences(1);
+        ToolkitViewState.clearSharedReferences(1);
         UiVisualStyle.clearSharedReferences(24358);
         pbb.clearSharedReferences(-652030847);
         NullUiRenderer.clearSharedReferences(11227);
@@ -2190,14 +2190,14 @@ public final class VoidHunters extends NetworkGameClient {
           SetMachineGunEnergyUsed.field_o[3]) {
           GetDebrisThrowable.a(false, "Selecting opengl toolkit...");
           var11 = new int[]{1};
-          DateOfBirthInput.field_x.a(false, GetFighterRepairAmount.a(var11, 2));
+          DateOfBirthInput.field_x.setBackendOptions(false, GetFighterRepairAmount.createBackendOptions(var11, 2));
           GetDebrisThrowable.a(false, "Done");
         }
         if (ssa.b(2) &&
           SetMachineGunEnergyUsed.field_o[4]) {
           GetDebrisThrowable.a(false, "Selecting java toolkit...");
           var12 = new int[]{0};
-          DateOfBirthInput.field_x.a(false, GetFighterRepairAmount.a(var12, 2));
+          DateOfBirthInput.field_x.setBackendOptions(false, GetFighterRepairAmount.createBackendOptions(var12, 2));
           GetDebrisThrowable.a(false, "Done");
         }
         if (ssa.b(2) &&
@@ -2281,9 +2281,9 @@ public final class VoidHunters extends NetworkGameClient {
               GetDebrisThrowable.a(false, "Canvas=" + var10 + " hashcode=" + var10.hashCode());
               DebugRequestFactory.field_b = var10;
             }
-            if (DateOfBirthInput.field_x.a((byte) -128, var10) ||
-              null != DateOfBirthInput.field_x.field_e &&
-              DateOfBirthInput.field_x.field_e.field_g != GetDebrisGroupColour.field_r) {
+            if (DateOfBirthInput.field_x.updateForCanvas((byte) -128, var10) ||
+              null != DateOfBirthInput.field_x.context &&
+              DateOfBirthInput.field_x.context.toolkit != GetDebrisGroupColour.field_r) {
               GetSpinningBladeSpindamageMultiplier.a(-9934);
             }
           }

@@ -117,13 +117,13 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_nebula_proximity_fade_downshift(" + SetAutoDetail.field_o + ")");
         System.out.println("set_use_trails(" + veb.field_b + ")");
         System.out.println("set_fighter_vision(" + MatchingFieldValidator.field_k + ")");
-        System.out.println("set_ship_to_ship_ram_damage(" + bra.field_d + ")");
+        System.out.println("set_ship_to_ship_ram_damage(" + ToolkitCanvasContext.field_d + ")");
         System.out.println("set_team_selection_speedup(" + ColorRowCacheEntry.field_f + ")");
         System.out.println("set_full_mission_set(" + GetAutoaim.field_o + ")");
         System.out.println("set_wait_for_players(" + GetSpinningBladeAimspeed.field_p + ")");
         System.out.println("set_keep_team_colours(" + SetMachineGunAimspeed.field_o + ")");
         System.out.println("set_debris_collision(" + gl.field_d + ")");
-        System.out.println("set_debris_partitioned(" + hw.field_b + ")");
+        System.out.println("set_debris_partitioned(" + TimingGraph.field_b + ")");
         System.out.println("set_debris_collision_damage(" + GetTeamSelectionSpeedup.field_p + ")");
         System.out.println("set_debris_projectile_collision(" + QuickChatPhraseLoader.field_d + ")");
         System.out.println("set_debris_throwable(" + GetPedrosRepairModeSwitchtime.field_o + ")");

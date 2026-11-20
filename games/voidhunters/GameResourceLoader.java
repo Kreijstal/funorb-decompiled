@@ -279,7 +279,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           ComponentCollision.a("Unpacking graphics", (byte) -113);
           IncrementVariableAction.a(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
           AppletRasterBuffer.field_a.renderGameFrame(-112);
-          GrapplingHookFactory.field_a = (BitmapFont) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
+          GrapplingHookFactory.field_a = (BitmapFont) ((Object) GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(var12, "", 0, var11, "arialish12"));
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.a(0, "basic", this.graphicsArchive, this.fontMetricsArchive, "antigrav_18_graphics1");
           HslAdjustTextureOperation.a(var12, this.fontMetricsArchive, this.graphicsArchive, (byte) 88, var11);
           ModelData.loadGameSprites(this.jpegArchive, param0 ^ 57, this.graphicsArchive);
@@ -339,10 +339,10 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           var4 = new ArchiveTextureProvider(this.textureMetricsArchive, this.textureArchive, this.graphicsArchive);
           ComponentCollision.a("Creating tk manager", (byte) -80);
           var16 = new int[]{GetMassDriverProjectiles.field_q};
-          DateOfBirthInput.field_x = new fab(var4, GetFighterRepairAmount.a(var16, param0 - 66));
+          DateOfBirthInput.field_x = new GraphicsToolkitSelector(var4, GetFighterRepairAmount.createBackendOptions(var16, param0 - 66));
           ComponentCollision.a("Finished creating tk manager", (byte) -109);
         }
-        if (DateOfBirthInput.field_x.field_e == null) {
+        if (DateOfBirthInput.field_x.context == null) {
           return false;
         }
         return true;

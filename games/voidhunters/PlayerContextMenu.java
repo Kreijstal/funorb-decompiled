@@ -466,7 +466,7 @@ final class PlayerContextMenu {
           return;
         }
         if (SetSpinningBladeSpindamageMultiplier.field_o == null) {
-          var5 = meb.a(this.targetGameId, 1);
+          var5 = UnderlinedLinkRenderer.getLobbyGameById(this.targetGameId, 1);
           if (var5 != null) {
             var3 = var5.field_Vb;
             if (!var5.field_ac) {
@@ -480,7 +480,7 @@ final class PlayerContextMenu {
                 }
               }
               if (var5.field_Qb) {
-                this.menu.addItem(SetReverbGain.a(t.field_e, new String[]{var3}, 126), (byte) -53, 3);
+                this.menu.addItem(SetReverbGain.a(ToolkitViewState.field_e, new String[]{var3}, 126), (byte) -53, 3);
               }
             } else {
               this.menu.addItem(SetReverbGain.a(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);

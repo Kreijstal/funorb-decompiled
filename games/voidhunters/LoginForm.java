@@ -235,10 +235,10 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
             this.alternateButton.tooltip = GetSpecialOrderBoxHeight.field_o;
           } else {
             if (!this.showGuestOption) {
-              this.alternateButton.renderer = (UiRenderer) ((Object) new meb());
+              this.alternateButton.renderer = (UiRenderer) ((Object) new UnderlinedLinkRenderer());
             } else {
               this.alternateButton.tooltip = UiContainer.field_u;
-              this.alternateButton.renderer = (UiRenderer) ((Object) new meb());
+              this.alternateButton.renderer = (UiRenderer) ((Object) new UnderlinedLinkRenderer());
             }
           }
           this.y = 15;

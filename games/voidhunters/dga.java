@@ -31,7 +31,7 @@ final class dga {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                hw.field_e = param1;
+                TimingGraph.field_e = param1;
                 var2 = NetworkGameClient.loadNamedResource("loginm3", 23100);
                 if (null != var2) {
                   SetSalvoRepairTimeMultiplier.field_o = Cp1252Strings.decode((byte) -125, var2);
@@ -374,7 +374,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("join_withdraw_request_xs_game", 23100);
                 if (null != var2) {
-                  t.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  ToolkitViewState.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gameopt_kick_x_from_this_game", 23100);
                 if (null != var2) {
@@ -746,7 +746,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("privatechat_friend_notlisted", 23100);
                 if (null != var2) {
-                  fab.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  GraphicsToolkitSelector.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("chatviewscrolledup", 23100);
                 if (null != var2) {
@@ -3017,7 +3017,7 @@ final class dga {
                 if (var2 != null) {
                   Cp1252Strings.decode((byte) -125, var2);
                 }
-                hw.field_e = null;
+                TimingGraph.field_e = null;
             }
             void run() {
                 var3 = VoidHunters.field_G;

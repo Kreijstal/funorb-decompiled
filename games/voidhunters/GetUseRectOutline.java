@@ -211,7 +211,7 @@ final class GetUseRectOutline extends ConsoleCommand {
         if (!MessageFactory.playerGameDataRequest.complete) {
           return;
         }
-        fab.loadPlayerGameData(-29365, MessageFactory.playerGameDataRequest.data);
+        GraphicsToolkitSelector.loadPlayerGameData(-29365, MessageFactory.playerGameDataRequest.data);
         MessageFactory.playerGameDataRequest = null;
         TextLayout.playerGameDataLoaded = true;
         LoadingAnimationControl.finishAnimations((byte) -114);

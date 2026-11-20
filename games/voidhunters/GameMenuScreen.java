@@ -742,7 +742,7 @@ final class GameMenuScreen {
                                           continue;
                                         }
                                         var16 = new int[]{var12_int};
-                                        DateOfBirthInput.field_x.a(false, GetFighterRepairAmount.a(var16, 2));
+                                        DateOfBirthInput.field_x.setBackendOptions(false, GetFighterRepairAmount.createBackendOptions(var16, 2));
                                         break;
                                       }
                                     }

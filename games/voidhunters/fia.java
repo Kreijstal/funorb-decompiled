@@ -179,7 +179,7 @@ final class fia {
                       if (!khb.field_b) {
                         SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p + 1;
                         LegacyOpenGlEnvironmentReflectionEffect.field_g = new int[1][0];
-                        hw.field_d = new int[1][0];
+                        TimingGraph.field_d = new int[1][0];
                         if (EnvironmentReflectionGpuMaterialEffect.field_g.length <= SetMissileLauncherProjectileLife.field_p) {
                           SetMissileLauncherProjectileLife.field_p = -1;
                         }
@@ -190,7 +190,7 @@ final class fia {
                         if (!khb.field_b) {
                           LegacyOpenGlEnvironmentReflectionEffect.field_g = new int[1][0];
                           SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p - 1;
-                          hw.field_d = new int[1][0];
+                          TimingGraph.field_d = new int[1][0];
                           if (SetMissileLauncherProjectileLife.field_p < -1) {
                             SetMissileLauncherProjectileLife.field_p = EnvironmentReflectionGpuMaterialEffect.field_g.length - 1;
                           }
@@ -221,12 +221,12 @@ final class fia {
                               SetMissileLauncherProjectileLife.field_p >= 0) {
                               if (BoundedRandomAccessFile.field_c == 1) {
                                 System.out.print("int[][] convex_outlines=new int[][]{");
-                                for (var1_int = 0; var1_int < hw.field_d.length; var1_int++) {
+                                for (var1_int = 0; var1_int < TimingGraph.field_d.length; var1_int++) {
                                   if (var1_int > 0) {
                                     System.out.print(",");
                                   }
                                   System.out.print("{");
-                                  var30 = hw.field_d[var1_int];
+                                  var30 = TimingGraph.field_d[var1_int];
                                   for (var3_intLifetime2 = 0; var3_intLifetime2 < var30.length; var3_intLifetime2++) {
                                     if (var3_intLifetime2 > 0) {
                                       System.out.print(",");
@@ -369,17 +369,17 @@ final class fia {
                   }
                   if (-1 != var3_intLifetime1) {
                     GetDebrisThrowable.a(false, "Adding point " + var3_intLifetime1);
-                    var22 = hw.field_d[-1 + hw.field_d.length];
-                    hw.field_d[-1 + hw.field_d.length] = SetAutozoomSpeedDivide.a(var3_intLifetime1, true, var22, (byte) -14);
+                    var22 = TimingGraph.field_d[-1 + TimingGraph.field_d.length];
+                    TimingGraph.field_d[-1 + TimingGraph.field_d.length] = SetAutozoomSpeedDivide.a(var3_intLifetime1, true, var22, (byte) -14);
                   }
                 }
                 if (ArchiveLoadRequest.field_c == 2) {
-                  var3_array = new int[1 + hw.field_d.length][];
-                  for (var4Lifetime2 = 0; var4Lifetime2 < hw.field_d.length; var4Lifetime2++) {
-                    var3_array[var4Lifetime2] = hw.field_d[var4Lifetime2];
+                  var3_array = new int[1 + TimingGraph.field_d.length][];
+                  for (var4Lifetime2 = 0; var4Lifetime2 < TimingGraph.field_d.length; var4Lifetime2++) {
+                    var3_array[var4Lifetime2] = TimingGraph.field_d[var4Lifetime2];
                   }
-                  var3_array[hw.field_d.length] = new int[]{};
-                  hw.field_d = var3_array;
+                  var3_array[TimingGraph.field_d.length] = new int[]{};
+                  TimingGraph.field_d = var3_array;
                   return;
                 }
               }

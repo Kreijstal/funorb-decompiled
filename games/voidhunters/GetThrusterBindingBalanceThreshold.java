@@ -36,10 +36,10 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             if (GetTorqueDownshift.a(GetDebrisThrowable.field_o, (byte) -47)) {
               var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.field_x}, 78);
               if (var10 != 0) {
-                var2 = SetReverbGain.a(fab.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
+                var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
               }
             } else {
-              var2 = SetReverbGain.a(fab.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
+              var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
             }
             if (LegacyOpenGlTurbulenceEffect.field_d) {
               lh.a((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);

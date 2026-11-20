@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class meb implements UiRenderer {
-    private int field_a;
+final class UnderlinedLinkRenderer implements UiRenderer {
+    private int verticalAlignment;
     static TextureCoordinateMode field_d;
-    private BitmapFont field_b;
-    private int field_e;
+    private BitmapFont font;
+    private int horizontalAlignment;
     static float[] field_c;
 
     public static void clearSharedReferences(byte param0) {
@@ -19,11 +19,11 @@ final class meb implements UiRenderer {
         field_c = null;
     }
 
-    final static LobbyGameEntry a(int param0, int param1) {
+    final static LobbyGameEntry getLobbyGameById(int param0, int param1) {
         if (param1 == 1) {
           return GetLaserReload.field_r == null ? null : (LobbyGameEntry) (GetLaserReload.field_r.get(-1, (long)param0));
         }
-        meb.a(-8, 53);
+        UnderlinedLinkRenderer.getLobbyGameById(-8, 53);
         return GetLaserReload.field_r == null ? null : (LobbyGameEntry) (GetLaserReload.field_r.get(-1, (long)param0));
     }
 
@@ -51,25 +51,25 @@ final class meb implements UiRenderer {
           }
           var6_int = stackIn_5_0;
           var7 = 122 / ((param0 + 27) / 35);
-          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param2 + param1.x, param3 + param1.y, param1.width, param1.height, var6_int, -1, this.field_e, this.field_a, this.field_b.maxDescent + this.field_b.maxAscent);
+          this.font.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.text + "</u>", param2 + param1.x, param3 + param1.y, param1.width, param1.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.maxDescent + this.font.maxAscent);
           if (!param1.hasFocus((byte) -120)) {
             return;
           }
-          var8 = this.field_b.getStringWidth(param1.text);
-          var9 = this.field_b.maxDescent + this.field_b.maxAscent;
+          var8 = this.font.getStringWidth(param1.text);
+          var9 = this.font.maxDescent + this.font.maxAscent;
           var10 = param2 + param1.x;
-          if (2 != this.field_e) {
-            if (this.field_e == 1) {
+          if (2 != this.horizontalAlignment) {
+            if (this.horizontalAlignment == 1) {
               var10 = var10 + (-var8 + param1.width >> 1);
             }
           } else {
             var10 = var10 + (-var8 + param1.width);
           }
           var11 = param1.y + param3;
-          if (this.field_a == 2) {
+          if (this.verticalAlignment == 2) {
             var11 = var11 + (-var9 + param1.height);
           } else {
-            if (this.field_a == 1) {
+            if (this.verticalAlignment == 1) {
               var11 = var11 + (-var9 + param1.height >> 1);
             }
           }
@@ -89,17 +89,17 @@ final class meb implements UiRenderer {
         }
     }
 
-    public meb() {
-        this.field_b = SetShipToShipRamDamage.field_o;
-        this.field_e = 1;
-        this.field_a = 1;
+    public UnderlinedLinkRenderer() {
+        this.font = SetShipToShipRamDamage.field_o;
+        this.horizontalAlignment = 1;
+        this.verticalAlignment = 1;
     }
 
-    meb(BitmapFont param0, int param1, int param2) {
+    UnderlinedLinkRenderer(BitmapFont param0, int param1, int param2) {
         try {
-          this.field_a = param2;
-          this.field_b = param0;
-          this.field_e = param1;
+          this.verticalAlignment = param2;
+          this.font = param0;
+          this.horizontalAlignment = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "meb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

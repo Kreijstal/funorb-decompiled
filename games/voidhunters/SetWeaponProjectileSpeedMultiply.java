@@ -102,8 +102,8 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
               SpawnPointFactory.a(var2, var3_ref_wfb, false);
               try {
                 if (BoundedRandomAccessFile.field_c == 1) {
-                  for (var4 = 0; var4 < hw.field_d.length; var4++) {
-                    var29 = hw.field_d[var4];
+                  for (var4 = 0; var4 < TimingGraph.field_d.length; var4++) {
+                    var29 = TimingGraph.field_d[var4];
                     if (var29.length > 0) {
                       var15 = new int[var29.length << 1];
                       var24 = var15;

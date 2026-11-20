@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fs {
-    boolean field_b;
-    int field_a;
-    int field_c;
+final class GraphicsBackendOption {
+    boolean enabled;
+    int backendId;
+    int multisamples;
 
-    final boolean a(byte param0, fs param1) {
+    final boolean hasSameBackend(byte param0, GraphicsBackendOption param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -15,7 +15,7 @@ final class fs {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -22) {
-            stackIn_6_0 = (param1.field_a == this.field_a);
+            stackIn_6_0 = (param1.backendId == this.backendId);
             return stackIn_6_0;
           }
           return true;
@@ -33,7 +33,7 @@ final class fs {
         }
     }
 
-    final boolean a(bra param0, int param1) {
+    final boolean isCompatibleWithContext(ToolkitCanvasContext param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -43,7 +43,7 @@ final class fs {
           if (param1 <= -76) {
             return true;
           }
-          this.field_b = false;
+          this.enabled = false;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,10 +63,10 @@ final class fs {
         return super.toString();
     }
 
-    fs(int param0, int param1) {
-        this.field_b = true;
-        this.field_a = param0;
-        this.field_c = param1;
+    GraphicsBackendOption(int param0, int param1) {
+        this.enabled = true;
+        this.backendId = param0;
+        this.multisamples = param1;
     }
 
     static {

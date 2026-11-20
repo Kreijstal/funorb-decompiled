@@ -127,7 +127,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ColorRowCacheEntry.field_d = param1[17];
           PacketBuffer.field_d = param1[203];
           ColorRowCacheEntry.field_f = param1[4];
-          hw.field_b = param1[9];
+          TimingGraph.field_b = param1[9];
           GetBombletSprayProjectileDamage.field_p = param1[73];
           GetSpinningBladeAimspeed.field_p = param1[6];
           SetTorpedoFireForce.field_o = param1[121];
@@ -332,7 +332,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           QuickChatCategoryDefinition.field_o = param1[162];
           SelectableIconLabelWidget.field_yb = param1[76];
           ShieldBehaviourFactory.field_a = param1[165];
-          bra.field_d = param1[3];
+          ToolkitCanvasContext.field_d = param1[3];
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kga.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

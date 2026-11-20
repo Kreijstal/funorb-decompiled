@@ -59,7 +59,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         }
     }
 
-    final static Ship a(int param0, int param1, boolean param2) {
+    final static Ship createPresetShip(int param0, int param1, boolean param2) {
         Ship stackIn_9_0 = null;
         Ship stackIn_64_0 = null;
         RuntimeException decompiledCaughtException = null;

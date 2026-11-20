@@ -74,7 +74,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[111] = SetMomentOfInertiaPerpointCalcDownshift.field_p;
         var2[213] = GetPhysicsCollisionPhantomForceMultiplier.field_o;
         var2[63] = LegacyOpenGlUnlitEffect.field_c;
-        var2[3] = bra.field_d;
+        var2[3] = ToolkitCanvasContext.field_d;
         var2[145] = TickClock.field_a;
         var2[179] = SetMassDriverEnergyUsed.field_o;
         var2[59] = SetTorpedoEnergyUsed.field_p;
@@ -177,7 +177,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[204] = CarouselSlotStateDump.field_i;
         var2[119] = GpuMaterialEffect.field_b;
         var2[87] = GetPlayerRepairAmount.field_o;
-        var2[9] = hw.field_b;
+        var2[9] = TimingGraph.field_b;
         var2[43] = PartitionZone.field_e;
         var2[34] = SetMaxShipSize.field_o;
         var2[217] = LoadSettings.field_p;

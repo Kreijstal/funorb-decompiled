@@ -32,7 +32,7 @@ final class MenuBackgroundBattle {
             var5_int == 1)) {
             var5_int = 2 + var5_int;
           }
-          var6 = t.a(var5_int, (byte) 94);
+          var6 = ToolkitViewState.createPresetShip(var5_int, (byte) 94);
           var6.setAi(new ShipAI(), 4);
           var6.setTeam(17704, param3);
           if (param2 > -26) {

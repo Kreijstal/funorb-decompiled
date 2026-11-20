@@ -61,16 +61,16 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
           if (DateOfBirthInput.field_x == null) {
             return false;
           }
-          if (DateOfBirthInput.field_x.field_e != null) {
-            return DateOfBirthInput.field_x.field_e.field_b.field_a == 1 ? true : false;
+          if (DateOfBirthInput.field_x.context != null) {
+            return DateOfBirthInput.field_x.context.backendOption.backendId == 1 ? true : false;
           }
           return false;
         }
         if (DateOfBirthInput.field_x == null) {
           return false;
         }
-        if (DateOfBirthInput.field_x.field_e != null) {
-          return DateOfBirthInput.field_x.field_e.field_b.field_a == 1 ? true : false;
+        if (DateOfBirthInput.field_x.context != null) {
+          return DateOfBirthInput.field_x.context.backendOption.backendId == 1 ? true : false;
         }
         return false;
     }

@@ -416,7 +416,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (param1 != 23100) {
             NetworkGameClient.clearSharedReferences(true);
           }
-          stackIn_3_0 = hw.field_e.fetchNamedFile(param0, true, "");
+          stackIn_3_0 = TimingGraph.field_e.fetchNamedFile(param0, true, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

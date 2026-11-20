@@ -66,7 +66,7 @@ final class NameSuggestionsPanel extends UiContainer implements UiActionListener
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        meb var4 = null;
+        UnderlinedLinkRenderer var4 = null;
         int var6 = 0;
         var6 = VoidHunters.field_G;
         try {
@@ -78,7 +78,7 @@ final class NameSuggestionsPanel extends UiContainer implements UiActionListener
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.suggestions[var4_int] = joa.a((CharSequence) ((Object) param0[var4_int]), false).replace(' ', ' ');
             }
-            var4 = new meb(SetShipToShipRamDamage.field_o, param1, 1);
+            var4 = new UnderlinedLinkRenderer(SetShipToShipRamDamage.field_o, param1, 1);
             this.buttons = new UiFocusableComponent[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.buttons[var5] = new UiFocusableComponent(this.suggestions[var5], (UiListener) (this));

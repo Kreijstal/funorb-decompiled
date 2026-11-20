@@ -48,7 +48,7 @@ final class GetOndamageParticleLife extends ConsoleCommand {
           return;
         }
         try {
-          fab.a(0, param4.position, param0, param4.payload, param3, (byte) 47, param2);
+          GraphicsToolkitSelector.writeRsaXteaPayload(0, param4.position, param0, param4.payload, param3, (byte) 47, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ufa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

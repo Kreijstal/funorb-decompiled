@@ -18,15 +18,15 @@ final class GetFighterRepairAmount extends ConsoleCommand {
         field_q = null;
     }
 
-    final static fs[] a(int[] param0, int param1) {
+    final static GraphicsBackendOption[] createBackendOptions(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        fs[] var3 = null;
+        GraphicsBackendOption[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
-        fs[] stackIn_15_0 = null;
+        GraphicsBackendOption[] stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -41,16 +41,16 @@ final class GetFighterRepairAmount extends ConsoleCommand {
           } else {
             stackIn_7_0 = 1 + param0.length;
           }
-          var3 = new fs[stackIn_7_0];
+          var3 = new GraphicsBackendOption[stackIn_7_0];
           var4 = 0;
           if (param1 != 2) {
             field_q = (SoftwareIndexedSprite2D[]) null;
           }
           for (var4Lifetime1 = 0; param0.length > var4Lifetime1; var4Lifetime1++) {
-            var3[var4Lifetime1] = new fs(param0[var4Lifetime1], 2);
+            var3[var4Lifetime1] = new GraphicsBackendOption(param0[var4Lifetime1], 2);
           }
           if (var4Lifetime1 < var3.length) {
-            var3[var4Lifetime1] = new fs(0, 2);
+            var3[var4Lifetime1] = new GraphicsBackendOption(0, 2);
           }
           stackIn_15_0 = var3;
           return stackIn_15_0;

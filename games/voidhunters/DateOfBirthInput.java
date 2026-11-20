@@ -5,7 +5,7 @@ import java.io.*;
 
 abstract class DateOfBirthInput extends UiContainer implements ValidatableInput {
     static int fontUnderlineColor;
-    static fab field_x;
+    static GraphicsToolkitSelector field_x;
     private DateOfBirthValidator validator;
     static String field_y;
     static String field_w;

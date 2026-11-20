@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hw {
-    private int field_a;
+final class TimingGraph {
+    private int writeIndex;
     static ResourceArchive field_e;
-    private long[] field_c;
+    private long[] samplesNanos;
     static int[][] field_d;
     static int field_b;
 
@@ -16,19 +16,19 @@ final class hw {
         field_e = null;
     }
 
-    final void a(long param0, byte param1) {
-        int fieldTemp$0 = this.field_a;
-        this.field_a = this.field_a + 1;
-        this.field_c[fieldTemp$0] = param0;
+    final void addSample(long param0, byte param1) {
+        int fieldTemp$0 = this.writeIndex;
+        this.writeIndex = this.writeIndex + 1;
+        this.samplesNanos[fieldTemp$0] = param0;
         if (param1 == -115) {
-          if (this.field_a >= this.field_c.length) {
-            this.field_a = 0;
+          if (this.writeIndex >= this.samplesNanos.length) {
+            this.writeIndex = 0;
           }
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         int var12 = 0;
         int var6;
         long var7;
@@ -41,10 +41,10 @@ final class hw {
         int var17;
         var17 = VoidHunters.field_G;
         var6 = 500;
-        if (var6 != this.field_c.length) {
-          this.field_c = new long[var6];
-          if (this.field_c.length <= this.field_a) {
-            this.field_a = 0;
+        if (var6 != this.samplesNanos.length) {
+          this.samplesNanos = new long[var6];
+          if (this.samplesNanos.length <= this.writeIndex) {
+            this.writeIndex = 0;
           }
         }
         param3 = param3 + param0;
@@ -52,11 +52,11 @@ final class hw {
         var9 = param4;
         var10 = param3;
         var11 = 16711935;
-        for (var12 = 0; this.field_c.length > var12; var12++) {
-          var13 = param2 * var12 / this.field_c.length + param4;
-          var14 = this.field_c[var12];
+        for (var12 = 0; this.samplesNanos.length > var12; var12++) {
+          var13 = param2 * var12 / this.samplesNanos.length + param4;
+          var14 = this.samplesNanos[var12];
           var16 = -(int)(var14 * (long)param0 / var7) + param3;
-          if (~var12 == ~this.field_a) {
+          if (~var12 == ~this.writeIndex) {
             DelayedPacket.drawLine(10 + param3, var13, var13, param3, -16777216, 16711680);
           }
           if (var12 > 0) {
@@ -66,15 +66,15 @@ final class hw {
           var9 = var13;
         }
         if (param1 < 88) {
-          this.a(13L, (byte) 97);
+          this.addSample(13L, (byte) 97);
         }
-        GetLagStandardDeviationOut.a(-1, "Currentval=" + this.field_c[(-1 + (this.field_c.length + this.field_a)) % this.field_c.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
+        GetLagStandardDeviationOut.a(-1, "Currentval=" + this.samplesNanos[(-1 + (this.samplesNanos.length + this.writeIndex)) % this.samplesNanos.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
         GetLagStandardDeviationOut.a(-1, "Maxval=" + var7 / 1000L, var11, 20 - param0 / 2 + param3, param2 + param4, 4266);
     }
 
-    hw() {
-        this.field_a = 0;
-        this.field_c = new long[500];
+    TimingGraph() {
+        this.writeIndex = 0;
+        this.samplesNanos = new long[500];
     }
 
     static {

@@ -486,7 +486,7 @@ final class World implements DiffableState, CompactGameState {
             var9 = -field_c[1] + param0.id;
             param0 = this.getMutableDebris(var9, false);
             stackIn_7_1 = (Ship) (param3);
-            stackIn_8_2 = (hw.field_b == 1);
+            stackIn_8_2 = (TimingGraph.field_b == 1);
             this.a(stackIn_7_1, stackIn_8_2, -102, param0, param1, param5);
             if (GetPedrosRepairModeSwitchtime.field_o == 0) {
               param0.dy = 0;
@@ -1569,7 +1569,7 @@ final class World implements DiffableState, CompactGameState {
                   stackIn_37_1 = this;
                   stackIn_37_2 = false;
                   stackIn_37_3 = 67;
-                  if (hw.field_b != 1) {
+                  if (TimingGraph.field_b != 1) {
                     stackIn_38_1 = this;
                     stackIn_38_4 = false;
                   } else {
@@ -1585,7 +1585,7 @@ final class World implements DiffableState, CompactGameState {
                 stackIn_29_1 = this;
                 stackIn_29_2 = true;
                 stackIn_29_3 = 67;
-                if (hw.field_b != 1) {
+                if (TimingGraph.field_b != 1) {
                   stackIn_30_1 = this;
                   stackIn_30_4 = false;
                 } else {
@@ -2198,7 +2198,7 @@ final class World implements DiffableState, CompactGameState {
           param0.updateTick(this, true, (byte) 67, false);
           if (this.addBodyToArray(29651, param0, this.debris, 1)) {
             param0.phantom = true;
-            if (hw.field_b != 1) {
+            if (TimingGraph.field_b != 1) {
               return;
             }
             this.registerBodyPartition(2, (byte) 126, param0);
@@ -2261,7 +2261,7 @@ final class World implements DiffableState, CompactGameState {
         stackIn_15_1 = this.ships;
         stackIn_16_2 = !(param0);
         this.registerBodyPartitions(stackIn_15_1, stackIn_16_2, 1);
-        if (hw.field_b == 1) {
+        if (TimingGraph.field_b == 1) {
           this.registerBodyPartitions(this.debris, true, 2);
         }
         this.registerBodyPartitions(this.asteroidField.getAsteroids(0), true, 3);
@@ -2517,7 +2517,7 @@ final class World implements DiffableState, CompactGameState {
               13 == this.objectiveType) {
               var28 = new Random((long)(var8 * var7));
               var11_int = GetRepairModeRadius.a(-101, 3, SetRepairModeCooldown.e((byte) 107), var28);
-              var29 = t.a(var11_int, (byte) 47);
+              var29 = ToolkitViewState.createPresetShip(var11_int, (byte) 47);
               var29.setAi(new ShipAI(), 4);
               var29.setTeam(17704, ToolkitRasterState.field_c);
               var13 = var7;
@@ -2839,7 +2839,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                       break;
                                                                                     case 57:
                                                                                       var72 = new Random((long)(var7 * var8));
-                                                                                      var73 = t.a(TextHotspotRegion.randomBoundedInt(var72, 12, 126) + 0, (byte) 42);
+                                                                                      var73 = ToolkitViewState.createPresetShip(TextHotspotRegion.randomBoundedInt(var72, 12, 126) + 0, (byte) 42);
                                                                                       var73.setAi(new ShipAI(), 4);
                                                                                       var73.setTeam(17704, ToolkitRasterState.field_c);
                                                                                       var12 = var7;
@@ -3554,7 +3554,7 @@ final class World implements DiffableState, CompactGameState {
               }
             } else {
               this.makeDebrisArrayMutable(-96);
-              if (1 == hw.field_b) {
+              if (1 == TimingGraph.field_b) {
                 var6 = 2;
               }
               var5 = this.debris;
@@ -4164,7 +4164,7 @@ final class World implements DiffableState, CompactGameState {
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        var13 = t.a(var10, (byte) 36);
+                        var13 = ToolkitViewState.createPresetShip(var10, (byte) 36);
                         var11_ref = var13;
                       }
                       if (null != var11_ref) {
@@ -5608,7 +5608,7 @@ final class World implements DiffableState, CompactGameState {
               var5 = this.getMutableDebris(var11, false);
             }
             stackIn_29_1 = (Ship) (param3);
-            stackIn_30_2 = (1 == hw.field_b);
+            stackIn_30_2 = (1 == TimingGraph.field_b);
             this.a(stackIn_29_1, stackIn_30_2, -98, (Debris) (var5), var8, var7);
             GetGrapplingHookAimarc.updateLoopingSound(param3.getY((byte) -91), param3.id, 74, 93, param3.getX(false));
           }
@@ -9060,7 +9060,7 @@ final class World implements DiffableState, CompactGameState {
                     !var9Lifetime2.chassis.isDestroyed((byte) 94) && (var4.getTeam((byte) 82) != var9Lifetime2.getTeam((byte) 69) ||
                     !var4.isFighter(false) &&
                     !var9Lifetime2.isFighter(param1))) {
-                    if (bra.field_d != 1) {
+                    if (ToolkitCanvasContext.field_d != 1) {
                       if (!var4.isFighter(false)) {
                         stackIn_49_0 = (var9Lifetime2.isFighter(param1)) ? 1 : 0;
                       } else {

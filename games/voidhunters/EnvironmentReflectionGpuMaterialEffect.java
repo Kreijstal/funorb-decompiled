@@ -93,7 +93,7 @@ final class EnvironmentReflectionGpuMaterialEffect extends GpuMaterialEffect {
           return;
         }
         this.toolkit.setActiveTextureUnit(1, -43);
-        this.toolkit.setTextureCoordinateMode((byte) -111, meb.field_d);
+        this.toolkit.setTextureCoordinateMode((byte) -111, UnderlinedLinkRenderer.field_d);
         this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         this.toolkit.setRgbCombineSource(2, pea.field_d, param0 - 2536);
         this.toolkit.setAlphaCombineSource(0, (byte) -125, SetGrapplingHookMaxExtension8Force.field_q);

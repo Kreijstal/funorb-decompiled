@@ -196,10 +196,10 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
                 jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
                 this.toolkit.setActiveTextureUnit(33984, 0);
                 if ((param0 & 64) == 0) {
-                  meb.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
-                  meb.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
-                  meb.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
-                  jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, meb.field_c, 0);
+                  UnderlinedLinkRenderer.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
+                  UnderlinedLinkRenderer.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
+                  UnderlinedLinkRenderer.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
+                  jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, UnderlinedLinkRenderer.field_c, 0);
                 } else {
                   jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
                 }
@@ -227,10 +227,10 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
             if ((param0 & 64) != 0) {
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
             } else {
-              meb.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
-              meb.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
-              meb.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
-              jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, meb.field_c, 0);
+              UnderlinedLinkRenderer.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
+              UnderlinedLinkRenderer.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
+              UnderlinedLinkRenderer.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
+              jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, UnderlinedLinkRenderer.field_c, 0);
             }
           }
           var4Lifetime3 = param0 & 3;
@@ -253,10 +253,10 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
               this.toolkit.setActiveTextureUnit(33984, 0);
               if ((param0 & 64) == 0) {
-                meb.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
-                meb.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
-                meb.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
-                jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, meb.field_c, 0);
+                UnderlinedLinkRenderer.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
+                UnderlinedLinkRenderer.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
+                UnderlinedLinkRenderer.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
+                jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, UnderlinedLinkRenderer.field_c, 0);
               } else {
                 jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
               }
@@ -291,10 +291,10 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
         if ((param0 & 64) != 0) {
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
         } else {
-          meb.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
-          meb.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
-          meb.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
-          jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, meb.field_c, 0);
+          UnderlinedLinkRenderer.field_c[2] = this.toolkit.field_pc * this.toolkit.field_i;
+          UnderlinedLinkRenderer.field_c[1] = this.toolkit.field_nc * this.toolkit.field_pc;
+          UnderlinedLinkRenderer.field_c[0] = this.toolkit.field_nb * this.toolkit.field_pc;
+          jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, UnderlinedLinkRenderer.field_c, 0);
         }
         var4Lifetime2 = param0 & 3;
         if (var4Lifetime2 == 2) {

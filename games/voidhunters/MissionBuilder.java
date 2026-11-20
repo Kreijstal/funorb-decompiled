@@ -253,7 +253,7 @@ final class MissionBuilder implements DiffableState {
         MissionEvent var11 = null;
         try {
           var12 = param2.world;
-          var7 = t.a(4, (byte) 101);
+          var7 = ToolkitViewState.createPresetShip(4, (byte) 101);
           var7.setPosition(param0, param4, (byte) -68);
           var8 = 1;
           var7.setTeam(17704, var8);
@@ -386,7 +386,7 @@ final class MissionBuilder implements DiffableState {
             var14 = 1 + TextHotspotRegion.randomBoundedInt(param0, 3, 127);
             for (var15 = 0; var15 < 2; var15++) {
               for (var16 = 0; var16 < var14; var16++) {
-                var17 = t.a(var13Lifetime1, (byte) 101);
+                var17 = ToolkitViewState.createPresetShip(var13Lifetime1, (byte) 101);
                 var17.setTeam(17704, 2);
                 var17.setAi(new ShipAI(), 4);
                 for (var18 = 0; var18 < 1000; var18++) {
@@ -896,7 +896,7 @@ final class MissionBuilder implements DiffableState {
           var18 = TextLayout.approximateVectorLength(param1 / 4, (byte) 115, param0 / 4) >> 8;
           var19 = null;
           for (var20 = 0; var17 > var20; var20++) {
-            var21 = OpenGlFramebuffer.a(2, 1, true);
+            var21 = OpenGlFramebuffer.createPresetShip(2, 1, true);
             var22 = 2048 * var20 / (var17 - 1) + 2048;
             var21.setPosition(param1 + var18 * (GetNumStars.cosAngle(var22, (byte) 127) >> 8), (TextureLineShape.sinAngle(var22, 50) >> 8) * var18 + param0, (byte) -95);
             var21.setAi(new ShipAI(), 4);
@@ -1193,7 +1193,7 @@ final class MissionBuilder implements DiffableState {
           var16Lifetime1 = TextLayout.approximateVectorLength(param1 / 4, (byte) 116, param3 / 4) >> 8;
           var17Lifetime2 = null;
           for (var18 = 0; var15Lifetime1 > var18; var18++) {
-            var19 = OpenGlFramebuffer.a(2, 2, true);
+            var19 = OpenGlFramebuffer.createPresetShip(2, 2, true);
             var20 = var18 * 2048 / (-1 + var15Lifetime1) + 2048;
             var19.setPosition(param1 + (GetNumStars.cosAngle(var20, (byte) -107) >> 8) * var16Lifetime1, (TextureLineShape.sinAngle(var20, 59) >> 8) * var16Lifetime1 + param3, (byte) -127);
             var19.setAi(new ShipAI(), 4);
@@ -1363,7 +1363,7 @@ final class MissionBuilder implements DiffableState {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = t.a(1, (byte) 47);
+          var5 = ToolkitViewState.createPresetShip(1, (byte) 47);
           var5.setPosition(param3, param1, (byte) 95);
           var5.setAi(new ShipAI(), 4);
           var5.setTeam(17704, 1);
@@ -1840,7 +1840,7 @@ final class MissionBuilder implements DiffableState {
           var19 = Math.min(param5.getWidth((byte) -122), param5.getHeight(1)) / 16;
           var20 = new MissionEvent();
           for (var21 = 0; var18 > var21; var21++) {
-            var22 = OpenGlFramebuffer.a(2, -1, true);
+            var22 = OpenGlFramebuffer.createPresetShip(2, -1, true);
             var22.setTeam(17704, 2);
             var23 = TextHotspotRegion.randomBoundedInt(param4, 8192, 122);
             var24 = TextHotspotRegion.randomBoundedInt(param4, var19, 126) >> 8;
@@ -2523,7 +2523,7 @@ final class MissionBuilder implements DiffableState {
         int var11Lifetime1;
         var17 = VoidHunters.field_G;
         try {
-          var18 = OpenGlFramebuffer.a(1, 1, true);
+          var18 = OpenGlFramebuffer.createPresetShip(1, 1, true);
           var18.setPosition(param2, param3, (byte) -108);
           var18.setAi(new ShipAI(), param0 ^ 4);
           var18.setTeam(17704, param0);

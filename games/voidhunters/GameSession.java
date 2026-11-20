@@ -10,7 +10,7 @@ final class GameSession {
     private int[] lastPlayerShipY;
     private int[] field_a;
     private int field_C;
-    private int field_p;
+    private int pendingSpecialOrderId;
     private int field_k;
     private boolean[] previousKeyStates;
     private int field_u;
@@ -18,7 +18,7 @@ final class GameSession {
     private npb field_K;
     private int field_U;
     private boolean field_s;
-    private hw field_Z;
+    private TimingGraph updateTimingGraph;
     private int field_Q;
     private boolean field_T;
     boolean field_h;
@@ -42,7 +42,7 @@ final class GameSession {
     private boolean radialMenuActive;
     private int field_o;
     private float field_w;
-    private int field_H;
+    private int activeSpecialOrderId;
     CommonGameState state;
     private TutorialController tutorialController;
     private int field_J;
@@ -55,7 +55,7 @@ final class GameSession {
     private int field_i;
     private int[] field_V;
     private IntrusiveDeque specialOrderButtons;
-    private hw field_b;
+    private TimingGraph renderTimingGraph;
     private int field_O;
 
     private final Ship prepareInspectionShip(int param0, Ship param1, int param2, int param3) {
@@ -407,7 +407,7 @@ final class GameSession {
         }
     }
 
-    private final void a(int param0) {
+    private final void drawLobbyGameEntries(int param0) {
         int var5 = 0;
         int var2;
         ToolkitRasterStateStack var3;
@@ -422,10 +422,10 @@ final class GameSession {
           var3 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
           var4 = 30;
           for (var5 = 0; var5 < 100; var5++) {
-            var6 = meb.a(var5, 1);
+            var6 = UnderlinedLinkRenderer.getLobbyGameById(var5, 1);
             if (var6 != null &&
               var6.field_ac) {
-              var7 = this.a(var3, (byte) -107, var4, var6);
+              var7 = this.drawLobbyGameEntry(var3, (byte) -107, var4, var6);
               var4 = var4 + var7;
             }
           }
@@ -460,7 +460,7 @@ final class GameSession {
         return -1;
     }
 
-    private final void a(SpecialOrderButtonState param0, boolean param1, Ship param2, int param3, boolean param4) {
+    private final void handleSpecialOrderPointer(SpecialOrderButtonState param0, boolean param1, Ship param2, int param3, boolean param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -474,12 +474,12 @@ final class GameSession {
           if (!param4) {
             if (1 == SetDebrisPartitioned.field_o &&
               PacketBuffer.field_g == 1) {
-              if (this.field_p == -1 &&
+              if (this.pendingSpecialOrderId == -1 &&
                 param1) {
-                this.field_p = param0.specialOrderId;
+                this.pendingSpecialOrderId = param0.specialOrderId;
                 this.radialMenuActive = false;
               } else {
-                this.field_p = -1;
+                this.pendingSpecialOrderId = -1;
               }
             }
           } else {
@@ -1066,7 +1066,7 @@ final class GameSession {
           param1 &&
           !this.field_l &&
           !this.radialMenuActive &&
-          -1 == this.field_p &&
+          -1 == this.pendingSpecialOrderId &&
           var9 != null &&
           GetBots.field_o != 1) {
           var14Lifetime1 = this.drawComponentInspection((byte) 36, var11, var10, var24.getPlayer(this.localPlayerIndex, (byte) 59), (Ship) (var9), var24.world);
@@ -1104,7 +1104,7 @@ final class GameSession {
         this.drawControlHints((byte) 70, (Ship) (var9));
         if (this.tutorialController != null &&
           param1) {
-          this.tutorialController.updateAndDrawHints(var24, this.radialMenuX, this.field_x, ShipTeamConditionFactory.field_a, this.radialMenuY, MissionVariableFactory.field_a, this.radialMenuAlpha, this.field_p, (byte) -32, this.specialOrderButtons, PartitionZoneFactory.field_a, this.localPlayerIndex, (Ship) (var9));
+          this.tutorialController.updateAndDrawHints(var24, this.radialMenuX, this.field_x, ShipTeamConditionFactory.field_a, this.radialMenuY, MissionVariableFactory.field_a, this.radialMenuAlpha, this.pendingSpecialOrderId, (byte) -32, this.specialOrderButtons, PartitionZoneFactory.field_a, this.localPlayerIndex, (Ship) (var9));
         }
         if (var9 != null) {
           var18Lifetime1 = ((Ship) (var9)).getDragging(57);
@@ -1121,21 +1121,21 @@ final class GameSession {
         this.drawDebugOverlay(false);
         this.drawChatButton((byte) -41);
         if (1 == SetShipTeamAction.field_e) {
-          this.a((Ship) (var9), false, var10, var11);
+          this.drawWeaponAimArcs((Ship) (var9), false, var10, var11);
         }
         this.drawScoreboard(false);
         if (param1) {
-          this.a(var14Lifetime1, var24, (byte) -96, (Ship) (var9));
+          this.drawActionCursor(var14Lifetime1, var24, (byte) -96, (Ship) (var9));
         }
         this.drawSessionNotifications(var24, -1);
         this.drawBlueprintSaveStatus(true, (Ship) (var9));
         this.field_K.a(this.localPlayerIndex, 84, var24, (Ship) (var9));
-        this.a(91);
+        this.drawLobbyGameEntries(91);
         var19 = SetUseTriFill.field_o.nanoTime((byte) -110);
         if (GetPointDefenceLaserProjectiles.a(8192, 11284)) {
-          this.field_b.a(var19 - var3, (byte) -115);
-          this.field_Z.a(200, 99, 200, 0, 0);
-          this.field_b.a(200, 122, 200, 0, 340);
+          this.renderTimingGraph.addSample(var19 - var3, (byte) -115);
+          this.updateTimingGraph.draw(200, 99, 200, 0, 0);
+          this.renderTimingGraph.draw(200, 122, 200, 0, 340);
         }
     }
 
@@ -1280,7 +1280,7 @@ final class GameSession {
                       break;
                     }
                     this.field_C = -1;
-                    this.field_p = -1;
+                    this.pendingSpecialOrderId = -1;
                     break;
                   }
                 }
@@ -1302,7 +1302,7 @@ final class GameSession {
                       GetMassDriverReload.a(var14, -24);
                       if (SetDebrisPartitioned.field_o == 1 &&
                         PacketBuffer.field_g == 1) {
-                        this.field_p = var13;
+                        this.pendingSpecialOrderId = var13;
                         break;
                       }
                     }
@@ -1918,7 +1918,7 @@ final class GameSession {
         String var34Lifetime1Lifetime2;
         var27 = VoidHunters.field_G;
         if (param0 > -74) {
-          this.b((byte) -11, true);
+          this.updateChatControls((byte) -11, true);
         }
         if (GetPointDefenceLaserProjectiles.a(64, 11284)) {
           var31 = this.state.b(1).missionState;
@@ -2107,7 +2107,7 @@ final class GameSession {
         }
     }
 
-    private final void a(int param0, GameSnapshot param1, byte param2, Ship param3) {
+    private final void drawActionCursor(int param0, GameSnapshot param1, byte param2, Ship param3) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
@@ -2138,7 +2138,7 @@ final class GameSession {
               var8 = param1.getPlayer(this.localPlayerIndex, (byte) 59).triggers;
               if ((param0 != 0 ||
                 (var8 & 128) != 0 ||
-                this.field_p != -1) && 1 != param0) {
+                this.pendingSpecialOrderId != -1) && 1 != param0) {
                 stackIn_21_0 = 0;
                 decompiledFrameRemainder0 = false;
               }
@@ -2157,7 +2157,7 @@ final class GameSession {
               if (param2 >= -56) {
                 this.updateSession((byte) 106, true);
               }
-              if (this.field_p != -1) {
+              if (this.pendingSpecialOrderId != -1) {
                 param0 = 5;
               }
               if (param3 != null &&
@@ -2782,7 +2782,7 @@ final class GameSession {
                   stackIn_47_0 = (!ArchiveIndexLoader.field_g.isComponentOptionVisible(var24_int + 3, (byte) 34)) ? 0 : 1;
                   var25_int = stackIn_47_0;
                   if (var25_int != 0) {
-                    var23[var24_int] = t.a(var24_int + 3, (byte) 72);
+                    var23[var24_int] = ToolkitViewState.createPresetShip(var24_int + 3, (byte) 72);
                     var22++;
                   }
                 }
@@ -3056,12 +3056,12 @@ final class GameSession {
         SpecialOrderDefinition var2 = null;
         int var3 = 0;
         String var4 = null;
-        if (this.field_p >= 0 &&
-          this.field_p < 13) {
-          var2 = CarouselPlayerEvent.specialOrderDefinitions[this.field_p];
+        if (this.pendingSpecialOrderId >= 0 &&
+          this.pendingSpecialOrderId < 13) {
+          var2 = CarouselPlayerEvent.specialOrderDefinitions[this.pendingSpecialOrderId];
           var3 = var2.getIconId((byte) 85);
           PlayerActionFactory.a(var3, 20 + GetUseDetailLines.field_o, (byte) 84, GetTorpedoReload.field_q);
-          var4 = GetGrapplingHookSpringConstant.specialOrderLabels[this.field_p].toUpperCase();
+          var4 = GetGrapplingHookSpringConstant.specialOrderLabels[this.pendingSpecialOrderId].toUpperCase();
           SetSelfDestructPrepareToggleCooldown.a(50 + GetUseDetailLines.field_o, 1, GetTorpedoReload.field_q + 20, var4, 2, 16777215, (byte) -92);
         }
         if (param0 != 15097) {
@@ -3424,7 +3424,7 @@ final class GameSession {
                   GetLagStandardDeviationOut.a(-1, var7, 16777215, -10 + var6, var4_int / 2 + var5 - GetPhasedEnergyBeamProjectiles.a(-112, var7) / 2, 4266);
                 }
               }
-              discarded$0 = this.a((byte) 61, true, param0);
+              discarded$0 = this.updateSpecialOrderMenu((byte) 61, true, param0);
             }
             if (param0.world.hasHomingProjectileTargeting(var22.getId(false), param1 - 16731016)) {
               var4 = SpawnChoiceFactory.field_a.toUpperCase();
@@ -3526,14 +3526,14 @@ final class GameSession {
         if (ssa.b(2)) {
           GetPointDefenceLaserProjectileInterceptDamage.a(SetMachineGunEnergyUsed.field_o, this.previousKeyStates, (byte) 79);
         }
-        this.b((byte) 119, param1);
+        this.updateChatControls((byte) 119, param1);
         var3 = 0;
         var4 = 0;
         var5 = -1;
         var6 = -1;
         var7 = -1;
         var8 = -1;
-        this.field_H = -1;
+        this.activeSpecialOrderId = -1;
         var9 = this.state.b(1);
         var10 = null;
         if (this.localPlayerIndex >= 0) {
@@ -3639,7 +3639,7 @@ final class GameSession {
           var13_long = SetUseTriFill.field_o.nanoTime((byte) -110);
           this.state.c(125);
           var15 = SetUseTriFill.field_o.nanoTime((byte) -110);
-          this.field_Z.a(var15 - var13_long, (byte) -115);
+          this.updateTimingGraph.addSample(var15 - var13_long, (byte) -115);
           this.field_K.a(this.localPlayerIndex, var9, (byte) 70, var9.world.findShipByOwner(this.localPlayerIndex, 88));
         }
         var20 = 0;
@@ -4160,7 +4160,7 @@ final class GameSession {
                 for (var12 = var4Lifetime2; var12 <= var5; var12++) {
                   var13 = GetGrapplingHookSpringConstant.specialOrderLabels[var12];
                   var8Lifetime2 = 11184810;
-                  stackIn_48_0 = (~this.field_p != ~var12) ? 0 : 1;
+                  stackIn_48_0 = (~this.pendingSpecialOrderId != ~var12) ? 0 : 1;
                   var14 = stackIn_48_0;
                   if (var14 != 0) {
                     var8Lifetime2 = 16777215;
@@ -4778,7 +4778,7 @@ final class GameSession {
             }
           }
           if (param0 != 1) {
-            this.field_b = (hw) null;
+            this.renderTimingGraph = (TimingGraph) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4892,7 +4892,7 @@ final class GameSession {
           var15Lifetime1 = GameKeyHandler.a(22433, 2048 + var13Lifetime1);
           if (param3) {
             var49 = (SpecialOrderButtonState) null;
-            this.a((SpecialOrderButtonState) null, (byte) 103, -86, false);
+            this.handleSpecialOrderHotkey((SpecialOrderButtonState) null, (byte) 103, -86, false);
           }
           var16Lifetime1 = GetNumStars.cosAngle(var15Lifetime1, (byte) 53) >> 8;
           var17Lifetime1 = TextureLineShape.sinAngle(var15Lifetime1, 44) >> 8;
@@ -5205,13 +5205,13 @@ final class GameSession {
         if (this.localPlayerIndex >= 0 &&
           param6) {
           if (~param3 == ~param2 &&
-            this.field_H == -1) {
+            this.activeSpecialOrderId == -1) {
             stackIn_8_0 = 0;
           } else {
             stackIn_8_0 = 1;
           }
           var10 = stackIn_8_0;
-          if (this.field_H == 0 &&
+          if (this.activeSpecialOrderId == 0 &&
             null != this.tutorialController) {
             this.tutorialController.completeHint((byte) 79, 8);
           }
@@ -5228,7 +5228,7 @@ final class GameSession {
               }
             }
             if ((param2 & -17) == (param3 & -17) &&
-              this.field_H == -1) {
+              this.activeSpecialOrderId == -1) {
               stackIn_25_0 = 0;
             } else {
               stackIn_25_0 = 1;
@@ -5275,10 +5275,10 @@ final class GameSession {
               var19.mousex = param0;
               var19.mousey = param4;
             }
-            if (this.field_H != -1) {
-              var21.specialOrderSubmessage = new SpecialOrderSubmessage(this.field_H);
-              if (11 != this.field_H) {
-                if (this.field_H == 12) {
+            if (this.activeSpecialOrderId != -1) {
+              var21.specialOrderSubmessage = new SpecialOrderSubmessage(this.activeSpecialOrderId);
+              if (11 != this.activeSpecialOrderId) {
+                if (this.activeSpecialOrderId == 12) {
                   var21.specialOrderSubmessage.blueprint = es.field_b.blueprint;
                 }
               } else {
@@ -5381,31 +5381,31 @@ final class GameSession {
 
     }
 
-    private final void activateHoveredOrder(boolean param0, int param1) {
+    private final void activatePendingSpecialOrder(boolean param0, int param1) {
         if (param1 >= -95) {
           return;
         }
-        if (this.field_p != -1) {
+        if (this.pendingSpecialOrderId != -1) {
           if (SetDebrisPartitioned.field_o != 1 ||
             PacketBuffer.field_g != 1 ||
             param0) {
-            if (!(this.field_p >= CarouselPlayerEvent.specialOrderDefinitions.length) &&
-              !CarouselPlayerEvent.specialOrderDefinitions[this.field_p].requiresPrimaryPress(false)) {
-              this.field_H = this.field_p;
-              if (this.field_H <= 8 ||
+            if (!(this.pendingSpecialOrderId >= CarouselPlayerEvent.specialOrderDefinitions.length) &&
+              !CarouselPlayerEvent.specialOrderDefinitions[this.pendingSpecialOrderId].requiresPrimaryPress(false)) {
+              this.activeSpecialOrderId = this.pendingSpecialOrderId;
+              if (this.activeSpecialOrderId <= 8 ||
                 !SetMachineGunEnergyUsed.field_o[81]) {
                 this.field_G = true;
                 this.field_C = -1;
-                this.field_p = -1;
+                this.pendingSpecialOrderId = -1;
               }
             }
           } else {
-            this.field_H = this.field_p;
-            if (this.field_H <= 8 ||
+            this.activeSpecialOrderId = this.pendingSpecialOrderId;
+            if (this.activeSpecialOrderId <= 8 ||
               !SetMachineGunEnergyUsed.field_o[81]) {
               this.field_G = true;
               this.field_C = -1;
-              this.field_p = -1;
+              this.pendingSpecialOrderId = -1;
             }
           }
         }
@@ -5538,9 +5538,9 @@ final class GameSession {
               var7 = param3.world.findShipByOwner(this.localPlayerIndex, 95);
               if (var7 == null) {
                 if (!param3.world.getDebug((byte) -124)) {
-                  this.field_p = -1;
+                  this.pendingSpecialOrderId = -1;
                 } else {
-                  this.activateHoveredOrder(this.field_l, -96);
+                  this.activatePendingSpecialOrder(this.field_l, -96);
                 }
                 this.field_n = false;
                 this.field_g = 0;
@@ -5565,18 +5565,18 @@ final class GameSession {
                 stackIn_14_0 = (!this.field_l) ? 0 : 1;
                 var8 = stackIn_14_0;
                 if (var8 == 0) {
-                  stackIn_19_0 = (!this.a((byte) 8, false, param3)) ? 0 : 1;
+                  stackIn_19_0 = (!this.updateSpecialOrderMenu((byte) 8, false, param3)) ? 0 : 1;
                   var8 = stackIn_19_0;
                 }
                 if (var8 != 0) {
                   this.field_l = true;
                 }
-                this.activateHoveredOrder(var8 != 0, -116);
+                this.activatePendingSpecialOrder(var8 != 0, -116);
                 param5 = this.a(param3, this.field_l, param5, 8186);
               }
-              this.field_H = this.b(-19706);
+              this.activeSpecialOrderId = this.resolveActiveSpecialOrder(-19706);
             } else {
-              this.field_H = this.b(-19706);
+              this.activeSpecialOrderId = this.resolveActiveSpecialOrder(-19706);
             }
           }
           stackIn_37_0 = param5;
@@ -5613,10 +5613,10 @@ final class GameSession {
             field_D = (String) null;
           }
           var4 = SetUseOffscreenRendering.field_o;
-          while (bra.menuLabels.length > var3_int) {
+          while (ToolkitCanvasContext.menuLabels.length > var3_int) {
             var5 = GetMessageMax.menuActionIds[var3_int];
             if (var5 >= 0) {
-              var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, bra.menuLabels[var3_int]);
+              var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, ToolkitCanvasContext.menuLabels[var3_int]);
               var4 = var4 + ro.field_c;
               var7 = -(var6 >> 1) + PlayerVote.field_f;
               if (SetMachineGunAimarc.a(var4, (GraphicsHeap.field_d << 1) + var6, (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - GraphicsHeap.field_d, param2)) {
@@ -5706,7 +5706,7 @@ final class GameSession {
           var7 = ShipTeamConditionFactory.field_a.worldToScreenX(65536 + var3_int, (byte) 119);
           var8 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var5 + 65536);
           if (param0 < 39) {
-            this.field_H = -98;
+            this.activeSpecialOrderId = -98;
           }
           UiToggleButtonRenderer.drawRectangle(120, var4, -var6 + var8, var6, 16755455, -var4 + var7);
           GetLagStandardDeviationOut.a(1, "Gridx=" + param1.gridx + ", gridy=" + param1.gridy, 16711935, var6, var4, 4266);
@@ -6012,7 +6012,7 @@ final class GameSession {
     private final void updateRadialMenuActivation(int param0) {
         int var3;
         var3 = VoidHunters.field_G;
-        if (this.field_p == -1 &&
+        if (this.pendingSpecialOrderId == -1 &&
           SetMachineGunEnergyUsed.field_o[81] &&
           !this.previousKeyStates[81] &&
           GetUseDetailLines.field_o != -1 &&
@@ -6099,7 +6099,7 @@ final class GameSession {
           }
           if (param2 != -11) {
             var13 = (Ship) null;
-            this.a((SpecialOrderButtonState) null, false, (Ship) null, 80, true);
+            this.handleSpecialOrderPointer((SpecialOrderButtonState) null, false, (Ship) null, 80, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6260,7 +6260,7 @@ final class GameSession {
         return this.state.getPlayerName(1, param0);
     }
 
-    private final void a(Ship param0, boolean param1, int param2, int param3) {
+    private final void drawWeaponAimArcs(Ship param0, boolean param1, int param2, int param3) {
         int var6 = 0;
         WeaponBehaviour stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
@@ -6353,7 +6353,7 @@ final class GameSession {
         }
     }
 
-    private final boolean a(byte param0, boolean param1, GameSnapshot param2) {
+    private final boolean updateSpecialOrderMenu(byte param0, boolean param1, GameSnapshot param2) {
         int stackIn_33_0 = 0;
         boolean stackIn_54_1 = false;
         int stackIn_143_0 = 0;
@@ -6647,13 +6647,13 @@ final class GameSession {
                 var19 + var17 >= GetTorpedoReload.field_q ||
                 var26 != 0 &&
                 this.isMouseInRadialSegment(var10, (byte) -3, var20, var8)) {
-                this.a(var15, var24Lifetime1 != 0, var5, 80, param1);
+                this.handleSpecialOrderPointer(var15, var24Lifetime1 != 0, var5, 80, param1);
                 var4_int = 1;
                 var25 = 1;
               }
               var27 = var41.getShortcutKey(-1);
               if (!param1) {
-                this.a(var15, (byte) -80, var27, var24Lifetime1 != 0);
+                this.handleSpecialOrderHotkey(var15, (byte) -80, var27, var24Lifetime1 != 0);
               }
               if (param1) {
                 var28 = var15.field_d;
@@ -6670,7 +6670,7 @@ final class GameSession {
                   }
                 }
                 var29Lifetime1 = var41.getCooldown((byte) 64);
-                if (this.field_p != var15.specialOrderId &&
+                if (this.pendingSpecialOrderId != var15.specialOrderId &&
                   var15.nonPositiveStateCount > 0) {
                 }
                 var30Lifetime1 = (-var15.field_j + var29Lifetime1 << 8) / var29Lifetime1;
@@ -6689,7 +6689,7 @@ final class GameSession {
                   if (OpenGlTexture1D.field_i) {
                     var33Lifetime1 = -65536;
                     if (var31Lifetime1 == 0 &&
-                      var15.specialOrderId != this.field_p) {
+                      var15.specialOrderId != this.pendingSpecialOrderId) {
                       if (255 <= var30Lifetime1) {
                         var33Lifetime1 = -16711936;
                       }
@@ -6748,7 +6748,7 @@ final class GameSession {
                   var37 = SetTorpedoProjectileDamage.field_q[var27];
                 }
                 var38Lifetime1 = 16777215;
-                if (var15.specialOrderId == this.field_p) {
+                if (var15.specialOrderId == this.pendingSpecialOrderId) {
                   var38Lifetime1 = 13404296;
                 }
                 var39 = 0;
@@ -6941,7 +6941,7 @@ final class GameSession {
         }
         int var4 = param2 * 8192 / param1;
         if (param0) {
-          this.a(-66);
+          this.drawLobbyGameEntries(-66);
         }
         return var4;
     }
@@ -7469,7 +7469,7 @@ final class GameSession {
         }
     }
 
-    private final void b(byte param0, boolean param1) {
+    private final void updateChatControls(byte param0, boolean param1) {
         int var3;
         int var4;
         int var5;
@@ -7891,7 +7891,7 @@ final class GameSession {
         }
     }
 
-    private final int b(int param0) {
+    private final int resolveActiveSpecialOrder(int param0) {
         int var2_int = 0;
         Ship var2 = null;
         int[] var3 = null;
@@ -7901,7 +7901,7 @@ final class GameSession {
           2 == PacketBuffer.field_g) {
           var2_int = this.getHeldActionHotkey(30);
           if (-1 != var2_int) {
-            this.field_H = 13 + var2_int;
+            this.activeSpecialOrderId = 13 + var2_int;
           }
         }
         if (param0 != -19706) {
@@ -7919,10 +7919,10 @@ final class GameSession {
             }
           }
         }
-        return this.field_H;
+        return this.activeSpecialOrderId;
     }
 
-    private final int a(ToolkitRasterStateStack param0, byte param1, int param2, LobbyGameEntry param3) {
+    private final int drawLobbyGameEntry(ToolkitRasterStateStack param0, byte param1, int param2, LobbyGameEntry param3) {
         int stackIn_27_0 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -8302,7 +8302,7 @@ final class GameSession {
           }
           var4Lifetime1 = this.getHeldActionHotkey(30);
           if (param0 < 65) {
-            this.field_Z = (hw) null;
+            this.updateTimingGraph = (TimingGraph) null;
           }
           if (-1 != var4Lifetime1) {
             var4Lifetime1 += 13;
@@ -8368,7 +8368,7 @@ final class GameSession {
         }
     }
 
-    private final void a(SpecialOrderButtonState param0, byte param1, int param2, boolean param3) {
+    private final void handleSpecialOrderHotkey(SpecialOrderButtonState param0, byte param1, int param2, boolean param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -8384,13 +8384,13 @@ final class GameSession {
             if (SetMachineGunEnergyUsed.field_o[82]) {
               return;
             }
-            if (this.field_p == -1 &&
+            if (this.pendingSpecialOrderId == -1 &&
               param3) {
               this.radialMenuActive = false;
-              this.field_p = param0.specialOrderId;
+              this.pendingSpecialOrderId = param0.specialOrderId;
               return;
             }
-            this.field_p = -1;
+            this.pendingSpecialOrderId = -1;
             return;
           }
           return;
@@ -8449,7 +8449,7 @@ final class GameSession {
             SetMachineGunEnergyUsed.field_o[SetCountermeasureLauncherAimspeed.field_q]) {
             param2 = param2 | 2;
           }
-          if (this.field_p == -1) {
+          if (this.pendingSpecialOrderId == -1) {
             stackIn_38_0 = (!this.field_G) ? 1 : 0;
           } else {
             stackIn_38_0 = 0;
@@ -8476,7 +8476,7 @@ final class GameSession {
             1 == PacketBuffer.field_g &&
             var6 != 0) && !param1) {
             this.field_C = -1;
-            this.field_p = -1;
+            this.pendingSpecialOrderId = -1;
             param2 = param2 | 128;
           }
           if (0 != (144 & param2)) {
@@ -8754,15 +8754,15 @@ final class GameSession {
         this.field_l = false;
         this.lastEnemyShipSpawnTick = -1;
         this.field_V = null;
-        this.field_Z = new hw();
-        this.field_b = new hw();
+        this.updateTimingGraph = new TimingGraph();
+        this.renderTimingGraph = new TimingGraph();
         this.field_O = -1;
         try {
           stackIn_4_1 = (param6);
           this.field_x = stackIn_4_1;
           this.specialOrderStatuses = new IntrusiveDeque();
           this.specialOrderButtons = new IntrusiveDeque();
-          this.field_p = -1;
+          this.pendingSpecialOrderId = -1;
           this.field_C = -1;
           ssa.b(2);
           stackIn_7_1 = (param0);
@@ -8817,7 +8817,7 @@ final class GameSession {
             var8 = MenuInputState.createShipFromComponentWords(VariableConditionFactory.a(108), (byte) 127);
           } else {
             if (this.field_x) {
-              var8 = t.a(3, (byte) 65);
+              var8 = ToolkitViewState.createPresetShip(3, (byte) 65);
             }
           }
           if (var8 != null) {

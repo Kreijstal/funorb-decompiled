@@ -58,7 +58,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           if (param0 != -111) {
             return;
           }
-          if (meb.field_d != param1) {
+          if (UnderlinedLinkRenderer.field_d != param1) {
             var3_int = ValidationStatusWidget.toOpenGlTextureCoordinateMode(param1, 9216);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);

@@ -86,9 +86,9 @@ final class bd {
           DialogMessagePanel.field_w = 15;
           atb.field_d = 11;
           jk.field_Cb = 2;
-          var7 = fab.a(param2, "largefont", 0, param3, "lobby");
-          GetDebrisCarryOverPercentage.field_o = fab.a(param2, "generalfont", 0, param3, "lobby");
-          UiDraggableContainer.field_y = fab.a(param2, "chatfont", 0, param3, "lobby");
+          var7 = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "largefont", 0, param3, "lobby");
+          GetDebrisCarryOverPercentage.field_o = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "generalfont", 0, param3, "lobby");
+          UiDraggableContainer.field_y = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "chatfont", 0, param3, "lobby");
           var7.setInlineSprites(var5, var25);
           GetDebrisCarryOverPercentage.field_o.setInlineSprites(var5, var25);
           UiDraggableContainer.field_y.setInlineSprites(var5, var25);
