@@ -39,7 +39,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void handleRecordReply(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -51,10 +51,10 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        ea var11 = null;
-        iea var12 = null;
+        ByteIndexedRecordWriteRequest var11 = null;
+        IntegerRecordReadQueueEntry var12 = null;
         IsaacPacketBuffer var13 = null;
-        iea var14 = null;
+        IntegerRecordReadQueueEntry var14 = null;
         var8 = VoidHunters.field_G;
         try {
           var13 = qga.field_b;
@@ -69,7 +69,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(92);
             }
-            var14 = (iea) (GetLagStandardDeviationIn.field_q.first(0));
+            var14 = (IntegerRecordReadQueueEntry) (GetLagStandardDeviationIn.pendingRecordReads.first(0));
             if (var14 != null) {
               var14.unlink(param0 ^ -3846);
               return;
@@ -82,7 +82,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
               FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
               FighterBayWeaponDefinition.l(param0 - 117);
             } else {
-              var12 = (iea) (GetLagStandardDeviationIn.field_q.first(0));
+              var12 = (IntegerRecordReadQueueEntry) (GetLagStandardDeviationIn.pendingRecordReads.first(0));
               if (var12 == null) {
                 FighterBayWeaponDefinition.l(-119);
                 return;
@@ -91,7 +91,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
               var12.unlink(-3846);
             }
           } else {
-            var11 = (ea) (OpenGlVertexBufferObject.field_k.first(0));
+            var11 = (ByteIndexedRecordWriteRequest) (OpenGlVertexBufferObject.pendingByteIndexedRecordWrites.first(0));
             if (var11 == null) {
               FighterBayWeaponDefinition.l(-125);
               return;
@@ -106,7 +106,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         }
     }
 
-    final static String a(byte[] param0, byte param1) {
+    final static String encodeBase64Unpadded(byte[] param0, byte param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

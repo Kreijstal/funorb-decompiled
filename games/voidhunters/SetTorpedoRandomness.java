@@ -39,9 +39,9 @@ final class SetTorpedoRandomness extends ConsoleCommand {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, String param7, int param8) {
         hp.field_b.text = param7;
         if (NetworkMessageState.chatChannel != 2) {
-          dp.field_a.text = SetReverbWet.field_o;
+          PartitionZoneFactoryHolder.field_a.text = SetReverbWet.field_o;
         } else {
-          dp.field_a.text = ChatMessage.field_l;
+          PartitionZoneFactoryHolder.field_a.text = ChatMessage.field_l;
         }
         int var9_int = 495;
         int var10 = 5;
@@ -50,8 +50,8 @@ final class SetTorpedoRandomness extends ConsoleCommand {
         var10 = var10 + (param8 + param6);
         WidgetNode.field_l.setBounds(UiComboBoxRenderer.field_c.width, 125, WidgetNode.field_l.width, 0, param6);
         GetMachineGunAimarc.field_q.setBounds(5, 118, GetMachineGunAimarc.field_q.getPreferredWidth(26), var10, param5);
-        int var11 = dp.field_a.getPreferredWidth(49);
-        dp.field_a.setBounds(-5 + (var9_int - var11), 29, var11, var10, param5);
+        int var11 = PartitionZoneFactoryHolder.field_a.getPreferredWidth(49);
+        PartitionZoneFactoryHolder.field_a.setBounds(-5 + (var9_int - var11), 29, var11, var10, param5);
         int var12 = param5 + (var10 + 5);
         hp.field_b.setBounds(0, -69, var9_int, 0, param2);
         TiledSpriteTextureOperation.field_s.setBounds(0, 125, var9_int, param2, var12);

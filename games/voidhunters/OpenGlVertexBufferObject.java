@@ -3,7 +3,7 @@
  */
 final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenGlVertexBufferBinding {
     static Sprite field_j;
-    static IntrusiveDeque field_k;
+    static IntrusiveDeque pendingByteIndexedRecordWrites;
     static GzipCodec field_h;
     static int field_i;
 
@@ -15,7 +15,7 @@ final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenG
     }
 
     public static void clearSharedReferences(int param0) {
-        field_k = null;
+        pendingByteIndexedRecordWrites = null;
         if (param0 < 78) {
           return;
         }
@@ -47,7 +47,7 @@ final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenG
     }
 
     static {
-        field_k = new IntrusiveDeque();
+        pendingByteIndexedRecordWrites = new IntrusiveDeque();
         field_h = new GzipCodec();
         field_i = 100;
     }

@@ -54,7 +54,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_ship_direction_arrow(" + GetPointDefenceLaserProjectileInterceptDamage.field_o + ")");
         System.out.println("set_ship_aim_lines(" + AccountCreationDialog.field_Y + ")");
         System.out.println("set_allow_ship_saving(" + SetShipTeamActionFactory.field_b + ")");
-        System.out.println("set_use_offscreen_rendering(" + jw.field_c + ")");
+        System.out.println("set_use_offscreen_rendering(" + CombatHelpText.field_c + ")");
         System.out.println("set_use_circle_fill(" + ColorizeTextureOperation.field_j + ")");
         System.out.println("set_use_circle_outline(" + GetReadyRoomMutatorTime.field_p + ")");
         System.out.println("set_use_lines(" + GetLaserAimarc.field_p + ")");
@@ -301,7 +301,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_spinning_blade_spinup_speed(" + SetUseRectFill.field_p + ")");
         System.out.println("set_spinning_blade_spindamage_multiplier(" + ShipSpawnedCondition.field_d + ")");
         System.out.println("set_phased_energy_beam_pulsetime(" + SetGrapplingHookMaxLength.field_p + ")");
-        System.out.println("set_phased_energy_beam_pulse_fadetime(" + ea.field_j + ")");
+        System.out.println("set_phased_energy_beam_pulse_fadetime(" + ByteIndexedRecordWriteRequest.field_j + ")");
         System.out.println("set_machine_gun_pulsetime(" + GetTorqueDownshift.field_o + ")");
         System.out.println("set_point_defence_laser_pulsetime(" + VariableConditionFactory.field_a + ")");
         System.out.println("set_bomblet_spray_push_multiplier(" + SetBombletSprayFireForce.field_o + ")");
@@ -321,7 +321,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_grappling_hook_rope_break_length(" + CarouselSlotStateDump.field_i + ")");
         System.out.println("set_missiles_cooldown(" + Particle.field_m + ")");
         System.out.println("set_missiles_explosion_power(" + gib.field_a + ")");
-        System.out.println("set_missiles_acceleration(" + iea.field_d + ")");
+        System.out.println("set_missiles_acceleration(" + IntegerRecordReadQueueEntry.field_d + ")");
         System.out.println("set_missiles_top_speed(" + LegacyOpenGlUnderwaterEffect.field_k + ")");
         System.out.println("set_shields_toggle_cooldown(" + Particle.field_w + ")");
         System.out.println("set_shields_directional_idle_energy_usage(" + SetMissilesCooldown.field_p + ")");

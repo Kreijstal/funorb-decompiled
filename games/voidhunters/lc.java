@@ -6,7 +6,7 @@ import java.util.*;
 final class lc {
     private int field_a;
     private Hashtable field_c;
-    static bs field_b;
+    static SocialTabsPanel field_b;
 
     final static void a(int param0, ShipComponent param1) {
         ShipComponent var4 = null;

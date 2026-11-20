@@ -10,7 +10,7 @@ final class SetThrusterForce extends ConsoleCommand {
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6) {
         try {
-          GetCountermeasureLauncherAimspeed.a(param2, param5, param1, false, param0, param6, param4, SetAutoaim.field_p);
+          GetCountermeasureLauncherAimspeed.drawRightAlignedText(param2, param5, param1, false, param0, param6, param4, SetAutoaim.field_p);
           if (param3 != 180) {
             field_o = 96;
           }

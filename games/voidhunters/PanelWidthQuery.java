@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends tb {
+final class PanelWidthQuery extends tb {
     static int field_c;
     static int field_e;
     static String field_d;
@@ -13,7 +13,7 @@ final class fk extends tb {
         field_d = null;
     }
 
-    final static int b(int param0) {
+    final static int getMaximumPanelWidth(int param0) {
         int var1 = 95 % ((-69 - param0) / 48);
         return GetLagStandardDeviationIn.field_r.getMaximumPanelWidth(-101);
     }

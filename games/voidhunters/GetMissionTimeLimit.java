@@ -67,7 +67,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
                 if (CarouselPlayerEventFactory.field_a <= 0) {
                   if (GetRepairModePower.field_o > SetExplosionPushMultiplier.field_p) {
                     if (SetExplosionPushMultiplier.field_p == 0) {
-                      ai.a(false, 0);
+                      GameInterfaceAssembler.assembleGameInterface(false, 0);
                     }
                     SetExplosionPushMultiplier.field_p = SetExplosionPushMultiplier.field_p + 1;
                   }
@@ -87,7 +87,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
                   } else {
                     if (CarouselPlayerEventFactory.field_a < GetRepairModePower.field_o) {
                       if (CarouselPlayerEventFactory.field_a == 0) {
-                        ai.a(true, 0);
+                        GameInterfaceAssembler.assembleGameInterface(true, 0);
                       }
                       CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a + 1;
                     }

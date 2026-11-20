@@ -30,7 +30,7 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetUseOffscreenRendering.a(24);
           }
-          jw.field_c = arguments[0].booleanValue(false);
+          CombatHelpText.field_c = arguments[0].booleanValue(false);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

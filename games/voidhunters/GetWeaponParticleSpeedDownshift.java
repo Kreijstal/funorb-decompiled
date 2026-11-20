@@ -130,7 +130,7 @@ final class GetWeaponParticleSpeedDownshift extends ConsoleCommand {
             var5[var3 + 1] = (byte)param1[var3];
           }
           if (param0 == 65535) {
-            stackIn_8_0 = SetSniperCannonRandomness.a(var2, (byte) -116);
+            stackIn_8_0 = SetSniperCannonRandomness.encodeBase64Unpadded(var2, (byte) -116);
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

@@ -159,7 +159,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[166] = SetShipAimLines.field_q;
         var2[101] = GetMachineGunAimspeed.field_p;
         var2[222] = UiComboBoxRenderer.field_a;
-        var2[207] = iea.field_d;
+        var2[207] = IntegerRecordReadQueueEntry.field_d;
         var2[47] = GetUseNiceTrails.fogOfWarSensorRange;
         var2[208] = LegacyOpenGlUnderwaterEffect.field_k;
         var2[206] = gib.field_a;
@@ -228,7 +228,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[46] = Particle.field_A;
         var2[45] = LaunchFightersOrderDefinition.field_d;
         var2[42] = FeatheredLineRasterizer.fightersPerPlayerMaximum;
-        var2[187] = ea.field_j;
+        var2[187] = ByteIndexedRecordWriteRequest.field_j;
         var2[77] = SetPhasedEnergyBeamPulseFadetime.field_o;
         var2[214] = Particle.field_q;
         var2[6] = GetSpinningBladeAimspeed.field_p;

@@ -46,7 +46,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           HighscoreValueRequest.menuActionLabels[13] = ArchiveLoadRequest.field_d;
           HighscoreValueRequest.menuActionLabels[19] = Widget.field_V + ":";
           HighscoreValueRequest.menuActionLabels[5] = ffb.field_b;
-          HighscoreValueRequest.menuActionLabels[7] = bw.field_a;
+          HighscoreValueRequest.menuActionLabels[7] = GameInterfaceText.returnToMainMenuText;
           HighscoreValueRequest.menuActionLabels[4] = DebugRequest.field_j;
           HighscoreValueRequest.menuActionLabels[12] = SetBombletSprayRandomness.field_o;
           HighscoreValueRequest.menuActionLabels[1] = GetAiFiringRangeUpshift.field_p;
@@ -124,7 +124,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipSpawnedCondition.field_e[44] = UiComboBox.field_I;
           ShipSpawnedCondition.field_e[22] = SetPhysicsCollisionPhantomForceMultiplier.field_o;
           ShipSpawnedCondition.field_e[46] = LegacyOpenGlWaterTextures.field_f;
-          ShipSpawnedCondition.field_e[16] = jw.field_a;
+          ShipSpawnedCondition.field_e[16] = CombatHelpText.slowTargetHint;
           ShipSpawnedCondition.field_e[19] = OpenGlEnvironmentMappedWaterEffect.field_h;
           ShipSpawnedCondition.field_e[38] = OpenGlEnvironmentMappedWaterEffect.field_h;
           ShipSpawnedCondition.field_e[23] = GetSniperCannonProjectileLife.field_o;
@@ -185,11 +185,11 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[56] = PanelHeightQuery.field_a;
           GetGrapplingHookSpringConstant.specialOrderLabels[55] = UiTextStyle.field_l;
           GetGrapplingHookSpringConstant.specialOrderLabels[37] = GetMissileLauncherEnergyUsed.field_o;
-          GetGrapplingHookSpringConstant.specialOrderLabels[10] = jw.field_d;
+          GetGrapplingHookSpringConstant.specialOrderLabels[10] = CombatHelpText.spawnEnemyAtMouseText;
           GetGrapplingHookSpringConstant.specialOrderLabels[21] = TextHotspotRegion.field_e;
           GetGrapplingHookSpringConstant.specialOrderLabels[40] = SetThrusterBindingBalanceThreshold.field_r;
           GetGrapplingHookSpringConstant.specialOrderLabels[16] = ModalPanel.field_y;
-          GetGrapplingHookSpringConstant.specialOrderLabels[5] = jb.field_b;
+          GetGrapplingHookSpringConstant.specialOrderLabels[5] = BoosterOrderText.fireBoostersText;
           GetGrapplingHookSpringConstant.specialOrderLabels[24] = MissionState.field_c;
           GetGrapplingHookSpringConstant.specialOrderLabels[1] = dfa.field_c;
           GetGrapplingHookSpringConstant.specialOrderLabels[19] = HotspotTextWidget.field_G;

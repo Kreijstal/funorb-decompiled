@@ -133,7 +133,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (GetMachineGunAimarc.field_q.field_o != 0) {
               SetFightersPerPlayerMaximum.field_p = false;
             }
-            if (dp.field_a.field_o == 0) {
+            if (PartitionZoneFactoryHolder.field_a.field_o == 0) {
               return;
             }
             ChatInputResetter.clearChatInput(26718);
@@ -225,7 +225,7 @@ public final class VoidHunters extends NetworkGameClient {
               GetMessageFadetime.field_o = false;
               SetMissionTerrainDebrisProbability.field_p = false;
               AgeValidator.field_f = 0;
-              aeb.field_a = true;
+              IntegerRecordWritePackets.field_a = true;
               GraphicsPresentException.field_a = false;
               HardpointDefinition.a(true);
             }
@@ -262,7 +262,7 @@ public final class VoidHunters extends NetworkGameClient {
                 GetThrusterSmallForce.field_o = false;
                 AgeValidator.field_f = -2;
                 SetMissionTerrainDebrisProbability.field_p = false;
-                aeb.field_a = true;
+                IntegerRecordWritePackets.field_a = true;
                 GetSniperCannonProjectiles.chatVisible = true;
                 HardpointDefinition.a(true);
               }
@@ -397,7 +397,7 @@ public final class VoidHunters extends NetworkGameClient {
         int var4;
         int var5;
         int var6;
-        ea var7;
+        ByteIndexedRecordWriteRequest var7;
         int var3Lifetime1;
         int var3Lifetime2;
         var6 = field_G;
@@ -478,11 +478,11 @@ public final class VoidHunters extends NetworkGameClient {
         FlipTextureOperation.field_l.updateNetwork(RequestNewestBlackboxRecording.field_p, -114);
         if (!GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 111)) {
           while (true) {
-            var7 = (ea) (SetGrapplingHookCooldown.field_o.removeFirst(true));
+            var7 = (ByteIndexedRecordWriteRequest) (SetGrapplingHookCooldown.queuedByteIndexedRecordWrites.removeFirst(true));
             if (var7 == null) {
               break;
             }
-            SetLaserReload.a(4, var7, 0);
+            SetLaserReload.enqueueByteIndexedRecordWrite(4, var7, 0);
           }
         }
         while (GetSelfDestructTimer.a(0, ta.serverPacketLengths)) {
@@ -524,7 +524,7 @@ public final class VoidHunters extends NetworkGameClient {
           if (var4 == 0 ||
             var4 == 1) {
             iwa.a((byte) -30, 2);
-            GetSalvoDamageMultiplier.a(50, 4);
+            GetSalvoDamageMultiplier.resendQueuedRecordRequests(50, 4);
             GetReverbGain.resendClientDataRequests(6, (byte) -52);
             RasterShapesTextureOperation.resendIntegerRecordRequests(5, 0);
             GetReverbDry.resetReflectionCheckQueue(-115);
@@ -536,7 +536,7 @@ public final class VoidHunters extends NetworkGameClient {
               }
             } else {
               if (GraphicsPresentException.field_a) {
-                aeb.field_a = true;
+                IntegerRecordWritePackets.field_a = true;
                 enb.field_b = true;
                 GetMessageFadetime.field_o = false;
                 if (!GetThrusterSmallForce.field_o) {
@@ -644,7 +644,7 @@ public final class VoidHunters extends NetworkGameClient {
         ArchiveIndexLoader.field_g = new ServerInfo();
         ArchiveIndexLoader.field_g.resetOptionStates((byte) -65);
         SetUseTriFill.field_o = GameKeyHandler.b(-89);
-        SetGrapplingHookMaxExtension8Force.field_o = tc.field_b;
+        SetGrapplingHookMaxExtension8Force.field_o = TextureCombineMappings.field_b;
         ncb.field_a = GetPointDefenceLaserAimspeed.field_o;
         if (UiDraggableContainer.field_E) {
           GetGrapplingHooksDamageableBySourcePlayer.e((byte) -120);
@@ -847,7 +847,7 @@ public final class VoidHunters extends NetworkGameClient {
         NanosecondClock.clearSharedReferences(4);
         BitmapFont.clearSharedReferences();
         ToolkitRasterStateStack.clearSharedReferences(89);
-        bw.clearSharedReferences(9502);
+        GameInterfaceText.clearSharedReferences(9502);
         hb.clearSharedReferences(15873);
         veb.clearSharedReferences(1);
         oua.clearSharedReferences(true);
@@ -873,12 +873,12 @@ public final class VoidHunters extends NetworkGameClient {
         ResourceArchive.clearSharedReferences((byte) 112);
         PacketBuffer.clearSharedReferences(-38);
         MonotonicMillisClock.clearSharedReferences(-101);
-        tc.clearSharedReferences((byte) 40);
+        TextureCombineMappings.clearSharedReferences((byte) 40);
         kia.clearSharedReferences(3553);
         kmb.clearSharedReferences(32768);
         wja.clearSharedReferences(false);
         bsb.clearSharedReferences(23870);
-        dp.clearSharedReferences(8);
+        PartitionZoneFactoryHolder.clearSharedReferences(8);
         lmb.clearSharedReferences((byte) -53);
         ChatMessage.clearSharedReferences((byte) 75);
         nqa.clearSharedReferences((byte) -30);
@@ -902,7 +902,7 @@ public final class VoidHunters extends NetworkGameClient {
         ThrusterBehaviour.clearSharedReferences(-69);
         WeaponBehaviour.clearSharedReferences(!param0 ? true : false);
         fra.clearSharedReferences(2147483647);
-        jb.clearSharedReferences(12472);
+        BoosterOrderText.clearSharedReferences(12472);
         SpecialOrderDefinition.clearSharedReferences((byte) -95);
         eqb.clearSharedReferences(65);
         es.clearSharedReferences(param0);
@@ -1023,7 +1023,7 @@ public final class VoidHunters extends NetworkGameClient {
         PlayerContextMenu.clearSharedReferences((byte) -106);
         lwa.clearSharedReferences(0);
         IconTextWidget.clearSharedReferences(1);
-        bs.clearSharedReferences((byte) 42);
+        SocialTabsPanel.clearSharedReferences((byte) 42);
         ooa.clearSharedReferences(126);
         DualLinkNode.clearSharedReferences(-31049);
         DeveloperConsole.clearSharedReferences((byte) 78);
@@ -1092,7 +1092,7 @@ public final class VoidHunters extends NetworkGameClient {
         TutorialProgressState.clearSharedReferences((byte) 66);
         SoftLruCache.clearSharedReferences(118);
         SpritePadding.clearSharedReferences(0);
-        jw.clearSharedReferences(false);
+        CombatHelpText.clearSharedReferences(false);
         SocketConnector.clearSharedReferences((byte) -109);
         ProxyAuthenticationException.clearSharedReferences(91);
         MissionGenerationData.clearSharedReferences((byte) -125);
@@ -1255,7 +1255,7 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlVertexDeclaration.clearSharedReferences(23008);
         tb.clearSharedReferences(-75);
         pl.clearSharedReferences((byte) -109);
-        fk.clearSharedReferences((byte) 80);
+        PanelWidthQuery.clearSharedReferences((byte) 80);
         iob.clearSharedReferences(-5509);
         vhb.clearSharedReferences(21053);
         hla.clearSharedReferences((byte) 39);
@@ -1351,7 +1351,7 @@ public final class VoidHunters extends NetworkGameClient {
         NumericLoginCredentials.clearSharedReferences((byte) 32);
         AlternateNumericLoginCredentials.clearSharedReferences(false);
         EmailLoginCredentials.clearSharedReferences((byte) 83);
-        ea.clearSharedReferences(10);
+        ByteIndexedRecordWriteRequest.clearSharedReferences(10);
         BlackBoxRecordingFactory.clearSharedReferences(false);
         IntegerArrayReadRequest.clearSharedReferences(true);
         ToolkitViewState.clearSharedReferences(1);
@@ -2367,7 +2367,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5_intLifetime2 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetPhasedEnergyBeamFireForce.a(var4_int, 32, var5_intLifetime2);
             if (!RoundResult.field_e) {
-              this.drawCachedCenteredFrame(2, 20 + PanelHeightQuery.getMaximumPanelHeight(true), fk.b(-119));
+              this.drawCachedCenteredFrame(2, 20 + PanelHeightQuery.getMaximumPanelHeight(true), PanelWidthQuery.getMaximumPanelWidth(-119));
             }
             PerlinNoiseTextureOperation.a(false, (byte) 71);
             RoundResult.field_e = true;

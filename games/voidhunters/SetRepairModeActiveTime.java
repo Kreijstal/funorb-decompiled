@@ -103,7 +103,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           PlayerContextMenu.field_k = param9;
           SetMutatorVotes.field_o = param14;
           ClientException.field_c = param10;
-          ea.field_k = param13;
+          ByteIndexedRecordWriteRequest.field_k = param13;
           SetShipAimLines.field_o = param5;
           ValidationStatusWidget.field_M = param0;
           SetRepairModeRadius.field_o = param6;
@@ -135,7 +135,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           var24.field_F = 1;
           DialogMessagePanel.field_v = new Widget(0L, DeveloperConsole.field_q);
           DialogMessagePanel.field_v.field_F = 1;
-          SpawnChoiceFactory.field_c = new Widget(0L, SetPlayerRepairAmount.field_q, bw.field_a.toUpperCase());
+          SpawnChoiceFactory.field_c = new Widget(0L, SetPlayerRepairAmount.field_q, GameInterfaceText.returnToMainMenuText.toUpperCase());
           AlphaContainer.field_w = new Widget(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
           sra.field_a = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ArchiveIndexLoader.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);

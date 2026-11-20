@@ -276,7 +276,7 @@ final class ComponentCollision extends IntrusiveNode {
                   if ((var16Lifetime1Lifetime1 != 0)) {
                     ObjectiveMarker.field_b.enabled = false;
                     if (!(!ObjectiveMarker.field_b.field_Q)) {
-                      if (0 == GetReverbWidth.field_o.field_a.field_Ab) {
+                      if (0 == GetReverbWidth.field_o.tabs.field_Ab) {
                         NebulaFieldFactory.field_a = ClientDataReadRequest.field_e;
                       } else {
                         NebulaFieldFactory.field_a = SetReverbGain.a(SetInnateThrusters.field_p, new String[]{bd.field_a}, 121);
@@ -349,7 +349,7 @@ final class ComponentCollision extends IntrusiveNode {
           stackIn_175_0 = SetUseCircleFill.field_o;
           stackIn_176_1 = (param3) && (!param4) && (GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_175_0).updateInput(stackIn_176_1, 1332);
-          GetReverbWidth.field_o.field_a.i(10000);
+          GetReverbWidth.field_o.tabs.i(10000);
           if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
               sh.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);

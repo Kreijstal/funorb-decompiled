@@ -332,7 +332,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
     }
 
     final static void disposeChatInputDialog(byte param0) {
-        dp.field_a = null;
+        PartitionZoneFactoryHolder.field_a = null;
         GetMachineGunAimarc.field_q = null;
         if (lsa.savedChatInputWidget != null) {
           WidgetNode.field_l = ServerTick.field_d;

@@ -21,7 +21,7 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
         if (param0 != -63) {
           return 85;
         }
-        return ea.field_j;
+        return ByteIndexedRecordWriteRequest.field_j;
     }
 
     final int getFiringSoundId(boolean param0) {
@@ -77,9 +77,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
         if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
           SpecialOrderButtonState.field_i.addChild(-561, DialogMessagePanel.field_v);
           SpecialOrderButtonState.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
-          lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
+          lc.field_b = new SocialTabsPanel(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
           tb.field_a = new Widget(0L, (Widget) null);
-          tb.field_a.addChild(param0 ^ -9108, lc.field_b.field_a);
+          tb.field_a.addChild(param0 ^ -9108, lc.field_b.tabs);
           tb.field_a.addChild(-561, SpawnChoiceFactory.field_c);
           SetGrapplingHookMinLength.a(5);
           if (param0 != 8611) {
@@ -89,9 +89,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
           return;
         }
         SpecialOrderButtonState.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
-        lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
+        lc.field_b = new SocialTabsPanel(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
         tb.field_a = new Widget(0L, (Widget) null);
-        tb.field_a.addChild(param0 ^ -9108, lc.field_b.field_a);
+        tb.field_a.addChild(param0 ^ -9108, lc.field_b.tabs);
         tb.field_a.addChild(-561, SpawnChoiceFactory.field_c);
         SetGrapplingHookMinLength.a(5);
         if (param0 == 8611) {

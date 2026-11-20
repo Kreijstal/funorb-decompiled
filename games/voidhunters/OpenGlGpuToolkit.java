@@ -1105,7 +1105,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         if (param0 < 109) {
           return;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34162, tc.toOpenGlCombineOperation(8448, this.alphaCombineOperations[this.activeTextureUnit]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, TextureCombineMappings.toOpenGlCombineOperation(8448, this.alphaCombineOperations[this.activeTextureUnit]));
     }
 
     final void setBloomParameters(float param0, float param1, float param2) {
@@ -1550,7 +1550,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         if (param0 > -64) {
           return;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, tc.toOpenGlCombineOperation(8448, this.rgbCombineOperations[this.activeTextureUnit]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, TextureCombineMappings.toOpenGlCombineOperation(8448, this.rgbCombineOperations[this.activeTextureUnit]));
     }
 
     final void setTextureCoordinateIndex(int param0, int param1) {

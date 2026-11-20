@@ -5,7 +5,7 @@ final class ShipBodyFactory implements GameStateFactory {
     static ToolkitFontMetrics[] field_b;
     static String field_a;
 
-    final static void a(byte param0, boolean param1) {
+    final static void layoutGameInterface(byte param0, boolean param1) {
         int var6 = 0;
         Widget dupTemp$0 = null;
         int var11 = 0;
@@ -43,7 +43,7 @@ final class ShipBodyFactory implements GameStateFactory {
             stackIn_4_0 = SetExplosionPushMultiplier.field_p;
           }
           lkb.a(stackIn_4_0, (byte) -106);
-          GetReverbWidth.field_o.a(0, -92, -2 + WaterTextures.field_g.height - 40, 0, WaterTextures.field_g.width);
+          GetReverbWidth.field_o.layout(0, -92, -2 + WaterTextures.field_g.height - 40, 0, WaterTextures.field_g.width);
           SetPhasedEnergyBeamPulsetime.field_o.setBounds(0, -11, SetOndamageParticleLife.field_o.width, 0, DialogMessagePanel.field_w);
           stackIn_6_0 = SecondaryNodeDequeIterator.field_a;
           stackIn_6_1 = 0;
@@ -60,7 +60,7 @@ final class ShipBodyFactory implements GameStateFactory {
           GetShipToShipRamDamage.field_q.setBounds(0, -41, WaterTextures.field_g.width, WaterTextures.field_g.height - 40, 40);
           GetWeaponParticleSpeedDownshift.field_q.setBounds(0, 121, ThreeSliceButtonStyle.field_r.width, 0, 30);
           if (param0 != 100) {
-            ShipBodyFactory.a((byte) -23, true);
+            ShipBodyFactory.layoutGameInterface((byte) -23, true);
           }
           SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.setBounds(0, 124, ThreeSliceButtonStyle.field_r.width, 30, -32 + ThreeSliceButtonStyle.field_r.height - 40);
           var2_int = 3 + PasswordValidator.field_l;
@@ -182,7 +182,7 @@ final class ShipBodyFactory implements GameStateFactory {
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          ShipBodyFactory.a((byte) 101, true);
+          ShipBodyFactory.layoutGameInterface((byte) 101, true);
         }
         return (SerializableGameState[]) ((Object) new ShipBody[param1]);
     }

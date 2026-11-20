@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetLagStandardDeviationIn extends ConsoleCommand {
-    static IntrusiveDeque field_q;
+    static IntrusiveDeque pendingRecordReads;
     static int[] field_o;
     static ModalStack field_r;
     static int field_p;
@@ -10,7 +10,7 @@ final class GetLagStandardDeviationIn extends ConsoleCommand {
     public static void clearSharedReferences(boolean param0) {
         field_r = null;
         field_o = null;
-        field_q = null;
+        pendingRecordReads = null;
         if (!param0) {
           GetLagStandardDeviationIn.clearSharedReferences(true);
         }
@@ -29,7 +29,7 @@ final class GetLagStandardDeviationIn extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_q = (IntrusiveDeque) null;
+            pendingRecordReads = (IntrusiveDeque) null;
           }
           stackIn_3_0 = new ConsoleValue(SetMaxShipSize.e((byte) -97));
           return stackIn_3_0;
@@ -49,6 +49,6 @@ final class GetLagStandardDeviationIn extends ConsoleCommand {
 
     static {
         field_p = 1;
-        field_q = new IntrusiveDeque();
+        pendingRecordReads = new IntrusiveDeque();
     }
 }

@@ -13,12 +13,12 @@ final class TextNode extends IntrusiveNode {
         RuntimeException var1 = null;
         var4 = VoidHunters.field_G;
         try {
-          var1_int = bs.field_b[0];
+          var1_int = SocialTabsPanel.field_b[0];
           if (param0 != -15) {
             return;
           }
-          for (var2 = 1; var2 < bs.field_b.length; var2++) {
-            var3 = bs.field_b[var2];
+          for (var2 = 1; var2 < SocialTabsPanel.field_b.length; var2++) {
+            var3 = SocialTabsPanel.field_b[var2];
             ArrayOperations.copy(SetMissionDebrisDefaultProbability.field_p, var2 << 4, SetMissionDebrisDefaultProbability.field_p, var1_int, var3);
             var1_int = var1_int + var3;
           }

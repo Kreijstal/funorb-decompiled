@@ -188,14 +188,14 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
             ColorKeyScaleTextureOperation.d(25);
           }
           SetVariableAction.field_b = 0;
-          if (aeb.field_a) {
+          if (IntegerRecordWritePackets.field_a) {
             GetDebrisThrowable.a(false, "Destroying game");
             MatchingFieldValidator.field_g = null;
-            aeb.field_a = false;
+            IntegerRecordWritePackets.field_a = false;
             ProxyAuthenticationException.field_a = null;
           }
           if (GetMachineGunAimarc.field_p) {
-            SetGrapplingHookCooldown.field_o = new IntrusiveDeque();
+            SetGrapplingHookCooldown.queuedByteIndexedRecordWrites = new IntrusiveDeque();
             var9 = TutorialController.field_a;
             var7 = var9;
             var4 = var7;

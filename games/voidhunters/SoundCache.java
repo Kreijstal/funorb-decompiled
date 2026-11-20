@@ -156,7 +156,7 @@ final class SoundCache {
             GetBombletSprayReload.field_q = param10;
             SetNebulaProximityFadeDownshift.field_p = param8;
             GetDebrisSurvives.field_o = param5;
-            fk.field_c = param9;
+            PanelWidthQuery.field_c = param9;
             GetUseRectFill.field_p = param12;
             ProjectileFactory.field_a = param3;
             if (param2 < 46) {

@@ -58,7 +58,7 @@ final class GetRepairModeActiveTime extends ConsoleCommand {
         if (SetShipSpawnInvulnerabilityTime.field_o == null) {
           return false;
         }
-        if (!tc.field_c.a((byte) 98)) {
+        if (!TextureCombineMappings.field_c.a((byte) 98)) {
           return false;
         }
         return true;

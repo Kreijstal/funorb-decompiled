@@ -257,7 +257,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           }
           RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 2;
           var5_int = RequestNewestBlackboxRecording.field_p.position;
-          RequestNewestBlackboxRecording.field_p.writeInt(fk.field_c, 332614536);
+          RequestNewestBlackboxRecording.field_p.writeInt(PanelWidthQuery.field_c, 332614536);
           RequestNewestBlackboxRecording.field_p.writeLong(GetDebrisSurvives.field_o, 90);
           var6 = 0;
           if (GetRespawnTime.field_o) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetGrapplingHookCooldown extends ConsoleCommand {
-    static IntrusiveDeque field_o;
+    static IntrusiveDeque queuedByteIndexedRecordWrites;
     static String field_p;
 
     SetGrapplingHookCooldown(String param0, Class[] param1, String param2) {
@@ -53,9 +53,9 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_o = null;
+        queuedByteIndexedRecordWrites = null;
         if (param0 != -63) {
-          field_o = (IntrusiveDeque) null;
+          queuedByteIndexedRecordWrites = (IntrusiveDeque) null;
           field_p = null;
           return;
         }
@@ -96,6 +96,6 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
 
     static {
         field_p = "<%0> left";
-        field_o = new IntrusiveDeque();
+        queuedByteIndexedRecordWrites = new IntrusiveDeque();
     }
 }

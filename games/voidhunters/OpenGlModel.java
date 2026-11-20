@@ -389,7 +389,7 @@ final class OpenGlModel extends Model3D {
         ModelData.lastNetworkReadTimeMillis = dupTemp$2;
         if (1 != GetPointDefenceLaserProjectiles.field_o.status) {
         }
-        tc.field_c = GetMissileLauncherRandomness.field_o;
+        TextureCombineMappings.field_c = GetMissileLauncherRandomness.field_o;
         GetPointDefenceLaserProjectiles.field_o = null;
         return true;
     }

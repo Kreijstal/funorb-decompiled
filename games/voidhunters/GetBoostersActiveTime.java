@@ -100,7 +100,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (tc.field_c == SetBombletSprayReload.field_p) {
+          if (TextureCombineMappings.field_c == SetBombletSprayReload.field_p) {
             ehb.field_f = null;
             RequestNewestBlackboxRecording.field_p.position = 0;
             if (param5 == null) {
@@ -155,15 +155,15 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var10, -124);
             }
             TileTextureOperation.b(-1, 113);
-            tc.field_c = bs.field_d;
+            TextureCombineMappings.field_c = SocialTabsPanel.field_d;
           }
-          if (tc.field_c == bs.field_d &&
+          if (TextureCombineMappings.field_c == SocialTabsPanel.field_d &&
             ShipBlueprint.a(1, 30000)) {
             var9Lifetime1 = qga.field_b.readUnsignedByte((byte) -124);
             qga.field_b.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
-              tc.field_c = ComponentWordEncoder.field_a;
+              TextureCombineMappings.field_c = ComponentWordEncoder.field_a;
               gob.field_a = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
@@ -175,7 +175,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 return stackIn_34_0;
               }
               if (99 != var9Lifetime1) {
-                tc.field_c = OpenGlGpuCubeTexture.field_k;
+                TextureCombineMappings.field_c = OpenGlGpuCubeTexture.field_k;
                 PartitioningManagerFactory.field_a = -1;
                 NetworkMessageState.incomingOpcode = var9Lifetime1;
               } else {
@@ -185,7 +185,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               }
             }
           }
-          if (tc.field_c == ComponentWordEncoder.field_a) {
+          if (TextureCombineMappings.field_c == ComponentWordEncoder.field_a) {
             var9Lifetime2 = 2;
             if (ShipBlueprint.a(var9Lifetime2, param4 ^ 30000)) {
               var10Lifetime1 = qga.field_b.readUnsignedShort(1869);
@@ -205,7 +205,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           if (param4 != 0) {
             GetBoostersActiveTime.f((byte) 86);
           }
-          if (tc.field_c == OpenGlGpuCubeTexture.field_k &&
+          if (TextureCombineMappings.field_c == OpenGlGpuCubeTexture.field_k &&
             PlayerJoinFactory.b((byte) 46)) {
             if (NetworkMessageState.incomingOpcode == 255) {
               var9_ref_String = qga.field_b.readNullableString(0);

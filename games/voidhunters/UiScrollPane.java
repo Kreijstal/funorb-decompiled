@@ -88,7 +88,7 @@ final class UiScrollPane extends UiArrayContainer {
         TextHotspotRegion.field_l = param1;
         SetPointDefenceLaserProjectileDamage.field_p = param5;
         OpenGlToolkit.field_Ib = param8;
-        ea.field_d = param6;
+        ByteIndexedRecordWriteRequest.field_d = param6;
         if (param4 != -2) {
           return;
         }

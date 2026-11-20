@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aeb {
+final class IntegerRecordWritePackets {
     static boolean field_a;
 
     final static void sendIntegerRecordWrite(int param0, int param1, IntegerRecordWriteRequest param2) {
@@ -21,7 +21,7 @@ final class aeb {
           var5.writeInt(param2.field_i, 332614536);
           var5.writeCrc(param1 ^ -21109, var4);
           if (param1 != -21584) {
-            aeb.a(47, -32);
+            IntegerRecordWritePackets.a(47, -32);
           }
           var5.writeLengthByte(var5.position - var4, -129);
         } catch (RuntimeException runtimeException) {

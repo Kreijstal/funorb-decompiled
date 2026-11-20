@@ -913,7 +913,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime94 = HuffmanCodec.fetchLocalizedResource((byte) -44, "round_x");
           if (null != var2Lifetime94) {
-            bw.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime94);
+            GameInterfaceText.roundTemplate = Cp1252Strings.decode((byte) -125, var2Lifetime94);
           }
           var2Lifetime95 = HuffmanCodec.fetchLocalizedResource((byte) -65, "waiting_for_players");
           if (null != var2Lifetime95) {
@@ -997,7 +997,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime115 = HuffmanCodec.fetchLocalizedResource((byte) -71, "COMPONENT_USE_WEAPON_PLASMABALL_TEXT");
           if (null != var2Lifetime115) {
-            jw.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime115);
+            CombatHelpText.slowTargetHint = Cp1252Strings.decode((byte) -125, var2Lifetime115);
           }
           var2Lifetime116 = HuffmanCodec.fetchLocalizedResource((byte) -77, "COMPONENT_USE_WEAPON_FIGHTERBAY_TEXT");
           if (var2Lifetime116 != null) {
@@ -1301,7 +1301,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime191 = HuffmanCodec.fetchLocalizedResource((byte) -67, "ORDER_BOOSTERS_FIRE");
           if (var2Lifetime191 != null) {
-            jb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime191);
+            BoosterOrderText.fireBoostersText = Cp1252Strings.decode((byte) -125, var2Lifetime191);
           }
           var2Lifetime192 = HuffmanCodec.fetchLocalizedResource((byte) -45, "ORDER_FIGHTERS_LAUNCH_SHORT");
           if (var2Lifetime192 != null) {
@@ -1329,7 +1329,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime198 = HuffmanCodec.fetchLocalizedResource((byte) -57, "ORDER_SPAWN_ENEMY");
           if (var2Lifetime198 != null) {
-            jw.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime198);
+            CombatHelpText.spawnEnemyAtMouseText = Cp1252Strings.decode((byte) -125, var2Lifetime198);
           }
           var2Lifetime199 = HuffmanCodec.fetchLocalizedResource((byte) -87, "ORDER_SAVE_BLUEPRINT");
           if (var2Lifetime199 != null) {

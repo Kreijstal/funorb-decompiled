@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetLaserReload extends ConsoleCommand {
-    final static void a(int param0, ea param1, int param2) {
+    final static void enqueueByteIndexedRecordWrite(int param0, ByteIndexedRecordWriteRequest param1, int param2) {
         if (param2 != 0) {
           return;
         }
         try {
-          OpenGlVertexBufferObject.field_k.addLast(-10258, param1);
-          GetCountermeasureLauncherAimspeed.a(param1, 1, param0);
+          OpenGlVertexBufferObject.pendingByteIndexedRecordWrites.addLast(-10258, param1);
+          GetCountermeasureLauncherAimspeed.sendByteIndexedRecordWrite(param1, 1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dba.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

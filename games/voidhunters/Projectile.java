@@ -168,8 +168,8 @@ final class Projectile extends MovingObject implements DiffableState {
                     var4Lifetime1 = ((ShipBody) (var3)).chassis.finalx;
                     var5Lifetime1 = ((ShipBody) (var3)).chassis.finaly;
                   } else {
-                    var4Lifetime1 = this.x + (iea.field_d * GetNumStars.cosAngle(this.angle, (byte) 28) >> 8);
-                    var5Lifetime1 = this.y + (iea.field_d * TextureLineShape.sinAngle(this.angle, 70) >> 8);
+                    var4Lifetime1 = this.x + (IntegerRecordReadQueueEntry.field_d * GetNumStars.cosAngle(this.angle, (byte) 28) >> 8);
+                    var5Lifetime1 = this.y + (IntegerRecordReadQueueEntry.field_d * TextureLineShape.sinAngle(this.angle, 70) >> 8);
                   }
                   var6Lifetime1 = var4Lifetime1 - this.x >> 6;
                   var7 = var5Lifetime1 - this.y >> 6;
@@ -185,9 +185,9 @@ final class Projectile extends MovingObject implements DiffableState {
                       this.x = this.x + this.dx;
                       return;
                     }
-                    var12 = var9 * iea.field_d / var11;
+                    var12 = var9 * IntegerRecordReadQueueEntry.field_d / var11;
                     this.dx = this.dx + var12;
-                    var13 = var10 * iea.field_d / var11;
+                    var13 = var10 * IntegerRecordReadQueueEntry.field_d / var11;
                     this.dy = this.dy + var13;
                   }
                 }

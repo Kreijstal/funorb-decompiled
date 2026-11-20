@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, String param6, int param7) {
+    final static void drawRightAlignedText(int param0, int param1, int param2, boolean param3, int param4, int param5, String param6, int param7) {
         RuntimeException var8 = null;
         ToolkitFont stackIn_8_0;
         int stackIn_8_1;
@@ -43,7 +43,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
         }
     }
 
-    final static void a(ea param0, int param1, int param2) {
+    final static void sendByteIndexedRecordWrite(ByteIndexedRecordWriteRequest param0, int param1, int param2) {
         IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
@@ -52,8 +52,8 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(0, param1);
-          var5.writeByte(param1 ^ 1, param0.field_e);
-          var5.writeByte(0, param0.field_g);
+          var5.writeByte(param1 ^ 1, param0.recordType);
+          var5.writeByte(0, param0.recordId);
           var5.writeInt(param0.field_i, param1 ^ 332614537);
           var5.writeInt(param0.field_h, 332614536);
           var5.writeInt(param0.field_l, param1 ^ 332614537);
@@ -67,7 +67,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
-        ea var4 = null;
+        ByteIndexedRecordWriteRequest var4 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -75,8 +75,8 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            var4 = (ea) null;
-            GetCountermeasureLauncherAimspeed.a((ea) null, 4, -26);
+            var4 = (ByteIndexedRecordWriteRequest) null;
+            GetCountermeasureLauncherAimspeed.sendByteIndexedRecordWrite((ByteIndexedRecordWriteRequest) null, 4, -26);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(129, 85));
           return stackIn_3_0;

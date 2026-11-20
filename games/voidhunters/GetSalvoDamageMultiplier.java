@@ -38,26 +38,26 @@ final class GetSalvoDamageMultiplier extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendQueuedRecordRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        ea var4 = null;
+        ByteIndexedRecordWriteRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (ea) (OpenGlVertexBufferObject.field_k.first(0));
+          var4 = (ByteIndexedRecordWriteRequest) (OpenGlVertexBufferObject.pendingByteIndexedRecordWrites.first(0));
           while (var4 != null) {
-            GetCountermeasureLauncherAimspeed.a(var4, 1, param1);
-            var4 = (ea) (OpenGlVertexBufferObject.field_k.next((byte) 28));
+            GetCountermeasureLauncherAimspeed.sendByteIndexedRecordWrite(var4, 1, param1);
+            var4 = (ByteIndexedRecordWriteRequest) (OpenGlVertexBufferObject.pendingByteIndexedRecordWrites.next((byte) 28));
           }
           if (param0 != 50) {
             field_p = -54;
           }
-          var2 = GetLagStandardDeviationIn.field_q.first(0);
+          var2 = GetLagStandardDeviationIn.pendingRecordReads.first(0);
           while (var2 != null) {
-            GetTorqueDownshift.b(-105, param1);
-            var2 = GetLagStandardDeviationIn.field_q.next((byte) 9);
+            GetTorqueDownshift.sendRecordReadRequest(-105, param1);
+            var2 = GetLagStandardDeviationIn.pendingRecordReads.next((byte) 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

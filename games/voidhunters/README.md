@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1444/1572 classes and 7284/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 128 opaque classes and 931 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1456/1572 classes and 7297/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 116 opaque classes and 918 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -108,6 +108,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `MissionBuilder` now names every method: terrain subdivision/weights, nebula and debris population, objective entities/events, reinforcement and scoring rules, opposite-team duplication/remapping, team swaps and lobby-option compatibility. `PolygonAreaEstimator` names the original signed area approximation, and clearance areas expose their nebula-clearing contract. Original omitted closing edges, integer overflow, repeated-index relocation, weighted overwrite/retry behavior, timer labels, RNG sequences, event ordering and guards remain unchanged.
 
 `OpenGlToolkit`, `OpenGlGpuToolkit` and `CommonGameState` now name every method, including material/2D setup, deferred GPU deletion, model/view transforms, visible snapshots and state-checksum diagnostics. `MessageDialogPresenter` names modal-message layout, while runtime settings, chat-history clearing and current-state-only serialization have named helpers. Original GL state/queue ordering, serialization flags, unchecked checksum mismatch, settings aliases, float arithmetic and guards remain unchanged.
+
+`GameInterfaceAssembler` and `SocialTabsPanel` identify shared game/tips, friends and ignore containers; interface text and panel-width/factory holders have descriptive names. `ByteIndexedRecordWriteRequest`, `IntegerRecordReadQueueEntry` and `IntegerRecordWritePackets` expose record queues and framing helpers. Ellipse rasterization, texture-combine mappings, component-state submission and text encoding/drawing also have named entrypoints. Original packet bytes/CRC, byte-index versus signed-smart framing, queue ordering, private constructor failures, layout arithmetic and guards remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

@@ -432,10 +432,10 @@ final class ResourceArchive {
               }
               if (var30.field_Q &&
                 var6Lifetime2 > 0) {
-                if (ea.field_k == null) {
+                if (ByteIndexedRecordWriteRequest.field_k == null) {
                   stackIn_153_0 = null;
                 } else {
-                  stackIn_153_0 = ea.field_k[-1 + var6Lifetime2];
+                  stackIn_153_0 = ByteIndexedRecordWriteRequest.field_k[-1 + var6Lifetime2];
                 }
                 var8 = stackIn_153_0;
                 if (var8 != null) {

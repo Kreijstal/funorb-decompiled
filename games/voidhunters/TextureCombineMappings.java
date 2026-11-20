@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc {
+final class TextureCombineMappings {
     static gj field_c;
     static boolean field_a;
     static boolean[][] field_b;
@@ -56,7 +56,7 @@ final class tc {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendComponentStateSetting(int param0, int param1, int param2) {
         AdminMessage var3 = new AdminMessage();
         var3.value = param1;
         var3.index = 31 + param2;

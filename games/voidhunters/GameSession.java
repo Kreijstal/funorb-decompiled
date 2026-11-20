@@ -610,7 +610,7 @@ final class GameSession {
         var19 = VoidHunters.field_G;
         try {
           var5_int = OpenGlTexture1D.field_i ? 1 : 0;
-          stackIn_4_0 = (!jw.field_c) ? 0 : 1;
+          stackIn_4_0 = (!CombatHelpText.field_c) ? 0 : 1;
           var6 = stackIn_4_0;
           if (OpenGlTexture1D.field_i &&
             !GetWorldWidthUpshift.a(param1 + 15684)) {
@@ -2492,7 +2492,7 @@ final class GameSession {
               var19 = var45;
               var20 = GetTorqueDownshift.a(var18Lifetime1, -58);
               if (var20 > 1) {
-                var19 = var45 + " (" + SetReverbGain.a(bw.field_c, new String[]{Integer.toString(var20 - (var40.getRoundsLeft((byte) 28) - 1))}, 107) + ")";
+                var19 = var45 + " (" + SetReverbGain.a(GameInterfaceText.roundTemplate, new String[]{Integer.toString(var20 - (var40.getRoundsLeft((byte) 28) - 1))}, 107) + ")";
               }
               SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(4, var19, 13879) >> 1), 1, GetPointDefenceLaserProjectiles.a(false, var16) * 7 / 4 + var14 + var15 - GetPointDefenceLaserProjectiles.a(false, 4), var19, 4, 16777215, (byte) -85);
               var21Lifetime1 = -1;
@@ -7969,7 +7969,7 @@ final class GameSession {
               GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, true, (byte) -85, -2);
             }
             GetMessageFadetime.field_o = false;
-            aeb.field_a = true;
+            IntegerRecordWritePackets.field_a = true;
             ColorKeyScaleTextureOperation.d(991426348);
             AgeValidator.field_f = -2;
             GetSniperCannonProjectiles.chatVisible = true;

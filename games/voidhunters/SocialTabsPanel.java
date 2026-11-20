@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bs {
+final class SocialTabsPanel {
     static gj field_d;
-    ooa field_a;
+    ooa tabs;
     static int[] field_b;
     static int field_c;
 
-    bs(String param0, Widget param1) {
+    SocialTabsPanel(String param0, Widget param1) {
         String[] var3 = null;
         Widget[] var4 = null;
         try {
           var3 = new String[]{param0, GetBloomCoefficientPercentage.field_q, RequestNewestBlackboxRecording.field_o};
           var4 = new Widget[]{param1, PlayerJoinFactory.field_c, (Widget) ((Object) AttachmentInputState.field_b)};
-          this.field_a = new ooa(0L, vhb.field_c, var3, EscapePodFactory.field_a, var4, 0);
+          this.tabs = new ooa(0L, vhb.field_c, var3, EscapePodFactory.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -21,7 +21,7 @@ final class bs {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 < 41) {
-          bs.clearSharedReferences((byte) 78);
+          SocialTabsPanel.clearSharedReferences((byte) 78);
           field_d = null;
           field_b = null;
           return;
@@ -30,11 +30,11 @@ final class bs {
         field_b = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void layout(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
         int var7 = 5;
         if (param1 <= -71) {
-          this.field_a.a(param3, param4, var6, var7, 60, param2, param0);
+          this.tabs.a(param3, param4, var6, var7, 60, param2, param0);
           OpenGlCubeTexture.field_h.setBounds(0, 120, PlayerJoinFactory.field_c.width, 0, DialogMessagePanel.field_w);
           SetCountermeasureLauncherRandomness.field_o.setBounds(0, -25, PlayerJoinFactory.field_c.width - ResourceNode.field_a - 84, 2 + DialogMessagePanel.field_w, 18);
           GameKeyHandler.field_b.setBounds(-2 + (PlayerJoinFactory.field_c.width - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, DialogMessagePanel.field_w + 2, 18);

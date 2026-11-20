@@ -79,7 +79,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.zones = (PartitionZone[]) (SetAutoDetail.a(8, dp.field_b, param0, 1, -76, this.zones));
+          this.zones = (PartitionZone[]) (SetAutoDetail.a(8, PartitionZoneFactoryHolder.partitionZoneFactory, param0, 1, -76, this.zones));
           if (param1) {
             this.markChanged(-8);
           }
@@ -98,7 +98,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
         }
         try {
           var3.revision = this.revision;
-          var3.zones = (PartitionZone[]) (SpriteDimensions.copyStateArrayByMode(var3.zones, this.zones, 1, dp.field_b, false));
+          var3.zones = (PartitionZone[]) (SpriteDimensions.copyStateArrayByMode(var3.zones, this.zones, 1, PartitionZoneFactoryHolder.partitionZoneFactory, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cda.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -220,7 +220,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
         if (param0 <= 118) {
           this.revision = -59;
         }
-        this.zones = (PartitionZone[]) (MapClearanceAreaFactory.a(this.zones, var7, dp.field_b, true, true, 1));
+        this.zones = (PartitionZone[]) (MapClearanceAreaFactory.a(this.zones, var7, PartitionZoneFactoryHolder.partitionZoneFactory, true, true, 1));
         this.markChanged(125);
         return var7;
     }
@@ -261,7 +261,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
         if (var5 == -1) {
           return false;
         }
-        this.zones = (PartitionZone[]) (GetSalvoUsesAllEnergy.a(dp.field_b, var5, 15667, this.zones));
+        this.zones = (PartitionZone[]) (GetSalvoUsesAllEnergy.a(PartitionZoneFactoryHolder.partitionZoneFactory, var5, 15667, this.zones));
         this.markChanged(-100);
         if (this.zones != null &&
           this.zones.length != 0) {

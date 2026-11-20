@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends IntrusiveNode {
+final class ByteIndexedRecordWriteRequest extends IntrusiveNode {
     int field_f;
     static int field_j;
     static int field_d;
     static String[] field_k;
     int field_h;
     int field_i;
-    int field_g;
-    int field_e;
+    int recordId;
+    int recordType;
     int field_l;
 
     public static void clearSharedReferences(int param0) {
         field_k = null;
         if (param0 != 10) {
-          ea.clearSharedReferences(-25);
+          ByteIndexedRecordWriteRequest.clearSharedReferences(-25);
         }
     }
 
-    private ea() throws Throwable {
+    private ByteIndexedRecordWriteRequest() throws Throwable {
         throw new Error();
     }
 

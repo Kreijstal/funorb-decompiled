@@ -575,7 +575,7 @@ final class GameMenuScreen {
                                         if (null != MatchingFieldValidator.field_g) {
                                           MatchingFieldValidator.field_g.saveHintsAndOpenMainMenu(param1, -10510);
                                         }
-                                        aeb.field_a = true;
+                                        IntegerRecordWritePackets.field_a = true;
                                         GetMessageFadetime.field_o = false;
                                         if (SocketNetworkArchiveClient.g(-118) &&
                                           GraphicsPresentException.field_a) {

@@ -29,13 +29,13 @@ final class TextureEllipseShape extends TextureRasterShape {
         if (param0 == -112) {
           var6 = this.centerY * param2 >> 12;
           var7 = param2 * this.radiusY >> 12;
-          mf.a(var4, var7, param0 + 17112, var5, this.fillColor, var6);
+          EllipseRasterizer.fillEllipse(var4, var7, param0 + 17112, var5, this.fillColor, var6);
           return;
         }
         this.centerY = -14;
         var6Lifetime1 = this.centerY * param2 >> 12;
         var7Lifetime1 = param2 * this.radiusY >> 12;
-        mf.a(var4, var7Lifetime1, param0 + 17112, var5, this.fillColor, var6Lifetime1);
+        EllipseRasterizer.fillEllipse(var4, var7Lifetime1, param0 + 17112, var5, this.fillColor, var6Lifetime1);
     }
 
     final void drawFilledAndOutline(int param0, byte param1, int param2) {

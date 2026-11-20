@@ -232,7 +232,7 @@ final class ScrollPaneWidget extends Widget {
           stackIn_83_0 = SetUseCircleFill.field_o;
           stackIn_84_1 = (param0) && (!param2) && (GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_83_0).updateInput(stackIn_84_1, 1332);
-          GetReverbWidth.field_o.field_a.i(10000);
+          GetReverbWidth.field_o.tabs.i(10000);
           if (SetThrusterParticleSpeedDownshift.field_o != null) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
               LegacyOpenGlShader.a(false, param3);

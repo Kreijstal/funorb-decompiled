@@ -1129,7 +1129,7 @@ final class GpuModel extends Model3D {
             !MovingObjectFactory.a(this.field_s, -1104, this.field_I)) {
             return;
           }
-          this.field_H = new GpuIndexBufferOwner(iea.a(this.field_I, this.field_s, (byte) -106));
+          this.field_H = new GpuIndexBufferOwner(IntegerRecordReadQueueEntry.a(this.field_I, this.field_s, (byte) -106));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

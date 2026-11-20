@@ -73,7 +73,7 @@ final class FadingMidiPcmStream extends MidiPcmStream {
         stackIn_21_0 = GetTorpedoProjectiles.field_o;
         stackIn_22_1 = (param0) && (!param1) && (TutorialController.field_d);
         ((Widget) (Object) stackIn_21_0).updateInput(stackIn_22_1, 1332);
-        lc.field_b.field_a.i(10000);
+        lc.field_b.tabs.i(10000);
         if (SpawnChoiceFactory.field_c.field_o != 0) {
           MessageLog.field_d = true;
         }

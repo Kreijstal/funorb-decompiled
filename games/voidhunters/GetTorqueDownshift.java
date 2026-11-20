@@ -36,7 +36,7 @@ final class GetTorqueDownshift extends ConsoleCommand {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendRecordReadRequest(int param0, int param1) {
         IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
         var2.writeIsaacByte(24335, param1);
         var2.writeByte(0, 1);

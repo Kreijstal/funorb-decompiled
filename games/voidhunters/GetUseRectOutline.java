@@ -37,10 +37,10 @@ final class GetUseRectOutline extends ConsoleCommand {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);
                 } else {
-                  ShipBodyFactory.a((byte) 100, true);
+                  ShipBodyFactory.layoutGameInterface((byte) 100, true);
                 }
               } else {
-                ShipBodyFactory.a((byte) 100, false);
+                ShipBodyFactory.layoutGameInterface((byte) 100, false);
               }
             }
             if (!param7) {
@@ -100,10 +100,10 @@ final class GetUseRectOutline extends ConsoleCommand {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);
                 } else {
-                  ShipBodyFactory.a((byte) 100, true);
+                  ShipBodyFactory.layoutGameInterface((byte) 100, true);
                 }
               } else {
-                ShipBodyFactory.a((byte) 100, false);
+                ShipBodyFactory.layoutGameInterface((byte) 100, false);
               }
             }
             if (!param7) {

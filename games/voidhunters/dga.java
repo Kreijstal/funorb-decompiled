@@ -702,7 +702,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("pressf10toquickchat", 23100);
                 if (var2 != null) {
-                  bw.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  GameInterfaceText.quickChatShortcutText = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("dob_chatdisabled", 23100);
                 if (var2 != null) {
@@ -992,7 +992,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_2_2", 23100);
                 if (var2 != null) {
-                  fk.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  PanelWidthQuery.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("createafreeaccount", 23100);
                 if (var2 != null) {
@@ -1938,7 +1938,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("returntomainmenu", 23100);
                 if (var2 != null) {
-                  bw.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  GameInterfaceText.returnToMainMenuText = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("returntopausemenu", 23100);
                 if (null != var2) {

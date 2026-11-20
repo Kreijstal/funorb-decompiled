@@ -269,7 +269,7 @@ final class CarouselGameClient {
         try {
           var3 = new DebugMessage();
           var3.field_b = (DebugSendable) ((Object) new DebugRequest("<RequestNewestBlackBox>"));
-          SetBuildViewAutozoomEndOnAction.a(0, var3, param1, fk.field_e);
+          SetBuildViewAutozoomEndOnAction.a(0, var3, param1, PanelWidthQuery.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -713,7 +713,7 @@ final class CarouselGameClient {
         try {
           var4 = new DebugMessage();
           var4.field_b = (DebugSendable) ((Object) new DebugRequest("<SetCarouselConstant>" + param2));
-          SetBuildViewAutozoomEndOnAction.a(param1 ^ param1, var4, param0, fk.field_e);
+          SetBuildViewAutozoomEndOnAction.a(param1 ^ param1, var4, param0, PanelWidthQuery.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -754,7 +754,7 @@ final class CarouselGameClient {
           }
           var4 = new DebugMessage();
           var4.field_b = (DebugSendable) ((Object) new DebugRequest(param1));
-          SetBuildViewAutozoomEndOnAction.a(0, var4, param2, fk.field_e);
+          SetBuildViewAutozoomEndOnAction.a(0, var4, param2, PanelWidthQuery.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

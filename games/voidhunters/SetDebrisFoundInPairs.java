@@ -207,14 +207,14 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
                     var15 = SpriteTextureOperation.field_n[var12];
                     if (var15 != -2147483648) {
                       var16 = -var6 + (var14Lifetime1 + (var13Lifetime1 + var15));
-                      stackIn_25_0 = -1 + bs.field_b.length;
+                      stackIn_25_0 = -1 + SocialTabsPanel.field_b.length;
                       if (var7 < 0) {
                         stackIn_26_1 = var16 << -var7;
                       } else {
                         stackIn_26_1 = var16 >> var7;
                       }
                       var17 = stackIn_25_0 - stackIn_26_1;
-                      var18 = bs.field_b[var17];
+                      var18 = SocialTabsPanel.field_b[var17];
                       while (true) {
                         if (var18 >> 4 != 0) {
                           var17--;
@@ -224,14 +224,14 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var18 = bs.field_b[var17];
+                          var18 = SocialTabsPanel.field_b[var17];
                           continue;
                         }
                         stackIn_37_0Lifetime1 = var18;
                         stackIn_37_1Lifetime1 = var17 << 4;
                         var19 = stackIn_37_0Lifetime1 + stackIn_37_1Lifetime1;
                         SetMissionDebrisDefaultProbability.field_p[var19] = var9;
-                        bs.field_b[var17] = 1 + var18;
+                        SocialTabsPanel.field_b[var17] = 1 + var18;
                         if (0 < param3.field_z &&
                           param3.field_E != null) {
                           dupTemp$0 = param3.field_E[var9];

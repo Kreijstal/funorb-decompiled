@@ -112,14 +112,14 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
     private final void finishZoneSelection(int param0, int param1) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
-        for (var3 = 1 + param0; var3 < bs.field_c; var3++) {
+        for (var3 = 1 + param0; var3 < SocialTabsPanel.field_c; var3++) {
           MaskedPasswordTextStyle.field_s[var3] = null;
           AsteroidFieldFactory.field_c[var3] = null;
         }
         if (param1 <= 72) {
           this.revision = -33;
         }
-        bs.field_c = param0;
+        SocialTabsPanel.field_c = param0;
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {

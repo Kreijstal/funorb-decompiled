@@ -101,7 +101,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           CarouselSlotStateDump.field_i = param1[204];
           MassDriverFireForceSetting.fireForce = param1[98];
           SetAiFiringRangeUpshift.field_p = param1[93];
-          iea.field_d = param1[207];
+          IntegerRecordReadQueueEntry.field_d = param1[207];
           GetPhysicsCollisionGrapplingHookForceMultiplier.field_o = param1[109];
           TickClock.field_a = param1[145];
           GetWorldWidthUpshift.field_q = param1[191];
@@ -158,7 +158,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_I = param1[32];
           GetLagStandardDeviationIn.field_p = param1[85];
           gib.field_a = param1[206];
-          ea.field_j = param1[187];
+          ByteIndexedRecordWriteRequest.field_j = param1[187];
           SetMachineGunAimspeed.field_o = param1[7];
           PlayerReady.field_c = param1[138];
           TextureCombineSource.field_a = param1[177];

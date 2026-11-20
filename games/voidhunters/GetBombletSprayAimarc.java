@@ -21,7 +21,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
             var5 = (Widget) null;
             GetBombletSprayAimarc.a((byte[]) null, (Widget) null, -17, -59, (Widget) null, false, 76, 14, -115, (Widget) null);
           }
-          var6 = bs.field_b;
+          var6 = SocialTabsPanel.field_b;
           var1 = var6;
           var2 = 0;
           var3 = var6.length;

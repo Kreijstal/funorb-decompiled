@@ -83,10 +83,10 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
           }
           var5_int = 0;
           while (true) {
-            if (bs.field_b.length <= var5_int) {
+            if (SocialTabsPanel.field_b.length <= var5_int) {
               return;
             }
-            param1 = bs.field_b[var5_int];
+            param1 = SocialTabsPanel.field_b[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param1;

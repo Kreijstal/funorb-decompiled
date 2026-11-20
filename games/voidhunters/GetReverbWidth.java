@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetReverbWidth extends ConsoleCommand {
-    static bs field_o;
+    static SocialTabsPanel field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -51,7 +51,7 @@ final class GetReverbWidth extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 9839) {
-          field_o = (bs) null;
+          field_o = (SocialTabsPanel) null;
         }
     }
 

@@ -15,7 +15,7 @@ final class RasterShapesTextureOperation extends TextureOperation {
         try {
           var4 = (IntegerRecordWriteRequest) (SetSalvoHoldable.pendingIntegerRecordWrites.first(0));
           while (var4 != null) {
-            aeb.sendIntegerRecordWrite(param0, -21584, var4);
+            IntegerRecordWritePackets.sendIntegerRecordWrite(param0, -21584, var4);
             var4 = (IntegerRecordWriteRequest) (SetSalvoHoldable.pendingIntegerRecordWrites.next((byte) 8));
           }
           var5 = (IntegerArrayReadRequest) (SetDebugLineLife.pendingIntegerArrayReads.first(param1));

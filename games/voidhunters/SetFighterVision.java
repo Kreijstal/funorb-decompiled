@@ -27,7 +27,7 @@ final class SetFighterVision extends ConsoleCommand {
             var5 = PasswordValidator.field_g;
           } else {
             if (hb.field_c) {
-              var5 = bw.field_b;
+              var5 = GameInterfaceText.quickChatShortcutText;
             } else {
               var5 = IconTextWidget.field_xb;
             }
@@ -52,12 +52,12 @@ final class SetFighterVision extends ConsoleCommand {
           WidgetNode.field_l = new Widget(0L, ServerTick.field_d);
           SetThrusterAutobalancing.field_p.addChild(-561, WidgetNode.field_l);
           GetMachineGunAimarc.field_q = new Widget(0L, TargetLock.field_b, GetMissionTerrainVotingChancestep.field_o);
-          dp.field_a = new Widget(0L, TargetLock.field_b);
+          PartitionZoneFactoryHolder.field_a = new Widget(0L, TargetLock.field_b);
           OneShotSound.field_l.addChild(-561, hp.field_b);
           OneShotSound.field_l.addChild(-561, TiledSpriteTextureOperation.field_s);
           TiledSpriteTextureOperation.field_s.addChild(-561, SetThrusterAutobalancing.field_p);
           TiledSpriteTextureOperation.field_s.addChild(param1 + 19588, GetMachineGunAimarc.field_q);
-          TiledSpriteTextureOperation.field_s.addChild(-561, dp.field_a);
+          TiledSpriteTextureOperation.field_s.addChild(-561, PartitionZoneFactoryHolder.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

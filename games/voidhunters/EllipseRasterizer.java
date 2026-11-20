@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mf {
+final class EllipseRasterizer {
     private static String field_z;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillEllipse(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param1 == param3) {
           ConsoleValue.a((byte) -90, param5, param4, param0, param3);
           return;
         }
         if (param2 != 17000) {
-          mf.a(-92, -40, -47, 44, 16, -23);
+          EllipseRasterizer.fillEllipse(-92, -40, -47, 44, 16, -23);
           if (OpenGlTexture3D.field_j > -param3 + param0) {
             SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
             return;

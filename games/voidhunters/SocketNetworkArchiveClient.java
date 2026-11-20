@@ -333,7 +333,7 @@ final class SocketNetworkArchiveClient extends NetworkArchiveClient {
         if (param0 > -113) {
           SocketNetworkArchiveClient.a(-4, (byte) 35, 31);
         }
-        stackIn_6_0 = (null != SetShipSpawnInvulnerabilityTime.field_o) && (GetOndamageParticleSpeed.field_o == tc.field_c);
+        stackIn_6_0 = (null != SetShipSpawnInvulnerabilityTime.field_o) && (GetOndamageParticleSpeed.field_o == TextureCombineMappings.field_c);
         return stackIn_6_0;
     }
 
