@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kr {
+final class AppletReload {
     static String[] field_a;
 
     public static void clearSharedReferences(int param0) {
@@ -9,7 +9,7 @@ final class kr {
         int var1 = 87 / ((-33 - param0) / 63);
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void reloadGamePage(java.applet.Applet param0, int param1) {
         try {
           String var2 = null;
           Exception var2_ref = null;
@@ -26,7 +26,7 @@ final class kr {
               var2 = param0.getDocumentBase().getFile();
               var3 = var2.indexOf('?');
               if (param1 != 5836) {
-                kr.clearSharedReferences(-122);
+                AppletReload.clearSharedReferences(-122);
               }
               var4 = "reload.ws";
               if (var3 >= 0) {

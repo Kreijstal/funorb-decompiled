@@ -43,7 +43,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             }
             if (LegacyOpenGlTurbulenceEffect.field_d) {
               lh.a((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
-              fj.b(param0 ^ -22377);
+              WhirlpoolDigest.closeQuickChatIfOpen(param0 ^ -22377);
             }
           }
           if (null == var2 &&

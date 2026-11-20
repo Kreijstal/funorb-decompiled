@@ -33,7 +33,7 @@ final class TextureCombineMappings {
             stackIn_10_0 = 34165;
             return stackIn_10_0;
           }
-          if (param1 == je.field_c) {
+          if (param1 == GpuQuadBuffers.field_c) {
             stackIn_13_0 = 260;
             return stackIn_13_0;
           }

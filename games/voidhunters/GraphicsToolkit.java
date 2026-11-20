@@ -293,7 +293,7 @@ abstract class GraphicsToolkit {
             decompiledFrameRemainder0 = false;
           }
           else {
-            fj.b(18444);
+            WhirlpoolDigest.closeQuickChatIfOpen(18444);
             param0 = false;
           }
         }

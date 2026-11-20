@@ -103,7 +103,7 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
             GetSelfDestructPrepareToggleCooldown.a(-123, 3);
             this.closeDialog((byte) -106);
           } else {
-            lc.a((byte) 86, MissionList.b((byte) -92), "tochangedisplayname.ws");
+            GameReleaseStatistics.openAppletRelativeUrl((byte) 86, MissionList.b((byte) -92), "tochangedisplayname.ws");
           }
           if (param0 == 11) {
             return;

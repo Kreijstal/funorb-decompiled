@@ -99,7 +99,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
     }
 
     final void applyRenderState(int param0, boolean param1) {
-        this.toolkit.setTextureCombineOperations(je.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
+        this.toolkit.setTextureCombineOperations(GpuQuadBuffers.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
         if (param0 != 5) {
           this.onViewTransformChanged((byte) 107);
         }

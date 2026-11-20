@@ -277,7 +277,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           MissionEvent.field_a = param1[112];
           SetSpinningBladeAimarc.field_o = param1[113];
           SelectableIconLabelWidget.field_wb = param1[117];
-          fj.field_b = param1[86];
+          WhirlpoolDigest.field_b = param1[86];
           Particle.field_m = param1[205];
           FullscreenMembershipDialog.field_J = param1[88];
           GetMissionTerrainNebulaProbability.field_p = param1[143];

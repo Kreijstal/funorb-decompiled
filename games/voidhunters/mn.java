@@ -81,7 +81,7 @@ final class mn {
         RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
         try {
-          if (!je.a((byte) -31, param0, true)) {
+          if (!GpuQuadBuffers.isValidPlayerNameSyntax((byte) -31, param0, true)) {
             return false;
           }
           if (param1 > -107) {

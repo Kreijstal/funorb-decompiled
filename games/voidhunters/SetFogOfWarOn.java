@@ -110,7 +110,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_debug_line_life(" + SetAutoaim.field_o + ")");
         System.out.println("set_use_filled_polygons(" + SetVariableActionFactory.field_c + ")");
         System.out.println("set_use_detail_lines(" + ResourceArchive.field_f + ")");
-        System.out.println("set_bloom_threshold_percentage(" + pab.field_m + ")");
+        System.out.println("set_bloom_threshold_percentage(" + CachedByteArray.field_m + ")");
         System.out.println("set_bloom_coefficient_percentage(" + OpenGlVertexBufferObject.field_i + ")");
         System.out.println("set_autozoom_speed_divide(" + SetMassDriverProjectileDamage.field_o + ")");
         System.out.println("set_autozoom_amount_multiply(" + PerlinNoiseTextureOperation.field_n + ")");
@@ -200,7 +200,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_bomblet_spray_projectiles(" + LegacyOpenGlUnderwaterEffect.field_m + ")");
         System.out.println("set_phased_energy_beam_projectiles(" + uab.field_b + ")");
         System.out.println("set_torpedo_projectiles(" + GetLagStandardDeviationIn.field_p + ")");
-        System.out.println("set_sniper_cannon_projectiles(" + fj.field_b + ")");
+        System.out.println("set_sniper_cannon_projectiles(" + WhirlpoolDigest.field_b + ")");
         System.out.println("set_missile_launcher_projectiles(" + GetPlayerRepairAmount.field_o + ")");
         System.out.println("set_point_defence_laser_projectiles(" + FullscreenMembershipDialog.field_J + ")");
         System.out.println("set_countermeasure_launcher_projectiles(" + RenderResourceNode.field_k + ")");

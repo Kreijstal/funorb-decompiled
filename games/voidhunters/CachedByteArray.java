@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pab extends DualLinkNode {
-    static MusicTrack[] field_k;
+final class CachedByteArray extends DualLinkNode {
+    static MusicTrack[] musicTracks;
     static int field_m;
-    byte[] field_l;
+    byte[] bytes;
 
     final static void setGameCanvasSize(int param0, int param1, byte param2) {
         GetDebrisSurvives.field_p = param1;
@@ -15,22 +15,22 @@ final class pab extends DualLinkNode {
           GetDebrisSurvives.field_q = true;
           return;
         }
-        field_k = (MusicTrack[]) null;
+        musicTracks = (MusicTrack[]) null;
         SetPointDefenceLaserReload.field_p = param0;
         GetLoadingMissions.field_p = param0;
         GetDebrisSurvives.field_q = true;
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_k = null;
+        musicTracks = null;
         if (param0) {
-          field_k = (MusicTrack[]) null;
+          musicTracks = (MusicTrack[]) null;
         }
     }
 
-    pab(byte[] param0) {
+    CachedByteArray(byte[] param0) {
         try {
-          this.field_l = param0;
+          this.bytes = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

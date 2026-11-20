@@ -92,7 +92,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
 
     final void enable(int param0, boolean param1) {
         this.toolkit.setActiveTextureUnit(1, param0 ^ -72);
-        this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, je.field_c);
+        this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, GpuQuadBuffers.field_c);
         this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, SetGrapplingHookMaxExtension8Force.field_q, 0);
         this.toolkit.setAlphaCombineSource(0, (byte) -101, SpriteTextureOperation.field_l);
         this.toolkit.setTextureCoordinateIndex(-34, 0);

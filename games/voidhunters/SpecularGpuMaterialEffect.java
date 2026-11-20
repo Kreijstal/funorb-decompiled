@@ -149,13 +149,13 @@ final class SpecularGpuMaterialEffect extends GpuMaterialEffect {
               this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, MissionVariable.field_c);
               this.toolkit.setRgbCombineSource(0, SpriteTextureOperation.field_l, 7);
               this.toolkit.setActiveTextureUnit(2, -51);
-              this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, je.field_c);
+              this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, GpuQuadBuffers.field_c);
               this.toolkit.setRgbCombineSource(0, SpriteTextureOperation.field_l, param0 ^ 2);
               this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, SpriteTextureOperation.field_l, 1);
               this.toolkit.setAlphaCombineSource(0, (byte) -86, GetArmageddonLength.field_q);
               this.toolkit.setTexture(this.toolkit.field_Q, param0 - 119);
             } else {
-              this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, je.field_c);
+              this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, GpuQuadBuffers.field_c);
               this.toolkit.setRgbCombineSource(true, param0 - 21120, false, SetGrapplingHookMaxExtension8Force.field_q, 0);
               this.toolkit.setAlphaCombineSource(0, (byte) -96, GetArmageddonLength.field_q);
             }

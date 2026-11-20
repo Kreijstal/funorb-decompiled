@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iq {
+final class TypedStateArrayReader {
     static int field_a;
 
-    final static SerializableGameState[] a(GameStateFactory[] param0, SerializableGameState[] param1, Class[] param2, GameStateFactory param3, int param4, IsaacPacketBuffer param5, int param6, int param7) {
+    final static SerializableGameState[] readTypedStateArray(GameStateFactory[] param0, SerializableGameState[] param1, Class[] param2, GameStateFactory param3, int param4, IsaacPacketBuffer param5, int param6, int param7) {
         int var11 = 0;
         SerializableGameState[] stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;

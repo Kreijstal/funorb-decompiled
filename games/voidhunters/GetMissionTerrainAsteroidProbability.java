@@ -25,7 +25,7 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
             stackIn_2_0 = (SoftwareAlphaBitmapFont) null;
             return stackIn_2_0;
           }
-          if (!pa.decodeSpriteArchiveFile(param3, 2, param4, param1)) {
+          if (!SpriteArchiveDecoder.decodeSpriteArchiveFile(param3, 2, param4, param1)) {
             return null;
           }
           stackIn_7_0 = BufferedSocket.createAlphaBitmapFont((byte) 19, param2.fetchFile(param3, param1, (byte) 13));

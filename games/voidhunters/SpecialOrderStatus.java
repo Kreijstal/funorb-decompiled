@@ -172,7 +172,7 @@ final class SpecialOrderStatus extends IntrusiveNode {
     }
 
     final static byte[] a(byte param0, int param1) {
-        pab var2;
+        CachedByteArray var2;
         byte[] var3_ref_byte__;
         int var3;
         Random var4;
@@ -185,7 +185,7 @@ final class SpecialOrderStatus extends IntrusiveNode {
         byte[] var11;
         int var5Lifetime1;
         var9 = VoidHunters.field_G;
-        var2 = (pab) (SoftwareFaceAttachmentState.field_c.get((long)param1, 72));
+        var2 = (CachedByteArray) (SoftwareFaceAttachmentState.field_c.get((long)param1, 72));
         if (var2 == null) {
           var11 = new byte[512];
           var10 = var11;
@@ -202,11 +202,11 @@ final class SpecialOrderStatus extends IntrusiveNode {
             var3_ref_byte__[511 - var5Lifetime1] = (byte) var8;
             var3_ref_byte__[var6] = (byte) var8;
           }
-          var2 = new pab(var11);
+          var2 = new CachedByteArray(var11);
           SoftwareFaceAttachmentState.field_c.put((long)param1, (byte) -48, var2);
         }
         var3 = -56 / ((-24 - param0) / 45);
-        return var2.field_l;
+        return var2.bytes;
     }
 
     static {

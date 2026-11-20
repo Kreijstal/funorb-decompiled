@@ -110,13 +110,13 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
             if (SetMachineGunEnergyUsed.field_s > SetBots.field_q) {
               SetBots.field_q = SetBots.field_q + 1;
               if (SetMachineGunEnergyUsed.field_p < SetBots.field_q && (null == SetSpinningBladeSpindamageMultiplier.field_p ||
-                null == SetSpinningBladeSpindamageMultiplier.field_p[pa.field_b])) {
+                null == SetSpinningBladeSpindamageMultiplier.field_p[SpriteArchiveDecoder.field_b])) {
                 SetBots.field_q = SetBots.field_q - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (SetBots.field_q >= SetMachineGunEnergyUsed.field_s &&
-                  SetSpinningBladeSpindamageMultiplier.field_p[(pa.field_b + 1) % var2_int] == null) {
+                  SetSpinningBladeSpindamageMultiplier.field_p[(SpriteArchiveDecoder.field_b + 1) % var2_int] == null) {
                   SetBots.field_q = SetBots.field_q - 1;
                 }
               }
@@ -124,14 +124,14 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
             if (SetBots.field_q >= SetMachineGunEnergyUsed.field_s) {
               SetBots.field_q = SetBots.field_q - SetMachineGunEnergyUsed.field_s;
               if (!SetPhysicsCollisionGrapplingHookForceMultiplier.field_q) {
-                pa.field_b = pa.field_b - 1;
-                if (pa.field_b < 0) {
-                  pa.field_b = pa.field_b + var2_int;
+                SpriteArchiveDecoder.field_b = SpriteArchiveDecoder.field_b - 1;
+                if (SpriteArchiveDecoder.field_b < 0) {
+                  SpriteArchiveDecoder.field_b = SpriteArchiveDecoder.field_b + var2_int;
                 }
               } else {
-                pa.field_b = pa.field_b + 1;
-                if (var2_int <= pa.field_b) {
-                  pa.field_b = pa.field_b - var2_int;
+                SpriteArchiveDecoder.field_b = SpriteArchiveDecoder.field_b + 1;
+                if (var2_int <= SpriteArchiveDecoder.field_b) {
+                  SpriteArchiveDecoder.field_b = SpriteArchiveDecoder.field_b - var2_int;
                 }
               }
             }

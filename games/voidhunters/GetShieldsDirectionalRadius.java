@@ -13,10 +13,10 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
         if (!EscapePod.a(GetBoostersCooldown.savedHintCompletion, TutorialProgressState.completedHints, 32)) {
           return;
         }
-        if (es.field_b == null) {
-          es.field_b = new PlayerGameData();
+        if (TooltipDisplay.field_b == null) {
+          TooltipDisplay.field_b = new PlayerGameData();
         }
-        es.field_b.setCompletedHints(TutorialProgressState.completedHints, -28855);
+        TooltipDisplay.field_b.setCompletedHints(TutorialProgressState.completedHints, -28855);
         GetMissionResnetResourceTickTime.savePlayerGameData((byte) -46);
         int var1 = -27 / ((1 - param0) / 32);
         GetBoostersCooldown.savedHintCompletion = GetBots.a(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);

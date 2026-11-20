@@ -1472,7 +1472,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("login_email", 23100);
                 if (null != resourceBytes) {
-                  fj.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  WhirlpoolDigest.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("login_username_tooltip", 23100);
                 if (resourceBytes != null) {

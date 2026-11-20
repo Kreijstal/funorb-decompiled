@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class es {
+final class TooltipDisplay {
     static PlayerGameData field_b;
     static String field_a;
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          es.clearSharedReferences(false);
+          TooltipDisplay.clearSharedReferences(false);
           field_b = null;
           field_a = null;
           return;
@@ -16,7 +16,7 @@ final class es {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, ToolkitFontMetrics param2, int param3, ToolkitFont param4, int param5, GraphicsToolkit param6, int param7, int param8, BitmapFont param9, int param10) {
+    final static void updateAndDrawTooltip(int param0, int param1, ToolkitFontMetrics param2, int param3, ToolkitFont param4, int param5, GraphicsToolkit param6, int param7, int param8, BitmapFont param9, int param10) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

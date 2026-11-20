@@ -136,7 +136,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           DialogMessagePanel.field_v = new Widget(0L, DeveloperConsole.field_q);
           DialogMessagePanel.field_v.field_F = 1;
           SpawnChoiceFactory.field_c = new Widget(0L, SetPlayerRepairAmount.field_q, GameInterfaceText.returnToMainMenuText.toUpperCase());
-          AlphaContainer.field_w = new Widget(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
+          AlphaContainer.field_w = new Widget(0L, SpriteArchiveDecoder.field_a, SetMachineGunAimarc.field_o.toUpperCase());
           sra.field_a = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ArchiveIndexLoader.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
           GetSniperCannonAimspeed.field_q = new Widget(0L, GetUseSprites.field_p, SpecialOrderButtonState.field_e);
@@ -205,7 +205,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           }
           SetOndamageParticleLife.field_o.addChild(-561, WaterTextures.field_f);
           GetShipToShipRamDamage.field_q = new Widget(0L, SetPlayerRepairAmount.field_q, ReturnToLobbyText.returnToLobbyText.toUpperCase());
-          GetWeaponParticleSpeedDownshift.field_q = new Widget(0L, pa.field_a);
+          GetWeaponParticleSpeedDownshift.field_q = new Widget(0L, SpriteArchiveDecoder.field_a);
           SetPhysicsCollisionGrapplingHookForceMultiplier.field_o = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ProxySocketConnector.field_e = new Widget(0L, TutorialController.field_b, DisplayModeErrorDialog.field_J.toUpperCase());
           GetLaserAimarc.field_o = new Widget[4 + param12];

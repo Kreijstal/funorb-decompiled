@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je {
+final class GpuQuadBuffers {
     static TextureCombineOperation field_c;
-    private GpuVertexBuffer field_a;
-    private GpuVertexBuffer field_d;
-    private GpuIndexBuffer field_b;
+    private GpuVertexBuffer vertexBuffer;
+    private GpuVertexBuffer normalBuffer;
+    private GpuIndexBuffer indexBuffer;
 
-    final void a(boolean param0) {
-        this.field_a.release(-108);
+    final void releaseVertexBuffer(boolean param0) {
+        this.vertexBuffer.release(-108);
         if (param0) {
-          je.clearSharedReferences((byte) -55);
+          GpuQuadBuffers.clearSharedReferences((byte) -55);
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1, boolean param2) {
+    final static boolean isValidPlayerNameSyntax(byte param0, CharSequence param1, boolean param2) {
         int var6 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
@@ -60,7 +60,7 @@ final class je {
                 return false;
               }
               if (param0 != -31) {
-                je.a((byte) 82);
+                GpuQuadBuffers.a((byte) 82);
               }
               return true;
             }
@@ -84,14 +84,14 @@ final class je {
     public static void clearSharedReferences(byte param0) {
         field_c = null;
         if (param0 != 117) {
-          je.clearSharedReferences((byte) -3);
+          GpuQuadBuffers.clearSharedReferences((byte) -3);
         }
     }
 
     final static void a(byte param0) {
         lsa var1 = (lsa) (ScreenSizeController.field_p.first(0));
         if (param0 <= 108) {
-          je.clearSharedReferences((byte) -96);
+          GpuQuadBuffers.clearSharedReferences((byte) -96);
         }
         if (var1 == null) {
           FighterBayWeaponDefinition.l(-116);
@@ -105,15 +105,15 @@ final class je {
         var1.unlink(-3846);
     }
 
-    final void a(int param0, GpuToolkit param1) {
+    final void allocateVertexBuffer(int param0, GpuToolkit param1) {
         try {
-          this.field_a.allocate(param0, 786336, 97);
+          this.vertexBuffer.allocate(param0, 786336, 97);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    je(GpuToolkit param0) {
+    GpuQuadBuffers(GpuToolkit param0) {
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
@@ -128,12 +128,12 @@ final class je {
         int var5Lifetime1;
         try {
           param0.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_d, VertexAttribute.field_l}), new VertexStreamLayout(VertexAttribute.field_g)});
-          this.field_a = param0.createVertexBuffer(true, 3);
-          this.field_d = param0.createVertexBuffer(false, 3);
-          this.field_d.allocate(12, 393168, 119);
-          this.field_b = param0.createIndexBuffer((byte) -19, false);
-          this.field_b.allocate(25427, 49146);
-          var7 = this.field_b.lock((byte) -30, true);
+          this.vertexBuffer = param0.createVertexBuffer(true, 3);
+          this.normalBuffer = param0.createVertexBuffer(false, 3);
+          this.normalBuffer.allocate(12, 393168, 119);
+          this.indexBuffer = param0.createIndexBuffer((byte) -19, false);
+          this.indexBuffer.allocate(25427, 49146);
+          var7 = this.indexBuffer.lock((byte) -30, true);
           if (var7 != null) {
             var8 = param0.getBufferWriter(var7, false);
             if (jaclib.memory.Stream.isBigEndian()) {
@@ -158,9 +158,9 @@ final class je {
               }
             }
             var8.flush();
-            this.field_b.unlock(-93);
+            this.indexBuffer.unlock(-93);
           }
-          var9 = this.field_d.lock(true, (byte) 41);
+          var9 = this.normalBuffer.lock(true, (byte) 41);
           if (var9 != null) {
             var4 = param0.getBufferWriter(var9, false);
             if (jaclib.memory.Stream.isBigEndian()) {
@@ -195,7 +195,7 @@ final class je {
               }
             }
             var4.flush();
-            this.field_d.unlock(-20836);
+            this.normalBuffer.unlock(-20836);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

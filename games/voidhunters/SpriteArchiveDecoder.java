@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa {
+final class SpriteArchiveDecoder {
     static Widget field_a;
     static String field_c;
     static int field_b;
@@ -18,7 +18,7 @@ final class pa {
           return;
         }
         ResourceArchive var4 = (ResourceArchive) null;
-        pa.decodeSpriteArchiveFile(-92, -5, (ResourceArchive) null, 15);
+        SpriteArchiveDecoder.decodeSpriteArchiveFile(-92, -5, (ResourceArchive) null, 15);
         var3Lifetime1 = RequestNewestBlackboxRecording.field_p;
         var3Lifetime1.writeIsaacByte(24335, param0);
         var3Lifetime1.writeByte(0, 3);
@@ -26,10 +26,10 @@ final class pa {
         var3Lifetime1.writeShort(param2, true);
     }
 
-    final static void a(String param0, int param1) {
+    final static void logError(String param0, int param1) {
         System.out.println("Error: " + sh.a("\n", "%0a", param0, 0));
         if (param1 != 3) {
-          pa.clearSharedReferences(111);
+          SpriteArchiveDecoder.clearSharedReferences(111);
         }
     }
 
@@ -51,7 +51,7 @@ final class pa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 2) {
-            pa.clearSharedReferences(36);
+            SpriteArchiveDecoder.clearSharedReferences(36);
           }
           var5 = param2.fetchFile(param0, param3, (byte) 13);
           var4 = var5;

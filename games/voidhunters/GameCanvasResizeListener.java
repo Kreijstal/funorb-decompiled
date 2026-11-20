@@ -15,7 +15,7 @@ final class GameCanvasResizeListener implements CanvasResizeListener {
 
     public final void onSizeChanged(int param0, int param1, int param2) {
         int var4 = 103 / ((22 - param0) / 42);
-        pab.setGameCanvasSize(param2, param1, (byte) -95);
+        CachedByteArray.setGameCanvasSize(param2, param1, (byte) -95);
     }
 
     final static String a(int param0, String param1, String param2, byte param3) {

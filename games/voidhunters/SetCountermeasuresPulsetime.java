@@ -18,7 +18,7 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         String var7;
         String var8;
         var5 = VoidHunters.field_G;
-        var6 = "(" + iq.field_a + " " + SetMissionResnetResourceTickTime.field_o + " " + SetSalvoRepairTimeMultiplier.field_r + ") " + NetworkMessageState.incomingOpcode;
+        var6 = "(" + TypedStateArrayReader.field_a + " " + SetMissionResnetResourceTickTime.field_o + " " + SetSalvoRepairTimeMultiplier.field_r + ") " + NetworkMessageState.incomingOpcode;
         var1 = var6;
         if (param0 != -13514) {
           SetCountermeasuresPulsetime.e(-111);

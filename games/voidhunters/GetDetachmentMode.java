@@ -47,7 +47,7 @@ final class GetDetachmentMode extends ConsoleCommand {
         if (param1 != -9307) {
           GetDetachmentMode.a(-44, 13, -90);
           if (SetBombletSprayProjectileDamage.field_o == 13) {
-            fj.b(18444);
+            WhirlpoolDigest.closeQuickChatIfOpen(18444);
             return true;
           }
           if (SetBombletSprayProjectileDamage.field_o == 102) {
@@ -63,7 +63,7 @@ final class GetDetachmentMode extends ConsoleCommand {
           return true;
         }
         if (SetBombletSprayProjectileDamage.field_o == 13) {
-          fj.b(18444);
+          WhirlpoolDigest.closeQuickChatIfOpen(18444);
           return true;
         }
         if (SetBombletSprayProjectileDamage.field_o == 102) {

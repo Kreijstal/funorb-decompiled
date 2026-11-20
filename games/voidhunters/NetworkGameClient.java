@@ -560,7 +560,7 @@ abstract class NetworkGameClient extends GameApplet {
           regionExit1: {
             switch (var2) {
               case 1:
-                je.a((byte) 113);
+                GpuQuadBuffers.a((byte) 113);
                 break;
               case 4:
                 SetLag.handleIntegerRecordReply(-8999);
@@ -747,10 +747,10 @@ abstract class NetworkGameClient extends GameApplet {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 17);
           }
           if (11 == var4) {
-            kr.a(MissionList.b((byte) -126), 5836);
+            AppletReload.reloadGamePage(MissionList.b((byte) -126), 5836);
           }
           if (var4 == 12) {
-            lc.a((byte) 86, MissionList.b((byte) -126), GetToggledScoreboard.a(27158));
+            GameReleaseStatistics.openAppletRelativeUrl((byte) 86, MissionList.b((byte) -126), GetToggledScoreboard.a(27158));
           }
           if (var4 == 13) {
             try {

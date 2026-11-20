@@ -229,7 +229,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param1 == SetThrusterBindingMoveAndTurnHasOppositeMove.field_o) {
           return 26;
         }
-        if (param1 == je.field_c) {
+        if (param1 == GpuQuadBuffers.field_c) {
           return 7;
         }
         if (param1 == ToolkitRasterStateCache.field_a) {

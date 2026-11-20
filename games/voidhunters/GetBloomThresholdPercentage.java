@@ -15,7 +15,7 @@ final class GetBloomThresholdPercentage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(pab.field_m);
+            stackIn_4_0 = new ConsoleValue(CachedByteArray.field_m);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

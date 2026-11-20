@@ -631,7 +631,7 @@ public final class VoidHunters extends NetworkGameClient {
         LegacyOpenGlTurbulenceEffect.field_g = new FadingMidiPcmStream(GetThrusterParticleLife.field_o);
         MidiPcmStream var3 = new MidiPcmStream();
         MidiCrossfadeStream var4 = new MidiCrossfadeStream(GetThrusterParticleLife.field_o, LegacyOpenGlTurbulenceEffect.field_g, var3);
-        kr.a((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
+        AppletReload.a((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
         ScreenSizeController var5 = new ScreenSizeController(new GameCanvasResizeListener());
         var5.minimumMemoryMegabytes = 0;
         var5.resizable = false;
@@ -689,12 +689,12 @@ public final class VoidHunters extends NetworkGameClient {
         if (var2 != 0) {
           if (GetBurstFireMaxEnergy.field_p.selectedStream != LegacyOpenGlTurbulenceEffect.field_g &&
             this.musicStingCooldown <= 0) {
-            GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-126, pab.field_k[1], 100, 1000000);
+            GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-126, CachedByteArray.musicTracks[1], 100, 1000000);
           }
           this.menuMusicMixId = -1;
         } else {
           if (GetBurstFireMaxEnergy.field_p.selectedStream != GetThrusterParticleLife.field_o) {
-            GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-127, pab.field_k[0], 100, 1000000);
+            GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-127, CachedByteArray.musicTracks[0], 100, 1000000);
           }
           this.gameMusicMixId = -1;
         }
@@ -721,7 +721,7 @@ public final class VoidHunters extends NetworkGameClient {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
                       LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
-                    AdminMessage.playMusicTrack(32, false, pab.field_k[2]);
+                    AdminMessage.playMusicTrack(32, false, CachedByteArray.musicTracks[2]);
                     this.musicStingCooldown = 500;
                   }
                 } else {
@@ -730,7 +730,7 @@ public final class VoidHunters extends NetworkGameClient {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
                       LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
-                    AdminMessage.playMusicTrack(32, false, pab.field_k[3]);
+                    AdminMessage.playMusicTrack(32, false, CachedByteArray.musicTracks[3]);
                     this.musicStingCooldown = 500;
                   }
                 }
@@ -853,7 +853,7 @@ public final class VoidHunters extends NetworkGameClient {
         oua.clearSharedReferences(true);
         CarouselGameClient.clearSharedReferences(66);
         GraphicsToolkitSelector.clearSharedReferences(10970);
-        pa.clearSharedReferences(2);
+        SpriteArchiveDecoder.clearSharedReferences(2);
         FadingMidiPcmStream.clearSharedReferences(0);
         MidiCrossfadeStream.clearSharedReferences(98);
         btb.clearSharedReferences((byte) 94);
@@ -905,7 +905,7 @@ public final class VoidHunters extends NetworkGameClient {
         BoosterOrderText.clearSharedReferences(12472);
         SpecialOrderDefinition.clearSharedReferences((byte) -95);
         eqb.clearSharedReferences(65);
-        es.clearSharedReferences(param0);
+        TooltipDisplay.clearSharedReferences(param0);
         WorldDebugArrow.clearSharedReferences((byte) 26);
         CommonGameState.clearSharedReferences(28801);
         MissionBuilder.clearSharedReferences(1);
@@ -984,7 +984,7 @@ public final class VoidHunters extends NetworkGameClient {
         AudioOutput.clearSharedReferences();
         GameCanvasResizeListener.clearSharedReferences(2);
         ChunkedDataReceiver.clearSharedReferences(100);
-        lc.clearSharedReferences(95);
+        GameReleaseStatistics.clearSharedReferences(95);
         DeveloperAccess.clearSharedReferences(2);
         SecondaryNodeHashTable.clearSharedReferences(1);
         spb.clearSharedReferences(0);
@@ -1003,7 +1003,7 @@ public final class VoidHunters extends NetworkGameClient {
         ChoosePlayerNameForm.clearSharedReferences((byte) 115);
         AccountRequestText.clearSharedReferences((byte) -114);
         UiTheme.clearSharedReferences((byte) -29);
-        kr.clearSharedReferences(-127);
+        AppletReload.clearSharedReferences(-127);
         RemoveEventAction.clearSharedReferences(-125);
         Cp1252Strings.clearSharedReferences(!param0 ? true : false);
         NineSliceSprite.clearSharedReferences(-22113);
@@ -1125,7 +1125,7 @@ public final class VoidHunters extends NetworkGameClient {
         PlayerRequestPackets.clearSharedReferences(-72);
         MidiEnvelope.clearSharedReferences(-17719);
         UiAngleDial.clearSharedReferences(6344);
-        fj.clearSharedReferences(0);
+        WhirlpoolDigest.clearSharedReferences(0);
         DateOfBirthTextFields.clearSharedReferences((byte) 106);
         DateOfBirthInput.clearSharedReferences((byte) -81);
         UiScrollPane.clearSharedReferences(1);
@@ -1151,7 +1151,7 @@ public final class VoidHunters extends NetworkGameClient {
         atb.clearSharedReferences(true);
         GpuMaterialEffect.clearSharedReferences((byte) -96);
         GpuEnvironmentMapSource.clearSharedReferences(0);
-        je.clearSharedReferences((byte) 117);
+        GpuQuadBuffers.clearSharedReferences((byte) 117);
         GpuVertexDeclaration.clearSharedReferences(8192);
         TextureCombineSource.clearSharedReferences((byte) 13);
         TextureCoordinateMode.clearSharedReferences((byte) -123);
@@ -1802,7 +1802,7 @@ public final class VoidHunters extends NetworkGameClient {
         GpuIndexBufferOwner.clearSharedReferences(-1);
         GpuFaceNormal.clearSharedReferences(84);
         AdminMessageFactory.clearSharedReferences(-115);
-        pab.clearSharedReferences(false);
+        CachedByteArray.clearSharedReferences(false);
         TextureRasterShape.clearSharedReferences(28378);
         TextureLineShape.clearSharedReferences(30826);
         TextureBezierShape.clearSharedReferences((byte) -127);
@@ -1831,7 +1831,7 @@ public final class VoidHunters extends NetworkGameClient {
         GetArmageddonTimerStart.field_o = 0;
         GpuFaceAttachmentState.setTicksPerSecond(-106, 50);
         ComponentCollision.a("Playing music", (byte) -101);
-        ConsoleSettingsScript.playLoopingMusicTrack(pab.field_k[0], (byte) -114);
+        ConsoleSettingsScript.playLoopingMusicTrack(CachedByteArray.musicTracks[0], (byte) -114);
         if (param0 <= 124) {
           Object var4 = (Object) null;
           VoidHunters.checkDuplicateReference(true, (Object) null);
@@ -2306,7 +2306,7 @@ public final class VoidHunters extends NetworkGameClient {
               if (!GetDebrisGroupColour.field_r.isBloomEnabled()) {
                 GetDebrisGroupColour.field_r.enableBloom();
               }
-              GetDebrisGroupColour.field_r.setBloomParameters((float)pab.field_m / 100.0f, 1.0f, (float)OpenGlVertexBufferObject.field_i / 100.0f);
+              GetDebrisGroupColour.field_r.setBloomParameters((float)CachedByteArray.field_m / 100.0f, 1.0f, (float)OpenGlVertexBufferObject.field_i / 100.0f);
             }
             GetDebrisGroupColour.field_r.clearColor(0);
             GetDebrisGroupColour.field_r.clearDepth();

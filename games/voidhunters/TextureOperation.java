@@ -133,7 +133,7 @@ abstract class TextureOperation extends IntrusiveNode {
             var6 = (ResourceArchive) null;
             TextureOperation.a((ResourceArchive) null, (byte) 32, (ResourceArchive) null, -82, 9);
           }
-          if (pa.decodeSpriteArchiveFile(param4, 2, param0, param3)) {
+          if (SpriteArchiveDecoder.decodeSpriteArchiveFile(param4, 2, param0, param3)) {
             stackIn_6_0 = ServerInfo.createFontFromDecodedSprites(param2.fetchFile(param4, param3, (byte) 13), 11);
             return stackIn_6_0;
           }

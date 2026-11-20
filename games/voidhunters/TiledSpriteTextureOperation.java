@@ -29,7 +29,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
         RuntimeException decompiledCaughtException = null;
         try {
           if (2 == param0.getDefinition((byte) -112).field_a) {
-            stackIn_3_0 = pa.field_c;
+            stackIn_3_0 = SpriteArchiveDecoder.field_c;
             return stackIn_3_0;
           }
           if (param0.getDefinition((byte) -112).field_a == 3) {
@@ -634,7 +634,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  pa.a(param4, (byte) -88, var12.getGameId((byte) -13));
+                  SpriteArchiveDecoder.a(param4, (byte) -88, var12.getGameId((byte) -13));
                 }
               }
             }

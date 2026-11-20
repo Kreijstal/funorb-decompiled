@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class lc {
-    private int field_a;
-    private Hashtable field_c;
+final class GameReleaseStatistics {
+    private int releaseMode;
+    private Hashtable counters;
     static SocialTabsPanel field_b;
 
-    final static void a(int param0, ShipComponent param1) {
+    final static void applyPresetComponentLayout(int param0, ShipComponent param1) {
         ShipComponent var4 = null;
         ShipComponent var5 = null;
         ShipComponent var6 = null;
@@ -40,17 +40,17 @@ final class lc {
         field_b = null;
         if (param0 != 95) {
           ShipComponent var2 = (ShipComponent) null;
-          lc.a(-56, (ShipComponent) null);
+          GameReleaseStatistics.applyPresetComponentLayout(-56, (ShipComponent) null);
         }
     }
 
     public final String toString() {
-        String var1 = "Release mode=" + SetSpecialOrderBarX.field_o[this.field_a] + "\n";
-        var1 = var1 + this.field_c.toString();
+        String var1 = "Release mode=" + SetSpecialOrderBarX.field_o[this.releaseMode] + "\n";
+        var1 = var1 + this.counters.toString();
         return var1;
     }
 
-    final void a(String param0, int param1, boolean param2) {
+    final void addCounter(String param0, int param1, boolean param2) {
         Number var4 = null;
         try {
           param0 = param0.toLowerCase();
@@ -58,21 +58,21 @@ final class lc {
             this.toString();
           }
           param0 = param0.replace(' ', '_');
-          var4 = (Number) (this.field_c.get(param0));
+          var4 = (Number) (this.counters.get(param0));
           if (var4 != null) {
             param1 = param1 + var4.intValue();
           }
-          this.field_c.put(param0, new Integer(param1));
+          this.counters.put(param0, new Integer(param1));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private lc() throws Throwable {
+    private GameReleaseStatistics() throws Throwable {
         throw new Error();
     }
 
-    final static void a(byte param0, java.applet.Applet param1, String param2) {
+    final static void openAppletRelativeUrl(byte param0, java.applet.Applet param1, String param2) {
         try {
           java.net.URL var3 = null;
           Exception var3_ref = null;
@@ -87,7 +87,7 @@ final class lc {
           try {
             if (param0 != 86) {
               var4 = (ShipComponent) null;
-              lc.a(-123, (ShipComponent) null);
+              GameReleaseStatistics.applyPresetComponentLayout(-123, (ShipComponent) null);
             }
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param2);

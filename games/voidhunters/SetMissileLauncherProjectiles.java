@@ -45,7 +45,7 @@ final class SetMissileLauncherProjectiles extends ConsoleCommand {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        fj var5 = null;
+        WhirlpoolDigest var5 = null;
         byte[] var6 = null;
         var7 = VoidHunters.field_G;
         try {
@@ -58,14 +58,14 @@ final class SetMissileLauncherProjectiles extends ConsoleCommand {
           } else {
             var4 = param2;
           }
-          var5 = new fj();
-          var5.b((byte) -88);
-          var5.a(var4, -7, (long)(8 * param1));
+          var5 = new WhirlpoolDigest();
+          var5.reset((byte) -88);
+          var5.updateBits(var4, -7, (long)(8 * param1));
           var6 = new byte[64];
           if (param0 != 25) {
             field_o = (String[]) null;
           }
-          var5.a(var6, 0, (byte) 89);
+          var5.writeDigest(var6, 0, (byte) 89);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

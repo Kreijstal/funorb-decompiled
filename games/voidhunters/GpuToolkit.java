@@ -75,7 +75,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     int scissorTop;
     private int underwaterFogStrength;
     private int field_V;
-    private je field_Ib;
+    private GpuQuadBuffers field_Ib;
     private jaclib.memory.Stream bufferWriter;
     boolean lightingEnabled;
     private GpuEnvironmentMapSource field_kc;
@@ -388,7 +388,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
               this.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
             } else {
               if (param1 == 3) {
-                this.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, je.field_c);
+                this.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, GpuQuadBuffers.field_c);
               } else {
                 if (param1 != 4) {
                   var3 = 106 / ((-56 - param0) / 59);
@@ -858,7 +858,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_Jb = new GpuModel(this, 0, 0, true, true);
         GpuModel discarded$4 = new GpuModel(this, 0, 0, false, false);
         this.field_w = new GpuModel(this, 0, 0, true, true);
-        this.field_Ib = new je(this);
+        this.field_Ib = new GpuQuadBuffers(this);
         this.field_T = this.createIndexBuffer((byte) -19, true);
         this.recreateGpuResources(param0 ^ -31089);
         this.field_Mb = new WaterTextures(this);
@@ -2146,7 +2146,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_hb.releaseBuffers(26385);
         this.field_Jb.releaseBuffers(26385);
         this.field_w.releaseBuffers(26385);
-        this.field_Ib.a(false);
+        this.field_Ib.releaseVertexBuffer(false);
         this.field_T.release(-127);
     }
 
@@ -2277,7 +2277,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
         this.createLineGeometry(param0 ^ 27191);
         this.createCircleGeometry(3096);
-        this.field_Ib.a(24, this);
+        this.field_Ib.allocateVertexBuffer(24, this);
     }
 
     final ToolkitSprite createSprite(IndexedSpriteData param0, boolean param1) {

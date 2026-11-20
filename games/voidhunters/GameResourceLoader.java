@@ -247,11 +247,11 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           ComponentCollision.a("Unpacking music", (byte) -125);
           IncrementVariableAction.a(GetBloomCoefficientPercentage.field_p, -1, 88.0f);
           AppletRasterBuffer.field_a.renderGameFrame(-103);
-          pab.field_k = new MusicTrack[4];
-          pab.field_k[0] = MusicTrack.load(this.musicArchive, "", "VH_Title_Music");
-          pab.field_k[1] = MusicTrack.load(this.musicArchive, "", "VH_Ingame_Music");
-          pab.field_k[2] = MusicTrack.load(this.musicArchive, "", "VH_Jingle_Win");
-          pab.field_k[3] = MusicTrack.load(this.musicArchive, "", "VH_Jingle_Lose");
+          CachedByteArray.musicTracks = new MusicTrack[4];
+          CachedByteArray.musicTracks[0] = MusicTrack.load(this.musicArchive, "", "VH_Title_Music");
+          CachedByteArray.musicTracks[1] = MusicTrack.load(this.musicArchive, "", "VH_Ingame_Music");
+          CachedByteArray.musicTracks[2] = MusicTrack.load(this.musicArchive, "", "VH_Jingle_Win");
+          CachedByteArray.musicTracks[3] = MusicTrack.load(this.musicArchive, "", "VH_Jingle_Lose");
           this.musicArchive = null;
           MidiNote.resetFrameTiming(2096);
           return false;
@@ -259,8 +259,8 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         if (null != this.patchArchive) {
           ComponentCollision.a("Unpacking patches", (byte) -123);
           for (var4_int = 0; var4_int < 4; var4_int++) {
-            if (pab.field_k[var4_int] != null &&
-              !GetBurstFireMaxEnergy.field_p.firstStream.loadMusicPatches(this.soundCache, -29476, this.patchArchive, 176400, pab.field_k[var4_int])) {
+            if (CachedByteArray.musicTracks[var4_int] != null &&
+              !GetBurstFireMaxEnergy.field_p.firstStream.loadMusicPatches(this.soundCache, -29476, this.patchArchive, 176400, CachedByteArray.musicTracks[var4_int])) {
               MidiNote.resetFrameTiming(param0 ^ 2164);
               return false;
             }

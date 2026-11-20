@@ -253,7 +253,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
               var8 = SetSpinningBladeTopSpeed.field_o;
             }
           } else {
-            var8 = fj.field_a;
+            var8 = WhirlpoolDigest.field_a;
           }
           dupTemp$0 = new LabeledInputContainer(10, this.y, this.width - 20, 25, this.loginField, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;

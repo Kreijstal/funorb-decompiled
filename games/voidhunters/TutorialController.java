@@ -954,8 +954,8 @@ final class TutorialController {
                   }
                   if (this.isHintCompleteAndHidden((byte) 11, 9)) {
                     this.advanceHintTimer(-26476, 10);
-                    if (null != es.field_b &&
-                      es.field_b.blueprint != null) {
+                    if (null != TooltipDisplay.field_b &&
+                      TooltipDisplay.field_b.blueprint != null) {
                       this.completeHint((byte) 123, 10);
                     }
                     if (this.isHintVisible(10, -61)) {

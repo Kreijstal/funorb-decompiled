@@ -15,7 +15,7 @@ final class SetDetachmentMode extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          if (!je.a((byte) -31, param2, param0)) {
+          if (!GpuQuadBuffers.isValidPlayerNameSyntax((byte) -31, param2, param0)) {
             return false;
           }
           if (param1 < 47) {

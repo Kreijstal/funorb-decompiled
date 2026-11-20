@@ -80,9 +80,9 @@ final class SniperCannonWeaponDefinition extends WeaponDefinition {
     final int getProjectileCount(boolean param0) {
         if (param0) {
           this.getProjectileDamage(-21);
-          return fj.field_b;
+          return WhirlpoolDigest.field_b;
         }
-        return fj.field_b;
+        return WhirlpoolDigest.field_b;
     }
 
     final int getProjectileDamage(int param0) {

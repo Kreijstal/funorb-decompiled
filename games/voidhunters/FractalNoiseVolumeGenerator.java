@@ -47,7 +47,7 @@ class FractalNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
               }
               var3 = var3 + param1;
             }
-            pa.a(var3, 3);
+            SpriteArchiveDecoder.logError(var3, 3);
             var7 = sh.a("%3a", ":", var3, param2 + param2);
             var8 = sh.a("%40", "@", var7, param2 + 0);
             var9 = sh.a("%26", "&", var8, 0);

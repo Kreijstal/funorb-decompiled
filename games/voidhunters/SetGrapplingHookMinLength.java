@@ -213,7 +213,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         SetGrapplingHookRopeBreakLength.field_p = SoftwareRasterizer2D.height;
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
         StripesTextureOperation.a(true);
-        lc.field_b.layout(0, -83, -40 + (tb.field_a.height - 2), 0, tb.field_a.width);
+        GameReleaseStatistics.field_b.layout(0, -83, -40 + (tb.field_a.height - 2), 0, tb.field_a.width);
         DialogMessagePanel.field_v.setBounds(0, -17, SpecialOrderButtonState.field_i.width, 0, DialogMessagePanel.field_w);
         int var1 = DialogMessagePanel.field_w + 2;
         DualLinkNode.field_f.setBounds(0, -26, SpecialOrderButtonState.field_i.width, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, SpecialOrderButtonState.field_i.height - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));

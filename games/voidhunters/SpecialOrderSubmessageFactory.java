@@ -13,7 +13,7 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!pa.decodeSpriteArchiveFile(param0, 2, param3, param2)) {
+          if (!SpriteArchiveDecoder.decodeSpriteArchiveFile(param0, 2, param3, param2)) {
             return null;
           }
           var4_int = -44 % ((param1 - 53) / 50);

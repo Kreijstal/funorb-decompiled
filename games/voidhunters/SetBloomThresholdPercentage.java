@@ -17,7 +17,7 @@ final class SetBloomThresholdPercentage extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          pab.field_m = arguments[0].intValue(127);
+          CachedByteArray.field_m = arguments[0].intValue(127);
           if (obfuscationGuard > -119) {
             field_p = (int[]) null;
           }

@@ -379,10 +379,10 @@ final class GameSession {
             this.blueprintSizeBytes = IntrusiveNode.a((byte) -6).payload.length;
             if (this.blueprintSizeBytes <= 192) {
               this.blueprintSaveStatus = 0;
-              if (es.field_b == null) {
-                es.field_b = new PlayerGameData();
+              if (TooltipDisplay.field_b == null) {
+                TooltipDisplay.field_b = new PlayerGameData();
               }
-              es.field_b.blueprint = var4;
+              TooltipDisplay.field_b.blueprint = var4;
               if (!ModelFaceAttachment.a(false)) {
                 GetMissionResnetResourceTickTime.savePlayerGameData((byte) -39);
               }
@@ -2724,8 +2724,8 @@ final class GameSession {
                     return false;
                   }
                 }
-                if (es.field_b != null) {
-                  stackIn_20_0 = (es.field_b.blueprint != null) ? 1 : 0;
+                if (TooltipDisplay.field_b != null) {
+                  stackIn_20_0 = (TooltipDisplay.field_b.blueprint != null) ? 1 : 0;
                 } else {
                   stackIn_20_0 = 0;
                 }
@@ -2741,7 +2741,7 @@ final class GameSession {
                     var9_ref_hna.specialOrderSubmessage.blueprint = new ShipBlueprint();
                     var9_ref_hna.specialOrderSubmessage.blueprint.description = var13_ref_int__;
                   } else {
-                    var9_ref_hna.specialOrderSubmessage.blueprint = es.field_b.blueprint;
+                    var9_ref_hna.specialOrderSubmessage.blueprint = TooltipDisplay.field_b.blueprint;
                   }
                   this.submitPlayerAction(0, true, var9_ref_hna);
                   return false;
@@ -2787,7 +2787,7 @@ final class GameSession {
                   }
                 }
                 if (var21 != 0) {
-                  var24 = MenuInputState.createShipFromComponentWords(es.field_b.blueprint.description, (byte) 41);
+                  var24 = MenuInputState.createShipFromComponentWords(TooltipDisplay.field_b.blueprint.description, (byte) 41);
                   var23[var18 - 1] = var24;
                 }
                 var56 = new int[var18][];
@@ -2988,7 +2988,7 @@ final class GameSession {
                         var54.mousex = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
                         var54.mousey = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
                         var54.specialOrderSubmessage = new SpecialOrderSubmessage();
-                        var54.specialOrderSubmessage.blueprint = es.field_b.blueprint;
+                        var54.specialOrderSubmessage.blueprint = TooltipDisplay.field_b.blueprint;
                         this.submitPlayerAction(0, true, var54);
                       } else {
                         var53 = new PlayerAction();
@@ -3925,10 +3925,10 @@ final class GameSession {
         Ship var37 = null;
         var35 = VoidHunters.field_G;
         try {
-          if (null != es.field_b &&
-            es.field_b.blueprint != null &&
-            null != es.field_b.blueprint.description) {
-            var36 = MenuInputState.createShipFromComponentWords(es.field_b.blueprint.description, (byte) 60);
+          if (null != TooltipDisplay.field_b &&
+            TooltipDisplay.field_b.blueprint != null &&
+            null != TooltipDisplay.field_b.blueprint.description) {
+            var36 = MenuInputState.createShipFromComponentWords(TooltipDisplay.field_b.blueprint.description, (byte) 60);
             var37 = var36;
             var7 = new Camera2D();
             var8 = 512;
@@ -5279,12 +5279,12 @@ final class GameSession {
               var21.specialOrderSubmessage = new SpecialOrderSubmessage(this.activeSpecialOrderId);
               if (11 != this.activeSpecialOrderId) {
                 if (this.activeSpecialOrderId == 12) {
-                  var21.specialOrderSubmessage.blueprint = es.field_b.blueprint;
+                  var21.specialOrderSubmessage.blueprint = TooltipDisplay.field_b.blueprint;
                 }
               } else {
                 if (!this.blueprintOverwritePending &&
-                  null != es.field_b &&
-                  es.field_b.blueprint != null) {
+                  null != TooltipDisplay.field_b &&
+                  TooltipDisplay.field_b.blueprint != null) {
                   this.blueprintOverwritePending = true;
                 } else {
                   this.saveShipBlueprint(this.state.getVisibleSnapshot(1).world.findShipByOwner(this.localPlayerIndex, 99), -90);
@@ -6466,14 +6466,14 @@ final class GameSession {
                 }
                 if (SetShipTeamActionFactory.field_b) {
                   this.specialOrderStatuses.addLast(-10258, new SpecialOrderStatus(11, 0));
-                  if (es.field_b != null &&
-                    es.field_b.blueprint != null) {
+                  if (TooltipDisplay.field_b != null &&
+                    TooltipDisplay.field_b.blueprint != null) {
                     var7 = 0;
                     if (null != var5.getTargetBlueprint((byte) 28)) {
                       var7 = 51;
                     }
-                    if (es.field_b.blueprint.description != null &&
-                      es.field_b.blueprint.description[0] != var5.chassis.getComponentTypeId(0)) {
+                    if (TooltipDisplay.field_b.blueprint.description != null &&
+                      TooltipDisplay.field_b.blueprint.description[0] != var5.chassis.getComponentTypeId(0)) {
                       var7 = 50;
                     }
                     this.specialOrderStatuses.addLast(-10258, new SpecialOrderStatus(12, var7));
@@ -7962,7 +7962,7 @@ final class GameSession {
               decompiledFrameRemainder0 = false;
             }
             else {
-              pa.a(11, (byte) -123, param3.getGameId((byte) -13));
+              SpriteArchiveDecoder.a(11, (byte) -123, param3.getGameId((byte) -13));
             }
             if (MatchingFieldValidator.field_g != null) {
               this.tutorialController.saveHintProgress((byte) -111);
@@ -8701,7 +8701,7 @@ final class GameSession {
               if (var6 < var10) {
                 var11 = 255 * (var5 - var10 + var6) / var5;
               }
-              var17 = kr.field_a[var9.stringId];
+              var17 = AppletReload.field_a[var9.stringId];
               var12 = var17;
               var13 = this.state.getPlayerName(1, var9.aId);
               var14 = this.state.getPlayerName(1, var9.bId);

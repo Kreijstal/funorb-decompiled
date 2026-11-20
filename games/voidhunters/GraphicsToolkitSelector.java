@@ -36,7 +36,7 @@ final class GraphicsToolkitSelector {
           if (param0 != -29365) {
             field_b = (String) null;
           }
-          es.field_b = var2_ref;
+          TooltipDisplay.field_b = var2_ref;
           GetSalvoUsesAllEnergy.a(-118);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fab.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

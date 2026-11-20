@@ -96,13 +96,13 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         if (!SocketNetworkArchiveClient.g(-127)) {
           return;
         }
-        PlayerGameData var1 = es.field_b;
+        PlayerGameData var1 = TooltipDisplay.field_b;
         if (var1 == null) {
           return;
         }
         if (ModelFaceAttachment.a(false)) {
           var1 = new PlayerGameData();
-          es.field_b.copyTo((byte) 87, var1);
+          TooltipDisplay.field_b.copyTo((byte) 87, var1);
           var1.blueprint = null;
         }
         byte[] var2 = TickCondition.encodeState(-30234, var1);

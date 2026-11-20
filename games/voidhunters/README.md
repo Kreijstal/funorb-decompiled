@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1497/1572 classes and 7373/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 75 opaque classes and 842 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1505/1572 classes and 7388/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 67 opaque classes and 827 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -116,6 +116,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `ComponentBehaviour` and `ShieldBehaviour` expose activation, per-tick updates, independent aiming and special-order state. `BlackBoxRecording` names its serialization-mode hooks; software/GPU face attachments, `LruNodeCache`, `LoginMethod`, tutorial/developer access checks and context-menu/popup builders have descriptive names. Shared message-box state, settings scripts, music playback, skinned panel drawing, progress dialogs and tick-rate helpers are named without changing the original empty constructors, queue/sentinel behavior, shared save slot, cookies, guards or UI/network policy.
 
 `LobbyThemeBuilder`, `TabbedWidget`, `LoginTransitionDialog`, `DateOfBirthEntryPanel` and `FullscreenMembershipDialog` identify shared lobby/account UI. `InterfaceTextLoader` names each text-loading region, including resource bytes carried between regions; `ComponentDefinitionInitializer` names equipment geometry, hull/asteroid definitions and final buffer sizing. `AccountRequestText` exposes encrypted-payload inclusion. Original resource ordering/discarded decodes, literal geometry, seeded RNG, state-machine exceptions, membership checks and empty attachment constructors remain unchanged. The naming audit also rejects generated `runPartition` methods.
+
+`WhirlpoolDigest` names block processing, bit updates, digest output and reset, with tables identified against the primary algorithm implementation. `GpuQuadBuffers`, `CachedByteArray`, `TooltipDisplay` and `TypedStateArrayReader` expose buffer ownership, cached payloads, delayed tooltips and typed-state decoding. Applet reload/navigation, release counters, preset component layout and error logging also have named entrypoints. Original digest padding/reset semantics, buffer release scope, cache/RNG behavior, tooltip timing, serialization modes and guards remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

@@ -95,7 +95,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                         GrapplingHookFactory.a((byte) 127, var4);
                       } else {
                         if (var5 == 5) {
-                          lc.a(38, var4);
+                          GameReleaseStatistics.applyPresetComponentLayout(38, var4);
                         } else {
                           if (var5 != 6) {
                             if (var5 == 1) {

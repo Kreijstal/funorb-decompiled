@@ -342,10 +342,10 @@ final class MenuBackgroundBattle {
         this.world.setWidth(var1, (byte) -93);
         this.world.setHeight(var2, 0);
         var3 = new Random();
-        if (null != es.field_b &&
-          null != es.field_b.blueprint) {
+        if (null != TooltipDisplay.field_b &&
+          null != TooltipDisplay.field_b.blueprint) {
           try {
-            var12 = es.field_b.blueprint.description;
+            var12 = TooltipDisplay.field_b.blueprint.description;
             var5_ref_sg = MenuInputState.createShipFromComponentWords(var12, (byte) 45);
             var5_ref_sg.setTeam(17704, 3);
             var5_ref_sg.setAi(new ShipAI(), 4);
@@ -354,9 +354,9 @@ final class MenuBackgroundBattle {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
-            es.field_b.blueprint = null;
+            TooltipDisplay.field_b.blueprint = null;
             GetMissionResnetResourceTickTime.savePlayerGameData((byte) -111);
-            FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) exception), "player_gamedata version " + es.field_b.version + " blueprint is corrupted", 0);
+            FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) exception), "player_gamedata version " + TooltipDisplay.field_b.version + " blueprint is corrupted", 0);
           }
         } else {
           for (var4 = 0; var4 < 2; var4++) {

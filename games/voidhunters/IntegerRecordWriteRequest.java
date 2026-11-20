@@ -69,7 +69,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[114] = SetLaserRandomness.field_q;
         var2[177] = TextureCombineSource.field_a;
         var2[124] = PlayerActionFactory.field_a;
-        var2[86] = fj.field_b;
+        var2[86] = WhirlpoolDigest.field_b;
         var2[137] = ConsoleCharacterStream.field_d;
         var2[111] = SetMomentOfInertiaPerpointCalcDownshift.field_p;
         var2[213] = GetPhysicsCollisionPhantomForceMultiplier.field_o;

@@ -78,7 +78,7 @@ final class PlayerContextMenu {
                 sh.a(this.targetGameId, -1, param1);
               }
             } else {
-              pa.a(param1, (byte) -128, this.targetGameId);
+              SpriteArchiveDecoder.a(param1, (byte) -128, this.targetGameId);
             }
           } else {
             World.sendLobbyPlayerRemovalRequest(param1, this.targetPlayerKey, param0 ^ -25);

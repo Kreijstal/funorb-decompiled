@@ -52,7 +52,7 @@ final class SetGrapplingHookRopeChangeRate extends ConsoleCommand {
             SetGrapplingHookRopeChangeRate.a(91, -87, 12, -41, -105);
           }
           MatchResultsFactory.setSessionCookie(param0, (byte) 56, "");
-          kr.a(param0, param1 ^ -20973);
+          AppletReload.reloadGamePage(param0, param1 ^ -20973);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wob.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

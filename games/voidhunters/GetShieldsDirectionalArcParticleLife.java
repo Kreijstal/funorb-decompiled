@@ -3,9 +3,9 @@
  */
 final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
     static String[] field_q;
-    static long[] field_o;
+    static long[] whirlpoolRoundConstants;
     static int field_p;
-    static long[][] field_r;
+    static long[][] whirlpoolTables;
 
     GetShieldsDirectionalArcParticleLife(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -41,11 +41,11 @@ final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        whirlpoolRoundConstants = null;
         if (param0 != -23822) {
           return;
         }
-        field_r = (long[][]) null;
+        whirlpoolTables = (long[][]) null;
         field_q = null;
     }
 
@@ -60,8 +60,8 @@ final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
         long var8;
         long var10;
         long var12;
-        field_o = new long[11];
-        field_r = new long[8][256];
+        whirlpoolRoundConstants = new long[11];
+        whirlpoolTables = new long[8][256];
         var0 = 0;
         scanLoop1: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
@@ -85,16 +85,16 @@ final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
             var10 = var10 ^ 285L;
           }
           var12 = var10 ^ var2;
-          field_r[0][var0] = AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(var8 << 16, AwardVictoryToTeamActionFactory.orBits(var10 << 24, AwardVictoryToTeamActionFactory.orBits(var2 << 32, AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
+          whirlpoolTables[0][var0] = AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(var8 << 16, AwardVictoryToTeamActionFactory.orBits(var10 << 24, AwardVictoryToTeamActionFactory.orBits(var2 << 32, AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
           for (var14 = 1; var14 < 8; var14++) {
-            field_r[var14][var0] = AwardVictoryToTeamActionFactory.orBits(field_r[var14 - 1][var0] << 56, field_r[var14 - 1][var0] >>> 8);
+            whirlpoolTables[var14][var0] = AwardVictoryToTeamActionFactory.orBits(whirlpoolTables[var14 - 1][var0] << 56, whirlpoolTables[var14 - 1][var0] >>> 8);
           }
           var0++;
         }
-        field_o[0] = 0L;
+        whirlpoolRoundConstants[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = -8 + var0 * 8;
-          field_o[var0] = SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(16711680L, field_r[5][var1 + 5]), SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(280375465082880L, field_r[2][var1 + 2]), SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(field_r[1][1 + var1], 71776119061217280L), SetExplosionProjectileDamage.andBits(-72057594037927936L, field_r[0][var1]))), SetExplosionProjectileDamage.andBits(field_r[3][3 + var1], 1095216660480L)), SetExplosionProjectileDamage.andBits(field_r[4][4 + var1], 4278190080L))), SetExplosionProjectileDamage.andBits(65280L, field_r[6][var1 + 6])), SetExplosionProjectileDamage.andBits(255L, field_r[7][var1 + 7]));
+          whirlpoolRoundConstants[var0] = SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(16711680L, whirlpoolTables[5][var1 + 5]), SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(280375465082880L, whirlpoolTables[2][var1 + 2]), SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(whirlpoolTables[1][1 + var1], 71776119061217280L), SetExplosionProjectileDamage.andBits(-72057594037927936L, whirlpoolTables[0][var1]))), SetExplosionProjectileDamage.andBits(whirlpoolTables[3][3 + var1], 1095216660480L)), SetExplosionProjectileDamage.andBits(whirlpoolTables[4][4 + var1], 4278190080L))), SetExplosionProjectileDamage.andBits(65280L, whirlpoolTables[6][var1 + 6])), SetExplosionProjectileDamage.andBits(255L, whirlpoolTables[7][var1 + 7]));
         }
     }
 }

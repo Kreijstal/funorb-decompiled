@@ -121,7 +121,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (es.field_a.indexOf(var5Lifetime1) == -1) {
+              if (TooltipDisplay.field_a.indexOf(var5Lifetime1) == -1) {
                 stackIn_47_0 = PointDefenceLaserWeaponDefinition.field_b;
                 return stackIn_47_0;
               }

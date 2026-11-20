@@ -31,7 +31,7 @@ final class OpenGlTransparentWaterEffect extends GpuMaterialEffect {
     }
 
     final void applyRenderState(int param0, boolean param1) {
-        this.toolkit.setTextureCombineOperations(je.field_c, true, MissionVariable.field_c);
+        this.toolkit.setTextureCombineOperations(GpuQuadBuffers.field_c, true, MissionVariable.field_c);
         if (param0 != 5) {
           this.setParameters(0, 25, 20);
         }

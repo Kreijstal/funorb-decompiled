@@ -15,7 +15,7 @@ final class GetThrusterBoosterForce extends ConsoleCommand {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!pa.decodeSpriteArchiveFile(param2, 2, param1, param3)) {
+          if (!SpriteArchiveDecoder.decodeSpriteArchiveFile(param2, 2, param1, param3)) {
             return null;
           }
           if (param0 == -32431) {

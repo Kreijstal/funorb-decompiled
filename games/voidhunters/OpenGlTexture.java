@@ -57,7 +57,7 @@ abstract class OpenGlTexture implements OpenGlFramebufferAttachment {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          if (pa.decodeSpriteArchiveFile(param2, 2, param0, param1)) {
+          if (SpriteArchiveDecoder.decodeSpriteArchiveFile(param2, 2, param0, param1)) {
             return TextureCoordinateMode.a(false);
           }
           return null;

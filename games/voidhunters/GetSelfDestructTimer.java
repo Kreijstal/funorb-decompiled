@@ -46,7 +46,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               for (var5_int = 0; var5_int < PartitioningManagerFactory.field_a; var5_int++) {
                 AccountNameAvailabilityReplies.field_b.payload[var5_int] = var4_ref_c.payload[var5_int];
               }
-              iq.field_a = SetMissionResnetResourceTickTime.field_o;
+              TypedStateArrayReader.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
               SetSalvoRepairTimeMultiplier.field_r = NetworkMessageState.incomingOpcode;
               NetworkMessageState.incomingOpcode = var4_ref_c.opcodeOrLength;
@@ -67,7 +67,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               return false;
             }
             if (PanelHeightQuery.incomingLagMillis == 0) {
-              iq.field_a = SetMissionResnetResourceTickTime.field_o;
+              TypedStateArrayReader.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
               SetSalvoRepairTimeMultiplier.field_r = NetworkMessageState.incomingOpcode;
               NetworkMessageState.incomingOpcode = SetAutoDetail.field_p;

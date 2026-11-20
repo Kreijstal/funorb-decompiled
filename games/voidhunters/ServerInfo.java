@@ -3,7 +3,7 @@
  */
 final class ServerInfo implements DiffableState {
     static int[] field_d;
-    lc field_e;
+    GameReleaseStatistics field_e;
     boolean copyToClipboardHidden;
     int[] componentoptionStates;
     private int[] voteoptionStates;
@@ -208,7 +208,7 @@ final class ServerInfo implements DiffableState {
 
     final boolean isComponentOptionComingSoon(int param0, int param1) {
         if (param0 != -22549) {
-          this.field_e = (lc) null;
+          this.field_e = (GameReleaseStatistics) null;
         }
         int var3 = this.componentoptionStates[param1];
         return this.isComingSoonOptionState(var3, param0 + 22645);
@@ -416,7 +416,7 @@ final class ServerInfo implements DiffableState {
           ChatMessage.writePackedIntArray(stackIn_5_0, stackIn_6_1, 60, param0, this.componentoptionStates);
           DateOfBirthInput.writeBoolean(param0, -110, this.copyToClipboardHidden);
           if (param1 >= -109) {
-            this.field_e = (lc) null;
+            this.field_e = (GameReleaseStatistics) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

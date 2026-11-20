@@ -20,7 +20,7 @@ final class BombletSprayWeaponDefinition extends WeaponDefinition {
     }
 
     final static void a(boolean param0, byte param1) {
-        pa.field_b = 0;
+        SpriteArchiveDecoder.field_b = 0;
         SetBots.field_q = SetMachineGunEnergyUsed.field_p;
         SetSpecialOrderBoxWidth.field_o = 0;
         DialogMessagePanel.field_z = new MenuInputState(2);
