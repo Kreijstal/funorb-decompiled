@@ -100,7 +100,7 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_V) {
-            GetSelfDestructPrepareToggleCooldown.a(-123, 3);
+            GetSelfDestructPrepareToggleCooldown.setAccountUiResult(-123, 3);
             this.closeDialog((byte) -106);
           } else {
             GameReleaseStatistics.openAppletRelativeUrl((byte) 86, MissionList.b((byte) -92), "tochangedisplayname.ws");

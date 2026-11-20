@@ -3,7 +3,7 @@
  */
 final class IntegerArrayReadRequest extends IntrusiveNode {
     int recordType;
-    static lkb field_f;
+    static EmailValidationError incompleteEmailError;
     int[] values;
 
     private IntegerArrayReadRequest() throws Throwable {
@@ -13,13 +13,13 @@ final class IntegerArrayReadRequest extends IntrusiveNode {
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           IntegerArrayReadRequest.clearSharedReferences(true);
-          field_f = null;
+          incompleteEmailError = null;
           return;
         }
-        field_f = null;
+        incompleteEmailError = null;
     }
 
     static {
-        field_f = new lkb();
+        incompleteEmailError = new EmailValidationError();
     }
 }

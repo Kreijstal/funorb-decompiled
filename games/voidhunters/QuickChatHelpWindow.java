@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lwa extends Widget {
-    private Widget field_wb;
-    static String field_vb;
+final class QuickChatHelpWindow extends Widget {
+    private Widget closeButton;
+    static String loadingExtraDataText;
     static ResourceArchive field_xb;
 
-    final boolean a(boolean param0, boolean param1) {
+    final boolean updateAndCheckDismissed(boolean param0, boolean param1) {
         boolean stackIn_9_0 = false;
         if (param1) {
-          this.a(false, true);
+          this.updateAndCheckDismissed(false, true);
         }
         boolean decompiledFrameRemainder0 = true;
         this.updateInput(true, 1332);
         if ((0 == SetDebrisPartitioned.field_o ||
-          this.field_o != 0) && 0 == this.field_wb.field_o) {
+          this.field_o != 0) && 0 == this.closeButton.field_o) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -24,22 +24,22 @@ final class lwa extends Widget {
         return stackIn_9_0;
     }
 
-    final static int e(byte param0) {
+    final static int getEffectsBufferSize(byte param0) {
         if (param0 != 73) {
-          field_vb = (String) null;
+          loadingExtraDataText = (String) null;
         }
-        return LegacyOpenGlWaveWaterEffect.field_e;
+        return LegacyOpenGlWaveWaterEffect.effectsBufferSize;
     }
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           return;
         }
-        field_vb = null;
+        loadingExtraDataText = null;
         field_xb = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int findGraphicsBackendIndex(int param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -49,10 +49,10 @@ final class lwa extends Widget {
         var3 = VoidHunters.field_G;
         try {
           if (param1 != -1) {
-            field_vb = (String) null;
+            loadingExtraDataText = (String) null;
           }
-          for (var2_int = 0; DebugSendable.field_f.length > var2_int; var2_int++) {
-            if (DebugSendable.field_f[var2_int] == param0) {
+          for (var2_int = 0; DebugSendable.graphicsBackendOrder.length > var2_int; var2_int++) {
+            if (DebugSendable.graphicsBackendOrder[var2_int] == param0) {
               stackIn_8_0 = var2_int;
               return stackIn_8_0;
             }
@@ -66,7 +66,7 @@ final class lwa extends Widget {
         }
     }
 
-    lwa(Widget param0, Widget param1, Widget param2, Widget param3, Widget param4, Widget param5) {
+    QuickChatHelpWindow(Widget param0, Widget param1, Widget param2, Widget param3, Widget param4, Widget param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -95,7 +95,7 @@ final class lwa extends Widget {
         try {
           var17 = new Widget(0L, param1, SetPhasedEnergyBeamEnergyUsed.field_p.toUpperCase());
           var17.field_F = 1;
-          this.field_wb = new Widget(0L, param2);
+          this.closeButton = new Widget(0L, param2);
           var8 = new Widget(0L, param3);
           var9 = new Widget(0L, param3, TextInputWidget.field_Jb);
           var9.field_F = 1;
@@ -117,11 +117,11 @@ final class lwa extends Widget {
           var10 += 15;
           var17.setBounds(0, 116, 20 + (var11 + 90), 0, 24);
           this.setBounds(100, 23, var17.width, 100, var10 + var17.height);
-          this.field_wb.setBounds(-20 + var17.width, 8, 15, 5, 15);
+          this.closeButton.setBounds(-20 + var17.width, 8, 15, 5, 15);
           var8.setBounds(0, 119, this.width, var17.height, -var17.height + this.height);
           var9.setBounds(0, 121, this.width, 20, 15);
           var8.field_gb = ShieldInfo.createGradientNineSliceSprites(11579568, var8.height, 2105376, 8421504, 119, 3);
-          var17.addChild(-561, this.field_wb);
+          var17.addChild(-561, this.closeButton);
           var8.addChild(-561, var9);
           this.addChild(-561, var17);
           this.addChild(-561, var8);
@@ -173,6 +173,6 @@ final class lwa extends Widget {
     }
 
     static {
-        field_vb = "Loading extra data";
+        loadingExtraDataText = "Loading extra data";
     }
 }

@@ -15,7 +15,7 @@ final class AsteroidFactory implements GameStateFactory {
         if (param0 != 29012) {
           armageddonWarning = 71;
         }
-        RoundResultFactory.field_a = new lwa(DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o);
+        RoundResultFactory.field_a = new QuickChatHelpWindow(DualLinkNode.field_g, WorldSpriteTiler.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o);
     }
 
     final static void a(int param0, boolean param1, int param2) {

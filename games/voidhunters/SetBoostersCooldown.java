@@ -4,13 +4,13 @@
 final class SetBoostersCooldown extends ConsoleCommand {
     final static ResourceArchive a(byte param0, int param1) {
         int var2 = 59 / ((7 - param0) / 45);
-        if (lwa.field_xb != null) {
-          return lwa.field_xb;
+        if (QuickChatHelpWindow.field_xb != null) {
+          return QuickChatHelpWindow.field_xb;
         }
         if (-1 != param1) {
           return SetAutoAfkTimeout.a(true, false, -65, true, param1, 1);
         }
-        return lwa.field_xb;
+        return QuickChatHelpWindow.field_xb;
     }
 
     SetBoostersCooldown(String param0, Class[] param1, String param2) {

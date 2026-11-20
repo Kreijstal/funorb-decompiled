@@ -22,7 +22,7 @@ final class GameCanvasResizeListener implements CanvasResizeListener {
         RuntimeException var4 = null;
         IsaacPacketBuffer var5 = null;
         int var6 = 0;
-        vu var7 = null;
+        SocialListEntry var7 = null;
         CharSequence var8 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;

@@ -5,12 +5,12 @@ final class chb {
     static int field_a;
 
     final static void a(int param0, int param1, boolean param2) {
-        vu var3 = null;
+        SocialListEntry var3 = null;
         PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        vu var3Lifetime1;
+        SocialListEntry var3Lifetime1;
         PlayerContextMenu var4Lifetime1;
         String var5_ref_StringLifetime1;
         PlayerContextMenu var4Lifetime2;
@@ -26,7 +26,7 @@ final class chb {
             var4.menu.addItem(var5_ref_String, (byte) -53, 5);
             var4Lifetime2 = GetLagStandardDeviationOut.field_o;
             var5 = Particle.field_H;
-            var6 = qs.field_a;
+            var6 = AppletCookieWriter.field_a;
             var4Lifetime2.menu.layoutPopup(var5, -29060, var6, 0, 0);
           }
           IsaacCipher.a((byte) 44, param1, param2);
@@ -41,7 +41,7 @@ final class chb {
           var4Lifetime1.menu.addItem(var5_ref_StringLifetime1, (byte) -53, 5);
           var4Lifetime1Lifetime1 = GetLagStandardDeviationOut.field_o;
           var5Lifetime1 = Particle.field_H;
-          var6Lifetime1 = qs.field_a;
+          var6Lifetime1 = AppletCookieWriter.field_a;
           var4Lifetime1Lifetime1.menu.layoutPopup(var5Lifetime1, -29060, var6Lifetime1, 0, 0);
         }
         IsaacCipher.a((byte) 44, param1, param2);

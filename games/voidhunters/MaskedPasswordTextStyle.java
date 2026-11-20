@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MaskedPasswordTextStyle extends GradientBorderTextStyle {
-    static PcmStreamMixer field_q;
+    static PcmStreamMixer effectsMixer;
     static PartitionZone[] field_s;
     static String field_r;
 
@@ -10,11 +10,11 @@ final class MaskedPasswordTextStyle extends GradientBorderTextStyle {
         field_s = null;
         if (param0 != 17433) {
           MaskedPasswordTextStyle.clearSharedReferences(-38);
-          field_q = null;
+          effectsMixer = null;
           field_r = null;
           return;
         }
-        field_q = null;
+        effectsMixer = null;
         field_r = null;
     }
 

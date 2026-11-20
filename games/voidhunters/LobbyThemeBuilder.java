@@ -82,7 +82,7 @@ final class LobbyThemeBuilder {
             }
           }
           MissionListFactory.field_a = 2;
-          qs.field_c = 4;
+          AppletCookieWriter.field_c = 4;
           DialogMessagePanel.field_w = 15;
           atb.field_d = 11;
           jk.field_Cb = 2;
@@ -117,8 +117,8 @@ final class LobbyThemeBuilder {
           var12 = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "popup_mouseover"), (byte) 106);
           var13 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "button");
           var14 = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_active"), (byte) -113);
-          lo.field_b = new Widget(0L, var8);
-          lo.field_b.field_gb = var14;
+          WorldSpriteTiler.field_b = new Widget(0L, var8);
+          WorldSpriteTiler.field_b.field_gb = var14;
           GetFighterBayReload.field_p = new Widget(0L, (Widget) null);
           GetFighterBayReload.field_p.field_tb = SetSniperCannonProjectiles.a(param3, "closebutton", "lobby", true);
           GetFighterBayReload.field_p.field_cb = SetSniperCannonProjectiles.a(param3, "closebutton_mouseover", "lobby", true);

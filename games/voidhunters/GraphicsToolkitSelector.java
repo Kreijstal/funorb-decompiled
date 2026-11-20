@@ -269,7 +269,7 @@ final class GraphicsToolkitSelector {
                   }
                 }
                 try {
-                  var11 = SetPhasedEnergyBeamProjectiles.createToolkitForCanvas(false, param0, var6.multisamples, this.textureProvider, lwa.field_xb, var6.backendId);
+                  var11 = SetPhasedEnergyBeamProjectiles.createToolkitForCanvas(false, param0, var6.multisamples, this.textureProvider, QuickChatHelpWindow.field_xb, var6.backendId);
                   if (var11 != null) {
                     var8 = new ToolkitCanvasContext(var11, var6, param0);
                     if (var6.isCompatibleWithContext(var8, -97)) {
@@ -458,7 +458,7 @@ final class GraphicsToolkitSelector {
     private GraphicsToolkitSelector(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformService param3, GraphicsBackendOption[] param4) {
         this.selectionCurrent = false;
         try {
-          lwa.field_xb = param1;
+          QuickChatHelpWindow.field_xb = param1;
           MissionEventFactory.field_a = param0;
           this.textureProvider = param2;
           TextureLineShape.a(param3, (byte) 127, param0);

@@ -43,7 +43,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
         if (param0 > -53) {
           field_o = (String) null;
         }
-        SetFighterVision.initializeChatInputDialog(UiFocusableComponent.field_w, -20149, lo.field_b, DualLinkNode.field_g, DeveloperConsole.field_q);
+        SetFighterVision.initializeChatInputDialog(UiFocusableComponent.field_w, -20149, WorldSpriteTiler.field_b, DualLinkNode.field_g, DeveloperConsole.field_q);
     }
 
     SetDebrisSurvives(String param0, Class[] param1, String param2) {
@@ -54,7 +54,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
         int var4_int = 0;
         int var5 = VoidHunters.field_G;
         int var1 = hla.field_a[0] * SetMissionTerrainDebrisProbability.field_o[0];
-        byte[] var2 = sh.field_a[0];
+        byte[] var2 = LiteralStrings.field_a[0];
         if (param0 >= -65) {
           SetDebrisSurvives.e((byte) 85);
         }

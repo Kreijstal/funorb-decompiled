@@ -155,11 +155,11 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 stackIn_39_0 = ((8 & var7) != 0);
                 GetBloomThresholdPercentage.field_p = stackIn_39_0;
                 stackIn_42_0 = ((var7 & 2) != 0);
-                ConsoleSettingsScript.field_c = stackIn_42_0;
+                ConsoleSettingsScript.quickChatOnly = stackIn_42_0;
                 stackIn_45_0 = ((var7 & 4) != 0);
                 GetFightersPerPlayerMaximum.field_r = stackIn_45_0;
                 if (GetBloomThresholdPercentage.field_p) {
-                  ConsoleSettingsScript.field_c = true;
+                  ConsoleSettingsScript.quickChatOnly = true;
                 }
               }
               stackIn_50_0 = ((16 & var7) != 0);

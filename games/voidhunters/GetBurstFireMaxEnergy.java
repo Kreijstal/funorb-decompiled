@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBurstFireMaxEnergy extends ConsoleCommand {
-    static MidiCrossfadeStream field_p;
+    static MidiCrossfadeStream musicStream;
     static boolean field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -47,7 +47,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         if (param0) {
           return;
         }
-        field_p = null;
+        musicStream = null;
     }
 
     GetBurstFireMaxEnergy(String param0, Class[] param1, String param2) {

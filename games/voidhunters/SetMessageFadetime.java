@@ -54,7 +54,7 @@ final class SetMessageFadetime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           RemoveEventActionFactory.field_b = false;
-          vu.field_xb = false;
+          SocialListEntry.field_xb = false;
           if (SetPointDefenceLaserAimarc.field_o != null &&
             SetPointDefenceLaserAimarc.field_o.active) {
             var3_int = 1;
@@ -72,7 +72,7 @@ final class SetMessageFadetime extends ConsoleCommand {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (vu.field_xb) {
+              if (SocialListEntry.field_xb) {
                 param0 = SetReverbGain.a(SetPointDefenceLaserFireForce.field_o, new String[]{param0}, 107);
               }
               if (CarouselConstantRequests.field_c) {

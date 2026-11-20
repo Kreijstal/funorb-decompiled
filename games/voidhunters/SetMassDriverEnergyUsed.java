@@ -46,7 +46,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           return true;
         }
         if (RoundResultFactory.field_a == null) {
-          if (!SetFightersPerPlayerMaximum.field_p) {
+          if (!SetFightersPerPlayerMaximum.chatInputActive) {
             if (!LegacyOpenGlTurbulenceEffect.field_d &&
               9 != SetBombletSprayProjectileDamage.field_o &&
               SetBombletSprayProjectileDamage.field_o != 10 &&
@@ -54,15 +54,15 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
               if (SetBombletSprayProjectileDamage.field_o != 80) {
                 return false;
               }
-              if (!lmb.a(118)) {
+              if (!ChatPermissions.isFreeChatAllowed(118)) {
                 return false;
               }
-              SetFightersPerPlayerMaximum.field_p = true;
+              SetFightersPerPlayerMaximum.chatInputActive = true;
               return true;
             }
             return GetDetachmentMode.a(param0, -9307, param1);
           }
-          if (!lmb.a(-115)) {
+          if (!ChatPermissions.isFreeChatAllowed(-115)) {
             return false;
           }
           stackIn_46_0 = (!SetFighterRepairAmount.b(param2, param0, -85)) ? 0 : 1;
@@ -70,14 +70,14 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           if (SetBombletSprayProjectileDamage.field_o == 80 ||
             84 == SetBombletSprayProjectileDamage.field_o) {
             var4 = 1;
-            SetFightersPerPlayerMaximum.field_p = false;
+            SetFightersPerPlayerMaximum.chatInputActive = false;
           }
         } else {
           if (SetBombletSprayProjectileDamage.field_o == 13) {
             RoundResultFactory.field_a = null;
             return true;
           }
-          if (!SetFightersPerPlayerMaximum.field_p) {
+          if (!SetFightersPerPlayerMaximum.chatInputActive) {
             if (LegacyOpenGlTurbulenceEffect.field_d) {
               return GetDetachmentMode.a(param0, -9307, param1);
             }
@@ -89,33 +89,33 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
               if (SetBombletSprayProjectileDamage.field_o != 80) {
                 return false;
               }
-              if (!lmb.a(118)) {
+              if (!ChatPermissions.isFreeChatAllowed(118)) {
                 return false;
               }
-              SetFightersPerPlayerMaximum.field_p = true;
+              SetFightersPerPlayerMaximum.chatInputActive = true;
               return true;
             }
             return GetDetachmentMode.a(param0, -9307, param1);
           }
-          if (!lmb.a(-115)) {
+          if (!ChatPermissions.isFreeChatAllowed(-115)) {
             return false;
           }
           stackIn_11_0 = (!SetFighterRepairAmount.b(param2, param0, -85)) ? 0 : 1;
           var4 = stackIn_11_0;
           if (SetBombletSprayProjectileDamage.field_o == 80) {
             var4 = 1;
-            SetFightersPerPlayerMaximum.field_p = false;
+            SetFightersPerPlayerMaximum.chatInputActive = false;
           } else {
             if (84 == SetBombletSprayProjectileDamage.field_o) {
               var4 = 1;
-              SetFightersPerPlayerMaximum.field_p = false;
+              SetFightersPerPlayerMaximum.chatInputActive = false;
             }
           }
         }
         if (SetBombletSprayProjectileDamage.field_o == 13) {
           ChatInputResetter.clearChatInput(26718);
           var4 = 1;
-          SetFightersPerPlayerMaximum.field_p = false;
+          SetFightersPerPlayerMaximum.chatInputActive = false;
         }
         return var4 != 0;
     }

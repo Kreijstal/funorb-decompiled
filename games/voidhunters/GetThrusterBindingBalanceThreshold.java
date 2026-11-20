@@ -33,13 +33,13 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           }
           if (NetworkMessageState.chatChannel == 2 &&
             !SetAutozoomAmountMultiply.a(0)) {
-            if (GetTorqueDownshift.a(GetDebrisThrowable.field_o, (byte) -47)) {
-              var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.field_x}, 78);
+            if (GetTorqueDownshift.a(GetDebrisThrowable.privateChatTarget, (byte) -47)) {
+              var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 78);
               if (var10 != 0) {
-                var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
+                var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);
               }
             } else {
-              var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
+              var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);
             }
             if (LegacyOpenGlTurbulenceEffect.field_d) {
               lh.a((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
@@ -61,7 +61,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var6 = NetworkMessageState.chatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{ChoosePlayerNameForm.field_x}, 91);
+              var4 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 91);
               var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var3}, 79);
               var7 = WidgetNode.field_l.width + (UiComboBoxRenderer.field_c.width - 485 + DebrisFactory.field_c.getStringWidth(var8)) - DebrisFactory.field_c.getStringWidth(var4);
               if (0 > var7) {
@@ -96,7 +96,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               var8Lifetime1 = stackIn_56_0;
               var4 = var4 + var3 + var8Lifetime1;
               if (!GetBloomThresholdPercentage.field_p) {
-                if (ConsoleSettingsScript.field_c) {
+                if (ConsoleSettingsScript.quickChatOnly) {
                   var5 = "";
                   var4 = "<col=999999>" + var4 + DateOfBirthInput.field_y + "</col>";
                   if (var10 != 0) {
@@ -126,11 +126,11 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               }
             }
             SetSelfDestructTimer.a(19204, var4 + BitmapFont.escapeMarkup(SetShipAimLines.field_p.toString()), var7, var5, ConsoleCommand.field_m[var6]);
-            if (!SetFightersPerPlayerMaximum.field_p) {
+            if (!SetFightersPerPlayerMaximum.chatInputActive) {
               WidgetNode.field_l.field_O = false;
             }
             if (WidgetNode.field_l.field_O) {
-              var1 = SetReverbGain.a(MissionGenerationDataFactory.field_a, new String[]{var3, ChoosePlayerNameForm.field_x}, 100);
+              var1 = SetReverbGain.a(MissionGenerationDataFactory.field_a, new String[]{var3, ChoosePlayerNameForm.privateChatTargetDisplayName}, 100);
             }
           }
           stackIn_94_0 = var1;

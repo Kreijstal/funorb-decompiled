@@ -141,7 +141,7 @@ final class SpecularGpuMaterialEffect extends GpuMaterialEffect {
             this.toolkit.setAlphaCombineSource(0, (byte) -113, GetArmageddonLength.field_q);
           } else {
             this.toolkit.setActiveTextureUnit(1, -51);
-            this.toolkit.setTextureCoordinateMode((byte) -111, tea.field_d);
+            this.toolkit.setTextureCoordinateMode((byte) -111, GameTextMetrics.field_d);
             var5 = this.toolkit.getTextureTransform((byte) 8);
             var5.setRotationX((byte) -80, 1024);
             this.toolkit.setTextureTransformMode(LoadSettings.field_o, true);

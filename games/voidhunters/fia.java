@@ -76,11 +76,11 @@ final class fia {
           if (param1 == 1) {
             param1 = 0;
           }
-          ChoosePlayerNameForm.field_x = param4;
+          ChoosePlayerNameForm.privateChatTargetDisplayName = param4;
           NetworkMessageState.chatChannel = param1;
           var8 = (CharSequence) ((Object) param4);
-          GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var8);
-          lsa.field_f = param3;
+          GetDebrisThrowable.privateChatTarget = ConstantColorTextureOperation.normalizeName(false, var8);
+          lsa.privateChatRecipientKey = param3;
           var7 = MessageLog.createQuickChatPhraseMenu(ConstantColorTextureOperation.field_k, param0, 0, DebrisFactory.field_a, ScrollableActionPanel.field_Ab);
           AsteroidFieldFactory.setQuickChatMenu((byte) -28, var7);
           return true;

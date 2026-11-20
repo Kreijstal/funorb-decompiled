@@ -150,7 +150,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               var13.worldCenterX = param1.worldCenterX;
               var15 = OpenGlVertexNormal.field_d[7];
               var8Lifetime1 = 4194304;
-              lo.a(0, var8Lifetime1, var15, var16);
+              WorldSpriteTiler.tileWorldSprite(0, var8Lifetime1, var15, var16);
             }
             if (SetSalvoDamageMultiplier.field_o == 1) {
               var16.worldCenterX = param1.worldCenterX;
@@ -158,7 +158,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               var13.worldCenterY = param1.worldCenterY;
               var17 = OpenGlVertexNormal.field_d[6];
               var8Lifetime1Lifetime1 = 4194304;
-              lo.a(0, var8Lifetime1Lifetime1, var17, var16);
+              WorldSpriteTiler.tileWorldSprite(0, var8Lifetime1Lifetime1, var17, var16);
             }
           }
           var6 = param1.worldToScreenX(-var4_int, (byte) 124) - 1;

@@ -67,7 +67,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationState((byte) 35) == GetShipPersistence.validInput &&
                 !param0.equals(this.referenceField.text)) {
-                stackIn_6_0 = lmb.field_a;
+                stackIn_6_0 = ChatPermissions.field_a;
                 return stackIn_6_0;
               }
               stackIn_8_0 = var3.getValidationMessage((byte) -79);
@@ -75,7 +75,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             }
           }
           if (!param0.equals(this.referenceField.text)) {
-            stackIn_11_0 = lmb.field_a;
+            stackIn_11_0 = ChatPermissions.field_a;
             return stackIn_11_0;
           }
           if (param1 == -1) {

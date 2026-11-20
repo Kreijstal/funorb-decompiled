@@ -41,7 +41,7 @@ final class DateOfBirthEntryPanel extends UiArrayContainer implements UiActionLi
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         super.drawLayer(param0, param1, 80, param3);
-        SetTorpedoProjectileLife.field_o.draw(pea.field_c, 4 + (param0 + this.x), 4 + param3 + (this.y + SetTorpedoProjectileLife.field_o.maxAscent), 16777215, -1);
+        SetTorpedoProjectileLife.field_o.draw(PlayerContextMenus.field_c, 4 + (param0 + this.x), 4 + param3 + (this.y + SetTorpedoProjectileLife.field_o.maxAscent), 16777215, -1);
         if (param2 < 47) {
           UiFocusableComponent var6 = (UiFocusableComponent) null;
           this.onAction(46, -102, -40, (UiFocusableComponent) null, -107);

@@ -675,7 +675,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
         var3 = VoidHunters.field_G;
         if (this.selectedModeButton != this.classicButton) {
           if (this.resizableButton == this.selectedModeButton) {
-            spb.a((byte) -95);
+            FullscreenExit.exitFullscreen((byte) -95);
             LegacyOpenGlTurbulenceEffect.makeGameWindowResizable(-10128);
           } else {
             if (this.fullscreenButton == this.selectedModeButton) {
@@ -693,7 +693,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
             }
           }
         } else {
-          spb.a((byte) -95);
+          FullscreenExit.exitFullscreen((byte) -95);
           SetVariableLabelAction.d(0);
         }
         if (param0 >= -18) {

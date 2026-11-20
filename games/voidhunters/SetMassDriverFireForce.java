@@ -56,7 +56,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
           if (!ppb.field_a.loadIndex((byte) -37)) {
             return PasswordValidator.waitingForTextMessage;
           }
-          return lo.loadingTextMessage;
+          return WorldSpriteTiler.loadingTextMessage;
         }
         if (!btb.field_b.loadIndex((byte) 115)) {
           return SetTorpedoProjectileOndamageParticles.field_o;
@@ -77,7 +77,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
           return SetUseLines.field_q;
         }
         if (!BufferedFile.field_i.loadAllGroups(35)) {
-          return lwa.field_vb + " - " + BufferedFile.field_i.getLoadPercent(-115) + "%";
+          return QuickChatHelpWindow.loadingExtraDataText + " - " + BufferedFile.field_i.getLoadPercent(-115) + "%";
         }
         return SetUseModels.field_p;
     }

@@ -392,13 +392,13 @@ final class ArchiveIndex {
         }
     }
 
-    final static vu a(boolean param0, int param1, int param2) {
+    final static SocialListEntry a(boolean param0, int param1, int param2) {
         ScrollPaneWidget stackIn_4_0;
         int stackIn_4_1;
         int stackIn_4_2;
         int stackIn_4_3;
         boolean stackIn_5_4 = false;
-        vu stackIn_9_0 = null;
+        SocialListEntry stackIn_9_0 = null;
         Widget stackIn_34_0 = null;
         String stackIn_35_1 = null;
         Widget stackIn_38_0 = null;
@@ -407,13 +407,13 @@ final class ArchiveIndex {
         Object stackIn_89_0 = null;
         Object stackIn_101_0 = null;
         RuntimeException decompiledCaughtException = null;
-        vu stackOut_8_0;
+        SocialListEntry stackOut_8_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        vu var7 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -444,7 +444,7 @@ final class ArchiveIndex {
             OpenGlCubeTexture.field_h.text = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{HslAdjustTextureOperation.field_q}, param1 + 89);
             BitmapTextLayout.field_n.scrollPane.viewport.text = null;
             var6 = null;
-            var7 = (vu) (var4.first(0));
+            var7 = (SocialListEntry) (var4.first(0));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (null == var7))) {
               var8 = 0;
@@ -529,11 +529,11 @@ final class ArchiveIndex {
                   !var7.field_Bb.field_O) {
                   if (var7.field_o != 0) {
                     var16 = var7.field_Fb;
-                    pea.$cfr$intArgs$a$91f64d33677c(0L, var7, -1, (int[]) null, var16, BitmapTextLayout.field_n.scrollPane, (String) null, 87, -1);
+                    PlayerContextMenus.prepareContextMenu(0L, var7, -1, (int[]) null, var16, BitmapTextLayout.field_n.scrollPane, (String) null, 87, -1);
                     if (null != var7.field_Ab &&
-                      !qs.a(0, GetLagStandardDeviationOut.field_o.targetName) &&
+                      !AppletCookieWriter.isActivePrivateChatTarget(0, GetLagStandardDeviationOut.field_o.targetName) &&
                       !GetBloomThresholdPercentage.field_p) {
-                      if (!ConsoleSettingsScript.field_c) {
+                      if (!ConsoleSettingsScript.quickChatOnly) {
                         var17 = GetLagStandardDeviationOut.field_o;
                         var18 = SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var16}, param1 + 122);
                         var17.menu.addItem(var18, (byte) -53, 8);
@@ -550,7 +550,7 @@ final class ArchiveIndex {
                 } else {
                   NebulaFieldFactory.field_a = var7.field_vb;
                 }
-                var7 = (vu) (var4.next((byte) 99));
+                var7 = (SocialListEntry) (var4.next((byte) 99));
                 continue;
               }
               break;
@@ -582,7 +582,7 @@ final class ArchiveIndex {
             igb.a(BitmapTextLayout.field_n.content, (byte) -100);
           }
           stackIn_101_0 = var5;
-          return (vu) (stackIn_101_0);
+          return (SocialListEntry) (stackIn_101_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

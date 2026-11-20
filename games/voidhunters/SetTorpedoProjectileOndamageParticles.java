@@ -46,8 +46,8 @@ final class SetTorpedoProjectileOndamageParticles extends ConsoleCommand {
         RuntimeException var2 = null;
         var3 = VoidHunters.field_G;
         try {
-          for (var2_int = 0; var2_int < DebugSendable.field_f.length; var2_int++) {
-            if (param1 == DebugSendable.field_f[var2_int]) {
+          for (var2_int = 0; var2_int < DebugSendable.graphicsBackendOrder.length; var2_int++) {
+            if (param1 == DebugSendable.graphicsBackendOrder[var2_int]) {
               return true;
             }
           }

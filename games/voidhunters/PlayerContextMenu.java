@@ -50,7 +50,7 @@ final class PlayerContextMenu {
         if (17 != param1) {
           return false;
         }
-        Asteroid.activeReportDialog = new ReportAbuseDialog(this.sourceWidget.screenX, this.sourceWidget.screenY, this.sourceWidget.width, this.sourceWidget.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.targetName, this.targetPlayerKey);
+        Asteroid.activeReportDialog = new ReportAbuseDialog(this.sourceWidget.screenX, this.sourceWidget.screenY, this.sourceWidget.width, this.sourceWidget.height, param2, DualLinkNode.field_g, WorldSpriteTiler.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.targetName, this.targetPlayerKey);
         return true;
     }
 
@@ -75,7 +75,7 @@ final class PlayerContextMenu {
                   ArmBehaviourFactory.a(this.targetGameId, param1, 20694);
                 }
               } else {
-                sh.a(this.targetGameId, -1, param1);
+                LiteralStrings.a(this.targetGameId, -1, param1);
               }
             } else {
               SpriteArchiveDecoder.a(param1, (byte) -128, this.targetGameId);
@@ -175,7 +175,7 @@ final class PlayerContextMenu {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        vu var5 = null;
+        SocialListEntry var5 = null;
         int var6 = 0;
         CharSequence var7 = null;
         String var8 = null;
@@ -198,9 +198,9 @@ final class PlayerContextMenu {
               }
             }
             if (var5 != null) {
-              if (!qs.a(0, this.targetName) &&
+              if (!AppletCookieWriter.isActivePrivateChatTarget(0, this.targetName) &&
                 !GetBloomThresholdPercentage.field_p) {
-                if (!ConsoleSettingsScript.field_c) {
+                if (!ConsoleSettingsScript.quickChatOnly) {
                   this.menu.addItem(SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
                 }
                 this.menu.addItem(SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);
@@ -365,7 +365,7 @@ final class PlayerContextMenu {
             }
           }
         } else {
-          GetMpSandboxEnemySpawnLimit.a((byte) 39, this.targetPlayerKey, this.targetName);
+          GetMpSandboxEnemySpawnLimit.selectPrivateChatTarget((byte) 39, this.targetPlayerKey, this.targetName);
         }
         return true;
     }

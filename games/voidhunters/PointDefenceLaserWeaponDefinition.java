@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
-    static lkb field_b;
+    static EmailValidationError invalidEmailSyntaxError;
     static java.awt.Frame field_c;
 
     PointDefenceLaserWeaponDefinition() {
@@ -25,7 +25,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
 
     final int getFiringSoundId(boolean param0) {
         if (param0) {
-          field_b = (lkb) null;
+          invalidEmailSyntaxError = (EmailValidationError) null;
           return 41;
         }
         return 41;
@@ -50,7 +50,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_b = null;
+        invalidEmailSyntaxError = null;
         field_c = null;
         if (param0 != 17036) {
           String var2 = (String) null;
@@ -87,7 +87,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
     }
 
     final static boolean a(long param0, String param1, int param2) {
-        vu var4 = null;
+        SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
         boolean stackIn_11_0 = false;
@@ -130,7 +130,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
 
     final boolean autoTargetsThreats(int param0) {
         if (param0 != -2291) {
-          field_b = (lkb) null;
+          invalidEmailSyntaxError = (EmailValidationError) null;
           return true;
         }
         return true;
@@ -138,7 +138,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
 
     final int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
-          field_b = (lkb) null;
+          invalidEmailSyntaxError = (EmailValidationError) null;
           return SetShipPersistence.field_s;
         }
         return SetShipPersistence.field_s;
@@ -157,6 +157,6 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
     }
 
     static {
-        field_b = new lkb();
+        invalidEmailSyntaxError = new EmailValidationError();
     }
 }

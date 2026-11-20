@@ -100,8 +100,8 @@ final class AgeValidator extends TextFieldValidator {
 
     final static void configureReverb(float param0, float param1, float param2, int param3, float param4, float param5, float param6) {
         if (FloatNoiseSliceGenerator.field_b == null) {
-          FloatNoiseSliceGenerator.field_b = new ReverbPcmStream(MaskedPasswordTextStyle.field_q);
-          LobbyGameContextMenuBuilder.field_b.setStream(FloatNoiseSliceGenerator.field_b);
+          FloatNoiseSliceGenerator.field_b = new ReverbPcmStream(MaskedPasswordTextStyle.effectsMixer);
+          LobbyGameContextMenuBuilder.effectsOutput.setStream(FloatNoiseSliceGenerator.field_b);
           FloatNoiseSliceGenerator.field_b.setInputGain(param0);
           FloatNoiseSliceGenerator.field_b.setFeedback(param4);
           FloatNoiseSliceGenerator.field_b.setDampingTime(param2);

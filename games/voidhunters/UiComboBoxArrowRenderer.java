@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pbb implements UiRenderer {
-    static String field_a;
+final class UiComboBoxArrowRenderer implements UiRenderer {
+    static String protectVipText;
 
     public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
@@ -57,7 +57,7 @@ final class pbb implements UiRenderer {
         }
     }
 
-    final static GraphicsToolkit a(ResourceArchive param0, int param1, int param2, TextureProvider param3, java.awt.Canvas param4) {
+    final static GraphicsToolkit createOpenGlGpuToolkit(ResourceArchive param0, int param1, int param2, TextureProvider param3, java.awt.Canvas param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         OpenGlGpuToolkit var8 = null;
@@ -119,15 +119,15 @@ final class pbb implements UiRenderer {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_a = null;
+        protectVipText = null;
         if (param0 != -652030847) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          pbb.a((ResourceArchive) null, 54, 122, (TextureProvider) null, (java.awt.Canvas) null);
+          UiComboBoxArrowRenderer.createOpenGlGpuToolkit((ResourceArchive) null, 54, 122, (TextureProvider) null, (java.awt.Canvas) null);
           return;
         }
     }
 
     static {
-        field_a = "Protect your VIP";
+        protectVipText = "Protect your VIP";
     }
 }

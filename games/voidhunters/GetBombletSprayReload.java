@@ -55,7 +55,7 @@ final class GetBombletSprayReload extends ConsoleCommand {
         OpenGlFaceAttachment.field_b = var4;
         int var5 = -112 / ((param0 + 16) / 59);
         Particle.field_H = var3;
-        qs.field_a = var4;
+        AppletCookieWriter.field_a = var4;
     }
 
     static {

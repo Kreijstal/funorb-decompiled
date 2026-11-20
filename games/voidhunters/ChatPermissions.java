@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lmb {
+final class ChatPermissions {
     static String field_a;
     static int field_b;
 
-    final static boolean a(int param0) {
+    final static boolean isFreeChatAllowed(int param0) {
         int var1 = -95 % ((65 - param0) / 43);
-        return !ConsoleSettingsScript.field_c ? true : false;
+        return !ConsoleSettingsScript.quickChatOnly ? true : false;
     }
 
     public static void clearSharedReferences(byte param0) {

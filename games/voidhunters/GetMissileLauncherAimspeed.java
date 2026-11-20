@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMissileLauncherAimspeed extends ConsoleCommand {
-    static HuffmanCodec field_o;
+    static HuffmanCodec huffmanCodec;
     static int[] field_p;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 127) {
           GetMissileLauncherAimspeed.clearSharedReferences(14);
-          field_o = null;
+          huffmanCodec = null;
           field_p = null;
           return;
         }
-        field_o = null;
+        huffmanCodec = null;
         field_p = null;
     }
 

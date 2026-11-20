@@ -3,17 +3,17 @@
  */
 final class TooltipDisplay {
     static PlayerGameData field_b;
-    static String field_a;
+    static String emailLocalPartCharacters;
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
           TooltipDisplay.clearSharedReferences(false);
           field_b = null;
-          field_a = null;
+          emailLocalPartCharacters = null;
           return;
         }
         field_b = null;
-        field_a = null;
+        emailLocalPartCharacters = null;
     }
 
     final static void updateAndDrawTooltip(int param0, int param1, ToolkitFontMetrics param2, int param3, ToolkitFont param4, int param5, GraphicsToolkit param6, int param7, int param8, BitmapFont param9, int param10) {
@@ -86,6 +86,6 @@ final class TooltipDisplay {
     }
 
     static {
-        field_a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
+        emailLocalPartCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

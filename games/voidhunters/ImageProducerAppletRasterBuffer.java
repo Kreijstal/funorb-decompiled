@@ -83,7 +83,7 @@ final class ImageProducerAppletRasterBuffer extends AppletRasterBuffer implement
               var4_int = param0;
             }
             var5 = new byte[var4_int];
-            param1.position = param1.position + GetMissileLauncherAimspeed.field_o.decompress(0, param1.payload, var5, var4_int, 0, param1.position);
+            param1.position = param1.position + GetMissileLauncherAimspeed.huffmanCodec.decompress(0, param1.payload, var5, var4_int, 0, param1.position);
             var6 = CarouselSlot.decodeCp1252(0, 0, var4_int, var5);
             stackIn_4_0 = var6;
             return stackIn_4_0;

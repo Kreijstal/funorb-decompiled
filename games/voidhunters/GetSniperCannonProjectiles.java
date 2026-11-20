@@ -45,12 +45,12 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
           } else {
             stackIn_3_8 = param0.field_q;
           }
-          pea.$cfr$intArgs$a$91f64d33677c(stackIn_2_0, stackIn_2_1, stackIn_2_2, (int[]) (stackIn_2_3), stackIn_2_4, (ScrollPaneWidget) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          PlayerContextMenus.prepareContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, (int[]) (stackIn_2_3), stackIn_2_4, (ScrollPaneWidget) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (0 == param0.channelType &&
-            !spb.a(-121) &&
+            !FullscreenExit.isActivePublicChat(-121) &&
             SetSpinningBladeSpindamageMultiplier.field_o == null &&
             SetThrusterParticleSpeedDownshift.field_o == null) {
-            if (!ConsoleSettingsScript.field_c) {
+            if (!ConsoleSettingsScript.quickChatOnly) {
               var5 = GetLagStandardDeviationOut.field_o;
               var6 = FlipTextureOperation.field_k;
               var5.menu.addItem(var6, (byte) -53, 14);
@@ -60,10 +60,10 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             var7.menu.addItem(var8, (byte) -53, 20);
           }
           if (param0.channelType == 1 &&
-            !spb.a(-78) &&
+            !FullscreenExit.isActivePublicChat(-78) &&
             null != SetSpinningBladeSpindamageMultiplier.field_o &&
             param0.field_q == SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13)) {
-            if (!ConsoleSettingsScript.field_c) {
+            if (!ConsoleSettingsScript.quickChatOnly) {
               var9 = GetLagStandardDeviationOut.field_o;
               var10 = kia.field_b;
               var9.menu.addItem(var10, (byte) -53, 14);
@@ -82,7 +82,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
           GetLagStandardDeviationOut.field_o.addChatFilterOptions(param0, param1 ^ 22805);
           var13 = GetLagStandardDeviationOut.field_o;
           var3 = Particle.field_H;
-          var4 = qs.field_a;
+          var4 = AppletCookieWriter.field_a;
           var13.menu.layoutPopup(var3, -29060, var4, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

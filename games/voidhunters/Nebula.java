@@ -109,7 +109,7 @@ final class Nebula implements DiffableState {
         }
     }
 
-    final static boolean a(vu param0, int param1, vu param2) {
+    final static boolean a(SocialListEntry param0, int param1, SocialListEntry param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -121,7 +121,7 @@ final class Nebula implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          var3_int = -param0.field_yb + param2.field_yb;
+          var3_int = -param0.insertionIndex + param2.insertionIndex;
           if (param2.field_Ab != HslAdjustTextureOperation.field_q) {
             if (null == param2.field_Ab) {
               var3_int += 200;

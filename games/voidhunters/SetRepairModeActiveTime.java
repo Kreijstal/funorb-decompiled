@@ -137,13 +137,13 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           DialogMessagePanel.field_v.field_F = 1;
           SpawnChoiceFactory.field_c = new Widget(0L, SetPlayerRepairAmount.field_q, GameInterfaceText.returnToMainMenuText.toUpperCase());
           AlphaContainer.field_w = new Widget(0L, SpriteArchiveDecoder.field_a, SetMachineGunAimarc.field_o.toUpperCase());
-          sra.field_a = new Widget(0L, GpuEnvironmentMapSource.field_c);
+          LobbyGameListWidgets.panel = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ArchiveIndexLoader.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
           GetSniperCannonAimspeed.field_q = new Widget(0L, GetUseSprites.field_p, SpecialOrderButtonState.field_e);
           SettingsChangeFactory.field_b = new Widget(0L, GetUseSprites.field_p, DebouncedInputValidator.field_b);
           GrapplingHook.field_C = new Widget(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
           GetDebrisDetachmentForceMultiplier.field_o = new Widget(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
-          LegacyOpenGlTurbulenceEffect.field_h = new Widget(0L, ObjectiveMarker.field_d, tea.field_c);
+          LegacyOpenGlTurbulenceEffect.field_h = new Widget(0L, ObjectiveMarker.field_d, GameTextMetrics.elapsedTimeText);
           MapClearanceCircle.field_f = new ScrollPaneWidget(0L, new Widget(0L, (Widget) null), UiFocusableComponent.field_w, GetUseNiceTrails.field_o);
           GetMomentOfInertiaPerpointCalcDownshift.field_p = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p, TextureRasterShape.field_b.toUpperCase());
           GetMomentOfInertiaPerpointCalcDownshift.field_p.enabled = GetGrapplingHooksDamageableBySourcePlayer.field_o;
@@ -163,16 +163,16 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           LoginCredentials.field_a = new Widget(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           ModelFaceAttachment.field_d = new Widget(0L, (Widget) null);
           ModelFaceAttachment.field_d.addChild(-561, AlphaContainer.field_w);
-          ModelFaceAttachment.field_d.addChild(param1 - 10792, sra.field_a);
-          sra.field_a.addChild(-561, ArchiveIndexLoader.field_a);
-          sra.field_a.addChild(-561, GetSniperCannonAimspeed.field_q);
-          sra.field_a.addChild(param1 ^ -9672, SettingsChangeFactory.field_b);
+          ModelFaceAttachment.field_d.addChild(param1 - 10792, LobbyGameListWidgets.panel);
+          LobbyGameListWidgets.panel.addChild(-561, ArchiveIndexLoader.field_a);
+          LobbyGameListWidgets.panel.addChild(-561, GetSniperCannonAimspeed.field_q);
+          LobbyGameListWidgets.panel.addChild(param1 ^ -9672, SettingsChangeFactory.field_b);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
-            sra.field_a.addChild(param1 ^ -9672, GrapplingHook.field_C);
+            LobbyGameListWidgets.panel.addChild(param1 ^ -9672, GrapplingHook.field_C);
           }
-          sra.field_a.addChild(-561, GetDebrisDetachmentForceMultiplier.field_o);
-          sra.field_a.addChild(-561, LegacyOpenGlTurbulenceEffect.field_h);
-          sra.field_a.addChild(-561, MapClearanceCircle.field_f);
+          LobbyGameListWidgets.panel.addChild(-561, GetDebrisDetachmentForceMultiplier.field_o);
+          LobbyGameListWidgets.panel.addChild(-561, LegacyOpenGlTurbulenceEffect.field_h);
+          LobbyGameListWidgets.panel.addChild(-561, MapClearanceCircle.field_f);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             ModelFaceAttachment.field_d.addChild(-561, GetMomentOfInertiaPerpointCalcDownshift.field_p);
           }
@@ -301,7 +301,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           ThreeSliceButtonStyle.field_r.addChild(param1 - 10792, vw.field_a);
           ThreeSliceButtonStyle.field_r.addChild(-561, ObjectiveMarker.field_b);
           ThreeSliceButtonStyle.field_r.addChild(-561, SetAutozoomSpeedDivide.field_p);
-          ProjectileHit.field_d = new Widget(0L, lo.field_b, FloatGradientNoiseSliceGenerator.field_d.toUpperCase());
+          ProjectileHit.field_d = new Widget(0L, WorldSpriteTiler.field_b, FloatGradientNoiseSliceGenerator.field_d.toUpperCase());
           LegacyOpenGlTextureCache.field_a = new Widget(0L, DisplayModeDialog.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

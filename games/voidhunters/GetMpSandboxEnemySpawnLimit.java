@@ -90,18 +90,18 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         return true;
     }
 
-    final static void a(byte param0, long param1, String param2) {
+    final static void selectPrivateChatTarget(byte param0, long param1, String param2) {
         CharSequence var5 = null;
         try {
           NetworkMessageState.chatChannel = 2;
-          ChoosePlayerNameForm.field_x = param2;
+          ChoosePlayerNameForm.privateChatTargetDisplayName = param2;
           var5 = (CharSequence) ((Object) param2);
-          GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var5);
-          SetFightersPerPlayerMaximum.field_p = true;
+          GetDebrisThrowable.privateChatTarget = ConstantColorTextureOperation.normalizeName(false, var5);
+          SetFightersPerPlayerMaximum.chatInputActive = true;
           if (param0 != 39) {
             field_o = (String) null;
           }
-          lsa.field_f = param1;
+          lsa.privateChatRecipientKey = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ir.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

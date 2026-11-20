@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1505/1572 classes and 7388/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 67 opaque classes and 827 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1519/1572 classes and 7417/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 53 opaque classes and 798 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -118,6 +118,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `LobbyThemeBuilder`, `TabbedWidget`, `LoginTransitionDialog`, `DateOfBirthEntryPanel` and `FullscreenMembershipDialog` identify shared lobby/account UI. `InterfaceTextLoader` names each text-loading region, including resource bytes carried between regions; `ComponentDefinitionInitializer` names equipment geometry, hull/asteroid definitions and final buffer sizing. `AccountRequestText` exposes encrypted-payload inclusion. Original resource ordering/discarded decodes, literal geometry, seeded RNG, state-machine exceptions, membership checks and empty attachment constructors remain unchanged. The naming audit also rejects generated `runPartition` methods.
 
 `WhirlpoolDigest` names block processing, bit updates, digest output and reset, with tables identified against the primary algorithm implementation. `GpuQuadBuffers`, `CachedByteArray`, `TooltipDisplay` and `TypedStateArrayReader` expose buffer ownership, cached payloads, delayed tooltips and typed-state decoding. Applet reload/navigation, release counters, preset component layout and error logging also have named entrypoints. Original digest padding/reset semantics, buffer release scope, cache/RNG behavior, tooltip timing, serialization modes and guards remain unchanged.
+
+`PlayerContextMenus` preserves separate byte/int guard overloads, while `EmailValidationError` names the original address/local-part/domain checks and identity tokens. Cookie writing, private/public chat selection, audio setup, the intrusive hash-table iterator, combo-box arrows, quick-chat help, social-list entries and fullscreen exit have named contracts. Literal replacement retains its replacement/needle/source order; panel tiling, fixed-point roots, validation quirks, server chat policy, native setup, iterator exhaustion and guards remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

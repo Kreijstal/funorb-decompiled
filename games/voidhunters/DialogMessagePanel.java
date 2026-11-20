@@ -35,7 +35,7 @@ final class DialogMessagePanel extends UiContainer implements UiActionListener {
             }
             var7 = this.actionCodes[var6_int];
             if (var7 != -1) {
-              GetSelfDestructPrepareToggleCooldown.a(127, this.actionCodes[var6_int]);
+              GetSelfDestructPrepareToggleCooldown.setAccountUiResult(127, this.actionCodes[var6_int]);
             } else {
               this.owner.closeDialog((byte) -106);
             }

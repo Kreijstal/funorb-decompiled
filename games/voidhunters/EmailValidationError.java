@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lkb {
+final class EmailValidationError {
     static int[] field_a;
 
     public static void clearSharedReferences(int param0) {
@@ -11,7 +11,7 @@ final class lkb {
         field_a = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void layoutSlidingLobbyPanels(int param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -26,7 +26,7 @@ final class lkb {
           ThreeSliceButtonStyle.field_r.setBounds(var2 + 202 + 438 * var4 / var3, 26, 438, 0, -124 + SoftwareRasterizer2D.height);
           return;
         }
-        lkb.clearSharedReferences(92);
+        EmailValidationError.clearSharedReferences(92);
         var2Lifetime1 = (-640 + GetShieldsDirectionalArcParticleLife.field_p) / 2;
         var3Lifetime1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         var4Lifetime1 = var3Lifetime1 - param0 * param0;
@@ -38,16 +38,16 @@ final class lkb {
         throw new IllegalStateException();
     }
 
-    final static lkb a(String param0, byte param1) {
+    final static EmailValidationError validateEmailAddress(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        lkb var5 = null;
-        lkb stackIn_6_0 = null;
-        lkb stackIn_10_0 = null;
-        lkb stackIn_13_0 = null;
-        lkb stackIn_15_0 = null;
+        EmailValidationError var5 = null;
+        EmailValidationError stackIn_6_0 = null;
+        EmailValidationError stackIn_10_0 = null;
+        EmailValidationError stackIn_13_0 = null;
+        EmailValidationError stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -60,20 +60,20 @@ final class lkb {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_10_0 = IntegerArrayReadRequest.field_f;
+              stackIn_10_0 = IntegerArrayReadRequest.incompleteEmailError;
               return stackIn_10_0;
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(var2_int + 1);
-            var5 = SetToggledScoreboard.a((byte) 108, var3);
+            var5 = SetToggledScoreboard.validateEmailLocalPart((byte) 108, var3);
             if (var5 == null) {
-              stackIn_15_0 = SetServerinfoComponentstate.a(0, var4);
+              stackIn_15_0 = SetServerinfoComponentstate.validateEmailDomain(0, var4);
               return stackIn_15_0;
             }
             stackIn_13_0 = var5;
             return stackIn_13_0;
           }
-          stackIn_6_0 = GetGrapplingHookCooldown.field_r;
+          stackIn_6_0 = GetGrapplingHookCooldown.emptyEmailError;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

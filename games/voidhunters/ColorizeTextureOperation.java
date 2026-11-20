@@ -23,7 +23,7 @@ final class ColorizeTextureOperation extends TextureOperation {
           field_j = true;
           return;
         }
-        if (!RoundResultFactory.field_a.a(param1, false)) {
+        if (!RoundResultFactory.field_a.updateAndCheckDismissed(param1, false)) {
           if (param0 == 34) {
             return;
           }

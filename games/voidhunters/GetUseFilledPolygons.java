@@ -45,7 +45,7 @@ final class GetUseFilledPolygons extends ConsoleCommand {
     final static void a(int param0) {
         RemoveEventActionFactory.field_b = false;
         OpenGlSprite.reconnecting = false;
-        GetSelfDestructPrepareToggleCooldown.a(-86, param0);
+        GetSelfDestructPrepareToggleCooldown.setAccountUiResult(-86, param0);
         SetShipTeamAction.field_b = ToolkitRasterStateStack.field_d;
         SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.field_d;
     }

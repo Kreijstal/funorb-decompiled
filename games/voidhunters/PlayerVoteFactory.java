@@ -100,12 +100,12 @@ final class PlayerVoteFactory implements GameStateFactory {
     final static void a(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
-          ChoosePlayerNameForm.field_x = param0;
+          ChoosePlayerNameForm.privateChatTargetDisplayName = param0;
           int var4_int = -104 / ((-6 - param2) / 42);
           NetworkMessageState.chatChannel = 2;
           var5 = (CharSequence) ((Object) param0);
-          GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var5);
-          lsa.field_f = param1;
+          GetDebrisThrowable.privateChatTarget = ConstantColorTextureOperation.normalizeName(false, var5);
+          lsa.privateChatRecipientKey = param1;
           CommonGameState.selectDefaultQuickChatMenu(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

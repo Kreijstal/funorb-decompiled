@@ -66,7 +66,7 @@ final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
             }
             var1_int = 1;
           }
-          UiAngleDialRenderer.field_c.updatePointerSelection(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(OpenGlFaceAttachment.field_b, 3841, PlayerGameData.field_b));
+          UiAngleDialRenderer.field_c.updatePointerSelection(SetBuildViewAutozoomEndOnAction.a(AppletCookieWriter.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(OpenGlFaceAttachment.field_b, 3841, PlayerGameData.field_b));
           if (UiAngleDialRenderer.field_c.isActivationRequested((byte) -126)) {
             var1_int = 1;
           }

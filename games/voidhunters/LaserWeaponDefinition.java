@@ -18,9 +18,9 @@ final class LaserWeaponDefinition extends WeaponDefinition {
     final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           field_b = (String) null;
-          return tea.field_b;
+          return GameTextMetrics.field_b;
         }
-        return tea.field_b;
+        return GameTextMetrics.field_b;
     }
 
     final int getAimArc(int param0) {

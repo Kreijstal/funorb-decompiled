@@ -88,13 +88,13 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
         if (param0 == 2543) {
           this.toolkit.setRgbCombineSource(1, GetArmageddonLength.field_q, 7);
-          this.toolkit.setRgbCombineSource(2, pea.field_d, 7);
+          this.toolkit.setRgbCombineSource(2, PlayerContextMenus.field_d, 7);
           this.toolkit.setEffectFogEnabled(true, false);
           return;
         }
         this.field_g = (jagdx.IDirect3DVertexShader) null;
         this.toolkit.setRgbCombineSource(1, GetArmageddonLength.field_q, 7);
-        this.toolkit.setRgbCombineSource(2, pea.field_d, 7);
+        this.toolkit.setRgbCombineSource(2, PlayerContextMenus.field_d, 7);
         this.toolkit.setEffectFogEnabled(true, false);
     }
 
@@ -180,7 +180,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
 
     final void enable(int param0, boolean param1) {
         this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, param0 + 2);
-        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
+        this.toolkit.setRgbCombineSource(1, PlayerContextMenus.field_d, 7);
         this.toolkit.setRgbCombineSource(false, -21115, true, GetArmageddonLength.field_q, 2);
         this.toolkit.setEffectFogEnabled(false, false);
         this.field_e.setVertexShader(0, this.field_g);

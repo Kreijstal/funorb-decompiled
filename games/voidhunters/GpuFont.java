@@ -280,7 +280,7 @@ final class GpuFont extends ToolkitFont {
           this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, MissionVariable.field_c);
         } else {
           this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, MissionVariable.field_c);
-          this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
+          this.toolkit.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
           this.toolkit.setTextureConstantColor(-122, param3);
         }
         var6 = this.toolkit.getModelTransform(11);

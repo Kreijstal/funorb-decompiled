@@ -96,7 +96,7 @@ final class SetShieldsDamageEnergyConversion extends ConsoleCommand {
         }
         param2 = param2 - param1;
         param6 = param6 - param4;
-        return vu.b(-var9Lifetime1 + param1 * param1 + param4 * param4, 0, param6 * param4 + param2 * param1 << 1, param5, param6 * param6 + param2 * param2 << 1);
+        return SocialListEntry.findUnitIntervalQuadraticRoot(-var9Lifetime1 + param1 * param1 + param4 * param4, 0, param6 * param4 + param2 * param1 << 1, param5, param6 * param6 + param2 * param2 << 1);
     }
 
     public static void clearSharedReferences(int param0) {

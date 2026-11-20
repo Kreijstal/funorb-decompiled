@@ -253,7 +253,7 @@ final class TutorialController {
         try {
           var10_int = -16384;
           var11 = -2048;
-          var12 = tea.a(param7, param6, 13879);
+          var12 = GameTextMetrics.getStringWidth(param7, param6, 13879);
           var13 = PartitionZoneFactory.field_a;
           var14 = MissionVariableFactory.field_a;
           var15 = param0[0];

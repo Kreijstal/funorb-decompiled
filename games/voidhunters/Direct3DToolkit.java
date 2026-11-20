@@ -992,7 +992,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (SpriteTextureOperation.field_l == param0) {
           return 1;
         }
-        if (param0 == pea.field_d) {
+        if (param0 == PlayerContextMenus.field_d) {
           return 3;
         }
         var2 = -14 / ((param1 - 31) / 56);
@@ -1136,7 +1136,7 @@ public final class Direct3DToolkit extends GpuToolkit {
     final void setTextureCoordinateMode(byte param0, TextureCoordinateMode param1) {
         int var3;
         var3 = 0;
-        if (tea.field_d == param1) {
+        if (GameTextMetrics.field_d == param1) {
           var3 = 65536;
         } else {
           if (OpenGlFramebuffer.field_c != param1) {

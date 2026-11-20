@@ -268,13 +268,13 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 SmoothedNanoTickClock.isLocalLobbyOwner(-91) &&
                 BodyInZoneConditionFactory.field_a != var12.field_zb) {
                 if (null != var12.field_wb.text) {
-                  var26 = var12.field_wb.getPreferredWidth(param1 + 93) + 2 * qs.field_c;
+                  var26 = var12.field_wb.getPreferredWidth(param1 + 93) + 2 * AppletCookieWriter.field_c;
                   var12.field_wb.setBounds(var25_int, 124, var26, var19, DialogMessagePanel.field_w);
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Nb.text != null) {
                   if (WaterTextures.field_f != param2) {
-                    var26Lifetime2 = var12.field_Nb.getPreferredWidth(101) + qs.field_c * 2;
+                    var26Lifetime2 = var12.field_Nb.getPreferredWidth(101) + AppletCookieWriter.field_c * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
@@ -316,10 +316,10 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Mb.font.getLineCount(var23, -qs.field_c + var12.width - qs.field_c);
+              var24_intLifetime1 = var12.field_Mb.font.getLineCount(var23, -AppletCookieWriter.field_c + var12.width - AppletCookieWriter.field_c);
               var12.field_Mb.field_I = 256 * var12.field_yb / GetMomentOfInertiaPredivideDownshift.field_p;
               var12.field_Mb.text = var23;
-              var12.field_Mb.setBounds(qs.field_c, -102, var12.width - qs.field_c * 2, var19, DialogMessagePanel.field_w * var24_intLifetime1);
+              var12.field_Mb.setBounds(AppletCookieWriter.field_c, -102, var12.width - AppletCookieWriter.field_c * 2, var19, DialogMessagePanel.field_w * var24_intLifetime1);
               var19 = var19 + DialogMessagePanel.field_w * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
@@ -334,7 +334,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 if (0 != var12.field_Nb.field_o) {
                   World.sendLobbyPlayerRemovalRequest(param4, var12.field_zb, -125);
                 } else {
-                  AccountCreationDialog.showPlayerContextMenu(qs.field_a, 0, var12, (byte) 71, Particle.field_H, param2, 0);
+                  AccountCreationDialog.showPlayerContextMenu(AppletCookieWriter.field_a, 0, var12, (byte) 71, Particle.field_H, param2, 0);
                 }
               } else {
                 PlayerRequestPackets.sendPlayerRequest(6, var12.field_zb, param4);

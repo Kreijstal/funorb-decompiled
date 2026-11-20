@@ -5,7 +5,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
     static char[] field_q;
     static String field_o;
     static String field_p;
-    static lkb field_r;
+    static EmailValidationError emptyEmailError;
 
     GetGrapplingHookCooldown(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -115,14 +115,14 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
         if (param0 <= -110) {
           field_p = null;
           field_q = null;
-          field_r = null;
+          emptyEmailError = null;
           return;
         }
         Ship var2 = (Ship) null;
         GetGrapplingHookCooldown.findNearestAiTarget((World) null, (byte) -124, 125, (Ship) null);
         field_p = null;
         field_q = null;
-        field_r = null;
+        emptyEmailError = null;
     }
 
     final static int[] a(byte param0, int[] param1) {
@@ -194,6 +194,6 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
         field_q = new char[128];
         field_o = "Power plant";
         field_p = "Honour";
-        field_r = new lkb();
+        emptyEmailError = new EmailValidationError();
     }
 }

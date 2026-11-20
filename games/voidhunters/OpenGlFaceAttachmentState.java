@@ -278,7 +278,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_gamelist_elapsed_time", 23100);
                 if (resourceBytes != null) {
-                  tea.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  GameTextMetrics.elapsedTimeText = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_play_rated", 23100);
                 if (null != resourceBytes) {
@@ -490,7 +490,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("find_opponent_singular", 23100);
                 if (resourceBytes != null) {
-                  spb.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  FullscreenExit.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("find_opponents_plural", 23100);
                 if (null != resourceBytes) {
@@ -710,7 +710,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("dob_enterforchat", 23100);
                 if (null != resourceBytes) {
-                  pea.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  PlayerContextMenus.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("tab_hidechattemporarily", 23100);
                 if (null != resourceBytes) {
@@ -1408,7 +1408,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("create_email_confirm", 23100);
                 if (null != resourceBytes) {
-                  qs.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  AppletCookieWriter.confirmEmailText = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("create_age", 23100);
                 if (null != resourceBytes) {
@@ -1644,7 +1644,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("create_alert_mismatch", 23100);
                 if (null != resourceBytes) {
-                  lmb.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  ChatPermissions.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("create_passwordvalid", 23100);
                 if (resourceBytes != null) {
@@ -1826,7 +1826,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("loading_extradata", 23100);
                 if (null != resourceBytes) {
-                  lwa.field_vb = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  QuickChatHelpWindow.loadingExtraDataText = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("loading_languages", 23100);
                 if (null != resourceBytes) {

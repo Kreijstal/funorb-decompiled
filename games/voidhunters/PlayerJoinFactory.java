@@ -3,7 +3,7 @@
  */
 final class PlayerJoinFactory implements GameStateFactory {
     static Widget field_c;
-    static int field_b;
+    static int pendingAccountUiResult;
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -78,6 +78,6 @@ final class PlayerJoinFactory implements GameStateFactory {
 
     static {
         field_a = "Remove name";
-        field_b = -1;
+        pendingAccountUiResult = -1;
     }
 }

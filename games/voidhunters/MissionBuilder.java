@@ -2084,7 +2084,7 @@ final class MissionBuilder implements DiffableState {
                   var9 = 0;
                   break;
                 }
-                param6 = param6 + (vu.field_zb[param3] & 255);
+                param6 = param6 + (SocialListEntry.field_zb[param3] & 255);
               }
             }
             var10Lifetime1 = 0;

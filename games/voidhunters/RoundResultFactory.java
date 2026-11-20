@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RoundResultFactory implements GameStateFactory {
-    static lwa field_a;
+    static QuickChatHelpWindow field_a;
 
     final static void a(boolean param0, int param1, int param2, int param3, int[] param4) {
         int[] var5 = null;
@@ -18,7 +18,7 @@ final class RoundResultFactory implements GameStateFactory {
         var8 = VoidHunters.field_G;
         try {
           if (!param0) {
-            field_a = (lwa) null;
+            field_a = (QuickChatHelpWindow) null;
           }
           while (true) {
             param3--;
@@ -48,7 +48,7 @@ final class RoundResultFactory implements GameStateFactory {
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          field_a = (lwa) null;
+          field_a = (QuickChatHelpWindow) null;
           return (SerializableGameState[]) ((Object) new RoundResult[param1]);
         }
         return (SerializableGameState[]) ((Object) new RoundResult[param1]);
@@ -59,7 +59,7 @@ final class RoundResultFactory implements GameStateFactory {
         if (param0 == -1) {
           return;
         }
-        field_a = (lwa) null;
+        field_a = (QuickChatHelpWindow) null;
     }
 
     public final SerializableGameState create(byte param0) {

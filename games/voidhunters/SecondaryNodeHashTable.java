@@ -120,7 +120,7 @@ final class SecondaryNodeHashTable {
         if (param0 != 17496) {
           return;
         }
-        GetSelfDestructPrepareToggleCooldown.a(-29, 4);
+        GetSelfDestructPrepareToggleCooldown.setAccountUiResult(-29, 4);
     }
 
     final DualLinkNode first(int param0) {

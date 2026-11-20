@@ -23,7 +23,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[31] = GetFightersPerPlayerMaximum.field_p;
         var2[136] = BombletSprayAimArcSetting.aimArc;
         var2[65] = LogoMaterial.field_a;
-        var2[149] = pea.field_a;
+        var2[149] = PlayerContextMenus.field_a;
         var2[32] = Particle.field_I;
         var2[17] = ColorRowCacheEntry.field_d;
         var2[35] = GetBombletSprayReload.field_s;
@@ -56,7 +56,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[102] = wja.field_b;
         var2[191] = GetWorldWidthUpshift.field_q;
         var2[56] = OpenGlGpuTexture.field_g;
-        var2[154] = pea.field_b;
+        var2[154] = PlayerContextMenus.field_b;
         var2[147] = ArchiveRequest.field_m;
         var2[144] = QuickChatPhraseLoader.field_b;
         var2[195] = SetMissionDebrisDefaultProbability.field_o;
@@ -106,7 +106,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[182] = SetRepairModePower.field_r;
         var2[106] = SetShipPersistence.field_s;
         var2[161] = SoftwareFaceAttachment.field_b;
-        var2[74] = tea.field_b;
+        var2[74] = GameTextMetrics.field_b;
         var2[209] = Particle.field_w;
         var2[107] = SetMissileLauncherEnergyUsed.field_o;
         var2[215] = Particle.field_k;

@@ -3,7 +3,7 @@
  */
 abstract class DebugSendable extends IntrusiveNode implements SerializableGameState {
     static String field_g;
-    static int[] field_f;
+    static int[] graphicsBackendOrder;
     static String[] field_d;
     static ConsoleCommandRegistry field_e;
     static String field_h;
@@ -60,7 +60,7 @@ abstract class DebugSendable extends IntrusiveNode implements SerializableGameSt
           return;
         }
         field_e = null;
-        field_f = null;
+        graphicsBackendOrder = null;
         field_g = null;
     }
 
@@ -90,7 +90,7 @@ abstract class DebugSendable extends IntrusiveNode implements SerializableGameSt
 
     static {
         field_g = "<%0> has entered a game.";
-        field_f = new int[]{1, 0};
+        graphicsBackendOrder = new int[]{1, 0};
         field_h = "Waiting for <%0> to start the game...";
         field_d = new String[]{"Game type"};
         field_e = new ConsoleCommandRegistry();

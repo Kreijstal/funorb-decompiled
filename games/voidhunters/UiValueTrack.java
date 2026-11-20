@@ -39,7 +39,7 @@ final class UiValueTrack extends UiFocusableComponent {
         if (!param0) {
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
             var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
-            var25 = sh.field_a[var2];
+            var25 = LiteralStrings.field_a[var2];
             if (!SetBurstFireMaxEnergy.field_o[var2]) {
               var10 = new int[var3];
               var26 = var10;
@@ -65,7 +65,7 @@ final class UiValueTrack extends UiFocusableComponent {
           UiValueTrack.createDecodedSprites(true);
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
             var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
-            var23 = sh.field_a[var2];
+            var23 = LiteralStrings.field_a[var2];
             if (!SetBurstFireMaxEnergy.field_o[var2]) {
               var10 = new int[var3];
               var24 = var10;

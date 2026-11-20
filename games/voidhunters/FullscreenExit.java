@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class spb {
+final class FullscreenExit {
     static String field_a;
 
-    final static void a(byte param0) {
+    final static void exitFullscreen(byte param0) {
         if (null == psb.field_b) {
           return;
         }
@@ -29,11 +29,11 @@ final class spb {
         field_a = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isActivePublicChat(int param0) {
         if (param0 >= -54) {
           return true;
         }
-        if (!SetFightersPerPlayerMaximum.field_p) {
+        if (!SetFightersPerPlayerMaximum.chatInputActive) {
           return false;
         }
         if (NetworkMessageState.chatChannel == 0) {
@@ -42,9 +42,9 @@ final class spb {
         return false;
     }
 
-    final static void a(byte param0, HuffmanCodec param1) {
+    final static void setHuffmanCodec(byte param0, HuffmanCodec param1) {
         try {
-          GetMissileLauncherAimspeed.field_o = param1;
+          GetMissileLauncherAimspeed.huffmanCodec = param1;
           int var2_int = 12 % ((param0 - 19) / 37);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "spb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

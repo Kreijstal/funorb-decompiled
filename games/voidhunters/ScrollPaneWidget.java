@@ -83,7 +83,7 @@ final class ScrollPaneWidget extends Widget {
         int var10Lifetime1;
         var12 = VoidHunters.field_G;
         try {
-          lkb.a(CarouselPlayerEventFactory.field_a, (byte) -101);
+          EmailValidationError.layoutSlidingLobbyPanels(CarouselPlayerEventFactory.field_a, (byte) -101);
           if (null != SetThrusterParticleSpeedDownshift.field_o) {
             var15 = vw.field_a;
             var17 = var15;
@@ -134,7 +134,7 @@ final class ScrollPaneWidget extends Widget {
               if (var8 != 0) {
                 stackIn_37_1 = SetAudioRangeCutoff.field_p;
               } else {
-                stackIn_37_1 = spb.field_a;
+                stackIn_37_1 = FullscreenExit.field_a;
               }
               stackIn_36_0.text = ((String) (Object) stackIn_37_1).toUpperCase();
               stackIn_39_0 = GetTorpedoProjectileDamage.field_p;

@@ -42,7 +42,7 @@ final class ShipBodyFactory implements GameStateFactory {
           } else {
             stackIn_4_0 = SetExplosionPushMultiplier.field_p;
           }
-          lkb.a(stackIn_4_0, (byte) -106);
+          EmailValidationError.layoutSlidingLobbyPanels(stackIn_4_0, (byte) -106);
           GetReverbWidth.field_o.layout(0, -92, -2 + WaterTextures.field_g.height - 40, 0, WaterTextures.field_g.width);
           SetPhasedEnergyBeamPulsetime.field_o.setBounds(0, -11, SetOndamageParticleLife.field_o.width, 0, DialogMessagePanel.field_w);
           stackIn_6_0 = SecondaryNodeDequeIterator.field_a;

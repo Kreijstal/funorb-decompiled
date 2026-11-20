@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tea {
+final class GameTextMetrics {
     static TextureCoordinateMode field_d;
     static int field_b;
-    static String field_c;
-    static String field_a;
+    static String elapsedTimeText;
+    static String domainLabelCharacters;
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          field_a = null;
+          domainLabelCharacters = null;
           field_d = null;
-          field_c = null;
+          elapsedTimeText = null;
           return;
         }
         field_b = -71;
-        field_a = null;
+        domainLabelCharacters = null;
         field_d = null;
-        field_c = null;
+        elapsedTimeText = null;
     }
 
-    final static int a(int param0, String param1, int param2) {
+    final static int getStringWidth(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -30,7 +30,7 @@ final class tea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 13879) {
-            field_a = (String) null;
+            domainLabelCharacters = (String) null;
           }
           if (OpenGlTexture1D.field_i) {
             stackIn_6_0 = SetTorpedoEnergyUsed.a(param0, param2 ^ 14107).getStringWidth(param1, param2 - 13878);
@@ -55,7 +55,7 @@ final class tea {
     static {
         field_d = new TextureCoordinateMode();
         field_b = 0;
-        field_c = "Elapsed time";
-        field_a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        elapsedTimeText = "Elapsed time";
+        domainLabelCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     }
 }

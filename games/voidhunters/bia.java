@@ -46,7 +46,7 @@ class bia extends tb {
         if (!param0) {
           return (PcmStreamMixer) null;
         }
-        return MaskedPasswordTextStyle.field_q;
+        return MaskedPasswordTextStyle.effectsMixer;
     }
 
     static {

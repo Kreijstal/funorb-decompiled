@@ -741,7 +741,7 @@ final class ResourceArchive {
               stackIn_338_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_337_0.enabled = stackIn_338_1;
             }
-            var6Lifetime3 = var6Lifetime3 + (255 & vu.field_zb[var7]);
+            var6Lifetime3 = var6Lifetime3 + (255 & SocialListEntry.field_zb[var7]);
           }
           if (var5 != 0) {
             if (param2) {

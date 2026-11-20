@@ -28,7 +28,7 @@ abstract class Model3D {
           var2 = new SoundPlayback(param1, param1);
           GetToggledScoreboard.field_p.addLast(-10258, var2);
           var3 = 119 / ((param0 - 18) / 37);
-          MaskedPasswordTextStyle.field_q.addSubStream(param1);
+          MaskedPasswordTextStyle.effectsMixer.addSubStream(param1);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

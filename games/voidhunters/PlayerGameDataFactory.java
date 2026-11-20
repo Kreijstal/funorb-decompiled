@@ -11,7 +11,7 @@ final class PlayerGameDataFactory implements GameStateFactory {
           if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -124)) {
             if (null != psb.field_b &&
               psb.field_b.focusLost) {
-              spb.a((byte) -95);
+              FullscreenExit.exitFullscreen((byte) -95);
               HighscoreTableRequest.field_h.pushPanel(false, new DisplayModeErrorDialog(HighscoreTableRequest.field_h, AdminMessageFactory.field_a));
             }
             return;

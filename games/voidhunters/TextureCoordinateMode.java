@@ -22,7 +22,7 @@ final class TextureCoordinateMode {
         Sprite[] var1 = new Sprite[GpuProjectionMode.field_a];
         for (var2 = 0; var2 < GpuProjectionMode.field_a; var2++) {
           var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
-          var4 = sh.field_a[var2];
+          var4 = LiteralStrings.field_a[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits(255, (int) var4[var6])];

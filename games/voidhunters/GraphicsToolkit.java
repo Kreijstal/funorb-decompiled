@@ -105,7 +105,7 @@ abstract class GraphicsToolkit {
             return stackIn_12_0;
           }
           if (5 == param7) {
-            stackIn_16_0 = pbb.a(param1, param2, -1588388127, param4, param5);
+            stackIn_16_0 = UiComboBoxArrowRenderer.createOpenGlGpuToolkit(param1, param2, -1588388127, param4, param5);
             return stackIn_16_0;
           }
           if (param7 != 3) {

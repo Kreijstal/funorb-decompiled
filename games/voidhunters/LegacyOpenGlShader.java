@@ -23,7 +23,7 @@ final class LegacyOpenGlShader {
           if (param0 != 1001) {
             return;
           }
-          qs.field_a = SetBombletSprayAimarc.field_p;
+          AppletCookieWriter.field_a = SetBombletSprayAimarc.field_p;
           AppletCookieReader.field_a = 0;
           PacketBuffer.field_g = tda.field_K;
         }

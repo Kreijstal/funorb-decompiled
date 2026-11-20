@@ -3,7 +3,7 @@
  */
 final class SetFightersPerPlayerMaximum extends ConsoleCommand {
     static int field_o;
-    static boolean field_p;
+    static boolean chatInputActive;
 
     SetFightersPerPlayerMaximum(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -218,7 +218,7 @@ final class SetFightersPerPlayerMaximum extends ConsoleCommand {
     }
 
     static {
-        field_p = true;
+        chatInputActive = true;
         field_o = 22;
     }
 }

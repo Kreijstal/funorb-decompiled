@@ -45,14 +45,14 @@ final class SetToggledScoreboard extends ConsoleCommand {
         field_o = null;
     }
 
-    final static lkb a(byte param0, String param1) {
-        lkb stackIn_6_0 = null;
-        lkb stackIn_10_0 = null;
-        lkb stackIn_15_0 = null;
+    final static EmailValidationError validateEmailLocalPart(byte param0, String param1) {
+        EmailValidationError stackIn_6_0 = null;
+        EmailValidationError stackIn_10_0 = null;
+        EmailValidationError stackIn_15_0 = null;
         int stackIn_23_0 = 0;
-        lkb stackIn_28_0 = null;
-        lkb stackIn_42_0 = null;
-        lkb stackIn_47_0 = null;
+        EmailValidationError stackIn_28_0 = null;
+        EmailValidationError stackIn_42_0 = null;
+        EmailValidationError stackIn_47_0 = null;
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -72,19 +72,19 @@ final class SetToggledScoreboard extends ConsoleCommand {
           var2_int = param1.length();
           if (param0 <= 95) {
             var7 = (String) null;
-            SetToggledScoreboard.a((byte) 73, (String) null);
+            SetToggledScoreboard.validateEmailLocalPart((byte) 73, (String) null);
           }
           if (0 == var2_int) {
-            stackIn_6_0 = IntegerArrayReadRequest.field_f;
+            stackIn_6_0 = IntegerArrayReadRequest.incompleteEmailError;
             return stackIn_6_0;
           }
           if (var2_int > 64) {
-            stackIn_10_0 = OneShotSound.field_j;
+            stackIn_10_0 = OneShotSound.emailTooLongError;
             return stackIn_10_0;
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(var2_int - 1) != 34) {
-              stackIn_15_0 = PointDefenceLaserWeaponDefinition.field_b;
+              stackIn_15_0 = PointDefenceLaserWeaponDefinition.invalidEmailSyntaxError;
               return stackIn_15_0;
             }
             var3 = 0;
@@ -93,7 +93,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
               if (var5 != 92) {
                 if (34 == var5 &&
                   var3 == 0) {
-                  stackIn_28_0 = PointDefenceLaserWeaponDefinition.field_b;
+                  stackIn_28_0 = PointDefenceLaserWeaponDefinition.invalidEmailSyntaxError;
                   return stackIn_28_0;
                 }
                 var3 = 0;
@@ -116,13 +116,13 @@ final class SetToggledScoreboard extends ConsoleCommand {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_42_0 = PointDefenceLaserWeaponDefinition.field_b;
+                stackIn_42_0 = PointDefenceLaserWeaponDefinition.invalidEmailSyntaxError;
                 return stackIn_42_0;
               }
             }
             if (decompiledFrameRemainder0) {
-              if (TooltipDisplay.field_a.indexOf(var5Lifetime1) == -1) {
-                stackIn_47_0 = PointDefenceLaserWeaponDefinition.field_b;
+              if (TooltipDisplay.emailLocalPartCharacters.indexOf(var5Lifetime1) == -1) {
+                stackIn_47_0 = PointDefenceLaserWeaponDefinition.invalidEmailSyntaxError;
                 return stackIn_47_0;
               }
               var3Lifetime1 = 0;

@@ -46,7 +46,7 @@ abstract class LegacyOpenGlMaterialEffect {
             stackIn_9_0 = 34168;
             return stackIn_9_0;
           }
-          if (param0 != pea.field_d) {
+          if (param0 != PlayerContextMenus.field_d) {
             throw new IllegalArgumentException();
           }
           stackIn_12_0 = 34166;

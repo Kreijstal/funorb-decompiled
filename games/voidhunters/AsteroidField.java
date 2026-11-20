@@ -853,7 +853,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime79 = HuffmanCodec.fetchLocalizedResource((byte) -16, "keycode_chat_all_secondary");
           if (var2Lifetime79 != null) {
-            vu.field_Db = 255 & var2Lifetime79[0];
+            SocialListEntry.field_Db = 255 & var2Lifetime79[0];
           }
           var2Lifetime80 = HuffmanCodec.fetchLocalizedResource((byte) -49, "keycode_chat_team_secondary");
           if (var2Lifetime80 != null) {
@@ -1449,7 +1449,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime228 = HuffmanCodec.fetchLocalizedResource((byte) -13, "VOTE_ASSASSINATE_VIP_DESC_B");
           if (var2Lifetime228 != null) {
-            pbb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime228);
+            UiComboBoxArrowRenderer.protectVipText = Cp1252Strings.decode((byte) -125, var2Lifetime228);
           }
           var2Lifetime229 = HuffmanCodec.fetchLocalizedResource((byte) -34, "VOTE_ASSASSINATE_VIP_BALANCED");
           if (var2Lifetime229 != null) {

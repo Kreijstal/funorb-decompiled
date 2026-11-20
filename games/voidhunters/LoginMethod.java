@@ -42,7 +42,7 @@ final class LoginMethod {
           return;
         }
         try {
-          qs.writeCookie(param0, param1 ^ -124, this.cookieValue, "jagex-last-login-method", 31536000L);
+          AppletCookieWriter.writeCookie(param0, param1 ^ -124, this.cookieValue, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "khb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

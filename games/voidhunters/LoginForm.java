@@ -54,7 +54,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
                     GetGrapplingHookRopeBreakLength.showGuestPlayNotice((byte) -91);
                   }
                 } else {
-                  qj.a((byte) 127);
+                  EmailTopLevelDomainValidator.requestQuitToWebsite((byte) 127);
                 }
               }
             }

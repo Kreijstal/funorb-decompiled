@@ -38,14 +38,14 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
         }
     }
 
-    final static vu a(String param0, boolean param1) {
+    final static SocialListEntry a(String param0, boolean param1) {
         String var2 = null;
-        vu var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        vu stackIn_13_0 = null;
+        SocialListEntry stackIn_13_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -61,7 +61,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (vu) (TeamNodeCondition.field_c.get(-1, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (TeamNodeCondition.field_c.get(-1, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
@@ -72,7 +72,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
               var4 = var3.field_Fb;
             }
             if (!var4.equals(var2)) {
-              var3 = (vu) (TeamNodeCondition.field_c.getNextSameKey(-88));
+              var3 = (SocialListEntry) (TeamNodeCondition.field_c.getNextSameKey(-88));
               continue;
             }
             break;

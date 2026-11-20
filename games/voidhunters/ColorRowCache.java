@@ -106,9 +106,9 @@ final class ColorRowCache {
           while (UiAngleDial.pollKeyEvent(127)) {
             GetLagStandardDeviationIn.field_r.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
-          if (PlayerJoinFactory.field_b != -1) {
-            var1_int = PlayerJoinFactory.field_b;
-            GetSelfDestructPrepareToggleCooldown.a(-59, -1);
+          if (PlayerJoinFactory.pendingAccountUiResult != -1) {
+            var1_int = PlayerJoinFactory.pendingAccountUiResult;
+            GetSelfDestructPrepareToggleCooldown.setAccountUiResult(-59, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }

@@ -541,12 +541,12 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
               }
               if (var12.field_ac) {
                 var12.field_Tb.text = SetReverbGain.a(GetDebrisGroupColour.field_o, new String[]{var32}, 104);
-                var12.field_Tb.setBounds(qs.field_c, 122, var12.width - qs.field_c * 2, var31, DialogMessagePanel.field_w);
+                var12.field_Tb.setBounds(AppletCookieWriter.field_c, 122, var12.width - AppletCookieWriter.field_c * 2, var31, DialogMessagePanel.field_w);
                 var31 = var31 + DialogMessagePanel.field_w;
               }
               if (var12.field_Qb) {
                 var12.field_vb.text = SetReverbGain.a(SoftCacheReference.field_m, new String[]{var32}, 79);
-                var12.field_vb.setBounds(qs.field_c, 0, var12.width - 2 * qs.field_c, var31, DialogMessagePanel.field_w);
+                var12.field_vb.setBounds(AppletCookieWriter.field_c, 0, var12.width - 2 * AppletCookieWriter.field_c, var31, DialogMessagePanel.field_w);
                 var31 = var31 + DialogMessagePanel.field_w;
               }
             }
@@ -554,10 +554,10 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_bc.font.getLineCount(var33, -qs.field_c + (var12.width - qs.field_c));
+              var34_intLifetime1 = var12.field_bc.font.getLineCount(var33, -AppletCookieWriter.field_c + (var12.width - AppletCookieWriter.field_c));
               var12.field_bc.field_I = var12.field_Db * 256 / GetMomentOfInertiaPredivideDownshift.field_p;
               var12.field_bc.text = var33;
-              var12.field_bc.setBounds(qs.field_c, 126, -(2 * qs.field_c) + var12.width, var31, DialogMessagePanel.field_w * var34_intLifetime1);
+              var12.field_bc.setBounds(AppletCookieWriter.field_c, 126, -(2 * AppletCookieWriter.field_c) + var12.width, var31, DialogMessagePanel.field_w * var34_intLifetime1);
               var31 = var31 + DialogMessagePanel.field_w * var34_intLifetime1;
             }
             if (var7_int == 0) {

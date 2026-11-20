@@ -129,7 +129,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
             GetUseLines.field_p.content.y = GetUseLines.field_p.viewport.height - GetUseLines.field_p.content.height;
           }
           GetUseLines.field_p.content.field_E = -GetUseLines.field_p.content.height + var7Lifetime1;
-          if (!SetFightersPerPlayerMaximum.field_p) {
+          if (!SetFightersPerPlayerMaximum.chatInputActive) {
             var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
             if (GetReverbDamp.field_o) {
               GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
@@ -166,7 +166,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
             GetUseLines.field_p.content.y = GetUseLines.field_p.viewport.height - GetUseLines.field_p.content.height;
           }
           GetUseLines.field_p.content.field_E = -GetUseLines.field_p.content.height + var7Lifetime1;
-          if (!SetFightersPerPlayerMaximum.field_p) {
+          if (!SetFightersPerPlayerMaximum.chatInputActive) {
             var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
             if (GetReverbDamp.field_o) {
               GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;

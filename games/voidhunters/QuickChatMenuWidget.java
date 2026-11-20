@@ -93,12 +93,12 @@ final class QuickChatMenuWidget extends Widget {
                 OpenGlPostEffect.a(1, (byte) -119, param2, var6);
               }
               var8 = (String) null;
-              SetBurstFireReload.a((String) null, -25719, var5, param3, NetworkMessageState.chatChannel, ChoosePlayerNameForm.field_x);
+              SetBurstFireReload.a((String) null, -25719, var5, param3, NetworkMessageState.chatChannel, ChoosePlayerNameForm.privateChatTargetDisplayName);
               stackIn_15_0 = NetworkMessageState.chatChannel;
               stackIn_15_1 = var5;
-              stackIn_15_2 = lsa.field_f;
+              stackIn_15_2 = lsa.privateChatRecipientKey;
               stackIn_16_3 = (param1) ? false : true;
-              ArchiveRequest.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, ChoosePlayerNameForm.field_x);
+              ArchiveRequest.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, ChoosePlayerNameForm.privateChatTargetDisplayName);
               GetUseExtraBackground.closeQuickChatMenu(-1);
               SetSalvoRepairTimeMultiplier.a(4907);
             } else {

@@ -37,7 +37,7 @@ final class SetThrusterAutobalancing extends ConsoleCommand {
 
     final static void e(int param0) {
         SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -29);
-        SetReverbDry.a(GetGrapplingHookAimspeed.field_o[0].paddedWidth, DialogMessagePanel.field_w, 96, qs.field_c, jk.field_Cb, ResourceNode.field_a);
+        SetReverbDry.a(GetGrapplingHookAimspeed.field_o[0].paddedWidth, DialogMessagePanel.field_w, 96, AppletCookieWriter.field_c, jk.field_Cb, ResourceNode.field_a);
         int var1 = -31 / ((param0 - 58) / 51);
     }
 

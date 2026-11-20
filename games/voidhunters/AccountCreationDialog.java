@@ -45,7 +45,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
         int var10 = 0;
         int var11 = 0;
         try {
-          pea.$cfr$intArgs$a$91f64d33677c(param2.field_zb, param2, -1, (int[]) null, param2.field_Hb, param5, param2.field_xb, 103, -1);
+          PlayerContextMenus.prepareContextMenu(param2.field_zb, param2, -1, (int[]) null, param2.field_Hb, param5, param2.field_xb, 103, -1);
           GetLagStandardDeviationOut.field_o.addLobbyOwnerOptions(true, param3 - 35);
           GetLagStandardDeviationOut.field_o.addSocialOptions(-70, 0, (int[]) null);
           GetLagStandardDeviationOut.field_o.addReportOption(param3 - 9994);

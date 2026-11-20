@@ -5,7 +5,7 @@ final class ConsoleSettingsScript {
     static int[] field_d;
     static long field_b;
     static int field_a;
-    static boolean field_c;
+    static boolean quickChatOnly;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 15873) {

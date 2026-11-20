@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo {
+final class WorldSpriteTiler {
     static String loadingTextMessage;
     static Widget field_b;
     static GameMenuScreen[] field_a;
@@ -13,12 +13,12 @@ final class lo {
         field_c = null;
         if (!param0) {
           Camera2D var2 = (Camera2D) null;
-          lo.a(20, 74, (ToolkitSprite) null, (Camera2D) null);
+          WorldSpriteTiler.tileWorldSprite(20, 74, (ToolkitSprite) null, (Camera2D) null);
         }
         field_a = null;
     }
 
-    final static void a(int param0, int param1, ToolkitSprite param2, Camera2D param3) {
+    final static void tileWorldSprite(int param0, int param1, ToolkitSprite param2, Camera2D param3) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_15_0 = null;

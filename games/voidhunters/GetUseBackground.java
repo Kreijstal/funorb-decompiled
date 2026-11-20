@@ -47,12 +47,12 @@ final class GetUseBackground extends ConsoleCommand {
           StripesTextureOperation.a(true);
         }
         if (CarouselPlayerEventFactory.field_a > 0) {
-          lkb.a(CarouselPlayerEventFactory.field_a, (byte) -107);
+          EmailValidationError.layoutSlidingLobbyPanels(CarouselPlayerEventFactory.field_a, (byte) -107);
         }
         if (SetExplosionPushMultiplier.field_p <= 0) {
           return;
         }
-        lkb.a(SetExplosionPushMultiplier.field_p, (byte) -124);
+        EmailValidationError.layoutSlidingLobbyPanels(SetExplosionPushMultiplier.field_p, (byte) -124);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

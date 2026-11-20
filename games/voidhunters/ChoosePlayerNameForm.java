@@ -6,7 +6,7 @@ final class ChoosePlayerNameForm extends UiContainer implements NameSuggestionTa
     private ValidatedTextField nameField;
     static String instructionsText;
     static String[] field_w;
-    static String field_x;
+    static String privateChatTargetDisplayName;
     static String[] field_D;
     private UiFocusableComponent okButton;
     private UiFocusableComponent cancelButton;
@@ -299,7 +299,7 @@ final class ChoosePlayerNameForm extends UiContainer implements NameSuggestionTa
     public static void clearSharedReferences(byte param0) {
         field_D = null;
         int var1 = -52 % ((6 - param0) / 55);
-        field_x = null;
+        privateChatTargetDisplayName = null;
         field_w = null;
         instructionsText = null;
     }

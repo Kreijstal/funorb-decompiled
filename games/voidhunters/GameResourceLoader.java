@@ -82,9 +82,9 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         ComponentCollision.a("requesting texturemetrics", (byte) -66);
         OpenGlGpuTexture3D.field_m.enqueueRequest(GetThrusterParticleSpeedDownshift.field_p, -1, RangeTextureOperation.field_k, this.textureMetricsArchive);
         ComponentCollision.a("requesting extradata1", (byte) -94);
-        OpenGlGpuTexture3D.field_m.enqueueRequest(lwa.field_vb, -1, SetUseLines.field_q, this.wordpackArchive);
+        OpenGlGpuTexture3D.field_m.enqueueRequest(QuickChatHelpWindow.loadingExtraDataText, -1, SetUseLines.field_q, this.wordpackArchive);
         ComponentCollision.a("requesting extradata2", (byte) -77);
-        OpenGlGpuTexture3D.field_m.enqueueRequest(lwa.field_vb, -1, SetUseLines.field_q, this.quickChatArchive);
+        OpenGlGpuTexture3D.field_m.enqueueRequest(QuickChatHelpWindow.loadingExtraDataText, -1, SetUseLines.field_q, this.quickChatArchive);
         ComponentCollision.a("end of requestdata", (byte) -98);
     }
 
@@ -260,12 +260,12 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           ComponentCollision.a("Unpacking patches", (byte) -123);
           for (var4_int = 0; var4_int < 4; var4_int++) {
             if (CachedByteArray.musicTracks[var4_int] != null &&
-              !GetBurstFireMaxEnergy.field_p.firstStream.loadMusicPatches(this.soundCache, -29476, this.patchArchive, 176400, CachedByteArray.musicTracks[var4_int])) {
+              !GetBurstFireMaxEnergy.musicStream.firstStream.loadMusicPatches(this.soundCache, -29476, this.patchArchive, 176400, CachedByteArray.musicTracks[var4_int])) {
               MidiNote.resetFrameTiming(param0 ^ 2164);
               return false;
             }
           }
-          GetBurstFireMaxEnergy.field_p.firstStream.clearPatchSampleIds(false);
+          GetBurstFireMaxEnergy.musicStream.firstStream.clearPatchSampleIds(false);
           this.patchArchive = null;
           this.soundCache = null;
           MidiNote.resetFrameTiming(2096);
@@ -280,7 +280,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           IncrementVariableAction.a(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
           AppletRasterBuffer.field_a.renderGameFrame(-112);
           GrapplingHookFactory.field_a = (BitmapFont) ((Object) GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(var12, "", 0, var11, "arialish12"));
-          SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.a(0, "basic", this.graphicsArchive, this.fontMetricsArchive, "antigrav_18_graphics1");
+          SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "basic", this.graphicsArchive, this.fontMetricsArchive, "antigrav_18_graphics1");
           HslAdjustTextureOperation.a(var12, this.fontMetricsArchive, this.graphicsArchive, (byte) 88, var11);
           ModelData.loadGameSprites(this.jpegArchive, param0 ^ 57, this.graphicsArchive);
           FloatGradientNoiseSliceGenerator.field_e = WorldPoint.a("frame", -124, "basic", this.graphicsArchive);
@@ -288,7 +288,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           MidiCrossfadeStream.buttonFrameSprites = WorldPoint.a("button_frame", param0 ^ 21, "basic", this.graphicsArchive);
           SetDebrisGroupColour.field_o = WorldPoint.a("button_raised", -95, "basic", this.graphicsArchive);
           WorldPoint.a("button_depressed", 80, "basic", this.graphicsArchive);
-          lo.field_c = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", "achievements_large");
+          WorldSpriteTiler.field_c = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", "achievements_large");
           OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
           WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
           AlternateNumericLoginCredentials.alignSpriteToFourPixels(OpenGlGpuTexture2D.field_j, 121);
@@ -329,7 +329,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         }
         if (this.wordpackArchive != null) {
           ComponentCollision.a("Loading huffman wordpack", (byte) -123);
-          spb.a((byte) -22, new HuffmanCodec(this.wordpackArchive.fetchNamedFile("huffman", true, "")));
+          FullscreenExit.setHuffmanCodec((byte) -22, new HuffmanCodec(this.wordpackArchive.fetchNamedFile("huffman", true, "")));
           this.wordpackArchive = null;
           MidiNote.resetFrameTiming(2096);
           return false;

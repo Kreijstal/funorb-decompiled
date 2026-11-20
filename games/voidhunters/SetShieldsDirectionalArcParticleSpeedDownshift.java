@@ -130,7 +130,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         Sprite var22Lifetime5;
         Sprite var22Lifetime6;
         try {
-          pea.$cfr$intArgs$a$91f64d33677c(0L, param1, param2, (int[]) null, (String) null, (ScrollPaneWidget) null, (String) null, 80, -1);
+          PlayerContextMenus.prepareContextMenu(0L, param1, param2, (int[]) null, (String) null, (ScrollPaneWidget) null, (String) null, 80, -1);
           if (param2 == 0) {
             var12 = GetLagStandardDeviationOut.field_o;
             var13 = GetGrapplingHookAimspeed.field_o[0];

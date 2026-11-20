@@ -95,7 +95,7 @@ final class ShieldInfoPool {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          qs.writeCookie(param0, -125, var3, var2, var4);
+          AppletCookieWriter.writeCookie(param0, -125, var3, var2, var4);
           if (param1 == 0) {
             return;
           }

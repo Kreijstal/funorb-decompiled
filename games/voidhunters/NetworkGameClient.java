@@ -281,7 +281,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (null == SetReverbFeedback.field_p) {
             SetReverbFeedback.field_p = bia.getPcmStreamMixer(true);
-            EscapePod.field_j = lwa.e((byte) 73);
+            EscapePod.field_j = QuickChatHelpWindow.getEffectsBufferSize((byte) 73);
           }
           GetSpinningBladeSpindamageMultiplier.a((byte) 55, BufferedFile.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
           GetSalvoUsesAllEnergy.field_o = null;
@@ -301,7 +301,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (UiDraggableContainer.field_z == 11) {
           if (OpenGlVertexBuffer.field_j != null && (!OpenGlVertexBuffer.field_j.loadIndex((byte) -38) ||
             !OpenGlVertexBuffer.field_j.loadAllGroups(param1 ^ 113))) {
-            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.waitingForTextMessage, lo.loadingTextMessage), -1, 0.0f);
+            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.waitingForTextMessage, WorldSpriteTiler.loadingTextMessage), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -573,7 +573,7 @@ abstract class NetworkGameClient extends GameApplet {
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      NebulaFieldFactory.a(true);
+                      NebulaFieldFactory.handleSocialListPacket(true);
                       break regionExit1;
                     case 17:
                       this.handleOpenUrlPacket(3);

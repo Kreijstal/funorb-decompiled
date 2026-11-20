@@ -93,7 +93,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         var12 = VoidHunters.field_G;
         try {
           BodyInZoneConditionFactory.field_a = -1L;
-          vu.field_zb = param0;
+          SocialListEntry.field_zb = param0;
           SetThrusterForce.field_o = param6;
           PasswordValidator.field_l = param0.length;
           SetSpinningBladeSpindamageMultiplier.field_o = null;
@@ -101,8 +101,8 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           SetThrusterParticleSpeedDownshift.field_o = null;
           GetPlayerRepairTime.field_o = new byte[(7 + SetThrusterForce.field_o) / 8];
           var10_int = 0;
-          for (var11 = 0; var11 < vu.field_zb.length; var11++) {
-            var10_int = var10_int + (vu.field_zb[var11] & 255);
+          for (var11 = 0; var11 < SocialListEntry.field_zb.length; var11++) {
+            var10_int = var10_int + (SocialListEntry.field_zb[var11] & 255);
           }
           var10_int = (var10_int + 7) / 8;
           GetDebrisThrowable.field_p = new byte[var10_int];

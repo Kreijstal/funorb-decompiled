@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj {
-    final static lkb a(byte param0, String param1) {
+final class EmailTopLevelDomainValidator {
+    final static EmailValidationError validateTopLevelDomain(byte param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        lkb stackIn_3_0 = null;
-        lkb stackIn_13_0 = null;
+        EmailValidationError stackIn_3_0 = null;
+        EmailValidationError stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -18,7 +18,7 @@ final class qj {
         try {
           var2_int = param1.length();
           if (param0 != -74) {
-            stackIn_3_0 = (lkb) null;
+            stackIn_3_0 = (EmailValidationError) null;
             return stackIn_3_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {
@@ -30,7 +30,7 @@ final class qj {
               return null;
             }
           }
-          stackIn_13_0 = PointDefenceLaserWeaponDefinition.field_b;
+          stackIn_13_0 = PointDefenceLaserWeaponDefinition.invalidEmailSyntaxError;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,11 +46,11 @@ final class qj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void requestQuitToWebsite(byte param0) {
         if (param0 < 126) {
           return;
         }
-        GetSelfDestructPrepareToggleCooldown.a(-88, 17);
+        GetSelfDestructPrepareToggleCooldown.setAccountUiResult(-88, 17);
     }
 
     static {

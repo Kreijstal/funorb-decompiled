@@ -333,7 +333,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
             stackIn_2_0 = 9216;
             return stackIn_2_0;
           }
-          if (param0 == tea.field_d) {
+          if (param0 == GameTextMetrics.field_d) {
             stackIn_9_0 = 34065;
             return stackIn_9_0;
           }

@@ -27,7 +27,7 @@ final class SpriteArchiveDecoder {
     }
 
     final static void logError(String param0, int param1) {
-        System.out.println("Error: " + sh.a("\n", "%0a", param0, 0));
+        System.out.println("Error: " + LiteralStrings.replaceLiteral("\n", "%0a", param0, 0));
         if (param1 != 3) {
           SpriteArchiveDecoder.clearSharedReferences(111);
         }

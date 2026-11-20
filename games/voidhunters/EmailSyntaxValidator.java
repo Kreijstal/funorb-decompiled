@@ -90,7 +90,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (param1 != 16384) {
             field_f = (int[]) null;
           }
-          stackIn_5_0 = (null != lkb.a(param0, (byte) -116)) ? 0 : 1;
+          stackIn_5_0 = (null != EmailValidationError.validateEmailAddress(param0, (byte) -116)) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             return GetShipPersistence.validInput;

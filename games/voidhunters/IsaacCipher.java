@@ -23,7 +23,7 @@ final class IsaacCipher {
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
-        vu var6 = null;
+        SocialListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -57,7 +57,7 @@ final class IsaacCipher {
           AttachmentInputState.field_b.scrollPane.viewport.text = null;
           AttachmentInputState.field_b.enabled = true;
           var5 = null;
-          var6 = (vu) (var4.first(0));
+          var6 = (SocialListEntry) (var4.first(0));
           while (var6 != null) {
             var7 = 0;
             if (var6.children == null) {
@@ -111,16 +111,16 @@ final class IsaacCipher {
             }
             var5 = var6;
             if (var6.field_o != 0) {
-              pea.$cfr$intArgs$a$91f64d33677c(0L, var6, -1, (int[]) null, var6.field_Cb, AttachmentInputState.field_b.scrollPane, var6.field_Fb, 72, -1);
+              PlayerContextMenus.prepareContextMenu(0L, var6, -1, (int[]) null, var6.field_Cb, AttachmentInputState.field_b.scrollPane, var6.field_Fb, 72, -1);
               var16 = GetLagStandardDeviationOut.field_o;
               var13_ref_String = PlayerJoinFactory.field_a;
               var16.menu.addItem(var13_ref_String, (byte) -53, 7);
               var17 = GetLagStandardDeviationOut.field_o;
               var13 = Particle.field_H;
-              var14 = qs.field_a;
+              var14 = AppletCookieWriter.field_a;
               var17.menu.layoutPopup(var13, -29060, var14, 0, 0);
             }
-            var6 = (vu) (var4.next((byte) 66));
+            var6 = (SocialListEntry) (var4.next((byte) 66));
           }
           if (0 != AttachmentInputState.field_b.firstButton.field_o) {
             GpuFractalNoiseVolume.field_p = new qka(AttachmentInputState.field_b.firstButton.screenX, AttachmentInputState.field_b.firstButton.screenY, AttachmentInputState.field_b.firstButton.width, AttachmentInputState.field_b.firstButton.height, LegacyOpenGlWaveWaterEffect.field_d, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);

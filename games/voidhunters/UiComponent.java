@@ -449,7 +449,7 @@ class UiComponent extends IntrusiveNode {
             this.handleMouseWheel(param1, -6006, GetPointDefenceLaserPulsetime.field_o, this, PlayerGameData.field_b, param2, OpenGlFaceAttachment.field_b);
           }
           if (SetDebrisPartitioned.field_o != 0) {
-            if (!this.handleMousePress(Particle.field_H, param1, qs.field_a, SetDebrisPartitioned.field_o, this, param2, (byte) -105)) {
+            if (!this.handleMousePress(Particle.field_H, param1, AppletCookieWriter.field_a, SetDebrisPartitioned.field_o, this, param2, (byte) -105)) {
               if (var5 != 0) {
                 this.clearFocus((byte) -34);
               }

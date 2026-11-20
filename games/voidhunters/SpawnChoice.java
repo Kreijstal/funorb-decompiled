@@ -91,14 +91,14 @@ final class SpawnChoice implements DiffableState {
         GetUseFilledPolygons.a(-1);
         if (param0 > 25) {
           OpenGlSprite.reconnecting = true;
-          vu.field_xb = true;
+          SocialListEntry.field_xb = true;
           GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
           PendingScoreboardRequest.showAccountStatusDialog(SetCountermeasureLauncherEnergyUsed.field_p, -122, false);
           return;
         }
         loadingTextMessages = (String[]) null;
         OpenGlSprite.reconnecting = true;
-        vu.field_xb = true;
+        SocialListEntry.field_xb = true;
         GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
         PendingScoreboardRequest.showAccountStatusDialog(SetCountermeasureLauncherEnergyUsed.field_p, -122, false);
     }

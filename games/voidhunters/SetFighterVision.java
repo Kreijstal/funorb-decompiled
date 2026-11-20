@@ -22,11 +22,11 @@ final class SetFighterVision extends ConsoleCommand {
           if (lsa.savedChatInputWidget != null) {
             return;
           }
-          SetFightersPerPlayerMaximum.field_p = false;
+          SetFightersPerPlayerMaximum.chatInputActive = false;
           if (GetBloomThresholdPercentage.field_p) {
             var5 = PasswordValidator.field_g;
           } else {
-            if (ConsoleSettingsScript.field_c) {
+            if (ConsoleSettingsScript.quickChatOnly) {
               var5 = GameInterfaceText.quickChatShortcutText;
             } else {
               var5 = IconTextWidget.field_xb;

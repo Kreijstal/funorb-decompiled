@@ -22,11 +22,11 @@ final class NebulaFieldFactory implements GameStateFactory {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void handleSocialListPacket(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_14_0 = 0;
-        vu stackIn_66_0 = null;
+        SocialListEntry stackIn_66_0 = null;
         RuntimeException decompiledCaughtException = null;
         IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
@@ -36,15 +36,15 @@ final class NebulaFieldFactory implements GameStateFactory {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        vu var6 = null;
+        SocialListEntry var6 = null;
         String var7 = null;
-        vu var7_ref = null;
+        SocialListEntry var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        vu var6Lifetime1;
+        SocialListEntry var6Lifetime1;
         var9 = VoidHunters.field_G;
         try {
           var1 = AccountNameAvailabilityReplies.field_b;
@@ -80,11 +80,11 @@ final class NebulaFieldFactory implements GameStateFactory {
               }
             }
             if (var6 == null) {
-              var6 = new vu();
+              var6 = new SocialListEntry();
               TeamNodeCondition.field_c.put(var6, (byte) -106, (long)var8.hashCode());
               fieldTemp$0 = OpenGlIndexBuffer.field_k;
               OpenGlIndexBuffer.field_k = OpenGlIndexBuffer.field_k + 1;
-              var6.field_yb = fieldTemp$0;
+              var6.insertionIndex = fieldTemp$0;
               SetPointDefenceLaserProjectileOndamageParticles.field_o.addLast(-10258, var6);
             }
             var6.field_vb = var7;
@@ -135,11 +135,11 @@ final class NebulaFieldFactory implements GameStateFactory {
             }
           }
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = new vu();
+            var6Lifetime1 = new SocialListEntry();
             MenuInputState.field_f.put(var6Lifetime1, (byte) -112, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = GetBoostersCooldown.field_p;
             GetBoostersCooldown.field_p = GetBoostersCooldown.field_p + 1;
-            var6Lifetime1.field_yb = fieldTemp$1;
+            var6Lifetime1.insertionIndex = fieldTemp$1;
             DisplayModeErrorDialog.field_M.addLast(-10258, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
@@ -149,7 +149,7 @@ final class NebulaFieldFactory implements GameStateFactory {
           var6Lifetime1.field_vb = var5Lifetime1;
           var6Lifetime1.field_Ab = (String) (var3Lifetime1);
           var6Lifetime1.unlink(-3846);
-          var7_ref = (vu) (DisplayModeErrorDialog.field_M.first(0));
+          var7_ref = (SocialListEntry) (DisplayModeErrorDialog.field_M.first(0));
           scanLoop1: while (true) {
             if (var7_ref != null) {
               stackIn_66_0 = var7_ref;
@@ -157,7 +157,7 @@ final class NebulaFieldFactory implements GameStateFactory {
                 break scanLoop1;
               }
               if (Nebula.a(stackIn_66_0, 7569, var6Lifetime1)) {
-                var7_ref = (vu) (DisplayModeErrorDialog.field_M.next((byte) 78));
+                var7_ref = (SocialListEntry) (DisplayModeErrorDialog.field_M.next((byte) 78));
                 continue;
               }
             }

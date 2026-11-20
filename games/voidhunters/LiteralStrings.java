@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sh {
+final class LiteralStrings {
     static byte[][] field_a;
 
     final static void a(int param0, int param1, int param2) {
@@ -14,15 +14,15 @@ final class sh {
           return;
         }
         String var4 = (String) null;
-        sh.a((String) null, (String) null, (String) null, -75);
+        LiteralStrings.replaceLiteral((String) null, (String) null, (String) null, -75);
     }
 
-    final static String a(String param0, String param1, String param2, int param3) {
+    final static String replaceLiteral(String param0, String param1, String param2, int param3) {
         int var4 = 0;
         int var5 = VoidHunters.field_G;
         int var4Lifetime1;
         if (param3 != 0) {
-          sh.clearSharedReferences((byte) -13);
+          LiteralStrings.clearSharedReferences((byte) -13);
         } else {
           var4 = param2.indexOf(param1);
           while (-1 != var4) {

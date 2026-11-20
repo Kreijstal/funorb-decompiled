@@ -57,8 +57,8 @@ final class SetReverbFeedback extends ConsoleCommand {
           if (param0 != 200) {
             return;
           }
-          SetSelfDestructTimer.field_o.service();
-          LobbyGameContextMenuBuilder.field_b.service();
+          SetSelfDestructTimer.musicOutput.service();
+          LobbyGameContextMenuBuilder.effectsOutput.service();
           GetShieldsDirectionalRadius.field_o = GetShieldsDirectionalRadius.field_o - 1;
           if (GetShieldsDirectionalRadius.field_o == 0) {
             GetShieldsDirectionalRadius.field_o = 200;

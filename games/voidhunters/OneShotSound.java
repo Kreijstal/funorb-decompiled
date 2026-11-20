@@ -9,13 +9,13 @@ final class OneShotSound extends IntrusiveNode {
     SoundPlayback playback;
     int x;
     static CommonArchiveId field_e;
-    static lkb field_j;
+    static EmailValidationError emailTooLongError;
     static QuickChatDynamicCommand field_g;
     static Widget field_l;
     private static String field_z;
 
     public static void clearSharedReferences(boolean param0) {
-        field_j = null;
+        emailTooLongError = null;
         field_e = null;
         field_g = null;
         field_l = null;
@@ -30,7 +30,7 @@ final class OneShotSound extends IntrusiveNode {
     static {
         field_z = "qw.A(";
         field_e = new CommonArchiveId(8);
-        field_j = new lkb();
+        emailTooLongError = new EmailValidationError();
         field_g = new QuickChatDynamicCommand(13, 0, 1, 0);
     }
 }

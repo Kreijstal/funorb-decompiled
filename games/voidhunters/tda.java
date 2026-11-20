@@ -28,7 +28,7 @@ final class tda extends ResizableModalPanel implements UiActionListener {
           if (var7 > 0) {
             this.field_J.text = "" + var7;
           } else {
-            spb.a((byte) -95);
+            FullscreenExit.exitFullscreen((byte) -95);
             this.l((byte) -98);
             this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, RemoveEventAction.field_a));
           }
@@ -102,7 +102,7 @@ final class tda extends ResizableModalPanel implements UiActionListener {
           if (this.field_P != param3) {
             return;
           }
-          spb.a((byte) -95);
+          FullscreenExit.exitFullscreen((byte) -95);
           this.l((byte) -98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

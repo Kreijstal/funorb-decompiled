@@ -180,7 +180,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
             return;
           }
           if (BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
-            lo.field_a[GetArmageddonTimerStart.field_o].applyObfuscationGuard((byte) 49);
+            WorldSpriteTiler.field_a[GetArmageddonTimerStart.field_o].applyObfuscationGuard((byte) 49);
           }
           SetShipTeamAction.field_f = GetMessageFadetime.field_o;
           GetArmageddonTimerStart.field_o = AgeValidator.field_f;

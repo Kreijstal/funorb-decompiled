@@ -12,17 +12,17 @@ final class SetShipPersistence extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static lkb a(int param0, String param1) {
+    final static EmailValidationError validateEmailDomainLabel(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        lkb stackIn_4_0 = null;
-        lkb stackIn_8_0 = null;
-        lkb stackIn_18_0 = null;
-        lkb stackIn_22_0 = null;
+        EmailValidationError stackIn_4_0 = null;
+        EmailValidationError stackIn_8_0 = null;
+        EmailValidationError stackIn_18_0 = null;
+        EmailValidationError stackIn_22_0 = null;
         Object stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -32,11 +32,11 @@ final class SetShipPersistence extends ConsoleCommand {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = IntegerArrayReadRequest.field_f;
+            stackIn_4_0 = IntegerArrayReadRequest.incompleteEmailError;
             return stackIn_4_0;
           }
           if (var2_int > 63) {
-            stackIn_8_0 = OneShotSound.field_j;
+            stackIn_8_0 = OneShotSound.emailTooLongError;
             return stackIn_8_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {
@@ -44,12 +44,12 @@ final class SetShipPersistence extends ConsoleCommand {
             if (var4 == 45) {
               if (var3 == 0 ||
                 var3 == var2_int - 1) {
-                stackIn_18_0 = PointDefenceLaserWeaponDefinition.field_b;
+                stackIn_18_0 = PointDefenceLaserWeaponDefinition.invalidEmailSyntaxError;
                 return stackIn_18_0;
               }
             } else {
-              if (tea.field_a.indexOf(var4) == -1) {
-                stackIn_22_0 = PointDefenceLaserWeaponDefinition.field_b;
+              if (GameTextMetrics.domainLabelCharacters.indexOf(var4) == -1) {
+                stackIn_22_0 = PointDefenceLaserWeaponDefinition.invalidEmailSyntaxError;
                 return stackIn_22_0;
               }
             }
@@ -58,9 +58,9 @@ final class SetShipPersistence extends ConsoleCommand {
             return null;
           }
           var6 = (String) null;
-          SetShipPersistence.a(-101, (String) null);
+          SetShipPersistence.validateEmailDomainLabel(-101, (String) null);
           stackIn_29_0 = null;
-          return (lkb) (stackIn_29_0);
+          return (EmailValidationError) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -82,7 +82,7 @@ final class SetShipPersistence extends ConsoleCommand {
           return;
         }
         String var2 = (String) null;
-        SetShipPersistence.a(105, (String) null);
+        SetShipPersistence.validateEmailDomainLabel(105, (String) null);
         field_p = null;
         field_r = null;
     }

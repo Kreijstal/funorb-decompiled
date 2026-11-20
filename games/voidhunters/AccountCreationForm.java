@@ -280,7 +280,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         String var2 = SetReverbGain.a(GetLaserProjectiles.field_o, new String[]{this.getLinkMarkupStart((byte) 50), this.getLinkMarkupEnd((byte) -121)}, 109);
         int var3 = 20;
         var3 = var3 + this.addFieldRow(this.emailField, var3, MissionState.field_h, 170, (byte) -42);
-        var3 = var3 + (5 + this.addFieldWithHelp(this.emailConfirmationField, var3, 170, qs.field_b, false, 20, ""));
+        var3 = var3 + (5 + this.addFieldWithHelp(this.emailConfirmationField, var3, 170, AppletCookieWriter.confirmEmailText, false, 20, ""));
         var3 = var3 + this.addFieldRow(this.passwordField, var3, RequestNewestBlackboxRecording.field_q, 170, (byte) -36);
         var3 = var3 + (this.addFieldWithHelp(-41, OpenGlVertexNormal.field_e, 170, ScramblerPulseOrderDefinition.field_d, var3, this.passwordConfirmationField) + 5);
         var3 = var3 + (5 + this.addFieldWithHelp(-103, Projectile.field_r, 170, ffb.field_c, var3, this.usernameField));

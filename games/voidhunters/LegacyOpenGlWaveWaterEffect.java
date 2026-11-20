@@ -5,7 +5,7 @@ final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
     private LegacyOpenGlShaderProgram program;
     private LegacyOpenGlWaterTextures waterTextures;
     private boolean active;
-    static int field_e;
+    static int effectsBufferSize;
     private boolean supported;
     static String field_d;
 
@@ -47,7 +47,7 @@ final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
     public static void clearSharedReferences(int param0) {
         field_d = null;
         if (param0 != 13776) {
-          field_e = -2;
+          effectsBufferSize = -2;
         }
     }
 

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lsa extends IntrusiveNode {
-    static long field_f;
+    static long privateChatRecipientKey;
     int field_g;
     int field_d;
     static Widget savedChatInputWidget;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != -92) {
-          field_f = 37L;
+          privateChatRecipientKey = 37L;
           savedChatInputWidget = null;
           return;
         }

@@ -143,8 +143,8 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
             var3 = 357 - SettingsChange.field_e.paddedHeight / 2;
             var4 = 0;
             if (SetDebrisPartitioned.field_o != 0 &&
-              var3 < qs.field_a &&
-              qs.field_a < var3 + SettingsChange.field_e.height) {
+              var3 < AppletCookieWriter.field_a &&
+              AppletCookieWriter.field_a < var3 + SettingsChange.field_e.height) {
               if (269 - SettingsChange.field_e.width < Particle.field_H &&
                 269 > Particle.field_H) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_s;
@@ -176,7 +176,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (!param0) {
             return 0;
           }
-          DialogMessagePanel.field_z.updatePointerSelection(GetGrapplingHookAimspeed.a(-1, qs.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, OpenGlFaceAttachment.field_b, PlayerGameData.field_b));
+          DialogMessagePanel.field_z.updatePointerSelection(GetGrapplingHookAimspeed.a(-1, AppletCookieWriter.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, OpenGlFaceAttachment.field_b, PlayerGameData.field_b));
           if (DialogMessagePanel.field_z.isActivationRequested((byte) -120)) {
             if (DialogMessagePanel.field_z.selectedIndex == 0) {
               stackIn_61_0 = 3;

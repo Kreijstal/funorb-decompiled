@@ -14,7 +14,7 @@ final class IntrusiveNodeHashTable implements Iterable {
     IntrusiveNode[] buckets;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new pnb(this));
+        return (Iterator) ((Object) new IntrusiveNodeHashTableIterator(this));
     }
 
     final IntrusiveNode get(byte param0, long param1) {

@@ -14,18 +14,18 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         Object var4_ref = null;
         RuntimeException var4_ref2 = null;
         try {
-          if (null != GetBurstFireMaxEnergy.field_p) {
+          if (null != GetBurstFireMaxEnergy.musicStream) {
             GetTorpedoProjectileDamage.a(1048576, param1, param2, true, param0);
           }
           if (null != SetMassDriverRandomness.field_o) {
-            var4_ref = SetSelfDestructTimer.field_o;
+            var4_ref = SetSelfDestructTimer.musicOutput;
             synchronized (var4_ref) {
               SetMassDriverRandomness.field_o.setChannelGain(param2, (byte) 18, -1);
               if (param0 == Bzip2State.field_u) {
                 return;
               }
               SetMassDriverRandomness.field_o.stop(true);
-              SetSelfDestructTimer.field_o.flush();
+              SetSelfDestructTimer.musicOutput.flush();
               Bzip2State.field_u = param0;
               if (null != Bzip2State.field_u) {
                 SetMassDriverRandomness.field_o.playTrack(param1, Bzip2State.field_u, -1);

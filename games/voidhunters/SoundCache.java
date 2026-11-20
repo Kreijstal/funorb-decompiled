@@ -152,7 +152,7 @@ final class SoundCache {
             bia.field_d = param1;
             GetAutozoomAmountMultiply.field_p = param6;
             TextureBezierShape.field_n = param4;
-            lmb.field_b = param11;
+            ChatPermissions.field_b = param11;
             GetBombletSprayReload.field_q = param10;
             SetNebulaProximityFadeDownshift.field_p = param8;
             GetDebrisSurvives.field_o = param5;

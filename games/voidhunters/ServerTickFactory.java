@@ -62,8 +62,8 @@ final class ServerTickFactory implements GameStateFactory {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
-        vu var7 = null;
-        vu var8 = null;
+        SocialListEntry var7 = null;
+        SocialListEntry var8 = null;
         IsaacPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = VoidHunters.field_G;
@@ -84,9 +84,9 @@ final class ServerTickFactory implements GameStateFactory {
           }
           DisplayModeErrorDialog.field_M.startAt(3, var8);
           while (true) {
-            var7 = (vu) (DisplayModeErrorDialog.field_M.next((byte) 72));
+            var7 = (SocialListEntry) (DisplayModeErrorDialog.field_M.next((byte) 72));
             if (var7 != null) {
-              var7.field_yb = var7.field_yb - 1;
+              var7.insertionIndex = var7.insertionIndex - 1;
               continue;
             }
             break;

@@ -46,7 +46,7 @@ final class SetUseSprites extends ConsoleCommand {
           GpuProjectionMode.field_a = var17.readUnsignedShort(1869);
           hla.field_a = new int[GpuProjectionMode.field_a];
           SetInnateThrusters.field_o = new byte[GpuProjectionMode.field_a][];
-          sh.field_a = new byte[GpuProjectionMode.field_a][];
+          LiteralStrings.field_a = new byte[GpuProjectionMode.field_a][];
           SetBurstFireMaxEnergy.field_o = new boolean[GpuProjectionMode.field_a];
           SettingsChange.field_f = new int[GpuProjectionMode.field_a];
           SetMissionTerrainDebrisProbability.field_o = new int[GpuProjectionMode.field_a];
@@ -83,7 +83,7 @@ final class SetUseSprites extends ConsoleCommand {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            sh.field_a[var4Lifetime5] = var20;
+            LiteralStrings.field_a[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

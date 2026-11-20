@@ -126,7 +126,7 @@ final class ProjectileHit {
                       var7 = GetShipAimLines.field_p;
                     }
                   } else {
-                    var7 = pea.field_b;
+                    var7 = PlayerContextMenus.field_b;
                   }
                 } else {
                   var7 = NetworkArchiveRequest.field_o;

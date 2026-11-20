@@ -11,7 +11,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     private DualLinkNode nextNode;
 
     final static void a(int param0) {
-        spb.a((byte) -95);
+        FullscreenExit.exitFullscreen((byte) -95);
         if (null != igb.field_a) {
           ShieldInfoPool.detachCanvasInput(igb.field_a, param0 ^ 92);
         }

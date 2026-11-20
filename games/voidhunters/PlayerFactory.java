@@ -15,7 +15,7 @@ final class PlayerFactory implements GameStateFactory {
     }
 
     final static SoftwareIndexedSprite2D createFirstSoftwareIndexedSprite(int param0) {
-        SoftwareIndexedSprite2D var1 = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[0], SettingsChange.field_f[0], SetMissionTerrainDebrisProbability.field_o[0], hla.field_a[0], sh.field_a[0], LegacyOpenGlTextureCache.field_d);
+        SoftwareIndexedSprite2D var1 = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[0], SettingsChange.field_f[0], SetMissionTerrainDebrisProbability.field_o[0], hla.field_a[0], LiteralStrings.field_a[0], LegacyOpenGlTextureCache.field_d);
         if (param0 < -53) {
           MatchResults.clearDecodedSpriteData(95);
           return var1;

@@ -188,7 +188,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_mission_resnet_resource_tick_time(" + Particle.field_v + ")");
         System.out.println("set_mass_driver_randomness(" + Cp1252CharacterEncoder.field_a + ")");
         System.out.println("set_torpedo_randomness(" + GetBombletSprayProjectileDamage.field_p + ")");
-        System.out.println("set_laser_randomness(" + tea.field_b + ")");
+        System.out.println("set_laser_randomness(" + GameTextMetrics.field_b + ")");
         System.out.println("set_bomblet_spray_randomness(" + GetSalvoRepairTimeMultiplier.field_o + ")");
         System.out.println("set_phased_energy_beam_randomness(" + SelectableIconLabelWidget.field_yb + ")");
         System.out.println("set_sniper_cannon_randomness(" + SetPhasedEnergyBeamPulseFadetime.field_o + ")");
@@ -263,12 +263,12 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_machine_gun_projectile_damage(" + ServerInfo.field_f + ")");
         System.out.println("set_sniper_cannon_projectile_damage(" + ArchiveRequest.field_m + ")");
         System.out.println("set_bomblet_spray_projectile_damage(" + GetMissionTerrainAsteroidProbability.field_o + ")");
-        System.out.println("set_explosion_projectile_damage(" + pea.field_a + ")");
+        System.out.println("set_explosion_projectile_damage(" + PlayerContextMenus.field_a + ")");
         System.out.println("set_point_defence_laser_projectile_damage(" + GetAngularForceDownshift.field_q + ")");
         System.out.println("set_point_defence_laser_projectile_intercept_damage(" + TabbedWidget.field_xb + ")");
         System.out.println("set_mass_driver_projectile_ondamage_particles(" + LruNodeCache.field_e + ")");
         System.out.println("set_torpedo_projectile_ondamage_particles(" + UiSingleChildContainer.field_u + ")");
-        System.out.println("set_phased_energy_beam_projectile_ondamage_particles(" + pea.field_b + ")");
+        System.out.println("set_phased_energy_beam_projectile_ondamage_particles(" + PlayerContextMenus.field_b + ")");
         System.out.println("set_sniper_cannon_projectile_ondamage_particles(" + GetShipAimLines.field_p + ")");
         System.out.println("set_bomblet_spray_projectile_ondamage_particles(" + NetworkArchiveRequest.field_o + ")");
         System.out.println("set_explosion_projectile_ondamage_particles(" + GetLaserEnergyUsed.field_r + ")");

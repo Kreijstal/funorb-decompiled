@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qs {
-    static String field_b;
+final class AppletCookieWriter {
+    static String confirmEmailText;
     static int field_a;
     static int field_c;
 
@@ -83,10 +83,10 @@ final class qs {
         if (!param0) {
           return;
         }
-        field_b = null;
+        confirmEmailText = null;
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isActivePrivateChatTarget(int param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         RuntimeException stackIn_16_0 = null;
@@ -94,13 +94,13 @@ final class qs {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!SetFightersPerPlayerMaximum.field_p) {
+          if (!SetFightersPerPlayerMaximum.chatInputActive) {
             return false;
           }
           if (NetworkMessageState.chatChannel == 2 &&
-            GetDebrisThrowable.field_o != null) {
+            GetDebrisThrowable.privateChatTarget != null) {
             var3 = (CharSequence) ((Object) param1);
-            if (!GetDebrisThrowable.field_o.equals(ConstantColorTextureOperation.normalizeName(false, var3))) {
+            if (!GetDebrisThrowable.privateChatTarget.equals(ConstantColorTextureOperation.normalizeName(false, var3))) {
               return false;
             }
             if (param0 == 0) {
@@ -125,6 +125,6 @@ final class qs {
 
     static {
         field_a = 0;
-        field_b = "Confirm Email:";
+        confirmEmailText = "Confirm Email:";
     }
 }

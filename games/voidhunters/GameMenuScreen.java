@@ -288,7 +288,7 @@ final class GameMenuScreen {
             }
           }
         }
-        var10 = tea.a(var5, var8, 13879);
+        var10 = GameTextMetrics.getStringWidth(var5, var8, 13879);
         var12 = this.getItemLeft(31488, param0);
         var13 = this.getItemRight((byte) -60, param0);
         var14 = 0;
@@ -733,10 +733,10 @@ final class GameMenuScreen {
                                     }
                                     if (var9 != 0) {
                                       var10_int = 0;
-                                      while (!(var10_int >= DebugSendable.field_f.length)) {
-                                        var11 = lwa.a(GetMassDriverProjectiles.field_q, -1);
-                                        var11 = (var9 + DebugSendable.field_f.length + var11) % DebugSendable.field_f.length;
-                                        var12_int = DebugSendable.field_f[var11];
+                                      while (!(var10_int >= DebugSendable.graphicsBackendOrder.length)) {
+                                        var11 = QuickChatHelpWindow.findGraphicsBackendIndex(GetMassDriverProjectiles.field_q, -1);
+                                        var11 = (var9 + DebugSendable.graphicsBackendOrder.length + var11) % DebugSendable.graphicsBackendOrder.length;
+                                        var12_int = DebugSendable.graphicsBackendOrder[var11];
                                         if (!SetTorpedoProjectileOndamageParticles.a(-25915, var12_int)) {
                                           var10_int++;
                                           continue;
@@ -943,7 +943,7 @@ final class GameMenuScreen {
             PasswordValidator.field_m[this.menuId] != null) {
             var5 = PasswordValidator.field_m[this.menuId];
             var6Lifetime1 = 1;
-            SetSelfDestructPrepareToggleCooldown.a(GetBombletSprayEnergyUsed.field_p.width / 2 - (tea.a(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
+            SetSelfDestructPrepareToggleCooldown.a(GetBombletSprayEnergyUsed.field_p.width / 2 - (GameTextMetrics.getStringWidth(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
           }
         } else {
           PlayerActionFactory.a(137, var3Lifetime1 + GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.a(param0 ^ 37, 137) / 2, (byte) 103, 20 + var4Lifetime1);
@@ -1095,7 +1095,7 @@ final class GameMenuScreen {
             this.handleItemInput(24, false, this.inputState.selectedIndex);
           }
           var2Lifetime1Lifetime1 = this.inputState.selectedIndex;
-          this.inputState.updatePointerSelection(this.hitTestItem(qs.field_a, Particle.field_H, 6868), 5620, this.hitTestItem(OpenGlFaceAttachment.field_b, PlayerGameData.field_b, param0 ^ 6868));
+          this.inputState.updatePointerSelection(this.hitTestItem(AppletCookieWriter.field_a, Particle.field_H, 6868), 5620, this.hitTestItem(OpenGlFaceAttachment.field_b, PlayerGameData.field_b, param0 ^ 6868));
           if (this.inputState.selectedIndex >= 0 &&
             var2Lifetime1Lifetime1 != this.inputState.selectedIndex) {
             GetNebulaFadesOutWhenClose.a(-124, PendingScoreboardRequest.soundEffects[0]);

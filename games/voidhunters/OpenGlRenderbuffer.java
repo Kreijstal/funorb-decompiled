@@ -169,7 +169,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         }
         if (2 == var3) {
           if (param1 != 0) {
-            stackIn_30_0 = pbb.field_a;
+            stackIn_30_0 = UiComboBoxArrowRenderer.protectVipText;
           } else {
             stackIn_30_0 = BricksTextureOperation.field_t;
           }

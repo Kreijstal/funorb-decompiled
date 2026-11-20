@@ -70,7 +70,7 @@ final class ComponentCollision extends IntrusiveNode {
         var18 = null;
         var19 = VoidHunters.field_G;
         try {
-          lkb.a(SetExplosionPushMultiplier.field_p, (byte) -128);
+          EmailValidationError.layoutSlidingLobbyPanels(SetExplosionPushMultiplier.field_p, (byte) -128);
           if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
             boolean decompiledFrameRemainder0 = true;
             GetShipToShipRamDamage.field_q.enabled = true;
@@ -352,7 +352,7 @@ final class ComponentCollision extends IntrusiveNode {
           GetReverbWidth.field_o.tabs.updateSelectedTab(10000);
           if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
-              sh.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);
+              LiteralStrings.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);
             }
             if (vw.field_a.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = true;

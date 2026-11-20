@@ -67,20 +67,20 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
         }
     }
 
-    final static lkb a(int param0, String param1) {
+    final static EmailValidationError validateEmailDomain(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
         String[] var4 = null;
         int var5 = 0;
         String var6 = null;
-        lkb var7 = null;
+        EmailValidationError var7 = null;
         int var8 = 0;
-        lkb stackIn_3_0 = null;
-        lkb stackIn_7_0 = null;
-        lkb stackIn_10_0 = null;
-        lkb stackIn_15_0 = null;
-        lkb stackIn_18_0 = null;
+        EmailValidationError stackIn_3_0 = null;
+        EmailValidationError stackIn_7_0 = null;
+        EmailValidationError stackIn_10_0 = null;
+        EmailValidationError stackIn_15_0 = null;
+        EmailValidationError stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -89,27 +89,27 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = IntegerArrayReadRequest.field_f;
+            stackIn_3_0 = IntegerArrayReadRequest.incompleteEmailError;
             return stackIn_3_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = OneShotSound.field_j;
+            stackIn_7_0 = OneShotSound.emailTooLongError;
             return stackIn_7_0;
           }
           var3 = SetFighterBayAimspeed.a((byte) -67, '.', param1);
           if (2 > var3.length) {
-            stackIn_10_0 = IntegerArrayReadRequest.field_f;
+            stackIn_10_0 = IntegerArrayReadRequest.incompleteEmailError;
             return stackIn_10_0;
           }
           var4 = var3;
           var5 = param0;
           while (true) {
             if (var4.length <= var5) {
-              stackIn_18_0 = qj.a((byte) -74, var3[-1 + var3.length]);
+              stackIn_18_0 = EmailTopLevelDomainValidator.validateTopLevelDomain((byte) -74, var3[-1 + var3.length]);
               return stackIn_18_0;
             }
             var6 = var4[var5];
-            var7 = SetShipPersistence.a(-23150, var6);
+            var7 = SetShipPersistence.validateEmailDomainLabel(-23150, var6);
             if (var7 == null) {
               var5++;
               continue;

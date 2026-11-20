@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vu extends Widget {
+final class SocialListEntry extends Widget {
     static byte[] field_zb;
-    int field_yb;
+    int insertionIndex;
     Widget field_wb;
     static boolean field_xb;
     Widget field_Eb;
@@ -14,7 +14,7 @@ final class vu extends Widget {
     static int field_Db;
     String field_Fb;
 
-    final static int b(int param0, int param1, int param2, int param3, int param4) {
+    final static int findUnitIntervalQuadraticRoot(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_26_0 = 0;
         int var5;
         int var6;
@@ -68,11 +68,11 @@ final class vu extends Widget {
     public static void clearSharedReferences(byte param0) {
         field_zb = null;
         if (param0 != 113) {
-          vu.b(30, 61, 5, 19, 62);
+          SocialListEntry.findUnitIntervalQuadraticRoot(30, 61, 5, 19, 62);
         }
     }
 
-    vu() {
+    SocialListEntry() {
         super(0L, (Widget) null);
     }
 

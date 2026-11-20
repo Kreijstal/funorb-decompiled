@@ -95,7 +95,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           var5 = (CharSequence) ((Object) param0);
           var4 = MissionListFactory.a(var5, 96);
           param1.writeUnsignedSmart((byte) 124, var4.length);
-          param1.position = param1.position + GetMissileLauncherAimspeed.field_o.compress(var4.length, var4, param1.payload, 104, param1.position, 0);
+          param1.position = param1.position + GetMissileLauncherAimspeed.huffmanCodec.compress(var4.length, var4, param1.payload, 104, param1.position, 0);
           stackIn_4_0 = -var3_int + param1.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

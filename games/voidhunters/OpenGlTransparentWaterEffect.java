@@ -24,10 +24,10 @@ final class OpenGlTransparentWaterEffect extends GpuMaterialEffect {
     final static void e(int param0) {
         if (param0 != -24248) {
           OpenGlTransparentWaterEffect.e(30);
-          GetSelfDestructPrepareToggleCooldown.a(113, 4);
+          GetSelfDestructPrepareToggleCooldown.setAccountUiResult(113, 4);
           return;
         }
-        GetSelfDestructPrepareToggleCooldown.a(113, 4);
+        GetSelfDestructPrepareToggleCooldown.setAccountUiResult(113, 4);
     }
 
     final void applyRenderState(int param0, boolean param1) {

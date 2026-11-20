@@ -62,9 +62,9 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           GameMenuScreen.field_a = SetSniperCannonProjectiles.a(param1, "jagex_logo_grey", "commonui", true);
           GetBombletSprayProjectileLife.field_o = SetGrapplingHookRopeBreakLength.a(param1, true, "commonui", "button");
           ByteStorage.field_a = GrowableIntArray.loadNamedSprites("commonui", -90, param1, "validation");
-          SetTorpedoProjectileLife.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo12"));
-          SetShipToShipRamDamage.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14"));
-          GetBoostersCooldown.field_r = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14bold"));
+          SetTorpedoProjectileLife.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "commonui", param1, param2, "arezzo12"));
+          SetShipToShipRamDamage.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "commonui", param1, param2, "arezzo14"));
+          GetBoostersCooldown.field_r = (BitmapFont) ((Object) GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "commonui", param1, param2, "arezzo14bold"));
           var17 = new Sprite(param0.fetchNamedFile("", true, "button.gif"), (java.awt.Component) ((Object) igb.field_a));
           UiDraggableContainer.loadSoftwareIndexedSpriteByName("dropdown", "commonui", param3 ^ -60, param1);
           var5 = GetExplosionProjectileDamage.a(-124, "commonui", "screen_options", param1);

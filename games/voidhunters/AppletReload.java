@@ -60,12 +60,12 @@ final class AppletReload {
         }
     }
 
-    final static void a(byte param0, boolean param1, PlatformService param2, java.awt.Component param3, MidiCrossfadeStream param4, int param5) {
+    final static void initializeAudio(byte param0, boolean param1, PlatformService param2, java.awt.Component param3, MidiCrossfadeStream param4, int param5) {
         if (param0 != -32) {
           return;
         }
         try {
-          GetFighterBayAimspeed.a(param2, param4, param3, param1, param5, 1024, (byte) 21, param5);
+          GetFighterBayAimspeed.initializeAudio(param2, param4, param3, param1, param5, 1024, (byte) 21, param5);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kr.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

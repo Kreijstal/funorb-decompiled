@@ -3,10 +3,10 @@
  */
 final class LobbyGameContextMenuBuilder {
     static String field_a;
-    static AudioOutput field_b;
+    static AudioOutput effectsOutput;
 
     public static void clearSharedReferences(byte param0) {
-        field_b = null;
+        effectsOutput = null;
         if (param0 != 35) {
           return;
         }
@@ -31,7 +31,7 @@ final class LobbyGameContextMenuBuilder {
         String var12 = null;
         PlayerContextMenu var13 = null;
         try {
-          pea.$cfr$intArgs$a$91f64d33677c(0L, param1, -1, (int[]) null, (String) null, MapClearanceCircle.field_f, (String) null, 50, param1.getGameId((byte) -13));
+          PlayerContextMenus.prepareContextMenu(0L, param1, -1, (int[]) null, (String) null, MapClearanceCircle.field_f, (String) null, 50, param1.getGameId((byte) -13));
           if (param1.field_fc && (param1.field_Bb == 2 ||
             !(SetAngularVelocitySustain.field_p < 2))) {
             var7 = GetLagStandardDeviationOut.field_o;
@@ -52,7 +52,7 @@ final class LobbyGameContextMenuBuilder {
           }
           var13 = GetLagStandardDeviationOut.field_o;
           var5 = Particle.field_H;
-          var6 = qs.field_a;
+          var6 = AppletCookieWriter.field_a;
           if (param0 != 112) {
             field_a = (String) null;
           }

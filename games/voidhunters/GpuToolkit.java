@@ -234,8 +234,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
     final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.preparePrimitiveDraw(false);
         this.setTextureConstantColor(-126, param4);
-        this.setRgbCombineSource(0, pea.field_d, 7);
-        this.setAlphaCombineSource(0, (byte) -108, pea.field_d);
+        this.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -108, PlayerContextMenus.field_d);
         this.setBlendMode(99, param5);
         this.modelTransform.setScale(5557, (float)param2, (float)param3, 1.0f);
         this.modelTransform.translate(param1, 16383, 0, param0);
@@ -355,8 +355,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
     final void fillCircle(int param0, int param1, int param2, int param3, int param4) {
         this.preparePrimitiveDraw(false);
         this.setTextureConstantColor(-128, param3);
-        this.setRgbCombineSource(0, pea.field_d, 7);
-        this.setAlphaCombineSource(0, (byte) -65, pea.field_d);
+        this.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -65, PlayerContextMenus.field_d);
         this.setBlendMode(83, param4);
         this.modelTransform.setScale(5557, (float)param2, (float)param2, 1.0f);
         this.modelTransform.translate(param1, 16383, 0, param0);
@@ -1204,8 +1204,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
         this.preparePrimitiveDraw(false);
         this.setTextureConstantColor(-128, param4);
-        this.setRgbCombineSource(0, pea.field_d, 7);
-        this.setAlphaCombineSource(0, (byte) -118, pea.field_d);
+        this.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -118, PlayerContextMenus.field_d);
         this.setBlendMode(72, param5);
         this.resetModelTransform(true);
         this.setMultisampleEnabled(-75, false);
@@ -1613,8 +1613,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
     final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
         this.preparePrimitiveDraw(false);
         this.setTextureConstantColor(-126, param3);
-        this.setRgbCombineSource(0, pea.field_d, 7);
-        this.setAlphaCombineSource(0, (byte) -65, pea.field_d);
+        this.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -65, PlayerContextMenus.field_d);
         this.setBlendMode(58, param4);
         this.modelTransform.setScale(5557, (float)param2, (float)param2, 1.0f);
         this.modelTransform.translate(param1, 16383, 0, param0);
@@ -1855,8 +1855,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
         this.preparePrimitiveDraw(false);
         this.setTextureConstantColor(-125, param4);
-        this.setRgbCombineSource(0, pea.field_d, 7);
-        this.setAlphaCombineSource(0, (byte) -71, pea.field_d);
+        this.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -71, PlayerContextMenus.field_d);
         this.setBlendMode(99, param6);
         this.modelTransform.setScale(5557, var11, (float)param5, 1.0f);
         this.modelTransform.translate(-param5 / 2, 16383, 0, 0);
@@ -2006,8 +2006,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
         float var7 = this.getPixelOffset((byte) -95);
         this.preparePrimitiveDraw(false);
         this.setTextureConstantColor(-123, param4);
-        this.setRgbCombineSource(0, pea.field_d, 7);
-        this.setAlphaCombineSource(0, (byte) -113, pea.field_d);
+        this.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -113, PlayerContextMenus.field_d);
         this.setBlendMode(103, param5);
         this.modelTransform.setScale(5557, (float)(-1 + param2), (float)(param3 - 1), 1.0f);
         this.modelTransform.translate(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);

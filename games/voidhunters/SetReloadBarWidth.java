@@ -69,7 +69,7 @@ final class SetReloadBarWidth extends ConsoleCommand {
     final static void a(int param0, String param1) {
         try {
           SetTabForScores.field_p = param1;
-          GetSelfDestructPrepareToggleCooldown.a(-53, param0);
+          GetSelfDestructPrepareToggleCooldown.setAccountUiResult(-53, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -401,7 +401,7 @@ final class World implements DiffableState, CompactGameState {
             if (var7_int != -1) {
               var9Lifetime1 = (var8 * param0.dx >> 8) + param1;
               var10 = (var8 * param0.dy >> 8) + param2;
-              var11Lifetime1 = pea.field_b;
+              var11Lifetime1 = PlayerContextMenus.field_b;
               if (3 == param0.getType((byte) -104)) {
                 param0.setImpactEndpoint(var10, var9Lifetime1, 118);
               } else {
@@ -8232,7 +8232,7 @@ final class World implements DiffableState, CompactGameState {
                       var16_ref_String = Integer.toString((var15_int - 1) / Particle.field_l);
                       var17 = param3.worldToScreenX(var12.getX(false), (byte) 119);
                       var18 = param3.worldToScreenY(true, -8192 + var12.getBoundingbox((byte) -70)[2]);
-                      SetSelfDestructPrepareToggleCooldown.a(-(tea.a(1, var16_ref_String, 13879) >> 1) + var17, -1, var18, var16_ref_String, 1, 16541441, (byte) -94);
+                      SetSelfDestructPrepareToggleCooldown.a(-(GameTextMetrics.getStringWidth(1, var16_ref_String, 13879) >> 1) + var17, -1, var18, var16_ref_String, 1, 16541441, (byte) -94);
                     }
                   }
                   if (!GetPointDefenceLaserProjectiles.a(8, 11284)) {
@@ -8602,7 +8602,7 @@ final class World implements DiffableState, CompactGameState {
         var9 = param1;
         for (var10 = 0; var9 > var10; var10++) {
           var11 = 8192 * var10 / var9;
-          var12 = new Projectile(param5, param6, GetNumStars.cosAngle(var11, (byte) 114) * 1000 >> 16, 1000 * TextureLineShape.sinAngle(var11, 93) >> 16, var11, 2 * param1, param2, param3, 5, pea.field_a);
+          var12 = new Projectile(param5, param6, GetNumStars.cosAngle(var11, (byte) 114) * 1000 >> 16, 1000 * TextureLineShape.sinAngle(var11, 93) >> 16, var11, 2 * param1, param2, param3, 5, PlayerContextMenus.field_a);
           this.addProjectile(var12, false);
         }
     }

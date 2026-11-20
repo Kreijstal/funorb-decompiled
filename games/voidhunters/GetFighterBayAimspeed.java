@@ -10,26 +10,26 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(PlatformService param0, MidiCrossfadeStream param1, java.awt.Component param2, boolean param3, int param4, int param5, byte param6, int param7) {
+    final static void initializeAudio(PlatformService param0, MidiCrossfadeStream param1, java.awt.Component param2, boolean param3, int param4, int param5, byte param6, int param7) {
         try {
           AudioOutput.configure(param7, param3, 10);
-          SetSelfDestructTimer.field_o = AudioOutput.create(param0, param2, 0, param4);
-          LobbyGameContextMenuBuilder.field_b = AudioOutput.create(param0, param2, 1, param5);
+          SetSelfDestructTimer.musicOutput = AudioOutput.create(param0, param2, 0, param4);
+          LobbyGameContextMenuBuilder.effectsOutput = AudioOutput.create(param0, param2, 1, param5);
           if (param6 != 21) {
             field_q = (String) null;
           }
-          MaskedPasswordTextStyle.field_q = new PcmStreamMixer();
-          LegacyOpenGlWaveWaterEffect.field_e = param5;
-          LobbyGameContextMenuBuilder.field_b.setStream(MaskedPasswordTextStyle.field_q);
-          GetBurstFireMaxEnergy.field_p = param1;
-          GetBurstFireMaxEnergy.field_p.setMasterGain((byte) -108, GetMutatorVotes.field_p);
-          SetSelfDestructTimer.field_o.setStream(GetBurstFireMaxEnergy.field_p);
+          MaskedPasswordTextStyle.effectsMixer = new PcmStreamMixer();
+          LegacyOpenGlWaveWaterEffect.effectsBufferSize = param5;
+          LobbyGameContextMenuBuilder.effectsOutput.setStream(MaskedPasswordTextStyle.effectsMixer);
+          GetBurstFireMaxEnergy.musicStream = param1;
+          GetBurstFireMaxEnergy.musicStream.setMasterGain((byte) -108, GetMutatorVotes.field_p);
+          SetSelfDestructTimer.musicOutput.setStream(GetBurstFireMaxEnergy.musicStream);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vda.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static SoftwareAlphaBitmapFont a(int param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
+    final static SoftwareAlphaBitmapFont loadSoftwareAlphaFontByName(int param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

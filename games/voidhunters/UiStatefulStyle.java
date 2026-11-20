@@ -206,11 +206,11 @@ final class UiStatefulStyle extends UiTextStyle {
               var4 = 1;
               if (null != SniperCannonWeaponDefinition.menuBackgroundBattle) {
                 stackIn_10_0 = SniperCannonWeaponDefinition.menuBackgroundBattle;
-                stackIn_11_1 = (lo.field_a[param3].hitTestItem(GetTorpedoReload.field_q, GetUseDetailLines.field_o, 6868) != -1) ? false : true;
+                stackIn_11_1 = (WorldSpriteTiler.field_a[param3].hitTestItem(GetTorpedoReload.field_q, GetUseDetailLines.field_o, 6868) != -1) ? false : true;
                 ((MenuBackgroundBattle) (Object) stackIn_10_0).render(stackIn_11_1, (byte) 55);
               }
             }
-            lo.field_a[param3].draw((byte) 65);
+            WorldSpriteTiler.field_a[param3].draw((byte) 65);
           }
         }
         if (var4 == 0) {

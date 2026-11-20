@@ -346,12 +346,12 @@ class Widget extends WidgetNode {
           SetDebrisPartitioned.field_o != 0 &&
           Particle.field_H >= SoftwareRasterizer2D.clipLeft &&
           Particle.field_H < SoftwareRasterizer2D.clipRight &&
-          qs.field_a >= SoftwareRasterizer2D.clipTop &&
-          SoftwareRasterizer2D.clipBottom > qs.field_a) {
+          AppletCookieWriter.field_a >= SoftwareRasterizer2D.clipTop &&
+          SoftwareRasterizer2D.clipBottom > AppletCookieWriter.field_a) {
           this.field_C = SetDebrisPartitioned.field_o;
           var12 = 1;
           this.field_r = Particle.field_H - this.screenX;
-          this.field_n = -this.screenY + qs.field_a;
+          this.field_n = -this.screenY + AppletCookieWriter.field_a;
           this.field_o = SetDebrisPartitioned.field_o;
         } else {
           if (SetDebrisPartitioned.field_o != 0) {

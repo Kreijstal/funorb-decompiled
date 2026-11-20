@@ -8,7 +8,7 @@ final class BodyDestroyedCondition extends MissionCondition implements DiffableS
     final static void b(int param0) {
         Particle.field_H = GetUseDetailLines.field_o;
         OpenGlFaceAttachment.field_b = GetTorpedoReload.field_q;
-        qs.field_a = GetTorpedoReload.field_q;
+        AppletCookieWriter.field_a = GetTorpedoReload.field_q;
         PlayerGameData.field_b = GetUseDetailLines.field_o;
         if (param0 != -1) {
           BodyDestroyedCondition.b(17);

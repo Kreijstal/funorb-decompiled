@@ -5,7 +5,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
     static byte[] field_p;
     static int field_r;
     static int field_q;
-    static String field_o;
+    static String privateChatTarget;
 
     final static void completeEmailAvailabilityCheck(int param0, boolean param1) {
         if (param0 != 12) {
@@ -20,7 +20,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         field_p = null;
-        field_o = null;
+        privateChatTarget = null;
         if (param0 > -67) {
           field_q = -100;
         }

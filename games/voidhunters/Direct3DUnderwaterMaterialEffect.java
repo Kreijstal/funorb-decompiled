@@ -146,7 +146,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         }
         this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
-        this.toolkit.setRgbCombineSource(2, pea.field_d, 7);
+        this.toolkit.setRgbCombineSource(2, PlayerContextMenus.field_d, 7);
         this.toolkit.setAlphaCombineSource(0, (byte) -106, SetGrapplingHookMaxExtension8Force.field_q);
         this.toolkit.setActiveTextureUnit(0, -71);
         if (!this.field_f) {
@@ -230,7 +230,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         this.toolkit.setTexture(this.field_o, -110);
         if (param0 == 5) {
           this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
-          this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
+          this.toolkit.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
           this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
           this.toolkit.setAlphaCombineSource(0, (byte) -108, SpriteTextureOperation.field_l);
           this.toolkit.setActiveTextureUnit(0, -72);
@@ -239,7 +239,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         }
         this.field_l = (jagdx.IDirect3DVertexShader) null;
         this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
-        this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
+        this.toolkit.setRgbCombineSource(0, PlayerContextMenus.field_d, 7);
         this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
         this.toolkit.setAlphaCombineSource(0, (byte) -108, SpriteTextureOperation.field_l);
         this.toolkit.setActiveTextureUnit(0, -72);

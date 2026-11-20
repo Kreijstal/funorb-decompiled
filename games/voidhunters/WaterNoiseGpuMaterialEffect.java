@@ -98,7 +98,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
         this.toolkit.setTextureCoordinateIndex(-34, 0);
         this.toolkit.setActiveTextureUnit(0, -79);
         this.toolkit.setTextureConstantColor(-128, -16777216);
-        this.toolkit.setAlphaCombineSource(0, (byte) -111, pea.field_d);
+        this.toolkit.setAlphaCombineSource(0, (byte) -111, PlayerContextMenus.field_d);
         if (param0 == 5) {
           this.onTextureTransformChanged(param0 + 3);
           return;

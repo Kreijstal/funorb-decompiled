@@ -139,7 +139,7 @@ final class UiComboBox extends UiContainer implements UiActionListener {
           this.dropdownOpen = false;
           this.displayButton = new UiFocusableComponent("", new UiComboBoxRenderer(this), (UiListener) (this));
           this.arrowButton = new UiFocusableComponent();
-          this.arrowButton.renderer = (UiRenderer) ((Object) new pbb());
+          this.arrowButton.renderer = (UiRenderer) ((Object) new UiComboBoxArrowRenderer());
           this.arrowButton.listener = (UiListener) (this);
           this.addChild(-18756, this.displayButton);
           this.addChild(-18756, this.arrowButton);

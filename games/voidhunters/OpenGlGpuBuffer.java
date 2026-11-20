@@ -22,8 +22,8 @@ abstract class OpenGlGpuBuffer implements GpuBuffer {
           this.bufferId = 0;
           return;
         }
-        jaggl.OpenGL.glGenBuffersARB(1, lkb.field_a, 0);
-        this.bufferId = lkb.field_a[0];
+        jaggl.OpenGL.glGenBuffersARB(1, EmailValidationError.field_a, 0);
+        this.bufferId = EmailValidationError.field_a[0];
         jaggl.OpenGL.glBindBufferARB(this.target, this.bufferId);
     }
 

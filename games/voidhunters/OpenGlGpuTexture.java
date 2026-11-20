@@ -348,7 +348,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
           OpenGlGpuTexture.disposeChatInputDialog((byte) -19);
         }
         OneShotSound.field_l = null;
-        SetFightersPerPlayerMaximum.field_p = true;
+        SetFightersPerPlayerMaximum.chatInputActive = true;
     }
 
     final void uploadArgbMipmaps(byte param0, int param1, int param2, int param3, int[] param4) {

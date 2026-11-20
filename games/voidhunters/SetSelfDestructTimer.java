@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSelfDestructTimer extends ConsoleCommand {
-    static AudioOutput field_o;
+    static AudioOutput musicOutput;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -35,7 +35,7 @@ final class SetSelfDestructTimer extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        musicOutput = null;
         if (param0 != -26016) {
           SetSelfDestructTimer.clearSharedReferences(-2);
         }

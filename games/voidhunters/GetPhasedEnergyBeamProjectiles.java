@@ -73,7 +73,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 49 / ((param0 - 53) / 41);
-          stackIn_1_0 = tea.a(SetAutoaim.field_p, param1, 13879);
+          stackIn_1_0 = GameTextMetrics.getStringWidth(SetAutoaim.field_p, param1, 13879);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,7 +144,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetFighterRepairAmount.field_o = param1[116];
           SetLaserRandomness.field_o = param1[134];
           Particle.field_G = param1[70];
-          pea.field_a = param1[149];
+          PlayerContextMenus.field_a = param1[149];
           LegacyOpenGlUnlitEffect.field_c = param1[63];
           Particle.field_e = param1[224];
           Particle.field_q = param1[214];
@@ -180,7 +180,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetGrapplingHookMaxLength.field_p = param1[186];
           OpenGlGpuTexture.field_g = param1[56];
           ArchiveRequest.field_m = param1[147];
-          tea.field_b = param1[74];
+          GameTextMetrics.field_b = param1[74];
           GetMissilesHitSourceTeam.field_o = param1[69];
           GetShipAimLines.field_p = param1[155];
           SetGrapplingHookRopeChangeRate.field_o = param1[91];
@@ -225,7 +225,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetTorqueDownshift.field_o = param1[188];
           UiSingleChildContainer.field_u = param1[153];
           SetShipTeamAction.field_e = param1[28];
-          pea.field_b = param1[154];
+          PlayerContextMenus.field_b = param1[154];
           GetBombletSprayRandomness.field_p = param1[29];
           AwardVictoryToTeamActionFactory.field_b = param1[201];
           GetMaxShipSize.field_o = param1[141];

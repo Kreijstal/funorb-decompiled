@@ -49,8 +49,8 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.setTexture(this.texture, -109);
         this.toolkit.setBlendMode(124, param6);
         this.toolkit.setTextureCombineMode(-117, param4);
-        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
-        this.toolkit.setAlphaCombineSource(1, (byte) -97, pea.field_d);
+        this.toolkit.setRgbCombineSource(1, PlayerContextMenus.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -97, PlayerContextMenus.field_d);
         this.toolkit.setTextureConstantColor(-127, param5);
         var10.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 106), 1.0f);
         if (this.field_k) {
@@ -90,8 +90,8 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.setTexture(this.texture, -123);
         this.toolkit.setBlendMode(121, param4);
         this.toolkit.setTextureCombineMode(107, param2);
-        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
-        this.toolkit.setAlphaCombineSource(1, (byte) -54, pea.field_d);
+        this.toolkit.setRgbCombineSource(1, PlayerContextMenus.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -54, PlayerContextMenus.field_d);
         this.toolkit.setTextureConstantColor(-127, param3);
         var8.setScale(5557, (float)this.width, (float)this.height, 0.0f);
         var8.translate(param1, 16383, 0, param0);
@@ -142,8 +142,8 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.setTexture(this.texture, -122);
         this.toolkit.setBlendMode(54, param8);
         this.toolkit.setTextureCombineMode(13, param6);
-        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
-        this.toolkit.setAlphaCombineSource(1, (byte) -121, pea.field_d);
+        this.toolkit.setRgbCombineSource(1, PlayerContextMenus.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -121, PlayerContextMenus.field_d);
         this.toolkit.setTextureConstantColor(-126, param7);
         if (this.field_k) {
           var13 = (float)this.getPaddedWidth();
@@ -211,8 +211,8 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.setTexture(this.texture, -119);
         this.toolkit.setBlendMode(75, param6);
         this.toolkit.setTextureCombineMode(-124, param4);
-        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
-        this.toolkit.setAlphaCombineSource(1, (byte) -98, pea.field_d);
+        this.toolkit.setRgbCombineSource(1, PlayerContextMenus.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -98, PlayerContextMenus.field_d);
         this.toolkit.setTextureConstantColor(-123, param5);
         if (this.field_a &&
           0 == this.paddingTop &&
