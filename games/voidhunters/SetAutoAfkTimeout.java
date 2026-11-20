@@ -14,7 +14,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
         try {
           Object var6 = null;
           Object var7 = null;
-          ga var8 = null;
+          CachedArchiveProvider var8 = null;
           asb stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
@@ -35,7 +35,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
               }
               var7 = new fo(param4, GpuNativeHeap.field_e, btb.field_d[param4], 2097152);
             }
-            var8 = ho.field_a.a(param4, 5, (fo) (var6), (fo) (var7), param3);
+            var8 = ho.field_a.getArchiveProvider(param4, 5, (fo) (var6), (fo) (var7), param3);
             if (param1) {
               var8.b((byte) -82);
             }

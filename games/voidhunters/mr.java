@@ -74,7 +74,7 @@ final class mr extends iw implements oo {
         shb var4 = null;
         try {
           var3 = null;
-          if (param1 == qua.field_a) {
+          if (param1 == ComponentAttachmentPlan.field_a) {
             var3 = oda.field_t;
           } else {
             if (param1 == AdminMessageFactory.field_a) {

@@ -1,13 +1,15 @@
 # Reading Void Hunters
 
-Resolved declarations: 969/1572 classes and 3983/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 603 opaque classes and 4232 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 981/1572 classes and 4190/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 591 opaque classes and 4025 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
 `GameApplet` drives `initializeGame`, `updateGameTick`, `renderGameFrame`, `shutdownGame` and `clearClientResources`. `NetworkGameClient` parses launch parameters and coordinates shared login/reconnection work; `VoidHunters.handleServerPacket` dispatches the game-specific replies.
 
 `SerializableGameState` names `readState`, `writeState`, `copyTo` and `differsFrom` across the simulation. `CompactGameState` exposes its additional packed representation. `PacketBuffer`, `IsaacPacketBuffer` and `IsaacCipher` separate byte codecs, bit codecs and encoded protocol bytes.
+
+`ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 
 `MissionEvent.evaluateAndExecute` evaluates each condition, applies its negation flag, collects target body ids and executes actions. Conditions and actions expose descriptions, editable parameters and world marker positions. `GameStateFactory` names default-instance and typed-array creation; each named concrete factory identifies its product type.
 
@@ -18,6 +20,8 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 `ToolkitFont` exposes ordinary and masked glyph drawing. Its software palette, monochrome and alpha variants name their pixel blitters; `GlyphMask` names the software span mask and OpenGL texture mask. Renderer capability names follow the original diagnostic messages for memory pools, backbuffers, shadows, bloom, environment maps, anti-aliasing, threads, particles, underwater effects, clipping and point lights.
 
 `AudioPump` services `AudioOutput`; `JavaSoundAudioOutput` submits mixed PCM through Java Sound. `PcmStreamMixer` combines child streams and scheduled listeners. `MidiPcmStream` reads `MusicTrack` events with `MidiFileReader`, manages patch notes and controllers, and mixes them through `MusicPatchPcmStream`. `PcmSampleStream` names its forward/reverse, mono/stereo, interpolated/aligned and gain-ramped mixing kernels. `SoundCache` loads music samples and synthesized `SoundEffect` samples. `SoundInstrument`, `SoundEnvelope` and `SoundFilter` expose synthesis; `VorbisSample` decodes compressed music through its codebooks, floors, residues and mappings.
+
+`TextureProvider` supplies RGB, ARGB and floating-point RGBA generation through `ArchiveTextureProvider` and `ProceduralTexture`. `ArchiveIndexLoader` verifies the master archive index and creates cached archive providers.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

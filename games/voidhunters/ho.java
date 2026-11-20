@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ho {
-    static fwa field_a;
+    static ArchiveIndexLoader field_a;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {

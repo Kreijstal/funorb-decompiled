@@ -6,7 +6,7 @@ final class fab {
     bra field_e;
     private fs[] field_c;
     private boolean field_d;
-    private d field_a;
+    private TextureProvider field_a;
 
     final static void a(int param0, byte[] param1) {
         String var4 = null;
@@ -451,11 +451,11 @@ final class fab {
         }
     }
 
-    fab(d param0, fs[] param1) {
+    fab(TextureProvider param0, fs[] param1) {
         this(GetAiRepairAmount.a(0), qc.b(0), param0, SetTorpedoProjectiles.field_o, param1);
     }
 
-    private fab(asb param0, asb param1, d param2, eab param3, fs[] param4) {
+    private fab(asb param0, asb param1, TextureProvider param2, eab param3, fs[] param4) {
         this.field_d = false;
         try {
           lwa.field_xb = param1;

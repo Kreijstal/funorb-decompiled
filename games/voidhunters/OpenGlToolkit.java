@@ -166,7 +166,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var7;
         int var8;
         int var9;
-        opa var10;
+        TextureMetadata var10;
         int var11;
         int var12;
         int var13;
@@ -190,7 +190,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var9 = stackIn_9_0;
           if (param3 >= 0) {
             var5 = this.field_r.a((byte) -125, param3);
-            var10 = this.field_a.a(-20292, param3);
+            var10 = this.field_a.getTextureMetadata(-20292, param3);
             if (0 == var10.field_p &&
               var10.field_d == 0) {
               this.k(param2 + 0);
@@ -1695,7 +1695,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    OpenGlToolkit(java.awt.Canvas param0, d param1, int param2) {
+    OpenGlToolkit(java.awt.Canvas param0, TextureProvider param1, int param2) {
         super(param1);
         long dupTemp$3 = 0L;
         int var9 = 0;

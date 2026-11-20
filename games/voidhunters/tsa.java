@@ -12,7 +12,7 @@ final class tsa extends IntrusiveNode {
         if (this.field_e == SetMissionVariablesHudX.field_p) {
           return "Method{" + this.field_d + "}";
         }
-        if (fwa.field_h == this.field_e) {
+        if (ArchiveIndexLoader.field_h == this.field_e) {
           return "Number{" + this.field_d + "}";
         }
         if (io.field_p == this.field_e) {
@@ -81,7 +81,7 @@ final class tsa extends IntrusiveNode {
               stackIn_10_0 = MessageFactory.a(this.field_d, var8, param1, (byte) -124);
               return stackIn_10_0;
             }
-            if (this.field_e == fwa.field_h) {
+            if (this.field_e == ArchiveIndexLoader.field_h) {
               var3_int = Character.toLowerCase(this.field_d.charAt(this.field_d.length() - 1));
               if (var3_int == 102) {
                 stackIn_16_0 = new ConsoleValue(Float.valueOf(this.field_d).floatValue());

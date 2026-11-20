@@ -439,7 +439,7 @@ final class hnb extends iw implements oo {
                   if (var6_int == 0 &&
                     this.field_L == param3) {
                     if (!this.field_K) {
-                      this.field_v.a(false, new mr(this.field_v, qua.field_a));
+                      this.field_v.a(false, new mr(this.field_v, ComponentAttachmentPlan.field_a));
                       return;
                     }
                     if (GetDebrisCarryOver.field_o <= 0) {

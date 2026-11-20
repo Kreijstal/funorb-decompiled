@@ -10,7 +10,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
 
     final static int a(int param0) {
         int var1 = 17 / ((param0 + 41) / 54);
-        ho.field_a.a(0);
+        ho.field_a.processArchiveRequests(0);
         if (!GetAutozoomAmountMultiply.field_o.e(0)) {
           return vq.g(-6269);
         }

@@ -11,7 +11,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
         if (vjb.field_a) {
           return;
         }
-        fka.a("Initing text...", (byte) -82);
+        ComponentCollision.a("Initing text...", (byte) -82);
         vjb.field_a = true;
         if (null != ifa.field_g) {
           return;
@@ -170,7 +170,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[38] = vqa.field_f;
           GetGrapplingHookSpringConstant.field_o[45] = CommonGameState.field_b;
           GetGrapplingHookSpringConstant.field_o[52] = pl.field_e;
-          GetGrapplingHookSpringConstant.field_o[27] = ii.field_g;
+          GetGrapplingHookSpringConstant.field_o[27] = ArchiveTextureProvider.field_g;
           GetGrapplingHookSpringConstant.field_o[43] = GetUseCircleFill.field_p;
           GetGrapplingHookSpringConstant.field_o[8] = kl.field_e;
           GetGrapplingHookSpringConstant.field_o[54] = SetMissilesDamageSourceTeam.field_p;
@@ -237,7 +237,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[6] = GetSniperCannonAimspeed.field_o;
           ShipTeamCondition.field_f[3] = iwa.field_a;
           ShipTeamCondition.field_f[22] = kla.field_b;
-          ShipTeamCondition.field_f[0] = ii.field_a;
+          ShipTeamCondition.field_f[0] = ArchiveTextureProvider.field_a;
           ShipTeamCondition.field_f[15] = qn.field_d;
           ShipTeamCondition.field_f[27] = GetBombletSprayEnergyUsed.field_o;
           ShipTeamCondition.field_f[5] = GetReloadBarHeight.field_o;

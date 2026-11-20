@@ -105,7 +105,7 @@ final class SetReverbFeedback extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetReverbFeedback.b(true);
           }
-          qua.field_b = arguments[0].floatValue(0);
+          ComponentAttachmentPlan.field_b = arguments[0].floatValue(0);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -183,7 +183,7 @@ public final class VoidHunters extends NetworkGameClient {
         var7 = field_G;
         if (param0 == 9) {
           olb.d(param1 + 991426336);
-          lu.field_d = false;
+          HardpointMatch.field_d = false;
           wgb.field_f = 6;
           BodyInZoneCondition.field_c = qga.field_b.readString(-1);
           return;
@@ -194,7 +194,7 @@ public final class VoidHunters extends NetworkGameClient {
           GetBombletSprayAimarc.a(shb.field_o, SetUseOffscreenRendering.a(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.b(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
           GetPhasedEnergyBeamAimarc.a(SetBombletSprayPushMultiplier.a(0), dm.i((byte) -90), true);
           GraphicsPresentException.field_a = true;
-          lu.field_d = false;
+          HardpointMatch.field_d = false;
           if (vqa.field_g != null &&
             !vqa.field_g.field_N) {
             vga.field_b = 0;
@@ -229,7 +229,7 @@ public final class VoidHunters extends NetworkGameClient {
               GraphicsPresentException.field_a = false;
               HardpointDefinition.a(true);
             }
-            lu.field_d = false;
+            HardpointMatch.field_d = false;
             SetMassDriverFireForce.field_o = false;
             return;
           }
@@ -418,16 +418,16 @@ public final class VoidHunters extends NetworkGameClient {
         var2 = -40 % ((23 - param0) / 61);
         SetMinimapWidth.field_o = SetMinimapWidth.field_o + 1;
         if (GetUseTriFill.a(51)) {
-          fka.a("Servicing login...", (byte) -86);
+          ComponentCollision.a("Servicing login...", (byte) -86);
           this.h(0);
           if (GetUseTriFill.a(119)) {
             return;
           }
         }
         if (!uob.field_e) {
-          fka.a("Servicing login_create_ui...", (byte) -85);
+          ComponentCollision.a("Servicing login_create_ui...", (byte) -85);
           GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, 15877);
-          fka.a("Finished servicing login_create_ui...", (byte) -72);
+          ComponentCollision.a("Finished servicing login_create_ui...", (byte) -72);
           if (this.finishResourceLoading((byte) 125)) {
             uob.field_e = true;
           }
@@ -532,7 +532,7 @@ public final class VoidHunters extends NetworkGameClient {
               if (vqa.field_g == null ||
                 vqa.field_g.field_N) {
                 SetMassDriverFireForce.field_o = true;
-                lu.field_d = true;
+                HardpointMatch.field_d = true;
               }
             } else {
               if (GraphicsPresentException.field_a) {
@@ -554,7 +554,7 @@ public final class VoidHunters extends NetworkGameClient {
                 SetMissionTerrainDebrisProbability.field_p = false;
                 HardpointDefinition.a(true);
               }
-              lu.field_d = false;
+              HardpointMatch.field_d = false;
               SetMassDriverFireForce.field_o = false;
             }
           }
@@ -566,7 +566,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5 = 1;
           }
           if (GraphicsPresentException.field_a ||
-            lu.field_d ||
+            HardpointMatch.field_d ||
             SetMassDriverFireForce.field_o) {
             var5 = 1;
           }
@@ -641,8 +641,8 @@ public final class VoidHunters extends NetworkGameClient {
         di.field_l = new kda();
         GetCountermeasureLauncherAimarc.e((byte) 117);
         this.applyShipCookie(false);
-        fwa.field_g = new ServerInfo();
-        fwa.field_g.a((byte) -65);
+        ArchiveIndexLoader.field_g = new ServerInfo();
+        ArchiveIndexLoader.field_g.a((byte) -65);
         SetUseTriFill.field_o = GameKeyHandler.b(-89);
         SetGrapplingHookMaxExtension8Force.field_o = tc.field_b;
         ncb.field_a = GetPointDefenceLaserAimspeed.field_o;
@@ -940,8 +940,8 @@ public final class VoidHunters extends NetworkGameClient {
         qga.clearSharedReferences(114);
         qs.clearSharedReferences(true);
         joa.clearSharedReferences(26936);
-        qua.clearSharedReferences(16606);
-        sfa.clearSharedReferences(false);
+        ComponentAttachmentPlan.clearSharedReferences(16606);
+        ProjectileHit.clearSharedReferences(false);
         MovingObject.clearSharedReferences(true);
         SetVariableLabelAction.clearSharedReferences(112);
         TickCondition.clearSharedReferences((byte) -44);
@@ -960,8 +960,8 @@ public final class VoidHunters extends NetworkGameClient {
         ShipSpawnedCondition.clearSharedReferences((byte) 11);
         ShipTeamCondition.clearSharedReferences(-10570);
         VariableCondition.clearSharedReferences(-120);
-        gda.clearSharedReferences((byte) 18);
-        lu.clearSharedReferences((byte) 87);
+        ComponentContact.clearSharedReferences((byte) 18);
+        HardpointMatch.clearSharedReferences((byte) 87);
         vra.clearSharedReferences((byte) -66);
         kl.clearSharedReferences(-127);
         AsteroidField.clearSharedReferences((byte) 48);
@@ -972,7 +972,7 @@ public final class VoidHunters extends NetworkGameClient {
         kra.clearSharedReferences((byte) 70);
         pea.clearSharedReferences(true);
         sra.clearSharedReferences(96);
-        ii.clearSharedReferences(25498);
+        ArchiveTextureProvider.clearSharedReferences(25498);
         SoundCache.clearSharedReferences((byte) -120);
         dqb.clearSharedReferences(15060);
         tea.clearSharedReferences(!param0 ? true : false);
@@ -1015,7 +1015,7 @@ public final class VoidHunters extends NetworkGameClient {
         wc.clearSharedReferences(-20221);
         ona.clearSharedReferences(125);
         pfa.clearSharedReferences(63);
-        fwa.clearSharedReferences(5);
+        ArchiveIndexLoader.clearSharedReferences(5);
         ppb.clearSharedReferences(37);
         pjb.clearSharedReferences((byte) 22);
         aw.clearSharedReferences(0);
@@ -1111,7 +1111,7 @@ public final class VoidHunters extends NetworkGameClient {
         wh.clearSharedReferences(0);
         km.clearSharedReferences((byte) 114);
         jma.clearSharedReferences(100);
-        ga.clearSharedReferences((byte) -110);
+        CachedArchiveProvider.clearSharedReferences((byte) -110);
         SoundInstrument.clearSharedReferences();
         tga.clearSharedReferences(88);
         uf.clearSharedReferences((byte) -128);
@@ -1822,7 +1822,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (!eu.field_i.a((byte) 68)) {
           return false;
         }
-        fka.a("Initing menus", (byte) -62);
+        ComponentCollision.a("Initing menus", (byte) -62);
         csa.b((byte) -111);
         for (var2 = 0; var2 < 10; var2++) {
           lo.field_a[var2] = new wf(var2);
@@ -1830,7 +1830,7 @@ public final class VoidHunters extends NetworkGameClient {
         wgb.field_f = 0;
         GetArmageddonTimerStart.field_o = 0;
         gib.a(-106, 50);
-        fka.a("Playing music", (byte) -101);
+        ComponentCollision.a("Playing music", (byte) -101);
         hb.a(pab.field_k[0], (byte) -114);
         if (param0 <= 124) {
           Object var4 = (Object) null;
@@ -1839,11 +1839,11 @@ public final class VoidHunters extends NetworkGameClient {
         for (var2Lifetime1 = 0; var2Lifetime1 < 16; var2Lifetime1++) {
           GetThrusterParticleLife.field_o.setChannelGain(0, (byte) 18, var2Lifetime1);
         }
-        wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, qua.field_b, nl.field_n, CommonGameState.field_i);
-        fka.a("Initing audiohandler", (byte) -64);
+        wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, nl.field_n, CommonGameState.field_i);
+        ComponentCollision.a("Initing audiohandler", (byte) -64);
         qn.c((byte) 89);
         MidiNote.resetFrameTiming(2096);
-        fka.a("Finished loadloop", (byte) -128);
+        ComponentCollision.a("Finished loadloop", (byte) -128);
         if (this.l(0) &&
           GetPhasedEnergyBeamPulsetime.e((byte) 116)) {
           wu.a(true, false);
@@ -1895,7 +1895,7 @@ public final class VoidHunters extends NetworkGameClient {
         int var7Lifetime2;
         var10 = field_G;
         if (ssa.b(2)) {
-          wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, qua.field_b, nl.field_n, CommonGameState.field_i);
+          wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, nl.field_n, CommonGameState.field_i);
           if (SetMachineGunEnergyUsed.field_o[81] &&
             SetMachineGunEnergyUsed.field_o[102]) {
             SetInnateThrusters.a(0, new int[]{4});
@@ -2034,7 +2034,7 @@ public final class VoidHunters extends NetworkGameClient {
             var4 = 0;
           }
           if (GraphicsPresentException.field_a &&
-            !lu.field_d &&
+            !HardpointMatch.field_d &&
             !SetMassDriverFireForce.field_o) {
             if (GetThrusterSmallForce.field_o &&
               SetFightersPerPlayerMaximum.field_p) {
@@ -2162,7 +2162,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (-4 == wgb.field_f) {
           RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 9);
           wgb.field_f = GetArmageddonTimerStart.field_o;
-          lu.field_d = true;
+          HardpointMatch.field_d = true;
           vga.field_b = GetRepairModePower.field_o;
         }
         if (-5 == wgb.field_f) {

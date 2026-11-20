@@ -9,11 +9,11 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
     int angularvelocity;
     private int angle;
     int id;
-    int field_p;
+    int torque;
     private int centreofmassy;
-    int field_o;
+    int forceY;
     ShipComponent chassis;
-    int field_t;
+    int forceX;
 
     public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_7_0 = 0;
@@ -98,15 +98,15 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final int j(int param0) {
+    final int getCenterOfMassOffsetX(int param0) {
         if (param0 != 995401160) {
-          this.f(85);
+          this.getVelocityY(85);
         }
         int var2 = this.angle >> 8;
         return (int)((long)this.centreofmassx * (long)GetNumStars.a(var2, (byte) -62) - (long)this.centreofmassy * (long)eu.a(var2, 124) >> 16);
     }
 
-    final void a(boolean param0, boolean param1, World param2) {
+    final void integrateMotion(boolean param0, boolean param1, World param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -117,7 +117,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         try {
           this.x = this.x + this.dx;
           if (!param1) {
-            this.e((byte) 36);
+            this.recalculateMassProperties((byte) 36);
           }
           this.angle = this.angle + this.angularvelocity;
           this.y = this.y + this.dy;
@@ -127,15 +127,15 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           if (param0) {
             param2.field_u.a(this.boundingbox, (byte) -105);
           }
-          this.c(16);
-          var4_int = this.x - this.j(995401160);
-          var5 = this.y - this.i((byte) 5);
-          this.chassis.a(this instanceof Ship, var4_int, var5, this.angle >> 8, 0, this.boundingbox);
+          this.clearBounds(16);
+          var4_int = this.x - this.getCenterOfMassOffsetX(995401160);
+          var5 = this.y - this.getCenterOfMassOffsetY((byte) 5);
+          this.chassis.updateWorldTransforms(this instanceof Ship, var4_int, var5, this.angle >> 8, 0, this.boundingbox);
           if (param0) {
-            param2.field_u.a(1, this.d(82), this.id, this.boundingbox);
-            this.d((byte) 124);
+            param2.field_u.a(1, this.getBodyKind(82), this.id, this.boundingbox);
+            this.onStateChanged((byte) 124);
           } else {
-            this.d((byte) 124);
+            this.onStateChanged((byte) 124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +152,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final int i(byte param0) {
+    final int getCenterOfMassOffsetY(byte param0) {
         if (param0 != 5) {
           return -127;
         }
@@ -184,7 +184,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(int[] param0, int[] param1, int[] param2, int param3, int[] param4, int param5, ShipComponent[] param6) {
+    private final void calculateThrusterBalanceScores(int[] param0, int[] param1, int[] param2, int param3, int[] param4, int param5, ShipComponent[] param6) {
         int var8_int = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_1 = 0;
@@ -272,9 +272,9 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         return this.y;
     }
 
-    final int g(int param0) {
+    final int getBoundingExtent(int param0) {
         if (param0 >= -36) {
-          this.g(-59);
+          this.getBoundingExtent(-59);
         }
         int var2 = Math.abs(-this.x + this.boundingbox[0]);
         int var3 = Math.abs(-this.x + this.boundingbox[1]);
@@ -283,78 +283,78 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         return Math.max(var2, Math.max(var3, Math.max(var4, var5)));
     }
 
-    final void b(int param0, int param1) {
+    final void applyAccumulatedForces(int param0, int param1) {
         int var3 = 0;
         if (param0 != 24) {
           World var4 = (World) null;
-          this.a((lta) null, -28, (World) null, -49);
+          this.draw((lta) null, -28, (World) null, -49);
         }
-        if (this.field_t != 0 ||
-          this.field_o != 0) {
-          this.dx = this.dx + this.field_t / param1;
-          this.dy = this.dy + this.field_o / param1;
-          this.d((byte) 91);
-          this.field_t = 0;
-          this.field_o = 0;
+        if (this.forceX != 0 ||
+          this.forceY != 0) {
+          this.dx = this.dx + this.forceX / param1;
+          this.dy = this.dy + this.forceY / param1;
+          this.onStateChanged((byte) 91);
+          this.forceX = 0;
+          this.forceY = 0;
         }
-        if (this.field_p != 0) {
-          var3 = this.field_p / Math.max(this.momentofinertia >> wf.field_e, 1);
+        if (this.torque != 0) {
+          var3 = this.torque / Math.max(this.momentofinertia >> wf.field_e, 1);
           this.angularvelocity = this.angularvelocity + var3;
-          this.d((byte) 40);
-          this.field_p = 0;
+          this.onStateChanged((byte) 40);
+          this.torque = 0;
         }
     }
 
-    final void i(int param0) {
-        this.c(16);
-        int var2 = this.x - this.j(995401160);
-        int var3 = this.y - this.i((byte) 5);
-        this.chassis.a(this instanceof Ship, var2, var3, this.angle >> 8, param0, this.boundingbox);
+    final void updateBounds(int param0) {
+        this.clearBounds(16);
+        int var2 = this.x - this.getCenterOfMassOffsetX(995401160);
+        int var3 = this.y - this.getCenterOfMassOffsetY((byte) 5);
+        this.chassis.updateWorldTransforms(this instanceof Ship, var2, var3, this.angle >> 8, param0, this.boundingbox);
     }
 
-    final int e(int param0) {
+    final int getAngle(int param0) {
         if (param0 != 0) {
-          this.field_o = -108;
+          this.forceY = -108;
         }
         return this.angle >> 8;
     }
 
-    int d(int param0) {
+    int getBodyKind(int param0) {
         if (param0 <= 42) {
-          this.field_p = -29;
+          this.torque = -29;
         }
         return -1;
     }
 
-    void e(byte param0) {
-        int var2 = this.j(995401160);
-        int var3 = this.i((byte) 5);
-        this.chassis.a(0, true, 0, false, (byte) 88, 0, (int[]) null);
+    void recalculateMassProperties(byte param0) {
+        int var2 = this.getCenterOfMassOffsetX(995401160);
+        int var3 = this.getCenterOfMassOffsetY((byte) 5);
+        this.chassis.updateWorldTransforms(0, true, 0, false, (byte) 88, 0, (int[]) null);
         if (param0 != 119) {
           this.chassis = (ShipComponent) null;
         }
-        this.mass = this.chassis.e((byte) -86);
+        this.mass = this.chassis.getMass((byte) -86);
         int[] var4 = new int[]{0, 0, 0};
-        this.chassis.a((byte) 114, var4);
+        this.chassis.accumulateMassMoments((byte) 114, var4);
         int var5 = Math.max(1, var4[2] >> 4);
         this.centreofmassy = var4[1] / var5;
         this.centreofmassx = var4[0] / var5;
-        this.momentofinertia = this.chassis.a(-921054591, this.centreofmassx, this.centreofmassy);
-        int var6 = this.j(995401160);
-        int var7 = this.i((byte) 5);
+        this.momentofinertia = this.chassis.getMomentOfInertia(-921054591, this.centreofmassx, this.centreofmassy);
+        int var6 = this.getCenterOfMassOffsetX(995401160);
+        int var7 = this.getCenterOfMassOffsetY((byte) 5);
         int var8 = var6 - var2;
         this.x = this.x + var8;
         int var9 = var7 - var3;
         this.y = this.y + var9;
-        this.chassis.a(this.angle >> 8, false, this.y - var7, this instanceof Ship, (byte) 106, this.x - var6, (int[]) null);
-        this.d((byte) 38);
+        this.chassis.updateWorldTransforms(this.angle >> 8, false, this.y - var7, this instanceof Ship, (byte) 106, this.x - var6, (int[]) null);
+        this.onStateChanged((byte) 38);
     }
 
-    final boolean h(int param0) {
+    final boolean isDestroyed(int param0) {
         if (param0 >= -112) {
           return false;
         }
-        return this.chassis.k((byte) 84);
+        return this.chassis.isDestroyed((byte) 84);
     }
 
     public void writeState(IsaacPacketBuffer param0, int param1) {
@@ -378,7 +378,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           param0.writeBits(-632, this.angularvelocity, 24);
           param0.writeBits(-632, this.id, 16);
           if (param1 > -109) {
-            this.c(-33);
+            this.clearBounds(-33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,18 +395,18 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void addDirectionalForce(int param0, int param1, int param2, int param3, int param4) {
         int var6 = GetNumStars.a(param1, (byte) -69) * param3 >> 8;
         int var7 = param3 * eu.a(param1, 42) >> 8;
-        this.a(var7, param2, param0, (byte) -118, var6);
+        this.addForceAtPoint(var7, param2, param0, (byte) -118, var6);
         if (param4 != 1948934248) {
           this.id = 82;
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int aimAt(int param0, int param1, int param2) {
         int var4 = -57 / ((param0 + 56) / 55);
-        return this.chassis.a(param2, false, 0, param1, 21750, 0);
+        return this.chassis.aimAt(param2, false, 0, param1, 21750, 0);
     }
 
     public void readState(IsaacPacketBuffer param0, boolean param1) {
@@ -423,24 +423,24 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           this.angle = uwa.a(24, param0, (byte) 20);
           this.angularvelocity = uwa.a(24, param0, (byte) 20);
           this.id = param0.readBits(0, 16);
-          this.h((byte) 63);
+          this.rebuildGeometry((byte) 63);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, boolean param1, World param2) {
+    final void explode(int param0, boolean param1, World param2) {
         try {
-          this.chassis.a(param1, param2, this, (byte) -89);
+          this.chassis.explode(param1, param2, this, (byte) -89);
           if (param0 >= -46) {
-            this.field_t = 42;
+            this.forceX = 42;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.RA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(lta param0, int param1, World param2, int param3) {
+    final void draw(lta param0, int param1, World param2, int param3) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -462,10 +462,10 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           if (!MissionAction.rectanglesIntersect(this.boundingbox, param0.field_f, 36)) {
             return;
           }
-          this.chassis.a((byte) 125, param0, this instanceof Ship, param2, param1);
+          this.chassis.drawTree((byte) 125, param0, this instanceof Ship, param2, param1);
           if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
-            var5_int = this.j(995401160);
-            var6 = this.i((byte) 5);
+            var5_int = this.getCenterOfMassOffsetX(995401160);
+            var6 = this.getCenterOfMassOffsetY((byte) 5);
             var7 = param0.a(this.x, (byte) 125);
             var8 = param0.b(true, this.y);
             GetPhasedEnergyBeamReload.a(var8, param0.field_a * 1024.0f, -81, var7, 16711680);
@@ -501,47 +501,47 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setAngle(int param0, int param1) {
         this.angle = param0 << 8;
         if (param1 > -13) {
           this.centreofmassx = -127;
         }
     }
 
-    final int c(byte param0) {
+    final int getVelocityX(byte param0) {
         if (param0 > -111) {
           return 58;
         }
         return this.dx;
     }
 
-    final void a(int param0, World param1) {
+    final void pruneDestroyedComponents(int param0, World param1) {
         try {
           int var3_int = -85 % ((26 - param0) / 35);
-          this.chassis.a(0, param1, this);
+          this.chassis.pruneDestroyedComponents(0, param1, this);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int b(boolean param0) {
+    final int getBoundingRadius(boolean param0) {
         if (!param0) {
           return -2;
         }
-        return this.chassis.a(0, this.y, -125, this.x);
+        return this.chassis.getBoundingRadius(0, this.y, -125, this.x);
     }
 
-    final int f(int param0) {
+    final int getVelocityY(int param0) {
         if (param0 != 0) {
           this.id = -93;
         }
         return this.dy;
     }
 
-    final boolean k(int param0) {
+    final boolean isMoving(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 != 995401160) {
-          this.field_t = -99;
+          this.forceX = -99;
         }
         stackIn_8_0 = (this.dx != 0) || (this.dy != 0) || (this.angularvelocity != 0);
         return stackIn_8_0;
@@ -569,34 +569,34 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    private final void h(byte param0) {
+    private final void rebuildGeometry(byte param0) {
         if (this instanceof Debris) {
-          this.chassis.c(0, this.chassis.i((byte) -112).field_b, param0 - 7, this.chassis.i((byte) -112).field_i);
+          this.chassis.setConnectionTransform(0, this.chassis.getDefinition((byte) -112).connectionX, param0 - 7, this.chassis.getDefinition((byte) -112).connectionY);
         } else {
-          this.chassis.c(0, 0, 56, 0);
+          this.chassis.setConnectionTransform(0, 0, 56, 0);
         }
         int var2 = this.x;
         int var3 = this.y;
-        this.e((byte) 119);
+        this.recalculateMassProperties((byte) 119);
         this.x = var2;
         if (param0 != 63) {
           return;
         }
         this.y = var3;
-        this.c(16);
-        this.chassis.a(this instanceof Ship, this.x - this.j(995401160), this.y - this.i((byte) 5), this.angle >> 8, param0 - 63, this.boundingbox);
+        this.clearBounds(16);
+        this.chassis.updateWorldTransforms(this instanceof Ship, this.x - this.getCenterOfMassOffsetX(995401160), this.y - this.getCenterOfMassOffsetY((byte) 5), this.angle >> 8, param0 - 63, this.boundingbox);
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setPosition(int param0, int param1, byte param2) {
         int var4 = 5 / ((param2 + 11) / 38);
         this.x = param0;
         this.y = param1;
     }
 
-    final boolean c(int param0, int param1, int param2, int param3, int param4) {
+    final boolean extendsOutsideBounds(int param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_10_0 = false;
         if (param2 < 8) {
-          this.c(101, -72, -14, 88, 79);
+          this.extendsOutsideBounds(101, -72, -14, 88, 79);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.boundingbox != null && (this.boundingbox[0] < param4 ||
@@ -612,19 +612,19 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         return stackIn_10_0;
     }
 
-    void d(byte param0) {
+    void onStateChanged(byte param0) {
         int var2 = -43 % ((param0 + 4) / 38);
     }
 
     final int getId(boolean param0) {
         if (param0) {
           World var3 = (World) null;
-          this.a((World) null, 115, false, 79, -113);
+          this.applyControls((World) null, 115, false, 79, -113);
         }
         return this.id;
     }
 
-    void a(int param0, int param1, World param2, int param3, int param4) {
+    void activateSpecialOrder(int param0, int param1, World param2, int param3, int param4) {
         World var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -633,11 +633,11 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         RuntimeException var6 = null;
         try {
           if (param1 >= 0) {
-            this.chassis.a(param1, param3, param2, (byte) -73, param4, this);
+            this.chassis.activateSpecialOrder(param1, param3, param2, (byte) -73, param4, this);
           }
           if (param0 > -36) {
             var7 = (World) null;
-            this.a(-66, -62, (World) null, 87, -25);
+            this.activateSpecialOrder(-66, -62, (World) null, 87, -25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -654,7 +654,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(World param0, int param1, boolean param2, int param3, int param4) {
+    final void applyControls(World param0, int param1, boolean param2, int param3, int param4) {
         int var17 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_77_0 = null;
@@ -755,82 +755,82 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         var26 = VoidHunters.field_G;
         try {
           if (SetSniperCannonProjectiles.field_o == 1) {
-            stackIn_7_0 = (this.chassis.i((byte) -112).field_s) ? 1 : 0;
+            stackIn_7_0 = (this.chassis.getDefinition((byte) -112).field_s) ? 1 : 0;
           } else {
             stackIn_7_0 = 0;
           }
           var6_int = stackIn_7_0;
           if (param2) {
-            this.h((byte) -95);
+            this.rebuildGeometry((byte) -95);
           }
           if (var6_int != 0) {
             var27_ref = new ShipComponent(13);
-            var27_ref.a((byte) -127, 1);
+            var27_ref.setTriggerMap((byte) -127, 1);
             var8_int = 4096;
             var9 = -(var8_int * GetNumStars.a(this.chassis.finalangle, (byte) -76)) >> 16;
             var10 = -(eu.a(this.chassis.finalangle, 40) * var8_int) >> 16;
-            var27_ref.a(false, this.chassis.finalx + var9, this.chassis.finaly + var10, this.chassis.finalangle, 0, (int[]) null);
+            var27_ref.updateWorldTransforms(false, this.chassis.finalx + var9, this.chassis.finaly + var10, this.chassis.finalangle, 0, (int[]) null);
             MissionActionFactory.field_a[0] = var27_ref;
             var28_ref = new ShipComponent(13);
-            var28_ref.a((byte) 114, 2);
+            var28_ref.setTriggerMap((byte) 114, 2);
             var8_intLifetime2 = 4096;
             var9Lifetime2 = GetNumStars.a(this.chassis.finalangle, (byte) 100) * var8_intLifetime2 >> 16;
             var10Lifetime2 = var8_intLifetime2 * eu.a(this.chassis.finalangle, 122) >> 16;
             var11 = this.chassis.finalangle + 4096;
-            var28_ref.a(false, this.chassis.finalx + var9Lifetime2, this.chassis.finaly + var10Lifetime2, var11, 0, (int[]) null);
+            var28_ref.updateWorldTransforms(false, this.chassis.finalx + var9Lifetime2, this.chassis.finaly + var10Lifetime2, var11, 0, (int[]) null);
             MissionActionFactory.field_a[1] = var28_ref;
             var29_ref = new ShipComponent(13);
-            var29_ref.a((byte) 113, 36);
+            var29_ref.setTriggerMap((byte) 113, 36);
             var8_intLifetime3 = 8192;
             var9Lifetime3 = GameKeyHandler.a(22433, 256 + this.chassis.finalangle);
             var10Lifetime3 = var8_intLifetime3 * GetNumStars.a(var9Lifetime3, (byte) -112) >> 16;
             var11Lifetime2 = var8_intLifetime3 * eu.a(var9Lifetime3, 85) >> 16;
             var12_int = GameKeyHandler.a(22433, -2048 + this.chassis.finalangle);
-            var29_ref.a(false, var10Lifetime3 + this.chassis.finalx, var11Lifetime2 + this.chassis.finaly, var12_int, 0, (int[]) null);
+            var29_ref.updateWorldTransforms(false, var10Lifetime3 + this.chassis.finalx, var11Lifetime2 + this.chassis.finaly, var12_int, 0, (int[]) null);
             MissionActionFactory.field_a[2] = var29_ref;
             var30_ref = new ShipComponent(13);
-            var30_ref.a((byte) 120, 72);
+            var30_ref.setTriggerMap((byte) 120, 72);
             var8_intLifetime4 = 8192;
             var9Lifetime4 = GameKeyHandler.a(22433, this.chassis.finalangle - 256);
             var10Lifetime4 = var8_intLifetime4 * GetNumStars.a(var9Lifetime4, (byte) -102) >> 16;
             var11Lifetime3 = var8_intLifetime4 * eu.a(var9Lifetime4, 87) >> 16;
             var12_intLifetime1 = GameKeyHandler.a(22433, 2048 + this.chassis.finalangle);
-            var30_ref.a(false, var10Lifetime4 + this.chassis.finalx, var11Lifetime3 + this.chassis.finaly, var12_intLifetime1, 0, (int[]) null);
+            var30_ref.updateWorldTransforms(false, var10Lifetime4 + this.chassis.finalx, var11Lifetime3 + this.chassis.finaly, var12_intLifetime1, 0, (int[]) null);
             MissionActionFactory.field_a[3] = var30_ref;
             var31_ref = new ShipComponent(13);
-            var31_ref.a((byte) -23, 68);
+            var31_ref.setTriggerMap((byte) -23, 68);
             var8_intLifetime5 = 8192;
             var9Lifetime5 = GameKeyHandler.a(22433, this.chassis.finalangle - 3840);
             var10Lifetime5 = GetNumStars.a(var9Lifetime5, (byte) -91) * var8_intLifetime5 >> 16;
             var11Lifetime4 = var8_intLifetime5 * eu.a(var9Lifetime5, 122) >> 16;
             var12_intLifetime2 = GameKeyHandler.a(22433, this.chassis.finalangle + 2048);
-            var31_ref.a(false, var10Lifetime5 + this.chassis.finalx, var11Lifetime4 + this.chassis.finaly, var12_intLifetime2, 0, (int[]) null);
+            var31_ref.updateWorldTransforms(false, var10Lifetime5 + this.chassis.finalx, var11Lifetime4 + this.chassis.finaly, var12_intLifetime2, 0, (int[]) null);
             MissionActionFactory.field_a[4] = var31_ref;
             var32_ref = new ShipComponent(13);
-            var32_ref.a((byte) 12, 40);
+            var32_ref.setTriggerMap((byte) 12, 40);
             var8_intLifetime6 = 8192;
             var9Lifetime6 = GameKeyHandler.a(22433, 4096 + this.chassis.finalangle - 256);
             var10Lifetime6 = var8_intLifetime6 * GetNumStars.a(var9Lifetime6, (byte) 46) >> 16;
             var11Lifetime5 = var8_intLifetime6 * eu.a(var9Lifetime6, 85) >> 16;
             var12_intLifetime3 = GameKeyHandler.a(22433, this.chassis.finalangle - 2048);
-            var32_ref.a(false, var10Lifetime6 + this.chassis.finalx, this.chassis.finaly + var11Lifetime5, var12_intLifetime3, 0, (int[]) null);
+            var32_ref.updateWorldTransforms(false, var10Lifetime6 + this.chassis.finalx, this.chassis.finaly + var11Lifetime5, var12_intLifetime3, 0, (int[]) null);
             MissionActionFactory.field_a[5] = var32_ref;
           }
           boolean decompiledFrameRemainder0 = true;
           if (1 == BodyInZoneConditionFactory.field_b &&
             (99 & param1) != 0 &&
             (param1 & 111) == (99 & param1)) {
-            var7_ref_ml__ = this.chassis.a(0, (ShipComponent[]) null, param1);
+            var7_ref_ml__ = this.chassis.collectActiveThrusters(0, (ShipComponent[]) null, param1);
             if (var6_int != 0) {
               for (var8_intLifetime1 = 0; var8_intLifetime1 < MissionActionFactory.field_a.length; var8_intLifetime1++) {
-                var7_ref_ml__ = (ShipComponent[]) (ija.a(MissionActionFactory.field_a[var8_intLifetime1], var7_ref_ml__, 0, ii.field_d));
+                var7_ref_ml__ = (ShipComponent[]) (ija.a(MissionActionFactory.field_a[var8_intLifetime1], var7_ref_ml__, 0, ArchiveTextureProvider.field_d));
               }
             }
             if (var7_ref_ml__ == null) {
               param1 = param1 & -112;
               if ((var6_int != 0)) {
                 for (var7 = 0; var7 < MissionActionFactory.field_a.length; var7++) {
-                  MissionActionFactory.field_a[var7].a(param4, 7834, this, param3, param1, param0);
+                  MissionActionFactory.field_a[var7].applyControls(param4, 7834, this, param3, param1, param0);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -839,9 +839,9 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
               var41 = new int[var7_ref_ml__.length];
               var34 = var41;
               var8 = var34;
-              var9Lifetime1 = this.field_t;
-              var10Lifetime1 = this.field_o;
-              var11Lifetime1 = this.field_p;
+              var9Lifetime1 = this.forceX;
+              var10Lifetime1 = this.forceY;
+              var11Lifetime1 = this.torque;
               var43 = new int[var7_ref_ml__.length];
               var36 = var43;
               var12 = var36;
@@ -855,14 +855,14 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
               for (var16 = 0; var7_ref_ml__.length > var16; var16++) {
                 var33 = var7_ref_ml__[var16];
                 var18_int = var33.triggermap;
-                var19 = this.field_t;
-                var20 = this.field_o;
-                var21 = this.field_p;
-                var22 = var33.thrusterbehaviour.a(var33.componentTypeId, false);
-                this.a(var33.finaly, var33.finalangle, var33.finalx, var22, 1948934248);
-                var12[var16] = this.field_t - var19;
-                var13[var16] = -var20 + this.field_o;
-                var14[var16] = this.field_p - var21;
+                var19 = this.forceX;
+                var20 = this.forceY;
+                var21 = this.torque;
+                var22 = var33.thrusterbehaviour.getThrust(var33.componentTypeId, false);
+                this.addDirectionalForce(var33.finaly, var33.finalangle, var33.finalx, var22, 1948934248);
+                var12[var16] = this.forceX - var19;
+                var13[var16] = -var20 + this.forceY;
+                var14[var16] = this.torque - var21;
                 if ((param1 & var18_int) != 0) {
                   var41[var16] = 256;
                   var15 = var15 + var42[var16];
@@ -871,15 +871,15 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
                   var14[var16] = -var42[var16];
                 }
               }
-              this.field_o = var10Lifetime1;
-              this.field_p = var11Lifetime1;
-              this.field_t = var9Lifetime1;
+              this.forceY = var10Lifetime1;
+              this.torque = var11Lifetime1;
+              this.forceX = var9Lifetime1;
               var16Lifetime1 = var15 / Math.max(this.momentofinertia >> wf.field_e, 1);
               if (var15 != 0 &&
                 Math.abs(var16Lifetime1) > us.field_f) {
                 var49 = new int[var7_ref_ml__.length];
                 var18 = new boolean[var7_ref_ml__.length];
-                this.a(var49, var44, var42, 3, var43, var15, var7_ref_ml__);
+                this.calculateThrusterBalanceScores(var49, var44, var42, 3, var43, var15, var7_ref_ml__);
                 var50 = new int[var7_ref_ml__.length];
                 for (var20Lifetime1 = 0; var50.length > var20Lifetime1; var20Lifetime1++) {
                   var21Lifetime1 = -2147483648;
@@ -927,7 +927,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
               for (var17 = 0; var17 < var7_ref_ml__.length; var17++) {
                 var40 = var7_ref_ml__[var17];
                 if (var41[var17] > 0) {
-                  var40.a(this, param4, param0, param3, 55, var41[var17]);
+                  var40.activate(this, param4, param0, param3, 55, var41[var17]);
                 }
               }
               param1 = param1 & -112;
@@ -936,10 +936,10 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           if ((decompiledFrameRemainder0) &&
             (var6_int != 0)) {
             for (var7Lifetime1 = 0; var7Lifetime1 < MissionActionFactory.field_a.length; var7Lifetime1++) {
-              MissionActionFactory.field_a[var7Lifetime1].a(param4, 7834, this, param3, param1, param0);
+              MissionActionFactory.field_a[var7Lifetime1].applyControls(param4, 7834, this, param3, param1, param0);
             }
           }
-          this.chassis.a(param4, 7834, this, param3, param1, param0);
+          this.chassis.applyControls(param4, 7834, this, param3, param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -955,14 +955,14 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final int e(boolean param0) {
+    final int getMass(boolean param0) {
         if (param0) {
           this.angle = 99;
         }
         return this.mass;
     }
 
-    void a(World param0, boolean param1, byte param2, boolean param3) {
+    void updateTick(World param0, boolean param1, byte param2, boolean param3) {
         int var5_int = 0;
         World var6 = null;
         int stackIn_18_0 = 0;
@@ -1003,14 +1003,14 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           }
           var5_int = stackIn_18_0;
           if (var5_int != 0) {
-            this.a(param3, true, param0);
+            this.integrateMotion(param3, true, param0);
           }
           if (this instanceof Ship) {
-            this.chassis.a(true, (byte) -124, param0, this);
+            this.chassis.updateBehaviors(true, (byte) -124, param0, this);
           }
           if (param2 != 67) {
             var6 = (World) null;
-            this.a(93, false, (World) null);
+            this.explode(93, false, (World) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1029,14 +1029,14 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
 
     final int getX(boolean param0) {
         if (param0) {
-          this.e((byte) 22);
+          this.recalculateMassProperties((byte) 22);
         }
         return this.x;
     }
 
-    final void a(tpb param0, Projectile param1, byte param2) {
+    final void traceProjectile(ProjectileTraceResult param0, Projectile param1, byte param2) {
         try {
-          this.chassis.a(param1, param0, 0);
+          this.chassis.traceProjectile(param1, param0, 0);
           if (param2 < 24) {
             this.angle = 116;
           }
@@ -1045,7 +1045,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4) {
+    final boolean bounceWithinBounds(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         if (null == this.boundingbox) {
           return false;
@@ -1140,15 +1140,15 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
+    final void addForceAtPoint(int param0, int param1, int param2, byte param3, int param4) {
         int var6;
         int var7;
         long var8;
         long var10;
         long var12;
         int var14;
-        this.field_t = this.field_t + param4;
-        this.field_o = this.field_o + param0;
+        this.forceX = this.forceX + param4;
+        this.forceY = this.forceY + param0;
         var6 = -this.x + param1;
         var7 = -this.y + param2;
         if (param3 > -112) {
@@ -1157,33 +1157,33 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         var8 = (long)(-var7 >> ge.field_c);
         var10 = (long)(var6 >> ge.field_c);
         var12 = var8 * (long)param4 + (long)param0 * var10;
-        var14 = this.field_p;
-        this.field_p = (int)((long)this.field_p + (var12 >> tua.field_a));
+        var14 = this.torque;
+        this.torque = (int)((long)this.torque + (var12 >> tua.field_a));
         if (var12 > 0L) {
-          if (this.field_p < var14) {
-            this.field_p = 2147483647;
+          if (this.torque < var14) {
+            this.torque = 2147483647;
           } else {
             if (var12 < 0L &&
-              var14 < this.field_p) {
-              this.field_p = -2147483648;
+              var14 < this.torque) {
+              this.torque = -2147483648;
             }
           }
         } else {
           if (var12 < 0L &&
-            var14 < this.field_p) {
-            this.field_p = -2147483648;
+            var14 < this.torque) {
+            this.torque = -2147483648;
           }
         }
-        this.d((byte) 111);
+        this.onStateChanged((byte) 111);
         VariableCondition.a(param1, param2, param2 - param0, -param4 + param1, (byte) -54);
     }
 
-    final void a(sfa param0, Projectile param1, int param2) {
+    final void testProjectileHit(ProjectileHit param0, Projectile param1, int param2) {
         try {
-          this.chassis.a(param1, param0, -1);
+          this.chassis.testProjectileHit(param1, param0, -1);
           if (param2 != -4414) {
             World var5 = (World) null;
-            this.a(97, false, (World) null);
+            this.explode(97, false, (World) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.JB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -1227,7 +1227,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         this.boundingbox = new int[4];
     }
 
-    private final void c(int param0) {
+    private final void clearBounds(int param0) {
         this.boundingbox[3] = -2147483648;
         this.boundingbox[2] = 2147483647;
         this.boundingbox[1] = -2147483648;

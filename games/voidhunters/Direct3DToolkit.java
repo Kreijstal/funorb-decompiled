@@ -237,7 +237,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
         if (param0) {
           var3 = (Integer) null;
-          Direct3DToolkit.createToolkit((java.awt.Canvas) null, (d) null, (asb) null, (Integer) null);
+          Direct3DToolkit.createToolkit((java.awt.Canvas) null, (TextureProvider) null, (asb) null, (Integer) null);
         }
         throw new IllegalArgumentException();
     }
@@ -354,7 +354,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         this.field_Qc = false;
     }
 
-    private Direct3DToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.PeerReferenceManager param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gma param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, asb param10, int param11) {
+    private Direct3DToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.PeerReferenceManager param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gma param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, TextureProvider param9, asb param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         int stackIn_4_1 = 0;
@@ -763,7 +763,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         super.n(116);
     }
 
-    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, asb param2, Integer param3) {
+    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, TextureProvider param1, asb param2, Integer param3) {
         Direct3DToolkit stackIn_41_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -907,7 +907,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           if (SetGrapplingHookFireForce.field_o == param0) {
             return 22;
           }
-          if (param0 == qua.field_d) {
+          if (param0 == ComponentAttachmentPlan.field_d) {
             return 21;
           }
           if (param0 == GetMinimapWidth.field_p) {

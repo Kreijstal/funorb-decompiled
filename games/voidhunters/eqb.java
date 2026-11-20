@@ -19,11 +19,11 @@ final class eqb {
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = new ShipComponent(29);
             var4 = new ShipComponent(32);
-            var4.a(param1 ^ 14671, 2, new ShipComponent(25));
-            var4.a(1, 3, new ShipComponent(25));
-            var4.a(1, 4, new ShipComponent(25));
-            var3.a(1, 0, var4);
-            param0.a(param1 ^ 14671, var2_int, var3);
+            var4.attachToHardpoint(param1 ^ 14671, 2, new ShipComponent(25));
+            var4.attachToHardpoint(1, 3, new ShipComponent(25));
+            var4.attachToHardpoint(1, 4, new ShipComponent(25));
+            var3.attachToHardpoint(1, 0, var4);
+            param0.attachToHardpoint(param1 ^ 14671, var2_int, var3);
           }
           if (param1 != 14670) {
             field_a = (char[]) null;

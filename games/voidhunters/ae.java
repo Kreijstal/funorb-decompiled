@@ -594,9 +594,9 @@ final class ae {
         try {
           var2 = new Ship();
           var2.chassis = SetSniperCannonProjectileLife.a(1, param0);
-          var2.e((byte) 119);
-          var2.chassis.a(true, 0, 0, 0, 0, var2.getBoundingbox((byte) -123));
-          var2.chassis.a((byte) 21, (ShipBody) (var2));
+          var2.recalculateMassProperties((byte) 119);
+          var2.chassis.updateWorldTransforms(true, 0, 0, 0, 0, var2.getBoundingbox((byte) -123));
+          var2.chassis.configureThrusterBindings((byte) 21, (ShipBody) (var2));
           if (param1 <= 21) {
             field_g = (ri) null;
           }

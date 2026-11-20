@@ -17,7 +17,7 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (param0 != 15) {
             SetGrapplingHooksDamageableBySourcePlayer.a(-127);
           }
-          ii.field_h = false;
+          ArchiveTextureProvider.field_h = false;
           SetThrusterParticleSpeedDownshift.field_o = null;
           if (null != SetMachineGunAimarc.field_q) {
             SetMachineGunAimarc.field_q.clear(103);

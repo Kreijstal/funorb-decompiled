@@ -2,44 +2,44 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ShipComponentDefinition {
-    int field_p;
-    int field_u;
+    int maxHealth;
+    int mass;
     int[][] field_A;
     WeaponBehaviour field_c;
-    int field_n;
+    int energyCapacity;
     int field_a;
     ArmBehaviour field_e;
     boolean field_r;
-    HardpointDefinition[] field_o;
+    HardpointDefinition[] hardpoints;
     boolean field_k;
     GrappleLauncherBehaviour field_x;
     boolean field_s;
-    int field_i;
+    int connectionY;
     ShieldBehaviour field_g;
     int field_q;
     int field_y;
     int field_h;
-    int field_b;
+    int connectionX;
     int[][] field_w;
     ThrusterBehaviour field_t;
-    int field_z;
-    private int field_j;
+    int healthScale;
+    private int encodedSpecialOrderId;
     boolean field_f;
     int field_B;
-    int[] field_v;
+    int[] outline;
     boolean field_m;
-    int field_l;
+    int boundingRadius;
     int field_d;
 
-    final void a(int param0, boolean param1) {
-        this.field_z = param0;
+    final void setHealthScale(int param0, boolean param1) {
+        this.healthScale = param0;
         if (!param1) {
-          this.a((byte) -121, -90);
+          this.setSpecialOrderId((byte) -121, -90);
         }
-        this.field_p = lw.a((byte) -73, this.field_u) * this.field_z;
+        this.maxHealth = lw.a((byte) -73, this.mass) * this.healthScale;
     }
 
-    final int a(int param0) {
+    final int getCategoryColor(int param0) {
         int var2;
         int var3;
         var3 = VoidHunters.field_G;
@@ -66,44 +66,44 @@ final class ShipComponentDefinition {
           return 9382103;
         }
         if (param0 != 14951) {
-          this.a(-100);
+          this.getCategoryColor(-100);
         }
         return 16711935;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void scaleGeometry(int param0, int param1, boolean param2) {
         int var6 = 0;
         HardpointDefinition dupTemp$0 = null;
         HardpointDefinition dupTemp$1 = null;
         int var4 = 0;
         int var5 = VoidHunters.field_G;
         int var4Lifetime1;
-        this.field_b = this.field_b << param0;
-        this.field_i = this.field_i << param0;
-        for (var4 = 0; var4 < this.field_v.length; var4++) {
-          this.field_v[var4] = this.field_v[var4] << param0;
+        this.connectionX = this.connectionX << param0;
+        this.connectionY = this.connectionY << param0;
+        for (var4 = 0; var4 < this.outline.length; var4++) {
+          this.outline[var4] = this.outline[var4] << param0;
         }
         if (param1 <= 57) {
-          this.a(8);
+          this.getCategoryColor(8);
         }
-        if (this.field_o != null) {
+        if (this.hardpoints != null) {
           var6 = 0;
           var4Lifetime1 = var6;
-          while (this.field_o.length > var6) {
-            dupTemp$0 = this.field_o[var6];
+          while (this.hardpoints.length > var6) {
+            dupTemp$0 = this.hardpoints[var6];
             dupTemp$0.field_b = dupTemp$0.field_b << param0;
-            dupTemp$1 = this.field_o[var6];
+            dupTemp$1 = this.hardpoints[var6];
             dupTemp$1.field_c = dupTemp$1.field_c << param0;
             var6++;
           }
         }
         if (param2) {
-          this.a(true);
+          this.calculateMass(true);
         }
-        this.a((byte) 110);
+        this.calculateBoundingRadius((byte) 110);
     }
 
-    private final void a(byte param0) {
+    private final void calculateBoundingRadius(byte param0) {
         int var2 = 0;
         int var3;
         int var4;
@@ -111,68 +111,68 @@ final class ShipComponentDefinition {
         var4 = VoidHunters.field_G;
         if (param0 <= 85) {
           var5 = (HardpointDefinition) null;
-          this.a(-102, (HardpointDefinition) null);
+          this.addHardpoint(-102, (HardpointDefinition) null);
         }
-        this.field_l = 0;
-        for (var2 = 0; this.field_v.length > var2; var2 += 2) {
-          var3 = ar.a(this.field_v[var2], (byte) 109, this.field_v[var2 + 1]);
-          if (var3 > this.field_l) {
-            this.field_l = var3;
+        this.boundingRadius = 0;
+        for (var2 = 0; this.outline.length > var2; var2 += 2) {
+          var3 = ar.a(this.outline[var2], (byte) 109, this.outline[var2 + 1]);
+          if (var3 > this.boundingRadius) {
+            this.boundingRadius = var3;
           }
         }
     }
 
-    final void a(byte param0, int param1) {
-        this.field_j = param1 + 1;
+    final void setSpecialOrderId(byte param0, int param1) {
+        this.encodedSpecialOrderId = param1 + 1;
         if (param0 >= -100) {
-          this.b(-15);
+          this.getSpecialOrderId(-15);
         }
     }
 
-    private final void a(boolean param0) {
+    private final void calculateMass(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = VoidHunters.field_G;
-        this.field_u = 0;
+        this.mass = 0;
         if (!param0) {
           this.field_e = (ArmBehaviour) null;
         }
-        for (var2 = 0; this.field_v.length - 2 > var2; var2 += 2) {
-          var3 = this.field_v[var2];
-          var4 = this.field_v[1 + var2];
-          var5 = this.field_v[var2 + 2];
-          var6 = this.field_v[var2 + 3];
-          this.field_u = this.field_u + (-(var5 * var4) + var6 * var3);
+        for (var2 = 0; this.outline.length - 2 > var2; var2 += 2) {
+          var3 = this.outline[var2];
+          var4 = this.outline[1 + var2];
+          var5 = this.outline[var2 + 2];
+          var6 = this.outline[var2 + 3];
+          this.mass = this.mass + (-(var5 * var4) + var6 * var3);
         }
-        this.field_u = this.field_u / 2;
-        if (this.field_u == 0) {
-          this.field_u = 1;
+        this.mass = this.mass / 2;
+        if (this.mass == 0) {
+          this.mass = 1;
         }
-        if (this.field_u < 0) {
-          this.field_u = 2147483647;
+        if (this.mass < 0) {
+          this.mass = 2147483647;
         }
-        this.field_p = lw.a((byte) -73, this.field_u) * this.field_z;
+        this.maxHealth = lw.a((byte) -73, this.mass) * this.healthScale;
     }
 
-    final void a(int param0, int param1) {
-        this.field_u = this.field_u >> param1;
-        this.field_p = lw.a((byte) -73, this.field_u) * this.field_z;
+    final void scaleMassDown(int param0, int param1) {
+        this.mass = this.mass >> param1;
+        this.maxHealth = lw.a((byte) -73, this.mass) * this.healthScale;
         if (param0 < 100) {
           this.field_A = (int[][]) null;
         }
     }
 
-    final int b(int param0) {
+    final int getSpecialOrderId(int param0) {
         if (param0 != -1) {
-          this.a((byte) 101);
+          this.calculateBoundingRadius((byte) 101);
         }
-        return -1 + this.field_j;
+        return -1 + this.encodedSpecialOrderId;
     }
 
-    final void a(int param0, HardpointDefinition param1) {
+    final void addHardpoint(int param0, HardpointDefinition param1) {
         int var5 = 0;
         int var3_int = 0;
         HardpointDefinition[] var4 = null;
@@ -185,17 +185,17 @@ final class ShipComponentDefinition {
         var6 = VoidHunters.field_G;
         try {
           var3_int = 34 / ((-69 - param0) / 44);
-          if (null != this.field_o) {
-            var4 = new HardpointDefinition[this.field_o.length + 1];
-            for (var5 = 0; this.field_o.length > var5; var5++) {
-              var4[var5] = this.field_o[var5];
+          if (null != this.hardpoints) {
+            var4 = new HardpointDefinition[this.hardpoints.length + 1];
+            for (var5 = 0; this.hardpoints.length > var5; var5++) {
+              var4[var5] = this.hardpoints[var5];
             }
-            var4[this.field_o.length] = param1;
-            this.field_o = var4;
+            var4[this.hardpoints.length] = param1;
+            this.hardpoints = var4;
             return;
           }
-          this.field_o = new HardpointDefinition[1];
-          this.field_o[0] = param1;
+          this.hardpoints = new HardpointDefinition[1];
+          this.hardpoints[0] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,17 +216,17 @@ final class ShipComponentDefinition {
         this.field_h = 256;
         this.field_r = false;
         try {
-          this.field_v = param0;
-          this.field_i = param2;
+          this.outline = param0;
+          this.connectionY = param2;
           this.field_s = false;
-          this.field_z = 256;
+          this.healthScale = 256;
           this.field_y = 0;
           this.field_B = 256;
           this.field_d = 0;
           this.field_q = 256;
-          this.field_b = param1;
-          this.a(true);
-          this.a((byte) 121);
+          this.connectionX = param1;
+          this.calculateMass(true);
+          this.calculateBoundingRadius((byte) 121);
           this.field_k = true;
           this.field_a = 6;
         } catch (RuntimeException runtimeException) {

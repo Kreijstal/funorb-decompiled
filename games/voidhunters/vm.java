@@ -15,7 +15,7 @@ final class vm extends TextureOperation {
     private int field_m;
 
     final void postDecode(byte param0) {
-        this.field_j = ihb.a((byte) 36, this.field_l);
+        this.field_j = SpecialOrderStatus.a((byte) 36, this.field_l);
         this.d(30866);
         if (param0 > -35) {
           PacketBuffer var3 = (PacketBuffer) null;

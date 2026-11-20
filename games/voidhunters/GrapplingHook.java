@@ -185,7 +185,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
         if (param0 != 620) {
           return;
         }
-        this.chassis.a(this.chassis.i((byte) -112).field_p, (byte) 92);
+        this.chassis.applyScaledDamage(this.chassis.getDefinition((byte) -112).maxHealth, (byte) 92);
     }
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {
@@ -299,7 +299,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
     GrapplingHook(ShipComponent param0, int param1, int param2) {
         try {
           this.chassis = param0;
-          this.e((byte) 119);
+          this.recalculateMassProperties((byte) 119);
           this.firedFromPlayer = param2;
           this.firedFromId = param1;
         } catch (RuntimeException runtimeException) {

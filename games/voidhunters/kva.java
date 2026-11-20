@@ -130,7 +130,7 @@ abstract class kva implements ura {
           if (this.field_f == SetGrapplingHookFireForce.field_o) {
             return 6407;
           }
-          if (qua.field_d == this.field_f) {
+          if (ComponentAttachmentPlan.field_d == this.field_f) {
             return 6408;
           }
           if (this.field_f == GetMinimapWidth.field_p) {
@@ -150,7 +150,7 @@ abstract class kva implements ura {
             if (this.field_f == SetGrapplingHookFireForce.field_o) {
               return 34843;
             }
-            if (this.field_f == qua.field_d) {
+            if (this.field_f == ComponentAttachmentPlan.field_d) {
               return 34842;
             }
             if (GetMinimapWidth.field_p == this.field_f) {
@@ -170,7 +170,7 @@ abstract class kva implements ura {
               if (SetGrapplingHookFireForce.field_o == this.field_f) {
                 return 34837;
               }
-              if (qua.field_d == this.field_f) {
+              if (ComponentAttachmentPlan.field_d == this.field_f) {
                 return 34836;
               }
               if (GetMinimapWidth.field_p == this.field_f) {
@@ -390,7 +390,7 @@ abstract class kva implements ura {
             !bd.a(param2, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          if (qua.field_d != this.field_f) {
+          if (ComponentAttachmentPlan.field_d != this.field_f) {
             throw new IllegalArgumentException("");
           }
           var6_int = 0;

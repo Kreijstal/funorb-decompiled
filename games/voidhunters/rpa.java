@@ -140,8 +140,8 @@ final class rpa implements jaa {
           if (!param2) {
             field_c = (uja) null;
           }
-          var7.e((byte) 119);
-          var7.chassis.a((byte) -128, (ShipBody) (var7));
+          var7.recalculateMassProperties((byte) 119);
+          var7.chassis.configureThrusterBindings((byte) -128, (ShipBody) (var7));
           stackIn_64_0 = var7;
           return stackIn_64_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

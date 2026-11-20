@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fwa {
+final class ArchiveIndexLoader {
     private pfa field_i;
     static llb field_a;
     static ServerInfo field_g;
-    private java.math.BigInteger field_e;
+    private java.math.BigInteger signatureModulus;
     static int field_h;
-    private ga[] field_f;
-    private java.math.BigInteger field_b;
+    private CachedArchiveProvider[] archiveProviders;
+    private java.math.BigInteger signatureExponent;
     private ona field_j;
     private km field_d;
-    private PacketBuffer field_c;
+    private PacketBuffer masterIndex;
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 5) {
           int[] var2 = (int[]) null;
-          fwa.a(69, -75, (int[]) null);
+          ArchiveIndexLoader.moveValueToEnd(69, -75, (int[]) null);
         }
         field_g = null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean loadMasterIndex(boolean param0) {
         int var7 = 0;
         int var3;
         byte[] var4;
@@ -35,7 +35,7 @@ final class fwa {
         byte[] var13;
         byte[] var15;
         var8 = VoidHunters.field_G;
-        if (null != this.field_c) {
+        if (null != this.masterIndex) {
           return true;
         }
         if (null == this.field_d) {
@@ -55,10 +55,10 @@ final class fwa {
         var11 = var13;
         var4 = var11;
         var10.readBytes(0, var4, (byte) -59, var13.length);
-        if (null != this.field_b &&
-          null != this.field_e) {
+        if (null != this.signatureExponent &&
+          null != this.signatureModulus) {
           var12 = new java.math.BigInteger(var13);
-          var7_ref_java_math_BigInteger = var12.modPow(this.field_b, this.field_e);
+          var7_ref_java_math_BigInteger = var12.modPow(this.signatureExponent, this.signatureModulus);
           var5 = var7_ref_java_math_BigInteger.toByteArray();
         } else {
           var5 = var4;
@@ -75,44 +75,44 @@ final class fwa {
             throw new RuntimeException();
           }
         }
-        this.field_c = var10;
-        this.field_f = new ga[var3];
+        this.masterIndex = var10;
+        this.archiveProviders = new CachedArchiveProvider[var3];
         return true;
     }
 
-    final void a(int param0) {
+    final void processArchiveRequests(int param0) {
         int var2;
         int var3;
         int var4;
         int var2Lifetime1;
         var3 = VoidHunters.field_G;
-        if (this.field_f == null) {
+        if (this.archiveProviders == null) {
           return;
         }
-        for (var2 = param0; this.field_f.length > var2; var2++) {
-          if (null != this.field_f[var2]) {
-            this.field_f[var2].c(param0 + 0);
+        for (var2 = param0; this.archiveProviders.length > var2; var2++) {
+          if (null != this.archiveProviders[var2]) {
+            this.archiveProviders[var2].c(param0 + 0);
           }
         }
         var4 = 0;
         var2Lifetime1 = var4;
-        while (var4 < this.field_f.length) {
-          if (this.field_f[var4] != null) {
-            this.field_f[var4].b(-83);
+        while (var4 < this.archiveProviders.length) {
+          if (this.archiveProviders[var4] != null) {
+            this.archiveProviders[var4].b(-83);
           }
           var4++;
         }
         return;
     }
 
-    final ga a(int param0, int param1, fo param2, fo param3, boolean param4) {
+    final CachedArchiveProvider getArchiveProvider(int param0, int param1, fo param2, fo param3, boolean param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ga var9 = null;
+        CachedArchiveProvider var9 = null;
         byte[] var13 = null;
-        ga stackIn_8_0 = null;
-        ga stackIn_12_0 = null;
+        CachedArchiveProvider stackIn_8_0 = null;
+        CachedArchiveProvider stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -120,25 +120,25 @@ final class fwa {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c == null) {
+          if (this.masterIndex == null) {
             throw new RuntimeException();
           }
           if (param0 >= 0 &&
-            this.field_f.length > param0) {
-            if (null != this.field_f[param0]) {
-              stackIn_8_0 = this.field_f[param0];
+            this.archiveProviders.length > param0) {
+            if (null != this.archiveProviders[param0]) {
+              stackIn_8_0 = this.archiveProviders[param0];
               return stackIn_8_0;
             }
-            this.field_c.position = 6 + 72 * param0;
-            var6_int = this.field_c.readInt(param1 ^ 20);
-            var7 = this.field_c.readInt(47);
+            this.masterIndex.position = 6 + 72 * param0;
+            var6_int = this.masterIndex.readInt(param1 ^ 20);
+            var7 = this.masterIndex.readInt(47);
             var13 = new byte[64];
-            this.field_c.readBytes(0, var13, (byte) -59, 64);
-            var9 = new ga(param0, param3, param2, this.field_j, this.field_i, var6_int, var13, var7, param4);
+            this.masterIndex.readBytes(0, var13, (byte) -59, 64);
+            var9 = new CachedArchiveProvider(param0, param3, param2, this.field_j, this.field_i, var6_int, var13, var7, param4);
             if (param1 != 5) {
-              this.a(false);
+              this.loadMasterIndex(false);
             }
-            this.field_f[param0] = var9;
+            this.archiveProviders[param0] = var9;
             stackIn_12_0 = var9;
             return stackIn_12_0;
           }
@@ -163,7 +163,7 @@ final class fwa {
         }
     }
 
-    final static boolean a(int param0, int param1, int[] param2) {
+    final static boolean moveValueToEnd(int param0, int param1, int[] param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -215,14 +215,14 @@ final class fwa {
         }
     }
 
-    fwa(ona param0, pfa param1) {
+    ArchiveIndexLoader(ona param0, pfa param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private fwa(ona param0, pfa param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ArchiveIndexLoader(ona param0, pfa param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
-          this.field_e = param3;
-          this.field_b = param2;
+          this.signatureModulus = param3;
+          this.signatureExponent = param2;
           this.field_i = param1;
           this.field_j = param0;
           if (!this.field_j.d(52)) {

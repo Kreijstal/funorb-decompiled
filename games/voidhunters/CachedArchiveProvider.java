@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends fnb {
+final class CachedArchiveProvider extends fnb {
     private pfa field_f;
     private int field_n;
     private NodeHashTable field_u;
@@ -106,7 +106,7 @@ final class ga extends fnb {
           return var3.e((byte) -4);
         }
         if (param1) {
-          ga.clearSharedReferences((byte) 114);
+          CachedArchiveProvider.clearSharedReferences((byte) 114);
         }
         return 0;
     }
@@ -546,7 +546,7 @@ final class ga extends fnb {
         }
     }
 
-    ga(int param0, fo param1, fo param2, ona param3, pfa param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveProvider(int param0, fo param1, fo param2, ona param3, pfa param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

@@ -8,22 +8,22 @@ final class GetUseBackgroundInFullscreen extends ConsoleCommand {
         ShipComponent var3 = null;
         ShipComponent var4 = null;
         try {
-          param1.a(1, 2, new ShipComponent(13));
-          param1.a(1, 3, new ShipComponent(13));
-          param1.a(1, 13, new ShipComponent(13));
-          param1.a(1, 12, new ShipComponent(13));
-          param1.a(1, 7, new ShipComponent(25));
-          param1.a(1, 8, new ShipComponent(25));
-          param1.a(1, 16, new ShipComponent(18));
+          param1.attachToHardpoint(1, 2, new ShipComponent(13));
+          param1.attachToHardpoint(1, 3, new ShipComponent(13));
+          param1.attachToHardpoint(1, 13, new ShipComponent(13));
+          param1.attachToHardpoint(1, 12, new ShipComponent(13));
+          param1.attachToHardpoint(1, 7, new ShipComponent(25));
+          param1.attachToHardpoint(1, 8, new ShipComponent(25));
+          param1.attachToHardpoint(1, 16, new ShipComponent(18));
           var3 = new ShipComponent(29);
-          var3.a(1, 0, new ShipComponent(27));
-          param1.a(1, 4, var3);
+          var3.attachToHardpoint(1, 0, new ShipComponent(27));
+          param1.attachToHardpoint(1, 4, var3);
           if (param0 >= -77) {
             field_o = (GameStateFactory) null;
           }
           var4 = new ShipComponent(29);
-          var4.a(1, 0, new ShipComponent(27));
-          param1.a(1, 11, var4);
+          var4.attachToHardpoint(1, 0, new ShipComponent(27));
+          param1.attachToHardpoint(1, 11, var4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "leb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

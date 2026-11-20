@@ -94,7 +94,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           if (GetArmageddonTimerStart.field_o != 0) {
             var15Lifetime2 = SetVariableLabelAction.field_a;
             var3Lifetime2 = var15Lifetime2;
-            ga.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
+            CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5 = ArmBehaviour.a(var2, 0, 200, var15Lifetime2);
             var16 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var18 = new lta();
@@ -108,13 +108,13 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var18.field_a = Math.min(var11, var12);
             var18.field_c = (float)((var25[0] + var25[1]) / 2);
             var18.field_b = (float)((var25[3] + var25[2]) / 2);
-            var16.a(SetMinimapWidth.field_o * 10 % 8192, -82);
+            var16.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
               vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
               var16.setTeam(17704, 1);
-              var16.a(false, true, (World) null);
-              var16.a(var18, 121, (World) null);
+              var16.integrateMotion(false, true, (World) null);
+              var16.draw(var18, 121, (World) null);
               if (0 != GetBots.field_o ||
                 SetMachineGunEnergyUsed.field_o[83] ||
                 SetMachineGunEnergyUsed.field_o[84] ||
@@ -133,8 +133,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               }
               return;
             }
-            var16.a(false, true, (World) null);
-            var16.a(var18, 121, (World) null);
+            var16.integrateMotion(false, true, (World) null);
+            var16.draw(var18, 121, (World) null);
             if (0 == GetBots.field_o &&
               !SetMachineGunEnergyUsed.field_o[83] &&
               !SetMachineGunEnergyUsed.field_o[84]) {
@@ -180,7 +180,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           }
           if (0 == wgb.field_f) {
             var4 = 1;
-            ga.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
+            CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5Lifetime2 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
             var19 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var21 = new lta();
@@ -194,14 +194,14 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var21.field_a = Math.min(var11Lifetime2, var12Lifetime2);
             var21.field_c = (float)((var26[0] + var26[1]) / 2);
             var21.field_b = (float)((var26[3] + var26[2]) / 2);
-            var19.a(SetMinimapWidth.field_o * 10 % 8192, -82);
+            var19.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
               vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
               var19.setTeam(17704, 1);
             }
-            var19.a(false, true, (World) null);
-            var19.a(var21, 121, (World) null);
+            var19.integrateMotion(false, true, (World) null);
+            var19.draw(var21, 121, (World) null);
             if (0 != GetBots.field_o ||
               SetMachineGunEnergyUsed.field_o[83] ||
               SetMachineGunEnergyUsed.field_o[84] ||
@@ -222,7 +222,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           }
           var3Lifetime2 = SetVariableLabelAction.field_a;
         }
-        ga.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
+        CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
         var5Lifetime1 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
         var22 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
         var24 = new lta();
@@ -236,10 +236,10 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         var24.field_a = Math.min(var11Lifetime1, var12Lifetime1);
         var24.field_c = (float)((var27[0] + var27[1]) / 2);
         var24.field_b = (float)((var27[3] + var27[2]) / 2);
-        var22.a(SetMinimapWidth.field_o * 10 % 8192, -82);
+        var22.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
         if (vqa.field_g == null) {
-          var22.a(false, true, (World) null);
-          var22.a(var24, 121, (World) null);
+          var22.integrateMotion(false, true, (World) null);
+          var22.draw(var24, 121, (World) null);
           if (0 == GetBots.field_o &&
             !SetMachineGunEnergyUsed.field_o[83] &&
             !SetMachineGunEnergyUsed.field_o[84]) {
@@ -263,8 +263,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           }
         } else {
           if (vqa.field_g.field_N) {
-            var22.a(false, true, (World) null);
-            var22.a(var24, 121, (World) null);
+            var22.integrateMotion(false, true, (World) null);
+            var22.draw(var24, 121, (World) null);
             if (0 == GetBots.field_o &&
               !SetMachineGunEnergyUsed.field_o[83] &&
               !SetMachineGunEnergyUsed.field_o[84]) {
@@ -289,8 +289,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           } else {
             if (vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
               var22.setTeam(17704, 1);
-              var22.a(false, true, (World) null);
-              var22.a(var24, 121, (World) null);
+              var22.integrateMotion(false, true, (World) null);
+              var22.draw(var24, 121, (World) null);
               if (0 != GetBots.field_o ||
                 SetMachineGunEnergyUsed.field_o[83] ||
                 SetMachineGunEnergyUsed.field_o[84] ||
@@ -303,8 +303,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                 }
               }
             } else {
-              var22.a(false, true, (World) null);
-              var22.a(var24, 121, (World) null);
+              var22.integrateMotion(false, true, (World) null);
+              var22.draw(var24, 121, (World) null);
               if (0 != GetBots.field_o) {
                 if (var4 == 0) {
                   GetBombletSprayPushMultiplier.field_o = null;

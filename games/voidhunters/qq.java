@@ -123,10 +123,10 @@ abstract class qq implements nib {
             stackIn_3_0 = 55;
             return stackIn_3_0;
           }
-          if (null != fwa.field_g) {
+          if (null != ArchiveIndexLoader.field_g) {
             var3_int = 0;
             for (var4 = param1; var4 < 56; var4++) {
-              if (fwa.field_g.c(var4, (byte) 34)) {
+              if (ArchiveIndexLoader.field_g.c(var4, (byte) 34)) {
                 if (param2 <= var3_int) {
                   stackIn_11_0 = var4;
                   return stackIn_11_0;

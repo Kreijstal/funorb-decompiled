@@ -84,7 +84,7 @@ class pja extends TextureOperation {
         int var4 = (int)((float)param2 - kba.field_a.field_b);
         if (param0 > 83) {
           var5 = (int)(640.0 / (double)kba.field_a.field_a);
-          var6 = qua.a(var5, (byte) 119, var4, var3);
+          var6 = ComponentAttachmentPlan.a(var5, (byte) 119, var4, var3);
           var7 = 33554432 / var6;
           if (var7 > 128) {
             var7 = 128;

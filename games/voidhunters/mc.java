@@ -134,20 +134,20 @@ abstract class mc extends shb implements nea {
         ShipComponent var3 = null;
         ShipComponent var4 = null;
         try {
-          param0.a(1, 2, new ShipComponent(13));
-          param0.a(param1 ^ 26, 8, new ShipComponent(13));
-          param0.a(1, 11, new ShipComponent(13));
-          param0.a(1, 4, new ShipComponent(25));
-          param0.a(1, 6, new ShipComponent(25));
-          param0.a(1, 5, new ShipComponent(25));
+          param0.attachToHardpoint(1, 2, new ShipComponent(13));
+          param0.attachToHardpoint(param1 ^ 26, 8, new ShipComponent(13));
+          param0.attachToHardpoint(1, 11, new ShipComponent(13));
+          param0.attachToHardpoint(1, 4, new ShipComponent(25));
+          param0.attachToHardpoint(1, 6, new ShipComponent(25));
+          param0.attachToHardpoint(1, 5, new ShipComponent(25));
           var3 = new ShipComponent(29);
-          var3.a(1, 0, new ShipComponent(27));
-          var3.a(1, 1, new ShipComponent(13));
-          param0.a(1, 0, var3);
+          var3.attachToHardpoint(1, 0, new ShipComponent(27));
+          var3.attachToHardpoint(1, 1, new ShipComponent(13));
+          param0.attachToHardpoint(1, 0, var3);
           var4 = new ShipComponent(29);
-          var4.a(1, 0, new ShipComponent(param1));
-          var4.a(1, 2, new ShipComponent(13));
-          param0.a(1, 10, var4);
+          var4.attachToHardpoint(1, 0, new ShipComponent(param1));
+          var4.attachToHardpoint(1, 2, new ShipComponent(13));
+          param0.attachToHardpoint(1, 10, var4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mc.TA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

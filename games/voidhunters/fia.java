@@ -353,7 +353,7 @@ final class fia {
                 if (1 == ujb.field_c) {
                   var3_intLifetime1 = -1;
                   var4Lifetime1 = 2147483647;
-                  var27 = var19.field_v;
+                  var27 = var19.outline;
                   var20 = var27;
                   var5_ref_int__ = var20;
                   for (var6Lifetime1 = 0; var27.length > var6Lifetime1; var6Lifetime1 += 2) {

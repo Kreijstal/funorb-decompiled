@@ -61,21 +61,21 @@ final class SpawnPointFactory implements GameStateFactory {
           if (param2) {
             return;
           }
-          if (param1.field_v == null) {
+          if (param1.outline == null) {
             return;
           }
           if (0 <= SetMissileLauncherProjectileLife.field_p &&
             au.field_c == 2) {
             try {
               var15 = new ShipComponent(SetMissileLauncherProjectileLife.field_p);
-              var15.a((World) null, (byte) 84, 16777215, param0, false);
+              var15.drawComponent((World) null, (byte) 84, 16777215, param0, false);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (Exception) (Object) decompiledCaughtException;
               var4.printStackTrace();
             }
           }
-          var18 = param1.field_v;
+          var18 = param1.outline;
           var16 = var18;
           var14 = var16;
           var19 = var14;
@@ -103,7 +103,7 @@ final class SpawnPointFactory implements GameStateFactory {
             }
           }
           if (au.field_c == 0) {
-            var5_ref_lsb__ = param1.field_o;
+            var5_ref_lsb__ = param1.hardpoints;
             if (var5_ref_lsb__ != null) {
               for (var6Lifetime2 = 0; var5_ref_lsb__.length > var6Lifetime2; var6Lifetime2++) {
                 var7Lifetime2 = var5_ref_lsb__[var6Lifetime2].field_b;
@@ -120,10 +120,10 @@ final class SpawnPointFactory implements GameStateFactory {
               }
             }
           }
-          var5Lifetime2 = param0.a(param1.field_b, (byte) 125);
+          var5Lifetime2 = param0.a(param1.connectionX, (byte) 125);
           stackIn_40_0 = (lta) (param0);
           stackIn_41_1 = !(param2);
-          var6Lifetime3 = ((lta) (Object) stackIn_40_0).b(stackIn_41_1, param1.field_i);
+          var6Lifetime3 = ((lta) (Object) stackIn_40_0).b(stackIn_41_1, param1.connectionY);
           SetNumStars.a(2.0f, (byte) 115, var6Lifetime3, 255, var5Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

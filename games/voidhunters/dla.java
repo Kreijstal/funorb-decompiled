@@ -40,8 +40,8 @@ final class dla {
           }
           var7 = -this.field_f.getWidth((byte) -122) / 2 + hob.a(param1, this.field_f.getWidth((byte) -122), 119);
           var8 = -this.field_f.m(1) / 2 + hob.a(param1, this.field_f.m(1), 120);
-          var6.a(var7, var8, (byte) -72);
-          var6.a(hob.a(param1, 8192, 126), -85);
+          var6.setPosition(var7, var8, (byte) -72);
+          var6.setAngle(hob.a(param1, 8192, 126), -85);
           this.field_f.a(var6, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class dla {
             var18Lifetime2 = var10_ref_nbb;
             var7_refLifetime2 = var18Lifetime2;
             if (var10_ref_nbb != null) {
-              var11_ref_ml = var10_ref_nbb.chassis.a(var6, var5, true);
+              var11_ref_ml = var10_ref_nbb.chassis.findComponentAtPoint(var6, var5, true);
               if (var11_ref_ml != null) {
                 var12_ref_String = me.a(var11_ref_ml, (byte) 72);
                 var13 = var11_ref_ml.getFinalx(true);
@@ -144,7 +144,7 @@ final class dla {
           var18Lifetime1 = this.field_f.a(true, var6, var5, var5, var6);
           var7_refLifetime1 = var18Lifetime1;
           if (var18Lifetime1 != null) {
-            var8Lifetime1 = var18Lifetime1.g(-71) << 2;
+            var8Lifetime1 = var18Lifetime1.getBoundingExtent(-71) << 2;
             var9 = me.a(var18Lifetime1.chassis, (byte) 106);
             var10 = var18Lifetime1.chassis.getFinalx(true);
             var11 = -var5 + var10;
@@ -349,7 +349,7 @@ final class dla {
             var5_ref_sg = ae.a(var12, (byte) 45);
             var5_ref_sg.setTeam(17704, 3);
             var5_ref_sg.setAi(new ShipAI(), 4);
-            var5_ref_sg.a(hob.a(var3, 8192, 122), -67);
+            var5_ref_sg.setAngle(hob.a(var3, 8192, 122), -67);
             this.field_f.a(var5_ref_sg, (byte) 107);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -367,7 +367,7 @@ final class dla {
         var9 = new Asteroid(new ShipComponent(49));
         var5 = -this.field_f.getWidth((byte) -122) / 2 + hob.a(var3, this.field_f.getWidth((byte) -122), 120);
         var6 = -this.field_f.m(1) / 2 + hob.a(var3, this.field_f.m(1), 123);
-        var9.a(var5, var6, (byte) 43);
+        var9.setPosition(var5, var6, (byte) 43);
         this.field_f.a((byte) 126, var9);
     }
 

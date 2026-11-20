@@ -17,75 +17,75 @@ final class fcb implements oob {
     static String field_g;
 
     final void b(byte param0) {
-        fka.a("Very start of requestdata", (byte) -56);
+        ComponentCollision.a("Very start of requestdata", (byte) -56);
         if (esb.field_j != null) {
           AsteroidField.a((byte) -100, esb.field_j);
           esb.field_j = null;
           MidiNote.resetFrameTiming(param0 + 2095);
         }
         AsteroidFieldFactory.field_b = true;
-        fka.a("common wordpackj", (byte) -102);
+        ComponentCollision.a("common wordpackj", (byte) -102);
         this.field_f = MissionBuilder.a(param0 + 0, gn.field_k.field_a);
-        fka.a("graphicsj", (byte) -103);
+        ComponentCollision.a("graphicsj", (byte) -103);
         this.field_i = MissionBuilder.a(param0 + 0, 16);
-        fka.a("fontmetricsj", (byte) -66);
+        ComponentCollision.a("fontmetricsj", (byte) -66);
         this.field_e = MissionBuilder.a(1, 17);
-        fka.a("jagfxj", (byte) -93);
+        ComponentCollision.a("jagfxj", (byte) -93);
         this.field_l = MissionBuilder.a(param0 + 0, 18);
-        fka.a("vorbisj", (byte) -64);
+        ComponentCollision.a("vorbisj", (byte) -64);
         this.field_k = MissionBuilder.a(1, 19);
-        fka.a("patchesj", (byte) -106);
+        ComponentCollision.a("patchesj", (byte) -106);
         this.field_j = MissionBuilder.a(param0 + 0, 20);
-        fka.a("midij", (byte) -100);
+        ComponentCollision.a("midij", (byte) -100);
         this.field_h = MissionBuilder.a(1, 21);
-        fka.a("common quickchatj", (byte) -64);
+        ComponentCollision.a("common quickchatj", (byte) -64);
         this.field_b = MissionBuilder.a(1, GetMachineGunProjectileDamage.field_o.field_a);
-        fka.a("texturemetricsj", (byte) -108);
+        ComponentCollision.a("texturemetricsj", (byte) -108);
         this.field_m = MissionBuilder.a(param0 ^ 0, 24);
-        fka.a("texturesj", (byte) -91);
+        ComponentCollision.a("texturesj", (byte) -91);
         this.field_a = MissionBuilder.a(1, 25);
-        fka.a("jpegj", (byte) -52);
+        ComponentCollision.a("jpegj", (byte) -52);
         this.field_d = MissionBuilder.a(param0 ^ 0, 26);
         asb var4 = GetMassDriverReload.field_o;
         asb var3 = GetShieldsDirectionalArc.field_r;
-        fka.a("creating request queue", (byte) -84);
+        ComponentCollision.a("creating request queue", (byte) -84);
         rab.field_m = new wsb(82);
-        fka.a("requesting basic common graphics group", (byte) -68);
+        ComponentCollision.a("requesting basic common graphics group", (byte) -68);
         rab.field_m.a(var4, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
-        fka.a("requesting common arialish12", (byte) -66);
+        ComponentCollision.a("requesting common arialish12", (byte) -66);
         rab.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
-        fka.a("requesting common arialish12 fontmetric", (byte) -59);
+        ComponentCollision.a("requesting common arialish12 fontmetric", (byte) -59);
         rab.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
-        fka.a("requesting common lobbyfont", (byte) -79);
+        ComponentCollision.a("requesting common lobbyfont", (byte) -79);
         rab.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
-        fka.a("requesting common lobbyfont metric", (byte) -72);
+        ComponentCollision.a("requesting common lobbyfont metric", (byte) -72);
         rab.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
-        fka.a("requesting jfx sounds", (byte) -66);
+        ComponentCollision.a("requesting jfx sounds", (byte) -66);
         rab.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_l);
-        fka.a("requesting vorbis sounds", (byte) -53);
+        ComponentCollision.a("requesting vorbis sounds", (byte) -53);
         rab.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_k);
-        fka.a("requesting patches", (byte) -112);
+        ComponentCollision.a("requesting patches", (byte) -112);
         rab.field_m.a(ttb.field_z, param0 ^ -2, GetMissilesCooldown.field_p, this.field_j);
-        fka.a("requesting midis", (byte) -113);
+        ComponentCollision.a("requesting midis", (byte) -113);
         rab.field_m.a(GetBombletSprayProjectiles.field_o, -1, CarouselSlotFactory.field_a, this.field_h);
-        fka.a("requesting basic graphics", (byte) -108);
+        ComponentCollision.a("requesting basic graphics", (byte) -108);
         if (param0 != 1) {
           this.field_a = (asb) null;
         }
         rab.field_m.a(this.field_i, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
-        fka.a("requesting jpeg graphics", (byte) -87);
+        ComponentCollision.a("requesting jpeg graphics", (byte) -87);
         rab.field_m.a(SetTorpedoProjectileOndamageParticles.field_o, -1, SetTorpedoProjectileOndamageParticles.field_o, this.field_d);
-        fka.a("requesting font graphics", (byte) -64);
+        ComponentCollision.a("requesting font graphics", (byte) -64);
         rab.field_m.a(this.field_e, GetBombletSprayAimarc.field_p, false, "basic", wqb.field_b);
-        fka.a("requesting textures", (byte) -107);
+        ComponentCollision.a("requesting textures", (byte) -107);
         rab.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_a);
-        fka.a("requesting texturemetrics", (byte) -66);
+        ComponentCollision.a("requesting texturemetrics", (byte) -66);
         rab.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_m);
-        fka.a("requesting extradata1", (byte) -94);
+        ComponentCollision.a("requesting extradata1", (byte) -94);
         rab.field_m.a(lwa.field_vb, -1, SetUseLines.field_q, this.field_f);
-        fka.a("requesting extradata2", (byte) -77);
+        ComponentCollision.a("requesting extradata2", (byte) -77);
         rab.field_m.a(lwa.field_vb, -1, SetUseLines.field_q, this.field_b);
-        fka.a("end of requestdata", (byte) -98);
+        ComponentCollision.a("end of requestdata", (byte) -98);
     }
 
     final boolean a(byte param0) {
@@ -96,7 +96,7 @@ final class fcb implements oob {
         asb var11;
         asb var12;
         Object var3;
-        ii var4;
+        ArchiveTextureProvider var4;
         Sprite[][] var9;
         caa[] var10;
         Sprite[][] var14;
@@ -104,13 +104,13 @@ final class fcb implements oob {
         int[] var16;
         int[] var19;
         var8 = VoidHunters.field_G;
-        fka.a("Inside unpack", (byte) -111);
+        ComponentCollision.a("Inside unpack", (byte) -111);
         AwardVictoryToTeamActionFactory.b((byte) -99);
         var11 = GetMassDriverReload.field_o;
         var12 = GetShieldsDirectionalArc.field_r;
         if (this.field_l != null &&
           this.field_k != null) {
-          fka.a("Unpacking sounds", (byte) -104);
+          ComponentCollision.a("Unpacking sounds", (byte) -104);
           GetAllowShipSaving.a(4410);
           IncrementVariableAction.a(bva.field_e, param0 ^ -69, 82.0f);
           mab.field_a.renderGameFrame(param0 - 187);
@@ -244,7 +244,7 @@ final class fcb implements oob {
           return false;
         }
         if (null != this.field_h) {
-          fka.a("Unpacking music", (byte) -125);
+          ComponentCollision.a("Unpacking music", (byte) -125);
           IncrementVariableAction.a(GetBloomCoefficientPercentage.field_p, -1, 88.0f);
           mab.field_a.renderGameFrame(-103);
           pab.field_k = new MusicTrack[4];
@@ -257,7 +257,7 @@ final class fcb implements oob {
           return false;
         }
         if (null != this.field_j) {
-          fka.a("Unpacking patches", (byte) -123);
+          ComponentCollision.a("Unpacking patches", (byte) -123);
           for (var4_int = 0; var4_int < 4; var4_int++) {
             if (pab.field_k[var4_int] != null &&
               !GetBurstFireMaxEnergy.field_p.field_k.loadMusicPatches(this.field_c, -29476, this.field_j, 176400, pab.field_k[var4_int])) {
@@ -276,7 +276,7 @@ final class fcb implements oob {
         }
         if (null != this.field_e &&
           this.field_d != null) {
-          fka.a("Unpacking graphics", (byte) -113);
+          ComponentCollision.a("Unpacking graphics", (byte) -113);
           IncrementVariableAction.a(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
           mab.field_a.renderGameFrame(-112);
           GrapplingHookFactory.field_a = (BitmapFont) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
@@ -328,19 +328,19 @@ final class fcb implements oob {
           return false;
         }
         if (this.field_f != null) {
-          fka.a("Loading huffman wordpack", (byte) -123);
+          ComponentCollision.a("Loading huffman wordpack", (byte) -123);
           spb.a((byte) -22, new dqb(this.field_f.a("huffman", true, "")));
           this.field_f = null;
           MidiNote.resetFrameTiming(2096);
           return false;
         }
         if (null == vq.field_x) {
-          fka.a("Creating textureprovider", (byte) -119);
-          var4 = new ii(this.field_m, this.field_a, this.field_i);
-          fka.a("Creating tk manager", (byte) -80);
+          ComponentCollision.a("Creating textureprovider", (byte) -119);
+          var4 = new ArchiveTextureProvider(this.field_m, this.field_a, this.field_i);
+          ComponentCollision.a("Creating tk manager", (byte) -80);
           var16 = new int[]{GetMassDriverProjectiles.field_q};
           vq.field_x = new fab(var4, GetFighterRepairAmount.a(var16, param0 - 66));
-          fka.a("Finished creating tk manager", (byte) -109);
+          ComponentCollision.a("Finished creating tk manager", (byte) -109);
         }
         if (vq.field_x.field_e == null) {
           return false;

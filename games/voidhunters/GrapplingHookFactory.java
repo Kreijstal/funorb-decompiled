@@ -25,7 +25,7 @@ final class GrapplingHookFactory implements GameStateFactory {
           }
           if (dla.field_d != var5.field_e &&
             SetMissionTerrainSpaceProbability.field_o != var5.field_e &&
-            var5.field_e != fwa.field_h &&
+            var5.field_e != ArchiveIndexLoader.field_h &&
             io.field_p != var5.field_e) {
             if (SetMissionVariablesHudX.field_p != var5.field_e) {
               throw new ojb(var5.field_g);
@@ -81,23 +81,23 @@ final class GrapplingHookFactory implements GameStateFactory {
         ShipComponent var4 = null;
         ShipComponent var5 = null;
         try {
-          param1.a(1, 7, new ShipComponent(35));
+          param1.attachToHardpoint(1, 7, new ShipComponent(35));
           int var2_int = -57 / ((param0 - 24) / 51);
-          param1.a(1, 15, new ShipComponent(35));
-          param1.a(1, 3, new ShipComponent(13));
-          param1.a(1, 11, new ShipComponent(13));
-          param1.a(1, 16, new ShipComponent(13));
-          param1.a(1, 17, new ShipComponent(13));
-          param1.a(1, 5, new ShipComponent(15));
-          param1.a(1, 9, new ShipComponent(15));
-          param1.a(1, 4, new ShipComponent(15));
-          param1.a(1, 10, new ShipComponent(15));
+          param1.attachToHardpoint(1, 15, new ShipComponent(35));
+          param1.attachToHardpoint(1, 3, new ShipComponent(13));
+          param1.attachToHardpoint(1, 11, new ShipComponent(13));
+          param1.attachToHardpoint(1, 16, new ShipComponent(13));
+          param1.attachToHardpoint(1, 17, new ShipComponent(13));
+          param1.attachToHardpoint(1, 5, new ShipComponent(15));
+          param1.attachToHardpoint(1, 9, new ShipComponent(15));
+          param1.attachToHardpoint(1, 4, new ShipComponent(15));
+          param1.attachToHardpoint(1, 10, new ShipComponent(15));
           var4 = new ShipComponent(33);
-          var4.a(1, 0, new ShipComponent(13));
-          param1.a(1, 1, var4);
+          var4.attachToHardpoint(1, 0, new ShipComponent(13));
+          param1.attachToHardpoint(1, 1, var4);
           var5 = new ShipComponent(33);
-          var5.a(1, 2, new ShipComponent(13));
-          param1.a(1, 13, var5);
+          var5.attachToHardpoint(1, 2, new ShipComponent(13));
+          param1.attachToHardpoint(1, 13, var5);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lhb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

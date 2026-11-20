@@ -27,12 +27,12 @@ final class ArbProgram {
           }
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = new ShipComponent(32);
-            var3.a(1, 1, new ShipComponent(24));
-            var3.a(param0 ^ -93, 2, new ShipComponent(24));
-            var3.a(1, 3, new ShipComponent(24));
-            var3.a(param0 ^ -93, 4, new ShipComponent(24));
-            var3.a(1, 5, new ShipComponent(24));
-            param1.a(param0 ^ -93, var2_int, var3);
+            var3.attachToHardpoint(1, 1, new ShipComponent(24));
+            var3.attachToHardpoint(param0 ^ -93, 2, new ShipComponent(24));
+            var3.attachToHardpoint(1, 3, new ShipComponent(24));
+            var3.attachToHardpoint(param0 ^ -93, 4, new ShipComponent(24));
+            var3.attachToHardpoint(1, 5, new ShipComponent(24));
+            param1.attachToHardpoint(param0 ^ -93, var2_int, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

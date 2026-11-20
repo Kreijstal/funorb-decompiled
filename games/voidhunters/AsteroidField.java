@@ -745,7 +745,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime52 = dqb.a((byte) -114, "controls");
           if (var2Lifetime52 != null) {
-            lu.field_a = qpa.a((byte) -125, var2Lifetime52);
+            HardpointMatch.field_a = qpa.a((byte) -125, var2Lifetime52);
           }
           var2Lifetime53 = dqb.a((byte) -37, "instructions_pages,0");
           if (var2Lifetime53 != null) {
@@ -1389,7 +1389,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime213 = dqb.a((byte) -81, "VOTE_DESTROY_BASE");
           if (var2Lifetime213 != null) {
-            ii.field_a = qpa.a((byte) -125, var2Lifetime213);
+            ArchiveTextureProvider.field_a = qpa.a((byte) -125, var2Lifetime213);
           }
           var2Lifetime214 = dqb.a((byte) -59, "VOTE_DESTROY_BASE_DESC");
           if (var2Lifetime214 != null) {

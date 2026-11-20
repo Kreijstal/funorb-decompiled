@@ -70,9 +70,9 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != fwa.field_g &&
-            null != fwa.field_g.field_e) {
-            fwa.field_g.field_e.a(param1, param2, false);
+          if (null != ArchiveIndexLoader.field_g &&
+            null != ArchiveIndexLoader.field_g.field_e) {
+            ArchiveIndexLoader.field_g.field_e.a(param1, param2, false);
           }
           if (param0 == 202) {
             return;

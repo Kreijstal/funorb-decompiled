@@ -386,10 +386,10 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             }
           }
           if (3 != var2) {
-            ii.field_h = false;
+            ArchiveTextureProvider.field_h = false;
             return;
           }
-          ii.field_h = true;
+          ArchiveTextureProvider.field_h = true;
           for (var3Lifetime2 = 0; GetPlayerRepairTime.field_o.length > var3Lifetime2; var3Lifetime2++) {
             GetPlayerRepairTime.field_o[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -114);
           }

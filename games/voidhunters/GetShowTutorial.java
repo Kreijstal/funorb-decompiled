@@ -11,7 +11,7 @@ final class GetShowTutorial extends ConsoleCommand {
         if (!btb.field_a) {
           return 16742263 + 2243266 * param1;
         }
-        return hab.field_g[param1].a(14951);
+        return hab.field_g[param1].getCategoryColor(14951);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

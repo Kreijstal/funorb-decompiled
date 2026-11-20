@@ -14,7 +14,7 @@ final class qqa extends TextureOperation {
         int var3 = VoidHunters.field_G;
         try {
           for (var2_int = 0; var2_int < 11; var2_int++) {
-            lu.field_f[var2_int] = 0;
+            HardpointMatch.field_f[var2_int] = 0;
             qd.field_a[var2_int] = !param0 ? true : false;
           }
           if (param1 > -5) {

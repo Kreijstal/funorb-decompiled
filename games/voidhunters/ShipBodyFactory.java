@@ -161,7 +161,7 @@ final class ShipBodyFactory implements GameStateFactory {
             }
           }
           SetUseCircleFill.field_o.a(-360 + dma.field_g >> 1, 117, 360, 10, -130 + (dma.field_j - 14));
-          sfa.field_d.a(0, 124, SetUseCircleFill.field_o.field_hb, 0, 24);
+          ProjectileHit.field_d.a(0, 124, SetUseCircleFill.field_o.field_hb, 0, 24);
           SetUseModels.field_o.a(0, 124, SetUseCircleFill.field_o.field_hb, 24, -24 + SetUseCircleFill.field_o.field_G);
           SetUseModels.field_o.field_gb = uwa.a(11579568, SetUseModels.field_o.field_G, 1, 8421504, 92, 3);
           DualLinkNode.field_f.a(5, 124, SetUseModels.field_o.field_hb - 10, 5, -2 + (-24 + SetUseModels.field_o.field_G) - 10);

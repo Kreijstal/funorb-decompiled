@@ -308,26 +308,26 @@ final class waa extends dqa implements jpb, oo {
         ShipComponent var4 = null;
         ShipComponent var5 = null;
         try {
-          param0.a(1, 15, new ShipComponent(15));
-          param0.a(param1 ^ 18633, 14, new ShipComponent(15));
+          param0.attachToHardpoint(1, 15, new ShipComponent(15));
+          param0.attachToHardpoint(param1 ^ 18633, 14, new ShipComponent(15));
           if (param1 != 18632) {
             asb var3 = (asb) null;
             waa.a((asb) null, (byte) -43, -58);
           }
-          param0.a(param1 - 18631, 5, new ShipComponent(13));
-          param0.a(1, 6, new ShipComponent(13));
-          param0.a(1, 7, new ShipComponent(13));
-          param0.a(1, 8, new ShipComponent(13));
-          param0.a(1, 0, new ShipComponent(13));
-          param0.a(1, 13, new ShipComponent(13));
-          param0.a(param1 ^ 18633, 4, new ShipComponent(13));
-          param0.a(1, 9, new ShipComponent(13));
+          param0.attachToHardpoint(param1 - 18631, 5, new ShipComponent(13));
+          param0.attachToHardpoint(1, 6, new ShipComponent(13));
+          param0.attachToHardpoint(1, 7, new ShipComponent(13));
+          param0.attachToHardpoint(1, 8, new ShipComponent(13));
+          param0.attachToHardpoint(1, 0, new ShipComponent(13));
+          param0.attachToHardpoint(1, 13, new ShipComponent(13));
+          param0.attachToHardpoint(param1 ^ 18633, 4, new ShipComponent(13));
+          param0.attachToHardpoint(1, 9, new ShipComponent(13));
           var4 = new ShipComponent(34);
-          var4.a(1, 3, new ShipComponent(15));
-          param0.a(param1 - 18631, 11, var4);
+          var4.attachToHardpoint(1, 3, new ShipComponent(15));
+          param0.attachToHardpoint(param1 - 18631, 11, var4);
           var5 = new ShipComponent(34);
-          var5.a(1, 1, new ShipComponent(15));
-          param0.a(param1 ^ 18633, 2, var5);
+          var5.attachToHardpoint(1, 1, new ShipComponent(15));
+          param0.attachToHardpoint(param1 ^ 18633, 2, var5);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "waa.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -82,8 +82,8 @@ final class npb {
           for (var11 = 0; var10_ref_sg__.length > var11; var11++) {
             var12_ref_sg = var10_ref_sg__[var11];
             if (var12_ref_sg != null) {
-              if (!var12_ref_sg.b(2, (byte) -3)) {
-                stackIn_32_0 = (!var12_ref_sg.b(1, (byte) 69)) ? 1 : 0;
+              if (!var12_ref_sg.hasVisibilityFlag(2, (byte) -3)) {
+                stackIn_32_0 = (!var12_ref_sg.hasVisibilityFlag(1, (byte) 69)) ? 1 : 0;
               } else {
                 stackIn_32_0 = 0;
               }
@@ -123,7 +123,7 @@ final class npb {
           }
           stackIn_58_1 = (var10 != 0);
           this.field_b = stackIn_58_1;
-          stackIn_61_0 = (!param3.d(9, 47)) ? 0 : 1;
+          stackIn_61_0 = (!param3.isSpecialOrderActive(9, 47)) ? 0 : 1;
           var11Lifetime1 = stackIn_61_0;
           if (var11Lifetime1 != 0 &&
             !this.field_c) {
@@ -175,7 +175,7 @@ final class npb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != null) {
-            var5_int = param3.t(0);
+            var5_int = param3.getHealthProgress(0);
             if (var5_int < 64) {
               GetBombletSprayProjectileDamage.a(15, 0, (byte) -53);
             }

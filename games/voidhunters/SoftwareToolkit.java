@@ -1296,7 +1296,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
     final void updateFrame(int param0) {
         uva var4 = null;
         int var5 = 0;
-        opa var6 = null;
+        TextureMetadata var6 = null;
         int var2 = param0 - this.field_E;
         Object var3 = this.field_f.a((byte) 67);
         while (var3 != null) {
@@ -1305,7 +1305,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
             var4.field_g = var4.field_g + var2;
             var5 = var4.field_g / 20;
             if (var5 > 0) {
-              var6 = this.field_a.a(-20292, var4.field_d);
+              var6 = this.field_a.getTextureMetadata(-20292, var4.field_d);
               var4.a(var6.field_p * var2 * 50 / 1000, var6.field_d * var2 * 50 / 1000);
               var4.field_g = var4.field_g - var5 * 20;
             }
@@ -1612,7 +1612,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         }
     }
 
-    private SoftwareToolkit(d param0) {
+    private SoftwareToolkit(TextureProvider param0) {
         super(param0);
         SoftwareTransform3D discarded$0 = null;
         this.field_B = false;
@@ -1816,7 +1816,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         var12.field_i = false;
     }
 
-    SoftwareToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
+    SoftwareToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         this(param1);
         try {
           this.registerCanvas(param0, param2, param3);

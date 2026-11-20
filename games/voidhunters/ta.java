@@ -67,10 +67,10 @@ final class ta {
             var13 = -var10;
             var14 = GameSnapshotFactory.a(var13, (byte) -77, var12);
             var15 = 1;
-            if (param2.field_b != 0 ||
-              param2.field_i != 0) {
-              var16 = param2.field_b - var8;
-              var17 = param2.field_i - var9;
+            if (param2.connectionX != 0 ||
+              param2.connectionY != 0) {
+              var16 = param2.connectionX - var8;
+              var17 = param2.connectionY - var9;
               var18 = ar.a(var16, (byte) 119, var17);
               var19 = ar.a(var10, (byte) 117, var11);
               if (var18 < var19 >> 1) {
@@ -78,7 +78,7 @@ final class ta {
               }
             }
             if (var15 != 0) {
-              param2.a(-124, new HardpointDefinition(var8, var9, var14));
+              param2.addHardpoint(-124, new HardpointDefinition(var8, var9, var14));
             }
           }
           return;

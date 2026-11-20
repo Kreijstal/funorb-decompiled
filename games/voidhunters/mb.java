@@ -80,8 +80,8 @@ final class mb extends PacketBuffer {
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = new ShipComponent(29);
-            var3.a(param0 ^ -1688588311, 0, new ShipComponent(24));
-            param1.a(1, var2_int, var3);
+            var3.attachToHardpoint(param0 ^ -1688588311, 0, new ShipComponent(24));
+            param1.attachToHardpoint(1, var2_int, var3);
           }
           if (param0 == -1688588312) {
             return;

@@ -283,7 +283,7 @@ class llb extends fgb {
     }
 
     llb(String param0, llb param1, int param2, int param3, int param4, int param5, String param6) {
-        this(qua.a((CharSequence) ((Object) param0), true), param1, param2, param3, param4, param5, param6);
+        this(ComponentAttachmentPlan.a((CharSequence) ((Object) param0), true), param1, param2, param3, param4, param5, param6);
     }
 
     private final void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5) {

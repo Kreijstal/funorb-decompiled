@@ -27,12 +27,12 @@ final class qn extends IntrusiveNode {
           return true;
         }
         if (!OpenGlSprite.b(111, param0)) {
-          if (fwa.field_g.b(param0, param1 ^ -29)) {
-            return fwa.field_g.a(param0, false) ? true : false;
+          if (ArchiveIndexLoader.field_g.b(param0, param1 ^ -29)) {
+            return ArchiveIndexLoader.field_g.a(param0, false) ? true : false;
           }
           return false;
         }
-        if (fwa.field_g.a(param0, false)) {
+        if (ArchiveIndexLoader.field_g.a(param0, false)) {
           return true;
         }
         return false;

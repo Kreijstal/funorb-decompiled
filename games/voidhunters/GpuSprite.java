@@ -422,7 +422,7 @@ final class GpuSprite extends ToolkitSprite {
           stackIn_3_3 = param1;
           stackIn_3_4 = param2;
           if (param3) {
-            stackIn_4_5 = qua.field_d;
+            stackIn_4_5 = ComponentAttachmentPlan.field_d;
           } else {
             stackIn_4_5 = SetGrapplingHookFireForce.field_o;
           }

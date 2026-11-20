@@ -230,7 +230,7 @@ abstract class NetworkGameClient extends GameApplet {
           dga.field_a = false;
         }
         if (0 == ef.field_z &&
-          ThrusterBehaviour.a(param1 - 90)) {
+          ThrusterBehaviour.loadMasterIndex(param1 - 90)) {
           ef.field_z = 1;
         }
         if (1 == ef.field_z) {
@@ -676,7 +676,7 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = qua.a(GetFixedaim.g((byte) -65), true, SetMachineGunFireForce.e(120));
+            var5 = ComponentAttachmentPlan.a(GetFixedaim.g((byte) -65), true, SetMachineGunFireForce.e(120));
             if (var5 != -1) {
               qga.a(dgb.field_b, var5, (byte) 70, gob.field_a);
               gob.field_a = null;

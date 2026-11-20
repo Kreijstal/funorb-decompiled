@@ -6,7 +6,7 @@ final class MonochromeRowCache {
     static String[] field_j;
     private MonochromeRowCacheEntry[] field_a;
     private int field_c;
-    static sfa field_b;
+    static ProjectileHit field_b;
     private int field_d;
     private int field_g;
     private IntrusiveDeque field_i;
@@ -105,6 +105,6 @@ final class MonochromeRowCache {
 
     static {
         field_j = new String[]{null, null, null, null, "User in singleplayer sandbox"};
-        field_b = new sfa();
+        field_b = new ProjectileHit();
     }
 }

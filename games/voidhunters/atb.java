@@ -6,7 +6,7 @@ final class atb {
     static Sprite[] field_b;
     private pfb field_c;
     private GpuToolkit field_a;
-    private d field_e;
+    private TextureProvider field_e;
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
@@ -44,7 +44,7 @@ final class atb {
         boolean stackIn_57_4 = false;
         Object var3;
         eb var4;
-        opa var5;
+        TextureMetadata var5;
         int var6;
         float[] var7;
         int var8;
@@ -67,10 +67,10 @@ final class atb {
         if (var3 != null) {
           return (eb) (var3);
         }
-        if (!this.field_e.a(param1, (byte) -49)) {
+        if (!this.field_e.isTextureReady(param1, (byte) -49)) {
           return null;
         }
-        var5 = this.field_e.a(-20292, param1);
+        var5 = this.field_e.getTextureMetadata(-20292, param1);
         if (var5.field_h) {
           stackIn_8_0 = 64;
         } else {
@@ -79,7 +79,7 @@ final class atb {
         var6 = stackIn_8_0;
         if (!var5.field_i) {
           if (var5.field_q == 2) {
-            var23 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+            var23 = this.field_e.generateArgbPixels(103, var6, var6, false, param1, 0.699999988079071f);
             stackIn_14_0 = this.field_a;
             stackIn_14_1 = var6;
             stackIn_15_2 = (var5.field_j == 0) ? false : true;
@@ -92,7 +92,7 @@ final class atb {
             return var11;
           }
           if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
-            var24 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+            var24 = this.field_e.generateArgbPixels(103, var6, var6, false, param1, 0.699999988079071f);
             stackIn_20_0 = this.field_a;
             stackIn_20_1 = var6;
             stackIn_21_2 = (var5.field_j == 0) ? false : true;
@@ -104,7 +104,7 @@ final class atb {
             this.field_c.a(var13, (long)param1, (byte) -117);
             return var13;
           }
-          var25 = this.field_e.a(var6, 0.699999988079071f, true, param1, var6, true);
+          var25 = this.field_e.generateRgbPixels(var6, 0.699999988079071f, true, param1, var6, true);
           stackIn_26_0 = this.field_a;
           stackIn_26_1 = var6;
           stackIn_27_2 = (var5.field_j == 0) ? false : true;
@@ -118,14 +118,14 @@ final class atb {
           return var15;
         }
         if (this.field_a.isBloomEnabled()) {
-          var9 = this.field_e.a(0.699999988079071f, var6, param1, var6, 117, false);
+          var9 = this.field_e.generateFloatRgba(0.699999988079071f, var6, param1, var6, 117, false);
           var7 = var9;
           stackIn_56_0 = this.field_a;
           stackIn_56_1 = var6;
           stackIn_56_2 = var6;
           stackIn_56_3 = var9;
           stackIn_57_4 = (var5.field_j == 0) ? false : true;
-          var22 = ((GpuToolkit) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, param0 + 0, qua.field_d);
+          var22 = ((GpuToolkit) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, param0 + 0, ComponentAttachmentPlan.field_d);
           if (param0 != -1) {
             this.a(100, 49);
           }
@@ -134,7 +134,7 @@ final class atb {
           return var22;
         }
         if (var5.field_q == 2) {
-          var26 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+          var26 = this.field_e.generateArgbPixels(103, var6, var6, false, param1, 0.699999988079071f);
           stackIn_37_0 = this.field_a;
           stackIn_37_1 = var6;
           stackIn_38_2 = (var5.field_j == 0) ? false : true;
@@ -147,7 +147,7 @@ final class atb {
           return var17;
         }
         if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
-          var27 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
+          var27 = this.field_e.generateArgbPixels(103, var6, var6, false, param1, 0.699999988079071f);
           stackIn_43_0 = this.field_a;
           stackIn_43_1 = var6;
           stackIn_44_2 = (var5.field_j == 0) ? false : true;
@@ -159,7 +159,7 @@ final class atb {
           this.field_c.a(var19, (long)param1, (byte) -117);
           return var19;
         }
-        var28 = this.field_e.a(var6, 0.699999988079071f, true, param1, var6, true);
+        var28 = this.field_e.generateRgbPixels(var6, 0.699999988079071f, true, param1, var6, true);
         stackIn_49_0 = this.field_a;
         stackIn_49_1 = var6;
         stackIn_50_2 = (var5.field_j == 0) ? false : true;
@@ -181,7 +181,7 @@ final class atb {
         this.field_c.a(true, 5);
     }
 
-    atb(GpuToolkit param0, d param1) {
+    atb(GpuToolkit param0, TextureProvider param1) {
         this.field_c = new pfb(256);
         try {
           this.field_e = param1;

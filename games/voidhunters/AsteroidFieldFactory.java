@@ -11,7 +11,7 @@ final class AsteroidFieldFactory implements GameStateFactory {
         field_c = null;
     }
 
-    final static GraphicsToolkit a(d param0, byte param1, int param2, java.awt.Canvas param3) {
+    final static GraphicsToolkit a(TextureProvider param0, byte param1, int param2, java.awt.Canvas param3) {
         RuntimeException var4 = null;
         GraphicsToolkit stackIn_2_0 = null;
         OpenGlToolkit stackIn_4_0 = null;

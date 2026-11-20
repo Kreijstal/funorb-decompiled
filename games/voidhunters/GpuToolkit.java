@@ -533,10 +533,10 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    GpuToolkit(java.awt.Canvas param0, Object param1, d param2, asb param3, int param4, int param5) {
+    GpuToolkit(java.awt.Canvas param0, Object param1, TextureProvider param2, asb param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
-        opa var9 = null;
+        TextureMetadata var9 = null;
         java.awt.Dimension var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -632,9 +632,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
             ocb.a(false, (byte) 33, true);
             if (this.field_a != null) {
               this.field_I = new atb(this, this.field_a);
-              this.field_Zb = new jagex3.graphics2.hw.NativeInterface(this.field_a.a(11316), this.field_e);
-              for (var8 = 0; var8 < this.field_a.a(11316); var8++) {
-                var9 = this.field_a.a(-20292, var8);
+              this.field_Zb = new jagex3.graphics2.hw.NativeInterface(this.field_a.getTextureCount(11316), this.field_e);
+              for (var8 = 0; var8 < this.field_a.getTextureCount(11316); var8++) {
+                var9 = this.field_a.getTextureMetadata(-20292, var8);
                 if (var9 != null) {
                   this.field_Zb.initTextureMetrics(var8, var9.field_b, var9.field_g);
                 }
@@ -842,7 +842,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.field_Eb[var2] = new GpuTransform3D();
         }
         this.field_Lb = new fsb[-2 + this.field_qb];
-        this.field_Q = (ura) ((Object) this.a(125, 1, 1, qua.field_d, mj.field_f));
+        this.field_Q = (ura) ((Object) this.a(125, 1, 1, ComponentAttachmentPlan.field_d, mj.field_f));
         this.setHeap(new GpuNativeHeap(262144));
         this.field_Vb = this.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_l})});
         this.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_d})});
@@ -1903,7 +1903,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         int var7;
         int var8;
         int var9;
-        opa var10;
+        TextureMetadata var10;
         int var11;
         int var12;
         GpuTransform3D var13;
@@ -1930,7 +1930,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             this.F((byte) 126);
           } else {
             var5_ref = this.field_I.a(-1, param3);
-            var10 = this.field_a.a(-20292, param3);
+            var10 = this.field_a.getTextureMetadata(-20292, param3);
             if (var10.field_p == 0 &&
               var10.field_d == 0) {
               this.F((byte) 75);

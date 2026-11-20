@@ -129,7 +129,7 @@ final class fj {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_j[var2] = ihb.a(ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[6 + var3]) << 8, ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[5 + var3]) << 16, ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[4 + var3]) << 24, ihb.a(SetExplosionProjectileDamage.a(255L, (long)this.field_f[3 + var3]) << 32, ihb.a(SetExplosionProjectileDamage.a(280375465082880L, (long)this.field_f[var3 + 2] << 40), ihb.a(SetExplosionProjectileDamage.a((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)))))), SetExplosionProjectileDamage.a((long)this.field_f[var3 + 7], 255L));
+          this.field_j[var2] = SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[6 + var3]) << 8, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[5 + var3]) << 16, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[4 + var3]) << 24, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[3 + var3]) << 32, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(280375465082880L, (long)this.field_f[var3 + 2] << 40), SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)))))), SetExplosionProjectileDamage.a((long)this.field_f[var3 + 7], 255L));
           var2++;
           var3 += 8;
         }
@@ -140,7 +140,7 @@ final class fj {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_j[var2Lifetime1];
           this.field_i[var2Lifetime1] = dupTemp$0;
-          this.field_d[var2Lifetime1] = ihb.a(arrayValue$1, dupTemp$0);
+          this.field_d[var2Lifetime1] = SpecialOrderStatus.xorLong(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -148,7 +148,7 @@ final class fj {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = ihb.a(this.field_h[var3Lifetime1], GetShieldsDirectionalArcParticleLife.field_r[var4][dla.a(255, (int)(this.field_i[dla.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_h[var3Lifetime1] = SpecialOrderStatus.xorLong(this.field_h[var3Lifetime1], GetShieldsDirectionalArcParticleLife.field_r[var4][dla.a(255, (int)(this.field_i[dla.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -156,14 +156,14 @@ final class fj {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_i[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_i[0] = ihb.a(this.field_i[0], GetShieldsDirectionalArcParticleLife.field_o[var2Lifetime2]);
+          this.field_i[0] = SpecialOrderStatus.xorLong(this.field_i[0], GetShieldsDirectionalArcParticleLife.field_o[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_i[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_h[var3Lifetime1Lifetime2] = ihb.a(this.field_h[var3Lifetime1Lifetime2], GetShieldsDirectionalArcParticleLife.field_r[var7][dla.a(255, (int)(this.field_d[dla.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_h[var3Lifetime1Lifetime2] = SpecialOrderStatus.xorLong(this.field_h[var3Lifetime1Lifetime2], GetShieldsDirectionalArcParticleLife.field_r[var7][dla.a(255, (int)(this.field_d[dla.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -173,7 +173,7 @@ final class fj {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = ihb.a(this.field_l[var2Lifetime3], ihb.a(this.field_j[var2Lifetime3], this.field_d[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = SpecialOrderStatus.xorLong(this.field_l[var2Lifetime3], SpecialOrderStatus.xorLong(this.field_j[var2Lifetime3], this.field_d[var2Lifetime3]));
         }
     }
 

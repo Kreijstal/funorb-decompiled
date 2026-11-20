@@ -251,7 +251,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetMomentOfInertiaPerpointCalcDownshift.field_p = param1[111];
           SetThrusterBindingMoveAndTurnHasOppositeMove.field_p = param1[120];
           MatchResults.field_b = param1[68];
-          gda.field_d = param1[40];
+          ComponentContact.field_d = param1[40];
           ehb.field_e = param1[152];
           GetFullMissionSet.field_p = param1[36];
           voa.field_b = param1[144];

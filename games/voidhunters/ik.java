@@ -36,7 +36,7 @@ final class ik extends IntrusiveNode {
         var2[220] = Particle.field_n;
         var2[33] = qrb.field_a;
         var2[189] = VariableConditionFactory.field_a;
-        var2[40] = gda.field_d;
+        var2[40] = ComponentContact.field_d;
         var2[25] = SetMissilesTopSpeed.field_o;
         var2[203] = PacketBuffer.field_d;
         var2[89] = r.field_k;

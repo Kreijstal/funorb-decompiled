@@ -33,7 +33,7 @@ final class tib extends eca {
             field_i = (byte[]) null;
           }
           if (!param0.equals(this.field_f)) {
-            var3 = qua.a(false, param0);
+            var3 = ComponentAttachmentPlan.a(false, param0);
             if (var3 != null &&
               null == var3.field_f) {
               this.field_f = param0;
@@ -96,7 +96,7 @@ final class tib extends eca {
             return stackIn_6_0;
           }
           if (!param0.equals(this.field_f)) {
-            var4 = qua.a(false, param0);
+            var4 = ComponentAttachmentPlan.a(false, param0);
             if (var4 == null) {
               return null;
             }

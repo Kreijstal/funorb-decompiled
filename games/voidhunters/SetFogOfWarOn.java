@@ -79,7 +79,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_mission_variables_hud_y(" + jra.field_c + ")");
         System.out.println("set_audio_range_cutoff(" + Projectile.field_q + ")");
         System.out.println("set_reverb_gain(" + SetMissileLauncherEnergyUsed.field_p + ")");
-        System.out.println("set_reverb_feedback(" + qua.field_b + ")");
+        System.out.println("set_reverb_feedback(" + ComponentAttachmentPlan.field_b + ")");
         System.out.println("set_reverb_damp(" + MapClearanceRectangleFactory.field_a + ")");
         System.out.println("set_reverb_wet(" + nl.field_n + ")");
         System.out.println("set_reverb_dry(" + GetMissileLauncherProjectiles.field_o + ")");
@@ -154,7 +154,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_client_side_dragging(" + GetMomentOfInertiaPredivideDownshift.field_q + ")");
         System.out.println("set_salvo_damage_multiplier(" + GetVelocitySustain.field_o + ")");
         System.out.println("set_salvo_repair_time_multiplier(" + GrappleLauncherBehaviour.field_d + ")");
-        System.out.println("set_mp_sandbox_enemy_spawn_limit(" + gda.field_d + ")");
+        System.out.println("set_mp_sandbox_enemy_spawn_limit(" + ComponentContact.field_d + ")");
         System.out.println("set_max_ship_size(" + OpenGlShader.field_a + ")");
         System.out.println("set_fighters_per_player_maximum(" + wk.field_a + ")");
         System.out.println("set_burst_fire_max_energy(" + PartitionZone.field_e + ")");

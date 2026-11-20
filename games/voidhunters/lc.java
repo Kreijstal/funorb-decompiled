@@ -14,23 +14,23 @@ final class lc {
         ShipComponent var6 = null;
         ShipComponent var7 = null;
         try {
-          param1.a(1, 9, new ShipComponent(16));
-          param1.a(1, 14, new ShipComponent(13));
-          param1.a(1, 4, new ShipComponent(13));
-          param1.a(1, 0, new ShipComponent(13));
-          param1.a(1, 18, new ShipComponent(13));
+          param1.attachToHardpoint(1, 9, new ShipComponent(16));
+          param1.attachToHardpoint(1, 14, new ShipComponent(13));
+          param1.attachToHardpoint(1, 4, new ShipComponent(13));
+          param1.attachToHardpoint(1, 0, new ShipComponent(13));
+          param1.attachToHardpoint(1, 18, new ShipComponent(13));
           var4 = new ShipComponent(39);
           var5 = new ShipComponent(30);
-          var5.a(1, 0, new ShipComponent(24));
-          var4.a(param0 ^ 39, 3, var5);
-          var4.a(param0 ^ 39, 1, new ShipComponent(13));
-          param1.a(1, 3, var4);
+          var5.attachToHardpoint(1, 0, new ShipComponent(24));
+          var4.attachToHardpoint(param0 ^ 39, 3, var5);
+          var4.attachToHardpoint(param0 ^ 39, 1, new ShipComponent(13));
+          param1.attachToHardpoint(1, 3, var4);
           var6 = new ShipComponent(param0);
           var7 = new ShipComponent(30);
-          var7.a(1, 1, new ShipComponent(24));
-          var6.a(param0 ^ 39, 2, var7);
-          var6.a(1, 4, new ShipComponent(13));
-          param1.a(1, 15, var6);
+          var7.attachToHardpoint(1, 1, new ShipComponent(24));
+          var6.attachToHardpoint(param0 ^ 39, 2, var7);
+          var6.attachToHardpoint(1, 4, new ShipComponent(13));
+          param1.attachToHardpoint(1, 15, var6);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

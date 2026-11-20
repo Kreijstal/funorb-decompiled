@@ -221,7 +221,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         SpawnChoiceFactory.field_c.a(0, 124, tb.field_a.field_hb, -40 + tb.field_a.field_G, 40);
         qpb.field_w.a(0, -65, bqa.field_d.field_hb, 0, 30);
         sra.field_a.a(0, 124, bqa.field_d.field_hb, 30, -32 + bqa.field_d.field_G - 40);
-        fwa.field_a.a(5, param0 ^ 120, 68, 5, 30);
+        ArchiveIndexLoader.field_a.a(5, param0 ^ 120, 68, 5, 30);
         GetSniperCannonAimspeed.field_q.a(75, 18, 78, 5, 30);
         SettingsChangeFactory.field_b.a(155, 124, 48, 5, 30);
         GrapplingHook.field_C.a(205, param0 ^ 113, 48, 5, 30);

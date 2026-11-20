@@ -94,7 +94,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             var30 = uca.a(var4, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 4, 6, 8, 9, 10, 0, 2, 0, 10, 0, 2, 0, 10, 0}, var3);
             var22 = new ShipComponentDefinition(var30, 0, 0);
             ta.a(var30, param0 + 12, var22);
-            var22.a(102, 15);
+            var22.scaleMassDown(102, 15);
             SpawnPointFactory.a(var2, var22, false);
           } else {
             var3_ref_wfb = hab.field_g[SetMissileLauncherProjectileLife.field_p];
@@ -110,8 +110,8 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                       var18 = var24;
                       var6 = var18;
                       for (var7 = 0; var7 < var29.length; var7++) {
-                        var15[var7 << 1] = var2.a(var3_ref_wfb.field_v[var29[var7] << 1], (byte) 119);
-                        var15[(var7 << 1) + 1] = var2.b(true, var3_ref_wfb.field_v[1 + (var29[var7] << 1)]);
+                        var15[var7 << 1] = var2.a(var3_ref_wfb.outline[var29[var7] << 1], (byte) 119);
+                        var15[(var7 << 1) + 1] = var2.b(true, var3_ref_wfb.outline[1 + (var29[var7] << 1)]);
                       }
                       for (var7 = 0; var7 < var24.length; var7 += 2) {
                         var8 = var24[var7];

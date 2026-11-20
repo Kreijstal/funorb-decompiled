@@ -135,7 +135,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         return true;
     }
 
-    private final native void MA(d param0, int param1, int param2);
+    private final native void MA(TextureProvider param0, int param1, int param2);
 
     final int getMaxPointLights() {
         return 4;
@@ -352,7 +352,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
 
     final native void setAmbientLight(float param0);
 
-    public NativeSoftwareToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
+    public NativeSoftwareToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
         super(param1);
         NativeSoftwareTransform3D discarded$1 = null;
         Throwable decompiledCaughtException = null;
@@ -392,23 +392,23 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
     private final boolean WA(short param0) {
         Object var2 = null;
         Object var2_ref = null;
-        opa var3 = null;
+        TextureMetadata var3 = null;
         int[] var4 = null;
         Throwable var5 = null;
         Throwable decompiledCaughtException = null;
         var2_ref = this.field_a;
         synchronized (var2_ref) {
-          if (!this.field_a.a((int) param0, (byte) -73)) {
+          if (!this.field_a.isTextureReady((int) param0, (byte) -73)) {
             return false;
           }
-          var3 = this.field_a.a(-20292, (int) param0);
+          var3 = this.field_a.getTextureMetadata(-20292, (int) param0);
           if (var3 == null) {
             return false;
           }
           if (var3.field_q == 2) {
-            var4 = this.field_a.a(99, 128, 128, true, (int) param0, 0.699999988079071f);
+            var4 = this.field_a.generateArgbPixels(99, 128, 128, true, (int) param0, 0.699999988079071f);
           } else {
-            var4 = this.field_a.a(128, 0.699999988079071f, true, (int) param0, 128, true);
+            var4 = this.field_a.generateRgbPixels(128, 0.699999988079071f, true, (int) param0, 128, true);
           }
           this.CA(param0, var4, var3.field_l, var3.field_q, var3.field_c, var3.field_n, var3.field_o, var3.field_h, var3.field_b, var3.field_g, var3.field_p, var3.field_d, var3.field_r, var3.field_m, var3.field_a, var3.field_k, var3.field_s, var3.field_j, var3.field_i, var3.field_e, var3.field_f);
         }
@@ -418,12 +418,12 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
     private final boolean c(short param0) {
         Object var2 = null;
         Object var2_ref = null;
-        opa var3 = null;
+        TextureMetadata var3 = null;
         Throwable var4 = null;
         Throwable decompiledCaughtException = null;
         var2_ref = this;
         synchronized (var2_ref) {
-          var3 = this.field_a.a(-20292, (int) param0);
+          var3 = this.field_a.getTextureMetadata(-20292, (int) param0);
           if (var3 == null) {
             return false;
           }

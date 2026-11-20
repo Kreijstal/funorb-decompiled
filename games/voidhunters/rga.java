@@ -80,7 +80,7 @@ final class rga {
               }
             }
           }
-          this.field_e = this.field_h.a(128, 16, var25, qua.field_d, 128, -16539);
+          this.field_e = this.field_h.a(128, 16, var25, ComponentAttachmentPlan.field_d, 128, -16539);
         }
         return null != this.field_e ? true : false;
     }

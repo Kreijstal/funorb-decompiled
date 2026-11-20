@@ -226,11 +226,11 @@ final class WeaponBehaviour implements DiffableState {
           var24 = var21 * (param14 >> 4) >> 12;
           var25 = var21 * (param6 >> 4) >> 12;
           if (var20 != 0) {
-            param10.a(var18_int * -var25, param5, param8, (byte) -125, var18_int * -var24);
+            param10.addForceAtPoint(var18_int * -var25, param5, param8, (byte) -125, var18_int * -var24);
           }
-          var26 = var24 * SetMissionDebrisDefaultProbability.field_o + param10.c((byte) -126);
+          var26 = var24 * SetMissionDebrisDefaultProbability.field_o + param10.getVelocityX((byte) -126);
           var28 = 47 % ((15 - param2) / 63);
-          var27 = var25 * SetMissionDebrisDefaultProbability.field_o + param10.f(0);
+          var27 = var25 * SetMissionDebrisDefaultProbability.field_o + param10.getVelocityY(0);
           if (param16.e(-34)) {
             var27 = -param7 + param11;
             var26 = param0 - param13;
@@ -269,7 +269,7 @@ final class WeaponBehaviour implements DiffableState {
           if (this.weapontype != 6 &&
             this.weapontype != 9 &&
             this.weapontype != 11) {
-            param15.a(5, param10.c((byte) -121) + (var24 >> MovingObjectFactory.field_b), 20, 20, 30273, param13, 500, param7, param10.f(0) + (var25 >> MovingObjectFactory.field_b));
+            param15.a(5, param10.getVelocityX((byte) -121) + (var24 >> MovingObjectFactory.field_b), 20, 20, 30273, param13, 500, param7, param10.getVelocityY(0) + (var25 >> MovingObjectFactory.field_b));
           }
           if (this.weapontype == 9 &&
             param4 >= 0) {
@@ -408,14 +408,14 @@ final class WeaponBehaviour implements DiffableState {
               return;
             }
             var25 = TimedSpecialOrderBehaviour.a(false);
-            var25.a(var20Lifetime1, var21Lifetime1, (byte) 118);
-            var25.a(param8, -122);
+            var25.setPosition(var20Lifetime1, var21Lifetime1, (byte) 118);
+            var25.setAngle(param8, -122);
             var25.setTeam(17704, var22);
             var25.setOwner(-1, -111);
             var26 = new ShipAI();
             var26.a(var23, true);
             var25.setAi(var26, 4);
-            var25.a(var21Lifetime1, param8, var20Lifetime1, 500, 1948934248);
+            var25.addDirectionalForce(var21Lifetime1, param8, var20Lifetime1, 500, 1948934248);
             param0.a(var25, (byte) 72);
             this.reload = var34.f((byte) 77);
             GetFighterVision.a(6811, var34.a(false), 1 + this.reload / 2);
@@ -481,7 +481,7 @@ final class WeaponBehaviour implements DiffableState {
             if (var29 != null) {
               var31 = -param3 + var29.x;
               var32 = var29.y - param6;
-              if (ar.a(var31, (byte) 112, var32) <= var29.b(true) + 32768) {
+              if (ar.a(var31, (byte) 112, var32) <= var29.getBoundingRadius(true) + 32768) {
                 this.targetLock.targetId = var29.getId(false);
                 this.targetLock.targetX = param3 - var29.getX(false);
                 this.targetLock.targetY = -var29.getY((byte) -122) + param6;
@@ -670,7 +670,7 @@ final class WeaponBehaviour implements DiffableState {
         try {
           if (0 < this.reload) {
             this.reload = this.reload - 1;
-            param1.d((byte) 87);
+            param1.onStateChanged((byte) 87);
           }
           if (this.weapontype == 10 &&
             Particle.field_a - Particle.field_n < this.reload) {
@@ -742,16 +742,16 @@ final class WeaponBehaviour implements DiffableState {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param4.c(param0 + 26894);
+          var6_int = param4.getAimArc(param0 + 26894);
           if (var6_int == 0) {
             return false;
           }
           if (param0 != -26772) {
             this.reload = 95;
           }
-          var7 = param4.a(param3, (byte) -69);
-          var8 = param4.a(-119, param3);
-          var9 = param4.g((byte) -127);
+          var7 = param4.getWorldConnectionX(param3, (byte) -69);
+          var8 = param4.getWorldConnectionY(-119, param3);
+          var9 = param4.getUnrotatedWorldAngle((byte) -127);
           var10 = param2 - var7;
           var11 = param1 - var8;
           var12 = GameSnapshotFactory.a(var11, (byte) -77, var10);

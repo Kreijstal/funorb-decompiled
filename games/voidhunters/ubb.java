@@ -224,7 +224,7 @@ final class ubb extends kva implements eb {
     }
 
     ubb(OpenGlGpuToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, 3553, qua.field_d, mj.field_f, param2 * param1, param3);
+        super(param0, 3553, ComponentAttachmentPlan.field_d, mj.field_f, param2 * param1, param3);
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

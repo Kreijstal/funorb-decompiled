@@ -342,7 +342,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rm_x_from_ignore", 23100);
                 if (null != var2) {
-                  lu.field_c = qpa.a((byte) -125, var2);
+                  HardpointMatch.field_c = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("send_pm_to_x", 23100);
                 if (null != var2) {
@@ -626,7 +626,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_can_join", 23100);
                 if (null != var2) {
-                  gda.field_k = qpa.a((byte) -125, var2);
+                  ComponentContact.field_k = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_can_ask_to_join", 23100);
                 if (null != var2) {

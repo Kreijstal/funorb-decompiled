@@ -97,7 +97,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           SetThrusterForce.field_o = param6;
           ocb.field_l = param0.length;
           SetSpinningBladeSpindamageMultiplier.field_o = null;
-          ii.field_h = false;
+          ArchiveTextureProvider.field_h = false;
           SetThrusterParticleSpeedDownshift.field_o = null;
           GetPlayerRepairTime.field_o = new byte[(7 + SetThrusterForce.field_o) / 8];
           var10_int = 0;

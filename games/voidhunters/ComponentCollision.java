@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fka extends IntrusiveNode {
-    int field_e;
-    ShipComponent field_d;
-    ShipComponent field_f;
+final class ComponentCollision extends IntrusiveNode {
+    int overlapScore;
+    ShipComponent first;
+    ShipComponent second;
 
     final static void a(String param0, byte param1) {
         try {
           if (param1 > -51) {
-            fka.a(96, (byte) 89, false, true, true);
+            ComponentCollision.a(96, (byte) 89, false, true, true);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fka.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -338,7 +338,7 @@ final class fka extends IntrusiveNode {
             SetPhasedEnergyBeamPulsetime.field_o.field_R = SetReverbGain.a(GetArmageddonLength.field_o, new String[]{Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_zb), Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_Fb)}, 124);
           }
           if (param1 < 8) {
-            fka.a(-44, (byte) 40, true, false, true);
+            ComponentCollision.a(-44, (byte) 40, true, false, true);
           }
           stackIn_165_0 = rga.field_g;
           stackIn_166_1 = (param3) && (!param4) && (!GetTorpedoProjectileDamage.field_o);
@@ -373,11 +373,11 @@ final class fka extends IntrusiveNode {
         }
     }
 
-    fka(ShipComponent param0, int param1, ShipComponent param2, int param3, int param4) {
+    ComponentCollision(ShipComponent param0, int param1, ShipComponent param2, int param3, int param4) {
         try {
-          this.field_d = param0;
-          this.field_f = param2;
-          this.field_e = param4;
+          this.first = param0;
+          this.second = param2;
+          this.overlapScore = param4;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

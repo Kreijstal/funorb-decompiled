@@ -34,7 +34,7 @@ final class jf extends ora implements hdb {
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
         stackIn_3_1 = (Direct3DToolkit) (param0);
-        stackIn_3_2 = qua.field_d;
+        stackIn_3_2 = ComponentAttachmentPlan.field_d;
         stackIn_3_3 = mj.field_f;
         if (param2) {
           stackIn_3_0Lifetime1 = this;

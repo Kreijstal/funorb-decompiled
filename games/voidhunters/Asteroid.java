@@ -6,7 +6,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
     private int field_u;
     static bwa field_v;
 
-    final int d(int param0) {
+    final int getBodyKind(int param0) {
         if (param0 <= 42) {
           IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
           this.writeCompactState((IsaacPacketBuffer) null, (byte) -116);
@@ -137,10 +137,10 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
 
     Asteroid() {
         this.field_u = 0;
-        this.d((byte) -50);
+        this.onStateChanged((byte) -50);
     }
 
-    final void d(byte param0) {
+    final void onStateChanged(byte param0) {
         int fieldTemp$0 = SetLag.field_o;
         SetLag.field_o = SetLag.field_o + 1;
         this.field_u = fieldTemp$0;
@@ -150,10 +150,10 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
 
     Asteroid(ShipComponent param0) {
         this.field_u = 0;
-        this.d((byte) -50);
+        this.onStateChanged((byte) -50);
         try {
           this.chassis = param0;
-          this.e((byte) 119);
+          this.recalculateMassProperties((byte) 119);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "crb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

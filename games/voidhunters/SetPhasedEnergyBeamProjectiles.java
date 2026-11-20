@@ -11,7 +11,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         var3 = VoidHunters.field_G;
         if (param0) {
           var4 = (asb) null;
-          SetPhasedEnergyBeamProjectiles.a(true, (java.awt.Canvas) null, -80, (d) null, (asb) null, 58);
+          SetPhasedEnergyBeamProjectiles.a(true, (java.awt.Canvas) null, -80, (TextureProvider) null, (asb) null, 58);
         }
         var2 = param1;
         if (0 == var2) {
@@ -137,7 +137,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         return null;
     }
 
-    final static GraphicsToolkit a(boolean param0, java.awt.Canvas param1, int param2, d param3, asb param4, int param5) {
+    final static GraphicsToolkit a(boolean param0, java.awt.Canvas param1, int param2, TextureProvider param3, asb param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -224,13 +224,13 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
 
     final static void a(ShipComponent param0, int param1) {
         try {
-          param0.a(1, 0, new ShipComponent(13));
-          param0.a(1, 8, new ShipComponent(13));
-          param0.a(1, 9, new ShipComponent(13));
+          param0.attachToHardpoint(1, 0, new ShipComponent(13));
+          param0.attachToHardpoint(1, 8, new ShipComponent(13));
+          param0.attachToHardpoint(1, 9, new ShipComponent(13));
           int var2_int = 21 % ((param1 - 57) / 55);
-          param0.a(1, 1, new ShipComponent(42));
-          param0.a(1, 7, new ShipComponent(42));
-          param0.a(1, 4, new ShipComponent(22));
+          param0.attachToHardpoint(1, 1, new ShipComponent(42));
+          param0.attachToHardpoint(1, 7, new ShipComponent(42));
+          param0.attachToHardpoint(1, 4, new ShipComponent(22));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

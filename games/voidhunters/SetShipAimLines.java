@@ -111,7 +111,7 @@ final class SetShipAimLines extends ConsoleCommand {
         }
     }
 
-    final static GraphicsToolkit a(byte param0, int param1, java.awt.Canvas param2, d param3, int param4) {
+    final static GraphicsToolkit a(byte param0, int param1, java.awt.Canvas param2, TextureProvider param3, int param4) {
         RuntimeException var5 = null;
         NativeSoftwareToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

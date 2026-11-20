@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qua {
+final class ComponentAttachmentPlan {
     static dpb field_a;
-    lu field_e;
+    HardpointMatch hardpoint;
     static float field_b;
-    ShipComponent[] field_c;
+    ShipComponent[] obstructions;
     static kb field_d;
 
-    final void a(byte param0, ShipComponent param1) {
+    final void addObstruction(byte param0, ShipComponent param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -22,9 +22,9 @@ final class qua {
         var5 = VoidHunters.field_G;
         try {
           var3_int = 1;
-          for (var4 = 0; this.field_c.length > var4; var4++) {
-            if (this.field_c[var4] != param1 &&
-              !this.field_c[var4].a(16, param1)) {
+          for (var4 = 0; this.obstructions.length > var4; var4++) {
+            if (this.obstructions[var4] != param1 &&
+              !this.obstructions[var4].containsDescendant(16, param1)) {
               continue;
             }
             var3_int = 0;
@@ -32,18 +32,18 @@ final class qua {
           }
           if (var3_int != 0) {
             var4Lifetime1 = 0;
-            while (var4Lifetime1 < this.field_c.length) {
-              if (param1.a(16, this.field_c[var4Lifetime1])) {
-                this.field_c = (ShipComponent[]) (GetSalvoUsesAllEnergy.a(ii.field_d, var4Lifetime1, 15667, this.field_c));
+            while (var4Lifetime1 < this.obstructions.length) {
+              if (param1.containsDescendant(16, this.obstructions[var4Lifetime1])) {
+                this.obstructions = (ShipComponent[]) (GetSalvoUsesAllEnergy.a(ArchiveTextureProvider.field_d, var4Lifetime1, 15667, this.obstructions));
                 var4Lifetime1--;
               }
               var4Lifetime1++;
             }
-            this.field_c = (ShipComponent[]) (ija.a(param1, this.field_c, 0, ii.field_d));
+            this.obstructions = (ShipComponent[]) (ija.a(param1, this.obstructions, 0, ArchiveTextureProvider.field_d));
           }
           if (param0 != 108) {
             var6 = (String) null;
-            qua.a(false, (String) null);
+            ComponentAttachmentPlan.a(false, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -261,10 +261,10 @@ final class qua {
         }
     }
 
-    qua(lu param0) {
+    ComponentAttachmentPlan(HardpointMatch param0) {
         try {
-          this.field_e = param0;
-          this.field_c = new ShipComponent[]{};
+          this.hardpoint = param0;
+          this.obstructions = new ShipComponent[]{};
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -285,7 +285,7 @@ final class qua {
           }
           if (param0) {
             var3 = (CharSequence) null;
-            qua.a((CharSequence) null, true);
+            ComponentAttachmentPlan.a((CharSequence) null, true);
           }
           if (SetSniperCannonFireForce.field_o == SetShipTeamAction.field_b &&
             param1.equals(SetCountermeasureLauncherAimarc.field_q)) {
@@ -316,7 +316,7 @@ final class qua {
         field_d = null;
         if (param0 != 16606) {
           String var2 = (String) null;
-          qua.a(false, (String) null);
+          ComponentAttachmentPlan.a(false, (String) null);
         }
         field_a = null;
     }

@@ -9,10 +9,10 @@ final class MissionList implements DiffableState {
         if (param0 >= -41) {
           return false;
         }
-        if (null == fwa.field_g) {
+        if (null == ArchiveIndexLoader.field_g) {
           return false;
         }
-        if (fwa.field_g.field_e == null) {
+        if (ArchiveIndexLoader.field_g.field_e == null) {
           return false;
         }
         return true;

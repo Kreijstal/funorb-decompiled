@@ -50,16 +50,16 @@ final class SetRepairModeCooldown extends ConsoleCommand {
         int var1_intLifetime1;
         var4 = VoidHunters.field_G;
         try {
-          if (null == fwa.field_g) {
+          if (null == ArchiveIndexLoader.field_g) {
             var1_int = 107 % ((param0 + 59) / 38);
             stackIn_13_0 = 9;
             return stackIn_13_0;
           }
           var1_intLifetime1 = 0;
           for (var2 = 3; 12 > var2; var2++) {
-            var3 = fwa.field_g.componentoptionStates[var2];
-            if (fwa.field_g.a(var3, true, false) ||
-              fwa.field_g.c(var3, 78)) {
+            var3 = ArchiveIndexLoader.field_g.componentoptionStates[var2];
+            if (ArchiveIndexLoader.field_g.a(var3, true, false) ||
+              ArchiveIndexLoader.field_g.c(var3, 78)) {
               var1_intLifetime1++;
             }
           }

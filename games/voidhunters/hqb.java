@@ -212,7 +212,7 @@ final class hqb {
               this.field_i.a(SetReverbGain.a(GetAllowShipSaving.field_o, new String[]{var8}, 114), (byte) -53, 5);
             }
             if (var6 != 0) {
-              this.field_i.a(SetReverbGain.a(lu.field_c, new String[]{var8}, 80), (byte) -53, 7);
+              this.field_i.a(SetReverbGain.a(HardpointMatch.field_c, new String[]{var8}, 80), (byte) -53, 7);
             }
           }
           if (param0 >= -13) {

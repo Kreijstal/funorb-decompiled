@@ -9,7 +9,7 @@ final class SetWorldWidthUpshift extends ConsoleCommand {
         return 1;
     }
 
-    final static GraphicsToolkit a(d param0, int param1, int param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit a(TextureProvider param0, int param1, int param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
         SoftwareToolkit stackIn_4_0 = null;
@@ -57,7 +57,7 @@ final class SetWorldWidthUpshift extends ConsoleCommand {
         try {
           if (obfuscationGuard > -119) {
             var4 = (java.awt.Canvas) null;
-            SetWorldWidthUpshift.a((d) null, -53, -128, (java.awt.Canvas) null, -4);
+            SetWorldWidthUpshift.a((TextureProvider) null, -53, -128, (java.awt.Canvas) null, -4);
           }
           SetMachineGunEnergyUsed.a(193, 62, arguments[0].intValue(88));
           stackIn_3_0 = new ConsoleValue("void");

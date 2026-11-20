@@ -30,7 +30,7 @@ final class ShipAI implements DiffableState {
           for (var5 = 0; var5 < param2; var5++) {
             var6 = param0[var5];
             var7 = var6.weaponbehaviour.weapontype;
-            if (!var6.k((byte) 86) &&
+            if (!var6.isDestroyed((byte) 86) &&
               2 != var7 &&
               var7 != 8 &&
               9 != var7 &&
@@ -95,12 +95,12 @@ final class ShipAI implements DiffableState {
           var4_int = 0;
           var5 = param0;
           var6 = param2.a(true);
-          var7 = param1.g(-101);
+          var7 = param1.getBoundingExtent(-101);
           var8 = var6;
           for (var9 = 0; var9 < var8.length; var9++) {
             var10 = var8[var9];
             if (var10 != null) {
-              var11 = var10.g(-42) + var7 >> 6;
+              var11 = var10.getBoundingExtent(-42) + var7 >> 6;
               var12 = var10.x - param1.x;
               var13 = var10.y - param1.y;
               var14 = ar.a(var12, (byte) 122, var13) >> 9;
@@ -174,8 +174,8 @@ final class ShipAI implements DiffableState {
           this.field_e = 0;
           this.field_f = 0;
           this.a(param3, (byte) -89, param2, param1);
-          if (!param2.g(param0)) {
-            var5_int = param2.chassis.l(-8913);
+          if (!param2.isFighter(param0)) {
+            var5_int = param2.chassis.countActiveThrusters(-8913);
             if (var5_int > 0) {
               this.a(0, param2, param3);
               this.a(param3, (byte) -103, param2);
@@ -308,12 +308,12 @@ final class ShipAI implements DiffableState {
           var4_int = param0.dx;
           var5 = param0.dy;
           var6 = param0.angularvelocity;
-          var7 = param0.chassis.b(127, 0);
+          var7 = param0.chassis.collectWeapons(127, 0);
           var8 = this.a(GetPointDefenceLaserProjectileInterceptDamage.field_q, -18, var7);
           if (var8 > GetUseNiceTrails.field_p) {
             var8 = GetUseNiceTrails.field_p;
           }
-          if (param0.g(false)) {
+          if (param0.isFighter(false)) {
             var9_ref_Random = new Random((long)(param0.id * GetSniperCannonFireForce.field_o));
             var10 = 1000;
             if (this.field_a == null) {
@@ -340,13 +340,13 @@ final class ShipAI implements DiffableState {
               for (var18 = 0; var18 < var7; var18++) {
                 var19_ref_ml = GetPointDefenceLaserProjectileInterceptDamage.field_q[var18];
                 var20 = var19_ref_ml.weaponbehaviour.weapontype;
-                if (!var19_ref_ml.k((byte) 48) &&
+                if (!var19_ref_ml.isDestroyed((byte) 48) &&
                   var20 != 2 &&
                   var20 != 8 &&
                   9 != var20 &&
                   var20 != 10 &&
                   var8 >> 3 <= var19_ref_ml.weaponbehaviour.a((byte) 24).j(127)) {
-                  var21 = var19_ref_ml.g((byte) -127);
+                  var21 = var19_ref_ml.getUnrotatedWorldAngle((byte) -127);
                   var22 = GameKeyHandler.a(param1 + 22506, var15 - var21);
                   if (var17 > Math.abs(var22)) {
                     var17 = Math.abs(var22);
@@ -358,24 +358,24 @@ final class ShipAI implements DiffableState {
                 this.field_f = var16 << 8;
               }
               if (di.field_p == 0) {
-                param0.a(8, var11, var10Lifetime1);
+                param0.aimAt(8, var11, var10Lifetime1);
               }
               var9 = var9 | 16;
             } else {
               if (0 != this.field_e &&
                 this.field_d != 0) {
                 var16 = GameSnapshotFactory.a(this.field_d, (byte) -77, this.field_e);
-                this.field_f = GameKeyHandler.a(22433, var16 - param0.e(param1 ^ -73)) << 8;
+                this.field_f = GameKeyHandler.a(22433, var16 - param0.getAngle(param1 ^ -73)) << 8;
               }
             }
             if (GetUseNiceTrails.field_p > var14) {
-              param0.a(-73, 2, param2, var11, var10Lifetime1);
-              param0.a(-126, 6, param2, var11, var10Lifetime1);
+              param0.activateSpecialOrder(-73, 2, param2, var11, var10Lifetime1);
+              param0.activateSpecialOrder(-126, 6, param2, var11, var10Lifetime1);
               if (!param0.getShieldsOn(31390)) {
-                param0.a(param1 ^ 30, 3, param2, var11, var10Lifetime1);
+                param0.activateSpecialOrder(param1 ^ 30, 3, param2, var11, var10Lifetime1);
               }
             }
-            if (param0.chassis.b((byte) 70, 7)) {
+            if (param0.chassis.hasAvailableSpecialOrder((byte) 70, 7)) {
               var16_ref_ij = param2.getProjectiles(true);
               var17Lifetime2 = 0;
               var18_ref_tj = (Projectile) (var16_ref_ij.first(0));
@@ -400,7 +400,7 @@ final class ShipAI implements DiffableState {
                 if (var17Lifetime2 == 0) {
                   break;
                 }
-                param0.a(-111, 7, param2, var11, var10Lifetime1);
+                param0.activateSpecialOrder(-111, 7, param2, var11, var10Lifetime1);
                 break;
               }
             }
@@ -425,7 +425,7 @@ final class ShipAI implements DiffableState {
             if (var14Lifetime1 != 0 ||
               var15Lifetime1 != 0) {
               var17Lifetime1 = GameSnapshotFactory.a(var15Lifetime1, (byte) -77, var14Lifetime1);
-              var18Lifetime1 = param0.e(0);
+              var18Lifetime1 = param0.getAngle(0);
               var19Lifetime1 = GameKeyHandler.a(22433, var17Lifetime1 - var18Lifetime1);
               var20Lifetime1 = GameKeyHandler.a(22433, -4096 - (var18Lifetime1 - var17Lifetime1));
               var21Lifetime1 = GameKeyHandler.a(22433, 2048 - (var18Lifetime1 - var17Lifetime1));
@@ -447,7 +447,7 @@ final class ShipAI implements DiffableState {
           if (var9 == 0) {
             return false;
           }
-          param0.a(param2, var9, false, var10Lifetime1, var11);
+          param0.applyControls(param2, var9, false, var10Lifetime1, var11);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -502,7 +502,7 @@ final class ShipAI implements DiffableState {
           if (param1 != -103) {
             return;
           }
-          var6 = param2.g(-100);
+          var6 = param2.getBoundingExtent(-100);
           var7 = param0.getShips(1000);
           var8 = var7;
           for (var9 = 0; var8.length > var9; var9++) {
@@ -510,7 +510,7 @@ final class ShipAI implements DiffableState {
             if (var10 != null &&
               param2 != var10 &&
               var10.getTeam((byte) 70) == param2.getTeam((byte) 97)) {
-              var11 = var6 + var10.g(-86) >> 6;
+              var11 = var6 + var10.getBoundingExtent(-86) >> 6;
               var12 = -param2.x + var10.x;
               var13 = var10.y - param2.y;
               var14 = ar.a(var12, (byte) 109, var13) >> 9;

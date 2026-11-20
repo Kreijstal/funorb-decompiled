@@ -132,7 +132,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
             var7 = var5[var6];
             if (var7 != null &&
               var7.getTeam((byte) 105) == this.teamId &&
-              0 < var7.chassis.a(this.componentTypeId, 0)) {
+              0 < var7.chassis.countType(this.componentTypeId, 0)) {
               return true;
             }
           }
@@ -235,7 +235,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
               var7.getTeam((byte) 114) == this.teamId &&
               !var7.hasAi((byte) -10) &&
               var7.getOwner((byte) -117) >= 0 &&
-              var7.chassis.a(this.componentTypeId, 0) > 0) {
+              var7.chassis.countType(this.componentTypeId, 0) > 0) {
               param2 = SetAutozoomSpeedDivide.a(var7.getId(false), true, param2, (byte) -14);
             }
           }

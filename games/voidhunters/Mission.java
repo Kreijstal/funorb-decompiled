@@ -249,7 +249,7 @@ final class Mission implements DiffableState {
                   var9.savedShip = new Ship();
                 }
                 var8.copyTo((byte) 92, var9.savedShip);
-                var9.savedShip.u(-14);
+                var9.savedShip.prepareForSaving(-14);
               }
             }
           }

@@ -200,7 +200,7 @@ final class rw extends TextureOperation {
         int var3;
         int var4;
         var4 = VoidHunters.field_G;
-        this.field_p = ihb.a((byte) 95, this.field_i);
+        this.field_p = SpecialOrderStatus.a((byte) 95, this.field_i);
         this.d(-80);
         var2 = this.field_r - 1;
         if (param0 >= -35) {

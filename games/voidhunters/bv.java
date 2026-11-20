@@ -102,7 +102,7 @@ final class bv {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -4) {
-            stackIn_7_0 = !(lu.field_f[param0] < 50);
+            stackIn_7_0 = !(HardpointMatch.field_f[param0] < 50);
             return stackIn_7_0;
           }
           return true;
@@ -121,7 +121,7 @@ final class bv {
           if (param0 != 11) {
             return false;
           }
-          stackIn_10_0 = (qd.field_a[param1]) && (lu.field_f[param1] < 50);
+          stackIn_10_0 = (qd.field_a[param1]) && (HardpointMatch.field_f[param1] < 50);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -355,7 +355,7 @@ final class bv {
             var30 != 0) {
             GetMissilesHitSourceTeam.a(-1 + var20, var21 - 1, (byte) -128, 2 + var23, param3, 1, 2 + var22);
           }
-          ga.a(param3, false, var20, var21, var23, var22, 236981);
+          CachedArchiveProvider.a(param3, false, var20, var21, var23, var22, 236981);
           var24Lifetime1 = param1.a(0, 4 + var16 + var19);
           if (param5) {
             if (param0[3] < var24Lifetime1) {
@@ -468,10 +468,10 @@ final class bv {
         RuntimeException var5 = null;
         try {
           if (!qd.field_a[param2] &&
-            lu.field_f[param2] < param0 && (param3 ||
+            HardpointMatch.field_f[param2] < param0 && (param3 ||
             -1 == GetMassDriverFireForce.field_o ||
             param2 == GetMassDriverFireForce.field_o)) {
-            lu.field_f[param2] = lu.field_f[param2] + 2;
+            HardpointMatch.field_f[param2] = HardpointMatch.field_f[param2] + 2;
           }
           if (param1 <= 85) {
             field_a = (int[]) null;
@@ -533,8 +533,8 @@ final class bv {
               return;
             }
             if (null != var13 &&
-              ((Debris) (var13)).chassis.a(27, 0) > 0) {
-              ((Debris) (var13)).chassis.e(122, 27);
+              ((Debris) (var13)).chassis.countType(27, 0) > 0) {
+              ((Debris) (var13)).chassis.resetWeaponReloads(122, 27);
             }
             var12++;
           }
@@ -557,7 +557,7 @@ final class bv {
               var14.setTeam(17704, 1);
               var14.setAi(new ShipAI(), 4);
               var15 = param1.world.a(0, param1.world.m(1) / 2, 0, 0, var14.getTeam((byte) 108), param1.world.getWidth((byte) -122) / 2);
-              var14.a(var15.field_c, var15.field_b, (byte) 80);
+              var14.setPosition(var15.field_c, var15.field_b, (byte) 80);
               param1.world.a(var14, (byte) 72);
               var14.endSpawnProtection(-2);
               var16 = new MissionEvent();
@@ -677,11 +677,11 @@ final class bv {
               var15 = param0.a(param11, (byte) 59);
               var17 = 0;
               boolean decompiledNaturalLoopExit1 = false;
-              while (!(decompiledNaturalLoopExit1 = (!(lu.field_f.length > var17)))) {
-                stackIn_23_0 = lu.field_f[var17];
+              while (!(decompiledNaturalLoopExit1 = (!(HardpointMatch.field_f.length > var17)))) {
+                stackIn_23_0 = HardpointMatch.field_f[var17];
                 if (var43 == 0) {
                   if (stackIn_23_0 > 0) {
-                    lu.field_f[var17] = lu.field_f[var17] - 1;
+                    HardpointMatch.field_f[var17] = HardpointMatch.field_f[var17] - 1;
                   }
                   var17++;
                   continue;
@@ -704,7 +704,7 @@ final class bv {
                     break scanLoop1;
                   }
                   if (stackIn_41_0 != 4 &&
-                    lu.field_f[var19_int] > 0) {
+                    HardpointMatch.field_f[var19_int] > 0) {
                     GetMassDriverFireForce.field_o = var19_int;
                   } else {
                     var19_int++;
@@ -714,7 +714,7 @@ final class bv {
                 if (param12 == null) {
                   return;
                 }
-                stackIn_41_0 = param12.d(9, 49) ? 1 : 0;
+                stackIn_41_0 = param12.isSpecialOrderActive(9, 49) ? 1 : 0;
                 break;
               }
               if (stackIn_41_0 == 0) {
@@ -740,23 +740,23 @@ final class bv {
                 }
                 if (this.b(0, -116)) {
                   var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, bva.field_d), this.a(-6448, bib.field_f, mfb.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
-                  this.a(param0, param3, GetMutatorVotes.a(lu.field_f[0], 255), var16, var19, var20, 1619);
+                  this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[0], 255), var16, var19, var20, 1619);
                 }
                 if (this.b((byte) 11, 0) &&
                   !param12.getRepairModeOn(32)) {
-                  var20_int = param12.chassis.b(126, 0);
+                  var20_int = param12.chassis.collectWeapons(126, 0);
                   var21 = 0;
                   var22 = 0;
                   while (true) {
                     if (var22 < var20_int) {
                       var23 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var22];
-                      stackOut_81_0 = var23.k((byte) 122);
+                      stackOut_81_0 = var23.isDestroyed((byte) 122);
                       stackIn_92_0 = stackOut_81_0 ? 1 : 0;
                       stackIn_82_0 = stackOut_81_0;
                       if (var43 == 0) {
                         if (!stackIn_82_0 &&
                           var23.weaponbehaviour.b((byte) 119)) {
-                          var24_int = var23.c(-14);
+                          var24_int = var23.getAimArc(-14);
                           if (var24_int != 0) {
                             var21 = 1;
                           }
@@ -778,17 +778,17 @@ final class bv {
                     boolean decompiledNaturalLoopExit0 = false;
                     while (!(decompiledNaturalLoopExit0 = (var23_int >= var20_int))) {
                       var24 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var23_int];
-                      stackOut_100_0 = var24.k((byte) 73);
+                      stackOut_100_0 = var24.isDestroyed((byte) 73);
                       stackIn_117_0 = stackOut_100_0 ? 1 : 0;
                       stackIn_101_0 = stackOut_100_0;
                       if (var43 == 0) {
                         if (!stackIn_101_0) {
-                          var25 = var24.c(118);
+                          var25 = var24.getAimArc(118);
                           if (var25 != 0) {
-                            var26_int = GameKeyHandler.a(22433, var24.g((byte) -127) - var24.c(-61));
-                            var27 = GameKeyHandler.a(22433, var24.g((byte) -127) + var24.c(-118));
-                            var28 = var24.a(var24.i((byte) -112), (byte) -69);
-                            var29 = var24.a(125, var24.i((byte) -112));
+                            var26_int = GameKeyHandler.a(22433, var24.getUnrotatedWorldAngle((byte) -127) - var24.getAimArc(-61));
+                            var27 = GameKeyHandler.a(22433, var24.getUnrotatedWorldAngle((byte) -127) + var24.getAimArc(-118));
+                            var28 = var24.getWorldConnectionX(var24.getDefinition((byte) -112), (byte) -69);
+                            var29 = var24.getWorldConnectionY(125, var24.getDefinition((byte) -112));
                             var30 = 8;
                             var31 = var28 + (GetNumStars.a(var26_int, (byte) -96) * var30 >> 1);
                             var32 = (eu.a(var26_int, 44) * var30 >> 1) + var29;
@@ -801,8 +801,8 @@ final class bv {
                             var39 = param3.a(var28, (byte) 115);
                             var40 = param3.b(true, var29);
                             var41 = 11142145;
-                            var42 = GetMutatorVotes.a(lu.field_f[1], 255) >>> 2;
-                            if (!var24.weaponbehaviour.a(-26772, var18, var17, var24.i((byte) -112), var24)) {
+                            var42 = GetMutatorVotes.a(HardpointMatch.field_f[1], 255) >>> 2;
+                            if (!var24.weaponbehaviour.a(-26772, var18, var17, var24.getDefinition((byte) -112), var24)) {
                               if (PacketBuffer.field_g != 0) {
                                 var41 = 16712705;
                               }
@@ -832,25 +832,25 @@ final class bv {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
-                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
+                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(HardpointMatch.field_f[1], 255) << 24, 1);
                       }
                     } else {
                       if (var22 != 0) {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
-                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
+                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(HardpointMatch.field_f[1], 255) << 24, 1);
                       }
                     }
                     var23_int = 1024;
                     var24_array = new int[]{-var23_int + var17, var23_int + var17, -var23_int + var18, var23_int + var18};
-                    this.a(param0, param3, GetMutatorVotes.a(lu.field_f[1], 255), var16, var24_array, CarouselSlotStateDump.field_e, 1619);
+                    this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[1], 255), var16, var24_array, CarouselSlotStateDump.field_e, 1619);
                     break;
                   }
                 }
                 if (this.b((byte) 11, 0) &&
                   this.b((byte) 11, 1) &&
-                  !param12.d(4, 50)) {
+                  !param12.isSpecialOrderActive(4, 50)) {
                   if (GetUseDetailLines.field_o == -1 ||
                     -1 == GetTorpedoReload.field_q) {
                     var17 = param12.x;
@@ -864,26 +864,26 @@ final class bv {
                       !(param0.world.b(true) > 1) &&
                       param12.getDragging(46) != -1)) {
                       this.a((byte) 99, 3);
-                      lu.field_f[3] = 0;
+                      HardpointMatch.field_f[3] = 0;
                     }
                     if (param12.getDragging(-119) != -1) {
                       if (!param2) {
                         this.a((byte) 123, 3);
                       }
-                      lu.field_f[3] = 0;
+                      HardpointMatch.field_f[3] = 0;
                     }
                     if (this.b(3, -123)) {
                       var21_ref_int__ = var20_ref.getBoundingbox((byte) -82);
-                      this.a(param0, param3, GetMutatorVotes.a(lu.field_f[3], 255), var16, var21_ref_int__, GetMissionVotes.field_o, 1619);
+                      this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[3], 255), var16, var21_ref_int__, GetMissionVotes.field_o, 1619);
                       if ((var43 != 0) && (!qd.field_a[3] &&
-                        lu.field_f[3] > 0)) {
-                        lu.field_f[3] = lu.field_f[3] - 1;
+                        HardpointMatch.field_f[3] > 0)) {
+                        HardpointMatch.field_f[3] = HardpointMatch.field_f[3] - 1;
                       }
                     }
                   } else {
                     if (!qd.field_a[3] &&
-                      lu.field_f[3] > 0) {
-                      lu.field_f[3] = lu.field_f[3] - 1;
+                      HardpointMatch.field_f[3] > 0) {
+                      HardpointMatch.field_f[3] = HardpointMatch.field_f[3] - 1;
                     }
                   }
                 }
@@ -908,7 +908,7 @@ final class bv {
                     var20_int = param10 / 2;
                     var21 = param5 / 4;
                     var22_ref_int__ = new int[]{var20_int, var21};
-                    this.a(var22_ref_int__, param3, false, GetMutatorVotes.a(lu.field_f[2], 255), param0, false, ei.field_f, var16, (byte) 116);
+                    this.a(var22_ref_int__, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[2], 255), param0, false, ei.field_f, var16, (byte) 116);
                   }
                 }
                 if (this.b((byte) 11, 0) &&
@@ -930,16 +930,16 @@ final class bv {
                     var24_intLifetime1 = GetMassDriverFireForce.field_o;
                     GetMassDriverFireForce.field_o = -1;
                     this.a((byte) 113, var23_int, 4);
-                    if (~lu.field_f[4] == ~var23_int) {
+                    if (~HardpointMatch.field_f[4] == ~var23_int) {
                       this.a((byte) 113, 4);
                     }
                     if (this.b(4, -124)) {
-                      this.a(param0, param3, GetMutatorVotes.a(lu.field_f[4], 255), var16, var21_ref_int__Lifetime1, uia.field_a, 1619);
+                      this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[4], 255), var16, var21_ref_int__Lifetime1, uia.field_a, 1619);
                     }
                     GetMassDriverFireForce.field_o = var24_intLifetime1;
                   }
                   var20_ref2 = new IntrusiveDeque();
-                  param12.a(var20_ref2, 9, param2, param0.world.d(param12.getId(false), (byte) 21));
+                  param12.collectSpecialOrderStatuses(var20_ref2, 9, param2, param0.world.d(param12.getId(false), (byte) 21));
                   if (var20_ref2.size(3) > 1) {
                     this.a(-26476, 9);
                     if (SetMachineGunEnergyUsed.field_o[81]) {
@@ -949,7 +949,7 @@ final class bv {
                       var21 = 172;
                       var22 = param5 - 58;
                       var23_array = new int[]{var21, var22};
-                      this.a(var23_array, param3, false, GetMutatorVotes.a(lu.field_f[9], 255), param0, false, slb.field_b, var16, (byte) -47);
+                      this.a(var23_array, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[9], 255), param0, false, slb.field_b, var16, (byte) -47);
                     }
                   }
                   if (this.b((byte) 11, 9)) {
@@ -962,7 +962,7 @@ final class bv {
                       var21_ref_int__Lifetime1Lifetime1 = this.a(11, param9, 30, param4, param3, param6, param5, param1);
                       if (null != var21_ref_int__Lifetime1Lifetime1) {
                         var22_ref_String = SetReverbGain.a(SetCountermeasureLauncherAimarc.field_o, new String[]{SetTorpedoProjectileDamage.field_q[SetDetachmentMode.field_p]}, 110);
-                        this.a(var21_ref_int__Lifetime1Lifetime1, param3, true, GetMutatorVotes.a(lu.field_f[10], 255), param0, true, var22_ref_String, var16, (byte) -50);
+                        this.a(var21_ref_int__Lifetime1Lifetime1, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[10], 255), param0, true, var22_ref_String, var16, (byte) -50);
                       }
                     }
                   }
@@ -971,30 +971,30 @@ final class bv {
                     this.a((byte) 118, 10);
                   }
                   var21_ref_int__Lifetime1Lifetime2 = new int[2];
-                  param12.chassis.a(var21_ref_int__Lifetime1Lifetime2, (byte) -17, true);
+                  param12.chassis.accumulateHealth(var21_ref_int__Lifetime1Lifetime2, (byte) -17, true);
                   var22 = var21_ref_int__Lifetime1Lifetime2[0] * 256 / var21_ref_int__Lifetime1Lifetime2[1];
                   var21_ref_int__Lifetime1Lifetime2[0] = 0;
                   var21_ref_int__Lifetime1Lifetime2[1] = 0;
-                  param12.chassis.a(var21_ref_int__Lifetime1Lifetime2, (byte) -17, false);
+                  param12.chassis.accumulateHealth(var21_ref_int__Lifetime1Lifetime2, (byte) -17, false);
                   var23_int = 256 * var21_ref_int__Lifetime1Lifetime2[0] / var21_ref_int__Lifetime1Lifetime2[1];
                   if (var22 < var23_int) {
                     this.a(-26476, 5);
                   }
                   if ((var22 >= var23_int ||
                     var43 != 0) &&
-                    0 < lu.field_f[5]) {
-                    lu.field_f[5] = lu.field_f[5] - 1;
+                    0 < HardpointMatch.field_f[5]) {
+                    HardpointMatch.field_f[5] = HardpointMatch.field_f[5] - 1;
                   }
-                  if (param12.d(4, 75)) {
+                  if (param12.isSpecialOrderActive(4, 75)) {
                     this.a((byte) 118, 5);
                   }
                   if (this.b(5, -12)) {
                     var24_arrayLifetime1 = this.a(4, param9, 30, param4, param3, param6, param5, param1);
                     if (var24_arrayLifetime1 != null) {
-                      this.a(var24_arrayLifetime1, param3, true, GetMutatorVotes.a(lu.field_f[5], 255), param0, true, SetMissionVotes.field_o, var16, (byte) 98);
+                      this.a(var24_arrayLifetime1, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[5], 255), param0, true, SetMissionVotes.field_o, var16, (byte) 98);
                     }
                   }
-                  if (param12.d(4, 72)) {
+                  if (param12.isSpecialOrderActive(4, 72)) {
                     if (param12.isRepairModeFullyCharged(-50)) {
                       this.a(-26476, 6);
                     }
@@ -1005,7 +1005,7 @@ final class bv {
                   if (this.b(6, -88)) {
                     var21_ref_int__Lifetime1Lifetime3 = this.a(4, param9, 30, param4, param3, param6, param5, param1);
                     if (var21_ref_int__Lifetime1Lifetime3 != null) {
-                      this.a(var21_ref_int__Lifetime1Lifetime3, param3, true, GetMutatorVotes.a(lu.field_f[6], 255), param0, true, GetMissionTerrainVotingChancestep.field_p, var16, (byte) 102);
+                      this.a(var21_ref_int__Lifetime1Lifetime3, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[6], 255), param0, true, GetMissionTerrainVotingChancestep.field_p, var16, (byte) 102);
                     }
                   }
                   var21_ref_int__Lifetime1Lifetime4 = this.a(0, param9, 30, param4, param3, param6, param5, param1);
@@ -1020,12 +1020,12 @@ final class bv {
                         if (this.b(8, -43)) {
                           var22 = 1024;
                           var23_arrayLifetime1 = new int[]{var17 - var22, var17 + var22, -var22 + var18, var18 + var22};
-                          this.a(var23_arrayLifetime1, param3, false, GetMutatorVotes.a(lu.field_f[8], 255), param0, true, pja.field_i, var16, (byte) -115);
+                          this.a(var23_arrayLifetime1, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[8], 255), param0, true, pja.field_i, var16, (byte) -115);
                         }
                       }
                     }
                     if (this.b(7, -106)) {
-                      this.a(var21_ref_int__Lifetime1Lifetime4, param3, true, GetMutatorVotes.a(lu.field_f[7], 255), param0, true, gla.field_b, var16, (byte) 60);
+                      this.a(var21_ref_int__Lifetime1Lifetime4, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[7], 255), param0, true, gla.field_b, var16, (byte) 60);
                     }
                   }
                   if (this.b((byte) 11, 10) &&

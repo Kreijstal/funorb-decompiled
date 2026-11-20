@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class opa {
+final class TextureMetadata {
     byte field_g;
     boolean field_k;
     byte field_d;

@@ -29,18 +29,18 @@ final class ShipSpawnedConditionFactory implements GameStateFactory {
               GetHealthBarWidth.field_p[var1_int] = GetDebrisGroupColour.field_r.createModel(MessageLogFactory.field_a[var1_int], -1, -1, 100, 100);
               if (!dm.field_b) {
                 var2 = hab.field_g[var1_int];
-                var14 = GetBombletSprayProjectileOndamageParticles.a((byte) -109, var2.field_v);
+                var14 = GetBombletSprayProjectileOndamageParticles.a((byte) -109, var2.outline);
                 var4 = -var14[0] + var14[1];
                 var5 = var14[3] - var14[2];
                 var6 = GetHealthBarWidth.field_p[var1_int].RA() - GetHealthBarWidth.field_p[var1_int].V();
                 var7 = GetHealthBarWidth.field_p[var1_int].G() - GetHealthBarWidth.field_p[var1_int].HA();
-                if (var2.field_b == 0 &&
-                  0 == var2.field_i) {
+                if (var2.connectionX == 0 &&
+                  0 == var2.connectionY) {
                   var8 = var6 * var14[0] / var4;
                   GetHealthBarWidth.field_p[var1_int].H(var8, 0, 0);
                 } else {
-                  var8 = var2.field_b * var6 / var4;
-                  var9 = -var2.field_i * var7 / var5;
+                  var8 = var2.connectionX * var6 / var4;
+                  var9 = -var2.connectionY * var7 / var5;
                   GetHealthBarWidth.field_p[var1_int].H(var8, 0, var9);
                 }
                 GetHealthBarWidth.field_p[var1_int].O(144, 144, 144);

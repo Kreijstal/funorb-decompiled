@@ -238,7 +238,7 @@ final class MissionBuilder implements DiffableState {
           var16.addAction(var18, true);
           param0.a(var16, -38);
           var19 = new Debris(new ShipComponent(47), false);
-          var19.a(0, 0, (byte) 89);
+          var19.setPosition(0, 0, (byte) 89);
           param0.a(var19, (byte) 100);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -254,7 +254,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var12 = param2.world;
           var7 = t.a(4, (byte) 101);
-          var7.a(param0, param4, (byte) -68);
+          var7.setPosition(param0, param4, (byte) -68);
           var8 = 1;
           var7.setTeam(17704, var8);
           var9 = this.a(param2, var8, 13145, param1);
@@ -263,7 +263,7 @@ final class MissionBuilder implements DiffableState {
             var7.setAi(new ShipAI(), 4);
           }
           int var10 = -13 % ((22 - param3) / 62);
-          var7.a(4096, -17);
+          var7.setAngle(4096, -17);
           var12.a(var7, (byte) 115);
           var11 = new MissionEvent();
           var11.addCondition((byte) -108, (MissionCondition) (new BodyDestroyedCondition(var7.getId(false))));
@@ -406,10 +406,10 @@ final class MissionBuilder implements DiffableState {
                   if (var5 < var22) {
                     var22 = var5;
                   }
-                  var17.a(var21, var22, (byte) -55);
+                  var17.setPosition(var21, var22, (byte) -55);
                   var23 = hob.a(param0, 8192, 124);
-                  var17.a(var23, -21);
-                  var17.i(0);
+                  var17.setAngle(var23, -21);
+                  var17.updateBounds(0);
                   if (param2.a(-11924, var17)) {
                     continue;
                   }
@@ -777,17 +777,17 @@ final class MissionBuilder implements DiffableState {
                 if (var7 instanceof Debris) {
                   var13 = new Debris();
                   var7.copyTo((byte) 67, var13);
-                  var13.a(GameKeyHandler.a(22433, var13.e(0) + 4096), -93);
-                  var13.a(-var13.x, -var13.y, (byte) -112);
+                  var13.setAngle(GameKeyHandler.a(22433, var13.getAngle(0) + 4096), -93);
+                  var13.setPosition(-var13.x, -var13.y, (byte) -112);
                   param0.world.a(var13, (byte) 53);
                   var5 = (ShipBody[]) (ija.a(var13, (Object[]) (var5), 0, ebb.field_a));
                 }
               } else {
                 var12 = new Ship();
                 var7.copyTo((byte) 66, var12);
-                var12.chassis.g(0);
-                var12.a(GameKeyHandler.a(22433, 4096 + var12.e(0)), -29);
-                var12.a(-var12.x, -var12.y, (byte) 45);
+                var12.chassis.makeThrusterTrailsMutable(0);
+                var12.setAngle(GameKeyHandler.a(22433, 4096 + var12.getAngle(0)), -29);
+                var12.setPosition(-var12.x, -var12.y, (byte) 45);
                 var9 = GpuSprite.b(21957, var12.getTeam((byte) 64));
                 var12.setTeam(17704, var9);
                 if (var12.getOwner((byte) -117) >= 0) {
@@ -898,7 +898,7 @@ final class MissionBuilder implements DiffableState {
           for (var20 = 0; var17 > var20; var20++) {
             var21 = rpa.a(2, 1, true);
             var22 = 2048 * var20 / (var17 - 1) + 2048;
-            var21.a(param1 + var18 * (GetNumStars.a(var22, (byte) 127) >> 8), (eu.a(var22, 50) >> 8) * var18 + param0, (byte) -95);
+            var21.setPosition(param1 + var18 * (GetNumStars.a(var22, (byte) 127) >> 8), (eu.a(var22, 50) >> 8) * var18 + param0, (byte) -95);
             var21.setAi(new ShipAI(), 4);
             var21.setTeam(17704, 1);
             param2.a(var21, (byte) 81);
@@ -1195,7 +1195,7 @@ final class MissionBuilder implements DiffableState {
           for (var18 = 0; var15Lifetime1 > var18; var18++) {
             var19 = rpa.a(2, 2, true);
             var20 = var18 * 2048 / (-1 + var15Lifetime1) + 2048;
-            var19.a(param1 + (GetNumStars.a(var20, (byte) -107) >> 8) * var16Lifetime1, (eu.a(var20, 59) >> 8) * var16Lifetime1 + param3, (byte) -127);
+            var19.setPosition(param1 + (GetNumStars.a(var20, (byte) -107) >> 8) * var16Lifetime1, (eu.a(var20, 59) >> 8) * var16Lifetime1 + param3, (byte) -127);
             var19.setAi(new ShipAI(), 4);
             var19.setTeam(17704, 1);
             param2.a(var19, (byte) 92);
@@ -1364,7 +1364,7 @@ final class MissionBuilder implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = t.a(1, (byte) 47);
-          var5.a(param3, param1, (byte) 95);
+          var5.setPosition(param3, param1, (byte) 95);
           var5.setAi(new ShipAI(), 4);
           var5.setTeam(17704, 1);
           var7 = 7 % ((23 - param0) / 36);
@@ -1845,8 +1845,8 @@ final class MissionBuilder implements DiffableState {
             var23 = hob.a(param4, 8192, 122);
             var24 = hob.a(param4, var19, 126) >> 8;
             for (var25_int = 0; 1000 > var25_int; var25_int++) {
-              var22.a((GetNumStars.a(var23, (byte) -108) >> 8) * var24, (eu.a(var23, 127) >> 8) * var24, (byte) -112);
-              var22.i(0);
+              var22.setPosition((GetNumStars.a(var23, (byte) -108) >> 8) * var24, (eu.a(var23, 127) >> 8) * var24, (byte) -112);
+              var22.updateBounds(0);
               if (param5.a(-11924, var22)) {
                 continue;
               }
@@ -2524,7 +2524,7 @@ final class MissionBuilder implements DiffableState {
         var17 = VoidHunters.field_G;
         try {
           var18 = rpa.a(1, 1, true);
-          var18.a(param2, param3, (byte) -108);
+          var18.setPosition(param2, param3, (byte) -108);
           var18.setAi(new ShipAI(), param0 ^ 4);
           var18.setTeam(17704, param0);
           param4.a(var18, (byte) 107);
@@ -2532,14 +2532,14 @@ final class MissionBuilder implements DiffableState {
           var8 = param4.f(24797);
           for (var9 = 0; var8 > var9; var9++) {
             var10 = 8192 * var9 / var8;
-            var11 = 2 * var18.g(-123);
+            var11 = 2 * var18.getBoundingExtent(-123);
             var12_ref_ml = new ShipComponent(26);
             var19 = new Debris(var12_ref_ml, false);
             var14 = (var11 >> 8) * (GetNumStars.a(var10, (byte) 115) >> 8);
             var15 = (eu.a(var10, 119) >> 8) * (var11 >> 8);
-            var19.a(var14 + param2, param3 + var15, (byte) -61);
+            var19.setPosition(var14 + param2, param3 + var15, (byte) -61);
             var16 = hob.a(param1, 8192, 126);
-            var19.a(var16, -107);
+            var19.setAngle(var16, -107);
             param4.a(var19, (byte) 99);
             var7 = (ShipBody[]) (ija.a(var19, (Object[]) (var7), param0 ^ 0, ebb.field_a));
           }
@@ -3068,8 +3068,8 @@ final class MissionBuilder implements DiffableState {
                 var20 = var11 + hob.a(param0, var15, 118);
                 if (fra.a(var7, var20, 2, var19)) {
                   var21_ref_crb = new Asteroid(new ShipComponent(NodeHashTable.chooseRandomAsteroidType(param0, (byte) 97)));
-                  var21_ref_crb.a(var19, var20, (byte) -97);
-                  var21_ref_crb.a(hob.a(param0, 8192, 116), -64);
+                  var21_ref_crb.setPosition(var19, var20, (byte) -97);
+                  var21_ref_crb.setAngle(hob.a(param0, 8192, 116), -64);
                   var22_ref_crb__ = param1.a(true);
                   var23 = 0;
                   var24_ref_crb__ = var22_ref_crb__;
@@ -3082,7 +3082,7 @@ final class MissionBuilder implements DiffableState {
                         var27_int = var21_ref_crb.getX(false) - var32.getX(false);
                         var28 = var21_ref_crb.getY((byte) 118) - var32.getY((byte) -124);
                         var29 = ar.a(var27_int, (byte) 112, var28);
-                        if (var29 < var21_ref_crb.chassis.i((byte) -112).field_l + var32.chassis.i((byte) -112).field_l) {
+                        if (var29 < var21_ref_crb.chassis.getDefinition((byte) -112).boundingRadius + var32.chassis.getDefinition((byte) -112).boundingRadius) {
                           var23 = 1;
                           decompiledFrameRemainder0 = false;
                         }
@@ -3202,8 +3202,8 @@ final class MissionBuilder implements DiffableState {
                     }
                     var33 = new ShipComponent(var25);
                     var27 = new Debris(var33, false);
-                    var27.a(var23, var24, (byte) 85);
-                    var27.a(hob.a(param0, 8192, param3 ^ 119), -47);
+                    var27.setPosition(var23, var24, (byte) 85);
+                    var27.setAngle(hob.a(param0, 8192, param3 ^ 119), -47);
                     param1.a(var27, (byte) 104);
                   }
                   if (var17 - 1 <= var22 &&
@@ -3631,7 +3631,7 @@ final class MissionBuilder implements DiffableState {
             var8 = field_a[var7_int];
             var13 = GetResourceNodeCaptureTime.a(var8, true, true);
             var10 = ae.a(var13, (byte) 65);
-            var10.a(0, 0, (byte) 30);
+            var10.setPosition(0, 0, (byte) 30);
             var10.setAi(new ShipAI(), param5 - 2097148);
             var10.setTeam(param5 - 2079448, 1);
             param1.a(var10, (byte) 100);

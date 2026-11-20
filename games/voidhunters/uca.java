@@ -77,10 +77,10 @@ final class uca {
           if (1 == fra.field_a) {
             var5 = new Ship();
             param1.copyTo((byte) 61, var5);
-            var5.a(param2 ^ 11893, param0, param3);
-            var6 = var5.getX(false) - var5.j(995401160);
-            var7 = var5.getY((byte) -54) - var5.i((byte) 5);
-            var5.chassis.a(true, var6, var7, var5.e(0), 0, var5.getBoundingbox((byte) -55));
+            var5.aimAt(param2 ^ 11893, param0, param3);
+            var6 = var5.getX(false) - var5.getCenterOfMassOffsetX(995401160);
+            var7 = var5.getY((byte) -54) - var5.getCenterOfMassOffsetY((byte) 5);
+            var5.chassis.updateWorldTransforms(true, var6, var7, var5.getAngle(0), 0, var5.getBoundingbox((byte) -55));
             param1 = var5;
           }
           stackIn_6_0 = (Ship) (param1);
@@ -665,7 +665,7 @@ final class uca {
                   var26Lifetime2 = var21;
                   if (var21 != null &&
                     var8 == var21.getTeam((byte) 121) &&
-                    var21.s(param1 ^ -15491) && (var8 != sja.field_c ||
+                    var21.canSpawnEscapePod(param1 ^ -15491) && (var8 != sja.field_c ||
                     var21 == param0)) {
                     var13 = ShipTeamConditionFactory.field_a.a(var21.getX(false), (byte) 119);
                     var14 = ShipTeamConditionFactory.field_a.b(true, var21.getY((byte) -118));
@@ -711,7 +711,7 @@ final class uca {
                       var26Lifetime1 = var25[var13Lifetime3];
                       if (var26Lifetime1 != null &&
                         var26Lifetime1.getTeam((byte) 90) == var8 &&
-                        var26Lifetime1.s(param1 + 15726) && (var8 != sja.field_c ||
+                        var26Lifetime1.canSpawnEscapePod(param1 + 15726) && (var8 != sja.field_c ||
                         param0 == var26Lifetime1)) {
                         var15Lifetime4 = ShipTeamConditionFactory.field_a.a(var26Lifetime1.getX(false), (byte) 125);
                         var16Lifetime2 = ShipTeamConditionFactory.field_a.b(true, var26Lifetime1.getY((byte) 127));
@@ -816,7 +816,7 @@ final class uca {
                       var13Lifetime3 = var11Lifetime2 + var12Lifetime2 * 8192 / 100;
                       var14Lifetime3 = var8 + (GetNumStars.a(var13Lifetime3, (byte) 118) * var10 >> 16);
                       var15Lifetime4 = (var10 * eu.a(var13Lifetime3, 48) >> 16) + var9;
-                      ga.a(128, false, var14Lifetime3, var15Lifetime4, 1, 1, 16777215);
+                      CachedArchiveProvider.a(128, false, var14Lifetime3, var15Lifetime4, 1, 1, 16777215);
                     }
                   }
                   break regionExit1;
@@ -851,7 +851,7 @@ final class uca {
                     var13Lifetime1 = var11Lifetime1 + var12Lifetime1 * 8192 / 100;
                     var14Lifetime1 = var8Lifetime1 + (GetNumStars.a(var13Lifetime1, (byte) 118) * var10Lifetime1 >> 16);
                     var15Lifetime1 = (var10Lifetime1 * eu.a(var13Lifetime1, 48) >> 16) + var9Lifetime1;
-                    ga.a(128, false, var14Lifetime1, var15Lifetime1, 1, 1, 16777215);
+                    CachedArchiveProvider.a(128, false, var14Lifetime1, var15Lifetime1, 1, 1, 16777215);
                   }
                 }
               }
@@ -1016,13 +1016,13 @@ final class uca {
               (128 & var18_ref_tfa.triggers) == 0 &&
               ((Ship) (var9)).getTargetBlueprint((byte) 28) == null &&
               (16 & var18_ref_tfa.triggers) == 0 &&
-              !((Ship) (var9)).d(4, 91)) {
+              !((Ship) (var9)).isSpecialOrderActive(4, 91)) {
               ((Ship) (var9)).copyTo((byte) 94, this.field_W);
-              this.field_W.a(-123, var17, var16);
-              var20_int = this.field_W.getX(false) - this.field_W.j(995401160);
-              var21 = this.field_W.getY((byte) -31) - this.field_W.i((byte) 5);
+              this.field_W.aimAt(-123, var17, var16);
+              var20_int = this.field_W.getX(false) - this.field_W.getCenterOfMassOffsetX(995401160);
+              var21 = this.field_W.getY((byte) -31) - this.field_W.getCenterOfMassOffsetY((byte) 5);
               var19_int = 1;
-              this.field_W.chassis.a(true, var20_int, var21, this.field_W.e(0), 0, this.field_W.getBoundingbox((byte) -71));
+              this.field_W.chassis.updateWorldTransforms(true, var20_int, var21, this.field_W.getAngle(0), 0, this.field_W.getBoundingbox((byte) -71));
             }
           } else {
             var17 = var18_ref_tfa.aimtargety;
@@ -1110,7 +1110,7 @@ final class uca {
           var18Lifetime1 = ((Ship) (var9)).getDragging(57);
           var26 = var24.world.i(21363, var18Lifetime1);
           if (var26 != null &&
-            ((Ship) (var9)).chassis.j(1) + var26.chassis.j(1) > OpenGlShader.field_a) {
+            ((Ship) (var9)).chassis.countComponents(1) + var26.chassis.countComponents(1) > OpenGlShader.field_a) {
             ArmBehaviour.a(2, 0, 200, MissionControl.field_a.toUpperCase());
           }
         }
@@ -1394,8 +1394,8 @@ final class uca {
           if (var4 != null) {
             var8 = -6 + ShipTeamConditionFactory.field_a.b(true, var4.getBoundingbox((byte) -110)[2] - 3 * NebulaField.field_d);
             var11_ref_String = this.field_m.a(1, var4.getOwner((byte) -117));
-            if (var4.getOwner((byte) -117) != this.field_L && (!var4.b(1, (byte) 24) &&
-              !var4.b(2, (byte) -120) ||
+            if (var4.getOwner((byte) -117) != this.field_L && (!var4.hasVisibilityFlag(1, (byte) 24) &&
+              !var4.hasVisibilityFlag(2, (byte) -120) ||
               var10 != 0)) {
               stackIn_23_0 = (var4.getOwner((byte) -117) == this.field_L);
               var12 = qpb.a(stackIn_23_0, var4.getTeam((byte) 98), 13894143);
@@ -1734,7 +1734,7 @@ final class uca {
                       var37 = var7.world.d(var17Lifetime1, 126);
                       var27 = 0;
                       if (var37 != null) {
-                        var27 = var37.chassis.j(1);
+                        var27 = var37.chassis.countComponents(1);
                       }
                       var23_ref_String = Integer.toString(var27);
                     }
@@ -2365,7 +2365,7 @@ final class uca {
                   var40.c(true) != null) {
                   var21 += 24;
                 }
-                ga.a(200, false, var13, var14, var21, var7, 1);
+                CachedArchiveProvider.a(200, false, var13, var14, var21, var7, 1);
                 SetSelfDestructPrepareToggleCooldown.a(-(tea.a(var16, var41, 13879) / 2) + var9, -1, GetPointDefenceLaserProjectiles.a(false, var16) + var14, var41, var16, 16777215, (byte) -124);
               }
             }
@@ -2440,9 +2440,9 @@ final class uca {
                 kca.a(var31, var28_int, var30_int, GetPointDefenceLaserProjectiles.a(false, 4), this.field_U, 0, var32, 4, 56035, -var15 - var30_int + var12 + var26, 0, (byte) -74, -1);
               }
               var33 = null;
-              if (!fwa.field_g.a(this.field_y, (byte) -118)) {
-                if (!fwa.field_g.b(this.field_y, 4)) {
-                  if (fwa.field_g.d(this.field_y, (byte) -43)) {
+              if (!ArchiveIndexLoader.field_g.a(this.field_y, (byte) -118)) {
+                if (!ArchiveIndexLoader.field_g.b(this.field_y, 4)) {
+                  if (ArchiveIndexLoader.field_g.d(this.field_y, (byte) -43)) {
                     var33 = igb.field_b;
                   }
                 } else {
@@ -2451,7 +2451,7 @@ final class uca {
               } else {
                 var33 = MapClearanceRectangle.field_f;
               }
-              if (fwa.field_g.a((byte) -126, this.field_y)) {
+              if (ArchiveIndexLoader.field_g.a((byte) -126, this.field_y)) {
                 if (var33 != null) {
                   var33 = (String) (var33) + " " + ti.field_i;
                 } else {
@@ -2779,7 +2779,7 @@ final class uca {
                 var22 = 0;
                 var23 = new Ship[var18];
                 for (var24_int = 0; SetWaitForPlayers.a(9) > var24_int; var24_int++) {
-                  stackIn_47_0 = (!fwa.field_g.c(var24_int + 3, (byte) 34)) ? 0 : 1;
+                  stackIn_47_0 = (!ArchiveIndexLoader.field_g.c(var24_int + 3, (byte) 34)) ? 0 : 1;
                   var25_int = stackIn_47_0;
                   if (var25_int != 0) {
                     var23[var24_int] = t.a(var24_int + 3, (byte) 72);
@@ -2795,7 +2795,7 @@ final class uca {
                 var24_array = var46;
                 for (var25_intLifetime1 = 0; var18 > var25_intLifetime1; var25_intLifetime1++) {
                   if (var23[var25_intLifetime1] != null) {
-                    var23[var25_intLifetime1].i(0);
+                    var23[var25_intLifetime1].updateBounds(0);
                     var59 = var23[var25_intLifetime1].getBoundingbox((byte) -52);
                     var24_array[var25_intLifetime1] = new int[4];
                     for (var27 = 0; var27 < 4; var27++) {
@@ -2842,7 +2842,7 @@ final class uca {
                 for (var34_int = 0; var34_int < var18; var34_int++) {
                   var35 = 1;
                   if (var20 > var34_int) {
-                    stackIn_82_0 = (!fwa.field_g.c(3 + var34_int, (byte) 34)) ? 0 : 1;
+                    stackIn_82_0 = (!ArchiveIndexLoader.field_g.c(3 + var34_int, (byte) 34)) ? 0 : 1;
                     var35 = stackIn_82_0;
                   } else {
                     var33 = var33 - (var30Lifetime1 + var11Lifetime1);
@@ -2851,9 +2851,9 @@ final class uca {
                   if (var35 != 0) {
                     var36 = var32 - (var30Lifetime1 >> 1);
                     var37 = var33;
-                    var38 = fwa.field_g.a(ujb.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
-                    var39 = fwa.field_g.d(-22549, 3 + var34_int) ? 1 : 0;
-                    var40 = fwa.field_g.b(3 + var34_int, (byte) 24) ? 1 : 0;
+                    var38 = ArchiveIndexLoader.field_g.a(ujb.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
+                    var39 = ArchiveIndexLoader.field_g.d(-22549, 3 + var34_int) ? 1 : 0;
+                    var40 = ArchiveIndexLoader.field_g.b(3 + var34_int, (byte) 24) ? 1 : 0;
                     BlackBoxRecording.a((byte) -115, 200, var30Lifetime1, var36, var37, var30Lifetime1);
                     if (param2) {
                       if (GetUseDetailLines.field_o >= var36) {
@@ -2875,13 +2875,13 @@ final class uca {
                     var41 = stackIn_98_0;
                     var42 = var9Lifetime1;
                     if (var34_int == var9Lifetime1) {
-                      ga.a(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
+                      CachedArchiveProvider.a(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
                       uv.a(125, var36, var30Lifetime1, var37, 56035, var30Lifetime1);
                       uv.a(124, 1 + var36, var30Lifetime1 - 2, 1 + var37, 56035, -2 + var30Lifetime1);
                     } else {
                       if (var41 != 0) {
                         if (var38 != 0) {
-                          ga.a(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
+                          CachedArchiveProvider.a(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
                           if (GetBots.field_o == 1 &&
                             !this.field_X) {
                             this.field_X = true;
@@ -3135,7 +3135,7 @@ final class uca {
             var20 = var18[var9_int];
             var10 = var20;
             if (var10 != null) {
-              var20.z(90);
+              var20.clearVisibilityFlags(90);
             }
           }
           if (param5) {
@@ -3167,7 +3167,7 @@ final class uca {
                   var15 = var9[PartitionZoneListFactory.field_a[var14]];
                   if (var15 != null &&
                     var15.a((byte) 100, var12.getX(false), var12.getY((byte) 117))) {
-                    var12.f(0, 1);
+                    var12.addVisibilityFlags(0, 1);
                     break;
                   }
                 }
@@ -3191,7 +3191,7 @@ final class uca {
                   var15Lifetime1 = var9Lifetime1[PartitionZoneListFactory.field_a[var14Lifetime1]];
                   if (var15Lifetime1 != null &&
                     var15Lifetime1.a((byte) 100, var12Lifetime1.getX(false), var12Lifetime1.getY((byte) 117))) {
-                    var12Lifetime1.f(0, 1);
+                    var12Lifetime1.addVisibilityFlags(0, 1);
                     break;
                   }
                 }
@@ -3214,7 +3214,7 @@ final class uca {
                   var15Lifetime1Lifetime1 = var9Lifetime1[PartitionZoneListFactory.field_a[var14Lifetime1Lifetime1]];
                   if (var15Lifetime1Lifetime1 != null &&
                     var15Lifetime1Lifetime1.a((byte) 100, var12Lifetime1Lifetime1.getX(false), var12Lifetime1Lifetime1.getY((byte) 117))) {
-                    var12Lifetime1Lifetime1.f(0, 1);
+                    var12Lifetime1Lifetime1.addVisibilityFlags(0, 1);
                     break;
                   }
                   var14Lifetime1Lifetime1++;
@@ -3959,17 +3959,17 @@ final class uca {
             var20 = -(var15 / 2) + (var17 - var18);
             var21 = 2 * var18 + var14;
             var22 = var15 + 2 * var18;
-            ga.a(200, false, var19, var20, var22, var21, 1);
+            CachedArchiveProvider.a(200, false, var19, var20, var22, var21, 1);
             uv.a(113, var19, var22, var20, 11184810, var21);
             var7.field_c = (float)((var37.getBoundingbox((byte) -98)[0] + var37.getBoundingbox((byte) -49)[1]) / 2);
             var7.field_b = (float)((var37.getBoundingbox((byte) -101)[2] + var37.getBoundingbox((byte) -39)[3]) / 2);
             var7.field_e = var17;
             var7.field_d = var16;
-            var37.a(var7, 122, (World) null);
+            var37.draw(var7, 122, (World) null);
             var23 = GetPointDefenceLaserProjectiles.a(param3, 3);
             var24 = param1.world.getDebris((byte) -33);
             for (var25 = 0; 56 > var25; var25++) {
-              var26 = var37.chassis.a(var25, 0) - param4.chassis.a(var25, 0);
+              var26 = var37.chassis.countType(var25, 0) - param4.chassis.countType(var25, 0);
               if (0 < var26) {
                 var27 = 0;
                 var28 = 0;
@@ -3979,7 +3979,7 @@ final class uca {
                   if (var29_ref_nbb__.length > var30_int) {
                     var31 = var29_ref_nbb__[var30_int];
                     if (var31 != null &&
-                      var31.chassis.a(var25, 0) > 0) {
+                      var31.chassis.countType(var25, 0) > 0) {
                       var28 = 1;
                       var32 = var31.getX(false) - param4.getX(false);
                       var33 = var31.getY((byte) -116) - param4.getY((byte) -15);
@@ -4221,7 +4221,7 @@ final class uca {
             var10Lifetime1 = var18;
             while (var18 < var17.length) {
               var11 = var17[var18];
-              ga.a(200, false, var7Lifetime1, var9Lifetime1 + (-var8Lifetime1 + 2), var8Lifetime1, GetPhasedEnergyBeamProjectiles.a(102, var11), 1118481);
+              CachedArchiveProvider.a(200, false, var7Lifetime1, var9Lifetime1 + (-var8Lifetime1 + 2), var8Lifetime1, GetPhasedEnergyBeamProjectiles.a(102, var11), 1118481);
               GetLagStandardDeviationOut.a(-1, var11, 16777215, var9Lifetime1, var7Lifetime1, 4266);
               var9Lifetime1 = var9Lifetime1 + var8Lifetime1;
               var18++;
@@ -4309,12 +4309,12 @@ final class uca {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int var3_int = 2 * param1.g(-42);
-        int var4 = var3_int * (GetNumStars.a(param1.e(0), (byte) 91) >> 8) >> 8;
-        int var5 = (eu.a(param1.e(0), 43) >> 8) * var3_int >> 8;
+        int var3_int = 2 * param1.getBoundingExtent(-42);
+        int var4 = var3_int * (GetNumStars.a(param1.getAngle(0), (byte) 91) >> 8) >> 8;
+        int var5 = (eu.a(param1.getAngle(0), 43) >> 8) * var3_int >> 8;
         var3_int = (int)(24.0f / ShipTeamConditionFactory.field_a.field_a) + var3_int;
-        int var6 = (GetNumStars.a(param1.e(0), (byte) -99) >> 8) * var3_int >> 8;
-        int var7 = var3_int * (eu.a(param1.e(0), 102) >> 8) >> 8;
+        int var6 = (GetNumStars.a(param1.getAngle(0), (byte) -99) >> 8) * var3_int >> 8;
+        int var7 = var3_int * (eu.a(param1.getAngle(0), 102) >> 8) >> 8;
         int var8 = (int)(0.05000000074505806f / ShipTeamConditionFactory.field_a.field_a);
         if (param0 > -56) {
           return;
@@ -4374,7 +4374,7 @@ final class uca {
                   var8++;
                   GetLagStandardDeviationOut.a(-1, "Null body=" + var10, 16711680, var13, var12, 4266);
                 } else {
-                  var11.a(ShipTeamConditionFactory.field_a, 16777215, param1, 16);
+                  var11.draw(ShipTeamConditionFactory.field_a, 16777215, param1, 16);
                   GetLagStandardDeviationOut.a(-1, "Body=" + var10, 65280, var13, var12, 4266);
                   var8++;
                 }
@@ -4439,11 +4439,11 @@ final class uca {
             stackIn_2_0 = 116;
             return stackIn_2_0;
           }
-          if (param4.d(4, param0 + 41)) {
+          if (param4.isSpecialOrderActive(4, param0 + 41)) {
             stackIn_5_0 = 3;
             return stackIn_5_0;
           }
-          if (param4.d(9, 113)) {
+          if (param4.isSpecialOrderActive(9, 113)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
@@ -4451,11 +4451,11 @@ final class uca {
             (16 & param3.triggers) == 0 && (-1 != GetUseDetailLines.field_o ||
             -1 != GetTorpedoReload.field_q) && null == param4.getTargetBlueprint((byte) 28)) {
             param4 = this.a(param1, param4, -11788, param2);
-            var14 = param4.chassis.a(param1, param2, true);
+            var14 = param4.chassis.findComponentAtPoint(param1, param2, true);
             var15 = var14;
             if (var15 != null &&
               var15 != param4.chassis) {
-              var15.a((byte) 100, ShipTeamConditionFactory.field_a, true, param5, qpb.a(true, param4.getTeam((byte) 105), 13894143));
+              var15.drawTree((byte) 100, ShipTeamConditionFactory.field_a, true, param5, qpb.a(true, param4.getTeam((byte) 105), 13894143));
               var8_int = 26 + ShipTeamConditionFactory.field_a.a(param2, (byte) 120);
               var9 = ShipTeamConditionFactory.field_a.b(true, param1) + 10;
               this.a(var8_int, 92, var9);
@@ -4464,14 +4464,14 @@ final class uca {
               }
               this.field_ab = true;
               this.field_J = var15.getComponentTypeId(param0 ^ 36);
-              var10_ref_String__ = this.a(this.field_o, true, new String[]{me.a(var14, (byte) -120), GetSelfDestructActivateCooldown.a(var14.i((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
+              var10_ref_String__ = this.a(this.field_o, true, new String[]{me.a(var14, (byte) -120), GetSelfDestructActivateCooldown.a(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
               this.a(var15.getFinalx(true), var15.getFinaly((byte) 85), var10_ref_String__, (byte) -96);
               stackIn_21_0 = 1;
               return stackIn_21_0;
             }
             var8 = param5.a(true, param4.getY((byte) 124), param2, param4.getX(false), param1);
             if (var8 != null) {
-              var9Lifetime1 = var8.g(-115) << 1;
+              var9Lifetime1 = var8.getBoundingExtent(-115) << 1;
               var10 = (var8.getBoundingbox((byte) -60)[0] + var8.getBoundingbox((byte) -88)[1]) / 2;
               var11 = (var8.getBoundingbox((byte) -64)[2] + var8.getBoundingbox((byte) -89)[3]) / 2;
               if (this.field_J != var8.chassis.getComponentTypeId(0)) {
@@ -4479,7 +4479,7 @@ final class uca {
               }
               this.field_ab = true;
               this.field_J = var8.chassis.getComponentTypeId(param0 - 36);
-              var12 = this.a(this.field_o, true, new String[]{me.a(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.a(var8.chassis.i((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
+              var12 = this.a(this.field_o, true, new String[]{me.a(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.a(var8.chassis.getDefinition((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
               if (this.a(param1, var10, param2, false, var12, var11, var9Lifetime1)) {
                 stackIn_28_0 = 1;
                 return stackIn_28_0;
@@ -4588,10 +4588,10 @@ final class uca {
             var3 = var8;
             for (var4 = 0; var4 < var8.length; var4++) {
               var5 = var8[var4];
-              if (var5 != null && (!var5.b(1, (byte) -111) ||
-                var5.getOwner((byte) -117) == this.field_L) && (!var5.b(2, (byte) -116) &&
-                !var5.d(9, 56))) {
-                var5.a(false, ShipTeamConditionFactory.field_a, 32);
+              if (var5 != null && (!var5.hasVisibilityFlag(1, (byte) -111) ||
+                var5.getOwner((byte) -117) == this.field_L) && (!var5.hasVisibilityFlag(2, (byte) -116) &&
+                !var5.isSpecialOrderActive(9, 56))) {
+                var5.drawHealthBar(false, ShipTeamConditionFactory.field_a, 32);
               }
             }
           }
@@ -5044,7 +5044,7 @@ final class uca {
             var12 = var8.b(true, param0.m(1) / 2);
             var7 = var7 + var11;
             var6 = var6 - var9;
-            ga.a(200, false, var6 + var9, var11 + var7, -var11 + var12, var10 - var9, 0);
+            CachedArchiveProvider.a(200, false, var6 + var9, var11 + var7, -var11 + var12, var10 - var9, 0);
             fpa.a(var7 + var11, var12 + var7, true, var6 + var10, var9 + var6);
             var23 = param2;
             for (var14_int = 0; var23.length > var14_int; var14_int++) {
@@ -5119,10 +5119,10 @@ final class uca {
           int var10 = -20 % ((param4 - 8) / 41);
           var11.field_d = param7;
           var11.field_a = var11.field_a * param2;
-          param5.a(0, 0, (byte) 92);
-          param5.a(param0, -116);
-          param5.a(false, true, param6.world);
-          param5.a(var11, qpb.a(false, param3, 13894143), param6.world, 16);
+          param5.setPosition(0, 0, (byte) 92);
+          param5.setAngle(param0, -116);
+          param5.integrateMotion(false, true, param6.world);
+          param5.draw(var11, qpb.a(false, param3, 13894143), param6.world, 16);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uca.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -5295,7 +5295,7 @@ final class uca {
             var14 = 0;
             var15 = this.field_m.b(1).world.d(this.field_L, 91);
             if (var15 != null) {
-              stackIn_67_0 = (!var15.d(4, 114)) ? 0 : 1;
+              stackIn_67_0 = (!var15.isSpecialOrderActive(4, 114)) ? 0 : 1;
               var14 = stackIn_67_0;
               if (var14 != 0 &&
                 GetFightersPerPlayerMaximum.field_p == 1) {
@@ -5305,8 +5305,8 @@ final class uca {
             }
             var16 = 0;
             if (var14 != 0) {
-              var25 = var15.chassis.a(GetMinimapWidth.field_o, param4, 0, (byte) -42, param0, 0, (int[]) null);
-              this.field_V = var15.chassis.a(GetMinimapWidth.field_o, param1, 0, (byte) -84, param5, 0, (int[]) null);
+              var25 = var15.chassis.collectDamagedComponentPaths(GetMinimapWidth.field_o, param4, 0, (byte) -42, param0, 0, (int[]) null);
+              this.field_V = var15.chassis.collectDamagedComponentPaths(GetMinimapWidth.field_o, param1, 0, (byte) -84, param5, 0, (int[]) null);
               if (SetBlueprintSaveTime.a(this.field_V, var25, (byte) 28)) {
                 var16 = 1;
               }
@@ -5553,7 +5553,7 @@ final class uca {
                 if (0 <= var9 &&
                   SetWaitForPlayers.a(9) > var9 &&
                   var8 != var9 &&
-                  fwa.field_g.a(ujb.a(-114), 3 + var9, (byte) -84)) {
+                  ArchiveIndexLoader.field_g.a(ujb.a(-114), 3 + var9, (byte) -84)) {
                   var10 = new PlayerAction();
                   var10.mousey = param1;
                   var10.mousex = param0;
@@ -5811,7 +5811,7 @@ final class uca {
             GetTorpedoReload.field_q < var23 &&
             !param12) {
             this.field_y = param0;
-            if (!fwa.field_g.b(param0, 4)) {
+            if (!ArchiveIndexLoader.field_g.b(param0, 4)) {
               if (var15 == 0) {
                 GetMassDriverReload.a(PartitioningManager.field_c, -46);
               } else {
@@ -5820,7 +5820,7 @@ final class uca {
             } else {
               GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -64);
             }
-            if (fwa.field_g.a(param0, 11, ujb.a(-113))) {
+            if (ArchiveIndexLoader.field_g.a(param0, 11, ujb.a(-113))) {
               this.field_a[param0] = Math.min(255, 64 + this.field_a[param0]);
               if (SetDebrisPartitioned.field_o != 1) {
                 if (SetDebrisPartitioned.field_o == 2) {
@@ -5842,11 +5842,11 @@ final class uca {
               var25 = 16763938;
             }
             var26 = -1;
-            if (fwa.field_g.a(param0, (byte) 41)) {
+            if (ArchiveIndexLoader.field_g.a(param0, (byte) 41)) {
               var26 = 16755200;
             } else {
-              if (!fwa.field_g.b(param0, 4)) {
-                if (fwa.field_g.d(param0, (byte) -43)) {
+              if (!ArchiveIndexLoader.field_g.b(param0, 4)) {
+                if (ArchiveIndexLoader.field_g.d(param0, (byte) -43)) {
                   var26 = 16776960;
                 }
               } else {
@@ -5945,18 +5945,18 @@ final class uca {
           }
           var6_int = ShipTeamConditionFactory.field_a.a(true, param1);
           var7 = ShipTeamConditionFactory.field_a.a(0, param0);
-          var8 = param4.chassis.b(param3 ^ 126, param3);
+          var8 = param4.chassis.collectWeapons(param3 ^ 126, param3);
           var9 = 0;
           scanLoop1: while (true) {
             if (var9 < var8) {
               var10 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var9];
-              if (!var10.k((byte) 59)) {
-                var11 = var10.c(114);
+              if (!var10.isDestroyed((byte) 59)) {
+                var11 = var10.getAimArc(114);
                 if (0 != var11) {
-                  var12 = var10.i((byte) -112);
-                  var13 = var10.a(var12, (byte) -69);
-                  var14 = var10.a(-102, var12);
-                  var15 = var10.g((byte) -127);
+                  var12 = var10.getDefinition((byte) -112);
+                  var13 = var10.getWorldConnectionX(var12, (byte) -69);
+                  var14 = var10.getWorldConnectionY(-102, var12);
+                  var15 = var10.getUnrotatedWorldAngle((byte) -127);
                   var16 = var6_int - var13;
                   var17 = var7 - var14;
                   var18 = GameSnapshotFactory.a(var17, (byte) -77, var16);
@@ -6158,8 +6158,8 @@ final class uca {
               if (!var8.getDebug((byte) 96) &&
                 !this.field_m.carouselInfo.f(1)) {
                 var13 = 30.0f;
-                var14 = (float)var11 + var13 * (float)var9.c((byte) -117);
-                var15 = (float)var12 + (float)var9.f(0) * var13;
+                var14 = (float)var11 + var13 * (float)var9.getVelocityX((byte) -117);
+                var15 = (float)var12 + (float)var9.getVelocityY(0) * var13;
                 ShipTeamConditionFactory.field_a.field_c = (var14 + 9.0f * ShipTeamConditionFactory.field_a.field_c) / 10.0f;
                 ShipTeamConditionFactory.field_a.field_b = (9.0f * ShipTeamConditionFactory.field_a.field_b + var15) / 10.0f;
                 ShipTeamConditionFactory.field_a.a(MissionVariableFactory.field_a, 0, -117, PartitionZoneFactory.field_a, 0);
@@ -6176,7 +6176,7 @@ final class uca {
                   ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b - (float)((ShipTeamConditionFactory.field_a.field_f[3] - var22[3]) / 2);
                 }
               }
-              if (var9.d(4, 44)) {
+              if (var9.isSpecialOrderActive(4, 44)) {
                 this.field_n = false;
                 this.field_r = 1;
                 if (GetFightersPerPlayerMaximum.field_p == 1) {
@@ -6298,18 +6298,18 @@ final class uca {
           if (param0 != null &&
             this.field_L == param0.getOwner((byte) -117) &&
             param0.justAttachedSomething) {
-            var5_int = param0.chassis.b(127, 0);
+            var5_int = param0.chassis.collectWeapons(127, 0);
             for (var6 = 0; var6 < var5_int; var6++) {
               var7 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var6];
               stackIn_8_0 = var7.weaponbehaviour;
               stackIn_9_1 = !(param1);
               if (((WeaponBehaviour) (Object) stackIn_8_0).a(stackIn_9_1)) {
-                var8 = var7.c(114);
+                var8 = var7.getAimArc(114);
                 if (var8 != 0) {
-                  var9 = var7.i((byte) -112);
-                  var10 = var7.a(var9, (byte) -69);
-                  var11 = var7.a(-90, var9);
-                  var12 = var7.g((byte) -127);
+                  var9 = var7.getDefinition((byte) -112);
+                  var10 = var7.getWorldConnectionX(var9, (byte) -69);
+                  var11 = var7.getWorldConnectionY(-90, var9);
+                  var12 = var7.getUnrotatedWorldAngle((byte) -127);
                   var13 = param2 - var10;
                   var14 = param3 - var11;
                   var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
@@ -6439,11 +6439,11 @@ final class uca {
             return false;
           }
           if (var5 != null &&
-            !var5.d(9, 90) &&
+            !var5.isSpecialOrderActive(9, 90) &&
             param2.missionState.getMissionPhase(8) == 5) {
             if (param1) {
               this.field_E.clear(96);
-              var5.a(this.field_E, 9, this.field_x, param2.world.d(var5.getId(false), (byte) 21));
+              var5.collectSpecialOrderStatuses(this.field_E, 9, this.field_x, param2.world.d(var5.getId(false), (byte) 21));
               if (this.field_v.a(10, true)) {
                 stackIn_33_0 = 1;
               } else {
@@ -6461,11 +6461,11 @@ final class uca {
               if (var6 != 0) {
                 if (!this.field_x &&
                   13 == param2.world.d(false) && (!this.field_N ||
-                  gda.field_d != 0)) {
-                  this.field_E.addLast(-10258, new ihb(10, 0));
+                  ComponentContact.field_d != 0)) {
+                  this.field_E.addLast(-10258, new SpecialOrderStatus(10, 0));
                 }
                 if (SetShipTeamActionFactory.field_b) {
-                  this.field_E.addLast(-10258, new ihb(11, 0));
+                  this.field_E.addLast(-10258, new SpecialOrderStatus(11, 0));
                   if (es.field_b != null &&
                     es.field_b.blueprint != null) {
                     var7 = 0;
@@ -6476,7 +6476,7 @@ final class uca {
                       es.field_b.blueprint.description[0] != var5.chassis.getComponentTypeId(0)) {
                       var7 = 50;
                     }
-                    this.field_E.addLast(-10258, new ihb(12, var7));
+                    this.field_E.addLast(-10258, new SpecialOrderStatus(12, var7));
                   }
                 }
               }
@@ -6575,7 +6575,7 @@ final class uca {
                 var18 = 6 + (var16 + var12);
                 if (13 != param2.world.d(false) ||
                   this.field_N &&
-                  gda.field_d == 0 ||
+                  ComponentContact.field_d == 0 ||
                   this.field_x) {
                   var18 = var18 - (6 + var16);
                 }
@@ -6598,7 +6598,7 @@ final class uca {
                 var18 = 12 + (2 * var16 + var12);
                 if (param2.world.d(false) != 13 ||
                   this.field_N &&
-                  gda.field_d == 0 ||
+                  ComponentContact.field_d == 0 ||
                   this.field_x) {
                   var18 = var18 - (6 + var16);
                 }
@@ -6868,7 +6868,7 @@ final class uca {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ihb var5 = null;
+        SpecialOrderStatus var5 = null;
         lw var5_ref = null;
         int var5_int = 0;
         RuntimeException var5_ref2 = null;
@@ -6884,25 +6884,25 @@ final class uca {
             var9.a(-26857);
             var9 = (lw) (param2.next((byte) 75));
           }
-          var5 = (ihb) (param1.first(0));
+          var5 = (SpecialOrderStatus) (param1.first(0));
           while (var5 != null) {
             var6 = 0;
             var7 = (lw) (param2.first(0));
             while (var7 != null) {
-              if (var7.field_l != var5.field_d) {
+              if (var7.field_l != var5.specialOrderId) {
                 var7 = (lw) (param2.next((byte) 101));
                 continue;
               }
-              var7.a(-1746542610, var5.field_e);
+              var7.a(-1746542610, var5.state);
               var6 = 1;
               break;
             }
             if (var6 == 0) {
-              var7Lifetime1 = new lw(var5.field_d);
-              var7Lifetime1.a(-1746542610, var5.field_e);
+              var7Lifetime1 = new lw(var5.specialOrderId);
+              var7Lifetime1.a(-1746542610, var5.state);
               param2.addLast(-10258, var7Lifetime1);
             }
-            var5 = (ihb) (param1.next((byte) 127));
+            var5 = (SpecialOrderStatus) (param1.next((byte) 127));
           }
           if (!param0) {
             var5_ref = (lw) (param2.first(0));
@@ -7038,7 +7038,7 @@ final class uca {
               var10 = var6[var9];
               if (var10 != null &&
                 var10.getTeam((byte) 119) != var8.getTeam((byte) 112) &&
-                !var10.b(1, (byte) 82)) {
+                !var10.hasVisibilityFlag(1, (byte) 82)) {
                 var11 = var8.getX(false) - var10.getX(false);
                 var12Lifetime1 = var8.getY((byte) 119) - var10.getY((byte) -111);
                 var13Lifetime1 = ar.a(var11, (byte) 120, var12Lifetime1);
@@ -7241,7 +7241,7 @@ final class uca {
             var15 = 16;
             var16 = tea.a(var13Lifetime1Lifetime1, var10, 13879) + 2 * var15;
             var17Lifetime1 = 2 * var14Lifetime1 + var15;
-            ga.a(200, false, -(var16 / 2) + SetMassDriverReload.field_p, -(var17Lifetime1 / 2) + GetLaserAimarc.field_q + (GetPointDefenceLaserProjectiles.a(false, var3_int) + var14Lifetime1 / 2 + 8) / 2, var17Lifetime1, var16, 1);
+            CachedArchiveProvider.a(200, false, -(var16 / 2) + SetMassDriverReload.field_p, -(var17Lifetime1 / 2) + GetLaserAimarc.field_q + (GetPointDefenceLaserProjectiles.a(false, var3_int) + var14Lifetime1 / 2 + 8) / 2, var17Lifetime1, var16, 1);
             SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(var13Lifetime1Lifetime1, var10, 13879) / 2, -1, var14Lifetime1 / 2 + GetLaserAimarc.field_q, var10, var13Lifetime1Lifetime1, var11Lifetime1Lifetime1, (byte) -102);
             var25 = Integer.toString(var24.getPhaseChangeCountdown((byte) -127) / Particle.field_l);
             var18 = var25;
@@ -7289,22 +7289,22 @@ final class uca {
           if (0 >= param2.getEnergyProgress(99)) {
             return false;
           }
-          if (param2.d(9, param3 + 7888)) {
+          if (param2.isSpecialOrderActive(9, param3 + 7888)) {
             return false;
           }
-          if (param2.d(4, 55)) {
+          if (param2.isSpecialOrderActive(4, 55)) {
             return false;
           }
           if (param3 != -7829) {
             var10 = (Ship) null;
             discarded$1 = this.a(81, -19, 26, 56, (Ship) null);
           }
-          var5_int = param2.chassis.b(127, 0);
+          var5_int = param2.chassis.collectWeapons(127, 0);
           for (var6 = 0; var6 < var5_int; var6++) {
             var7 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var6];
-            if (!var7.k((byte) 103) &&
+            if (!var7.isDestroyed((byte) 103) &&
               var7.weaponbehaviour.b((byte) 127)) {
-              var8 = var7.i((byte) -112);
+              var8 = var7.getDefinition((byte) -112);
               if (var7.weaponbehaviour.a(-26772, param1, param0, var8, var7)) {
                 return true;
               }
@@ -7366,7 +7366,7 @@ final class uca {
         var16 = VoidHunters.field_G;
         try {
           var8_int = 1;
-          var9 = param2.g(-92);
+          var9 = param2.getBoundingExtent(-92);
           var10 = 0;
           scanLoop1: while (true) {
             if (var10 < param6.length) {
@@ -7427,7 +7427,7 @@ final class uca {
             }
           }
           if (var8_int != 0) {
-            param2.f(0, 2);
+            param2.addVisibilityFlags(0, 2);
           }
           var10Lifetime1 = 64 / ((-23 - param5) / 62);
           return;
@@ -8201,7 +8201,7 @@ final class uca {
               if (var16 instanceof Ship) {
                 var45 = (Ship) (var16);
                 var18 = GetSniperCannonAimarc.a((byte) -38, param1, var45) + ":";
-                var19 = var45.t(0);
+                var19 = var45.getHealthProgress(0);
                 var20Lifetime2 = qpb.a(false, var45.getTeam((byte) 66), 13894143);
                 var21Lifetime1 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22Lifetime1 = var7 - (-var21Lifetime1 - var10);
@@ -8214,7 +8214,7 @@ final class uca {
                   if (var23 != null &&
                     var23 instanceof Ship) {
                     var46 = (Ship) (var23);
-                    if (var46.t(0) > var19) {
+                    if (var46.getHealthProgress(0) > var19) {
                       var25Lifetime1 = SetMinimapWidth.field_o * 16 % 255;
                       uv.a(121, var6 - var12 + 1, 7, -3 + (var22Lifetime1 - var21Lifetime1 / 2), var25Lifetime1 << 16, 1 + var12);
                     }
@@ -8282,7 +8282,7 @@ final class uca {
             if (param1.isRepairModeFullyCharged(-22)) {
               var4 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
               var5_int = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
-              if (!param1.chassis.b(32609, var5_int, GetMinimapWidth.field_o, var4)) {
+              if (!param1.chassis.hasDamagedComponentInCircle(32609, var5_int, GetMinimapWidth.field_o, var4)) {
                 var3 = SetPlayerRepairTime.field_o;
               }
             } else {

@@ -58,7 +58,7 @@ final class PlayerVoteFactory implements GameStateFactory {
                 if (SetMissionVariablesHudX.field_p == var5.field_e) {
                   discarded$1 = var3.append("<col=ffff99>").append(var8).append("</col>");
                 } else {
-                  if (fwa.field_h == var5.field_e) {
+                  if (ArchiveIndexLoader.field_h == var5.field_e) {
                     discarded$2 = var3.append("<col=ffaaff>").append(var8).append("</col>");
                   } else {
                     if (var5.field_e != io.field_p) {
@@ -129,24 +129,24 @@ final class PlayerVoteFactory implements GameStateFactory {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          param1.a(1, 0, new ShipComponent(13));
-          param1.a(1, 1, new ShipComponent(13));
-          param1.a(1, 3, new ShipComponent(13));
-          param1.a(1, 23, new ShipComponent(13));
-          param1.a(1, 25, new ShipComponent(13));
-          param1.a(1, 13, new ShipComponent(16));
-          param1.a(1, 2, new ShipComponent(43));
-          param1.a(1, 24, new ShipComponent(43));
+          param1.attachToHardpoint(1, 0, new ShipComponent(13));
+          param1.attachToHardpoint(1, 1, new ShipComponent(13));
+          param1.attachToHardpoint(1, 3, new ShipComponent(13));
+          param1.attachToHardpoint(1, 23, new ShipComponent(13));
+          param1.attachToHardpoint(1, 25, new ShipComponent(13));
+          param1.attachToHardpoint(1, 13, new ShipComponent(16));
+          param1.attachToHardpoint(1, 2, new ShipComponent(43));
+          param1.attachToHardpoint(1, 24, new ShipComponent(43));
           var4 = new ShipComponent(31);
-          var4.a(1, 1, new ShipComponent(13));
-          var4.a(1, 3, new ShipComponent(13));
-          var4.a(1, 2, new ShipComponent(16));
-          param1.a(1, 6, var4);
+          var4.attachToHardpoint(1, 1, new ShipComponent(13));
+          var4.attachToHardpoint(1, 3, new ShipComponent(13));
+          var4.attachToHardpoint(1, 2, new ShipComponent(16));
+          param1.attachToHardpoint(1, 6, var4);
           var5 = new ShipComponent(31);
-          var5.a(1, 0, new ShipComponent(13));
-          var5.a(1, 2, new ShipComponent(13));
-          var5.a(1, 3, new ShipComponent(16));
-          param1.a(1, 20, var5);
+          var5.attachToHardpoint(1, 0, new ShipComponent(13));
+          var5.attachToHardpoint(1, 2, new ShipComponent(13));
+          var5.attachToHardpoint(1, 3, new ShipComponent(16));
+          param1.attachToHardpoint(1, 20, var5);
           if (!param0) {
             var3 = (String) null;
             PlayerVoteFactory.a((String) null, 85);

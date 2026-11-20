@@ -39,7 +39,7 @@ final class wf {
             var8 = 4 * SetRepairModeRadius.f(param1 ^ -196);
           }
         }
-        ga.a(param0, false, var3 + var8, var4, -(2 * var4) + GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width - var3 * 2, 0);
+        CachedArchiveProvider.a(param0, false, var3 + var8, var4, -(2 * var4) + GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width - var3 * 2, 0);
     }
 
     private final String a(String param0, byte param1, String param2, int param3) {
@@ -269,7 +269,7 @@ final class wf {
         var9 = 0;
         var11 = -10 / ((param2 - 55) / 34);
         if (var6 == 23) {
-          if (fwa.field_g.copyToClipboardHidden &&
+          if (ArchiveIndexLoader.field_g.copyToClipboardHidden &&
             !ssa.b(2)) {
             if (param1) {
               GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -33);
@@ -443,7 +443,7 @@ final class wf {
         var11 = 50;
         var12 = var11 + (-55 - ko.field_e[0].field_n) + (var6 + 160) - var8;
         var13 = 2 * var8 + 180 + ko.field_e[0].field_n + (ko.field_e[6].field_n - 10);
-        ga.a(150, false, -var7 + var5 + 80 - (ko.field_e[0].field_m - var9), var12, var13, -(var9 * 2) + ko.field_e[0].field_m + 480 - (-ko.field_e[2].field_m - 2 * var7), 1);
+        CachedArchiveProvider.a(150, false, -var7 + var5 + 80 - (ko.field_e[0].field_m - var9), var12, var13, -(var9 * 2) + ko.field_e[0].field_m + 480 - (-ko.field_e[2].field_m - 2 * var7), 1);
         var14 = 50;
         var15 = -var7 + (-ko.field_e[0].field_m + (var5 + 80 + var9)) + var14;
         var16 = 2 * var7 + (ko.field_e[0].field_m + 480 - var14 * 2) + (ko.field_e[2].field_m - var9 * 2);
@@ -451,7 +451,7 @@ final class wf {
         if (SetFps.field_o == 0) {
           var12 += 50;
           SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, mb.field_k[SetFps.field_o], var17, var16, -55, var12, 0, var2);
-          SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, lu.field_a, 16755200, var16, -51, var12, 0, var2);
+          SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, HardpointMatch.field_a, 16755200, var16, -51, var12, 0, var2);
         } else {
           var12 -= 10;
           var20 = this.a("<savekey>", (byte) 119, mb.field_k[SetFps.field_o], SetDetachmentMode.field_p);
@@ -640,7 +640,7 @@ final class wf {
                                                         this.field_b.e((byte) -84)) {
                                                         var4 = 0;
                                                         if (vqa.field_g != null &&
-                                                          wh.field_n <= 0 && (!fwa.field_g.copyToClipboardHidden ||
+                                                          wh.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
                                                           ssa.b(2))) {
                                                           var10 = vqa.field_g.field_m.b(1).world.d(vqa.field_g.field_L, 93);
                                                           if (var10 != null) {
@@ -1066,7 +1066,7 @@ final class wf {
           }
           return;
         }
-        if (!lu.field_d &&
+        if (!HardpointMatch.field_d &&
           !SetMassDriverFireForce.field_o) {
           while (ata.e(127)) {
             if (GetSpinningBladeAimspeed.a(-22029)) {

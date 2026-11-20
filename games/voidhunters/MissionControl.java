@@ -194,7 +194,7 @@ final class MissionControl implements DiffableState {
             stackIn_19_0 = 6407;
             return stackIn_19_0;
           }
-          if (param1 == qua.field_d) {
+          if (param1 == ComponentAttachmentPlan.field_d) {
             stackIn_17_0 = 6408;
             return stackIn_17_0;
           }

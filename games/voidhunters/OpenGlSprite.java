@@ -32,7 +32,7 @@ final class OpenGlSprite extends ToolkitSprite {
         if (param0 < 92) {
           return false;
         }
-        return fwa.field_g.a(param1, 11, true);
+        return ArchiveIndexLoader.field_g.a(param1, 11, true);
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {

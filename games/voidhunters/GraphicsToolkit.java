@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class GraphicsToolkit {
-    d field_a;
+    TextureProvider field_a;
     int field_b;
 
     abstract ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
@@ -22,7 +22,7 @@ abstract class GraphicsToolkit {
     final void drawThickLine(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         this.drawThickLine(param1, param2, param5, param0, param3, param6, 1);
         if (param4) {
-          this.field_a = (d) null;
+          this.field_a = (TextureProvider) null;
         }
     }
 
@@ -73,7 +73,7 @@ abstract class GraphicsToolkit {
 
     abstract void clearDepth();
 
-    final synchronized static GraphicsToolkit create(int param0, asb param1, int param2, int param3, d param4, java.awt.Canvas param5, int param6, int param7) {
+    final synchronized static GraphicsToolkit create(int param0, asb param1, int param2, int param3, TextureProvider param4, java.awt.Canvas param5, int param6, int param7) {
         RuntimeException var8 = null;
         GraphicsToolkit stackIn_3_0 = null;
         GraphicsToolkit stackIn_7_0 = null;
@@ -220,7 +220,7 @@ abstract class GraphicsToolkit {
 
     abstract boolean supportsResizableBackbuffer();
 
-    GraphicsToolkit(d param0) {
+    GraphicsToolkit(TextureProvider param0) {
         int var2_int = 0;
         int var3 = 0;
         try {

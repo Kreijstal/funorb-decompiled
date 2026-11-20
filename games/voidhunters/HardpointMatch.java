@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lu {
+final class HardpointMatch {
     static int[] field_f;
-    int field_g;
+    int distance;
     static boolean field_d;
     static String field_a;
-    ShipComponent field_b;
-    int field_e;
+    ShipComponent component;
+    int hardpointIndex;
     static String field_c;
 
     public static void clearSharedReferences(byte param0) {
@@ -15,15 +15,15 @@ final class lu {
         field_f = null;
         field_a = null;
         if (param0 != 87) {
-          lu.clearSharedReferences((byte) 17);
+          HardpointMatch.clearSharedReferences((byte) 17);
         }
     }
 
-    lu(int param0, ShipComponent param1, int param2) {
+    HardpointMatch(int param0, ShipComponent param1, int param2) {
         try {
-          this.field_g = param2;
-          this.field_e = param0;
-          this.field_b = param1;
+          this.distance = param2;
+          this.hardpointIndex = param0;
+          this.component = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lu.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

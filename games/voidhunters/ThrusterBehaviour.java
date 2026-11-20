@@ -7,7 +7,7 @@ final class ThrusterBehaviour implements DiffableState {
     private TimedSpecialOrderBehaviour timer;
     static String[] field_a;
 
-    final int c(int param0) {
+    final int getCooldown(int param0) {
         if (this.timer != null) {
           return this.timer.cooldown;
         }
@@ -18,7 +18,7 @@ final class ThrusterBehaviour implements DiffableState {
         return 0;
     }
 
-    private final void a(World param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, ShipBody param8) {
+    private final void applyThrust(World param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, ShipBody param8) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -35,10 +35,10 @@ final class ThrusterBehaviour implements DiffableState {
           if (param3 != 0) {
             return;
           }
-          var10_int = this.a(param6, false) * param1 >> 8;
+          var10_int = this.getThrust(param6, false) * param1 >> 8;
           var11 = var10_int * GetNumStars.a(param2, (byte) 31) >> 8;
           var12 = var10_int * eu.a(param2, param3 ^ 50) >> 8;
-          param8.a(var12, param4, param7, (byte) -117, var11);
+          param8.addForceAtPoint(var12, param4, param7, (byte) -117, var11);
           if (veb.field_b == 0) {
             if (param6 != 46) {
               param0.a(1, -var11 >> GetSalvoHoldable.field_p, 0, slb.field_a, 30273, param4, 0, param7, -var12 >> GetSalvoHoldable.field_p);
@@ -79,16 +79,16 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    final void a(boolean param0) {
+    final void resetTrail(boolean param0) {
         if (param0) {
           return;
         }
         if (this.trail != null) {
-          this.trail.a(98);
+          this.trail.reset(98);
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void setTrailEnabled(boolean param0, int param1) {
         if (veb.field_b == 0) {
           param0 = false;
         }
@@ -310,7 +310,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    final void b(boolean param0) {
+    final void makeTrailMutable(boolean param0) {
         TrailHolder var2 = null;
         if (this.field_d) {
           return;
@@ -324,7 +324,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean isBooster(int param0, byte param1) {
         if (param1 == -61) {
           return param0 == 46 ? true : false;
         }
@@ -332,7 +332,7 @@ final class ThrusterBehaviour implements DiffableState {
         return param0 == 46 ? true : false;
     }
 
-    final void a(byte param0, int param1, lta param2, int[] param3) {
+    final void drawTrail(byte param0, int param1, lta param2, int[] param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -342,7 +342,7 @@ final class ThrusterBehaviour implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -116) {
-            this.a(false, -52);
+            this.setTrailEnabled(false, -52);
           }
           if (this.trail == null) {
             return;
@@ -369,7 +369,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    final void a(int param0, ShipBody param1, int param2) {
+    final void limitDetachedBoosterCooldown(int param0, ShipBody param1, int param2) {
         uj var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_10_0 = null;
@@ -382,7 +382,7 @@ final class ThrusterBehaviour implements DiffableState {
             var4 = CarouselPlayerEvent.field_i[5];
             if (this.timer.cooldown > var4.d((byte) 64)) {
               this.timer.cooldown = var4.d((byte) 64);
-              param1.d((byte) -55);
+              param1.onStateChanged((byte) -55);
             }
           }
           if (param2 == -24213) {
@@ -407,11 +407,11 @@ final class ThrusterBehaviour implements DiffableState {
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 > -52) {
-          ThrusterBehaviour.a(115);
+          ThrusterBehaviour.loadMasterIndex(115);
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int getThrust(int param0, boolean param1) {
         int var3;
         var3 = param0;
         if (var3 == 46) {
@@ -429,17 +429,17 @@ final class ThrusterBehaviour implements DiffableState {
         return 0;
     }
 
-    final static boolean a(int param0) {
+    final static boolean loadMasterIndex(int param0) {
         if (param0 > -53) {
           return false;
         }
-        return ho.field_a.a(true);
+        return ho.field_a.loadMasterIndex(true);
     }
 
     public ThrusterBehaviour() {
     }
 
-    final void a(boolean param0, ShipBody param1, int param2, int param3, int param4, int[] param5, int param6, int param7, World param8) {
+    final void update(boolean param0, ShipBody param1, int param2, int param3, int param4, int[] param5, int param6, int param7, World param8) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -462,17 +462,17 @@ final class ThrusterBehaviour implements DiffableState {
             if (param0) {
               if (this.timer.cooldown > var10_int) {
                 this.timer.cooldown = var10_int;
-                param1.d((byte) -82);
+                param1.onStateChanged((byte) -82);
               }
               return;
             }
             if (0 < this.timer.cooldown) {
               this.timer.cooldown = this.timer.cooldown - 1;
-              param1.d((byte) -128);
+              param1.onStateChanged((byte) -128);
             }
             if (this.timer.cooldown > var10_int) {
               GetGrapplingHookAimarc.a(param3, param1.id + param8.getShips(1000).length, 2, -64, param7);
-              this.a(param8, 256, param2, param6 + 31501, param7, param5, param4, param3, param1);
+              this.applyThrust(param8, 256, param2, param6 + 31501, param7, param5, param4, param3, param1);
             }
           }
           if (param6 == -31501) {
@@ -506,7 +506,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, ShipBody param5, int[] param6, int[] param7, World param8, int param9, int param10, int param11, int param12, int param13) {
+    final void activate(boolean param0, int param1, int param2, int param3, int param4, ShipBody param5, int[] param6, int[] param7, World param8, int param9, int param10, int param11, int param12, int param13) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -524,18 +524,18 @@ final class ThrusterBehaviour implements DiffableState {
             if (this.timer.cooldown <= 0) {
               var16 = CarouselPlayerEvent.field_i[5];
               this.timer.cooldown = var16.d((byte) 64) + var16.b(-25131);
-              param5.d((byte) -57);
+              param5.onStateChanged((byte) -57);
             }
           } else {
             if (param13 != 12) {
               GetGrapplingHookAimarc.a(param3, param5.id, 69, 87, param2);
             }
-            this.a(param8, param11, param9, 0, param2, param7, param13, param3, param5);
+            this.applyThrust(param8, param11, param9, 0, param2, param7, param13, param3, param5);
           }
           if (param0) {
             return;
           }
-          ThrusterBehaviour.a(-31);
+          ThrusterBehaviour.loadMasterIndex(-31);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

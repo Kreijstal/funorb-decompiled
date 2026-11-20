@@ -21,7 +21,7 @@ final class sb extends ora implements eb {
         if (param7 >= -78) {
           this.field_j = -127;
         }
-        if (this.field_c == qua.field_d &&
+        if (this.field_c == ComponentAttachmentPlan.field_d &&
           mj.field_f == this.field_a) {
           var9 = this.field_d.field_zc;
           var10 = this.field_h.LockRect(0, param6, param0, param2, param1, 0, var9);
@@ -179,7 +179,7 @@ final class sb extends ora implements eb {
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
         stackIn_3_1 = (Direct3DToolkit) (param0);
-        stackIn_3_2 = qua.field_d;
+        stackIn_3_2 = ComponentAttachmentPlan.field_d;
         stackIn_3_3 = mj.field_f;
         if (param3) {
           stackIn_3_0Lifetime1 = this;

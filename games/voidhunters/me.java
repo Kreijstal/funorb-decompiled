@@ -28,11 +28,11 @@ final class me extends pja {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (2 == param0.i((byte) -112).field_a) {
+          if (2 == param0.getDefinition((byte) -112).field_a) {
             stackIn_3_0 = pa.field_c;
             return stackIn_3_0;
           }
-          if (param0.i((byte) -112).field_a == 3) {
+          if (param0.getDefinition((byte) -112).field_a == 3) {
             stackIn_6_0 = GetMpSandboxEnemySpawnLimit.field_o;
             return stackIn_6_0;
           }
@@ -609,7 +609,7 @@ final class me extends pja {
                   stackIn_160_0 = GetMissilesCooldown.field_o;
                 }
               } else {
-                stackIn_160_0 = gda.field_k;
+                stackIn_160_0 = ComponentContact.field_k;
               }
               NebulaFieldFactory.field_a = stackIn_160_0;
             }

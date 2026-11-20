@@ -129,7 +129,7 @@ final class soa extends llb {
               }
             }
             qsa.field_b.field_y = true;
-            if (!ii.field_h) {
+            if (!ArchiveTextureProvider.field_h) {
               stackIn_36_0 = qsa.field_b;
               if (var8 != 0) {
                 stackIn_37_1 = SetAudioRangeCutoff.field_p;
@@ -238,7 +238,7 @@ final class soa extends llb {
               ts.a(false, param3);
             }
             if (qsa.field_b.field_o != 0) {
-              if (ii.field_h) {
+              if (ArchiveTextureProvider.field_h) {
                 GetComponentBreakingExplosionForceMultiplier.a(38, param3);
               } else {
                 GpuSprite.a((byte) 108, param3);

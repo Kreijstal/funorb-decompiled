@@ -11,7 +11,7 @@ final class ai {
         rga.field_g.b(-561, GetShipToShipRamDamage.field_q);
         SetUseCircleFill.field_o = new llb(0L, DualLinkNode.field_g);
         SetUseModels.field_o = new llb((long)param1, (llb) null);
-        SetUseCircleFill.field_o.b(param1 ^ -561, sfa.field_d);
+        SetUseCircleFill.field_o.b(param1 ^ -561, ProjectileHit.field_d);
         SetUseCircleFill.field_o.b(param1 ^ -561, SetUseModels.field_o);
         SetUseModels.field_o.b(-561, DualLinkNode.field_f);
         SetUseModels.field_o.b(-561, rlb.field_a);

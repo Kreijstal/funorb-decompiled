@@ -111,7 +111,7 @@ final class roa extends ka {
         int[] var8 = null;
         long[] var9 = null;
         int var10 = 0;
-        opa var10_ref_opa = null;
+        TextureMetadata var10_ref_opa = null;
         hu[] var11 = null;
         int var12 = 0;
         int var13 = 0;
@@ -189,17 +189,17 @@ final class roa extends ka {
         float var60 = 0.0f;
         float var61 = 0.0f;
         float var62 = 0.0f;
-        d var64 = null;
+        TextureProvider var64 = null;
         int[] var65 = null;
-        opa var66 = null;
-        opa var67 = null;
+        TextureMetadata var66 = null;
+        TextureMetadata var67 = null;
         long[] var68 = null;
         bqa var69 = null;
         sr var70 = null;
         hu var71 = null;
         hu var72 = null;
         hu var73 = null;
-        opa var74 = null;
+        TextureMetadata var74 = null;
         kua var75 = null;
         hu var77 = null;
         hu var78 = null;
@@ -268,7 +268,7 @@ final class roa extends ka {
               2 != param1.field_E[var9_int]) {
               if (null != param1.field_u &&
                 param1.field_u[var9_int] != -1) {
-                var10_ref_opa = var64.a(-20292, 65535 & param1.field_u[var9_int]);
+                var10_ref_opa = var64.getTextureMetadata(-20292, 65535 & param1.field_u[var9_int]);
                 decompiledFrameRemainder0 = (((this.field_s & 64) != 0 &&
                   var10_ref_opa.field_r) || !(var10_ref_opa.field_m));
               }
@@ -309,7 +309,7 @@ final class roa extends ka {
                     var18 = 1;
                   }
                   if (var21_ref_sr.field_e != -1) {
-                    var66 = var64.a(-20292, var21_ref_sr.field_e);
+                    var66 = var64.getTextureMetadata(-20292, var21_ref_sr.field_e);
                     if (2 != var66.field_q) {
                     }
                   }
@@ -326,7 +326,7 @@ final class roa extends ka {
               if (param1.field_u != null) {
                 var18Lifetime5 = param1.field_u[var12];
                 if (-1 != var18Lifetime5) {
-                  var67 = var64.a(-20292, var18Lifetime5 & 65535);
+                  var67 = var64.getTextureMetadata(-20292, var18Lifetime5 & 65535);
                   var13_ref = var67;
                   if ((64 & this.field_s) != 0 &&
                     var67.field_r) {
@@ -343,7 +343,7 @@ final class roa extends ka {
                 stackIn_43_0 = 1;
               } else {
                 if (var13_ref != null) {
-                  stackIn_43_0 = (((opa) (var13_ref)).field_q != 0) ? 1 : 0;
+                  stackIn_43_0 = (((TextureMetadata) (var13_ref)).field_q != 0) ? 1 : 0;
                 } else {
                   stackIn_43_0 = 0;
                 }
@@ -518,7 +518,7 @@ final class roa extends ka {
             var21Lifetime1 = stackIn_101_0;
             if (-1 != var21Lifetime1 &&
               (64 & this.field_s) != 0) {
-              var74 = var64.a(-20292, var21Lifetime1 & 65535);
+              var74 = var64.getTextureMetadata(-20292, var21Lifetime1 & 65535);
               if (var74.field_r) {
                 var21Lifetime1 = -1;
               }

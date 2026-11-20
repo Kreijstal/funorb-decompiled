@@ -86,7 +86,7 @@ final class jba implements wwa {
             var8 = SoftwareGlyphMask.a(param1, (byte) 55, param5, param2, param3);
           }
           var24 = new ShipComponentDefinition((int[]) (var8), 0, 0);
-          var24.a(4, 102, false);
+          var24.scaleGeometry(4, 102, false);
           if (param0 == null) {
             var24.field_w = new int[3][];
             var10_ref = var8;
@@ -122,7 +122,7 @@ final class jba implements wwa {
           var24.field_m = true;
           var24.field_k = false;
           var10Lifetime1 = 71 / ((param4 - 45) / 63);
-          var24.a(121, 8);
+          var24.scaleMassDown(121, 8);
           var24.field_B = 16;
           var24.field_r = true;
           stackIn_32_0 = var24;

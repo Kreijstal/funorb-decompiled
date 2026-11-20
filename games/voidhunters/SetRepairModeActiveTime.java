@@ -138,7 +138,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SpawnChoiceFactory.field_c = new llb(0L, SetPlayerRepairAmount.field_q, bw.field_a.toUpperCase());
           qpb.field_w = new llb(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
           sra.field_a = new llb(0L, as.field_c);
-          fwa.field_a = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
+          ArchiveIndexLoader.field_a = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
           GetSniperCannonAimspeed.field_q = new llb(0L, GetUseSprites.field_p, lw.field_e);
           SettingsChangeFactory.field_b = new llb(0L, GetUseSprites.field_p, sc.field_b);
           GrapplingHook.field_C = new llb(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
@@ -164,7 +164,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           bqa.field_d = new llb(0L, (llb) null);
           bqa.field_d.b(-561, qpb.field_w);
           bqa.field_d.b(param1 - 10792, sra.field_a);
-          sra.field_a.b(-561, fwa.field_a);
+          sra.field_a.b(-561, ArchiveIndexLoader.field_a);
           sra.field_a.b(-561, GetSniperCannonAimspeed.field_q);
           sra.field_a.b(param1 ^ -9672, SettingsChangeFactory.field_b);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
@@ -301,7 +301,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           vva.field_r.b(param1 - 10792, vw.field_a);
           vva.field_r.b(-561, qsa.field_b);
           vva.field_r.b(-561, SetAutozoomSpeedDivide.field_p);
-          sfa.field_d = new llb(0L, lo.field_b, ko.field_d.toUpperCase());
+          ProjectileHit.field_d = new llb(0L, lo.field_b, ko.field_d.toUpperCase());
           rlb.field_a = new llb(0L, hnb.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -95,12 +95,12 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           var2_int = 0;
           while (4 > var2_int) {
             var3 = new ShipComponent(32);
-            var3.a(1, 1, new ShipComponent(15));
-            var3.a(1, 2, new ShipComponent(15));
-            var3.a(1, 3, new ShipComponent(15));
-            var3.a(1, 4, new ShipComponent(15));
-            var3.a(1, 5, new ShipComponent(15));
-            param0.a(1, var2_int, var3);
+            var3.attachToHardpoint(1, 1, new ShipComponent(15));
+            var3.attachToHardpoint(1, 2, new ShipComponent(15));
+            var3.attachToHardpoint(1, 3, new ShipComponent(15));
+            var3.attachToHardpoint(1, 4, new ShipComponent(15));
+            var3.attachToHardpoint(1, 5, new ShipComponent(15));
+            param0.attachToHardpoint(1, var2_int, var3);
             var2_int++;
             if (var4 != 0) {
               return;

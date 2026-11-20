@@ -23,7 +23,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
     private int currentconnectedangle;
     static byte[][][] field_l;
 
-    final void a(byte param0, int[] param1) {
+    final void accumulateMassMoments(byte param0, int[] param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -34,7 +34,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException var3 = null;
         var5 = VoidHunters.field_G;
         try {
-          var3_int = this.i((byte) -112).field_u;
+          var3_int = this.getDefinition((byte) -112).mass;
           param1[1] = param1[1] + (this.finaly * var3_int >> 4);
           param1[2] = param1[2] + var3_int;
           if (param0 < 23) {
@@ -43,7 +43,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           param1[0] = param1[0] + (this.finalx * var3_int >> 4);
           if (null != this.subcomponents) {
             for (var4 = 0; var4 < this.subcomponents.length; var4++) {
-              this.subcomponents[var4].a((byte) 117, param1);
+              this.subcomponents[var4].accumulateMassMoments((byte) 117, param1);
             }
             return;
           }
@@ -62,24 +62,24 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int c(byte param0) {
+    final int getDefaultConnectionY(byte param0) {
         if (param0 != 100) {
           return -49;
         }
-        return this.i((byte) -112).field_i;
+        return this.getDefinition((byte) -112).connectionY;
     }
 
-    final void a(byte param0, lta param1, boolean param2, World param3, int param4) {
+    final void drawTree(byte param0, lta param1, boolean param2, World param3, int param4) {
         int var6_int = 0;
         int var7 = VoidHunters.field_G;
-        this.a(param3, (byte) 84, param4, param1, param2);
+        this.drawComponent(param3, (byte) 84, param4, param1, param2);
         if (param0 <= 21) {
           return;
         }
         try {
           if (null != this.subcomponents) {
             for (var6_int = 0; this.subcomponents.length > var6_int; var6_int++) {
-              this.subcomponents[var6_int].a((byte) 87, param1, param2, param3, param4);
+              this.subcomponents[var6_int].drawTree((byte) 87, param1, param2, param3, param4);
             }
           }
         } catch (RuntimeException runtimeException) {
@@ -87,7 +87,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(ShipBody param0, int param1, World param2, int param3, int param4, int param5) {
+    final void activate(ShipBody param0, int param1, World param2, int param3, int param4, int param5) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -100,18 +100,18 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param4 <= 7) {
             return;
           }
-          var8 = this.i((byte) -112);
+          var8 = this.getDefinition((byte) -112);
           if (this.thrusterbehaviour != null) {
-            this.thrusterbehaviour.a(true, var8.field_i, this.finalx, this.finaly, var8.field_b, param0, var8.field_v, this.finaloutline, param2, this.finalangle, param1, param5, param3, this.componentTypeId);
+            this.thrusterbehaviour.activate(true, var8.connectionY, this.finalx, this.finaly, var8.connectionX, param0, var8.outline, this.finaloutline, param2, this.finalangle, param1, param5, param3, this.componentTypeId);
           }
           if (this.weaponbehaviour != null) {
-            this.weaponbehaviour.a(param2, false, var8.field_b, param3, -97, param0, param1, this.finaly, this.finalangle, this.finalx, var8.field_i, var8.field_v);
+            this.weaponbehaviour.a(param2, false, var8.connectionX, param3, -97, param0, param1, this.finaly, this.finalangle, this.finalx, var8.connectionY, var8.outline);
           }
           if (this.grapplebehaviour != null) {
-            this.grapplebehaviour.a(param3, this.finaly, var8.field_v, param1, this.finalangle, this.finalx, var8.field_i, (byte) 77, param2, var8.field_b, param0);
+            this.grapplebehaviour.a(param3, this.finaly, var8.outline, param1, this.finalangle, this.finalx, var8.connectionY, (byte) 77, param2, var8.connectionX, param0);
           }
           if (null != this.behaviour) {
-            this.behaviour.a(param0, var8.field_v, -9151, param1, this.finaly, this.finalangle, var8.field_b, param2, var8.field_i, this.finalx, param3);
+            this.behaviour.a(param0, var8.outline, -9151, param1, this.finaly, this.finalangle, var8.connectionX, param2, var8.connectionY, this.finalx, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(World param0, int param1, ShipBody param2) {
+    private final void detachFromBody(World param0, int param1, ShipBody param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -158,7 +158,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           if (null != this.subcomponents) {
             for (var4_int = 0; this.subcomponents.length > var4_int; var4_int++) {
-              this.subcomponents[var4_int].a(param0, -19625, param2);
+              this.subcomponents[var4_int].detachFromBody(param0, -19625, param2);
             }
           }
           if (param1 != -19625) {
@@ -185,15 +185,15 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final boolean d(byte param0) {
+    private final boolean hasAdjustableConnection(byte param0) {
         int var2;
         boolean stackIn_5_0 = false;
         var2 = 63 / ((-25 - param0) / 43);
-        stackIn_5_0 = (this.d(-47)) || !(0 >= this.c(118));
+        stackIn_5_0 = (this.isSpinningWeapon(-47)) || !(0 >= this.getAimArc(118));
         return stackIn_5_0;
     }
 
-    final void a(boolean param0, byte param1, World param2, ShipBody param3) {
+    final void updateBehaviors(boolean param0, byte param1, World param2, ShipBody param3) {
         int stackIn_65_0 = 0;
         RuntimeException stackIn_86_0 = null;
         StringBuilder stackIn_86_1 = null;
@@ -234,20 +234,20 @@ final class ShipComponent implements DiffableState, CompactGameState {
         try {
           if (this.subcomponents != null) {
             for (var5_int = 0; this.subcomponents.length > var5_int; var5_int++) {
-              this.subcomponents[var5_int].a(param0, (byte) -124, param2, param3);
+              this.subcomponents[var5_int].updateBehaviors(param0, (byte) -124, param2, param3);
             }
           }
           if (null != this.weaponbehaviour &&
             param0) {
-            var23 = this.i((byte) -112);
+            var23 = this.getDefinition((byte) -112);
             var22 = this.weaponbehaviour.a((byte) 24);
             if (0 < var22.b((byte) 97) &&
               this.weaponbehaviour.reload != 0) {
               this.currentconnectedangle = this.currentconnectedangle + this.weaponbehaviour.reload;
-              this.weaponbehaviour.a(this.finalx, param3, var23.field_v, var23.field_i, this.finaly, true, var23.field_b, this.finalangle, param2);
-              param3.d((byte) -76);
+              this.weaponbehaviour.a(this.finalx, param3, var23.outline, var23.connectionY, this.finaly, true, var23.connectionX, this.finalangle, param2);
+              param3.onStateChanged((byte) -76);
             } else {
-              if (!this.k((byte) 127)) {
+              if (!this.isDestroyed((byte) 127)) {
                 if (this.weaponbehaviour.c((byte) 101)) {
                   if (this.weaponbehaviour.b(true)) {
                     var7 = this.weaponbehaviour.c(2);
@@ -257,14 +257,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
                         var8 = param2.d((byte) -27, var7.targetId);
                       }
                       if (var8 != null) {
-                        this.a(var8.getX(false) + var7.targetX, true, 0, var8.getY((byte) -87) + var7.targetY, 21750, 0);
+                        this.aimAt(var8.getX(false) + var7.targetX, true, 0, var8.getY((byte) -87) + var7.targetY, 21750, 0);
                       }
                     }
                   } else {
                     this.weaponbehaviour.b(param1 + 2172);
                   }
                 }
-                this.weaponbehaviour.a(this.finalx, param3, var23.field_v, var23.field_i, this.finaly, true, var23.field_b, this.finalangle, param2);
+                this.weaponbehaviour.a(this.finalx, param3, var23.outline, var23.connectionY, this.finaly, true, var23.connectionX, this.finalangle, param2);
                 if (var22.h(param1 ^ 2185)) {
                   var26 = (Ship) (param3);
                   var24 = param2.getProjectiles(true);
@@ -297,7 +297,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   while (var20 < var19.length) {
                     var14 = var19[var20];
                     if (var14 != null &&
-                      var14.g(false) &&
+                      var14.isFighter(false) &&
                       var14.getTeam((byte) 78) != var26.getTeam((byte) 124)) {
                       var15Lifetime1 = var14.x - this.finalx;
                       var16Lifetime1 = var14.y - this.finaly;
@@ -311,19 +311,19 @@ final class ShipComponent implements DiffableState, CompactGameState {
                     var20++;
                   }
                   if (var10 != null) {
-                    this.a(((MovingObject) (var10)).dx + ((MovingObject) (var10)).x, true, 0, ((MovingObject) (var10)).y + ((MovingObject) (var10)).dy, 21750, 0);
-                    this.a(param3, ((MovingObject) (var10)).dy + ((MovingObject) (var10)).y, param2, ((MovingObject) (var10)).x + ((MovingObject) (var10)).dx, 111, 256);
-                    param3.d((byte) -44);
+                    this.aimAt(((MovingObject) (var10)).dx + ((MovingObject) (var10)).x, true, 0, ((MovingObject) (var10)).y + ((MovingObject) (var10)).dy, 21750, 0);
+                    this.activate(param3, ((MovingObject) (var10)).dy + ((MovingObject) (var10)).y, param2, ((MovingObject) (var10)).x + ((MovingObject) (var10)).dx, 111, 256);
+                    param3.onStateChanged((byte) -44);
                   }
                 }
               }
             }
             if (0 < var22.b((byte) 72) &&
-              !this.k((byte) 106)) {
-              this.weaponbehaviour.a(param2, true, var23.field_b, 0, -78, param3, 0, this.finaly, this.finalangle, this.finalx, var23.field_i, var23.field_v);
+              !this.isDestroyed((byte) 106)) {
+              this.weaponbehaviour.a(param2, true, var23.connectionX, 0, -78, param3, 0, this.finaly, this.finalangle, this.finalx, var23.connectionY, var23.outline);
             }
           }
-          stackIn_65_0 = (!this.k((byte) 46)) ? 0 : 1;
+          stackIn_65_0 = (!this.isDestroyed((byte) 46)) ? 0 : 1;
           var5_intLifetime1 = stackIn_65_0;
           if (param1 != -124) {
             this.readState((IsaacPacketBuffer) null, false);
@@ -334,14 +334,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.weaponbehaviour.reload = this.weaponbehaviour.a((byte) 24).f((byte) 57) - this.weaponbehaviour.a((byte) 24).c((byte) 124);
           }
           if (null != this.thrusterbehaviour) {
-            this.thrusterbehaviour.a(var5_intLifetime1 != 0, param3, this.finalangle, this.finaly, this.componentTypeId, this.finaloutline, param1 - 31377, this.finalx, param2);
+            this.thrusterbehaviour.update(var5_intLifetime1 != 0, param3, this.finalangle, this.finaly, this.componentTypeId, this.finaloutline, param1 - 31377, this.finalx, param2);
           }
-          var25 = this.i((byte) -112);
+          var25 = this.getDefinition((byte) -112);
           if (this.grapplebehaviour != null) {
-            this.grapplebehaviour.a(param3, param2, this.finaly, var5_intLifetime1 != 0, (byte) 126, this.finalx, this.finalangle, var25.field_v);
+            this.grapplebehaviour.a(param3, param2, this.finaly, var5_intLifetime1 != 0, (byte) 126, this.finalx, this.finalangle, var25.outline);
           }
           if (null != this.behaviour) {
-            this.behaviour.a(var5_intLifetime1 != 0, this.finaly, param3, var25.field_v, param2, this.finalangle, 123, this.finalx);
+            this.behaviour.a(var5_intLifetime1 != 0, this.finaly, param3, var25.outline, param2, this.finalangle, 123, this.finalx);
           }
           if (var25.field_d > 0 &&
             param0) {
@@ -369,7 +369,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final ShipComponent[] a(byte param0, int param1, int param2, ShipComponent[] param3, int param4) {
+    final ShipComponent[] collectComponentsInCircle(byte param0, int param1, int param2, ShipComponent[] param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -382,14 +382,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
         try {
           if (this.subcomponents != null) {
             for (var6_int = 0; this.subcomponents.length > var6_int; var6_int++) {
-              param3 = this.subcomponents[var6_int].a((byte) 101, param1, param2, param3, param4);
+              param3 = this.subcomponents[var6_int].collectComponentsInCircle((byte) 101, param1, param2, param3, param4);
             }
           }
           if (param0 != 101) {
-            this.a((byte) 114, (ShipBody) null);
+            this.configureThrusterBindings((byte) 114, (ShipBody) null);
           }
           if (ujb.a((byte) -57, this.finaloutline, param1, param4, param2)) {
-            param3 = (ShipComponent[]) (ija.a(this, param3, 0, ii.field_d));
+            param3 = (ShipComponent[]) (ija.a(this, param3, 0, ArchiveTextureProvider.field_d));
           }
           stackIn_11_0 = (ShipComponent[]) (param3);
           return stackIn_11_0;
@@ -407,10 +407,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final lu a(int param0, boolean param1, int param2, int param3, int param4, ShipComponent param5, int param6, ShipBody param7) {
+    final HardpointMatch findNearestHardpoint(int param0, boolean param1, int param2, int param3, int param4, ShipComponent param5, int param6, ShipBody param7) {
         int var11 = 0;
-        lu stackIn_3_0 = null;
-        lu stackIn_21_0 = null;
+        HardpointMatch stackIn_3_0 = null;
+        HardpointMatch stackIn_21_0 = null;
         Object stackIn_23_0 = null;
         Object stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -420,7 +420,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         Object var9 = null;
         int var10 = 0;
-        lu var11_ref_lu = null;
+        HardpointMatch var11_ref_lu = null;
         Hardpoint var12 = null;
         int var13 = 0;
         int var14 = 0;
@@ -430,16 +430,16 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var16 = VoidHunters.field_G;
         try {
           if (param6 != -29866) {
-            stackIn_3_0 = (lu) null;
+            stackIn_3_0 = (HardpointMatch) null;
             return stackIn_3_0;
           }
           var9 = null;
           if (this.subcomponents != null) {
             for (var10 = 0; var10 < this.subcomponents.length; var10++) {
-              var11_ref_lu = this.subcomponents[var10].a(param0, param1, param2, param3, param4, param5, -29866, param7);
+              var11_ref_lu = this.subcomponents[var10].findNearestHardpoint(param0, param1, param2, param3, param4, param5, -29866, param7);
               if (var11_ref_lu != null) {
                 var9 = var11_ref_lu;
-                param2 = ((lu) (var9)).field_g;
+                param2 = ((HardpointMatch) (var9)).distance;
               }
             }
           }
@@ -456,12 +456,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
               }
             }
             if (-1 != var10Lifetime1) {
-              stackIn_21_0 = new lu(var10Lifetime1, this, param2);
+              stackIn_21_0 = new HardpointMatch(var10Lifetime1, this, param2);
               return stackIn_21_0;
             }
           }
           stackIn_23_0 = var9;
-          return (lu) (stackIn_23_0);
+          return (HardpointMatch) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -482,7 +482,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(byte param0, int param1, int param2, IntrusiveDeque param3, int param4, ShipComponent param5) {
+    private final void collectCollisions(byte param0, int param1, int param2, IntrusiveDeque param3, int param4, ShipComponent param5) {
         int var7_int = 0;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
@@ -514,21 +514,21 @@ final class ShipComponent implements DiffableState, CompactGameState {
         try {
           if (this.subcomponents != null) {
             for (var7_int = 0; this.subcomponents.length > var7_int; var7_int++) {
-              this.subcomponents[var7_int].a((byte) -52, 1 + param1, var7_int + 1 << 4 * param1 | param2, param3, param4, param5);
+              this.subcomponents[var7_int].collectCollisions((byte) -52, 1 + param1, var7_int + 1 << 4 * param1 | param2, param3, param4, param5);
             }
           }
-          if (ar.a(-param5.finalx + this.finalx, (byte) 115, -param5.finaly + this.finaly) > this.i((byte) -112).field_l + param5.i((byte) -112).field_l) {
+          if (ar.a(-param5.finalx + this.finalx, (byte) 115, -param5.finaly + this.finaly) > this.getDefinition((byte) -112).boundingRadius + param5.getDefinition((byte) -112).boundingRadius) {
             return;
           }
-          var7 = this.i((byte) -112).field_A;
+          var7 = this.getDefinition((byte) -112).field_A;
           var8 = 37 % ((61 - param0) / 51);
-          var9 = param5.i((byte) -112).field_A;
+          var9 = param5.getDefinition((byte) -112).field_A;
           if (var7 != null) {
             if (var9 == null) {
               var10 = -1;
               for (var11 = 0; var7.length > var11; var11++) {
-                var24 = this.a(this.finaloutline, var11, var7, -600917695);
-                var13 = ihb.a(var24, -5115, param5.finaloutline);
+                var24 = this.extractPolygonPart(this.finaloutline, var11, var7, -600917695);
+                var13 = SpecialOrderStatus.getPolygonOverlapScore(var24, -5115, param5.finaloutline);
                 if (var10 < var13) {
                   var10 = var13;
                 }
@@ -536,15 +536,15 @@ final class ShipComponent implements DiffableState, CompactGameState {
               if (var10 == -1) {
                 return;
               }
-              param3.addLast(-10258, new fka(this, param2, param5, param4, var10));
+              param3.addLast(-10258, new ComponentCollision(this, param2, param5, param4, var10));
               return;
             }
             var10Lifetime3 = -1;
             for (var11Lifetime2 = 0; var7.length > var11Lifetime2; var11Lifetime2++) {
-              var25 = this.a(this.finaloutline, var11Lifetime2, var7, -600917695);
+              var25 = this.extractPolygonPart(this.finaloutline, var11Lifetime2, var7, -600917695);
               for (var13Lifetime2 = 0; var13Lifetime2 < var9.length; var13Lifetime2++) {
-                var26 = this.a(param5.finaloutline, var13Lifetime2, var9, -600917695);
-                var15 = ihb.a(var25, -5115, var26);
+                var26 = this.extractPolygonPart(param5.finaloutline, var13Lifetime2, var9, -600917695);
+                var15 = SpecialOrderStatus.getPolygonOverlapScore(var25, -5115, var26);
                 if (var15 > var10Lifetime3) {
                   var10Lifetime3 = var15;
                 }
@@ -553,14 +553,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
             if (var10Lifetime3 == -1) {
               return;
             }
-            param3.addLast(-10258, new fka(this, param2, param5, param4, var10Lifetime3));
+            param3.addLast(-10258, new ComponentCollision(this, param2, param5, param4, var10Lifetime3));
             return;
           }
           if (var9 != null) {
             var10Lifetime1 = -1;
             for (var11Lifetime1 = 0; var11Lifetime1 < var9.length; var11Lifetime1++) {
-              var27 = this.a(param5.finaloutline, var11Lifetime1, var9, -600917695);
-              var13Lifetime1 = ihb.a(this.finaloutline, -5115, var27);
+              var27 = this.extractPolygonPart(param5.finaloutline, var11Lifetime1, var9, -600917695);
+              var13Lifetime1 = SpecialOrderStatus.getPolygonOverlapScore(this.finaloutline, -5115, var27);
               if (var13Lifetime1 > var10Lifetime1) {
                 var10Lifetime1 = var13Lifetime1;
               }
@@ -568,12 +568,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
             if (var10Lifetime1 == -1) {
               return;
             }
-            param3.addLast(-10258, new fka(this, param2, param5, param4, var10Lifetime1));
+            param3.addLast(-10258, new ComponentCollision(this, param2, param5, param4, var10Lifetime1));
             return;
           }
-          var10Lifetime2 = ihb.a(this.finaloutline, -5115, param5.finaloutline);
+          var10Lifetime2 = SpecialOrderStatus.getPolygonOverlapScore(this.finaloutline, -5115, param5.finaloutline);
           if (-1 != var10Lifetime2) {
-            param3.addLast(-10258, new fka(this, param2, param5, param4, var10Lifetime2));
+            param3.addLast(-10258, new ComponentCollision(this, param2, param5, param4, var10Lifetime2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -596,7 +596,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean a(int param0, int param1, World param2, ShipBody param3) {
+    final boolean applyDamageToLeaves(int param0, int param1, World param2, ShipBody param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -610,15 +610,15 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var7 = VoidHunters.field_G;
         try {
           if (this.componentTypeId == param1) {
-            param3.chassis.a(param0, (byte) 80);
+            param3.chassis.applyScaledDamage(param0, (byte) 80);
             return false;
           }
           if (null != this.subcomponents &&
             this.subcomponents.length != 0) {
             for (var5_int = 0; this.subcomponents.length > var5_int; var5_int++) {
-              var6 = this.subcomponents[var5_int].a(param0, 47, param2, param3) ? 1 : 0;
+              var6 = this.subcomponents[var5_int].applyDamageToLeaves(param0, 47, param2, param3) ? 1 : 0;
               if (var6 != 0) {
-                this.a(param2, 0, true, param3);
+                this.pruneDestroyedComponents(param2, 0, true, param3);
               }
             }
             return false;
@@ -656,7 +656,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return this.componentTypeId;
     }
 
-    final void a(World param0, byte param1, int param2, lta param3, boolean param4) {
+    final void drawComponent(World param0, byte param1, int param2, lta param3, boolean param4) {
         boolean discarded$0 = false;
         int stackIn_74_0 = 0;
         RuntimeException stackIn_127_0 = null;
@@ -749,13 +749,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var24Lifetime1Lifetime1;
         var46 = VoidHunters.field_G;
         try {
-          var47 = this.i((byte) -112);
-          var7 = this.health * 256 / var47.field_p;
+          var47 = this.getDefinition((byte) -112);
+          var7 = this.health * 256 / var47.maxHealth;
           var8 = (-var7 + 256) * ((31 & SetMinimapWidth.field_o ^ (SetMinimapWidth.field_o & 32) - ((32 & SetMinimapWidth.field_o) >>> 5)) + 32) / 64;
           var9 = -var8 + 256;
           var10 = var8;
           var11 = 16724787;
-          if (this.k((byte) 97) ||
+          if (this.isDestroyed((byte) 97) ||
             this.health == 1 &&
             !param4) {
             param2 = param2 / 2;
@@ -766,13 +766,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var12 = 11184810;
           }
           if (param1 != 84) {
-            discarded$0 = this.d((byte) -119);
+            discarded$0 = this.hasAdjustableConnection((byte) -119);
           }
           if (this.componentTypeId == 45) {
             SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.b(true, this.finaly), (float)(int)(param3.field_a * 4096.0f), 128 + (eu.a(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.a(this.finalx, (byte) 127));
           }
           if (GetPointDefenceLaserProjectiles.a(16, param1 + 11200)) {
-            SetNumStars.a(param3.field_a * (float)var47.field_l, (byte) 113, param3.b(true, this.finaly), 16711680, param3.a(this.finalx, (byte) 126));
+            SetNumStars.a(param3.field_a * (float)var47.boundingRadius, (byte) 113, param3.b(true, this.finaly), 16711680, param3.a(this.finalx, (byte) 126));
           }
           var13 = 1;
           if (1 == GetUseSprites.field_o) {
@@ -880,10 +880,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (var13 != 0) {
             var14 = GetNumStars.a(this.finalangle, (byte) -108);
             var15 = eu.a(this.finalangle, 69);
-            if (0 != var47.field_b ||
-              0 != var47.field_i) {
-              var16Lifetime1 = -(var47.field_i * var15) + var47.field_b * var14 >> 16;
-              var17Lifetime1 = var47.field_b * var15 + var47.field_i * var14 >> 16;
+            if (0 != var47.connectionX ||
+              0 != var47.connectionY) {
+              var16Lifetime1 = -(var47.connectionY * var15) + var47.connectionX * var14 >> 16;
+              var17Lifetime1 = var47.connectionX * var15 + var47.connectionY * var14 >> 16;
               var18Lifetime1 = var16Lifetime1 + this.finalx;
               var19Lifetime1 = this.finaly + var17Lifetime1;
               var20 = param3.a(var18Lifetime1, (byte) 115);
@@ -948,7 +948,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   var25Lifetime1 = 0;
                   var26 = 1;
                   for (var27 = 0; var17_ref_int____[var19Lifetime1Lifetime1].length > var27; var27 += 2) {
-                    var28 = var17_ref_int____[var19Lifetime1Lifetime1][var27] - this.a(param4, var47, true) >> 4;
+                    var28 = var17_ref_int____[var19Lifetime1Lifetime1][var27] - this.getRecoilOffset(param4, var47, true) >> 4;
                     var29 = var17_ref_int____[var19Lifetime1Lifetime1][1 + var27] >> 4;
                     var30 = var14 * var28;
                     var31 = var15 * var29;
@@ -999,7 +999,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 }
               }
             }
-            if (this.d(-128)) {
+            if (this.isSpinningWeapon(-128)) {
               for (var16Lifetime1Lifetime2 = 0; this.finaloutline.length > var16Lifetime1Lifetime2; var16Lifetime1Lifetime2 += 2) {
                 var17Lifetime1Lifetime2 = this.finaloutline[var16Lifetime1Lifetime2];
                 var18Lifetime1Lifetime2 = this.finaloutline[var16Lifetime1Lifetime2 + 1];
@@ -1017,8 +1017,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   var19Lifetime1Lifetime3 = param3.a(var17Lifetime1Lifetime3, (byte) 125);
                   var20Lifetime3 = param3.b(true, var18Lifetime1Lifetime3);
                   if (GetPointDefenceLaserProjectiles.a(4, 11284)) {
-                    var21Lifetime2 = GetNumStars.a(this.finalangle + var47.field_o[var16Lifetime1Lifetime3].field_a, (byte) -93) * 8 >> 8;
-                    var22Lifetime1Lifetime2 = eu.a(var47.field_o[var16Lifetime1Lifetime3].field_a + this.finalangle, 99) * 8 >> 8;
+                    var21Lifetime2 = GetNumStars.a(this.finalangle + var47.hardpoints[var16Lifetime1Lifetime3].field_a, (byte) -93) * 8 >> 8;
+                    var22Lifetime1Lifetime2 = eu.a(var47.hardpoints[var16Lifetime1Lifetime3].field_a + this.finalangle, 99) * 8 >> 8;
                     c.a(param3.b(true, var22Lifetime1Lifetime2 + var18Lifetime1Lifetime3), param3.a(var17Lifetime1Lifetime3 + var21Lifetime2, (byte) 119), var19Lifetime1Lifetime3, var20Lifetime3, -16777216, 16711680);
                     GetLagStandardDeviationOut.a(-1, Integer.toString(var16Lifetime1Lifetime3), 16711935, var20Lifetime3, var19Lifetime1Lifetime3, param1 ^ 4350);
                   }
@@ -1047,7 +1047,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int a(boolean param0, boolean param1, int param2) {
+    final int adjustHealth(boolean param0, boolean param1, int param2) {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int var4;
@@ -1057,18 +1057,18 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var9;
         int var6Lifetime1;
         var9 = VoidHunters.field_G;
-        stackIn_3_0 = (this.k((byte) 110)) ? 0 : 1;
+        stackIn_3_0 = (this.isDestroyed((byte) 110)) ? 0 : 1;
         var4 = stackIn_3_0;
         this.health = this.health + param2;
-        var5 = this.i((byte) -112);
-        if (this.health <= var5.field_p) {
-          if (this.k((byte) 52) &&
+        var5 = this.getDefinition((byte) -112);
+        if (this.health <= var5.maxHealth) {
+          if (this.isDestroyed((byte) 52) &&
             var4 != 0 &&
             !param0 &&
             this.subcomponents != null &&
             this.subcomponents.length > 0) {
             for (var6 = 0; this.subcomponents.length > var6; var6++) {
-              this.subcomponents[var6].g(-this.subcomponents[var6].health, 3);
+              this.subcomponents[var6].repair(-this.subcomponents[var6].health, 3);
             }
           }
           if (!param1) {
@@ -1077,29 +1077,29 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.connectionpointx = -14;
           return 0;
         }
-        var6Lifetime1 = -var5.field_p + this.health;
+        var6Lifetime1 = -var5.maxHealth + this.health;
         if (!param0 &&
           null != this.subcomponents && this.subcomponents.length > 0) {
           for (var7 = 0; this.subcomponents.length > var7; var7++) {
-            var8 = this.subcomponents[var7].g(var6Lifetime1, 3);
+            var8 = this.subcomponents[var7].repair(var6Lifetime1, 3);
             var6Lifetime1 = var8;
             if (0 == var6Lifetime1) {
               break;
             }
           }
         }
-        this.health = var5.field_p;
+        this.health = var5.maxHealth;
         return var6Lifetime1;
     }
 
-    final boolean k(byte param0) {
+    final boolean isDestroyed(byte param0) {
         if (param0 < 40) {
-          this.d(-95, -20);
+          this.getSubcomponent(-95, -20);
         }
         return this.health <= 0 ? true : false;
     }
 
-    private final void b(IsaacPacketBuffer param0, byte param1) {
+    private final void writePackedAttributes(IsaacPacketBuffer param0, byte param1) {
         int var3_int = 0;
         IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
@@ -1110,17 +1110,17 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.d((byte) -94)) {
+          if (this.hasAdjustableConnection((byte) -94)) {
             param0.writeBits(-632, this.currentconnectedangle, 14);
           }
           var3_int = -63 / ((9 - param1) / 47);
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -115;
-          stackIn_5_2 = (this.health != this.i((byte) -112).field_p);
+          stackIn_5_2 = (this.health != this.getDefinition((byte) -112).maxHealth);
           if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            param0.writeBits(-632, this.health, BodyInZoneCondition.a(-88, this.i((byte) -112).field_p));
+            param0.writeBits(-632, this.health, BodyInZoneCondition.a(-88, this.getDefinition((byte) -112).maxHealth));
           }
-          if (this.f((byte) -98)) {
+          if (this.hasWeaponOrThruster((byte) -98)) {
             param0.writeBits(-632, this.triggermap, 9);
           }
           return;
@@ -1138,7 +1138,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, int[] param8) {
+    final void updateWeaponTransforms(int param0, int param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, int[] param8) {
         int var12 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -1158,7 +1158,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           boolean decompiledFrameRemainder0 = true;
           if (this.weaponbehaviour != null && (this.weaponbehaviour.a((byte) 24).h((byte) 55) ||
             !(this.weaponbehaviour.a((byte) 24).b((byte) 29) <= 0))) {
-            this.a(param5, param3, 0, param1, param2, param6, param0, param7, param8);
+            this.transformGeometry(param5, param3, 0, param1, param2, param6, param0, param7, param8);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -1172,7 +1172,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var10_intLifetime1 = GetShipAimLines.field_o;
             var11Lifetime1 = GetCountermeasureLauncherRandomness.field_p;
             for (var12 = 0; this.subcomponents.length > var12; var12++) {
-              this.subcomponents[var12].a(var11Lifetime1, this.finalangle, var10_intLifetime1, this.finaly, true, param5, param6, this.finalx, param8);
+              this.subcomponents[var12].updateWeaponTransforms(var11Lifetime1, this.finalangle, var10_intLifetime1, this.finaly, true, param5, param6, this.finalx, param8);
             }
             return;
           }
@@ -1352,34 +1352,34 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, boolean param3, byte param4, int param5, int[] param6) {
+    final void updateWorldTransforms(int param0, boolean param1, int param2, boolean param3, byte param4, int param5, int[] param6) {
         int var8_int = 0;
         int var9 = 0;
         try {
           var8_int = GetNumStars.a(param0, (byte) -96);
           if (param4 < 84) {
-            this.a((IntrusiveDeque) null, (Ship) null, 87);
+            this.collectSpecialOrderStatuses((IntrusiveDeque) null, (Ship) null, 87);
           }
           var9 = eu.a(param0, 84);
-          this.a(param2, var9, param3, param0, param6, param1, 256, var8_int, param5);
+          this.updateWorldTransforms(param2, var9, param3, param0, param6, param1, 256, var8_int, param5);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ml.AB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int j(int param0) {
+    final int countComponents(int param0) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         int var2 = param0;
         if (this.subcomponents != null) {
           for (var3 = 0; this.subcomponents.length > var3; var3++) {
-            var2 = var2 + this.subcomponents[var3].j(1);
+            var2 = var2 + this.subcomponents[var3].countComponents(1);
           }
         }
         return var2;
     }
 
-    final void e(int param0, int param1) {
+    final void resetWeaponReloads(int param0, int param1) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         if (this.componentTypeId == param1 &&
@@ -1387,16 +1387,16 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.weaponbehaviour.reload = 0;
         }
         if (param0 <= 63) {
-          this.a((Random) null, (World) null, 35, (byte) -68, 76, (ShipBody) null);
+          this.ejectChildDebris((Random) null, (World) null, 35, (byte) -68, 76, (ShipBody) null);
         }
         if (null != this.subcomponents) {
           for (var3 = 0; var3 < this.subcomponents.length; var3++) {
-            this.subcomponents[var3].e(93, param1);
+            this.subcomponents[var3].resetWeaponReloads(93, param1);
           }
         }
     }
 
-    final int[] a(int param0, int param1, int param2, byte param3, int param4, int param5, int[] param6) {
+    final int[] collectDamagedComponentPaths(int param0, int param1, int param2, byte param3, int param4, int param5, int[] param6) {
         boolean discarded$1 = false;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -1409,15 +1409,15 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var9 = VoidHunters.field_G;
         try {
           if (param3 > -1) {
-            discarded$1 = this.a((ShipComponent) null, 51, (ShipComponent) null, (ShipComponent) null);
+            discarded$1 = this.isAllowedAttachmentOverlap((ShipComponent) null, 51, (ShipComponent) null, (ShipComponent) null);
           }
           if (this.subcomponents != null) {
             for (var8_int = 0; this.subcomponents.length > var8_int; var8_int++) {
-              param6 = this.subcomponents[var8_int].a(param0, param1, param2 | 1 + var8_int << 4 * param5, (byte) -45, param4, 1 + param5, param6);
+              param6 = this.subcomponents[var8_int].collectDamagedComponentPaths(param0, param1, param2 | 1 + var8_int << 4 * param5, (byte) -45, param4, 1 + param5, param6);
             }
           }
           if (ujb.a((byte) -57, this.finaloutline, param4, param1, param0) &&
-            this.health < this.i((byte) -112).field_p) {
+            this.health < this.getDefinition((byte) -112).maxHealth) {
             param6 = SetMinimapWidth.a(param6, param2, (byte) -106);
           }
           stackIn_12_0 = (int[]) (param6);
@@ -1436,25 +1436,25 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3) {
+    final int getBoundingRadius(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = VoidHunters.field_G;
-        int var5 = ar.a(param3 - this.finalx, (byte) 124, param1 - this.finaly) + this.i((byte) -112).field_l;
+        int var5 = ar.a(param3 - this.finalx, (byte) 124, param1 - this.finaly) + this.getDefinition((byte) -112).boundingRadius;
         if (param2 > -61) {
-          this.b((IsaacPacketBuffer) null, (byte) -13);
+          this.writePackedAttributes((IsaacPacketBuffer) null, (byte) -13);
         }
         if (var5 > param0) {
           param0 = var5;
         }
         if (this.subcomponents != null) {
           for (var6 = 0; var6 < this.subcomponents.length; var6++) {
-            param0 = this.subcomponents[var6].a(param0, param1, -114, param3);
+            param0 = this.subcomponents[var6].getBoundingRadius(param0, param1, -114, param3);
           }
         }
         return param0;
     }
 
-    final void a(int param0, int param1, World param2, byte param3, int param4, ShipBody param5) {
+    final void activateSpecialOrder(int param0, int param1, World param2, byte param3, int param4, ShipBody param5) {
         int var7_int = 0;
         int var8 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -1466,16 +1466,16 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException var7 = null;
         var8 = VoidHunters.field_G;
         try {
-          if (this.i((byte) -112).b(-1) == param0 &&
-            !this.k((byte) 67)) {
-            this.a(param5, param1, param2, param4, 50, 256);
+          if (this.getDefinition((byte) -112).getSpecialOrderId(-1) == param0 &&
+            !this.isDestroyed((byte) 67)) {
+            this.activate(param5, param1, param2, param4, 50, 256);
           }
           if (param3 >= -47) {
             this.connectionpointx = -103;
           }
           if (this.subcomponents != null) {
             for (var7_int = 0; this.subcomponents.length > var7_int; var7_int++) {
-              this.subcomponents[var7_int].a(param0, param1, param2, (byte) -102, param4, param5);
+              this.subcomponents[var7_int].activateSpecialOrder(param0, param1, param2, (byte) -102, param4, param5);
             }
             return;
           }
@@ -1500,7 +1500,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(World param0, int param1, boolean param2, ShipBody param3) {
+    private final void pruneDestroyedComponents(World param0, int param1, boolean param2, ShipBody param3) {
         int var5_int = 0;
         ShipComponent var6 = null;
         int var7 = 0;
@@ -1519,19 +1519,19 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var5_int = 0;
             while (var5_int < this.subcomponents.length) {
               var6 = this.subcomponents[var5_int];
-              var7 = var6.a(param1 + 0, param0, param3) ? 1 : 0;
+              var7 = var6.pruneDestroyedComponents(param1 + 0, param0, param3) ? 1 : 0;
               if (var7 != 0) {
                 if (param2) {
-                  var8 = var6.i((byte) -112).field_y;
+                  var8 = var6.getDefinition((byte) -112).field_y;
                   if (var8 > 0) {
-                    param0.a((byte) -44, param3, var6, var6.i((byte) -112));
+                    param0.a((byte) -44, param3, var6, var6.getDefinition((byte) -112));
                   }
                 }
-                var6.a(param0, -19625, param3);
-                this.f(115, var5_int);
+                var6.detachFromBody(param0, -19625, param3);
+                this.removeSubcomponent(115, var5_int);
                 var5_int = -1 + var5_int;
-                param3.e((byte) 119);
-                var6.a(true, param0, param3, (byte) -113);
+                param3.recalculateMassProperties((byte) 119);
+                var6.explode(true, param0, param3, (byte) -113);
               }
               var5_int++;
             }
@@ -1560,7 +1560,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final int a(boolean param0, ShipComponentDefinition param1, boolean param2) {
+    private final int getRecoilOffset(boolean param0, ShipComponentDefinition param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1577,7 +1577,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.weaponbehaviour.reload > 0) {
             var5 = this.weaponbehaviour.a(89);
             if (var5 > 0) {
-              var4_int = param1.field_l * var5 >> 8;
+              var4_int = param1.boundingRadius * var5 >> 8;
             }
           }
           if (param2) {
@@ -1602,46 +1602,46 @@ final class ShipComponent implements DiffableState, CompactGameState {
 
     final int getFinaly(byte param0) {
         if (param0 <= 43) {
-          this.a((IntrusiveDeque) null, (Ship) null, 87);
+          this.collectSpecialOrderStatuses((IntrusiveDeque) null, (Ship) null, 87);
         }
         return this.finaly;
     }
 
-    final void g(int param0) {
+    final void makeThrusterTrailsMutable(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (null != this.thrusterbehaviour) {
-          this.thrusterbehaviour.b(true);
+          this.thrusterbehaviour.makeTrailMutable(true);
         }
         if (null != this.subcomponents) {
           for (var2 = 0; var2 < this.subcomponents.length; var2++) {
-            this.subcomponents[var2].g(0);
+            this.subcomponents[var2].makeThrusterTrailsMutable(0);
           }
         }
         if (param0 != 0) {
-          this.a(59, -127, (World) null, (byte) 46, 109, (ShipBody) null);
+          this.activateSpecialOrder(59, -127, (World) null, (byte) 46, 109, (ShipBody) null);
         }
     }
 
-    private final void a(int param0, IsaacPacketBuffer param1) {
+    private final void readPackedAttributes(int param0, IsaacPacketBuffer param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.d((byte) -94)) {
+          if (this.hasAdjustableConnection((byte) -94)) {
             this.currentconnectedangle = uwa.a(14, param1, (byte) 20);
           }
           if (!kv.readBoolean(false, param1)) {
-            this.health = this.i((byte) -112).field_p;
+            this.health = this.getDefinition((byte) -112).maxHealth;
           } else {
-            this.health = param1.readBits(0, BodyInZoneCondition.a(-111, this.i((byte) -112).field_p));
+            this.health = param1.readBits(0, BodyInZoneCondition.a(-111, this.getDefinition((byte) -112).maxHealth));
           }
-          if (this.f((byte) -15)) {
+          if (this.hasWeaponOrThruster((byte) -15)) {
             this.triggermap = param1.readBits(0, 9);
           }
-          this.c(true);
+          this.initializeGeometry(true);
           if (param0 != 0) {
             this.weaponbehaviour = (WeaponBehaviour) null;
           }
@@ -1660,25 +1660,25 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(IntrusiveDeque param0, Ship param1, int param2) {
+    final void collectSpecialOrderStatuses(IntrusiveDeque param0, Ship param1, int param2) {
         int var6 = 0;
         int var4_int = 0;
         int var5 = VoidHunters.field_G;
         int var4_intLifetime1;
         try {
-          if (~this.i((byte) -112).b(-1) != param2) {
-            var4_int = this.a(param1, param2 ^ 10298);
-            if (this.k((byte) 84) &&
+          if (~this.getDefinition((byte) -112).getSpecialOrderId(-1) != param2) {
+            var4_int = this.getSpecialOrderState(param1, param2 ^ 10298);
+            if (this.isDestroyed((byte) 84) &&
               var4_int == 0) {
               var4_int++;
             }
-            param0.addLast(-10258, new ihb(this.i((byte) -112).b(-1), var4_int));
+            param0.addLast(-10258, new SpecialOrderStatus(this.getDefinition((byte) -112).getSpecialOrderId(-1), var4_int));
           }
           if (this.subcomponents != null) {
             var6 = 0;
             var4_intLifetime1 = var6;
             while (this.subcomponents.length > var6) {
-              this.subcomponents[var6].a(param0, param1, 0);
+              this.subcomponents[var6].collectSpecialOrderStatuses(param0, param1, 0);
               var6++;
             }
           }
@@ -1687,10 +1687,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int applyScaledDamage(int param0, byte param1) {
         int var5 = 0;
         int var4 = -97 / ((-34 - param1) / 62);
-        int var3 = this.i((byte) -112).field_B;
+        int var3 = this.getDefinition((byte) -112).field_B;
         if (var3 == 0) {
           return 0;
         }
@@ -1703,7 +1703,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return 0;
     }
 
-    private final void a(int param0, IntrusiveDeque param1, ShipComponent param2, int param3, int param4, int param5) {
+    private final void collectEdgeContacts(int param0, IntrusiveDeque param1, ShipComponent param2, int param3, int param4, int param5) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -1730,10 +1730,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
         try {
           if (null != this.subcomponents) {
             for (var7_int = 0; var7_int < this.subcomponents.length; var7_int++) {
-              this.subcomponents[var7_int].a(param0 + 1, param1, param2, param3 | 1 + var7_int << param0 * 4, 0, param5);
+              this.subcomponents[var7_int].collectEdgeContacts(param0 + 1, param1, param2, param3 | 1 + var7_int << param0 * 4, 0, param5);
             }
           }
-          if (ar.a(this.finalx - param2.finalx, (byte) 119, this.finaly - param2.finaly) > this.i((byte) -112).field_l + param2.i((byte) -112).field_l) {
+          if (ar.a(this.finalx - param2.finalx, (byte) 119, this.finaly - param2.finaly) > this.getDefinition((byte) -112).boundingRadius + param2.getDefinition((byte) -112).boundingRadius) {
             return;
           }
           for (var7_intLifetime1 = param4; var7_intLifetime1 < this.finaloutline.length; var7_intLifetime1 += 2) {
@@ -1752,7 +1752,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 var17 < 245) {
                 var18 = var8 + (var17 * (var10 - var8) >> 8);
                 var19 = var9 + ((var11 - var9) * var17 >> 8);
-                param1.addLast(-10258, new gda(this, param3, param2, param5, var18, var19, var7_intLifetime1 >> 1, var12 >> 1));
+                param1.addLast(-10258, new ComponentContact(this, param3, param2, param5, var18, var19, var7_intLifetime1 >> 1, var12 >> 1));
               }
             }
           }
@@ -1777,7 +1777,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(byte param0, ShipBody param1) {
+    final void configureThrusterBindings(byte param0, ShipBody param1) {
         ThrusterBehaviour stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
         RuntimeException stackIn_36_0 = null;
@@ -1809,20 +1809,20 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var21 = VoidHunters.field_G;
         try {
           if (this.thrusterbehaviour != null &&
-            !this.thrusterbehaviour.a(this.componentTypeId, (byte) -61)) {
+            !this.thrusterbehaviour.isBooster(this.componentTypeId, (byte) -61)) {
             this.triggermap = 0;
             if (param1 instanceof Ship) {
-              var3_int = param1.field_t;
-              var4 = param1.field_o;
-              var5 = param1.field_p;
-              var6 = this.thrusterbehaviour.a(this.componentTypeId, false);
-              param1.a(this.finaly, this.finalangle, this.finalx, var6, 1948934248);
-              var7 = -var3_int + param1.field_t >> 8;
-              var8 = param1.field_o - var4 >> 8;
-              var9 = param1.field_p - var5;
-              var10 = GetNumStars.a(param1.e(0), (byte) -119) >> 8;
-              var11 = eu.a(param1.e(0), 114) >> 8;
-              var12 = GameKeyHandler.a(22433, -2048 + param1.e(0));
+              var3_int = param1.forceX;
+              var4 = param1.forceY;
+              var5 = param1.torque;
+              var6 = this.thrusterbehaviour.getThrust(this.componentTypeId, false);
+              param1.addDirectionalForce(this.finaly, this.finalangle, this.finalx, var6, 1948934248);
+              var7 = -var3_int + param1.forceX >> 8;
+              var8 = param1.forceY - var4 >> 8;
+              var9 = param1.torque - var5;
+              var10 = GetNumStars.a(param1.getAngle(0), (byte) -119) >> 8;
+              var11 = eu.a(param1.getAngle(0), 114) >> 8;
+              var12 = GameKeyHandler.a(22433, -2048 + param1.getAngle(0));
               var13 = GetNumStars.a(var12, (byte) -78) >> 8;
               var14 = eu.a(var12, 96) >> 8;
               var15 = var10 * var7 + var8 * var11;
@@ -1847,9 +1847,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   this.triggermap = this.triggermap | 2;
                 }
               }
-              param1.field_t = var3_int;
-              param1.field_p = var5;
-              param1.field_o = var4;
+              param1.forceX = var3_int;
+              param1.torque = var5;
+              param1.forceY = var4;
               if (var16 > 0 &&
                 var19 > var20) {
                 this.triggermap = this.triggermap | 32;
@@ -1862,16 +1862,16 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
             stackIn_24_0 = this.thrusterbehaviour;
             stackIn_25_1 = ((99 & this.triggermap) != 0);
-            ((ThrusterBehaviour) (Object) stackIn_24_0).a(stackIn_25_1, 1024);
+            ((ThrusterBehaviour) (Object) stackIn_24_0).setTrailEnabled(stackIn_25_1, 1024);
           } else {
             if (null != this.thrusterbehaviour) {
-              this.thrusterbehaviour.a(param1 instanceof Ship, 1024);
-              this.thrusterbehaviour.a(this.componentTypeId, param1, -24213);
+              this.thrusterbehaviour.setTrailEnabled(param1 instanceof Ship, 1024);
+              this.thrusterbehaviour.limitDetachedBoosterCooldown(this.componentTypeId, param1, -24213);
             }
           }
           if (null != this.subcomponents) {
             for (var3_intLifetime1 = 0; this.subcomponents.length > var3_intLifetime1; var3_intLifetime1++) {
-              this.subcomponents[var3_intLifetime1].a((byte) 115, param1);
+              this.subcomponents[var3_intLifetime1].configureThrusterBindings((byte) 115, param1);
             }
           }
           var3_intLifetime2 = 7 % ((param0 + 76) / 43);
@@ -1890,7 +1890,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(boolean param0, ShipComponent param1, World param2, int param3, ShipBody param4) {
+    final void detachComponent(boolean param0, ShipComponent param1, World param2, int param3, ShipBody param4) {
         int var6_int = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -1913,19 +1913,19 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 if (null != param1.thrusterbehaviour) {
                   var7 = GameKeyHandler.a(22433, var7 + 4096);
                 }
-                param1.a(param2, -19625, param4);
+                param1.detachFromBody(param2, -19625, param4);
                 var8 = new Debris(param1, param0);
                 var8.dx = param4.dx;
                 var8.dy = param4.dy;
                 param2.a(var8, (byte) 37);
                 if (!param0 &&
                   SetTorpedoAimspeed.field_o > 0) {
-                  var8.a(var8.y, var7, var8.x, var8.e(false) * SetTorpedoAimspeed.field_o >> 8, 1948934248);
+                  var8.addDirectionalForce(var8.y, var7, var8.x, var8.getMass(false) * SetTorpedoAimspeed.field_o >> 8, 1948934248);
                 }
-                this.f(126, var6_int);
-                param4.e((byte) 119);
+                this.removeSubcomponent(126, var6_int);
+                param4.recalculateMassProperties((byte) 119);
               } else {
-                this.subcomponents[var6_int].a(param0, param1, param2, 90, param4);
+                this.subcomponents[var6_int].detachComponent(param0, param1, param2, 90, param4);
               }
             }
           }
@@ -1959,7 +1959,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean a(int param0, ShipComponent param1) {
+    final boolean containsDescendant(int param0, ShipComponent param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1977,7 +1977,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               if (this.subcomponents[var3_int] == param1) {
                 return true;
               }
-              if (this.subcomponents[var3_int].a(param0 + 0, param1)) {
+              if (this.subcomponents[var3_int].containsDescendant(param0 + 0, param1)) {
                 return true;
               }
             }
@@ -1997,7 +1997,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, int param3, int[] param4, boolean param5, int param6, int param7, int param8) {
+    private final void updateWorldTransforms(int param0, int param1, boolean param2, int param3, int[] param4, boolean param5, int param6, int param7, int param8) {
         int var12 = 0;
         int var10_int = 0;
         int var11 = 0;
@@ -2010,9 +2010,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var13 = VoidHunters.field_G;
         try {
           if (param6 != 256) {
-            this.a((World) null, (byte) -46, (ShipBody) null);
+            this.detachAllChildren((World) null, (byte) -46, (ShipBody) null);
           }
-          this.a(param5, param0, 0, param3, param7, param2, param1, param8, param4);
+          this.transformGeometry(param5, param0, 0, param3, param7, param2, param1, param8, param4);
           if (this.subcomponents != null) {
             if (this.subcomponents.length <= 0) {
               return;
@@ -2020,7 +2020,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var10_int = GetShipAimLines.field_o;
             var11 = GetCountermeasureLauncherRandomness.field_p;
             for (var12 = 0; this.subcomponents.length > var12; var12++) {
-              this.subcomponents[var12].a(this.finaly, var11, param2, this.finalangle, param4, param5, 256, var10_int, this.finalx);
+              this.subcomponents[var12].updateWorldTransforms(this.finaly, var11, param2, this.finalangle, param4, param5, 256, var10_int, this.finalx);
             }
           }
           return;
@@ -2038,7 +2038,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final boolean a(ShipComponent param0, int param1, ShipComponent param2, ShipComponent param3) {
+    private final boolean isAllowedAttachmentOverlap(ShipComponent param0, int param1, ShipComponent param2, ShipComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -2054,7 +2054,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.connectionpointx = 125;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (param3.componentTypeId == 22 && (param2.i((byte) -112).field_a == 2 ||
+          if (param3.componentTypeId == 22 && (param2.getDefinition((byte) -112).field_a == 2 ||
             param0 == param2)) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
@@ -2089,7 +2089,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final ShipComponent[] a(ShipComponent[] param0, byte param1) {
+    final ShipComponent[] collectDescendants(ShipComponent[] param0, byte param1) {
         int var4 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -2104,8 +2104,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var3_int = -63 % ((param1 + 44) / 42);
           if (this.subcomponents != null) {
             for (var4 = 0; this.subcomponents.length > var4; var4++) {
-              param0 = (ShipComponent[]) (ija.a(this.subcomponents[var4], param0, 0, ii.field_d));
-              param0 = this.subcomponents[var4].a(param0, (byte) -127);
+              param0 = (ShipComponent[]) (ija.a(this.subcomponents[var4], param0, 0, ArchiveTextureProvider.field_d));
+              param0 = this.subcomponents[var4].collectDescendants(param0, (byte) -127);
             }
           }
           stackIn_7_0 = (ShipComponent[]) (param0);
@@ -2176,9 +2176,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
               this.behaviour.readState(param0, false);
             }
           }
-          this.subcomponents = (ShipComponent[]) (SetAutoDetail.a(5, ii.field_d, param0, 1, -85, this.subcomponents));
+          this.subcomponents = (ShipComponent[]) (SetAutoDetail.a(5, ArchiveTextureProvider.field_d, param0, 1, -85, this.subcomponents));
           this.hardpoints = (Hardpoint[]) (SetAutoDetail.a(5, ta.field_a, param0, 1, -63, this.hardpoints));
-          this.a(0, param0);
+          this.readPackedAttributes(0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2194,7 +2194,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final boolean f(byte param0) {
+    private final boolean hasWeaponOrThruster(byte param0) {
         int var2;
         boolean stackIn_5_0 = false;
         var2 = 22 % ((param0 + 61) / 32);
@@ -2202,7 +2202,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return stackIn_5_0;
     }
 
-    final ShipComponent[] a(int param0, Random param1, ShipComponent[] param2) {
+    final ShipComponent[] markRandomComponentsDestroyed(int param0, Random param1, ShipComponent[] param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -2225,13 +2225,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
               if (GetBombletSprayReload.field_s > var5 &&
                 this.subcomponents[var4_int].componentTypeId != 47) {
                 this.subcomponents[var4_int].health = 0;
-                param2 = (ShipComponent[]) (ija.a(this.subcomponents[var4_int], param2, 0, ii.field_d));
+                param2 = (ShipComponent[]) (ija.a(this.subcomponents[var4_int], param2, 0, ArchiveTextureProvider.field_d));
               } else {
                 if (0 >= this.subcomponents[var4_int].health) {
                   this.subcomponents[var4_int].health = 1;
                 }
               }
-              param2 = this.subcomponents[var4_int].a(0, param1, param2);
+              param2 = this.subcomponents[var4_int].markRandomComponentsDestroyed(0, param1, param2);
             }
           }
           stackIn_14_0 = (ShipComponent[]) (param2);
@@ -2256,7 +2256,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final int c(byte param0, int param1) {
+    private final int rotateAim(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -2264,15 +2264,15 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var3Lifetime1;
         var6 = VoidHunters.field_G;
         if (param1 != 0 &&
-          this.c(112) > 0 &&
+          this.getAimArc(112) > 0 &&
           this.health > 0) {
           var3 = 0;
           if (param1 > 0) {
-            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.connectedangle - (-this.c(124) + this.currentconnectedangle)));
+            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.connectedangle - (-this.getAimArc(124) + this.currentconnectedangle)));
           } else {
-            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.connectedangle - (this.c(-116) + this.currentconnectedangle)));
+            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.connectedangle - (this.getAimArc(-116) + this.currentconnectedangle)));
           }
-          var4 = this.b((byte) 103);
+          var4 = this.getAimSpeed((byte) 103);
           if (SetShipTeamAction.field_e == 1) {
             if (this.weaponbehaviour != null &&
               this.weaponbehaviour.a(true)) {
@@ -2295,7 +2295,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return -4;
     }
 
-    private final int b(byte param0) {
+    private final int getAimSpeed(byte param0) {
         if (param0 != 103) {
           this.getFinalx(false);
         }
@@ -2318,7 +2318,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void initializeGeometry(boolean param0) {
         int var3 = 0;
         ShipComponentDefinition var2;
         Hardpoint var4;
@@ -2327,9 +2327,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         ShipComponent var6;
         var7 = VoidHunters.field_G;
         var2 = hab.field_g[this.componentTypeId];
-        this.finaloutline = new int[var2.field_v.length];
+        this.finaloutline = new int[var2.outline.length];
         if (!param0) {
-          this.a((ShipComponentDefinition) null, (byte) -94);
+          this.getWorldConnectionX((ShipComponentDefinition) null, (byte) -94);
         }
         if (this.hardpoints != null) {
           for (var3 = 0; this.hardpoints.length > var3; var3++) {
@@ -2337,36 +2337,36 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var5 = var4.connectedComponentIdx;
             if (0 <= var5) {
               var6 = this.subcomponents[var5];
-              this.a(var6, (byte) 83, this.i((byte) -112), var3);
-              if (!var6.d((byte) -91)) {
-                var6.h((byte) 42);
+              this.alignToHardpoint(var6, (byte) 83, this.getDefinition((byte) -112), var3);
+              if (!var6.hasAdjustableConnection((byte) -91)) {
+                var6.resetConnectedAngle((byte) 42);
               }
             }
           }
         }
     }
 
-    final void i(int param0) {
+    final void resetAim(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         int var2Lifetime1;
         if (this.subcomponents != null) {
           for (var2 = 0; this.subcomponents.length > var2; var2++) {
-            this.subcomponents[var2].i(94);
+            this.subcomponents[var2].resetAim(94);
           }
         }
         if (param0 < 93) {
           return;
         }
-        if (this.a(true)) {
+        if (this.canAimIndependently(true)) {
           var2Lifetime1 = GameKeyHandler.a(22433, this.connectedangle - this.currentconnectedangle);
-          discarded$0 = this.c((byte) -105, var2Lifetime1);
+          discarded$0 = this.rotateAim((byte) -105, var2Lifetime1);
         }
     }
 
-    final qua a(boolean param0, ShipBody param1, int param2, int param3, int param4, int param5, ShipComponent param6, int param7) {
-        qua stackIn_23_0 = null;
+    final ComponentAttachmentPlan planAttachment(boolean param0, ShipBody param1, int param2, int param3, int param4, int param5, ShipComponent param6, int param7) {
+        ComponentAttachmentPlan stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -2375,7 +2375,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         int var10 = 0;
-        qua var11 = null;
+        ComponentAttachmentPlan var11 = null;
         ShipComponent var12 = null;
         HardpointDefinition var13 = null;
         Hardpoint var14 = null;
@@ -2385,48 +2385,48 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var18 = 0;
         IntrusiveDeque var19 = null;
         Object var20 = null;
-        fka var20_ref = null;
+        ComponentCollision var20_ref = null;
         int var21 = 0;
-        lu var22 = null;
-        lu var23 = null;
+        HardpointMatch var22 = null;
+        HardpointMatch var23 = null;
         var20 = null;
         var21 = VoidHunters.field_G;
         try {
-          var22 = this.a(param7, false, param5, param2, param4, param6, -29866, (ShipBody) null);
+          var22 = this.findNearestHardpoint(param7, false, param5, param2, param4, param6, -29866, (ShipBody) null);
           var23 = var22;
           if (var23 == null) {
             return null;
           }
-          var10 = param1.e(0);
-          var11 = new qua(var23);
-          var12 = var23.field_b;
-          var13 = var12.i((byte) -112).field_o[var22.field_e];
-          var14 = var12.hardpoints[var22.field_e];
+          var10 = param1.getAngle(0);
+          var11 = new ComponentAttachmentPlan(var23);
+          var12 = var23.component;
+          var13 = var12.getDefinition((byte) -112).hardpoints[var22.hardpointIndex];
+          var14 = var12.hardpoints[var22.hardpointIndex];
           var15 = param1.chassis;
           var16 = var13.field_a + var12.finalangle;
           if (null != var15.thrusterbehaviour) {
             var16 = GameKeyHandler.a(22433, var16 + 4096);
           }
-          var17 = var15.b(-10) * GetNumStars.a(var10, (byte) -89) - var15.c((byte) 100) * eu.a(var10, 49) >> 16;
-          var18 = var15.b(124) * eu.a(var10, param3 ^ -120) + var15.c((byte) 100) * GetNumStars.a(var10, (byte) -72) >> 16;
-          var15.a(false, var14.worldx - var17, -var18 + var14.worldy, var16, param3 ^ param3, (int[]) null);
+          var17 = var15.getDefaultConnectionX(-10) * GetNumStars.a(var10, (byte) -89) - var15.getDefaultConnectionY((byte) 100) * eu.a(var10, 49) >> 16;
+          var18 = var15.getDefaultConnectionX(124) * eu.a(var10, param3 ^ -120) + var15.getDefaultConnectionY((byte) 100) * GetNumStars.a(var10, (byte) -72) >> 16;
+          var15.updateWorldTransforms(false, var14.worldx - var17, -var18 + var14.worldy, var16, param3 ^ param3, (int[]) null);
           var19 = new IntrusiveDeque();
-          param6.a(var15, 0, 0, (byte) -126, var19);
+          param6.collectTreeCollisions(var15, 0, 0, (byte) -126, var19);
           if (var19.size(3) > 0) {
-            var20_ref = (fka) (var19.first(0));
+            var20_ref = (ComponentCollision) (var19.first(0));
             while (var20_ref != null) {
-              if (var20_ref.field_e > 255 &&
-                !this.a(param6, -23, var20_ref.field_f, var20_ref.field_d) &&
-                !this.a(param6, -23, var20_ref.field_d, var20_ref.field_f) && (var15 != var20_ref.field_d ||
+              if (var20_ref.overlapScore > 255 &&
+                !this.isAllowedAttachmentOverlap(param6, -23, var20_ref.second, var20_ref.first) &&
+                !this.isAllowedAttachmentOverlap(param6, -23, var20_ref.first, var20_ref.second) && (var15 != var20_ref.first ||
                 null == var15.thrusterbehaviour ||
-                var20_ref.field_f != var23.field_b)) {
-                var11.a((byte) 108, var20_ref.field_f);
+                var20_ref.second != var23.component)) {
+                var11.addObstruction((byte) 108, var20_ref.second);
               }
-              var20_ref = (fka) (var19.next((byte) 112));
+              var20_ref = (ComponentCollision) (var19.next((byte) 112));
             }
           }
           if (var14.connectedComponentIdx != -1) {
-            var11.a((byte) 108, var12.subcomponents[var14.connectedComponentIdx]);
+            var11.addObstruction((byte) 108, var12.subcomponents[var14.connectedComponentIdx]);
           }
           stackIn_23_0 = var11;
           return stackIn_23_0;
@@ -2531,10 +2531,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final ShipComponent a(int param0, byte param1, int param2) {
+    private final ShipComponent resolveComponentPath(int param0, byte param1, int param2) {
         int var4 = 15 & param2 >> param0 * 4;
         if (param1 >= -50) {
-          this.b(20);
+          this.getDefaultConnectionX(20);
         }
         if (var4 != 0) {
           if (null == this.subcomponents) {
@@ -2543,12 +2543,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (this.subcomponents.length < var4) {
             return null;
           }
-          return this.subcomponents[var4 - 1].a(param0 + 1, (byte) -73, param2);
+          return this.subcomponents[var4 - 1].resolveComponentPath(param0 + 1, (byte) -73, param2);
         }
         return this;
     }
 
-    final void h(int param0) {
+    final void clearPlaceholderHealth(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (this.health == 1) {
@@ -2559,12 +2559,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
         if (null != this.subcomponents) {
           for (var2 = 0; this.subcomponents.length > var2; var2++) {
-            this.subcomponents[var2].h(89);
+            this.subcomponents[var2].clearPlaceholderHealth(89);
           }
         }
     }
 
-    private final int a(Ship param0, int param1) {
+    private final int getSpecialOrderState(Ship param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -2593,7 +2593,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             return stackIn_6_0;
           }
           if (this.thrusterbehaviour != null) {
-            stackIn_9_0 = this.thrusterbehaviour.c(0);
+            stackIn_9_0 = this.thrusterbehaviour.getCooldown(0);
             return stackIn_9_0;
           }
           if (null == this.behaviour) {
@@ -2616,22 +2616,22 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int e(byte param0) {
+    final int getMass(byte param0) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         if (param0 != -86) {
-          this.j((byte) 13);
+          this.getTreeDepth((byte) 13);
         }
-        int var2 = this.i((byte) -112).field_u;
+        int var2 = this.getDefinition((byte) -112).mass;
         if (null != this.subcomponents) {
           for (var3 = 0; this.subcomponents.length > var3; var3++) {
-            var2 = var2 + this.subcomponents[var3].e((byte) -86);
+            var2 = var2 + this.subcomponents[var3].getMass((byte) -86);
           }
         }
         return var2;
     }
 
-    final int c(int param0) {
+    final int getAimArc(int param0) {
         int var2 = 17 / ((56 - param0) / 56);
         if (null == this.behaviour) {
           if (null != this.weaponbehaviour) {
@@ -2645,13 +2645,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return this.behaviour.getAimArc((byte) -114);
     }
 
-    final void a(Projectile param0, sfa param1, int param2) {
+    final void testProjectileHit(Projectile param0, ProjectileHit param1, int param2) {
         int var4_int = 0;
         int var5 = VoidHunters.field_G;
         if (this.subcomponents != null) {
           for (var4_int = 0; this.subcomponents.length > var4_int; var4_int++) {
-            this.subcomponents[var4_int].a(param0, param1, -1);
-            if (param1.a((byte) -61)) {
+            this.subcomponents[var4_int].testProjectileHit(param0, param1, -1);
+            if (param1.hasHit((byte) -61)) {
               return;
             }
           }
@@ -2660,13 +2660,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
           return;
         }
         try {
-          param0.a(24158, this, param1);
+          param0.testComponentHit(24158, this, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ml.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(Projectile param0, tpb param1, int param2) {
+    final void traceProjectile(Projectile param0, ProjectileTraceResult param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -2681,16 +2681,16 @@ final class ShipComponent implements DiffableState, CompactGameState {
         try {
           if (null != this.subcomponents) {
             for (var4_int = 0; var4_int < this.subcomponents.length; var4_int++) {
-              this.subcomponents[var4_int].a(param0, param1, 0);
+              this.subcomponents[var4_int].traceProjectile(param0, param1, 0);
             }
           }
           if (param2 >= this.health) {
             return;
           }
-          var4_intLifetime1 = param0.a(this, 3);
-          if (param1.field_a > var4_intLifetime1) {
-            param1.field_a = var4_intLifetime1;
-            param1.field_b = this;
+          var4_intLifetime1 = param0.getComponentHitFraction(this, 3);
+          if (param1.fraction > var4_intLifetime1) {
+            param1.fraction = var4_intLifetime1;
+            param1.component = this;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2713,26 +2713,26 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3) {
+    final boolean hasDamagedComponentInCircle(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6;
         boolean stackIn_14_0 = false;
         var6 = VoidHunters.field_G;
         if (this.subcomponents != null) {
           for (var5 = 0; var5 < this.subcomponents.length; var5++) {
-            if (this.subcomponents[var5].b(32609, param1, param2, param3)) {
+            if (this.subcomponents[var5].hasDamagedComponentInCircle(32609, param1, param2, param3)) {
               return true;
             }
           }
         }
         if (param0 != 32609) {
-          this.a(false, (byte) 89, (World) null, (ShipBody) null);
+          this.updateBehaviors(false, (byte) 89, (World) null, (ShipBody) null);
         }
-        stackIn_14_0 = (ujb.a((byte) -57, this.finaloutline, param3, param1, param2)) && (this.health < this.i((byte) -112).field_p);
+        stackIn_14_0 = (ujb.a((byte) -57, this.finaloutline, param3, param1, param2)) && (this.health < this.getDefinition((byte) -112).maxHealth);
         return stackIn_14_0;
     }
 
-    final int a(ShipComponentDefinition param0, byte param1) {
+    final int getWorldConnectionX(ShipComponentDefinition param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -2743,7 +2743,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param1 != -69) {
             this.grapplebehaviour = (GrappleLauncherBehaviour) null;
           }
-          stackIn_3_0 = this.finalx + (param0.field_b * GetNumStars.a(this.finalangle, (byte) -99) - param0.field_i * eu.a(this.finalangle, 84) >> 16);
+          stackIn_3_0 = this.finalx + (param0.connectionX * GetNumStars.a(this.finalangle, (byte) -99) - param0.connectionY * eu.a(this.finalangle, 84) >> 16);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2759,7 +2759,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int collectWeapons(int param0, int param1) {
         ShipComponent[] var5 = null;
         ShipComponent[] var3_ref_ml__ = null;
         int incrementValue$0 = 0;
@@ -2781,13 +2781,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
         if (this.subcomponents != null) {
           for (var3 = 0; this.subcomponents.length > var3; var3++) {
-            param1 = this.subcomponents[var3].b(126, param1);
+            param1 = this.subcomponents[var3].collectWeapons(126, param1);
           }
         }
         return param1;
     }
 
-    final void a(IntrusiveDeque param0, ShipComponent param1, int param2, byte param3, int param4) {
+    final void collectTreeEdgeContacts(IntrusiveDeque param0, ShipComponent param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -2801,12 +2801,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
         try {
           if (null != this.subcomponents) {
             for (var6_int = 0; this.subcomponents.length > var6_int; var6_int++) {
-              this.subcomponents[var6_int].a(param0, param1, 1 + var6_int << param4 * 4 | param2, (byte) 122, param4 + 1);
+              this.subcomponents[var6_int].collectTreeEdgeContacts(param0, param1, 1 + var6_int << param4 * 4 | param2, (byte) 122, param4 + 1);
             }
           }
-          param1.a(0, param0, this, param2, 0, 0);
+          param1.collectEdgeContacts(0, param0, this, param2, 0, 0);
           if (param3 < 117) {
-            this.c(38, 37, -84, -122);
+            this.setConnectionTransform(38, 37, -84, -122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2829,7 +2829,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean a(int param0, World param1, ShipBody param2) {
+    final boolean pruneDestroyedComponents(int param0, World param1, ShipBody param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -2838,7 +2838,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, 0, false, param2);
+          this.pruneDestroyedComponents(param1, 0, false, param2);
           if (this.health > param0) {
             return false;
           }
@@ -2863,29 +2863,29 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int l(int param0) {
+    final int countActiveThrusters(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = VoidHunters.field_G;
-        if (null != this.thrusterbehaviour && !this.thrusterbehaviour.a(this.componentTypeId, (byte) -61) &&
+        if (null != this.thrusterbehaviour && !this.thrusterbehaviour.isBooster(this.componentTypeId, (byte) -61) &&
           0 < this.health) {
           return 1;
         }
         if (this.subcomponents != null) {
           var2 = 0;
           for (var3 = 0; this.subcomponents.length > var3; var3++) {
-            var2 = var2 + this.subcomponents[var3].l(-8913);
+            var2 = var2 + this.subcomponents[var3].countActiveThrusters(-8913);
           }
           return var2;
         }
         if (param0 != -8913) {
-          this.a(31, 93, (World) null, (ShipBody) null);
+          this.applyDamageToLeaves(31, 93, (World) null, (ShipBody) null);
           return 0;
         }
         return 0;
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void setConnectionTransform(int param0, int param1, int param2, int param3) {
         this.connectionpointy = param3;
         this.connectedangle = param0;
         this.connectionpointx = param1;
@@ -2894,7 +2894,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int j(byte param0) {
+    final int getTreeDepth(byte param0) {
         int var4 = 0;
         int var2;
         int var3;
@@ -2908,7 +2908,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (this.subcomponents != null) {
           var3 = 0;
           for (var4 = 0; var4 < this.subcomponents.length; var4++) {
-            var5 = this.subcomponents[var4].j((byte) 57);
+            var5 = this.subcomponents[var4].getTreeDepth((byte) 57);
             if (var5 > var3) {
               var3 = var5;
             }
@@ -2971,7 +2971,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
             this.behaviour.readState(param0, false);
           }
-          this.subcomponents = (ShipComponent[]) (GetAutoAfkTimeout.a(127, 1, this.subcomponents, ii.field_d, 5, param0));
+          this.subcomponents = (ShipComponent[]) (GetAutoAfkTimeout.a(127, 1, this.subcomponents, ArchiveTextureProvider.field_d, 5, param0));
           this.hardpoints = (Hardpoint[]) (GetAutoAfkTimeout.a(param1 ^ 93, 1, this.hardpoints, ta.field_a, 5, param0));
           this.connectedangle = param0.readBits(0, 32);
           this.currentconnectedangle = uwa.a(14, param0, (byte) 20);
@@ -2995,7 +2995,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void d(boolean param0) {
+    final void ensurePositiveHealth(boolean param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (this.health <= 0) {
@@ -3003,22 +3003,22 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
         if (null != this.subcomponents) {
           for (var2 = 0; this.subcomponents.length > var2; var2++) {
-            this.subcomponents[var2].d(param0);
+            this.subcomponents[var2].ensurePositiveHealth(param0);
           }
         }
         if (param0) {
-          this.a(-20, (IntrusiveDeque) null, (ShipComponent) null, 126, 9, -78);
+          this.collectEdgeContacts(-20, (IntrusiveDeque) null, (ShipComponent) null, 126, 9, -78);
         }
     }
 
-    final ShipComponent c(int param0, int param1) {
+    final ShipComponent getComponentByPath(int param0, int param1) {
         if (param1 >= -83) {
-          this.f(5);
+          this.resetThrusterTrails(5);
         }
-        return this.a(0, (byte) -62, param0);
+        return this.resolveComponentPath(0, (byte) -62, param0);
     }
 
-    private final void f(int param0, int param1) {
+    private final void removeSubcomponent(int param0, int param1) {
         int var4 = 0;
         ShipComponent[] var3;
         Hardpoint var5;
@@ -3055,13 +3055,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final ShipComponent a(int param0, int param1, boolean param2) {
+    final ShipComponent findComponentAtPoint(int param0, int param1, boolean param2) {
         int var4 = 0;
         ShipComponent var5 = null;
         int var6 = VoidHunters.field_G;
         if (this.subcomponents != null) {
           for (var4 = 0; var4 < this.subcomponents.length; var4++) {
-            var5 = this.subcomponents[var4].a(param0, param1, param2);
+            var5 = this.subcomponents[var4].findComponentAtPoint(param0, param1, param2);
             if (var5 != null) {
               return var5;
             }
@@ -3073,21 +3073,21 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (param2) {
           return null;
         }
-        this.a(-9);
+        this.getEnergyCapacity(-9);
         return null;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, int[] param5) {
+    final void updateWorldTransforms(boolean param0, int param1, int param2, int param3, int param4, int[] param5) {
         int discarded$0 = 0;
         int var7_int = 0;
         int var8 = 0;
         try {
           if (param4 != 0) {
-            discarded$0 = this.c((byte) 99, 116);
+            discarded$0 = this.rotateAim((byte) 99, 116);
           }
           var7_int = GetNumStars.a(param3, (byte) 35);
           var8 = eu.a(param3, 86);
-          this.a(param2, var8, param0, param3, param5, false, 256, var7_int, param1);
+          this.updateWorldTransforms(param2, var8, param0, param3, param5, false, 256, var7_int, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ml.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -3147,7 +3147,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             var5.behaviour = null;
           }
-          var5.subcomponents = (ShipComponent[]) (SpriteDimensions.a(var5.subcomponents, this.subcomponents, 1, ii.field_d, false));
+          var5.subcomponents = (ShipComponent[]) (SpriteDimensions.a(var5.subcomponents, this.subcomponents, 1, ArchiveTextureProvider.field_d, false));
           var5.hardpoints = (Hardpoint[]) (SpriteDimensions.a(var5.hardpoints, this.hardpoints, 1, ta.field_a, false));
           var5.connectedangle = this.connectedangle;
           var5.finalangle = this.finalangle;
@@ -3174,12 +3174,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void setTriggerMap(byte param0, int param1) {
         this.triggermap = param1;
         int var3 = -97 / ((param0 - 58) / 33);
     }
 
-    private final boolean d(int param0) {
+    private final boolean isSpinningWeapon(int param0) {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = -112 / ((param0 - 25) / 51);
@@ -3187,7 +3187,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return stackIn_4_0;
     }
 
-    final void a(ShipComponent param0, int param1, int param2, byte param3, IntrusiveDeque param4) {
+    final void collectTreeCollisions(ShipComponent param0, int param1, int param2, byte param3, IntrusiveDeque param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -3201,10 +3201,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
         try {
           if (null != this.subcomponents) {
             for (var6_int = 0; var6_int < this.subcomponents.length; var6_int++) {
-              this.subcomponents[var6_int].a(param0, 1 + var6_int << param2 * 4 | param1, 1 + param2, (byte) -126, param4);
+              this.subcomponents[var6_int].collectTreeCollisions(param0, 1 + var6_int << param2 * 4 | param1, 1 + param2, (byte) -126, param4);
             }
           }
-          param0.a((byte) -53, 0, param1, param4, 0, this);
+          param0.collectCollisions((byte) -53, 0, param1, param4, 0, this);
           if (param3 != -126) {
             this.finaloutline = (int[]) null;
           }
@@ -3229,7 +3229,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final Debris a(World param0, int param1, int param2, ShipBody param3, byte param4) {
+    final Debris detachAtPoint(World param0, int param1, int param2, ShipBody param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         ShipComponent var7 = null;
@@ -3251,7 +3251,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var6_int = 0;
             while (var6_int < this.subcomponents.length) {
               var7 = this.subcomponents[var6_int];
-              var8 = var7.a(param0, param1, param2, param3, (byte) 106);
+              var8 = var7.detachAtPoint(param0, param1, param2, param3, (byte) 106);
               if (var8 != null) {
                 stackIn_6_0 = var8;
                 return stackIn_6_0;
@@ -3260,11 +3260,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 var6_int++;
                 continue;
               }
-              var7.a(param0, -19625, param3);
+              var7.detachFromBody(param0, -19625, param3);
               var9 = new Debris(var7, false);
               param0.a(var9, (byte) 124);
-              this.f(121, var6_int);
-              param3.e((byte) 119);
+              this.removeSubcomponent(121, var6_int);
+              param3.recalculateMassProperties((byte) 119);
               stackIn_9_0 = var9;
               return stackIn_9_0;
             }
@@ -3295,14 +3295,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int g(int param0, int param1) {
+    final int repair(int param0, int param1) {
         if (param1 != 3) {
           return 111;
         }
-        return this.a(false, false, param0);
+        return this.adjustHealth(false, false, param0);
     }
 
-    final void a(int param0, int param1, ShipBody param2, int param3, int param4, World param5) {
+    final void applyControls(int param0, int param1, ShipBody param2, int param3, int param4, World param5) {
         int var7_int = 0;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
@@ -3337,11 +3337,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
             (this.triggermap & 4) == 0) &&
             (GetGrapplingHookAimspeed.field_p != 0 ||
             (this.triggermap & 1) == 0)))) {
-            this.a(param2, param0, param5, param3, 90, 256);
+            this.activate(param2, param0, param5, param3, 90, 256);
           }
           if (this.subcomponents != null) {
             for (var7_int = 0; this.subcomponents.length > var7_int; var7_int++) {
-              this.subcomponents[var7_int].a(param0, 7834, param2, param3, param4, param5);
+              this.subcomponents[var7_int].applyControls(param0, 7834, param2, param3, param4, param5);
             }
             return;
           }
@@ -3366,25 +3366,25 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void f(int param0) {
+    final void resetThrusterTrails(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (this.thrusterbehaviour != null) {
-          this.thrusterbehaviour.a(false);
+          this.thrusterbehaviour.resetTrail(false);
         }
         if (param0 != 14546) {
           return;
         }
         if (null != this.subcomponents) {
           for (var2 = 0; var2 < this.subcomponents.length; var2++) {
-            this.subcomponents[var2].f(param0 + 0);
+            this.subcomponents[var2].resetThrusterTrails(param0 + 0);
           }
         }
     }
 
-    final ShipComponent d(int param0, int param1) {
+    final ShipComponent getSubcomponent(int param0, int param1) {
         if (param1 != 692) {
-          this.b(48, 1, -93, 81);
+          this.hasDamagedComponentInCircle(48, 1, -93, 81);
         }
         if (null == this.subcomponents) {
           return null;
@@ -3398,7 +3398,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return this.subcomponents[param0];
     }
 
-    final void a(ShipComponent param0, int param1, int param2, int param3, int param4, int param5, IntrusiveDeque param6, int param7, int param8) {
+    final void collectCircleContacts(ShipComponent param0, int param1, int param2, int param3, int param4, int param5, IntrusiveDeque param6, int param7, int param8) {
         int var10_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -3415,11 +3415,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           if (null != this.subcomponents) {
             for (var10_int = 0; var10_int < this.subcomponents.length; var10_int++) {
-              this.subcomponents[var10_int].a(param0, param1, var10_int + 1 << param4 * 4 | param2, param3, 1 + param4, param5, param6, param7 ^ 0, param8);
+              this.subcomponents[var10_int].collectCircleContacts(param0, param1, var10_int + 1 << param4 * 4 | param2, param3, 1 + param4, param5, param6, param7 ^ 0, param8);
             }
           }
           if (ujb.a((byte) -57, this.finaloutline, param3, param1, param5)) {
-            param6.addLast(-10258, new gda(this, param2, param0, param8, param3, param1, 0, 0));
+            param6.addLast(-10258, new ComponentContact(this, param2, param0, param8, param3, param1, 0, 0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3442,7 +3442,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int getMomentOfInertia(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -3456,7 +3456,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var8Lifetime1;
         int var9Lifetime1;
         var12 = VoidHunters.field_G;
-        var4 = this.i((byte) -112).field_u;
+        var4 = this.getDefinition((byte) -112).mass;
         var5 = this.finaloutline.length >> 1;
         var6 = var4 / var5;
         var7 = 1;
@@ -3477,7 +3477,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var8Lifetime1 = var13;
           while (this.subcomponents.length > var13) {
             var9Lifetime1 = var7;
-            var7 = var7 + this.subcomponents[var13].a(-921054591, param1, param2);
+            var7 = var7 + this.subcomponents[var13].getMomentOfInertia(-921054591, param1, param2);
             if (var9Lifetime1 > var7) {
               var7 = 2147483647;
             }
@@ -3487,7 +3487,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return var7;
     }
 
-    final int a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final int aimAt(int param0, boolean param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -3515,9 +3515,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (param4 != 21750) {
           this.grapplebehaviour = (GrappleLauncherBehaviour) null;
         }
-        var8 = Math.abs(GameKeyHandler.a(param4 + 683, this.connectedangle + (-this.c(127) - this.currentconnectedangle)));
+        var8 = Math.abs(GameKeyHandler.a(param4 + 683, this.connectedangle + (-this.getAimArc(127) - this.currentconnectedangle)));
         param2 = param2 + var8;
-        var9 = Math.abs(GameKeyHandler.a(param4 + 683, this.connectedangle + (this.c(param4 ^ 21639) - this.currentconnectedangle)));
+        var9 = Math.abs(GameKeyHandler.a(param4 + 683, this.connectedangle + (this.getAimArc(param4 ^ 21639) - this.currentconnectedangle)));
         if (param2 >= 8192) {
           param2 = 8191;
         }
@@ -3526,7 +3526,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           param5 = 8191;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.a(true) &&
+        if (!this.canAimIndependently(true) &&
           !param1) {
           if ((this.subcomponents != null)) {
             var7 = 0;
@@ -3534,7 +3534,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var18 = 0;
             var11 = var18;
             while (this.subcomponents.length > var18) {
-              var12 = this.subcomponents[var18].a(param0, false, param2, param3, 21750, param5);
+              var12 = this.subcomponents[var18].aimAt(param0, false, param2, param3, 21750, param5);
               var10++;
               var7 = var7 + var12;
               var18++;
@@ -3546,13 +3546,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
           decompiledFrameRemainder0 = false;
         }
         else {
-          var10_ref_wfb = this.i((byte) -112);
-          var11Lifetime1 = this.a(var10_ref_wfb, (byte) -69);
-          var12Lifetime1 = this.a(-86, var10_ref_wfb);
+          var10_ref_wfb = this.getDefinition((byte) -112);
+          var11Lifetime1 = this.getWorldConnectionX(var10_ref_wfb, (byte) -69);
+          var12Lifetime1 = this.getWorldConnectionY(-86, var10_ref_wfb);
           var13 = param0 - var11Lifetime1;
           var14 = param3 - var12Lifetime1;
           var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
-          if (this.d(-77)) {
+          if (this.isSpinningWeapon(-77)) {
             var16 = GameKeyHandler.a(param4 ^ 855, GameKeyHandler.a(22433, -this.currentconnectedangle + this.finalangle) + this.connectedangle);
             var7 = GameKeyHandler.a(22433, var15 - var16);
           } else {
@@ -3576,7 +3576,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
           }
         }
-        var7 = this.c((byte) -105, var7);
+        var7 = this.rotateAim((byte) -105, var7);
         return var7;
     }
 
@@ -3735,12 +3735,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int b(int param0) {
+    final int getDefaultConnectionX(int param0) {
         int var2 = 32 % ((param0 - 89) / 35);
-        return this.i((byte) -112).field_b;
+        return this.getDefinition((byte) -112).connectionX;
     }
 
-    private final boolean a(boolean param0) {
+    private final boolean canAimIndependently(boolean param0) {
         if (this.behaviour != null &&
           this.behaviour.a(0)) {
           return true;
@@ -3754,12 +3754,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
           return true;
         }
         if (!param0) {
-          this.a((IntrusiveDeque) null, (Ship) null, -20);
+          this.collectSpecialOrderStatuses((IntrusiveDeque) null, (Ship) null, -20);
         }
         return false;
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, int[] param8) {
+    private final void transformGeometry(boolean param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, int[] param8) {
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         int stackIn_4_3 = 0;
@@ -3801,10 +3801,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
             stackIn_4_3 = this.currentconnectedangle;
           }
           this.finalangle = GameKeyHandler.a(stackIn_3_1, stackIn_3_2 + stackIn_4_3);
-          var40 = this.i((byte) -112);
+          var40 = this.getDefinition((byte) -112);
           var42 = var40;
-          var11 = (long)var42.field_b;
-          var13 = (long)var42.field_i;
+          var11 = (long)var42.connectionX;
+          var13 = (long)var42.connectionY;
           var15 = GetNumStars.a(this.finalangle, (byte) -97);
           var16 = eu.a(this.finalangle, 123);
           GetShipAimLines.field_o = var15;
@@ -3817,14 +3817,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.finaly = (int)(-var19 + (long)param1 + var23);
           var25 = 0;
           var26 = 0;
-          var27 = this.a(param5, var42, true);
+          var27 = this.getRecoilOffset(param5, var42, true);
           if (var27 != param2) {
             var25 = var27 * var15 >> 16;
             var26 = var16 * var27 >> 16;
           }
-          for (var28 = 0; var28 < var42.field_v.length; var28 += 2) {
-            var29 = (long)var40.field_v[var28];
-            var31 = (long)var40.field_v[var28 + 1];
+          for (var28 = 0; var28 < var42.outline.length; var28 += 2) {
+            var29 = (long)var40.outline[var28];
+            var31 = (long)var40.outline[var28 + 1];
             var33 = (-(var31 * (long)var16) + var29 * (long)var15 >> 16) + (long)this.finalx;
             var35 = (long)this.finaly + ((long)var16 * var29 + (long)var15 * var31 >> 16);
             this.finaloutline[var28] = (int)var33 - var25;
@@ -3865,7 +3865,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var41 = 0;
             var28Lifetime1 = var41;
             while (var41 < this.hardpoints.length) {
-              this.hardpoints[var41].a(var16, this.finalx, this.finaly, var15, param2 ^ -665140432, var40.field_o[var41].field_b, var40.field_o[var41].field_c);
+              this.hardpoints[var41].a(var16, this.finalx, this.finaly, var15, param2 ^ -665140432, var40.hardpoints[var41].field_b, var40.hardpoints[var41].field_c);
               var41++;
             }
             return;
@@ -3885,7 +3885,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(Random param0, World param1, int param2, byte param3, int param4, ShipBody param5) {
+    private final void ejectChildDebris(Random param0, World param1, int param2, byte param3, int param4, ShipBody param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -3902,7 +3902,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var12 = 0;
         Debris var13 = null;
         try {
-          this.subcomponents[param4].a(param1, -19625, param5);
+          this.subcomponents[param4].detachFromBody(param1, -19625, param5);
           if (param3 != 97) {
             this.currentconnectedangle = 117;
           }
@@ -3915,12 +3915,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var10 = 1;
           }
           var11 = GameSnapshotFactory.a(var9, (byte) -77, var8);
-          var12 = param2 * var13.e(false) / var10;
+          var12 = param2 * var13.getMass(false) / var10;
           if (param5 != null) {
             var13.dy = param5.dy;
             var13.dx = param5.dx;
           }
-          var13.a(this.finaly, GameKeyHandler.a(22433, -100 + (var11 + hob.a(param0, 200, 118))), this.finalx, var12, 1948934248);
+          var13.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var11 + hob.a(param0, 200, 118))), this.finalx, var12, 1948934248);
           param1.a(var13, (byte) 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3949,7 +3949,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final ShipComponent[] a(int param0, ShipComponent[] param1, int param2) {
+    final ShipComponent[] collectActiveThrusters(int param0, ShipComponent[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -3961,16 +3961,16 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var5 = VoidHunters.field_G;
         try {
           if (this.thrusterbehaviour != null &&
-            !this.thrusterbehaviour.a(this.componentTypeId, (byte) -61) &&
+            !this.thrusterbehaviour.isBooster(this.componentTypeId, (byte) -61) &&
             this.health > 0) {
-            param1 = (ShipComponent[]) (ija.a(this, param1, 0, ii.field_d));
+            param1 = (ShipComponent[]) (ija.a(this, param1, 0, ArchiveTextureProvider.field_d));
           }
           if (param0 != 0) {
             this.currentconnectedangle = 84;
           }
           if (null != this.subcomponents) {
             for (var4_int = 0; this.subcomponents.length > var4_int; var4_int++) {
-              param1 = this.subcomponents[var4_int].a(param0 + 0, param1, param2);
+              param1 = this.subcomponents[var4_int].collectActiveThrusters(param0 + 0, param1, param2);
             }
           }
           stackIn_13_0 = (ShipComponent[]) (param1);
@@ -3989,13 +3989,13 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int countType(int param0, int param1) {
         int var4 = 0;
         int var5 = VoidHunters.field_G;
         int var3 = param1;
         if (this.subcomponents != null) {
           for (var4 = 0; this.subcomponents.length > var4; var4++) {
-            var3 = var3 + this.subcomponents[var4].a(param0, 0);
+            var3 = var3 + this.subcomponents[var4].countType(param0, 0);
           }
         }
         if (param0 == this.componentTypeId) {
@@ -4004,7 +4004,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return var3;
     }
 
-    final void a(int[] param0, byte param1, boolean param2) {
+    final void accumulateHealth(int[] param0, byte param1, boolean param2) {
         int var4_int = 0;
         int var5 = VoidHunters.field_G;
         try {
@@ -4012,11 +4012,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.thrusterbehaviour = (ThrusterBehaviour) null;
           }
           param0[0] = param0[0] + this.health;
-          param0[1] = param0[1] + this.i((byte) -112).field_p;
+          param0[1] = param0[1] + this.getDefinition((byte) -112).maxHealth;
           if (param2 &&
             null != this.subcomponents) {
             for (var4_int = 0; var4_int < this.subcomponents.length; var4_int++) {
-              this.subcomponents[var4_int].a(param0, (byte) -17, param2);
+              this.subcomponents[var4_int].accumulateHealth(param0, (byte) -17, param2);
             }
           }
         } catch (RuntimeException runtimeException) {
@@ -4024,7 +4024,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final ShipComponentDefinition i(byte param0) {
+    final ShipComponentDefinition getDefinition(byte param0) {
         if (param0 != -112) {
           return (ShipComponentDefinition) null;
         }
@@ -4153,7 +4153,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var10++;
             }
           }
-          this.b(param0, (byte) 63);
+          this.writePackedAttributes(param0, (byte) 63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4169,7 +4169,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(World param0, byte param1, ShipBody param2) {
+    final void detachAllChildren(World param0, byte param1, ShipBody param2) {
         int var4_int = 0;
         ShipComponent var5 = null;
         int var6 = 0;
@@ -4189,9 +4189,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var4_int = 0;
             while (var4_int < this.subcomponents.length) {
               var5 = this.subcomponents[var4_int];
-              var5.a(param0, (byte) -111, param2);
+              var5.detachAllChildren(param0, (byte) -111, param2);
               var4_int--;
-              this.a(false, var5, param0, param1 + 234, param2);
+              this.detachComponent(false, var5, param0, param1 + 234, param2);
               var4_int++;
             }
             return;
@@ -4217,7 +4217,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final int[] a(int[] param0, int param1, int[][] param2, int param3) {
+    private final int[] extractPolygonPart(int[] param0, int param1, int[][] param2, int param3) {
         int var7 = 0;
         int[] var5 = null;
         RuntimeException var5_ref = null;
@@ -4267,7 +4267,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int a(int param0, ShipComponentDefinition param1) {
+    final int getWorldConnectionY(int param0, ShipComponentDefinition param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -4277,7 +4277,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -106 % ((-24 - param0) / 56);
-          stackIn_1_0 = this.finaly + (param1.field_b * eu.a(this.finalangle, 62) + param1.field_i * GetNumStars.a(this.finalangle, (byte) -119) >> 16);
+          stackIn_1_0 = this.finaly + (param1.connectionX * eu.a(this.finalangle, 62) + param1.connectionY * GetNumStars.a(this.finalangle, (byte) -119) >> 16);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4293,19 +4293,19 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean b(byte param0, int param1) {
+    final boolean hasAvailableSpecialOrder(byte param0, int param1) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         if (param0 < 39) {
           this.weaponbehaviour = (WeaponBehaviour) null;
         }
-        if (param1 == this.i((byte) -112).b(-1) &&
-          !this.k((byte) 69)) {
+        if (param1 == this.getDefinition((byte) -112).getSpecialOrderId(-1) &&
+          !this.isDestroyed((byte) 69)) {
           return true;
         }
         if (this.subcomponents != null) {
           for (var3 = 0; var3 < this.subcomponents.length; var3++) {
-            if (this.subcomponents[var3].b((byte) 118, param1)) {
+            if (this.subcomponents[var3].hasAvailableSpecialOrder((byte) 118, param1)) {
               return true;
             }
           }
@@ -4313,7 +4313,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return false;
     }
 
-    private final void a(byte param0, ShipComponent param1) {
+    private final void addSubcomponent(byte param0, ShipComponent param1) {
         int var4 = 0;
         ShipComponent[] var3 = null;
         int var5 = 0;
@@ -4326,7 +4326,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var5 = VoidHunters.field_G;
         try {
           if (param0 != 73) {
-            this.a(-81, false, 28, -34, 8, (ShipComponent) null, 106, (ShipBody) null);
+            this.findNearestHardpoint(-81, false, 28, -34, 8, (ShipComponent) null, 106, (ShipBody) null);
           }
           if (this.subcomponents != null) {
             var6 = new ShipComponent[this.subcomponents.length + 1];
@@ -4358,7 +4358,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
     ShipComponent() {
     }
 
-    final int g(byte param0) {
+    final int getUnrotatedWorldAngle(byte param0) {
         if (param0 != -127) {
           this.finaloutline = (int[]) null;
         }
@@ -4372,29 +4372,29 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return this.finalx;
     }
 
-    final int a(int param0) {
+    final int getEnergyCapacity(int param0) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         if (param0 != 0) {
-          this.a(45, 20, true, -45, (int[]) null, false, 77, -58, 36);
+          this.updateWorldTransforms(45, 20, true, -45, (int[]) null, false, 77, -58, 36);
         }
-        int var2 = this.i((byte) -112).field_n;
+        int var2 = this.getDefinition((byte) -112).energyCapacity;
         if (this.subcomponents != null) {
           for (var3 = 0; this.subcomponents.length > var3; var3++) {
-            var2 = var2 + this.subcomponents[var3].a(param0 ^ 0);
+            var2 = var2 + this.subcomponents[var3].getEnergyCapacity(param0 ^ 0);
           }
         }
         return var2;
     }
 
-    final void h(byte param0) {
+    final void resetConnectedAngle(byte param0) {
         if (param0 != 42) {
           this.finaly = 90;
         }
         this.currentconnectedangle = this.connectedangle;
     }
 
-    final void a(boolean param0, World param1, ShipBody param2, byte param3) {
+    final void explode(boolean param0, World param1, ShipBody param2, byte param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -4419,19 +4419,19 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var17 = VoidHunters.field_G;
         try {
           qba.a(20382, this.finalx, 65, this.finaly, 10);
-          var18 = this.i((byte) -112);
-          var6 = Math.min(var18.field_p / var18.field_z + this.j(1), 1000);
+          var18 = this.getDefinition((byte) -112);
+          var6 = Math.min(var18.maxHealth / var18.healthScale + this.countComponents(1), 1000);
           if (param3 > -53) {
             this.currentconnectedangle = -111;
           }
           var7 = param2.dx;
           var8 = param2.dy;
-          var9 = kmb.field_f * this.i((byte) -112).field_h >> 8;
+          var9 = kmb.field_f * this.getDefinition((byte) -112).field_h >> 8;
           var10 = new Random((long)this.finalx);
           if (null != this.subcomponents &&
             param0) {
             for (var11 = 0; this.subcomponents.length > var11; var11++) {
-              this.a(var10, param1, var9, (byte) 97, var11, param2);
+              this.ejectChildDebris(var10, param1, var9, (byte) 97, var11, param2);
             }
           }
           var11Lifetime1 = 3;
@@ -4449,8 +4449,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var14 = 1;
             }
             var15 = GameSnapshotFactory.a(var13, (byte) -77, var12);
-            var16 = param2.e(false) * var9 / var14;
-            param2.a(this.finaly, GameKeyHandler.a(22433, -100 + (var15 + hob.a(var10, 200, 123))), this.finalx, var16, 1948934248);
+            var16 = param2.getMass(false) * var9 / var14;
+            param2.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var15 + hob.a(var10, 200, 123))), this.finalx, var16, 1948934248);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4473,22 +4473,22 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, World param2, lta param3) {
+    final void drawTrailsAndGrapples(int param0, int param1, World param2, lta param3) {
         int var5_int = 0;
         int var6 = VoidHunters.field_G;
         try {
           if (this.thrusterbehaviour != null) {
-            this.thrusterbehaviour.a((byte) -116, param1, param3, this.finaloutline);
+            this.thrusterbehaviour.drawTrail((byte) -116, param1, param3, this.finaloutline);
           }
           if (null != this.grapplebehaviour) {
-            this.grapplebehaviour.a(this.finalangle, param3, this.i((byte) -112).field_v, this.finaly, param2, this.finalx, param0 + 110);
+            this.grapplebehaviour.a(this.finalangle, param3, this.getDefinition((byte) -112).outline, this.finaly, param2, this.finalx, param0 + 110);
           }
           if (param0 != 0) {
-            this.d(34, -81);
+            this.getSubcomponent(34, -81);
           }
           if (this.subcomponents != null) {
             for (var5_int = 0; var5_int < this.subcomponents.length; var5_int++) {
-              this.subcomponents[var5_int].a(0, param1, param2, param3);
+              this.subcomponents[var5_int].drawTrailsAndGrapples(0, param1, param2, param3);
             }
           }
         } catch (RuntimeException runtimeException) {
@@ -4496,23 +4496,23 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(ShipComponent param0, byte param1, ShipComponentDefinition param2, int param3) {
+    private final void alignToHardpoint(ShipComponent param0, byte param1, ShipComponentDefinition param2, int param3) {
         int var5_int = 0;
         try {
           if (param1 <= 25) {
             this.subcomponents = (ShipComponent[]) null;
           }
-          var5_int = param2.field_o[param3].field_a;
+          var5_int = param2.hardpoints[param3].field_a;
           if (null != param0.thrusterbehaviour) {
             var5_int = GameKeyHandler.a(22433, 4096 + var5_int);
           }
-          param0.c(var5_int, param2.field_o[param3].field_b, 56, param2.field_o[param3].field_c);
+          param0.setConnectionTransform(var5_int, param2.hardpoints[param3].field_b, 56, param2.hardpoints[param3].field_c);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ml.PC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, ShipComponent param2) {
+    final void attachToHardpoint(int param0, int param1, ShipComponent param2) {
         ShipComponentDefinition var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -4520,15 +4520,15 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          this.a((byte) 73, param2);
+          this.addSubcomponent((byte) 73, param2);
           this.hardpoints[param1].connectedComponentIdx = -1 + this.subcomponents.length;
-          var4 = this.i((byte) -112);
-          this.a(param2, (byte) 115, var4, param1);
+          var4 = this.getDefinition((byte) -112);
+          this.alignToHardpoint(param2, (byte) 115, var4, param1);
           if (param0 != 1) {
-            this.a((ShipComponent[]) null, (byte) 63);
-            param2.h((byte) 42);
+            this.collectDescendants((ShipComponent[]) null, (byte) 63);
+            param2.resetConnectedAngle((byte) 42);
           } else {
-            param2.h((byte) 42);
+            param2.resetConnectedAngle((byte) 42);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4553,9 +4553,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (null != var2.field_c) {
           this.weaponbehaviour = new WeaponBehaviour();
           var2.field_c.copyTo((byte) 94, this.weaponbehaviour);
-          if (var2.b(-1) == -1 &&
+          if (var2.getSpecialOrderId(-1) == -1 &&
             !var2.field_c.a((byte) 24).e(-3)) {
-            this.a((byte) 124, 16);
+            this.setTriggerMap((byte) 124, 16);
           }
         }
         if (var2.field_e == null) {
@@ -4576,15 +4576,15 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var2.field_x.copyTo((byte) 107, this.grapplebehaviour);
         }
         this.currentconnectedangle = 0;
-        this.health = var2.field_p;
+        this.health = var2.maxHealth;
         this.connectedangle = 0;
-        if (null != var2.field_o) {
-          this.hardpoints = new Hardpoint[var2.field_o.length];
+        if (null != var2.hardpoints) {
+          this.hardpoints = new Hardpoint[var2.hardpoints.length];
           for (var3 = 0; var3 < this.hardpoints.length; var3++) {
             this.hardpoints[var3] = new Hardpoint();
           }
         }
-        this.c(true);
+        this.initializeGeometry(true);
     }
 
     static {

@@ -13,7 +13,7 @@ final class Projectile extends MovingObject implements DiffableState {
     private int firedTeam;
     private int type;
 
-    final int a(ShipComponent param0, int param1) {
+    final int getComponentHitFraction(ShipComponent param0, int param1) {
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_20_0 = 0;
@@ -466,12 +466,12 @@ final class Projectile extends MovingObject implements DiffableState {
         return this.x;
     }
 
-    final void a(int param0, ShipComponent param1, sfa param2) {
+    final void testComponentHit(int param0, ShipComponent param1, ProjectileHit param2) {
         int var4_int = 0;
         if (this.type != 3 &&
           this.type != 4) {
           if (fra.a(param1.finaloutline, this.y, 2, this.x)) {
-            param2.a(this.y, param1, this, (byte) 61, this.x);
+            param2.set(this.y, param1, this, (byte) 61, this.x);
           }
           return;
         }
@@ -479,8 +479,8 @@ final class Projectile extends MovingObject implements DiffableState {
           if (param0 != 24158) {
             field_k = (String[]) null;
           }
-          var4_int = this.a(param1, 3);
-          this.a(false, param2, param1, var4_int);
+          var4_int = this.getComponentHitFraction(param1, 3);
+          this.setHitAtFraction(false, param2, param1, var4_int);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -593,7 +593,7 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final void a(boolean param0, sfa param1, ShipComponent param2, int param3) {
+    final void setHitAtFraction(boolean param0, ProjectileHit param1, ShipComponent param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -607,7 +607,7 @@ final class Projectile extends MovingObject implements DiffableState {
           if (param3 < 2147483647) {
             var5_int = (param3 * this.dx >> 8) + (-this.dx + this.x);
             var6 = (this.dy * param3 >> 8) - this.dy + this.y;
-            param1.a(var6, param2, this, (byte) 61, var5_int);
+            param1.set(var6, param2, this, (byte) 61, var5_int);
           }
           if (param0) {
             this.firedPlayer = 12;

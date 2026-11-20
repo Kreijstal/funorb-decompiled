@@ -40,7 +40,7 @@ final class gn extends kva implements eb {
     }
 
     gn(OpenGlGpuToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
-        super(param0, 34037, qua.field_d, mj.field_f, param2 * param1, false);
+        super(param0, 34037, ComponentAttachmentPlan.field_d, mj.field_f, param2 * param1, false);
         try {
           this.field_j = param2;
           this.field_l = param1;

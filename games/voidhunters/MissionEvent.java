@@ -293,7 +293,7 @@ final class MissionEvent implements DiffableState {
               if (dupTemp$4 != -1) {
                 var5 = param3[param2++];
                 var6 = new ShipComponent(var5);
-                param1.a(1, var4_int, var6);
+                param1.attachToHardpoint(1, var4_int, var6);
                 param2 = MissionEvent.decodeChildComponents(param0 ^ 0, var6, param2, param3);
                 if (var4_int != -1 + param1.hardpoints.length) {
                   continue;

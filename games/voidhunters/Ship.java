@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Ship extends ShipBody implements DiffableState, CompactGameState {
-    private int[] field_x;
+    private int[] attachmentPreviewOutline;
     private int energy;
     private int repairModeReload;
     private boolean repairModeOn;
-    private int field_A;
+    private int visibilityFlags;
     private boolean shieldsOn;
-    private qua field_L;
+    private ComponentAttachmentPlan attachmentPlan;
     private ShipBlueprint targetBlueprint;
     private int team;
     static int field_H;
@@ -94,7 +94,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
     final boolean isRepairModeFullyCharged(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -6) {
-          this.field_x = (int[]) null;
+          this.attachmentPreviewOutline = (int[]) null;
         }
         stackIn_6_0 = (this.repairModeOn) && (Particle.field_I == this.repairModeReload);
         return stackIn_6_0;
@@ -111,36 +111,36 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
 
     final int getRepairModeReload(int param0) {
         if (param0 <= 36) {
-          this.field_x = (int[]) null;
+          this.attachmentPreviewOutline = (int[]) null;
         }
         return this.repairModeReload;
     }
 
-    final boolean s(int param0) {
+    final boolean canSpawnEscapePod(int param0) {
         ShipAI var3;
         boolean stackIn_7_0 = false;
         if (param0 < 31) {
           var3 = (ShipAI) null;
           this.setAi((ShipAI) null, -101);
         }
-        stackIn_7_0 = (1 == vqa.field_k) || !(this.g(false));
+        stackIn_7_0 = (1 == vqa.field_k) || !(this.isFighter(false));
         return stackIn_7_0;
     }
 
-    final void a(int[] param0, int param1) {
+    final void setAttachmentPreviewOutline(int[] param0, int param1) {
         if (param1 >= -7) {
           return;
         }
         try {
-          this.field_x = param0;
+          this.attachmentPreviewOutline = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sg.BC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(qua param0, int param1) {
+    final void setAttachmentPlan(ComponentAttachmentPlan param0, int param1) {
         try {
-          this.field_L = param0;
+          this.attachmentPlan = param0;
           if (param1 != 3) {
             this.getOwner((byte) -104);
           }
@@ -159,12 +159,12 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
 
     final boolean getShieldsOn(int param0) {
         if (param0 != 31390) {
-          this.A(125);
+          this.getAttachmentPreviewOutline(125);
         }
         return this.shieldsOn;
     }
 
-    final int d(int param0) {
+    final int getBodyKind(int param0) {
         if (param0 < 42) {
           field_H = -63;
           return 1;
@@ -172,9 +172,9 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return 1;
     }
 
-    final void e(byte param0) {
-        super.e(param0);
-        this.maxEnergy = PartitionZone.field_e + this.chassis.a(0);
+    final void recalculateMassProperties(byte param0) {
+        super.recalculateMassProperties(param0);
+        this.maxEnergy = PartitionZone.field_e + this.chassis.getEnergyCapacity(0);
     }
 
     final boolean getSelfDestructPrepared(byte param0) {
@@ -201,7 +201,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         } else {
           this.shieldsOn = !this.shieldsOn ? true : false;
           this.shieldsToggleCooldown = CarouselPlayerEvent.field_i[3].d((byte) 64);
-          this.d((byte) 39);
+          this.onStateChanged((byte) 39);
           if (!this.shieldsOn) {
             qba.a(20382, this.getX(false), 25, this.getY((byte) -3), 50);
           } else {
@@ -231,7 +231,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
 
     final void recordAttacker(int param0, int param1) {
         if (0 <= this.owner &&
-          !fwa.a(param0, 1, this.lastAttackers)) {
+          !ArchiveIndexLoader.moveValueToEnd(param0, 1, this.lastAttackers)) {
           this.lastAttackers = SetAutozoomSpeedDivide.a(param0, true, this.lastAttackers, (byte) -14);
         }
         if (param1 != 19581) {
@@ -239,9 +239,9 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean b(int param0, byte param1) {
+    final boolean hasVisibilityFlag(int param0, byte param1) {
         int var3 = -67 % ((param1 + 53) / 48);
-        return (this.field_A & param0) != 0 ? true : false;
+        return (this.visibilityFlags & param0) != 0 ? true : false;
     }
 
     final int getTimeUntilSelfDestructEffect(int param0) {
@@ -253,7 +253,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
 
     final int getTeam(byte param0) {
         if (param0 <= 63) {
-          this.u(39);
+          this.prepareForSaving(39);
         }
         return this.team;
     }
@@ -265,34 +265,34 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.targetBlueprint;
     }
 
-    final void a(IntrusiveDeque param0, int param1, boolean param2, boolean param3) {
+    final void collectSpecialOrderStatuses(IntrusiveDeque param0, int param1, boolean param2, boolean param3) {
         try {
           if (param1 != 9) {
-            qua var6 = (qua) null;
-            this.a((qua) null, 93);
+            ComponentAttachmentPlan var6 = (ComponentAttachmentPlan) null;
+            this.setAttachmentPlan((ComponentAttachmentPlan) null, 93);
           }
           if (1 == GetFightersPerPlayerMaximum.field_p) {
-            param0.addLast(param1 ^ -10265, new ihb(4, this.repairModeOn ? 2 : 0));
+            param0.addLast(param1 ^ -10265, new SpecialOrderStatus(4, this.repairModeOn ? 2 : 0));
           } else {
-            param0.addLast(param1 - 10267, new ihb(4, this.repairModeReload));
+            param0.addLast(param1 - 10267, new SpecialOrderStatus(4, this.repairModeReload));
           }
           if (!param2 &&
             !param3) {
             if (!this.selfDestructActivated) {
-              param0.addLast(param1 ^ -10265, new ihb(8, 0));
+              param0.addLast(param1 ^ -10265, new SpecialOrderStatus(8, 0));
             }
             if (this.selfDestructPrepared) {
-              param0.addLast(-10258, new ihb(9, this.selfDestructCountdown));
+              param0.addLast(-10258, new SpecialOrderStatus(9, this.selfDestructCountdown));
             }
           }
-          this.chassis.a(param0, this, 0);
+          this.chassis.collectSpecialOrderStatuses(param0, this, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sg.LC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final int c(int param0, byte param1) {
-        int var3 = this.chassis.g(param0, param1 + 5);
+    final int repair(int param0, byte param1) {
+        int var3 = this.chassis.repair(param0, param1 + 5);
         if (param1 != -2) {
           World var4 = (World) null;
           this.updateAi(false, (World) null);
@@ -307,11 +307,11 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         this.spawnTimer = Particle.field_A;
         if (param0 != -2) {
           int[] var3 = (int[]) null;
-          this.a((int[]) null, 59);
+          this.setAttachmentPreviewOutline((int[]) null, 59);
         }
     }
 
-    final void a(boolean param0, lta param1, int param2) {
+    final void drawHealthBar(boolean param0, lta param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -319,7 +319,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         int var8 = 0;
         int var9 = 0;
         try {
-          var4_int = this.t(0);
+          var4_int = this.getHealthProgress(0);
           var5 = (int)((float)tu.field_d * param1.field_a);
           if (var5 < 8) {
             var5 = 8;
@@ -452,11 +452,11 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.dragging;
     }
 
-    final qua p(byte param0) {
+    final ComponentAttachmentPlan getAttachmentPlan(byte param0) {
         if (param0 != 49) {
-          this.t(-25);
+          this.getHealthProgress(-25);
         }
-        return this.field_L;
+        return this.attachmentPlan;
     }
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
@@ -523,7 +523,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.owner;
     }
 
-    final boolean a(World param0, int param1, int param2, int param3) {
+    final boolean repairAt(World param0, int param1, int param2, int param3) {
         int var11 = 0;
         int stackIn_38_0 = 0;
         int stackIn_38_1 = 0;
@@ -549,18 +549,18 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         int var14Lifetime1;
         var16 = VoidHunters.field_G;
         try {
-          if (!this.d(4, 67)) {
+          if (!this.isSpecialOrderActive(4, 67)) {
             return true;
           }
-          this.chassis.i(param3 + 110);
-          this.a(param0, true, (byte) 67, true);
+          this.chassis.resetAim(param3 + 110);
+          this.updateTick(param0, true, (byte) 67, true);
           if (!this.isRepairModeFullyCharged(-107)) {
             return false;
           }
           if (param3 != 0) {
             this.getShieldsOn(-12);
           }
-          var17 = this.chassis.a((byte) 101, param1, GetMinimapWidth.field_o, (ShipComponent[]) null, param2);
+          var17 = this.chassis.collectComponentsInCircle((byte) 101, param1, GetMinimapWidth.field_o, (ShipComponent[]) null, param2);
           var18 = var17;
           var5 = var18;
           var6 = 1;
@@ -581,10 +581,10 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
               var12 = var18[var11];
               var13 = var8Lifetime1 + var9;
               if (var11 != var7) {
-                var9 = var12.a(true, false, var13);
+                var9 = var12.adjustHealth(true, false, var13);
               } else {
                 var14 = var8Lifetime1 / 4;
-                var9 = var13 - var14 + var12.a(true, false, var14);
+                var9 = var13 - var14 + var12.adjustHealth(true, false, var14);
               }
               var14Lifetime1 = -var9 + var13;
               if (var14Lifetime1 > 0) {
@@ -625,14 +625,14 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(World param0, boolean param1, byte param2, boolean param3) {
+    final void updateTick(World param0, boolean param1, byte param2, boolean param3) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updateTick(param0, param1, param2, param3);
           if (this.energy <= 0) {
             this.reloadtimer = this.reloadtimer + 1;
           }
@@ -670,7 +670,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           }
           if (this.selfDestructActivated &&
             this.selfDestructCountdown <= Particle.field_e) {
-            this.chassis.a(400, param2 - 20, param0, (ShipBody) (this));
+            this.chassis.applyDamageToLeaves(400, param2 - 20, param0, (ShipBody) (this));
           }
           if (this.shieldsToggleCooldown > 0) {
             this.shieldsToggleCooldown = this.shieldsToggleCooldown - 1;
@@ -757,8 +757,8 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final void f(int param0, int param1) {
-        this.field_A = this.field_A | param1;
+    final void addVisibilityFlags(int param0, int param1) {
+        this.visibilityFlags = this.visibilityFlags | param1;
         if (param0 != 0) {
           this.hasAi((byte) -73);
         }
@@ -775,14 +775,14 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final int t(int param0) {
+    final int getHealthProgress(int param0) {
         int[] var5 = new int[2];
         int[] var2 = var5;
-        this.chassis.a(var5, (byte) -17, true);
+        this.chassis.accumulateHealth(var5, (byte) -17, true);
         int var3 = var5[0] * 256 / var5[1];
         var5[1] = param0;
         var5[0] = 0;
-        this.chassis.a(var5, (byte) -17, false);
+        this.chassis.accumulateHealth(var5, (byte) -17, false);
         int var4 = 256 * var5[0] / var5[1];
         if (var4 < var3) {
           var3 = var4;
@@ -858,7 +858,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean d(int param0, int param1) {
+    final boolean isSpecialOrderActive(int param0, int param1) {
         SerializableGameState var4;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
@@ -880,12 +880,12 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return stackIn_13_0;
     }
 
-    final void z(int param0) {
+    final void clearVisibilityFlags(int param0) {
         if (param0 < 77) {
           IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
           this.writeState((IsaacPacketBuffer) null, -12);
         }
-        this.field_A = 0;
+        this.visibilityFlags = 0;
     }
 
     final int getShieldsToggleCooldown(int param0) {
@@ -923,11 +923,11 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.repairModeOn;
     }
 
-    final int[] A(int param0) {
+    final int[] getAttachmentPreviewOutline(int param0) {
         if (param0 < 21) {
           this.getTimeUntilSelfDestructEffect(-71);
         }
-        return this.field_x;
+        return this.attachmentPreviewOutline;
     }
 
     final boolean consumeEnergy(byte param0, int param1) {
@@ -936,14 +936,14 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
         if (this.energy > 0) {
           this.energy = this.energy - param1;
-          this.d((byte) -126);
+          this.onStateChanged((byte) -126);
           return true;
         }
         return false;
     }
 
-    final void u(int param0) {
-        this.chassis.f(14546);
+    final void prepareForSaving(int param0) {
+        this.chassis.resetThrusterTrails(14546);
         if (GetFightersPerPlayerMaximum.field_p == 1) {
           this.repairModeReload = 0;
           this.repairModeOn = false;
@@ -996,7 +996,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           }
           pgb.a(stackIn_8_0, stackIn_9_1, -90, param0, this.lastAttackers);
           if (param1 > -91) {
-            this.s(57);
+            this.canSpawnEscapePod(57);
           }
           stackIn_13_0 = (IsaacPacketBuffer) (param0);
           stackIn_13_1 = 101;
@@ -1025,7 +1025,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         int var3 = 85 % ((47 - param0) / 51);
         if (var2 == 0) {
           this.shieldsOn = false;
-          this.d((byte) 124);
+          this.onStateChanged((byte) 124);
           return;
         }
     }
@@ -1055,7 +1055,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(lta param0, int param1, World param2) {
+    final void draw(lta param0, int param1, World param2) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -1077,7 +1077,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         try {
           var4_int = qpb.a(false, this.team, 13894143);
           if (this.isSpawnProtected((byte) 108)) {
-            var5 = this.b(true);
+            var5 = this.getBoundingRadius(true);
             if (var5 > 0) {
               var5 = Particle.field_A * var5 / (1 + this.spawnTimer);
               var6 = 256;
@@ -1094,7 +1094,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
               var4_int = var4_int ^ 4473924;
             }
           }
-          super.a(param0, var4_int, param2, 16);
+          super.draw(param0, var4_int, param2, 16);
           if (param1 < 119) {
             this.ai = (ShipAI) null;
           }
@@ -1133,7 +1133,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return null != this.ai ? true : false;
     }
 
-    final void a(int param0, int param1, World param2, int param3, int param4) {
+    final void activateSpecialOrder(int param0, int param1, World param2, int param3, int param4) {
         boolean stackIn_6_1 = false;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -1146,7 +1146,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         uj var8Lifetime1;
         uj var8Lifetime2;
         try {
-          super.a(-53, param1, param2, param3, param4);
+          super.activateSpecialOrder(-53, param1, param2, param3, param4);
           if (param1 == 4) {
             if (GetFightersPerPlayerMaximum.field_p != 1) {
               if (this.repairModeReload <= 0) {
@@ -1191,7 +1191,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean g(boolean param0) {
+    final boolean isFighter(boolean param0) {
         if (param0) {
           this.getSelfDestructPrepared((byte) -85);
         }
@@ -1322,7 +1322,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             var4 = 1;
           }
           if (obfuscationGuard >= -19) {
-            this.field_A = 114;
+            this.visibilityFlags = 114;
           }
           stackIn_62_0 = (var5.salvoJustFired) ? 0 : 1;
           if (stackIn_62_0 == (this.salvoJustFired ? 1 : 0)) {
@@ -1391,8 +1391,8 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         this.ai = null;
         this.team = 0;
         this.owner = -1;
-        this.field_x = null;
-        this.field_L = null;
+        this.attachmentPreviewOutline = null;
+        this.attachmentPlan = null;
     }
 
     static {

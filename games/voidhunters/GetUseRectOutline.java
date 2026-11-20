@@ -17,7 +17,7 @@ final class GetUseRectOutline extends ConsoleCommand {
             soa.a(param0, -99, param7, param5);
           }
           if (~SetExplosionPushMultiplier.field_p < param1) {
-            fka.a(param5, (byte) 105, param8, param0, param7);
+            ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
           }
           if (GetTorpedoProjectileDamage.field_o &&
             SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
@@ -55,7 +55,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                fka.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
@@ -79,7 +79,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                fka.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
@@ -118,7 +118,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                fka.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
@@ -142,7 +142,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                fka.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (!GetTorpedoProjectileDamage.field_o) {
                 CarouselSlot.field_a.field_xb.field_R = null;

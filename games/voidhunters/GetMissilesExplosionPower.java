@@ -9,28 +9,28 @@ final class GetMissilesExplosionPower extends ConsoleCommand {
         ShipComponent var4 = null;
         ShipComponent var3 = null;
         try {
-          param0.a(1, 1, new ShipComponent(13));
-          param0.a(1, 3, new ShipComponent(13));
-          param0.a(1, 23, new ShipComponent(13));
-          param0.a(1, 25, new ShipComponent(13));
-          param0.a(1, 11, new ShipComponent(15));
-          param0.a(1, 15, new ShipComponent(15));
-          param0.a(1, 10, new ShipComponent(42));
-          param0.a(1, 13, new ShipComponent(42));
-          param0.a(1, 16, new ShipComponent(42));
+          param0.attachToHardpoint(1, 1, new ShipComponent(13));
+          param0.attachToHardpoint(1, 3, new ShipComponent(13));
+          param0.attachToHardpoint(1, 23, new ShipComponent(13));
+          param0.attachToHardpoint(1, 25, new ShipComponent(13));
+          param0.attachToHardpoint(1, 11, new ShipComponent(15));
+          param0.attachToHardpoint(1, 15, new ShipComponent(15));
+          param0.attachToHardpoint(1, 10, new ShipComponent(42));
+          param0.attachToHardpoint(1, 13, new ShipComponent(42));
+          param0.attachToHardpoint(1, 16, new ShipComponent(42));
           var4 = new ShipComponent(31);
-          var4.a(1, 1, new ShipComponent(13));
-          var4.a(1, 2, new ShipComponent(13));
-          var4.a(1, 3, new ShipComponent(13));
-          var4.a(1, 0, new ShipComponent(15));
-          param0.a(1, 7, var4);
+          var4.attachToHardpoint(1, 1, new ShipComponent(13));
+          var4.attachToHardpoint(1, 2, new ShipComponent(13));
+          var4.attachToHardpoint(1, 3, new ShipComponent(13));
+          var4.attachToHardpoint(1, 0, new ShipComponent(15));
+          param0.attachToHardpoint(1, 7, var4);
           int var2_int = 13 % ((param1 - 61) / 42);
           var3 = new ShipComponent(31);
-          var3.a(1, 0, new ShipComponent(13));
-          var3.a(1, 2, new ShipComponent(13));
-          var3.a(1, 3, new ShipComponent(13));
-          var3.a(1, 1, new ShipComponent(15));
-          param0.a(1, 19, var3);
+          var3.attachToHardpoint(1, 0, new ShipComponent(13));
+          var3.attachToHardpoint(1, 2, new ShipComponent(13));
+          var3.attachToHardpoint(1, 3, new ShipComponent(13));
+          var3.attachToHardpoint(1, 1, new ShipComponent(15));
+          param0.attachToHardpoint(1, 19, var3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tkb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

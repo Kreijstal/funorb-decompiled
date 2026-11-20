@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class ihb extends IntrusiveNode {
-    int field_d;
-    int field_e;
+final class SpecialOrderStatus extends IntrusiveNode {
+    int specialOrderId;
+    int state;
 
-    static long a(long param0, long param1) {
+    static long xorLong(long param0, long param1) {
         return param0 ^ param1;
     }
 
-    final static int a(int[] param0, int param1, int[] param2) {
+    final static int getPolygonOverlapScore(int[] param0, int param1, int[] param2) {
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_22_1 = 0;
@@ -166,9 +166,9 @@ final class ihb extends IntrusiveNode {
         }
     }
 
-    ihb(int param0, int param1) {
-        this.field_e = param1;
-        this.field_d = param0;
+    SpecialOrderStatus(int param0, int param1) {
+        this.state = param1;
+        this.specialOrderId = param0;
     }
 
     final static byte[] a(byte param0, int param1) {

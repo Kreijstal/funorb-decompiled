@@ -68,7 +68,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
               if (var21 == null) {
                 return;
               }
-              var22 = var21.chassis.c(var23.getGrabbedComponentId(127), -97);
+              var22 = var21.chassis.getComponentByPath(var23.getGrabbedComponentId(127), -97);
               if (var22 == null) {
                 return;
               }
@@ -175,17 +175,17 @@ final class GrappleLauncherBehaviour implements DiffableState {
               var21 = ((Ship) (param10)).getOwner((byte) -117);
             }
             var22 = new GrapplingHook(new ShipComponent(28), param10.id, var21);
-            var14Lifetime1 = Lo.a(var22.chassis.i((byte) -112).field_v, 80);
-            var22.a(param4, -17);
+            var14Lifetime1 = Lo.a(var22.chassis.getDefinition((byte) -112).outline, 80);
+            var22.setAngle(param4, -17);
             var23 = GetNumStars.a(param4, (byte) -127) * var14Lifetime1 >> 16;
             var24 = eu.a(param4, 77) * var14Lifetime1 >> 16;
-            var22.a(var23 * 2 + var15, var24 * 2 + var16, (byte) 100);
+            var22.setPosition(var23 * 2 + var15, var24 * 2 + var16, (byte) 100);
             param8.a((byte) 67, var22);
             var22.dy = param10.dy;
             var22.dx = param10.dx;
             qba.a(20382, var15, 12, var16, 50);
-            var22.a(var16, param4, var15, joa.field_a, 1948934248);
-            param10.a(var16, GameKeyHandler.a(22433, param4 + 4096), var15, joa.field_a, 1948934248);
+            var22.addDirectionalForce(var16, param4, var15, joa.field_a, 1948934248);
+            param10.addDirectionalForce(var16, GameKeyHandler.a(22433, param4 + 4096), var15, joa.field_a, 1948934248);
             this.hookId = var22.id;
             this.reload = CarouselPlayerEvent.field_i[0].d((byte) 64);
             this.targetRopeLength = this.ropeLength;
@@ -278,14 +278,14 @@ final class GrappleLauncherBehaviour implements DiffableState {
           if (var33 == null) {
             if (this.hookId != -1) {
               this.hookId = -1;
-              param0.d((byte) -85);
+              param0.onStateChanged((byte) -85);
             }
             if (this.reload > 0) {
               this.reload = this.reload - 1;
-              param0.d((byte) 40);
+              param0.onStateChanged((byte) 40);
             }
           } else {
-            param0.d((byte) -74);
+            param0.onStateChanged((byte) -74);
             var10 = Lo.a(param7, -82);
             var11 = param5 + (var10 * GetNumStars.a(param6, (byte) -125) >> 16);
             var12 = param2 + (var10 * eu.a(param6, 39) >> 16);
@@ -298,7 +298,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
               var14 = (var14 << 8) / this.ropeLength;
               var17_int = var16 / Math.max(1, this.ropeLength >> 8);
               if (CarouselSlotStateDump.field_i < var15) {
-                var33.chassis.a(var33.chassis.i((byte) -112).field_p, (byte) -109);
+                var33.chassis.applyScaledDamage(var33.chassis.getDefinition((byte) -112).maxHealth, (byte) -109);
               } else {
                 if (var17_int > AwardVictoryToTeamActionFactory.field_b) {
                   var17_int = AwardVictoryToTeamActionFactory.field_b;
@@ -308,8 +308,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
                 var19 = var18_int >> 8;
                 var20 = var14 * (SetPointDefenceLaserEnergyUsed.field_o * var16 >> 8);
                 var21_int = var20 >> 8;
-                var33.a(-var21_int, var33.getX(false), var33.getY((byte) 122), (byte) -128, -var19);
-                param0.a(var21_int, var11, var12, (byte) -117, var19);
+                var33.addForceAtPoint(-var21_int, var33.getX(false), var33.getY((byte) 122), (byte) -128, -var19);
+                param0.addForceAtPoint(var21_int, var11, var12, (byte) -117, var19);
                 if (-1 == var33.l((byte) -106)) {
                   this.a(32, var33);
                 }
@@ -321,7 +321,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
                 var33.f(true);
                 return;
               }
-              var18 = var17.chassis.c(var33.getGrabbedComponentId(-109), -121);
+              var18 = var17.chassis.getComponentByPath(var33.getGrabbedComponentId(-109), -121);
               if (var18 == null) {
                 var33.f(true);
                 return;
@@ -335,13 +335,13 @@ final class GrappleLauncherBehaviour implements DiffableState {
               var23 = (long)var18.finaly + ((long)var33.o(23463) * (long)var19Lifetime1 + (long)var33.getGrabbedComponentOffsety(32) * (long)var20Lifetime1 >> 16);
               var25 = (int)var21 - var33.getX(false);
               var26 = (int)var23 - var33.getY((byte) -29);
-              var27 = var33.c((byte) -121) - var17.c((byte) -112);
-              var28 = var33.f(0) - var17.f(0);
-              var29 = Math.min(var33.e(false), var17.e(false) / 4);
+              var27 = var33.getVelocityX((byte) -121) - var17.getVelocityX((byte) -112);
+              var28 = var33.getVelocityY(0) - var17.getVelocityY(0);
+              var29 = Math.min(var33.getMass(false), var17.getMass(false) / 4);
               var30 = (var25 - var27) * var29 / 2;
               var31 = (-var28 + var26) * var29 / 2;
-              var33.a(var31, var33.getX(false), var33.getY((byte) 124), (byte) -118, var30);
-              var17.a(-var31, (int)var21, (int)var23, (byte) -123, -var30);
+              var33.addForceAtPoint(var31, var33.getX(false), var33.getY((byte) 124), (byte) -118, var30);
+              var17.addForceAtPoint(-var31, (int)var21, (int)var23, (byte) -123, -var30);
             }
             if (this.ropeLength > this.targetRopeLength) {
               this.ropeLength = this.ropeLength - PacketBuffer.field_d;
@@ -356,7 +356,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
               }
             }
             if (param3) {
-              var33.chassis.a(var33.chassis.i((byte) -112).field_p, (byte) -114);
+              var33.chassis.applyScaledDamage(var33.chassis.getDefinition((byte) -112).maxHealth, (byte) -114);
             }
           }
           var10Lifetime1 = 51 % ((param4 - 69) / 57);

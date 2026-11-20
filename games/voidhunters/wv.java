@@ -125,8 +125,8 @@ final class wv extends TextureOperation {
         super.initializeCache(param0, param1, param2);
         if (this.field_i >= 0 &&
           nl.field_e != null) {
-          var4 = nl.field_e.a(-20292, this.field_i).field_h ? 64 : 128;
-          this.field_k = nl.field_e.a(var4, 1.0f, true, this.field_i, var4, false);
+          var4 = nl.field_e.getTextureMetadata(-20292, this.field_i).field_h ? 64 : 128;
+          this.field_k = nl.field_e.generateRgbPixels(var4, 1.0f, true, this.field_i, var4, false);
           this.field_j = var4;
           this.field_m = var4;
         }

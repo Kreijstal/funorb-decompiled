@@ -194,7 +194,7 @@ final class b extends ka {
         int stackIn_57_1 = 0;
         int stackIn_58_2 = 0;
         int stackIn_67_0 = 0;
-        d var7;
+        TextureProvider var7;
         long[] var9;
         int var10;
         int var11_int;
@@ -205,7 +205,7 @@ final class b extends ka {
         int var15;
         int var16;
         int var17;
-        opa var18;
+        TextureMetadata var18;
         int var18_int;
         float[] var19;
         int var19_int;
@@ -213,7 +213,7 @@ final class b extends ka {
         int var21;
         sr var21_ref_sr;
         int var22;
-        opa var22_ref_opa;
+        TextureMetadata var22_ref_opa;
         int var23;
         int var24;
         int var25;
@@ -257,12 +257,12 @@ final class b extends ka {
         float var53;
         int var54;
         bqa var56;
-        opa var57;
+        TextureMetadata var57;
         long[] var58;
         bqa var59;
         sr var60;
         SoftwareRenderContext var61;
-        opa var62;
+        TextureMetadata var62;
         float[] var65;
         float[] var66;
         long[] var68;
@@ -333,7 +333,7 @@ final class b extends ka {
                   var18_int = 1;
                 }
                 if (var21_ref_sr.field_e != -1) {
-                  var22_ref_opa = var7.a(-20292, var21_ref_sr.field_e);
+                  var22_ref_opa = var7.getTextureMetadata(-20292, var21_ref_sr.field_e);
                   if (var22_ref_opa.field_q == 2) {
                     this.field_z = true;
                   }
@@ -348,7 +348,7 @@ final class b extends ka {
           if (param1.field_u != null) {
             var18_intLifetime2 = param1.field_u[var12];
             if (var18_intLifetime2 != -1) {
-              var57 = var7.a(-20292, var18_intLifetime2 & 65535);
+              var57 = var7.getTextureMetadata(-20292, var18_intLifetime2 & 65535);
               var13 = var57;
               if ((param5 & 64) != 0 &&
                 var57.field_r) {
@@ -364,7 +364,7 @@ final class b extends ka {
             stackIn_41_0 = 1;
           } else {
             if (var13 != null) {
-              stackIn_41_0 = (((opa) (var13)).field_q == 2) ? 1 : 0;
+              stackIn_41_0 = (((TextureMetadata) (var13)).field_q == 2) ? 1 : 0;
             } else {
               stackIn_41_0 = 0;
             }
@@ -431,7 +431,7 @@ final class b extends ka {
           var18_intLifetime1 = stackIn_67_0;
           if (var18_intLifetime1 != -1 &&
             (param5 & 64) != 0) {
-            var62 = var7.a(-20292, var18_intLifetime1 & 65535);
+            var62 = var7.getTextureMetadata(-20292, var18_intLifetime1 & 65535);
             if (var62.field_r) {
               var18_intLifetime1 = -1;
             }
@@ -652,7 +652,7 @@ final class b extends ka {
             if (var17Lifetime2 == -1) {
               this.field_b[var16Lifetime2] = (short)-1;
             } else {
-              var18 = this.field_f.field_a.a(-20292, var17Lifetime2);
+              var18 = this.field_f.field_a.getTextureMetadata(-20292, var17Lifetime2);
               if ((param5 & 64) != 0 &&
                 var18.field_r) {
                 this.field_b[var16Lifetime2] = (short)-1;

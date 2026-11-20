@@ -51,7 +51,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
             if (var5 == null) {
               return true;
             }
-            fwa.field_g = var5;
+            ArchiveIndexLoader.field_g = var5;
             return true;
           }
           if (param1 != 74) {
@@ -74,7 +74,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           if (var3 == null) {
             return true;
           }
-          fwa.field_g = var3;
+          ArchiveIndexLoader.field_g = var3;
           return true;
         }
         if (param1 != 74) {
@@ -111,21 +111,21 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         ShipComponent var4 = null;
         ShipComponent var5 = null;
         try {
-          param0.a(1, 10, new ShipComponent(13));
-          param0.a(1, 9, new ShipComponent(13));
-          param0.a(1, 8, new ShipComponent(13));
-          param0.a(1, 0, new ShipComponent(13));
-          param0.a(1, 1, new ShipComponent(13));
-          param0.a(1, 7, new ShipComponent(13));
-          param0.a(1, 4, new ShipComponent(26));
-          param0.a(1, 11, new ShipComponent(13));
+          param0.attachToHardpoint(1, 10, new ShipComponent(13));
+          param0.attachToHardpoint(1, 9, new ShipComponent(13));
+          param0.attachToHardpoint(1, 8, new ShipComponent(13));
+          param0.attachToHardpoint(1, 0, new ShipComponent(13));
+          param0.attachToHardpoint(1, 1, new ShipComponent(13));
+          param0.attachToHardpoint(1, 7, new ShipComponent(13));
+          param0.attachToHardpoint(1, 4, new ShipComponent(26));
+          param0.attachToHardpoint(1, 11, new ShipComponent(13));
           int var3 = -119 / ((79 - param1) / 47);
           var4 = new ShipComponent(31);
-          var4.a(1, 0, new ShipComponent(23));
-          param0.a(1, 3, var4);
+          var4.attachToHardpoint(1, 0, new ShipComponent(23));
+          param0.attachToHardpoint(1, 3, var4);
           var5 = new ShipComponent(31);
-          var5.a(1, 1, new ShipComponent(23));
-          param0.a(1, 5, var5);
+          var5.attachToHardpoint(1, 1, new ShipComponent(23));
+          param0.attachToHardpoint(1, 5, var5);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ir.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -178,7 +178,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
               !Character.isDigit(var5.charAt(0))) {
               var4Lifetime1 = SetMissionVariablesHudX.field_p;
             } else {
-              var4Lifetime1 = fwa.field_h;
+              var4Lifetime1 = ArchiveIndexLoader.field_h;
             }
           } else {
             var4Lifetime1 = io.field_p;

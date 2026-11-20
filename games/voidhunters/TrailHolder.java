@@ -209,7 +209,7 @@ final class TrailHolder implements DiffableState {
         }
     }
 
-    final void a(int param0) {
+    final void reset(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         int var2Lifetime1;

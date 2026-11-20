@@ -378,7 +378,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_9_0 = new gn(this, param0, param3, param2, param6, param4);
               return (eb) ((Object) stackIn_9_0);
             }
-            var9 = new ubb(this, qua.field_d, mj.field_f, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
+            var9 = new ubb(this, ComponentAttachmentPlan.field_d, mj.field_f, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
             var9.a(0, param3, param0, param6, param4, param2, 0, (byte) -104);
             stackIn_11_0 = var9;
             return (eb) ((Object) stackIn_11_0);
@@ -1210,7 +1210,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         int var2 = -60 % ((-45 - param0) / 51);
     }
 
-    OpenGlGpuToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, asb param4, int param5) {
+    OpenGlGpuToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, TextureProvider param3, asb param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;

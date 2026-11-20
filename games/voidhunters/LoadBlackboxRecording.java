@@ -29,11 +29,11 @@ final class LoadBlackboxRecording extends ConsoleCommand {
           for (var3 = 0; 4 > var3; var3++) {
             var4 = new ShipComponent(29);
             var5 = new ShipComponent(32);
-            var5.a(param1 ^ -9, 2, new ShipComponent(var7[var3]));
-            var5.a(1, 3, new ShipComponent(var7[var3]));
-            var5.a(1, 4, new ShipComponent(var7[var3]));
-            var4.a(1, 0, var5);
-            param0.a(1, var3, var4);
+            var5.attachToHardpoint(param1 ^ -9, 2, new ShipComponent(var7[var3]));
+            var5.attachToHardpoint(1, 3, new ShipComponent(var7[var3]));
+            var5.attachToHardpoint(1, 4, new ShipComponent(var7[var3]));
+            var4.attachToHardpoint(1, 0, var5);
+            param0.attachToHardpoint(1, var3, var4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

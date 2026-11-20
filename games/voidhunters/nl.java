@@ -9,7 +9,7 @@ final class nl extends IntrusiveNode {
     int field_f;
     int field_i;
     static float field_n;
-    static d field_e;
+    static TextureProvider field_e;
     int field_l;
     static int field_m;
     static String field_j;

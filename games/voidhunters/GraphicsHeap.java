@@ -19,7 +19,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          if (null == fwa.field_g) {
+          if (null == ArchiveIndexLoader.field_g) {
             if (param0 != -93) {
               GraphicsHeap.c((byte) 43);
             }
@@ -28,9 +28,9 @@ abstract class GraphicsHeap extends IntrusiveNode {
           }
           var1_int = 0;
           for (var2 = 0; var2 < 12; var2++) {
-            var3 = fwa.field_g.componentoptionStates[var2];
-            if (fwa.field_g.a(var3, true, false) ||
-              fwa.field_g.c(var3, -40)) {
+            var3 = ArchiveIndexLoader.field_g.componentoptionStates[var2];
+            if (ArchiveIndexLoader.field_g.a(var3, true, false) ||
+              ArchiveIndexLoader.field_g.c(var3, -40)) {
               var1_int++;
             }
           }

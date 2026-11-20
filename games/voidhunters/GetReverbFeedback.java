@@ -12,7 +12,7 @@ final class GetReverbFeedback extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(qua.field_b);
+            stackIn_4_0 = new ConsoleValue(ComponentAttachmentPlan.field_b);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

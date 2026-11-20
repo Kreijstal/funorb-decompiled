@@ -101,39 +101,39 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
         Ship var9 = new Ship();
         ShipComponent var2 = new ShipComponent(0);
         ShipComponent var4 = new ShipComponent(14);
-        var2.a(1, 0, var4);
+        var2.attachToHardpoint(1, 0, var4);
         ShipComponent var5 = new ShipComponent(12);
         var5.thrusterbehaviour = new ThrusterBehaviour();
-        var5.a((byte) -82, 8);
-        var5.thrusterbehaviour.a(true, 1024);
-        var2.a(1, 1, var5);
+        var5.setTriggerMap((byte) -82, 8);
+        var5.thrusterbehaviour.setTrailEnabled(true, 1024);
+        var2.attachToHardpoint(1, 1, var5);
         ShipComponent var6 = new ShipComponent(12);
         var6.thrusterbehaviour = new ThrusterBehaviour();
-        var6.a((byte) -64, 4);
-        var6.thrusterbehaviour.a(true, 1024);
-        var2.a(1, 2, var6);
+        var6.setTriggerMap((byte) -64, 4);
+        var6.thrusterbehaviour.setTrailEnabled(true, 1024);
+        var2.attachToHardpoint(1, 2, var6);
         ShipComponent var7 = new ShipComponent(12);
         var7.thrusterbehaviour = new ThrusterBehaviour();
-        var7.a((byte) -113, 2);
-        var7.thrusterbehaviour.a(true, 1024);
-        var2.a(1, 3, var7);
+        var7.setTriggerMap((byte) -113, 2);
+        var7.thrusterbehaviour.setTrailEnabled(true, 1024);
+        var2.attachToHardpoint(1, 3, var7);
         ShipComponent var8 = new ShipComponent(12);
         if (!param0) {
           var8.thrusterbehaviour = new ThrusterBehaviour();
-          var8.a((byte) -92, 1);
-          var8.thrusterbehaviour.a(true, 1024);
-          var2.a(1, 4, var8);
+          var8.setTriggerMap((byte) -92, 1);
+          var8.thrusterbehaviour.setTrailEnabled(true, 1024);
+          var2.attachToHardpoint(1, 4, var8);
           var9.chassis = var2;
-          var9.e((byte) 119);
+          var9.recalculateMassProperties((byte) 119);
           return var9;
         }
         field_a = 66;
         var8.thrusterbehaviour = new ThrusterBehaviour();
-        var8.a((byte) -92, 1);
-        var8.thrusterbehaviour.a(true, 1024);
-        var2.a(1, 4, var8);
+        var8.setTriggerMap((byte) -92, 1);
+        var8.thrusterbehaviour.setTrailEnabled(true, 1024);
+        var2.attachToHardpoint(1, 4, var8);
         var9.chassis = var2;
-        var9.e((byte) 119);
+        var9.recalculateMassProperties((byte) 119);
         return var9;
     }
 

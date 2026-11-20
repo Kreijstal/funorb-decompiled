@@ -241,11 +241,11 @@ final class bd {
           TargetLockFactory.field_a.field_A = dupTemp$3;
           var18 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "checkbox");
           SetShieldsDirectionalArcParticleLife.field_o = new qca(0L, var18[1], var18[0], 1, GetMissionDebrisDefaultProbability.field_o, (String) null);
-          ga.field_s = new llb(0L, (llb) null);
-          ga.field_s.field_gb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion", "lobby", true));
-          ga.field_s.field_mb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseover", "lobby", true));
-          ga.field_s.field_A = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseheld", "lobby", true));
-          ga.field_s.field_ub = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_disabled", "lobby", true));
+          CachedArchiveProvider.field_s = new llb(0L, (llb) null);
+          CachedArchiveProvider.field_s.field_gb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion", "lobby", true));
+          CachedArchiveProvider.field_s.field_mb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseover", "lobby", true));
+          CachedArchiveProvider.field_s.field_A = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseheld", "lobby", true));
+          CachedArchiveProvider.field_s.field_ub = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_disabled", "lobby", true));
           GetPointDefenceLaserProjectileInterceptDamage.field_r = new llb(0L, (llb) null);
           GetPointDefenceLaserProjectileInterceptDamage.field_r.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "dragbar"), (byte) 98);
           GetPointDefenceLaserProjectileInterceptDamage.field_r.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "dragbar_mouseover"), (byte) -59);
@@ -261,7 +261,7 @@ final class bd {
           SetAngularVelocitySustain.field_q.field_cb = SetSniperCannonProjectiles.a(param3, "downbutton_mouseover", "lobby", true);
           SetAngularVelocitySustain.field_q.field_ob = SetSniperCannonProjectiles.a(param3, "downbutton_mouseheld", "lobby", true);
           SetAngularVelocitySustain.field_q.field_z = SetSniperCannonProjectiles.a(param3, "downbutton_disabled", "lobby", true);
-          GetUseNiceTrails.field_o = new pjb(0L, MissionConditionFactory.field_a, SetAngularVelocitySustain.field_q, ga.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
+          GetUseNiceTrails.field_o = new pjb(0L, MissionConditionFactory.field_a, SetAngularVelocitySustain.field_q, CachedArchiveProvider.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
           rbb.field_k = new wdb(0L, (llb) null, htb.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

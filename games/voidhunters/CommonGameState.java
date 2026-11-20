@@ -402,10 +402,10 @@ final class CommonGameState implements DiffableState, mfa {
               var14.addAction(new SetVariableLabelAction(0, 10), true);
               var12.world.a(var14, -38);
               var15 = new Asteroid(new ShipComponent(54));
-              var15.a(65536, 81920, (byte) -60);
+              var15.setPosition(65536, 81920, (byte) -60);
               var12.world.a((byte) 126, var15);
               var16 = new Asteroid(new ShipComponent(50));
-              var16.a(-131072, 65536, (byte) 69);
+              var16.setPosition(-131072, 65536, (byte) 69);
               var12.world.a((byte) 126, var16);
             }
           } else {

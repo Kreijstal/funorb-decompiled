@@ -4,7 +4,7 @@
 final class RoundResult implements DiffableState {
     int winningTime;
     int winner;
-    static tpb field_c;
+    static ProjectileTraceResult field_c;
     static boolean field_e;
     static String field_a;
 
@@ -175,7 +175,7 @@ final class RoundResult implements DiffableState {
     }
 
     static {
-        field_c = new tpb();
+        field_c = new ProjectileTraceResult();
         field_a = "This game has been updated! Please reload this page.";
     }
 }

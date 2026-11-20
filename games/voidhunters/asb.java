@@ -246,7 +246,7 @@ final class asb {
         var26 = VoidHunters.field_G;
         try {
           if (param2) {
-            stackIn_12_0 = (ii.field_h) ? 0 : 1;
+            stackIn_12_0 = (ArchiveTextureProvider.field_h) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
             if (nmb.b(param3 + 164)) {
@@ -539,7 +539,7 @@ final class asb {
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
                 null != ncb.field_a && (!param2 ||
-                !ii.field_h)) {
+                !ArchiveTextureProvider.field_h)) {
                 GetMissionVotes.field_p = false;
                 hrb.field_b = false;
                 if (tib.field_i == null) {

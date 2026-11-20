@@ -10,21 +10,21 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
 
     private final void a(boolean param0, Debris param1) {
         try {
-          param1.field_o = this.field_o;
-          param1.field_p = this.field_p;
-          param1.field_t = this.field_t;
-          this.field_p = 0;
+          param1.forceY = this.forceY;
+          param1.torque = this.torque;
+          param1.forceX = this.forceX;
+          this.torque = 0;
           if (!param0) {
             this.field_x = true;
           }
-          this.field_o = 0;
-          this.field_t = 0;
+          this.forceY = 0;
+          this.forceX = 0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nbb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int d(int param0) {
+    final int getBodyKind(int param0) {
         if (param0 < 42) {
           return -85;
         }
@@ -45,7 +45,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
           super.writeState(param0, -110);
           vq.writeBoolean(param0, 118, this.phantom);
           if (param1 > -109) {
-            this.d(-99);
+            this.getBodyKind(-99);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nbb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -97,18 +97,18 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         this.field_w = 0;
-        this.d((byte) -52);
+        this.onStateChanged((byte) -52);
         try {
           this.chassis = param0;
-          this.a(this.chassis.finalangle, -56);
-          this.a(this.chassis.finalx, this.chassis.finaly, (byte) 31);
-          this.chassis.c(0, this.chassis.b(52), 56, this.chassis.c((byte) 100));
-          this.chassis.h((byte) 42);
-          this.chassis.a((byte) -125, (ShipBody) (this));
-          this.e((byte) 119);
+          this.setAngle(this.chassis.finalangle, -56);
+          this.setPosition(this.chassis.finalx, this.chassis.finaly, (byte) 31);
+          this.chassis.setConnectionTransform(0, this.chassis.getDefaultConnectionX(52), 56, this.chassis.getDefaultConnectionY((byte) 100));
+          this.chassis.resetConnectedAngle((byte) 42);
+          this.chassis.configureThrusterBindings((byte) -125, (ShipBody) (this));
+          this.recalculateMassProperties((byte) 119);
           if (GetFullMissionSet.field_p != 0 &&
             !param1) {
-            this.chassis.d(false);
+            this.chassis.ensurePositiveHealth(false);
             return;
           }
           this.field_u = true;
@@ -127,7 +127,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
         }
     }
 
-    final void d(byte param0) {
+    final void onStateChanged(byte param0) {
         int fieldTemp$0 = GetMomentOfInertiaPerpointCalcDownshift.field_o;
         GetMomentOfInertiaPerpointCalcDownshift.field_o = GetMomentOfInertiaPerpointCalcDownshift.field_o + 1;
         this.field_w = fieldTemp$0;
@@ -148,7 +148,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
 
     public Debris() {
         this.field_w = 0;
-        this.d((byte) -52);
+        this.onStateChanged((byte) -52);
     }
 
     public final void copyTo(byte param0, SerializableGameState param1) {

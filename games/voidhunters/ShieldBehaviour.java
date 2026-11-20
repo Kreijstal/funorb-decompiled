@@ -27,7 +27,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
           if (!(param2 instanceof Ship)) {
             if (this.operationalLastFrame) {
               this.operationalLastFrame = false;
-              param2.d((byte) 59);
+              param2.onStateChanged((byte) 59);
             }
             return;
           }
@@ -50,13 +50,13 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
               this.operationalLastFrame = true;
               this.previousShieldY = param1;
               this.previousShieldX = param7;
-              param2.d((byte) 80);
+              param2.onStateChanged((byte) 80);
             }
             return;
           }
           if (this.operationalLastFrame) {
             this.operationalLastFrame = false;
-            param2.d((byte) 113);
+            param2.onStateChanged((byte) 113);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
