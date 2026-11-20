@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GammaCorrection {
-    static java.awt.Canvas field_a;
+    static java.awt.Canvas canvas;
     static String field_b;
 
     final static String getNameValidationError(CharSequence param0, byte param1) {
@@ -37,7 +37,7 @@ final class GammaCorrection {
         if (param0 != 0) {
           return;
         }
-        field_a = null;
+        canvas = null;
     }
 
     final static void updateGammaTable(boolean param0, double param1) {

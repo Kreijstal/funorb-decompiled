@@ -454,7 +454,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                   stackIn_77_0 = 1;
                 }
                 var36 = stackIn_77_0;
-                stackIn_79_0 = atb.field_b;
+                stackIn_79_0 = GpuTextureCache.field_b;
                 if (var36 == 0) {
                   stackIn_80_1 = 0;
                 } else {

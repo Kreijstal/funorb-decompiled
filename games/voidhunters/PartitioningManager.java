@@ -12,7 +12,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         if (null == this.zonelists[var6]) {
           this.zonelists[var6] = new PartitionZoneList();
         }
-        ppb.field_b = this.zonelists[var6];
+        ByteStorageRanges.field_b = this.zonelists[var6];
         return this.zonelists[var6].getOrCreateZone((byte) 120, param3, param1, param2);
     }
 
@@ -58,7 +58,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         if (param3 < 108) {
           this.revision = 69;
         }
-        ppb.field_b = var6;
+        ByteStorageRanges.field_b = var6;
         if (var6 == null) {
           return null;
         }
@@ -202,7 +202,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
           this.decrementIdsAbove((byte) -57, 94, 86);
         }
         var6.addId(param2, -13251);
-        ppb.field_b.markChanged(-112);
+        ByteStorageRanges.field_b.markChanged(-112);
     }
 
     private final int getOrCreateZonesInBounds(byte param0, int[] param1, int param2) {
@@ -235,7 +235,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
           for (var9 = var4_int; var5 >= var9; var9++) {
             for (var10 = var6; var10 <= var7; var10++) {
               var11 = this.getOrCreateZone(-1, var10, param2, var9);
-              AsteroidFieldFactory.field_c[var8] = ppb.field_b;
+              AsteroidFieldFactory.field_c[var8] = ByteStorageRanges.field_b;
               incrementValue$1 = var8;
               var8++;
               MaskedPasswordTextStyle.field_s[incrementValue$1] = var11;
@@ -296,7 +296,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
                 if (AsteroidFieldFactory.field_c.length <= var9) {
                   this.growZoneScratchArrays((byte) -16);
                 }
-                AsteroidFieldFactory.field_c[var9] = ppb.field_b;
+                AsteroidFieldFactory.field_c[var9] = ByteStorageRanges.field_b;
                 incrementValue$1 = var9;
                 var9++;
                 MaskedPasswordTextStyle.field_s[incrementValue$1] = var12;
@@ -437,7 +437,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         }
         PartitionZone var6 = this.findZone(param2, param1, param0, (byte) 114);
         if (var6 != null) {
-          ppb.field_b.markChanged(param3 - 14);
+          ByteStorageRanges.field_b.markChanged(param3 - 14);
           this.removeBodyFromZone(1, var6, param4);
         }
     }

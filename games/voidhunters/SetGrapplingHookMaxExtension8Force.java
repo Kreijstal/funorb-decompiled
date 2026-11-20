@@ -7,7 +7,7 @@ final class SetGrapplingHookMaxExtension8Force extends ConsoleCommand {
     static String field_r;
     static Widget field_p;
 
-    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+    final static byte[] copyByteRange(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

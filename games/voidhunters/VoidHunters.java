@@ -631,7 +631,7 @@ public final class VoidHunters extends NetworkGameClient {
         LegacyOpenGlTurbulenceEffect.field_g = new FadingMidiPcmStream(GetThrusterParticleLife.field_o);
         MidiPcmStream var3 = new MidiPcmStream();
         MidiCrossfadeStream var4 = new MidiCrossfadeStream(GetThrusterParticleLife.field_o, LegacyOpenGlTurbulenceEffect.field_g, var3);
-        AppletReload.initializeAudio((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) GammaCorrection.field_a), var4, 22050);
+        AppletReload.initializeAudio((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) GammaCorrection.canvas), var4, 22050);
         ScreenSizeController var5 = new ScreenSizeController(new GameCanvasResizeListener());
         var5.minimumMemoryMegabytes = 0;
         var5.resizable = false;
@@ -901,7 +901,7 @@ public final class VoidHunters extends NetworkGameClient {
         GrappleLauncherBehaviour.clearSharedReferences((byte) 114);
         ThrusterBehaviour.clearSharedReferences(-69);
         WeaponBehaviour.clearSharedReferences(!param0 ? true : false);
-        fra.clearSharedReferences(2147483647);
+        PolygonContainment.clearSharedReferences(2147483647);
         BoosterOrderText.clearSharedReferences(12472);
         SpecialOrderDefinition.clearSharedReferences((byte) -95);
         CustomBase64Alphabet.clearSharedReferences(65);
@@ -939,7 +939,7 @@ public final class VoidHunters extends NetworkGameClient {
         MissionList.clearSharedReferences(param0);
         AccountNameAvailabilityReplies.clearSharedReferences(114);
         AppletCookieWriter.clearSharedReferences(true);
-        joa.clearSharedReferences(26936);
+        SegmentIntersections.clearSharedReferences(26936);
         ComponentAttachmentPlan.clearSharedReferences(16606);
         ProjectileHit.clearSharedReferences(false);
         MovingObject.clearSharedReferences(true);
@@ -1016,7 +1016,7 @@ public final class VoidHunters extends NetworkGameClient {
         NetworkArchiveClient.clearSharedReferences(125);
         ArchiveDiskWorker.clearSharedReferences(63);
         ArchiveIndexLoader.clearSharedReferences(5);
-        ppb.clearSharedReferences(37);
+        ByteStorageRanges.clearSharedReferences(37);
         ScrollBarWidget.clearSharedReferences((byte) 22);
         PopupMenuWidget.clearSharedReferences(0);
         ScrollableActionPanel.clearSharedReferences((byte) 127);
@@ -1087,7 +1087,7 @@ public final class VoidHunters extends NetworkGameClient {
         ByteStorage.clearSharedReferences(1);
         Bzip2Decompressor.clearSharedReferences();
         Bzip2State.clearSharedReferences(53);
-        fia.clearSharedReferences((byte) -28);
+        ComponentGeometryEditor.clearSharedReferences((byte) -28);
         VorbisFloor.clearSharedReferences();
         TutorialProgressState.clearSharedReferences((byte) 66);
         SoftLruCache.clearSharedReferences(118);
@@ -1148,7 +1148,7 @@ public final class VoidHunters extends NetworkGameClient {
         GpuTransform3D.clearSharedReferences(108);
         TextureTransformMode.clearSharedReferences(17121);
         TextureCombineOperation.clearSharedReferences(-3696);
-        atb.clearSharedReferences(true);
+        GpuTextureCache.clearSharedReferences(true);
         GpuMaterialEffect.clearSharedReferences((byte) -96);
         GpuEnvironmentMapSource.clearSharedReferences(0);
         GpuQuadBuffers.clearSharedReferences((byte) 117);
@@ -1367,7 +1367,7 @@ public final class VoidHunters extends NetworkGameClient {
         PlayerJoinFactory.clearSharedReferences(-5254);
         PlayerLeaveFactory.clearSharedReferences(0);
         PlayerReadyFactory.clearSharedReferences((byte) -4);
-        Lo.clearSharedReferences(301);
+        HelloCommand.clearSharedReferences(301);
         SetLagVariant.clearSharedReferences(125);
         GetLagStandardDeviationIn.clearSharedReferences(true);
         GetLagStandardDeviationOut.clearSharedReferences(-2);
@@ -2051,7 +2051,7 @@ public final class VoidHunters extends NetworkGameClient {
                 var7 = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
                 var8 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
                 GetBombletSprayReload.a(-119, var8, var7);
-                GetMutatorVotes.a(SetBombletSprayProjectileOndamageParticles.e((byte) 93), var4 != 0, SetThrusterForce.a(-99), 123);
+                GetMutatorVotes.a(SetBombletSprayProjectileOndamageParticles.e((byte) 93), var4 != 0, SetThrusterForce.getOverlayClipCenterY(-99), 123);
                 BodyDestroyedCondition.b(-1);
                 if (MatchingFieldValidator.field_g.networked) {
                   MatchingFieldValidator.field_g.updateSession((byte) 89, var4 != 0);

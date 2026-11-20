@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Lo extends ConsoleCommand {
+final class HelloCommand extends ConsoleCommand {
     static String field_p;
     static NineSliceSprite field_o;
     static String[] field_q;
 
-    final static void a(java.awt.Color param0, int param1, int param2, boolean param3, String param4) {
+    final static void drawLoadingBar(java.awt.Color param0, int param1, int param2, boolean param3, String param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -22,7 +22,7 @@ final class Lo extends ConsoleCommand {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = GammaCorrection.field_a.getGraphics();
+            var9 = GammaCorrection.canvas.getGraphics();
             if (null == GetPhasedEnergyBeamPulsetime.field_p) {
               GetPhasedEnergyBeamPulsetime.field_p = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -35,7 +35,7 @@ final class Lo extends ConsoleCommand {
             }
             try {
               if (SetPhasedEnergyBeamAimspeed.field_p == null) {
-                SetPhasedEnergyBeamAimspeed.field_p = GammaCorrection.field_a.createImage(304, 34);
+                SetPhasedEnergyBeamAimspeed.field_p = GammaCorrection.canvas.createImage(304, 34);
               }
               var10 = SetPhasedEnergyBeamAimspeed.field_p.getGraphics();
               var10.setColor(param0);
@@ -76,7 +76,7 @@ final class Lo extends ConsoleCommand {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            GammaCorrection.field_a.repaint();
+            GammaCorrection.canvas.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -99,7 +99,7 @@ final class Lo extends ConsoleCommand {
         }
     }
 
-    Lo(String param0, Class[] param1, String param2) {
+    HelloCommand(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
@@ -113,7 +113,7 @@ final class Lo extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(ShipComponentFactory.a(-8225));
+            stackIn_4_0 = new ConsoleValue(ShipComponentFactory.getGreeting(-8225));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -141,7 +141,7 @@ final class Lo extends ConsoleCommand {
         field_p = null;
     }
 
-    final static int a(int[] param0, int param1) {
+    final static int getMaxPolygonX(int[] param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         int var3 = 0;

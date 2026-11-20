@@ -129,12 +129,12 @@ final class WaterTextures {
           if (!this.usesVolumeTexture) {
             this.noiseFrames = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var15 = ppb.a(PlayerVote.field_b, var2_int * 32768, true, 32768);
+              var15 = ByteStorageRanges.extractRange(PlayerVote.field_b, var2_int * 32768, true, 32768);
               this.noiseFrames[var2_int] = this.toolkit.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var15);
             }
             this.field_c = new GpuTexture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var16 = ppb.a(GetPointDefenceLaserRandomness.field_q, 32768 * var2_intLifetime1, true, 32768);
+              var16 = ByteStorageRanges.extractRange(GetPointDefenceLaserRandomness.field_q, 32768 * var2_intLifetime1, true, 32768);
               this.field_c[var2_intLifetime1] = this.toolkit.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var16);
             }
             return;

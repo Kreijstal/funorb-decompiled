@@ -36,14 +36,14 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           return 0;
         }
         if (SetGrapplingHookAimarc.field_p != 0) {
-          if (ppb.field_a != null) {
-            if (!ppb.field_a.loadIndex((byte) -118)) {
+          if (ByteStorageRanges.field_a != null) {
+            if (!ByteStorageRanges.field_a.loadIndex((byte) -118)) {
               return 14;
             }
-            if (!ppb.field_a.containsNamedGroup(true, "")) {
+            if (!ByteStorageRanges.field_a.containsNamedGroup(true, "")) {
               return 29;
             }
-            if (!ppb.field_a.isNamedGroupReady(32171, "")) {
+            if (!ByteStorageRanges.field_a.isNamedGroupReady(32171, "")) {
               return 29;
             }
           }

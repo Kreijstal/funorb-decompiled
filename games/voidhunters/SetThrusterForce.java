@@ -19,7 +19,7 @@ final class SetThrusterForce extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0) {
+    final static int getOverlayClipCenterY(int param0) {
         int var1 = 22 / ((52 - param0) / 49);
         return 180;
     }

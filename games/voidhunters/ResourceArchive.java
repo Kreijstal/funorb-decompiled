@@ -685,7 +685,7 @@ final class ResourceArchive {
                     }
                   }
                   if (var23 == 0) {
-                    var21 = SetReverbGain.a(fra.field_c, new String[]{(String) (var22)}, 78);
+                    var21 = SetReverbGain.a(PolygonContainment.field_c, new String[]{(String) (var22)}, 78);
                   } else {
                     var21 = DialogMessagePanel.field_F + (String) (var22);
                   }

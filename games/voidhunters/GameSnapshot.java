@@ -388,7 +388,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           this.settings.applyToRuntime((byte) 125);
           this.world.updateSimulation(1799937864, param3, this.messageLog, (Player[]) (param0.players), this.missionState, param1, (Player[]) (this.players));
           this.missionState.updateMissionPhases(this, param1, (byte) -19);
-          if (param2 == fra.field_a) {
+          if (param2 == PolygonContainment.field_a) {
             for (var5_int = 0; this.players.length > var5_int; var5_int++) {
               var6 = (Player) (this.players[var5_int]);
               var6.triggers = -17 & var6.triggers;

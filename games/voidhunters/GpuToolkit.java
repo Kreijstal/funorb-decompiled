@@ -61,7 +61,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     float[] antiSunDirection;
     float[] sunDirection;
     private GpuMaterialEffect[] materialEffects;
-    private atb field_I;
+    private GpuTextureCache field_I;
     TextureCombineOperation[] alphaCombineOperations;
     private float field_B;
     int previousPointLightCount;
@@ -631,7 +631,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             this.viewportWidth = var11.width;
             PasswordValidator.a(false, (byte) 33, true);
             if (this.field_a != null) {
-              this.field_I = new atb(this, this.field_a);
+              this.field_I = new GpuTextureCache(this, this.field_a);
               this.field_Zb = new jagex3.graphics2.hw.NativeInterface(this.field_a.getTextureCount(11316), this.field_e);
               for (var8 = 0; var8 < this.field_a.getTextureCount(11316); var8++) {
                 var9 = this.field_a.getTextureMetadata(-20292, var8);
@@ -1649,7 +1649,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     void updateFrame(int param0) {
         if (null != this.field_I) {
-          this.field_I.a((byte) -106);
+          this.field_I.ageCache((byte) -106);
         }
         this.field_pc = param0 & 2147483647;
     }
@@ -1929,7 +1929,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           if (param3 < 0) {
             this.resetTextureTransform((byte) 126);
           } else {
-            var5_ref = this.field_I.a(-1, param3);
+            var5_ref = this.field_I.getTexture(-1, param3);
             var10 = this.field_a.getTextureMetadata(-20292, param3);
             if (var10.field_p == 0 &&
               var10.field_d == 0) {

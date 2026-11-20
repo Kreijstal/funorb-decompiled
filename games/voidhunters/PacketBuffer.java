@@ -533,7 +533,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = fia.a(110, param0);
+        this.payload = ComponentGeometryEditor.allocateByteArray(110, param0);
     }
 
     final void writeVarInt(int param0, int param1) {

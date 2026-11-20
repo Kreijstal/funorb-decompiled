@@ -43,7 +43,7 @@ final class ArchiveLoadRequest {
           var5_int = 0;
           while (true) {
             if (param1.length <= var5_int) {
-              stackIn_11_0 = fra.a(param1, param3, 2, param2);
+              stackIn_11_0 = PolygonContainment.containsPoint(param1, param3, 2, param2);
               return stackIn_11_0;
             }
             var6 = param1[var5_int];

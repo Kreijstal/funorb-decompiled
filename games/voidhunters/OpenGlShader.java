@@ -112,7 +112,7 @@ final class OpenGlShader {
             OpenGlShader.uploadByteTextureMipmaps((byte[]) null, -33, -97, 6, -100, 46, -12);
           }
           SetMissilesExplosionPower.field_p = param0;
-          Lo.field_o = param2;
+          HelloCommand.field_o = param2;
           GetMachineGunEnergyUsed.field_p = param3;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

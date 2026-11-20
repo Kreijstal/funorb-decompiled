@@ -118,7 +118,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
               GetShowTutorial.field_o = false;
               var3_int = 1;
             }
-            Lo.a(SetBlueprintSaveTime.field_p, 13, GetMissileLauncherFireForce.e((byte) 97), var3_int != 0, SetMassDriverFireForce.e((byte) -79));
+            HelloCommand.drawLoadingBar(SetBlueprintSaveTime.field_p, 13, GetMissileLauncherFireForce.e((byte) 97), var3_int != 0, SetMassDriverFireForce.e((byte) -79));
           }
           if (param0 == 111) {
             return;

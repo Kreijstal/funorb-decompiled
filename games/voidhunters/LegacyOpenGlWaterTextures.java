@@ -57,12 +57,12 @@ final class LegacyOpenGlWaterTextures {
           if (!this.usesVolumeTextures) {
             this.noiseFrames = new OpenGlTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var23 = ppb.a(GetMissionTimeLimit.field_p, 32768 * var2_int, true, 32768);
+              var23 = ByteStorageRanges.extractRange(GetMissionTimeLimit.field_p, 32768 * var2_int, true, 32768);
               this.noiseFrames[var2_int] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
             this.scrollingNoiseFrames = new OpenGlTexture2D[16];
             for (var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
-              var24 = ppb.a(ScrollBarWidget.field_vb, var2_intLifetime1 * 32768, true, 32768);
+              var24 = ByteStorageRanges.extractRange(ScrollBarWidget.field_vb, var2_intLifetime1 * 32768, true, 32768);
               this.scrollingNoiseFrames[var2_intLifetime1] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;

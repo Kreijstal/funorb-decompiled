@@ -125,10 +125,10 @@ final class OpenGlUnderwaterMaterialEffect extends GpuMaterialEffect {
         try {
           if (param1 != null &&
             param0.field_Ac) {
-            this.field_p = mha.a(0, param1.fetchNamedFile("uw_ground_unlit", true, "gl"), 34336, param0);
-            this.field_k = mha.a(0, param1.fetchNamedFile("uw_ground_lit", true, "gl"), 34336, param0);
-            this.field_m = mha.a(0, param1.fetchNamedFile("uw_model_unlit", true, "gl"), 34336, param0);
-            this.field_j = mha.a(0, param1.fetchNamedFile("uw_model_lit", true, "gl"), 34336, param0);
+            this.field_p = OpenGlArbProgramCompiler.compileProgram(0, param1.fetchNamedFile("uw_ground_unlit", true, "gl"), 34336, param0);
+            this.field_k = OpenGlArbProgramCompiler.compileProgram(0, param1.fetchNamedFile("uw_ground_lit", true, "gl"), 34336, param0);
+            this.field_m = OpenGlArbProgramCompiler.compileProgram(0, param1.fetchNamedFile("uw_model_unlit", true, "gl"), 34336, param0);
+            this.field_j = OpenGlArbProgramCompiler.compileProgram(0, param1.fetchNamedFile("uw_model_lit", true, "gl"), 34336, param0);
             stackIn_7_0 = (this.field_j == null) ? 0 : 1;
             if (this.field_k == null) {
               stackIn_10_1 = 0;

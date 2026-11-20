@@ -147,7 +147,7 @@ final class TileTextureOperation extends TextureOperation {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (null != SetShipSpawnInvulnerabilityTime.field_o && (param0 < 0 ||
-            GetOndamageParticleSpeed.field_o == TextureCombineMappings.field_c)) {
+            GetOndamageParticleSpeed.loggedIn == TextureCombineMappings.loginStage)) {
             if (param1 < 110) {
               return;
             }

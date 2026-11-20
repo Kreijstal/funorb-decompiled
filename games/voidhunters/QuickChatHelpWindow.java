@@ -101,10 +101,10 @@ final class QuickChatHelpWindow extends Widget {
           var9.field_F = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; var12 < Lo.field_q.length; var12++) {
+          for (var12 = 0; var12 < HelloCommand.field_q.length; var12++) {
             var13 = new Widget(0L, param3, GetKeepTeamColours.field_r[var12]);
-            var14 = new Widget(0L, param3, Lo.field_q[var12]);
-            var15 = param3.font.getStringWidth(Lo.field_q[var12]);
+            var14 = new Widget(0L, param3, HelloCommand.field_q[var12]);
+            var15 = param3.font.getStringWidth(HelloCommand.field_q[var12]);
             if (var15 > var11) {
               var11 = var15;
             }

@@ -97,7 +97,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[6] = CarouselConstantRequests.field_b;
           SetSpinningBladeSpinupSpeed.field_o[50] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[41] = WeaponBehaviourFactory.field_a;
-          SetSpinningBladeSpinupSpeed.field_o[27] = Lo.field_p;
+          SetSpinningBladeSpinupSpeed.field_o[27] = HelloCommand.field_p;
           SetSpinningBladeSpinupSpeed.field_o[47] = OpenGlGlyphMask.field_d;
           SetSpinningBladeSpinupSpeed.field_o[35] = SetLaserProjectiles.field_p;
           SetSpinningBladeSpinupSpeed.field_o[37] = LogoAnimationStatus.field_a;
@@ -260,7 +260,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ThrusterBehaviour.field_a[9] = GetReloadBarWidth.field_p;
           ThrusterBehaviour.field_a[7] = MissionBuilderFactory.field_a;
           ThrusterBehaviour.field_a[8] = LoadSettings.field_r;
-          ThrusterBehaviour.field_a[1] = fia.field_a;
+          ThrusterBehaviour.field_a[1] = ComponentGeometryEditor.field_a;
           ThrusterBehaviour.field_a[5] = GpuFractalNoiseVolume.field_q;
           ThrusterBehaviour.field_a[3] = LoadBlackboxRecording.field_p;
           ThrusterBehaviour.field_a[2] = ArmBehaviour.field_c;
@@ -279,7 +279,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetPhasedEnergyBeamProjectiles.field_o[1] = MapClearanceRectangle.field_f;
           SetPhasedEnergyBeamProjectiles.field_o[2] = GetDebrisCollisionDamage.field_o;
           SetPhasedEnergyBeamProjectiles.field_o[8] = GammaCorrection.field_b + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
-          SetPhasedEnergyBeamProjectiles.field_o[4] = ppb.field_d;
+          SetPhasedEnergyBeamProjectiles.field_o[4] = ByteStorageRanges.field_d;
           SetPhasedEnergyBeamProjectiles.field_o[5] = QuickChatDynamicCommand.field_b;
           SetPhasedEnergyBeamProjectiles.field_o[0] = DualLinkNode.field_h;
           SetPhasedEnergyBeamProjectiles.field_o[3] = GammaCorrection.field_b;

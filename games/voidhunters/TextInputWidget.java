@@ -13,7 +13,7 @@ final class TextInputWidget extends Widget {
     private int selectionHeight;
     Widget textWidget;
     private Widget selectionWidget;
-    static gj field_xb;
+    static LoginStage field_xb;
     private int maximumLength;
     static String field_Jb;
     private int selectionAnchor;
@@ -603,6 +603,6 @@ final class TextInputWidget extends Widget {
 
     static {
         field_Jb = "Shortcut Reference";
-        field_xb = new gj();
+        field_xb = new LoginStage();
     }
 }

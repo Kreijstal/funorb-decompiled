@@ -175,9 +175,9 @@ final class ServerInfoFactory implements GameStateFactory {
               ModalStack.a(stackIn_42_0, var13, -73);
               if (OpenGlTexture1D.field_i) {
                 var5Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
-                var6Lifetime2 = fra.a((byte) 120);
+                var6Lifetime2 = PolygonContainment.getOverlayClipTop((byte) 120);
                 var7 = DirectByteStorage.a(false);
-                var8 = SetArmageddonWarning.a(param0 + 57974);
+                var8 = SetArmageddonWarning.getOverlayClipHeight(param0 + 57974);
                 var9 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
                 var10 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                 var11 = var5Lifetime2 + var9;
@@ -246,9 +246,9 @@ final class ServerInfoFactory implements GameStateFactory {
                   ModalStack.a(stackIn_96_0, var15, -73);
                   if (OpenGlTexture1D.field_i) {
                     var5Lifetime1Lifetime3 = SetLaserEnergyUsed.e((byte) -47);
-                    var6Lifetime1Lifetime3 = fra.a((byte) 120);
+                    var6Lifetime1Lifetime3 = PolygonContainment.getOverlayClipTop((byte) 120);
                     var7Lifetime1 = DirectByteStorage.a(false);
-                    var8Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
+                    var8Lifetime1 = SetArmageddonWarning.getOverlayClipHeight(param0 + 57974);
                     var9Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
                     var10Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                     var11Lifetime1 = var5Lifetime1Lifetime3 + var9Lifetime1;
@@ -303,9 +303,9 @@ final class ServerInfoFactory implements GameStateFactory {
                 ModalStack.a(stackIn_126_0, var17, -73);
                 if (OpenGlTexture1D.field_i) {
                   var5Lifetime1Lifetime1Lifetime4 = SetLaserEnergyUsed.e((byte) -47);
-                  var6Lifetime1Lifetime1Lifetime4 = fra.a((byte) 120);
+                  var6Lifetime1Lifetime1Lifetime4 = PolygonContainment.getOverlayClipTop((byte) 120);
                   var7Lifetime1Lifetime1 = DirectByteStorage.a(false);
-                  var8Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
+                  var8Lifetime1Lifetime1 = SetArmageddonWarning.getOverlayClipHeight(param0 + 57974);
                   var9Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
                   var10Lifetime1Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                   var11Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime4 + var9Lifetime1Lifetime1;
@@ -343,9 +343,9 @@ final class ServerInfoFactory implements GameStateFactory {
                   return;
                 }
                 var5Lifetime1Lifetime1Lifetime1Lifetime1 = SetLaserEnergyUsed.e((byte) -47);
-                var6Lifetime1Lifetime1Lifetime1Lifetime1 = fra.a((byte) 120);
+                var6Lifetime1Lifetime1Lifetime1Lifetime1 = PolygonContainment.getOverlayClipTop((byte) 120);
                 var7Lifetime1Lifetime1Lifetime1 = DirectByteStorage.a(false);
-                var8Lifetime1Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
+                var8Lifetime1Lifetime1Lifetime1 = SetArmageddonWarning.getOverlayClipHeight(param0 + 57974);
                 var9Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
                 var10Lifetime1Lifetime1Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                 var11Lifetime1Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime1Lifetime1 + var9Lifetime1Lifetime1Lifetime1;
@@ -375,9 +375,9 @@ final class ServerInfoFactory implements GameStateFactory {
                 ModalStack.a(stackIn_162_0, var20, -73);
                 if (OpenGlTexture1D.field_i) {
                   var5Lifetime1Lifetime1Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
-                  var6Lifetime1Lifetime1Lifetime2 = fra.a((byte) 120);
+                  var6Lifetime1Lifetime1Lifetime2 = PolygonContainment.getOverlayClipTop((byte) 120);
                   var7Lifetime1Lifetime1Lifetime2 = DirectByteStorage.a(false);
-                  var8Lifetime1Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
+                  var8Lifetime1Lifetime1Lifetime2 = SetArmageddonWarning.getOverlayClipHeight(param0 + 57974);
                   var9Lifetime1Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
                   var10Lifetime1Lifetime1Lifetime2 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                   var11Lifetime1Lifetime1Lifetime2 = var5Lifetime1Lifetime1Lifetime2 + var9Lifetime1Lifetime1Lifetime2;
@@ -415,9 +415,9 @@ final class ServerInfoFactory implements GameStateFactory {
               return;
             }
             var5Lifetime1Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
-            var6Lifetime1Lifetime2 = fra.a((byte) 120);
+            var6Lifetime1Lifetime2 = PolygonContainment.getOverlayClipTop((byte) 120);
             var7Lifetime1Lifetime2 = DirectByteStorage.a(false);
-            var8Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
+            var8Lifetime1Lifetime2 = SetArmageddonWarning.getOverlayClipHeight(param0 + 57974);
             var9Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
             var10Lifetime1Lifetime2 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
             var11Lifetime1Lifetime2 = var5Lifetime1Lifetime2 + var9Lifetime1Lifetime2;

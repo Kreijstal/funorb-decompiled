@@ -105,7 +105,7 @@ final class UiValueTrackRenderer implements UiRenderer {
                 var16[var17Lifetime1] = var16[var17Lifetime1] + var12Lifetime1 * (var14Lifetime1 + 1);
                 var16[1 + var17Lifetime1] = var16[1 + var17Lifetime1] + var13Lifetime1 * (1 + var14Lifetime1);
                 for (var18 = 0; var18 < 100; var18++) {
-                  if (!fra.a((int[]) (var10_ref), var16[var17Lifetime1 + 1], 2, var27[var17Lifetime1])) {
+                  if (!PolygonContainment.containsPoint((int[]) (var10_ref), var16[var17Lifetime1 + 1], 2, var27[var17Lifetime1])) {
                     var16[var17Lifetime1] = var27[var17Lifetime1] * 200 >> 8;
                     var16[1 + var17Lifetime1] = var16[var17Lifetime1 + 1] * 200 >> 8;
                     continue;

@@ -68,7 +68,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
         field_p = null;
     }
 
-    final static int a(int param0) {
+    final static int getOverlayClipHeight(int param0) {
         if (param0 != 27546) {
           field_o = 127;
           return 62;

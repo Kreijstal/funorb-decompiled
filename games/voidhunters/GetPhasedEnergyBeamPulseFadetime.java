@@ -81,7 +81,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (TextureCombineMappings.field_c == SetBombletSprayReload.field_p) {
+            if (TextureCombineMappings.loginStage == SetBombletSprayReload.field_p) {
               if (!param4) {
                 OpenGlGpuCubeTexture.loginCredentials = SetMissileLauncherProjectileLife.createLoginCredentials(param2, param5, false, (byte) -70);
               } else {
@@ -92,29 +92,29 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.writeByte(param3 ^ 13, 14);
               RequestNewestBlackboxRecording.field_p.writeByte(0, OpenGlGpuCubeTexture.loginCredentials.getType((byte) 56).wireId);
               TileTextureOperation.flushSocketOutput(-1, 117);
-              TextureCombineMappings.field_c = SetSpecialOrderBoxHeight.field_o;
+              TextureCombineMappings.loginStage = SetSpecialOrderBoxHeight.field_o;
             }
-            if (SetSpecialOrderBoxHeight.field_o == TextureCombineMappings.field_c &&
+            if (SetSpecialOrderBoxHeight.field_o == TextureCombineMappings.loginStage &&
               ShipBlueprint.a(1, 30000)) {
               var6_int = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -121);
               if (var6_int != 0) {
                 PartitioningManagerFactory.field_a = -1;
-                TextureCombineMappings.field_c = TextInputWidget.field_xb;
+                TextureCombineMappings.loginStage = TextInputWidget.field_xb;
                 NetworkMessageState.incomingOpcode = var6_int;
               } else {
-                TextureCombineMappings.field_c = ModalStack.field_w;
+                TextureCombineMappings.loginStage = ModalStack.field_w;
               }
               AccountNameAvailabilityReplies.field_b.position = 0;
             }
-            if (ModalStack.field_w == TextureCombineMappings.field_c &&
+            if (ModalStack.field_w == TextureCombineMappings.loginStage &&
               ShipBlueprint.a(8, param3 ^ 30013)) {
               SetMissileLauncherRandomness.field_p = AccountNameAvailabilityReplies.field_b.readLong(255);
               AccountNameAvailabilityReplies.field_b.position = 0;
               UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.loginCredentials, param1);
-              TextureCombineMappings.field_c = LegacyOpenGlShaderProgram.field_a;
+              TextureCombineMappings.loginStage = LegacyOpenGlShaderProgram.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (TextureCombineMappings.field_c == LegacyOpenGlShaderProgram.field_a &&
+            if (TextureCombineMappings.loginStage == LegacyOpenGlShaderProgram.field_a &&
               ShipBlueprint.a(1, 30000)) {
               var6_intLifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -110);
               NetworkMessageState.incomingOpcode = var6_intLifetime1;
@@ -124,7 +124,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   PartitioningManagerFactory.field_a = -1;
-                  TextureCombineMappings.field_c = TextInputWidget.field_xb;
+                  TextureCombineMappings.loginStage = TextInputWidget.field_xb;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -136,10 +136,10 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               }
               if (decompiledFrameRemainder0) {
                 PartitioningManagerFactory.field_a = -1;
-                TextureCombineMappings.field_c = UiFocusableComponent.field_A;
+                TextureCombineMappings.loginStage = UiFocusableComponent.readingAccountDetails;
               }
             }
-            if (TextureCombineMappings.field_c == UiFocusableComponent.field_A &&
+            if (TextureCombineMappings.loginStage == UiFocusableComponent.readingAccountDetails &&
               PlayerJoinFactory.b((byte) 113)) {
               SetTorpedoAimarc.field_p = AccountNameAvailabilityReplies.field_b.readLong(255);
               SetLagVariant.passwordForChatFilter = param5;
@@ -178,7 +178,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               var13 = (CharSequence) ((Object) IntIndexTable.field_a);
               ByteStorageAccess.field_e = ConstantColorTextureOperation.normalizeName(false, var13);
               SetClientSideDragging.field_p = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -94);
-              TextureCombineMappings.field_c = GetOndamageParticleSpeed.field_o;
+              TextureCombineMappings.loginStage = GetOndamageParticleSpeed.loggedIn;
               if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 124) == GetSalvoDamageMultiplier.emailCredentialType) {
                 SetFighterBayAimspeed.field_o.writeCookie(MissionList.b((byte) -106), param3 ^ 13);
               } else {
@@ -217,7 +217,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               stackIn_77_0 = NetworkMessageState.incomingOpcode;
               return stackIn_77_0;
             }
-            if (TextureCombineMappings.field_c == TextInputWidget.field_xb &&
+            if (TextureCombineMappings.loginStage == TextInputWidget.field_xb &&
               PlayerJoinFactory.b((byte) 113)) {
               FighterBayWeaponDefinition.l(-117);
               if (NetworkMessageState.incomingOpcode == 7 &&

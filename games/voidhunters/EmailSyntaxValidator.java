@@ -10,10 +10,10 @@ final class EmailSyntaxValidator extends TextFieldValidator {
           if (GetMissileLauncherAimarc.field_o) {
             return null;
           }
-          if (fra.field_b > OpenGlVertexAttribute.field_a) {
+          if (PolygonContainment.field_b > OpenGlVertexAttribute.field_a) {
             return null;
           }
-          if (!(OpenGlVertexAttribute.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
+          if (!(OpenGlVertexAttribute.field_a >= PolygonContainment.field_b + GetMessageMaxage.field_r)) {
             return GetReadyRoomMutatorTime.field_o;
           }
           return null;
@@ -21,10 +21,10 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         if (GetMissileLauncherAimarc.field_o) {
           return null;
         }
-        if (fra.field_b > OpenGlVertexAttribute.field_a) {
+        if (PolygonContainment.field_b > OpenGlVertexAttribute.field_a) {
           return null;
         }
-        if (!(OpenGlVertexAttribute.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
+        if (!(OpenGlVertexAttribute.field_a >= PolygonContainment.field_b + GetMessageMaxage.field_r)) {
           return GetReadyRoomMutatorTime.field_o;
         }
         return null;

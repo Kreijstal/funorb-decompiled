@@ -55,7 +55,7 @@ final class Projectile extends MovingObject implements DiffableState {
               var8 -= 512;
               var6 += 512;
             }
-            var9 = SpecialOrderSubmessageFactory.a(8, -this.dy + this.y, (byte) 89, -this.dx + this.x, var7, this.x, var6, var5, var8, this.y);
+            var9 = SpecialOrderSubmessageFactory.segmentIntersectionFraction(8, -this.dy + this.y, (byte) 89, -this.dx + this.x, var7, this.x, var6, var5, var8, this.y);
             if (var9 != -1 &&
               var9 < var3_int) {
               var3_int = var9;
@@ -470,7 +470,7 @@ final class Projectile extends MovingObject implements DiffableState {
         int var4_int = 0;
         if (this.type != 3 &&
           this.type != 4) {
-          if (fra.a(param1.finaloutline, this.y, 2, this.x)) {
+          if (PolygonContainment.containsPoint(param1.finaloutline, this.y, 2, this.x)) {
             param2.set(this.y, param1, this, (byte) 61, this.x);
           }
           return;
@@ -588,7 +588,7 @@ final class Projectile extends MovingObject implements DiffableState {
         this.type = param8;
         this.firedTeam = param6;
         this.damage = param9;
-        if (fra.field_a == 1) {
+        if (PolygonContainment.field_a == 1) {
           this.damage = this.damage * GetVelocitySustain.field_o;
         }
     }

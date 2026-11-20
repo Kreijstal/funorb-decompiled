@@ -3,12 +3,12 @@
  */
 final class GetOndamageParticleSpeed extends ConsoleCommand {
     static int[] field_p;
-    static gj field_o;
+    static LoginStage loggedIn;
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        loggedIn = null;
         if (param0 != 30388) {
-          field_o = (gj) null;
+          loggedIn = (LoginStage) null;
           field_p = null;
           return;
         }
@@ -49,6 +49,6 @@ final class GetOndamageParticleSpeed extends ConsoleCommand {
     }
 
     static {
-        field_o = new gj();
+        loggedIn = new LoginStage();
     }
 }

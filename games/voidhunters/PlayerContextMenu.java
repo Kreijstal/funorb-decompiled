@@ -353,7 +353,7 @@ final class PlayerContextMenu {
                       if (19 != param1) {
                         return false;
                       }
-                      fia.a(this.actionData, this.channelType, (byte) 105, this.targetPlayerKey, this.targetName);
+                      ComponentGeometryEditor.openQuickChatPhraseMenu(this.actionData, this.channelType, (byte) 105, this.targetPlayerKey, this.targetName);
                       return true;
                     }
                     ChatChannelControl.setChatChannel(0);

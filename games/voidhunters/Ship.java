@@ -1021,7 +1021,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
     }
 
     final void consumeShieldEnergy(byte param0) {
-        int var2 = this.consumeEnergy((byte) 11, SetMissilesCooldown.field_p * (-fra.field_a + 1)) ? 1 : 0;
+        int var2 = this.consumeEnergy((byte) 11, SetMissilesCooldown.field_p * (-PolygonContainment.field_a + 1)) ? 1 : 0;
         int var3 = 85 % ((47 - param0) / 51);
         if (var2 == 0) {
           this.shieldsOn = false;

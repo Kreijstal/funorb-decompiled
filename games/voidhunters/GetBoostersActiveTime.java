@@ -100,7 +100,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (TextureCombineMappings.field_c == SetBombletSprayReload.field_p) {
+          if (TextureCombineMappings.loginStage == SetBombletSprayReload.field_p) {
             LruNodeCache.field_f = null;
             RequestNewestBlackboxRecording.field_p.position = 0;
             if (param5 == null) {
@@ -155,15 +155,15 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var10, -124);
             }
             TileTextureOperation.flushSocketOutput(-1, 113);
-            TextureCombineMappings.field_c = SocialTabsPanel.field_d;
+            TextureCombineMappings.loginStage = SocialTabsPanel.field_d;
           }
-          if (TextureCombineMappings.field_c == SocialTabsPanel.field_d &&
+          if (TextureCombineMappings.loginStage == SocialTabsPanel.field_d &&
             ShipBlueprint.a(1, 30000)) {
             var9Lifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -124);
             AccountNameAvailabilityReplies.field_b.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
-              TextureCombineMappings.field_c = ComponentWordEncoder.field_a;
+              TextureCombineMappings.loginStage = ComponentWordEncoder.awaitingLoginReply;
               GameInvitationText.field_a = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
@@ -175,7 +175,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 return stackIn_34_0;
               }
               if (99 != var9Lifetime1) {
-                TextureCombineMappings.field_c = OpenGlGpuCubeTexture.field_k;
+                TextureCombineMappings.loginStage = OpenGlGpuCubeTexture.field_k;
                 PartitioningManagerFactory.field_a = -1;
                 NetworkMessageState.incomingOpcode = var9Lifetime1;
               } else {
@@ -185,7 +185,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               }
             }
           }
-          if (TextureCombineMappings.field_c == ComponentWordEncoder.field_a) {
+          if (TextureCombineMappings.loginStage == ComponentWordEncoder.awaitingLoginReply) {
             var9Lifetime2 = 2;
             if (ShipBlueprint.a(var9Lifetime2, param4 ^ 30000)) {
               var10Lifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
@@ -205,7 +205,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           if (param4 != 0) {
             GetBoostersActiveTime.f((byte) 86);
           }
-          if (TextureCombineMappings.field_c == OpenGlGpuCubeTexture.field_k &&
+          if (TextureCombineMappings.loginStage == OpenGlGpuCubeTexture.field_k &&
             PlayerJoinFactory.b((byte) 46)) {
             if (NetworkMessageState.incomingOpcode == 255) {
               var9_ref_String = AccountNameAvailabilityReplies.field_b.readNullableString(0);

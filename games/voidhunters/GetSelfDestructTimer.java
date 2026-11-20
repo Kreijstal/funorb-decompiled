@@ -31,7 +31,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
         int var7 = 0;
         var7 = VoidHunters.field_G;
         try {
-          if (TextureCombineMappings.field_c != GetOndamageParticleSpeed.field_o) {
+          if (TextureCombineMappings.loginStage != GetOndamageParticleSpeed.loggedIn) {
             return false;
           }
           var2_long = MonotonicMillisClock.currentTimeMillis(false);

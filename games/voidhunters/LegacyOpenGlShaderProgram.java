@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlShaderProgram {
-    static gj field_a;
+    static LoginStage field_a;
     long handle;
     private OpenGlToolkit toolkit;
 
@@ -14,7 +14,7 @@ final class LegacyOpenGlShaderProgram {
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 8345) {
-          field_a = (gj) null;
+          field_a = (LoginStage) null;
         }
     }
 
@@ -28,7 +28,7 @@ final class LegacyOpenGlShaderProgram {
     }
 
     static {
-        field_a = new gj();
+        field_a = new LoginStage();
         SettingsChangeFactory discarded$0 = new SettingsChangeFactory();
     }
 }

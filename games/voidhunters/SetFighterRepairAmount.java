@@ -234,7 +234,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var45);
         } else {
           var47 = (CharSequence) ((Object) ChoosePlayerNameForm.privateChatTargetDisplayName);
-          var18 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{joa.a(var47, false)}, 108);
+          var18 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{SegmentIntersections.canonicalizeBase37Name(var47, false)}, 108);
           var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var16}, param2 ^ -30);
           var9 = DebrisFactory.field_c.getStringWidth(var18);
           var10 = DebrisFactory.field_c.getStringWidth(var8);

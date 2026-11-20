@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMissileLauncherRandomness extends ConsoleCommand {
-    static gj field_o;
+    static LoginStage field_o;
     static int field_p;
     static String field_q;
 
@@ -63,13 +63,13 @@ final class GetMissileLauncherRandomness extends ConsoleCommand {
         if (param0 == -3840) {
           return SetShipTeamAction.field_b == ActiveIconBorderRenderer.pendingAccountRequest ? true : false;
         }
-        field_o = (gj) null;
+        field_o = (LoginStage) null;
         return SetShipTeamAction.field_b == ActiveIconBorderRenderer.pendingAccountRequest ? true : false;
     }
 
     static {
         field_p = 0;
-        field_o = new gj();
+        field_o = new LoginStage();
         field_q = "Year";
     }
 }

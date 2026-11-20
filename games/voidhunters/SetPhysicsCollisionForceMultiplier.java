@@ -138,7 +138,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
           var3 != 0) {
           return false;
         }
-        return fia.a(GetSniperCannonAimspeed.field_p, NanosecondClock.field_a, (byte) 123, SetPhasedEnergyBeamPulseFadetime.field_p, RecallGrapplesOrderDefinition.field_d);
+        return ComponentGeometryEditor.openQuickChatPhraseMenu(GetSniperCannonAimspeed.field_p, NanosecondClock.field_a, (byte) 123, SetPhasedEnergyBeamPulseFadetime.field_p, RecallGrapplesOrderDefinition.field_d);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

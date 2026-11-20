@@ -76,7 +76,7 @@ final class NameSuggestionsPanel extends UiContainer implements UiActionListener
             var3_int = param0.length;
             this.suggestions = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.suggestions[var4_int] = joa.a((CharSequence) ((Object) param0[var4_int]), false).replace(' ', ' ');
+              this.suggestions[var4_int] = SegmentIntersections.canonicalizeBase37Name((CharSequence) ((Object) param0[var4_int]), false).replace(' ', ' ');
             }
             var4 = new UnderlinedLinkRenderer(SetShipToShipRamDamage.field_o, param1, 1);
             this.buttons = new UiFocusableComponent[1 + var3_int];

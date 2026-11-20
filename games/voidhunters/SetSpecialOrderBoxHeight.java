@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSpecialOrderBoxHeight extends ConsoleCommand {
-    static gj field_o;
+    static LoginStage field_o;
     static String field_p;
     static String field_q;
 
@@ -33,7 +33,7 @@ final class SetSpecialOrderBoxHeight extends ConsoleCommand {
         try {
           CarouselSlotStateDump.field_g = arguments[0].intValue(121);
           if (obfuscationGuard >= -119) {
-            field_o = (gj) null;
+            field_o = (LoginStage) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -53,7 +53,7 @@ final class SetSpecialOrderBoxHeight extends ConsoleCommand {
 
     static {
         field_p = "Retry";
-        field_o = new gj();
+        field_o = new LoginStage();
         field_q = "Absorbs all damage";
     }
 }

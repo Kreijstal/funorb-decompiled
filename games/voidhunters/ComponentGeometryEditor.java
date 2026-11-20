@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fia {
+final class ComponentGeometryEditor {
     static String field_a;
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] allocateByteArray(int param0, int param1) {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
@@ -57,7 +57,7 @@ final class fia {
         return new byte[param1];
     }
 
-    final static boolean a(int[] param0, int param1, byte param2, long param3, String param4) {
+    final static boolean openQuickChatPhraseMenu(int[] param0, int param1, byte param2, long param3, String param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         QuickChatMenuWidget var7 = null;
@@ -104,7 +104,7 @@ final class fia {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void handleEditorInput(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;

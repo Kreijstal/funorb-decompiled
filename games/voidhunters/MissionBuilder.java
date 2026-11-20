@@ -2339,7 +2339,7 @@ final class MissionBuilder implements DiffableState {
             discarded$1 = this.hasPolygonEdgeClearance(42, 83, (int[]) null, 99, (byte) -48, -83);
           }
           var7.clearTerrainAroundEntities(0);
-          if (gj.a(param0, 22681)) {
+          if (LoginStage.shouldSpawnNeutralAiFleets(param0, 22681)) {
             this.spawnNeutralAiFleets(param2, 90, var7);
           }
           if (GetDefaultFiringLeeway.a(param3, (byte) -24)) {
@@ -2680,7 +2680,7 @@ final class MissionBuilder implements DiffableState {
                 var29_int = var7[var27 + 1];
                 var30_int = var7[(var27 + 2) % var7.length];
                 var31 = var7[(3 + var27) % var7.length];
-                var32 = SpecialOrderSubmessageFactory.a(8, var29_int, (byte) 113, var28_int, var22, var30_int, var18, var17, var23, var31);
+                var32 = SpecialOrderSubmessageFactory.segmentIntersectionFraction(8, var29_int, (byte) 113, var28_int, var22, var30_int, var18, var17, var23, var31);
                 if (-1 != var32) {
                   if (var24 == 2) {
                     var24++;
@@ -3066,7 +3066,7 @@ final class MissionBuilder implements DiffableState {
               for (var18_int = 0; var18_int < var17; var18_int++) {
                 var19 = TextHotspotRegion.randomBoundedInt(param0, var14, 123) + var9;
                 var20 = var11 + TextHotspotRegion.randomBoundedInt(param0, var15, 118);
-                if (fra.a(var7, var20, 2, var19)) {
+                if (PolygonContainment.containsPoint(var7, var20, 2, var19)) {
                   var21_ref_crb = new Asteroid(new ShipComponent(NodeHashTable.chooseRandomAsteroidType(param0, (byte) 97)));
                   var21_ref_crb.setPosition(var19, var20, (byte) -97);
                   var21_ref_crb.setAngle(TextHotspotRegion.randomBoundedInt(param0, 8192, 116), -64);
@@ -3176,7 +3176,7 @@ final class MissionBuilder implements DiffableState {
                 while (var22 < var17) {
                   var23 = TextHotspotRegion.randomBoundedInt(param0, var14, 117) + var9;
                   var24 = var11 + TextHotspotRegion.randomBoundedInt(param0, var15, 119);
-                  if (fra.a(var7, var24, 2, var23)) {
+                  if (PolygonContainment.containsPoint(var7, var24, 2, var23)) {
                     var25 = var21;
                     if (-1 != var25) {
                       var21 = -1;
@@ -3774,7 +3774,7 @@ final class MissionBuilder implements DiffableState {
               for (var21 = 0; var21 < var18; var21++) {
                 var22 = TextHotspotRegion.randomBoundedInt(param0, var15, 116) + var10;
                 var23 = TextHotspotRegion.randomBoundedInt(param0, var16, 120) + var12;
-                if (fra.a(var8, var23, 2, var22) &&
+                if (PolygonContainment.containsPoint(var8, var23, 2, var22) &&
                   this.hasPolygonEdgeClearance(var19, var22, var8, var23, (byte) 105, var20)) {
                   var25 = new Nebula(var22, var23);
                   param3.addNebula(param4, var25, (byte) -71);

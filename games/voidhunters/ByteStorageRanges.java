@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ppb {
+final class ByteStorageRanges {
     static QuickChatDynamicCommand field_c;
     static String field_d;
     static ResourceArchive field_a;
@@ -15,7 +15,7 @@ final class ppb {
         field_d = null;
     }
 
-    final static byte[] a(Object param0, int param1, boolean param2, int param3) {
+    final static byte[] extractRange(Object param0, int param1, boolean param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         ByteStorage var5 = null;
@@ -32,7 +32,7 @@ final class ppb {
           }
           if (param0 instanceof byte[]) {
             var4 = (byte[]) (param0);
-            stackIn_6_0 = SetGrapplingHookMaxExtension8Force.a(param3, var4, param1, 31783);
+            stackIn_6_0 = SetGrapplingHookMaxExtension8Force.copyByteRange(param3, var4, param1, 31783);
             return stackIn_6_0;
           }
           if (!param2) {
@@ -59,7 +59,7 @@ final class ppb {
         }
     }
 
-    final static SocketConnector a(String param0, int param1, byte param2) {
+    final static SocketConnector createProxyConnector(String param0, int param1, byte param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -71,7 +71,7 @@ final class ppb {
         try {
           if (param2 >= -55) {
             var4 = (String) null;
-            ppb.a((String) null, 112, (byte) 96);
+            ByteStorageRanges.createProxyConnector((String) null, 112, (byte) 96);
           }
           var3 = new ProxySocketConnector();
           ((SocketConnector) ((Object) var3)).port = param1;

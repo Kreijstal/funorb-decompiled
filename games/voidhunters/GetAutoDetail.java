@@ -45,7 +45,7 @@ final class GetAutoDetail extends ConsoleCommand {
         RuntimeException var15 = null;
         Sprite[] var16 = null;
         try {
-          VertexStreamLayout.a(param0, GetMachineGunEnergyUsed.field_p, GetPhasedEnergyBeamPulsetime.menuHeadingColor, param13, param12, param14, param10, param3, param0, Lo.field_o, param14, param8, new NineSliceSprite(param11), FloatPacketBuffer.menuSelectedItemColor, SetUsePolygonFill.menuItemColor, SetMissilesExplosionPower.field_p, param2 + 29, param1, new NineSliceSprite(param4), param10);
+          VertexStreamLayout.a(param0, GetMachineGunEnergyUsed.field_p, GetPhasedEnergyBeamPulsetime.menuHeadingColor, param13, param12, param14, param10, param3, param0, HelloCommand.field_o, param14, param8, new NineSliceSprite(param11), FloatPacketBuffer.menuSelectedItemColor, SetUsePolygonFill.menuItemColor, SetMissilesExplosionPower.field_p, param2 + 29, param1, new NineSliceSprite(param4), param10);
           GetMessageMaxage.openMessageBox(param7, param9, param6, param5, (byte) 25);
           if (param2 != -115) {
             var16 = (Sprite[]) null;

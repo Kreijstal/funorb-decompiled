@@ -101,7 +101,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             SetPhasedEnergyBeamPulsetime.clearSharedReferences((byte) 26);
           }
           SoftwareRasterizer2D.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
-          DeveloperConsole.field_q.font.drawParagraph(param0, 3 + var7, var8 + 1 + atb.field_d - DeveloperConsole.field_q.font.maxAscent, 500, 1000, 0, -1, 0, 0, DialogMessagePanel.field_w);
+          DeveloperConsole.field_q.font.drawParagraph(param0, 3 + var7, var8 + 1 + GpuTextureCache.field_d - DeveloperConsole.field_q.font.maxAscent, 500, 1000, 0, -1, 0, 0, DialogMessagePanel.field_w);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

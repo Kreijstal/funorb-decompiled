@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBombletSprayReload extends ConsoleCommand {
-    static gj field_p;
+    static LoginStage field_p;
     static CommonArchiveId field_o;
 
     public static void clearSharedReferences(int param0) {
@@ -48,7 +48,7 @@ final class SetBombletSprayReload extends ConsoleCommand {
     }
 
     static {
-        field_p = new gj();
+        field_p = new LoginStage();
         field_o = new CommonArchiveId(0);
     }
 }

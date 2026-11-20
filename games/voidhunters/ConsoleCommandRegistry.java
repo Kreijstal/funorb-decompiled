@@ -10,7 +10,7 @@ final class ConsoleCommandRegistry {
 
     final static IntrusiveDeque a(int param0) {
         IntrusiveDeque var1 = new IntrusiveDeque();
-        var1.addLast(-10258, new Lo("lo", new Class[]{}, "Say hello"));
+        var1.addLast(-10258, new HelloCommand("lo", new Class[]{}, "Say hello"));
         var1.addLast(-10258, new SetLag("set_lag", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}, (String) null));
         var1.addLast(param0 - 10274, new SetLagVariant("set_lag", new Class[]{Integer.TYPE, Integer.TYPE}, (String) null));
         var1.addLast(-10258, new GetLagIn("get_lag_in", new Class[]{}, (String) null));

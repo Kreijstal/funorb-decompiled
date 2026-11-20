@@ -794,7 +794,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("gameopt_cannotbecombined1", 23100);
                 if (resourceBytes != null) {
-                  fra.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  PolygonContainment.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("gameopt_cannotbecombined2", 23100);
                 if (null != resourceBytes) {
@@ -2469,27 +2469,27 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("quickchat_shortcut_help,0", 23100);
                 if (null != resourceBytes) {
-                  Lo.field_q[0] = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  HelloCommand.field_q[0] = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("quickchat_shortcut_help,1", 23100);
                 if (null != resourceBytes) {
-                  Lo.field_q[1] = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  HelloCommand.field_q[1] = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("quickchat_shortcut_help,2", 23100);
                 if (null != resourceBytes) {
-                  Lo.field_q[2] = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  HelloCommand.field_q[2] = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("quickchat_shortcut_help,3", 23100);
                 if (resourceBytes != null) {
-                  Lo.field_q[3] = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  HelloCommand.field_q[3] = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("quickchat_shortcut_help,4", 23100);
                 if (null != resourceBytes) {
-                  Lo.field_q[4] = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  HelloCommand.field_q[4] = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("quickchat_shortcut_help,5", 23100);
                 if (null != resourceBytes) {
-                  Lo.field_q[5] = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  HelloCommand.field_q[5] = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("quickchat_shortcut_keys,0", 23100);
                 if (resourceBytes != null) {

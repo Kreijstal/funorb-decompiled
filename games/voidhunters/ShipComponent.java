@@ -1746,7 +1746,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var14 = param2.finaloutline[1 + var12];
               var15 = param2.finaloutline[(var12 + 2) % param2.finaloutline.length];
               var16 = param2.finaloutline[(3 + var12) % param2.finaloutline.length];
-              var17 = SpecialOrderSubmessageFactory.a(8, var9, (byte) 88, var8, var15, var10, var14, var13, var16, var11);
+              var17 = SpecialOrderSubmessageFactory.segmentIntersectionFraction(8, var9, (byte) 88, var8, var15, var10, var14, var13, var16, var11);
               if (var17 != -1 &&
                 var17 > 10 &&
                 var17 < 245) {
@@ -3067,7 +3067,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
           }
         }
-        if (fra.a(this.finaloutline, param0, 2, param1)) {
+        if (PolygonContainment.containsPoint(this.finaloutline, param0, 2, param1)) {
           return this;
         }
         if (param2) {
@@ -3256,7 +3256,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 stackIn_6_0 = var8;
                 return stackIn_6_0;
               }
-              if (!fra.a(var7.finaloutline, param2, 2, param1)) {
+              if (!PolygonContainment.containsPoint(var7.finaloutline, param2, 2, param1)) {
                 var6_int++;
                 continue;
               }
@@ -3505,7 +3505,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var12Lifetime1;
         int var16Lifetime1;
         var17 = VoidHunters.field_G;
-        if (fra.field_a == 1 &&
+        if (PolygonContainment.field_a == 1 &&
           null != this.weaponbehaviour &&
           this.weaponbehaviour.isFiring(true) &&
           !param1) {

@@ -43,7 +43,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             this.ropeLength = 55;
           }
           if (var23 != null) {
-            var9 = Lo.a(param2, 84);
+            var9 = HelloCommand.getMaxPolygonX(param2, 84);
             var10 = param5 + (var9 * GetNumStars.cosAngle(param0, (byte) -96) >> 16);
             var11 = param3 + (TextureLineShape.sinAngle(param0, 85) * var9 >> 16);
             var12 = -var10 + var23.getX(false);
@@ -120,7 +120,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         if (param0 != 126) {
           return -65;
         }
-        if (1 == fra.field_a) {
+        if (1 == PolygonContainment.field_a) {
           return 2048;
         }
         return GetRepairModePower.field_q;
@@ -159,7 +159,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             this.reload == 0) {
             var12_int = param5 + (param9 * GetNumStars.cosAngle(param4, (byte) 30) - TextureLineShape.sinAngle(param4, 103) * param6 >> 16);
             var13 = param1 + (param9 * TextureLineShape.sinAngle(param4, 43) + GetNumStars.cosAngle(param4, (byte) 87) * param6 >> 16);
-            var14 = Lo.a(param2, -71);
+            var14 = HelloCommand.getMaxPolygonX(param2, -71);
             var15 = param5 + (GetNumStars.cosAngle(param4, (byte) -63) * var14 >> 16);
             var16 = (var14 * TextureLineShape.sinAngle(param4, 76) >> 16) + param1;
             var17 = -var12_int + param0;
@@ -175,7 +175,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
               var21 = ((Ship) (param10)).getOwner((byte) -117);
             }
             var22 = new GrapplingHook(new ShipComponent(28), param10.id, var21);
-            var14Lifetime1 = Lo.a(var22.chassis.getDefinition((byte) -112).outline, 80);
+            var14Lifetime1 = HelloCommand.getMaxPolygonX(var22.chassis.getDefinition((byte) -112).outline, 80);
             var22.setAngle(param4, -17);
             var23 = GetNumStars.cosAngle(param4, (byte) -127) * var14Lifetime1 >> 16;
             var24 = TextureLineShape.sinAngle(param4, 77) * var14Lifetime1 >> 16;
@@ -184,8 +184,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var22.dy = param10.dy;
             var22.dx = param10.dx;
             BlendTextureOperation.a(20382, var15, 12, var16, 50);
-            var22.addDirectionalForce(var16, param4, var15, joa.field_a, 1948934248);
-            param10.addDirectionalForce(var16, GameKeyHandler.a(22433, param4 + 4096), var15, joa.field_a, 1948934248);
+            var22.addDirectionalForce(var16, param4, var15, SegmentIntersections.field_a, 1948934248);
+            param10.addDirectionalForce(var16, GameKeyHandler.a(22433, param4 + 4096), var15, SegmentIntersections.field_a, 1948934248);
             this.hookId = var22.id;
             this.reload = CarouselPlayerEvent.specialOrderDefinitions[0].getCooldown((byte) 64);
             this.targetRopeLength = this.ropeLength;
@@ -286,7 +286,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             }
           } else {
             param0.onStateChanged((byte) -74);
-            var10 = Lo.a(param7, -82);
+            var10 = HelloCommand.getMaxPolygonX(param7, -82);
             var11 = param5 + (var10 * GetNumStars.cosAngle(param6, (byte) -125) >> 16);
             var12 = param2 + (var10 * TextureLineShape.sinAngle(param6, 39) >> 16);
             var13 = var33.getX(false) - var11;

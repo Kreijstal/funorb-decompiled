@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gj {
-    final static boolean a(int param0, int param1) {
+final class LoginStage {
+    final static boolean shouldSpawnNeutralAiFleets(int param0, int param1) {
         if (param1 != 22681) {
           return false;
         }
@@ -13,17 +13,17 @@ final class gj {
         throw new IllegalStateException();
     }
 
-    final boolean a(byte param0) {
+    final boolean isReceivingReplyOrLoggedIn(byte param0) {
         if (param0 != 98) {
           return true;
         }
         if (LegacyOpenGlShaderProgram.field_a == this) {
           return true;
         }
-        if (UiFocusableComponent.field_A == this) {
+        if (UiFocusableComponent.readingAccountDetails == this) {
           return true;
         }
-        if (this != GetOndamageParticleSpeed.field_o) {
+        if (this != GetOndamageParticleSpeed.loggedIn) {
           return false;
         }
         return true;

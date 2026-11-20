@@ -59,7 +59,7 @@ final class TextHotspotRegion extends IntrusiveNode {
     final static void loadLogoFinalFrame(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
-        Sprite var2 = new Sprite(param1.fetchNamedFile("", true, "final_frame.jpg"), (java.awt.Component) ((Object) GammaCorrection.field_a));
+        Sprite var2 = new Sprite(param1.fetchNamedFile("", true, "final_frame.jpg"), (java.awt.Component) ((Object) GammaCorrection.canvas));
         if (param0 <= 23) {
           return;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeTexture {
-    static gj field_k;
+    static LoginStage field_k;
     static LoginCredentials loginCredentials;
 
     public final void bind(int param0) {
@@ -75,7 +75,7 @@ final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeText
     }
 
     static {
-        field_k = new gj();
+        field_k = new LoginStage();
         loginCredentials = null;
     }
 }

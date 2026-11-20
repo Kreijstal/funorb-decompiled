@@ -42,7 +42,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void refreshLoopingSound(int param0, int param1, byte param2) {
         PcmSample var10 = null;
         SoundPlayback var11 = null;
         int var4 = 0;

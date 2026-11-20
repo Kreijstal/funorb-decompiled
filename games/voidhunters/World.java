@@ -738,7 +738,7 @@ final class World implements DiffableState, CompactGameState {
           while (var19 < param5) {
             var20 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, var14Lifetime1, 126) + var10_int;
             var21 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, var15Lifetime1, 125) + var12;
-            if (fra.a(param7, var21, 2, var20)) {
+            if (PolygonContainment.containsPoint(param7, var21, 2, var20)) {
               var22 = 0;
               var23 = 0;
               if (param4 > 0) {
@@ -1836,7 +1836,7 @@ final class World implements DiffableState, CompactGameState {
         try {
           var5_int = GetTorpedoAcceleration.field_p;
           var6 = TextureCoordinateMode.field_b;
-          if (param1 == fra.field_a) {
+          if (param1 == PolygonContainment.field_a) {
             var5_int = var5_int * GrappleLauncherBehaviour.field_d;
             var6 = var6 * GrappleLauncherBehaviour.field_d;
           }
@@ -1928,7 +1928,7 @@ final class World implements DiffableState, CompactGameState {
                   var11.updateTick(this, false, (byte) 67, true);
                 }
               }
-              if (fra.field_a == 1 &&
+              if (PolygonContainment.field_a == 1 &&
                 1 == GetBombletSprayRandomness.field_p &&
                 var11.getEnergyProgress(94) < 255) {
                 if (!var11.salvoJustFired) {

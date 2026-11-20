@@ -82,7 +82,7 @@ final class OpenGlTransparentWaterEffect extends GpuMaterialEffect {
           if (param1 != null &&
             this.field_e.hasNoiseTextures((byte) -65) &&
             this.field_f.field_Ac) {
-            this.field_g = mha.a(0, param1.fetchNamedFile("transparent_water", true, "gl"), 34336, this.field_f);
+            this.field_g = OpenGlArbProgramCompiler.compileProgram(0, param1.fetchNamedFile("transparent_water", true, "gl"), 34336, this.field_f);
             return;
           }
           this.field_g = null;

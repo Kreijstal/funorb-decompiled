@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class npb {
-    private boolean field_b;
-    private int field_f;
-    private int field_d;
-    private int field_e;
-    private int field_a;
-    private boolean field_g;
-    private boolean field_c;
+final class ShipAudioFeedback {
+    private boolean selfDestructPrepared;
+    private int lowEnergyWarningCooldown;
+    private int previousEnergyProgress;
+    private int trackedShipCount;
+    private int lastSelfDestructSecond;
+    private boolean reloading;
+    private boolean selfDestructActive;
 
-    final void a(int param0, int param1, GameSnapshot param2, Ship param3) {
+    final void updateEventSounds(int param0, int param1, GameSnapshot param2, Ship param3) {
         boolean stackIn_15_1 = false;
         int stackIn_32_0 = 0;
         int stackIn_44_0 = 0;
@@ -43,39 +43,39 @@ final class npb {
         try {
           if (param1 != 84) {
             var16 = (Ship) null;
-            this.a(-99, (GameSnapshot) null, (byte) -13, (Ship) null);
+            this.refreshWarningSounds(-99, (GameSnapshot) null, (byte) -13, (Ship) null);
           }
           if (param3 == null) {
-            this.field_g = false;
-            this.field_d = 0;
-            this.field_a = 0;
-            this.field_e = 0;
+            this.reloading = false;
+            this.previousEnergyProgress = 0;
+            this.lastSelfDestructSecond = 0;
+            this.trackedShipCount = 0;
             return;
           }
           var5_int = param3.isReloading((byte) -90) ? 1 : 0;
-          if (this.field_g &&
+          if (this.reloading &&
             var5_int == 0) {
             GetNebulaFadesOutWhenClose.a(-112, PendingScoreboardRequest.soundEffects[18]);
           } else {
             if (var5_int != 0 &&
-              !this.field_g) {
+              !this.reloading) {
               GetNebulaFadesOutWhenClose.a(-86, PendingScoreboardRequest.soundEffects[10]);
             }
           }
           stackIn_15_1 = (var5_int != 0);
-          this.field_g = stackIn_15_1;
+          this.reloading = stackIn_15_1;
           var6 = param3.getEnergyProgress(-55);
           var7 = 64;
           if (var6 < var7 &&
-            var7 < this.field_d &&
-            this.field_f <= 0) {
+            var7 < this.previousEnergyProgress &&
+            this.lowEnergyWarningCooldown <= 0) {
             GetNebulaFadesOutWhenClose.a(-87, PendingScoreboardRequest.soundEffects[16]);
-            this.field_f = Particle.field_l;
+            this.lowEnergyWarningCooldown = Particle.field_l;
           }
-          if (this.field_f > 0) {
-            this.field_f = this.field_f - 1;
+          if (this.lowEnergyWarningCooldown > 0) {
+            this.lowEnergyWarningCooldown = this.lowEnergyWarningCooldown - 1;
           }
-          this.field_d = var6;
+          this.previousEnergyProgress = var6;
           var8 = 0;
           var9 = param2.world.getShips(1000);
           var10_ref_sg__ = var9;
@@ -112,25 +112,25 @@ final class npb {
               }
             }
           }
-          if (this.field_e < var8) {
+          if (this.trackedShipCount < var8) {
             GetNebulaFadesOutWhenClose.a(param1 - 186, PendingScoreboardRequest.soundEffects[9]);
           }
-          this.field_e = var8;
+          this.trackedShipCount = var8;
           var10 = param3.getSelfDestructPrepared((byte) -86) ? 1 : 0;
           if (var10 != 0 &&
-            !this.field_b) {
+            !this.selfDestructPrepared) {
             GetNebulaFadesOutWhenClose.a(-90, PendingScoreboardRequest.soundEffects[83]);
           }
           stackIn_58_1 = (var10 != 0);
-          this.field_b = stackIn_58_1;
+          this.selfDestructPrepared = stackIn_58_1;
           stackIn_61_0 = (!param3.isSpecialOrderActive(9, 47)) ? 0 : 1;
           var11Lifetime1 = stackIn_61_0;
           if (var11Lifetime1 != 0 &&
-            !this.field_c) {
+            !this.selfDestructActive) {
             GetNebulaFadesOutWhenClose.a(-103, PendingScoreboardRequest.soundEffects[84]);
           }
           stackIn_68_1 = (var11Lifetime1 != 0);
-          this.field_c = stackIn_68_1;
+          this.selfDestructActive = stackIn_68_1;
           if (var11Lifetime1 == 0) {
             return;
           }
@@ -138,10 +138,10 @@ final class npb {
           if (var12 < 0) {
             var12 = 0;
           }
-          if (this.field_a > var12) {
+          if (this.lastSelfDestructSecond > var12) {
             GetNebulaFadesOutWhenClose.a(-98, PendingScoreboardRequest.soundEffects[85]);
           }
-          this.field_a = var12;
+          this.lastSelfDestructSecond = var12;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ final class npb {
         }
     }
 
-    final void a(int param0, GameSnapshot param1, byte param2, Ship param3) {
+    final void refreshWarningSounds(int param0, GameSnapshot param1, byte param2, Ship param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Ship var6 = null;
@@ -177,17 +177,17 @@ final class npb {
           if (param3 != null) {
             var5_int = param3.getHealthProgress(0);
             if (var5_int < 64) {
-              GetBombletSprayProjectileDamage.a(15, 0, (byte) -53);
+              GetBombletSprayProjectileDamage.refreshLoopingSound(15, 0, (byte) -53);
             }
             if (param1.world.hasHomingProjectileTargeting(param3.getId(false), -71)) {
-              GetBombletSprayProjectileDamage.a(86, 0, (byte) -109);
+              GetBombletSprayProjectileDamage.refreshLoopingSound(86, 0, (byte) -109);
             }
           }
           if (param2 == 70) {
             return;
           }
           var6 = (Ship) null;
-          this.a(29, (GameSnapshot) null, (byte) -95, (Ship) null);
+          this.refreshWarningSounds(29, (GameSnapshot) null, (byte) -95, (Ship) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

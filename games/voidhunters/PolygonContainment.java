@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fra {
+final class PolygonContainment {
     static String field_c;
     static int field_b;
     static int field_a;
@@ -9,11 +9,11 @@ final class fra {
     public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != 2147483647) {
-          fra.clearSharedReferences(52);
+          PolygonContainment.clearSharedReferences(52);
         }
     }
 
-    final static boolean a(int[] param0, int param1, int param2, int param3) {
+    final static boolean containsPoint(int[] param0, int param1, int param2, int param3) {
         boolean stackIn_40_0 = false;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -62,7 +62,7 @@ final class fra {
             }
           }
           if (param2 != 2) {
-            fra.clearSharedReferences(25);
+            PolygonContainment.clearSharedReferences(25);
           }
           if (!SetDebrisProjectileCollision.a(5220, var5, param1, var7, param3, var4_int, var6)) {
             return false;
@@ -92,7 +92,7 @@ final class fra {
             var13 = param0[1 + var17];
             var14 = param0[(2 + var17) % param0.length];
             var15 = param0[(var17 + 3) % param0.length];
-            if (-1 != SpecialOrderSubmessageFactory.a(8, param1, (byte) 93, param3, var14, var8Lifetime1, var13, var12, var15, var9Lifetime1)) {
+            if (-1 != SpecialOrderSubmessageFactory.segmentIntersectionFraction(8, param1, (byte) 93, param3, var14, var8Lifetime1, var13, var12, var15, var9Lifetime1)) {
               var10Lifetime2++;
             }
             var17 += 2;
@@ -113,9 +113,9 @@ final class fra {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getOverlayClipTop(byte param0) {
         int var1 = -17 / ((-44 - param0) / 49);
-        return SetThrusterForce.a(-19) - SetArmageddonWarning.a(27546) / 2;
+        return SetThrusterForce.getOverlayClipCenterY(-19) - SetArmageddonWarning.getOverlayClipHeight(27546) / 2;
     }
 
     static {

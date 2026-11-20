@@ -15,11 +15,11 @@ final class FullscreenExit {
         EmailAvailabilityChecks.fullscreenCanvas.exitFullscreen(SetTorpedoProjectiles.field_o, -32335);
         EmailAvailabilityChecks.fullscreenCanvas = null;
         if (MissionConditionFactory.field_b == null) {
-          GammaCorrection.field_a.requestFocus();
+          GammaCorrection.canvas.requestFocus();
           return;
         }
         MissionConditionFactory.field_b.restorePreviousSize(param0 - 29579);
-        GammaCorrection.field_a.requestFocus();
+        GammaCorrection.canvas.requestFocus();
     }
 
     public static void clearSharedReferences(int param0) {

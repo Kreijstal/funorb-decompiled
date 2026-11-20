@@ -111,7 +111,7 @@ abstract class GraphicsToolkit {
           if (param7 != 3) {
             throw new IllegalArgumentException("UM");
           }
-          stackIn_19_0 = jsa.a(param1, param2, 27908, param5, param4);
+          stackIn_19_0 = Direct3DToolkitLoader.createToolkit(param1, param2, 27908, param5, param4);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

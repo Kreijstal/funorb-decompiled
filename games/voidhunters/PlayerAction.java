@@ -443,7 +443,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           }
           stackIn_26_0.specialorder = stackIn_27_1;
           var5.triggers = this.triggers;
-          if (fra.field_a != 0 &&
+          if (PolygonContainment.field_a != 0 &&
             this.mousex == -2 &&
             this.mousey == -2) {
             return;

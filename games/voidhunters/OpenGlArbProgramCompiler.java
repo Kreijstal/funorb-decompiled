@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mha {
+final class OpenGlArbProgramCompiler {
     static int field_a;
 
-    final static OpenGlArbProgram a(int param0, byte[] param1, int param2, OpenGlGpuToolkit param3) {
+    final static OpenGlArbProgram compileProgram(int param0, byte[] param1, int param2, OpenGlGpuToolkit param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_5_0 = null;

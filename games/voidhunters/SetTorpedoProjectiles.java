@@ -215,7 +215,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             stackIn_59_0 = (var33.equals(var12.field_xb)) ? 0 : 1;
             var22 = stackIn_59_0;
             if (var12.field_vb >= 4) {
-              var20 = "<img=" + (mha.field_a + var12.field_vb - 4) + ">" + var33;
+              var20 = "<img=" + (OpenGlArbProgramCompiler.field_a + var12.field_vb - 4) + ">" + var33;
             } else {
               if (var12.field_vb > 0) {
                 var20 = "<img=" + (-1 + var12.field_vb) + ">" + var33;

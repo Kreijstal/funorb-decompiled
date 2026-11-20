@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SocialTabsPanel {
-    static gj field_d;
+    static LoginStage field_d;
     TabbedWidget tabs;
     static int[] field_b;
     static int field_c;
@@ -47,6 +47,6 @@ final class SocialTabsPanel {
     static {
         field_b = new int[1024];
         field_c = 0;
-        field_d = new gj();
+        field_d = new LoginStage();
     }
 }

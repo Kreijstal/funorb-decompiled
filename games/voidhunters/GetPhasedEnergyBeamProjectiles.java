@@ -186,7 +186,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetGrapplingHookRopeChangeRate.field_o = param1[91];
           SetMaxShipSize.field_o = param1[34];
           GetPedrosRepairModeSwitchtime.field_o = param1[12];
-          fra.field_a = param1[26];
+          PolygonContainment.field_a = param1[26];
           OpenGlUnderwaterMaterialEffect.field_n = param1[118];
           GetMissionTerrainNebulaProbability.field_r = param1[198];
           SetVariableActionFactory.field_a = param1[62];
@@ -289,7 +289,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetRepairModePower.field_r = param1[182];
           SetPointDefenceLaserPulsetime.field_o = param1[14];
           Particle.field_z = param1[233];
-          joa.field_a = param1[199];
+          SegmentIntersections.field_a = param1[199];
           GetMissileLauncherEnergyUsed.field_q = param1[175];
           Cp1252CharacterEncoder.armageddonTimerStart = param1[60];
           SetPhasedEnergyBeamPulseFadetime.field_o = param1[77];

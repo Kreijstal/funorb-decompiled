@@ -15,7 +15,7 @@ final class GameSession {
     private boolean[] previousKeyStates;
     private int field_u;
     private boolean field_x;
-    private npb field_K;
+    private ShipAudioFeedback field_K;
     private int field_U;
     private boolean blueprintOverwritePending;
     private TimingGraph updateTimingGraph;
@@ -74,7 +74,7 @@ final class GameSession {
             stackIn_2_0 = (Ship) null;
             return stackIn_2_0;
           }
-          if (1 == fra.field_a) {
+          if (1 == PolygonContainment.field_a) {
             var5 = new Ship();
             param1.copyTo((byte) 61, var5);
             var5.aimAt(param2 ^ 11893, param0, param3);
@@ -1012,7 +1012,7 @@ final class GameSession {
           if (var13 == this.localPlayerIndex &&
             !this.state.carouselInfo.isReplay(1)) {
             if (var9 != null &&
-              fra.field_a == 1 &&
+              PolygonContainment.field_a == 1 &&
               (128 & var18_ref_tfa.triggers) == 0 &&
               ((Ship) (var9)).getTargetBlueprint((byte) 28) == null &&
               (16 & var18_ref_tfa.triggers) == 0 &&
@@ -1129,7 +1129,7 @@ final class GameSession {
         }
         this.drawSessionNotifications(var24, -1);
         this.drawBlueprintSaveStatus(true, (Ship) (var9));
-        this.field_K.a(this.localPlayerIndex, 84, var24, (Ship) (var9));
+        this.field_K.updateEventSounds(this.localPlayerIndex, 84, var24, (Ship) (var9));
         this.drawLobbyGameEntries(91);
         var19 = SetUseTriFill.field_o.nanoTime((byte) -110);
         if (GetPointDefenceLaserProjectiles.a(8192, 11284)) {
@@ -3640,7 +3640,7 @@ final class GameSession {
           this.state.updateTimeline(125);
           var15 = SetUseTriFill.field_o.nanoTime((byte) -110);
           this.updateTimingGraph.addSample(var15 - var13_long, (byte) -115);
-          this.field_K.a(this.localPlayerIndex, var9, (byte) 70, var9.world.findShipByOwner(this.localPlayerIndex, 88));
+          this.field_K.refreshWarningSounds(this.localPlayerIndex, var9, (byte) 70, var9.world.findShipByOwner(this.localPlayerIndex, 88));
         }
         var20 = 0;
         var13_intLifetime1 = var20;
@@ -5215,7 +5215,7 @@ final class GameSession {
             null != this.tutorialController) {
             this.tutorialController.completeHint((byte) 79, 8);
           }
-          if (fra.field_a == 1) {
+          if (PolygonContainment.field_a == 1) {
             var11 = 0;
             if (0 != (16 & param2)) {
               var20 = this.state.getVisibleSnapshot(1).world.findShipByOwner(this.localPlayerIndex, 56);
@@ -5263,7 +5263,7 @@ final class GameSession {
             var21 = var19;
             var19.triggers = param2;
             var13 = 1;
-            if (fra.field_a == 1 &&
+            if (PolygonContainment.field_a == 1 &&
               (16 & param3) != 0 &&
               (16 & param2) != 0) {
               var13 = 0;
@@ -5316,7 +5316,7 @@ final class GameSession {
             if (var10 == 0 && ((param2 & 128) == 0 ||
               GetMomentOfInertiaPredivideDownshift.field_q != 0) && var16 == 0) {
               if ((SetMissilesTopSpeed.field_o == 0) &&
-                (fra.field_a == 0) &&
+                (PolygonContainment.field_a == 0) &&
                 (0 == FlipTextureOperation.field_p)) {
                 this.submitPlayerAction(0, var10 != 0, var21);
               }
@@ -8809,7 +8809,7 @@ final class GameSession {
           this.tutorialController = new TutorialController();
           this.voteHighlightAlphas = new int[31];
           this.hoveredVoteOptionId = -1;
-          this.field_K = new npb();
+          this.field_K = new ShipAudioFeedback();
           this.field_W = new Ship();
           var8 = null;
           if (!this.networked &&

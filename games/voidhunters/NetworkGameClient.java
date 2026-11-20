@@ -235,7 +235,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (1 == UiDraggableContainer.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
-            ppb.field_a = MissionBuilder.createArchive(1, GrappleLauncherBehaviour.field_f);
+            ByteStorageRanges.field_a = MissionBuilder.createArchive(1, GrappleLauncherBehaviour.field_f);
           }
           CommonUiArchiveResources.commonUiArchive = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
           GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
@@ -245,19 +245,19 @@ abstract class NetworkGameClient extends GameApplet {
           GetShieldsDirectionalArc.field_r = GetSalvoUsesAllEnergy.field_o;
         }
         if (UiDraggableContainer.field_z == 2) {
-          if (null != ppb.field_a &&
-            ppb.field_a.loadIndex((byte) -81)) {
-            if (ppb.field_a.containsNamedGroup(true, "")) {
-              if (ppb.field_a.isNamedGroupReady(32171, "")) {
-                OpenGlFaceAttachmentState.loadInterfaceTexts(true, ppb.field_a);
-                ppb.field_a = null;
+          if (null != ByteStorageRanges.field_a &&
+            ByteStorageRanges.field_a.loadIndex((byte) -81)) {
+            if (ByteStorageRanges.field_a.containsNamedGroup(true, "")) {
+              if (ByteStorageRanges.field_a.isNamedGroupReady(32171, "")) {
+                OpenGlFaceAttachmentState.loadInterfaceTexts(true, ByteStorageRanges.field_a);
+                ByteStorageRanges.field_a = null;
                 MidiNote.resetFrameTiming(2096);
               }
             } else {
-              ppb.field_a = null;
+              ByteStorageRanges.field_a = null;
             }
           }
-          if (null == ppb.field_a) {
+          if (null == ByteStorageRanges.field_a) {
             UiDraggableContainer.field_z = 3;
           }
         }
@@ -326,9 +326,9 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!param0 &&
           GetDebrisSurvives.field_q) {
-          ShieldInfoPool.detachCanvasInput(GammaCorrection.field_a, -125);
+          ShieldInfoPool.detachCanvasInput(GammaCorrection.canvas, -125);
           this.rebuildCanvas(-81);
-          SetGrapplingHookCooldown.a((byte) -62, GammaCorrection.field_a);
+          SetGrapplingHookCooldown.a((byte) -62, GammaCorrection.canvas);
         }
         if (SetBombletSprayProjectileLife.allowedCommonPackets[8]) {
           GetCountermeasureLauncherFireForce.sendReflectionCheckResponses(param1 ^ 1);
@@ -522,7 +522,7 @@ abstract class NetworkGameClient extends GameApplet {
         UiScrollPane.initializeArchiveSystem(param3, this.host, this.primaryGamePort, this.secondaryGamePort, (byte) -2, SetGrapplingHookAimarc.field_p, this.gameCrc, SetTorpedoProjectiles.field_o, this.serverNumber);
         ProxyAuthenticationException.initializePunctuationKeyCodes(47);
         GetWaitForPlayers.field_o = ByteArrayNode.createMouseWheelInput((byte) -127);
-        SetGrapplingHookCooldown.a((byte) 122, GammaCorrection.field_a);
+        SetGrapplingHookCooldown.a((byte) 122, GammaCorrection.canvas);
         GetShieldsDirectionalArc.field_p = param7;
         SetFighterRepairAmount.field_p = param5;
         GetFullMissionSet.field_o = param4;

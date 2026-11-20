@@ -140,7 +140,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_bots(" + SetMissionResnetResourceTickTime.field_p + ")");
         System.out.println("set_detachment_mode(" + GetInnateThrusters.field_p + ")");
         System.out.println("set_autoaim(" + SetMissilesTopSpeed.field_o + ")");
-        System.out.println("set_salvoaim(" + fra.field_a + ")");
+        System.out.println("set_salvoaim(" + PolygonContainment.field_a + ")");
         System.out.println("set_fixedaim(" + FlipTextureOperation.field_p + ")");
         System.out.println("set_angleset(" + SetShipTeamAction.field_e + ")");
         System.out.println("set_salvo_uses_all_energy(" + GetBombletSprayRandomness.field_p + ")");
@@ -313,7 +313,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_respawn_time(" + Particle.field_C + ")");
         System.out.println("set_grappling_hook_max_length(" + bia.field_c + ")");
         System.out.println("set_grappling_hook_min_length(" + GetMissionTerrainNebulaProbability.field_r + ")");
-        System.out.println("set_grappling_hook_fire_force(" + joa.field_a + ")");
+        System.out.println("set_grappling_hook_fire_force(" + SegmentIntersections.field_a + ")");
         System.out.println("set_grappling_hook_spring_constant(" + SetPointDefenceLaserEnergyUsed.field_o + ")");
         System.out.println("set_grappling_hook_max_extension8_force(" + AwardVictoryToTeamActionFactory.field_b + ")");
         System.out.println("set_grappling_hook_cooldown(" + Particle.field_t + ")");

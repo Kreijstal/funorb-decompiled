@@ -111,7 +111,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetPointDefenceLaserAimarc.field_p = param8;
           SpriteDimensions.field_o = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "gameprivacy");
           DisplayModeDialog.field_U = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "ratedgame");
-          atb.field_b = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "opentome");
+          GpuTextureCache.field_b = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "opentome");
           GetPointDefenceLaserProjectileInterceptDamage.field_t = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "allowspectators");
           SetHealthBarHeight.field_p = new String[5];
           SetHealthBarHeight.field_p[2] = CarouselSlot.field_b;

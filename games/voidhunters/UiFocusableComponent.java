@@ -7,7 +7,7 @@ class UiFocusableComponent extends UiComponent {
     static Widget field_w;
     boolean enabled;
     private boolean focused;
-    static gj field_A;
+    static LoginStage readingAccountDetails;
     int activatedButton;
     private boolean focusable;
     static String field_v;
@@ -148,7 +148,7 @@ class UiFocusableComponent extends UiComponent {
 
     public static void clearSharedReferences(int param0) {
         field_w = null;
-        field_A = null;
+        readingAccountDetails = null;
         field_v = null;
         int var1 = 31 / ((48 - param0) / 43);
     }
@@ -297,6 +297,6 @@ class UiFocusableComponent extends UiComponent {
 
     static {
         field_v = "s";
-        field_A = new gj();
+        readingAccountDetails = new LoginStage();
     }
 }

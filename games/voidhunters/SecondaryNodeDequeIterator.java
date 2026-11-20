@@ -12,8 +12,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     final static void a(int param0) {
         FullscreenExit.exitFullscreen((byte) -95);
-        if (null != GammaCorrection.field_a) {
-          ShieldInfoPool.detachCanvasInput(GammaCorrection.field_a, param0 ^ 92);
+        if (null != GammaCorrection.canvas) {
+          ShieldInfoPool.detachCanvasInput(GammaCorrection.canvas, param0 ^ 92);
         }
         if (param0 != 1) {
           SecondaryNodeDequeIterator.a(121);

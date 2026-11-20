@@ -52,8 +52,8 @@ final class SetMassDriverFireForce extends ConsoleCommand {
         if (UiDraggableContainer.field_z < 2) {
           return GetSpinningBladeTopSpeed.connectingToUpdateServerText;
         }
-        if (ppb.field_a != null) {
-          if (!ppb.field_a.loadIndex((byte) -37)) {
+        if (ByteStorageRanges.field_a != null) {
+          if (!ByteStorageRanges.field_a.loadIndex((byte) -37)) {
             return PasswordValidator.waitingForTextMessage;
           }
           return WorldSpriteTiler.loadingTextMessage;

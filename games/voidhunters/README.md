@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1548/1572 classes and 7475/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 24 opaque classes and 740 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1558/1572 classes and 7500/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 14 opaque classes and 715 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -128,6 +128,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `PlayerNameEntryDialog` exposes key handling and result polling, while `AccountRequestPhase` identifies the original idle, pending and complete tokens. `DequeReferenceTracker` and `ReferenceTrackingControl` name duplicate-reference traversal and tracking shutdown. Social-name request dispatch, dialog dismissal and common-UI archive/cache references retain their original input quirks, aliases, iterator behavior and guard side effects.
 
 `TextureMappingData`, `ScrollingTexturePixels`, `GammaCorrection` and `OpenGlByteTextureFactory` expose texture preparation and lookup. `FullscreenConfirmationDialog` names its buttons, timer and completion helpers. Pending-request resend/reply, CRC ranges, typed state-array copying, integer logarithms, reconnect login and chat-filter packing have named entrypoints. Original overflow, masks, clipping, cache/sprite aliases, guard branches and serialization modes remain unchanged.
+
+`LoginStage` names existing handshake identities; the neutral-fleet predicate keeps its original always-false result. `ComponentGeometryEditor`, `SegmentIntersections`, `PolygonContainment`, `GpuTextureCache` and `ShipAudioFeedback` expose editor, geometry, texture and sound entrypoints. `Direct3DToolkitLoader`, `OpenGlArbProgramCompiler`, `ByteStorageRanges` and the registered `HelloCommand` identify loading and utility roles. Original pool synchronization, geometry arithmetic, RNG/sound ordering, reflection/GL behavior, progress-bar fallback and guards remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

@@ -50,14 +50,14 @@ final class LobbyThemeBuilder {
         try {
           var21 = GetExplosionProjectileDamage.a(-112, "lobby", "crowns", param3);
           var5 = var21;
-          mha.field_a = var21.length;
+          OpenGlArbProgramCompiler.field_a = var21.length;
           if (param4 != null) {
-            var6 = new SoftwareIndexedSprite2D[mha.field_a + param4.length];
-            for (var7_int = 0; mha.field_a > var7_int; var7_int++) {
+            var6 = new SoftwareIndexedSprite2D[OpenGlArbProgramCompiler.field_a + param4.length];
+            for (var7_int = 0; OpenGlArbProgramCompiler.field_a > var7_int; var7_int++) {
               var6[var7_int] = var21[var7_int];
             }
             for (var7_intLifetime3 = 0; var7_intLifetime3 < param4.length; var7_intLifetime3++) {
-              var6[mha.field_a + var7_intLifetime3] = param4[var7_intLifetime3];
+              var6[OpenGlArbProgramCompiler.field_a + var7_intLifetime3] = param4[var7_intLifetime3];
             }
             var5 = var6;
           }
@@ -67,24 +67,24 @@ final class LobbyThemeBuilder {
           var25 = var20;
           var23 = var25;
           var6_array = var23;
-          for (var7_intLifetime1 = 0; mha.field_a > var7_intLifetime1; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; OpenGlArbProgramCompiler.field_a > var7_intLifetime1; var7_intLifetime1++) {
             var24[var7_intLifetime1] = 10;
           }
           if (param4 != null) {
             if (param1 != null) {
               for (var7_intLifetime2 = 0; param4.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + mha.field_a] = param1[var7_intLifetime2];
+                var6_array[var7_intLifetime2 + OpenGlArbProgramCompiler.field_a] = param1[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; param4.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[mha.field_a + var7_intLifetime2] = param4[var7_intLifetime2].canvasHeight;
+                var6_array[OpenGlArbProgramCompiler.field_a + var7_intLifetime2] = param4[var7_intLifetime2].canvasHeight;
               }
             }
           }
           MissionListFactory.field_a = 2;
           AppletCookieWriter.field_c = 4;
           DialogMessagePanel.field_w = 15;
-          atb.field_d = 11;
+          GpuTextureCache.field_d = 11;
           LobbyPlayerEntry.field_Cb = 2;
           var7 = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "largefont", 0, param3, "lobby");
           GetDebrisCarryOverPercentage.field_o = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "generalfont", 0, param3, "lobby");

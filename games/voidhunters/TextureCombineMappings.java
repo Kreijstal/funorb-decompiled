@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextureCombineMappings {
-    static gj field_c;
+    static LoginStage loginStage;
     static boolean field_a;
     static boolean[][] field_b;
 
@@ -64,10 +64,10 @@ final class TextureCombineMappings {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_c = null;
+        loginStage = null;
         field_b = (boolean[][]) null;
         if (param0 != 40) {
-          field_c = (gj) null;
+          loginStage = (LoginStage) null;
         }
     }
 

@@ -1047,7 +1047,7 @@ final class GameMenuScreen {
           this.menuId = 40;
         }
         if (8 == this.menuId) {
-          fia.a(false);
+          ComponentGeometryEditor.handleEditorInput(false);
         }
         if (this.menuId == 7) {
           stackIn_10_0 = !(GetBombletSprayRandomness.a(-75));

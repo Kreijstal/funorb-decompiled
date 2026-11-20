@@ -53,8 +53,8 @@ class UiTextField extends UiFocusableComponent {
           }
           if (decompiledFrameRemainder0) {
             if (!GetMissileLauncherAimarc.field_o) {
-              if (fra.field_b <= OpenGlVertexAttribute.field_a) {
-                stackIn_17_0 = (OpenGlVertexAttribute.field_a < fra.field_b + GetMessageMaxage.field_r) ? 1 : 0;
+              if (PolygonContainment.field_b <= OpenGlVertexAttribute.field_a) {
+                stackIn_17_0 = (OpenGlVertexAttribute.field_a < PolygonContainment.field_b + GetMessageMaxage.field_r) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -66,10 +66,10 @@ class UiTextField extends UiFocusableComponent {
               OpenGlVertexAttribute.field_a = 0;
             } else {
               if (GetMissileLauncherAimarc.field_o) {
-                OpenGlVertexAttribute.field_a = fra.field_b;
+                OpenGlVertexAttribute.field_a = PolygonContainment.field_b;
               } else {
                 if (var2_int != 0) {
-                  OpenGlVertexAttribute.field_a = fra.field_b;
+                  OpenGlVertexAttribute.field_a = PolygonContainment.field_b;
                 } else {
                   OpenGlVertexAttribute.field_a = 0;
                 }
@@ -87,7 +87,7 @@ class UiTextField extends UiFocusableComponent {
           }
           GetReadyRoomMutatorTime.field_o = param0;
           if (!GetMissileLauncherAimarc.field_o &&
-            OpenGlVertexAttribute.field_a < fra.field_b &&
+            OpenGlVertexAttribute.field_a < PolygonContainment.field_b &&
             VariableConditionFactory.field_c) {
             OpenGlVertexAttribute.field_a = 0;
             GetBombletSprayReload.field_r = GetBombletSprayProjectileOndamageParticles.field_o;

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jsa {
-    final static GraphicsToolkit a(ResourceArchive param0, int param1, int param2, java.awt.Canvas param3, TextureProvider param4) {
+final class Direct3DToolkitLoader {
+    final static GraphicsToolkit createToolkit(ResourceArchive param0, int param1, int param2, java.awt.Canvas param3, TextureProvider param4) {
         try {
           Class var5 = null;
           RuntimeException var5_ref = null;

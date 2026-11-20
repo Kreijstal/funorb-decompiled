@@ -38,7 +38,7 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new SpecialOrderSubmessage());
     }
 
-    final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int segmentIntersectionFraction(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         if (Math.max(param3, param5) < Math.min(param7, param4)) {
           return -1;
         }
@@ -70,10 +70,10 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
           param8 = param8 >> var10;
         }
         if (param2 >= 45) {
-          return joa.a(param8, param5, param1, param4, param0, param9, param3, 0);
+          return SegmentIntersections.intersectionFraction(param8, param5, param1, param4, param0, param9, param3, 0);
         }
         field_a = (String) null;
-        return joa.a(param8, param5, param1, param4, param0, param9, param3, 0);
+        return SegmentIntersections.intersectionFraction(param8, param5, param1, param4, param0, param9, param3, 0);
     }
 
     public static void clearSharedReferences(boolean param0) {

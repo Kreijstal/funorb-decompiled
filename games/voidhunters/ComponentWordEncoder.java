@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ComponentWordEncoder {
-    static gj field_a;
+    static LoginStage awaitingLoginReply;
     static String field_b;
 
     final static int getSpriteHeightOrFallback(int param0, int param1) {
@@ -31,7 +31,7 @@ final class ComponentWordEncoder {
         var6 = VoidHunters.field_G;
         try {
           if (param1 <= 30) {
-            field_a = (gj) null;
+            awaitingLoginReply = (LoginStage) null;
           }
           param2.addLast(-10258, new IntegerNode(param0.componentTypeId));
           if (null != param0.hardpoints) {
@@ -78,11 +78,11 @@ final class ComponentWordEncoder {
     public static void clearSharedReferences(byte param0) {
         int var1 = 100 % ((param0 - 79) / 38);
         field_b = null;
-        field_a = null;
+        awaitingLoginReply = null;
     }
 
     static {
-        field_a = new gj();
+        awaitingLoginReply = new LoginStage();
         field_b = " KEYS";
     }
 }

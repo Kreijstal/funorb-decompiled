@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ModalStack extends UiSingleChildContainer {
     static TextureTransformMode field_x;
-    static gj field_w;
+    static LoginStage field_w;
     private IntrusiveDeque panels;
 
     final void pushPanel(boolean param0, UiComponent param1) {
@@ -57,7 +57,7 @@ final class ModalStack extends UiSingleChildContainer {
         }
         this.child = null;
         if (param0 != -17) {
-          field_w = (gj) null;
+          field_w = (LoginStage) null;
         }
     }
 
@@ -409,6 +409,6 @@ final class ModalStack extends UiSingleChildContainer {
 
     static {
         field_x = new TextureTransformMode();
-        field_w = new gj();
+        field_w = new LoginStage();
     }
 }

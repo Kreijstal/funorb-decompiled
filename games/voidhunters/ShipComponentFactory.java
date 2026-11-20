@@ -4,9 +4,9 @@
 final class ShipComponentFactory implements GameStateFactory {
     static boolean field_a;
 
-    final static String a(int param0) {
+    final static String getGreeting(int param0) {
         if (param0 != -8225) {
-          ShipComponentFactory.a(59);
+          ShipComponentFactory.getGreeting(59);
           return "Lo!";
         }
         return "Lo!";

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class joa {
+final class SegmentIntersections {
     private static int[] field_b;
     static int field_a;
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String canonicalizeBase37Name(CharSequence param0, boolean param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_5_0 = null;
@@ -37,7 +37,7 @@ final class joa {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static int intersectionFraction(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int localTemp$0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
@@ -128,7 +128,7 @@ final class joa {
     public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 26936) {
-          joa.a(-25, -71, 87, 48, 85, 34, -54, 36);
+          SegmentIntersections.intersectionFraction(-25, -71, 87, 48, 85, 34, -54, 36);
         }
     }
 

@@ -74,7 +74,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                 if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                   stackIn_15_0 = EmailAvailabilityChecks.fullscreenCanvas;
                 } else {
-                  stackIn_15_0 = GammaCorrection.field_a;
+                  stackIn_15_0 = GammaCorrection.canvas;
                 }
                 var4 = stackIn_15_0;
                 SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -101,7 +101,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                 stackIn_28_0 = EmailAvailabilityChecks.fullscreenCanvas;
               } else {
-                stackIn_28_0 = GammaCorrection.field_a;
+                stackIn_28_0 = GammaCorrection.canvas;
               }
               var4 = stackIn_28_0;
               SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -124,7 +124,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                 if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                   stackIn_41_0 = EmailAvailabilityChecks.fullscreenCanvas;
                 } else {
-                  stackIn_41_0 = GammaCorrection.field_a;
+                  stackIn_41_0 = GammaCorrection.canvas;
                 }
                 var4 = stackIn_41_0;
                 SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -154,7 +154,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                 stackIn_83_0 = EmailAvailabilityChecks.fullscreenCanvas;
               } else {
-                stackIn_83_0 = GammaCorrection.field_a;
+                stackIn_83_0 = GammaCorrection.canvas;
               }
               var4 = stackIn_83_0;
               SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -176,7 +176,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                   if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                     stackIn_57_0 = EmailAvailabilityChecks.fullscreenCanvas;
                   } else {
-                    stackIn_57_0 = GammaCorrection.field_a;
+                    stackIn_57_0 = GammaCorrection.canvas;
                   }
                   var4 = stackIn_57_0;
                   SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -197,7 +197,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                     if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                       stackIn_70_0 = EmailAvailabilityChecks.fullscreenCanvas;
                     } else {
-                      stackIn_70_0 = GammaCorrection.field_a;
+                      stackIn_70_0 = GammaCorrection.canvas;
                     }
                     var4 = stackIn_70_0;
                     SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -217,7 +217,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                     if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                       stackIn_93_0 = EmailAvailabilityChecks.fullscreenCanvas;
                     } else {
-                      stackIn_93_0 = GammaCorrection.field_a;
+                      stackIn_93_0 = GammaCorrection.canvas;
                     }
                     var4 = stackIn_93_0;
                     SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -230,7 +230,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                       if (null != EmailAvailabilityChecks.fullscreenCanvas) {
                         stackIn_98_0 = EmailAvailabilityChecks.fullscreenCanvas;
                       } else {
-                        stackIn_98_0 = GammaCorrection.field_a;
+                        stackIn_98_0 = GammaCorrection.canvas;
                       }
                       var4 = stackIn_98_0;
                       SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);

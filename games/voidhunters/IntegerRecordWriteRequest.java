@@ -15,7 +15,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[85] = GetLagStandardDeviationIn.field_p;
         var2[52] = GetMissileLauncherEnergyUsed.field_p;
         var2[64] = GetDebrisFoundInPairs.field_o;
-        var2[26] = fra.field_a;
+        var2[26] = PolygonContainment.field_a;
         var2[14] = SetPointDefenceLaserPulsetime.field_o;
         var2[66] = SetUseLines.field_p;
         var2[185] = ShipSpawnedCondition.field_d;
@@ -218,7 +218,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[70] = Particle.field_G;
         var2[51] = ToolkitRasterState.field_i;
         var2[108] = ArchiveLoadRequest.field_h;
-        var2[199] = joa.field_a;
+        var2[199] = SegmentIntersections.field_a;
         var2[67] = GetToggledScoreboard.field_r;
         var2[44] = ToolkitRasterState.field_b;
         var2[184] = SetUseRectFill.field_p;

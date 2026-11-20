@@ -264,7 +264,7 @@ final class PlatformService implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var8.result = ppb.a((String) (var8.objectArgument), var8.primaryIntArgument, (byte) -112).openSocket(2048);
+                      var8.result = ByteStorageRanges.createProxyConnector((String) (var8.objectArgument), var8.primaryIntArgument, (byte) -112).openSocket(2048);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationException) (Object) decompiledCaughtException;

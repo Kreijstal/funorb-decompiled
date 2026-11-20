@@ -12,7 +12,7 @@ final class WeaponBehaviour implements DiffableState {
 
     final int getAimSpeed(byte param0) {
         int var2 = 114 / ((param0 - 78) / 43);
-        if (1 == fra.field_a) {
+        if (1 == PolygonContainment.field_a) {
           return 2048;
         }
         return this.getDefinition((byte) 24).getAimSpeed(0);
@@ -458,7 +458,7 @@ final class WeaponBehaviour implements DiffableState {
           var28Lifetime1 = var34.getEnergyCost(0);
           if (var24 != null &&
             !((Ship) (var24)).consumeEnergy((byte) 11, var28Lifetime1)) {
-            if (fra.field_a != 1) {
+            if (PolygonContainment.field_a != 1) {
               return;
             }
             if (!param1) {
