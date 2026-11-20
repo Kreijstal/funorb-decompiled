@@ -75,7 +75,7 @@ final class SetNumStars extends ConsoleCommand {
         field_o = (int[]) null;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 56) {
           return;
         }

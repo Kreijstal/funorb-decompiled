@@ -74,7 +74,7 @@ final class sa {
         field_a = 0;
     }
 
-    public static void b() {
+    public static void clearSharedReferences() {
         field_d = null;
     }
 

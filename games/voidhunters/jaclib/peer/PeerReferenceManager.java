@@ -3,12 +3,12 @@
  */
 package jaclib.peer;
 
-public final class tqb {
+public final class PeerReferenceManager {
     java.lang.ref.ReferenceQueue b;
     private jaclib.peer.PeerReference c;
     private jaclib.peer.PeerReference a;
 
-    private final void a(int param0) {
+    private final void pollCollected(int param0) {
         java.lang.ref.Reference var2;
         jaclib.peer.PeerReference var5;
         jaclib.peer.PeerReference var4;
@@ -20,7 +20,7 @@ public final class tqb {
               return;
             }
             var4 = (jaclib.peer.PeerReference) ((Object) var2);
-            this.a(-22216, var4);
+            this.releaseReference(-22216, var4);
           }
         }
         this.a = (jaclib.peer.PeerReference) null;
@@ -30,29 +30,29 @@ public final class tqb {
             return;
           }
           var5 = (jaclib.peer.PeerReference) ((Object) var2Lifetime1);
-          this.a(-22216, var5);
+          this.releaseReference(-22216, var5);
         }
     }
 
-    public tqb() {
+    public PeerReferenceManager() {
         this.b = new java.lang.ref.ReferenceQueue();
     }
 
-    public final void a(byte param0) {
-        this.a(-18289);
+    public final void releaseAll(byte param0) {
+        this.pollCollected(-18289);
         while (null != this.c) {
-          this.a(-22216, this.c);
+          this.releaseReference(-22216, this.c);
         }
         if (param0 > 56) {
-          this.a(-18289);
+          this.pollCollected(-18289);
           return;
         }
         this.b = (java.lang.ref.ReferenceQueue) null;
-        this.a(-18289);
+        this.pollCollected(-18289);
     }
 
-    private final void a(int param0, jaclib.peer.PeerReference param1) {
-        param1.a(0);
+    private final void releaseReference(int param0, jaclib.peer.PeerReference param1) {
+        param1.release(0);
         if (param1 == this.c) {
           this.c = param1.b;
         }
@@ -70,7 +70,7 @@ public final class tqb {
         }
     }
 
-    final void a(jaclib.peer.PeerReference param0, int param1) {
+    final void register(jaclib.peer.PeerReference param0, int param1) {
         param0.a = null;
         if (param1 == 25362) {
           param0.b = this.c;
@@ -92,8 +92,8 @@ public final class tqb {
         this.c = param0;
     }
 
-    public final void a(boolean param0) {
-        this.a(-18289);
+    public final void poll(boolean param0) {
+        this.pollCollected(-18289);
         if (!param0) {
           return;
         }

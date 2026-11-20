@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
-    static phb field_o;
+    static Sprite field_o;
 
     final static void a(kka param0, boolean param1, int param2, byte param3) {
         Object var4 = null;
@@ -96,7 +96,7 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (phb) null;
+            field_o = (Sprite) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(195, 121));
           return stackIn_3_0;

@@ -3,7 +3,7 @@
  */
 final class SetTorpedoProjectileLife extends ConsoleCommand {
     static String field_p;
-    static no field_o;
+    static BitmapFont field_o;
 
     final static void a(int param0) {
         MissionList var1 = null;
@@ -11,7 +11,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
         MissionList var1Lifetime1;
         IsaacPacketBuffer var2Lifetime1;
         if (param0 > -20) {
-          SetTorpedoProjectileLife.e((byte) 50);
+          SetTorpedoProjectileLife.clearSharedReferences((byte) 50);
           if (!SetMissionTerrainAsteroidProbability.field_o) {
             return;
           }
@@ -40,7 +40,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 100) {
           return;
         }
@@ -57,7 +57,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetTorpedoProjectileLife.e((byte) 42);
+            SetTorpedoProjectileLife.clearSharedReferences((byte) 42);
           }
           SetMachineGunEnergyUsed.a(91, 62, arguments[0].intValue(107));
           stackIn_3_0 = new ConsoleValue("void");

@@ -538,7 +538,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final static void a(int param0, boolean param1) {
         SetSniperCannonFiringLeeway.field_p = param1 ? true : false;
         int var2 = -9 % ((param0 - 13) / 33);
-        osa.field_e = param1 ? true : false;
+        MonochromeRowCacheEntry.field_e = param1 ? true : false;
     }
 
     final ka a(cbb param0, int param1, int param2, int param3, int param4) {
@@ -977,7 +977,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (param0 < 40) {
           this.field_Cc = (IntrusiveDeque) null;
         }
-        while (!this.field_c.a()) {
+        while (!this.field_c.attachToCurrentThread()) {
           incrementValue$0 = var2;
           var2++;
           if (5 < incrementValue$0) {
@@ -1889,7 +1889,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   this.field_cb = false;
                 }
               }
-              this.field_g = this.field_g & this.field_c.a("GL_ARB_half_float_pixel");
+              this.field_g = this.field_g & this.field_c.hasExtension("GL_ARB_half_float_pixel");
               this.field_k = this.field_cb;
             }
             if (this.field_Ab.indexOf("intel") != -1) {
@@ -2258,10 +2258,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (12 > this.field_f) {
           var2 = var2 | 2;
         }
-        if (!this.field_c.a("GL_ARB_multitexture")) {
+        if (!this.field_c.hasExtension("GL_ARB_multitexture")) {
           var2 = var2 | 8;
         }
-        if (!this.field_c.a("GL_ARB_texture_env_combine")) {
+        if (!this.field_c.hasExtension("GL_ARB_texture_env_combine")) {
           var2 = var2 | 32;
         }
         var9 = new int[1];
@@ -2279,22 +2279,22 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_dc < 2) {
           var2 = var2 | 16;
         }
-        this.field_ac = jaclib.memory.Stream.a();
+        this.field_ac = jaclib.memory.Stream.isBigEndian();
         this.field_O = this.field_c.arePbuffersAvailable();
-        this.field_cb = this.field_c.a("GL_ARB_vertex_buffer_object");
-        this.field_y = this.field_c.a("GL_ARB_multisample");
-        this.field_Zb = this.field_c.a("GL_ARB_vertex_program");
-        this.field_c.a("GL_ARB_fragment_program");
-        this.field_bc = this.field_c.a("GL_ARB_vertex_shader");
-        this.field_B = this.field_c.a("GL_ARB_fragment_shader");
-        this.field_tc = this.field_c.a("GL_EXT_texture3D");
-        this.field_g = this.field_c.a("GL_ARB_texture_rectangle");
-        this.field_S = this.field_c.a("GL_ARB_texture_cube_map");
-        this.field_I = this.field_c.a("GL_ARB_texture_float");
+        this.field_cb = this.field_c.hasExtension("GL_ARB_vertex_buffer_object");
+        this.field_y = this.field_c.hasExtension("GL_ARB_multisample");
+        this.field_Zb = this.field_c.hasExtension("GL_ARB_vertex_program");
+        this.field_c.hasExtension("GL_ARB_fragment_program");
+        this.field_bc = this.field_c.hasExtension("GL_ARB_vertex_shader");
+        this.field_B = this.field_c.hasExtension("GL_ARB_fragment_shader");
+        this.field_tc = this.field_c.hasExtension("GL_EXT_texture3D");
+        this.field_g = this.field_c.hasExtension("GL_ARB_texture_rectangle");
+        this.field_S = this.field_c.hasExtension("GL_ARB_texture_cube_map");
+        this.field_I = this.field_c.hasExtension("GL_ARB_texture_float");
         this.field_n = false;
-        this.field_U = this.field_c.a("GL_EXT_framebuffer_object");
-        this.field_Ob = this.field_c.a("GL_EXT_framebuffer_blit");
-        this.field_gb = this.field_c.a("GL_EXT_framebuffer_multisample");
+        this.field_U = this.field_c.hasExtension("GL_EXT_framebuffer_object");
+        this.field_Ob = this.field_c.hasExtension("GL_EXT_framebuffer_blit");
+        this.field_gb = this.field_c.hasExtension("GL_EXT_framebuffer_multisample");
         this.field_sc = this.field_Ob & this.field_gb;
         this.field_eb = fjb.field_b.startsWith("mac");
         jaggl.OpenGL.glGetFloatv(2834, GetSpinningBladeTopSpeed.field_o, 0);
@@ -2921,7 +2921,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     private final void h(byte param0) {
-        this.field_c.b();
+        this.field_c.detachFromCurrentThread();
         if (param0 != -46) {
           this.o(46);
         }

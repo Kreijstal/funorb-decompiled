@@ -26,7 +26,7 @@ final class mna extends mfb {
         nna.field_z = new ae(2);
         nna.field_z.a(param0, param1 - 91, -1, GetGrapplingHookAimspeed.a(param1 - 91, uia.field_b, kc.field_b));
         if (param1 != 90) {
-          mna.i((byte) 38);
+          mna.clearSharedReferences((byte) 38);
         }
     }
 
@@ -59,7 +59,7 @@ final class mna extends mfb {
         return 2;
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 9) {
           field_c = (String) null;
           field_c = null;
@@ -70,7 +70,7 @@ final class mna extends mfb {
 
     final int d(byte param0) {
         if (param0 > -52) {
-          mna.i((byte) 119);
+          mna.clearSharedReferences((byte) 119);
           return GetMachineGunAimspeed.field_p;
         }
         return GetMachineGunAimspeed.field_p;
@@ -91,7 +91,7 @@ final class mna extends mfb {
 
     final int a(int param0) {
         if (param0 != 0) {
-          mna.i((byte) 50);
+          mna.clearSharedReferences((byte) 50);
           return rn.field_o;
         }
         return rn.field_o;

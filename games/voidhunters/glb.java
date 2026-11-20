@@ -20,14 +20,14 @@ final class glb {
           if (param0 != 17043) {
             field_a = (String) null;
           }
-          if (ms.field_y != null &&
-            !ms.field_y.isEmpty(-42)) {
-            var1 = (qw) (ms.field_y.first(0));
+          if (NetworkGameClient.field_y != null &&
+            !NetworkGameClient.field_y.isEmpty(-42)) {
+            var1 = (qw) (NetworkGameClient.field_y.first(0));
             while (var1 != null) {
               if (!var1.field_k.isLinked((byte) -63)) {
                 var1.unlink(-3846);
               }
-              var1 = (qw) (ms.field_y.next((byte) 77));
+              var1 = (qw) (NetworkGameClient.field_y.next((byte) 77));
             }
           }
           if (null != gtb.field_d) {

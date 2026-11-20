@@ -6,7 +6,7 @@ final class SetReverbDamp extends ConsoleCommand {
     static llb field_q;
     static boolean field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 != -7) {
           return;
@@ -24,7 +24,7 @@ final class SetReverbDamp extends ConsoleCommand {
         try {
           qaa.field_a = arguments[0].floatValue(0);
           if (obfuscationGuard >= -119) {
-            SetReverbDamp.e((byte) -82);
+            SetReverbDamp.clearSharedReferences((byte) -82);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

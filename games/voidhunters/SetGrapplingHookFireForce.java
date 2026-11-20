@@ -137,7 +137,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 85 % ((-42 - param0) / 42);
         field_o = null;
     }

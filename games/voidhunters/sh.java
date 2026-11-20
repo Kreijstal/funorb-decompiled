@@ -22,7 +22,7 @@ final class sh {
         int var5 = VoidHunters.field_G;
         int var4Lifetime1;
         if (param3 != 0) {
-          sh.a((byte) -13);
+          sh.clearSharedReferences((byte) -13);
         } else {
           var4 = param2.indexOf(param1);
           while (-1 != var4) {
@@ -70,7 +70,7 @@ final class sh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 43) {
           return;
         }

@@ -53,7 +53,7 @@ final class GetMissionTerrainSpaceProbability extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = (int[][]) null;
         field_p = null;
         if (!param0) {

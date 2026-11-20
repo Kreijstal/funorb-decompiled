@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class le extends IntrusiveNode {
+abstract class TextureOperation extends IntrusiveNode {
     int field_h;
-    rt field_d;
+    ColorRowCache field_d;
     boolean field_g;
-    le[] field_e;
-    gab field_f;
+    TextureOperation[] field_e;
+    MonochromeRowCache field_f;
 
-    final int[][] a(byte param0, int param1, int param2) {
+    final int[][] getInputColorRow(byte param0, int param1, int param2) {
         if (param0 < 30) {
           return (int[][]) null;
         }
         if (!this.field_e[param1].field_g) {
-          return this.field_e[param1].a(255, param2);
+          return this.field_e[param1].getColorRow(255, param2);
         }
-        int[] var6 = this.field_e[param1].a(param2, true);
+        int[] var6 = this.field_e[param1].getMonochromeRow(param2, true);
         int[] var4 = var6;
         int[][] var5 = new int[3][];
         var5[1] = var6;
@@ -24,9 +24,9 @@ abstract class le extends IntrusiveNode {
         return var5;
     }
 
-    void c(int param0) {
+    void clearCache(int param0) {
         if (!this.field_g) {
-          this.field_d.a(1);
+          this.field_d.clear(1);
           this.field_d = null;
           if (param0 > -23) {
             this.field_g = true;
@@ -34,7 +34,7 @@ abstract class le extends IntrusiveNode {
           }
           return;
         }
-        this.field_f.a(false);
+        this.field_f.clear(false);
         this.field_f = null;
         if (param0 > -23) {
           this.field_g = true;
@@ -42,44 +42,44 @@ abstract class le extends IntrusiveNode {
         }
     }
 
-    void b(int param0, int param1, int param2) {
+    void initializeCache(int param0, int param1, int param2) {
         int var4 = 0;
         int var4Lifetime1;
         if (param0 != -9163) {
-          this.a(-12, 12);
+          this.getColorRow(-12, 12);
           var4 = 255 != this.field_h ? this.field_h : param2;
           if (this.field_g) {
-            this.field_f = new gab(var4, param2, param1);
+            this.field_f = new MonochromeRowCache(var4, param2, param1);
             return;
           }
-          this.field_d = new rt(var4, param2, param1);
+          this.field_d = new ColorRowCache(var4, param2, param1);
           return;
         }
         var4Lifetime1 = 255 != this.field_h ? this.field_h : param2;
         if (this.field_g) {
-          this.field_f = new gab(var4Lifetime1, param2, param1);
+          this.field_f = new MonochromeRowCache(var4Lifetime1, param2, param1);
           return;
         }
-        this.field_d = new rt(var4Lifetime1, param2, param1);
+        this.field_d = new ColorRowCache(var4Lifetime1, param2, param1);
     }
 
-    final int[] a(int param0, int param1, int param2) {
+    final int[] getInputMonochromeRow(int param0, int param1, int param2) {
         if (param2 != 255) {
           this.d((byte) -6);
           if (this.field_e[param0].field_g) {
-            return this.field_e[param0].a(param1, true);
+            return this.field_e[param0].getMonochromeRow(param1, true);
           }
-          return this.field_e[param0].a(255, param1)[0];
+          return this.field_e[param0].getColorRow(255, param1)[0];
         }
         if (this.field_e[param0].field_g) {
-          return this.field_e[param0].a(param1, true);
+          return this.field_e[param0].getMonochromeRow(param1, true);
         }
-        return this.field_e[param0].a(255, param1)[0];
+        return this.field_e[param0].getColorRow(255, param1)[0];
     }
 
     int d(byte param0) {
         if (param0 <= 62) {
-          this.field_d = (rt) null;
+          this.field_d = (ColorRowCache) null;
           return -1;
         }
         return -1;
@@ -88,13 +88,13 @@ abstract class le extends IntrusiveNode {
     int a(int param0) {
         if (param0 != -1) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a(97, 76, (PacketBuffer) null);
+          this.decodeParameter(97, 76, (PacketBuffer) null);
           return -1;
         }
         return -1;
     }
 
-    int[] a(int param0, boolean param1) {
+    int[] getMonochromeRow(int param0, boolean param1) {
         if (!param1) {
           this.a(-12);
           throw new IllegalStateException("This operation does not have a monochrome output");
@@ -102,18 +102,18 @@ abstract class le extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a monochrome output");
     }
 
-    void c(byte param0) {
+    void postDecode(byte param0) {
         if (param0 >= -35) {
-          this.c((byte) -62);
+          this.postDecode((byte) -62);
         }
     }
 
-    int[][] a(int param0, int param1) {
+    int[][] getColorRow(int param0, int param1) {
         if (param0 == 255) {
           throw new IllegalStateException("This operation does not have a colour output");
         }
         PacketBuffer var4 = (PacketBuffer) null;
-        this.a(-96, -51, (PacketBuffer) null);
+        this.decodeParameter(-96, -51, (PacketBuffer) null);
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
@@ -131,7 +131,7 @@ abstract class le extends IntrusiveNode {
         try {
           if (param1 > -21) {
             var6 = (asb) null;
-            le.a((asb) null, (byte) 32, (asb) null, -82, 9);
+            TextureOperation.a((asb) null, (byte) 32, (asb) null, -82, 9);
           }
           if (pa.a(param4, 2, param0, param3)) {
             stackIn_6_0 = coa.a(param2.a(param4, param3, (byte) 13), 11);
@@ -159,12 +159,12 @@ abstract class le extends IntrusiveNode {
         }
     }
 
-    le(int param0, boolean param1) {
-        this.field_e = new le[param0];
+    TextureOperation(int param0, boolean param1) {
+        this.field_e = new TextureOperation[param0];
         this.field_g = param1 ? true : false;
     }
 
-    void a(int param0, int param1, PacketBuffer param2) {
+    void decodeParameter(int param0, int param1, PacketBuffer param2) {
         try {
           if (param1 > -60) {
             this.field_g = false;

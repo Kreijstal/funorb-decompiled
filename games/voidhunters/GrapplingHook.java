@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GrapplingHook extends ShipBody implements DiffableState, utb {
+final class GrapplingHook extends ShipBody implements DiffableState, CompactGameState {
     private boolean retracting;
     private int firedFromId;
     static String field_x;
@@ -115,9 +115,9 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         return this.grabbedComponentId;
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -115);
+          super.writeCompactState(param0, (byte) -115);
           param0.writeBits(-632, this.grabbedObjectId, 32);
           param0.writeBits(-632, this.grabbedComponentId, 32);
           param0.writeBits(-632, this.grabbedComponentOffsetx, 32);
@@ -141,7 +141,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         return this.grabbedComponentOffsetx;
     }
 
-    public static void j(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -116) {
           return;
         }
@@ -149,9 +149,9 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         field_C = null;
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.a(param0, 32);
+          super.readCompactState(param0, 32);
           this.grabbedObjectId = param0.readBits(0, 32);
           this.grabbedComponentId = param0.readBits(param1 ^ 32, 32);
           this.grabbedComponentOffsetx = param0.readBits(0, 32);

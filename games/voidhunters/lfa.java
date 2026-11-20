@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lfa extends le {
+final class lfa extends TextureOperation {
     static int field_m;
     private int field_l;
     static boolean field_j;
@@ -37,7 +37,7 @@ final class lfa extends le {
         field_j = true;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[][] var3;
         int[] var8;
         int[] var9;
@@ -74,14 +74,14 @@ final class lfa extends le {
         int[][] var23Lifetime1;
         var15 = VoidHunters.field_G;
         if (param0 == 255) {
-          var23 = this.field_d.a(param1, (byte) -92);
+          var23 = this.field_d.getRow(param1, (byte) -92);
           var18 = var23;
           var16 = var18;
           var3 = var16;
           if (!this.field_d.field_g) {
             return var3;
           }
-          var36 = this.a((byte) 95, 0, param1);
+          var36 = this.getInputColorRow((byte) 95, 0, param1);
           var37 = var36[0];
           var39 = var36[1];
           var38 = var36[2];
@@ -106,14 +106,14 @@ final class lfa extends le {
           return var3;
         }
         field_j = true;
-        var23Lifetime1 = this.field_d.a(param1, (byte) -92);
+        var23Lifetime1 = this.field_d.getRow(param1, (byte) -92);
         var18Lifetime1 = var23Lifetime1;
         var16Lifetime1 = var18Lifetime1;
         var3Lifetime1 = var16Lifetime1;
         if (!this.field_d.field_g) {
           return var3Lifetime1;
         }
-        var35 = this.a((byte) 95, 0, param1);
+        var35 = this.getInputColorRow((byte) 95, 0, param1);
         var28 = var35[0];
         var24 = var28;
         var30 = var35[1];
@@ -141,7 +141,7 @@ final class lfa extends le {
         return var3Lifetime1;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -5,7 +5,7 @@ final class SetUseRectFill extends ConsoleCommand {
     static String[] field_o;
     static int field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -5) {
           field_o = (String[]) null;
           field_o = null;

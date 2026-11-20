@@ -24,7 +24,7 @@ class vka {
     static boolean field_r;
     private int field_p;
 
-    public static void d() {
+    public static void clearSharedReferences() {
         field_e = null;
     }
 

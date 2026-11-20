@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sma extends le {
+final class sma extends TextureOperation {
     private int field_i;
     private int field_j;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var5 = 0;
         int[] var3;
         int[] var4;
         int var6;
         int var7;
         var7 = VoidHunters.field_G;
-        var3 = this.field_f.a((byte) -117, param0);
+        var3 = this.field_f.getRow((byte) -117, param0);
         if (this.field_f.field_e) {
-          var4 = this.a(0, param0, 255);
+          var4 = this.getInputMonochromeRow(0, param0, 255);
           for (var5 = 0; var5 < hob.field_d; var5++) {
             var6 = var4[var5];
             if (this.field_j > var6) {
@@ -40,7 +40,7 @@ final class sma extends le {
         this.field_j = 0;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int var11 = 0;
         int[][] var3;
         int[] var8;
@@ -67,14 +67,14 @@ final class sma extends le {
         var15 = VoidHunters.field_G;
         if (param0 != 255) {
           var16 = (PacketBuffer) null;
-          this.a(-114, -34, (PacketBuffer) null);
+          this.decodeParameter(-114, -34, (PacketBuffer) null);
         }
-        var27 = this.field_d.a(param1, (byte) -117);
+        var27 = this.field_d.getRow(param1, (byte) -117);
         var19 = var27;
         var17 = var19;
         var3 = var17;
         if (this.field_d.field_g) {
-          var38 = this.a((byte) 94, 0, param1);
+          var38 = this.getInputColorRow((byte) 94, 0, param1);
           var39 = var38[0];
           var40 = var38[1];
           var41 = var38[2];
@@ -123,7 +123,7 @@ final class sma extends le {
         return var3;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_14_1 = false;

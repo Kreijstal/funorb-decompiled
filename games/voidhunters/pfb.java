@@ -21,7 +21,7 @@ final class pfb {
         this.field_d = this.field_e;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         int var1 = 77 / ((62 - param0) / 56);
     }
@@ -59,7 +59,7 @@ final class pfb {
     final void a(Object param0, long param1, byte param2) {
         try {
           if (param2 != -117) {
-            pfb.a(-73);
+            pfb.clearSharedReferences(-73);
           }
           this.a(param2 ^ 20, param0, param1, 1);
         } catch (RuntimeException runtimeException) {
@@ -213,7 +213,7 @@ final class pfb {
           var7.unlink(-3846);
           var7.unlinkSecondary((byte) -35);
           if (param0 != 0) {
-            pfb.a(-93);
+            pfb.clearSharedReferences(-93);
             return var5;
           }
           return var5;
@@ -221,7 +221,7 @@ final class pfb {
         this.field_b.addLast(param0 - 17569, var7);
         var7.secondaryKey = 0L;
         if (param0 != 0) {
-          pfb.a(-93);
+          pfb.clearSharedReferences(-93);
           return var5;
         }
         return var5;

@@ -74,7 +74,7 @@ final class hka extends uj {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         if (param0 != 0) {
           field_d = (String[]) null;

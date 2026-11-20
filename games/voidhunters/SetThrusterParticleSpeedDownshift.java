@@ -34,7 +34,7 @@ final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 84) {
           field_o = (mm) null;
           field_o = null;
@@ -65,7 +65,7 @@ final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
           }
           return null;
         }
-        SetThrusterParticleSpeedDownshift.e((byte) -51);
+        SetThrusterParticleSpeedDownshift.clearSharedReferences((byte) -51);
         var3_refLifetime1 = (nl) (gtb.field_d.first(0));
         while (var3_refLifetime1 != null) {
           if (param0 == var3_refLifetime1.field_k &&

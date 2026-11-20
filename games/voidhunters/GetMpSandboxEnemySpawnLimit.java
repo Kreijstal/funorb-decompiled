@@ -33,7 +33,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         int var1 = 56 / ((param0 + 47) / 55);
     }

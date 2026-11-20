@@ -52,7 +52,7 @@ final class SetMissionTerrainDebrisProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 12124934) {
           return;
         }

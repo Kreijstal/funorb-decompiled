@@ -129,7 +129,7 @@ final class ita extends vq {
         }
     }
 
-    final static no a(int param0, int param1) {
+    final static BitmapFont a(int param0, int param1) {
         if (param1 != 7988) {
           field_D = (String) null;
           return lhb.field_a;
@@ -219,7 +219,7 @@ final class ita extends vq {
         this.field_C.a(90 + var6, 40, param2, param3 + 0, 0);
     }
 
-    public static void j(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_A = null;
         field_D = null;
         if (param0 <= 71) {

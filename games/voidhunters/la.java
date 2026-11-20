@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class la extends qg {
-    private vab field_d;
-    private vab field_c;
-    private vab field_g;
-    private vab field_i;
+    private ArbProgram field_d;
+    private ArbProgram field_c;
+    private ArbProgram field_g;
+    private ArbProgram field_i;
     private boolean field_l;
     static int field_k;
     private boolean field_f;

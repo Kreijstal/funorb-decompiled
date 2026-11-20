@@ -12,7 +12,7 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
         return rga.field_f.field_wb;
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != -2326) {
           field_p = (String) null;

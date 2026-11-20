@@ -614,7 +614,7 @@ class uf extends htb {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_F = null;
         int var1 = -24 % ((-63 - param0) / 45);
         field_E = null;

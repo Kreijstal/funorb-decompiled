@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ckb extends le {
+final class ckb extends TextureOperation {
     private int[][] field_j;
     private int[] field_i;
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[] var17 = null;
         int[] var6 = null;
         int[] var7 = null;
@@ -13,7 +13,7 @@ final class ckb extends le {
         int var9 = 0;
         int var4 = 0;
         int var10 = VoidHunters.field_G;
-        int[][] var14 = this.field_d.a(param1, (byte) -115);
+        int[][] var14 = this.field_d.getRow(param1, (byte) -115);
         int[][] var12 = var14;
         int[][] var11 = var12;
         int[][] var3 = var11;
@@ -21,7 +21,7 @@ final class ckb extends le {
           return (int[][]) null;
         }
         if (this.field_d.field_g) {
-          var17 = this.a(0, param1, 255);
+          var17 = this.getInputMonochromeRow(0, param1, 255);
           var6 = var14[0];
           var7 = var14[1];
           var8 = var14[2];
@@ -42,7 +42,7 @@ final class ckb extends le {
         return var11;
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         if (null == this.field_j) {
           this.a(true, 1);
         }
@@ -128,11 +128,11 @@ final class ckb extends le {
           }
         }
         if (param0 < 93) {
-          this.c((byte) -97);
+          this.postDecode((byte) -97);
         }
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;

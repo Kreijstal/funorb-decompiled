@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qqa extends le {
+final class qqa extends TextureOperation {
     static String[] field_i;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 59 % ((-48 - param0) / 43);
         field_i = null;
     }
@@ -18,7 +18,7 @@ final class qqa extends le {
             qd.field_a[var2_int] = !param0 ? true : false;
           }
           if (param1 > -5) {
-            qqa.e((byte) 81);
+            qqa.clearSharedReferences((byte) 81);
           }
           nqa.field_c = !param0 ? true : false;
           mfb.field_a = !param0 ? true : false;
@@ -36,7 +36,7 @@ final class qqa extends le {
         super(1, true);
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var8 = 0;
         int[] var3;
         int[][] var4;
@@ -46,10 +46,10 @@ final class qqa extends le {
         int var9;
         int[] var10;
         var9 = VoidHunters.field_G;
-        var10 = this.field_f.a((byte) -62, param0);
+        var10 = this.field_f.getRow((byte) -62, param0);
         var3 = var10;
         if (this.field_f.field_e) {
-          var4 = this.a((byte) 69, 0, param0);
+          var4 = this.getInputColorRow((byte) 69, 0, param0);
           var5 = var4[0];
           var6 = var4[1];
           var7 = var4[2];

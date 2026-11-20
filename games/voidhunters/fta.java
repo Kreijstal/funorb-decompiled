@@ -4,7 +4,7 @@
 final class fta extends uda {
     private jagdx.IDirect3DVertexShader field_e;
     private jagdx.IDirect3DVertexShader field_g;
-    private nla field_m;
+    private Direct3DToolkit field_m;
     private jagdx.IDirect3DVertexShader field_h;
     private static float[] field_p;
     private boolean field_f;
@@ -21,7 +21,7 @@ final class fta extends uda {
         }
     }
 
-    fta(nla param0, asb param1) {
+    fta(Direct3DToolkit param0, asb param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
@@ -32,10 +32,10 @@ final class fta extends uda {
         this.field_m = param0;
         if (param1 != null &&
           257 <= (this.field_m.field_Hc.VertexShaderVersion & 65535)) {
-          this.field_e = this.field_m.field_Mc.b(param1.a("uw_ground_unlit", true, "dx"));
-          this.field_l = this.field_m.field_Mc.b(param1.a("uw_ground_lit", true, "dx"));
-          this.field_i = this.field_m.field_Mc.b(param1.a("uw_model_unlit", true, "dx"));
-          this.field_g = this.field_m.field_Mc.b(param1.a("uw_model_lit", true, "dx"));
+          this.field_e = this.field_m.field_Mc.createVertexShader(param1.a("uw_ground_unlit", true, "dx"));
+          this.field_l = this.field_m.field_Mc.createVertexShader(param1.a("uw_ground_lit", true, "dx"));
+          this.field_i = this.field_m.field_Mc.createVertexShader(param1.a("uw_model_unlit", true, "dx"));
+          this.field_g = this.field_m.field_Mc.createVertexShader(param1.a("uw_model_lit", true, "dx"));
           stackIn_6_0 = (null == this.field_g) ? 0 : 1;
           stackIn_9_1 = (null == this.field_e) ? 0 : 1;
           stackIn_12_2 = (null == this.field_l) ? 0 : 1;
@@ -68,7 +68,7 @@ final class fta extends uda {
           if (null != this.field_h) {
             var2 = this.field_m.field_Mc;
             var3 = this.field_m.E(param0 - 15);
-            var2.a(0, var3.a(field_p, (byte) 22));
+            var2.setVertexShaderConstants(0, var3.a(field_p, (byte) 22));
           }
           return;
         }
@@ -76,7 +76,7 @@ final class fta extends uda {
         if (null != this.field_h) {
           var2Lifetime1 = this.field_m.field_Mc;
           var3Lifetime1 = this.field_m.E(param0 - 15);
-          var2Lifetime1.a(0, var3Lifetime1.a(field_p, (byte) 22));
+          var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.a(field_p, (byte) 22));
         }
     }
 
@@ -133,7 +133,7 @@ final class fta extends uda {
             this.b(true);
           }
           var5.a(field_k, -1.0f, (byte) 67, (float)var4, 0.0f, 0.0f);
-          var3.a(12, field_k);
+          var3.setVertexShaderConstants(12, field_k);
           return;
         }
     }
@@ -169,7 +169,7 @@ final class fta extends uda {
         jagdx.IDirect3DDevice var2 = null;
         if (null != this.field_h) {
           var2 = this.field_m.field_Mc;
-          var2.a(4, this.field_d.a(123, field_p));
+          var2.setVertexShaderConstants(4, this.field_d.a(123, field_p));
         }
         if (param0) {
           return;
@@ -210,9 +210,9 @@ final class fta extends uda {
           var4 = this.field_d.z((byte) 90);
           oj var2 = var4;
           var3 = this.field_m.field_Mc;
-          var3.b(13, this.field_d.field_Rb * this.field_d.field_Sb, this.field_d.field_Rb * this.field_d.field_u, this.field_d.field_Rb * this.field_d.field_x, 1.0f);
-          var3.b(14, this.field_d.field_oc * this.field_d.field_Sb, this.field_d.field_oc * this.field_d.field_u, this.field_d.field_oc * this.field_d.field_x, 1.0f);
-          var3.b(16, this.field_d.field_Sb * this.field_d.field_tc, this.field_d.field_u * this.field_d.field_tc, this.field_d.field_x * this.field_d.field_tc, 1.0f);
+          var3.setVertexShaderConstant(13, this.field_d.field_Rb * this.field_d.field_Sb, this.field_d.field_Rb * this.field_d.field_u, this.field_d.field_Rb * this.field_d.field_x, 1.0f);
+          var3.setVertexShaderConstant(14, this.field_d.field_oc * this.field_d.field_Sb, this.field_d.field_oc * this.field_d.field_u, this.field_d.field_oc * this.field_d.field_x, 1.0f);
+          var3.setVertexShaderConstant(16, this.field_d.field_Sb * this.field_d.field_tc, this.field_d.field_u * this.field_d.field_tc, this.field_d.field_x * this.field_d.field_tc, 1.0f);
           var4.a(this.field_d.field_wc[1], field_k, this.field_d.field_wc[2], this.field_d.field_wc[0], false);
           var3.SetVertexShaderConstantF(15, field_k, 1);
           var4.a(this.field_d.field_cb[1], field_k, this.field_d.field_cb[2], this.field_d.field_cb[0], false);
@@ -252,7 +252,7 @@ final class fta extends uda {
         if (null != this.field_h) {
           var2 = this.field_m.field_Mc;
           var3 = this.field_m.E(0);
-          var2.a(0, var3.a(field_p, (byte) 22));
+          var2.setVertexShaderConstants(0, var3.a(field_p, (byte) 22));
         }
         if (param0 == 5) {
           return;
@@ -272,8 +272,8 @@ final class fta extends uda {
           var4 = this.field_d.i();
           var5 = (float)var3 - 0.125f * (float)(-var4 + var3);
           var6 = -((float)(var3 - var4) * 0.25f) + (float)var3;
-          var2.b(10, var6, 1.0f / (var5 - var6), var5, 1.0f / (-var5 + (float)var3));
-          var2.b(11, 1.0f / (float)this.field_d.D(117), (float)this.field_d.a(false) / 255.0f, this.field_d.field_r, 1.0f / (this.field_d.field_r - this.field_d.field_p));
+          var2.setVertexShaderConstant(10, var6, 1.0f / (var5 - var6), var5, 1.0f / (-var5 + (float)var3));
+          var2.setVertexShaderConstant(11, 1.0f / (float)this.field_d.D(117), (float)this.field_d.a(false) / 255.0f, this.field_d.field_r, 1.0f / (this.field_d.field_r - this.field_d.field_p));
           this.field_d.e(-125, this.field_d.D((byte) -126));
         }
         if (param0) {

@@ -6,7 +6,7 @@ final class dw implements wwa {
     static int[] field_a;
     static dfa field_c;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 < 113) {
@@ -22,7 +22,7 @@ final class dw implements wwa {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        phb var8 = null;
+        Sprite var8 = null;
         int var9 = 0;
         try {
           var6_int = param1.field_g + param2;

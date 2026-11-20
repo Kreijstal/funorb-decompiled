@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class smb extends le {
+final class smb extends TextureOperation {
     private int[] field_l;
     private int field_i;
     private int field_k;
     private int field_j;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -47,7 +47,7 @@ final class smb extends le {
         }
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         this.d(-32307);
         if (param0 >= -35) {
           int[] var3 = (int[]) null;
@@ -74,7 +74,7 @@ final class smb extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var7 = 0;
         int[] var25 = null;
         int[] var9 = null;
@@ -92,13 +92,13 @@ final class smb extends le {
         if (!param1) {
           return (int[]) null;
         }
-        int[] var18 = this.field_f.a((byte) 127, param0);
+        int[] var18 = this.field_f.getRow((byte) 127, param0);
         int[] var3 = var18;
         if (this.field_f.field_e) {
           var7 = this.field_k * tpa.field_b >> 12;
-          var25 = this.a(0, -1 + param0 & wf.field_d, 255);
-          var9 = this.a(0, param0, 255);
-          var26 = this.a(0, 1 + param0 & wf.field_d, 255);
+          var25 = this.getInputMonochromeRow(0, -1 + param0 & wf.field_d, 255);
+          var9 = this.getInputMonochromeRow(0, param0, 255);
+          var26 = this.getInputMonochromeRow(0, 1 + param0 & wf.field_d, 255);
           for (var11 = 0; var11 < hob.field_d; var11++) {
             var12 = var7 * (-var25[var11] + var26[var11]) >> 12;
             var13 = (var9[-1 + var11 & SetMassDriverEnergyUsed.field_q] - var9[var11 + 1 & SetMassDriverEnergyUsed.field_q]) * var7 >> 12;

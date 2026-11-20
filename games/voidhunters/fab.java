@@ -64,7 +64,7 @@ final class fab {
           if (param2 != 0) {
             field_b = (String) null;
           }
-          stackIn_3_0 = le.a(param3, (byte) -35, param0, var6, var5_int);
+          stackIn_3_0 = TextureOperation.a(param3, (byte) -35, param0, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -320,7 +320,7 @@ final class fab {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 10970) {
           field_b = (String) null;
@@ -427,7 +427,7 @@ final class fab {
         RuntimeException var3 = null;
         try {
           if (param0) {
-            fab.a(23);
+            fab.clearSharedReferences(23);
           }
           if (param1 != this.field_c) {
             if (param1.length == 0) {

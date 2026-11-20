@@ -7,7 +7,7 @@ final class SetShipDirectionArrow extends ConsoleCommand {
     static mfb[] field_o;
     static String field_r;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_r = null;
         field_q = null;
         field_p = null;

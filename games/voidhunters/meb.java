@@ -4,11 +4,11 @@
 final class meb implements wwa {
     private int field_a;
     static uja field_d;
-    private no field_b;
+    private BitmapFont field_b;
     private int field_e;
     static float[] field_c;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -52) {
           field_c = (float[]) null;
           field_d = null;
@@ -95,7 +95,7 @@ final class meb implements wwa {
         this.field_a = 1;
     }
 
-    meb(no param0, int param1, int param2) {
+    meb(BitmapFont param0, int param1, int param2) {
         try {
           this.field_a = param2;
           this.field_b = param0;

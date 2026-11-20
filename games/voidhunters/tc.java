@@ -63,7 +63,7 @@ final class tc {
         SetBuildViewAutozoomEndOnAction.a(0, var3, RequestNewestBlackboxRecording.field_p, param0);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_b = (boolean[][]) null;
         if (param0 != 40) {

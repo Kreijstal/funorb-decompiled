@@ -5,7 +5,7 @@ final class SetShieldsDirectionalHalfarcCuts extends ConsoleCommand {
     static dja field_o;
     static llb field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 >= -109) {
           return;

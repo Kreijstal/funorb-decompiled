@@ -8,7 +8,7 @@ final class GetDebrisCollisionDamage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         int var1 = -9 / ((param0 - 76) / 33);
     }

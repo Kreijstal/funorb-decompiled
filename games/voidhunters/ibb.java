@@ -4,7 +4,7 @@
 final class ibb {
     static int field_a;
     long field_b;
-    private jp field_c;
+    private OpenGlGpuToolkit field_c;
 
     final static void a(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
@@ -44,7 +44,7 @@ final class ibb {
         super.finalize();
     }
 
-    ibb(jp param0, long param1, ue[] param2) {
+    ibb(OpenGlGpuToolkit param0, long param1, ue[] param2) {
         try {
           this.field_c = param0;
           this.field_b = param1;

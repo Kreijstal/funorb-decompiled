@@ -95,7 +95,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(byte param0, asb param1, no param2) {
+    final static void a(byte param0, asb param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -111,7 +111,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        no var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
         var9 = VoidHunters.field_G;
         try {
@@ -133,14 +133,14 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
             return;
           }
           jka.a(var4, (byte) -111);
-          var12 = (no) null;
-          wdb.field_Ab = ocb.a(65793, 4020342, 10204, (no) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
+          var12 = (BitmapFont) null;
+          wdb.field_Ab = ocb.a(65793, 4020342, 10204, (BitmapFont) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
           ej.field_a = ocb.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
           jwa.field_k = ocb.a(0, 0, 10204, param2, 0, 0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = dma.field_g;
           var6 = dma.field_j;
           var16 = dma.field_i;
-          GetTeamSelectionSpeedup.field_o = new phb(10, 14);
+          GetTeamSelectionSpeedup.field_o = new Sprite(10, 14);
           GetTeamSelectionSpeedup.field_o.b();
           for (var8 = 2; var8 < 7; var8++) {
             dma.d(var8, 1 + var8, 14 - (var8 << 1), 16777215);

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class World implements DiffableState, utb {
+final class World implements DiffableState, CompactGameState {
     private NebulaField field_p;
     private boolean swappedTeams;
     private int width;
@@ -91,7 +91,7 @@ final class World implements DiffableState, utb {
         return var6 != 0;
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -119,7 +119,7 @@ final class World implements DiffableState, utb {
             if (this.field_e == null) {
               this.field_e = new AsteroidField();
             }
-            this.field_e.a(param0, 32);
+            this.field_e.readCompactState(param0, 32);
           } else {
             this.field_e = null;
           }
@@ -315,7 +315,7 @@ final class World implements DiffableState, utb {
         try {
           if (1 != param0.getType((byte) -104) &&
             param0.getType((byte) -104) != 6 &&
-            !gab.field_b.a((byte) -54)) {
+            !MonochromeRowCache.field_b.a((byte) -54)) {
             var7_int = -1;
             var8 = RoundResult.field_c.field_a;
             for (var9 = 0; ccb.field_a.field_d > var9; var9++) {
@@ -1765,8 +1765,8 @@ final class World implements DiffableState, utb {
         RuntimeException var4_ref = null;
         try {
           if (!param2.c(112)) {
-            param0.a(gab.field_b, param2, -4414);
-            if (gab.field_b.a((byte) -97)) {
+            param0.a(MonochromeRowCache.field_b, param2, -4414);
+            if (MonochromeRowCache.field_b.a((byte) -97)) {
               wgb.field_i = param0;
               return true;
             }
@@ -3447,12 +3447,12 @@ final class World implements DiffableState, utb {
         RuntimeException var4 = null;
         try {
           if (RoundResult.field_c.a((byte) 92)) {
-            param1.a(false, gab.field_b, RoundResult.field_c.field_b, RoundResult.field_c.field_a);
+            param1.a(false, MonochromeRowCache.field_b, RoundResult.field_c.field_b, RoundResult.field_c.field_a);
             RoundResult.field_c.a(2147483647);
           }
-          if (gab.field_b.a((byte) 123)) {
-            gab.field_b.a(this, -1, wgb.field_i, param2);
-            gab.field_b.b((byte) -113);
+          if (MonochromeRowCache.field_b.a((byte) 123)) {
+            MonochromeRowCache.field_b.a(this, -1, wgb.field_i, param2);
+            MonochromeRowCache.field_b.b((byte) -113);
           }
           var4_int = 1 % ((30 - param0) / 36);
           return;
@@ -3609,9 +3609,9 @@ final class World implements DiffableState, utb {
         var5 = VoidHunters.field_G;
         try {
           var6_ref = (World) (param1);
-          var6_ref.ships = (Ship[]) (sqb.a(var6_ref.ships, this.ships, 1, MissionGenerationData.field_a, false));
+          var6_ref.ships = (Ship[]) (SpriteDimensions.a(var6_ref.ships, this.ships, 1, MissionGenerationData.field_a, false));
           if (this.debug) {
-            if (VoidHunters.a(true, this.ships)) {
+            if (VoidHunters.checkDuplicateReference(true, this.ships)) {
               System.err.println("Ship[] ships the actual object has a duplicate reference");
             }
             var7 = tjb.a(this.ships, 0);
@@ -3619,9 +3619,9 @@ final class World implements DiffableState, utb {
               System.err.println("An element of Ship[] ships has a duplicate reference - " + var7.toString());
             }
           }
-          var6_ref.field_s = (Particle[]) (sqb.a(var6_ref.field_s, this.field_s, 1, AdjustBodyComponentsAction.field_c, false));
+          var6_ref.field_s = (Particle[]) (SpriteDimensions.a(var6_ref.field_s, this.field_s, 1, AdjustBodyComponentsAction.field_c, false));
           if (this.debug) {
-            if (VoidHunters.a(true, this.field_s)) {
+            if (VoidHunters.checkDuplicateReference(true, this.field_s)) {
               System.err.println("Particle[] particles the actual object has a duplicate reference");
             }
             var8 = tjb.a(this.field_s, 0);
@@ -3631,7 +3631,7 @@ final class World implements DiffableState, utb {
           }
           var6_ref.projectiles = SetBloomCoefficientPercentage.a(var6_ref.projectiles, this.projectiles, 1, aba.field_b, -90);
           if (this.debug) {
-            if (VoidHunters.a(true, this.projectiles)) {
+            if (VoidHunters.checkDuplicateReference(true, this.projectiles)) {
               System.err.println("linklist<voidhunters.common.worldstate.Projectile> projectiles the actual object has a duplicate reference");
             }
             var9 = nqa.a(this.projectiles, 12642);
@@ -3650,13 +3650,13 @@ final class World implements DiffableState, utb {
             }
             this.field_e.copyTo((byte) 79, var6_ref.field_e);
             if (this.debug &&
-              VoidHunters.a(true, this.field_e)) {
+              VoidHunters.checkDuplicateReference(true, this.field_e)) {
               System.err.println("AsteroidContainer asteroid_container has a duplicate reference");
             }
           }
           var6_ref.spawnPoints = SetBloomCoefficientPercentage.a(var6_ref.spawnPoints, this.spawnPoints, 1, GetBombletSprayProjectileDamage.field_q, 88);
           if (this.debug) {
-            if (VoidHunters.a(true, this.spawnPoints)) {
+            if (VoidHunters.checkDuplicateReference(true, this.spawnPoints)) {
               System.err.println("linklist<voidhunters.common.worldstate.SpawnPoint> spawn_points the actual object has a duplicate reference");
             }
             var10 = nqa.a(this.spawnPoints, 12642);
@@ -3664,9 +3664,9 @@ final class World implements DiffableState, utb {
               System.err.println("An element of linklist<voidhunters.common.worldstate.SpawnPoint> spawn_points has a duplicate reference - " + var10.toString());
             }
           }
-          var6_ref.grapplingHooks = (GrapplingHook[]) (sqb.a(var6_ref.grapplingHooks, this.grapplingHooks, 1, TickCondition.field_c, false));
+          var6_ref.grapplingHooks = (GrapplingHook[]) (SpriteDimensions.a(var6_ref.grapplingHooks, this.grapplingHooks, 1, TickCondition.field_c, false));
           if (this.debug) {
-            if (VoidHunters.a(true, this.grapplingHooks)) {
+            if (VoidHunters.checkDuplicateReference(true, this.grapplingHooks)) {
               System.err.println("GrapplingHook[] grappling_hooks the actual object has a duplicate reference");
             }
             var11 = tjb.a(this.grapplingHooks, 0);
@@ -3687,15 +3687,15 @@ final class World implements DiffableState, utb {
             }
             this.missionControl.copyTo((byte) 87, var6_ref.missionControl);
             if (this.debug &&
-              VoidHunters.a(true, this.missionControl)) {
+              VoidHunters.checkDuplicateReference(true, this.missionControl)) {
               System.err.println("MissionControl mission_control has a duplicate reference");
             }
           } else {
             var6_ref.missionControl = null;
           }
-          var6_ref.mapZones = (MapZone[]) (sqb.a(var6_ref.mapZones, this.mapZones, 1, wsb.field_e, false));
+          var6_ref.mapZones = (MapZone[]) (SpriteDimensions.a(var6_ref.mapZones, this.mapZones, 1, wsb.field_e, false));
           if (this.debug) {
-            if (VoidHunters.a(true, this.mapZones)) {
+            if (VoidHunters.checkDuplicateReference(true, this.mapZones)) {
               System.err.println("MapZone[] map_zones the actual object has a duplicate reference");
             }
             var12 = tjb.a(this.mapZones, 0);
@@ -3703,9 +3703,9 @@ final class World implements DiffableState, utb {
               System.err.println("An element of MapZone[] map_zones has a duplicate reference - " + var12.toString());
             }
           }
-          var6_ref.resNodes = (ResourceNode[]) (sqb.a(var6_ref.resNodes, this.resNodes, 1, SetShipDirectionArrow.field_p, false));
+          var6_ref.resNodes = (ResourceNode[]) (SpriteDimensions.a(var6_ref.resNodes, this.resNodes, 1, SetShipDirectionArrow.field_p, false));
           if (this.debug) {
-            if (VoidHunters.a(true, this.resNodes)) {
+            if (VoidHunters.checkDuplicateReference(true, this.resNodes)) {
               System.err.println("ResourceNode[] res_nodes the actual object has a duplicate reference");
             }
             var13 = tjb.a(this.resNodes, 0);
@@ -3724,15 +3724,15 @@ final class World implements DiffableState, utb {
             }
             this.field_u.copyTo((byte) 122, var6_ref.field_u);
             if (this.debug &&
-              VoidHunters.a(true, this.field_u)) {
+              VoidHunters.checkDuplicateReference(true, this.field_u)) {
               System.err.println("PartitioningManager grid has a duplicate reference");
             }
           } else {
             var6_ref.field_u = null;
           }
-          var6_ref.escapePods = (EscapePod[]) (sqb.a(var6_ref.escapePods, this.escapePods, 1, pgb.field_g, false));
+          var6_ref.escapePods = (EscapePod[]) (SpriteDimensions.a(var6_ref.escapePods, this.escapePods, 1, pgb.field_g, false));
           if (this.debug) {
-            if (VoidHunters.a(true, this.escapePods)) {
+            if (VoidHunters.checkDuplicateReference(true, this.escapePods)) {
               System.err.println("EscapePod[] escape_pods the actual object has a duplicate reference");
             }
             var14 = tjb.a(this.escapePods, 0);
@@ -5327,7 +5327,7 @@ final class World implements DiffableState, utb {
             }
             wgb.field_i = null;
             RoundResult.field_c.a(2147483647);
-            gab.field_b.b((byte) -70);
+            MonochromeRowCache.field_b.b((byte) -70);
             var4Lifetime1 = var3_ref.x;
             var5 = var4Lifetime1 - var3_ref.dx;
             var6 = var5;
@@ -5366,7 +5366,7 @@ final class World implements DiffableState, utb {
               break;
             }
             if (1 == voa.field_d &&
-              !gab.field_b.a((byte) 111)) {
+              !MonochromeRowCache.field_b.a((byte) 111)) {
               var12Lifetime1 = this.field_u.a(-122, 2);
               for (var13Lifetime1 = 0; var13Lifetime1 < var12Lifetime1; var13Lifetime1++) {
                 var21 = this.debris[ada.field_a[var13Lifetime1] - field_c[1]];
@@ -5378,7 +5378,7 @@ final class World implements DiffableState, utb {
                 }
               }
             }
-            if (!gab.field_b.a((byte) 127)) {
+            if (!MonochromeRowCache.field_b.a((byte) 127)) {
               var13_ref_mqb__ = this.grapplingHooks;
               for (var14_int = 0; var14_int < var13_ref_mqb__.length; var14_int++) {
                 var15 = var13_ref_mqb__[var14_int];
@@ -5389,7 +5389,7 @@ final class World implements DiffableState, utb {
                 }
               }
             }
-            if (!gab.field_b.a((byte) -18)) {
+            if (!MonochromeRowCache.field_b.a((byte) -18)) {
               var12Lifetime2 = this.field_u.a(-110, 3);
               for (var13Lifetime2 = 0; var13Lifetime2 < var12Lifetime2; var13Lifetime2++) {
                 var22 = param0[-field_c[2] + ada.field_a[var13Lifetime2]];
@@ -6670,7 +6670,7 @@ final class World implements DiffableState, utb {
         return this.b(1, 65536, param3, param2, param4, param1);
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 3) {
           field_d = (String) null;
         }
@@ -7527,7 +7527,7 @@ final class World implements DiffableState, utb {
         }
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         int stackIn_5_0 = 0;
         IsaacPacketBuffer stackIn_13_0 = null;
         int stackIn_13_1 = 0;
@@ -7673,7 +7673,7 @@ final class World implements DiffableState, utb {
               stackIn_13_1 = 110;
               stackIn_14_2 = (null != var8);
               if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
-                ((utb) ((Object) var8)).a(var11, (byte) -105);
+                ((CompactGameState) ((Object) var8)).writeCompactState(var11, (byte) -105);
               }
             }
           }
@@ -7724,7 +7724,7 @@ final class World implements DiffableState, utb {
               stackIn_49_1 = 101;
               stackIn_50_2 = (var8_ref2 != null);
               if (vq.writeBoolean(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
-                ((utb) ((Object) var8_ref2)).a(var18, (byte) -127);
+                ((CompactGameState) ((Object) var8_ref2)).writeCompactState(var18, (byte) -127);
               }
             }
           }
@@ -7732,7 +7732,7 @@ final class World implements DiffableState, utb {
           stackIn_58_1 = 54;
           stackIn_59_2 = (null != this.field_e);
           if (vq.writeBoolean(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
-            this.field_e.a(param0, (byte) -92);
+            this.field_e.writeCompactState(param0, (byte) -92);
           }
           var21 = param0;
           var3Lifetime3 = var21;
@@ -7776,7 +7776,7 @@ final class World implements DiffableState, utb {
               stackIn_89_1 = 74;
               stackIn_90_2 = (var8_ref3 != null);
               if (vq.writeBoolean(stackIn_89_0, stackIn_89_1, stackIn_90_2)) {
-                ((utb) ((Object) var8_ref3)).a(var23, (byte) -98);
+                ((CompactGameState) ((Object) var8_ref3)).writeCompactState(var23, (byte) -98);
               }
             }
           }

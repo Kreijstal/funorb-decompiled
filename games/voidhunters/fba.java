@@ -327,7 +327,7 @@ final class fba implements DiffableState, ofa {
         return this.a(-1, SetReadyRoomMutatorTime.field_o, param1, 74);
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 <= 112) {
           field_c = (String) null;
@@ -472,7 +472,7 @@ final class fba implements DiffableState, ofa {
             field_c = (String) null;
           }
           var3.field_b = this.field_b;
-          var3.zonelists = (PartitionZoneList[]) (sqb.a(var3.zonelists, this.zonelists, 1, mjb.field_c, false));
+          var3.zonelists = (PartitionZoneList[]) (SpriteDimensions.a(var3.zonelists, this.zonelists, 1, mjb.field_c, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

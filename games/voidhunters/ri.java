@@ -6,7 +6,7 @@ final class ri {
     static String field_b;
     int field_c;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 24 / ((param0 + 53) / 32);
         field_b = null;
     }

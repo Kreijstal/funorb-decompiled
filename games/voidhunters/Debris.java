@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Debris extends ShipBody implements DiffableState, ofa, utb {
+final class Debris extends ShipBody implements DiffableState, ofa, CompactGameState {
     private int field_w;
     boolean field_x;
     boolean field_u;
@@ -31,9 +31,9 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         return 2;
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.readCompactState(param0, param1);
           this.phantom = kv.readBoolean(false, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nbb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -134,9 +134,9 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         int var2 = 102 / ((param0 + 4) / 38);
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -103);
+          super.writeCompactState(param0, (byte) -103);
           vq.writeBoolean(param0, 95, this.phantom);
           if (param1 >= -91) {
             this.field_w = 55;

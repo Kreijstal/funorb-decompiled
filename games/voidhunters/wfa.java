@@ -552,12 +552,12 @@ final class wfa extends oi {
         return;
     }
 
-    wfa(sob param0, int param1, int param2) {
+    wfa(SoftwareToolkit param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_F = new int[param1 * param2];
     }
 
-    wfa(sob param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    wfa(SoftwareToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         super(param0, param4, param5);
         int var9 = 0;
         int var10 = 0;
@@ -2359,7 +2359,7 @@ final class wfa extends oi {
         }
     }
 
-    wfa(sob param0, int[] param1, int param2, int param3) {
+    wfa(SoftwareToolkit param0, int[] param1, int param2, int param3) {
         super(param0, param2, param3);
         this.field_F = param1;
     }

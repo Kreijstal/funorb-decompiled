@@ -4,7 +4,7 @@
 final class GetMassDriverReload extends ConsoleCommand {
     static asb field_o;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           field_o = (asb) null;
           field_o = null;

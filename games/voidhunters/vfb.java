@@ -4,7 +4,7 @@
 final class vfb implements dja {
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < 16) {
           return;
         }

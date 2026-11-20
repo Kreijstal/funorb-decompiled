@@ -5,7 +5,7 @@ final class GetUseRectFill extends ConsoleCommand {
     static int field_p;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 25837) {
           return;
         }

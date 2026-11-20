@@ -4,7 +4,7 @@
 final class GetBombletSprayAimspeed extends ConsoleCommand {
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 71) {
           return;
         }
@@ -85,7 +85,7 @@ final class GetBombletSprayAimspeed extends ConsoleCommand {
             return stackIn_7_0;
           }
           if (param2 == 7) {
-            stackIn_10_0 = lra.field_o;
+            stackIn_10_0 = ProceduralTexture.field_o;
             return stackIn_10_0;
           }
           if (8 == param2) {

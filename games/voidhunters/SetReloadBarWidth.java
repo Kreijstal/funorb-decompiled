@@ -26,7 +26,7 @@ final class SetReloadBarWidth extends ConsoleCommand {
         return false;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_r = null;
         field_q = null;
         field_s = null;

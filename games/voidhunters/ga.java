@@ -106,7 +106,7 @@ final class ga extends fnb {
           return var3.e((byte) -4);
         }
         if (param1) {
-          ga.c((byte) 114);
+          ga.clearSharedReferences((byte) 114);
         }
         return 0;
     }
@@ -344,7 +344,7 @@ final class ga extends fnb {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 110 % ((param0 + 65) / 33);
         field_s = null;
     }

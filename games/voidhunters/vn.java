@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn extends le {
+final class vn extends TextureOperation {
     private int field_k;
     static int field_m;
     static String field_i;
     private int field_l;
     private int field_j;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -33,7 +33,7 @@ final class vn extends le {
           }
           if (param1 >= -60) {
             var6 = (PacketBuffer) null;
-            this.a(-122, -52, (PacketBuffer) null);
+            this.decodeParameter(-122, -52, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,14 +50,14 @@ final class vn extends le {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           return;
         }
         field_i = null;
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var4 = 0;
         int[] var3;
         int var5;
@@ -70,7 +70,7 @@ final class vn extends le {
         int[] var12;
         int[] var13;
         var11 = VoidHunters.field_G;
-        var13 = this.field_f.a((byte) 120, param0);
+        var13 = this.field_f.getRow((byte) 120, param0);
         var12 = var13;
         var3 = var12;
         if (this.field_f.field_e) {

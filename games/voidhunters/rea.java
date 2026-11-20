@@ -5,7 +5,7 @@ final class rea extends uj {
     static String[] field_e;
     static String field_d;
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < 56) {
           field_d = (String) null;
           field_d = null;
@@ -18,7 +18,7 @@ final class rea extends uj {
 
     final boolean c(int param0) {
         if (param0 <= 63) {
-          rea.d(-112);
+          rea.clearSharedReferences(-112);
           return true;
         }
         return true;

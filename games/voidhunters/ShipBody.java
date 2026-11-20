@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ShipBody extends ara implements DiffableState, utb {
+class ShipBody extends ara implements DiffableState, CompactGameState {
     private int momentofinertia;
     private int centreofmassx;
     int[] boundingbox;
@@ -160,14 +160,14 @@ class ShipBody extends ara implements DiffableState, utb {
         return (int)((long)this.centreofmassx * (long)eu.a(var2, param0 + 105) + (long)this.centreofmassy * (long)GetNumStars.a(var2, (byte) -68) >> 16);
     }
 
-    public void a(IsaacPacketBuffer param0, int param1) {
+    public void readCompactState(IsaacPacketBuffer param0, int param1) {
         try {
           super.readState(param0, false);
           if (kv.readBoolean(false, param0)) {
             if (null == this.chassis) {
               this.chassis = new ShipComponent();
             }
-            this.chassis.a(param0, 32);
+            this.chassis.readCompactState(param0, 32);
           } else {
             this.chassis = null;
           }
@@ -547,10 +547,10 @@ class ShipBody extends ara implements DiffableState, utb {
         return stackIn_8_0;
     }
 
-    public void a(IsaacPacketBuffer param0, byte param1) {
+    public void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         super.writeState(param0, -113);
         if (vq.writeBoolean(param0, 54, this.chassis != null ? true : false)) {
-          this.chassis.a(param0, (byte) -113);
+          this.chassis.writeCompactState(param0, (byte) -113);
         }
         param0.writeBits(-632, this.angle, 24);
         if (param1 > -91) {

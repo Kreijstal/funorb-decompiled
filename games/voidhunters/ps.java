@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ps {
-    static phb[] field_a;
+    static Sprite[] field_a;
 
     final static byte[] a(String param0, int param1) {
         int var2_int = 0;
@@ -64,10 +64,10 @@ abstract class ps {
 
     abstract byte[] a(int param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 1) {
-          field_a = (phb[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 

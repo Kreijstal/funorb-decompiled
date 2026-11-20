@@ -122,7 +122,7 @@ final class SetReverbFeedback extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 200) {
           return;
         }

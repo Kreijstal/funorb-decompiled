@@ -86,7 +86,7 @@ final class ocb extends eca {
         }
     }
 
-    final static llb a(int param0, int param1, int param2, no param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static llb a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         llb var13 = null;
         RuntimeException var13_ref = null;
         llb stackIn_3_0 = null;
@@ -139,13 +139,13 @@ final class ocb extends eca {
     final static void f(int param0) {
         ulb.a(100);
         if (param0 != -10150) {
-          ocb.a(-128, 101, 87, (no) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
+          ocb.a(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }
         uda.b(-2283);
         SetReadyRoomMutatorTime.e(-17);
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_m = null;
         field_g = null;
         if (param0 < 125) {

@@ -51,7 +51,7 @@ final class deb extends mfb {
         return true;
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         int var1 = -124 % ((param0 + 63) / 32);
     }
@@ -71,7 +71,7 @@ final class deb extends mfb {
 
     final int g(int param0) {
         if (param0 != 2769) {
-          deb.i((byte) 112);
+          deb.clearSharedReferences((byte) 112);
           return GetMissionTerrainNebulaProbability.field_p;
         }
         return GetMissionTerrainNebulaProbability.field_p;
@@ -112,7 +112,7 @@ final class deb extends mfb {
           var2.writeByte(0, kua.a((byte) 75));
           return;
         }
-        deb.i((byte) 62);
+        deb.clearSharedReferences((byte) 62);
         var2Lifetime1 = RequestNewestBlackboxRecording.field_p;
         var2Lifetime1.writeIsaacByte(24335, param1);
         var2Lifetime1.writeByte(0, 2);

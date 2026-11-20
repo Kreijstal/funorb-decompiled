@@ -20,7 +20,7 @@ class IntrusiveNode {
         return false;
     }
 
-    final static void a(phb[] param0, int param1, int param2, phb[] param3, phb[] param4, int param5, int param6, int param7, int param8, no param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(Sprite[] param0, int param1, int param2, Sprite[] param3, Sprite[] param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, int param13, int param14) {
         int var15_int = param9.field_A + param9.field_o;
         int var16 = param9.field_o;
         if (param13 != -14109) {
@@ -56,11 +56,11 @@ class IntrusiveNode {
 
     final static IsaacPacketBuffer a(byte param0) {
         if (param0 == -6) {
-          return new IsaacPacketBuffer(GameApplet.a((byte) 73, bk.field_w));
+          return new IsaacPacketBuffer(GameApplet.copyWrittenBytes((byte) 73, bk.field_w));
         }
-        no var2 = (no) null;
-        IntrusiveNode.a((phb[]) null, 27, -49, (phb[]) null, (phb[]) null, 58, 92, 102, -42, (no) null, 125, 6, -7, 73, -90);
-        return new IsaacPacketBuffer(GameApplet.a((byte) 73, bk.field_w));
+        BitmapFont var2 = (BitmapFont) null;
+        IntrusiveNode.a((Sprite[]) null, 27, -49, (Sprite[]) null, (Sprite[]) null, 58, 92, 102, -42, (BitmapFont) null, 125, 6, -7, 73, -90);
+        return new IsaacPacketBuffer(GameApplet.copyWrittenBytes((byte) 73, bk.field_w));
     }
 
     static {

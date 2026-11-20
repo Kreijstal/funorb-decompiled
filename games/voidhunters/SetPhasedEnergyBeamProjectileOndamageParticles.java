@@ -18,7 +18,7 @@ final class SetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         try {
           SetMachineGunEnergyUsed.a(154, 62, arguments[0].intValue(74));
           if (obfuscationGuard > -119) {
-            SetPhasedEnergyBeamProjectileOndamageParticles.a(-109);
+            SetPhasedEnergyBeamProjectileOndamageParticles.clearSharedReferences(-109);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -36,7 +36,7 @@ final class SetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -2573) {
           return;
         }

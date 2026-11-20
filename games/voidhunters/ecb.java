@@ -4,7 +4,7 @@
 final class ecb implements dja {
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 <= 14) {
           field_a = (int[]) null;
@@ -61,9 +61,9 @@ final class ecb implements dja {
                 param2 = param2 >> 1;
               }
               if (param1 != -77) {
-                ecb.a(34);
+                ecb.clearSharedReferences(34);
               }
-              return sqb.a(param0, 102, param2);
+              return SpriteDimensions.a(param0, 102, param2);
             }
           } else {
             param2 = param2 >> 16;
@@ -97,9 +97,9 @@ final class ecb implements dja {
                 param2 = param2 >> 1;
               }
               if (param1 != -77) {
-                ecb.a(34);
+                ecb.clearSharedReferences(34);
               }
-              return sqb.a(param0, 102, param2);
+              return SpriteDimensions.a(param0, 102, param2);
             }
           } else {
             param0 = param0 >> 4;
@@ -117,9 +117,9 @@ final class ecb implements dja {
             16384 > param0 &&
             param0 >= -16384) {
             if (param1 != -77) {
-              ecb.a(34);
+              ecb.clearSharedReferences(34);
             }
-            return sqb.a(param0, 102, param2);
+            return SpriteDimensions.a(param0, 102, param2);
           }
           param0 = param0 >> 1;
           param2 = param2 >> 1;
@@ -160,9 +160,9 @@ final class ecb implements dja {
                   param2 = param2 >> 1;
                 }
                 if (param1 != -77) {
-                  ecb.a(34);
+                  ecb.clearSharedReferences(34);
                 }
-                return sqb.a(param0, 102, param2);
+                return SpriteDimensions.a(param0, 102, param2);
               }
             } else {
               param2 = param2 >> 16;
@@ -196,9 +196,9 @@ final class ecb implements dja {
                   param2 = param2 >> 1;
                 }
                 if (param1 != -77) {
-                  ecb.a(34);
+                  ecb.clearSharedReferences(34);
                 }
-                return sqb.a(param0, 102, param2);
+                return SpriteDimensions.a(param0, 102, param2);
               }
             } else {
               param0 = param0 >> 4;
@@ -216,9 +216,9 @@ final class ecb implements dja {
               16384 > param0 &&
               param0 >= -16384) {
               if (param1 != -77) {
-                ecb.a(34);
+                ecb.clearSharedReferences(34);
               }
-              return sqb.a(param0, 102, param2);
+              return SpriteDimensions.a(param0, 102, param2);
             }
             param0 = param0 >> 1;
             param2 = param2 >> 1;
@@ -258,9 +258,9 @@ final class ecb implements dja {
                         param2 = param2 >> 1;
                       }
                       if (param1 != -77) {
-                        ecb.a(34);
+                        ecb.clearSharedReferences(34);
                       }
-                      return sqb.a(param0, 102, param2);
+                      return SpriteDimensions.a(param0, 102, param2);
                     }
                   } else {
                     param0 = param0 >> 4;
@@ -281,10 +281,10 @@ final class ecb implements dja {
                     param2 = param2 >> 1;
                   }
                   if (param1 == -77) {
-                    return sqb.a(param0, 102, param2);
+                    return SpriteDimensions.a(param0, 102, param2);
                   }
-                  ecb.a(34);
-                  return sqb.a(param0, 102, param2);
+                  ecb.clearSharedReferences(34);
+                  return SpriteDimensions.a(param0, 102, param2);
                 }
               } else {
                 param2 = param2 >> 16;
@@ -318,10 +318,10 @@ final class ecb implements dja {
                     param2 = param2 >> 1;
                   }
                   if (param1 == -77) {
-                    return sqb.a(param0, 102, param2);
+                    return SpriteDimensions.a(param0, 102, param2);
                   }
-                  ecb.a(34);
-                  return sqb.a(param0, 102, param2);
+                  ecb.clearSharedReferences(34);
+                  return SpriteDimensions.a(param0, 102, param2);
                 }
               } else {
                 param0 = param0 >> 4;
@@ -339,10 +339,10 @@ final class ecb implements dja {
                 16384 > param0 &&
                 param0 >= -16384) {
                 if (param1 == -77) {
-                  return sqb.a(param0, 102, param2);
+                  return SpriteDimensions.a(param0, 102, param2);
                 }
-                ecb.a(34);
-                return sqb.a(param0, 102, param2);
+                ecb.clearSharedReferences(34);
+                return SpriteDimensions.a(param0, 102, param2);
               }
               param0 = param0 >> 1;
               param2 = param2 >> 1;
@@ -383,9 +383,9 @@ final class ecb implements dja {
                       param2 = param2 >> 1;
                     }
                     if (param1 != -77) {
-                      ecb.a(34);
+                      ecb.clearSharedReferences(34);
                     }
-                    return sqb.a(param0, 102, param2);
+                    return SpriteDimensions.a(param0, 102, param2);
                   }
                 } else {
                   param0 = param0 >> 4;
@@ -406,19 +406,19 @@ final class ecb implements dja {
                   param2 = param2 >> 1;
                 }
                 if (param1 == -77) {
-                  return sqb.a(param0, 102, param2);
+                  return SpriteDimensions.a(param0, 102, param2);
                 }
-                ecb.a(34);
-                return sqb.a(param0, 102, param2);
+                ecb.clearSharedReferences(34);
+                return SpriteDimensions.a(param0, 102, param2);
               }
             }
           }
         }
         if (param1 == -77) {
-          return sqb.a(param0, 102, param2);
+          return SpriteDimensions.a(param0, 102, param2);
         }
-        ecb.a(34);
-        return sqb.a(param0, 102, param2);
+        ecb.clearSharedReferences(34);
+        return SpriteDimensions.a(param0, 102, param2);
     }
 
     static {

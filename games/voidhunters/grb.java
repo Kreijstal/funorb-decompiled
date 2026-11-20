@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class grb extends le {
+final class grb extends TextureOperation {
     private int field_m;
     static int[] field_l;
     static int[] field_j;
@@ -17,7 +17,7 @@ final class grb extends le {
         field_j = null;
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var11 = 0;
         int[] var3;
         int var4;
@@ -43,7 +43,7 @@ final class grb extends le {
         if (!param1) {
           grb.e((byte) -21);
         }
-        var3 = this.field_f.a((byte) 121, param0);
+        var3 = this.field_f.getRow((byte) 121, param0);
         if (this.field_f.field_e) {
           var4 = 1 + (this.field_k + this.field_k);
           var5 = 65536 / var4;
@@ -53,7 +53,7 @@ final class grb extends le {
           var17 = var19;
           var8 = var17;
           for (var9 = param0 - this.field_k; var9 <= this.field_k + param0; var9++) {
-            var10_ref_int__ = this.a(0, var9 & wf.field_d, 255);
+            var10_ref_int__ = this.getInputMonochromeRow(0, var9 & wf.field_d, 255);
             var18 = new int[hob.field_d];
             var16 = var18;
             var11_ref_int__ = var16;
@@ -88,7 +88,7 @@ final class grb extends le {
         this.field_k = 1;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_10_1 = false;
@@ -130,7 +130,7 @@ final class grb extends le {
         }
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -161,7 +161,7 @@ final class grb extends le {
         int var13 = 0;
         int var14 = 0;
         int var23 = VoidHunters.field_G;
-        int[][] var37 = this.field_d.a(param1, (byte) -94);
+        int[][] var37 = this.field_d.getRow(param1, (byte) -94);
         int[][] var29 = var37;
         int[][] var3 = var29;
         int var22Lifetime1;
@@ -177,7 +177,7 @@ final class grb extends le {
           var30 = var38;
           var8 = var30;
           for (var9_int = -this.field_k + param1; param1 + this.field_k >= var9_int; var9_int++) {
-            var46 = this.a((byte) 110, 0, wf.field_d & var9_int);
+            var46 = this.getInputColorRow((byte) 110, 0, wf.field_d & var9_int);
             var50 = new int[3][hob.field_d];
             var12 = 0;
             var13 = 0;

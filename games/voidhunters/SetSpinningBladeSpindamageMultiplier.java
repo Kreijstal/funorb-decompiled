@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
-    static phb[] field_p;
+    static Sprite[] field_p;
     static mm field_o;
 
     SetSpinningBladeSpindamageMultiplier(String param0, Class[] param1, String param2) {
@@ -19,7 +19,7 @@ final class SetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(185, 62, arguments[0].intValue(66));
           if (obfuscationGuard >= -119) {
-            SetSpinningBladeSpindamageMultiplier.e((byte) 15);
+            SetSpinningBladeSpindamageMultiplier.clearSharedReferences((byte) 15);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -37,11 +37,11 @@ final class SetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 > -100) {
-          field_p = (phb[]) null;
+          field_p = (Sprite[]) null;
         }
     }
 

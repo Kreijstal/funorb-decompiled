@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetTorpedoAimspeed extends ConsoleCommand {
-    static osa field_o;
+    static MonochromeRowCacheEntry field_o;
     static String field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -14,7 +14,7 @@ final class GetTorpedoAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetTorpedoAimspeed.e((byte) 25);
+            GetTorpedoAimspeed.clearSharedReferences((byte) 25);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(118, 116));
           return stackIn_3_0;
@@ -32,7 +32,7 @@ final class GetTorpedoAimspeed extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 < 14) {
@@ -45,7 +45,7 @@ final class GetTorpedoAimspeed extends ConsoleCommand {
     }
 
     static {
-        field_o = new osa(0, 0);
+        field_o = new MonochromeRowCacheEntry(0, 0);
         field_p = "Rated game";
     }
 }

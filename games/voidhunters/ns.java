@@ -17,7 +17,7 @@ final class ns implements dja {
         return (SerializableGameState) ((Object) new SettingsInstance());
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < 100) {
           field_a = (String) null;
           field_a = null;

@@ -3,9 +3,9 @@
  */
 final class atb {
     static int field_d;
-    static phb[] field_b;
+    static Sprite[] field_b;
     private pfb field_c;
-    private pf field_a;
+    private GpuToolkit field_a;
     private d field_e;
 
     public static void a(boolean param0) {
@@ -19,25 +19,25 @@ final class atb {
 
     final eb a(int param0, int param1) {
         int stackIn_8_0 = 0;
-        pf stackIn_14_0 = null;
+        GpuToolkit stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
-        pf stackIn_20_0 = null;
+        GpuToolkit stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         boolean stackIn_21_2 = false;
-        pf stackIn_26_0 = null;
+        GpuToolkit stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         boolean stackIn_27_2 = false;
-        pf stackIn_37_0 = null;
+        GpuToolkit stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         boolean stackIn_38_2 = false;
-        pf stackIn_43_0 = null;
+        GpuToolkit stackIn_43_0 = null;
         int stackIn_43_1 = 0;
         boolean stackIn_44_2 = false;
-        pf stackIn_49_0 = null;
+        GpuToolkit stackIn_49_0 = null;
         int stackIn_49_1 = 0;
         boolean stackIn_50_2 = false;
-        pf stackIn_56_0;
+        GpuToolkit stackIn_56_0;
         int stackIn_56_1;
         int stackIn_56_2;
         float[] stackIn_56_3;
@@ -83,7 +83,7 @@ final class atb {
             stackIn_14_0 = this.field_a;
             stackIn_14_1 = var6;
             stackIn_15_2 = (var5.field_j == 0) ? false : true;
-            var11 = ((pf) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, var6, (byte) -84, var23);
+            var11 = ((GpuToolkit) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, var6, (byte) -84, var23);
             if (param0 != -1) {
               this.a(100, 49);
             }
@@ -96,7 +96,7 @@ final class atb {
             stackIn_20_0 = this.field_a;
             stackIn_20_1 = var6;
             stackIn_21_2 = (var5.field_j == 0) ? false : true;
-            var13 = ((pf) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2, var6, (byte) -84, var24);
+            var13 = ((GpuToolkit) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2, var6, (byte) -84, var24);
             if (param0 != -1) {
               this.a(100, 49);
             }
@@ -108,7 +108,7 @@ final class atb {
           stackIn_26_0 = this.field_a;
           stackIn_26_1 = var6;
           stackIn_27_2 = (var5.field_j == 0) ? false : true;
-          var15 = ((pf) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2, var6, (byte) -84, var25);
+          var15 = ((GpuToolkit) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2, var6, (byte) -84, var25);
           var4 = var15;
           if (param0 != -1) {
             this.a(100, 49);
@@ -125,7 +125,7 @@ final class atb {
           stackIn_56_2 = var6;
           stackIn_56_3 = var9;
           stackIn_57_4 = (var5.field_j == 0) ? false : true;
-          var22 = ((pf) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, param0 + 0, qua.field_d);
+          var22 = ((GpuToolkit) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, param0 + 0, qua.field_d);
           if (param0 != -1) {
             this.a(100, 49);
           }
@@ -138,7 +138,7 @@ final class atb {
           stackIn_37_0 = this.field_a;
           stackIn_37_1 = var6;
           stackIn_38_2 = (var5.field_j == 0) ? false : true;
-          var17 = ((pf) (Object) stackIn_37_0).a(stackIn_37_1, stackIn_38_2, var6, (byte) -84, var26);
+          var17 = ((GpuToolkit) (Object) stackIn_37_0).a(stackIn_37_1, stackIn_38_2, var6, (byte) -84, var26);
           if (param0 != -1) {
             this.a(100, 49);
           }
@@ -151,7 +151,7 @@ final class atb {
           stackIn_43_0 = this.field_a;
           stackIn_43_1 = var6;
           stackIn_44_2 = (var5.field_j == 0) ? false : true;
-          var19 = ((pf) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2, var6, (byte) -84, var27);
+          var19 = ((GpuToolkit) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2, var6, (byte) -84, var27);
           if (param0 != -1) {
             this.a(100, 49);
           }
@@ -163,7 +163,7 @@ final class atb {
         stackIn_49_0 = this.field_a;
         stackIn_49_1 = var6;
         stackIn_50_2 = (var5.field_j == 0) ? false : true;
-        var21 = ((pf) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_50_2, var6, (byte) -84, var28);
+        var21 = ((GpuToolkit) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_50_2, var6, (byte) -84, var28);
         if (param0 != -1) {
           this.a(100, 49);
         }
@@ -177,11 +177,11 @@ final class atb {
           this.field_c.a(true, 5);
           return;
         }
-        this.field_a = (pf) null;
+        this.field_a = (GpuToolkit) null;
         this.field_c.a(true, 5);
     }
 
-    atb(pf param0, d param1) {
+    atb(GpuToolkit param0, d param1) {
         this.field_c = new pfb(256);
         try {
           this.field_e = param1;

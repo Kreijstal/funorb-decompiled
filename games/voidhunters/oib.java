@@ -7,7 +7,7 @@ abstract class oib {
     static int field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 <= 119) {
           return;

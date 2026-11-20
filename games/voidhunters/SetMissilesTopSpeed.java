@@ -34,7 +34,7 @@ final class SetMissilesTopSpeed extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         int var1 = -45 % ((-8 - param0) / 57);
     }

@@ -5,7 +5,7 @@ final class SetUseDetailLines extends ConsoleCommand {
     static int field_o;
     static pr field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           return;
         }

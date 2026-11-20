@@ -91,7 +91,7 @@ final class kea {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         int var1 = 35 / ((param0 - 40) / 63);
     }

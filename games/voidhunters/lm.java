@@ -5,7 +5,7 @@ final class lm {
     static dja field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -116 % ((param0 - 62) / 49);
         field_b = null;
         field_a = null;

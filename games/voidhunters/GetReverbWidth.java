@@ -48,7 +48,7 @@ final class GetReverbWidth extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 9839) {
           field_o = (bs) null;

@@ -5,7 +5,7 @@ final class wf {
     static int field_e;
     private int field_c;
     static int field_d;
-    static phb field_a;
+    static Sprite field_a;
     private ae field_b;
 
     private final void b(int param0, byte param1) {
@@ -83,7 +83,7 @@ final class wf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 3) {
           return;
         }
@@ -369,7 +369,7 @@ final class wf {
 
     final void a(boolean param0, int param1, int param2) {
         if (param1 != 320) {
-          field_a = (phb) null;
+          field_a = (Sprite) null;
         }
         if (this.field_b.field_j != -1 &&
           this.a(this.field_b.field_j, 117)) {
@@ -626,7 +626,7 @@ final class wf {
                                                 } else {
                                                   if (var10_int == 12) {
                                                     if (this.field_b.e((byte) -82)) {
-                                                      VoidHunters.a(MissionList.b((byte) -123), param0 - 20);
+                                                      VoidHunters.quitToWebsite(MissionList.b((byte) -123), param0 - 20);
                                                     }
                                                   } else {
                                                     if (var10_int == 22) {

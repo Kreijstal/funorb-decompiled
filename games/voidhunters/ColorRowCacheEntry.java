@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dcb extends IntrusiveNode {
+final class ColorRowCacheEntry extends IntrusiveNode {
     int field_e;
     int field_g;
     static int field_d;
     static int field_f;
     private static String field_z;
 
-    dcb(int param0, int param1) {
+    ColorRowCacheEntry(int param0, int param1) {
         this.field_e = param1;
         this.field_g = param0;
     }

@@ -18,7 +18,7 @@ final class jja implements dja {
         return (SerializableGameState[]) ((Object) new pwa[param1]);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 > -98) {
           field_b = (String) null;
           field_b = null;

@@ -25,14 +25,14 @@ final class sb extends ora implements eb {
           mj.field_f == this.field_a) {
           var9 = this.field_d.field_zc;
           var10 = this.field_h.LockRect(0, param6, param0, param2, param1, 0, var9);
-          if (jagdx.hea.b(var10, (byte) 58)) {
+          if (jagdx.HResult.succeeded(var10, (byte) 58)) {
             var11 = var9.getRowPitch();
             if (var11 == param2 * 4 &&
               param4 == param2) {
-              var9.a(param5, param3, 0, param1 * param2);
+              var9.writeInts(param5, param3, 0, param1 * param2);
             } else {
               for (var12 = 0; param1 > var12; var12++) {
-                var9.a(param5, var12 * param4 + param3, var12 * var11, param2);
+                var9.writeInts(param5, var12 * param4 + param3, var12 * var11, param2);
               }
             }
             this.field_h.UnlockRect(0);
@@ -46,11 +46,11 @@ final class sb extends ora implements eb {
         super.a(param0, param1);
     }
 
-    sb(nla param0, kb param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    sb(Direct3DToolkit param0, kb param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(null, null, null, false, param2 * param3);
         int var12 = 0;
         Object stackIn_3_0;
-        nla stackIn_3_1;
+        Direct3DToolkit stackIn_3_1;
         kb stackIn_3_2;
         mj stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -61,7 +61,7 @@ final class sb extends ora implements eb {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (nla) (param0);
+        stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = (kb) (param1);
         stackIn_3_3 = mj.field_f;
         if (param4) {
@@ -82,13 +82,13 @@ final class sb extends ora implements eb {
           this.field_j = GetSalvoaim.a(param3, (byte) -99);
         }
         if (!param4) {
-          this.field_h = this.field_d.field_Mc.a(this.field_i, this.field_j, 1, 0, nla.a(this.field_c, mj.field_f, -122), 1);
+          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 1, 0, Direct3DToolkit.a(this.field_c, mj.field_f, -122), 1);
         } else {
-          this.field_h = this.field_d.field_Mc.a(this.field_i, this.field_j, 0, 1024, nla.a(this.field_c, mj.field_f, -95), 1);
+          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 0, 1024, Direct3DToolkit.a(this.field_c, mj.field_f, -95), 1);
         }
         var13 = this.field_d.field_zc;
         var10 = this.field_h.LockRect(0, 0, 0, param2, param3, 0, var13);
-        if (jagdx.hea.b(var10, (byte) 100)) {
+        if (jagdx.HResult.succeeded(var10, (byte) 100)) {
           if (param7 == 0) {
             param7 = param2;
           }
@@ -97,17 +97,17 @@ final class sb extends ora implements eb {
           var11 = var13.getRowPitch();
           if (param2 == var11 &&
             param7 == param2) {
-            var13.a(param5, param6, 0, param2 * param3);
+            var13.writeBytes(param5, param6, 0, param2 * param3);
           } else {
             for (var12 = 0; param3 > var12; var12++) {
-              var13.a(param5, param6 + param7 * var12, var12 * var11, param2);
+              var13.writeBytes(param5, param6 + param7 * var12, var12 * var11, param2);
             }
           }
           this.field_h.UnlockRect(0);
         }
     }
 
-    sb(nla param0, kb param1, mj param2, int param3, int param4) {
+    sb(Direct3DToolkit param0, kb param1, mj param2, int param3, int param4) {
         super(param0, param1, param2, false, param3 * param4);
         if (this.field_d.field_Nc) {
           this.field_j = param4;
@@ -116,7 +116,7 @@ final class sb extends ora implements eb {
           this.field_i = GetSalvoaim.a(param3, (byte) -113);
           this.field_j = GetSalvoaim.a(param4, (byte) -97);
         }
-        this.field_h = this.field_d.field_Mc.a(param3, param4, 1, 0, nla.a(this.field_c, this.field_a, -122), 1);
+        this.field_h = this.field_d.field_Mc.createTexture(param3, param4, 1, 0, Direct3DToolkit.a(this.field_c, this.field_a, -122), 1);
     }
 
     final jagdx.IDirect3DBaseTexture c(int param0) {
@@ -163,11 +163,11 @@ final class sb extends ora implements eb {
         return this.field_j;
     }
 
-    sb(nla param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    sb(Direct3DToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(null, null, null, false, param2 * param1);
         int var11 = 0;
         Object stackIn_3_0;
-        nla stackIn_3_1;
+        Direct3DToolkit stackIn_3_1;
         kb stackIn_3_2;
         mj stackIn_3_3;
         int stackIn_4_4 = 0;
@@ -178,7 +178,7 @@ final class sb extends ora implements eb {
         int stackIn_4_4Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
-        stackIn_3_1 = (nla) (param0);
+        stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = qua.field_d;
         stackIn_3_3 = mj.field_f;
         if (param3) {
@@ -199,23 +199,23 @@ final class sb extends ora implements eb {
           this.field_j = param2;
         }
         if (!param3) {
-          this.field_h = this.field_d.field_Mc.a(this.field_i, this.field_j, 1, 0, 21, 1);
+          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 1, 0, 21, 1);
         } else {
-          this.field_h = this.field_d.field_Mc.a(this.field_i, this.field_j, 0, 1024, 21, 1);
+          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 0, 1024, 21, 1);
         }
         var12 = this.field_d.field_zc;
         var9 = this.field_h.LockRect(0, 0, 0, param1, param2, 0, var12);
-        if (jagdx.hea.b(var9, (byte) 118)) {
+        if (jagdx.HResult.succeeded(var9, (byte) 118)) {
           if (0 == param6) {
             param6 = param1;
           }
           var10 = var12.getRowPitch();
           if (var10 == param1 * 4 &&
             param1 == param6) {
-            var12.a(param4, param5, 0, param2 * param1);
+            var12.writeInts(param4, param5, 0, param2 * param1);
           } else {
             for (var11 = 0; var11 < param2; var11++) {
-              var12.a(param4, param5 + var11 * param6, var10 * var11, param1);
+              var12.writeInts(param4, param5 + var11 * param6, var10 * var11, param1);
             }
           }
           this.field_h.UnlockRect(0);

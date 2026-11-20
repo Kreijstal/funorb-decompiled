@@ -7,7 +7,7 @@ final class daa {
     private int[] field_e;
     boolean field_i;
     private float[] field_h;
-    private sob field_f;
+    private SoftwareToolkit field_f;
     int field_g;
     private boolean field_l;
     private co field_c;
@@ -2518,7 +2518,7 @@ final class daa {
         return this.field_k[0] / this.field_m;
     }
 
-    daa(sob param0, co param1) {
+    daa(SoftwareToolkit param0, co param1) {
         this.field_k = new int[4096];
         this.field_i = false;
         this.field_l = false;

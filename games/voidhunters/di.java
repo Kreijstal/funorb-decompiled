@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di extends le {
+final class di extends TextureOperation {
     private boolean field_n;
     private boolean field_o;
     static String field_k;
@@ -28,15 +28,15 @@ final class di extends le {
         this.field_o = true;
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = VoidHunters.field_G;
-        int[] var7 = this.field_f.a((byte) -90, param0);
+        int[] var7 = this.field_f.getRow((byte) -90, param0);
         int[] var3 = var7;
         if (!this.field_f.field_e) {
         } else {
-          var4 = this.a(0, !this.field_n ? param0 : -param0 + wf.field_d, 255);
+          var4 = this.getInputMonochromeRow(0, !this.field_n ? param0 : -param0 + wf.field_d, 255);
           if (!this.field_o) {
             cua.a(var4, 0, var7, 0, hob.field_d);
           } else {
@@ -51,7 +51,7 @@ final class di extends le {
         return var3;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_8_1 = false;
@@ -80,7 +80,7 @@ final class di extends le {
             }
           }
           if (param1 >= -60) {
-            this.a(-9, true);
+            this.getMonochromeRow(-9, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ final class di extends le {
         }
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int stackIn_6_1 = 0;
         int stackIn_6_2 = 0;
         int stackIn_7_3 = 0;
@@ -125,7 +125,7 @@ final class di extends le {
         if (param0 != 255) {
           di.e((byte) -54);
         }
-        var21 = this.field_d.a(param1, (byte) -113);
+        var21 = this.field_d.getRow(param1, (byte) -113);
         var16 = var21;
         var13 = var16;
         var3 = var13;
@@ -137,7 +137,7 @@ final class di extends le {
           } else {
             stackIn_7_3 = param1;
           }
-          var26 = this.a((byte) stackIn_6_1, stackIn_6_2, stackIn_7_3);
+          var26 = this.getInputColorRow((byte) stackIn_6_1, stackIn_6_2, stackIn_7_3);
           var22 = var26[0];
           var17 = var22;
           var5 = var17;

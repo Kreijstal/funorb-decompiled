@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends le {
+final class il extends TextureOperation {
     private int field_l;
     private int field_i;
     private int field_k;
     private int field_j;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -34,7 +34,7 @@ final class il extends le {
             this.field_l = param2.readUnsignedShort(1869);
           }
           if (param1 > -60) {
-            this.a(-126, false);
+            this.getMonochromeRow(-126, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,7 +188,7 @@ final class il extends le {
         this.field_j = 0;
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var4 = 0;
         int[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
@@ -209,7 +209,7 @@ final class il extends le {
         if (!param1) {
           return (int[]) null;
         }
-        var15 = this.field_f.a((byte) 16, param0);
+        var15 = this.field_f.getRow((byte) 16, param0);
         var3 = var15;
         if (this.field_f.field_e) {
           for (var4 = 0; var4 < hob.field_d; var4++) {

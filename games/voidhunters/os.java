@@ -4,7 +4,7 @@
 class os extends gea implements oo {
     private boolean field_V;
     private ttb field_R;
-    private no field_T;
+    private BitmapFont field_T;
     private boolean field_S;
     private boolean field_W;
     private boolean field_U;
@@ -36,7 +36,7 @@ class os extends gea implements oo {
         this.field_V = true;
     }
 
-    os(ida param0, no param1, String param2, boolean param3, boolean param4) {
+    os(ida param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new nna((os) null, param1, param2), 77, 10, 10);
         try {
           this.field_W = param3 ? true : false;
@@ -163,7 +163,7 @@ class os extends gea implements oo {
               if (this.field_W) {
                 stackIn_15_2 = SetSpecialOrderBoxHeight.field_p;
               } else {
-                stackIn_15_2 = vab.field_a;
+                stackIn_15_2 = ArbProgram.field_a;
               }
               ((nna) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, -1);
             }

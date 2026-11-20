@@ -388,7 +388,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         this.teamId = param0;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != -2684) {
           field_c = (pr) null;

@@ -5,7 +5,7 @@ class bob implements wwa, at {
     private int field_j;
     int field_f;
     int field_a;
-    no field_d;
+    BitmapFont field_d;
     int field_h;
     private boolean field_g;
     int field_i;
@@ -190,7 +190,7 @@ class bob implements wwa, at {
         }
     }
 
-    bob(no param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    bob(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -287,7 +287,7 @@ class bob implements wwa, at {
         try {
           this.a(param4, 3);
           if (param5 != -1) {
-            bob.b(38);
+            bob.clearSharedReferences(38);
           }
           stackIn_3_0 = param4.field_d.a(param1 - this.b(-3, param2, param4), -23381, param0 - this.a(0, param3, param4));
           return stackIn_3_0;
@@ -579,7 +579,7 @@ class bob implements wwa, at {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         field_l = null;
         if (param0 != 22540) {
@@ -653,7 +653,7 @@ class bob implements wwa, at {
     protected bob() {
     }
 
-    bob(no param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    bob(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_h = param9;
           this.field_j = param6;

@@ -344,7 +344,7 @@ final class vcb extends oda implements oo {
         }
     }
 
-    public static void j(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -7) {
           field_E = (byte[][]) null;
         }
@@ -465,7 +465,7 @@ final class vcb extends oda implements oo {
           var7 = var5_int + var6;
           var8 = new String[var7];
           if (param0 != 0) {
-            vcb.j((byte) 98);
+            vcb.clearSharedReferences((byte) 98);
           }
           var21 = new char[var7];
           var19 = var21;
@@ -633,7 +633,7 @@ final class vcb extends oda implements oo {
     final static void f(int param0) {
         int var1 = 0;
         if (param0 != 32) {
-          vcb.j((byte) -101);
+          vcb.clearSharedReferences((byte) -101);
         }
         if (GetMutatorVotes.field_p < 224) {
           var1 = GetMutatorVotes.field_p % 32;

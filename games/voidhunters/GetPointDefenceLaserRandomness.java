@@ -38,7 +38,7 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         field_q = null;
         if (!param0) {
@@ -54,7 +54,7 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
           return GetBombletSprayPushMultiplier.field_p.b(4);
         }
         if (param0 != 52) {
-          GetPointDefenceLaserRandomness.b(true);
+          GetPointDefenceLaserRandomness.clearSharedReferences(true);
           if (dw.field_c == SetShipTeamAction.field_b) {
             return GetBombletSprayPushMultiplier.field_p.b(4);
           }

@@ -132,7 +132,7 @@ final class ota {
         return var3;
     }
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_g = null;
         field_a = null;
         field_i = null;

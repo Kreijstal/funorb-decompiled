@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class moa extends le {
+final class moa extends TextureOperation {
     private int field_k;
     static String field_n;
     private int[] field_i;
@@ -9,7 +9,7 @@ final class moa extends le {
     private int field_m;
     private int field_l;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int stackIn_19_0 = 0;
         int stackIn_19_1 = 0;
         int[] var3;
@@ -28,7 +28,7 @@ final class moa extends le {
         int var9Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var10 = VoidHunters.field_G;
-        var13 = this.field_f.a((byte) 121, param0);
+        var13 = this.field_f.getRow((byte) 121, param0);
         var12 = var13;
         var3 = var12;
         if (this.field_f.field_e) {
@@ -123,14 +123,14 @@ final class moa extends le {
         this.field_i[this.field_m] = this.field_i[0] + 4096;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_n = null;
         if (param0 != -120) {
           field_n = (String) null;
         }
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -155,7 +155,7 @@ final class moa extends le {
           }
           if (param1 > -60) {
             var6 = (PacketBuffer) null;
-            this.a(61, -61, (PacketBuffer) null);
+            this.decodeParameter(61, -61, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,7 +190,7 @@ final class moa extends le {
         bqa.field_d.a(438 * var3 / var2 + (var1 + 202), -126, 438, 0, -4 + (-120 + dma.field_j));
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         if (param0 > -35) {
           return;
         }

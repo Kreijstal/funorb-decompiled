@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetPedrosRepairMode extends ConsoleCommand {
-    static phb[] field_q;
+    static Sprite[] field_q;
     static int field_p;
     static int field_o;
 

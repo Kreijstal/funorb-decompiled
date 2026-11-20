@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoadBlackboxRecording extends ConsoleCommand {
-    static phb[] field_o;
+    static Sprite[] field_o;
     static String field_p;
     static int field_q;
     static String field_r;
@@ -72,7 +72,7 @@ final class LoadBlackboxRecording extends ConsoleCommand {
           return SetCountermeasureLauncherAimarc.field_q;
         }
         if (param0 < 54) {
-          field_o = (phb[]) null;
+          field_o = (Sprite[]) null;
           if (!GetBombletSprayPushMultiplier.field_p.a(4)) {
             return SetCountermeasureLauncherAimarc.field_q;
           }

@@ -4,7 +4,7 @@
 final class qb implements dja {
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 109) {
           return;
         }
@@ -18,7 +18,7 @@ final class qb implements dja {
 
     public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          qb.a(-6);
+          qb.clearSharedReferences(-6);
           return (SerializableGameState[]) ((Object) new CarouselCommongameInfo[param1]);
         }
         return (SerializableGameState[]) ((Object) new CarouselCommongameInfo[param1]);

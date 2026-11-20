@@ -22,7 +22,7 @@ final class teb extends mfb {
         return SetLaserRandomness.field_o;
     }
 
-    public static void l(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 8192) {
           return;
         }

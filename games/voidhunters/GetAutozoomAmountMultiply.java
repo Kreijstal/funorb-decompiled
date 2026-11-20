@@ -5,7 +5,7 @@ final class GetAutozoomAmountMultiply extends ConsoleCommand {
     static String field_p;
     static ona field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 >= -101) {
           return;

@@ -62,7 +62,7 @@ final class RoundResult implements DiffableState {
         RoundResult var6 = null;
         try {
           if (param0 < 54) {
-            RoundResult.a((byte) -62);
+            RoundResult.clearSharedReferences((byte) -62);
           }
           var5 = (RoundResult) (param1);
           var6 = var5;
@@ -166,7 +166,7 @@ final class RoundResult implements DiffableState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 > -27) {
           return;

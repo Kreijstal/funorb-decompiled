@@ -83,7 +83,7 @@ final class fma extends mfb {
           tb.field_a.b(-561, gmb.field_c);
           SetGrapplingHookMinLength.a(5);
           if (param0 != 8611) {
-            fma.i((byte) -29);
+            fma.clearSharedReferences((byte) -29);
             return;
           }
           return;
@@ -97,7 +97,7 @@ final class fma extends mfb {
         if (param0 == 8611) {
           return;
         }
-        fma.i((byte) -29);
+        fma.clearSharedReferences((byte) -29);
     }
 
     final int a(int param0) {
@@ -116,7 +116,7 @@ final class fma extends mfb {
     fma() {
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -22) {
           return;
         }

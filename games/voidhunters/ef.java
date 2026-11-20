@@ -209,7 +209,7 @@ final class ef extends mc {
         this.field_C = this.field_r;
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_y = null;
         field_A = null;
         int var1 = 124 % ((-23 - param0) / 44);

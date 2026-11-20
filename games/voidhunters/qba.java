@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qba extends le {
+final class qba extends TextureOperation {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 20382) {
           return;
@@ -9,7 +9,7 @@ final class qba extends le {
         fnb.a(param4, param3, param1, false, param2, 256);
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -22,7 +22,7 @@ final class qba extends le {
             this.field_g = stackIn_5_1;
           }
           if (param1 > -60) {
-            this.a(30, true);
+            this.getMonochromeRow(30, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -43,7 +43,7 @@ final class qba extends le {
         super(3, false);
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var7 = 0;
         int[] var3;
         int var8;
@@ -55,11 +55,11 @@ final class qba extends le {
         if (!param1) {
           return (int[]) null;
         }
-        var3 = this.field_f.a((byte) -5, param0);
+        var3 = this.field_f.getRow((byte) -5, param0);
         if (this.field_f.field_e) {
-          var14 = this.a(0, param0, 255);
-          var15 = this.a(1, param0, 255);
-          var13 = this.a(2, param0, 255);
+          var14 = this.getInputMonochromeRow(0, param0, 255);
+          var15 = this.getInputMonochromeRow(1, param0, 255);
+          var13 = this.getInputMonochromeRow(2, param0, 255);
           for (var7 = 0; var7 < hob.field_d; var7++) {
             var8 = var13[var7];
             if (var8 != 4096) {
@@ -76,7 +76,7 @@ final class qba extends le {
         return var3;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int var16 = 0;
         int[][] var3;
         int[] var7;
@@ -100,16 +100,16 @@ final class qba extends le {
         int[] var56Lifetime1;
         var19 = VoidHunters.field_G;
         if (param0 != 255) {
-          this.a(86, 48);
+          this.getColorRow(86, 48);
         }
-        var31 = this.field_d.a(param1, (byte) -99);
+        var31 = this.field_d.getRow(param1, (byte) -99);
         var21 = var31;
         var20 = var21;
         var3 = var20;
         if (this.field_d.field_g) {
-          var52 = this.a(2, param1, param0 ^ 0);
-          var50 = this.a((byte) 79, 0, param1);
-          var51 = this.a((byte) 31, 1, param1);
+          var52 = this.getInputMonochromeRow(2, param1, param0 ^ 0);
+          var50 = this.getInputColorRow((byte) 79, 0, param1);
+          var51 = this.getInputColorRow((byte) 31, 1, param1);
           var7 = var31[0];
           var8 = var31[1];
           var9 = var31[2];

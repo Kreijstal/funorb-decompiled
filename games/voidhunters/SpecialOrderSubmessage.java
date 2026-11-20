@@ -133,7 +133,7 @@ final class SpecialOrderSubmessage implements DiffableState {
         try {
           var2_int = param0.length;
           if (param1 != 62) {
-            SpecialOrderSubmessage.a(-111);
+            SpecialOrderSubmessage.clearSharedReferences(-111);
           }
           for (var3 = 1; var2_int > var3; var3++) {
             var4 = param0[var3];
@@ -228,7 +228,7 @@ final class SpecialOrderSubmessage implements DiffableState {
     public SpecialOrderSubmessage() {
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         int var1 = -65 % ((-23 - param0) / 51);
     }

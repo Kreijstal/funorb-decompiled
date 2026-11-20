@@ -127,7 +127,7 @@ final class CarouselCommongameInfo implements DiffableState {
             this.field_j = (String) null;
           }
           var3.field_i = this.field_i;
-          var3.field_a = (tja[]) (sqb.a(var3.field_a, this.field_a, 1, gva.field_a, false));
+          var3.field_a = (tja[]) (SpriteDimensions.a(var3.field_a, this.field_a, 1, gva.field_a, false));
           this.b(param1, -128);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -322,7 +322,7 @@ final class CarouselCommongameInfo implements DiffableState {
 
     private final void a(byte param0, IsaacPacketBuffer param1) {
         try {
-          if (!osa.field_e) {
+          if (!MonochromeRowCacheEntry.field_e) {
             this.a(param1, (byte) -19);
           } else {
             this.b(param1, (byte) 42);
@@ -530,7 +530,7 @@ final class CarouselCommongameInfo implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!osa.field_e) {
+          if (!MonochromeRowCacheEntry.field_e) {
             this.c(param0, (byte) 43);
           } else {
             this.a(~param1, param0);
@@ -774,7 +774,7 @@ final class CarouselCommongameInfo implements DiffableState {
         while ((1 + this.field_i) % this.field_a.length != var5) {
           var6 = (var5 + 1) % this.field_a.length;
           if (tga.field_N) {
-            ConsoleValue.a((byte) 68);
+            ConsoleValue.beginReferenceTracking((byte) 68);
           }
           this.field_a[var5].copyTo((byte) 77, this.field_a[var6]);
           this.a(var5, var6, -121);

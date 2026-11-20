@@ -176,7 +176,7 @@ final class vla extends dqa implements en, oo {
         RuntimeException decompiledCaughtException = null;
         vva var6 = null;
         RuntimeException var6_ref = null;
-        no var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         khb var9 = null;
         sca var12 = null;
@@ -210,7 +210,7 @@ final class vla extends dqa implements en, oo {
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = vab.field_a;
+              stackIn_18_3 = ArbProgram.field_a;
             }
             this.field_A = new htb(stackIn_18_3, (sba) null);
             if (this.field_F) {
@@ -320,7 +320,7 @@ final class vla extends dqa implements en, oo {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 3) {
           return;
         }
@@ -344,7 +344,7 @@ final class vla extends dqa implements en, oo {
           var2_int = param1.length();
           var3 = 0;
           if (param0 <= 105) {
-            vla.e(30);
+            vla.clearSharedReferences(30);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var3 = aea.a(-125, param1.charAt(var4)) + (-var3 + (var3 << 5));

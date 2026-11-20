@@ -7,7 +7,7 @@ final class GetLagOut extends ConsoleCommand {
     }
 
     final static void a(int param0, int param1) {
-        rt.c(1);
+        ColorRowCache.c(1);
         if (param1 != 15877) {
           GetLagOut.a(50, -58);
         }

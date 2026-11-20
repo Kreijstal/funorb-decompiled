@@ -15,7 +15,7 @@ final class rcb extends dqa implements oo {
         if (param1 != 0) {
           return;
         }
-        no var5 = SetShipToShipRamDamage.field_o;
+        BitmapFont var5 = SetShipToShipRamDamage.field_o;
         if (null != this.field_w) {
           var5.a(SetShipTeamAction.field_a, this.field_g + param0, this.field_r + param3, this.field_h, 20, 16777215, -1, 0, 0, var5.field_k + var5.field_A);
         }

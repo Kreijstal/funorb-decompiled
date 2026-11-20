@@ -42,7 +42,7 @@ final class q {
         this.field_a[param0] = this.field_d.position;
     }
 
-    public static void b() {
+    public static void clearSharedReferences() {
         field_h = null;
     }
 

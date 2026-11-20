@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ngb extends no {
+final class ngb extends BitmapFont {
     private byte[][] field_I;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {

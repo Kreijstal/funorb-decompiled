@@ -19,7 +19,7 @@ final class vfa {
     private int field_g;
     private nka field_a;
     int field_e;
-    static phb[] field_d;
+    static Sprite[] field_d;
     private int field_k;
     boolean field_b;
 
@@ -192,7 +192,7 @@ final class vfa {
         this.field_h = param2;
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_d = null;
         field_p = null;
         if (param0 != 120) {
@@ -258,7 +258,7 @@ final class vfa {
             }
             this.field_k = this.field_m;
             if (param0 != 3908) {
-              field_d = (phb[]) null;
+              field_d = (Sprite[]) null;
             }
             if (Nebula.field_b < this.field_i) {
               this.field_b = false;
@@ -298,7 +298,7 @@ final class vfa {
           }
           this.field_k = this.field_m;
           if (param0 != 3908) {
-            field_d = (phb[]) null;
+            field_d = (Sprite[]) null;
           }
           if (Nebula.field_b >= this.field_i) {
             this.b(-17698);
@@ -344,7 +344,7 @@ final class vfa {
           qn.field_h.a(0, 0, 0);
           return;
         }
-        field_d = (phb[]) null;
+        field_d = (Sprite[]) null;
         qn.field_h.a(0, 0, 0);
     }
 

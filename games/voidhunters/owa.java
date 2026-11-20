@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class owa extends le {
+final class owa extends TextureOperation {
     private short[] field_i;
     static String field_j;
     private int[] field_l;
@@ -9,7 +9,7 @@ final class owa extends le {
     private int[][] field_n;
     private int field_m;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -169,15 +169,15 @@ final class owa extends le {
         this.field_k = new int[]{var9[0] + (var9[0] - var12[0]), var9[1] - var12[1] + var9[1]};
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] var5 = null;
         int var6 = 0;
         int var4 = 0;
         int var7 = VoidHunters.field_G;
-        int[] var8 = this.field_f.a((byte) 6, param0);
+        int[] var8 = this.field_f.getRow((byte) 6, param0);
         int[] var3 = var8;
         if (this.field_f.field_e) {
-          var5 = this.a(0, param0, 255);
+          var5 = this.getInputMonochromeRow(0, param0, 255);
           for (var6 = 0; hob.field_d > var6; var6++) {
             var4 = var5[var6] >> 4;
             if (0 > var4) {
@@ -206,7 +206,7 @@ final class owa extends le {
         return this.field_n[param1];
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         if (this.field_n == null) {
           this.field_n = new int[][]{new int[]{0, 0}, new int[]{4096, 4096}};
         }

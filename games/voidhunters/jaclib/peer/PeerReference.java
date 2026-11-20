@@ -8,7 +8,7 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
     private long peer;
     jaclib.peer.PeerReference b;
 
-    final long a(int param0) {
+    final long release(int param0) {
         long var2 = 0L;
         long var2Lifetime1;
         if (param0 == 0) {
@@ -33,12 +33,12 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
     protected abstract long releasePeer(long param0);
 
     final void setPeer(long param0) {
-        this.a(0);
+        this.release(0);
         this.peer = param0;
     }
 
-    PeerReference(jaclib.peer.Peer param0, jaclib.peer.tqb param1) {
+    PeerReference(jaclib.peer.Peer param0, jaclib.peer.PeerReferenceManager param1) {
         super(param0, param1.b);
-        param1.a(this, 25362);
+        param1.register(this, 25362);
     }
 }

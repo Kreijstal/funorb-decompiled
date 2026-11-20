@@ -18,7 +18,7 @@ final class lh {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 15261) {

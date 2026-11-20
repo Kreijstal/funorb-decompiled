@@ -7,7 +7,7 @@ final class ada implements dja {
     static int[] field_a;
     static pia field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -1) {
           field_a = (int[]) null;
         }
@@ -179,7 +179,7 @@ final class ada implements dja {
         try {
           var4_int = -1;
           if (param2) {
-            ada.a(-17);
+            ada.clearSharedReferences(-17);
           }
           for (var5 = 0; var5 < param3.length; var5++) {
             var6 = param3[var5];

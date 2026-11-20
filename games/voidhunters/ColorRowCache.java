@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rt {
+final class ColorRowCache {
     private int field_a;
     private int field_b;
     private int field_d;
     private IntrusiveDeque field_f;
-    private dcb[] field_e;
+    private ColorRowCacheEntry[] field_e;
     private int[][][] field_c;
     private int field_h;
     boolean field_g;
 
-    final int[][][] b(int param0) {
+    final int[][][] getFullImage(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (this.field_a != this.field_h) {
@@ -26,11 +26,11 @@ final class rt {
         return this.field_c;
     }
 
-    final int[][] a(int param0, byte param1) {
+    final int[][] getRow(int param0, byte param1) {
         boolean stackIn_14_1 = false;
         boolean stackIn_18_1 = false;
-        dcb var3;
-        dcb var4;
+        ColorRowCacheEntry var3;
+        ColorRowCacheEntry var4;
         int var5;
         var5 = VoidHunters.field_G;
         if (param1 > -82) {
@@ -54,11 +54,11 @@ final class rt {
         } else {
           this.field_g = true;
           if (this.field_d < this.field_h) {
-            var3 = new dcb(param0, this.field_d);
+            var3 = new ColorRowCacheEntry(param0, this.field_d);
             this.field_d = this.field_d + 1;
           } else {
-            var4 = (dcb) (this.field_f.last((byte) 120));
-            var3 = new dcb(param0, var4.field_e);
+            var4 = (ColorRowCacheEntry) (this.field_f.last((byte) 120));
+            var3 = new ColorRowCacheEntry(param0, var4.field_e);
             this.field_e[var4.field_g] = null;
             var4.unlink(-3846);
           }
@@ -68,11 +68,11 @@ final class rt {
         return this.field_c[var3.field_e];
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         int var3 = VoidHunters.field_G;
         int var2 = 0;
         if (param0 != 1) {
-          this.a(43, (byte) 61);
+          this.getRow(43, (byte) 61);
         }
         while (this.field_h > var2) {
           this.field_c[var2][0] = null;
@@ -141,7 +141,7 @@ final class rt {
         }
     }
 
-    rt(int param0, int param1, int param2) {
+    ColorRowCache(int param0, int param1, int param2) {
         this.field_b = -1;
         this.field_d = 0;
         this.field_f = new IntrusiveDeque();
@@ -149,7 +149,7 @@ final class rt {
         this.field_h = param0;
         this.field_a = param1;
         this.field_c = new int[this.field_h][3][param2];
-        this.field_e = new dcb[this.field_a];
+        this.field_e = new ColorRowCacheEntry[this.field_a];
     }
 
     static {

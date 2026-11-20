@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class koa extends le {
+final class koa extends TextureOperation {
     private int field_l;
     private int field_i;
     private int field_j;
     static String field_k;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         PacketBuffer var6 = null;
@@ -21,7 +21,7 @@ final class koa extends le {
         try {
           if (param1 >= -60) {
             var6 = (PacketBuffer) null;
-            this.a(61, -46, (PacketBuffer) null);
+            this.decodeParameter(61, -46, (PacketBuffer) null);
           }
           var4_int = param0;
           if (var4_int == 0) {
@@ -58,17 +58,17 @@ final class koa extends le {
         field_k = null;
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         if (!param1) {
           return (int[]) null;
         }
-        int[] var7 = this.field_f.a((byte) 117, param0);
+        int[] var7 = this.field_f.getRow((byte) 117, param0);
         int[] var3 = var7;
         if (this.field_f.field_e) {
-          var4 = this.a(0, param0, 255);
+          var4 = this.getInputMonochromeRow(0, param0, 255);
           for (var5 = 0; var5 < hob.field_d; var5++) {
             var7[var5] = (var4[var5] * this.field_i >> 12) + this.field_l;
           }
@@ -76,7 +76,7 @@ final class koa extends le {
         return var3;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[][] var28 = null;
         int[] var29 = null;
         int[] var30 = null;
@@ -89,12 +89,12 @@ final class koa extends le {
         if (param0 != 255) {
           this.field_l = 63;
         }
-        int[][] var20 = this.field_d.a(param1, (byte) -126);
+        int[][] var20 = this.field_d.getRow(param1, (byte) -126);
         int[][] var15 = var20;
         int[][] var13 = var15;
         int[][] var3 = var13;
         if (this.field_d.field_g) {
-          var28 = this.a((byte) 65, 0, param1);
+          var28 = this.getInputColorRow((byte) 65, 0, param1);
           var29 = var28[0];
           var30 = var28[1];
           var31 = var28[2];
@@ -117,10 +117,10 @@ final class koa extends le {
         this.field_l = 1024;
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         this.field_i = -this.field_l + this.field_j;
         if (param0 > -35) {
-          this.a(3, false);
+          this.getMonochromeRow(3, false);
         }
     }
 

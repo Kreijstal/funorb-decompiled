@@ -31,14 +31,14 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
         aaa.field_b.e();
     }
 
-    final static phb[] a(boolean param0, int param1) {
-        phb[] var3 = new phb[9];
-        phb[] var2 = var3;
+    final static Sprite[] a(boolean param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         if (param0) {
           var3[4] = SetMaxShipSize.a(param1, (byte) -113, 64);
           return var2;
         }
-        return (phb[]) null;
+        return (Sprite[]) null;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

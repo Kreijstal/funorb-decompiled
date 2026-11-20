@@ -38,25 +38,25 @@ final class ii implements d {
         return this.field_b[param1];
     }
 
-    private final lra b(int param0, int param1) {
+    private final ProceduralTexture b(int param0, int param1) {
         DualLinkNode var3 = this.field_f.a((long)param1, 77);
         if (param0 != -2) {
           this.a(-32, (byte) 119);
         }
         if (var3 != null) {
-          return (lra) (var3);
+          return (ProceduralTexture) (var3);
         }
         byte[] var4 = this.field_c.c((byte) 9, param1);
         if (var4 == null) {
           return null;
         }
-        lra var5 = new lra(new PacketBuffer(var4));
+        ProceduralTexture var5 = new ProceduralTexture(new PacketBuffer(var4));
         this.field_f.a((long)param1, (byte) -22, var5);
         return var5;
     }
 
     public final boolean a(int param0, byte param1) {
-        lra var3;
+        ProceduralTexture var3;
         boolean stackIn_6_0 = false;
         var3 = this.b(-2, param0);
         if (param1 > -30) {

@@ -4,7 +4,7 @@
 final class GetMessageMax extends ConsoleCommand {
     static int[] field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         int var1 = 7 / ((param0 + 46) / 57);
     }

@@ -7,7 +7,7 @@ final class whb implements DiffableState {
     static String field_d;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         field_c = null;
         if (param0 > -110) {
@@ -128,7 +128,7 @@ final class whb implements DiffableState {
         var4 = VoidHunters.field_G;
         try {
           if (param1) {
-            whb.a(80);
+            whb.clearSharedReferences(80);
           }
           if (!kv.readBoolean(param1, param0)) {
             this.field_b = null;

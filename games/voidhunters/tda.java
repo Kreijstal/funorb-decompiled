@@ -204,7 +204,7 @@ final class tda extends iw implements oo {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_M = null;
         if (param0 != 29914) {
           field_M = (String) null;

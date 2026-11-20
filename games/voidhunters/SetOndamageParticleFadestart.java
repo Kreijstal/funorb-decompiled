@@ -39,7 +39,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
     }
 
     final static void a(asb param0, asb param1, asb param2, int param3) {
-        phb var17 = null;
+        Sprite var17 = null;
         caa[] var5 = null;
         caa[][] var6 = null;
         int[][] var19 = null;
@@ -47,10 +47,10 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
         int[][] var7 = null;
         caa[] var14 = null;
         int var11_int = 0;
-        phb var15 = null;
-        phb var18 = null;
-        phb var11 = null;
-        phb var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = VoidHunters.field_G;
@@ -62,10 +62,10 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           wf.field_a = SetSniperCannonProjectiles.a(param1, "jagex_logo_grey", "commonui", true);
           GetBombletSprayProjectileLife.field_o = SetGrapplingHookRopeBreakLength.a(param1, true, "commonui", "button");
           ps.field_a = hma.a("commonui", -90, param1, "validation");
-          SetTorpedoProjectileLife.field_o = (no) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo12"));
-          SetShipToShipRamDamage.field_o = (no) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14"));
-          GetBoostersCooldown.field_r = (no) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14bold"));
-          var17 = new phb(param0.a("", true, "button.gif"), (java.awt.Component) ((Object) igb.field_a));
+          SetTorpedoProjectileLife.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo12"));
+          SetShipToShipRamDamage.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14"));
+          GetBoostersCooldown.field_r = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14bold"));
+          var17 = new Sprite(param0.a("", true, "button.gif"), (java.awt.Component) ((Object) igb.field_a));
           ef.a("dropdown", "commonui", param3 ^ -60, param1);
           var5 = GetExplosionProjectileDamage.a(-124, "commonui", "screen_options", param1);
           SetUseBackground.field_p = new caa[4];
@@ -94,18 +94,18 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           SetOndamageParticleSpeed.e(param3 + 3);
           var17.b();
           dma.a(0, 0, dma.field_g, dma.field_j);
-          var15 = new phb(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.b();
           var17.c(0, 0);
-          var11 = new phb(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.b();
           var17.c(var9Lifetime1 - var17.field_q, 0);
-          var12 = new phb(var17.field_q - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var17.field_q - var9Lifetime1 * 2, var9Lifetime1);
           var12.b();
           var17.c(-var9Lifetime1, param3);
           bia.a((byte) 124);
-          GetBombletSprayProjectileLife.field_o = new phb[]{var15, var12, var11};
+          GetBombletSprayProjectileLife.field_o = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uo.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

@@ -93,7 +93,7 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 6970) {
           return;
         }

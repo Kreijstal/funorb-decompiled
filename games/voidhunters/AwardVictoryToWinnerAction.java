@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AwardVictoryToWinnerAction extends MissionAction implements DiffableState {
-    static phb[] field_a;
+    static Sprite[] field_a;
     static int field_b;
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
@@ -16,10 +16,10 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
-          field_a = (phb[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 

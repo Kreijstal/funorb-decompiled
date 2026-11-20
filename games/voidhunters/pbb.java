@@ -60,10 +60,10 @@ final class pbb implements wwa {
     final static GraphicsToolkit a(asb param0, int param1, int param2, d param3, java.awt.Canvas param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
-        jp var8 = null;
+        OpenGlGpuToolkit var8 = null;
         jaggl.OpenGL var9 = null;
         GraphicsToolkit stackIn_11_0 = null;
-        jp stackIn_13_0 = null;
+        OpenGlGpuToolkit stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -84,7 +84,7 @@ final class pbb implements wwa {
           if (var6 == 0L) {
             throw new RuntimeException("");
           }
-          var8 = new jp(var9, param4, var6, param3, param0, param1);
+          var8 = new OpenGlGpuToolkit(var9, param4, var6, param3, param0, param1);
           if (param2 != -1588388127) {
             stackIn_11_0 = (GraphicsToolkit) null;
             return stackIn_11_0;

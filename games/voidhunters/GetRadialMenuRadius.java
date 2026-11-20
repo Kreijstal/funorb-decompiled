@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetRadialMenuRadius extends ConsoleCommand {
-    static phb field_o;
+    static Sprite field_o;
     static int field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

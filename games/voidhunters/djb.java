@@ -175,7 +175,7 @@ final class djb extends qc {
         var11 = VoidHunters.field_G;
         try {
           if (param0 >= -4) {
-            djb.c((byte) 38);
+            djb.clearSharedReferences((byte) 38);
           }
           boolean decompiledFrameRemainder0 = true;
           var2 = this.field_p.l(-14453);
@@ -252,7 +252,7 @@ final class djb extends qc {
         }
     }
 
-    djb(IntrusiveDeque param0, no param1, eab param2) {
+    djb(IntrusiveDeque param0, BitmapFont param1, eab param2) {
         super(param1, param2);
         int incrementValue$1 = 0;
         RuntimeException runtimeException = null;
@@ -327,7 +327,7 @@ final class djb extends qc {
               if (false) throw (ojb) null;
               var3 = SetDebrisGroupColour.a(-1, param1);
               if (param0 != -10278) {
-                djb.c((byte) 96);
+                djb.clearSharedReferences((byte) 96);
               }
               var4 = new ipb(var3);
               var5 = lhb.a((byte) 105, var4);
@@ -367,7 +367,7 @@ final class djb extends qc {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         try {
           field_s = (ima[][]) null;
           int var1_int = -118 % ((83 - param0) / 35);

@@ -66,7 +66,7 @@ final class SetPlayerRepairAmount extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_q = null;
         int var1 = -29 / ((param0 + 16) / 58);

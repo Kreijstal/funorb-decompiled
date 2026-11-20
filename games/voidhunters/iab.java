@@ -4,7 +4,7 @@
 final class iab implements nka {
     static oe field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 2) {
           field_a = (oe) null;
           field_a = null;
@@ -54,7 +54,7 @@ final class iab implements nka {
           mq.field_k = mq.field_k - 1;
           var5 = RequestNewestBlackboxRecording.field_p;
           if (param3 != -76) {
-            iab.a(76);
+            iab.clearSharedReferences(76);
           }
           var5.writeIsaacByte(24335, param0);
           var5.position = var5.position + 1;

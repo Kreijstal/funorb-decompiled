@@ -10,7 +10,7 @@ final class dj {
         this(param0, false);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         int var1 = -35 / ((param0 - 60) / 53);
     }

@@ -265,7 +265,7 @@ class tja implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (tja) (param1);
-          var3.field_c = (bha[]) (sqb.a(var3.field_c, this.field_c, 1, GetLoadingMissions.field_q, false));
+          var3.field_c = (bha[]) (SpriteDimensions.a(var3.field_c, this.field_c, 1, GetLoadingMissions.field_q, false));
           if (param0 < 54) {
             this.field_c = (bha[]) null;
           }

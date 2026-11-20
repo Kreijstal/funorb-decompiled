@@ -111,7 +111,7 @@ final class MissionVariable implements DiffableState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 109 % ((param0 - 66) / 57);
         field_c = null;
     }
@@ -155,7 +155,7 @@ final class MissionVariable implements DiffableState {
           SetMissileLauncherProjectiles.field_o[1] = GetBloomCoefficientPercentage.field_q;
           GetMissileLauncherFireForce.a((byte) -35, param1, GetDebrisCarryOverPercentage.field_o);
           if (param2 != 2874) {
-            MissionVariable.a((byte) -66);
+            MissionVariable.clearSharedReferences((byte) -66);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "et.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

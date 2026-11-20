@@ -170,7 +170,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_o = null;
         if (param0 != -1) {
@@ -187,7 +187,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetBombletSprayAimarc.e(28);
+            GetBombletSprayAimarc.clearSharedReferences(28);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(136, 77));
           return stackIn_3_0;

@@ -13,7 +13,7 @@ final class GetUseTriFill extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetUseTriFill.e((byte) -53);
+            GetUseTriFill.clearSharedReferences((byte) -53);
           }
           stackIn_3_0 = new ConsoleValue(GetBurstFireMaxEnergy.field_o);
           return stackIn_3_0;
@@ -67,7 +67,7 @@ final class GetUseTriFill extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 >= -121) {
           return;
         }

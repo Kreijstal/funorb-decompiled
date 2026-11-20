@@ -4,7 +4,7 @@
 final class un extends us {
     static int[] field_h;
 
-    final static void a(phb param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -67,8 +67,8 @@ final class un extends us {
 
     public static void a(boolean param0) {
         if (param0) {
-          phb var2 = (phb) null;
-          un.a((phb) null, 3);
+          Sprite var2 = (Sprite) null;
+          un.a((Sprite) null, 3);
         }
         field_h = null;
     }

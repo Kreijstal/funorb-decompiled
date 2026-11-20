@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AsteroidField implements DiffableState, ofa, utb {
+final class AsteroidField implements DiffableState, ofa, CompactGameState {
     private Asteroid[] asteroids;
     static double field_c;
     static String field_b;
@@ -51,7 +51,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
           if (param0 < 54) {
             this.b(116);
           }
-          var3.asteroids = (Asteroid[]) (sqb.a(var3.asteroids, this.asteroids, 1, tob.field_o, false));
+          var3.asteroids = (Asteroid[]) (SpriteDimensions.a(var3.asteroids, this.asteroids, 1, tob.field_o, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -717,7 +717,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
           }
           var2Lifetime45 = dqb.a((byte) -86, "crown_tooltips,4");
           if (null != var2Lifetime45) {
-            gab.field_j[4] = qpa.a((byte) -125, var2Lifetime45);
+            MonochromeRowCache.field_j[4] = qpa.a((byte) -125, var2Lifetime45);
           }
           var2Lifetime46 = dqb.a((byte) -45, "scoreboard_column_type_names,0");
           if (null != var2Lifetime46) {
@@ -1895,7 +1895,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         RuntimeException var3 = null;
         try {
           if (param1) {
-            this.a((IsaacPacketBuffer) null, (byte) 39);
+            this.writeCompactState((IsaacPacketBuffer) null, (byte) 39);
           }
           stackIn_7_1 = !(param1);
           this.a(stackIn_7_1);
@@ -2045,7 +2045,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -2071,7 +2071,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         IsaacPacketBuffer var3 = null;
         Asteroid[] var4 = null;
         int var5 = 0;
@@ -2114,7 +2114,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
               stackIn_17_1 = -111;
               stackIn_18_2 = (var8 != null);
               if (vq.writeBoolean(stackIn_17_0, stackIn_17_1, stackIn_18_2)) {
-                ((utb) ((Object) var8)).a(var3, (byte) -127);
+                ((CompactGameState) ((Object) var8)).writeCompactState(var3, (byte) -127);
               }
               var7++;
             }

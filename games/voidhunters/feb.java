@@ -5,7 +5,7 @@ final class feb {
     static aba field_a;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 != 122) {
           return;

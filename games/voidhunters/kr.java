@@ -4,7 +4,7 @@
 final class kr {
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         int var1 = 87 / ((-33 - param0) / 63);
     }
@@ -26,7 +26,7 @@ final class kr {
               var2 = param0.getDocumentBase().getFile();
               var3 = var2.indexOf('?');
               if (param1 != 5836) {
-                kr.a(-122);
+                kr.clearSharedReferences(-122);
               }
               var4 = "reload.ws";
               if (var3 >= 0) {

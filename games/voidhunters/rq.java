@@ -495,7 +495,7 @@ final class rq extends dqa implements ln, oo, jpb {
         ((tib) (this.field_F.a(param0 ^ -782442674))).d((byte) 38);
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 67 / ((-47 - param0) / 56);
         field_G = null;
     }

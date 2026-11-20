@@ -735,7 +735,7 @@ final class fca extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_y = null;
         field_s = null;
         field_z = null;

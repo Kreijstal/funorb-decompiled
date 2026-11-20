@@ -5,7 +5,7 @@ final class wk implements rs {
     static float[] field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         if (param0 != 80) {
           field_b = (float[]) null;

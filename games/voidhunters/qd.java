@@ -41,7 +41,7 @@ final class qd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         field_c = null;
         int var1 = 82 / ((-47 - param0) / 60);

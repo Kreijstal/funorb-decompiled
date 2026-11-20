@@ -29,7 +29,7 @@ class dqa extends shb implements nea {
         var7 = VoidHunters.field_G;
         try {
           if (!param0) {
-            dqa.b(false);
+            dqa.clearSharedReferences(false);
           }
           if (this.field_t.isEmpty(115)) {
             return false;
@@ -133,7 +133,7 @@ class dqa extends shb implements nea {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_u = null;
         if (param0) {
           field_u = (String) null;

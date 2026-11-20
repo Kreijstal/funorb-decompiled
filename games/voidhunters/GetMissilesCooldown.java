@@ -5,7 +5,7 @@ final class GetMissilesCooldown extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         if (param0 <= 55) {

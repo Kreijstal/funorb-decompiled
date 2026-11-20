@@ -4,7 +4,7 @@
 final class co {
     Runnable field_c;
     boolean field_f;
-    private sob field_d;
+    private SoftwareToolkit field_d;
     private int[] field_b;
     daa field_e;
     float[] field_a;
@@ -123,7 +123,7 @@ final class co {
         }
     }
 
-    co(sob param0) {
+    co(SoftwareToolkit param0) {
         b discarded$12 = null;
         b discarded$13 = null;
         b discarded$14 = null;

@@ -37,7 +37,7 @@ final class pu implements dja {
         throw new IllegalArgumentException("");
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 < 49) {
           field_b = (String) null;

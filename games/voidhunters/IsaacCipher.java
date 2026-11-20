@@ -88,7 +88,7 @@ final class IsaacCipher {
             if (var10 <= 0) {
               stackIn_23_1 = var6.field_Fb;
             } else {
-              stackIn_23_1 = no.a(var6.field_wb.field_eb, var6.field_Fb, var10);
+              stackIn_23_1 = BitmapFont.a(var6.field_wb.field_eb, var6.field_Fb, var10);
             }
             stackIn_22_0.field_R = stackIn_23_1;
             stackIn_26_0 = (var6.field_wb.field_R.equals(var6.field_Fb)) ? 0 : 1;

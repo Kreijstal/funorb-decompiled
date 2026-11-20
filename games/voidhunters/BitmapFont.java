@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class no extends DualLinkNode {
+abstract class BitmapFont extends DualLinkNode {
     int field_H;
     private int[] field_t;
     private int[] field_y;
@@ -133,7 +133,7 @@ abstract class no extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_u[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)no.a(var15, var16, var17, this.field_C, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_u[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_C, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -223,12 +223,12 @@ abstract class no extends DualLinkNode {
         field_q = 0;
     }
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_s = null;
         field_p = null;
     }
 
-    final static String a(no param0, String param1, int param2) {
+    final static String a(BitmapFont param0, String param1, int param2) {
         int var6 = 0;
         int var3;
         int var4;
@@ -677,7 +677,7 @@ abstract class no extends DualLinkNode {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    no(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

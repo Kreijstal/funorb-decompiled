@@ -5,7 +5,7 @@ final class SetLaserEnergyUsed extends ConsoleCommand {
     static int[] field_p;
     static String field_o;
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 < 74) {
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vab {
+final class ArbProgram {
     int field_b;
     static String field_a;
     private OpenGlToolkit field_c;
@@ -49,14 +49,14 @@ final class vab {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_a = null;
         if (param0) {
           field_a = (String) null;
         }
     }
 
-    vab(OpenGlToolkit param0, int param1, int param2) {
+    ArbProgram(OpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_b = param2;
           this.field_c = param0;

@@ -1006,7 +1006,7 @@ final class dma {
         dma.c();
     }
 
-    public static void b() {
+    public static void clearSharedReferences() {
         field_i = null;
         field_h = null;
         field_b = null;

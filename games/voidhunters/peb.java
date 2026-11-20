@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class peb extends le {
+final class peb extends TextureOperation {
     private static String field_z;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] var4 = null;
         int[] var3 = null;
         int[] var4Lifetime1;
         int[] var3Lifetime1;
         if (!param1) {
-          this.a(79, false);
-          var4 = this.field_f.a((byte) 127, param0);
+          this.getMonochromeRow(79, false);
+          var4 = this.field_f.getRow((byte) 127, param0);
           var3 = var4;
           if (this.field_f.field_e) {
             cua.a(var4, 0, hob.field_d, SetSalvoUsesAllEnergy.field_p[param0]);
@@ -19,7 +19,7 @@ final class peb extends le {
           }
           return var4;
         }
-        var4Lifetime1 = this.field_f.a((byte) 127, param0);
+        var4Lifetime1 = this.field_f.getRow((byte) 127, param0);
         var3Lifetime1 = var4Lifetime1;
         if (!this.field_f.field_e) {
           return var4Lifetime1;

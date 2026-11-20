@@ -4,7 +4,7 @@
 final class GetDebrisGrabbingRange extends ConsoleCommand {
     static llb field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 55) {
           field_o = (llb) null;
           field_o = null;

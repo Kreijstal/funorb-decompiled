@@ -35,7 +35,7 @@ final class qh extends iw implements oo {
             return true;
           }
           if (param0 != -15834) {
-            qh.l((byte) 46);
+            qh.clearSharedReferences((byte) 46);
           }
           if (param1 != 99) {
             stackIn_11_0 = super.a(-15834, param1, param2, param3);
@@ -57,7 +57,7 @@ final class qh extends iw implements oo {
         }
     }
 
-    public static void l(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 99 / ((-24 - param0) / 62);
         field_N = null;
         field_L = null;

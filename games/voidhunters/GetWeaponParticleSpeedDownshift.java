@@ -100,7 +100,7 @@ final class GetWeaponParticleSpeedDownshift extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         field_q = null;

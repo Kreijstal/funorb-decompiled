@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg extends le {
+final class gg extends TextureOperation {
     private int field_l;
     private int field_k;
     static int field_j;
     private int field_i;
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         GetTrapMouse.e((byte) -91);
         if (param0 >= -35) {
           this.field_k = 85;
         }
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -37,7 +37,7 @@ final class gg extends le {
             }
           }
           if (param1 >= -60) {
-            this.c((byte) 61);
+            this.postDecode((byte) 61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class gg extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var6 = 0;
         int[] var3;
         int var4;
@@ -70,7 +70,7 @@ final class gg extends le {
         int[] var14Lifetime1;
         int[] var14Lifetime1Lifetime1;
         var11 = VoidHunters.field_G;
-        var14 = this.field_f.a((byte) -80, param0);
+        var14 = this.field_f.getRow((byte) -80, param0);
         var13 = var14;
         var12 = var13;
         var3 = var12;

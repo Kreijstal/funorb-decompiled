@@ -45,7 +45,7 @@ final class MessageLog implements DiffableState {
           return;
         }
         try {
-          var3.messages = (Message[]) (sqb.a(var3.messages, this.messages, 1, bob.field_e, false));
+          var3.messages = (Message[]) (SpriteDimensions.a(var3.messages, this.messages, 1, bob.field_e, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nwa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

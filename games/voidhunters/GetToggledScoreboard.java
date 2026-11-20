@@ -4,10 +4,10 @@
 final class GetToggledScoreboard extends ConsoleCommand {
     static int field_q;
     static IntrusiveDeque field_p;
-    static phb field_o;
+    static Sprite field_o;
     static int field_r;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         field_p = null;
         if (param0) {
@@ -17,7 +17,7 @@ final class GetToggledScoreboard extends ConsoleCommand {
 
     final static String a(int param0) {
         if (param0 != 27158) {
-          GetToggledScoreboard.b(false);
+          GetToggledScoreboard.clearSharedReferences(false);
           return SetTabForScores.field_p;
         }
         return SetTabForScores.field_p;

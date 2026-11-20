@@ -28,13 +28,13 @@ final class qma {
     private final int a(int param0, int param1) {
         if (param0 != 15) {
           bc var4 = (bc) null;
-          qma.a((no) null, 36, 72, 17, 121, -94, -120, 88, (no) null, (bc) null, 76, 114, (bc) null, 55, -78, 123, -51, -27, (bc) null, -111);
+          qma.a((BitmapFont) null, 36, 72, 17, 121, -94, -120, 88, (BitmapFont) null, (bc) null, 76, 114, (bc) null, 55, -78, 123, -51, -27, (bc) null, -111);
           return 15 & (int)(this.field_a >> param1 * pb.field_m);
         }
         return 15 & (int)(this.field_a >> param1 * pb.field_m);
     }
 
-    final static void a(no param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, no param8, bc param9, int param10, int param11, bc param12, int param13, int param14, int param15, int param16, int param17, bc param18, int param19) {
+    final static void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, BitmapFont param8, bc param9, int param10, int param11, bc param12, int param13, int param14, int param15, int param16, int param17, bc param18, int param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

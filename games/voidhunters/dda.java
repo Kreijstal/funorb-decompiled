@@ -12,7 +12,7 @@ final class dda extends dg implements uq {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           field_d = (mka[]) null;
           field_d = null;

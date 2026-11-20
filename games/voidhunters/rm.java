@@ -68,7 +68,7 @@ final class rm extends eca {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 2) {
           field_f = (int[]) null;
           field_f = null;

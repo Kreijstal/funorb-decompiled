@@ -4,7 +4,7 @@
 final class lkb {
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 199) {
           return;
         }
@@ -26,7 +26,7 @@ final class lkb {
           vva.field_r.a(var2 + 202 + 438 * var4 / var3, 26, 438, 0, -124 + dma.field_j);
           return;
         }
-        lkb.a(92);
+        lkb.clearSharedReferences(92);
         var2Lifetime1 = (-640 + GetShieldsDirectionalArcParticleLife.field_p) / 2;
         var3Lifetime1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         var4Lifetime1 = var3Lifetime1 - param0 * param0;

@@ -42,7 +42,7 @@ final class GetAngularVelocitySustainMax extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -67,7 +67,7 @@ final class GetAngularVelocitySustainMax extends ConsoleCommand {
         var5 = VoidHunters.field_G;
         try {
           if (param0 > -3) {
-            GetAngularVelocitySustainMax.a(-64);
+            GetAngularVelocitySustainMax.clearSharedReferences(-64);
           }
           if (Character.isISOControl(param1)) {
             return false;

@@ -146,7 +146,7 @@ class htb extends shb {
         return this.field_t;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_w = null;
         field_A = null;
         field_v = null;

@@ -69,7 +69,7 @@ final class hc {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_h = (float[][]) null;
         field_f = (int[][]) null;
     }

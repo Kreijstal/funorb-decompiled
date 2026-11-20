@@ -66,7 +66,7 @@ final class mn {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 19 / ((29 - param0) / 59);
         field_a = null;
     }

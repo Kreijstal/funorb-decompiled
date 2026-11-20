@@ -22,7 +22,7 @@ final class rbb {
     int field_i;
     int field_g;
     wwa field_q;
-    no field_p;
+    BitmapFont field_p;
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         if (!param2) {
@@ -121,7 +121,7 @@ final class rbb {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -29) {
           return;
         }
@@ -131,7 +131,7 @@ final class rbb {
     final void a(byte param0) {
         bia.a((byte) 124);
         if (param0 < 82) {
-          rbb.b((byte) 6);
+          rbb.clearSharedReferences((byte) 6);
         }
     }
 
@@ -196,10 +196,10 @@ final class rbb {
         qca.a(param2, param0, param4, true, param3);
     }
 
-    final void a(no param0, int param1) {
+    final void a(BitmapFont param0, int param1) {
         bob var17 = null;
         uea var4 = null;
-        phb[] var5 = null;
+        Sprite[] var5 = null;
         jva var16 = null;
         jva var18 = null;
         int var7_int = 0;
@@ -208,12 +208,12 @@ final class rbb {
         ei discarded$0 = null;
         jba discarded$1 = null;
         uea var8 = null;
-        phb[] var9 = null;
-        phb[] var10 = null;
-        phb dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         uea var11 = null;
         uea var12 = null;
-        phb var13 = null;
+        Sprite var13 = null;
         uea var14 = null;
         uea var19 = null;
         int var15 = VoidHunters.field_G;
@@ -242,13 +242,13 @@ final class rbb {
           }
           var4.a(1, -1).a(true, vdb.a(10066329, 11184810, 118, 13421772));
           var4.a(3, -1).a(true, vdb.a(7829367, 8947848, 123, 10066329)).a(113, 1).b(1, false);
-          var5 = new phb[9];
+          var5 = new Sprite[9];
           var16 = new jva(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_r.length > var7_int; var7_int++) {
             var16.field_r[var7_int] = 1077952576;
           }
-          var5[4] = (phb) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(4, -1).a(-123, true).a(true, var5);
           var4.a(5, -1).a(true, SetCountermeasureLauncherFireForce.a(0, (byte) 119, 0, 65793, 0)).a(param1 + 24638, true).b(-1, param1 - 2147458885);
           this.field_a = (wwa) ((Object) var4);
@@ -266,10 +266,10 @@ final class rbb {
           var8.a(0, -1).a(true, vdb.a(7829367, 15658734, param1 + 24884, 10066329)).b(1118481, -2147483648).c(-1, param1 - 2147458885);
           var8.a(4, -1).a(param1 + 24635, true).a(true, var5);
           this.field_o = (wwa) ((Object) var8);
-          var9 = new phb[9];
-          var9[4] = new phb(2, 1);
-          var10 = new phb[9];
-          var10[4] = new phb(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_r = new int[]{6710886, 7829367};
           var10[4].field_r = new int[]{6710886, 7829367};
@@ -279,7 +279,7 @@ final class rbb {
           var12.a(0, var10, param1 ^ -23749);
           this.field_l = (wwa) ((Object) var4);
           this.field_e = (wwa) ((Object) var12);
-          var13 = new phb(7, 4);
+          var13 = new Sprite(7, 4);
           this.field_s = 10;
           var13.field_r = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new uea(var4, true);

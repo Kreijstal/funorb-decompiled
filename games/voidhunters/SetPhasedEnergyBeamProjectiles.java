@@ -4,7 +4,7 @@
 final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
     static String[] field_o;
 
-    final static le a(boolean param0, int param1) {
+    final static TextureOperation a(boolean param0, int param1) {
         int var2;
         int var3;
         asb var4;
@@ -15,124 +15,124 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         }
         var2 = param1;
         if (0 == var2) {
-          return (le) ((Object) new drb());
+          return (TextureOperation) ((Object) new drb());
         }
         if (1 == var2) {
-          return (le) ((Object) new jwa());
+          return (TextureOperation) ((Object) new jwa());
         }
         if (var2 == 2) {
-          return (le) ((Object) new cdb());
+          return (TextureOperation) ((Object) new cdb());
         }
         if (var2 == 3) {
-          return (le) ((Object) new peb());
+          return (TextureOperation) ((Object) new peb());
         }
         if (var2 == 4) {
-          return (le) ((Object) new jlb());
+          return (TextureOperation) ((Object) new jlb());
         }
         if (var2 == 5) {
-          return (le) ((Object) new grb());
+          return (TextureOperation) ((Object) new grb());
         }
         if (6 == var2) {
-          return (le) ((Object) new sma());
+          return (TextureOperation) ((Object) new sma());
         }
         if (7 == var2) {
-          return (le) ((Object) new cj());
+          return (TextureOperation) ((Object) new cj());
         }
         if (var2 == 8) {
-          return (le) ((Object) new owa());
+          return (TextureOperation) ((Object) new owa());
         }
         if (9 == var2) {
-          return (le) ((Object) new di());
+          return (TextureOperation) ((Object) new di());
         }
         if (var2 == 10) {
-          return (le) ((Object) new ckb());
+          return (TextureOperation) ((Object) new ckb());
         }
         if (var2 == 11) {
-          return (le) ((Object) new lfa());
+          return (TextureOperation) ((Object) new lfa());
         }
         if (12 == var2) {
-          return (le) ((Object) new gg());
+          return (TextureOperation) ((Object) new gg());
         }
         if (var2 == 13) {
-          return (le) ((Object) new lq());
+          return (TextureOperation) ((Object) new lq());
         }
         if (var2 == 14) {
-          return (le) ((Object) new gw());
+          return (TextureOperation) ((Object) new gw());
         }
         if (15 == var2) {
-          return (le) ((Object) new vm());
+          return (TextureOperation) ((Object) new vm());
         }
         if (var2 == 16) {
-          return (le) ((Object) new vn());
+          return (TextureOperation) ((Object) new vn());
         }
         if (var2 == 17) {
-          return (le) ((Object) new kbb());
+          return (TextureOperation) ((Object) new kbb());
         }
         if (18 == var2) {
-          return (le) ((Object) new me());
+          return (TextureOperation) ((Object) new me());
         }
         if (var2 == 19) {
-          return (le) ((Object) new sna());
+          return (TextureOperation) ((Object) new sna());
         }
         if (var2 == 20) {
-          return (le) ((Object) new lnb());
+          return (TextureOperation) ((Object) new lnb());
         }
         if (var2 == 21) {
-          return (le) ((Object) new qba());
+          return (TextureOperation) ((Object) new qba());
         }
         if (var2 == 22) {
-          return (le) ((Object) new ksb());
+          return (TextureOperation) ((Object) new ksb());
         }
         if (var2 == 23) {
-          return (le) ((Object) new hpb());
+          return (TextureOperation) ((Object) new hpb());
         }
         if (var2 == 24) {
-          return (le) ((Object) new qqa());
+          return (TextureOperation) ((Object) new qqa());
         }
         if (var2 == 25) {
-          return (le) ((Object) new olb());
+          return (TextureOperation) ((Object) new olb());
         }
         if (var2 == 26) {
-          return (le) ((Object) new wua());
+          return (TextureOperation) ((Object) new wua());
         }
         if (var2 == 27) {
-          return (le) ((Object) new moa());
+          return (TextureOperation) ((Object) new moa());
         }
         if (var2 == 28) {
-          return (le) ((Object) new cm());
+          return (TextureOperation) ((Object) new cm());
         }
         if (var2 == 29) {
-          return (le) ((Object) new md());
+          return (TextureOperation) ((Object) new md());
         }
         if (var2 == 30) {
-          return (le) ((Object) new koa());
+          return (TextureOperation) ((Object) new koa());
         }
         if (var2 == 31) {
-          return (le) ((Object) new il());
+          return (TextureOperation) ((Object) new il());
         }
         if (var2 == 32) {
-          return (le) ((Object) new smb());
+          return (TextureOperation) ((Object) new smb());
         }
         if (var2 == 33) {
-          return (le) ((Object) new gia());
+          return (TextureOperation) ((Object) new gia());
         }
         if (34 == var2) {
-          return (le) ((Object) new rw());
+          return (TextureOperation) ((Object) new rw());
         }
         if (35 == var2) {
-          return (le) ((Object) new hk());
+          return (TextureOperation) ((Object) new hk());
         }
         if (36 == var2) {
-          return (le) ((Object) new wv());
+          return (TextureOperation) ((Object) new wv());
         }
         if (var2 == 37) {
-          return (le) ((Object) new oqb());
+          return (TextureOperation) ((Object) new oqb());
         }
         if (var2 == 38) {
-          return (le) ((Object) new sva());
+          return (TextureOperation) ((Object) new sva());
         }
         if (39 == var2) {
-          return (le) ((Object) new pja());
+          return (TextureOperation) ((Object) new pja());
         }
         return null;
     }

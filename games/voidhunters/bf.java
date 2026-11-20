@@ -12,7 +12,7 @@ final class bf implements dja {
         return (SerializableGameState[]) ((Object) new AdjustVariableAction[param1]);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 != 27) {
           field_a = (llb) null;

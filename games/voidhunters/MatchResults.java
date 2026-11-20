@@ -40,7 +40,7 @@ final class MatchResults implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (MatchResults) (param1);
-          var3.results = (RoundResult[]) (sqb.a(var3.results, this.results, 1, lm.field_b, false));
+          var3.results = (RoundResult[]) (SpriteDimensions.a(var3.results, this.results, 1, lm.field_b, false));
           if (param0 < 54) {
             var4 = (SerializableGameState) null;
             this.reportDifferences((SerializableGameState) null, 79);

@@ -4,7 +4,7 @@
 final class GetReloadBarHeight extends ConsoleCommand {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -126 / ((param0 - 59) / 58);
         field_o = null;
     }

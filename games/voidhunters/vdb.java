@@ -7,9 +7,9 @@ final class vdb extends uj {
     vdb() {
     }
 
-    final static phb[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param2 <= 110) {
-          return (phb[]) null;
+          return (Sprite[]) null;
         }
         return ul.a(param0, param1, 1, param3, true);
     }

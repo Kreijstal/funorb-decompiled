@@ -89,7 +89,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
         GetDebrisGroupColour.field_r.a(param2, (byte) 120, param0 | -16777216, param4, param3, param5);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 59 / ((param0 - 43) / 46);
         field_p = null;
         field_o = null;

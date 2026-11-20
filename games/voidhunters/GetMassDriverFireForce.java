@@ -15,7 +15,7 @@ final class GetMassDriverFireForce extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetMassDriverFireForce.a(-21);
+            GetMassDriverFireForce.clearSharedReferences(-21);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(98, 125));
           return stackIn_3_0;
@@ -78,7 +78,7 @@ final class GetMassDriverFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 127) {
           field_p = (mma) null;
           field_p = null;

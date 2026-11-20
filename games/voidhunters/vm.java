@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vm extends le {
+final class vm extends TextureOperation {
     static String field_q;
     private int field_o;
     private short[] field_k;
@@ -14,12 +14,12 @@ final class vm extends le {
     private int field_p;
     private int field_m;
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         this.field_j = ihb.a((byte) 36, this.field_l);
         this.d(30866);
         if (param0 > -35) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a(-21, 74, (PacketBuffer) null);
+          this.decodeParameter(-21, 74, (PacketBuffer) null);
         }
     }
 
@@ -41,7 +41,7 @@ final class vm extends le {
         Random var5 = new Random((long)this.field_l);
         Random var2 = var5;
         if (param0 != 30866) {
-          this.c((byte) 124);
+          this.postDecode((byte) 124);
         }
         this.field_k = new short[512];
         if (this.field_i > 0) {
@@ -51,7 +51,7 @@ final class vm extends le {
         }
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -110,7 +110,7 @@ final class vm extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var14 = 0;
         int var8 = 0;
         int var7 = 0;
@@ -147,9 +147,9 @@ final class vm extends le {
         int var18Lifetime1;
         var19 = VoidHunters.field_G;
         if (!param1) {
-          this.c((byte) 33);
+          this.postDecode((byte) 33);
         }
-        var3 = this.field_f.a((byte) 118, param0);
+        var3 = this.field_f.getRow((byte) 118, param0);
         if (this.field_f.field_e) {
           var4 = 2048 + SetSalvoUsesAllEnergy.field_p[param0] * this.field_p;
           var5 = var4 >> 12;

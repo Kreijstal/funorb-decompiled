@@ -42,7 +42,7 @@ final class al implements hf {
         }
     }
 
-    al(sob param0, aja param1, woa param2) {
+    al(SoftwareToolkit param0, aja param1, woa param2) {
         wfa var6 = null;
         sda var5 = null;
         try {

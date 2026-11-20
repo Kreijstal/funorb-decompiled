@@ -35,16 +35,16 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         super(param0, param1, param2);
     }
 
-    final static le a(PacketBuffer param0, byte param1) {
+    final static TextureOperation decodeTextureOperation(PacketBuffer param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        le var3 = null;
+        TextureOperation var3 = null;
         int var4 = 0;
         int var6 = 0;
         int var7 = 0;
-        le stackIn_3_0 = null;
-        le stackIn_8_0 = null;
+        TextureOperation stackIn_3_0 = null;
+        TextureOperation stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -52,7 +52,7 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         var7 = VoidHunters.field_G;
         try {
           if (param1 < 50) {
-            stackIn_3_0 = (le) null;
+            stackIn_3_0 = (TextureOperation) null;
             return stackIn_3_0;
           }
           param0.readUnsignedByte((byte) -96);
@@ -62,9 +62,9 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
           var4 = param0.readUnsignedByte((byte) -117);
           for (var5 = 0; var5 < var4; var5++) {
             var6 = param0.readUnsignedByte((byte) -118);
-            var3.a(var6, -116, param0);
+            var3.decodeParameter(var6, -116, param0);
           }
-          var3.c((byte) -67);
+          var3.postDecode((byte) -67);
           stackIn_8_0 = var3;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

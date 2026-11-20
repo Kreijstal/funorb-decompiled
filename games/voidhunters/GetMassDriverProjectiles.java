@@ -64,7 +64,7 @@ final class GetMassDriverProjectiles extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         int var1 = -70 / ((param0 - 80) / 37);
         field_o = null;

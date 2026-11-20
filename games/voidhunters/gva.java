@@ -5,7 +5,7 @@ final class gva extends Exception {
     String field_b;
     static dja field_a;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           return;
         }

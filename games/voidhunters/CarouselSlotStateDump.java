@@ -18,13 +18,13 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
         var2.position = param0;
         tja var3 = (tja) (gva.field_a.a((byte) -128));
         var2.beginBitRead(-23497);
-        if (!(var3 instanceof utb)) {
+        if (!(var3 instanceof CompactGameState)) {
           var3.readState(var2, false);
           var2.endBitRead((byte) -116);
           this.field_h = var3;
           return var3;
         }
-        ((utb) ((Object) var3)).a(var2, 32);
+        ((CompactGameState) ((Object) var3)).readCompactState(var2, 32);
         var2.endBitRead((byte) -116);
         this.field_h = var3;
         return var3;
@@ -49,7 +49,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
         this(param0, param1.payload, param1.position);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 32) {
           return;
         }

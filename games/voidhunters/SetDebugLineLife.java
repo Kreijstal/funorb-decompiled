@@ -5,7 +5,7 @@ final class SetDebugLineLife extends ConsoleCommand {
     static String field_o;
     static IntrusiveDeque field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         field_p = null;
         int var1 = -31 / ((44 - param0) / 52);

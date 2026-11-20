@@ -187,7 +187,7 @@ final class ok implements dja {
         return (SerializableGameState[]) ((Object) new ShipBody[param1]);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         field_b = null;
         int var1 = -7 % ((63 - param0) / 50);

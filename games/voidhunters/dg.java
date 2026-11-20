@@ -7,9 +7,9 @@ class dg {
 
     dg(OpenGlToolkit param0, byte[] param1, int param2) {
         this.field_b = param0;
-        this.field_a = (jaclib.memory.Buffer) ((Object) this.field_b.field_Kb.a(param2, false));
+        this.field_a = (jaclib.memory.Buffer) ((Object) this.field_b.field_Kb.allocate(param2, false));
         if (param1 != null) {
-          this.field_a.a(param1, 0, 0, param2);
+          this.field_a.writeBytes(param1, 0, 0, param2);
         }
     }
 }

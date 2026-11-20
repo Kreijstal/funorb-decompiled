@@ -10,13 +10,13 @@ final class ge {
 
     final boolean b(byte param0) {
         if (param0 != -20) {
-          ge.a((byte) 88);
+          ge.clearSharedReferences((byte) 88);
           return this.field_d;
         }
         return this.field_d;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -87 / ((param0 - 62) / 54);
         field_b = null;
     }
@@ -42,7 +42,7 @@ final class ge {
           this.field_e = true;
           return;
         }
-        ge.a((byte) -96);
+        ge.clearSharedReferences((byte) -96);
         this.field_d = param1 ? true : false;
         this.field_e = true;
     }

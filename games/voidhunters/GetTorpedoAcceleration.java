@@ -14,7 +14,7 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetTorpedoAcceleration.a(85);
+            GetTorpedoAcceleration.clearSharedReferences(85);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(169, 94));
           return stackIn_3_0;
@@ -36,7 +36,7 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           field_o = (String) null;
         }
@@ -71,7 +71,7 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
             }
           }
           if (param1 != 107) {
-            GetTorpedoAcceleration.a(-108);
+            GetTorpedoAcceleration.clearSharedReferences(-108);
           }
           var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
           for (var5 = 0; var5 < param0.length; var5++) {

@@ -7,7 +7,7 @@ final class GetMessageMaxage extends ConsoleCommand {
     static String field_q;
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 67 / ((36 - param0) / 39);
         field_q = null;
         field_o = null;
@@ -28,7 +28,7 @@ final class GetMessageMaxage extends ConsoleCommand {
         try {
           var4_int = -1;
           if (param0 != -69) {
-            GetMessageMaxage.e((byte) -96);
+            GetMessageMaxage.clearSharedReferences((byte) -96);
           }
           for (var5 = param3; param1 > var5; var5++) {
             var4_int = var4_int >>> 8 ^ coa.field_d[255 & (var4_int ^ param2[var5])];

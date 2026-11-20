@@ -6,7 +6,7 @@ import java.io.*;
 final class GetMachineGunProjectileDamage extends ConsoleCommand {
     static gl field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
           field_o = (gl) null;
@@ -213,7 +213,7 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetMachineGunProjectileDamage.a(-113);
+            GetMachineGunProjectileDamage.clearSharedReferences(-113);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(146, 124));
           return stackIn_3_0;

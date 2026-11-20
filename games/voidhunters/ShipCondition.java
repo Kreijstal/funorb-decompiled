@@ -7,7 +7,7 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
     static int field_e;
     private int shipId;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -10570) {
           return;
         }

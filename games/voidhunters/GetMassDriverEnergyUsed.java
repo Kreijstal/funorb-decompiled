@@ -59,7 +59,7 @@ final class GetMassDriverEnergyUsed extends ConsoleCommand {
         return (char)var2;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 <= 56) {
           field_o = (String) null;

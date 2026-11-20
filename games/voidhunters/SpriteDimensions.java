@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sqb extends DualLinkNode {
+abstract class SpriteDimensions extends DualLinkNode {
     int field_p;
-    static phb[] field_o;
+    static Sprite[] field_o;
     int field_l;
     int field_n;
     int field_q;
@@ -100,7 +100,7 @@ abstract class sqb extends DualLinkNode {
 
     final static int a(int param0, int param1, int param2) {
         if (param1 <= 42) {
-          field_o = (phb[]) null;
+          field_o = (Sprite[]) null;
         }
         if (param2 == 0) {
           if (param0 == 0) {
@@ -132,11 +132,11 @@ abstract class sqb extends DualLinkNode {
     public static void a(boolean param0) {
         field_o = null;
         if (!param0) {
-          sqb.a(2, -61, -79);
+          SpriteDimensions.a(2, -61, -79);
         }
     }
 
-    sqb() {
+    SpriteDimensions() {
     }
 
     static {

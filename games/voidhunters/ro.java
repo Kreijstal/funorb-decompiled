@@ -72,7 +72,7 @@ final class ro {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         int var1 = 121 / ((param0 - 44) / 55);
     }

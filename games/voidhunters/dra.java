@@ -5,7 +5,7 @@ final class dra extends f {
     private kka field_o;
     hbb field_n;
     private int field_u;
-    static phb[] field_v;
+    static Sprite[] field_v;
     private boolean field_q;
     private int field_s;
     private hbb field_j;
@@ -267,7 +267,7 @@ final class dra extends f {
     final synchronized void b(byte param0, int param1) {
         this.field_h = param1;
         if (param0 != -108) {
-          dra.c(72);
+          dra.clearSharedReferences(72);
         }
     }
 
@@ -394,10 +394,10 @@ final class dra extends f {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_v = null;
         if (param0 <= 37) {
-          field_v = (phb[]) null;
+          field_v = (Sprite[]) null;
         }
     }
 

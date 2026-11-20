@@ -182,11 +182,11 @@ class pca extends uqb implements DiffableState {
         if (param0 >= 1) {
           return 0 != (param1 & 34) ? true : false;
         }
-        pca.d(40);
+        pca.clearSharedReferences(40);
         return 0 != (param1 & 34) ? true : false;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_l = null;
         field_i = null;
         int var1 = -58 % ((-48 - param0) / 44);

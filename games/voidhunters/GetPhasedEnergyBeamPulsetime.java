@@ -32,7 +32,7 @@ final class GetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 != 51) {
           field_p = (java.awt.Font) null;

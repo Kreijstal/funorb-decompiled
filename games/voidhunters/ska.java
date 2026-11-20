@@ -16,7 +16,7 @@ final class ska extends is {
         return this.field_l;
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_m = null;
         if (param0 != 5697) {

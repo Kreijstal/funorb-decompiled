@@ -7,7 +7,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
     static dja field_c;
     private int mode;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -98 % ((param0 - 42) / 51);
         field_c = null;
         field_a = null;

@@ -623,7 +623,7 @@ final class uca {
             epb.field_m.field_q != onb.field_a ||
             epb.field_m.field_p != lj.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g1 fog of war sprite");
-            epb.field_m = (phb) ((Object) new jva(onb.field_a, lj.field_a));
+            epb.field_m = (Sprite) ((Object) new jva(onb.field_a, lj.field_a));
             if (var6 != 0) {
               GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
             }
@@ -1669,7 +1669,7 @@ final class uca {
         for (var17Lifetime1 = 0; var3 > var17Lifetime1; var17Lifetime1++) {
           if ((1 << var17Lifetime1 & this.field_m.field_j) != 0 &&
             SetMissionResnetResourceTickTime.field_p == 0) {
-            var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], jp.field_Oc);
+            var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], OpenGlGpuToolkit.field_Oc);
           } else {
             if (var17Lifetime1 == this.field_L) {
               var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], GetBoostersActiveTime.field_o);
@@ -1678,7 +1678,7 @@ final class uca {
             if (!var35.field_a &&
               this.field_m.field_h[var17Lifetime1] == null &&
               SetMissionResnetResourceTickTime.field_p == 0) {
-              var11[var17Lifetime1 + 1] = SetAngularForceDownshift.a(var11[var17Lifetime1 + 1], jp.field_Oc);
+              var11[var17Lifetime1 + 1] = SetAngularForceDownshift.a(var11[var17Lifetime1 + 1], OpenGlGpuToolkit.field_Oc);
             } else {
               if (!var7.missionState.c((byte) -126) &&
                 null == var7.world.d(var17Lifetime1, 92)) {
@@ -4647,7 +4647,7 @@ final class uca {
             var14 = param2;
             for (var15 = 0; var15 < param0.length; var15++) {
               var16 = param0[var15];
-              if ((param7[var16] & jp.field_Oc) == 0) {
+              if ((param7[var16] & OpenGlGpuToolkit.field_Oc) == 0) {
                 var17 = param11[var13_int][var16];
                 var18 = var14 + (param8 >> 1);
                 var14 = var14 + param8;
@@ -7933,7 +7933,7 @@ final class uca {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        phb var7 = null;
+        Sprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

@@ -9,7 +9,7 @@ final class csa {
         int var1 = -44 % ((param0 + 41) / 58);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         field_a = null;
         int var1 = -55 % ((67 - param0) / 55);

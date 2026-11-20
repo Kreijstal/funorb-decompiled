@@ -3,7 +3,7 @@
  */
 final class jfa extends da {
     private int[] field_g;
-    private sob field_c;
+    private SoftwareToolkit field_c;
     private int[] field_e;
     private int[] field_f;
     private int[] field_h;
@@ -107,7 +107,7 @@ final class jfa extends da {
         }
     }
 
-    jfa(sob param0, sw param1, ima[] param2, int[] param3, int[] param4) {
+    jfa(SoftwareToolkit param0, sw param1, ima[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_c = param0;

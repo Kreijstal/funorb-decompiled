@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lhb implements dja {
-    static no field_a;
+    static BitmapFont field_a;
 
     final static tsa a(byte param0, ipb param1) throws ojb {
         tsa stackIn_9_0 = null;
@@ -21,7 +21,7 @@ final class lhb implements dja {
         try {
           var5 = param1.a((byte) -1);
           if (param0 <= 13) {
-            field_a = (no) null;
+            field_a = (BitmapFont) null;
           }
           if (dla.field_d != var5.field_e &&
             SetMissionTerrainSpaceProbability.field_o != var5.field_e &&
@@ -116,7 +116,7 @@ final class lhb implements dja {
         return (SerializableGameState) ((Object) new GrapplingHook());
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 > -62) {
           return;
         }

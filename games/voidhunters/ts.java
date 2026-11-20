@@ -118,7 +118,7 @@ final class ts {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 7) {
           return;
         }

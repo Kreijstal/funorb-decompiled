@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ShipComponent implements DiffableState, utb {
+final class ShipComponent implements DiffableState, CompactGameState {
     int[] finaloutline;
     int finalangle;
     ThrusterBehaviour thrusterbehaviour;
@@ -2311,7 +2311,7 @@ final class ShipComponent implements DiffableState, utb {
         return this.grapplebehaviour.d((byte) 126);
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_l = (byte[][][]) null;
         if (param0 != 24388) {
           field_l = (byte[][][]) null;
@@ -2918,7 +2918,7 @@ final class ShipComponent implements DiffableState, utb {
         return var2;
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -3147,8 +3147,8 @@ final class ShipComponent implements DiffableState, utb {
           } else {
             var5.behaviour = null;
           }
-          var5.subcomponents = (ShipComponent[]) (sqb.a(var5.subcomponents, this.subcomponents, 1, ii.field_d, false));
-          var5.hardpoints = (Hardpoint[]) (sqb.a(var5.hardpoints, this.hardpoints, 1, ta.field_a, false));
+          var5.subcomponents = (ShipComponent[]) (SpriteDimensions.a(var5.subcomponents, this.subcomponents, 1, ii.field_d, false));
+          var5.hardpoints = (Hardpoint[]) (SpriteDimensions.a(var5.hardpoints, this.hardpoints, 1, ta.field_a, false));
           var5.connectedangle = this.connectedangle;
           var5.finalangle = this.finalangle;
           var5.finalx = this.finalx;
@@ -3580,7 +3580,7 @@ final class ShipComponent implements DiffableState, utb {
         return var7;
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         IsaacPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
@@ -3676,7 +3676,7 @@ final class ShipComponent implements DiffableState, utb {
               stackIn_35_1 = -97;
               stackIn_36_2 = (var8 != null);
               if (vq.writeBoolean(stackIn_35_0, stackIn_35_1, stackIn_36_2)) {
-                ((utb) ((Object) var8)).a(var3, (byte) -122);
+                ((CompactGameState) ((Object) var8)).writeCompactState(var3, (byte) -122);
               }
             }
           }
@@ -3702,7 +3702,7 @@ final class ShipComponent implements DiffableState, utb {
               stackIn_50_1 = 120;
               stackIn_51_2 = (var8_ref != null);
               if (vq.writeBoolean(stackIn_50_0, stackIn_50_1, stackIn_51_2)) {
-                ((utb) ((Object) var8_ref)).a(var3Lifetime1, (byte) -93);
+                ((CompactGameState) ((Object) var8_ref)).writeCompactState(var3Lifetime1, (byte) -93);
               }
               var10++;
             }

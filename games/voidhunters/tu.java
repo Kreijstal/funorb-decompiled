@@ -7,7 +7,7 @@ final class tu {
     static char[] field_c;
     static GameApplet field_a;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         if (param0 != 88) {
           field_c = (char[]) null;

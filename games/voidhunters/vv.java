@@ -4,8 +4,8 @@
 final class vv {
     private int field_i;
     private int field_h;
-    phb[] field_b;
-    phb field_e;
+    Sprite[] field_b;
+    Sprite field_e;
     private int field_g;
     private boolean field_d;
     private int field_f;
@@ -36,7 +36,7 @@ final class vv {
     }
 
     final void a(uea param0, boolean param1, int param2, shb param3, int param4) {
-        no stackIn_21_0 = null;
+        BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
         int stackIn_24_2;
@@ -112,7 +112,7 @@ final class vv {
             } else {
               stackIn_28_8 = 256;
             }
-            ((no) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_c, param0.field_n, param0.field_h);
+            ((BitmapFont) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_c, param0.field_n, param0.field_h);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,7 +213,7 @@ final class vv {
 
     final vv b(int param0, int param1) {
         if (param1 != -2147483648) {
-          this.field_b = (phb[]) null;
+          this.field_b = (Sprite[]) null;
           this.field_j = param0;
           return this;
         }
@@ -221,7 +221,7 @@ final class vv {
         return this;
     }
 
-    final vv a(boolean param0, phb[] param1) {
+    final vv a(boolean param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

@@ -4,7 +4,7 @@
 final class GetReadyRoomTeamTime extends ConsoleCommand {
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 61) {
           field_o = (String) null;
           field_o = null;

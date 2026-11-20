@@ -39,7 +39,7 @@ final class SetThrusterBindingBalanceThreshold extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 23 / ((param0 + 46) / 55);
         field_r = null;
         field_q = null;

@@ -17,7 +17,7 @@ final class hab extends uda {
         this.field_d.a(MissionVariable.field_c, true, asa.field_a);
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -18951) {
           return;
         }
@@ -32,7 +32,7 @@ final class hab extends uda {
         }
     }
 
-    hab(pf param0) {
+    hab(GpuToolkit param0) {
         super(param0);
         this.field_f = false;
     }

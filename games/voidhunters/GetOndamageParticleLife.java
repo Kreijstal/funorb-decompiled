@@ -5,7 +5,7 @@ final class GetOndamageParticleLife extends ConsoleCommand {
     static char[] field_p;
     static boolean field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 37 / ((-33 - param0) / 54);
         field_p = null;
     }

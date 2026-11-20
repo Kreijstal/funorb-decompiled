@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sob extends GraphicsToolkit {
+final class SoftwareToolkit extends GraphicsToolkit {
     private int field_E;
     private int field_z;
     private gnb field_t;
@@ -1612,7 +1612,7 @@ final class sob extends GraphicsToolkit {
         }
     }
 
-    private sob(d param0) {
+    private SoftwareToolkit(d param0) {
         super(param0);
         lia discarded$0 = null;
         this.field_B = false;
@@ -1816,7 +1816,7 @@ final class sob extends GraphicsToolkit {
         var12.field_i = false;
     }
 
-    sob(java.awt.Canvas param0, d param1, int param2, int param3) {
+    SoftwareToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
         this(param1);
         try {
           this.b(param0, param2, param3);

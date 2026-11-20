@@ -5,7 +5,7 @@ final class SetLaserProjectiles extends ConsoleCommand {
     static boolean[] field_o;
     static String field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -9 % ((-14 - param0) / 47);
         field_o = null;
         field_p = null;
@@ -25,7 +25,7 @@ final class SetLaserProjectiles extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(82, 62, arguments[0].intValue(8));
           if (obfuscationGuard >= -119) {
-            SetLaserProjectiles.e((byte) 124);
+            SetLaserProjectiles.clearSharedReferences((byte) 124);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

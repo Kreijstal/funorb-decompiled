@@ -5,7 +5,7 @@ final class GetMissileLauncherProjectileLife extends ConsoleCommand {
     static int field_p;
     static String[] field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 < 116) {
           field_o = (String[]) null;

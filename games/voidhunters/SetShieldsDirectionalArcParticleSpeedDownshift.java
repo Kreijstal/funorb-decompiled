@@ -92,43 +92,43 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
 
     final static void a(int param0, llb param1, int param2) {
         hqb var12 = null;
-        phb var13 = null;
+        Sprite var13 = null;
         String var14 = null;
         hqb var15 = null;
-        phb var16 = null;
+        Sprite var16 = null;
         String var17 = null;
         hqb var18 = null;
-        phb var19 = null;
+        Sprite var19 = null;
         String var20 = null;
         hqb var21 = null;
         String var23 = null;
         hqb var24 = null;
-        phb var25 = null;
+        Sprite var25 = null;
         String var26 = null;
         hqb var27 = null;
-        phb var28 = null;
+        Sprite var28 = null;
         String var29 = null;
         hqb var30 = null;
-        phb var31 = null;
+        Sprite var31 = null;
         String var32 = null;
         hqb var33 = null;
-        phb var34 = null;
+        Sprite var34 = null;
         String var35 = null;
         hqb var36 = null;
-        phb var37 = null;
+        Sprite var37 = null;
         String var38 = null;
         hqb var39 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        phb var22 = null;
-        phb var22Lifetime1;
-        phb var22Lifetime2;
-        phb var22Lifetime3;
-        phb var22Lifetime4;
-        phb var22Lifetime5;
-        phb var22Lifetime6;
+        Sprite var22 = null;
+        Sprite var22Lifetime1;
+        Sprite var22Lifetime2;
+        Sprite var22Lifetime3;
+        Sprite var22Lifetime4;
+        Sprite var22Lifetime5;
+        Sprite var22Lifetime6;
         try {
           pea.$cfr$intArgs$a$91f64d33677c(0L, param1, param2, (int[]) null, (String) null, (soa) null, (String) null, 80, -1);
           if (param2 == 0) {

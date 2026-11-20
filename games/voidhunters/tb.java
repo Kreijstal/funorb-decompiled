@@ -6,7 +6,7 @@ class tb {
     static int field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 >= -1) {
           field_a = (llb) null;
           field_a = null;

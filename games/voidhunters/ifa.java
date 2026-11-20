@@ -9,7 +9,7 @@ final class ifa extends IntrusiveNode {
     private static char[] field_f;
     static String[] field_g;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_h = null;
         field_f = null;
         field_e = null;

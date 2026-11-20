@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Ship extends ShipBody implements DiffableState, utb {
+final class Ship extends ShipBody implements DiffableState, CompactGameState {
     private int[] field_x;
     private int energy;
     private int repairModeReload;
@@ -33,7 +33,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
         this.owner = param0;
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -42,7 +42,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
-          super.a(param0, 32);
+          super.readCompactState(param0, 32);
           this.owner = param0.readBits(0, 32);
           this.team = param0.readBits(param1 ^ 32, 32);
           this.dragging = param0.readBits(param1 - 32, 32);
@@ -951,7 +951,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
         int var2 = 90 / ((72 - param0) / 44);
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
@@ -966,7 +966,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, (byte) -107);
+          super.writeCompactState(param0, (byte) -107);
           param0.writeBits(-632, this.owner, 32);
           param0.writeBits(-632, this.team, 32);
           param0.writeBits(-632, this.dragging, 32);

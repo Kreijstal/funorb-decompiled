@@ -100,7 +100,7 @@ final class gnb {
         }
     }
 
-    final static ibb a(int param0, ue[] param1, jp param2) {
+    final static ibb a(int param0, ue[] param1, OpenGlGpuToolkit param2) {
         Object stackIn_7_0 = null;
         Object stackIn_24_0 = null;
         ibb stackIn_26_0 = null;

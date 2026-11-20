@@ -35,7 +35,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 88) {
           field_p = (khb) null;
           field_p = null;

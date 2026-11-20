@@ -45,7 +45,7 @@ final class SetGrapplingHookMaxExtension8Force extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_r = null;
         field_p = null;
         field_q = null;

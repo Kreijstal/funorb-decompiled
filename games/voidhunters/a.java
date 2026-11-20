@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a implements e {
-    private oa field_b;
+    private NativeSoftwareToolkit field_b;
     long field_nativeid;
     Runnable field_a;
 
@@ -21,7 +21,7 @@ final class a implements e {
 
     private final native void E(long param0, boolean param1);
 
-    a(oa param0, int param1, int param2) {
+    a(NativeSoftwareToolkit param0, int param1, int param2) {
         this.field_b = param0;
         i discarded$0 = new i(this.field_b);
         i discarded$1 = new i(this.field_b);

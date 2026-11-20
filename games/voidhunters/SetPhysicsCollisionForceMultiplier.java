@@ -143,7 +143,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
-        phb[] var4 = null;
+        Sprite[] var4 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -151,8 +151,8 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            var4 = (phb[]) null;
-            SetPhysicsCollisionForceMultiplier.a((phb[]) null, 64, 92, -41, -29, false);
+            var4 = (Sprite[]) null;
+            SetPhysicsCollisionForceMultiplier.a((Sprite[]) null, 64, 92, -41, -29, false);
           }
           SetMachineGunEnergyUsed.a(50, 62, arguments[0].intValue(48));
           stackIn_3_0 = new ConsoleValue("void");
@@ -171,14 +171,14 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 <= 119) {
           field_o = (String) null;
         }
     }
 
-    final static void a(phb[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

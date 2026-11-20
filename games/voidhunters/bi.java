@@ -14,7 +14,7 @@ final class bi implements Runnable {
     private eab field_e;
     private int field_a;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -19766) {
           field_g = (String) null;
           field_g = null;

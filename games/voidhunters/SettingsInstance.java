@@ -139,7 +139,7 @@ final class SettingsInstance implements DiffableState {
         return hab.field_g[param1].field_r;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 17674) {
           return;
         }

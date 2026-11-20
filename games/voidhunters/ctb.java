@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ctb extends da {
-    private sob field_g;
+    private SoftwareToolkit field_g;
     private int[] field_d;
     private int[] field_e;
     private byte[][] field_c;
@@ -185,7 +185,7 @@ final class ctb extends da {
         }
     }
 
-    ctb(sob param0, sw param1, ima[] param2, int[] param3, int[] param4) {
+    ctb(SoftwareToolkit param0, sw param1, ima[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         byte[] array$0 = null;

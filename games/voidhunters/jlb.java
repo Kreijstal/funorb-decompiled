@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jlb extends le {
+final class jlb extends TextureOperation {
     private int field_j;
     private int field_m;
     private int[] field_v;
@@ -20,7 +20,7 @@ final class jlb extends le {
     static String field_t;
     private int field_s;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var4 = 0;
         int stackIn_14_0 = 0;
         int stackIn_21_0 = 0;
@@ -42,7 +42,7 @@ final class jlb extends le {
         int[] var19;
         int[] var19Lifetime1;
         var17 = VoidHunters.field_G;
-        var19 = this.field_f.a((byte) 40, param0);
+        var19 = this.field_f.getRow((byte) 40, param0);
         var18 = var19;
         var3 = var18;
         if (!param1) {
@@ -124,7 +124,7 @@ final class jlb extends le {
           return true;
         }
         if (param1 != -2048) {
-          jlb.a(false);
+          jlb.clearSharedReferences(false);
         }
         if (rtb.a(param0, -94, param3, param2)) {
           return true;
@@ -132,7 +132,7 @@ final class jlb extends le {
         return false;
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         this.e((byte) -34);
         if (param0 >= -35) {
           this.field_p = -6;
@@ -194,7 +194,7 @@ final class jlb extends le {
         this.field_v[this.field_s] = 4096;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -254,7 +254,7 @@ final class jlb extends le {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_t = null;
         if (!param0) {
           field_t = (String) null;

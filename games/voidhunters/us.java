@@ -7,7 +7,7 @@ class us extends oib {
     static pfb field_d;
     private String field_e;
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 27) {
           return;
         }

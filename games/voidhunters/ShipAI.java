@@ -42,7 +42,7 @@ final class ShipAI implements DiffableState {
             }
           }
           if (param1 > -1) {
-            ShipAI.a(true);
+            ShipAI.clearSharedReferences(true);
           }
           stackIn_26_0 = var4_int << 3;
           return stackIn_26_0;
@@ -242,7 +242,7 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           return;
         }

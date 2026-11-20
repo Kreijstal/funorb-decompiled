@@ -12,7 +12,7 @@ final class wva implements dja {
         int var1 = -93 % ((param0 + 11) / 55);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 101 % ((-83 - param0) / 37);
         field_a = null;
     }
@@ -78,7 +78,7 @@ final class wva implements dja {
         return (SerializableGameState) ((Object) new MatchResults());
     }
 
-    final static int a(int param0, String[] param1, int param2, String param3, no param4) {
+    final static int a(int param0, String[] param1, int param2, String param3, BitmapFont param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

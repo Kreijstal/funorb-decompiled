@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gw extends le {
+final class gw extends TextureOperation {
     private int field_j;
     static int[] field_i;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var5 = 0;
         int stackIn_13_0 = 0;
         int stackIn_21_0 = 0;
@@ -25,7 +25,7 @@ final class gw extends le {
         if (!param1) {
           return (int[]) null;
         }
-        var11 = this.field_f.a((byte) 124, param0);
+        var11 = this.field_f.getRow((byte) 124, param0);
         var10 = var11;
         var9 = var10;
         var3 = var9;
@@ -105,7 +105,7 @@ final class gw extends le {
         this.field_j = 585;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -120,7 +120,7 @@ final class gw extends le {
           if (param1 <= -60) {
             return;
           }
-          gw.a(false);
+          gw.clearSharedReferences(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ final class gw extends le {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           field_i = (int[]) null;
           field_i = null;

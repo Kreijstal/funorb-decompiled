@@ -35,7 +35,7 @@ final class bib extends uda {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_g = null;
         field_e = null;
         if (param0) {
@@ -55,7 +55,7 @@ final class bib extends uda {
         }
     }
 
-    bib(pf param0) {
+    bib(GpuToolkit param0) {
         super(param0);
     }
 

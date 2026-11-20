@@ -7,7 +7,7 @@ final class iob extends vhb {
     static int field_g;
     private static String field_z;
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -5509) {
           return;
         }

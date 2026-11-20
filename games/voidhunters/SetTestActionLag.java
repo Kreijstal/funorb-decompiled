@@ -51,10 +51,10 @@ final class SetTestActionLag extends ConsoleCommand {
             SetTestActionLag.a((SerializableGameState) null, (byte) 16);
           }
           bk.field_w.beginBitWrite(-81);
-          if (!(param0 instanceof utb)) {
+          if (!(param0 instanceof CompactGameState)) {
             param0.writeState(bk.field_w, -111);
           } else {
-            ((utb) ((Object) param0)).a(bk.field_w, (byte) -116);
+            ((CompactGameState) ((Object) param0)).writeCompactState(bk.field_w, (byte) -116);
           }
           bk.field_w.endBitWrite(32712);
           stackIn_6_0 = psb.a(bk.field_w.payload, bk.field_w.position, 0);

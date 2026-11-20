@@ -5,7 +5,7 @@ final class SetBombletSprayReload extends ConsoleCommand {
     static gj field_p;
     static gl field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         if (param0 != 0) {

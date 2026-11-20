@@ -106,7 +106,7 @@ final class bma extends uda {
         this.field_i = true;
     }
 
-    bma(jp param0, asb param1) {
+    bma(OpenGlGpuToolkit param0, asb param1) {
         super(param0);
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;

@@ -8,14 +8,14 @@ final class ta {
     final static void a(byte param0, int param1) {
         wp.field_a = SetBombletSprayEnergyUsed.field_o;
         if (param0 > -101) {
-          ta.a((byte) -35);
+          ta.clearSharedReferences((byte) -35);
           pw.field_a = param1;
           return;
         }
         pw.field_a = param1;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 != -109) {

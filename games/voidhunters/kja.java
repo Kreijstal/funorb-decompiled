@@ -255,7 +255,7 @@ class kja extends htb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_G = null;
         field_E = null;
         field_C = null;

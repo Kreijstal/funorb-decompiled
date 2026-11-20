@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetDebrisGroupColour extends ConsoleCommand {
-    static phb[] field_o;
+    static Sprite[] field_o;
 
     final static float[] a(float param0, int param1, int param2, int param3, float param4, int param5, int param6, float param7) {
         float[] var21 = new float[9];

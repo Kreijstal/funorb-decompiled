@@ -5,7 +5,7 @@ final class GetPlayerRepairTime extends ConsoleCommand {
     static IntrusiveDeque field_p;
     static byte[] field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 8) {
           field_p = (IntrusiveDeque) null;
           field_p = null;

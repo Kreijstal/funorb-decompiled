@@ -31,7 +31,7 @@ final class GetAutoDetail extends ConsoleCommand {
         }
     }
 
-    final static void a(no param0, int param1, byte param2, int param3, phb[] param4, boolean param5, String param6, int param7, int param8, boolean param9, int param10, phb[] param11, int param12, int param13, int param14) {
+    final static void a(BitmapFont param0, int param1, byte param2, int param3, Sprite[] param4, boolean param5, String param6, int param7, int param8, boolean param9, int param10, Sprite[] param11, int param12, int param13, int param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -43,13 +43,13 @@ final class GetAutoDetail extends ConsoleCommand {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        phb[] var16 = null;
+        Sprite[] var16 = null;
         try {
           qma.a(param0, GetMachineGunEnergyUsed.field_p, GetPhasedEnergyBeamPulsetime.field_o, param13, param12, param14, param10, param3, param0, Lo.field_o, param14, param8, new bc(param11), mb.field_j, SetUsePolygonFill.field_o, SetMissilesExplosionPower.field_p, param2 + 29, param1, new bc(param4), param10);
           GetMessageMaxage.a(param7, param9, param6, param5, (byte) 25);
           if (param2 != -115) {
-            var16 = (phb[]) null;
-            GetAutoDetail.a((no) null, 4, (byte) 70, -69, (phb[]) null, true, (String) null, -82, -63, false, -29, (phb[]) null, -73, 82, -95);
+            var16 = (Sprite[]) null;
+            GetAutoDetail.a((BitmapFont) null, 4, (byte) 70, -69, (Sprite[]) null, true, (String) null, -82, -63, false, -29, (Sprite[]) null, -73, 82, -95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oaa extends mnb implements uq {
-    static phb field_j;
+    static Sprite field_j;
     static IntrusiveDeque field_k;
     static lla field_h;
     static int field_i;
@@ -14,7 +14,7 @@ final class oaa extends mnb implements uq {
         return this.field_f;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_k = null;
         if (param0 < 78) {
           return;

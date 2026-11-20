@@ -4,7 +4,7 @@
 final class aw extends llb {
     private llb field_Fb;
     private int field_yb;
-    private phb[] field_xb;
+    private Sprite[] field_xb;
     private llb field_Cb;
     private int field_wb;
     static gl field_Bb;
@@ -49,7 +49,7 @@ final class aw extends llb {
 
     final void a(String param0, byte param1, int param2) {
         try {
-          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, (phb) null, param0);
+          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, (Sprite) null, param0);
           this.field_Gb[this.field_Ib].field_mb = this.field_xb;
           this.field_Gb[this.field_Ib].field_S = true;
           this.field_Gb[this.field_Ib].field_B = 1;
@@ -76,7 +76,7 @@ final class aw extends llb {
         int var8Lifetime1;
         var11 = VoidHunters.field_G;
         if (0 == this.field_Ib) {
-          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Fb, (phb) null, GetNumStars.field_o);
+          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Fb, (Sprite) null, GetNumStars.field_o);
           this.field_Gb[this.field_Ib].field_B = 1;
           this.b(-561, this.field_Gb[this.field_Ib]);
           this.field_Eb[this.field_Ib] = -1;
@@ -131,7 +131,7 @@ final class aw extends llb {
         }
     }
 
-    final void a(int param0, int param1, phb param2, String param3) {
+    final void a(int param0, int param1, Sprite param2, String param3) {
         if (param0 != -1) {
           return;
         }
@@ -148,7 +148,7 @@ final class aw extends llb {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_Db = null;
         field_Bb = null;
         if (param0 != 0) {
@@ -160,7 +160,7 @@ final class aw extends llb {
         this(param0, param0.field_xb, param0.field_Fb, param0.field_Cb, param0.field_zb, param0.field_vb, param0.field_Hb, param0.field_yb, param0.field_wb);
     }
 
-    aw(llb param0, phb[] param1, llb param2, llb param3, int param4, int param5, int param6, int param7, int param8) {
+    aw(llb param0, Sprite[] param1, llb param2, llb param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Eb = new int[256];
         this.field_Ab = -2;

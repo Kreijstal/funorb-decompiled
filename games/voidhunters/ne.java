@@ -366,7 +366,7 @@ final class ne extends ka {
         return this.field_e;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_m = null;
         if (param0 != -2) {
           field_m = (String) null;

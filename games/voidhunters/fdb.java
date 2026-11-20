@@ -8,7 +8,7 @@ final class fdb extends hbb {
     private boolean field_P;
     private int field_Q;
     private int[] field_J;
-    private cl field_U;
+    private MidiChannelLevels field_U;
 
     public static void g(int param0) {
         field_S = null;
@@ -115,7 +115,7 @@ final class fdb extends hbb {
         this.field_R[param2] = param0 << 12;
     }
 
-    final synchronized void a(byte param0, int param1, cl param2) {
+    final synchronized void a(byte param0, int param1, MidiChannelLevels param2) {
         int var4_int = 0;
         try {
           var4_int = vka.field_s * param1 / 1000;
@@ -136,14 +136,14 @@ final class fdb extends hbb {
     private final synchronized void b(int param0, int param1, int param2, byte param3) {
         this.field_P = false;
         if (this.field_U == null) {
-          this.field_U = new cl();
+          this.field_U = new MidiChannelLevels();
         }
-        this.field_U.field_a[param1] = param2;
+        this.field_U.levels[param1] = param2;
         if (param3 != -48) {
           return;
         }
         int var5 = this.field_R[param1];
-        int var6 = -var5 + (this.field_U.field_a[param1] << 12);
+        int var6 = -var5 + (this.field_U.levels[param1] << 12);
         int var7 = 0;
         int var8 = 0;
         if (0 > var6) {
@@ -181,7 +181,7 @@ final class fdb extends hbb {
               var7 = this.field_J[var6];
               if (0 != var7) {
                 this.field_R[var6] = this.field_R[var6] + param2 * var7;
-                var8 = this.field_U.field_a[var6];
+                var8 = this.field_U.levels[var6];
                 stackIn_9_0 = (this.field_R[var6] >> 12 >= var8) ? 0 : 1;
                 if (var7 <= 0) {
                   stackIn_12_1 = 0;
@@ -217,7 +217,7 @@ final class fdb extends hbb {
         }
     }
 
-    private final synchronized void a(int param0, cl param1, int param2) {
+    private final synchronized void a(int param0, MidiChannelLevels param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -232,7 +232,7 @@ final class fdb extends hbb {
             return;
           }
           for (var4_int = 0; var4_int < 16; var4_int++) {
-            this.b(param2, var4_int, this.field_U.field_a[var4_int], (byte) -48);
+            this.b(param2, var4_int, this.field_U.levels[var4_int], (byte) -48);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

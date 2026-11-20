@@ -7,7 +7,7 @@ class llb extends fgb {
     int field_v;
     boolean field_Z;
     int field_B;
-    phb field_tb;
+    Sprite field_tb;
     int field_P;
     boolean field_Q;
     int field_L;
@@ -16,21 +16,21 @@ class llb extends fgb {
     int field_t;
     int field_K;
     int field_fb;
-    phb field_ob;
+    Sprite field_ob;
     boolean field_S;
     int field_D;
     int field_hb;
     int field_G;
     private boolean field_W;
-    phb[] field_nb;
+    Sprite[] field_nb;
     private int field_bb;
     boolean field_J;
     int field_X;
-    phb[] field_gb;
+    Sprite[] field_gb;
     String field_R;
     int field_ib;
-    phb[] field_A;
-    phb field_q;
+    Sprite[] field_A;
+    Sprite field_q;
     private int field_sb;
     private int field_n;
     int field_w;
@@ -40,10 +40,10 @@ class llb extends fgb {
     int field_E;
     private int field_ab;
     int field_I;
-    phb[] field_mb;
-    phb[] field_ub;
-    phb field_cb;
-    no field_eb;
+    Sprite[] field_mb;
+    Sprite[] field_ub;
+    Sprite field_cb;
+    BitmapFont field_eb;
     int field_U;
     int field_jb;
     boolean field_y;
@@ -61,7 +61,7 @@ class llb extends fgb {
     int field_F;
     int field_M;
     private boolean field_N;
-    phb field_z;
+    Sprite field_z;
 
     final void a(llb param0, int param1, llb param2, int param3) {
         int var5_int = 0;
@@ -574,8 +574,8 @@ class llb extends fgb {
         int var13;
         int var14;
         int var15;
-        phb[] var16;
-        phb var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;

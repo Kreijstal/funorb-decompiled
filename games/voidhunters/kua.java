@@ -3,7 +3,7 @@
  */
 final class kua {
     int[] field_b;
-    static phb field_a;
+    static Sprite field_a;
     static boolean field_e;
     int[] field_f;
     float[][] field_c;

@@ -4,7 +4,7 @@
 final class GetBombletSprayProjectileLife extends ConsoleCommand {
     static String field_r;
     static kla field_q;
-    static phb[] field_o;
+    static Sprite[] field_o;
     static String field_p;
 
     GetBombletSprayProjectileLife(String param0, Class[] param1, String param2) {

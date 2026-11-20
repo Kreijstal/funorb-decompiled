@@ -501,7 +501,7 @@ final class qp {
                 }
                 stackIn_34_0 = var7.field_wb;
                 if (var14 > 0) {
-                  stackIn_35_1 = no.a(var7.field_wb.field_eb, var7.field_Fb, var14);
+                  stackIn_35_1 = BitmapFont.a(var7.field_wb.field_eb, var7.field_Fb, var14);
                 } else {
                   stackIn_35_1 = var7.field_Fb;
                 }

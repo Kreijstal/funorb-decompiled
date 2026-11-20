@@ -29,11 +29,11 @@ final class pa {
     final static void a(String param0, int param1) {
         System.out.println("Error: " + sh.a("\n", "%0a", param0, 0));
         if (param1 != 3) {
-          pa.a(111);
+          pa.clearSharedReferences(111);
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != 2) {
@@ -51,7 +51,7 @@ final class pa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 2) {
-            pa.a(36);
+            pa.clearSharedReferences(36);
           }
           var5 = param2.a(param0, param3, (byte) 13);
           var4 = var5;

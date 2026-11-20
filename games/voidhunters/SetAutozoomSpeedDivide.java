@@ -32,7 +32,7 @@ final class SetAutozoomSpeedDivide extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 <= 47) {
           field_o = (String) null;

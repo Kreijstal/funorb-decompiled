@@ -12,14 +12,14 @@ final class uja {
         }
     }
 
-    final static phb[] a(boolean param0) {
+    final static Sprite[] a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = VoidHunters.field_G;
-        phb[] var1 = new phb[mma.field_a];
+        Sprite[] var1 = new Sprite[mma.field_a];
         for (var2 = 0; var2 < mma.field_a; var2++) {
           var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
           var4 = sh.field_a[var2];
@@ -27,7 +27,7 @@ final class uja {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = rlb.field_d[dla.a(255, (int) var4[var6])];
           }
-          var1[var2] = new phb(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var5);
+          var1[var2] = new Sprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var5);
         }
         MatchResults.a(84);
         if (param0) {

@@ -30,7 +30,7 @@ final class GetShieldsToggleCooldown extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 < 105) {
           field_o = (String) null;
@@ -50,7 +50,7 @@ final class GetShieldsToggleCooldown extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetShieldsToggleCooldown.e((byte) -83);
+            GetShieldsToggleCooldown.clearSharedReferences((byte) -83);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(209, 82));
           return stackIn_3_0;

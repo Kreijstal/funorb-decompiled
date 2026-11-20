@@ -4,7 +4,7 @@
 package jagdx;
 
 public class IDirect3DTexture extends jagdx.IDirect3DBaseTexture {
-    IDirect3DTexture(jaclib.peer.tqb param0) {
+    IDirect3DTexture(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 

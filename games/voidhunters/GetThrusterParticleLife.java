@@ -5,7 +5,7 @@ final class GetThrusterParticleLife extends ConsoleCommand {
     static fdb field_o;
     static dja field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 177) {
           return;
         }

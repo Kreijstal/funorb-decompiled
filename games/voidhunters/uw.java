@@ -17,7 +17,7 @@ final class uw extends uj {
 
     final int b(byte param0) {
         if (param0 <= 79) {
-          uw.d(-2);
+          uw.clearSharedReferences(-2);
           return 106;
         }
         return 106;
@@ -106,7 +106,7 @@ final class uw extends uj {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 34037) {
           return;
         }

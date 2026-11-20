@@ -10,7 +10,7 @@ final class asa extends aa {
     im field_b;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         if (param0 != 20000000) {
           return;

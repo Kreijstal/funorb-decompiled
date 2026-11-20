@@ -14,9 +14,9 @@ final class ya extends za implements e {
         }
     }
 
-    private final native void aa(oa param0, int param1);
+    private final native void aa(NativeSoftwareToolkit param0, int param1);
 
-    ya(oa param0, int param1) {
+    ya(NativeSoftwareToolkit param0, int param1) {
         this.aa(param0, param1);
     }
 

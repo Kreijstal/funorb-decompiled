@@ -5,12 +5,12 @@ final class rp extends da {
     private mkb field_e;
     private boolean field_c;
     private eb field_d;
-    private pf field_f;
+    private GpuToolkit field_f;
 
     final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
     }
 
-    rp(pf param0, sw param1, ima[] param2, boolean param3) {
+    rp(GpuToolkit param0, sw param1, ima[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -216,52 +216,52 @@ final class rp extends da {
               var21 = var19 * var11;
               var22 = (var18 + (float)var15Lifetime1) * var10;
               var23 = (var19 + (float)var14Lifetime1) * var11;
-              if (!jaclib.memory.Stream.a()) {
-                var34.a((float)var17Lifetime1);
-                var34.a((float)var16Lifetime1);
-                var34.a(0.0f);
-                var34.a(var20);
-                var34.a(var21);
-                var34.a((float)var17Lifetime1);
-                var34.a((float)(var16Lifetime1 + var14Lifetime1));
-                var34.a(0.0f);
-                var34.a(var20);
-                var34.a(var23);
-                var34.a((float)(var17Lifetime1 + var15Lifetime1));
-                var34.a((float)(var16Lifetime1 + var14Lifetime1));
-                var34.a(0.0f);
-                var34.a(var22);
-                var34.a(var23);
-                var34.a((float)(var17Lifetime1 + var15Lifetime1));
-                var34.a((float)var16Lifetime1);
-                var34.a(0.0f);
-                var34.a(var22);
-                var34.a(var21);
+              if (!jaclib.memory.Stream.isBigEndian()) {
+                var34.writeFloatLE((float)var17Lifetime1);
+                var34.writeFloatLE((float)var16Lifetime1);
+                var34.writeFloatLE(0.0f);
+                var34.writeFloatLE(var20);
+                var34.writeFloatLE(var21);
+                var34.writeFloatLE((float)var17Lifetime1);
+                var34.writeFloatLE((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloatLE(0.0f);
+                var34.writeFloatLE(var20);
+                var34.writeFloatLE(var23);
+                var34.writeFloatLE((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloatLE((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloatLE(0.0f);
+                var34.writeFloatLE(var22);
+                var34.writeFloatLE(var23);
+                var34.writeFloatLE((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloatLE((float)var16Lifetime1);
+                var34.writeFloatLE(0.0f);
+                var34.writeFloatLE(var22);
+                var34.writeFloatLE(var21);
               } else {
-                var34.b((float)var17Lifetime1);
-                var34.b((float)var16Lifetime1);
-                var34.b(0.0f);
-                var34.b(var20);
-                var34.b(var21);
-                var34.b((float)var17Lifetime1);
-                var34.b((float)(var16Lifetime1 + var14Lifetime1));
-                var34.b(0.0f);
-                var34.b(var20);
-                var34.b(var23);
-                var34.b((float)(var17Lifetime1 + var15Lifetime1));
-                var34.b((float)(var16Lifetime1 + var14Lifetime1));
-                var34.b(0.0f);
-                var34.b(var22);
-                var34.b(var23);
-                var34.b((float)(var17Lifetime1 + var15Lifetime1));
-                var34.b((float)var16Lifetime1);
-                var34.b(0.0f);
-                var34.b(var22);
-                var34.b(var21);
+                var34.writeFloat((float)var17Lifetime1);
+                var34.writeFloat((float)var16Lifetime1);
+                var34.writeFloat(0.0f);
+                var34.writeFloat(var20);
+                var34.writeFloat(var21);
+                var34.writeFloat((float)var17Lifetime1);
+                var34.writeFloat((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloat(0.0f);
+                var34.writeFloat(var20);
+                var34.writeFloat(var23);
+                var34.writeFloat((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloat((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloat(0.0f);
+                var34.writeFloat(var22);
+                var34.writeFloat(var23);
+                var34.writeFloat((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloat((float)var16Lifetime1);
+                var34.writeFloat(0.0f);
+                var34.writeFloat(var22);
+                var34.writeFloat(var21);
               }
               var24++;
             }
-            var34.b();
+            var34.flush();
             if (this.field_e.b(-20836)) {
               return;
             }

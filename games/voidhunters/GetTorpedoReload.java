@@ -37,7 +37,7 @@ final class GetTorpedoReload extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 194) {
           field_p = (dka) null;

@@ -11,7 +11,7 @@ final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           }
           uob.a(dga.field_a, (byte) 106, mnb.field_g, dkb.field_b);
           if (!param1) {
-            GetPhasedEnergyBeamAimspeed.a(73);
+            GetPhasedEnergyBeamAimspeed.clearSharedReferences(73);
           }
           SetSniperCannonAimarc.a(param0, 0, 0, 0);
         } catch (RuntimeException runtimeException) {
@@ -19,7 +19,7 @@ final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -29417) {
           field_o = (String) null;
           field_o = null;

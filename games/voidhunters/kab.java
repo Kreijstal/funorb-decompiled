@@ -77,7 +77,7 @@ final class kab extends bob {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 777) {
           field_p = (String) null;

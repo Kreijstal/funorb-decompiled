@@ -4,10 +4,10 @@
 final class ubb extends kva implements eb {
     private int field_l;
     private int field_m;
-    static phb field_j;
+    static Sprite field_j;
     static String field_k;
 
-    ubb(jp param0, kb param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+    ubb(OpenGlGpuToolkit param0, kb param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
         super(param0, 3553, param1, mj.field_d, param3 * param2, param4);
         RuntimeException var9 = null;
         RuntimeException stackIn_9_0 = null;
@@ -71,7 +71,7 @@ final class ubb extends kva implements eb {
         }
     }
 
-    ubb(jp param0, kb param1, mj param2, int param3, int param4) {
+    ubb(OpenGlGpuToolkit param0, kb param1, mj param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
         try {
           this.field_m = param4;
@@ -102,7 +102,7 @@ final class ubb extends kva implements eb {
         try {
           super.a(param0, param1 ^ 0);
           if (param1 != -28798) {
-            field_j = (phb) null;
+            field_j = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -154,7 +154,7 @@ final class ubb extends kva implements eb {
         }
     }
 
-    ubb(jp param0, kb param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    ubb(OpenGlGpuToolkit param0, kb param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, 3553, param1, mj.field_f, param3 * param2, param4);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
@@ -223,7 +223,7 @@ final class ubb extends kva implements eb {
         jaggl.OpenGL.glTexParameteri(this.field_e, 10243, !param2 ? 33071 : 10497);
     }
 
-    ubb(jp param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+    ubb(OpenGlGpuToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, 3553, qua.field_d, mj.field_f, param2 * param1, param3);
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
@@ -283,7 +283,7 @@ final class ubb extends kva implements eb {
         super.b(param0 ^ 0);
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = null;
         if (param0 != 42) {
           return;
@@ -305,7 +305,7 @@ final class ubb extends kva implements eb {
           jaggl.OpenGL.glPixelStorei(3314, param3);
           jaggl.OpenGL.glTexSubImage2Df(this.field_e, 0, param6, param5, param7, param0, MissionControl.a(-29328, param1), 5121, param4, param8);
           if (param2 >= -35) {
-            ubb.f((byte) -66);
+            ubb.clearSharedReferences((byte) -66);
           }
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {

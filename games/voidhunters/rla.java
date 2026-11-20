@@ -10,7 +10,7 @@ final class rla extends dqa implements oo {
 
     final static boolean c(boolean param0) {
         if (param0) {
-          rla.i((byte) -52);
+          rla.clearSharedReferences((byte) -52);
           if (!upa.field_a) {
             return false;
           }
@@ -50,7 +50,7 @@ final class rla extends dqa implements oo {
         super.b(param0, param1, 94, param3);
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 45) {
           return;
         }

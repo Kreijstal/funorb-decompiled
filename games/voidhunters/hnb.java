@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hnb extends iw implements oo {
-    static phb[] field_U;
+    static Sprite[] field_U;
     private boolean field_M;
     static llb field_X;
     private htb field_L;
@@ -50,7 +50,7 @@ final class hnb extends iw implements oo {
             this.field_v.a(false, new hnb(this.field_v));
           }
           if (param2 != -981) {
-            field_U = (phb[]) null;
+            field_U = (Sprite[]) null;
           }
           if (null != this.field_P) {
             stackIn_16_0 = (this.field_P.h(0)) ? 0 : 1;
@@ -393,9 +393,9 @@ final class hnb extends iw implements oo {
         }
     }
 
-    public static void i(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
-          field_U = (phb[]) null;
+          field_U = (Sprite[]) null;
         }
         field_U = null;
         field_X = null;

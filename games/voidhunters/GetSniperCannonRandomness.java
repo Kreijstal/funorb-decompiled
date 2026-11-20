@@ -84,7 +84,7 @@ final class GetSniperCannonRandomness extends ConsoleCommand {
         return 4;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != -27645) {
           return;

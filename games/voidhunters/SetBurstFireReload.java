@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBurstFireReload extends ConsoleCommand {
-    final static phb[] a(int param0, int param1, int param2) {
+    final static Sprite[] a(int param0, int param1, int param2) {
         if (param0 == -26998) {
           return GetPhasedEnergyBeamProjectiles.a(param2, param1, 1, true);
         }

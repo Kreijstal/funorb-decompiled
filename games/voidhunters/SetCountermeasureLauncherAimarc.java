@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetCountermeasureLauncherAimarc extends ConsoleCommand {
-    static phb[] field_p;
+    static Sprite[] field_p;
     static gdb field_r;
     static String field_o;
     static String field_q;
@@ -40,7 +40,7 @@ final class SetCountermeasureLauncherAimarc extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= -30) {
           field_s = null;
           field_p = null;

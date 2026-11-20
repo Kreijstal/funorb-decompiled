@@ -5,7 +5,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
     static java.math.BigInteger field_p;
     static int field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         int var1 = 24 / ((param0 + 45) / 52);
     }
@@ -13,7 +13,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
     final static boolean e(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 9) {
-          SetSalvoDamageMultiplier.a(24);
+          SetSalvoDamageMultiplier.clearSharedReferences(24);
         }
         stackIn_6_0 = (SetMassDriverProjectileLife.a(0)) && ((SetMinimapWidth.field_o & 8) == 0);
         return stackIn_6_0;

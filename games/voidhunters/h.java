@@ -10,11 +10,11 @@ final class h extends da implements e {
         }
     }
 
-    private final native void JA(oa param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
+    private final native void JA(NativeSoftwareToolkit param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
 
     final native void fa(char param0, int param1, int param2, int param3, boolean param4);
 
-    h(oa param0, ya param1, sw param2, ima[] param3, aja[] param4) {
+    h(NativeSoftwareToolkit param0, ya param1, sw param2, ima[] param3, aja[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];

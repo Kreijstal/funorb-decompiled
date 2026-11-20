@@ -20,7 +20,7 @@ final class sja {
           this.field_e = param1;
           this.field_k = param3;
           if (param4 != 4096) {
-            sja.a((byte) 30);
+            sja.clearSharedReferences((byte) 30);
           }
           this.field_h = param6;
           this.field_f = param5;
@@ -31,7 +31,7 @@ final class sja {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -46 / ((param0 - 64) / 44);
         field_j = null;
         field_d = null;

@@ -387,7 +387,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 87 % ((46 - param0) / 63);
         field_c = null;
     }

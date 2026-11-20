@@ -9,7 +9,7 @@ final class nna extends dqa implements oo {
     static int field_w;
     static llb field_v;
     static djb field_C;
-    private no field_H;
+    private BitmapFont field_H;
     private String field_x;
     static ae field_z;
     private int field_A;
@@ -125,7 +125,7 @@ final class nna extends dqa implements oo {
         field_D = null;
     }
 
-    nna(os param0, no param1, String param2) {
+    nna(os param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (wwa) null);
         int var4_int = 0;
         this.field_A = 0;

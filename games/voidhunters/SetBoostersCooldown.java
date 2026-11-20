@@ -22,8 +22,8 @@ final class SetBoostersCooldown extends ConsoleCommand {
           return;
         }
         try {
-          no var11 = (no) null;
-          es.a(param4, param9, param1, param8, param2, param7, param0, param6, -115, (no) null, param5);
+          BitmapFont var11 = (BitmapFont) null;
+          es.a(param4, param9, param1, param8, param2, param7, param0, param6, -115, (BitmapFont) null, param5);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }

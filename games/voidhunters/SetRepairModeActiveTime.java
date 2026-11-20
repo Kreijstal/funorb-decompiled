@@ -43,7 +43,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, asb param3, String[] param4, String[][] param5, phb[][] param6, int param7, phb[][] param8, String[][] param9, String[] param10, byte[] param11, int param12, String[] param13, int[] param14) {
+    final static void a(byte[] param0, int param1, int param2, asb param3, String[] param4, String[][] param5, Sprite[][] param6, int param7, Sprite[][] param8, String[][] param9, String[] param10, byte[] param11, int param12, String[] param13, int[] param14) {
         cna[] array$0 = null;
         cna[] array$1 = null;
         cna[] array$2 = null;
@@ -109,7 +109,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetRepairModeRadius.field_o = param6;
           vva.field_u = param11;
           SetPointDefenceLaserAimarc.field_p = param8;
-          sqb.field_o = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "gameprivacy");
+          SpriteDimensions.field_o = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "gameprivacy");
           hnb.field_U = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "ratedgame");
           atb.field_b = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "opentome");
           GetPointDefenceLaserProjectileInterceptDamage.field_t = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "allowspectators");
@@ -213,33 +213,33 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           GetLaserAimarc.field_o[0] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMissionTerrainSpaceProbability.field_p);
           SetReloadBarHeight.field_q[0] = new cna[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            SetReloadBarHeight.field_q[0][1 + var17_int] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, sqb.field_o[var17_int], SetHealthBarHeight.field_p[var17_int]);
+            SetReloadBarHeight.field_q[0][1 + var17_int] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, SpriteDimensions.field_o[var17_int], SetHealthBarHeight.field_p[var17_int]);
           }
           if (SetMutatorVotes.field_o.length >= 2) {
             GetLaserAimarc.field_o[1] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, uda.field_a);
             array$0 = new cna[1 + SetMutatorVotes.field_o.length];
             SetReloadBarHeight.field_q[1] = array$0;
-            SetReloadBarHeight.field_q[1][0] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (phb) null, mpb.field_k);
+            SetReloadBarHeight.field_q[1][0] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, mpb.field_k);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < SetMutatorVotes.field_o.length; var17_intLifetime1++) {
-              SetReloadBarHeight.field_q[1][var17_intLifetime1 + 1] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (phb) null, Integer.toString(SetMutatorVotes.field_o[var17_intLifetime1]));
+              SetReloadBarHeight.field_q[1][var17_intLifetime1 + 1] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, Integer.toString(SetMutatorVotes.field_o[var17_intLifetime1]));
             }
           }
           GetLaserAimarc.field_o[2] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, kra.field_b);
-          SetReloadBarHeight.field_q[2] = new cna[]{new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (phb) null, mpb.field_k), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], ns.field_a)};
+          SetReloadBarHeight.field_q[2] = new cna[]{new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, mpb.field_k), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], ns.field_a)};
           if (GetDebrisThrowable.field_r > 1) {
             GetLaserAimarc.field_o[3] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMassDriverProjectileOndamageParticles.field_o);
             array$1 = new cna[1 + GetDebrisThrowable.field_r];
             SetReloadBarHeight.field_q[3] = array$1;
-            SetReloadBarHeight.field_q[3][0] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (phb) null, mpb.field_k);
+            SetReloadBarHeight.field_q[3][0] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, mpb.field_k);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < GetDebrisThrowable.field_r; var17_intLifetime2++) {
-              SetReloadBarHeight.field_q[3][var17_intLifetime2 + 1] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (phb) null, wja.field_c[var17_intLifetime2]);
+              SetReloadBarHeight.field_q[3][var17_intLifetime2 + 1] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, wja.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
             GetLaserAimarc.field_o[var17_intLifetime3 + 4] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, ClientException.field_c[var17_intLifetime3]);
             array$2 = new cna[dla.a(255, (int) gm.field_M[var17_intLifetime3]) + 1];
             SetReloadBarHeight.field_q[var17_intLifetime3 + 4] = array$2;
-            SetReloadBarHeight.field_q[var17_intLifetime3 + 4][0] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (phb) null, mpb.field_k);
+            SetReloadBarHeight.field_q[var17_intLifetime3 + 4][0] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, mpb.field_k);
             for (var18 = 0; var18 < (gm.field_M[var17_intLifetime3] & 255); var18++) {
               if (SetRepairModeRadius.field_o == null) {
                 var19_ref = null;
@@ -259,7 +259,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
                   var20 = hqb.field_k[var17_intLifetime3][var18];
                 }
               }
-              SetReloadBarHeight.field_q[4 + var17_intLifetime3][1 + var18] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (phb) (var19_ref), (String) (var20));
+              SetReloadBarHeight.field_q[4 + var17_intLifetime3][1 + var18] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param12; var17_intLifetime4++) {

@@ -18,7 +18,7 @@ final class GetFighterBayAimarc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetFighterBayAimarc.a(-128);
+            GetFighterBayAimarc.clearSharedReferences(-128);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(133, 109));
           return stackIn_3_0;
@@ -36,7 +36,7 @@ final class GetFighterBayAimarc extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         int var1 = -67 % ((-77 - param0) / 48);
     }

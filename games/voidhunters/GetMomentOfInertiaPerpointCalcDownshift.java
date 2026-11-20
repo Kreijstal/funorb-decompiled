@@ -20,13 +20,13 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
           var4 = (param1 * var3 >> 12) + 40960;
           return var4 * var2 >> 12;
         }
-        jp var5 = (jp) null;
-        GetMomentOfInertiaPerpointCalcDownshift.a((byte[]) null, 119, (byte) -84, (jp) null);
+        OpenGlGpuToolkit var5 = (OpenGlGpuToolkit) null;
+        GetMomentOfInertiaPerpointCalcDownshift.a((byte[]) null, 119, (byte) -84, (OpenGlGpuToolkit) null);
         var4Lifetime1 = (param1 * var3 >> 12) + 40960;
         return var4Lifetime1 * var2 >> 12;
     }
 
-    final static ue a(byte[] param0, int param1, byte param2, jp param3) {
+    final static ue a(byte[] param0, int param1, byte param2, OpenGlGpuToolkit param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         byte[] var10 = null;
@@ -92,7 +92,7 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_r = null;
         field_q = null;
         if (param0 != 0) {
@@ -112,7 +112,7 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetMomentOfInertiaPerpointCalcDownshift.a(-36);
+            GetMomentOfInertiaPerpointCalcDownshift.clearSharedReferences(-36);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(182, 85));
           return stackIn_3_0;

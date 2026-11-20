@@ -38,7 +38,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 91) {
           field_o = (llb) null;
         }

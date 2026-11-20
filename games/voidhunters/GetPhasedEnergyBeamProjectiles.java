@@ -4,11 +4,11 @@
 final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
     static int field_o;
 
-    final static phb[] a(int param0, int param1, int param2, boolean param3) {
+    final static Sprite[] a(int param0, int param1, int param2, boolean param3) {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
-        phb[] var7 = new phb[9];
-        phb[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         int var5Lifetime1;
         var7[0] = SetMaxShipSize.a(param0, (byte) -118, param2);
         if (param3) {
@@ -124,9 +124,9 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_C = param1[196];
           uda.field_b = param1[119];
           Particle.field_t = param1[202];
-          dcb.field_d = param1[17];
+          ColorRowCacheEntry.field_d = param1[17];
           PacketBuffer.field_d = param1[203];
-          dcb.field_f = param1[4];
+          ColorRowCacheEntry.field_f = param1[4];
           hw.field_b = param1[9];
           GetBombletSprayProjectileDamage.field_p = param1[73];
           GetSpinningBladeAimspeed.field_p = param1[6];

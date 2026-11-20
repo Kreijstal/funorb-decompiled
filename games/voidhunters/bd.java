@@ -5,10 +5,10 @@ final class bd {
     static String field_a;
 
     final static void a(int param0, int[] param1, asb param2, asb param3, caa[] param4) {
-        phb[] dupTemp$0 = null;
-        phb[] dupTemp$1 = null;
-        phb[] dupTemp$2 = null;
-        phb[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         caa[] var5 = null;
         caa[] var6 = null;
         int[] var6_array = null;
@@ -36,13 +36,13 @@ final class bd {
         llb var9 = null;
         llb var10 = null;
         llb var11 = null;
-        phb[] var12 = null;
-        phb[] var13 = null;
-        phb[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         llb var15 = null;
-        phb[] var16 = null;
+        Sprite[] var16 = null;
         int var17 = 0;
-        phb[] var18 = null;
+        Sprite[] var18 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
@@ -95,14 +95,14 @@ final class bd {
           var8 = new llb(0L, (llb) null);
           var8.field_Y = 16777215;
           var8.field_D = nna.field_w;
-          var8.field_eb = (no) ((Object) var7);
+          var8.field_eb = (BitmapFont) ((Object) var7);
           var8.field_B = 1;
           var9 = var8;
           var9.field_F = 1;
           var10 = new llb(0L, (llb) null);
           var10.field_D = nna.field_w;
           var10.field_Y = 16777215;
-          var10.field_eb = (no) ((Object) GetDebrisCarryOverPercentage.field_o);
+          var10.field_eb = (BitmapFont) ((Object) GetDebrisCarryOverPercentage.field_o);
           var11 = var10;
           var10.field_B = 1;
           var11.field_F = 1;
@@ -135,7 +135,7 @@ final class bd {
           qsa.field_d.field_gb = GetFighterVision.a(false, true, 2039583, 24436, 3815994, 30);
           qc.field_q = new llb(0L, (llb) null);
           qc.field_q.field_B = 1;
-          qc.field_q.field_eb = (no) ((Object) GetDebrisCarryOverPercentage.field_o);
+          qc.field_q.field_eb = (BitmapFont) ((Object) GetDebrisCarryOverPercentage.field_o);
           qc.field_q.field_Y = 13421772;
           qc.field_q.field_D = nna.field_w;
           GetMissionDebrisDefaultProbability.field_o = new llb(0L, qc.field_q);
@@ -147,7 +147,7 @@ final class bd {
           var15 = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
           var15.field_D = nna.field_w;
           var15.field_Y = 16777215;
-          var15.field_eb = (no) ((Object) var7);
+          var15.field_eb = (BitmapFont) ((Object) var7);
           SetAutoAfkTimeout.field_q = new llb(0L, qc.field_q);
           SetAutoAfkTimeout.field_q.field_gb = GetFighterVision.a(false, false, 2236962, 24436, 2236962, 16);
           SetAutoAfkTimeout.field_q.field_w = 2;
@@ -303,7 +303,7 @@ final class bd {
         return (-param0 & param0) == param0 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         int var1 = 45 % ((-20 - param0) / 48);
     }

@@ -12,12 +12,12 @@ final class dnb extends IntrusiveNode {
         }
         bk.field_w.beginBitRead(-23497);
         tja var1 = (tja) (gva.field_a.a((byte) 69));
-        if (!(var1 instanceof utb)) {
+        if (!(var1 instanceof CompactGameState)) {
           var1.readState(bk.field_w, false);
           bk.field_w.endBitRead((byte) -92);
           return var1;
         }
-        ((utb) ((Object) var1)).a(bk.field_w, 32);
+        ((CompactGameState) ((Object) var1)).readCompactState(bk.field_w, 32);
         bk.field_w.endBitRead((byte) -92);
         return var1;
     }

@@ -46,7 +46,7 @@ final class eu extends ev {
         return 2048 > param0 ? kra.field_a[param0] : kra.field_a[-param0 + 4096];
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 30826) {
           field_h = (lpb) null;
           field_i = null;

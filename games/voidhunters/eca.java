@@ -51,7 +51,7 @@ abstract class eca extends sc implements en {
         return true;
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -27183) {
           field_d = (String) null;
           field_d = null;

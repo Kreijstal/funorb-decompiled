@@ -77,7 +77,7 @@ abstract class vq extends dqa implements lca {
 
     abstract int f(int param0);
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_y = null;
         int var1 = -9 / ((35 - param0) / 62);
         field_w = null;

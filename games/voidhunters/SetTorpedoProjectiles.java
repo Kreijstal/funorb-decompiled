@@ -210,7 +210,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             if (tja.field_a == param2) {
               var21 += 42;
             }
-            var33 = no.a(var12.field_Ib.field_eb, var32, var21);
+            var33 = BitmapFont.a(var12.field_Ib.field_eb, var32, var21);
             var20 = var33;
             stackIn_59_0 = (var33.equals(var12.field_xb)) ? 0 : 1;
             var22 = stackIn_59_0;
@@ -507,7 +507,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -28228) {
           return;
         }

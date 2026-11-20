@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends GraphicsToolkit implements e {
+final class NativeSoftwareToolkit extends GraphicsToolkit implements e {
     private boolean field_m;
     private IntrusiveDeque field_c;
     private ya field_k;
@@ -352,7 +352,7 @@ final class oa extends GraphicsToolkit implements e {
 
     final native void xa(float param0);
 
-    public oa(java.awt.Canvas param0, d param1, int param2, int param3) {
+    public NativeSoftwareToolkit(java.awt.Canvas param0, d param1, int param2, int param3) {
         super(param1);
         ja discarded$1 = null;
         Throwable decompiledCaughtException = null;

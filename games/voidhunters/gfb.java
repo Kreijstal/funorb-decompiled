@@ -96,7 +96,7 @@ final class gfb implements dja {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 12 / ((param0 - 15) / 40);
         field_a = null;
     }

@@ -82,7 +82,7 @@ final class jeb extends mfb {
     jeb() {
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         int var1 = 29 % ((14 - param0) / 44);
         field_b = null;

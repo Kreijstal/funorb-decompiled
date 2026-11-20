@@ -48,7 +48,7 @@ final class PlayerVote implements DiffableState {
           SetAiFiringRangeUpshift.a(param5, param4, param1, (byte) -122, 31, param2, param0);
           return;
         }
-        PlayerVote.a((byte) -23);
+        PlayerVote.clearSharedReferences((byte) -23);
         SetAiFiringRangeUpshift.a(param5, param4, param1, (byte) -122, 31, param2, param0);
     }
 
@@ -161,7 +161,7 @@ final class PlayerVote implements DiffableState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_d = null;
         if (param0 != -98) {
           field_c = (IntrusiveDeque) null;

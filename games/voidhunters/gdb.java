@@ -36,7 +36,7 @@ final class gdb {
         return this.field_b;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_i = null;
         if (param0 > -41) {
           field_d = (String) null;

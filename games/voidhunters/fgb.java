@@ -6,7 +6,7 @@ class fgb extends DualLinkNode {
     static llb field_l;
     static long[] field_m;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_l = null;
         if (param0 != 8) {
           field_m = (long[]) null;

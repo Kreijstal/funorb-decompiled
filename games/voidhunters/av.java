@@ -17,7 +17,7 @@ final class av implements dja {
         return (SerializableGameState) ((Object) new MissionAction());
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           return;
         }

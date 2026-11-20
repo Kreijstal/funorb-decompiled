@@ -81,7 +81,7 @@ final class roa extends ka {
         }
     }
 
-    roa(pf param0, cbb param1, int param2, int param3, int param4, int param5) {
+    roa(GpuToolkit param0, cbb param1, int param2, int param3, int param4, int param5) {
         this(param0, param2, param5, true, false);
         int var9_int = 0;
         int fieldTemp$4 = 0;
@@ -836,8 +836,8 @@ final class roa extends ka {
           this.field_r = GetDebrisCarryOverPercentage.a(this.field_L, this.field_r, (byte) 50);
           this.field_x = GetDebrisCarryOverPercentage.a(this.field_L, this.field_x, (byte) 59);
           this.field_b = aba.a(this.field_b, this.field_L, -28321);
-          this.field_D = jp.a(this.field_D, this.field_L, 7353);
-          this.field_y = jp.a(this.field_y, this.field_L, 7353);
+          this.field_D = OpenGlGpuToolkit.a(this.field_D, this.field_L, 7353);
+          this.field_y = OpenGlGpuToolkit.a(this.field_y, this.field_L, 7353);
           if (null != param1.field_p &&
             GetLaserBeamProjectileDamage.a((byte) 11, this.field_s, param2)) {
             param1.a((byte) -37, false);
@@ -1095,7 +1095,7 @@ final class roa extends ka {
         return this.field_G;
     }
 
-    roa(pf param0, int param1, int param2, boolean param3, boolean param4) {
+    roa(GpuToolkit param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -1119,7 +1119,7 @@ final class roa extends ka {
           }
           if (param3 ||
             GetUseCircleFill.a(this.field_I, (byte) -111, this.field_s)) {
-            this.field_C = new glb(pf.a(0, this.field_I, this.field_s));
+            this.field_C = new glb(GpuToolkit.a(0, this.field_I, this.field_s));
           }
           if (param3 ||
             wh.a(this.field_s, (byte) 127, this.field_I)) {

@@ -10,7 +10,7 @@ final class GetRepairModeActiveTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 215) {
           field_q = (String) null;

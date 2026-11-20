@@ -106,7 +106,7 @@ final class SetCountermeasureLauncherAimspeed extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 1 % ((param0 - 59) / 42);
         field_r = null;
         field_o = null;

@@ -10,7 +10,7 @@ final class SetTeamSelectionSpeedup extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_o = null;
         field_q = null;
@@ -28,7 +28,7 @@ final class SetTeamSelectionSpeedup extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -24) {
-            SetTeamSelectionSpeedup.e((byte) -70);
+            SetTeamSelectionSpeedup.clearSharedReferences((byte) -70);
           }
           if (param2 == null) {
             return null;

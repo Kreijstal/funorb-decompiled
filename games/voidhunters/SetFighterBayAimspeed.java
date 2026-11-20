@@ -5,7 +5,7 @@ final class SetFighterBayAimspeed extends ConsoleCommand {
     static String field_p;
     static khb field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         int var1 = 126 / ((-36 - param0) / 51);
         field_o = null;
@@ -65,7 +65,7 @@ final class SetFighterBayAimspeed extends ConsoleCommand {
           var5 = 0;
           var6 = 0;
           if (param0 != -67) {
-            SetFighterBayAimspeed.e((byte) 26);
+            SetFighterBayAimspeed.clearSharedReferences((byte) 26);
           }
           for (var7 = 0; var7 < var3_int; var7++) {
             for (var8 = var6; param1 != param2.charAt(var8); var8++) {

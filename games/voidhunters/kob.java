@@ -25,7 +25,7 @@ final class kob extends IntrusiveNode {
         uv.a(108, param4, param2 - param3, param3, 16764108, -param4 + param1);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         if (param0 != 127) {
           field_e = (String) null;

@@ -56,12 +56,12 @@ final class IsaacPacketBuffer extends PacketBuffer {
         return 255 & this.payload[fieldTemp$1] - this.cipher.nextInt((byte) -41);
     }
 
-    final static vab compileArbProgram(byte param0, OpenGlToolkit param1, int param2, String param3) {
+    final static ArbProgram compileArbProgram(byte param0, OpenGlToolkit param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        vab stackIn_2_0 = null;
+        ArbProgram stackIn_2_0 = null;
         Object stackIn_6_0 = null;
-        vab stackIn_8_0 = null;
+        ArbProgram stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -70,7 +70,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 115) {
-            stackIn_2_0 = (vab) null;
+            stackIn_2_0 = (ArbProgram) null;
             return stackIn_2_0;
           }
           var4_int = jaggl.OpenGL.glGenProgramARB();
@@ -80,10 +80,10 @@ final class IsaacPacketBuffer extends PacketBuffer {
           if (lp.field_b[0] != -1) {
             jaggl.OpenGL.glBindProgramARB(param2, 0);
             stackIn_6_0 = null;
-            return (vab) (stackIn_6_0);
+            return (ArbProgram) (stackIn_6_0);
           }
           jaggl.OpenGL.glBindProgramARB(param2, 0);
-          stackIn_8_0 = new vab(param1, param2, var4_int);
+          stackIn_8_0 = new ArbProgram(param1, param2, var4_int);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

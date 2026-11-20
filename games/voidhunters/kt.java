@@ -39,7 +39,7 @@ class kt extends elb {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 2 / ((25 - param0) / 36);
         field_r = null;
     }
@@ -195,11 +195,11 @@ class kt extends elb {
               stackIn_38_0 = null;
             }
             var21 = stackIn_38_0;
-            var22 = cl.field_b[var15Lifetime1];
+            var22 = MidiChannelLevels.field_b[var15Lifetime1];
             var23 = GetMachineGunAimspeed.field_o[var15Lifetime1];
-            var24 = cl.field_b[var16];
+            var24 = MidiChannelLevels.field_b[var16];
             var25 = GetMachineGunAimspeed.field_o[var16];
-            var26 = cl.field_b[var17];
+            var26 = MidiChannelLevels.field_b[var17];
             var27 = GetMachineGunAimspeed.field_o[var17];
             if (var19 == var18 &&
               var19 == var20) {

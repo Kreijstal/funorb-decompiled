@@ -40,7 +40,7 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
                 if (param2[var8] == null) {
                   param2[var8] = param3.a((byte) 109);
                 }
-                ((utb) ((Object) param2[var8])).a(param5, 32);
+                ((CompactGameState) ((Object) param2[var8])).readCompactState(param5, 32);
               } else {
                 param2[var8] = null;
               }

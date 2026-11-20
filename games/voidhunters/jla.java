@@ -18,7 +18,7 @@ final class jla extends htb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 77 % ((param0 + 87) / 33);
         field_B = null;
     }

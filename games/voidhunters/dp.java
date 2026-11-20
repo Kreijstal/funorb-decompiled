@@ -6,7 +6,7 @@ final class dp {
     static llb field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         int var1 = 47 % ((-65 - param0) / 45);
         field_b = null;

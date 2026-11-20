@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ttb extends shb {
-    private phb field_F;
+    private Sprite field_F;
     private int field_t;
     private int field_E;
-    private phb[] field_C;
+    private Sprite[] field_C;
     private int field_A;
-    private phb field_u;
+    private Sprite field_u;
     private int field_H;
     boolean field_x;
-    private phb field_y;
+    private Sprite field_y;
     private int field_G;
     int field_v;
     static char field_B;
     static String field_z;
     private int field_w;
 
-    private final phb a(boolean param0, int param1, int param2) {
+    private final Sprite a(boolean param0, int param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -25,7 +25,7 @@ final class ttb extends shb {
         int var11 = 0;
         int var12 = 0;
         int var13 = VoidHunters.field_G;
-        phb var14 = new phb(this.field_E * 2, this.field_f);
+        Sprite var14 = new Sprite(this.field_E * 2, this.field_f);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -97,18 +97,18 @@ final class ttb extends shb {
         }
     }
 
-    private final phb b(boolean param0) {
+    private final Sprite b(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = VoidHunters.field_G;
         int var2 = this.field_f >> 1;
-        phb var3 = new phb(var2, this.field_f);
+        Sprite var3 = new Sprite(var2, this.field_f);
         SetTorpedoEnergyUsed.a(78, var3);
         if (param0) {
-          phb var10 = (phb) null;
-          this.a(-50, -55, (phb) null, -43);
+          Sprite var10 = (Sprite) null;
+          this.a(-50, -55, (Sprite) null, -43);
         }
         for (var4 = 0; this.field_f > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -153,10 +153,10 @@ final class ttb extends shb {
         if (param0 < 59) {
           return;
         }
-        this.field_C = new phb[]{this.a(true, this.field_H, this.field_t), this.a(true, this.field_G, this.field_A)};
+        this.field_C = new Sprite[]{this.a(true, this.field_H, this.field_t), this.a(true, this.field_G, this.field_A)};
         this.field_y = this.b(false);
         this.field_u = this.field_y.a();
-        this.field_F = new phb(this.field_f >> 1, this.field_f);
+        this.field_F = new Sprite(this.field_f >> 1, this.field_f);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -173,7 +173,7 @@ final class ttb extends shb {
         this.a(param0, param2, param3, 1, param1);
     }
 
-    private final void a(int param0, int param1, phb param2, int param3) {
+    private final void a(int param0, int param1, Sprite param2, int param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;

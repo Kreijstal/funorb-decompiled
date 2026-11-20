@@ -38,7 +38,7 @@ final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static phb[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 >= 112) {
           return hi.a(-972, 1, param4, 3, param3, 1, 1, param2, param0);
         }

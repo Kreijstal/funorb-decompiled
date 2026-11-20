@@ -12,45 +12,45 @@ final class uwa {
     int field_a;
     ShipBody field_e;
 
-    final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        phb var11 = null;
-        phb var12 = null;
-        phb var13 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var11 = null;
+        Sprite var12 = null;
+        Sprite var13 = null;
         Object var14 = null;
-        phb var16 = null;
+        Sprite var16 = null;
         int[] var18 = dma.field_i;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
         int var7 = dma.field_g;
         int var8 = dma.field_j;
-        phb var9 = new phb(param5, param1 - param5 * 2);
+        Sprite var9 = new Sprite(param5, param1 - param5 * 2);
         var9.b();
         dma.c(0, 0, param5, param1 - param5 * 2, param0, param3);
-        phb var10 = new phb(param5, param5);
+        Sprite var10 = new Sprite(param5, param5);
         if (param4 > 86) {
           var10.b();
           dma.d(0, 0, param5, param5, param0);
-          var11 = new phb(16, param5);
+          var11 = new Sprite(16, param5);
           var11.b();
           dma.d(0, 0, 16, param5, param0);
-          var12 = new phb(param5, param5);
+          var12 = new Sprite(param5, param5);
           var12.b();
           dma.d(0, 0, param5, param5, param3);
-          var13 = new phb(16, param5);
+          var13 = new Sprite(16, param5);
           var13.b();
           dma.d(0, 0, 16, param5, param3);
           var14 = null;
           if (param2 > 0) {
-            var16 = new phb(16, 16);
+            var16 = new Sprite(16, 16);
             var14 = var16;
             var16.b();
             dma.d(0, 0, 16, 16, param2);
           }
           dma.a(var18, var7, var8);
-          return new phb[]{var10, var11, var10, var9, (phb) (var14), var9, var12, var13, var12};
+          return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
         }
-        return (phb[]) null;
+        return (Sprite[]) null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, ShipBody param7, int param8, int param9) {

@@ -5,7 +5,7 @@ abstract class bkb {
     static java.applet.Applet field_b;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_b = null;
         int var1 = -115 / ((param0 + 34) / 45);

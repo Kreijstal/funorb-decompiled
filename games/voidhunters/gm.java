@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gm extends kja {
-    private phb field_N;
+    private Sprite field_N;
     static IntrusiveDeque field_H;
     private int field_K;
     private eeb field_L;
@@ -19,7 +19,7 @@ final class gm extends kja {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_M = null;
         field_I = null;
         if (param0 != -2459) {
@@ -40,20 +40,20 @@ final class gm extends kja {
         int var10;
         int var11;
         int var12;
-        phb var16;
-        phb var18;
-        phb var19;
-        phb var20;
-        phb var22;
-        phb var23;
-        phb var24;
-        phb var26;
-        phb var27;
-        phb var28;
-        phb var29;
-        phb var31;
-        phb var32;
-        phb var33;
+        Sprite var16;
+        Sprite var18;
+        Sprite var19;
+        Sprite var20;
+        Sprite var22;
+        Sprite var23;
+        Sprite var24;
+        Sprite var26;
+        Sprite var27;
+        Sprite var28;
+        Sprite var29;
+        Sprite var31;
+        Sprite var32;
+        Sprite var33;
         at var34;
         at var35;
         at var36;
@@ -122,7 +122,7 @@ final class gm extends kja {
               SetTorpedoEnergyUsed.a(94, this.field_N);
               dma.a();
             } else {
-              this.field_N = new phb(var11, var12);
+              this.field_N = new Sprite(var11, var12);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             }
             var20.b(112, 144, var20.field_m << 4, var20.field_n << 4, -this.field_K << 10, 4096);
@@ -153,15 +153,15 @@ final class gm extends kja {
           var11Lifetime4 = var24.field_m << 1;
           var12Lifetime4 = var24.field_n << 1;
           if (this.field_N == null) {
-            this.field_N = new phb(var11Lifetime4, var12Lifetime4);
+            this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
             if (var11Lifetime4 > this.field_N.field_q) {
-              this.field_N = new phb(var11Lifetime4, var12Lifetime4);
+              this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
               if (var12Lifetime4 > this.field_N.field_p) {
-                this.field_N = new phb(var11Lifetime4, var12Lifetime4);
+                this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
                 SetTorpedoEnergyUsed.a(99, this.field_N);
               } else {
                 SetTorpedoEnergyUsed.a(94, this.field_N);
@@ -200,18 +200,18 @@ final class gm extends kja {
           var11Lifetime1 = var33.field_m << 1;
           var12Lifetime1 = var33.field_n << 1;
           if (this.field_N == null) {
-            this.field_N = new phb(var11Lifetime1, var12Lifetime1);
+            this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
             if (var11Lifetime1 > this.field_N.field_q) {
-              this.field_N = new phb(var11Lifetime1, var12Lifetime1);
+              this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
               if (var12Lifetime1 <= this.field_N.field_p) {
                 SetTorpedoEnergyUsed.a(94, this.field_N);
                 dma.a();
               } else {
-                this.field_N = new phb(var11Lifetime1, var12Lifetime1);
+                this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
                 SetTorpedoEnergyUsed.a(99, this.field_N);
               }
             }
@@ -237,7 +237,7 @@ final class gm extends kja {
             SetTorpedoEnergyUsed.a(94, this.field_N);
             dma.a();
           } else {
-            this.field_N = new phb(var11Lifetime2, var12Lifetime2);
+            this.field_N = new Sprite(var11Lifetime2, var12Lifetime2);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           }
           var26.b(112, 144, var26.field_m << 4, var26.field_n << 4, -this.field_K << 10, 4096);
@@ -263,15 +263,15 @@ final class gm extends kja {
         var11Lifetime3 = var29.field_m << 1;
         var12Lifetime3 = var29.field_n << 1;
         if (this.field_N == null) {
-          this.field_N = new phb(var11Lifetime3, var12Lifetime3);
+          this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
           SetTorpedoEnergyUsed.a(99, this.field_N);
         } else {
           if (var11Lifetime3 > this.field_N.field_q) {
-            this.field_N = new phb(var11Lifetime3, var12Lifetime3);
+            this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
             if (var12Lifetime3 > this.field_N.field_p) {
-              this.field_N = new phb(var11Lifetime3, var12Lifetime3);
+              this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
               SetTorpedoEnergyUsed.a(94, this.field_N);

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class wu extends uda {
     private float field_f;
-    static phb field_h;
+    static Sprite field_h;
     static String field_e;
     private rga field_g;
 
@@ -74,13 +74,13 @@ final class wu extends uda {
         return;
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 93 % ((-34 - param0) / 63);
         field_h = null;
         field_e = null;
     }
 
-    wu(pf param0, rga param1) {
+    wu(GpuToolkit param0, rga param1) {
         super(param0);
         this.field_f = 0.0f;
         try {
@@ -122,7 +122,7 @@ final class wu extends uda {
         this.field_d.g(0, -62);
         this.field_d.a(0, (byte) -76, SetGrapplingHookMaxExtension8Force.field_q);
         if (param0 != 2543) {
-          field_h = (phb) null;
+          field_h = (Sprite) null;
         }
     }
 
@@ -282,7 +282,7 @@ final class wu extends uda {
         try {
           this.field_d.a(param2, -124);
           if (param0 <= 42) {
-            field_h = (phb) null;
+            field_h = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wu.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

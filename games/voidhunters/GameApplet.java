@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    boolean field_c;
+    boolean errorShown;
     public static boolean field_g;
     public static boolean field_i;
     public static boolean field_h;
@@ -41,7 +41,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             GetCountermeasureLauncherAimarc.field_p = wt.a(false);
             gdb.b(-65, 5000L);
             MissionList.field_b = null;
-            this.a(false, 10);
+            this.shutdownApplet(false, 10);
             return;
           }
           return;
@@ -100,7 +100,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void a(byte param0) {
+    private final void runGameTick(byte param0) {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -121,7 +121,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != -83) {
             return;
           }
-          this.a(89);
+          this.updateGameTick(89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void b(boolean param0);
+    abstract void clearClientResources(boolean param0);
 
     public final java.net.URL getDocumentBase() {
         RuntimeException var1 = null;
@@ -157,9 +157,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void a(boolean param0);
+    abstract void initializeGame(boolean param0);
 
-    final static byte[] a(byte param0, PacketBuffer param1) {
+    final static byte[] copyWrittenBytes(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -172,7 +172,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var2_int = param1.position;
           var3 = new byte[var2_int];
           if (param0 <= 4) {
-            GameApplet.a((byte) -89, (PacketBuffer) null);
+            GameApplet.copyWrittenBytes((byte) -89, (PacketBuffer) null);
           }
           cua.a(param1.payload, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
@@ -268,14 +268,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     protected GameApplet() {
-        this.field_c = false;
+        this.errorShown = false;
     }
 
-    abstract void b(int param0);
+    abstract void shutdownGame(int param0);
 
-    abstract void a(int param0);
+    abstract void updateGameTick(int param0);
 
-    final synchronized void c(int param0) {
+    final synchronized void rebuildCanvas(int param0) {
         Object var2 = null;
         java.awt.Insets var3 = null;
         int var4 = 0;
@@ -344,7 +344,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final void a(String param0, int param1) {
+    final void showGameError(String param0, int param1) {
         try {
           Throwable throwable = null;
           Exception exception = null;
@@ -354,10 +354,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (this.field_c) {
+            if (this.errorShown) {
               return;
             }
-            this.field_c = true;
+            this.errorShown = true;
             System.out.println("error_game_" + param0);
             try {
               ia.a(MissionList.b((byte) -115), "loggedout", param1 ^ 12348);
@@ -372,7 +372,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
             if (param1 != 0) {
-              GameApplet.a((byte) -85, (PacketBuffer) null);
+              GameApplet.copyWrittenBytes((byte) -85, (PacketBuffer) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -409,7 +409,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    private final void c(byte param0) {
+    private final void renderFrame(byte param0) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         long var2_long = 0L;
@@ -422,7 +422,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var4 = SetSniperCannonFiringLeeway.field_o[CarouselSlotStateDump.field_f];
           SetSniperCannonFiringLeeway.field_o[CarouselSlotStateDump.field_f] = var2_long;
           if (param0 != -5) {
-            this.field_c = false;
+            this.errorShown = false;
           }
           CarouselSlotStateDump.field_f = CarouselSlotStateDump.field_f + 1 & 31;
           if (var4 != 0L &&
@@ -448,7 +448,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, hqb.field_f);
             }
           }
-          this.d(-105);
+          this.renderGameFrame(-105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -474,7 +474,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
+    final void startApplet(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
         try {
           eab dupTemp$0 = null;
           RuntimeException stackIn_21_0 = null;
@@ -495,7 +495,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                this.a("alreadyloaded", 0);
+                this.showGameError("alreadyloaded", 0);
                 return;
               }
               SetPointDefenceLaserReload.field_p = param6;
@@ -525,7 +525,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
               gna.a(var8, (String) null, 0);
-              this.a("crash", 0);
+              this.showGameError("crash", 0);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -588,7 +588,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a("wrongjava", 0);
+                    this.showGameError("wrongjava", 0);
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -610,7 +610,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       var4 = var2.substring(6, var3);
                       if (SetPointDefenceLaserAimarc.a((CharSequence) ((Object) var4), 10) &&
                         !(lob.a(-121, (CharSequence) ((Object) var4)) >= 10)) {
-                        this.a("wrongjava", 0);
+                        this.showGameError("wrongjava", 0);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -666,14 +666,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   }
                 }
                 ara.a(27671);
-                this.c(-78);
+                this.rebuildCanvas(-78);
                 SetClientSideDragging.field_q = SetBurstFireRegenerationRate.a((byte) 3, (java.awt.Component) ((Object) igb.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
-                this.a(false);
+                this.initializeGame(false);
                 GetPedrosRepairMode.field_p = mr.g(46);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != GetCountermeasureLauncherAimarc.field_p) {
-                    stackIn_95_0 = $cfr$lcmp(wt.a(false), GetCountermeasureLauncherAimarc.field_p);
+                    stackIn_95_0 = compareLongs(wt.a(false), GetCountermeasureLauncherAimarc.field_p);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_95_0 >= 0)) {
@@ -687,11 +687,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   var3 = stackIn_95_0;
                   do {
                     if (!(var3 < SetCountermeasureLauncherAimspeed.field_p)) {
-                      this.c((byte) -5);
+                      this.renderFrame((byte) -5);
                       ts.a((byte) 61, SetTorpedoProjectiles.field_o, igb.field_a);
                       break;
                     }
-                    this.a((byte) -83);
+                    this.runGameTick((byte) -83);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -700,9 +700,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               gna.a((Throwable) (var1), (String) null, 0);
-              this.a("crash", 0);
+              this.showGameError("crash", 0);
             }
-            this.a(true, 10);
+            this.shutdownApplet(true, 10);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -719,7 +719,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
 
-    final boolean b(byte param0) {
+    final boolean isStartupAllowed(byte param0) {
         return true;
     }
 
@@ -824,9 +824,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void d(int param0);
+    abstract void renderGameFrame(int param0);
 
-    private final void a(boolean param0, int param1) {
+    private final void shutdownApplet(boolean param0, int param1) {
         Exception exception = null;
         Throwable throwable = null;
         RuntimeException runtimeException = null;
@@ -845,7 +845,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             bkb.field_b.destroy();
           }
           try {
-            this.b(-121);
+            this.shutdownGame(-121);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -868,9 +868,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
           }
           if (param1 != 10) {
-            this.field_c = true;
+            this.errorShown = true;
           }
-          this.b(false);
+          this.clearClientResources(false);
           if (null != ira.field_c) {
             try {
               System.exit(0);
@@ -891,7 +891,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static {
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

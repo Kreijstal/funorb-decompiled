@@ -5,7 +5,7 @@ final class SetLagVariant extends ConsoleCommand {
     static tu field_o;
     static String field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -101 % ((61 - param0) / 61);
         field_p = null;
         field_o = null;
@@ -109,7 +109,7 @@ final class SetLagVariant extends ConsoleCommand {
         try {
           GetMachineGunReload.a(-108, arguments[0].intValue(72), arguments[1].intValue(116));
           if (obfuscationGuard > -119) {
-            SetLagVariant.a(98);
+            SetLagVariant.clearSharedReferences(98);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

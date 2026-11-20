@@ -66,7 +66,7 @@ final class GetReverbGain extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < 26) {
           field_o = (kb) null;
           field_o = null;

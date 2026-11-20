@@ -8,7 +8,7 @@ final class hma {
     private int[] field_c;
     static int[] field_d;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         if (param0 != -1) {
           field_d = (int[]) null;
@@ -22,12 +22,12 @@ final class hma {
         }
     }
 
-    final static phb[] a(String param0, int param1, asb param2, String param3) {
+    final static Sprite[] a(String param0, int param1, asb param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        phb[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

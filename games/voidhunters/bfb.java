@@ -23,7 +23,7 @@ final class bfb {
         field_j = field_h / 2;
     }
 
-    public static void b() {
+    public static void clearSharedReferences() {
         field_g = null;
         field_i = null;
         field_c = null;

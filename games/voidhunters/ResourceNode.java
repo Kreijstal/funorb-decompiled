@@ -157,7 +157,7 @@ final class ResourceNode implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 8947848) {
-            ResourceNode.a(false);
+            ResourceNode.clearSharedReferences(false);
           }
           if (this.captureTimer <= 0) {
             return;
@@ -255,7 +255,7 @@ final class ResourceNode implements DiffableState {
     ResourceNode() {
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           field_g = (byte[]) null;
           field_g = null;

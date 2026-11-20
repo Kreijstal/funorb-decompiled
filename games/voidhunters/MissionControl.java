@@ -295,7 +295,7 @@ final class MissionControl implements DiffableState {
         MissionControl var3 = null;
         try {
           var3 = (MissionControl) (param1);
-          var3.events = (MissionEvent[]) (sqb.a(var3.events, this.events, 1, GetExplosionPushMultiplier.field_o, false));
+          var3.events = (MissionEvent[]) (SpriteDimensions.a(var3.events, this.events, 1, GetExplosionPushMultiplier.field_o, false));
           var3.selectedConditionOrAction = this.selectedConditionOrAction;
           if (param0 <= 54) {
             this.reservedIds = (int[]) null;
@@ -320,7 +320,7 @@ final class MissionControl implements DiffableState {
             this.events[this.selectedEvent].a(param0, true);
           }
           if (param1 != 0) {
-            MissionControl.a((byte) 108);
+            MissionControl.clearSharedReferences((byte) 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -347,7 +347,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -98) {
           field_f = (String) null;
         }

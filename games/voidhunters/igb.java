@@ -14,7 +14,7 @@ final class igb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 111) {
-            igb.a(-66);
+            igb.clearSharedReferences(-66);
           }
           stackIn_3_0 = SetThrusterBoosterForce.a(-125, false, param0);
           return stackIn_3_0;
@@ -32,7 +32,7 @@ final class igb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
           return;

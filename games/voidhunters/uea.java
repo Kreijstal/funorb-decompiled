@@ -15,7 +15,7 @@ final class uea extends bob {
         return dupTemp$0;
     }
 
-    final void a(int param0, phb[] param1, int param2) {
+    final void a(int param0, Sprite[] param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
@@ -138,7 +138,7 @@ final class uea extends bob {
         }
     }
 
-    final void a(phb[] param0, byte param1) {
+    final void a(Sprite[] param0, byte param1) {
         int var4 = 0;
         vv[] var3 = null;
         vv var5 = null;
@@ -224,12 +224,12 @@ final class uea extends bob {
         }
     }
 
-    final void a(int param0, phb param1) {
+    final void a(int param0, Sprite param1) {
         int var4 = 0;
         vv[] var3 = null;
         vv var5 = null;
         int var6 = 0;
-        phb[] var7 = null;
+        Sprite[] var7 = null;
         vv[] var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -239,8 +239,8 @@ final class uea extends bob {
         var6 = VoidHunters.field_G;
         try {
           if (param0 != 32460) {
-            var7 = (phb[]) null;
-            this.a((phb[]) null, (byte) -127);
+            var7 = (Sprite[]) null;
+            this.a((Sprite[]) null, (byte) -127);
           }
           var8 = this.field_q;
           var3 = var8;

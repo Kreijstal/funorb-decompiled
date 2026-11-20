@@ -263,7 +263,7 @@ abstract class ar {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 < 41) {
           field_a = (String) null;

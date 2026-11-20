@@ -21,7 +21,7 @@ public class OpenGL {
 
     public final native static void glMultMatrixf(float[] param0, int param1);
 
-    public final synchronized boolean a() {
+    public final synchronized boolean attachToCurrentThread() {
         Thread var1 = Thread.currentThread();
         if (!this.attachPeer()) {
           return false;
@@ -156,7 +156,7 @@ public class OpenGL {
 
     public final native static void glFrustum(double param0, double param1, double param2, double param3, double param4, double param5);
 
-    public final synchronized boolean b() {
+    public final synchronized boolean detachFromCurrentThread() {
         if (this.a != Thread.currentThread()) {
           return false;
         }
@@ -350,7 +350,7 @@ public class OpenGL {
 
     public final native static void glAlphaFunc(int param0, float param1);
 
-    public final boolean a(String param0) {
+    public final boolean hasExtension(String param0) {
         String var2;
         int var3;
         int var4_int;

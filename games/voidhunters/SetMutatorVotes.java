@@ -147,7 +147,7 @@ final class SetMutatorVotes extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 79) {
           field_o = (int[]) null;
         }

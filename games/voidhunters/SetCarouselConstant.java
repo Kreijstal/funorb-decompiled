@@ -8,7 +8,7 @@ final class SetCarouselConstant extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -77 / ((87 - param0) / 33);
         field_o = null;
     }
@@ -22,7 +22,7 @@ final class SetCarouselConstant extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetCarouselConstant.e((byte) 125);
+            SetCarouselConstant.clearSharedReferences((byte) 125);
           }
           kmb.a((String) (arguments[0].value), 18700);
           stackIn_3_0 = new ConsoleValue("void");

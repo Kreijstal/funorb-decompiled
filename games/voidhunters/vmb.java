@@ -5,7 +5,7 @@ abstract class vmb {
     static int[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 8192) {
           return;
         }

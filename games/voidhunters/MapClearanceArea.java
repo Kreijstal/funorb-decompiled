@@ -83,10 +83,10 @@ abstract class MapClearanceArea implements DiffableState {
         }
     }
 
-    final static phb[] a(int param0, byte param1, asb param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, asb param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        phb[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -100,7 +100,7 @@ abstract class MapClearanceArea implements DiffableState {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (phb[]) (stackIn_4_0);
+          return (Sprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

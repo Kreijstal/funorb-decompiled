@@ -433,7 +433,7 @@ final class amb implements dja {
         field_b = (String) null;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 > -36) {

@@ -152,14 +152,14 @@ final class hi implements dja {
         return (SerializableGameState) ((Object) new MissionList());
     }
 
-    final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        phb[] var10;
-        phb[] var11_ref_phb__;
+        Sprite[] var10;
+        Sprite[] var11_ref_phb__;
         int var11;
         int var12;
-        phb var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -170,7 +170,7 @@ final class hi implements dja {
         int var12Lifetime4;
         var15 = VoidHunters.field_G;
         var9 = param1 - (-param5 - param6);
-        var10 = new phb[]{new phb(var9, var9), new phb(param3, var9), new phb(var9, var9), new phb(var9, param3), new phb(64, 64), new phb(var9, param3), new phb(var9, var9), new phb(param3, var9), new phb(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9), new Sprite(var9, param3), new Sprite(64, 64), new Sprite(var9, param3), new Sprite(var9, var9), new Sprite(param3, var9), new Sprite(var9, var9)};
         var11_ref_phb__ = var10;
         for (var12 = 0; var11_ref_phb__.length > var12; var12++) {
           var13 = var11_ref_phb__[var12];

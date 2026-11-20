@@ -5,7 +5,7 @@ abstract class qg {
     OpenGlToolkit field_b;
     static soa field_a;
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != -15081) {
           field_a = (soa) null;

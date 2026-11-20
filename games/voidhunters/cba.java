@@ -6,7 +6,7 @@ final class cba extends za {
     static gdb field_e;
 
     final void a(boolean param0) {
-        this.field_f.a();
+        this.field_f.deallocate();
         if (!param0) {
           cba.b(false);
         }

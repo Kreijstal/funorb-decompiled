@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class lnb extends le {
+final class lnb extends TextureOperation {
     private int field_j;
     static jv field_i;
     private int field_k;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] var3;
         int[] var4;
         int var5;
@@ -21,18 +21,18 @@ final class lnb extends le {
         int var7Lifetime1;
         var9 = VoidHunters.field_G;
         if (!param1) {
-          this.a(105, -69);
+          this.getColorRow(105, -69);
         }
-        var10 = this.field_f.a((byte) -112, param0);
+        var10 = this.field_f.getRow((byte) -112, param0);
         var3 = var10;
         if (this.field_f.field_e) {
           var5 = hob.field_d / this.field_k;
           var6 = GetTorpedoReload.field_o / this.field_j;
           if (var6 <= 0) {
-            var4 = this.a(0, 0, 255);
+            var4 = this.getInputMonochromeRow(0, 0, 255);
           } else {
             var7 = param0 % var6;
-            var4 = this.a(0, GetTorpedoReload.field_o * var7 / var6, 255);
+            var4 = this.getInputMonochromeRow(0, GetTorpedoReload.field_o * var7 / var6, 255);
           }
           var11 = 0;
           var7Lifetime1 = var11;
@@ -49,7 +49,7 @@ final class lnb extends le {
         return var10;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int var13 = 0;
         int[][] var3;
         int[][] var4;
@@ -72,7 +72,7 @@ final class lnb extends le {
         if (param0 != 255) {
           return (int[][]) null;
         }
-        var19 = this.field_d.a(param1, (byte) -127);
+        var19 = this.field_d.getRow(param1, (byte) -127);
         var18 = var19;
         var17 = var18;
         var3 = var17;
@@ -80,10 +80,10 @@ final class lnb extends le {
           var5 = hob.field_d / this.field_k;
           var6 = GetTorpedoReload.field_o / this.field_j;
           if (var6 <= 0) {
-            var4 = this.a((byte) 69, 0, 0);
+            var4 = this.getInputColorRow((byte) 69, 0, 0);
           } else {
             var7_int = param1 % var6;
-            var4 = this.a((byte) 82, 0, var7_int * GetTorpedoReload.field_o / var6);
+            var4 = this.getInputColorRow((byte) 82, 0, var7_int * GetTorpedoReload.field_o / var6);
           }
           var7 = var4[0];
           var8 = var4[1];
@@ -106,7 +106,7 @@ final class lnb extends le {
         return var17;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -197,11 +197,11 @@ final class lnb extends le {
         qg.field_a = null;
         GetLagStandardDeviationOut.field_o = null;
         if (param0 != 0) {
-          lnb.e(75);
+          lnb.clearSharedReferences(75);
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_i = null;
         if (param0 != 1) {
           field_i = (jv) null;

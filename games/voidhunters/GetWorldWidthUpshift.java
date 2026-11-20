@@ -3,7 +3,7 @@
  */
 final class GetWorldWidthUpshift extends ConsoleCommand {
     static String[] field_o;
-    static phb field_p;
+    static Sprite field_p;
     static String field_r;
     static int field_q;
 
@@ -57,7 +57,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
 
     final static boolean a(int param0) {
         if (param0 != 70) {
-          field_p = (phb) null;
+          field_p = (Sprite) null;
           if (vq.field_x == null) {
             return false;
           }
@@ -108,7 +108,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
         }
     }
 
-    final static void a(String[] args, byte[] param1, asb param2, asb param3, asb param4, phb[][] param5, String[] param6, int param7, String[][] param8, byte[] param9, int param10, int param11, boolean param12, int[] param13, int param14, int[] param15, String[][] param16, phb[][] param17, caa[] param18) {
+    final static void a(String[] args, byte[] param1, asb param2, asb param3, asb param4, Sprite[][] param5, String[] param6, int param7, String[][] param8, byte[] param9, int param10, int param11, boolean param12, int[] param13, int param14, int[] param15, String[][] param16, Sprite[][] param17, caa[] param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -237,7 +237,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_r = null;
         field_o = null;
@@ -247,7 +247,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
     }
 
     static {
-        field_p = new phb(270, 70);
+        field_p = new Sprite(270, 70);
         field_r = "Hull spike";
         field_q = 128;
     }

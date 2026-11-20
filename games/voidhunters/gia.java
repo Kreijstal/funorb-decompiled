@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gia extends le {
+final class gia extends TextureOperation {
     private boolean field_l;
     private int field_i;
     static eab field_k;
     static String field_j;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -51,7 +51,7 @@ final class gia extends le {
         this.field_l = true;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[] var41 = null;
         int[] var5 = null;
         int[] var40 = null;
@@ -70,7 +70,7 @@ final class gia extends le {
         int var12 = 0;
         int var11 = 0;
         int var21 = VoidHunters.field_G;
-        int[][] var29 = this.field_d.a(param1, (byte) -85);
+        int[][] var29 = this.field_d.getRow(param1, (byte) -85);
         int[][] var23 = var29;
         int[][] var22 = var23;
         int[][] var3 = var22;
@@ -78,9 +78,9 @@ final class gia extends le {
           return (int[][]) null;
         }
         if (this.field_d.field_g) {
-          var41 = this.a(0, wf.field_d & param1 - 1, 255);
-          var5 = this.a(0, param1, 255);
-          var40 = this.a(0, 1 + param1 & wf.field_d, 255);
+          var41 = this.getInputMonochromeRow(0, wf.field_d & param1 - 1, 255);
+          var5 = this.getInputMonochromeRow(0, param1, 255);
+          var40 = this.getInputMonochromeRow(0, 1 + param1 & wf.field_d, 255);
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];

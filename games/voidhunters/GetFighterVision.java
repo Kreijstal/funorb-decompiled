@@ -44,20 +44,20 @@ final class GetFighterVision extends ConsoleCommand {
         RuntimeException var3_ref = null;
         var6 = VoidHunters.field_G;
         try {
-          if (ms.field_y != null &&
+          if (NetworkGameClient.field_y != null &&
             null != kba.field_a) {
-            var3 = (qw) (ms.field_y.first(0));
+            var3 = (qw) (NetworkGameClient.field_y.first(0));
             while (var3 != null) {
               if (param1 == var3.field_f &&
                 !var3.field_m &&
                 Math.abs(var3.field_i - SetReverbDry.field_o) < param2) {
                 return;
               }
-              var3 = (qw) (ms.field_y.next((byte) 92));
+              var3 = (qw) (NetworkGameClient.field_y.next((byte) 92));
             }
             var3_int = param1;
             if (fbb.field_j[param1] > 1) {
-              var3_int = hob.a(jp.field_Jc, fbb.field_j[param1], 117) + param1;
+              var3_int = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param1], 117) + param1;
             }
             var4 = GetNebulaFadesOutWhenClose.a(param0 ^ -6902, fa.field_d[var3_int]);
             var5 = new qw();
@@ -65,7 +65,7 @@ final class GetFighterVision extends ConsoleCommand {
             var5.field_m = false;
             var5.field_i = SetReverbDry.field_o;
             var5.field_f = param1;
-            ms.field_y.addLast(-10258, var5);
+            NetworkGameClient.field_y.addLast(-10258, var5);
           }
           if (param0 == 6811) {
             return;
@@ -79,18 +79,18 @@ final class GetFighterVision extends ConsoleCommand {
         }
     }
 
-    final static phb[] a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
         Object var10 = null;
         Object var11 = null;
-        phb var13 = null;
-        phb var14 = null;
+        Sprite var13 = null;
+        Sprite var14 = null;
         int[] var16 = dma.field_i;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
         int var7 = dma.field_g;
         int var8 = dma.field_j;
-        phb var9 = new phb(16, param5);
+        Sprite var9 = new Sprite(16, param5);
         var9.b();
         dma.c(0, 0, 16, param5, param4, param2);
         if (param3 == 24436) {
@@ -117,9 +117,9 @@ final class GetFighterVision extends ConsoleCommand {
             dma.h(15, 4, 1, 0);
           }
           dma.a(var16, var7, var8);
-          return new phb[]{null, null, null, (phb) (var10), var9, (phb) (var11), null, null, null};
+          return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
-        return (phb[]) null;
+        return (Sprite[]) null;
     }
 
     GetFighterVision(String param0, Class[] param1, String param2) {

@@ -9,7 +9,7 @@ final class bca implements dja {
         return (SerializableGameState) ((Object) new be());
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -73) {
           field_a = (dpb) null;
           field_a = null;

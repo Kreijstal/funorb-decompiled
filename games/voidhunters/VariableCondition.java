@@ -43,7 +43,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -104 / ((param0 + 54) / 51);
         field_f = null;
     }
@@ -179,7 +179,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
           if (param1 == -2) {
             return;
           }
-          VariableCondition.c(80);
+          VariableCondition.clearSharedReferences(80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

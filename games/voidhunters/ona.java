@@ -18,7 +18,7 @@ abstract class ona {
 
     abstract void a(int param0);
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_l = null;
         if (param0 < 124) {
           field_l = (String) null;
@@ -40,7 +40,7 @@ abstract class ona {
         if (param0 == 32) {
           return this.b(-3666) >= 20 ? true : false;
         }
-        ona.c(58);
+        ona.clearSharedReferences(58);
         return this.b(-3666) >= 20 ? true : false;
     }
 

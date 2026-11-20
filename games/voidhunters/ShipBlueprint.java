@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ShipBlueprint implements DiffableState {
-    static no field_a;
+    static BitmapFont field_a;
     int[] description;
     static String field_b;
 
@@ -110,7 +110,7 @@ final class ShipBlueprint implements DiffableState {
           var3 = (ShipBlueprint) (other);
           var4 = 0;
           if (obfuscationGuard >= -19) {
-            field_a = (no) null;
+            field_a = (BitmapFont) null;
           }
           if (GetCountermeasuresCooldown.a(this.description, var3.description, false)) {
             var4 = 1;
@@ -163,7 +163,7 @@ final class ShipBlueprint implements DiffableState {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
           field_a = null;

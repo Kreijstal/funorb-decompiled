@@ -51,7 +51,7 @@ final class kpb extends io {
         }
     }
 
-    private kpb(no param0, int param1) {
+    private kpb(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

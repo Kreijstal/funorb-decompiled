@@ -57,7 +57,7 @@ abstract class mea extends IntrusiveNode {
         return 1;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         if (param0 >= -88) {
           field_e = (IntrusiveDeque) null;

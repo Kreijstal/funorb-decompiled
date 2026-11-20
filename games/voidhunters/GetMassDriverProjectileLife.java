@@ -4,7 +4,7 @@
 final class GetMassDriverProjectileLife extends ConsoleCommand {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 21584) {
           field_o = (String) null;
           field_o = null;

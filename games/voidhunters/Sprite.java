@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class phb extends sqb {
+class Sprite extends SpriteDimensions {
     int[] field_r;
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -26,9 +26,9 @@ class phb extends sqb {
         }
     }
 
-    final phb d() {
+    final Sprite d() {
         int var3 = 0;
-        phb var1 = new phb(this.field_q, this.field_p);
+        Sprite var1 = new Sprite(this.field_q, this.field_p);
         var1.field_m = this.field_m;
         var1.field_n = this.field_n;
         var1.field_k = this.field_k;
@@ -81,7 +81,7 @@ class phb extends sqb {
           if (var5 <= 0) {
             return;
           }
-          phb.a(dma.field_i, this.field_r, var4, var3, var6, var5, var7, var8);
+          Sprite.a(dma.field_i, this.field_r, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -261,7 +261,7 @@ class phb extends sqb {
         int var4 = param0 + (this.field_q >> 1) > dma.field_a ? dma.field_a - param0 << 1 : this.field_q;
         int var5 = param1 < dma.field_c ? dma.field_c - param1 << 1 : 0;
         int var6 = param1 + (this.field_p >> 1) > dma.field_f ? dma.field_f - param1 << 1 : this.field_p;
-        phb.a(this.field_r, var5 * this.field_q + var3, (param1 + (var5 >> 1)) * dma.field_g + (param0 + (var3 >> 1)), (this.field_q << 1) - (var4 - var3) + (this.field_q & 1), dma.field_g - (var4 - var3 >> 1), this.field_q, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_r, var5 * this.field_q + var3, (param1 + (var5 >> 1)) * dma.field_g + (param0 + (var3 >> 1)), (this.field_q << 1) - (var4 - var3) + (this.field_q & 1), dma.field_g - (var4 - var3 >> 1), this.field_q, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void e() {
@@ -397,7 +397,7 @@ class phb extends sqb {
           if (var5 <= 0) {
             return;
           }
-          phb.a(0, dma.field_i, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, dma.field_i, this.field_r, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1085,7 +1085,7 @@ class phb extends sqb {
           if (var6 <= 0) {
             return;
           }
-          phb.a(dma.field_i, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(dma.field_i, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1155,7 +1155,7 @@ class phb extends sqb {
           if (var5 <= 0) {
             return;
           }
-          phb.b(dma.field_i, this.field_r, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.b(dma.field_i, this.field_r, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1616,7 +1616,7 @@ class phb extends sqb {
           if (var6 <= 0) {
             return;
           }
-          phb.a(dma.field_i, this.field_r, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.a(dma.field_i, this.field_r, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1716,7 +1716,7 @@ class phb extends sqb {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          phb.a(dma.field_i, this.field_r, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.a(dma.field_i, this.field_r, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1763,18 +1763,18 @@ class phb extends sqb {
             return;
           }
           if (param2 == 256) {
-            phb.a(0, 0, 0, dma.field_i, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, dma.field_i, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            phb.a(0, 0, 0, dma.field_i, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, dma.field_i, this.field_r, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
     }
 
-    final phb a() {
+    final Sprite a() {
         int var2 = 0;
         int var3 = 0;
-        phb var1 = new phb(this.field_q, this.field_p);
+        Sprite var1 = new Sprite(this.field_q, this.field_p);
         var1.field_m = this.field_m;
         var1.field_n = this.field_n;
         var1.field_k = this.field_m - this.field_q - this.field_k;
@@ -2044,7 +2044,7 @@ class phb extends sqb {
         }
     }
 
-    phb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_m = param0;
         this.field_n = param1;
         this.field_k = param2;
@@ -2126,7 +2126,7 @@ class phb extends sqb {
         }
     }
 
-    phb(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_r = new int[param0 * param1];
         this.field_m = param0;
         this.field_q = param0;
@@ -2177,7 +2177,7 @@ class phb extends sqb {
           if (var6 <= 0) {
             return;
           }
-          phb.b(dma.field_i, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(dma.field_i, this.field_r, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2204,7 +2204,7 @@ class phb extends sqb {
         }
     }
 
-    phb(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

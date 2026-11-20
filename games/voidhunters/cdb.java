@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cdb extends le {
+final class cdb extends TextureOperation {
     private static String field_z;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         if (!param1) {
           return (int[]) null;
         }

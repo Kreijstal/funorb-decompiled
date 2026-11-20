@@ -111,7 +111,7 @@ final class im extends aia {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 105) {
           return;
         }

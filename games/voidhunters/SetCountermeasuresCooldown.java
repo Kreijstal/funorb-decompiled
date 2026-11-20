@@ -13,7 +13,7 @@ final class SetCountermeasuresCooldown extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetCountermeasuresCooldown.a(20);
+            SetCountermeasuresCooldown.clearSharedReferences(20);
           }
           SetMachineGunEnergyUsed.a(221, 62, arguments[0].intValue(12));
           stackIn_3_0 = new ConsoleValue("void");
@@ -32,7 +32,7 @@ final class SetCountermeasuresCooldown extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, no param3, int param4, phb[] param5, int param6, int param7, int param8, int param9, int param10, phb[] param11, int param12, int param13, no param14, int param15, int param16, int param17, int param18, phb[] param19) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, Sprite[] param19) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -90,7 +90,7 @@ final class SetCountermeasuresCooldown extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           return;
         }

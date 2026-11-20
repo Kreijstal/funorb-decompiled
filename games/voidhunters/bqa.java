@@ -9,7 +9,7 @@ final class bqa {
     int field_b;
     int field_e;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 <= 104) {
           return;

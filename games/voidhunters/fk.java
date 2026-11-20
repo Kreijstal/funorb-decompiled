@@ -6,7 +6,7 @@ final class fk extends tb {
     static int field_e;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 15) {
           return;
         }

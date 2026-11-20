@@ -103,7 +103,7 @@ final class kma extends ComponentBehaviour implements DiffableState {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_d = null;
         int var1 = 84 % ((param0 - 36) / 50);
@@ -125,7 +125,7 @@ final class kma extends ComponentBehaviour implements DiffableState {
 
     final int b(byte param0) {
         if (param0 <= 98) {
-          kma.c(-99);
+          kma.clearSharedReferences(-99);
           return 16;
         }
         return 16;

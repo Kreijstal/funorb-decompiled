@@ -13,7 +13,7 @@ final class GetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetShieldsDirectionalArcParticleSpeedDownshift.e((byte) 22);
+            GetShieldsDirectionalArcParticleSpeedDownshift.clearSharedReferences((byte) 22);
           }
           stackIn_3_0 = new ConsoleValue(apb.field_b);
           return stackIn_3_0;
@@ -35,7 +35,7 @@ final class GetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != -31) {
           field_o = (String[]) null;

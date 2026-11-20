@@ -7,7 +7,7 @@ final class jba implements wwa {
     private int field_i;
     private int field_a;
     private int field_f;
-    private no field_g;
+    private BitmapFont field_g;
     private int field_d;
     static llb field_b;
     private int field_c;
@@ -200,7 +200,7 @@ final class jba implements wwa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_h = null;
         field_b = null;
         if (!param0) {
@@ -208,7 +208,7 @@ final class jba implements wwa {
         }
     }
 
-    jba(no param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    jba(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_e = param4;
           this.field_g = param0;

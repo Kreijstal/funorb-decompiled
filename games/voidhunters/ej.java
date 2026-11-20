@@ -4,9 +4,9 @@
 final class ej implements dja {
     static String field_b;
     static llb field_a;
-    static no field_c;
+    static BitmapFont field_c;
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -22,7 +22,7 @@ final class ej implements dja {
 
     public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          ej.b((byte) 12);
+          ej.clearSharedReferences((byte) 12);
           return (SerializableGameState[]) ((Object) new Debris[param1]);
         }
         return (SerializableGameState[]) ((Object) new Debris[param1]);

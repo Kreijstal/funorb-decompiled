@@ -296,7 +296,7 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_D = null;
         int var1 = -52 % ((6 - param0) / 55);
         field_x = null;

@@ -6,7 +6,7 @@ final class uu implements dja {
     static java.awt.Canvas field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 >= -10) {
           return;
         }
@@ -19,7 +19,7 @@ final class uu implements dja {
         return (SerializableGameState) ((Object) new mo());
     }
 
-    final static void a(byte param0, int[] param1, ms param2) {
+    final static void a(byte param0, int[] param1, NetworkGameClient param2) {
         param2.a(false, true, true, false, -4590, true, true);
         param1[66] = 1;
         param1[72] = -2;

@@ -5,7 +5,7 @@ final class lo {
     static String field_d;
     static llb field_b;
     static wf[] field_a;
-    static phb[] field_c;
+    static Sprite[] field_c;
 
     public static void a(boolean param0) {
         field_d = null;

@@ -6,7 +6,7 @@ final class GetDebrisFoundInPairs extends ConsoleCommand {
     static int field_p;
     static int field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         int var1 = 111 / ((-46 - param0) / 53);
     }
@@ -24,7 +24,7 @@ final class GetDebrisFoundInPairs extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetDebrisFoundInPairs.e((byte) 30);
+            GetDebrisFoundInPairs.clearSharedReferences((byte) 30);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(18, 91));
           return stackIn_3_0;

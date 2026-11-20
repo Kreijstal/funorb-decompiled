@@ -3,7 +3,7 @@
  */
 final class bc {
     static IntrusiveDeque field_b;
-    private phb[] field_c;
+    private Sprite[] field_c;
     static String field_a;
 
     public static void a(int param0) {
@@ -19,7 +19,7 @@ final class bc {
         abb.a(3, param4, param2, param3, this.field_c, param1);
     }
 
-    bc(phb[] param0) {
+    bc(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

@@ -6,7 +6,7 @@ final class mq extends qq implements vca {
     static int field_j;
     static int field_k;
 
-    mq(jp param0, mj param1, boolean param2) {
+    mq(OpenGlGpuToolkit param0, mj param1, boolean param2) {
         super(param0, 34963, param2);
         try {
           this.field_i = param1;

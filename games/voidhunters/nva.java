@@ -10,7 +10,7 @@ final class nva extends dqa implements oo {
     tia field_w;
     static String field_D;
     static String field_I;
-    no field_v;
+    BitmapFont field_v;
     private int field_B;
     String field_E;
     private boolean field_z;
@@ -178,7 +178,7 @@ final class nva extends dqa implements oo {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -77) {
           return;
         }
@@ -280,7 +280,7 @@ final class nva extends dqa implements oo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 >= -17) {
-            this.field_v = (no) null;
+            this.field_v = (BitmapFont) null;
           }
           stackIn_3_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -93);
           return stackIn_3_0;
@@ -468,7 +468,7 @@ final class nva extends dqa implements oo {
         char[] var6 = new char[param2];
         char[] var3 = var6;
         if (!param1) {
-          nva.f(-90);
+          nva.clearSharedReferences(-90);
         }
         for (var4 = 0; var4 < param2; var4++) {
           var6[var4] = param0;

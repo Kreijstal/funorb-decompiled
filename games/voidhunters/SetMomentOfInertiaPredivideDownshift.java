@@ -4,7 +4,7 @@
 final class SetMomentOfInertiaPredivideDownshift extends ConsoleCommand {
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 49) {
           return;
         }
@@ -37,12 +37,12 @@ final class SetMomentOfInertiaPredivideDownshift extends ConsoleCommand {
             SetPointDefenceLaserAimarc.a((CharSequence) ((Object) var6), param1 - 2131)) {
             lob.a(-106, (CharSequence) ((Object) var6));
           }
-          AwardVictoryToWinnerAction.field_a = new phb[param2.length];
+          AwardVictoryToWinnerAction.field_a = new Sprite[param2.length];
           if (param1 != 2141) {
             return;
           }
           for (var7 = 0; var7 < param2.length; var7++) {
-            AwardVictoryToWinnerAction.field_a[var7] = new phb(317, 34);
+            AwardVictoryToWinnerAction.field_a[var7] = new Sprite(317, 34);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

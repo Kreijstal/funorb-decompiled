@@ -18,7 +18,7 @@ final class MissionList implements DiffableState {
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           field_b = (eab) null;
           field_b = null;
@@ -179,7 +179,7 @@ final class MissionList implements DiffableState {
           return;
         }
         try {
-          var3.missions = (Mission[]) (sqb.a(var3.missions, this.missions, 1, GetThrusterParticleLife.field_p, false));
+          var3.missions = (Mission[]) (SpriteDimensions.a(var3.missions, this.missions, 1, GetThrusterParticleLife.field_p, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vpa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

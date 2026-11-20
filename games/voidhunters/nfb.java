@@ -17,7 +17,7 @@ final class nfb implements dja {
         return (SerializableGameState[]) ((Object) new GrappleLauncherBehaviour[param1]);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 76 / ((param0 + 65) / 53);
         field_a = null;
     }

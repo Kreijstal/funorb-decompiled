@@ -132,7 +132,7 @@ final class Lo extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 != 301) {
           return;

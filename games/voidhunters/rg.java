@@ -69,7 +69,7 @@ final class rg implements dja {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_c = null;
         if (param0 > -111) {

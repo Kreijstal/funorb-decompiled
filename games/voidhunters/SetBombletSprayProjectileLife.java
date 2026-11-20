@@ -5,17 +5,17 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
     static String field_p;
     static boolean[] field_o;
 
-    final static phb[] a(boolean param0, phb param1) {
-        phb[] var2 = null;
+    final static Sprite[] a(boolean param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        phb[] var3 = null;
-        phb[] stackIn_3_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new phb[9];
+          var3 = new Sprite[9];
           var2 = var3;
           if (param0) {
             SetBombletSprayProjectileLife.e((byte) -84);

@@ -113,7 +113,7 @@ final class SetShipAimLines extends ConsoleCommand {
 
     final static GraphicsToolkit a(byte param0, int param1, java.awt.Canvas param2, d param3, int param4) {
         RuntimeException var5 = null;
-        oa stackIn_3_0 = null;
+        NativeSoftwareToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -124,7 +124,7 @@ final class SetShipAimLines extends ConsoleCommand {
           if (param0 < 110) {
             field_o = (String[][]) null;
           }
-          stackIn_3_0 = new oa(param2, param3, param1, param4);
+          stackIn_3_0 = new NativeSoftwareToolkit(param2, param3, param1, param4);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class SetShipAimLines extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_o = (String[][]) null;
         if (param0 != -1) {

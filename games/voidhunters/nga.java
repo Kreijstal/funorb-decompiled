@@ -111,7 +111,7 @@ final class nga implements Iterable {
         this.field_g = null;
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_e = null;
         field_c = null;
         if (param0 != -126) {

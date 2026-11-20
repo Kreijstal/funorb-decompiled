@@ -5,7 +5,7 @@ final class GetAutoaim extends ConsoleCommand {
     static int field_o;
     static GraphicsToolkit field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 47 / ((param0 + 36) / 33);
         field_p = null;
     }

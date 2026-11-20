@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
+final class Asteroid extends ShipBody implements DiffableState, CompactGameState, ofa {
     static int[][] field_w;
     private int field_u;
     static bwa field_v;
@@ -9,15 +9,15 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
     final int d(int param0) {
         if (param0 <= 42) {
           IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
-          this.a((IsaacPacketBuffer) null, (byte) -116);
+          this.writeCompactState((IsaacPacketBuffer) null, (byte) -116);
           return 3;
         }
         return 3;
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.readCompactState(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "crb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -124,9 +124,9 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
         SetMissionDebrisVotingChancestep.a(param1, 4095);
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         try {
-          super.a(param0, (byte) -101);
+          super.writeCompactState(param0, (byte) -101);
           if (param1 > -91) {
             Asteroid.l(-20);
           }

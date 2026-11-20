@@ -7,7 +7,7 @@ abstract class qq implements nib {
     private int field_f;
     private int field_a;
     private int field_c;
-    jp field_d;
+    OpenGlGpuToolkit field_d;
     private int field_b;
     private jaclib.memory.heap.NativeHeapBuffer field_h;
 
@@ -64,9 +64,9 @@ abstract class qq implements nib {
             if (0 < this.field_a) {
               jaggl.OpenGL.glBindBufferARB(this.field_b, this.field_a);
               if (this.field_e == 1) {
-                jaggl.OpenGL.glBufferSubDataARBa(this.field_b, 0, this.field_f, this.field_d.field_m.b());
+                jaggl.OpenGL.glBufferSubDataARBa(this.field_b, 0, this.field_f, this.field_d.field_m.getAddress());
               } else {
-                stackIn_10_0 = (!param1.a()) ? 0 : 1;
+                stackIn_10_0 = (!param1.unmap()) ? 0 : 1;
                 var3_int = stackIn_10_0;
               }
             }
@@ -97,10 +97,10 @@ abstract class qq implements nib {
 
     final long c(int param0) {
         if (param0 == 2) {
-          return 0 == this.field_a ? this.field_h.b() : 0L;
+          return 0 == this.field_a ? this.field_h.getAddress() : 0L;
         }
         qq.a(127, true);
-        return 0 == this.field_a ? this.field_h.b() : 0L;
+        return 0 == this.field_a ? this.field_h.getAddress() : 0L;
     }
 
     protected final void finalize() throws Throwable {
@@ -237,8 +237,8 @@ abstract class qq implements nib {
                 return (jaclib.memory.Buffer) ((Object) stackIn_9_0);
               }
             }
-            if (!param2.b() &&
-              param2.a(this.field_b, this.field_c, 35001)) {
+            if (!param2.isMapped() &&
+              param2.map(this.field_b, this.field_c, 35001)) {
               this.field_e = 2;
               stackIn_14_0 = (jaggl.MapBuffer) (param2);
               return (jaclib.memory.Buffer) ((Object) stackIn_14_0);
@@ -264,7 +264,7 @@ abstract class qq implements nib {
         }
     }
 
-    qq(jp param0, int param1, boolean param2) {
+    qq(OpenGlGpuToolkit param0, int param1, boolean param2) {
         this.field_a = -1;
         this.field_e = 0;
         try {

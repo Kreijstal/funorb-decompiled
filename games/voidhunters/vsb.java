@@ -3,7 +3,7 @@
  */
 final class vsb extends uda {
     private rga field_e;
-    private jp field_f;
+    private OpenGlGpuToolkit field_f;
     private gla field_g;
 
     final void a(int param0, boolean param1) {
@@ -65,7 +65,7 @@ final class vsb extends uda {
         }
     }
 
-    vsb(jp param0, asb param1, rga param2) {
+    vsb(OpenGlGpuToolkit param0, asb param1, rga param2) {
         super(param0);
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
@@ -119,7 +119,7 @@ final class vsb extends uda {
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);
         if (param0 != 2543) {
-          this.field_f = (jp) null;
+          this.field_f = (OpenGlGpuToolkit) null;
         }
     }
 

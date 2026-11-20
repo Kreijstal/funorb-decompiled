@@ -10,7 +10,7 @@ final class se extends ps {
 
     final static int a(boolean param0) {
         if (param0) {
-          se.c(-109);
+          se.clearSharedReferences(-109);
           return 495;
         }
         return 495;
@@ -53,7 +53,7 @@ final class se extends ps {
         return (byte[]) null;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -27982) {
           return;
         }

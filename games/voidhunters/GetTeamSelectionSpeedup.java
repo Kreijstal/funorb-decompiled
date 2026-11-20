@@ -3,7 +3,7 @@
  */
 final class GetTeamSelectionSpeedup extends ConsoleCommand {
     static int field_p;
-    static phb field_o;
+    static Sprite field_o;
 
     public static void e(int param0) {
         field_o = null;
@@ -21,7 +21,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (phb) null;
+            field_o = (Sprite) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(4, 94));
           return stackIn_3_0;

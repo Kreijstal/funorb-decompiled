@@ -5,7 +5,7 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
     static String field_p;
     static int field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 116 / ((58 - param0) / 61);
         field_p = null;
     }
@@ -125,11 +125,11 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static phb a(asb param0, String param1, String param2, boolean param3) {
+    final static Sprite a(asb param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        phb stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

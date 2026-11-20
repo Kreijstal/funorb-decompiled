@@ -494,7 +494,7 @@ final class mpb extends mea {
         this.field_v = null;
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_l = null;
         field_k = null;
         field_h = null;

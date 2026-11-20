@@ -10,7 +10,7 @@ final class jjb {
     aia[] field_c;
     ob field_b;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_f = null;
         if (param0) {
           field_f = (String) null;

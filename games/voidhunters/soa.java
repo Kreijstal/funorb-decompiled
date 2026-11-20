@@ -22,7 +22,7 @@ final class soa extends llb {
         }
         var10.field_j = param0;
         var10.field_r = param3;
-        var10.c((byte) -105);
+        var10.postDecode((byte) -105);
         SetPhasedEnergyBeamProjectiles.a(param5, param7, -108);
         for (var11 = 0; var11 < param5; var11++) {
           var10.a(1, var11, var15[var11]);

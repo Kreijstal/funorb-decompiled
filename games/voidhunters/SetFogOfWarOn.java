@@ -118,7 +118,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_use_trails(" + veb.field_b + ")");
         System.out.println("set_fighter_vision(" + vqa.field_k + ")");
         System.out.println("set_ship_to_ship_ram_damage(" + bra.field_d + ")");
-        System.out.println("set_team_selection_speedup(" + dcb.field_f + ")");
+        System.out.println("set_team_selection_speedup(" + ColorRowCacheEntry.field_f + ")");
         System.out.println("set_full_mission_set(" + GetAutoaim.field_o + ")");
         System.out.println("set_wait_for_players(" + GetSpinningBladeAimspeed.field_p + ")");
         System.out.println("set_keep_team_colours(" + SetMachineGunAimspeed.field_o + ")");
@@ -131,7 +131,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_missiles_damage_source_team(" + SetPointDefenceLaserPulsetime.field_o + ")");
         System.out.println("set_grappling_hooks_damageable_by_source_player(" + SetThrusterAutobalancing.field_r + ")");
         System.out.println("set_thruster_binding_move_and_turn_has_opposite_move(" + GetGrapplingHookAimspeed.field_p + ")");
-        System.out.println("set_nebula_fades_out_when_close(" + dcb.field_d + ")");
+        System.out.println("set_nebula_fades_out_when_close(" + ColorRowCacheEntry.field_d + ")");
         System.out.println("set_debris_found_in_pairs(" + WeaponBehaviour.field_d + ")");
         System.out.println("set_fog_of_war_on(" + rla.field_x + ")");
         System.out.println("set_use_models(" + rma.field_b + ")");

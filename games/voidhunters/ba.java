@@ -12,6 +12,6 @@ final class ba extends r implements e {
         }
     }
 
-    ba(oa param0) {
+    ba(NativeSoftwareToolkit param0) {
     }
 }

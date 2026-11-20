@@ -228,7 +228,7 @@ final class TrailHolder implements DiffableState {
         this.field_g = 0;
     }
 
-    final static void a(no param0, int param1, toa param2, String param3, int param4) {
+    final static void a(BitmapFont param0, int param1, toa param2, String param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;

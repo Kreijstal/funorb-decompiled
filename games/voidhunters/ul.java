@@ -5,16 +5,16 @@ final class ul {
     static llb[] field_b;
     static int field_a;
 
-    final static phb[] a(int param0, int param1, int param2, int param3, boolean param4) {
-        phb[] var6 = new phb[9];
-        phb[] var5 = var6;
-        phb dupTemp$0 = SetMaxShipSize.a(param0, (byte) -119, param2);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = SetMaxShipSize.a(param0, (byte) -119, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        phb dupTemp$1 = SetMaxShipSize.a(param3, (byte) -125, param2);
+        Sprite dupTemp$1 = SetMaxShipSize.a(param3, (byte) -125, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -68,7 +68,7 @@ final class ul {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != -23460) {
           field_b = (llb[]) null;

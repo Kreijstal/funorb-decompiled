@@ -158,7 +158,7 @@ final class npa implements dja {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_a = null;
         if (!param0) {
           field_a = (int[]) null;

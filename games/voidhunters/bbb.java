@@ -4,7 +4,7 @@
 final class bbb {
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
           field_a = null;
@@ -13,13 +13,13 @@ final class bbb {
         field_a = null;
     }
 
-    final static phb[] a(phb[] param0, byte param1) {
+    final static Sprite[] a(Sprite[] param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        phb var4 = null;
+        Sprite var4 = null;
         int var5 = 0;
-        phb[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -34,7 +34,7 @@ final class bbb {
             param0[var3].field_m = param0[var3].field_q;
             param0[var3].field_n = param0[var3].field_p;
           }
-          stackIn_5_0 = (phb[]) (param0);
+          stackIn_5_0 = (Sprite[]) (param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

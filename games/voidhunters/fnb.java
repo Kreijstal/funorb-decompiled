@@ -30,9 +30,9 @@ abstract class fnb {
           if (param3) {
             fnb.a(-3, 82, -123, true, 37, 119);
           }
-          if (null != ms.field_y &&
+          if (null != NetworkGameClient.field_y &&
             null != kba.field_a) {
-            var6 = (qw) (ms.field_y.first(0));
+            var6 = (qw) (NetworkGameClient.field_y.first(0));
             while (var6 != null) {
               if (var6.field_f == param4 &&
                 var6.field_m &&
@@ -48,7 +48,7 @@ abstract class fnb {
                   return;
                 }
               }
-              var6 = (qw) (ms.field_y.next((byte) 127));
+              var6 = (qw) (NetworkGameClient.field_y.next((byte) 127));
             }
             var6_int = uv.a(128, param2);
             var7Lifetime1 = pja.b((byte) 95, param2, param1);
@@ -57,7 +57,7 @@ abstract class fnb {
             }
             var8Lifetime1 = param4;
             if (1 < fbb.field_j[param4]) {
-              var8Lifetime1 = param4 + hob.a(jp.field_Jc, fbb.field_j[param4], 117);
+              var8Lifetime1 = param4 + hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param4], 117);
             }
             var9 = coa.a(var7Lifetime1, 100, var6_int, fa.field_d[var8Lifetime1]);
             var10 = new qw();
@@ -67,7 +67,7 @@ abstract class fnb {
             var10.field_k = var9;
             var10.field_i = SetReverbDry.field_o;
             var10.field_d = param2;
-            ms.field_y.addLast(-10258, var10);
+            NetworkGameClient.field_y.addLast(-10258, var10);
             return;
           }
           return;

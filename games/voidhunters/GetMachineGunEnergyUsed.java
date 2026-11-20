@@ -3,7 +3,7 @@
  */
 final class GetMachineGunEnergyUsed extends ConsoleCommand {
     static dja field_q;
-    static dcb field_o;
+    static ColorRowCacheEntry field_o;
     static int field_p;
 
     GetMachineGunEnergyUsed(String param0, Class[] param1, String param2) {
@@ -49,6 +49,6 @@ final class GetMachineGunEnergyUsed extends ConsoleCommand {
 
     static {
         field_q = (dja) ((Object) new cn());
-        field_o = new dcb(0, 0);
+        field_o = new ColorRowCacheEntry(0, 0);
     }
 }

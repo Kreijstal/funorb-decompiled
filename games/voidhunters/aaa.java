@@ -5,7 +5,7 @@ final class aaa {
     static String field_a;
     static vka field_b;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         if (param0 != 35) {
           return;

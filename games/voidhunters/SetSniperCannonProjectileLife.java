@@ -32,7 +32,7 @@ final class SetSniperCannonProjectileLife extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         field_p = null;
         int var1 = 87 % ((param0 + 18) / 48);

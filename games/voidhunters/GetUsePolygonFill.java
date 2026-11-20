@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUsePolygonFill extends ConsoleCommand {
-    static no field_p;
+    static BitmapFont field_p;
     static String field_o;
 
     GetUsePolygonFill(String param0, Class[] param1, String param2) {
@@ -38,7 +38,7 @@ final class GetUsePolygonFill extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 9141) {
           return;

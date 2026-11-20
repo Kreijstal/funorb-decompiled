@@ -28,7 +28,7 @@ final class SetSniperCannonAimarc extends ConsoleCommand {
           if (param1 == 0) {
             return;
           }
-          SetSniperCannonAimarc.e((byte) -76);
+          SetSniperCannonAimarc.clearSharedReferences((byte) -76);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -44,7 +44,7 @@ final class SetSniperCannonAimarc extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         int var1 = -24 / ((param0 + 34) / 57);
         field_q = null;

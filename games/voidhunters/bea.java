@@ -289,7 +289,7 @@ final class bea implements DiffableState {
           var3_int = 0;
           var4 = 0;
           if (param1 != 262144) {
-            bea.a(73);
+            bea.clearSharedReferences(73);
           }
           while (var4 < param0.length) {
             var3_int = var3_int + param0[var4];
@@ -3352,7 +3352,7 @@ final class bea implements DiffableState {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
           field_a = (String[]) null;
         }

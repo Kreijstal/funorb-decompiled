@@ -5,7 +5,7 @@ final class SetPointDefenceLaserAimarc extends ConsoleCommand {
     static ima[] field_r;
     static int field_q;
     static os field_o;
-    static phb[][] field_p;
+    static Sprite[][] field_p;
 
     final static boolean a(CharSequence param0, int param1) {
         RuntimeException var2 = null;
@@ -16,7 +16,7 @@ final class SetPointDefenceLaserAimarc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 10) {
-            field_p = (phb[][]) null;
+            field_p = (Sprite[][]) null;
           }
           stackIn_3_0 = SetSniperCannonProjectiles.a(param0, true, (byte) 117, 10);
           return stackIn_3_0;
@@ -68,11 +68,11 @@ final class SetPointDefenceLaserAimarc extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_r = null;
         field_o = null;
         int var1 = 98 / ((57 - param0) / 37);
-        field_p = (phb[][]) null;
+        field_p = (Sprite[][]) null;
     }
 
     static {

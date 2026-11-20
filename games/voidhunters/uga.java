@@ -3,7 +3,7 @@
  */
 final class uga extends qg {
     private float field_k;
-    private vab field_j;
+    private ArbProgram field_j;
     private float[] field_f;
     static llb field_h;
     private int field_c;
@@ -12,7 +12,7 @@ final class uga extends qg {
     static fdb field_g;
     private bt field_e;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -9) {
           return;
         }

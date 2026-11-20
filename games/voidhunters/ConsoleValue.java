@@ -19,7 +19,7 @@ final class ConsoleValue {
         if (param0 != 0) {
           return;
         }
-        osa.field_e = SetSniperCannonFiringLeeway.field_p;
+        MonochromeRowCacheEntry.field_e = SetSniperCannonFiringLeeway.field_p;
     }
 
     private final long longValue(int param0) {
@@ -84,7 +84,7 @@ final class ConsoleValue {
         this.primitive = true;
     }
 
-    final static void a(byte param0) {
+    final static void beginReferenceTracking(byte param0) {
         int var1 = -53 % ((-32 - param0) / 53);
         SetVelocitySustainMax.field_o = 0;
         if (null == SetFogOfWarOn.field_o) {

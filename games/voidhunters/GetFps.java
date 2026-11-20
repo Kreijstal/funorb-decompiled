@@ -36,7 +36,7 @@ final class GetFps extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 30465) {
           return;
         }

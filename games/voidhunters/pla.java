@@ -6,10 +6,10 @@ final class pla extends htb {
     private eeb field_C;
 
     final void b(int param0, int param1, int param2, int param3) {
-        phb var15 = null;
-        phb var16 = null;
-        phb var13 = null;
-        phb var12 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var13 = null;
+        Sprite var12 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = VoidHunters.field_G;
@@ -30,7 +30,7 @@ final class pla extends htb {
           var9 = var15.field_m << 1;
           var10 = var15.field_n << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
-            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9, var10);
+            GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
@@ -38,7 +38,7 @@ final class pla extends htb {
             return;
           }
           if (GetWeaponProjectileSpeedMultiply.field_o.field_q < var9) {
-            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9, var10);
+            GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
@@ -46,7 +46,7 @@ final class pla extends htb {
             return;
           }
           if (var10 > GetWeaponProjectileSpeedMultiply.field_o.field_p) {
-            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9, var10);
+            GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
@@ -65,7 +65,7 @@ final class pla extends htb {
           var9Lifetime1 = var16.field_m << 1;
           var10Lifetime1 = var16.field_n << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
-            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9Lifetime1, var10Lifetime1);
+            GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
@@ -73,7 +73,7 @@ final class pla extends htb {
             return;
           }
           if (GetWeaponProjectileSpeedMultiply.field_o.field_q < var9Lifetime1) {
-            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9Lifetime1, var10Lifetime1);
+            GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
@@ -81,7 +81,7 @@ final class pla extends htb {
             return;
           }
           if (var10Lifetime1 > GetWeaponProjectileSpeedMultiply.field_o.field_p) {
-            GetWeaponProjectileSpeedMultiply.field_o = new phb(var9Lifetime1, var10Lifetime1);
+            GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);

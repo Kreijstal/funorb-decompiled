@@ -8,11 +8,11 @@ final class okb implements vca {
     private boolean field_e;
     private int field_g;
     private jagdx.IDirect3DIndexBuffer field_d;
-    private nla field_a;
+    private Direct3DToolkit field_a;
 
     public final void a(int param0) {
         if (null != this.field_d) {
-          this.field_d.a(false);
+          this.field_d.release(false);
           this.field_d = null;
         }
         this.field_f = 0;
@@ -59,9 +59,9 @@ final class okb implements vca {
           } else {
             stackIn_11_4 = 102;
           }
-          this.field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_10_1).a(stackIn_10_2, stackIn_10_3, stackIn_11_4, var3, this.field_d);
+          this.field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_10_1).createIndexBuffer(stackIn_10_2, stackIn_10_3, stackIn_11_4, var3, this.field_d);
         } else {
-          this.field_d.a(false);
+          this.field_d.release(false);
           stackIn_14_0 = this;
           stackIn_14_1 = this.field_a.field_Mc;
           stackIn_14_2 = this.field_g;
@@ -71,7 +71,7 @@ final class okb implements vca {
           } else {
             stackIn_15_4 = 102;
           }
-          this.field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_14_1).a(stackIn_14_2, stackIn_14_3, stackIn_15_4, var3, this.field_d);
+          this.field_d = ((jagdx.IDirect3DDevice) (Object) stackIn_14_1).createIndexBuffer(stackIn_14_2, stackIn_14_3, stackIn_15_4, var3, this.field_d);
         }
         this.field_f = this.field_g;
         return;
@@ -84,7 +84,7 @@ final class okb implements vca {
           var2 = 14 / ((13 - param0) / 37);
           return false;
         }
-        if (jagdx.hea.b(this.field_d.Unlock(), (byte) 90)) {
+        if (jagdx.HResult.succeeded(this.field_d.Unlock(), (byte) 90)) {
           this.field_c = false;
           return true;
         }
@@ -102,7 +102,7 @@ final class okb implements vca {
           if (this.field_c) {
             return null;
           }
-          if (jagdx.hea.b(this.field_d.Lock(0, this.field_f, param1 ? 8192 : 0, this.field_a.field_Kc), (byte) 37)) {
+          if (jagdx.HResult.succeeded(this.field_d.Lock(0, this.field_f, param1 ? 8192 : 0, this.field_a.field_Kc), (byte) 37)) {
             this.field_c = true;
             return (jaclib.memory.Buffer) ((Object) this.field_a.field_Kc);
           }
@@ -115,14 +115,14 @@ final class okb implements vca {
         if (this.field_c) {
           return null;
         }
-        if (jagdx.hea.b(this.field_d.Lock(0, this.field_f, param1 ? 8192 : 0, this.field_a.field_Kc), (byte) 37)) {
+        if (jagdx.HResult.succeeded(this.field_d.Lock(0, this.field_f, param1 ? 8192 : 0, this.field_a.field_Kc), (byte) 37)) {
           this.field_c = true;
           return (jaclib.memory.Buffer) ((Object) this.field_a.field_Kc);
         }
         return null;
     }
 
-    okb(nla param0, mj param1, boolean param2) {
+    okb(Direct3DToolkit param0, mj param1, boolean param2) {
         this.field_c = false;
         this.field_b = param1;
         this.field_e = param2 ? true : false;

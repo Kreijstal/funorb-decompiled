@@ -110,7 +110,7 @@ final class rdb extends IntrusiveNode implements DiffableState {
         return this.y;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 51200) {
           field_f = (String) null;
           field_f = null;

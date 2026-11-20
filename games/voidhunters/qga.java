@@ -62,7 +62,7 @@ final class qga {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         int var1 = 94 / ((param0 - 55) / 45);
     }

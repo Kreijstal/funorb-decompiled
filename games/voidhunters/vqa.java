@@ -81,7 +81,7 @@ final class vqa extends eca {
           if (param1 == -1) {
             return null;
           }
-          vqa.f(108);
+          vqa.clearSharedReferences(108);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class vqa extends eca {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
           return;
         }

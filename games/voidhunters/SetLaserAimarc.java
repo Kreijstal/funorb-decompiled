@@ -60,7 +60,7 @@ final class SetLaserAimarc extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -80) {
           field_p = (int[]) null;
           field_p = null;

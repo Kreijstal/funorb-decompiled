@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Hardpoint implements DiffableState, utb {
+final class Hardpoint implements DiffableState, CompactGameState {
     int connectedComponentIdx;
     static int field_a;
     int worldx;
@@ -15,7 +15,7 @@ final class Hardpoint implements DiffableState, utb {
         }
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         param0.writeBits(-632, this.connectedComponentIdx + 1, 5);
         param0.writeBits(-632, this.worldx, 32);
         if (param1 > -91) {
@@ -28,7 +28,7 @@ final class Hardpoint implements DiffableState, utb {
         }
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         try {
           this.connectedComponentIdx = param0.readBits(0, 5) - 1;
           this.worldx = param0.readBits(0, param1);

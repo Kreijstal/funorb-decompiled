@@ -445,7 +445,7 @@ final class usb extends oda {
           }
           if (param0 != -15834) {
             var6 = (String) null;
-            usb.a(-25, (no) null, (String) null, 107, 85, 63, 106);
+            usb.a(-25, (BitmapFont) null, (String) null, 107, 85, 63, 106);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -462,7 +462,7 @@ final class usb extends oda {
         }
     }
 
-    final static void a(int param0, no param1, String param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, BitmapFont param1, String param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

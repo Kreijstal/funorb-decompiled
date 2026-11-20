@@ -33,7 +33,7 @@ final class SetBombletSprayAimarc extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 114 / ((param0 + 10) / 41);
         field_o = null;
     }

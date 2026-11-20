@@ -4,7 +4,7 @@
 final class SetTorpedoProjectileOndamageParticles extends ConsoleCommand {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 153) {
           field_o = (String) null;

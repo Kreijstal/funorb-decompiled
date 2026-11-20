@@ -18,7 +18,7 @@ final class jsa {
             if (!RasterBuffer.a("jagdx", (byte) 114)) {
               throw new RuntimeException("");
             }
-            var5 = Class.forName("nla");
+            var5 = Class.forName("Direct3DToolkit");
             if (param2 != 27908) {
               stackIn_7_0 = (GraphicsToolkit) null;
               return stackIn_7_0;

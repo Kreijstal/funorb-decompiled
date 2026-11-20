@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class drb extends le {
+final class drb extends TextureOperation {
     static int field_j;
     static String field_k;
     private int field_i;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = null;
         if (param0 > -80) {
           field_k = (String) null;
@@ -23,11 +23,11 @@ final class drb extends le {
         return (kob) null;
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         if (!param1) {
           return (int[]) null;
         }
-        int[] var4 = this.field_f.a((byte) 117, param0);
+        int[] var4 = this.field_f.getRow((byte) 117, param0);
         int[] var3 = var4;
         if (!this.field_f.field_e) {
           return var4;
@@ -46,7 +46,7 @@ final class drb extends le {
         this(4096);
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -55,7 +55,7 @@ final class drb extends le {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -60) {
-            drb.e((byte) 48);
+            drb.clearSharedReferences((byte) 48);
           }
           var4_int = param0;
           if (0 != var4_int) {

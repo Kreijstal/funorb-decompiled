@@ -5,7 +5,7 @@ final class wcb extends uda {
     private jagdx.IDirect3DVertexShader field_g;
     private static float[] field_h;
     private rga field_f;
-    private nla field_e;
+    private Direct3DToolkit field_e;
 
     final void b(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
@@ -18,9 +18,9 @@ final class wcb extends uda {
             var3 = this.field_d.field_r;
             var4 = this.field_d.field_p;
             var5 = var4 - 512.0f;
-            var2.b(10, var5, 1.0f / (var4 - var5), var4, 1.0f / (-var4 + var3));
+            var2.setVertexShaderConstant(10, var5, 1.0f / (var4 - var5), var4, 1.0f / (-var4 + var3));
           } else {
-            var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
+            var2.setVertexShaderConstant(10, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           this.field_d.e(-126, this.field_d.field_lc);
         }
@@ -39,22 +39,22 @@ final class wcb extends uda {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_g != null) {
           var2 = this.field_e.field_Mc;
-          var2.a(4, this.field_d.a(108, field_h));
+          var2.setVertexShaderConstants(4, this.field_d.a(108, field_h));
         }
         if (param0) {
           return;
         }
-        this.field_e = (nla) null;
+        this.field_e = (Direct3DToolkit) null;
     }
 
-    wcb(nla param0, asb param1, rga param2) {
+    wcb(Direct3DToolkit param0, asb param1, rga param2) {
         super(param0);
         this.field_f = param2;
         this.field_e = param0;
         if (param1 != null &&
           this.field_f.c((byte) 60) &&
           (65535 & this.field_e.field_Hc.VertexShaderVersion) >= 257) {
-          this.field_g = this.field_e.field_Mc.b(param1.a("transparent_water", true, "dx"));
+          this.field_g = this.field_e.field_Mc.createVertexShader(param1.a("transparent_water", true, "dx"));
         } else {
           this.field_g = null;
         }
@@ -111,7 +111,7 @@ final class wcb extends uda {
         if (this.field_g != null) {
           var2 = this.field_e.field_Mc;
           var3 = this.field_e.E(0);
-          var2.a(0, var3.a(field_h, (byte) 22));
+          var2.setVertexShaderConstants(0, var3.a(field_h, (byte) 22));
         }
         if (param0 == 5) {
           return;
@@ -134,7 +134,7 @@ final class wcb extends uda {
           if (null != this.field_g) {
             var2 = this.field_e.field_Mc;
             var3 = this.field_e.E(0);
-            var2.a(0, var3.a(field_h, (byte) 22));
+            var2.setVertexShaderConstants(0, var3.a(field_h, (byte) 22));
           }
           return;
         }
@@ -142,7 +142,7 @@ final class wcb extends uda {
         if (null != this.field_g) {
           var2Lifetime1 = this.field_e.field_Mc;
           var3Lifetime1 = this.field_e.E(0);
-          var2Lifetime1.a(0, var3Lifetime1.a(field_h, (byte) 22));
+          var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.a(field_h, (byte) 22));
         }
     }
 
@@ -157,11 +157,11 @@ final class wcb extends uda {
           if (this.field_f.field_b) {
             var5_float = (float)(this.field_d.field_pc % 4000) / 4000.0f;
             this.field_d.a(this.field_f.field_d, -124);
-            var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
+            var7.setVertexShaderConstant(11, var5_float, 0.0f, 0.0f, 0.0f);
           } else {
             var5 = 16 * (this.field_d.field_pc % 4000) / 4000;
             this.field_d.a(this.field_f.field_a[var5], param2 - 127);
-            var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+            var7.setVertexShaderConstant(11, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
         }
@@ -170,11 +170,11 @@ final class wcb extends uda {
         if (this.field_f.field_b) {
           var5_floatLifetime1 = (float)(this.field_d.field_pc % 4000) / 4000.0f;
           this.field_d.a(this.field_f.field_d, -124);
-          var6.b(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
+          var6.setVertexShaderConstant(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
         } else {
           var5Lifetime1 = 16 * (this.field_d.field_pc % 4000) / 4000;
           this.field_d.a(this.field_f.field_a[var5Lifetime1], param2 - 127);
-          var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+          var6.setVertexShaderConstant(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
     }
 

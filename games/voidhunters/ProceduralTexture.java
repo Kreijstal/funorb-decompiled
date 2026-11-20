@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lra extends DualLinkNode {
-    private le field_m;
+final class ProceduralTexture extends DualLinkNode {
+    private TextureOperation field_m;
     static String field_o;
     private int[] field_n;
     private int[] field_l;
-    private le[] field_q;
-    private le field_k;
-    private le field_p;
+    private TextureOperation[] field_q;
+    private TextureOperation field_k;
+    private TextureOperation field_p;
 
     final float[] a(int param0, int param1, d param2, boolean param3, asb param4, int param5) {
         int var7_int = 0;
@@ -49,7 +49,7 @@ final class lra extends DualLinkNode {
           GetAngularVelocitySustainMax.field_o = param4;
           nl.field_e = param2;
           for (var7_int = 0; this.field_q.length > var7_int; var7_int++) {
-            this.field_q[var7_int].b(-9163, param1, param5);
+            this.field_q[var7_int].initializeCache(-9163, param1, param5);
           }
           SetPhasedEnergyBeamProjectiles.a(param5, param1, -116);
           var20 = new float[4 * (param1 * param5)];
@@ -57,12 +57,12 @@ final class lra extends DualLinkNode {
           var8 = 0;
           for (var9 = 0; var9 < param5; var9++) {
             if (this.field_m.field_g) {
-              var15_ref_int__ = this.field_m.a(var9, true);
+              var15_ref_int__ = this.field_m.getMonochromeRow(var9, true);
               var12 = var15_ref_int__;
               var11 = var15_ref_int__;
               var10 = var15_ref_int__;
             } else {
-              var23 = this.field_m.a(255, var9);
+              var23 = this.field_m.getColorRow(255, var9);
               var22 = var23;
               var19 = var22;
               var15_ref_int____ = var19;
@@ -71,17 +71,17 @@ final class lra extends DualLinkNode {
               var12 = var23[2];
             }
             if (this.field_p.field_g) {
-              var13 = this.field_p.a(var9, true);
+              var13 = this.field_p.getMonochromeRow(var9, true);
             } else {
-              var13 = this.field_p.a(255, var9)[0];
+              var13 = this.field_p.getColorRow(255, var9)[0];
             }
             if (param3) {
               var8 = var9 << 2;
             }
             if (this.field_k.field_g) {
-              var14 = this.field_k.a(var9, true);
+              var14 = this.field_k.getMonochromeRow(var9, true);
             } else {
-              var14 = this.field_k.a(255, var9)[0];
+              var14 = this.field_k.getColorRow(255, var9)[0];
             }
             for (var15 = param1 - 1; 0 <= var15; var15--) {
               var16 = (float)var13[var15] / 4096.0f;
@@ -113,11 +113,11 @@ final class lra extends DualLinkNode {
           var21 = 0;
           var9Lifetime1 = var21;
           while (var21 < this.field_q.length) {
-            this.field_q[var21].c(-36);
+            this.field_q[var21].clearCache(-36);
             var21++;
           }
           if (param0 != 2) {
-            lra.a(false);
+            ProceduralTexture.a(false);
           }
           stackIn_35_0 = var7;
           return stackIn_35_0;
@@ -244,7 +244,7 @@ final class lra extends DualLinkNode {
           nl.field_e = param5;
           GetAngularVelocitySustainMax.field_o = param4;
           for (var9_int = 0; this.field_q.length > var9_int; var9_int++) {
-            this.field_q[var9_int].b(-9163, param0, param2);
+            this.field_q[var9_int].initializeCache(-9163, param0, param2);
           }
           igb.a(true, param6);
           SetPhasedEnergyBeamProjectiles.a(param2, param0, -99);
@@ -252,13 +252,13 @@ final class lra extends DualLinkNode {
           var10 = 0;
           for (var11 = 0; param2 > var11; var11++) {
             if (this.field_m.field_g) {
-              var24 = this.field_m.a(var11, true);
+              var24 = this.field_m.getMonochromeRow(var11, true);
               var15 = var24;
               var14 = var24;
               var13 = var24;
               var12 = var24;
             } else {
-              var27 = this.field_m.a(255, var11);
+              var27 = this.field_m.getColorRow(255, var11);
               var26 = var27;
               var23 = var26;
               var15_array = var23;
@@ -270,9 +270,9 @@ final class lra extends DualLinkNode {
               var10 = var11;
             }
             if (this.field_p.field_g) {
-              var15Lifetime1 = this.field_p.a(var11, true);
+              var15Lifetime1 = this.field_p.getMonochromeRow(var11, true);
             } else {
-              var15Lifetime1 = this.field_p.a(255, var11)[0];
+              var15Lifetime1 = this.field_p.getColorRow(255, var11)[0];
             }
             for (var16 = -1 + param0; var16 >= 0; var16--) {
               var17 = var12[var16] >> 4;
@@ -323,7 +323,7 @@ final class lra extends DualLinkNode {
           var25 = 0;
           var11Lifetime1 = var25;
           while (this.field_q.length > var25) {
-            this.field_q[var25].c(-72);
+            this.field_q[var25].clearCache(-72);
             var25++;
           }
           stackIn_51_0 = var9;
@@ -385,7 +385,7 @@ final class lra extends DualLinkNode {
           GetAngularVelocitySustainMax.field_o = param2;
           nl.field_e = param1;
           for (var10_int = 0; this.field_q.length > var10_int; var10_int++) {
-            this.field_q[var10_int].b(-9163, param5, param7);
+            this.field_q[var10_int].initializeCache(-9163, param5, param7);
           }
           igb.a(true, param6);
           SetPhasedEnergyBeamProjectiles.a(param7, param5, -128);
@@ -406,14 +406,14 @@ final class lra extends DualLinkNode {
               var14 = var15;
             }
             if (!this.field_m.field_g) {
-              dupTemp$0 = this.field_m.a(255, var15);
+              dupTemp$0 = this.field_m.getColorRow(255, var15);
               var25 = dupTemp$0;
               var19_ref_int____ = dupTemp$0;
               var17 = var25[1];
               var16 = var25[0];
               var18 = var25[2];
             } else {
-              var19_ref_int__ = this.field_m.a(var15, true);
+              var19_ref_int__ = this.field_m.getMonochromeRow(var15, true);
               var16 = var19_ref_int__;
               var17 = var19_ref_int__;
               var18 = var19_ref_int__;
@@ -456,7 +456,7 @@ final class lra extends DualLinkNode {
           var27 = param3;
           var15Lifetime1 = var27;
           while (this.field_q.length > var27) {
-            this.field_q[var27].c(-91);
+            this.field_q[var27].clearCache(-91);
             var27++;
           }
           stackIn_43_0 = var10;
@@ -481,7 +481,7 @@ final class lra extends DualLinkNode {
         }
     }
 
-    lra(PacketBuffer param0) {
+    ProceduralTexture(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -499,9 +499,9 @@ final class lra extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         int[][] var12 = null;
-        le var13 = null;
-        le var14 = null;
-        le var15 = null;
+        TextureOperation var13 = null;
+        TextureOperation var14 = null;
+        TextureOperation var15 = null;
         int var6Lifetime1;
         int var9Lifetime1;
         int var3Lifetime1;
@@ -513,9 +513,9 @@ final class lra extends DualLinkNode {
           var3 = 0;
           var4 = 0;
           var12 = new int[var2_int][];
-          this.field_q = new le[var2_int];
+          this.field_q = new TextureOperation[var2_int];
           for (var6 = 0; var2_int > var6; var6++) {
-            var13 = GetPhasedEnergyBeamProjectileOndamageParticles.a(param0, (byte) 55);
+            var13 = GetPhasedEnergyBeamProjectileOndamageParticles.decodeTextureOperation(param0, (byte) 55);
             var14 = var13;
             if (var14.a(-1) >= 0) {
               var3++;
@@ -577,7 +577,7 @@ final class lra extends DualLinkNode {
     public static void a(boolean param0) {
         field_o = null;
         if (!param0) {
-          lra.a(false);
+          ProceduralTexture.a(false);
         }
     }
 

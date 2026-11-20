@@ -160,7 +160,7 @@ final class bmb {
             GetUseRectFill.field_p = param12;
             beb.field_a = param3;
             if (param2 < 46) {
-              bmb.a((byte) -11);
+              bmb.clearSharedReferences((byte) -11);
             }
             GetRespawnTime.field_o = param7;
             if (null == cp.field_n.field_o) {
@@ -366,7 +366,7 @@ final class bmb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -76 / ((37 - param0) / 55);
         field_b = null;
     }

@@ -7,7 +7,7 @@ final class GetKeepTeamColours extends ConsoleCommand {
     static String field_q;
     static String[] field_r;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 22829) {
           return;
         }

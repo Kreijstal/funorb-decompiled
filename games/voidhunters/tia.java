@@ -12,9 +12,9 @@ final class tia extends mu {
     Object[] field_L;
     static String field_K;
     int field_I;
-    private no field_E;
+    private BitmapFont field_E;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_J = null;
         field_M = null;
         field_G = null;
@@ -100,19 +100,19 @@ final class tia extends mu {
 
     final static int a(boolean param0, int param1, int param2, boolean param3) {
         if (param0) {
-          tia.a(-64);
+          tia.clearSharedReferences(-64);
         }
-        return rt.c(1);
+        return ColorRowCache.c(1);
     }
 
     final int e(int param0) {
         if (param0 != 4) {
-          this.field_E = (no) (((Object[]) (this.field_L[1]))[15]);
+          this.field_E = (BitmapFont) (((Object[]) (this.field_L[1]))[15]);
         }
         return null != this.field_L ? this.field_I * (1 + this.field_L.length * 2) >> 1 : 200;
     }
 
-    tia(nva param0, no param1, Object[] param2, int param3) {
+    tia(nva param0, BitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_E = param1;

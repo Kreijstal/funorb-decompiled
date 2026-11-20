@@ -10,12 +10,12 @@ final class ucb {
         this.field_a = param0;
     }
 
-    final static phb[] a(String param0, int param1, String param2, asb param3) {
-        phb[] var4 = null;
+    final static Sprite[] a(String param0, int param1, String param2, asb param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        phb[] var6 = null;
-        phb[] stackIn_1_0 = null;
+        Sprite[] var6 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

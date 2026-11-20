@@ -14,7 +14,7 @@ final class mba {
         GetMissionTerrainNebulaProbability.field_q = false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 != 26) {
           field_a = (ae) null;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class olb extends le {
+final class olb extends TextureOperation {
     private int field_l;
     private int[] field_i;
     private int field_k;
     private int field_m;
     private int field_j;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -70,7 +70,7 @@ final class olb extends le {
         this.field_j = 4096;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int var11 = 0;
         int[][] var3;
         int[] var8;
@@ -98,14 +98,14 @@ final class olb extends le {
         if (param0 != 255) {
           return (int[][]) null;
         }
-        var27 = this.field_d.a(param1, (byte) -115);
+        var27 = this.field_d.getRow(param1, (byte) -115);
         var19 = var27;
         var17 = var19;
         var3 = var17;
         if (!this.field_d.field_g) {
           return var3;
         }
-        var38 = this.a((byte) 42, 0, param1);
+        var38 = this.getInputColorRow((byte) 42, 0, param1);
         var39 = var38[0];
         var40 = var38[1];
         var41 = var38[2];

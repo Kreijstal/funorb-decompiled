@@ -4,7 +4,7 @@
 final class SetSniperCannonProjectileDamage extends ConsoleCommand {
     static float[] field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 <= 47) {
           field_o = (float[]) null;

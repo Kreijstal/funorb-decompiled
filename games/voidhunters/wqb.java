@@ -25,7 +25,7 @@ final class wqb extends mfb {
         return bma.field_n;
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_d = null;
         if (param0 != 75) {
           return;

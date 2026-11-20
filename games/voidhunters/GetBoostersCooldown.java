@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GetBoostersCooldown extends ConsoleCommand {
-    static no field_r;
+    static BitmapFont field_r;
     static String field_q;
     static boolean[] field_o;
     static int field_p;
@@ -77,7 +77,7 @@ final class GetBoostersCooldown extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         field_o = null;
         int var1 = 114 % ((param0 + 51) / 61);

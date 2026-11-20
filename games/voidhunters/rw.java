@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rw extends le {
+final class rw extends TextureOperation {
     private short[] field_m;
     boolean field_s;
     int field_j;
@@ -195,7 +195,7 @@ final class rw extends le {
         }
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -229,7 +229,7 @@ final class rw extends le {
         this.field_p = new byte[512];
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_31_0 = null;
@@ -332,7 +332,7 @@ final class rw extends le {
         param3 = param3 & 4095;
         if (param6 != -34) {
           var19 = (PacketBuffer) null;
-          this.a(77, -92, (PacketBuffer) null);
+          this.decodeParameter(77, -92, (PacketBuffer) null);
         }
         var12 = var12 & 255;
         var11 = param3 - 4096;
@@ -407,20 +407,20 @@ final class rw extends le {
         return (param4 * (-var16 + var17) >> 12) + var16;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_l = null;
         int var1 = 4 / ((-39 - param0) / 39);
     }
 
-    final int[] a(int param0, boolean param1) {
-        int[] var5 = this.field_f.a((byte) 127, param0);
+    final int[] getMonochromeRow(int param0, boolean param1) {
+        int[] var5 = this.field_f.getRow((byte) 127, param0);
         int[] var3 = var5;
         if (this.field_f.field_e) {
           this.a(1, param0, var5);
         }
         if (!param1) {
           PacketBuffer var4 = (PacketBuffer) null;
-          this.a(-38, 6, (PacketBuffer) null);
+          this.decodeParameter(-38, 6, (PacketBuffer) null);
         }
         return var5;
     }

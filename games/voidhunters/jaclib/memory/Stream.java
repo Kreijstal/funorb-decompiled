@@ -10,8 +10,8 @@ public final class Stream {
     private byte[] c;
     private jaclib.memory.Buffer a;
 
-    private final void a(jaclib.memory.Buffer param0, int param1, int param2) {
-        this.b();
+    private final void setBufferRange(jaclib.memory.Buffer param0, int param1, int param2) {
+        this.flush();
         this.a = param0;
         this.b = param2 + param1;
         this.e = param1;
@@ -20,9 +20,9 @@ public final class Stream {
         }
     }
 
-    public final void a(int param0) {
+    public final void writeShortLE(int param0) {
         if (this.d + 1 >= this.c.length) {
-          this.b();
+          this.flush();
         }
         int fieldTemp$0 = this.d;
         this.d = this.d + 1;
@@ -32,12 +32,12 @@ public final class Stream {
         this.c[fieldTemp$1] = (byte)(param0 >> 8);
     }
 
-    public final void b() {
+    public final void flush() {
         if (this.d <= 0) {
           return;
         }
         if (this.e + this.d <= this.b) {
-          this.a.a(this.c, 0, this.e, this.d);
+          this.a.writeBytes(this.c, 0, this.e, this.d);
           this.e = this.e + this.d;
           this.d = 0;
           return;
@@ -51,9 +51,9 @@ public final class Stream {
 
     public final native static int floatToRawIntBits(float param0);
 
-    public final void b(int param0) {
+    public final void writeShort(int param0) {
         if (this.c.length <= this.d + 1) {
-          this.b();
+          this.flush();
         }
         int fieldTemp$0 = this.d;
         this.d = this.d + 1;
@@ -65,15 +65,15 @@ public final class Stream {
 
     private final native static byte getLSB(int param0);
 
-    public final void a(jaclib.memory.Buffer param0) {
-        this.a(param0, 0, param0.getSize());
+    public final void setBuffer(jaclib.memory.Buffer param0) {
+        this.setBufferRange(param0, 0, param0.getSize());
     }
 
-    public final static boolean a() {
+    public final static boolean isBigEndian() {
         return jaclib.memory.Stream.getLSB(-65536) == -1;
     }
 
-    public final void b(float param0) {
+    public final void writeFloat(float param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -96,7 +96,7 @@ public final class Stream {
           this.c[fieldTemp$3] = (byte)var2;
           return;
         }
-        this.b();
+        this.flush();
         var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
         int fieldTemp$4 = this.d;
         this.d = this.d + 1;
@@ -112,7 +112,7 @@ public final class Stream {
         this.c[fieldTemp$7] = (byte)var2Lifetime1;
     }
 
-    public final void a(float param0) {
+    public final void writeFloatLE(float param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -135,7 +135,7 @@ public final class Stream {
           this.c[fieldTemp$3] = (byte)(var2 >> 24);
           return;
         }
-        this.b();
+        this.flush();
         var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
         int fieldTemp$4 = this.d;
         this.d = this.d + 1;

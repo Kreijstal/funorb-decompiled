@@ -107,7 +107,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             }
           }
           if (param1 >= -12) {
-            GetExplosionProjectileDamage.a((llb) null, -42, (llb) null, (no) null, (llb) null, (llb) null, (llb) null, true, (llb) null, (llb) null, (llb) null, (pjb) null);
+            GetExplosionProjectileDamage.a((llb) null, -42, (llb) null, (BitmapFont) null, (llb) null, (llb) null, (llb) null, true, (llb) null, (llb) null, (llb) null, (pjb) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,7 +124,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static void a(llb param0, int param1, llb param2, no param3, llb param4, llb param5, llb param6, boolean param7, llb param8, llb param9, llb param10, pjb param11) {
+    final static void a(llb param0, int param1, llb param2, BitmapFont param3, llb param4, llb param5, llb param6, boolean param7, llb param8, llb param9, llb param10, pjb param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -149,12 +149,12 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         StringBuilder stackIn_74_1 = null;
         String stackIn_75_2 = null;
         RuntimeException decompiledCaughtException = null;
-        phb var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        phb[] var16 = null;
+        Sprite[] var16 = null;
         llb var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -175,7 +175,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           SetLaserEnergyUsed.field_p[3] = 16736511;
           SetLaserEnergyUsed.field_p[2] = 16736352;
           ConsoleCommand.field_m[4] = 16711935;
-          var12 = new phb(4, 4);
+          var12 = new Sprite(4, 4);
           var13 = var12.field_r;
           var14 = var12.field_r;
           var12.field_r[15] = 7368816;
@@ -183,7 +183,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           var15[8] = 7368816;
           var13[2] = 7368816;
           var14[5] = 7368816;
-          var16 = new phb[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
           SetToggledScoreboard.field_o = new llb(0L, param2);
           kea.field_a = new llb((long)param1, param10);

@@ -40,7 +40,7 @@ abstract class ija {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_c = null;
         if (!param0) {
           field_b = (mob) null;

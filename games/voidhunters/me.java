@@ -6,7 +6,7 @@ final class me extends pja {
     static llb field_s;
     static llb field_q;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_q = null;
         if (!param0) {
           return;
@@ -56,7 +56,7 @@ final class me extends pja {
         }
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
@@ -67,7 +67,7 @@ final class me extends pja {
         if (param0 != 255) {
           field_s = (llb) null;
         }
-        int[][] var13 = this.field_d.a(param1, (byte) -98);
+        int[][] var13 = this.field_d.getRow(param1, (byte) -98);
         int[][] var12 = var13;
         int[][] var11 = var12;
         int[][] var3 = var11;
@@ -119,9 +119,9 @@ final class me extends pja {
         int stackIn_34_0 = 0;
         int stackIn_67_0 = 0;
         int stackIn_77_0 = 0;
-        phb[] stackIn_79_0 = null;
+        Sprite[] stackIn_79_0 = null;
         int stackIn_80_1 = 0;
-        phb[] stackIn_87_0 = null;
+        Sprite[] stackIn_87_0 = null;
         int stackIn_88_1 = 0;
         String stackIn_152_0 = null;
         String stackIn_160_0 = null;
@@ -163,7 +163,7 @@ final class me extends pja {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        phb var42 = null;
+        Sprite var42 = null;
         llb var43 = null;
         llb var44 = null;
         llb var45 = null;
@@ -172,14 +172,14 @@ final class me extends pja {
         llb var48 = null;
         llb var49 = null;
         Object var50 = null;
-        phb var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        phb var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        phb var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        phb var53_ref = null;
-        phb var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         String var34Lifetime1;
         String var34Lifetime2;
         int var14Lifetime1;
@@ -204,7 +204,7 @@ final class me extends pja {
           stackIn_4_4 = (qg.field_a == rgb.field_f);
           var7_int = ((soa) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, nna.field_w * 2 + 4) ? 1 : 0;
           if (param6 <= 108) {
-            me.a(false);
+            me.clearSharedReferences(false);
           }
           var8 = rgb.field_f.field_wb.field_lb;
           var9 = wt.a(false);
@@ -418,7 +418,7 @@ final class me extends pja {
               } else {
                 var12.field_Mb.a(0, 5, 68, var31, nna.field_w);
               }
-              var12.field_dc.field_R = no.a(var12.field_dc.field_eb, var32, 78);
+              var12.field_dc.field_R = BitmapFont.a(var12.field_dc.field_eb, var32, 78);
               var12.field_dc.a(70, -40, 78, var31, nna.field_w);
               if (var12.field_dc.field_O &&
                 !var12.field_dc.field_R.equals(var32)) {
@@ -442,7 +442,7 @@ final class me extends pja {
               var12.field_Lb.a(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, nna.field_w);
               var34_int = hi.field_a;
               if ((1 << ar.field_b & var14Lifetime1) != 0) {
-                var50_ref = sqb.field_o[var12.field_Cb];
+                var50_ref = SpriteDimensions.field_o[var12.field_Cb];
                 var12.field_Wb.field_tb = var50_ref;
                 var12.field_Wb.a(var34_int, 32, var50_ref.field_m, 0, var12.field_Lb.field_G);
                 var34_int = var34_int + (hi.field_a + var50_ref.field_m);

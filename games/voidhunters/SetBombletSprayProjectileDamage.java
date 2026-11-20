@@ -40,7 +40,7 @@ final class SetBombletSprayProjectileDamage extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -98 % ((param0 + 24) / 63);
         field_p = null;
         field_q = null;

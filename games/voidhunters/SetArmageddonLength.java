@@ -9,7 +9,7 @@ final class SetArmageddonLength extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -82 / ((81 - param0) / 34);
         field_o = null;
     }
@@ -23,7 +23,7 @@ final class SetArmageddonLength extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetArmageddonLength.e((byte) 112);
+            SetArmageddonLength.clearSharedReferences((byte) 112);
           }
           SetMachineGunEnergyUsed.a(62, 62, arguments[0].intValue(58));
           stackIn_3_0 = new ConsoleValue("void");

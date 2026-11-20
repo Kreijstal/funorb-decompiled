@@ -47,7 +47,7 @@ final class cp extends ev {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_g = null;
         if (param0 > -121) {
           return;

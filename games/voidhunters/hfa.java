@@ -3196,7 +3196,7 @@ final class hfa extends oi {
 
     }
 
-    hfa(sob param0, byte[] param1, int[] param2, int param3, int param4) {
+    hfa(SoftwareToolkit param0, byte[] param1, int[] param2, int param3, int param4) {
         super(param0, param3, param4);
         this.field_F = param1;
         this.field_G = param2;

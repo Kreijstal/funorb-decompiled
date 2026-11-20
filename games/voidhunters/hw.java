@@ -8,7 +8,7 @@ final class hw {
     static int[][] field_d;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -1) {
           return;
         }

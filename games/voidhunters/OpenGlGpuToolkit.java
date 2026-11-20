@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jp extends pf {
+final class OpenGlGpuToolkit extends GpuToolkit {
     static Random field_Jc;
     static int field_Oc;
     private IntrusiveDeque field_yc;
@@ -204,7 +204,7 @@ final class jp extends pf {
     final void o() {
         super.o();
         if (this.field_zc != null) {
-          this.field_zc.b();
+          this.field_zc.detachFromCurrentThread();
           this.field_zc.release();
           this.field_zc = null;
         }
@@ -1210,7 +1210,7 @@ final class jp extends pf {
         int var2 = -60 % ((-45 - param0) / 51);
     }
 
-    jp(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, asb param4, int param5) {
+    OpenGlGpuToolkit(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, asb param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;
@@ -1263,7 +1263,7 @@ final class jp extends pf {
         try {
           try {
             this.field_zc = param0;
-            this.field_zc.a();
+            this.field_zc.attachToCurrentThread();
             this.field_Bc = jaggl.OpenGL.glGetString(7936).toLowerCase();
             this.field_ad = jaggl.OpenGL.glGetString(7937).toLowerCase();
             if (this.field_Bc.indexOf("microsoft") == -1 &&
@@ -1286,10 +1286,10 @@ final class jp extends pf {
               if (this.field_Fc < 12) {
                 throw new RuntimeException("");
               }
-              if (!this.field_zc.a("GL_ARB_multitexture")) {
+              if (!this.field_zc.hasExtension("GL_ARB_multitexture")) {
                 throw new RuntimeException("");
               }
-              if (!this.field_zc.a("GL_ARB_texture_env_combine")) {
+              if (!this.field_zc.hasExtension("GL_ARB_texture_env_combine")) {
                 throw new RuntimeException("");
               }
               var26 = new int[1];
@@ -1299,18 +1299,18 @@ final class jp extends pf {
                 throw new RuntimeException("");
               }
               this.field_qb = 8;
-              this.field_Hc = this.field_zc.a("GL_ARB_vertex_buffer_object");
-              this.field_sc = this.field_zc.a("GL_ARB_multisample");
-              this.field_Zc = this.field_zc.a("GL_ARB_texture_rectangle");
-              this.field_vb = this.field_zc.a("GL_ARB_texture_cube_map");
-              this.field_Xc = this.field_zc.a("GL_ARB_texture_non_power_of_two");
-              this.field_uc = this.field_zc.a("GL_EXT_texture3D");
-              this.field_Mc = this.field_zc.a("GL_ARB_vertex_shader");
-              this.field_Ac = this.field_zc.a("GL_ARB_vertex_program");
-              this.field_Qc = this.field_zc.a("GL_ARB_fragment_shader");
-              this.field_zc.a("GL_ARB_fragment_program");
+              this.field_Hc = this.field_zc.hasExtension("GL_ARB_vertex_buffer_object");
+              this.field_sc = this.field_zc.hasExtension("GL_ARB_multisample");
+              this.field_Zc = this.field_zc.hasExtension("GL_ARB_texture_rectangle");
+              this.field_vb = this.field_zc.hasExtension("GL_ARB_texture_cube_map");
+              this.field_Xc = this.field_zc.hasExtension("GL_ARB_texture_non_power_of_two");
+              this.field_uc = this.field_zc.hasExtension("GL_EXT_texture3D");
+              this.field_Mc = this.field_zc.hasExtension("GL_ARB_vertex_shader");
+              this.field_Ac = this.field_zc.hasExtension("GL_ARB_vertex_program");
+              this.field_Qc = this.field_zc.hasExtension("GL_ARB_fragment_shader");
+              this.field_zc.hasExtension("GL_ARB_fragment_program");
               this.field_Wc = new int[this.field_L];
-              if (!jaclib.memory.Stream.a()) {
+              if (!jaclib.memory.Stream.isBigEndian()) {
                 stackIn_21_1 = 5121;
               } else {
                 stackIn_21_1 = 33639;
@@ -1379,7 +1379,7 @@ final class jp extends pf {
                     this.field_uc = false;
                   }
                 }
-                this.field_Zc = this.field_Zc & this.field_zc.a("GL_ARB_half_float_pixel");
+                this.field_Zc = this.field_Zc & this.field_zc.hasExtension("GL_ARB_half_float_pixel");
               }
               if (this.field_Bc.indexOf("intel") == -1) {
               }

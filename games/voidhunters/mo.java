@@ -37,7 +37,7 @@ final class mo extends ub implements DiffableState {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_j = null;
         if (param0 != 46) {
           field_j = (String) null;

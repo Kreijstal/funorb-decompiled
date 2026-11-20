@@ -4,7 +4,7 @@
 final class mha {
     static int field_a;
 
-    final static gla a(int param0, byte[] param1, int param2, jp param3) {
+    final static gla a(int param0, byte[] param1, int param2, OpenGlGpuToolkit param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_5_0 = null;

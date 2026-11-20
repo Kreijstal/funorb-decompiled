@@ -7,7 +7,7 @@ final class vva extends bob {
     private int field_p;
     static byte[] field_u;
     private int field_t;
-    private phb[] field_q;
+    private Sprite[] field_q;
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
@@ -66,7 +66,7 @@ final class vva extends bob {
         this(2188450, 2591221, 9543);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 121) {
           return;
         }

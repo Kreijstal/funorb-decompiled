@@ -113,7 +113,7 @@ final class hla {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 39) {
           field_a = (int[]) null;
           field_a = null;

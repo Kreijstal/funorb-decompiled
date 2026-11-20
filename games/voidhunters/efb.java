@@ -19,7 +19,7 @@ final class efb implements dja {
         return (SerializableGameState) ((Object) new MissionCondition());
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 == -80) {
           field_b = null;
           field_a = null;

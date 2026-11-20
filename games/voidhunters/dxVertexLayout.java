@@ -4,7 +4,7 @@
 public class dxVertexLayout extends vmb {
     jagdx.IDirect3DVertexDeclaration field_b;
 
-    dxVertexLayout(nla param0, qma[] param1) {
+    dxVertexLayout(Direct3DToolkit param0, qma[] param1) {
         int var5 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -62,6 +62,6 @@ public class dxVertexLayout extends vmb {
           }
         }
         var10.finish();
-        this.field_b = param0.field_Mc.a(var10, (jagdx.IDirect3DVertexDeclaration) null);
+        this.field_b = param0.field_Mc.createVertexDeclaration(var10, (jagdx.IDirect3DVertexDeclaration) null);
     }
 }

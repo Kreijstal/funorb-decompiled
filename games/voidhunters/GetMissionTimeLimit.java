@@ -124,7 +124,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         try {
           if (param0 >= -71) {
             field_p = (Object) null;

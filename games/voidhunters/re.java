@@ -6,14 +6,14 @@ final class re extends ar {
     private int field_h;
     private int field_e;
     private int field_j;
-    private no field_g;
+    private BitmapFont field_g;
     static dja field_k;
     private int field_l;
     private String field_m;
     private int field_i;
     static wdb field_n;
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -2705) {
           field_n = (wdb) null;
           field_n = null;
@@ -24,7 +24,7 @@ final class re extends ar {
         field_k = null;
     }
 
-    private final toa a(int param0, String param1, no param2, int param3) {
+    private final toa a(int param0, String param1, BitmapFont param2, int param3) {
         toa var5 = null;
         RuntimeException var5_ref = null;
         toa var6 = null;
@@ -64,7 +64,7 @@ final class re extends ar {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, no param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, String param3, BitmapFont param4, int param5, int param6, int param7) {
         toa stackIn_35_0;
         toa stackIn_35_1;
         int stackIn_35_2;
@@ -72,7 +72,7 @@ final class re extends ar {
         toa stackIn_36_0 = null;
         toa stackIn_36_1 = null;
         int stackIn_36_4 = 0;
-        no stackIn_39_0 = null;
+        BitmapFont stackIn_39_0 = null;
         int stackIn_40_1 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -163,7 +163,7 @@ final class re extends ar {
             var14.field_c[0] = 0;
             if (var13 != null) {
               var14.field_c[var13.length()] = param4.b(var13);
-              stackIn_39_0 = (no) (param4);
+              stackIn_39_0 = (BitmapFont) (param4);
               if (param5 != 3) {
                 stackIn_40_1 = 0;
               } else {
@@ -195,7 +195,7 @@ final class re extends ar {
         }
     }
 
-    final void a(int param0, no param1, int param2, String param3, int param4) {
+    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
         toa var7 = null;
         toa var8 = null;
         if (param3 == null) {
@@ -227,7 +227,7 @@ final class re extends ar {
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, no param4) {
+    final void a(int param0, int param1, String param2, int param3, BitmapFont param4) {
         toa var8 = null;
         int var7 = 0;
         if (param2 == null) {
@@ -258,7 +258,7 @@ final class re extends ar {
         }
     }
 
-    final void a(int param0, no param1, int param2, int param3, String param4) {
+    final void a(int param0, BitmapFont param1, int param2, int param3, String param4) {
         toa var8 = null;
         toa var9 = null;
         if (param4 == null) {
@@ -298,7 +298,7 @@ final class re extends ar {
         if (null != SetMassDriverRandomness.field_o) {
           SetMassDriverRandomness.field_o.b(param0, (byte) 14);
           if (param1 >= -93) {
-            re.d(-100);
+            re.clearSharedReferences(-100);
             if (null != GetBurstFireMaxEnergy.field_p) {
               GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
             }
@@ -315,7 +315,7 @@ final class re extends ar {
           }
           return;
         }
-        re.d(-100);
+        re.clearSharedReferences(-100);
         if (null != GetBurstFireMaxEnergy.field_p) {
           GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
         }

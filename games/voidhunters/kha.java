@@ -356,7 +356,7 @@ final class kha {
         var4 = -21 / ((55 - param0) / 61);
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
           return;
         }
@@ -373,7 +373,7 @@ final class kha {
         this.field_h = null;
         this.field_n = null;
         if (!param0) {
-          kha.b(0);
+          kha.clearSharedReferences(0);
         }
         this.field_o = null;
         if (!this.field_i.isEmpty(8)) {

@@ -32,7 +32,7 @@ final class j extends aja implements e {
 
     private final native void R(long param0, boolean param1);
 
-    private final native void ma(oa param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7);
+    private final native void ma(NativeSoftwareToolkit param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7);
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.RA(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6, param7);
@@ -52,7 +52,7 @@ final class j extends aja implements e {
 
     private final native int I(long param0);
 
-    private final native void ua(oa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
+    private final native void ua(NativeSoftwareToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6);
 
     private final native void A(long param0, int param1, int param2, int param3, int param4);
 
@@ -60,7 +60,7 @@ final class j extends aja implements e {
         this.A(this.field_nativeid, param0, param1, param2, param3);
     }
 
-    j(oa param0, int param1, int param2) {
+    j(NativeSoftwareToolkit param0, int param1, int param2) {
         this.EA(param0, param1, param2);
     }
 
@@ -70,13 +70,13 @@ final class j extends aja implements e {
 
     private final native int wa(long param0);
 
-    j(oa param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
+    j(NativeSoftwareToolkit param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
         this.ua(param0, param1, param2, param3, param4, param5, param6);
     }
 
     private final native void P(long param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
-    private final native void EA(oa param0, int param1, int param2);
+    private final native void EA(NativeSoftwareToolkit param0, int param1, int param2);
 
     private final native int M(long param0);
 
@@ -90,7 +90,7 @@ final class j extends aja implements e {
         this.aa(this.field_nativeid, param0, param1, param2, param3, param4, param5, param6);
     }
 
-    j(oa param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7) {
+    j(NativeSoftwareToolkit param0, int[] param1, byte[] param2, byte[] param3, int param4, int param5, int param6, int param7) {
         this.ma(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 }

@@ -4,9 +4,9 @@
 final class SetMaxShipSize extends ConsoleCommand {
     static int field_o;
 
-    final static phb a(int param0, byte param1, int param2) {
+    final static Sprite a(int param0, byte param1, int param2) {
         int var5 = VoidHunters.field_G;
-        phb var3 = new phb(param2, param2);
+        Sprite var3 = new Sprite(param2, param2);
         int var4 = 0;
         if (param1 > -109) {
           java.applet.Applet var6 = (java.applet.Applet) null;

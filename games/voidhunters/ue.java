@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ue {
-    private jp field_b;
+    private OpenGlGpuToolkit field_b;
     static String field_c;
     static int field_a;
     long field_d;
@@ -119,14 +119,14 @@ final class ue {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 124) {
           return;
         }
         field_c = null;
     }
 
-    ue(jp param0, long param1, int param2) {
+    ue(OpenGlGpuToolkit param0, long param1, int param2) {
         try {
           this.field_b = param0;
           this.field_d = param1;

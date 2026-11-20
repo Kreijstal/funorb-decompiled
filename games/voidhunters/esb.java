@@ -107,7 +107,7 @@ final class esb extends qq implements mkb {
         field_j = null;
     }
 
-    esb(jp param0, boolean param1) {
+    esb(OpenGlGpuToolkit param0, boolean param1) {
         super(param0, 34962, param1);
     }
 

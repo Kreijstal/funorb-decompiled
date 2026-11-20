@@ -66,7 +66,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
           var7 = pja.b((byte) 126, param4, param0);
           var8 = param2;
           if (fbb.field_j[param2] > 1) {
-            var8 = hob.a(jp.field_Jc, fbb.field_j[param2], 121) + param2;
+            var8 = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param2], 121) + param2;
           }
           var9 = fa.field_d[var8];
           var10 = coa.a(var7, 100, var6, var9);

@@ -28,7 +28,7 @@ final class etb implements dja {
         return AdjustVariableAction.field_a;
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         int var1 = 2 % ((-29 - param0) / 47);
         field_b = null;

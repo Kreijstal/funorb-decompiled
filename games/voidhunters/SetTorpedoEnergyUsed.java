@@ -8,14 +8,14 @@ final class SetTorpedoEnergyUsed extends ConsoleCommand {
 
     final static sw a(int param0, int param1) {
         if (param1 != 300) {
-          phb var3 = (phb) null;
-          SetTorpedoEnergyUsed.a(86, (phb) null);
+          Sprite var3 = (Sprite) null;
+          SetTorpedoEnergyUsed.a(86, (Sprite) null);
           return ok.field_b[param0];
         }
         return ok.field_b[param0];
     }
 
-    final static void a(int param0, phb param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           SetOndamageParticleSpeed.e(3);
           dma.a(param1.field_r, param1.field_m, param1.field_n);

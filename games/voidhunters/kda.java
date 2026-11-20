@@ -167,7 +167,7 @@ final class kda {
                 var13 = new CarouselSlotStateDump(-var10 + param0.field_g, bk.field_w);
                 var14 = new lla();
                 var14.a(84, 0, var13.field_d, var13.field_d.length);
-                var20 = GameApplet.a((byte) 10, var14.field_f);
+                var20 = GameApplet.copyWrittenBytes((byte) 10, var14.field_f);
                 this.field_j.a(var20, 0);
               }
             }
@@ -682,7 +682,7 @@ final class kda {
             } else {
               var12 = (uqb) (var6);
               var13 = var12;
-              if (osa.field_e) {
+              if (MonochromeRowCacheEntry.field_e) {
                 var13.field_g = false;
               }
               var4_int++;

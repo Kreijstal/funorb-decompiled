@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class nla extends pf {
+public final class Direct3DToolkit extends GpuToolkit {
     private boolean[] field_Vc;
     private jagdx.IDirect3DVertexShader field_Tc;
     private jagdx.D3DLIGHT field_Fc;
@@ -14,7 +14,7 @@ public final class nla extends pf {
     private jagdx.IDirect3D field_Ic;
     jagdx.D3DCAPS field_Hc;
     private jagdx.D3DLIGHT field_Dc;
-    jaclib.peer.tqb field_Sc;
+    jaclib.peer.PeerReferenceManager field_Sc;
     jagdx.PixelBuffer field_zc;
     boolean field_Nc;
     private boolean[] field_Lc;
@@ -54,7 +54,7 @@ public final class nla extends pf {
         stackIn_6_0 = this.field_Mc;
         stackIn_6_1 = 28;
         stackIn_7_2 = (this.field_cc) && (this.field_ub) && (0 <= this.field_j);
-        ((jagdx.IDirect3DDevice) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_7_2);
+        ((jagdx.IDirect3DDevice) (Object) stackIn_6_0).setBooleanRenderState(stackIn_6_1, stackIn_7_2);
     }
 
     private final static int a(kba param0, byte param1) {
@@ -127,7 +127,7 @@ public final class nla extends pf {
         jagdx.D3DDISPLAYMODE var14 = null;
         if (param2 != -111) {
           var12 = (jra) null;
-          nla.a((jra) null, 37);
+          Direct3DToolkit.a((jra) null, 37);
         }
         var6 = 0;
         var7 = 0;
@@ -135,7 +135,7 @@ public final class nla extends pf {
         try {
           var13 = new jagdx.D3DDISPLAYMODE();
           var14 = var13;
-          if (jagdx.hea.a(param4.a(param3, var14), (byte) 118)) {
+          if (jagdx.HResult.failed(param4.getAdapterDisplayMode(param3, var14), (byte) 118)) {
             return false;
           }
           scanLoop1: while (true) {
@@ -182,7 +182,7 @@ public final class nla extends pf {
 
     final void a(jra param0, int param1, int param2, int param3) {
         int var5 = 31 % ((param3 + 4) / 32);
-        this.field_Mc.DrawPrimitive(nla.a(param0, 1), param1, param2);
+        this.field_Mc.DrawPrimitive(Direct3DToolkit.a(param0, 1), param1, param2);
     }
 
     final void a(int param0, jagdx.IDirect3DVertexShader param1) {
@@ -237,7 +237,7 @@ public final class nla extends pf {
         }
         if (param0) {
           var3 = (Integer) null;
-          nla.createToolkit((java.awt.Canvas) null, (d) null, (asb) null, (Integer) null);
+          Direct3DToolkit.createToolkit((java.awt.Canvas) null, (d) null, (asb) null, (Integer) null);
         }
         throw new IllegalArgumentException();
     }
@@ -283,7 +283,7 @@ public final class nla extends pf {
         if (param0) {
           var6 = var6 | 16;
         }
-        this.field_Mc.SetTextureStageState(this.field_ab, var5, var6 | nla.a(param2, (byte) -70));
+        this.field_Mc.SetTextureStageState(this.field_ab, var5, var6 | Direct3DToolkit.a(param2, (byte) -70));
     }
 
     final void A(byte param0) {
@@ -300,8 +300,8 @@ public final class nla extends pf {
         if (this.field_p < (float)this.field_h) {
           this.field_p = (float)this.field_h;
         }
-        this.field_Mc.a(36, this.field_p);
-        this.field_Mc.a(37, this.field_r);
+        this.field_Mc.setFloatRenderState(36, this.field_p);
+        this.field_Mc.setFloatRenderState(37, this.field_r);
         this.field_Mc.SetRenderState(34, this.field_lc);
     }
 
@@ -309,14 +309,14 @@ public final class nla extends pf {
         if (param0 > -14) {
           this.field_Kc = (jagdx.GeometryBuffer) null;
         }
-        this.field_Mc.a(161, param1);
+        this.field_Mc.setBooleanRenderState(161, param1);
     }
 
     final void a(float param0, float param1, float param2) {
     }
 
     final void j(byte param0) {
-        this.field_Mc.a(27, this.field_zb);
+        this.field_Mc.setBooleanRenderState(27, this.field_zb);
         if (param0 != -56) {
           this.b();
         }
@@ -334,7 +334,7 @@ public final class nla extends pf {
           } else {
             this.field_Mc.SetTransform(this.field_ab + 16, this.field_Eb[this.field_ab].c(field_Bc, (byte) -80));
           }
-          var2 = nla.a(this.field_A[this.field_ab], (byte) 123);
+          var2 = Direct3DToolkit.a(this.field_A[this.field_ab], (byte) 123);
           if (this.field_Cc[this.field_ab] != var2) {
             this.field_Mc.SetTextureStageState(this.field_ab, 24, var2);
             this.field_Cc[this.field_ab] = var2;
@@ -354,7 +354,7 @@ public final class nla extends pf {
         this.field_Qc = false;
     }
 
-    private nla(int param0, int param1, java.awt.Canvas param2, jaclib.peer.tqb param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gma param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, asb param10, int param11) {
+    private Direct3DToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.PeerReferenceManager param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, gma param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, asb param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         int stackIn_4_1 = 0;
@@ -448,7 +448,7 @@ public final class nla extends pf {
         stackIn_3_0 = this.field_Mc;
         stackIn_3_1 = 137;
         stackIn_4_2 = (this.field_Xb) && (!this.field_Hb);
-        ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+        ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).setBooleanRenderState(stackIn_3_1, stackIn_4_2);
         if (param0 >= -15) {
           this.field_Qc = true;
         }
@@ -460,7 +460,7 @@ public final class nla extends pf {
         boolean stackIn_4_0 = false;
         var4 = -73 % ((-32 - param2) / 50);
         var5 = new jagdx.D3DDISPLAYMODE();
-        stackIn_4_0 = (jagdx.hea.b(this.field_Ic.a(this.field_Oc, var5), (byte) 21)) && (jagdx.hea.b(this.field_Ic.CheckDeviceFormat(this.field_Oc, this.field_Ec, var5.Format, 0, 4, nla.a(param1, param0, -97)), (byte) 62));
+        stackIn_4_0 = (jagdx.HResult.succeeded(this.field_Ic.getAdapterDisplayMode(this.field_Oc, var5), (byte) 21)) && (jagdx.HResult.succeeded(this.field_Ic.CheckDeviceFormat(this.field_Oc, this.field_Ec, var5.Format, 0, 4, Direct3DToolkit.a(param1, param0, -97)), (byte) 62));
         return stackIn_4_0;
     }
 
@@ -515,10 +515,10 @@ public final class nla extends pf {
         var3.a(-106);
         this.field_Yc.BackBufferWidth = 0;
         this.field_Yc.BackBufferHeight = 0;
-        if (nla.a(this.field_Yc, this.field_rc, (byte) -111, this.field_Oc, this.field_Ic, this.field_Ec)) {
+        if (Direct3DToolkit.a(this.field_Yc, this.field_rc, (byte) -111, this.field_Oc, this.field_Ic, this.field_Ec)) {
           var4 = this.field_Mc.Reset(this.field_Yc);
-          if (jagdx.hea.b(var4, (byte) 82)) {
-            var3.a(0, this.field_Mc.b(0), this.field_Mc.b());
+          if (jagdx.HResult.succeeded(var4, (byte) 82)) {
+            var3.a(0, this.field_Mc.getSwapChain(0), this.field_Mc.getDepthStencilSurface());
             this.i(0);
             this.n(109);
             return true;
@@ -552,7 +552,7 @@ public final class nla extends pf {
           discarded$4 = this.K(60);
         } else {
           this.field_Gc = 0;
-          if (jagdx.hea.a(this.field_Uc.a(false, 0), (byte) 54)) {
+          if (jagdx.HResult.failed(this.field_Uc.a(false, 0), (byte) 54)) {
             discarded$5 = this.K(60);
           }
         }
@@ -572,7 +572,7 @@ public final class nla extends pf {
     }
 
     final void o() {
-        this.field_Sc.a((byte) 101);
+        this.field_Sc.releaseAll((byte) 101);
         super.o();
     }
 
@@ -681,15 +681,15 @@ public final class nla extends pf {
     final void o(byte param0) {
         if (param0 != 81) {
           kba var3 = (kba) null;
-          nla.a((kba) null, (byte) -103);
+          Direct3DToolkit.a((kba) null, (byte) -103);
         }
-        this.field_Mc.a(174, this.field_ac);
+        this.field_Mc.setBooleanRenderState(174, this.field_ac);
     }
 
     final float f(byte param0) {
         if (param0 > -90) {
           slb var3 = (slb) null;
-          nla.a((slb) null, (byte) 118);
+          Direct3DToolkit.a((slb) null, (byte) 118);
         }
         return -0.5f;
     }
@@ -751,7 +751,7 @@ public final class nla extends pf {
         this.field_Mc.SetRenderState(22, 2);
         this.field_Mc.SetRenderState(147, 1);
         this.field_Mc.SetRenderState(145, 1);
-        this.field_Mc.a(38, 0.949999988079071f);
+        this.field_Mc.setFloatRenderState(38, 0.949999988079071f);
         if (param0 <= 106) {
           this.field_Kc = (jagdx.GeometryBuffer) null;
         }
@@ -764,29 +764,29 @@ public final class nla extends pf {
     }
 
     final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, asb param2, Integer param3) {
-        nla stackIn_41_0 = null;
+        Direct3DToolkit stackIn_41_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        jaclib.peer.tqb var7 = null;
+        jaclib.peer.PeerReferenceManager var7 = null;
         jagdx.IDirect3D var8 = null;
         jagdx.D3DCAPS var9 = null;
         jagdx.D3DPRESENT_PARAMETERS var10 = null;
         int var11 = 0;
         Object var12 = null;
         jagdx.IDirect3DDevice var12_ref = null;
-        jagdx.nba var13 = null;
+        jagdx.Direct3DException var13 = null;
         gma var13_ref = null;
-        nla var14 = null;
+        Direct3DToolkit var14 = null;
         var4 = null;
         try {
           var5_int = 0;
           var6 = 1;
-          var7 = new jaclib.peer.tqb();
-          var8 = jagdx.IDirect3D.a(-2147483616, var7);
-          var9 = var8.a(var5_int, var6);
+          var7 = new jaclib.peer.PeerReferenceManager();
+          var8 = jagdx.IDirect3D.createDirect3D(-2147483616, var7);
+          var9 = var8.getDeviceCaps(var5_int, var6);
           if ((var9.RasterCaps & 16777216) == 0) {
             throw new RuntimeException("");
           }
@@ -825,7 +825,7 @@ public final class nla extends pf {
             throw new RuntimeException("");
           }
           var10 = new jagdx.D3DPRESENT_PARAMETERS(param0);
-          if (!nla.a(var10, param3.intValue(), (byte) -111, var5_int, var8, var6)) {
+          if (!Direct3DToolkit.a(var10, param3.intValue(), (byte) -111, var5_int, var8, var6)) {
             throw new RuntimeException("");
           }
           var10.PresentationInterval = -2147483648;
@@ -837,14 +837,14 @@ public final class nla extends pf {
           }
           var12 = null;
           try {
-            var12_ref = var8.a(var5_int, var6, param0, var11 | 64, var10);
-          } catch (jagdx.nba decompiledCaughtParameter0) {
+            var12_ref = var8.createDevice(var5_int, var6, param0, var11 | 64, var10);
+          } catch (jagdx.Direct3DException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var13 = (jagdx.nba) (Object) decompiledCaughtException;
-            var12_ref = var8.a(var5_int, var6, param0, 32 | var11, var10);
+            var13 = (jagdx.Direct3DException) (Object) decompiledCaughtException;
+            var12_ref = var8.createDevice(var5_int, var6, param0, 32 | var11, var10);
           }
-          var13_ref = new gma(var12_ref.b(0), var12_ref.b());
-          var14 = new nla(var5_int, var6, param0, var7, var8, var12_ref, var13_ref, var10, var9, param1, param2, param3.intValue());
+          var13_ref = new gma(var12_ref.getSwapChain(0), var12_ref.getDepthStencilSurface());
+          var14 = new Direct3DToolkit(var5_int, var6, param0, var7, var8, var12_ref, var13_ref, var10, var9, param1, param2, param3.intValue());
           var4 = var14;
           var14.z(-31089);
           stackIn_41_0 = var14;
@@ -853,7 +853,7 @@ public final class nla extends pf {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           if (var4 != null) {
-            ((nla) (var4)).o();
+            ((Direct3DToolkit) (var4)).o();
           }
           throw var5;
         }
@@ -879,7 +879,7 @@ public final class nla extends pf {
         if (param2) {
           var7 = var7 | 16;
         }
-        this.field_Mc.SetTextureStageState(this.field_ab, var6, nla.a(param3, (byte) 100) | var7);
+        this.field_Mc.SetTextureStageState(this.field_ab, var6, Direct3DToolkit.a(param3, (byte) 100) | var7);
     }
 
     final void s(byte param0) {
@@ -935,7 +935,7 @@ public final class nla extends pf {
     }
 
     final synchronized void c(int param0) {
-        this.field_Sc.a(false);
+        this.field_Sc.poll(false);
         super.c(param0);
     }
 
@@ -963,10 +963,10 @@ public final class nla extends pf {
     }
 
     final void o(int param0) {
-        int var2 = this.field_yc[this.field_ab] ? nla.a(false, this.field_z[this.field_ab]) : 1;
+        int var2 = this.field_yc[this.field_ab] ? Direct3DToolkit.a(false, this.field_z[this.field_ab]) : 1;
         if (param0 > -64) {
           mj var3 = (mj) null;
-          nla.a((kb) null, (mj) null, 107);
+          Direct3DToolkit.a((kb) null, (mj) null, 107);
         }
         this.field_Mc.SetTextureStageState(this.field_ab, 1, var2);
     }
@@ -1009,10 +1009,10 @@ public final class nla extends pf {
         int[] var11;
         int[] var12;
         var5 = null;
-        var6 = this.field_Mc.a(0);
-        var7 = this.field_Mc.a(param2, param3, 21, 0, 0, true);
-        if (jagdx.hea.b(this.field_Mc.StretchRect(var6, param0, param1, param2, param3, var7, 0, 0, param2, param3, 0), (byte) 125) &&
-          jagdx.hea.b(var7.LockRect(0, 0, param2, param3, 16, this.field_zc), (byte) 49)) {
+        var6 = this.field_Mc.getRenderTarget(0);
+        var7 = this.field_Mc.createRenderTarget(param2, param3, 21, 0, 0, true);
+        if (jagdx.HResult.succeeded(this.field_Mc.StretchRect(var6, param0, param1, param2, param3, var7, 0, 0, param2, param3, 0), (byte) 125) &&
+          jagdx.HResult.succeeded(var7.LockRect(0, 0, param2, param3, 16, this.field_zc), (byte) 49)) {
           var12 = new int[param2 * param3];
           var11 = var12;
           var10 = var11;
@@ -1020,15 +1020,15 @@ public final class nla extends pf {
           var8 = this.field_zc.getRowPitch();
           if (var8 != param2 * 4) {
             for (var9 = 0; var9 < param3; var9++) {
-              this.field_zc.b(var12, var9 * param2, var8 * var9, param2);
+              this.field_zc.readInts(var12, var9 * param2, var8 * var9, param2);
             }
           } else {
-            this.field_zc.b(var12, 0, 0, param3 * param2);
+            this.field_zc.readInts(var12, 0, 0, param3 * param2);
           }
           var7.UnlockRect();
         }
-        var6.a(false);
-        var7.a(false);
+        var6.release(false);
+        var7.release(false);
         return (int[]) (var5);
     }
 
@@ -1066,7 +1066,7 @@ public final class nla extends pf {
         if (param0 != 17634) {
           return;
         }
-        this.field_Mc.a(15, this.field_eb);
+        this.field_Mc.setBooleanRenderState(15, this.field_eb);
     }
 
     final boolean a(int param0, kb param1, mj param2) {
@@ -1075,7 +1075,7 @@ public final class nla extends pf {
         boolean stackIn_4_0 = false;
         var4 = new jagdx.D3DDISPLAYMODE();
         var5 = -100 % ((-77 - param0) / 49);
-        stackIn_4_0 = (jagdx.hea.b(this.field_Ic.a(this.field_Oc, var4), (byte) 62)) && (jagdx.hea.b(this.field_Ic.CheckDeviceFormat(this.field_Oc, this.field_Ec, var4.Format, 0, 3, nla.a(param1, param2, -106)), (byte) 98));
+        stackIn_4_0 = (jagdx.HResult.succeeded(this.field_Ic.getAdapterDisplayMode(this.field_Oc, var4), (byte) 62)) && (jagdx.HResult.succeeded(this.field_Ic.CheckDeviceFormat(this.field_Oc, this.field_Ec, var4.Format, 0, 3, Direct3DToolkit.a(param1, param2, -106)), (byte) 98));
         return stackIn_4_0;
     }
 
@@ -1084,26 +1084,26 @@ public final class nla extends pf {
         jagdx.IDirect3DSurface var9;
         int var10;
         jagdx.IDirect3DSurface var12;
-        var12 = this.field_Mc.a(0);
-        var9 = this.field_Mc.a(param2, param3, 21, 0, 0, true);
-        if (jagdx.hea.b(var9.LockRect(0, 0, param2, param3, 0, this.field_zc), (byte) 47)) {
+        var12 = this.field_Mc.getRenderTarget(0);
+        var9 = this.field_Mc.createRenderTarget(param2, param3, 21, 0, 0, true);
+        if (jagdx.HResult.succeeded(var9.LockRect(0, 0, param2, param3, 0, this.field_zc), (byte) 47)) {
           if (0 == param6) {
             param6 = param2;
           }
           var10 = this.field_zc.getRowPitch();
           if (param6 == param2 &&
             4 * param2 == var10) {
-            this.field_zc.a(param4, param5, 0, param3 * param2);
+            this.field_zc.writeInts(param4, param5, 0, param3 * param2);
           } else {
             for (var11 = 0; var11 < param3; var11++) {
-              this.field_zc.a(param4, param6 * var11 + param5, var10 * var11, param2);
+              this.field_zc.writeInts(param4, param6 * var11 + param5, var10 * var11, param2);
             }
           }
           var9.UnlockRect();
         }
         this.field_Mc.StretchRect(var9, 0, 0, param2, param3, var12, param0, param1, param2, param3, 0);
-        var9.a(false);
-        var12.a(false);
+        var9.release(false);
+        var12.release(false);
     }
 
     final void GA(int param0) {
@@ -1117,14 +1117,14 @@ public final class nla extends pf {
         stackIn_3_0 = this.field_Mc;
         stackIn_3_1 = 14;
         stackIn_4_2 = (this.field_M) && (this.field_X);
-        ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+        ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).setBooleanRenderState(stackIn_3_1, stackIn_4_2);
         if (param0 >= -41) {
           this.field_Wc = (tu[]) null;
         }
     }
 
     final void F(int param0) {
-        this.field_Mc.a(7, this.field_nc);
+        this.field_Mc.setBooleanRenderState(7, this.field_nc);
         if (param0 != 12614) {
           this.field_Hc = (jagdx.D3DCAPS) null;
         }
@@ -1200,13 +1200,13 @@ public final class nla extends pf {
             if (!param1.field_b) {
               stackIn_19_3 = 0;
             } else {
-              stackIn_19_3 = nla.a(31365, param1.field_e);
+              stackIn_19_3 = Direct3DToolkit.a(31365, param1.field_e);
             }
             ((jagdx.IDirect3DDevice) (Object) stackIn_18_0).SetSamplerState(stackIn_18_1, stackIn_18_2, stackIn_19_3);
             this.field_Rc[this.field_ab] = param1.field_b;
           }
         } else {
-          var3 = nla.a(31365, param1.field_e);
+          var3 = Direct3DToolkit.a(31365, param1.field_e);
           this.field_Mc.SetSamplerState(this.field_ab, 6, var3);
           this.field_Mc.SetSamplerState(this.field_ab, 5, var3);
           this.field_Wc[this.field_ab] = param1.field_e;
@@ -1217,7 +1217,7 @@ public final class nla extends pf {
             stackIn_9_1 = this.field_ab;
             stackIn_9_2 = 7;
             if (param1.field_b) {
-              stackIn_10_3 = nla.a(31365, param1.field_e);
+              stackIn_10_3 = Direct3DToolkit.a(31365, param1.field_e);
             } else {
               stackIn_10_3 = 0;
             }
@@ -1233,7 +1233,7 @@ public final class nla extends pf {
     }
 
     final void l(byte param0) {
-        int var2 = this.field_yc[this.field_ab] ? nla.a(false, this.field_U[this.field_ab]) : 1;
+        int var2 = this.field_yc[this.field_ab] ? Direct3DToolkit.a(false, this.field_U[this.field_ab]) : 1;
         if (param0 <= 109) {
           this.n(69);
         }

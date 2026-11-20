@@ -1092,7 +1092,7 @@ final class asb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         int var1 = -114 % ((param0 - 25) / 54);
         field_a = null;

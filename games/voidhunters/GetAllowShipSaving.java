@@ -78,7 +78,7 @@ final class GetAllowShipSaving extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         if (param0 <= 78) {

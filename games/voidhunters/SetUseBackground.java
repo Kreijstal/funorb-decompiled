@@ -15,7 +15,7 @@ final class SetUseBackground extends ConsoleCommand {
         try {
           AwardVictoryToWinnerAction.field_b = arguments[0].intValue(7);
           if (obfuscationGuard >= -119) {
-            SetUseBackground.a(36);
+            SetUseBackground.clearSharedReferences(36);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -33,7 +33,7 @@ final class SetUseBackground extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         int var1 = 22 / ((param0 - 55) / 45);

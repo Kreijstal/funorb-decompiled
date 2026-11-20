@@ -84,9 +84,9 @@ final class af extends ub implements DiffableState {
 
     private final void a(byte param0, IsaacPacketBuffer param1) {
         try {
-          pu.field_a = osa.field_e;
+          pu.field_a = MonochromeRowCacheEntry.field_e;
           int var3_int = -88 % ((12 - param0) / 49);
-          osa.field_e = false;
+          MonochromeRowCacheEntry.field_e = false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "af.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -139,7 +139,7 @@ final class af extends ub implements DiffableState {
 
     private final void a(IsaacPacketBuffer param0, int param1) {
         try {
-          osa.field_e = pu.field_a;
+          MonochromeRowCacheEntry.field_e = pu.field_a;
           if (param1 <= 25) {
             this.getClientStateDump(-23);
           }
@@ -150,7 +150,7 @@ final class af extends ub implements DiffableState {
 
     private final void a(int param0, IsaacPacketBuffer param1) {
         try {
-          osa.field_e = pu.field_a;
+          MonochromeRowCacheEntry.field_e = pu.field_a;
           if (param0 != 116) {
             af.a((byte) 124, -116, -59, -4, 46, 82);
           }
@@ -218,12 +218,12 @@ final class af extends ub implements DiffableState {
         try {
           this.serverCarousel = new CarouselCommongameInfo();
           this.serverCarousel.field_h = true;
-          pu.field_a = osa.field_e;
+          pu.field_a = MonochromeRowCacheEntry.field_e;
           if (param1 >= -3) {
             IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
             this.readState((IsaacPacketBuffer) null, true);
           }
-          osa.field_e = false;
+          MonochromeRowCacheEntry.field_e = false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "af.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -87,7 +87,7 @@ final class ooa extends llb {
         int var8 = -32 % ((param4 - 15) / 35);
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 18) {
           return;
         }
@@ -195,7 +195,7 @@ final class ooa extends llb {
             }
           }
           if (param4 != -17572) {
-            ooa.h(79);
+            ooa.clearSharedReferences(79);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

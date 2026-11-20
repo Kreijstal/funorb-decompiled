@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sna extends le {
+final class sna extends TextureOperation {
     private int field_i;
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[] var30 = null;
         int[] var31 = null;
         int[] var6 = null;
@@ -22,13 +22,13 @@ final class sna extends le {
         if (param0 != 255) {
           sna.d(-89);
         }
-        int[][] var23 = this.field_d.a(param1, (byte) -127);
+        int[][] var23 = this.field_d.getRow(param1, (byte) -127);
         int[][] var19 = var23;
         int[][] var18 = var19;
         int[][] var3 = var18;
         if (this.field_d.field_g) {
-          var30 = this.a(1, param1, 255);
-          var31 = this.a(2, param1, 255);
+          var30 = this.getInputMonochromeRow(1, param1, 255);
+          var31 = this.getInputMonochromeRow(2, param1, 255);
           var6 = var23[0];
           var7 = var23[1];
           var8 = var23[2];
@@ -39,7 +39,7 @@ final class sna extends le {
             var13 = GetDebrisPartitioned.field_o[var10] * var11 >> 12;
             var14 = var9 + (var12 >> 12) & SetMassDriverEnergyUsed.field_q;
             var15 = wf.field_d & param1 + (var13 >> 12);
-            var32 = this.a((byte) 82, 0, var15);
+            var32 = this.getInputColorRow((byte) 82, 0, var15);
             var6[var9] = var32[0][var14];
             var7[var9] = var32[1][var14];
             var8[var9] = var32[2][var14];
@@ -170,7 +170,7 @@ final class sna extends le {
         this.field_i = 32768;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -208,7 +208,7 @@ final class sna extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] var25 = null;
         int[] var26 = null;
         int var6 = 0;
@@ -220,11 +220,11 @@ final class sna extends le {
         int var12 = 0;
         int[] var27 = null;
         int var14 = VoidHunters.field_G;
-        int[] var15 = this.field_f.a((byte) -42, param0);
+        int[] var15 = this.field_f.getRow((byte) -42, param0);
         int[] var3 = var15;
         if (this.field_f.field_e) {
-          var25 = this.a(1, param0, 255);
-          var26 = this.a(2, param0, 255);
+          var25 = this.getInputMonochromeRow(1, param0, 255);
+          var26 = this.getInputMonochromeRow(2, param0, 255);
           for (var6 = 0; var6 < hob.field_d; var6++) {
             var7 = (4084 & var25[var6]) >> 4;
             var8 = var26[var6] * this.field_i >> 12;
@@ -232,7 +232,7 @@ final class sna extends le {
             var10 = var8 * GetDebrisPartitioned.field_o[var7] >> 12;
             var11 = SetMassDriverEnergyUsed.field_q & (var9 >> 12) + var6;
             var12 = wf.field_d & (var10 >> 12) + param0;
-            var27 = this.a(0, var12, 255);
+            var27 = this.getInputMonochromeRow(0, var12, 255);
             var15[var6] = var27[var11];
           }
         }
@@ -242,7 +242,7 @@ final class sna extends le {
         return var3;
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         GetTrapMouse.e((byte) 124);
         if (param0 >= -35) {
           this.field_i = 33;

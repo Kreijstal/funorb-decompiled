@@ -8,7 +8,7 @@ class ara extends IntrusiveNode implements DiffableState {
     static String field_g;
     int dy;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_g = null;
         if (!param0) {
           field_g = (String) null;

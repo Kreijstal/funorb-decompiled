@@ -38,7 +38,7 @@ final class rtb extends pib {
         return SetFighterRepairAmount.b(param0, param3, -85);
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_h = null;
         if (param0 < 40) {
           field_h = (llb) null;

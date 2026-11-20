@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oqb extends le {
+final class oqb extends TextureOperation {
     private int field_q;
     private int field_p;
     private int field_l;
@@ -39,7 +39,7 @@ final class oqb extends le {
         this.field_o = 2048;
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         boolean discarded$0 = false;
         if (param0 >= -35) {
           discarded$0 = this.d(-93, -27, 100);
@@ -47,7 +47,7 @@ final class oqb extends le {
         GetTrapMouse.e((byte) 118);
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var5 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -79,9 +79,9 @@ final class oqb extends le {
         int var10Lifetime2;
         var11 = VoidHunters.field_G;
         if (!param1) {
-          this.c((byte) -85);
+          this.postDecode((byte) -85);
         }
-        var12 = this.field_f.a((byte) 119, param0);
+        var12 = this.field_f.getRow((byte) 119, param0);
         var3 = var12;
         if (this.field_f.field_e) {
           var4 = SetSalvoUsesAllEnergy.field_p[param0] - 2048;
@@ -153,7 +153,7 @@ final class oqb extends le {
         return var12;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = null;
         field_n = null;
         if (param0 > -117) {
@@ -161,7 +161,7 @@ final class oqb extends le {
         }
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -200,7 +200,7 @@ final class oqb extends le {
             this.field_o = param2.readUnsignedShort(1869);
           }
           if (param1 > -60) {
-            this.a(116, true);
+            this.getMonochromeRow(116, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

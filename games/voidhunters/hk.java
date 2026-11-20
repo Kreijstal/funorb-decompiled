@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends le {
+final class hk extends TextureOperation {
     static String field_i;
     private int field_j;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -33,7 +33,7 @@ final class hk extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var7 = 0;
         int stackIn_9_0 = 0;
         int[] var3;
@@ -54,12 +54,12 @@ final class hk extends le {
         if (!param1) {
           return (int[]) null;
         }
-        var17 = this.field_f.a((byte) 124, param0);
+        var17 = this.field_f.getRow((byte) 124, param0);
         var3 = var17;
         if (this.field_f.field_e) {
-          var25 = this.a(0, wf.field_d & -1 + param0, 255);
-          var5 = this.a(0, param0, 255);
-          var24 = this.a(0, wf.field_d & param0 + 1, 255);
+          var25 = this.getInputMonochromeRow(0, wf.field_d & -1 + param0, 255);
+          var5 = this.getInputMonochromeRow(0, param0, 255);
+          var24 = this.getInputMonochromeRow(0, wf.field_d & param0 + 1, 255);
           for (var7 = 0; var7 < hob.field_d; var7++) {
             var8 = this.field_j * (var24[var7] - var25[var7]);
             var9 = (-var5[SetMassDriverEnergyUsed.field_q & -1 + var7] + var5[var7 + 1 & SetMassDriverEnergyUsed.field_q]) * this.field_j;
@@ -90,7 +90,7 @@ final class hk extends le {
         hab.field_k = param0;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_i = null;
         if (param0 != -1210841460) {
           field_i = (String) null;

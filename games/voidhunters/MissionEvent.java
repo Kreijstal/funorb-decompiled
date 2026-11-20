@@ -201,7 +201,7 @@ final class MissionEvent implements DiffableState {
         return this.conditions;
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 > -30) {
           return;

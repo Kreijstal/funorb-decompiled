@@ -15,7 +15,7 @@ final class GetAngularVelocitySustain extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetAngularVelocitySustain.e((byte) -37);
+            GetAngularVelocitySustain.clearSharedReferences((byte) -37);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(175, 104));
           return stackIn_3_0;
@@ -33,7 +33,7 @@ final class GetAngularVelocitySustain extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         int var1 = 49 % ((param0 - 15) / 63);
     }

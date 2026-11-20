@@ -7,7 +7,7 @@ final class GetLaserReload extends ConsoleCommand {
     static String field_p;
     static pr field_r;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_r = null;
         field_p = null;
         field_q = null;

@@ -6,7 +6,7 @@ final class akb implements dja {
 
     public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          akb.b((byte) -90);
+          akb.clearSharedReferences((byte) -90);
           return (SerializableGameState[]) ((Object) new MissionEvent[param1]);
         }
         return (SerializableGameState[]) ((Object) new MissionEvent[param1]);
@@ -17,7 +17,7 @@ final class akb implements dja {
         return (SerializableGameState) ((Object) new MissionEvent());
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -21 % ((param0 + 35) / 34);
         field_a = null;
     }

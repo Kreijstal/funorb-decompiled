@@ -37,7 +37,7 @@ final class SetMachineGunAimarc extends ConsoleCommand {
 
     final static boolean a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         if (param4 != -65) {
-          SetMachineGunAimarc.a(57);
+          SetMachineGunAimarc.clearSharedReferences(57);
           if (param5 > param3) {
             return false;
           }
@@ -71,7 +71,7 @@ final class SetMachineGunAimarc extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         field_r = null;

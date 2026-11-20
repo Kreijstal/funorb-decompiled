@@ -40,7 +40,7 @@ final class GetUseNiceTrails extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 53 / ((param0 - 47) / 55);
         field_q = null;
         field_o = null;

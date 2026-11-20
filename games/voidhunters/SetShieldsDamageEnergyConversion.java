@@ -99,7 +99,7 @@ final class SetShieldsDamageEnergyConversion extends ConsoleCommand {
         return vu.b(-var9Lifetime1 + param1 * param1 + param4 * param4, 0, param6 * param4 + param2 * param1 << 1, param5, param6 * param6 + param2 * param2 << 1);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         int var1 = 15 % ((-67 - param0) / 54);
     }

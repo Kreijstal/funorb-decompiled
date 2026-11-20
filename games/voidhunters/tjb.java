@@ -136,8 +136,8 @@ final class tjb extends llb {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        no var17 = null;
-        no var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_vb = -1;
         try {
           this.field_yb = param7;
@@ -161,7 +161,7 @@ final class tjb extends llb {
               this.field_Ab[var13] == -1) {
               var14 = GetTeamSelectionSpeedup.field_o;
             }
-            this.field_Bb[var13] = new cna(0L, param2, (llb) null, param3, (phb) (var14), param6[var13]);
+            this.field_Bb[var13] = new cna(0L, param2, (llb) null, param3, (Sprite) (var14), param6[var13]);
             this.b(-561, this.field_Bb[var13]);
             var15 = var17.b(param6[var13]);
             if (this.field_Jb < var15) {
@@ -244,7 +244,7 @@ final class tjb extends llb {
         return this.field_Eb + (null != this.field_xb ? this.field_xb.k(-4109) : 0);
     }
 
-    public static void i(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 85) {
           return;
         }
@@ -410,7 +410,7 @@ final class tjb extends llb {
             return stackIn_19_0;
           }
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
-            if (VoidHunters.a(true, param0[var2_int])) {
+            if (VoidHunters.checkDuplicateReference(true, param0[var2_int])) {
               stackIn_16_0 = param0[var2_int];
               return stackIn_16_0;
             }

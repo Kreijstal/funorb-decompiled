@@ -5,7 +5,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
     static int[] field_o;
     static ge field_p;
 
-    final static aja a(byte param0, GraphicsToolkit param1, phb param2) {
+    final static aja a(byte param0, GraphicsToolkit param1, Sprite param2) {
         int var4 = 0;
         aja var3 = null;
         RuntimeException var3_ref = null;
@@ -39,7 +39,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
               }
               stackIn_6_0[stackIn_6_1] = stackIn_7_2;
             }
-            param2 = (phb) ((Object) var6);
+            param2 = (Sprite) ((Object) var6);
           }
           if (param0 > -61) {
             field_o = (int[]) null;
@@ -76,7 +76,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetBombletSprayPushMultiplier.a(73);
+            GetBombletSprayPushMultiplier.clearSharedReferences(73);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(190, 116));
           return stackIn_3_0;
@@ -94,7 +94,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 > -70) {
           field_p = (ge) null;

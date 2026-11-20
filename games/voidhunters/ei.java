@@ -13,10 +13,10 @@ final class ei implements wwa {
     static String field_f;
     static String field_e;
     static String[] field_i;
-    private no field_j;
+    private BitmapFont field_j;
     static int field_a;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           return;
         }
@@ -66,7 +66,7 @@ final class ei implements wwa {
         }
     }
 
-    ei(no param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ei(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_m = param5;
           this.field_g = param2;

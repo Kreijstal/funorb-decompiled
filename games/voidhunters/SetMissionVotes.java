@@ -5,7 +5,7 @@ final class SetMissionVotes extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         int var1 = -125 % ((-30 - param0) / 43);
         field_p = null;

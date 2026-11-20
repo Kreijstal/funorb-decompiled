@@ -442,7 +442,7 @@ final class tla extends aja {
         jaggl.OpenGL.glEnd();
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_k = null;
         field_h = null;
         if (param0 != 1) {

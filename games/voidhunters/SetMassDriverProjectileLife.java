@@ -29,7 +29,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
         SetMassDriverProjectileLife.a(59, (byte) -18, 107, 110, 95, -108);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != 127) {
           field_o = (String) null;
@@ -46,7 +46,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(90, 62, arguments[0].intValue(83));
           if (obfuscationGuard >= -119) {
-            SetMassDriverProjectileLife.e((byte) -13);
+            SetMassDriverProjectileLife.clearSharedReferences((byte) -13);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

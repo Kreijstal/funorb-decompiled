@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq extends le {
+final class lq extends TextureOperation {
     static dja field_i;
     static String field_j;
 
@@ -22,14 +22,14 @@ final class lq extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         if (!param1) {
-          this.a(-57, false);
+          this.getMonochromeRow(-57, false);
         }
-        int[] var7 = this.field_f.a((byte) -21, param0);
+        int[] var7 = this.field_f.getRow((byte) -21, param0);
         int[] var3 = var7;
         if (this.field_f.field_e) {
           var4 = SetSalvoUsesAllEnergy.field_p[param0];

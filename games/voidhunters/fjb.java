@@ -13,7 +13,7 @@ final class fjb implements dja {
         return (SerializableGameState) ((Object) new Message());
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;

@@ -5,7 +5,7 @@ final class ata extends htb {
     int field_J;
     int field_B;
     int field_I;
-    static phb field_K;
+    static Sprite field_K;
     int field_F;
     int field_E;
     static String field_L;
@@ -104,7 +104,7 @@ final class ata extends htb {
 
     static {
         field_L = "game_settings.dat";
-        field_K = new phb(540, 140);
+        field_K = new Sprite(540, 140);
         field_G = "Hold the Component";
     }
 }

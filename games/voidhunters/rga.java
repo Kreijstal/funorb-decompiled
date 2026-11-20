@@ -6,7 +6,7 @@ final class rga {
     static soa field_f;
     private eb[] field_c;
     static llb field_g;
-    private pf field_h;
+    private GpuToolkit field_h;
     eb[] field_a;
     boolean field_b;
     gf field_d;
@@ -85,7 +85,7 @@ final class rga {
         return null != this.field_e ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         field_g = null;
         if (param0 <= 20) {
@@ -98,7 +98,7 @@ final class rga {
         return !this.field_b ? null != this.field_a ? true : false : null != this.field_d ? true : false;
     }
 
-    rga(pf param0) {
+    rga(GpuToolkit param0) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

@@ -7,7 +7,7 @@ final class GetSpinningBladeAimarc extends ConsoleCommand {
     static int field_r;
     static String field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 < 55) {
           return;
@@ -28,7 +28,7 @@ final class GetSpinningBladeAimarc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetSpinningBladeAimarc.e((byte) 15);
+            GetSpinningBladeAimarc.clearSharedReferences((byte) 15);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(134, 122));
           return stackIn_3_0;

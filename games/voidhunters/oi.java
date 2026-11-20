@@ -29,7 +29,7 @@ abstract class oi extends aja {
     int field_D;
     int field_k;
     static int field_m;
-    sob field_w;
+    SoftwareToolkit field_w;
     private static int field_A;
     static int field_y;
     int field_e;
@@ -297,7 +297,7 @@ abstract class oi extends aja {
         }
     }
 
-    oi(sob param0, int param1, int param2) {
+    oi(SoftwareToolkit param0, int param1, int param2) {
         this.field_w = param0;
         this.field_e = param1;
         this.field_q = param2;

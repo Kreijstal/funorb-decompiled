@@ -9,7 +9,7 @@ final class p extends IntrusiveNode implements e {
     long field_nativeid;
     private static long field_h;
 
-    private final native void sa(oa param0, java.awt.Canvas param1, int param2, int param3);
+    private final native void sa(NativeSoftwareToolkit param0, java.awt.Canvas param1, int param2, int param3);
 
     final void a(int param0, int param1) {
         java.awt.Dimension var4 = null;
@@ -38,7 +38,7 @@ final class p extends IntrusiveNode implements e {
         this.field_f.repaint();
     }
 
-    p(oa param0, java.awt.Canvas param1, int param2, int param3) {
+    p(NativeSoftwareToolkit param0, java.awt.Canvas param1, int param2, int param3) {
         this.field_f = param1;
         this.field_e = param2;
         this.field_g = param3;

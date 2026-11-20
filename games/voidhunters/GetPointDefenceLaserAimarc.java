@@ -35,7 +35,7 @@ final class GetPointDefenceLaserAimarc extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         int var1 = 42 / ((param0 + 33) / 43);
     }

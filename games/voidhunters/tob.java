@@ -21,7 +21,7 @@ final class tob extends DualLinkNode {
         super.finalize();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_l = null;
         int var1 = 112 / ((param0 - 32) / 56);

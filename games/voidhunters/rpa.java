@@ -103,7 +103,7 @@ final class rpa implements jaa {
                                 GetExplosionProjectileDamage.a(var4, -14);
                               } else {
                                 if (1 == param1) {
-                                  vab.a((byte) -94, var4);
+                                  ArbProgram.a((byte) -94, var4);
                                 }
                               }
                             } else {
@@ -331,7 +331,7 @@ final class rpa implements jaa {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         try {
           field_c = null;
           if (param0 != 1) {

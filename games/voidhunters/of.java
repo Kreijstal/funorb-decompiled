@@ -11,7 +11,7 @@ final class of {
         super.finalize();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 8345) {
           field_a = (gj) null;

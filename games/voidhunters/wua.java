@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wua extends le {
+final class wua extends TextureOperation {
     private int field_j;
     static int field_k;
     private int field_i;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -17,7 +17,7 @@ final class wua extends le {
         var5 = VoidHunters.field_G;
         try {
           if (param1 >= -60) {
-            this.a(28, false);
+            this.getMonochromeRow(28, false);
           }
           var4_int = param0;
           if (var4_int == 0) {
@@ -43,7 +43,7 @@ final class wua extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var5 = 0;
         int[] var3;
         int[] var4;
@@ -54,7 +54,7 @@ final class wua extends le {
         int stackIn_10_1 = 0;
         int stackIn_11_2 = 0;
         var7 = VoidHunters.field_G;
-        var8 = this.field_f.a((byte) 117, param0);
+        var8 = this.field_f.getRow((byte) 117, param0);
         var3 = var8;
         if (!param1) {
           return (int[]) null;
@@ -62,7 +62,7 @@ final class wua extends le {
         if (!this.field_f.field_e) {
           return var8;
         }
-        var4 = this.a(0, param0, 255);
+        var4 = this.getInputMonochromeRow(0, param0, 255);
         for (var5 = 0; hob.field_d > var5; var5++) {
           var6 = var4[var5];
           stackIn_10_0 = var8;

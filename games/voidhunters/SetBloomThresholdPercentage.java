@@ -37,7 +37,7 @@ final class SetBloomThresholdPercentage extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (param0) {
           return;

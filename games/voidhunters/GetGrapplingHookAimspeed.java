@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetGrapplingHookAimspeed extends ConsoleCommand {
-    static phb[] field_o;
+    static Sprite[] field_o;
     static int field_p;
 
     GetGrapplingHookAimspeed(String param0, Class[] param1, String param2) {
@@ -89,7 +89,7 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 121) {
-            field_o = (phb[]) null;
+            field_o = (Sprite[]) null;
           }
           stackIn_3_0 = new cp(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -77), param1.readUnsignedByte((byte) -113));
           return stackIn_3_0;

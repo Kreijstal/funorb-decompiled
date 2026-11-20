@@ -4,7 +4,7 @@
 final class SetMachineGunPulsetime extends ConsoleCommand {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 >= -101) {
           field_o = (String) null;
@@ -13,7 +13,7 @@ final class SetMachineGunPulsetime extends ConsoleCommand {
 
     final static boolean e(int param0) {
         if (param0 != 0) {
-          SetMachineGunPulsetime.a(-11);
+          SetMachineGunPulsetime.clearSharedReferences(-11);
           return SetTorpedoProjectiles.field_o.field_k;
         }
         return SetTorpedoProjectiles.field_o.field_k;

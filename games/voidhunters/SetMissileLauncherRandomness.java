@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMissileLauncherRandomness extends ConsoleCommand {
-    static phb field_o;
+    static Sprite field_o;
     static long field_p;
 
     SetMissileLauncherRandomness(String param0, Class[] param1, String param2) {
@@ -37,10 +37,10 @@ final class SetMissileLauncherRandomness extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 < 107) {
-          field_o = (phb) null;
+          field_o = (Sprite) null;
         }
     }
 

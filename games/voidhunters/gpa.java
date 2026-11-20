@@ -5,7 +5,7 @@ final class gpa extends za {
     static String field_f;
     jaclib.memory.heap.NativeHeap field_e;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         if (param0 > -89) {
           field_f = (String) null;
@@ -13,7 +13,7 @@ final class gpa extends za {
     }
 
     final void a(boolean param0) {
-        this.field_e.a();
+        this.field_e.deallocate();
         if (param0) {
           this.a(true);
         }

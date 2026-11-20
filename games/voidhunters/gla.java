@@ -4,7 +4,7 @@
 final class gla {
     int field_c;
     static String field_b;
-    private jp field_a;
+    private OpenGlGpuToolkit field_a;
 
     protected final void finalize() throws Throwable {
         this.field_a.a(this.field_c, (byte) 98);
@@ -18,7 +18,7 @@ final class gla {
         }
     }
 
-    gla(jp param0, int param1, int param2) {
+    gla(OpenGlGpuToolkit param0, int param1, int param2) {
         try {
           this.field_a = param0;
           this.field_c = param2;

@@ -194,7 +194,7 @@ final class cv {
         return (byte)cv.a(1, param0);
     }
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_a = null;
     }
 

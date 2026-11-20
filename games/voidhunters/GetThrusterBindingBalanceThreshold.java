@@ -23,7 +23,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
         var10 = VoidHunters.field_G;
         try {
           if (param0 != -8037) {
-            GetThrusterBindingBalanceThreshold.e((byte) -1);
+            GetThrusterBindingBalanceThreshold.clearSharedReferences((byte) -1);
           }
           var1 = null;
           var2 = null;
@@ -125,7 +125,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                 }
               }
             }
-            SetSelfDestructTimer.a(19204, var4 + no.c(SetShipAimLines.field_p.toString()), var7, var5, ConsoleCommand.field_m[var6]);
+            SetSelfDestructTimer.a(19204, var4 + BitmapFont.c(SetShipAimLines.field_p.toString()), var7, var5, ConsoleCommand.field_m[var6]);
             if (!SetFightersPerPlayerMaximum.field_p) {
               fgb.field_l.field_O = false;
             }
@@ -173,7 +173,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         try {
           field_o = null;
           field_p = null;

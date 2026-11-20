@@ -6,7 +6,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
     static dja field_c;
     static boolean field_e;
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -44) {
           return;
         }

@@ -12,14 +12,14 @@ final class qn extends IntrusiveNode {
     int field_g;
 
     final static void c(byte param0) {
-        ms.field_y = new IntrusiveDeque();
+        NetworkGameClient.field_y = new IntrusiveDeque();
         gtb.field_d = new IntrusiveDeque();
         if (param0 >= 52) {
-          jp.field_Jc = new Random();
+          OpenGlGpuToolkit.field_Jc = new Random();
           return;
         }
         qn.a(11, (byte) 95);
-        jp.field_Jc = new Random();
+        OpenGlGpuToolkit.field_Jc = new Random();
     }
 
     final static boolean a(int param0, byte param1) {

@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ms extends GameApplet {
-    private boolean field_x;
-    private int field_r;
+abstract class NetworkGameClient extends GameApplet {
+    private boolean officialHost;
+    private int affiliateId;
     static int[] field_A;
-    private int field_w;
+    private int serverNumber;
     static IntrusiveDeque field_y;
-    private int field_v;
-    private boolean field_z;
-    private long field_t;
-    private int field_q;
+    private int secondaryGamePort;
+    private boolean member;
+    private long instanceId;
+    private int gameCrc;
     private boolean field_s;
-    String field_u;
-    private int field_o;
-    private int field_p;
+    String host;
+    private int languageId;
+    private int primaryGamePort;
 
     private final void d(byte param0) {
         if (param0 != -116) {
@@ -29,7 +29,7 @@ abstract class ms extends GameApplet {
         if (param0 < 34) {
           this.a(83, 93, -32, 71, -33, -12, false, -123);
         }
-        if (this.field_c) {
+        if (this.errorShown) {
           return -1;
         }
         if (!SetWeaponProjectileSpeedMultiply.b(true)) {
@@ -38,7 +38,7 @@ abstract class ms extends GameApplet {
         if (GetSpinningBladeAimarc.field_o) {
           return -1;
         }
-        var2 = GetPhasedEnergyBeamPulseFadetime.a(this.field_x, this.field_r, LoadBlackboxRecording.a(125), (byte) 13, true, fpb.d(true));
+        var2 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.a(125), (byte) 13, true, fpb.d(true));
         if (var2 == -1) {
           return -1;
         }
@@ -54,7 +54,7 @@ abstract class ms extends GameApplet {
         }
         if (var2 != 1) {
           if (!SetAudioRangeCutoff.field_q) {
-            this.a("reconnect", 0);
+            this.showGameError("reconnect", 0);
           }
           km.f((byte) -119);
           SetMessageFadetime.a(dgb.field_b, (byte) 72, var2);
@@ -131,7 +131,7 @@ abstract class ms extends GameApplet {
         GetMassDriverFireForce.e((byte) -101);
         ts.a(1001);
         if (param1 != 9) {
-          this.field_w = 76;
+          this.serverNumber = 76;
         }
         if (!GetUseTriFill.a(45) &&
           GetSpinningBladeAimspeed.field_q != 11) {
@@ -196,20 +196,20 @@ abstract class ms extends GameApplet {
             }
           } else {
             if (MapClearanceArea.field_a == 3) {
-              this.a("js5crc", 0);
+              this.showGameError("js5crc", 0);
             } else {
               if (MapClearanceArea.field_a != 4) {
                 if (MapClearanceArea.field_a != 2) {
                   if (MapClearanceArea.field_a != 5) {
-                    this.a("js5connect", 0);
+                    this.showGameError("js5connect", 0);
                   } else {
-                    this.a("outofdate", 0);
+                    this.showGameError("outofdate", 0);
                   }
                 } else {
-                  this.a("js5connect_full", 0);
+                  this.showGameError("js5connect_full", 0);
                 }
               } else {
-                this.a("js5io", 0);
+                this.showGameError("js5io", 0);
               }
             }
           }
@@ -327,7 +327,7 @@ abstract class ms extends GameApplet {
         if (!param0 &&
           GetDebrisSurvives.field_q) {
           kl.a(igb.field_a, -125);
-          this.c(-81);
+          this.rebuildCanvas(-81);
           SetGrapplingHookCooldown.a((byte) -62, igb.field_a);
         }
         if (SetBombletSprayProjectileLife.field_o[8]) {
@@ -396,16 +396,16 @@ abstract class ms extends GameApplet {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void startClient(String param0, int param1, int param2) {
         try {
           int var4_int = 1 % ((-20 - param1) / 33);
-          this.a(param2, 480, 640, param0, 32);
+          this.initializeFromAppletParameters(param2, 480, 640, param0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static byte[] b(String param0, int param1) {
+    final static byte[] loadNamedResource(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -414,7 +414,7 @@ abstract class ms extends GameApplet {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 23100) {
-            ms.d(true);
+            NetworkGameClient.clearSharedReferences(true);
           }
           stackIn_3_0 = hw.field_e.a(param0, true, "");
           return stackIn_3_0;
@@ -435,7 +435,7 @@ abstract class ms extends GameApplet {
     private final void i(int param0) {
         if (param0 != 30138) {
           String var3 = (String) null;
-          this.a((String) null, 57, -40);
+          this.startClient((String) null, 57, -40);
         }
         SetBombletSprayProjectileLife.field_o[2] = true;
     }
@@ -444,7 +444,7 @@ abstract class ms extends GameApplet {
         SetBombletSprayProjectileLife.field_o[4] = param0;
     }
 
-    private final void a(int param0, int param1, int param2, String param3, int param4) {
+    private final void initializeFromAppletParameters(int param0, int param1, int param2, String param3, int param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -459,41 +459,41 @@ abstract class ms extends GameApplet {
         String var10 = null;
         try {
           try {
-            if (!this.b((byte) -114)) {
+            if (!this.isStartupAllowed((byte) -114)) {
               return;
             }
-            this.field_u = this.getCodeBase().getHost();
-            var6 = this.field_u.toLowerCase();
+            this.host = this.getCodeBase().getHost();
+            var6 = this.host.toLowerCase();
             stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
-            this.field_x = stackIn_7_1;
-            this.field_p = Integer.parseInt(this.getParameter("gameport1"));
-            this.field_v = Integer.parseInt(this.getParameter("gameport2"));
+            this.officialHost = stackIn_7_1;
+            this.primaryGamePort = Integer.parseInt(this.getParameter("gameport1"));
+            this.secondaryGamePort = Integer.parseInt(this.getParameter("gameport2"));
             var7 = this.getParameter("servernum");
             if (var7 != null) {
-              this.field_w = Integer.parseInt(var7);
+              this.serverNumber = Integer.parseInt(var7);
             }
-            this.field_q = Integer.parseInt(this.getParameter("gamecrc"));
-            this.field_t = Long.parseLong(this.getParameter("instanceid"));
-            this.field_z = this.getParameter("member").equals("yes");
+            this.gameCrc = Integer.parseInt(this.getParameter("gamecrc"));
+            this.instanceId = Long.parseLong(this.getParameter("instanceid"));
+            this.member = this.getParameter("member").equals("yes");
             var8 = this.getParameter("lang");
             if (var8 != null) {
-              this.field_o = Integer.parseInt(var8);
+              this.languageId = Integer.parseInt(var8);
             }
-            if (this.field_o >= 5) {
-              this.field_o = 0;
+            if (this.languageId >= 5) {
+              this.languageId = 0;
             }
             var9 = this.getParameter("affid");
             if (var9 != null) {
-              this.field_r = Integer.parseInt(var9);
+              this.affiliateId = Integer.parseInt(var9);
             }
             tc.field_a = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(this.field_q, param4, param0, 7, param2, param3, param1);
+            this.startApplet(this.gameCrc, param4, param0, 7, param2, param3, param1);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             gna.a((Throwable) ((Object) var6_ref), (String) null, 0);
-            this.a("crash", 0);
+            this.showGameError("crash", 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -515,11 +515,11 @@ abstract class ms extends GameApplet {
         var11.pack();
         var11.dispose();
         this.setBackground(java.awt.Color.black);
-        SetGrapplingHookAimarc.field_p = this.field_o;
+        SetGrapplingHookAimarc.field_p = this.languageId;
         aeb.a(SetGrapplingHookAimarc.field_p, 1);
         int var10 = -52 / ((-72 - param0) / 33);
-        bmb.a(5000, this.field_v, 60, this.field_w, SetTorpedoProjectiles.field_o, this.field_t, this.field_u, this.field_z, this.field_p, this.field_q, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
-        sha.a(param3, this.field_u, this.field_p, this.field_v, (byte) -2, SetGrapplingHookAimarc.field_p, this.field_q, SetTorpedoProjectiles.field_o, this.field_w);
+        bmb.a(5000, this.secondaryGamePort, 60, this.serverNumber, SetTorpedoProjectiles.field_o, this.instanceId, this.host, this.member, this.primaryGamePort, this.gameCrc, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
+        sha.a(param3, this.host, this.primaryGamePort, this.secondaryGamePort, (byte) -2, SetGrapplingHookAimarc.field_p, this.gameCrc, SetTorpedoProjectiles.field_o, this.serverNumber);
         ProxyAuthenticationException.initializePunctuationKeyCodes(47);
         GetWaitForPlayers.field_o = ghb.c((byte) -127);
         SetGrapplingHookCooldown.a((byte) 122, igb.field_a);
@@ -651,7 +651,7 @@ abstract class ms extends GameApplet {
         SetBombletSprayProjectileLife.field_o[5] = true;
         if (param0 != -4) {
           String var3 = (String) null;
-          ms.b((String) null, -15);
+          NetworkGameClient.loadNamedResource((String) null, -15);
         }
     }
 
@@ -689,7 +689,7 @@ abstract class ms extends GameApplet {
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);
           if (var4 == 2) {
-            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.field_r, (byte) 111, LoadBlackboxRecording.a(88), etb.a(31065), fpb.d(true));
+            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), etb.a(31065), fpb.d(true));
             if (-1 != var6_int) {
               wt.a(var6_int, -19342, gob.field_a, dgb.field_b);
               gob.field_a = null;
@@ -705,7 +705,7 @@ abstract class ms extends GameApplet {
             if (param1) {
               GetSpinningBladeAimarc.field_o = false;
             } else {
-              var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.a(this.field_x, this.field_r, LoadBlackboxRecording.a(83), (byte) 13, false, fpb.d(true));
+              var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.a(83), (byte) 13, false, fpb.d(true));
               if (var6_intLifetime1 != -1) {
                 if (var6_intLifetime1 != 0) {
                   SetMessageFadetime.a(dgb.field_b, (byte) 110, var6_intLifetime1);
@@ -728,7 +728,7 @@ abstract class ms extends GameApplet {
             }
           }
           if (5 == var4) {
-            VoidHunters.a(MissionList.b((byte) -91), 4);
+            VoidHunters.quitToWebsite(MissionList.b((byte) -91), 4);
           }
           if (var4 == 6 &&
             djb.field_r) {
@@ -794,7 +794,7 @@ abstract class ms extends GameApplet {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_y = null;
         if (param0) {
           field_y = (IntrusiveDeque) null;
@@ -802,7 +802,7 @@ abstract class ms extends GameApplet {
         field_A = null;
     }
 
-    protected ms() {
+    protected NetworkGameClient() {
     }
 
     static {

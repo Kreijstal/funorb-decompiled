@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class bl extends dqa {
-    static no field_x;
+    static BitmapFont field_x;
     private int field_w;
     static int field_A;
     static String field_y;
@@ -69,7 +69,7 @@ abstract class bl extends dqa {
           return;
         }
         if (null == vib.field_b) {
-          vib.field_b = new phb(this.field_h, this.field_f);
+          vib.field_b = new Sprite(this.field_h, this.field_f);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
           dma.a();
           this.b(0, 1630174241, 0);
@@ -85,7 +85,7 @@ abstract class bl extends dqa {
           return;
         }
         if (vib.field_b.field_q < this.field_h) {
-          vib.field_b = new phb(this.field_h, this.field_f);
+          vib.field_b = new Sprite(this.field_h, this.field_f);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
           dma.a();
           this.b(0, 1630174241, 0);
@@ -101,7 +101,7 @@ abstract class bl extends dqa {
           return;
         }
         if (this.field_f > vib.field_b.field_p) {
-          vib.field_b = new phb(this.field_h, this.field_f);
+          vib.field_b = new Sprite(this.field_h, this.field_f);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
           dma.a();
           this.b(0, 1630174241, 0);

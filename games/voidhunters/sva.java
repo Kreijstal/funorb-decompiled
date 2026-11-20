@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class sva extends le {
+final class sva extends TextureOperation {
     private int field_j;
     private int field_k;
     static int field_m;
@@ -11,7 +11,7 @@ final class sva extends le {
     private int field_i;
     private int field_n;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int var7 = 0;
         int var23 = 0;
         int stackIn_7_0 = 0;
@@ -45,10 +45,10 @@ final class sva extends le {
         int var17Lifetime1;
         int var17Lifetime2;
         var27 = VoidHunters.field_G;
-        var3 = this.field_f.a((byte) 117, param0);
+        var3 = this.field_f.getRow((byte) 117, param0);
         if (this.field_f.field_e) {
           var4 = this.field_j >> 1;
-          var31 = this.field_f.b(73);
+          var31 = this.field_f.getFullImage(73);
           var6 = new Random((long)this.field_n);
           for (var7 = 0; this.field_k > var7; var7++) {
             if (this.field_j <= 0) {
@@ -134,7 +134,7 @@ final class sva extends le {
         this.field_i = 0;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -145,7 +145,7 @@ final class sva extends le {
         var5 = VoidHunters.field_G;
         try {
           if (param1 >= -60) {
-            this.a(66, true);
+            this.getMonochromeRow(66, true);
           }
           var4_int = param0;
           if (var4_int == 0) {
@@ -182,7 +182,7 @@ final class sva extends le {
         }
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         if (param0 >= -35) {
           sva.e((byte) -123);
         }

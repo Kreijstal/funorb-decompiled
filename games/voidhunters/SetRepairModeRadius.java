@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetRepairModeRadius extends ConsoleCommand {
-    static phb[][] field_o;
+    static Sprite[][] field_o;
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -101 % ((-37 - param0) / 42);
-        field_o = (phb[][]) null;
+        field_o = (Sprite[][]) null;
     }
 
     final static int f(int param0) {

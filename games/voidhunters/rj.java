@@ -307,7 +307,7 @@ final class rj {
         }
     }
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_e = null;
     }
 }

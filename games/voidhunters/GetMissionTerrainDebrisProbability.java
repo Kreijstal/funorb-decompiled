@@ -102,7 +102,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
         npa.field_c = param2;
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           return;
         }

@@ -19,7 +19,7 @@ final class SetGrapplingHookMaxLength extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetGrapplingHookMaxLength.e((byte) -121);
+            SetGrapplingHookMaxLength.clearSharedReferences((byte) -121);
           }
           SetMachineGunEnergyUsed.a(197, 62, arguments[0].intValue(19));
           stackIn_3_0 = new ConsoleValue("void");
@@ -38,7 +38,7 @@ final class SetGrapplingHookMaxLength extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         int var1 = -29 / ((14 - param0) / 41);
         field_o = null;

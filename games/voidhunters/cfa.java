@@ -6,7 +6,7 @@ final class cfa extends oib {
     private String field_f;
     static String field_e;
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 121 % ((-54 - param0) / 33);
         field_e = null;
     }
@@ -35,7 +35,7 @@ final class cfa extends oib {
           }
           return elb.field_f;
         }
-        cfa.c((byte) 108);
+        cfa.clearSharedReferences((byte) 108);
         if (null == elb.field_f) {
           elb.field_f = new bob(SetTorpedoProjectileLife.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, SetTorpedoProjectileLife.field_o.field_k, -1, 2147483647, true);
         }

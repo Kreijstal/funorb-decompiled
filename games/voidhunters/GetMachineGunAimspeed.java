@@ -10,7 +10,7 @@ final class GetMachineGunAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 125) {
           return;
         }
@@ -52,7 +52,7 @@ final class GetMachineGunAimspeed extends ConsoleCommand {
           ajb.a((byte) -74, param0);
           fa.a(SetMissionDebrisVotingChancestep.field_p, -124, false);
           if (param1 > -39) {
-            GetMachineGunAimspeed.a(10);
+            GetMachineGunAimspeed.clearSharedReferences(10);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

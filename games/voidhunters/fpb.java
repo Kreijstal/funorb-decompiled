@@ -85,7 +85,7 @@ final class fpb extends mfb {
         }
     }
 
-    public static void l(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_b = null;
         field_d = (byte[][]) null;

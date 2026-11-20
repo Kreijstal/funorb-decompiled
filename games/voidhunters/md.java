@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends le {
+final class md extends TextureOperation {
     static IntrusiveDeque field_j;
     private ev[] field_i;
 
@@ -31,7 +31,7 @@ final class md extends le {
         }
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int[][] var29 = null;
@@ -45,12 +45,12 @@ final class md extends le {
         int var14 = 0;
         int var15 = 0;
         int var16 = VoidHunters.field_G;
-        int[][] var3 = this.field_d.a(param1, (byte) -92);
+        int[][] var3 = this.field_d.getRow(param1, (byte) -92);
         if (this.field_d.field_g) {
           var4 = hob.field_d;
           var5 = GetTorpedoReload.field_o;
           var29 = new int[var5][var4];
-          var30 = this.field_d.b(param0 - 134);
+          var30 = this.field_d.getFullImage(param0 - 134);
           this.a(true, var29);
           for (var8 = 0; GetTorpedoReload.field_o > var8; var8++) {
             var32 = var29[var8];
@@ -72,19 +72,19 @@ final class md extends le {
         return var3;
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         if (!param1) {
           this.field_i = (ev[]) null;
         }
-        int[] var4 = this.field_f.a((byte) 121, param0);
+        int[] var4 = this.field_f.getRow((byte) 121, param0);
         int[] var3 = var4;
         if (this.field_f.field_e) {
-          this.a(param1, this.field_f.b(123));
+          this.a(param1, this.field_f.getFullImage(123));
         }
         return var4;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

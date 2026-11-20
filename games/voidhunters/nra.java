@@ -415,7 +415,7 @@ final class nra implements dja {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 2) {
           field_a = (String) null;
         }

@@ -235,7 +235,7 @@ final class cbb {
         try {
           var8 = new jva(param0.a("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 75)));
           var8.e();
-          oaa.field_j = (phb) ((Object) var8);
+          oaa.field_j = (Sprite) ((Object) var8);
           SetPointDefenceLaserAimarc.field_r = new ima[138];
           SetPointDefenceLaserAimarc.field_r[0] = ima.b(param2, "basic", "objective_icon_attack");
           SetPointDefenceLaserAimarc.field_r[1] = ima.b(param2, "basic", "objective_icon_defend");

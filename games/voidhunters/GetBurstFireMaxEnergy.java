@@ -36,14 +36,14 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         try {
           vla.field_E = param1;
           if (param0 != 1043) {
-            GetBurstFireMaxEnergy.b(false);
+            GetBurstFireMaxEnergy.clearSharedReferences(false);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ew.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           return;
         }

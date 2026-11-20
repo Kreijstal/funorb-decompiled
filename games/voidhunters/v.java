@@ -15,8 +15,8 @@ final class v extends htb {
         return this.field_G.a((byte) -118);
     }
 
-    final static phb[] b(boolean param0) {
-        phb[] var1;
+    final static Sprite[] b(boolean param0) {
+        Sprite[] var1;
         int var2;
         int var3;
         byte[] var5;
@@ -35,7 +35,7 @@ final class v extends htb {
         int[] var24;
         int[] var26;
         var8 = VoidHunters.field_G;
-        var1 = new phb[mma.field_a];
+        var1 = new Sprite[mma.field_a];
         if (!param0) {
           for (var2 = 0; mma.field_a > var2; var2++) {
             var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
@@ -46,7 +46,7 @@ final class v extends htb {
               for (var6 = 0; var3 > var6; var6++) {
                 var10[var6] = rlb.field_d[dla.a((int) var25[var6], 255)];
               }
-              var1[var2] = new phb(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var26);
+              var1[var2] = new Sprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var26);
             } else {
               var15 = SetInnateThrusters.field_o[var2];
               var11 = var15;
@@ -58,7 +58,7 @@ final class v extends htb {
               for (var7 = 0; var3 > var7; var7++) {
                 var6_ref_int__[var7] = SetAngularForceDownshift.a(dla.a(var15[var7] << 24, -16777216), rlb.field_d[dla.a((int) var25[var7], 255)]);
               }
-              var1[var2] = (phb) ((Object) new jva(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
+              var1[var2] = (Sprite) ((Object) new jva(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
             }
           }
         } else {
@@ -72,7 +72,7 @@ final class v extends htb {
               for (var6 = 0; var3 > var6; var6++) {
                 var10[var6] = rlb.field_d[dla.a((int) var23[var6], 255)];
               }
-              var1[var2] = new phb(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var24);
+              var1[var2] = new Sprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var24);
             } else {
               var15 = SetInnateThrusters.field_o[var2];
               var11 = var15;
@@ -84,7 +84,7 @@ final class v extends htb {
               for (var7 = 0; var3 > var7; var7++) {
                 var6_ref_int__[var7] = SetAngularForceDownshift.a(dla.a(var15[var7] << 24, -16777216), rlb.field_d[dla.a((int) var23[var7], 255)]);
               }
-              var1[var2] = (phb) ((Object) new jva(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
+              var1[var2] = (Sprite) ((Object) new jva(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
             }
           }
         }

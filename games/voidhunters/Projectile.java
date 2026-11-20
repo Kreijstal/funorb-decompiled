@@ -85,7 +85,7 @@ final class Projectile extends ara implements DiffableState {
         this.targetBody = param0;
     }
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_r = null;
         int var1 = -35 % ((param0 + 84) / 39);
         field_k = null;

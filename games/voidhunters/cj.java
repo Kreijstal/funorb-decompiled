@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj extends le {
+final class cj extends TextureOperation {
     private int field_i;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -40,7 +40,7 @@ final class cj extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_34_2 = 0;
@@ -73,11 +73,11 @@ final class cj extends le {
         int[] var19;
         int[] var11Lifetime1;
         var9 = VoidHunters.field_G;
-        var11 = this.field_f.a((byte) 118, param0);
+        var11 = this.field_f.getRow((byte) 118, param0);
         var3 = var11;
         if (this.field_f.field_e) {
-          var19 = this.a(0, param0, 255);
-          var18 = this.a(1, param0, 255);
+          var19 = this.getInputMonochromeRow(0, param0, 255);
+          var18 = this.getInputMonochromeRow(1, param0, 255);
           var8 = this.field_i;
           if (1 == var8) {
             var11Lifetime1 = var3;
@@ -215,7 +215,7 @@ final class cj extends le {
         }
         if (!param1) {
           var10 = (PacketBuffer) null;
-          this.a(-107, 21, (PacketBuffer) null);
+          this.decodeParameter(-107, 21, (PacketBuffer) null);
         }
         return var3;
     }
@@ -225,7 +225,7 @@ final class cj extends le {
         this.field_i = 6;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[] stackIn_33_0 = null;
         int stackIn_33_1 = 0;
         int stackIn_34_2 = 0;
@@ -322,13 +322,13 @@ final class cj extends le {
         int[] var56Lifetime1;
         int[] var57Lifetime1;
         var22 = VoidHunters.field_G;
-        var33 = this.field_d.a(param1, (byte) -112);
+        var33 = this.field_d.getRow(param1, (byte) -112);
         var24 = var33;
         var23 = var24;
         var3 = var23;
         if (this.field_d.field_g) {
-          var50 = this.a((byte) 59, 0, param1);
-          var51 = this.a((byte) 110, 1, param1);
+          var50 = this.getInputColorRow((byte) 59, 0, param1);
+          var51 = this.getInputColorRow((byte) 110, 1, param1);
           var12 = var33[0];
           var13 = var33[1];
           var14 = var33[2];

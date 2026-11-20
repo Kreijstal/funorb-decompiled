@@ -7,7 +7,7 @@ final class gn extends kva implements eb {
     private int field_l;
     static gl field_k;
 
-    gn(jp param0, kb param1, int param2, int param3, float[] param4, int param5, int param6) {
+    gn(OpenGlGpuToolkit param0, kb param1, int param2, int param3, float[] param4, int param5, int param6) {
         super(param0, 34037, param1, mj.field_d, param2 * param3, false);
         try {
           this.field_j = param3;
@@ -39,7 +39,7 @@ final class gn extends kva implements eb {
         super.b(param0);
     }
 
-    gn(jp param0, int param1, int param2, int[] param3, int param4, int param5) {
+    gn(OpenGlGpuToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         super(param0, 34037, qua.field_d, mj.field_f, param2 * param1, false);
         try {
           this.field_j = param2;
@@ -53,7 +53,7 @@ final class gn extends kva implements eb {
         }
     }
 
-    gn(jp param0, kb param1, int param2, int param3, byte[] param4, int param5, int param6) {
+    gn(OpenGlGpuToolkit param0, kb param1, int param2, int param3, byte[] param4, int param5, int param6) {
         super(param0, 34037, param1, mj.field_f, param3 * param2, false);
         try {
           this.field_l = param2;
@@ -77,7 +77,7 @@ final class gn extends kva implements eb {
         return param0;
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 77) {
           return;
         }
@@ -167,7 +167,7 @@ final class gn extends kva implements eb {
         }
     }
 
-    gn(jp param0, kb param1, mj param2, int param3, int param4) {
+    gn(OpenGlGpuToolkit param0, kb param1, mj param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param3 * param4, false);
         try {
           this.field_j = param4;

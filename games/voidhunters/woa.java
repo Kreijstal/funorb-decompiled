@@ -38,7 +38,7 @@ final class woa implements wib {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -16777216) {
           return;
         }

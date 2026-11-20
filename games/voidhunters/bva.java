@@ -9,7 +9,7 @@ final class bva extends vmb {
     static String field_g;
     static boolean field_d;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 23008) {
           return;
         }

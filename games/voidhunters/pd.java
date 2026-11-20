@@ -9,7 +9,7 @@ final class pd extends IntrusiveNode {
     int field_d;
     int field_h;
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 2 % ((param0 - 73) / 41);
         field_g = (int[][]) null;
     }

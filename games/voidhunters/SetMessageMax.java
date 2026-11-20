@@ -4,7 +4,7 @@
 final class SetMessageMax extends ConsoleCommand {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           field_o = (String) null;
           field_o = null;
@@ -23,7 +23,7 @@ final class SetMessageMax extends ConsoleCommand {
         try {
           hb.field_a = arguments[0].intValue(107);
           if (obfuscationGuard > -119) {
-            SetMessageMax.a(-49);
+            SetMessageMax.clearSharedReferences(-49);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

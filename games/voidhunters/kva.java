@@ -4,7 +4,7 @@
 abstract class kva implements ura {
     private int field_a;
     kb field_f;
-    jp field_h;
+    OpenGlGpuToolkit field_h;
     private int field_d;
     private boolean field_c;
     mj field_b;
@@ -481,7 +481,7 @@ abstract class kva implements ura {
         jaggl.OpenGL.glBindTexture(this.field_e, this.field_a);
     }
 
-    kva(jp param0, int param1, kb param2, mj param3, int param4, boolean param5) {
+    kva(OpenGlGpuToolkit param0, int param1, kb param2, mj param3, int param4, boolean param5) {
         this.field_i = cs.field_a;
         try {
           this.field_h = param0;

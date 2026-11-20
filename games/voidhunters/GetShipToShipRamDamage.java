@@ -64,7 +64,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 != 2) {
           field_p = (String) null;

@@ -7,7 +7,7 @@ final class sf extends da {
     private int[] field_g;
     private int[] field_e;
     private int[] field_c;
-    private sob field_f;
+    private SoftwareToolkit field_f;
 
     private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
         int var24 = 0;
@@ -236,7 +236,7 @@ final class sf extends da {
         }
     }
 
-    sf(sob param0, sw param1, ima[] param2, int[] param3, int[] param4) {
+    sf(SoftwareToolkit param0, sw param1, ima[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_f = param0;

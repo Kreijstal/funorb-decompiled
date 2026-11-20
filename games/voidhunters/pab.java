@@ -21,7 +21,7 @@ final class pab extends DualLinkNode {
         GetDebrisSurvives.field_q = true;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_k = null;
         if (param0) {
           field_k = (kka[]) null;

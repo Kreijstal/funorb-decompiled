@@ -47,7 +47,7 @@ final class SetDebrisCollision extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 >= -126) {
           field_o = (String) null;

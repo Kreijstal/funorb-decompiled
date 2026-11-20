@@ -98,7 +98,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
           var8 = lma.a(20, var3, var6, (byte) -16);
           dma.b(var7, var8, var5, var6, 0);
           if (param1 <= 9) {
-            SetPhasedEnergyBeamPulsetime.e((byte) 26);
+            SetPhasedEnergyBeamPulsetime.clearSharedReferences((byte) 26);
           }
           dma.d(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
           qc.field_q.field_eb.a(param0, 3 + var7, var8 + 1 + atb.field_d - qc.field_q.field_eb.field_k, 500, 1000, 0, -1, 0, 0, nna.field_w);
@@ -107,7 +107,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < -36) {
           field_q = null;
           field_o = null;

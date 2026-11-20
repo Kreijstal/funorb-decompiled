@@ -12,7 +12,7 @@ final class pl extends bia {
         return new khb[]{SetFighterBayAimspeed.field_o, SetShowTutorial.field_p, SetMassDriverFireForce.field_p};
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = -3 % ((27 - param0) / 58);
         field_e = null;
     }

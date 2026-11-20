@@ -4,7 +4,7 @@
 final class SetTorpedoProjectileDamage extends ConsoleCommand {
     static String field_o;
     static String[] field_q;
-    static phb[][] field_p;
+    static Sprite[][] field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -16,7 +16,7 @@ final class SetTorpedoProjectileDamage extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(144, 62, arguments[0].intValue(55));
           if (obfuscationGuard >= -119) {
-            field_p = (phb[][]) null;
+            field_p = (Sprite[][]) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -38,13 +38,13 @@ final class SetTorpedoProjectileDamage extends ConsoleCommand {
         if (param0 == 0) {
           field_q = null;
           field_o = null;
-          field_p = (phb[][]) null;
+          field_p = (Sprite[][]) null;
           return;
         }
         SetTorpedoProjectileDamage.a(55);
         field_q = null;
         field_o = null;
-        field_p = (phb[][]) null;
+        field_p = (Sprite[][]) null;
     }
 
     SetTorpedoProjectileDamage(String param0, Class[] param1, String param2) {

@@ -8,7 +8,7 @@ final class epb extends pw {
     private float field_l;
     private float field_j;
     private float field_h;
-    static phb field_m;
+    static Sprite field_m;
     private float field_c;
     private float field_f;
     private float field_k;
@@ -121,7 +121,7 @@ final class epb extends pw {
           if (!param0) {
             return;
           }
-          epb.c(30);
+          epb.clearSharedReferences(30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -176,9 +176,9 @@ final class epb extends pw {
         this.field_k = 1.0f;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 13) {
-          field_m = (phb) null;
+          field_m = (Sprite) null;
           field_m = null;
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GameSnapshot extends tja implements DiffableState, utb {
+final class GameSnapshot extends tja implements DiffableState, CompactGameState {
     MissionState missionState;
     SettingsInstance settings;
     World world;
@@ -184,7 +184,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         super.a(param0, 122);
         if (param1 <= 93) {
           IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
-          this.a((IsaacPacketBuffer) null, -44);
+          this.readCompactState((IsaacPacketBuffer) null, -44);
         }
         this.world = new World(param0);
         this.settings = new SettingsInstance();
@@ -409,7 +409,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         }
     }
 
-    public final void a(IsaacPacketBuffer param0, int param1) {
+    public final void readCompactState(IsaacPacketBuffer param0, int param1) {
         int var4 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -426,7 +426,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
             if (null == this.world) {
               this.world = new World();
             }
-            this.world.a(param0, 32);
+            this.world.readCompactState(param0, 32);
           } else {
             this.world = null;
           }
@@ -469,7 +469,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         }
     }
 
-    public final void a(IsaacPacketBuffer param0, byte param1) {
+    public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
@@ -493,7 +493,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
           stackIn_2_1 = -121;
           stackIn_3_2 = (this.world != null);
           if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.world.a(param0, (byte) -126);
+            this.world.writeCompactState(param0, (byte) -126);
           }
           if (param1 >= -91) {
             return;

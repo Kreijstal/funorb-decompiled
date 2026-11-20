@@ -39,7 +39,7 @@ final class kca {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 124) {
           field_a = (String) null;
         }

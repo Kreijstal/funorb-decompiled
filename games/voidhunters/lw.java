@@ -23,7 +23,7 @@ final class lw extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_e = null;
         if (param0) {
           field_i = (llb) null;

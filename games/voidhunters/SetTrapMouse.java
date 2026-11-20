@@ -18,7 +18,7 @@ final class SetTrapMouse extends ConsoleCommand {
         try {
           SetNebulaProximityFadeDownshift.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard >= -119) {
-            SetTrapMouse.b(true);
+            SetTrapMouse.clearSharedReferences(true);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -36,7 +36,7 @@ final class SetTrapMouse extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (param0) {
           field_o = (String) null;

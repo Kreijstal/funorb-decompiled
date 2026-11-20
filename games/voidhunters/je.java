@@ -105,7 +105,7 @@ final class je {
         var1.unlink(-3846);
     }
 
-    final void a(int param0, pf param1) {
+    final void a(int param0, GpuToolkit param1) {
         try {
           this.field_a.a(param0, 786336, 97);
         } catch (RuntimeException runtimeException) {
@@ -113,7 +113,7 @@ final class je {
         }
     }
 
-    je(pf param0) {
+    je(GpuToolkit param0) {
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
@@ -136,65 +136,65 @@ final class je {
           var7 = this.field_b.a((byte) -30, true);
           if (var7 != null) {
             var8 = param0.a(var7, false);
-            if (jaclib.memory.Stream.a()) {
+            if (jaclib.memory.Stream.isBigEndian()) {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = var4_int * 4;
-                var8.b(var5);
-                var8.b(var5 + 1);
-                var8.b(var5 + 2);
-                var8.b(var5 + 2);
-                var8.b(3 + var5);
-                var8.b(var5);
+                var8.writeShort(var5);
+                var8.writeShort(var5 + 1);
+                var8.writeShort(var5 + 2);
+                var8.writeShort(var5 + 2);
+                var8.writeShort(3 + var5);
+                var8.writeShort(var5);
               }
             } else {
               for (var4_int = 0; 8191 > var4_int; var4_int++) {
                 var5 = 4 * var4_int;
-                var8.a(var5);
-                var8.a(var5 + 1);
-                var8.a(var5 + 2);
-                var8.a(2 + var5);
-                var8.a(var5 + 3);
-                var8.a(var5);
+                var8.writeShortLE(var5);
+                var8.writeShortLE(var5 + 1);
+                var8.writeShortLE(var5 + 2);
+                var8.writeShortLE(2 + var5);
+                var8.writeShortLE(var5 + 3);
+                var8.writeShortLE(var5);
               }
             }
-            var8.b();
+            var8.flush();
             this.field_b.b(-93);
           }
           var9 = this.field_d.a(true, (byte) 41);
           if (var9 != null) {
             var4 = param0.a(var9, false);
-            if (jaclib.memory.Stream.a()) {
+            if (jaclib.memory.Stream.isBigEndian()) {
               for (var5Lifetime1 = 0; var5Lifetime1 < 8191; var5Lifetime1++) {
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(-1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(-1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(-1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(-1.0f);
+                var4.writeFloat(0.0f);
               }
             } else {
               for (var5Lifetime1 = 0; var5Lifetime1 < 8191; var5Lifetime1++) {
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(-1.0f);
+                var4.writeFloatLE(0.0f);
               }
             }
-            var4.b();
+            var4.flush();
             this.field_d.b(-20836);
           }
           return;

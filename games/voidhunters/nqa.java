@@ -33,7 +33,7 @@ final class nqa {
             if (var2 == null) {
               return null;
             }
-            if (!VoidHunters.a(true, var2)) {
+            if (!VoidHunters.checkDuplicateReference(true, var2)) {
               var2 = param0.next((byte) 98);
               continue;
             }
@@ -55,7 +55,7 @@ final class nqa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -30) {
           return;
         }

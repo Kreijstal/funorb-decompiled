@@ -37,7 +37,7 @@ final class lg extends uj {
         return cbb.field_h;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 108) {
           field_d = (String) null;
           field_d = null;

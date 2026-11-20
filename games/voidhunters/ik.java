@@ -25,7 +25,7 @@ final class ik extends IntrusiveNode {
         var2[65] = apb.field_a;
         var2[149] = pea.field_a;
         var2[32] = Particle.field_I;
-        var2[17] = dcb.field_d;
+        var2[17] = ColorRowCacheEntry.field_d;
         var2[35] = GetBombletSprayReload.field_s;
         var2[39] = GrappleLauncherBehaviour.field_d;
         var2[72] = aea.field_a;
@@ -134,7 +134,7 @@ final class ik extends IntrusiveNode {
         var2[20] = rma.field_b;
         var2[112] = MissionEvent.field_a;
         var2[0] = SetAutoDetail.field_o;
-        var2[4] = dcb.field_f;
+        var2[4] = ColorRowCacheEntry.field_f;
         var2[88] = qh.field_J;
         var2[22] = wqa.field_b;
         var2[167] = GetShieldsDirectionalRadius.field_p;

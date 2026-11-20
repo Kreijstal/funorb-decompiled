@@ -20,7 +20,7 @@ final class SetTorpedoAcceleration extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 169) {
           return;
         }
@@ -37,7 +37,7 @@ final class SetTorpedoAcceleration extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            SetTorpedoAcceleration.a(58);
+            SetTorpedoAcceleration.clearSharedReferences(58);
           }
           SetMachineGunEnergyUsed.a(169, 62, arguments[0].intValue(42));
           stackIn_3_0 = new ConsoleValue("void");

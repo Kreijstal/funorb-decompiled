@@ -41,7 +41,7 @@ final class uva extends IntrusiveNode {
         field_f = var8;
     }
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_f = null;
     }
 

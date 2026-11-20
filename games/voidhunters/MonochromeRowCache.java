@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gab {
+final class MonochromeRowCache {
     private int field_f;
     static String[] field_j;
-    private osa[] field_a;
+    private MonochromeRowCacheEntry[] field_a;
     private int field_c;
     static sfa field_b;
     private int field_d;
@@ -13,7 +13,7 @@ final class gab {
     private int[][] field_h;
     boolean field_e;
 
-    final int[][] b(int param0) {
+    final int[][] getFullImage(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (this.field_g != this.field_c) {
@@ -28,7 +28,7 @@ final class gab {
         return this.field_h;
     }
 
-    final void a(boolean param0) {
+    final void clear(boolean param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         for (var2 = 0; var2 < this.field_c; var2++) {
@@ -38,12 +38,12 @@ final class gab {
         this.field_a = null;
         this.field_i.clear(100);
         if (param0) {
-          this.b(122);
+          this.getFullImage(122);
         }
         this.field_i = null;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 15325) {
           return;
         }
@@ -51,12 +51,12 @@ final class gab {
         field_b = null;
     }
 
-    final int[] a(byte param0, int param1) {
+    final int[] getRow(byte param0, int param1) {
         boolean stackIn_5_1 = false;
         boolean stackIn_16_1 = false;
         int var3;
-        osa var4;
-        osa var5;
+        MonochromeRowCacheEntry var4;
+        MonochromeRowCacheEntry var5;
         int var6;
         var6 = VoidHunters.field_G;
         var3 = -45 / ((param0 - 80) / 37);
@@ -78,11 +78,11 @@ final class gab {
         } else {
           this.field_e = true;
           if (this.field_d < this.field_c) {
-            var4 = new osa(param1, this.field_d);
+            var4 = new MonochromeRowCacheEntry(param1, this.field_d);
             this.field_d = this.field_d + 1;
           } else {
-            var5 = (osa) (this.field_i.last((byte) 116));
-            var4 = new osa(param1, var5.field_f);
+            var5 = (MonochromeRowCacheEntry) (this.field_i.last((byte) 116));
+            var4 = new MonochromeRowCacheEntry(param1, var5.field_f);
             this.field_a[var5.field_d] = null;
             var5.unlink(-3846);
           }
@@ -92,7 +92,7 @@ final class gab {
         return this.field_h[var4.field_f];
     }
 
-    gab(int param0, int param1, int param2) {
+    MonochromeRowCache(int param0, int param1, int param2) {
         this.field_f = -1;
         this.field_d = 0;
         this.field_i = new IntrusiveDeque();
@@ -100,7 +100,7 @@ final class gab {
         this.field_g = param1;
         this.field_c = param0;
         this.field_h = new int[this.field_c][param2];
-        this.field_a = new osa[this.field_g];
+        this.field_a = new MonochromeRowCacheEntry[this.field_g];
     }
 
     static {

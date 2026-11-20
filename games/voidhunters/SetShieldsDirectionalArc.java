@@ -4,7 +4,7 @@
 final class SetShieldsDirectionalArc extends ConsoleCommand {
     static llb field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 26 / ((43 - param0) / 39);
         field_o = null;
     }
@@ -68,7 +68,7 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
 
     final static int a(int param0) {
         if (param0 != -22954) {
-          SetShieldsDirectionalArc.e((byte) 3);
+          SetShieldsDirectionalArc.clearSharedReferences((byte) 3);
           return ot.field_b;
         }
         return ot.field_b;

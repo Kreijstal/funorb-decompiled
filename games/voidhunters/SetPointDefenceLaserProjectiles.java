@@ -8,7 +8,7 @@ final class SetPointDefenceLaserProjectiles extends ConsoleCommand {
     static int field_o;
     static String field_q;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_q = null;
         if (param0 != 88) {

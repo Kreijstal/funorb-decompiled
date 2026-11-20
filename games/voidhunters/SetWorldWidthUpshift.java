@@ -12,7 +12,7 @@ final class SetWorldWidthUpshift extends ConsoleCommand {
     final static GraphicsToolkit a(d param0, int param1, int param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
-        sob stackIn_4_0 = null;
+        SoftwareToolkit stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -21,7 +21,7 @@ final class SetWorldWidthUpshift extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > 20) {
-            stackIn_4_0 = new sob(param3, param0, param4, param1);
+            stackIn_4_0 = new SoftwareToolkit(param3, param0, param4, param1);
             return (GraphicsToolkit) ((Object) stackIn_4_0);
           }
           stackIn_2_0 = (GraphicsToolkit) null;

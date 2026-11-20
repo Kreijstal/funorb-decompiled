@@ -23,7 +23,7 @@ final class rc implements dja {
         return (SerializableGameState) ((Object) new MissionGenerationData());
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 540800) {
           field_a = (String) null;

@@ -7,7 +7,7 @@ final class qeb {
     static String field_c;
     int field_b;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 >= -115) {
           return;
         }

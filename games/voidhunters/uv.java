@@ -6,7 +6,7 @@ final class uv implements wwa {
     private int field_m;
     private int field_l;
     private int field_n;
-    private no field_j;
+    private BitmapFont field_j;
     private int field_e;
     private int field_k;
     private int field_b;
@@ -111,7 +111,7 @@ final class uv implements wwa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         field_a = null;
         if (param0 != 22089) {
@@ -119,7 +119,7 @@ final class uv implements wwa {
         }
     }
 
-    uv(no param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    uv(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_e = 1;
         this.field_b = 1;
         try {

@@ -19,7 +19,7 @@ final class sv extends uda {
         return true;
     }
 
-    sv(pf param0) {
+    sv(GpuToolkit param0) {
         super(param0);
     }
 

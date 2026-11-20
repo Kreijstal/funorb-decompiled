@@ -59,7 +59,7 @@ final class hob extends IntrusiveNode {
     final static void a(int param0, asb param1) {
         int var3 = 0;
         int var4 = 0;
-        phb var2 = new phb(param1.a("", true, "final_frame.jpg"), (java.awt.Component) ((Object) igb.field_a));
+        Sprite var2 = new Sprite(param1.a("", true, "final_frame.jpg"), (java.awt.Component) ((Object) igb.field_a));
         if (param0 <= 23) {
           return;
         }
@@ -67,10 +67,10 @@ final class hob extends IntrusiveNode {
           var3 = var2.field_q;
           var4 = var2.field_p;
           SetOndamageParticleSpeed.e(3);
-          GetToggledScoreboard.field_o = new phb(var3, 3 * var4 / 4);
+          GetToggledScoreboard.field_o = new Sprite(var3, 3 * var4 / 4);
           GetToggledScoreboard.field_o.b();
           var2.c(0, 0);
-          reb.field_a = new phb(var3, var4 - GetToggledScoreboard.field_o.field_p);
+          reb.field_a = new Sprite(var3, var4 - GetToggledScoreboard.field_o.field_p);
           reb.field_a.b();
           var2.c(0, -GetToggledScoreboard.field_o.field_p);
           reb.field_a.field_l = GetToggledScoreboard.field_o.field_p;
@@ -80,7 +80,7 @@ final class hob extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_e = null;
         field_l = null;
         int var1 = 101 % ((param0 - 66) / 34);

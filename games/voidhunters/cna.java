@@ -8,7 +8,7 @@ final class cna extends llb {
     llb field_yb;
     static int[] field_zb;
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_zb = null;
         if (param0 != 1) {
           field_wb = (String) null;
@@ -28,7 +28,7 @@ final class cna extends llb {
         }
     }
 
-    cna(long param0, llb param1, llb param2, llb param3, phb param4, String param5) {
+    cna(long param0, llb param1, llb param2, llb param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

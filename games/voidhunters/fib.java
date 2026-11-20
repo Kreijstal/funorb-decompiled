@@ -91,7 +91,7 @@ final class fib extends uda {
         }
     }
 
-    fib(jp param0, asb param1, rga param2) {
+    fib(OpenGlGpuToolkit param0, asb param1, rga param2) {
         super(param0);
         ue var4 = null;
         RuntimeException var4_ref = null;
@@ -153,7 +153,7 @@ final class fib extends uda {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_h = null;
         field_j = null;
         if (param0 > -66) {

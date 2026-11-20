@@ -34,7 +34,7 @@ final class SetUseTriFill extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         int var1 = -89 / ((param0 - 44) / 32);
     }

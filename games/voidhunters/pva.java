@@ -38,7 +38,7 @@ final class pva extends uj {
         return true;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         if (param0 != 109) {
           field_d = (llb) null;

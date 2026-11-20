@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl {
-    int[] field_a;
+final class MidiChannelLevels {
+    int[] levels;
     static int[] field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -26,7 +26,7 @@ final class cl {
           if (param0 == -3518) {
             return;
           }
-          cl.a((byte) 67);
+          MidiChannelLevels.clearSharedReferences((byte) 67);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -35,13 +35,13 @@ final class cl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         int var1 = 51 % ((-31 - param0) / 36);
     }
 
-    public cl() {
-        this.field_a = new int[16];
+    public MidiChannelLevels() {
+        this.levels = new int[16];
     }
 
     static {

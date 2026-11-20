@@ -17,7 +17,7 @@ final class vlb implements dja {
         return (SerializableGameState) ((Object) new TargetLock());
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 >= -48) {
           field_a = (llb) null;

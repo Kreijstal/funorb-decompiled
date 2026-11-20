@@ -673,7 +673,7 @@ final class MissionState implements DiffableState {
           if (param0 <= 54) {
             this.phaseTimer = 126;
           }
-          var5.customVariables = (MissionVariable[]) (sqb.a(var5.customVariables, this.customVariables, 1, SetUseTrails.field_p, false));
+          var5.customVariables = (MissionVariable[]) (SpriteDimensions.a(var5.customVariables, this.customVariables, 1, SetUseTrails.field_p, false));
           if (this.nextround == null) {
             var5.nextround = null;
           } else {
@@ -1166,7 +1166,7 @@ final class MissionState implements DiffableState {
               return;
             }
             if (this.missionPhase == 3) {
-              if (1 == dcb.field_f) {
+              if (1 == ColorRowCacheEntry.field_f) {
                 var19 = new int[2];
                 var13 = var19;
                 var11 = var13;

@@ -68,7 +68,7 @@ final class qpb extends mc {
         this.field_v = 256;
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_w = null;
         if (!param0) {
           field_w = (llb) null;
@@ -76,8 +76,8 @@ final class qpb extends mc {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        phb var7;
-        phb var8;
+        Sprite var7;
+        Sprite var8;
         if (param1 != 0) {
           return;
         }
@@ -92,7 +92,7 @@ final class qpb extends mc {
             this.field_t.b(param0 + this.field_g, param1, 74, param3 + this.field_r);
             return;
           }
-          var8 = new phb(this.field_t.field_h, this.field_t.field_f);
+          var8 = new Sprite(this.field_t.field_h, this.field_t.field_f);
           SetTorpedoEnergyUsed.a(117, var8);
           this.field_t.b(0, param1, 115, 0);
           bia.a((byte) 124);
@@ -107,7 +107,7 @@ final class qpb extends mc {
           this.field_t.b(param0 + this.field_g, param1, 74, param3 + this.field_r);
           return;
         }
-        var7 = new phb(this.field_t.field_h, this.field_t.field_f);
+        var7 = new Sprite(this.field_t.field_h, this.field_t.field_f);
         SetTorpedoEnergyUsed.a(117, var7);
         this.field_t.b(0, param1, 115, 0);
         bia.a((byte) 124);

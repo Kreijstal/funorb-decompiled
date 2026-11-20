@@ -4,12 +4,12 @@
 final class sca extends mc {
     private String field_A;
     private int field_z;
-    private no field_v;
+    private BitmapFont field_v;
     private int field_w;
     private boolean field_y;
     private int field_x;
 
-    sca(int param0, int param1, int param2, int param3, shb param4, boolean param5, int param6, int param7, no param8, int param9, String param10) {
+    sca(int param0, int param1, int param2, int param3, shb param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (wwa) null, (sba) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

@@ -44,7 +44,7 @@ final class GetNumStars extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 95 % ((param0 + 41) / 63);
         field_o = null;
     }

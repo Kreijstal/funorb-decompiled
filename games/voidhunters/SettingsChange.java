@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SettingsChange implements DiffableState {
-    static phb field_e;
+    static Sprite field_e;
     static int field_b;
     int id;
     int value;

@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class ko extends vjb {
-    static phb[] field_e;
+    static Sprite[] field_e;
     private int[] field_f;
     static int field_g;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 32 % ((52 - param0) / 49);
         field_e = null;
         field_d = null;
@@ -56,7 +56,7 @@ final class ko extends vjb {
         try {
           var12_int = (int)(-1.0f + param1 * (float)param10);
           if (param6 <= 90) {
-            ko.a(-90);
+            ko.clearSharedReferences(-90);
           }
           var12_int = var12_int & 255;
           var13 = (int)(param0 * (float)param8 - 1.0f);

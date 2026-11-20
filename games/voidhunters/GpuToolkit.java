@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class pf extends GraphicsToolkit {
+abstract class GpuToolkit extends GraphicsToolkit {
     private jaclib.memory.heap.NativeHeap field_jc;
     static String[] field_Yb;
     rga field_Mb;
@@ -533,7 +533,7 @@ abstract class pf extends GraphicsToolkit {
         }
     }
 
-    pf(java.awt.Canvas param0, Object param1, d param2, asb param3, int param4, int param5) {
+    GpuToolkit(java.awt.Canvas param0, Object param1, d param2, asb param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
         opa var9 = null;
@@ -979,25 +979,25 @@ abstract class pf extends GraphicsToolkit {
           return false;
         }
         jaclib.memory.Stream var9 = this.a(var10, false);
-        if (!jaclib.memory.Stream.a()) {
-          var9.a(param5);
-          var9.a(param1);
-          var9.a(param0);
-          var9.a(param4);
-          var9.a(param3);
-          var9.a(param6);
+        if (!jaclib.memory.Stream.isBigEndian()) {
+          var9.writeFloatLE(param5);
+          var9.writeFloatLE(param1);
+          var9.writeFloatLE(param0);
+          var9.writeFloatLE(param4);
+          var9.writeFloatLE(param3);
+          var9.writeFloatLE(param6);
         } else {
-          var9.b(param5);
-          var9.b(param1);
-          var9.b(param0);
-          var9.b(param4);
-          var9.b(param3);
-          var9.b(param6);
+          var9.writeFloat(param5);
+          var9.writeFloat(param1);
+          var9.writeFloat(param0);
+          var9.writeFloat(param4);
+          var9.writeFloat(param3);
+          var9.writeFloat(param6);
         }
         if (param2 >= -58) {
           this.field_Bb = -117;
         }
-        var9.b();
+        var9.flush();
         return this.field_S.b(-20836);
     }
 
@@ -1321,7 +1321,7 @@ abstract class pf extends GraphicsToolkit {
 
     final jaclib.memory.heap.NativeHeapBuffer a(boolean param0, int param1, int param2) {
         int var4 = -73 % ((param1 - 37) / 38);
-        return this.field_jc.a(param2, param0);
+        return this.field_jc.allocate(param2, param0);
     }
 
     final void T(int param0, int param1, int param2, int param3) {
@@ -1390,80 +1390,80 @@ abstract class pf extends GraphicsToolkit {
             var3 = this.field_C.a(true, (byte) 119);
             if (var3 != null) {
               var4 = this.a(var3, false);
-              if (jaclib.memory.Stream.a()) {
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
+              if (jaclib.memory.Stream.isBigEndian()) {
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(1.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
+                var4.writeFloat(0.0f);
               } else {
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(1.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
+                var4.writeFloatLE(0.0f);
               }
-              var4.b();
+              var4.flush();
               if (this.field_C.b(-20836)) {
                 break scanLoop1;
               }
@@ -1488,7 +1488,7 @@ abstract class pf extends GraphicsToolkit {
           if (param1) {
             this.field_Eb = (oj[]) null;
           }
-          this.field_kb.a(param0);
+          this.field_kb.setBuffer(param0);
           stackIn_3_0 = this.field_kb;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1712,24 +1712,24 @@ abstract class pf extends GraphicsToolkit {
             var3 = this.field_P.a(true, (byte) 52);
             if (var3 != null) {
               var4 = this.a(var3, false);
-              var4.b(0.0f);
-              var4.b(0.0f);
-              var4.b(0.0f);
+              var4.writeFloat(0.0f);
+              var4.writeFloat(0.0f);
+              var4.writeFloat(0.0f);
               for (var5 = 0; var5 <= 256; var5++) {
                 var6 = 3.141592653589793 * (double)(var5 * 2) / 256.0;
                 var8 = (float)Math.cos(var6);
                 var9 = (float)Math.sin(var6);
-                if (jaclib.memory.Stream.a()) {
-                  var4.b(var9);
-                  var4.b(var8);
-                  var4.b(0.0f);
+                if (jaclib.memory.Stream.isBigEndian()) {
+                  var4.writeFloat(var9);
+                  var4.writeFloat(var8);
+                  var4.writeFloat(0.0f);
                 } else {
-                  var4.a(var9);
-                  var4.a(var8);
-                  var4.a(0.0f);
+                  var4.writeFloatLE(var9);
+                  var4.writeFloatLE(var8);
+                  var4.writeFloatLE(0.0f);
                 }
               }
-              var4.b();
+              var4.flush();
               if (this.field_P.b(param0 ^ -23932)) {
                 break scanLoop1;
               }
@@ -2250,7 +2250,7 @@ abstract class pf extends GraphicsToolkit {
 
     abstract void l(byte param0);
 
-    public static void d(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_Yb = null;
         if (param0 != -101) {
           field_Yb = (String[]) null;
@@ -2428,7 +2428,7 @@ abstract class pf extends GraphicsToolkit {
     final void a(za param0) {
         try {
           this.field_jc = ((cba) (param0)).field_f;
-          this.field_m = this.field_jc.a(32768, false);
+          this.field_m = this.field_jc.allocate(32768, false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.GB(" + (param0 != null ? "{...}" : "null") + ')');
         }

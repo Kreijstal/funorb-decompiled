@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ksb extends le {
-    final int[][] a(int param0, int param1) {
+final class ksb extends TextureOperation {
+    final int[][] getColorRow(int param0, int param1) {
         int[][] var19 = null;
         int[] var21 = null;
         int[] var22 = null;
@@ -15,12 +15,12 @@ final class ksb extends le {
         if (param0 != 255) {
           ksb.b(-104, -124);
         }
-        int[][] var20 = this.field_d.a(param1, (byte) -97);
+        int[][] var20 = this.field_d.getRow(param1, (byte) -97);
         int[][] var15 = var20;
         int[][] var13 = var15;
         int[][] var3 = var13;
         if (this.field_d.field_g) {
-          var19 = this.a((byte) 76, 0, param1);
+          var19 = this.getInputColorRow((byte) 76, 0, param1);
           var21 = var19[0];
           var22 = var19[1];
           var23 = var19[2];
@@ -36,7 +36,7 @@ final class ksb extends le {
         return var13;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -66,17 +66,17 @@ final class ksb extends le {
         }
     }
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         if (!param1) {
           return (int[]) null;
         }
-        int[] var7 = this.field_f.a((byte) 4, param0);
+        int[] var7 = this.field_f.getRow((byte) 4, param0);
         int[] var3 = var7;
         if (this.field_f.field_e) {
-          var4 = this.a(0, param0, 255);
+          var4 = this.getInputMonochromeRow(0, param0, 255);
           for (var5 = 0; hob.field_d > var5; var5++) {
             var7[var5] = 4096 - var4[var5];
           }

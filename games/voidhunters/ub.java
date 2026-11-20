@@ -53,7 +53,7 @@ abstract class ub extends IntrusiveNode implements SerializableGameState {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_d = null;
         field_h = null;
         if (param0 <= 37) {

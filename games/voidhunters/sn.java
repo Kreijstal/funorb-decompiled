@@ -111,7 +111,7 @@ final class sn extends os implements oo {
                 var5.a(-128, fma.field_c, 11);
                 var5.a(-114, GetFighterBayAimspeed.field_q, 17);
               } else {
-                var5.a(-115, vab.field_a, -1);
+                var5.a(-115, ArbProgram.field_a, -1);
               }
             }
             if (param2.field_d == 3) {

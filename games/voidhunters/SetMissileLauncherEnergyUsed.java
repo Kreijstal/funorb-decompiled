@@ -64,7 +64,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
         GetDebrisGroupColour.field_r.a(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -32 / ((param0 - 39) / 32);
         field_q = null;
         field_r = null;

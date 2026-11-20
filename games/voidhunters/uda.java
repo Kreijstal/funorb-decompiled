@@ -4,7 +4,7 @@
 abstract class uda {
     static String field_c;
     static int field_b;
-    pf field_d;
+    GpuToolkit field_d;
     static String field_a;
 
     abstract void a(int param0, int param1, int param2);
@@ -80,7 +80,7 @@ abstract class uda {
 
     abstract void a(byte param0, int param1, ura param2);
 
-    uda(pf param0) {
+    uda(GpuToolkit param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

@@ -12,12 +12,12 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
     }
 
     final static void a(int param0) {
-        phb var1 = null;
-        phb var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         try {
-          var1 = new phb(540, 140);
+          var1 = new Sprite(540, 140);
           SetTorpedoEnergyUsed.a(29, var1);
           bfb.e();
           dma.a();

@@ -97,7 +97,7 @@ final class ptb extends MapClearanceArea implements DiffableState {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 < 120) {
           field_f = (String) null;

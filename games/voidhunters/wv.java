@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wv extends le {
+final class wv extends TextureOperation {
     private int field_j;
     private int field_m;
     private int field_i;
@@ -13,7 +13,7 @@ final class wv extends le {
         this.field_i = -1;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -21,7 +21,7 @@ final class wv extends le {
         RuntimeException var4 = null;
         try {
           if (param1 > -60) {
-            wv.d(-72);
+            wv.clearSharedReferences(-72);
           }
           if (param0 == 0) {
             this.field_i = param2.readUnsignedShort(1869);
@@ -41,15 +41,15 @@ final class wv extends le {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 65280) {
           return;
         }
         field_l = null;
     }
 
-    final void c(int param0) {
-        super.c(-115);
+    final void clearCache(int param0) {
+        super.clearCache(-115);
         this.field_k = null;
         if (param0 > -23) {
           this.field_i = 99;
@@ -58,12 +58,12 @@ final class wv extends le {
 
     final int d(byte param0) {
         if (param0 < 62) {
-          this.c(111);
+          this.clearCache(111);
         }
         return this.field_i;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int incrementValue$0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_6_1 = 0;
@@ -83,7 +83,7 @@ final class wv extends le {
         if (param0 != 255) {
           return (int[][]) null;
         }
-        var14 = this.field_d.a(param1, (byte) -101);
+        var14 = this.field_d.getRow(param1, (byte) -101);
         var13 = var14;
         var12 = var13;
         var3 = var12;
@@ -120,9 +120,9 @@ final class wv extends le {
         return var3;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void initializeCache(int param0, int param1, int param2) {
         int var4 = 0;
-        super.b(param0, param1, param2);
+        super.initializeCache(param0, param1, param2);
         if (this.field_i >= 0 &&
           nl.field_e != null) {
           var4 = nl.field_e.a(-20292, this.field_i).field_h ? 64 : 128;

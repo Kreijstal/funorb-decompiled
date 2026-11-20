@@ -13,15 +13,15 @@ final class gma {
 
     final void a(int param0) {
         if (this.field_c != null) {
-          this.field_c.a(false);
+          this.field_c.release(false);
           this.field_c = null;
         }
         if (null != this.field_b) {
-          this.field_b.a(false);
+          this.field_b.release(false);
           this.field_b = null;
         }
         if (this.field_a != null) {
-          this.field_a.a(false);
+          this.field_a.release(false);
           this.field_a = null;
         }
         if (param0 <= -36) {
@@ -42,7 +42,7 @@ final class gma {
     final void a(int param0, jagdx.IDirect3DSwapChain param1, jagdx.IDirect3DSurface param2) {
         this.field_a = param1;
         this.field_b = param2;
-        this.field_c = this.field_a.a(0, param0);
+        this.field_c = this.field_a.getBackBuffer(0, param0);
     }
 
     gma(jagdx.IDirect3DSwapChain param0, jagdx.IDirect3DSurface param1) {

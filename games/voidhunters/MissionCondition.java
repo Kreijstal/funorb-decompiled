@@ -24,7 +24,7 @@ class MissionCondition implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 16) {
-            MissionCondition.a((byte) 30);
+            MissionCondition.clearSharedReferences((byte) 30);
           }
           stackIn_3_0 = (int[]) (param2);
           return stackIn_3_0;
@@ -170,7 +170,7 @@ class MissionCondition implements DiffableState {
         whb.field_a = param4;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 > -45) {
           field_b = (String) null;
         }

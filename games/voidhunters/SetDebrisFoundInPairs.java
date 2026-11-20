@@ -191,10 +191,10 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
             stackIn_11_0 = stackOut_10_0;
             if (var20 == 0) {
               if (stackIn_11_0) {
-                var13 = cl.field_b[var10];
+                var13 = MidiChannelLevels.field_b[var10];
                 var14 = GetMachineGunAimspeed.field_o[var10];
-                var15 = cl.field_b[var11] - var13;
-                var16 = cl.field_b[var12] - var13;
+                var15 = MidiChannelLevels.field_b[var11] - var13;
+                var16 = MidiChannelLevels.field_b[var12] - var13;
                 var17 = GetMachineGunAimspeed.field_o[var11] - var14;
                 var18 = -var14 + GetMachineGunAimspeed.field_o[var12];
               }

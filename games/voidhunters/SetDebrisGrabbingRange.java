@@ -67,7 +67,7 @@ final class SetDebrisGrabbingRange extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 59) {
           field_o = (int[]) null;
           field_o = null;

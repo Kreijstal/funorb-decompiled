@@ -17,7 +17,7 @@ final class b extends ka {
     private short[] field_m;
     private byte[] field_k;
     private float[][] field_q;
-    private sob field_f;
+    private SoftwareToolkit field_f;
     private int field_A;
     private int[] field_o;
     private short[] field_g;
@@ -177,7 +177,7 @@ final class b extends ka {
         return this.field_d;
     }
 
-    b(sob param0) {
+    b(SoftwareToolkit param0) {
         this.field_n = false;
         this.field_A = 0;
         this.field_z = false;
@@ -186,7 +186,7 @@ final class b extends ka {
         this.field_f = param0;
     }
 
-    b(sob param0, cbb param1, int param2, int param3, int param4, int param5) {
+    b(SoftwareToolkit param0, cbb param1, int param2, int param3, int param4, int param5) {
         int var9_int = 0;
         int stackIn_6_0 = 0;
         int stackIn_41_0 = 0;

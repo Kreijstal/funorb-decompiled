@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class cm extends le {
+final class cm extends TextureOperation {
     private int field_r;
     private int field_s;
     private int field_p;
@@ -16,7 +16,7 @@ final class cm extends le {
     private int field_o;
     static int[] field_j;
 
-    final int[] a(int param0, boolean param1) {
+    final int[] getMonochromeRow(int param0, boolean param1) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         int stackIn_20_0 = 0;
@@ -76,12 +76,12 @@ final class cm extends le {
         int[] var26Lifetime1;
         int[][] var48Lifetime1;
         var38 = VoidHunters.field_G;
-        var3 = this.field_f.a((byte) -43, param0);
+        var3 = this.field_f.getRow((byte) -43, param0);
         if (!param1) {
           this.field_l = 74;
         }
         if (this.field_f.field_e) {
-          var47 = this.field_f.b(73);
+          var47 = this.field_f.getFullImage(73);
           var40 = var47;
           var4 = var40;
           var5 = 0;
@@ -263,7 +263,7 @@ final class cm extends le {
         this.field_o = 1024;
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -370,14 +370,14 @@ final class cm extends le {
         }
     }
 
-    final void c(byte param0) {
+    final void postDecode(byte param0) {
         if (param0 > -35) {
           Random var3 = (Random) null;
           this.a(72, -58, (int[][]) null, -109, -87, (Random) null, 122);
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_j = null;
         if (param0 > -115) {
           field_j = (int[]) null;

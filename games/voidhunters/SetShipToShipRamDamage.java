@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetShipToShipRamDamage extends ConsoleCommand {
-    static no field_o;
+    static BitmapFont field_o;
 
     SetShipToShipRamDamage(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -27,7 +27,7 @@ final class SetShipToShipRamDamage extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(3, 62, arguments[0].intValue(126));
           if (obfuscationGuard >= -119) {
-            field_o = (no) null;
+            field_o = (BitmapFont) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

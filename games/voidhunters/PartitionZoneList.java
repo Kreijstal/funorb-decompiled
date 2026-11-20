@@ -98,7 +98,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         }
         try {
           var3.field_b = this.field_b;
-          var3.zones = (PartitionZone[]) (sqb.a(var3.zones, this.zones, 1, dp.field_b, false));
+          var3.zones = (PartitionZone[]) (SpriteDimensions.a(var3.zones, this.zones, 1, dp.field_b, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cda.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -7,7 +7,7 @@ abstract class qc implements kd {
     kw field_p;
     private llb field_m;
     llb field_o;
-    no field_n;
+    BitmapFont field_n;
     soa field_h;
     private IntrusiveDeque field_i;
     static ri field_g;
@@ -160,7 +160,7 @@ abstract class qc implements kd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         if (param0 < 16) {
           return;
@@ -481,7 +481,7 @@ abstract class qc implements kd {
         }
     }
 
-    qc(no param0, eab param1) {
+    qc(BitmapFont param0, eab param1) {
         int var3_int = 0;
         llb var4 = null;
         llb var5 = null;

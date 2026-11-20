@@ -5,7 +5,7 @@ abstract class abb {
     static int field_a;
     static String field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, phb[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         int var21 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -167,7 +167,7 @@ abstract class abb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 4) {
           field_b = (String) null;

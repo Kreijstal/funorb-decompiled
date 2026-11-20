@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jwa extends le {
+final class jwa extends TextureOperation {
     static llb field_k;
     static int field_l;
     private int field_j;
@@ -19,13 +19,13 @@ final class jwa extends le {
         this.field_m = (16711680 & param0) >> 12;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int[] var4 = null;
         int[] var5 = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = VoidHunters.field_G;
-        int[][] var9 = this.field_d.a(param1, (byte) -98);
+        int[][] var9 = this.field_d.getRow(param1, (byte) -98);
         int[][] var3 = var9;
         if (this.field_d.field_g) {
           var4 = var9[0];
@@ -48,7 +48,7 @@ final class jwa extends le {
         this.b(param0, -121);
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

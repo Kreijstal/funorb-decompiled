@@ -5,7 +5,7 @@ final class slb {
     static int field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 13) {
           return;
         }

@@ -14,7 +14,7 @@ final class mjb extends aja {
     private int field_f;
     private int field_d;
     private boolean field_i;
-    private pf field_h;
+    private GpuToolkit field_h;
     private int field_g;
     private boolean field_a;
 
@@ -391,9 +391,9 @@ final class mjb extends aja {
         }
     }
 
-    mjb(pf param0, int param1, int param2, boolean param3) {
+    mjb(GpuToolkit param0, int param1, int param2, boolean param3) {
         Object stackIn_3_0;
-        pf stackIn_3_1;
+        GpuToolkit stackIn_3_1;
         int stackIn_3_2;
         int stackIn_3_3;
         int stackIn_3_4;
@@ -417,7 +417,7 @@ final class mjb extends aja {
           this.field_d = param1;
           this.field_h = param0;
           stackIn_3_0 = this;
-          stackIn_3_1 = (pf) (param0);
+          stackIn_3_1 = (GpuToolkit) (param0);
           stackIn_3_2 = 118;
           stackIn_3_3 = param1;
           stackIn_3_4 = param2;
@@ -426,7 +426,7 @@ final class mjb extends aja {
           } else {
             stackIn_4_5 = SetGrapplingHookFireForce.field_o;
           }
-          this.field_o = ((pf) (Object) stackIn_3_1).a(stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, mj.field_f);
+          this.field_o = ((GpuToolkit) (Object) stackIn_3_1).a(stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, mj.field_f);
           this.field_o.a(true, (byte) -98, true);
           stackIn_7_1 = (~param1 != ~this.field_o.b((byte) 113));
           this.field_j = stackIn_7_1;
@@ -451,7 +451,7 @@ final class mjb extends aja {
         }
     }
 
-    mjb(pf param0, int param1, int param2, int[] param3, int param4, int param5) {
+    mjb(GpuToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_11_1 = false;

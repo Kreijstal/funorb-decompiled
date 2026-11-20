@@ -51,7 +51,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = 90 / ((param0 + 87) / 38);
         field_a = null;
     }
@@ -85,7 +85,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
-            RemoveEventAction.b(49);
+            RemoveEventAction.clearSharedReferences(49);
           }
           super.writeState(param0, -110);
         } catch (RuntimeException runtimeException) {

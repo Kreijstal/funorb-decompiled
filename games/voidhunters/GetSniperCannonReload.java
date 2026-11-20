@@ -4,7 +4,7 @@
 final class GetSniperCannonReload extends ConsoleCommand {
     static IntrusiveDeque field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -1) {
           field_o = (IntrusiveDeque) null;

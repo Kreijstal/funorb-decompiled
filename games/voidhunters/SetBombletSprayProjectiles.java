@@ -35,7 +35,7 @@ final class SetBombletSprayProjectiles extends ConsoleCommand {
     final static void a(int param0) {
         SetMassDriverAimspeed.a(-105);
         if (param0 >= -104) {
-          SetBombletSprayProjectiles.e((byte) 50);
+          SetBombletSprayProjectiles.clearSharedReferences((byte) 50);
         }
     }
 
@@ -43,7 +43,7 @@ final class SetBombletSprayProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -27) {
           field_o = (String) null;
           field_o = null;

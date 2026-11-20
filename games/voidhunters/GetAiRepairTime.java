@@ -13,7 +13,7 @@ final class GetAiRepairTime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetAiRepairTime.a(9);
+            GetAiRepairTime.clearSharedReferences(9);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(228, 95));
           return stackIn_3_0;
@@ -107,7 +107,7 @@ final class GetAiRepairTime extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 22) {
           field_o = (String) null;
         }

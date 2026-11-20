@@ -27,7 +27,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         return this.index;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         int var1 = -42 / ((param0 - 27) / 47);
     }
@@ -141,7 +141,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
           param0.writeBits(-632, this.index, 32);
           param0.writeBits(-632, this.label, 32);
           if (param1 >= -109) {
-            SetVariableLabelAction.c(48);
+            SetVariableLabelAction.clearSharedReferences(48);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

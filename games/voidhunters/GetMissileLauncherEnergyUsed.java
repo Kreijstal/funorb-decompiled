@@ -39,7 +39,7 @@ final class GetMissileLauncherEnergyUsed extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -10515) {
           field_o = (String) null;

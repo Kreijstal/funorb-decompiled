@@ -5,7 +5,7 @@ final class tn {
     static String field_b;
     int field_a;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         if (param0 != 110) {
           field_b = (String) null;

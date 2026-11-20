@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ssa {
-    static no field_a;
+    static BitmapFont field_a;
     static String field_b;
 
     final static boolean b(int param0) {
@@ -13,7 +13,7 @@ final class ssa {
         return 2 <= SetAngularVelocitySustain.field_p ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 2) {

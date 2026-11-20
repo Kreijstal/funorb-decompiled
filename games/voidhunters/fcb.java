@@ -97,9 +97,9 @@ final class fcb implements oob {
         asb var12;
         Object var3;
         ii var4;
-        phb[][] var9;
+        Sprite[][] var9;
         caa[] var10;
-        phb[][] var14;
+        Sprite[][] var14;
         caa[] var15;
         int[] var16;
         int[] var19;
@@ -113,7 +113,7 @@ final class fcb implements oob {
           fka.a("Unpacking sounds", (byte) -104);
           GetAllowShipSaving.a(4410);
           IncrementVariableAction.a(bva.field_e, param0 ^ -69, 82.0f);
-          mab.field_a.d(param0 - 187);
+          mab.field_a.renderGameFrame(param0 - 187);
           this.field_c = new bmb(this.field_l, this.field_k);
           fa.field_d[0] = this.field_c.a("", "vh_menu_mouseover", (byte) 113);
           fa.field_d[1] = this.field_c.a("", "vh_menu_mouseover", (byte) 72);
@@ -246,7 +246,7 @@ final class fcb implements oob {
         if (null != this.field_h) {
           fka.a("Unpacking music", (byte) -125);
           IncrementVariableAction.a(GetBloomCoefficientPercentage.field_p, -1, 88.0f);
-          mab.field_a.d(-103);
+          mab.field_a.renderGameFrame(-103);
           pab.field_k = new kka[4];
           pab.field_k[0] = kka.a(this.field_h, "", "VH_Title_Music");
           pab.field_k[1] = kka.a(this.field_h, "", "VH_Ingame_Music");
@@ -278,8 +278,8 @@ final class fcb implements oob {
           this.field_d != null) {
           fka.a("Unpacking graphics", (byte) -113);
           IncrementVariableAction.a(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
-          mab.field_a.d(-112);
-          lhb.field_a = (no) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
+          mab.field_a.renderGameFrame(-112);
+          lhb.field_a = (BitmapFont) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.a(0, "basic", this.field_i, this.field_e, "antigrav_18_graphics1");
           kbb.a(var12, this.field_e, this.field_i, (byte) 88, var11);
           cbb.a(this.field_d, param0 ^ 57, this.field_i);
@@ -293,27 +293,27 @@ final class fcb implements oob {
           wu.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
           un.a(ubb.field_j, 121);
           un.a(wu.field_h, 126);
-          kua.field_a = new phb(32, 32);
+          kua.field_a = new Sprite(32, 32);
           kua.field_a.b();
           wu.field_h.c(0, 0, 32, 32);
           SetClientSideDragging.field_q.a((byte) -108);
           wu.field_h = null;
-          SetTorpedoProjectileDamage.field_p = new phb[ei.field_i.length][];
-          var9 = new phb[ei.field_i.length][];
+          SetTorpedoProjectileDamage.field_p = new Sprite[ei.field_i.length][];
+          var9 = new Sprite[ei.field_i.length][];
           var14 = var9;
           for (var5 = 0; var5 < ei.field_i.length; var5++) {
             SetTorpedoProjectileDamage.field_p[var5] = SetGrapplingHookRopeBreakLength.a(this.field_i, true, "basic", ei.field_i[var5]);
             var9[var5] = SetTorpedoProjectileDamage.field_p[var5];
           }
           dda.a(18090, false);
-          SetComponentBreakingExplosionForceMultiplier.a(gab.field_j, param0 + 29073);
+          SetComponentBreakingExplosionForceMultiplier.a(MonochromeRowCache.field_j, param0 + 29073);
           var10 = GetExplosionProjectileDamage.a(98, "basic", "extra_crowns", this.field_i);
           var15 = var10;
           var19 = new int[var10.length];
           for (var7 = 0; var19.length > var7; var7++) {
             var19[var7] = 9;
           }
-          cma.a(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, ms.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.field_b, var15, shb.field_o, ub.field_d);
+          cma.a(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.field_b, var15, shb.field_o, ub.field_d);
           kl.field_c = SetSniperCannonProjectiles.a(this.field_i, "lobby_game_logo", "basic", true);
           hk.b(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);
@@ -348,7 +348,7 @@ final class fcb implements oob {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_g = null;
         int var1 = -13 / ((59 - param0) / 48);
     }
@@ -360,7 +360,7 @@ final class fcb implements oob {
           param1 <= hab.field_i) {
           nn.a(param3, param4, param2, 112, param0, param1);
         } else {
-          cl.a(-3518, param0, param1, param2, param4, param3);
+          MidiChannelLevels.a(-3518, param0, param1, param2, param4, param3);
         }
         if (param5 >= -1) {
           field_g = (String) null;

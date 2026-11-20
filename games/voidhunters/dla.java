@@ -273,7 +273,7 @@ final class dla {
         return param0 & param1;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 101) {
           return;
         }

@@ -30,7 +30,7 @@ final class qda {
     private static int[] field_v;
     private static int[] field_t;
 
-    public static void a() {
+    public static void clearSharedReferences() {
         field_f = null;
         field_g = null;
         field_m = null;

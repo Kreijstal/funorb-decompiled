@@ -157,7 +157,7 @@ final class ida extends mc {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_x = null;
         int var1 = -8 % ((param0 - 22) / 62);
         field_w = null;

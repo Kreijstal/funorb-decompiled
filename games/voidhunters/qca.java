@@ -67,7 +67,7 @@ final class qca extends llb {
         return this.field_vb.e(param1 ^ 80) + (param0 + this.field_xb.e(param1 ^ 61));
     }
 
-    qca(long param0, phb param1, phb param2, int param3, llb param4, String param5) {
+    qca(long param0, Sprite param1, Sprite param2, int param3, llb param4, String param5) {
         this(param0, (llb) null, param4, param5);
         try {
           this.field_vb.field_q = param1;

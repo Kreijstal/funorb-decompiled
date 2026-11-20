@@ -75,7 +75,7 @@ final class ct {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         int var1 = 100 % ((param0 - 79) / 38);
         field_b = null;
         field_a = null;

@@ -9,7 +9,7 @@ final class SetUseTrails extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 8) {
           return;
         }

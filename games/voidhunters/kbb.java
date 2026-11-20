@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kbb extends le {
+final class kbb extends TextureOperation {
     static String field_q;
     private int field_i;
     private int field_j;
@@ -77,7 +77,7 @@ final class kbb extends le {
         }
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -118,7 +118,7 @@ final class kbb extends le {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         int var1 = -4 % ((-75 - param0) / 37);
     }
@@ -154,7 +154,7 @@ final class kbb extends le {
         stackIn_6_0 = (param1 <= param2) ? param1 : param2;
         var6 = stackIn_6_0;
         if (param0 > -10) {
-          kbb.e((byte) 5);
+          kbb.clearSharedReferences((byte) 5);
         }
         stackIn_11_0 = (var5 < param3) ? param3 : var5;
         var5Lifetime1 = stackIn_11_0;
@@ -337,7 +337,7 @@ final class kbb extends le {
         return;
     }
 
-    final int[][] a(int param0, int param1) {
+    final int[][] getColorRow(int param0, int param1) {
         int var11 = 0;
         int[][] var3;
         int[] var8;
@@ -352,7 +352,7 @@ final class kbb extends le {
         int[] var30;
         int[] var31;
         var12 = VoidHunters.field_G;
-        var20 = this.field_d.a(param1, (byte) -118);
+        var20 = this.field_d.getRow(param1, (byte) -118);
         var15 = var20;
         var13 = var15;
         var3 = var13;
@@ -362,7 +362,7 @@ final class kbb extends le {
           }
           return var3;
         }
-        var28 = this.a((byte) 108, 0, param1);
+        var28 = this.getInputColorRow((byte) 108, 0, param1);
         var30 = var28[0];
         var29 = var28[1];
         var31 = var28[2];

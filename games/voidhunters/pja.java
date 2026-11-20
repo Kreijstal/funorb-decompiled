@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pja extends le {
+class pja extends TextureOperation {
     static slb field_l;
     static String field_o;
     int field_p;
@@ -25,7 +25,7 @@ class pja extends le {
         }
     }
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -61,8 +61,8 @@ class pja extends le {
         return this.field_m;
     }
 
-    final void c(int param0) {
-        super.c(-75);
+    final void clearCache(int param0) {
+        super.clearCache(-75);
         if (param0 >= -23) {
           this.a(52);
           this.field_k = null;
@@ -94,7 +94,7 @@ class pja extends le {
         return 77;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -1) {
           return;
@@ -119,7 +119,7 @@ class pja extends le {
         return true;
     }
 
-    int[][] a(int param0, int param1) {
+    int[][] getColorRow(int param0, int param1) {
         int incrementValue$2 = 0;
         int incrementValue$1 = 0;
         int[][] var3;
@@ -152,7 +152,7 @@ class pja extends le {
         var11 = VoidHunters.field_G;
         if (param0 != 255) {
           this.a(53);
-          var14 = this.field_d.a(param1, (byte) -110);
+          var14 = this.field_d.getRow(param1, (byte) -110);
           var13 = var14;
           var12 = var13;
           var3 = var12;
@@ -192,7 +192,7 @@ class pja extends le {
           }
           return var3;
         }
-        var14Lifetime1 = this.field_d.a(param1, (byte) -110);
+        var14Lifetime1 = this.field_d.getRow(param1, (byte) -110);
         var13Lifetime1 = var14Lifetime1;
         var12Lifetime1 = var13Lifetime1;
         var3Lifetime1 = var12Lifetime1;

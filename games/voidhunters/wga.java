@@ -54,7 +54,7 @@ final class wga implements dja {
         return (SerializableGameState[]) ((Object) new RoundResult[param1]);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 == -1) {
           return;

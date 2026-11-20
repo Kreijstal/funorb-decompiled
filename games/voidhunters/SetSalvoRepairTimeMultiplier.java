@@ -7,7 +7,7 @@ final class SetSalvoRepairTimeMultiplier extends ConsoleCommand {
     static String field_o;
     static int field_r;
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -1) {
           return;
         }

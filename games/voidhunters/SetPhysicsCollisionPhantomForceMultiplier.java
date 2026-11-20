@@ -67,7 +67,7 @@ final class SetPhysicsCollisionPhantomForceMultiplier extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         int var1 = -72 / ((57 - param0) / 50);
         field_o = null;
     }

@@ -18,7 +18,7 @@ final class qr extends uda {
         }
     }
 
-    qr(pf param0) {
+    qr(GpuToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;
