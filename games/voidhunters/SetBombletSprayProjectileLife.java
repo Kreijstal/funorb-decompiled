@@ -108,7 +108,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
           var11 = param0.field_yb;
           if (var11.ensureProgram(param1 + 77) &&
             null == SetPhasedEnergyBeamProjectileOndamageParticles.field_o) {
-            var21 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 80, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
+            var21 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 80, 8, new FloatGradientNoiseSliceGenerator(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
             SetPhasedEnergyBeamProjectileOndamageParticles.field_o = EscapePodFactory.storeBytes(false, var21, param1 - 12461);
           }
           if (param1 == 16) {

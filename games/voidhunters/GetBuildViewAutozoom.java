@@ -11,7 +11,7 @@ final class GetBuildViewAutozoom extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetBuildViewAutozoom.a(0.19481031596660614f, 0.738810122013092f, -13, -0.6636441349983215f);
+            GetBuildViewAutozoom.lerp(0.19481031596660614f, 0.738810122013092f, -13, -0.6636441349983215f);
           }
           stackIn_3_0 = new ConsoleValue(GetPointDefenceLaserPulsetime.field_q);
           return stackIn_3_0;
@@ -29,11 +29,11 @@ final class GetBuildViewAutozoom extends ConsoleCommand {
         }
     }
 
-    final static float a(float param0, float param1, int param2, float param3) {
+    final static float lerp(float param0, float param1, int param2, float param3) {
         if (param2 < -2) {
           return param3 + (-param3 + param0) * param1;
         }
-        GetBuildViewAutozoom.a(0.4492854177951813f, 1.439752459526062f, -120, 2.3633742332458496f);
+        GetBuildViewAutozoom.lerp(0.4492854177951813f, 1.439752459526062f, -120, 2.3633742332458496f);
         return param3 + (-param3 + param0) * param1;
     }
 

@@ -84,7 +84,7 @@ final class PlayerContextMenu {
             World.a(param1, this.targetPlayerKey, param0 ^ -25);
           }
         } else {
-          ut.a(6, this.targetPlayerKey, param1);
+          PlayerRequestPackets.sendPlayerRequest(6, this.targetPlayerKey, param1);
         }
         if (param0 == 99) {
           return true;

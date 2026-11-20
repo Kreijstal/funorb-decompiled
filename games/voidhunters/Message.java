@@ -70,10 +70,10 @@ final class Message implements DiffableState {
         }
     }
 
-    final static float a(float param0, float param1, int param2, float param3, byte param4) {
+    final static float dotNoiseGradient(float param0, float param1, int param2, float param3, byte param4) {
         float[] var6 = null;
         if (param4 > 53) {
-          var6 = TickConditionFactory.field_a[param2];
+          var6 = TickConditionFactory.noiseGradients[param2];
           float[] var5 = var6;
           return param3 * var6[1] + var6[0] * param1 + param0 * var6[2];
         }

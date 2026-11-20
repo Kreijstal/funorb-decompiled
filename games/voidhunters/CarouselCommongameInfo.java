@@ -834,7 +834,7 @@ final class CarouselCommongameInfo implements DiffableState {
     private final void swapSlotsForDebug(int param0, int param1, int param2) {
         CarouselSlot var5 = null;
         int var4 = -85 % ((-55 - param2) / 38);
-        if (1 == ko.field_g &&
+        if (1 == FloatGradientNoiseSliceGenerator.field_g &&
           param0 == this.currentIndex) {
           var5 = this.history[param1];
           this.history[param1] = this.history[param0];

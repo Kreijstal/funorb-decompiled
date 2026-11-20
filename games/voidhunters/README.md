@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1423/1572 classes and 7123/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 149 opaque classes and 1092 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1427/1572 classes and 7139/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 145 opaque classes and 1076 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -94,6 +94,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `GraphicsToolkitSelector`, `GraphicsBackendOption`, `ToolkitCanvasContext` and `ToolkitViewState` expose renderer selection, native dependency loading and view restoration across toolkit replacement. `TimingGraph` retains the render/update duration rings. `UnderlinedLinkRenderer` names link drawing, while preset-ship factories, chat/cursor handling and special-order menu input have named helpers. `activatePendingSpecialOrder` identifies activation of an order staged by a click or shortcut. The existing fallback, timing, encryption, input and rendering behavior remains unchanged.
 
 `GameSession` now names every method. Its remaining entrypoints separate action input and submission, camera pan/follow/autozoom, ship visibility, minimap drawing, inspection guides, voting grids, scoreboard columns, respawn choices and round-status rendering. `World.isTeamRespawnEnabled` and `isTeamRespawnAllowed` distinguish the original custom-variable gate from phase/Armageddon eligibility. Existing trigger masks, neutral-team rules, random blueprint fallback, timers, guards and failure behavior remain intact.
+
+`FloatNoiseSliceGenerator` and `FloatGradientNoiseSliceGenerator` identify float-array noise slices, their gradient table and fractal accumulation helper. `OpenGlPbuffer` exposes native offscreen-buffer ownership. `PlayerRequestPackets` names targeted player-request framing. Chat-input initialization/disposal and transient-menu closing helpers have named entrypoints. Original gradient values, permutation swaps, per-octave signed-byte wrapping, random.dat fallbacks, native guards and dialog state changes remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

@@ -322,7 +322,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_invite_players", 23100);
                 if (var2 != null) {
-                  ko.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  FloatGradientNoiseSliceGenerator.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("close", 23100);
                 if (var2 != null) {
@@ -1700,7 +1700,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("ignorelistdupe", 23100);
                 if (var2 != null) {
-                  vjb.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  FloatNoiseSliceGenerator.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("ignorenotfound", 23100);
                 if (var2 != null) {
@@ -2070,7 +2070,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("canceldraw", 23100);
                 if (var2 != null) {
-                  ut.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  PlayerRequestPackets.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("acceptdraw", 23100);
                 if (null != var2) {

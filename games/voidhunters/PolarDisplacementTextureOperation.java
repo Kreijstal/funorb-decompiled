@@ -152,7 +152,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
     final static void updateDrawMenuLabel(int param0) {
         int var2 = VoidHunters.field_G;
         if ((1 << MatchingFieldValidator.field_g.localPlayerIndex & MatchingFieldValidator.field_g.state.drawOfferMask) != 0) {
-          HighscoreValueRequest.menuActionLabels[8] = ut.field_a;
+          HighscoreValueRequest.menuActionLabels[8] = PlayerRequestPackets.field_a;
         } else {
           if (MatchingFieldValidator.field_g.state.drawOfferMask != 0) {
             HighscoreValueRequest.menuActionLabels[8] = SetShipDirectionArrow.field_q;

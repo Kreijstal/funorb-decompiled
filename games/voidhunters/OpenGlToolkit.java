@@ -580,15 +580,15 @@ final class OpenGlToolkit extends GraphicsToolkit {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tob var3 = null;
+        OpenGlPbuffer var3 = null;
         OpenGlRenderbuffer var3_ref = null;
         RuntimeException var3_ref2 = null;
         DualLinkNode var4 = null;
         int var6 = 0;
         OpenGlRenderbuffer var7 = null;
         OpenGlRenderbuffer var8 = null;
-        tob var9 = null;
-        tob var10 = null;
+        OpenGlPbuffer var9 = null;
+        OpenGlPbuffer var10 = null;
         var6 = VoidHunters.field_G;
         try {
           this.field_qc = (OpenGlSprite) (param0);
@@ -596,19 +596,19 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (!this.field_O) {
               throw new RuntimeException("");
             }
-            var3 = (tob) (this.field_Ic.get((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), 116));
+            var3 = (OpenGlPbuffer) (this.field_Ic.get((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), 116));
             if (var3 == null) {
-              var9 = new tob(this, this.field_qc.getWidth(), this.field_qc.getHeight());
+              var9 = new OpenGlPbuffer(this, this.field_qc.getWidth(), this.field_qc.getHeight());
               var3 = var9;
-              this.field_Gc = this.field_Gc + 4 * var9.field_m;
+              this.field_Gc = this.field_Gc + 4 * var9.pixelCount;
               while (this.field_Gc > 2097152) {
                 var4 = this.field_E.removeLast(1);
                 if (var4 != null) {
-                  var10 = (tob) (var4);
+                  var10 = (OpenGlPbuffer) (var4);
                   var10.unlinkSecondary((byte) -35);
                   var10.unlink(-3846);
-                  this.field_c.releasePbuffer(var10.f(-128));
-                  this.field_Gc = this.field_Gc - var10.field_m;
+                  this.field_c.releasePbuffer(var10.getHandle(-128));
+                  this.field_Gc = this.field_Gc - var10.pixelCount;
                   continue;
                 }
                 break;
@@ -616,7 +616,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               this.field_Ic.put((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), var9, (byte) -120);
             }
             this.field_E.addFirst((DualLinkNode) (var3), (byte) -22);
-            this.field_c.setPbuffer(var3.f(-128));
+            this.field_c.setPbuffer(var3.getHandle(-128));
           } else {
             if (this.field_jb == null) {
               this.field_jb = new OpenGlFramebuffer(this);

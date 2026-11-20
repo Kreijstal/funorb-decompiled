@@ -8,11 +8,11 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
     final static void b(byte param0) {
         int var1_int = 0;
         int var2 = VoidHunters.field_G;
-        if (vjb.field_a) {
+        if (FloatNoiseSliceGenerator.field_a) {
           return;
         }
         ComponentCollision.a("Initing text...", (byte) -82);
-        vjb.field_a = true;
+        FloatNoiseSliceGenerator.field_a = true;
         if (null != HighscoreValueRequest.menuActionLabels) {
           return;
         }
@@ -230,7 +230,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[30] = GetMachineGunPulsetime.field_o;
           ShipTeamCondition.field_f[29] = OpenGlTexture3D.field_m;
           ShipTeamCondition.field_f[20] = ThrusterBehaviourFactory.field_a;
-          ShipTeamCondition.field_f[26] = tob.field_l;
+          ShipTeamCondition.field_f[26] = OpenGlPbuffer.field_l;
           ShipTeamCondition.field_f[8] = GetFightersPerPlayerMaximum.field_s;
           ShipTeamCondition.field_f[4] = GetTorpedoAcceleration.field_o;
           ShipTeamCondition.field_f[7] = SetCarouselConstant.field_o;

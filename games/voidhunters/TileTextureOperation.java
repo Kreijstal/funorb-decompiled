@@ -189,7 +189,7 @@ final class TileTextureOperation extends TextureOperation {
         return (1024 & param0) != 0 ? true : false;
     }
 
-    final static void d(int param0) {
+    final static void closePlayerContextMenu(int param0) {
         if (null != GetLagStandardDeviationOut.field_o &&
           GetLagStandardDeviationOut.field_o.sourceWidget != null) {
           GetLagStandardDeviationOut.field_o.sourceWidget.field_J = false;

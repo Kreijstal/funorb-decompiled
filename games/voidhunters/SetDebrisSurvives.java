@@ -43,7 +43,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
         if (param0 > -53) {
           field_o = (String) null;
         }
-        SetFighterVision.a(UiFocusableComponent.field_w, -20149, lo.field_b, DualLinkNode.field_g, DeveloperConsole.field_q);
+        SetFighterVision.initializeChatInputDialog(UiFocusableComponent.field_w, -20149, lo.field_b, DualLinkNode.field_g, DeveloperConsole.field_q);
     }
 
     SetDebrisSurvives(String param0, Class[] param1, String param2) {

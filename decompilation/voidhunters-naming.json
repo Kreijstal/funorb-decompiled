@@ -5620,6 +5620,14 @@
       "renamedSymbol": "C:SetAngularForceDownshift"
     },
     {
+      "symbol": "C:ko",
+      "originalName": "ko",
+      "to": "FloatGradientNoiseSliceGenerator",
+      "evidence": "Original seeded512-entry duplicated permutation generator evaluates eight-corner3D gradient noise into fixed-z float slice using quintic fade/interpolation;retain original masks,shuffle and gradient table.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FloatGradientNoiseSliceGenerator"
+    },
+    {
       "symbol": "C:koa",
       "originalName": "koa",
       "to": "RangeTextureOperation",
@@ -9988,6 +9996,14 @@
       "renamedSymbol": "C:TextLayoutLine"
     },
     {
+      "symbol": "C:tob",
+      "originalName": "tob",
+      "to": "OpenGlPbuffer",
+      "evidence": "Original native OpenGL pbuffer wrapper retains handle,toolkit and pixel-count cost;creates/releases native buffer and exposes handle,with unrelated chat-dialog initialization predicate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:OpenGlPbuffer"
+    },
+    {
       "symbol": "C:tp",
       "originalName": "tp",
       "to": "GetCountermeasuresPulsetime",
@@ -10556,6 +10572,14 @@
       "renamedSymbol": "C:UiWeightedGridContainer"
     },
     {
+      "symbol": "C:ut",
+      "originalName": "ut",
+      "to": "PlayerRequestPackets",
+      "evidence": "Original helper writes variable-opcode byte/long request using player target keys from PlayerContextMenu/lobby action callers;retain unrelated Cancel draw text.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PlayerRequestPackets"
+    },
+    {
       "symbol": "C:uta",
       "originalName": "uta",
       "to": "SetMissionDebrisVotingChancestep",
@@ -10810,6 +10834,14 @@
       "evidence": "GameStateFactory implementation whose reviewed create/createArray bodies construct PartitioningManager and its typed arrays. Abstract-only scalar construction may return null; unrelated static helpers remain in place.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PartitioningManagerFactory"
+    },
+    {
+      "symbol": "C:vjb",
+      "originalName": "vjb",
+      "to": "FloatNoiseSliceGenerator",
+      "evidence": "Original abstract float-array slice-generation contract implemented by original gradient generator;retains unrelated shared menu/dialog closing helper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FloatNoiseSliceGenerator"
     },
     {
       "symbol": "C:vk",
@@ -13458,6 +13490,14 @@
       "evidence": "Normalized upper bound for randomly selected brick height.",
       "confidence": "reviewed",
       "renamedSymbol": "F:IrregularBricksTextureOperation.maximumHeight:I"
+    },
+    {
+      "symbol": "F:cn.field_a:[[F",
+      "originalName": "field_a",
+      "to": "noiseGradients",
+      "evidence": "Original eight3D diagonal gradient vectors with components +/-0.33333298563957214f;retain values and indexing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:TickConditionFactory.noiseGradients:[[F"
     },
     {
       "symbol": "F:cna.field_vb:Lllb;",
@@ -19348,6 +19388,14 @@
       "renamedSymbol": "F:NetworkArchiveRequest.blockPosition:I"
     },
     {
+      "symbol": "F:ko.field_f:[I",
+      "originalName": "field_f",
+      "to": "permutation",
+      "evidence": "Original512-entry permutation table with duplicated256-entry halves and retained random-swap construction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:FloatGradientNoiseSliceGenerator.permutation:[I"
+    },
+    {
       "symbol": "F:koa.field_i:I",
       "originalName": "field_i",
       "to": "range",
@@ -20234,6 +20282,14 @@
       "evidence": "The state-diff method prints \"targetBody has changed\" for this field.",
       "confidence": "reviewed",
       "renamedSymbol": "F:SetShipTeamAction.targetBody:I"
+    },
+    {
+      "symbol": "F:lsa.field_e:Lllb;",
+      "originalName": "field_e",
+      "to": "savedChatInputWidget",
+      "evidence": "Original input widget retained when modal input components initialize and restored during dialog disposal.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:lsa.savedChatInputWidget:LWidget;"
     },
     {
       "symbol": "F:lta.field_a:F",
@@ -28138,6 +28194,30 @@
       "evidence": "Character-boundary X coordinates,including the final line-end position.",
       "confidence": "reviewed",
       "renamedSymbol": "F:TextLayoutLine.caretXs:[I"
+    },
+    {
+      "symbol": "F:tob.field_k:Lqfa;",
+      "originalName": "field_k",
+      "to": "toolkit",
+      "evidence": "Original OpenGlToolkit owning native pbuffer API.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlPbuffer.toolkit:LOpenGlToolkit;"
+    },
+    {
+      "symbol": "F:tob.field_m:I",
+      "originalName": "field_m",
+      "to": "pixelCount",
+      "evidence": "Original width*height int product used as native buffer cost;preserve overflow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlPbuffer.pixelCount:I"
+    },
+    {
+      "symbol": "F:tob.field_n:J",
+      "originalName": "field_n",
+      "to": "handle",
+      "evidence": "Original long native pbuffer handle,zeroed on release.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlPbuffer.handle:J"
     },
     {
       "symbol": "F:tpa.field_c:Z",
@@ -37540,6 +37620,14 @@
       "renamedSymbol": "M:GetFighterRepairTime.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:dc.a(Lllb;ILllb;Lllb;Lllb;)V",
+      "originalName": "a",
+      "to": "initializeChatInputDialog",
+      "evidence": "Initialize original modal chat widgets,save existing input/auxiliary widgets and replace global input component;preserve already-initialized return,partial bad-guard side effects and all styling.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V"
+    },
+    {
       "symbol": "M:dc.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -41802,6 +41890,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetMissileLauncherProjectileLife.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:fea.a(I)V",
+      "originalName": "a",
+      "to": "closeQuickChatMenu",
+      "evidence": "Close original quick-chat submenu,clear original mode flag,conditionally reset chat input and zero retained timer;preserve complement comparison and delegate ordering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetUseExtraBackground.closeQuickChatMenu(I)V"
     },
     {
       "symbol": "M:fea.a([Lnc;I)Lnc;",
@@ -52604,6 +52700,14 @@
       "renamedSymbol": "M:MapZoneFactory.createArray(II)[LSerializableGameState;"
     },
     {
+      "symbol": "M:kfb.a(FFIF)F",
+      "originalName": "a",
+      "to": "lerp",
+      "evidence": "Evaluate original start+(end-start)*weight expression with retained unusual parameter order and wrong-guard discarded recursive call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetBuildViewAutozoom.lerp(FFIF)F"
+    },
+    {
       "symbol": "M:kfb.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -53220,12 +53324,20 @@
       "renamedSymbol": "M:SetAngularForceDownshift.clearSharedReferences(B)V"
     },
     {
+      "symbol": "M:ko.a(FF[FFIFBIIII)V",
+      "originalName": "a",
+      "to": "fillSlice",
+      "evidence": "Original float noise contract fills supplied slice at destination offset using axis steps,dimensions,z index and amplitude;propagate exact contract to gradient implementation. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V"
+    },
+    {
       "symbol": "M:ko.a(I)V",
       "originalName": "a",
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_d, field_e; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ko.clearSharedReferences(I)V"
+      "renamedSymbol": "M:FloatGradientNoiseSliceGenerator.clearSharedReferences(I)V"
     },
     {
       "symbol": "M:koa.a(II)[[I",
@@ -53722,6 +53834,14 @@
       "evidence": "Bind texture then choose linear/nearest magnification and mipmapped/non-mipmapped minification parameters.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlGpuTexture.applyFilterMode(I)V"
+    },
+    {
+      "symbol": "M:kva.d(B)V",
+      "originalName": "d",
+      "to": "disposeChatInputDialog",
+      "evidence": "Clear original chat dialog references and restore saved input/auxiliary widgets with existing partial color resets;preserve flag assignment and bad-guard recursive path.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlGpuTexture.disposeChatInputDialog(B)V"
     },
     {
       "symbol": "M:kva.d(I)V",
@@ -55210,6 +55330,14 @@
       "evidence": "Monochrome output contract; the base throws when that output is unavailable. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TileTextureOperation.getMonochromeRow(IZ)[I"
+    },
+    {
+      "symbol": "M:lnb.d(I)V",
+      "originalName": "d",
+      "to": "closePlayerContextMenu",
+      "evidence": "Clear original source widget interaction flag,context-menu scroll owner and PlayerContextMenu reference;preserve guard-dependent texture shared cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TileTextureOperation.closePlayerContextMenu(I)V"
     },
     {
       "symbol": "M:lnb.e(I)V",
@@ -60938,6 +61066,22 @@
       "evidence": "Only clears own static reference fields field_a, field_b; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ServerTickFactory.clearSharedReferences(Z)V"
+    },
+    {
+      "symbol": "M:nq.a(BLds;)V",
+      "originalName": "a",
+      "to": "writeRandomDatBytes",
+      "evidence": "Write original24bytes from platform random.dat file,reject all-zero data and useFFonreadfailure;preserve zero-buffer output when file absent,guard return and exact exception handling.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V"
+    },
+    {
+      "symbol": "M:nq.a(FIFIIIFLvjb;IFI[BBF)V",
+      "originalName": "a",
+      "to": "accumulateFractalNoiseSlice",
+      "evidence": "For original octave count,fill one fixed-z float slice,add each octave into existing signed destination bytes with immediate cast/wrap,double frequencies/scale amplitude,then add127bias;preserve starting offset and wrong-guard recursion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V"
     },
     {
       "symbol": "M:nq.a([Lnc;I)Lnc;",
@@ -67196,6 +67340,14 @@
       "renamedSymbol": "M:SetVariableAction.clearSharedReferences(B)V"
     },
     {
+      "symbol": "M:pob.a(BF)F",
+      "originalName": "a",
+      "to": "quinticFade",
+      "evidence": "Evaluate original6t^5-15t^4+10t^3 float polynomial with original operation order and arithmetic guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetVariableAction.quinticFade(BF)F"
+    },
+    {
       "symbol": "M:pob.a(BLtv;)Z",
       "originalName": "a",
       "to": "differsFrom",
@@ -71258,6 +71410,14 @@
       "evidence": "State comparison contract: SettingsChange and MissionVariable return whether stored values differ; concrete implementations retain their original comparison formulas. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Message.differsFrom(BLSerializableGameState;)Z"
+    },
+    {
+      "symbol": "M:rha.a(FFIFB)F",
+      "originalName": "a",
+      "to": "dotNoiseGradient",
+      "evidence": "Evaluate original three-term gradient dot product using retained eight-vector table and original coordinate order;preserve guard fallback constant.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Message.dotNoiseGradient(FFIFB)F"
     },
     {
       "symbol": "M:rha.a(Lfaa;Z)V",
@@ -76881,7 +77041,31 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_l, field_o; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tob.clearSharedReferences(I)V"
+      "renamedSymbol": "M:OpenGlPbuffer.clearSharedReferences(I)V"
+    },
+    {
+      "symbol": "M:tob.e(I)V",
+      "originalName": "e",
+      "to": "release",
+      "evidence": "Release original native pbuffer when handle greater than supplied guard,then zero handle;preserve threshold comparison and finalize ordering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlPbuffer.release(I)V"
+    },
+    {
+      "symbol": "M:tob.f(I)J",
+      "originalName": "f",
+      "to": "getHandle",
+      "evidence": "Return original native pbuffer handle;preserve guard-dependent unrelated string cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlPbuffer.getHandle(I)J"
+    },
+    {
+      "symbol": "M:tob.g(I)Z",
+      "originalName": "g",
+      "to": "isChatInputDialogInitialized",
+      "evidence": "Return original saved chat-input widget nonnull predicate,which dialog initialization/disposal maintains;retain bad-guard shared-string cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlPbuffer.isChatInputDialogInitialized(I)Z"
     },
     {
       "symbol": "M:tp.a(IZI)I",
@@ -80097,7 +80281,15 @@
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_a. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ut.clearSharedReferences(I)V"
+      "renamedSymbol": "M:PlayerRequestPackets.clearSharedReferences(I)V"
+    },
+    {
+      "symbol": "M:ut.a(IJI)V",
+      "originalName": "a",
+      "to": "sendPlayerRequest",
+      "evidence": "Write original supplied opcode,byte request type and target player long key to shared outgoing buffer with byte-length framing;preserve all argument order and existing network buffering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerRequestPackets.sendPlayerRequest(IJI)V"
     },
     {
       "symbol": "M:uta.a([Lnc;I)Lnc;",
@@ -81124,12 +81316,28 @@
       "renamedSymbol": "M:PartitioningManagerFactory.createArray(II)[LSerializableGameState;"
     },
     {
+      "symbol": "M:vjb.a(B)V",
+      "originalName": "a",
+      "to": "closeTransientMenusAndDialogs",
+      "evidence": "Close original player context menu,clear transient popup/report dialog and reset quick-chat menu state;preserve invalid-byte recursive path and exact delegate order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FloatNoiseSliceGenerator.closeTransientMenusAndDialogs(B)V"
+    },
+    {
+      "symbol": "M:vjb.a(FF[FFIFBIIII)V",
+      "originalName": "a",
+      "to": "fillSlice",
+      "evidence": "Original float noise contract fills supplied slice at destination offset using axis steps,dimensions,z index and amplitude;propagate exact contract to gradient implementation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V"
+    },
+    {
       "symbol": "M:vjb.b(B)V",
       "originalName": "b",
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_b, field_c. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:vjb.clearSharedReferences(B)V"
+      "renamedSymbol": "M:FloatNoiseSliceGenerator.clearSharedReferences(B)V"
     },
     {
       "symbol": "M:vk.a([Lnc;I)Lnc;",
@@ -104606,9 +104814,9 @@
     },
     {
       "symbol": "C:ko",
-      "renamedSymbol": "C:ko",
+      "renamedSymbol": "C:FloatGradientNoiseSliceGenerator",
       "originalName": "ko",
-      "renamedName": "ko",
+      "renamedName": "FloatGradientNoiseSliceGenerator",
       "declaration": {
         "file": "ko.java",
         "start": 71,
@@ -111195,9 +111403,9 @@
     },
     {
       "symbol": "C:tob",
-      "renamedSymbol": "C:tob",
+      "renamedSymbol": "C:OpenGlPbuffer",
       "originalName": "tob",
-      "renamedName": "tob",
+      "renamedName": "OpenGlPbuffer",
       "declaration": {
         "file": "tob.java",
         "start": 50,
@@ -112064,9 +112272,9 @@
     },
     {
       "symbol": "C:ut",
-      "renamedSymbol": "C:ut",
+      "renamedSymbol": "C:PlayerRequestPackets",
       "originalName": "ut",
-      "renamedName": "ut",
+      "renamedName": "PlayerRequestPackets",
       "declaration": {
         "file": "ut.java",
         "start": 50,
@@ -112482,9 +112690,9 @@
     },
     {
       "symbol": "C:vjb",
-      "renamedSymbol": "C:vjb",
+      "renamedSymbol": "C:FloatNoiseSliceGenerator",
       "originalName": "vjb",
-      "renamedName": "vjb",
+      "renamedName": "FloatNoiseSliceGenerator",
       "declaration": {
         "file": "vjb.java",
         "start": 53,
@@ -119841,9 +120049,9 @@
     },
     {
       "symbol": "F:cn.field_a:[[F",
-      "renamedSymbol": "F:TickConditionFactory.field_a:[[F",
+      "renamedSymbol": "F:TickConditionFactory.noiseGradients:[[F",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "noiseGradients",
       "declaration": {
         "file": "cn.java",
         "start": 118,
@@ -140686,7 +140894,7 @@
     },
     {
       "symbol": "F:ko.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:ko.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:FloatGradientNoiseSliceGenerator.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -140697,7 +140905,7 @@
     },
     {
       "symbol": "F:ko.field_e:[Lphb;",
-      "renamedSymbol": "F:ko.field_e:[LSprite;",
+      "renamedSymbol": "F:FloatGradientNoiseSliceGenerator.field_e:[LSprite;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -140708,9 +140916,9 @@
     },
     {
       "symbol": "F:ko.field_f:[I",
-      "renamedSymbol": "F:ko.field_f:[I",
+      "renamedSymbol": "F:FloatGradientNoiseSliceGenerator.permutation:[I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "permutation",
       "declaration": {
         "file": "ko.java",
         "start": 132,
@@ -140719,7 +140927,7 @@
     },
     {
       "symbol": "F:ko.field_g:I",
-      "renamedSymbol": "F:ko.field_g:I",
+      "renamedSymbol": "F:FloatGradientNoiseSliceGenerator.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -143931,9 +144139,9 @@
     },
     {
       "symbol": "F:lsa.field_e:Lllb;",
-      "renamedSymbol": "F:lsa.field_e:LWidget;",
+      "renamedSymbol": "F:lsa.savedChatInputWidget:LWidget;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "savedChatInputWidget",
       "declaration": {
         "file": "lsa.java",
         "start": 142,
@@ -169330,9 +169538,9 @@
     },
     {
       "symbol": "F:tob.field_k:Lqfa;",
-      "renamedSymbol": "F:tob.field_k:LOpenGlToolkit;",
+      "renamedSymbol": "F:OpenGlPbuffer.toolkit:LOpenGlToolkit;",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "toolkit",
       "declaration": {
         "file": "tob.java",
         "start": 177,
@@ -169341,7 +169549,7 @@
     },
     {
       "symbol": "F:tob.field_l:Ljava/lang/String;",
-      "renamedSymbol": "F:tob.field_l:Ljava/lang/String;",
+      "renamedSymbol": "F:OpenGlPbuffer.field_l:Ljava/lang/String;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -169352,9 +169560,9 @@
     },
     {
       "symbol": "F:tob.field_m:I",
-      "renamedSymbol": "F:tob.field_m:I",
+      "renamedSymbol": "F:OpenGlPbuffer.pixelCount:I",
       "originalName": "field_m",
-      "renamedName": "field_m",
+      "renamedName": "pixelCount",
       "declaration": {
         "file": "tob.java",
         "start": 152,
@@ -169363,9 +169571,9 @@
     },
     {
       "symbol": "F:tob.field_n:J",
-      "renamedSymbol": "F:tob.field_n:J",
+      "renamedSymbol": "F:OpenGlPbuffer.handle:J",
       "originalName": "field_n",
-      "renamedName": "field_n",
+      "renamedName": "handle",
       "declaration": {
         "file": "tob.java",
         "start": 135,
@@ -169374,7 +169582,7 @@
     },
     {
       "symbol": "F:tob.field_o:Ldja;",
-      "renamedSymbol": "F:tob.field_o:LGameStateFactory;",
+      "renamedSymbol": "F:OpenGlPbuffer.field_o:LGameStateFactory;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -172366,7 +172574,7 @@
     },
     {
       "symbol": "F:ut.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ut.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:PlayerRequestPackets.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -173917,7 +174125,7 @@
     },
     {
       "symbol": "F:vjb.field_a:Z",
-      "renamedSymbol": "F:vjb.field_a:Z",
+      "renamedSymbol": "F:FloatNoiseSliceGenerator.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -173928,7 +174136,7 @@
     },
     {
       "symbol": "F:vjb.field_b:Lsfb;",
-      "renamedSymbol": "F:vjb.field_b:LReverbPcmStream;",
+      "renamedSymbol": "F:FloatNoiseSliceGenerator.field_b:LReverbPcmStream;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -173939,7 +174147,7 @@
     },
     {
       "symbol": "F:vjb.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:vjb.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:FloatNoiseSliceGenerator.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -254283,7 +254491,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#0",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#0",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#0",
       "originalName": "var11_int",
       "renamedName": "var11_int",
       "declaration": {
@@ -254294,7 +254502,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#1",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#1",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -254305,7 +254513,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#2",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#2",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#2",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -254316,7 +254524,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#3",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#3",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#3",
       "originalName": "stackIn_1_0",
       "renamedName": "stackIn_1_0",
       "declaration": {
@@ -254327,7 +254535,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#4",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#4",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#4",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -254338,7 +254546,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#5",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#5",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#5",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -254349,7 +254557,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#6",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#6",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#6",
       "originalName": "stackIn_5_2",
       "renamedName": "stackIn_5_2",
       "declaration": {
@@ -254360,7 +254568,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#7",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#7",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -254371,7 +254579,7 @@
     },
     {
       "symbol": "L:dbb.a(FFBILvjb;IIIFFF)[B#8",
-      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#8",
+      "renamedSymbol": "L:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -254525,7 +254733,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#0",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#0",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -254536,7 +254744,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#1",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#1",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#1",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -254547,7 +254755,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#10",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#10",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -254558,7 +254766,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#11",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#11",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#11",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -254569,7 +254777,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#12",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#12",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -254580,7 +254788,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#13",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#13",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -254591,7 +254799,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#14",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#14",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -254602,7 +254810,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#2",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#2",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#2",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -254613,7 +254821,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#3",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#3",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -254624,7 +254832,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#4",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#4",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#4",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -254635,7 +254843,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#5",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#5",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#5",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -254646,7 +254854,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#6",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#6",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#6",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -254657,7 +254865,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#7",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#7",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#7",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -254668,7 +254876,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#8",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#8",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#8",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -254679,7 +254887,7 @@
     },
     {
       "symbol": "L:dc.a(Lllb;ILllb;Lllb;Lllb;)V#9",
-      "renamedSymbol": "L:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#9",
+      "renamedSymbol": "L:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -377186,7 +377394,7 @@
     },
     {
       "symbol": "L:ko.<init>(I)V#0",
-      "renamedSymbol": "L:ko.<init>(I)V#0",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.<init>(I)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -377197,7 +377405,7 @@
     },
     {
       "symbol": "L:ko.<init>(I)V#1",
-      "renamedSymbol": "L:ko.<init>(I)V#1",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.<init>(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -377208,7 +377416,7 @@
     },
     {
       "symbol": "L:ko.<init>(I)V#2",
-      "renamedSymbol": "L:ko.<init>(I)V#2",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.<init>(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -377219,7 +377427,7 @@
     },
     {
       "symbol": "L:ko.<init>(I)V#3",
-      "renamedSymbol": "L:ko.<init>(I)V#3",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.<init>(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -377230,7 +377438,7 @@
     },
     {
       "symbol": "L:ko.<init>(I)V#4",
-      "renamedSymbol": "L:ko.<init>(I)V#4",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.<init>(I)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -377241,7 +377449,7 @@
     },
     {
       "symbol": "L:ko.<init>(I)V#5",
-      "renamedSymbol": "L:ko.<init>(I)V#5",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.<init>(I)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -377252,7 +377460,7 @@
     },
     {
       "symbol": "L:ko.<init>(I)V#6",
-      "renamedSymbol": "L:ko.<init>(I)V#6",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.<init>(I)V#6",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -377263,7 +377471,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#0",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#0",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#0",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -377274,7 +377482,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#1",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#1",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#1",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -377285,7 +377493,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#10",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#10",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#10",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -377296,7 +377504,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#11",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#11",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#11",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -377307,7 +377515,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#12",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#12",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#12",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -377318,7 +377526,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#13",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#13",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#13",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -377329,7 +377537,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#14",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#14",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#14",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -377340,7 +377548,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#15",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#15",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#15",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -377351,7 +377559,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#16",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#16",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#16",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -377362,7 +377570,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#17",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#17",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#17",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -377373,7 +377581,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#18",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#18",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#18",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -377384,7 +377592,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#19",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#19",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#19",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -377395,7 +377603,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#2",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#2",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#2",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -377406,7 +377614,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#20",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#20",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#20",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -377417,7 +377625,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#21",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#21",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#21",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -377428,7 +377636,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#22",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#22",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#22",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -377439,7 +377647,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#23",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#23",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#23",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -377450,7 +377658,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#24",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#24",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#24",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -377461,7 +377669,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#25",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#25",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#25",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -377472,7 +377680,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#26",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#26",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#26",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -377483,7 +377691,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#27",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#27",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#27",
       "originalName": "var38",
       "renamedName": "var38",
       "declaration": {
@@ -377494,7 +377702,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#28",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#28",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#28",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -377505,7 +377713,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#29",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#29",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#29",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -377516,7 +377724,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#3",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#3",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#3",
       "originalName": "var12_int",
       "renamedName": "var12_int",
       "declaration": {
@@ -377527,7 +377735,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#30",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#30",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#30",
       "originalName": "var41",
       "renamedName": "var41",
       "declaration": {
@@ -377538,7 +377746,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#31",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#31",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#31",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -377549,7 +377757,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#32",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#32",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#32",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -377560,7 +377768,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#33",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#33",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#33",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -377571,7 +377779,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#34",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#34",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#34",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -377582,7 +377790,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#35",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#35",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#35",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -377593,7 +377801,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#36",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#36",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#36",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -377604,7 +377812,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#4",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#4",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -377615,7 +377823,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#5",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#5",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -377626,7 +377834,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#6",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#6",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#6",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -377637,7 +377845,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#7",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#7",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#7",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -377648,7 +377856,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#8",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#8",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#8",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -377659,7 +377867,7 @@
     },
     {
       "symbol": "L:ko.a(FF[FFIFBIIII)V#9",
-      "renamedSymbol": "L:ko.a(FF[FFIFBIIII)V#9",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#9",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -377670,7 +377878,7 @@
     },
     {
       "symbol": "L:ko.a(I)V#0",
-      "renamedSymbol": "L:ko.clearSharedReferences(I)V#0",
+      "renamedSymbol": "L:FloatGradientNoiseSliceGenerator.clearSharedReferences(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -437455,7 +437663,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#0",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#0",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -437466,7 +437674,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#1",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#1",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -437477,7 +437685,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#10",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#10",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#10",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -437488,7 +437696,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#11",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#11",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#11",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -437499,7 +437707,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#12",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#12",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -437510,7 +437718,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#13",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#13",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#13",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -437521,7 +437729,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#14",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#14",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#14",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -437532,7 +437740,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#15",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#15",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#15",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -437543,7 +437751,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#2",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#2",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#2",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -437554,7 +437762,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#3",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#3",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -437565,7 +437773,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#4",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#4",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -437576,7 +437784,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#5",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#5",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#5",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -437587,7 +437795,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#6",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#6",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#6",
       "originalName": "stackIn_22_1",
       "renamedName": "stackIn_22_1",
       "declaration": {
@@ -437598,7 +437806,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#7",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#7",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#7",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -437609,7 +437817,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#8",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#8",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#8",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -437620,7 +437828,7 @@
     },
     {
       "symbol": "L:nq.a(BLds;)V#9",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(BLPacketBuffer;)V#9",
+      "renamedSymbol": "L:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -437631,7 +437839,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#0",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#0",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#0",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -437642,7 +437850,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#1",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#1",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#1",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -437653,7 +437861,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#10",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#10",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#10",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -437664,7 +437872,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#11",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#11",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#11",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -437675,7 +437883,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#12",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#12",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#12",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -437686,7 +437894,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#13",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#13",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#13",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -437697,7 +437905,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#14",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#14",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#14",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -437708,7 +437916,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#15",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#15",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#15",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -437719,7 +437927,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#16",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#16",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#16",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -437730,7 +437938,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#17",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#17",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -437741,7 +437949,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#2",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#2",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#2",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -437752,7 +437960,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#3",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#3",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#3",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -437763,7 +437971,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#4",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#4",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#4",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -437774,7 +437982,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#5",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#5",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#5",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -437785,7 +437993,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#6",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#6",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -437796,7 +438004,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#7",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#7",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#7",
       "originalName": "var14_int",
       "renamedName": "var14_int",
       "declaration": {
@@ -437807,7 +438015,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#8",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#8",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -437818,7 +438026,7 @@
     },
     {
       "symbol": "L:nq.a(FIFIIIFLvjb;IFI[BBF)V#9",
-      "renamedSymbol": "L:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#9",
+      "renamedSymbol": "L:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#9",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -493456,7 +493664,7 @@
     },
     {
       "symbol": "L:pob.a(BF)F#0",
-      "renamedSymbol": "L:SetVariableAction.a(BF)F#0",
+      "renamedSymbol": "L:SetVariableAction.quinticFade(BF)F#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -522155,7 +522363,7 @@
     },
     {
       "symbol": "L:rha.a(FFIFB)F#0",
-      "renamedSymbol": "L:Message.a(FFIFB)F#0",
+      "renamedSymbol": "L:Message.dotNoiseGradient(FFIFB)F#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -522166,7 +522374,7 @@
     },
     {
       "symbol": "L:rha.a(FFIFB)F#1",
-      "renamedSymbol": "L:Message.a(FFIFB)F#1",
+      "renamedSymbol": "L:Message.dotNoiseGradient(FFIFB)F#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -577463,7 +577671,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#0",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#0",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#0",
       "originalName": "var13_int",
       "renamedName": "var13_int",
       "declaration": {
@@ -577474,7 +577682,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#1",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#1",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -577485,7 +577693,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#2",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#2",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -577496,7 +577704,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#3",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#3",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -577507,7 +577715,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#4",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#4",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -577518,7 +577726,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#5",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#5",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#5",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -577529,7 +577737,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#6",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#6",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#6",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -577540,7 +577748,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#7",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#7",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -577551,7 +577759,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#8",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#8",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#8",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -577562,7 +577770,7 @@
     },
     {
       "symbol": "L:toa.a(IFIFFBLvjb;FIFII[B)V#9",
-      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#9",
+      "renamedSymbol": "L:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -577617,7 +577825,7 @@
     },
     {
       "symbol": "L:tob.<init>(Lqfa;II)V#0",
-      "renamedSymbol": "L:tob.<init>(LOpenGlToolkit;II)V#0",
+      "renamedSymbol": "L:OpenGlPbuffer.<init>(LOpenGlToolkit;II)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -577628,7 +577836,7 @@
     },
     {
       "symbol": "L:tob.a(I)V#0",
-      "renamedSymbol": "L:tob.clearSharedReferences(I)V#0",
+      "renamedSymbol": "L:OpenGlPbuffer.clearSharedReferences(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -616700,7 +616908,7 @@
     },
     {
       "symbol": "L:ut.a(IJI)V#0",
-      "renamedSymbol": "L:ut.a(IJI)V#0",
+      "renamedSymbol": "L:PlayerRequestPackets.sendPlayerRequest(IJI)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -616711,7 +616919,7 @@
     },
     {
       "symbol": "L:ut.a(IJI)V#1",
-      "renamedSymbol": "L:ut.a(IJI)V#1",
+      "renamedSymbol": "L:PlayerRequestPackets.sendPlayerRequest(IJI)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -665287,7 +665495,7 @@
     },
     {
       "symbol": "M:dbb.a(FFBILvjb;IIIFFF)[B",
-      "renamedSymbol": "M:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B",
+      "renamedSymbol": "M:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -665331,9 +665539,9 @@
     },
     {
       "symbol": "M:dc.a(Lllb;ILllb;Lllb;Lllb;)V",
-      "renamedSymbol": "M:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V",
+      "renamedSymbol": "M:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeChatInputDialog",
       "declaration": {
         "file": "dc.java",
         "start": 89,
@@ -673339,9 +673547,9 @@
     },
     {
       "symbol": "M:fea.a(I)V",
-      "renamedSymbol": "M:GetUseExtraBackground.a(I)V",
+      "renamedSymbol": "M:GetUseExtraBackground.closeQuickChatMenu(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "closeQuickChatMenu",
       "declaration": {
         "file": "fea.java",
         "start": 192,
@@ -697924,9 +698132,9 @@
     },
     {
       "symbol": "M:kfb.a(FFIF)F",
-      "renamedSymbol": "M:GetBuildViewAutozoom.a(FFIF)F",
+      "renamedSymbol": "M:GetBuildViewAutozoom.lerp(FFIF)F",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "lerp",
       "declaration": {
         "file": "kfb.java",
         "start": 1197,
@@ -699244,9 +699452,9 @@
     },
     {
       "symbol": "M:ko.<init>(I)V",
-      "renamedSymbol": "M:ko.<init>(I)V",
+      "renamedSymbol": "M:FloatGradientNoiseSliceGenerator.<init>(I)V",
       "originalName": "ko",
-      "renamedName": "ko",
+      "renamedName": "FloatGradientNoiseSliceGenerator",
       "declaration": {
         "file": "ko.java",
         "start": 4958,
@@ -699255,9 +699463,9 @@
     },
     {
       "symbol": "M:ko.a(FF[FFIFBIIII)V",
-      "renamedSymbol": "M:ko.a(FF[FFIFBIIII)V",
+      "renamedSymbol": "M:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fillSlice",
       "declaration": {
         "file": "ko.java",
         "start": 348,
@@ -699266,7 +699474,7 @@
     },
     {
       "symbol": "M:ko.a(I)V",
-      "renamedSymbol": "M:ko.clearSharedReferences(I)V",
+      "renamedSymbol": "M:FloatGradientNoiseSliceGenerator.clearSharedReferences(I)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -700256,9 +700464,9 @@
     },
     {
       "symbol": "M:kva.d(B)V",
-      "renamedSymbol": "M:OpenGlGpuTexture.d(B)V",
+      "renamedSymbol": "M:OpenGlGpuTexture.disposeChatInputDialog(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "disposeChatInputDialog",
       "declaration": {
         "file": "kva.java",
         "start": 11001,
@@ -703138,9 +703346,9 @@
     },
     {
       "symbol": "M:lnb.d(I)V",
-      "renamedSymbol": "M:TileTextureOperation.d(I)V",
+      "renamedSymbol": "M:TileTextureOperation.closePlayerContextMenu(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "closePlayerContextMenu",
       "declaration": {
         "file": "lnb.java",
         "start": 5773,
@@ -713500,9 +713708,9 @@
     },
     {
       "symbol": "M:nq.a(BLds;)V",
-      "renamedSymbol": "M:GetMissilesTopSpeed.a(BLPacketBuffer;)V",
+      "renamedSymbol": "M:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeRandomDatBytes",
       "declaration": {
         "file": "nq.java",
         "start": 4374,
@@ -713511,9 +713719,9 @@
     },
     {
       "symbol": "M:nq.a(FIFIIIFLvjb;IFI[BBF)V",
-      "renamedSymbol": "M:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V",
+      "renamedSymbol": "M:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "accumulateFractalNoiseSlice",
       "declaration": {
         "file": "nq.java",
         "start": 1230,
@@ -724874,9 +725082,9 @@
     },
     {
       "symbol": "M:pob.a(BF)F",
-      "renamedSymbol": "M:SetVariableAction.a(BF)F",
+      "renamedSymbol": "M:SetVariableAction.quinticFade(BF)F",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "quinticFade",
       "declaration": {
         "file": "pob.java",
         "start": 205,
@@ -732585,9 +732793,9 @@
     },
     {
       "symbol": "M:rha.a(FFIFB)F",
-      "renamedSymbol": "M:Message.a(FFIFB)F",
+      "renamedSymbol": "M:Message.dotNoiseGradient(FFIFB)F",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "dotNoiseGradient",
       "declaration": {
         "file": "rha.java",
         "start": 2603,
@@ -743365,7 +743573,7 @@
     },
     {
       "symbol": "M:toa.a(IFIFFBLvjb;FIFII[B)V",
-      "renamedSymbol": "M:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V",
+      "renamedSymbol": "M:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -743398,9 +743606,9 @@
     },
     {
       "symbol": "M:tob.<init>(Lqfa;II)V",
-      "renamedSymbol": "M:tob.<init>(LOpenGlToolkit;II)V",
+      "renamedSymbol": "M:OpenGlPbuffer.<init>(LOpenGlToolkit;II)V",
       "originalName": "tob",
-      "renamedName": "tob",
+      "renamedName": "OpenGlPbuffer",
       "declaration": {
         "file": "tob.java",
         "start": 1025,
@@ -743409,7 +743617,7 @@
     },
     {
       "symbol": "M:tob.a(I)V",
-      "renamedSymbol": "M:tob.clearSharedReferences(I)V",
+      "renamedSymbol": "M:OpenGlPbuffer.clearSharedReferences(I)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -743420,9 +743628,9 @@
     },
     {
       "symbol": "M:tob.e(I)V",
-      "renamedSymbol": "M:tob.e(I)V",
+      "renamedSymbol": "M:OpenGlPbuffer.release(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "release",
       "declaration": {
         "file": "tob.java",
         "start": 682,
@@ -743431,9 +743639,9 @@
     },
     {
       "symbol": "M:tob.f(I)J",
-      "renamedSymbol": "M:tob.f(I)J",
+      "renamedSymbol": "M:OpenGlPbuffer.getHandle(I)J",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "getHandle",
       "declaration": {
         "file": "tob.java",
         "start": 863,
@@ -743442,7 +743650,7 @@
     },
     {
       "symbol": "M:tob.finalize()V",
-      "renamedSymbol": "M:tob.finalize()V",
+      "renamedSymbol": "M:OpenGlPbuffer.finalize()V",
       "originalName": "finalize",
       "renamedName": "finalize",
       "declaration": {
@@ -743453,9 +743661,9 @@
     },
     {
       "symbol": "M:tob.g(I)Z",
-      "renamedSymbol": "M:tob.g(I)Z",
+      "renamedSymbol": "M:OpenGlPbuffer.isChatInputDialogInitialized(I)Z",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "isChatInputDialogInitialized",
       "declaration": {
         "file": "tob.java",
         "start": 212,
@@ -749360,7 +749568,7 @@
     },
     {
       "symbol": "M:ut.a(I)V",
-      "renamedSymbol": "M:ut.clearSharedReferences(I)V",
+      "renamedSymbol": "M:PlayerRequestPackets.clearSharedReferences(I)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -749371,9 +749579,9 @@
     },
     {
       "symbol": "M:ut.a(IJI)V",
-      "renamedSymbol": "M:ut.a(IJI)V",
+      "renamedSymbol": "M:PlayerRequestPackets.sendPlayerRequest(IJI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendPlayerRequest",
       "declaration": {
         "file": "ut.java",
         "start": 105,
@@ -751362,9 +751570,9 @@
     },
     {
       "symbol": "M:vjb.a(B)V",
-      "renamedSymbol": "M:vjb.a(B)V",
+      "renamedSymbol": "M:FloatNoiseSliceGenerator.closeTransientMenusAndDialogs(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "closeTransientMenusAndDialogs",
       "declaration": {
         "file": "vjb.java",
         "start": 161,
@@ -751373,9 +751581,9 @@
     },
     {
       "symbol": "M:vjb.a(FF[FFIFBIIII)V",
-      "renamedSymbol": "M:vjb.a(FF[FFIFBIIII)V",
+      "renamedSymbol": "M:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fillSlice",
       "declaration": {
         "file": "vjb.java",
         "start": 638,
@@ -751384,7 +751592,7 @@
     },
     {
       "symbol": "M:vjb.b(B)V",
-      "renamedSymbol": "M:vjb.clearSharedReferences(B)V",
+      "renamedSymbol": "M:FloatNoiseSliceGenerator.clearSharedReferences(B)V",
       "originalName": "b",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -790533,7 +790741,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#0",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#0",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -790544,7 +790752,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#1",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#1",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -790555,7 +790763,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#10",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#10",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -790566,7 +790774,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#2",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#2",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -790577,7 +790785,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#3",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#3",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -790588,7 +790796,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#4",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#4",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -790599,7 +790807,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#5",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#5",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -790610,7 +790818,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#6",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#6",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -790621,7 +790829,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#7",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#7",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -790632,7 +790840,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#8",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#8",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -790643,7 +790851,7 @@
     },
     {
       "symbol": "P:dbb.a(FFBILvjb;IIIFFF)[B#9",
-      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILvjb;IIIFFF)[B#9",
+      "renamedSymbol": "P:GetFighterRepairTime.a(FFBILFloatNoiseSliceGenerator;IIIFFF)[B#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -790819,7 +791027,7 @@
     },
     {
       "symbol": "P:dc.a(Lllb;ILllb;Lllb;Lllb;)V#0",
-      "renamedSymbol": "P:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#0",
+      "renamedSymbol": "P:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -790830,7 +791038,7 @@
     },
     {
       "symbol": "P:dc.a(Lllb;ILllb;Lllb;Lllb;)V#1",
-      "renamedSymbol": "P:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#1",
+      "renamedSymbol": "P:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -790841,7 +791049,7 @@
     },
     {
       "symbol": "P:dc.a(Lllb;ILllb;Lllb;Lllb;)V#2",
-      "renamedSymbol": "P:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#2",
+      "renamedSymbol": "P:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -790852,7 +791060,7 @@
     },
     {
       "symbol": "P:dc.a(Lllb;ILllb;Lllb;Lllb;)V#3",
-      "renamedSymbol": "P:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#3",
+      "renamedSymbol": "P:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -790863,7 +791071,7 @@
     },
     {
       "symbol": "P:dc.a(Lllb;ILllb;Lllb;Lllb;)V#4",
-      "renamedSymbol": "P:SetFighterVision.a(LWidget;ILWidget;LWidget;LWidget;)V#4",
+      "renamedSymbol": "P:SetFighterVision.initializeChatInputDialog(LWidget;ILWidget;LWidget;LWidget;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -809079,7 +809287,7 @@
     },
     {
       "symbol": "P:fea.a(I)V#0",
-      "renamedSymbol": "P:GetUseExtraBackground.a(I)V#0",
+      "renamedSymbol": "P:GetUseExtraBackground.closeQuickChatMenu(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -867808,7 +868016,7 @@
     },
     {
       "symbol": "P:kfb.a(FFIF)F#0",
-      "renamedSymbol": "P:GetBuildViewAutozoom.a(FFIF)F#0",
+      "renamedSymbol": "P:GetBuildViewAutozoom.lerp(FFIF)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -867819,7 +868027,7 @@
     },
     {
       "symbol": "P:kfb.a(FFIF)F#1",
-      "renamedSymbol": "P:GetBuildViewAutozoom.a(FFIF)F#1",
+      "renamedSymbol": "P:GetBuildViewAutozoom.lerp(FFIF)F#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -867830,7 +868038,7 @@
     },
     {
       "symbol": "P:kfb.a(FFIF)F#2",
-      "renamedSymbol": "P:GetBuildViewAutozoom.a(FFIF)F#2",
+      "renamedSymbol": "P:GetBuildViewAutozoom.lerp(FFIF)F#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -867841,7 +868049,7 @@
     },
     {
       "symbol": "P:kfb.a(FFIF)F#3",
-      "renamedSymbol": "P:GetBuildViewAutozoom.a(FFIF)F#3",
+      "renamedSymbol": "P:GetBuildViewAutozoom.lerp(FFIF)F#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -870382,7 +870590,7 @@
     },
     {
       "symbol": "P:ko.<init>(I)V#0",
-      "renamedSymbol": "P:ko.<init>(I)V#0",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.<init>(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -870393,7 +870601,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#0",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#0",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -870404,7 +870612,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#1",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#1",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -870415,7 +870623,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#10",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#10",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -870426,7 +870634,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#2",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#2",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -870437,7 +870645,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#3",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#3",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -870448,7 +870656,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#4",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#4",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -870459,7 +870667,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#5",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#5",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -870470,7 +870678,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#6",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#6",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -870481,7 +870689,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#7",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#7",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -870492,7 +870700,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#8",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#8",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -870503,7 +870711,7 @@
     },
     {
       "symbol": "P:ko.a(FF[FFIFBIIII)V#9",
-      "renamedSymbol": "P:ko.a(FF[FFIFBIIII)V#9",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -870514,7 +870722,7 @@
     },
     {
       "symbol": "P:ko.a(I)V#0",
-      "renamedSymbol": "P:ko.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:FloatGradientNoiseSliceGenerator.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -872989,7 +873197,7 @@
     },
     {
       "symbol": "P:kva.d(B)V#0",
-      "renamedSymbol": "P:OpenGlGpuTexture.d(B)V#0",
+      "renamedSymbol": "P:OpenGlGpuTexture.disposeChatInputDialog(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -879281,7 +879489,7 @@
     },
     {
       "symbol": "P:lnb.d(I)V#0",
-      "renamedSymbol": "P:TileTextureOperation.d(I)V#0",
+      "renamedSymbol": "P:TileTextureOperation.closePlayerContextMenu(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -902832,7 +903040,7 @@
     },
     {
       "symbol": "P:nq.a(BLds;)V#0",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(BLPacketBuffer;)V#0",
+      "renamedSymbol": "P:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -902843,7 +903051,7 @@
     },
     {
       "symbol": "P:nq.a(BLds;)V#1",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(BLPacketBuffer;)V#1",
+      "renamedSymbol": "P:GetMissilesTopSpeed.writeRandomDatBytes(BLPacketBuffer;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -902854,7 +903062,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#0",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#0",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -902865,7 +903073,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#1",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#1",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -902876,7 +903084,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#10",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#10",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -902887,7 +903095,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#11",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#11",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -902898,7 +903106,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#12",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#12",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -902909,7 +903117,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#13",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#13",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -902920,7 +903128,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#2",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#2",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -902931,7 +903139,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#3",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#3",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -902942,7 +903150,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#4",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#4",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -902953,7 +903161,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#5",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#5",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -902964,7 +903172,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#6",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#6",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -902975,7 +903183,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#7",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#7",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -902986,7 +903194,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#8",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#8",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -902997,7 +903205,7 @@
     },
     {
       "symbol": "P:nq.a(FIFIIIFLvjb;IFI[BBF)V#9",
-      "renamedSymbol": "P:GetMissilesTopSpeed.a(FIFIIIFLvjb;IFI[BBF)V#9",
+      "renamedSymbol": "P:GetMissilesTopSpeed.accumulateFractalNoiseSlice(FIFIIIFLFloatNoiseSliceGenerator;IFI[BBF)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -931806,7 +932014,7 @@
     },
     {
       "symbol": "P:pob.a(BF)F#0",
-      "renamedSymbol": "P:SetVariableAction.a(BF)F#0",
+      "renamedSymbol": "P:SetVariableAction.quinticFade(BF)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -931817,7 +932025,7 @@
     },
     {
       "symbol": "P:pob.a(BF)F#1",
-      "renamedSymbol": "P:SetVariableAction.a(BF)F#1",
+      "renamedSymbol": "P:SetVariableAction.quinticFade(BF)F#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -947822,7 +948030,7 @@
     },
     {
       "symbol": "P:rha.a(FFIFB)F#0",
-      "renamedSymbol": "P:Message.a(FFIFB)F#0",
+      "renamedSymbol": "P:Message.dotNoiseGradient(FFIFB)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -947833,7 +948041,7 @@
     },
     {
       "symbol": "P:rha.a(FFIFB)F#1",
-      "renamedSymbol": "P:Message.a(FFIFB)F#1",
+      "renamedSymbol": "P:Message.dotNoiseGradient(FFIFB)F#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -947844,7 +948052,7 @@
     },
     {
       "symbol": "P:rha.a(FFIFB)F#2",
-      "renamedSymbol": "P:Message.a(FFIFB)F#2",
+      "renamedSymbol": "P:Message.dotNoiseGradient(FFIFB)F#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -947855,7 +948063,7 @@
     },
     {
       "symbol": "P:rha.a(FFIFB)F#3",
-      "renamedSymbol": "P:Message.a(FFIFB)F#3",
+      "renamedSymbol": "P:Message.dotNoiseGradient(FFIFB)F#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -947866,7 +948074,7 @@
     },
     {
       "symbol": "P:rha.a(FFIFB)F#4",
-      "renamedSymbol": "P:Message.a(FFIFB)F#4",
+      "renamedSymbol": "P:Message.dotNoiseGradient(FFIFB)F#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -972330,7 +972538,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#0",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#0",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -972341,7 +972549,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#1",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#1",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -972352,7 +972560,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#10",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#10",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -972363,7 +972571,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#11",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#11",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -972374,7 +972582,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#12",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#12",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -972385,7 +972593,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#2",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#2",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -972396,7 +972604,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#3",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#3",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -972407,7 +972615,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#4",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#4",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -972418,7 +972626,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#5",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#5",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -972429,7 +972637,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#6",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#6",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -972440,7 +972648,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#7",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#7",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -972451,7 +972659,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#8",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#8",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -972462,7 +972670,7 @@
     },
     {
       "symbol": "P:toa.a(IFIFFBLvjb;FIFII[B)V#9",
-      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLvjb;FIFII[B)V#9",
+      "renamedSymbol": "P:TextLayoutLine.a(IFIFFBLFloatNoiseSliceGenerator;FIFII[B)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -972528,7 +972736,7 @@
     },
     {
       "symbol": "P:tob.<init>(Lqfa;II)V#0",
-      "renamedSymbol": "P:tob.<init>(LOpenGlToolkit;II)V#0",
+      "renamedSymbol": "P:OpenGlPbuffer.<init>(LOpenGlToolkit;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -972539,7 +972747,7 @@
     },
     {
       "symbol": "P:tob.<init>(Lqfa;II)V#1",
-      "renamedSymbol": "P:tob.<init>(LOpenGlToolkit;II)V#1",
+      "renamedSymbol": "P:OpenGlPbuffer.<init>(LOpenGlToolkit;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -972550,7 +972758,7 @@
     },
     {
       "symbol": "P:tob.<init>(Lqfa;II)V#2",
-      "renamedSymbol": "P:tob.<init>(LOpenGlToolkit;II)V#2",
+      "renamedSymbol": "P:OpenGlPbuffer.<init>(LOpenGlToolkit;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -972561,7 +972769,7 @@
     },
     {
       "symbol": "P:tob.a(I)V#0",
-      "renamedSymbol": "P:tob.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:OpenGlPbuffer.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -972572,7 +972780,7 @@
     },
     {
       "symbol": "P:tob.e(I)V#0",
-      "renamedSymbol": "P:tob.e(I)V#0",
+      "renamedSymbol": "P:OpenGlPbuffer.release(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -972583,7 +972791,7 @@
     },
     {
       "symbol": "P:tob.f(I)J#0",
-      "renamedSymbol": "P:tob.f(I)J#0",
+      "renamedSymbol": "P:OpenGlPbuffer.getHandle(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -972594,7 +972802,7 @@
     },
     {
       "symbol": "P:tob.g(I)Z#0",
-      "renamedSymbol": "P:tob.g(I)Z#0",
+      "renamedSymbol": "P:OpenGlPbuffer.isChatInputDialogInitialized(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -986784,7 +986992,7 @@
     },
     {
       "symbol": "P:ut.a(I)V#0",
-      "renamedSymbol": "P:ut.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:PlayerRequestPackets.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -986795,7 +987003,7 @@
     },
     {
       "symbol": "P:ut.a(IJI)V#0",
-      "renamedSymbol": "P:ut.a(IJI)V#0",
+      "renamedSymbol": "P:PlayerRequestPackets.sendPlayerRequest(IJI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -986806,7 +987014,7 @@
     },
     {
       "symbol": "P:ut.a(IJI)V#1",
-      "renamedSymbol": "P:ut.a(IJI)V#1",
+      "renamedSymbol": "P:PlayerRequestPackets.sendPlayerRequest(IJI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -986817,7 +987025,7 @@
     },
     {
       "symbol": "P:ut.a(IJI)V#2",
-      "renamedSymbol": "P:ut.a(IJI)V#2",
+      "renamedSymbol": "P:PlayerRequestPackets.sendPlayerRequest(IJI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -991085,7 +991293,7 @@
     },
     {
       "symbol": "P:vjb.a(B)V#0",
-      "renamedSymbol": "P:vjb.a(B)V#0",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.closeTransientMenusAndDialogs(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -991096,7 +991304,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#0",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#0",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -991107,7 +991315,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#1",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#1",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -991118,7 +991326,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#10",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#10",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -991129,7 +991337,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#2",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#2",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -991140,7 +991348,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#3",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#3",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -991151,7 +991359,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#4",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#4",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -991162,7 +991370,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#5",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#5",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -991173,7 +991381,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#6",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#6",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -991184,7 +991392,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#7",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#7",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -991195,7 +991403,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#8",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#8",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -991206,7 +991414,7 @@
     },
     {
       "symbol": "P:vjb.a(FF[FFIFBIIII)V#9",
-      "renamedSymbol": "P:vjb.a(FF[FFIFBIIII)V#9",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.fillSlice(FF[FFIFBIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -991217,7 +991425,7 @@
     },
     {
       "symbol": "P:vjb.b(B)V#0",
-      "renamedSymbol": "P:vjb.clearSharedReferences(B)V#0",
+      "renamedSymbol": "P:FloatNoiseSliceGenerator.clearSharedReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1003915,7 +1004123,7 @@
       "original": "VoidHunters.java",
       "renamed": "VoidHunters.java",
       "inputSha256": "69cc4b9b8186f4765c6d34781d7b497712847d6d0020d8b54c038b1e406427f1",
-      "outputSha256": "008be4b22505f3068fca83318aea28b253e2d3d1ddf9f63e0b2fec8acfa7f144",
+      "outputSha256": "184a16fe6d8101c3706faa412d670305bfd96d8792ed452265b0ecd0a28f01de",
       "edits": [
         {
           "start": 77,
@@ -1004560,6 +1004768,20 @@
           "symbol": "C:olb",
           "original": "olb",
           "renamed": "ColorKeyScaleTextureOperation"
+        },
+        {
+          "start": 7645,
+          "end": 7648,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
+          "start": 7649,
+          "end": 7650,
+          "symbol": "M:vjb.a(B)V",
+          "original": "a",
+          "renamed": "closeTransientMenusAndDialogs"
         },
         {
           "start": 7678,
@@ -1010843,6 +1011065,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 34401,
+          "end": 34403,
+          "symbol": "C:ut",
+          "original": "ut",
+          "renamed": "PlayerRequestPackets"
+        },
+        {
           "start": 34404,
           "end": 34405,
           "symbol": "M:ut.a(I)V",
@@ -1012110,6 +1012339,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 36644,
+          "end": 36647,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
           "start": 36648,
           "end": 36649,
           "symbol": "M:tob.a(I)V",
@@ -1012334,6 +1012570,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 37023,
+          "end": 37025,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 37026,
           "end": 37027,
           "symbol": "M:ko.a(I)V",
@@ -1012437,6 +1012680,13 @@
           "symbol": "M:gna.b(Z)V",
           "original": "b",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 37198,
+          "end": 37201,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 37202,
@@ -1034661,7 +1034911,7 @@
       "original": "aib.java",
       "renamed": "AsteroidField.java",
       "inputSha256": "af391265e3d1a3ba3cfe402208328b0b7f61cbd852cb21191b5b2d4dc85f76c7",
-      "outputSha256": "d029966d02088e1bf7b213962d4aa469543e4906133a19cf76d07cec5444156b",
+      "outputSha256": "1fa075e6dc7e54d914d73f0341a55d6d3f24d842afa8c1f62dcc7ae5bddf63b8",
       "edits": [
         {
           "start": 50,
@@ -1034872,6 +1035122,13 @@
           "symbol": "F:aib.field_a:[Lcrb;",
           "original": "field_a",
           "renamed": "asteroids"
+        },
+        {
+          "start": 1945,
+          "end": 1948,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
         },
         {
           "start": 2448,
@@ -1043687,6 +1043944,13 @@
           "renamed": "fetchLocalizedResource"
         },
         {
+          "start": 66846,
+          "end": 66849,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
           "start": 66860,
           "end": 66863,
           "symbol": "C:qpa",
@@ -1046235,6 +1046499,13 @@
           "renamed": "SetAutoDetail"
         },
         {
+          "start": 81536,
+          "end": 81539,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
           "start": 81570,
           "end": 81577,
           "symbol": "F:aib.field_a:[Lcrb;",
@@ -1046611,6 +1046882,13 @@
           "symbol": "F:aib.field_a:[Lcrb;",
           "original": "field_a",
           "renamed": "asteroids"
+        },
+        {
+          "start": 87551,
+          "end": 87554,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
         },
         {
           "start": 88020,
@@ -1049716,7 +1049994,7 @@
       "original": "amb.java",
       "renamed": "ServerInfoFactory.java",
       "inputSha256": "842bcc8493fddfc9f163e7b699f974492ed2fd3afd76f8317d6751ad70a7b67c",
-      "outputSha256": "6beeeffd433b3cd5af43e20530059db4a17611847bce136aab45e6fb0e608905",
+      "outputSha256": "126eb00c00c0dbcc792be3b139c684c6c8ad43bbafa5d6a5226460d4351e892d",
       "edits": [
         {
           "start": 50,
@@ -1049927,6 +1050205,20 @@
           "symbol": "C:fva",
           "original": "fva",
           "renamed": "SetFightersPerPlayerMaximum"
+        },
+        {
+          "start": 4475,
+          "end": 4478,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
+          "start": 4479,
+          "end": 4480,
+          "symbol": "M:tob.g(I)Z",
+          "original": "g",
+          "renamed": "isChatInputDialogInitialized"
         },
         {
           "start": 4729,
@@ -1050433,6 +1050725,20 @@
           "renamed": "SetFightersPerPlayerMaximum"
         },
         {
+          "start": 7000,
+          "end": 7003,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
+          "start": 7004,
+          "end": 7005,
+          "symbol": "M:tob.g(I)Z",
+          "original": "g",
+          "renamed": "isChatInputDialogInitialized"
+        },
+        {
           "start": 7132,
           "end": 7135,
           "symbol": "C:jkb",
@@ -1050445,6 +1050751,20 @@
           "symbol": "C:fva",
           "original": "fva",
           "renamed": "SetFightersPerPlayerMaximum"
+        },
+        {
+          "start": 7216,
+          "end": 7219,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
+          "start": 7220,
+          "end": 7221,
+          "symbol": "M:tob.g(I)Z",
+          "original": "g",
+          "renamed": "isChatInputDialogInitialized"
         },
         {
           "start": 7404,
@@ -1101024,7 +1101344,7 @@
       "original": "bm.java",
       "renamed": "SetTorpedoProjectiles.java",
       "inputSha256": "b507fbd4fbf6f3c2e6fecb91232cf78e424deea54d88d178e733a13c2615fd6a",
-      "outputSha256": "4d412a4a98e02f80dc890ad1518096948ce3b9567dc2d326b51e38d9eb9d4e2f",
+      "outputSha256": "0d542ac3ec9de69957b686b2f80c96d6574f1c7a87816900f3f9a7bb875844b1",
       "edits": [
         {
           "start": 50,
@@ -1102215,6 +1102535,20 @@
           "symbol": "C:oq",
           "original": "oq",
           "renamed": "Particle"
+        },
+        {
+          "start": 12968,
+          "end": 12970,
+          "symbol": "C:ut",
+          "original": "ut",
+          "renamed": "PlayerRequestPackets"
+        },
+        {
+          "start": 12971,
+          "end": 12972,
+          "symbol": "M:ut.a(IJI)V",
+          "original": "a",
+          "renamed": "sendPlayerRequest"
         },
         {
           "start": 13170,
@@ -1143751,7 +1144085,7 @@
       "original": "cn.java",
       "renamed": "TickConditionFactory.java",
       "inputSha256": "571a1cfdce633b0792d00ce3379d9ea41af43bfbdd341202d3580622e00225d7",
-      "outputSha256": "576c4c925f57ec9bd8b360f4f0604e08d0c7ff269ec2531ff817a284266b9a3e",
+      "outputSha256": "12f962fad1c9999889ad986b11a323757874ed5541a41a06eaa8bbdf428de0a9",
       "edits": [
         {
           "start": 50,
@@ -1143768,11 +1144102,25 @@
           "renamed": "GameStateFactory"
         },
         {
+          "start": 118,
+          "end": 125,
+          "symbol": "F:cn.field_a:[[F",
+          "original": "field_a",
+          "renamed": "noiseGradients"
+        },
+        {
           "start": 151,
           "end": 152,
           "symbol": "M:cn.a(Z)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 203,
+          "end": 210,
+          "symbol": "F:cn.field_a:[[F",
+          "original": "field_a",
+          "renamed": "noiseGradients"
         },
         {
           "start": 263,
@@ -1143831,6 +1144179,13 @@
           "renamed": "createArray"
         },
         {
+          "start": 516,
+          "end": 523,
+          "symbol": "F:cn.field_a:[[F",
+          "original": "field_a",
+          "renamed": "noiseGradients"
+        },
+        {
           "start": 562,
           "end": 564,
           "symbol": "C:tv",
@@ -1143857,6 +1144212,13 @@
           "symbol": "C:dab",
           "original": "dab",
           "renamed": "TickCondition"
+        },
+        {
+          "start": 731,
+          "end": 738,
+          "symbol": "F:cn.field_a:[[F",
+          "original": "field_a",
+          "renamed": "noiseGradients"
         }
       ]
     },
@@ -1159179,7 +1159541,7 @@
       "original": "dbb.java",
       "renamed": "GetFighterRepairTime.java",
       "inputSha256": "7a5ce5004392753298bec0bedeaccae646adfec5db2f1cb0e27597a6216517cc",
-      "outputSha256": "effeb343696aa7615d82cb2d930783fdb2a3b21b491aa1fbe5efb5ff001d050a",
+      "outputSha256": "7b1110324da341b51bc26a08c3fa1d0d2c18995617f5af09414465072f8a3814",
       "edits": [
         {
           "start": 50,
@@ -1159308,6 +1159670,13 @@
           "renamed": "GetFighterRepairTime"
         },
         {
+          "start": 4069,
+          "end": 4072,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 4602,
           "end": 4605,
           "symbol": "C:toa",
@@ -1159327,7 +1159696,7 @@
       "original": "dc.java",
       "renamed": "SetFighterVision.java",
       "inputSha256": "84120452c3728cab5652a14e90d86643b5ae131ad4ed38d360a64491e38f5ef6",
-      "outputSha256": "b6a34cdec5aba1bb5e9797af284af7a0c84ceacde177028634c6ae64622e61a3",
+      "outputSha256": "f5e1083f571f62c0d60219202b2ed2a11d8918c95f43b223a769d0f91530633e",
       "edits": [
         {
           "start": 50,
@@ -1159342,6 +1159711,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 89,
+          "end": 90,
+          "symbol": "M:dc.a(Lllb;ILllb;Lllb;Lllb;)V",
+          "original": "a",
+          "renamed": "initializeChatInputDialog"
         },
         {
           "start": 91,
@@ -1159370,6 +1159746,13 @@
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 762,
+          "end": 769,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
         },
         {
           "start": 823,
@@ -1159461,6 +1159844,13 @@
           "symbol": "C:odb",
           "original": "odb",
           "renamed": "TargetLock"
+        },
+        {
+          "start": 1646,
+          "end": 1653,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
         },
         {
           "start": 1656,
@@ -1161804,7 +1162194,7 @@
       "original": "dga.java",
       "renamed": "dga.java",
       "inputSha256": "1fbb7d63cbe9b5f113d89da09c3e6753929ecc074941d2064c23490a7e3d7557",
-      "outputSha256": "21ed91fa50bd6fd97776aa69098def9ff79035ae1e858e13c6413505f6a14416",
+      "outputSha256": "bce314470de3db44085651a44ed8908a7a855fb6a69533b8c56ef86122d0b893",
       "edits": [
         {
           "start": 154,
@@ -1164269,6 +1164659,13 @@
           "symbol": "M:ms.b(Ljava/lang/String;I)[B",
           "original": "b",
           "renamed": "loadNamedResource"
+        },
+        {
+          "start": 13240,
+          "end": 13242,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 13253,
@@ -1175597,6 +1175994,13 @@
           "renamed": "loadNamedResource"
         },
         {
+          "start": 70898,
+          "end": 70901,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 70912,
           "end": 70915,
           "symbol": "C:qpa",
@@ -1178444,6 +1178848,13 @@
           "symbol": "M:ms.b(Ljava/lang/String;I)[B",
           "original": "b",
           "renamed": "loadNamedResource"
+        },
+        {
+          "start": 85540,
+          "end": 85542,
+          "symbol": "C:ut",
+          "original": "ut",
+          "renamed": "PlayerRequestPackets"
         },
         {
           "start": 85553,
@@ -1198651,7 +1199062,7 @@
       "original": "dqa.java",
       "renamed": "UiContainer.java",
       "inputSha256": "2217fbb020990d696992e089961d0cf72e32cfee7e8d06d0f6c1b066b53b1daf",
-      "outputSha256": "ef28569808dfb41d62af40a508e5889c82ea4ee47923d23367d1bb24dd63cc71",
+      "outputSha256": "50c2ad7075498e07662f29dbc72d9531101e56269055b062dbfc40f68457fce9",
       "edits": [
         {
           "start": 65,
@@ -1199695,6 +1200106,13 @@
           "symbol": "C:nq",
           "original": "nq",
           "renamed": "GetMissilesTopSpeed"
+        },
+        {
+          "start": 8580,
+          "end": 8581,
+          "symbol": "M:nq.a(BLds;)V",
+          "original": "a",
+          "renamed": "writeRandomDatBytes"
         },
         {
           "start": 8594,
@@ -1238602,7 +1239020,7 @@
       "original": "fcb.java",
       "renamed": "GameResourceLoader.java",
       "inputSha256": "d6888aa0fb3738be1fc8bd543c0bb510806656c53705c1fbd707d9b4d2ad357d",
-      "outputSha256": "f65e4c2ccd59169418f7b5f5162ce8343ae3655aa62a4cd3beda4ff364489861",
+      "outputSha256": "25a4d83eed19ea26d194603540d83f58f528dd56caf901001a1d2f0d4f80e3c7",
       "edits": [
         {
           "start": 50,
@@ -1242133,6 +1242551,13 @@
           "renamed": "graphicsArchive"
         },
         {
+          "start": 15977,
+          "end": 15979,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 15990,
           "end": 15993,
           "symbol": "C:ucb",
@@ -1244340,7 +1244765,7 @@
       "original": "fea.java",
       "renamed": "GetUseExtraBackground.java",
       "inputSha256": "9bbeff5da9df5df015a53a25224994c0e22ca54edc332b1a70353d5889330c7c",
-      "outputSha256": "4b1dc097ee09ac2a7f5059415330c68c3d450909fff3113980789eb8844a3c7b",
+      "outputSha256": "dc3513f17df04a1e9189987d754ec819cc4ff985d3131d86083bb9f8d2fc08de",
       "edits": [
         {
           "start": 50,
@@ -1244362,6 +1244787,13 @@
           "symbol": "M:fea.<init>(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;)V",
           "original": "fea",
           "renamed": "GetUseExtraBackground"
+        },
+        {
+          "start": 192,
+          "end": 193,
+          "symbol": "M:fea.a(I)V",
+          "original": "a",
+          "renamed": "closeQuickChatMenu"
         },
         {
           "start": 216,
@@ -1254251,7 +1254683,7 @@
       "original": "fj.java",
       "renamed": "fj.java",
       "inputSha256": "dbda6c164fb16a4cc5e97b4f5fc13a8dae59f8c64167d734d2a05c2eb6c0fed4",
-      "outputSha256": "f35a7a0dff7452e630d52b42bbacd6ef63692e34ba7448510dbb0bf99f119920",
+      "outputSha256": "4f2d25db3d68431650befcce8c45938f2e1620fcfc992dd37cfd39d343226bd2",
       "edits": [
         {
           "start": 489,
@@ -1254266,6 +1254698,13 @@
           "symbol": "C:fea",
           "original": "fea",
           "renamed": "GetUseExtraBackground"
+        },
+        {
+          "start": 518,
+          "end": 519,
+          "symbol": "M:fea.a(I)V",
+          "original": "a",
+          "renamed": "closeQuickChatMenu"
         },
         {
           "start": 1070,
@@ -1255935,7 +1256374,7 @@
       "original": "fka.java",
       "renamed": "ComponentCollision.java",
       "inputSha256": "e1c5efd6eb5b2f33124a3f7870a117e03198aee0e5e8107a9a654009486c7539",
-      "outputSha256": "d8486aac85653e3bdbb1cd685832968977b990969800d18a2fe36eddcdf579f5",
+      "outputSha256": "67c9093cea677c682995c6c5c984637c4778f1b9c88bd0dd9e3125479a9a7e86",
       "edits": [
         {
           "start": 50,
@@ -1256279,6 +1256718,13 @@
           "symbol": "F:llb.field_R:Ljava/lang/String;",
           "original": "field_R",
           "renamed": "text"
+        },
+        {
+          "start": 3139,
+          "end": 3141,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 3192,
@@ -1318871,7 +1319317,7 @@
       "original": "hqb.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "2f9be593c0b23b99dc2ec7d73293f1e471ea91cb04d7bea3b02d33e4f72ac1bc",
-      "outputSha256": "c415e3e6456f7ce332a189c86c5f085c0d881d7f43feff861a1ae06cf1fe0a01",
+      "outputSha256": "f1c70de9a99cd84de85456d31881a3088937149e1a0f26c6f1a87e4ab4fa698b",
       "edits": [
         {
           "start": 50,
@@ -1319236,6 +1319682,20 @@
           "symbol": "F:hqb.field_d:J",
           "original": "field_d",
           "renamed": "targetPlayerKey"
+        },
+        {
+          "start": 2594,
+          "end": 2596,
+          "symbol": "C:ut",
+          "original": "ut",
+          "renamed": "PlayerRequestPackets"
+        },
+        {
+          "start": 2597,
+          "end": 2598,
+          "symbol": "M:ut.a(IJI)V",
+          "original": "a",
+          "renamed": "sendPlayerRequest"
         },
         {
           "start": 2607,
@@ -1360144,7 +1360604,7 @@
       "original": "jgb.java",
       "renamed": "SetDebrisSurvives.java",
       "inputSha256": "7c82d3c683817b2480f153d3adbe624081db84a670654a74a8a376e6a46d9783",
-      "outputSha256": "1002bc314da51bc84dacf58568fd4cc886017f015640875f2cc8259bf2051bfe",
+      "outputSha256": "dbce16828e612847842de1a27a25fb1ce9c19b1e0b5ccda472ae2363fdebfe80",
       "edits": [
         {
           "start": 50,
@@ -1360278,6 +1360738,13 @@
           "symbol": "C:dc",
           "original": "dc",
           "renamed": "SetFighterVision"
+        },
+        {
+          "start": 1447,
+          "end": 1448,
+          "symbol": "M:dc.a(Lllb;ILllb;Lllb;Lllb;)V",
+          "original": "a",
+          "renamed": "initializeChatInputDialog"
         },
         {
           "start": 1449,
@@ -1363946,7 +1364413,7 @@
       "original": "jlb.java",
       "renamed": "BricksTextureOperation.java",
       "inputSha256": "90f1ee54b283cb4436b01b92d4deafe32cd2a2f7c7c51c254c2f5c760899eab3",
-      "outputSha256": "828c395c2a9cbdf1cf63ce21bdaeff145c37037ee6aa4bdd1f1a8d0f16f19440",
+      "outputSha256": "f8aa43b7860dd3f8b7d50f7b7cea9060e94bed5544a0d42cae27e32302d33974",
       "edits": [
         {
           "start": 71,
@@ -1364292,6 +1364759,13 @@
           "renamed": "TileTextureOperation"
         },
         {
+          "start": 3242,
+          "end": 3243,
+          "symbol": "M:lnb.d(I)V",
+          "original": "d",
+          "renamed": "closePlayerContextMenu"
+        },
+        {
           "start": 3293,
           "end": 3296,
           "symbol": "C:crb",
@@ -1364346,6 +1364820,13 @@
           "symbol": "C:lnb",
           "original": "lnb",
           "renamed": "TileTextureOperation"
+        },
+        {
+          "start": 3395,
+          "end": 3396,
+          "symbol": "M:lnb.d(I)V",
+          "original": "d",
+          "renamed": "closePlayerContextMenu"
         },
         {
           "start": 3446,
@@ -1388631,7 +1389112,7 @@
       "original": "kfb.java",
       "renamed": "GetBuildViewAutozoom.java",
       "inputSha256": "3da371ebd0c4bbb2c773283c238c69debdcca34b07b6c1d707a1d9ba64f0de10",
-      "outputSha256": "1e1dbd7c9e9e63ce475a5422e7964c0c8b853f0c47ada6ee8fd05db4a8b1cd02",
+      "outputSha256": "765f77760b28d73b0a5191668821566c92a131a71d2abe80975e4f128f99dec3",
       "edits": [
         {
           "start": 50,
@@ -1388704,6 +1389185,13 @@
           "renamed": "GetBuildViewAutozoom"
         },
         {
+          "start": 421,
+          "end": 422,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
+        },
+        {
           "start": 533,
           "end": 535,
           "symbol": "C:nc",
@@ -1388739,11 +1389227,25 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 1197,
+          "end": 1198,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
+        },
+        {
           "start": 1355,
           "end": 1358,
           "symbol": "C:kfb",
           "original": "kfb",
           "renamed": "GetBuildViewAutozoom"
+        },
+        {
+          "start": 1359,
+          "end": 1360,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
         },
         {
           "start": 1494,
@@ -1399539,10 +1400041,24 @@
     },
     {
       "original": "ko.java",
-      "renamed": "ko.java",
+      "renamed": "FloatGradientNoiseSliceGenerator.java",
       "inputSha256": "f5d64d0f9479e190abedcde5903e0c1842ab1be2ba23ecbac6a30fc7927e438e",
-      "outputSha256": "452163913b04581e6c1b693dd9d69a2e9580178ee05bcb6aff2516d0f1da189c",
+      "outputSha256": "62f298335778a1d66a6a46c59d351c5d9351e59716aea141e172d872507e3648",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
+          "start": 82,
+          "end": 85,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
         {
           "start": 99,
           "end": 102,
@@ -1399551,11 +1400067,32 @@
           "renamed": "Sprite"
         },
         {
+          "start": 132,
+          "end": 139,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 216,
           "end": 217,
           "symbol": "M:ko.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 348,
+          "end": 349,
+          "symbol": "M:ko.a(FF[FFIFBIIII)V",
+          "original": "a",
+          "renamed": "fillSlice"
+        },
+        {
+          "start": 1664,
+          "end": 1666,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 1667,
@@ -1399572,11 +1400109,67 @@
           "renamed": "SetVariableAction"
         },
         {
+          "start": 2129,
+          "end": 2130,
+          "symbol": "M:pob.a(BF)F",
+          "original": "a",
+          "renamed": "quinticFade"
+        },
+        {
+          "start": 2208,
+          "end": 2215,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 2247,
+          "end": 2254,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 2519,
           "end": 2522,
           "symbol": "C:pob",
           "original": "pob",
           "renamed": "SetVariableAction"
+        },
+        {
+          "start": 2523,
+          "end": 2524,
+          "symbol": "M:pob.a(BF)F",
+          "original": "a",
+          "renamed": "quinticFade"
+        },
+        {
+          "start": 2641,
+          "end": 2648,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 2690,
+          "end": 2697,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 2739,
+          "end": 2746,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 2788,
+          "end": 2795,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
         },
         {
           "start": 3085,
@@ -1399586,11 +1400179,25 @@
           "renamed": "SetVariableAction"
         },
         {
+          "start": 3089,
+          "end": 3090,
+          "symbol": "M:pob.a(BF)F",
+          "original": "a",
+          "renamed": "quinticFade"
+        },
+        {
           "start": 3308,
           "end": 3311,
           "symbol": "C:kfb",
           "original": "kfb",
           "renamed": "GetBuildViewAutozoom"
+        },
+        {
+          "start": 3312,
+          "end": 3313,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
         },
         {
           "start": 3314,
@@ -1399600,6 +1400207,13 @@
           "renamed": "GetBuildViewAutozoom"
         },
         {
+          "start": 3318,
+          "end": 3319,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
+        },
+        {
           "start": 3320,
           "end": 3323,
           "symbol": "C:kfb",
@@ -1399607,11 +1400221,25 @@
           "renamed": "GetBuildViewAutozoom"
         },
         {
+          "start": 3324,
+          "end": 3325,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
+        },
+        {
           "start": 3326,
           "end": 3329,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3330,
+          "end": 3331,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 3346,
@@ -1399628,11 +1400256,25 @@
           "renamed": "andBits"
         },
         {
+          "start": 3360,
+          "end": 3367,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 3416,
           "end": 3419,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3420,
+          "end": 3421,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 3436,
@@ -1399649,6 +1400291,13 @@
           "renamed": "andBits"
         },
         {
+          "start": 3450,
+          "end": 3457,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 3506,
           "end": 3509,
           "symbol": "C:kfb",
@@ -1399656,11 +1400305,25 @@
           "renamed": "GetBuildViewAutozoom"
         },
         {
+          "start": 3510,
+          "end": 3511,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
+        },
+        {
           "start": 3512,
           "end": 3515,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3516,
+          "end": 3517,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 3532,
@@ -1399677,11 +1400340,25 @@
           "renamed": "andBits"
         },
         {
+          "start": 3546,
+          "end": 3553,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 3602,
           "end": 3605,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3606,
+          "end": 3607,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 3622,
@@ -1399698,11 +1400375,25 @@
           "renamed": "andBits"
         },
         {
+          "start": 3633,
+          "end": 3640,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 3694,
           "end": 3697,
           "symbol": "C:kfb",
           "original": "kfb",
           "renamed": "GetBuildViewAutozoom"
+        },
+        {
+          "start": 3698,
+          "end": 3699,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
         },
         {
           "start": 3700,
@@ -1399712,11 +1400403,25 @@
           "renamed": "GetBuildViewAutozoom"
         },
         {
+          "start": 3704,
+          "end": 3705,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
+        },
+        {
           "start": 3706,
           "end": 3709,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3710,
+          "end": 3711,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 3726,
@@ -1399733,11 +1400438,25 @@
           "renamed": "andBits"
         },
         {
+          "start": 3740,
+          "end": 3747,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 3796,
           "end": 3799,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3800,
+          "end": 3801,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 3816,
@@ -1399754,6 +1400473,13 @@
           "renamed": "andBits"
         },
         {
+          "start": 3830,
+          "end": 3837,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 3887,
           "end": 3890,
           "symbol": "C:kfb",
@@ -1399761,11 +1400487,25 @@
           "renamed": "GetBuildViewAutozoom"
         },
         {
+          "start": 3891,
+          "end": 3892,
+          "symbol": "M:kfb.a(FFIF)F",
+          "original": "a",
+          "renamed": "lerp"
+        },
+        {
           "start": 3893,
           "end": 3896,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3897,
+          "end": 3898,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 3913,
@@ -1399782,11 +1400522,25 @@
           "renamed": "andBits"
         },
         {
+          "start": 3927,
+          "end": 3934,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 3983,
           "end": 3986,
           "symbol": "C:rha",
           "original": "rha",
           "renamed": "Message"
+        },
+        {
+          "start": 3987,
+          "end": 3988,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
         },
         {
           "start": 4003,
@@ -1399803,11 +1400557,88 @@
           "renamed": "andBits"
         },
         {
+          "start": 4017,
+          "end": 4024,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
           "start": 4591,
           "end": 4594,
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 4958,
+          "end": 4960,
+          "symbol": "M:ko.<init>(I)V",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
+          "start": 5135,
+          "end": 5142,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5260,
+          "end": 5267,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5303,
+          "end": 5310,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5473,
+          "end": 5480,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5515,
+          "end": 5522,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5545,
+          "end": 5552,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5593,
+          "end": 5600,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5635,
+          "end": 5642,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
+        },
+        {
+          "start": 5678,
+          "end": 5685,
+          "symbol": "F:ko.field_f:[I",
+          "original": "field_f",
+          "renamed": "permutation"
         }
       ]
     },
@@ -1404803,7 +1405634,7 @@
       "original": "kva.java",
       "renamed": "OpenGlGpuTexture.java",
       "inputSha256": "4d4efb69bbf441d9a30ea903b734fffaf8cdec7f2b7fe854a5fa6b258ad04557",
-      "outputSha256": "e158c32e1721d4252d8849df493b521c637b7d8a50c61034bce3fb163ad82d12",
+      "outputSha256": "2294e2fddd0499bad348ee4e981b8af9c0cee0ced7065372a62fba8bcf75b40f",
       "edits": [
         {
           "start": 53,
@@ -1405639,11 +1406470,25 @@
           "renamed": "getEstimatedByteSize"
         },
         {
+          "start": 11001,
+          "end": 11002,
+          "symbol": "M:kva.d(B)V",
+          "original": "d",
+          "renamed": "disposeChatInputDialog"
+        },
+        {
           "start": 11053,
           "end": 11056,
           "symbol": "C:fhb",
           "original": "fhb",
           "renamed": "GetMachineGunAimarc"
+        },
+        {
+          "start": 11089,
+          "end": 11096,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
         },
         {
           "start": 11118,
@@ -1405665,6 +1406510,20 @@
           "symbol": "C:bpa",
           "original": "bpa",
           "renamed": "UiComboBoxRenderer"
+        },
+        {
+          "start": 11173,
+          "end": 11180,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
+        },
+        {
+          "start": 11196,
+          "end": 11203,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
         },
         {
           "start": 11222,
@@ -1405700,6 +1406559,13 @@
           "symbol": "C:kva",
           "original": "kva",
           "renamed": "OpenGlGpuTexture"
+        },
+        {
+          "start": 11423,
+          "end": 11424,
+          "symbol": "M:kva.d(B)V",
+          "original": "d",
+          "renamed": "disposeChatInputDialog"
         },
         {
           "start": 11456,
@@ -1427186,7 +1428052,7 @@
       "original": "lna.java",
       "renamed": "SetBombletSprayProjectileLife.java",
       "inputSha256": "71d7fb12c7d79ae233641f327ea317d90df20d7b9dc69b9a071e8094f448562c",
-      "outputSha256": "1f9e1d029b5dd64f5b1980af8a0e8315a1891c841b8689fe49cb2c515d3f639a",
+      "outputSha256": "f9e078b568900a06a5265364344681ed38b91e16dcecb90b4a34bc43d21682df",
       "edits": [
         {
           "start": 50,
@@ -1427574,6 +1428440,13 @@
           "renamed": "GetFighterRepairTime"
         },
         {
+          "start": 3824,
+          "end": 3826,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 3882,
           "end": 3885,
           "symbol": "C:lda",
@@ -1427628,7 +1428501,7 @@
       "original": "lnb.java",
       "renamed": "TileTextureOperation.java",
       "inputSha256": "c194ad15ace10fdfcb00247bec6eaf2a3b91dcd2b8b66fcac07b04ecd95be866",
-      "outputSha256": "cab9c38fcccc668ef069a4787efaebea4f1e7a319c58c1b36c5a2dc666472b24",
+      "outputSha256": "2124f052bab3cc9d2a2f5d3ffa7e294e138651083a5096255aabd15caefa8f5f",
       "edits": [
         {
           "start": 69,
@@ -1428126,6 +1428999,13 @@
           "symbol": "C:jv",
           "original": "jv",
           "renamed": "QuickChatCategoryLoader"
+        },
+        {
+          "start": 5773,
+          "end": 5774,
+          "symbol": "M:lnb.d(I)V",
+          "original": "d",
+          "renamed": "closePlayerContextMenu"
         },
         {
           "start": 5809,
@@ -1433167,7 +1434047,7 @@
       "original": "lsa.java",
       "renamed": "lsa.java",
       "inputSha256": "32ea2355400f0473a04f7d94f409e5c1238185d65c1c8913c236034a55919af7",
-      "outputSha256": "35abb1e04a3cca71d5851bfde5fe73e8ae526721488b187493b201721c6f1db6",
+      "outputSha256": "a85f24e63e3a2abafabcd442bcf4166fdf750341eae3fa134732f75b58b6f533",
       "edits": [
         {
           "start": 62,
@@ -1433184,11 +1434064,32 @@
           "renamed": "Widget"
         },
         {
+          "start": 142,
+          "end": 149,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
+        },
+        {
           "start": 175,
           "end": 176,
           "symbol": "M:lsa.c(B)V",
           "original": "c",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 256,
+          "end": 263,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
+        },
+        {
+          "start": 308,
+          "end": 315,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
         },
         {
           "start": 807,
@@ -1433238,7 +1434139,7 @@
       "original": "lsb.java",
       "renamed": "HardpointDefinition.java",
       "inputSha256": "fdb9f826397ce40b1c3db3d1e855338b13c4c02a9578cd6ef595af88b25ba08e",
-      "outputSha256": "45b3c6f1aa2adb4219d09ad8d678ad1a7475dbd5bba0f7c4cd3f3b19bc2eda10",
+      "outputSha256": "615bfacebd467789985d81499eb8c964a71ae3f5953089b2fdf1b9df0b062b45",
       "edits": [
         {
           "start": 50,
@@ -1433253,6 +1434154,13 @@
           "symbol": "C:kva",
           "original": "kva",
           "renamed": "OpenGlGpuTexture"
+        },
+        {
+          "start": 213,
+          "end": 214,
+          "symbol": "M:kva.d(B)V",
+          "original": "d",
+          "renamed": "disposeChatInputDialog"
         },
         {
           "start": 239,
@@ -1447170,7 +1448078,7 @@
       "original": "mib.java",
       "renamed": "CarouselCommongameInfo.java",
       "inputSha256": "fdf0cb05033e8340a592e7c6e19f004fd6391d964d7eca9941607832dbf1f495",
-      "outputSha256": "1c88ea8da08c73911264aef6cc544a42d20b6811e4ffef77c5bf169167b15feb",
+      "outputSha256": "b5ade8e61a7947726047f71ad11c942cd4badce7ae6245b9842f00f6f92108ae",
       "edits": [
         {
           "start": 97,
@@ -1450841,6 +1451749,13 @@
           "symbol": "C:tja",
           "original": "tja",
           "renamed": "CarouselSlot"
+        },
+        {
+          "start": 28308,
+          "end": 28310,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 28347,
@@ -1508700,7 +1509615,7 @@
       "original": "nq.java",
       "renamed": "GetMissilesTopSpeed.java",
       "inputSha256": "0531c7923ac774e86fe5d04b90b821e786f6d423802d8072e6452cd08ff454a1",
-      "outputSha256": "0ea2ce04f7ef46ee5d934ef64a8f23e1110506ce59fd986912d94c239f86c513",
+      "outputSha256": "84a7a13459ef7d12205d5779523bd5ffae2b559cc39afad44d45628465343cd6",
       "edits": [
         {
           "start": 69,
@@ -1508815,6 +1509730,20 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 1230,
+          "end": 1231,
+          "symbol": "M:nq.a(FIFIIIFLvjb;IFI[BBF)V",
+          "original": "a",
+          "renamed": "accumulateFractalNoiseSlice"
+        },
+        {
+          "start": 1322,
+          "end": 1325,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 2108,
           "end": 2110,
           "symbol": "C:nq",
@@ -1508822,11 +1509751,39 @@
           "renamed": "GetMissilesTopSpeed"
         },
         {
+          "start": 2111,
+          "end": 2112,
+          "symbol": "M:nq.a(FIFIIIFLvjb;IFI[BBF)V",
+          "original": "a",
+          "renamed": "accumulateFractalNoiseSlice"
+        },
+        {
+          "start": 2197,
+          "end": 2200,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
+          "start": 2481,
+          "end": 2482,
+          "symbol": "M:vjb.a(FF[FFIFBIIII)V",
+          "original": "a",
+          "renamed": "fillSlice"
+        },
+        {
           "start": 4150,
           "end": 4153,
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 4374,
+          "end": 4375,
+          "symbol": "M:nq.a(BLds;)V",
+          "original": "a",
+          "renamed": "writeRandomDatBytes"
         },
         {
           "start": 4389,
@@ -1509263,7 +1510220,7 @@
       "original": "nra.java",
       "renamed": "AwardVictoryToTeamActionFactory.java",
       "inputSha256": "9217383abf4eac5dac83b5c849002fa0540806a6608069ff51ac9c12ec8defda",
-      "outputSha256": "ca7ee69f6e0812ed23e49f4bb4d65d54eea8c3b19dd413fe709fcde0d9f3855d",
+      "outputSha256": "f0a503905303dd64079753a781cc36c367119f4db490d516d8a3d9d5c84f2cc6",
       "edits": [
         {
           "start": 50,
@@ -1509280,11 +1510237,25 @@
           "renamed": "GameStateFactory"
         },
         {
+          "start": 240,
+          "end": 243,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 291,
           "end": 294,
           "symbol": "C:fka",
           "original": "fka",
           "renamed": "ComponentCollision"
+        },
+        {
+          "start": 337,
+          "end": 340,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 377,
@@ -1512603,6 +1513574,13 @@
           "symbol": "C:ih",
           "original": "ih",
           "renamed": "ShipTeamCondition"
+        },
+        {
+          "start": 9081,
+          "end": 9084,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
         },
         {
           "start": 9104,
@@ -1525607,7 +1526585,7 @@
       "original": "oga.java",
       "renamed": "GetPedrosRepairModeSwitchtime.java",
       "inputSha256": "deb452dcf23ed5b076e4af64caf8af38bfffd054a2d7be3a84101d7a62f63f8e",
-      "outputSha256": "33fd495f9c071ab014877bdc832b45b34506f268d37ff7fa1c8d0707efa9dd86",
+      "outputSha256": "ebf300ab7a03415573111bf781b7a55ee6596ae66aaf8a26df6c1f07b933d42f",
       "edits": [
         {
           "start": 69,
@@ -1525790,6 +1526768,13 @@
           "symbol": "C:lnb",
           "original": "lnb",
           "renamed": "TileTextureOperation"
+        },
+        {
+          "start": 1735,
+          "end": 1736,
+          "symbol": "M:lnb.d(I)V",
+          "original": "d",
+          "renamed": "closePlayerContextMenu"
         },
         {
           "start": 1791,
@@ -1528128,7 +1529113,7 @@
       "original": "oj.java",
       "renamed": "GpuTransform3D.java",
       "inputSha256": "9e36972997a7051e6ae77536f69919f03463f288cc8c5de81acb1c9aa76d0432",
-      "outputSha256": "9eb5d240eda2c41dbec0f36fc7556b1b111a79e77104058f972ab1a3195191ad",
+      "outputSha256": "d44569750ca244faaf98520ec1d4938575980abc3da0e13a10ad6475f5db4f0a",
       "edits": [
         {
           "start": 69,
@@ -1531827,6 +1532812,13 @@
           "renamed": "TileTextureOperation"
         },
         {
+          "start": 23925,
+          "end": 23926,
+          "symbol": "M:lnb.d(I)V",
+          "original": "d",
+          "renamed": "closePlayerContextMenu"
+        },
+        {
           "start": 23993,
           "end": 23994,
           "symbol": "M:oj.b(ILpw;)V",
@@ -1534506,7 +1535498,7 @@
       "original": "olb.java",
       "renamed": "ColorKeyScaleTextureOperation.java",
       "inputSha256": "eb977429737172facaee9436db4f379e03c89756f5fff01a1abecd29fb443c01",
-      "outputSha256": "0d6fb21aab2c307b9b61fbff4a9608c0fe4de82b94fae784603d33e54c3e5c04",
+      "outputSha256": "70b39a20346f326adbdbd8bed44e8aa48a712b31026c1f92f763a0172281a20e",
       "edits": [
         {
           "start": 50,
@@ -1534997,6 +1535989,20 @@
           "symbol": "C:fhb",
           "original": "fhb",
           "renamed": "GetMachineGunAimarc"
+        },
+        {
+          "start": 6478,
+          "end": 6481,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
+          "start": 6482,
+          "end": 6483,
+          "symbol": "M:vjb.a(B)V",
+          "original": "a",
+          "renamed": "closeTransientMenusAndDialogs"
         },
         {
           "start": 6506,
@@ -1604142,7 +1605148,7 @@
       "original": "pob.java",
       "renamed": "SetVariableAction.java",
       "inputSha256": "84edbd46edbf0ed014300d1e5bd3309397cde442b4431518fbe022ccb408e2cc",
-      "outputSha256": "2d337479c1d9d7fadb774d08d0e19f448f0849afc575944e5a71c30b69eb69ec",
+      "outputSha256": "20a33c80db4eb86bef38366b3c003b405319e82990f3ef5dca6607fc2a1d4f12",
       "edits": [
         {
           "start": 50,
@@ -1604185,6 +1605191,13 @@
           "symbol": "F:pob.field_a:I",
           "original": "field_a",
           "renamed": "value"
+        },
+        {
+          "start": 205,
+          "end": 206,
+          "symbol": "M:pob.a(BF)F",
+          "original": "a",
+          "renamed": "quinticFade"
         },
         {
           "start": 402,
@@ -1621884,7 +1622897,7 @@
       "original": "qfa.java",
       "renamed": "OpenGlToolkit.java",
       "inputSha256": "b81f18912a0b02f8015104734d975484645bb89230facf16524498674d5b8c90",
-      "outputSha256": "8cf67432ac6305013cafcbb5c1e80ef5bfc9d875ac5788967c2b37b27a7a86e1",
+      "outputSha256": "e624e94e94a98a08b31e546ef9ead2b66d14b8b1296407f18152c9c06d827b67",
       "edits": [
         {
           "start": 71,
@@ -1623021,6 +1624034,13 @@
           "renamed": "ToolkitSprite"
         },
         {
+          "start": 19076,
+          "end": 19079,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
           "start": 19101,
           "end": 19103,
           "symbol": "C:nv",
@@ -1623049,11 +1624069,32 @@
           "renamed": "OpenGlRenderbuffer"
         },
         {
+          "start": 19266,
+          "end": 19269,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
+          "start": 19291,
+          "end": 19294,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
           "start": 19386,
           "end": 19389,
           "symbol": "C:tla",
           "original": "tla",
           "renamed": "OpenGlSprite"
+        },
+        {
+          "start": 19545,
+          "end": 19548,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
         },
         {
           "start": 19565,
@@ -1623077,6 +1624118,13 @@
           "renamed": "getHeight"
         },
         {
+          "start": 19684,
+          "end": 19687,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
           "start": 19708,
           "end": 19709,
           "symbol": "M:tla.d()I",
@@ -1623091,11 +1624139,25 @@
           "renamed": "getHeight"
         },
         {
+          "start": 19815,
+          "end": 19822,
+          "symbol": "F:tob.field_m:I",
+          "original": "field_m",
+          "renamed": "pixelCount"
+        },
+        {
           "start": 19908,
           "end": 19909,
           "symbol": "M:vga.b(I)Lfh;",
           "original": "b",
           "renamed": "removeLast"
+        },
+        {
+          "start": 19977,
+          "end": 19980,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
         },
         {
           "start": 20014,
@@ -1623110,6 +1624172,20 @@
           "symbol": "M:ksa.b(I)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 20115,
+          "end": 20116,
+          "symbol": "M:tob.f(I)J",
+          "original": "f",
+          "renamed": "getHandle"
+        },
+        {
+          "start": 20181,
+          "end": 20188,
+          "symbol": "F:tob.field_m:I",
+          "original": "field_m",
+          "renamed": "pixelCount"
         },
         {
           "start": 20303,
@@ -1623145,6 +1624221,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 20486,
+          "end": 20487,
+          "symbol": "M:tob.f(I)J",
+          "original": "f",
+          "renamed": "getHandle"
         },
         {
           "start": 20590,
@@ -1654537,7 +1655620,7 @@
       "original": "rga.java",
       "renamed": "WaterTextures.java",
       "inputSha256": "d3ab2ced1562120e7d661482557eef382a29969a7af81a374832550a7f0185e9",
-      "outputSha256": "190b5b09e003462bc97fc1b066477b8d090036dd9d3b41d4035347a40f966308",
+      "outputSha256": "86851a34388903098c522fabfaafb477c560ae73d7f63afe32128a021ff65627",
       "edits": [
         {
           "start": 50,
@@ -1654657,6 +1655740,13 @@
           "symbol": "C:dbb",
           "original": "dbb",
           "renamed": "GetFighterRepairTime"
+        },
+        {
+          "start": 1197,
+          "end": 1199,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 1335,
@@ -1655975,7 +1657065,7 @@
       "original": "rha.java",
       "renamed": "Message.java",
       "inputSha256": "90eb2e3b140d639ac57a8f78258c70d8014121775692f6310ac2dc4799027d03",
-      "outputSha256": "7afd3d30363d7f39752fc5ab109adc2a24f87e2c6ce646f658d99b70d0683512",
+      "outputSha256": "583e0ddf1381bad6a85e6186d645191a35f65086b9049be699f65c124f10e851",
       "edits": [
         {
           "start": 50,
@@ -1656307,11 +1657397,25 @@
           "renamed": "GetMissileLauncherRandomness"
         },
         {
+          "start": 2603,
+          "end": 2604,
+          "symbol": "M:rha.a(FFIFB)F",
+          "original": "a",
+          "renamed": "dotNoiseGradient"
+        },
+        {
           "start": 2747,
           "end": 2749,
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "TickConditionFactory"
+        },
+        {
+          "start": 2750,
+          "end": 2757,
+          "symbol": "F:cn.field_a:[[F",
+          "original": "field_a",
+          "renamed": "noiseGradients"
         },
         {
           "start": 2946,
@@ -1687448,7 +1688552,7 @@
       "original": "sdb.java",
       "renamed": "GetThrusterBindingBalanceThreshold.java",
       "inputSha256": "0401fee525af0e3f33fde8afdb9aec14cd64c1400de6b582d3f11eb9e85e3756",
-      "outputSha256": "06d469f62141c47b69251ac5d3338ff95dcdd573fea073b90e64aae9a92d8c1e",
+      "outputSha256": "09a5f2eca5f341da810b71537b4f22a42e29fb03ddf062d34e5ea67a7fcbabf5",
       "edits": [
         {
           "start": 50,
@@ -1687836,6 +1688940,20 @@
           "renamed": "SetSpinningBladeSpindamageMultiplier"
         },
         {
+          "start": 3066,
+          "end": 3069,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
+          "start": 3070,
+          "end": 3071,
+          "symbol": "M:tob.g(I)Z",
+          "original": "g",
+          "renamed": "isChatInputDialogInitialized"
+        },
+        {
           "start": 3311,
           "end": 3314,
           "symbol": "C:erb",
@@ -1687876,6 +1688994,20 @@
           "symbol": "M:no.b(Ljava/lang/String;)I",
           "original": "b",
           "renamed": "getStringWidth"
+        },
+        {
+          "start": 3838,
+          "end": 3841,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
+          "start": 3842,
+          "end": 3843,
+          "symbol": "M:tob.g(I)Z",
+          "original": "g",
+          "renamed": "isChatInputDialogInitialized"
         },
         {
           "start": 3870,
@@ -1709933,7 +1711065,7 @@
       "original": "sna.java",
       "renamed": "PolarDisplacementTextureOperation.java",
       "inputSha256": "f28915ec306d26a7d1df2820db9621aded6cffc5840562057294919ab57cf3e2",
-      "outputSha256": "91c52f7e9a4cc7abe1113dd7d89714064e22fea89a764e6fb65289a304b0906a",
+      "outputSha256": "e53d1ca5ee2f73bbac4e3f64213960560c293bb96349e0aceabb25095b9b4e97",
       "edits": [
         {
           "start": 50,
@@ -1710151,6 +1711283,13 @@
           "symbol": "F:ifa.field_g:[Ljava/lang/String;",
           "original": "field_g",
           "renamed": "menuActionLabels"
+        },
+        {
+          "start": 5456,
+          "end": 5458,
+          "symbol": "C:ut",
+          "original": "ut",
+          "renamed": "PlayerRequestPackets"
         },
         {
           "start": 5499,
@@ -1727258,7 +1728397,7 @@
       "original": "tba.java",
       "renamed": "SetExplosionPushMultiplier.java",
       "inputSha256": "f877e400eb9e87cb0bc2e987bc2169e3d8ee7e479215baf25e6e368173350f55",
-      "outputSha256": "e9bda43e268353e5cdcf444e042b94964ba7575a6387136a9dc8406601c51d3b",
+      "outputSha256": "c7f517871f035402d5adb29b9d7f611971d96b747f13801f84fcc1f27f8fe8b8",
       "edits": [
         {
           "start": 50,
@@ -1727378,6 +1728517,13 @@
           "symbol": "C:isa",
           "original": "isa",
           "renamed": "SetReverbGain"
+        },
+        {
+          "start": 1652,
+          "end": 1655,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 1752,
@@ -1740338,7 +1741484,7 @@
       "original": "tjb.java",
       "renamed": "QuickChatMenuWidget.java",
       "inputSha256": "55fe2b4d2291ac8c495f9f9c950ed12c8a933807fcf5b0957625c489e4fad43d",
-      "outputSha256": "91772e135135355823ddaf21f5c491e42209ac1bbf8bae4cad9a07bf4a58d9e8",
+      "outputSha256": "12dfd7fcedf233f647e2e9737d29943a66f7246e8fab9895b1b85652ef9a9984",
       "edits": [
         {
           "start": 50,
@@ -1740556,6 +1741702,13 @@
           "symbol": "C:fea",
           "original": "fea",
           "renamed": "GetUseExtraBackground"
+        },
+        {
+          "start": 1195,
+          "end": 1196,
+          "symbol": "M:fea.a(I)V",
+          "original": "a",
+          "renamed": "closeQuickChatMenu"
         },
         {
           "start": 1250,
@@ -1740796,6 +1741949,13 @@
           "renamed": "GetUseExtraBackground"
         },
         {
+          "start": 3077,
+          "end": 3078,
+          "symbol": "M:fea.a(I)V",
+          "original": "a",
+          "renamed": "closeQuickChatMenu"
+        },
+        {
           "start": 3098,
           "end": 3100,
           "symbol": "C:fd",
@@ -1740815,6 +1741975,13 @@
           "symbol": "C:fea",
           "original": "fea",
           "renamed": "GetUseExtraBackground"
+        },
+        {
+          "start": 3177,
+          "end": 3178,
+          "symbol": "M:fea.a(I)V",
+          "original": "a",
+          "renamed": "closeQuickChatMenu"
         },
         {
           "start": 3242,
@@ -1747961,7 +1749128,7 @@
       "original": "toa.java",
       "renamed": "TextLayoutLine.java",
       "inputSha256": "c24f75e0d1be914525f3e3c134727148bf5989ce903a4383cac124fefacd60f9",
-      "outputSha256": "61ab94976a8ff153d87448dc73f822678db113792e51e53ee747845d28416625",
+      "outputSha256": "61350f3dfc7ac98613243cea7975e43ad4ad9b4b22f9a00dcf3d40bf8d53c3c2",
       "edits": [
         {
           "start": 50,
@@ -1748006,6 +1749173,13 @@
           "renamed": "TextLayoutLine"
         },
         {
+          "start": 623,
+          "end": 626,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 733,
           "end": 740,
           "symbol": "F:toa.field_c:[I",
@@ -1748034,6 +1749208,13 @@
           "renamed": "caretXs"
         },
         {
+          "start": 1045,
+          "end": 1048,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 1585,
           "end": 1588,
           "symbol": "C:toa",
@@ -1748046,6 +1749227,13 @@
           "symbol": "C:nq",
           "original": "nq",
           "renamed": "GetMissilesTopSpeed"
+        },
+        {
+          "start": 1698,
+          "end": 1699,
+          "symbol": "M:nq.a(FIFIIIFLvjb;IFI[BBF)V",
+          "original": "a",
+          "renamed": "accumulateFractalNoiseSlice"
         },
         {
           "start": 2861,
@@ -1748135,10 +1749323,17 @@
     },
     {
       "original": "tob.java",
-      "renamed": "tob.java",
+      "renamed": "OpenGlPbuffer.java",
       "inputSha256": "ee6605366263c29d923413364ea5ba65852b49631dd33843b920a6b3812e9019",
-      "outputSha256": "5f678f72f0d632432b6d304f3b3aab4a21c071d545ab2b01a575a8e5243c2f5c",
+      "outputSha256": "cf085e11046b121c27bfd78a152c0c97ad73907cb04a4904dbc277769a5bba97",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:tob",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
         {
           "start": 62,
           "end": 64,
@@ -1748154,11 +1749349,60 @@
           "renamed": "GameStateFactory"
         },
         {
+          "start": 135,
+          "end": 142,
+          "symbol": "F:tob.field_n:J",
+          "original": "field_n",
+          "renamed": "handle"
+        },
+        {
+          "start": 152,
+          "end": 159,
+          "symbol": "F:tob.field_m:I",
+          "original": "field_m",
+          "renamed": "pixelCount"
+        },
+        {
           "start": 173,
           "end": 176,
           "symbol": "C:qfa",
           "original": "qfa",
           "renamed": "OpenGlToolkit"
+        },
+        {
+          "start": 177,
+          "end": 184,
+          "symbol": "F:tob.field_k:Lqfa;",
+          "original": "field_k",
+          "renamed": "toolkit"
+        },
+        {
+          "start": 212,
+          "end": 213,
+          "symbol": "M:tob.g(I)Z",
+          "original": "g",
+          "renamed": "isChatInputDialogInitialized"
+        },
+        {
+          "start": 311,
+          "end": 318,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
+        },
+        {
+          "start": 372,
+          "end": 379,
+          "symbol": "F:lsa.field_e:Lllb;",
+          "original": "field_e",
+          "renamed": "savedChatInputWidget"
+        },
+        {
+          "start": 479,
+          "end": 480,
+          "symbol": "M:tob.e(I)V",
+          "original": "e",
+          "renamed": "release"
         },
         {
           "start": 541,
@@ -1748168,11 +1749412,102 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 682,
+          "end": 683,
+          "symbol": "M:tob.e(I)V",
+          "original": "e",
+          "renamed": "release"
+        },
+        {
+          "start": 715,
+          "end": 722,
+          "symbol": "F:tob.field_n:J",
+          "original": "field_n",
+          "renamed": "handle"
+        },
+        {
+          "start": 756,
+          "end": 763,
+          "symbol": "F:tob.field_k:Lqfa;",
+          "original": "field_k",
+          "renamed": "toolkit"
+        },
+        {
+          "start": 792,
+          "end": 799,
+          "symbol": "F:tob.field_n:J",
+          "original": "field_n",
+          "renamed": "handle"
+        },
+        {
+          "start": 817,
+          "end": 824,
+          "symbol": "F:tob.field_n:J",
+          "original": "field_n",
+          "renamed": "handle"
+        },
+        {
+          "start": 863,
+          "end": 864,
+          "symbol": "M:tob.f(I)J",
+          "original": "f",
+          "renamed": "getHandle"
+        },
+        {
+          "start": 966,
+          "end": 973,
+          "symbol": "F:tob.field_n:J",
+          "original": "field_n",
+          "renamed": "handle"
+        },
+        {
+          "start": 1005,
+          "end": 1012,
+          "symbol": "F:tob.field_n:J",
+          "original": "field_n",
+          "renamed": "handle"
+        },
+        {
+          "start": 1025,
+          "end": 1028,
+          "symbol": "M:tob.<init>(Lqfa;II)V",
+          "original": "tob",
+          "renamed": "OpenGlPbuffer"
+        },
+        {
           "start": 1029,
           "end": 1032,
           "symbol": "C:qfa",
           "original": "qfa",
           "renamed": "OpenGlToolkit"
+        },
+        {
+          "start": 1096,
+          "end": 1103,
+          "symbol": "F:tob.field_m:I",
+          "original": "field_m",
+          "renamed": "pixelCount"
+        },
+        {
+          "start": 1138,
+          "end": 1145,
+          "symbol": "F:tob.field_k:Lqfa;",
+          "original": "field_k",
+          "renamed": "toolkit"
+        },
+        {
+          "start": 1171,
+          "end": 1178,
+          "symbol": "F:tob.field_n:J",
+          "original": "field_n",
+          "renamed": "handle"
+        },
+        {
+          "start": 1186,
+          "end": 1193,
+          "symbol": "F:tob.field_k:Lqfa;",
+          "original": "field_k",
+          "renamed": "toolkit"
         },
         {
           "start": 1303,
@@ -1758050,7 +1759385,7 @@
       "original": "uca.java",
       "renamed": "GameSession.java",
       "inputSha256": "6411540835dfa3b22b2bd717fb0fa6399b771ecbf519ebf16dcb3d8f7f24035c",
-      "outputSha256": "dd163d4702357b775b9c31249485d0bd886f9bf99fb309da51c320ef48e05304",
+      "outputSha256": "cdb4ebbd3a6243cca50bfeaf700a87b59621449775dc1d1e55d3351242a59d8e",
       "edits": [
         {
           "start": 71,
@@ -1788656,6 +1789991,13 @@
           "renamed": "AdjustVariableActionFactory"
         },
         {
+          "start": 335787,
+          "end": 335789,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 335809,
           "end": 335811,
           "symbol": "C:bf",
@@ -1812431,10 +1813773,24 @@
     },
     {
       "original": "ut.java",
-      "renamed": "ut.java",
+      "renamed": "PlayerRequestPackets.java",
       "inputSha256": "5c54f544b3e38ede8003192990a9c4bff5aa44111f8cc04312431e5f1234cca2",
-      "outputSha256": "f54bb20a5cdfdb4662974ceece458ee2e5f2d28f2bb91c6c98a469d4c119be8e",
+      "outputSha256": "3fbd07b01bb9c9273889d2ecead808226ebe600461e08b45956905c80ca57911",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ut",
+          "original": "ut",
+          "renamed": "PlayerRequestPackets"
+        },
+        {
+          "start": 105,
+          "end": 106,
+          "symbol": "M:ut.a(IJI)V",
+          "original": "a",
+          "renamed": "sendPlayerRequest"
+        },
         {
           "start": 154,
           "end": 157,
@@ -1812511,6 +1813867,13 @@
           "symbol": "M:ut.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 466,
+          "end": 468,
+          "symbol": "C:ut",
+          "original": "ut",
+          "renamed": "PlayerRequestPackets"
         },
         {
           "start": 469,
@@ -1827288,10 +1828651,17 @@
     },
     {
       "original": "vjb.java",
-      "renamed": "vjb.java",
+      "renamed": "FloatNoiseSliceGenerator.java",
       "inputSha256": "3d10a27bc44baac3794c30394c4d451dacef84915d7ad3ae7977d30ac4a61d22",
-      "outputSha256": "89fbb7a38db7103820abac6aca59d170fd7102b2fb093f1afcd8b8ece65034a6",
+      "outputSha256": "d0bf879c4a7eac6d38a448131bdcc77cf95a041d2c68c79c3149103e1ba84fed",
       "edits": [
+        {
+          "start": 53,
+          "end": 56,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
         {
           "start": 98,
           "end": 101,
@@ -1827300,11 +1828670,25 @@
           "renamed": "ReverbPcmStream"
         },
         {
+          "start": 161,
+          "end": 162,
+          "symbol": "M:vjb.a(B)V",
+          "original": "a",
+          "renamed": "closeTransientMenusAndDialogs"
+        },
+        {
           "start": 215,
           "end": 218,
           "symbol": "C:lnb",
           "original": "lnb",
           "renamed": "TileTextureOperation"
+        },
+        {
+          "start": 219,
+          "end": 220,
+          "symbol": "M:lnb.d(I)V",
+          "original": "d",
+          "renamed": "closePlayerContextMenu"
         },
         {
           "start": 264,
@@ -1827328,11 +1828712,39 @@
           "renamed": "GetUseExtraBackground"
         },
         {
+          "start": 298,
+          "end": 299,
+          "symbol": "M:fea.a(I)V",
+          "original": "a",
+          "renamed": "closeQuickChatMenu"
+        },
+        {
+          "start": 341,
+          "end": 344,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
+          "start": 345,
+          "end": 346,
+          "symbol": "M:vjb.a(B)V",
+          "original": "a",
+          "renamed": "closeTransientMenusAndDialogs"
+        },
+        {
           "start": 367,
           "end": 370,
           "symbol": "C:lnb",
           "original": "lnb",
           "renamed": "TileTextureOperation"
+        },
+        {
+          "start": 371,
+          "end": 372,
+          "symbol": "M:lnb.d(I)V",
+          "original": "d",
+          "renamed": "closePlayerContextMenu"
         },
         {
           "start": 412,
@@ -1827356,6 +1828768,13 @@
           "renamed": "GetUseExtraBackground"
         },
         {
+          "start": 444,
+          "end": 445,
+          "symbol": "M:fea.a(I)V",
+          "original": "a",
+          "renamed": "closeQuickChatMenu"
+        },
+        {
           "start": 481,
           "end": 482,
           "symbol": "M:vjb.b(B)V",
@@ -1827363,11 +1828782,25 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 584,
+          "end": 587,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 588,
           "end": 589,
           "symbol": "M:vjb.b(B)V",
           "original": "b",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 638,
+          "end": 639,
+          "symbol": "M:vjb.a(FF[FFIFBIIII)V",
+          "original": "a",
+          "renamed": "fillSlice"
         }
       ]
     },
@@ -1837780,7 +1839213,7 @@
       "original": "vrb.java",
       "renamed": "SetRepairModeActiveTime.java",
       "inputSha256": "fffdb75e26ac2da28d443d1ecb59b592e16ea0bfcefe74d3140aa4599891c3fe",
-      "outputSha256": "de30612164b6805065336ede168799410e39890a1ebd6f4cf4918281b4133e68",
+      "outputSha256": "c4341edba0dd64d70d132f72d8b84fc707aa136a0abc7368392d5008dc454c0d",
       "edits": [
         {
           "start": 50,
@@ -1840728,6 +1842161,13 @@
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 13750,
+          "end": 13752,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 13787,
@@ -1851052,7 +1852492,7 @@
       "original": "wf.java",
       "renamed": "GameMenuScreen.java",
       "inputSha256": "92ff4912852c4a2de46e0f31b178890ac4a401dfee8c5fd3edd3699e55db0fad",
-      "outputSha256": "a6c4b4cc5f574db60c428f6ab5514a61c4c7d99751d5c1e6fc9767b0dbd89990",
+      "outputSha256": "ef50ca9efcb9a2b7a59819a22c7e97699e8f6547acdb9b1f96b2c75e23d8cb23",
       "edits": [
         {
           "start": 50,
@@ -1852532,11 +1853972,25 @@
           "renamed": "BlackBoxRecording"
         },
         {
+          "start": 13594,
+          "end": 13596,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 13608,
           "end": 13615,
           "symbol": "F:sqb.field_n:I",
           "original": "field_n",
           "renamed": "paddedHeight"
+        },
+        {
+          "start": 13619,
+          "end": 13621,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 13633,
@@ -1852546,11 +1854000,25 @@
           "renamed": "paddedHeight"
         },
         {
+          "start": 13668,
+          "end": 13670,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 13682,
           "end": 13689,
           "symbol": "F:sqb.field_m:I",
           "original": "field_m",
           "renamed": "paddedWidth"
+        },
+        {
+          "start": 13721,
+          "end": 13723,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 13735,
@@ -1852560,11 +1854028,25 @@
           "renamed": "paddedHeight"
         },
         {
+          "start": 13768,
+          "end": 13770,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 13782,
           "end": 13789,
           "symbol": "F:sqb.field_m:I",
           "original": "field_m",
           "renamed": "paddedWidth"
+        },
+        {
+          "start": 13793,
+          "end": 13795,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 13807,
@@ -1852574,6 +1854056,13 @@
           "renamed": "paddedWidth"
         },
         {
+          "start": 13887,
+          "end": 13889,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 13901,
           "end": 13908,
           "symbol": "F:sqb.field_n:I",
@@ -1852581,11 +1854070,25 @@
           "renamed": "paddedHeight"
         },
         {
+          "start": 13966,
+          "end": 13968,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 13980,
           "end": 13987,
           "symbol": "F:sqb.field_n:I",
           "original": "field_n",
           "renamed": "paddedHeight"
+        },
+        {
+          "start": 13991,
+          "end": 13993,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 14005,
@@ -1852602,11 +1854105,25 @@
           "renamed": "CachedArchiveProvider"
         },
         {
+          "start": 14066,
+          "end": 14068,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 14080,
           "end": 14087,
           "symbol": "F:sqb.field_m:I",
           "original": "field_m",
           "renamed": "paddedWidth"
+        },
+        {
+          "start": 14125,
+          "end": 14127,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 14139,
@@ -1852616,11 +1854133,25 @@
           "renamed": "paddedWidth"
         },
         {
+          "start": 14157,
+          "end": 14159,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 14171,
           "end": 14178,
           "symbol": "F:sqb.field_m:I",
           "original": "field_m",
           "renamed": "paddedWidth"
+        },
+        {
+          "start": 14242,
+          "end": 14244,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 14256,
@@ -1852630,11 +1854161,25 @@
           "renamed": "paddedWidth"
         },
         {
+          "start": 14323,
+          "end": 14325,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
+        },
+        {
           "start": 14337,
           "end": 14344,
           "symbol": "F:sqb.field_m:I",
           "original": "field_m",
           "renamed": "paddedWidth"
+        },
+        {
+          "start": 14367,
+          "end": 14369,
+          "symbol": "C:ko",
+          "original": "ko",
+          "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
           "start": 14381,
@@ -1859086,7 +1860631,7 @@
       "original": "wgb.java",
       "renamed": "AgeValidator.java",
       "inputSha256": "26c9234f4ade57356b2badf54ad10d1e1869f860df0eaea5f4ee0e4d171357aa",
-      "outputSha256": "3419b9c3b518bd8f7a0fd617535e83799a4af42b298bb380c827072b15b0a4db",
+      "outputSha256": "3f7dafdfbe524f15bfe5a19be29eb0bfcbf3f3974b6bbd4cf5f04c537e9c3747",
       "edits": [
         {
           "start": 50,
@@ -1859306,6 +1860851,20 @@
           "renamed": "configureReverb"
         },
         {
+          "start": 3560,
+          "end": 3563,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
+          "start": 3593,
+          "end": 3596,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 3611,
           "end": 3614,
           "symbol": "C:sfb",
@@ -1859320,11 +1860879,32 @@
           "renamed": "setStream"
         },
         {
+          "start": 3653,
+          "end": 3656,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
+          "start": 3677,
+          "end": 3680,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 3689,
           "end": 3690,
           "symbol": "M:sfb.d(F)V",
           "original": "d",
           "renamed": "setInputGain"
+        },
+        {
+          "start": 3710,
+          "end": 3713,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 3722,
@@ -1859334,11 +1860914,25 @@
           "renamed": "setFeedback"
         },
         {
+          "start": 3743,
+          "end": 3746,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 3755,
           "end": 3756,
           "symbol": "M:sfb.b(F)V",
           "original": "b",
           "renamed": "setDampingTime"
+        },
+        {
+          "start": 3847,
+          "end": 3850,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 3859,
@@ -1859348,11 +1860942,25 @@
           "renamed": "setWetGain"
         },
         {
+          "start": 3882,
+          "end": 3885,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 3894,
           "end": 3895,
           "symbol": "M:sfb.e(F)V",
           "original": "e",
           "renamed": "setDryGain"
+        },
+        {
+          "start": 3917,
+          "end": 3920,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 3929,
@@ -1859362,11 +1860970,25 @@
           "renamed": "setStereoWidth"
         },
         {
+          "start": 3982,
+          "end": 3985,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 3994,
           "end": 3995,
           "symbol": "M:sfb.a(F)V",
           "original": "a",
           "renamed": "setWetGain"
+        },
+        {
+          "start": 4015,
+          "end": 4018,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 4027,
@@ -1859376,11 +1860998,25 @@
           "renamed": "setDryGain"
         },
         {
+          "start": 4048,
+          "end": 4051,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 4060,
           "end": 4061,
           "symbol": "M:sfb.f(F)V",
           "original": "f",
           "renamed": "setStereoWidth"
+        },
+        {
+          "start": 4107,
+          "end": 4110,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 4119,
@@ -1859390,11 +1861026,25 @@
           "renamed": "setInputGain"
         },
         {
+          "start": 4138,
+          "end": 4141,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 4150,
           "end": 4151,
           "symbol": "M:sfb.c(F)V",
           "original": "c",
           "renamed": "setFeedback"
+        },
+        {
+          "start": 4169,
+          "end": 4172,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 4181,
@@ -1859404,11 +1861054,25 @@
           "renamed": "setDampingTime"
         },
         {
+          "start": 4232,
+          "end": 4235,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 4244,
           "end": 4245,
           "symbol": "M:sfb.a(F)V",
           "original": "a",
           "renamed": "setWetGain"
+        },
+        {
+          "start": 4265,
+          "end": 4268,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 4277,
@@ -1859418,11 +1861082,25 @@
           "renamed": "setDryGain"
         },
         {
+          "start": 4298,
+          "end": 4301,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 4310,
           "end": 4311,
           "symbol": "M:sfb.f(F)V",
           "original": "f",
           "renamed": "setStereoWidth"
+        },
+        {
+          "start": 4390,
+          "end": 4393,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 4402,
@@ -1859432,11 +1861110,25 @@
           "renamed": "setWetGain"
         },
         {
+          "start": 4421,
+          "end": 4424,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
+        },
+        {
           "start": 4433,
           "end": 4434,
           "symbol": "M:sfb.e(F)V",
           "original": "e",
           "renamed": "setDryGain"
+        },
+        {
+          "start": 4452,
+          "end": 4455,
+          "symbol": "C:vjb",
+          "original": "vjb",
+          "renamed": "FloatNoiseSliceGenerator"
         },
         {
           "start": 4464,
@@ -1881288,10 +1882980,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/voidhunters"
     },
-    "rulesSha256": "8e54eb2f574b78beeac955d5055bdb8ef1bb9b5a26efc7fea08d2bd519e170d1",
+    "rulesSha256": "8b7503c879184de352ff5a78940104c91982ea28bde7e98079e0e986e3bd932a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
-    "outputTreeSha256": "af5fe6c970db672ed2b3a187f942becd4bf6a57c7a4455414f33d699c4672ef8",
+    "outputTreeSha256": "4a782e1cb3ac511da1b2e1e932c3029b66bf1d808bd437705a25f93581b0b0f3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

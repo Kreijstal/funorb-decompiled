@@ -301,7 +301,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           ThreeSliceButtonStyle.field_r.addChild(param1 - 10792, vw.field_a);
           ThreeSliceButtonStyle.field_r.addChild(-561, ObjectiveMarker.field_b);
           ThreeSliceButtonStyle.field_r.addChild(-561, SetAutozoomSpeedDivide.field_p);
-          ProjectileHit.field_d = new Widget(0L, lo.field_b, ko.field_d.toUpperCase());
+          ProjectileHit.field_d = new Widget(0L, lo.field_b, FloatGradientNoiseSliceGenerator.field_d.toUpperCase());
           LegacyOpenGlTextureCache.field_a = new Widget(0L, DisplayModeDialog.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -88,7 +88,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                   }
                 }
               }
-              if (tob.g(0)) {
+              if (OpenGlPbuffer.isChatInputDialogInitialized(0)) {
                 stackIn_56_0 = ": ";
               } else {
                 stackIn_56_0 = "<img=3>: ";
@@ -109,7 +109,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                 var5 = "";
               }
               var9 = DebrisFactory.field_c.getStringWidth(var4);
-              if (!tob.g(0)) {
+              if (!OpenGlPbuffer.isChatInputDialogInitialized(0)) {
                 if (UiComboBoxRenderer.field_c.field_O &&
                   -UiComboBoxRenderer.field_c.screenX + PlayerGameData.field_b < var9) {
                   if (!GetBloomThresholdPercentage.field_p) {

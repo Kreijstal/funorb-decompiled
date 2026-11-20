@@ -133,7 +133,7 @@ final class GetFighterRepairTime extends ConsoleCommand {
         return var11Lifetime1;
     }
 
-    final static byte[] a(float param0, float param1, byte param2, int param3, vjb param4, int param5, int param6, int param7, float param8, float param9, float param10) {
+    final static byte[] a(float param0, float param1, byte param2, int param3, FloatNoiseSliceGenerator param4, int param5, int param6, int param7, float param8, float param9, float param10) {
         int var11_int = 0;
         RuntimeException var11 = null;
         byte[] var12 = null;

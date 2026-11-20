@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ut {
+final class PlayerRequestPackets {
     static String field_a;
 
-    final static void a(int param0, long param1, int param2) {
+    final static void sendPlayerRequest(int param0, long param1, int param2) {
         IsaacPacketBuffer var4 = RequestNewestBlackboxRecording.field_p;
         var4.writeIsaacByte(24335, param2);
         var4.position = var4.position + 1;
@@ -16,7 +16,7 @@ final class ut {
 
     public static void clearSharedReferences(int param0) {
         if (param0 > -36) {
-          ut.clearSharedReferences(7);
+          PlayerRequestPackets.clearSharedReferences(7);
           field_a = null;
           return;
         }

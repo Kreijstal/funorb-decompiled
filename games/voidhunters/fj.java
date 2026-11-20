@@ -20,7 +20,7 @@ final class fj {
           return;
         }
         if (LegacyOpenGlTurbulenceEffect.field_d) {
-          GetUseExtraBackground.a(-1);
+          GetUseExtraBackground.closeQuickChatMenu(-1);
         }
     }
 

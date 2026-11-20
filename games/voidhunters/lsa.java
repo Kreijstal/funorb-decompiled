@@ -5,15 +5,15 @@ final class lsa extends IntrusiveNode {
     static long field_f;
     int field_g;
     int field_d;
-    static Widget field_e;
+    static Widget savedChatInputWidget;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != -92) {
           field_f = 37L;
-          field_e = null;
+          savedChatInputWidget = null;
           return;
         }
-        field_e = null;
+        savedChatInputWidget = null;
     }
 
     private lsa() throws Throwable {

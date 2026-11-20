@@ -603,7 +603,7 @@ final class GpuTransform3D extends Transform3D {
               SecondaryNodeQueue.a(var3, (byte) -119, Asteroid.activeReportDialog.getReportedName(0), Asteroid.activeReportDialog.targetPlayerKey, param2, var4 != 0);
             }
             Asteroid.activeReportDialog = null;
-            TileTextureOperation.d(0);
+            TileTextureOperation.closePlayerContextMenu(0);
           }
           return;
         }

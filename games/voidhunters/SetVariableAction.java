@@ -7,7 +7,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
     static int field_b;
     private int value;
 
-    final static float a(byte param0, float param1) {
+    final static float quinticFade(byte param0, float param1) {
         int var2 = -128 % ((-87 - param0) / 36);
         return ((param1 * 6.0f - 15.0f) * param1 + 10.0f) * (param1 * param1 * param1);
     }

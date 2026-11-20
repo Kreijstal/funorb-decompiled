@@ -337,7 +337,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   AccountCreationDialog.showPlayerContextMenu(qs.field_a, 0, var12, (byte) 71, Particle.field_H, param2, 0);
                 }
               } else {
-                ut.a(6, var12.field_zb, param4);
+                PlayerRequestPackets.sendPlayerRequest(6, var12.field_zb, param4);
               }
             }
             if (var12.field_Q &&

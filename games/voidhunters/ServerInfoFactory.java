@@ -134,7 +134,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 stackIn_20_0 = 0;
               } else {
                 if (SetFightersPerPlayerMaximum.field_p) {
-                  stackIn_20_0 = (tob.g(0)) ? 1 : 0;
+                  stackIn_20_0 = (OpenGlPbuffer.isChatInputDialogInitialized(0)) ? 1 : 0;
                 } else {
                   stackIn_20_0 = 0;
                 }
@@ -202,14 +202,14 @@ final class ServerInfoFactory implements GameStateFactory {
           if (GetThrusterSmallForce.field_o) {
             if (MatchingFieldValidator.field_g.networked) {
               if (SetFightersPerPlayerMaximum.field_p) {
-                stackIn_108_0 = (!tob.g(0)) ? 0 : 1;
+                stackIn_108_0 = (!OpenGlPbuffer.isChatInputDialogInitialized(0)) ? 0 : 1;
               } else {
                 stackIn_108_0 = 0;
               }
             } else {
               if (GraphicsPresentException.field_a) {
                 if (SetFightersPerPlayerMaximum.field_p) {
-                  stackIn_74_0 = (tob.g(0)) ? 1 : 0;
+                  stackIn_74_0 = (OpenGlPbuffer.isChatInputDialogInitialized(0)) ? 1 : 0;
                 } else {
                   stackIn_74_0 = 0;
                 }

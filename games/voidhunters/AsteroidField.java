@@ -51,7 +51,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           if (param0 < 54) {
             this.markChanged(116);
           }
-          var3.asteroids = (Asteroid[]) (SpriteDimensions.copyStateArrayByMode(var3.asteroids, this.asteroids, 1, tob.field_o, false));
+          var3.asteroids = (Asteroid[]) (SpriteDimensions.copyStateArrayByMode(var3.asteroids, this.asteroids, 1, OpenGlPbuffer.field_o, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1581,7 +1581,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime261 = HuffmanCodec.fetchLocalizedResource((byte) -118, "VOTE_MORE_SPECIAL_WEAPONS");
           if (var2Lifetime261 != null) {
-            tob.field_l = Cp1252Strings.decode((byte) -125, var2Lifetime261);
+            OpenGlPbuffer.field_l = Cp1252Strings.decode((byte) -125, var2Lifetime261);
           }
           var2Lifetime262 = HuffmanCodec.fetchLocalizedResource((byte) -21, "VOTE_MORE_THRUSTERS");
           if (null != var2Lifetime262) {
@@ -1899,7 +1899,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           stackIn_7_1 = !(param1);
           this.selectForRevisionUpdates(stackIn_7_1);
-          this.asteroids = (Asteroid[]) (SetAutoDetail.a(10, tob.field_o, param0, 1, -70, this.asteroids));
+          this.asteroids = (Asteroid[]) (SetAutoDetail.a(10, OpenGlPbuffer.field_o, param0, 1, -70, this.asteroids));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2055,7 +2055,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           if (param1 != 32) {
             field_b = (String) null;
           }
-          this.asteroids = (Asteroid[]) (GetAutoAfkTimeout.a(param1 ^ 35, 1, this.asteroids, tob.field_o, 10, param0));
+          this.asteroids = (Asteroid[]) (GetAutoAfkTimeout.a(param1 ^ 35, 1, this.asteroids, OpenGlPbuffer.field_o, 10, param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

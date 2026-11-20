@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tob extends DualLinkNode {
+final class OpenGlPbuffer extends DualLinkNode {
     static String field_l;
     static GameStateFactory field_o;
-    private long field_n;
-    int field_m;
-    private OpenGlToolkit field_k;
+    private long handle;
+    int pixelCount;
+    private OpenGlToolkit toolkit;
 
-    final static boolean g(int param0) {
+    final static boolean isChatInputDialogInitialized(int param0) {
         if (param0 != 0) {
           field_l = (String) null;
-          return lsa.field_e != null ? true : false;
+          return lsa.savedChatInputWidget != null ? true : false;
         }
-        return lsa.field_e != null ? true : false;
+        return lsa.savedChatInputWidget != null ? true : false;
     }
 
     protected final void finalize() throws Throwable {
-        this.e(0);
+        this.release(0);
         super.finalize();
     }
 
@@ -27,26 +27,26 @@ final class tob extends DualLinkNode {
         int var1 = 112 / ((param0 - 32) / 56);
     }
 
-    private final void e(int param0) {
-        if (this.field_n > (long)param0) {
-          this.field_k.field_c.releasePbuffer(this.field_n);
-          this.field_n = 0L;
+    private final void release(int param0) {
+        if (this.handle > (long)param0) {
+          this.toolkit.field_c.releasePbuffer(this.handle);
+          this.handle = 0L;
         }
     }
 
-    final long f(int param0) {
+    final long getHandle(int param0) {
         if (param0 >= -122) {
           field_l = (String) null;
-          return this.field_n;
+          return this.handle;
         }
-        return this.field_n;
+        return this.handle;
     }
 
-    tob(OpenGlToolkit param0, int param1, int param2) {
+    OpenGlPbuffer(OpenGlToolkit param0, int param1, int param2) {
         try {
-          this.field_m = param1 * param2;
-          this.field_k = param0;
-          this.field_n = this.field_k.field_c.createPbuffer(param1, param2);
+          this.pixelCount = param1 * param2;
+          this.toolkit = param0;
+          this.handle = this.toolkit.field_c.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

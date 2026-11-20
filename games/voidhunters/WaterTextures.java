@@ -42,7 +42,7 @@ final class WaterTextures {
         byte[] var3Lifetime1;
         if (this.normalMapVolume == null) {
           if (LegacyOpenGlEnvironmentMappedWaterEffect.field_c == null) {
-            var23 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 97, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
+            var23 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 97, 8, new FloatGradientNoiseSliceGenerator(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
             var20 = var23;
             var19 = var20;
             var3 = var19;

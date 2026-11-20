@@ -218,7 +218,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
           if (!enb.field_b) {
             return;
           }
-          vjb.a((byte) 95);
+          FloatNoiseSliceGenerator.closeTransientMenusAndDialogs((byte) 95);
           SetGrapplingHooksDamageableBySourcePlayer.a(15);
           SoftwareSprite2D.a(114);
           enb.field_b = false;

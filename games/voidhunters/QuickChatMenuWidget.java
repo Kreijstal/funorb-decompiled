@@ -42,7 +42,7 @@ final class QuickChatMenuWidget extends Widget {
         if (null == this.openSubmenu &&
           this == MidiNote.field_m &&
           var4 != 0) {
-          GetUseExtraBackground.a(-1);
+          GetUseExtraBackground.closeQuickChatMenu(-1);
           return true;
         }
         var5 = SetClientSideDragging.field_r;
@@ -99,11 +99,11 @@ final class QuickChatMenuWidget extends Widget {
               stackIn_15_2 = lsa.field_f;
               stackIn_16_3 = (param1) ? false : true;
               ArchiveRequest.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, ChoosePlayerNameForm.field_x);
-              GetUseExtraBackground.a(-1);
+              GetUseExtraBackground.closeQuickChatMenu(-1);
               SetSalvoRepairTimeMultiplier.a(4907);
             } else {
               AsteroidFactory.a(29012);
-              GetUseExtraBackground.a(-1);
+              GetUseExtraBackground.closeQuickChatMenu(-1);
             }
           }
         } else {

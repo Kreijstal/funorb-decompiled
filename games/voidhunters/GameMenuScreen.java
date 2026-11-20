@@ -438,15 +438,15 @@ final class GameMenuScreen {
         var7 = 20;
         var8 = 20;
         var10 = -32 % ((param0 - 3) / 51);
-        BlackBoxRecording.a((byte) -115, 200, var8 * 2 + ko.field_e[6].paddedHeight + (ko.field_e[0].paddedHeight + 180 + 55), 80 + var5 + (-ko.field_e[0].paddedWidth - var7), -var8 + (160 + var6 - ko.field_e[0].paddedHeight) - 55, 2 * var7 + (480 + ko.field_e[0].paddedWidth) + ko.field_e[2].paddedWidth);
+        BlackBoxRecording.a((byte) -115, 200, var8 * 2 + FloatGradientNoiseSliceGenerator.field_e[6].paddedHeight + (FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight + 180 + 55), 80 + var5 + (-FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth - var7), -var8 + (160 + var6 - FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight) - 55, 2 * var7 + (480 + FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth) + FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth);
         var9 = 16;
         var11 = 50;
-        var12 = var11 + (-55 - ko.field_e[0].paddedHeight) + (var6 + 160) - var8;
-        var13 = 2 * var8 + 180 + ko.field_e[0].paddedHeight + (ko.field_e[6].paddedHeight - 10);
-        CachedArchiveProvider.a(150, false, -var7 + var5 + 80 - (ko.field_e[0].paddedWidth - var9), var12, var13, -(var9 * 2) + ko.field_e[0].paddedWidth + 480 - (-ko.field_e[2].paddedWidth - 2 * var7), 1);
+        var12 = var11 + (-55 - FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight) + (var6 + 160) - var8;
+        var13 = 2 * var8 + 180 + FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight + (FloatGradientNoiseSliceGenerator.field_e[6].paddedHeight - 10);
+        CachedArchiveProvider.a(150, false, -var7 + var5 + 80 - (FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth - var9), var12, var13, -(var9 * 2) + FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth + 480 - (-FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth - 2 * var7), 1);
         var14 = 50;
-        var15 = -var7 + (-ko.field_e[0].paddedWidth + (var5 + 80 + var9)) + var14;
-        var16 = 2 * var7 + (ko.field_e[0].paddedWidth + 480 - var14 * 2) + (ko.field_e[2].paddedWidth - var9 * 2);
+        var15 = -var7 + (-FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth + (var5 + 80 + var9)) + var14;
+        var16 = 2 * var7 + (FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth + 480 - var14 * 2) + (FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth - var9 * 2);
         var17 = 13421772;
         if (SetFps.helpPageIndex == 0) {
           var12 += 50;

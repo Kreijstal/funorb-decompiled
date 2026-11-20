@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetFighterVision extends ConsoleCommand {
-    final static void a(Widget param0, int param1, Widget param2, Widget param3, Widget param4) {
+    final static void initializeChatInputDialog(Widget param0, int param1, Widget param2, Widget param3, Widget param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -19,7 +19,7 @@ final class SetFighterVision extends ConsoleCommand {
         String var7 = null;
         var6 = VoidHunters.field_G;
         try {
-          if (lsa.field_e != null) {
+          if (lsa.savedChatInputWidget != null) {
             return;
           }
           SetFightersPerPlayerMaximum.field_p = false;
@@ -41,7 +41,7 @@ final class SetFighterVision extends ConsoleCommand {
           if (param1 != -20149) {
             return;
           }
-          lsa.field_e = UiComboBoxRenderer.field_c;
+          lsa.savedChatInputWidget = UiComboBoxRenderer.field_c;
           OneShotSound.field_l = new Widget(0L, param3);
           hp.field_b = new Widget(0L, param2);
           TiledSpriteTextureOperation.field_s = new Widget(0L, (Widget) null);

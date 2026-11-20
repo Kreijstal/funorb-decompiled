@@ -92,7 +92,7 @@ final class ComponentCollision extends IntrusiveNode {
                 vw.field_a.text = SetPhasedEnergyBeamPulsetime.field_q.toUpperCase();
                 vw.field_a.enabled = false;
               } else {
-                vw.field_a.text = ko.field_d.toUpperCase();
+                vw.field_a.text = FloatGradientNoiseSliceGenerator.field_d.toUpperCase();
                 vw.field_a.enabled = true;
               }
               vw.field_a.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_gb;

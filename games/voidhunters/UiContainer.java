@@ -246,7 +246,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[1], 332614536);
           SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[2], 332614536);
           SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[3], 332614536);
-          GetMissilesTopSpeed.a((byte) -91, SetTorpedoAcceleration.field_p);
+          GetMissilesTopSpeed.writeRandomDatBytes((byte) -91, SetTorpedoAcceleration.field_p);
           SetTorpedoAcceleration.field_p.writeShort(param4, true);
           param3.write(SetTorpedoAcceleration.field_p, -26216);
           RequestNewestBlackboxRecording.field_p.position = 0;

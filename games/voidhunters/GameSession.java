@@ -8782,7 +8782,7 @@ final class GameSession {
           MissionVariableFactory.field_a = GetBombletSprayEnergyUsed.field_p.height;
           AdjustVariableActionFactory.field_a = new Widget("chat_toggle", (Widget) null, 0, 440, 95, 20, DateOfBirthTextFields.field_A);
           AdjustVariableActionFactory.field_a.x = -(AdjustVariableActionFactory.field_a.width / 2) + PartitionZoneFactory.field_a / 2;
-          AdjustVariableActionFactory.field_a.field_gb = ko.field_e;
+          AdjustVariableActionFactory.field_a.field_gb = FloatGradientNoiseSliceGenerator.field_e;
           AdjustVariableActionFactory.field_a.y = MissionVariableFactory.field_a - AdjustVariableActionFactory.field_a.height;
           AdjustVariableActionFactory.field_a.font = GrapplingHookFactory.field_a;
           AdjustVariableActionFactory.field_a.field_mb = ScreenSizeController.field_d;

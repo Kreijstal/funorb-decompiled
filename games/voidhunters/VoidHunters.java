@@ -218,7 +218,7 @@ public final class VoidHunters extends NetworkGameClient {
             GetDebrisThrowable.a(false, "Leaving lobby");
             if (GraphicsPresentException.field_a) {
               ColorKeyScaleTextureOperation.d(991426348);
-              vjb.a((byte) 110);
+              FloatNoiseSliceGenerator.closeTransientMenusAndDialogs((byte) 110);
               SettingsInstance.a(-15400);
               enb.field_b = true;
               GetThrusterSmallForce.field_o = false;
@@ -1122,7 +1122,7 @@ public final class VoidHunters extends NetworkGameClient {
         TextFieldValidator.clearSharedReferences(-27183);
         LogoFinalFrameBottom.clearSharedReferences(false);
         Under13AccountNoticePanel.clearSharedReferences((byte) 77);
-        ut.clearSharedReferences(-72);
+        PlayerRequestPackets.clearSharedReferences(-72);
         MidiEnvelope.clearSharedReferences(-17719);
         ata.clearSharedReferences(6344);
         fj.clearSharedReferences(0);
@@ -1219,7 +1219,7 @@ public final class VoidHunters extends NetworkGameClient {
         uia.clearSharedReferences(-4353);
         OpenGlNativeHeap.clearSharedReferences(-92);
         OpenGlSpriteTexture.clearSharedReferences((byte) 105);
-        tob.clearSharedReferences(91);
+        OpenGlPbuffer.clearSharedReferences(91);
         OpenGlDisplayLists.clearSharedReferences(-4509);
         ArbProgram.clearSharedReferences(false);
         EnvironmentMapSource.clearSharedReferences(26);
@@ -1236,7 +1236,7 @@ public final class VoidHunters extends NetworkGameClient {
         TextureFilterMode.clearSharedReferences((byte) 88);
         GpuNativeHeap.clearSharedReferences(!param0 ? true : false);
         gib.clearSharedReferences(15);
-        ko.clearSharedReferences(-35);
+        FloatGradientNoiseSliceGenerator.clearSharedReferences(-35);
         GpuSprite.clearSharedReferences(-81);
         UnlitGpuMaterialEffect.clearSharedReferences(0);
         WaterNoiseGpuMaterialEffect.clearSharedReferences((byte) 46);
@@ -1244,7 +1244,7 @@ public final class VoidHunters extends NetworkGameClient {
         UnsupportedGpuMaterialEffect.clearSharedReferences(param0);
         RidgedNoiseVolumeGenerator.clearSharedReferences((byte) -19);
         FractalNoiseVolumeGenerator.clearSharedReferences(false);
-        vjb.clearSharedReferences((byte) 53);
+        FloatNoiseSliceGenerator.clearSharedReferences((byte) 53);
         ArchiveIndexLoaderState.clearSharedReferences(13032);
         OpenGlGpuTexture2D.clearSharedReferences((byte) 42);
         OpenGlGpuRectangleTexture.clearSharedReferences(106);

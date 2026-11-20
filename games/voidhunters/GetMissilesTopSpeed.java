@@ -33,7 +33,7 @@ final class GetMissilesTopSpeed extends ConsoleCommand {
         }
     }
 
-    final static void a(float param0, int param1, float param2, int param3, int param4, int param5, float param6, vjb param7, int param8, float param9, int param10, byte[] param11, byte param12, float param13) {
+    final static void accumulateFractalNoiseSlice(float param0, int param1, float param2, int param3, int param4, int param5, float param6, FloatNoiseSliceGenerator param7, int param8, float param9, int param10, byte[] param11, byte param12, float param13) {
         int var18 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -55,13 +55,13 @@ final class GetMissilesTopSpeed extends ConsoleCommand {
         try {
           if (param12 <= 47) {
             var20 = (byte[]) null;
-            GetMissilesTopSpeed.a(1.1260381937026978f, -88, 0.9253022074699402f, -128, 62, -46, 1.1999729871749878f, (vjb) null, -54, 2.695220470428467f, -81, (byte[]) null, (byte) -123, -0.5407317280769348f);
+            GetMissilesTopSpeed.accumulateFractalNoiseSlice(1.1260381937026978f, -88, 0.9253022074699402f, -128, 62, -46, 1.1999729871749878f, (FloatNoiseSliceGenerator) null, -54, 2.695220470428467f, -81, (byte[]) null, (byte) -123, -0.5407317280769348f);
           }
           var14_int = param4 * param3;
           var25 = new float[var14_int];
           for (var16 = 0; var16 < param1; var16++) {
             var17 = param10;
-            param7.a(param0 / (float)param3, param6 / (float)param4, var25, param9 / (float)param8, param8, 127.0f * param2, (byte) 99, 0, param3, param5, param4);
+            param7.fillSlice(param0 / (float)param3, param6 / (float)param4, var25, param9 / (float)param8, param8, 127.0f * param2, (byte) 99, 0, param3, param5, param4);
             param9 = param9 * 2.0f;
             param2 = param2 * param13;
             for (var18 = 0; var18 < var14_int; var18++) {
@@ -98,7 +98,7 @@ final class GetMissilesTopSpeed extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, PacketBuffer param1) {
+    final static void writeRandomDatBytes(byte param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

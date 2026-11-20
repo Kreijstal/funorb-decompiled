@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class ko extends vjb {
+final class FloatGradientNoiseSliceGenerator extends FloatNoiseSliceGenerator {
     static Sprite[] field_e;
-    private int[] field_f;
+    private int[] permutation;
     static int field_g;
     static String field_d;
 
@@ -15,7 +15,7 @@ final class ko extends vjb {
         field_d = null;
     }
 
-    final void a(float param0, float param1, float[] param2, float param3, int param4, float param5, byte param6, int param7, int param8, int param9, int param10) {
+    final void fillSlice(float param0, float param1, float[] param2, float param3, int param4, float param5, byte param6, int param7, int param8, int param9, int param10) {
         int var23 = 0;
         int var34 = 0;
         int incrementValue$1 = 0;
@@ -56,7 +56,7 @@ final class ko extends vjb {
         try {
           var12_int = (int)(-1.0f + param1 * (float)param10);
           if (param6 <= 90) {
-            ko.clearSharedReferences(-90);
+            FloatGradientNoiseSliceGenerator.clearSharedReferences(-90);
           }
           var12_int = var12_int & 255;
           var13 = (int)(param0 * (float)param8 - 1.0f);
@@ -69,35 +69,35 @@ final class ko extends vjb {
           var18 = var15 - (float)var16;
           var19 = -var18 + 1.0f;
           var16 = var16 & var14;
-          var20 = SetVariableAction.a((byte) -125, var18);
+          var20 = SetVariableAction.quinticFade((byte) -125, var18);
           var17 = var17 & var14;
-          var21 = this.field_f[var16];
-          var22 = this.field_f[var17];
+          var21 = this.permutation[var16];
+          var22 = this.permutation[var17];
           for (var23 = 0; var23 < param8; var23++) {
             var24 = (float)var23 * param0;
             var25 = (int)var24;
             var26 = var25 + 1;
             var27 = var24 - (float)var25;
             var28 = -var27 + 1.0f;
-            var29 = SetVariableAction.a((byte) -123, var27);
+            var29 = SetVariableAction.quinticFade((byte) -123, var27);
             var26 = var26 & var13;
             var25 = var25 & var13;
-            var30 = this.field_f[var21 + var25];
-            var31 = this.field_f[var21 + var26];
-            var32 = this.field_f[var25 + var22];
-            var33 = this.field_f[var26 + var22];
+            var30 = this.permutation[var21 + var25];
+            var31 = this.permutation[var21 + var26];
+            var32 = this.permutation[var25 + var22];
+            var33 = this.permutation[var26 + var22];
             for (var34 = 0; param10 > var34; var34++) {
               var35 = (float)var34 * param1;
               var36 = (int)var35;
               var37 = 1 + var36;
               var38 = (float)(-var36) + var35;
               var39 = 1.0f - var38;
-              var40 = SetVariableAction.a((byte) 127, var38);
+              var40 = SetVariableAction.quinticFade((byte) 127, var38);
               var37 = var37 & var12_int;
               var36 = var36 & var12_int;
               incrementValue$1 = param7;
               param7++;
-              param2[incrementValue$1] = param5 * GetBuildViewAutozoom.a(GetBuildViewAutozoom.a(GetBuildViewAutozoom.a(Message.a(var18, var38, MenuBackgroundBattle.andBits(7, this.field_f[var33 + var37]), var27, (byte) 69), var40, -14, Message.a(var18, var39, MenuBackgroundBattle.andBits(7, this.field_f[var36 + var33]), var27, (byte) 78)), var29, -9, GetBuildViewAutozoom.a(Message.a(var18, var38, MenuBackgroundBattle.andBits(7, this.field_f[var32 + var37]), var28, (byte) 66), var40, -75, Message.a(var18, var39, MenuBackgroundBattle.andBits(this.field_f[var32 + var36], 7), var28, (byte) 99))), var20, -28, GetBuildViewAutozoom.a(GetBuildViewAutozoom.a(Message.a(var19, var38, MenuBackgroundBattle.andBits(7, this.field_f[var31 + var37]), var27, (byte) 69), var40, -86, Message.a(var19, var39, MenuBackgroundBattle.andBits(7, this.field_f[var31 + var36]), var27, (byte) 65)), var29, -97, GetBuildViewAutozoom.a(Message.a(var19, var38, MenuBackgroundBattle.andBits(7, this.field_f[var30 + var37]), var28, (byte) 70), var40, -97, Message.a(var19, var39, MenuBackgroundBattle.andBits(7, this.field_f[var36 + var30]), var28, (byte) 54))));
+              param2[incrementValue$1] = param5 * GetBuildViewAutozoom.lerp(GetBuildViewAutozoom.lerp(GetBuildViewAutozoom.lerp(Message.dotNoiseGradient(var18, var38, MenuBackgroundBattle.andBits(7, this.permutation[var33 + var37]), var27, (byte) 69), var40, -14, Message.dotNoiseGradient(var18, var39, MenuBackgroundBattle.andBits(7, this.permutation[var36 + var33]), var27, (byte) 78)), var29, -9, GetBuildViewAutozoom.lerp(Message.dotNoiseGradient(var18, var38, MenuBackgroundBattle.andBits(7, this.permutation[var32 + var37]), var28, (byte) 66), var40, -75, Message.dotNoiseGradient(var18, var39, MenuBackgroundBattle.andBits(this.permutation[var32 + var36], 7), var28, (byte) 99))), var20, -28, GetBuildViewAutozoom.lerp(GetBuildViewAutozoom.lerp(Message.dotNoiseGradient(var19, var38, MenuBackgroundBattle.andBits(7, this.permutation[var31 + var37]), var27, (byte) 69), var40, -86, Message.dotNoiseGradient(var19, var39, MenuBackgroundBattle.andBits(7, this.permutation[var31 + var36]), var27, (byte) 65)), var29, -97, GetBuildViewAutozoom.lerp(Message.dotNoiseGradient(var19, var38, MenuBackgroundBattle.andBits(7, this.permutation[var30 + var37]), var28, (byte) 70), var40, -97, Message.dotNoiseGradient(var19, var39, MenuBackgroundBattle.andBits(7, this.permutation[var36 + var30]), var28, (byte) 54))));
             }
           }
           return;
@@ -115,7 +115,7 @@ final class ko extends vjb {
         }
     }
 
-    ko(int param0) {
+    FloatGradientNoiseSliceGenerator(int param0) {
         int dupTemp$0 = 0;
         Random var2;
         int var3;
@@ -123,22 +123,22 @@ final class ko extends vjb {
         int var5;
         int var7;
         int var3Lifetime1;
-        this.field_f = new int[512];
+        this.permutation = new int[512];
         var2 = new Random((long)param0);
         for (var3 = 0; 256 > var3; var3++) {
-          this.field_f[256 + var3] = var3;
-          this.field_f[var3] = var3;
+          this.permutation[256 + var3] = var3;
+          this.permutation[var3] = var3;
         }
         var7 = 0;
         var3Lifetime1 = var7;
         while (var7 < 256) {
           var4 = var2.nextInt() & 255;
-          var5 = this.field_f[var4];
-          dupTemp$0 = this.field_f[var7];
-          this.field_f[var4 + 256] = dupTemp$0;
-          this.field_f[var4] = dupTemp$0;
-          this.field_f[256 + var7] = var5;
-          this.field_f[var7] = var5;
+          var5 = this.permutation[var4];
+          dupTemp$0 = this.permutation[var7];
+          this.permutation[var4 + 256] = dupTemp$0;
+          this.permutation[var4] = dupTemp$0;
+          this.permutation[256 + var7] = var5;
+          this.permutation[var7] = var5;
           var7++;
         }
     }
