@@ -409,7 +409,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
                         }
                         if ((stackIn_43_0 ? 1 : 0) != stackIn_44_1 &&
                           this.shieldsToggleCooldown == var5.shieldsToggleCooldown &&
-                          !SetBlueprintSaveTime.a(var5.lastAttackers, this.lastAttackers, (byte) 28)) {
+                          !SetBlueprintSaveTime.intArraysDiffer(var5.lastAttackers, this.lastAttackers, (byte) 28)) {
                           stackIn_50_0 = (var5.targetBlueprint != null) ? 0 : 1;
                           if (this.targetBlueprint != null) {
                             stackIn_53_1 = 0;

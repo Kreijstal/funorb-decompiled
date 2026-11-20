@@ -4,16 +4,16 @@
 final class SetSniperCannonAimspeed extends ConsoleCommand {
     static int field_o;
 
-    final static void a(boolean param0, int param1, boolean param2, String param3) {
+    final static void showLoginForm(boolean param0, int param1, boolean param2, String param3) {
         GetUseFilledPolygons.a(-1);
-        GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
+        GetLagStandardDeviationIn.modalStack.closeAllPanels((byte) -17);
         if (param1 >= -77) {
           return;
         }
         try {
           SetAiFiringRangeUpshift.field_o = new LoginForm(ToggleShieldsOrderDefinition.field_d, (String) null, OpenGlSprite.reconnecting, param0, param2);
-          GetMissionVariablesHudX.field_o = new LoginTransitionDialog(GetLagStandardDeviationIn.field_r, SetAiFiringRangeUpshift.field_o);
-          GetLagStandardDeviationIn.field_r.pushPanel(false, GetMissionVariablesHudX.field_o);
+          GetMissionVariablesHudX.field_o = new LoginTransitionDialog(GetLagStandardDeviationIn.modalStack, SetAiFiringRangeUpshift.field_o);
+          GetLagStandardDeviationIn.modalStack.pushPanel(false, GetMissionVariablesHudX.field_o);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vt.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

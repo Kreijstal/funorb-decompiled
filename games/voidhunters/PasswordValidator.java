@@ -160,9 +160,9 @@ final class PasswordValidator extends TextFieldValidator {
         if (param1 <= 101) {
           field_g = (String) null;
         }
-        if (RoundResultFactory.field_a != null) {
+        if (RoundResultFactory.quickChatHelpWindow != null) {
           SoftwareRasterizer2D.darkenRectangle(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, -SoftwareRasterizer2D.clipLeft + SoftwareRasterizer2D.clipRight, -SoftwareRasterizer2D.clipTop + SoftwareRasterizer2D.clipBottom);
-          RoundResultFactory.field_a.draw(param0, 22);
+          RoundResultFactory.quickChatHelpWindow.draw(param0, 22);
         }
     }
 

@@ -57,9 +57,9 @@ final class AsteroidFieldFactory implements GameStateFactory {
             field_a = 99;
           }
           MidiNote.field_m = param1;
-          GetGrapplingHookFireForce.field_o.children.clear(param0 + 128);
-          GetGrapplingHookFireForce.field_o.addChild(-561, MidiNote.field_m);
-          LegacyOpenGlTurbulenceEffect.field_d = true;
+          GetGrapplingHookFireForce.quickChatMenuRoot.children.clear(param0 + 128);
+          GetGrapplingHookFireForce.quickChatMenuRoot.addChild(-561, MidiNote.field_m);
+          LegacyOpenGlTurbulenceEffect.quickChatMenuOpen = true;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

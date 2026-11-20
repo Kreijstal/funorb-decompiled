@@ -1756,7 +1756,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var3 = (MissionBuilder) (param1);
           var4 = 3 / ((22 - param0) / 59);
-          stackIn_6_0 = (var3.seed != this.seed) || (SetBlueprintSaveTime.a(var3.optionTotals, this.optionTotals, (byte) 28)) || (SetCountermeasureLauncherAimspeed.a(var3.clearanceAreas, true, 1, this.clearanceAreas, 126));
+          stackIn_6_0 = (var3.seed != this.seed) || (SetBlueprintSaveTime.intArraysDiffer(var3.optionTotals, this.optionTotals, (byte) 28)) || (SetCountermeasureLauncherAimspeed.a(var3.clearanceAreas, true, 1, this.clearanceAreas, 126));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

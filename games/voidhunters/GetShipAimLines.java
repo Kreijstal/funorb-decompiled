@@ -34,15 +34,15 @@ final class GetShipAimLines extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void processQuickChatInput(int param0, int param1, int param2, boolean param3) {
         if (param1 == 11343) {
-          ColorizeTextureOperation.a((byte) 34, param3);
-          GraphicsToolkit.a(param3, param0, param2, 5);
+          ColorizeTextureOperation.updateQuickChatHelpWindow((byte) 34, param3);
+          GraphicsToolkit.updateQuickChatMenuInput(param3, param0, param2, 5);
           return;
         }
-        GetShipAimLines.a(72, 8, 14, true);
-        ColorizeTextureOperation.a((byte) 34, param3);
-        GraphicsToolkit.a(param3, param0, param2, 5);
+        GetShipAimLines.processQuickChatInput(72, 8, 14, true);
+        ColorizeTextureOperation.updateQuickChatHelpWindow((byte) 34, param3);
+        GraphicsToolkit.updateQuickChatMenuInput(param3, param0, param2, 5);
     }
 
     GetShipAimLines(String param0, Class[] param1, String param2) {

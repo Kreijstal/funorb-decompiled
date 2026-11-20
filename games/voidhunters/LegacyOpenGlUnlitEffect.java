@@ -58,9 +58,9 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
           if (SetCountermeasureLauncherAimspeed.field_r != ToolkitRasterStateStack.idleAccountRequest) {
             return false;
           }
-          var9 = new AccountCreationDialog(GetLagStandardDeviationIn.field_r, param2);
+          var9 = new AccountCreationDialog(GetLagStandardDeviationIn.modalStack, param2);
           var7 = var9;
-          GetLagStandardDeviationIn.field_r.pushPanel(false, var9);
+          GetLagStandardDeviationIn.modalStack.pushPanel(false, var9);
           if (SetAutozoomAmountMultiply.isAccountCreationBlocked(0)) {
             var9.showAccountIneligible(false);
           } else {

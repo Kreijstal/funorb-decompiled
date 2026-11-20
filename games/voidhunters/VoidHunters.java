@@ -158,7 +158,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (null != GetBombletSprayPushMultiplier.field_o) {
           return;
         }
-        String var2 = AppletCookieReader.readCookie("fog_voidhunters_ship", 74, MissionList.b((byte) -125));
+        String var2 = AppletCookieReader.readCookie("fog_voidhunters_ship", 74, MissionList.getApplet((byte) -125));
         GetDebrisThrowable.a(logGuard, "Ship cookie=" + var2);
         if (var2 != null) {
           SetInnateThrusters.a(0, GetResourceNodeCaptureTime.a(var2, true, true));
@@ -401,7 +401,7 @@ public final class VoidHunters extends NetworkGameClient {
         int var3Lifetime1;
         int var3Lifetime2;
         var6 = field_G;
-        ProxySocketConnector.field_f = SetPedrosRepairModeSwitchtime.a(32);
+        ProxySocketConnector.field_f = SetPedrosRepairModeSwitchtime.getKeyboardIdleTicks(32);
         GetCountermeasureLauncherEnergyUsed.field_o = NormalMapTextureOperation.d(-2);
         SetReverbFeedback.e(200);
         if (EmailAvailabilityChecks.fullscreenCanvas != null &&
@@ -432,7 +432,7 @@ public final class VoidHunters extends NetworkGameClient {
             LegacyOpenGlEnvironmentReflectionEffect.field_e = true;
           }
         } else {
-          if (!Mission.b(-1)) {
+          if (!Mission.isPlayerGameDataReady(-1)) {
             GetUseRectOutline.updatePlayerGameDataLoading(false);
             if (TextLayout.playerGameDataLoaded &&
               this.isTutorialEnabled(0) &&
@@ -449,7 +449,7 @@ public final class VoidHunters extends NetworkGameClient {
                   VariableCondition.b((byte) -56);
                 }
                 if (2 == var3) {
-                  VoidHunters.quitToWebsite(MissionList.b((byte) -118), 4);
+                  VoidHunters.quitToWebsite(MissionList.getApplet((byte) -118), 4);
                 }
               }
               this.updateClientStateAndInput(true, -121);
@@ -505,7 +505,7 @@ public final class VoidHunters extends NetworkGameClient {
           ProxyAuthenticationException.field_a != null &&
           ProxyAuthenticationException.field_a.state.carouselInfo.outOfSync) &&
           null != FlipTextureOperation.field_l &&
-          null == FlipTextureOperation.field_l.dataSender) && (SocketNetworkArchiveClient.g(-114) &&
+          null == FlipTextureOperation.field_l.dataSender) && (SocketNetworkArchiveClient.isLoggedIn(-114) &&
           SetMachineGunEnergyUsed.field_o[82] &&
           SetMachineGunEnergyUsed.field_o[35])) {
           stackIn_69_0 = 1;
@@ -2295,7 +2295,7 @@ public final class VoidHunters extends NetworkGameClient {
             GetPhasedEnergyBeamAimspeed.a(var10, true);
             return;
           }
-          if (!Mission.b(-1)) {
+          if (!Mission.isPlayerGameDataReady(-1)) {
             IncrementVariableAction.setProgressDialogStatus(QuickChatHelpWindow.loadingExtraDataText, -1, 100.0f);
             GetPhasedEnergyBeamAimspeed.a(var10, true);
             return;
@@ -2389,7 +2389,7 @@ public final class VoidHunters extends NetworkGameClient {
                 this.cachedFrame.pixels = GetDebrisGroupColour.field_r.readPixels(var7, var8, this.cachedFrame.width, this.cachedFrame.height);
               }
               this.cachedFrame.drawOpaque(SoftwareRasterizer2D.width / 2 - var5_intLifetime2 / 2, SoftwareRasterizer2D.height / 2 - var6 / 2 - 1);
-              SetMutatorVotes.f(-1321004447);
+              SetMutatorVotes.drawGameMenu(-1321004447);
               RoundResult.field_e = true;
             }
           }
@@ -2429,7 +2429,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5 = SetReverbGain.a(GetGrapplingHookRopeBreakLength.field_q, new String[]{Integer.toString(var4_int)}, 106);
             var6Lifetime2 = 1;
             var7Lifetime2 = (GetBombletSprayEnergyUsed.field_p.width >> 1) - (GameTextMetrics.getStringWidth(var6Lifetime2, var5, 13879) >> 1);
-            var8Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (GetPointDefenceLaserProjectiles.a(false, var6Lifetime2) >> 1);
+            var8Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (GetPointDefenceLaserProjectiles.getFontAscent(false, var6Lifetime2) >> 1);
             BlackBoxRecording.drawPanelBackground((byte) -115, 200, MidiNote.a(var6Lifetime2, (byte) -121) * 8, var7Lifetime2 - 16, var8Lifetime1 - 5 * MidiNote.a(var6Lifetime2, (byte) -121), 32 + GameTextMetrics.getStringWidth(var6Lifetime2, var5, 13879));
             SetSelfDestructPrepareToggleCooldown.a(var7Lifetime2, 1, var8Lifetime1, var5, var6Lifetime2, 16777215, (byte) -101);
           }

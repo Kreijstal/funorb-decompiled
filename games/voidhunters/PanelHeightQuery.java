@@ -22,9 +22,9 @@ final class PanelHeightQuery {
     final static int getMaximumPanelHeight(boolean param0) {
         if (!param0) {
           field_a = (String) null;
-          return GetLagStandardDeviationIn.field_r.getMaximumPanelHeight(-2147483648);
+          return GetLagStandardDeviationIn.modalStack.getMaximumPanelHeight(-2147483648);
         }
-        return GetLagStandardDeviationIn.field_r.getMaximumPanelHeight(-2147483648);
+        return GetLagStandardDeviationIn.modalStack.getMaximumPanelHeight(-2147483648);
     }
 
     static {

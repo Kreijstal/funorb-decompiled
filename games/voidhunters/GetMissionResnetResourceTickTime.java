@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMissionResnetResourceTickTime extends ConsoleCommand {
-    static UiTheme field_p;
+    static UiTheme loginUiTheme;
     static int field_o;
 
     final static void a(int param0, int param1, Sprite[] param2, int param3, int param4) {
@@ -64,7 +64,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_p = (UiTheme) null;
+            loginUiTheme = (UiTheme) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(71, 96));
           return stackIn_3_0;
@@ -83,7 +83,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_p = null;
+        loginUiTheme = null;
         if (param0 > -43) {
           field_o = -91;
         }
@@ -93,7 +93,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 104)) {
           return;
         }
-        if (!SocketNetworkArchiveClient.g(-127)) {
+        if (!SocketNetworkArchiveClient.isLoggedIn(-127)) {
           return;
         }
         PlayerGameData var1 = TooltipDisplay.field_b;

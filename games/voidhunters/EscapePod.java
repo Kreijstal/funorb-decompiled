@@ -36,7 +36,7 @@ final class EscapePod extends MovingObject implements DiffableState {
         }
     }
 
-    final void a(Camera2D param0, byte param1) {
+    final void draw(Camera2D param0, byte param1) {
         try {
           if (param1 >= -91) {
             SerializableGameState var4 = (SerializableGameState) null;
@@ -106,7 +106,7 @@ final class EscapePod extends MovingObject implements DiffableState {
         }
     }
 
-    final static boolean a(boolean[] param0, boolean[] param1, int param2) {
+    final static boolean booleanArraysDiffer(boolean[] param0, boolean[] param1, int param2) {
         boolean stackIn_9_0 = false;
         int stackIn_22_0 = 0;
         int stackIn_25_1 = 0;
@@ -257,7 +257,7 @@ final class EscapePod extends MovingObject implements DiffableState {
         }
     }
 
-    final void c(byte param0) {
+    final void updateHyperdriveTimer(byte param0) {
         if (this.hyperdriveTimer > 0) {
           this.hyperdriveTimer = this.hyperdriveTimer - 1;
         }

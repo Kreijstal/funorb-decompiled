@@ -237,7 +237,7 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
               var39 = 234946304 & var30 * var36 >>> 8 | -218169089 & var35 * var30 >>> 8;
               var37 = var37 + var31 * 65793;
               var39 = var39 + var33 * 65793;
-              GetPointDefenceLaserProjectileDamage.a(var39 >> 16, var38 >> 8 & 255, var38 >> 16, var22, (var39 & 65337) >> 8, var25, var37 >> 16, (65314 & var37) >> 8, var39 & 255, -18419, var26, var27, var37 & 255, var24, var38 & 255, var23);
+              GetPointDefenceLaserProjectileDamage.drawHalfAlphaRgbTriangle(var39 >> 16, var38 >> 8 & 255, var38 >> 16, var22, (var39 & 65337) >> 8, var25, var37 >> 16, (65314 & var37) >> 8, var39 & 255, -18419, var26, var27, var37 & 255, var24, var38 & 255, var23);
             }
           }
           if (param3 > -109) {

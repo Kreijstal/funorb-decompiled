@@ -1170,7 +1170,7 @@ final class OpenGlModel extends Model3D {
             param1.groupFaceAttachmentIndices(-96);
           }
           if (null != param1.faceLabels &&
-            ArchiveLoadRequest.a(384, this.field_u, param2)) {
+            ArchiveLoadRequest.needsFaceGroups(384, this.field_u, param2)) {
             var18Lifetime5 = 0;
             var84 = new int[256];
             var80 = var84;

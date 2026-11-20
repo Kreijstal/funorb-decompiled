@@ -104,7 +104,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
     }
 
     final static void a(boolean param0, int param1) {
-        WaterTextures.a(param0, false, false);
+        WaterTextures.showLoginForm(param0, false, false);
         if (param1 > -121) {
           chatVisible = true;
         }

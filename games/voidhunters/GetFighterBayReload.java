@@ -54,7 +54,7 @@ final class GetFighterBayReload extends ConsoleCommand {
 
     final static void a(byte param0, int[] param1, long[] param2) {
         try {
-          PlayerGameData.a(-14677, param2, 0, param1, param2.length - 1);
+          PlayerGameData.sortLongKeysWithIntValues(-14677, param2, 0, param1, param2.length - 1);
           if (param0 != -24) {
             GameStateFactory var4 = (GameStateFactory) null;
             GetFighterBayReload.appendStateArrayValue((Object[]) null, (Object) null, false, (GameStateFactory) null, 32);

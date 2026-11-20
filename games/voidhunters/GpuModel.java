@@ -1122,7 +1122,7 @@ final class GpuModel extends Model3D {
             this.field_C = new GpuVertexBufferOwner(GpuToolkit.a(0, this.field_I, this.field_s));
           }
           if (param3 ||
-            SocketNetworkArchiveClient.a(this.field_s, (byte) 127, this.field_I)) {
+            SocketNetworkArchiveClient.matchesGpuVertexDataMask(this.field_s, (byte) 127, this.field_I)) {
             this.field_h = new GpuVertexBufferOwner(MissionState.a(this.field_s, this.field_I, (byte) 30));
           }
           if (!param3 &&

@@ -7,8 +7,8 @@ final class GetAllowShipSaving extends ConsoleCommand {
     static long lastClockSampleMillis;
 
     final static void finishLoadingAnimations(int param0) {
-        if (null != GetLagStandardDeviationIn.field_r) {
-          GetLagStandardDeviationIn.field_r.finishPanelAnimations(param0 - 4299);
+        if (null != GetLagStandardDeviationIn.modalStack) {
+          GetLagStandardDeviationIn.modalStack.finishPanelAnimations(param0 - 4299);
           if (param0 == 4410) {
             if (null == MatchingFieldValidator.field_i) {
               GetDebugLineLife.e(95);

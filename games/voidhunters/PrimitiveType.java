@@ -37,7 +37,7 @@ final class PrimitiveType {
                 var5Lifetime1 = ServerTickFactory.a((byte) 90, var4, param0);
               }
               if (2 == MissionGenerationDataFactory.field_b) {
-                var5Lifetime1 = SetExplosionPushMultiplier.a(2, var4, param0);
+                var5Lifetime1 = SetExplosionPushMultiplier.requestAddIgnore(2, var4, param0);
               }
               if (MissionGenerationDataFactory.field_b == 3) {
                 var5Lifetime1 = GameCanvasResizeListener.a(param0, var4, var4, (byte) -76);

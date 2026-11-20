@@ -384,11 +384,11 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
             var9.settings.applyChange(param1 ^ 42, this.specialOrderSubmessage.settingsChange);
             return;
           }
-          var5 = var9.getPlayer(this.field_k, (byte) 59);
+          var5 = var9.getPlayer(this.playerId, (byte) 59);
           if (this.specialOrderSubmessage != null &&
             this.specialOrderSubmessage.spawnchoice != null) {
             if (var5.spawnChoice == this.specialOrderSubmessage.spawnchoice.choice) {
-              var9.world.resetRespawnTimer(-1, this.field_k);
+              var9.world.resetRespawnTimer(-1, this.playerId);
               return;
             }
             var5.spawnChoice = this.specialOrderSubmessage.spawnchoice.choice;
@@ -413,7 +413,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           }
           if (this.specialOrderSubmessage != null &&
             this.specialOrderSubmessage.blueprint != null) {
-            var11 = var9.world.findShipByOwner(this.field_k, 80);
+            var11 = var9.world.findShipByOwner(this.playerId, 80);
             if (var11 != null) {
               var11.setTargetBlueprint((byte) 34, this.specialOrderSubmessage.blueprint);
               return;
@@ -427,11 +427,11 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               var10.recalculateMassProperties((byte) 119);
               var10.chassis.configureThrusterBindings((byte) 0, (ShipBody) (var10));
               var5.savedShip = var10;
-              var9.world.resetRespawnTimer(param1 - 1, this.field_k);
+              var9.world.resetRespawnTimer(param1 - 1, this.playerId);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var7 = (Exception) (Object) decompiledCaughtException;
-              SetVelocitySustainMax.a((Throwable) ((Object) var7), true, "Invalid blueprint action from player " + this.field_k + " AKA " + param0.getPlayerName(1, this.field_k));
+              SetVelocitySustainMax.a((Throwable) ((Object) var7), true, "Invalid blueprint action from player " + this.playerId + " AKA " + param0.getPlayerName(1, this.playerId));
             }
             return;
           }
@@ -472,7 +472,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
     }
 
     public final String toString() {
-        return "Tick=" + this.tick + ", system=" + this.systemEvent + ", playerid=" + this.field_k + ",triggers=" + this.triggers + ", mousex=" + this.mousex + ", mousey=" + this.mousey + " specialorder=" + this.specialOrderSubmessage;
+        return "Tick=" + this.tick + ", system=" + this.systemEvent + ", playerid=" + this.playerId + ",triggers=" + this.triggers + ", mousex=" + this.mousex + ", mousey=" + this.mousey + " specialorder=" + this.specialOrderSubmessage;
     }
 
     public PlayerAction() {

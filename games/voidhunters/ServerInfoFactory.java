@@ -148,8 +148,8 @@ final class ServerInfoFactory implements GameStateFactory {
             var14 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
             if (OpenGlTexture1D.field_i) {
               var4_int = SetToggledScoreboard.field_o.screenY;
-              if (!LegacyOpenGlTurbulenceEffect.field_d) {
-                if (GetReverbDry.e((byte) 105)) {
+              if (!LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
+                if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
                   var4_int = SoftwareRasterizer2D.height;
                   GetAiRepairTime.e(-22);
                 }
@@ -219,8 +219,8 @@ final class ServerInfoFactory implements GameStateFactory {
                 var16 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
                 if (OpenGlTexture1D.field_i) {
                   var4_intLifetime1 = SetToggledScoreboard.field_o.screenY;
-                  if (!LegacyOpenGlTurbulenceEffect.field_d) {
-                    if (GetReverbDry.e((byte) 105)) {
+                  if (!LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
+                    if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
                       var4_intLifetime1 = SoftwareRasterizer2D.height;
                       GetAiRepairTime.e(-22);
                     }
@@ -275,7 +275,7 @@ final class ServerInfoFactory implements GameStateFactory {
           var3 = var18;
           if (OpenGlTexture1D.field_i) {
             var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.screenY;
-            if (LegacyOpenGlTurbulenceEffect.field_d) {
+            if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
               var4_intLifetime1Lifetime1 = SoftwareRasterizer2D.height;
               GetAiRepairTime.e(-97);
               if (SoftwareRasterizer2D.height > var4_intLifetime1Lifetime1) {
@@ -320,7 +320,7 @@ final class ServerInfoFactory implements GameStateFactory {
               }
               return;
             }
-            if (!GetReverbDry.e((byte) 105)) {
+            if (!GetReverbDry.isSocialDialogOpen((byte) 105)) {
               if (SoftwareRasterizer2D.height > var4_intLifetime1Lifetime1) {
                 var5Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
                 var6Lifetime1Lifetime1Lifetime1 = -SoftwareRasterizer2D.height + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;

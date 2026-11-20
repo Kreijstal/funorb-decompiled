@@ -62,7 +62,7 @@ final class MatchResultsFactory implements GameStateFactory {
               AppletJavaScriptBridge.evaluate((byte) -115, param0, "document.cookie=\"" + var5Lifetime4 + "\"");
             } catch (Throwable throwable) {
             }
-            PlayerLeave.a(-102, param0);
+            PlayerLeave.updateWebsiteNavigationLinks(-102, param0);
           } catch (RuntimeException runtimeException) {
             throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wva.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

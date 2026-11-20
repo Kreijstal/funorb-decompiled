@@ -32,7 +32,7 @@ final class SetPedrosRepairModeSwitchtime extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openServerList(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException var2_ref = null;
@@ -53,7 +53,7 @@ final class SetPedrosRepairModeSwitchtime extends ConsoleCommand {
             if (param0 == 32) {
               return;
             }
-            SetPedrosRepairModeSwitchtime.e((byte) -84);
+            SetPedrosRepairModeSwitchtime.drawQuickChatMenu((byte) -84);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -74,27 +74,27 @@ final class SetPedrosRepairModeSwitchtime extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void drawQuickChatMenu(byte param0) {
         if (param0 > 6) {
-          if (LegacyOpenGlTurbulenceEffect.field_d) {
+          if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
             SoftwareRasterizer2D.darkenRectangle(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, -SoftwareRasterizer2D.clipLeft + SoftwareRasterizer2D.clipRight, -SoftwareRasterizer2D.clipTop + SoftwareRasterizer2D.clipBottom);
-            GetGrapplingHookFireForce.field_o.draw(false, -111);
+            GetGrapplingHookFireForce.quickChatMenuRoot.draw(false, -111);
           }
           return;
         }
-        SetPedrosRepairModeSwitchtime.a(76);
-        if (LegacyOpenGlTurbulenceEffect.field_d) {
+        SetPedrosRepairModeSwitchtime.getKeyboardIdleTicks(76);
+        if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
           SoftwareRasterizer2D.darkenRectangle(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, -SoftwareRasterizer2D.clipLeft + SoftwareRasterizer2D.clipRight, -SoftwareRasterizer2D.clipTop + SoftwareRasterizer2D.clipBottom);
-          GetGrapplingHookFireForce.field_o.draw(false, -111);
+          GetGrapplingHookFireForce.quickChatMenuRoot.draw(false, -111);
         }
     }
 
-    final static int a(int param0) {
+    final static int getKeyboardIdleTicks(int param0) {
         if (param0 != 32) {
-          SetPedrosRepairModeSwitchtime.a(9);
-          return GetUseCircleOutline.field_q;
+          SetPedrosRepairModeSwitchtime.getKeyboardIdleTicks(9);
+          return GetUseCircleOutline.keyboardIdleTicks;
         }
-        return GetUseCircleOutline.field_q;
+        return GetUseCircleOutline.keyboardIdleTicks;
     }
 
     SetPedrosRepairModeSwitchtime(String param0, Class[] param1, String param2) {

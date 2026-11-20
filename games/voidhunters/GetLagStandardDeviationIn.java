@@ -4,11 +4,11 @@
 final class GetLagStandardDeviationIn extends ConsoleCommand {
     static IntrusiveDeque pendingRecordReads;
     static int[] hslPalette;
-    static ModalStack field_r;
+    static ModalStack modalStack;
     static int field_p;
 
     public static void clearSharedReferences(boolean param0) {
-        field_r = null;
+        modalStack = null;
         hslPalette = null;
         pendingRecordReads = null;
         if (!param0) {

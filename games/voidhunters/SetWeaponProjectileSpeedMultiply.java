@@ -43,7 +43,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         if (!param0) {
           return false;
         }
-        stackIn_7_0 = (GetSpinningBladeAimspeed.field_q >= 10) && (!GuestModeState.guestMode) && (!SocketNetworkArchiveClient.g(-115));
+        stackIn_7_0 = (GetSpinningBladeAimspeed.field_q >= 10) && (!GuestModeState.guestMode) && (!SocketNetworkArchiveClient.isLoggedIn(-115));
         return stackIn_7_0;
     }
 

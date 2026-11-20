@@ -7,7 +7,7 @@ final class PlayerLeave implements DiffableState {
     static int[] field_a;
     static int field_c;
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void updateWebsiteNavigationLinks(int param0, java.applet.Applet param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -59,7 +59,7 @@ final class PlayerLeave implements DiffableState {
         field_a = null;
         if (param0) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          PlayerLeave.a(-91, (java.applet.Applet) null);
+          PlayerLeave.updateWebsiteNavigationLinks(-91, (java.applet.Applet) null);
         }
     }
 
@@ -76,7 +76,7 @@ final class PlayerLeave implements DiffableState {
           var6 = var5;
           var6.field_d = this.field_d;
           if (param0 <= 54) {
-            PlayerLeave.a((byte) 23, 42L);
+            PlayerLeave.sleepMillis((byte) 23, 42L);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,7 +93,7 @@ final class PlayerLeave implements DiffableState {
         }
     }
 
-    final static void a(byte param0, ChatMessage param1) {
+    final static void receiveChatMessage(byte param0, ChatMessage param1) {
         int var2_int = 0;
         ChatMessage var3 = null;
         int var4 = 0;
@@ -229,7 +229,7 @@ final class PlayerLeave implements DiffableState {
         }
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepMillis(byte param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

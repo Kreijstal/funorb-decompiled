@@ -388,7 +388,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param0 != 101) {
             this.configureThrusterBindings((byte) 114, (ShipBody) null);
           }
-          if (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param1, param4, param2)) {
+          if (ArchiveLoadRequest.intersectsCircle((byte) -57, this.finaloutline, param1, param4, param2)) {
             param3 = (ShipComponent[]) (SoftwareSprite2D.appendStateArrayValue(this, param3, 0, ArchiveTextureProvider.field_d));
           }
           stackIn_11_0 = (ShipComponent[]) (param3);
@@ -1416,7 +1416,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               param6 = this.subcomponents[var8_int].collectDamagedComponentPaths(param0, param1, param2 | 1 + var8_int << 4 * param5, (byte) -45, param4, 1 + param5, param6);
             }
           }
-          if (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param4, param1, param0) &&
+          if (ArchiveLoadRequest.intersectsCircle((byte) -57, this.finaloutline, param4, param1, param0) &&
             this.health < this.getDefinition((byte) -112).maxHealth) {
             param6 = SetMinimapWidth.a(param6, param2, (byte) -106);
           }
@@ -2728,7 +2728,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (param0 != 32609) {
           this.updateBehaviors(false, (byte) 89, (World) null, (ShipBody) null);
         }
-        stackIn_14_0 = (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param3, param1, param2)) && (this.health < this.getDefinition((byte) -112).maxHealth);
+        stackIn_14_0 = (ArchiveLoadRequest.intersectsCircle((byte) -57, this.finaloutline, param3, param1, param2)) && (this.health < this.getDefinition((byte) -112).maxHealth);
         return stackIn_14_0;
     }
 
@@ -3418,7 +3418,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               this.subcomponents[var10_int].collectCircleContacts(param0, param1, var10_int + 1 << param4 * 4 | param2, param3, 1 + param4, param5, param6, param7 ^ 0, param8);
             }
           }
-          if (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param3, param1, param5)) {
+          if (ArchiveLoadRequest.intersectsCircle((byte) -57, this.finaloutline, param3, param1, param5)) {
             param6.addLast(-10258, new ComponentContact(this, param2, param0, param8, param3, param1, 0, 0));
           }
           return;

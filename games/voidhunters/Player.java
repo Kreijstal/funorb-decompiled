@@ -40,7 +40,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             var5.specialorder == this.specialorder &&
             this.spawnChoice == var5.spawnChoice &&
             var5.selectedTeam == this.selectedTeam &&
-            !SetBlueprintSaveTime.a(var5.votes, this.votes, (byte) 28)) {
+            !SetBlueprintSaveTime.intArraysDiffer(var5.votes, this.votes, (byte) 28)) {
             stackIn_11_0 = (this.savedShip != null) ? 0 : 1;
             if (var5.savedShip != null) {
               stackIn_14_1 = 0;
@@ -48,7 +48,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
               stackIn_14_1 = 1;
             }
             if ((stackIn_11_0 ^ stackIn_14_1) == 0 && (null == this.savedShip ||
-              !this.savedShip.differsFrom((byte) -125, var5.savedShip)) && (!SetBlueprintSaveTime.a(var5.carriedOverComponents, this.carriedOverComponents, (byte) 28) &&
+              !this.savedShip.differsFrom((byte) -125, var5.savedShip)) && (!SetBlueprintSaveTime.intArraysDiffer(var5.carriedOverComponents, this.carriedOverComponents, (byte) 28) &&
               this.kills == var5.kills &&
               var5.assists == this.assists &&
               this.deaths == var5.deaths &&

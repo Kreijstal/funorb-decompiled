@@ -57,10 +57,10 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          SetCountermeasureLauncherAimarc.field_p = SetGrapplingHookRopeBreakLength.a(param1, true, "commonui", "frame_top");
-          SetPedrosRepairMode.field_q = SetGrapplingHookRopeBreakLength.a(param1, true, "commonui", "frame_bottom");
+          SetCountermeasureLauncherAimarc.field_p = SetGrapplingHookRopeBreakLength.loadNamedSprites(param1, true, "commonui", "frame_top");
+          SetPedrosRepairMode.field_q = SetGrapplingHookRopeBreakLength.loadNamedSprites(param1, true, "commonui", "frame_bottom");
           GameMenuScreen.field_a = SetSniperCannonProjectiles.a(param1, "jagex_logo_grey", "commonui", true);
-          GetBombletSprayProjectileLife.field_o = SetGrapplingHookRopeBreakLength.a(param1, true, "commonui", "button");
+          GetBombletSprayProjectileLife.field_o = SetGrapplingHookRopeBreakLength.loadNamedSprites(param1, true, "commonui", "button");
           ByteStorage.field_a = GrowableIntArray.loadNamedSprites("commonui", -90, param1, "validation");
           SetTorpedoProjectileLife.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "commonui", param1, param2, "arezzo12"));
           SetShipToShipRamDamage.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "commonui", param1, param2, "arezzo14"));

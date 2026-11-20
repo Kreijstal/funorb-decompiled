@@ -47,6 +47,6 @@ final class SetPointDefenceLaserFireForce extends ConsoleCommand {
 
     static {
         field_o = "Connection lost. <%0>";
-        SetMutatorVotes.a(1600, 61);
+        SetMutatorVotes.bitLength(1600, 61);
     }
 }

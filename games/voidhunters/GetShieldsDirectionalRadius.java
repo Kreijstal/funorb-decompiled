@@ -10,7 +10,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
     }
 
     final static void saveCompletedHints(int param0) {
-        if (!EscapePod.a(GetBoostersCooldown.savedHintCompletion, TutorialProgressState.completedHints, 32)) {
+        if (!EscapePod.booleanArraysDiffer(GetBoostersCooldown.savedHintCompletion, TutorialProgressState.completedHints, 32)) {
           return;
         }
         if (TooltipDisplay.field_b == null) {
@@ -86,7 +86,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           stackIn_85_5 = param0 ^ 16777194;
           stackIn_85_6 = var2;
           stackIn_87_7 = (GetThrusterSmallForce.field_o) || (SetMissionTerrainDebrisProbability.field_p);
-          SetGrapplingHookRopeBreakLength.a(stackIn_82_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_85_6 != 0, stackIn_87_7, param1, 13, 15, 0);
+          SetGrapplingHookRopeBreakLength.updateSocialPanels(stackIn_82_0, stackIn_85_1, stackIn_85_2, stackIn_85_3, stackIn_85_4, stackIn_85_5, stackIn_85_6 != 0, stackIn_87_7, param1, 13, 15, 0);
         } else {
           GetShieldsDirectionalRadius.saveCompletedHints(77);
           if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
@@ -108,7 +108,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
             stackIn_12_5 = param0 ^ 16777194;
             stackIn_12_6 = var2;
             stackIn_14_7 = (GetThrusterSmallForce.field_o) || (SetMissionTerrainDebrisProbability.field_p);
-            SetGrapplingHookRopeBreakLength.a(stackIn_9_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6 != 0, stackIn_14_7, param1, 13, 15, 0);
+            SetGrapplingHookRopeBreakLength.updateSocialPanels(stackIn_9_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6 != 0, stackIn_14_7, param1, 13, 15, 0);
           } else {
             if (TextureRectangleShape.a(112, SetSpinningBladeSpindamageMultiplier.field_o.field_zb)) {
               var2 = 1;
@@ -129,7 +129,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
               stackIn_57_5 = param0 ^ 16777194;
               stackIn_57_6 = var2;
               stackIn_59_7 = (GetThrusterSmallForce.field_o) || (SetMissionTerrainDebrisProbability.field_p);
-              SetGrapplingHookRopeBreakLength.a(stackIn_54_0, stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6 != 0, stackIn_59_7, param1, 13, 15, 0);
+              SetGrapplingHookRopeBreakLength.updateSocialPanels(stackIn_54_0, stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6 != 0, stackIn_59_7, param1, 13, 15, 0);
             } else {
               var2 = 0;
               var3 = GetBombletSprayEnergyUsed.field_p.width;
@@ -149,7 +149,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
               stackIn_35_5 = param0 ^ 16777194;
               stackIn_35_6 = var2;
               stackIn_37_7 = (GetThrusterSmallForce.field_o) || (SetMissionTerrainDebrisProbability.field_p);
-              SetGrapplingHookRopeBreakLength.a(stackIn_32_0, stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, stackIn_35_6 != 0, stackIn_37_7, param1, 13, 15, 0);
+              SetGrapplingHookRopeBreakLength.updateSocialPanels(stackIn_32_0, stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, stackIn_35_6 != 0, stackIn_37_7, param1, 13, 15, 0);
             }
           }
         }

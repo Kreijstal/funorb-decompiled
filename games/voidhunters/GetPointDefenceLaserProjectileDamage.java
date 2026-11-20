@@ -44,7 +44,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static void f(byte param0) {
+    final static void initializeReportReasonLabels(byte param0) {
         GetSniperCannonEnergyUsed.reportReasonLabels = new String[SetFightersPerPlayerMaximum.field_o];
         GetSniperCannonEnergyUsed.reportReasonLabels[5] = GetMachineGunAimspeed.field_q;
         GetSniperCannonEnergyUsed.reportReasonLabels[21] = LawViolationReportText.lawViolationText;
@@ -65,38 +65,38 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void drawHalfAlphaRgbTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
         var17 = VoidHunters.field_G;
         if (param15 >= param5) {
           if (param15 < param11) {
-            SetPhasedEnergyBeamRandomness.a(param7, param6, param14, param11, SoftwareRasterizer2D.pixels, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
+            SetPhasedEnergyBeamRandomness.drawSortedHalfAlphaRgbTriangle(param7, param6, param14, param11, SoftwareRasterizer2D.pixels, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
           } else {
             if (param11 <= param5) {
-              SetPhasedEnergyBeamRandomness.a(param1, param2, param8, param15, SoftwareRasterizer2D.pixels, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, param9 ^ 18418, param3);
+              SetPhasedEnergyBeamRandomness.drawSortedHalfAlphaRgbTriangle(param1, param2, param8, param15, SoftwareRasterizer2D.pixels, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, param9 ^ 18418, param3);
             } else {
-              SetPhasedEnergyBeamRandomness.a(param4, param0, param14, param15, SoftwareRasterizer2D.pixels, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, param9 + 18418, param3);
+              SetPhasedEnergyBeamRandomness.drawSortedHalfAlphaRgbTriangle(param4, param0, param14, param15, SoftwareRasterizer2D.pixels, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, param9 + 18418, param3);
             }
           }
         } else {
           if (param11 > param5) {
-            SetPhasedEnergyBeamRandomness.a(param1, param2, param12, param11, SoftwareRasterizer2D.pixels, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, param9 + 18418, param10);
+            SetPhasedEnergyBeamRandomness.drawSortedHalfAlphaRgbTriangle(param1, param2, param12, param11, SoftwareRasterizer2D.pixels, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, param9 + 18418, param10);
           } else {
             if (param15 >= param11) {
-              SetPhasedEnergyBeamRandomness.a(param7, param6, param8, param5, SoftwareRasterizer2D.pixels, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
+              SetPhasedEnergyBeamRandomness.drawSortedHalfAlphaRgbTriangle(param7, param6, param8, param5, SoftwareRasterizer2D.pixels, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
             } else {
-              SetPhasedEnergyBeamRandomness.a(param4, param0, param12, param5, SoftwareRasterizer2D.pixels, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
+              SetPhasedEnergyBeamRandomness.drawSortedHalfAlphaRgbTriangle(param4, param0, param12, param5, SoftwareRasterizer2D.pixels, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
             }
           }
         }
         if (param9 == -18419) {
           return;
         }
-        GetPointDefenceLaserProjectileDamage.a(true, -61);
+        GetPointDefenceLaserProjectileDamage.drawModalPanels(true, -61);
     }
 
-    final static void a(boolean param0, int param1) {
-        GetLagStandardDeviationIn.field_r.draw(0, 0, 0);
+    final static void drawModalPanels(boolean param0, int param1) {
+        GetLagStandardDeviationIn.modalStack.draw(0, 0, 0);
         int var2 = 100 % ((-38 - param1) / 39);
     }
 

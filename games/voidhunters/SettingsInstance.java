@@ -186,7 +186,7 @@ final class SettingsInstance implements DiffableState {
         try {
           var3 = (SettingsInstance) (param1);
           var4 = -34 % ((22 - param0) / 59);
-          stackIn_1_0 = SetBlueprintSaveTime.a(var3.values, this.values, (byte) 28);
+          stackIn_1_0 = SetBlueprintSaveTime.intArraysDiffer(var3.values, this.values, (byte) 28);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

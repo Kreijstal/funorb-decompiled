@@ -15,7 +15,7 @@ final class PanelWidthQuery extends SocialPanelState {
 
     final static int getMaximumPanelWidth(int param0) {
         int var1 = 95 % ((-69 - param0) / 48);
-        return GetLagStandardDeviationIn.field_r.getMaximumPanelWidth(-101);
+        return GetLagStandardDeviationIn.modalStack.getMaximumPanelWidth(-101);
     }
 
     static {

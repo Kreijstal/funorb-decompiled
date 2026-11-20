@@ -56,7 +56,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
               AppletJavaScriptBridge.evaluate((byte) -126, param0, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
-            PlayerLeave.a(-38, param0);
+            PlayerLeave.updateWebsiteNavigationLinks(-38, param0);
           } catch (RuntimeException runtimeException) {
             throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pcb.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

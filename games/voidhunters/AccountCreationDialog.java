@@ -9,7 +9,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
 
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         if (this.ineligible) {
-          WaterTextures.a(false, true, false);
+          WaterTextures.showLoginForm(false, true, false);
           return;
         }
         GetBoostersActiveTime.f((byte) -74);

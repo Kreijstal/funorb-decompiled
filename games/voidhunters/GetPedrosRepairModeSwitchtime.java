@@ -39,25 +39,25 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final static boolean processSocialDialogInput(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         if (param0 <= 27) {
-          GetPedrosRepairModeSwitchtime.a(23, 89, -52, 81, -123, -26, false);
+          GetPedrosRepairModeSwitchtime.processSocialDialogInput(23, 89, -52, 81, -123, -26, false);
         }
-        if (GetReverbDry.e((byte) 105)) {
-          GetShipAimLines.a(param2, 11343, param4, param6);
+        if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
+          GetShipAimLines.processQuickChatInput(param2, 11343, param4, param6);
           if (null != GetLagStandardDeviationOut.field_o &&
             GetLagStandardDeviationOut.field_o.updateAndDispatchSelection(param6, -11, param1, param4, param3)) {
             TileTextureOperation.closePlayerContextMenu(0);
             param6 = false;
           }
           PrimitiveType.updateSocialNameDialog(param4, param6, 19717);
-          GpuTransform3D.a((byte) -127, param6, param5);
+          GpuTransform3D.updateReportAbuseDialog((byte) -127, param6, param5);
           param6 = false;
         }
         return param6;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isPrintableGameCharacter(char param0, byte param1) {
         if (param0 >= 32 &&
           param0 <= 126) {
           return true;
@@ -78,7 +78,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
         return true;
     }
 
-    final static void a(int param0) {
+    final static void closeArchiveResources(int param0) {
         try {
           int var1_int = 0;
           IOException iOException = null;

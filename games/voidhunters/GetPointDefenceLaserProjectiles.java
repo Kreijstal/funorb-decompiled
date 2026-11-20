@@ -5,7 +5,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
     static PlatformRequest field_o;
     static String field_p;
 
-    final static int a(boolean param0, int param1) {
+    final static int getFontAscent(boolean param0, int param1) {
         if (param0) {
           field_o = (PlatformRequest) null;
           if (!OpenGlTexture1D.field_i) {

@@ -7,7 +7,7 @@ final class GetUseExtraBackground extends ConsoleCommand {
     }
 
     final static void closeQuickChatMenu(int param0) {
-        LegacyOpenGlTurbulenceEffect.field_d = false;
+        LegacyOpenGlTurbulenceEffect.quickChatMenuOpen = false;
         if (null != MidiNote.field_m) {
           MidiNote.field_m.closeSubmenu(16384);
           if (~NetworkMessageState.chatChannel != param0) {

@@ -149,7 +149,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           return true;
         }
         var4 = SetClientSideDragging.field_r;
-        if (!GetPedrosRepairModeSwitchtime.a((char) var4, (byte) 32)) {
+        if (!GetPedrosRepairModeSwitchtime.isPrintableGameCharacter((char) var4, (byte) 32)) {
           return false;
         }
         if (var3 == 0) {

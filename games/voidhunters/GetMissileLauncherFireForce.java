@@ -116,7 +116,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         var9 = VoidHunters.field_G;
         try {
           var3_int = SetGrapplingHookAimarc.field_p;
-          GetGrapplingHookFireForce.field_o = new Widget(0L, (Widget) null);
+          GetGrapplingHookFireForce.quickChatMenuRoot = new Widget(0L, (Widget) null);
           if (param1 == null) {
             var10 = (Throwable) null;
             FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "QC1", 0);
@@ -150,7 +150,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           if (param0 != -35) {
             return;
           }
-          GetGrapplingHookFireForce.field_o.children = new IntrusiveDeque();
+          GetGrapplingHookFireForce.quickChatMenuRoot.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -450,13 +450,13 @@ final class GameMenuScreen {
         var17 = 13421772;
         if (SetFps.helpPageIndex == 0) {
           var12 += 50;
-          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], var17, var16, -55, var12, 0, var2);
-          SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, HardpointMatch.field_a, 16755200, var16, -51, var12, 0, var2);
+          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 0, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], var17, var16, -55, var12, 0, var2);
+          SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 0, HardpointMatch.field_a, 16755200, var16, -51, var12, 0, var2);
         } else {
           var12 -= 10;
           var20 = this.formatShortcutHint("<savekey>", (byte) 119, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], SetDetachmentMode.field_p);
           var21 = this.formatShortcutHint("<loadkey>", (byte) 63, var20, WaveformTextureOperation.field_j);
-          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
+          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
         }
         SetSelfDestructPrepareToggleCooldown.a(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.a(SetFps.helpPageIndex, -98), 1, 16738305, (byte) -96);
     }
@@ -577,7 +577,7 @@ final class GameMenuScreen {
                                         }
                                         IntegerRecordWritePackets.field_a = true;
                                         GetMessageFadetime.field_o = false;
-                                        if (SocketNetworkArchiveClient.g(-118) &&
+                                        if (SocketNetworkArchiveClient.isLoggedIn(-118) &&
                                           GraphicsPresentException.field_a) {
                                           RequestNewestBlackboxRecording.field_p.writeIsaacByte(param0 ^ 24343, 10);
                                           GraphicsPresentException.field_a = false;
@@ -626,7 +626,7 @@ final class GameMenuScreen {
                                                 } else {
                                                   if (var10_int == 12) {
                                                     if (this.inputState.isActivationRequested((byte) -82)) {
-                                                      VoidHunters.quitToWebsite(MissionList.b((byte) -123), param0 - 20);
+                                                      VoidHunters.quitToWebsite(MissionList.getApplet((byte) -123), param0 - 20);
                                                     }
                                                   } else {
                                                     if (var10_int == 22) {
@@ -694,7 +694,7 @@ final class GameMenuScreen {
                                                             SetTorpedoProjectiles.field_o.writeClipboard((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
                                                             SocketNetworkArchiveClient.field_n = 100;
                                                             var4 = 1;
-                                                            ArchiveIndex.openExternalUrl(true, 0, MissionList.b((byte) -92), var20);
+                                                            ArchiveIndex.openExternalUrl(true, 0, MissionList.getApplet((byte) -92), var20);
                                                           }
                                                         }
                                                       }
@@ -919,13 +919,13 @@ final class GameMenuScreen {
         } else {
           if (this.menuId == 6) {
             var2Lifetime1 = 3;
-            var3 = AsteroidField.getParagraphHeight((byte) -37, BodyInZoneCondition.field_c, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), var2Lifetime1, 480);
+            var3 = AsteroidField.getParagraphHeight((byte) -37, BodyInZoneCondition.field_c, GetPointDefenceLaserProjectiles.getFontAscent(false, var2Lifetime1), var2Lifetime1, 480);
             var4 = 16;
             var5_int = (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
             var6 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             var3 = var3 + var4 * 2;
             BlackBoxRecording.drawPanelBackground((byte) -115, 255, var3, var5_int + (80 - var4), -var4 + (var6 + 160), var4 * 2 + 480);
-            SetAutoaim.a(-1, 1000, 80 + var5_int, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), 0, BodyInZoneCondition.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
+            SetAutoaim.a(-1, 1000, 80 + var5_int, GetPointDefenceLaserProjectiles.getFontAscent(false, var2Lifetime1), 0, BodyInZoneCondition.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
           }
         }
         var2Lifetime2 = SetVariableAction.field_b;
@@ -1056,7 +1056,7 @@ final class GameMenuScreen {
             if (null != EmailAvailabilityChecks.fullscreenCanvas) {
               VariableCondition.b((byte) -42);
             }
-            SetMaxShipSize.a(MissionList.b((byte) -105), 0);
+            SetMaxShipSize.a(MissionList.getApplet((byte) -105), 0);
           }
           if (var2 == 1) {
             GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, 0);

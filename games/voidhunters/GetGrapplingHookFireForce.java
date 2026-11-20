@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetGrapplingHookFireForce extends ConsoleCommand {
-    static Widget field_o;
+    static Widget quickChatMenuRoot;
     static float[] field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -39,7 +39,7 @@ final class GetGrapplingHookFireForce extends ConsoleCommand {
         if (param0 != 0) {
           return;
         }
-        field_o = null;
+        quickChatMenuRoot = null;
     }
 
     GetGrapplingHookFireForce(String param0, Class[] param1, String param2) {

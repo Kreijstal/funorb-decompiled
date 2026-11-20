@@ -234,7 +234,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
     }
 
     final static void openDisplayModeDialog(int param0) {
-        GetDebrisMax.field_s = SetSpinningBladeAimarc.f((byte) 62);
+        GetDebrisMax.field_s = SetSpinningBladeAimarc.getLoginUiTheme((byte) 62);
         HighscoreTableRequest.field_h = new ModalStack();
         GetPhasedEnergyBeamFireForce.showDisplayModeDialog((byte) 117);
         if (param0 != 32) {

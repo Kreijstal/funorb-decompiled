@@ -17,11 +17,11 @@ final class PendingScoreboardRequest extends IntrusiveNode {
         try {
           RemoveEventActionFactory.field_b = true;
           CarouselConstantRequests.field_c = param2 ? true : false;
-          SetPointDefenceLaserAimarc.field_o = new AccountStatusDialog(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, OpenGlSprite.reconnecting, CarouselConstantRequests.field_c);
+          SetPointDefenceLaserAimarc.field_o = new AccountStatusDialog(GetLagStandardDeviationIn.modalStack, GetBoostersCooldown.field_r, param0, OpenGlSprite.reconnecting, CarouselConstantRequests.field_c);
           if (param1 >= -119) {
             soundEffects = (PcmSample[]) null;
           }
-          GetLagStandardDeviationIn.field_r.pushPanel(false, SetPointDefenceLaserAimarc.field_o);
+          GetLagStandardDeviationIn.modalStack.pushPanel(false, SetPointDefenceLaserAimarc.field_o);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

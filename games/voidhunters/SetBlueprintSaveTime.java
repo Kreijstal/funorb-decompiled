@@ -49,7 +49,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int[] param0, int[] param1, byte param2) {
+    final static boolean intArraysDiffer(int[] param0, int[] param1, byte param2) {
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;

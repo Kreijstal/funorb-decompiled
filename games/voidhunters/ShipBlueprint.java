@@ -147,7 +147,7 @@ final class ShipBlueprint implements DiffableState {
         try {
           var3 = (ShipBlueprint) (param1);
           var4 = -3 / ((param0 - 22) / 59);
-          stackIn_1_0 = SetBlueprintSaveTime.a(var3.description, this.description, (byte) 28);
+          stackIn_1_0 = SetBlueprintSaveTime.intArraysDiffer(var3.description, this.description, (byte) 28);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

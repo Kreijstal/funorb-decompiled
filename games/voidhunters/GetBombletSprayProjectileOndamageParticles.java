@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBombletSprayProjectileOndamageParticles extends ConsoleCommand {
-    static int field_o;
+    static int pendingTooltipX;
     static int field_q;
     static int field_p;
 
@@ -102,7 +102,7 @@ final class GetBombletSprayProjectileOndamageParticles extends ConsoleCommand {
     }
 
     static {
-        field_o = -1;
+        pendingTooltipX = -1;
         field_q = 256;
         field_p = 50;
     }

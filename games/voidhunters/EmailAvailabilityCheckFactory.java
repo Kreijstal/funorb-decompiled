@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmailAvailabilityCheckFactory {
-    static int field_b;
+    static int pendingTooltipY;
     static int field_a;
 
     final static EmailAvailabilityCheck create(String param0, byte param1) {
@@ -35,6 +35,6 @@ final class EmailAvailabilityCheckFactory {
     }
 
     static {
-        field_b = -1;
+        pendingTooltipY = -1;
     }
 }

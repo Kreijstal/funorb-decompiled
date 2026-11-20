@@ -21,7 +21,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.enableClientDataReplies((byte) 92);
         }
         String var2 = OpenGlPostEffect.readIncomingString(true);
-        MatchResultsFactory.setSessionCookie(MissionList.b((byte) -119), (byte) 56, var2);
+        MatchResultsFactory.setSessionCookie(MissionList.getApplet((byte) -119), (byte) 56, var2);
     }
 
     final int pollReconnect(int param0) {
@@ -128,7 +128,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           MissionConditionFactory.field_b.update(param1 + 3899);
         }
-        GetMassDriverFireForce.e((byte) -101);
+        GetMassDriverFireForce.pollKeyboardState((byte) -101);
         LegacyOpenGlShader.snapshotMouseState(1001);
         if (param1 != 9) {
           this.serverNumber = 76;
@@ -140,10 +140,10 @@ abstract class NetworkGameClient extends GameApplet {
         if (null != GetWaitForPlayers.field_o) {
           GetPointDefenceLaserPulsetime.field_o = GetWaitForPlayers.field_o.pollRotation(1);
         }
-        if (SocketNetworkArchiveClient.g(-126)) {
-          var3 = 1200 * SetGrapplingHookRopeBreakLength.e(204);
+        if (SocketNetworkArchiveClient.isLoggedIn(-126)) {
+          var3 = 1200 * SetGrapplingHookRopeBreakLength.getTicksPerSecond(204);
           if (this.field_s ||
-            !(var3 >= SetPedrosRepairModeSwitchtime.a(32)) &&
+            !(var3 >= SetPedrosRepairModeSwitchtime.getKeyboardIdleTicks(32)) &&
             !(NormalMapTextureOperation.d(-2) <= var3)) {
             this.field_s = false;
             FighterBayWeaponDefinition.l(-123);
@@ -274,7 +274,7 @@ abstract class NetworkGameClient extends GameApplet {
             stackIn_102_0 = !(BoosterOrderText.field_a);
             stackIn_104_1 = param1 ^ -110;
             stackIn_105_2 = !(BoosterOrderText.field_a);
-            SetSniperCannonAimspeed.a(stackIn_102_0, stackIn_104_1, stackIn_105_2, PlayerReady.field_a);
+            SetSniperCannonAimspeed.showLoginForm(stackIn_102_0, stackIn_104_1, stackIn_105_2, PlayerReady.field_a);
           }
           if (TextureCombineMappings.field_a) {
             SecondaryNodeHashTable.continueAsGuest(param1 + 17487);
@@ -590,7 +590,7 @@ abstract class NetworkGameClient extends GameApplet {
                 stackIn_31_0 = 47;
                 stackIn_32_1 = (12 == var2);
                 var3 = TrailHolder.readChatMessage(stackIn_31_0, stackIn_32_1);
-                PlayerLeave.a((byte) 108, var3);
+                PlayerLeave.receiveChatMessage((byte) 108, var3);
                 break;
               case 16:
                 SoftwareFramebuffer.a(-113);
@@ -631,7 +631,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var4 = -1 + PartitioningManagerFactory.field_a;
         byte[] var5 = new byte[var4];
         AccountNameAvailabilityReplies.field_b.readIsaacBytes(var4, 0, (byte) -50, var5);
-        ArchiveIndex.openExternalUrl(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), Cp1252Strings.decode((byte) -125, var5));
+        ArchiveIndex.openExternalUrl(var3 != 0, param0 ^ param0, MissionList.getApplet((byte) -117), Cp1252Strings.decode((byte) -125, var5));
     }
 
     private final void enableCorePacketHandlers(byte param0, boolean param1) {
@@ -682,7 +682,7 @@ abstract class NetworkGameClient extends GameApplet {
               GameInvitationText.field_a = null;
               GameJoinNotificationText.field_b = null;
             }
-            var12 = SetExplosionPushMultiplier.a(-127);
+            var12 = SetExplosionPushMultiplier.pollEmailAvailabilityResult(-127);
             if (var12 != null) {
               GetDebrisThrowable.completeEmailAvailabilityCheck(12, var12.booleanValue());
             }
@@ -724,33 +724,33 @@ abstract class NetworkGameClient extends GameApplet {
               GetSpinningBladeAimspeed.field_q = 10;
               GuestModeState.guestMode = true;
             } else {
-              SetGrapplingHookRopeChangeRate.clearSessionCookieAndReload(MissionList.b((byte) -84), -18209);
+              SetGrapplingHookRopeChangeRate.clearSessionCookieAndReload(MissionList.getApplet((byte) -84), -18209);
             }
           }
           if (5 == var4) {
-            VoidHunters.quitToWebsite(MissionList.b((byte) -91), 4);
+            VoidHunters.quitToWebsite(MissionList.getApplet((byte) -91), 4);
           }
           if (var4 == 6 &&
             CommandConsole.field_r) {
             GetSpinningBladeAimspeed.field_q = 10;
           }
           if (var4 == 7) {
-            SetPedrosRepairModeSwitchtime.a(32, MissionList.b((byte) -86));
+            SetPedrosRepairModeSwitchtime.openServerList(32, MissionList.getApplet((byte) -86));
           }
           if (var4 == 8) {
-            SetGrapplingHookRopeChangeRate.clearSessionCookieAndReload(MissionList.b((byte) -90), -18209);
+            SetGrapplingHookRopeChangeRate.clearSessionCookieAndReload(MissionList.getApplet((byte) -90), -18209);
           }
           if (var4 == 9) {
-            SetNebulaFadesOutWhenClose.a(17, MissionList.b((byte) -127));
+            SetNebulaFadesOutWhenClose.a(17, MissionList.getApplet((byte) -127));
           }
           if (var4 == 10) {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 17);
           }
           if (11 == var4) {
-            AppletReload.reloadGamePage(MissionList.b((byte) -126), 5836);
+            AppletReload.reloadGamePage(MissionList.getApplet((byte) -126), 5836);
           }
           if (var4 == 12) {
-            GameReleaseStatistics.openAppletRelativeUrl((byte) 86, MissionList.b((byte) -126), GetToggledScoreboard.a(27158));
+            GameReleaseStatistics.openAppletRelativeUrl((byte) 86, MissionList.getApplet((byte) -126), GetToggledScoreboard.a(27158));
           }
           if (var4 == 13) {
             try {

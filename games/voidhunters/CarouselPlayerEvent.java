@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
-    int field_k;
+    int playerId;
     static SpecialOrderDefinition[] specialOrderDefinitions;
     static String field_l;
     static int field_j;
@@ -14,13 +14,13 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
           if (param1 >= -109) {
             field_m = -29;
           }
-          this.a((byte) -121, param0);
+          this.writePlayerId((byte) -121, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(IsaacPacketBuffer param0, int param1) {
+    private final void readPlayerId(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
         IsaacPacketBuffer var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -35,7 +35,7 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
           if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
-          this.field_k = param0.readBits(param1 + 0, EnvironmentReflectionGpuMaterialEffect.field_h);
+          this.playerId = param0.readBits(param1 + 0, EnvironmentReflectionGpuMaterialEffect.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,13 +61,13 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
           var5 = (CarouselPlayerEvent) (param1);
           var6 = var5;
           super.copyTo((byte) 126, param1);
-          var6.field_k = this.field_k;
+          var6.playerId = this.playerId;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(byte param0, IsaacPacketBuffer param1) {
+    private final void writePlayerId(byte param0, IsaacPacketBuffer param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -75,12 +75,12 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -116) {
-            CarouselPlayerEvent.a(-90, -61, 89);
+            CarouselPlayerEvent.matchesVertexDataMask(-90, -61, 89);
           }
           if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
-          param1.writeBits(-632, this.field_k, EnvironmentReflectionGpuMaterialEffect.field_h);
+          param1.writeBits(-632, this.playerId, EnvironmentReflectionGpuMaterialEffect.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,8 +114,8 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
           if (obfuscationGuard > -19) {
             return;
           }
-          if (this.field_k != var3.field_k) {
-            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.field_k + ", now=" + this.field_k);
+          if (this.playerId != var3.playerId) {
+            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.playerId + ", now=" + this.playerId);
             var4 = 1;
           }
           if (var4 == 0) {
@@ -149,7 +149,7 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
         try {
           var3_int = -110 / ((param0 - 22) / 59);
           var4 = (CarouselPlayerEvent) (param1);
-          stackIn_5_0 = (super.differsFrom((byte) -50, param1)) || (this.field_k != var4.field_k);
+          stackIn_5_0 = (super.differsFrom((byte) -50, param1)) || (this.playerId != var4.playerId);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,13 +172,13 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
             this.reportDifferences((SerializableGameState) null, -35);
           }
           super.readState(param0, param1);
-          this.a(param0, 0);
+          this.readPlayerId(param0, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean matchesVertexDataMask(int param0, int param1, int param2) {
         if (param0 >= 1) {
           return 0 != (param1 & 34) ? true : false;
         }

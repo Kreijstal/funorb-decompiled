@@ -4,7 +4,7 @@
 final class SetMutatorVotes extends ConsoleCommand {
     static int[] field_o;
 
-    final static void f(int param0) {
+    final static void drawGameMenu(int param0) {
         int var3 = 0;
         String stackIn_12_0 = null;
         int stackIn_12_1 = 0;
@@ -87,7 +87,7 @@ final class SetMutatorVotes extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(58, 62, arguments[0].intValue(18));
           if (obfuscationGuard >= -119) {
-            SetMutatorVotes.e(-54);
+            SetMutatorVotes.initializeLoginUi(-54);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -105,16 +105,16 @@ final class SetMutatorVotes extends ConsoleCommand {
         }
     }
 
-    final static void e(int param0) {
+    final static void initializeLoginUi(int param0) {
         if (param0 < 112) {
           return;
         }
-        GetDebrisMax.field_s = SetSpinningBladeAimarc.f((byte) 62);
-        GetLagStandardDeviationIn.field_r = new ModalStack();
-        WaterTextures.a(true, true, false);
+        GetDebrisMax.field_s = SetSpinningBladeAimarc.getLoginUiTheme((byte) 62);
+        GetLagStandardDeviationIn.modalStack = new ModalStack();
+        WaterTextures.showLoginForm(true, true, false);
     }
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         int var3;
         var2 = -35 % ((-9 - param1) / 32);

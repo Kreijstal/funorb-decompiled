@@ -5,7 +5,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
     static int hslPaletteUsers;
     static int[] field_o;
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void drawSortedHalfAlphaRgbTriangle(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -133,7 +133,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         SoftwareFlatTriangleRasterizer.clipWidth > var37) {
-                        SetHealthBarWidth.a(var25, 0, var21, var37 + var36Lifetime2, var38, 0, var29, param4, 0, true);
+                        SetHealthBarWidth.drawHalfAlphaRgbScanline(var25, 0, var21, var37 + var36Lifetime2, var38, 0, var29, param4, 0, true);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -143,9 +143,9 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
                         var38 = -var37 + SoftwareFlatTriangleRasterizer.clipWidth - 1;
                       }
                       if (var37 < 0) {
-                        SetHealthBarWidth.a(-(var37 * var40) + var25, var40, var21 - var37 * var39, var36Lifetime2, var37 + var38, var41, -(var41 * var37) + var29, param4, var39, true);
+                        SetHealthBarWidth.drawHalfAlphaRgbScanline(-(var37 * var40) + var25, var40, var21 - var37 * var39, var36Lifetime2, var37 + var38, var41, -(var41 * var37) + var29, param4, var39, true);
                       } else {
-                        SetHealthBarWidth.a(var25, var40, var21, var37 + var36Lifetime2, var38, var41, var29, param4, var39, true);
+                        SetHealthBarWidth.drawHalfAlphaRgbScanline(var25, var40, var21, var37 + var36Lifetime2, var38, var41, var29, param4, var39, true);
                       }
                     }
                   }
@@ -294,14 +294,14 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
                     var37Lifetime1 = -var36Lifetime1 + SoftwareFlatTriangleRasterizer.clipWidth - 1;
                   }
                   if (var36Lifetime1 < 0) {
-                    SetHealthBarWidth.a(var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var40Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, param4, var38Lifetime1, true);
+                    SetHealthBarWidth.drawHalfAlphaRgbScanline(var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var40Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, param4, var38Lifetime1, true);
                   } else {
-                    SetHealthBarWidth.a(var25, var39Lifetime1, var21, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var40Lifetime1, var29, param4, var38Lifetime1, true);
+                    SetHealthBarWidth.drawHalfAlphaRgbScanline(var25, var39Lifetime1, var21, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var40Lifetime1, var29, param4, var38Lifetime1, true);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < SoftwareFlatTriangleRasterizer.clipWidth) {
-                    SetHealthBarWidth.a(var25, 0, var21, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, var29, param4, 0, true);
+                    SetHealthBarWidth.drawHalfAlphaRgbScanline(var25, 0, var21, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, var29, param4, 0, true);
                   }
                 }
               }
@@ -370,7 +370,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 23518) {
-          SetPhasedEnergyBeamRandomness.a(-25, -40, 101, -77, (int[]) null, -65, 79, 17, 32, 59, 77, -19, 88, -80, -117, 21, 79);
+          SetPhasedEnergyBeamRandomness.drawSortedHalfAlphaRgbTriangle(-25, -40, 101, -77, (int[]) null, -65, 79, 17, 32, 59, 77, -19, 88, -80, -117, 21, 79);
         }
         field_o = null;
     }

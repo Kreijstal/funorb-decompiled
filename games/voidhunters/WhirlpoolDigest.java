@@ -19,7 +19,7 @@ final class WhirlpoolDigest {
         if (param0 != 18444) {
           return;
         }
-        if (LegacyOpenGlTurbulenceEffect.field_d) {
+        if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
           GetUseExtraBackground.closeQuickChatMenu(-1);
         }
     }

@@ -158,12 +158,12 @@ final class WaterTextures {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void showLoginForm(boolean param0, boolean param1, boolean param2) {
         if (param2) {
           return;
         }
         String var4 = (String) null;
-        SetSniperCannonAimspeed.a(param0, -90, param1, (String) null);
+        SetSniperCannonAimspeed.showLoginForm(param0, -90, param1, (String) null);
     }
 
     static {

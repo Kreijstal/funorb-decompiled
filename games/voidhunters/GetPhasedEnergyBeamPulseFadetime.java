@@ -180,27 +180,27 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               SetClientSideDragging.field_p = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -94);
               TextureCombineMappings.loginStage = GetOndamageParticleSpeed.loggedIn;
               if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 124) == GetSalvoDamageMultiplier.emailCredentialType) {
-                SetFighterBayAimspeed.field_o.writeCookie(MissionList.b((byte) -106), param3 ^ 13);
+                SetFighterBayAimspeed.field_o.writeCookie(MissionList.getApplet((byte) -106), param3 ^ 13);
               } else {
                 if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 112) == GetTorpedoReload.numericCredentialType) {
-                  SetShowTutorial.field_p.writeCookie(MissionList.b((byte) -103), 0);
+                  SetShowTutorial.field_p.writeCookie(MissionList.getApplet((byte) -103), 0);
                 }
               }
               SetShowTutorial.field_o = false;
               if (var12 != null) {
-                SetNebulaProximityFadeDownshift.a(MissionList.b((byte) -94), var12, -1);
+                SetNebulaProximityFadeDownshift.a(MissionList.getApplet((byte) -94), var12, -1);
               }
               if (GetDebrisCarryOver.field_o <= 0 &&
                 !GetFightersPerPlayerMaximum.field_r) {
                 try {
-                  AppletJavaScriptBridge.call(MissionList.b((byte) -87), "unzap", param3 ^ 12337);
+                  AppletJavaScriptBridge.call(MissionList.getApplet((byte) -87), "unzap", param3 ^ 12337);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  AppletJavaScriptBridge.call(new Object[]{SecondaryNodeQueue.decodeBase37Name(SetTorpedoAimarc.field_p, -127)}, MissionList.b((byte) -92), "zap", (byte) 108);
+                  AppletJavaScriptBridge.call(new Object[]{SecondaryNodeQueue.decodeBase37Name(SetTorpedoAimarc.field_p, -127)}, MissionList.getApplet((byte) -92), "zap", (byte) 108);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

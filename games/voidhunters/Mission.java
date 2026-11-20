@@ -38,10 +38,10 @@ final class Mission implements DiffableState {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isPlayerGameDataReady(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -1) {
-          Mission.b(36);
+          Mission.isPlayerGameDataReady(36);
         }
         stackIn_7_0 = (TextLayout.playerGameDataLoaded) || (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 103));
         return stackIn_7_0;
@@ -91,9 +91,9 @@ final class Mission implements DiffableState {
         }
     }
 
-    final int a(int param0) {
+    final int getObjectiveType(int param0) {
         if (param0 != 0) {
-          Mission.b(29);
+          Mission.isPlayerGameDataReady(29);
         }
         return this.savedState.getObjectiveType(false);
     }
@@ -215,7 +215,7 @@ final class Mission implements DiffableState {
         }
     }
 
-    final void a(boolean param0, GameSnapshot param1, int param2) {
+    final void applyToSnapshot(boolean param0, GameSnapshot param1, int param2) {
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;

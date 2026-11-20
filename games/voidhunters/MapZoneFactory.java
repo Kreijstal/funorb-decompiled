@@ -10,15 +10,15 @@ final class MapZoneFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new MapZone[param1]);
     }
 
-    final static boolean a(int param0) {
+    final static boolean isQuickChatOverlayOpen(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -26243) {
           return false;
         }
-        if (null != RoundResultFactory.field_a) {
+        if (null != RoundResultFactory.quickChatHelpWindow) {
           stackIn_7_0 = true;
         } else {
-          if (LegacyOpenGlTurbulenceEffect.field_d) {
+          if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
             return true;
           }
           stackIn_7_0 = false;

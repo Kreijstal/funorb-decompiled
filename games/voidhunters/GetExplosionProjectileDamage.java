@@ -252,7 +252,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             SetBombletSprayAimarc.field_o = new Widget(0L, param5);
             SetBombletSprayAimarc.field_o.text = SetShieldsDirectionalArcParticleSpeedDownshift.field_r;
             SetToggledScoreboard.field_o.addChild(-561, SetBombletSprayAimarc.field_o);
-            stackIn_28_0 = SocketNetworkArchiveClient.g(-126) ? 1 : 0;
+            stackIn_28_0 = SocketNetworkArchiveClient.isLoggedIn(-126) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
             !GetBloomThresholdPercentage.field_p) {

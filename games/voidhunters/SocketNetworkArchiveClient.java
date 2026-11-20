@@ -273,7 +273,7 @@ final class SocketNetworkArchiveClient extends NetworkArchiveClient {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
-          SocketNetworkArchiveClient.g(-53);
+          SocketNetworkArchiveClient.isLoggedIn(-53);
         }
     }
 
@@ -328,16 +328,16 @@ final class SocketNetworkArchiveClient extends NetworkArchiveClient {
         this.responseXorKey = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    final static boolean g(int param0) {
+    final static boolean isLoggedIn(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 > -113) {
-          SocketNetworkArchiveClient.a(-4, (byte) 35, 31);
+          SocketNetworkArchiveClient.matchesGpuVertexDataMask(-4, (byte) 35, 31);
         }
         stackIn_6_0 = (null != SetShipSpawnInvulnerabilityTime.field_o) && (GetOndamageParticleSpeed.loggedIn == TextureCombineMappings.loginStage);
         return stackIn_6_0;
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean matchesGpuVertexDataMask(int param0, byte param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param1 < 90) {
           field_o = (TextureFormat) null;

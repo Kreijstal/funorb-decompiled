@@ -25,7 +25,7 @@ final class WorldPoint {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = SetGrapplingHookRopeBreakLength.a(param3, true, param2, param0);
+          var6 = SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, param2, param0);
           var4 = var6;
           var6[1].paddedWidth = var6[1].width;
           var5 = -55 % ((13 - param1) / 38);

@@ -33,7 +33,7 @@ final class SetVariableActionFactory implements GameStateFactory {
 
     final static void attachQuickChatMenu(QuickChatMenuWidget param0, int param1) {
         try {
-          GetGrapplingHookFireForce.field_o.addChild(-561, param0);
+          GetGrapplingHookFireForce.quickChatMenuRoot.addChild(-561, param0);
           if (param1 != 6) {
             field_e = (String[]) null;
           }

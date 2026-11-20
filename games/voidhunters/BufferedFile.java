@@ -257,10 +257,10 @@ final class BufferedFile {
           return;
         }
         if (param1 % 10L == 0L) {
-          PlayerLeave.a((byte) 90, -1L + param1);
-          PlayerLeave.a((byte) 90, 1L);
+          PlayerLeave.sleepMillis((byte) 90, -1L + param1);
+          PlayerLeave.sleepMillis((byte) 90, 1L);
         } else {
-          PlayerLeave.a((byte) 90, param1);
+          PlayerLeave.sleepMillis((byte) 90, param1);
         }
     }
 

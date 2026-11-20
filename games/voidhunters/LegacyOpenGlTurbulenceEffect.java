@@ -7,7 +7,7 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
     private float[] noiseParameters;
     static Widget field_h;
     private int lastUpdateTime;
-    static boolean field_d;
+    static boolean quickChatMenuOpen;
     private LegacyOpenGlWaterTextures waterTextures;
     static FadingMidiPcmStream field_g;
     private OpenGlDisplayLists displayLists;
@@ -310,7 +310,7 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
 
     final void applyRenderState(boolean param0, boolean param1) {
         if (!param0) {
-          field_d = true;
+          quickChatMenuOpen = true;
         }
     }
 
@@ -341,6 +341,6 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
     }
 
     static {
-        field_d = false;
+        quickChatMenuOpen = false;
     }
 }

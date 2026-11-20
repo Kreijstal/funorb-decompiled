@@ -33,7 +33,7 @@ final class GetMassDriverFireForce extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void pollKeyboardState(byte param0) {
         int var2 = 0;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
@@ -46,7 +46,7 @@ final class GetMassDriverFireForce extends ConsoleCommand {
             if (param0 != -101) {
               return;
             }
-            GetUseCircleOutline.field_q = GetUseCircleOutline.field_q + 1;
+            GetUseCircleOutline.keyboardIdleTicks = GetUseCircleOutline.keyboardIdleTicks + 1;
             OpenGlVertexDeclaration.field_c = MessageLog.field_a;
             if (SetSniperCannonAimarc.field_p < 0) {
               for (var2 = 0; 112 > var2; var2++) {

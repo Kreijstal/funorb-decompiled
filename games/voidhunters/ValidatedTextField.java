@@ -29,11 +29,11 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
           return null;
         }
         if (param0 == 125) {
-          SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.pointerOffsetX), (byte) -114, OpenGlFaceAttachment.field_b);
+          SetExplosionPushMultiplier.setTooltipPosition(PlayerGameData.field_b + (this.width - this.pointerOffsetX), (byte) -114, OpenGlFaceAttachment.field_b);
           return this.tooltip;
         }
         field_M = (String[]) null;
-        SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.pointerOffsetX), (byte) -114, OpenGlFaceAttachment.field_b);
+        SetExplosionPushMultiplier.setTooltipPosition(PlayerGameData.field_b + (this.width - this.pointerOffsetX), (byte) -114, OpenGlFaceAttachment.field_b);
         return this.tooltip;
     }
 

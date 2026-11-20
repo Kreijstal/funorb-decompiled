@@ -3,7 +3,7 @@
  */
 final class ServerInfo implements DiffableState {
     static int[] field_d;
-    GameReleaseStatistics field_e;
+    GameReleaseStatistics releaseStatistics;
     boolean copyToClipboardHidden;
     int[] componentoptionStates;
     private int[] voteoptionStates;
@@ -203,12 +203,12 @@ final class ServerInfo implements DiffableState {
     }
 
     public final String toString() {
-        return "Voteoption states=" + SetFightersPerPlayerMaximum.a(this.voteoptionStates, false) + "\nComponentoption states=" + SetFightersPerPlayerMaximum.a(this.componentoptionStates, false) + "\ncopy_to_clipboard_hidden=" + this.copyToClipboardHidden + "\nServerside: " + this.field_e;
+        return "Voteoption states=" + SetFightersPerPlayerMaximum.a(this.voteoptionStates, false) + "\nComponentoption states=" + SetFightersPerPlayerMaximum.a(this.componentoptionStates, false) + "\ncopy_to_clipboard_hidden=" + this.copyToClipboardHidden + "\nServerside: " + this.releaseStatistics;
     }
 
     final boolean isComponentOptionComingSoon(int param0, int param1) {
         if (param0 != -22549) {
-          this.field_e = (GameReleaseStatistics) null;
+          this.releaseStatistics = (GameReleaseStatistics) null;
         }
         int var3 = this.componentoptionStates[param1];
         return this.isComingSoonOptionState(var3, param0 + 22645);
@@ -416,7 +416,7 @@ final class ServerInfo implements DiffableState {
           ChatMessage.writePackedIntArray(stackIn_5_0, stackIn_6_1, 60, param0, this.componentoptionStates);
           DateOfBirthInput.writeBoolean(param0, -110, this.copyToClipboardHidden);
           if (param1 >= -109) {
-            this.field_e = (GameReleaseStatistics) null;
+            this.releaseStatistics = (GameReleaseStatistics) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -547,8 +547,8 @@ final class ServerInfo implements DiffableState {
           boolean decompiledFrameRemainder0 = true;
           var4 = 55 / ((param0 - 22) / 59);
           var3 = (ServerInfo) (param1);
-          if (!SetBlueprintSaveTime.a(var3.voteoptionStates, this.voteoptionStates, (byte) 28) &&
-            !SetBlueprintSaveTime.a(var3.componentoptionStates, this.componentoptionStates, (byte) 28)) {
+          if (!SetBlueprintSaveTime.intArraysDiffer(var3.voteoptionStates, this.voteoptionStates, (byte) 28) &&
+            !SetBlueprintSaveTime.intArraysDiffer(var3.componentoptionStates, this.componentoptionStates, (byte) 28)) {
             stackIn_5_0 = (this.copyToClipboardHidden) ? 0 : 1;
             if (stackIn_5_0 != (var3.copyToClipboardHidden ? 1 : 0)) {
               stackIn_8_0 = false;

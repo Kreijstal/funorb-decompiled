@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1572/1572 classes and 7600/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 0 opaque classes and 615 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1572/1572 classes and 7660/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 0 opaque classes and 555 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -140,6 +140,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 Objective-condition indicators, native-library preparation, archive connection errors, fullscreen requests, toolkit sprites and dotted focus borders have named entrypoints. Fog-of-war sprite invalidation and archive-handshake state references identify their existing roles. Original marker choices, cache writes, retry/port logic, clipping quirks, fullscreen gates and guard branches remain unchanged.
 
 Native heap callbacks identify their observed initialization, toolkit-release and frame-update call sites; their native implementations are not inferred. Carousel snapshots expose their absolute tick header, serialized bytes and lazy decoded state. Secondary sprite texture combination, framebuffer copying, modal pointer coordinates, progress-dialog status, common archives and integer math have named helpers. Original GL constants, cache behavior, arithmetic, packet reads and guard branches are retained.
+
+Mission lookup, saved-world application and player-data version migration have named entrypoints, along with player-event ID serialization and escape-pod drawing/timer hooks. Login panels, quick-chat overlays, incoming chat, ignore requests, keyboard polling and tooltip coordinates expose their existing contracts. Half-alpha RGB triangles and scanlines retain the original interpolation, vertex ordering and clipping. The Direct3D texture-matrix writer retains its specialized layout.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

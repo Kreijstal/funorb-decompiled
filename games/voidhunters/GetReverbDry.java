@@ -40,7 +40,7 @@ final class GetReverbDry extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean e(byte param0) {
+    final static boolean isSocialDialogOpen(byte param0) {
         if (param0 != 105) {
           GetReverbDry.resetReflectionCheckQueue(22);
           if (null != GetLagStandardDeviationOut.field_o) {
@@ -52,7 +52,7 @@ final class GetReverbDry extends ConsoleCommand {
           if (null != Asteroid.activeReportDialog) {
             return true;
           }
-          if (!MapZoneFactory.a(-26243)) {
+          if (!MapZoneFactory.isQuickChatOverlayOpen(-26243)) {
             return false;
           }
           return true;
@@ -66,7 +66,7 @@ final class GetReverbDry extends ConsoleCommand {
         if (null != Asteroid.activeReportDialog) {
           return true;
         }
-        if (!MapZoneFactory.a(-26243)) {
+        if (!MapZoneFactory.isQuickChatOverlayOpen(-26243)) {
           return false;
         }
         return true;

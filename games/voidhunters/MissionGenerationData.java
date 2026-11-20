@@ -107,7 +107,7 @@ final class MissionGenerationData implements DiffableState {
         try {
           var4 = -60 % ((param0 - 22) / 59);
           var3 = (MissionGenerationData) (param1);
-          stackIn_7_0 = (this.votedObjective != var3.votedObjective) || (this.missionGenerationSeed != var3.missionGenerationSeed) || (SetBlueprintSaveTime.a(var3.optionTotals, this.optionTotals, (byte) 28)) || (var3.roundsLeft != this.roundsLeft);
+          stackIn_7_0 = (this.votedObjective != var3.votedObjective) || (this.missionGenerationSeed != var3.missionGenerationSeed) || (SetBlueprintSaveTime.intArraysDiffer(var3.optionTotals, this.optionTotals, (byte) 28)) || (var3.roundsLeft != this.roundsLeft);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class MissionGenerationData implements DiffableState {
         if (param8 >= -118) {
           return;
         }
-        param4 = GetPedrosRepairModeSwitchtime.a(33, param11, param1, param12, param3, param0, param4);
+        param4 = GetPedrosRepairModeSwitchtime.processSocialDialogInput(33, param11, param1, param12, param3, param0, param4);
         GetUseRectOutline.a(param4, -1, param2, param10, param7, param11, param5, param6, param13, param9);
         SocialListUpdater.updateSocialLists(0, param5, param7);
         ChatPanelUpdater.updateChatPanel(param4, param5, param12, 97);

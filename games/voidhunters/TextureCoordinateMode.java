@@ -12,7 +12,7 @@ final class TextureCoordinateMode {
         }
     }
 
-    final static Sprite[] a(boolean param0) {
+    final static Sprite[] buildDecodedSprites(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -31,7 +31,7 @@ final class TextureCoordinateMode {
         }
         MatchResults.clearDecodedSpriteData(84);
         if (param0) {
-          TextureCoordinateMode.a(false);
+          TextureCoordinateMode.buildDecodedSprites(false);
         }
         return var1;
     }

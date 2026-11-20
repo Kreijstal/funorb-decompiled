@@ -12,7 +12,7 @@ final class StringBuilderOutputStream extends OutputStream {
     }
 
     final static void layoutQuickChatMenuArea(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        GetGrapplingHookFireForce.field_o.setBounds(param5, -6, param0, param6, param1);
+        GetGrapplingHookFireForce.quickChatMenuRoot.setBounds(param5, -6, param0, param6, param1);
         if (null != MidiNote.field_m) {
           MidiNote.field_m.layoutMenu(12, param1, -GetLaserAimspeed.field_p + param2, param2, param1, param4);
           if (param3) {

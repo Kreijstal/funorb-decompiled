@@ -16,9 +16,9 @@ final class ThrusterBehaviourFactory implements GameStateFactory {
         }
         if (param0 != -28941) {
           field_a = (String) null;
-          return (java.awt.Container) ((Object) MissionList.b((byte) -122));
+          return (java.awt.Container) ((Object) MissionList.getApplet((byte) -122));
         }
-        return (java.awt.Container) ((Object) MissionList.b((byte) -122));
+        return (java.awt.Container) ((Object) MissionList.getApplet((byte) -122));
     }
 
     final static boolean a(int param0) {

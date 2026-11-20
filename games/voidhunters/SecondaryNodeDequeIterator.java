@@ -19,7 +19,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           SecondaryNodeDequeIterator.a(121);
           SmoothedNanoTickClock.clearKeyboardHandlerReference(-87);
           CarouselPlayerEventFactory.b(14194);
-          GetPedrosRepairModeSwitchtime.a(16928);
+          GetPedrosRepairModeSwitchtime.closeArchiveResources(16928);
           if (GetRepairModeActiveTime.e(215)) {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
             TileTextureOperation.flushSocketOutput(0, 127);
@@ -31,7 +31,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         }
         SmoothedNanoTickClock.clearKeyboardHandlerReference(-87);
         CarouselPlayerEventFactory.b(14194);
-        GetPedrosRepairModeSwitchtime.a(16928);
+        GetPedrosRepairModeSwitchtime.closeArchiveResources(16928);
         if (!GetRepairModeActiveTime.e(215)) {
           FighterBayWeaponDefinition.l(-125);
           return;

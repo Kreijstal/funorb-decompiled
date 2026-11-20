@@ -8,7 +8,7 @@ final class SetSpinningBladeAimarc extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void e(byte param0) {
+    final static void restoreMouseCursor(byte param0) {
         java.awt.Canvas var1 = null;
         if (param0 == -128) {
           if (ShipComponentFactory.field_a) {
@@ -51,36 +51,36 @@ final class SetSpinningBladeAimarc extends ConsoleCommand {
         }
     }
 
-    final static UiTheme f(byte param0) {
+    final static UiTheme getLoginUiTheme(byte param0) {
         if (param0 == 62) {
-          if (GetMissionResnetResourceTickTime.field_p == null) {
-            GetMissionResnetResourceTickTime.field_p = new UiTheme();
-            GetMissionResnetResourceTickTime.field_p.initializeDefaultStyles(SetShipToShipRamDamage.field_o, -24763);
-            GetMissionResnetResourceTickTime.field_p.tooltipPaddingRight = 5;
-            GetMissionResnetResourceTickTime.field_p.tooltipBackgroundColor = 2763306;
-            GetMissionResnetResourceTickTime.field_p.font = SetTorpedoProjectileLife.field_o;
-            GetMissionResnetResourceTickTime.field_p.tooltipPaddingBottom = 4;
-            GetMissionResnetResourceTickTime.field_p.tooltipPaddingLeft = 6;
-            GetMissionResnetResourceTickTime.field_p.tooltipLineSpacing = 14;
-            GetMissionResnetResourceTickTime.field_p.tooltipPaddingTop = 0;
-            GetMissionResnetResourceTickTime.field_p.tooltipBorderColor = 7697781;
+          if (GetMissionResnetResourceTickTime.loginUiTheme == null) {
+            GetMissionResnetResourceTickTime.loginUiTheme = new UiTheme();
+            GetMissionResnetResourceTickTime.loginUiTheme.initializeDefaultStyles(SetShipToShipRamDamage.field_o, -24763);
+            GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingRight = 5;
+            GetMissionResnetResourceTickTime.loginUiTheme.tooltipBackgroundColor = 2763306;
+            GetMissionResnetResourceTickTime.loginUiTheme.font = SetTorpedoProjectileLife.field_o;
+            GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingBottom = 4;
+            GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingLeft = 6;
+            GetMissionResnetResourceTickTime.loginUiTheme.tooltipLineSpacing = 14;
+            GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingTop = 0;
+            GetMissionResnetResourceTickTime.loginUiTheme.tooltipBorderColor = 7697781;
           }
-          return GetMissionResnetResourceTickTime.field_p;
+          return GetMissionResnetResourceTickTime.loginUiTheme;
         }
-        SetSpinningBladeAimarc.f((byte) -106);
-        if (GetMissionResnetResourceTickTime.field_p == null) {
-          GetMissionResnetResourceTickTime.field_p = new UiTheme();
-          GetMissionResnetResourceTickTime.field_p.initializeDefaultStyles(SetShipToShipRamDamage.field_o, -24763);
-          GetMissionResnetResourceTickTime.field_p.tooltipPaddingRight = 5;
-          GetMissionResnetResourceTickTime.field_p.tooltipBackgroundColor = 2763306;
-          GetMissionResnetResourceTickTime.field_p.font = SetTorpedoProjectileLife.field_o;
-          GetMissionResnetResourceTickTime.field_p.tooltipPaddingBottom = 4;
-          GetMissionResnetResourceTickTime.field_p.tooltipPaddingLeft = 6;
-          GetMissionResnetResourceTickTime.field_p.tooltipLineSpacing = 14;
-          GetMissionResnetResourceTickTime.field_p.tooltipPaddingTop = 0;
-          GetMissionResnetResourceTickTime.field_p.tooltipBorderColor = 7697781;
+        SetSpinningBladeAimarc.getLoginUiTheme((byte) -106);
+        if (GetMissionResnetResourceTickTime.loginUiTheme == null) {
+          GetMissionResnetResourceTickTime.loginUiTheme = new UiTheme();
+          GetMissionResnetResourceTickTime.loginUiTheme.initializeDefaultStyles(SetShipToShipRamDamage.field_o, -24763);
+          GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingRight = 5;
+          GetMissionResnetResourceTickTime.loginUiTheme.tooltipBackgroundColor = 2763306;
+          GetMissionResnetResourceTickTime.loginUiTheme.font = SetTorpedoProjectileLife.field_o;
+          GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingBottom = 4;
+          GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingLeft = 6;
+          GetMissionResnetResourceTickTime.loginUiTheme.tooltipLineSpacing = 14;
+          GetMissionResnetResourceTickTime.loginUiTheme.tooltipPaddingTop = 0;
+          GetMissionResnetResourceTickTime.loginUiTheme.tooltipBorderColor = 7697781;
         }
-        return GetMissionResnetResourceTickTime.field_p;
+        return GetMissionResnetResourceTickTime.loginUiTheme;
     }
 
     static {

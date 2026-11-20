@@ -7,11 +7,11 @@ final class SetHealthBarWidth extends ConsoleCommand {
           return (param2 & 2048) != 0 ? true : false;
         }
         int[] var4 = (int[]) null;
-        SetHealthBarWidth.a(-42, -9, 37, 119, 111, 16, 52, (int[]) null, 30, true);
+        SetHealthBarWidth.drawHalfAlphaRgbScanline(-42, -9, 37, 119, 111, 16, 52, (int[]) null, 30, true);
         return (param2 & 2048) != 0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, boolean param9) {
+    final static void drawHalfAlphaRgbScanline(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, boolean param9) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;

@@ -4,14 +4,14 @@
 final class GetUseCircleOutline extends ConsoleCommand {
     static GameStateFactory field_o;
     static int field_p;
-    static volatile int field_q;
+    static volatile int keyboardIdleTicks;
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         try {
           GetBombletSprayPushMultiplier.emailAvailabilityCheck = EmailAvailabilityCheckFactory.create("", (byte) 110);
           GetBombletSprayPushMultiplier.emailAvailabilityCheck.complete(7861, param4);
           SetOndamageParticleFadestart.a(param3, param2, param1, 0);
-          SetMutatorVotes.e(121);
+          SetMutatorVotes.initializeLoginUi(121);
           SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.idleAccountRequest;
           SetShipTeamAction.field_b = ToolkitRasterStateStack.idleAccountRequest;
         } catch (RuntimeException runtimeException) {
@@ -63,6 +63,6 @@ final class GetUseCircleOutline extends ConsoleCommand {
     static {
         field_o = (GameStateFactory) ((Object) new TeamNodeConditionFactory());
         field_p = 27;
-        field_q = 0;
+        keyboardIdleTicks = 0;
     }
 }

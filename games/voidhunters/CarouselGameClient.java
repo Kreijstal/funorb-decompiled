@@ -489,7 +489,7 @@ final class CarouselGameClient {
               if (!param5.addEvent(1, var17_ref)) {
                 var9_int = -1;
                 if (var17_ref instanceof CarouselPlayerEvent) {
-                  var9_int = ((CarouselPlayerEvent) (var17_ref)).field_k;
+                  var9_int = ((CarouselPlayerEvent) (var17_ref)).playerId;
                 }
                 var18 = param5.getPlayerNames(param3 + 101).getPlayerName(param3 ^ 6, var9_int);
                 SetDebrisGrabbingRange.a((byte) -92, "I'm " + IntIndexTable.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
@@ -771,7 +771,7 @@ final class CarouselGameClient {
         int var5 = 0;
         var5 = VoidHunters.field_G;
         try {
-          if (!SocketNetworkArchiveClient.g(-121)) {
+          if (!SocketNetworkArchiveClient.isLoggedIn(-121)) {
             if (this.ready) {
               GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
             }

@@ -126,8 +126,8 @@ final class LegacyOpenGlEnvironmentReflectionEffect extends LegacyOpenGlMaterial
 
     final static void updateProgressDialog(boolean param0, byte param1, String param2, float param3) {
         if (null == MatchingFieldValidator.field_i) {
-          MatchingFieldValidator.field_i = new ProgressDialog(GetLagStandardDeviationIn.field_r, EnvironmentReflectionGpuMaterialEffect.field_j);
-          GetLagStandardDeviationIn.field_r.pushPanel(false, MatchingFieldValidator.field_i);
+          MatchingFieldValidator.field_i = new ProgressDialog(GetLagStandardDeviationIn.modalStack, EnvironmentReflectionGpuMaterialEffect.field_j);
+          GetLagStandardDeviationIn.modalStack.pushPanel(false, MatchingFieldValidator.field_i);
         }
         MatchingFieldValidator.field_i.updateProgress(param0, param2, param3, (byte) -89);
         SoftwareRasterizer2D.clear();
@@ -135,7 +135,7 @@ final class LegacyOpenGlEnvironmentReflectionEffect extends LegacyOpenGlMaterial
           return;
         }
         try {
-          GetPointDefenceLaserProjectileDamage.a(true, -114);
+          GetPointDefenceLaserProjectileDamage.drawModalPanels(true, -114);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uob.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

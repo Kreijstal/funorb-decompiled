@@ -26,7 +26,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var2 = null;
         try {
           if (null != GetMomentOfInertiaPerpointCalcDownshift.field_q) {
-            GetUseCircleOutline.field_q = 0;
+            GetUseCircleOutline.keyboardIdleTicks = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               GetBombletSprayRandomness.field_o.length > var2_int) {
@@ -92,7 +92,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3Lifetime1;
         try {
           if (null != GetMomentOfInertiaPerpointCalcDownshift.field_q) {
-            GetUseCircleOutline.field_q = 0;
+            GetUseCircleOutline.keyboardIdleTicks = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               GetBombletSprayRandomness.field_o.length > var2_int) {

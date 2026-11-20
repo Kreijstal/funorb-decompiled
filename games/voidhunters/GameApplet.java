@@ -360,7 +360,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.errorShown = true;
             System.out.println("error_game_" + param0);
             try {
-              AppletJavaScriptBridge.call(MissionList.b((byte) -115), "loggedout", param1 ^ 12348);
+              AppletJavaScriptBridge.call(MissionList.getApplet((byte) -115), "loggedout", param1 ^ 12348);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -507,7 +507,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               GetDebrisSurvives.field_p = param4;
               GetPhasedEnergyBeamFireForce.field_p = param4;
               TextureFilterMode.field_a = this;
-              SetMachineGunAimspeed.field_p = MissionList.b((byte) -117);
+              SetMachineGunAimspeed.field_p = MissionList.getApplet((byte) -117);
               dupTemp$0 = new PlatformService(param1, param5, param2, true);
               SetTorpedoProjectiles.field_o = dupTemp$0;
               MissionList.field_b = dupTemp$0;

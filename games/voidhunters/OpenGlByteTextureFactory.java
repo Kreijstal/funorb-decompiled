@@ -16,7 +16,7 @@ final class OpenGlByteTextureFactory {
           }
           var1 = DisplayModeErrorDialog.getLoginNameOrFallback((byte) -118);
           SetAiFiringRangeUpshift.field_o = new LoginForm(var1, (String) null, true, false, false);
-          GetLagStandardDeviationIn.field_r.pushPanel(false, GetMissionVariablesHudX.field_o);
+          GetLagStandardDeviationIn.modalStack.pushPanel(false, GetMissionVariablesHudX.field_o);
           GetMissionVariablesHudX.field_o.transitionToContent(SetAiFiringRangeUpshift.field_o, -110);
           GetMissionVariablesHudX.field_o.finishResize(param0 - 10394);
           return;

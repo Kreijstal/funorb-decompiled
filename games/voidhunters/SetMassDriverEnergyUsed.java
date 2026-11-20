@@ -45,9 +45,9 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         if (param3 != 23) {
           return true;
         }
-        if (RoundResultFactory.field_a == null) {
+        if (RoundResultFactory.quickChatHelpWindow == null) {
           if (!SetFightersPerPlayerMaximum.chatInputActive) {
-            if (!LegacyOpenGlTurbulenceEffect.field_d &&
+            if (!LegacyOpenGlTurbulenceEffect.quickChatMenuOpen &&
               9 != SetBombletSprayProjectileDamage.field_o &&
               SetBombletSprayProjectileDamage.field_o != 10 &&
               SetBombletSprayProjectileDamage.field_o != 11) {
@@ -74,11 +74,11 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           }
         } else {
           if (SetBombletSprayProjectileDamage.field_o == 13) {
-            RoundResultFactory.field_a = null;
+            RoundResultFactory.quickChatHelpWindow = null;
             return true;
           }
           if (!SetFightersPerPlayerMaximum.chatInputActive) {
-            if (LegacyOpenGlTurbulenceEffect.field_d) {
+            if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
               return GetDetachmentMode.a(param0, -9307, param1);
             }
             if (9 == SetBombletSprayProjectileDamage.field_o) {

@@ -332,7 +332,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           if (OpenGlInterleavedVertexBuffer.field_a != this.textureTransformModes[this.activeTextureUnit]) {
             this.device.SetTransform(this.activeTextureUnit + 16, this.textureTransforms[this.activeTextureUnit].writeColumnMajorMatrix(field_Bc, (byte) 114));
           } else {
-            this.device.SetTransform(this.activeTextureUnit + 16, this.textureTransforms[this.activeTextureUnit].c(field_Bc, (byte) -80));
+            this.device.SetTransform(this.activeTextureUnit + 16, this.textureTransforms[this.activeTextureUnit].writeDirect3DTextureMatrix(field_Bc, (byte) -80));
           }
           var2 = Direct3DToolkit.toDirect3DTextureTransformMode(this.textureTransformModes[this.activeTextureUnit], (byte) 123);
           if (this.field_Cc[this.activeTextureUnit] != var2) {

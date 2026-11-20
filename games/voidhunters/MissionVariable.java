@@ -149,7 +149,7 @@ final class MissionVariable implements DiffableState {
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, boolean param3) {
         try {
           GetExplosionProjectileDamage.a(DeveloperConsole.field_q, 0, IncrementVariableActionFactoryHolder.field_c, UiDraggableContainer.field_y, SetAutoAfkTimeout.field_q, SpawnEnemyShipOrderDefinition.field_d, GetMissionDebrisDefaultProbability.field_o, param3, TargetLockFactory.field_a, SetShieldsDirectionalHalfarcCuts.field_p, ResourceArchive.field_a, GetUseNiceTrails.field_o);
-          GetGrapplingHookAimspeed.field_o = SetGrapplingHookRopeBreakLength.a(param0, true, "lobby", "chatfilter");
+          GetGrapplingHookAimspeed.field_o = SetGrapplingHookRopeBreakLength.loadNamedSprites(param0, true, "lobby", "chatfilter");
           SetMissileLauncherProjectiles.field_o[2] = OpenGlNativeHeap.field_f;
           SetMissileLauncherProjectiles.field_o[0] = GetMassDriverAimspeed.field_p;
           SetMissileLauncherProjectiles.field_o[1] = GetBloomCoefficientPercentage.field_q;

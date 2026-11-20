@@ -270,7 +270,7 @@ final class TutorialController {
               var16 = param1.worldToScreenY(true, var11 + (param0[2] + param0[3] >> 1));
             }
           }
-          var17 = GetPointDefenceLaserProjectiles.a(false, param7);
+          var17 = GetPointDefenceLaserProjectiles.getFontAscent(false, param7);
           if (!param5) {
             var16 = var16 - var17 / 2;
             var15 = var15 - var12 / 2;

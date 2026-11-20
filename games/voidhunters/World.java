@@ -1657,7 +1657,7 @@ final class World implements DiffableState, CompactGameState {
             var29 = this.escapePods;
             for (var17Lifetime3 = 0; var17Lifetime3 < var29.length; var17Lifetime3++) {
               var30 = var29[var17Lifetime3];
-              var30.c((byte) -7);
+              var30.updateHyperdriveTimer((byte) -7);
             }
           }
           this.processArmageddon(false, param4, (byte) -117, (Camera2D) null);
@@ -3826,7 +3826,7 @@ final class World implements DiffableState, CompactGameState {
             if ((stackIn_11_0 ^ stackIn_11_1) == 0 && (null == this.asteroidField ||
               !this.asteroidField.differsFrom((byte) -65, var5.asteroidField)) && (!SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.spawnPoints, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952), -93) &&
               !SetCountermeasureLauncherAimspeed.a(var5.grapplingHooks, false, 1, this.grapplingHooks, 122) &&
-              !SetBlueprintSaveTime.a(var5.respawntimers, this.respawntimers, (byte) 28))) {
+              !SetBlueprintSaveTime.intArraysDiffer(var5.respawntimers, this.respawntimers, (byte) 28))) {
               stackIn_22_0 = (var5.debug) ? 0 : 1;
               if (stackIn_22_0 != (this.debug ? 1 : 0) &&
                 var5.objectiveType == this.objectiveType &&
@@ -4168,7 +4168,7 @@ final class World implements DiffableState, CompactGameState {
                         var11_ref = var13;
                       }
                       if (null != var11_ref) {
-                        if (MissionList.a((byte) -100) &&
+                        if (MissionList.hasReleaseStatistics((byte) -100) &&
                           !param3.isPreGamePhase((byte) 112)) {
                           var27 = SetSpinningBladeSpinupSpeed.field_o[var11_ref.chassis.getComponentTypeId(0)];
                           if (var12 != 0) {
@@ -4899,7 +4899,7 @@ final class World implements DiffableState, CompactGameState {
             var17 = this.escapePods;
             for (var6_intLifetime1 = 0; var17.length > var6_intLifetime1; var6_intLifetime1++) {
               var18 = var17[var6_intLifetime1];
-              var18.a(param0, (byte) -111);
+              var18.draw(param0, (byte) -111);
             }
           }
           var19 = this.grapplingHooks;
@@ -8689,7 +8689,7 @@ final class World implements DiffableState, CompactGameState {
           var4_int = 22 % ((-27 - param0) / 42);
           if (GetPointDefenceLaserProjectiles.a(8, 11284)) {
             var5 = param2.worldToScreenX(param1.getX(false), (byte) 127);
-            var6 = param2.worldToScreenY(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.b((byte) 118) / 2;
+            var6 = param2.worldToScreenY(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.getCurrentFontAscent((byte) 118) / 2;
             var7 = Integer.toString(param1.id);
             GetLagStandardDeviationOut.a(-1, var7, 16711935, var6, -(GetPhasedEnergyBeamProjectiles.a(-118, var7) >> 1) + var5, 4266);
           }

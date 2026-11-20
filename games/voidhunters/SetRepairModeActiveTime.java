@@ -109,10 +109,10 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetRepairModeRadius.field_o = param6;
           ThreeSliceButtonStyle.field_u = param11;
           SetPointDefenceLaserAimarc.field_p = param8;
-          SpriteDimensions.field_o = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "gameprivacy");
-          DisplayModeDialog.field_U = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "ratedgame");
-          GpuTextureCache.field_b = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "opentome");
-          GetPointDefenceLaserProjectileInterceptDamage.field_t = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "allowspectators");
+          SpriteDimensions.field_o = SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, "lobby", "gameprivacy");
+          DisplayModeDialog.field_U = SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, "lobby", "ratedgame");
+          GpuTextureCache.field_b = SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, "lobby", "opentome");
+          GetPointDefenceLaserProjectileInterceptDamage.field_t = SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, "lobby", "allowspectators");
           SetHealthBarHeight.field_p = new String[5];
           SetHealthBarHeight.field_p[2] = CarouselSlot.field_b;
           SetHealthBarHeight.field_p[3] = SetPointDefenceLaserProjectiles.field_q;

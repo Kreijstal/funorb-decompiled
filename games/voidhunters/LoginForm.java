@@ -247,7 +247,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
             this.y = this.y + (var7.getParagraphHeight(this.headerMessage, this.width - 40, var7.maxAscent) + 5);
           }
           var8 = RemoveEventActionFactory.field_a;
-          var9 = GpuFaceAttachmentState.readLastLoginMethod(19314, MissionList.b((byte) -86));
+          var9 = GpuFaceAttachmentState.readLastLoginMethod(19314, MissionList.getApplet((byte) -86));
           if (SetFighterBayAimspeed.field_o != var9) {
             if (var9 == SetShowTutorial.field_p) {
               var8 = SetSpinningBladeTopSpeed.field_o;

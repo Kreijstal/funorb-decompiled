@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LruNodeCache {
-    static Boolean field_f;
+    static Boolean emailAvailabilityResult;
     static int field_g;
     static int field_e;
     private DualLinkNode evictionSentinel;
@@ -64,7 +64,7 @@ final class LruNodeCache {
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_f = null;
+        emailAvailabilityResult = null;
         if (param0) {
           LruNodeCache.clearSharedReferences(false);
         }

@@ -147,7 +147,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         } else {
           SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, 192);
         }
-        GetPointDefenceLaserProjectileDamage.a(param1, 76);
+        GetPointDefenceLaserProjectileDamage.drawModalPanels(param1, 76);
     }
 
     QuickChatPhraseDefinition() {

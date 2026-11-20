@@ -101,7 +101,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             return stackIn_6_0;
           }
           if (TextureCombineMappings.loginStage == SetBombletSprayReload.field_p) {
-            LruNodeCache.field_f = null;
+            LruNodeCache.emailAvailabilityResult = null;
             RequestNewestBlackboxRecording.field_p.position = 0;
             if (param5 == null) {
               SetTorpedoAcceleration.field_p.position = 0;
@@ -146,7 +146,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.writeByte(param4 + 0, 18);
               RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 2;
               var10 = RequestNewestBlackboxRecording.field_p.position;
-              var11_ref_StringLifetime4 = GetMassDriverRandomness.a(-6465, MissionList.b((byte) -114));
+              var11_ref_StringLifetime4 = GetMassDriverRandomness.a(-6465, MissionList.getApplet((byte) -114));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -167,7 +167,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               GameInvitationText.field_a = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
-                ShieldInfoPool.writeSessionMarkerCookie(MissionList.b((byte) -124), param4 ^ 0);
+                ShieldInfoPool.writeSessionMarkerCookie(MissionList.getApplet((byte) -124), param4 ^ 0);
                 GameJoinNotificationText.field_b = CurveTextureOperation.field_j;
                 FighterBayWeaponDefinition.l(param4 - 125);
                 SetShowTutorial.field_o = false;
@@ -180,7 +180,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 NetworkMessageState.incomingOpcode = var9Lifetime1;
               } else {
                 ShipBlueprint.a(SetWorldWidthUpshift.a(param4 + 24655), 30000);
-                LruNodeCache.field_f = new Boolean(SetSpecialOrderBarYOffset.a(param4 - 2, AccountNameAvailabilityReplies.field_b));
+                LruNodeCache.emailAvailabilityResult = new Boolean(SetSpecialOrderBarYOffset.a(param4 - 2, AccountNameAvailabilityReplies.field_b));
                 AccountNameAvailabilityReplies.field_b.position = 0;
               }
             }
@@ -210,7 +210,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             if (NetworkMessageState.incomingOpcode == 255) {
               var9_ref_String = AccountNameAvailabilityReplies.field_b.readNullableString(0);
               if (var9_ref_String != null) {
-                SetNebulaProximityFadeDownshift.a(MissionList.b((byte) -123), var9_ref_String, -1);
+                SetNebulaProximityFadeDownshift.a(MissionList.getApplet((byte) -123), var9_ref_String, -1);
               }
             } else {
               GameJoinNotificationText.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);

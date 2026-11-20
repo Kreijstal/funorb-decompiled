@@ -172,7 +172,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               GetSniperCannonProjectiles.chatVisible = false;
               GetMessageFadetime.field_o = true;
               GetThrusterSmallForce.field_o = true;
-              if (SocketNetworkArchiveClient.g(-120)) {
+              if (SocketNetworkArchiveClient.isLoggedIn(-120)) {
                 RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 71);
                 SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
               }
@@ -196,7 +196,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             GetSniperCannonProjectiles.chatVisible = false;
             GetMessageFadetime.field_o = true;
             GetThrusterSmallForce.field_o = true;
-            if (SocketNetworkArchiveClient.g(-120)) {
+            if (SocketNetworkArchiveClient.isLoggedIn(-120)) {
               RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 71);
               SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
             }
@@ -252,7 +252,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
         GetSniperCannonProjectiles.chatVisible = false;
         GetMessageFadetime.field_o = true;
         GetThrusterSmallForce.field_o = true;
-        if (SocketNetworkArchiveClient.g(-120)) {
+        if (SocketNetworkArchiveClient.isLoggedIn(-120)) {
           RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 71);
           SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
         }

@@ -147,7 +147,7 @@ final class MissionState implements DiffableState {
           }
           var9.optionTotals = this.getVotedOptions(true);
           var9.generateMission(91, param1);
-          if (MissionList.a((byte) -125)) {
+          if (MissionList.hasReleaseStatistics((byte) -125)) {
             var11 = ShipTeamCondition.field_f[param1.missionState.getVotedObjective(6472)];
             SetGrapplingHookCooldown.a(202, "missions_started_" + var11, 1);
             SetGrapplingHookCooldown.a(param0 + 202, "missions_started", 1);
@@ -439,7 +439,7 @@ final class MissionState implements DiffableState {
         if (param2 < 15) {
           return true;
         }
-        return SocketNetworkArchiveClient.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | EmailAvailabilityValidator.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
+        return SocketNetworkArchiveClient.matchesGpuVertexDataMask(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | EmailAvailabilityValidator.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
@@ -471,7 +471,7 @@ final class MissionState implements DiffableState {
               stackIn_11_1 = 1;
             }
             if ((stackIn_8_0 ^ stackIn_11_1) == 0 && (this.nextround == null ||
-              !this.nextround.differsFrom((byte) -74, var5.nextround)) && !SetBlueprintSaveTime.a(var5.teamscores, this.teamscores, (byte) 28)) {
+              !this.nextround.differsFrom((byte) -74, var5.nextround)) && !SetBlueprintSaveTime.intArraysDiffer(var5.teamscores, this.teamscores, (byte) 28)) {
               stackIn_19_0 = (null != this.currentMatch) ? 0 : 1;
               if (var5.currentMatch != null) {
                 stackIn_22_1 = 0;
@@ -1210,11 +1210,11 @@ final class MissionState implements DiffableState {
                   }
                 }
                 if (SetMissionTerrainAsteroidProbability.field_o) {
-                  var16 = SetDebrisPartitioned.b(false).a(3, false);
-                  var16.a(true, param0, param2 ^ -112);
+                  var16 = SetDebrisPartitioned.b(false).getMission(3, false);
+                  var16.applyToSnapshot(true, param0, param2 ^ -112);
                 } else {
                   var15 = EnvironmentMapSource.createTeamSwitchingMission(0);
-                  var15.a(true, param0, param2 ^ 104);
+                  var15.applyToSnapshot(true, param0, param2 ^ 104);
                 }
                 this.setMissionPhase(0, param2 ^ 20, Particle.field_l * 1);
                 if (0 != SetMachineGunAimspeed.field_o) {

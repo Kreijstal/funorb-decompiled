@@ -38,14 +38,14 @@ abstract class OpenGlTexture implements OpenGlFramebufferAttachment {
         }
     }
 
-    final static int b(byte param0) {
+    final static int getCurrentFontAscent(byte param0) {
         if (param0 != 118) {
           return 29;
         }
-        return GetPointDefenceLaserProjectiles.a(false, SetAutoaim.field_p);
+        return GetPointDefenceLaserProjectiles.getFontAscent(false, SetAutoaim.field_p);
     }
 
-    final static Sprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static Sprite[] loadSprites(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -58,7 +58,7 @@ abstract class OpenGlTexture implements OpenGlFramebufferAttachment {
             return stackIn_2_0;
           }
           if (SpriteArchiveDecoder.decodeSpriteArchiveFile(param2, 2, param0, param1)) {
-            return TextureCoordinateMode.a(false);
+            return TextureCoordinateMode.buildDecodedSprites(false);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

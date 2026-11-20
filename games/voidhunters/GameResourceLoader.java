@@ -288,7 +288,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           MidiCrossfadeStream.buttonFrameSprites = WorldPoint.a("button_frame", param0 ^ 21, "basic", this.graphicsArchive);
           SetDebrisGroupColour.field_o = WorldPoint.a("button_raised", -95, "basic", this.graphicsArchive);
           WorldPoint.a("button_depressed", 80, "basic", this.graphicsArchive);
-          WorldSpriteTiler.field_c = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", "achievements_large");
+          WorldSpriteTiler.field_c = SetGrapplingHookRopeBreakLength.loadNamedSprites(this.graphicsArchive, true, "basic", "achievements_large");
           OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
           WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
           AlternateNumericLoginCredentials.alignSpriteToFourPixels(OpenGlGpuTexture2D.field_j, 121);
@@ -302,7 +302,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           var9 = new Sprite[UiAngleDialRenderer.field_i.length][];
           var14 = var9;
           for (var5 = 0; var5 < UiAngleDialRenderer.field_i.length; var5++) {
-            SetTorpedoProjectileDamage.field_p[var5] = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", UiAngleDialRenderer.field_i[var5]);
+            SetTorpedoProjectileDamage.field_p[var5] = SetGrapplingHookRopeBreakLength.loadNamedSprites(this.graphicsArchive, true, "basic", UiAngleDialRenderer.field_i[var5]);
             var9[var5] = SetTorpedoProjectileDamage.field_p[var5];
           }
           OpenGlClientVertexBuffer.a(18090, false);

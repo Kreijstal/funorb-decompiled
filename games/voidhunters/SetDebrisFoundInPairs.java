@@ -170,7 +170,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         int var14Lifetime1;
         var20 = VoidHunters.field_G;
         try {
-          var5_int = SetMutatorVotes.a((param4 - param1) * 3, -128);
+          var5_int = SetMutatorVotes.bitLength((param4 - param1) * 3, -128);
           var6 = 3 * param1;
           GetBombletSprayAimarc.a(-19689);
           var7 = var5_int - 10;

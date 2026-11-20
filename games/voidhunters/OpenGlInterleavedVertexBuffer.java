@@ -21,7 +21,7 @@ final class OpenGlInterleavedVertexBuffer {
 
     OpenGlInterleavedVertexBuffer() {
         FloatPacketBuffer discarded$0 = new FloatPacketBuffer(786336);
-        SetMutatorVotes.a(1600, -61);
+        SetMutatorVotes.bitLength(1600, -61);
     }
 
     public static void clearSharedReferences(byte param0) {

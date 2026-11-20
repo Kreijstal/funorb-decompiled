@@ -111,7 +111,7 @@ final class GpuTransform3D extends Transform3D {
 
     public static void clearSharedReferences(int param0) {
         if (param0 < 65) {
-          GpuTransform3D.a((byte) 104, false, 86);
+          GpuTransform3D.updateReportAbuseDialog((byte) 104, false, 86);
           field_b = null;
           return;
         }
@@ -536,7 +536,7 @@ final class GpuTransform3D extends Transform3D {
         try {
           var6 = (GpuTransform3D) (param1);
           if (!param2) {
-            GpuTransform3D.a((byte) -123, false, 91);
+            GpuTransform3D.updateReportAbuseDialog((byte) -123, false, 91);
           }
           var5 = (GpuTransform3D) (param0);
           this.m00 = var6.m02 * var5.m20 + (var5.m10 * var6.m01 + var6.m00 * var5.m00);
@@ -589,7 +589,7 @@ final class GpuTransform3D extends Transform3D {
         this.m10 = 0.0f;
     }
 
-    final static void a(byte param0, boolean param1, int param2) {
+    final static void updateReportAbuseDialog(byte param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         if (param0 != -127) {
@@ -630,7 +630,7 @@ final class GpuTransform3D extends Transform3D {
         }
     }
 
-    final float[] c(float[] param0, byte param1) {
+    final float[] writeDirect3DTextureMatrix(float[] param0, byte param1) {
         RuntimeException var3 = null;
         float[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

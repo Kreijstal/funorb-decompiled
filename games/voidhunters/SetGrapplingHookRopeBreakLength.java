@@ -33,7 +33,7 @@ final class SetGrapplingHookRopeBreakLength extends ConsoleCommand {
         }
     }
 
-    final static Sprite[] a(ResourceArchive param0, boolean param1, String param2, String param3) {
+    final static Sprite[] loadNamedSprites(ResourceArchive param0, boolean param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -49,7 +49,7 @@ final class SetGrapplingHookRopeBreakLength extends ConsoleCommand {
         try {
           var4_int = param0.getGroupId(param2, -94);
           var5 = param0.getFileId(param1, var4_int, param3);
-          stackIn_1_0 = OpenGlTexture.a(param0, var5, var4_int, 0);
+          stackIn_1_0 = OpenGlTexture.loadSprites(param0, var5, var4_int, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class SetGrapplingHookRopeBreakLength extends ConsoleCommand {
         }
     }
 
-    final static int e(int param0) {
+    final static int getTicksPerSecond(int param0) {
         if (param0 != 204) {
           field_p = 19;
           return (int)(1000000000L / OpenGlGlyphMask.tickIntervalNanos);
@@ -92,7 +92,7 @@ final class SetGrapplingHookRopeBreakLength extends ConsoleCommand {
         return (int)(1000000000L / OpenGlGlyphMask.tickIntervalNanos);
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8, int param9, int param10, int param11) {
+    final static void updateSocialPanels(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8, int param9, int param10, int param11) {
         MissionGenerationData.updateSocialPanels(param2, param10, 16777215, param9, param8, param4, param7, param0, -128, param3, param5, param1, param11, param6);
     }
 

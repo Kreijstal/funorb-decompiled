@@ -275,7 +275,7 @@ final class MissionControl implements DiffableState {
         try {
           var4 = 26 % ((22 - param0) / 59);
           var3 = (MissionControl) (param1);
-          stackIn_7_0 = (SetCountermeasureLauncherAimspeed.a(var3.events, false, 1, this.events, 119)) || (var3.selectedEvent != this.selectedEvent) || (this.selectedConditionOrAction != var3.selectedConditionOrAction) || (SetBlueprintSaveTime.a(var3.reservedIds, this.reservedIds, (byte) 28));
+          stackIn_7_0 = (SetCountermeasureLauncherAimspeed.a(var3.events, false, 1, this.events, 119)) || (var3.selectedEvent != this.selectedEvent) || (this.selectedConditionOrAction != var3.selectedConditionOrAction) || (SetBlueprintSaveTime.intArraysDiffer(var3.reservedIds, this.reservedIds, (byte) 28));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

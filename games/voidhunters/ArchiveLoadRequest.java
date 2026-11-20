@@ -13,15 +13,15 @@ final class ArchiveLoadRequest {
     static String field_d;
     static int field_c;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean needsFaceGroups(int param0, int param1, int param2) {
         if (param0 == 384) {
           return (384 & param2) != 0 ? true : false;
         }
-        ArchiveLoadRequest.a(-23, -58, 67);
+        ArchiveLoadRequest.needsFaceGroups(-23, -58, 67);
         return (384 & param2) != 0 ? true : false;
     }
 
-    final static boolean a(byte param0, int[] param1, int param2, int param3, int param4) {
+    final static boolean intersectsCircle(byte param0, int[] param1, int param2, int param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -79,10 +79,10 @@ final class ArchiveLoadRequest {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isLoggedInMember(int param0) {
         if (param0 >= -99) {
           field_h = -105;
-          if (!SocketNetworkArchiveClient.g(-118)) {
+          if (!SocketNetworkArchiveClient.isLoggedIn(-118)) {
             return false;
           }
           if (GetDebrisCarryOver.field_o > 0) {
@@ -90,7 +90,7 @@ final class ArchiveLoadRequest {
           }
           return false;
         }
-        if (!SocketNetworkArchiveClient.g(-118)) {
+        if (!SocketNetworkArchiveClient.isLoggedIn(-118)) {
           return false;
         }
         if (GetDebrisCarryOver.field_o > 0) {

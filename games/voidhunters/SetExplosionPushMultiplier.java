@@ -10,18 +10,18 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void setTooltipPosition(int param0, byte param1, int param2) {
         if (param1 != -114) {
           SetExplosionPushMultiplier.clearSharedReferences((byte) 98);
-          GetBombletSprayProjectileOndamageParticles.field_o = param0;
-          EmailAvailabilityCheckFactory.field_b = param2;
+          GetBombletSprayProjectileOndamageParticles.pendingTooltipX = param0;
+          EmailAvailabilityCheckFactory.pendingTooltipY = param2;
           return;
         }
-        GetBombletSprayProjectileOndamageParticles.field_o = param0;
-        EmailAvailabilityCheckFactory.field_b = param2;
+        GetBombletSprayProjectileOndamageParticles.pendingTooltipX = param0;
+        EmailAvailabilityCheckFactory.pendingTooltipY = param2;
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String requestAddIgnore(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         IsaacPacketBuffer var5 = null;
@@ -89,14 +89,14 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         field_q = null;
         if (param0 >= -79) {
-          SetExplosionPushMultiplier.a(23, (byte) -112, 66);
+          SetExplosionPushMultiplier.setTooltipPosition(23, (byte) -112, 66);
         }
     }
 
-    final static Boolean a(int param0) {
+    final static Boolean pollEmailAvailabilityResult(int param0) {
         int var1 = 118 % ((param0 - 12) / 55);
-        Boolean var2 = LruNodeCache.field_f;
-        LruNodeCache.field_f = null;
+        Boolean var2 = LruNodeCache.emailAvailabilityResult;
+        LruNodeCache.emailAvailabilityResult = null;
         return var2;
     }
 

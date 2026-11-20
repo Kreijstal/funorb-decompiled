@@ -31,7 +31,7 @@ final class PlayerContextMenu {
               }
               var4_ref = GameCanvasResizeListener.a(param0, this.targetDisplayName, this.targetName, (byte) -76);
             } else {
-              var4_ref = SetExplosionPushMultiplier.a(2, this.targetName, param0);
+              var4_ref = SetExplosionPushMultiplier.requestAddIgnore(2, this.targetName, param0);
             }
           }
         } else {

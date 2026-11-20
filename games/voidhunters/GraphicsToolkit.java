@@ -98,7 +98,7 @@ abstract class GraphicsToolkit {
             return stackIn_7_0;
           }
           if (param6 <= 0) {
-            GraphicsToolkit.a(false, -43, -73, 67);
+            GraphicsToolkit.updateQuickChatMenuInput(false, -43, -73, 67);
           }
           if (param7 == 1) {
             stackIn_12_0 = AsteroidFieldFactory.a(param4, (byte) 16, param2, param5);
@@ -273,13 +273,13 @@ abstract class GraphicsToolkit {
 
     abstract void setDepthRange(int param0, int param1);
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void updateQuickChatMenuInput(boolean param0, int param1, int param2, int param3) {
         int var4;
         int var5;
-        if (!LegacyOpenGlTurbulenceEffect.field_d) {
+        if (!LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
           return;
         }
-        GetGrapplingHookFireForce.field_o.updateInput(param0, param3 ^ 1329);
+        GetGrapplingHookFireForce.quickChatMenuRoot.updateInput(param0, param3 ^ 1329);
         var4 = MidiNote.field_m.hasClickedItem(-25675) ? 1 : 0;
         boolean decompiledFrameRemainder0 = true;
         if (SetDebrisPartitioned.field_o != 0) {
@@ -306,7 +306,7 @@ abstract class GraphicsToolkit {
           }
         }
         if (var4 != 0) {
-          GetGrapplingHookFireForce.field_o.updateInput(param0, param3 ^ 1329);
+          GetGrapplingHookFireForce.quickChatMenuRoot.updateInput(param0, param3 ^ 1329);
         }
         var5 = MidiNote.field_m.getOpenMenuWidth(-4109) + MidiNote.field_m.screenX;
         if (var5 > 640) {

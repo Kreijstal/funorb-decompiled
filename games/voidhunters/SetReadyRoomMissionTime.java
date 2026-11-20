@@ -85,7 +85,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
             }
             if (!param1 &&
               ShipComponentFactory.field_a) {
-              SetSpinningBladeAimarc.e((byte) -128);
+              SetSpinningBladeAimarc.restoreMouseCursor((byte) -128);
             }
           }
           if (!ShipComponentFactory.field_a) {
@@ -204,7 +204,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                   }
                 }
               } else {
-                SetSpinningBladeAimarc.e((byte) -128);
+                SetSpinningBladeAimarc.restoreMouseCursor((byte) -128);
                 if (!ShipComponentFactory.field_a) {
                   GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                   GetUseDetailLines.field_o = PlayerGameData.field_b;

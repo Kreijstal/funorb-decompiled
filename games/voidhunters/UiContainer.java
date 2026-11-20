@@ -273,7 +273,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             var6 = var6 | 16;
           }
           RequestNewestBlackboxRecording.field_p.writeByte(0, var6);
-          var7 = GetMassDriverRandomness.a(-6465, MissionList.b((byte) -121));
+          var7 = GetMassDriverRandomness.a(-6465, MissionList.getApplet((byte) -121));
           if (var7 == null) {
             var7 = "";
           }

@@ -71,8 +71,8 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != ArchiveIndexLoader.field_g &&
-            null != ArchiveIndexLoader.field_g.field_e) {
-            ArchiveIndexLoader.field_g.field_e.addCounter(param1, param2, false);
+            null != ArchiveIndexLoader.field_g.releaseStatistics) {
+            ArchiveIndexLoader.field_g.releaseStatistics.addCounter(param1, param2, false);
           }
           if (param0 == 202) {
             return;

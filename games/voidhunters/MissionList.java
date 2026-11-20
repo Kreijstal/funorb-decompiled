@@ -5,14 +5,14 @@ final class MissionList implements DiffableState {
     static PlatformService field_b;
     private Mission[] missions;
 
-    final static boolean a(byte param0) {
+    final static boolean hasReleaseStatistics(byte param0) {
         if (param0 >= -41) {
           return false;
         }
         if (null == ArchiveIndexLoader.field_g) {
           return false;
         }
-        if (ArchiveIndexLoader.field_g.field_e == null) {
+        if (ArchiveIndexLoader.field_g.releaseStatistics == null) {
           return false;
         }
         return true;
@@ -27,7 +27,7 @@ final class MissionList implements DiffableState {
         field_b = null;
     }
 
-    final static java.applet.Applet b(byte param0) {
+    final static java.applet.Applet getApplet(byte param0) {
         if (EnvironmentMapSource.field_b != null) {
           return EnvironmentMapSource.field_b;
         }
@@ -96,7 +96,7 @@ final class MissionList implements DiffableState {
         }
     }
 
-    final Mission a(int param0, boolean param1) {
+    final Mission getMission(int param0, boolean param1) {
         Object var3;
         int var4;
         int var5;
@@ -109,10 +109,10 @@ final class MissionList implements DiffableState {
         var4 = 0;
         if (!param1) {
           while (this.missions.length > var4) {
-            if (param0 == this.missions[var4].a(0)) {
+            if (param0 == this.missions[var4].getObjectiveType(0)) {
               return this.missions[var4];
             }
-            if (this.missions[var4].a(0) == 0) {
+            if (this.missions[var4].getObjectiveType(0) == 0) {
               var3 = this.missions[var4];
             }
             var4++;
@@ -123,10 +123,10 @@ final class MissionList implements DiffableState {
         var6 = (SerializableGameState) null;
         this.reportDifferences((SerializableGameState) null, -74);
         while (this.missions.length > var4) {
-          if (param0 == this.missions[var4].a(0)) {
+          if (param0 == this.missions[var4].getObjectiveType(0)) {
             return this.missions[var4];
           }
-          if (this.missions[var4].a(0) == 0) {
+          if (this.missions[var4].getObjectiveType(0) == 0) {
             var3 = this.missions[var4];
           }
           var4++;

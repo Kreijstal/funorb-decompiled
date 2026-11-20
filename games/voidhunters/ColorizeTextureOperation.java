@@ -15,22 +15,22 @@ final class ColorizeTextureOperation extends TextureOperation {
         this.blue = 4096;
     }
 
-    final static void a(byte param0, boolean param1) {
-        if (RoundResultFactory.field_a == null) {
+    final static void updateQuickChatHelpWindow(byte param0, boolean param1) {
+        if (RoundResultFactory.quickChatHelpWindow == null) {
           if (param0 == 34) {
             return;
           }
           field_j = true;
           return;
         }
-        if (!RoundResultFactory.field_a.updateAndCheckDismissed(param1, false)) {
+        if (!RoundResultFactory.quickChatHelpWindow.updateAndCheckDismissed(param1, false)) {
           if (param0 == 34) {
             return;
           }
           field_j = true;
           return;
         }
-        RoundResultFactory.field_a = null;
+        RoundResultFactory.quickChatHelpWindow = null;
         if (param0 == 34) {
           return;
         }

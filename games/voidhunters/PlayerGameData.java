@@ -9,7 +9,7 @@ final class PlayerGameData implements DiffableState {
     private boolean[] tipsDone;
     static int field_b;
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void shiftBlueprintDescriptionIndices(int param0, byte param1, int param2) {
         int var5 = 0;
         int[] var4;
         int var6;
@@ -121,7 +121,7 @@ final class PlayerGameData implements DiffableState {
           var4 = 112 % ((22 - param0) / 59);
           var3 = (PlayerGameData) (param1);
           if (this.version == var3.version &&
-            !EscapePod.a(var3.tipsDone, this.tipsDone, 32)) {
+            !EscapePod.booleanArraysDiffer(var3.tipsDone, this.tipsDone, 32)) {
             stackIn_5_0 = (null != var3.blueprint) ? 0 : 1;
             if (null != this.blueprint) {
               stackIn_8_1 = 0;
@@ -160,17 +160,17 @@ final class PlayerGameData implements DiffableState {
         field_e = null;
     }
 
-    private final void a(byte param0) {
+    private final void migrateToCurrentVersion(byte param0) {
         if (param0 < 46) {
           return;
         }
         if (0 == this.version) {
-          this.a(4, (byte) 31, 8);
+          this.shiftBlueprintDescriptionIndices(4, (byte) 31, 8);
         }
         this.version = 1;
     }
 
-    final static void a(int param0, long[] param1, int param2, int[] param3, int param4) {
+    final static void sortLongKeysWithIntValues(int param0, long[] param1, int param2, int[] param3, int param4) {
         int var11 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -215,8 +215,8 @@ final class PlayerGameData implements DiffableState {
             param1[var6] = var7;
             param3[param4] = param3[var6];
             param3[var6] = var9;
-            PlayerGameData.a(-14677, param1, param2, param3, -1 + var6);
-            PlayerGameData.a(-14677, param1, var6 + 1, param3, param4);
+            PlayerGameData.sortLongKeysWithIntValues(-14677, param1, param2, param3, -1 + var6);
+            PlayerGameData.sortLongKeysWithIntValues(-14677, param1, var6 + 1, param3, param4);
           }
           if (param0 != -14677) {
             field_a = (String) null;
@@ -316,7 +316,7 @@ final class PlayerGameData implements DiffableState {
             System.out.println("int version has changed. before=" + var5.version + ", now=" + this.version);
           }
           if (obfuscationGuard >= -19) {
-            this.a((byte) 101);
+            this.migrateToCurrentVersion((byte) 101);
           }
           if (GameSession.reportBooleanArrayDifferences(this.tipsDone, var5.tipsDone, -48)) {
             System.out.println("boolean[] tips_done has changed. ");
@@ -364,7 +364,7 @@ final class PlayerGameData implements DiffableState {
             }
             this.blueprint.readState(param0, false);
           }
-          this.a((byte) 58);
+          this.migrateToCurrentVersion((byte) 58);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

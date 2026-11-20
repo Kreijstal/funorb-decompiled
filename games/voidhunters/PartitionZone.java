@@ -257,7 +257,7 @@ final class PartitionZone implements DiffableState, SpatialStateMarker, Sortable
         try {
           var3 = (PartitionZone) (param1);
           var4 = 11 % ((22 - param0) / 59);
-          stackIn_7_0 = (SetBlueprintSaveTime.a(var3.ids, this.ids, (byte) 28)) || (this.gridx != var3.gridx) || (this.gridy != var3.gridy) || (this.type != var3.type);
+          stackIn_7_0 = (SetBlueprintSaveTime.intArraysDiffer(var3.ids, this.ids, (byte) 28)) || (this.gridx != var3.gridx) || (this.gridy != var3.gridy) || (this.type != var3.type);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
