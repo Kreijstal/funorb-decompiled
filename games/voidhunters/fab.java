@@ -269,7 +269,7 @@ final class fab {
                   }
                 }
                 try {
-                  var11 = SetPhasedEnergyBeamProjectiles.a(false, param0, var6.field_c, this.field_a, lwa.field_xb, var6.field_a);
+                  var11 = SetPhasedEnergyBeamProjectiles.createToolkitForCanvas(false, param0, var6.field_c, this.field_a, lwa.field_xb, var6.field_a);
                   if (var11 != null) {
                     var8 = new bra(var11, var6, param0);
                     if (var6.a(var8, -97)) {

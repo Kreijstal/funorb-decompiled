@@ -70,7 +70,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_unable", 23100);
                 if (null != var2) {
-                  owa.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  CurveTextureOperation.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_ineligible", 23100);
                 if (null != var2) {
@@ -414,7 +414,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_lobby_friends_only", 23100);
                 if (null != var2) {
-                  vv.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  UiVisualStyle.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_lobby_friends", 23100);
                 if (var2 != null) {
@@ -542,7 +542,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("message_lobby", 23100);
                 if (var2 != null) {
-                  di.field_k = Cp1252Strings.decode((byte) -125, var2);
+                  FlipTextureOperation.field_k = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("quickchat_lobby", 23100);
                 if (null != var2) {
@@ -598,7 +598,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("status_join", 23100);
                 if (var2 != null) {
-                  di.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  FlipTextureOperation.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("status_private", 23100);
                 if (var2 != null) {
@@ -904,7 +904,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("ra_title", 23100);
                 if (var2 != null) {
-                  hpb.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  KaleidoscopeTextureOperation.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("ra_mutethisplayer", 23100);
                 if (null != var2) {
@@ -932,7 +932,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_0_0", 23100);
                 if (var2 != null) {
-                  uea.field_p = Cp1252Strings.decode((byte) -125, var2);
+                  UiStatefulStyle.field_p = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_0_1", 23100);
                 if (var2 != null) {
@@ -1540,7 +1540,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_age_tooltip", 23100);
                 if (var2 != null) {
-                  lq.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  HashNoiseTextureOperation.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_optin_news_tooltip", 23100);
                 if (null != var2) {
@@ -1716,7 +1716,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("enterfriend_add", 23100);
                 if (var2 != null) {
-                  hk.field_i = Cp1252Strings.decode((byte) -125, var2);
+                  EdgeMagnitudeTextureOperation.field_i = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("enterfriend_del", 23100);
                 if (var2 != null) {
@@ -1790,7 +1790,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("waitingfor_textures", 23100);
                 if (null != var2) {
-                  koa.field_k = Cp1252Strings.decode((byte) -125, var2);
+                  RangeTextureOperation.field_k = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("waitingfor_animations", 23100);
                 if (var2 != null) {
@@ -1798,7 +1798,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("loading_graphics", 23100);
                 if (null != var2) {
-                  drb.field_k = Cp1252Strings.decode((byte) -125, var2);
+                  ConstantMonochromeTextureOperation.field_k = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("loading_models", 23100);
                 if (null != var2) {
@@ -2557,15 +2557,15 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("members_expansion_benefits,0", 23100);
                 if (var2 != null) {
-                  ufb.field_d[0] = Cp1252Strings.decode((byte) -125, var2);
+                  FullscreenCanvas.field_d[0] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("members_expansion_benefits,1", 23100);
                 if (var2 != null) {
-                  ufb.field_d[1] = Cp1252Strings.decode((byte) -125, var2);
+                  FullscreenCanvas.field_d[1] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("members_expansion_benefits,2", 23100);
                 if (var2 != null) {
-                  ufb.field_d[2] = Cp1252Strings.decode((byte) -125, var2);
+                  FullscreenCanvas.field_d[2] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("members_expansion_price_top", 23100);
                 if (null != var2) {
@@ -2795,7 +2795,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_config_done", 23100);
                 if (null != var2) {
-                  wv.field_l = Cp1252Strings.decode((byte) -125, var2);
+                  TextureSourceOperation.field_l = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_config_apply", 23100);
                 if (null != var2) {

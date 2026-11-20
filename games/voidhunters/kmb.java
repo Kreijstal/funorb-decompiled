@@ -19,10 +19,10 @@ final class kmb {
           if (param1 != 18700) {
             kmb.clearSharedReferences(9);
           }
-          if (di.field_l == null) {
+          if (FlipTextureOperation.field_l == null) {
             return;
           }
-          di.field_l.sendCarouselConstant(RequestNewestBlackboxRecording.field_p, param1 ^ -17690, param0);
+          FlipTextureOperation.field_l.sendCarouselConstant(RequestNewestBlackboxRecording.field_p, param1 ^ -17690, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

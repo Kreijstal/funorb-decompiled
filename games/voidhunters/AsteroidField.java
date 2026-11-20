@@ -785,7 +785,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime62 = HuffmanCodec.fetchLocalizedResource((byte) -47, "keycode_move_strafe_left");
           if (var2Lifetime62 != null) {
-            vn.field_m = 255 & var2Lifetime62[0];
+            HerringboneTextureOperation.field_m = 255 & var2Lifetime62[0];
           }
           var2Lifetime63 = HuffmanCodec.fetchLocalizedResource((byte) -84, "keycode_move_strafe_right");
           if (var2Lifetime63 != null) {
@@ -837,7 +837,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime75 = HuffmanCodec.fetchLocalizedResource((byte) -81, "keycode_load_blueprint");
           if (null != var2Lifetime75) {
-            gg.field_j = var2Lifetime75[0] & 255;
+            WaveformTextureOperation.field_j = var2Lifetime75[0] & 255;
           }
           var2Lifetime76 = HuffmanCodec.fetchLocalizedResource((byte) -45, "keycode_chat_all_primary");
           if (var2Lifetime76 != null) {
@@ -1105,7 +1105,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime142 = HuffmanCodec.fetchLocalizedResource((byte) -64, "COMPONENT_CHASSIS_WASP_TEXT");
           if (var2Lifetime142 != null) {
-            ufb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime142);
+            FullscreenCanvas.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime142);
           }
           var2Lifetime143 = HuffmanCodec.fetchLocalizedResource((byte) -55, "COMPONENT_THRUSTER_SMALL_TEXT");
           if (null != var2Lifetime143) {
@@ -1113,7 +1113,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime144 = HuffmanCodec.fetchLocalizedResource((byte) -116, "COMPONENT_THRUSTER_STANDARD_TEXT");
           if (null != var2Lifetime144) {
-            vn.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime144);
+            HerringboneTextureOperation.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime144);
           }
           var2Lifetime145 = HuffmanCodec.fetchLocalizedResource((byte) -46, "COMPONENT_WEAPON_MACHINEGUN_TEXT");
           if (null != var2Lifetime145) {
@@ -1145,7 +1145,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime152 = HuffmanCodec.fetchLocalizedResource((byte) -49, "COMPONENT_WEAPON_LASER_BEAM_TEXT");
           if (null != var2Lifetime152) {
-            grb.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime152);
+            BoxBlurTextureOperation.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime152);
           }
           var2Lifetime153 = HuffmanCodec.fetchLocalizedResource((byte) -18, "COMPONENT_WEAPON_SNIPER_CANNON_TEXT");
           if (null != var2Lifetime153) {
@@ -1297,7 +1297,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime190 = HuffmanCodec.fetchLocalizedResource((byte) -55, "ORDER_BOOSTERS_FIRE_SHORT");
           if (null != var2Lifetime190) {
-            gia.field_j = Cp1252Strings.decode((byte) -125, var2Lifetime190);
+            NormalMapTextureOperation.field_j = Cp1252Strings.decode((byte) -125, var2Lifetime190);
           }
           var2Lifetime191 = HuffmanCodec.fetchLocalizedResource((byte) -67, "ORDER_BOOSTERS_FIRE");
           if (var2Lifetime191 != null) {
@@ -1445,7 +1445,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime227 = HuffmanCodec.fetchLocalizedResource((byte) -116, "VOTE_ASSASSINATE_VIP_DESC_A");
           if (null != var2Lifetime227) {
-            jlb.field_t = Cp1252Strings.decode((byte) -125, var2Lifetime227);
+            BricksTextureOperation.field_t = Cp1252Strings.decode((byte) -125, var2Lifetime227);
           }
           var2Lifetime228 = HuffmanCodec.fetchLocalizedResource((byte) -13, "VOTE_ASSASSINATE_VIP_DESC_B");
           if (var2Lifetime228 != null) {
@@ -1708,7 +1708,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime292 = HuffmanCodec.fetchLocalizedResource((byte) -16, "tutorial_grappling_hook_fire");
           if (null != var2Lifetime292) {
-            pja.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime292);
+            SpriteTextureOperation.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime292);
           }
           var2Lifetime293 = HuffmanCodec.fetchLocalizedResource((byte) -6, "tutorial_radial_menu");
           if (var2Lifetime293 != null) {

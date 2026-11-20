@@ -93,15 +93,15 @@ final class cm extends TextureOperation {
           var11 = 1;
           var12 = 0;
           var13 = 0;
-          var14 = hob.field_d * this.field_n >> 12;
-          var15 = this.field_q * hob.field_d >> 12;
+          var14 = hob.textureWidth * this.field_n >> 12;
+          var15 = this.field_q * hob.textureWidth >> 12;
           var16 = this.field_k * GetTorpedoReload.field_o >> 12;
           var17 = GetTorpedoReload.field_o * this.field_s >> 12;
           if (var17 <= 1) {
             return var47[param0];
           }
-          this.field_m = this.field_o * (hob.field_d / 8) >> 12;
-          var18 = hob.field_d / var14 + 1;
+          this.field_m = this.field_o * (hob.textureWidth / 8) >> 12;
+          var18 = hob.textureWidth / var14 + 1;
           var19 = new int[var18][3];
           var48 = new int[var18][3];
           var20 = var48;
@@ -110,9 +110,9 @@ final class cm extends TextureOperation {
             var23 = var14 + hob.a(var21, -var14 + var15, 122);
             var24 = var16 + hob.a(var21, -var16 + var17, 127);
             var25 = var23 + var8;
-            if (var25 > hob.field_d) {
-              var25 = hob.field_d;
-              var23 = -var8 + hob.field_d;
+            if (var25 > hob.textureWidth) {
+              var25 = hob.textureWidth;
+              var23 = -var8 + hob.textureWidth;
             }
             regionExit1: {
               if (var11 == 0) {
@@ -122,10 +122,10 @@ final class cm extends TextureOperation {
                 var28 = 0;
                 var29_int = var5 + var25;
                 if (var29_int < 0) {
-                  var29_int = var29_int + hob.field_d;
+                  var29_int = var29_int + hob.textureWidth;
                 }
-                if (hob.field_d < var29_int) {
-                  var29_int = var29_int - hob.field_d;
+                if (hob.textureWidth < var29_int) {
+                  var29_int = var29_int - hob.textureWidth;
                 }
                 while (true) {
                   var53 = var48Lifetime1[var26_int];
@@ -135,10 +135,10 @@ final class cm extends TextureOperation {
                     if (var26_int != var9) {
                       var30 = var5 + var8;
                       if (var30 < 0) {
-                        var30 = var30 + hob.field_d;
+                        var30 = var30 + hob.textureWidth;
                       }
-                      if (var30 > hob.field_d) {
-                        var30 = var30 - hob.field_d;
+                      if (var30 > hob.textureWidth) {
+                        var30 = var30 - hob.textureWidth;
                       }
                       for (var31 = 1; var31 <= var28; var31++) {
                         var42 = var20[(var31 + var9) % var12];
@@ -158,7 +158,7 @@ final class cm extends TextureOperation {
                           } else {
                             if (var36 != 0) {
                               var34 = Math.max(var30, var36);
-                              var35 = hob.field_d;
+                              var35 = hob.textureWidth;
                             } else {
                               var35 = Math.min(var29_int, var37);
                               var34 = 0;
@@ -189,7 +189,7 @@ final class cm extends TextureOperation {
             } else {
               var10 = 0;
             }
-            if (var25 != hob.field_d) {
+            if (var25 != hob.textureWidth) {
               incrementValue$1 = var13;
               var13++;
               var44 = var19[incrementValue$1];
@@ -219,15 +219,15 @@ final class cm extends TextureOperation {
             var12 = var13;
             var7 = var6;
             var13 = 0;
-            var6 = hob.a(var21, hob.field_d, 124);
+            var6 = hob.a(var21, hob.textureWidth, 124);
             var5 = -var7 + var6;
             var8 = 0;
             var28Lifetime1 = var5;
             if (var28Lifetime1 < 0) {
-              var28Lifetime1 = var28Lifetime1 + hob.field_d;
+              var28Lifetime1 = var28Lifetime1 + hob.textureWidth;
             }
-            if (var28Lifetime1 > hob.field_d) {
-              var28Lifetime1 = var28Lifetime1 - hob.field_d;
+            if (var28Lifetime1 > hob.textureWidth) {
+              var28Lifetime1 = var28Lifetime1 - hob.textureWidth;
             }
             var9 = 0;
             while (true) {
@@ -451,17 +451,17 @@ final class cm extends TextureOperation {
             var24 = (Random) null;
             this.a(-48, 78, (int[][]) null, 42, 103, (Random) null, -25);
           }
-          if (param3 >= hob.field_d) {
-            param3 = param3 - hob.field_d;
+          if (param3 >= hob.textureWidth) {
+            param3 = param3 - hob.textureWidth;
           }
           if (var10 <= 0) {
-            if (hob.field_d >= param3 + param1) {
+            if (hob.textureWidth >= param3 + param1) {
               for (var11 = 0; var11 < param4; var11++) {
                 ArrayOperations.fill(param2[var11 + param6], param3, param1, var8_int);
               }
               return;
             }
-            var11Lifetime2 = -param3 + hob.field_d;
+            var11Lifetime2 = -param3 + hob.textureWidth;
             for (var12 = 0; var12 < param4; var12++) {
               var13_ref_int__ = param2[param6 + var12];
               ArrayOperations.fill(var13_ref_int__, param3, var11Lifetime2, var8_int);
@@ -507,10 +507,10 @@ final class cm extends TextureOperation {
                     stackIn_41_0[stackIn_41_1] = stackIn_42_4;
                   }
                 }
-                if (var16 + var15 <= hob.field_d) {
+                if (var16 + var15 <= hob.textureWidth) {
                   ArrayOperations.fill(var18, var15, var16, var19);
                 } else {
-                  var20 = -var15 + hob.field_d;
+                  var20 = -var15 + hob.textureWidth;
                   ArrayOperations.fill(var18, var15, var20, var19);
                   ArrayOperations.fill(var18, 0, -var20 + var16, var19);
                 }
@@ -522,10 +522,10 @@ final class cm extends TextureOperation {
                     var18[dupTemp$2] = var8_int * var20 / var13;
                     var18[dla.a(var20 + param3, SetMassDriverEnergyUsed.field_q)] = var8_int * var20 / var13;
                   }
-                  if (hob.field_d >= var15 + var16) {
+                  if (hob.textureWidth >= var15 + var16) {
                     ArrayOperations.fill(var18, var15, var16, var8_int);
                   } else {
-                    var20 = hob.field_d - var15;
+                    var20 = hob.textureWidth - var15;
                     ArrayOperations.fill(var18, var15, var20, var8_int);
                     ArrayOperations.fill(var18, 0, -var20 + var16, var8_int);
                   }
@@ -556,10 +556,10 @@ final class cm extends TextureOperation {
                       stackIn_53_0[stackIn_53_1] = stackIn_54_4;
                     }
                   }
-                  if (hob.field_d >= var16 + var15) {
+                  if (hob.textureWidth >= var16 + var15) {
                     ArrayOperations.fill(var18, var15, var16, var20);
                   } else {
-                    var21 = -var15 + hob.field_d;
+                    var21 = -var15 + hob.textureWidth;
                     ArrayOperations.fill(var18, var15, var21, var20);
                     ArrayOperations.fill(var18, 0, var16 - var21, var20);
                   }

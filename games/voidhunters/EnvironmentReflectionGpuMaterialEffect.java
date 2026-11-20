@@ -65,7 +65,7 @@ final class EnvironmentReflectionGpuMaterialEffect extends GpuMaterialEffect {
           this.toolkit.setTextureCoordinateMode((byte) -111, GetArmageddonLength.field_p);
           this.toolkit.setActiveTextureUnit(1, param0 ^ -60);
           this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
-          this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, pja.field_l, 2);
+          this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, SpriteTextureOperation.field_l, 2);
           this.toolkit.setAlphaCombineSource(0, (byte) -97, GetArmageddonLength.field_q);
           var4 = this.toolkit.getTextureTransform((byte) -125);
           var4.copyRotationWithXTranslation(param0 ^ 5, this.toolkit.getInverseViewTransform((byte) 103));

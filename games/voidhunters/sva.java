@@ -58,7 +58,7 @@ final class sva extends TextureOperation {
             }
             var8 = stackIn_7_0;
             var8 = var8 >> 4 & 255;
-            var9 = hob.a(var6, hob.field_d, 127);
+            var9 = hob.a(var6, hob.textureWidth, 127);
             var10 = hob.a(var6, GetTorpedoReload.field_o, 117);
             var11 = var9 + (GetBombletSprayProjectiles.field_q[var8] * this.field_l >> 12);
             var12 = var10 + (GetDebrisPartitioned.field_o[var8] * this.field_l >> 12);
@@ -104,7 +104,7 @@ final class sva extends TextureOperation {
               for (var23 = var9; var23 < var11; var23++) {
                 var24 = var20 * (var23 - var9) + 1024 + var21;
                 var25 = SetMassDriverEnergyUsed.field_q & var23;
-                var26 = var16Lifetime2 & wf.field_d;
+                var26 = var16Lifetime2 & wf.textureHeightMask;
                 var19 = var19 + var18;
                 if (var15 == 0) {
                   var31[var25][var26] = var24;

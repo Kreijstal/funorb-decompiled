@@ -18,7 +18,7 @@ final class GetMassDriverReload extends ConsoleCommand {
           return;
         }
         try {
-          pja.field_o = param0;
+          SpriteTextureOperation.field_o = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kwa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

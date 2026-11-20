@@ -75,7 +75,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
               (null == var8.getAi((byte) -108) ||
               var8.getAi((byte) -108).a((byte) 66) != param2)) &&
               (!param3.isFighter(false) ||
-              !param0.a((ShipBody) (var8), 119)))) {
+              !param0.isBodyCenterInNebula((ShipBody) (var8), 119)))) {
               var9 = var8.x - param3.x;
               var10 = var8.y - param3.y;
               var11 = TextLayout.approximateVectorLength(var9, (byte) 107, var10);

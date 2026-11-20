@@ -12,7 +12,7 @@ abstract class ToolkitFont {
         }
         CarouselPlayerInfoFactory.field_b = param2;
         TimedSpecialOrderBehaviour.field_a = param2;
-        drb.field_j = param1;
+        ConstantMonochromeTextureOperation.field_j = param1;
         oib.field_c = 0;
         SetGrapplingHookRopeChangeRate.field_p = -1;
         MapClearanceAreaFactory.field_a = param0;
@@ -107,7 +107,7 @@ abstract class ToolkitFont {
             }
           }
           if (0 < var4_int) {
-            drb.field_j = (-this.field_b.a(param2, 1) + param1 << 8) / var4_int;
+            ConstantMonochromeTextureOperation.field_j = (-this.field_b.a(param2, 1) + param1 << 8) / var4_int;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,7 +209,7 @@ abstract class ToolkitFont {
                   if (var21Lifetime1 != -1 + var19) {
                     this.a(-116, param10, SetUseRectFill.field_o[var21Lifetime1]);
                     this.a(var20, param8 - 432, param1, param5, SetUseRectFill.field_o[var21Lifetime1], param15, param2, param12, param4);
-                    drb.field_j = 0;
+                    ConstantMonochromeTextureOperation.field_j = 0;
                   } else {
                     this.a(var20, param8 - 613, param1, param5, SetUseRectFill.field_o[var21Lifetime1], param15, param2, param12, param4);
                   }
@@ -364,8 +364,8 @@ abstract class ToolkitFont {
                   param5 = param5 + this.field_b.a(var12, (char) var15, -101);
                 }
                 if (var15 == 32) {
-                  if (drb.field_j > 0) {
-                    oib.field_c = oib.field_c + drb.field_j;
+                  if (ConstantMonochromeTextureOperation.field_j > 0) {
+                    oib.field_c = oib.field_c + ConstantMonochromeTextureOperation.field_j;
                     param5 = param5 + (oib.field_c >> 8);
                     oib.field_c = oib.field_c & 255;
                   }

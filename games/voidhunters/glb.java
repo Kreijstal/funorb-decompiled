@@ -43,7 +43,7 @@ final class glb {
               } else {
                 if (var1_ref.field_g) {
                   var2 = uv.a(param0 - 16915, var1_ref.field_i);
-                  var3 = pja.b((byte) 119, var1_ref.field_i, var1_ref.field_f);
+                  var3 = SpriteTextureOperation.b((byte) 119, var1_ref.field_i, var1_ref.field_f);
                   var1_ref.field_d.a(param0 ^ 16915, var3, var2);
                 }
                 var1_ref.field_h = false;

@@ -170,7 +170,7 @@ final class SetDebrisGroupColour extends ConsoleCommand {
                 continue;
               }
               if (var4 == 44) {
-                var2.addLast(-10258, new tsa(jwa.field_l, -1 + var3.field_b));
+                var2.addLast(-10258, new tsa(ConstantColorTextureOperation.field_l, -1 + var3.field_b));
                 continue;
               }
               var2.addLast(param0 ^ 10257, GetMpSandboxEnemySpawnLimit.a(-20, var3));

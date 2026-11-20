@@ -101,7 +101,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var5_int = -83 / ((-4 - param3) / 32);
           if (TextureFilterMode.field_b != param0) {
             if (GetFightersPerPlayerMaximum.field_o != param0) {
-              if (di.field_i == param0) {
+              if (FlipTextureOperation.field_i == param0) {
                 var6 = 4;
                 var7 = 3 * param2;
               } else {

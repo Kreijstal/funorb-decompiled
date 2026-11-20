@@ -62,7 +62,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
           return SetTorpedoProjectileOndamageParticles.field_o;
         }
         if (!btb.field_b.isNamedGroupReady(32171, "commonui")) {
-          return drb.field_k + " - " + btb.field_b.getNamedGroupLoadPercent("commonui", -2118) + "%";
+          return ConstantMonochromeTextureOperation.field_k + " - " + btb.field_b.getNamedGroupLoadPercent("commonui", -2118) + "%";
         }
         if (!GetSalvoUsesAllEnergy.field_o.loadIndex((byte) 122)) {
           return TorpedoWeaponDefinition.field_b;

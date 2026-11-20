@@ -357,7 +357,7 @@ final class ShipAI implements DiffableState {
               if (var17 < 2147483647) {
                 this.field_f = var16 << 8;
               }
-              if (di.field_p == 0) {
+              if (FlipTextureOperation.field_p == 0) {
                 param0.aimAt(8, var11, var10Lifetime1);
               }
               var9 = var9 | 16;

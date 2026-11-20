@@ -13,7 +13,7 @@ final class SetReloadBarWidth extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean f(byte param0) {
+    final static boolean isCachedFrameAvailable(byte param0) {
         if (param0 >= -63) {
           return false;
         }
@@ -48,7 +48,7 @@ final class SetReloadBarWidth extends ConsoleCommand {
         try {
           GetSniperCannonAimarc.field_p = arguments[0].intValue(11);
           if (obfuscationGuard > -119) {
-            SetReloadBarWidth.f((byte) -42);
+            SetReloadBarWidth.isCachedFrameAvailable((byte) -42);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

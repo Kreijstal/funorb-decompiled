@@ -376,7 +376,7 @@ final class Particle implements DiffableState {
         if (null == MissionConditionFactory.field_b) {
           return false;
         }
-        if (MissionConditionFactory.field_b.a(34)) {
+        if (MissionConditionFactory.field_b.canResize(34)) {
           return true;
         }
         return false;

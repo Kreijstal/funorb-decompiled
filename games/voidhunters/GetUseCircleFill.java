@@ -16,7 +16,7 @@ final class GetUseCircleFill extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(lfa.field_j);
+          stackIn_3_0 = new ConsoleValue(ColorizeTextureOperation.field_j);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -33,15 +33,15 @@ final class es {
         var12 = VoidHunters.field_G;
         try {
           var11_int = -47 / ((param8 + 59) / 50);
-          if (null != pja.field_o) {
+          if (null != SpriteTextureOperation.field_o) {
             PlayerLeave.field_c = 0;
             GetAngularVelocitySustain.field_o = GetAngularVelocitySustain.field_o + 1;
             if (ArmBehaviourFactory.field_a < GetAngularVelocitySustain.field_o) {
               if (param9 != null) {
-                usb.a(param3, param9, pja.field_o, param7, 1, param0, param5);
+                usb.a(param3, param9, SpriteTextureOperation.field_o, param7, 1, param0, param5);
               } else {
                 if (param4 != null) {
-                  GetAutozoomSpeedDivide.a(param0, param1, pja.field_o, (byte) 100, param3, param10, param4, param6, param2, param5, param7);
+                  GetAutozoomSpeedDivide.a(param0, param1, SpriteTextureOperation.field_o, (byte) 100, param3, param10, param4, param6, param2, param5, param7);
                 }
               }
             }
@@ -51,7 +51,7 @@ final class es {
               GetAngularVelocitySustain.field_o = 0;
             }
           }
-          pja.field_o = null;
+          SpriteTextureOperation.field_o = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

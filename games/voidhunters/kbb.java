@@ -369,7 +369,7 @@ final class kbb extends TextureOperation {
         var8 = var20[0];
         var9 = var20[1];
         var10 = var20[2];
-        for (var11 = 0; hob.field_d > var11; var11++) {
+        for (var11 = 0; hob.textureWidth > var11; var11++) {
           this.a((byte) -44, var29[var11], var30[var11], var31[var11]);
           this.field_l = this.field_l + this.field_n;
           this.field_k = this.field_k + this.field_o;

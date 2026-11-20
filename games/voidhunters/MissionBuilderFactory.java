@@ -16,19 +16,19 @@ final class MissionBuilderFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new MissionBuilder());
     }
 
-    final static fm[] a(PlatformService param0, int param1) {
+    final static DisplayMode[] listDisplayModesBlocking(PlatformService param0, int param1) {
         int var5 = 0;
-        fm[] stackIn_4_0 = null;
-        fm[] stackIn_10_0 = null;
-        fm[] stackIn_17_0 = null;
+        DisplayMode[] stackIn_4_0 = null;
+        DisplayMode[] stackIn_10_0 = null;
+        DisplayMode[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        fm[] var4 = null;
-        fm var6 = null;
+        DisplayMode[] var4 = null;
+        DisplayMode var6 = null;
         int var7 = 0;
         PlatformRequest var8 = null;
         int[] var9 = null;
@@ -36,7 +36,7 @@ final class MissionBuilderFactory implements GameStateFactory {
         var7 = VoidHunters.field_G;
         try {
           if (!param0.isFullscreenSupported(0)) {
-            stackIn_4_0 = new fm[]{};
+            stackIn_4_0 = new DisplayMode[]{};
             return stackIn_4_0;
           }
           var8 = param0.listDisplayModes(85);
@@ -44,7 +44,7 @@ final class MissionBuilderFactory implements GameStateFactory {
             BufferedFile.sleep(127, 10L);
           }
           if (2 == var8.status) {
-            stackIn_10_0 = new fm[]{};
+            stackIn_10_0 = new DisplayMode[]{};
             return stackIn_10_0;
           }
           if (param1 != -30334) {
@@ -53,14 +53,14 @@ final class MissionBuilderFactory implements GameStateFactory {
           var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
-          var4 = new fm[var10.length >> 2];
+          var4 = new DisplayMode[var10.length >> 2];
           for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new fm();
+            var6 = new DisplayMode();
             var4[var5] = var6;
-            var6.field_c = var3[var5 << 2];
-            var6.field_a = var3[1 + (var5 << 2)];
-            var6.field_e = var3[2 + (var5 << 2)];
-            var6.field_d = var3[(var5 << 2) + 3];
+            var6.width = var3[var5 << 2];
+            var6.height = var3[1 + (var5 << 2)];
+            var6.bitDepth = var3[2 + (var5 << 2)];
+            var6.refreshRate = var3[(var5 << 2) + 3];
           }
           stackIn_17_0 = var4;
           return stackIn_17_0;

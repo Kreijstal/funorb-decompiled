@@ -24,14 +24,14 @@ final class uga extends qg {
         if (param0 != -10128) {
           uga.d(115);
           if (null != MissionConditionFactory.field_b) {
-            MissionConditionFactory.field_b.field_b = true;
+            MissionConditionFactory.field_b.resizable = true;
             mb.h(1, 117);
             return;
           }
           throw new IllegalStateException("NGR");
         }
         if (null != MissionConditionFactory.field_b) {
-          MissionConditionFactory.field_b.field_b = true;
+          MissionConditionFactory.field_b.resizable = true;
           mb.h(1, 117);
           return;
         }

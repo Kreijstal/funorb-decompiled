@@ -4,7 +4,7 @@
 final class SetMissionTimeLimit extends ConsoleCommand {
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
-        vfa var4 = null;
+        ScreenSizeController var4 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -12,8 +12,8 @@ final class SetMissionTimeLimit extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            var4 = (vfa) null;
-            SetMissionTimeLimit.a((vfa) null, -90);
+            var4 = (ScreenSizeController) null;
+            SetMissionTimeLimit.a((ScreenSizeController) null, -90);
           }
           SetMachineGunEnergyUsed.a(59, 62, arguments[0].intValue(98));
           stackIn_3_0 = new ConsoleValue("void");
@@ -40,15 +40,15 @@ final class SetMissionTimeLimit extends ConsoleCommand {
         if (param2 == -10923) {
           return;
         }
-        vfa var4 = (vfa) null;
-        SetMissionTimeLimit.a((vfa) null, -41);
+        ScreenSizeController var4 = (ScreenSizeController) null;
+        SetMissionTimeLimit.a((ScreenSizeController) null, -41);
     }
 
     SetMissionTimeLimit(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
-    final static void a(vfa param0, int param1) {
+    final static void a(ScreenSizeController param0, int param1) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -61,7 +61,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
           }
           MissionConditionFactory.field_b = param0;
           if (null != MissionConditionFactory.field_b &&
-            MissionConditionFactory.field_b.field_b) {
+            MissionConditionFactory.field_b.resizable) {
             stackIn_7_0 = 1;
           } else {
             stackIn_7_0 = 0;

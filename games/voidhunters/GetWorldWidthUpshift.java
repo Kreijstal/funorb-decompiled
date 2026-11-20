@@ -7,7 +7,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
     static String field_r;
     static int field_q;
 
-    final static void a(java.awt.Frame param0, PlatformService param1, byte param2) {
+    final static void exitFullscreenBlocking(java.awt.Frame param0, PlatformService param1, byte param2) {
         PlatformRequest var3 = null;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;

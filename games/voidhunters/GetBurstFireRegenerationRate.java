@@ -31,11 +31,11 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
         aaa.field_b.shutdown();
     }
 
-    final static Sprite[] a(boolean param0, int param1) {
+    final static Sprite[] createCenterSpriteTile(boolean param0, int param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
         if (param0) {
-          var3[4] = SetMaxShipSize.a(param1, (byte) -113, 64);
+          var3[4] = SetMaxShipSize.createSolidSprite(param1, (byte) -113, 64);
           return var2;
         }
         return (Sprite[]) null;

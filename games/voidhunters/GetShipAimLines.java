@@ -36,12 +36,12 @@ final class GetShipAimLines extends ConsoleCommand {
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         if (param1 == 11343) {
-          lfa.a((byte) 34, param3);
+          ColorizeTextureOperation.a((byte) 34, param3);
           GraphicsToolkit.a(param3, param0, param2, 5);
           return;
         }
         GetShipAimLines.a(72, 8, 14, true);
-        lfa.a((byte) 34, param3);
+        ColorizeTextureOperation.a((byte) 34, param3);
         GraphicsToolkit.a(param3, param0, param2, 5);
     }
 

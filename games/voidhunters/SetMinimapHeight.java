@@ -35,7 +35,7 @@ final class SetMinimapHeight extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          vv.field_c = arguments[0].intValue(26);
+          UiVisualStyle.field_c = arguments[0].intValue(26);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

@@ -69,7 +69,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             }
             var6 = CarouselPlayerEventFactory.a(var4_ref_String, false);
             var7 = var1.readString(-1);
-            var8 = jwa.normalizeName(false, (CharSequence) ((Object) var4_ref_String));
+            var8 = ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -127,16 +127,16 @@ final class NebulaFieldFactory implements GameStateFactory {
           }
           var4_ref_StringLifetime1 = var1.readString(-1);
           var5Lifetime1 = var1.readString(-1);
-          var6Lifetime1 = di.a(var4_ref_StringLifetime1, 0);
+          var6Lifetime1 = FlipTextureOperation.a(var4_ref_StringLifetime1, 0);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = di.a(var5Lifetime1, 0);
+            var6Lifetime1 = FlipTextureOperation.a(var5Lifetime1, 0);
             if (null != var6Lifetime1) {
-              ae.field_f.a(var6Lifetime1, (byte) -31, (long)jwa.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              ae.field_f.a(var6Lifetime1, (byte) -31, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new vu();
-            ae.field_f.a(var6Lifetime1, (byte) -112, (long)jwa.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            ae.field_f.a(var6Lifetime1, (byte) -112, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = GetBoostersCooldown.field_p;
             GetBoostersCooldown.field_p = GetBoostersCooldown.field_p + 1;
             var6Lifetime1.field_yb = fieldTemp$1;

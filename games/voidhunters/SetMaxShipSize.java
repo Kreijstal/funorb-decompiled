@@ -4,7 +4,7 @@
 final class SetMaxShipSize extends ConsoleCommand {
     static int field_o;
 
-    final static Sprite a(int param0, byte param1, int param2) {
+    final static Sprite createSolidSprite(int param0, byte param1, int param2) {
         int var5 = VoidHunters.field_G;
         Sprite var3 = new Sprite(param2, param2);
         int var4 = 0;

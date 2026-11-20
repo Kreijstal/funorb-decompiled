@@ -34,7 +34,7 @@ final class GetThrusterForce extends ConsoleCommand {
     }
 
     final static void a(int param0) {
-        me.field_q.setBounds(0, 123, DualLinkNode.field_f.width - (!GetGrapplingHooksDamageableBySourcePlayer.field_o ? 0 : 4 + (ResourceNode.field_a + 40)), 0, 18);
+        TiledSpriteTextureOperation.field_q.setBounds(0, 123, DualLinkNode.field_f.width - (!GetGrapplingHooksDamageableBySourcePlayer.field_o ? 0 : 4 + (ResourceNode.field_a + 40)), 0, 18);
         GetDebrisGrabbingRange.field_o.setBounds(-40 + DualLinkNode.field_f.width + (-ResourceNode.field_a - 2), -29, 42 + ResourceNode.field_a, param0, 18);
         CarouselSlot.field_a.setBoundsAndLayout(DualLinkNode.field_f.width, 2, -1, DualLinkNode.field_f.height - 20, 20, 0, ResourceNode.field_a);
     }

@@ -1,0 +1,130 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RangeTextureOperation extends TextureOperation {
+    private int lowerBound;
+    private int range;
+    private int upperBound;
+    static String field_k;
+
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
+        int var4_int = 0;
+        int var5 = 0;
+        PacketBuffer var6 = null;
+        boolean stackIn_13_1 = false;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        var5 = VoidHunters.field_G;
+        try {
+          if (param1 >= -60) {
+            var6 = (PacketBuffer) null;
+            this.decodeParameter(61, -46, (PacketBuffer) null);
+          }
+          var4_int = param0;
+          if (var4_int == 0) {
+            this.lowerBound = param2.readUnsignedShort(1869);
+          } else {
+            if (var4_int != 1) {
+              if (var4_int == 2) {
+                stackIn_13_1 = (param2.readUnsignedByte((byte) -93) == 1);
+                this.field_g = stackIn_13_1;
+              }
+            } else {
+              this.upperBound = param2.readUnsignedShort(1869);
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_17_0 = var4;
+          stackIn_17_1 = new StringBuilder().append("koa.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    public static void clearSharedReferences(int param0) {
+        if (param0 < 9) {
+          RangeTextureOperation.clearSharedReferences(-110);
+        }
+        field_k = null;
+    }
+
+    final int[] getMonochromeRow(int param0, boolean param1) {
+        int[] var4 = null;
+        int var5 = 0;
+        int var6 = VoidHunters.field_G;
+        if (!param1) {
+          return (int[]) null;
+        }
+        int[] var7 = this.field_f.getRow((byte) 117, param0);
+        int[] var3 = var7;
+        if (this.field_f.field_e) {
+          var4 = this.getInputMonochromeRow(0, param0, 255);
+          for (var5 = 0; var5 < hob.textureWidth; var5++) {
+            var7[var5] = (var4[var5] * this.range >> 12) + this.lowerBound;
+          }
+        }
+        return var3;
+    }
+
+    final int[][] getColorRow(int param0, int param1) {
+        int[][] var28 = null;
+        int[] var29 = null;
+        int[] var30 = null;
+        int[] var31 = null;
+        int[] var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int var11 = 0;
+        int var12 = VoidHunters.field_G;
+        if (param0 != 255) {
+          this.lowerBound = 63;
+        }
+        int[][] var20 = this.field_d.getRow(param1, (byte) -126);
+        int[][] var15 = var20;
+        int[][] var13 = var15;
+        int[][] var3 = var13;
+        if (this.field_d.field_g) {
+          var28 = this.getInputColorRow((byte) 65, 0, param1);
+          var29 = var28[0];
+          var30 = var28[1];
+          var31 = var28[2];
+          var8 = var20[0];
+          var9 = var20[1];
+          var10 = var20[2];
+          for (var11 = 0; var11 < hob.textureWidth; var11++) {
+            var8[var11] = (var29[var11] * this.range >> 12) + this.lowerBound;
+            var9[var11] = (this.range * var30[var11] >> 12) + this.lowerBound;
+            var10[var11] = (this.range * var31[var11] >> 12) + this.lowerBound;
+          }
+        }
+        return var13;
+    }
+
+    public RangeTextureOperation() {
+        super(1, false);
+        this.upperBound = 3072;
+        this.range = 2048;
+        this.lowerBound = 1024;
+    }
+
+    final void postDecode(byte param0) {
+        this.range = -this.lowerBound + this.upperBound;
+        if (param0 > -35) {
+          this.getMonochromeRow(3, false);
+        }
+    }
+
+    static {
+        field_k = "Waiting for textures";
+    }
+}

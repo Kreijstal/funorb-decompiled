@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MissionConditionFactory implements GameStateFactory {
-    static vfa field_b;
+    static ScreenSizeController field_b;
     static QuickChatDynamicCommand field_c;
     static Widget field_a;
 

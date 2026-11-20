@@ -162,7 +162,7 @@ final class GetUseRectOutline extends ConsoleCommand {
             }
           }
         }
-        me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
+        TiledSpriteTextureOperation.a(param2, param6, param4, param9, param5, param3, (byte) 119);
         SetTorpedoProjectiles.a(param6, (byte) 1, WaterTextures.field_f, param4, param5);
         GetMissionTerrainNebulaProbability.field_o = GetMissionTerrainNebulaProbability.field_o + 1;
     }
@@ -206,7 +206,7 @@ final class GetUseRectOutline extends ConsoleCommand {
           return;
         }
         if (MessageFactory.field_c == null) {
-          MessageFactory.field_c = drb.a(true, 6);
+          MessageFactory.field_c = ConstantMonochromeTextureOperation.a(true, 6);
         }
         if (!MessageFactory.field_c.field_d) {
           return;

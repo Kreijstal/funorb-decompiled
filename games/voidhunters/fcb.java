@@ -51,7 +51,7 @@ final class fcb implements oob {
         ComponentCollision.a("creating request queue", (byte) -84);
         OpenGlGpuTexture3D.field_m = new wsb(82);
         ComponentCollision.a("requesting basic common graphics group", (byte) -68);
-        OpenGlGpuTexture3D.field_m.a(var4, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
+        OpenGlGpuTexture3D.field_m.a(var4, ConstantMonochromeTextureOperation.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
         ComponentCollision.a("requesting common arialish12", (byte) -66);
         OpenGlGpuTexture3D.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "arialish12", TorpedoWeaponDefinition.field_b);
         ComponentCollision.a("requesting common arialish12 fontmetric", (byte) -59);
@@ -72,15 +72,15 @@ final class fcb implements oob {
         if (param0 != 1) {
           this.field_a = (ResourceArchive) null;
         }
-        OpenGlGpuTexture3D.field_m.a(this.field_i, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
+        OpenGlGpuTexture3D.field_m.a(this.field_i, ConstantMonochromeTextureOperation.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
         ComponentCollision.a("requesting jpeg graphics", (byte) -87);
         OpenGlGpuTexture3D.field_m.a(SetTorpedoProjectileOndamageParticles.field_o, -1, SetTorpedoProjectileOndamageParticles.field_o, this.field_d);
         ComponentCollision.a("requesting font graphics", (byte) -64);
         OpenGlGpuTexture3D.field_m.a(this.field_e, GetBombletSprayAimarc.field_p, false, "basic", TorpedoWeaponDefinition.field_b);
         ComponentCollision.a("requesting textures", (byte) -107);
-        OpenGlGpuTexture3D.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_a);
+        OpenGlGpuTexture3D.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, RangeTextureOperation.field_k, this.field_a);
         ComponentCollision.a("requesting texturemetrics", (byte) -66);
-        OpenGlGpuTexture3D.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_m);
+        OpenGlGpuTexture3D.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, RangeTextureOperation.field_k, this.field_m);
         ComponentCollision.a("requesting extradata1", (byte) -94);
         OpenGlGpuTexture3D.field_m.a(lwa.field_vb, -1, SetUseLines.field_q, this.field_f);
         ComponentCollision.a("requesting extradata2", (byte) -77);
@@ -284,7 +284,7 @@ final class fcb implements oob {
           kbb.a(var12, this.field_e, this.field_i, (byte) 88, var11);
           cbb.a(this.field_d, param0 ^ 57, this.field_i);
           ko.field_e = WorldPoint.a("frame", -124, "basic", this.field_i);
-          vfa.field_d = WorldPoint.a("frame_filled", 52, "basic", this.field_i);
+          ScreenSizeController.field_d = WorldPoint.a("frame_filled", 52, "basic", this.field_i);
           dra.field_v = WorldPoint.a("button_frame", param0 ^ 21, "basic", this.field_i);
           SetDebrisGroupColour.field_o = WorldPoint.a("button_raised", -95, "basic", this.field_i);
           WorldPoint.a("button_depressed", 80, "basic", this.field_i);
@@ -315,7 +315,7 @@ final class fcb implements oob {
           }
           cma.a(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.field_b, var15, UiComponent.field_o, DebugSendable.field_d);
           kl.field_c = SetSniperCannonProjectiles.a(this.field_i, "lobby_game_logo", "basic", true);
-          hk.b(200, -100);
+          EdgeMagnitudeTextureOperation.b(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);
           SetMomentOfInertiaPredivideDownshift.a(mab.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);
           var3 = null;

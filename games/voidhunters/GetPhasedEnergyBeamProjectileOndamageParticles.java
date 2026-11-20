@@ -57,7 +57,7 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
           }
           param0.readUnsignedByte((byte) -96);
           var2_int = param0.readUnsignedByte((byte) -108);
-          var3 = SetPhasedEnergyBeamProjectiles.a(false, var2_int);
+          var3 = SetPhasedEnergyBeamProjectiles.createTextureOperation(false, var2_int);
           var3.field_h = param0.readUnsignedByte((byte) -114);
           var4 = param0.readUnsignedByte((byte) -117);
           for (var5 = 0; var5 < var4; var5++) {

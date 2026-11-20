@@ -1,0 +1,137 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NormalMapTextureOperation extends TextureOperation {
+    private boolean biasUnsigned;
+    private int heightScale;
+    static PlatformService field_k;
+    static String field_j;
+
+    final void decodeParameter(int param0, int param1, PacketBuffer param2) {
+        RuntimeException runtimeException = null;
+        int var4_int = 0;
+        int var5 = 0;
+        boolean stackIn_10_1 = false;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = VoidHunters.field_G;
+        try {
+          if (param1 >= -60) {
+            field_k = (PlatformService) null;
+          }
+          var4_int = param0;
+          if (var4_int == 0) {
+            this.heightScale = param2.readUnsignedShort(1869);
+            return;
+          }
+          if (var4_int == 1) {
+            stackIn_10_1 = (param2.readUnsignedByte((byte) -118) == 1);
+            this.biasUnsigned = stackIn_10_1;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_14_0 = runtimeException;
+          stackIn_14_1 = new StringBuilder().append("gia.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    public NormalMapTextureOperation() {
+        super(1, false);
+        this.heightScale = 4096;
+        this.biasUnsigned = true;
+    }
+
+    final int[][] getColorRow(int param0, int param1) {
+        int[] var41 = null;
+        int[] var5 = null;
+        int[] var40 = null;
+        int[] var42 = null;
+        int[] var43 = null;
+        int[] var44 = null;
+        int var10 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int var13 = 0;
+        int var12 = 0;
+        int var11 = 0;
+        int var21 = VoidHunters.field_G;
+        int[][] var29 = this.field_d.getRow(param1, (byte) -85);
+        int[][] var23 = var29;
+        int[][] var22 = var23;
+        int[][] var3 = var22;
+        if (param0 != 255) {
+          return (int[][]) null;
+        }
+        if (this.field_d.field_g) {
+          var41 = this.getInputMonochromeRow(0, wf.textureHeightMask & param1 - 1, 255);
+          var5 = this.getInputMonochromeRow(0, param1, 255);
+          var40 = this.getInputMonochromeRow(0, 1 + param1 & wf.textureHeightMask, 255);
+          var42 = var29[0];
+          var43 = var29[1];
+          var44 = var29[2];
+          for (var10 = 0; hob.textureWidth > var10; var10++) {
+            var14 = this.heightScale * (var40[var10] - var41[var10]);
+            var15 = (var5[SetMassDriverEnergyUsed.field_q & var10 + 1] - var5[SetMassDriverEnergyUsed.field_q & -1 + var10]) * this.heightScale;
+            var16 = var15 >> 12;
+            var17 = var14 >> 12;
+            var18 = var16 * var16 >> 12;
+            var19 = var17 * var17 >> 12;
+            var20 = (int)(Math.sqrt((double)((float)(4096 + (var19 + var18)) / 4096.0f)) * 4096.0);
+            if (var20 == 0) {
+              var13 = 0;
+              var12 = 0;
+              var11 = 0;
+            } else {
+              var12 = var14 / var20;
+              var13 = 16777216 / var20;
+              var11 = var15 / var20;
+            }
+            if (this.biasUnsigned) {
+              var13 = 2048 + (var13 >> 1);
+              var11 = 2048 + (var11 >> 1);
+              var12 = 2048 + (var12 >> 1);
+            }
+            var42[var10] = var11;
+            var43[var10] = var12;
+            var44[var10] = var13;
+          }
+          return var22;
+        }
+        return var22;
+    }
+
+    public static void clearSharedReferences(boolean param0) {
+        field_j = null;
+        field_k = null;
+        if (param0) {
+          NormalMapTextureOperation.clearSharedReferences(true);
+        }
+    }
+
+    final static int d(int param0) {
+        if (param0 != -2) {
+          field_j = (String) null;
+          return OpenGlFramebuffer.field_b;
+        }
+        return OpenGlFramebuffer.field_b;
+    }
+
+    static {
+        field_j = "Boosters";
+    }
+}

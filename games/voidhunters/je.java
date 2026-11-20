@@ -34,7 +34,7 @@ final class je {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = jwa.normalizeName(false, param1);
+            var4 = ConstantColorTextureOperation.normalizeName(false, param1);
             if (var4 != null &&
               var4.length() >= 1) {
               if (MouseWheelInput.isNameSeparator(var4.charAt(0), 104)) {
@@ -89,7 +89,7 @@ final class je {
     }
 
     final static void a(byte param0) {
-        lsa var1 = (lsa) (vfa.field_p.first(0));
+        lsa var1 = (lsa) (ScreenSizeController.field_p.first(0));
         if (param0 <= 108) {
           je.clearSharedReferences((byte) -96);
         }

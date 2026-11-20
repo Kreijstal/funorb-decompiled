@@ -29,7 +29,7 @@ final class hqb {
               if (7 != param1) {
                 return false;
               }
-              var4_ref = iab.a(param0, this.field_g, this.field_a, (byte) -76);
+              var4_ref = GameCanvasResizeListener.a(param0, this.field_g, this.field_a, (byte) -76);
             } else {
               var4_ref = SetExplosionPushMultiplier.a(2, this.field_a, param0);
             }
@@ -184,7 +184,7 @@ final class hqb {
             param1 == 2) && iwa.field_b == 2) {
             var8 = this.b((byte) -63);
             var4 = var8;
-            var5 = di.a(this.field_a, 0);
+            var5 = FlipTextureOperation.a(this.field_a, 0);
             var6 = SetUseLines.a((byte) -94, this.field_a) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
@@ -266,7 +266,7 @@ final class hqb {
           var3_int = param2.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = jwa.normalizeName(false, param2);
+            var4 = ConstantColorTextureOperation.normalizeName(false, param2);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!MouseWheelInput.isNameSeparator(var4.charAt(0), 56) &&
@@ -423,7 +423,7 @@ final class hqb {
           this.field_c = param0.field_a;
           if (param0.field_a == 0) {
             if (kib.field_d == 0) {
-              this.field_i.addItem(vv.field_a, (byte) -53, 12);
+              this.field_i.addItem(UiVisualStyle.field_a, (byte) -53, 12);
             }
             this.field_i.addItem(tda.field_M, (byte) -53, 13);
           }

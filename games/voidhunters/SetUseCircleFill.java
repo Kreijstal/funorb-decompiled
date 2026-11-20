@@ -20,7 +20,7 @@ final class SetUseCircleFill extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          lfa.field_j = arguments[0].booleanValue(false);
+          ColorizeTextureOperation.field_j = arguments[0].booleanValue(false);
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 113);

@@ -78,18 +78,18 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
             jaggl.OpenGL.glAttachObjectARB(var3_long, param0[var5].field_c);
           }
           jaggl.OpenGL.glLinkProgramARB(var3_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, grb.field_j, 0);
-          if (0 == grb.field_j[0]) {
-            if (0 == grb.field_j[0]) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, BoxBlurTextureOperation.field_j, 0);
+          if (0 == BoxBlurTextureOperation.field_j[0]) {
+            if (0 == BoxBlurTextureOperation.field_j[0]) {
               System.out.println("Shader linking failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, grb.field_j, 1);
-            if (1 < grb.field_j[1]) {
-              var11 = new byte[grb.field_j[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var3_long, grb.field_j[1], grb.field_j, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, BoxBlurTextureOperation.field_j, 1);
+            if (1 < BoxBlurTextureOperation.field_j[1]) {
+              var11 = new byte[BoxBlurTextureOperation.field_j[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var3_long, BoxBlurTextureOperation.field_j[1], BoxBlurTextureOperation.field_j, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (grb.field_j[0] == 0) {
+            if (BoxBlurTextureOperation.field_j[0] == 0) {
               var7 = 0;
               var5Lifetime1 = var7;
               while (var7 < param0.length) {

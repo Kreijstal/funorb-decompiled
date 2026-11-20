@@ -120,10 +120,10 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetHealthBarHeight.field_p[0] = uob.field_f;
           SetHealthBarHeight.field_p[4] = GetCountermeasuresCooldown.field_o;
           DualLinkNode.field_f = new Widget(0L, (Widget) null);
-          me.field_q = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
+          TiledSpriteTextureOperation.field_q = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GetDebrisGrabbingRange.field_o = new Widget(0L, ObjectiveMarker.field_d, GetMessageMaxage.field_p);
           CarouselSlot.field_a = new ScrollPaneWidget(0L, new Widget(0L, (Widget) null), UiFocusableComponent.field_w, GetUseNiceTrails.field_o);
-          DualLinkNode.field_f.addChild(-561, me.field_q);
+          DualLinkNode.field_f.addChild(-561, TiledSpriteTextureOperation.field_q);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             DualLinkNode.field_f.addChild(param1 - 10792, GetDebrisGrabbingRange.field_o);
           }

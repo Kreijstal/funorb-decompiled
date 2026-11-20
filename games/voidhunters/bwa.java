@@ -159,7 +159,7 @@ final class bwa extends Widget {
         this.field_xb = -2;
         try {
           this.field_yb = param12;
-          this.field_Cb = new Widget(0L, param6, hpb.field_j.toUpperCase());
+          this.field_Cb = new Widget(0L, param6, KaleidoscopeTextureOperation.field_j.toUpperCase());
           this.field_Cb.field_F = 1;
           this.addChild(-561, this.field_Cb);
           this.field_zb = new Widget(0L, param7);

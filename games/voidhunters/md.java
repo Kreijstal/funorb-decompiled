@@ -47,7 +47,7 @@ final class md extends TextureOperation {
         int var16 = VoidHunters.field_G;
         int[][] var3 = this.field_d.getRow(param1, (byte) -92);
         if (this.field_d.field_g) {
-          var4 = hob.field_d;
+          var4 = hob.textureWidth;
           var5 = GetTorpedoReload.field_o;
           var29 = new int[var5][var4];
           var30 = this.field_d.getFullImage(param0 - 134);
@@ -58,7 +58,7 @@ final class md extends TextureOperation {
             var11 = var31[0];
             var12 = var31[1];
             var13 = var31[2];
-            for (var14 = 0; var14 < hob.field_d; var14++) {
+            for (var14 = 0; var14 < hob.textureWidth; var14++) {
               var15 = var32[var14];
               var13[var14] = dla.a(255, var15) << 4;
               var12[var14] = dla.a(var15, 65280) >> 4;
@@ -113,7 +113,7 @@ final class md extends TextureOperation {
                     this.field_i[var4_int] = (ev) ((Object) AwardVictoryToTeamAction.a(32, param2));
                   } else {
                     if (3 == var6) {
-                      this.field_i[var4_int] = (ev) ((Object) uea.a(param2, -87));
+                      this.field_i[var4_int] = (ev) ((Object) UiStatefulStyle.a(param2, -87));
                     }
                   }
                 } else {
@@ -162,10 +162,10 @@ final class md extends TextureOperation {
         RuntimeException var3 = null;
         var9 = VoidHunters.field_G;
         try {
-          var3_int = hob.field_d;
+          var3_int = hob.textureWidth;
           var4 = GetTorpedoReload.field_o;
           AdjustBodyComponentsAction.a(param1, -98);
-          GetUseDetailLines.a(wf.field_d, 0, param0, 0, SetMassDriverEnergyUsed.field_q);
+          GetUseDetailLines.a(wf.textureHeightMask, 0, param0, 0, SetMassDriverEnergyUsed.field_q);
           if (this.field_i != null) {
             for (var5 = 0; var5 < this.field_i.length; var5++) {
               var6 = this.field_i[var5];

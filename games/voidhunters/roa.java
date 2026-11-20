@@ -843,7 +843,7 @@ final class roa extends ka {
             param1.a((byte) -37, false);
           }
           if (null != param1.field_g &&
-            lnb.a(param2, this.field_s, false)) {
+            TileTextureOperation.a(param2, this.field_s, false)) {
             param1.a(-126);
           }
           if (null != param1.field_y &&

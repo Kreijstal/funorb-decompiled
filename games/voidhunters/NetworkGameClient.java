@@ -124,9 +124,9 @@ abstract class NetworkGameClient extends GameApplet {
           if (psb.field_b == null) {
             var6 = ThrusterBehaviourFactory.b(-28941);
             var4 = var6.getSize();
-            MissionConditionFactory.field_b.c(param1 ^ 109, var4.width, var4.height);
+            MissionConditionFactory.field_b.setAvailableSize(param1 ^ 109, var4.width, var4.height);
           }
-          MissionConditionFactory.field_b.d(param1 + 3899);
+          MissionConditionFactory.field_b.update(param1 + 3899);
         }
         GetMassDriverFireForce.e((byte) -101);
         ts.a(1001);
@@ -144,7 +144,7 @@ abstract class NetworkGameClient extends GameApplet {
           var3 = 1200 * SetGrapplingHookRopeBreakLength.e(204);
           if (this.field_s ||
             !(var3 >= SetPedrosRepairModeSwitchtime.a(32)) &&
-            !(gia.d(-2) <= var3)) {
+            !(NormalMapTextureOperation.d(-2) <= var3)) {
             this.field_s = false;
             FighterBayWeaponDefinition.l(-123);
             NetworkArchiveRequest.f((byte) -119);

@@ -25,7 +25,7 @@ final class ckb extends TextureOperation {
           var6 = var14[0];
           var7 = var14[1];
           var8 = var14[2];
-          for (var9 = 0; var9 < hob.field_d; var9++) {
+          for (var9 = 0; var9 < hob.textureWidth; var9++) {
             var4 = var17[var9] >> 4;
             if (var4 < 0) {
               var4 = 0;

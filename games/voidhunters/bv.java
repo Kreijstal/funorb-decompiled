@@ -564,7 +564,7 @@ final class bv {
               var16.addCondition((byte) -106, (MissionCondition) (new BodyDestroyedCondition(var14.getId(false))));
               var16.addAction(new IncrementVariableAction(0, 1), true);
               var16.addAction(new RemoveEventAction(), true);
-              param1.world.a(var16, -38);
+              param1.world.addMissionEvent(var16, -38);
             }
           }
           return;
@@ -1020,7 +1020,7 @@ final class bv {
                         if (this.b(8, -43)) {
                           var22 = 1024;
                           var23_arrayLifetime1 = new int[]{var17 - var22, var17 + var22, -var22 + var18, var18 + var22};
-                          this.a(var23_arrayLifetime1, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[8], 255), param0, true, pja.field_i, var16, (byte) -115);
+                          this.a(var23_arrayLifetime1, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[8], 255), param0, true, SpriteTextureOperation.field_i, var16, (byte) -115);
                         }
                       }
                     }

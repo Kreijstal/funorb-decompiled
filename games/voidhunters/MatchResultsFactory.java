@@ -6,8 +6,8 @@ final class MatchResultsFactory implements GameStateFactory {
     static int field_b;
 
     final static void b(byte param0) {
-        if (di.field_l != null) {
-          di.field_l.requestNewestBlackBoxRecording(-32339, RequestNewestBlackboxRecording.field_p);
+        if (FlipTextureOperation.field_l != null) {
+          FlipTextureOperation.field_l.requestNewestBlackBoxRecording(-32339, RequestNewestBlackboxRecording.field_p);
         }
         int var1 = -93 % ((param0 + 11) / 55);
     }

@@ -11,7 +11,7 @@ final class hnb extends iw implements UiActionListener {
     private UiFocusableComponent field_Q;
     private UiFocusableComponent field_W;
     private UiFocusableComponent[] field_T;
-    private fm[] field_N;
+    private DisplayMode[] field_N;
     private UiFocusableComponent field_V;
     private UiComboBox field_P;
     private UiFocusableComponent field_O;
@@ -78,7 +78,7 @@ final class hnb extends iw implements UiActionListener {
     private final void a(boolean param0, UiFocusableComponent param1) {
         UiFocusableComponent var3 = null;
         int var4 = 0;
-        fm var5 = null;
+        DisplayMode var5 = null;
         UiFocusableComponent stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_20_0 = null;
@@ -101,8 +101,8 @@ final class hnb extends iw implements UiActionListener {
               if (this.field_P != null) {
                 var4 = this.field_P.getSelectedIndex(0);
                 var5 = this.field_N[var4];
-                if (MissionConditionFactory.field_b.field_q == var5.field_c &&
-                  MissionConditionFactory.field_b.field_e == var5.field_a) {
+                if (MissionConditionFactory.field_b.fullscreenWidth == var5.width &&
+                  MissionConditionFactory.field_b.fullscreenHeight == var5.height) {
                   this.g(-99);
                   return;
                 }
@@ -166,7 +166,7 @@ final class hnb extends iw implements UiActionListener {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        fm[] var3_ref_fm__ = null;
+        DisplayMode[] var3_ref_fm__ = null;
         int var4 = 0;
         int var5 = 0;
         String[] var5_ref_String__ = null;
@@ -174,7 +174,7 @@ final class hnb extends iw implements UiActionListener {
         String var6 = null;
         UiFocusableComponent var6_ref = null;
         UiComponent var7 = null;
-        fm var8 = null;
+        DisplayMode var8 = null;
         String var10 = null;
         Object stackIn_50_0Lifetime1;
         usb stackIn_52_1Lifetime1;
@@ -185,20 +185,20 @@ final class hnb extends iw implements UiActionListener {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_N = MissionBuilderFactory.a(SetTorpedoProjectiles.field_o, -30334);
+          this.field_N = MissionBuilderFactory.listDisplayModesBlocking(SetTorpedoProjectiles.field_o, -30334);
           if (0 < this.field_N.length) {
             for (var2_int = 0; var2_int < this.field_N.length; var2_int++) {
               if (null != this.field_N[var2_int]) {
                 for (var3 = 1 + var2_int; this.field_N.length > var3; var3++) {
                   if (null != this.field_N[var3] &&
-                    this.field_N[var3].field_c == this.field_N[var2_int].field_c &&
-                    this.field_N[var2_int].field_a == this.field_N[var3].field_a) {
+                    this.field_N[var3].width == this.field_N[var2_int].width &&
+                    this.field_N[var2_int].height == this.field_N[var3].height) {
                     this.field_N[var3] = null;
                   }
                 }
                 if (MissionConditionFactory.field_b != null &&
                   this.field_N[var2_int] != null &&
-                  !MissionConditionFactory.field_b.b(this.field_N[var2_int].field_a, this.field_N[var2_int].field_c, 0)) {
+                  !MissionConditionFactory.field_b.isValidSize(this.field_N[var2_int].height, this.field_N[var2_int].width, 0)) {
                   this.field_N[var2_int] = null;
                 }
               }
@@ -210,7 +210,7 @@ final class hnb extends iw implements UiActionListener {
               }
             }
             var3_ref_fm__ = this.field_N;
-            this.field_N = new fm[var2_int];
+            this.field_N = new DisplayMode[var2_int];
             var4 = 0;
             for (var5 = 0; var5 < var3_ref_fm__.length; var5++) {
               if (null != var3_ref_fm__[var5]) {
@@ -231,7 +231,7 @@ final class hnb extends iw implements UiActionListener {
           this.field_J = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
             if (MissionConditionFactory.field_b != null) {
-              stackIn_48_0 = (MissionConditionFactory.field_b.b((byte) -17)) ? 1 : 0;
+              stackIn_48_0 = (MissionConditionFactory.field_b.isResizeMemoryRestricted((byte) -17)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -286,17 +286,17 @@ final class hnb extends iw implements UiActionListener {
             for (var7_int = 0; this.field_N.length > var7_int; var7_int++) {
               var8 = this.field_N[var7_int];
               if (psb.field_b != null &&
-                var8.field_c == MissionConditionFactory.field_b.field_q &&
-                var8.field_a == MissionConditionFactory.field_b.field_e) {
+                var8.width == MissionConditionFactory.field_b.fullscreenWidth &&
+                var8.height == MissionConditionFactory.field_b.fullscreenHeight) {
                 var6_int = var7_int;
               }
-              var5_ref_String__[var7_int] = var8.field_c + "<times>" + var8.field_a;
+              var5_ref_String__[var7_int] = var8.width + "<times>" + var8.height;
             }
             this.field_P = new UiComboBox(var5_ref_String__, var6_int, 150);
             this.field_P.setBounds(this.field_L.x + this.field_S.x, 126, 18, 1, -19 + (this.field_L.height + this.field_S.y + this.field_L.y));
             this.children.addFirst(this.field_P, (byte) -55);
           }
-          this.field_Q = this.a(wv.field_l, (UiListener) (this), -14);
+          this.field_Q = this.a(TextureSourceOperation.field_l, (UiListener) (this), -14);
           var5Lifetime1 = this.field_Q.width / 2 + this.field_Q.x;
           this.field_Q.width = 150;
           this.field_Q.x = -this.field_Q.width + (var5Lifetime1 - 20);
@@ -646,7 +646,7 @@ final class hnb extends iw implements UiActionListener {
           String var3 = (String) null;
           hnb.a((byte) -60, (String) null);
         }
-        if (MissionConditionFactory.field_b != null && MissionConditionFactory.field_b.field_b &&
+        if (MissionConditionFactory.field_b != null && MissionConditionFactory.field_b.resizable &&
           null != this.field_R) {
           return this.field_R;
         }
@@ -682,7 +682,7 @@ final class hnb extends iw implements UiActionListener {
               if (null != this.field_P) {
                 var2 = this.field_P.getSelectedIndex(0);
                 if (var2 >= 0) {
-                  MissionConditionFactory.field_b.a(this.field_N[var2].field_a, 480, this.field_N[var2].field_c);
+                  MissionConditionFactory.field_b.setFullscreenSize(this.field_N[var2].height, 480, this.field_N[var2].width);
                 }
                 SetReadyRoomMutatorTime.a(2, true);
                 this.field_v.a(false, new tda(this.field_v));

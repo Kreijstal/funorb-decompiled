@@ -249,7 +249,7 @@ abstract class DeveloperConsole implements DeveloperConsoleMarker {
           this.completionSuggestions = (String[]) null;
         }
         Widget var4 = new Widget(0L, (Widget) null);
-        var4.field_gb = SetBurstFireReload.a(-26998, param1, param2);
+        var4.field_gb = SetBurstFireReload.createBorderedSpriteTiles(-26998, param1, param2);
         return var4;
     }
 
@@ -269,7 +269,7 @@ abstract class DeveloperConsole implements DeveloperConsoleMarker {
           return (Widget) null;
         }
         Widget var3 = new Widget(0L, (Widget) null);
-        var3.field_gb = GetBurstFireRegenerationRate.a(true, param1);
+        var3.field_gb = GetBurstFireRegenerationRate.createCenterSpriteTile(true, param1);
         return var3;
     }
 
@@ -384,7 +384,7 @@ abstract class DeveloperConsole implements DeveloperConsoleMarker {
     private final Widget createBackgroundWidget(int param0, byte param1) {
         int var3 = -103 / ((param1 + 68) / 35);
         Widget var4 = new Widget();
-        var4.field_gb = SetBurstFireReload.a(-26998, 0, param0);
+        var4.field_gb = SetBurstFireReload.createBorderedSpriteTiles(-26998, 0, param0);
         return var4;
     }
 

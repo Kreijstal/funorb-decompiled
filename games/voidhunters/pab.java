@@ -6,7 +6,7 @@ final class pab extends DualLinkNode {
     static int field_m;
     byte[] field_l;
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void setGameCanvasSize(int param0, int param1, byte param2) {
         GetDebrisSurvives.field_p = param1;
         GetPhasedEnergyBeamFireForce.field_p = param1;
         if (param2 < -27) {

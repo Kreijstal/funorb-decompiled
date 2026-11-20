@@ -8,13 +8,13 @@ final class ul {
     final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = SetMaxShipSize.a(param0, (byte) -119, param2);
+        Sprite dupTemp$0 = SetMaxShipSize.createSolidSprite(param0, (byte) -119, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = SetMaxShipSize.a(param3, (byte) -125, param2);
+        Sprite dupTemp$1 = SetMaxShipSize.createSolidSprite(param3, (byte) -125, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -22,7 +22,7 @@ final class ul {
           field_b = (Widget[]) null;
         }
         if (param1 != 0) {
-          var6[4] = SetMaxShipSize.a(param1, (byte) -116, 64);
+          var6[4] = SetMaxShipSize.createSolidSprite(param1, (byte) -116, 64);
         }
         return var5;
     }

@@ -80,7 +80,7 @@ final class MidiNote extends IntrusiveNode {
             field_m = (QuickChatMenuWidget) null;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            fm.field_b[var1_intLifetime1] = 0L;
+            DisplayMode.field_b[var1_intLifetime1] = 0L;
           }
           SetCountermeasureLauncherAimspeed.field_p = 0;
         } catch (RuntimeException runtimeException) {

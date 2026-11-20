@@ -74,7 +74,7 @@ final class OpenGlUnderwaterMaterialEffect extends GpuMaterialEffect {
         this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
         this.toolkit.setRgbCombineSource(0, pea.field_d, param0 ^ 2);
         this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
-        this.toolkit.setAlphaCombineSource(0, (byte) -104, pja.field_l);
+        this.toolkit.setAlphaCombineSource(0, (byte) -104, SpriteTextureOperation.field_l);
         this.toolkit.setActiveTextureUnit(0, -93);
         if (param0 != 5) {
           this.field_j = (OpenGlArbProgram) null;
@@ -228,8 +228,8 @@ final class OpenGlUnderwaterMaterialEffect extends GpuMaterialEffect {
             if (!this.field_f) {
               this.toolkit.setTexture(this.toolkit.field_Q, -108);
               this.toolkit.setTextureCombineMode(-120, 1);
-              this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
-              this.toolkit.setAlphaCombineSource(0, (byte) -74, pja.field_l);
+              this.toolkit.setRgbCombineSource(0, SpriteTextureOperation.field_l, 7);
+              this.toolkit.setAlphaCombineSource(0, (byte) -74, SpriteTextureOperation.field_l);
               this.field_f = true;
             }
           }

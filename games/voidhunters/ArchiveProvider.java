@@ -51,7 +51,7 @@ abstract class ArchiveProvider {
               var6 = (qw) (NetworkGameClient.field_y.next((byte) 127));
             }
             var6_int = uv.a(128, param2);
-            var7Lifetime1 = pja.b((byte) 95, param2, param1);
+            var7Lifetime1 = SpriteTextureOperation.b((byte) 95, param2, param1);
             if (param5 != 256) {
               var7Lifetime1 = var7Lifetime1 * param5 >> 8;
             }

@@ -20,7 +20,7 @@ abstract class gea extends iw {
         RuntimeException var3 = null;
         try {
           this.field_K = param0;
-          if (iab.field_a == this.field_N) {
+          if (GameCanvasResizeListener.field_a == this.field_N) {
             this.c(116, this.field_K.width + 12, this.field_K.height + this.field_O + 12, this.field_M);
             this.field_Q = 0;
           } else {
@@ -121,7 +121,7 @@ abstract class gea extends iw {
             fieldTemp$0 = this.field_Q + 1;
             this.field_Q = this.field_Q + 1;
             if (this.field_P == fieldTemp$0) {
-              this.field_N = iab.field_a;
+              this.field_N = GameCanvasResizeListener.field_a;
               this.c(96, this.field_K.width + 12, this.field_K.height + (this.field_O + 12), this.field_M);
               this.field_L.field_v = 0;
               this.field_Q = 0;
@@ -152,7 +152,7 @@ abstract class gea extends iw {
           fieldTemp$2 = this.field_Q + 1;
           this.field_Q = this.field_Q + 1;
           if (this.field_P == fieldTemp$2) {
-            this.field_N = iab.field_a;
+            this.field_N = GameCanvasResizeListener.field_a;
             this.c(96, this.field_K.width + 12, this.field_K.height + (this.field_O + 12), this.field_M);
             this.field_L.field_v = 0;
             this.field_Q = 0;

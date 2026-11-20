@@ -81,22 +81,22 @@ final class cj extends TextureOperation {
           var8 = this.field_i;
           if (1 == var8) {
             var11Lifetime1 = var3;
-            for (var8 = 0; var8 < hob.field_d; var8++) {
+            for (var8 = 0; var8 < hob.textureWidth; var8++) {
               var11Lifetime1[var8] = var18[var8] + var19[var8];
             }
           } else {
             if (var8 == 2) {
-              for (var8 = 0; var8 < hob.field_d; var8++) {
+              for (var8 = 0; var8 < hob.textureWidth; var8++) {
                 var3[var8] = -var18[var8] + var19[var8];
               }
             } else {
               if (var8 == 3) {
-                for (var8 = 0; var8 < hob.field_d; var8++) {
+                for (var8 = 0; var8 < hob.textureWidth; var8++) {
                   var3[var8] = var18[var8] * var19[var8] >> 12;
                 }
               } else {
                 if (4 == var8) {
-                  for (var8 = 0; var8 < hob.field_d; var8++) {
+                  for (var8 = 0; var8 < hob.textureWidth; var8++) {
                     var5 = var18[var8];
                     stackIn_33_0 = var3;
                     stackIn_33_1 = var8;
@@ -109,12 +109,12 @@ final class cj extends TextureOperation {
                   }
                 } else {
                   if (var8 == 5) {
-                    for (var8 = 0; var8 < hob.field_d; var8++) {
+                    for (var8 = 0; var8 < hob.textureWidth; var8++) {
                       var3[var8] = -((4096 - var19[var8]) * (4096 - var18[var8]) >> 12) + 4096;
                     }
                   } else {
                     if (var8 == 6) {
-                      for (var8 = 0; hob.field_d > var8; var8++) {
+                      for (var8 = 0; hob.textureWidth > var8; var8++) {
                         var5 = var18[var8];
                         stackIn_42_0 = var3;
                         stackIn_42_1 = var8;
@@ -127,7 +127,7 @@ final class cj extends TextureOperation {
                       }
                     } else {
                       if (var8 == 7) {
-                        for (var8 = 0; hob.field_d > var8; var8++) {
+                        for (var8 = 0; hob.textureWidth > var8; var8++) {
                           var4 = var19[var8];
                           stackIn_48_0 = var3;
                           stackIn_48_1 = var8;
@@ -140,7 +140,7 @@ final class cj extends TextureOperation {
                         }
                       } else {
                         if (8 == var8) {
-                          for (var8 = 0; hob.field_d > var8; var8++) {
+                          for (var8 = 0; hob.textureWidth > var8; var8++) {
                             var4 = var19[var8];
                             stackIn_54_0 = var3;
                             stackIn_54_1 = var8;
@@ -153,7 +153,7 @@ final class cj extends TextureOperation {
                           }
                         } else {
                           if (9 == var8) {
-                            for (var8 = 0; hob.field_d > var8; var8++) {
+                            for (var8 = 0; hob.textureWidth > var8; var8++) {
                               var4 = var19[var8];
                               var5 = var18[var8];
                               stackIn_60_0 = var3;
@@ -167,7 +167,7 @@ final class cj extends TextureOperation {
                             }
                           } else {
                             if (var8 == 10) {
-                              for (var8 = 0; hob.field_d > var8; var8++) {
+                              for (var8 = 0; hob.textureWidth > var8; var8++) {
                                 var4 = var19[var8];
                                 var5 = var18[var8];
                                 stackIn_66_0 = var3;
@@ -181,7 +181,7 @@ final class cj extends TextureOperation {
                               }
                             } else {
                               if (11 == var8) {
-                                for (var8 = 0; var8 < hob.field_d; var8++) {
+                                for (var8 = 0; var8 < hob.textureWidth; var8++) {
                                   var5 = var18[var8];
                                   var4 = var19[var8];
                                   stackIn_72_0 = var3;
@@ -195,7 +195,7 @@ final class cj extends TextureOperation {
                                 }
                               } else {
                                 if (12 == var8) {
-                                  for (var8 = 0; var8 < hob.field_d; var8++) {
+                                  for (var8 = 0; var8 < hob.textureWidth; var8++) {
                                     var4 = var19[var8];
                                     var5 = var18[var8];
                                     var3[var8] = -(var5 * var4 >> 11) + var5 + var4;
@@ -349,7 +349,7 @@ final class cj extends TextureOperation {
             var55Lifetime1 = var50[1];
             var56Lifetime1 = var51[2];
             var57Lifetime1 = var50[2];
-            for (var21 = 0; hob.field_d > var21; var21++) {
+            for (var21 = 0; hob.textureWidth > var21; var21++) {
               var12Lifetime1[var21] = var52Lifetime1[var21] + var53Lifetime1[var21];
               var13Lifetime1[var21] = var54Lifetime1[var21] + var55Lifetime1[var21];
               var14Lifetime1[var21] = var56Lifetime1[var21] + var57Lifetime1[var21];
@@ -365,7 +365,7 @@ final class cj extends TextureOperation {
               var55Lifetime1 = var50[1];
               var56Lifetime1 = var51[2];
               var57Lifetime1 = var50[2];
-              for (var21 = 0; hob.field_d > var21; var21++) {
+              for (var21 = 0; hob.textureWidth > var21; var21++) {
                 var12Lifetime1[var21] = var52Lifetime1[var21] - var53Lifetime1[var21];
                 var13Lifetime1[var21] = -var54Lifetime1[var21] + var55Lifetime1[var21];
                 var14Lifetime1[var21] = -var56Lifetime1[var21] + var57Lifetime1[var21];
@@ -381,7 +381,7 @@ final class cj extends TextureOperation {
                 var55Lifetime1 = var50[1];
                 var56Lifetime1 = var51[2];
                 var57Lifetime1 = var50[2];
-                for (var21 = 0; hob.field_d > var21; var21++) {
+                for (var21 = 0; hob.textureWidth > var21; var21++) {
                   var12Lifetime1[var21] = var52Lifetime1[var21] * var53Lifetime1[var21] >> 12;
                   var13Lifetime1[var21] = var55Lifetime1[var21] * var54Lifetime1[var21] >> 12;
                   var14Lifetime1[var21] = var57Lifetime1[var21] * var56Lifetime1[var21] >> 12;
@@ -397,7 +397,7 @@ final class cj extends TextureOperation {
                   var55Lifetime1 = var50[1];
                   var56Lifetime1 = var51[2];
                   var57Lifetime1 = var50[2];
-                  for (var21 = 0; var21 < hob.field_d; var21++) {
+                  for (var21 = 0; var21 < hob.textureWidth; var21++) {
                     var9 = var56Lifetime1[var21];
                     var8 = var54Lifetime1[var21];
                     var7 = var53Lifetime1[var21];
@@ -437,7 +437,7 @@ final class cj extends TextureOperation {
                     var55Lifetime1 = var50[1];
                     var56Lifetime1 = var51[2];
                     var57Lifetime1 = var50[2];
-                    for (var21 = 0; var21 < hob.field_d; var21++) {
+                    for (var21 = 0; var21 < hob.textureWidth; var21++) {
                       var12Lifetime1[var21] = -((4096 - var53Lifetime1[var21]) * (4096 - var52Lifetime1[var21]) >> 12) + 4096;
                       var13Lifetime1[var21] = -((-var54Lifetime1[var21] + 4096) * (4096 - var55Lifetime1[var21]) >> 12) + 4096;
                       var14Lifetime1[var21] = -((-var56Lifetime1[var21] + 4096) * (4096 - var57Lifetime1[var21]) >> 12) + 4096;
@@ -453,7 +453,7 @@ final class cj extends TextureOperation {
                       var55Lifetime1 = var50[1];
                       var56Lifetime1 = var51[2];
                       var57Lifetime1 = var50[2];
-                      for (var21 = 0; var21 < hob.field_d; var21++) {
+                      for (var21 = 0; var21 < hob.textureWidth; var21++) {
                         var7 = var53Lifetime1[var21];
                         var8 = var54Lifetime1[var21];
                         var9 = var56Lifetime1[var21];
@@ -493,7 +493,7 @@ final class cj extends TextureOperation {
                         var55Lifetime1 = var50[1];
                         var56Lifetime1 = var51[2];
                         var57Lifetime1 = var50[2];
-                        for (var21 = 0; hob.field_d > var21; var21++) {
+                        for (var21 = 0; hob.textureWidth > var21; var21++) {
                           var4 = var52Lifetime1[var21];
                           var6 = var57Lifetime1[var21];
                           var5 = var55Lifetime1[var21];
@@ -533,7 +533,7 @@ final class cj extends TextureOperation {
                           var55Lifetime1 = var50[1];
                           var56Lifetime1 = var51[2];
                           var57Lifetime1 = var50[2];
-                          for (var21 = 0; hob.field_d > var21; var21++) {
+                          for (var21 = 0; hob.textureWidth > var21; var21++) {
                             var6 = var57Lifetime1[var21];
                             var5 = var55Lifetime1[var21];
                             var4 = var52Lifetime1[var21];
@@ -573,7 +573,7 @@ final class cj extends TextureOperation {
                             var55Lifetime1 = var50[1];
                             var56Lifetime1 = var51[2];
                             var57Lifetime1 = var50[2];
-                            for (var21 = 0; hob.field_d > var21; var21++) {
+                            for (var21 = 0; hob.textureWidth > var21; var21++) {
                               var8 = var54Lifetime1[var21];
                               var6 = var57Lifetime1[var21];
                               var7 = var53Lifetime1[var21];
@@ -616,7 +616,7 @@ final class cj extends TextureOperation {
                               var55Lifetime1 = var50[1];
                               var56Lifetime1 = var51[2];
                               var57Lifetime1 = var50[2];
-                              for (var21 = 0; hob.field_d > var21; var21++) {
+                              for (var21 = 0; hob.textureWidth > var21; var21++) {
                                 var7 = var53Lifetime1[var21];
                                 var4 = var52Lifetime1[var21];
                                 var9 = var56Lifetime1[var21];
@@ -659,7 +659,7 @@ final class cj extends TextureOperation {
                                 var55Lifetime1 = var50[1];
                                 var56Lifetime1 = var51[2];
                                 var57Lifetime1 = var50[2];
-                                for (var21 = 0; var21 < hob.field_d; var21++) {
+                                for (var21 = 0; var21 < hob.textureWidth; var21++) {
                                   var8 = var54Lifetime1[var21];
                                   var5 = var55Lifetime1[var21];
                                   var9 = var56Lifetime1[var21];
@@ -702,7 +702,7 @@ final class cj extends TextureOperation {
                                   var55Lifetime1 = var50[1];
                                   var56Lifetime1 = var51[2];
                                   var57Lifetime1 = var50[2];
-                                  for (var21 = 0; var21 < hob.field_d; var21++) {
+                                  for (var21 = 0; var21 < hob.textureWidth; var21++) {
                                     var4 = var52Lifetime1[var21];
                                     var7 = var53Lifetime1[var21];
                                     var8 = var54Lifetime1[var21];

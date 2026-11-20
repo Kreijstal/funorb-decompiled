@@ -60,7 +60,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
           GetSniperCannonEnergyUsed.field_o[16] = SetExplosionProjectileDamage.field_p;
           GetSniperCannonEnergyUsed.field_o[18] = SettingsInstance.field_b;
           GetSniperCannonEnergyUsed.field_o[13] = SetKeepTeamColours.field_q;
-          GetSniperCannonEnergyUsed.field_o[6] = uea.field_p;
+          GetSniperCannonEnergyUsed.field_o[6] = UiStatefulStyle.field_p;
           return;
         }
     }

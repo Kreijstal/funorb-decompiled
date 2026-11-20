@@ -44,7 +44,7 @@ final class SetFighterVision extends ConsoleCommand {
           lsa.field_e = UiComboBoxRenderer.field_c;
           qw.field_l = new Widget(0L, param3);
           hp.field_b = new Widget(0L, param2);
-          me.field_s = new Widget(0L, (Widget) null);
+          TiledSpriteTextureOperation.field_s = new Widget(0L, (Widget) null);
           SetThrusterAutobalancing.field_p = new Widget(0L, param0);
           UiComboBoxRenderer.field_c = new Widget(0L, param4);
           UiComboBoxRenderer.field_c.font = DebrisFactory.field_c;
@@ -54,10 +54,10 @@ final class SetFighterVision extends ConsoleCommand {
           GetMachineGunAimarc.field_q = new Widget(0L, TargetLock.field_b, GetMissionTerrainVotingChancestep.field_o);
           dp.field_a = new Widget(0L, TargetLock.field_b);
           qw.field_l.addChild(-561, hp.field_b);
-          qw.field_l.addChild(-561, me.field_s);
-          me.field_s.addChild(-561, SetThrusterAutobalancing.field_p);
-          me.field_s.addChild(param1 + 19588, GetMachineGunAimarc.field_q);
-          me.field_s.addChild(-561, dp.field_a);
+          qw.field_l.addChild(-561, TiledSpriteTextureOperation.field_s);
+          TiledSpriteTextureOperation.field_s.addChild(-561, SetThrusterAutobalancing.field_p);
+          TiledSpriteTextureOperation.field_s.addChild(param1 + 19588, GetMachineGunAimarc.field_q);
+          TiledSpriteTextureOperation.field_s.addChild(-561, dp.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

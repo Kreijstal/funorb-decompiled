@@ -151,15 +151,15 @@ final class vm extends TextureOperation {
         }
         var3 = this.field_f.getRow((byte) 118, param0);
         if (this.field_f.field_e) {
-          var4 = 2048 + SetSalvoUsesAllEnergy.field_p[param0] * this.field_p;
+          var4 = 2048 + SetSalvoUsesAllEnergy.textureYCoordinates[param0] * this.field_p;
           var5 = var4 >> 12;
           var6 = var5 + 1;
-          for (var14 = 0; hob.field_d > var14; var14++) {
+          for (var14 = 0; hob.textureWidth > var14; var14++) {
             SoftwareDepthBuffer.field_b = 2147483647;
             qd.field_b = 2147483647;
             SetSalvoRepairTimeMultiplier.field_q = 2147483647;
             MissionListFactory.field_b = 2147483647;
-            var15 = 2048 + grb.field_l[var14] * this.field_m;
+            var15 = 2048 + BoxBlurTextureOperation.textureXCoordinates[var14] * this.field_m;
             var16 = var15 >> 12;
             var17 = var16 + 1;
             for (var8 = var5 - 1; var6 >= var8; var8++) {

@@ -8,7 +8,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
 
     final static void d(int param0) {
         if (MissionConditionFactory.field_b != null) {
-          MissionConditionFactory.field_b.field_b = false;
+          MissionConditionFactory.field_b.resizable = false;
         }
         mb.h(param0, param0 + 101);
     }

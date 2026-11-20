@@ -278,7 +278,7 @@ final class AsteroidFactory implements GameStateFactory {
               }
             }
           }
-          Ship.field_E = (lfa.field_m + ro.field_c << 1) * mba.field_a.field_c;
+          Ship.field_E = (ColorizeTextureOperation.field_m + ro.field_c << 1) * mba.field_a.field_c;
           for (var4Lifetime2 = 0; bra.field_f.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_111_0 = Ship.field_E;
             if (GetMessageMax.field_o[var4Lifetime2] >= 0) {
@@ -304,8 +304,8 @@ final class AsteroidFactory implements GameStateFactory {
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][0] = var8Lifetime1 - GraphicsHeap.field_d;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][1] = var5Lifetime3;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][2] = var7Lifetime2 + (GraphicsHeap.field_d << 1);
-              GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][3] = (lfa.field_m << 1) + GetAngularVelocitySustain.field_p;
-              var5Lifetime3 = var5Lifetime3 + ((lfa.field_m << 1) - (-ro.field_c - GetAngularVelocitySustain.field_p));
+              GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][3] = (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p;
+              var5Lifetime3 = var5Lifetime3 + ((ColorizeTextureOperation.field_m << 1) - (-ro.field_c - GetAngularVelocitySustain.field_p));
             }
             var4Lifetime3++;
           }

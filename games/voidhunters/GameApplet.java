@@ -108,8 +108,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = wt.a(false);
-          var4 = fm.field_b[SetDetachmentMode.field_o];
-          fm.field_b[SetDetachmentMode.field_o] = var2_long;
+          var4 = DisplayMode.field_b[SetDetachmentMode.field_o];
+          DisplayMode.field_b[SetDetachmentMode.field_o] = var2_long;
           SetDetachmentMode.field_o = 31 & SetDetachmentMode.field_o + 1;
           if (var4 != 0L &&
             var4 < var2_long) {
@@ -335,7 +335,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           nqa.field_a = true;
           GetShowTutorial.field_o = true;
           GetDebrisSurvives.field_q = false;
-          hpb.field_k = wt.a(false);
+          KaleidoscopeTextureOperation.field_k = wt.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -665,7 +665,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                MovingObject.a(27671);
+                MovingObject.readMaximumHeapMemory(27671);
                 this.rebuildCanvas(-78);
                 SetClientSideDragging.field_q = SetBurstFireRegenerationRate.a((byte) 3, (java.awt.Component) ((Object) igb.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
                 this.initializeGame(false);
@@ -737,7 +737,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !mb.field_i) {
             GetShowTutorial.field_o = true;
             if (GetCountermeasureLauncherAimarc.field_o &&
-              -hpb.field_k + wt.a(false) > 1000L) {
+              -KaleidoscopeTextureOperation.field_k + wt.a(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (var2.width < GetPhasedEnergyBeamFireForce.field_p) {

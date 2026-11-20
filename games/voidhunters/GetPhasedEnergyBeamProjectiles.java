@@ -4,25 +4,25 @@
 final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
     static int field_o;
 
-    final static Sprite[] a(int param0, int param1, int param2, boolean param3) {
+    final static Sprite[] createBorderedSpriteTiles(int param0, int param1, int param2, boolean param3) {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
         int var5Lifetime1;
-        var7[0] = SetMaxShipSize.a(param0, (byte) -118, param2);
+        var7[0] = SetMaxShipSize.createSolidSprite(param0, (byte) -118, param2);
         if (param3) {
           for (var5 = 1; 9 > var5; var5++) {
             var7[var5] = var7[0];
           }
-          var4[4] = SetMaxShipSize.a(param1, (byte) -123, 64);
+          var4[4] = SetMaxShipSize.createSolidSprite(param1, (byte) -123, 64);
           return var4;
         }
         field_o = 40;
         for (var5Lifetime1 = 1; 9 > var5Lifetime1; var5Lifetime1++) {
           var7[var5Lifetime1] = var7[0];
         }
-        var4[4] = SetMaxShipSize.a(param1, (byte) -123, 64);
+        var4[4] = SetMaxShipSize.createSolidSprite(param1, (byte) -123, 64);
         return var4;
     }
 
@@ -245,7 +245,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetThrusterAutobalancing.field_r = param1[15];
           BodyInZoneConditionFactory.field_b = param1[22];
           SetTorpedoEnergyUsed.field_p = param1[59];
-          di.field_p = param1[27];
+          FlipTextureOperation.field_p = param1[27];
           GetMinimapWidth.field_o = param1[216];
           GpuEnvironmentMapSource.field_d = param1[13];
           SetMomentOfInertiaPerpointCalcDownshift.field_p = param1[111];

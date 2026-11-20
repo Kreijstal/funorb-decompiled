@@ -56,7 +56,7 @@ final class GrapplingHookFactory implements GameStateFactory {
                 stackIn_31_0 = var5;
                 return stackIn_31_0;
               }
-              if (var7.field_e != jwa.field_l) {
+              if (var7.field_e != ConstantColorTextureOperation.field_l) {
                 throw new ojb(var7.field_g);
               }
             }

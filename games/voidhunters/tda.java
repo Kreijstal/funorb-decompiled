@@ -38,7 +38,7 @@ final class tda extends iw implements UiActionListener {
             this.field_v.a(false, new mr(this.field_v, AdminMessageFactory.field_a));
           }
           if (psb.field_b != null) {
-            if (!psb.field_b.field_a) {
+            if (!psb.field_b.focusLost) {
               return;
             }
             this.l((byte) -98);

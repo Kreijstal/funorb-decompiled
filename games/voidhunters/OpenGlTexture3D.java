@@ -74,27 +74,27 @@ final class OpenGlTexture3D extends OpenGlTexture {
         }
     }
 
-    final static ufb a(int param0, PlatformService param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenCanvas createFullscreenCanvas(int param0, PlatformService param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ufb var7 = null;
+        FullscreenCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        ufb stackIn_4_0 = null;
+        FullscreenCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = GetAutozoomSpeedDivide.a(11168, param4, param1, param3, param0, param2);
+          var8 = GetAutozoomSpeedDivide.enterFullscreenBlocking(11168, param4, param1, param3, param0, param2);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (ufb) (stackIn_2_0);
+            return (FullscreenCanvas) (stackIn_2_0);
           }
-          var7 = new ufb();
-          var7.field_b = var8;
-          var7.field_b.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenCanvas();
+          var7.frame = var8;
+          var7.frame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(param5, 0, param2, param3);
           var7.addFocusListener(var7);
           var7.requestFocus();

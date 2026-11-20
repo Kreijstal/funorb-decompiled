@@ -52,7 +52,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             SetThrusterParticleSpeedDownshift.field_o == null) {
             if (!hb.field_c) {
               var5 = GetLagStandardDeviationOut.field_o;
-              var6 = di.field_k;
+              var6 = FlipTextureOperation.field_k;
               var5.field_i.addItem(var6, (byte) -53, 14);
             }
             var7 = GetLagStandardDeviationOut.field_o;

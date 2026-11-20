@@ -241,7 +241,7 @@ final class ik extends IntrusiveNode {
         var2[118] = OpenGlUnderwaterMaterialEffect.field_n;
         var2[168] = GetMissionResnetResourceTickTime.field_o;
         var2[55] = SettingsChangeFactory.field_c;
-        var2[27] = di.field_p;
+        var2[27] = FlipTextureOperation.field_p;
         var2[62] = SetVariableActionFactory.field_a;
         var2[81] = SetSalvoRepairTimeMultiplier.field_p;
         var2[159] = GetPointDefenceLaserAimspeed.field_p;

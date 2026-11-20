@@ -99,11 +99,11 @@ final class ocb extends eca {
           if (param2 != 10204) {
             field_i = (String) null;
           }
-          var13.field_gb = SetBurstFireReload.a(-26998, param4, param11);
-          var13.field_mb = SetBurstFireReload.a(param2 - 37202, param5, param6);
-          var13.field_A = SetBurstFireReload.a(param2 ^ -20138, param12, param9);
-          var13.field_nb = SetBurstFireReload.a(-26998, param7, param1);
-          var13.field_ub = SetBurstFireReload.a(param2 - 37202, param0, param8);
+          var13.field_gb = SetBurstFireReload.createBorderedSpriteTiles(-26998, param4, param11);
+          var13.field_mb = SetBurstFireReload.createBorderedSpriteTiles(param2 - 37202, param5, param6);
+          var13.field_A = SetBurstFireReload.createBorderedSpriteTiles(param2 ^ -20138, param12, param9);
+          var13.field_nb = SetBurstFireReload.createBorderedSpriteTiles(-26998, param7, param1);
+          var13.field_ub = SetBurstFireReload.createBorderedSpriteTiles(param2 - 37202, param0, param8);
           var13.field_Y = param10;
           var13.font = param3;
           stackIn_3_0 = var13;

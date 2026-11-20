@@ -95,7 +95,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         try {
           var1_int = 0;
           while (true) {
-            var2 = lnb.field_i.getCategory((byte) -72, var1_int);
+            var2 = TileTextureOperation.field_i.getCategory((byte) -72, var1_int);
             if (var2.field_k) {
               stackIn_6_0 = var2;
               return stackIn_6_0;
@@ -127,7 +127,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
     }
 
     final static void b(byte param0) {
-        pja.e(-110);
+        SpriteTextureOperation.e(-110);
         int var1 = -25 / ((46 - param0) / 35);
     }
 

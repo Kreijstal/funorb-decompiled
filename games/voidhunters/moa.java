@@ -32,7 +32,7 @@ final class moa extends TextureOperation {
         var12 = var13;
         var3 = var12;
         if (this.field_f.field_e) {
-          var4 = SetSalvoUsesAllEnergy.field_p[param0];
+          var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0];
           if (this.field_k == 0) {
             var5 = 0;
             var6 = 0;
@@ -51,15 +51,15 @@ final class moa extends TextureOperation {
               }
               break;
             }
-            ArrayOperations.fill(var13, 0, hob.field_d, var5);
+            ArrayOperations.fill(var13, 0, hob.textureWidth, var5);
             decompiledFrameRemainder0 = false;
           }
           else {
             var5Lifetime1 = 0;
-            while (!(hob.field_d <= var5Lifetime1)) {
+            while (!(hob.textureWidth <= var5Lifetime1)) {
               var6Lifetime1 = 0;
               var7 = 0;
-              var8 = grb.field_l[var5Lifetime1];
+              var8 = BoxBlurTextureOperation.textureXCoordinates[var5Lifetime1];
               var9 = this.field_k;
               stackIn_19_0 = var9;
               stackIn_19_1 = 1;

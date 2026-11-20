@@ -13,7 +13,7 @@ final class RemoveEventActionFactory implements GameStateFactory {
 
     final static int b(byte param0) {
         int var1 = 8 % ((param0 - 63) / 33);
-        if (!SetReloadBarWidth.f((byte) -89) ||
+        if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -89) ||
           null == qn.field_h.g(0)) {
           return -1;
         }

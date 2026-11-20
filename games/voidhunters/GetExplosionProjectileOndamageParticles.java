@@ -7,7 +7,7 @@ final class GetExplosionProjectileOndamageParticles extends ConsoleCommand {
     }
 
     final static int e(byte param0) {
-        if (!SetReloadBarWidth.f((byte) -113)) {
+        if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -113)) {
           return -1;
         }
         if (null == qn.field_h.g(0)) {

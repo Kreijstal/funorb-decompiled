@@ -154,7 +154,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -108, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
               RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var10, -124);
             }
-            lnb.b(-1, 113);
+            TileTextureOperation.b(-1, 113);
             tc.field_c = bs.field_d;
           }
           if (tc.field_c == bs.field_d &&
@@ -168,7 +168,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             } else {
               if (var9Lifetime1 == 248) {
                 kl.a(MissionList.b((byte) -124), param4 ^ 0);
-                dgb.field_b = owa.field_j;
+                dgb.field_b = CurveTextureOperation.field_j;
                 FighterBayWeaponDefinition.l(param4 - 125);
                 SetShowTutorial.field_o = false;
                 stackIn_34_0 = var9Lifetime1;

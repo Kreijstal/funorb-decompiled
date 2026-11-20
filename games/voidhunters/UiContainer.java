@@ -286,7 +286,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           }
           GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -126, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
           RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var5_int, -125);
-          lnb.b(-1, 111);
+          TileTextureOperation.b(-1, 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

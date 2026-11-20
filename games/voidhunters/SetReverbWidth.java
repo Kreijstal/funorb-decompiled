@@ -58,7 +58,7 @@ final class SetReverbWidth extends ConsoleCommand {
           if (param1 != -29008) {
             SetReverbWidth.a(-118, -73);
           }
-          lnb.b(param0, 115);
+          TileTextureOperation.b(param0, 115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

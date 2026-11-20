@@ -7,8 +7,8 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
     static GameStateFactory field_c;
 
     final static void a(int param0, byte param1) {
-        if (di.field_l != null) {
-          di.field_l.sendDebugRequest((byte) 76, Integer.toString(param0), RequestNewestBlackboxRecording.field_p);
+        if (FlipTextureOperation.field_l != null) {
+          FlipTextureOperation.field_l.sendDebugRequest((byte) 76, Integer.toString(param0), RequestNewestBlackboxRecording.field_p);
           if (param1 != 47) {
             MachineGunWeaponDefinition.a(112, (byte) -50);
             return;

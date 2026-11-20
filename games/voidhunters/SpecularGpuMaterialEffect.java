@@ -147,11 +147,11 @@ final class SpecularGpuMaterialEffect extends GpuMaterialEffect {
             this.toolkit.setTextureTransformMode(LoadSettings.field_o, true);
             if (!this.field_h) {
               this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, MissionVariable.field_c);
-              this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
+              this.toolkit.setRgbCombineSource(0, SpriteTextureOperation.field_l, 7);
               this.toolkit.setActiveTextureUnit(2, -51);
               this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, je.field_c);
-              this.toolkit.setRgbCombineSource(0, pja.field_l, param0 ^ 2);
-              this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, pja.field_l, 1);
+              this.toolkit.setRgbCombineSource(0, SpriteTextureOperation.field_l, param0 ^ 2);
+              this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, SpriteTextureOperation.field_l, 1);
               this.toolkit.setAlphaCombineSource(0, (byte) -86, GetArmageddonLength.field_q);
               this.toolkit.setTexture(this.toolkit.field_Q, param0 - 119);
             } else {
@@ -197,7 +197,7 @@ final class SpecularGpuMaterialEffect extends GpuMaterialEffect {
             this.toolkit.setActiveTextureUnit(2, -90);
             this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
             this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
-            this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
+            this.toolkit.setRgbCombineSource(1, SpriteTextureOperation.field_l, 7);
             this.toolkit.setAlphaCombineSource(0, (byte) -105, SetGrapplingHookMaxExtension8Force.field_q);
             this.toolkit.setTexture((GpuTexture) null, -128);
           }

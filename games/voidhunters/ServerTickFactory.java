@@ -77,7 +77,7 @@ final class ServerTickFactory implements GameStateFactory {
             stackIn_8_0 = ei.field_e;
             return stackIn_8_0;
           }
-          var8 = di.a(param1, param0 - 90);
+          var8 = FlipTextureOperation.a(param1, param0 - 90);
           if (var8 == null) {
             stackIn_12_0 = SetReverbGain.a(SetSniperCannonAimarc.field_q, new String[]{param1}, 118);
             return stackIn_12_0;

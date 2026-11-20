@@ -118,10 +118,10 @@ final class SpecialOrderSubmessage implements DiffableState {
         }
     }
 
-    final static void a(fm[] param0, byte param1) {
+    final static void a(DisplayMode[] param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
-        fm var4 = null;
+        DisplayMode var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -168,7 +168,7 @@ final class SpecialOrderSubmessage implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        fm[] var5 = null;
+        DisplayMode[] var5 = null;
         SpecialOrderSubmessage var6 = null;
         var4 = VoidHunters.field_G;
         try {
@@ -191,8 +191,8 @@ final class SpecialOrderSubmessage implements DiffableState {
             var6.spawnchoice = null;
           }
           if (param0 <= 54) {
-            var5 = (fm[]) null;
-            SpecialOrderSubmessage.a((fm[]) null, (byte) -120);
+            var5 = (DisplayMode[]) null;
+            SpecialOrderSubmessage.a((DisplayMode[]) null, (byte) -120);
           }
           if (this.vote != null) {
             if (null == var6.vote) {

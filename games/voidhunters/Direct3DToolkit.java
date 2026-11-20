@@ -488,7 +488,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (SetThrusterParticleLife.field_p == param0) {
           return 1;
         }
-        if (di.field_i == param0) {
+        if (FlipTextureOperation.field_i == param0) {
           return 4;
         }
         if (UiViewport.field_v == param0) {
@@ -989,7 +989,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param0 == GetArmageddonLength.field_q) {
           return 0;
         }
-        if (pja.field_l == param0) {
+        if (SpriteTextureOperation.field_l == param0) {
           return 1;
         }
         if (param0 == pea.field_d) {

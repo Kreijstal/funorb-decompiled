@@ -27,7 +27,7 @@ final class PrimitiveType {
                 var5Lifetime2 = var4;
               } else {
                 var11 = (CharSequence) ((Object) ola.field_p.text);
-                var4 = jwa.normalizeName(false, var11);
+                var4 = ConstantColorTextureOperation.normalizeName(false, var11);
               }
               var5Lifetime1 = null;
               if (0 == MissionGenerationDataFactory.field_b) {
@@ -40,7 +40,7 @@ final class PrimitiveType {
                 var5Lifetime1 = SetExplosionPushMultiplier.a(2, var4, param0);
               }
               if (MissionGenerationDataFactory.field_b == 3) {
-                var5Lifetime1 = iab.a(param0, var4, var4, (byte) -76);
+                var5Lifetime1 = GameCanvasResizeListener.a(param0, var4, var4, (byte) -76);
               }
               if (var5Lifetime1 != null) {
                 var6 = (String) null;

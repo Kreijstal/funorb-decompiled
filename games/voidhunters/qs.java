@@ -100,7 +100,7 @@ final class qs {
           if (ow.field_b == 2 &&
             GetDebrisThrowable.field_o != null) {
             var3 = (CharSequence) ((Object) param1);
-            if (!GetDebrisThrowable.field_o.equals(jwa.normalizeName(false, var3))) {
+            if (!GetDebrisThrowable.field_o.equals(ConstantColorTextureOperation.normalizeName(false, var3))) {
               return false;
             }
             if (param0 == 0) {

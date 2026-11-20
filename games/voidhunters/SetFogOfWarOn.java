@@ -48,14 +48,14 @@ final class SetFogOfWarOn extends ConsoleCommand {
     final static void e(byte param0) {
         System.out.println("set_loading_missions(" + SetMissionTerrainAsteroidProbability.field_o + ")");
         System.out.println("set_trap_mouse(" + SetNebulaProximityFadeDownshift.field_o + ")");
-        System.out.println("set_tab_for_scores(" + me.field_r + ")");
+        System.out.println("set_tab_for_scores(" + TiledSpriteTextureOperation.field_r + ")");
         System.out.println("set_toggled_scoreboard(" + SetRepairModeCooldown.field_o + ")");
         System.out.println("set_debris_group_colour(" + btb.field_a + ")");
         System.out.println("set_ship_direction_arrow(" + GetPointDefenceLaserProjectileInterceptDamage.field_o + ")");
         System.out.println("set_ship_aim_lines(" + sn.field_Y + ")");
         System.out.println("set_allow_ship_saving(" + SetShipTeamActionFactory.field_b + ")");
         System.out.println("set_use_offscreen_rendering(" + jw.field_c + ")");
-        System.out.println("set_use_circle_fill(" + lfa.field_j + ")");
+        System.out.println("set_use_circle_fill(" + ColorizeTextureOperation.field_j + ")");
         System.out.println("set_use_circle_outline(" + GetReadyRoomMutatorTime.field_p + ")");
         System.out.println("set_use_lines(" + GetLaserAimarc.field_p + ")");
         System.out.println("set_use_rect_fill(" + ne.field_v + ")");
@@ -66,7 +66,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_fps(" + Particle.field_l + ")");
         System.out.println("set_radial_menu_radius(" + NodeHashTable.field_a + ")");
         System.out.println("set_minimap_width(" + GetAiFiringRangeUpshift.field_o + ")");
-        System.out.println("set_minimap_height(" + vv.field_c + ")");
+        System.out.println("set_minimap_height(" + UiVisualStyle.field_c + ")");
         System.out.println("set_health_bar_width(" + TextureFilterMode.field_d + ")");
         System.out.println("set_health_bar_height(" + NebulaField.field_d + ")");
         System.out.println("set_reload_bar_width(" + GetSniperCannonAimarc.field_p + ")");
@@ -141,7 +141,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_detachment_mode(" + GetInnateThrusters.field_p + ")");
         System.out.println("set_autoaim(" + SetMissilesTopSpeed.field_o + ")");
         System.out.println("set_salvoaim(" + fra.field_a + ")");
-        System.out.println("set_fixedaim(" + di.field_p + ")");
+        System.out.println("set_fixedaim(" + FlipTextureOperation.field_p + ")");
         System.out.println("set_angleset(" + SetShipTeamAction.field_e + ")");
         System.out.println("set_salvo_uses_all_energy(" + GetBombletSprayRandomness.field_p + ")");
         System.out.println("set_salvo_holdable(" + CarouselPlayerEvent.field_m + ")");

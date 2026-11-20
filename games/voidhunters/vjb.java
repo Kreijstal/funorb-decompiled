@@ -8,14 +8,14 @@ abstract class vjb {
 
     final static void a(byte param0) {
         if (param0 > 75) {
-          lnb.d(0);
+          TileTextureOperation.d(0);
           ebb.a((byte) -74);
           Asteroid.field_v = null;
           GetUseExtraBackground.a(-1);
           return;
         }
         vjb.a((byte) 48);
-        lnb.d(0);
+        TileTextureOperation.d(0);
         ebb.a((byte) -74);
         Asteroid.field_v = null;
         GetUseExtraBackground.a(-1);

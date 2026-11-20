@@ -171,7 +171,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
           if (param1 != 0) {
             stackIn_30_0 = pbb.field_a;
           } else {
-            stackIn_30_0 = jlb.field_t;
+            stackIn_30_0 = BricksTextureOperation.field_t;
           }
           return stackIn_30_0;
         }

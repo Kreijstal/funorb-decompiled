@@ -4,7 +4,7 @@
 final class wf {
     static int field_e;
     private int field_c;
-    static int field_d;
+    static int textureHeightMask;
     static Sprite field_a;
     private ae field_b;
 
@@ -386,7 +386,7 @@ final class wf {
         var6 = VoidHunters.field_G;
         var4 = 0;
         if (param2 != 6868) {
-          field_d = 97;
+          textureHeightMask = 97;
         }
         while (SetReloadBarWidth.field_p[this.field_c].length > var4) {
           var5 = this.c(var4, 17915);
@@ -455,7 +455,7 @@ final class wf {
         } else {
           var12 -= 10;
           var20 = this.a("<savekey>", (byte) 119, mb.field_k[SetFps.field_o], SetDetachmentMode.field_p);
-          var21 = this.a("<loadkey>", (byte) 63, var20, gg.field_j);
+          var21 = this.a("<loadkey>", (byte) 63, var20, WaveformTextureOperation.field_j);
           SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
         }
         SetSelfDestructPrepareToggleCooldown.a(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.a(SetFps.field_o, -98), 1, 16738305, (byte) -96);
@@ -633,7 +633,7 @@ final class wf {
                                                       if (this.field_b.e((byte) -119)) {
                                                         stackIn_193_0 = (!SetReverbFeedback.b(true)) ? 0 : 1;
                                                         var10_int = stackIn_193_0;
-                                                        qqa.a(var10_int != 0, (byte) -90);
+                                                        GrayscaleTextureOperation.a(var10_int != 0, (byte) -90);
                                                       }
                                                     } else {
                                                       if (23 == var10_int &&
@@ -973,7 +973,7 @@ final class wf {
 
     private final boolean a(int param0, int param1) {
         if (param1 <= 112) {
-          field_d = -28;
+          textureHeightMask = -28;
         }
         if (this.field_c != 5) {
           return true;
@@ -1040,7 +1040,7 @@ final class wf {
         int var2Lifetime1;
         int var2Lifetime1Lifetime1;
         var3 = VoidHunters.field_G;
-        if (SetReloadBarWidth.f((byte) -72)) {
+        if (SetReloadBarWidth.isCachedFrameAvailable((byte) -72)) {
           return;
         }
         if (param0 != 0) {

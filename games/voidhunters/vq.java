@@ -111,7 +111,7 @@ abstract class vq extends UiContainer implements lca {
           }
           try {
             if (0 == gob.field_c) {
-              SoftwareSprite2D.field_b = gia.field_k.openSocket(SetDefaultFiringLeeway.field_p, hob.field_l, param0 ^ -6201);
+              SoftwareSprite2D.field_b = NormalMapTextureOperation.field_k.openSocket(SetDefaultFiringLeeway.field_p, hob.field_l, param0 ^ -6201);
               gob.field_c = gob.field_c + 1;
             }
             if (1 == gob.field_c) {
@@ -124,7 +124,7 @@ abstract class vq extends UiContainer implements lca {
               }
             }
             if (gob.field_c == 2) {
-              eu.field_h = new BufferedSocket((java.net.Socket) (SoftwareSprite2D.field_b.result), gia.field_k);
+              eu.field_h = new BufferedSocket((java.net.Socket) (SoftwareSprite2D.field_b.result), NormalMapTextureOperation.field_k);
               var2 = new PacketBuffer(13);
               SetVariableLabelActionFactory.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.writeByte(0, 15);

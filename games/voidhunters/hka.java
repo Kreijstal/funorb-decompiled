@@ -18,9 +18,9 @@ final class hka extends uj {
     final int a(int param0) {
         if (param0 != -1) {
           field_d = (String[]) null;
-          return gg.field_j;
+          return WaveformTextureOperation.field_j;
         }
-        return gg.field_j;
+        return WaveformTextureOperation.field_j;
     }
 
     final boolean c(int param0) {

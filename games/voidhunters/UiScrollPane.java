@@ -84,7 +84,7 @@ final class UiScrollPane extends UiArrayContainer {
 
     final static void initializeArchiveSystem(int param0, String param1, int param2, int param3, byte param4, int param5, int param6, PlatformService param7, int param8) {
         GetFixedaim.field_o = param0;
-        gia.field_k = param7;
+        NormalMapTextureOperation.field_k = param7;
         hob.field_l = param1;
         SetPointDefenceLaserProjectileDamage.field_p = param5;
         OpenGlToolkit.field_Ib = param8;

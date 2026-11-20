@@ -476,7 +476,7 @@ final class UiScrollBar extends UiArrayContainer implements UiActionListener {
           var11 = new QuickChatMenuWidget[var7];
           if (null != param4.categoryIds) {
             for (var12 = 0; var12 < param4.categoryIds.length; var12++) {
-              var13_ref_rn = lnb.field_i.getCategory((byte) -72, param4.categoryIds[var12]);
+              var13_ref_rn = TileTextureOperation.field_i.getCategory((byte) -72, param4.categoryIds[var12]);
               var8[var12] = var13_ref_rn.label;
               var9[var12] = param4.categoryShortcuts[var12];
               var11[var12] = UiScrollBar.createQuickChatCategoryMenu(0, param1, param2, param3, var13_ref_rn);

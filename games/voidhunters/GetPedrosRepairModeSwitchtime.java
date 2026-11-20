@@ -47,7 +47,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
           GetShipAimLines.a(param2, 11343, param4, param6);
           if (null != GetLagStandardDeviationOut.field_o &&
             GetLagStandardDeviationOut.field_o.a(param6, -11, param1, param4, param3)) {
-            lnb.d(0);
+            TileTextureOperation.d(0);
             param6 = false;
           }
           PrimitiveType.a(param4, param6, 19717);

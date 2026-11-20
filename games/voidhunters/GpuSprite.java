@@ -65,8 +65,8 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.markModelTransformChanged(20837);
         this.toolkit.drawUnitQuadTriangles((byte) -79);
         this.toolkit.resetTextureTransform((byte) 74);
-        this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
-        this.toolkit.setAlphaCombineSource(1, (byte) -55, pja.field_l);
+        this.toolkit.setRgbCombineSource(1, SpriteTextureOperation.field_l, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -55, SpriteTextureOperation.field_l);
     }
 
     final static int b(int param0, int param1) {
@@ -100,8 +100,8 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.markModelTransformChanged(20837);
         this.toolkit.drawUnitQuadTriangles((byte) -72);
         this.toolkit.resetTextureTransform((byte) 85);
-        this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
-        this.toolkit.setAlphaCombineSource(1, (byte) -72, pja.field_l);
+        this.toolkit.setRgbCombineSource(1, SpriteTextureOperation.field_l, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -72, SpriteTextureOperation.field_l);
     }
 
     final int getPaddedWidth() {
@@ -174,8 +174,8 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.markModelTransformChanged(20837);
         this.toolkit.drawUnitQuadTriangles((byte) -102);
         this.toolkit.resetTextureTransform((byte) 72);
-        this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
-        this.toolkit.setAlphaCombineSource(1, (byte) -123, pja.field_l);
+        this.toolkit.setRgbCombineSource(1, SpriteTextureOperation.field_l, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -123, SpriteTextureOperation.field_l);
     }
 
     final int getHeight() {
@@ -322,8 +322,8 @@ final class GpuSprite extends ToolkitSprite {
               }
               if (var13 <= var19Lifetime1) {
                 this.toolkit.resetTextureTransform((byte) 125);
-                this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
-                this.toolkit.setAlphaCombineSource(1, (byte) -101, pja.field_l);
+                this.toolkit.setRgbCombineSource(1, SpriteTextureOperation.field_l, 7);
+                this.toolkit.setAlphaCombineSource(1, (byte) -101, SpriteTextureOperation.field_l);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -347,8 +347,8 @@ final class GpuSprite extends ToolkitSprite {
         }
         if (decompiledFrameRemainder0) {
           this.toolkit.resetTextureTransform((byte) 125);
-          this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
-          this.toolkit.setAlphaCombineSource(1, (byte) -101, pja.field_l);
+          this.toolkit.setRgbCombineSource(1, SpriteTextureOperation.field_l, 7);
+          this.toolkit.setAlphaCombineSource(1, (byte) -101, SpriteTextureOperation.field_l);
         }
 
     }

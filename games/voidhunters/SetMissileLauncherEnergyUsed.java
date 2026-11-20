@@ -48,7 +48,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
             SoftwareRasterizer2D.fillCircleAlpha(param5, param2, (int)param3, param0, param4);
             return;
           }
-          if (lfa.field_j) {
+          if (ColorizeTextureOperation.field_j) {
             GetDebrisGroupColour.field_r.fillCircle(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
             return;
           }
@@ -58,7 +58,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
           SoftwareRasterizer2D.fillCircleAlpha(param5, param2, (int)param3, param0, param4);
           return;
         }
-        if (!lfa.field_j) {
+        if (!ColorizeTextureOperation.field_j) {
           return;
         }
         GetDebrisGroupColour.field_r.fillCircle(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);

@@ -89,7 +89,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
           }
         } else {
           if (null == MissionConditionFactory.field_b) {
-            psb.field_b = OpenGlTexture3D.a(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
+            psb.field_b = OpenGlTexture3D.createFullscreenCanvas(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
             if (psb.field_b != null) {
               var2 = 2;
               SetGrapplingHookCooldown.a((byte) 77, psb.field_b);
@@ -97,7 +97,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
               var2 = 3;
             }
           } else {
-            psb.field_b = MissionConditionFactory.field_b.a((byte) 124);
+            psb.field_b = MissionConditionFactory.field_b.createFullscreenCanvas((byte) 124);
             mb.h(2, 117);
             if (psb.field_b != null) {
               var2 = 2;

@@ -99,12 +99,12 @@ final class ProjectileHit {
               } else {
                 if (!var6.field_r) {
                   if (var6.field_B == 0) {
-                    qba.a(20382, this.impactX, 60, this.impactY, 1);
+                    BlendTextureOperation.a(20382, this.impactX, 60, this.impactY, 1);
                   } else {
-                    qba.a(20382, this.impactX, 56, this.impactY, 1);
+                    BlendTextureOperation.a(20382, this.impactX, 56, this.impactY, 1);
                   }
                 } else {
-                  qba.a(20382, this.impactX, 77, this.impactY, 1);
+                  BlendTextureOperation.a(20382, this.impactX, 77, this.impactY, 1);
                 }
               }
             } else {

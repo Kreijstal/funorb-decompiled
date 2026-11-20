@@ -30,7 +30,7 @@ final class tsa extends IntrusiveNode {
         if (SetMissionTerrainVotingChancestep.field_o == this.field_e) {
           return "ArgEnd";
         }
-        if (jwa.field_l != this.field_e) {
+        if (ConstantColorTextureOperation.field_l != this.field_e) {
           return "Unknown";
         }
         return "ArgComma";

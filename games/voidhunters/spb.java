@@ -12,13 +12,13 @@ final class spb {
           return;
         }
         kl.a(psb.field_b, -28);
-        psb.field_b.a(SetTorpedoProjectiles.field_o, -32335);
+        psb.field_b.exitFullscreen(SetTorpedoProjectiles.field_o, -32335);
         psb.field_b = null;
         if (MissionConditionFactory.field_b == null) {
           igb.field_a.requestFocus();
           return;
         }
-        MissionConditionFactory.field_b.c(param0 - 29579);
+        MissionConditionFactory.field_b.restorePreviousSize(param0 - 29579);
         igb.field_a.requestFocus();
     }
 

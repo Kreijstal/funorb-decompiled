@@ -257,7 +257,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         this.field_y.tooltip = dj.field_a;
         this.field_x.tooltip = UiScrollPane.field_x;
         this.field_A.tooltip = SetAngularForceDownshift.field_p;
-        this.field_D.tooltip = lq.field_j;
+        this.field_D.tooltip = HashNoiseTextureOperation.field_j;
         this.field_E.tooltip = QuickChatCategoryLoader.field_f;
         this.field_F.a(6614, new tib(this.field_F));
         this.field_z.a(6614, new rm(this.field_z));

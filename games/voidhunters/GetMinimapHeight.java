@@ -14,7 +14,7 @@ final class GetMinimapHeight extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(vv.field_c);
+            stackIn_4_0 = new ConsoleValue(UiVisualStyle.field_c);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

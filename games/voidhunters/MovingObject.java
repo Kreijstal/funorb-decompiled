@@ -15,7 +15,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final static void a(int param0) {
+    final static void readMaximumHeapMemory(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           java.lang.reflect.Method var1 = null;
@@ -36,7 +36,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
               var2 = Runtime.getRuntime();
               var4 = (Object[]) null;
               var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-              Nebula.field_b = 1 + (int)(var3.longValue() / 1048576L);
+              Nebula.maximumHeapMegabytes = 1 + (int)(var3.longValue() / 1048576L);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

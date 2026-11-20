@@ -9,7 +9,7 @@ final class OpenGlTransparentWaterEffect extends GpuMaterialEffect {
     final void enable(int param0, boolean param1) {
         jaggl.OpenGL.glBindProgramARB(34336, this.field_g.programId);
         jaggl.OpenGL.glEnable(34336);
-        this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
+        this.toolkit.setRgbCombineSource(0, SpriteTextureOperation.field_l, 7);
         if (param0 != 5) {
           GpuTexture var4 = (GpuTexture) null;
           this.setTexture((byte) -95, 120, (GpuTexture) null);

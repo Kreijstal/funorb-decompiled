@@ -400,7 +400,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
               var14 = new MissionEvent();
               var14.addCondition((byte) -117, (MissionCondition) (new TickCondition(1)));
               var14.addAction(new SetVariableLabelAction(0, 10), true);
-              var12.world.a(var14, -38);
+              var12.world.addMissionEvent(var14, -38);
               var15 = new Asteroid(new ShipComponent(54));
               var15.setPosition(65536, 81920, (byte) -60);
               var12.world.addAsteroid((byte) 126, var15);

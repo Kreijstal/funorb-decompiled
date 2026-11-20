@@ -84,9 +84,9 @@ final class oqb extends TextureOperation {
         var12 = this.field_f.getRow((byte) 119, param0);
         var3 = var12;
         if (this.field_f.field_e) {
-          var4 = SetSalvoUsesAllEnergy.field_p[param0] - 2048;
-          for (var5 = 0; var5 < hob.field_d; var5++) {
-            var6 = -2048 + grb.field_l[var5];
+          var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0] - 2048;
+          for (var5 = 0; var5 < hob.textureWidth; var5++) {
+            var6 = -2048 + BoxBlurTextureOperation.textureXCoordinates[var5];
             var7 = this.field_o + var6;
             if (var7 >= -2048) {
               stackIn_8_0 = var7;

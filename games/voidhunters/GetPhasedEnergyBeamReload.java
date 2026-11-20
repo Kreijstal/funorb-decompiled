@@ -28,7 +28,7 @@ final class GetPhasedEnergyBeamReload extends ConsoleCommand {
           }
           return;
         }
-        if (!lfa.field_j) {
+        if (!ColorizeTextureOperation.field_j) {
           if (param2 >= -16) {
             field_p = (GameStateFactory) null;
             return;

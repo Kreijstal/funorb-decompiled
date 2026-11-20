@@ -147,7 +147,7 @@ final class Projectile extends MovingObject implements DiffableState {
                       var5 = -this.x + var16.x;
                       var6 = var16.y - this.y;
                       if (TextLayout.approximateVectorLength(var5, (byte) 111, var6) < GetUseNiceTrails.field_p / 2 &&
-                        !param1.a(var16, param0 ^ 39)) {
+                        !param1.isBodyCenterInNebula(var16, param0 ^ 39)) {
                         var4 = 1;
                       }
                       if (var4 == 0) {
@@ -160,7 +160,7 @@ final class Projectile extends MovingObject implements DiffableState {
                     var15 = param1.getBodyById((byte) -27, this.targetBody);
                     var3 = var15;
                     if (var15 == null ||
-                      param1.a(var15, -76)) {
+                      param1.isBodyCenterInNebula(var15, -76)) {
                       this.targetBody = -1;
                     }
                   }

@@ -4,96 +4,96 @@
 final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
     static String[] field_o;
 
-    final static TextureOperation a(boolean param0, int param1) {
+    final static TextureOperation createTextureOperation(boolean param0, int param1) {
         int var2;
         int var3;
         ResourceArchive var4;
         var3 = VoidHunters.field_G;
         if (param0) {
           var4 = (ResourceArchive) null;
-          SetPhasedEnergyBeamProjectiles.a(true, (java.awt.Canvas) null, -80, (TextureProvider) null, (ResourceArchive) null, 58);
+          SetPhasedEnergyBeamProjectiles.createToolkitForCanvas(true, (java.awt.Canvas) null, -80, (TextureProvider) null, (ResourceArchive) null, 58);
         }
         var2 = param1;
         if (0 == var2) {
-          return (TextureOperation) ((Object) new drb());
+          return (TextureOperation) ((Object) new ConstantMonochromeTextureOperation());
         }
         if (1 == var2) {
-          return (TextureOperation) ((Object) new jwa());
+          return (TextureOperation) ((Object) new ConstantColorTextureOperation());
         }
         if (var2 == 2) {
-          return (TextureOperation) ((Object) new cdb());
+          return (TextureOperation) ((Object) new HorizontalGradientTextureOperation());
         }
         if (var2 == 3) {
-          return (TextureOperation) ((Object) new peb());
+          return (TextureOperation) ((Object) new VerticalGradientTextureOperation());
         }
         if (var2 == 4) {
-          return (TextureOperation) ((Object) new jlb());
+          return (TextureOperation) ((Object) new BricksTextureOperation());
         }
         if (var2 == 5) {
-          return (TextureOperation) ((Object) new grb());
+          return (TextureOperation) ((Object) new BoxBlurTextureOperation());
         }
         if (6 == var2) {
-          return (TextureOperation) ((Object) new sma());
+          return (TextureOperation) ((Object) new ClampTextureOperation());
         }
         if (7 == var2) {
           return (TextureOperation) ((Object) new cj());
         }
         if (var2 == 8) {
-          return (TextureOperation) ((Object) new owa());
+          return (TextureOperation) ((Object) new CurveTextureOperation());
         }
         if (9 == var2) {
-          return (TextureOperation) ((Object) new di());
+          return (TextureOperation) ((Object) new FlipTextureOperation());
         }
         if (var2 == 10) {
           return (TextureOperation) ((Object) new ckb());
         }
         if (var2 == 11) {
-          return (TextureOperation) ((Object) new lfa());
+          return (TextureOperation) ((Object) new ColorizeTextureOperation());
         }
         if (12 == var2) {
-          return (TextureOperation) ((Object) new gg());
+          return (TextureOperation) ((Object) new WaveformTextureOperation());
         }
         if (var2 == 13) {
-          return (TextureOperation) ((Object) new lq());
+          return (TextureOperation) ((Object) new HashNoiseTextureOperation());
         }
         if (var2 == 14) {
-          return (TextureOperation) ((Object) new gw());
+          return (TextureOperation) ((Object) new WeaveTextureOperation());
         }
         if (15 == var2) {
           return (TextureOperation) ((Object) new vm());
         }
         if (var2 == 16) {
-          return (TextureOperation) ((Object) new vn());
+          return (TextureOperation) ((Object) new HerringboneTextureOperation());
         }
         if (var2 == 17) {
           return (TextureOperation) ((Object) new kbb());
         }
         if (18 == var2) {
-          return (TextureOperation) ((Object) new me());
+          return (TextureOperation) ((Object) new TiledSpriteTextureOperation());
         }
         if (var2 == 19) {
-          return (TextureOperation) ((Object) new sna());
+          return (TextureOperation) ((Object) new PolarDisplacementTextureOperation());
         }
         if (var2 == 20) {
-          return (TextureOperation) ((Object) new lnb());
+          return (TextureOperation) ((Object) new TileTextureOperation());
         }
         if (var2 == 21) {
-          return (TextureOperation) ((Object) new qba());
+          return (TextureOperation) ((Object) new BlendTextureOperation());
         }
         if (var2 == 22) {
-          return (TextureOperation) ((Object) new ksb());
+          return (TextureOperation) ((Object) new InvertTextureOperation());
         }
         if (var2 == 23) {
-          return (TextureOperation) ((Object) new hpb());
+          return (TextureOperation) ((Object) new KaleidoscopeTextureOperation());
         }
         if (var2 == 24) {
-          return (TextureOperation) ((Object) new qqa());
+          return (TextureOperation) ((Object) new GrayscaleTextureOperation());
         }
         if (var2 == 25) {
-          return (TextureOperation) ((Object) new olb());
+          return (TextureOperation) ((Object) new ColorKeyScaleTextureOperation());
         }
         if (var2 == 26) {
-          return (TextureOperation) ((Object) new wua());
+          return (TextureOperation) ((Object) new ThresholdTextureOperation());
         }
         if (var2 == 27) {
           return (TextureOperation) ((Object) new moa());
@@ -105,25 +105,25 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new md());
         }
         if (var2 == 30) {
-          return (TextureOperation) ((Object) new koa());
+          return (TextureOperation) ((Object) new RangeTextureOperation());
         }
         if (var2 == 31) {
-          return (TextureOperation) ((Object) new il());
+          return (TextureOperation) ((Object) new MandelbrotTextureOperation());
         }
         if (var2 == 32) {
           return (TextureOperation) ((Object) new smb());
         }
         if (var2 == 33) {
-          return (TextureOperation) ((Object) new gia());
+          return (TextureOperation) ((Object) new NormalMapTextureOperation());
         }
         if (34 == var2) {
           return (TextureOperation) ((Object) new rw());
         }
         if (35 == var2) {
-          return (TextureOperation) ((Object) new hk());
+          return (TextureOperation) ((Object) new EdgeMagnitudeTextureOperation());
         }
         if (36 == var2) {
-          return (TextureOperation) ((Object) new wv());
+          return (TextureOperation) ((Object) new TextureSourceOperation());
         }
         if (var2 == 37) {
           return (TextureOperation) ((Object) new oqb());
@@ -132,12 +132,12 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new sva());
         }
         if (39 == var2) {
-          return (TextureOperation) ((Object) new pja());
+          return (TextureOperation) ((Object) new SpriteTextureOperation());
         }
         return null;
     }
 
-    final static GraphicsToolkit a(boolean param0, java.awt.Canvas param1, int param2, TextureProvider param3, ResourceArchive param4, int param5) {
+    final static GraphicsToolkit createToolkitForCanvas(boolean param0, java.awt.Canvas param1, int param2, TextureProvider param3, ResourceArchive param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -155,7 +155,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           var6_int = 0;
           var7 = 0;
           if (param0) {
-            SetPhasedEnergyBeamProjectiles.a(false, 23);
+            SetPhasedEnergyBeamProjectiles.createTextureOperation(false, 23);
           }
           if (param1 != null) {
             var8 = param1.getSize();
@@ -243,7 +243,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setTextureDimensions(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = VoidHunters.field_G;
         int var3_intLifetime1;
@@ -251,25 +251,25 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           if (param2 >= -65) {
             field_o = (String[]) null;
           }
-          if (param1 != hob.field_d) {
-            grb.field_l = new int[param1];
+          if (param1 != hob.textureWidth) {
+            BoxBlurTextureOperation.textureXCoordinates = new int[param1];
             for (var3_int = 0; var3_int < param1; var3_int++) {
-              grb.field_l[var3_int] = (var3_int << 12) / param1;
+              BoxBlurTextureOperation.textureXCoordinates[var3_int] = (var3_int << 12) / param1;
             }
             SetMassDriverEnergyUsed.field_q = param1 - 1;
             tpa.field_b = 32 * param1;
-            hob.field_d = param1;
+            hob.textureWidth = param1;
           }
           if (param0 != GetTorpedoReload.field_o) {
-            if (hob.field_d == param0) {
-              SetSalvoUsesAllEnergy.field_p = grb.field_l;
+            if (hob.textureWidth == param0) {
+              SetSalvoUsesAllEnergy.textureYCoordinates = BoxBlurTextureOperation.textureXCoordinates;
             } else {
-              SetSalvoUsesAllEnergy.field_p = new int[param0];
+              SetSalvoUsesAllEnergy.textureYCoordinates = new int[param0];
               for (var3_intLifetime1 = 0; param0 > var3_intLifetime1; var3_intLifetime1++) {
-                SetSalvoUsesAllEnergy.field_p[var3_intLifetime1] = (var3_intLifetime1 << 12) / param0;
+                SetSalvoUsesAllEnergy.textureYCoordinates[var3_intLifetime1] = (var3_intLifetime1 << 12) / param0;
               }
             }
-            wf.field_d = param0 - 1;
+            wf.textureHeightMask = param0 - 1;
             GetTorpedoReload.field_o = param0;
           }
         } catch (RuntimeException runtimeException) {

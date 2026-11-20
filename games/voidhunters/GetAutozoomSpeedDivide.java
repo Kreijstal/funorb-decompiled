@@ -39,7 +39,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
           param7.drawRectangleDefaultBlend(114, var14, 6 + var11_int, -16777216 | param0, var13, 6 + var12);
           if (param3 != 100) {
             var15 = (PlatformService) null;
-            GetAutozoomSpeedDivide.a(-53, -31, (PlatformService) null, -44, -9, 98);
+            GetAutozoomSpeedDivide.enterFullscreenBlocking(-53, -31, (PlatformService) null, -44, -9, 98);
           }
           param7.fillRectangle(var11_int + 4, (byte) 120, -16777216 | param9, var12 + 4, 1 + var14, 1 + var13);
           param6.a(true, param0 | -16777216, -1, param2, var14 + 3 + param8.field_d, var13 + 3);
@@ -76,7 +76,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, PlatformService param2, int param3, int param4, int param5) {
+    final static java.awt.Frame enterFullscreenBlocking(int param0, int param1, PlatformService param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_28_0 = null;
         Object stackIn_34_0 = null;
@@ -85,12 +85,12 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        fm[] var6 = null;
+        DisplayMode[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        fm[] var10 = null;
+        DisplayMode[] var10 = null;
         PlatformRequest var11 = null;
         var9 = VoidHunters.field_G;
         try {
@@ -98,20 +98,20 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
             return null;
           }
           if (param1 == 0) {
-            var10 = MissionBuilderFactory.a(param2, -30334);
+            var10 = MissionBuilderFactory.listDisplayModesBlocking(param2, -30334);
             var6 = var10;
             if (var6 == null) {
               return null;
             }
             var7_int = 0;
             for (var8 = 0; var8 < var10.length; var8++) {
-              if (var10[var8].field_c == param5 &&
-                var10[var8].field_a == param3 && ((param4 == 0 ||
-                var10[var8].field_d == param4) &&
+              if (var10[var8].width == param5 &&
+                var10[var8].height == param3 && ((param4 == 0 ||
+                var10[var8].refreshRate == param4) &&
                 (var7_int == 0 ||
-                !(param1 >= var10[var8].field_e)))) {
+                !(param1 >= var10[var8].bitDepth)))) {
                 var7_int = 1;
-                param1 = var10[var8].field_e;
+                param1 = var10[var8].bitDepth;
               }
             }
             if (var7_int == 0) {
@@ -134,7 +134,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
           if (2 != var11.status) {
             return var7;
           }
-          GetWorldWidthUpshift.a(var7, param2, (byte) 31);
+          GetWorldWidthUpshift.exitFullscreenBlocking(var7, param2, (byte) 31);
           stackIn_40_0 = null;
           return (java.awt.Frame) (stackIn_40_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

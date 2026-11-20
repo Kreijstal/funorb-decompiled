@@ -65,7 +65,7 @@ abstract class TextureOperation extends IntrusiveNode {
 
     final int[] getInputMonochromeRow(int param0, int param1, int param2) {
         if (param2 != 255) {
-          this.d((byte) -6);
+          this.getTextureId((byte) -6);
           if (this.field_e[param0].field_g) {
             return this.field_e[param0].getMonochromeRow(param1, true);
           }
@@ -77,7 +77,7 @@ abstract class TextureOperation extends IntrusiveNode {
         return this.field_e[param0].getColorRow(255, param1)[0];
     }
 
-    int d(byte param0) {
+    int getTextureId(byte param0) {
         if (param0 <= 62) {
           this.field_d = (ColorRowCache) null;
           return -1;
@@ -85,7 +85,7 @@ abstract class TextureOperation extends IntrusiveNode {
         return -1;
     }
 
-    int a(int param0) {
+    int getSpriteId(int param0) {
         if (param0 != -1) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.decodeParameter(97, 76, (PacketBuffer) null);
@@ -96,7 +96,7 @@ abstract class TextureOperation extends IntrusiveNode {
 
     int[] getMonochromeRow(int param0, boolean param1) {
         if (!param1) {
-          this.a(-12);
+          this.getSpriteId(-12);
           throw new IllegalStateException("This operation does not have a monochrome output");
         }
         throw new IllegalStateException("This operation does not have a monochrome output");

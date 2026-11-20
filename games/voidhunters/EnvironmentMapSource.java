@@ -38,11 +38,11 @@ abstract class EnvironmentMapSource {
         MissionEvent var7 = new MissionEvent();
         var7.addCondition((byte) -114, (MissionCondition) (new BodyInZoneCondition(-1, 1)));
         var7.addAction(new SetShipTeamAction(-1, 0), true);
-        var10.a(var7, -38);
+        var10.addMissionEvent(var7, -38);
         MissionEvent var8 = new MissionEvent();
         var8.addCondition((byte) -124, (MissionCondition) (new BodyInZoneCondition(-1, 0)));
         var8.addAction(new SetShipTeamAction(-1, 1), true);
-        var10.a(var8, -38);
+        var10.addMissionEvent(var8, -38);
         Mission var9 = new Mission(var10);
         return var9;
     }

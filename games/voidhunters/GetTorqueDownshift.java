@@ -20,7 +20,7 @@ final class GetTorqueDownshift extends ConsoleCommand {
           if (param1 >= -17) {
             field_o = 19;
           }
-          stackIn_5_0 = (null != di.a(param0, 0));
+          stackIn_5_0 = (null != FlipTextureOperation.a(param0, 0));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

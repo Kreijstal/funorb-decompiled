@@ -54,8 +54,8 @@ final class SetTorpedoRandomness extends ConsoleCommand {
         dp.field_a.setBounds(-5 + (var9_int - var11), 29, var11, var10, param5);
         int var12 = param5 + (var10 + 5);
         hp.field_b.setBounds(0, -69, var9_int, 0, param2);
-        me.field_s.setBounds(0, 125, var9_int, param2, var12);
-        me.field_s.field_gb = uwa.a(11579568, me.field_s.height, 2105376, 8421504, 92, 3);
+        TiledSpriteTextureOperation.field_s.setBounds(0, 125, var9_int, param2, var12);
+        TiledSpriteTextureOperation.field_s.field_gb = uwa.a(11579568, TiledSpriteTextureOperation.field_s.height, 2105376, 8421504, 92, 3);
         var12 = var12 + param2;
         if (param4) {
           return;

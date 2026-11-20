@@ -8,9 +8,9 @@ final class PlayerGameDataFactory implements GameStateFactory {
         RuntimeException var1 = null;
         var2 = VoidHunters.field_G;
         try {
-          if (!SetReloadBarWidth.f((byte) -124)) {
+          if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -124)) {
             if (null != psb.field_b &&
-              psb.field_b.field_a) {
+              psb.field_b.focusLost) {
               spb.a((byte) -95);
               qn.field_h.a(false, new mr(qn.field_h, AdminMessageFactory.field_a));
             }

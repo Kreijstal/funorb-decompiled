@@ -3,7 +3,7 @@
  */
 final class psb {
     static int field_a;
-    static ufb field_b;
+    static FullscreenCanvas field_b;
 
     final static ge a(String param0, int param1) {
         RuntimeException var2 = null;

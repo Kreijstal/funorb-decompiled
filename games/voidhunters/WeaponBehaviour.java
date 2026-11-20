@@ -277,7 +277,7 @@ final class WeaponBehaviour implements DiffableState {
             return;
           }
           if (param4 >= 0) {
-            qba.a(20382, param13, param4, param7, 5);
+            BlendTextureOperation.a(20382, param13, param4, param7, 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -423,12 +423,12 @@ final class WeaponBehaviour implements DiffableState {
           }
           if (this.weapontype == 10) {
             this.reload = Particle.field_a;
-            qba.a(20382, var20Lifetime1, var34.getFiringSoundId(false), var21Lifetime1, this.reload / 2 + 1);
+            BlendTextureOperation.a(20382, var20Lifetime1, var34.getFiringSoundId(false), var21Lifetime1, this.reload / 2 + 1);
             return;
           }
           if (!var34.aimsDirectlyAtTarget(true) &&
             !param1 &&
-            0 == di.field_p) {
+            0 == FlipTextureOperation.field_p) {
             var25_int = param3 - var17;
             var26_int = -var18 + param6;
             var27 = GameSnapshotFactory.a(var26_int, (byte) -77, var25_int);

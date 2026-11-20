@@ -7,7 +7,7 @@ final class ConsoleValue {
 
     public final String toString() {
         if (this.primitive) {
-          return sna.getPrimitiveType(this.value, (byte) 107) + "{" + this.value + "}";
+          return PolarDisplacementTextureOperation.getPrimitiveType(this.value, (byte) 107) + "{" + this.value + "}";
         }
         if (this.value == null) {
           return "null";

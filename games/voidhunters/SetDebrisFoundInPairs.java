@@ -200,11 +200,11 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
               }
               if (!stackIn_11_0 ||
                 -(var16 * var17) + var18 * var15 < 0) {
-                var13Lifetime1 = pja.field_n[var10];
+                var13Lifetime1 = SpriteTextureOperation.field_n[var10];
                 if (var13Lifetime1 != -2147483648) {
-                  var14Lifetime1 = pja.field_n[var11];
+                  var14Lifetime1 = SpriteTextureOperation.field_n[var11];
                   if (var14Lifetime1 != -2147483648) {
-                    var15 = pja.field_n[var12];
+                    var15 = SpriteTextureOperation.field_n[var12];
                     if (var15 != -2147483648) {
                       var16 = -var6 + (var14Lifetime1 + (var13Lifetime1 + var15));
                       stackIn_25_0 = -1 + bs.field_b.length;

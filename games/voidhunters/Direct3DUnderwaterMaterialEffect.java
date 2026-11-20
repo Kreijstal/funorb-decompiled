@@ -88,8 +88,8 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
           if (!this.field_f) {
             this.toolkit.setTexture(this.toolkit.field_Q, -123);
             this.toolkit.setTextureCombineMode(116, 1);
-            this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
-            this.toolkit.setAlphaCombineSource(0, (byte) -91, pja.field_l);
+            this.toolkit.setRgbCombineSource(0, SpriteTextureOperation.field_l, 7);
+            this.toolkit.setAlphaCombineSource(0, (byte) -91, SpriteTextureOperation.field_l);
             this.field_f = true;
             return;
           }
@@ -232,7 +232,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
           this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
           this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
           this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
-          this.toolkit.setAlphaCombineSource(0, (byte) -108, pja.field_l);
+          this.toolkit.setAlphaCombineSource(0, (byte) -108, SpriteTextureOperation.field_l);
           this.toolkit.setActiveTextureUnit(0, -72);
           this.applyUnderwaterShader((byte) -46);
           return;
@@ -241,7 +241,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
         this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
         this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
-        this.toolkit.setAlphaCombineSource(0, (byte) -108, pja.field_l);
+        this.toolkit.setAlphaCombineSource(0, (byte) -108, SpriteTextureOperation.field_l);
         this.toolkit.setActiveTextureUnit(0, -72);
         this.applyUnderwaterShader((byte) -46);
     }

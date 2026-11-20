@@ -68,7 +68,7 @@ final class MessageFactory implements GameStateFactory {
           var7 = new StringBuilder("The method " + param0 + "(");
           for (var5 = 0; param1.length > var5; var5++) {
             if (param1[var5].primitive) {
-              discarded$1 = var7.append(sna.getPrimitiveType(param1[var5].value, (byte) 119).toString());
+              discarded$1 = var7.append(PolarDisplacementTextureOperation.getPrimitiveType(param1[var5].value, (byte) 119).toString());
             } else {
               discarded$2 = var7.append(wp.a(param1[var5].value.getClass(), false));
             }

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SetSalvoUsesAllEnergy extends ConsoleCommand {
-    static int[] field_p;
+    static int[] textureYCoordinates;
     static int field_o;
 
     final static int a(int param0, int param1, Random param2, boolean param3, int[] param4) {
@@ -145,7 +145,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
         if (param0 != 0) {
           return;
         }
-        field_p = null;
+        textureYCoordinates = null;
     }
 
     static {

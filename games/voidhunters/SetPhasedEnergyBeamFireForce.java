@@ -53,10 +53,10 @@ final class SetPhasedEnergyBeamFireForce extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          var3 = jwa.normalizeName(false, var6);
+          var3 = ConstantColorTextureOperation.normalizeName(false, var6);
           stackIn_3_0 = !param0;
           var7 = (CharSequence) ((Object) param2);
-          var4 = jwa.normalizeName(stackIn_3_0, var7);
+          var4 = ConstantColorTextureOperation.normalizeName(stackIn_3_0, var7);
           if (var3 == null &&
             var4 == null) {
             return true;

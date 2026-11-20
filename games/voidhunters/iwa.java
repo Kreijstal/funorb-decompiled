@@ -23,10 +23,10 @@ final class iwa {
         RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (lsa) (vfa.field_p.first(0));
+          var4 = (lsa) (ScreenSizeController.field_p.first(0));
           while (var4 != null) {
             WidgetNode.a(62, param1, var4);
-            var4 = (lsa) (vfa.field_p.next((byte) 109));
+            var4 = (lsa) (ScreenSizeController.field_p.next((byte) 109));
           }
           if (param0 == -30) {
             return;

@@ -51,7 +51,7 @@ final class ProceduralTexture extends DualLinkNode {
           for (var7_int = 0; this.field_q.length > var7_int; var7_int++) {
             this.field_q[var7_int].initializeCache(-9163, param1, param5);
           }
-          SetPhasedEnergyBeamProjectiles.a(param5, param1, -116);
+          SetPhasedEnergyBeamProjectiles.setTextureDimensions(param5, param1, -116);
           var20 = new float[4 * (param1 * param5)];
           var7 = var20;
           var8 = 0;
@@ -247,7 +247,7 @@ final class ProceduralTexture extends DualLinkNode {
             this.field_q[var9_int].initializeCache(-9163, param0, param2);
           }
           igb.a(true, param6);
-          SetPhasedEnergyBeamProjectiles.a(param2, param0, -99);
+          SetPhasedEnergyBeamProjectiles.setTextureDimensions(param2, param0, -99);
           var9 = new int[param2 * param0];
           var10 = 0;
           for (var11 = 0; param2 > var11; var11++) {
@@ -388,7 +388,7 @@ final class ProceduralTexture extends DualLinkNode {
             this.field_q[var10_int].initializeCache(-9163, param5, param7);
           }
           igb.a(true, param6);
-          SetPhasedEnergyBeamProjectiles.a(param7, param5, -128);
+          SetPhasedEnergyBeamProjectiles.setTextureDimensions(param7, param5, -128);
           var26 = new int[param5 * param7];
           var10 = var26;
           if (!param0) {
@@ -517,10 +517,10 @@ final class ProceduralTexture extends DualLinkNode {
           for (var6 = 0; var2_int > var6; var6++) {
             var13 = GetPhasedEnergyBeamProjectileOndamageParticles.decodeTextureOperation(param0, (byte) 55);
             var14 = var13;
-            if (var14.a(-1) >= 0) {
+            if (var14.getSpriteId(-1) >= 0) {
               var3++;
             }
-            if (var14.d((byte) 81) >= 0) {
+            if (var14.getTextureId((byte) 81) >= 0) {
               var4++;
             }
             var8 = var14.field_e.length;
@@ -541,8 +541,8 @@ final class ProceduralTexture extends DualLinkNode {
             for (var9Lifetime1 = 0; var8Lifetime1 > var9Lifetime1; var9Lifetime1++) {
               var15.field_e[var9Lifetime1] = this.field_q[var12[var6Lifetime1][var9Lifetime1]];
             }
-            var9Lifetime1Lifetime1 = var15.a(-1);
-            var10 = var15.d((byte) 77);
+            var9Lifetime1Lifetime1 = var15.getSpriteId(-1);
+            var10 = var15.getTextureId((byte) 77);
             if (0 < var9Lifetime1Lifetime1) {
               incrementValue$0 = var3Lifetime1;
               var3Lifetime1++;

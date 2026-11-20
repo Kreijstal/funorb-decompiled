@@ -4418,7 +4418,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var11Lifetime1;
         var17 = VoidHunters.field_G;
         try {
-          qba.a(20382, this.finalx, 65, this.finaly, 10);
+          BlendTextureOperation.a(20382, this.finalx, 65, this.finaly, 10);
           var18 = this.getDefinition((byte) -112);
           var6 = Math.min(var18.maxHealth / var18.healthScale + this.countComponents(1), 1000);
           if (param3 > -53) {

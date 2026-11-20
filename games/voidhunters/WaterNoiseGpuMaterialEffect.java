@@ -94,7 +94,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
         this.toolkit.setActiveTextureUnit(1, param0 ^ -72);
         this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, je.field_c);
         this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, SetGrapplingHookMaxExtension8Force.field_q, 0);
-        this.toolkit.setAlphaCombineSource(0, (byte) -101, pja.field_l);
+        this.toolkit.setAlphaCombineSource(0, (byte) -101, SpriteTextureOperation.field_l);
         this.toolkit.setTextureCoordinateIndex(-34, 0);
         this.toolkit.setActiveTextureUnit(0, -79);
         this.toolkit.setTextureConstantColor(-128, -16777216);
@@ -160,11 +160,11 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               var5 = hob.a(new Random(), 2147483647, 117);
               if (param0) {
                 var4 = 3;
-                qqa.a(true, (byte) -41);
+                GrayscaleTextureOperation.a(true, (byte) -41);
               }
               vqa.field_g = new GameSession(false, var3, 0, false, var4, var5, param0);
               GpuSprite.field_e = param1;
-              di.field_l.startGame(false, -13027);
+              FlipTextureOperation.field_l.startGame(false, -13027);
               var6 = OpenGlBufferObject.field_d ? 1 : 0;
               stackIn_34_0 = (bqa.a(false)) ? 7 : 0;
               GetNebulaFadesOutWhenClose.a(stackIn_34_0, var6 != 0, (byte) -85, -1);
@@ -184,11 +184,11 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             var5Lifetime2 = hob.a(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
-              qqa.a(true, (byte) -41);
+              GrayscaleTextureOperation.a(true, (byte) -41);
             }
             vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime2, param0);
             GpuSprite.field_e = param1;
-            di.field_l.startGame(false, -13027);
+            FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime2 = OpenGlBufferObject.field_d ? 1 : 0;
             stackIn_22_0 = (bqa.a(false)) ? 7 : 0;
             GetNebulaFadesOutWhenClose.a(stackIn_22_0, var6Lifetime2 != 0, (byte) -85, -1);
@@ -212,11 +212,11 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
           if (param0) {
             var4 = 3;
-            qqa.a(true, (byte) -41);
+            GrayscaleTextureOperation.a(true, (byte) -41);
           }
           vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
           GpuSprite.field_e = param1;
-          di.field_l.startGame(false, -13027);
+          FlipTextureOperation.field_l.startGame(false, -13027);
           var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
           stackIn_52_0 = (bqa.a(false)) ? 7 : 0;
           GetNebulaFadesOutWhenClose.a(stackIn_52_0, var6Lifetime1 != 0, (byte) -85, -1);
@@ -225,11 +225,11 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
-              qqa.a(true, (byte) -41);
+              GrayscaleTextureOperation.a(true, (byte) -41);
             }
             vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;
-            di.field_l.startGame(false, -13027);
+            FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
             stackIn_77_0 = (bqa.a(false)) ? 7 : 0;
             GetNebulaFadesOutWhenClose.a(stackIn_77_0, var6Lifetime1 != 0, (byte) -85, -1);
@@ -238,11 +238,11 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
-              qqa.a(true, (byte) -41);
+              GrayscaleTextureOperation.a(true, (byte) -41);
             }
             vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;
-            di.field_l.startGame(false, -13027);
+            FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
             stackIn_65_0 = (bqa.a(false)) ? 7 : 0;
             GetNebulaFadesOutWhenClose.a(stackIn_65_0, var6Lifetime1 != 0, (byte) -85, -1);

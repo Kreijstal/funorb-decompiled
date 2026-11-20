@@ -42,7 +42,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           }
           for (var4_int = 0; var4_int < this.parameterTypes.length; var4_int++) {
             if (param2[var4_int].primitive) {
-              var5 = sna.getPrimitiveType(param2[var4_int].value, (byte) 124);
+              var5 = PolarDisplacementTextureOperation.getPrimitiveType(param2[var4_int].value, (byte) 124);
               if (var5 == Boolean.TYPE &&
                 this.parameterTypes[var4_int] != Boolean.TYPE) {
                 return false;

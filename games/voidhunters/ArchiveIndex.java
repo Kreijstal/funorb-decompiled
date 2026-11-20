@@ -557,7 +557,7 @@ final class ArchiveIndex {
             }
             if (decompiledNaturalLoopExit0) {
               if (BitmapTextLayout.field_n.firstButton.field_o != 0) {
-                ola.field_p = new qka(BitmapTextLayout.field_n.firstButton.screenX, BitmapTextLayout.field_n.firstButton.screenY, BitmapTextLayout.field_n.firstButton.width, BitmapTextLayout.field_n.firstButton.height, hk.field_i, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
+                ola.field_p = new qka(BitmapTextLayout.field_n.firstButton.screenX, BitmapTextLayout.field_n.firstButton.screenY, BitmapTextLayout.field_n.firstButton.width, BitmapTextLayout.field_n.firstButton.height, EdgeMagnitudeTextureOperation.field_i, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
                 MissionGenerationDataFactory.field_b = 0;
               }
               stackIn_89_0 = BitmapTextLayout.field_n.secondButton;

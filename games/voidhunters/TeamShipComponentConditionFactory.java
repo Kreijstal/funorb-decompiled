@@ -9,7 +9,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new TeamShipComponentCondition());
     }
 
-    final static boolean a(int param0, fm param1, fm param2) {
+    final static boolean a(int param0, DisplayMode param1, DisplayMode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -18,11 +18,11 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.field_c < param1.field_c) {
+          if (param2.width < param1.width) {
             return true;
           }
-          if (param1.field_c == param2.field_c &&
-            param2.field_a < param1.field_a) {
+          if (param1.width == param2.width &&
+            param2.height < param1.height) {
             return true;
           }
           if (param0 == -27544) {

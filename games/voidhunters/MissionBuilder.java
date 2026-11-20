@@ -212,31 +212,31 @@ final class MissionBuilder implements DiffableState {
           var8.addAction(new SetVariableLabelAction(var5_int, 1), true);
           var8.addAction(new SetVariableAction(var6, var7), true);
           var8.addAction(new SetVariableLabelAction(var6, 2), true);
-          param0.a(var8, param1 - 6023);
+          param0.addMissionEvent(var8, param1 - 6023);
           var9 = new MissionEvent();
           var10 = new VariableCondition(var6, 1);
           ((MissionCondition) ((Object) var10)).negated = true;
           var9.addCondition((byte) -125, (MissionCondition) (var10));
           var9.addAction(new AwardVictoryToTeamAction(0), true);
-          param0.a(var9, -38);
+          param0.addMissionEvent(var9, -38);
           var11 = new MissionEvent();
           var12 = new VariableCondition(var5_int, 1);
           ((MissionCondition) ((Object) var12)).negated = true;
           var11.addCondition((byte) -111, (MissionCondition) (var12));
           var11.addAction(new AwardVictoryToTeamAction(1), true);
-          param0.a(var11, -38);
+          param0.addMissionEvent(var11, -38);
           var13 = new MissionEvent();
           var14 = new TeamShipComponentCondition(0, 47);
           var15 = new IncrementVariableAction(var6, -1);
           var13.addCondition((byte) -102, (MissionCondition) (var14));
           var13.addAction(var15, true);
-          param0.a(var13, -38);
+          param0.addMissionEvent(var13, -38);
           var16 = new MissionEvent();
           var17 = new TeamShipComponentCondition(1, 47);
           var18 = new IncrementVariableAction(var5_int, -1);
           var16.addCondition((byte) -122, (MissionCondition) (var17));
           var16.addAction(var18, true);
-          param0.a(var16, -38);
+          param0.addMissionEvent(var16, -38);
           var19 = new Debris(new ShipComponent(47), false);
           var19.setPosition(0, 0, (byte) 89);
           param0.addDebris(var19, (byte) 100);
@@ -268,7 +268,7 @@ final class MissionBuilder implements DiffableState {
           var11 = new MissionEvent();
           var11.addCondition((byte) -108, (MissionCondition) (new BodyDestroyedCondition(var7.getId(false))));
           var11.addAction(new AwardVictoryToTeamAction(0), true);
-          var12.a(var11, -38);
+          var12.addMissionEvent(var11, -38);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -868,30 +868,30 @@ final class MissionBuilder implements DiffableState {
           var8.addAction(new SetVariableLabelAction(var5_int, 6), true);
           var8.addAction(new SetVariableAction(var6, 0), true);
           var8.addAction(new SetVariableLabelAction(var6, 7), true);
-          param2.a(var8, -38);
+          param2.addMissionEvent(var8, -38);
           var9 = new MissionEvent();
           var9.addAction(new SetVariableAction(var5_int, 0), true);
           var9.addAction(new SetVariableAction(var6, 0), true);
-          param2.a(var9, -38);
+          param2.addMissionEvent(var9, -38);
           var10 = new MissionEvent();
           var10.addCondition((byte) -109, (MissionCondition) (new ShipTeamCondition(-1, 0)));
           var10.addAction(new AdjustBodyComponentsAction(var5_int, 0), true);
-          param2.a(var10, -38);
+          param2.addMissionEvent(var10, -38);
           var11 = new MissionEvent();
           var11.addCondition((byte) -99, (MissionCondition) (new ShipTeamCondition(-1, 1)));
           var11.addAction(new AdjustBodyComponentsAction(var6, 0), true);
-          param2.a(var11, -38);
+          param2.addMissionEvent(var11, -38);
           var12 = new MissionEvent();
           var13 = new VariableCondition(var5_int, var7);
           var12.addCondition((byte) -107, (MissionCondition) (var13));
           var14 = -47 % ((10 - param3) / 50);
           var12.addAction(new AwardVictoryToTeamAction(0), true);
-          param2.a(var12, -38);
+          param2.addMissionEvent(var12, -38);
           var15 = new MissionEvent();
           var16 = new VariableCondition(var6, var7);
           var15.addCondition((byte) -122, (MissionCondition) (var16));
           var15.addAction(new AwardVictoryToTeamAction(1), true);
-          param2.a(var15, -38);
+          param2.addMissionEvent(var15, -38);
           var17 = 4;
           var18 = TextLayout.approximateVectorLength(param1 / 4, (byte) 115, param0 / 4) >> 8;
           var19 = null;
@@ -1003,7 +1003,7 @@ final class MissionBuilder implements DiffableState {
                 var20++;
               }
             }
-            param4.a(var11, param6 - 92);
+            param4.addMissionEvent(var11, param6 - 92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1116,7 +1116,7 @@ final class MissionBuilder implements DiffableState {
           var9.addAction(new SetVariableAction(var6, var8), true);
           var9.addAction(new SetVariableLabelAction(var6, 9), true);
           var9.addAction(new SetVariableAction(var7, 0), true);
-          param2.a(var9, -38);
+          param2.addMissionEvent(var9, -38);
           var22 = new MissionEvent();
           var11_ref_cqb = new VariableCondition(var6, 1);
           ((MissionCondition) ((Object) var11_ref_cqb)).negated = true;
@@ -1125,20 +1125,20 @@ final class MissionBuilder implements DiffableState {
           ((MissionCondition) ((Object) var12_ref_ih)).negated = true;
           var22.addCondition((byte) -112, (MissionCondition) (var12_ref_ih));
           var22.addAction(new AwardVictoryToTeamAction(0), true);
-          param2.a(var22, -38);
+          param2.addMissionEvent(var22, -38);
           var23 = new MissionEvent();
           var14_ref_jsb = new ShipSpawnedCondition(0);
           var23.addCondition((byte) -110, (MissionCondition) (var14_ref_jsb));
           var15_ref_tt = new AdjustBodyComponentsAction(var5_int, 1);
           var23.addAction(var15_ref_tt, true);
-          param2.a(var23, -38);
+          param2.addMissionEvent(var23, -38);
           var24 = new MissionEvent();
           var17 = new VariableCondition(var5_int, 0);
           ((MissionCondition) (var17)).negated = true;
           var24.addCondition((byte) -128, (MissionCondition) (var17));
           var18_ref_pob = new SetVariableAction(var5_int, 0);
           var24.addAction(var18_ref_pob, true);
-          param2.a(var24, -38);
+          param2.addMissionEvent(var24, -38);
           var25 = new MissionEvent();
           var11_ref_cqbLifetime1 = new VariableCondition(var5_int, 1);
           ((MissionCondition) ((Object) var11_ref_cqbLifetime1)).negated = true;
@@ -1147,20 +1147,20 @@ final class MissionBuilder implements DiffableState {
           ((MissionCondition) ((Object) var12_ref_ihLifetime1)).negated = true;
           var25.addCondition((byte) -125, (MissionCondition) (var12_ref_ihLifetime1));
           var25.addAction(new AwardVictoryToTeamAction(1), true);
-          param2.a(var25, -38);
+          param2.addMissionEvent(var25, -38);
           var26 = new MissionEvent();
           var14_ref_jsbLifetime1 = new ShipSpawnedCondition(1);
           var26.addCondition((byte) -103, (MissionCondition) (var14_ref_jsbLifetime1));
           var15_ref_ttLifetime1 = new AdjustBodyComponentsAction(var6, 1);
           var26.addAction(var15_ref_ttLifetime1, true);
-          param2.a(var26, -38);
+          param2.addMissionEvent(var26, -38);
           var27 = new MissionEvent();
           var17Lifetime1 = new VariableCondition(var6, 0);
           ((MissionCondition) (var17Lifetime1)).negated = true;
           var27.addCondition((byte) -119, (MissionCondition) (var17Lifetime1));
           var18_ref_pobLifetime1 = new SetVariableAction(var6, 0);
           var27.addAction(var18_ref_pobLifetime1, true);
-          param2.a(var27, -38);
+          param2.addMissionEvent(var27, -38);
           var10 = 3;
           for (var11 = 0; var10 > var11; var11++) {
             var12 = param2.getWidth((byte) -122);
@@ -1174,21 +1174,21 @@ final class MissionBuilder implements DiffableState {
           }
           var29 = new MissionEvent();
           var29.addAction(new IncrementVariableAction(var7, 1), true);
-          param2.a(var29, -38);
+          param2.addMissionEvent(var29, -38);
           var30 = new MissionEvent();
           var30.addCondition((byte) -123, (MissionCondition) (new VariableCondition(var7, Particle.field_v)));
           var30.addCondition((byte) -107, (MissionCondition) (new TeamNodeCondition(1)));
           var30.addAction(new AdjustVariableAction(var5_int, 1), true);
-          param2.a(var30, -38);
+          param2.addMissionEvent(var30, -38);
           var31 = new MissionEvent();
           var31.addCondition((byte) -116, (MissionCondition) (new VariableCondition(var7, Particle.field_v)));
           var31.addCondition((byte) -125, (MissionCondition) (new TeamNodeCondition(0)));
           var31.addAction(new AdjustVariableAction(var6, 1), true);
-          param2.a(var31, -38);
+          param2.addMissionEvent(var31, -38);
           var32 = new MissionEvent();
           var32.addCondition((byte) -107, (MissionCondition) (new VariableCondition(var7, Particle.field_v)));
           var32.addAction(new SetVariableAction(var7, 0), true);
-          param2.a(var32, -38);
+          param2.addMissionEvent(var32, -38);
           var15Lifetime1 = 2;
           var16Lifetime1 = TextLayout.approximateVectorLength(param1 / 4, (byte) 116, param3 / 4) >> 8;
           var17Lifetime2 = null;
@@ -1335,18 +1335,18 @@ final class MissionBuilder implements DiffableState {
           var5.addCondition((byte) -117, (MissionCondition) (new TickCondition(0)));
           var5.addAction(new SetVariableAction(var4_int, 300 * Particle.field_l), true);
           var5.addAction(new SetVariableLabelAction(var4_int, param1), true);
-          param0.a(var5, param1 ^ -39);
+          param0.addMissionEvent(var5, param1 ^ -39);
           var9 = new MissionEvent();
           var9.addCondition((byte) -128, (MissionCondition) (new VariableCondition(var4_int, 1)));
           var9.addAction(new IncrementVariableAction(var4_int, -1), true);
-          param0.a(var9, -38);
+          param0.addMissionEvent(var9, -38);
           var10 = new MissionEvent();
           var7 = new VariableCondition(var4_int, 1);
           ((MissionCondition) ((Object) var7)).negated = true;
           var10.addCondition((byte) -106, (MissionCondition) (var7));
           var8 = new AwardVictoryToWinnerAction();
           var10.addAction(var8, true);
-          param0.a(var10, -38);
+          param0.addMissionEvent(var10, -38);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -1372,7 +1372,7 @@ final class MissionBuilder implements DiffableState {
           var6 = new MissionEvent();
           var6.addCondition((byte) -112, (MissionCondition) (new BodyDestroyedCondition(var5.getId(false))));
           var6.addAction(new AwardVictoryToTeamAction(0), true);
-          param2.a(var6, -38);
+          param2.addMissionEvent(var6, -38);
           stackIn_1_0 = null;
           return (ShipBody[]) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1820,19 +1820,19 @@ final class MissionBuilder implements DiffableState {
           var13.addAction(new SetVariableLabelAction(var11, 1), true);
           var13.addAction(new SetVariableAction(var12, Particle.field_l * 600), true);
           var13.addAction(new SetVariableLabelAction(var12, 2), true);
-          param5.a(var13, -38);
+          param5.addMissionEvent(var13, -38);
           var14 = new MissionEvent();
           var15 = new VariableCondition(var12, 1);
           ((MissionCondition) ((Object) var15)).negated = true;
           var14.addCondition((byte) -106, (MissionCondition) (var15));
           var14.addAction(new AwardVictoryToTeamAction(0), true);
-          param5.a(var14, -38);
+          param5.addMissionEvent(var14, -38);
           var16 = new MissionEvent();
           var17 = new VariableCondition(var11, 1);
           ((MissionCondition) ((Object) var17)).negated = true;
           var16.addCondition((byte) -98, (MissionCondition) (var17));
           var16.addAction(new AwardVictoryToTeamAction(1), true);
-          param5.a(var16, -38);
+          param5.addMissionEvent(var16, -38);
           var18 = 5;
           if (param3 > -115) {
             return;
@@ -1857,14 +1857,14 @@ final class MissionBuilder implements DiffableState {
             var25 = new MissionEvent();
             var25.addCondition((byte) -123, (MissionCondition) (new BodyInZoneCondition(var22.getId(false), -2 + param5.getMapZoneCount(true))));
             var25.addAction(new IncrementVariableAction(var12, -1), true);
-            param5.a(var25, -38);
+            param5.addMissionEvent(var25, -38);
             var26 = new MissionEvent();
             var26.addCondition((byte) -120, (MissionCondition) (new BodyInZoneCondition(var22.getId(false), -1 + param5.getMapZoneCount(true))));
             var26.addAction(new IncrementVariableAction(var11, -1), true);
-            param5.a(var26, -38);
+            param5.addMissionEvent(var26, -38);
           }
           var20.addAction(new AwardVictoryToTeamAction(-1), true);
-          param5.a(var20, -38);
+          param5.addMissionEvent(var20, -38);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2333,7 +2333,7 @@ final class MissionBuilder implements DiffableState {
           this.a(0, param1, param0, param2, param3);
           this.a(param1, param2, var7, 0);
           if (qab.a(33, param0)) {
-            this.a(ksb.b(-100, param0), false, var7);
+            this.a(InvertTextureOperation.b(-100, param0), false, var7);
           }
           if (param4 < 34) {
             discarded$1 = this.a(42, 83, (int[]) null, 99, (byte) -48, -83);
@@ -2557,11 +2557,11 @@ final class MissionBuilder implements DiffableState {
           var21 = new MissionEvent();
           var21.addCondition((byte) -112, (MissionCondition) (new BodyDestroyedCondition(var18.getId(false))));
           var21.addAction(new AwardVictoryToTeamAction(1), true);
-          param4.a(var21, -38);
+          param4.addMissionEvent(var21, -38);
           var22 = new MissionEvent();
           var22.addCondition((byte) -107, (MissionCondition) (new BodyInZoneCondition(var18.getId(false), param4.getMapZoneCount(true) - 1)));
           var22.addAction(new AwardVictoryToTeamAction(0), true);
-          param4.a(var22, param0 - 38);
+          param4.addMissionEvent(var22, param0 - 38);
           stackIn_8_0 = var7;
           return (ShipBody[]) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3296,12 +3296,12 @@ final class MissionBuilder implements DiffableState {
             var11.addAction(new SetVariableAction(var12, var13), true);
             var11.addAction(new SetVariableLabelAction(var12, 3), true);
           }
-          param0.a(var11, -38);
+          param0.addMissionEvent(var11, -38);
           if (param2 == -1) {
             var22 = new MissionEvent();
             var22.addCondition((byte) -124, (MissionCondition) (new VariableCondition(var12, 1)));
             var22.addAction(new IncrementVariableAction(var12, -1), true);
-            param0.a(var22, -38);
+            param0.addMissionEvent(var22, -38);
           }
           var23 = new MissionEvent();
           var14 = new VariableCondition(var9, 1);
@@ -3311,20 +3311,20 @@ final class MissionBuilder implements DiffableState {
           ((MissionCondition) ((Object) var15)).negated = true;
           var23.addCondition((byte) -113, (MissionCondition) (var15));
           var23.addAction(new AwardVictoryToTeamAction(0), true);
-          param0.a(var23, -38);
+          param0.addMissionEvent(var23, -38);
           var24 = new MissionEvent();
           var17 = new ShipSpawnedCondition(0);
           var24.addCondition((byte) -110, (MissionCondition) (var17));
           var18 = new AdjustBodyComponentsAction(var8_int, 3);
           var24.addAction(var18, true);
-          param0.a(var24, param4 - 40);
+          param0.addMissionEvent(var24, param4 - 40);
           var25 = new MissionEvent();
           var20 = new VariableCondition(var8_int, 0);
           ((MissionCondition) ((Object) var20)).negated = true;
           var25.addCondition((byte) -127, (MissionCondition) (var20));
           var21 = new SetVariableAction(var8_int, 0);
           var25.addAction(var21, true);
-          param0.a(var25, param4 - 40);
+          param0.addMissionEvent(var25, param4 - 40);
           var26 = new MissionEvent();
           var14Lifetime1 = new VariableCondition(var8_int, 1);
           ((MissionCondition) ((Object) var14Lifetime1)).negated = true;
@@ -3333,20 +3333,20 @@ final class MissionBuilder implements DiffableState {
           ((MissionCondition) ((Object) var15Lifetime1)).negated = true;
           var26.addCondition((byte) -104, (MissionCondition) (var15Lifetime1));
           var26.addAction(new AwardVictoryToTeamAction(1), true);
-          param0.a(var26, param4 ^ -40);
+          param0.addMissionEvent(var26, param4 ^ -40);
           var27 = new MissionEvent();
           var17Lifetime1 = new ShipSpawnedCondition(1);
           var27.addCondition((byte) -121, (MissionCondition) (var17Lifetime1));
           var18Lifetime1 = new AdjustBodyComponentsAction(var9, 3);
           var27.addAction(var18Lifetime1, true);
-          param0.a(var27, -38);
+          param0.addMissionEvent(var27, -38);
           var28 = new MissionEvent();
           var20Lifetime1 = new VariableCondition(var9, 0);
           ((MissionCondition) ((Object) var20Lifetime1)).negated = true;
           var28.addCondition((byte) -118, (MissionCondition) (var20Lifetime1));
           var21Lifetime1 = new SetVariableAction(var9, 0);
           var28.addAction(var21Lifetime1, true);
-          param0.a(var28, -38);
+          param0.addMissionEvent(var28, -38);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
@@ -3641,7 +3641,7 @@ final class MissionBuilder implements DiffableState {
             var11 = new MissionEvent();
             var11.addCondition((byte) -98, (MissionCondition) (new BodyDestroyedCondition(var10.getId(false))));
             var11.addAction(new AwardVictoryToTeamAction(0), true);
-            param1.a(var11, -38);
+            param1.addMissionEvent(var11, -38);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var7 = (Exception) (Object) decompiledCaughtException;
@@ -3686,8 +3686,8 @@ final class MissionBuilder implements DiffableState {
         try {
           if (param4 != null) {
             for (var6_int = 0; var6_int < param4.length; var6_int++) {
-              if (param0 == param3.a(param4[var6_int], param1 + 2958)) {
-                stackIn_8_0 = param3.a(param2[var6_int], 87);
+              if (param0 == param3.getMapZoneIndex(param4[var6_int], param1 + 2958)) {
+                stackIn_8_0 = param3.getMapZoneIndex(param2[var6_int], 87);
                 return stackIn_8_0;
               }
             }

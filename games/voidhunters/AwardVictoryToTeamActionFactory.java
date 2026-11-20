@@ -62,7 +62,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o = new String[56];
           SetSpinningBladeSpinupSpeed.field_o[53] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[14] = SetDebrisSurvives.field_o;
-          SetSpinningBladeSpinupSpeed.field_o[13] = vn.field_i;
+          SetSpinningBladeSpinupSpeed.field_o[13] = HerringboneTextureOperation.field_i;
           SetSpinningBladeSpinupSpeed.field_o[7] = SetAutozoomAmountMultiply.field_o;
           SetSpinningBladeSpinupSpeed.field_o[51] = GetRepairModeActiveTime.field_q;
           SetSpinningBladeSpinupSpeed.field_o[39] = GetMutatorVotes.field_o;
@@ -105,7 +105,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[4] = ArchiveDiskWorker.field_a;
           SetSpinningBladeSpinupSpeed.field_o[18] = SetPlayerRepairAmount.field_o;
           SetSpinningBladeSpinupSpeed.field_o[44] = GetPhasedEnergyBeamReload.field_r;
-          SetSpinningBladeSpinupSpeed.field_o[24] = grb.field_i;
+          SetSpinningBladeSpinupSpeed.field_o[24] = BoxBlurTextureOperation.field_i;
           SetSpinningBladeSpinupSpeed.field_o[43] = SoftwareDepthBuffer.field_e;
           SetSpinningBladeSpinupSpeed.field_o[17] = SetGrapplingHookMaxLength.field_o;
           SetSpinningBladeSpinupSpeed.field_o[20] = OpenGlGpuTexture2D.field_k;
@@ -115,7 +115,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[49] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[32] = SetTeamSelectionSpeedup.field_q;
           SetSpinningBladeSpinupSpeed.field_o[52] = GetPedrosRepairMode.field_o;
-          SetSpinningBladeSpinupSpeed.field_o[11] = ufb.field_c;
+          SetSpinningBladeSpinupSpeed.field_o[11] = FullscreenCanvas.field_c;
           SetSpinningBladeSpinupSpeed.field_o[55] = GetPedrosRepairMode.field_o;
           ShipSpawnedCondition.field_e[30] = OpenGlEnvironmentMappedWaterEffect.field_h;
           ShipSpawnedCondition.field_e[39] = OpenGlEnvironmentMappedWaterEffect.field_h;
@@ -157,7 +157,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetBlueprintSaveTime.field_o[0] = SetDebrisFoundInPairs.field_o;
           GetBlueprintSaveTime.field_o[4] = hla.field_b;
           GetBlueprintSaveTime.field_o[3] = gl.field_c;
-          GetBlueprintSaveTime.field_o[5] = gia.field_j;
+          GetBlueprintSaveTime.field_o[5] = NormalMapTextureOperation.field_j;
           GetBlueprintSaveTime.field_o[2] = Cp1252Strings.field_a;
           GetBlueprintSaveTime.field_o[7] = NanosecondClock.field_b;
           GetGrapplingHookSpringConstant.field_o = new String[SetSpinningBladeSpinupSpeed.field_o.length + 72];
@@ -213,7 +213,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[0] = qh.field_L;
           GetGrapplingHookSpringConstant.field_o[46] = SetLaserEnergyUsed.field_o;
           GetGrapplingHookSpringConstant.field_o[22] = bi.field_g;
-          GetGrapplingHookSpringConstant.field_o[39] = di.field_m;
+          GetGrapplingHookSpringConstant.field_o[39] = FlipTextureOperation.field_m;
           GetGrapplingHookSpringConstant.field_o[4] = Widget.field_kb;
           GetGrapplingHookSpringConstant.field_o[47] = ScrollBarWidget.field_Db;
           GetGrapplingHookSpringConstant.field_o[15] = MidiNote.field_z;

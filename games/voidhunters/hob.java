@@ -9,7 +9,7 @@ final class hob extends IntrusiveNode {
     static String field_e;
     hob field_f;
     int field_i;
-    static int field_d;
+    static int textureWidth;
     int field_h;
     int field_k;
     int field_g;
@@ -131,7 +131,7 @@ final class hob extends IntrusiveNode {
             return stackIn_5_0;
           }
           if (param2 < 115) {
-            field_d = -117;
+            textureWidth = -117;
           }
           var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
           do {

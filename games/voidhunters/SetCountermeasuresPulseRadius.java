@@ -168,16 +168,16 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
-                  pja.field_n[var23Lifetime2] = var29Lifetime1;
+                  SpriteTextureOperation.field_n[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;
                   }
                 } else {
-                  pja.field_n[var23Lifetime2] = -2147483648;
+                  SpriteTextureOperation.field_n[var23Lifetime2] = -2147483648;
                 }
                 if (param6) {
                   SpinningBladeWeaponDefinition.field_b[var23Lifetime2] = var27Lifetime1 >> iob.field_f;
-                  gw.field_i[var23Lifetime2] = var28Lifetime1 >> iob.field_f;
+                  WeaveTextureOperation.field_i[var23Lifetime2] = var28Lifetime1 >> iob.field_f;
                   HardpointFactory.field_a[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

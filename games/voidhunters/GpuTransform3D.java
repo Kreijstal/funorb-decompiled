@@ -603,7 +603,7 @@ final class GpuTransform3D extends Transform3D {
               SecondaryNodeQueue.a(var3, (byte) -119, Asteroid.field_v.i(0), Asteroid.field_v.field_yb, param2, var4 != 0);
             }
             Asteroid.field_v = null;
-            lnb.d(0);
+            TileTextureOperation.d(0);
           }
           return;
         }

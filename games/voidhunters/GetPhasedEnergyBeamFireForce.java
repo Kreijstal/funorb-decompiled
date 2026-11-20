@@ -57,7 +57,7 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
     final static void a(int param0, int param1, int param2) {
         int var3 = 8 / ((-49 - param1) / 47);
         MapClearanceArea.field_c = param2;
-        wua.field_k = param0;
+        ThresholdTextureOperation.field_k = param0;
     }
 
     final static void e(byte param0) {

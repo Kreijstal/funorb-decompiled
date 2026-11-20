@@ -91,7 +91,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.position = 0;
               RequestNewestBlackboxRecording.field_p.writeByte(param3 ^ 13, 14);
               RequestNewestBlackboxRecording.field_p.writeByte(0, OpenGlGpuCubeTexture.field_j.a((byte) 56).field_a);
-              lnb.b(-1, 117);
+              TileTextureOperation.b(-1, 117);
               tc.field_c = SetSpecialOrderBoxHeight.field_o;
             }
             if (SetSpecialOrderBoxHeight.field_o == tc.field_c &&
@@ -176,7 +176,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               }
               IntIndexTable.field_a = qga.field_b.readString(param3 ^ -14);
               var13 = (CharSequence) ((Object) IntIndexTable.field_a);
-              ffb.field_e = jwa.normalizeName(false, var13);
+              ffb.field_e = ConstantColorTextureOperation.normalizeName(false, var13);
               SetClientSideDragging.field_p = qga.field_b.readUnsignedByte((byte) -94);
               tc.field_c = GetOndamageParticleSpeed.field_o;
               if (OpenGlGpuCubeTexture.field_j.a((byte) 124) == GetSalvoDamageMultiplier.field_r) {

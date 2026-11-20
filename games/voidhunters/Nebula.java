@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Nebula implements DiffableState {
-    static int field_b;
+    static int maximumHeapMegabytes;
     private int x;
     private int y;
 
@@ -192,7 +192,7 @@ final class Nebula implements DiffableState {
         if (param1) {
           return 8192 * (-(param0 % 3) + 3);
         }
-        field_b = 68;
+        maximumHeapMegabytes = 68;
         return 8192 * (-(param0 % 3) + 3);
     }
 
@@ -290,6 +290,6 @@ final class Nebula implements DiffableState {
     }
 
     static {
-        field_b = 64;
+        maximumHeapMegabytes = 64;
     }
 }

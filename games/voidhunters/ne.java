@@ -1158,7 +1158,7 @@ final class ne extends ka {
           this.field_I = GetBombletSprayProjectileDamage.a(this.field_I, 125, this.field_x);
           this.field_h = GetBombletSprayProjectileDamage.a(this.field_h, 99, this.field_x);
           this.field_A = GetBombletSprayProjectileDamage.a(this.field_A, 73, this.field_x);
-          this.field_z = sna.a(this.field_z, this.field_x, 5666);
+          this.field_z = PolarDisplacementTextureOperation.a(this.field_z, this.field_x, 5666);
           this.field_J = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_J);
           this.field_k = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_k);
           if (param1.field_p != null &&
