@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetRadialMenuRadius extends ConsoleCommand {
-    final static void a(byte param0, int param1, int param2) {
+    final static void drawLogoAnimation(byte param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -12,20 +12,20 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = VoidHunters.field_G;
-        if (0 > SetSalvoaim.field_r) {
+        if (0 > SetSalvoaim.logoAnimationTick) {
           return;
         }
         var3 = -135 + param1;
         var4 = param2 - 35;
         var5 = 256;
-        if (SetSalvoaim.field_r < 75) {
-          var5 = (SetSalvoaim.field_r << 8) / 75;
+        if (SetSalvoaim.logoAnimationTick < 75) {
+          var5 = (SetSalvoaim.logoAnimationTick << 8) / 75;
         }
-        if (SetSalvoaim.field_r > 200) {
-          var5 = (250 - SetSalvoaim.field_r << 8) / 50;
+        if (SetSalvoaim.logoAnimationTick > 200) {
+          var5 = (250 - SetSalvoaim.logoAnimationTick << 8) / 50;
         }
         if (param0 != 82) {
-          SetRadialMenuRadius.a((byte) -71, -110, -57);
+          SetRadialMenuRadius.drawLogoAnimation((byte) -71, -110, -57);
         }
         SetTorpedoEnergyUsed.a(74, UiAngleDial.field_K);
         SoftwareFlatTriangleRasterizer.setClipFromRaster();
@@ -35,12 +35,12 @@ final class SetRadialMenuRadius extends ConsoleCommand {
           SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, -var5 + 256);
         }
         bia.popRasterState((byte) 124);
-        if (SetSalvoaim.field_r < 150) {
+        if (SetSalvoaim.logoAnimationTick < 150) {
           UiAngleDial.field_K.drawHalfSize(var3, var4);
         } else {
           GetToggledScoreboard.field_o.drawAlpha(var3 + 15, 10 + var4, var5);
         }
-        var6 = SetSalvoaim.field_r - 125;
+        var6 = SetSalvoaim.logoAnimationTick - 125;
         if (0 < var6 &&
           var6 < 50) {
           if (var6 < 20) {
@@ -55,7 +55,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
             }
           }
         }
-        var6Lifetime1 = -140 + SetSalvoaim.field_r;
+        var6Lifetime1 = -140 + SetSalvoaim.logoAnimationTick;
         if (0 < var6Lifetime1) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {
@@ -110,7 +110,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         try {
           var3_int = 0;
           while (true) {
-            if (var3_int >= GetDebrisCarryOver.field_p) {
+            if (var3_int >= GetDebrisCarryOver.objectiveMarkerCount) {
               if (param0 != -100) {
                 return;
               }
@@ -121,7 +121,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
               }
               return;
             }
-            var4 = SetKeepTeamColours.field_p[var3_int];
+            var4 = SetKeepTeamColours.objectiveMarkers[var3_int];
             if (param2 != var4.target) {
               var3_int++;
               continue;

@@ -113,7 +113,7 @@ final class MissionControl implements DiffableState {
           this.events = (MissionEvent[]) (SetAutoDetail.a(8, GetExplosionPushMultiplier.field_o, param0, 1, -115, this.events));
           this.selectedEvent = param0.readBits(0, 32);
           this.selectedConditionOrAction = param0.readBits(0, 32);
-          this.reservedIds = SetVariableActionFactory.a((byte) 37, this.reservedIds, param0, 8);
+          this.reservedIds = SetVariableActionFactory.readPackedIntArray((byte) 37, this.reservedIds, param0, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

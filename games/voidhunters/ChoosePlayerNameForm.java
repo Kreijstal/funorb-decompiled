@@ -147,7 +147,7 @@ final class ChoosePlayerNameForm extends UiContainer implements NameSuggestionTa
         var2.setBounds(20, 270, 50, 1, var3);
         this.addChild(-18756, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.addValidatedField(35, var3, ffb.field_c, Projectile.field_r, 170, this.nameField));
+        var3 = var3 + (5 + this.addValidatedField(35, var3, ByteStorageAccess.field_c, Projectile.field_r, 170, this.nameField));
         this.okButton.setBounds(-var5 + 496 >> 1, var5, 40, 1, var3);
         this.cancelButton.setBounds(var4 + 3, 60, 40, 1, 15 + var3);
         this.cancelButton.listener = (UiListener) (this);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RemoveEventAction extends MissionAction implements DiffableState {
-    static dpb field_a;
+    static FullscreenFailureReason confirmationTimeout;
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
@@ -34,7 +34,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
           if (param1 == 26964) {
             return null;
           }
-          field_a = (dpb) null;
+          confirmationTimeout = (FullscreenFailureReason) null;
           stackIn_3_0 = null;
           return (WorldPoint) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +53,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
 
     public static void clearSharedReferences(int param0) {
         int var1 = 90 / ((param0 + 87) / 38);
-        field_a = null;
+        confirmationTimeout = null;
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
@@ -96,7 +96,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard >= -19) {
-            field_a = (dpb) null;
+            confirmationTimeout = (FullscreenFailureReason) null;
           }
           super.reportDifferences(other, -68);
         } catch (RuntimeException runtimeException) {
@@ -127,6 +127,6 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
     }
 
     static {
-        field_a = new dpb();
+        confirmationTimeout = new FullscreenFailureReason();
     }
 }

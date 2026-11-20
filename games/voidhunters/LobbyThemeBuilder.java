@@ -108,8 +108,8 @@ final class LobbyThemeBuilder {
           var11.field_F = 1;
           SpriteArchiveDecoder.field_a = new Widget(0L, var8);
           SpriteArchiveDecoder.field_a.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "heading"), (byte) 55);
-          cwa.field_c = new Widget(0L, (Widget) null);
-          cwa.field_c.field_gb = GetFighterVision.a(false, false, 4210752, 24436, 8421504, 120);
+          IncrementVariableActionFactoryHolder.field_c = new Widget(0L, (Widget) null);
+          IncrementVariableActionFactoryHolder.field_c.field_gb = GetFighterVision.a(false, false, 4210752, 24436, 8421504, 120);
           ResourceArchive.field_a = new Widget(0L, (Widget) null);
           ResourceArchive.field_a.field_gb = ShieldInfo.createGradientNineSliceSprites(6316128, 114, 1, 6316128, 113, 3);
           GetDebrisMax.field_o = new Widget(0L, (Widget) null);

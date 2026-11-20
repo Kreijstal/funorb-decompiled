@@ -2979,7 +2979,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.finalx = param0.readBits(0, 32);
           this.finaly = param0.readBits(0, 32);
           this.finalangle = param0.readBits(0, 32);
-          this.finaloutline = SetVariableActionFactory.a((byte) 37, this.finaloutline, param0, 8);
+          this.finaloutline = SetVariableActionFactory.readPackedIntArray((byte) 37, this.finaloutline, param0, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

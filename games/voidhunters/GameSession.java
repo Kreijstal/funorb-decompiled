@@ -3659,7 +3659,7 @@ final class GameSession {
           var13 = SetReverbGain.a(OpenGlVertexNormal.field_b, new String[]{Integer.toString(Particle.field_E / (Particle.field_l * 60))}, 95);
           var19 = (String) null;
           var18 = (String) null;
-          lh.a((byte) -123, 0, (String) null, (String) null, var13, 2);
+          ChatMessages.appendMessage((byte) -123, 0, (String) null, (String) null, var13, 2);
           GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, -5);
         }
         return;
@@ -5451,14 +5451,14 @@ final class GameSession {
         if (param0 <= 26) {
           discarded$0 = this.clearFogCircle(-96, -60, -66, (byte) 53, 121);
         }
-        if (null == NullUiRenderer.field_b) {
+        if (null == NullUiRenderer.chatMessages) {
           return null;
         }
         var4 = "";
         var5 = 0;
         var6 = 0;
-        for (var7 = this.field_u; var7 < NullUiRenderer.field_b.length; var7++) {
-          var8 = NullUiRenderer.field_b[var7];
+        for (var7 = this.field_u; var7 < NullUiRenderer.chatMessages.length; var7++) {
+          var8 = NullUiRenderer.chatMessages[var7];
           if (var8 != null &&
             SetPhasedEnergyBeamFireForce.a(true, var8.field_e, this.state.getPlayerName(1, param2))) {
             if (var5 >= this.playerChatOffsets[param2]) {
@@ -6516,7 +6516,7 @@ final class GameSession {
             }
             var15 = (SpecialOrderButtonState) (this.specialOrderButtons.first(0));
             while (var15 != null) {
-              var16 = chb.field_a;
+              var16 = SocialListUpdater.field_a;
               var17 = CarouselSlotStateDump.field_g;
               var18 = var12 + (var11 * var16 + 6 * var11);
               var19 = var14;
@@ -7204,7 +7204,7 @@ final class GameSession {
                   var10 = SetReverbGain.a(CommonArchiveId.field_b.toUpperCase(), new String[]{var23, var20}, param1 ^ 177);
                 } else {
                   if (var14 != 1) {
-                    var10 = SetReverbGain.a(lh.field_a.toUpperCase(), new String[]{var23}, 92);
+                    var10 = SetReverbGain.a(ChatMessages.wonMatchText.toUpperCase(), new String[]{var23}, 92);
                   } else {
                     var16 = var12.a(-54, var13Lifetime1);
                     if (var16 != 1) {
@@ -8144,9 +8144,9 @@ final class GameSession {
               }
             }
           }
-          if (GetDebrisCarryOver.field_p > 0) {
-            for (var13_intLifetime1 = 0; GetDebrisCarryOver.field_p > var13_intLifetime1; var13_intLifetime1++) {
-              var38 = SetKeepTeamColours.field_p[var13_intLifetime1];
+          if (GetDebrisCarryOver.objectiveMarkerCount > 0) {
+            for (var13_intLifetime1 = 0; GetDebrisCarryOver.objectiveMarkerCount > var13_intLifetime1; var13_intLifetime1++) {
+              var38 = SetKeepTeamColours.objectiveMarkers[var13_intLifetime1];
               var15 = var38.target;
               if (var15 instanceof Ship) {
                 var44 = (Ship) (var15);
@@ -8192,11 +8192,11 @@ final class GameSession {
               }
             }
           }
-          if (GetDebrisCarryOver.field_p > 0) {
+          if (GetDebrisCarryOver.objectiveMarkerCount > 0) {
             var5 += 6;
             var13 = (GameSnapshot) (this.state.carouselInfo.getStateStepsAgo(this.state.carouselInfo.getHistoryLength((byte) 121) - 1, -87));
-            for (var14 = 0; GetDebrisCarryOver.field_p > var14; var14++) {
-              var43 = SetKeepTeamColours.field_p[var14];
+            for (var14 = 0; GetDebrisCarryOver.objectiveMarkerCount > var14; var14++) {
+              var43 = SetKeepTeamColours.objectiveMarkers[var14];
               var16 = var43.target;
               if (var16 instanceof Ship) {
                 var45 = (Ship) (var16);
@@ -8568,8 +8568,8 @@ final class GameSession {
             return;
           }
           LoadSettings.a(param3, param4, ShipTeamConditionFactory.field_a, (byte) -84, param0);
-          for (var6_int = 0; GetDebrisCarryOver.field_p > var6_int; var6_int++) {
-            var7 = SetKeepTeamColours.field_p[var6_int];
+          for (var6_int = 0; GetDebrisCarryOver.objectiveMarkerCount > var6_int; var6_int++) {
+            var7 = SetKeepTeamColours.objectiveMarkers[var6_int];
             var8 = var7.target;
             if (!(var8 instanceof ShipBody)) {
               if (var8 instanceof MapZone) {
@@ -8796,7 +8796,7 @@ final class GameSession {
           this.lastPlayerShipY = new int[param1.length];
           this.playerChatTimers = new int[param1.length];
           this.playerChatOffsets = new int[param1.length];
-          this.field_u = SetRepairModePower.field_q;
+          this.field_u = SetRepairModePower.chatMessageCount;
           for (var8_int = 0; var8_int < this.playerChatOffsets.length; var8_int++) {
             var9 = this.getPlayerChatLines((byte) 86, 0, var8_int);
             if (var9 != null &&

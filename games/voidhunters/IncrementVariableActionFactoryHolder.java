@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cwa {
-    static GameStateFactory field_a;
+final class IncrementVariableActionFactoryHolder {
+    static GameStateFactory factory;
     static String field_b;
     static Widget field_c;
     private static String field_z;
@@ -11,13 +11,13 @@ final class cwa {
         if (param0 != 74) {
           return;
         }
-        field_a = null;
+        factory = null;
         field_c = null;
         field_b = null;
     }
 
     static {
         field_z = "cwa.A(";
-        field_a = (GameStateFactory) ((Object) new IncrementVariableActionFactory());
+        factory = (GameStateFactory) ((Object) new IncrementVariableActionFactory());
     }
 }

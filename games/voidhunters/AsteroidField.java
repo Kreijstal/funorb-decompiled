@@ -1241,7 +1241,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime176 = HuffmanCodec.fetchLocalizedResource((byte) -97, "COMPONENT_ARMOUR_PLATE_TEXT");
           if (var2Lifetime176 != null) {
-            lm.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime176);
+            LogoAnimationStatus.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime176);
           }
           var2Lifetime177 = HuffmanCodec.fetchLocalizedResource((byte) -16, "COMPONENT_HULL_BEAM_TEXT");
           if (null != var2Lifetime177) {
@@ -1625,7 +1625,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime272 = HuffmanCodec.fetchLocalizedResource((byte) -79, "win_match_message");
           if (null != var2Lifetime272) {
-            lh.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime272);
+            ChatMessages.wonMatchText = Cp1252Strings.decode((byte) -125, var2Lifetime272);
           }
           var2Lifetime273 = HuffmanCodec.fetchLocalizedResource((byte) -100, "win_match_with_less_time_message");
           if (null != var2Lifetime273) {

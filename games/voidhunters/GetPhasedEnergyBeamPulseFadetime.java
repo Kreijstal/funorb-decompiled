@@ -176,7 +176,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               }
               IntIndexTable.field_a = AccountNameAvailabilityReplies.field_b.readString(param3 ^ -14);
               var13 = (CharSequence) ((Object) IntIndexTable.field_a);
-              ffb.field_e = ConstantColorTextureOperation.normalizeName(false, var13);
+              ByteStorageAccess.field_e = ConstantColorTextureOperation.normalizeName(false, var13);
               SetClientSideDragging.field_p = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -94);
               TextureCombineMappings.field_c = GetOndamageParticleSpeed.field_o;
               if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 124) == GetSalvoDamageMultiplier.emailCredentialType) {

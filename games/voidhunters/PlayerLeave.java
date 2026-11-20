@@ -109,8 +109,8 @@ final class PlayerLeave implements DiffableState {
           }
           if (param1.field_f != 0 ||
             param1.field_h != 0) {
-            for (var2_int = 0; var2_int < SetRepairModePower.field_q; var2_int++) {
-              var3 = NullUiRenderer.field_b[var2_int];
+            for (var2_int = 0; var2_int < SetRepairModePower.chatMessageCount; var2_int++) {
+              var3 = NullUiRenderer.chatMessages[var2_int];
               if (var3.channelType == 2 &&
                 param1.field_f == var3.field_f &&
                 param1.field_h == var3.field_h) {
@@ -124,7 +124,7 @@ final class PlayerLeave implements DiffableState {
             NanosecondClock.field_a = param1.channelType;
             GetSniperCannonAimspeed.field_p = param1.field_m;
           }
-          MassDriverWeaponDefinition.a(param1, 0);
+          MassDriverWeaponDefinition.appendChatMessage(param1, 0);
           if (param0 <= 105) {
             PlayerLeave.clearSharedReferences(true);
           }

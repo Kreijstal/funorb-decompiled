@@ -4,7 +4,7 @@
 final class SetKeepTeamColours extends ConsoleCommand {
     static int field_o;
     static String field_q;
-    static ObjectiveMarker[] field_p;
+    static ObjectiveMarker[] objectiveMarkers;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -60,10 +60,10 @@ final class SetKeepTeamColours extends ConsoleCommand {
         field_q = null;
         if (param0) {
           SetKeepTeamColours.clearSharedReferences(false);
-          field_p = null;
+          objectiveMarkers = null;
           return;
         }
-        field_p = null;
+        objectiveMarkers = null;
     }
 
     static {

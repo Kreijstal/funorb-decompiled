@@ -235,7 +235,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
         if (MatchingFieldValidator.field_g.state.rematchRequestMask == 0) {
           if ((MatchingFieldValidator.field_g.field_B | 1 << MatchingFieldValidator.field_g.localPlayerIndex) != -1 + (1 << MatchingFieldValidator.field_g.state.field_a)) {
-            HighscoreValueRequest.menuActionLabels[10] = !MatchingFieldValidator.field_g.field_h ? ffb.field_d : UnratedRematchText.text;
+            HighscoreValueRequest.menuActionLabels[10] = !MatchingFieldValidator.field_g.field_h ? ByteStorageAccess.field_d : UnratedRematchText.text;
             if (param0 > -76) {
               field_e = false;
               return;

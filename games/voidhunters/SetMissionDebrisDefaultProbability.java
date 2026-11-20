@@ -75,8 +75,8 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         GetUseLines.field_p.content.children.clear(122);
         var5 = 0;
         var6 = 0;
-        for (var7 = -1 + SetRepairModePower.field_q; 0 <= var7; var7--) {
-          var8_ref_pgb = NullUiRenderer.field_b[var7];
+        for (var7 = -1 + SetRepairModePower.chatMessageCount; 0 <= var7; var7--) {
+          var8_ref_pgb = NullUiRenderer.chatMessages[var7];
           var9 = 0;
           if (!GetBloomThresholdPercentage.field_p &&
             var5 < EnvironmentReflectionGpuMaterialEffect.field_k) {
@@ -91,7 +91,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
               ebb.field_b) {
               if (null != var8_ref_pgb.widget) {
               }
-              var10 = dpb.a(true, var8_ref_pgb);
+              var10 = FullscreenFailureReason.formatChatPrefix(true, var8_ref_pgb);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pgb.text);
               var12 = GetReverbFeedback.getChatMessageColor(2, var8_ref_pgb);
               var8_ref_pgb.widget = new Widget(0L, TargetLock.field_b, var11);
@@ -107,8 +107,8 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           }
         }
         var7Lifetime1 = 0;
-        for (var8 = 0; SetRepairModePower.field_q > var8; var8++) {
-          var9_ref_pgb = NullUiRenderer.field_b[var8];
+        for (var8 = 0; SetRepairModePower.chatMessageCount > var8; var8++) {
+          var9_ref_pgb = NullUiRenderer.chatMessages[var8];
           if (null != var9_ref_pgb.widget) {
             GetUseLines.field_p.content.addChild(-561, var9_ref_pgb.widget);
             var9_ref_pgb.widget.setBounds(param1, 122, var9_ref_pgb.widget.getPreferredWidth(66), var7Lifetime1, param0);

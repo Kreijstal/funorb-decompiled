@@ -66,7 +66,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.justAttachedSomething = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.shieldsOn = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.shieldsToggleCooldown = param0.readBits(0, 32);
-          this.lastAttackers = SetVariableActionFactory.a((byte) 37, this.lastAttackers, param0, 4);
+          this.lastAttackers = SetVariableActionFactory.readPackedIntArray((byte) 37, this.lastAttackers, param0, 4);
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {
@@ -491,7 +491,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.justAttachedSomething = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.shieldsOn = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.shieldsToggleCooldown = param0.readBits(0, 32);
-          this.lastAttackers = SetVariableActionFactory.a((byte) 37, this.lastAttackers, param0, 4);
+          this.lastAttackers = SetVariableActionFactory.readPackedIntArray((byte) 37, this.lastAttackers, param0, 4);
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {

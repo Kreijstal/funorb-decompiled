@@ -62,7 +62,7 @@ final class DisplayModeErrorDialog extends ResizableModalPanel implements UiActi
         }
     }
 
-    DisplayModeErrorDialog(ModalStack param0, dpb param1) {
+    DisplayModeErrorDialog(ModalStack param0, FullscreenFailureReason param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -74,10 +74,10 @@ final class DisplayModeErrorDialog extends ResizableModalPanel implements UiActi
         UiComponent var4 = null;
         try {
           var3 = null;
-          if (param1 == ComponentAttachmentPlan.field_a) {
+          if (param1 == ComponentAttachmentPlan.signedAppletRequired) {
             var3 = UiArrayContainer.field_t;
           } else {
-            if (param1 == AdminMessageFactory.field_a) {
+            if (param1 == AdminMessageFactory.focusOrResolutionFailure) {
               this.height = this.height + 10;
               var3 = RenderResourceNode.field_m;
               if (Particle.canResizeGameWindow((byte) 109)) {
@@ -85,7 +85,7 @@ final class DisplayModeErrorDialog extends ResizableModalPanel implements UiActi
                 this.height = this.height + 20;
               }
             } else {
-              if (param1 == RemoveEventAction.field_a) {
+              if (param1 == RemoveEventAction.confirmationTimeout) {
                 this.height = this.height + 30;
                 var3 = SetFighterRepairAmount.field_o;
               }

@@ -16,14 +16,14 @@ final class SetVariableActionFactory implements GameStateFactory {
         field_d = null;
     }
 
-    final static void b(byte param0) {
+    final static void advanceLogoAnimation(byte param0) {
         if (param0 != 6) {
           field_a = 79;
         }
-        if (SetSalvoaim.field_r != -GetShieldsDamageEnergyConversion.field_p + 0 &&
-          SetSalvoaim.field_r == -GetShieldsDamageEnergyConversion.field_p + 250) {
+        if (SetSalvoaim.logoAnimationTick != -GetShieldsDamageEnergyConversion.field_p + 0 &&
+          SetSalvoaim.logoAnimationTick == -GetShieldsDamageEnergyConversion.field_p + 250) {
         }
-        SetSalvoaim.field_r = SetSalvoaim.field_r + 1;
+        SetSalvoaim.logoAnimationTick = SetSalvoaim.logoAnimationTick + 1;
     }
 
     public final SerializableGameState create(byte param0) {
@@ -31,7 +31,7 @@ final class SetVariableActionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new SetVariableAction());
     }
 
-    final static void a(QuickChatMenuWidget param0, int param1) {
+    final static void attachQuickChatMenu(QuickChatMenuWidget param0, int param1) {
         try {
           GetGrapplingHookFireForce.field_o.addChild(-561, param0);
           if (param1 != 6) {
@@ -45,12 +45,12 @@ final class SetVariableActionFactory implements GameStateFactory {
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
           IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
-          SetVariableActionFactory.a((byte) -44, (int[]) null, (IsaacPacketBuffer) null, -49);
+          SetVariableActionFactory.readPackedIntArray((byte) -44, (int[]) null, (IsaacPacketBuffer) null, -49);
         }
         return (SerializableGameState[]) ((Object) new SetVariableAction[param1]);
     }
 
-    final static int[] a(byte param0, int[] param1, IsaacPacketBuffer param2, int param3) {
+    final static int[] readPackedIntArray(byte param0, int[] param1, IsaacPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

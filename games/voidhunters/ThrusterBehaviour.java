@@ -451,7 +451,7 @@ final class ThrusterBehaviour implements DiffableState {
         int var10_int = 0;
         RuntimeException var10 = null;
         try {
-          if (oua.field_a &&
+          if (BodyDestroyedConditionFactoryHolder.field_a &&
             null != this.trail &&
             !param8.getDebug((byte) 33)) {
             this.trail.a((byte) -128);

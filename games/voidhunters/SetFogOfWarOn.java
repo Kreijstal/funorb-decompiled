@@ -73,7 +73,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_reload_bar_height(" + HighscoreValueRequest.field_d + ")");
         System.out.println("set_special_order_bar_x(" + SetFighterBayAimarc.field_o + ")");
         System.out.println("set_special_order_bar_y_offset(" + GetSalvoDamageMultiplier.field_p + ")");
-        System.out.println("set_special_order_box_width(" + chb.field_a + ")");
+        System.out.println("set_special_order_box_width(" + SocialListUpdater.field_a + ")");
         System.out.println("set_special_order_box_height(" + CarouselSlotStateDump.field_g + ")");
         System.out.println("set_mission_variables_hud_x(" + GetBoostersActiveTime.field_p + ")");
         System.out.println("set_mission_variables_hud_y(" + PrimitiveType.field_c + ")");

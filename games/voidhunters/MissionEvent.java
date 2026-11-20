@@ -109,14 +109,14 @@ final class MissionEvent implements DiffableState {
         try {
           var9 = (MissionEvent) (param1);
           var4 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
-          var5 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, GuestPlayNoticePanel.field_v, oua.field_b};
+          var5 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, GuestPlayNoticePanel.field_v, BodyDestroyedConditionFactoryHolder.factory};
           var9.conditions = (MissionCondition[]) (hla.a(var4, this.conditions, var5, -118, var9.conditions, 1, QuickChatCategoryLoader.field_d));
           if (param0 <= 54) {
             SerializableGameState var8 = (SerializableGameState) null;
             this.reportDifferences((SerializableGameState) null, 121);
           }
           var6 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
-          var7 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, BitmapTextLayout.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
+          var7 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, BitmapTextLayout.field_k, SetDebrisCarryOver.field_o, IncrementVariableActionFactoryHolder.factory, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
           var9.actions = (MissionAction[]) (hla.a(var6, this.actions, var7, -120, var9.actions, 1, SetUseCircleOutline.field_o));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -224,14 +224,14 @@ final class MissionEvent implements DiffableState {
         Class[] var5 = null;
         GameStateFactory[] var6 = null;
         Class[] var7 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
-        GameStateFactory[] var4 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, GuestPlayNoticePanel.field_v, oua.field_b};
+        GameStateFactory[] var4 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, GuestPlayNoticePanel.field_v, BodyDestroyedConditionFactoryHolder.factory};
         this.conditions = (MissionCondition[]) (TypedStateArrayReader.readTypedStateArray(var4, this.conditions, var7, QuickChatCategoryLoader.field_d, 8, param0, 1, 108));
         if (param1) {
           return;
         }
         try {
           var5 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
-          var6 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, BitmapTextLayout.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
+          var6 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, BitmapTextLayout.field_k, SetDebrisCarryOver.field_o, IncrementVariableActionFactoryHolder.factory, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
           this.actions = (MissionAction[]) (TypedStateArrayReader.readTypedStateArray(var6, this.actions, var5, SetUseCircleOutline.field_o, 8, param0, 1, 119));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

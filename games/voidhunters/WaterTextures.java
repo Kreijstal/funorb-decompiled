@@ -48,7 +48,7 @@ final class WaterTextures {
             var3 = var19;
             LegacyOpenGlEnvironmentMappedWaterEffect.field_c = EscapePodFactory.storeBytes(false, var23, -12445);
           }
-          var24 = ffb.extractBytes(false, LegacyOpenGlEnvironmentMappedWaterEffect.field_c, true);
+          var24 = ByteStorageAccess.extractBytes(false, LegacyOpenGlEnvironmentMappedWaterEffect.field_c, true);
           var21 = var24;
           var18 = var21;
           var3Lifetime1 = var18;
@@ -139,9 +139,9 @@ final class WaterTextures {
             }
             return;
           }
-          var17 = ffb.extractBytes(false, PlayerVote.field_b, true);
+          var17 = ByteStorageAccess.extractBytes(false, PlayerVote.field_b, true);
           this.noiseVolume = this.toolkit.createTexture3D(128, 16, var17, SocketNetworkArchiveClient.field_o, 128, -16539);
-          var18 = ffb.extractBytes(false, GetPointDefenceLaserRandomness.field_q, true);
+          var18 = ByteStorageAccess.extractBytes(false, GetPointDefenceLaserRandomness.field_q, true);
           this.toolkit.createTexture3D(128, 16, var18, SocketNetworkArchiveClient.field_o, 128, -16539);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

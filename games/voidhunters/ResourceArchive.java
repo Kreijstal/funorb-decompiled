@@ -1058,7 +1058,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.files[param0][param3] != null) {
-            var8 = ffb.extractBytes(false, this.files[param0][param3], true);
+            var8 = ByteStorageAccess.extractBytes(false, this.files[param0][param3], true);
             var6 = var8;
             if (var8 == null) {
               throw new RuntimeException("");
@@ -1405,7 +1405,7 @@ final class ResourceArchive {
             param3[1] != 0 ||
             param3[2] != 0 ||
             0 != param3[3])) {
-            var35 = ffb.extractBytes(true, this.groups[param2], true);
+            var35 = ByteStorageAccess.extractBytes(true, this.groups[param2], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -1413,7 +1413,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = ffb.extractBytes(false, this.groups[param2], true);
+            var9 = ByteStorageAccess.extractBytes(false, this.groups[param2], true);
           }
           try {
             var36 = GetWeaponParticleSpeedDownshift.decompressContainer(param1, var9);

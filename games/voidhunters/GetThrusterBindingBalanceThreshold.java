@@ -42,7 +42,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);
             }
             if (LegacyOpenGlTurbulenceEffect.field_d) {
-              lh.a((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
+              ChatMessages.appendMessage((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
               WhirlpoolDigest.closeQuickChatIfOpen(param0 ^ -22377);
             }
           }

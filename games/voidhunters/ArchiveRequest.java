@@ -19,7 +19,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         try {
           GetWaitForPlayers.field_p = param1;
           ConsoleSettingsScript.field_b = param2;
-          cwa.field_b = param4;
+          IncrementVariableActionFactoryHolder.field_b = param4;
           SetThrusterBindingBalanceThreshold.field_o = true;
           EmailAvailabilityCheckFactory.field_a = param0;
           if (param3) {

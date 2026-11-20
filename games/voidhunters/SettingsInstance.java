@@ -104,10 +104,10 @@ final class SettingsInstance implements DiffableState {
           return;
         }
         try {
-          for (var1_int = 0; SetRepairModePower.field_q > var1_int; var1_int++) {
-            NullUiRenderer.field_b[var1_int] = null;
+          for (var1_int = 0; SetRepairModePower.chatMessageCount > var1_int; var1_int++) {
+            NullUiRenderer.chatMessages[var1_int] = null;
           }
-          SetRepairModePower.field_q = 0;
+          SetRepairModePower.chatMessageCount = 0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tr.E(" + param0 + ')');
         }
@@ -115,7 +115,7 @@ final class SettingsInstance implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.values = SetVariableActionFactory.a((byte) 37, this.values, param0, 8);
+          this.values = SetVariableActionFactory.readPackedIntArray((byte) 37, this.values, param0, 8);
           if (param1) {
             this.values = (int[]) null;
           }

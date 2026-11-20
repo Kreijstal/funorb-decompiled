@@ -1227,7 +1227,7 @@ final class MissionBuilder implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           this.seed = param0.readBits(0, 32);
-          this.optionTotals = SetVariableActionFactory.a((byte) 37, this.optionTotals, param0, 8);
+          this.optionTotals = SetVariableActionFactory.readPackedIntArray((byte) 37, this.optionTotals, param0, 8);
           var3 = new Class[]{MapClearanceCircle.class, MapClearanceRectangle.class};
           var4 = new GameStateFactory[]{MachineGunWeaponDefinition.field_d, GetFighterBayReload.field_q};
           this.clearanceAreas = (MapClearanceArea[]) (TypedStateArrayReader.readTypedStateArray(var4, this.clearanceAreas, var3, SetCountermeasureLauncherFireForce.field_o, 8, param0, 1, -25));

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetDebrisCarryOver extends ConsoleCommand {
-    static int field_p;
+    static int objectiveMarkerCount;
     static int field_o;
     static String field_q;
 
@@ -172,7 +172,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         int var11 = 0;
         int var11Lifetime1;
         if (param0 != 8) {
-          field_p = 5;
+          objectiveMarkerCount = 5;
           if (OpenGlTexture1D.field_i) {
             if (GetBurstFireMaxEnergy.field_o) {
               GetDebrisGroupColour.field_r.fillGradientTriangle(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);

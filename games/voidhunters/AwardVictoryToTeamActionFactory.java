@@ -45,7 +45,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           HighscoreValueRequest.menuActionLabels[15] = GetFightersPerPlayerMaximum.field_q;
           HighscoreValueRequest.menuActionLabels[13] = ArchiveLoadRequest.field_d;
           HighscoreValueRequest.menuActionLabels[19] = Widget.field_V + ":";
-          HighscoreValueRequest.menuActionLabels[5] = ffb.field_b;
+          HighscoreValueRequest.menuActionLabels[5] = ByteStorageAccess.field_b;
           HighscoreValueRequest.menuActionLabels[7] = GameInterfaceText.returnToMainMenuText;
           HighscoreValueRequest.menuActionLabels[4] = DebugRequest.field_j;
           HighscoreValueRequest.menuActionLabels[12] = SetBombletSprayRandomness.field_o;
@@ -100,7 +100,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[27] = Lo.field_p;
           SetSpinningBladeSpinupSpeed.field_o[47] = OpenGlGlyphMask.field_d;
           SetSpinningBladeSpinupSpeed.field_o[35] = SetLaserProjectiles.field_p;
-          SetSpinningBladeSpinupSpeed.field_o[37] = lm.field_a;
+          SetSpinningBladeSpinupSpeed.field_o[37] = LogoAnimationStatus.field_a;
           SetSpinningBladeSpinupSpeed.field_o[33] = SetBombletSprayProjectileDamage.field_p;
           SetSpinningBladeSpinupSpeed.field_o[4] = ArchiveDiskWorker.field_a;
           SetSpinningBladeSpinupSpeed.field_o[18] = SetPlayerRepairAmount.field_o;
@@ -202,12 +202,12 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[51] = SniperCannonWeaponDefinition.field_c;
           GetGrapplingHookSpringConstant.specialOrderLabels[25] = SetMinimapHeight.field_q;
           GetGrapplingHookSpringConstant.specialOrderLabels[7] = SpecialOrderSubmessageFactory.field_a;
-          GetGrapplingHookSpringConstant.specialOrderLabels[20] = lh.field_b;
+          GetGrapplingHookSpringConstant.specialOrderLabels[20] = ChatMessages.spawnSpawnpointText;
           GetGrapplingHookSpringConstant.specialOrderLabels[14] = OpenGlSprite.field_k;
           GetGrapplingHookSpringConstant.specialOrderLabels[48] = SetShieldsDirectionalIdleEnergyUsage.field_o;
           GetGrapplingHookSpringConstant.specialOrderLabels[36] = SetUseExtraBackground.field_s;
           GetGrapplingHookSpringConstant.specialOrderLabels[50] = GetThrusterBindingBalanceThreshold.field_o;
-          GetGrapplingHookSpringConstant.specialOrderLabels[34] = ffb.field_a;
+          GetGrapplingHookSpringConstant.specialOrderLabels[34] = ByteStorageAccess.field_a;
           GetGrapplingHookSpringConstant.specialOrderLabels[44] = ChatMessage.field_p;
           GetGrapplingHookSpringConstant.specialOrderLabels[41] = EnvironmentReflectionGpuMaterialEffect.field_e;
           GetGrapplingHookSpringConstant.specialOrderLabels[0] = FullscreenMembershipDialog.field_L;

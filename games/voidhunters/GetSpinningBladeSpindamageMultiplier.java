@@ -183,7 +183,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         }
         try {
           GetMissionTerrainNebulaProbability.buildLogoGlowSprite(121);
-          SetSalvoaim.field_r = 0 - GetShieldsDamageEnergyConversion.field_p;
+          SetSalvoaim.logoAnimationTick = 0 - GetShieldsDamageEnergyConversion.field_p;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

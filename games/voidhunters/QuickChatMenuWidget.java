@@ -79,7 +79,7 @@ final class QuickChatMenuWidget extends Widget {
             this.setAnimationStep((byte) 116, 0);
             this.selectedItem = param0;
             this.openSubmenu = this.submenus[this.selectedItem];
-            SetVariableActionFactory.a(this.openSubmenu, 6);
+            SetVariableActionFactory.attachQuickChatMenu(this.openSubmenu, 6);
             this.openSubmenu.setAnimationStep((byte) 121, 12);
           } else {
             if (this.phraseIds[param0] != -1) {

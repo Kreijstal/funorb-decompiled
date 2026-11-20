@@ -361,8 +361,8 @@ final class ServerInfo implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.voteoptionStates = SetVariableActionFactory.a((byte) 37, this.voteoptionStates, param0, 8);
-          this.componentoptionStates = SetVariableActionFactory.a((byte) 37, this.componentoptionStates, param0, 8);
+          this.voteoptionStates = SetVariableActionFactory.readPackedIntArray((byte) 37, this.voteoptionStates, param0, 8);
+          this.componentoptionStates = SetVariableActionFactory.readPackedIntArray((byte) 37, this.componentoptionStates, param0, 8);
           this.copyToClipboardHidden = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
           this.ensureOptionStateArrays(true);
         } catch (RuntimeException runtimeException) {

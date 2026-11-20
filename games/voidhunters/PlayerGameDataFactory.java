@@ -12,7 +12,7 @@ final class PlayerGameDataFactory implements GameStateFactory {
             if (null != psb.field_b &&
               psb.field_b.focusLost) {
               FullscreenExit.exitFullscreen((byte) -95);
-              HighscoreTableRequest.field_h.pushPanel(false, new DisplayModeErrorDialog(HighscoreTableRequest.field_h, AdminMessageFactory.field_a));
+              HighscoreTableRequest.field_h.pushPanel(false, new DisplayModeErrorDialog(HighscoreTableRequest.field_h, AdminMessageFactory.focusOrResolutionFailure));
             }
             return;
           }

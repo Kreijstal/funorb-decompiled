@@ -61,7 +61,7 @@ final class LoadSettings extends ConsoleCommand {
           if (param3 > 0) {
             return;
           }
-          chb.a(0);
+          SocialListUpdater.resetObjectiveMarkers(0);
           var13 = param0.world.getMissionControl(0);
           if (var13 != null) {
             var6 = var13.getEvents(1);

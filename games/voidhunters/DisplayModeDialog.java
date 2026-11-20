@@ -439,7 +439,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
                   if (var6_int == 0 &&
                     this.fullscreenButton == param3) {
                     if (!this.hasDisplayModes) {
-                      this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, ComponentAttachmentPlan.field_a));
+                      this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, ComponentAttachmentPlan.signedAppletRequired));
                       return;
                     }
                     if (GetDebrisCarryOver.field_o <= 0) {

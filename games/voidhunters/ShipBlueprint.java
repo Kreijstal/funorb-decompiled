@@ -46,7 +46,7 @@ final class ShipBlueprint implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.description = SetVariableActionFactory.a((byte) 37, this.description, param0, 8);
+          this.description = SetVariableActionFactory.readPackedIntArray((byte) 37, this.description, param0, 8);
           if (param1) {
             ShipBlueprint.a(-120, 56);
           }

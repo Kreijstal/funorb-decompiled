@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AdminMessageFactory implements GameStateFactory {
-    static dpb field_a;
+    static FullscreenFailureReason focusOrResolutionFailure;
 
     public final SerializableGameState create(byte param0) {
         int var2 = -86 % ((-64 - param0) / 50);
@@ -11,11 +11,11 @@ final class AdminMessageFactory implements GameStateFactory {
 
     public static void clearSharedReferences(int param0) {
         if (param0 > -73) {
-          field_a = (dpb) null;
-          field_a = null;
+          focusOrResolutionFailure = (FullscreenFailureReason) null;
+          focusOrResolutionFailure = null;
           return;
         }
-        field_a = null;
+        focusOrResolutionFailure = null;
     }
 
     public final SerializableGameState[] createArray(int param0, int param1) {
@@ -26,7 +26,7 @@ final class AdminMessageFactory implements GameStateFactory {
     }
 
     static {
-        field_a = new dpb();
+        focusOrResolutionFailure = new FullscreenFailureReason();
         ShieldBehaviourFactory discarded$0 = new ShieldBehaviourFactory();
     }
 }

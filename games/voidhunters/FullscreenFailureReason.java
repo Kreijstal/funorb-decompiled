@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dpb {
-    final static String a(boolean param0, ChatMessage param1) {
+final class FullscreenFailureReason {
+    final static String formatChatPrefix(boolean param0, ChatMessage param1) {
         String stackIn_3_0 = null;
         String stackIn_35_0 = null;
         Object stackIn_38_0 = null;

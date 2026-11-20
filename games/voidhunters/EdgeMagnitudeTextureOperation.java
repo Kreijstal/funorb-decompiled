@@ -81,11 +81,11 @@ final class EdgeMagnitudeTextureOperation extends TextureOperation {
     }
 
     final static void b(int param0, int param1) {
-        NullUiRenderer.field_b = new ChatMessage[param0 * 15];
+        NullUiRenderer.chatMessages = new ChatMessage[param0 * 15];
         if (param1 > -90) {
           field_i = (String) null;
         }
-        SetRepairModePower.field_q = 0;
+        SetRepairModePower.chatMessageCount = 0;
         GetPlayerRepairAmount.field_q = new int[3];
         EnvironmentReflectionGpuMaterialEffect.field_k = param0;
     }

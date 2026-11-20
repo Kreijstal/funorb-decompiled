@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSalvoaim extends ConsoleCommand {
-    static int field_r;
+    static int logoAnimationTick;
     static String field_q;
     static GameStateFactory field_s;
     static int field_p;

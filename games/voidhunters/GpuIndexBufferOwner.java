@@ -24,7 +24,7 @@ final class GpuIndexBufferOwner {
         int var6Lifetime3;
         var7 = VoidHunters.field_G;
         var2 = 0;
-        var3 = SetSalvoaim.field_r;
+        var3 = SetSalvoaim.logoAnimationTick;
         if (5 > var3) {
           var2 = var3 * (var3 * 8192) / 1100;
           var4 = 1;

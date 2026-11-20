@@ -436,7 +436,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           this.specialorder = -1 + param0.readBits(0, 8);
           this.spawnChoice = param0.readBits(0, 4);
           this.selectedTeam = param0.readBits(0, 4) - 1;
-          this.votes = SetVariableActionFactory.a((byte) 37, this.votes, param0, 4);
+          this.votes = SetVariableActionFactory.readPackedIntArray((byte) 37, this.votes, param0, 4);
           if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.savedShip = null;
           } else {
@@ -445,7 +445,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             }
             this.savedShip.readState(param0, false);
           }
-          this.carriedOverComponents = SetVariableActionFactory.a((byte) 37, this.carriedOverComponents, param0, 8);
+          this.carriedOverComponents = SetVariableActionFactory.readPackedIntArray((byte) 37, this.carriedOverComponents, param0, 8);
           this.kills = param0.readBits(0, 16);
           this.assists = param0.readBits(0, 16);
           this.deaths = param0.readBits(0, 16);

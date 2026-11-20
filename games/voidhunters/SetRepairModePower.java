@@ -5,7 +5,7 @@ final class SetRepairModePower extends ConsoleCommand {
     static String field_o;
     static int field_r;
     static String field_p;
-    static int field_q;
+    static int chatMessageCount;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

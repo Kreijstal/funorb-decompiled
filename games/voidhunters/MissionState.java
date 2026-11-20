@@ -1041,7 +1041,7 @@ final class MissionState implements DiffableState {
           } else {
             this.nextround = null;
           }
-          this.teamscores = SetVariableActionFactory.a((byte) 37, this.teamscores, param0, 8);
+          this.teamscores = SetVariableActionFactory.readPackedIntArray((byte) 37, this.teamscores, param0, 8);
           if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (this.currentMatch == null) {
               this.currentMatch = new MatchResults();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ffb {
+final class ByteStorageAccess {
     static String field_e;
     static String field_a;
     static String field_d;
@@ -66,7 +66,7 @@ final class ffb {
         int var1 = -75 / ((-40 - param0) / 34);
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4) {
+    final static void fillCircleClipped(int param0, byte param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;

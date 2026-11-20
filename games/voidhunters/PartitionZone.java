@@ -236,7 +236,7 @@ final class PartitionZone implements DiffableState, SpatialStateMarker, Sortable
           if (param1) {
             this.ids = (int[]) null;
           }
-          this.ids = SetVariableActionFactory.a((byte) 37, this.ids, param0, 8);
+          this.ids = SetVariableActionFactory.readPackedIntArray((byte) 37, this.ids, param0, 8);
           this.gridx = ShieldInfo.readSignedBits(8, param0, (byte) 20);
           this.gridy = ShieldInfo.readSignedBits(8, param0, (byte) 20);
           this.type = param0.readBits(0, 2);

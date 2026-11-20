@@ -19,7 +19,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             SetSpecialOrderBoxWidth.a((byte) -16, false);
           }
-          chb.field_a = arguments[0].intValue(108);
+          SocialListUpdater.field_a = arguments[0].intValue(108);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

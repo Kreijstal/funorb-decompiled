@@ -21,7 +21,7 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
         return GetPointDefenceLaserAimspeed.field_p;
     }
 
-    final static void a(ChatMessage param0, int param1) {
+    final static void appendChatMessage(ChatMessage param0, int param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -42,19 +42,19 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
           for (var2_int = param1; var2_int < 3; var2_int++) {
             GetPlayerRepairAmount.field_q[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < SetRepairModePower.field_q; var2_intLifetime1++) {
-            if (param0.channelType == NullUiRenderer.field_b[var2_intLifetime1].channelType) {
-              dupTemp$3 = NullUiRenderer.field_b[var2_intLifetime1].getVisibilityPriority(param1 ^ 1);
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < SetRepairModePower.chatMessageCount; var2_intLifetime1++) {
+            if (param0.channelType == NullUiRenderer.chatMessages[var2_intLifetime1].channelType) {
+              dupTemp$3 = NullUiRenderer.chatMessages[var2_intLifetime1].getVisibilityPriority(param1 ^ 1);
               GetPlayerRepairAmount.field_q[dupTemp$3] = GetPlayerRepairAmount.field_q[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param0.getVisibilityPriority(1);
           GetPlayerRepairAmount.field_q[dupTemp$0] = GetPlayerRepairAmount.field_q[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; SetRepairModePower.field_q > var3; var3++) {
+          for (var3 = 0; SetRepairModePower.chatMessageCount > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (NullUiRenderer.field_b[var3].channelType == param0.channelType) {
-              var4 = NullUiRenderer.field_b[var3].getVisibilityPriority(1);
+            if (NullUiRenderer.chatMessages[var3].channelType == param0.channelType) {
+              var4 = NullUiRenderer.chatMessages[var3].getVisibilityPriority(1);
               if (GetPlayerRepairAmount.field_q[var4] > EnvironmentReflectionGpuMaterialEffect.field_k) {
                 GetPlayerRepairAmount.field_q[var4] = GetPlayerRepairAmount.field_q[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -63,13 +63,13 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              NullUiRenderer.field_b[incrementValue$2] = NullUiRenderer.field_b[var3];
+              NullUiRenderer.chatMessages[incrementValue$2] = NullUiRenderer.chatMessages[var3];
             }
           }
-          SetRepairModePower.field_q = var2_intLifetime2;
-          fieldTemp$1 = SetRepairModePower.field_q;
-          SetRepairModePower.field_q = SetRepairModePower.field_q + 1;
-          NullUiRenderer.field_b[fieldTemp$1] = param0;
+          SetRepairModePower.chatMessageCount = var2_intLifetime2;
+          fieldTemp$1 = SetRepairModePower.chatMessageCount;
+          SetRepairModePower.chatMessageCount = SetRepairModePower.chatMessageCount + 1;
+          NullUiRenderer.chatMessages[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

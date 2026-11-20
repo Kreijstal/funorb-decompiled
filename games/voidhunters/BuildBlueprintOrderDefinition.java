@@ -100,9 +100,9 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
         var4 = VoidHunters.field_G;
         try {
           if (UiDraggableContainer.field_z >= 10) {
-            if (!lm.a(true)) {
+            if (!LogoAnimationStatus.hasLogoAnimationFinished(true)) {
               SoftwareRasterizer2D.clear();
-              SetRadialMenuRadius.a((byte) 82, 320, 240);
+              SetRadialMenuRadius.drawLogoAnimation((byte) 82, 320, 240);
               SetSniperCannonAimarc.a(param1, 0, 0, 0);
             } else {
               if (GetSpinningBladeAimspeed.field_q == 0) {

@@ -48,7 +48,7 @@ final class TutorialController {
               if (stackIn_12_0 == stackIn_12_1) {
                 var11 = var9.x;
                 var12 = var9.y;
-                stackIn_9_0 = new int[]{var11, var11 + chb.field_a, var12, CarouselSlotStateDump.field_g + var12};
+                stackIn_9_0 = new int[]{var11, var11 + SocialListUpdater.field_a, var12, CarouselSlotStateDump.field_g + var12};
                 return stackIn_9_0;
               }
               var9 = (SpecialOrderButtonState) (param1.next((byte) 39));

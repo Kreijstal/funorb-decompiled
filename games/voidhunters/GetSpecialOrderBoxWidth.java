@@ -12,7 +12,7 @@ final class GetSpecialOrderBoxWidth extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(chb.field_a);
+            stackIn_4_0 = new ConsoleValue(SocialListUpdater.field_a);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

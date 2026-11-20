@@ -133,10 +133,10 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           } else {
             var13 = (String) null;
             var12 = (String) null;
-            lh.a((byte) -70, 0, (String) null, (String) null, SetCountermeasuresPulseRadius.field_p, 2);
+            ChatMessages.appendMessage((byte) -70, 0, (String) null, (String) null, SetCountermeasuresPulseRadius.field_p, 2);
             var15 = (String) null;
             var14 = (String) null;
-            lh.a((byte) -62, 0, (String) null, (String) null, SetShieldsDamageEnergyConversion.field_o, 2);
+            ChatMessages.appendMessage((byte) -62, 0, (String) null, (String) null, SetShieldsDamageEnergyConversion.field_o, 2);
           }
           ChatInputResetter.clearChatInput(26718);
           return true;

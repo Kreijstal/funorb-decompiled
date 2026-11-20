@@ -1392,7 +1392,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("create_displayname", 23100);
                 if (null != resourceBytes) {
-                  ffb.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  ByteStorageAccess.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("create_password", 23100);
                 if (resourceBytes != null) {
@@ -1962,7 +1962,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("menu", 23100);
                 if (null != resourceBytes) {
-                  ffb.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  ByteStorageAccess.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("selectlevel", 23100);
                 if (null != resourceBytes) {
@@ -2329,7 +2329,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mp_offerrematch", 23100);
                 if (null != resourceBytes) {
-                  ffb.field_d = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  ByteStorageAccess.field_d = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mp_offerrematch_unrated", 23100);
                 if (null != resourceBytes) {

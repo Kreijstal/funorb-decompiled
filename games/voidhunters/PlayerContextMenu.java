@@ -38,7 +38,7 @@ final class PlayerContextMenu {
           var4_ref = SetPhasedEnergyBeamPulsetime.a(this.targetName, param0, 9602);
         }
         if (var4_ref != null) {
-          lh.a((byte) -112, 0, (String) null, this.targetName, var4_ref, 2);
+          ChatMessages.appendMessage((byte) -112, 0, (String) null, this.targetName, var4_ref, 2);
         }
         return true;
     }

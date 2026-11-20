@@ -75,7 +75,7 @@ abstract class Transform3D {
           var3Lifetime1 = SetBloomThresholdPercentage.field_p[9] >> 8;
           var4 = SetBloomThresholdPercentage.field_p[10] >> 8;
           var5Lifetime1 = SetBloomThresholdPercentage.field_p[11] >> 8;
-          var6Lifetime1 = SetSalvoaim.field_r << 4;
+          var6Lifetime1 = SetSalvoaim.logoAnimationTick << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = TextureLineShape.sinAngle(var6Lifetime1, 57) >> 8;
           var9Lifetime1 = GetNumStars.cosAngle(var6Lifetime1, (byte) 61) >> 8;

@@ -98,16 +98,16 @@ final class ConsoleValue {
           ConsoleValue.restoreDefaultStateSerializationMode(-58);
         }
         if (OpenGlTexture3D.field_j > param3 - param4) {
-          ffb.a(param4, (byte) -89, param1, param2, param3);
+          ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
         } else {
           if (param3 + param4 > GetCountermeasureLauncherProjectiles.field_o) {
-            ffb.a(param4, (byte) -89, param1, param2, param3);
+            ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
           } else {
             if (-param4 + param1 < NebulaField.field_c) {
-              ffb.a(param4, (byte) -89, param1, param2, param3);
+              ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
             } else {
               if (EnvironmentReflectionGpuMaterialEffect.field_i < param4 + param1) {
-                ffb.a(param4, (byte) -89, param1, param2, param3);
+                ByteStorageAccess.fillCircleClipped(param4, (byte) -89, param1, param2, param3);
               } else {
                 GetFixedaim.fillCircleUnclipped(param2, param3, param1, param4, 2);
               }

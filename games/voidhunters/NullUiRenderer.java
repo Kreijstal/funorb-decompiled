@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NullUiRenderer implements UiRenderer {
-    static ChatMessage[] field_b;
+    static ChatMessage[] chatMessages;
     static String field_a;
 
     public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
@@ -14,7 +14,7 @@ final class NullUiRenderer implements UiRenderer {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_b = null;
+        chatMessages = null;
         field_a = null;
         if (param0 != 11227) {
           NullUiRenderer.clearSharedReferences(-127);

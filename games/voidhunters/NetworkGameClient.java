@@ -83,8 +83,8 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!TextureLineShape.a(true)) {
           if (UiDraggableContainer.field_z >= 10) {
-            if (!lm.a(true)) {
-              SetVariableActionFactory.b((byte) 6);
+            if (!LogoAnimationStatus.hasLogoAnimationFinished(true)) {
+              SetVariableActionFactory.advanceLogoAnimation((byte) 6);
             } else {
               if (GetSpinningBladeAimspeed.field_q != 0) {
                 GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, param0 ^ 15877);

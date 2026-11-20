@@ -44,7 +44,7 @@ final class PrimitiveType {
               }
               if (var5Lifetime1 != null) {
                 var6 = (String) null;
-                lh.a((byte) -86, 0, (String) null, var4, (String) (var5Lifetime1), 2);
+                ChatMessages.appendMessage((byte) -86, 0, (String) null, var4, (String) (var5Lifetime1), 2);
               }
             }
             MissionGenerationDataFactory.field_b = -1;

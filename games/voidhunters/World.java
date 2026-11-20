@@ -131,7 +131,7 @@ final class World implements DiffableState, CompactGameState {
             }
           }
           this.grapplingHooks = (GrapplingHook[]) (GetAutoAfkTimeout.a(-14, 1, this.grapplingHooks, TickCondition.field_c, 8, param0));
-          this.respawntimers = SetVariableActionFactory.a((byte) 37, this.respawntimers, param0, 4);
+          this.respawntimers = SetVariableActionFactory.readPackedIntArray((byte) 37, this.respawntimers, param0, 4);
           this.debug = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.objectiveType = param0.readBits(0, param1);
           this.swappedTeams = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
@@ -1522,7 +1522,7 @@ final class World implements DiffableState, CompactGameState {
         var24 = null;
         var21 = VoidHunters.field_G;
         try {
-          oua.field_a = param1;
+          BodyDestroyedConditionFactoryHolder.field_a = param1;
           GetSniperCannonFireForce.field_o = param5;
           GetFogOfWarSensorRange.field_o = new Random((long)(10234 * GetSniperCannonFireForce.field_o));
           ShipFactory.shieldInfoPool.reset(39);
@@ -5235,7 +5235,7 @@ final class World implements DiffableState, CompactGameState {
             }
           }
           this.grapplingHooks = (GrapplingHook[]) (SetAutoDetail.a(8, TickCondition.field_c, param0, 1, -47, this.grapplingHooks));
-          this.respawntimers = SetVariableActionFactory.a((byte) 37, this.respawntimers, param0, 4);
+          this.respawntimers = SetVariableActionFactory.readPackedIntArray((byte) 37, this.respawntimers, param0, 4);
           this.debug = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.objectiveType = param0.readBits(0, 32);
           this.swappedTeams = LegacyOpenGlSpecularEffect.readBoolean(false, param0);

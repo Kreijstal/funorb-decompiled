@@ -16,7 +16,7 @@ final class MissionGenerationData implements DiffableState {
         try {
           this.votedObjective = param0.readBits(0, 8);
           this.missionGenerationSeed = param0.readBits(0, 32);
-          this.optionTotals = SetVariableActionFactory.a((byte) 37, this.optionTotals, param0, 8);
+          this.optionTotals = SetVariableActionFactory.readPackedIntArray((byte) 37, this.optionTotals, param0, 8);
           this.roundsLeft = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -145,7 +145,7 @@ final class MissionGenerationData implements DiffableState {
         }
         param4 = GetPedrosRepairModeSwitchtime.a(33, param11, param1, param12, param3, param0, param4);
         GetUseRectOutline.a(param4, -1, param2, param10, param7, param11, param5, param6, param13, param9);
-        chb.a(0, param5, param7);
+        SocialListUpdater.updateSocialLists(0, param5, param7);
         mn.a(param4, param5, param12, 97);
     }
 

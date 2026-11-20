@@ -40,7 +40,7 @@ final class MatchResults implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (MatchResults) (param1);
-          var3.results = (RoundResult[]) (SpriteDimensions.copyStateArrayByMode(var3.results, this.results, 1, lm.field_b, false));
+          var3.results = (RoundResult[]) (SpriteDimensions.copyStateArrayByMode(var3.results, this.results, 1, LogoAnimationStatus.roundResultFactory, false));
           if (param0 < 54) {
             var4 = (SerializableGameState) null;
             this.reportDifferences((SerializableGameState) null, 79);
@@ -118,7 +118,7 @@ final class MatchResults implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.results = (RoundResult[]) (SetAutoDetail.a(8, lm.field_b, param0, 1, -62, this.results));
+          this.results = (RoundResult[]) (SetAutoDetail.a(8, LogoAnimationStatus.roundResultFactory, param0, 1, -62, this.results));
           if (param1) {
             field_b = 39;
           }
@@ -157,7 +157,7 @@ final class MatchResults implements DiffableState {
           if (param0 < 87) {
             field_b = 57;
           }
-          this.results = (RoundResult[]) (SoftwareSprite2D.a(param1, this.results, 0, lm.field_b));
+          this.results = (RoundResult[]) (SoftwareSprite2D.a(param1, this.results, 0, LogoAnimationStatus.roundResultFactory));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qqb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class chb {
+final class SocialListUpdater {
     static int field_a;
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void updateSocialLists(int param0, int param1, boolean param2) {
         SocialListEntry var3 = null;
         PlayerContextMenu var4 = null;
         String var5_ref_String = null;
@@ -47,13 +47,13 @@ final class chb {
         IsaacCipher.a((byte) 44, param1, param2);
     }
 
-    final static void a(int param0) {
-        if (null == SetKeepTeamColours.field_p) {
-          SetKeepTeamColours.field_p = new ObjectiveMarker[32];
-          GetDebrisCarryOver.field_p = param0;
+    final static void resetObjectiveMarkers(int param0) {
+        if (null == SetKeepTeamColours.objectiveMarkers) {
+          SetKeepTeamColours.objectiveMarkers = new ObjectiveMarker[32];
+          GetDebrisCarryOver.objectiveMarkerCount = param0;
           return;
         }
-        GetDebrisCarryOver.field_p = param0;
+        GetDebrisCarryOver.objectiveMarkerCount = param0;
     }
 
     static {

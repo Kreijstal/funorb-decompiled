@@ -38,22 +38,22 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
                   return true;
                 }
                 var4 = (String) null;
-                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
               }
               if (!AdjustVariableAction.b(param1 + 5)) {
                 return true;
               }
               var4 = (String) null;
-              SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+              SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
               return true;
             }
-            if (PointDefenceLaserWeaponDefinition.a(ConsoleSettingsScript.field_b, cwa.field_b, 41)) {
+            if (PointDefenceLaserWeaponDefinition.a(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
               if (EmailAvailabilityCheckFactory.field_a != 2) {
                 if (var3 == 0) {
                   if (AdjustVariableAction.b(param1 + 5)) {
                     var4Lifetime2 = (String) null;
-                    SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+                    SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                     return true;
                   }
                   return true;
@@ -62,7 +62,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
               }
               if (AdjustVariableAction.b(param1 + 5)) {
                 var4Lifetime2 = (String) null;
-                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
               }
               return true;
@@ -94,7 +94,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
                 if (var3 == 0) {
                   if (AdjustVariableAction.b(param1 + 5)) {
                     var4Lifetime1 = (String) null;
-                    SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+                    SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                     return true;
                   }
                   return true;
@@ -103,17 +103,17 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
               }
               if (AdjustVariableAction.b(param1 + 5)) {
                 var4Lifetime1 = (String) null;
-                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
               }
               return true;
             }
-            if (PointDefenceLaserWeaponDefinition.a(ConsoleSettingsScript.field_b, cwa.field_b, 41)) {
+            if (PointDefenceLaserWeaponDefinition.a(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
               if (EmailAvailabilityCheckFactory.field_a != 2) {
                 if (var3 == 0) {
                   if (AdjustVariableAction.b(param1 + 5)) {
                     var4Lifetime1Lifetime1 = (String) null;
-                    SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+                    SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                     return true;
                   }
                   return true;
@@ -122,7 +122,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
               }
               if (AdjustVariableAction.b(param1 + 5)) {
                 var4Lifetime1Lifetime1 = (String) null;
-                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, cwa.field_b);
+                SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
               }
               return true;

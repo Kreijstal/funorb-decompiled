@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ComponentAttachmentPlan {
-    static dpb field_a;
+    static FullscreenFailureReason signedAppletRequired;
     HardpointMatch hardpoint;
     static float field_b;
     ShipComponent[] obstructions;
@@ -236,7 +236,7 @@ final class ComponentAttachmentPlan {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_a = (dpb) null;
+            signedAppletRequired = (FullscreenFailureReason) null;
           }
           var4 = (String) null;
           stackIn_3_0 = GetBoostersActiveTime.a(0, param2, param0, 0, 0, (String) null, false);
@@ -318,11 +318,11 @@ final class ComponentAttachmentPlan {
           String var2 = (String) null;
           ComponentAttachmentPlan.pollNameAvailability(false, (String) null);
         }
-        field_a = null;
+        signedAppletRequired = null;
     }
 
     static {
-        field_a = new dpb();
+        signedAppletRequired = new FullscreenFailureReason();
         field_b = 0.4000000059604645f;
         field_d = new TextureFormat(4);
     }

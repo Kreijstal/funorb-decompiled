@@ -224,14 +224,14 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
     final static ObjectiveMarker acquireTemporaryObjective(byte param0) {
         ObjectiveMarker[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
-        if (SetKeepTeamColours.field_p.length > GetDebrisCarryOver.field_p) {
-          if (SetKeepTeamColours.field_p[GetDebrisCarryOver.field_p] == null) {
-            SetKeepTeamColours.field_p[GetDebrisCarryOver.field_p] = new ObjectiveMarker();
+        if (SetKeepTeamColours.objectiveMarkers.length > GetDebrisCarryOver.objectiveMarkerCount) {
+          if (SetKeepTeamColours.objectiveMarkers[GetDebrisCarryOver.objectiveMarkerCount] == null) {
+            SetKeepTeamColours.objectiveMarkers[GetDebrisCarryOver.objectiveMarkerCount] = new ObjectiveMarker();
           }
           int var1 = 28 / ((15 - param0) / 47);
-          fieldTemp$0 = SetKeepTeamColours.field_p;
-          fieldTemp$1 = GetDebrisCarryOver.field_p;
-          GetDebrisCarryOver.field_p = GetDebrisCarryOver.field_p + 1;
+          fieldTemp$0 = SetKeepTeamColours.objectiveMarkers;
+          fieldTemp$1 = GetDebrisCarryOver.objectiveMarkerCount;
+          GetDebrisCarryOver.objectiveMarkerCount = GetDebrisCarryOver.objectiveMarkerCount + 1;
           return fieldTemp$0[fieldTemp$1];
         }
         GetDebrisThrowable.a(false, "We've run out of temp objective slots");
