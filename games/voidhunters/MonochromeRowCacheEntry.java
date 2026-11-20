@@ -4,7 +4,7 @@
 final class MonochromeRowCacheEntry extends IntrusiveNode {
     int field_d;
     int field_f;
-    static boolean field_e;
+    static boolean currentStateOnlyMode;
     private static String field_z;
 
     MonochromeRowCacheEntry(int param0, int param1) {
@@ -14,6 +14,6 @@ final class MonochromeRowCacheEntry extends IntrusiveNode {
 
     static {
         field_z = "osa.<init>(";
-        field_e = false;
+        currentStateOnlyMode = false;
     }
 }

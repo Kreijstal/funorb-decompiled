@@ -977,11 +977,11 @@ final class GameSession {
           GetDebrisGroupColour.field_r.setViewTransform(var23);
         }
         ShipTeamConditionFactory.field_a.updateWorldBounds(MissionVariableFactory.field_a, 0, -116, PartitionZoneFactory.field_a, 0);
-        var24 = this.state.b(1);
+        var24 = this.state.getVisibleSnapshot(1);
         PlayerAction.a(var24.world, ShipTeamConditionFactory.field_a, this.field_x, (byte) -59);
-        var6 = this.state.a((byte) 33).getShips(1000);
-        var7 = this.state.a((byte) 42).getResNodes(1);
-        var8 = this.state.a((byte) 30).getEscapePods(0);
+        var6 = this.state.getVisibleWorld((byte) 33).getShips(1000);
+        var7 = this.state.getVisibleWorld((byte) 42).getResNodes(1);
+        var8 = this.state.getVisibleWorld((byte) 30).getEscapePods(0);
         var9 = null;
         var10 = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
         var11 = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
@@ -1373,7 +1373,7 @@ final class GameSession {
           var29 = (GameSnapshot) null;
           discarded$0 = this.updateRespawnPanel((GameSnapshot) null, (byte) 96, false);
         }
-        var30 = this.state.b(1);
+        var30 = this.state.getVisibleSnapshot(1);
         for (var3 = 0; this.state.field_a > var3; var3++) {
           var4 = var30.world.findShipByOwner(var3, 96);
           if (var4 != null) {
@@ -1635,7 +1635,7 @@ final class GameSession {
           this.blueprintSaveStatus = 75;
         }
         var6 = 2;
-        var7 = this.state.b(1);
+        var7 = this.state.getVisibleSnapshot(1);
         var8 = var7.world.getObjectiveType(param0);
         var9 = ConsoleCharacterStream.a(74, var8) ? 1 : 0;
         var10 = new String[var32.length][1 + var3];
@@ -1921,7 +1921,7 @@ final class GameSession {
           this.updateChatControls((byte) -11, true);
         }
         if (GetPointDefenceLaserProjectiles.a(64, 11284)) {
-          var31 = this.state.b(1).missionState;
+          var31 = this.state.getVisibleSnapshot(1).missionState;
           if (var31 != null) {
             var28 = var31.getCustomVariables(false);
             var3 = var28;
@@ -1941,7 +1941,7 @@ final class GameSession {
               }
             }
           }
-          var32 = this.state.a((byte) 43).getMissionControl(0);
+          var32 = this.state.getVisibleWorld((byte) 43).getMissionControl(0);
           if (var32 != null) {
             var4 = var32.getEvents(1);
             if (var4 != null) {
@@ -1955,7 +1955,7 @@ final class GameSession {
               for (var12 = 0; var4.length > var12; var12++) {
                 var13 = var4[var12];
                 if (var12 == var32.selectedEvent) {
-                  stackIn_29_0 = (this.state.a((byte) 125).getDebug((byte) 126)) ? 1 : 0;
+                  stackIn_29_0 = (this.state.getVisibleWorld((byte) 125).getDebug((byte) 126)) ? 1 : 0;
                 } else {
                   stackIn_29_0 = 0;
                 }
@@ -2020,7 +2020,7 @@ final class GameSession {
                     var15Lifetime3 = var34Lifetime1Lifetime2;
                     var15Lifetime3 = var34Lifetime1Lifetime2;
                     if (var14 != 0) {
-                      var29 = var16[var21].getWorldPositions(this.state.a((byte) 106), -20605);
+                      var29 = var16[var21].getWorldPositions(this.state.getVisibleWorld((byte) 106), -20605);
                       var23 = var29;
                       if (var23 != null) {
                         for (var24 = 0; var29.length > var24; var24++) {
@@ -2076,7 +2076,7 @@ final class GameSession {
                     var36 = ((StringBuilder) (Object) stackIn_89_0).append(stackIn_90_1).toString();
                     var15Lifetime3 = var36;
                     if (var14 != 0) {
-                      var35 = var17[var30].getWorldPosition(this.state.a((byte) 55), 26964);
+                      var35 = var17[var30].getWorldPosition(this.state.getVisibleWorld((byte) 55), 26964);
                       if (var35 != null) {
                         var24Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenX(var35.x, (byte) 118);
                         var25Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var35.y);
@@ -2809,11 +2809,11 @@ final class GameSession {
                   var17 = 85000.0f / (float)var26;
                 }
                 this.drawShipPreview(16 * SetMinimapWidth.field_o % 8192, var15 + (var16 / 2 + 8), var17, var5, (byte) 100, var25, param0, (var12 >> 1) + var14);
-                var26Lifetime1 = this.state.a((byte) 70).getObjectiveType(false);
+                var26Lifetime1 = this.state.getVisibleWorld((byte) 70).getObjectiveType(false);
                 var27Lifetime1 = -1;
                 if (this.localPlayerIndex >= 0) {
                   var27Lifetime1 = param0.getPlayer(this.localPlayerIndex, (byte) 59).selectedTeam;
-                  if (this.state.a((byte) 26).areTeamsSwapped((byte) -49)) {
+                  if (this.state.getVisibleWorld((byte) 26).areTeamsSwapped((byte) -49)) {
                     var27Lifetime1 = GpuSprite.swapTeamId(21957, var27Lifetime1);
                   }
                 }
@@ -3148,7 +3148,7 @@ final class GameSession {
                 this.markShipOutsideSensorRange(param2, param1, var21, param3, var7_int, -116, param4);
               }
             }
-            var22 = this.state.a((byte) 90);
+            var22 = this.state.getVisibleWorld((byte) 90);
             var19 = var22.getNebulae((byte) -93);
             var9 = var19;
             if (var9 == null) {
@@ -3175,7 +3175,7 @@ final class GameSession {
             }
             return;
           }
-          var22Lifetime1 = this.state.a((byte) 90);
+          var22Lifetime1 = this.state.getVisibleWorld((byte) 90);
           var19Lifetime1 = var22Lifetime1.getNebulae((byte) -93);
           var9Lifetime1 = var19Lifetime1;
           if (var9Lifetime1 != null &&
@@ -3534,7 +3534,7 @@ final class GameSession {
         var7 = -1;
         var8 = -1;
         this.activeSpecialOrderId = -1;
-        var9 = this.state.b(1);
+        var9 = this.state.getVisibleSnapshot(1);
         var10 = null;
         if (this.localPlayerIndex >= 0) {
           var24 = var9.world.findShipByOwner(this.localPlayerIndex, 54);
@@ -3546,12 +3546,12 @@ final class GameSession {
               var23 = MenuInputState.createShipFromComponentWords(var28, (byte) 27);
               var23.setTeam(17704, 1);
               var23.setAi(new ShipAI(), 4);
-              this.state.b(1).world.addShip(var23, (byte) 92);
+              this.state.getVisibleSnapshot(1).world.addShip(var23, (byte) 92);
             } else {
               var22 = MenuInputState.createShipFromComponentWords(var28, (byte) 27);
               var22.setOwner(0, -117);
-              this.state.b(1).world.addShip(var22, (byte) 124);
-              this.state.b(1).world.clearTerrainAroundEntities(0);
+              this.state.getVisibleSnapshot(1).world.addShip(var22, (byte) 124);
+              this.state.getVisibleSnapshot(1).world.clearTerrainAroundEntities(0);
             }
           }
           if (this.field_x) {
@@ -3637,7 +3637,7 @@ final class GameSession {
         var12Lifetime1 = stackIn_70_0;
         if (var12Lifetime1 == 0) {
           var13_long = SetUseTriFill.field_o.nanoTime((byte) -110);
-          this.state.c(125);
+          this.state.updateTimeline(125);
           var15 = SetUseTriFill.field_o.nanoTime((byte) -110);
           this.updateTimingGraph.addSample(var15 - var13_long, (byte) -115);
           this.field_K.a(this.localPlayerIndex, var9, (byte) 70, var9.world.findShipByOwner(this.localPlayerIndex, 88));
@@ -4098,7 +4098,7 @@ final class GameSession {
           }
         }
         if (GetPointDefenceLaserProjectiles.a(128, 11284)) {
-          var16 = (Player[]) (this.state.b(1).players);
+          var16 = (Player[]) (this.state.getVisibleSnapshot(1).players);
           var2_ref_tfa__ = var16;
           var3 = "null";
           if (var2_ref_tfa__ != null) {
@@ -4133,7 +4133,7 @@ final class GameSession {
           }
           SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(2, var3Lifetime1Lifetime2, 13879) / 2, 1, 200, var3Lifetime1Lifetime2, 2, 16711935, (byte) -127);
         }
-        if (this.state.a((byte) 54).getDebug((byte) -77) &&
+        if (this.state.getVisibleWorld((byte) 54).getDebug((byte) -77) &&
           ssa.b(2)) {
           var21 = "DEBUG MODE";
           var2_ref_String = var21;
@@ -4548,12 +4548,12 @@ final class GameSession {
         int var2 = ToolkitRasterState.field_c;
         int var3 = 81 % ((-32 - param0) / 52);
         if (this.localPlayerIndex >= 0) {
-          var4 = this.state.b(1);
+          var4 = this.state.getVisibleSnapshot(1);
           var2 = ((Player) (var4.players[this.localPlayerIndex])).selectedTeam;
           if (!ConsoleCharacterStream.a(59, var4.world.getObjectiveType(false))) {
             var2 = this.localPlayerIndex;
           }
-          var5 = this.state.a((byte) 33).findShipByOwner(this.localPlayerIndex, 83);
+          var5 = this.state.getVisibleWorld((byte) 33).findShipByOwner(this.localPlayerIndex, 83);
           if (var5 != null) {
             var2 = var5.getTeam((byte) 84);
           }
@@ -5058,7 +5058,7 @@ final class GameSession {
                 MouseWheelInput.a(var18, var17, var16, -119);
               }
             }
-            var25 = this.state.a((byte) 33).getProjectiles(true);
+            var25 = this.state.getVisibleWorld((byte) 33).getProjectiles(true);
             var27 = (Projectile) (var25.first(0));
             while (var27 != null) {
               var15 = var8.worldToScreenX(var27.getX(116), (byte) 115) + var6;
@@ -5067,7 +5067,7 @@ final class GameSession {
               MouseWheelInput.a(var17Lifetime1, var16Lifetime1, var15, -110);
               var27 = (Projectile) (var25.next((byte) 118));
             }
-            var14 = this.state.a((byte) 65).getAsteroids(true);
+            var14 = this.state.getVisibleWorld((byte) 65).getAsteroids(true);
             var26 = var14;
             for (var16Lifetime2 = param1; var26.length > var16Lifetime2; var16Lifetime2++) {
               var17_ref_crb = var26[var16Lifetime2];
@@ -5218,7 +5218,7 @@ final class GameSession {
           if (fra.field_a == 1) {
             var11 = 0;
             if (0 != (16 & param2)) {
-              var20 = this.state.b(1).world.findShipByOwner(this.localPlayerIndex, 56);
+              var20 = this.state.getVisibleSnapshot(1).world.findShipByOwner(this.localPlayerIndex, 56);
               if (var20 != null) {
                 stackIn_17_0 = (!this.canShipFireAtPoint(param0, param4, var20, -7829)) ? 0 : 1;
                 var11 = stackIn_17_0;
@@ -5287,13 +5287,13 @@ final class GameSession {
                   es.field_b.blueprint != null) {
                   this.blueprintOverwritePending = true;
                 } else {
-                  this.saveShipBlueprint(this.state.b(1).world.findShipByOwner(this.localPlayerIndex, 99), -90);
+                  this.saveShipBlueprint(this.state.getVisibleSnapshot(1).world.findShipByOwner(this.localPlayerIndex, 99), -90);
                   this.blueprintOverwritePending = false;
                 }
               }
             }
             var14 = 0;
-            var15 = this.state.b(1).world.findShipByOwner(this.localPlayerIndex, 91);
+            var15 = this.state.getVisibleSnapshot(1).world.findShipByOwner(this.localPlayerIndex, 91);
             if (var15 != null) {
               stackIn_67_0 = (!var15.isSpecialOrderActive(4, 114)) ? 0 : 1;
               var14 = stackIn_67_0;
@@ -5345,7 +5345,7 @@ final class GameSession {
         var12 = VoidHunters.field_G;
         if (GetPointDefenceLaserProjectiles.a(256, 11284) ||
           GetPointDefenceLaserProjectiles.a(512, 11284)) {
-          var13 = this.state.a((byte) 112);
+          var13 = this.state.getVisibleWorld((byte) 112);
           if (this.localPlayerIndex < 0) {
             var2 = 39 / ((param0 + 39) / 51);
             decompiledFrameRemainder0 = false;
@@ -6144,7 +6144,7 @@ final class GameSession {
         try {
           var6_int = 0;
           var7 = 77 % ((param4 + 85) / 33);
-          var8 = this.state.a((byte) 90);
+          var8 = this.state.getVisibleWorld((byte) 90);
           if (this.localPlayerIndex >= 0) {
             var9 = param1.world.findShipByOwner(this.localPlayerIndex, 89);
             if (var9 != null) {
@@ -6974,7 +6974,7 @@ final class GameSession {
         int var12Lifetime1;
         int var13Lifetime1;
         var15 = VoidHunters.field_G;
-        var16 = this.state.b(1);
+        var16 = this.state.getVisibleSnapshot(1);
         if (null != var16.missionState &&
           5 == var16.missionState.getMissionPhase(8)) {
           var3_int = var16.missionState.getPhaseTimer((byte) -125);
@@ -7119,7 +7119,7 @@ final class GameSession {
             }
             SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(var3_int, var4_ref_String, 13879) >> 1), 1, -OpenGlTexture.b((byte) 118) + var5, var4_ref_String, var3_int, 16777215, (byte) -87);
           }
-          var4 = this.state.a((byte) 82).getObjectiveType(false);
+          var4 = this.state.getVisibleWorld((byte) 82).getObjectiveType(false);
           this.drawMissionStatusPanel((byte) -117, var4);
           var5Lifetime1 = param0.missionState.getPhaseTimer((byte) -123);
           if (param1 != 200) {
@@ -7165,13 +7165,13 @@ final class GameSession {
             var11Lifetime2 = -1;
             if (0 <= this.localPlayerIndex) {
               var11Lifetime2 = param0.getPlayer(this.localPlayerIndex, (byte) 59).selectedTeam;
-              if (this.state.a((byte) 77).areTeamsSwapped((byte) -106)) {
+              if (this.state.getVisibleWorld((byte) 77).areTeamsSwapped((byte) -106)) {
                 var11Lifetime2 = GpuSprite.swapTeamId(21957, var11Lifetime2);
               }
             }
             this.drawObjectiveInstructions(-78 + GetLaserAimarc.field_q, var8, var4, var11Lifetime2, 2);
           }
-          var24 = this.state.b(param1 - 199).missionState;
+          var24 = this.state.getVisibleSnapshot(param1 - 199).missionState;
           if (6 == var24.getMissionPhase(param1 ^ 192)) {
             stackIn_38_0 = (!ConsoleCharacterStream.a(36, param0.world.getObjectiveType(false))) ? 0 : 1;
             var8Lifetime1 = stackIn_38_0;
@@ -7910,7 +7910,7 @@ final class GameSession {
         }
         if (ssa.b(2) &&
           SetMachineGunEnergyUsed.field_o[6]) {
-          var2 = this.state.b(1).world.findShipByOwner(this.localPlayerIndex, 124);
+          var2 = this.state.getVisibleSnapshot(1).world.findShipByOwner(this.localPlayerIndex, 124);
           if (var2 != null) {
             var3 = SetOndamageParticleLife.encodeComponentWords(var2.chassis, -111);
             if (var3 != null) {
@@ -8108,7 +8108,7 @@ final class GameSession {
         var31 = null;
         var32 = null;
         var26 = VoidHunters.field_G;
-        var33 = this.state.b(1).missionState;
+        var33 = this.state.getVisibleSnapshot(1).missionState;
         if (var33 != null &&
           !var33.isPreGamePhase((byte) 93)) {
           var4 = var33.getCustomVariables(false);
@@ -8275,7 +8275,7 @@ final class GameSession {
         var10 = VoidHunters.field_G;
         try {
           if (this.autoZoomTicks > 0 &&
-            !this.state.a((byte) 110).getDebug((byte) -79) &&
+            !this.state.getVisibleWorld((byte) 110).getDebug((byte) -79) &&
             this.field_r != 0 &&
             param1 != null) {
             var3 = TutorialProgressState.field_c;
@@ -8308,7 +8308,7 @@ final class GameSession {
             var4Lifetime1 += 13;
           }
           if (-1 != var4Lifetime1 &&
-            var4Lifetime1 < GetGrapplingHookSpringConstant.specialOrderLabels.length && (this.state.a((byte) 90).getDebug((byte) 6) ||
+            var4Lifetime1 < GetGrapplingHookSpringConstant.specialOrderLabels.length && (this.state.getVisibleWorld((byte) 90).getDebug((byte) 6) ||
             var4Lifetime1 == 13 &&
             ssa.b(2))) {
             var12 = GetGrapplingHookSpringConstant.specialOrderLabels[var4Lifetime1];
@@ -8822,8 +8822,8 @@ final class GameSession {
           }
           if (var8 != null) {
             ((Ship) (var8)).setOwner(0, 114);
-            this.state.b(1).world.addShip((Ship) (var8), (byte) 113);
-            this.state.b(1).world.clearTerrainAroundEntities(0);
+            this.state.getVisibleSnapshot(1).world.addShip((Ship) (var8), (byte) 113);
+            this.state.getVisibleSnapshot(1).world.clearTerrainAroundEntities(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

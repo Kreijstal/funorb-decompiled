@@ -106,7 +106,7 @@ final class PlayerVoteFactory implements GameStateFactory {
           var5 = (CharSequence) ((Object) param0);
           GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var5);
           lsa.field_f = param1;
-          CommonGameState.a(true);
+          CommonGameState.selectDefaultQuickChatMenu(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

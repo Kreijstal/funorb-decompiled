@@ -111,7 +111,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var16.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (MatchingFieldValidator.field_g != null &&
               !MatchingFieldValidator.field_g.networked &&
-              MatchingFieldValidator.field_g.state.b(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
+              MatchingFieldValidator.field_g.state.getVisibleSnapshot(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
               var16.setTeam(17704, 1);
               var16.integrateMotion(false, true, (World) null);
               var16.draw(var18, 121, (World) null);
@@ -197,7 +197,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var19.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (MatchingFieldValidator.field_g != null &&
               !MatchingFieldValidator.field_g.networked &&
-              MatchingFieldValidator.field_g.state.b(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
+              MatchingFieldValidator.field_g.state.getVisibleSnapshot(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
               var19.setTeam(17704, 1);
             }
             var19.integrateMotion(false, true, (World) null);
@@ -287,7 +287,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               SetFixedaim.field_o = true;
             }
           } else {
-            if (MatchingFieldValidator.field_g.state.b(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
+            if (MatchingFieldValidator.field_g.state.getVisibleSnapshot(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
               var22.setTeam(17704, 1);
               var22.integrateMotion(false, true, (World) null);
               var22.draw(var24, 121, (World) null);

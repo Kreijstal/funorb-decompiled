@@ -628,13 +628,13 @@ final class GpuModel extends Model3D {
                       var27 = GetAutozoomSpeedDivide.field_o[1];
                     } else {
                       if (var31 == 3) {
-                        CommonGameState.a(var86, param1.vertexZ[var32_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var32_int], (byte) -82, var36, param1.vertexY[var32_int], var39_int, var35);
+                        CommonGameState.computeSphericalTextureCoordinates(var86, param1.vertexZ[var32_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var32_int], (byte) -82, var36, param1.vertexY[var32_int], var39_int, var35);
                         var23 = GetAutozoomSpeedDivide.field_o[1];
                         var22_float = GetAutozoomSpeedDivide.field_o[0];
-                        CommonGameState.a(var86, param1.vertexZ[var33_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var33_int], (byte) -82, var36, param1.vertexY[var33_int], var39_int, var35);
+                        CommonGameState.computeSphericalTextureCoordinates(var86, param1.vertexZ[var33_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var33_int], (byte) -82, var36, param1.vertexY[var33_int], var39_int, var35);
                         var25 = GetAutozoomSpeedDivide.field_o[1];
                         var24 = GetAutozoomSpeedDivide.field_o[0];
-                        CommonGameState.a(var86, param1.vertexZ[var34], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var34], (byte) -82, var36, param1.vertexY[var34], var39_int, var35);
+                        CommonGameState.computeSphericalTextureCoordinates(var86, param1.vertexZ[var34], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var34], (byte) -82, var36, param1.vertexY[var34], var39_int, var35);
                         var26 = GetAutozoomSpeedDivide.field_o[0];
                         var27 = GetAutozoomSpeedDivide.field_o[1];
                         if ((1 & var39_int) != 0) {
@@ -836,8 +836,8 @@ final class GpuModel extends Model3D {
           this.field_r = GetDebrisCarryOverPercentage.a(this.field_L, this.field_r, (byte) 50);
           this.field_x = GetDebrisCarryOverPercentage.a(this.field_L, this.field_x, (byte) 59);
           this.field_b = TextureCombineOperation.a(this.field_b, this.field_L, -28321);
-          this.field_D = OpenGlGpuToolkit.a(this.field_D, this.field_L, 7353);
-          this.field_y = OpenGlGpuToolkit.a(this.field_y, this.field_L, 7353);
+          this.field_D = OpenGlGpuToolkit.copyFloatPrefix(this.field_D, this.field_L, 7353);
+          this.field_y = OpenGlGpuToolkit.copyFloatPrefix(this.field_y, this.field_L, 7353);
           if (null != param1.vertexLabels &&
             GetLaserBeamProjectileDamage.a((byte) 11, this.field_s, param2)) {
             param1.groupVertexIndices((byte) -37, false);

@@ -7,7 +7,7 @@ final class OpenGlArbProgram {
     private OpenGlGpuToolkit toolkit;
 
     protected final void finalize() throws Throwable {
-        this.toolkit.a(this.programId, (byte) 98);
+        this.toolkit.queueProgramDeletion(this.programId, (byte) 98);
         super.finalize();
     }
 

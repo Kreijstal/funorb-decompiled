@@ -139,7 +139,7 @@ final class MissionGenerationData implements DiffableState {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11, int param12, boolean param13) {
         NebulaFieldFactory.field_a = null;
-        SettingsInstance.c(6939);
+        SettingsInstance.showRemovedFromGameNotice(6939);
         if (param8 >= -118) {
           return;
         }

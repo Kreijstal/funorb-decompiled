@@ -37,7 +37,7 @@ final class OpenGlSprite extends ToolkitSprite {
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
         this.texture.setLinearFiltering(-78, false);
-        this.toolkit.n(27841);
+        this.toolkit.prepareTextured2D(27841);
         this.toolkit.setBlendMode(param4, 73);
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         param1 = param1 + this.paddingTop;
@@ -148,7 +148,7 @@ final class OpenGlSprite extends ToolkitSprite {
         stackIn_2_1 = -124;
         stackIn_3_2 = ((param7 & 1) == 0) ? false : true;
         ((OpenGlSpriteTexture) (Object) stackIn_2_0).setLinearFiltering(stackIn_2_1, stackIn_3_2);
-        this.toolkit.n(27841);
+        this.toolkit.prepareTextured2D(27841);
         this.toolkit.setBlendMode(param6, 115);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
         if (!this.field_l) {
@@ -247,7 +247,7 @@ final class OpenGlSprite extends ToolkitSprite {
         var8 = param2 + param0;
         this.texture.setLinearFiltering(-122, false);
         var9 = param1 + param3;
-        this.toolkit.n(27841);
+        this.toolkit.prepareTextured2D(27841);
         this.toolkit.bindTexture(31, this.texture);
         this.toolkit.setBlendMode(param6, 111);
         this.toolkit.setTextureCombineMode(0, param4);
@@ -425,7 +425,7 @@ final class OpenGlSprite extends ToolkitSprite {
         var11Lifetime1 = param4 + (param2 - param0);
         this.texture.setLinearFiltering(109, (1 & param9) != 0 ? true : false);
         var12Lifetime1 = -param1 + param5 + param3;
-        this.toolkit.n(27841);
+        this.toolkit.prepareTextured2D(27841);
         this.toolkit.bindTexture(54, this.texture);
         this.toolkit.setBlendMode(param8, 122);
         this.toolkit.setTextureCombineMode(0, param6);

@@ -22,7 +22,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
           return;
         }
         if (this.textureId > 0) {
-          this.toolkit.b(this.textureId, 117, this.getEstimatedByteSize((byte) 61));
+          this.toolkit.queueTextureDeletion(this.textureId, 117, this.getEstimatedByteSize((byte) 61));
           this.textureId = 0;
         }
     }

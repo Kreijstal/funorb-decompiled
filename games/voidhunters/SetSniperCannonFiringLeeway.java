@@ -3,7 +3,7 @@
  */
 final class SetSniperCannonFiringLeeway extends ConsoleCommand {
     static long[] field_o;
-    static boolean field_p;
+    static boolean defaultCurrentStateOnlyMode;
     static long field_q;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -47,6 +47,6 @@ final class SetSniperCannonFiringLeeway extends ConsoleCommand {
 
     static {
         field_o = new long[32];
-        field_p = false;
+        defaultCurrentStateOnlyMode = false;
     }
 }

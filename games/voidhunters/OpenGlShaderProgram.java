@@ -40,7 +40,7 @@ final class OpenGlShaderProgram {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_c.a(this.field_b, 0);
+        this.field_c.queueObjectDeletion(this.field_b, 0);
         super.finalize();
     }
 

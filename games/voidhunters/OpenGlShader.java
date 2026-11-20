@@ -8,7 +8,7 @@ final class OpenGlShader {
     long field_d;
 
     protected final void finalize() throws Throwable {
-        this.field_b.a(this.field_d, 0);
+        this.field_b.queueObjectDeletion(this.field_d, 0);
         super.finalize();
     }
 

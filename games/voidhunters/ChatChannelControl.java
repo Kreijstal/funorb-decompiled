@@ -6,7 +6,7 @@ final class ChatChannelControl {
 
     final static void setChatChannel(int param0) {
         NetworkMessageState.chatChannel = param0;
-        CommonGameState.a(true);
+        CommonGameState.selectDefaultQuickChatMenu(true);
     }
 
     static {

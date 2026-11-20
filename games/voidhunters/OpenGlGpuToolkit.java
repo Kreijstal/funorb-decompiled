@@ -8,12 +8,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     static int field_Oc;
     private IntrusiveDeque field_yc;
     private jaggl.OpenGL field_zc;
-    private IntrusiveDeque field_Ic;
-    private IntrusiveDeque field_Uc;
+    private IntrusiveDeque bufferDeletionQueue;
+    private IntrusiveDeque textureDeletionQueue;
     private IntrusiveDeque field_Cc;
     private IntrusiveDeque field_bd;
-    private IntrusiveDeque field_Ec;
-    private IntrusiveDeque field_Gc;
+    private IntrusiveDeque programDeletionQueue;
+    private IntrusiveDeque objectDeletionQueue;
     private boolean field_cd;
     private boolean field_Kc;
     private long field_Tc;
@@ -175,14 +175,14 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         return false;
     }
 
-    final synchronized void b(int param0, int param1, boolean param2) {
+    final synchronized void queueBufferDeletion(int param0, int param1, boolean param2) {
         if (param2) {
           ToolkitSprite var5 = (ToolkitSprite) null;
           this.setRenderTarget((ToolkitSprite) null, true);
         }
         IntegerNode var4 = new IntegerNode(param1);
         var4.key = (long)param0;
-        this.field_Ic.addLast(-10258, var4);
+        this.bufferDeletionQueue.addLast(-10258, var4);
     }
 
     final void setMultisampleEnabled(int param0, boolean param1) {
@@ -308,7 +308,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           jaggl.OpenGL.glLightf(var4, 4616, 0.0f);
         }
         if (param0 < 106) {
-          this.field_Gc = (IntrusiveDeque) null;
+          this.objectDeletionQueue = (IntrusiveDeque) null;
         }
         jaggl.OpenGL.glFogf(2914, 0.949999988079071f);
         jaggl.OpenGL.glFogi(2917, 9729);
@@ -399,7 +399,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    private final void I(byte param0) {
+    private final void applyModelViewTransform(byte param0) {
         int var2;
         int var3;
         var3 = VoidHunters.field_G;
@@ -445,13 +445,13 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         jaggl.OpenGL.glLightModelfv(2899, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
-    final synchronized void b(int param0, int param1, int param2) {
+    final synchronized void queueTextureDeletion(int param0, int param1, int param2) {
         if (param1 <= 89) {
-          this.field_Gc = (IntrusiveDeque) null;
+          this.objectDeletionQueue = (IntrusiveDeque) null;
         }
         IntegerNode var4 = new IntegerNode(param2);
         var4.key = (long)param0;
-        this.field_Uc.addLast(-10258, var4);
+        this.textureDeletionQueue.addLast(-10258, var4);
     }
 
     final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
@@ -716,7 +716,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
 
     final void applyViewTransform(int param0) {
         this.field_cd = false;
-        this.I((byte) -105);
+        this.applyModelViewTransform((byte) -105);
         if (param0 != 17891) {
           this.restoreDefaultFramebuffer();
         }
@@ -731,7 +731,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final static float[] a(float[] param0, int param1, int param2) {
+    final static float[] copyFloatPrefix(float[] param0, int param1, int param2) {
         float[] var3 = null;
         RuntimeException var3_ref = null;
         float[] var4 = null;
@@ -781,8 +781,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         var4 = VoidHunters.field_G;
         var2 = 0;
         param0 = param0 & 2147483647;
-        while (!this.field_Ic.isEmpty(112)) {
-          var5 = (IntegerNode) (this.field_Ic.removeFirst(true));
+        while (!this.bufferDeletionQueue.isEmpty(112)) {
+          var5 = (IntegerNode) (this.bufferDeletionQueue.removeFirst(true));
           incrementValue$3 = var2;
           var2++;
           SystemNanoClock.field_c[incrementValue$3] = (int)var5.key;
@@ -797,8 +797,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           jaggl.OpenGL.glDeleteBuffersARB(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
-        while (!this.field_Uc.isEmpty(120)) {
-          var6 = (IntegerNode) (this.field_Uc.removeFirst(true));
+        while (!this.textureDeletionQueue.isEmpty(120)) {
+          var6 = (IntegerNode) (this.textureDeletionQueue.removeFirst(true));
           incrementValue$2 = var2;
           var2++;
           SystemNanoClock.field_c[incrementValue$2] = (int)var6.key;
@@ -848,12 +848,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var9 = (IntegerNode) (this.field_yc.removeFirst(true));
           jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
         }
-        while (!this.field_Ec.isEmpty(-96)) {
-          var10 = this.field_Ec.removeFirst(true);
+        while (!this.programDeletionQueue.isEmpty(-96)) {
+          var10 = this.programDeletionQueue.removeFirst(true);
           jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
         }
-        while (!this.field_Gc.isEmpty(127)) {
-          var11 = this.field_Gc.removeFirst(true);
+        while (!this.objectDeletionQueue.isEmpty(127)) {
+          var11 = this.objectDeletionQueue.removeFirst(true);
           jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
         while (!this.field_yc.isEmpty(-126)) {
@@ -1033,13 +1033,13 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         super.applyPointLights(75);
     }
 
-    final synchronized void a(long param0, int param1) {
+    final synchronized void queueObjectDeletion(long param0, int param1) {
         IntrusiveNode var4 = new IntrusiveNode();
         var4.key = param0;
         if (param1 != 0) {
           return;
         }
-        this.field_Gc.addLast(-10258, var4);
+        this.objectDeletionQueue.addLast(-10258, var4);
     }
 
     final Object createSurface(byte param0, java.awt.Canvas param1) {
@@ -1203,7 +1203,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         if (param0 <= 84) {
           return;
         }
-        this.I((byte) 92);
+        this.applyModelViewTransform((byte) 92);
     }
 
     final void commitDirectionalLights(byte param0) {
@@ -1251,12 +1251,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         var29 = null;
         var30 = null;
         this.field_yc = new IntrusiveDeque();
-        this.field_Ic = new IntrusiveDeque();
-        this.field_Uc = new IntrusiveDeque();
+        this.bufferDeletionQueue = new IntrusiveDeque();
+        this.textureDeletionQueue = new IntrusiveDeque();
         this.field_Cc = new IntrusiveDeque();
         this.field_bd = new IntrusiveDeque();
-        this.field_Ec = new IntrusiveDeque();
-        this.field_Gc = new IntrusiveDeque();
+        this.programDeletionQueue = new IntrusiveDeque();
+        this.objectDeletionQueue = new IntrusiveDeque();
         this.field_Pc = new OpenGlVertexBuffer[16];
         this.field_Sc = new jaggl.MapBuffer();
         this.field_Vc = new jaggl.MapBuffer();
@@ -1458,13 +1458,13 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final synchronized void a(int param0, byte param1) {
+    final synchronized void queueProgramDeletion(int param0, byte param1) {
         IntrusiveNode var3 = new IntrusiveNode();
         var3.key = (long)param0;
         if (param1 <= 94) {
           return;
         }
-        this.field_Ec.addLast(-10258, var3);
+        this.programDeletionQueue.addLast(-10258, var3);
     }
 
     final void applyDirectionalLightDirections(int param0) {

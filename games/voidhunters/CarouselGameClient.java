@@ -682,7 +682,7 @@ final class CarouselGameClient {
             } else {
               var12 = (CarouselEvent) (var6);
               var13 = var12;
-              if (MonochromeRowCacheEntry.field_e) {
+              if (MonochromeRowCacheEntry.currentStateOnlyMode) {
                 var13.pendingApplication = false;
               }
               var4_int++;

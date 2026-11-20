@@ -10,14 +10,14 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
         MidiCrossfadeStream.setAlternateHistoryLength((byte) 125, 3);
         if (param1) {
           SpecialOrderButtonState.field_f = true;
-          OpenGlToolkit.a(62, true);
+          OpenGlToolkit.setCurrentStateOnlyMode(62, true);
           if (param0 < 68) {
             field_p = 55;
             return;
           }
           return;
         }
-        OpenGlToolkit.a(62, true);
+        OpenGlToolkit.setCurrentStateOnlyMode(62, true);
         if (param0 >= 68) {
           return;
         }

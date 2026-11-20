@@ -93,7 +93,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int[] param1) {
+    final static void applyRuntimeSettings(int param0, int[] param1) {
         try {
           NumericLoginCredentials.field_f = param1[48];
           MapClearanceRectangleFactory.field_b = param1[115];

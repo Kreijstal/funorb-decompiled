@@ -203,7 +203,7 @@ final class OpenGlFont extends ToolkitFont {
     }
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
-        this.toolkit.c(false);
+        this.toolkit.prepareFontRendering(false);
         this.toolkit.bindTexture(115, this.field_e);
         if (!this.field_c &&
           !param4) {
@@ -229,7 +229,7 @@ final class OpenGlFont extends ToolkitFont {
         float var12;
         var9 = (OpenGlGlyphMask) (param5);
         var10 = var9.texture;
-        this.toolkit.c(false);
+        this.toolkit.prepareFontRendering(false);
         this.toolkit.bindTexture(34, this.field_e);
         if (!this.field_c &&
           !param4) {

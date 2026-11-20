@@ -99,7 +99,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
           var12Lifetime1 = stackIn_25_0;
           if (var12Lifetime1 != 0) {
             var5.beginBitRead(-23497);
-            var11.state.a(-62, var5);
+            var11.state.readStateWithChecksumDiagnostic(-62, var5);
             var5.endBitRead((byte) -81);
             param1.applyBufferedEventsAndCatchUp(0, GetThrusterSmallForce.field_o, var11.state.carouselInfo);
           }

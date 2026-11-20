@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kqb {
-    final static void a(String param0, int param1) {
+final class MessageDialogPresenter {
+    final static void showMessage(String param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

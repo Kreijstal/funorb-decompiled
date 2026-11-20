@@ -935,13 +935,13 @@ final class OpenGlModel extends Model3D {
                       var26 = MissionBuilder.field_f[0];
                     } else {
                       if (3 == var31) {
-                        CommonGameState.a(var86, param1.vertexZ[var32_int], var40, MissionBuilder.field_f, var37, param1.vertexX[var32_int], (byte) -82, var36, param1.vertexY[var32_int], var39, var35);
+                        CommonGameState.computeSphericalTextureCoordinates(var86, param1.vertexZ[var32_int], var40, MissionBuilder.field_f, var37, param1.vertexX[var32_int], (byte) -82, var36, param1.vertexY[var32_int], var39, var35);
                         var23 = MissionBuilder.field_f[1];
                         var22 = MissionBuilder.field_f[0];
-                        CommonGameState.a(var86, param1.vertexZ[var33_int], var40, MissionBuilder.field_f, var37, param1.vertexX[var33_int], (byte) -82, var36, param1.vertexY[var33_int], var39, var35);
+                        CommonGameState.computeSphericalTextureCoordinates(var86, param1.vertexZ[var33_int], var40, MissionBuilder.field_f, var37, param1.vertexX[var33_int], (byte) -82, var36, param1.vertexY[var33_int], var39, var35);
                         var24 = MissionBuilder.field_f[0];
                         var25 = MissionBuilder.field_f[1];
-                        CommonGameState.a(var86, param1.vertexZ[var34], var40, MissionBuilder.field_f, var37, param1.vertexX[var34], (byte) -82, var36, param1.vertexY[var34], var39, var35);
+                        CommonGameState.computeSphericalTextureCoordinates(var86, param1.vertexZ[var34], var40, MissionBuilder.field_f, var37, param1.vertexX[var34], (byte) -82, var36, param1.vertexY[var34], var39, var35);
                         var27 = MissionBuilder.field_f[1];
                         var26 = MissionBuilder.field_f[0];
                         if ((1 & var39) != 0) {

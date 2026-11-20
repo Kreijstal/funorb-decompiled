@@ -19,7 +19,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
         try {
           this.field_h[param1] = param0;
           if (param2 >= -112) {
-            this.b(96);
+            this.getVisibleSnapshot(96);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oma.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -92,26 +92,26 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 28801) {
-          CommonGameState.a(false);
+          CommonGameState.selectDefaultQuickChatMenu(false);
         }
         field_b = null;
         field_c = null;
     }
 
-    final void c(int param0) {
+    final void updateTimeline(int param0) {
         SecondaryNodeHashTable.field_c = this;
         this.carouselInfo.updateTimeline(SetMinimapWidth.field_o, (byte) 106);
         int var2 = 5 % ((67 - param0) / 57);
     }
 
-    final World a(byte param0) {
+    final World getVisibleWorld(byte param0) {
         if (param0 < 20) {
           field_i = 1.3303049802780151f;
         }
         return ((GameSnapshot) (this.carouselInfo.getVisibleState(28120))).world;
     }
 
-    final void a(int param0, IsaacPacketBuffer param1) {
+    final void readStateWithChecksumDiagnostic(int param0, IsaacPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -119,7 +119,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
           return;
         }
         try {
-          ConsoleValue.b(0);
+          ConsoleValue.restoreDefaultStateSerializationMode(0);
           param1.endBitRead((byte) -50);
           var3_int = param1.position;
           param1.beginBitRead(-23497);
@@ -223,7 +223,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
 
     public final String getPlayerName(int param0, int param1) {
         if (SetMissionResnetResourceTickTime.field_p == param0 &&
-          !this.b(1).getPlayer(param1, (byte) 59).connected) {
+          !this.getVisibleSnapshot(1).getPlayer(param1, (byte) 59).connected) {
           return "Bot " + param1;
         }
         if (this.field_h[param1] == null) {
@@ -232,7 +232,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
         return this.field_h[param1];
     }
 
-    final static void a(float[] param0, int param1, float param2, float[] param3, int param4, int param5, byte param6, int param7, int param8, int param9, int param10) {
+    final static void computeSphericalTextureCoordinates(float[] param0, int param1, float param2, float[] param3, int param4, int param5, byte param6, int param7, int param8, int param9, int param10) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -301,8 +301,8 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
         }
     }
 
-    final static void a(boolean param0) {
-        AsteroidFieldFactory.a((byte) -28, GetShieldsDamageEnergyConversion.field_o);
+    final static void selectDefaultQuickChatMenu(boolean param0) {
+        AsteroidFieldFactory.setQuickChatMenu((byte) -28, GetShieldsDamageEnergyConversion.field_o);
         if (!param0) {
           field_i = 0.1389508843421936f;
         }
@@ -352,9 +352,9 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
         }
     }
 
-    final GameSnapshot b(int param0) {
+    final GameSnapshot getVisibleSnapshot(int param0) {
         if (param0 != 1) {
-          this.a((byte) -95);
+          this.getVisibleWorld((byte) -95);
         }
         return (GameSnapshot) (this.carouselInfo.getVisibleState(28120));
     }

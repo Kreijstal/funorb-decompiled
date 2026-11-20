@@ -146,7 +146,7 @@ abstract class OpenGlGpuBuffer implements GpuBuffer {
 
     void release(int param0) {
         if (this.bufferId > 0) {
-          this.toolkit.b(this.bufferId, this.size, false);
+          this.toolkit.queueBufferDeletion(this.bufferId, this.size, false);
           this.bufferId = -1;
           if (param0 >= -84) {
             this.getClientAddress(126);

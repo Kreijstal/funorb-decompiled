@@ -84,9 +84,9 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
 
     private final void a(byte param0, IsaacPacketBuffer param1) {
         try {
-          ParticleFactory.field_a = MonochromeRowCacheEntry.field_e;
+          ParticleFactory.field_a = MonochromeRowCacheEntry.currentStateOnlyMode;
           int var3_int = -88 % ((12 - param0) / 49);
-          MonochromeRowCacheEntry.field_e = false;
+          MonochromeRowCacheEntry.currentStateOnlyMode = false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "af.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -139,7 +139,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
 
     private final void a(IsaacPacketBuffer param0, int param1) {
         try {
-          MonochromeRowCacheEntry.field_e = ParticleFactory.field_a;
+          MonochromeRowCacheEntry.currentStateOnlyMode = ParticleFactory.field_a;
           if (param1 <= 25) {
             this.getClientStateDump(-23);
           }
@@ -150,7 +150,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
 
     private final void a(int param0, IsaacPacketBuffer param1) {
         try {
-          MonochromeRowCacheEntry.field_e = ParticleFactory.field_a;
+          MonochromeRowCacheEntry.currentStateOnlyMode = ParticleFactory.field_a;
           if (param0 != 116) {
             BlackBoxRecording.a((byte) 124, -116, -59, -4, 46, 82);
           }
@@ -218,12 +218,12 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         try {
           this.serverCarousel = new CarouselCommongameInfo();
           this.serverCarousel.replay = true;
-          ParticleFactory.field_a = MonochromeRowCacheEntry.field_e;
+          ParticleFactory.field_a = MonochromeRowCacheEntry.currentStateOnlyMode;
           if (param1 >= -3) {
             IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
             this.readState((IsaacPacketBuffer) null, true);
           }
-          MonochromeRowCacheEntry.field_e = false;
+          MonochromeRowCacheEntry.currentStateOnlyMode = false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "af.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -283,7 +283,7 @@ final class GameMenuScreen {
             var8 = SpawnChoiceFactory.field_b.toUpperCase();
             if (SetTorpedoProjectiles.field_o == null ||
               null == MatchingFieldValidator.field_g ||
-              null == MatchingFieldValidator.field_g.state.b(1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 107)) {
+              null == MatchingFieldValidator.field_g.state.getVisibleSnapshot(1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 107)) {
               var9 = 1;
             }
           }
@@ -642,7 +642,7 @@ final class GameMenuScreen {
                                                         if (MatchingFieldValidator.field_g != null &&
                                                           SocketNetworkArchiveClient.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
                                                           ssa.b(2))) {
-                                                          var10 = MatchingFieldValidator.field_g.state.b(1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 93);
+                                                          var10 = MatchingFieldValidator.field_g.state.getVisibleSnapshot(1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 93);
                                                           if (var10 != null) {
                                                             if (SetTorpedoProjectiles.field_o == null) {
                                                               return;

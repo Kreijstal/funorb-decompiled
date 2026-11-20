@@ -322,7 +322,7 @@ final class CarouselCommongameInfo implements DiffableState {
 
     private final void readTimeline(byte param0, IsaacPacketBuffer param1) {
         try {
-          if (!MonochromeRowCacheEntry.field_e) {
+          if (!MonochromeRowCacheEntry.currentStateOnlyMode) {
             this.readHistoryAndState(param1, (byte) -19);
           } else {
             this.readCurrentState(param1, (byte) 42);
@@ -530,7 +530,7 @@ final class CarouselCommongameInfo implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!MonochromeRowCacheEntry.field_e) {
+          if (!MonochromeRowCacheEntry.currentStateOnlyMode) {
             this.writeHistoryAndState(param0, (byte) 43);
           } else {
             this.writeCurrentState(~param1, param0);

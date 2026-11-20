@@ -5764,6 +5764,14 @@
       "renamedSymbol": "C:SetNumStars"
     },
     {
+      "symbol": "C:kqb",
+      "originalName": "kqb",
+      "to": "MessageDialogPresenter",
+      "evidence": "Only helper sets original modal-message visibility/text and lays out shared dialog,gradient border and dismissal button. Full class and visibility consumers reviewed;retain original offsets,globals and guards.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MessageDialogPresenter"
+    },
+    {
       "symbol": "C:kra",
       "originalName": "kra",
       "to": "FixedPointTrigonometry",
@@ -19148,6 +19156,38 @@
       "renamedSymbol": "F:PartitionZone.gridx:I"
     },
     {
+      "symbol": "F:jp.field_Ec:Lij;",
+      "originalName": "field_Ec",
+      "to": "programDeletionQueue",
+      "evidence": "Deferred ARB program ids consumed by glDeleteProgramARB.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlGpuToolkit.programDeletionQueue:LIntrusiveDeque;"
+    },
+    {
+      "symbol": "F:jp.field_Gc:Lij;",
+      "originalName": "field_Gc",
+      "to": "objectDeletionQueue",
+      "evidence": "Deferred ARB object long handles consumed by glDeleteObjectARB.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlGpuToolkit.objectDeletionQueue:LIntrusiveDeque;"
+    },
+    {
+      "symbol": "F:jp.field_Ic:Lij;",
+      "originalName": "field_Ic",
+      "to": "bufferDeletionQueue",
+      "evidence": "Deferred buffer id/cost pairs consumed by glDeleteBuffersARB.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlGpuToolkit.bufferDeletionQueue:LIntrusiveDeque;"
+    },
+    {
+      "symbol": "F:jp.field_Uc:Lij;",
+      "originalName": "field_Uc",
+      "to": "textureDeletionQueue",
+      "evidence": "Deferred texture id/cost pairs consumed by glDeleteTextures.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlGpuToolkit.textureDeletionQueue:LIntrusiveDeque;"
+    },
+    {
       "symbol": "F:jpa.field_b:I",
       "originalName": "field_b",
       "to": "index",
@@ -23316,6 +23356,14 @@
       "renamedSymbol": "F:Direct3DTexture.filterMode:LTextureFilterMode;"
     },
     {
+      "symbol": "F:osa.field_e:Z",
+      "originalName": "field_e",
+      "to": "currentStateOnlyMode",
+      "evidence": "Active flag selecting current-state versus history serialization and original event pending-application behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MonochromeRowCacheEntry.currentStateOnlyMode:Z"
+    },
+    {
       "symbol": "F:ova.field_a:I",
       "originalName": "field_a",
       "to": "sendDelay",
@@ -27282,6 +27330,14 @@
       "evidence": "The state-diff method prints \"ai has changed\" for this field.",
       "confidence": "reviewed",
       "renamedSymbol": "F:Ship.ai:LShipAI;"
+    },
+    {
+      "symbol": "F:sga.field_p:Z",
+      "originalName": "field_p",
+      "to": "defaultCurrentStateOnlyMode",
+      "evidence": "Default timeline serialization mode saved/restored through ConsoleValue helper;set with active mode.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SetSniperCannonFiringLeeway.defaultCurrentStateOnlyMode:Z"
     },
     {
       "symbol": "F:sha.field_A:Z",
@@ -51948,6 +52004,14 @@
       "renamedSymbol": "M:OpenGlGpuToolkit.clearColor(I)V"
     },
     {
+      "symbol": "M:jp.I(B)V",
+      "originalName": "I",
+      "to": "applyModelViewTransform",
+      "evidence": "Maintain original GL matrix stack/modelview state for projection mode,view/light refresh and optional model transform;retain push/pop ordering,flags and arithmetic guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlGpuToolkit.applyModelViewTransform(B)V"
+    },
+    {
       "symbol": "M:jp.I(I)V",
       "originalName": "I",
       "to": "applyAlphaTestEnabled",
@@ -52018,6 +52082,14 @@
       "evidence": "Assign threshold, tone-map white level and bloom strength consumed by GLSL params uniforms in OpenGlBloomEffect. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlGpuToolkit.setBloomParameters(FFF)V"
+    },
+    {
+      "symbol": "M:jp.a(IB)V",
+      "originalName": "a",
+      "to": "queueProgramDeletion",
+      "evidence": "Queue original ARB program id for deferred glDeleteProgramARB;retain allocation before byte-guard return and original queue order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueProgramDeletion(IB)V"
     },
     {
       "symbol": "M:jp.a(II)V",
@@ -52098,6 +52170,14 @@
       "evidence": "Construct backend vertex declaration from stream layout array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlGpuToolkit.createVertexDeclaration(I[LVertexStreamLayout;)LGpuVertexDeclaration;"
+    },
+    {
+      "symbol": "M:jp.a(JI)V",
+      "originalName": "a",
+      "to": "queueObjectDeletion",
+      "evidence": "Queue original long ARB object handle for deferred glDeleteObjectARB;retain allocation before int-guard return.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueObjectDeletion(JI)V"
     },
     {
       "symbol": "M:jp.a(Laja;Z)V",
@@ -52188,6 +52268,14 @@
       "renamedSymbol": "M:OpenGlGpuToolkit.createCubeTexture(ZI[[II)LGpuCubeTexture;"
     },
     {
+      "symbol": "M:jp.a([FII)[F",
+      "originalName": "a",
+      "to": "copyFloatPrefix",
+      "evidence": "Allocate original requested float length and copy exactly that prefix;retain source-too-short failures,negative-size behavior and guard mutation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlGpuToolkit.copyFloatPrefix([FII)[F"
+    },
+    {
       "symbol": "M:jp.b()Z",
       "originalName": "b",
       "to": "enableBloom",
@@ -52202,6 +52290,22 @@
       "evidence": "Software creates float depth array sized by width/height; unsupported backends may return null. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlGpuToolkit.createDepthBuffer(II)LDepthBuffer;"
+    },
+    {
+      "symbol": "M:jp.b(III)V",
+      "originalName": "b",
+      "to": "queueTextureDeletion",
+      "evidence": "Queue original texture id and memory cost in IntegerNode;drain calls glDeleteTextures and subtracts value. Retain bad-guard object-queue cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueTextureDeletion(III)V"
+    },
+    {
+      "symbol": "M:jp.b(IIZ)V",
+      "originalName": "b",
+      "to": "queueBufferDeletion",
+      "evidence": "Queue original GL buffer id and memory cost in IntegerNode;drain calls glDeleteBuffersARB and subtracts value. Retain bad-bool render-target call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueBufferDeletion(IIZ)V"
     },
     {
       "symbol": "M:jp.c(I)V",
@@ -53572,6 +53676,14 @@
       "renamedSymbol": "M:GetPhasedEnergyBeamProjectiles.createBorderedSpriteTiles(IIIZ)[LSprite;"
     },
     {
+      "symbol": "M:kga.a(I[I)V",
+      "originalName": "a",
+      "to": "applyRuntimeSettings",
+      "evidence": "Apply original235-index settings array assignments to shared runtime globals in original order;FULL2174-token body read including midway guard mutation. Retain aliases,direct array failures and all values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(I[I)V"
+    },
+    {
       "symbol": "M:kga.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -54330,6 +54442,14 @@
       "evidence": "Only clears own static reference fields field_o; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetNumStars.clearSharedReferences(B)V"
+    },
+    {
+      "symbol": "M:kqb.a(Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "showMessage",
+      "evidence": "Set original modal visibility flag and text,measure paragraph,center/size shared dialog and gradient border and position dismissal control;retain passed guard as layout argument and exception behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V"
     },
     {
       "symbol": "M:kr.a(I)V",
@@ -60188,6 +60308,14 @@
       "renamedSymbol": "M:ConsoleValue.booleanValue(Z)Z"
     },
     {
+      "symbol": "M:nc.b(I)V",
+      "originalName": "b",
+      "to": "restoreDefaultStateSerializationMode",
+      "evidence": "When original guard0,copy default current-state-only mode into active mode;retain other-guard no-op.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ConsoleValue.restoreDefaultStateSerializationMode(I)V"
+    },
+    {
       "symbol": "M:nc.c(I)J",
       "originalName": "c",
       "to": "longValue",
@@ -64212,6 +64340,14 @@
       "renamedSymbol": "M:TeamNodeCondition.writeState(LIsaacPacketBuffer;I)V"
     },
     {
+      "symbol": "M:oma.a(B)Lpe;",
+      "originalName": "a",
+      "to": "getVisibleWorld",
+      "evidence": "Return world from original CarouselCommongameInfo visible GameSnapshot;retain bad-byte shared-float mutation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CommonGameState.getVisibleWorld(B)LWorld;"
+    },
+    {
       "symbol": "M:oma.a(BLtv;)Z",
       "originalName": "a",
       "to": "differsFrom",
@@ -64234,6 +64370,14 @@
       "evidence": "Return the indexed stored player name or the original Bot/Unknown fallback based on the snapshot and game mode.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CommonGameState.getPlayerName(II)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:oma.a(ILfaa;)V",
+      "originalName": "a",
+      "to": "readStateWithChecksumDiagnostic",
+      "evidence": "Restore default timeline serialization mode,read bit-packed state between byte positions,read trailing checksum and log when matching,then resume bit mode;retain lack of mismatch rejection and early guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V"
     },
     {
       "symbol": "M:oma.a(Lfaa;Z)V",
@@ -64260,6 +64404,22 @@
       "renamedSymbol": "M:CommonGameState.reportDifferences(LSerializableGameState;I)V"
     },
     {
+      "symbol": "M:oma.a(Z)V",
+      "originalName": "a",
+      "to": "selectDefaultQuickChatMenu",
+      "evidence": "Select original root quick-chat category menu via shared menu-selection helper;retained global was constructed by createQuickChatCategoryMenu. Preserve bad-bool shared-float mutation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CommonGameState.selectDefaultQuickChatMenu(Z)V"
+    },
+    {
+      "symbol": "M:oma.a([FIF[FIIBIIII)V",
+      "originalName": "a",
+      "to": "computeSphericalTextureCoordinates",
+      "evidence": "Transform relative3D vector by supplied3x3 matrix,derive atan2/asin UV and original offset/orientation rotations;retain float order,zero-length NaN behavior and bad-byte cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V"
+    },
+    {
       "symbol": "M:oma.b(BLtv;)V",
       "originalName": "b",
       "to": "copyTo",
@@ -64268,12 +64428,28 @@
       "renamedSymbol": "M:CommonGameState.copyTo(BLSerializableGameState;)V"
     },
     {
+      "symbol": "M:oma.b(I)Lrsb;",
+      "originalName": "b",
+      "to": "getVisibleSnapshot",
+      "evidence": "Return original visible CarouselCommongameInfo GameSnapshot;retain invalid-int world-getter side call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CommonGameState.getVisibleSnapshot(I)LGameSnapshot;"
+    },
+    {
       "symbol": "M:oma.b(Lfaa;I)V",
       "originalName": "b",
       "to": "writeState",
       "evidence": "Serializes state fields into the supplied bit packet buffer; confirmed by SettingsChange, MissionVariable and PlayerVote implementations. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CommonGameState.writeState(LIsaacPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:oma.c(I)V",
+      "originalName": "c",
+      "to": "updateTimeline",
+      "evidence": "Set original active CommonGameState reference and advance retained carousel timeline with original tick value;retain arithmetic guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CommonGameState.updateTimeline(I)V"
     },
     {
       "symbol": "M:omb.a([Lnc;I)Lnc;",
@@ -70028,6 +70204,14 @@
       "renamedSymbol": "M:OpenGlToolkit.bindVertexBuffer(ILOpenGlVertexBufferBinding;)V"
     },
     {
+      "symbol": "M:qfa.a(IZ)V",
+      "originalName": "a",
+      "to": "setCurrentStateOnlyMode",
+      "evidence": "Set original default and current timeline-serialization mode flags together;CarouselCommongameInfo true path reads/writes current state instead of history,and BlackBoxRecording temporarily clears/restores it. Retain arithmetic guard between assignments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.setCurrentStateOnlyMode(IZ)V"
+    },
+    {
       "symbol": "M:qfa.a(I[I)[I",
       "originalName": "a",
       "to": "reflectXAndReversePoints",
@@ -70138,6 +70322,22 @@
       "evidence": "Retain requested fog enablement, refresh native state and invalidate cached render-state bits.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlToolkit.setFogEnabled(ZI)V"
+    },
+    {
+      "symbol": "M:qfa.a(ZIZ)V",
+      "originalName": "a",
+      "to": "setMaterialTexture",
+      "evidence": "Delegate original material/texture setup with fixed first effect flag and guard0;retain bad-bool getClip(null) side call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.setMaterialTexture(ZIZ)V"
+    },
+    {
+      "symbol": "M:qfa.a(ZZII)V",
+      "originalName": "a",
+      "to": "setMaterialTexture",
+      "evidence": "Resolve material texture/metadata,apply original scroll transform/effect selection and fallback binding/combine,cache selection and invalidate render mode bits;retain flags,guard and integer timing arithmetic.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.setMaterialTexture(ZZII)V"
     },
     {
       "symbol": "M:qfa.a([BIIZB)Luq;",
@@ -70314,6 +70514,14 @@
       "evidence": "Retain the lighting-suppression flag and refresh the effective lighting enablement.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlToolkit.setLightingSuppressed(IZ)V"
+    },
+    {
+      "symbol": "M:qfa.c(Z)V",
+      "originalName": "c",
+      "to": "prepareFontRendering",
+      "evidence": "Set original screen-space,fog/light/depth-disabled font pipeline and default blend1;OpenGlFont drawGlyph callers prove role. Retain mode cache and bad-bool clipping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.prepareFontRendering(Z)V"
     },
     {
       "symbol": "M:qfa.d()Lpw;",
@@ -70508,6 +70716,14 @@
       "renamedSymbol": "M:OpenGlToolkit.applyScreenSpaceProjection(I)V"
     },
     {
+      "symbol": "M:qfa.i(II)V",
+      "originalName": "i",
+      "to": "setMaterialTexture",
+      "evidence": "Delegate original default-flag material/texture setup using supplied texture id(normally-2);retain invalid-matrix guard heap call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.setMaterialTexture(II)V"
+    },
+    {
       "symbol": "M:qfa.j()V",
       "originalName": "j",
       "to": "restoreDefaultFramebuffer",
@@ -70572,12 +70788,28 @@
       "renamedSymbol": "M:OpenGlToolkit.supportsMultipleCanvases()Z"
     },
     {
+      "symbol": "M:qfa.m(I)V",
+      "originalName": "m",
+      "to": "prepareUntextured2D",
+      "evidence": "Configure original screen-space primitive pipeline,clear bound texture/material selection and set combine mode1;primitive draw callers prove role. Retain state-cache and arithmetic guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.prepareUntextured2D(I)V"
+    },
+    {
       "symbol": "M:qfa.n()Z",
       "originalName": "n",
       "to": "supportsResizableBackbuffer",
       "evidence": "Resolved call sites in jc.a(I)V explicitly print has_resizable_backbuffer beside this capability result; reviewed complete diagnostic block and backend implementation. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlToolkit.supportsResizableBackbuffer()Z"
+    },
+    {
+      "symbol": "M:qfa.n(I)V",
+      "originalName": "n",
+      "to": "prepareTextured2D",
+      "evidence": "Configure original screen-space sprite/postprocessor pipeline without selecting texture/blend;retain mode cache and invalid-guard lighting call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlToolkit.prepareTextured2D(I)V"
     },
     {
       "symbol": "M:qfa.na(IIII)[I",
@@ -75652,6 +75884,14 @@
       "renamedSymbol": "M:AsteroidFieldFactory.create(B)LSerializableGameState;"
     },
     {
+      "symbol": "M:sl.a(BLtjb;)V",
+      "originalName": "a",
+      "to": "setQuickChatMenu",
+      "evidence": "Ignore null,retain selected QuickChatMenuWidget,replace original container children and set dirty flag;retain guarded static mutation and delegate order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AsteroidFieldFactory.setQuickChatMenu(BLQuickChatMenuWidget;)V"
+    },
+    {
       "symbol": "M:sl.a(I)V",
       "originalName": "a",
       "to": "clearSharedReferences",
@@ -78436,12 +78676,36 @@
       "renamedSymbol": "M:SetBombletSprayProjectileOndamageParticles.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:tr.a(B)V",
+      "originalName": "a",
+      "to": "applyToRuntime",
+      "evidence": "Delegate original full settings-array application to runtime globals;retain invalid-byte reportDifferences(null) before application and exact settings aliases.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SettingsInstance.applyToRuntime(B)V"
+    },
+    {
       "symbol": "M:tr.a(BLtv;)Z",
       "originalName": "a",
       "to": "differsFrom",
       "evidence": "State comparison contract: SettingsChange and MissionVariable return whether stored values differ; concrete implementations retain their original comparison formulas. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SettingsInstance.differsFrom(BLSerializableGameState;)Z"
+    },
+    {
+      "symbol": "M:tr.a(I)V",
+      "originalName": "a",
+      "to": "clearChatHistory",
+      "evidence": "Clear original active ChatMessage array prefix and reset retained message count;array type and append/draw users prove chat history. Preserve reused scalar aliases and guard return.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SettingsInstance.clearChatHistory(I)V"
+    },
+    {
+      "symbol": "M:tr.a(ILso;)V",
+      "originalName": "a",
+      "to": "applyChange",
+      "evidence": "Assign original SettingsChange.value into values[SettingsChange.id];retain direct bounds/null failures and arithmetic guard after assignment.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SettingsInstance.applyChange(ILSettingsChange;)V"
     },
     {
       "symbol": "M:tr.a(Lfaa;Z)V",
@@ -78482,6 +78746,14 @@
       "evidence": "Serializes state fields into the supplied bit packet buffer; confirmed by SettingsChange, MissionVariable and PlayerVote implementations. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SettingsInstance.writeState(LIsaacPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:tr.c(I)V",
+      "originalName": "c",
+      "to": "showRemovedFromGameNotice",
+      "evidence": "If pending lobby-owner name exists,format original You have been removed from this players game notice,present modal message and clear pending name;retain bad-guard string cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SettingsInstance.showRemovedFromGameNotice(I)V"
     },
     {
       "symbol": "M:tra.a(I)V",
@@ -106227,9 +106499,9 @@
     },
     {
       "symbol": "C:kqb",
-      "renamedSymbol": "C:kqb",
+      "renamedSymbol": "C:MessageDialogPresenter",
       "originalName": "kqb",
-      "renamedName": "kqb",
+      "renamedName": "MessageDialogPresenter",
       "declaration": {
         "file": "kqb.java",
         "start": 50,
@@ -139777,9 +140049,9 @@
     },
     {
       "symbol": "F:jp.field_Ec:Lij;",
-      "renamedSymbol": "F:OpenGlGpuToolkit.field_Ec:LIntrusiveDeque;",
+      "renamedSymbol": "F:OpenGlGpuToolkit.programDeletionQueue:LIntrusiveDeque;",
       "originalName": "field_Ec",
-      "renamedName": "field_Ec",
+      "renamedName": "programDeletionQueue",
       "declaration": {
         "file": "jp.java",
         "start": 315,
@@ -139799,9 +140071,9 @@
     },
     {
       "symbol": "F:jp.field_Gc:Lij;",
-      "renamedSymbol": "F:OpenGlGpuToolkit.field_Gc:LIntrusiveDeque;",
+      "renamedSymbol": "F:OpenGlGpuToolkit.objectDeletionQueue:LIntrusiveDeque;",
       "originalName": "field_Gc",
-      "renamedName": "field_Gc",
+      "renamedName": "objectDeletionQueue",
       "declaration": {
         "file": "jp.java",
         "start": 340,
@@ -139821,9 +140093,9 @@
     },
     {
       "symbol": "F:jp.field_Ic:Lij;",
-      "renamedSymbol": "F:OpenGlGpuToolkit.field_Ic:LIntrusiveDeque;",
+      "renamedSymbol": "F:OpenGlGpuToolkit.bufferDeletionQueue:LIntrusiveDeque;",
       "originalName": "field_Ic",
-      "renamedName": "field_Ic",
+      "renamedName": "bufferDeletionQueue",
       "declaration": {
         "file": "jp.java",
         "start": 215,
@@ -139953,9 +140225,9 @@
     },
     {
       "symbol": "F:jp.field_Uc:Lij;",
-      "renamedSymbol": "F:OpenGlGpuToolkit.field_Uc:LIntrusiveDeque;",
+      "renamedSymbol": "F:OpenGlGpuToolkit.textureDeletionQueue:LIntrusiveDeque;",
       "originalName": "field_Uc",
-      "renamedName": "field_Uc",
+      "renamedName": "textureDeletionQueue",
       "declaration": {
         "file": "jp.java",
         "start": 240,
@@ -154770,9 +155042,9 @@
     },
     {
       "symbol": "F:osa.field_e:Z",
-      "renamedSymbol": "F:MonochromeRowCacheEntry.field_e:Z",
+      "renamedSymbol": "F:MonochromeRowCacheEntry.currentStateOnlyMode:Z",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "currentStateOnlyMode",
       "declaration": {
         "file": "osa.java",
         "start": 121,
@@ -167200,9 +167472,9 @@
     },
     {
       "symbol": "F:sga.field_p:Z",
-      "renamedSymbol": "F:SetSniperCannonFiringLeeway.field_p:Z",
+      "renamedSymbol": "F:SetSniperCannonFiringLeeway.defaultCurrentStateOnlyMode:Z",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "defaultCurrentStateOnlyMode",
       "declaration": {
         "file": "sga.java",
         "start": 114,
@@ -358435,7 +358707,7 @@
     },
     {
       "symbol": "L:jp.I(B)V#0",
-      "renamedSymbol": "L:OpenGlGpuToolkit.I(B)V#0",
+      "renamedSymbol": "L:OpenGlGpuToolkit.applyModelViewTransform(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -358446,7 +358718,7 @@
     },
     {
       "symbol": "L:jp.I(B)V#1",
-      "renamedSymbol": "L:OpenGlGpuToolkit.I(B)V#1",
+      "renamedSymbol": "L:OpenGlGpuToolkit.applyModelViewTransform(B)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -358688,7 +358960,7 @@
     },
     {
       "symbol": "L:jp.a(IB)V#0",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a(IB)V#0",
+      "renamedSymbol": "L:OpenGlGpuToolkit.queueProgramDeletion(IB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -359766,7 +360038,7 @@
     },
     {
       "symbol": "L:jp.a(JI)V#0",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a(JI)V#0",
+      "renamedSymbol": "L:OpenGlGpuToolkit.queueObjectDeletion(JI)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -360646,7 +360918,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#0",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#0",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -360657,7 +360929,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#1",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#1",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -360668,7 +360940,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#2",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#2",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -360679,7 +360951,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#3",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#3",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -360690,7 +360962,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#4",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#4",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -360701,7 +360973,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#5",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#5",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -360712,7 +360984,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#6",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#6",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -360723,7 +360995,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#7",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#7",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -360734,7 +361006,7 @@
     },
     {
       "symbol": "L:jp.a([FII)[F#8",
-      "renamedSymbol": "L:OpenGlGpuToolkit.a([FII)[F#8",
+      "renamedSymbol": "L:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -360745,7 +361017,7 @@
     },
     {
       "symbol": "L:jp.b(III)V#0",
-      "renamedSymbol": "L:OpenGlGpuToolkit.b(III)V#0",
+      "renamedSymbol": "L:OpenGlGpuToolkit.queueTextureDeletion(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -360756,7 +361028,7 @@
     },
     {
       "symbol": "L:jp.b(IIZ)V#0",
-      "renamedSymbol": "L:OpenGlGpuToolkit.b(IIZ)V#0",
+      "renamedSymbol": "L:OpenGlGpuToolkit.queueBufferDeletion(IIZ)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -360767,7 +361039,7 @@
     },
     {
       "symbol": "L:jp.b(IIZ)V#1",
-      "renamedSymbol": "L:OpenGlGpuToolkit.b(IIZ)V#1",
+      "renamedSymbol": "L:OpenGlGpuToolkit.queueBufferDeletion(IIZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -373626,7 +373898,7 @@
     },
     {
       "symbol": "L:kga.a(I[I)V#0",
-      "renamedSymbol": "L:GetPhasedEnergyBeamProjectiles.a(I[I)V#0",
+      "renamedSymbol": "L:GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(I[I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -380083,7 +380355,7 @@
     },
     {
       "symbol": "L:kqb.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:kqb.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -380094,7 +380366,7 @@
     },
     {
       "symbol": "L:kqb.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:kqb.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -380105,7 +380377,7 @@
     },
     {
       "symbol": "L:kqb.a(Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:kqb.a(Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -380116,7 +380388,7 @@
     },
     {
       "symbol": "L:kqb.a(Ljava/lang/String;I)V#3",
-      "renamedSymbol": "L:kqb.a(Ljava/lang/String;I)V#3",
+      "renamedSymbol": "L:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -380127,7 +380399,7 @@
     },
     {
       "symbol": "L:kqb.a(Ljava/lang/String;I)V#4",
-      "renamedSymbol": "L:kqb.a(Ljava/lang/String;I)V#4",
+      "renamedSymbol": "L:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -452012,7 +452284,7 @@
     },
     {
       "symbol": "L:oma.a(ILfaa;)V#0",
-      "renamedSymbol": "L:CommonGameState.a(ILIsaacPacketBuffer;)V#0",
+      "renamedSymbol": "L:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -452023,7 +452295,7 @@
     },
     {
       "symbol": "L:oma.a(ILfaa;)V#1",
-      "renamedSymbol": "L:CommonGameState.a(ILIsaacPacketBuffer;)V#1",
+      "renamedSymbol": "L:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -452034,7 +452306,7 @@
     },
     {
       "symbol": "L:oma.a(ILfaa;)V#2",
-      "renamedSymbol": "L:CommonGameState.a(ILIsaacPacketBuffer;)V#2",
+      "renamedSymbol": "L:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -452045,7 +452317,7 @@
     },
     {
       "symbol": "L:oma.a(ILfaa;)V#3",
-      "renamedSymbol": "L:CommonGameState.a(ILIsaacPacketBuffer;)V#3",
+      "renamedSymbol": "L:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -452243,7 +452515,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#0",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#0",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -452254,7 +452526,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#1",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#1",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#1",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -452265,7 +452537,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#10",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#10",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -452276,7 +452548,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#11",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#11",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -452287,7 +452559,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#12",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#12",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -452298,7 +452570,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#13",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#13",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -452309,7 +452581,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#14",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#14",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -452320,7 +452592,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#15",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#15",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -452331,7 +452603,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#2",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#2",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#2",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -452342,7 +452614,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#3",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#3",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#3",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -452353,7 +452625,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#4",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#4",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#4",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -452364,7 +452636,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#5",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#5",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -452375,7 +452647,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#6",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#6",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#6",
       "originalName": "var11_float",
       "renamedName": "var11_float",
       "declaration": {
@@ -452386,7 +452658,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#7",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#7",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -452397,7 +452669,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#8",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#8",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -452408,7 +452680,7 @@
     },
     {
       "symbol": "L:oma.a([FIF[FIIBIIII)V#9",
-      "renamedSymbol": "L:CommonGameState.a([FIF[FIIBIIII)V#9",
+      "renamedSymbol": "L:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -452595,7 +452867,7 @@
     },
     {
       "symbol": "L:oma.c(I)V#0",
-      "renamedSymbol": "L:CommonGameState.c(I)V#0",
+      "renamedSymbol": "L:CommonGameState.updateTimeline(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -504108,7 +504380,7 @@
     },
     {
       "symbol": "L:qfa.a(IZ)V#0",
-      "renamedSymbol": "L:OpenGlToolkit.a(IZ)V#0",
+      "renamedSymbol": "L:OpenGlToolkit.setCurrentStateOnlyMode(IZ)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -505208,7 +505480,7 @@
     },
     {
       "symbol": "L:qfa.a(ZIZ)V#0",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZIZ)V#0",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZIZ)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -505219,7 +505491,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#0",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#0",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -505230,7 +505502,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#1",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#1",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#1",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -505241,7 +505513,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#10",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#10",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -505252,7 +505524,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#11",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#11",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -505263,7 +505535,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#12",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#12",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -505274,7 +505546,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#13",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#13",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#13",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -505285,7 +505557,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#2",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#2",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#2",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -505296,7 +505568,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#3",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#3",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#3",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -505307,7 +505579,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#4",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#4",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -505318,7 +505590,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#5",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#5",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -505329,7 +505601,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#6",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#6",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -505340,7 +505612,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#7",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#7",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -505351,7 +505623,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#8",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#8",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -505362,7 +505634,7 @@
     },
     {
       "symbol": "L:qfa.a(ZZII)V#9",
-      "renamedSymbol": "L:OpenGlToolkit.a(ZZII)V#9",
+      "renamedSymbol": "L:OpenGlToolkit.setMaterialTexture(ZZII)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -506539,7 +506811,7 @@
     },
     {
       "symbol": "L:qfa.m(I)V#0",
-      "renamedSymbol": "L:OpenGlToolkit.m(I)V#0",
+      "renamedSymbol": "L:OpenGlToolkit.prepareUntextured2D(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -555005,7 +555277,7 @@
     },
     {
       "symbol": "L:sl.a(BLtjb;)V#0",
-      "renamedSymbol": "L:AsteroidFieldFactory.a(BLQuickChatMenuWidget;)V#0",
+      "renamedSymbol": "L:AsteroidFieldFactory.setQuickChatMenu(BLQuickChatMenuWidget;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -579436,7 +579708,7 @@
     },
     {
       "symbol": "L:tr.a(B)V#0",
-      "renamedSymbol": "L:SettingsInstance.a(B)V#0",
+      "renamedSymbol": "L:SettingsInstance.applyToRuntime(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -579546,7 +579818,7 @@
     },
     {
       "symbol": "L:tr.a(I)V#0",
-      "renamedSymbol": "L:SettingsInstance.a(I)V#0",
+      "renamedSymbol": "L:SettingsInstance.clearChatHistory(I)V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -579557,7 +579829,7 @@
     },
     {
       "symbol": "L:tr.a(I)V#1",
-      "renamedSymbol": "L:SettingsInstance.a(I)V#1",
+      "renamedSymbol": "L:SettingsInstance.clearChatHistory(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -579568,7 +579840,7 @@
     },
     {
       "symbol": "L:tr.a(I)V#2",
-      "renamedSymbol": "L:SettingsInstance.a(I)V#2",
+      "renamedSymbol": "L:SettingsInstance.clearChatHistory(I)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -579590,7 +579862,7 @@
     },
     {
       "symbol": "L:tr.a(ILso;)V#0",
-      "renamedSymbol": "L:SettingsInstance.a(ILSettingsChange;)V#0",
+      "renamedSymbol": "L:SettingsInstance.applyChange(ILSettingsChange;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -579601,7 +579873,7 @@
     },
     {
       "symbol": "L:tr.a(ILso;)V#1",
-      "renamedSymbol": "L:SettingsInstance.a(ILSettingsChange;)V#1",
+      "renamedSymbol": "L:SettingsInstance.applyChange(ILSettingsChange;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -579821,7 +580093,7 @@
     },
     {
       "symbol": "L:tr.c(I)V#0",
-      "renamedSymbol": "L:SettingsInstance.c(I)V#0",
+      "renamedSymbol": "L:SettingsInstance.showRemovedFromGameNotice(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -579832,7 +580104,7 @@
     },
     {
       "symbol": "L:tr.c(I)V#1",
-      "renamedSymbol": "L:SettingsInstance.c(I)V#1",
+      "renamedSymbol": "L:SettingsInstance.showRemovedFromGameNotice(I)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -696575,9 +696847,9 @@
     },
     {
       "symbol": "M:jp.I(B)V",
-      "renamedSymbol": "M:OpenGlGpuToolkit.I(B)V",
+      "renamedSymbol": "M:OpenGlGpuToolkit.applyModelViewTransform(B)V",
       "originalName": "I",
-      "renamedName": "I",
+      "renamedName": "applyModelViewTransform",
       "declaration": {
         "file": "jp.java",
         "start": 13420,
@@ -696685,9 +696957,9 @@
     },
     {
       "symbol": "M:jp.a(IB)V",
-      "renamedSymbol": "M:OpenGlGpuToolkit.a(IB)V",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueProgramDeletion(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "queueProgramDeletion",
       "declaration": {
         "file": "jp.java",
         "start": 53484,
@@ -696806,9 +697078,9 @@
     },
     {
       "symbol": "M:jp.a(JI)V",
-      "renamedSymbol": "M:OpenGlGpuToolkit.a(JI)V",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueObjectDeletion(JI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "queueObjectDeletion",
       "declaration": {
         "file": "jp.java",
         "start": 36407,
@@ -696938,9 +697210,9 @@
     },
     {
       "symbol": "M:jp.a([FII)[F",
-      "renamedSymbol": "M:OpenGlGpuToolkit.a([FII)[F",
+      "renamedSymbol": "M:OpenGlGpuToolkit.copyFloatPrefix([FII)[F",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyFloatPrefix",
       "declaration": {
         "file": "jp.java",
         "start": 24941,
@@ -696971,9 +697243,9 @@
     },
     {
       "symbol": "M:jp.b(III)V",
-      "renamedSymbol": "M:OpenGlGpuToolkit.b(III)V",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueTextureDeletion(III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "queueTextureDeletion",
       "declaration": {
         "file": "jp.java",
         "start": 14814,
@@ -696982,9 +697254,9 @@
     },
     {
       "symbol": "M:jp.b(IIZ)V",
-      "renamedSymbol": "M:OpenGlGpuToolkit.b(IIZ)V",
+      "renamedSymbol": "M:OpenGlGpuToolkit.queueBufferDeletion(IIZ)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "queueBufferDeletion",
       "declaration": {
         "file": "jp.java",
         "start": 5586,
@@ -699578,9 +699850,9 @@
     },
     {
       "symbol": "M:kga.a(I[I)V",
-      "renamedSymbol": "M:GetPhasedEnergyBeamProjectiles.a(I[I)V",
+      "renamedSymbol": "M:GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(I[I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyRuntimeSettings",
       "declaration": {
         "file": "kga.java",
         "start": 3288,
@@ -701118,9 +701390,9 @@
     },
     {
       "symbol": "M:kqb.a(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:kqb.a(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showMessage",
       "declaration": {
         "file": "kqb.java",
         "start": 78,
@@ -712096,9 +712368,9 @@
     },
     {
       "symbol": "M:nc.b(I)V",
-      "renamedSymbol": "M:ConsoleValue.b(I)V",
+      "renamedSymbol": "M:ConsoleValue.restoreDefaultStateSerializationMode(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "restoreDefaultStateSerializationMode",
       "declaration": {
         "file": "nc.java",
         "start": 389,
@@ -719092,9 +719364,9 @@
     },
     {
       "symbol": "M:oma.a(B)Lpe;",
-      "renamedSymbol": "M:CommonGameState.a(B)LWorld;",
+      "renamedSymbol": "M:CommonGameState.getVisibleWorld(B)LWorld;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getVisibleWorld",
       "declaration": {
         "file": "oma.java",
         "start": 3514,
@@ -719136,9 +719408,9 @@
     },
     {
       "symbol": "M:oma.a(ILfaa;)V",
-      "renamedSymbol": "M:CommonGameState.a(ILIsaacPacketBuffer;)V",
+      "renamedSymbol": "M:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readStateWithChecksumDiagnostic",
       "declaration": {
         "file": "oma.java",
         "start": 3687,
@@ -719180,9 +719452,9 @@
     },
     {
       "symbol": "M:oma.a(Z)V",
-      "renamedSymbol": "M:CommonGameState.a(Z)V",
+      "renamedSymbol": "M:CommonGameState.selectDefaultQuickChatMenu(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "selectDefaultQuickChatMenu",
       "declaration": {
         "file": "oma.java",
         "start": 11124,
@@ -719191,9 +719463,9 @@
     },
     {
       "symbol": "M:oma.a([FIF[FIIBIIII)V",
-      "renamedSymbol": "M:CommonGameState.a([FIF[FIIBIIII)V",
+      "renamedSymbol": "M:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeSphericalTextureCoordinates",
       "declaration": {
         "file": "oma.java",
         "start": 8030,
@@ -719213,9 +719485,9 @@
     },
     {
       "symbol": "M:oma.b(I)Lrsb;",
-      "renamedSymbol": "M:CommonGameState.b(I)LGameSnapshot;",
+      "renamedSymbol": "M:CommonGameState.getVisibleSnapshot(I)LGameSnapshot;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getVisibleSnapshot",
       "declaration": {
         "file": "oma.java",
         "start": 12955,
@@ -719235,9 +719507,9 @@
     },
     {
       "symbol": "M:oma.c(I)V",
-      "renamedSymbol": "M:CommonGameState.c(I)V",
+      "renamedSymbol": "M:CommonGameState.updateTimeline(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "updateTimeline",
       "declaration": {
         "file": "oma.java",
         "start": 3357,
@@ -729069,9 +729341,9 @@
     },
     {
       "symbol": "M:qfa.a(IZ)V",
-      "renamedSymbol": "M:OpenGlToolkit.a(IZ)V",
+      "renamedSymbol": "M:OpenGlToolkit.setCurrentStateOnlyMode(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCurrentStateOnlyMode",
       "declaration": {
         "file": "qfa.java",
         "start": 17248,
@@ -729234,9 +729506,9 @@
     },
     {
       "symbol": "M:qfa.a(ZIZ)V",
-      "renamedSymbol": "M:OpenGlToolkit.a(ZIZ)V",
+      "renamedSymbol": "M:OpenGlToolkit.setMaterialTexture(ZIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setMaterialTexture",
       "declaration": {
         "file": "qfa.java",
         "start": 51698,
@@ -729245,9 +729517,9 @@
     },
     {
       "symbol": "M:qfa.a(ZZII)V",
-      "renamedSymbol": "M:OpenGlToolkit.a(ZZII)V",
+      "renamedSymbol": "M:OpenGlToolkit.setMaterialTexture(ZZII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setMaterialTexture",
       "declaration": {
         "file": "qfa.java",
         "start": 3908,
@@ -729498,9 +729770,9 @@
     },
     {
       "symbol": "M:qfa.c(Z)V",
-      "renamedSymbol": "M:OpenGlToolkit.c(Z)V",
+      "renamedSymbol": "M:OpenGlToolkit.prepareFontRendering(Z)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "prepareFontRendering",
       "declaration": {
         "file": "qfa.java",
         "start": 32089,
@@ -729773,9 +730045,9 @@
     },
     {
       "symbol": "M:qfa.i(II)V",
-      "renamedSymbol": "M:OpenGlToolkit.i(II)V",
+      "renamedSymbol": "M:OpenGlToolkit.setMaterialTexture(II)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "setMaterialTexture",
       "declaration": {
         "file": "qfa.java",
         "start": 48227,
@@ -729872,9 +730144,9 @@
     },
     {
       "symbol": "M:qfa.m(I)V",
-      "renamedSymbol": "M:OpenGlToolkit.m(I)V",
+      "renamedSymbol": "M:OpenGlToolkit.prepareUntextured2D(I)V",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "prepareUntextured2D",
       "declaration": {
         "file": "qfa.java",
         "start": 42245,
@@ -729894,9 +730166,9 @@
     },
     {
       "symbol": "M:qfa.n(I)V",
-      "renamedSymbol": "M:OpenGlToolkit.n(I)V",
+      "renamedSymbol": "M:OpenGlToolkit.prepareTextured2D(I)V",
       "originalName": "n",
-      "renamedName": "n",
+      "renamedName": "prepareTextured2D",
       "declaration": {
         "file": "qfa.java",
         "start": 81133,
@@ -739706,9 +739978,9 @@
     },
     {
       "symbol": "M:sl.a(BLtjb;)V",
-      "renamedSymbol": "M:AsteroidFieldFactory.a(BLQuickChatMenuWidget;)V",
+      "renamedSymbol": "M:AsteroidFieldFactory.setQuickChatMenu(BLQuickChatMenuWidget;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setQuickChatMenu",
       "declaration": {
         "file": "sl.java",
         "start": 1813,
@@ -745184,9 +745456,9 @@
     },
     {
       "symbol": "M:tr.a(B)V",
-      "renamedSymbol": "M:SettingsInstance.a(B)V",
+      "renamedSymbol": "M:SettingsInstance.applyToRuntime(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyToRuntime",
       "declaration": {
         "file": "tr.java",
         "start": 4375,
@@ -745206,9 +745478,9 @@
     },
     {
       "symbol": "M:tr.a(I)V",
-      "renamedSymbol": "M:SettingsInstance.a(I)V",
+      "renamedSymbol": "M:SettingsInstance.clearChatHistory(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearChatHistory",
       "declaration": {
         "file": "tr.java",
         "start": 3483,
@@ -745228,9 +745500,9 @@
     },
     {
       "symbol": "M:tr.a(ILso;)V",
-      "renamedSymbol": "M:SettingsInstance.a(ILSettingsChange;)V",
+      "renamedSymbol": "M:SettingsInstance.applyChange(ILSettingsChange;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyChange",
       "declaration": {
         "file": "tr.java",
         "start": 5258,
@@ -745305,9 +745577,9 @@
     },
     {
       "symbol": "M:tr.c(I)V",
-      "renamedSymbol": "M:SettingsInstance.c(I)V",
+      "renamedSymbol": "M:SettingsInstance.showRemovedFromGameNotice(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "showRemovedFromGameNotice",
       "declaration": {
         "file": "tr.java",
         "start": 4889,
@@ -862290,7 +862562,7 @@
     },
     {
       "symbol": "P:jp.I(B)V#0",
-      "renamedSymbol": "P:OpenGlGpuToolkit.I(B)V#0",
+      "renamedSymbol": "P:OpenGlGpuToolkit.applyModelViewTransform(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -862554,7 +862826,7 @@
     },
     {
       "symbol": "P:jp.a(IB)V#0",
-      "renamedSymbol": "P:OpenGlGpuToolkit.a(IB)V#0",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueProgramDeletion(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -862565,7 +862837,7 @@
     },
     {
       "symbol": "P:jp.a(IB)V#1",
-      "renamedSymbol": "P:OpenGlGpuToolkit.a(IB)V#1",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueProgramDeletion(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -863027,7 +863299,7 @@
     },
     {
       "symbol": "P:jp.a(JI)V#0",
-      "renamedSymbol": "P:OpenGlGpuToolkit.a(JI)V#0",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueObjectDeletion(JI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -863038,7 +863310,7 @@
     },
     {
       "symbol": "P:jp.a(JI)V#1",
-      "renamedSymbol": "P:OpenGlGpuToolkit.a(JI)V#1",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueObjectDeletion(JI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -863467,7 +863739,7 @@
     },
     {
       "symbol": "P:jp.a([FII)[F#0",
-      "renamedSymbol": "P:OpenGlGpuToolkit.a([FII)[F#0",
+      "renamedSymbol": "P:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -863478,7 +863750,7 @@
     },
     {
       "symbol": "P:jp.a([FII)[F#1",
-      "renamedSymbol": "P:OpenGlGpuToolkit.a([FII)[F#1",
+      "renamedSymbol": "P:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -863489,7 +863761,7 @@
     },
     {
       "symbol": "P:jp.a([FII)[F#2",
-      "renamedSymbol": "P:OpenGlGpuToolkit.a([FII)[F#2",
+      "renamedSymbol": "P:OpenGlGpuToolkit.copyFloatPrefix([FII)[F#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -863522,7 +863794,7 @@
     },
     {
       "symbol": "P:jp.b(III)V#0",
-      "renamedSymbol": "P:OpenGlGpuToolkit.b(III)V#0",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueTextureDeletion(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -863533,7 +863805,7 @@
     },
     {
       "symbol": "P:jp.b(III)V#1",
-      "renamedSymbol": "P:OpenGlGpuToolkit.b(III)V#1",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueTextureDeletion(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -863544,7 +863816,7 @@
     },
     {
       "symbol": "P:jp.b(III)V#2",
-      "renamedSymbol": "P:OpenGlGpuToolkit.b(III)V#2",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueTextureDeletion(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -863555,7 +863827,7 @@
     },
     {
       "symbol": "P:jp.b(IIZ)V#0",
-      "renamedSymbol": "P:OpenGlGpuToolkit.b(IIZ)V#0",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueBufferDeletion(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -863566,7 +863838,7 @@
     },
     {
       "symbol": "P:jp.b(IIZ)V#1",
-      "renamedSymbol": "P:OpenGlGpuToolkit.b(IIZ)V#1",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueBufferDeletion(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -863577,7 +863849,7 @@
     },
     {
       "symbol": "P:jp.b(IIZ)V#2",
-      "renamedSymbol": "P:OpenGlGpuToolkit.b(IIZ)V#2",
+      "renamedSymbol": "P:OpenGlGpuToolkit.queueBufferDeletion(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -869627,7 +869899,7 @@
     },
     {
       "symbol": "P:kga.a(I[I)V#0",
-      "renamedSymbol": "P:GetPhasedEnergyBeamProjectiles.a(I[I)V#0",
+      "renamedSymbol": "P:GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(I[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -869638,7 +869910,7 @@
     },
     {
       "symbol": "P:kga.a(I[I)V#1",
-      "renamedSymbol": "P:GetPhasedEnergyBeamProjectiles.a(I[I)V#1",
+      "renamedSymbol": "P:GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(I[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -872707,7 +872979,7 @@
     },
     {
       "symbol": "P:kqb.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:kqb.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -872718,7 +872990,7 @@
     },
     {
       "symbol": "P:kqb.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:kqb.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:MessageDialogPresenter.showMessage(Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -897281,7 +897553,7 @@
     },
     {
       "symbol": "P:nc.b(I)V#0",
-      "renamedSymbol": "P:ConsoleValue.b(I)V#0",
+      "renamedSymbol": "P:ConsoleValue.restoreDefaultStateSerializationMode(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -914760,7 +915032,7 @@
     },
     {
       "symbol": "P:oma.a(B)Lpe;#0",
-      "renamedSymbol": "P:CommonGameState.a(B)LWorld;#0",
+      "renamedSymbol": "P:CommonGameState.getVisibleWorld(B)LWorld;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -914826,7 +915098,7 @@
     },
     {
       "symbol": "P:oma.a(ILfaa;)V#0",
-      "renamedSymbol": "P:CommonGameState.a(ILIsaacPacketBuffer;)V#0",
+      "renamedSymbol": "P:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -914837,7 +915109,7 @@
     },
     {
       "symbol": "P:oma.a(ILfaa;)V#1",
-      "renamedSymbol": "P:CommonGameState.a(ILIsaacPacketBuffer;)V#1",
+      "renamedSymbol": "P:CommonGameState.readStateWithChecksumDiagnostic(ILIsaacPacketBuffer;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -914925,7 +915197,7 @@
     },
     {
       "symbol": "P:oma.a(Z)V#0",
-      "renamedSymbol": "P:CommonGameState.a(Z)V#0",
+      "renamedSymbol": "P:CommonGameState.selectDefaultQuickChatMenu(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -914936,7 +915208,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#0",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#0",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -914947,7 +915219,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#1",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#1",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -914958,7 +915230,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#10",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#10",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -914969,7 +915241,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#2",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#2",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -914980,7 +915252,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#3",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#3",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -914991,7 +915263,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#4",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#4",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -915002,7 +915274,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#5",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#5",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -915013,7 +915285,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#6",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#6",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -915024,7 +915296,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#7",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#7",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -915035,7 +915307,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#8",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#8",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -915046,7 +915318,7 @@
     },
     {
       "symbol": "P:oma.a([FIF[FIIBIIII)V#9",
-      "renamedSymbol": "P:CommonGameState.a([FIF[FIIBIIII)V#9",
+      "renamedSymbol": "P:CommonGameState.computeSphericalTextureCoordinates([FIF[FIIBIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -915079,7 +915351,7 @@
     },
     {
       "symbol": "P:oma.b(I)Lrsb;#0",
-      "renamedSymbol": "P:CommonGameState.b(I)LGameSnapshot;#0",
+      "renamedSymbol": "P:CommonGameState.getVisibleSnapshot(I)LGameSnapshot;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -915112,7 +915384,7 @@
     },
     {
       "symbol": "P:oma.c(I)V#0",
-      "renamedSymbol": "P:CommonGameState.c(I)V#0",
+      "renamedSymbol": "P:CommonGameState.updateTimeline(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -939092,7 +939364,7 @@
     },
     {
       "symbol": "P:qfa.a(IZ)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.a(IZ)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.setCurrentStateOnlyMode(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -939103,7 +939375,7 @@
     },
     {
       "symbol": "P:qfa.a(IZ)V#1",
-      "renamedSymbol": "P:OpenGlToolkit.a(IZ)V#1",
+      "renamedSymbol": "P:OpenGlToolkit.setCurrentStateOnlyMode(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -939422,7 +939694,7 @@
     },
     {
       "symbol": "P:qfa.a(ZIZ)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.a(ZIZ)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(ZIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -939433,7 +939705,7 @@
     },
     {
       "symbol": "P:qfa.a(ZIZ)V#1",
-      "renamedSymbol": "P:OpenGlToolkit.a(ZIZ)V#1",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(ZIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -939444,7 +939716,7 @@
     },
     {
       "symbol": "P:qfa.a(ZIZ)V#2",
-      "renamedSymbol": "P:OpenGlToolkit.a(ZIZ)V#2",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(ZIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -939455,7 +939727,7 @@
     },
     {
       "symbol": "P:qfa.a(ZZII)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.a(ZZII)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(ZZII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -939466,7 +939738,7 @@
     },
     {
       "symbol": "P:qfa.a(ZZII)V#1",
-      "renamedSymbol": "P:OpenGlToolkit.a(ZZII)V#1",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(ZZII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -939477,7 +939749,7 @@
     },
     {
       "symbol": "P:qfa.a(ZZII)V#2",
-      "renamedSymbol": "P:OpenGlToolkit.a(ZZII)V#2",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(ZZII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -939488,7 +939760,7 @@
     },
     {
       "symbol": "P:qfa.a(ZZII)V#3",
-      "renamedSymbol": "P:OpenGlToolkit.a(ZZII)V#3",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(ZZII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -940137,7 +940409,7 @@
     },
     {
       "symbol": "P:qfa.c(Z)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.c(Z)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.prepareFontRendering(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -940467,7 +940739,7 @@
     },
     {
       "symbol": "P:qfa.i(II)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.i(II)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -940478,7 +940750,7 @@
     },
     {
       "symbol": "P:qfa.i(II)V#1",
-      "renamedSymbol": "P:OpenGlToolkit.i(II)V#1",
+      "renamedSymbol": "P:OpenGlToolkit.setMaterialTexture(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -940544,7 +940816,7 @@
     },
     {
       "symbol": "P:qfa.m(I)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.m(I)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.prepareUntextured2D(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -940555,7 +940827,7 @@
     },
     {
       "symbol": "P:qfa.n(I)V#0",
-      "renamedSymbol": "P:OpenGlToolkit.n(I)V#0",
+      "renamedSymbol": "P:OpenGlToolkit.prepareTextured2D(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -962456,7 +962728,7 @@
     },
     {
       "symbol": "P:sl.a(BLtjb;)V#0",
-      "renamedSymbol": "P:AsteroidFieldFactory.a(BLQuickChatMenuWidget;)V#0",
+      "renamedSymbol": "P:AsteroidFieldFactory.setQuickChatMenu(BLQuickChatMenuWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -962467,7 +962739,7 @@
     },
     {
       "symbol": "P:sl.a(BLtjb;)V#1",
-      "renamedSymbol": "P:AsteroidFieldFactory.a(BLQuickChatMenuWidget;)V#1",
+      "renamedSymbol": "P:AsteroidFieldFactory.setQuickChatMenu(BLQuickChatMenuWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -974424,7 +974696,7 @@
     },
     {
       "symbol": "P:tr.a(B)V#0",
-      "renamedSymbol": "P:SettingsInstance.a(B)V#0",
+      "renamedSymbol": "P:SettingsInstance.applyToRuntime(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -974457,7 +974729,7 @@
     },
     {
       "symbol": "P:tr.a(I)V#0",
-      "renamedSymbol": "P:SettingsInstance.a(I)V#0",
+      "renamedSymbol": "P:SettingsInstance.clearChatHistory(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -974490,7 +974762,7 @@
     },
     {
       "symbol": "P:tr.a(ILso;)V#0",
-      "renamedSymbol": "P:SettingsInstance.a(ILSettingsChange;)V#0",
+      "renamedSymbol": "P:SettingsInstance.applyChange(ILSettingsChange;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -974501,7 +974773,7 @@
     },
     {
       "symbol": "P:tr.a(ILso;)V#1",
-      "renamedSymbol": "P:SettingsInstance.a(ILSettingsChange;)V#1",
+      "renamedSymbol": "P:SettingsInstance.applyChange(ILSettingsChange;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -974666,7 +974938,7 @@
     },
     {
       "symbol": "P:tr.c(I)V#0",
-      "renamedSymbol": "P:SettingsInstance.c(I)V#0",
+      "renamedSymbol": "P:SettingsInstance.showRemovedFromGameNotice(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1005459,7 +1005731,7 @@
       "original": "VoidHunters.java",
       "renamed": "VoidHunters.java",
       "inputSha256": "69cc4b9b8186f4765c6d34781d7b497712847d6d0020d8b54c038b1e406427f1",
-      "outputSha256": "d182ed96e869294a611bb2a946e491348167beb9410bc0d3663e69b793db5eab",
+      "outputSha256": "d73d44538c7ce1441b4ede4d0de1cad48e4ff7efa588ec988fabbd532f8ef2b0",
       "edits": [
         {
           "start": 77,
@@ -1006153,6 +1006425,13 @@
           "symbol": "C:tr",
           "original": "tr",
           "renamed": "SettingsInstance"
+        },
+        {
+          "start": 7681,
+          "end": 7682,
+          "symbol": "M:tr.a(I)V",
+          "original": "a",
+          "renamed": "clearChatHistory"
         },
         {
           "start": 7740,
@@ -1032239,7 +1032518,7 @@
       "original": "af.java",
       "renamed": "BlackBoxRecording.java",
       "inputSha256": "9bcbfe006845233d404fba6fbb33a599a4ded47eed83e0ee9470d3e6a6ac1ff3",
-      "outputSha256": "846e2a1d054f890a1cbfd2fe21faab754e37b607ad7694cccc5cbd7cc16437ee",
+      "outputSha256": "40a8692cc06a05d504d00b77081657593f24894db2b22460f56f17bb08fb24f9",
       "edits": [
         {
           "start": 50,
@@ -1032620,11 +1032899,25 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 3001,
+          "end": 3008,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
+        },
+        {
           "start": 3073,
           "end": 3076,
           "symbol": "C:osa",
           "original": "osa",
           "renamed": "MonochromeRowCacheEntry"
+        },
+        {
+          "start": 3077,
+          "end": 3084,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
         },
         {
           "start": 3164,
@@ -1032802,6 +1033095,13 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 4995,
+          "end": 5002,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
+        },
+        {
           "start": 5005,
           "end": 5007,
           "symbol": "C:pu",
@@ -1032835,6 +1033135,13 @@
           "symbol": "C:osa",
           "original": "osa",
           "renamed": "MonochromeRowCacheEntry"
+        },
+        {
+          "start": 5366,
+          "end": 5373,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
         },
         {
           "start": 5376,
@@ -1033103,6 +1033410,13 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 7662,
+          "end": 7669,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
+        },
+        {
           "start": 7713,
           "end": 7716,
           "symbol": "C:faa",
@@ -1033136,6 +1033450,13 @@
           "symbol": "C:osa",
           "original": "osa",
           "renamed": "MonochromeRowCacheEntry"
+        },
+        {
+          "start": 7800,
+          "end": 7807,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
         },
         {
           "start": 7887,
@@ -1075122,7 +1075443,7 @@
       "original": "b.java",
       "renamed": "SoftwareModel.java",
       "inputSha256": "00a7e1988f28861fe7a7650be30cc6c541a2e63c61c6a77aafe1e68d2b17f2f0",
-      "outputSha256": "cf3873615a0eeac3e4bc2c196375b5e60f43e1293bf8897aed962b526aefec8c",
+      "outputSha256": "4bceab0c9ef78decb476100dfec64659df62f2f84aecf7622fe81a8386ff12bd",
       "edits": [
         {
           "start": 50,
@@ -1075937,6 +1076258,13 @@
           "renamed": "CommonGameState"
         },
         {
+          "start": 14106,
+          "end": 14107,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
+        },
+        {
           "start": 14120,
           "end": 14127,
           "symbol": "F:b.field_y:[I",
@@ -1075965,6 +1076293,13 @@
           "renamed": "CommonGameState"
         },
         {
+          "start": 14345,
+          "end": 14346,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
+        },
+        {
           "start": 14359,
           "end": 14366,
           "symbol": "F:b.field_y:[I",
@@ -1075991,6 +1076326,13 @@
           "symbol": "C:oma",
           "original": "oma",
           "renamed": "CommonGameState"
+        },
+        {
+          "start": 14584,
+          "end": 14585,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
         },
         {
           "start": 14598,
@@ -1076882,7 +1077224,7 @@
       "original": "bab.java",
       "renamed": "PlayerVoteFactory.java",
       "inputSha256": "7383e486a1b7470a645a75ef95b22dedac8417c311138c0468f580eefc47d2e7",
-      "outputSha256": "d7cfb8fdd6746c9fc628c408370398624233db37dfa80448a61c4b58591babb5",
+      "outputSha256": "687d5b533c4068846db55332cfe7bf011239c22bc93256b25949f0c63a04b3de",
       "edits": [
         {
           "start": 50,
@@ -1077156,6 +1077498,13 @@
           "symbol": "C:oma",
           "original": "oma",
           "renamed": "CommonGameState"
+        },
+        {
+          "start": 3888,
+          "end": 3889,
+          "symbol": "M:oma.a(Z)V",
+          "original": "a",
+          "renamed": "selectDefaultQuickChatMenu"
         },
         {
           "start": 3967,
@@ -1256546,7 +1256895,7 @@
       "original": "fia.java",
       "renamed": "fia.java",
       "inputSha256": "a7cfcc7b0fd7ffbe5abf86aefe5c374dc8f4c8a23efa9a10d9166f7eaf371bb4",
-      "outputSha256": "7ff251a5a2aee2328be271e4df776fb85357e6542df6bde3b9ae13bf97859c0e",
+      "outputSha256": "807c33de6e021ee6ca2b53a26427c441cac260aadd9530125cec6e31e95d202f",
       "edits": [
         {
           "start": 506,
@@ -1256855,6 +1257204,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "AsteroidFieldFactory"
+        },
+        {
+          "start": 2890,
+          "end": 2891,
+          "symbol": "M:sl.a(BLtjb;)V",
+          "original": "a",
+          "renamed": "setQuickChatMenu"
         },
         {
           "start": 3676,
@@ -1263427,7 +1263783,7 @@
       "original": "fn.java",
       "renamed": "OpenGlFont.java",
       "inputSha256": "0993ae0436ec606fe39038dc2076eb859cd6f47211b6788a2b3b86223778a93b",
-      "outputSha256": "c37d8491976194dcb5c752d5314d5f259c9cde75cea8585a86a134be99d2db2d",
+      "outputSha256": "b2a6899efcac0a46bf547790068540bf041ab00fb10dcfecd19d7f1faec594ac",
       "edits": [
         {
           "start": 50,
@@ -1263773,6 +1264129,13 @@
           "renamed": "toolkit"
         },
         {
+          "start": 7547,
+          "end": 7548,
+          "symbol": "M:qfa.c(Z)V",
+          "original": "c",
+          "renamed": "prepareFontRendering"
+        },
+        {
           "start": 7570,
           "end": 7577,
           "symbol": "F:fn.field_f:Lqfa;",
@@ -1263897,6 +1264260,13 @@
           "symbol": "F:fn.field_f:Lqfa;",
           "original": "field_f",
           "renamed": "toolkit"
+        },
+        {
+          "start": 8466,
+          "end": 8467,
+          "symbol": "M:qfa.c(Z)V",
+          "original": "c",
+          "renamed": "prepareFontRendering"
         },
         {
           "start": 8489,
@@ -1268085,7 +1268455,7 @@
       "original": "frb.java",
       "renamed": "GetLaserFireForce.java",
       "inputSha256": "c7748eac18ebe9bc15fe86fcd2fb5632b2bf663059d90c8e03ec8b8c895f88ab",
-      "outputSha256": "39b7d743116510ea3778eea4c00a07b249dc12e96244cce736d08ef49227a5fe",
+      "outputSha256": "ce95e9a6b04f4c41b798e6321ebc71218f1a08b2278f84d3ac4d67247267759f",
       "edits": [
         {
           "start": 50,
@@ -1268242,6 +1268612,13 @@
           "renamed": "state"
         },
         {
+          "start": 1463,
+          "end": 1464,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 1468,
           "end": 1475,
           "symbol": "F:rsb.field_f:Ltr;",
@@ -1268275,6 +1268652,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 1633,
+          "end": 1634,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 1638,
@@ -1284356,7 +1284740,7 @@
       "original": "gla.java",
       "renamed": "OpenGlArbProgram.java",
       "inputSha256": "626c1fbc3422157ac502a2c5191f6d13827ce215d197335e96f5b3a24a74439c",
-      "outputSha256": "a873adfdf73c68f0723cb7b1eff8a1407caae3a0765b766b2bf2f92483e46cd4",
+      "outputSha256": "d0dd0ecdcbcf5bccffa0f8fce445e39edc7a98d3ecb4a821bc8488fd55f342a2",
       "edits": [
         {
           "start": 50,
@@ -1284392,6 +1284776,13 @@
           "symbol": "F:gla.field_a:Ljp;",
           "original": "field_a",
           "renamed": "toolkit"
+        },
+        {
+          "start": 201,
+          "end": 202,
+          "symbol": "M:jp.a(IB)V",
+          "original": "a",
+          "renamed": "queueProgramDeletion"
         },
         {
           "start": 208,
@@ -1315607,7 +1315998,7 @@
       "original": "hna.java",
       "renamed": "PlayerAction.java",
       "inputSha256": "b1cbac41963a5539ae255de28b2e6390d7171f376e4259522b1b7c328d29126d",
-      "outputSha256": "a9df53bd23a8c6fd6de72b9d5274bf089627a35c02eade8d9518ebae298d6679",
+      "outputSha256": "9c7a68247bef3db913df4a47b6dfdd355490d86575072cdfce330a9c4edd2b78",
       "edits": [
         {
           "start": 71,
@@ -1317085,6 +1317476,13 @@
           "symbol": "F:rsb.field_f:Ltr;",
           "original": "field_f",
           "renamed": "settings"
+        },
+        {
+          "start": 14587,
+          "end": 14588,
+          "symbol": "M:tr.a(ILso;)V",
+          "original": "a",
+          "renamed": "applyChange"
         },
         {
           "start": 14607,
@@ -1331963,7 +1332361,7 @@
       "original": "ibb.java",
       "renamed": "OpenGlShaderProgram.java",
       "inputSha256": "e5660cd9bf35f518899d850fceb5495903954701e9f57ff24d8fbe7d6e81f9eb",
-      "outputSha256": "874ab63f7202d36fa91ecb6877b6138cce0ef152f118baa2e2a96696a660b1ba",
+      "outputSha256": "afe561e79e605fa17acf72afc7ab68c8056dae2707a56453789887660b209a91",
       "edits": [
         {
           "start": 50,
@@ -1332034,6 +1332432,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 1781,
+          "end": 1782,
+          "symbol": "M:jp.a(JI)V",
+          "original": "a",
+          "renamed": "queueObjectDeletion"
         },
         {
           "start": 1838,
@@ -1372793,7 +1373198,7 @@
       "original": "jp.java",
       "renamed": "OpenGlGpuToolkit.java",
       "inputSha256": "4f34dd9a2e432c25c0692bd2251f5dc82fa0d2fed862dad4c27355c058165c92",
-      "outputSha256": "2f552b9c5b9c56efa5598237d9d3a1642905f0100c96f49962cbc1f032ce50f6",
+      "outputSha256": "5deee9270bbd6fc90bcdf7e6c72439e7340f2277ec9fd92f9283aadbedb7308b",
       "edits": [
         {
           "start": 71,
@@ -1372824,11 +1373229,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 215,
+          "end": 223,
+          "symbol": "F:jp.field_Ic:Lij;",
+          "original": "field_Ic",
+          "renamed": "bufferDeletionQueue"
+        },
+        {
           "start": 237,
           "end": 239,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 240,
+          "end": 248,
+          "symbol": "F:jp.field_Uc:Lij;",
+          "original": "field_Uc",
+          "renamed": "textureDeletionQueue"
         },
         {
           "start": 262,
@@ -1372852,11 +1373271,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 315,
+          "end": 323,
+          "symbol": "F:jp.field_Ec:Lij;",
+          "original": "field_Ec",
+          "renamed": "programDeletionQueue"
+        },
+        {
           "start": 337,
           "end": 339,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 340,
+          "end": 348,
+          "symbol": "F:jp.field_Gc:Lij;",
+          "original": "field_Gc",
+          "renamed": "objectDeletionQueue"
         },
         {
           "start": 565,
@@ -1373090,6 +1373523,13 @@
           "renamed": "enableBloom"
         },
         {
+          "start": 5586,
+          "end": 5587,
+          "symbol": "M:jp.b(IIZ)V",
+          "original": "b",
+          "renamed": "queueBufferDeletion"
+        },
+        {
           "start": 5662,
           "end": 5665,
           "symbol": "C:aja",
@@ -1373137,6 +1373577,13 @@
           "symbol": "F:ksa.field_b:J",
           "original": "field_b",
           "renamed": "key"
+        },
+        {
+          "start": 5817,
+          "end": 5825,
+          "symbol": "F:jp.field_Ic:Lij;",
+          "original": "field_Ic",
+          "renamed": "bufferDeletionQueue"
         },
         {
           "start": 5826,
@@ -1373305,6 +1373752,13 @@
           "symbol": "M:jp.n(I)V",
           "original": "n",
           "renamed": "initializeRenderState"
+        },
+        {
+          "start": 9670,
+          "end": 9678,
+          "symbol": "F:jp.field_Gc:Lij;",
+          "original": "field_Gc",
+          "renamed": "objectDeletionQueue"
         },
         {
           "start": 9682,
@@ -1373545,6 +1373999,13 @@
           "renamed": "GetMissileLauncherRandomness"
         },
         {
+          "start": 13420,
+          "end": 13421,
+          "symbol": "M:jp.I(B)V",
+          "original": "I",
+          "renamed": "applyModelViewTransform"
+        },
+        {
           "start": 13647,
           "end": 13655,
           "symbol": "F:pf.field_pb:Lmma;",
@@ -1373734,6 +1374195,20 @@
           "renamed": "GetPhasedEnergyBeamFireForce"
         },
         {
+          "start": 14814,
+          "end": 14815,
+          "symbol": "M:jp.b(III)V",
+          "original": "b",
+          "renamed": "queueTextureDeletion"
+        },
+        {
+          "start": 14897,
+          "end": 14905,
+          "symbol": "F:jp.field_Gc:Lij;",
+          "original": "field_Gc",
+          "renamed": "objectDeletionQueue"
+        },
+        {
           "start": 14909,
           "end": 14911,
           "symbol": "C:ij",
@@ -1373760,6 +1374235,13 @@
           "symbol": "F:ksa.field_b:J",
           "original": "field_b",
           "renamed": "key"
+        },
+        {
+          "start": 15015,
+          "end": 15023,
+          "symbol": "F:jp.field_Uc:Lij;",
+          "original": "field_Uc",
+          "renamed": "textureDeletionQueue"
         },
         {
           "start": 15024,
@@ -1374357,6 +1374839,13 @@
           "renamed": "applyViewTransform"
         },
         {
+          "start": 24589,
+          "end": 24590,
+          "symbol": "M:jp.I(B)V",
+          "original": "I",
+          "renamed": "applyModelViewTransform"
+        },
+        {
           "start": 24651,
           "end": 24652,
           "symbol": "M:jp.j()V",
@@ -1374383,6 +1374872,13 @@
           "symbol": "F:pf.field_Fb:[F",
           "original": "field_Fb",
           "renamed": "projectionMatrix"
+        },
+        {
+          "start": 24941,
+          "end": 24942,
+          "symbol": "M:jp.a([FII)[F",
+          "original": "a",
+          "renamed": "copyFloatPrefix"
         },
         {
           "start": 25385,
@@ -1374469,6 +1374965,13 @@
           "renamed": "IntegerNode"
         },
         {
+          "start": 26657,
+          "end": 26665,
+          "symbol": "F:jp.field_Ic:Lij;",
+          "original": "field_Ic",
+          "renamed": "bufferDeletionQueue"
+        },
+        {
           "start": 26666,
           "end": 26667,
           "symbol": "M:ij.b(I)Z",
@@ -1374481,6 +1374984,13 @@
           "symbol": "C:hua",
           "original": "hua",
           "renamed": "IntegerNode"
+        },
+        {
+          "start": 26705,
+          "end": 26713,
+          "symbol": "F:jp.field_Ic:Lij;",
+          "original": "field_Ic",
+          "renamed": "bufferDeletionQueue"
         },
         {
           "start": 26714,
@@ -1374525,6 +1375035,13 @@
           "renamed": "SystemNanoClock"
         },
         {
+          "start": 27193,
+          "end": 27201,
+          "symbol": "F:jp.field_Uc:Lij;",
+          "original": "field_Uc",
+          "renamed": "textureDeletionQueue"
+        },
+        {
           "start": 27202,
           "end": 27203,
           "symbol": "M:ij.b(I)Z",
@@ -1374537,6 +1375054,13 @@
           "symbol": "C:hua",
           "original": "hua",
           "renamed": "IntegerNode"
+        },
+        {
+          "start": 27241,
+          "end": 27249,
+          "symbol": "F:jp.field_Uc:Lij;",
+          "original": "field_Uc",
+          "renamed": "textureDeletionQueue"
         },
         {
           "start": 27250,
@@ -1374721,11 +1375245,25 @@
           "renamed": "value"
         },
         {
+          "start": 28927,
+          "end": 28935,
+          "symbol": "F:jp.field_Ec:Lij;",
+          "original": "field_Ec",
+          "renamed": "programDeletionQueue"
+        },
+        {
           "start": 28936,
           "end": 28937,
           "symbol": "M:ij.b(I)Z",
           "original": "b",
           "renamed": "isEmpty"
+        },
+        {
+          "start": 28969,
+          "end": 28977,
+          "symbol": "F:jp.field_Ec:Lij;",
+          "original": "field_Ec",
+          "renamed": "programDeletionQueue"
         },
         {
           "start": 28978,
@@ -1374742,11 +1375280,25 @@
           "renamed": "key"
         },
         {
+          "start": 29081,
+          "end": 29089,
+          "symbol": "F:jp.field_Gc:Lij;",
+          "original": "field_Gc",
+          "renamed": "objectDeletionQueue"
+        },
+        {
           "start": 29090,
           "end": 29091,
           "symbol": "M:ij.b(I)Z",
           "original": "b",
           "renamed": "isEmpty"
+        },
+        {
+          "start": 29123,
+          "end": 29131,
+          "symbol": "F:jp.field_Gc:Lij;",
+          "original": "field_Gc",
+          "renamed": "objectDeletionQueue"
         },
         {
           "start": 29132,
@@ -1375309,6 +1375861,13 @@
           "renamed": "applyPointLights"
         },
         {
+          "start": 36407,
+          "end": 36408,
+          "symbol": "M:jp.a(JI)V",
+          "original": "a",
+          "renamed": "queueObjectDeletion"
+        },
+        {
           "start": 36444,
           "end": 36447,
           "symbol": "C:ksa",
@@ -1375328,6 +1375887,13 @@
           "symbol": "F:ksa.field_b:J",
           "original": "field_b",
           "renamed": "key"
+        },
+        {
+          "start": 36565,
+          "end": 36573,
+          "symbol": "F:jp.field_Gc:Lij;",
+          "original": "field_Gc",
+          "renamed": "objectDeletionQueue"
         },
         {
           "start": 36574,
@@ -1375911,6 +1376477,13 @@
           "renamed": "applyModelTransform"
         },
         {
+          "start": 42833,
+          "end": 42834,
+          "symbol": "M:jp.I(B)V",
+          "original": "I",
+          "renamed": "applyModelViewTransform"
+        },
+        {
           "start": 42869,
           "end": 42870,
           "symbol": "M:jp.i(B)V",
@@ -1375946,11 +1376519,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 44410,
+          "end": 44418,
+          "symbol": "F:jp.field_Ic:Lij;",
+          "original": "field_Ic",
+          "renamed": "bufferDeletionQueue"
+        },
+        {
           "start": 44425,
           "end": 44427,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 44444,
+          "end": 44452,
+          "symbol": "F:jp.field_Uc:Lij;",
+          "original": "field_Uc",
+          "renamed": "textureDeletionQueue"
         },
         {
           "start": 44459,
@@ -1375974,11 +1376561,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 44546,
+          "end": 44554,
+          "symbol": "F:jp.field_Ec:Lij;",
+          "original": "field_Ec",
+          "renamed": "programDeletionQueue"
+        },
+        {
           "start": 44561,
           "end": 44563,
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 44580,
+          "end": 44588,
+          "symbol": "F:jp.field_Gc:Lij;",
+          "original": "field_Gc",
+          "renamed": "objectDeletionQueue"
         },
         {
           "start": 44595,
@@ -1376268,6 +1376869,13 @@
           "renamed": "applyDirectionalLightsEnabled"
         },
         {
+          "start": 53484,
+          "end": 53485,
+          "symbol": "M:jp.a(IB)V",
+          "original": "a",
+          "renamed": "queueProgramDeletion"
+        },
+        {
           "start": 53521,
           "end": 53524,
           "symbol": "C:ksa",
@@ -1376287,6 +1376895,13 @@
           "symbol": "F:ksa.field_b:J",
           "original": "field_b",
           "renamed": "key"
+        },
+        {
+          "start": 53649,
+          "end": 53657,
+          "symbol": "F:jp.field_Ec:Lij;",
+          "original": "field_Ec",
+          "renamed": "programDeletionQueue"
         },
         {
           "start": 53658,
@@ -1389537,7 +1390152,7 @@
       "original": "kda.java",
       "renamed": "CarouselGameClient.java",
       "inputSha256": "6872a43ec10644d1fc3dfe213096544e325bf9288fb4446e794c81bad6198b53",
-      "outputSha256": "5401b4c87c5a8c8583df6d8bd16b96dc4fa120f57037bff2bf1f5c7955a20793",
+      "outputSha256": "23adf6033896f70bcc7b0e1122f36bec2bb3fdd39e285030f08978875a2ce575",
       "edits": [
         {
           "start": 50,
@@ -1391913,6 +1392528,13 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 24452,
+          "end": 24459,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
+        },
+        {
           "start": 24485,
           "end": 24492,
           "symbol": "F:uqb.field_g:Z",
@@ -1393704,7 +1394326,7 @@
       "original": "kga.java",
       "renamed": "GetPhasedEnergyBeamProjectiles.java",
       "inputSha256": "e0f6ffcc06d3731ffd30fb145b901ad91633b75d7729131877d9e2409af41d67",
-      "outputSha256": "4d53aeb23609be89f438384ae31015c8ea547eba7b6c8a4386c2681422691225",
+      "outputSha256": "dd6bf7f33715257fff0be2bee1f9f9979f7d0ee88f2030351979259dcd7f11bc",
       "edits": [
         {
           "start": 50,
@@ -1393957,6 +1394579,13 @@
           "symbol": "M:kga.<init>(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;)V",
           "original": "kga",
           "renamed": "GetPhasedEnergyBeamProjectiles"
+        },
+        {
+          "start": 3288,
+          "end": 3289,
+          "symbol": "M:kga.a(I[I)V",
+          "original": "a",
+          "renamed": "applyRuntimeSettings"
         },
         {
           "start": 3342,
@@ -1395772,7 +1396401,7 @@
       "original": "kha.java",
       "renamed": "OpenGlPostProcessor.java",
       "inputSha256": "cdcd7814763fed1689ef9442e492cc97c673ea9adda29469992d739927764c3b",
-      "outputSha256": "2eca57a364eaf28ca57fedb5199c2c67a36d00c45c668e0e12a369abee2ee61d",
+      "outputSha256": "7c0a2a5e9e3ed87e9b454e94ddf40cef833201bafed1598e48f87474a5d79feb",
       "edits": [
         {
           "start": 50,
@@ -1397187,6 +1397816,13 @@
           "symbol": "F:kha.field_t:Lqfa;",
           "original": "field_t",
           "renamed": "toolkit"
+        },
+        {
+          "start": 10099,
+          "end": 10100,
+          "symbol": "M:qfa.n(I)V",
+          "original": "n",
+          "renamed": "prepareTextured2D"
         },
         {
           "start": 10122,
@@ -1406626,10 +1407262,24 @@
     },
     {
       "original": "kqb.java",
-      "renamed": "kqb.java",
+      "renamed": "MessageDialogPresenter.java",
       "inputSha256": "25a3b537e353ad812d2a9d9b11020fc0b082b7ce865ea1b5d7dcb9b20029d40d",
-      "outputSha256": "67565463e4de9ef5eecdcda8ee3c0a17e4b59bea24a85b0b1c3be284a8719b5b",
+      "outputSha256": "8c2cb27cdeb65fe6cece9f02160147f8de36acc507673cc61e37d71560b55532",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:kqb",
+          "original": "kqb",
+          "renamed": "MessageDialogPresenter"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "symbol": "M:kqb.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "showMessage"
+        },
         {
           "start": 225,
           "end": 227,
@@ -1410266,7 +1410916,7 @@
       "original": "kva.java",
       "renamed": "OpenGlGpuTexture.java",
       "inputSha256": "4d4efb69bbf441d9a30ea903b734fffaf8cdec7f2b7fe854a5fa6b258ad04557",
-      "outputSha256": "2294e2fddd0499bad348ee4e981b8af9c0cee0ced7065372a62fba8bcf75b40f",
+      "outputSha256": "3e3fe04166d199c481c9d9fff1df925ff7b313f5bab951403477facc01f7bcde",
       "edits": [
         {
           "start": 53,
@@ -1410393,6 +1411043,13 @@
           "symbol": "F:kva.field_h:Ljp;",
           "original": "field_h",
           "renamed": "toolkit"
+        },
+        {
+          "start": 523,
+          "end": 524,
+          "symbol": "M:jp.b(III)V",
+          "original": "b",
+          "renamed": "queueTextureDeletion"
         },
         {
           "start": 530,
@@ -1452773,7 +1453430,7 @@
       "original": "mib.java",
       "renamed": "CarouselCommongameInfo.java",
       "inputSha256": "fdf0cb05033e8340a592e7c6e19f004fd6391d964d7eca9941607832dbf1f495",
-      "outputSha256": "b5ade8e61a7947726047f71ad11c942cd4badce7ae6245b9842f00f6f92108ae",
+      "outputSha256": "5887cbfc92317af5477e5dd55369cf46842bf3084e64749f6fdd83ebed336fa4",
       "edits": [
         {
           "start": 97,
@@ -1454059,6 +1454716,13 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 10305,
+          "end": 10312,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
+        },
+        {
           "start": 10333,
           "end": 10334,
           "symbol": "M:mib.a(Lfaa;B)V",
@@ -1454967,6 +1455631,13 @@
           "symbol": "C:osa",
           "original": "osa",
           "renamed": "MonochromeRowCacheEntry"
+        },
+        {
+          "start": 18313,
+          "end": 18320,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
         },
         {
           "start": 18341,
@@ -1494946,7 +1495617,7 @@
       "original": "nc.java",
       "renamed": "ConsoleValue.java",
       "inputSha256": "c3fd43487517ca18a6491f7a1f7700605d12ad12a2a950176dacb376c99d0a1b",
-      "outputSha256": "1a62b4488b4a46664343b93ee91171022b050e4c104baad360527093fe092181",
+      "outputSha256": "f17b114a7c068427297cac1e783073812b8e029204eceec97b63a91752df1e07",
       "edits": [
         {
           "start": 50,
@@ -1495019,6 +1495690,13 @@
           "renamed": "value"
         },
         {
+          "start": 389,
+          "end": 390,
+          "symbol": "M:nc.b(I)V",
+          "original": "b",
+          "renamed": "restoreDefaultStateSerializationMode"
+        },
+        {
           "start": 468,
           "end": 471,
           "symbol": "C:osa",
@@ -1495026,11 +1495704,25 @@
           "renamed": "MonochromeRowCacheEntry"
         },
         {
+          "start": 472,
+          "end": 479,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
+        },
+        {
           "start": 482,
           "end": 485,
           "symbol": "C:sga",
           "original": "sga",
           "renamed": "SetSniperCannonFiringLeeway"
+        },
+        {
+          "start": 486,
+          "end": 493,
+          "symbol": "F:sga.field_p:Z",
+          "original": "field_p",
+          "renamed": "defaultCurrentStateOnlyMode"
         },
         {
           "start": 525,
@@ -1495187,6 +1495879,13 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 1718,
+          "end": 1719,
+          "symbol": "M:nc.b(I)V",
+          "original": "b",
+          "renamed": "restoreDefaultStateSerializationMode"
+        },
+        {
           "start": 1748,
           "end": 1755,
           "symbol": "F:nc.field_b:Ljava/lang/Object;",
@@ -1495311,6 +1496010,13 @@
           "symbol": "C:nc",
           "original": "nc",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 2606,
+          "end": 2607,
+          "symbol": "M:nc.b(I)V",
+          "original": "b",
+          "renamed": "restoreDefaultStateSerializationMode"
         },
         {
           "start": 2636,
@@ -1497003,7 +1497709,7 @@
       "original": "ne.java",
       "renamed": "OpenGlModel.java",
       "inputSha256": "b37c56bc810b280889759cde0aece01ae32334717ff9f531d94f8ccc74a62030",
-      "outputSha256": "e65251a6730508fcadaf1e64cef0b11e66ef351e80c86a845f09e97848eda85e",
+      "outputSha256": "4b6541c9716869b205a05649ddef8cb08cd609a0f5e47d25f62eb20a7d6f5e86",
       "edits": [
         {
           "start": 69,
@@ -1498973,6 +1499679,13 @@
           "renamed": "CommonGameState"
         },
         {
+          "start": 35049,
+          "end": 35050,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
+        },
+        {
           "start": 35065,
           "end": 35072,
           "symbol": "F:cbb.field_x:[I",
@@ -1499022,6 +1499735,13 @@
           "renamed": "CommonGameState"
         },
         {
+          "start": 35324,
+          "end": 35325,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
+        },
+        {
           "start": 35340,
           "end": 35347,
           "symbol": "F:cbb.field_x:[I",
@@ -1499069,6 +1499789,13 @@
           "symbol": "C:oma",
           "original": "oma",
           "renamed": "CommonGameState"
+        },
+        {
+          "start": 35599,
+          "end": 35600,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
         },
         {
           "start": 35615,
@@ -1502602,7 +1503329,7 @@
       "original": "nia.java",
       "renamed": "SetPointDefenceLaserProjectileDamage.java",
       "inputSha256": "804ae86844cddafc4a0bec4454ddd5e783f8f05828ac02c9b27b7593cc37a5be",
-      "outputSha256": "82383f4a291b7a2f775be3b4df0eb3a070a587c477a4f08420acdf994b6a4925",
+      "outputSha256": "dfb0aa3384601d27a1700a8cbdf0c738c67067584f4ffb12c49f28d3587ec69b",
       "edits": [
         {
           "start": 50,
@@ -1502869,6 +1503596,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 3484,
+          "end": 3485,
+          "symbol": "M:oma.a(ILfaa;)V",
+          "original": "a",
+          "renamed": "readStateWithChecksumDiagnostic"
         },
         {
           "start": 3515,
@@ -1541763,7 +1542497,7 @@
       "original": "oma.java",
       "renamed": "CommonGameState.java",
       "inputSha256": "f9645b08239364f89d813d94712e27d6ede7b0ff0fc540376cc1fe4763017eaa",
-      "outputSha256": "cbfe1685b274350f9409d5f97ef5de1915157c524ff7aae57f85a7b0e8b1cc38",
+      "outputSha256": "d8144aadf670be0d8891bd1e00a34389e17bd8b532d0b2cb62b8a31304a12607",
       "edits": [
         {
           "start": 50,
@@ -1541827,6 +1542561,13 @@
           "symbol": "M:oma.a(Ljava/lang/String;IB)V",
           "original": "a",
           "renamed": "setPlayerName"
+        },
+        {
+          "start": 497,
+          "end": 498,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 586,
@@ -1542039,6 +1542780,20 @@
           "renamed": "CommonGameState"
         },
         {
+          "start": 3267,
+          "end": 3268,
+          "symbol": "M:oma.a(Z)V",
+          "original": "a",
+          "renamed": "selectDefaultQuickChatMenu"
+        },
+        {
+          "start": 3357,
+          "end": 3358,
+          "symbol": "M:oma.c(I)V",
+          "original": "c",
+          "renamed": "updateTimeline"
+        },
+        {
           "start": 3381,
           "end": 3383,
           "symbol": "C:pr",
@@ -1542074,6 +1542829,13 @@
           "renamed": "World"
         },
         {
+          "start": 3514,
+          "end": 3515,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 3626,
           "end": 3629,
           "symbol": "C:rsb",
@@ -1542102,6 +1542864,13 @@
           "renamed": "world"
         },
         {
+          "start": 3687,
+          "end": 3688,
+          "symbol": "M:oma.a(ILfaa;)V",
+          "original": "a",
+          "renamed": "readStateWithChecksumDiagnostic"
+        },
+        {
           "start": 3701,
           "end": 3704,
           "symbol": "C:faa",
@@ -1542114,6 +1542883,13 @@
           "symbol": "C:nc",
           "original": "nc",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 3868,
+          "end": 3869,
+          "symbol": "M:nc.b(I)V",
+          "original": "b",
+          "renamed": "restoreDefaultStateSerializationMode"
         },
         {
           "start": 3891,
@@ -1542473,6 +1543249,13 @@
           "renamed": "SetMissionResnetResourceTickTime"
         },
         {
+          "start": 7801,
+          "end": 7802,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 7806,
           "end": 7807,
           "symbol": "M:rsb.a(IB)Ltfa;",
@@ -1542487,6 +1543270,13 @@
           "renamed": "connected"
         },
         {
+          "start": 8030,
+          "end": 8031,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
+        },
+        {
           "start": 10766,
           "end": 10769,
           "symbol": "C:rta",
@@ -1542494,11 +1543284,25 @@
           "renamed": "GetMissileLauncherRandomness"
         },
         {
+          "start": 11124,
+          "end": 11125,
+          "symbol": "M:oma.a(Z)V",
+          "original": "a",
+          "renamed": "selectDefaultQuickChatMenu"
+        },
+        {
           "start": 11152,
           "end": 11154,
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "AsteroidFieldFactory"
+        },
+        {
+          "start": 11155,
+          "end": 11156,
+          "symbol": "M:sl.a(BLtjb;)V",
+          "original": "a",
+          "renamed": "setQuickChatMenu"
         },
         {
           "start": 11169,
@@ -1542590,6 +1543394,20 @@
           "symbol": "C:rsb",
           "original": "rsb",
           "renamed": "GameSnapshot"
+        },
+        {
+          "start": 12955,
+          "end": 12956,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
+          "start": 13013,
+          "end": 13014,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 13054,
@@ -1547006,7 +1547824,7 @@
       "original": "or.java",
       "renamed": "ChatChannelControl.java",
       "inputSha256": "f7158498d31a083d57e464cb02c73f7416a9e7cca065d374eec29f78d1d9b3c8",
-      "outputSha256": "3d8faee92b1458fcfca1b6b9b901933a97025233163627981a897c169347a254",
+      "outputSha256": "3a544f6a5b0bb25194a75a5c0a08a8727cc72d406419a533045b99327019d015",
       "edits": [
         {
           "start": 50,
@@ -1547042,6 +1547860,13 @@
           "symbol": "C:oma",
           "original": "oma",
           "renamed": "CommonGameState"
+        },
+        {
+          "start": 170,
+          "end": 171,
+          "symbol": "M:oma.a(Z)V",
+          "original": "a",
+          "renamed": "selectDefaultQuickChatMenu"
         }
       ]
     },
@@ -1547857,7 +1548682,7 @@
       "original": "osa.java",
       "renamed": "MonochromeRowCacheEntry.java",
       "inputSha256": "52ba1d149cdd2924c1edb6c1958f1238f5d8f2d1ed2cea67c2a9a13dbee3ea8b",
-      "outputSha256": "e7a5d7221bc15d6ffdf024512257a5c57438a4fc69fb07d106274f750381b5b8",
+      "outputSha256": "2453c544d1ee88eac5cd8770b51ce8e79f3d4bf75f41a76f5fc2c877ff03bb4b",
       "edits": [
         {
           "start": 50,
@@ -1547874,11 +1548699,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 121,
+          "end": 128,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
+        },
+        {
           "start": 170,
           "end": 173,
           "symbol": "M:osa.<init>(II)V",
           "original": "osa",
           "renamed": "MonochromeRowCacheEntry"
+        },
+        {
+          "start": 323,
+          "end": 330,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
         }
       ]
     },
@@ -1552301,7 +1553140,7 @@
       "original": "pcb.java",
       "renamed": "SetNebulaProximityFadeDownshift.java",
       "inputSha256": "3eecd09b0de016159b6a7e66889e3af193b9297848b2ee7c5028f334c844ca3d",
-      "outputSha256": "b2c409393a11649076f7139d50550e9f18544aea5344efbaa9332eb051590d0d",
+      "outputSha256": "b8a24161a972fb637a46fbdb0636a942385687fc779dfa7af36c424653817c7d",
       "edits": [
         {
           "start": 50,
@@ -1552374,11 +1553213,25 @@
           "renamed": "OpenGlToolkit"
         },
         {
+          "start": 398,
+          "end": 399,
+          "symbol": "M:qfa.a(IZ)V",
+          "original": "a",
+          "renamed": "setCurrentStateOnlyMode"
+        },
+        {
           "start": 534,
           "end": 537,
           "symbol": "C:qfa",
           "original": "qfa",
           "renamed": "OpenGlToolkit"
+        },
+        {
+          "start": 538,
+          "end": 539,
+          "symbol": "M:qfa.a(IZ)V",
+          "original": "a",
+          "renamed": "setCurrentStateOnlyMode"
         },
         {
           "start": 1070,
@@ -1627531,7 +1628384,7 @@
       "original": "qdb.java",
       "renamed": "MissionGenerationData.java",
       "inputSha256": "ae38c55444ceba028bae98000f0d8b325a12cbb91cc54bedad94b06a73116d5b",
-      "outputSha256": "76debad9557beddccab93b28ed765fd60657a8b65ec643d62c1a5baf35656b30",
+      "outputSha256": "8081a734ecd71541c037d081ee76fcd8c878a44168809b2c9ac040b505b32b94",
       "edits": [
         {
           "start": 50,
@@ -1628330,6 +1629183,13 @@
           "symbol": "C:tr",
           "original": "tr",
           "renamed": "SettingsInstance"
+        },
+        {
+          "start": 5816,
+          "end": 5817,
+          "symbol": "M:tr.c(I)V",
+          "original": "c",
+          "renamed": "showRemovedFromGameNotice"
         },
         {
           "start": 5900,
@@ -1629419,7 +1630279,7 @@
       "original": "qfa.java",
       "renamed": "OpenGlToolkit.java",
       "inputSha256": "b81f18912a0b02f8015104734d975484645bb89230facf16524498674d5b8c90",
-      "outputSha256": "e624e94e94a98a08b31e546ef9ead2b66d14b8b1296407f18152c9c06d827b67",
+      "outputSha256": "0fe4e199157b39ac479b4b1a10ea347dcdc5743286b08fd8fd12d960795ad1d5",
       "edits": [
         {
           "start": 71,
@@ -1629742,6 +1630602,13 @@
           "symbol": "M:qfa.d(Z)V",
           "original": "d",
           "renamed": "restoreProjectionDepthTerms"
+        },
+        {
+          "start": 3908,
+          "end": 3909,
+          "symbol": "M:qfa.a(ZZII)V",
+          "original": "a",
+          "renamed": "setMaterialTexture"
         },
         {
           "start": 4194,
@@ -1630465,6 +1631332,13 @@
           "renamed": "applyLightingEnabled"
         },
         {
+          "start": 17248,
+          "end": 17249,
+          "symbol": "M:qfa.a(IZ)V",
+          "original": "a",
+          "renamed": "setCurrentStateOnlyMode"
+        },
+        {
           "start": 17288,
           "end": 17291,
           "symbol": "C:sga",
@@ -1630472,11 +1631346,25 @@
           "renamed": "SetSniperCannonFiringLeeway"
         },
         {
+          "start": 17292,
+          "end": 17299,
+          "symbol": "F:sga.field_p:Z",
+          "original": "field_p",
+          "renamed": "defaultCurrentStateOnlyMode"
+        },
+        {
           "start": 17379,
           "end": 17382,
           "symbol": "C:osa",
           "original": "osa",
           "renamed": "MonochromeRowCacheEntry"
+        },
+        {
+          "start": 17383,
+          "end": 17390,
+          "symbol": "F:osa.field_e:Z",
+          "original": "field_e",
+          "renamed": "currentStateOnlyMode"
         },
         {
           "start": 17433,
@@ -1630983,6 +1631871,13 @@
           "renamed": "drawCircle"
         },
         {
+          "start": 23246,
+          "end": 23247,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
+        },
+        {
           "start": 23269,
           "end": 23270,
           "symbol": "M:qfa.d(II)V",
@@ -1631284,11 +1632179,25 @@
           "renamed": "fillGradientTriangle"
         },
         {
+          "start": 31309,
+          "end": 31310,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
+        },
+        {
           "start": 31331,
           "end": 31332,
           "symbol": "M:qfa.d(II)V",
           "original": "d",
           "renamed": "setBlendMode"
+        },
+        {
+          "start": 32089,
+          "end": 32090,
+          "symbol": "M:qfa.c(Z)V",
+          "original": "c",
+          "renamed": "prepareFontRendering"
         },
         {
           "start": 32157,
@@ -1631324,6 +1632233,13 @@
           "symbol": "M:qfa.a(ZB)V",
           "original": "a",
           "renamed": "setDepthWriteEnabled"
+        },
+        {
+          "start": 32314,
+          "end": 32315,
+          "symbol": "M:qfa.i(II)V",
+          "original": "i",
+          "renamed": "setMaterialTexture"
         },
         {
           "start": 32342,
@@ -1631408,6 +1632324,13 @@
           "symbol": "M:qfa.d(IIIIII)V",
           "original": "d",
           "renamed": "drawRectangle"
+        },
+        {
+          "start": 33334,
+          "end": 33335,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
         },
         {
           "start": 33355,
@@ -1631802,6 +1632725,13 @@
           "renamed": "initializeRenderState"
         },
         {
+          "start": 40119,
+          "end": 40120,
+          "symbol": "M:qfa.i(II)V",
+          "original": "i",
+          "renamed": "setMaterialTexture"
+        },
+        {
           "start": 40216,
           "end": 40217,
           "symbol": "M:qfa.h(II)V",
@@ -1631900,6 +1632830,13 @@
           "renamed": "OpenGlFramebuffer"
         },
         {
+          "start": 42245,
+          "end": 42246,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
+        },
+        {
           "start": 42309,
           "end": 42310,
           "symbol": "M:qfa.i(I)V",
@@ -1631947,6 +1632884,13 @@
           "symbol": "C:pib",
           "original": "pib",
           "renamed": "OpenGlTexture"
+        },
+        {
+          "start": 42502,
+          "end": 42503,
+          "symbol": "M:qfa.i(II)V",
+          "original": "i",
+          "renamed": "setMaterialTexture"
         },
         {
           "start": 42530,
@@ -1632003,6 +1632947,13 @@
           "symbol": "M:qfa.f(I)V",
           "original": "f",
           "renamed": "applyViewport"
+        },
+        {
+          "start": 43515,
+          "end": 43516,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
         },
         {
           "start": 43557,
@@ -1632334,6 +1633285,13 @@
           "renamed": "fillRectangle"
         },
         {
+          "start": 45523,
+          "end": 45524,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
+        },
+        {
           "start": 45543,
           "end": 45544,
           "symbol": "M:qfa.d(II)V",
@@ -1632418,6 +1633376,13 @@
           "renamed": "drawVerticalLine"
         },
         {
+          "start": 46840,
+          "end": 46841,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
+        },
+        {
           "start": 46861,
           "end": 46862,
           "symbol": "M:qfa.d(II)V",
@@ -1632481,11 +1633446,32 @@
           "renamed": "OpenGlToolkit"
         },
         {
+          "start": 48172,
+          "end": 48173,
+          "symbol": "M:qfa.a(IZ)V",
+          "original": "a",
+          "renamed": "setCurrentStateOnlyMode"
+        },
+        {
+          "start": 48227,
+          "end": 48228,
+          "symbol": "M:qfa.i(II)V",
+          "original": "i",
+          "renamed": "setMaterialTexture"
+        },
+        {
           "start": 48300,
           "end": 48301,
           "symbol": "M:qfa.e(I)Lza;",
           "original": "e",
           "renamed": "createHeap"
+        },
+        {
+          "start": 48331,
+          "end": 48332,
+          "symbol": "M:qfa.a(ZIZ)V",
+          "original": "a",
+          "renamed": "setMaterialTexture"
         },
         {
           "start": 48380,
@@ -1632514,6 +1633500,13 @@
           "symbol": "C:qfa",
           "original": "qfa",
           "renamed": "OpenGlToolkit"
+        },
+        {
+          "start": 49002,
+          "end": 49003,
+          "symbol": "M:qfa.a(IZ)V",
+          "original": "a",
+          "renamed": "setCurrentStateOnlyMode"
         },
         {
           "start": 49874,
@@ -1632584,6 +1633577,20 @@
           "symbol": "C:tla",
           "original": "tla",
           "renamed": "OpenGlSprite"
+        },
+        {
+          "start": 51698,
+          "end": 51699,
+          "symbol": "M:qfa.a(ZIZ)V",
+          "original": "a",
+          "renamed": "setMaterialTexture"
+        },
+        {
+          "start": 51759,
+          "end": 51760,
+          "symbol": "M:qfa.a(ZZII)V",
+          "original": "a",
+          "renamed": "setMaterialTexture"
         },
         {
           "start": 51861,
@@ -1632703,6 +1633710,13 @@
           "symbol": "M:qfa.za(IIIII)V",
           "original": "za",
           "renamed": "fillCircle"
+        },
+        {
+          "start": 54652,
+          "end": 54653,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
         },
         {
           "start": 54675,
@@ -1632843,6 +1633857,13 @@
           "symbol": "C:pib",
           "original": "pib",
           "renamed": "OpenGlTexture"
+        },
+        {
+          "start": 57351,
+          "end": 57352,
+          "symbol": "M:qfa.i(II)V",
+          "original": "i",
+          "renamed": "setMaterialTexture"
         },
         {
           "start": 57379,
@@ -1633405,6 +1634426,13 @@
           "renamed": "drawLine"
         },
         {
+          "start": 70609,
+          "end": 70610,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
+        },
+        {
           "start": 70630,
           "end": 70631,
           "symbol": "M:qfa.d(II)V",
@@ -1633669,6 +1634697,13 @@
           "symbol": "M:fsb.c(I)I",
           "original": "c",
           "renamed": "getRadius"
+        },
+        {
+          "start": 75012,
+          "end": 75013,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
         },
         {
           "start": 75098,
@@ -1633972,6 +1635007,13 @@
           "renamed": "drawHorizontalLine"
         },
         {
+          "start": 79449,
+          "end": 79450,
+          "symbol": "M:qfa.m(I)V",
+          "original": "m",
+          "renamed": "prepareUntextured2D"
+        },
+        {
           "start": 79469,
           "end": 79470,
           "symbol": "M:qfa.d(II)V",
@@ -1634112,6 +1635154,13 @@
           "renamed": "resetClipRectangle"
         },
         {
+          "start": 81133,
+          "end": 81134,
+          "symbol": "M:qfa.n(I)V",
+          "original": "n",
+          "renamed": "prepareTextured2D"
+        },
+        {
           "start": 81195,
           "end": 81196,
           "symbol": "M:qfa.b(IZ)V",
@@ -1634154,11 +1635203,25 @@
           "renamed": "setDepthWriteEnabled"
         },
         {
+          "start": 81426,
+          "end": 81427,
+          "symbol": "M:qfa.i(II)V",
+          "original": "i",
+          "renamed": "setMaterialTexture"
+        },
+        {
           "start": 81499,
           "end": 81500,
           "symbol": "M:qfa.d(II)V",
           "original": "d",
           "renamed": "setBlendMode"
+        },
+        {
+          "start": 83821,
+          "end": 83822,
+          "symbol": "M:qfa.i(II)V",
+          "original": "i",
+          "renamed": "setMaterialTexture"
         },
         {
           "start": 83865,
@@ -1634236,6 +1635299,13 @@
           "symbol": "M:qfa.k(I)V",
           "original": "k",
           "renamed": "resetTextureMatrix"
+        },
+        {
+          "start": 86349,
+          "end": 86350,
+          "symbol": "M:qfa.c(Z)V",
+          "original": "c",
+          "renamed": "prepareFontRendering"
         },
         {
           "start": 86390,
@@ -1647913,7 +1648983,7 @@
       "original": "qq.java",
       "renamed": "OpenGlGpuBuffer.java",
       "inputSha256": "b291b7ec46e9d0660f71f63c14774b361f4dc3fcd0a49838dcc893aa8cd8f04c",
-      "outputSha256": "19fcc03addfb5dc3f8faae0a483422331804e4c2f0b0037869283d34ee85c4bf",
+      "outputSha256": "5a45b7c01687aef0713acfd38fe73744845ea5097bd018152e724504fc44ec71",
       "edits": [
         {
           "start": 53,
@@ -1648306,6 +1649376,13 @@
           "symbol": "F:qq.field_d:Ljp;",
           "original": "field_d",
           "renamed": "toolkit"
+        },
+        {
+          "start": 4748,
+          "end": 4749,
+          "symbol": "M:jp.b(IIZ)V",
+          "original": "b",
+          "renamed": "queueBufferDeletion"
         },
         {
           "start": 4755,
@@ -1673311,7 +1674388,7 @@
       "original": "roa.java",
       "renamed": "GpuModel.java",
       "inputSha256": "e2cde29f738f0bb136fc86d277c6d2cc26f52107b9dc5b67817a9159f7ec6550",
-      "outputSha256": "54fd359a88e54e9d68be0e15a5d87d78f283a2788512229c7b8ebbe26a04a8c2",
+      "outputSha256": "be31d2c4b341ccd95331c8e45891fb4d90c2dcc4357ea07e11421bf3a89cb716",
       "edits": [
         {
           "start": 50,
@@ -1674756,6 +1675833,13 @@
           "renamed": "CommonGameState"
         },
         {
+          "start": 26353,
+          "end": 26354,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
+        },
+        {
           "start": 26369,
           "end": 26376,
           "symbol": "F:cbb.field_x:[I",
@@ -1674805,6 +1675889,13 @@
           "renamed": "CommonGameState"
         },
         {
+          "start": 26638,
+          "end": 26639,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
+        },
+        {
           "start": 26654,
           "end": 26661,
           "symbol": "F:cbb.field_x:[I",
@@ -1674852,6 +1675943,13 @@
           "symbol": "C:oma",
           "original": "oma",
           "renamed": "CommonGameState"
+        },
+        {
+          "start": 26917,
+          "end": 26918,
+          "symbol": "M:oma.a([FIF[FIIBIIII)V",
+          "original": "a",
+          "renamed": "computeSphericalTextureCoordinates"
         },
         {
           "start": 26933,
@@ -1675365,11 +1676463,25 @@
           "renamed": "OpenGlGpuToolkit"
         },
         {
+          "start": 37984,
+          "end": 37985,
+          "symbol": "M:jp.a([FII)[F",
+          "original": "a",
+          "renamed": "copyFloatPrefix"
+        },
+        {
           "start": 38046,
           "end": 38048,
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "OpenGlGpuToolkit"
+        },
+        {
+          "start": 38049,
+          "end": 38050,
+          "symbol": "M:jp.a([FII)[F",
+          "original": "a",
+          "renamed": "copyFloatPrefix"
         },
         {
           "start": 38115,
@@ -1683082,7 +1684194,7 @@
       "original": "rsb.java",
       "renamed": "GameSnapshot.java",
       "inputSha256": "b7276f2329d2ea687005a14c69dfe2c9b1af9dcbf6c902d4a4ee805302fb68f0",
-      "outputSha256": "4fa773cf61559f8b4dabd5cdc5ce36d9b2e7cab677b06b17c5fd896d9779c0c2",
+      "outputSha256": "ed7f204ff1880ce1056b06b6947c1aa6daf42644812d5fd1623afb1b60d7caa0",
       "edits": [
         {
           "start": 50,
@@ -1684672,6 +1685784,13 @@
           "symbol": "F:rsb.field_f:Ltr;",
           "original": "field_f",
           "renamed": "settings"
+        },
+        {
+          "start": 13220,
+          "end": 13221,
+          "symbol": "M:tr.a(B)V",
+          "original": "a",
+          "renamed": "applyToRuntime"
         },
         {
           "start": 13250,
@@ -1707494,7 +1708613,7 @@
       "original": "sga.java",
       "renamed": "SetSniperCannonFiringLeeway.java",
       "inputSha256": "ba06c95d936b89beeb84b0229dadaec9e9fea5c7b4db809ff62401dcbc779272",
-      "outputSha256": "215f16c57955050a115f0892f04f9af0bfd46a7785eabfed8717a96dfdfbb8c6",
+      "outputSha256": "4faf185206cfdf9c3a6e69dac52f30aad0599996c5fd4a361bda5ec1b4d7875b",
       "edits": [
         {
           "start": 50,
@@ -1707509,6 +1708628,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 114,
+          "end": 121,
+          "symbol": "F:sga.field_p:Z",
+          "original": "field_p",
+          "renamed": "defaultCurrentStateOnlyMode"
         },
         {
           "start": 159,
@@ -1707649,6 +1708775,13 @@
           "symbol": "M:sga.<init>(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;)V",
           "original": "sga",
           "renamed": "SetSniperCannonFiringLeeway"
+        },
+        {
+          "start": 1572,
+          "end": 1579,
+          "symbol": "F:sga.field_p:Z",
+          "original": "field_p",
+          "renamed": "defaultCurrentStateOnlyMode"
         }
       ]
     },
@@ -1715775,7 +1716908,7 @@
       "original": "sl.java",
       "renamed": "AsteroidFieldFactory.java",
       "inputSha256": "288ff6db82044fdf9a07a0a3d36d28a284d315eb758c0e08d963b7d11c29c73d",
-      "outputSha256": "4aee1ff2d9bad742fba5dc4481222e1f4d647c49928e192e06ce3481c25d4d54",
+      "outputSha256": "30034bb872ee0b60f9bf94db5eef9278643d326bb304a0a4f99e83769bbffd44",
       "edits": [
         {
           "start": 50,
@@ -1715860,6 +1716993,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 1813,
+          "end": 1814,
+          "symbol": "M:sl.a(BLtjb;)V",
+          "original": "a",
+          "renamed": "setQuickChatMenu"
         },
         {
           "start": 1828,
@@ -1727627,7 +1728767,7 @@
       "original": "spa.java",
       "renamed": "ShieldBehaviourFactory.java",
       "inputSha256": "2c9ac61c93b1f4103e9f6e27130ba4f41282f3523c546ca20a13836ca4c0694b",
-      "outputSha256": "e1aa9013a83b95e42f23b28fe205e90ca07c2ae6cb01dd35d750b42b85fe105c",
+      "outputSha256": "dcb16fd8dc254da6332471b3c4e68815c355ff33280bf67032593c6099efc956",
       "edits": [
         {
           "start": 50,
@@ -1728064,6 +1729204,13 @@
           "renamed": "state"
         },
         {
+          "start": 3363,
+          "end": 3364,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 3377,
           "end": 3384,
           "symbol": "F:rsb.field_g:Lpe;",
@@ -1728496,6 +1729643,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 6476,
+          "end": 6477,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 6490,
@@ -1728986,6 +1730140,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 9635,
+          "end": 9636,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 9649,
@@ -1751925,7 +1753086,7 @@
       "original": "tla.java",
       "renamed": "OpenGlSprite.java",
       "inputSha256": "b5715a4f223ac5a1c66198c1eecf56ca35df2746816be88da4cd827835dc0398",
-      "outputSha256": "f8af530ac56197d692b167adca617fdadbc17d7b23bf053c25d1dba5ca0e7a44",
+      "outputSha256": "f286ee7690342d2337b118bf7d9b553fc48cbd2882c5a4b3d8642f083476c3a2",
       "edits": [
         {
           "start": 50,
@@ -1752150,6 +1753311,13 @@
           "symbol": "F:tla.field_g:Lqfa;",
           "original": "field_g",
           "renamed": "toolkit"
+        },
+        {
+          "start": 1096,
+          "end": 1097,
+          "symbol": "M:qfa.n(I)V",
+          "original": "n",
+          "renamed": "prepareTextured2D"
         },
         {
           "start": 1119,
@@ -1752845,6 +1754013,13 @@
           "renamed": "toolkit"
         },
         {
+          "start": 5820,
+          "end": 5821,
+          "symbol": "M:qfa.n(I)V",
+          "original": "n",
+          "renamed": "prepareTextured2D"
+        },
+        {
           "start": 5843,
           "end": 5850,
           "symbol": "F:tla.field_g:Lqfa;",
@@ -1753361,6 +1754536,13 @@
           "symbol": "F:tla.field_g:Lqfa;",
           "original": "field_g",
           "renamed": "toolkit"
+        },
+        {
+          "start": 10400,
+          "end": 10401,
+          "symbol": "M:qfa.n(I)V",
+          "original": "n",
+          "renamed": "prepareTextured2D"
         },
         {
           "start": 10423,
@@ -1754026,6 +1755208,13 @@
           "symbol": "F:tla.field_g:Lqfa;",
           "original": "field_g",
           "renamed": "toolkit"
+        },
+        {
+          "start": 18015,
+          "end": 18016,
+          "symbol": "M:qfa.n(I)V",
+          "original": "n",
+          "renamed": "prepareTextured2D"
         },
         {
           "start": 18038,
@@ -1757247,7 +1758436,7 @@
       "original": "tr.java",
       "renamed": "SettingsInstance.java",
       "inputSha256": "5aa2c32b3b04e61169aba6548e4d7ad1e30959af026884ae8d7d3eb65fc3f7d8",
-      "outputSha256": "73e60c271bb5f4ba0abde519b9356e3e48546daa510c1dfce0affeeffb8095ce",
+      "outputSha256": "4b11ade1c8da56871d3b2bbfc00f5ea912f8701265b2cec259c746d3327eb7e3",
       "edits": [
         {
           "start": 50,
@@ -1757502,11 +1758691,25 @@
           "renamed": "SettingsInstance"
         },
         {
+          "start": 2843,
+          "end": 2844,
+          "symbol": "M:tr.c(I)V",
+          "original": "c",
+          "renamed": "showRemovedFromGameNotice"
+        },
+        {
           "start": 3291,
           "end": 3294,
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 3483,
+          "end": 3484,
+          "symbol": "M:tr.a(I)V",
+          "original": "a",
+          "renamed": "clearChatHistory"
         },
         {
           "start": 3668,
@@ -1757586,11 +1758789,25 @@
           "renamed": "GetMissileLauncherRandomness"
         },
         {
+          "start": 4375,
+          "end": 4376,
+          "symbol": "M:tr.a(B)V",
+          "original": "a",
+          "renamed": "applyToRuntime"
+        },
+        {
           "start": 4431,
           "end": 4434,
           "symbol": "C:kga",
           "original": "kga",
           "renamed": "GetPhasedEnergyBeamProjectiles"
+        },
+        {
+          "start": 4435,
+          "end": 4436,
+          "symbol": "M:kga.a(I[I)V",
+          "original": "a",
+          "renamed": "applyRuntimeSettings"
         },
         {
           "start": 4447,
@@ -1757635,6 +1758852,13 @@
           "renamed": "GetPhasedEnergyBeamProjectiles"
         },
         {
+          "start": 4557,
+          "end": 4558,
+          "symbol": "M:kga.a(I[I)V",
+          "original": "a",
+          "renamed": "applyRuntimeSettings"
+        },
+        {
           "start": 4569,
           "end": 4576,
           "symbol": "F:tr.field_a:[I",
@@ -1757656,6 +1758880,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 4889,
+          "end": 4890,
+          "symbol": "M:tr.c(I)V",
+          "original": "c",
+          "renamed": "showRemovedFromGameNotice"
+        },
+        {
           "start": 4945,
           "end": 4948,
           "symbol": "C:dsa",
@@ -1757668,6 +1758899,20 @@
           "symbol": "C:dsa",
           "original": "dsa",
           "renamed": "SetFighterRepairTime"
+        },
+        {
+          "start": 5038,
+          "end": 5041,
+          "symbol": "C:kqb",
+          "original": "kqb",
+          "renamed": "MessageDialogPresenter"
+        },
+        {
+          "start": 5042,
+          "end": 5043,
+          "symbol": "M:kqb.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "showMessage"
         },
         {
           "start": 5044,
@@ -1757689,6 +1758934,13 @@
           "symbol": "C:dsa",
           "original": "dsa",
           "renamed": "SetFighterRepairTime"
+        },
+        {
+          "start": 5258,
+          "end": 5259,
+          "symbol": "M:tr.a(ILso;)V",
+          "original": "a",
+          "renamed": "applyChange"
         },
         {
           "start": 5272,
@@ -1757738,6 +1758990,13 @@
           "symbol": "C:kga",
           "original": "kga",
           "renamed": "GetPhasedEnergyBeamProjectiles"
+        },
+        {
+          "start": 5636,
+          "end": 5637,
+          "symbol": "M:kga.a(I[I)V",
+          "original": "a",
+          "renamed": "applyRuntimeSettings"
         },
         {
           "start": 5643,
@@ -1766440,7 +1767699,7 @@
       "original": "uca.java",
       "renamed": "GameSession.java",
       "inputSha256": "6411540835dfa3b22b2bd717fb0fa6399b771ecbf519ebf16dcb3d8f7f24035c",
-      "outputSha256": "0282fa011a2e464d075ddf5515cca8e4b668893e5f7a83bdde230455597ca39a",
+      "outputSha256": "3298bef2ab260146555202f3fee46dd24bc48472670c982272012024f207db66",
       "edits": [
         {
           "start": 71,
@@ -1770703,6 +1771962,13 @@
           "renamed": "state"
         },
         {
+          "start": 36190,
+          "end": 36191,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 36204,
           "end": 36207,
           "symbol": "C:hna",
@@ -1770731,6 +1771997,13 @@
           "renamed": "state"
         },
         {
+          "start": 36293,
+          "end": 36294,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 36306,
           "end": 36307,
           "symbol": "M:pe.d(I)[Lsg;",
@@ -1770745,6 +1772018,13 @@
           "renamed": "state"
         },
         {
+          "start": 36343,
+          "end": 36344,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 36356,
           "end": 36357,
           "symbol": "M:pe.i(I)[Lrba;",
@@ -1770757,6 +1772037,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 36390,
+          "end": 36391,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 36403,
@@ -1772544,6 +1773831,13 @@
           "renamed": "state"
         },
         {
+          "start": 50324,
+          "end": 50325,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 50358,
           "end": 50365,
           "symbol": "F:uca.field_m:Loma;",
@@ -1773088,6 +1774382,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 59430,
+          "end": 59431,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 59456,
@@ -1773727,6 +1775028,13 @@
           "renamed": "state"
         },
         {
+          "start": 70668,
+          "end": 70669,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 70673,
           "end": 70680,
           "symbol": "F:rsb.field_e:Llbb;",
@@ -1773804,6 +1775112,13 @@
           "renamed": "state"
         },
         {
+          "start": 71544,
+          "end": 71545,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 71557,
           "end": 71558,
           "symbol": "M:pe.e(I)Luna;",
@@ -1773844,6 +1775159,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 72073,
+          "end": 72074,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 72087,
@@ -1773900,6 +1775222,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 75085,
+          "end": 75086,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 75296,
@@ -1773984,6 +1775313,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 77709,
+          "end": 77710,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 77815,
@@ -1775876,6 +1777212,13 @@
           "renamed": "state"
         },
         {
+          "start": 106299,
+          "end": 106300,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 106312,
           "end": 106313,
           "symbol": "M:pe.d(Z)I",
@@ -1775916,6 +1777259,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 106513,
+          "end": 106514,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 106526,
@@ -1777213,6 +1778563,13 @@
           "renamed": "state"
         },
         {
+          "start": 121531,
+          "end": 121532,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 121571,
           "end": 121572,
           "symbol": "M:pe.d(B)[Lqob;",
@@ -1777288,6 +1778645,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 122460,
+          "end": 122461,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 122516,
@@ -1778312,6 +1779676,13 @@
           "renamed": "state"
         },
         {
+          "start": 136540,
+          "end": 136541,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 136585,
           "end": 136592,
           "symbol": "F:uca.field_L:I",
@@ -1778403,6 +1779774,13 @@
           "renamed": "state"
         },
         {
+          "start": 136943,
+          "end": 136944,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 136948,
           "end": 136955,
           "symbol": "F:rsb.field_g:Lpe;",
@@ -1778445,6 +1779823,13 @@
           "renamed": "state"
         },
         {
+          "start": 137103,
+          "end": 137104,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 137108,
           "end": 137115,
           "symbol": "F:rsb.field_g:Lpe;",
@@ -1778464,6 +1779849,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 137165,
+          "end": 137166,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 137170,
@@ -1779024,6 +1780416,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 140013,
+          "end": 140014,
+          "symbol": "M:oma.c(I)V",
+          "original": "c",
+          "renamed": "updateTimeline"
         },
         {
           "start": 140039,
@@ -1780624,6 +1782023,13 @@
           "renamed": "state"
         },
         {
+          "start": 156105,
+          "end": 156106,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 156110,
           "end": 156117,
           "symbol": "F:tja.field_c:[Lbha;",
@@ -1780755,6 +1782161,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 157553,
+          "end": 157554,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 157566,
@@ -1782705,6 +1784118,13 @@
           "renamed": "state"
         },
         {
+          "start": 175704,
+          "end": 175705,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 175729,
           "end": 175732,
           "symbol": "C:tfa",
@@ -1782766,6 +1784186,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 175899,
+          "end": 175900,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 175912,
@@ -1783923,6 +1785350,13 @@
           "renamed": "state"
         },
         {
+          "start": 195840,
+          "end": 195841,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 195853,
           "end": 195854,
           "symbol": "M:pe.c(Z)Lij;",
@@ -1783998,6 +1785432,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 196277,
+          "end": 196278,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 196290,
@@ -1784735,6 +1786176,13 @@
           "renamed": "state"
         },
         {
+          "start": 202044,
+          "end": 202045,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 202049,
           "end": 202056,
           "symbol": "F:rsb.field_g:Lpe;",
@@ -1784973,6 +1786421,13 @@
           "renamed": "state"
         },
         {
+          "start": 204280,
+          "end": 204281,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 204285,
           "end": 204292,
           "symbol": "F:rsb.field_g:Lpe;",
@@ -1785006,6 +1786461,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 204464,
+          "end": 204465,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 204469,
@@ -1785209,6 +1786671,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 206108,
+          "end": 206109,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 206142,
@@ -1787900,6 +1789369,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 234901,
+          "end": 234902,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 234934,
@@ -1790954,6 +1792430,13 @@
           "renamed": "state"
         },
         {
+          "start": 267563,
+          "end": 267564,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 267595,
           "end": 267602,
           "symbol": "F:rsb.field_e:Llbb;",
@@ -1791388,6 +1792871,13 @@
           "renamed": "state"
         },
         {
+          "start": 272627,
+          "end": 272628,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 272640,
           "end": 272641,
           "symbol": "M:pe.d(Z)I",
@@ -1791535,6 +1793025,13 @@
           "renamed": "state"
         },
         {
+          "start": 274391,
+          "end": 274392,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 274404,
           "end": 274405,
           "symbol": "M:pe.e(B)Z",
@@ -1791575,6 +1793072,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 274628,
+          "end": 274629,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 274644,
@@ -1793931,6 +1795435,13 @@
           "renamed": "state"
         },
         {
+          "start": 302818,
+          "end": 302819,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 302823,
           "end": 302830,
           "symbol": "F:rsb.field_g:Lpe;",
@@ -1794629,6 +1796140,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 309477,
+          "end": 309478,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 309482,
@@ -1795352,6 +1796870,13 @@
           "renamed": "state"
         },
         {
+          "start": 316408,
+          "end": 316409,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
+        },
+        {
           "start": 316422,
           "end": 316423,
           "symbol": "M:pe.c(B)Z",
@@ -1795560,6 +1797085,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 317773,
+          "end": 317774,
+          "symbol": "M:oma.a(B)Lpe;",
+          "original": "a",
+          "renamed": "getVisibleWorld"
         },
         {
           "start": 317786,
@@ -1797438,6 +1798970,13 @@
           "renamed": "state"
         },
         {
+          "start": 337243,
+          "end": 337244,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
+        },
+        {
           "start": 337248,
           "end": 337255,
           "symbol": "F:rsb.field_g:Lpe;",
@@ -1797464,6 +1799003,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 337309,
+          "end": 337310,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 337314,
@@ -1798203,7 +1799749,7 @@
       "original": "ue.java",
       "renamed": "OpenGlShader.java",
       "inputSha256": "630b6edd89b27a99dccf8bdf563e208afbd60315567a79ced2204dc7ba2e3a16",
-      "outputSha256": "234769dfe88c9f29cb320e5c343ced6869e8873a230afc078bc6e79ce45898f6",
+      "outputSha256": "10d3da70c807da832570505d494f684b67cd31c23c5987444b423f4182f04f8b",
       "edits": [
         {
           "start": 50,
@@ -1798218,6 +1799764,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "OpenGlGpuToolkit"
+        },
+        {
+          "start": 225,
+          "end": 226,
+          "symbol": "M:jp.a(JI)V",
+          "original": "a",
+          "renamed": "queueObjectDeletion"
         },
         {
           "start": 300,
@@ -1859946,7 +1861499,7 @@
       "original": "wf.java",
       "renamed": "GameMenuScreen.java",
       "inputSha256": "92ff4912852c4a2de46e0f31b178890ac4a401dfee8c5fd3edd3699e55db0fad",
-      "outputSha256": "9f477971979af63cf858436169ac545a140a36afd897b4e90156124a32925be3",
+      "outputSha256": "9c6463dfb9fbeb3becabb6b6ff220c54860f85cf21ec5de1caedd7bfc593255e",
       "edits": [
         {
           "start": 50,
@@ -1860941,6 +1862494,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 8946,
+          "end": 8947,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 8951,
@@ -1862712,6 +1864272,13 @@
           "symbol": "F:uca.field_m:Loma;",
           "original": "field_m",
           "renamed": "state"
+        },
+        {
+          "start": 24553,
+          "end": 24554,
+          "symbol": "M:oma.b(I)Lrsb;",
+          "original": "b",
+          "renamed": "getVisibleSnapshot"
         },
         {
           "start": 24558,
@@ -1890567,10 +1892134,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/voidhunters"
     },
-    "rulesSha256": "bee414d6077cc692711cd7547bc355045e199a640f0e6674a1df93df70fa189a",
+    "rulesSha256": "d82db68ecffd5289139e253761239d282da582f4d2c3d6fc1e016c55c2739500",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
-    "outputTreeSha256": "29f4b98b0c51a3ea337779be0aabda50c151aa961fd5878d55055a1c044c9b3d",
+    "outputTreeSha256": "ee7e68767170fd7e13b3d55c799d35bfefdbaca7144555f44b69f6468e873868",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

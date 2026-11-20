@@ -461,13 +461,13 @@ final class SoftwareModel extends Model3D {
                 if (var22 != 1) {
                   if (var22 != 2) {
                     if (var22 == 3) {
-                      CommonGameState.a(var75, this.vertexZ[var23], var31, var76, var28, this.vertexX[var23], (byte) -82, var27, this.vertexY[var23], var30, var26);
+                      CommonGameState.computeSphericalTextureCoordinates(var75, this.vertexZ[var23], var31, var76, var28, this.vertexX[var23], (byte) -82, var27, this.vertexY[var23], var30, var26);
                       var19[0] = var76[0];
                       var20[0] = var76[1];
-                      CommonGameState.a(var75, this.vertexZ[var24], var31, var76, var28, this.vertexX[var24], (byte) -82, var27, this.vertexY[var24], var30, var26);
+                      CommonGameState.computeSphericalTextureCoordinates(var75, this.vertexZ[var24], var31, var76, var28, this.vertexX[var24], (byte) -82, var27, this.vertexY[var24], var30, var26);
                       var19[1] = var76[0];
                       var20[1] = var76[1];
-                      CommonGameState.a(var75, this.vertexZ[var25], var31, var76, var28, this.vertexX[var25], (byte) -82, var27, this.vertexY[var25], var30, var26);
+                      CommonGameState.computeSphericalTextureCoordinates(var75, this.vertexZ[var25], var31, var76, var28, this.vertexX[var25], (byte) -82, var27, this.vertexY[var25], var30, var26);
                       var19[2] = var76[0];
                       var20[2] = var76[1];
                       if ((var30 & 1) != 0) {

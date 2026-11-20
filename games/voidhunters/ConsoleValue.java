@@ -15,11 +15,11 @@ final class ConsoleValue {
         return this.value.toString();
     }
 
-    final static void b(int param0) {
+    final static void restoreDefaultStateSerializationMode(int param0) {
         if (param0 != 0) {
           return;
         }
-        MonochromeRowCacheEntry.field_e = SetSniperCannonFiringLeeway.field_p;
+        MonochromeRowCacheEntry.currentStateOnlyMode = SetSniperCannonFiringLeeway.defaultCurrentStateOnlyMode;
     }
 
     private final long longValue(int param0) {
@@ -62,7 +62,7 @@ final class ConsoleValue {
 
     final int intValue(int param0) {
         if (param0 < 5) {
-          ConsoleValue.b(-117);
+          ConsoleValue.restoreDefaultStateSerializationMode(-117);
           if (!(this.value instanceof Integer)) {
             return (int)this.longValue(0);
           }
@@ -95,7 +95,7 @@ final class ConsoleValue {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 > -79) {
-          ConsoleValue.b(-58);
+          ConsoleValue.restoreDefaultStateSerializationMode(-58);
         }
         if (OpenGlTexture3D.field_j > param3 - param4) {
           ffb.a(param4, (byte) -89, param1, param2, param3);

@@ -381,7 +381,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           var9 = (GameSnapshot) (param2);
           if (null != this.specialOrderSubmessage &&
             null != this.specialOrderSubmessage.settingsChange) {
-            var9.settings.a(param1 ^ 42, this.specialOrderSubmessage.settingsChange);
+            var9.settings.applyChange(param1 ^ 42, this.specialOrderSubmessage.settingsChange);
             return;
           }
           var5 = var9.getPlayer(this.field_k, (byte) 59);

@@ -156,7 +156,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Xb[10] = this.field_mb;
     }
 
-    private final void a(boolean param0, boolean param1, int param2, int param3) {
+    private final void setMaterialTexture(boolean param0, boolean param1, int param2, int param3) {
         boolean stackIn_3_0 = false;
         int stackIn_4_1 = 0;
         int stackIn_9_0 = 0;
@@ -535,10 +535,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final static void a(int param0, boolean param1) {
-        SetSniperCannonFiringLeeway.field_p = param1 ? true : false;
+    final static void setCurrentStateOnlyMode(int param0, boolean param1) {
+        SetSniperCannonFiringLeeway.defaultCurrentStateOnlyMode = param1 ? true : false;
         int var2 = -9 % ((param0 - 13) / 33);
-        MonochromeRowCacheEntry.field_e = param1 ? true : false;
+        MonochromeRowCacheEntry.currentStateOnlyMode = param1 ? true : false;
     }
 
     final Model3D createModel(ModelData param0, int param1, int param2, int param3, int param4) {
@@ -690,7 +690,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (this.field_ab >= -param2 + param0 &&
           this.field_fb <= param2 + param1 &&
           this.field_C >= -param2 + param1) {
-          this.m(-88);
+          this.prepareUntextured2D(-88);
           this.setBlendMode(param4, 114);
           jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
           if (1 >= param2) {
@@ -902,7 +902,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void fillGradientTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        this.m(-125);
+        this.prepareUntextured2D(-125);
         this.setBlendMode(param9, 126);
         jaggl.OpenGL.glBegin(4);
         jaggl.OpenGL.glColor4ub((byte)(param6 >> 16), (byte)(param6 >> 8), (byte)param6, (byte)(param6 >> 24));
@@ -914,14 +914,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glEnd();
     }
 
-    final void c(boolean param0) {
+    final void prepareFontRendering(boolean param0) {
         if (this.field_x != 4) {
           this.applyScreenSpaceProjection(3);
           this.setFogEnabled(false, -119);
           this.setLightingEnabled(-20951, false);
           this.setDepthTestEnabled((byte) 32, false);
           this.setDepthWriteEnabled(false, (byte) 66);
-          this.i(5888, -2);
+          this.setMaterialTexture(5888, -2);
           this.setBlendMode(1, 74);
           this.field_x = 4;
         }
@@ -953,7 +953,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         float var8 = (float)param1 + 0.3499999940395355f;
         float var9 = -1.0f + (var7 + (float)param2);
         float var10 = -1.0f + ((float)param3 + var8);
-        this.m(-71);
+        this.prepareUntextured2D(-71);
         this.setBlendMode(param5, 124);
         jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
         if (this.field_y) {
@@ -1156,7 +1156,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var3 = 0;
         int var4 = 0;
         int var5 = VoidHunters.field_G;
-        this.i(param0 ^ 5122, -2);
+        this.setMaterialTexture(param0 ^ 5122, -2);
         for (var2 = this.field_Dc - 1; var2 >= 0; var2--) {
           this.setActiveTextureUnit(33984, var2);
           this.bindTexture(param0 - 729, (OpenGlTexture) null);
@@ -1217,7 +1217,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void m(int param0) {
+    private final void prepareUntextured2D(int param0) {
         if (this.field_x != 1) {
           this.applyScreenSpaceProjection(3);
           this.setFogEnabled(false, -127);
@@ -1225,7 +1225,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.setDepthTestEnabled((byte) 32, false);
           this.setDepthWriteEnabled(false, (byte) 122);
           this.bindTexture(115, (OpenGlTexture) null);
-          this.i(5888, -2);
+          this.setMaterialTexture(5888, -2);
           this.setTextureCombineMode(0, 1);
           this.field_x = 1;
         }
@@ -1262,7 +1262,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private final void applyViewport(int param0) {
         jaggl.OpenGL.glViewport(this.field_N, this.field_Fb, this.field_Sb, this.field_Y);
         if (param0 != 27818) {
-          this.m(14);
+          this.prepareUntextured2D(14);
         }
     }
 
@@ -1323,7 +1323,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         float var8 = 0.3499999940395355f + (float)param1;
         float var9 = (float)param2 + var7;
         float var10 = var8 + (float)param3;
-        this.m(80);
+        this.prepareUntextured2D(80);
         this.setBlendMode(param5, 67);
         jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
         if (this.field_y) {
@@ -1365,7 +1365,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void drawVerticalLine(int param0, int param1, int param2, int param3, int param4) {
-        this.m(106);
+        this.prepareUntextured2D(106);
         this.setBlendMode(param4, 62);
         float var6 = (float)param0 + 0.3499999940395355f;
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
@@ -1407,15 +1407,15 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.setTextureCombineOperations(7681, 7681, false);
         }
         if (param0 != 0) {
-          OpenGlToolkit.a(117, false);
+          OpenGlToolkit.setCurrentStateOnlyMode(117, false);
         }
     }
 
-    private final void i(int param0, int param1) {
+    private final void setMaterialTexture(int param0, int param1) {
         if (param0 != 5888) {
           this.createHeap(-78);
         }
-        this.a(false, param1, true);
+        this.setMaterialTexture(false, param1, true);
     }
 
     final boolean supportsUnderwaterEffects() {
@@ -1439,7 +1439,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         var7 = VoidHunters.field_G;
         try {
           if (param0 != 1) {
-            OpenGlToolkit.a(69, false);
+            OpenGlToolkit.setCurrentStateOnlyMode(69, false);
           }
           var8 = new int[param1.length];
           var2 = var8;
@@ -1511,8 +1511,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return (ToolkitSprite) ((Object) new OpenGlSprite(this, param0, param1, param2));
     }
 
-    private final void a(boolean param0, int param1, boolean param2) {
-        this.a(true, param2, 0, param1);
+    private final void setMaterialTexture(boolean param0, int param1, boolean param2) {
+        this.setMaterialTexture(true, param2, 0, param1);
         if (param0) {
           int[] var5 = (int[]) null;
           this.getClip((int[]) null);
@@ -1600,7 +1600,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         if (this.field_ab >= -param2 + param0 &&
           this.field_fb <= param1 + param2 &&
           this.field_C >= param1 - param2) {
-          this.m(-63);
+          this.prepareUntextured2D(-63);
           this.setBlendMode(param4, 69);
           jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
           var6 = 0.3499999940395355f + (float)param0;
@@ -1677,7 +1677,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.setDepthTestEnabled((byte) 32, false);
           this.setDepthWriteEnabled(false, (byte) 85);
           this.bindTexture(111, (OpenGlTexture) null);
-          this.i(5888, -2);
+          this.setMaterialTexture(5888, -2);
           this.setTextureCombineMode(0, 1);
           this.setBlendMode(0, 127);
           jaggl.OpenGL.glMatrixMode(5889);
@@ -2055,7 +2055,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         float var7;
         float var8;
         float var9;
-        this.m(-97);
+        this.prepareUntextured2D(-97);
         this.setBlendMode(param5, 124);
         var7 = (float)param2 - (float)param0;
         var8 = (float)(-param1) + (float)param3;
@@ -2202,7 +2202,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var2++;
         }
         if (param0 <= 16) {
-          this.m(-35);
+          this.prepareUntextured2D(-35);
         }
         this.field_Rb = this.field_P;
     }
@@ -2321,7 +2321,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4) {
-        this.m(54);
+        this.prepareUntextured2D(54);
         this.setBlendMode(param4, 107);
         float var6 = 0.3499999940395355f + (float)param0;
         float var7 = (float)param1 + 0.3499999940395355f;
@@ -2378,7 +2378,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.resetClipRectangle(119);
     }
 
-    final void n(int param0) {
+    final void prepareTextured2D(int param0) {
         if (param0 != 27841) {
           this.setLightingEnabled(28, false);
         }
@@ -2388,7 +2388,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.setLightingEnabled(-20951, false);
           this.setDepthTestEnabled((byte) 32, false);
           this.setDepthWriteEnabled(false, (byte) -103);
-          this.i(5888, -2);
+          this.setMaterialTexture(5888, -2);
           this.field_x = 2;
         }
     }
@@ -2468,7 +2468,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_x = this.field_x & -29;
         }
         if (param1 < 57) {
-          this.i(101, -67);
+          this.setMaterialTexture(101, -67);
         }
     }
 
@@ -2548,7 +2548,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_Vb = false;
         }
         if (param0 != 0) {
-          this.c(true);
+          this.prepareFontRendering(true);
         }
     }
 

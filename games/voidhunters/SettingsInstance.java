@@ -81,7 +81,7 @@ final class SettingsInstance implements DiffableState {
           if (param1 <= -109) {
             return;
           }
-          SettingsInstance.c(99);
+          SettingsInstance.showRemovedFromGameNotice(99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class SettingsInstance implements DiffableState {
         }
     }
 
-    final static void a(int param0) {
+    final static void clearChatHistory(int param0) {
         int var1_int = 0;
         int var2 = VoidHunters.field_G;
         if (param0 != -15400) {
@@ -124,14 +124,14 @@ final class SettingsInstance implements DiffableState {
         }
     }
 
-    final void a(byte param0) {
+    final void applyToRuntime(byte param0) {
         if (param0 >= 112) {
-          GetPhasedEnergyBeamProjectiles.a(107, this.values);
+          GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(107, this.values);
           return;
         }
         SerializableGameState var3 = (SerializableGameState) null;
         this.reportDifferences((SerializableGameState) null, 78);
-        GetPhasedEnergyBeamProjectiles.a(107, this.values);
+        GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(107, this.values);
     }
 
     final static boolean a(int param0, int param1) {
@@ -146,12 +146,12 @@ final class SettingsInstance implements DiffableState {
         field_b = null;
     }
 
-    final static void c(int param0) {
+    final static void showRemovedFromGameNotice(int param0) {
         String var2 = null;
         if (SetFighterRepairTime.field_p != null) {
           var2 = SetFighterRepairTime.field_p;
           String var1 = var2;
-          kqb.a(SetReverbGain.a(ToolkitRasterState.field_d, new String[]{var2}, 125), param0 ^ 6923);
+          MessageDialogPresenter.showMessage(SetReverbGain.a(ToolkitRasterState.field_d, new String[]{var2}, 125), param0 ^ 6923);
           SetFighterRepairTime.field_p = null;
         }
         if (param0 == 6939) {
@@ -160,7 +160,7 @@ final class SettingsInstance implements DiffableState {
         field_b = (String) null;
     }
 
-    final void a(int param0, SettingsChange param1) {
+    final void applyChange(int param0, SettingsChange param1) {
         try {
           this.values[param1.id] = param1.value;
           int var3_int = 127 / ((-39 - param0) / 54);
@@ -170,7 +170,7 @@ final class SettingsInstance implements DiffableState {
     }
 
     SettingsInstance() {
-        GetPhasedEnergyBeamProjectiles.a(107, GetOndamageParticleSpeed.field_p);
+        GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(107, GetOndamageParticleSpeed.field_p);
         this.values = IntegerRecordWriteRequest.captureSettingsValues(-21049);
     }
 

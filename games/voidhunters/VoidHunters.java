@@ -219,7 +219,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (GraphicsPresentException.field_a) {
               ColorKeyScaleTextureOperation.d(991426348);
               FloatNoiseSliceGenerator.closeTransientMenusAndDialogs((byte) 110);
-              SettingsInstance.a(-15400);
+              SettingsInstance.clearChatHistory(-15400);
               enb.field_b = true;
               GetThrusterSmallForce.field_o = false;
               GetMessageFadetime.field_o = false;

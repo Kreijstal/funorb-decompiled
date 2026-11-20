@@ -82,7 +82,7 @@ final class fia {
           GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var8);
           lsa.field_f = param3;
           var7 = MessageLog.createQuickChatPhraseMenu(ConstantColorTextureOperation.field_k, param0, 0, DebrisFactory.field_a, ScrollableActionPanel.field_Ab);
-          AsteroidFieldFactory.a((byte) -28, var7);
+          AsteroidFieldFactory.setQuickChatMenu((byte) -28, var7);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

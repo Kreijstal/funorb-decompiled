@@ -299,7 +299,7 @@ final class OpenGlPostProcessor {
           this.toolkit.popReadFramebuffer((OpenGlFramebufferBinding) (this.field_s), (byte) -94);
           this.toolkit.pushReadFramebuffer(56, this.field_o);
         }
-        this.toolkit.n(27841);
+        this.toolkit.prepareTextured2D(27841);
         this.toolkit.setBlendMode(0, 127);
         this.toolkit.setTextureCombineMode(0, 1);
         this.toolkit.resetClipRectangle(110);
