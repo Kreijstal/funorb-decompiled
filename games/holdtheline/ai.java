@@ -16,7 +16,7 @@ final class ai {
         return true;
     }
 
-    final static void a(ResourceArchive param0, int[] param1, int param2) {
+    final static void loadEncryptedCourses(ResourceArchive param0, int[] param1, int param2) {
         try {
           int var3_int = 0;
           int var4 = 0;
@@ -48,7 +48,7 @@ final class ai {
         }
     }
 
-    final static void a(byte param0, SoundPlayback param1) {
+    final static void stopSoundPlayback(byte param0, SoundPlayback param1) {
         try {
           if (param0 != -123) {
             field_b = (RotatedSpriteAsset) null;
@@ -136,7 +136,7 @@ final class ai {
           var63 = MidiPcmStream.field_T;
           if (param0 != -4006) {
             var41 = (SoundPlayback) null;
-            ai.a((byte) -11, (SoundPlayback) null);
+            ai.stopSoundPlayback((byte) -11, (SoundPlayback) null);
           }
           var64 = Bzip2State.field_q;
           var62 = ResizableDialog.field_S;

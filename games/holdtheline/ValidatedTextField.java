@@ -59,10 +59,10 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
     final static void a(String param0, int param1) {
         try {
           MarkerSliderRenderer.a(param0, 0);
-          IsaacPacketBuffer.a(false, qd.field_g, 22676);
+          IsaacPacketBuffer.a(false, TexturedRoadFillRenderer.field_g, 22676);
           if (param1 >= -46) {
-            vd var3 = (vd) null;
-            ValidatedTextField.a((RoadSegment[]) null, -122, false, 107, (vd) null, 44);
+            RoadFillRenderer var3 = (RoadFillRenderer) null;
+            ValidatedTextField.a((RoadSegment[]) null, -122, false, 107, (RoadFillRenderer) null, 44);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -84,7 +84,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         return null;
     }
 
-    final static void a(RoadSegment[] param0, int param1, boolean param2, int param3, vd param4, int param5) {
+    final static void a(RoadSegment[] param0, int param1, boolean param2, int param3, RoadFillRenderer param4, int param5) {
         int var12 = 0;
         float var17 = 0.0f;
         RuntimeException stackIn_20_0 = null;
@@ -142,7 +142,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
             var13 = param0[var12];
             if (var13.field_k != var11 &&
               param2) {
-              param4.a(0.0f, var7.toArray(-92), var11, var6.toArray(-81), (byte) 49);
+              param4.drawRoadFill(0.0f, var7.toArray(-92), var11, var6.toArray(-81), (byte) 49);
               var23 = o.a((byte) 29);
               var6 = var23;
               var24 = o.a((byte) 105);
@@ -171,7 +171,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
             var7.add(var28.x, (byte) 95);
             var7.add(var28.y, (byte) 108);
           }
-          param4.a(0.0f, var7.toArray(-58), var11, var6.toArray(-52), (byte) 49);
+          param4.drawRoadFill(0.0f, var7.toArray(-58), var11, var6.toArray(-52), (byte) 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

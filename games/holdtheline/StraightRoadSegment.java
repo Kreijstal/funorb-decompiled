@@ -80,7 +80,7 @@ final class StraightRoadSegment extends RoadSegment {
         return new Point2i((int)var4, (int)var5);
     }
 
-    final void b(int param0, float param1) {
+    final void setOffsetDirection(int param0, float param1) {
         if (param0 <= 12) {
           return;
         }
@@ -91,24 +91,24 @@ final class StraightRoadSegment extends RoadSegment {
     private final int b(byte param0, float param1) {
         if (param0 > -120) {
           byte[] var4 = (byte[]) null;
-          StraightRoadSegment.a((byte) -17, (byte[]) null);
+          StraightRoadSegment.buildDecodedPaletteFont((byte) -17, (byte[]) null);
         }
-        return (int)((float)this.field_O + this.e(param1, 6) * (float)(-this.field_O + this.field_N));
+        return (int)((float)this.field_O + this.widthBlendAt(param1, 6) * (float)(-this.field_O + this.field_N));
     }
 
-    private final float e(float param0, int param1) {
+    private final float widthBlendAt(float param0, int param1) {
         int var3 = -12 / ((86 - param1) / 38);
         return (1.0f - (float)Math.cos((double)((-this.field_G + this.field_y) * param0 + this.field_G))) / 2.0f;
     }
 
     final int c(int param0, float param1) {
         if (param0 < 33) {
-          StraightRoadSegment.a(55, (byte) -61);
+          StraightRoadSegment.resendArchiveKeyRequests(55, (byte) -61);
         }
-        return (int)((float)this.field_z + this.e(param1, 124) * (float)(this.field_A - this.field_z));
+        return (int)((float)this.field_z + this.widthBlendAt(param1, 124) * (float)(this.field_A - this.field_z));
     }
 
-    final static PaletteBitmapFont a(byte param0, byte[] param1) {
+    final static PaletteBitmapFont buildDecodedPaletteFont(byte param0, byte[] param1) {
         PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -123,7 +123,7 @@ final class StraightRoadSegment extends RoadSegment {
           }
           var2 = new PaletteBitmapFont(param1, DirectByteStorage.field_j, Vector2i.field_g, EditableTextField.field_K, ad.field_d, field_E, IterableSecondaryNodeDeque.field_e);
           var3 = 26 / ((param0 - 56) / 51);
-          tk.a(false);
+          tk.clearDecodedSpriteSheet(false);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,7 +170,7 @@ final class StraightRoadSegment extends RoadSegment {
         return this.a(1.0f, 255);
     }
 
-    final static void a(int param0, int param1, boolean param2, LoginCredentials param3, boolean param4) {
+    final static void writeLoginPacket(int param0, int param1, boolean param2, LoginCredentials param3, boolean param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -189,7 +189,7 @@ final class StraightRoadSegment extends RoadSegment {
           SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, Bzip2State.field_x[1]);
           SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, Bzip2State.field_x[2]);
           SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, Bzip2State.field_x[3]);
-          q.a(125, SecondaryNodeDequeIterator.field_a);
+          q.writeRandomSeedData(125, SecondaryNodeDequeIterator.field_a);
           SecondaryNodeDequeIterator.field_a.writeShort(-652561784, param1);
           param3.writeToPacket(0, SecondaryNodeDequeIterator.field_a);
           IsaacPacketBuffer.field_p.position = 0;
@@ -249,7 +249,7 @@ final class StraightRoadSegment extends RoadSegment {
         return this.field_P;
     }
 
-    final static void a(int param0, int param1, Sprite param2, int param3, int param4) {
+    final static void drawWhiteRecoloredSprite(int param0, int param1, Sprite param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -303,7 +303,7 @@ final class StraightRoadSegment extends RoadSegment {
         CurvedRoadSegment.field_M = param3;
         if (param4 > -55) {
           byte[] var6 = (byte[]) null;
-          StraightRoadSegment.a((byte) -63, (byte[]) null);
+          StraightRoadSegment.buildDecodedPaletteFont((byte) -63, (byte[]) null);
         }
         ViewportSizingController.field_i = param0;
         ClientTextResources.field_b = param1;
@@ -320,20 +320,20 @@ final class StraightRoadSegment extends RoadSegment {
         return this.a(0.0f, 255);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendArchiveKeyRequests(int param0, byte param1) {
         int var3 = 0;
-        fo var4 = null;
+        ArchiveKeyRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = HoldTheLine.field_D;
         try {
-          var4 = (fo) (TutorialPage.field_a.first((byte) 91));
+          var4 = (ArchiveKeyRequest) (TutorialPage.field_a.first((byte) 91));
           if (param1 < 8) {
             field_H = (String) null;
           }
           while (var4 != null) {
-            WidgetContainer.a(3, param0, var4);
-            var4 = (fo) (TutorialPage.field_a.next((byte) -120));
+            WidgetContainer.sendArchiveKeyRequest(3, param0, var4);
+            var4 = (ArchiveKeyRequest) (TutorialPage.field_a.next((byte) -120));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -393,7 +393,7 @@ final class StraightRoadSegment extends RoadSegment {
         if (!param1) {
           this.field_G = -0.8879954218864441f;
         }
-        return (int)((float)this.field_I + this.e(param0, 124) * (float)(-this.field_I + this.field_C));
+        return (int)((float)this.field_I + this.widthBlendAt(param0, 124) * (float)(-this.field_I + this.field_C));
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -425,7 +425,7 @@ final class StraightRoadSegment extends RoadSegment {
         if (param1 != 0) {
           return -16;
         }
-        return (int)((float)this.field_K + this.e(param0, param1 + 35) * (float)(this.field_L - this.field_K));
+        return (int)((float)this.field_K + this.widthBlendAt(param0, param1 + 35) * (float)(this.field_L - this.field_K));
     }
 
     final static Point2i a(int param0, Vector2f param1, GrowableObjectList param2, int param3, Point2i param4) {
@@ -602,7 +602,7 @@ final class StraightRoadSegment extends RoadSegment {
           stackIn_19_1 = (param15);
           this.field_m = stackIn_19_1;
           this.field_J = (float)Math.sqrt((double)((this.field_P.y - this.field_R.y) * (-this.field_R.y + this.field_P.y) + (-this.field_R.x + this.field_P.x) * (this.field_P.x - this.field_R.x)));
-          this.b(51, param19);
+          this.setOffsetDirection(51, param19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,8 +23,8 @@ final class mn {
             }
             eo.a(param1, -31645, "document.cookie=\"" + var5 + "\"");
             if (param2 != -1) {
-              vd var6 = (vd) null;
-              mn.a((RoadSegment[]) null, (vd) null, (byte) 41);
+              RoadFillRenderer var6 = (RoadFillRenderer) null;
+              mn.a((RoadSegment[]) null, (RoadFillRenderer) null, (byte) 41);
             }
             bb.a(param1, (byte) 49);
           } catch (RuntimeException runtimeException) {
@@ -44,7 +44,7 @@ final class mn {
         }
     }
 
-    final static void a(RoadSegment[] param0, vd param1, byte param2) {
+    final static void a(RoadSegment[] param0, RoadFillRenderer param1, byte param2) {
         int var12 = 0;
         GrowableIntList var3 = null;
         GrowableIntList var4 = null;
@@ -119,7 +119,7 @@ final class mn {
               var11 = var11 - var16;
               var4.add(var25.y, (byte) 110);
               if (var11 < 0.0f) {
-                param1.a(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.toArray(-50), var13.field_k, var3.toArray(-90), (byte) 49);
+                param1.drawRoadFill(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.toArray(-50), var13.field_k, var3.toArray(-90), (byte) 49);
                 var26 = o.a((byte) 51);
                 var3 = var26;
                 var27 = o.a((byte) 21);
@@ -139,7 +139,7 @@ final class mn {
             var3.add(var28.y, (byte) 66);
             var4.add(var29.x, (byte) 95);
             var4.add(var29.y, (byte) 121);
-            param1.a(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.toArray(-60), var13.field_k, var3.toArray(-127), (byte) 49);
+            param1.drawRoadFill(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.toArray(-60), var13.field_k, var3.toArray(-127), (byte) 49);
             var3 = o.a((byte) 17);
             var30 = o.a((byte) -128);
             var3.add(var6Lifetime1.x, (byte) 71);

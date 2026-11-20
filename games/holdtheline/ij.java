@@ -219,14 +219,14 @@ final class ij {
         if (var2 != 0) {
           return;
         }
-        qd.a(20830, 3 + StrongCacheEntry.field_w);
+        TexturedRoadFillRenderer.selectMusicTrack(20830, 3 + StrongCacheEntry.field_w);
         nm.field_b = ArchiveIndex.b((byte) -49);
         if (UsernameLoginCredentials.a(nm.field_b, true)) {
-          MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 0, false, false, t.field_l, -1);
+          MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 0, false, false, IntArrayReadRequest.field_l, -1);
         } else {
           ArchiveRequest.field_r = 0;
-          QuickChatPhraseDefinition.field_r = t.field_l;
-          fl.field_j = false;
+          QuickChatPhraseDefinition.field_r = IntArrayReadRequest.field_l;
+          BlobWriteRequest.field_j = false;
           qn.field_k = false;
           MusicPatchPcmStream.field_r = null;
           DiskCacheStore.field_i = -1;
@@ -254,7 +254,7 @@ final class ij {
         this.field_h = MusicPatch.field_m;
         this.field_i = TextFieldRenderer.field_u;
         this.field_e = NineSlicePanel.field_f;
-        this.field_o = fi.field_kb;
+        this.field_o = SocialListEntry.field_kb;
         this.field_d = pj.field_o;
         if (param0) {
           this.field_b = TextLayout.field_d;

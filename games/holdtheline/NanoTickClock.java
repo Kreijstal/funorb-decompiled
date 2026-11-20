@@ -15,7 +15,7 @@ final class NanoTickClock extends TickClock {
     private long[] field_l;
     static int[] field_n;
 
-    final static GrowableObjectList a(GrowableObjectList param0, byte param1) {
+    final static GrowableObjectList removeShortBoundaryEdges(GrowableObjectList param0, byte param1) {
         int var4 = 0;
         Point2i var3 = null;
         TrackBoundary var5 = null;
@@ -32,7 +32,7 @@ final class NanoTickClock extends TickClock {
         var8 = HoldTheLine.field_D;
         try {
           if (param1 != -127) {
-            NanoTickClock.a(67, -35, -105);
+            NanoTickClock.createSolidSquareSprite(67, -35, -105);
           }
           var9 = new GrowableObjectList();
           var3 = ((BoundaryCurve) (param0.elements[-1 + param0.size])).getEndPoint(0);
@@ -63,7 +63,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
+    final static java.awt.Frame enterFullscreen(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         java.awt.Frame stackIn_29_0 = null;
@@ -72,33 +72,33 @@ final class NanoTickClock extends TickClock {
         StringBuilder stackIn_42_1 = null;
         String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nl[] var6 = null;
+        FullscreenDisplayMode[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        nl[] var10 = null;
+        FullscreenDisplayMode[] var10 = null;
         PlatformTask var11 = null;
         var9 = HoldTheLine.field_D;
         try {
-          if (!param4.a(true)) {
+          if (!param4.isFullscreenSupported(true)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (0 == param2) {
-            var10 = NetworkGameClient.a(param4, (byte) 111);
+            var10 = NetworkGameClient.listFullscreenDisplayModes(param4, (byte) 111);
             var6 = var10;
             if (var6 == null) {
               return null;
             }
             var7_int = 0;
             for (var8 = 0; var8 < var10.length; var8++) {
-              if (~param1 == ~var10[var8].field_b &&
-                param3 == var10[var8].field_a && ((param5 == 0 ||
-                param5 == var10[var8].field_d) &&
+              if (~param1 == ~var10[var8].width &&
+                param3 == var10[var8].height && ((param5 == 0 ||
+                param5 == var10[var8].refreshRate) &&
                 (var7_int == 0 ||
-                !(param2 >= var10[var8].field_g)))) {
-                param2 = var10[var8].field_g;
+                !(param2 >= var10[var8].bitDepth)))) {
+                param2 = var10[var8].bitDepth;
                 var7_int = 1;
               }
             }
@@ -110,7 +110,7 @@ final class NanoTickClock extends TickClock {
             stackIn_29_0 = (java.awt.Frame) null;
             return stackIn_29_0;
           }
-          var11 = param4.a(param5, param2, param3, param1, false);
+          var11 = param4.enterFullscreen(param5, param2, param3, param1, false);
           while (var11.field_d == 0) {
             SocketConnector.sleepMillis(10L, (byte) 45);
           }
@@ -138,7 +138,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final int a(long param0, int param1) {
+    final int advanceTicks(long param0, int param1) {
         int var4;
         int var5;
         int var6;
@@ -162,7 +162,7 @@ final class NanoTickClock extends TickClock {
         return var5;
     }
 
-    final void b(byte param0) {
+    final void reset(byte param0) {
         if (this.field_f > this.field_h) {
           this.field_h = this.field_h + (this.field_f - this.field_h);
         }
@@ -196,7 +196,7 @@ final class NanoTickClock extends TickClock {
         int var8Lifetime1;
         var10 = HoldTheLine.field_D;
         try {
-          var1_int = ie.field_j;
+          var1_int = BlobReadRequest.field_j;
           var2 = 0;
           if (WhirlpoolHasher.field_h == 2) {
             var3_long = -TutorialAction.field_g + bb.b(-1);
@@ -213,7 +213,7 @@ final class NanoTickClock extends TickClock {
             if (var4 < 0) {
               var5 = DialWidget.field_I;
             } else {
-              if (var4 == TextFieldRenderer.field_q.field_g) {
+              if (var4 == TextFieldRenderer.field_q.selectedIndex) {
                 var5 = ge.field_b;
               } else {
                 var5 = LoginCredentials.field_c;
@@ -262,7 +262,7 @@ final class NanoTickClock extends TickClock {
             var7Lifetime1 = h.measureMenuTextWidthWithIntGuard(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + field_i;
             if (0 <= var4) {
-              if (var4 == TextFieldRenderer.field_q.field_g) {
+              if (var4 == TextFieldRenderer.field_q.selectedIndex) {
                 stackIn_45_0 = na.field_p;
               } else {
                 stackIn_45_0 = Point2i.field_e;
@@ -290,7 +290,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void drawPanelWithShadow(int param0, int param1, int param2, byte param3, int param4) {
         Sprite[] var5 = jc.field_h;
         Sprite var6 = ij.a(-8096, param0, var5, param1);
         param2 = param2 - (var6.height - param1 >> 1);
@@ -324,7 +324,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void recolorGreenPixels(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -385,14 +385,14 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final long a(int param0) {
-        this.field_h = this.field_h + this.b(10);
+    final long getSleepMillis(int param0) {
+        this.field_h = this.field_h + this.sampleElapsedNanos(10);
         if (this.field_h < this.field_f) {
           return (-this.field_h + this.field_f) / 1000000L;
         }
         if (param0 > -25) {
           GrowableObjectList var3 = (GrowableObjectList) null;
-          NanoTickClock.a((GrowableObjectList) null, (byte) -102);
+          NanoTickClock.removeShortBoundaryEdges((GrowableObjectList) null, (byte) -102);
         }
         return 0L;
     }
@@ -406,7 +406,7 @@ final class NanoTickClock extends TickClock {
         field_o = null;
     }
 
-    private final long b(int param0) {
+    private final long sampleElapsedNanos(int param0) {
         int var8 = 0;
         int var9 = HoldTheLine.field_D;
         if (param0 != 10) {
@@ -442,7 +442,7 @@ final class NanoTickClock extends TickClock {
           if (param2 != -2698) {
             return;
           }
-          fi.field_nb = false;
+          SocialListEntry.field_nb = false;
           if (sb.field_c != null) {
             if (!sb.field_c.field_F) {
               return;
@@ -462,7 +462,7 @@ final class NanoTickClock extends TickClock {
               MidiKeyUsage.a(17902);
             }
             if (var3_int != 0) {
-              if (fi.field_nb) {
+              if (SocialListEntry.field_nb) {
                 param1 = LoginCredentials.substituteIndexedTokens(fk.field_d, new String[]{param1}, true);
               }
               if (ResourceArchive.field_g) {
@@ -495,7 +495,7 @@ final class NanoTickClock extends TickClock {
         }
     }
 
-    final static Sprite a(int param0, int param1, int param2) {
+    final static Sprite createSolidSquareSprite(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = HoldTheLine.field_D;
         int var4 = -105 / ((66 - param1) / 56);
@@ -518,9 +518,9 @@ final class NanoTickClock extends TickClock {
         this.field_f = System.nanoTime();
     }
 
-    final static void a(boolean param0, EntitySound param1) {
+    final static void removeEntitySound(boolean param0, EntitySound param1) {
         if (null != param1.field_p) {
-          ai.a((byte) -123, param1.field_p);
+          ai.stopSoundPlayback((byte) -123, param1.field_p);
         }
         if (!param0) {
           return;

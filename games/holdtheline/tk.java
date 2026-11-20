@@ -8,7 +8,7 @@ final class tk {
     static String field_b;
     static BitmapFont field_a;
 
-    final static void a(int[] param0, byte param1, byte param2, IndexedSprite param3) {
+    final static void orPolygonMask(int[] param0, byte param1, byte param2, IndexedSprite param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -27,22 +27,22 @@ final class tk {
           if (param1 != -92) {
             return;
           }
-          gf.a();
-          gf.a(param0, 0, param0.length);
-          gf.c();
+          PolygonScanConverter.clearEdges();
+          PolygonScanConverter.addPolygonEdges(param0, 0, param0.length);
+          PolygonScanConverter.beginScan();
           while (true) {
-            if (!gf.d()) {
+            if (!PolygonScanConverter.nextSpan()) {
               return;
             }
-            var4_int = gf.field_g;
+            var4_int = PolygonScanConverter.spanStartX;
             if (0 > var4_int) {
               var4_int = 0;
             }
-            var5 = gf.field_b;
+            var5 = PolygonScanConverter.spanEndX;
             if (param3.field_i <= var5) {
               var5 = -1 + param3.field_i;
             }
-            var6 = gf.field_a;
+            var6 = PolygonScanConverter.spanY;
             if (0 > var6) {
               continue;
             }
@@ -80,7 +80,7 @@ final class tk {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void clearDecodedSpriteSheet(boolean param0) {
         IterableSecondaryNodeDeque.field_e = (byte[][]) null;
         if (param0) {
           return;

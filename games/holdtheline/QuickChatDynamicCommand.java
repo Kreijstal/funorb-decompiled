@@ -33,7 +33,7 @@ final class QuickChatDynamicCommand {
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
-        tn var7 = null;
+        GrowableStringList var7 = null;
         String[] stackIn_8_0 = null;
         String[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -61,13 +61,13 @@ final class QuickChatDynamicCommand {
           }
           while (args.length > var4) {
             if (args[var4].trim().charAt(0) != 91) {
-              var7.a((byte) 112, args[var4].trim());
+              var7.add((byte) 112, args[var4].trim());
               var4++;
               continue;
             }
             break;
           }
-          stackIn_13_0 = var7.c(param1 ^ 3);
+          stackIn_13_0 = var7.toArray(param1 ^ 3);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

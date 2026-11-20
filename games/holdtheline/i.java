@@ -208,7 +208,7 @@ final class i extends NineSlicePanel {
           var6 = param3 + "_decelerate";
           var7 = new NamedSoundEffect(var5, param2);
           var8 = new NamedSoundEffect(var6, param4);
-          var7.field_m = NetworkGameClient.a(var7, param1, 89);
+          var7.field_m = NetworkGameClient.sampleFramesForMillis(var7, param1, 89);
           var7.field_l = var7.field_n.length;
           stackIn_3_0 = new tk(var7, var8);
           return stackIn_3_0;

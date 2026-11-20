@@ -93,26 +93,26 @@ final class jh {
         int var22 = 0;
         var22 = HoldTheLine.field_D;
         try {
-          gf.a();
-          gf.a(param3, 0, param3.length);
-          gf.c();
+          PolygonScanConverter.clearEdges();
+          PolygonScanConverter.addPolygonEdges(param3, 0, param3.length);
+          PolygonScanConverter.beginScan();
           if (param1 <= 46) {
             field_d = (LoginCredentialType) null;
           }
-          stackIn_5_0 = gf.d();
+          stackIn_5_0 = PolygonScanConverter.nextSpan();
           while (true) {
             if (!stackIn_5_0) {
               return;
             }
-            var4_int = gf.field_g;
+            var4_int = PolygonScanConverter.spanStartX;
             if (var4_int < 0) {
               var4_int = 0;
             }
-            var5 = gf.field_b;
+            var5 = PolygonScanConverter.spanEndX;
             if (SoftwareRasterizer.width <= var5) {
               var5 = -1 + SoftwareRasterizer.width;
             }
-            var6 = gf.field_a;
+            var6 = PolygonScanConverter.spanY;
             if (var6 < 0) {
               var6 = 0;
             }
@@ -128,7 +128,7 @@ final class jh {
             while (true) {
               var12--;
               if (var12 < 0) {
-                stackIn_5_0 = gf.d();
+                stackIn_5_0 = PolygonScanConverter.nextSpan();
                 break;
               }
               var13 = SoftwareRasterizer.pixels[var9] & 16711680;

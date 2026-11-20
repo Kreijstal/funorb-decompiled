@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MidiNote extends IntrusiveNode {
-    int field_n;
-    int field_l;
-    int field_w;
-    MusicPatchEnvelope field_C;
-    MusicPatch field_o;
-    PcmSampleStream field_t;
-    int field_q;
-    int field_B;
-    int field_y;
-    int field_A;
-    int field_p;
-    int field_k;
-    int field_r;
-    int field_i;
-    PcmSample field_s;
-    int field_x;
-    int field_m;
-    int field_z;
-    int field_j;
-    int field_u;
-    int field_v;
+    int portamentoProgress;
+    int amplitudeEnvelopeIndex;
+    int decayProgress;
+    MusicPatchEnvelope envelope;
+    MusicPatch patch;
+    PcmSampleStream sampleStream;
+    int releaseEnvelopeIndex;
+    int portamentoPitchDelta;
+    int keyPan;
+    int amplitudeEnvelopeTime;
+    int channel;
+    int exclusiveGroup;
+    int samplesUntilUpdate;
+    int velocityGain;
+    PcmSample sample;
+    int basePitch;
+    int age;
+    int releaseTime;
+    int vibratoPhase;
+    int key;
+    int retriggerPhase;
 
     final static boolean a(int param0, boolean param1, int param2, Point2i param3, Point2i param4, int param5, Vector2f param6) {
         RuntimeException var7 = null;
@@ -92,11 +92,11 @@ final class MidiNote extends IntrusiveNode {
         return ArchiveProvider.field_b;
     }
 
-    final void b(byte param0) {
-        this.field_o = null;
-        this.field_C = null;
-        this.field_s = null;
-        this.field_t = null;
+    final void clearVoiceReferences(byte param0) {
+        this.patch = null;
+        this.envelope = null;
+        this.sample = null;
+        this.sampleStream = null;
         int var2 = -104 % ((24 - param0) / 52);
     }
 
@@ -109,7 +109,7 @@ final class MidiNote extends IntrusiveNode {
             BufferedSocket.a(false);
           }
           CheckboxWidget.a(DisplayNameForm.field_K, DelayedServerPacket.field_m, LayeredWidgetStyle.field_e, -115);
-          hi.a(param1, 0, true, 0);
+          hi.paintRasterBuffer(param1, 0, true, 0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ck.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

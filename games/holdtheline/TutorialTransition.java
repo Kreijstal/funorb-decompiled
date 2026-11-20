@@ -84,7 +84,7 @@ final class TutorialTransition {
     }
 
     final static void a(int param0) {
-        tn.field_h[MidiPcmStream.field_F] = SoftwareRasterizer.pixels;
+        GrowableStringList.field_h[MidiPcmStream.field_F] = SoftwareRasterizer.pixels;
         OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F] = SoftwareRasterizer.clipLeft;
         dm.field_b[MidiPcmStream.field_F] = SoftwareRasterizer.clipRight;
         m.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.clipTop;
@@ -102,20 +102,20 @@ final class TutorialTransition {
           TutorialTransition.a((byte) 60);
         }
         if (ad.field_c == -1) {
-          if (!hi.b(1, (byte) 40)) {
+          if (!hi.readServerBytes(1, (byte) 40)) {
             return false;
           }
           ad.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -72);
           RoadStripRenderer.field_e.position = 0;
         }
         if (ad.field_c == -2) {
-          if (!hi.b(2, (byte) 40)) {
+          if (!hi.readServerBytes(2, (byte) 40)) {
             return false;
           }
           ad.field_c = RoadStripRenderer.field_e.readUnsignedShort(62);
           RoadStripRenderer.field_e.position = 0;
         }
-        return hi.b(ad.field_c, (byte) 40);
+        return hi.readServerBytes(ad.field_c, (byte) 40);
     }
 
     static {

@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends IntrusiveNode {
+final class IntWriteRequest extends IntrusiveNode {
     static NamedSoundEffect field_m;
     static int field_i;
     static int field_l;
-    int field_j;
-    int field_k;
+    int category;
+    int id;
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          se.clearSharedReferences(true);
+          IntWriteRequest.clearSharedReferences(true);
           field_m = null;
           return;
         }
         field_m = null;
     }
 
-    private se() throws Throwable {
+    private IntWriteRequest() throws Throwable {
         throw new Error();
     }
 

@@ -530,7 +530,7 @@ final class SoundCache {
             if (param0) {
               SoundCache.clearSharedReferences(18);
             }
-            var4 = MidiPcmStream.a(param2, (byte) -98);
+            var4 = MidiPcmStream.normalizeAccountName(param2, (byte) -98);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!SocketJs5Transport.isNameSeparator(-2821, var4.charAt(0)) &&

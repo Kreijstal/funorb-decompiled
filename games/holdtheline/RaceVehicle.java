@@ -472,30 +472,30 @@ final class RaceVehicle extends MovingEntity {
         RuntimeException var2 = null;
         try {
           if (this.field_rb != null) {
-            NanoTickClock.a(true, this.field_rb);
+            NanoTickClock.removeEntitySound(true, this.field_rb);
           }
           this.field_rb = null;
           if (this.field_S != null) {
-            NanoTickClock.a(true, this.field_S);
+            NanoTickClock.removeEntitySound(true, this.field_S);
           }
           this.field_S = null;
           if (null != this.field_Z) {
-            NanoTickClock.a(true, this.field_Z);
+            NanoTickClock.removeEntitySound(true, this.field_Z);
           }
           if (param0 < 97) {
             this.field_sb = (GrowableObjectList) null;
           }
           this.field_Z = null;
           if (this.field_fb != null) {
-            NanoTickClock.a(true, this.field_fb);
+            NanoTickClock.removeEntitySound(true, this.field_fb);
           }
           this.field_fb = null;
           if (this.field_ub != null) {
-            NanoTickClock.a(true, this.field_ub);
+            NanoTickClock.removeEntitySound(true, this.field_ub);
           }
           this.field_ub = null;
           if (this.field_vc != null) {
-            NanoTickClock.a(true, this.field_vc);
+            NanoTickClock.removeEntitySound(true, this.field_vc);
           }
           this.field_vc = null;
           return;
@@ -912,7 +912,7 @@ final class RaceVehicle extends MovingEntity {
                 }
               }
               if (this.field_S != null) {
-                NanoTickClock.a(true, this.field_S);
+                NanoTickClock.removeEntitySound(true, this.field_S);
               }
               this.field_S = ValidationHelpWidget.a((byte) 3, (MovingEntity) (this), this.field_C.field_L, this.field_C.field_L.field_q);
               this.field_S.field_o.setSamplePosition(var2_int);
@@ -931,7 +931,7 @@ final class RaceVehicle extends MovingEntity {
                 decompiledFrameRemainder0 = (fieldTemp$0 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (null != this.field_rb))) {
-                  NanoTickClock.a(true, this.field_rb);
+                  NanoTickClock.removeEntitySound(true, this.field_rb);
                   this.field_rb = null;
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
@@ -955,7 +955,7 @@ final class RaceVehicle extends MovingEntity {
                 decompiledFrameRemainder0 = (fieldTemp$1 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (this.field_S != null))) {
-                  NanoTickClock.a(true, this.field_S);
+                  NanoTickClock.removeEntitySound(true, this.field_S);
                   this.field_S = null;
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
@@ -979,7 +979,7 @@ final class RaceVehicle extends MovingEntity {
                 }
               }
               if (this.field_rb != null) {
-                NanoTickClock.a(true, this.field_rb);
+                NanoTickClock.removeEntitySound(true, this.field_rb);
               }
               this.field_rb = ValidationHelpWidget.a((byte) 114, (MovingEntity) (this), this.field_C.field_u, this.field_C.field_u.field_q);
               this.field_rb.field_o.setSamplePosition(var2_intLifetime1);
@@ -1393,7 +1393,7 @@ final class RaceVehicle extends MovingEntity {
                   this.field_Fb[1] != 3 &&
                   3 != this.field_Fb[2]) &&
                   (decompiledFrameRemainder1 = !(this.field_fc >= (-30 + MusicPatchPcmStream.field_r.field_ab)))) {
-                  ad.a(255, 64, DualNodeHashTable.field_b);
+                  ad.playSample(255, 64, DualNodeHashTable.field_b);
                   this.field_fc = MusicPatchPcmStream.field_r.field_ab;
                   decompiledFrameRemainder1 = (var9 != 0);
                 }
@@ -1530,17 +1530,17 @@ final class RaceVehicle extends MovingEntity {
           }
           if (stackIn_164_0 == 0) {
             if (null != this.field_vc) {
-              NanoTickClock.a(true, this.field_vc);
+              NanoTickClock.removeEntitySound(true, this.field_vc);
               this.field_vc = null;
               if ((var9 != 0) &&
                 (null == this.field_vc)) {
-                this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), vd.field_b, vd.field_b.field_q);
+                this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), RoadFillRenderer.field_b, RoadFillRenderer.field_b.field_q);
                 this.field_vc.field_o.setLoopCount(-1);
               }
             }
           } else {
             if (null == this.field_vc) {
-              this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), vd.field_b, vd.field_b.field_q);
+              this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), RoadFillRenderer.field_b, RoadFillRenderer.field_b.field_q);
               this.field_vc.field_o.setLoopCount(-1);
             }
           }

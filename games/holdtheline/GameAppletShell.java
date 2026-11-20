@@ -135,7 +135,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             return (MonochromeBitmapFont) (stackIn_7_0);
           }
           var2 = new MonochromeBitmapFont(param1, DirectByteStorage.field_j, Vector2i.field_g, EditableTextField.field_K, ad.field_d, IterableSecondaryNodeDeque.field_e);
-          tk.a(false);
+          tk.clearDecodedSpriteSheet(false);
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -480,7 +480,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               dupTemp$0 = new PlatformTaskDispatcher(param6, param0, param2, true);
               wi.field_b = dupTemp$0;
               te.field_d = dupTemp$0;
-              var8 = wi.field_b.a((byte) -28, 1, (Runnable) (this));
+              var8 = wi.field_b.startThread((byte) -28, 1, (Runnable) (this));
               while (true) {
                 if (0 == var8.field_d) {
                   SocketConnector.sleepMillis(10L, (byte) 45);
@@ -493,7 +493,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              MusicPatchPcmStream.a(var8_ref, (byte) -46, (String) null);
+              MusicPatchPcmStream.reportClientError(var8_ref, (byte) -46, (String) null);
               this.a("crash", 221);
             }
             return;
@@ -554,7 +554,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (null != wi.field_b) {
             try {
-              wi.field_b.a((byte) 55);
+              wi.field_b.shutdown((byte) 55);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -833,7 +833,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    uj.field_h = oi.field_e.b(IntrusiveDequeCursor.field_c, 68);
+                    uj.field_h = oi.field_e.waitForTicks(IntrusiveDequeCursor.field_c, 68);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -851,7 +851,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              MusicPatchPcmStream.a((Throwable) (var1), (byte) -128, (String) null);
+              MusicPatchPcmStream.reportClientError((Throwable) (var1), (byte) -128, (String) null);
               this.a("crash", 221);
             }
             this.a(true, 0);

@@ -39,7 +39,7 @@ final class RaceSetupMenu extends MenuList {
     private int menuId;
     private int[] field_I;
     int transitionState;
-    static fo field_y;
+    static ArchiveKeyRequest field_y;
 
     final void activateItem(int param0, int param1) {
         if (param1 != -3565) {
@@ -399,7 +399,7 @@ final class RaceSetupMenu extends MenuList {
         if (this.transitionState == 2) {
           var2Lifetime1 = (int)((double)we.field_n * (-Math.exp((double)(0.20000000298023224f * (float)(this.transitionTicks - 5))) + 1.0));
         }
-        fl.a(this.field_L.toUpperCase(), var2Lifetime1, 1, param0 - 1698, 8);
+        BlobWriteRequest.drawTitleBar(this.field_L.toUpperCase(), var2Lifetime1, 1, param0 - 1698, 8);
         for (var3_int = 0; var3_int < this.controlActions.length; var3_int++) {
           this.drawControl(this.getControlY((byte) -128, var3_int), this.controlActions[var3_int], true, var3_int);
         }
@@ -489,7 +489,7 @@ final class RaceSetupMenu extends MenuList {
     final static void resendPendingDataRequests(int param0, byte param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        fl var4 = null;
+        BlobWriteRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = HoldTheLine.field_D;
@@ -497,14 +497,14 @@ final class RaceSetupMenu extends MenuList {
           if (param1 != 51) {
             return;
           }
-          var4 = (fl) (UsernameLoginCredentials.field_e.first((byte) 125));
+          var4 = (BlobWriteRequest) (UsernameLoginCredentials.field_e.first((byte) 125));
           while (var4 != null) {
-            TrackObjectDefinition.a(27391, var4, param0);
-            var4 = (fl) (UsernameLoginCredentials.field_e.next((byte) -89));
+            TrackObjectDefinition.sendBlobWriteRequest(27391, var4, param0);
+            var4 = (BlobWriteRequest) (UsernameLoginCredentials.field_e.next((byte) -89));
           }
           var2 = oc.field_d.first((byte) 121);
           while (var2 != null) {
-            q.a(param0, 60);
+            q.sendBlobReadRequest(param0, 60);
             var2 = oc.field_d.next((byte) 124);
           }
           return;
@@ -724,7 +724,7 @@ final class RaceSetupMenu extends MenuList {
         var4 = this.rowSprites[param1];
         var5 = this.rowLabels[param1];
         if (param0 != 47) {
-          field_y = (fo) null;
+          field_y = (ArchiveKeyRequest) null;
         }
         if (var3 == null) {
           return;
@@ -1318,7 +1318,7 @@ final class RaceSetupMenu extends MenuList {
               ma.a(stackIn_27_0, stackIn_28_1);
               return;
             }
-            t.field_l = var6;
+            IntArrayReadRequest.field_l = var6;
             if (Vector2i.field_c) {
               var7 = StrongCacheEntry.field_w;
               var12 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][1], 9, 111)};
@@ -1357,7 +1357,7 @@ final class RaceSetupMenu extends MenuList {
             }
           }
           if (param0 == 2) {
-            t.field_l = var6;
+            IntArrayReadRequest.field_l = var6;
             var7 = ArchiveIndex.b((byte) -49).field_p;
             if (Vector2i.field_c) {
               var15 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1] + 8, 9, 111)};

@@ -202,7 +202,7 @@ final class BufferedSocket implements Runnable {
               this.run();
             }
             if (null == this.field_k) {
-              this.field_k = this.field_b.a((byte) -28, 3, (Runnable) (this));
+              this.field_k = this.field_b.startThread((byte) -28, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -372,7 +372,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            MusicPatchPcmStream.a((Throwable) ((Object) var1_ref), (byte) 94, (String) null);
+            MusicPatchPcmStream.reportClientError((Throwable) ((Object) var1_ref), (byte) 94, (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -388,7 +388,7 @@ final class BufferedSocket implements Runnable {
         }
         boolean decompiledFrameRemainder0 = true;
         if (PolarSortVector.field_d >= 20 &&
-          jn.a((byte) -30) && (!(q.field_c > 0) ||
+          MenuSelectionController.isAccountUiReady((byte) -30) && (!(q.field_c > 0) ||
           ai.a(-118))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;

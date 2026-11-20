@@ -24,7 +24,7 @@ abstract class RoadSegment extends TrackCurve {
 
     abstract Point2i a(float param0, boolean param1);
 
-    final static Sprite b(String param0, byte param1) {
+    final static Sprite loadSpriteByName(String param0, byte param1) {
         RuntimeException var2 = null;
         String var3 = null;
         Sprite stackIn_3_0 = null;
@@ -35,7 +35,7 @@ abstract class RoadSegment extends TrackCurve {
         try {
           if (param1 != -63) {
             var3 = (String) null;
-            RoadSegment.b((String) null, (byte) -20);
+            RoadSegment.loadSpriteByName((String) null, (byte) -20);
           }
           stackIn_3_0 = UrlPacketDownloader.a(fb.field_i, param0, false, "");
           return stackIn_3_0;

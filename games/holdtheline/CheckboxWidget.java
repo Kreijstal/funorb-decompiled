@@ -26,7 +26,7 @@ final class CheckboxWidget extends TextButton {
     final static void a(boolean param0, String param1, float param2, int param3) {
         try {
           if (null == MidiKeyUsage.field_l) {
-            MidiKeyUsage.field_l = new LoadProgressDialog(ka.field_b, nl.field_c);
+            MidiKeyUsage.field_l = new LoadProgressDialog(ka.field_b, FullscreenDisplayMode.field_c);
             ka.field_b.a(MidiKeyUsage.field_l, false);
           }
           MidiKeyUsage.field_l.setProgress(param2, -84, param0, param1);
@@ -164,11 +164,11 @@ final class CheckboxWidget extends TextButton {
         return (byte) var2;
     }
 
-    final static tn a(int param0, int param1) {
+    final static GrowableStringList a(int param0, int param1) {
         if (param1 != 19923) {
           field_J = (String) null;
         }
-        tn var2 = new tn(param0, false);
+        GrowableStringList var2 = new GrowableStringList(param0, false);
         return var2;
     }
 

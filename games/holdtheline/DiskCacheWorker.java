@@ -111,7 +111,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              MusicPatchPcmStream.a((Throwable) ((Object) var2_ref), (byte) 115, (String) null);
+              MusicPatchPcmStream.reportClientError((Throwable) ((Object) var2_ref), (byte) 115, (String) null);
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {
@@ -304,7 +304,7 @@ final class DiskCacheWorker implements Runnable {
         this.field_g = false;
         this.field_c = 0;
         try {
-          var2 = param0.a((byte) -28, 5, (Runnable) (this));
+          var2 = param0.startThread((byte) -28, 5, (Runnable) (this));
           while (var2.field_d == 0) {
             SocketConnector.sleepMillis(10L, (byte) 45);
           }

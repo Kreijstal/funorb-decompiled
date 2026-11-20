@@ -102,14 +102,14 @@ final class PasswordValidator extends TextFieldValidator {
           }
         }
         if (!param0) {
-          fi.field_kb = ta.a(80, var8, param1);
+          SocialListEntry.field_kb = ta.a(80, var8, param1);
           TextLayout.field_d = null;
           return new ij(param0);
         }
         var5 = var8.readUnsignedShort(99);
         try {
           var9 = DialWidget.field_H.getPhrase(var5, 1);
-          fi.field_kb = var9.getTemplateText(245197136);
+          SocialListEntry.field_kb = var9.getTemplateText(245197136);
           if (TextFieldRenderer.field_u.equals(QuickChatPhraseCache.field_e)) {
             stackIn_24_0 = null;
           } else {
@@ -119,9 +119,9 @@ final class PasswordValidator extends TextFieldValidator {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          MusicPatchPcmStream.a((Throwable) ((Object) var6), (byte) -49, "CC1");
+          MusicPatchPcmStream.reportClientError((Throwable) ((Object) var6), (byte) -49, "CC1");
           TextLayout.field_d = null;
-          fi.field_kb = null;
+          SocialListEntry.field_kb = null;
           return new ij(param0);
         }
         return new ij(param0);
@@ -217,7 +217,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = LoginMethodPreference.field_b;
             return stackIn_8_0;
           }
-          if (t.a(0, var5)) {
+          if (IntArrayReadRequest.a(0, var5)) {
             stackIn_11_0 = GameAppletShell.field_c;
             return stackIn_11_0;
           }
@@ -264,20 +264,20 @@ final class PasswordValidator extends TextFieldValidator {
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = NanoTickClock.a(param2, 124, param0);
+        Sprite dupTemp$0 = NanoTickClock.createSolidSquareSprite(param2, 124, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[param1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = NanoTickClock.a(param4, Vector2i.xor(param1, -97), param0);
+        Sprite dupTemp$1 = NanoTickClock.createSolidSquareSprite(param4, Vector2i.xor(param1, -97), param0);
         var5[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 == 0) {
           return var5;
         }
-        var5[4] = NanoTickClock.a(param3, param1 - 108, 64);
+        var5[4] = NanoTickClock.createSolidSquareSprite(param3, param1 - 108, 64);
         return var5;
     }
 

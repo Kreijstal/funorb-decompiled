@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class WhirlpoolHasher {
-    private byte[] field_f;
-    private long[] field_j;
+    private byte[] blockBuffer;
+    private long[] roundScratch;
     static int field_h;
-    private long[] field_g;
-    private byte[] field_c;
-    private long[] field_k;
-    private long[] field_d;
-    private int field_e;
+    private long[] blockWords;
+    private byte[] messageBitLength;
+    private long[] hash;
+    private long[] roundKey;
+    private int bufferByteCount;
     static String field_i;
-    private int field_a;
-    private long[] field_b;
+    private int bufferBitCount;
+    private long[] cipherState;
 
-    final static void a(byte param0) {
-        fo var1 = (fo) (TutorialPage.field_a.first((byte) 87));
+    final static void readArchiveKeyReply(byte param0) {
+        ArchiveKeyRequest var1 = (ArchiveKeyRequest) (TutorialPage.field_a.first((byte) 87));
         if (var1 == null) {
           r.a(-28036);
           return;
@@ -24,11 +24,11 @@ final class WhirlpoolHasher {
         if (param0 <= 68) {
           return;
         }
-        var1.field_i = new int[]{var2.readInt(45), var2.readInt(-72), var2.readInt(-47), var2.readInt(79)};
+        var1.key = new int[]{var2.readInt(45), var2.readInt(-72), var2.readInt(-47), var2.readInt(79)};
         var1.unlink(0);
     }
 
-    final void a(int param0, byte[] param1, int param2) {
+    final void finishDigest(int param0, byte[] param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -43,28 +43,28 @@ final class WhirlpoolHasher {
         Sprite var9 = null;
         var8 = HoldTheLine.field_D;
         try {
-          this.field_f[this.field_e] = (byte)kc.a((int) this.field_f[this.field_e], 128 >>> LoginChoicePanel.a(7, this.field_a));
-          this.field_e = this.field_e + 1;
-          if (this.field_e > 32) {
-            while (this.field_e < 64) {
-              fieldTemp$0 = this.field_e;
-              this.field_e = this.field_e + 1;
-              this.field_f[fieldTemp$0] = (byte) 0;
+          this.blockBuffer[this.bufferByteCount] = (byte)kc.a((int) this.blockBuffer[this.bufferByteCount], 128 >>> LoginChoicePanel.a(7, this.bufferBitCount));
+          this.bufferByteCount = this.bufferByteCount + 1;
+          if (this.bufferByteCount > 32) {
+            while (this.bufferByteCount < 64) {
+              fieldTemp$0 = this.bufferByteCount;
+              this.bufferByteCount = this.bufferByteCount + 1;
+              this.blockBuffer[fieldTemp$0] = (byte) 0;
             }
-            this.c(true);
-            this.field_e = 0;
+            this.processBlock(true);
+            this.bufferByteCount = 0;
           }
-          while (this.field_e < 32) {
-            fieldTemp$1 = this.field_e;
-            this.field_e = this.field_e + 1;
-            this.field_f[fieldTemp$1] = (byte) 0;
+          while (this.bufferByteCount < 32) {
+            fieldTemp$1 = this.bufferByteCount;
+            this.bufferByteCount = this.bufferByteCount + 1;
+            this.blockBuffer[fieldTemp$1] = (byte) 0;
           }
-          ArrayOperations.copyBytes(this.field_c, 0, this.field_f, 32, 32);
-          this.c(true);
+          ArrayOperations.copyBytes(this.messageBitLength, 0, this.blockBuffer, 32, 32);
+          this.processBlock(true);
           var4_int = 0;
           var5 = param2;
           while (8 > var4_int) {
-            var6 = this.field_k[var4_int];
+            var6 = this.hash[var4_int];
             param1[var5] = (byte)(int)(var6 >>> 56);
             param1[var5 + 1] = (byte)(int)(var6 >>> 48);
             param1[2 + var5] = (byte)(int)(var6 >>> 40);
@@ -78,7 +78,7 @@ final class WhirlpoolHasher {
           }
           if (param0 != 6934) {
             var9 = (Sprite) null;
-            WhirlpoolHasher.a(-73, -103, -36, (Sprite) null);
+            WhirlpoolHasher.drawScreenBlendedSprite(-73, -103, -36, (Sprite) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,21 +95,21 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void b(boolean param0) {
+    final void reset(boolean param0) {
         int var2 = 0;
         int var3 = HoldTheLine.field_D;
         int var2Lifetime1;
         for (var2 = 0; var2 < 32; var2++) {
-          this.field_c[var2] = (byte) 0;
+          this.messageBitLength[var2] = (byte) 0;
         }
-        this.field_f[0] = (byte) 0;
+        this.blockBuffer[0] = (byte) 0;
         if (param0) {
           return;
         }
-        this.field_a = 0;
-        this.field_e = 0;
+        this.bufferBitCount = 0;
+        this.bufferByteCount = 0;
         for (var2Lifetime1 = 0; 8 > var2Lifetime1; var2Lifetime1++) {
-          this.field_k[var2Lifetime1] = 0L;
+          this.hash[var2Lifetime1] = 0L;
         }
     }
 
@@ -136,7 +136,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3) {
+    final static void drawScreenBlendedSprite(int param0, int param1, int param2, Sprite param3) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -229,7 +229,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void processBlock(boolean param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -254,48 +254,48 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_g[var2] = GameKeyHandler.a(GameKeyHandler.a(ViewportSizingController.andLong(65280L, (long)this.field_f[var3 + 6] << 8), GameKeyHandler.a(ViewportSizingController.andLong((long)this.field_f[5 + var3] << 16, 16711680L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a((long)this.field_f[var3] << 56, ViewportSizingController.andLong(255L, (long)this.field_f[1 + var3]) << 48), ViewportSizingController.andLong((long)this.field_f[2 + var3], 255L) << 40), ViewportSizingController.andLong(1095216660480L, (long)this.field_f[3 + var3] << 32)), ViewportSizingController.andLong((long)this.field_f[4 + var3] << 24, 4278190080L)))), ViewportSizingController.andLong(255L, (long)this.field_f[var3 + 7]));
+          this.blockWords[var2] = GameKeyHandler.a(GameKeyHandler.a(ViewportSizingController.andLong(65280L, (long)this.blockBuffer[var3 + 6] << 8), GameKeyHandler.a(ViewportSizingController.andLong((long)this.blockBuffer[5 + var3] << 16, 16711680L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a((long)this.blockBuffer[var3] << 56, ViewportSizingController.andLong(255L, (long)this.blockBuffer[1 + var3]) << 48), ViewportSizingController.andLong((long)this.blockBuffer[2 + var3], 255L) << 40), ViewportSizingController.andLong(1095216660480L, (long)this.blockBuffer[3 + var3] << 32)), ViewportSizingController.andLong((long)this.blockBuffer[4 + var3] << 24, 4278190080L)))), ViewportSizingController.andLong(255L, (long)this.blockBuffer[var3 + 7]));
           var2++;
           var3 += 8;
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 8; var2Lifetime1++) {
-          dupTemp$0 = this.field_k[var2Lifetime1];
-          arrayValue$1 = this.field_g[var2Lifetime1];
-          this.field_d[var2Lifetime1] = dupTemp$0;
-          this.field_b[var2Lifetime1] = GameKeyHandler.a(arrayValue$1, dupTemp$0);
+          dupTemp$0 = this.hash[var2Lifetime1];
+          arrayValue$1 = this.blockWords[var2Lifetime1];
+          this.roundKey[var2Lifetime1] = dupTemp$0;
+          this.cipherState[var2Lifetime1] = GameKeyHandler.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
-            this.field_j[var3Lifetime1] = 0L;
+            this.roundScratch[var3Lifetime1] = 0L;
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_j[var3Lifetime1] = GameKeyHandler.a(this.field_j[var3Lifetime1], ri.field_g[var4][LoginChoicePanel.a((int)(this.field_d[LoginChoicePanel.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.roundScratch[var3Lifetime1] = GameKeyHandler.a(this.roundScratch[var3Lifetime1], ri.field_g[var4][LoginChoicePanel.a((int)(this.roundKey[LoginChoicePanel.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
           }
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
-            this.field_d[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
+            this.roundKey[var3Lifetime1Lifetime1] = this.roundScratch[var3Lifetime1Lifetime1];
           }
-          this.field_d[0] = GameKeyHandler.a(this.field_d[0], ri.field_f[var2Lifetime2]);
+          this.roundKey[0] = GameKeyHandler.a(this.roundKey[0], ri.field_f[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
-            this.field_j[var3Lifetime1Lifetime2] = this.field_d[var3Lifetime1Lifetime2];
+            this.roundScratch[var3Lifetime1Lifetime2] = this.roundKey[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_j[var3Lifetime1Lifetime2] = GameKeyHandler.a(this.field_j[var3Lifetime1Lifetime2], ri.field_g[var7][LoginChoicePanel.a((int)(this.field_b[LoginChoicePanel.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.roundScratch[var3Lifetime1Lifetime2] = GameKeyHandler.a(this.roundScratch[var3Lifetime1Lifetime2], ri.field_g[var7][LoginChoicePanel.a((int)(this.cipherState[LoginChoicePanel.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
           }
           for (var3Lifetime1Lifetime3 = 0; 8 > var3Lifetime1Lifetime3; var3Lifetime1Lifetime3++) {
-            this.field_b[var3Lifetime1Lifetime3] = this.field_j[var3Lifetime1Lifetime3];
+            this.cipherState[var3Lifetime1Lifetime3] = this.roundScratch[var3Lifetime1Lifetime3];
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_k[var2Lifetime3] = GameKeyHandler.a(this.field_k[var2Lifetime3], GameKeyHandler.a(this.field_b[var2Lifetime3], this.field_g[var2Lifetime3]));
+          this.hash[var2Lifetime3] = GameKeyHandler.a(this.hash[var2Lifetime3], GameKeyHandler.a(this.cipherState[var2Lifetime3], this.blockWords[var2Lifetime3]));
         }
         return;
     }
@@ -307,7 +307,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(byte[] param0, byte param1, long param2) {
+    final void updateBits(byte[] param0, byte param1, long param2) {
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -330,13 +330,13 @@ final class WhirlpoolHasher {
           var5_int = 0;
           var6 = -73 / ((-14 - param1) / 44);
           var7 = 7 & -(7 & (int)param2) + 8;
-          var8 = this.field_a & 7;
+          var8 = this.bufferBitCount & 7;
           var10 = param2;
           var12 = 31;
           var13 = 0;
           while (var12 >= 0) {
-            var13 = var13 + (((int)var10 & 255) + (255 & this.field_c[var12]));
-            this.field_c[var12] = (byte)var13;
+            var13 = var13 + (((int)var10 & 255) + (255 & this.messageBitLength[var12]));
+            this.messageBitLength[var12] = (byte)var13;
             var10 = var10 >>> 8;
             var13 = var13 >>> 8;
             var12--;
@@ -345,18 +345,18 @@ final class WhirlpoolHasher {
             var9 = 255 & param0[var5_int] << var7 | (255 & param0[1 + var5_int]) >>> -var7 + 8;
             if (var9 >= 0 &&
               var9 < 256) {
-              this.field_f[this.field_e] = (byte)kc.a((int) this.field_f[this.field_e], var9 >>> var8);
-              this.field_e = this.field_e + 1;
-              this.field_a = this.field_a + (-var8 + 8);
-              if (this.field_a == 512) {
-                this.c(true);
-                this.field_e = 0;
-                this.field_a = 0;
+              this.blockBuffer[this.bufferByteCount] = (byte)kc.a((int) this.blockBuffer[this.bufferByteCount], var9 >>> var8);
+              this.bufferByteCount = this.bufferByteCount + 1;
+              this.bufferBitCount = this.bufferBitCount + (-var8 + 8);
+              if (this.bufferBitCount == 512) {
+                this.processBlock(true);
+                this.bufferByteCount = 0;
+                this.bufferBitCount = 0;
               }
-              this.field_f[this.field_e] = (byte)LoginChoicePanel.a(var9 << -var8 + 8, 255);
+              this.blockBuffer[this.bufferByteCount] = (byte)LoginChoicePanel.a(var9 << -var8 + 8, 255);
               param2 = param2 - 8L;
               var5_int++;
-              this.field_a = this.field_a + var8;
+              this.bufferBitCount = this.bufferBitCount + var8;
               continue;
             }
             throw new RuntimeException("LOGIC ERROR");
@@ -365,23 +365,23 @@ final class WhirlpoolHasher {
             stackIn_15_0 = 255;
             stackIn_15_1 = param0[var5_int] << var7;
             var9Lifetime1 = stackIn_15_0 & stackIn_15_1;
-            this.field_f[this.field_e] = (byte)kc.a((int) this.field_f[this.field_e], var9Lifetime1 >>> var8);
+            this.blockBuffer[this.bufferByteCount] = (byte)kc.a((int) this.blockBuffer[this.bufferByteCount], var9Lifetime1 >>> var8);
           } else {
             var9Lifetime1 = 0;
           }
           if (param2 + (long)var8 < 8L) {
-            this.field_a = (int)((long)this.field_a + param2);
+            this.bufferBitCount = (int)((long)this.bufferBitCount + param2);
           } else {
             param2 = param2 - (long)(-var8 + 8);
-            this.field_a = this.field_a + (8 - var8);
-            this.field_e = this.field_e + 1;
-            if (this.field_a == 512) {
-              this.c(true);
-              this.field_e = 0;
-              this.field_a = 0;
+            this.bufferBitCount = this.bufferBitCount + (8 - var8);
+            this.bufferByteCount = this.bufferByteCount + 1;
+            if (this.bufferBitCount == 512) {
+              this.processBlock(true);
+              this.bufferByteCount = 0;
+              this.bufferBitCount = 0;
             }
-            this.field_f[this.field_e] = (byte)LoginChoicePanel.a(var9Lifetime1 << 8 - var8, 255);
-            this.field_a = this.field_a + (int)param2;
+            this.blockBuffer[this.bufferByteCount] = (byte)LoginChoicePanel.a(var9Lifetime1 << 8 - var8, 255);
+            this.bufferBitCount = this.bufferBitCount + (int)param2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -399,15 +399,15 @@ final class WhirlpoolHasher {
     }
 
     WhirlpoolHasher() {
-        this.field_f = new byte[64];
-        this.field_j = new long[8];
-        this.field_k = new long[8];
-        this.field_g = new long[8];
-        this.field_a = 0;
-        this.field_d = new long[8];
-        this.field_e = 0;
-        this.field_b = new long[8];
-        this.field_c = new byte[32];
+        this.blockBuffer = new byte[64];
+        this.roundScratch = new long[8];
+        this.hash = new long[8];
+        this.blockWords = new long[8];
+        this.bufferBitCount = 0;
+        this.roundKey = new long[8];
+        this.bufferByteCount = 0;
+        this.cipherState = new long[8];
+        this.messageBitLength = new byte[32];
     }
 
     static {

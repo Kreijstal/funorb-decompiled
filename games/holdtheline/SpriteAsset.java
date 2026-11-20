@@ -32,13 +32,13 @@ final class SpriteAsset {
           return this.field_b;
         }
         if (param0 == 8192) {
-          dupTemp$0 = RoadSegment.b(this.field_e, (byte) -63);
+          dupTemp$0 = RoadSegment.loadSpriteByName(this.field_e, (byte) -63);
           this.field_b = dupTemp$0;
           return dupTemp$0;
         }
         String var3 = (String) null;
         SpriteAsset.a(-37, (String) null, (byte) 101, true, 47, (String) null, (String) null);
-        Sprite dupTemp$1 = RoadSegment.b(this.field_e, (byte) -63);
+        Sprite dupTemp$1 = RoadSegment.loadSpriteByName(this.field_e, (byte) -63);
         this.field_b = dupTemp$1;
         return dupTemp$1;
     }

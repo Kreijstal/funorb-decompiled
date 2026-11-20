@@ -2,41 +2,41 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class NetworkGameClient extends GameAppletShell {
-    private long field_l;
-    private boolean field_v;
-    private int field_t;
-    private int field_u;
-    private int field_q;
+    private long instanceId;
+    private boolean member;
+    private int gameCrc;
+    private int languageId;
+    private int affiliateId;
     static String field_r;
-    private boolean field_w;
+    private boolean officialCodebase;
     static Sprite field_m;
     static int[] field_s;
-    private int field_y;
-    private int field_p;
-    private int field_x;
+    private int secondaryGamePort;
+    private int serverId;
+    private int primaryGamePort;
     private boolean field_o;
-    String field_n;
+    String serverHost;
 
-    final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
-        this.a(98, false);
+    final void configurePacketHandlers(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
+        this.enableCommonPackets(98, false);
         if (param1) {
-          this.n(param4 - 657);
+          this.enableArchiveKeyPackets(param4 - 657);
         }
         if (param3) {
-          this.a(true);
+          this.setLeaderboardPacketsEnabled(true);
         }
         if (param4 != 640) {
-          this.field_u = -90;
+          this.languageId = -90;
         }
         if (param0) {
-          this.h(-6);
+          this.enableIntDataPackets(-6);
         }
         if (param2) {
-          this.i(param4 ^ 645);
+          this.enablePacketHandler(param4 ^ 645);
         }
     }
 
-    private final void k(int param0) {
+    private final void initializeServerPacketLengths(int param0) {
         ae.field_e[3] = -1;
         ae.field_e[11] = -1;
         ae.field_e[7] = -1;
@@ -54,20 +54,20 @@ abstract class NetworkGameClient extends GameAppletShell {
         ae.field_e[5] = -1;
         if (param0 != 29385) {
           String var3 = (String) null;
-          this.a(-53, 124, (String) null);
+          this.initializeApplet(-53, 124, (String) null);
         }
         ae.field_e[6] = -2;
     }
 
-    private final void a(boolean param0) {
+    private final void setLeaderboardPacketsEnabled(boolean param0) {
         PathWaypoint.field_j[2] = param0;
     }
 
-    private final void i(int param0) {
+    private final void enablePacketHandler(int param0) {
         PathWaypoint.field_j[param0] = true;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
+    final void initializeClientServices(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
@@ -75,10 +75,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param4 != 63) {
           field_m = (Sprite) null;
         }
-        WidgetContainer.field_C = this.field_u;
+        WidgetContainer.field_C = this.languageId;
         AccountProgressDialog.a(WidgetContainer.field_C, (byte) 89);
-        WidgetContainer.a(this.field_t, this.field_v, 5000, 5000, this.field_y, this.field_x, wi.field_b, param1, this.field_l, this.field_n, WidgetContainer.field_C, param0, true, this.field_p);
-        HuffmanDecoder.initializeArchiveLoading(this.field_t, 24, WidgetContainer.field_C, wi.field_b, this.field_x, this.field_n, param0, this.field_y, this.field_p);
+        WidgetContainer.initializeNetworkState(this.gameCrc, this.member, 5000, 5000, this.secondaryGamePort, this.primaryGamePort, wi.field_b, param1, this.instanceId, this.serverHost, WidgetContainer.field_C, param0, true, this.serverId);
+        HuffmanDecoder.initializeArchiveLoading(this.gameCrc, 24, WidgetContainer.field_C, wi.field_b, this.primaryGamePort, this.serverHost, param0, this.secondaryGamePort, this.serverId);
         BoundaryIntersection.configurePunctuationKeyCodes(false);
         TrackBoundary.field_u = HoldTheLine.createMouseWheelInput((byte) -87);
         LinkWidgetRenderer.a(MouseInputHandler.field_b, 114);
@@ -87,18 +87,18 @@ abstract class NetworkGameClient extends GameAppletShell {
         PasswordValidator.field_k = param7;
         DiskCacheWorker.field_i = param5;
         LayeredButtonRenderer.field_v = param3;
-        this.k(29385);
+        this.initializeServerPacketLengths(29385);
         fj.f(0);
     }
 
-    private final void h(int param0) {
+    private final void enableIntDataPackets(int param0) {
         PathWaypoint.field_j[4] = true;
         if (param0 != -6) {
-          this.field_l = 25L;
+          this.instanceId = 25L;
         }
     }
 
-    final void j(int param0) {
+    final void dispatchServerPacket(int param0) {
         boolean stackIn_22_0 = false;
         int var2;
         ij var3;
@@ -114,7 +114,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             return;
           }
           if (var2 == 1) {
-            WhirlpoolHasher.a((byte) 79);
+            WhirlpoolHasher.readArchiveKeyReply((byte) 79);
           } else {
             if (var2 == 2) {
               Js5Transport.b((byte) 68);
@@ -123,19 +123,19 @@ abstract class NetworkGameClient extends GameAppletShell {
                 ArchiveCatalog.b((byte) -128);
               } else {
                 if (4 == var2) {
-                  q.c((byte) -24);
+                  q.readIntDataReply((byte) -24);
                 } else {
                   if (var2 == 5) {
-                    hm.b(param0 ^ -56);
+                    hm.readBlobReply(param0 ^ -56);
                   } else {
                     if (var2 == 6) {
                       BufferedSocket.b((byte) -126);
                     } else {
                       if (var2 == 7) {
-                        this.e((byte) -15);
+                        this.readNavigationPacket((byte) -15);
                       } else {
                         if (var2 == 8) {
-                          tn.a((byte) -107, wi.field_b, RoadStripRenderer.field_e, ad.field_c);
+                          GrowableStringList.readReflectionCheck((byte) -107, wi.field_b, RoadStripRenderer.field_e, ad.field_c);
                         } else {
                           if (var2 == 16) {
                             TutorialCondition.a((byte) 3);
@@ -147,14 +147,14 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.o(-1);
+                                this.readCipheredNavigationPacket(-1);
                                 return;
                               }
                               if (var2 == 18) {
                                 QuickChatPhraseCache.a(param0 ^ 41);
                                 return;
                               }
-                              MusicPatchPcmStream.a((Throwable) null, (byte) -119, "MGS1: " + AgeValidator.b(false));
+                              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -119, "MGS1: " + AgeValidator.b(false));
                               r.a(-28036);
                               return;
                             }
@@ -172,12 +172,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           return;
         }
-        MusicPatchPcmStream.a((Throwable) null, (byte) 70, "MGS2: " + AgeValidator.b(false));
+        MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 70, "MGS2: " + AgeValidator.b(false));
         r.a(-28036);
         return;
     }
 
-    private final int a(boolean param0, boolean param1, boolean param2) {
+    private final int processAccountScreens(boolean param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -209,7 +209,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = SpriteAsset.a(oi.a((byte) 31), TimedValidator.d((byte) -116), (byte) 80, MidiNote.a((byte) -27), this.field_q, tn.d(0), FullscreenFocusCanvas.c(4));
+            var5_intLifetime1 = SpriteAsset.a(oi.a((byte) 31), TimedValidator.d((byte) -116), (byte) 80, MidiNote.a((byte) -27), this.affiliateId, GrowableStringList.d(0), FullscreenFocusCanvas.c(4));
             if (var5_intLifetime1 != -1) {
               StandardContentTransitionDialog.a(um.field_b, IsaacRandom.field_h, -98, var5_intLifetime1);
               IsaacRandom.field_h = null;
@@ -223,13 +223,13 @@ abstract class NetworkGameClient extends GameAppletShell {
               GameMenu.clearJs5Errors(-87);
             }
             if (!param0) {
-              var5_intLifetime2 = WidgetContainer.a(this.field_w, 1, tn.d(0), FullscreenFocusCanvas.c(4), false, this.field_q);
+              var5_intLifetime2 = WidgetContainer.processLogin(this.officialCodebase, 1, GrowableStringList.d(0), FullscreenFocusCanvas.c(4), false, this.affiliateId);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   NanoTickClock.a(var5_intLifetime2, um.field_b, -2698);
                   um.field_b = null;
                 } else {
-                  TutorialCalloutAnchor.field_e = vd.field_a;
+                  TutorialCalloutAnchor.field_e = RoadFillRenderer.field_a;
                   DisplayNameForm.g((byte) 121);
                   DiskCacheRequest.field_w = 10;
                   mn.field_a = false;
@@ -261,7 +261,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             co.a(GameKeyHandler.a(120), 237);
           }
           if (var4 == 9) {
-            WidgetContainer.a(GameKeyHandler.a(93), 102);
+            WidgetContainer.openSupportPage(GameKeyHandler.a(93), 102);
           }
           if (var4 == 10) {
             IsaacPacketBuffer.field_p.writeCipheredOpcode((byte) 33, 17);
@@ -284,19 +284,19 @@ abstract class NetworkGameClient extends GameAppletShell {
                 var12 = SpriteSheetAsset.field_a.b((byte) 85);
                 if (var12 != null) {
                   var7 = sm.decodeCp1252(var12.position, 0, -129, var12.payload);
-                  t.a(var7, (byte) -55);
+                  IntArrayReadRequest.a(var7, (byte) -55);
                 } else {
                   var9 = (String) null;
-                  t.a((String) null, (byte) -64);
+                  IntArrayReadRequest.a((String) null, (byte) -64);
                 }
                 SpriteSheetAsset.field_a = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              MusicPatchPcmStream.a((Throwable) ((Object) var5), (byte) 87, "S1");
+              MusicPatchPcmStream.reportClientError((Throwable) ((Object) var5), (byte) 87, "S1");
               var10 = (String) null;
-              t.a((String) null, (byte) -87);
+              IntArrayReadRequest.a((String) null, (byte) -87);
               SpriteSheetAsset.field_a = null;
             }
           }
@@ -317,7 +317,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3, int param4) {
+    private final void readAppletParameters(String param0, int param1, int param2, int param3, int param4) {
         int discarded$0 = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_26_0 = null;
@@ -336,40 +336,40 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (!this.e(-11)) {
               return;
             }
-            this.field_n = this.getCodeBase().getHost();
-            var6 = this.field_n.toLowerCase();
+            this.serverHost = this.getCodeBase().getHost();
+            var6 = this.serverHost.toLowerCase();
             stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
-            this.field_w = stackIn_7_1;
-            this.field_x = Integer.parseInt(this.getParameter("gameport1"));
-            this.field_y = Integer.parseInt(this.getParameter("gameport2"));
+            this.officialCodebase = stackIn_7_1;
+            this.primaryGamePort = Integer.parseInt(this.getParameter("gameport1"));
+            this.secondaryGamePort = Integer.parseInt(this.getParameter("gameport2"));
             var7 = this.getParameter("servernum");
             if (var7 != null) {
-              this.field_p = Integer.parseInt(var7);
+              this.serverId = Integer.parseInt(var7);
             }
-            this.field_t = Integer.parseInt(this.getParameter("gamecrc"));
-            this.field_l = Long.parseLong(this.getParameter("instanceid"));
+            this.gameCrc = Integer.parseInt(this.getParameter("gamecrc"));
+            this.instanceId = Long.parseLong(this.getParameter("instanceid"));
             if (param2 < 125) {
-              discarded$0 = this.a(false, true, false);
+              discarded$0 = this.processAccountScreens(false, true, false);
             }
-            this.field_v = this.getParameter("member").equals("yes");
+            this.member = this.getParameter("member").equals("yes");
             var8 = this.getParameter("lang");
             if (var8 != null) {
-              this.field_u = Integer.parseInt(var8);
+              this.languageId = Integer.parseInt(var8);
             }
-            if (this.field_u >= 5) {
-              this.field_u = 0;
+            if (this.languageId >= 5) {
+              this.languageId = 0;
             }
             var9 = this.getParameter("affid");
             if (var9 != null) {
-              this.field_q = Integer.parseInt(var9);
+              this.affiliateId = Integer.parseInt(var9);
             }
             vb.field_b = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param0, param1, param4, param3, (byte) -101, this.field_t, 32);
+            this.a(param0, param1, param4, param3, (byte) -101, this.gameCrc, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            MusicPatchPcmStream.a((Throwable) ((Object) var6_ref), (byte) 113, (String) null);
+            MusicPatchPcmStream.reportClientError((Throwable) ((Object) var6_ref), (byte) 113, (String) null);
             this.a("crash", 221);
           }
           return;
@@ -387,7 +387,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void updateClientServices(int param0, boolean param1) {
         int stackIn_23_0 = 0;
         boolean stackIn_100_0 = false;
         int stackIn_102_1 = 0;
@@ -486,7 +486,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   NanoTickClock.a(256, ll.field_b, -2698);
                 }
               } else {
-                NanoTickClock.a(256, t.field_k, -2698);
+                NanoTickClock.a(256, IntArrayReadRequest.field_k, -2698);
               }
               pj.field_n = true;
             }
@@ -531,7 +531,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (ml.field_a.tryLoadNamedGroup("", param0 - 1135)) {
                 ClientTextResources.loadInterfaceText(1, ml.field_a);
                 ml.field_a = null;
-                qd.d(42);
+                TexturedRoadFillRenderer.resetFrameTiming(42);
               }
             }
           }
@@ -562,12 +562,12 @@ abstract class NetworkGameClient extends GameAppletShell {
             ao.field_f = qh.a(124);
             CheckboxRenderer.field_l = ContentTransitionDialog.m(param0 + 28624);
           }
-          fi.a(CheckboxRenderer.field_l, ArchiveRequest.field_p, param0 ^ 1051, ao.field_f);
+          SocialListEntry.a(CheckboxRenderer.field_l, ArchiveRequest.field_p, param0 ^ 1051, ao.field_f);
           LinkWidgetRenderer.field_d = null;
           IntrusiveDeque.field_d = null;
           ArchiveRequest.field_p = null;
           DraggableWidget.a((java.applet.Applet) (this), (byte) 92);
-          qd.d(71);
+          TexturedRoadFillRenderer.resetFrameTiming(71);
           PolarSortVector.field_d = 10;
         }
         if (10 == PolarSortVector.field_d) {
@@ -589,7 +589,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (param0 != 1051) {
-          this.field_y = 95;
+          this.secondaryGamePort = 95;
         }
         if (12 == PolarSortVector.field_d &&
           !EditableTextField.field_R) {
@@ -617,7 +617,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void enableCommonPackets(int param0, boolean param1) {
         if (param0 <= 96) {
           this.field_o = true;
         }
@@ -639,7 +639,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         field_m = null;
     }
 
-    final int d(byte param0) {
+    final int processReconnect(byte param0) {
         if (this.field_b) {
           return -1;
         }
@@ -649,7 +649,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (pj.field_n) {
           return -1;
         }
-        int var2 = WidgetContainer.a(this.field_w, 1, tn.d(0), FullscreenFocusCanvas.c(4), true, this.field_q);
+        int var2 = WidgetContainer.processLogin(this.officialCodebase, 1, GrowableStringList.d(0), FullscreenFocusCanvas.c(4), true, this.affiliateId);
         if (var2 == -1) {
           return -1;
         }
@@ -674,7 +674,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         return 54;
     }
 
-    final static int a(PcmSample param0, int param1, int param2) {
+    final static int sampleFramesForMillis(PcmSample param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -701,31 +701,31 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void initializeAccountScreenSelection(boolean param0, boolean param1) {
         AccountFormText.field_b = 0;
         hk.field_e = BoundedRandomAccessFile.field_g;
         SpriteSheetAsset.field_e = 0;
         UrlPacketDownloader.field_i = 0;
-        DualLinkNode.field_k = new jn(2);
+        DualLinkNode.field_k = new MenuSelectionController(2);
         if (!param1) {
           field_s = (int[]) null;
         }
-        DualLinkNode.field_k.a(PasswordValidator.a(125, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 0, param0, -1);
+        DualLinkNode.field_k.setSelectionState(PasswordValidator.a(125, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 0, param0, -1);
     }
 
-    private final void n(int param0) {
+    private final void enableArchiveKeyPackets(int param0) {
         if (param0 != -17) {
-          this.field_l = 71L;
+          this.instanceId = 71L;
         }
         PathWaypoint.field_j[1] = true;
     }
 
-    final void l(int param0) {
+    final void updateAccountScreens(int param0) {
         int discarded$1 = 0;
         int discarded$2 = 0;
         int var3 = HoldTheLine.field_D;
-        if (jn.a((byte) -30)) {
-          discarded$1 = this.a(false, null != NetworkArchiveRequest.field_w ? true : false, true);
+        if (MenuSelectionController.isAccountUiReady((byte) -30)) {
+          discarded$1 = this.processAccountScreens(false, null != NetworkArchiveRequest.field_w ? true : false, true);
         } else {
           if (PolarSortVector.field_d >= 10) {
             if (!ge.a(true)) {
@@ -734,87 +734,87 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (0 != DiskCacheRequest.field_w) {
                 DiskCacheWorker.a(LoginForm.field_T, (byte) -97);
               } else {
-                discarded$2 = this.a(false, false, true);
+                discarded$2 = this.processAccountScreens(false, false, true);
               }
             }
           }
         }
         if (param0 != 0) {
-          this.a(false);
+          this.setLeaderboardPacketsEnabled(false);
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void initializeApplet(int param0, int param1, String param2) {
         try {
-          this.a(param2, 640, 127, 480, param0);
+          this.readAppletParameters(param2, 640, 127, 480, param0);
           if (param1 != 6165) {
-            NetworkGameClient.a(true, false);
+            NetworkGameClient.initializeAccountScreenSelection(true, false);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "oh.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int c(int param0, boolean param1) {
+    final int processAccountScreens(int param0, boolean param1) {
         if (param0 != -1) {
           this.field_o = false;
         }
-        return this.a(true, param1, true);
+        return this.processAccountScreens(true, param1, true);
     }
 
-    private final void e(byte param0) {
-        String var2 = vd.a(-1);
+    private final void readNavigationPacket(byte param0) {
+        String var2 = RoadFillRenderer.readServerString(-1);
         if (param0 != -15) {
-          NetworkGameClient.a(false, false);
+          NetworkGameClient.initializeAccountScreenSelection(false, false);
         }
         mn.a(var2, GameKeyHandler.a(104), -1);
     }
 
-    final static nl[] a(PlatformTaskDispatcher param0, byte param1) {
+    final static FullscreenDisplayMode[] listFullscreenDisplayModes(PlatformTaskDispatcher param0, byte param1) {
         int var5 = 0;
-        nl[] stackIn_3_0 = null;
-        nl[] stackIn_9_0 = null;
-        nl[] stackIn_16_0 = null;
+        FullscreenDisplayMode[] stackIn_3_0 = null;
+        FullscreenDisplayMode[] stackIn_9_0 = null;
+        FullscreenDisplayMode[] stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        nl[] var4 = null;
-        nl var6 = null;
+        FullscreenDisplayMode[] var4 = null;
+        FullscreenDisplayMode var6 = null;
         int var7 = 0;
         PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = HoldTheLine.field_D;
         try {
-          if (!param0.a(true)) {
-            stackIn_3_0 = new nl[]{};
+          if (!param0.isFullscreenSupported(true)) {
+            stackIn_3_0 = new FullscreenDisplayMode[]{};
             return stackIn_3_0;
           }
-          var8 = param0.a(2);
+          var8 = param0.listDisplayModes(2);
           while (0 == var8.field_d) {
             SocketConnector.sleepMillis(10L, (byte) 45);
           }
           if (var8.field_d == 2) {
-            stackIn_9_0 = new nl[]{};
+            stackIn_9_0 = new FullscreenDisplayMode[]{};
             return stackIn_9_0;
           }
           var10 = (int[]) (var8.field_b);
           var9 = var10;
           var3 = var9;
-          var4 = new nl[var10.length >> 2];
+          var4 = new FullscreenDisplayMode[var10.length >> 2];
           if (param1 <= 108) {
             field_s = (int[]) null;
           }
           for (var5 = 0; var4.length > var5; var5++) {
-            var6 = new nl();
+            var6 = new FullscreenDisplayMode();
             var4[var5] = var6;
-            var6.field_b = var3[var5 << 2];
-            var6.field_a = var3[(var5 << 2) + 1];
-            var6.field_g = var3[2 + (var5 << 2)];
-            var6.field_d = var3[(var5 << 2) + 3];
+            var6.width = var3[var5 << 2];
+            var6.height = var3[(var5 << 2) + 1];
+            var6.bitDepth = var3[2 + (var5 << 2)];
+            var6.refreshRate = var3[(var5 << 2) + 3];
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;
@@ -832,13 +832,13 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    private final void o(int param0) {
+    private final void readCipheredNavigationPacket(int param0) {
         int var2 = RoadStripRenderer.field_e.readUnsignedByte((byte) -97);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         int var4 = param0 + ad.field_c;
         byte[] var5 = new byte[var4];
         RoadStripRenderer.field_e.readCipheredBytes(var5, var4, 0, true);
-        ba.a(-7235, rk.a((byte) 80, var5), var3 != 0, GameKeyHandler.a(109));
+        ba.a(-7235, RoadLayerMaskRenderer.decodeCp1252((byte) 80, var5), var3 != 0, GameKeyHandler.a(109));
     }
 
     protected NetworkGameClient() {

@@ -157,12 +157,12 @@ abstract class MenuList {
           if (0 >= r.field_b) {
             if (1 != param2) {
               this.decreaseItemValue(1, param1);
-              r.field_b = ki.field_o;
+              r.field_b = ReflectionCheck.field_o;
               var7 = 14 % ((param3 + 51) / 46);
               return;
             }
             this.activateItem(param1, -3565);
-            r.field_b = ki.field_o;
+            r.field_b = ReflectionCheck.field_o;
           }
         }
         var7Lifetime1 = 14 % ((param3 + 51) / 46);

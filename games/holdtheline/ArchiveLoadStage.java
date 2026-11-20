@@ -79,7 +79,7 @@ final class ArchiveLoadStage {
             boolean decompiledFrameRemainder0 = true;
             if (~lj.field_a[var3].field_h == ~param1.field_h) {
               var4 = lj.field_a[var3].a(param0 ^ -21258);
-              if (se.field_i < CheckboxRenderer.field_n[var4]) {
+              if (IntWriteRequest.field_i < CheckboxRenderer.field_n[var4]) {
                 CheckboxRenderer.field_n[var4] = CheckboxRenderer.field_n[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

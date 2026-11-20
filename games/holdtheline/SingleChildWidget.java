@@ -102,23 +102,23 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    final static fl a(byte[] param0, int param1, int param2) {
-        fl var3 = null;
+    final static BlobWriteRequest requestBlobWrite(byte[] param0, int param1, int param2) {
+        BlobWriteRequest var3 = null;
         RuntimeException var3_ref = null;
-        fl stackIn_2_0 = null;
-        fl stackIn_4_0 = null;
+        BlobWriteRequest stackIn_2_0 = null;
+        BlobWriteRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new fl(param0);
+          var3 = new BlobWriteRequest(param0);
           if (param2 != 0) {
-            stackIn_2_0 = (fl) null;
+            stackIn_2_0 = (BlobWriteRequest) null;
             return stackIn_2_0;
           }
           UsernameLoginCredentials.field_e.addLast((byte) -86, var3);
-          TrackObjectDefinition.a(27391, var3, param1);
+          TrackObjectDefinition.sendBlobWriteRequest(27391, var3, param1);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,7 +135,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    private final boolean b(int param0, UiWidget param1) {
+    private final boolean focusPreviousChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -162,7 +162,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    private final boolean a(int param0, UiWidget param1) {
+    private final boolean focusNextChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -189,14 +189,14 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    void a(int param0) {
+    void refreshChildLayout(int param0) {
         if (this.child != null) {
           this.child.refreshLayout(82);
         }
         int var2 = 91 / ((param0 + 68) / 32);
     }
 
-    UiWidget a(byte param0) {
+    UiWidget getFocusedChild(byte param0) {
         UiWidget var2 = this.child;
         if (var2 != null &&
           var2.isFocused((byte) -20)) {
@@ -235,7 +235,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         }
     }
 
-    final static GrowableIntList a(int param0, int param1) {
+    final static GrowableIntList createAdditiveIntList(int param0, int param1) {
         if (param1 <= 40) {
           SingleChildWidget.clearSharedReferences((byte) 22);
         }
@@ -276,7 +276,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         try {
           if (this.beginDebugVisit(20720, param2, param3, param0)) {
             this.appendDebugProperties(param2, param0, true, param3);
-            this.a((byte) 123, param0, param3, param2);
+            this.appendChildDebugTree((byte) 123, param0, param3, param2);
           }
           var5_int = 107 / ((0 - param1) / 49);
           stackIn_4_0 = (StringBuilder) (param3);
@@ -319,9 +319,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
           var5_int = param1;
           if (var5_int == 80) {
             if (!IterableSecondaryNodeDeque.field_g[81]) {
-              stackIn_11_0 = this.b(param2 ^ 29, param0);
+              stackIn_11_0 = this.focusPreviousChild(param2 ^ 29, param0);
             } else {
-              stackIn_11_0 = this.a(3, param0);
+              stackIn_11_0 = this.focusNextChild(3, param0);
             }
             return stackIn_11_0;
           }
@@ -347,7 +347,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
 
     final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.a(117);
+        this.refreshChildLayout(117);
     }
 
     void handleMouseRelease(int param0, UiWidget param1, int param2, int param3, byte param4, int param5) {
@@ -397,7 +397,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         if (param0 != -20) {
           return false;
         }
-        return null != this.a((byte) 123) ? true : false;
+        return null != this.getFocusedChild((byte) 123) ? true : false;
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -410,7 +410,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
         field_E = null;
     }
 
-    final void a(byte param0, int param1, StringBuilder param2, Hashtable param3) {
+    final void appendChildDebugTree(byte param0, int param1, StringBuilder param2, Hashtable param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$3 = null;

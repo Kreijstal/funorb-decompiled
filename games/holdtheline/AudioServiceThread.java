@@ -34,7 +34,7 @@ final class AudioServiceThread implements Runnable {
               for (var1_int = 0; var1_int < 2; var1_int++) {
                 var2 = this.field_d[var1_int];
                 if (var2 != null) {
-                  var2.d();
+                  var2.service();
                 }
               }
               SocketConnector.sleepMillis(10L, (byte) 45);
@@ -45,7 +45,7 @@ final class AudioServiceThread implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var5 = (String) null;
-            MusicPatchPcmStream.a((Throwable) ((Object) var1), (byte) 57, (String) null);
+            MusicPatchPcmStream.reportClientError((Throwable) ((Object) var1), (byte) 57, (String) null);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

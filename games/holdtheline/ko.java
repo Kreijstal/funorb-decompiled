@@ -122,18 +122,18 @@ final class ko {
               TutorialAction.field_a = false;
               var3_int = 1;
             }
-            DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
+            DraggableWidget.a(q.getInterfaceLoadingStatus((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
           } else {
             if (!ge.a(true)) {
               SoftwareRasterizer.clear();
               vb.a(-76, 240, 320);
-              hi.a(param1, 0, true, 0);
+              hi.paintRasterBuffer(param1, 0, true, 0);
             } else {
               if (DiskCacheRequest.field_w != 0) {
                 MidiNote.a((byte) -97, param1);
               } else {
                 CourseDefinition.a(param2, false, 86);
-                hi.a(param1, 0, true, 0);
+                hi.paintRasterBuffer(param1, 0, true, 0);
               }
             }
           }
@@ -178,18 +178,18 @@ final class ko {
               TutorialAction.field_a = false;
               var3_int = 1;
             }
-            DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
+            DraggableWidget.a(q.getInterfaceLoadingStatus((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
           } else {
             if (!ge.a(true)) {
               SoftwareRasterizer.clear();
               vb.a(-76, 240, 320);
-              hi.a(param1, 0, true, 0);
+              hi.paintRasterBuffer(param1, 0, true, 0);
             } else {
               if (DiskCacheRequest.field_w != 0) {
                 MidiNote.a((byte) -97, param1);
               } else {
                 CourseDefinition.a(param2, false, 86);
-                hi.a(param1, 0, true, 0);
+                hi.paintRasterBuffer(param1, 0, true, 0);
               }
             }
           }

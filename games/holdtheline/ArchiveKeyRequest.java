@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fo extends IntrusiveNode {
-    int field_l;
+final class ArchiveKeyRequest extends IntrusiveNode {
+    int id;
     static QuickChatDynamicCommand field_n;
-    int[] field_i;
-    int field_j;
+    int[] key;
+    int category;
     static sh field_k;
     static String field_m;
     private static String field_z;
@@ -19,7 +19,7 @@ final class fo extends IntrusiveNode {
         }
     }
 
-    fo() {
+    ArchiveKeyRequest() {
     }
 
     static {

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi extends hi {
-    String field_hb;
+final class SocialListEntry extends hi {
+    String worldName;
     static boolean field_nb;
     static String field_jb;
     static String field_kb;
-    int field_gb;
+    int insertionOrder;
     static int[][] field_lb;
-    String field_mb;
+    String displayName;
     static String field_ib;
 
     final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
@@ -35,7 +35,7 @@ final class fi extends hi {
         }
     }
 
-    final static MonochromeBitmapFont a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
+    final static MonochromeBitmapFont loadMonochromeFont(int param0, ResourceArchive param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
         Object stackIn_2_0 = null;
@@ -47,13 +47,13 @@ final class fi extends hi {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qg.a(param4, param3, (byte) -27, param2)) {
+          if (!qg.decodeArchivedSpriteSheet(param4, param3, (byte) -27, param2)) {
             stackIn_2_0 = null;
             return (MonochromeBitmapFont) (stackIn_2_0);
           }
           if (param0 != -17072) {
             var6 = (ResourceArchive) null;
-            fi.a(25, (ResourceArchive) null, (ResourceArchive) null, 26, 41);
+            SocialListEntry.loadMonochromeFont(25, (ResourceArchive) null, (ResourceArchive) null, 26, 41);
           }
           stackIn_6_0 = GameAppletShell.a(param0 - 7255, param1.getFile(param4, true, param3));
           return stackIn_6_0;
@@ -77,7 +77,7 @@ final class fi extends hi {
         }
     }
 
-    fi() {
+    SocialListEntry() {
         super(0L, (hi) null);
     }
 

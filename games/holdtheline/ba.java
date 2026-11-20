@@ -431,7 +431,7 @@ final class ba {
           RuntimeException var4_ref = null;
           try {
             if (PlatformTaskDispatcher.field_s.startsWith("win") &&
-              CurvedRoadSegment.a(false, param1)) {
+              CurvedRoadSegment.openUrlOnWindows(false, param1)) {
               return;
             }
             try {
@@ -442,7 +442,7 @@ final class ba {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              MusicPatchPcmStream.a((Throwable) null, (byte) 79, "MGR1: " + param1);
+              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 79, "MGR1: " + param1);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

@@ -80,7 +80,7 @@ final class ka {
     final static void a(int param0) {
         uk.b(-114);
         ArchiveCatalog.field_o = true;
-        fi.field_nb = true;
+        SocialListEntry.field_nb = true;
         field_b.a(false);
         if (param0 == -1) {
           IsaacPacketBuffer.a(false, we.field_t, 22676);

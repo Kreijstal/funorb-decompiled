@@ -27,13 +27,13 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
             return true;
           }
           if (param1 == 98) {
-            stackIn_5_0 = this.c(param0, -1);
+            stackIn_5_0 = this.focusPreviousChild(param0, -1);
             return stackIn_5_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_8_0 = this.b(param0, param2 ^ -51);
+          stackIn_8_0 = this.focusNextChild(param0, param2 ^ -51);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
 
     public LoginChoicePanel() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_K = new TextButton(fo.field_m, (WidgetListener) null);
+        this.field_K = new TextButton(ArchiveKeyRequest.field_m, (WidgetListener) null);
         this.field_P = new TextButton(um.field_c, (WidgetListener) null);
         this.field_F = new TextButton(ue.field_a, (WidgetListener) null);
         SpriteButtonRenderer var1 = new SpriteButtonRenderer();
@@ -73,9 +73,9 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         this.field_K.tooltip = ml.field_b;
         this.field_F.listener = (WidgetListener) (this);
         this.field_F.tooltip = TrackCurve.field_j;
-        this.a(true, this.field_P);
-        this.a(true, this.field_K);
-        this.a(true, this.field_F);
+        this.addChild(true, this.field_P);
+        this.addChild(true, this.field_K);
+        this.addChild(true, this.field_F);
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
@@ -116,7 +116,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         try {
           var2_int = param1.length();
           if (0 == var2_int) {
-            stackIn_4_0 = fo.field_k;
+            stackIn_4_0 = ArchiveKeyRequest.field_k;
             return stackIn_4_0;
           }
           if (63 < var2_int) {

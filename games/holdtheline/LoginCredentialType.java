@@ -23,12 +23,12 @@ final class LoginCredentialType {
         }
         if (!MusicPatchEnvelope.field_f) {
           if (null == IsaacRandom.field_g) {
-            IsaacRandom.field_g = hi.a(6, -52);
+            IsaacRandom.field_g = hi.requestBlobRead(6, -52);
           }
-          if (IsaacRandom.field_g.field_m) {
-            HuffmanDecoder.decodePlayerProgress(param0 - 56, IsaacRandom.field_g.field_l);
+          if (IsaacRandom.field_g.completed) {
+            HuffmanDecoder.decodePlayerProgress(param0 - 56, IsaacRandom.field_g.payload);
             if (ad.field_a) {
-              tn.a(0);
+              GrowableStringList.a(0);
             }
             MusicPatchEnvelope.field_f = true;
             IsaacRandom.field_g = null;

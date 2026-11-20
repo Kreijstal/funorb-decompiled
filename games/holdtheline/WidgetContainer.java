@@ -11,7 +11,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     static int field_E;
     static int field_B;
 
-    final void a(boolean param0, UiWidget param1) {
+    final void addChild(boolean param0, UiWidget param1) {
         if (!param0) {
           return;
         }
@@ -22,7 +22,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    private final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    private final void appendChildDebugTrees(Hashtable param0, int param1, int param2, StringBuilder param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
@@ -72,7 +72,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final static void a(byte param0, String param1, int param2, int param3, int param4) {
+    final static void drawHeader(byte param0, String param1, int param2, int param3, int param4) {
         try {
           LayeredWidgetStyle.field_i.draw(param3, param4);
           nm.field_c.draw(param1, 15 + param3, -2 + (param4 + (nm.field_c.ascent + 30) / 2), param2, -1);
@@ -82,7 +82,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, String param3, boolean param4, int param5) {
+    final static int processLogin(boolean param0, int param1, String param2, String param3, boolean param4, int param5) {
         try {
           int stackIn_5_0 = 0;
           int stackIn_29_0 = 0;
@@ -121,7 +121,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             if (AccountCreationForm.field_S == d.field_f) {
               if (param4) {
                 var10 = (String) null;
-                TriangleMesh.field_j = PathWaypoint.createLoginCredentials((String) null, vd.field_a, false, param3, true);
+                TriangleMesh.field_j = PathWaypoint.createLoginCredentials((String) null, RoadFillRenderer.field_a, false, param3, true);
               } else {
                 TriangleMesh.field_j = wi.createLoginCredentials((byte) 126, false, param2, param3);
               }
@@ -132,7 +132,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               d.field_f = um.field_d;
             }
             if (um.field_d == d.field_f &&
-              hi.b(1, (byte) 40)) {
+              hi.readServerBytes(1, (byte) 40)) {
               var6_int = RoadStripRenderer.field_e.readUnsignedByte((byte) -102);
               RoadStripRenderer.field_e.position = 0;
               if (var6_int == 0) {
@@ -144,15 +144,15 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               }
             }
             if (pb.field_c == d.field_f &&
-              hi.b(8, (byte) 40)) {
+              hi.readServerBytes(8, (byte) 40)) {
               DialogLayer.field_H = RoadStripRenderer.field_e.readLong(true);
               RoadStripRenderer.field_e.position = 0;
-              StraightRoadSegment.a(param1 ^ 1, param5, param0, TriangleMesh.field_j, param4);
+              StraightRoadSegment.writeLoginPacket(param1 ^ 1, param5, param0, TriangleMesh.field_j, param4);
               d.field_f = SoundPlayback.field_l;
             }
             boolean decompiledFrameRemainder0 = true;
             if (d.field_f == SoundPlayback.field_l &&
-              hi.b(1, (byte) 40)) {
+              hi.readServerBytes(1, (byte) 40)) {
               var6_intLifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -128);
               NineSlicePanel.field_c = var6_intLifetime1;
               RoadStripRenderer.field_e.position = 0;
@@ -178,7 +178,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             }
             if (fb.field_s == d.field_f &&
               TutorialTransition.a((byte) 55)) {
-              vd.field_a = RoadStripRenderer.field_e.readLong(true);
+              RoadFillRenderer.field_a = RoadStripRenderer.field_e.readLong(true);
               CachedArchiveProvider.field_x = RoadStripRenderer.field_e.readUnsignedByte((byte) -33);
               RoadStripRenderer.field_e.readUnsignedByte((byte) -43);
               fc.field_a = RoadStripRenderer.field_e.readUnsignedShort(-119);
@@ -207,7 +207,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               }
               QuickChatPhraseCache.field_e = RoadStripRenderer.field_e.readCp1252String(-1231);
               var11 = (CharSequence) ((Object) QuickChatPhraseCache.field_e);
-              co.field_e = MidiPcmStream.a(var11, (byte) -12);
+              co.field_e = MidiPcmStream.normalizeAccountName(var11, (byte) -12);
               q.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -95);
               d.field_f = ad.field_b;
               if (TriangleMesh.field_j.getType(true) == sb.field_d) {
@@ -231,7 +231,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
               } else {
                 try {
-                  eo.a(GameKeyHandler.a(param1 ^ 79), new Object[]{EntitySound.a(true, vd.field_a)}, false, "zap");
+                  eo.a(GameKeyHandler.a(param1 ^ 79), new Object[]{EntitySound.a(true, RoadFillRenderer.field_a)}, false, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -355,7 +355,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           UiWidget var3 = (UiWidget) null;
           this.handleScrollInput(25, (UiWidget) null, 78, 2, 104, 42, -126);
         }
-        return this.f((byte) 118) != null ? true : false;
+        return this.getFocusedChild((byte) 118) != null ? true : false;
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -394,9 +394,9 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           var6 = param1;
           if (80 == var6) {
             if (IterableSecondaryNodeDeque.field_g[81]) {
-              stackIn_15_0 = this.c(param0, param2 + 77);
+              stackIn_15_0 = this.focusPreviousChild(param0, param2 + 77);
             } else {
-              stackIn_15_0 = this.b(param0, 116);
+              stackIn_15_0 = this.focusNextChild(param0, 116);
             }
             return stackIn_15_0;
           }
@@ -533,7 +533,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final static boolean a(PacketBuffer param0, byte param1) {
+    final static boolean readBoolean(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -566,7 +566,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, boolean param7, long param8, String param9, int param10, int param11, boolean param12, int param13) {
+    final static void initializeNetworkState(int param0, boolean param1, int param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, boolean param7, long param8, String param9, int param10, int param11, boolean param12, int param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -674,7 +674,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSupportPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;
@@ -731,11 +731,11 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           return null;
         }
         StringBuilder var6 = (StringBuilder) null;
-        this.a((Hashtable) null, 49, 4, (StringBuilder) null);
+        this.appendChildDebugTrees((Hashtable) null, 49, 4, (StringBuilder) null);
         return null;
     }
 
-    final boolean b(UiWidget param0, int param1) {
+    final boolean focusNextChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -786,7 +786,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    private final void a(int param0) {
+    private final void refreshChildLayouts(int param0) {
         int var4 = HoldTheLine.field_D;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != 15) {
@@ -813,7 +813,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         try {
           if (this.beginDebugVisit(20720, param2, param3, param0)) {
             this.appendDebugProperties(param2, param0, true, param3);
-            this.a(param2, 0, param0, param3);
+            this.appendChildDebugTrees(param2, 0, param0, param3);
           }
           var5_int = -111 % ((0 - param1) / 49);
           stackIn_4_0 = (StringBuilder) (param3);
@@ -893,7 +893,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    final boolean c(UiWidget param0, int param1) {
+    final boolean focusPreviousChild(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
@@ -943,7 +943,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         }
     }
 
-    UiWidget f(byte param0) {
+    UiWidget getFocusedChild(byte param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
@@ -964,10 +964,10 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
 
     final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.a(param1 ^ 117);
+        this.refreshChildLayouts(param1 ^ 117);
     }
 
-    final static void a(int param0, int param1, fo param2) {
+    final static void sendArchiveKeyRequest(int param0, int param1, ArchiveKeyRequest param2) {
         IsaacPacketBuffer var3 = null;
         try {
           if (param0 != 3) {
@@ -975,8 +975,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           }
           var3 = IsaacPacketBuffer.field_p;
           var3.writeCipheredOpcode((byte) 33, param1);
-          var3.writeByte(param0 + 108, param2.field_j);
-          var3.writeShort(-652561784, param2.field_l);
+          var3.writeByte(param0 + 108, param2.category);
+          var3.writeShort(-652561784, param2.id);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "v.CB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

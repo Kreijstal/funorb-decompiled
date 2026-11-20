@@ -146,7 +146,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             param0.setBounds(6, (byte) 122, this.field_Z + 6, param0.height, param0.width);
             this.field_eb = new OpacityWidget(param0);
           }
-          this.a(true, this.field_eb);
+          this.addChild(true, this.field_eb);
           if (param1 != -100) {
             this.field_gb = -75;
           }

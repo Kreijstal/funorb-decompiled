@@ -4,22 +4,22 @@
 import java.io.*;
 import java.util.*;
 
-public class me {
+public class CacheFileLocator {
     private static String field_a;
     private static String field_d;
     private static boolean field_e;
     private static int field_c;
     private static Hashtable field_b;
 
-    public static File a(int param0, String param1, boolean param2, String param3) {
+    public static File resolveCacheFile(int param0, String param1, boolean param2, String param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param3, param1);
     }
 
-    private me() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 
-    public static void a(String param0, int param1, int param2) {
+    public static void initialize(String param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         Throwable decompiledCaughtException = null;
@@ -46,13 +46,13 @@ public class me {
         field_e = true;
     }
 
-    public static File a(String param0, int param1) {
+    public static File resolveCacheFile(String param0, int param1) {
         if (param1 > 10) {
-          return me.a(field_c, param0, false, field_a);
+          return CacheFileLocator.resolveCacheFile(field_c, param0, false, field_a);
         }
         String var3 = (String) null;
-        me.a((String) null, 25, 85);
-        return me.a(field_c, param0, false, field_a);
+        CacheFileLocator.initialize((String) null, 25, 85);
+        return CacheFileLocator.resolveCacheFile(field_c, param0, false, field_a);
     }
 
     static {

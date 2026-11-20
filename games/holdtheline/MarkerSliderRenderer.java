@@ -41,7 +41,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
 
     final static void restoreRasterTarget(int param0) {
         MidiPcmStream.field_F = MidiPcmStream.field_F - 1;
-        SoftwareRasterizer.bindRaster(tn.field_h[MidiPcmStream.field_F], TextFieldValidator.field_c[MidiPcmStream.field_F], ValidationHelpWidget.field_V[MidiPcmStream.field_F]);
+        SoftwareRasterizer.bindRaster(GrowableStringList.field_h[MidiPcmStream.field_F], TextFieldValidator.field_c[MidiPcmStream.field_F], ValidationHelpWidget.field_V[MidiPcmStream.field_F]);
         SoftwareRasterizer.clipLeft = OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F];
         SoftwareRasterizer.clipRight = dm.field_b[MidiPcmStream.field_F];
         SoftwareRasterizer.clipTop = m.field_c[MidiPcmStream.field_F];
@@ -272,8 +272,8 @@ final class MarkerSliderRenderer implements WidgetRenderer {
         var10 = HoldTheLine.field_D;
         try {
           boolean decompiledFrameRemainder1 = true;
-          var4_int = jn.a(14, (byte) -96, param0);
-          var5 = jn.a(13, (byte) -96, param0);
+          var4_int = MenuSelectionController.readOptionalBits(14, (byte) -96, param0);
+          var5 = MenuSelectionController.readOptionalBits(13, (byte) -96, param0);
           var6 = param0.readBits(2, 7);
           var7 = hk.field_c[param2][param1];
           var8 = QuickChatPhraseDefinition.field_v[param2][param1];

@@ -163,7 +163,7 @@ final class ArchiveCatalog {
           var12 = RoadStripRenderer.field_e;
           var2 = var12.readUnsignedByte((byte) -84);
           if (0 == var2) {
-            var10 = vd.c(1023);
+            var10 = RoadFillRenderer.allocateIntScratchBuffer(1023);
             var16 = var10;
             var14 = var16;
             var3 = var14;
@@ -199,12 +199,12 @@ final class ArchiveCatalog {
                 r.a(-28036);
                 return;
               }
-              var13.field_j = vd.c(1023);
+              var13.field_j = RoadFillRenderer.allocateIntScratchBuffer(1023);
               var13.field_m = var13.field_j[0];
               var13.field_i = true;
               var13.unlink(0);
             } else {
-              MusicPatchPcmStream.a((Throwable) null, (byte) -52, "A1: " + AgeValidator.b(false));
+              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -52, "A1: " + AgeValidator.b(false));
               r.a(-28036);
             }
           }

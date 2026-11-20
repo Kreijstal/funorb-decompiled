@@ -33,7 +33,7 @@ final class cm {
             cm.clearSharedReferences((byte) 84);
           }
           var3_int = 0;
-          var4 = ie.field_j;
+          var4 = BlobReadRequest.field_j;
           while (var3_int < ClientException.field_b.length) {
             var5 = cd.field_f[var3_int];
             if (var5 >= 0) {

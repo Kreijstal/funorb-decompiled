@@ -23,7 +23,7 @@ final class LabeledField extends SingleChildWidget {
         try {
           o.field_d = param1;
           RaceSetupMenu.field_v = param3;
-          IsaacPacketBuffer.a(param0, qd.field_g, 22676);
+          IsaacPacketBuffer.a(param0, TexturedRoadFillRenderer.field_g, 22676);
           if (param2 >= -5) {
             LabeledField.clearSharedReferences(108);
           }
@@ -134,35 +134,35 @@ final class LabeledField extends SingleChildWidget {
             if (param1.field_o != 1) {
               if (param1.field_o == 2) {
                 AccountCreationForm.field_F.field_b.drawUnkeyed(0, 0);
-                mn.a(param1.roadSegments, new qd(IterableSecondaryNodeDeque.field_a.field_b), (byte) -40);
+                mn.a(param1.roadSegments, new TexturedRoadFillRenderer(IterableSecondaryNodeDeque.field_a.field_b), (byte) -40);
               } else {
                 if (param1.field_o == 3) {
                   kc.field_b.field_b.drawUnkeyed(0, 0);
-                  mn.a(param1.roadSegments, new qd(MarkerSliderRenderer.field_b.field_b, 0.5f), (byte) -102);
+                  mn.a(param1.roadSegments, new TexturedRoadFillRenderer(MarkerSliderRenderer.field_b.field_b, 0.5f), (byte) -102);
                 } else {
                   if (4 == param1.field_o) {
                     MarkerSliderRenderer.field_b.field_b.drawUnkeyed(0, 0);
-                    mn.a(param1.roadSegments, new qd(BoundaryIntersection.field_i.field_b, 0.5f), (byte) -30);
+                    mn.a(param1.roadSegments, new TexturedRoadFillRenderer(BoundaryIntersection.field_i.field_b, 0.5f), (byte) -30);
                   } else {
                     if (param1.field_o != 5) {
                       if (param1.field_o == 6) {
                         DialWidget.field_Q.field_b.drawUnkeyed(0, 0);
-                        tn.a(param1.roadSegments, 10000536, new qd(ValidationState.field_e.field_b));
+                        GrowableStringList.a(param1.roadSegments, 10000536, new TexturedRoadFillRenderer(ValidationState.field_e.field_b));
                       }
                     } else {
                       BoundaryIntersection.field_i.field_b.drawUnkeyed(0, 0);
-                      mn.a(param1.roadSegments, new qd(kc.field_b.field_b, 0.5f), (byte) -125);
+                      mn.a(param1.roadSegments, new TexturedRoadFillRenderer(kc.field_b.field_b, 0.5f), (byte) -125);
                     }
                   }
                 }
               }
             } else {
               AccountCreationForm.field_F.field_b.drawUnkeyed(0, 0);
-              mn.a(param1.roadSegments, new qd(ProxySocketConnector.field_h.field_b), (byte) -15);
+              mn.a(param1.roadSegments, new TexturedRoadFillRenderer(ProxySocketConnector.field_h.field_b), (byte) -15);
             }
           } else {
             SecondaryNodeDeque.field_h.field_b.drawUnkeyed(0, 0);
-            mn.a(param1.roadSegments, new qd(ValidationState.field_e.field_b), (byte) -23);
+            mn.a(param1.roadSegments, new TexturedRoadFillRenderer(ValidationState.field_e.field_b), (byte) -23);
           }
           if (param0 != 2 &&
             param0 != 6) {
@@ -197,7 +197,7 @@ final class LabeledField extends SingleChildWidget {
               var13[2] = (int)(var10 * 0.0f + (var7 + (float)(6 + 6 * var14) * var9));
               var13[7] = (int)(-(6.0f * var9) + (var10 * (float)(var14 * 6) + var8));
               var14++;
-              gf.a(var17, var3_int);
+              PolygonScanConverter.fillPolygon(var17, var3_int);
               var13[7] = (int)(var8 + (float)(var14 * 6) * var10 + 6.0f * var9);
               var13[1] = (int)(0.0f * var9 + (var10 * (float)(var14 * 6) + var8));
               var13[5] = (int)(var8 + (float)(var14 * 6 + 6) * var10 + var9 * 6.0f);
@@ -206,7 +206,7 @@ final class LabeledField extends SingleChildWidget {
               var13[0] = (int)(-(0.0f * var10) + (var7 + var9 * (float)(var14 * 6)));
               var13[3] = (int)(var9 * 0.0f + (var8 + (float)(6 + var14 * 6) * var10));
               var13[6] = (int)(-(var10 * 6.0f) + (var7 + (float)(var14 * 6) * var9));
-              gf.a(var17, var3_int);
+              PolygonScanConverter.fillPolygon(var17, var3_int);
               var14++;
             }
           }

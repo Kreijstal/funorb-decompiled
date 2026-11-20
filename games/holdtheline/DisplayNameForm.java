@@ -33,17 +33,17 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         int var5 = 200;
         var2.setBounds(20, (byte) 122, var3, 50, 270);
         var3 += 50;
-        this.a(true, var2);
+        this.addChild(true, var2);
         var3 = var3 + (this.a(var3, (byte) -86, ArchiveLoadStage.field_h, sh.field_a, 170, this.field_F) + 5);
         this.field_M.setBounds(496 - var5 >> 1, (byte) 122, var3, 40, var5);
         this.field_N.setBounds(3 + var4, (byte) 122, 15 + var3, 40, 60);
         this.field_N.listener = (WidgetListener) (this);
         this.field_M.listener = (WidgetListener) (this);
-        this.a(true, this.field_M);
-        this.a(true, this.field_N);
+        this.addChild(true, this.field_M);
+        this.addChild(true, this.field_N);
         this.field_H = new NameSuggestionsPanel((NameSelectionListener) (this));
         this.field_H.setBounds(60 + this.field_F.x + this.field_F.width, (byte) 122, 20, 150, -60 - this.field_F.width + (this.width - this.field_F.x));
-        this.a(true, this.field_H);
+        this.addChild(true, this.field_H);
         this.setBounds(0, (byte) 122, 0, var4 + var3 + 55, 496);
     }
 
@@ -96,18 +96,18 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         var3 = HoldTheLine.field_D;
         var1 = 1 % ((-31 - param0) / 39);
         DelayedServerPacket.field_k = false;
-        nl.field_c = null;
+        FullscreenDisplayMode.field_c = null;
         if (ArchiveCatalog.field_o) {
           sb.field_c.o(-41);
         } else {
           var2 = q.field_c;
           if (var2 > 0) {
             if (var2 == 1) {
-              nl.field_c = jc.field_c;
+              FullscreenDisplayMode.field_c = jc.field_c;
             } else {
-              nl.field_c = LoginCredentials.substituteIndexedTokens(h.field_c, new String[]{Integer.toString(var2)}, true);
+              FullscreenDisplayMode.field_c = LoginCredentials.substituteIndexedTokens(h.field_c, new String[]{Integer.toString(var2)}, true);
             }
-            nl.field_c = CacheEntry.a((byte) -54, new CharSequence[]{(CharSequence) ((Object) nl.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedRandomAccessFile.field_q)});
+            FullscreenDisplayMode.field_c = CacheEntry.a((byte) -54, new CharSequence[]{(CharSequence) ((Object) FullscreenDisplayMode.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedRandomAccessFile.field_q)});
           }
           sb.field_c.h((byte) -57);
           TutorialPage.a((byte) -124);
@@ -127,13 +127,13 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             return true;
           }
           if (param1 == 98) {
-            stackIn_5_0 = this.c(param0, -1);
+            stackIn_5_0 = this.focusPreviousChild(param0, -1);
             return stackIn_5_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(param0, 122);
+          stackIn_9_0 = this.focusNextChild(param0, 122);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,7 +290,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qg.a(param0, param1, (byte) -27, param2)) {
+          if (!qg.decodeArchivedSpriteSheet(param0, param1, (byte) -27, param2)) {
             stackIn_2_0 = null;
             return (IndexedSprite) (stackIn_2_0);
           }
@@ -353,10 +353,10 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             stackIn_2_0 = 49;
             return stackIn_2_0;
           }
-          this.a(true, var10);
+          this.addChild(true, var10);
           var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param6)).getValidator(param4 ^ 10567), param5, 126, var10.height + param3, 25 + param0, param2);
           var9.listener = (WidgetListener) (this);
-          this.a(true, var9);
+          this.addChild(true, var9);
           stackIn_4_0 = var10.height + var9.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

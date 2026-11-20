@@ -16,7 +16,7 @@ final class sa {
     final static void a(MovingEntity param0, int param1) {
         try {
           if (FadingDialog.field_J != null) {
-            rk.a((byte) 107);
+            RoadLayerMaskRenderer.stopAllEntitySounds((byte) 107);
           } else {
             FadingDialog.field_J = new IntrusiveDeque();
           }

@@ -66,7 +66,7 @@ final class oc {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = NanoTickClock.a(2, param5, param1, param2, param4, param0);
+          var9 = NanoTickClock.enterFullscreen(2, param5, param1, param2, param4, param0);
           var6 = var9;
           if (var9 == null) {
             return null;

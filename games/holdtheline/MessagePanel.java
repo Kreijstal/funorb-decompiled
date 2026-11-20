@@ -86,7 +86,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
             var6 = (TextButton) null;
             this.onButtonAction(-64, (TextButton) null, 28, 127, 42);
           }
-          this.a(true, var4);
+          this.addChild(true, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

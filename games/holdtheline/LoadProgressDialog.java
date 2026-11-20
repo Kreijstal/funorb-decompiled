@@ -62,7 +62,7 @@ final class LoadProgressDialog extends ResizableDialog {
           if (var3_int > 12) {
             return false;
           }
-          var4 = MidiPcmStream.a(param0, (byte) 122);
+          var4 = MidiPcmStream.normalizeAccountName(param0, (byte) 122);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!SocketJs5Transport.isNameSeparator(-2821, var4.charAt(0)) &&
@@ -189,7 +189,7 @@ final class LoadProgressDialog extends ResizableDialog {
           this.field_jb.animating = true;
           this.field_Y = false;
           this.field_db = false;
-          this.a(true, this.field_jb);
+          this.addChild(true, this.field_jb);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -210,7 +210,7 @@ final class LoadProgressDialog extends ResizableDialog {
             LoadProgressDialog.a((String) null, -94);
           }
           var4 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = co.field_e.equals(MidiPcmStream.a(var4, (byte) -102));
+          stackIn_3_0 = co.field_e.equals(MidiPcmStream.normalizeAccountName(var4, (byte) -102));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,9 +226,9 @@ final class LoadProgressDialog extends ResizableDialog {
         }
     }
 
-    final static fi a(String param0, int param1) {
+    final static SocialListEntry a(String param0, int param1) {
         String var2 = null;
-        fi var3 = null;
+        SocialListEntry var3 = null;
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
@@ -236,7 +236,7 @@ final class LoadProgressDialog extends ResizableDialog {
         CharSequence var8 = null;
         Object stackIn_7_0 = null;
         Object stackIn_10_0 = null;
-        fi stackIn_16_0 = null;
+        SocialListEntry stackIn_16_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -252,24 +252,24 @@ final class LoadProgressDialog extends ResizableDialog {
           }
           if (param0.length() == 0) {
             stackIn_7_0 = null;
-            return (fi) (stackIn_7_0);
+            return (SocialListEntry) (stackIn_7_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var2 = MidiPcmStream.a(var7, (byte) 99);
+          var2 = MidiPcmStream.normalizeAccountName(var7, (byte) 99);
           if (var2 == null) {
             stackIn_10_0 = null;
-            return (fi) (stackIn_10_0);
+            return (SocialListEntry) (stackIn_10_0);
           }
           var4 = 70 % ((param1 - 9) / 33);
-          var3 = (fi) (jo.field_b.get(-25839, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (jo.field_b.get(-25839, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
             }
-            var8 = (CharSequence) ((Object) var3.field_mb);
-            var5 = MidiPcmStream.a(var8, (byte) 123);
+            var8 = (CharSequence) ((Object) var3.displayName);
+            var5 = MidiPcmStream.normalizeAccountName(var8, (byte) 123);
             if (!var5.equals(var2)) {
-              var3 = (fi) (jo.field_b.getNextWithSameKey(20240));
+              var3 = (SocialListEntry) (jo.field_b.getNextWithSameKey(20240));
               continue;
             }
             break;

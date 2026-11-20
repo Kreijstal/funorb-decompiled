@@ -966,10 +966,10 @@ final class RaceWorld {
             if (var5 == 0) {
               if ((var4_int == 5) &&
                 (!(hc.a(0, (int)(param1 << 6)) >= 3))) {
-                var6 = 84 + (tn.a((int)(param1 << 6), 5255) * 40 >> 16);
+                var6 = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
                 stackIn_28_0 = param0 + 296;
                 if (0L == (1L & param1)) {
-                  stackIn_29_1 = se.field_m;
+                  stackIn_29_1 = IntWriteRequest.field_m;
                 } else {
                   stackIn_29_1 = uj.field_a;
                 }
@@ -978,9 +978,9 @@ final class RaceWorld {
                   var7.setVolume((byte) -126, var6);
                 }
                 if (var8 != 0) {
-                  this.field_F = 84 + (tn.a((int)(param1 << 6), 5255) * 40 >> 16);
+                  this.field_F = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
                   var6 = this.field_F;
-                  var7 = MatchingTextValidator.a(293, qd.field_j);
+                  var7 = MatchingTextValidator.a(293, TexturedRoadFillRenderer.field_j);
                   if (null != var7) {
                     var7.setVolume((byte) -125, var6);
                     var7.field_j.setSamplePosition(var6 * 150 + 300);
@@ -988,9 +988,9 @@ final class RaceWorld {
                 }
               }
             } else {
-              this.field_F = 84 + (tn.a((int)(param1 << 6), 5255) * 40 >> 16);
+              this.field_F = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
               var6 = this.field_F;
-              var7 = MatchingTextValidator.a(293, qd.field_j);
+              var7 = MatchingTextValidator.a(293, TexturedRoadFillRenderer.field_j);
               if (null != var7) {
                 var7.setVolume((byte) -125, var6);
                 var7.field_j.setSamplePosition(var6 * 150 + 300);
@@ -2483,7 +2483,7 @@ final class RaceWorld {
             this.field_rb[6] = -1;
             this.field_t = LayeredWidgetStyle.field_d;
             this.field_j = 0;
-            this.field_g = tn.field_c;
+            this.field_g = GrowableStringList.field_c;
             this.field_hb = ni.field_b;
             this.field_s = 0;
             this.field_rb[11] = 1;
@@ -2682,7 +2682,7 @@ final class RaceWorld {
                     !(QuickChatPhraseDefinition.field_s));
                   if (!decompiledSharedTail0) {
                     QuickChatPhraseDefinition.field_s = false;
-                    tn.a(0);
+                    GrowableStringList.a(0);
                     this.b("demolition", (byte) 8);
                     decompiledSharedTail0 = (var14 != 0);
                   }
@@ -2692,7 +2692,7 @@ final class RaceWorld {
                     this.field_J != 6 &&
                     this.field_J != 2)) {
                     ij.field_l = false;
-                    tn.a(0);
+                    GrowableStringList.a(0);
                     this.b("night", (byte) 8);
                   }
                 }
@@ -2821,7 +2821,7 @@ final class RaceWorld {
           var7 = param1.position.y + (int)(-Math.sin((double)var4) * (double)var3_int);
           vb.a(param0 ^ -7, this.field_I);
           var8 = TriangleMesh.field_f.getByAngle(param1.heading, param0 + 27724);
-          WhirlpoolHasher.a(-(var8.canvasHeight >> 1) + var7, -(var8.canvasWidth >> 1) + var6, 121, var8);
+          WhirlpoolHasher.drawScreenBlendedSprite(-(var8.canvasHeight >> 1) + var7, -(var8.canvasWidth >> 1) + var6, 121, var8);
           MarkerSliderRenderer.restoreRasterTarget(param0 - 65);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3281,7 +3281,7 @@ final class RaceWorld {
           TutorialTransition.a(32381);
           this.field_I.bindRaster();
           var3 = DisplayNameForm.field_Q;
-          WhirlpoolHasher.a(-(var3.height >> 1) + param1.field_n, param1.field_l - (var3.width >> 1), 103, var3);
+          WhirlpoolHasher.drawScreenBlendedSprite(-(var3.height >> 1) + param1.field_n, param1.field_l - (var3.width >> 1), 103, var3);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           if (param0 >= -24) {
             this.field_W = (IntrusiveDeque) null;
@@ -3606,7 +3606,7 @@ final class RaceWorld {
           if (param0 != 32249) {
             this.a(false);
           }
-          WhirlpoolHasher.a(param1.position.y - (param1.field_kb.height >> 1), param1.position.x - (param1.field_kb.width >> 1), 108, param1.field_kb);
+          WhirlpoolHasher.drawScreenBlendedSprite(param1.position.y - (param1.field_kb.height >> 1), param1.position.x - (param1.field_kb.width >> 1), 108, param1.field_kb);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4758,7 +4758,7 @@ final class RaceWorld {
             default:
               break;
           }
-          NanoTickClock.a(var8, var9, var7, (byte) -42, var6_int);
+          NanoTickClock.drawPanelWithShadow(var8, var9, var7, (byte) -42, var6_int);
           var10 = var7;
           var11 = nm.field_c.getLineCount(param0, var8);
           nm.field_c.drawParagraph(param0, var6_int, var10, var8, 20 * var11, 0, -1, 1, 0, 20);
@@ -5289,7 +5289,7 @@ final class RaceWorld {
             if (decompiledFrameCompleted0) {
               if (var3_intLifetime3 != 0 ||
                 var11 != 0) {
-                MusicPatch.a(param0.field_Eb, param0.position.y, var4, param0.position.x, (byte) 98);
+                MusicPatch.drawCenteredSpriteMask(param0.field_Eb, param0.position.y, var4, param0.position.x, (byte) 98);
               }
               if (var11 != 0) {
                 var4 = param0.field_C.field_h.getByAngle(param0.heading, 27788);
@@ -6006,7 +6006,7 @@ final class RaceWorld {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameRemainder4 = true;
             var40_ref_dd = (StraightRoadSegment) (var20.elements[var14]);
-            var40_ref_dd.b(param2 + 43, var37);
+            var40_ref_dd.setOffsetDirection(param2 + 43, var37);
             if (~var40_ref_dd.field_R.x == ~var40_ref_dd.field_P.x) {
               stackIn_127_0 = ~var40_ref_dd.field_R.y;
               stackIn_127_1 = ~var40_ref_dd.field_P.y;
@@ -6620,7 +6620,7 @@ final class RaceWorld {
             }
             o.a(128, 480, 0, var4_int, 640, -4441, 0);
           }
-          var4_intLifetime1 = 1 * hc.a(0, (int)(param0 << 1)) + 2 * tn.a((int)(param0 >> 1), 5255) >> 20;
+          var4_intLifetime1 = 1 * hc.a(0, (int)(param0 << 1)) + 2 * GrowableStringList.a((int)(param0 >> 1), 5255) >> 20;
           var5 = ((int)param0 * 640 - 1) % 1337;
           var6 = var5 / 640;
           boolean decompiledNaturalLoopExit1 = false;
@@ -7511,12 +7511,12 @@ final class RaceWorld {
               stackIn_47_0 = ~this.field_r;
             }
             if (stackIn_47_0 == -4) {
-              tn.a(this.roadSegments, 10000536, new rk(this.field_lb, (byte) 3));
+              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.field_lb, (byte) 3));
             }
             if (stackIn_47_0 != -4 ||
               var16 != 0) {
-              tn.a(this.roadSegments, 10000536, new rk(this.field_lb, (byte) 2));
-              mn.a(this.roadSegments, new rk(this.field_lb, (byte) 3), (byte) -20);
+              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.field_lb, (byte) 2));
+              mn.a(this.roadSegments, new RoadLayerMaskRenderer(this.field_lb, (byte) 3), (byte) -20);
             }
             TutorialTransition.a(32381);
             if (this.field_qb == null) {
@@ -7534,10 +7534,10 @@ final class RaceWorld {
               var7 = new GrowableObjectList();
               var8 = new GrowableObjectList();
               TextLineLayout.a(var6, var8, var5, var4, this.roadSegments, var7, -110);
-              var5 = NanoTickClock.a(var5, (byte) -127);
-              var7 = NanoTickClock.a(var7, (byte) -127);
-              var6 = NanoTickClock.a(var6, (byte) -127);
-              var8 = NanoTickClock.a(var8, (byte) -127);
+              var5 = NanoTickClock.removeShortBoundaryEdges(var5, (byte) -127);
+              var7 = NanoTickClock.removeShortBoundaryEdges(var7, (byte) -127);
+              var6 = NanoTickClock.removeShortBoundaryEdges(var6, (byte) -127);
+              var8 = NanoTickClock.removeShortBoundaryEdges(var8, (byte) -127);
               this.field_jb = ao.a(var6, (byte) 21, param2, var5);
               this.field_nb = ao.a(var8, (byte) 21, param2, var7);
               l.a(29824, param0);

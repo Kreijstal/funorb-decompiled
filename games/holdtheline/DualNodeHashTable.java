@@ -36,10 +36,10 @@ final class DualNodeHashTable {
     final static void b(int param0) {
         int var1 = 72 / ((param0 - 1) / 34);
         if (LoginChoicePanel.field_G != null) {
-          LoginChoicePanel.field_G.a();
+          LoginChoicePanel.field_G.shutdown();
         }
         if (DraggableWidget.field_G != null) {
-          DraggableWidget.field_G.a();
+          DraggableWidget.field_G.shutdown();
         }
     }
 

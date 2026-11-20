@@ -92,7 +92,7 @@ final class ll {
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (t.a(0, param2)) {
+          if (IntArrayReadRequest.a(0, param2)) {
             return false;
           }
           if (DelayedServerPacket.hasRepeatedCharacter(param2, 1)) {
@@ -146,7 +146,7 @@ final class ll {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qg.a(param2, param1, (byte) -27, param3)) {
+          if (!qg.decodeArchivedSpriteSheet(param2, param1, (byte) -27, param3)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }
@@ -187,7 +187,7 @@ final class ll {
           }
           return;
         }
-        i.field_m.a(param1, false);
+        i.field_m.setMasterVolume(param1, false);
         var2Lifetime1 = 9 % ((-69 - param0) / 38);
         if (null != ai.field_a) {
           ai.field_a.a(param1, -32284);

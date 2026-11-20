@@ -16,12 +16,12 @@ abstract class PointPath {
         }
         if (d.field_c[param0] == -1) {
           d.field_c[param0] = param2;
-          tn.a(0);
+          GrowableStringList.a(0);
           return;
         }
         if (d.field_c[param0] > param2) {
           d.field_c[param0] = param2;
-          tn.a(0);
+          GrowableStringList.a(0);
           return;
         }
     }

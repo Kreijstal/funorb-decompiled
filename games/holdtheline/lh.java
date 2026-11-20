@@ -54,10 +54,10 @@ final class lh {
     final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Component param2) {
         try {
           SecondaryNodeDequeIterator.field_d = new MusicCrossfadeStream();
-          SecondaryNodeDequeIterator.field_d.field_q.d(128, -13549, 9);
-          SecondaryNodeDequeIterator.field_d.field_q.a(NanoTickClock.field_e, false);
-          SecondaryNodeDequeIterator.field_d.field_C.d(128, -13549, 9);
-          SecondaryNodeDequeIterator.field_d.field_C.a(NanoTickClock.field_e, false);
+          SecondaryNodeDequeIterator.field_d.field_q.setChannelProgram(128, -13549, 9);
+          SecondaryNodeDequeIterator.field_d.field_q.setMasterVolume(NanoTickClock.field_e, false);
+          SecondaryNodeDequeIterator.field_d.field_C.setChannelProgram(128, -13549, 9);
+          SecondaryNodeDequeIterator.field_d.field_C.setMasterVolume(NanoTickClock.field_e, false);
           int var3_int = -54 % ((param1 - 11) / 55);
           TrackCurve.a((byte) -111, param0, param2, 22050, 1102, true, 22050, SecondaryNodeDequeIterator.field_d);
           ll.a(-114, 160);

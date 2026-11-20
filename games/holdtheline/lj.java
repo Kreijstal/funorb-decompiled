@@ -18,14 +18,14 @@ final class lj {
         RuntimeException var6 = null;
         var7 = HoldTheLine.field_D;
         try {
-          gf.a();
+          PolygonScanConverter.clearEdges();
           if (param4 >= 0) {
             field_f = -105;
           }
-          gf.a(param3, 0, param3.length);
-          gf.c();
-          while (gf.d()) {
-            SoftwareRasterizer.drawHorizontalLineAlpha(gf.field_g + param2, gf.field_a + param5, gf.field_b - gf.field_g, param0, param1);
+          PolygonScanConverter.addPolygonEdges(param3, 0, param3.length);
+          PolygonScanConverter.beginScan();
+          while (PolygonScanConverter.nextSpan()) {
+            SoftwareRasterizer.drawHorizontalLineAlpha(PolygonScanConverter.spanStartX + param2, PolygonScanConverter.spanY + param5, PolygonScanConverter.spanEndX - PolygonScanConverter.spanStartX, param0, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -43,7 +43,7 @@ final class lj {
     }
 
     final static void a(byte param0) {
-        we var1 = (we) (fl.field_i.removeLast((byte) 74));
+        we var1 = (we) (BlobWriteRequest.field_i.removeLast((byte) 74));
         if (var1 == null) {
           var1 = new we();
         }

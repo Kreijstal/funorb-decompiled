@@ -18,10 +18,10 @@ final class ta {
           if (param4 >= -69) {
             field_b = (String) null;
           }
-          if (!qg.a(param0, param1, (byte) -27, param2)) {
+          if (!qg.decodeArchivedSpriteSheet(param0, param1, (byte) -27, param2)) {
             return null;
           }
-          stackIn_6_0 = StraightRoadSegment.a((byte) -100, param3.getFile(param0, true, param1));
+          stackIn_6_0 = StraightRoadSegment.buildDecodedPaletteFont((byte) -100, param3.getFile(param0, true, param1));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ final class ta {
         field_b = null;
     }
 
-    final static tn a(byte param0) {
+    final static GrowableStringList a(byte param0) {
         if (param0 != 72) {
           field_a = (ResourceArchive) null;
         }

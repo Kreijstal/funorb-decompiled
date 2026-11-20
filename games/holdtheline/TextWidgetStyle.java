@@ -675,12 +675,12 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
     }
 
     final static AccountFormText a(int param0) {
-        String var1 = tn.d(param0 ^ param0);
+        String var1 = GrowableStringList.d(param0 ^ param0);
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new AccountFormText(tn.d(0), AccountProgressDialog.n(112));
+        return new AccountFormText(GrowableStringList.d(0), AccountProgressDialog.n(112));
     }
 
     TextWidgetStyle(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {

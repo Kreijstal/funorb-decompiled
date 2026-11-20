@@ -84,7 +84,7 @@ class hi extends fj {
         field_W = null;
     }
 
-    final static void a(java.awt.Canvas param0, int param1, boolean param2, int param3) {
+    final static void paintRasterBuffer(java.awt.Canvas param0, int param1, boolean param2, int param3) {
         java.awt.Graphics var4 = null;
         if (!param2) {
           hi.clearSharedReferences((byte) -49);
@@ -267,18 +267,18 @@ class hi extends fj {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static ie a(int param0, int param1) {
-        ie var2 = null;
+    final static BlobReadRequest requestBlobRead(int param0, int param1) {
+        BlobReadRequest var2 = null;
         if (param1 < -51) {
-          var2 = new ie();
+          var2 = new BlobReadRequest();
           oc.field_d.addLast((byte) -104, var2);
-          q.a(param0, 51);
+          q.sendBlobReadRequest(param0, 51);
           return var2;
         }
-        return (ie) null;
+        return (BlobReadRequest) null;
     }
 
-    private final void a(hi param0, int param1) {
+    private final void inheritStyleProperties(hi param0, int param1) {
         RuntimeException stackIn_101_0 = null;
         StringBuilder stackIn_101_1 = null;
         String stackIn_102_2 = null;
@@ -513,7 +513,7 @@ class hi extends fj {
                 if (!(var16 < var14 * var14) &&
                   !(var16 > var15 * var15)) {
                   var17 = BoundaryIntersection.angleBetweenPoints(var20_ref.field_U, param5, false);
-                  var18 = var20_ref.a(var17, (byte) 72);
+                  var18 = var20_ref.parameterAtAngle(var17, (byte) 72);
                   if (var18 >= 0.0f &&
                     1.0f >= var18) {
                     stackIn_36_0 = var18 + (float)var9;
@@ -545,7 +545,7 @@ class hi extends fj {
         }
     }
 
-    final static boolean b(int param0, byte param1) {
+    final static boolean readServerBytes(int param0, byte param1) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
@@ -615,7 +615,7 @@ class hi extends fj {
         this.field_x = -2147483648;
         try {
           this.key = param0;
-          this.a(param1, -114);
+          this.inheritStyleProperties(param1, -114);
           if (param6 != null) {
             this.field_bb = param6;
           }

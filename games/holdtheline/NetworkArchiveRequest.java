@@ -117,7 +117,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             d.field_f = wm.field_U;
           }
           if (wm.field_U == d.field_f &&
-            hi.b(1, (byte) 40)) {
+            hi.readServerBytes(1, (byte) 40)) {
             var9Lifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -56);
             RoadStripRenderer.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -134,8 +134,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
-                hi.b(tn.a((byte) 115), (byte) 40);
-                RoadSegment.field_u = new Boolean(WidgetContainer.a(RoadStripRenderer.field_e, (byte) 87));
+                hi.readServerBytes(GrowableStringList.a((byte) 115), (byte) 40);
+                RoadSegment.field_u = new Boolean(WidgetContainer.readBoolean(RoadStripRenderer.field_e, (byte) 87));
                 RoadStripRenderer.field_e.position = 0;
               } else {
                 NineSlicePanel.field_c = var9Lifetime1;
@@ -146,10 +146,10 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           }
           if (TutorialAction.field_f == d.field_f) {
             var9Lifetime2 = 2;
-            if (hi.b(var9Lifetime2, (byte) 40)) {
+            if (hi.readServerBytes(var9Lifetime2, (byte) 40)) {
               var10Lifetime1 = RoadStripRenderer.field_e.readUnsignedShort(115);
               RoadStripRenderer.field_e.position = 0;
-              if (hi.b(var10Lifetime1, (byte) 40)) {
+              if (hi.readServerBytes(var10Lifetime1, (byte) 40)) {
                 var11 = IsaacRandom.field_h.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   IsaacRandom.field_h[var12] = RoadStripRenderer.field_e.readPrefixedCp1252String(true);
@@ -289,7 +289,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             var4Lifetime1 = 32;
             var5 = 65503;
           }
-          PathWaypoint.field_o = new fb(var4Lifetime1, var5, LayeredWidgetStyle.field_d, ni.field_b, cm.field_a, tn.field_c, var14);
+          PathWaypoint.field_o = new fb(var4Lifetime1, var5, LayeredWidgetStyle.field_d, ni.field_b, cm.field_a, GrowableStringList.field_c, var14);
           if (!l.field_b &&
             !pj.b((byte) 109)) {
             LinkWidgetRenderer.a(3, (byte) -37, PathWaypoint.field_o);
@@ -339,9 +339,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           !(param2 + param0 <= IterableNodeHashTable.field_h.length)) {
           IterableNodeHashTable.field_h = new int[2 * (param2 + param0)];
         }
-        if (null == tn.field_d ||
-          !(param0 <= tn.field_d.length)) {
-          tn.field_d = new boolean[2 * param0];
+        if (null == GrowableStringList.field_d ||
+          !(param0 <= GrowableStringList.field_d.length)) {
+          GrowableStringList.field_d = new boolean[2 * param0];
         }
         r.field_c = -2147483648;
         VehicleDefinition.field_t = -2147483648;
@@ -367,7 +367,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           hk.field_c[param1][param2] > param3) {
           hk.field_c[param1][param2] = param3;
           BoundaryIntersection.field_j[param1][param2] = param0;
-          tn.a(0);
+          GrowableStringList.a(0);
         }
         if (param4 >= -107) {
           field_w = (FullscreenFocusCanvas) null;

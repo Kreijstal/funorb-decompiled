@@ -123,7 +123,7 @@ abstract class FadingDialog extends WidgetContainer {
             field_I = 52;
           }
           param4.drawUnkeyed(0, 0);
-          WhirlpoolHasher.a(param1, param3, 107, param2);
+          WhirlpoolHasher.drawScreenBlendedSprite(param1, param3, 107, param2);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           stackIn_3_0 = var7;
           return stackIn_3_0;
@@ -267,8 +267,8 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    final UiWidget f(byte param0) {
-        UiWidget var2 = super.f((byte) 83);
+    final UiWidget getFocusedChild(byte param0) {
+        UiWidget var2 = super.getFocusedChild((byte) 83);
         if (var2 != null) {
           return var2;
         }

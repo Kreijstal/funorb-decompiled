@@ -215,7 +215,7 @@ final class StripedProgressBar extends UiWidget {
             if (param0) {
               return;
             }
-            BoundaryCurve.field_l = qd.field_i;
+            BoundaryCurve.field_l = TexturedRoadFillRenderer.field_i;
             if (DraggableWidget.field_J < 0) {
               var5 = 0;
               var2 = var5;
@@ -235,7 +235,7 @@ final class StripedProgressBar extends UiWidget {
                 IterableSecondaryNodeDeque.field_g[~var2] = false;
               }
             }
-            qd.field_i = lj.field_b;
+            TexturedRoadFillRenderer.field_i = lj.field_b;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

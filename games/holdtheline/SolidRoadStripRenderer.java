@@ -65,7 +65,7 @@ final class SolidRoadStripRenderer extends RoadStripRenderer {
             var5[1 + var10 * 2 + param0.length] = param3[param3.length - 1 - 2 * var10];
             var10++;
           }
-          gf.a(var12, this.field_m);
+          PolygonScanConverter.fillPolygon(var12, this.field_m);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

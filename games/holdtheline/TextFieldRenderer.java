@@ -3,7 +3,7 @@
  */
 class TextFieldRenderer extends TextWidgetStyle {
     static String[] field_r;
-    static jn field_q;
+    static MenuSelectionController field_q;
     static PlatformTaskDispatcher field_v;
     static NamedSoundEffect field_t;
     static uj[] field_s;
@@ -15,7 +15,7 @@ class TextFieldRenderer extends TextWidgetStyle {
             field_s = (uj[]) null;
           }
           if (param0) {
-            tn.a(param1 + param3.x, param3.width, 152, param4 + param3.y, param3.height);
+            GrowableStringList.drawGradientBorder(param1 + param3.x, param3.width, 152, param4 + param3.y, param3.height);
           }
           super.drawWidget(param0, param1, -106, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -39,7 +39,7 @@ class TextFieldRenderer extends TextWidgetStyle {
         field_u = null;
         field_v = null;
         if (!param0) {
-          field_q = (jn) null;
+          field_q = (MenuSelectionController) null;
         }
     }
 
@@ -56,6 +56,6 @@ class TextFieldRenderer extends TextWidgetStyle {
 
     static {
         field_r = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
-        field_q = new jn(1);
+        field_q = new MenuSelectionController(1);
     }
 }

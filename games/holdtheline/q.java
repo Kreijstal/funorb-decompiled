@@ -9,7 +9,7 @@ final class q {
     static int field_c;
     static int[] field_b;
 
-    final static String b(byte param0) {
+    final static String getInterfaceLoadingStatus(byte param0) {
         if (!(PolarSortVector.field_d >= 2)) {
           return aj.field_d;
         }
@@ -43,12 +43,12 @@ final class q {
         return QuickChatPhraseCache.field_b;
     }
 
-    final static void a(String param0, PaletteBitmapFont param1, int param2, int param3, byte param4, int param5) {
+    final static void drawCenteredTextWithHighlight(String param0, PaletteBitmapFont param1, int param2, int param3, byte param4, int param5) {
         try {
           param1.drawCenteredAlpha(param0, param3 + 1, 1 + param5, 8, -1, 114);
           if (param4 > -126) {
             PacketBuffer var7 = (PacketBuffer) null;
-            q.a(-69, (PacketBuffer) null);
+            q.writeRandomSeedData(-69, (PacketBuffer) null);
           }
           param1.drawCentered(param0, param3, param5, param2, -1);
         } catch (RuntimeException runtimeException) {
@@ -56,16 +56,16 @@ final class q {
         }
     }
 
-    final static void c(byte param0) {
+    final static void readIntDataReply(byte param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        t var4 = null;
+        IntArrayReadRequest var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        se var5_ref_se = null;
+        IntWriteRequest var5_ref_se = null;
         int[] var6 = null;
         int var8 = 0;
         IsaacPacketBuffer var9 = null;
@@ -78,13 +78,13 @@ final class q {
           var2 = var9.readUnsignedByte((byte) -62);
           var3 = var9.readUnsignedByte((byte) -86);
           if (0 == var2) {
-            var4 = (t) (ih.field_j.first((byte) 100));
+            var4 = (IntArrayReadRequest) (ih.field_j.first((byte) 100));
             if (var4 == null) {
               r.a(-28036);
               return;
             }
             var5 = -var9.position + ad.field_c;
-            var11 = var4.field_m;
+            var11 = var4.values;
             var10 = var11;
             var6 = var10;
             if (var5 > var11.length << 2) {
@@ -97,11 +97,11 @@ final class q {
           } else {
             if (var2 == 1) {
               var4_int = var9.readSignedSmart((byte) -84);
-              var5_ref_se = (se) (ShadedRoadStripRenderer.field_n.first((byte) 113));
+              var5_ref_se = (IntWriteRequest) (ShadedRoadStripRenderer.field_n.first((byte) 113));
               while (var5_ref_se != null) {
-                if (~var3 != ~var5_ref_se.field_j ||
-                  var5_ref_se.field_k != var4_int) {
-                  var5_ref_se = (se) (ShadedRoadStripRenderer.field_n.next((byte) -42));
+                if (~var3 != ~var5_ref_se.category ||
+                  var5_ref_se.id != var4_int) {
+                  var5_ref_se = (IntWriteRequest) (ShadedRoadStripRenderer.field_n.next((byte) -42));
                   continue;
                 }
                 break;
@@ -114,7 +114,7 @@ final class q {
               decompiledFrameRemainder0 = false;
             }
             else {
-              MusicPatchPcmStream.a((Throwable) null, (byte) 59, "LR1: " + AgeValidator.b(false));
+              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 59, "LR1: " + AgeValidator.b(false));
               r.a(-28036);
             }
           }
@@ -138,7 +138,7 @@ final class q {
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendBlobReadRequest(int param0, int param1) {
         IsaacPacketBuffer var2 = IsaacPacketBuffer.field_p;
         var2.writeCipheredOpcode((byte) 33, param0);
         var2.writeByte(111, 1);
@@ -148,7 +148,7 @@ final class q {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void writeRandomSeedData(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;

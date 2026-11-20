@@ -291,7 +291,7 @@ final class pe {
             }
             TutorialAction.field_g = bb.b(-1);
           }
-          TextFieldRenderer.field_q.field_b = ClientException.field_e.length;
+          TextFieldRenderer.field_q.itemCount = ClientException.field_e.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < ClientException.field_b.length; var4Lifetime1++) {
             stackIn_88_0 = ClientException.field_b[var4Lifetime1];
@@ -324,7 +324,7 @@ final class pe {
           var4Lifetime2 = 95 / ((-38 - param2) / 48);
           NanoTickClock.field_d = NanoTickClock.field_i - (var3_intLifetime1 >> 1);
           vf.field_t = var3_intLifetime1 + (NanoTickClock.field_i - (var3_intLifetime1 >> 1));
-          TrackBoundary.field_v = (vf.field_w + ContentTransitionDialog.field_bb << 1) * TextFieldRenderer.field_q.field_b;
+          TrackBoundary.field_v = (vf.field_w + ContentTransitionDialog.field_bb << 1) * TextFieldRenderer.field_q.itemCount;
           for (var5Lifetime3 = 0; var5Lifetime3 < ClientException.field_b.length; var5Lifetime3++) {
             stackIn_113_0 = TrackBoundary.field_v;
             if (0 <= cd.field_f[var5Lifetime3]) {
@@ -334,21 +334,21 @@ final class pe {
             }
             TrackBoundary.field_v = stackIn_113_0 + stackIn_114_1;
           }
-          ie.field_j = Vector2f.field_i - (TrackBoundary.field_v >> 1);
-          fi.field_lb = new int[ClientException.field_b.length][];
+          BlobReadRequest.field_j = Vector2f.field_i - (TrackBoundary.field_v >> 1);
+          SocialListEntry.field_lb = new int[ClientException.field_b.length][];
           var5Lifetime4 = 0;
-          var6Lifetime1 = ie.field_j;
+          var6Lifetime1 = BlobReadRequest.field_j;
           while (var5Lifetime4 < ClientException.field_b.length) {
             var7Lifetime2 = cd.field_f[var5Lifetime4];
             if (0 <= var7Lifetime2) {
               var8Lifetime1 = h.measureMenuTextWidthWithIntGuard(ClientException.field_b[var5Lifetime4], -113, true);
               var6Lifetime1 = var6Lifetime1 + ContentTransitionDialog.field_bb;
               var9 = -(var8Lifetime1 >> 1) + NanoTickClock.field_i;
-              fi.field_lb[var5Lifetime4] = new int[4];
-              fi.field_lb[var5Lifetime4][0] = var9 - DropTargetWidget.field_G;
-              fi.field_lb[var5Lifetime4][1] = var6Lifetime1;
-              fi.field_lb[var5Lifetime4][2] = (DropTargetWidget.field_G << 1) + var8Lifetime1;
-              fi.field_lb[var5Lifetime4][3] = (vf.field_w << 1) + TickClock.field_b;
+              SocialListEntry.field_lb[var5Lifetime4] = new int[4];
+              SocialListEntry.field_lb[var5Lifetime4][0] = var9 - DropTargetWidget.field_G;
+              SocialListEntry.field_lb[var5Lifetime4][1] = var6Lifetime1;
+              SocialListEntry.field_lb[var5Lifetime4][2] = (DropTargetWidget.field_G << 1) + var8Lifetime1;
+              SocialListEntry.field_lb[var5Lifetime4][3] = (vf.field_w << 1) + TickClock.field_b;
               var6Lifetime1 = var6Lifetime1 + (ContentTransitionDialog.field_bb + ((vf.field_w << 1) + TickClock.field_b));
             } else {
               var6Lifetime1 = var6Lifetime1 + CurvedRoadSegment.field_M;
@@ -356,9 +356,9 @@ final class pe {
             var5Lifetime4++;
           }
           if (WhirlpoolHasher.field_h == 2) {
-            TextFieldRenderer.field_q.a(-1, 0, param1, -1);
+            TextFieldRenderer.field_q.setSelectionState(-1, 0, param1, -1);
           } else {
-            TextFieldRenderer.field_q.a(cm.a((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 0, param1, 0);
+            TextFieldRenderer.field_q.setSelectionState(cm.a((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 0, param1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

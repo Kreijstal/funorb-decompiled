@@ -32,7 +32,7 @@ final class ao {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (eo.a(21896, "getcookies", param0));
-              var4 = fl.a(var3, (byte) -125, ';');
+              var4 = BlobWriteRequest.split(var3, (byte) -125, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -168,7 +168,7 @@ final class ao {
           }
           var4_intLifetime4 = 0;
           while (var13.size > var4_intLifetime4) {
-            var13.elements[var4_intLifetime4] = NanoTickClock.a((GrowableObjectList) (var13.elements[var4_intLifetime4]), (byte) -127);
+            var13.elements[var4_intLifetime4] = NanoTickClock.removeShortBoundaryEdges((GrowableObjectList) (var13.elements[var4_intLifetime4]), (byte) -127);
             if (((GrowableObjectList) (var13.elements[var4_intLifetime4])).size != 0) {
               var4_intLifetime4++;
               continue;

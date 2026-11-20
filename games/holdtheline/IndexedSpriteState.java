@@ -113,7 +113,7 @@ abstract class IndexedSpriteState {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        Sprite var3 = tn.field_b.field_i[SolidRoadStripRenderer.b(2, 6)];
+        Sprite var3 = GrowableStringList.field_b.field_i[SolidRoadStripRenderer.b(2, 6)];
         if (param0 != -61) {
           return;
         }

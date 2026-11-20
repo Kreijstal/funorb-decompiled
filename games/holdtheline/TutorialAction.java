@@ -91,7 +91,7 @@ final class TutorialAction {
           LoginCredentials.field_a = false;
           ValidationIndicator.field_J = DelegatingCanvas.field_a;
           TrackBoundary.field_x = IterableNodeHashTable.field_e;
-          ValidatedTextField.field_U = nl.field_f;
+          ValidatedTextField.field_U = FullscreenDisplayMode.field_f;
           DelegatingCanvas.field_a = 0;
         }
         if (param0 == 1983) {

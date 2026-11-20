@@ -131,7 +131,7 @@ abstract class RoadStripRenderer {
             RoadStripRenderer.a(113, -110, (byte) 115, 12, -60, (String) null);
           }
           while (true) {
-            var3 = param1.a(param2, (byte) -95);
+            var3 = param1.exitFullscreen(param2, (byte) -95);
             while (var3.field_d == 0) {
               SocketConnector.sleepMillis(10L, (byte) 45);
             }

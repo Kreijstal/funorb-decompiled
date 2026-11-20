@@ -20,7 +20,7 @@ final class RotatedSpriteCache {
         nm.field_b = ArchiveRequest.field_r == 6 ? tk.field_c[5][var1] : tk.field_c[var1][0];
         if (!UsernameLoginCredentials.a(nm.field_b, true)) {
           qn.field_k = false;
-          fl.field_j = false;
+          BlobWriteRequest.field_j = false;
           QuickChatPhraseDefinition.field_r = -1;
           MusicPatchPcmStream.field_r = null;
           DiskCacheStore.field_i = -1;

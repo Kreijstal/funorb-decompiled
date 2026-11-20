@@ -175,7 +175,7 @@ final class StereoMusicSample {
           var5Lifetime1 = HoldTheLine.field_E[11] >> 8;
           var6Lifetime1 = StrongCacheEntry.field_q << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = tn.a(var6Lifetime1, 5255) >> 8;
+          var8Lifetime1 = GrowableStringList.a(var6Lifetime1, 5255) >> 8;
           var9Lifetime1 = hc.a(0, var6Lifetime1) >> 8;
           var10Lifetime1 = 68 / ((param0 - 5) / 52);
           if (-1 != NodeHashTableIterator.field_g &&

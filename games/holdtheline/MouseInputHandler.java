@@ -202,7 +202,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != ArchiveLoadStage.field_d) {
             SpriteAsset.field_a = 0;
             IterableNodeHashTable.field_e = param0.getX();
-            nl.field_f = param0.getY();
+            FullscreenDisplayMode.field_f = param0.getY();
             bb.b(-1);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DelegatingCanvas.field_a = 2;

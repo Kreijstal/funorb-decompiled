@@ -13,7 +13,7 @@ final class ad {
         field_b = null;
     }
 
-    final static SoundPlayback a(int param0, int param1, PcmSample param2) {
+    final static SoundPlayback playSample(int param0, int param1, PcmSample param2) {
         RuntimeException var3 = null;
         SoundPlayback stackIn_2_0 = null;
         SoundPlayback stackIn_4_0 = null;
@@ -42,32 +42,32 @@ final class ad {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isReflectionCheckReady(int param0) {
         int var2 = 0;
-        ki var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
         Sprite var4 = null;
-        ki var5 = null;
+        ReflectionCheck var5 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          var5 = (ki) (sl.field_b.first((byte) 94));
+          var5 = (ReflectionCheck) (sl.field_b.first((byte) 94));
           var1 = var5;
           if (var1 == null) {
             return false;
           }
           if (param0 <= 80) {
             var4 = (Sprite) null;
-            ad.a((int[]) null, 0.6495102643966675f, (byte) -45, 0.5647060871124268f, (Sprite) null);
+            ad.fillBlendedShadedTexturePolygon((int[]) null, 0.6495102643966675f, (byte) -45, 0.5647060871124268f, (Sprite) null);
           }
-          for (var2 = 0; var2 < var1.field_p; var2++) {
-            if (null != var5.field_k[var2] &&
-              0 == var5.field_k[var2].field_d) {
+          for (var2 = 0; var2 < var1.operationCount; var2++) {
+            if (null != var5.fieldTasks[var2] &&
+              0 == var5.fieldTasks[var2].field_d) {
               return false;
             }
-            if (null != var5.field_l[var2] &&
-              0 == var5.field_l[var2].field_d) {
+            if (null != var5.methodTasks[var2] &&
+              0 == var5.methodTasks[var2].field_d) {
               return false;
             }
           }
@@ -93,7 +93,7 @@ final class ad {
         LoadProgressDialog.field_ab = -1;
     }
 
-    final static void a(int[] param0, float param1, byte param2, float param3, Sprite param4) {
+    final static void fillBlendedShadedTexturePolygon(int[] param0, float param1, byte param2, float param3, Sprite param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -125,23 +125,23 @@ final class ad {
         int var22Lifetime1;
         var24 = HoldTheLine.field_D;
         try {
-          gf.a();
-          gf.a(param0, 0, param0.length);
-          gf.c();
+          PolygonScanConverter.clearEdges();
+          PolygonScanConverter.addPolygonEdges(param0, 0, param0.length);
+          PolygonScanConverter.beginScan();
           var5_int = 51 % ((param2 - 26) / 33);
           while (true) {
-            if (!gf.d()) {
+            if (!PolygonScanConverter.nextSpan()) {
               return;
             }
-            var6 = gf.field_g;
+            var6 = PolygonScanConverter.spanStartX;
             if (var6 < 0) {
               var6 = 0;
             }
-            var7 = gf.field_b;
+            var7 = PolygonScanConverter.spanEndX;
             if (var7 >= SoftwareRasterizer.width) {
               var7 = -1 + SoftwareRasterizer.width;
             }
-            var8 = gf.field_a;
+            var8 = PolygonScanConverter.spanY;
             if (var8 < 0) {
               var8 = 0;
             }

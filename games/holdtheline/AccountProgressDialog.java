@@ -18,7 +18,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         }
         this.field_F = false;
         if (this.field_kb) {
-          wh.a((byte) -41);
+          OutlinedRoadFillRenderer.a((byte) -41);
         } else {
           if (this.field_ob) {
             HuffmanDecoder.b(58);
@@ -81,7 +81,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           this.field_nb = param1;
           this.field_rb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_rb.animating = true;
-          this.a(true, this.field_rb);
+          this.addChild(true, this.field_rb);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

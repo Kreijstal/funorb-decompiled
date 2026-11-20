@@ -95,7 +95,7 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
           }
           this.field_p.addAll(param0, 0);
           this.field_o.addAll(param3, 0);
-          gf.a(var14, 12566463);
+          PolygonScanConverter.fillPolygon(var14, 12566463);
           if (param2 > -49) {
             return;
           }

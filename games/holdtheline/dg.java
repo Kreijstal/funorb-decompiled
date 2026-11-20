@@ -35,7 +35,7 @@ final class dg {
           if (SocketConnector.field_g != null) {
             return;
           }
-          UrlPacketDownloader.field_h = nl.field_e.toLowerCase();
+          UrlPacketDownloader.field_h = FullscreenDisplayMode.field_e.toLowerCase();
           ProxySocketConnector.field_l = TextHotspotRange.field_q.toLowerCase();
           SocketConnector.field_g = new String[14];
           SocketConnector.field_g[7] = WeightedLruCache.field_h;
@@ -76,7 +76,7 @@ final class dg {
           uk.field_c[12] = CachedArchiveProvider.field_B;
           uk.field_c[21] = gk.field_c;
           PacketBuffer.field_n = new String[]{uk.field_c[4], uk.field_c[0]};
-          ki.field_i = new String[]{uk.field_c[9], uk.field_c[0]};
+          ReflectionCheck.field_i = new String[]{uk.field_c[9], uk.field_c[0]};
           DropTargetWidget.field_L = new String[]{uk.field_c[0], jc.field_d, b.field_e, o.field_b};
           var1_int = TextHotspotRange.field_i.length;
           var2 = Integer.toString(var1_int);
@@ -203,7 +203,7 @@ final class dg {
             var4 = (ih) (fb.field_n.next((byte) -75));
           }
           if (of.a(-969)) {
-            RaceSetupMenu.field_y = ie.a(10, 31043, 2, 0);
+            RaceSetupMenu.field_y = BlobReadRequest.requestArchiveKey(10, 31043, 2, 0);
           }
           h.b((byte) -92);
           RoadSegment.a(of.a(-969), (byte) 97);

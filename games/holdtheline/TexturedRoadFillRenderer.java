@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends vd {
+final class TexturedRoadFillRenderer extends RoadFillRenderer {
     static int[] field_l;
     static String field_g;
-    private Sprite field_m;
+    private Sprite texture;
     static String field_k;
     static int field_h;
     static int[] field_f;
     static int field_i;
-    private float field_n;
+    private float textureScale;
     static NamedSoundEffect field_j;
 
-    final void a(float param0, int[] param1, int param2, int[] param3, byte param4) {
+    final void drawRoadFill(float param0, int[] param1, int param2, int[] param3, byte param4) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -57,12 +57,12 @@ final class qd extends vd {
             var10++;
           }
           if (param0 != 0.0f) {
-            ad.a(var12, this.field_n, (byte) 101, param0, this.field_m);
+            ad.fillBlendedShadedTexturePolygon(var12, this.textureScale, (byte) 101, param0, this.texture);
           } else {
-            if (this.field_n != 1.0f) {
-              jh.a(this.field_m, (byte) 51, this.field_n, var12);
+            if (this.textureScale != 1.0f) {
+              jh.a(this.texture, (byte) 51, this.textureScale, var12);
             } else {
-              qg.a(this.field_m, (byte) 126, var12);
+              qg.fillTexturedPolygon(this.texture, (byte) 126, var12);
             }
           }
           return;
@@ -95,7 +95,7 @@ final class qd extends vd {
         int var1 = 38 % ((param0 + 31) / 49);
     }
 
-    final static void a(int param0, int param1) {
+    final static void selectMusicTrack(int param0, int param1) {
         if (null != ValidationHelpWidget.field_Q &&
           i.field_k[param1] != null) {
           EmailValidationResult.field_d = null;
@@ -109,12 +109,12 @@ final class qd extends vd {
         }
     }
 
-    final static void d(int param0) {
+    final static void resetFrameTiming(int param0) {
         int var1_int = 0;
         int var2 = HoldTheLine.field_D;
         int var1_intLifetime1;
         try {
-          oi.field_e.b((byte) 45);
+          oi.field_e.reset((byte) 45);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             AudioServiceThread.field_b[var1_int] = 0L;
           }
@@ -130,19 +130,19 @@ final class qd extends vd {
         }
     }
 
-    qd(Sprite param0) {
+    TexturedRoadFillRenderer(Sprite param0) {
         try {
-          this.field_m = param0;
-          this.field_n = 1.0f;
+          this.texture = param0;
+          this.textureScale = 1.0f;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    qd(Sprite param0, float param1) {
+    TexturedRoadFillRenderer(Sprite param0, float param1) {
         try {
-          this.field_n = param1;
-          this.field_m = param0;
+          this.textureScale = param1;
+          this.texture = param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

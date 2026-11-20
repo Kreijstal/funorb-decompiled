@@ -31,7 +31,7 @@ final class IconToggleRenderer implements WidgetRenderer {
           }
           var6_int = param3.x + param1;
           var7 = param3.y + param4;
-          tn.a(var6_int, param3.width, 152, var7, param3.height);
+          GrowableStringList.drawGradientBorder(var6_int, param3.width, 152, var7, param3.height);
           var8 = FullscreenFocusCanvas.field_i[1];
           if (param3 instanceof TextButton &&
             ((TextButton) (param3)).field_B) {

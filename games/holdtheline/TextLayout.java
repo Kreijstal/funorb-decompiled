@@ -537,7 +537,7 @@ abstract class TextLayout {
           var36 = null;
           while (true) {
             var37_ref_dd = (StraightRoadSegment) (var18.elements[var13Lifetime2]);
-            var37_ref_dd.b(58, var35);
+            var37_ref_dd.setOffsetDirection(58, var35);
             if (var37_ref_dd.field_P.x == var37_ref_dd.field_R.x &&
               ~var37_ref_dd.field_R.y == ~var37_ref_dd.field_P.y) {
               var18.removeAt(true, var13Lifetime2);
@@ -604,11 +604,11 @@ abstract class TextLayout {
           var65 = new GrowableObjectList();
           var63 = new GrowableObjectList();
           TextLineLayout.a(var62, var63, var64, var57.field_e, var57.roadSegments, var65, -68);
-          var57.field_e = NanoTickClock.a(var57.field_e, (byte) -127);
-          var67 = NanoTickClock.a(var64, (byte) -127);
-          var69 = NanoTickClock.a(var65, (byte) -127);
-          var66 = NanoTickClock.a(var62, (byte) -127);
-          var68 = NanoTickClock.a(var63, (byte) -127);
+          var57.field_e = NanoTickClock.removeShortBoundaryEdges(var57.field_e, (byte) -127);
+          var67 = NanoTickClock.removeShortBoundaryEdges(var64, (byte) -127);
+          var69 = NanoTickClock.removeShortBoundaryEdges(var65, (byte) -127);
+          var66 = NanoTickClock.removeShortBoundaryEdges(var62, (byte) -127);
+          var68 = NanoTickClock.removeShortBoundaryEdges(var63, (byte) -127);
           var57.field_c = ao.a(var66, (byte) 21, false, var67);
           var57.field_t = ao.a(var68, (byte) 21, false, var69);
           if (var6 != 0) {

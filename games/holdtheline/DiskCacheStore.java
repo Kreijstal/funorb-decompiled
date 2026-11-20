@@ -166,8 +166,8 @@ final class DiskCacheStore {
           var1_int = 0;
           var2 = 0;
           while (qh.c(-105)) {
-            TextFieldRenderer.field_q.b(-1);
-            if (TextFieldRenderer.field_q.a(-1)) {
+            TextFieldRenderer.field_q.handleVerticalKeys(-1);
+            if (TextFieldRenderer.field_q.hasActivationInput(-1)) {
               var1_int = 1;
             }
             if (DelayedServerPacket.field_n != 13) {
@@ -175,8 +175,8 @@ final class DiskCacheStore {
             }
             var2 = 1;
           }
-          TextFieldRenderer.field_q.a(cm.a((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), cm.a((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
-          if (TextFieldRenderer.field_q.a(-1)) {
+          TextFieldRenderer.field_q.updateMouseSelection(cm.a((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), cm.a((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
+          if (TextFieldRenderer.field_q.hasActivationInput(-1)) {
             var1_int = 1;
           }
           if (param0 != 18) {
@@ -184,8 +184,8 @@ final class DiskCacheStore {
           }
           var3 = 0;
           if (var1_int != 0 &&
-            0 <= TextFieldRenderer.field_q.field_g) {
-            var3 = ClientException.field_e[TextFieldRenderer.field_q.field_g];
+            0 <= TextFieldRenderer.field_q.selectedIndex) {
+            var3 = ClientException.field_e[TextFieldRenderer.field_q.selectedIndex];
             if (2 == var3 ||
               5 == var3) {
               IntrusiveDeque.b(false);

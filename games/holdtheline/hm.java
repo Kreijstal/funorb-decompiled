@@ -255,14 +255,14 @@ final class hm {
         }
     }
 
-    final static void b(int param0) {
+    final static void readBlobReply(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        ie var4_ref_ie = null;
-        fl var5 = null;
+        BlobReadRequest var4_ref_ie = null;
+        BlobWriteRequest var5 = null;
         int var5_int = 0;
         Object var6 = null;
         int var7 = 0;
@@ -278,10 +278,10 @@ final class hm {
           if (var2 != 0) {
             if (var2 == 1) {
               var4 = var9.readInt(-67);
-              var5 = (fl) (UsernameLoginCredentials.field_e.first((byte) 85));
+              var5 = (BlobWriteRequest) (UsernameLoginCredentials.field_e.first((byte) 85));
               while (var5 != null) {
-                if (var4 != var5.field_k) {
-                  var5 = (fl) (UsernameLoginCredentials.field_e.next((byte) -26));
+                if (var4 != var5.acknowledgementCrc) {
+                  var5 = (BlobWriteRequest) (UsernameLoginCredentials.field_e.next((byte) -26));
                   continue;
                 }
                 break;
@@ -293,10 +293,10 @@ final class hm {
               r.a(-28036);
               return;
             }
-            MusicPatchPcmStream.a((Throwable) null, (byte) 65, "A1: " + AgeValidator.b(false));
+            MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 65, "A1: " + AgeValidator.b(false));
             r.a(-28036);
           } else {
-            var4_ref_ie = (ie) (oc.field_d.first((byte) 94));
+            var4_ref_ie = (BlobReadRequest) (oc.field_d.first((byte) 94));
             if (var4_ref_ie == null) {
               r.a(-28036);
               return;
@@ -316,8 +316,8 @@ final class hm {
               r.a(-28036);
               return;
             }
-            var4_ref_ie.field_m = true;
-            var4_ref_ie.field_l = (byte[]) (var6);
+            var4_ref_ie.completed = true;
+            var4_ref_ie.payload = (byte[]) (var6);
             var4_ref_ie.unlink(0);
           }
           return;

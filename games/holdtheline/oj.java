@@ -28,7 +28,7 @@ final class oj {
           }
           ViewportSizingController.field_n[AccountProgressDialog.field_jb] = var3;
         }
-        if (!SecondaryNodeDequeIterator.field_d.field_q.a(22050, jh.field_a, var1, false, UsernameLoginCredentials.field_f)) {
+        if (!SecondaryNodeDequeIterator.field_d.field_q.loadTrackPatches(22050, jh.field_a, var1, false, UsernameLoginCredentials.field_f)) {
           return;
         }
         i.field_k[AccountProgressDialog.field_jb] = var1;
@@ -36,7 +36,7 @@ final class oj {
         fieldTemp$1 = oc.field_a - 1;
         oc.field_a = oc.field_a - 1;
         if (fieldTemp$1 == 0) {
-          SecondaryNodeDequeIterator.field_d.field_q.e(0);
+          SecondaryNodeDequeIterator.field_d.field_q.discardPatchSampleIds(0);
           jh.field_a = null;
         }
         if (WeightedLruCache.field_e == 2) {

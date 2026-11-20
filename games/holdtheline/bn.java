@@ -3,7 +3,7 @@
  */
 final class bn extends UsernameLoginCredentials {
     static boolean field_j;
-    static vd field_l;
+    static RoadFillRenderer field_l;
     static long field_k;
 
     bn(long param0, String param1) {
@@ -35,6 +35,6 @@ final class bn extends UsernameLoginCredentials {
     }
 
     static {
-        field_l = (vd) ((Object) new wh(16777087, 16777087, 128));
+        field_l = (RoadFillRenderer) ((Object) new OutlinedRoadFillRenderer(16777087, 16777087, 128));
     }
 }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class t extends IntrusiveNode {
+final class IntArrayReadRequest extends IntrusiveNode {
     static String field_k;
     static int field_n;
     static int[] field_j;
     static int field_l;
-    int[] field_m;
+    int[] values;
     static SpriteAsset field_i;
 
     final static boolean a(int param0, String param1) {
@@ -45,7 +45,7 @@ final class t extends IntrusiveNode {
     final static void a(String param0, byte param1) {
         try {
           if (param1 >= -21) {
-            t.clearSharedReferences(10);
+            IntArrayReadRequest.clearSharedReferences(10);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "t.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -169,7 +169,7 @@ final class t extends IntrusiveNode {
         }
     }
 
-    private t() throws Throwable {
+    private IntArrayReadRequest() throws Throwable {
         throw new Error();
     }
 

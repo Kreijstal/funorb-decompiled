@@ -99,7 +99,7 @@ final class fc {
         IndexedSprite var1 = null;
         if (param0) {
           var1 = new IndexedSprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], IterableSecondaryNodeDeque.field_e[0], StraightRoadSegment.field_E);
-          tk.a(false);
+          tk.clearDecodedSpriteSheet(false);
           return var1;
         }
         return (IndexedSprite) null;

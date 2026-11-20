@@ -6,7 +6,7 @@ abstract class TickClock {
     static SpriteAsset field_a;
     static int field_b;
 
-    final static void a(int param0, Sprite param1, int param2, int param3, int param4) {
+    final static void drawWhiteRecoloredSprite(int param0, Sprite param1, int param2, int param3, int param4) {
         int var11 = 0;
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
@@ -81,7 +81,7 @@ abstract class TickClock {
         }
     }
 
-    abstract int a(long param0, int param1);
+    abstract int advanceTicks(long param0, int param1);
 
     public static void clearSharedReferences(byte param0) {
         field_a = null;
@@ -135,19 +135,19 @@ abstract class TickClock {
         }
     }
 
-    abstract long a(int param0);
+    abstract long getSleepMillis(int param0);
 
-    abstract void b(byte param0);
+    abstract void reset(byte param0);
 
-    final int b(long param0, int param1) {
-        long var4 = this.a(-123);
+    final int waitForTicks(long param0, int param1) {
+        long var4 = this.getSleepMillis(-123);
         if (0L < var4) {
           SocketConnector.sleepMillis(var4, (byte) 45);
         }
         if (param1 <= 38) {
           return 20;
         }
-        return this.a(param0, -35);
+        return this.advanceTicks(param0, -35);
     }
 
     static {

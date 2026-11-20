@@ -132,16 +132,16 @@ final class hc {
           param1 = param1 & 8191;
           if (param1 < 4096) {
             if (param1 >= 2048) {
-              stackIn_19_0 = -qd.field_f[param1 - 2048];
+              stackIn_19_0 = -TexturedRoadFillRenderer.field_f[param1 - 2048];
             } else {
-              stackIn_19_0 = qd.field_f[-param1 + 2048];
+              stackIn_19_0 = TexturedRoadFillRenderer.field_f[-param1 + 2048];
             }
             return stackIn_19_0;
           }
           if (param1 < 6144) {
-            stackIn_15_0 = -qd.field_f[-param1 + 6144];
+            stackIn_15_0 = -TexturedRoadFillRenderer.field_f[-param1 + 6144];
           } else {
-            stackIn_15_0 = qd.field_f[param1 - 6144];
+            stackIn_15_0 = TexturedRoadFillRenderer.field_f[param1 - 6144];
           }
           return stackIn_15_0;
         }
@@ -149,16 +149,16 @@ final class hc {
         param1 = param1 & 8191;
         if (param1 < 4096) {
           if (param1 >= 2048) {
-            stackIn_9_0 = -qd.field_f[param1 - 2048];
+            stackIn_9_0 = -TexturedRoadFillRenderer.field_f[param1 - 2048];
           } else {
-            stackIn_9_0 = qd.field_f[-param1 + 2048];
+            stackIn_9_0 = TexturedRoadFillRenderer.field_f[-param1 + 2048];
           }
           return stackIn_9_0;
         }
         if (param1 < 6144) {
-          stackIn_5_0 = -qd.field_f[-param1 + 6144];
+          stackIn_5_0 = -TexturedRoadFillRenderer.field_f[-param1 + 6144];
         } else {
-          stackIn_5_0 = qd.field_f[param1 - 6144];
+          stackIn_5_0 = TexturedRoadFillRenderer.field_f[param1 - 6144];
         }
         return stackIn_5_0;
     }

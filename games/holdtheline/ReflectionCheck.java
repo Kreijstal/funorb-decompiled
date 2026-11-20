@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends IntrusiveNode {
+final class ReflectionCheck extends IntrusiveNode {
     static int field_o;
-    PlatformTask[] field_k;
-    int[] field_j;
+    PlatformTask[] fieldTasks;
+    int[] fieldWriteValues;
     static String[] field_i;
-    int[] field_m;
-    int[] field_r;
-    int field_n;
-    int field_p;
-    byte[][][] field_q;
-    PlatformTask[] field_l;
+    int[] operations;
+    int[] errors;
+    int requestId;
+    int operationCount;
+    byte[][][] serializedArguments;
+    PlatformTask[] methodTasks;
 
     final static boolean a(boolean param0) {
         RotatedSpriteAsset.field_n = true;
@@ -19,7 +19,7 @@ final class ki extends IntrusiveNode {
         if (!param0) {
           return DiskCacheRequest.field_w == 11 ? true : false;
         }
-        ki.a(false);
+        ReflectionCheck.a(false);
         return DiskCacheRequest.field_w == 11 ? true : false;
     }
 
@@ -30,7 +30,7 @@ final class ki extends IntrusiveNode {
         }
     }
 
-    ki() {
+    ReflectionCheck() {
     }
 
     static {

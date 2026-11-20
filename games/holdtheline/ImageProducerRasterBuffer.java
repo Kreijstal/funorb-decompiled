@@ -166,11 +166,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var2 = HoldTheLine.field_D;
         SoundPlayback var1Lifetime1;
         try {
-          LoginChoicePanel.field_G.d();
+          LoginChoicePanel.field_G.service();
           if (param0 != -1379) {
             ImageProducerRasterBuffer.clearSharedReferences(-82);
           }
-          DraggableWidget.field_G.d();
+          DraggableWidget.field_G.service();
           ValidationIndicator.field_G = ValidationIndicator.field_G - 1;
           if (0 == ValidationIndicator.field_G) {
             ValidationIndicator.field_G = 200;
@@ -192,7 +192,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             }
           }
           if (i.field_m != null &&
-            i.field_m.c((byte) 85)) {
+            i.field_m.isReady((byte) 85)) {
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ')');

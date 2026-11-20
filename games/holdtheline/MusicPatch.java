@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicPatch extends IntrusiveNode {
-    byte[] field_l;
-    int field_j;
+    byte[] keyPans;
+    int volume;
     static String[] field_t;
-    PcmSample[] field_s;
-    short[] field_q;
+    PcmSample[] samples;
+    short[] keyPitches;
     static tk field_n;
-    MusicPatchEnvelope[] field_o;
+    MusicPatchEnvelope[] envelopes;
     static float[] field_r;
-    private int[] field_p;
-    byte[] field_k;
+    private int[] sampleIds;
+    byte[] keyVolumes;
     static MovingEntity field_i;
     static int field_m;
-    byte[] field_v;
+    byte[] exclusiveGroups;
     static RotatedSpriteAsset field_u;
 
     final static void a(java.applet.Applet param0, byte param1) {
@@ -58,7 +58,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, int[] param1, byte[] param2, SoundCache param3) {
+    final boolean loadSamples(int param0, int[] param1, byte[] param2, SoundCache param3) {
         int stackIn_23_0 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -86,7 +86,7 @@ final class MusicPatch extends IntrusiveNode {
           while (var9 < 128) {
             if (null == param2 ||
               param2[var9] != 0) {
-              var10 = this.field_p[var9];
+              var10 = this.sampleIds[var9];
               if (var10 != 0) {
                 if (~var10 != ~var6) {
                   var6 = var10;
@@ -103,8 +103,8 @@ final class MusicPatch extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_s[var9] = (PcmSample) (var7);
-                  this.field_p[var9] = 0;
+                  this.samples[var9] = (PcmSample) (var7);
+                  this.sampleIds[var9] = 0;
                 }
               }
             }
@@ -142,7 +142,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static MonochromeBitmapFont a(String param0, ResourceArchive param1, int param2, ResourceArchive param3, String param4) {
+    final static MonochromeBitmapFont loadMonochromeFontByName(String param0, ResourceArchive param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -162,7 +162,7 @@ final class MusicPatch extends IntrusiveNode {
           var5_int = param3.getGroupId(param0, 3);
           var6 = param3.getFileId(var5_int, param4, false);
           if (param2 == 14819) {
-            stackIn_4_0 = fi.a(-17072, param1, param3, var6, var5_int);
+            stackIn_4_0 = SocialListEntry.loadMonochromeFont(-17072, param1, param3, var6, var5_int);
             return stackIn_4_0;
           }
           stackIn_2_0 = (MonochromeBitmapFont) null;
@@ -543,13 +543,13 @@ final class MusicPatch extends IntrusiveNode {
         int stackIn_299_1Lifetime1Lifetime1;
         var36 = HoldTheLine.field_D;
         try {
-          this.field_l = new byte[128];
-          this.field_p = new int[128];
-          this.field_q = new short[128];
-          this.field_v = new byte[128];
-          this.field_s = new PcmSample[128];
-          this.field_o = new MusicPatchEnvelope[128];
-          this.field_k = new byte[128];
+          this.keyPans = new byte[128];
+          this.sampleIds = new int[128];
+          this.keyPitches = new short[128];
+          this.exclusiveGroups = new byte[128];
+          this.samples = new PcmSample[128];
+          this.envelopes = new MusicPatchEnvelope[128];
+          this.keyVolumes = new byte[128];
           var2 = new PacketBuffer(param0);
           var3 = 0;
           while (0 != var2.payload[var2.position + var3]) {
@@ -716,7 +716,7 @@ final class MusicPatch extends IntrusiveNode {
               break;
             }
             var19 = var19 + var2.readUnsignedByte((byte) -93);
-            this.field_q[var20] = (short)var19;
+            this.keyPitches[var20] = (short)var19;
             var20++;
           } while (var36 == 0);
           var20 = 0;
@@ -726,7 +726,7 @@ final class MusicPatch extends IntrusiveNode {
               break;
             }
             var19 = var19 + var2.readUnsignedByte((byte) -86);
-            this.field_q[var20] = (short)(this.field_q[var20] + (var19 << 8));
+            this.keyPitches[var20] = (short)(this.keyPitches[var20] + (var19 << 8));
             var20++;
           } while (var36 == 0);
           var21 = 0;
@@ -744,9 +744,9 @@ final class MusicPatch extends IntrusiveNode {
                 }
                 var22 = var2.readVarInt((byte) -17);
               }
-              this.field_q[var23] = (short)(this.field_q[var23] + LoginChoicePanel.a(-1 + var22 << 14, 32768));
+              this.keyPitches[var23] = (short)(this.keyPitches[var23] + LoginChoicePanel.a(-1 + var22 << 14, 32768));
               var20--;
-              this.field_p[var23] = var22;
+              this.sampleIds[var23] = var22;
               var23++;
               continue;
             }
@@ -761,7 +761,7 @@ final class MusicPatch extends IntrusiveNode {
           var24 = stackIn_109_0;
           boolean decompiledNaturalLoopExit3 = false;
           while (!(decompiledNaturalLoopExit3 = (var24 >= 128))) {
-            stackIn_129_0 = ~this.field_p[var24];
+            stackIn_129_0 = ~this.sampleIds[var24];
             if (var36 == 0) {
               if (stackIn_129_0 != -1) {
                 if (var20 == 0) {
@@ -775,7 +775,7 @@ final class MusicPatch extends IntrusiveNode {
                   }
                 }
                 var20--;
-                this.field_v[var24] = (byte)var23;
+                this.exclusiveGroups[var24] = (byte)var23;
               }
               var24++;
               continue;
@@ -791,7 +791,7 @@ final class MusicPatch extends IntrusiveNode {
           var25_int = stackIn_129_0;
           boolean decompiledNaturalLoopExit2 = false;
           while (!(decompiledNaturalLoopExit2 = (var25_int >= 128))) {
-            stackIn_144_0 = ~this.field_p[var25_int];
+            stackIn_144_0 = ~this.sampleIds[var25_int];
             if (var36 == 0) {
               if (stackIn_144_0 != -1) {
                 if (0 == var20) {
@@ -805,7 +805,7 @@ final class MusicPatch extends IntrusiveNode {
                   }
                 }
                 var20--;
-                this.field_l[var25_int] = (byte)var24;
+                this.keyPans[var25_int] = (byte)var24;
               }
               var25_int++;
               continue;
@@ -827,7 +827,7 @@ final class MusicPatch extends IntrusiveNode {
               stackIn_161_0 = 0;
               break;
             }
-            stackIn_161_0 = this.field_p[var26];
+            stackIn_161_0 = this.sampleIds[var26];
             if (var36 == 0) {
               if (stackIn_161_0 != 0) {
                 if (var20 == 0) {
@@ -838,7 +838,7 @@ final class MusicPatch extends IntrusiveNode {
                     var20 = -1;
                   }
                 }
-                this.field_o[var26] = (MusicPatchEnvelope) (var25);
+                this.envelopes[var26] = (MusicPatchEnvelope) (var25);
                 var20--;
               }
               var26++;
@@ -857,11 +857,11 @@ final class MusicPatch extends IntrusiveNode {
                 } else {
                   var20 = var18[var21Lifetime1++];
                 }
-                if (this.field_p[var27] > 0) {
+                if (this.sampleIds[var27] > 0) {
                   var26 = 1 + var2.readUnsignedByte((byte) -112);
                 }
               }
-              this.field_k[var27] = (byte)var26;
+              this.keyVolumes[var27] = (byte)var26;
               var20--;
               var27++;
               continue;
@@ -869,7 +869,7 @@ final class MusicPatch extends IntrusiveNode {
             break;
           }
           if (decompiledNaturalLoopExit1) {
-            this.field_j = 1 + var2.readUnsignedByte((byte) -54);
+            this.volume = 1 + var2.readUnsignedByte((byte) -54);
             stackIn_176_0 = 0;
           }
           var27 = stackIn_176_0;
@@ -1020,7 +1020,7 @@ final class MusicPatch extends IntrusiveNode {
                   var29 = 2;
                   break;
                 }
-                this.field_k[var29] = (byte)(32 + var28_int * this.field_k[var29] >> 6);
+                this.keyVolumes[var29] = (byte)(32 + var28_int * this.keyVolumes[var29] >> 6);
                 var29++;
               } while (var36 == 0);
               scanLoop3: while (true) {
@@ -1036,7 +1036,7 @@ final class MusicPatch extends IntrusiveNode {
                   while (var33 < var30) {
                     var34 = ImageProducerRasterBuffer.a(var32, -var27 + var30, (byte) -76);
                     var32 = var32 + (var31 - var28_int);
-                    this.field_k[var33] = (byte)(var34 * this.field_k[var33] + 32 >> 6);
+                    this.keyVolumes[var33] = (byte)(var34 * this.keyVolumes[var33] + 32 >> 6);
                     var33++;
                   }
                   var27 = var30;
@@ -1049,7 +1049,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var30 = stackIn_268_0;
               while (var30 < 128) {
-                this.field_k[var30] = (byte)(var28_int * this.field_k[var30] + 32 >> 6);
+                this.keyVolumes[var30] = (byte)(var28_int * this.keyVolumes[var30] + 32 >> 6);
                 var30++;
                 if (var36 != 0) {
                   break scanLoop2;
@@ -1077,7 +1077,7 @@ final class MusicPatch extends IntrusiveNode {
               var29 = 0;
               scanLoop5: while (true) {
                 if (var29 < var27) {
-                  var30 = var28_int + (this.field_l[var29] & 255);
+                  var30 = var28_int + (this.keyPans[var29] & 255);
                   stackIn_299_0 = ~var30;
                   stackIn_299_1 = -1;
                   if (var36 != 0) {
@@ -1096,7 +1096,7 @@ final class MusicPatch extends IntrusiveNode {
                   if (128 < var30) {
                     var30 = 128;
                   }
-                  this.field_l[var29] = (byte)var30;
+                  this.keyPans[var29] = (byte)var30;
                   var29++;
                   continue;
                 }
@@ -1117,7 +1117,7 @@ final class MusicPatch extends IntrusiveNode {
                   var33 = stackIn_323_0;
                   while (var33 < var30) {
                     var34 = ImageProducerRasterBuffer.a(var32, -var27 + var30, (byte) -86);
-                    var35 = var34 + (this.field_l[var33] & 255);
+                    var35 = var34 + (this.keyPans[var33] & 255);
                     stackIn_299_0Lifetime1Lifetime1 = 0;
                     stackIn_299_1Lifetime1Lifetime1 = var35;
                     if (stackIn_299_0Lifetime1Lifetime1 > stackIn_299_1Lifetime1Lifetime1) {
@@ -1127,7 +1127,7 @@ final class MusicPatch extends IntrusiveNode {
                       var35 = 128;
                     }
                     var32 = var32 + (-var28_int + var31);
-                    this.field_l[var33] = (byte)var35;
+                    this.keyPans[var33] = (byte)var35;
                     var33++;
                   }
                   var29 += 2;
@@ -1138,14 +1138,14 @@ final class MusicPatch extends IntrusiveNode {
               }
               var16 = null;
               for (var30 = var27; var30 < 128; var30++) {
-                var31 = var28_int + (this.field_l[var30] & 255);
+                var31 = var28_int + (this.keyPans[var30] & 255);
                 if (var31 < 0) {
                   var31 = 0;
                 }
                 if (var31 > 128) {
                   var31 = 128;
                 }
-                this.field_l[var30] = (byte)var31;
+                this.keyPans[var30] = (byte)var31;
               }
             }
             stackIn_323_0 = 0;
@@ -1240,14 +1240,14 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final void e(int param0) {
+    final void discardSampleIds(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != -8346) {
-            MusicPatch.a(-62, 14, (Sprite) null, 98, (byte) 42);
+            MusicPatch.drawCenteredSpriteMask(-62, 14, (Sprite) null, 98, (byte) 42);
           }
-          this.field_p = null;
+          this.sampleIds = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1256,7 +1256,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, Sprite param2, int param3, byte param4) {
+    final static void drawCenteredSpriteMask(int param0, int param1, Sprite param2, int param3, byte param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

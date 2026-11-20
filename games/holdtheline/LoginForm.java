@@ -197,7 +197,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             }
             this.field_Q = new TextButton(stackIn_19_3, (WidgetListener) null);
             if (this.field_O) {
-              this.field_N = new TextButton(fo.field_m, (WidgetListener) (this));
+              this.field_N = new TextButton(ArchiveKeyRequest.field_m, (WidgetListener) (this));
             }
           } else {
             this.field_F = new TextButton(CachedTextLayout.field_p, (WidgetListener) null);
@@ -244,11 +244,11 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           }
           dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.field_M, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a(true, dupTemp$0);
+          this.addChild(true, dupTemp$0);
           this.y = this.y + (((UiWidget) ((Object) var12)).height + 5);
           dupTemp$1 = new LabeledField(10, this.y, this.width - 20, 25, this.field_H, false, 80, 3, var7, 16777215, EmailValidationResult.field_f);
           var13 = dupTemp$1;
-          this.a(true, dupTemp$1);
+          this.addChild(true, dupTemp$1);
           this.field_F.listener = (WidgetListener) (this);
           this.y = this.y + (((UiWidget) ((Object) var13)).height + 5);
           if (this.field_N != null) {
@@ -279,12 +279,12 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             }
           }
           this.setBounds(0, (byte) 122, 0, this.y + 3, this.width);
-          this.a(true, this.field_F);
+          this.addChild(true, this.field_F);
           if (this.field_N != null) {
-            this.a(true, this.field_N);
+            this.addChild(true, this.field_N);
           }
           if (this.field_Q != null) {
-            this.a(true, this.field_Q);
+            this.addChild(true, this.field_Q);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -443,13 +443,13 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             return true;
           }
           if (param1 == 98) {
-            stackIn_7_0 = this.c(param0, param2 + 77);
+            stackIn_7_0 = this.focusPreviousChild(param0, param2 + 77);
             return stackIn_7_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param0, 116);
+          stackIn_10_0 = this.focusNextChild(param0, 116);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

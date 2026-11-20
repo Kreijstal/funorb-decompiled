@@ -22,7 +22,7 @@ final class MusicPatchEnvelope {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        tn var6 = null;
+        GrowableStringList var6 = null;
         String[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -35,7 +35,7 @@ final class MusicPatchEnvelope {
           var4 = param1;
           while (true) {
             if (param0.length <= var4) {
-              stackIn_17_0 = var6.c(3);
+              stackIn_17_0 = var6.toArray(3);
               return stackIn_17_0;
             }
             while (var4 < param0.length) {
@@ -46,7 +46,7 @@ final class MusicPatchEnvelope {
               }
               break;
             }
-            var6.a((byte) 112, sm.decodeCp1252(-var3 + var4, var3, -129, param0));
+            var6.add((byte) 112, sm.decodeCp1252(-var3 + var4, var3, -129, param0));
             while (param0.length > var4) {
               if (param0[var4] == 13 ||
                 param0[var4] == 10) {

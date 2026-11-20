@@ -35,7 +35,7 @@ final class ak {
         }
         if (null != cd.field_a) {
           if (param1) {
-            stackIn_15_0 = nl.field_h[param2];
+            stackIn_15_0 = FullscreenDisplayMode.field_h[param2];
           } else {
             stackIn_15_0 = cd.field_a[param2];
           }
@@ -50,7 +50,7 @@ final class ak {
           return stackIn_21_0;
         }
         cd.field_a = StandardContentTransitionDialog.a(fb.field_i, 33, "achievements_128", "");
-        nl.field_h = new Sprite[cd.field_a.length];
+        FullscreenDisplayMode.field_h = new Sprite[cd.field_a.length];
         TutorialTransition.a(32381);
         var3 = 0;
         do {
@@ -58,13 +58,13 @@ final class ak {
             MarkerSliderRenderer.restoreRasterTarget(-1);
             break;
           }
-          nl.field_h[var3] = new Sprite(32, 32);
-          nl.field_h[var3].bindRaster();
+          FullscreenDisplayMode.field_h[var3] = new Sprite(32, 32);
+          FullscreenDisplayMode.field_h[var3].bindRaster();
           cd.field_a[var3].drawDownscaledThreshold(0, 0, 32, 32);
           var3++;
         } while (var4 == 0);
         if (param1) {
-          stackIn_31_0 = nl.field_h[param2];
+          stackIn_31_0 = FullscreenDisplayMode.field_h[param2];
         } else {
           stackIn_31_0 = cd.field_a[param2];
         }

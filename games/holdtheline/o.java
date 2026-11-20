@@ -103,7 +103,7 @@ final class o {
 
     final static GrowableIntList a(byte param0) {
         int var1 = 48 / ((param0 + 52) / 57);
-        return SingleChildWidget.a(1, 111);
+        return SingleChildWidget.createAdditiveIntList(1, 111);
     }
 
     static {

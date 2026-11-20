@@ -30,17 +30,17 @@ final class UrlPacketDownloader implements Runnable {
         RuntimeException var4 = null;
         var5 = HoldTheLine.field_D;
         try {
-          gf.a();
-          gf.a(param0, 0, param0.length);
-          gf.c();
+          PolygonScanConverter.clearEdges();
+          PolygonScanConverter.addPolygonEdges(param0, 0, param0.length);
+          PolygonScanConverter.beginScan();
           if (param1 >= -53) {
             var6 = (IsaacPacketBuffer) null;
             UrlPacketDownloader.a(20, (IsaacPacketBuffer) null);
           }
-          stackIn_5_0 = gf.d();
+          stackIn_5_0 = PolygonScanConverter.nextSpan();
           while (stackIn_5_0) {
-            SoftwareRasterizer.drawHorizontalLineAlpha(gf.field_g, gf.field_a, gf.field_b - gf.field_g, param3, param2);
-            stackIn_5_0 = gf.d();
+            SoftwareRasterizer.drawHorizontalLineAlpha(PolygonScanConverter.spanStartX, PolygonScanConverter.spanY, PolygonScanConverter.spanEndX - PolygonScanConverter.spanStartX, param3, param2);
+            stackIn_5_0 = PolygonScanConverter.nextSpan();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ final class UrlPacketDownloader implements Runnable {
         }
         if (this.field_c == 0) {
           if (this.field_a == null) {
-            this.field_a = this.field_l.a(this.field_b, 0);
+            this.field_a = this.field_l.openUrlStream(this.field_b, 0);
           }
           if (0 == this.field_a.field_d) {
             return false;
@@ -170,7 +170,7 @@ final class UrlPacketDownloader implements Runnable {
         }
         if (1 == this.field_c) {
           if (null == this.field_d) {
-            this.field_d = this.field_l.a(0, 443, this.field_b.getHost());
+            this.field_d = this.field_l.openSocket(0, 443, this.field_b.getHost());
           }
           if (0 == this.field_d.field_d) {
             return false;
@@ -204,7 +204,7 @@ final class UrlPacketDownloader implements Runnable {
           }
         }
         if (this.field_e == null) {
-          this.field_e = this.field_l.a((byte) -28, 5, (Runnable) (this));
+          this.field_e = this.field_l.startThread((byte) -28, 5, (Runnable) (this));
         }
         if (this.field_e.field_d == 0) {
           return false;
@@ -255,12 +255,12 @@ final class UrlPacketDownloader implements Runnable {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          ki var13 = null;
+          ReflectionCheck var13 = null;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
           Object var17 = null;
           java.lang.reflect.Field var17_ref = null;
-          ki var18 = null;
+          ReflectionCheck var18 = null;
           java.lang.reflect.Field var19 = null;
           Object var20 = null;
           Object var22 = null;
@@ -275,26 +275,26 @@ final class UrlPacketDownloader implements Runnable {
           var22 = null;
           var12 = HoldTheLine.field_D;
           try {
-            var13 = (ki) (sl.field_b.first((byte) 96));
+            var13 = (ReflectionCheck) (sl.field_b.first((byte) 96));
             var18 = var13;
             if (var18 == null) {
               return;
             }
             var3 = 0;
-            for (var4 = 0; var18.field_p > var4; var4++) {
-              if (null != var13.field_k[var4]) {
-                if (var13.field_k[var4].field_d == 2) {
-                  var13.field_r[var4] = -5;
+            for (var4 = 0; var18.operationCount > var4; var4++) {
+              if (null != var13.fieldTasks[var4]) {
+                if (var13.fieldTasks[var4].field_d == 2) {
+                  var13.errors[var4] = -5;
                 }
-                if (var13.field_k[var4].field_d == 0) {
+                if (var13.fieldTasks[var4].field_d == 0) {
                   var3 = 1;
                 }
               }
-              if (null != var13.field_l[var4]) {
-                if (var13.field_l[var4].field_d == 2) {
-                  var13.field_r[var4] = -6;
+              if (null != var13.methodTasks[var4]) {
+                if (var13.methodTasks[var4].field_d == 2) {
+                  var13.errors[var4] = -6;
                 }
-                if (var13.field_l[var4].field_d == 0) {
+                if (var13.methodTasks[var4].field_d == 0) {
                   var3 = 1;
                 }
               }
@@ -303,34 +303,34 @@ final class UrlPacketDownloader implements Runnable {
               return;
             }
             var4 = param1.position;
-            param1.writeInt((byte) -58, var18.field_n);
-            for (var5 = param0; var5 < var18.field_p; var5++) {
-              if (0 == var18.field_r[var5]) {
+            param1.writeInt((byte) -58, var18.requestId);
+            for (var5 = param0; var5 < var18.operationCount; var5++) {
+              if (0 == var18.errors[var5]) {
                 try {
-                  var6_int = var18.field_m[var5];
+                  var6_int = var18.operations[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var18.field_k[var5].field_b);
+                    var15 = (java.lang.reflect.Field) (var18.fieldTasks[var5].field_b);
                     var8 = var15.getInt((Object) null);
                     param1.writeByte(111, 0);
                     param1.writeInt((byte) -58, var8);
                   } else {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var18.field_k[var5].field_b);
+                        var26 = (java.lang.reflect.Field) (var18.fieldTasks[var5].field_b);
                         var8 = var26.getModifiers();
                         param1.writeByte(111, 0);
                         param1.writeInt((byte) -58, var8);
                       }
                     } else {
-                      var17_ref = (java.lang.reflect.Field) (var18.field_k[var5].field_b);
+                      var17_ref = (java.lang.reflect.Field) (var18.fieldTasks[var5].field_b);
                       var19 = var17_ref;
-                      var19.setInt((Object) null, var18.field_j[var5]);
+                      var19.setInt((Object) null, var18.fieldWriteValues[var5]);
                       param1.writeByte(111, 0);
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var18.field_l[var5].field_b);
-                    var25 = var18.field_q[var5];
+                    var28 = (java.lang.reflect.Method) (var18.methodTasks[var5].field_b);
+                    var25 = var18.serializedArguments[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var25.length > var10_int; var10_int++) {
                       var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var25[var10_int])));
@@ -350,7 +350,7 @@ final class UrlPacketDownloader implements Runnable {
                     }
                   } else {
                     if (4 == var6_int) {
-                      var27 = (java.lang.reflect.Method) (var18.field_l[var5].field_b);
+                      var27 = (java.lang.reflect.Method) (var18.methodTasks[var5].field_b);
                       var8Lifetime1 = var27.getModifiers();
                       param1.writeByte(111, 0);
                       param1.writeInt((byte) -58, var8Lifetime1);
@@ -406,7 +406,7 @@ final class UrlPacketDownloader implements Runnable {
                   param1.writeByte(111, -21);
                 }
               } else {
-                param1.writeByte(111, var18.field_r[var5]);
+                param1.writeByte(111, var18.errors[var5]);
               }
             }
             param1.appendCrc32(var4, (byte) 47);

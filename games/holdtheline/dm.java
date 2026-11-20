@@ -19,7 +19,7 @@ final class dm {
         SoftwareRasterizer.bindRaster(var1.field_k, var1.field_s, var1.field_m);
         SoftwareRasterizer.setClip(var1.field_i, var1.field_r, var1.field_q, var1.field_u);
         var1.field_k = null;
-        fl.field_i.addLast((byte) -101, var1);
+        BlobWriteRequest.field_i.addLast((byte) -101, var1);
     }
 
     public static void clearSharedReferences(byte param0) {

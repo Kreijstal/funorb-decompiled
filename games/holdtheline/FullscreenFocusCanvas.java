@@ -40,12 +40,12 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (param0 != 4) {
           FullscreenFocusCanvas.clearSharedReferences(12);
           if (bb.field_a == ImageProducerRasterBuffer.field_n) {
-            return qd.field_k;
+            return TexturedRoadFillRenderer.field_k;
           }
           return o.field_d;
         }
         if (bb.field_a == ImageProducerRasterBuffer.field_n) {
-          return qd.field_k;
+          return TexturedRoadFillRenderer.field_k;
         }
         return o.field_d;
     }

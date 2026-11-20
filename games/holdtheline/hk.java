@@ -98,7 +98,7 @@ final class hk {
     }
 
     final static void a(boolean param0) {
-        LabeledField.a(param0, qd.field_k, -94, ij.field_k);
+        LabeledField.a(param0, TexturedRoadFillRenderer.field_k, -94, ij.field_k);
         ResourceArchive.field_g = true;
     }
 

@@ -149,7 +149,7 @@ final class GameMenu extends MenuList {
             var6 = -(this.itemCount * 5) - 5 + (25 + this.exitTicks);
             var4 = (int)((double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)var6))));
           }
-          fl.a(SocketConnector.field_g[this.menuId].toUpperCase(), var4, 5, param0 - 1698, var5_int);
+          BlobWriteRequest.drawTitleBar(SocketConnector.field_g[this.menuId].toUpperCase(), var4, 5, param0 - 1698, var5_int);
         }
         if (this.menuId == 0) {
           var4 = -140 + this.top;
@@ -251,7 +251,7 @@ final class GameMenu extends MenuList {
             regionExit3: {
               regionExit4: {
                 var4 = 132;
-                q.a(TextHotspotRange.field_i[param0], HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
+                q.drawCenteredTextWithHighlight(TextHotspotRange.field_i[param0], HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                 var4 += 40;
                 var5 = ImageProducerRasterBuffer.field_m % 180 / 5;
                 var6 = param0;
@@ -264,7 +264,7 @@ final class GameMenu extends MenuList {
                   case 0:
                     Vector2i.a(20, DiskCacheStore.field_f, 0, 0, 560, var4 - 20, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                     var4 += 120;
-                    q.a(LinkWidgetRenderer.field_c, HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
+                    q.drawCenteredTextWithHighlight(LinkWidgetRenderer.field_c, HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                     var4 += 30;
                     LinkWidgetRenderer.a(310 - param2, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
@@ -399,12 +399,12 @@ final class GameMenu extends MenuList {
               }
               Vector2i.a(20, TutorialPage.field_n, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, ~param1, 1, HoldTheLine.field_F);
               var4 += 80;
-              q.a(hc.field_a, HoldTheLine.field_F, 2, 160 - param2, (byte) -127, var4);
-              q.a(o.field_a, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
+              q.drawCenteredTextWithHighlight(hc.field_a, HoldTheLine.field_F, 2, 160 - param2, (byte) -127, var4);
+              q.drawCenteredTextWithHighlight(o.field_a, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
               var4 += 20;
-              q.a(IconToggleRenderer.field_a, HoldTheLine.field_F, 2, -param2 + 160, (byte) -128, var4);
-              q.a(IterableNodeHashTable.field_f, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
-              q.a(m.field_b, HoldTheLine.field_F, 1, -param2 + 320, (byte) -127, var4);
+              q.drawCenteredTextWithHighlight(IconToggleRenderer.field_a, HoldTheLine.field_F, 2, -param2 + 160, (byte) -128, var4);
+              q.drawCenteredTextWithHighlight(IterableNodeHashTable.field_f, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
+              q.drawCenteredTextWithHighlight(m.field_b, HoldTheLine.field_F, 1, -param2 + 320, (byte) -127, var4);
               var4 += 40;
               LinkWidgetRenderer.a(-param2 + 200, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
@@ -420,21 +420,21 @@ final class GameMenu extends MenuList {
               var4 += 20;
               GrowableObjectList.a(-param2 + 440, param1 ^ 1, IndexedSpriteState.field_f, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              GrowableObjectList.a(-param2 + 440, 1, vd.field_e, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.a(-param2 + 440, 1, RoadFillRenderer.field_e, 1, var4, HoldTheLine.field_F);
               var4 += 20;
               GrowableObjectList.a(-param2 + 440, 1, ka.field_a, 1, var4, HoldTheLine.field_F);
               var4 += 20;
               GrowableObjectList.a(-param2 + 440, param1 ^ 1, jh.field_b, 1, var4, HoldTheLine.field_F);
               var4 -= 80;
-              q.a(b.field_a, HoldTheLine.field_F, 0, -param2 + 320, (byte) -128, var4);
+              q.drawCenteredTextWithHighlight(b.field_a, HoldTheLine.field_F, 0, -param2 + 320, (byte) -128, var4);
               var4 += 20;
-              q.a(WhirlpoolHasher.field_i, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              q.drawCenteredTextWithHighlight(WhirlpoolHasher.field_i, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.a(NameSuggestionsPanel.field_H, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              q.drawCenteredTextWithHighlight(NameSuggestionsPanel.field_H, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.a(StrongCacheEntry.field_t, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              q.drawCenteredTextWithHighlight(StrongCacheEntry.field_t, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.a(kc.field_c, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              q.drawCenteredTextWithHighlight(kc.field_c, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
               if (var8 == 0) {
                 break regionExit2;
@@ -542,15 +542,15 @@ final class GameMenu extends MenuList {
         if (this.transitionState > 2) {
           var3 = 640;
         }
-        tn.field_a = this.hitTestChampionshipIcon(FullscreenErrorDialog.field_X, (byte) -128, NodeHashTableIterator.field_g, var3);
-        if (tn.field_a != -1) {
-          ArchiveCatalog.a(0, (byte) 118, this.menuId, tn.field_a);
+        GrowableStringList.field_a = this.hitTestChampionshipIcon(FullscreenErrorDialog.field_X, (byte) -128, NodeHashTableIterator.field_g, var3);
+        if (GrowableStringList.field_a != -1) {
+          ArchiveCatalog.a(0, (byte) 118, this.menuId, GrowableStringList.field_a);
         }
         ArchiveCatalog.field_j = this.hitTestCoursePreview(FullscreenErrorDialog.field_X, param0 + 5465, NodeHashTableIterator.field_g, var3);
         if (ValidationIndicator.field_J == 1) {
           MatchingTextValidator.a(293, StrongCacheEntry.field_r);
-          if (tn.field_a != -1 &&
-            ~tn.field_a != ~BoundaryIntersection.field_p) {
+          if (GrowableStringList.field_a != -1 &&
+            ~GrowableStringList.field_a != ~BoundaryIntersection.field_p) {
             if (pj.field_m != GameKeyHandler.field_b ||
               BoundaryIntersection.field_p != PasswordValidator.field_j) {
               this.carouselOffset = this.carouselOffset - 640.0f;
@@ -558,7 +558,7 @@ final class GameMenu extends MenuList {
               GameKeyHandler.field_b = pj.field_m;
             }
             this.targetCarouselOffset = 640;
-            BoundaryIntersection.field_p = tn.field_a;
+            BoundaryIntersection.field_p = GrowableStringList.field_a;
           }
         }
     }
@@ -595,12 +595,12 @@ final class GameMenu extends MenuList {
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][1];
+                    IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][1];
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
+                  IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
@@ -609,8 +609,8 @@ final class GameMenu extends MenuList {
           if (decompiledFrameRemainder0) {
             if ((this.selectedItem != 0) &&
               (decompiledFrameRemainder0 = (MusicPatchPcmStream.field_r != null))) {
-              if (t.field_l != -1) {
-                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[t.field_l]);
+              if (IntArrayReadRequest.field_l != -1) {
+                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[IntArrayReadRequest.field_l]);
               }
               wm.a(false, false, -1);
               MatchingTextValidator.a(293, StrongCacheEntry.field_r);
@@ -856,7 +856,7 @@ final class GameMenu extends MenuList {
           this.drawAchievementIcon(false, var5Lifetime1, 128, 291, param0 + 30, 320);
           LinkWidgetRenderer.a(200, PolarSortVector.field_b, true, HoldTheLine.field_F, 252, 0);
           GrowableObjectList.a(440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
-          q.a(Integer.toString(ShadedRoadStripRenderer.field_o[var5Lifetime1][0]), HoldTheLine.field_F, 0, 140, (byte) -128, 282);
+          q.drawCenteredTextWithHighlight(Integer.toString(ShadedRoadStripRenderer.field_o[var5Lifetime1][0]), HoldTheLine.field_F, 0, 140, (byte) -128, 282);
           var6 = PolarSortVector.a((byte) -123);
           var7 = ShadedRoadStripRenderer.field_o[var5Lifetime1][1];
           var8 = ImageProducerRasterBuffer.field_m / 15 % (var7 + 2);
@@ -886,7 +886,7 @@ final class GameMenu extends MenuList {
           }
           Vector2i.a(stackIn_25_0, TextLineLayout.field_j[var5Lifetime1], 0, 0, 400, 362, 120, 80, param0 + 17, 1, HoldTheLine.field_F);
         }
-        fl.a(IndexedSpriteState.field_b, 0, 0, -1753, 448);
+        BlobWriteRequest.drawTitleBar(IndexedSpriteState.field_b, 0, 0, -1753, 448);
         return;
     }
 
@@ -996,7 +996,7 @@ final class GameMenu extends MenuList {
           this.drawAchievementIcon(false, var6Lifetime1, 128, 276, 12, -param1 + 320);
           LinkWidgetRenderer.a(200 - param1, PolarSortVector.field_b, true, HoldTheLine.field_F, 252, 0);
           GrowableObjectList.a(-param1 + 440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
-          q.a(Integer.toString(ShadedRoadStripRenderer.field_o[var6Lifetime1][0]), HoldTheLine.field_F, 0, -param1 + 160, (byte) -127, 282);
+          q.drawCenteredTextWithHighlight(Integer.toString(ShadedRoadStripRenderer.field_o[var6Lifetime1][0]), HoldTheLine.field_F, 0, -param1 + 160, (byte) -127, 282);
           var7 = PolarSortVector.a((byte) -123);
           var8 = ShadedRoadStripRenderer.field_o[var6Lifetime1][1];
           var9 = ImageProducerRasterBuffer.field_m / 15 % (2 + var8);
@@ -1026,12 +1026,12 @@ final class GameMenu extends MenuList {
             break;
           }
           if (stackIn_29_0 != stackIn_29_1) {
-            q.a(DualLinkNode.field_j, HoldTheLine.field_F, 1, 320 - param1, (byte) -127, 357);
+            q.drawCenteredTextWithHighlight(DualLinkNode.field_j, HoldTheLine.field_F, 1, 320 - param1, (byte) -127, 357);
           }
           if ((stackIn_29_0 == stackIn_29_1 ||
             var13 != 0) &&
             ImageProducerRasterBuffer.field_m % 80 < 40) {
-            q.a(fc.field_b, HoldTheLine.field_F, 2, 320 - param1, (byte) -127, 352);
+            q.drawCenteredTextWithHighlight(fc.field_b, HoldTheLine.field_F, 2, 320 - param1, (byte) -127, 352);
           }
           nm.field_c.drawCentered(ae.field_c[var6Lifetime1], 320 - param1, 207, 0, -1);
           Vector2i.a(20, TextLineLayout.field_j[var6Lifetime1], 0, 0, 400, 357, 120 - param1, 80, -1, 1, HoldTheLine.field_F);
@@ -1039,10 +1039,10 @@ final class GameMenu extends MenuList {
         if ((var6Lifetime1 == -1 ||
           var13 != 0) &&
           pj.b((byte) 104)) {
-          q.a(EditableTextField.field_M, HoldTheLine.field_F, 0, 320 - param1, (byte) -127, 270);
-          q.a(ue.field_b, HoldTheLine.field_F, 0, 320 - param1, (byte) -128, 290);
+          q.drawCenteredTextWithHighlight(EditableTextField.field_M, HoldTheLine.field_F, 0, 320 - param1, (byte) -127, 270);
+          q.drawCenteredTextWithHighlight(ue.field_b, HoldTheLine.field_F, 0, 320 - param1, (byte) -128, 290);
         }
-        fl.a(IndexedSpriteState.field_b, param1, 0, -1753, 448);
+        BlobWriteRequest.drawTitleBar(IndexedSpriteState.field_b, param1, 0, -1753, 448);
         return;
     }
 
@@ -1092,7 +1092,7 @@ final class GameMenu extends MenuList {
             Js5Transport.a(0, 19189, 80, 20, 50, 0, -1500, MouseWheelInput.field_a.field_b, 80);
             te.a(param0 - 4, kc.field_a.field_i);
             nm.a(bo.field_d.field_b, 22210);
-            NetworkGameClient.a(true, true);
+            NetworkGameClient.initializeAccountScreenSelection(true, true);
             CurvedRoadSegment.field_T = true;
           }
         }
@@ -1182,7 +1182,7 @@ final class GameMenu extends MenuList {
 
     final void beginExitFromCurrentPosition(int param0) {
         this.transitionState = 2;
-        ie.field_n = -ie.field_n + 80;
+        BlobReadRequest.field_n = -BlobReadRequest.field_n + 80;
         this.exitTicks = -this.enterTicks + (this.itemCount * 5 + 25);
         if (param0 != 0) {
           this.closeDelayTicks = 0;
@@ -1258,7 +1258,7 @@ final class GameMenu extends MenuList {
           WidgetContainer.field_E = -1;
           this.carouselOffset = 0.0f;
           ArchiveRequest.field_s = 0;
-          qd.field_h = 2;
+          TexturedRoadFillRenderer.field_h = 2;
           this.targetCarouselOffset = 0;
           ArchiveCatalog.field_j = -1;
         }
@@ -1312,7 +1312,7 @@ final class GameMenu extends MenuList {
           SecondaryNodeDequeIterator.field_h[var4] = 32;
           var4++;
         } while (var5 == 0);
-        NetworkGameClient.a(param0, true);
+        NetworkGameClient.initializeAccountScreenSelection(param0, true);
         return;
     }
 
@@ -1364,8 +1364,8 @@ final class GameMenu extends MenuList {
               break;
             }
           case 25:
-            fieldTemp$2 = qd.field_h + 1;
-            qd.field_h = qd.field_h + 1;
+            fieldTemp$2 = TexturedRoadFillRenderer.field_h + 1;
+            TexturedRoadFillRenderer.field_h = TexturedRoadFillRenderer.field_h + 1;
             stackIn_24_0 = ~fieldTemp$2;
             if (ih.field_p != -1 + TextHotspotRange.field_i.length) {
               stackIn_25_1 = 2;
@@ -1376,7 +1376,7 @@ final class GameMenu extends MenuList {
               break;
             }
             stackIn_30_0 = (ih.field_p == 0) ? 1 : 0;
-            qd.field_h = stackIn_30_0;
+            TexturedRoadFillRenderer.field_h = stackIn_30_0;
             if (var4 == 0) {
               break;
             }
@@ -1700,22 +1700,22 @@ final class GameMenu extends MenuList {
                         break regionExit2;
                       }
                     }
-                    if (qd.field_h != 0) {
-                      if (2 == qd.field_h) {
+                    if (TexturedRoadFillRenderer.field_h != 0) {
+                      if (2 == TexturedRoadFillRenderer.field_h) {
                         if (ih.field_p >= 6) {
                           break regionExit1;
                         }
                         fieldTemp$0 = ih.field_p + 1;
                         ih.field_p = ih.field_p + 1;
                         if (fieldTemp$0 == 6) {
-                          qd.field_h = 1;
+                          TexturedRoadFillRenderer.field_h = 1;
                         }
                         this.targetCarouselOffset = 640 * ih.field_p;
                         if (var7 == 0) {
                           break regionExit2;
                         }
                       }
-                      if (qd.field_h != 1) {
+                      if (TexturedRoadFillRenderer.field_h != 1) {
                         break regionExit1;
                       }
                       wm.a(param1, false, TextLayout.field_a);
@@ -1729,7 +1729,7 @@ final class GameMenu extends MenuList {
                     fieldTemp$1 = ih.field_p - 1;
                     ih.field_p = ih.field_p - 1;
                     if (0 == fieldTemp$1) {
-                      qd.field_h = 2;
+                      TexturedRoadFillRenderer.field_h = 2;
                     }
                     this.targetCarouselOffset = ih.field_p * 640;
                     if (var7 == 0) {
@@ -1832,14 +1832,14 @@ final class GameMenu extends MenuList {
         mc.field_a[10] = null;
         mc.field_a[11] = new TrackObjectDefinition(4, 8300, Vector2i.field_d, ao.field_d, -1);
         mc.field_a[12] = new TrackObjectDefinition(10, 0, DiskCacheWorker.field_b, 2);
-        mc.field_a[13] = new TrackObjectDefinition(15, 0, t.field_i, 2);
+        mc.field_a[13] = new TrackObjectDefinition(15, 0, IntArrayReadRequest.field_i, 2);
         mc.field_a[14] = new TrackObjectDefinition(20, 0, cd.field_d, 2);
         mc.field_a[15] = new TrackObjectDefinition(25, 0, ArchiveCatalog.field_k, 2);
         mc.field_a[16] = new TrackObjectDefinition(40, 0, BufferedRandomAccessFile.field_o, 2);
         mc.field_a[17] = new TrackObjectDefinition(25, 50, 524320, SingleChildWidget.field_A, 0);
         mc.field_a[18] = new TrackObjectDefinition(25, 50, 524320, aj.field_c, 0);
         mc.field_a[19] = new TrackObjectDefinition(25, 50, 524320, MouseWheelInput.field_c, 0);
-        mc.field_a[20] = new TrackObjectDefinition(15, 30, 32, ie.field_k, 0);
+        mc.field_a[20] = new TrackObjectDefinition(15, 30, 32, BlobReadRequest.field_k, 0);
         mc.field_a[21] = new TrackObjectDefinition(15, 30, 32, CheckboxWidget.field_I, 0);
         mc.field_a[22] = new TrackObjectDefinition(15, 30, 32, MusicPatch.field_u, 0);
         mc.field_a[23] = new TrackObjectDefinition(10, 10, 16384, MusicPatchPcmStream.field_s, 0);
@@ -1883,7 +1883,7 @@ final class GameMenu extends MenuList {
         mc.field_a[58] = new TrackObjectDefinition(10, 16384, jo.field_a, 2);
         mc.field_a[59] = new TrackObjectDefinition(15, 16384, hm.field_b, 2);
         mc.field_a[60] = new TrackObjectDefinition(20, 16384, Vector2f.field_b, 2);
-        mc.field_a[61] = new TrackObjectDefinition(25, 16384, ie.field_i, 2);
+        mc.field_a[61] = new TrackObjectDefinition(25, 16384, BlobReadRequest.field_i, 2);
         mc.field_a[62] = new TrackObjectDefinition(12, 6, 352, 0);
         mc.field_a[63] = new TrackObjectDefinition(12, 6, 352, 0);
         mc.field_a[64] = new TrackObjectDefinition(12, 6, 352, 0);
@@ -1921,7 +1921,7 @@ final class GameMenu extends MenuList {
         scanLoop1: while (true) {
           if (var3 < 4) {
             stackIn_18_1 = ~var3;
-            stackIn_18_2 = ~tn.field_a;
+            stackIn_18_2 = ~GrowableStringList.field_a;
             if (var4 == 0) {
               if (stackIn_18_1 == stackIn_18_2) {
                 stackIn_8_1 = 4210752;
@@ -1929,7 +1929,7 @@ final class GameMenu extends MenuList {
                 stackIn_8_1 = RoadSegment.field_l[var3];
               }
               stackIn_10_2 = 2;
-              if (~tn.field_a == ~var3) {
+              if (~GrowableStringList.field_a == ~var3) {
                 stackIn_11_3 = 16777215;
               } else {
                 stackIn_11_3 = CourseDefinition.field_q[var3];
@@ -1943,8 +1943,8 @@ final class GameMenu extends MenuList {
             if (pj.b((byte) 118)) {
               TutorialAction.a(30 - param1, 170, 580, (byte) 41, 260);
               var3 = 280;
-              q.a(EditableTextField.field_M, nm.field_c, 0, -param1 + 320, (byte) -128, var3 - nm.field_c.ascent);
-              q.a(ue.field_b, nm.field_c, 0, -param1 + 320, (byte) -127, var3);
+              q.drawCenteredTextWithHighlight(EditableTextField.field_M, nm.field_c, 0, -param1 + 320, (byte) -128, var3 - nm.field_c.ascent);
+              q.drawCenteredTextWithHighlight(ue.field_b, nm.field_c, 0, -param1 + 320, (byte) -127, var3);
               if (var4 == 0) {
                 break scanLoop1;
               }
@@ -2128,16 +2128,16 @@ final class GameMenu extends MenuList {
               if (AgeValidator.field_i[this.menuId][this.selectedItem] != 25) {
                 continue;
               }
-              if (!(2 <= qd.field_h) ||
+              if (!(2 <= TexturedRoadFillRenderer.field_h) ||
                 ih.field_p != -1 + TextHotspotRange.field_i.length) {
-                if (qd.field_h > 0) {
+                if (TexturedRoadFillRenderer.field_h > 0) {
                   continue;
                 }
                 if (0 != ih.field_p) {
                   continue;
                 }
               }
-              qd.field_h = 1;
+              TexturedRoadFillRenderer.field_h = 1;
               continue;
             }
             this.handleChampionshipKeys(-1);
@@ -2279,7 +2279,7 @@ final class GameMenu extends MenuList {
           return var4;
         }
         if (AgeValidator.field_i[this.menuId][var4] == 10) {
-          LinearPointPath.field_o = fj.a(qd.field_l, (byte) -119, param2);
+          LinearPointPath.field_o = fj.a(TexturedRoadFillRenderer.field_l, (byte) -119, param2);
           return var4;
         }
         if (AgeValidator.field_i[this.menuId][var4] == 24) {
@@ -2287,7 +2287,7 @@ final class GameMenu extends MenuList {
           return var4;
         }
         if (AgeValidator.field_i[this.menuId][var4] == 25) {
-          qd.field_h = fj.a(SpriteButtonRenderer.field_v, (byte) -119, param2);
+          TexturedRoadFillRenderer.field_h = fj.a(SpriteButtonRenderer.field_v, (byte) -119, param2);
           return var4;
         }
         if (param2 >= this.left &&
@@ -2555,7 +2555,7 @@ final class GameMenu extends MenuList {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          q.a(IntHashTable.field_a, HoldTheLine.field_F, 0, 280 - param1, (byte) -127, 204);
+          q.drawCenteredTextWithHighlight(IntHashTable.field_a, HoldTheLine.field_F, 0, 280 - param1, (byte) -127, 204);
           var8 = 0;
         }
         boolean decompiledFrameCompleted1 = true;
@@ -2646,7 +2646,7 @@ final class GameMenu extends MenuList {
                 var17 = stackIn_78_0;
                 var19 = 0;
                 while (var19 < 4) {
-                  q.a(AccountFormText.formatRaceTime(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + TextHotspotWidget.field_K[var19] - param1, (byte) -127, var15);
+                  q.drawCenteredTextWithHighlight(AccountFormText.formatRaceTime(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + TextHotspotWidget.field_K[var19] - param1, (byte) -127, var15);
                   var19++;
                 }
                 var8 = 1;
@@ -2662,7 +2662,7 @@ final class GameMenu extends MenuList {
               GrowableObjectList.a(240 - param1, 1, DisplayNameValidator.formatPreciseRaceTime(48, -PathWaypoint.field_o.field_r[0]), 5, var15, HoldTheLine.field_F);
               var17 = 0;
               while (var17 < 4) {
-                q.a(AccountFormText.formatRaceTime(PathWaypoint.field_o.field_r[1 + var17], (byte) -61), HoldTheLine.field_F, 5, TextHotspotWidget.field_K[var17] + (32 - param1), (byte) -127, var15);
+                q.drawCenteredTextWithHighlight(AccountFormText.formatRaceTime(PathWaypoint.field_o.field_r[1 + var17], (byte) -61), HoldTheLine.field_F, 5, TextHotspotWidget.field_K[var17] + (32 - param1), (byte) -127, var15);
                 var17++;
                 if (var20 != 0) {
                   return;
@@ -2707,8 +2707,8 @@ final class GameMenu extends MenuList {
             if (this.selectedItem == 1) {
               if (DelayedServerPacket.field_n == 84) {
                 MatchingTextValidator.a(293, StrongCacheEntry.field_r);
-                if (tn.field_a != -1 &&
-                  tn.field_a != BoundaryIntersection.field_p) {
+                if (GrowableStringList.field_a != -1 &&
+                  GrowableStringList.field_a != BoundaryIntersection.field_p) {
                   if (~pj.field_m != ~GameKeyHandler.field_b ||
                     ~PasswordValidator.field_j != ~BoundaryIntersection.field_p) {
                     PasswordValidator.field_j = BoundaryIntersection.field_p;
@@ -2716,21 +2716,21 @@ final class GameMenu extends MenuList {
                     GameKeyHandler.field_b = pj.field_m;
                   }
                   this.targetCarouselOffset = 640;
-                  BoundaryIntersection.field_p = tn.field_a;
+                  BoundaryIntersection.field_p = GrowableStringList.field_a;
                 }
               }
               if (DelayedServerPacket.field_n == 96) {
-                fieldTemp$0 = tn.field_a - 1;
-                tn.field_a = tn.field_a - 1;
+                fieldTemp$0 = GrowableStringList.field_a - 1;
+                GrowableStringList.field_a = GrowableStringList.field_a - 1;
                 if (fieldTemp$0 < 0) {
-                  tn.field_a = 3;
+                  GrowableStringList.field_a = 3;
                 }
               }
               if (97 == DelayedServerPacket.field_n) {
-                fieldTemp$1 = tn.field_a + 1;
-                tn.field_a = tn.field_a + 1;
+                fieldTemp$1 = GrowableStringList.field_a + 1;
+                GrowableStringList.field_a = GrowableStringList.field_a + 1;
                 if (fieldTemp$1 >= 4) {
-                  tn.field_a = 0;
+                  GrowableStringList.field_a = 0;
                   decompiledFrameRemainder0 = (HoldTheLine.field_D == 0);
                 }
               }
@@ -2754,8 +2754,8 @@ final class GameMenu extends MenuList {
         if (this.selectedItem != 1) {
           return;
         }
-        if (tn.field_a == -1) {
-          tn.field_a = 0;
+        if (GrowableStringList.field_a == -1) {
+          GrowableStringList.field_a = 0;
         }
     }
 
@@ -2799,8 +2799,8 @@ final class GameMenu extends MenuList {
               break;
             }
           case 25:
-            fieldTemp$2 = qd.field_h - 1;
-            qd.field_h = qd.field_h - 1;
+            fieldTemp$2 = TexturedRoadFillRenderer.field_h - 1;
+            TexturedRoadFillRenderer.field_h = TexturedRoadFillRenderer.field_h - 1;
             stackIn_25_0 = ~fieldTemp$2;
             if (ih.field_p != 0) {
               stackIn_26_1 = 0;
@@ -2811,7 +2811,7 @@ final class GameMenu extends MenuList {
               break;
             }
             stackIn_30_0 = (-1 + TextHotspotRange.field_i.length != ih.field_p) ? 2 : 1;
-            qd.field_h = stackIn_30_0;
+            TexturedRoadFillRenderer.field_h = stackIn_30_0;
             if (var4 == 0) {
               break;
             }
@@ -3009,7 +3009,7 @@ final class GameMenu extends MenuList {
         if (var5 != 24) {
           if (var5 != 25) {
             if (26 == var5) {
-              fl.a(var8, var7, var9, -1753, param0);
+              BlobWriteRequest.drawTitleBar(var8, var7, var9, -1753, param0);
               decompiledFrameRemainder0 = (var14 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -3043,8 +3043,8 @@ final class GameMenu extends MenuList {
                 }
                 if (decompiledFrameRemainder0) {
                   if (var5 == 10) {
-                    stackIn_85_0 = qd.field_l;
-                    stackIn_85_1 = ki.field_i;
+                    stackIn_85_0 = TexturedRoadFillRenderer.field_l;
+                    stackIn_85_1 = ReflectionCheck.field_i;
                     stackIn_85_2 = -127;
                     if (param2 &&
                       this.transitionState == 1) {
@@ -3067,7 +3067,7 @@ final class GameMenu extends MenuList {
                       decompiledFrameRemainder0 = (var14 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      WidgetContainer.a((byte) -122, var8, var9, var7, param0);
+                      WidgetContainer.drawHeader((byte) -122, var8, var9, var7, param0);
                       decompiledFrameRemainder0 = (var14 != 0);
                     }
                   }
@@ -3113,7 +3113,7 @@ final class GameMenu extends MenuList {
             stackIn_109_2 = -111;
             if (param2 &&
               this.transitionState == 1) {
-              stackIn_111_3 = qd.field_h;
+              stackIn_111_3 = TexturedRoadFillRenderer.field_h;
             } else {
               stackIn_111_3 = -1;
             }
@@ -3214,7 +3214,7 @@ final class GameMenu extends MenuList {
             var4 = this.exitTicks + 25 - (this.itemCount + 1) * 5;
             var3 = (int)((double)we.field_n * (-Math.exp((double)(0.20000000298023224f * (float)var4)) + 1.0));
           }
-          fl.a(MusicPatchEnvelope.field_e, var3, 1, -1753, 488 - (int)this.carouselOffset);
+          BlobWriteRequest.drawTitleBar(MusicPatchEnvelope.field_e, var3, 1, -1753, 488 - (int)this.carouselOffset);
         }
         var3Lifetime1 = 0;
         if (param0 != -10967) {
@@ -3289,7 +3289,7 @@ final class GameMenu extends MenuList {
         stackIn_31_1 = -5 + var2;
         stackIn_31_2 = 148;
         stackIn_31_3 = 114;
-        if (var9[0] == t.field_l &&
+        if (var9[0] == IntArrayReadRequest.field_l &&
           this.selectedItem == 1) {
           stackIn_33_4 = 16777215;
         } else {
@@ -3301,7 +3301,7 @@ final class GameMenu extends MenuList {
         stackIn_36_1 = -5 + var2;
         stackIn_36_2 = 148;
         stackIn_36_3 = 114;
-        if (~var9[1] == ~t.field_l &&
+        if (~var9[1] == ~IntArrayReadRequest.field_l &&
           this.selectedItem == 1) {
           stackIn_38_4 = 16777215;
         } else {
@@ -3322,8 +3322,8 @@ final class GameMenu extends MenuList {
             if (var18 == 0) {
               var11Lifetime1 = stackIn_51_0;
               while (var11Lifetime1 < 4) {
-                stackIn_40_0 = t.field_j[var11Lifetime1];
-                stackIn_40_1 = t.field_j[var10Lifetime1];
+                stackIn_40_0 = IntArrayReadRequest.field_j[var11Lifetime1];
+                stackIn_40_1 = IntArrayReadRequest.field_j[var10Lifetime1];
                 if (stackIn_40_0 > stackIn_40_1) {
                   var13[var10Lifetime1] = var13[var10Lifetime1] + 1;
                 }
@@ -3356,8 +3356,8 @@ final class GameMenu extends MenuList {
                     var17 = -ImageProducerRasterBuffer.field_m + var14_int + 5 * var12;
                     var3Lifetime1 = (int)((-1.0 + Math.exp((double)(var15 * (float)var17))) * (double)(var16 * 300.0f));
                   }
-                  if (t.field_j[var11Lifetime1Lifetime1] != 1) {
-                    stackIn_65_0 = t.field_j[var11Lifetime1Lifetime1] + ij.field_a;
+                  if (IntArrayReadRequest.field_j[var11Lifetime1Lifetime1] != 1) {
+                    stackIn_65_0 = IntArrayReadRequest.field_j[var11Lifetime1Lifetime1] + ij.field_a;
                   } else {
                     stackIn_65_0 = DirectByteStorage.field_h;
                   }
@@ -3379,12 +3379,12 @@ final class GameMenu extends MenuList {
     }
 
     final static int[] createRotationMatrix(int param0, int param1, byte param2) {
-        int var3 = tn.a(param1, 5255);
+        int var3 = GrowableStringList.a(param1, 5255);
         if (param2 >= -42) {
           return (int[]) null;
         }
         int var4 = hc.a(0, param1);
-        int var5 = tn.a(param0, 5255);
+        int var5 = GrowableStringList.a(param0, 5255);
         int var6 = hc.a(0, param0);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
@@ -3745,12 +3745,12 @@ final class GameMenu extends MenuList {
               var3 + 69 > NodeHashTableIterator.field_g &&
               (float)FullscreenErrorDialog.field_X >= 845.0f - this.carouselOffset &&
               (float)FullscreenErrorDialog.field_X < 949.0f - this.carouselOffset) {
-              t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][var2];
+              IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][var2];
               ArchiveCatalog.a(0, (byte) 120, this.menuId, var2);
               this.selectedItem = 1;
               if (((ValidationIndicator.field_J == 1)) &&
                 ((null != MusicPatchPcmStream.field_r))) {
-                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[t.field_l]);
+                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[IntArrayReadRequest.field_l]);
                 wm.a(true, false, -1);
                 MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               }

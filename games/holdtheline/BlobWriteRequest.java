@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends IntrusiveNode {
+final class BlobWriteRequest extends IntrusiveNode {
     static IntrusiveDeque field_i;
-    int field_k;
+    int acknowledgementCrc;
     static boolean field_j;
-    byte[] field_l;
+    byte[] payload;
 
-    final static String[] a(String param0, byte param1, char param2) {
+    final static String[] split(String param0, byte param1, char param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -33,7 +33,7 @@ final class fl extends IntrusiveNode {
           var6 = 0;
           if (param1 >= -27) {
             var10 = (String) null;
-            fl.a((String) null, (byte) 112, '￐');
+            BlobWriteRequest.split((String) null, (byte) 112, '￐');
           }
           for (var7 = 0; var7 < var3_int; var7++) {
             for (var8 = var6; param2 != param0.charAt(var8); var8++) {
@@ -63,12 +63,12 @@ final class fl extends IntrusiveNode {
     public static void clearSharedReferences(int param0) {
         if (param0 != 381) {
           String var2 = (String) null;
-          fl.a((String) null, 82, 107, -78, 12);
+          BlobWriteRequest.drawTitleBar((String) null, 82, 107, -78, 12);
         }
         field_i = null;
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int param4) {
+    final static void drawTitleBar(String param0, int param1, int param2, int param3, int param4) {
         try {
           QuickChatPhraseDefinition.field_t.draw(param1, param4);
           LayeredWidgetStyle.field_i.draw(381 + param1, param4);
@@ -81,9 +81,9 @@ final class fl extends IntrusiveNode {
         }
     }
 
-    fl(byte[] param0) {
+    BlobWriteRequest(byte[] param0) {
         try {
-          this.field_l = param0;
+          this.payload = param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

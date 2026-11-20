@@ -25,7 +25,7 @@ final class CurvedRoadSegment extends RoadSegment {
     float field_I;
     static int field_M;
 
-    final static boolean a(boolean param0, String param1) {
+    final static boolean openUrlOnWindows(boolean param0, String param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -124,7 +124,7 @@ final class CurvedRoadSegment extends RoadSegment {
 
     final Point2i h(int param0) {
         if (param0 != 7560980) {
-          this.a(0.218789204955101f, (byte) 23);
+          this.parameterAtAngle(0.218789204955101f, (byte) 23);
         }
         return new Point2i((int)((double)this.field_U.x + (double)this.field_O * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_O * Math.sin((double)this.field_I)));
     }
@@ -183,7 +183,7 @@ final class CurvedRoadSegment extends RoadSegment {
         return new Point2i((int)((double)this.field_U.x + (double)this.field_z * Math.cos((double)var3)), (int)((double)this.field_U.y - (double)this.field_z * Math.sin((double)var3)));
     }
 
-    final float a(float param0, byte param1) {
+    final float parameterAtAngle(float param0, byte param1) {
         int var4 = HoldTheLine.field_D;
         if (param1 < 33) {
           field_y = 109;
@@ -362,7 +362,7 @@ final class CurvedRoadSegment extends RoadSegment {
         }
     }
 
-    final boolean b(byte param0, float param1) {
+    final boolean containsAngle(byte param0, float param1) {
         int var4 = HoldTheLine.field_D;
         if (param0 != -113) {
           this.field_P = 69;

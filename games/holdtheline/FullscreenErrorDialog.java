@@ -30,7 +30,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, (byte) 122, var5, 30, -16 + (this.width - 14));
-          this.a(true, var4);
+          this.addChild(true, var4);
           this.refreshLayout(113);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -120,7 +120,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
           var4.height = 80;
           var4.x = 0;
           var4.renderer = (WidgetRenderer) ((Object) new TextWidgetStyle(SpriteButtonRenderer.field_w, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(true, var4);
+          this.addChild(true, var4);
           this.field_Z = this.addButton((WidgetListener) (this), h.field_f, 25105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -825,7 +825,7 @@ final class bb {
     final static Sprite[] a(int param0, byte param1) {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
-        var4[4] = NanoTickClock.a(param0, -61, 64);
+        var4[4] = NanoTickClock.createSolidSquareSprite(param0, -61, 64);
         int var3 = -88 % ((-70 - param1) / 56);
         return var2;
     }

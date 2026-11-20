@@ -40,15 +40,15 @@ abstract class TrackCurve extends IntrusiveNode {
 
     abstract Vector2f getEndDirection(boolean param0);
 
-    final static fi a(int param0, String param1) {
+    final static SocialListEntry a(int param0, String param1) {
         String var2 = null;
-        fi var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_3_0 = null;
-        fi stackIn_16_0 = null;
+        SocialListEntry stackIn_16_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -58,28 +58,28 @@ abstract class TrackCurve extends IntrusiveNode {
         try {
           if (IntrusiveDeque.field_a == null) {
             stackIn_3_0 = null;
-            return (fi) (stackIn_3_0);
+            return (SocialListEntry) (stackIn_3_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = MidiPcmStream.a(var6, (byte) -76);
+          var2 = MidiPcmStream.normalizeAccountName(var6, (byte) -76);
           if (var2 == null) {
             var2 = param1;
           }
           if (param0 != 0) {
             field_j = (String) null;
           }
-          var3 = (fi) (IntrusiveDeque.field_a.get(-25839, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (IntrusiveDeque.field_a.get(-25839, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
             }
-            var7 = (CharSequence) ((Object) var3.field_mb);
-            var4 = MidiPcmStream.a(var7, (byte) 119);
+            var7 = (CharSequence) ((Object) var3.displayName);
+            var4 = MidiPcmStream.normalizeAccountName(var7, (byte) 119);
             if (var4 == null) {
-              var4 = var3.field_mb;
+              var4 = var3.displayName;
             }
             if (!var4.equals(var2)) {
-              var3 = (fi) (IntrusiveDeque.field_a.getNextWithSameKey(20240));
+              var3 = (SocialListEntry) (IntrusiveDeque.field_a.getNextWithSameKey(20240));
               continue;
             }
             break;
@@ -123,15 +123,15 @@ abstract class TrackCurve extends IntrusiveNode {
           if (param0 > -108) {
             TrackCurve.e(-51);
           }
-          AudioOutput.a(param6, param5, 10);
-          LoginChoicePanel.field_G = AudioOutput.a(param1, param2, 0, param3);
-          DraggableWidget.field_G = AudioOutput.a(param1, param2, 1, param4);
+          AudioOutput.configure(param6, param5, 10);
+          LoginChoicePanel.field_G = AudioOutput.create(param1, param2, 0, param3);
+          DraggableWidget.field_G = AudioOutput.create(param1, param2, 1, param4);
           LoginChoicePanel.field_H = new PcmStreamMixer();
           ua.field_a = param4;
-          DraggableWidget.field_G.a(LoginChoicePanel.field_H);
+          DraggableWidget.field_G.setStream(LoginChoicePanel.field_H);
           ai.field_a = param7;
           ai.field_a.a(NanoTickClock.field_e, -32284);
-          LoginChoicePanel.field_G.a(ai.field_a);
+          LoginChoicePanel.field_G.setStream(ai.field_a);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wc.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
@@ -208,10 +208,10 @@ abstract class TrackCurve extends IntrusiveNode {
             var4 = param0;
           }
           var5 = new WhirlpoolHasher();
-          var5.b(false);
-          var5.a(var4, (byte) -108, (long)(param3 * 8));
+          var5.reset(false);
+          var5.updateBits(var4, (byte) -108, (long)(param3 * 8));
           var6 = new byte[64];
-          var5.a(param1 ^ -530, var6, 0);
+          var5.finishDigest(param1 ^ -530, var6, 0);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

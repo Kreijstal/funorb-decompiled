@@ -12,7 +12,7 @@ abstract class MouseWheelInput {
         if (-1 == QuickChatPhraseDefinition.field_v[param1][param3] ||
           !(QuickChatPhraseDefinition.field_v[param1][param3] <= param0)) {
           QuickChatPhraseDefinition.field_v[param1][param3] = param0;
-          tn.a(0);
+          GrowableStringList.a(0);
         }
         if (param2 != 62) {
           var5 = (IsaacPacketBuffer) null;

@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vd {
+abstract class RoadFillRenderer {
     static long field_a;
     static String field_e;
     static String field_d;
     static NamedSoundEffect field_b;
     static int[] field_c;
 
-    abstract void a(float param0, int[] param1, int param2, int[] param3, byte param4);
+    abstract void drawRoadFill(float param0, int[] param1, int param2, int[] param3, byte param4);
 
-    final static int[] c(int param0) {
+    final static int[] allocateIntScratchBuffer(int param0) {
         if (param0 != 1023) {
-          vd.clearSharedReferences(-2);
+          RoadFillRenderer.clearSharedReferences(-2);
           return new int[8];
         }
         return new int[8];
     }
 
-    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -54,7 +54,7 @@ abstract class vd {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboard(java.awt.Component param0, int param1) {
         if (param1 >= -109) {
           return;
         }
@@ -67,7 +67,7 @@ abstract class vd {
         }
     }
 
-    final static String a(int param0) {
+    final static String readServerString(int param0) {
         if (param0 != -1) {
           return (String) null;
         }
@@ -82,7 +82,7 @@ abstract class vd {
           field_e = null;
           return;
         }
-        vd.a(43);
+        RoadFillRenderer.readServerString(43);
         field_c = null;
         field_e = null;
     }

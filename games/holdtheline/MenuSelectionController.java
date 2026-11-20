@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn {
-    private int field_f;
-    private int field_c;
-    private int field_e;
-    int field_b;
-    int field_g;
-    private int field_a;
-    private boolean field_d;
+final class MenuSelectionController {
+    private int activationButton;
+    private int keyCode;
+    private int repeatCountdown;
+    int itemCount;
+    int selectedIndex;
+    private int heldMouseButton;
+    private boolean mouseSelection;
 
-    final boolean a(int param0) {
+    final boolean hasActivationInput(int param0) {
         if (param0 != -1) {
-          this.field_a = 15;
-          if (this.field_f != 0) {
+          this.heldMouseButton = 15;
+          if (this.activationButton != 0) {
             return true;
           }
-          if (this.field_c != 84) {
-            return 83 == this.field_c ? true : false;
+          if (this.keyCode != 84) {
+            return 83 == this.keyCode ? true : false;
           }
           return true;
         }
-        if (this.field_f != 0) {
+        if (this.activationButton != 0) {
           return true;
         }
-        if (this.field_c == 84) {
+        if (this.keyCode == 84) {
           return true;
         }
-        if (83 != this.field_c) {
+        if (83 != this.keyCode) {
           return false;
         }
         return true;
@@ -46,163 +46,163 @@ final class jn {
         }
     }
 
-    final void a(byte param0, int param1) {
-        this.field_f = 0;
+    final void handleHorizontalKeys(byte param0, int param1) {
+        this.activationButton = 0;
         if (param0 != -21) {
           return;
         }
-        this.field_c = 0;
-        if (this.field_a == 0) {
-          this.field_c = DelayedServerPacket.field_n;
+        this.keyCode = 0;
+        if (this.heldMouseButton == 0) {
+          this.keyCode = DelayedServerPacket.field_n;
         }
-        if (this.field_a == 0 &&
+        if (this.heldMouseButton == 0 &&
           DelayedServerPacket.field_n == 96) {
-          if (this.field_g <= 0) {
-            this.field_g = this.field_b;
+          if (this.selectedIndex <= 0) {
+            this.selectedIndex = this.itemCount;
           }
-          this.field_g = this.field_g - 1;
-          this.field_d = false;
+          this.selectedIndex = this.selectedIndex - 1;
+          this.mouseSelection = false;
         }
-        if (this.field_a == 0 &&
+        if (this.heldMouseButton == 0 &&
           DelayedServerPacket.field_n == 97) {
-          this.field_g = this.field_g + 1;
-          this.field_d = false;
-          if (this.field_g >= this.field_b) {
-            this.field_g = 0;
+          this.selectedIndex = this.selectedIndex + 1;
+          this.mouseSelection = false;
+          if (this.selectedIndex >= this.itemCount) {
+            this.selectedIndex = 0;
           }
         }
-        if (this.field_a != 0) {
+        if (this.heldMouseButton != 0) {
           return;
         }
         if (DelayedServerPacket.field_n != 98 &&
           99 != DelayedServerPacket.field_n) {
           return;
         }
-        if (0 > this.field_g) {
-          this.field_g = param1;
+        if (0 > this.selectedIndex) {
+          this.selectedIndex = param1;
         }
-        this.field_d = false;
+        this.mouseSelection = false;
     }
 
-    final void a(int param0, int param1, int param2) {
-        if (this.field_b <= param1) {
+    final void updateMouseSelection(int param0, int param1, int param2) {
+        if (this.itemCount <= param1) {
           throw new IllegalArgumentException();
         }
-        if (param0 >= this.field_b) {
+        if (param0 >= this.itemCount) {
           throw new IllegalArgumentException();
         }
-        this.field_f = 0;
-        this.field_c = 0;
+        this.activationButton = 0;
+        this.keyCode = 0;
         if (param2 != 4) {
           return;
         }
         if (ValidationIndicator.field_J != 0) {
-          this.field_a = ValidationIndicator.field_J;
-          this.field_e = fc.field_d;
-          this.field_d = true;
-          this.field_f = ValidationIndicator.field_J;
-          this.field_g = param0;
+          this.heldMouseButton = ValidationIndicator.field_J;
+          this.repeatCountdown = fc.field_d;
+          this.mouseSelection = true;
+          this.activationButton = ValidationIndicator.field_J;
+          this.selectedIndex = param0;
         }
-        if (0 != this.field_a) {
+        if (0 != this.heldMouseButton) {
           if (RoadStripRenderer.field_f == 0) {
             if (ValidationIndicator.field_J != 0) {
-              if (this.field_a == 0) {
-                if (!this.field_d &&
+              if (this.heldMouseButton == 0) {
+                if (!this.mouseSelection &&
                   !na.field_k) {
                   return;
                 }
                 if (param1 < 0) {
-                  if (this.field_d) {
-                    this.field_g = -1;
+                  if (this.mouseSelection) {
+                    this.selectedIndex = -1;
                   }
                 } else {
-                  if (this.field_g == param1) {
-                    this.field_d = true;
-                    this.field_g = param1;
+                  if (this.selectedIndex == param1) {
+                    this.mouseSelection = true;
+                    this.selectedIndex = param1;
                   } else {
-                    this.field_d = true;
-                    this.field_g = param1;
+                    this.mouseSelection = true;
+                    this.selectedIndex = param1;
                   }
                 }
               }
               return;
             }
             if (RoadStripRenderer.field_f != 0) {
-              if (this.field_a == 0) {
-                if (!this.field_d &&
+              if (this.heldMouseButton == 0) {
+                if (!this.mouseSelection &&
                   !na.field_k) {
                   return;
                 }
                 if (param1 < 0) {
-                  if (this.field_d) {
-                    this.field_g = -1;
+                  if (this.mouseSelection) {
+                    this.selectedIndex = -1;
                   }
                 } else {
-                  if (this.field_g == param1) {
-                    this.field_d = true;
-                    this.field_g = param1;
+                  if (this.selectedIndex == param1) {
+                    this.mouseSelection = true;
+                    this.selectedIndex = param1;
                   } else {
-                    this.field_d = true;
-                    this.field_g = param1;
+                    this.mouseSelection = true;
+                    this.selectedIndex = param1;
                   }
                 }
               }
               return;
             }
-            this.field_a = 0;
-            if (this.field_a != 0) {
+            this.heldMouseButton = 0;
+            if (this.heldMouseButton != 0) {
               return;
             }
-            if (!this.field_d &&
+            if (!this.mouseSelection &&
               !na.field_k) {
               return;
             }
             if (param1 < 0) {
-              if (!this.field_d) {
+              if (!this.mouseSelection) {
                 return;
               }
-              this.field_g = -1;
+              this.selectedIndex = -1;
               return;
             }
-            if (this.field_g != param1) {
-              this.field_d = true;
-              this.field_g = param1;
+            if (this.selectedIndex != param1) {
+              this.mouseSelection = true;
+              this.selectedIndex = param1;
               return;
             }
-            this.field_d = true;
-            this.field_g = param1;
+            this.mouseSelection = true;
+            this.selectedIndex = param1;
             return;
           }
-          if (this.field_e <= 0) {
-            this.field_e = PasswordFieldRenderer.field_x;
+          if (this.repeatCountdown <= 0) {
+            this.repeatCountdown = PasswordFieldRenderer.field_x;
           }
-          this.field_e = this.field_e - 1;
+          this.repeatCountdown = this.repeatCountdown - 1;
         }
         if (ValidationIndicator.field_J == 0 &&
           RoadStripRenderer.field_f == 0) {
-          this.field_a = 0;
+          this.heldMouseButton = 0;
         }
-        if (this.field_a != 0) {
+        if (this.heldMouseButton != 0) {
           return;
         }
-        if (!this.field_d &&
+        if (!this.mouseSelection &&
           !na.field_k) {
           return;
         }
         if (param1 < 0) {
-          if (!this.field_d) {
+          if (!this.mouseSelection) {
             return;
           }
-          this.field_g = -1;
+          this.selectedIndex = -1;
           return;
         }
-        if (this.field_g == param1) {
+        if (this.selectedIndex == param1) {
         }
-        this.field_d = true;
-        this.field_g = param1;
+        this.mouseSelection = true;
+        this.selectedIndex = param1;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isAccountUiReady(byte param0) {
         if (param0 != -30) {
           return false;
         }
@@ -215,47 +215,47 @@ final class jn {
         return false;
     }
 
-    final void b(int param0) {
-        this.field_f = 0;
-        this.field_c = 0;
-        if (param0 == ~this.field_a) {
-          this.field_c = DelayedServerPacket.field_n;
+    final void handleVerticalKeys(int param0) {
+        this.activationButton = 0;
+        this.keyCode = 0;
+        if (param0 == ~this.heldMouseButton) {
+          this.keyCode = DelayedServerPacket.field_n;
         }
-        if (this.field_a == 0) {
+        if (this.heldMouseButton == 0) {
           if (DelayedServerPacket.field_n != 98) {
-            if (0 != this.field_a) {
+            if (0 != this.heldMouseButton) {
               return;
             }
             if (99 != DelayedServerPacket.field_n) {
               return;
             }
-            this.field_g = this.field_g + 1;
-            if (this.field_g >= this.field_b) {
-              this.field_g = 0;
+            this.selectedIndex = this.selectedIndex + 1;
+            if (this.selectedIndex >= this.itemCount) {
+              this.selectedIndex = 0;
             }
-            this.field_d = false;
+            this.mouseSelection = false;
             return;
           }
-          if (this.field_g <= 0) {
-            this.field_g = this.field_b;
+          if (this.selectedIndex <= 0) {
+            this.selectedIndex = this.itemCount;
           }
-          this.field_g = this.field_g - 1;
-          this.field_d = false;
+          this.selectedIndex = this.selectedIndex - 1;
+          this.mouseSelection = false;
         }
-        if (0 == this.field_a &&
+        if (0 == this.heldMouseButton &&
           99 == DelayedServerPacket.field_n) {
-          this.field_g = this.field_g + 1;
-          if (this.field_g >= this.field_b) {
-            this.field_g = 0;
+          this.selectedIndex = this.selectedIndex + 1;
+          if (this.selectedIndex >= this.itemCount) {
+            this.selectedIndex = 0;
           }
-          this.field_d = false;
+          this.mouseSelection = false;
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
+    final static void initializeMusicArchives(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           if (param1 > -8) {
-            jn.a((byte) -64);
+            MenuSelectionController.isAccountUiReady((byte) -64);
           }
           ViewportSizingController.field_n = new MusicTrack[7];
           UsernameLoginCredentials.field_f = param2;
@@ -277,7 +277,7 @@ final class jn {
         }
     }
 
-    final static int a(int param0, byte param1, IsaacPacketBuffer param2) {
+    final static int readOptionalBits(int param0, byte param1, IsaacPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -311,20 +311,20 @@ final class jn {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
-        this.field_d = param2 ? true : false;
-        this.field_a = param1;
-        if (this.field_d) {
-          this.field_g = param0;
+    final void setSelectionState(int param0, int param1, boolean param2, int param3) {
+        this.mouseSelection = param2 ? true : false;
+        this.heldMouseButton = param1;
+        if (this.mouseSelection) {
+          this.selectedIndex = param0;
           return;
         }
-        this.field_g = param3;
+        this.selectedIndex = param3;
     }
 
-    jn(int param0) {
-        this.field_g = 0;
-        this.field_d = false;
-        this.field_b = param0;
+    MenuSelectionController(int param0) {
+        this.selectedIndex = 0;
+        this.mouseSelection = false;
+        this.itemCount = param0;
     }
 
     static {

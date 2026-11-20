@@ -80,7 +80,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             this.decodeField(53, (PacketBuffer) null, -28);
           }
           if (param2 == 1) {
-            this.field_u = fl.a(param1.readCp1252String(-1231), (byte) -29, '<');
+            this.field_u = BlobWriteRequest.split(param1.readCp1252String(-1231), (byte) -29, '<');
           } else {
             if (param2 == 2) {
               var4_int = param1.readUnsignedByte((byte) -111);

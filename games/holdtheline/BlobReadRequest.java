@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends IntrusiveNode {
+final class BlobReadRequest extends IntrusiveNode {
     static RotatedSpriteAsset field_k;
     static int field_n;
-    byte[] field_l;
+    byte[] payload;
     static int field_j;
     static SpriteAsset field_i;
-    boolean field_m;
+    boolean completed;
 
-    final static fo a(int param0, int param1, int param2, int param3) {
-        fo var4 = new fo();
-        var4.field_j = param0;
-        var4.field_l = param3;
+    final static ArchiveKeyRequest requestArchiveKey(int param0, int param1, int param2, int param3) {
+        ArchiveKeyRequest var4 = new ArchiveKeyRequest();
+        var4.category = param0;
+        var4.id = param3;
         TutorialPage.field_a.addLast((byte) -94, var4);
         if (param1 == 31043) {
-          WidgetContainer.a(3, param2, var4);
+          WidgetContainer.sendArchiveKeyRequest(3, param2, var4);
           return var4;
         }
         field_j = -119;
-        WidgetContainer.a(3, param2, var4);
+        WidgetContainer.sendArchiveKeyRequest(3, param2, var4);
         return var4;
     }
 
-    ie() {
+    BlobReadRequest() {
     }
 
     public static void clearSharedReferences(byte param0) {

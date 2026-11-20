@@ -112,7 +112,7 @@ final class qn extends IntrusiveNode {
         try {
           if (NameAvailabilityResult.field_e) {
             NameAvailabilityResult.field_e = false;
-            tn.a(param0 - 7);
+            GrowableStringList.a(param0 - 7);
           }
           if (3 == MusicPatchPcmStream.field_r.field_J) {
             wm.a(param1, false, 0);
@@ -181,7 +181,7 @@ final class qn extends IntrusiveNode {
             for (var3_intLifetime1 = 0; var3_intLifetime1 < 4; var3_intLifetime1++) {
               var11 = MusicPatchPcmStream.field_r.vehicles[var3_intLifetime1];
               var13 = var11;
-              t.field_j[var3_intLifetime1] = t.field_j[var3_intLifetime1] + SingleChildWidget.field_C[var11.field_R];
+              IntArrayReadRequest.field_j[var3_intLifetime1] = IntArrayReadRequest.field_j[var3_intLifetime1] + SingleChildWidget.field_C[var11.field_R];
               if (var13.field_bc > MusicPatchPcmStream.field_r.field_B) {
                 pe.field_g[var3_intLifetime1] = var11.field_Pb;
               } else {
@@ -229,7 +229,7 @@ final class qn extends IntrusiveNode {
               if (fieldTemp$1 == MenuList.field_l[ao.field_b]) {
                 hk.field_d = hk.field_d - 1;
               }
-              tn.a(0);
+              GrowableStringList.a(0);
               h.b((byte) 121);
             }
             var3_intLifetime1Lifetime1 = MusicPatchPcmStream.field_r.field_ob;
@@ -238,10 +238,10 @@ final class qn extends IntrusiveNode {
             CurvedRoadSegment.field_y = CurvedRoadSegment.field_y + var3_intLifetime1Lifetime1;
             ni.field_b = MusicPatchPcmStream.field_r.field_hb;
             cm.field_a = MusicPatchPcmStream.field_r.field_y;
-            tn.field_c = MusicPatchPcmStream.field_r.field_g;
+            GrowableStringList.field_c = MusicPatchPcmStream.field_r.field_g;
             ni.field_b = ni.field_b - 1;
-            tn.field_c = tn.field_c + 1;
-            cm.field_a = cm.field_a - (tn.field_c + CurvedRoadSegment.field_y);
+            GrowableStringList.field_c = GrowableStringList.field_c + 1;
+            cm.field_a = cm.field_a - (GrowableStringList.field_c + CurvedRoadSegment.field_y);
             LayeredWidgetStyle.field_d = LayeredWidgetStyle.field_d + ni.field_b;
             fieldTemp$2 = LoginForm.field_P + 1;
             LoginForm.field_P = LoginForm.field_P + 1;
@@ -254,7 +254,7 @@ final class qn extends IntrusiveNode {
                   fieldTemp$3 = ao.field_b + 1;
                   ao.field_b = ao.field_b + 1;
                   OutlinedRoadStripRenderer.field_r = fieldTemp$3;
-                  tn.a(0);
+                  GrowableStringList.a(0);
                   h.b((byte) -125);
                 }
               }

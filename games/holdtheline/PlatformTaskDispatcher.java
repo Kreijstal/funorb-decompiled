@@ -29,14 +29,14 @@ final class PlatformTaskDispatcher implements Runnable {
     static String field_s;
     static String field_p;
 
-    private final PlatformTask a(String param0, int param1, int param2, boolean param3) {
+    private final PlatformTask openSocket(String param0, int param1, int param2, boolean param3) {
         if (param1 < 37) {
           this.field_a = (BoundedRandomAccessFile) null;
         }
-        return this.a(0, param2, !param3 ? 1 : 22, -15563, param0);
+        return this.enqueueTask(0, param2, !param3 ? 1 : 22, -15563, param0);
     }
 
-    final void a(byte param0) {
+    final void shutdown(byte param0) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
@@ -101,14 +101,14 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(String param0, Class[] param1, Class param2, byte param3) {
+    final PlatformTask lookupDeclaredMethod(String param0, Class[] param1, Class param2, byte param3) {
         if (param3 != -32) {
-          this.a(37);
+          this.listDisplayModes(37);
         }
-        return this.a(0, 0, 8, -15563, new Object[]{param2, param0, param1});
+        return this.enqueueTask(0, 0, 8, -15563, new Object[]{param2, param0, param1});
     }
 
-    private final PlatformTask a(int param0, int param1, int param2, int param3, Object param4) {
+    private final PlatformTask enqueueTask(int param0, int param1, int param2, int param3, Object param4) {
         PlatformTask var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
@@ -134,18 +134,18 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    final PlatformTask a(java.net.URL param0, int param1) {
+    final PlatformTask openUrlStream(java.net.URL param0, int param1) {
         if (param1 != 0) {
           String var4 = (String) null;
-          PlatformTaskDispatcher.a((String) null, (String) null, 88, 91);
+          PlatformTaskDispatcher.openPreferencesFile((String) null, (String) null, 88, 91);
         }
-        return this.a(0, 0, 4, param1 - 15563, param0);
+        return this.enqueueTask(0, 0, 4, param1 - 15563, param0);
     }
 
-    final boolean a(boolean param0) {
+    final boolean isFullscreenSupported(boolean param0) {
         if (!param0) {
           Class var3 = (Class) null;
-          this.a((String) null, 24, (Class) null);
+          this.lookupDeclaredField((String) null, 24, (Class) null);
         }
         if (!this.field_f) {
           return false;
@@ -333,11 +333,11 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref_bg = PlatformTaskDispatcher.a("", (String) (var8.field_c), 69, field_b);
+                        var3_ref_bg = PlatformTaskDispatcher.openPreferencesFile("", (String) (var8.field_c), 69, field_b);
                         var8.field_b = var3_ref_bg;
                         break;
                       case 12:
-                        var3_ref_bg = PlatformTaskDispatcher.a(field_n, (String) (var8.field_c), 104, field_b);
+                        var3_ref_bg = PlatformTaskDispatcher.openPreferencesFile(field_n, (String) (var8.field_c), 104, field_b);
                         var8.field_b = var3_ref_bg;
                         break;
                       case 21:
@@ -406,29 +406,29 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(java.awt.Frame param0, byte param1) {
+    final PlatformTask exitFullscreen(java.awt.Frame param0, byte param1) {
         if (param1 != -95) {
           this.field_r = (Thread) null;
         }
-        return this.a(0, 0, 7, -15563, param0);
+        return this.enqueueTask(0, 0, 7, -15563, param0);
     }
 
-    final PlatformTask a(int param0, int param1, int param2, int param3, boolean param4) {
+    final PlatformTask enterFullscreen(int param0, int param1, int param2, int param3, boolean param4) {
         if (param4) {
           java.awt.Frame var7 = (java.awt.Frame) null;
-          this.a((java.awt.Frame) null, (byte) 11);
+          this.exitFullscreen((java.awt.Frame) null, (byte) 11);
         }
-        return this.a(param0 + (param1 << 16), (param3 << 16) + param2, 6, -15563, (Object) null);
+        return this.enqueueTask(param0 + (param1 << 16), (param3 << 16) + param2, 6, -15563, (Object) null);
     }
 
-    final PlatformTask a(int param0) {
+    final PlatformTask listDisplayModes(int param0) {
         if (param0 != 2) {
           return (PlatformTask) null;
         }
-        return this.a(0, 0, 5, -15563, (Object) null);
+        return this.enqueueTask(0, 0, 5, -15563, (Object) null);
     }
 
-    private final static BoundedRandomAccessFile a(String param0, String param1, int param2, int param3) {
+    private final static BoundedRandomAccessFile openPreferencesFile(String param0, String param1, int param2, int param3) {
         try {
           int var6 = 0;
           BoundedRandomAccessFile stackIn_15_0 = null;
@@ -473,20 +473,20 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final PlatformTask a(String param0, int param1, Class param2) {
+    final PlatformTask lookupDeclaredField(String param0, int param1, Class param2) {
         PlatformTask discarded$0 = null;
         if (param1 != 9) {
           Object var5 = (Object) null;
-          discarded$0 = this.a(-70, -27, -21, 108, (Object) null);
+          discarded$0 = this.enqueueTask(-70, -27, -21, 108, (Object) null);
         }
-        return this.a(0, 0, 9, -15563, new Object[]{param2, param0});
+        return this.enqueueTask(0, 0, 9, -15563, new Object[]{param2, param0});
     }
 
-    final PlatformTask a(int param0, int param1, String param2) {
+    final PlatformTask openSocket(int param0, int param1, String param2) {
         if (param0 != 0) {
           return (PlatformTask) null;
         }
-        return this.a(param2, 85, param1, false);
+        return this.openSocket(param2, 85, param1, false);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
@@ -572,14 +572,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        me.a(field_n, field_b, -38);
+        CacheFileLocator.initialize(field_n, field_b, -38);
         if (this.field_f) {
-          this.field_a = new BoundedRandomAccessFile(me.a(field_b, "random.dat", false, (String) null), "rw", 25L);
-          this.field_u = new BoundedRandomAccessFile(me.a("main_file_cache.dat2", 95), "rw", 314572800L);
-          this.field_h = new BoundedRandomAccessFile(me.a("main_file_cache.idx255", 126), "rw", 1048576L);
+          this.field_a = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile(field_b, "random.dat", false, (String) null), "rw", 25L);
+          this.field_u = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile("main_file_cache.dat2", 95), "rw", 314572800L);
+          this.field_h = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile("main_file_cache.idx255", 126), "rw", 1048576L);
           this.field_g = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_g[var5_int] = new BoundedRandomAccessFile(me.a("main_file_cache.idx" + var5_int, 37), "rw", 1048576L);
+            this.field_g[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile("main_file_cache.idx" + var5_int, 37), "rw", 1048576L);
           }
           if (this.field_l) {
             try {
@@ -618,11 +618,11 @@ final class PlatformTaskDispatcher implements Runnable {
         this.field_r.start();
     }
 
-    final PlatformTask a(byte param0, int param1, Runnable param2) {
+    final PlatformTask startThread(byte param0, int param1, Runnable param2) {
         if (param0 != -28) {
           field_s = (String) null;
         }
-        return this.a(0, param1, 2, -15563, param2);
+        return this.enqueueTask(0, param1, 2, -15563, param2);
     }
 
     static {

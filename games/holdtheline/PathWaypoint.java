@@ -79,7 +79,7 @@ final class PathWaypoint extends Point2i {
         var3 = HoldTheLine.field_D;
         try {
           var1 = IsaacPacketBuffer.field_p;
-          while (ad.a(100)) {
+          while (ad.isReflectionCheckReady(100)) {
             var1.writeCipheredOpcode((byte) 33, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

@@ -48,10 +48,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new LabeledField(20, param5, param2 + 120, 25, param3, param1, 120, 3, IntrusiveNode.field_g, 16777215, param4);
-          this.a(true, var10);
+          this.addChild(true, var10);
           var9 = new ValidationHelpWidget(((ValidatorProvider) ((Object) param3)).getValidator(1), param0, 126, var10.height + param5, 50 + param2, param6);
           var9.listener = (WidgetListener) (this);
-          this.a(true, var9);
+          this.addChild(true, var9);
           stackIn_1_0 = var10.height + var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -231,11 +231,11 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         var3 = var3 + this.a(170, this.field_L, 25, var3, cm.field_c);
         var3 = var3 + (5 + this.a("", false, 170, this.field_K, ByteStorage.field_e, var3, 20));
         var3 = var3 + this.a(170, this.field_T, 25, var3, EmailValidationResult.field_f);
-        var3 = var3 + (this.a(170, 21411, this.field_P, TextHotspotRange.field_o, fi.field_ib, var3) + 5);
+        var3 = var3 + (this.a(170, 21411, this.field_P, TextHotspotRange.field_o, SocialListEntry.field_ib, var3) + 5);
         var3 = var3 + (this.a(170, 21411, this.field_G, ArchiveLoadStage.field_h, sh.field_a, var3) + 5);
         var3 = var3 + this.a(170, (byte) -124, ImageProducerRasterBuffer.field_o, var3, this.field_M);
         LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, SpriteButtonRenderer.field_w, 11579568, TextLayout.field_c);
-        this.a(true, var4);
+        this.addChild(true, var4);
         var3 = var3 + var4.height;
         TextWidgetStyle var5 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
         this.field_O = new TextHotspotWidget(var2, var5);
@@ -245,18 +245,18 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.field_O.listener = (WidgetListener) (this);
         this.field_O.a(-90 + this.width, (byte) 111, var3, 46);
         var3 = var3 + (15 + this.field_O.height);
-        this.a(true, this.field_O);
+        this.addChild(true, this.field_O);
         int var6 = 4;
         int var7 = 200;
         this.field_Q.setBounds(496 - var7 >> 1, (byte) 122, var3, 40, var7);
         this.field_N.setBounds(3 + var6, (byte) 122, var3 + 15, 40, 60);
         this.field_N.listener = (WidgetListener) (this);
         this.field_Q.listener = (WidgetListener) (this);
-        this.a(true, this.field_Q);
-        this.a(true, this.field_N);
+        this.addChild(true, this.field_Q);
+        this.addChild(true, this.field_N);
         this.field_R = new NameSuggestionsPanel((NameSelectionListener) (this));
         this.field_R.setBounds(this.field_G.x + this.field_G.width + 60, (byte) 122, this.field_G.y + 20, 150, -60 + this.width - (this.field_G.x + this.field_G.width));
-        this.a(true, this.field_R);
+        this.addChild(true, this.field_R);
         this.setBounds(0, (byte) 122, 0, var6 + (55 + var3), 496);
     }
 
@@ -399,13 +399,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.c(param0, -1);
+            stackIn_6_0 = this.focusPreviousChild(param0, -1);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(param0, 115);
+          stackIn_10_0 = this.focusNextChild(param0, 115);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -433,7 +433,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new LabeledField(20, param3, param0 + 120, param2, param1, false, 120, 3, IntrusiveNode.field_g, 16777215, param4);
-          this.a(true, var6);
+          this.addChild(true, var6);
           stackIn_1_0 = var6.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -475,9 +475,9 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             var8 = (String) null;
             discarded$1 = this.a(71, (UiWidget) null, -15, -54, (String) null);
           }
-          this.a(true, var9);
+          this.addChild(true, var9);
           var7 = new ValidationIndicator(((ValidatorProvider) ((Object) param4)).getValidator(param1 + 125));
-          this.a(true, var7);
+          this.addChild(true, var7);
           var7.setBounds(var9.width + var9.x + 3, (byte) 122, var9.y + (-15 + var9.height >> 1), 15, 15);
           stackIn_3_0 = var9.height;
           return stackIn_3_0;

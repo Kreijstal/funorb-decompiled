@@ -64,7 +64,7 @@ final class eg {
           StraightRoadSegment.a(param3, param7, param17, param0, (byte) -96);
           WhirlpoolHasher.a(-76, param15, param13);
           ArchiveLoadStage.a(param18, param12, param16, 19362, param8, param14);
-          jn.a(param1, param20, param4, 0);
+          MenuSelectionController.a(param1, param20, param4, 0);
           ih.a(14893, param6, param19, param5);
           if (param11 != 2) {
             field_b = 37;
@@ -190,7 +190,7 @@ final class eg {
         for (var2 = 0; var2 < NineSlicePanel.field_d; var2++) {
           var1[var2] = new IndexedSprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], IterableSecondaryNodeDeque.field_e[var2], StraightRoadSegment.field_E);
         }
-        tk.a(param0);
+        tk.clearDecodedSpriteSheet(param0);
         if (param0) {
           NineSlicePanel var4 = (NineSlicePanel) null;
           eg.a(-72, -10, 111, 19, -41, -54, -99, -123, -100, (BitmapFont) null, (BitmapFont) null, -127, (NineSlicePanel) null, 71, 19, 60, (NineSlicePanel) null, -44, 42, -10, (NineSlicePanel) null);

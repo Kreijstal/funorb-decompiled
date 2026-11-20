@@ -36,12 +36,12 @@ final class DraggableWidget extends SingleChildWidget {
           }
           var1[var2] = new Sprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var5);
         }
-        tk.a(false);
+        tk.clearDecodedSpriteSheet(false);
         return var1;
     }
 
-    final void a(int param0) {
-        super.a(-122);
+    final void refreshChildLayout(int param0) {
+        super.refreshChildLayout(-122);
         this.child.setBounds(0, (byte) 122, 0, this.height, this.width);
         this.field_K = this.y;
         this.field_O = this.x;
@@ -109,7 +109,7 @@ final class DraggableWidget extends SingleChildWidget {
         try {
           if (this.beginDebugVisit(20720, param2, param3, param0)) {
             this.appendDebugProperties(param2, param0, true, param3);
-            this.a((byte) 126, param0, param3, param2);
+            this.appendChildDebugTree((byte) 126, param0, param3, param2);
             discarded$64 = param3.append(" revert=").append(this.field_P);
             if (2147483647 != this.field_O &&
               this.field_K != 2147483647) {

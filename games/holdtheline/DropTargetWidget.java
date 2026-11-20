@@ -422,7 +422,7 @@ final class DropTargetWidget extends SingleChildWidget {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_10_0 = fo.field_k;
+              stackIn_10_0 = ArchiveKeyRequest.field_k;
               return stackIn_10_0;
             }
             var3 = param0.substring(0, var2_int);
@@ -661,14 +661,14 @@ final class DropTargetWidget extends SingleChildWidget {
           SecondaryNodeDeque.field_h = DraggableWidget.a("s1_background", 1);
           ValidationState.field_e = DraggableWidget.a("s1_track", param0 ^ 30864);
           DiskCacheWorker.field_b = DraggableWidget.a("s1_tree20", 1);
-          t.field_i = DraggableWidget.a("s1_tree30", 1);
+          IntArrayReadRequest.field_i = DraggableWidget.a("s1_tree30", 1);
           cd.field_d = DraggableWidget.a("s1_tree40", 1);
           ArchiveCatalog.field_k = DraggableWidget.a("s1_tree50", 1);
           BufferedRandomAccessFile.field_o = DraggableWidget.a("s1_tree80", param0 ^ 30864);
           SingleChildWidget.field_A = TutorialPage.createRotatedSpriteAsset("s1_standempty", (byte) -125);
           aj.field_c = TutorialPage.createRotatedSpriteAsset("s1_standscattered", (byte) 81);
           MouseWheelInput.field_c = TutorialPage.createRotatedSpriteAsset("s1_standfull", (byte) 106);
-          ie.field_k = TutorialPage.createRotatedSpriteAsset("s1_ad1", (byte) 97);
+          BlobReadRequest.field_k = TutorialPage.createRotatedSpriteAsset("s1_ad1", (byte) 97);
           CheckboxWidget.field_I = TutorialPage.createRotatedSpriteAsset("s1_ad2", (byte) 87);
           MusicPatch.field_u = TutorialPage.createRotatedSpriteAsset("s1_ad3", (byte) 86);
           MusicPatchPcmStream.field_s = DraggableWidget.a("s1_pa", 1);
@@ -716,7 +716,7 @@ final class DropTargetWidget extends SingleChildWidget {
           jo.field_a = DraggableWidget.a("s4_tree20", 1);
           hm.field_b = DraggableWidget.a("s4_tree30", 1);
           Vector2f.field_b = DraggableWidget.a("s4_tree40", 1);
-          ie.field_i = DraggableWidget.a("s4_tree50", 1);
+          BlobReadRequest.field_i = DraggableWidget.a("s4_tree50", 1);
           IterableSecondaryNodeDeque.field_c = TrackBoundary.b("vehicle_f1", (byte) -85);
           al.field_a = TrackBoundary.b("vehicle_tourer", (byte) -113);
           FadingDialog.field_K = TrackBoundary.b("vehicle_dragster", (byte) 125);
@@ -729,7 +729,7 @@ final class DropTargetWidget extends SingleChildWidget {
           jk.field_p = hm.a(5499, "slowdown");
           DirectByteStorage.field_g = TutorialPage.createRotatedSpriteAsset("oilslick", (byte) -98);
           wi.field_a = new RotatedSpriteSheetAsset("halloween_zombie");
-          tn.field_b = new SpriteSheetAsset("halloween_blood");
+          GrowableStringList.field_b = new SpriteSheetAsset("halloween_blood");
           var15 = HuffmanDecoder.a((byte) 81, 100, 13487565, 40);
           discarded$2 = new RotatedSpriteCache(var15, true, false);
           TriangleMesh.field_f = new RotatedSpriteCache(FadingDialog.a(-5936, 0, var15, 10, var15), true, false);

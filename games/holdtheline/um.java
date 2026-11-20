@@ -21,7 +21,7 @@ final class um {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qg.a(param3, param0, (byte) -27, param1)) {
+          if (!qg.decodeArchivedSpriteSheet(param3, param0, (byte) -27, param1)) {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }

@@ -24,7 +24,7 @@ final class ph {
           try {
             try {
               var3 = (String) (eo.a(21896, "getcookies", param2));
-              var4 = fl.a(var3, (byte) -126, ';');
+              var4 = BlobWriteRequest.split(var3, (byte) -126, ';');
               var5 = 0;
               if (param1 < 4) {
                 stackIn_3_0 = (String) null;
@@ -169,7 +169,7 @@ final class ph {
           PolarSortVector.field_g = new NamedSoundEffect("alarm_test", 100);
           ArchiveLoadStage.field_i = new NamedSoundEffect("mine_landing_and_armed", 256);
           NamedSoundEffect.field_p = new NamedSoundEffect("mine_explosion", 256);
-          vd.field_b = new NamedSoundEffect("machine_gun_1070ms_loop", 40);
+          RoadFillRenderer.field_b = new NamedSoundEffect("machine_gun_1070ms_loop", 40);
           ValidatedTextField.field_T = new NamedSoundEffect("missile_launch", 256);
           discarded$1 = new NamedSoundEffect("homing_missile_beeps", 100);
           ResizableDialog.field_O = new NamedSoundEffect("explosion_and_shrapnel", 256);
@@ -182,8 +182,8 @@ final class ph {
           DualNodeHashTable.field_b = jh.field_a.getMusicSample(param1 - 32594, "wacky_boom_kick");
           StrongCacheEntry.field_r = jh.field_a.getSoundEffect("menu_low_beep", (byte) 77);
           jh.field_a.getSoundEffect("menu_high_beep", (byte) 9);
-          qd.field_j = new NamedSoundEffect("ZD_update_lightning_strike");
-          se.field_m = new NamedSoundEffect("ZD_update_thunder_roll_1");
+          TexturedRoadFillRenderer.field_j = new NamedSoundEffect("ZD_update_lightning_strike");
+          IntWriteRequest.field_m = new NamedSoundEffect("ZD_update_thunder_roll_1");
           uj.field_a = new NamedSoundEffect("ZD_update_thunder_roll_2");
           discarded$3 = new NamedSoundEffect("ZD_update_rain_loop");
           HuffmanDecoder.field_c = new StereoMusicSample("car_pass");
@@ -220,7 +220,7 @@ final class ph {
               }
               var3 = var9 + "settings";
               var4 = (String) (eo.a(21896, "getcookies", param1));
-              var5 = fl.a(var4, (byte) -98, ';');
+              var5 = BlobWriteRequest.split(var4, (byte) -98, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&

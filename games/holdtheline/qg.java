@@ -51,7 +51,7 @@ final class qg {
         }
     }
 
-    final static void a(Sprite param0, byte param1, int[] param2) {
+    final static void fillTexturedPolygon(Sprite param0, byte param1, int[] param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_4_0 = 0;
@@ -76,25 +76,25 @@ final class qg {
         int var13 = 0;
         var13 = HoldTheLine.field_D;
         try {
-          gf.a();
+          PolygonScanConverter.clearEdges();
           var3_int = 62 / ((69 - param1) / 47);
-          gf.a(param2, 0, param2.length);
-          gf.c();
+          PolygonScanConverter.addPolygonEdges(param2, 0, param2.length);
+          PolygonScanConverter.beginScan();
           while (true) {
-            if (!gf.d()) {
+            if (!PolygonScanConverter.nextSpan()) {
               return;
             }
-            var4 = gf.field_g;
+            var4 = PolygonScanConverter.spanStartX;
             stackIn_4_0 = -1;
             stackIn_4_1 = ~var4;
             if (stackIn_4_0 < stackIn_4_1) {
               var4 = 0;
             }
-            var5 = gf.field_b;
+            var5 = PolygonScanConverter.spanEndX;
             if (SoftwareRasterizer.width <= var5) {
               var5 = -1 + SoftwareRasterizer.width;
             }
-            var6 = gf.field_a;
+            var6 = PolygonScanConverter.spanY;
             if (var6 < 0) {
               var6 = 0;
             }
@@ -182,7 +182,7 @@ final class qg {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2, ResourceArchive param3) {
+    final static boolean decodeArchivedSpriteSheet(int param0, int param1, byte param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;

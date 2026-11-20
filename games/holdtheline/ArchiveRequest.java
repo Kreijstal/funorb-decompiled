@@ -30,7 +30,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         int var5Lifetime1;
         var8 = HoldTheLine.field_D;
         try {
-          var9 = fl.a(param2, (byte) -120, param1);
+          var9 = BlobWriteRequest.split(param2, (byte) -120, param1);
           var3 = var9;
           var6 = -65 % ((param0 + 68) / 35);
           var5 = 0;

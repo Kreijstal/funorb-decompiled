@@ -341,7 +341,7 @@ final class TriangleMesh {
           }
           try {
             if (EmailValidationResult.field_g == 0) {
-              PasswordFieldRenderer.field_y = TextFieldRenderer.field_v.a(0, CachedTextLayout.field_e, pe.field_c);
+              PasswordFieldRenderer.field_y = TextFieldRenderer.field_v.openSocket(0, CachedTextLayout.field_e, pe.field_c);
               EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
             }
             if (EmailValidationResult.field_g == param0) {

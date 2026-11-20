@@ -174,16 +174,16 @@ final class cd {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = fo.field_k;
+            stackIn_4_0 = ArchiveKeyRequest.field_k;
             return stackIn_4_0;
           }
           if (var2_int > 255) {
             stackIn_7_0 = Vector2i.field_h;
             return stackIn_7_0;
           }
-          var3 = fl.a(param1, (byte) -126, '.');
+          var3 = BlobWriteRequest.split(param1, (byte) -126, '.');
           if (var3.length < 2) {
-            stackIn_11_0 = fo.field_k;
+            stackIn_11_0 = ArchiveKeyRequest.field_k;
             return stackIn_11_0;
           }
           var5 = -111 / ((param0 + 56) / 44);

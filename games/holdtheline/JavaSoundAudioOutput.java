@@ -8,26 +8,26 @@ final class JavaSoundAudioOutput extends AudioOutput {
     private javax.sound.sampled.SourceDataLine field_w;
     private static String field_z;
 
-    final void c() {
+    final void closeDevice() {
         if (this.field_w != null) {
           this.field_w.close();
           this.field_w = null;
         }
     }
 
-    final int e() {
-        return this.field_x - (this.field_w.available() >> (field_t ? 2 : 1));
+    final int getBufferedFrames() {
+        return this.field_x - (this.field_w.available() >> (stereo ? 2 : 1));
     }
 
-    final void b() {
+    final void writeDevice() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
-        if (field_t) {
+        if (stereo) {
           var1 = var1 << 1;
         }
         for (var2 = 0; var2 < var1; var2++) {
-          var3 = this.field_q[var2];
+          var3 = this.sampleBuffer[var2];
           if ((var3 + 8388608 & -16777216) != 0) {
             var3 = 8388607 ^ var3 >> 31;
           }
@@ -40,7 +40,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
     JavaSoundAudioOutput() {
     }
 
-    final void a(java.awt.Component param0) {
+    final void initializeDevice(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;
@@ -72,9 +72,9 @@ final class JavaSoundAudioOutput extends AudioOutput {
         stackIn_15_0 = this;
         stackIn_15_1 = null;
         stackIn_15_2 = null;
-        stackIn_15_3 = (float)field_l;
+        stackIn_15_3 = (float)sampleRate;
         stackIn_15_4 = 16;
-        if (!field_t) {
+        if (!stereo) {
           stackIn_16_1 = null;
           stackIn_16_2 = null;
           stackIn_16_5 = 1;
@@ -85,7 +85,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         }
         this.field_v = new javax.sound.sampled.AudioFormat(stackIn_15_3, stackIn_15_4, stackIn_16_5, true, false);
         stackIn_18_1 = 256;
-        if (!field_t) {
+        if (!stereo) {
           stackIn_19_2 = 1;
         } else {
           stackIn_19_2 = 2;
@@ -93,17 +93,17 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_y = new byte[stackIn_18_1 << stackIn_19_2];
     }
 
-    final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
-          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_v, param0 << (field_t ? 2 : 1));
+          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_v, param0 << (stereo ? 2 : 1));
           this.field_w = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
           this.field_w.open();
           this.field_w.start();
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (RoadStripRenderer.bitCount(-699864667, param0) != 1) {
-            this.b(SpriteButtonRenderer.a((byte) 7, param0));
+            this.openDevice(SpriteButtonRenderer.a((byte) 7, param0));
             return;
           }
           this.field_w = null;

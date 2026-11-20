@@ -29,14 +29,14 @@ final class IsaacPacketBuffer extends PacketBuffer {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((vd.field_c[var4] & this.payload[incrementValue$0]) << -var4 + param0);
+          var5 = var5 + ((RoadFillRenderer.field_c[var4] & this.payload[incrementValue$0]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 != var4) {
-          var5 = var5 + (this.payload[var3] >> -param0 + var4 & vd.field_c[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & RoadFillRenderer.field_c[param0]);
         } else {
-          var5 = var5 + (vd.field_c[var4] & this.payload[var3]);
+          var5 = var5 + (RoadFillRenderer.field_c[var4] & this.payload[var3]);
         }
         return var5;
     }
@@ -97,7 +97,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         int var4;
         int var5;
         var5 = HoldTheLine.field_D;
-        param2 = param2 & vd.field_c[param1];
+        param2 = param2 & RoadFillRenderer.field_c[param1];
         var4 = 39 % ((14 - param0) / 57);
         while (this.writeBitsRemaining < param1) {
           param1 = param1 - this.writeBitsRemaining;

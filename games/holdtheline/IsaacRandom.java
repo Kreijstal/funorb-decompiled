@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IsaacRandom {
-    static ie field_g;
+    static BlobReadRequest field_g;
     private int field_j;
     private int[] field_d;
     private int field_e;

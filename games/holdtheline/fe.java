@@ -354,7 +354,7 @@ final class fe {
             fe.a((byte[]) null, -47);
           }
           var2 = new CoverageBitmapFont(param0, DirectByteStorage.field_j, Vector2i.field_g, EditableTextField.field_K, ad.field_d, StraightRoadSegment.field_E, IterableSecondaryNodeDeque.field_e);
-          tk.a(false);
+          tk.clearDecodedSpriteSheet(false);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -34,7 +34,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
             var3 = (PaletteBitmapFont) null;
             LinkWidgetRenderer.a(-98, (String) null, true, (PaletteBitmapFont) null, 48, -52);
           }
-          vd.a((java.awt.Component) ((Object) param0), -116);
+          RoadFillRenderer.attachKeyboard((java.awt.Component) ((Object) param0), -116);
           gk.a((java.awt.Component) ((Object) param0), param1 ^ 109);
           if (null == TrackBoundary.field_u) {
             return;

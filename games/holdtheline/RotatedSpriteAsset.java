@@ -115,7 +115,7 @@ final class RotatedSpriteAsset {
             }
           }
           SecondaryNodeDeque.field_g = param0;
-          t.field_n = param1;
+          IntArrayReadRequest.field_n = param1;
           SocketConnector.field_b = param4;
           TextLineLayout.field_a = new Sprite[param2.length];
           for (var7 = param5; var7 < param2.length; var7++) {
@@ -148,7 +148,7 @@ final class RotatedSpriteAsset {
           return this.field_f;
         }
         int var3 = 8 / ((param0 + 58) / 47);
-        Sprite var2 = RoadSegment.b(this.field_b, (byte) -63);
+        Sprite var2 = RoadSegment.loadSpriteByName(this.field_b, (byte) -63);
         if (var2 != null) {
           this.field_f = new RotatedSpriteCache(var2, this.field_c, this.field_h, this.field_m);
         }

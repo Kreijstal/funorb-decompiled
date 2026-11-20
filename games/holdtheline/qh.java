@@ -91,7 +91,7 @@ final class qh {
         Throwable decompiledCaughtException = null;
         var1_ref = MusicCrossfadeStream.field_n;
         synchronized (var1_ref) {
-          if (qd.field_i == BoundaryCurve.field_l) {
+          if (TexturedRoadFillRenderer.field_i == BoundaryCurve.field_l) {
             return false;
           }
           DelayedServerPacket.field_n = IndexedSpriteState.field_a[BoundaryCurve.field_l];

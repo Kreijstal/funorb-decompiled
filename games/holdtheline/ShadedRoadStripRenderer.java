@@ -94,7 +94,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
           if (var7 == 0) {
             return;
           }
-          gf.a(var20, var7);
+          PolygonScanConverter.fillPolygon(var20, var7);
           var8 = param0[0];
           var9 = param0[1];
           for (var6Lifetime2 = 2; param0.length > var6Lifetime2; var6Lifetime2 += 2) {
@@ -186,7 +186,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             return true;
           }
           if (null == ValidationIndicator.field_N) {
-            ValidationIndicator.field_N = na.field_s.a(0, bo.field_e, uj.field_f);
+            ValidationIndicator.field_N = na.field_s.openSocket(0, bo.field_e, uj.field_f);
           }
           if (ValidationIndicator.field_N.field_d == 0) {
             return false;

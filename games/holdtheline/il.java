@@ -25,7 +25,7 @@ final class il {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 115 / ((-67 - param0) / 52);
-          if (qg.a(param2, param3, (byte) -27, param1)) {
+          if (qg.decodeArchivedSpriteSheet(param2, param3, (byte) -27, param1)) {
             stackIn_4_0 = eg.b(false);
             return stackIn_4_0;
           }

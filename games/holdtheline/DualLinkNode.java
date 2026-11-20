@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class DualLinkNode extends IntrusiveNode {
-    static jn field_k;
+    static MenuSelectionController field_k;
     long secondaryKey;
     DualLinkNode secondaryNext;
     static String field_j;
@@ -29,7 +29,7 @@ class DualLinkNode extends IntrusiveNode {
         QuickChatDynamicCommand[] var5;
         var4 = HoldTheLine.field_D;
         if (param1 >= -50) {
-          field_k = (jn) null;
+          field_k = (MenuSelectionController) null;
         }
         var5 = ClientTextResources.a(4);
         var2 = var5;

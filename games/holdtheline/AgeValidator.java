@@ -245,7 +245,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.validateText(param0, (byte) 89) == LinearPointPath.field_k) {
-            stackIn_2_0 = vd.field_d;
+            stackIn_2_0 = RoadFillRenderer.field_d;
             return stackIn_2_0;
           }
           if (param1) {

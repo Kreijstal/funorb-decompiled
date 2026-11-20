@@ -56,7 +56,7 @@ final class jc {
           if (param0 != -1) {
             jc.clearSharedReferences((byte) 44);
           }
-          if (qg.a(param3, param1, (byte) -27, param2)) {
+          if (qg.decodeArchivedSpriteSheet(param3, param1, (byte) -27, param2)) {
             return GrowableObjectList.buildDecodedSprites(61);
           }
           return null;

@@ -106,7 +106,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     final static void c(int param0) {
-        qd.a(20830, param0);
+        TexturedRoadFillRenderer.selectMusicTrack(20830, param0);
         StrongCacheEntry.field_w = 0;
         nm.field_b = tk.field_c[4][0];
         LoginForm.field_P = 0;
@@ -121,7 +121,7 @@ final class ProxySocketConnector extends SocketConnector {
         QuickChatPhraseDefinition.field_r = -1;
         MusicPatchPcmStream.field_r = null;
         ArchiveRequest.field_r = 3;
-        fl.field_j = false;
+        BlobWriteRequest.field_j = false;
         DiskCacheStore.field_i = -1;
         EntitySound.field_j = true;
         wm.a(false, false, -1);
@@ -340,7 +340,7 @@ final class ProxySocketConnector extends SocketConnector {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = param0.a(true);
+            stackIn_4_0 = param0.isFullscreenSupported(true);
             return stackIn_4_0;
           }
           return false;

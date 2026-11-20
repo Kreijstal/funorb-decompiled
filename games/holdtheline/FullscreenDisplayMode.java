@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl {
+final class FullscreenDisplayMode {
     static String field_e;
-    int field_d;
+    int refreshRate;
     static Sprite field_i;
     static String field_c;
-    int field_a;
+    int height;
     static volatile int field_f;
-    int field_b;
-    int field_g;
+    int width;
+    int bitDepth;
     static Sprite[] field_h;
     private static String field_z;
 

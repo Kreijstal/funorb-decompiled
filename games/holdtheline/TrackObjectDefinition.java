@@ -25,8 +25,8 @@ final class TrackObjectDefinition {
           this.field_j = param1;
           this.field_c = false;
           if (param0 != 1) {
-            fl var4 = (fl) null;
-            TrackObjectDefinition.a(74, (fl) null, -105);
+            BlobWriteRequest var4 = (BlobWriteRequest) null;
+            TrackObjectDefinition.sendBlobWriteRequest(74, (BlobWriteRequest) null, -105);
           }
           this.field_g = null;
           this.field_l = null;
@@ -201,28 +201,28 @@ final class TrackObjectDefinition {
         }
     }
 
-    final static void a(int param0, fl param1, int param2) {
+    final static void sendBlobWriteRequest(int param0, BlobWriteRequest param1, int param2) {
         IsaacPacketBuffer var6 = null;
         int var4 = 0;
         try {
           if (param0 != 27391) {
-            fl var5 = (fl) null;
-            TrackObjectDefinition.a(-52, (fl) null, -89);
+            BlobWriteRequest var5 = (BlobWriteRequest) null;
+            TrackObjectDefinition.sendBlobWriteRequest(-52, (BlobWriteRequest) null, -89);
           }
           var6 = IsaacPacketBuffer.field_p;
           var6.writeCipheredOpcode((byte) 33, param2);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(111, 1);
-          if (null != param1.field_l) {
-            var6.writeByte(param0 - 27280, param1.field_l.length);
-            var6.writeBytes(param1.field_l.length, 86, param1.field_l, 0);
+          if (null != param1.payload) {
+            var6.writeByte(param0 - 27280, param1.payload.length);
+            var6.writeBytes(param1.payload.length, 86, param1.payload, 0);
           } else {
             var6.writeByte(param0 ^ 27280, 0);
           }
           var6.appendCrc32(var4, (byte) 118);
           var6.position = var6.position - 4;
-          param1.field_k = var6.readInt(62);
+          param1.acknowledgementCrc = var6.readInt(62);
           var6.backpatchByteLength(-268435456, var6.position - var4);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

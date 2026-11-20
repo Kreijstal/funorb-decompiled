@@ -63,7 +63,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
           while (true) {
             if (0 > TutorialPage.field_o) {
               RoadStripRenderer.field_e.position = 0;
-              if (!hi.b(1, (byte) 40)) {
+              if (!hi.readServerBytes(1, (byte) 40)) {
                 return false;
               }
               TutorialPage.field_o = RoadStripRenderer.field_e.readCipheredOpcode((byte) 73);

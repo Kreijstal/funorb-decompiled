@@ -58,9 +58,9 @@ final class b {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int stackIn_14_0 = 0;
-        fi stackIn_63_0 = null;
+        SocialListEntry stackIn_63_0 = null;
         int stackIn_63_1 = 0;
-        fi stackIn_63_2 = null;
+        SocialListEntry stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
         IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
@@ -70,10 +70,10 @@ final class b {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        fi var5_ref = null;
-        fi var6 = null;
+        SocialListEntry var5_ref = null;
+        SocialListEntry var6 = null;
         String var6_ref = null;
-        fi var7 = null;
+        SocialListEntry var7 = null;
         String var7_ref = null;
         int var8 = 0;
         Object var3Lifetime1;
@@ -88,7 +88,7 @@ final class b {
           if (var2 == 0) {
             if (IntrusiveDeque.field_a == null) {
               IntrusiveDeque.field_a = new DualNodeHashTable(128);
-              se.field_l = 0;
+              IntWriteRequest.field_l = 0;
             }
             stackIn_14_0 = (1 != var1.readUnsignedByte((byte) -18)) ? 0 : 1;
             var3_int = stackIn_14_0;
@@ -98,7 +98,7 @@ final class b {
             }
             var5_ref = TrackCurve.a(param0 - 10, var4_ref_String);
             var6_ref = var1.readCp1252String(param0 - 1241);
-            var7_ref = MidiPcmStream.a((CharSequence) ((Object) var4_ref_String), (byte) 94);
+            var7_ref = MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_String), (byte) 94);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
@@ -109,14 +109,14 @@ final class b {
               }
             }
             if (var5_ref == null) {
-              var5_ref = new fi();
+              var5_ref = new SocialListEntry();
               IntrusiveDeque.field_a.put((long)var7_ref.hashCode(), (byte) -75, var5_ref);
-              fieldTemp$1 = se.field_l;
-              se.field_l = se.field_l + 1;
-              var5_ref.field_gb = fieldTemp$1;
+              fieldTemp$1 = IntWriteRequest.field_l;
+              IntWriteRequest.field_l = IntWriteRequest.field_l + 1;
+              var5_ref.insertionOrder = fieldTemp$1;
               CheckboxWidget.field_H.addLast((byte) -128, var5_ref);
             }
-            var5_ref.field_mb = var4_ref_String;
+            var5_ref.displayName = var4_ref_String;
             return;
           }
           if (var2 != 1) {
@@ -133,7 +133,7 @@ final class b {
               return;
             }
             if (var2 != 4) {
-              MusicPatchPcmStream.a((Throwable) null, (byte) 55, "F1: " + AgeValidator.b(false));
+              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 55, "F1: " + AgeValidator.b(false));
               r.a(-28036);
               return;
             }
@@ -158,24 +158,24 @@ final class b {
           if (null == var6) {
             var6 = LoadProgressDialog.a(var5, param0 ^ 101);
             if (var6 != null) {
-              jo.field_b.put((long)MidiPcmStream.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
+              jo.field_b.put((long)MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
             }
           }
           if (null == var6) {
-            var6 = new fi();
-            jo.field_b.put((long)MidiPcmStream.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
+            var6 = new SocialListEntry();
+            jo.field_b.put((long)MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
             fieldTemp$0 = sl.field_a;
             sl.field_a = sl.field_a + 1;
-            var6.field_gb = fieldTemp$0;
+            var6.insertionOrder = fieldTemp$0;
             MidiKeyUsage.field_j.addLast((byte) -105, var6);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
-          var6.field_mb = var4_ref_StringLifetime1;
-          var6.field_hb = (String) (var3Lifetime1);
+          var6.displayName = var4_ref_StringLifetime1;
+          var6.worldName = (String) (var3Lifetime1);
           var6.unlink(param0 ^ 10);
-          var7 = (fi) (MidiKeyUsage.field_j.first((byte) 96));
+          var7 = (SocialListEntry) (MidiKeyUsage.field_j.first((byte) 96));
           scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_63_0 = var6;
@@ -184,8 +184,8 @@ final class b {
               if (var8 != 0) {
                 break scanLoop1;
               }
-              if (NameSuggestionsPanel.a(stackIn_63_0, stackIn_63_1, stackIn_63_2)) {
-                var7 = (fi) (MidiKeyUsage.field_j.next((byte) -33));
+              if (NameSuggestionsPanel.isLaterFriend(stackIn_63_0, stackIn_63_1, stackIn_63_2)) {
+                var7 = (SocialListEntry) (MidiKeyUsage.field_j.next((byte) -33));
                 continue;
               }
             }

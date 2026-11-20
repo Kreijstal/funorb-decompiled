@@ -122,12 +122,12 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
               this.field_I[var5].renderer = (WidgetRenderer) ((Object) var4);
               this.field_I[var5].tooltip = AccountTermsPanel.field_N;
               this.field_I[var5].setBounds(0, (byte) 122, var5 * 16 + 20, 15, 80);
-              this.a(true, this.field_I[var5]);
+              this.addChild(true, this.field_I[var5]);
             }
             this.field_I[var3_int] = new TextButton(PointPath.field_f, (WidgetListener) (this));
             this.field_I[var3_int].renderer = (WidgetRenderer) ((Object) var4);
             this.field_I[var3_int].setBounds(0, (byte) 122, 16 * (var3_int + 1) + 20, 15, 100);
-            this.a(true, this.field_I[var3_int]);
+            this.addChild(true, this.field_I[var3_int]);
             return;
           }
           this.field_F = null;
@@ -159,13 +159,13 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             return true;
           }
           if (param1 == 98) {
-            stackIn_5_0 = this.c(param0, param2 + 77);
+            stackIn_5_0 = this.focusPreviousChild(param0, param2 + 77);
             return stackIn_5_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(param0, param2 + 200);
+          stackIn_9_0 = this.focusNextChild(param0, param2 + 200);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,8 +185,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         field_J = null;
         field_H = null;
         if (param0 != -26897) {
-          fi var2 = (fi) null;
-          NameSuggestionsPanel.a((fi) null, 23, (fi) null);
+          SocialListEntry var2 = (SocialListEntry) null;
+          NameSuggestionsPanel.isLaterFriend((SocialListEntry) null, 23, (SocialListEntry) null);
         }
     }
 
@@ -230,7 +230,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final static boolean a(fi param0, int param1, fi param2) {
+    final static boolean isLaterFriend(SocialListEntry param0, int param1, SocialListEntry param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -242,21 +242,21 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         RuntimeException decompiledCaughtException = null;
         var4 = HoldTheLine.field_D;
         try {
-          var3_int = -param2.field_gb + param0.field_gb;
+          var3_int = -param2.insertionOrder + param0.insertionOrder;
           if (param1 != 200) {
             NameSuggestionsPanel.i(32);
           }
-          if (SecondaryNodeDequeIterator.field_g == param0.field_hb) {
+          if (SecondaryNodeDequeIterator.field_g == param0.worldName) {
             var3_int -= 200;
           } else {
-            if (null == param0.field_hb) {
+            if (null == param0.worldName) {
               var3_int += 200;
             }
           }
-          if (SecondaryNodeDequeIterator.field_g == param2.field_hb) {
+          if (SecondaryNodeDequeIterator.field_g == param2.worldName) {
             var3_int += 200;
           } else {
-            if (null == param2.field_hb) {
+            if (null == param2.worldName) {
               var3_int -= 200;
             }
           }

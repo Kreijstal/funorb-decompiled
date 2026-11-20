@@ -29,7 +29,7 @@ final class ma extends IntrusiveNode {
             var5 = (IsaacPacketBuffer) null;
             ma.a(true, (IsaacPacketBuffer) null, -15);
           }
-          var3_int = jn.a(16, (byte) -96, param1);
+          var3_int = MenuSelectionController.readOptionalBits(16, (byte) -96, param1);
           var4 = d.field_c[param2];
           if (var4 != -1 && (var4 < var3_int ||
             var3_int == -1)) {
@@ -109,7 +109,7 @@ final class ma extends IntrusiveNode {
         }
         PathWaypoint.field_o = null;
         ClientException.field_c = 0;
-        qd.a(20830, 3 + StrongCacheEntry.field_w);
+        TexturedRoadFillRenderer.selectMusicTrack(20830, 3 + StrongCacheEntry.field_w);
         CheckboxRenderer.field_x = 3;
         pe.field_g = new int[4];
         if (7 != DelegatingCanvas.field_d) {
@@ -120,21 +120,21 @@ final class ma extends IntrusiveNode {
           bn.a(1, param0 ^ 21498);
           nm.field_b = ArchiveIndex.b((byte) -49);
           if (UsernameLoginCredentials.a(nm.field_b, true)) {
-            MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, DelegatingCanvas.field_d, Vector2i.field_c, AgeValidator.field_o, t.field_l, IntrusiveDeque.field_b);
+            MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, DelegatingCanvas.field_d, Vector2i.field_c, AgeValidator.field_o, IntArrayReadRequest.field_l, IntrusiveDeque.field_b);
           } else {
             DiskCacheStore.field_i = IntrusiveDeque.field_b;
             ArchiveRequest.field_r = DelegatingCanvas.field_d;
             MusicPatchPcmStream.field_r = null;
-            QuickChatPhraseDefinition.field_r = t.field_l;
+            QuickChatPhraseDefinition.field_r = IntArrayReadRequest.field_l;
             qn.field_k = AgeValidator.field_o;
-            fl.field_j = Vector2i.field_c;
+            BlobWriteRequest.field_j = Vector2i.field_c;
           }
           EntitySound.field_j = true;
           wm.a(param1, false, -1);
         } else {
           Vector2i.field_c = false;
           EntitySound.field_l = 4;
-          t.field_j = new int[4];
+          IntArrayReadRequest.field_j = new int[4];
           AgeValidator.field_o = false;
           IntrusiveDeque.field_b = -1;
           TextWidgetStyle.field_g = 3;
@@ -143,9 +143,9 @@ final class ma extends IntrusiveNode {
           ni.field_b = 859978912;
           CurvedRoadSegment.field_y = 0;
           LayeredWidgetStyle.field_d = 1913842707 + ((1 & StrongCacheEntry.field_w) << 1) + ((2 & StrongCacheEntry.field_w) >> 1);
-          tn.field_c = -1134004831;
+          GrowableStringList.field_c = -1134004831;
           cm.field_a = -1329759026;
-          t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
+          IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
           ij.a(param1, -79);
           ((GameMenu) (l.field_a[10])).carouselOffset = 480.0f;
         }

@@ -73,19 +73,19 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             IntrusiveNode.field_d = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "signup_text");
             mn.field_c = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "menu_text");
             NodeHashTableIterator.field_h = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "button_frame");
-            nl.field_i = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "arrow");
-            tk.field_a = (BitmapFont) ((Object) MusicPatch.a("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "large_font"));
-            GzipDecompressor.field_e = (BitmapFont) ((Object) MusicPatch.a("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "small_font"));
+            FullscreenDisplayMode.field_i = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "arrow");
+            tk.field_a = (BitmapFont) ((Object) MusicPatch.loadMonochromeFontByName("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "large_font"));
+            GzipDecompressor.field_e = (BitmapFont) ((Object) MusicPatch.loadMonochromeFontByName("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "small_font"));
             var28 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
             var3 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
-            var11 = new Sprite(nl.field_i.width + 4, 4 + nl.field_i.height);
+            var11 = new Sprite(FullscreenDisplayMode.field_i.width + 4, 4 + FullscreenDisplayMode.field_i.height);
             var11.bindRaster();
-            nl.field_i.drawTinted(2, 2, t.field_n);
+            FullscreenDisplayMode.field_i.drawTinted(2, 2, IntArrayReadRequest.field_n);
             EmailLoginCredentials.a(2, var11.height, var11.width, var11, 0, 0, 1, -24983);
-            nl.field_i = var11;
-            NetworkGameClient.field_m = nl.field_i.flippedHorizontally();
+            FullscreenDisplayMode.field_i = var11;
+            NetworkGameClient.field_m = FullscreenDisplayMode.field_i.flippedHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.width / 2;
             var12.bindRaster();
@@ -94,19 +94,19 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(DraggableWidget.field_I, new String[]{jk.field_r}, true), var6, 110, 16777215, -1);
             GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(SpriteSheetAsset.field_b, new String[]{jk.field_r}, true), var6, 130, 16777215, -1);
             tk.field_a.drawCentered(jg.field_q, var6, 180, 16777215, -1);
-            GzipDecompressor.field_e.drawCentered(fi.field_jb, var6, 200, 16777215, -1);
+            GzipDecompressor.field_e.drawCentered(SocialListEntry.field_jb, var6, 200, 16777215, -1);
             EmailLoginCredentials.a(3, var12.height, var12.width, var12, 0, 0, 1, -24983);
             IterableNodeHashTable.field_k.bindRaster();
             var12.draw(-IterableNodeHashTable.field_k.offsetX + 18, 241 - IterableNodeHashTable.field_k.offsetY);
             for (var7 = 0; qh.field_b.length > var7; var7++) {
               TextLineLayout.field_a[var7].bindRaster();
-              GzipDecompressor.field_e.drawParagraph(qh.field_b[var7], 3, 3, TextLineLayout.field_a[var7].width - 6, -6 + TextLineLayout.field_a[var7].height, t.field_n, -1, 1, 1, GzipDecompressor.field_e.descent + GzipDecompressor.field_e.ascent);
+              GzipDecompressor.field_e.drawParagraph(qh.field_b[var7], 3, 3, TextLineLayout.field_a[var7].width - 6, -6 + TextLineLayout.field_a[var7].height, IntArrayReadRequest.field_n, -1, 1, 1, GzipDecompressor.field_e.descent + GzipDecompressor.field_e.ascent);
               EmailLoginCredentials.a(3, TextLineLayout.field_a[var7].height, TextLineLayout.field_a[var7].width, TextLineLayout.field_a[var7], 0, 0, 1, -24983);
             }
             qh.field_b = null;
             CheckboxRenderer.field_m = IntrusiveNode.field_d.copy();
             CheckboxRenderer.field_m.bindRaster();
-            NanoTickClock.a(255, SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 0, 0, 64);
+            NanoTickClock.recolorGreenPixels(255, SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 0, 0, 64);
             SoftwareRasterizer.bindRaster(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
             Point2i.field_b = (eg.field_c.width - NodeHashTableIterator.field_h.width) / 2 + 231;
@@ -240,12 +240,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             NodeHashTableIterator.field_h != null) {
             eg.field_c.draw(231, 390);
             var1 = IntrusiveNode.field_d;
-            if (DualLinkNode.field_k.field_g == 0) {
+            if (DualLinkNode.field_k.selectedIndex == 0) {
               var1 = CheckboxRenderer.field_m;
             }
             var1.draw(0, 0);
             stackIn_54_0 = AccountFormText.field_b;
-            if (DualLinkNode.field_k.field_g == 0) {
+            if (DualLinkNode.field_k.selectedIndex == 0) {
               stackIn_55_1 = 4;
             } else {
               stackIn_55_1 = 3;
@@ -264,39 +264,39 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_60_0 = 80;
             stackIn_60_1 = Point2i.field_b;
             stackIn_60_2 = LoginChoicePanel.field_L;
-            stackIn_61_3 = (DualLinkNode.field_k.field_g == 0);
+            stackIn_61_3 = (DualLinkNode.field_k.selectedIndex == 0);
             b.a(stackIn_60_0, stackIn_60_1, stackIn_60_2, stackIn_61_3);
           }
           if (eg.field_c != null &&
             null != NodeHashTableIterator.field_h) {
             eg.field_c.draw(434, 390);
             mn.field_c.draw(0, 0);
-            if (1 == DualLinkNode.field_k.field_g) {
-              NanoTickClock.a(255, eg.field_c.width - 4, 7 * eg.field_c.height / 12, 392, 436, 64);
+            if (1 == DualLinkNode.field_k.selectedIndex) {
+              NanoTickClock.recolorGreenPixels(255, eg.field_c.width - 4, 7 * eg.field_c.height / 12, 392, 436, 64);
             }
             stackIn_69_0 = 80;
             stackIn_69_1 = LoginForm.field_J;
             stackIn_69_2 = ShadedRoadStripRenderer.field_t;
-            stackIn_70_3 = (DualLinkNode.field_k.field_g == 1);
+            stackIn_70_3 = (DualLinkNode.field_k.selectedIndex == 1);
             b.a(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_70_3);
           }
-          if (nl.field_i != null) {
-            var1_int = 357 - nl.field_i.canvasHeight / 2;
-            nl.field_i.draw(269 - nl.field_i.canvasWidth, var1_int);
+          if (FullscreenDisplayMode.field_i != null) {
+            var1_int = 357 - FullscreenDisplayMode.field_i.canvasHeight / 2;
+            FullscreenDisplayMode.field_i.draw(269 - FullscreenDisplayMode.field_i.canvasWidth, var1_int);
             NetworkGameClient.field_m.draw(586, var1_int);
             if (FullscreenErrorDialog.field_X > var1_int &&
-              nl.field_i.height + var1_int > FullscreenErrorDialog.field_X) {
+              FullscreenDisplayMode.field_i.height + var1_int > FullscreenErrorDialog.field_X) {
               var2Lifetime5 = (QuadraticPointPath.a(AccountFormText.field_b << 4, 2) * 40 >> 16) + 40;
               if (var2Lifetime5 > 0) {
-                if (NodeHashTableIterator.field_g > 269 - nl.field_i.width &&
+                if (NodeHashTableIterator.field_g > 269 - FullscreenDisplayMode.field_i.width &&
                   NodeHashTableIterator.field_g < 269) {
-                  nl.field_i.drawAdditive(-1 + (269 - nl.field_i.canvasWidth), -1 + var1_int, var2Lifetime5);
-                  nl.field_i.drawAdditive(1 + (269 - nl.field_i.canvasWidth), var1_int - 1, var2Lifetime5);
-                  nl.field_i.drawAdditive(-1 + (269 - nl.field_i.canvasWidth), 1 + var1_int, var2Lifetime5);
-                  nl.field_i.drawAdditive(269 + (-nl.field_i.canvasWidth + 1), 1 + var1_int, var2Lifetime5);
+                  FullscreenDisplayMode.field_i.drawAdditive(-1 + (269 - FullscreenDisplayMode.field_i.canvasWidth), -1 + var1_int, var2Lifetime5);
+                  FullscreenDisplayMode.field_i.drawAdditive(1 + (269 - FullscreenDisplayMode.field_i.canvasWidth), var1_int - 1, var2Lifetime5);
+                  FullscreenDisplayMode.field_i.drawAdditive(-1 + (269 - FullscreenDisplayMode.field_i.canvasWidth), 1 + var1_int, var2Lifetime5);
+                  FullscreenDisplayMode.field_i.drawAdditive(269 + (-FullscreenDisplayMode.field_i.canvasWidth + 1), 1 + var1_int, var2Lifetime5);
                 } else {
                   if (NodeHashTableIterator.field_g > 586) {
-                    if (NodeHashTableIterator.field_g >= 586 + nl.field_i.width) {
+                    if (NodeHashTableIterator.field_g >= 586 + FullscreenDisplayMode.field_i.width) {
                       uk.a(3979);
                       TextLineLayout.field_a[SpriteSheetAsset.field_e].draw(269, 340);
                       return;

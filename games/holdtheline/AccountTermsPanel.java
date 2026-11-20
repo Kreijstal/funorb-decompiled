@@ -128,12 +128,12 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
           this.field_F.width = -40 + this.width;
           this.field_F.a(-40 + this.width, (byte) -64, var3, 26);
           var3 = var3 + (this.field_F.height + 15);
-          this.a(true, this.field_F);
+          this.addChild(true, this.field_F);
           var5 = 4;
           var6 = 200;
           this.field_M.setBounds(300 - var6 >> 1, (byte) 122, var3, 40, var6);
           this.field_M.listener = (WidgetListener) (this);
-          this.a(true, this.field_M);
+          this.addChild(true, this.field_M);
           this.setBounds(0, (byte) 122, 0, 55 + (var3 + var5), 300);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -153,13 +153,13 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
             return true;
           }
           if (98 == param1) {
-            stackIn_5_0 = this.c(param0, -1);
+            stackIn_5_0 = this.focusPreviousChild(param0, -1);
             return stackIn_5_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(param0, 121);
+          stackIn_9_0 = this.focusNextChild(param0, 121);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

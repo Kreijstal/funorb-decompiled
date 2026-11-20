@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn {
+final class GrowableStringList {
     static int field_c;
-    private int field_e;
+    private int lastIndex;
     static boolean[] field_d;
     static int field_a;
     static SpriteSheetAsset field_b;
     static int[][] field_h;
-    private int field_g;
-    private String[] field_f;
-    private boolean field_i;
+    private int growthFactor;
+    private String[] elements;
+    private boolean multiplicativeGrowth;
 
-    private final void a(String param0, int param1, int param2) {
+    private final void set(String param0, int param1, int param2) {
         try {
-          if (param1 > this.field_e) {
-            this.field_e = param1;
+          if (param1 > this.lastIndex) {
+            this.lastIndex = param1;
           }
           if (param2 != 12105912) {
             field_a = -122;
           }
-          if (param1 >= this.field_f.length) {
-            this.b(param1, 0);
+          if (param1 >= this.elements.length) {
+            this.grow(param1, 0);
           }
-          this.field_f[param1] = param0;
+          this.elements[param1] = param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "tn.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -35,23 +35,23 @@ final class tn {
         }
         param0 = param0 & 8191;
         if (4096 <= param0) {
-          return param0 < 6144 ? -qd.field_f[param0 - 4096] : -qd.field_f[-param0 + 8192];
+          return param0 < 6144 ? -TexturedRoadFillRenderer.field_f[param0 - 4096] : -TexturedRoadFillRenderer.field_f[-param0 + 8192];
         }
-        return 2048 > param0 ? qd.field_f[param0] : qd.field_f[-param0 + 4096];
+        return 2048 > param0 ? TexturedRoadFillRenderer.field_f[param0] : TexturedRoadFillRenderer.field_f[-param0 + 4096];
     }
 
-    final String[] c(int param0) {
+    final String[] toArray(int param0) {
         if (param0 != 3) {
           return (String[]) null;
         }
-        String[] var2 = new String[1 + this.field_e];
-        ArrayOperations.copyObjects(this.field_f, 0, var2, 0, this.field_e + 1);
+        String[] var2 = new String[1 + this.lastIndex];
+        ArrayOperations.copyObjects(this.elements, 0, var2, 0, this.lastIndex + 1);
         return var2;
     }
 
-    final void a(byte param0, String param1) {
+    final void add(byte param0, String param1) {
         try {
-          this.a(param1, 1 + this.field_e, param0 ^ 12105928);
+          this.set(param1, 1 + this.lastIndex, param0 ^ 12105928);
           if (param0 != 112) {
             field_a = 30;
           }
@@ -76,11 +76,11 @@ final class tn {
         StringBuilder var4 = new StringBuilder();
         StringBuilder var1 = var4;
         StringBuilder discarded$0 = var1.append("[");
-        for (var2 = 0; this.field_e > var2; var2++) {
+        for (var2 = 0; this.lastIndex > var2; var2++) {
           if (var2 != 0) {
             discarded$1 = var1.append(", ");
           }
-          discarded$2 = var4.append(this.field_f[var2]);
+          discarded$2 = var4.append(this.elements[var2]);
         }
         StringBuilder discarded$3 = var1.append("]");
         return var1.toString();
@@ -94,7 +94,7 @@ final class tn {
           return RoadStripRenderer.field_j;
         }
         if (param0 != 0) {
-          tn.a((byte) -82);
+          GrowableStringList.a((byte) -82);
         }
         if (!fj.field_o.isComplete(250)) {
           return RoadStripRenderer.field_j;
@@ -104,19 +104,19 @@ final class tn {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
-          tn.a((byte) -39);
+          GrowableStringList.a((byte) -39);
         }
         field_h = (int[][]) null;
         field_d = null;
         field_b = null;
     }
 
-    final static void a(byte param0, PlatformTaskDispatcher param1, PacketBuffer param2, int param3) {
+    final static void readReflectionCheck(byte param0, PlatformTaskDispatcher param1, PacketBuffer param2, int param3) {
         try {
           int var11_int = 0;
           int var12_int = 0;
           byte[] array$0 = null;
-          ki stackIn_5_0 = null;
+          ReflectionCheck stackIn_5_0 = null;
           RuntimeException stackIn_40_0 = null;
           StringBuilder stackIn_40_1 = null;
           String stackIn_41_2 = null;
@@ -141,28 +141,28 @@ final class tn {
           int var14 = 0;
           String var15 = null;
           int var16 = 0;
-          ki var17 = null;
+          ReflectionCheck var17 = null;
           byte[][] var18 = null;
           String var19 = null;
           byte[][] var20 = null;
           int var13Lifetime1;
           var14 = HoldTheLine.field_D;
           try {
-            var17 = new ki();
-            var17.field_p = param2.readUnsignedByte((byte) -53);
-            var17.field_n = param2.readInt(param0 + 192);
-            var17.field_m = new int[var17.field_p];
-            var17.field_l = new PlatformTask[var17.field_p];
-            var17.field_j = new int[var17.field_p];
-            var17.field_r = new int[var17.field_p];
-            var17.field_q = new byte[var17.field_p][][];
-            var17.field_k = new PlatformTask[var17.field_p];
+            var17 = new ReflectionCheck();
+            var17.operationCount = param2.readUnsignedByte((byte) -53);
+            var17.requestId = param2.readInt(param0 + 192);
+            var17.operations = new int[var17.operationCount];
+            var17.methodTasks = new PlatformTask[var17.operationCount];
+            var17.fieldWriteValues = new int[var17.operationCount];
+            var17.errors = new int[var17.operationCount];
+            var17.serializedArguments = new byte[var17.operationCount][][];
+            var17.fieldTasks = new PlatformTask[var17.operationCount];
             var5 = 0;
             if (param0 != -107) {
               return;
             }
             stackIn_5_0 = var17;
-            while (stackIn_5_0.field_p > var5) {
+            while (stackIn_5_0.operationCount > var5) {
               try {
                 var6_int = param2.readUnsignedByte((byte) -68);
                 if (var6_int != 0 &&
@@ -188,7 +188,7 @@ final class tn {
                         param2.readBytes(var13, 0, (byte) 116, var20[var12_int]);
                       }
                     }
-                    var17.field_m[var5] = var6_int;
+                    var17.operations[var5] = var6_int;
                     var12 = new Class[var9];
                     var16 = 0;
                     var13Lifetime1 = var16;
@@ -196,8 +196,8 @@ final class tn {
                       var12[var16] = wl.a(var10[var16], 24);
                       var16++;
                     }
-                    var17.field_l[var5] = param1.a(var8, var12, wl.a(var19, 64), (byte) -32);
-                    var17.field_q[var5] = var20;
+                    var17.methodTasks[var5] = param1.lookupDeclaredMethod(var8, var12, wl.a(var19, 64), (byte) -32);
+                    var17.serializedArguments[var5] = var20;
                   }
                 } else {
                   var15 = param2.readCp1252String(-1231);
@@ -207,30 +207,30 @@ final class tn {
                   if (1 == var6_int) {
                     var9 = param2.readInt(param0 ^ -12);
                   }
-                  var17.field_m[var5] = var6_int;
-                  var17.field_j[var5] = var9;
-                  var17.field_k[var5] = param1.a(var8, 9, wl.a(var15, param0 + 167));
+                  var17.operations[var5] = var6_int;
+                  var17.fieldWriteValues[var5] = var9;
+                  var17.fieldTasks[var5] = param1.lookupDeclaredField(var8, 9, wl.a(var15, param0 + 167));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                var17.field_r[var5] = -1;
+                var17.errors[var5] = -1;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                var17.field_r[var5] = -2;
+                var17.errors[var5] = -2;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                var17.field_r[var5] = -3;
+                var17.errors[var5] = -3;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                var17.field_r[var5] = -4;
+                var17.errors[var5] = -4;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
                 var6_ref4 = decompiledCaughtException;
-                var17.field_r[var5] = -5;
+                var17.errors[var5] = -5;
               }
               var5++;
               stackIn_5_0 = var17;
@@ -262,10 +262,10 @@ final class tn {
         }
     }
 
-    private final void b(int param0, int param1) {
-        String[] var3 = new String[this.a(true, param0)];
-        ArrayOperations.copyObjects(this.field_f, param1, var3, 0, this.field_f.length);
-        this.field_f = var3;
+    private final void grow(int param0, int param1) {
+        String[] var3 = new String[this.capacityForIndex(true, param0)];
+        ArrayOperations.copyObjects(this.elements, param1, var3, 0, this.elements.length);
+        this.elements = var3;
     }
 
     final static void a(int param0) {
@@ -276,30 +276,30 @@ final class tn {
         if (!pj.b((byte) 85)) {
           var2 = aj.a((byte) -53);
           byte[] var1 = var2;
-          SingleChildWidget.a(var2, 6, param0 + 0);
+          SingleChildWidget.requestBlobWrite(var2, 6, param0 + 0);
         } else {
           ad.field_a = true;
         }
         if (param0 != 0) {
-          tn.a(-121, -112);
+          GrowableStringList.a(-121, -112);
         }
     }
 
-    private final int a(boolean param0, int param1) {
+    private final int capacityForIndex(boolean param0, int param1) {
         int var3;
         int var4;
         var4 = HoldTheLine.field_D;
         if (!param0) {
           field_a = 37;
         }
-        var3 = this.field_f.length;
+        var3 = this.elements.length;
         while (var3 <= param1) {
-          if (!this.field_i) {
-            var3 = var3 + this.field_g;
+          if (!this.multiplicativeGrowth) {
+            var3 = var3 + this.growthFactor;
             continue;
           }
           if (var3 != 0) {
-            var3 = var3 * this.field_g;
+            var3 = var3 * this.growthFactor;
             continue;
           }
           var3 = 1;
@@ -307,7 +307,7 @@ final class tn {
         return var3;
     }
 
-    final static void a(RoadSegment[] param0, int param1, vd param2) {
+    final static void a(RoadSegment[] param0, int param1, RoadFillRenderer param2) {
         int var13 = 0;
         RuntimeException runtimeException = null;
         GrowableIntList var3 = null;
@@ -371,7 +371,7 @@ final class tn {
           for (var13 = 0; param0.length > var13; var13++) {
             var14 = param0[var13];
             if (var12 != var14.field_k) {
-              param2.a(0.0f, var4.toArray(param1 ^ -10000584), var12, var3.toArray(param1 ^ -10000572), (byte) 49);
+              param2.drawRoadFill(0.0f, var4.toArray(param1 ^ -10000584), var12, var3.toArray(param1 ^ -10000572), (byte) 49);
               var25 = o.a((byte) 26);
               var3 = var25;
               var26 = o.a((byte) -112);
@@ -400,7 +400,7 @@ final class tn {
               if (!(var11 < 0.0f)) {
                 continue;
               }
-              param2.a(0.0f, var4.toArray(param1 ^ -10000603), var12, var3.toArray(-58), (byte) 49);
+              param2.drawRoadFill(0.0f, var4.toArray(param1 ^ -10000603), var12, var3.toArray(-58), (byte) 49);
               var29 = o.a((byte) 102);
               var3 = var29;
               var30 = o.a((byte) -115);
@@ -418,7 +418,7 @@ final class tn {
             var4.add(var32.x, (byte) 81);
             var4.add(var32.y, (byte) 81);
           }
-          param2.a(0.0f, var4.toArray(-39), var12, var3.toArray(-61), (byte) 49);
+          param2.drawRoadFill(0.0f, var4.toArray(-39), var12, var3.toArray(-61), (byte) 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -440,7 +440,7 @@ final class tn {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawGradientBorder(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -478,12 +478,12 @@ final class tn {
         }
     }
 
-    tn(int param0, boolean param1) {
-        this.field_e = -1;
-        this.field_f = new String[]{};
-        this.field_i = false;
-        this.field_i = param1 ? true : false;
-        this.field_g = param0;
+    GrowableStringList(int param0, boolean param1) {
+        this.lastIndex = -1;
+        this.elements = new String[]{};
+        this.multiplicativeGrowth = false;
+        this.multiplicativeGrowth = param1 ? true : false;
+        this.growthFactor = param0;
     }
 
     static {

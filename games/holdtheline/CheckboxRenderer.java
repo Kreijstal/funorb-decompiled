@@ -119,7 +119,7 @@ final class CheckboxRenderer implements WidgetRenderer {
         var12 = HoldTheLine.field_D;
         try {
           if (param1 == 1024) {
-            StraightRoadSegment.a(param0 + 7091, param5, param2, param3, param4);
+            StraightRoadSegment.drawWhiteRecoloredSprite(param0 + 7091, param5, param2, param3, param4);
             return;
           }
           param5 = param5 - ((-1024 + param1) * param2.height >> 11);

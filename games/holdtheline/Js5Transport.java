@@ -181,7 +181,7 @@ abstract class Js5Transport {
             var7_ref_fb.unlink(0);
             return;
           }
-          MusicPatchPcmStream.a((Throwable) null, (byte) -120, "HS1: " + AgeValidator.b(false));
+          MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -120, "HS1: " + AgeValidator.b(false));
           r.a(-28036);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -212,7 +212,7 @@ abstract class RasterBuffer {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = fo.field_k;
+            stackIn_3_0 = ArchiveKeyRequest.field_k;
             return stackIn_3_0;
           }
           if (var2_int > 64) {

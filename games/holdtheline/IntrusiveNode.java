@@ -58,7 +58,7 @@ class IntrusiveNode {
                 return false;
               }
               var10 = BoundaryIntersection.angleBetweenPoints(var11.field_U, param3, param0);
-              stackIn_17_0 = var11.b((byte) -113, var10);
+              stackIn_17_0 = var11.containsAngle((byte) -113, var10);
               return stackIn_17_0;
             }
             var12 = (StraightRoadSegment) (param2);
@@ -171,7 +171,7 @@ class IntrusiveNode {
             return true;
           }
           ij.field_k = param5;
-          qd.field_k = param0;
+          TexturedRoadFillRenderer.field_k = param0;
           ArchiveProvider.field_b = param2;
           bb.field_a = ImageProducerRasterBuffer.field_n;
           SecondaryNodeDeque.field_a = param3;

@@ -12,7 +12,7 @@ final class DialogLayer extends SingleChildWidget {
     static int field_I;
     static int field_L;
 
-    final UiWidget a(byte param0) {
+    final UiWidget getFocusedChild(byte param0) {
         IntrusiveDequeCursor var2;
         FadingDialog var3;
         int var4;
@@ -24,7 +24,7 @@ final class DialogLayer extends SingleChildWidget {
         var3 = (FadingDialog) (var2.c((byte) -120));
         while (var3 != null) {
           if (var3.field_F) {
-            return var3.f((byte) 119);
+            return var3.getFocusedChild((byte) 119);
           }
           var3 = (FadingDialog) (var2.next((byte) -104));
         }
