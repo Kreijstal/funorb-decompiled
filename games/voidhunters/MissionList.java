@@ -75,7 +75,7 @@ final class MissionList implements DiffableState {
               stackIn_11_0 = var3;
               stackIn_11_1 = -88;
               stackIn_12_2 = (var8 != null);
-              if (vq.writeBoolean(stackIn_11_0, stackIn_11_1, stackIn_12_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_11_0, stackIn_11_1, stackIn_12_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }

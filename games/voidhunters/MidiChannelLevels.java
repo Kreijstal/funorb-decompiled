@@ -5,7 +5,7 @@ final class MidiChannelLevels {
     int[] levels;
     static int[] field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRasterRectangleClipped(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -21,7 +21,7 @@ final class MidiChannelLevels {
           var8 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param5);
           var9 = IntrusiveNode.clamp(param0 ^ -29743, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
           for (var10 = var6_int; var7 >= var10; var10++) {
-            GetSalvoRepairTimeMultiplier.a(param1, var9, ResourceNode.field_b[var10], (byte) 75, var8);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var9, ResourceNode.field_b[var10], (byte) 75, var8);
           }
           if (param0 == -3518) {
             return;

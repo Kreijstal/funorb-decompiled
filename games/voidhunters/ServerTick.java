@@ -76,7 +76,7 @@ final class ServerTick extends IntrusiveNode implements DiffableState {
           if (param1 > -109) {
             field_d = (Widget) null;
           }
-          vq.writeBoolean(param0, 43, this.field_e);
+          DateOfBirthInput.writeBoolean(param0, 43, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "umb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

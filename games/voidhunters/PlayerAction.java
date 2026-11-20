@@ -31,7 +31,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -126;
           stackIn_5_2 = (this.specialOrderSubmessage != null);
-          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             this.specialOrderSubmessage.writeState(param0, -115);
           }
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AsteroidField implements DiffableState, ofa, CompactGameState {
+final class AsteroidField implements DiffableState, SpatialStateMarker, CompactGameState {
     private Asteroid[] asteroids;
     static double field_c;
     static String field_b;
@@ -133,7 +133,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
               stackIn_14_0 = var3;
               stackIn_14_1 = 68;
               stackIn_15_2 = (null != var8);
-              if (vq.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
               var7++;
@@ -1181,7 +1181,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime161 = HuffmanCodec.fetchLocalizedResource((byte) -10, "COMPONENT_HULL_TRIANGLE_TEXT");
           if (var2Lifetime161 != null) {
-            wsb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime161);
+            ArchiveRequestQueue.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime161);
           }
           var2Lifetime162 = HuffmanCodec.fetchLocalizedResource((byte) -97, "COMPONENT_HULL_SPIKE_TEXT");
           if (null != var2Lifetime162) {
@@ -1401,7 +1401,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime216 = HuffmanCodec.fetchLocalizedResource((byte) -8, "VOTE_DESTROY_BASE_DESC_B");
           if (null != var2Lifetime216) {
-            fcb.field_g = Cp1252Strings.decode((byte) -125, var2Lifetime216);
+            GameResourceLoader.defendYourBaseText = Cp1252Strings.decode((byte) -125, var2Lifetime216);
           }
           var2Lifetime217 = HuffmanCodec.fetchLocalizedResource((byte) -81, "VOTE_DESTROY_BASE_BALANCED");
           if (null != var2Lifetime217) {
@@ -1928,7 +1928,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
             AsteroidField.getParagraphHeight((byte) 0, (String) null, -53, 66, 33);
           }
           if (!OpenGlTexture1D.field_i) {
-            stackIn_7_0 = ita.a(param3, param0 + 8025).getParagraphHeight(param1, param4, param2);
+            stackIn_7_0 = DateOfBirthTextFields.getDefaultBitmapFont(param3, param0 + 8025).getParagraphHeight(param1, param4, param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = SetTorpedoEnergyUsed.a(param3, 300).getParagraphHeight(param1, param2, param4, (byte) 112, (ToolkitSprite[]) null);
@@ -2113,7 +2113,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
               stackIn_17_0 = var3;
               stackIn_17_1 = -111;
               stackIn_18_2 = (var8 != null);
-              if (vq.writeBoolean(stackIn_17_0, stackIn_17_1, stackIn_18_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_17_0, stackIn_17_1, stackIn_18_2)) {
                 ((CompactGameState) ((Object) var8)).writeCompactState(var3, (byte) -127);
               }
               var7++;

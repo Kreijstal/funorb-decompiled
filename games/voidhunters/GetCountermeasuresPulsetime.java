@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetCountermeasuresPulsetime extends ConsoleCommand {
-    final static int a(int param0, boolean param1, int param2) {
+    final static int getDaysInMonth(int param0, boolean param1, int param2) {
         if (param1) {
           return -81;
         }
         if (param2 != 1) {
-          return UiComboBoxList.field_J[param2];
+          return UiComboBoxList.daysInMonth[param2];
         }
         if (ServerInfo.isLeapYear((byte) -117, param0)) {
           return 29;
         }
-        return UiComboBoxList.field_J[param2];
+        return UiComboBoxList.daysInMonth[param2];
     }
 
     GetCountermeasuresPulsetime(String param0, Class[] param1, String param2) {

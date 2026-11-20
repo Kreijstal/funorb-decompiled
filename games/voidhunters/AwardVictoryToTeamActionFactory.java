@@ -32,7 +32,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           }
           HighscoreValueRequest.field_g = new String[25];
           HighscoreValueRequest.field_g[9] = PhasedEnergyBeamWeaponDefinition.field_b;
-          HighscoreValueRequest.field_g[18] = ita.field_D;
+          HighscoreValueRequest.field_g[18] = DateOfBirthTextFields.field_D;
           HighscoreValueRequest.field_g[22] = GetSalvoaim.field_p;
           HighscoreValueRequest.field_g[20] = veb.field_c;
           HighscoreValueRequest.field_g[6] = null;
@@ -43,7 +43,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           HighscoreValueRequest.field_g[14] = SaveShipDesignOrderDefinition.field_d;
           HighscoreValueRequest.field_g[2] = DialogMessagePanel.field_D;
           HighscoreValueRequest.field_g[15] = GetFightersPerPlayerMaximum.field_q;
-          HighscoreValueRequest.field_g[13] = ujb.field_d;
+          HighscoreValueRequest.field_g[13] = ArchiveLoadRequest.field_d;
           HighscoreValueRequest.field_g[19] = Widget.field_V + ":";
           HighscoreValueRequest.field_g[5] = ffb.field_b;
           HighscoreValueRequest.field_g[7] = bw.field_a;
@@ -71,7 +71,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[22] = SetAutoAfkTimeout.field_o;
           SetSpinningBladeSpinupSpeed.field_o[16] = NineSliceSprite.field_a;
           SetSpinningBladeSpinupSpeed.field_o[12] = OpenGlModel.field_m;
-          SetSpinningBladeSpinupSpeed.field_o[30] = wsb.field_c;
+          SetSpinningBladeSpinupSpeed.field_o[30] = ArchiveRequestQueue.field_c;
           SetSpinningBladeSpinupSpeed.field_o[0] = TextureRasterShape.field_c;
           SetSpinningBladeSpinupSpeed.field_o[26] = HuffmanCodec.field_c;
           SetSpinningBladeSpinupSpeed.field_o[19] = SetUseExtraBackground.field_r;

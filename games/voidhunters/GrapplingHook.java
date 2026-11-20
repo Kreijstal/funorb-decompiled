@@ -124,7 +124,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
           param0.writeBits(-632, this.grabbedComponentOffsety, 32);
           param0.writeBits(-632, this.firedFromId, 32);
           param0.writeBits(-632, this.firedFromPlayer, 32);
-          vq.writeBoolean(param0, -98, this.retracting);
+          DateOfBirthInput.writeBoolean(param0, -98, this.retracting);
           if (param1 > -91) {
             this.getGrabbedComponentOffsetx(-128);
           }
@@ -200,7 +200,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
           param0.writeBits(-632, this.grabbedComponentOffsety, 32);
           param0.writeBits(-632, this.firedFromId, 32);
           param0.writeBits(-632, this.firedFromPlayer, 32);
-          vq.writeBoolean(param0, -123, this.retracting);
+          DateOfBirthInput.writeBoolean(param0, -123, this.retracting);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

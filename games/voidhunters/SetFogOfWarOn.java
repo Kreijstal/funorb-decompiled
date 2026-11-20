@@ -95,7 +95,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_shields_directional_arc_particle_life(" + LoadSettings.field_q + ")");
         System.out.println("set_shields_directional_arc_particle_speed_downshift(" + apb.field_b + ")");
         System.out.println("set_auto_afk_timeout(" + Particle.field_E + ")");
-        System.out.println("set_test_action_lag(" + nsb.field_a + ")");
+        System.out.println("set_test_action_lag(" + TestActionLagSetting.actionLag + ")");
         System.out.println("set_build_view_autozoom(" + GetPointDefenceLaserPulsetime.field_q + ")");
         System.out.println("set_build_view_autozoom_timeout(" + SetShipTeamActionFactory.field_c + ")");
         System.out.println("set_build_view_autozoom_end_on_action(" + SetSniperCannonReload.field_o + ")");
@@ -156,7 +156,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_salvo_repair_time_multiplier(" + GrappleLauncherBehaviour.field_d + ")");
         System.out.println("set_mp_sandbox_enemy_spawn_limit(" + ComponentContact.field_d + ")");
         System.out.println("set_max_ship_size(" + OpenGlShader.field_a + ")");
-        System.out.println("set_fighters_per_player_maximum(" + wk.field_a + ")");
+        System.out.println("set_fighters_per_player_maximum(" + FeatheredLineRasterizer.fightersPerPlayerMaximum + ")");
         System.out.println("set_burst_fire_max_energy(" + PartitionZone.field_e + ")");
         System.out.println("set_burst_fire_regeneration_rate(" + ToolkitRasterState.field_b + ")");
         System.out.println("set_burst_fire_reload(" + LaunchFightersOrderDefinition.field_d + ")");
@@ -212,7 +212,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_countermeasure_launcher_projectile_life(" + OpenGlIndexBuffer.field_j + ")");
         System.out.println("set_default_firing_leeway(" + NebulaFieldFactory.field_b + ")");
         System.out.println("set_sniper_cannon_firing_leeway(" + GetAutoAfkTimeout.field_o + ")");
-        System.out.println("set_mass_driver_fire_force(" + adb.field_a + ")");
+        System.out.println("set_mass_driver_fire_force(" + MassDriverFireForceSetting.fireForce + ")");
         System.out.println("set_torpedo_fire_force(" + SetArmageddonLength.field_p + ")");
         System.out.println("set_laser_fire_force(" + WorldFactory.field_a + ")");
         System.out.println("set_bomblet_spray_fire_force(" + GetMachineGunAimspeed.field_p + ")");
@@ -222,7 +222,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_missile_launcher_fire_force(" + SoundPlayback.field_f + ")");
         System.out.println("set_point_defence_laser_fire_force(" + SetShipPersistence.field_s + ")");
         System.out.println("set_countermeasure_launcher_fire_force(" + SetMissileLauncherEnergyUsed.field_o + ")");
-        System.out.println("set_mass_driver_reload(" + ujb.field_h + ")");
+        System.out.println("set_mass_driver_reload(" + ArchiveLoadRequest.field_h + ")");
         System.out.println("set_torpedo_reload(" + GetPhysicsCollisionGrapplingHookForceMultiplier.field_o + ")");
         System.out.println("set_laser_reload(" + SetSniperCannonAimspeed.field_o + ")");
         System.out.println("set_bomblet_spray_reload(" + SetMomentOfInertiaPerpointCalcDownshift.field_p + ")");
@@ -250,7 +250,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_fighter_bay_aimarc(" + SetVariableActionFactory.field_b + ")");
         System.out.println("set_spinning_blade_aimarc(" + SetLaserRandomness.field_o + ")");
         System.out.println("set_sniper_cannon_aimarc(" + SetThrusterBindingBalanceThreshold.field_p + ")");
-        System.out.println("set_bomblet_spray_aimarc(" + cia.field_a + ")");
+        System.out.println("set_bomblet_spray_aimarc(" + BombletSprayAimArcSetting.aimArc + ")");
         System.out.println("set_phased_energy_beam_aimarc(" + ConsoleCharacterStream.field_d + ")");
         System.out.println("set_machine_gun_aimarc(" + PlayerReady.field_c + ")");
         System.out.println("set_grappling_hook_aimarc(" + dla.field_c + ")");

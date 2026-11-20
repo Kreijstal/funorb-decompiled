@@ -3,32 +3,32 @@
  */
 import java.io.*;
 
-abstract class vq extends UiContainer implements ValidatableInput {
+abstract class DateOfBirthInput extends UiContainer implements ValidatableInput {
     static int fontUnderlineColor;
     static fab field_x;
-    private wta field_z;
+    private DateOfBirthValidator validator;
     static String field_y;
     static String field_w;
 
-    void a(int param0, wta param1) {
+    void setValidator(int param0, DateOfBirthValidator param1) {
         try {
-          this.field_z = param1;
+          this.validator = param1;
           if (param0 <= 73) {
             this.getValidator(68);
           }
-          this.field_z.field_c = this;
+          this.validator.input = this;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vq.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    vq(int param0, int param1, int param2, int param3, UiRenderer param4) {
+    DateOfBirthInput(int param0, int param1, int param2, int param3, UiRenderer param4) {
         super(param0, param1, param2, param3, param4);
     }
 
-    abstract boolean d(int param0);
+    abstract boolean isIncomplete(int param0);
 
-    abstract int e(int param0);
+    abstract int getDayOfMonth(int param0);
 
     final static boolean writeBoolean(IsaacPacketBuffer param0, int param1, boolean param2) {
         int var3_int = 0;
@@ -70,12 +70,12 @@ abstract class vq extends UiContainer implements ValidatableInput {
     public final InputValidator getValidator(int param0) {
         if (param0 != -782444220) {
           this.getValidator(84);
-          return (InputValidator) ((Object) this.field_z);
+          return (InputValidator) ((Object) this.validator);
         }
-        return (InputValidator) ((Object) this.field_z);
+        return (InputValidator) ((Object) this.validator);
     }
 
-    abstract int f(int param0);
+    abstract int getYear(int param0);
 
     public static void clearSharedReferences(byte param0) {
         field_y = null;
@@ -84,9 +84,9 @@ abstract class vq extends UiContainer implements ValidatableInput {
         field_x = null;
     }
 
-    abstract int c(boolean param0);
+    abstract int getMonthIndex(boolean param0);
 
-    final static int g(int param0) {
+    final static int pollArchiveConnection(int param0) {
         try {
           int stackIn_17_0 = 0;
           int stackIn_27_0 = 0;

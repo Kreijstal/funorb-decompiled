@@ -132,13 +132,13 @@ final class TextureRectangleShape extends TextureRasterShape {
         if (param0 == -112) {
           var6 = param2 * this.top >> 12;
           var7 = this.bottom * param2 >> 12;
-          fcb.a(this.fillColor, var7, var6, var4, var5, (byte) -117);
+          GameResourceLoader.fillRasterRectangle(this.fillColor, var7, var6, var4, var5, (byte) -117);
           return;
         }
         TextureRectangleShape.a((byte) 92, -127, 80, 107);
         var6Lifetime1 = param2 * this.top >> 12;
         var7Lifetime1 = this.bottom * param2 >> 12;
-        fcb.a(this.fillColor, var7Lifetime1, var6Lifetime1, var4, var5, (byte) -117);
+        GameResourceLoader.fillRasterRectangle(this.fillColor, var7Lifetime1, var6Lifetime1, var4, var5, (byte) -117);
     }
 
     final void drawFilledAndOutline(int param0, byte param1, int param2) {

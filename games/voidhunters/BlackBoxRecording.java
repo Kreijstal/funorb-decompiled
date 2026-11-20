@@ -304,10 +304,10 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
             this.differsFrom((byte) 94, (SerializableGameState) null);
           }
           super.writeState(param0, -116);
-          if (vq.writeBoolean(param0, 110, this.serverCarousel != null ? true : false)) {
+          if (DateOfBirthInput.writeBoolean(param0, 110, this.serverCarousel != null ? true : false)) {
             this.serverCarousel.writeState(param0, -110);
           }
-          if (vq.writeBoolean(param0, -35, this.clientStateDump != null ? true : false)) {
+          if (DateOfBirthInput.writeBoolean(param0, -35, this.clientStateDump != null ? true : false)) {
             this.clientStateDump.writeState(param0, -120);
           }
           this.a(param0, 92);

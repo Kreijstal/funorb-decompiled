@@ -348,8 +348,8 @@ final class TutorialController {
             }
             var29 = param3 << 24;
             GetMissilesHitSourceTeam.a(var20 - 1, -1 + var21, (byte) -128, var23 + 2, param3, 1, 2 + var22);
-            GetDebrisCarryOver.a(8, -var27Lifetime1 + var28Lifetime1, 1, 1 | var29, var26Lifetime1, -1 + (var26Lifetime1 - var27Lifetime1) + 1, var28Lifetime1 - var27Lifetime1, var28Lifetime1 + 1, var29 | 1, 1 + (var27Lifetime1 + var26Lifetime1), 1 | var29);
-            GetDebrisCarryOver.a(8, -var27Lifetime1 + var28Lifetime1, 1, var29 | 236981, var26Lifetime1, var26Lifetime1 + (1 - var27Lifetime1), -var27Lifetime1 + var28Lifetime1, var28Lifetime1, var29 | 56035, var26Lifetime1 + var27Lifetime1, 236981 | var29);
+            GetDebrisCarryOver.fillGradientTriangle(8, -var27Lifetime1 + var28Lifetime1, 1, 1 | var29, var26Lifetime1, -1 + (var26Lifetime1 - var27Lifetime1) + 1, var28Lifetime1 - var27Lifetime1, var28Lifetime1 + 1, var29 | 1, 1 + (var27Lifetime1 + var26Lifetime1), 1 | var29);
+            GetDebrisCarryOver.fillGradientTriangle(8, -var27Lifetime1 + var28Lifetime1, 1, var29 | 236981, var26Lifetime1, var26Lifetime1 + (1 - var27Lifetime1), -var27Lifetime1 + var28Lifetime1, var28Lifetime1, var29 | 56035, var26Lifetime1 + var27Lifetime1, 236981 | var29);
           }
           if (!param5 ||
             var30 != 0) {
@@ -812,7 +812,7 @@ final class TutorialController {
                               var22 = 1;
                               SetShowTutorial.a(var39, (byte) 66, var37, var40, 11142145, var38, var42);
                             }
-                            GetDebrisCarryOver.a(8, var36, 1, 131586, var39, var35, var38, var40, var41 | var42 << 24, var37, 131586);
+                            GetDebrisCarryOver.fillGradientTriangle(8, var36, 1, 131586, var39, var35, var38, var40, var41 | var42 << 24, var37, 131586);
                           }
                         }
                         var23_int++;

@@ -127,7 +127,7 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
         if (param0 >= -52) {
           field_d = (byte[][]) null;
         }
-        return adb.field_a;
+        return MassDriverFireForceSetting.fireForce;
     }
 
     final int getProjectileCount(boolean param0) {
@@ -144,7 +144,7 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
         if (param0 < 0) {
           this.getProjectileSpeed((byte) -39);
         }
-        return ujb.field_h;
+        return ArchiveLoadRequest.field_h;
     }
 
     final int getAimSpeed(int param0) {

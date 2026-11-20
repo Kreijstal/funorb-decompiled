@@ -175,7 +175,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           super.writeState(param0, -120);
-          vq.writeBoolean(param0, 120, this.operationalLastFrame);
+          DateOfBirthInput.writeBoolean(param0, 120, this.operationalLastFrame);
           param0.writeBits(-632, this.previousShieldX, 32);
           if (param1 >= -109) {
             this.operationalLastFrame = false;

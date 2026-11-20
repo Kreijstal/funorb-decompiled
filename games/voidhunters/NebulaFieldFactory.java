@@ -253,7 +253,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             if (decompiledSharedTail1) {
               incrementValue$0 = param4;
               param4++;
-              GetSalvoRepairTimeMultiplier.a(param1, param0, ResourceNode.field_b[incrementValue$0], (byte) 75, param2);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param0, ResourceNode.field_b[incrementValue$0], (byte) 75, param2);
             }
             boolean decompiledSharedTail0 = !(param5 > EnvironmentReflectionGpuMaterialEffect.field_i);
             if (!decompiledSharedTail0) {
@@ -263,7 +263,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             if (decompiledSharedTail0) {
               incrementValue$1 = param5;
               param5--;
-              GetSalvoRepairTimeMultiplier.a(param1, param0, ResourceNode.field_b[incrementValue$1], (byte) 75, param2);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param0, ResourceNode.field_b[incrementValue$1], (byte) 75, param2);
             }
             if (var6_int != 0 &&
               var7 != 0) {

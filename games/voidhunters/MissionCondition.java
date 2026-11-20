@@ -201,7 +201,7 @@ class MissionCondition implements DiffableState {
             World var4 = (World) null;
             this.setParameter((World) null, 68, -88, 56);
           }
-          vq.writeBoolean(param0, -119, this.negated);
+          DateOfBirthInput.writeBoolean(param0, -119, this.negated);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

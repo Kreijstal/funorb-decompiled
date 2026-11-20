@@ -10,8 +10,8 @@ final class PlayerJoinFactory implements GameStateFactory {
         if (OpenGlTexture1D.field_i) {
           param5 = param5 | -16777216;
           param2 = param2 | -16777216;
-          GetDebrisCarryOver.a(8, param0 + param1, 1, param2, param4, param3 + param4, param1 + param0, param0, param2, param4, param5);
-          GetDebrisCarryOver.a(8, param0, 1, param5, param4, param3 + param4, param1 + param0, param0, param2, param3 + param4, param5);
+          GetDebrisCarryOver.fillGradientTriangle(8, param0 + param1, 1, param2, param4, param3 + param4, param1 + param0, param0, param2, param4, param5);
+          GetDebrisCarryOver.fillGradientTriangle(8, param0, 1, param5, param4, param3 + param4, param1 + param0, param0, param2, param3 + param4, param5);
           if (param6 != 0) {
             field_a = (String) null;
             return;

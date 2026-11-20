@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ujb {
+final class ArchiveLoadRequest {
     static boolean field_j;
-    String field_a;
-    String field_i;
+    String progressLabel;
+    String pendingLabel;
     static int field_g;
     static int field_h;
-    String field_e;
-    int field_b;
-    ResourceArchive field_f;
+    String groupName;
+    int groupId;
+    ResourceArchive archive;
     static String field_d;
     static int field_c;
 
@@ -17,7 +17,7 @@ final class ujb {
         if (param0 == 384) {
           return (384 & param2) != 0 ? true : false;
         }
-        ujb.a(-23, -58, 67);
+        ArchiveLoadRequest.a(-23, -58, 67);
         return (384 & param2) != 0 ? true : false;
     }
 
@@ -75,7 +75,7 @@ final class ujb {
     public static void clearSharedReferences(byte param0) {
         field_d = null;
         if (param0 > -99) {
-          ujb.clearSharedReferences((byte) 62);
+          ArchiveLoadRequest.clearSharedReferences((byte) 62);
         }
     }
 

@@ -203,7 +203,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -107;
           stackIn_5_2 = (null != this.carouselInfo);
-          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             this.carouselInfo.writeState(param0, -114);
           }
           return;

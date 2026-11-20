@@ -48,21 +48,21 @@ final class MissionGenerationData implements DiffableState {
           var8_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5 + param1);
           var9 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param7 - param1);
           for (var16 = var12; var16 < var8_int; var16++) {
-            GetSalvoRepairTimeMultiplier.a(param6, var15, ResourceNode.field_b[var16], (byte) 75, var14);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var15, ResourceNode.field_b[var16], (byte) 75, var14);
           }
           if (param2 != 0) {
             field_a = (GameStateFactory) null;
           }
           for (var16Lifetime1 = var13; var16Lifetime1 > var9; var16Lifetime1--) {
-            GetSalvoRepairTimeMultiplier.a(param6, var15, ResourceNode.field_b[var16Lifetime1], (byte) 75, var14);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var15, ResourceNode.field_b[var16Lifetime1], (byte) 75, var14);
           }
           var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param4);
           var11 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -param1 + param0);
           for (var16Lifetime2 = var8_int; var16Lifetime2 <= var9; var16Lifetime2++) {
             var22 = ResourceNode.field_b[var16Lifetime2];
-            GetSalvoRepairTimeMultiplier.a(param6, var10, var22, (byte) 75, var14);
-            GetSalvoRepairTimeMultiplier.a(param3, var11, var22, (byte) 75, var10);
-            GetSalvoRepairTimeMultiplier.a(param6, var15, var22, (byte) 75, var11);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var10, var22, (byte) 75, var14);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var11, var22, (byte) 75, var10);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var15, var22, (byte) 75, var11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

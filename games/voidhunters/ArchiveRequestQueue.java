@@ -1,59 +1,59 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wsb {
-    private int field_d;
-    private int field_j;
-    private ujb[] field_i;
-    private int field_h;
-    float field_g;
-    String field_a;
+final class ArchiveRequestQueue {
+    private int progressScale;
+    private int nextRequestIndex;
+    private ArchiveLoadRequest[] requests;
+    private int requestCount;
+    float progress;
+    String statusText;
     static GameStateFactory field_e;
     static String field_c;
     static int field_f;
     static int field_b;
 
-    final boolean a(byte param0) {
-        ujb var2;
+    final boolean pollRequests(byte param0) {
+        ArchiveLoadRequest var2;
         int var3;
         String var4;
-        ujb var5;
+        ArchiveLoadRequest var5;
         var3 = VoidHunters.field_G;
-        while (this.field_h > this.field_j) {
-          var5 = this.field_i[this.field_j];
+        while (this.requestCount > this.nextRequestIndex) {
+          var5 = this.requests[this.nextRequestIndex];
           var2 = var5;
-          if (!var5.field_f.loadIndex((byte) 123)) {
-            this.a(var5, 0, (byte) 125);
+          if (!var5.archive.loadIndex((byte) 123)) {
+            this.updateProgress(var5, 0, (byte) 125);
             return false;
           }
-          if (0 <= var5.field_b &&
-            !var5.field_f.isGroupReady(68, var5.field_b)) {
-            this.a(var2, var5.field_f.getGroupLoadPercent(var5.field_b, 1045), (byte) 118);
+          if (0 <= var5.groupId &&
+            !var5.archive.isGroupReady(68, var5.groupId)) {
+            this.updateProgress(var2, var5.archive.getGroupLoadPercent(var5.groupId, 1045), (byte) 118);
             return false;
           }
-          if (var5.field_e != null &&
-            !var5.field_f.isNamedGroupReady(32171, var5.field_e)) {
-            this.a(var2, var5.field_f.getNamedGroupLoadPercent(var5.field_e, -2118), (byte) 25);
+          if (var5.groupName != null &&
+            !var5.archive.isNamedGroupReady(32171, var5.groupName)) {
+            this.updateProgress(var2, var5.archive.getNamedGroupLoadPercent(var5.groupName, -2118), (byte) 25);
             return false;
           }
-          if (var5.field_b < 0 &&
-            var5.field_e == null &&
-            var5.field_a != null &&
-            !var5.field_f.loadAllGroups(105)) {
-            this.a(var2, var5.field_f.getLoadPercent(-107), (byte) 120);
+          if (var5.groupId < 0 &&
+            var5.groupName == null &&
+            var5.progressLabel != null &&
+            !var5.archive.loadAllGroups(105)) {
+            this.updateProgress(var2, var5.archive.getLoadPercent(-107), (byte) 120);
             return false;
           }
-          this.field_j = this.field_j + 1;
+          this.nextRequestIndex = this.nextRequestIndex + 1;
         }
         if (param0 > 85) {
           return true;
         }
         var4 = (String) null;
-        this.a((ResourceArchive) null, (String) null, false, (String) null, (String) null);
+        this.enqueueRequest((ResourceArchive) null, (String) null, false, (String) null, (String) null);
         return true;
     }
 
-    final static int a(int param0, int param1) {
+    final static int highestOneBit(int param0, int param1) {
         int var2 = param0 >>> 1;
         if (param1 == 1302374146) {
           var2 = var2 | var2 >>> 1;
@@ -66,41 +66,41 @@ final class wsb {
         return -70;
     }
 
-    private final void a(String param0, byte param1, int param2, String param3, String param4, ResourceArchive param5) {
-        ujb[] var10 = null;
-        ujb var9 = null;
-        ujb var11 = null;
+    private final void enqueueRequest(String param0, byte param1, int param2, String param3, String param4, ResourceArchive param5) {
+        ArchiveLoadRequest[] var10 = null;
+        ArchiveLoadRequest var9 = null;
+        ArchiveLoadRequest var11 = null;
         int fieldTemp$0 = 0;
         try {
-          if (this.field_i.length <= this.field_h) {
-            var10 = new ujb[this.field_h * 2];
-            ujb[] var7 = var10;
-            ArrayOperations.copy(this.field_i, 0, var10, 0, this.field_h);
-            this.field_i = var10;
+          if (this.requests.length <= this.requestCount) {
+            var10 = new ArchiveLoadRequest[this.requestCount * 2];
+            ArchiveLoadRequest[] var7 = var10;
+            ArrayOperations.copy(this.requests, 0, var10, 0, this.requestCount);
+            this.requests = var10;
           }
           if (param1 != -62) {
             ResourceArchive var8 = (ResourceArchive) null;
-            this.a((String) null, 126, (String) null, (ResourceArchive) null);
+            this.enqueueRequest((String) null, 126, (String) null, (ResourceArchive) null);
           }
-          var9 = new ujb();
+          var9 = new ArchiveLoadRequest();
           var11 = var9;
-          ujb var7_ref = var11;
-          var11.field_b = param2;
-          var11.field_f = param5;
-          var11.field_a = param0;
-          var11.field_e = param3;
-          var11.field_i = param4;
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-          this.field_i[fieldTemp$0] = var9;
+          ArchiveLoadRequest var7_ref = var11;
+          var11.groupId = param2;
+          var11.archive = param5;
+          var11.progressLabel = param0;
+          var11.groupName = param3;
+          var11.pendingLabel = param4;
+          fieldTemp$0 = this.requestCount;
+          this.requestCount = this.requestCount + 1;
+          this.requests[fieldTemp$0] = var9;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wsb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(ResourceArchive param0, String param1, boolean param2, String param3, String param4) {
+    final void enqueueRequest(ResourceArchive param0, String param1, boolean param2, String param3, String param4) {
         try {
-          this.a(param1, (byte) -62, -1, param3, param4, param0);
+          this.enqueueRequest(param1, (byte) -62, -1, param3, param4, param0);
           if (param2) {
             field_b = -110;
           }
@@ -109,9 +109,9 @@ final class wsb {
         }
     }
 
-    final void a(String param0, int param1, String param2, ResourceArchive param3) {
+    final void enqueueRequest(String param0, int param1, String param2, ResourceArchive param3) {
         try {
-          this.a(param0, (byte) -62, param1, (String) null, param2, param3);
+          this.enqueueRequest(param0, (byte) -62, param1, (String) null, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wsb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -127,12 +127,12 @@ final class wsb {
         field_e = null;
     }
 
-    wsb(int param0) {
-        this.field_i = new ujb[16];
-        this.field_d = param0;
+    ArchiveRequestQueue(int param0) {
+        this.requests = new ArchiveLoadRequest[16];
+        this.progressScale = param0;
     }
 
-    private final void a(ujb param0, int param1, byte param2) {
+    private final void updateProgress(ArchiveLoadRequest param0, int param1, byte param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -141,14 +141,14 @@ final class wsb {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_float = (float)param1 / 100.0f + (float)(this.field_j + 1);
+          var4_float = (float)param1 / 100.0f + (float)(this.nextRequestIndex + 1);
           var5 = 40 % ((-27 - param2) / 40);
-          this.field_g = (float)this.field_d * var4_float / (float)(1 + this.field_h);
+          this.progress = (float)this.progressScale * var4_float / (float)(1 + this.requestCount);
           if (param1 != 0) {
-            this.field_a = param0.field_a + " - " + param1 + "%";
+            this.statusText = param0.progressLabel + " - " + param1 + "%";
             return;
           }
-          this.field_a = param0.field_i;
+          this.statusText = param0.pendingLabel;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

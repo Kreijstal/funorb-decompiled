@@ -4,7 +4,7 @@
 final class OpenGlGpuTexture3D extends OpenGlGpuTexture implements GpuTexture3D {
     static int field_n;
     private int field_j;
-    static wsb field_m;
+    static ArchiveRequestQueue field_m;
     private int field_l;
     private int field_k;
 

@@ -5,12 +5,12 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
     static int fontDefaultColor;
     static int field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRasterRectangleUnchecked(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var8 = VoidHunters.field_G;
         try {
           for (var6_int = param2; var6_int <= param5; var6_int++) {
-            GetSalvoRepairTimeMultiplier.a(param4, param1, ResourceNode.field_b[var6_int], (byte) 75, param0);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param1, ResourceNode.field_b[var6_int], (byte) 75, param0);
           }
           int var7 = -38 % ((-5 - param3) / 63);
         } catch (RuntimeException runtimeException) {

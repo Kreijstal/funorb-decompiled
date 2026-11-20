@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Debris extends ShipBody implements DiffableState, ofa, CompactGameState {
+final class Debris extends ShipBody implements DiffableState, SpatialStateMarker, CompactGameState {
     private int field_w;
     boolean field_x;
     boolean field_u;
@@ -43,7 +43,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           super.writeState(param0, -110);
-          vq.writeBoolean(param0, 118, this.phantom);
+          DateOfBirthInput.writeBoolean(param0, 118, this.phantom);
           if (param1 > -109) {
             this.getBodyKind(-99);
           }
@@ -137,7 +137,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
     public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         try {
           super.writeCompactState(param0, (byte) -103);
-          vq.writeBoolean(param0, 95, this.phantom);
+          DateOfBirthInput.writeBoolean(param0, 95, this.phantom);
           if (param1 >= -91) {
             this.field_w = 55;
           }

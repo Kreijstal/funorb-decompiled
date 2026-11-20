@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NebulaField implements DiffableState, ofa {
+final class NebulaField implements DiffableState, SpatialStateMarker {
     private Nebula[] nebulae;
     static int field_d;
     private int revision;
@@ -99,7 +99,7 @@ final class NebulaField implements DiffableState, ofa {
               stackIn_10_0 = var3;
               stackIn_10_1 = -68;
               stackIn_11_2 = (var8 != null);
-              if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }

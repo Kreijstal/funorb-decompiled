@@ -281,7 +281,7 @@ abstract class PointLight extends IntrusiveNode {
           var29 = param0.worldToScreenY(true, var19);
           var30 = param0.worldToScreenX(var20, (byte) 118);
           var31 = param0.worldToScreenY(true, var21);
-          GetDebrisCarryOver.a(param2 - 6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
+          GetDebrisCarryOver.fillGradientTriangle(param2 - 6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
           var32 = 1;
           while (var32 < var9_int) {
             var33 = (var9_int + param6 + var32) % var9_int;
@@ -356,10 +356,10 @@ abstract class PointLight extends IntrusiveNode {
                     var73 = param0.worldToScreenY(true, var65);
                     var74 = param8 | var55 << 24;
                     var75 = param8;
-                    GetDebrisCarryOver.a(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
-                    GetDebrisCarryOver.a(8, var69, var57, var56, var48, var68, var47, var49, var74, var46, var75);
-                    GetDebrisCarryOver.a(8, var49, var57, var56, var70, var48, var47, var71, var75, var46, var74);
-                    GetDebrisCarryOver.a(param2 ^ 6415, var49, var57, var75, var72, var48, var71, var73, var75, var70, var74);
+                    GetDebrisCarryOver.fillGradientTriangle(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
+                    GetDebrisCarryOver.fillGradientTriangle(8, var69, var57, var56, var48, var68, var47, var49, var74, var46, var75);
+                    GetDebrisCarryOver.fillGradientTriangle(8, var49, var57, var56, var70, var48, var47, var71, var75, var46, var74);
+                    GetDebrisCarryOver.fillGradientTriangle(param2 ^ 6415, var49, var57, var75, var72, var48, var71, var73, var75, var70, var74);
                   } else {
                     try {
                       var58_int = (int)(param0.scale * 2048.0f);

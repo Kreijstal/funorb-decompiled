@@ -412,7 +412,7 @@ public final class VoidHunters extends NetworkGameClient {
         stackIn_7_1 = (psb.field_b != null);
         this.updateClientServices(stackIn_7_1, 9);
         if (GetMissionTerrainDebrisProbability.field_o) {
-          TextureLineShape.field_i.b((byte) 1);
+          TextureLineShape.field_i.requestResources((byte) 1);
           GetMissionTerrainDebrisProbability.field_o = false;
         }
         var2 = -40 % ((23 - param0) / 61);
@@ -624,7 +624,7 @@ public final class VoidHunters extends NetworkGameClient {
 
     final void initializeGame(boolean param0) {
         this.initializeNetworkClient(false, 110, 92);
-        TextureLineShape.field_i = new fcb();
+        TextureLineShape.field_i = new GameResourceLoader();
         MidiPcmStream var6 = new MidiPcmStream();
         var6.setDefaultProgram(128, (byte) 96, 9);
         GetThrusterParticleLife.field_o = new fdb();
@@ -883,14 +883,14 @@ public final class VoidHunters extends NetworkGameClient {
         ChatMessage.clearSharedReferences((byte) 75);
         nqa.clearSharedReferences((byte) -30);
         mab.clearSharedReferences(-23483);
-        wsb.clearSharedReferences((byte) -108);
+        ArchiveRequestQueue.clearSharedReferences((byte) -108);
         FullscreenCanvas.clearSharedReferences(false);
         ScreenSizeController.clearSharedReferences((byte) 120);
         GameMenuScreen.clearSharedReferences(3);
         GameSession.clearSharedReferences(!param0 ? true : false);
         PlayerGameData.clearSharedReferences(-106);
         CommandConsole.clearSharedReferences((byte) -107);
-        fcb.clearSharedReferences(111);
+        GameResourceLoader.clearSharedReferences(111);
         dla.clearSharedReferences((byte) 101);
         mn.clearSharedReferences(-49);
         ShipComponent.clearSharedReferences(24388);
@@ -1038,7 +1038,7 @@ public final class VoidHunters extends NetworkGameClient {
         SoftwareSprite2D.clearSharedReferences(true);
         uc.clearSharedReferences(0);
         lm.clearSharedReferences(127);
-        wk.clearSharedReferences((byte) 80);
+        FeatheredLineRasterizer.clearSharedReferences((byte) 80);
         QuickChatMenuWidget.clearSharedReferences(85);
         QuickChatCategoryLoader.clearSharedReferences((byte) -33);
         SystemNanoClock.clearSharedReferences((byte) -58);
@@ -1126,8 +1126,8 @@ public final class VoidHunters extends NetworkGameClient {
         MidiEnvelope.clearSharedReferences(-17719);
         ata.clearSharedReferences(6344);
         fj.clearSharedReferences(0);
-        ita.clearSharedReferences((byte) 106);
-        vq.clearSharedReferences((byte) -81);
+        DateOfBirthTextFields.clearSharedReferences((byte) 106);
+        DateOfBirthInput.clearSharedReferences((byte) -81);
         UiScrollPane.clearSharedReferences(1);
         IntrusiveNodeHashTable.clearSharedReferences((byte) -126);
         SecondaryNodeDeque.clearSharedReferences(!param0 ? true : false);
@@ -1277,7 +1277,7 @@ public final class VoidHunters extends NetworkGameClient {
         HighscoreValueRequest.clearSharedReferences(95);
         vu.clearSharedReferences((byte) 113);
         fa.clearSharedReferences((byte) 119);
-        ujb.clearSharedReferences((byte) -111);
+        ArchiveLoadRequest.clearSharedReferences((byte) -111);
         SpecialOrderButtonState.clearSharedReferences(false);
         ClientDataReadRequest.clearSharedReferences(127);
         ConsoleCommand.clearSharedReferences(true);
@@ -1819,7 +1819,7 @@ public final class VoidHunters extends NetworkGameClient {
         int var3 = field_G;
         int var2Lifetime1;
         mab.field_a = this;
-        if (!TextureLineShape.field_i.a((byte) 68)) {
+        if (!TextureLineShape.field_i.unpackResources((byte) 68)) {
           return false;
         }
         ComponentCollision.a("Initing menus", (byte) -62);
@@ -1910,8 +1910,8 @@ public final class VoidHunters extends NetworkGameClient {
         }
         if (wp.field_b != wp.field_a) {
           if (~wp.field_a == ~SetBombletSprayEnergyUsed.field_o) {
-            hn.field_a = hn.field_a + 1;
-            if (16 == hn.field_a) {
+            ScreenTransitionFade.progress = ScreenTransitionFade.progress + 1;
+            if (16 == ScreenTransitionFade.progress) {
               if (!KaleidoscopeTextureOperation.field_i) {
                 NodeHashTable.a(0);
               } else {
@@ -1936,8 +1936,8 @@ public final class VoidHunters extends NetworkGameClient {
               }
               wp.field_a = SetShieldsDirectionalIdleEnergyUsage.field_p;
             } else {
-              hn.field_a = hn.field_a - 1;
-              if (hn.field_a == 0) {
+              ScreenTransitionFade.progress = ScreenTransitionFade.progress - 1;
+              if (ScreenTransitionFade.progress == 0) {
                 wp.field_a = wp.field_b;
               }
             }
@@ -2190,14 +2190,14 @@ public final class VoidHunters extends NetworkGameClient {
           SetMachineGunEnergyUsed.field_o[3]) {
           GetDebrisThrowable.a(false, "Selecting opengl toolkit...");
           var11 = new int[]{1};
-          vq.field_x.a(false, GetFighterRepairAmount.a(var11, 2));
+          DateOfBirthInput.field_x.a(false, GetFighterRepairAmount.a(var11, 2));
           GetDebrisThrowable.a(false, "Done");
         }
         if (ssa.b(2) &&
           SetMachineGunEnergyUsed.field_o[4]) {
           GetDebrisThrowable.a(false, "Selecting java toolkit...");
           var12 = new int[]{0};
-          vq.field_x.a(false, GetFighterRepairAmount.a(var12, 2));
+          DateOfBirthInput.field_x.a(false, GetFighterRepairAmount.a(var12, 2));
           GetDebrisThrowable.a(false, "Done");
         }
         if (ssa.b(2) &&
@@ -2276,14 +2276,14 @@ public final class VoidHunters extends NetworkGameClient {
           GetBombletSprayEnergyUsed.field_p = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 102).getSize();
           RoundResult.field_e = false;
           var10 = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 101);
-          if (null != vq.field_x) {
+          if (null != DateOfBirthInput.field_x) {
             if (DebugRequestFactory.field_b != var10) {
               GetDebrisThrowable.a(false, "Canvas=" + var10 + " hashcode=" + var10.hashCode());
               DebugRequestFactory.field_b = var10;
             }
-            if (vq.field_x.a((byte) -128, var10) ||
-              null != vq.field_x.field_e &&
-              vq.field_x.field_e.field_g != GetDebrisGroupColour.field_r) {
+            if (DateOfBirthInput.field_x.a((byte) -128, var10) ||
+              null != DateOfBirthInput.field_x.field_e &&
+              DateOfBirthInput.field_x.field_e.field_g != GetDebrisGroupColour.field_r) {
               GetSpinningBladeSpindamageMultiplier.a(-9934);
             }
           }
@@ -2394,7 +2394,7 @@ public final class VoidHunters extends NetworkGameClient {
             }
           }
           if (wp.field_a != wp.field_b) {
-            var4_int = 256 * hn.field_a / 16;
+            var4_int = 256 * ScreenTransitionFade.progress / 16;
             if (0 < var4_int) {
               SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, var4_int);
             }

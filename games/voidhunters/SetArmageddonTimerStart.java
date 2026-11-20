@@ -33,7 +33,7 @@ final class SetArmageddonTimerStart extends ConsoleCommand {
             var4_int = 1 % ((81 - param1) / 33);
             param0.writeBits(-632, param2.length, param3);
             for (var5 = 0; var5 < param2.length; var5++) {
-              vq.writeBoolean(param0, 118, param2[var5]);
+              DateOfBirthInput.writeBoolean(param0, 118, param2[var5]);
             }
             return;
           }

@@ -181,7 +181,7 @@ final class DebugMessage implements DiffableState {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -100;
           stackIn_5_2 = (this.field_b != null);
-          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             if (this.field_b.getClass() == DebugRequest.class) {
               param0.writeBits(-632, 0, 1);
             } else {

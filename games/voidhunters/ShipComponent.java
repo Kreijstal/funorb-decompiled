@@ -388,7 +388,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param0 != 101) {
             this.configureThrusterBindings((byte) 114, (ShipBody) null);
           }
-          if (ujb.a((byte) -57, this.finaloutline, param1, param4, param2)) {
+          if (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param1, param4, param2)) {
             param3 = (ShipComponent[]) (SoftwareSprite2D.a(this, param3, 0, ArchiveTextureProvider.field_d));
           }
           stackIn_11_0 = (ShipComponent[]) (param3);
@@ -1117,7 +1117,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -115;
           stackIn_5_2 = (this.health != this.getDefinition((byte) -112).maxHealth);
-          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             param0.writeBits(-632, this.health, BodyInZoneCondition.a(-88, this.getDefinition((byte) -112).maxHealth));
           }
           if (this.hasWeaponOrThruster((byte) -98)) {
@@ -1416,7 +1416,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               param6 = this.subcomponents[var8_int].collectDamagedComponentPaths(param0, param1, param2 | 1 + var8_int << 4 * param5, (byte) -45, param4, 1 + param5, param6);
             }
           }
-          if (ujb.a((byte) -57, this.finaloutline, param4, param1, param0) &&
+          if (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param4, param1, param0) &&
             this.health < this.getDefinition((byte) -112).maxHealth) {
             param6 = SetMinimapWidth.a(param6, param2, (byte) -106);
           }
@@ -2728,7 +2728,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (param0 != 32609) {
           this.updateBehaviors(false, (byte) 89, (World) null, (ShipBody) null);
         }
-        stackIn_14_0 = (ujb.a((byte) -57, this.finaloutline, param3, param1, param2)) && (this.health < this.getDefinition((byte) -112).maxHealth);
+        stackIn_14_0 = (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param3, param1, param2)) && (this.health < this.getDefinition((byte) -112).maxHealth);
         return stackIn_14_0;
     }
 
@@ -3418,7 +3418,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               this.subcomponents[var10_int].collectCircleContacts(param0, param1, var10_int + 1 << param4 * 4 | param2, param3, 1 + param4, param5, param6, param7 ^ 0, param8);
             }
           }
-          if (ujb.a((byte) -57, this.finaloutline, param3, param1, param5)) {
+          if (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param3, param1, param5)) {
             param6.addLast(-10258, new ComponentContact(this, param2, param0, param8, param3, param1, 0, 0));
           }
           return;
@@ -3631,25 +3631,25 @@ final class ShipComponent implements DiffableState, CompactGameState {
           stackIn_3_0 = (IsaacPacketBuffer) (param0);
           stackIn_3_1 = 74;
           stackIn_4_2 = (this.weaponbehaviour != null);
-          if (vq.writeBoolean(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
             this.weaponbehaviour.writeState(param0, -125);
           }
           stackIn_8_0 = (IsaacPacketBuffer) (param0);
           stackIn_8_1 = 104;
           stackIn_9_2 = (null != this.thrusterbehaviour);
-          if (vq.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
             this.thrusterbehaviour.writeState(param0, -125);
           }
           stackIn_13_0 = (IsaacPacketBuffer) (param0);
           stackIn_13_1 = -93;
           stackIn_14_2 = (this.grapplebehaviour != null);
-          if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
             this.grapplebehaviour.writeState(param0, -115);
           }
           stackIn_18_0 = (IsaacPacketBuffer) (param0);
           stackIn_18_1 = 54;
           stackIn_19_2 = (null != this.behaviour);
-          if (vq.writeBoolean(stackIn_18_0, stackIn_18_1, stackIn_19_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_18_0, stackIn_18_1, stackIn_19_2)) {
             if (this.behaviour.getClass() != ShieldBehaviour.class) {
               if (this.behaviour.getClass() == ArmBehaviour.class) {
                 param0.writeBits(-632, 1, 1);
@@ -3675,7 +3675,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               stackIn_35_0 = var3;
               stackIn_35_1 = -97;
               stackIn_36_2 = (var8 != null);
-              if (vq.writeBoolean(stackIn_35_0, stackIn_35_1, stackIn_36_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_35_0, stackIn_35_1, stackIn_36_2)) {
                 ((CompactGameState) ((Object) var8)).writeCompactState(var3, (byte) -122);
               }
             }
@@ -3701,7 +3701,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               stackIn_50_0 = var3Lifetime1;
               stackIn_50_1 = 120;
               stackIn_51_2 = (var8_ref != null);
-              if (vq.writeBoolean(stackIn_50_0, stackIn_50_1, stackIn_51_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_50_0, stackIn_50_1, stackIn_51_2)) {
                 ((CompactGameState) ((Object) var8_ref)).writeCompactState(var3Lifetime1, (byte) -93);
               }
               var10++;
@@ -4077,25 +4077,25 @@ final class ShipComponent implements DiffableState, CompactGameState {
           stackIn_3_0 = (IsaacPacketBuffer) (param0);
           stackIn_3_1 = -55;
           stackIn_4_2 = (this.weaponbehaviour != null);
-          if (vq.writeBoolean(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
             this.weaponbehaviour.writeState(param0, -114);
           }
           stackIn_9_0 = (IsaacPacketBuffer) (param0);
           stackIn_9_1 = 62;
           stackIn_10_2 = (null != this.thrusterbehaviour);
-          if (vq.writeBoolean(stackIn_9_0, stackIn_9_1, stackIn_10_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_9_0, stackIn_9_1, stackIn_10_2)) {
             this.thrusterbehaviour.writeState(param0, -123);
           }
           stackIn_14_0 = (IsaacPacketBuffer) (param0);
           stackIn_14_1 = 113;
           stackIn_15_2 = (this.grapplebehaviour != null);
-          if (vq.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
             this.grapplebehaviour.writeState(param0, -115);
           }
           stackIn_20_0 = (IsaacPacketBuffer) (param0);
           stackIn_20_1 = -98;
           stackIn_21_2 = (null != this.behaviour);
-          if (vq.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
             if (this.behaviour.getClass() != ShieldBehaviour.class) {
               if (this.behaviour.getClass() == ArmBehaviour.class) {
                 param0.writeBits(-632, 1, 1);
@@ -4121,7 +4121,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               stackIn_36_0 = var3;
               stackIn_36_1 = 113;
               stackIn_37_2 = (var8 != null);
-              if (vq.writeBoolean(stackIn_36_0, stackIn_36_1, stackIn_37_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_36_0, stackIn_36_1, stackIn_37_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
@@ -4147,7 +4147,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               stackIn_51_0 = var3Lifetime1;
               stackIn_51_1 = 53;
               stackIn_52_2 = (var8_ref != null);
-              if (vq.writeBoolean(stackIn_51_0, stackIn_51_1, stackIn_52_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_51_0, stackIn_51_1, stackIn_52_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3Lifetime1, var8_ref);
               }
               var10++;

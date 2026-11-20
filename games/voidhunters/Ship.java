@@ -815,19 +815,19 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -76;
           stackIn_5_2 = (this.ai != null);
-          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             this.ai.writeState(param0, -113);
           }
           param0.writeBits(-632, this.energy, 32);
           param0.writeBits(-632, this.reloadtimer, 32);
           param0.writeBits(-632, this.repairModeReload, 32);
-          vq.writeBoolean(param0, 81, this.repairModeOn);
-          vq.writeBoolean(param0, 47, this.selfDestructPrepared);
-          vq.writeBoolean(param0, 82, this.selfDestructActivated);
+          DateOfBirthInput.writeBoolean(param0, 81, this.repairModeOn);
+          DateOfBirthInput.writeBoolean(param0, 47, this.selfDestructPrepared);
+          DateOfBirthInput.writeBoolean(param0, 82, this.selfDestructActivated);
           param0.writeBits(-632, this.selfDestructCountdown, 32);
-          vq.writeBoolean(param0, 70, this.salvoJustFired);
-          vq.writeBoolean(param0, -121, this.justAttachedSomething);
-          vq.writeBoolean(param0, 104, this.shieldsOn);
+          DateOfBirthInput.writeBoolean(param0, 70, this.salvoJustFired);
+          DateOfBirthInput.writeBoolean(param0, -121, this.justAttachedSomething);
+          DateOfBirthInput.writeBoolean(param0, 104, this.shieldsOn);
           param0.writeBits(-632, this.shieldsToggleCooldown, 32);
           stackIn_9_0 = 4;
           if (this.lastAttackers != null) {
@@ -839,7 +839,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           stackIn_12_0 = (IsaacPacketBuffer) (param0);
           stackIn_12_1 = 78;
           stackIn_13_2 = (null != this.targetBlueprint);
-          if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
             this.targetBlueprint.writeState(param0, -116);
           }
           param0.writeBits(-632, this.spawnTimer, 32);
@@ -973,20 +973,20 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -128;
           stackIn_3_2 = (null != this.ai);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.ai.writeState(param0, -116);
           }
           param0.writeBits(-632, this.energy, 32);
           param0.writeBits(-632, this.reloadtimer, 32);
           param0.writeBits(-632, this.maxEnergy, 32);
           param0.writeBits(-632, this.repairModeReload, 32);
-          vq.writeBoolean(param0, -73, this.repairModeOn);
-          vq.writeBoolean(param0, 90, this.selfDestructPrepared);
-          vq.writeBoolean(param0, 113, this.selfDestructActivated);
+          DateOfBirthInput.writeBoolean(param0, -73, this.repairModeOn);
+          DateOfBirthInput.writeBoolean(param0, 90, this.selfDestructPrepared);
+          DateOfBirthInput.writeBoolean(param0, 113, this.selfDestructActivated);
           param0.writeBits(-632, this.selfDestructCountdown, 32);
-          vq.writeBoolean(param0, -92, this.salvoJustFired);
-          vq.writeBoolean(param0, 107, this.justAttachedSomething);
-          vq.writeBoolean(param0, -102, this.shieldsOn);
+          DateOfBirthInput.writeBoolean(param0, -92, this.salvoJustFired);
+          DateOfBirthInput.writeBoolean(param0, 107, this.justAttachedSomething);
+          DateOfBirthInput.writeBoolean(param0, -102, this.shieldsOn);
           param0.writeBits(-632, this.shieldsToggleCooldown, 32);
           stackIn_8_0 = 4;
           if (this.lastAttackers == null) {
@@ -1001,7 +1001,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           stackIn_13_0 = (IsaacPacketBuffer) (param0);
           stackIn_13_1 = 101;
           stackIn_14_2 = (null != this.targetBlueprint);
-          if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
             this.targetBlueprint.writeState(param0, -118);
           }
           param0.writeBits(-632, this.spawnTimer, 32);

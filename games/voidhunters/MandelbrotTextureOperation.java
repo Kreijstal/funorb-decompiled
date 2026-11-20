@@ -103,13 +103,13 @@ final class MandelbrotTextureOperation extends TextureOperation {
           var26 = var33;
           var15 = var26;
           var16 = -var8 + param4;
-          GetSalvoRepairTimeMultiplier.a(param1, var16, var15, (byte) 75, param4 - param3);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var16, var15, (byte) 75, param4 - param3);
           var17 = param4 + var8;
-          GetSalvoRepairTimeMultiplier.a(param0, var17, var33, (byte) 75, var16);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var17, var33, (byte) 75, var16);
           if (param2 > 0) {
             MandelbrotTextureOperation.a(-21, -8, (byte) 1, -122, 112, 81, 20);
           }
-          GetSalvoRepairTimeMultiplier.a(param1, param3 + param4, var33, (byte) 75, var17);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param3 + param4, var33, (byte) 75, var17);
           while (var9 > var7_int) {
             var14 += 2;
             var13 += 2;
@@ -133,19 +133,19 @@ final class MandelbrotTextureOperation extends TextureOperation {
                 var22 = -var7_int + param4;
                 var23 = var20 + param4;
                 var24 = param4 - var20;
-                GetSalvoRepairTimeMultiplier.a(param1, var24, var29, (byte) 75, var22);
-                GetSalvoRepairTimeMultiplier.a(param0, var23, var29, (byte) 75, var24);
-                GetSalvoRepairTimeMultiplier.a(param1, var21, var29, (byte) 75, var23);
-                GetSalvoRepairTimeMultiplier.a(param1, var24, var30, (byte) 75, var22);
-                GetSalvoRepairTimeMultiplier.a(param0, var23, var30, (byte) 75, var24);
-                GetSalvoRepairTimeMultiplier.a(param1, var21, var30, (byte) 75, var23);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var24, var29, (byte) 75, var22);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var23, var29, (byte) 75, var24);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var21, var29, (byte) 75, var23);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var24, var30, (byte) 75, var22);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var23, var30, (byte) 75, var24);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var21, var30, (byte) 75, var23);
               } else {
                 var27 = ResourceNode.field_b[param5 + var9];
                 var28 = ResourceNode.field_b[param5 - var9];
                 var20 = param4 + var7_int;
                 var21 = -var7_int + param4;
-                GetSalvoRepairTimeMultiplier.a(param1, var20, var27, (byte) 75, var21);
-                GetSalvoRepairTimeMultiplier.a(param1, var20, var28, (byte) 75, var21);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20, var27, (byte) 75, var21);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20, var28, (byte) 75, var21);
               }
             }
             var31 = ResourceNode.field_b[var7_int + param5];
@@ -153,8 +153,8 @@ final class MandelbrotTextureOperation extends TextureOperation {
             var20Lifetime1 = var9 + param4;
             var21Lifetime1 = -var9 + param4;
             if (var8 <= var7_int) {
-              GetSalvoRepairTimeMultiplier.a(param1, var20Lifetime1, var31, (byte) 75, var21Lifetime1);
-              GetSalvoRepairTimeMultiplier.a(param1, var20Lifetime1, var32, (byte) 75, var21Lifetime1);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20Lifetime1, var31, (byte) 75, var21Lifetime1);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20Lifetime1, var32, (byte) 75, var21Lifetime1);
               continue;
             }
             if (var7_int > var11) {
@@ -165,12 +165,12 @@ final class MandelbrotTextureOperation extends TextureOperation {
             var22Lifetime1 = stackIn_20_0;
             var23Lifetime1 = var22Lifetime1 + param4;
             var24Lifetime1 = -var22Lifetime1 + param4;
-            GetSalvoRepairTimeMultiplier.a(param1, var24Lifetime1, var31, (byte) 75, var21Lifetime1);
-            GetSalvoRepairTimeMultiplier.a(param0, var23Lifetime1, var31, (byte) 75, var24Lifetime1);
-            GetSalvoRepairTimeMultiplier.a(param1, var20Lifetime1, var31, (byte) 75, var23Lifetime1);
-            GetSalvoRepairTimeMultiplier.a(param1, var24Lifetime1, var32, (byte) 75, var21Lifetime1);
-            GetSalvoRepairTimeMultiplier.a(param0, var23Lifetime1, var32, (byte) 75, var24Lifetime1);
-            GetSalvoRepairTimeMultiplier.a(param1, var20Lifetime1, var32, (byte) 75, var23Lifetime1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var24Lifetime1, var31, (byte) 75, var21Lifetime1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var23Lifetime1, var31, (byte) 75, var24Lifetime1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20Lifetime1, var31, (byte) 75, var23Lifetime1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var24Lifetime1, var32, (byte) 75, var21Lifetime1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var23Lifetime1, var32, (byte) 75, var24Lifetime1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20Lifetime1, var32, (byte) 75, var23Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

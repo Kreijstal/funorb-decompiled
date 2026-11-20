@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PartitioningManager implements DiffableState, ofa {
+final class PartitioningManager implements DiffableState, SpatialStateMarker {
     private int revision;
     private PartitionZoneList[] zonelists;
     static String field_c;
@@ -410,7 +410,7 @@ final class PartitioningManager implements DiffableState, ofa {
               stackIn_12_0 = var3;
               stackIn_12_1 = 53;
               stackIn_13_2 = (var8 != null);
-              if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }

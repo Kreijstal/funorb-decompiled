@@ -36,13 +36,13 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         try {
           incrementValue$0 = param2;
           param2++;
-          GetSalvoRepairTimeMultiplier.a(param0, param5, ResourceNode.field_b[incrementValue$0], (byte) 75, param4);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param0, param5, ResourceNode.field_b[incrementValue$0], (byte) 75, param4);
           if (param1 < 57) {
             field_o = 108;
           }
           incrementValue$1 = param3;
           param3--;
-          GetSalvoRepairTimeMultiplier.a(param0, param5, ResourceNode.field_b[incrementValue$1], (byte) 75, param4);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param0, param5, ResourceNode.field_b[incrementValue$1], (byte) 75, param4);
           for (var6_int = param2; var6_int <= param3; var6_int++) {
             var7 = ResourceNode.field_b[var6_int];
             var7[param5] = param0;
@@ -153,7 +153,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         var3 = param0;
         if (var3 == 0) {
           if (param1 != 0) {
-            stackIn_22_0 = fcb.field_g;
+            stackIn_22_0 = GameResourceLoader.defendYourBaseText;
           } else {
             stackIn_22_0 = SetMachineGunAimarc.field_r;
           }

@@ -120,7 +120,7 @@ class CarouselPlayerInfo implements DiffableState {
             IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
             this.readState((IsaacPacketBuffer) null, true);
           }
-          vq.writeBoolean(param0, -82, this.connected);
+          DateOfBirthInput.writeBoolean(param0, -82, this.connected);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -643,7 +643,7 @@ final class PlatformService implements Runnable {
           }
           if (this.microsoftJvm) {
             try {
-              Class.forName("dna").newInstance();
+              Class.forName("LegacyDirectSoundBuffers").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;

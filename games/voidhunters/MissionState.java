@@ -385,7 +385,7 @@ final class MissionState implements DiffableState {
               stackIn_12_0 = var3;
               stackIn_12_1 = 80;
               stackIn_13_2 = (var8 != null);
-              if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var10, var8);
               }
             }
@@ -393,7 +393,7 @@ final class MissionState implements DiffableState {
           stackIn_19_0 = (IsaacPacketBuffer) (param0);
           stackIn_19_1 = 99;
           stackIn_20_2 = (this.nextround != null);
-          if (vq.writeBoolean(stackIn_19_0, stackIn_19_1, stackIn_20_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_19_0, stackIn_19_1, stackIn_20_2)) {
             this.nextround.writeState(param0, -112);
           }
           stackIn_25_0 = 8;
@@ -406,7 +406,7 @@ final class MissionState implements DiffableState {
           stackIn_28_0 = (IsaacPacketBuffer) (param0);
           stackIn_28_1 = 84;
           stackIn_29_2 = (this.currentMatch != null);
-          if (vq.writeBoolean(stackIn_28_0, stackIn_28_1, stackIn_29_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_28_0, stackIn_28_1, stackIn_29_2)) {
             this.currentMatch.writeState(param0, -126);
           }
           return;

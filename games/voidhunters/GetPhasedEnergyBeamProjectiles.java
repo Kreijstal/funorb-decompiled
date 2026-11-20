@@ -99,7 +99,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           MapClearanceRectangleFactory.field_b = param1[115];
           GetSalvoRepairTimeMultiplier.field_o = param1[75];
           CarouselSlotStateDump.field_i = param1[204];
-          adb.field_a = param1[98];
+          MassDriverFireForceSetting.fireForce = param1[98];
           SetAiFiringRangeUpshift.field_p = param1[93];
           iea.field_d = param1[207];
           GetPhysicsCollisionGrapplingHookForceMultiplier.field_o = param1[109];
@@ -191,7 +191,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetMissionTerrainNebulaProbability.field_r = param1[198];
           SetVariableActionFactory.field_a = param1[62];
           SoundPlayback.field_f = param1[105];
-          wk.field_a = param1[42];
+          FeatheredLineRasterizer.fightersPerPlayerMaximum = param1[42];
           GetRepairModePower.field_q = param1[126];
           TextureBezierShape.field_f = param1[80];
           GetPlayerRepairAmount.field_o = param1[87];
@@ -202,7 +202,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           TextFieldValidator.field_e = param1[103];
           TutorialController.field_e = param1[163];
           Particle.field_a = param1[221];
-          cia.field_a = param1[136];
+          BombletSprayAimArcSetting.aimArc = param1[136];
           GetBombletSprayProjectileOndamageParticles.field_q = param1[229];
           SetPointDefenceLaserProjectiles.field_o = param1[50];
           GetMissionResnetResourceTickTime.field_o = param1[168];
@@ -214,7 +214,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           OpenGlIndexBuffer.field_j = param1[95];
           OpenGlVertexNormal.field_i = param1[131];
           SetThrusterBindingBalanceThreshold.field_p = param1[135];
-          ujb.field_h = param1[108];
+          ArchiveLoadRequest.field_h = param1[108];
           GetTeamSelectionSpeedup.field_p = param1[10];
           SetAutoDetail.field_o = param1[0];
           khb.field_c = param1[140];

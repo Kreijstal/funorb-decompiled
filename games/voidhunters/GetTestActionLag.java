@@ -19,7 +19,7 @@ final class GetTestActionLag extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 5);
           }
-          stackIn_3_0 = new ConsoleValue(nsb.field_a);
+          stackIn_3_0 = new ConsoleValue(TestActionLagSetting.actionLag);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

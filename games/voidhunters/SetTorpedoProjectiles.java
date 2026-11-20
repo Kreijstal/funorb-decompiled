@@ -362,7 +362,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   } else {
                     if (var6 <= var12.field_Gb) {
                       if ((var8 & ~var12.field_Ab) != 0) {
-                        var25_int = wsb.a(var8 & ~var12.field_Ab, 1302374146);
+                        var25_int = ArchiveRequestQueue.highestOneBit(var8 & ~var12.field_Ab, 1302374146);
                         var24Lifetime2 = SetReverbGain.a(GetKeepTeamColours.field_q, new String[]{var20}, param1 ^ 124);
                         if (var25_int > 0 &&
                           null != MissionFactory.field_a &&
@@ -386,7 +386,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                       var24Lifetime2 = SetReverbGain.a(GetMassDriverFireForce.field_q, new String[]{null, Integer.toString(var6)}, 92);
                     } else {
                       if ((var8 & ~var12.field_Ab) != 0) {
-                        var25_int = wsb.a(~var12.field_Ab & var8, 1302374146);
+                        var25_int = ArchiveRequestQueue.highestOneBit(~var12.field_Ab & var8, 1302374146);
                         var24Lifetime2 = ooa.field_zb;
                         if (0 < var25_int &&
                           MissionFactory.field_a != null &&

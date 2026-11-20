@@ -78,7 +78,7 @@ final class BombletSprayWeaponDefinition extends WeaponDefinition {
 
     final int getAimArc(int param0) {
         int var2 = -1 % ((param0 - 7) / 47);
-        return cia.field_a;
+        return BombletSprayAimArcSetting.aimArc;
     }
 
     final int getProjectileDamage(int param0) {

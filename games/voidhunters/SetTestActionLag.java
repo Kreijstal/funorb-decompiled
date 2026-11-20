@@ -19,7 +19,7 @@ final class SetTestActionLag extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = 74;
           }
-          nsb.field_a = arguments[0].intValue(92);
+          TestActionLagSetting.actionLag = arguments[0].intValue(92);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

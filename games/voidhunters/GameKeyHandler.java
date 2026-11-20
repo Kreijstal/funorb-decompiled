@@ -163,7 +163,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             GameKeyHandler.clearSharedReferences(115);
           }
           if (!OpenGlTexture1D.field_i) {
-            stackIn_6_0 = ita.a(param2, 7988).getParagraphWidth(param4, param3);
+            stackIn_6_0 = DateOfBirthTextFields.getDefaultBitmapFont(param2, 7988).getParagraphWidth(param4, param3);
             return stackIn_6_0;
           }
           stackIn_4_0 = SetTorpedoEnergyUsed.a(param2, 300).getParagraphWidth(param3, param4, true, (ToolkitSprite[]) null);

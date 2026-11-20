@@ -6,7 +6,7 @@ abstract class ToolkitFont {
     private GraphicsToolkit toolkit;
 
     private final void resetStyle(int param0, int param1, int param2) {
-        vq.fontUnderlineColor = -1;
+        DateOfBirthInput.fontUnderlineColor = -1;
         if (param0 == -1) {
           param0 = 0;
         }
@@ -386,8 +386,8 @@ abstract class ToolkitFont {
                 if (SetGrapplingHookRopeChangeRate.fontStrikethroughColor != -1) {
                   this.toolkit.drawHorizontalLineDefaultBlend(param5, -25559, SetGrapplingHookRopeChangeRate.fontStrikethroughColor, param0 + (int)(0.7 * (double)this.metrics.ascent), var16);
                 }
-                if (vq.fontUnderlineColor != -1) {
-                  this.toolkit.drawHorizontalLineDefaultBlend(param5, -25559, vq.fontUnderlineColor, 1 + this.metrics.ascent + param0, var16);
+                if (DateOfBirthInput.fontUnderlineColor != -1) {
+                  this.toolkit.drawHorizontalLineDefaultBlend(param5, -25559, DateOfBirthInput.fontUnderlineColor, 1 + this.metrics.ascent + param0, var16);
                 }
                 param5 = param5 + var16;
                 var12 = var15;
@@ -484,7 +484,7 @@ abstract class ToolkitFont {
                       if (!param1.startsWith("u=")) {
                         if (!param1.equals("u")) {
                           if (param1.equals("/u")) {
-                            vq.fontUnderlineColor = -1;
+                            DateOfBirthInput.fontUnderlineColor = -1;
                           } else {
                             if (!param1.equalsIgnoreCase("shad=-1")) {
                               if (param1.startsWith("shad=")) {
@@ -508,11 +508,11 @@ abstract class ToolkitFont {
                             }
                           }
                         } else {
-                          vq.fontUnderlineColor = TimedSpecialOrderBehaviour.fontColor & -16777216;
+                          DateOfBirthInput.fontUnderlineColor = TimedSpecialOrderBehaviour.fontColor & -16777216;
                         }
                       } else {
                         var7 = (CharSequence) ((Object) param1.substring(2));
-                        vq.fontUnderlineColor = -16777216 & TimedSpecialOrderBehaviour.fontColor | UsernameAvailabilityValidator.parseInt(-596, var7, 16);
+                        DateOfBirthInput.fontUnderlineColor = -16777216 & TimedSpecialOrderBehaviour.fontColor | UsernameAvailabilityValidator.parseInt(-596, var7, 16);
                       }
                     }
                   } else {

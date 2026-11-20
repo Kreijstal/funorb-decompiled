@@ -16,8 +16,8 @@ final class LegacyOpenGlShader {
           OpenGlFramebuffer.field_b = OpenGlFramebuffer.field_b + 1;
           PlayerGameData.field_b = MonotonicMillisClock.field_a;
           uia.field_b = LegacyOpenGlSpecularEffect.field_e;
-          VariableConditionFactory.field_c = hda.field_a;
-          hda.field_a = false;
+          VariableConditionFactory.field_c = MouseActivityState.changed;
+          MouseActivityState.changed = false;
           SetDebrisPartitioned.field_o = ro.field_a;
           Particle.field_H = cma.field_a;
           if (param0 != 1001) {

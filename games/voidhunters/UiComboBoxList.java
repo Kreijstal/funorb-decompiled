@@ -7,7 +7,7 @@ final class UiComboBoxList extends UiFocusProxy {
     private UiComboBox comboBox;
     static String field_G;
     int selectedIndex;
-    static int[] field_J;
+    static int[] daysInMonth;
     static long field_C;
     Object[] items;
     static String field_K;
@@ -15,7 +15,7 @@ final class UiComboBoxList extends UiFocusProxy {
     private BitmapFont font;
 
     public static void clearSharedReferences(int param0) {
-        field_J = null;
+        daysInMonth = null;
         field_M = null;
         field_G = null;
         int var1 = -23 % ((-30 - param0) / 60);
@@ -174,7 +174,7 @@ final class UiComboBoxList extends UiFocusProxy {
     }
 
     static {
-        field_J = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        daysInMonth = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         field_G = "To <%0>: ";
         field_K = "OK";
     }

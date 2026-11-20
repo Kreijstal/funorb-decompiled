@@ -127,22 +127,22 @@ final class CarouselSystemEvent implements DiffableState {
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -81;
           stackIn_3_2 = (this.field_e != null);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.field_e.writeState(param0, -119);
           }
           stackIn_7_0 = (IsaacPacketBuffer) (param0);
           stackIn_7_1 = -59;
           stackIn_8_2 = (null != this.field_d);
-          if (vq.writeBoolean(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
             this.field_d.writeState(param0, -110);
           }
           stackIn_12_0 = (IsaacPacketBuffer) (param0);
           stackIn_12_1 = -43;
           stackIn_13_2 = (this.field_f != null);
-          if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
             this.field_f.writeState(param0, -115);
           }
-          vq.writeBoolean(param0, -107, this.field_c);
+          DateOfBirthInput.writeBoolean(param0, -107, this.field_c);
           if (param1 < -109) {
             return;
           }

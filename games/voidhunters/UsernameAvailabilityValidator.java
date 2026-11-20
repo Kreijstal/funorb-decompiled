@@ -131,12 +131,12 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         if (!param0) {
           field_h = (GpuProjectionMode) null;
           if (!OpenGlTexture1D.field_i) {
-            return ita.a(param1, 7988).maxAscent;
+            return DateOfBirthTextFields.getDefaultBitmapFont(param1, 7988).maxAscent;
           }
           return SetTorpedoEnergyUsed.a(param1, 300).maxAscent;
         }
         if (!OpenGlTexture1D.field_i) {
-          return ita.a(param1, 7988).maxAscent;
+          return DateOfBirthTextFields.getDefaultBitmapFont(param1, 7988).maxAscent;
         }
         return SetTorpedoEnergyUsed.a(param1, 300).maxAscent;
     }

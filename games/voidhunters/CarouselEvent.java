@@ -25,7 +25,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = 59;
           stackIn_5_2 = (this.systemEvent != null);
-          if (!vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (!DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             return;
           }
           this.systemEvent.writeState(param0, -113);

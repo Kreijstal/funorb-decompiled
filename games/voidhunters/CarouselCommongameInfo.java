@@ -99,7 +99,7 @@ final class CarouselCommongameInfo implements DiffableState {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         try {
-          var4_int = wsb.field_b;
+          var4_int = ArchiveRequestQueue.field_b;
           if (param1) {
             var4_int = lla.field_b;
           }
@@ -268,7 +268,7 @@ final class CarouselCommongameInfo implements DiffableState {
         CarouselEvent var5 = null;
         var4 = VoidHunters.field_G;
         try {
-          if (param1.tick <= this.tick - (wsb.field_b - param0)) {
+          if (param1.tick <= this.tick - (ArchiveRequestQueue.field_b - param0)) {
             SetDebrisGrabbingRange.a((byte) -84, "Oh dear, this action is off the end of the carousel: " + param1.toString() + ", tick=" + param1.tick + " (my tick=" + this.tick + ")");
             return false;
           }
@@ -276,7 +276,7 @@ final class CarouselCommongameInfo implements DiffableState {
             param1.systemEvent.field_c) {
             param1.systemEvent = null;
           } else {
-            if (ujb.field_j) {
+            if (ArchiveLoadRequest.field_j) {
               var5 = (CarouselEvent) (this.events.first(param0 - 1));
               while (var5 != null) {
                 if (param1 != var5 &&
@@ -613,7 +613,7 @@ final class CarouselCommongameInfo implements DiffableState {
             var6 = var10;
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
-              if (vq.writeBoolean(var3, 93, var8 != null ? true : false)) {
+              if (DateOfBirthInput.writeBoolean(var3, 93, var8 != null ? true : false)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var11, var8);
               }
             }

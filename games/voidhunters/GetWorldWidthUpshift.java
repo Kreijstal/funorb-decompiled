@@ -58,19 +58,19 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
     final static boolean a(int param0) {
         if (param0 != 70) {
           field_p = (Sprite) null;
-          if (vq.field_x == null) {
+          if (DateOfBirthInput.field_x == null) {
             return false;
           }
-          if (vq.field_x.field_e != null) {
-            return vq.field_x.field_e.field_b.field_a == 1 ? true : false;
+          if (DateOfBirthInput.field_x.field_e != null) {
+            return DateOfBirthInput.field_x.field_e.field_b.field_a == 1 ? true : false;
           }
           return false;
         }
-        if (vq.field_x == null) {
+        if (DateOfBirthInput.field_x == null) {
           return false;
         }
-        if (vq.field_x.field_e != null) {
-          return vq.field_x.field_e.field_b.field_a == 1 ? true : false;
+        if (DateOfBirthInput.field_x.field_e != null) {
+          return DateOfBirthInput.field_x.field_e.field_b.field_a == 1 ? true : false;
         }
         return false;
     }

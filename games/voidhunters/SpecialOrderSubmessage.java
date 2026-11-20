@@ -338,25 +338,25 @@ final class SpecialOrderSubmessage implements DiffableState {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = 66;
           stackIn_5_2 = (null != this.settingsChange);
-          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             this.settingsChange.writeState(param0, -110);
           }
           stackIn_10_0 = (IsaacPacketBuffer) (param0);
           stackIn_10_1 = 80;
           stackIn_11_2 = (this.spawnchoice != null);
-          if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
             this.spawnchoice.writeState(param0, -125);
           }
           stackIn_15_0 = (IsaacPacketBuffer) (param0);
           stackIn_15_1 = 117;
           stackIn_16_2 = (this.vote != null);
-          if (vq.writeBoolean(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
             this.vote.writeState(param0, -126);
           }
           stackIn_20_0 = (IsaacPacketBuffer) (param0);
           stackIn_20_1 = 122;
           stackIn_21_2 = (null != this.blueprint);
-          if (!vq.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
+          if (!DateOfBirthInput.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
             return;
           }
           this.blueprint.writeState(param0, -113);

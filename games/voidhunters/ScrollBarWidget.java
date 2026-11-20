@@ -83,7 +83,7 @@ final class ScrollBarWidget extends Widget {
               stackIn_10_0 = (IsaacPacketBuffer) (param0);
               stackIn_10_1 = 114;
               stackIn_11_2 = (var10 != null);
-              if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
                 var11 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (param4.length <= var11))) {

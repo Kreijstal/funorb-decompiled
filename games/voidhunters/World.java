@@ -143,7 +143,7 @@ final class World implements DiffableState, CompactGameState {
           } else {
             this.missionControl = null;
           }
-          this.mapZones = (MapZone[]) (SetAutoDetail.a(8, wsb.field_e, param0, 1, -98, this.mapZones));
+          this.mapZones = (MapZone[]) (SetAutoDetail.a(8, ArchiveRequestQueue.field_e, param0, 1, -98, this.mapZones));
           this.resNodes = (ResourceNode[]) (SetAutoDetail.a(4, SetShipDirectionArrow.field_p, param0, 1, -84, this.resNodes));
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.nebulaField = null;
@@ -3239,7 +3239,7 @@ final class World implements DiffableState, CompactGameState {
           if (param0 != 5706) {
             this.debris = (Debris[]) null;
           }
-          this.mapZones = (MapZone[]) (SoftwareSprite2D.a(param1, this.mapZones, param0 - 5706, wsb.field_e));
+          this.mapZones = (MapZone[]) (SoftwareSprite2D.a(param1, this.mapZones, param0 - 5706, ArchiveRequestQueue.field_e));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3693,7 +3693,7 @@ final class World implements DiffableState, CompactGameState {
           } else {
             var6_ref.missionControl = null;
           }
-          var6_ref.mapZones = (MapZone[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.mapZones, this.mapZones, 1, wsb.field_e, false));
+          var6_ref.mapZones = (MapZone[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.mapZones, this.mapZones, 1, ArchiveRequestQueue.field_e, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.mapZones)) {
               System.err.println("MapZone[] map_zones the actual object has a duplicate reference");
@@ -4392,7 +4392,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_13_0 = var3;
               stackIn_13_1 = -33;
               stackIn_14_2 = (null != var8);
-              if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var11, var8);
               }
             }
@@ -4420,7 +4420,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_31_0 = var3Lifetime1;
               stackIn_31_1 = 39;
               stackIn_32_2 = (null != var8_ref);
-              if (vq.writeBoolean(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3Lifetime1, var8_ref);
               }
             }
@@ -4443,7 +4443,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_49_0 = var3Lifetime2;
               stackIn_49_1 = 41;
               stackIn_50_2 = (null != var8_ref2);
-              if (vq.writeBoolean(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var16, var8_ref2);
               }
             }
@@ -4451,7 +4451,7 @@ final class World implements DiffableState, CompactGameState {
           stackIn_58_0 = (IsaacPacketBuffer) (param0);
           stackIn_58_1 = 77;
           stackIn_59_2 = (null != this.asteroidField);
-          if (vq.writeBoolean(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
             this.asteroidField.writeState(param0, -126);
           }
           var19 = param0;
@@ -4472,7 +4472,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_73_0 = var3Lifetime3;
               stackIn_73_1 = 118;
               stackIn_74_2 = (var21Lifetime1 != null);
-              if (vq.writeBoolean(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var19, var21Lifetime1);
               }
             }
@@ -4495,7 +4495,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_91_0 = var3Lifetime4;
               stackIn_91_1 = 88;
               stackIn_92_2 = (var8_ref3 != null);
-              if (vq.writeBoolean(stackIn_91_0, stackIn_91_1, stackIn_92_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_91_0, stackIn_91_1, stackIn_92_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var23, var8_ref3);
               }
             }
@@ -4507,13 +4507,13 @@ final class World implements DiffableState, CompactGameState {
             stackIn_101_1 = 0;
           }
           ChatMessage.writePackedIntArray(stackIn_100_0, stackIn_101_1, 68, param0, this.respawntimers);
-          vq.writeBoolean(param0, -88, this.debug);
+          DateOfBirthInput.writeBoolean(param0, -88, this.debug);
           param0.writeBits(-632, this.objectiveType, 32);
-          vq.writeBoolean(param0, 88, this.swappedTeams);
+          DateOfBirthInput.writeBoolean(param0, 88, this.swappedTeams);
           stackIn_104_0 = (IsaacPacketBuffer) (param0);
           stackIn_104_1 = -71;
           stackIn_105_2 = (this.missionControl != null);
-          if (vq.writeBoolean(stackIn_104_0, stackIn_104_1, stackIn_105_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_104_0, stackIn_104_1, stackIn_105_2)) {
             this.missionControl.writeState(param0, -117);
           }
           var26 = param0;
@@ -4534,7 +4534,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_119_0 = var3Lifetime5;
               stackIn_119_1 = 36;
               stackIn_120_2 = (null != var8_ref4);
-              if (vq.writeBoolean(stackIn_119_0, stackIn_119_1, stackIn_120_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_119_0, stackIn_119_1, stackIn_120_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var26, var8_ref4);
               }
             }
@@ -4557,7 +4557,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_137_0 = var3Lifetime6;
               stackIn_137_1 = -87;
               stackIn_138_2 = (var8_ref5 != null);
-              if (vq.writeBoolean(stackIn_137_0, stackIn_137_1, stackIn_138_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_137_0, stackIn_137_1, stackIn_138_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var29, var8_ref5);
               }
             }
@@ -4582,7 +4582,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_155_0 = var3Lifetime7;
               stackIn_155_1 = 56;
               stackIn_156_2 = (var8_ref6 != null);
-              if (vq.writeBoolean(stackIn_155_0, stackIn_155_1, stackIn_156_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_155_0, stackIn_155_1, stackIn_156_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var32, var8_ref6);
               }
             }
@@ -4590,7 +4590,7 @@ final class World implements DiffableState, CompactGameState {
           stackIn_164_0 = (IsaacPacketBuffer) (param0);
           stackIn_164_1 = 46;
           stackIn_165_2 = (null != this.missionBuilder);
-          if (vq.writeBoolean(stackIn_164_0, stackIn_164_1, stackIn_165_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_164_0, stackIn_164_1, stackIn_165_2)) {
             this.missionBuilder.writeState(param0, -113);
           }
           return;
@@ -5247,7 +5247,7 @@ final class World implements DiffableState, CompactGameState {
             }
             this.missionControl.readState(param0, false);
           }
-          this.mapZones = (MapZone[]) (SetAutoDetail.a(8, wsb.field_e, param0, 1, -98, this.mapZones));
+          this.mapZones = (MapZone[]) (SetAutoDetail.a(8, ArchiveRequestQueue.field_e, param0, 1, -98, this.mapZones));
           this.resNodes = (ResourceNode[]) (SetAutoDetail.a(4, SetShipDirectionArrow.field_p, param0, 1, -71, this.resNodes));
           this.width = param0.readBits(0, 28);
           this.height = param0.readBits(0, 28);
@@ -6777,7 +6777,7 @@ final class World implements DiffableState, CompactGameState {
     }
 
     private final void removeMapZoneAtIndex(int param0, byte param1) {
-        this.mapZones = (MapZone[]) (GetSalvoUsesAllEnergy.a(wsb.field_e, param0, 15667, this.mapZones));
+        this.mapZones = (MapZone[]) (GetSalvoUsesAllEnergy.a(ArchiveRequestQueue.field_e, param0, 15667, this.mapZones));
         if (param1 != -90) {
           this.a(false, (MissionState) null, (byte) 94, (Camera2D) null);
         }
@@ -7672,7 +7672,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_13_0 = var3;
               stackIn_13_1 = 110;
               stackIn_14_2 = (null != var8);
-              if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
                 ((CompactGameState) ((Object) var8)).writeCompactState(var11, (byte) -105);
               }
             }
@@ -7699,7 +7699,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_31_0 = var3Lifetime1;
               stackIn_31_1 = -69;
               stackIn_32_2 = (var16 != null);
-              if (vq.writeBoolean(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var14, var16);
               }
             }
@@ -7723,7 +7723,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_49_0 = var3Lifetime2;
               stackIn_49_1 = 101;
               stackIn_50_2 = (var8_ref2 != null);
-              if (vq.writeBoolean(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
                 ((CompactGameState) ((Object) var8_ref2)).writeCompactState(var18, (byte) -127);
               }
             }
@@ -7731,7 +7731,7 @@ final class World implements DiffableState, CompactGameState {
           stackIn_58_0 = (IsaacPacketBuffer) (param0);
           stackIn_58_1 = 54;
           stackIn_59_2 = (null != this.asteroidField);
-          if (vq.writeBoolean(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
             this.asteroidField.writeCompactState(param0, (byte) -92);
           }
           var21 = param0;
@@ -7752,7 +7752,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_73_0 = var3Lifetime3;
               stackIn_73_1 = 66;
               stackIn_74_2 = (var8_refLifetime1 != null);
-              if (vq.writeBoolean(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3Lifetime3, var8_refLifetime1);
               }
             }
@@ -7775,7 +7775,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_89_0 = var3Lifetime4;
               stackIn_89_1 = 74;
               stackIn_90_2 = (var8_ref3 != null);
-              if (vq.writeBoolean(stackIn_89_0, stackIn_89_1, stackIn_90_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_89_0, stackIn_89_1, stackIn_90_2)) {
                 ((CompactGameState) ((Object) var8_ref3)).writeCompactState(var23, (byte) -98);
               }
             }
@@ -7787,13 +7787,13 @@ final class World implements DiffableState, CompactGameState {
             stackIn_99_1 = this.respawntimers.length;
           }
           ChatMessage.writePackedIntArray(stackIn_98_0, stackIn_99_1, -114, param0, this.respawntimers);
-          vq.writeBoolean(param0, 56, this.debug);
+          DateOfBirthInput.writeBoolean(param0, 56, this.debug);
           param0.writeBits(-632, this.objectiveType, 32);
-          vq.writeBoolean(param0, 39, this.swappedTeams);
+          DateOfBirthInput.writeBoolean(param0, 39, this.swappedTeams);
           stackIn_102_0 = (IsaacPacketBuffer) (param0);
           stackIn_102_1 = 122;
           stackIn_103_2 = (null != this.missionControl);
-          if (vq.writeBoolean(stackIn_102_0, stackIn_102_1, stackIn_103_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_102_0, stackIn_102_1, stackIn_103_2)) {
             this.missionControl.writeState(param0, -123);
           }
           var26 = param0;
@@ -7814,7 +7814,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_117_0 = var3Lifetime5;
               stackIn_117_1 = 47;
               stackIn_118_2 = (null != var8_ref4);
-              if (vq.writeBoolean(stackIn_117_0, stackIn_117_1, stackIn_118_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_117_0, stackIn_117_1, stackIn_118_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var26, var8_ref4);
               }
             }
@@ -7837,7 +7837,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_135_0 = var3Lifetime6;
               stackIn_135_1 = 89;
               stackIn_136_2 = (null != var8_ref5);
-              if (vq.writeBoolean(stackIn_135_0, stackIn_135_1, stackIn_136_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_135_0, stackIn_135_1, stackIn_136_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var29, var8_ref5);
               }
             }
@@ -7845,7 +7845,7 @@ final class World implements DiffableState, CompactGameState {
           stackIn_144_0 = (IsaacPacketBuffer) (param0);
           stackIn_144_1 = -94;
           stackIn_145_2 = (null != this.nebulaField);
-          if (vq.writeBoolean(stackIn_144_0, stackIn_144_1, stackIn_145_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_144_0, stackIn_144_1, stackIn_145_2)) {
             this.nebulaField.writeState(param0, -117);
           }
           param0.writeBits(-632, this.width, 28);
@@ -7853,7 +7853,7 @@ final class World implements DiffableState, CompactGameState {
           stackIn_150_0 = (IsaacPacketBuffer) (param0);
           stackIn_150_1 = 109;
           stackIn_151_2 = (null != this.partitioningManager);
-          if (vq.writeBoolean(stackIn_150_0, stackIn_150_1, stackIn_151_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_150_0, stackIn_150_1, stackIn_151_2)) {
             this.partitioningManager.writeState(param0, -125);
           }
           if (param1 > -91) {
@@ -7877,7 +7877,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_167_0 = var3Lifetime7;
               stackIn_167_1 = -59;
               stackIn_168_2 = (var8_ref6 != null);
-              if (vq.writeBoolean(stackIn_167_0, stackIn_167_1, stackIn_168_2)) {
+              if (DateOfBirthInput.writeBoolean(stackIn_167_0, stackIn_167_1, stackIn_168_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var32, var8_ref6);
               }
             }
@@ -7885,7 +7885,7 @@ final class World implements DiffableState, CompactGameState {
           stackIn_176_0 = (IsaacPacketBuffer) (param0);
           stackIn_176_1 = 38;
           stackIn_177_2 = (null != this.missionBuilder);
-          if (vq.writeBoolean(stackIn_176_0, stackIn_176_1, stackIn_177_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_176_0, stackIn_176_1, stackIn_177_2)) {
             this.missionBuilder.writeState(param0, -113);
           }
           return;

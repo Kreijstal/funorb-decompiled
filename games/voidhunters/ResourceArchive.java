@@ -468,7 +468,7 @@ final class ResourceArchive {
                   SetBombletSprayPushMultiplier.field_o[var7] != null &&
                   0 < (~HslAdjustTextureOperation.field_p & SetBombletSprayPushMultiplier.field_o[var7][var9])) {
                   var14 = 1;
-                  var15 = wsb.a(SetBombletSprayPushMultiplier.field_o[var7][var9] & ~HslAdjustTextureOperation.field_p, 1302374146);
+                  var15 = ArchiveRequestQueue.highestOneBit(SetBombletSprayPushMultiplier.field_o[var7][var9] & ~HslAdjustTextureOperation.field_p, 1302374146);
                 }
                 if (null != SetGrapplingHookMaxExtension8Force.field_o &&
                   SetGrapplingHookMaxExtension8Force.field_o[var7] != null &&

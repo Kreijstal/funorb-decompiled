@@ -414,7 +414,7 @@ final class ServerInfo implements DiffableState {
             stackIn_6_1 = 0;
           }
           ChatMessage.writePackedIntArray(stackIn_5_0, stackIn_6_1, 60, param0, this.componentoptionStates);
-          vq.writeBoolean(param0, -110, this.copyToClipboardHidden);
+          DateOfBirthInput.writeBoolean(param0, -110, this.copyToClipboardHidden);
           if (param1 >= -109) {
             this.field_e = (lc) null;
           }

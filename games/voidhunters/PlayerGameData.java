@@ -83,7 +83,7 @@ final class PlayerGameData implements DiffableState {
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = 79;
           stackIn_3_2 = (this.blueprint != null);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.blueprint.writeState(param0, -126);
           }
           if (param1 > -109) {

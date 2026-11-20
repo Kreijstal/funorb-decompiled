@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wta extends DebouncedInputValidator implements UiTextFieldListener, UiComboBoxSelectionListener {
-    vq field_c;
+final class DateOfBirthValidator extends DebouncedInputValidator implements UiTextFieldListener, UiComboBoxSelectionListener {
+    DateOfBirthInput input;
 
     public final void onTextChanged(UiTextField param0, byte param1) {
         try {
           this.markChanged(18);
           if (param1 != 100) {
-            this.field_c = (vq) null;
+            this.input = (DateOfBirthInput) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wta.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -23,7 +23,7 @@ final class wta extends DebouncedInputValidator implements UiTextFieldListener, 
         RuntimeException var3 = null;
         try {
           if (param0 != -3) {
-            this.field_c = (vq) null;
+            this.input = (DateOfBirthInput) null;
             this.markChanged(79);
           } else {
             this.markChanged(79);
@@ -43,7 +43,7 @@ final class wta extends DebouncedInputValidator implements UiTextFieldListener, 
         }
     }
 
-    public wta() {
+    public DateOfBirthValidator() {
     }
 
     final String getCurrentValidationMessage(int param0) {
@@ -56,9 +56,9 @@ final class wta extends DebouncedInputValidator implements UiTextFieldListener, 
         String stackIn_7_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_c.e(-5);
-          var3 = this.field_c.c(true);
-          var4 = this.field_c.f(3476);
+          var2_int = this.input.getDayOfMonth(-5);
+          var3 = this.input.getMonthIndex(true);
+          var4 = this.input.getYear(3476);
           if (param0 != 16384) {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
@@ -66,7 +66,7 @@ final class wta extends DebouncedInputValidator implements UiTextFieldListener, 
           var5 = SecondaryNodeQueue.getCurrentYear(true);
           if (var4 >= 1890 &&
             -3 + var5 >= var4) {
-            if (BodyInZoneCondition.a(var3, var2_int, true, var4)) {
+            if (BodyInZoneCondition.isValidDate(var3, var2_int, true, var4)) {
               return null;
             }
           } else {
@@ -91,12 +91,12 @@ final class wta extends DebouncedInputValidator implements UiTextFieldListener, 
         ValidationState stackIn_12_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_c.e(-5);
-          var3 = this.field_c.c(true);
+          var2_int = this.input.getDayOfMonth(-5);
+          var3 = this.input.getMonthIndex(true);
           if (param0 != -1) {
-            this.field_c = (vq) null;
+            this.input = (DateOfBirthInput) null;
           }
-          var4 = this.field_c.f(3476);
+          var4 = this.input.getYear(3476);
           var5 = SecondaryNodeQueue.getCurrentYear(true);
           if (var4 < 1890) {
             stackIn_5_0 = SetArmageddonLength.invalidInput;
@@ -106,7 +106,7 @@ final class wta extends DebouncedInputValidator implements UiTextFieldListener, 
             stackIn_9_0 = SetArmageddonLength.invalidInput;
             return stackIn_9_0;
           }
-          if (!BodyInZoneCondition.a(var3, var2_int, true, var4)) {
+          if (!BodyInZoneCondition.isValidDate(var3, var2_int, true, var4)) {
             stackIn_12_0 = SetArmageddonLength.invalidInput;
             return stackIn_12_0;
           }
@@ -131,9 +131,9 @@ final class wta extends DebouncedInputValidator implements UiTextFieldListener, 
     public final boolean isEmpty(byte param0) {
         if (param0 >= -100) {
           this.isEmpty((byte) 87);
-          return this.field_c.d(0);
+          return this.input.isIncomplete(0);
         }
-        return this.field_c.d(0);
+        return this.input.isIncomplete(0);
     }
 
     static {

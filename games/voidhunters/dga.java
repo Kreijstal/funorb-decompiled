@@ -594,7 +594,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("status_playing", 23100);
                 if (null != var2) {
-                  vq.field_w = Cp1252Strings.decode((byte) -125, var2);
+                  DateOfBirthInput.field_w = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("status_join", 23100);
                 if (var2 != null) {
@@ -1886,7 +1886,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("sound_colon", 23100);
                 if (null != var2) {
-                  ujb.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  ArchiveLoadRequest.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("music_colon", 23100);
                 if (var2 != null) {
@@ -2038,7 +2038,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("next", 23100);
                 if (var2 != null) {
-                  ita.field_D = Cp1252Strings.decode((byte) -125, var2);
+                  DateOfBirthTextFields.field_D = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_colon", 23100);
                 if (var2 != null) {
@@ -2437,7 +2437,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_hidechat", 23100);
                 if (null != var2) {
-                  ita.field_A = Cp1252Strings.decode((byte) -125, var2);
+                  DateOfBirthTextFields.field_A = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_showchat_nounread", 23100);
                 if (var2 != null) {
@@ -2453,7 +2453,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("click_to_quickchat", 23100);
                 if (null != var2) {
-                  vq.field_y = Cp1252Strings.decode((byte) -125, var2);
+                  DateOfBirthInput.field_y = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("autorespond", 23100);
                 if (var2 != null) {

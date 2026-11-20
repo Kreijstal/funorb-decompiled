@@ -78,7 +78,7 @@ final class MatchResults implements DiffableState {
             var6 = var4;
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
-              if (vq.writeBoolean(var3, 86, var8 != null ? true : false)) {
+              if (DateOfBirthInput.writeBoolean(var3, 86, var8 != null ? true : false)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }

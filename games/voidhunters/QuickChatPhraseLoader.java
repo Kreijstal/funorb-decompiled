@@ -51,7 +51,7 @@ final class QuickChatPhraseLoader {
         return var5;
     }
 
-    QuickChatPhraseLoader(int param0, ResourceArchive param1, ResourceArchive param2, rs param3) {
+    QuickChatPhraseLoader(int param0, ResourceArchive param1, ResourceArchive param2, QuickChatPhraseLoaderMarker param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

@@ -256,7 +256,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         return this.bodyId;
     }
 
-    final static boolean a(int param0, int param1, boolean param2, int param3) {
+    final static boolean isValidDate(int param0, int param1, boolean param2, int param3) {
         if (0 <= param0 &&
           param0 <= 11) {
           if (!param2) {
@@ -265,7 +265,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           if (param1 < 1) {
             return false;
           }
-          if (param1 <= GetCountermeasuresPulsetime.a(param3, false, param0)) {
+          if (param1 <= GetCountermeasuresPulsetime.getDaysInMonth(param3, false, param0)) {
             return true;
           }
           return false;
@@ -476,7 +476,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -15818) {
-          BodyInZoneCondition.a(-54, 46, true, 51);
+          BodyInZoneCondition.isValidDate(-54, 46, true, 51);
         }
         field_c = null;
     }

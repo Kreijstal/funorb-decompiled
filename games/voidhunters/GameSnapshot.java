@@ -30,19 +30,19 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -90;
           stackIn_3_2 = (this.world != null);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.world.writeState(param0, -113);
           }
           stackIn_8_0 = (IsaacPacketBuffer) (param0);
           stackIn_8_1 = 46;
           stackIn_9_2 = (null != this.settings);
-          if (vq.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
             this.settings.writeState(param0, -128);
           }
           stackIn_14_0 = (IsaacPacketBuffer) (param0);
           stackIn_14_1 = 62;
           stackIn_15_2 = (null != this.missionState);
-          if (vq.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
             this.missionState.writeState(param0, -110);
           }
           if (param1 > -109) {
@@ -51,7 +51,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           stackIn_21_0 = (IsaacPacketBuffer) (param0);
           stackIn_21_1 = -93;
           stackIn_22_2 = (this.messageLog != null);
-          if (vq.writeBoolean(stackIn_21_0, stackIn_21_1, stackIn_22_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_21_0, stackIn_21_1, stackIn_22_2)) {
             this.messageLog.writeState(param0, -125);
           }
           return;
@@ -492,7 +492,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -121;
           stackIn_3_2 = (this.world != null);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.world.writeCompactState(param0, (byte) -126);
           }
           if (param1 >= -91) {
@@ -501,19 +501,19 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           stackIn_10_0 = (IsaacPacketBuffer) (param0);
           stackIn_10_1 = -53;
           stackIn_11_2 = (null != this.settings);
-          if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
             this.settings.writeState(param0, -127);
           }
           stackIn_15_0 = (IsaacPacketBuffer) (param0);
           stackIn_15_1 = -88;
           stackIn_16_2 = (this.missionState != null);
-          if (vq.writeBoolean(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
             this.missionState.writeState(param0, -127);
           }
           stackIn_20_0 = (IsaacPacketBuffer) (param0);
           stackIn_20_1 = 91;
           stackIn_21_2 = (this.messageLog != null);
-          if (vq.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
             this.messageLog.writeState(param0, -125);
           }
           return;

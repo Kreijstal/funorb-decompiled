@@ -251,7 +251,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var12.field_Lb.addChild(-561, var12.field_Wb);
               }
               var12.field_Eb = new Widget(0L, (Widget) null);
-              if (0 != (var14 & 1 << ujb.field_g)) {
+              if (0 != (var14 & 1 << ArchiveLoadRequest.field_g)) {
                 var12.field_Lb.addChild(-561, var12.field_Eb);
               }
               var12.field_Ab = new Widget(0L, (Widget) null);
@@ -408,7 +408,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                     if (var12.field_Bb == 2) {
                       var12.field_Sb.text = GpuVertexBufferOwner.field_a;
                     } else {
-                      var12.field_Mb.text = vq.field_w;
+                      var12.field_Mb.text = DateOfBirthInput.field_w;
                     }
                   }
                 }
@@ -447,7 +447,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var12.field_Wb.setBounds(var34_int, 32, var50_ref.paddedWidth, 0, var12.field_Lb.height);
                 var34_int = var34_int + (MissionListFactory.field_a + var50_ref.paddedWidth);
               }
-              if ((var14Lifetime1 & 1 << ujb.field_g) != 0) {
+              if ((var14Lifetime1 & 1 << ArchiveLoadRequest.field_g) != 0) {
                 if (!var12.field_cc) {
                   stackIn_77_0 = (var12.field_ac) ? 1 : 0;
                 } else {

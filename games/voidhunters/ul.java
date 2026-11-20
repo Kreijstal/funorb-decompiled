@@ -47,18 +47,18 @@ final class ul {
             return;
           }
           for (var12 = param0; var12 < var8_int; var12++) {
-            GetSalvoRepairTimeMultiplier.a(param4, param5, ResourceNode.field_b[var12], (byte) 75, param1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param5, ResourceNode.field_b[var12], (byte) 75, param1);
           }
           for (var12Lifetime1 = param3; var9 < var12Lifetime1; var12Lifetime1--) {
-            GetSalvoRepairTimeMultiplier.a(param4, param5, ResourceNode.field_b[var12Lifetime1], (byte) 75, param1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param5, ResourceNode.field_b[var12Lifetime1], (byte) 75, param1);
           }
           var11 = -param7 + param5;
           var10 = param7 + param1;
           for (var12Lifetime2 = var8_int; var9 >= var12Lifetime2; var12Lifetime2++) {
             var18 = ResourceNode.field_b[var12Lifetime2];
-            GetSalvoRepairTimeMultiplier.a(param4, var10, var18, (byte) 75, param1);
-            GetSalvoRepairTimeMultiplier.a(param2, var11, var18, (byte) 75, var10);
-            GetSalvoRepairTimeMultiplier.a(param4, param5, var18, (byte) 75, var11);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var10, var18, (byte) 75, param1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param2, var11, var18, (byte) 75, var10);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param5, var18, (byte) 75, var11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

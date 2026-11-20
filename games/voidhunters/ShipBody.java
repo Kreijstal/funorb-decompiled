@@ -371,7 +371,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -94;
           stackIn_3_2 = (this.chassis != null);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.chassis.writeState(param0, -115);
           }
           param0.writeBits(-632, this.angle, 24);
@@ -549,7 +549,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
 
     public void writeCompactState(IsaacPacketBuffer param0, byte param1) {
         super.writeState(param0, -113);
-        if (vq.writeBoolean(param0, 54, this.chassis != null ? true : false)) {
+        if (DateOfBirthInput.writeBoolean(param0, 54, this.chassis != null ? true : false)) {
           this.chassis.writeCompactState(param0, (byte) -113);
         }
         param0.writeBits(-632, this.angle, 24);

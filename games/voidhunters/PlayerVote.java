@@ -107,7 +107,7 @@ final class PlayerVote implements DiffableState {
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           param0.writeBits(-632, this.option, 32);
-          vq.writeBoolean(param0, -70, this.unvote);
+          DateOfBirthInput.writeBoolean(param0, -70, this.unvote);
           if (param1 >= -109) {
             this.unvote = false;
           }

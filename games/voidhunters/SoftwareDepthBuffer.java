@@ -22,7 +22,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
             PlayerReadyFactory.field_b[param5].drawRightAligned(param4, param1, -16777216 | param0, true, param2, param6);
             return;
           }
-          ita.a(param5, 7988).drawRightAligned(param6, param2, param1, param0, param4);
+          DateOfBirthTextFields.getDefaultBitmapFont(param5, 7988).drawRightAligned(param6, param2, param1, param0, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -49,7 +49,7 @@ final class SetAutoaim extends ConsoleCommand {
         try {
           var12_int = -16 / ((param8 - 32) / 48);
           if (!OpenGlTexture1D.field_i) {
-            stackIn_4_0 = ita.a(param11, 7988).drawParagraph(param5, param2, param9, param7, param1, param6, param0, param10, param4, param3);
+            stackIn_4_0 = DateOfBirthTextFields.getDefaultBitmapFont(param11, 7988).drawParagraph(param5, param2, param9, param7, param1, param6, param0, param10, param4, param3);
             return stackIn_4_0;
           }
           stackIn_2_0 = PlayerReadyFactory.field_b[param11].drawParagraph(param1, param3, param4, 0, param9, param2, (int[]) null, false, 0, param7, param5, param10, param0, (ToolkitSprite[]) null, -16777216 | param6, (GlyphMask) null);

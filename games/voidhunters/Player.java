@@ -354,7 +354,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           stackIn_7_0 = (IsaacPacketBuffer) (param0);
           stackIn_7_1 = 85;
           stackIn_8_2 = (this.savedShip != null);
-          if (vq.writeBoolean(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
             this.savedShip.writeState(param0, -114);
           }
           stackIn_13_0 = 8;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PartitionZone implements DiffableState, ofa, SortableValue {
+final class PartitionZone implements DiffableState, SpatialStateMarker, SortableValue {
     int[] ids;
     static java.security.SecureRandom field_a;
     int gridx;

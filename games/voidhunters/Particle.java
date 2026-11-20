@@ -225,7 +225,7 @@ final class Particle implements DiffableState {
           var24 = AlphaContainer.getTeamColor(false, var23, 13894143);
           var5 = var5 * 200 >> 8;
           var25 = var24 | var5 << 24;
-          GetDebrisCarryOver.a(8, var16Lifetime1, 1, var25, var11Lifetime2, var15Lifetime1, var14Lifetime1, var12Lifetime1, var25, var13Lifetime1, var25);
+          GetDebrisCarryOver.fillGradientTriangle(8, var16Lifetime1, 1, var25, var11Lifetime2, var15Lifetime1, var14Lifetime1, var12Lifetime1, var25, var13Lifetime1, var25);
           if (-10 + (this.fadestart << 1) > this.life) {
             return;
           }

@@ -179,7 +179,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
           stackIn_5_0 = (IsaacPacketBuffer) (param0);
           stackIn_5_1 = 87;
           stackIn_7_2 = (this.dx != 0) || (this.dy != 0);
-          if (!vq.writeBoolean(stackIn_5_0, stackIn_5_1, stackIn_7_2)) {
+          if (!DateOfBirthInput.writeBoolean(stackIn_5_0, stackIn_5_1, stackIn_7_2)) {
             return;
           }
           param0.writeBits(-632, this.dx, 32);

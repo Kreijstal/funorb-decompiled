@@ -9,7 +9,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 < 34) {
-          GetDebrisCarryOver.a(-45, -91, 32, -35, 52, 118, 51, -43, 19, 16, 38);
+          GetDebrisCarryOver.fillGradientTriangle(-45, -91, 32, -35, 52, 118, 51, -43, 19, 16, 38);
         }
     }
 
@@ -168,7 +168,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         return stackIn_25_0 + stackIn_28_1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void fillGradientTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var11 = 0;
         int var11Lifetime1;
         if (param0 != 8) {

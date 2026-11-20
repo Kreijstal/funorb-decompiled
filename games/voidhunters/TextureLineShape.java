@@ -6,7 +6,7 @@ final class TextureLineShape extends TextureRasterShape {
     private int startX;
     private int startY;
     static BufferedSocket field_h;
-    static fcb field_i;
+    static GameResourceLoader field_i;
     private int endY;
 
     final void drawFilledAndOutline(int param0, byte param1, int param2) {

@@ -1180,7 +1180,7 @@ final class GameSession {
                 var8Lifetime1 = GetMissionTimeLimit.field_q;
                 var5Lifetime3 = var8Lifetime1;
                 var5Lifetime3 = var8Lifetime1;
-                if (ujb.a(-117)) {
+                if (ArchiveLoadRequest.a(-117)) {
                   var5Lifetime3 = LaserWeaponDefinition.field_b;
                 } else {
                   var5Lifetime3 = var8Lifetime1 + "<br>" + SetCountermeasureLauncherProjectiles.field_o;
@@ -2455,7 +2455,7 @@ final class GameSession {
                 if (var33 != null) {
                   var33 = (String) (var33) + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
                 } else {
-                  if (!ujb.a(-118)) {
+                  if (!ArchiveLoadRequest.a(-118)) {
                     var33 = QuickChatDynamicCommand.field_b;
                   }
                 }
@@ -2851,7 +2851,7 @@ final class GameSession {
                   if (var35 != 0) {
                     var36 = var32 - (var30Lifetime1 >> 1);
                     var37 = var33;
-                    var38 = ArchiveIndexLoader.field_g.isComponentOptionAvailable(ujb.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
+                    var38 = ArchiveIndexLoader.field_g.isComponentOptionAvailable(ArchiveLoadRequest.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
                     var39 = ArchiveIndexLoader.field_g.isComponentOptionComingSoon(-22549, 3 + var34_int) ? 1 : 0;
                     var40 = ArchiveIndexLoader.field_g.isComponentOptionMembersOnly(3 + var34_int, (byte) 24) ? 1 : 0;
                     BlackBoxRecording.a((byte) -115, 200, var30Lifetime1, var36, var37, var30Lifetime1);
@@ -4520,7 +4520,7 @@ final class GameSession {
         }
         try {
           param2.field_k = this.localPlayerIndex;
-          FlipTextureOperation.field_l.submitLocalEvent(true, param2, this.state.carouselInfo, false, this.networked, nsb.field_a, RequestNewestBlackboxRecording.field_p);
+          FlipTextureOperation.field_l.submitLocalEvent(true, param2, this.state.carouselInfo, false, this.networked, TestActionLagSetting.actionLag, RequestNewestBlackboxRecording.field_p);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uca.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -5553,7 +5553,7 @@ final class GameSession {
                 if (0 <= var9 &&
                   SetWaitForPlayers.a(9) > var9 &&
                   var8 != var9 &&
-                  ArchiveIndexLoader.field_g.isComponentOptionAvailable(ujb.a(-114), 3 + var9, (byte) -84)) {
+                  ArchiveIndexLoader.field_g.isComponentOptionAvailable(ArchiveLoadRequest.a(-114), 3 + var9, (byte) -84)) {
                   var10 = new PlayerAction();
                   var10.mousey = param1;
                   var10.mousex = param0;
@@ -5820,7 +5820,7 @@ final class GameSession {
             } else {
               GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -64);
             }
-            if (ArchiveIndexLoader.field_g.isVoteOptionAvailable(param0, 11, ujb.a(-113))) {
+            if (ArchiveIndexLoader.field_g.isVoteOptionAvailable(param0, 11, ArchiveLoadRequest.a(-113))) {
               this.field_a[param0] = Math.min(255, 64 + this.field_a[param0]);
               if (SetDebrisPartitioned.field_o != 1) {
                 if (SetDebrisPartitioned.field_o == 2) {
@@ -6066,7 +6066,7 @@ final class GameSession {
           if (var14 != null) {
             var7 = 1;
             for (var8 = param4; var8 < param3; var8++) {
-              if (bia.a(ujb.a(param2 ^ 127), (byte) -31, var8)) {
+              if (bia.a(ArchiveLoadRequest.a(param2 ^ 127), (byte) -31, var8)) {
                 var7 = 0;
               }
             }
@@ -7483,7 +7483,7 @@ final class GameSession {
           if (!GetSniperCannonProjectiles.chatVisible) {
             AdjustVariableActionFactory.field_a.text = VariableConditionFactory.field_b;
           } else {
-            AdjustVariableActionFactory.field_a.text = ita.field_A;
+            AdjustVariableActionFactory.field_a.text = DateOfBirthTextFields.field_A;
           }
           var3 = -(AdjustVariableActionFactory.field_a.width / 2) + SetMassDriverReload.field_p;
           var4 = -AdjustVariableActionFactory.field_a.height + (MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height));
@@ -8018,7 +8018,7 @@ final class GameSession {
             var17 >= GetTorpedoReload.field_q) {
             var18 = 16711680;
             GetMassDriverReload.a(SetReverbGain.a(nrb.field_a, new String[]{param3.field_dc.text}, 78), -61);
-            if (ujb.field_c == 1) {
+            if (ArchiveLoadRequest.field_c == 1) {
               sh.a(param3.getGameId((byte) -13), -1, 11);
             }
           }
@@ -8780,7 +8780,7 @@ final class GameSession {
           this.state = new CommonGameState(param1, -1, param4, param5, false);
           PartitionZoneFactory.field_a = GetBombletSprayEnergyUsed.field_p.width;
           MissionVariableFactory.field_a = GetBombletSprayEnergyUsed.field_p.height;
-          AdjustVariableActionFactory.field_a = new Widget("chat_toggle", (Widget) null, 0, 440, 95, 20, ita.field_A);
+          AdjustVariableActionFactory.field_a = new Widget("chat_toggle", (Widget) null, 0, 440, 95, 20, DateOfBirthTextFields.field_A);
           AdjustVariableActionFactory.field_a.x = -(AdjustVariableActionFactory.field_a.width / 2) + PartitionZoneFactory.field_a / 2;
           AdjustVariableActionFactory.field_a.field_gb = ko.field_e;
           AdjustVariableActionFactory.field_a.y = MissionVariableFactory.field_a - AdjustVariableActionFactory.field_a.height;

@@ -310,12 +310,12 @@ final class fia {
                 var3 = var23;
                 var4 = var21.screenToWorldX(true, GetUseDetailLines.field_o);
                 var5 = var21.screenToWorldY(0, GetTorpedoReload.field_q);
-                if (ujb.field_c == 1 &&
+                if (ArchiveLoadRequest.field_c == 1 &&
                   SetMachineGunEnergyUsed.field_o[81]) {
                   LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.a(var4, false, var23, (byte) -14);
                   LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.a(var5, false, LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length], (byte) -14);
                 }
-                if (ujb.field_c == 2) {
+                if (ArchiveLoadRequest.field_c == 2) {
                   var6_ref_int____ = new int[LegacyOpenGlEnvironmentReflectionEffect.field_g.length + 1][];
                   for (var7 = 0; LegacyOpenGlEnvironmentReflectionEffect.field_g.length > var7; var7++) {
                     var6_ref_int____[var7] = LegacyOpenGlEnvironmentReflectionEffect.field_g[var7];
@@ -350,7 +350,7 @@ final class fia {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (1 == ujb.field_c) {
+                if (1 == ArchiveLoadRequest.field_c) {
                   var3_intLifetime1 = -1;
                   var4Lifetime1 = 2147483647;
                   var27 = var19.outline;
@@ -373,7 +373,7 @@ final class fia {
                     hw.field_d[-1 + hw.field_d.length] = SetAutozoomSpeedDivide.a(var3_intLifetime1, true, var22, (byte) -14);
                   }
                 }
-                if (ujb.field_c == 2) {
+                if (ArchiveLoadRequest.field_c == 2) {
                   var3_array = new int[1 + hw.field_d.length][];
                   for (var4Lifetime2 = 0; var4Lifetime2 < hw.field_d.length; var4Lifetime2++) {
                     var3_array[var4Lifetime2] = hw.field_d[var4Lifetime2];

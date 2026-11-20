@@ -13,7 +13,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (GetDebrisFoundInPairs.field_q != null) {
             OpenGlFramebuffer.field_b = 0;
             GetBombletSprayAimarc.field_q = 0;
-            hda.field_a = true;
+            MouseActivityState.changed = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
               tda.field_K = tda.field_K & -2;
@@ -50,7 +50,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             OpenGlFramebuffer.field_b = 0;
             MonotonicMillisClock.field_a = -1;
             LegacyOpenGlSpecularEffect.field_e = -1;
-            hda.field_a = true;
+            MouseActivityState.changed = true;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "swa.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -63,7 +63,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             OpenGlFramebuffer.field_b = 0;
             MonotonicMillisClock.field_a = param0.getX();
             LegacyOpenGlSpecularEffect.field_e = param0.getY();
-            hda.field_a = true;
+            MouseActivityState.changed = true;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "swa.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -76,7 +76,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             OpenGlFramebuffer.field_b = 0;
             MonotonicMillisClock.field_a = param0.getX();
             LegacyOpenGlSpecularEffect.field_e = param0.getY();
-            hda.field_a = true;
+            MouseActivityState.changed = true;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "swa.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -152,7 +152,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             if (0 != (var2_int & 4)) {
               tda.field_K = tda.field_K | 4;
             }
-            hda.field_a = true;
+            MouseActivityState.changed = true;
           }
           if (!param0.isPopupTrigger()) {
             return;
@@ -179,7 +179,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             OpenGlFramebuffer.field_b = 0;
             MonotonicMillisClock.field_a = param0.getX();
             LegacyOpenGlSpecularEffect.field_e = param0.getY();
-            hda.field_a = true;
+            MouseActivityState.changed = true;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "swa.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');

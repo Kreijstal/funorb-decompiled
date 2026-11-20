@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pia extends UiArrayContainer implements UiActionListener {
-    private ita field_v;
+    private DateOfBirthTextFields field_v;
     private UiFocusableComponent field_w;
     static GpuProjectionMode field_x;
 
@@ -31,8 +31,8 @@ final class pia extends UiArrayContainer implements UiActionListener {
 
     pia(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (UiRenderer) null);
-        this.field_v = new ita(new io(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
-        this.field_v.a(99, new wta());
+        this.field_v = new DateOfBirthTextFields(new io(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
+        this.field_v.setValidator(99, new DateOfBirthValidator());
         this.field_w = new UiFocusableComponent(tn.field_b, (UiListener) (this));
         this.children = new UiComponent[]{(UiComponent) ((Object) this.field_v), (UiComponent) ((Object) this.field_w)};
         this.field_w.renderer = (UiRenderer) ((Object) new vva());
@@ -50,13 +50,13 @@ final class pia extends UiArrayContainer implements UiActionListener {
 
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         if (param0 != 11) {
-          this.field_v = (ita) null;
+          this.field_v = (DateOfBirthTextFields) null;
         }
         if (this.field_v.getValidator(param0 ^ -782444209).getValidationState((byte) 35) != GetShipPersistence.validInput) {
           return;
         }
         try {
-          SetArmageddonWarning.b(0, this.field_v.e(-5), this.field_v.c(true), this.field_v.f(3476));
+          SetArmageddonWarning.b(0, this.field_v.getDayOfMonth(-5), this.field_v.getMonthIndex(true), this.field_v.getYear(3476));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

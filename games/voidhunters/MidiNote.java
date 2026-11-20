@@ -32,12 +32,12 @@ final class MidiNote extends IntrusiveNode {
         if (param1 != -121) {
           field_z = (String) null;
           if (!OpenGlTexture1D.field_i) {
-            return ita.a(param0, param1 ^ -8013).maxDescent;
+            return DateOfBirthTextFields.getDefaultBitmapFont(param0, param1 ^ -8013).maxDescent;
           }
           return SetTorpedoEnergyUsed.a(param0, 300).maxDescent;
         }
         if (!OpenGlTexture1D.field_i) {
-          return ita.a(param0, param1 ^ -8013).maxDescent;
+          return DateOfBirthTextFields.getDefaultBitmapFont(param0, param1 ^ -8013).maxDescent;
         }
         return SetTorpedoEnergyUsed.a(param0, 300).maxDescent;
     }

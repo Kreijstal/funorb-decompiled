@@ -9,7 +9,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         if (param0) {
           field_o = (PlatformRequest) null;
           if (!OpenGlTexture1D.field_i) {
-            return ita.a(param1, 7988).ascent;
+            return DateOfBirthTextFields.getDefaultBitmapFont(param1, 7988).ascent;
           }
           if (param1 == 3) {
             return 11;
@@ -17,7 +17,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           return SetTorpedoEnergyUsed.a(param1, 300).ascent;
         }
         if (!OpenGlTexture1D.field_i) {
-          return ita.a(param1, 7988).ascent;
+          return DateOfBirthTextFields.getDefaultBitmapFont(param1, 7988).ascent;
         }
         if (param1 == 3) {
           return 11;

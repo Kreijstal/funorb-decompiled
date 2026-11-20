@@ -404,7 +404,7 @@ final class WeaponBehaviour implements DiffableState {
           }
           if (2 == this.weapontype) {
             if (var23 >= 0 &&
-              param0.countAiShipsByType(var23, (byte) -99) >= wk.field_a) {
+              param0.countAiShipsByType(var23, (byte) -99) >= FeatheredLineRasterizer.fightersPerPlayerMaximum) {
               return;
             }
             var25 = TimedSpecialOrderBehaviour.a(false);
@@ -626,7 +626,7 @@ final class WeaponBehaviour implements DiffableState {
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -103;
           stackIn_5_2 = (null != this.targetLock);
-          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             this.targetLock.writeState(param0, -126);
           }
           return;

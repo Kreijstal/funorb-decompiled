@@ -43,7 +43,7 @@ final class GetFixedaim extends ConsoleCommand {
           var5_int = 0;
           var6 = param3;
           var7 = -param3;
-          GetSalvoRepairTimeMultiplier.a(param0, param3 + param1, ResourceNode.field_b[param2], (byte) 75, param1 - param3);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param0, param3 + param1, ResourceNode.field_b[param2], (byte) 75, param1 - param3);
           var8 = -1;
           while (var6 > var5_int) {
             var8 += 2;
@@ -56,15 +56,15 @@ final class GetFixedaim extends ConsoleCommand {
               var10_ref_int__ = ResourceNode.field_b[-var6 + param2];
               var11_int = param1 + var5_int;
               var12_int = param1 - var5_int;
-              GetSalvoRepairTimeMultiplier.a(param0, var11_int, var9_ref_int__, (byte) 75, var12_int);
-              GetSalvoRepairTimeMultiplier.a(param0, var11_int, var10_ref_int__, (byte) 75, var12_int);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var11_int, var9_ref_int__, (byte) 75, var12_int);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var11_int, var10_ref_int__, (byte) 75, var12_int);
             }
             var9 = param1 + var6;
             var10 = -var6 + param1;
             var11 = ResourceNode.field_b[var5_int + param2];
             var12 = ResourceNode.field_b[-var5_int + param2];
-            GetSalvoRepairTimeMultiplier.a(param0, var9, var11, (byte) 75, var10);
-            GetSalvoRepairTimeMultiplier.a(param0, var9, var12, (byte) 75, var10);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var9, var11, (byte) 75, var10);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var9, var12, (byte) 75, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

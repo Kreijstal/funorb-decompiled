@@ -2788,7 +2788,7 @@ final class MissionBuilder implements DiffableState {
               var7.x = -var7.width - var7.x;
               var7.y = -var7.y - var7.height;
               param1.addMapZone(5706, var7);
-              var4 = (MapZone[]) (SoftwareSprite2D.a(var7, (Object[]) (var4), 0, wsb.field_e));
+              var4 = (MapZone[]) (SoftwareSprite2D.a(var7, (Object[]) (var4), 0, ArchiveRequestQueue.field_e));
             }
           }
           stackIn_9_0 = var4;
@@ -2969,7 +2969,7 @@ final class MissionBuilder implements DiffableState {
                 var7 = (BodyInZoneCondition) (var6);
                 var8 = param3.getMapZone((byte) -61, var7.getParameter((byte) -123, 1));
                 if (var8 != null) {
-                  param1 = (MapZone[]) (GetFighterBayReload.a(param1, var8, true, wsb.field_e, -102));
+                  param1 = (MapZone[]) (GetFighterBayReload.a(param1, var8, true, ArchiveRequestQueue.field_e, -102));
                 }
               }
             }

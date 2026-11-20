@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Asteroid extends ShipBody implements DiffableState, CompactGameState, ofa {
+final class Asteroid extends ShipBody implements DiffableState, CompactGameState, SpatialStateMarker {
     static int[][] field_w;
     private int field_u;
     static bwa field_v;

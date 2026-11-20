@@ -17,9 +17,9 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         int[] var28 = null;
         int var2 = 0;
         int var2Lifetime1;
-        GetDebrisGroupColour.field_r = vq.field_x.field_e.field_g;
+        GetDebrisGroupColour.field_r = DateOfBirthInput.field_x.field_e.field_g;
         SetUseBackground.field_o = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
-        java.awt.Dimension var9 = vq.field_x.field_e.field_a.getSize();
+        java.awt.Dimension var9 = DateOfBirthInput.field_x.field_e.field_a.getSize();
         GetDebrisGroupColour.field_r.setClip(0, 0, var9.width, var9.height);
         PasswordValidator.f(-10150);
         if (param0 != -9934) {
@@ -27,7 +27,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
           GetSpinningBladeSpindamageMultiplier.a((byte) 16, (ResourceArchive) null, -27, (PcmStreamMixer) null);
           SetBombletSprayProjectiles.a(-126);
           var2 = GetMassDriverProjectiles.field_q;
-          GetMassDriverProjectiles.field_q = vq.field_x.field_e.field_b.field_a;
+          GetMassDriverProjectiles.field_q = DateOfBirthInput.field_x.field_e.field_b.field_a;
           if (var2 != GetMassDriverProjectiles.field_q &&
             UiDraggableContainer.field_E) {
             MissionBuilder.setIntegerPreference((byte) 44, "graphics_mode", GetMassDriverProjectiles.field_q);
@@ -69,7 +69,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         }
         SetBombletSprayProjectiles.a(-126);
         var2Lifetime1 = GetMassDriverProjectiles.field_q;
-        GetMassDriverProjectiles.field_q = vq.field_x.field_e.field_b.field_a;
+        GetMassDriverProjectiles.field_q = DateOfBirthInput.field_x.field_e.field_b.field_a;
         if (var2Lifetime1 != GetMassDriverProjectiles.field_q) {
           if (!UiDraggableContainer.field_E) {
             if (GetMassDriverProjectiles.field_q != 1) {

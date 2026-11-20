@@ -21,7 +21,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[185] = ShipSpawnedCondition.field_d;
         var2[10] = GetTeamSelectionSpeedup.field_p;
         var2[31] = GetFightersPerPlayerMaximum.field_p;
-        var2[136] = cia.field_a;
+        var2[136] = BombletSprayAimArcSetting.aimArc;
         var2[65] = apb.field_a;
         var2[149] = pea.field_a;
         var2[32] = Particle.field_I;
@@ -102,7 +102,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[218] = Particle.field_g;
         var2[61] = AsteroidFactory.field_a;
         var2[227] = SetSniperCannonFireForce.field_q;
-        var2[98] = adb.field_a;
+        var2[98] = MassDriverFireForceSetting.fireForce;
         var2[182] = SetRepairModePower.field_r;
         var2[106] = SetShipPersistence.field_s;
         var2[161] = ffa.field_b;
@@ -217,7 +217,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[110] = SetSniperCannonAimspeed.field_o;
         var2[70] = Particle.field_G;
         var2[51] = ToolkitRasterState.field_i;
-        var2[108] = ujb.field_h;
+        var2[108] = ArchiveLoadRequest.field_h;
         var2[199] = joa.field_a;
         var2[67] = GetToggledScoreboard.field_r;
         var2[44] = ToolkitRasterState.field_b;
@@ -227,7 +227,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[125] = dr.field_a;
         var2[46] = Particle.field_A;
         var2[45] = LaunchFightersOrderDefinition.field_d;
-        var2[42] = wk.field_a;
+        var2[42] = FeatheredLineRasterizer.fightersPerPlayerMaximum;
         var2[187] = ea.field_j;
         var2[77] = SetPhasedEnergyBeamPulseFadetime.field_o;
         var2[214] = Particle.field_q;

@@ -198,7 +198,7 @@ final class CarouselGameClient {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = this.getPingMillis(0) * GetBombletSprayProjectileOndamageParticles.field_p / param1;
-          var4 = wsb.field_f - var3_int;
+          var4 = ArchiveRequestQueue.field_f - var3_int;
           if (param0.ticksBehind <= var4) {
             return false;
           }

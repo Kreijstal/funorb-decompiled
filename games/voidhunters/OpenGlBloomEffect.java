@@ -193,8 +193,8 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
           if (this.downsampleTextures != null) {
             this.toolkit.pushFramebuffer((byte) -123, (OpenGlFramebufferBinding) (this.downsampleFramebuffer));
-            var5_int = wsb.a(this.sourceWidth, 1302374146);
-            var6 = wsb.a(this.sourceHeight, 1302374146);
+            var5_int = ArchiveRequestQueue.highestOneBit(this.sourceWidth, 1302374146);
+            var6 = ArchiveRequestQueue.highestOneBit(this.sourceHeight, 1302374146);
             var7_int = 0;
             {
               while ((!(256 >= var5_int) ||
@@ -361,8 +361,8 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
         if (param2 != -19454) {
           this.isSupported((byte) 118);
         }
-        var4 = wsb.a(this.sourceWidth, param2 ^ -1302392064);
-        var5 = wsb.a(this.sourceHeight, param2 + 1302393600);
+        var4 = ArchiveRequestQueue.highestOneBit(this.sourceWidth, param2 ^ -1302392064);
+        var5 = ArchiveRequestQueue.highestOneBit(this.sourceHeight, param2 + 1302393600);
         if (this.textureWidth != var4 ||
           var5 != this.textureHeight) {
           if (null != this.downsampleTextures) {

@@ -17,7 +17,7 @@ final class Mission implements DiffableState {
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = 81;
           stackIn_3_2 = (this.savedState != null);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.savedState.writeState(param0, -120);
           }
           if (param1 >= -109) {

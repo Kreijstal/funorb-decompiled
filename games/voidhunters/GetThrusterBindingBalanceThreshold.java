@@ -98,7 +98,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               if (!GetBloomThresholdPercentage.field_p) {
                 if (hb.field_c) {
                   var5 = "";
-                  var4 = "<col=999999>" + var4 + vq.field_y + "</col>";
+                  var4 = "<col=999999>" + var4 + DateOfBirthInput.field_y + "</col>";
                   if (var10 != 0) {
                     var4 = "<col=999999>" + var4 + PasswordValidator.field_g + "</col>";
                     var5 = "";
@@ -113,7 +113,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                 if (UiComboBoxRenderer.field_c.field_O &&
                   -UiComboBoxRenderer.field_c.screenX + PlayerGameData.field_b < var9) {
                   if (!GetBloomThresholdPercentage.field_p) {
-                    var1 = vq.field_y;
+                    var1 = DateOfBirthInput.field_y;
                   } else {
                     var1 = "Broken!";
                   }

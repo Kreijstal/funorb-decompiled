@@ -92,23 +92,23 @@ final class LegacyOpenGlScrollingNoiseEffect extends LegacyOpenGlMaterialEffect 
         int var8Lifetime1;
         this.toolkit.setActiveTextureUnit(33984, 1);
         if (var7 != 0) {
-          wk.field_b[2] = 0.0f;
-          wk.field_b[1] = 0.0f;
-          wk.field_b[3] = 0.0f;
-          wk.field_b[0] = var6;
-          jaggl.OpenGL.glTexGenfv(8192, 9474, wk.field_b, 0);
-          wk.field_b[3] = (float)this.toolkit.field_Mc * var4 % 1.0f;
-          wk.field_b[2] = 0.0f;
+          FeatheredLineRasterizer.texGenPlaneScratch[2] = 0.0f;
+          FeatheredLineRasterizer.texGenPlaneScratch[1] = 0.0f;
+          FeatheredLineRasterizer.texGenPlaneScratch[3] = 0.0f;
+          FeatheredLineRasterizer.texGenPlaneScratch[0] = var6;
+          jaggl.OpenGL.glTexGenfv(8192, 9474, FeatheredLineRasterizer.texGenPlaneScratch, 0);
+          FeatheredLineRasterizer.texGenPlaneScratch[3] = (float)this.toolkit.field_Mc * var4 % 1.0f;
+          FeatheredLineRasterizer.texGenPlaneScratch[2] = 0.0f;
           if (param1 == -25139) {
-            wk.field_b[0] = 0.0f;
-            wk.field_b[1] = var6;
-            jaggl.OpenGL.glTexGenfv(8193, 9474, wk.field_b, 0);
+            FeatheredLineRasterizer.texGenPlaneScratch[0] = 0.0f;
+            FeatheredLineRasterizer.texGenPlaneScratch[1] = var6;
+            jaggl.OpenGL.glTexGenfv(8193, 9474, FeatheredLineRasterizer.texGenPlaneScratch, 0);
             if (this.waterTextures.usesVolumeTextures) {
-              wk.field_b[3] = (float)this.toolkit.field_Mc * var5 % 1.0f;
-              wk.field_b[1] = 0.0f;
-              wk.field_b[2] = 0.0f;
-              wk.field_b[0] = 0.0f;
-              jaggl.OpenGL.glTexGenfv(8194, 9473, wk.field_b, 0);
+              FeatheredLineRasterizer.texGenPlaneScratch[3] = (float)this.toolkit.field_Mc * var5 % 1.0f;
+              FeatheredLineRasterizer.texGenPlaneScratch[1] = 0.0f;
+              FeatheredLineRasterizer.texGenPlaneScratch[2] = 0.0f;
+              FeatheredLineRasterizer.texGenPlaneScratch[0] = 0.0f;
+              jaggl.OpenGL.glTexGenfv(8194, 9473, FeatheredLineRasterizer.texGenPlaneScratch, 0);
             } else {
               var8 = (int)((float)this.toolkit.field_Mc * var5 * 16.0f);
               this.toolkit.bindTexture(25, this.waterTextures.scrollingNoiseFrames[var8 % 16]);
@@ -118,23 +118,23 @@ final class LegacyOpenGlScrollingNoiseEffect extends LegacyOpenGlMaterialEffect 
           }
           return;
         }
-        wk.field_b[1] = 0.0f;
-        wk.field_b[2] = var6;
-        wk.field_b[3] = 0.0f;
-        wk.field_b[0] = 0.0f;
-        jaggl.OpenGL.glTexGenfv(8192, 9474, wk.field_b, 0);
-        wk.field_b[3] = (float)this.toolkit.field_Mc * var4 % 1.0f;
-        wk.field_b[2] = 0.0f;
+        FeatheredLineRasterizer.texGenPlaneScratch[1] = 0.0f;
+        FeatheredLineRasterizer.texGenPlaneScratch[2] = var6;
+        FeatheredLineRasterizer.texGenPlaneScratch[3] = 0.0f;
+        FeatheredLineRasterizer.texGenPlaneScratch[0] = 0.0f;
+        jaggl.OpenGL.glTexGenfv(8192, 9474, FeatheredLineRasterizer.texGenPlaneScratch, 0);
+        FeatheredLineRasterizer.texGenPlaneScratch[3] = (float)this.toolkit.field_Mc * var4 % 1.0f;
+        FeatheredLineRasterizer.texGenPlaneScratch[2] = 0.0f;
         if (param1 == -25139) {
-          wk.field_b[0] = 0.0f;
-          wk.field_b[1] = var6;
-          jaggl.OpenGL.glTexGenfv(8193, 9474, wk.field_b, 0);
+          FeatheredLineRasterizer.texGenPlaneScratch[0] = 0.0f;
+          FeatheredLineRasterizer.texGenPlaneScratch[1] = var6;
+          jaggl.OpenGL.glTexGenfv(8193, 9474, FeatheredLineRasterizer.texGenPlaneScratch, 0);
           if (this.waterTextures.usesVolumeTextures) {
-            wk.field_b[3] = (float)this.toolkit.field_Mc * var5 % 1.0f;
-            wk.field_b[1] = 0.0f;
-            wk.field_b[2] = 0.0f;
-            wk.field_b[0] = 0.0f;
-            jaggl.OpenGL.glTexGenfv(8194, 9473, wk.field_b, 0);
+            FeatheredLineRasterizer.texGenPlaneScratch[3] = (float)this.toolkit.field_Mc * var5 % 1.0f;
+            FeatheredLineRasterizer.texGenPlaneScratch[1] = 0.0f;
+            FeatheredLineRasterizer.texGenPlaneScratch[2] = 0.0f;
+            FeatheredLineRasterizer.texGenPlaneScratch[0] = 0.0f;
+            jaggl.OpenGL.glTexGenfv(8194, 9473, FeatheredLineRasterizer.texGenPlaneScratch, 0);
           } else {
             var8Lifetime1 = (int)((float)this.toolkit.field_Mc * var5 * 16.0f);
             this.toolkit.bindTexture(25, this.waterTextures.scrollingNoiseFrames[var8Lifetime1 % 16]);

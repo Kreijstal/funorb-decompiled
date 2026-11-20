@@ -187,13 +187,13 @@ final class ThrusterBehaviour implements DiffableState {
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = 53;
           stackIn_3_2 = (this.timer != null);
-          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.timer.writeState(param0, -123);
           }
           stackIn_8_0 = (IsaacPacketBuffer) (param0);
           stackIn_8_1 = 87;
           stackIn_9_2 = (null != this.trail);
-          if (vq.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
+          if (DateOfBirthInput.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
             this.trail.writeState(param0, -126);
           }
           if (param1 < -109) {
