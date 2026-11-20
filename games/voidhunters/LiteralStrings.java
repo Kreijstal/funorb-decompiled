@@ -4,7 +4,7 @@
 final class LiteralStrings {
     static byte[][] field_a;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendLobbyGameRequest(int param0, int param1, int param2) {
         IsaacPacketBuffer var3 = RequestNewestBlackboxRecording.field_p;
         var3.writeIsaacByte(24335, param2);
         var3.writeByte(0, 3);

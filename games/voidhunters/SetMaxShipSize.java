@@ -10,7 +10,7 @@ final class SetMaxShipSize extends ConsoleCommand {
         int var4 = 0;
         if (param1 > -109) {
           java.applet.Applet var6 = (java.applet.Applet) null;
-          SetMaxShipSize.a((java.applet.Applet) null, 118);
+          SetMaxShipSize.openSubscriptionPage((java.applet.Applet) null, 118);
         }
         while (var4 < var3.pixels.length) {
           var3.pixels[var4] = param0;
@@ -60,7 +60,7 @@ final class SetMaxShipSize extends ConsoleCommand {
         return AsteroidField.incomingLagStdDevMillis;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscriptionPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;

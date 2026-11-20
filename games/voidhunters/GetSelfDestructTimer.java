@@ -56,7 +56,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
           while (true) {
             if (0 > SetAutoDetail.field_p) {
               AccountNameAvailabilityReplies.field_b.position = 0;
-              if (!ShipBlueprint.a(1, 30000)) {
+              if (!ShipBlueprint.pollReplyBytes(1, 30000)) {
                 return false;
               }
               SetAutoDetail.field_p = AccountNameAvailabilityReplies.field_b.readIsaacByte(255);

@@ -47,7 +47,7 @@ final class PlayerJoinFactory implements GameStateFactory {
 
     final static boolean pollIncomingPacketPayload(byte param0) {
         if (PartitioningManagerFactory.field_a == -1) {
-          if (!ShipBlueprint.a(1, 30000)) {
+          if (!ShipBlueprint.pollReplyBytes(1, 30000)) {
             return false;
           }
           PartitioningManagerFactory.field_a = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -126);
@@ -56,24 +56,24 @@ final class PlayerJoinFactory implements GameStateFactory {
         if (param0 <= 9) {
           PlayerJoinFactory.pollIncomingPacketPayload((byte) -116);
           if (PartitioningManagerFactory.field_a == -2) {
-            if (ShipBlueprint.a(2, 30000)) {
+            if (ShipBlueprint.pollReplyBytes(2, 30000)) {
               PartitioningManagerFactory.field_a = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
               AccountNameAvailabilityReplies.field_b.position = 0;
-              return ShipBlueprint.a(PartitioningManagerFactory.field_a, 30000);
+              return ShipBlueprint.pollReplyBytes(PartitioningManagerFactory.field_a, 30000);
             }
             return false;
           }
-          return ShipBlueprint.a(PartitioningManagerFactory.field_a, 30000);
+          return ShipBlueprint.pollReplyBytes(PartitioningManagerFactory.field_a, 30000);
         }
         if (PartitioningManagerFactory.field_a == -2) {
-          if (ShipBlueprint.a(2, 30000)) {
+          if (ShipBlueprint.pollReplyBytes(2, 30000)) {
             PartitioningManagerFactory.field_a = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
             AccountNameAvailabilityReplies.field_b.position = 0;
-            return ShipBlueprint.a(PartitioningManagerFactory.field_a, 30000);
+            return ShipBlueprint.pollReplyBytes(PartitioningManagerFactory.field_a, 30000);
           }
           return false;
         }
-        return ShipBlueprint.a(PartitioningManagerFactory.field_a, 30000);
+        return ShipBlueprint.pollReplyBytes(PartitioningManagerFactory.field_a, 30000);
     }
 
     static {

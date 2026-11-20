@@ -53,7 +53,7 @@ final class TypedStateArrayCopier {
               var11 = var16;
               if (var16 == null ||
                 var16.getClass() != var10) {
-                dupTemp$0 = GetVelocitySustainMax.a(param0, param2, var10, -82);
+                dupTemp$0 = GetVelocitySustainMax.createStateForClass(param0, param2, var10, -82);
                 param4[var8] = dupTemp$0;
                 var11 = dupTemp$0;
               }

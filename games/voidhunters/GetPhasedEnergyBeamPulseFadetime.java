@@ -95,7 +95,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               TextureCombineMappings.loginStage = SetSpecialOrderBoxHeight.field_o;
             }
             if (SetSpecialOrderBoxHeight.field_o == TextureCombineMappings.loginStage &&
-              ShipBlueprint.a(1, 30000)) {
+              ShipBlueprint.pollReplyBytes(1, 30000)) {
               var6_int = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -121);
               if (var6_int != 0) {
                 PartitioningManagerFactory.field_a = -1;
@@ -107,7 +107,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               AccountNameAvailabilityReplies.field_b.position = 0;
             }
             if (ModalStack.field_w == TextureCombineMappings.loginStage &&
-              ShipBlueprint.a(8, param3 ^ 30013)) {
+              ShipBlueprint.pollReplyBytes(8, param3 ^ 30013)) {
               SetMissileLauncherRandomness.field_p = AccountNameAvailabilityReplies.field_b.readLong(255);
               AccountNameAvailabilityReplies.field_b.position = 0;
               UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.loginCredentials, param1);
@@ -115,7 +115,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             boolean decompiledFrameRemainder0 = true;
             if (TextureCombineMappings.loginStage == LegacyOpenGlShaderProgram.field_a &&
-              ShipBlueprint.a(1, 30000)) {
+              ShipBlueprint.pollReplyBytes(1, 30000)) {
               var6_intLifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -110);
               NetworkMessageState.incomingOpcode = var6_intLifetime1;
               AccountNameAvailabilityReplies.field_b.position = 0;

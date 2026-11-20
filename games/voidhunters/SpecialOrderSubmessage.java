@@ -118,7 +118,7 @@ final class SpecialOrderSubmessage implements DiffableState {
         }
     }
 
-    final static void a(DisplayMode[] param0, byte param1) {
+    final static void sortDisplayModes(DisplayMode[] param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         DisplayMode var4 = null;
@@ -192,7 +192,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           }
           if (param0 <= 54) {
             var5 = (DisplayMode[]) null;
-            SpecialOrderSubmessage.a((DisplayMode[]) null, (byte) -120);
+            SpecialOrderSubmessage.sortDisplayModes((DisplayMode[]) null, (byte) -120);
           }
           if (this.vote != null) {
             if (null == var6.vote) {

@@ -41,11 +41,11 @@ final class SetNebulaFadesOutWhenClose extends ConsoleCommand {
         field_o = null;
         if (param0 != 2) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          SetNebulaFadesOutWhenClose.a(81, (java.applet.Applet) null);
+          SetNebulaFadesOutWhenClose.openSupportPage(81, (java.applet.Applet) null);
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSupportPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

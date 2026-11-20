@@ -117,7 +117,7 @@ abstract class TextureOperation extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
-    final static SoftwareMonochromeBitmapFont a(ResourceArchive param0, byte param1, ResourceArchive param2, int param3, int param4) {
+    final static SoftwareMonochromeBitmapFont loadMonochromeBitmapFont(ResourceArchive param0, byte param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
         Object stackIn_4_0 = null;
@@ -131,7 +131,7 @@ abstract class TextureOperation extends IntrusiveNode {
         try {
           if (param1 > -21) {
             var6 = (ResourceArchive) null;
-            TextureOperation.a((ResourceArchive) null, (byte) 32, (ResourceArchive) null, -82, 9);
+            TextureOperation.loadMonochromeBitmapFont((ResourceArchive) null, (byte) 32, (ResourceArchive) null, -82, 9);
           }
           if (SpriteArchiveDecoder.decodeSpriteArchiveFile(param4, 2, param0, param3)) {
             stackIn_6_0 = ServerInfo.createFontFromDecodedSprites(param2.fetchFile(param4, param3, (byte) 13), 11);

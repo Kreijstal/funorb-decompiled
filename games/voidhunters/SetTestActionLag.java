@@ -36,7 +36,7 @@ final class SetTestActionLag extends ConsoleCommand {
         }
     }
 
-    final static int a(SerializableGameState param0, byte param1) {
+    final static int calculateGameStateChecksum(SerializableGameState param0, byte param1) {
         RuntimeException var2 = null;
         SerializableGameState var3 = null;
         int stackIn_6_0 = 0;
@@ -48,7 +48,7 @@ final class SetTestActionLag extends ConsoleCommand {
           UiViewport.serializedStateBuffer.position = 0;
           if (param1 >= -5) {
             var3 = (SerializableGameState) null;
-            SetTestActionLag.a((SerializableGameState) null, (byte) 16);
+            SetTestActionLag.calculateGameStateChecksum((SerializableGameState) null, (byte) 16);
           }
           UiViewport.serializedStateBuffer.beginBitWrite(-81);
           if (!(param0 instanceof CompactGameState)) {

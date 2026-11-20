@@ -747,7 +747,7 @@ final class ResourceArchive {
             if (param2) {
               return;
             }
-            MapClearanceCircleFactory.a(param0, true);
+            MapClearanceCircleFactory.sendLobbyGameSettings(param0, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

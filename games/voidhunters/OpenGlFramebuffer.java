@@ -92,7 +92,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                       PlayerVoteFactory.attachPresetComponents(param2, var4);
                     } else {
                       if (var5 == 4) {
-                        GrapplingHookFactory.a((byte) 127, var4);
+                        GrapplingHookFactory.attachPresetComponents((byte) 127, var4);
                       } else {
                         if (var5 == 5) {
                           GameReleaseStatistics.applyPresetComponentLayout(38, var4);
@@ -103,7 +103,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                                 GetExplosionProjectileDamage.attachPresetComponents(var4, -14);
                               } else {
                                 if (1 == param1) {
-                                  ArbProgram.a((byte) -94, var4);
+                                  ArbProgram.attachPresetComponents((byte) -94, var4);
                                 }
                               }
                             } else {
@@ -133,7 +133,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                 }
               }
             } else {
-              GetUseBackgroundInFullscreen.a((byte) -107, var4);
+              GetUseBackgroundInFullscreen.attachPresetComponents((byte) -107, var4);
             }
           }
           var7.chassis = var4;

@@ -82,14 +82,14 @@ final class FadingMidiPcmStream extends MidiPcmStream {
         }
         if (GetMomentOfInertiaPerpointCalcDownshift.field_p.field_o != 0) {
           if (GetOndamageParticleLife.field_o) {
-            Under13AccountNoticePanel.a(param2, (byte) 92);
+            Under13AccountNoticePanel.sendLobbyControlRequest(param2, (byte) 92);
           } else {
             if (GetDebrisCarryOver.field_o > 0) {
-              Under13AccountNoticePanel.a(param2, (byte) 92);
+              Under13AccountNoticePanel.sendLobbyControlRequest(param2, (byte) 92);
             } else {
               if (SetAngularVelocitySustain.field_p >= 2 &&
                 SetMachineGunEnergyUsed.field_o[12]) {
-                Under13AccountNoticePanel.a(param2, (byte) 92);
+                Under13AccountNoticePanel.sendLobbyControlRequest(param2, (byte) 92);
               }
             }
           }
@@ -99,7 +99,7 @@ final class FadingMidiPcmStream extends MidiPcmStream {
             UiScrollPane.field_w != SetMutatorVotes.field_o[0]) {
             UiScrollPane.field_w = SetMutatorVotes.field_o[0];
           }
-          GetMassDriverProjectiles.a((byte) 127, true, ThreeSliceButtonStyle.field_u, 0, UiScrollPane.field_w, param2);
+          GetMassDriverProjectiles.sendLobbyOptionChange((byte) 127, true, ThreeSliceButtonStyle.field_u, 0, UiScrollPane.field_w, param2);
         }
         if (SetTorpedoAcceleration.field_o.field_o != 0) {
           TutorialController.field_d = false;

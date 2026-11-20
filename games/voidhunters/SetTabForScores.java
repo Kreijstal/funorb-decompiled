@@ -5,7 +5,7 @@ final class SetTabForScores extends ConsoleCommand {
     static String accountRelativeUrl;
     static String field_o;
 
-    final static boolean a(String param0, String param1, boolean param2) {
+    final static boolean containsNameOrReverseIgnoringUnderscores(String param0, String param1, boolean param2) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -17,7 +17,7 @@ final class SetTabForScores extends ConsoleCommand {
         RuntimeException var3_ref = null;
         try {
           param1 = OpenGlModel.replaceCharacter('_', (byte) 108, "", param1);
-          var3 = IrregularBricksTextureOperation.a((byte) -87, param1);
+          var3 = IrregularBricksTextureOperation.reverseString((byte) -87, param1);
           if (!param2) {
             SetTabForScores.clearSharedReferences(false);
           }
@@ -48,7 +48,7 @@ final class SetTabForScores extends ConsoleCommand {
         accountRelativeUrl = null;
         if (param0) {
           String var2 = (String) null;
-          SetTabForScores.a((String) null, (String) null, true);
+          SetTabForScores.containsNameOrReverseIgnoringUnderscores((String) null, (String) null, true);
         }
     }
 

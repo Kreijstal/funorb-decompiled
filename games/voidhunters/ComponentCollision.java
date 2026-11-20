@@ -352,7 +352,7 @@ final class ComponentCollision extends IntrusiveNode {
           GetReverbWidth.field_o.tabs.updateSelectedTab(10000);
           if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
-              LiteralStrings.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);
+              LiteralStrings.sendLobbyGameRequest(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);
             }
             if (LobbyInviteControls.inviteButton.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = true;

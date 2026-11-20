@@ -4,7 +4,7 @@
 final class GetUseBackgroundInFullscreen extends ConsoleCommand {
     static GameStateFactory field_o;
 
-    final static void a(byte param0, ShipComponent param1) {
+    final static void attachPresetComponents(byte param0, ShipComponent param1) {
         ShipComponent var3 = null;
         ShipComponent var4 = null;
         try {

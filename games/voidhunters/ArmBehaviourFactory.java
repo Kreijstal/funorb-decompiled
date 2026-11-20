@@ -4,7 +4,7 @@
 final class ArmBehaviourFactory implements GameStateFactory {
     static int field_a;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendLobbyGameRequest(int param0, int param1, int param2) {
         IsaacPacketBuffer var3 = null;
         if (param2 == 20694) {
           var3 = RequestNewestBlackboxRecording.field_p;

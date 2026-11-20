@@ -329,7 +329,7 @@ final class IrregularBricksTextureOperation extends TextureOperation {
         }
     }
 
-    final static String a(byte param0, String param1) {
+    final static String reverseString(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -348,7 +348,7 @@ final class IrregularBricksTextureOperation extends TextureOperation {
           var4 = 0;
           if (param0 != -87) {
             var6 = (String) null;
-            IrregularBricksTextureOperation.a((byte) 86, (String) null);
+            IrregularBricksTextureOperation.reverseString((byte) 86, (String) null);
           }
           while (var4 < var2_int) {
             var3[-var4 + var2_int - 1] = param1.charAt(var4);

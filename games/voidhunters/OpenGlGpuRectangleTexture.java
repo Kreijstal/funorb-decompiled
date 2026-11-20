@@ -89,7 +89,7 @@ final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTex
         return false;
     }
 
-    final static DiffableState[] a(int param0, IntrusiveDeque param1) {
+    final static DiffableState[] toDiffableStateArray(int param0, IntrusiveDeque param1) {
         int var4 = 0;
         IntrusiveNode[] var2 = null;
         RuntimeException var2_ref = null;

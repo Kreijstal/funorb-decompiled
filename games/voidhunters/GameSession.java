@@ -2433,7 +2433,7 @@ final class GameSession {
               SetBuildViewAutozoomTimeout.drawToolkitSpriteAlpha(true, this.field_U, -36 + var26, var27 - 24, 30);
               var30_int = var26 + 160;
               var31 = 29 + var27;
-              OpenGlShaderProgram.a(var21, this.field_U, -1, ShipTeamCondition.field_f[this.hoveredVoteOptionId].toUpperCase(), (byte) -106, 2, var31, var30_int);
+              OpenGlShaderProgram.drawTextAlpha(var21, this.field_U, -1, ShipTeamCondition.field_f[this.hoveredVoteOptionId].toUpperCase(), (byte) -106, 2, var31, var30_int);
               var31 = var31 + (36 - GetPointDefenceLaserProjectiles.getFontAscent(false, 2));
               var32 = ThrusterBehaviour.field_a[this.hoveredVoteOptionId];
               if (var32 != null) {
@@ -2462,7 +2462,7 @@ final class GameSession {
               }
               if (var33 != null) {
                 var44 = ((String) (var33)).toUpperCase();
-                OpenGlShaderProgram.a(56035, this.field_U, -1, var44, (byte) -70, 2, var28_int + var27, var30_int);
+                OpenGlShaderProgram.drawTextAlpha(56035, this.field_U, -1, var44, (byte) -70, 2, var28_int + var27, var30_int);
               }
               SetMissileLauncherEnergyUsed.fillCircleAlpha(54236, (byte) 7, 25 + var27, 14.0f, this.field_U, var7 + var13 - 25);
               var34 = 0;
@@ -3524,7 +3524,7 @@ final class GameSession {
         var17 = VoidHunters.field_G;
         this.uiBlocksWorldInput = false;
         if (DeveloperAccess.hasDeveloperAccess(2)) {
-          GetPointDefenceLaserProjectileInterceptDamage.a(SetMachineGunEnergyUsed.field_o, this.previousKeyStates, (byte) 79);
+          GetPointDefenceLaserProjectileInterceptDamage.updateDebugFlagsFromKeys(SetMachineGunEnergyUsed.field_o, this.previousKeyStates, (byte) 79);
         }
         this.updateChatControls((byte) 119, param1);
         var3 = 0;
@@ -4464,7 +4464,7 @@ final class GameSession {
               }
               this.field_ab = true;
               this.field_J = var15.getComponentTypeId(param0 ^ 36);
-              var10_ref_String__ = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.a(var14, (byte) -120), GetSelfDestructActivateCooldown.getComponentTypeName(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
+              var10_ref_String__ = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.getComponentDisplayName(var14, (byte) -120), GetSelfDestructActivateCooldown.getComponentTypeName(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
               this.drawWorldInspectionText(var15.getFinalx(true), var15.getFinaly((byte) 85), var10_ref_String__, (byte) -96);
               stackIn_21_0 = 1;
               return stackIn_21_0;
@@ -4479,7 +4479,7 @@ final class GameSession {
               }
               this.field_ab = true;
               this.field_J = var8.chassis.getComponentTypeId(param0 - 36);
-              var12 = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.a(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.getComponentTypeName(var8.chassis.getDefinition((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
+              var12 = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.getComponentDisplayName(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.getComponentTypeName(var8.chassis.getDefinition((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
               if (this.drawInspectionOutline(param1, var10, param2, false, var12, var11, var9Lifetime1)) {
                 stackIn_28_0 = 1;
                 return stackIn_28_0;
@@ -6702,7 +6702,7 @@ final class GameSession {
                         this.fillRadialSegment(var10, var33Lifetime1, var8, -62, this.radialMenuAlpha >> 1, var20);
                       }
                       var34_ref_String = GetBlueprintSaveTime.specialOrderShortLabels[var15.specialOrderId];
-                      OpenGlShaderProgram.a(16777215, this.radialMenuAlpha, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - GameTextMetrics.getStringWidth(3, var34_ref_String, 13879) / 2));
+                      OpenGlShaderProgram.drawTextAlpha(16777215, this.radialMenuAlpha, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - GameTextMetrics.getStringWidth(3, var34_ref_String, 13879) / 2));
                     } else {
                       OpenGlVertexNormal.field_d[101].draw(var18, var19, 0, var33Lifetime1, 1);
                       if (var25 != 0) {
@@ -7958,11 +7958,11 @@ final class GameSession {
             if (param3.field_fc && (!param3.field_Gb ||
               !param3.field_cc &&
               !param3.field_ac)) {
-              ArmBehaviourFactory.a(param3.getGameId((byte) -13), 11, 20694);
+              ArmBehaviourFactory.sendLobbyGameRequest(param3.getGameId((byte) -13), 11, 20694);
               decompiledFrameRemainder0 = false;
             }
             else {
-              SpriteArchiveDecoder.a(11, (byte) -123, param3.getGameId((byte) -13));
+              SpriteArchiveDecoder.sendLobbyGameRequest(11, (byte) -123, param3.getGameId((byte) -13));
             }
             if (MatchingFieldValidator.field_g != null) {
               this.tutorialController.saveHintProgress((byte) -111);
@@ -8019,7 +8019,7 @@ final class GameSession {
             var18 = 16711680;
             GetMassDriverReload.setTooltipText(SetReverbGain.a(NullUiRenderer.field_a, new String[]{param3.field_dc.text}, 78), -61);
             if (ArchiveLoadRequest.field_c == 1) {
-              LiteralStrings.a(param3.getGameId((byte) -13), -1, 11);
+              LiteralStrings.sendLobbyGameRequest(param3.getGameId((byte) -13), -1, 11);
             }
           }
           FixedPointTrigonometry.drawThickLine(var18, 2, 16994, var15, 255, var14, var16, var17);

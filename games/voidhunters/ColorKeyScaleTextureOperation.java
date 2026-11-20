@@ -219,7 +219,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
             return;
           }
           FloatNoiseSliceGenerator.closeTransientMenusAndDialogs((byte) 95);
-          SetGrapplingHooksDamageableBySourcePlayer.a(15);
+          SetGrapplingHooksDamageableBySourcePlayer.clearLobbyState(15);
           SoftwareSprite2D.resetSocialLists(114);
           AssassinationObjectiveText.field_b = false;
           return;

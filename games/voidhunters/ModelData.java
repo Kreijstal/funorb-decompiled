@@ -267,7 +267,7 @@ final class ModelData {
           SetPointDefenceLaserAimarc.field_r[27] = IndexedSpriteData.loadFirst(param2, "basic", "chassis9");
           SetPointDefenceLaserAimarc.field_r[28] = IndexedSpriteData.loadFirst(param2, "basic", "chassis9_glow");
           var9 = IndexedSpriteData.loadAll(param2, "basic", "box_pack");
-          GetSalvoRepairTimeMultiplier.a(SetPointDefenceLaserAimarc.field_r, 31, var9, -25801);
+          GetSalvoRepairTimeMultiplier.copyObjectArrayInto(SetPointDefenceLaserAimarc.field_r, 31, var9, -25801);
           SetPointDefenceLaserAimarc.field_r[40] = IndexedSpriteData.loadFirst(param2, "basic", "icon_frame_lrg");
           SetPointDefenceLaserAimarc.field_r[41] = IndexedSpriteData.loadFirst(param2, "basic", "icon_frame_lrg_select");
           SetPointDefenceLaserAimarc.field_r[42] = IndexedSpriteData.loadFirst(param2, "basic", "icon_frame_sml");
@@ -332,12 +332,12 @@ final class ModelData {
           SetPointDefenceLaserAimarc.field_r[100] = IndexedSpriteData.loadFirst(param2, "basic", "more_weapons_small");
           SetPointDefenceLaserAimarc.field_r[101] = IndexedSpriteData.loadFirst(param2, "basic", "icon_box");
           var10 = IndexedSpriteData.loadAll(param2, "basic", "icons_hud");
-          GetSalvoRepairTimeMultiplier.a(SetPointDefenceLaserAimarc.field_r, 102, var10, -25801);
+          GetSalvoRepairTimeMultiplier.copyObjectArrayInto(SetPointDefenceLaserAimarc.field_r, 102, var10, -25801);
           var11 = IndexedSpriteData.loadAll(param2, "basic", "self_destruct");
-          GetSalvoRepairTimeMultiplier.a(SetPointDefenceLaserAimarc.field_r, 112, var11, -25801);
+          GetSalvoRepairTimeMultiplier.copyObjectArrayInto(SetPointDefenceLaserAimarc.field_r, 112, var11, -25801);
           SetPointDefenceLaserAimarc.field_r[115] = IndexedSpriteData.loadFirst(param2, "basic", "chat");
           var12 = IndexedSpriteData.loadAll(param2, "basic", "frame_outer");
-          GetSalvoRepairTimeMultiplier.a(SetPointDefenceLaserAimarc.field_r, 116, var12, -25801);
+          GetSalvoRepairTimeMultiplier.copyObjectArrayInto(SetPointDefenceLaserAimarc.field_r, 116, var12, -25801);
           SetPointDefenceLaserAimarc.field_r[125] = IndexedSpriteData.loadFirst(param2, "basic", "button_off");
           SetPointDefenceLaserAimarc.field_r[126] = IndexedSpriteData.loadFirst(param2, "basic", "button_on");
           SetPointDefenceLaserAimarc.field_r[127] = IndexedSpriteData.loadFirst(param2, "basic", "buttonbig_off");

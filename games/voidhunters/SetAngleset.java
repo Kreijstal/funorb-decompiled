@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetAngleset extends ConsoleCommand {
-    final static OpenGlSpriteTexture a(int param0, int param1, int param2, OpenGlToolkit param3, int param4) {
+    final static OpenGlSpriteTexture createSpriteTexture(int param0, int param1, int param2, OpenGlToolkit param3, int param4) {
         RuntimeException var5 = null;
         OpenGlSpriteTexture stackIn_2_0 = null;
         OpenGlSpriteTexture stackIn_8_0 = null;

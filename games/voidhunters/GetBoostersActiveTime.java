@@ -158,7 +158,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             TextureCombineMappings.loginStage = SocialTabsPanel.field_d;
           }
           if (TextureCombineMappings.loginStage == SocialTabsPanel.field_d &&
-            ShipBlueprint.a(1, 30000)) {
+            ShipBlueprint.pollReplyBytes(1, 30000)) {
             var9Lifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -124);
             AccountNameAvailabilityReplies.field_b.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -179,7 +179,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 PartitioningManagerFactory.field_a = -1;
                 NetworkMessageState.incomingOpcode = var9Lifetime1;
               } else {
-                ShipBlueprint.a(SetWorldWidthUpshift.getEmailAvailabilityReplyLength(param4 + 24655), 30000);
+                ShipBlueprint.pollReplyBytes(SetWorldWidthUpshift.getEmailAvailabilityReplyLength(param4 + 24655), 30000);
                 LruNodeCache.emailAvailabilityResult = new Boolean(SetSpecialOrderBarYOffset.readEmailAvailabilityFlag(param4 - 2, AccountNameAvailabilityReplies.field_b));
                 AccountNameAvailabilityReplies.field_b.position = 0;
               }
@@ -187,10 +187,10 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           }
           if (TextureCombineMappings.loginStage == ComponentWordEncoder.awaitingLoginReply) {
             var9Lifetime2 = 2;
-            if (ShipBlueprint.a(var9Lifetime2, param4 ^ 30000)) {
+            if (ShipBlueprint.pollReplyBytes(var9Lifetime2, param4 ^ 30000)) {
               var10Lifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
               AccountNameAvailabilityReplies.field_b.position = 0;
-              if (ShipBlueprint.a(var10Lifetime1, param4 + 30000)) {
+              if (ShipBlueprint.pollReplyBytes(var10Lifetime1, param4 + 30000)) {
                 var11 = GameInvitationText.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   GameInvitationText.field_a[var12] = AccountNameAvailabilityReplies.field_b.readCircumfixedString(-1609246200);

@@ -47,7 +47,7 @@ final class SetBombletSprayEnergyUsed extends ConsoleCommand {
         }
     }
 
-    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean areCommonUiArchivesReady(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

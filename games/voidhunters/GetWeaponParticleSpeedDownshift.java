@@ -109,7 +109,7 @@ final class GetWeaponParticleSpeedDownshift extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0, int[] param1) {
+    final static String encodeShipCode(int param0, int[] param1) {
         int var3 = 0;
         byte[] var2 = null;
         RuntimeException var2_ref = null;

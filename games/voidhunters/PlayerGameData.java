@@ -79,7 +79,7 @@ final class PlayerGameData implements DiffableState {
         RuntimeException var3 = null;
         try {
           param0.writeBits(-632, this.version, 8);
-          SetArmageddonTimerStart.a(param0, (byte) -15, this.tipsDone, 8);
+          SetArmageddonTimerStart.writeBooleanArray(param0, (byte) -15, this.tipsDone, 8);
           stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = 79;
           stackIn_3_2 = (this.blueprint != null);

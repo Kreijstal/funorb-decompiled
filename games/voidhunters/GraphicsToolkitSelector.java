@@ -64,7 +64,7 @@ final class GraphicsToolkitSelector {
           if (param2 != 0) {
             field_b = (String) null;
           }
-          stackIn_3_0 = TextureOperation.a(param3, (byte) -35, param0, var6, var5_int);
+          stackIn_3_0 = TextureOperation.loadMonochromeBitmapFont(param3, (byte) -35, param0, var6, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

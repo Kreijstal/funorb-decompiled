@@ -783,7 +783,7 @@ final class CarouselCommongameInfo implements DiffableState {
           }
           var7 = 0;
           if (GetUseOffscreenRendering.field_o) {
-            var7 = SetTestActionLag.a(this.history[var5], (byte) -9);
+            var7 = SetTestActionLag.calculateGameStateChecksum(this.history[var5], (byte) -9);
           }
           this.history[var6].prepareTick(false, var4);
           if (ProxyAuthenticationException.field_c == 1) {
@@ -805,7 +805,7 @@ final class CarouselCommongameInfo implements DiffableState {
           ((CarouselSlot) (Object) stackIn_23_0).advanceSimulation(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4);
           if (GetUseOffscreenRendering.field_o) {
             UiStatefulStyle.swapStateSerializationBuffers(9487);
-            var8 = SetTestActionLag.a(this.history[var5], (byte) -117);
+            var8 = SetTestActionLag.calculateGameStateChecksum(this.history[var5], (byte) -117);
             if (var8 != var7) {
               var9 = ClientDataWriteRequest.readCarouselState((byte) -39);
               UiStatefulStyle.swapStateSerializationBuffers(9487);

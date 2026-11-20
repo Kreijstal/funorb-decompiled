@@ -73,7 +73,7 @@ final class CountermeasureLauncherWeaponDefinition extends WeaponDefinition {
     final int getProjectileCount(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          CountermeasureLauncherWeaponDefinition.a(31, (int[]) null, 36L, (String) null, (byte) 17);
+          CountermeasureLauncherWeaponDefinition.canOpenQuickChatPhraseMenu(31, (int[]) null, 36L, (String) null, (byte) 17);
           return RenderResourceNode.field_k;
         }
         return RenderResourceNode.field_k;
@@ -88,7 +88,7 @@ final class CountermeasureLauncherWeaponDefinition extends WeaponDefinition {
         field_b = null;
     }
 
-    final static boolean a(int param0, int[] param1, long param2, String param3, byte param4) {
+    final static boolean canOpenQuickChatPhraseMenu(int param0, int[] param1, long param2, String param3, byte param4) {
         RuntimeException var6 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;

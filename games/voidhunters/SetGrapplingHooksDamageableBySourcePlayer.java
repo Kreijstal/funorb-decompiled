@@ -6,7 +6,7 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void clearLobbyState(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         LobbyPlayerEntry var3 = null;
@@ -15,7 +15,7 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         try {
           SetSpinningBladeSpindamageMultiplier.field_o = null;
           if (param0 != 15) {
-            SetGrapplingHooksDamageableBySourcePlayer.a(-127);
+            SetGrapplingHooksDamageableBySourcePlayer.clearLobbyState(-127);
           }
           ArchiveTextureProvider.field_h = false;
           SetThrusterParticleSpeedDownshift.field_o = null;

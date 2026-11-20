@@ -89,7 +89,7 @@ final class Under13AccountNoticePanel extends UiContainer implements UiHotspotLi
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sendLobbyControlRequest(int param0, byte param1) {
         IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
         var2.writeIsaacByte(24335, param0);
         var2.writeByte(0, 1);
@@ -146,7 +146,7 @@ final class Under13AccountNoticePanel extends UiContainer implements UiHotspotLi
           if (param0 == 11) {
             return;
           }
-          Under13AccountNoticePanel.a(-96, (byte) -47);
+          Under13AccountNoticePanel.sendLobbyControlRequest(-96, (byte) -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

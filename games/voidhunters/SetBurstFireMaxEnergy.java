@@ -48,7 +48,7 @@ final class SetBurstFireMaxEnergy extends ConsoleCommand {
           if (param0 <= 10) {
             field_o = (boolean[]) null;
           }
-          PhasedEnergyBeamWeaponDefinition.l(8611);
+          PhasedEnergyBeamWeaponDefinition.initializeSocialPanelRoot(8611);
           SetThrusterAutobalancing.updateChatPanelLayout(116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

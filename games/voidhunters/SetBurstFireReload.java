@@ -10,7 +10,7 @@ final class SetBurstFireReload extends ConsoleCommand {
         return GetPhasedEnergyBeamProjectiles.createBorderedSpriteTiles(param2, param1, 1, true);
     }
 
-    final static void a(String param0, int param1, int param2, int param3, int param4, String param5) {
+    final static void sendChatMessage(String param0, int param1, int param2, int param3, int param4, String param5) {
         IsaacPacketBuffer var8 = null;
         int var7 = 0;
         try {
@@ -49,7 +49,7 @@ final class SetBurstFireReload extends ConsoleCommand {
           SetMachineGunEnergyUsed.submitSettingsChange(45, 62, arguments[0].intValue(50));
           if (obfuscationGuard > -119) {
             var4 = (String) null;
-            SetBurstFireReload.a((String) null, 24, 98, -9, 52, (String) null);
+            SetBurstFireReload.sendChatMessage((String) null, 24, 98, -9, 52, (String) null);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

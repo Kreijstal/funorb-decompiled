@@ -84,7 +84,7 @@ final class GetSalvoRepairTimeMultiplier extends ConsoleCommand {
         }
     }
 
-    final static void a(Object[] param0, int param1, Object[] param2, int param3) {
+    final static void copyObjectArrayInto(Object[] param0, int param1, Object[] param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;

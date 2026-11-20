@@ -239,9 +239,9 @@ final class ScrollPaneWidget extends Widget {
             }
             if (ObjectiveMarker.field_b.field_o != 0) {
               if (ArchiveTextureProvider.field_h) {
-                GetComponentBreakingExplosionForceMultiplier.a(38, param3);
+                GetComponentBreakingExplosionForceMultiplier.sendLobbyControlRequest(38, param3);
               } else {
-                GpuSprite.a((byte) 108, param3);
+                GpuSprite.sendLobbyOptions((byte) 108, param3);
               }
             }
             ResourceArchive.a(param3, SetThrusterParticleSpeedDownshift.field_o, true, (byte) -67);

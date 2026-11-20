@@ -459,7 +459,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_l = false;
         try {
           this.toolkit = param0;
-          this.texture = SetAngleset.a(28, param1, param2, param0, param3 ? 6408 : 6407);
+          this.texture = SetAngleset.createSpriteTexture(28, param1, param2, param0, param3 ? 6408 : 6407);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

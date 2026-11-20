@@ -125,7 +125,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
           if (var2 != this.field_h) {
             this.field_h = var2;
             this.field_m.setVertexShader(0, var2);
-            this.e(127);
+            this.uploadLightingConstants(127);
             this.onProjectionChanged(true);
             this.onTextureTransformChanged(8);
             this.onModelTransformChanged(5);
@@ -196,7 +196,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         return this.field_n;
     }
 
-    private final void e(int param0) {
+    private final void uploadLightingConstants(int param0) {
         GpuTransform3D var4 = null;
         jagdx.IDirect3DDevice var3 = null;
         if (null != this.field_h) {

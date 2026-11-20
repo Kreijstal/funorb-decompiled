@@ -64,21 +64,21 @@ final class PlayerContextMenu {
               if (param2 != 3) {
                 if (param2 != 10) {
                   if (param2 == 15) {
-                    AudioPump.a(param1, this.targetGameId, 91);
+                    AudioPump.selectLobbyGame(param1, this.targetGameId, 91);
                   } else {
                     if (16 != param2) {
                       return false;
                     }
-                    AudioPump.a(param1, 0, 53);
+                    AudioPump.selectLobbyGame(param1, 0, 53);
                   }
                 } else {
-                  ArmBehaviourFactory.a(this.targetGameId, param1, 20694);
+                  ArmBehaviourFactory.sendLobbyGameRequest(this.targetGameId, param1, 20694);
                 }
               } else {
-                LiteralStrings.a(this.targetGameId, -1, param1);
+                LiteralStrings.sendLobbyGameRequest(this.targetGameId, -1, param1);
               }
             } else {
-              SpriteArchiveDecoder.a(param1, (byte) -128, this.targetGameId);
+              SpriteArchiveDecoder.sendLobbyGameRequest(param1, (byte) -128, this.targetGameId);
             }
           } else {
             World.sendLobbyPlayerRemovalRequest(param1, this.targetPlayerKey, param0 ^ -25);

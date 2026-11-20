@@ -262,7 +262,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (UiDraggableContainer.field_z == 3 &&
-          SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, CommonUiArchiveResources.commonUiArchive) &&
+          SetBombletSprayEnergyUsed.areCommonUiArchivesReady(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, CommonUiArchiveResources.commonUiArchive) &&
           GetUseOffscreenRendering.loadAllArchiveGroups(-20230, BufferedFile.field_i)) {
           MissionFactory.clearLoadingBarResources((byte) 123);
           GetPhasedEnergyBeamFireForce.buildFullscreenConfirmationText(false);
@@ -301,7 +301,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (UiDraggableContainer.field_z == 11) {
           if (OpenGlVertexBuffer.field_j != null && (!OpenGlVertexBuffer.field_j.loadIndex((byte) -38) ||
             !OpenGlVertexBuffer.field_j.loadAllGroups(param1 ^ 113))) {
-            IncrementVariableAction.setProgressDialogStatus(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.waitingForTextMessage, WorldSpriteTiler.loadingTextMessage), -1, 0.0f);
+            IncrementVariableAction.setProgressDialogStatus(SetMomentOfInertiaPerpointCalcDownshift.formatArchiveLoadingStatus(-93, OpenGlVertexBuffer.field_j, PasswordValidator.waitingForTextMessage, WorldSpriteTiler.loadingTextMessage), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -741,7 +741,7 @@ abstract class NetworkGameClient extends GameApplet {
             SetGrapplingHookRopeChangeRate.clearSessionCookieAndReload(MissionList.getApplet((byte) -90), -18209);
           }
           if (var4 == 9) {
-            SetNebulaFadesOutWhenClose.a(17, MissionList.getApplet((byte) -127));
+            SetNebulaFadesOutWhenClose.openSupportPage(17, MissionList.getApplet((byte) -127));
           }
           if (var4 == 10) {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 17);

@@ -9,7 +9,7 @@ final class MapClearanceCircleFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new MapClearanceCircle[param1]);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void sendLobbyGameSettings(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
@@ -27,7 +27,7 @@ final class MapClearanceCircleFactory implements GameStateFactory {
           var2.writeLengthByte(-var3 + var2.position, -129);
           return;
         }
-        MapClearanceCircleFactory.a(-30, true);
+        MapClearanceCircleFactory.sendLobbyGameSettings(-30, true);
         var2.position = var2.position + 1;
         var3Lifetime1 = var2.position;
         var2.writeByte(0, 5);

@@ -219,7 +219,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
                 this.displayModes[incrementValue$0] = var3_ref_fm__[var5];
               }
             }
-            SpecialOrderSubmessage.a(this.displayModes, (byte) 62);
+            SpecialOrderSubmessage.sortDisplayModes(this.displayModes, (byte) 62);
           }
           stackIn_31_1 = !(this.displayModes.length <= 0);
           this.hasDisplayModes = stackIn_31_1;

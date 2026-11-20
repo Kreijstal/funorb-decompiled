@@ -72,7 +72,7 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
         return 3;
     }
 
-    final static void l(int param0) {
+    final static void initializeSocialPanelRoot(int param0) {
         SpecialOrderButtonState.field_i = new Widget(0L, (Widget) null);
         if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
           SpecialOrderButtonState.field_i.addChild(-561, DialogMessagePanel.field_v);

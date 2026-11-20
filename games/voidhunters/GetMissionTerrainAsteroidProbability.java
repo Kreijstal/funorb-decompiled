@@ -10,7 +10,7 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static SoftwareAlphaBitmapFont a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
+    final static SoftwareAlphaBitmapFont loadAlphaBitmapFont(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         SoftwareAlphaBitmapFont stackIn_2_0 = null;
         SoftwareAlphaBitmapFont stackIn_7_0 = null;

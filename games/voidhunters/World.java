@@ -8872,7 +8872,7 @@ final class World implements DiffableState, CompactGameState {
             var15Lifetime1 = var10.getDefaultConnectionX(127) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 99) - var10.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(var9.getAngle(0), 124) >> 16;
             var16Lifetime2 = var10.getDefaultConnectionX(-25) * TextureLineShape.sinAngle(var9.getAngle(0), 62) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 64) >> 16;
             CarouselPlayerInfoFactory.a(param3.chassis.finaly, 1, var14Lifetime2 + var16Lifetime2, var13Lifetime3 + var15Lifetime1, param7, param3.chassis.finalx);
-            var17 = TiledSpriteTextureOperation.a(var10, (byte) -84);
+            var17 = TiledSpriteTextureOperation.getComponentDisplayName(var10, (byte) -84);
             GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var17, 16777215, param7.worldToScreenY(true, -10000 + var9.getY((byte) -109)), param7.worldToScreenX(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(94, var17) >> 1), 4266);
             if (null != param3.getAttachmentPreviewOutline(56)) {
               var31 = param3.getAttachmentPreviewOutline(116);

@@ -129,7 +129,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (2 == SetReverbDry.getChatFilter(var5, (byte) 19)) {
               OpenGlPostEffect.setChatFilter(1, (byte) -76, param1, var5);
             }
-            SetBurstFireReload.a(var4_ref_String, param2 - 25634, -1, param0, NetworkMessageState.chatChannel, ChoosePlayerNameForm.privateChatTargetDisplayName);
+            SetBurstFireReload.sendChatMessage(var4_ref_String, param2 - 25634, -1, param0, NetworkMessageState.chatChannel, ChoosePlayerNameForm.privateChatTargetDisplayName);
           } else {
             var13 = (String) null;
             var12 = (String) null;

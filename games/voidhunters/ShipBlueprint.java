@@ -21,7 +21,7 @@ final class ShipBlueprint implements DiffableState {
           if (param0 > 54) {
             return;
           }
-          ShipBlueprint.a(-115, -119);
+          ShipBlueprint.pollReplyBytes(-115, -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,7 +39,7 @@ final class ShipBlueprint implements DiffableState {
 
     final int getEncodedBitLength(byte param0) {
         if (param0 > 113) {
-          return GetArmageddonTimerStart.a(-95, 8, this.description, null != this.description ? this.description.length : 0);
+          return GetArmageddonTimerStart.getPackedIntArrayBitLength(-95, 8, this.description, null != this.description ? this.description.length : 0);
         }
         return 100;
     }
@@ -48,20 +48,20 @@ final class ShipBlueprint implements DiffableState {
         try {
           this.description = SetVariableActionFactory.readPackedIntArray((byte) 37, this.description, param0, 8);
           if (param1) {
-            ShipBlueprint.a(-120, 56);
+            ShipBlueprint.pollReplyBytes(-120, 56);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "boa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean pollReplyBytes(int param0, int param1) {
         try {
           if (AccountNameAvailabilityReplies.field_b.position >= param0) {
             return true;
           }
           if (param1 != 30000) {
-            ShipBlueprint.a(-32, -68);
+            ShipBlueprint.pollReplyBytes(-32, -68);
           }
           if (null == SetShipSpawnInvulnerabilityTime.field_o) {
             return false;

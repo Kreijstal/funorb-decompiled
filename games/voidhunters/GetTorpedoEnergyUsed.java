@@ -6,7 +6,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawRectangleBorder(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = VoidHunters.field_G;
         if (param4 != -2) {
           return;
@@ -59,7 +59,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetTorpedoEnergyUsed.a(-5, -124, 5, -27, -5, 31, 53);
+            GetTorpedoEnergyUsed.drawRectangleBorder(-5, -124, 5, -27, -5, 31, 53);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(160, 80));
           return stackIn_3_0;

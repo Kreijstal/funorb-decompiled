@@ -148,7 +148,7 @@ final class CarouselGameClient {
               var11 = (CarouselEvent) (param0.events.next((byte) 36));
             }
             var11_ref = param0.getStateStepsAgo(var10, param2 ^ -949);
-            var12 = SetTestActionLag.a(var11_ref, (byte) -70);
+            var12 = SetTestActionLag.calculateGameStateChecksum(var11_ref, (byte) -70);
             stackIn_22_0 = (CarouselCommongameInfo) (param0);
             stackIn_23_1 = (var12 != param1);
             stackIn_22_0.outOfSync = stackIn_23_1;

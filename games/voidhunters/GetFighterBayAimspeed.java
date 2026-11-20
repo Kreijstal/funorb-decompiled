@@ -50,7 +50,7 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
           }
           var5_int = param2.getGroupId(param1, -127);
           var6 = param2.getFileId(true, var5_int, param4);
-          stackIn_3_0 = GetMissionTerrainAsteroidProbability.a(320, var6, param3, var5_int, param2);
+          stackIn_3_0 = GetMissionTerrainAsteroidProbability.loadAlphaBitmapFont(320, var6, param3, var5_int, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

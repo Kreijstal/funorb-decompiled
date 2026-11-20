@@ -609,7 +609,7 @@ final class GameMenuScreen {
                                                   GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, -5);
                                                 }
                                                 if (SetMissionTerrainDebrisProbability.field_p) {
-                                                  ArmBehaviourFactory.a(0, 11, 20694);
+                                                  ArmBehaviourFactory.sendLobbyGameRequest(0, 11, 20694);
                                                 }
                                               }
                                             } else {
@@ -648,7 +648,7 @@ final class GameMenuScreen {
                                                               return;
                                                             }
                                                             var23 = SetOndamageParticleLife.encodeComponentWords(var10.chassis, param0 ^ -98);
-                                                            var18 = GetWeaponParticleSpeedDownshift.a(65535, var23);
+                                                            var18 = GetWeaponParticleSpeedDownshift.encodeShipCode(65535, var23);
                                                             var14 = var18;
                                                             var13 = var14;
                                                             var13Lifetime1 = var18;
@@ -1056,7 +1056,7 @@ final class GameMenuScreen {
             if (null != EmailAvailabilityChecks.fullscreenCanvas) {
               VariableCondition.exitFullscreen((byte) -42);
             }
-            SetMaxShipSize.a(MissionList.getApplet((byte) -105), 0);
+            SetMaxShipSize.openSubscriptionPage(MissionList.getApplet((byte) -105), 0);
           }
           if (var2 == 1) {
             GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, false, (byte) -85, 0);

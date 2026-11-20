@@ -11,7 +11,7 @@ final class ArbProgram {
         super.finalize();
     }
 
-    final static void a(byte param0, ShipComponent param1) {
+    final static void attachPresetComponents(byte param0, ShipComponent param1) {
         int var2_int = 0;
         ShipComponent var3 = null;
         int var4 = 0;

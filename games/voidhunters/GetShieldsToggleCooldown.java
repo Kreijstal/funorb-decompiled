@@ -4,7 +4,7 @@
 final class GetShieldsToggleCooldown extends ConsoleCommand {
     static String field_o;
 
-    final static void a(PacketBuffer param0, boolean param1) {
+    final static void readPackedScoreRow(PacketBuffer param0, boolean param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

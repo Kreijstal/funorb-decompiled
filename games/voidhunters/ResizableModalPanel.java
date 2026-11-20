@@ -224,7 +224,7 @@ abstract class ResizableModalPanel extends ModalPanel {
             }
             GetUseCircleFill.a(var5, var4, 0);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              GetShieldsToggleCooldown.a(var14, true);
+              GetShieldsToggleCooldown.readPackedScoreRow(var14, true);
               if (var6_intLifetime1 != 0) {
                 ArchiveLoadRequest.appendScoreRow(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
               } else {

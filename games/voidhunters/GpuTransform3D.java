@@ -600,7 +600,7 @@ final class GpuTransform3D extends Transform3D {
           if (var3 != -2) {
             if (-1 != var3) {
               var4 = Asteroid.activeReportDialog.isMuteSelected((byte) -108) ? 1 : 0;
-              SecondaryNodeQueue.a(var3, (byte) -119, Asteroid.activeReportDialog.getReportedName(0), Asteroid.activeReportDialog.targetPlayerKey, param2, var4 != 0);
+              SecondaryNodeQueue.sendAbuseReport(var3, (byte) -119, Asteroid.activeReportDialog.getReportedName(0), Asteroid.activeReportDialog.targetPlayerKey, param2, var4 != 0);
             }
             Asteroid.activeReportDialog = null;
             TileTextureOperation.closePlayerContextMenu(0);

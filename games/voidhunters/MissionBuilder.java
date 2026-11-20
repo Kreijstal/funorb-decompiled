@@ -382,7 +382,7 @@ final class MissionBuilder implements DiffableState {
               }
               break;
             }
-            var13Lifetime1 = GetBoostersCooldown.a(param0, (byte) 72);
+            var13Lifetime1 = GetBoostersCooldown.chooseSpawnableChassis(param0, (byte) 72);
             var14 = 1 + TextHotspotRegion.randomBoundedInt(param0, 3, 127);
             for (var15 = 0; var15 < 2; var15++) {
               for (var16 = 0; var16 < var14; var16++) {

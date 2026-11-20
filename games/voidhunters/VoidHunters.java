@@ -2166,7 +2166,7 @@ public final class VoidHunters extends NetworkGameClient {
           SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
         }
         if (-5 == AgeValidator.field_f) {
-          LiteralStrings.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, 11);
+          LiteralStrings.sendLobbyGameRequest(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, 11);
           SetMassDriverFireForce.field_o = true;
           AgeValidator.field_f = GetArmageddonTimerStart.field_o;
         }

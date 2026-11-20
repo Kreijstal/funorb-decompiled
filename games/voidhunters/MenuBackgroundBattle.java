@@ -131,7 +131,7 @@ final class MenuBackgroundBattle {
             if (var10_ref_nbb != null) {
               var11_ref_ml = var10_ref_nbb.chassis.findComponentAtPoint(var6, var5, true);
               if (var11_ref_ml != null) {
-                var12_ref_String = TiledSpriteTextureOperation.a(var11_ref_ml, (byte) 72);
+                var12_ref_String = TiledSpriteTextureOperation.getComponentDisplayName(var11_ref_ml, (byte) 72);
                 var13 = var11_ref_ml.getFinalx(true);
                 var14 = var11_ref_ml.getFinaly((byte) 111);
                 var15 = this.camera.worldToScreenX(var13, (byte) 115);
@@ -145,7 +145,7 @@ final class MenuBackgroundBattle {
           var7_refLifetime1 = var18Lifetime1;
           if (var18Lifetime1 != null) {
             var8Lifetime1 = var18Lifetime1.getBoundingExtent(-71) << 2;
-            var9 = TiledSpriteTextureOperation.a(var18Lifetime1.chassis, (byte) 106);
+            var9 = TiledSpriteTextureOperation.getComponentDisplayName(var18Lifetime1.chassis, (byte) 106);
             var10 = var18Lifetime1.chassis.getFinalx(true);
             var11 = -var5 + var10;
             var12 = var18Lifetime1.chassis.getFinaly((byte) 104);

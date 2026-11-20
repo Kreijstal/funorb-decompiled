@@ -29,13 +29,13 @@ final class SetArmageddonWarning extends ConsoleCommand {
           if (param2 >= -25) {
             return true;
           }
-          if (GetAngularVelocitySustainMax.a(param1, -1, param0)) {
+          if (GetAngularVelocitySustainMax.containsTextOrReverse(param1, -1, param0)) {
             return false;
           }
-          if (SetMassDriverProjectileOndamageParticles.a(param0, 95, param1)) {
+          if (SetMassDriverProjectileOndamageParticles.containsTextOrReverseAfterRemovingCharacter(param0, 95, param1)) {
             return false;
           }
-          if (!SetTabForScores.a(param1, param0, true)) {
+          if (!SetTabForScores.containsNameOrReverseIgnoringUnderscores(param1, param0, true)) {
             return true;
           }
           return false;

@@ -44,7 +44,7 @@ final class GetSniperCannonReload extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean openUrlWithWindowsShell(String param0, int param1) {
         int var3 = 0;
         String var2 = null;
         int var4 = 0;

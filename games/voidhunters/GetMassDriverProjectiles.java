@@ -17,7 +17,7 @@ final class GetMassDriverProjectiles extends ConsoleCommand {
         try {
           if (obfuscationGuard > -119) {
             var4 = (byte[]) null;
-            GetMassDriverProjectiles.a((byte) -22, false, (byte[]) null, -98, -44, -111);
+            GetMassDriverProjectiles.sendLobbyOptionChange((byte) -22, false, (byte[]) null, -98, -44, -111);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(81, 89));
           return stackIn_3_0;
@@ -39,7 +39,7 @@ final class GetMassDriverProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(byte param0, boolean param1, byte[] param2, int param3, int param4, int param5) {
+    final static void sendLobbyOptionChange(byte param0, boolean param1, byte[] param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
         IsaacPacketBuffer var6 = RequestNewestBlackboxRecording.field_p;

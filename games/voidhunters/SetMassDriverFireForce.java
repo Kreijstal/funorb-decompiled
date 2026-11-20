@@ -48,7 +48,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static String e(byte param0) {
+    final static String getLoadingStatusText(byte param0) {
         if (UiDraggableContainer.field_z < 2) {
           return GetSpinningBladeTopSpeed.connectingToUpdateServerText;
         }

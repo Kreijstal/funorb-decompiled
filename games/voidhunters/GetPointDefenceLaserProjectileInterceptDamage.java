@@ -14,7 +14,7 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
         field_q = null;
         if (param0 != 0) {
           boolean[] var2 = (boolean[]) null;
-          GetPointDefenceLaserProjectileInterceptDamage.a((boolean[]) null, (boolean[]) null, (byte) 62);
+          GetPointDefenceLaserProjectileInterceptDamage.updateDebugFlagsFromKeys((boolean[]) null, (boolean[]) null, (byte) 62);
         }
         field_p = null;
         field_s = null;
@@ -36,7 +36,7 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
         try {
           if (obfuscationGuard >= -119) {
             var4 = (boolean[]) null;
-            GetPointDefenceLaserProjectileInterceptDamage.a((boolean[]) null, (boolean[]) null, (byte) -94);
+            GetPointDefenceLaserProjectileInterceptDamage.updateDebugFlagsFromKeys((boolean[]) null, (boolean[]) null, (byte) -94);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(151, 103));
           return stackIn_3_0;
@@ -54,7 +54,7 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
         }
     }
 
-    final static void a(boolean[] param0, boolean[] param1, byte param2) {
+    final static void updateDebugFlagsFromKeys(boolean[] param0, boolean[] param1, byte param2) {
         int var3_int = 0;
         int var4 = 0;
         int var6 = 0;

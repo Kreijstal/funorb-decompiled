@@ -171,7 +171,7 @@ final class SpecialOrderStatus extends IntrusiveNode {
         this.specialOrderId = param0;
     }
 
-    final static byte[] a(byte param0, int param1) {
+    final static byte[] getNoisePermutation(byte param0, int param1) {
         CachedByteArray var2;
         byte[] var3_ref_byte__;
         int var3;

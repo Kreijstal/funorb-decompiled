@@ -15,7 +15,7 @@ final class CellularNoiseTextureOperation extends TextureOperation {
     private int horizontalFrequency;
 
     final void postDecode(byte param0) {
-        this.permutation = SpecialOrderStatus.a((byte) 36, this.seed);
+        this.permutation = SpecialOrderStatus.getNoisePermutation((byte) 36, this.seed);
         this.initializeCellOffsets(30866);
         if (param0 > -35) {
           PacketBuffer var3 = (PacketBuffer) null;

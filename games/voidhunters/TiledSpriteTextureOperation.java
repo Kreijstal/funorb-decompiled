@@ -17,7 +17,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
     public TiledSpriteTextureOperation() {
     }
 
-    final static String a(ShipComponent param0, byte param1) {
+    final static String getComponentDisplayName(ShipComponent param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
@@ -630,11 +630,11 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 if (var12.field_fc && (!var12.field_Gb ||
                   !var12.field_cc &&
                   !var12.field_ac)) {
-                  ArmBehaviourFactory.a(var12.getGameId((byte) -13), param4, 20694);
+                  ArmBehaviourFactory.sendLobbyGameRequest(var12.getGameId((byte) -13), param4, 20694);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  SpriteArchiveDecoder.a(param4, (byte) -88, var12.getGameId((byte) -13));
+                  SpriteArchiveDecoder.sendLobbyGameRequest(param4, (byte) -88, var12.getGameId((byte) -13));
                 }
               }
             }

@@ -58,15 +58,15 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_18_0 = SetGrapplingHookMaxLength.field_q;
             return stackIn_18_0;
           }
-          if (GetAngularVelocitySustainMax.a(var5, -1, var3)) {
+          if (GetAngularVelocitySustainMax.containsTextOrReverse(var5, -1, var3)) {
             stackIn_21_0 = GetShieldsDirectionalArc.field_q;
             return stackIn_21_0;
           }
-          if (SetMassDriverProjectileOndamageParticles.a(var3, 95, var5)) {
+          if (SetMassDriverProjectileOndamageParticles.containsTextOrReverseAfterRemovingCharacter(var3, 95, var5)) {
             stackIn_25_0 = SetBombletSprayProjectileLife.field_p;
             return stackIn_25_0;
           }
-          if (!SetTabForScores.a(var5, var3, true)) {
+          if (!SetTabForScores.containsNameOrReverseIgnoringUnderscores(var5, var3, true)) {
             stackIn_30_0 = SetShipDirectionArrow.field_r;
             return stackIn_30_0;
           }

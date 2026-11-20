@@ -119,7 +119,7 @@ final class TextureRectangleShape extends TextureRasterShape {
         int var6 = this.top * param1 >> 12;
         int var8 = 62 % ((-48 - param0) / 40);
         int var7 = this.bottom * param1 >> 12;
-        GetTorpedoEnergyUsed.a(var7, var4, this.outlineColor, var6, -2, var5, this.outlineWidth);
+        GetTorpedoEnergyUsed.drawRectangleBorder(var7, var4, this.outlineColor, var6, -2, var5, this.outlineWidth);
     }
 
     final void drawFilled(byte param0, int param1, int param2) {

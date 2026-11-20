@@ -602,7 +602,7 @@ final class ArchiveIndex {
           java.net.MalformedURLException var4 = null;
           try {
             if (PlatformService.osNameLowercase.startsWith("win") &&
-              GetSniperCannonReload.a(param3, 69)) {
+              GetSniperCannonReload.openUrlWithWindowsShell(param3, 69)) {
               return;
             }
             try {

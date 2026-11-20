@@ -15,7 +15,7 @@ final class SetArmageddonTimerStart extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(IsaacPacketBuffer param0, byte param1, boolean[] param2, int param3) {
+    final static void writeBooleanArray(IsaacPacketBuffer param0, byte param1, boolean[] param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;

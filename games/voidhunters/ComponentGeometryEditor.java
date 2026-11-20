@@ -69,7 +69,7 @@ final class ComponentGeometryEditor {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!CountermeasureLauncherWeaponDefinition.a(param1, param0, param3, param4, (byte) -82)) {
+          if (!CountermeasureLauncherWeaponDefinition.canOpenQuickChatPhraseMenu(param1, param0, param3, param4, (byte) -82)) {
             return false;
           }
           var6_int = -8 % ((param2 - 36) / 44);

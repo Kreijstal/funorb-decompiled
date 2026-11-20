@@ -6,7 +6,7 @@ final class OpenGlShaderProgram {
     long field_b;
     private OpenGlGpuToolkit field_c;
 
-    final static void a(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, int param7) {
+    final static void drawTextAlpha(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         String var9 = null;
         RuntimeException stackIn_8_0 = null;
@@ -23,7 +23,7 @@ final class OpenGlShaderProgram {
             return;
           }
           var9 = (String) null;
-          OpenGlShaderProgram.a(-50, -31, 102, (String) null, (byte) 43, -91, 35, -110);
+          OpenGlShaderProgram.drawTextAlpha(-50, -31, 102, (String) null, (byte) 43, -91, 35, -110);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

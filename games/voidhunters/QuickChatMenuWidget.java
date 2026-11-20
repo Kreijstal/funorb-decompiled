@@ -93,7 +93,7 @@ final class QuickChatMenuWidget extends Widget {
                 OpenGlPostEffect.setChatFilter(1, (byte) -119, param2, var6);
               }
               var8 = (String) null;
-              SetBurstFireReload.a((String) null, -25719, var5, param3, NetworkMessageState.chatChannel, ChoosePlayerNameForm.privateChatTargetDisplayName);
+              SetBurstFireReload.sendChatMessage((String) null, -25719, var5, param3, NetworkMessageState.chatChannel, ChoosePlayerNameForm.privateChatTargetDisplayName);
               stackIn_15_0 = NetworkMessageState.chatChannel;
               stackIn_15_1 = var5;
               stackIn_15_2 = PendingRequest.privateChatRecipientKey;

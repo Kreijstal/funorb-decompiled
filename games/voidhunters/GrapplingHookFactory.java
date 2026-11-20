@@ -77,7 +77,7 @@ final class GrapplingHookFactory implements GameStateFactory {
         }
     }
 
-    final static void a(byte param0, ShipComponent param1) {
+    final static void attachPresetComponents(byte param0, ShipComponent param1) {
         ShipComponent var4 = null;
         ShipComponent var5 = null;
         try {

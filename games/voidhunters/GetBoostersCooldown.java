@@ -9,7 +9,7 @@ final class GetBoostersCooldown extends ConsoleCommand {
     static boolean[] savedHintCompletion;
     static int field_p;
 
-    final static int a(Random param0, byte param1) {
+    final static int chooseSpawnableChassis(Random param0, byte param1) {
         int var4 = 0;
         int var2_int = 0;
         int var3 = 0;

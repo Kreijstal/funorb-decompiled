@@ -64,7 +64,7 @@ final class SecondaryNodeQueue {
         return var2;
     }
 
-    final static void a(int param0, byte param1, String param2, long param3, int param4, boolean param5) {
+    final static void sendAbuseReport(int param0, byte param1, String param2, long param3, int param4, boolean param5) {
         RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, param4);
         RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;
         int var7_int = RequestNewestBlackboxRecording.field_p.position;

@@ -374,7 +374,7 @@ final class TutorialController {
               var24Lifetime1 = param1.screenToWorldY(0, var16);
             }
           }
-          OpenGlShaderProgram.a(1, param3, -1, param6, (byte) -117, param7, -5 + var16, var15);
+          OpenGlShaderProgram.drawTextAlpha(1, param3, -1, param6, (byte) -117, param7, -5 + var16, var15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

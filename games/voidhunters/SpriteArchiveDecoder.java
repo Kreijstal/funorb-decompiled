@@ -6,7 +6,7 @@ final class SpriteArchiveDecoder {
     static String field_c;
     static int field_b;
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void sendLobbyGameRequest(int param0, byte param1, int param2) {
         IsaacPacketBuffer var3 = null;
         IsaacPacketBuffer var3Lifetime1;
         if (param1 < -82) {

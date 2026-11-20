@@ -33,7 +33,7 @@ final class SetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0, ResourceArchive param1, String param2, String param3) {
+    final static String formatArchiveLoadingStatus(int param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
@@ -84,7 +84,7 @@ final class SetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         field_o = null;
         if (param0 <= 71) {
           String var2 = (String) null;
-          SetMomentOfInertiaPerpointCalcDownshift.a(-36, (ResourceArchive) null, (String) null, (String) null);
+          SetMomentOfInertiaPerpointCalcDownshift.formatArchiveLoadingStatus(-36, (ResourceArchive) null, (String) null, (String) null);
         }
     }
 

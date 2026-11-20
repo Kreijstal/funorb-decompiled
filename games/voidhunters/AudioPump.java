@@ -15,7 +15,7 @@ final class AudioPump implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void selectLobbyGame(int param0, int param1, int param2) {
         LobbyGameEntry var6 = null;
         LobbyGameEntry var7 = null;
         IsaacPacketBuffer var4 = null;

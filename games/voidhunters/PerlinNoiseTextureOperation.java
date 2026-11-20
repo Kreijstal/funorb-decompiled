@@ -200,7 +200,7 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
         int var3;
         int var4;
         var4 = VoidHunters.field_G;
-        this.permutation = SpecialOrderStatus.a((byte) 95, this.seed);
+        this.permutation = SpecialOrderStatus.getNoisePermutation((byte) 95, this.seed);
         this.initializeOctaves(-80);
         var2 = this.octaveCount - 1;
         if (param0 >= -35) {

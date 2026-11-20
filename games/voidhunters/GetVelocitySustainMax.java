@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetVelocitySustainMax extends ConsoleCommand {
-    final static SerializableGameState a(Class[] param0, GameStateFactory[] param1, Class param2, int param3) {
+    final static SerializableGameState createStateForClass(Class[] param0, GameStateFactory[] param1, Class param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         SerializableGameState stackIn_3_0 = null;

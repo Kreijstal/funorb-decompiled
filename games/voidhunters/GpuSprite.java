@@ -353,7 +353,7 @@ final class GpuSprite extends ToolkitSprite {
 
     }
 
-    final static void a(byte param0, int param1) {
+    final static void sendLobbyOptions(byte param0, int param1) {
         IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
         var2.writeIsaacByte(24335, param1);
         var2.position = var2.position + 1;
