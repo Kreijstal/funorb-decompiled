@@ -201,13 +201,13 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
           stackIn_3_1 = 38;
           stackIn_3_2 = 2;
           stackIn_3_3 = (DialogMessagePanel.field_w * 4 + 8) * param1;
-          stackIn_4_4 = (qg.field_a == MapClearanceCircle.field_f);
+          stackIn_4_4 = (LegacyOpenGlMaterialEffect.field_a == MapClearanceCircle.field_f);
           var7_int = ((ScrollPaneWidget) (Object) stackIn_3_0).layoutAndUpdateScrolling((byte) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, DialogMessagePanel.field_w * 2 + 4) ? 1 : 0;
           if (param6 <= 108) {
             TiledSpriteTextureOperation.clearSharedReferences(false);
           }
           var8 = MapClearanceCircle.field_f.content.children;
-          var9 = wt.a(false);
+          var9 = MonotonicMillisClock.currentTimeMillis(false);
           var11 = null;
           var12 = (LobbyGameEntry) (var8.first(0));
           while (var12 != null) {
@@ -386,7 +386,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 if (!var12.field_cc &&
                   !var12.field_ac) {
                   if (var12.field_Xb) {
-                    var12.field_Mb.text = wt.field_c;
+                    var12.field_Mb.text = MonotonicMillisClock.field_c;
                   } else {
                     var12.field_Mb.text = MouseWheelInput.field_a;
                   }

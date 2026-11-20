@@ -73,7 +73,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[137] = ConsoleCharacterStream.field_d;
         var2[111] = SetMomentOfInertiaPerpointCalcDownshift.field_p;
         var2[213] = GetPhysicsCollisionPhantomForceMultiplier.field_o;
-        var2[63] = ku.field_c;
+        var2[63] = LegacyOpenGlUnlitEffect.field_c;
         var2[3] = bra.field_d;
         var2[145] = TickClock.field_a;
         var2[179] = SetMassDriverEnergyUsed.field_o;
@@ -145,7 +145,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[109] = GetPhysicsCollisionGrapplingHookForceMultiplier.field_o;
         var2[232] = Particle.field_h;
         var2[188] = GetTorqueDownshift.field_o;
-        var2[83] = la.field_m;
+        var2[83] = LegacyOpenGlUnderwaterEffect.field_m;
         var2[68] = MatchResults.field_b;
         var2[97] = GetAutoAfkTimeout.field_o;
         var2[24] = GetInnateThrusters.field_p;
@@ -161,7 +161,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[222] = UiComboBoxRenderer.field_a;
         var2[207] = iea.field_d;
         var2[47] = GetUseNiceTrails.field_p;
-        var2[208] = la.field_k;
+        var2[208] = LegacyOpenGlUnderwaterEffect.field_k;
         var2[206] = gib.field_a;
         var2[228] = TextureCoordinateMode.field_b;
         var2[155] = GetShipAimLines.field_p;

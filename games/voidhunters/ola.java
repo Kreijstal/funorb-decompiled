@@ -32,14 +32,14 @@ final class ola extends gna {
         } else {
           var1 = new SoftwareIndexedSprite2D[GpuProjectionMode.field_a];
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
-            var1[var2] = new SoftwareIndexedSprite2D(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], sh.field_a[var2], rlb.field_d);
+            var1[var2] = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], sh.field_a[var2], rlb.field_d);
           }
           MatchResults.a(94);
           return var1;
         }
         var1Lifetime1 = new SoftwareIndexedSprite2D[GpuProjectionMode.field_a];
         for (var2Lifetime1 = 0; GpuProjectionMode.field_a > var2Lifetime1; var2Lifetime1++) {
-          var1Lifetime1[var2Lifetime1] = new SoftwareIndexedSprite2D(fbb.field_i, Ship.field_H, iib.field_e[var2Lifetime1], SettingsChange.field_f[var2Lifetime1], SetMissionTerrainDebrisProbability.field_o[var2Lifetime1], hla.field_a[var2Lifetime1], sh.field_a[var2Lifetime1], rlb.field_d);
+          var1Lifetime1[var2Lifetime1] = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2Lifetime1], SettingsChange.field_f[var2Lifetime1], SetMissionTerrainDebrisProbability.field_o[var2Lifetime1], hla.field_a[var2Lifetime1], sh.field_a[var2Lifetime1], rlb.field_d);
         }
         MatchResults.a(94);
         return var1Lifetime1;

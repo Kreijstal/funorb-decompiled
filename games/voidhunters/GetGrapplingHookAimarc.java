@@ -65,8 +65,8 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
           var6 = UiToggleButtonRenderer.computeSoundPan(128, param4);
           var7 = SpriteTextureOperation.computeSoundGain((byte) 126, param4, param0);
           var8 = param2;
-          if (fbb.field_j[param2] > 1) {
-            var8 = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, fbb.field_j[param2], 121) + param2;
+          if (LegacyOpenGlMaterialEffectManager.field_j[param2] > 1) {
+            var8 = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, LegacyOpenGlMaterialEffectManager.field_j[param2], 121) + param2;
           }
           var9 = fa.field_d[var8];
           var10 = ServerInfo.playPannedSample(var7, 100, var6, var9);

@@ -20,7 +20,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     int field_Kc;
     private OpenGlBloomEffect field_A;
     private OpenGlInterleavedVertexBuffer field_Ec;
-    private fbb field_d;
+    private LegacyOpenGlMaterialEffectManager field_d;
     private IntrusiveDeque field_D;
     nk field_yb;
     private boolean field_m;
@@ -209,8 +209,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           } else {
             this.resetTextureMatrix(param2 ^ 0);
           }
-          this.field_d.a(param0, param1, var7, -109, var9, var8);
-          if (!this.field_d.a((OpenGlTexture) (var5), 74, var6)) {
+          this.field_d.setEffect(param0, param1, var7, -109, var9, var8);
+          if (!this.field_d.setTexture((OpenGlTexture) (var5), 74, var6)) {
             this.bindTexture(58, (OpenGlTexture) (var5));
             this.setTextureCombineMode(param2 + 0, var6);
           }
@@ -1419,7 +1419,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final boolean supportsUnderwaterEffects() {
-        return this.field_d.a(8, 3);
+        return this.field_d.isEffectSupported(8, 3);
     }
 
     final static int[] reflectXAndReversePoints(int param0, int[] param1) {
@@ -1920,7 +1920,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 this.field_A = null;
               }
             }
-            this.field_d = new fbb(this);
+            this.field_d = new LegacyOpenGlMaterialEffectManager(this);
             this.initializeRenderState(770);
             this.updateCanvasDimensions(-1001);
             this.copyFrontToBackBuffer();
@@ -2336,7 +2336,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glMultMatrixf(this.field_F.getColumnMajorMatrix(param0), 0);
         if (this.field_Yb) {
-          this.field_d.field_b.e(34336);
+          this.field_d.underwaterEffect.updateProgramAndWaterPlane(34336);
         }
         this.applyDirectionalLightPositions((byte) 95);
         this.applyPointLights(22);
@@ -2743,9 +2743,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         this.field_r.a(true);
         if (!(this.getAllocatedMemory(97) <= 100663296) &&
-          !(60000L + this.field_vc >= wt.a(false))) {
+          !(60000L + this.field_vc >= MonotonicMillisClock.currentTimeMillis(false))) {
           System.gc();
-          this.field_vc = wt.a(false);
+          this.field_vc = MonotonicMillisClock.currentTimeMillis(false);
         }
         this.field_Mc = param0;
         return;

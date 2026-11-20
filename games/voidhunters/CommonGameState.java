@@ -34,7 +34,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
         RuntimeException var3 = null;
         try {
           GetDebrisThrowable.a(param1, "Starting to read");
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.carouselInfo = null;
           } else {
             this.carouselInfo = new CarouselCommongameInfo((PlayerNameRegistry) (this));

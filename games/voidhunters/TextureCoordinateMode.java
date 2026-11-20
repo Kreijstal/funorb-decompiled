@@ -27,7 +27,7 @@ final class TextureCoordinateMode {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = rlb.field_d[dla.a(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var5);
+          var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var5);
         }
         MatchResults.a(84);
         if (param0) {

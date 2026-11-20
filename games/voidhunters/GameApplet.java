@@ -38,7 +38,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == TextureFilterMode.field_a &&
             !mb.field_i) {
-            GetCountermeasureLauncherAimarc.field_p = wt.a(false);
+            GetCountermeasureLauncherAimarc.field_p = MonotonicMillisClock.currentTimeMillis(false);
             BufferedFile.sleep(-65, 5000L);
             MissionList.field_b = null;
             this.shutdownApplet(false, 10);
@@ -107,7 +107,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = wt.a(false);
+          var2_long = MonotonicMillisClock.currentTimeMillis(false);
           var4 = DisplayMode.field_b[SetDetachmentMode.field_o];
           DisplayMode.field_b[SetDetachmentMode.field_o] = var2_long;
           SetDetachmentMode.field_o = 31 & SetDetachmentMode.field_o + 1;
@@ -335,7 +335,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           nqa.field_a = true;
           GetShowTutorial.field_o = true;
           GetDebrisSurvives.field_q = false;
-          KaleidoscopeTextureOperation.field_k = wt.a(false);
+          KaleidoscopeTextureOperation.field_k = MonotonicMillisClock.currentTimeMillis(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -418,7 +418,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         try {
-          var2_long = wt.a(false);
+          var2_long = MonotonicMillisClock.currentTimeMillis(false);
           var4 = SetSniperCannonFiringLeeway.field_o[CarouselSlotStateDump.field_f];
           SetSniperCannonFiringLeeway.field_o[CarouselSlotStateDump.field_f] = var2_long;
           if (param0 != -5) {
@@ -463,7 +463,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == TextureFilterMode.field_a &&
             !mb.field_i) {
-            GetCountermeasureLauncherAimarc.field_p = 4000L + wt.a(false);
+            GetCountermeasureLauncherAimarc.field_p = 4000L + MonotonicMillisClock.currentTimeMillis(false);
             return;
           }
           return;
@@ -673,7 +673,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != GetCountermeasureLauncherAimarc.field_p) {
-                    stackIn_95_0 = compareLongs(wt.a(false), GetCountermeasureLauncherAimarc.field_p);
+                    stackIn_95_0 = compareLongs(MonotonicMillisClock.currentTimeMillis(false), GetCountermeasureLauncherAimarc.field_p);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_95_0 >= 0)) {
@@ -737,7 +737,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !mb.field_i) {
             GetShowTutorial.field_o = true;
             if (GetCountermeasureLauncherAimarc.field_o &&
-              -KaleidoscopeTextureOperation.field_k + wt.a(false) > 1000L) {
+              -KaleidoscopeTextureOperation.field_k + MonotonicMillisClock.currentTimeMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (var2.width < GetPhasedEnergyBeamFireForce.field_p) {

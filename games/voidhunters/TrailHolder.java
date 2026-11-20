@@ -155,11 +155,11 @@ final class TrailHolder implements DiffableState {
         }
         stackIn_11_0 = (var8.readUnsignedByte((byte) -106) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        ti.field_h = var8.readString(-1);
+        LegacyOpenGlEnvironmentMappedWaterEffect.field_h = var8.readString(-1);
         if (var4 != 0) {
           TextureCoordinateMode.field_a = var8.readString(-1);
         } else {
-          TextureCoordinateMode.field_a = ti.field_h;
+          TextureCoordinateMode.field_a = LegacyOpenGlEnvironmentMappedWaterEffect.field_h;
         }
         if (wja.field_a == 1) {
           psb.field_a = var8.readUnsignedShort(1869);

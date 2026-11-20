@@ -34,7 +34,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
           if (tc.field_c != GetOndamageParticleSpeed.field_o) {
             return false;
           }
-          var2_long = wt.a(false);
+          var2_long = MonotonicMillisClock.currentTimeMillis(false);
           if (param0 != cd.field_c &&
             SetAutoDetail.field_p < 0) {
             var4_ref_c = (c) (GetSpinningBladeAimarc.field_q.first(param0 + 0));

@@ -105,7 +105,7 @@ final class Mission implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (null == this.savedState) {
               this.savedState = new World();
             }

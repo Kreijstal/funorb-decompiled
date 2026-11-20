@@ -212,7 +212,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
           if (param1 != 32) {
             return;
           }
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             return;
           }
           this.dx = param0.readBits(param1 - 32, 32);

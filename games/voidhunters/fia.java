@@ -44,12 +44,12 @@ final class fia {
         if (ShipComponent.field_l != null) {
           for (var3 = 0; var3 < SetCountermeasuresCooldown.field_o.length; var3++) {
             if (SetCountermeasuresCooldown.field_o[var3] == param1 &&
-              0 < fbb.field_f[var3]) {
-              dupTemp$6 = fbb.field_f[var3] - 1;
+              0 < LegacyOpenGlMaterialEffectManager.field_f[var3]) {
+              dupTemp$6 = LegacyOpenGlMaterialEffectManager.field_f[var3] - 1;
               arrayValue$7 = ShipComponent.field_l[var3];
-              fbb.field_f[var3] = dupTemp$6;
+              LegacyOpenGlMaterialEffectManager.field_f[var3] = dupTemp$6;
               var4 = arrayValue$7[dupTemp$6];
-              ShipComponent.field_l[var3][fbb.field_f[var3]] = null;
+              ShipComponent.field_l[var3][LegacyOpenGlMaterialEffectManager.field_f[var3]] = null;
               return var4;
             }
           }
@@ -178,7 +178,7 @@ final class fia {
                     if (SetMachineGunEnergyUsed.field_o[97]) {
                       if (!khb.field_b) {
                         SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p + 1;
-                        uob.field_g = new int[1][0];
+                        LegacyOpenGlEnvironmentReflectionEffect.field_g = new int[1][0];
                         hw.field_d = new int[1][0];
                         if (EnvironmentReflectionGpuMaterialEffect.field_g.length <= SetMissileLauncherProjectileLife.field_p) {
                           SetMissileLauncherProjectileLife.field_p = -1;
@@ -188,7 +188,7 @@ final class fia {
                     } else {
                       if (SetMachineGunEnergyUsed.field_o[96]) {
                         if (!khb.field_b) {
-                          uob.field_g = new int[1][0];
+                          LegacyOpenGlEnvironmentReflectionEffect.field_g = new int[1][0];
                           SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p - 1;
                           hw.field_d = new int[1][0];
                           if (SetMissileLauncherProjectileLife.field_p < -1) {
@@ -201,7 +201,7 @@ final class fia {
                           if (!khb.field_b &&
                             SetMissileLauncherProjectileLife.field_p >= 0 &&
                             BoundedRandomAccessFile.field_c == 2) {
-                            var17 = uob.field_g[uob.field_g.length - 1];
+                            var17 = LegacyOpenGlEnvironmentReflectionEffect.field_g[LegacyOpenGlEnvironmentReflectionEffect.field_g.length - 1];
                             if (1 < var17.length) {
                               var26 = new int[var17.length - 2];
                               var18 = var26;
@@ -209,7 +209,7 @@ final class fia {
                               for (var3_int = 0; var26.length > var3_int; var3_int++) {
                                 var2[var3_int] = var17[var3_int];
                               }
-                              uob.field_g[uob.field_g.length - 1] = var26;
+                              LegacyOpenGlEnvironmentReflectionEffect.field_g[LegacyOpenGlEnvironmentReflectionEffect.field_g.length - 1] = var26;
                             }
                           }
                           khb.field_b = true;
@@ -239,12 +239,12 @@ final class fia {
                               } else {
                                 if (BoundedRandomAccessFile.field_c == 2) {
                                   System.out.print("int[][] detail_lines=new int[][]{");
-                                  for (var1_int = 0; uob.field_g.length > var1_int; var1_int++) {
+                                  for (var1_int = 0; LegacyOpenGlEnvironmentReflectionEffect.field_g.length > var1_int; var1_int++) {
                                     if (var1_int > 0) {
                                       System.out.print(",");
                                     }
                                     System.out.print("{");
-                                    var31 = uob.field_g[var1_int];
+                                    var31 = LegacyOpenGlEnvironmentReflectionEffect.field_g[var1_int];
                                     for (var3_intLifetime2 = 0; var3_intLifetime2 < var31.length; var3_intLifetime2++) {
                                       if (var3_intLifetime2 > 0) {
                                         System.out.print(",");
@@ -306,22 +306,22 @@ final class fia {
                 if (BoundedRandomAccessFile.field_c != 2) {
                   return;
                 }
-                var23 = uob.field_g[-1 + uob.field_g.length];
+                var23 = LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length];
                 var3 = var23;
                 var4 = var21.screenToWorldX(true, GetUseDetailLines.field_o);
                 var5 = var21.screenToWorldY(0, GetTorpedoReload.field_q);
                 if (ujb.field_c == 1 &&
                   SetMachineGunEnergyUsed.field_o[81]) {
-                  uob.field_g[-1 + uob.field_g.length] = SetAutozoomSpeedDivide.a(var4, false, var23, (byte) -14);
-                  uob.field_g[-1 + uob.field_g.length] = SetAutozoomSpeedDivide.a(var5, false, uob.field_g[-1 + uob.field_g.length], (byte) -14);
+                  LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.a(var4, false, var23, (byte) -14);
+                  LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.a(var5, false, LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length], (byte) -14);
                 }
                 if (ujb.field_c == 2) {
-                  var6_ref_int____ = new int[uob.field_g.length + 1][];
-                  for (var7 = 0; uob.field_g.length > var7; var7++) {
-                    var6_ref_int____[var7] = uob.field_g[var7];
+                  var6_ref_int____ = new int[LegacyOpenGlEnvironmentReflectionEffect.field_g.length + 1][];
+                  for (var7 = 0; LegacyOpenGlEnvironmentReflectionEffect.field_g.length > var7; var7++) {
+                    var6_ref_int____[var7] = LegacyOpenGlEnvironmentReflectionEffect.field_g[var7];
                   }
-                  var6_ref_int____[uob.field_g.length] = new int[]{};
-                  uob.field_g = var6_ref_int____;
+                  var6_ref_int____[LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = new int[]{};
+                  LegacyOpenGlEnvironmentReflectionEffect.field_g = var6_ref_int____;
                 }
                 if (GetBots.field_o != 1) {
                   return;

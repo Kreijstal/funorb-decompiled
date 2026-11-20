@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bt {
+final class OpenGlDisplayLists {
     static String field_b;
-    private int field_c;
+    private int baseListId;
     static PacketBuffer field_a;
 
-    final void b(int param0) {
+    final void endList(int param0) {
         jaggl.OpenGL.glEndList();
         if (param0 != 4864) {
-          this.b(30);
+          this.endList(30);
         }
     }
 
@@ -24,25 +24,25 @@ final class bt {
         field_a = null;
     }
 
-    final void a(boolean param0, char param1) {
+    final void callList(boolean param0, char param1) {
         if (param0) {
-          jaggl.OpenGL.glCallList(this.field_c + param1);
+          jaggl.OpenGL.glCallList(this.baseListId + param1);
           return;
         }
-        this.field_c = 21;
-        jaggl.OpenGL.glCallList(this.field_c + param1);
+        this.baseListId = 21;
+        jaggl.OpenGL.glCallList(this.baseListId + param1);
     }
 
-    bt(OpenGlToolkit param0, int param1) {
+    OpenGlDisplayLists(OpenGlToolkit param0, int param1) {
         try {
-          this.field_c = jaggl.OpenGL.glGenLists(param1);
+          this.baseListId = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1) {
-        jaggl.OpenGL.glNewList(this.field_c + param1, 4864);
+    final void beginList(int param0, int param1) {
+        jaggl.OpenGL.glNewList(this.baseListId + param1, 4864);
         if (param0 >= -79) {
           field_a = (PacketBuffer) null;
         }

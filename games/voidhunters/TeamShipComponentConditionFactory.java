@@ -71,7 +71,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         var2 = VoidHunters.field_G;
         RemoveEventActionFactory.field_b = false;
         EnvironmentReflectionGpuMaterialEffect.field_j = null;
-        if (OpenGlSprite.field_c) {
+        if (OpenGlSprite.reconnecting) {
           SetPointDefenceLaserAimarc.field_o.showConnectionRestored(-123);
           if (param0 > 30) {
             return;

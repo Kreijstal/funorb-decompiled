@@ -50,13 +50,13 @@ final class SetUseSprites extends ConsoleCommand {
           SetBurstFireMaxEnergy.field_o = new boolean[GpuProjectionMode.field_a];
           SettingsChange.field_f = new int[GpuProjectionMode.field_a];
           SetMissionTerrainDebrisProbability.field_o = new int[GpuProjectionMode.field_a];
-          iib.field_e = new int[GpuProjectionMode.field_a];
+          LegacyOpenGlScrollingNoiseEffect.field_e = new int[GpuProjectionMode.field_a];
           var17.position = -(GpuProjectionMode.field_a * 8) - 7 + param1.length;
-          fbb.field_i = var17.readUnsignedShort(1869);
+          LegacyOpenGlMaterialEffectManager.field_i = var17.readUnsignedShort(1869);
           Ship.field_H = var17.readUnsignedShort(1869);
           var3 = (255 & var17.readUnsignedByte((byte) -110)) + 1;
           for (var4 = 0; GpuProjectionMode.field_a > var4; var4++) {
-            iib.field_e[var4] = var16.readUnsignedShort(1869);
+            LegacyOpenGlScrollingNoiseEffect.field_e[var4] = var16.readUnsignedShort(1869);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < GpuProjectionMode.field_a; var4Lifetime1++) {
             SettingsChange.field_f[var4Lifetime1] = var17.readUnsignedShort(1869);

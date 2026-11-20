@@ -46,7 +46,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.owner = param0.readBits(0, 32);
           this.team = param0.readBits(param1 ^ 32, 32);
           this.dragging = param0.readBits(param1 - 32, 32);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.ai = null;
           } else {
             if (this.ai == null) {
@@ -58,16 +58,16 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.reloadtimer = param0.readBits(0, 32);
           this.maxEnergy = param0.readBits(0, 32);
           this.repairModeReload = param0.readBits(0, 32);
-          this.repairModeOn = kv.readBoolean(false, param0);
-          this.selfDestructPrepared = kv.readBoolean(false, param0);
-          this.selfDestructActivated = kv.readBoolean(false, param0);
+          this.repairModeOn = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          this.selfDestructPrepared = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          this.selfDestructActivated = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.selfDestructCountdown = param0.readBits(0, param1);
-          this.salvoJustFired = kv.readBoolean(false, param0);
-          this.justAttachedSomething = kv.readBoolean(false, param0);
-          this.shieldsOn = kv.readBoolean(false, param0);
+          this.salvoJustFired = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          this.justAttachedSomething = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          this.shieldsOn = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.shieldsToggleCooldown = param0.readBits(0, 32);
           this.lastAttackers = SetVariableActionFactory.a((byte) 37, this.lastAttackers, param0, 4);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {
             if (this.targetBlueprint == null) {
@@ -472,7 +472,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.owner = param0.readBits(0, 32);
           this.team = param0.readBits(0, 32);
           this.dragging = param0.readBits(0, 32);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.ai = null;
           } else {
             if (null == this.ai) {
@@ -483,16 +483,16 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.energy = param0.readBits(0, 32);
           this.reloadtimer = param0.readBits(0, 32);
           this.repairModeReload = param0.readBits(0, 32);
-          this.repairModeOn = kv.readBoolean(param1, param0);
-          this.selfDestructPrepared = kv.readBoolean(false, param0);
-          this.selfDestructActivated = kv.readBoolean(param1, param0);
+          this.repairModeOn = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
+          this.selfDestructPrepared = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          this.selfDestructActivated = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
           this.selfDestructCountdown = param0.readBits(0, 32);
-          this.salvoJustFired = kv.readBoolean(false, param0);
-          this.justAttachedSomething = kv.readBoolean(false, param0);
-          this.shieldsOn = kv.readBoolean(false, param0);
+          this.salvoJustFired = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          this.justAttachedSomething = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          this.shieldsOn = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.shieldsToggleCooldown = param0.readBits(0, 32);
           this.lastAttackers = SetVariableActionFactory.a((byte) 37, this.lastAttackers, param0, 4);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {
             if (this.targetBlueprint == null) {

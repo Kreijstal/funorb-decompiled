@@ -45,7 +45,7 @@ final class dpb {
               var3Lifetime1 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
             }
             if (param1.field_a == 1) {
-              var3Lifetime1 = "[" + SetReverbGain.a(wt.field_b, new String[]{param1.field_o}, 107) + "] ";
+              var3Lifetime1 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{param1.field_o}, 107) + "] ";
             }
             if (param1.field_a == 4 &&
               null != vla.field_E) {

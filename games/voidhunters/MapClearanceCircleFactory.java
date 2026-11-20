@@ -68,7 +68,7 @@ final class MapClearanceCircleFactory implements GameStateFactory {
           var3 = param0.readBits(0, 12);
           var4 = new apb[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!kv.readBoolean(false, param0)) {
+            if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
               var6 = param0.readBits(0, BodyInZoneCondition.a(-97, var5 - 1));
               var4[var5] = var4[var6];
             } else {

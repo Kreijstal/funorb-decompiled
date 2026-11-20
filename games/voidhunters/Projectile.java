@@ -77,10 +77,10 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setTargetBody(int param0, byte param1) {
         if (param1 > -94) {
           World var4 = (World) null;
-          this.a((byte) 43, (World) null);
+          this.update((byte) 43, (World) null);
         }
         this.targetBody = param0;
     }
@@ -98,7 +98,7 @@ final class Projectile extends MovingObject implements DiffableState {
         return this.damage;
     }
 
-    final void a(byte param0, World param1) {
+    final void update(byte param0, World param1) {
         Object stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -175,8 +175,8 @@ final class Projectile extends MovingObject implements DiffableState {
                   var7 = var5Lifetime1 - this.y >> 6;
                   var8 = TextLayout.approximateVectorLength(var6Lifetime1, (byte) 120, var7);
                   if (var8 > 0) {
-                    var6Lifetime1 = var6Lifetime1 * la.field_k / var8;
-                    var7 = var7 * la.field_k / var8;
+                    var6Lifetime1 = var6Lifetime1 * LegacyOpenGlUnderwaterEffect.field_k / var8;
+                    var7 = var7 * LegacyOpenGlUnderwaterEffect.field_k / var8;
                     var9 = var6Lifetime1 - this.dx;
                     var10 = -this.dy + var7;
                     var11 = TextLayout.approximateVectorLength(var9, (byte) 111, var10);
@@ -216,14 +216,14 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final void b(int param0, byte param1) {
+    final void setFiredPlayer(int param0, byte param1) {
         this.firedPlayer = param0;
         if (param1 != 47) {
           this.life = -66;
         }
     }
 
-    final void a(int param0, Camera2D param1) {
+    final void draw(int param0, Camera2D param1) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -310,7 +310,7 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final int b(boolean param0) {
+    final int getFiredPlayer(boolean param0) {
         if (param0) {
           this.angle = -104;
         }
@@ -354,16 +354,16 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setFiredTeam(int param0, int param1) {
         int var3 = -117 % ((param0 - 63) / 42);
         this.firedTeam = param1;
     }
 
-    final static boolean f(byte param0) {
+    final static boolean isReconnecting(byte param0) {
         if (param0 != -21) {
           field_r = (String) null;
         }
-        return OpenGlSprite.field_c;
+        return OpenGlSprite.reconnecting;
     }
 
     final int getTargetBody(byte param0) {
@@ -373,7 +373,7 @@ final class Projectile extends MovingObject implements DiffableState {
         return this.targetBody;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setImpactEndpoint(int param0, int param1, int param2) {
         this.y = this.y - this.dy;
         this.x = this.x - this.dx;
         int var4 = -this.x + param1;
@@ -410,14 +410,14 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setDamage(int param0, int param1) {
         this.damage = param0;
         if (param1 <= 50) {
           field_r = (String) null;
         }
     }
 
-    final void f(int param0) {
+    final void markBeamImpact(int param0) {
         if (param0 != -24805) {
           return;
         }
@@ -459,7 +459,7 @@ final class Projectile extends MovingObject implements DiffableState {
         return this.firedTeam;
     }
 
-    final int d(int param0) {
+    final int getX(int param0) {
         if (param0 <= 100) {
           field_r = (String) null;
         }
@@ -486,9 +486,9 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final int e(byte param0) {
+    final int getY(byte param0) {
         if (param0 != -107) {
-          this.e((byte) -9);
+          this.getY((byte) -9);
         }
         return this.y;
     }
@@ -561,7 +561,7 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isBeam(int param0) {
         if (this.type == 3) {
           return true;
         }

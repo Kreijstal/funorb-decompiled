@@ -62,7 +62,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = rlb.field_d[dla.a((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(fbb.field_i, Ship.field_H, iib.field_e[0], SettingsChange.field_f[0], SetMissionTerrainDebrisProbability.field_o[0], hla.field_a[0], var3);
+        Sprite var4 = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[0], SettingsChange.field_f[0], SetMissionTerrainDebrisProbability.field_o[0], hla.field_a[0], var3);
         MatchResults.a(58);
         return var4;
     }

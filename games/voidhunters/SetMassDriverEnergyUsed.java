@@ -47,7 +47,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         }
         if (RoundResultFactory.field_a == null) {
           if (!SetFightersPerPlayerMaximum.field_p) {
-            if (!uga.field_d &&
+            if (!LegacyOpenGlTurbulenceEffect.field_d &&
               9 != SetBombletSprayProjectileDamage.field_o &&
               SetBombletSprayProjectileDamage.field_o != 10 &&
               SetBombletSprayProjectileDamage.field_o != 11) {
@@ -78,7 +78,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
             return true;
           }
           if (!SetFightersPerPlayerMaximum.field_p) {
-            if (uga.field_d) {
+            if (LegacyOpenGlTurbulenceEffect.field_d) {
               return GetDetachmentMode.a(param0, -9307, param1);
             }
             if (9 == SetBombletSprayProjectileDamage.field_o) {

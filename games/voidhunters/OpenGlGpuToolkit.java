@@ -557,7 +557,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, param4 + 34176, qg.toOpenGlCombineSource(param3, false));
+          jaggl.OpenGL.glTexEnvi(8960, param4 + 34176, LegacyOpenGlMaterialEffect.toOpenGlCombineSource(param3, false));
           if (param1 != -21115) {
             this.applyFogParameters(71);
           }
@@ -615,7 +615,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, qg.toOpenGlCombineSource(param2, false));
+          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, LegacyOpenGlMaterialEffect.toOpenGlCombineSource(param2, false));
           stackIn_2_0 = 8960;
           stackIn_2_1 = param3 + 34200;
           if (param0) {
@@ -861,9 +861,9 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
         }
         if (100663296 < this.getGpuMemoryUsage(3554) &&
-          (this.field_Tc + 60000L) < wt.a(false)) {
+          (this.field_Tc + 60000L) < MonotonicMillisClock.currentTimeMillis(false)) {
           System.gc();
-          this.field_Tc = wt.a(false);
+          this.field_Tc = MonotonicMillisClock.currentTimeMillis(false);
         }
         super.updateFrame(param0);
     }

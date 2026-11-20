@@ -259,7 +259,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           this.triggers = param0.readBits(0, 16);
           this.mousex = param0.readBits(0, 32);
           this.mousey = param0.readBits(0, 32);
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (this.specialOrderSubmessage == null) {
               this.specialOrderSubmessage = new SpecialOrderSubmessage();
             }

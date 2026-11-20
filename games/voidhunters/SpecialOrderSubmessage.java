@@ -389,7 +389,7 @@ final class SpecialOrderSubmessage implements DiffableState {
         var4 = VoidHunters.field_G;
         try {
           this.ordertype = param0.readBits(0, 32);
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (null == this.settingsChange) {
               this.settingsChange = new SettingsChange();
             }
@@ -397,7 +397,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           } else {
             this.settingsChange = null;
           }
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.spawnchoice = null;
           } else {
             if (null == this.spawnchoice) {
@@ -405,7 +405,7 @@ final class SpecialOrderSubmessage implements DiffableState {
             }
             this.spawnchoice.readState(param0, false);
           }
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.vote = null;
           } else {
             if (this.vote != null) {
@@ -415,7 +415,7 @@ final class SpecialOrderSubmessage implements DiffableState {
               this.vote.readState(param0, false);
             }
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.blueprint = null;
             return;
           }

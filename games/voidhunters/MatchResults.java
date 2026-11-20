@@ -168,7 +168,7 @@ final class MatchResults implements DiffableState {
         if (param0 <= 36) {
           return;
         }
-        iib.field_e = null;
+        LegacyOpenGlScrollingNoiseEffect.field_e = null;
         rlb.field_d = null;
         SetMissionTerrainDebrisProbability.field_o = null;
         sh.field_a = (byte[][]) null;

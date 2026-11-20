@@ -131,7 +131,7 @@ abstract class vq extends UiContainer implements ValidatableInput {
               var2.writeInt(ea.field_d, 332614536);
               TextureLineShape.field_h.write(0, var2.payload, 13, 0);
               gob.field_c = gob.field_c + 1;
-              GetRepairModePower.field_r = 30000L + wt.a(false);
+              GetRepairModePower.field_r = 30000L + MonotonicMillisClock.currentTimeMillis(false);
             }
             if (gob.field_c == 3) {
               if (0 < TextureLineShape.field_h.available(param0 ^ -6269)) {
@@ -142,7 +142,7 @@ abstract class vq extends UiContainer implements ValidatableInput {
                 }
                 gob.field_c = gob.field_c + 1;
               } else {
-                if (GetRepairModePower.field_r < wt.a(false)) {
+                if (GetRepairModePower.field_r < MonotonicMillisClock.currentTimeMillis(false)) {
                   stackIn_27_0 = SetReverbDry.a(-84, -2);
                   return stackIn_27_0;
                 }

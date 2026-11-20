@@ -36,7 +36,7 @@ final class SocketNetworkArchiveClient extends NetworkArchiveClient {
           NetworkArchiveRequest var2Lifetime1;
           var16 = VoidHunters.field_G;
           if (this.connection != null) {
-            var2_long = wt.a(false);
+            var2_long = MonotonicMillisClock.currentTimeMillis(false);
             var4 = (int)(var2_long - this.lastProcessTime);
             if (var4 > 200) {
               var4 = 200;
@@ -425,7 +425,7 @@ final class SocketNetworkArchiveClient extends NetworkArchiveClient {
             if (param2) {
               SocketNetworkArchiveClient.clearSharedReferences(-98);
             }
-            this.lastProcessTime = wt.a(param2);
+            this.lastProcessTime = MonotonicMillisClock.currentTimeMillis(param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

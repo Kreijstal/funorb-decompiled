@@ -34,7 +34,7 @@ final class SetAutoDetail extends ConsoleCommand {
               param5 = param1.createArray(11995, var6_int);
             }
             for (var7 = 0; var7 < var6_int; var7++) {
-              if (!kv.readBoolean(false, param2)) {
+              if (!LegacyOpenGlSpecularEffect.readBoolean(false, param2)) {
                 param5[var7] = null;
               } else {
                 if (param5[var7] == null) {

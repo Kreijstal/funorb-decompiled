@@ -158,7 +158,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
           this.grabbedComponentOffsety = param0.readBits(0, param1);
           this.firedFromId = param0.readBits(param1 ^ 32, 32);
           this.firedFromPlayer = param0.readBits(0, 32);
-          this.retracting = kv.readBoolean(false, param0);
+          this.retracting = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mqb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -287,7 +287,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
           this.grabbedComponentOffsety = param0.readBits(0, 32);
           this.firedFromId = param0.readBits(0, 32);
           this.firedFromPlayer = param0.readBits(0, 32);
-          this.retracting = kv.readBoolean(param1, param0);
+          this.retracting = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -1012,7 +1012,7 @@ final class GetFixedaim extends ConsoleCommand {
                         }
                         case 17: {
                             try {
-                                if (fbb.b(var5, 15923)) {
+                                if (LegacyOpenGlMaterialEffectManager.b(var5, 15923)) {
                                     statePc = 18;
                                 } else {
                                     statePc = 18;

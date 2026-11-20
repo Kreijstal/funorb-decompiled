@@ -45,7 +45,7 @@ final class WeaponBehaviour implements DiffableState {
         try {
           this.reload = param0.readBits(0, 16);
           this.weapontype = param0.readBits(0, 4);
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (this.targetLock == null) {
               this.targetLock = new TargetLock();
             }

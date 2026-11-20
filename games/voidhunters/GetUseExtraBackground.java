@@ -7,7 +7,7 @@ final class GetUseExtraBackground extends ConsoleCommand {
     }
 
     final static void a(int param0) {
-        uga.field_d = false;
+        LegacyOpenGlTurbulenceEffect.field_d = false;
         if (null != MidiNote.field_m) {
           MidiNote.field_m.closeSubmenu(16384);
           if (~ow.field_b != param0) {

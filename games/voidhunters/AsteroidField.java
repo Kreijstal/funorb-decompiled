@@ -709,7 +709,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime43 = HuffmanCodec.fetchLocalizedResource((byte) -8, "option_state_for_members");
           if (null != var2Lifetime43) {
-            ti.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime43);
+            LegacyOpenGlEnvironmentMappedWaterEffect.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime43);
           }
           var2Lifetime44 = HuffmanCodec.fetchLocalizedResource((byte) -81, "option_state_members_only");
           if (null != var2Lifetime44) {
@@ -905,7 +905,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime92 = HuffmanCodec.fetchLocalizedResource((byte) -100, "armageddon_in");
           if (var2Lifetime92 != null) {
-            bt.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime92);
+            OpenGlDisplayLists.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime92);
           }
           var2Lifetime93 = HuffmanCodec.fetchLocalizedResource((byte) -124, "next_mission_colon");
           if (var2Lifetime93 != null) {
@@ -1053,7 +1053,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime129 = HuffmanCodec.fetchLocalizedResource((byte) -120, "COMPONENT_USE_THRUSTER_BOOSTER_TEXT");
           if (null != var2Lifetime129) {
-            jjb.field_f = Cp1252Strings.decode((byte) -125, var2Lifetime129);
+            LegacyOpenGlWaterTextures.field_f = Cp1252Strings.decode((byte) -125, var2Lifetime129);
           }
           var2Lifetime130 = HuffmanCodec.fetchLocalizedResource((byte) -7, "COMPONENT_USE_SPECIAL_COMPONENT_TEXT");
           if (var2Lifetime130 != null) {

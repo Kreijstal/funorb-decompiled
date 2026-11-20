@@ -41,7 +41,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             } else {
               var2 = SetReverbGain.a(fab.field_b, new String[]{waa.field_x}, 114);
             }
-            if (uga.field_d) {
+            if (LegacyOpenGlTurbulenceEffect.field_d) {
               lh.a((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
               fj.b(param0 ^ -22377);
             }
@@ -84,7 +84,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                     decompiledSharedTail0 = (var10 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var4 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, param0 + 8147) + "] ";
+                    var4 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, param0 + 8147) + "] ";
                   }
                 }
               }

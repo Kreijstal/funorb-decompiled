@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jjb {
-    OpenGlTexture3D field_a;
-    OpenGlTexture3D field_g;
-    boolean field_d;
+final class LegacyOpenGlWaterTextures {
+    OpenGlTexture3D normalVolume;
+    OpenGlTexture3D scrollingNoiseVolume;
+    boolean usesVolumeTextures;
     static String field_f;
-    OpenGlTexture2D[] field_e;
-    OpenGlTexture2D[] field_c;
-    OpenGlTexture3D field_b;
+    OpenGlTexture2D[] noiseFrames;
+    OpenGlTexture2D[] scrollingNoiseFrames;
+    OpenGlTexture3D noiseVolume;
 
     public static void clearSharedReferences(boolean param0) {
         field_f = null;
@@ -17,7 +17,7 @@ final class jjb {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.fillRectangle(param4, param3, param5, param1, param0);
         } else {
@@ -31,7 +31,7 @@ final class jjb {
         field_f = (String) null;
     }
 
-    jjb(OpenGlToolkit param0) {
+    LegacyOpenGlWaterTextures(OpenGlToolkit param0) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -46,43 +46,43 @@ final class jjb {
         byte[] var23 = null;
         byte[] var24 = null;
         int var2_intLifetime1;
-        this.field_a = null;
-        this.field_g = null;
-        this.field_e = null;
-        this.field_c = null;
-        this.field_b = null;
+        this.normalVolume = null;
+        this.scrollingNoiseVolume = null;
+        this.noiseFrames = null;
+        this.scrollingNoiseFrames = null;
+        this.noiseVolume = null;
         try {
-          this.field_d = param0.field_tc;
+          this.usesVolumeTextures = param0.field_tc;
           SetBombletSprayProjectileLife.a(param0, 16);
-          if (!this.field_d) {
-            this.field_e = new OpenGlTexture2D[16];
+          if (!this.usesVolumeTextures) {
+            this.noiseFrames = new OpenGlTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var23 = ppb.a(GetMissionTimeLimit.field_p, 32768 * var2_int, true, 32768);
-              this.field_e[var2_int] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
+              this.noiseFrames[var2_int] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
-            this.field_c = new OpenGlTexture2D[16];
+            this.scrollingNoiseFrames = new OpenGlTexture2D[16];
             for (var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
               var24 = ppb.a(ScrollBarWidget.field_vb, var2_intLifetime1 * 32768, true, 32768);
-              this.field_c[var2_intLifetime1] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
+              this.scrollingNoiseFrames[var2_intLifetime1] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
           var20 = ffb.extractBytes(false, GetMissionTimeLimit.field_p, true);
-          this.field_b = new OpenGlTexture3D(param0, 6410, 128, 128, 16, var20, 6410);
+          this.noiseVolume = new OpenGlTexture3D(param0, 6410, 128, 128, 16, var20, 6410);
           var21 = ffb.extractBytes(false, ScrollBarWidget.field_vb, true);
-          this.field_g = new OpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);
+          this.scrollingNoiseVolume = new OpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_yb;
           if (var10.a(92)) {
             var22 = ffb.extractBytes(false, SetPhasedEnergyBeamProjectileOndamageParticles.field_o, true);
-            this.field_a = new OpenGlTexture3D(param0, 6408, 128, 128, 16);
+            this.normalVolume = new OpenGlTexture3D(param0, 6408, 128, 128, 16);
             var4 = new OpenGlTexture3D(param0, 6409, 128, 128, 16, var22, 6409);
-            if (var10.a(2.0f, -28279, var4, this.field_a)) {
-              this.field_a.generateMipmaps(9729);
+            if (var10.a(2.0f, -28279, var4, this.normalVolume)) {
+              this.normalVolume.generateMipmaps(9729);
               var4.dispose(0);
               return;
             }
-            this.field_a.dispose(0);
-            this.field_a = null;
+            this.normalVolume.dispose(0);
+            this.normalVolume = null;
             var4.dispose(0);
             return;
           }

@@ -154,7 +154,7 @@ final class GameSession {
           var7 < param2 &&
           var8 < param2 &&
           param2 > var10) {
-          jjb.a(0, MissionVariableFactory.field_a, 17634, 0, 0, PartitionZoneFactory.field_a);
+          LegacyOpenGlWaterTextures.fillRectangle(0, MissionVariableFactory.field_a, 17634, 0, 0, PartitionZoneFactory.field_a);
           return true;
         }
         if (param2 > 20000) {
@@ -2453,7 +2453,7 @@ final class GameSession {
               }
               if (ArchiveIndexLoader.field_g.isVoteOptionMembersOnly((byte) -126, this.field_y)) {
                 if (var33 != null) {
-                  var33 = (String) (var33) + " " + ti.field_i;
+                  var33 = (String) (var33) + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
                 } else {
                   if (!ujb.a(-118)) {
                     var33 = QuickChatDynamicCommand.field_b;
@@ -2896,7 +2896,7 @@ final class GameSession {
                             var43_ref_StringLifetime1 = var49;
                             var43_ref_StringLifetime2 = var49;
                             if (var40 != 0) {
-                              var43_ref_StringLifetime2 = var49 + " " + ti.field_i;
+                              var43_ref_StringLifetime2 = var49 + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
                             }
                             GetMassDriverReload.a(var43_ref_StringLifetime2, -54);
                           }
@@ -3579,7 +3579,7 @@ final class GameSession {
           }
           if (GraphicsPresentException.field_a) {
             if (!SetFightersPerPlayerMaximum.field_p &&
-              !uga.field_d) {
+              !LegacyOpenGlTurbulenceEffect.field_d) {
               stackIn_38_0 = 1;
             } else {
               if (this.localPlayerIndex < 0) {
@@ -4771,7 +4771,7 @@ final class GameSession {
             if (var6 < var4_int &&
               var5 >= var4_int) {
               var7 = (-var4_int + var5) / Particle.field_l;
-              var8 = SetReverbGain.a(bt.field_b, new String[]{Integer.toString(var7)}, 118).toUpperCase();
+              var8 = SetReverbGain.a(OpenGlDisplayLists.field_b, new String[]{Integer.toString(var7)}, 118).toUpperCase();
               var9 = 128 + (TextureLineShape.sinAngle(SetMinimapWidth.field_o * 128 % 8192, 44) * 127 >> 16);
               var10 = var9 << 8 | 16711680 | var9;
               SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(1, var8, 13879) / 2, 1, GetLaserAimarc.field_q / 2, var8, 1, var10, (byte) -92);
@@ -5061,8 +5061,8 @@ final class GameSession {
             var25 = this.state.a((byte) 33).getProjectiles(true);
             var27 = (Projectile) (var25.first(0));
             while (var27 != null) {
-              var15 = var8.worldToScreenX(var27.d(116), (byte) 115) + var6;
-              var16Lifetime1 = var7 + var8.worldToScreenY(true, var27.e((byte) -107));
+              var15 = var8.worldToScreenX(var27.getX(116), (byte) 115) + var6;
+              var16Lifetime1 = var7 + var8.worldToScreenY(true, var27.getY((byte) -107));
               var17Lifetime1 = 16776960;
               MouseWheelInput.a(var17Lifetime1, var16Lifetime1, var15, -110);
               var27 = (Projectile) (var25.next((byte) 118));

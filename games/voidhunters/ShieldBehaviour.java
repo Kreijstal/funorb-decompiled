@@ -189,7 +189,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           super.readState(param0, false);
-          this.operationalLastFrame = kv.readBoolean(param1, param0);
+          this.operationalLastFrame = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
           this.previousShieldX = param0.readBits(0, 32);
           this.previousShieldY = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {

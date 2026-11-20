@@ -471,7 +471,7 @@ final class PlayerContextMenu {
             var3 = var5.field_Vb;
             if (!var5.field_ac) {
               if (var5.field_cc) {
-                this.menu.addItem(SetReverbGain.a(ti.field_g, new String[]{var3}, 101), (byte) -53, 2);
+                this.menu.addItem(SetReverbGain.a(LegacyOpenGlEnvironmentMappedWaterEffect.field_g, new String[]{var3}, 101), (byte) -53, 2);
               } else {
                 if (!var5.field_Qb &&
                   var5.field_Gb && (!var5.field_fc ||

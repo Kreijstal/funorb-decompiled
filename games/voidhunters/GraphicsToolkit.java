@@ -276,7 +276,7 @@ abstract class GraphicsToolkit {
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4;
         int var5;
-        if (!uga.field_d) {
+        if (!LegacyOpenGlTurbulenceEffect.field_d) {
           return;
         }
         GetGrapplingHookFireForce.field_o.updateInput(param0, param3 ^ 1329);

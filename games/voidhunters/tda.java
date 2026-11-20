@@ -23,7 +23,7 @@ final class tda extends ResizableModalPanel implements UiActionListener {
           if (VariableConditionFactory.field_c) {
             param3.clearFocus((byte) -34);
           }
-          var5_long = -this.field_L + wt.a(false);
+          var5_long = -this.field_L + MonotonicMillisClock.currentTimeMillis(false);
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (var7 > 0) {
             this.field_J.text = "" + var7;
@@ -63,7 +63,7 @@ final class tda extends ResizableModalPanel implements UiActionListener {
         super(param0, 200, 200);
         UiComponent var3 = null;
         try {
-          this.field_L = wt.a(false);
+          this.field_L = MonotonicMillisClock.currentTimeMillis(false);
           var3 = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
           var3.x = 0;
           var3.width = this.width;

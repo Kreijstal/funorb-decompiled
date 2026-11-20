@@ -3,7 +3,7 @@
  */
 final class OpenGlFont extends ToolkitFont {
     private OpenGlToolkit toolkit;
-    private bt field_d;
+    private OpenGlDisplayLists field_d;
     private boolean field_c;
     private im field_e;
 
@@ -172,7 +172,7 @@ final class OpenGlFont extends ToolkitFont {
           this.field_c = true;
         }
         this.field_e.setLinearFiltering(107, false);
-        this.field_d = new bt(param0, 256);
+        this.field_d = new OpenGlDisplayLists(param0, 256);
         var7 = this.field_e.field_n / (float)this.field_e.field_m;
         var8 = this.field_e.field_o / (float)this.field_e.field_p;
         for (var9 = 0; var9 < 256; var9++) {
@@ -187,7 +187,7 @@ final class OpenGlFont extends ToolkitFont {
           var18 = var16 * var8;
           var19 = (var15 + (float)var12Lifetime1) * var7;
           var20 = (var16 + (float)var11Lifetime1) * var8;
-          this.field_d.a(-104, var9);
+          this.field_d.beginList(-104, var9);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(var17, this.field_e.field_o - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1, var13Lifetime1);
@@ -198,7 +198,7 @@ final class OpenGlFont extends ToolkitFont {
           jaggl.OpenGL.glTexCoord2f(var19, this.field_e.field_o - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1 + var12Lifetime1, var13Lifetime1);
           jaggl.OpenGL.glEnd();
-          this.field_d.b(4864);
+          this.field_d.endList(4864);
         }
     }
 
@@ -214,7 +214,7 @@ final class OpenGlFont extends ToolkitFont {
         }
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_d.a(true, param0);
+        this.field_d.callList(true, param0);
         jaggl.OpenGL.glLoadIdentity();
         if (this.field_c ||
           param4) {
@@ -252,7 +252,7 @@ final class OpenGlFont extends ToolkitFont {
         jaggl.OpenGL.glEnable(3169);
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_d.a(true, param0);
+        this.field_d.callList(true, param0);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);

@@ -72,10 +72,10 @@ final class ProjectileHit {
           }
           var5_int = stackIn_7_0;
           if (this.projectile.getType((byte) -104) == 3) {
-            this.projectile.a(this.impactY, this.impactX, 127);
+            this.projectile.setImpactEndpoint(this.impactY, this.impactX, 127);
           }
           if (2 == this.projectile.getType((byte) -104) && (!(param2 instanceof Ship) ||
-            ((Ship) (param2)).getOwner((byte) -117) != this.projectile.b(false) ||
+            ((Ship) (param2)).getOwner((byte) -117) != this.projectile.getFiredPlayer(false) ||
             ((Ship) (param2)).getTeam((byte) 115) != this.projectile.getFiredTeam(param1 + 513))) {
             var6_int = SetBombletSprayFireForce.field_o;
             param2.addForceAtPoint(this.projectile.dy * var6_int, this.impactX, this.impactY, (byte) -119, var6_int * this.projectile.dx);
@@ -87,7 +87,7 @@ final class ProjectileHit {
           if (this.projectile.getType((byte) -104) == 6) {
             if (param3 ||
               SetPointDefenceLaserPulsetime.field_o == 1) {
-              param0.a(0, gib.field_a, this.projectile.getFiredTeam(512), this.projectile.b(false), false, this.impactX, this.impactY);
+              param0.a(0, gib.field_a, this.projectile.getFiredTeam(512), this.projectile.getFiredPlayer(false), false, this.impactX, this.impactY);
             }
             param3 = false;
           }
@@ -138,7 +138,7 @@ final class ProjectileHit {
             var8Lifetime1 = this.component.applyScaledDamage(this.projectile.getDamage((byte) 68), (byte) 40);
             if (var8Lifetime1 > 0) {
               var5_int = 0;
-              this.projectile.b(var8Lifetime1, 110);
+              this.projectile.setDamage(var8Lifetime1, 110);
             }
             param0.a(RandomLinesTextureOperation.field_m, this.impactY, this.impactX, ei.field_a, 11184895, var7, dw.field_b);
             var9 = var6;
@@ -146,7 +146,7 @@ final class ProjectileHit {
               var9.field_y > 0) {
               param2.chassis.detachComponent(true, this.component, param0, 60, param2);
               param2.chassis.configureThrusterBindings((byte) 102, param2);
-              param0.a(1, var9.field_y, this.projectile.getFiredTeam(param1 ^ -513), this.projectile.b(false), false, this.component.getFinalx(true), this.component.getFinaly((byte) 74));
+              param0.a(1, var9.field_y, this.projectile.getFiredTeam(param1 ^ -513), this.projectile.getFiredPlayer(false), false, this.component.getFinalx(true), this.component.getFinaly((byte) 74));
             } else {
               if (GetInnateThrusters.field_p == 1 &&
                 this.component.isDestroyed((byte) 71) &&

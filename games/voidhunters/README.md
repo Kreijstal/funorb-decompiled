@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1290/1572 classes and 6479/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 282 opaque classes and 1736 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1304/1572 classes and 6569/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 268 opaque classes and 1646 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -47,7 +47,9 @@ All forty texture-operation factory products have descriptive class names, inclu
 
 `UiWeightedGridContainer` exposes weighted rows/columns, cell alignment and retained child arrays. `PlayerContextMenu` identifies social, lobby, chat and report-menu paths. `TutorialController`, `TutorialProgressState` and `SpecialOrderButtonState` expose hint completion, timers, callouts, practice targets and special-order aggregation. Their original array mutation, status rules and packet/action helpers remain. Private `NativeSoftwareSprite` entrypoints follow their existing Java drawing, dimension, padding and initialization wrappers; source verification does not establish JNI runtime equivalence.
 
-`ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
+`ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection. `Projectile` names updating, drawing, impact endpoints and firing identity; its type 3 beam is shared by multiple weapon definitions, and original expiry movement remains.
+
+`LegacyOpenGlMaterialEffectManager` selects `LegacyOpenGlMaterialEffect` implementations for specular, turbulence, scrolling noise, unlit, reflection, water fog, underwater and GLSL water effects. Their shared enable/disable, render-state, parameter, texture and support contracts retain original guards and capability fallbacks, including the original constant-false environment-water support predicate. `OpenGlDisplayLists` and `LegacyOpenGlWaterTextures` expose state-list and noise/normal texture resources. `MonotonicMillisClock` retains backwards-clock compensation used by network read idle timing. Shader text and rendering behavior remain unchanged.
 
 `MissionEvent.evaluateAndExecute` evaluates each condition, applies its negation flag, collects target body ids and executes actions. Conditions and actions expose descriptions, editable parameters and world marker positions. `GameStateFactory` names default-instance and typed-array creation; each named concrete factory identifies its product type.
 

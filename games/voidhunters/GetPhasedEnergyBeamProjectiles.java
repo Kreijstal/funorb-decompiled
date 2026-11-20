@@ -145,13 +145,13 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetLaserRandomness.field_o = param1[134];
           Particle.field_G = param1[70];
           pea.field_a = param1[149];
-          ku.field_c = param1[63];
+          LegacyOpenGlUnlitEffect.field_c = param1[63];
           Particle.field_e = param1[224];
           Particle.field_q = param1[214];
           SetShipAimLines.field_q = param1[166];
           PlayerActionFactory.field_a = param1[124];
           GetFightersPerPlayerMaximum.field_p = param1[31];
-          la.field_m = param1[83];
+          LegacyOpenGlUnderwaterEffect.field_m = param1[83];
           SetTorpedoEnergyUsed.field_q = param1[94];
           rjb.field_u = param1[211];
           Particle.field_n = param1[220];
@@ -230,7 +230,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           AwardVictoryToTeamActionFactory.field_b = param1[201];
           GetMaxShipSize.field_o = param1[141];
           ValidationState.field_a = param1[33];
-          la.field_k = param1[208];
+          LegacyOpenGlUnderwaterEffect.field_k = param1[208];
           enb.field_c = param1[171];
           GameMenuScreen.field_e = param1[181];
           Particle.field_h = param1[232];

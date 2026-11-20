@@ -41,14 +41,14 @@ final class WaterTextures {
         int var2 = 59 % ((param0 + 26) / 42);
         byte[] var3Lifetime1;
         if (this.normalMapVolume == null) {
-          if (ti.field_c == null) {
+          if (LegacyOpenGlEnvironmentMappedWaterEffect.field_c == null) {
             var23 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 97, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
             var20 = var23;
             var19 = var20;
             var3 = var19;
-            ti.field_c = EscapePodFactory.storeBytes(false, var23, -12445);
+            LegacyOpenGlEnvironmentMappedWaterEffect.field_c = EscapePodFactory.storeBytes(false, var23, -12445);
           }
-          var24 = ffb.extractBytes(false, ti.field_c, true);
+          var24 = ffb.extractBytes(false, LegacyOpenGlEnvironmentMappedWaterEffect.field_c, true);
           var21 = var24;
           var18 = var21;
           var3Lifetime1 = var18;

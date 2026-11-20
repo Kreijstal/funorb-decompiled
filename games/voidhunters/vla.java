@@ -104,7 +104,7 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
           var3 = (UiTextField) null;
           this.onTextChanged((UiTextField) null, (byte) -20);
         }
-        if (Projectile.f((byte) -21) ||
+        if (Projectile.isReconnecting((byte) -21) ||
           !(this.field_y.text.length() <= 0) &&
           !(this.field_G.text.length() <= 0)) {
           PartitionZoneList.a(-41, this.field_G.text, this.field_y.text);

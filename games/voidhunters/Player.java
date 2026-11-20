@@ -437,7 +437,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           this.spawnChoice = param0.readBits(0, 4);
           this.selectedTeam = param0.readBits(0, 4) - 1;
           this.votes = SetVariableActionFactory.a((byte) 37, this.votes, param0, 4);
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.savedShip = null;
           } else {
             if (this.savedShip == null) {

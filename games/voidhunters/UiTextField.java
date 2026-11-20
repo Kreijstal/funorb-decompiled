@@ -222,7 +222,7 @@ class UiTextField extends UiFocusableComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.caretBlinkEpoch = wt.a(false);
+          this.caretBlinkEpoch = MonotonicMillisClock.currentTimeMillis(false);
           if (param0 != -15834) {
             this.selectionAnchor = 81;
           }
@@ -448,7 +448,7 @@ class UiTextField extends UiFocusableComponent {
           if (this.selectionAnchor != this.caretPosition) {
             var11.drawSelection(this.selectionAnchor, param3, -24184, param0, (UiComponent) (this), this.caretPosition);
           }
-          var6 = wt.a(false);
+          var6 = MonotonicMillisClock.currentTimeMillis(false);
           if ((var6 - this.caretBlinkEpoch) % 1000L >= 500L) {
             return;
           }
@@ -471,7 +471,7 @@ class UiTextField extends UiFocusableComponent {
         if (this.selectionAnchor != this.caretPosition) {
           var10.drawSelection(this.selectionAnchor, param3, -24184, param0, (UiComponent) (this), this.caretPosition);
         }
-        var6Lifetime1 = wt.a(false);
+        var6Lifetime1 = MonotonicMillisClock.currentTimeMillis(false);
         if ((var6Lifetime1 - this.caretBlinkEpoch) % 1000L >= 500L) {
           return;
         }
@@ -489,7 +489,7 @@ class UiTextField extends UiFocusableComponent {
           this.renderer = GetDebrisMax.field_s.field_o;
           this.setText(true, 0, param0);
           this.keepCaretVisible = true;
-          this.caretBlinkEpoch = wt.a(false);
+          this.caretBlinkEpoch = MonotonicMillisClock.currentTimeMillis(false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -515,7 +515,7 @@ class UiTextField extends UiFocusableComponent {
               stackIn_6_1 = var8_int;
             }
             this.moveCaret(stackIn_6_1, (byte) -84);
-            var8_long = wt.a(false);
+            var8_long = MonotonicMillisClock.currentTimeMillis(false);
             stackIn_9_1 = !(var8_long - this.lastClickTime >= 250L);
             this.doubleClickSelection = stackIn_9_1;
             if (this.doubleClickSelection) {
@@ -584,7 +584,7 @@ class UiTextField extends UiFocusableComponent {
                 this.caretPosition = var6;
               }
             }
-            this.caretBlinkEpoch = wt.a(false);
+            this.caretBlinkEpoch = MonotonicMillisClock.currentTimeMillis(false);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

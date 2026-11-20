@@ -18,7 +18,7 @@ final class MapZoneFactory implements GameStateFactory {
         if (null != RoundResultFactory.field_a) {
           stackIn_7_0 = true;
         } else {
-          if (uga.field_d) {
+          if (LegacyOpenGlTurbulenceEffect.field_d) {
             return true;
           }
           stackIn_7_0 = false;

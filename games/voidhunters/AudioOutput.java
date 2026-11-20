@@ -102,7 +102,7 @@ class AudioOutput {
           if (this.closed) {
             return;
           }
-          var1 = wt.a(false);
+          var1 = MonotonicMillisClock.currentTimeMillis(false);
           try {
             if (var1 > this.mixTimeMillis + 6000L) {
               this.mixTimeMillis = var1 - 6000L;
@@ -110,7 +110,7 @@ class AudioOutput {
             while (var1 > this.mixTimeMillis + 5000L) {
               this.skipSamples(256);
               this.mixTimeMillis = this.mixTimeMillis + (long)(256000 / sampleRate);
-              var1 = wt.a(false);
+              var1 = MonotonicMillisClock.currentTimeMillis(false);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,7 +223,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.reopenAfterMillis = wt.a(false) + 2000L;
+            this.reopenAfterMillis = MonotonicMillisClock.currentTimeMillis(false) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -355,7 +355,7 @@ class AudioOutput {
         if (this.stream != null) {
           this.stream.mix(param0, 0, param1);
         }
-        this.mixTimeMillis = wt.a(false);
+        this.mixTimeMillis = MonotonicMillisClock.currentTimeMillis(false);
     }
 
     void writeDevice() throws Exception {
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.closed = false;
         this.activityBudget = 32;
-        this.mixTimeMillis = wt.a(false);
+        this.mixTimeMillis = MonotonicMillisClock.currentTimeMillis(false);
         this.rescheduleSamplesRemaining = 0;
         this.reopenAfterMillis = 0L;
         this.maxConsumedSamples = 0;

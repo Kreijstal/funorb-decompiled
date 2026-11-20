@@ -44,7 +44,7 @@ final class IsaacCipher {
           stackIn_5_1 = 38;
           stackIn_5_2 = 2;
           stackIn_5_3 = param1 * (2 + DialogMessagePanel.field_w) * 3;
-          stackIn_6_4 = (qg.field_a == vra.field_b.scrollPane);
+          stackIn_6_4 = (LegacyOpenGlMaterialEffect.field_a == vra.field_b.scrollPane);
           var3_int = ((ScrollPaneWidget) (Object) stackIn_5_0).layoutAndUpdateScrolling((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param2, 2 + DialogMessagePanel.field_w) ? 1 : 0;
           var4 = vra.field_b.content.children;
           if (iwa.field_b != 2 &&
@@ -123,7 +123,7 @@ final class IsaacCipher {
             var6 = (vu) (var4.next((byte) 66));
           }
           if (0 != vra.field_b.firstButton.field_o) {
-            ola.field_p = new qka(vra.field_b.firstButton.screenX, vra.field_b.firstButton.screenY, vra.field_b.firstButton.width, vra.field_b.firstButton.height, mw.field_d, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
+            ola.field_p = new qka(vra.field_b.firstButton.screenX, vra.field_b.firstButton.screenY, vra.field_b.firstButton.width, vra.field_b.firstButton.height, LegacyOpenGlWaveWaterEffect.field_d, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
             MissionGenerationDataFactory.field_b = 2;
           }
           if (0 == vra.field_b.secondButton.field_o) {

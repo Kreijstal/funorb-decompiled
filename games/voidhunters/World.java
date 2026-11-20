@@ -115,7 +115,7 @@ final class World implements DiffableState, CompactGameState {
             }
           }
           this.debris = (Debris[]) (GetAutoAfkTimeout.a(param1 ^ -11, 1, this.debris, UiScrollBar.field_z, 10, param0));
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (this.asteroidField == null) {
               this.asteroidField = new AsteroidField();
             }
@@ -132,10 +132,10 @@ final class World implements DiffableState, CompactGameState {
           }
           this.grapplingHooks = (GrapplingHook[]) (GetAutoAfkTimeout.a(-14, 1, this.grapplingHooks, TickCondition.field_c, 8, param0));
           this.respawntimers = SetVariableActionFactory.a((byte) 37, this.respawntimers, param0, 4);
-          this.debug = kv.readBoolean(false, param0);
+          this.debug = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.objectiveType = param0.readBits(0, param1);
-          this.swappedTeams = kv.readBoolean(false, param0);
-          if (kv.readBoolean(false, param0)) {
+          this.swappedTeams = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (null == this.missionControl) {
               this.missionControl = new MissionControl();
             }
@@ -145,7 +145,7 @@ final class World implements DiffableState, CompactGameState {
           }
           this.mapZones = (MapZone[]) (SetAutoDetail.a(8, wsb.field_e, param0, 1, -98, this.mapZones));
           this.resNodes = (ResourceNode[]) (SetAutoDetail.a(4, SetShipDirectionArrow.field_p, param0, 1, -84, this.resNodes));
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.nebulaField = null;
           } else {
             this.nebulaField = new NebulaField();
@@ -153,7 +153,7 @@ final class World implements DiffableState, CompactGameState {
           }
           this.width = param0.readBits(0, 28);
           this.height = param0.readBits(0, 28);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.partitioningManager = null;
           } else {
             if (this.partitioningManager == null) {
@@ -162,7 +162,7 @@ final class World implements DiffableState, CompactGameState {
             this.partitioningManager.readState(param0, false);
           }
           this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, pgb.field_g, param0, 1, -62, this.escapePods));
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.missionBuilder = null;
           } else {
             this.missionBuilder = new MissionBuilder();
@@ -225,15 +225,15 @@ final class World implements DiffableState, CompactGameState {
             var4 = (Projectile) (var3.first(570));
             while (null != var4) {
               if (var4.getType((byte) -104) != var2_ref_tj.getType((byte) -104)) {
-                var5 = var2_ref_tj.d(107) - var4.d(118);
-                var6 = var2_ref_tj.e((byte) -107) - var4.e((byte) -107);
+                var5 = var2_ref_tj.getX(107) - var4.getX(118);
+                var6 = var2_ref_tj.getY((byte) -107) - var4.getY((byte) -107);
                 var7 = TextLayout.approximateVectorLength(var5, (byte) 103, var6);
                 if (2048 > var7) {
                   if (var4.getType((byte) -104) != 3) {
                     var2_ref_tj.life = 0;
                   } else {
                     var2_ref_tj.life = var2_ref_tj.life - ooa.field_xb;
-                    var4.f(-24805);
+                    var4.markBeamImpact(-24805);
                   }
                   var4.life = 0;
                   if (var2_ref_tj.life > 0) {
@@ -244,11 +244,11 @@ final class World implements DiffableState, CompactGameState {
                   var2_ref_tj.unlink(-3846);
                   if (var2_ref_tj.getType((byte) -104) == 6 &&
                     var4.getType((byte) -104) == 5) {
-                    this.a(0, gib.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.b(false), false, var2_ref_tj.d(111), var2_ref_tj.e((byte) -107));
+                    this.a(0, gib.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.getFiredPlayer(false), false, var2_ref_tj.getX(111), var2_ref_tj.getY((byte) -107));
                     break;
                   }
-                  BlendTextureOperation.a(20382, var2_ref_tj.d(113), 81, var2_ref_tj.e((byte) -107), 50);
-                  this.a(100, var2_ref_tj.e((byte) -107), var2_ref_tj.d(119), 1000, 11184895, 10, 50);
+                  BlendTextureOperation.a(20382, var2_ref_tj.getX(113), 81, var2_ref_tj.getY((byte) -107), 50);
+                  this.a(100, var2_ref_tj.getY((byte) -107), var2_ref_tj.getX(119), 1000, 11184895, 10, 50);
                   break;
                 }
               }
@@ -403,7 +403,7 @@ final class World implements DiffableState, CompactGameState {
               var10 = (var8 * param0.dy >> 8) + param2;
               var11Lifetime1 = pea.field_b;
               if (3 == param0.getType((byte) -104)) {
-                param0.a(var10, var9Lifetime1, 118);
+                param0.setImpactEndpoint(var10, var9Lifetime1, 118);
               } else {
                 BlendTextureOperation.a(20382, var9Lifetime1, 64, var10, 10);
                 param0.unlink(-3846);
@@ -1547,7 +1547,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var35 = (Projectile) (this.projectiles.first(0));
           while (var35 != null) {
-            var35.a((byte) 93, this);
+            var35.update((byte) 93, this);
             var35 = (Projectile) (this.projectiles.next((byte) 101));
           }
           for (var14 = 0; this.field_s.length > var14; var14++) {
@@ -1764,7 +1764,7 @@ final class World implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          if (!param2.c(112)) {
+          if (!param2.isBeam(112)) {
             param0.testProjectileHit(MonochromeRowCache.field_b, param2, -4414);
             if (MonochromeRowCache.field_b.hasHit((byte) -97)) {
               AgeValidator.field_i = param0;
@@ -2872,7 +2872,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                           var67.setPosition(var7, var8, (byte) 42);
                                                                                           this.addShip(var67, (byte) 83);
                                                                                         } else {
-                                                                                          if (fbb.b(var10_int, 15923)) {
+                                                                                          if (LegacyOpenGlMaterialEffectManager.b(var10_int, 15923)) {
                                                                                             var63 = new ShipComponent(var10_int);
                                                                                             var65 = new Debris(var63, false);
                                                                                             var64 = new Random((long)var7);
@@ -4941,7 +4941,7 @@ final class World implements DiffableState, CompactGameState {
           this.a(-98, param0, param2);
           var14 = (Projectile) (this.projectiles.first(0));
           while (null != var14) {
-            var14.a(0, param0);
+            var14.draw(0, param0);
             var14 = (Projectile) (this.projectiles.next((byte) 84));
           }
           var23 = this.nebulaField.getNebulae(false);
@@ -5155,7 +5155,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var4_int = Math.abs(param0.dx);
           var5 = Math.abs(param0.dy);
-          stackIn_4_0 = SetDebrisProjectileCollision.a(5220, param1.boundingbox[1] + var4_int, param0.e((byte) -107), param1.boundingbox[3] + var5, param0.d(101), -var4_int + param1.boundingbox[0], param1.boundingbox[2] - var5);
+          stackIn_4_0 = SetDebrisProjectileCollision.a(5220, param1.boundingbox[1] + var4_int, param0.getY((byte) -107), param1.boundingbox[3] + var5, param0.getX(101), -var4_int + param1.boundingbox[0], param1.boundingbox[2] - var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5219,7 +5219,7 @@ final class World implements DiffableState, CompactGameState {
             }
           }
           this.debris = (Debris[]) (SetAutoDetail.a(10, UiScrollBar.field_z, param0, 1, -68, this.debris));
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.asteroidField = null;
           } else {
             if (null == this.asteroidField) {
@@ -5236,10 +5236,10 @@ final class World implements DiffableState, CompactGameState {
           }
           this.grapplingHooks = (GrapplingHook[]) (SetAutoDetail.a(8, TickCondition.field_c, param0, 1, -47, this.grapplingHooks));
           this.respawntimers = SetVariableActionFactory.a((byte) 37, this.respawntimers, param0, 4);
-          this.debug = kv.readBoolean(false, param0);
+          this.debug = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.objectiveType = param0.readBits(0, 32);
-          this.swappedTeams = kv.readBoolean(false, param0);
-          if (!kv.readBoolean(false, param0)) {
+          this.swappedTeams = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.missionControl = null;
           } else {
             if (this.missionControl == null) {
@@ -5252,7 +5252,7 @@ final class World implements DiffableState, CompactGameState {
           this.width = param0.readBits(0, 28);
           this.height = param0.readBits(0, 28);
           this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, pgb.field_g, param0, 1, -83, this.escapePods));
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.missionBuilder = null;
           } else {
             this.missionBuilder = new MissionBuilder();
@@ -5355,9 +5355,9 @@ final class World implements DiffableState, CompactGameState {
                 GpuEnvironmentMapSource.field_d == 0 &&
                 var20.getTeam((byte) 99) == var3_ref.getFiredTeam(512) &&
                 (var20.getTeam((byte) 84) != sja.field_c ||
-                var20.getOwner((byte) -117) == var3_ref.b(false) ||
+                var20.getOwner((byte) -117) == var3_ref.getFiredPlayer(false) ||
                 var20.getAi((byte) -108) != null &&
-                var20.getAi((byte) -108).getParentPlayerId((byte) 28) == var3_ref.b(false)) ||
+                var20.getAi((byte) -108).getParentPlayerId((byte) 28) == var3_ref.getFiredPlayer(false)) ||
                 (!this.a(var3_ref, var20, -46) ||
                 !this.testProjectileAgainstBody(var20, 46, var3_ref))) {
                 var13++;
@@ -5383,7 +5383,7 @@ final class World implements DiffableState, CompactGameState {
               for (var14_int = 0; var14_int < var13_ref_mqb__.length; var14_int++) {
                 var15 = var13_ref_mqb__[var14_int];
                 if (null != var15 && (0 != SetThrusterAutobalancing.field_r ||
-                  var15.m(32) != var3_ref.b(false)) && (this.a(var3_ref, var15, -80) &&
+                  var15.m(32) != var3_ref.getFiredPlayer(false)) && (this.a(var3_ref, var15, -80) &&
                   this.testProjectileAgainstBody(var15, 48, var3_ref))) {
                   break;
                 }
@@ -5414,7 +5414,7 @@ final class World implements DiffableState, CompactGameState {
                 }
                 var13Lifetime3 = stackIn_95_0;
                 if (var13Lifetime3 != 0) {
-                  var23_ref.recordAttacker(var3_ref.b(false), 19581);
+                  var23_ref.recordAttacker(var3_ref.getFiredPlayer(false), 19581);
                   if (var23_ref.isFighter(false)) {
                     GetFighterVision.playNonSpatialSound(6811, 90, 100);
                   }
@@ -6219,7 +6219,7 @@ final class World implements DiffableState, CompactGameState {
               return;
             }
             var9 = ShipFactory.field_a.field_b[var7_int];
-            var10 = param3.b(false);
+            var10 = param3.getFiredPlayer(false);
             var11 = this.findShipByOwner(var10, 113);
             var12 = null;
             if (null != var9.field_e &&
@@ -6227,17 +6227,17 @@ final class World implements DiffableState, CompactGameState {
               var12 = (Ship) (var9.field_e);
             }
             if (null != var12) {
-              param3.b(((Ship) (var12)).getOwner((byte) -117), (byte) 47);
-              param3.a(122, ((Ship) (var12)).getTeam((byte) 80));
+              param3.setFiredPlayer(((Ship) (var12)).getOwner((byte) -117), (byte) 47);
+              param3.setFiredTeam(122, ((Ship) (var12)).getTeam((byte) 80));
             }
             if (null == var11) {
-              param3.a(-1, (byte) -98);
+              param3.setTargetBody(-1, (byte) -98);
               return;
             }
             if (var9.field_e == var11) {
               return;
             }
-            param3.a(var11.id, (byte) -113);
+            param3.setTargetBody(var11.id, (byte) -113);
             param3.life = SetShipDirectionArrow.weaponDefinitions[8].getProjectileLifetime((byte) -99);
             return;
           }

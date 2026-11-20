@@ -133,7 +133,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         var4 = VoidHunters.field_G;
         try {
           super.readState(param0, param1);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.world = null;
           } else {
             if (this.world == null) {
@@ -141,7 +141,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
             }
             this.world.readState(param0, false);
           }
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (null == this.settings) {
               this.settings = new SettingsInstance();
             }
@@ -149,7 +149,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           } else {
             this.settings = null;
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.missionState = null;
           } else {
             if (this.missionState == null) {
@@ -157,7 +157,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
             }
             this.missionState.readState(param0, false);
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (this.messageLog == null) {
               this.messageLog = new MessageLog();
             }
@@ -422,7 +422,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           if (param1 != 32) {
             return;
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (null == this.world) {
               this.world = new World();
             }
@@ -430,7 +430,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           } else {
             this.world = null;
           }
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.settings = null;
           } else {
             if (null == this.settings) {
@@ -438,7 +438,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
             }
             this.settings.readState(param0, false);
           }
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.missionState = null;
           } else {
             if (this.missionState == null) {
@@ -446,7 +446,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
             }
             this.missionState.readState(param0, false);
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (this.messageLog == null) {
               this.messageLog = new MessageLog();
             }

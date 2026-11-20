@@ -60,10 +60,10 @@ class gna extends elb {
             stackIn_13_2 = null;
             stackIn_13_3 = SetMachineGunAimspeed.field_p.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(Under13AccountNoticePanel.field_y).append("&u=");
-            if (null != ku.field_d) {
+            if (null != LegacyOpenGlUnlitEffect.field_d) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = ku.field_d;
+              stackIn_14_5 = LegacyOpenGlUnlitEffect.field_d;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;

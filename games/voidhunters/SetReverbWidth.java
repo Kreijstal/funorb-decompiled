@@ -21,7 +21,7 @@ final class SetReverbWidth extends ConsoleCommand {
         var7 = VoidHunters.field_G;
         try {
           if (PerlinNoiseTextureOperation.field_q != 0) {
-            var2_long = wt.a(false);
+            var2_long = MonotonicMillisClock.currentTimeMillis(false);
             var4 = PerlinNoiseTextureOperation.field_q;
             if (0.0 != ServerTickFactory.field_c) {
               var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * ServerTickFactory.field_c);

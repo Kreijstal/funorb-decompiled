@@ -317,7 +317,7 @@ final class CarouselSystemEvent implements DiffableState {
         RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.field_e = null;
           } else {
             if (null == this.field_e) {
@@ -325,7 +325,7 @@ final class CarouselSystemEvent implements DiffableState {
             }
             this.field_e.readState(param0, false);
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.field_d = null;
           } else {
             if (this.field_d != null) {
@@ -335,7 +335,7 @@ final class CarouselSystemEvent implements DiffableState {
               this.field_d.readState(param0, param1);
             }
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.field_f = null;
           } else {
             if (this.field_f != null) {
@@ -345,7 +345,7 @@ final class CarouselSystemEvent implements DiffableState {
               this.field_f.readState(param0, param1);
             }
           }
-          this.field_c = kv.readBoolean(false, param0);
+          this.field_c = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

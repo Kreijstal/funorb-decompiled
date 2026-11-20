@@ -130,7 +130,7 @@ final class DebugMessage implements DiffableState {
           if (param1) {
             DebugMessage.clearSharedReferences(80);
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.field_b = null;
             return;
           }

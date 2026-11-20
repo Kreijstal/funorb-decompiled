@@ -1,56 +1,56 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iib extends qg {
+final class LegacyOpenGlScrollingNoiseEffect extends LegacyOpenGlMaterialEffect {
     static int[] field_e;
-    private bt field_d;
-    private jjb field_c;
+    private OpenGlDisplayLists displayLists;
+    private LegacyOpenGlWaterTextures waterTextures;
 
-    final void a(int param0) {
-        this.field_d.a(true, '\001');
-        this.field_b.setActiveTextureUnit(33984, 1);
+    final void disable(int param0) {
+        this.displayLists.callList(true, '\001');
+        this.toolkit.setActiveTextureUnit(33984, 1);
         if (param0 == 5890) {
-          this.field_b.bindTexture(54, (OpenGlTexture) null);
-          this.field_b.setActiveTextureUnit(33984, 0);
+          this.toolkit.bindTexture(54, (OpenGlTexture) null);
+          this.toolkit.setActiveTextureUnit(33984, 0);
           return;
         }
     }
 
-    final void a(int param0, byte param1, OpenGlTexture param2) {
+    final void setTexture(int param0, byte param1, OpenGlTexture param2) {
         if (param1 != 125) {
           return;
         }
         try {
-          this.field_b.bindTexture(param1 ^ 77, param2);
-          this.field_b.setTextureCombineMode(0, param0);
+          this.toolkit.bindTexture(param1 ^ 77, param2);
+          this.toolkit.setTextureCombineMode(0, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void applyRenderState(boolean param0, boolean param1) {
         if (!param0) {
-          this.field_c = (jjb) null;
+          this.waterTextures = (LegacyOpenGlWaterTextures) null;
         }
     }
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
-          iib.clearSharedReferences(-53);
+          LegacyOpenGlScrollingNoiseEffect.clearSharedReferences(-53);
           field_e = null;
           return;
         }
         field_e = null;
     }
 
-    iib(OpenGlToolkit param0, jjb param1) {
+    LegacyOpenGlScrollingNoiseEffect(OpenGlToolkit param0, LegacyOpenGlWaterTextures param1) {
         super(param0);
         try {
-          this.field_c = param1;
-          this.field_d = new bt(param0, 2);
-          this.field_d.a(-109, 0);
-          this.field_b.setActiveTextureUnit(33984, 1);
-          if (this.field_c.field_d) {
+          this.waterTextures = param1;
+          this.displayLists = new OpenGlDisplayLists(param0, 2);
+          this.displayLists.beginList(-109, 0);
+          this.toolkit.setActiveTextureUnit(33984, 1);
+          if (this.waterTextures.usesVolumeTextures) {
             jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
             jaggl.OpenGL.glEnable(3170);
           }
@@ -58,31 +58,31 @@ final class iib extends qg {
           jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
-          this.field_b.setActiveTextureUnit(33984, 0);
-          this.field_d.b(4864);
-          this.field_d.a(-89, 1);
-          this.field_b.setActiveTextureUnit(33984, 1);
-          if (this.field_c.field_d) {
+          this.toolkit.setActiveTextureUnit(33984, 0);
+          this.displayLists.endList(4864);
+          this.displayLists.beginList(-89, 1);
+          this.toolkit.setActiveTextureUnit(33984, 1);
+          if (this.waterTextures.usesVolumeTextures) {
             jaggl.OpenGL.glDisable(3170);
           }
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
-          this.field_b.setActiveTextureUnit(33984, 0);
-          this.field_d.b(4864);
+          this.toolkit.setActiveTextureUnit(33984, 0);
+          this.displayLists.endList(4864);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 > -87) {
-          this.a(42);
+          this.disable(42);
           return true;
         }
         return true;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         int var8 = 0;
         int var9 = VoidHunters.field_G;
         float var4 = -0.0005000000237487257f * (float)(1 + (param0 & 3));
@@ -90,30 +90,30 @@ final class iib extends qg {
         float var6 = (64 & param0) != 0 ? 0.0009765625f : 0.00048828125f;
         int var7 = (param0 & 128) != 0 ? 1 : 0;
         int var8Lifetime1;
-        this.field_b.setActiveTextureUnit(33984, 1);
+        this.toolkit.setActiveTextureUnit(33984, 1);
         if (var7 != 0) {
           wk.field_b[2] = 0.0f;
           wk.field_b[1] = 0.0f;
           wk.field_b[3] = 0.0f;
           wk.field_b[0] = var6;
           jaggl.OpenGL.glTexGenfv(8192, 9474, wk.field_b, 0);
-          wk.field_b[3] = (float)this.field_b.field_Mc * var4 % 1.0f;
+          wk.field_b[3] = (float)this.toolkit.field_Mc * var4 % 1.0f;
           wk.field_b[2] = 0.0f;
           if (param1 == -25139) {
             wk.field_b[0] = 0.0f;
             wk.field_b[1] = var6;
             jaggl.OpenGL.glTexGenfv(8193, 9474, wk.field_b, 0);
-            if (this.field_c.field_d) {
-              wk.field_b[3] = (float)this.field_b.field_Mc * var5 % 1.0f;
+            if (this.waterTextures.usesVolumeTextures) {
+              wk.field_b[3] = (float)this.toolkit.field_Mc * var5 % 1.0f;
               wk.field_b[1] = 0.0f;
               wk.field_b[2] = 0.0f;
               wk.field_b[0] = 0.0f;
               jaggl.OpenGL.glTexGenfv(8194, 9473, wk.field_b, 0);
             } else {
-              var8 = (int)((float)this.field_b.field_Mc * var5 * 16.0f);
-              this.field_b.bindTexture(25, this.field_c.field_c[var8 % 16]);
+              var8 = (int)((float)this.toolkit.field_Mc * var5 * 16.0f);
+              this.toolkit.bindTexture(25, this.waterTextures.scrollingNoiseFrames[var8 % 16]);
             }
-            this.field_b.setActiveTextureUnit(33984, 0);
+            this.toolkit.setActiveTextureUnit(33984, 0);
             return;
           }
           return;
@@ -123,45 +123,45 @@ final class iib extends qg {
         wk.field_b[3] = 0.0f;
         wk.field_b[0] = 0.0f;
         jaggl.OpenGL.glTexGenfv(8192, 9474, wk.field_b, 0);
-        wk.field_b[3] = (float)this.field_b.field_Mc * var4 % 1.0f;
+        wk.field_b[3] = (float)this.toolkit.field_Mc * var4 % 1.0f;
         wk.field_b[2] = 0.0f;
         if (param1 == -25139) {
           wk.field_b[0] = 0.0f;
           wk.field_b[1] = var6;
           jaggl.OpenGL.glTexGenfv(8193, 9474, wk.field_b, 0);
-          if (this.field_c.field_d) {
-            wk.field_b[3] = (float)this.field_b.field_Mc * var5 % 1.0f;
+          if (this.waterTextures.usesVolumeTextures) {
+            wk.field_b[3] = (float)this.toolkit.field_Mc * var5 % 1.0f;
             wk.field_b[1] = 0.0f;
             wk.field_b[2] = 0.0f;
             wk.field_b[0] = 0.0f;
             jaggl.OpenGL.glTexGenfv(8194, 9473, wk.field_b, 0);
           } else {
-            var8Lifetime1 = (int)((float)this.field_b.field_Mc * var5 * 16.0f);
-            this.field_b.bindTexture(25, this.field_c.field_c[var8Lifetime1 % 16]);
+            var8Lifetime1 = (int)((float)this.toolkit.field_Mc * var5 * 16.0f);
+            this.toolkit.bindTexture(25, this.waterTextures.scrollingNoiseFrames[var8Lifetime1 % 16]);
           }
-          this.field_b.setActiveTextureUnit(33984, 0);
+          this.toolkit.setActiveTextureUnit(33984, 0);
           return;
         }
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_d.a(true, '\0');
+    final void enable(boolean param0, int param1) {
+        this.displayLists.callList(true, '\0');
         if (param1 < 18) {
-          this.b(31);
-          if (this.field_c.field_d) {
-            this.field_b.setActiveTextureUnit(33984, 1);
-            this.field_b.bindTexture(58, this.field_c.field_g);
-            this.field_b.setActiveTextureUnit(33984, 0);
+          this.isSupported(31);
+          if (this.waterTextures.usesVolumeTextures) {
+            this.toolkit.setActiveTextureUnit(33984, 1);
+            this.toolkit.bindTexture(58, this.waterTextures.scrollingNoiseVolume);
+            this.toolkit.setActiveTextureUnit(33984, 0);
             return;
           }
           return;
         }
-        if (!this.field_c.field_d) {
+        if (!this.waterTextures.usesVolumeTextures) {
           return;
         }
-        this.field_b.setActiveTextureUnit(33984, 1);
-        this.field_b.bindTexture(58, this.field_c.field_g);
-        this.field_b.setActiveTextureUnit(33984, 0);
+        this.toolkit.setActiveTextureUnit(33984, 1);
+        this.toolkit.bindTexture(58, this.waterTextures.scrollingNoiseVolume);
+        this.toolkit.setActiveTextureUnit(33984, 0);
     }
 
     static {

@@ -1634,7 +1634,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
           this.bindThreadContext(0);
           PasswordValidator.a(true, (byte) 33, true);
           this.field_B = true;
-          this.field_E = (int)wt.a(false);
+          this.field_E = (int)MonotonicMillisClock.currentTimeMillis(false);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
           this.dispose((byte) 30);

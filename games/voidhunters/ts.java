@@ -14,8 +14,8 @@ final class ts {
         synchronized (var1_ref) {
           GpuVertexNormal.field_b = GetBombletSprayAimarc.field_q;
           OpenGlFramebuffer.field_b = OpenGlFramebuffer.field_b + 1;
-          PlayerGameData.field_b = wt.field_a;
-          uia.field_b = kv.field_e;
+          PlayerGameData.field_b = MonotonicMillisClock.field_a;
+          uia.field_b = LegacyOpenGlSpecularEffect.field_e;
           VariableConditionFactory.field_c = hda.field_a;
           hda.field_a = false;
           SetDebrisPartitioned.field_o = ro.field_a;

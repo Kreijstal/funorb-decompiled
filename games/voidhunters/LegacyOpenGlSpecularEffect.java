@@ -1,68 +1,68 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kv extends qg {
-    private OpenGlCubeTexture[] field_f;
+final class LegacyOpenGlSpecularEffect extends LegacyOpenGlMaterialEffect {
+    private OpenGlCubeTexture[] specularMaps;
     static volatile int field_e;
-    private boolean field_c;
-    private bt field_g;
-    private boolean field_d;
+    private boolean limitedTextureUnits;
+    private OpenGlDisplayLists displayLists;
+    private boolean active;
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean param0, int param1) {
         if (param1 < 18) {
-          this.field_d = true;
+          this.active = true;
         }
-        if (null != this.field_g &&
+        if (null != this.displayLists &&
           param0) {
-          if (!this.field_c) {
-            this.field_b.setActiveTextureUnit(33984, 2);
-            this.field_b.bindTexture(64, this.field_b.field_qb);
-            this.field_b.setActiveTextureUnit(33984, 0);
+          if (!this.limitedTextureUnits) {
+            this.toolkit.setActiveTextureUnit(33984, 2);
+            this.toolkit.bindTexture(64, this.toolkit.field_qb);
+            this.toolkit.setActiveTextureUnit(33984, 0);
           }
-          this.field_g.a(true, '\0');
-          this.field_d = true;
+          this.displayLists.callList(true, '\0');
+          this.active = true;
         } else {
-          this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
+          this.toolkit.setAlphaCombineArgument(0, 770, 34168, 34184);
         }
     }
 
-    final void a(int param0, byte param1, OpenGlTexture param2) {
+    final void setTexture(int param0, byte param1, OpenGlTexture param2) {
         try {
           if (param1 != 125) {
             field_e = -96;
           }
-          this.field_b.bindTexture(115, param2);
-          this.field_b.setTextureCombineMode(param1 ^ 125, param0);
+          this.toolkit.bindTexture(115, param2);
+          this.toolkit.setTextureCombineMode(param1 ^ 125, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kv.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0) {
-        if (!this.field_d) {
-          this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
+    final void disable(int param0) {
+        if (!this.active) {
+          this.toolkit.setAlphaCombineArgument(0, 770, 5890, 34184);
         } else {
-          if (!this.field_c) {
-            this.field_b.setActiveTextureUnit(33984, 2);
-            this.field_b.bindTexture(62, (OpenGlTexture) null);
+          if (!this.limitedTextureUnits) {
+            this.toolkit.setActiveTextureUnit(33984, 2);
+            this.toolkit.bindTexture(62, (OpenGlTexture) null);
           }
-          this.field_b.setActiveTextureUnit(33984, 1);
-          this.field_b.bindTexture(param0 - 5852, (OpenGlTexture) null);
-          this.field_b.setActiveTextureUnit(33984, 0);
-          this.field_g.a(true, '\001');
-          this.field_d = false;
+          this.toolkit.setActiveTextureUnit(33984, 1);
+          this.toolkit.bindTexture(param0 - 5852, (OpenGlTexture) null);
+          this.toolkit.setActiveTextureUnit(33984, 0);
+          this.displayLists.callList(true, '\001');
+          this.active = false;
         }
         if (param0 != 5890) {
           return;
         }
-        this.field_b.setTextureCombineOperations(8448, 8448, false);
+        this.toolkit.setTextureCombineOperations(8448, 8448, false);
     }
 
-    private final void d(int param0) {
+    private final void buildDisplayLists(int param0) {
         int var3 = VoidHunters.field_G;
-        this.field_g = new bt(this.field_b, 2);
-        this.field_g.a(param0 ^ 14647, 0);
-        this.field_b.setActiveTextureUnit(param0 + 48651, 1);
+        this.displayLists = new OpenGlDisplayLists(this.toolkit, 2);
+        this.displayLists.beginList(param0 ^ 14647, 0);
+        this.toolkit.setActiveTextureUnit(param0 + 48651, 1);
         jaggl.OpenGL.glTexGeni(8192, 9472, 34065);
         jaggl.OpenGL.glTexGeni(8193, 9472, 34065);
         jaggl.OpenGL.glTexGeni(8194, 9472, 34065);
@@ -73,66 +73,66 @@ final class kv extends qg {
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glRotatef(22.5f, 1.0f, 0.0f, 0.0f);
         jaggl.OpenGL.glMatrixMode(5888);
-        if (!this.field_c) {
-          this.field_b.setTextureCombineOperations(7681, 8448, false);
-          this.field_b.setRgbCombineArgument(0, 34192, 768, 34168);
-          this.field_b.setActiveTextureUnit(33984, 2);
-          this.field_b.setTextureCombineOperations(260, 7681, false);
-          this.field_b.setRgbCombineArgument(0, param0 + 48859, 768, 34168);
-          this.field_b.setRgbCombineArgument(1, param0 ^ -48347, 770, 34168);
-          this.field_b.setAlphaCombineArgument(0, 770, 34167, 34184);
+        if (!this.limitedTextureUnits) {
+          this.toolkit.setTextureCombineOperations(7681, 8448, false);
+          this.toolkit.setRgbCombineArgument(0, 34192, 768, 34168);
+          this.toolkit.setActiveTextureUnit(33984, 2);
+          this.toolkit.setTextureCombineOperations(260, 7681, false);
+          this.toolkit.setRgbCombineArgument(0, param0 + 48859, 768, 34168);
+          this.toolkit.setRgbCombineArgument(1, param0 ^ -48347, 770, 34168);
+          this.toolkit.setAlphaCombineArgument(0, 770, 34167, 34184);
         } else {
-          this.field_b.setTextureCombineOperations(260, 7681, false);
-          this.field_b.setRgbCombineArgument(0, 34192, 770, 5890);
-          this.field_b.setAlphaCombineArgument(0, 770, 34167, 34184);
+          this.toolkit.setTextureCombineOperations(260, 7681, false);
+          this.toolkit.setRgbCombineArgument(0, 34192, 770, 5890);
+          this.toolkit.setAlphaCombineArgument(0, 770, 34167, 34184);
         }
-        this.field_b.setActiveTextureUnit(33984, 0);
-        this.field_g.b(param0 + 19531);
-        this.field_g.a(-96, 1);
+        this.toolkit.setActiveTextureUnit(33984, 0);
+        this.displayLists.endList(param0 + 19531);
+        this.displayLists.beginList(-96, 1);
         if (param0 != -14667) {
           IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
-          kv.readBoolean(true, (IsaacPacketBuffer) null);
+          LegacyOpenGlSpecularEffect.readBoolean(true, (IsaacPacketBuffer) null);
         }
-        this.field_b.setActiveTextureUnit(param0 + 48651, 1);
+        this.toolkit.setActiveTextureUnit(param0 + 48651, 1);
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
         jaggl.OpenGL.glDisable(3170);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glMatrixMode(5888);
-        if (!this.field_c) {
-          this.field_b.setTextureCombineOperations(8448, 8448, false);
-          this.field_b.setRgbCombineArgument(0, param0 + 48859, 768, 5890);
-          this.field_b.setActiveTextureUnit(param0 ^ -48523, 2);
-          this.field_b.setTextureCombineOperations(8448, 8448, false);
-          this.field_b.setRgbCombineArgument(0, param0 ^ -48347, 768, 5890);
-          this.field_b.setRgbCombineArgument(1, param0 ^ -48347, 768, 34168);
-          this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
+        if (!this.limitedTextureUnits) {
+          this.toolkit.setTextureCombineOperations(8448, 8448, false);
+          this.toolkit.setRgbCombineArgument(0, param0 + 48859, 768, 5890);
+          this.toolkit.setActiveTextureUnit(param0 ^ -48523, 2);
+          this.toolkit.setTextureCombineOperations(8448, 8448, false);
+          this.toolkit.setRgbCombineArgument(0, param0 ^ -48347, 768, 5890);
+          this.toolkit.setRgbCombineArgument(1, param0 ^ -48347, 768, 34168);
+          this.toolkit.setAlphaCombineArgument(0, 770, 5890, 34184);
         } else {
-          this.field_b.setTextureCombineOperations(8448, 8448, false);
-          this.field_b.setRgbCombineArgument(0, 34192, 768, 5890);
-          this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
+          this.toolkit.setTextureCombineOperations(8448, 8448, false);
+          this.toolkit.setRgbCombineArgument(0, 34192, 768, 5890);
+          this.toolkit.setAlphaCombineArgument(0, 770, 5890, 34184);
         }
-        this.field_b.setActiveTextureUnit(param0 + 48651, 0);
-        this.field_g.b(param0 + 19531);
+        this.toolkit.setActiveTextureUnit(param0 + 48651, 0);
+        this.displayLists.endList(param0 + 19531);
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 >= -87) {
-          this.b(8);
+          this.isSupported(8);
           return true;
         }
         return true;
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void applyRenderState(boolean param0, boolean param1) {
         if (!param0) {
-          this.a(53);
+          this.disable(53);
         }
-        this.field_b.setTextureCombineOperations(8448, 7681, false);
+        this.toolkit.setTextureCombineOperations(8448, 7681, false);
     }
 
-    kv(OpenGlToolkit param0) {
+    LegacyOpenGlSpecularEffect(OpenGlToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;
@@ -156,12 +156,12 @@ final class kv extends qg {
         byte[][] var27 = null;
         byte[][] var28 = null;
         byte[][] var29 = null;
-        this.field_d = false;
+        this.active = false;
         try {
           if (param0.field_S) {
             stackIn_5_1 = !(param0.field_Dc >= 3);
-            this.field_c = stackIn_5_1;
-            stackIn_8_0 = (this.field_c) ? 48 : 127;
+            this.limitedTextureUnits = stackIn_5_1;
+            stackIn_8_0 = (this.limitedTextureUnits) ? 48 : 127;
             var2_int = stackIn_8_0;
             var29 = new byte[6][4096];
             var27 = new byte[6][4096];
@@ -212,11 +212,11 @@ final class kv extends qg {
                 var9++;
               }
             }
-            this.field_f = new OpenGlCubeTexture[3];
-            this.field_f[0] = new OpenGlCubeTexture(this.field_b, 6406, 64, false, var27, 6406);
-            this.field_f[1] = new OpenGlCubeTexture(this.field_b, 6406, 64, false, var28, 6406);
-            this.field_f[2] = new OpenGlCubeTexture(this.field_b, 6406, 64, false, var29, 6406);
-            this.d(-14667);
+            this.specularMaps = new OpenGlCubeTexture[3];
+            this.specularMaps[0] = new OpenGlCubeTexture(this.toolkit, 6406, 64, false, var27, 6406);
+            this.specularMaps[1] = new OpenGlCubeTexture(this.toolkit, 6406, 64, false, var28, 6406);
+            this.specularMaps[2] = new OpenGlCubeTexture(this.toolkit, 6406, 64, false, var29, 6406);
+            this.buildDisplayLists(-14667);
             return;
           }
           return;
@@ -234,14 +234,14 @@ final class kv extends qg {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         if (param1 != -25139) {
           return;
         }
-        if (this.field_d) {
-          this.field_b.setActiveTextureUnit(param1 + 59123, 1);
-          this.field_b.bindTexture(65, this.field_f[-1 + param0]);
-          this.field_b.setActiveTextureUnit(param1 ^ -59123, 0);
+        if (this.active) {
+          this.toolkit.setActiveTextureUnit(param1 + 59123, 1);
+          this.toolkit.bindTexture(65, this.specularMaps[-1 + param0]);
+          this.toolkit.setActiveTextureUnit(param1 ^ -59123, 0);
         }
     }
 

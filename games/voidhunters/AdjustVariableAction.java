@@ -215,7 +215,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         int var5;
         int var6;
         var6 = VoidHunters.field_G;
-        var1 = wt.a(false);
+        var1 = MonotonicMillisClock.currentTimeMillis(false);
         if (param0 != 7) {
           return true;
         }

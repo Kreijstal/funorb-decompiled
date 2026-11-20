@@ -39,7 +39,7 @@ final class qs {
               if (param4 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + SetMassDriverAimarc.a((byte) 98, param4 * 1000L + wt.a(false)) + "; Max-Age=" + param4;
+                var7Lifetime4 = var9 + "; Expires=" + SetMassDriverAimarc.a((byte) 98, param4 * 1000L + MonotonicMillisClock.currentTimeMillis(false)) + "; Max-Age=" + param4;
               }
               ia.a((byte) -122, param0, "document.cookie=\"" + var7Lifetime4 + "\"");
               return;

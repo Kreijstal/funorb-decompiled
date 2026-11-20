@@ -104,7 +104,7 @@ final class BombletSprayWeaponDefinition extends WeaponDefinition {
         if (param0) {
           return -32;
         }
-        return la.field_m;
+        return LegacyOpenGlUnderwaterEffect.field_m;
     }
 
     static {

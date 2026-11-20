@@ -47,7 +47,7 @@ final class SetCountermeasureLauncherAimspeed extends ConsoleCommand {
             } else {
               if ((param0[var8] != null && (!param1 ||
                 param0[var8].getClass() == param3[var8].getClass())) &&
-                (decompiledFrameRemainder0 = !(!la.a(param0[var8], param3[var8], param2, (byte) -86)))) {
+                (decompiledFrameRemainder0 = !(!LegacyOpenGlUnderwaterEffect.compareStatesByMode(param0[var8], param3[var8], param2, (byte) -86)))) {
                 return true;
               }
             }

@@ -8,7 +8,7 @@ final class ModelData {
     short[] field_t;
     int[] field_L;
     short[] field_u;
-    static long field_q;
+    static long lastNetworkReadTimeMillis;
     int field_D;
     int[] field_f;
     ModelFaceAttachment[] faceAttachments;

@@ -28,11 +28,11 @@ final class NativeSoftwareSurface extends IntrusiveNode implements NativeResourc
 
     private final void handlePresentationFailure(Exception param0) {
         if (!field_d) {
-          field_h = wt.a(false);
+          field_h = MonotonicMillisClock.currentTimeMillis(false);
           field_d = true;
           return;
         }
-        if (wt.a(false) - field_h >= 30000L) {
+        if (MonotonicMillisClock.currentTimeMillis(false) - field_h >= 30000L) {
           throw new RuntimeException(param0.getMessage());
         }
         this.canvas.repaint();

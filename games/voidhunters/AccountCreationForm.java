@@ -195,7 +195,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
           var2 = Integer.parseInt(this.ageField.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return ku.startAccountCreation(this.passwordField.text, var2, this, this.emailUpdatesToggle.active, param0 - 3, this.usernameField.text, this.emailField.text);
+        return LegacyOpenGlUnlitEffect.startAccountCreation(this.passwordField.text, var2, this, this.emailUpdatesToggle.active, param0 - 3, this.usernameField.text, this.emailField.text);
     }
 
     private final int addFieldWithStatusIcon(int param0, UiComponent param1, byte param2, String param3, int param4) {

@@ -287,7 +287,7 @@ final class fab {
                         var8.field_g.setHeap(var8.field_g.createHeap(100663296));
                       }
                       if (var3 == null) {
-                        var8.field_e = wt.a(false);
+                        var8.field_e = MonotonicMillisClock.currentTimeMillis(false);
                       } else {
                         ((t) (var3)).b(1, var8);
                       }
@@ -362,14 +362,14 @@ final class fab {
           for (var9 = 0; 4 > var9; var9++) {
             var8[var9] = PartitionZone.field_a.nextInt();
           }
-          if (null == bt.field_a ||
-            !(bt.field_a.payload.length >= var7_int)) {
-            bt.field_a = new PacketBuffer(var7_int);
+          if (null == OpenGlDisplayLists.field_a ||
+            !(OpenGlDisplayLists.field_a.payload.length >= var7_int)) {
+            OpenGlDisplayLists.field_a = new PacketBuffer(var7_int);
           }
-          bt.field_a.position = 0;
-          bt.field_a.writeBytes(param0, param3, -1, param1);
-          bt.field_a.padToPosition(var7_int, (byte) 66);
-          bt.field_a.xteaEncrypt(var13, (byte) 127);
+          OpenGlDisplayLists.field_a.position = 0;
+          OpenGlDisplayLists.field_a.writeBytes(param0, param3, -1, param1);
+          OpenGlDisplayLists.field_a.padToPosition(var7_int, (byte) 66);
+          OpenGlDisplayLists.field_a.xteaEncrypt(var13, (byte) 127);
           if (null == GetKeepTeamColours.field_o ||
             !(GetKeepTeamColours.field_o.payload.length >= 100)) {
             GetKeepTeamColours.field_o = new PacketBuffer(100);
@@ -385,7 +385,7 @@ final class fab {
           GetKeepTeamColours.field_o.writeShort(param1, true);
           GetKeepTeamColours.field_o.rsaEncrypt(param6, param4, 16711680);
           param2.writeBytes(0, GetKeepTeamColours.field_o.payload, -1, GetKeepTeamColours.field_o.position);
-          param2.writeBytes(0, bt.field_a.payload, param5 - 48, bt.field_a.position);
+          param2.writeBytes(0, OpenGlDisplayLists.field_a.payload, param5 - 48, OpenGlDisplayLists.field_a.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -487,7 +487,7 @@ final class fab {
             this.a(param1, (byte) -119);
           }
           if (null != this.field_e) {
-            this.field_e.field_g.updateFrame((int)(wt.a(false) - this.field_e.field_e));
+            this.field_e.field_g.updateFrame((int)(MonotonicMillisClock.currentTimeMillis(false) - this.field_e.field_e));
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_e != null && (var3 == null ||

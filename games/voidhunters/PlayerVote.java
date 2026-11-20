@@ -98,7 +98,7 @@ final class PlayerVote implements DiffableState {
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           this.option = param0.readBits(0, 32);
-          this.unvote = kv.readBoolean(param1, param0);
+          this.unvote = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dv.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GetFighterVision extends ConsoleCommand {
-    static long field_p;
+    static long clockRollbackCompensationMillis;
     static int field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -56,8 +56,8 @@ final class GetFighterVision extends ConsoleCommand {
               var3 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.next((byte) 92));
             }
             var3_int = param1;
-            if (fbb.field_j[param1] > 1) {
-              var3_int = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, fbb.field_j[param1], 117) + param1;
+            if (LegacyOpenGlMaterialEffectManager.field_j[param1] > 1) {
+              var3_int = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, LegacyOpenGlMaterialEffectManager.field_j[param1], 117) + param1;
             }
             var4 = GetNebulaFadesOutWhenClose.a(param0 ^ -6902, fa.field_d[var3_int]);
             var5 = new OneShotSound();

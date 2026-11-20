@@ -36,7 +36,7 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
               param2 = param3.createArray(11995, var6_int);
             }
             for (var8 = 0; var8 < var6_int; var8++) {
-              if (kv.readBoolean(false, param5)) {
+              if (LegacyOpenGlSpecularEffect.readBoolean(false, param5)) {
                 if (param2[var8] == null) {
                   param2[var8] = param3.create((byte) 109);
                 }

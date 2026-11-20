@@ -227,7 +227,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 }
                 decompiledFrameRemainder0 = (this.field_m);
                 if ((decompiledFrameRemainder0) &&
-                  (decompiledFrameRemainder0 = !(this.nextRequestCleanupTime > wt.a(false)))) {
+                  (decompiledFrameRemainder0 = !(this.nextRequestCleanupTime > MonotonicMillisClock.currentTimeMillis(false)))) {
                   var2 = (ArchiveRequest) (this.requests.first((byte) 48));
                   while (var2 != null) {
                     if (!var2.pending) {
@@ -260,7 +260,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           decompiledFrameRemainder0 = (this.field_m);
           if ((decompiledFrameRemainder0) &&
-            (decompiledFrameRemainder0 = !(this.nextRequestCleanupTime > wt.a(false)))) {
+            (decompiledFrameRemainder0 = !(this.nextRequestCleanupTime > MonotonicMillisClock.currentTimeMillis(false)))) {
             var2Lifetime1 = (ArchiveRequest) (this.requests.first((byte) 48));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.pending) {
@@ -278,7 +278,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
         }
         if (decompiledFrameRemainder0) {
-          this.nextRequestCleanupTime = wt.a(false) + 1000L;
+          this.nextRequestCleanupTime = MonotonicMillisClock.currentTimeMillis(false) + 1000L;
         }
 
     }

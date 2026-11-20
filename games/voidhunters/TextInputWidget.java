@@ -181,7 +181,7 @@ final class TextInputWidget extends Widget {
           if (1 == this.field_o) {
             this.moveCaret(var2, 3047);
             this.dragSelecting = true;
-            var3_long = wt.a(false);
+            var3_long = MonotonicMillisClock.currentTimeMillis(false);
             stackIn_14_1 = !(var3_long - this.lastClickTime >= 250L);
             this.doubleClickSelection = stackIn_14_1;
             if (this.doubleClickSelection) {

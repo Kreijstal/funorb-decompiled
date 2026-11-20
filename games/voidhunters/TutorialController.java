@@ -516,7 +516,7 @@ final class TutorialController {
           var10 = (Projectile) (var9.first(0));
           while (var10 != null) {
             if (var10.getFiredTeam(512) != 0) {
-              var10.b(0, 71);
+              var10.setDamage(0, 71);
             }
             var10 = (Projectile) (var9.next((byte) 109));
             if (var17 == 0) {

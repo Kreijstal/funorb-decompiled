@@ -19,7 +19,7 @@ final class SetSalvoRepairTimeMultiplier extends ConsoleCommand {
     }
 
     final static void a(int param0) {
-        GetUseModels.field_o = wt.a(false);
+        GetUseModels.field_o = MonotonicMillisClock.currentTimeMillis(false);
         GetDebrisThrowable.field_q = 0;
         if (param0 != 4907) {
           SetSalvoRepairTimeMultiplier.a(-71);

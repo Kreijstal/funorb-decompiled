@@ -103,7 +103,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         try {
           this.a(param0, (byte) -122);
           super.readState(param0, param1);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.serverCarousel = null;
           } else {
             if (this.serverCarousel != null) {
@@ -113,7 +113,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
               this.serverCarousel.readState(param0, param1);
             }
           }
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (this.clientStateDump == null) {
               this.clientStateDump = new CarouselSlotStateDump();
             }

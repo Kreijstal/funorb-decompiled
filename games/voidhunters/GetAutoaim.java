@@ -34,7 +34,7 @@ final class GetAutoaim extends ConsoleCommand {
             param3 = new boolean[var4_int];
           }
           for (var5 = 0; var5 < var4_int; var5++) {
-            param3[var5] = kv.readBoolean(false, param1);
+            param3[var5] = LegacyOpenGlSpecularEffect.readBoolean(false, param1);
           }
           if (param2 <= 19) {
             var7 = (boolean[]) null;

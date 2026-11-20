@@ -158,7 +158,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
           stackIn_43_1 = 38;
           stackIn_43_2 = 2;
           stackIn_43_3 = (8 + DialogMessagePanel.field_w * 4) * param0;
-          stackIn_44_4 = (param2 == qg.field_a);
+          stackIn_44_4 = (param2 == LegacyOpenGlMaterialEffect.field_a);
           stackIn_47_0 = (!((ScrollPaneWidget) (Object) stackIn_43_0).layoutAndUpdateScrolling((byte) stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4, param3, 2 * (2 + DialogMessagePanel.field_w))) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param2.content.children;

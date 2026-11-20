@@ -177,7 +177,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_armageddon_timer_start(" + Cp1252CharacterEncoder.field_b + ")");
         System.out.println("set_armageddon_warning(" + AsteroidFactory.field_a + ")");
         System.out.println("set_armageddon_length(" + SetVariableActionFactory.field_a + ")");
-        System.out.println("set_mission_terrain_nebula_probability(" + ku.field_c + ")");
+        System.out.println("set_mission_terrain_nebula_probability(" + LegacyOpenGlUnlitEffect.field_c + ")");
         System.out.println("set_mission_terrain_asteroid_probability(" + GetDebrisFoundInPairs.field_o + ")");
         System.out.println("set_mission_terrain_debris_probability(" + apb.field_a + ")");
         System.out.println("set_mission_terrain_space_probability(" + SetUseLines.field_p + ")");
@@ -197,7 +197,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_countermeasure_launcher_randomness(" + TextureBezierShape.field_f + ")");
         System.out.println("set_mass_driver_projectiles(" + SetSalvoRepairTimeMultiplier.field_p + ")");
         System.out.println("set_laser_projectiles(" + GetLaserBeamProjectileDamage.field_o + ")");
-        System.out.println("set_bomblet_spray_projectiles(" + la.field_m + ")");
+        System.out.println("set_bomblet_spray_projectiles(" + LegacyOpenGlUnderwaterEffect.field_m + ")");
         System.out.println("set_phased_energy_beam_projectiles(" + uab.field_b + ")");
         System.out.println("set_torpedo_projectiles(" + GetLagStandardDeviationIn.field_p + ")");
         System.out.println("set_sniper_cannon_projectiles(" + fj.field_b + ")");
@@ -322,7 +322,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_missiles_cooldown(" + Particle.field_m + ")");
         System.out.println("set_missiles_explosion_power(" + gib.field_a + ")");
         System.out.println("set_missiles_acceleration(" + iea.field_d + ")");
-        System.out.println("set_missiles_top_speed(" + la.field_k + ")");
+        System.out.println("set_missiles_top_speed(" + LegacyOpenGlUnderwaterEffect.field_k + ")");
         System.out.println("set_shields_toggle_cooldown(" + Particle.field_w + ")");
         System.out.println("set_shields_directional_idle_energy_usage(" + SetMissilesCooldown.field_p + ")");
         System.out.println("set_shields_directional_radius(" + rjb.field_u + ")");

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ku extends qg {
+final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
     static int field_c;
     static String field_d;
 
@@ -9,31 +9,31 @@ final class ku extends qg {
         field_d = null;
         if (param0 <= 105) {
           String var2 = (String) null;
-          ku.startAccountCreation((String) null, 66, (AccountCreationForm) null, true, -92, (String) null, (String) null);
+          LegacyOpenGlUnlitEffect.startAccountCreation((String) null, 66, (AccountCreationForm) null, true, -92, (String) null, (String) null);
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void enable(boolean param0, int param1) {
         if (param1 >= 18) {
-          this.field_b.setLightingSuppressed(32925, true);
+          this.toolkit.setLightingSuppressed(32925, true);
           return;
         }
         OpenGlTexture var4 = (OpenGlTexture) null;
-        this.a(-92, (byte) 78, (OpenGlTexture) null);
-        this.field_b.setLightingSuppressed(32925, true);
+        this.setTexture(-92, (byte) 78, (OpenGlTexture) null);
+        this.toolkit.setLightingSuppressed(32925, true);
     }
 
-    ku(OpenGlToolkit param0) {
+    LegacyOpenGlUnlitEffect(OpenGlToolkit param0) {
         super(param0);
     }
 
-    final void a(int param0, byte param1, OpenGlTexture param2) {
+    final void setTexture(int param0, byte param1, OpenGlTexture param2) {
         try {
-          this.field_b.bindTexture(80, param2);
+          this.toolkit.bindTexture(80, param2);
           if (param1 != 125) {
             field_c = -10;
           }
-          this.field_b.setTextureCombineMode(0, param0);
+          this.toolkit.setTextureCombineMode(0, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ku.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -76,7 +76,7 @@ final class ku extends qg {
             return true;
           }
           var8 = (String) null;
-          ku.startAccountCreation((String) null, 104, (AccountCreationForm) null, true, 77, (String) null, (String) null);
+          LegacyOpenGlUnlitEffect.startAccountCreation((String) null, 104, (AccountCreationForm) null, true, 77, (String) null, (String) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,21 +110,21 @@ final class ku extends qg {
         }
     }
 
-    final void a(int param0) {
-        this.field_b.setLightingSuppressed(32925, false);
+    final void disable(int param0) {
+        this.toolkit.setLightingSuppressed(32925, false);
         if (param0 != 5890) {
           String var3 = (String) null;
-          ku.startAccountCreation((String) null, -94, (AccountCreationForm) null, true, -26, (String) null, (String) null);
+          LegacyOpenGlUnlitEffect.startAccountCreation((String) null, -94, (AccountCreationForm) null, true, -26, (String) null, (String) null);
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         if (param1 != -25139) {
-          this.a(true, true);
+          this.applyRenderState(true, true);
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isSupported(int param0) {
         if (param0 > -87) {
           field_c = -126;
           return true;
@@ -132,9 +132,9 @@ final class ku extends qg {
         return true;
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void applyRenderState(boolean param0, boolean param1) {
         if (!param0) {
-          ku.clearSharedReferences((byte) -82);
+          LegacyOpenGlUnlitEffect.clearSharedReferences((byte) -82);
         }
     }
 

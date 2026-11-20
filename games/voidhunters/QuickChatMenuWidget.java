@@ -279,7 +279,7 @@ final class QuickChatMenuWidget extends Widget {
           return false;
         }
         SetAudioRangeCutoff.field_q = true;
-        StrongCacheReference.field_p = wt.a(false) + 15000L;
+        StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
         return GetSpinningBladeAimspeed.field_q == 11 ? true : false;
     }
 

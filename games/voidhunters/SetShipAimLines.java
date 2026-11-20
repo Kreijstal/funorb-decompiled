@@ -71,7 +71,7 @@ final class SetShipAimLines extends ConsoleCommand {
           stackIn_28_0 = (0 == (2 & var4_int)) ? 0 : 1;
           var6 = stackIn_28_0;
           param1.field_Kb = param3.readUnsignedShort(1869);
-          param1.field_Ob = wt.a(false) - (long)param3.readInt(106);
+          param1.field_Ob = MonotonicMillisClock.currentTimeMillis(false) - (long)param3.readInt(106);
           var7 = -124 % ((param0 - 42) / 44);
           if (var5 == 0) {
             param1.field_Ub = -1;

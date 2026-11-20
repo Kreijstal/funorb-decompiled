@@ -163,7 +163,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
     public void readCompactState(IsaacPacketBuffer param0, int param1) {
         try {
           super.readState(param0, false);
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (null == this.chassis) {
               this.chassis = new ShipComponent();
             }
@@ -412,7 +412,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
     public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           super.readState(param0, false);
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (null == this.chassis) {
               this.chassis = new ShipComponent();
             }

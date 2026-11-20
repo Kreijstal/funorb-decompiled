@@ -1033,7 +1033,7 @@ final class MissionState implements DiffableState {
           this.phaseTimer = param0.readBits(0, 32);
           this.winner = param0.readBits(0, 32);
           this.customVariables = (MissionVariable[]) (SetAutoDetail.a(8, SetUseTrails.field_p, param0, 1, -128, this.customVariables));
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (null == this.nextround) {
               this.nextround = new MissionGenerationData();
             }
@@ -1042,7 +1042,7 @@ final class MissionState implements DiffableState {
             this.nextround = null;
           }
           this.teamscores = SetVariableActionFactory.a((byte) 37, this.teamscores, param0, 8);
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (this.currentMatch == null) {
               this.currentMatch = new MatchResults();
             }

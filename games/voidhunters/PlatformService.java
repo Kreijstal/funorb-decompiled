@@ -259,7 +259,7 @@ final class PlatformService implements Runnable {
                 var2_int = var8.type;
                 switch (var2_int) {
                   case 22:
-                    if (wt.a(false) < networkBlockedUntil) {
+                    if (MonotonicMillisClock.currentTimeMillis(false) < networkBlockedUntil) {
                       throw new IOException();
                     }
                     try {
@@ -299,7 +299,7 @@ final class PlatformService implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (wt.a(false) < networkBlockedUntil) {
+                        if (MonotonicMillisClock.currentTimeMillis(false) < networkBlockedUntil) {
                           throw new IOException();
                         }
                         var15 = (255 & var8.primaryIntArgument >> 24) + "." + ((var8.primaryIntArgument & 16719400) >> 16) + "." + (255 & var8.primaryIntArgument >> 8) + "." + (var8.primaryIntArgument & 255);
@@ -396,7 +396,7 @@ final class PlatformService implements Runnable {
                         }
                         break;
                       case 21:
-                        if (wt.a(false) < networkBlockedUntil) {
+                        if (MonotonicMillisClock.currentTimeMillis(false) < networkBlockedUntil) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -416,13 +416,13 @@ final class PlatformService implements Runnable {
                     var8.result = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                   case 4:
-                    if (networkBlockedUntil > wt.a(false)) {
+                    if (networkBlockedUntil > MonotonicMillisClock.currentTimeMillis(false)) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
                     break;
                   case 1:
-                    if (wt.a(false) < networkBlockedUntil) {
+                    if (MonotonicMillisClock.currentTimeMillis(false) < networkBlockedUntil) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.primaryIntArgument);

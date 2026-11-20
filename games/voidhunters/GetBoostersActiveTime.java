@@ -222,7 +222,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           }
           if (SetShipSpawnInvulnerabilityTime.field_o == null) {
             if (SetShowTutorial.field_o) {
-              if (30000L < mw.e(0)) {
+              if (30000L < LegacyOpenGlWaveWaterEffect.getNetworkReadIdleMillis(0)) {
                 dgb.field_b = SetSalvoRepairTimeMultiplier.field_o;
               } else {
                 dgb.field_b = UiToggleButtonRenderer.field_f;

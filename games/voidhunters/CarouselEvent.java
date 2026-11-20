@@ -293,7 +293,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
           if (param1) {
             return;
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.systemEvent = null;
             return;
           }

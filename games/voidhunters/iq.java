@@ -39,7 +39,7 @@ final class iq {
             }
             var10 = BodyInZoneCondition.a(-118, param0.length - 1);
             for (var11 = 0; var9 > var11; var11++) {
-              if (!kv.readBoolean(false, param5)) {
+              if (!LegacyOpenGlSpecularEffect.readBoolean(false, param5)) {
                 param1[var11] = null;
               } else {
                 var12 = param5.readBits(0, var10);

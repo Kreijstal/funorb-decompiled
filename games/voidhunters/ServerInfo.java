@@ -363,7 +363,7 @@ final class ServerInfo implements DiffableState {
         try {
           this.voteoptionStates = SetVariableActionFactory.a((byte) 37, this.voteoptionStates, param0, 8);
           this.componentoptionStates = SetVariableActionFactory.a((byte) 37, this.componentoptionStates, param0, 8);
-          this.copyToClipboardHidden = kv.readBoolean(param1, param0);
+          this.copyToClipboardHidden = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
           this.ensureOptionStateArrays(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "coa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -494,7 +494,7 @@ final class ServerInfo implements DiffableState {
           if (param0 == null) {
             return null;
           }
-          var2 = new SoftwareMonochromeBitmapFont(param0, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, sh.field_a);
+          var2 = new SoftwareMonochromeBitmapFont(param0, LegacyOpenGlScrollingNoiseEffect.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, sh.field_a);
           if (param1 != 11) {
             var3 = (byte[]) null;
             ServerInfo.createFontFromDecodedSprites((byte[]) null, -100);

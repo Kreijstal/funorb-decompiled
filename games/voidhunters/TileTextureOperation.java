@@ -152,13 +152,13 @@ final class TileTextureOperation extends TextureOperation {
               return;
             }
             if (RequestNewestBlackboxRecording.field_p.position == 0 &&
-              (10000L + GetTorpedoProjectileOndamageParticles.field_o) < wt.a(false)) {
+              (10000L + GetTorpedoProjectileOndamageParticles.field_o) < MonotonicMillisClock.currentTimeMillis(false)) {
               RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, param0);
             }
             if (0 < RequestNewestBlackboxRecording.field_p.position) {
               try {
                 SetShipSpawnInvulnerabilityTime.field_o.write(0, RequestNewestBlackboxRecording.field_p.payload, RequestNewestBlackboxRecording.field_p.position, 0);
-                GetTorpedoProjectileOndamageParticles.field_o = wt.a(false);
+                GetTorpedoProjectileOndamageParticles.field_o = MonotonicMillisClock.currentTimeMillis(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -194,7 +194,7 @@ final class TileTextureOperation extends TextureOperation {
           GetLagStandardDeviationOut.field_o.sourceWidget != null) {
           GetLagStandardDeviationOut.field_o.sourceWidget.field_J = false;
         }
-        qg.field_a = null;
+        LegacyOpenGlMaterialEffect.field_a = null;
         GetLagStandardDeviationOut.field_o = null;
         if (param0 != 0) {
           TileTextureOperation.clearSharedReferences(75);

@@ -72,7 +72,7 @@ final class ShipBlueprint implements DiffableState {
               var2_int = param0 - qga.field_b.position;
             }
             SetShipSpawnInvulnerabilityTime.field_o.readFully(param1 ^ -30026, qga.field_b.position, var2_int, qga.field_b.payload);
-            ModelData.field_q = wt.a(false);
+            ModelData.lastNetworkReadTimeMillis = MonotonicMillisClock.currentTimeMillis(false);
             qga.field_b.position = qga.field_b.position + var2_int;
             if (param0 > qga.field_b.position) {
               return false;
@@ -83,7 +83,7 @@ final class ShipBlueprint implements DiffableState {
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              30000L >= mw.e(0)) {
+              30000L >= LegacyOpenGlWaveWaterEffect.getNetworkReadIdleMillis(0)) {
               return false;
             }
             FighterBayWeaponDefinition.l(param1 ^ -30026);

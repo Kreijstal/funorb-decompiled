@@ -322,13 +322,13 @@ final class ComponentCollision extends IntrusiveNode {
               }
             } else {
               var9_ref_String = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
-              GetWeaponParticleSpeedDownshift.field_q.text = SetReverbGain.a(wt.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
+              GetWeaponParticleSpeedDownshift.field_q.text = SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
               SetAutozoomSpeedDivide.field_p.setBounds(0, -127, vva.field_r.width, -40 + vva.field_r.height, 40);
               SetAutozoomSpeedDivide.field_p.text = SetReverbGain.a(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
               var8 = SetAutozoomSpeedDivide.field_p;
             }
             if (qga.field_a != 0L) {
-              var9 = (int)(-wt.a(false) + qga.field_a);
+              var9 = (int)(-MonotonicMillisClock.currentTimeMillis(false) + qga.field_a);
               var9 = (999 + var9) / 1000;
               if (1 > var9) {
                 var9 = 1;

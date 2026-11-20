@@ -261,7 +261,7 @@ final class BufferedSocket implements Runnable {
             var3 = (byte[]) null;
             BufferedSocket.createAlphaBitmapFont((byte) -54, (byte[]) null);
           }
-          var2 = new SoftwareAlphaBitmapFont(param1, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, rlb.field_d, sh.field_a);
+          var2 = new SoftwareAlphaBitmapFont(param1, LegacyOpenGlScrollingNoiseEffect.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, rlb.field_d, sh.field_a);
           MatchResults.a(39);
           stackIn_6_0 = var2;
           return stackIn_6_0;

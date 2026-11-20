@@ -23,8 +23,8 @@ final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = kv.readBoolean(false, param0) ? 1 : 0;
-          var4 = kv.readBoolean(false, param0) ? 1 : 0;
+          var3 = LegacyOpenGlSpecularEffect.readBoolean(false, param0) ? 1 : 0;
+          var4 = LegacyOpenGlSpecularEffect.readBoolean(false, param0) ? 1 : 0;
           var5 = new wma();
           var5.field_J = (short)param0.readBits(0, 16);
           var5.field_r = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_r);
@@ -52,10 +52,10 @@ final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
             var5.field_i = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_i);
             var5.field_c = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_c);
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             var5.field_K = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_K);
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             var5.field_E = GetClientSideDragging.a(false, 16, param0, var5.field_E);
             var7 = 0;
             for (var8 = 0; var5.field_E.length > var8; var8++) {

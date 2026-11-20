@@ -129,11 +129,11 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                     if (var3_ref_wfb.field_k) {
                       var4 = -2;
                     }
-                    for (var5 = 0; uob.field_g.length > var5; var5++) {
-                      var25 = uob.field_g[var5];
+                    for (var5 = 0; LegacyOpenGlEnvironmentReflectionEffect.field_g.length > var5; var5++) {
+                      var25 = LegacyOpenGlEnvironmentReflectionEffect.field_g[var5];
                       var19 = var25;
                       var6 = var19;
-                      stackIn_31_0 = (var5 != uob.field_g.length - 1) ? 0 : 1;
+                      stackIn_31_0 = (var5 != LegacyOpenGlEnvironmentReflectionEffect.field_g.length - 1) ? 0 : 1;
                       var7 = stackIn_31_0;
                       var8 = 16777215;
                       if (var7 == 0) {

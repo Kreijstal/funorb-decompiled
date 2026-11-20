@@ -123,7 +123,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipSpawnedCondition.field_e[24] = Hardpoint.field_b;
           ShipSpawnedCondition.field_e[44] = UiComboBox.field_I;
           ShipSpawnedCondition.field_e[22] = SetPhysicsCollisionPhantomForceMultiplier.field_o;
-          ShipSpawnedCondition.field_e[46] = jjb.field_f;
+          ShipSpawnedCondition.field_e[46] = LegacyOpenGlWaterTextures.field_f;
           ShipSpawnedCondition.field_e[16] = jw.field_a;
           ShipSpawnedCondition.field_e[19] = OpenGlEnvironmentMappedWaterEffect.field_h;
           ShipSpawnedCondition.field_e[38] = OpenGlEnvironmentMappedWaterEffect.field_h;
@@ -181,7 +181,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[58] = nnb.field_f;
           GetGrapplingHookSpringConstant.field_o[31] = SetMassDriverReload.field_q;
           GetGrapplingHookSpringConstant.field_o[30] = SystemNanoClock.field_d;
-          GetGrapplingHookSpringConstant.field_o[28] = ti.field_k;
+          GetGrapplingHookSpringConstant.field_o[28] = LegacyOpenGlEnvironmentMappedWaterEffect.field_k;
           GetGrapplingHookSpringConstant.field_o[56] = cd.field_a;
           GetGrapplingHookSpringConstant.field_o[55] = UiTextStyle.field_l;
           GetGrapplingHookSpringConstant.field_o[37] = GetMissileLauncherEnergyUsed.field_o;
@@ -278,13 +278,13 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetPhasedEnergyBeamProjectiles.field_o = new String[9];
           SetPhasedEnergyBeamProjectiles.field_o[1] = MapClearanceRectangle.field_f;
           SetPhasedEnergyBeamProjectiles.field_o[2] = GetDebrisCollisionDamage.field_o;
-          SetPhasedEnergyBeamProjectiles.field_o[8] = igb.field_b + " " + ti.field_i;
+          SetPhasedEnergyBeamProjectiles.field_o[8] = igb.field_b + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
           SetPhasedEnergyBeamProjectiles.field_o[4] = ppb.field_d;
           SetPhasedEnergyBeamProjectiles.field_o[5] = QuickChatDynamicCommand.field_b;
           SetPhasedEnergyBeamProjectiles.field_o[0] = DualLinkNode.field_h;
           SetPhasedEnergyBeamProjectiles.field_o[3] = igb.field_b;
-          SetPhasedEnergyBeamProjectiles.field_o[6] = MapClearanceRectangle.field_f + " " + ti.field_i;
-          SetPhasedEnergyBeamProjectiles.field_o[7] = GetDebrisCollisionDamage.field_o + " " + ti.field_i;
+          SetPhasedEnergyBeamProjectiles.field_o[6] = MapClearanceRectangle.field_f + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
+          SetPhasedEnergyBeamProjectiles.field_o[7] = GetDebrisCollisionDamage.field_o + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nra.F(" + param0 + ')');
         }

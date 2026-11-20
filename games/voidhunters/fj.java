@@ -19,7 +19,7 @@ final class fj {
         if (param0 != 18444) {
           return;
         }
-        if (uga.field_d) {
+        if (LegacyOpenGlTurbulenceEffect.field_d) {
           GetUseExtraBackground.a(-1);
         }
     }

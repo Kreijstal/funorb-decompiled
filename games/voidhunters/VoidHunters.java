@@ -424,12 +424,12 @@ public final class VoidHunters extends NetworkGameClient {
             return;
           }
         }
-        if (!uob.field_e) {
+        if (!LegacyOpenGlEnvironmentReflectionEffect.field_e) {
           ComponentCollision.a("Servicing login_create_ui...", (byte) -85);
           GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, 15877);
           ComponentCollision.a("Finished servicing login_create_ui...", (byte) -72);
           if (this.finishResourceLoading((byte) 125)) {
-            uob.field_e = true;
+            LegacyOpenGlEnvironmentReflectionEffect.field_e = true;
           }
         } else {
           if (!Mission.b(-1)) {
@@ -601,10 +601,10 @@ public final class VoidHunters extends NetworkGameClient {
           }
           if (this.field_C == -1) {
             for (var4_int = 0; param0.levels.length > var4_int; var4_int++) {
-              uga.field_g.setChannelGain(param0.levels[var4_int], (byte) 18, var4_int);
+              LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(param0.levels[var4_int], (byte) 18, var4_int);
             }
           } else {
-            uga.field_g.a((byte) -115, 4000, param0);
+            LegacyOpenGlTurbulenceEffect.field_g.a((byte) -115, 4000, param0);
           }
           this.field_C = param2;
           return;
@@ -628,9 +628,9 @@ public final class VoidHunters extends NetworkGameClient {
         MidiPcmStream var6 = new MidiPcmStream();
         var6.setDefaultProgram(128, (byte) 96, 9);
         GetThrusterParticleLife.field_o = new fdb();
-        uga.field_g = new fdb(GetThrusterParticleLife.field_o);
+        LegacyOpenGlTurbulenceEffect.field_g = new fdb(GetThrusterParticleLife.field_o);
         MidiPcmStream var3 = new MidiPcmStream();
-        dra var4 = new dra(GetThrusterParticleLife.field_o, uga.field_g, var3);
+        dra var4 = new dra(GetThrusterParticleLife.field_o, LegacyOpenGlTurbulenceEffect.field_g, var3);
         kr.a((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
         ScreenSizeController var5 = new ScreenSizeController(new GameCanvasResizeListener());
         var5.minimumMemoryMegabytes = 0;
@@ -687,7 +687,7 @@ public final class VoidHunters extends NetworkGameClient {
         var2 = stackIn_5_0;
         var3 = 28 / ((-54 - param0) / 37);
         if (var2 != 0) {
-          if (GetBurstFireMaxEnergy.field_p.field_n != uga.field_g &&
+          if (GetBurstFireMaxEnergy.field_p.field_n != LegacyOpenGlTurbulenceEffect.field_g &&
             this.field_B <= 0) {
             GetBurstFireMaxEnergy.field_p.a(-126, pab.field_k[1], 100, 1000000);
           }
@@ -719,7 +719,7 @@ public final class VoidHunters extends NetworkGameClient {
                 if (var5 == 5) {
                   if (this.field_B <= 0) {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
-                      uga.field_g.setChannelGain(0, (byte) 18, var6_int);
+                      LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
                     AdminMessage.a(32, false, pab.field_k[2]);
                     this.field_B = 500;
@@ -728,7 +728,7 @@ public final class VoidHunters extends NetworkGameClient {
                   if (6 == var5 &&
                     this.field_B <= 0) {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
-                      uga.field_g.setChannelGain(0, (byte) 18, var6_int);
+                      LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
                     AdminMessage.a(32, false, pab.field_k[3]);
                     this.field_B = 500;
@@ -872,7 +872,7 @@ public final class VoidHunters extends NetworkGameClient {
         SoftwareRasterizer2D.clearSharedReferences();
         ResourceArchive.clearSharedReferences((byte) 112);
         PacketBuffer.clearSharedReferences(-38);
-        wt.clearSharedReferences(-101);
+        MonotonicMillisClock.clearSharedReferences(-101);
         tc.clearSharedReferences((byte) 40);
         kia.clearSharedReferences(3553);
         kmb.clearSharedReferences(32768);
@@ -1133,7 +1133,7 @@ public final class VoidHunters extends NetworkGameClient {
         SecondaryNodeDeque.clearSharedReferences(!param0 ? true : false);
         SoftwareFramebuffer.clearSharedReferences(true);
         rlb.clearSharedReferences(-120);
-        fbb.clearSharedReferences(param0);
+        LegacyOpenGlMaterialEffectManager.clearSharedReferences(param0);
         OpenGlPostProcessor.clearSharedReferences(1);
         OpenGlBloomEffect.clearSharedReferences(0);
         OpenGlInterleavedVertexBuffer.clearSharedReferences((byte) -26);
@@ -1213,25 +1213,25 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlTexture3D.clearSharedReferences((byte) 42);
         OpenGlRenderbuffer.clearSharedReferences(33);
         OpenGlPostEffect.clearSharedReferences(-95);
-        qg.clearSharedReferences(-15081);
-        jjb.clearSharedReferences(false);
+        LegacyOpenGlMaterialEffect.clearSharedReferences(-15081);
+        LegacyOpenGlWaterTextures.clearSharedReferences(false);
         OpenGlModel.clearSharedReferences(-2);
         uia.clearSharedReferences(-4353);
         OpenGlNativeHeap.clearSharedReferences(-92);
         im.clearSharedReferences((byte) 105);
         tob.clearSharedReferences(91);
-        bt.clearSharedReferences(-4509);
+        OpenGlDisplayLists.clearSharedReferences(-4509);
         ArbProgram.clearSharedReferences(false);
         EnvironmentMapSource.clearSharedReferences(26);
         OpenGlVertexBufferObject.clearSharedReferences(124);
         OpenGlBufferObject.clearSharedReferences(117);
         OpenGlClientVertexBuffer.clearSharedReferences(0);
-        uga.clearSharedReferences((byte) -9);
-        iib.clearSharedReferences(1);
-        ku.clearSharedReferences((byte) 108);
-        uob.clearSharedReferences(3168);
-        ti.clearSharedReferences(true);
-        mw.clearSharedReferences(13776);
+        LegacyOpenGlTurbulenceEffect.clearSharedReferences((byte) -9);
+        LegacyOpenGlScrollingNoiseEffect.clearSharedReferences(1);
+        LegacyOpenGlUnlitEffect.clearSharedReferences((byte) 108);
+        LegacyOpenGlEnvironmentReflectionEffect.clearSharedReferences(3168);
+        LegacyOpenGlEnvironmentMappedWaterEffect.clearSharedReferences(true);
+        LegacyOpenGlWaveWaterEffect.clearSharedReferences(13776);
         ts.clearSharedReferences((byte) 90);
         TextureFilterMode.clearSharedReferences((byte) 88);
         GpuNativeHeap.clearSharedReferences(!param0 ? true : false);
@@ -2291,7 +2291,7 @@ public final class VoidHunters extends NetworkGameClient {
             hka.a(111, var10, SetMassDriverProjectileLife.a(0));
             return;
           }
-          if (!uob.field_e) {
+          if (!LegacyOpenGlEnvironmentReflectionEffect.field_e) {
             GetPhasedEnergyBeamAimspeed.a(var10, true);
             return;
           }
@@ -2301,7 +2301,7 @@ public final class VoidHunters extends NetworkGameClient {
             return;
           }
           if (OpenGlTexture1D.field_i) {
-            GetDebrisGroupColour.field_r.updateFrame((int)(-GetSalvoaim.field_q + wt.a(false)));
+            GetDebrisGroupColour.field_r.updateFrame((int)(-GetSalvoaim.field_q + MonotonicMillisClock.currentTimeMillis(false)));
             if (ul.field_a == 1) {
               if (!GetDebrisGroupColour.field_r.isBloomEnabled()) {
                 GetDebrisGroupColour.field_r.enableBloom();

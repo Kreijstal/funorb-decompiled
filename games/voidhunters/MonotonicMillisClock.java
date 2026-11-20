@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wt {
+final class MonotonicMillisClock {
     static String field_b;
     static String field_c;
     static volatile int field_a;
 
-    final synchronized static long a(boolean param0) {
+    final synchronized static long currentTimeMillis(boolean param0) {
         long var1 = System.currentTimeMillis();
-        if (GetAllowShipSaving.field_q > var1) {
-          GetFighterVision.field_p = GetFighterVision.field_p + (-var1 + GetAllowShipSaving.field_q);
-          GetAllowShipSaving.field_q = var1;
+        if (GetAllowShipSaving.lastClockSampleMillis > var1) {
+          GetFighterVision.clockRollbackCompensationMillis = GetFighterVision.clockRollbackCompensationMillis + (-var1 + GetAllowShipSaving.lastClockSampleMillis);
+          GetAllowShipSaving.lastClockSampleMillis = var1;
           if (param0) {
             field_b = (String) null;
-            return var1 + GetFighterVision.field_p;
+            return var1 + GetFighterVision.clockRollbackCompensationMillis;
           }
-          return var1 + GetFighterVision.field_p;
+          return var1 + GetFighterVision.clockRollbackCompensationMillis;
         }
-        GetAllowShipSaving.field_q = var1;
+        GetAllowShipSaving.lastClockSampleMillis = var1;
         if (!param0) {
-          return var1 + GetFighterVision.field_p;
+          return var1 + GetFighterVision.clockRollbackCompensationMillis;
         }
         field_b = (String) null;
-        return var1 + GetFighterVision.field_p;
+        return var1 + GetFighterVision.clockRollbackCompensationMillis;
     }
 
     final static void handleAccountCreationReply(int param0, int param1, String[] param2, String param3) {
@@ -81,7 +81,7 @@ final class wt {
         field_b = null;
         field_c = null;
         if (param0 > -97) {
-          wt.clearSharedReferences(-106);
+          MonotonicMillisClock.clearSharedReferences(-106);
         }
     }
 

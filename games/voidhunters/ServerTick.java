@@ -147,7 +147,7 @@ final class ServerTick extends IntrusiveNode implements DiffableState {
         try {
           this.field_f = param0.readBits(0, 32);
           this.field_g = param0.readBits(0, 32);
-          this.field_e = kv.readBoolean(param1, param0);
+          this.field_e = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
           if (param1) {
             SerializableGameState var4 = (SerializableGameState) null;
             this.reportDifferences((SerializableGameState) null, 89);

@@ -178,7 +178,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (!VariableCondition.field_e) {
               if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
                 if (!OpenGlRenderbuffer.field_n) {
-                  var38 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+                  var38 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var39 = var38 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var39);
                   if (var5Lifetime1 < DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
@@ -187,7 +187,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
                   return true;
                 }
                 if (null == vla.field_E) {
-                  var36 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+                  var36 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var37 = var36 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var37);
                   if (var5Lifetime1 < DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
@@ -209,7 +209,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           }
           if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
             if (!OpenGlRenderbuffer.field_n) {
-              var43 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+              var43 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var44 = var43 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var44);
               if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
@@ -219,7 +219,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               return true;
             }
             if (null == vla.field_E) {
-              var41 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+              var41 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var42 = var41 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var42);
               if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {

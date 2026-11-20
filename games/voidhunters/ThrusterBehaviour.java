@@ -583,7 +583,7 @@ final class ThrusterBehaviour implements DiffableState {
             var5 = (SerializableGameState) null;
             this.differsFrom((byte) 111, (SerializableGameState) null);
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.timer = null;
           } else {
             if (null == this.timer) {
@@ -591,7 +591,7 @@ final class ThrusterBehaviour implements DiffableState {
             }
             this.timer.readState(param0, false);
           }
-          if (!kv.readBoolean(param1, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.trail = null;
             return;
           }

@@ -98,7 +98,7 @@ class CarouselPlayerInfo implements DiffableState {
 
     public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.connected = kv.readBoolean(param1, param0);
+          this.connected = LegacyOpenGlSpecularEffect.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -48,8 +48,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
             OpenGlFramebuffer.field_b = 0;
-            wt.field_a = -1;
-            kv.field_e = -1;
+            MonotonicMillisClock.field_a = -1;
+            LegacyOpenGlSpecularEffect.field_e = -1;
             hda.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -61,8 +61,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != GetDebrisFoundInPairs.field_q) {
             OpenGlFramebuffer.field_b = 0;
-            wt.field_a = param0.getX();
-            kv.field_e = param0.getY();
+            MonotonicMillisClock.field_a = param0.getX();
+            LegacyOpenGlSpecularEffect.field_e = param0.getY();
             hda.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -74,8 +74,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
             OpenGlFramebuffer.field_b = 0;
-            wt.field_a = param0.getX();
-            kv.field_e = param0.getY();
+            MonotonicMillisClock.field_a = param0.getX();
+            LegacyOpenGlSpecularEffect.field_e = param0.getY();
             hda.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -134,7 +134,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             OpenGlFramebuffer.field_b = 0;
             cma.field_a = param0.getX();
             SetBombletSprayAimarc.field_p = param0.getY();
-            wt.a(false);
+            MonotonicMillisClock.currentTimeMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ro.field_a = 2;
               GetBombletSprayAimarc.field_q = 2;
@@ -177,8 +177,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
             OpenGlFramebuffer.field_b = 0;
-            wt.field_a = param0.getX();
-            kv.field_e = param0.getY();
+            MonotonicMillisClock.field_a = param0.getX();
+            LegacyOpenGlSpecularEffect.field_e = param0.getY();
             hda.field_a = true;
           }
         } catch (RuntimeException runtimeException) {

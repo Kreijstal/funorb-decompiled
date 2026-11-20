@@ -59,7 +59,7 @@ abstract class NetworkGameClient extends GameApplet {
           NetworkArchiveRequest.f((byte) -119);
           SetMessageFadetime.a(dgb.field_b, (byte) 72, var2);
           GetSpinningBladeAimarc.field_o = true;
-          StrongCacheReference.field_p = wt.a(false) + 15000L;
+          StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
         } else {
           if (GetSpinningBladeAimspeed.field_q == 11 &&
             0 == MapClearanceArea.field_a) {
@@ -151,7 +151,7 @@ abstract class NetworkGameClient extends GameApplet {
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.a(-10560);
             GetSpinningBladeAimarc.field_o = true;
-            StrongCacheReference.field_p = 15000L + wt.a(false);
+            StrongCacheReference.field_p = 15000L + MonotonicMillisClock.currentTimeMillis(false);
           }
         }
         if (-1 == MapClearanceArea.field_a ||
@@ -167,7 +167,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (MapClearanceArea.field_a != -1 &&
             MapClearanceArea.field_a != 0) {
-            StrongCacheReference.field_p = wt.a(false) + 15000L;
+            StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
           }
         }
         if (-1 != MapClearanceArea.field_a &&
@@ -217,7 +217,7 @@ abstract class NetworkGameClient extends GameApplet {
         if ((-1 != MapClearanceArea.field_a &&
           MapClearanceArea.field_a != 0 ||
           SetWeaponProjectileSpeedMultiply.b(true)) &&
-          wt.a(false) >= StrongCacheReference.field_p) {
+          MonotonicMillisClock.currentTimeMillis(false) >= StrongCacheReference.field_p) {
           GetSpinningBladeAimarc.field_o = false;
           if (-1 != MapClearanceArea.field_a &&
             MapClearanceArea.field_a != 0) {
@@ -691,7 +691,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (var4 == 2) {
             var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), ThrusterBehaviourFactory.a(31065), MassDriverWeaponDefinition.d(true));
             if (-1 != var6_int) {
-              wt.handleAccountCreationReply(var6_int, -19342, gob.field_a, dgb.field_b);
+              MonotonicMillisClock.handleAccountCreationReply(var6_int, -19342, gob.field_a, dgb.field_b);
               gob.field_a = null;
               dgb.field_b = null;
             }

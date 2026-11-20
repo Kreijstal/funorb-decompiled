@@ -11,7 +11,7 @@ final class OpenGlSprite extends ToolkitSprite {
     private int field_a;
     private boolean field_l;
     im texture;
-    static boolean field_c;
+    static boolean reconnecting;
     private int paddingTop;
     private int paddingLeft;
 

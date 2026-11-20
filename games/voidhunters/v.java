@@ -46,7 +46,7 @@ final class v extends UiFocusableComponent {
               for (var6 = 0; var3 > var6; var6++) {
                 var10[var6] = rlb.field_d[dla.a((int) var25[var6], 255)];
               }
-              var1[var2] = new Sprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var26);
+              var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var26);
             } else {
               var15 = SetInnateThrusters.field_o[var2];
               var11 = var15;
@@ -58,7 +58,7 @@ final class v extends UiFocusableComponent {
               for (var7 = 0; var3 > var7; var7++) {
                 var6_ref_int__[var7] = SetAngularForceDownshift.a(dla.a(var15[var7] << 24, -16777216), rlb.field_d[dla.a((int) var25[var7], 255)]);
               }
-              var1[var2] = (Sprite) ((Object) new ArgbSprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
             }
           }
         } else {
@@ -72,7 +72,7 @@ final class v extends UiFocusableComponent {
               for (var6 = 0; var3 > var6; var6++) {
                 var10[var6] = rlb.field_d[dla.a((int) var23[var6], 255)];
               }
-              var1[var2] = new Sprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var24);
+              var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var24);
             } else {
               var15 = SetInnateThrusters.field_o[var2];
               var11 = var15;
@@ -84,7 +84,7 @@ final class v extends UiFocusableComponent {
               for (var7 = 0; var3 > var7; var7++) {
                 var6_ref_int__[var7] = SetAngularForceDownshift.a(dla.a(var15[var7] << 24, -16777216), rlb.field_d[dla.a((int) var23[var7], 255)]);
               }
-              var1[var2] = (Sprite) ((Object) new ArgbSprite(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
             }
           }
         }

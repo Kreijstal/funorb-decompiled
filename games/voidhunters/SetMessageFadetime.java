@@ -59,7 +59,7 @@ final class SetMessageFadetime extends ConsoleCommand {
             SetPointDefenceLaserAimarc.field_o.active) {
             var3_int = 1;
             if (param2 == 8) {
-              if (!OpenGlSprite.field_c) {
+              if (!OpenGlSprite.reconnecting) {
                 param0 = SetPlayerRepairAmount.field_p;
               } else {
                 param0 = GetTorqueDownshift.field_p;
@@ -82,7 +82,7 @@ final class SetMessageFadetime extends ConsoleCommand {
             }
             if (param2 != 256 &&
               param2 != 10 &&
-              !OpenGlSprite.field_c) {
+              !OpenGlSprite.reconnecting) {
               SetAiFiringRangeUpshift.field_o.i((byte) -29);
             }
           }

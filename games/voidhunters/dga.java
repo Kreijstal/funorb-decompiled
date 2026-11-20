@@ -366,7 +366,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("join_xs_game", 23100);
                 if (var2 != null) {
-                  ti.field_g = Cp1252Strings.decode((byte) -125, var2);
+                  LegacyOpenGlEnvironmentMappedWaterEffect.field_g = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("join_request_xs_game", 23100);
                 if (null != var2) {
@@ -526,7 +526,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("xs_game", 23100);
                 if (null != var2) {
-                  wt.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  MonotonicMillisClock.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("waiting_for_x_to_start_game", 23100);
                 if (null != var2) {
@@ -606,7 +606,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("status_full", 23100);
                 if (var2 != null) {
-                  wt.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  MonotonicMillisClock.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("players_in_game", 23100);
                 if (var2 != null) {
@@ -670,7 +670,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("multiconst_invite_only", 23100);
                 if (null != var2) {
-                  uob.field_f = Cp1252Strings.decode((byte) -125, var2);
+                  LegacyOpenGlEnvironmentReflectionEffect.field_f = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("multiconst_clan", 23100);
                 if (null != var2) {
@@ -1724,7 +1724,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("enterignore_add", 23100);
                 if (null != var2) {
-                  mw.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  LegacyOpenGlWaveWaterEffect.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("enterignore_del", 23100);
                 if (null != var2) {

@@ -247,7 +247,7 @@ final class AsteroidFactory implements GameStateFactory {
               }
               stackIn_64_0[stackIn_64_1] = stackIn_67_2;
             }
-            wt.a(false);
+            MonotonicMillisClock.currentTimeMillis(false);
           }
           mba.field_a.itemCount = CountermeasureLauncherWeaponDefinition.field_c.length;
           var3_intLifetime1 = 0;

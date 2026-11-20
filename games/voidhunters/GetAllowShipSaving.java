@@ -4,7 +4,7 @@
 final class GetAllowShipSaving extends ConsoleCommand {
     static String field_o;
     static String field_p;
-    static long field_q;
+    static long lastClockSampleMillis;
 
     final static void a(int param0) {
         if (null != GetLagStandardDeviationIn.field_r) {

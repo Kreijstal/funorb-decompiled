@@ -240,7 +240,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (null == SetShipSpawnInvulnerabilityTime.field_o) {
               if (SetShowTutorial.field_o) {
-                if (mw.e(0) > 30000L) {
+                if (LegacyOpenGlWaveWaterEffect.getNetworkReadIdleMillis(0) > 30000L) {
                   dgb.field_b = SetSalvoRepairTimeMultiplier.field_o;
                 } else {
                   dgb.field_b = UiToggleButtonRenderer.field_f;

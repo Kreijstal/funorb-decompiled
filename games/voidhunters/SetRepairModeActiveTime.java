@@ -117,7 +117,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetHealthBarHeight.field_p[2] = CarouselSlot.field_b;
           SetHealthBarHeight.field_p[3] = SetPointDefenceLaserProjectiles.field_q;
           SetHealthBarHeight.field_p[1] = GetAngularForceDownshift.field_o;
-          SetHealthBarHeight.field_p[0] = uob.field_f;
+          SetHealthBarHeight.field_p[0] = LegacyOpenGlEnvironmentReflectionEffect.field_f;
           SetHealthBarHeight.field_p[4] = GetCountermeasuresCooldown.field_o;
           DualLinkNode.field_f = new Widget(0L, (Widget) null);
           TiledSpriteTextureOperation.field_q = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
@@ -143,7 +143,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SettingsChangeFactory.field_b = new Widget(0L, GetUseSprites.field_p, DebouncedInputValidator.field_b);
           GrapplingHook.field_C = new Widget(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
           GetDebrisDetachmentForceMultiplier.field_o = new Widget(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
-          uga.field_h = new Widget(0L, ObjectiveMarker.field_d, tea.field_c);
+          LegacyOpenGlTurbulenceEffect.field_h = new Widget(0L, ObjectiveMarker.field_d, tea.field_c);
           MapClearanceCircle.field_f = new ScrollPaneWidget(0L, new Widget(0L, (Widget) null), UiFocusableComponent.field_w, GetUseNiceTrails.field_o);
           GetMomentOfInertiaPerpointCalcDownshift.field_p = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p, TextureRasterShape.field_b.toUpperCase());
           GetMomentOfInertiaPerpointCalcDownshift.field_p.enabled = GetGrapplingHooksDamageableBySourcePlayer.field_o;
@@ -171,7 +171,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             sra.field_a.addChild(param1 ^ -9672, GrapplingHook.field_C);
           }
           sra.field_a.addChild(-561, GetDebrisDetachmentForceMultiplier.field_o);
-          sra.field_a.addChild(-561, uga.field_h);
+          sra.field_a.addChild(-561, LegacyOpenGlTurbulenceEffect.field_h);
           sra.field_a.addChild(-561, MapClearanceCircle.field_f);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             ModelFaceAttachment.field_d.addChild(-561, GetMomentOfInertiaPerpointCalcDownshift.field_p);

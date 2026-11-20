@@ -384,9 +384,9 @@ final class OpenGlModel extends Model3D {
         if (GetPointDefenceLaserProjectiles.field_o.status == 0) {
           return false;
         }
-        dupTemp$2 = wt.a(false);
+        dupTemp$2 = MonotonicMillisClock.currentTimeMillis(false);
         GetTorpedoProjectileOndamageParticles.field_o = dupTemp$2;
-        ModelData.field_q = dupTemp$2;
+        ModelData.lastNetworkReadTimeMillis = dupTemp$2;
         if (1 != GetPointDefenceLaserProjectiles.field_o.status) {
         }
         tc.field_c = GetMissileLauncherRandomness.field_o;

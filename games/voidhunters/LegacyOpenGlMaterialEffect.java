@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qg {
-    OpenGlToolkit field_b;
+abstract class LegacyOpenGlMaterialEffect {
+    OpenGlToolkit toolkit;
     static ScrollPaneWidget field_a;
 
     public static void clearSharedReferences(int param0) {
@@ -12,11 +12,11 @@ abstract class qg {
         }
     }
 
-    abstract void a(int param0);
+    abstract void disable(int param0);
 
-    abstract void a(boolean param0, boolean param1);
+    abstract void applyRenderState(boolean param0, boolean param1);
 
-    abstract void a(boolean param0, int param1);
+    abstract void enable(boolean param0, int param1);
 
     final static int toOpenGlCombineSource(TextureCombineSource param0, boolean param1) {
         RuntimeException var2 = null;
@@ -65,19 +65,19 @@ abstract class qg {
         }
     }
 
-    abstract boolean b(int param0);
+    abstract boolean isSupported(int param0);
 
-    qg(OpenGlToolkit param0) {
+    LegacyOpenGlMaterialEffect(OpenGlToolkit param0) {
         try {
-          this.field_b = param0;
+          this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void setParameters(int param0, int param1, int param2);
 
-    abstract void a(int param0, byte param1, OpenGlTexture param2);
+    abstract void setTexture(int param0, byte param1, OpenGlTexture param2);
 
     static {
         PartitioningManagerFactory discarded$0 = new PartitioningManagerFactory();

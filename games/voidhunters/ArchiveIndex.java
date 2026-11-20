@@ -434,7 +434,7 @@ final class ArchiveIndex {
           stackIn_4_1 = 38;
           stackIn_4_2 = param1;
           stackIn_4_3 = param2 * (3 * (DialogMessagePanel.field_w + 2));
-          stackIn_5_4 = (qg.field_a == BitmapTextLayout.field_n.scrollPane);
+          stackIn_5_4 = (LegacyOpenGlMaterialEffect.field_a == BitmapTextLayout.field_n.scrollPane);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((ScrollPaneWidget) (Object) stackIn_4_0).layoutAndUpdateScrolling((byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, param0, DialogMessagePanel.field_w + 2) ? 1 : 0;
           var4 = BitmapTextLayout.field_n.content.children;

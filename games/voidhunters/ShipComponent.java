@@ -276,7 +276,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                     var13 = var12.getType((byte) -104);
                     if ((~var12.getFiredTeam(512) != ~var26.getTeam((byte) 73) ||
                       !ConsoleCharacterStream.a(33, param2.getObjectiveType(false)) &&
-                      var12.b(false) != var26.getOwner((byte) -117)) &&
+                      var12.getFiredPlayer(false) != var26.getOwner((byte) -117)) &&
                       (var13 == 6 ||
                       var13 == 1)) {
                       var14_int = var12.x - this.finalx;
@@ -1633,7 +1633,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (this.hasAdjustableConnection((byte) -94)) {
             this.currentconnectedangle = uwa.a(14, param1, (byte) 20);
           }
-          if (!kv.readBoolean(false, param1)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param1)) {
             this.health = this.getDefinition((byte) -112).maxHealth;
           } else {
             this.health = param1.readBits(0, BodyInZoneCondition.a(-111, this.getDefinition((byte) -112).maxHealth));
@@ -2135,7 +2135,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var4 = VoidHunters.field_G;
         try {
           this.componentTypeId = param0.readBits(0, 6);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.weaponbehaviour = null;
           } else {
             if (null == this.weaponbehaviour) {
@@ -2143,7 +2143,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
             this.weaponbehaviour.readState(param0, false);
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (null == this.thrusterbehaviour) {
               this.thrusterbehaviour = new ThrusterBehaviour();
             }
@@ -2151,7 +2151,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             this.thrusterbehaviour = null;
           }
-          if (kv.readBoolean(param1, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             if (this.grapplebehaviour == null) {
               this.grapplebehaviour = new GrappleLauncherBehaviour();
             }
@@ -2159,7 +2159,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             this.grapplebehaviour = null;
           }
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.behaviour = null;
           } else {
             if (null == this.behaviour) {
@@ -2932,7 +2932,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.triggermap = param0.readBits(0, 32);
           this.connectionpointx = param0.readBits(param1 - 32, 32);
           this.connectionpointy = param0.readBits(param1 - 32, param1);
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.weaponbehaviour = null;
           } else {
             if (this.weaponbehaviour == null) {
@@ -2940,7 +2940,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
             this.weaponbehaviour.readState(param0, false);
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (this.thrusterbehaviour == null) {
               this.thrusterbehaviour = new ThrusterBehaviour();
             }
@@ -2948,7 +2948,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             this.thrusterbehaviour = null;
           }
-          if (kv.readBoolean(false, param0)) {
+          if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (null == this.grapplebehaviour) {
               this.grapplebehaviour = new GrappleLauncherBehaviour();
             }
@@ -2956,7 +2956,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             this.grapplebehaviour = null;
           }
-          if (!kv.readBoolean(false, param0)) {
+          if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.behaviour = null;
           } else {
             if (null == this.behaviour) {

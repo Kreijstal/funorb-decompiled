@@ -227,7 +227,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         GrapplingHook.field_C.setBounds(205, param0 ^ 113, 48, 5, 30);
         int var2 = GetGrapplingHooksDamageableBySourcePlayer.field_o ? 250 : 200;
         GetDebrisDetachmentForceMultiplier.field_o.setBounds(var2 + 5, 123, -var2 + 363, 5, 30);
-        uga.field_h.setBounds(370, 116, -365 + (ModelFaceAttachment.field_d.width - 10), 5, 30);
+        LegacyOpenGlTurbulenceEffect.field_h.setBounds(370, 116, -365 + (ModelFaceAttachment.field_d.width - 10), 5, 30);
         MapClearanceCircle.field_f.setBoundsAndLayout(-5 + (sra.field_a.width - 5), 2, -1, -5 + (-37 + sra.field_a.height), 37, param0, ResourceNode.field_a);
         int var3 = (ModelFaceAttachment.field_d.width + 2) / 2;
         GetMomentOfInertiaPerpointCalcDownshift.field_p.setBounds(0, -116, -2 + var3, -40 + ModelFaceAttachment.field_d.height, 40);

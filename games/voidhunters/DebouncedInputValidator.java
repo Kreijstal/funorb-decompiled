@@ -6,7 +6,7 @@ abstract class DebouncedInputValidator implements InputValidator {
     private long lastChangedMillis;
 
     public final void markChanged(int param0) {
-        this.lastChangedMillis = wt.a(false);
+        this.lastChangedMillis = MonotonicMillisClock.currentTimeMillis(false);
         if (param0 <= 6) {
           this.lastChangedMillis = -33L;
         }
@@ -25,7 +25,7 @@ abstract class DebouncedInputValidator implements InputValidator {
         if (this.isEmpty((byte) -120)) {
           return SetTorpedoFireForce.emptyInput;
         }
-        if (!(350L + this.lastChangedMillis <= wt.a(false))) {
+        if (!(350L + this.lastChangedMillis <= MonotonicMillisClock.currentTimeMillis(false))) {
           return SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput;
         }
         if (param0 == 35) {
@@ -46,7 +46,7 @@ abstract class DebouncedInputValidator implements InputValidator {
         if (this.isEmpty((byte) -115)) {
           return null;
         }
-        if (wt.a(false) >= (this.lastChangedMillis + 350L)) {
+        if (MonotonicMillisClock.currentTimeMillis(false) >= (this.lastChangedMillis + 350L)) {
           return this.getCurrentValidationMessage(16384);
         }
         return null;

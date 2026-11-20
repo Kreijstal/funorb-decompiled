@@ -7,7 +7,7 @@ final class kia {
 
     final static void a(byte param0) {
         String var1 = null;
-        if (!OpenGlSprite.field_c) {
+        if (!OpenGlSprite.reconnecting) {
           throw new IllegalStateException();
         }
         if (param0 == 63) {

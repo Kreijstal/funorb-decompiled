@@ -676,7 +676,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         if (this.field_V != this.field_O) {
           if (this.field_R == this.field_V) {
             spb.a((byte) -95);
-            uga.d(-10128);
+            LegacyOpenGlTurbulenceEffect.makeGameWindowResizable(-10128);
           } else {
             if (this.field_L == this.field_V) {
               if (null != this.field_P) {

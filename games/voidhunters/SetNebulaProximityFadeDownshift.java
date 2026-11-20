@@ -49,7 +49,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param2 != ~param1.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + SetMassDriverAimarc.a((byte) -88, 94608000000L + wt.a(false)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + SetMassDriverAimarc.a((byte) -88, 94608000000L + MonotonicMillisClock.currentTimeMillis(false)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

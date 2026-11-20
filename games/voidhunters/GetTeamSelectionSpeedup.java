@@ -132,7 +132,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 var8_ref_jk = new jk(var18, var19, var3_long);
                 GetReverbWet.field_o.a(var8_ref_jk, (byte) -86, var3_long);
               }
-              var8_ref_jk.field_Kb = wt.a(false) - (long)((PacketBuffer) ((Object) var1)).readInt(77);
+              var8_ref_jk.field_Kb = MonotonicMillisClock.currentTimeMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(77);
               var8_ref_jk.field_Gb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt(param0 ^ 11425);
               stackIn_18_0 = var8_ref_jk;
@@ -279,7 +279,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                       qga.field_a = 0L;
                       return;
                     }
-                    qga.field_a = wt.a(false) + (long)var3Lifetime5;
+                    qga.field_a = MonotonicMillisClock.currentTimeMillis(false) + (long)var3Lifetime5;
                     return;
                   }
                   if (var2 == 22) {

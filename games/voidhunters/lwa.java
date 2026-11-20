@@ -28,7 +28,7 @@ final class lwa extends Widget {
         if (param0 != 73) {
           field_vb = (String) null;
         }
-        return mw.field_e;
+        return LegacyOpenGlWaveWaterEffect.field_e;
     }
 
     public static void clearSharedReferences(int param0) {
