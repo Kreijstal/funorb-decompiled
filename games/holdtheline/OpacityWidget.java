@@ -35,7 +35,7 @@ final class OpacityWidget extends SingleChildWidget {
               if (0L > param0) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + cd.formatCookieDate(75, param0 * 1000L + bb.monotonicTimeMillis(-1)) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + EmailDomainValidator.formatCookieDate(75, param0 * 1000L + BoundaryLoopTracer.monotonicTimeMillis(-1)) + "; Max-Age=" + param0;
               }
               if (param3 > -98) {
                 field_G = (VehicleEngineSounds) null;
@@ -117,7 +117,7 @@ final class OpacityWidget extends SingleChildWidget {
           var6 = new Sprite(this.child.width, this.child.height);
           ProxySocketConnector.pushSpriteRaster(var6, -1);
           this.child.drawLayer(param0, 0, 0, param3);
-          dm.popRasterState((byte) -10);
+          RasterStateRestoration.popRasterState((byte) -10);
           var6.drawAlpha(param2 + this.x, param1 + this.y, this.opacity);
           return;
         }

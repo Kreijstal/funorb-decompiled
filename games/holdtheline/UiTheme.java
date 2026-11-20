@@ -45,7 +45,7 @@ final class UiTheme {
           }
           var5_int = param4.getGroupId(param0, 3);
           var6 = param4.getFileId(var5_int, param1, false);
-          stackIn_3_0 = um.a(var6, param4, param2, var5_int, 0);
+          stackIn_3_0 = Cp1252CharacterRules.loadCoverageFont(var6, param4, param2, var5_int, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,9 +263,9 @@ final class UiTheme {
           this.field_b = 3;
           this.field_n = 3;
           var4.field_b = 11711154;
-          var4.createStateStyle(0, 62).setTextColor(15658734, -26228).setBorderSprites(29536, ImageProducerRasterBuffer.a(7829367, 10066329, 8947848, 14));
-          var4.createStateStyle(1, param1 ^ 76).setBorderSprites(29536, ImageProducerRasterBuffer.a(13421772, 10066329, 11184810, param1 - 25));
-          var4.createStateStyle(3, 122).setBorderSprites(29536, ImageProducerRasterBuffer.a(10066329, 7829367, 8947848, 14)).setOffsetX(1, -116).setOffsetY(1, true);
+          var4.createStateStyle(0, 62).setTextColor(15658734, -26228).setBorderSprites(29536, ImageProducerRasterBuffer.createSolidBeveledPanel(7829367, 10066329, 8947848, 14));
+          var4.createStateStyle(1, param1 ^ 76).setBorderSprites(29536, ImageProducerRasterBuffer.createSolidBeveledPanel(13421772, 10066329, 11184810, param1 - 25));
+          var4.createStateStyle(3, 122).setBorderSprites(29536, ImageProducerRasterBuffer.createSolidBeveledPanel(10066329, 7829367, 8947848, 14)).setOffsetX(1, -116).setOffsetY(1, true);
           var5 = new Sprite[9];
           var17 = new ArgbSprite(32, 32);
           var19 = var17;
@@ -274,20 +274,20 @@ final class UiTheme {
           }
           var5[4] = (Sprite) ((Object) var19);
           var4.createStateStyle(4, -79).setFlushBeforeApply(true, param1 ^ -2147483609).setBorderSprites(29536, var5);
-          var4.createStateStyle(5, -97).setBorderSprites(29536, EntitySound.a(0, 0, 65793, -104, 0)).setFlushBeforeApply(true, -2147483648).setTextColor(-1, -26228);
+          var4.createStateStyle(5, -97).setBorderSprites(29536, EntitySound.createPanelBorderSprites(0, 0, 65793, -104, 0)).setFlushBeforeApply(true, -2147483648).setTextColor(-1, -26228);
           this.field_p = (WidgetRenderer) ((Object) var4);
           var6 = new LayeredButtonRenderer(var4, true);
           var6.field_i = 0;
           var7 = new LayeredButtonRenderer(var4, true);
           var7.field_i = 0;
-          var7.setBorderSprites((byte) -2, bb.createSolidNineSlice(8947848, (byte) -127));
-          var7.createStateStyle(1, param1 + 75).setBorderSprites(param1 + 29497, bb.createSolidNineSlice(11184810, (byte) 87)).setTextColor(2236962, -26228);
+          var7.setBorderSprites((byte) -2, BoundaryLoopTracer.createSolidNineSlice(8947848, (byte) -127));
+          var7.createStateStyle(1, param1 + 75).setBorderSprites(param1 + 29497, BoundaryLoopTracer.createSolidNineSlice(11184810, (byte) 87)).setTextColor(2236962, -26228);
           this.field_f = (WidgetRenderer) ((Object) new CheckboxRenderer(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialWidgetRenderer(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderRenderer(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new LayeredButtonRenderer();
           var18.copyTo((byte) -124, var8);
-          var8.createStateStyle(0, 61).setBorderSprites(29536, ImageProducerRasterBuffer.a(10066329, 7829367, 15658734, 14)).setTextColor(1118481, -26228).setShadowColor(-1, false);
+          var8.createStateStyle(0, 61).setBorderSprites(29536, ImageProducerRasterBuffer.createSolidBeveledPanel(10066329, 7829367, 15658734, 14)).setTextColor(1118481, -26228).setShadowColor(-1, false);
           var8.createStateStyle(4, -90).setFlushBeforeApply(true, param1 ^ -2147483609).setBorderSprites(29536, var5);
           this.field_s = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];

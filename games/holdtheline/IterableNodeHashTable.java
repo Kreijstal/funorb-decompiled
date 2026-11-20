@@ -70,7 +70,7 @@ final class IterableNodeHashTable implements Iterable {
         field_h = null;
     }
 
-    final static boolean a(MovingEntity param0, MovingEntity param1, int param2) {
+    final static boolean overlapsEntities(MovingEntity param0, MovingEntity param1, int param2) {
         boolean stackIn_19_0 = false;
         boolean stackIn_22_0 = false;
         boolean stackIn_27_0 = false;
@@ -98,15 +98,15 @@ final class IterableNodeHashTable implements Iterable {
             }
             if (param0.rectangularCollision &&
               param1.rectangularCollision) {
-              stackIn_19_0 = l.a(0, param0.halfWidth, param1.halfLength, param0.halfLength, param0.direction, param1.halfWidth, param0.position, param1.direction, param1.position);
+              stackIn_19_0 = CollisionGeometry.overlapsOrientedRectangles(0, param0.halfWidth, param1.halfLength, param0.halfLength, param0.direction, param1.halfWidth, param0.position, param1.direction, param1.position);
               return stackIn_19_0;
             }
             if (param0.rectangularCollision) {
-              stackIn_22_0 = ArchiveRequest.a(param1.position, param0.halfWidth, param0.position, param1.collisionRadius, param0.direction, param0.halfLength, 107);
+              stackIn_22_0 = ArchiveRequest.overlapsExpandedRectangle(param1.position, param0.halfWidth, param0.position, param1.collisionRadius, param0.direction, param0.halfLength, 107);
               return stackIn_22_0;
             }
             if (param1.rectangularCollision) {
-              stackIn_27_0 = ArchiveRequest.a(param0.position, param1.halfWidth, param1.position, param0.collisionRadius, param1.direction, param1.halfLength, 109);
+              stackIn_27_0 = ArchiveRequest.overlapsExpandedRectangle(param0.position, param1.halfWidth, param1.position, param0.collisionRadius, param1.direction, param1.halfLength, 109);
               return stackIn_27_0;
             }
             return true;
@@ -132,7 +132,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void readPackedPlayerStats(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -143,11 +143,11 @@ final class IterableNodeHashTable implements Iterable {
           StandardContentTransitionDialog.field_jb = StandardContentTransitionDialog.field_jb + (var2_int >> 3);
           FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + (param1.readUnsignedShort(-125) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) -48);
-          ae.field_a = var2_intLifetime1 << 15 & 2064384;
+          AppletNavigation.field_a = var2_intLifetime1 << 15 & 2064384;
           FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + (var2_intLifetime1 >> 6);
-          ae.field_a = ae.field_a + (param1.readUnsignedByte((byte) -117) << 7);
+          AppletNavigation.field_a = AppletNavigation.field_a + (param1.readUnsignedByte((byte) -117) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) -97);
-          ae.field_a = ae.field_a + (var2_intLifetime2 >> 1);
+          AppletNavigation.field_a = AppletNavigation.field_a + (var2_intLifetime2 >> 1);
           TextWidgetStyle.field_l = (1 & var2_intLifetime2) << 16;
           if (param0 <= 70) {
             field_k = (Sprite) null;

@@ -30,7 +30,7 @@ final class ZombiePedestrian extends IntrusiveNode {
         this.fixedX = this.x << 16;
         if (param1 == 44) {
           this.setState(true, 0);
-          this.stateTicks = SolidRoadStripRenderer.b(param1 - 42, 500);
+          this.stateTicks = SolidRoadStripRenderer.nextRandomInt(param1 - 42, 500);
           return;
         }
     }
@@ -74,7 +74,7 @@ final class ZombiePedestrian extends IntrusiveNode {
         int var2;
         int var3;
         var3 = HoldTheLine.field_D;
-        var2 = SolidRoadStripRenderer.b(2, 2240);
+        var2 = SolidRoadStripRenderer.nextRandomInt(2, 2240);
         if (param0 > -58) {
           return;
         }
@@ -93,7 +93,7 @@ final class ZombiePedestrian extends IntrusiveNode {
             }
           }
         }
-        this.colorVariant = SolidRoadStripRenderer.b(2, 4);
+        this.colorVariant = SolidRoadStripRenderer.nextRandomInt(2, 4);
     }
 
     final void update(int param0) {
@@ -253,22 +253,22 @@ final class ZombiePedestrian extends IntrusiveNode {
 
     private final void stampBlood(int param0) {
         if (param0 == 25500) {
-          vb.a(param0 - 25551, MusicPatchPcmStream.field_r.courseImage);
-          IndexedSpriteState.a((byte) -61, this.x, this.y);
-          IndexedSpriteState.a((byte) -61, this.x + 6, this.y);
-          IndexedSpriteState.a((byte) -61, this.x - 6, this.y);
-          IndexedSpriteState.a((byte) -61, this.x, this.y + 6);
-          IndexedSpriteState.a((byte) -61, this.x, this.y - 6);
+          JagexLogoRenderer.pushSpriteRaster(param0 - 25551, MusicPatchPcmStream.field_r.courseImage);
+          IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x, this.y);
+          IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x + 6, this.y);
+          IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x - 6, this.y);
+          IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x, this.y + 6);
+          IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x, this.y - 6);
           MarkerSliderRenderer.restoreRasterTarget(param0 - 25501);
           return;
         }
         this.stampBlood(-70);
-        vb.a(param0 - 25551, MusicPatchPcmStream.field_r.courseImage);
-        IndexedSpriteState.a((byte) -61, this.x, this.y);
-        IndexedSpriteState.a((byte) -61, this.x + 6, this.y);
-        IndexedSpriteState.a((byte) -61, this.x - 6, this.y);
-        IndexedSpriteState.a((byte) -61, this.x, this.y + 6);
-        IndexedSpriteState.a((byte) -61, this.x, this.y - 6);
+        JagexLogoRenderer.pushSpriteRaster(param0 - 25551, MusicPatchPcmStream.field_r.courseImage);
+        IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x, this.y);
+        IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x + 6, this.y);
+        IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x - 6, this.y);
+        IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x, this.y + 6);
+        IndexedSpriteState.drawRandomBloodDecal((byte) -61, this.x, this.y - 6);
         MarkerSliderRenderer.restoreRasterTarget(param0 - 25501);
     }
 
@@ -354,8 +354,8 @@ final class ZombiePedestrian extends IntrusiveNode {
         int var3 = HoldTheLine.field_D;
         int var2 = 56 % ((param0 - 9) / 40);
         do {
-          this.targetX = SolidRoadStripRenderer.b(2, 640);
-          this.targetY = SolidRoadStripRenderer.b(2, 480);
+          this.targetX = SolidRoadStripRenderer.nextRandomInt(2, 640);
+          this.targetY = SolidRoadStripRenderer.nextRandomInt(2, 480);
         } while (!MusicPatchPcmStream.field_r.isInsideCollisionBounds(0, this.targetY, true, this.targetX));
         this.setState(true, 1);
         this.heading = (float)Math.atan2((double)(this.y - this.targetY), (double)(-this.x + this.targetX));

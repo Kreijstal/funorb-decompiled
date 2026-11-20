@@ -60,7 +60,7 @@ final class GrowableStringList {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getAccountResponseHeaderSize(byte param0) {
         if (param0 < 28) {
           field_d = (boolean[]) null;
           return 1;
@@ -87,14 +87,14 @@ final class GrowableStringList {
     }
 
     final static String getPendingDisplayName(int param0) {
-        if (bb.field_a == ImageProducerRasterBuffer.field_n) {
+        if (BoundaryLoopTracer.field_a == ImageProducerRasterBuffer.field_n) {
           return SecondaryNodeDeque.field_a;
         }
-        if (ak.field_b == ImageProducerRasterBuffer.field_n) {
+        if (NineSliceSpriteFactory.field_b == ImageProducerRasterBuffer.field_n) {
           return RoadStripRenderer.field_j;
         }
         if (param0 != 0) {
-          GrowableStringList.a((byte) -82);
+          GrowableStringList.getAccountResponseHeaderSize((byte) -82);
         }
         if (!WidgetStyleNode.field_o.isComplete(250)) {
           return RoadStripRenderer.field_j;
@@ -104,7 +104,7 @@ final class GrowableStringList {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
-          GrowableStringList.a((byte) -39);
+          GrowableStringList.getAccountResponseHeaderSize((byte) -39);
         }
         field_h = (int[][]) null;
         field_d = null;
@@ -193,10 +193,10 @@ final class GrowableStringList {
                     var16 = 0;
                     var13Lifetime1 = var16;
                     while (var16 < var9) {
-                      var12[var16] = wl.resolveClassDescriptor(var10[var16], 24);
+                      var12[var16] = ClassDescriptorResolver.resolveClassDescriptor(var10[var16], 24);
                       var16++;
                     }
-                    var17.methodTasks[var5] = param1.lookupDeclaredMethod(var8, var12, wl.resolveClassDescriptor(var19, 64), (byte) -32);
+                    var17.methodTasks[var5] = param1.lookupDeclaredMethod(var8, var12, ClassDescriptorResolver.resolveClassDescriptor(var19, 64), (byte) -32);
                     var17.serializedArguments[var5] = var20;
                   }
                 } else {
@@ -209,7 +209,7 @@ final class GrowableStringList {
                   }
                   var17.operations[var5] = var6_int;
                   var17.fieldWriteValues[var5] = var9;
-                  var17.fieldTasks[var5] = param1.lookupDeclaredField(var8, 9, wl.resolveClassDescriptor(var15, param0 + 167));
+                  var17.fieldTasks[var5] = param1.lookupDeclaredField(var8, 9, ClassDescriptorResolver.resolveClassDescriptor(var15, param0 + 167));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -270,7 +270,7 @@ final class GrowableStringList {
 
     final static void savePlayerProgress(int param0) {
         byte[] var2 = null;
-        if (l.field_b) {
+        if (CollisionGeometry.field_b) {
           return;
         }
         if (!RoadShadowRenderer.isGuestMode((byte) 85)) {
@@ -278,7 +278,7 @@ final class GrowableStringList {
           byte[] var1 = var2;
           SingleChildWidget.requestBlobWrite(var2, 6, param0 + 0);
         } else {
-          ad.field_a = true;
+          ReflectionCheckSupport.field_a = true;
         }
         if (param0 != 0) {
           GrowableStringList.sinFixed(-121, -112);
@@ -347,9 +347,9 @@ final class GrowableStringList {
         RuntimeException decompiledCaughtException = null;
         var20 = HoldTheLine.field_D;
         try {
-          var21 = o.a((byte) 51);
+          var21 = BackgroundSprites.createGeometryIntList((byte) 51);
           var3 = var21;
-          var23 = o.a((byte) -125);
+          var23 = BackgroundSprites.createGeometryIntList((byte) -125);
           var4 = var23;
           var5 = param0[param0.length - 1];
           var22 = var5.getLeftCollisionStart(param1 ^ 10000487);
@@ -372,9 +372,9 @@ final class GrowableStringList {
             var14 = param0[var13];
             if (var12 != var14.layer) {
               param2.drawRoadFill(0.0f, var4.toArray(param1 ^ -10000584), var12, var3.toArray(param1 ^ -10000572), (byte) 49);
-              var25 = o.a((byte) 26);
+              var25 = BackgroundSprites.createGeometryIntList((byte) 26);
               var3 = var25;
-              var26 = o.a((byte) -112);
+              var26 = BackgroundSprites.createGeometryIntList((byte) -112);
               var4 = var26;
               var25.add(var6.x, (byte) 101);
               var25.add(var6.y, (byte) 116);
@@ -401,9 +401,9 @@ final class GrowableStringList {
                 continue;
               }
               param2.drawRoadFill(0.0f, var4.toArray(param1 ^ -10000603), var12, var3.toArray(-58), (byte) 49);
-              var29 = o.a((byte) 102);
+              var29 = BackgroundSprites.createGeometryIntList((byte) 102);
               var3 = var29;
-              var30 = o.a((byte) -115);
+              var30 = BackgroundSprites.createGeometryIntList((byte) -115);
               var4 = var30;
               var29.add(var27.x, (byte) 91);
               var29.add(var27.y, (byte) 64);

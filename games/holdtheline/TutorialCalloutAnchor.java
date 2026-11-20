@@ -15,7 +15,7 @@ final class TutorialCalloutAnchor {
         int var1 = -20 % ((param0 + 59) / 49);
     }
 
-    final static void a(GrowableObjectList param0, boolean param1, GrowableObjectList param2, int param3, GrowableObjectList param4, GrowableObjectList param5) {
+    final static void collectBoundaryIntersections(GrowableObjectList param0, boolean param1, GrowableObjectList param2, int param3, GrowableObjectList param4, GrowableObjectList param5) {
         int stackIn_17_0 = 0;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_24_0 = null;

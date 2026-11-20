@@ -1,0 +1,333 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class HoverTargetTracker {
+    static SpriteAsset field_b;
+    static VehicleEngineSounds field_a;
+
+    final static void updateHoverTarget(byte param0, int param1) {
+        int stackIn_100_0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var3Lifetime1;
+        var4 = HoldTheLine.field_D;
+        SecondaryNodeDeque.field_f = SecondaryNodeDeque.field_f + 1;
+        var2 = 116 % ((param0 + 22) / 36);
+        if (param1 != AccountCreationForm.field_I) {
+          if (!SpriteSheetAsset.field_k) {
+            if (SecondaryNodeDeque.field_f >= HoldTheLine.field_A) {
+              stackIn_100_0 = (HoldTheLine.field_A + EmailValidationResult.field_h > SecondaryNodeDeque.field_f) ? 1 : 0;
+            } else {
+              stackIn_100_0 = 0;
+            }
+            var3 = stackIn_100_0;
+            if (param1 == -1) {
+              SecondaryNodeDeque.field_f = 0;
+              if (-1 == param1) {
+                if (var3 != 0) {
+                  SpriteSheetAsset.field_k = true;
+                }
+              } else {
+                SpriteSheetAsset.field_k = false;
+              }
+              if (!SpriteSheetAsset.field_k &&
+                HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
+                PointLight.field_k) {
+                SecondaryNodeDeque.field_f = 0;
+              }
+              AccountCreationForm.field_I = param1;
+              if (SpriteSheetAsset.field_k &&
+                SecondaryNodeDeque.field_f == ValidationState.field_d) {
+                SecondaryNodeDeque.field_f = 0;
+                SpriteSheetAsset.field_k = false;
+              }
+              return;
+            }
+            if (!SpriteSheetAsset.field_k &&
+              var3 == 0) {
+              SecondaryNodeDeque.field_f = 0;
+              if (-1 == param1) {
+                if (var3 != 0) {
+                  SpriteSheetAsset.field_k = true;
+                }
+              } else {
+                SpriteSheetAsset.field_k = false;
+              }
+            } else {
+              SecondaryNodeDeque.field_f = HoldTheLine.field_A;
+              if (-1 != param1) {
+                SpriteSheetAsset.field_k = false;
+              } else {
+                if (var3 == 0) {
+                  if (!SpriteSheetAsset.field_k &&
+                    HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
+                    PointLight.field_k) {
+                    SecondaryNodeDeque.field_f = 0;
+                  }
+                  AccountCreationForm.field_I = param1;
+                  if (SpriteSheetAsset.field_k &&
+                    SecondaryNodeDeque.field_f == ValidationState.field_d) {
+                    SecondaryNodeDeque.field_f = 0;
+                    SpriteSheetAsset.field_k = false;
+                    return;
+                  }
+                  return;
+                }
+                SpriteSheetAsset.field_k = true;
+              }
+            }
+            if (!SpriteSheetAsset.field_k &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
+              PointLight.field_k) {
+              SecondaryNodeDeque.field_f = 0;
+            }
+            AccountCreationForm.field_I = param1;
+            if (!SpriteSheetAsset.field_k) {
+              return;
+            }
+            if (SecondaryNodeDeque.field_f != ValidationState.field_d) {
+              return;
+            }
+            SecondaryNodeDeque.field_f = 0;
+            SpriteSheetAsset.field_k = false;
+            return;
+          }
+          var3Lifetime1 = 0;
+          if (param1 == -1) {
+            SecondaryNodeDeque.field_f = 0;
+            if (-1 == param1) {
+              if (var3Lifetime1 != 0) {
+                SpriteSheetAsset.field_k = true;
+              }
+            } else {
+              SpriteSheetAsset.field_k = false;
+            }
+            if (!SpriteSheetAsset.field_k &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
+              PointLight.field_k) {
+              SecondaryNodeDeque.field_f = 0;
+            }
+            AccountCreationForm.field_I = param1;
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
+              SecondaryNodeDeque.field_f = 0;
+              SpriteSheetAsset.field_k = false;
+            }
+            return;
+          }
+          if (!SpriteSheetAsset.field_k &&
+            var3Lifetime1 == 0) {
+            SecondaryNodeDeque.field_f = 0;
+            if (-1 == param1) {
+            } else {
+              SpriteSheetAsset.field_k = false;
+            }
+            if (!SpriteSheetAsset.field_k &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
+              PointLight.field_k) {
+              SecondaryNodeDeque.field_f = 0;
+            }
+            AccountCreationForm.field_I = param1;
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
+              SecondaryNodeDeque.field_f = 0;
+              SpriteSheetAsset.field_k = false;
+            }
+            return;
+          }
+          SecondaryNodeDeque.field_f = HoldTheLine.field_A;
+          if (-1 != param1) {
+            SpriteSheetAsset.field_k = false;
+            if (!SpriteSheetAsset.field_k &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
+              PointLight.field_k) {
+              SecondaryNodeDeque.field_f = 0;
+            }
+            AccountCreationForm.field_I = param1;
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
+              SecondaryNodeDeque.field_f = 0;
+              SpriteSheetAsset.field_k = false;
+            }
+            return;
+          }
+          if (var3Lifetime1 != 0) {
+            SpriteSheetAsset.field_k = true;
+            if (!SpriteSheetAsset.field_k &&
+              HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
+              PointLight.field_k) {
+              SecondaryNodeDeque.field_f = 0;
+            }
+            AccountCreationForm.field_I = param1;
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
+              SecondaryNodeDeque.field_f = 0;
+              SpriteSheetAsset.field_k = false;
+            }
+            return;
+          }
+        }
+        if (!SpriteSheetAsset.field_k &&
+          HoldTheLine.field_A > SecondaryNodeDeque.field_f) {
+          if (!PointLight.field_k) {
+            AccountCreationForm.field_I = param1;
+            if (SpriteSheetAsset.field_k &&
+              SecondaryNodeDeque.field_f == ValidationState.field_d) {
+              SecondaryNodeDeque.field_f = 0;
+              SpriteSheetAsset.field_k = false;
+            }
+            return;
+          }
+          SecondaryNodeDeque.field_f = 0;
+        }
+        AccountCreationForm.field_I = param1;
+        if (!SpriteSheetAsset.field_k) {
+          return;
+        }
+        if (SecondaryNodeDeque.field_f != ValidationState.field_d) {
+          return;
+        }
+        SecondaryNodeDeque.field_f = 0;
+        SpriteSheetAsset.field_k = false;
+    }
+
+    public static void clearSharedReferences(int param0) {
+        field_a = null;
+        if (param0 != 0) {
+          field_b = (SpriteAsset) null;
+          field_b = null;
+          return;
+        }
+        field_b = null;
+    }
+
+    final static void compactRasterBuckets(byte param0) {
+        int var2 = 0;
+        int var1_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var4 = HoldTheLine.field_D;
+        try {
+          if (param0 < 60) {
+            field_b = (SpriteAsset) null;
+          }
+          var1_int = TexturedPolygonRenderer.field_d[0];
+          for (var2 = 1; TexturedPolygonRenderer.field_d.length > var2; var2++) {
+            var3 = TexturedPolygonRenderer.field_d[var2];
+            ArrayOperations.copyInts(ByteArrayPool.field_b, var2 << 4, ByteArrayPool.field_b, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "hm.E(" + param0 + ')');
+        }
+    }
+
+    final static RotatedSpriteSheetAsset createRotatedSpriteSheetAsset(int param0, String param1) {
+        RuntimeException var2 = null;
+        RotatedSpriteSheetAsset stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 5499) {
+            HoverTargetTracker.updateHoverTarget((byte) -81, 114);
+          }
+          stackIn_3_0 = new RotatedSpriteSheetAsset(param1);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("hm.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final static void readBlobReply(int param0) {
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        BlobReadRequest var4_ref_ie = null;
+        BlobWriteRequest var5 = null;
+        int var5_int = 0;
+        Object var6 = null;
+        int var7 = 0;
+        byte[] var8 = null;
+        IsaacPacketBuffer var9 = null;
+        byte[] var10 = null;
+        byte[] var11 = null;
+        var7 = HoldTheLine.field_D;
+        try {
+          var3 = -84 % ((-58 - param0) / 61);
+          var9 = RoadStripRenderer.field_e;
+          var2 = var9.readUnsignedByte((byte) -32);
+          if (var2 != 0) {
+            if (var2 == 1) {
+              var4 = var9.readInt(-67);
+              var5 = (BlobWriteRequest) (UsernameLoginCredentials.field_e.first((byte) 85));
+              while (var5 != null) {
+                if (var4 != var5.acknowledgementCrc) {
+                  var5 = (BlobWriteRequest) (UsernameLoginCredentials.field_e.next((byte) -26));
+                  continue;
+                }
+                break;
+              }
+              if (var5 != null) {
+                var5.unlink(0);
+                return;
+              }
+              ServerConnectionState.closeServerConnection(-28036);
+              return;
+            }
+            MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 65, "A1: " + AgeValidator.describeServerPacket(false));
+            ServerConnectionState.closeServerConnection(-28036);
+          } else {
+            var4_ref_ie = (BlobReadRequest) (SpriteLayoutUtilities.field_d.first((byte) 94));
+            if (var4_ref_ie == null) {
+              ServerConnectionState.closeServerConnection(-28036);
+              return;
+            }
+            var5_int = var9.readUnsignedByte((byte) -85);
+            if (0 == var5_int) {
+              var6 = null;
+            } else {
+              var11 = new byte[var5_int];
+              var10 = var11;
+              var8 = var10;
+              var6 = var8;
+              var9.readBytes(var5_int, 0, (byte) 118, var11);
+            }
+            var9.position = var9.position + 4;
+            if (!var9.checkCrc32((byte) 78)) {
+              ServerConnectionState.closeServerConnection(-28036);
+              return;
+            }
+            var4_ref_ie.completed = true;
+            var4_ref_ie.payload = (byte[]) (var6);
+            var4_ref_ie.unlink(0);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw EntitySound.wrapException((Throwable) ((Object) var1), "hm.B(" + param0 + ')');
+        }
+    }
+
+    static {
+    }
+}

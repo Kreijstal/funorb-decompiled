@@ -30,7 +30,7 @@ final class LoginMethodPreference {
         }
     }
 
-    final static int[] a(int param0, byte param1, int param2, int[] param3) {
+    final static int[] tintColorsBetween(int param0, byte param1, int param2, int[] param3) {
         int var12 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -67,7 +67,7 @@ final class LoginMethodPreference {
           for (var12 = 0; var4_int > var12; var12++) {
             var13 = param3[var12];
             var14 = (var13 >> 8 & 255) * 6 + (((var13 & 16711680) >> 16) * 5 + 5 * (255 & var13));
-            var5[var12] = kc.a((int)((float)var14 / 4096.0f * (float)(var11 - var10)) + var10, kc.a((int)((float)var14 / 4096.0f * (float)(var9 - var8)) + var8 << 8, var6 + (int)((float)(var7 - var6) * ((float)var14 / 4096.0f)) << 16));
+            var5[var12] = BitwiseIntegerOperations.orInts((int)((float)var14 / 4096.0f * (float)(var11 - var10)) + var10, BitwiseIntegerOperations.orInts((int)((float)var14 / 4096.0f * (float)(var9 - var8)) + var8 << 8, var6 + (int)((float)(var7 - var6) * ((float)var14 / 4096.0f)) << 16));
           }
           stackIn_7_0 = var5;
           return stackIn_7_0;
@@ -102,7 +102,7 @@ final class LoginMethodPreference {
           if (0 != param0.messageIdHigh ||
             param0.messageIdLow != 0) {
             for (var2_int = 0; Vector2f.field_e > var2_int; var2_int++) {
-              var3 = lj.field_a[var2_int];
+              var3 = RasterStateStack.field_a[var2_int];
               if (2 == var3.type &&
                 param0.messageIdHigh == var3.messageIdHigh &&
                 var3.messageIdLow == param0.messageIdLow) {
@@ -145,7 +145,7 @@ final class LoginMethodPreference {
         throw new IllegalStateException();
     }
 
-    final static boolean a(int param0, boolean param1, int param2, int param3) {
+    final static boolean precedesPlayerStats(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
         int var4Lifetime1;
@@ -163,8 +163,8 @@ final class LoginMethodPreference {
           if (NetworkGameClient.field_s[param2] > NetworkGameClient.field_s[param0]) {
             return false;
           }
-          var4 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + WidgetStyleNode.field_q[param2]);
-          var5 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + WidgetStyleNode.field_q[param0];
+          var4 = IsaacPacketBuffer.field_u[param2] + (QuadraticPathSlicer.field_c[param2] + WidgetStyleNode.field_q[param2]);
+          var5 = QuadraticPathSlicer.field_c[param0] + IsaacPacketBuffer.field_u[param0] + WidgetStyleNode.field_q[param0];
           if (var4 < var5) {
             return true;
           }
@@ -188,8 +188,8 @@ final class LoginMethodPreference {
         if (SpriteSheetAsset.field_j[param0] < SpriteSheetAsset.field_j[param2]) {
           return false;
         }
-        var4Lifetime1 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + WidgetStyleNode.field_q[param2]);
-        var5Lifetime1 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + WidgetStyleNode.field_q[param0];
+        var4Lifetime1 = IsaacPacketBuffer.field_u[param2] + (QuadraticPathSlicer.field_c[param2] + WidgetStyleNode.field_q[param2]);
+        var5Lifetime1 = QuadraticPathSlicer.field_c[param0] + IsaacPacketBuffer.field_u[param0] + WidgetStyleNode.field_q[param0];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }

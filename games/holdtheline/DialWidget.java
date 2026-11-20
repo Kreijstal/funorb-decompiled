@@ -79,7 +79,7 @@ final class DialWidget extends TextButton {
         throw new Error();
     }
 
-    final static int a(byte param0) {
+    final static int getPopupWidth(byte param0) {
         if (param0 <= 36) {
           field_H = (QuickChatPhraseCache) null;
           return -NanoTickClock.field_d + ZombiePedestrian.field_t;

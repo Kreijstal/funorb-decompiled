@@ -12,7 +12,7 @@ final class ArchiveLoadStage {
     static MouseInputHandler field_d;
     static int[] field_f;
 
-    final static void a(int param0, NineSlicePanel param1, NineSlicePanel param2, int param3, int param4, int param5) {
+    final static void configureMenuRows(int param0, NineSlicePanel param1, NineSlicePanel param2, int param3, int param4, int param5) {
         DropTargetWidget.field_G = param5;
         Point2i.field_e = param2;
         if (param3 != 19362) {
@@ -27,12 +27,12 @@ final class ArchiveLoadStage {
         }
     }
 
-    final static void b(byte param0) {
-        kc.field_e = null;
+    final static void clearLoadingBarResources(byte param0) {
+        BitwiseIntegerOperations.field_e = null;
         if (param0 != 10) {
           field_d = (MouseInputHandler) null;
         }
-        i.field_i = null;
+        ShadedNineSlicePanel.field_i = null;
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -67,8 +67,8 @@ final class ArchiveLoadStage {
             CheckboxRenderer.field_n[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < Vector2f.field_e; var2_intLifetime1++) {
-            if (param1.type == lj.field_a[var2_intLifetime1].type) {
-              dupTemp$3 = lj.field_a[var2_intLifetime1].getRetentionCategory(-90);
+            if (param1.type == RasterStateStack.field_a[var2_intLifetime1].type) {
+              dupTemp$3 = RasterStateStack.field_a[var2_intLifetime1].getRetentionCategory(-90);
               CheckboxRenderer.field_n[dupTemp$3] = CheckboxRenderer.field_n[dupTemp$3] + 1;
             }
           }
@@ -77,8 +77,8 @@ final class ArchiveLoadStage {
           var2_intLifetime2 = 0;
           for (var3 = 0; Vector2f.field_e > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (~lj.field_a[var3].type == ~param1.type) {
-              var4 = lj.field_a[var3].getRetentionCategory(param0 ^ -21258);
+            if (~RasterStateStack.field_a[var3].type == ~param1.type) {
+              var4 = RasterStateStack.field_a[var3].getRetentionCategory(param0 ^ -21258);
               if (IntWriteRequest.field_i < CheckboxRenderer.field_n[var4]) {
                 CheckboxRenderer.field_n[var4] = CheckboxRenderer.field_n[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -87,13 +87,13 @@ final class ArchiveLoadStage {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              lj.field_a[incrementValue$2] = lj.field_a[var3];
+              RasterStateStack.field_a[incrementValue$2] = RasterStateStack.field_a[var3];
             }
           }
           Vector2f.field_e = var2_intLifetime2;
           fieldTemp$1 = Vector2f.field_e;
           Vector2f.field_e = Vector2f.field_e + 1;
-          lj.field_a[fieldTemp$1] = param1;
+          RasterStateStack.field_a[fieldTemp$1] = param1;
           if (param0 != 21325) {
             field_d = (MouseInputHandler) null;
           }

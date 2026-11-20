@@ -116,7 +116,7 @@ abstract class ResizableDialog extends FadingDialog {
         }
         SpriteState.field_t.draw(param0 + this.width - 90, param1 + 10);
         NameSuggestionsPanel.drawHorizontalFrame(param1 + 35, 14191, param0 + 5, RaceVehicle.field_Db, -10 + this.width);
-        NameSuggestionsPanel.drawHorizontalFrame(-22 + this.height + param1, 14191, param0, te.field_b, this.width);
+        NameSuggestionsPanel.drawHorizontalFrame(-22 + this.height + param1, 14191, param0, EncryptedPacketWriter.field_b, this.width);
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
@@ -201,7 +201,7 @@ abstract class ResizableDialog extends FadingDialog {
         field_Q = null;
     }
 
-    final static String j(int param0) {
+    final static String getAccountDisplayName(int param0) {
         if (QuickChatPhraseCache.field_e == null) {
           return "";
         }

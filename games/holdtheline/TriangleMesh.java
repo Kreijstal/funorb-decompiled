@@ -110,7 +110,7 @@ final class TriangleMesh {
             for (var8Lifetime1 = param1; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = IterableNodeHashTable.field_h[var8Lifetime1];
               var10Lifetime1 = IterableNodeHashTable.field_h[1 + var8Lifetime1];
-              if (LoginMethodPreference.a(var10Lifetime1, param3, var9Lifetime1, 13234)) {
+              if (LoginMethodPreference.precedesPlayerStats(var10Lifetime1, param3, var9Lifetime1, 13234)) {
                 IterableNodeHashTable.field_h[var8Lifetime1] = var10Lifetime1;
                 IterableNodeHashTable.field_h[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -341,12 +341,12 @@ final class TriangleMesh {
           }
           try {
             if (EmailValidationResult.field_g == 0) {
-              PasswordFieldRenderer.field_y = TextFieldRenderer.field_v.openSocket(0, CachedTextLayout.field_e, pe.field_c);
+              PasswordFieldRenderer.field_y = TextFieldRenderer.field_v.openSocket(0, CachedTextLayout.field_e, ScreenOptionsMenu.field_c);
               EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
             }
             if (EmailValidationResult.field_g == param0) {
               if (2 == PasswordFieldRenderer.field_y.field_d) {
-                stackIn_13_0 = ValidationHelpWidget.a(-1, 8077);
+                stackIn_13_0 = ValidationHelpWidget.handleArchiveConnectionError(-1, 8077);
                 return stackIn_13_0;
               }
               if (1 == PasswordFieldRenderer.field_y.field_d) {
@@ -354,26 +354,26 @@ final class TriangleMesh {
               }
             }
             if (2 == EmailValidationResult.field_g) {
-              oc.field_c = new BufferedSocket((java.net.Socket) (PasswordFieldRenderer.field_y.field_b), TextFieldRenderer.field_v);
+              SpriteLayoutUtilities.field_c = new BufferedSocket((java.net.Socket) (PasswordFieldRenderer.field_y.field_b), TextFieldRenderer.field_v);
               var2 = new PacketBuffer(13);
-              SoundPlayback.a(AccountCreationForm.field_H, (byte) -95, var2, MovingEntity.field_n, RoadSegment.field_r);
+              SoundPlayback.writeClientHandshake(AccountCreationForm.field_H, (byte) -95, var2, MovingEntity.field_n, RoadSegment.field_r);
               var2.writeByte(111, 15);
               var2.writeInt((byte) -58, RoadStripRenderer.field_g);
-              oc.field_c.write(13, var2.payload, 0, 1);
+              SpriteLayoutUtilities.field_c.write(13, var2.payload, 0, 1);
               EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
-              PlayerProgressEncoder.field_b = 30000L + bb.monotonicTimeMillis(-1);
+              PlayerProgressEncoder.field_b = 30000L + BoundaryLoopTracer.monotonicTimeMillis(-1);
             }
             if (EmailValidationResult.field_g == 3) {
-              if (oc.field_c.available(false) > 0) {
-                var1_int = oc.field_c.read(-27418);
+              if (SpriteLayoutUtilities.field_c.available(false) > 0) {
+                var1_int = SpriteLayoutUtilities.field_c.read(-27418);
                 if (var1_int != 0) {
-                  stackIn_28_0 = ValidationHelpWidget.a(var1_int, 8077);
+                  stackIn_28_0 = ValidationHelpWidget.handleArchiveConnectionError(var1_int, 8077);
                   return stackIn_28_0;
                 }
                 EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
               } else {
-                if (PlayerProgressEncoder.field_b < bb.monotonicTimeMillis(param0 ^ -2)) {
-                  stackIn_24_0 = ValidationHelpWidget.a(-2, param0 + 8076);
+                if (PlayerProgressEncoder.field_b < BoundaryLoopTracer.monotonicTimeMillis(param0 ^ -2)) {
+                  stackIn_24_0 = ValidationHelpWidget.handleArchiveConnectionError(-2, param0 + 8076);
                   return stackIn_24_0;
                 }
               }
@@ -382,8 +382,8 @@ final class TriangleMesh {
               stackIn_34_0 = -1;
               return stackIn_34_0;
             }
-            OutlinedRoadStripRenderer.field_n.attachConnection(oc.field_c, ka.field_d, 20);
-            oc.field_c = null;
+            OutlinedRoadStripRenderer.field_n.attachConnection(SpriteLayoutUtilities.field_c, AccountUiUtilities.field_d, 20);
+            SpriteLayoutUtilities.field_c = null;
             PasswordFieldRenderer.field_y = null;
             EmailValidationResult.field_g = 0;
             stackIn_32_0 = 0;
@@ -391,7 +391,7 @@ final class TriangleMesh {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return ValidationHelpWidget.a(-3, 8077);
+            return ValidationHelpWidget.handleArchiveConnectionError(-3, 8077);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

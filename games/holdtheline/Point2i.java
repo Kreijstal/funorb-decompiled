@@ -108,7 +108,7 @@ class Point2i {
         }
     }
 
-    final static boolean a(int param0, GrowableObjectList param1, int param2, Point2i param3, Point2i param4) {
+    final static boolean intersectsBoundarySegment(int param0, GrowableObjectList param1, int param2, Point2i param3, Point2i param4) {
         int var8 = 0;
         int var10 = 0;
         int stackIn_24_0 = 0;

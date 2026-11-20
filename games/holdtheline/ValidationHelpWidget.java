@@ -38,11 +38,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int handleArchiveConnectionError(int param0, int param1) {
         int var2 = 0;
         int var3 = HoldTheLine.field_D;
         int var2Lifetime1;
-        oc.field_c = null;
+        SpriteLayoutUtilities.field_c = null;
         EmailValidationResult.field_g = 0;
         PasswordFieldRenderer.field_y = null;
         if (param1 != 8077) {
@@ -197,7 +197,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           field_R = null;
           return;
         }
-        ValidationHelpWidget.a(77, -61);
+        ValidationHelpWidget.handleArchiveConnectionError(77, -61);
         field_V = null;
         field_Q = null;
         field_R = null;
@@ -231,8 +231,8 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           regionExit2: {
             var13 = HoldTheLine.field_D;
             var6 = this.field_U.getValidationState(-7447);
-            if (hh.field_d != var6 &&
-              um.field_a != var6) {
+            if (HoverTargetState.field_d != var6 &&
+              Cp1252CharacterRules.field_a != var6) {
               var5 = this.field_U.getValidationMessage((byte) -59);
               if (var5 == null) {
                 var5 = this.field_P;
@@ -256,7 +256,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var8 = (TextWidgetRenderer) ((Object) this.renderer);
         var9 = this.x + param2;
         var10 = var8.getTextOriginY(-1337403295, (UiWidget) (this), param1) + (var8.getTextLayout((byte) 20, (UiWidget) (this)).getHeight(-93) >> 1);
-        if (hh.field_d == var6Lifetime1) {
+        if (HoverTargetState.field_d == var6Lifetime1) {
           var18 = FullscreenFocusCanvas.field_i[0];
           var11 = var18.canvasWidth << 1;
           var12 = var18.canvasHeight << 1;
@@ -278,11 +278,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             }
           }
           var18.drawRotatedBilinear(112, 144, var18.canvasWidth << 4, var18.canvasHeight << 4, -this.field_N << 10, 4096);
-          dm.popRasterState((byte) -10);
+          RasterStateRestoration.popRasterState((byte) -10);
           this.field_T.drawAdditive(-(var18.canvasWidth >> 1) + var9, -var18.canvasHeight + var10, 256);
           return;
         }
-        if (var6Lifetime1 != um.field_a) {
+        if (var6Lifetime1 != Cp1252CharacterRules.field_a) {
           if (LinearPointPath.field_k == var6Lifetime1) {
             var15 = FullscreenFocusCanvas.field_i[2];
             var15.drawAdditive(var9, var10 - (var15.height >> 1), 256);
@@ -315,7 +315,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
         }
         var17.drawRotatedBilinear(112, 144, var17.canvasWidth << 4, var17.canvasHeight << 4, -this.field_N << 10, 4096);
-        dm.popRasterState((byte) -10);
+        RasterStateRestoration.popRasterState((byte) -10);
         this.field_T.drawAdditive(-(var17.canvasWidth >> 1) + var9, -var17.canvasHeight + var10, 256);
         return;
     }
@@ -331,7 +331,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static EntitySound a(byte param0, MovingEntity param1, PcmSample param2, int param3) {
+    final static EntitySound playEntitySound(byte param0, MovingEntity param1, PcmSample param2, int param3) {
         EntitySound var4 = null;
         RuntimeException var4_ref = null;
         EntitySound stackIn_3_0 = null;
@@ -369,7 +369,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    final static SoundPlayback a(int param0, int param1, int param2, PcmSample param3) {
+    final static SoundPlayback playSample(int param0, int param1, int param2, PcmSample param3) {
         RuntimeException var4 = null;
         SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -378,7 +378,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17405) {
-            ValidationHelpWidget.a(34, 10);
+            ValidationHelpWidget.handleArchiveConnectionError(34, 10);
           }
           stackIn_3_0 = CachedTextLayout.playSoundStream(PcmSampleStream.createAtRate(param3, 100, param1, param2), (byte) -68);
           return stackIn_3_0;

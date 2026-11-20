@@ -63,7 +63,7 @@ class MovingEntity extends IntrusiveNode {
         int var6 = 0;
         var6 = HoldTheLine.field_D;
         try {
-          var3_float = ka.a(this.layer, 77, this.position, param1);
+          var3_float = AccountUiUtilities.findRoadParameter(this.layer, 77, this.position, param1);
           if ((float)param0 != var3_float) {
             this.courseSegment = (int)var3_float;
             if (this.courseSegment == param1.length) {
@@ -77,7 +77,7 @@ class MovingEntity extends IntrusiveNode {
                 if (param1.length <= var5) {
                   var5 = var5 - param1.length;
                 }
-                if (!IntrusiveNode.a(false, this.layer, param1[var5], this.position)) {
+                if (!IntrusiveNode.containsRoadPoint(false, this.layer, param1[var5], this.position)) {
                   continue;
                 }
                 this.field_m = var5;
@@ -91,7 +91,7 @@ class MovingEntity extends IntrusiveNode {
                 if (var5 >= param1.length) {
                   var5 = var5 - param1.length;
                 }
-                if (!IntrusiveNode.a(false, this.layer, param1[var5], this.position)) {
+                if (!IntrusiveNode.containsRoadPoint(false, this.layer, param1[var5], this.position)) {
                   continue;
                 }
                 this.field_l = var5;
@@ -107,7 +107,7 @@ class MovingEntity extends IntrusiveNode {
               if (var5 >= param1.length) {
                 var5 = var5 - param1.length;
               }
-            } while (!IntrusiveNode.a(false, this.layer, param1[var5], this.position));
+            } while (!IntrusiveNode.containsRoadPoint(false, this.layer, param1[var5], this.position));
             this.field_s = var5;
             return;
           }

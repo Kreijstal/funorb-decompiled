@@ -90,7 +90,7 @@ final class BoundedRandomAccessFile {
                     }
                     var2.opcode = 9;
                     var2.field_c = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[1]), (byte) -116);
-                    var2.field_b = ka.a(5, param1[2]);
+                    var2.field_b = AccountUiUtilities.parseComparisonOperator(5, param1[2]);
                     var2.field_e = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[3]), (byte) -116);
                   } else {
                     if (param1[0].equalsIgnoreCase("playerzone")) {
@@ -98,7 +98,7 @@ final class BoundedRandomAccessFile {
                         throw new IllegalArgumentException();
                       }
                       var2.opcode = 2;
-                      var2.field_c = ka.a(5, param1[1]);
+                      var2.field_c = AccountUiUtilities.parseComparisonOperator(5, param1[1]);
                       var2.field_b = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[2]), (byte) -116);
                     } else {
                       if (!param1[0].equalsIgnoreCase("missilehit")) {
@@ -129,7 +129,7 @@ final class BoundedRandomAccessFile {
                   }
                   var2.opcode = 5;
                   var2.field_c = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[1]), (byte) -116);
-                  var2.field_b = ka.a(param0 ^ 5, param1[2]);
+                  var2.field_b = AccountUiUtilities.parseComparisonOperator(param0 ^ 5, param1[2]);
                   var2.field_e = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[3]), (byte) -116);
                 }
               } else {
@@ -150,7 +150,7 @@ final class BoundedRandomAccessFile {
               }
               var4.opcode = 3;
               var4.field_c = DialWidgetRenderer.parsePowerupCategory(122, param1[1]);
-              var4.field_b = ka.a(param0 ^ 5, param1[2]);
+              var4.field_b = AccountUiUtilities.parseComparisonOperator(param0 ^ 5, param1[2]);
               var4.field_e = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[3]), (byte) -116);
             }
           } else {
@@ -257,6 +257,6 @@ final class BoundedRandomAccessFile {
     }
 
     static {
-        StereoMusicSample.a(50, 14195);
+        StereoMusicSample.setBenefitsTimingScale(50, 14195);
     }
 }

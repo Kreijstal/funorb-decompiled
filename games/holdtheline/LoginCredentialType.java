@@ -27,7 +27,7 @@ final class LoginCredentialType {
           }
           if (IsaacRandom.field_g.completed) {
             HuffmanDecoder.decodePlayerProgress(param0 - 56, IsaacRandom.field_g.payload);
-            if (ad.field_a) {
+            if (ReflectionCheckSupport.field_a) {
               GrowableStringList.savePlayerProgress(0);
             }
             MusicPatchEnvelope.field_f = true;
@@ -45,15 +45,15 @@ final class LoginCredentialType {
           return true;
         }
         if (param0 == 16616) {
-          return 0 != (ka.field_g & 1 << param1) ? true : false;
+          return 0 != (AccountUiUtilities.field_g & 1 << param1) ? true : false;
         }
         LoginCredentialType.clearSharedReferences(113);
-        return 0 != (ka.field_g & 1 << param1) ? true : false;
+        return 0 != (AccountUiUtilities.field_g & 1 << param1) ? true : false;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isScreenOptionsOpen(int param0) {
         int var1 = 94 % ((param0 + 21) / 54);
-        return oi.field_f;
+        return HoverTooltipController.field_f;
     }
 
     public static void clearSharedReferences(int param0) {

@@ -8,7 +8,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
     private volatile int field_e;
     private volatile int field_b;
 
-    final void a(boolean param0, java.awt.Component param1, int param2) {
+    final void setCursorVisible(boolean param0, java.awt.Component param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         Object var7 = null;
@@ -52,7 +52,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
         com.ms.win32.User32.SendMessage(var6, 101024, 0, 0);
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void setCursorPosition(int param0, boolean param1, int param2) {
         com.ms.win32.User32.SetCursorPos(param2, param0);
         if (!param1) {
           this.field_b = 108;

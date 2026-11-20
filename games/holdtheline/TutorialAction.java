@@ -62,7 +62,7 @@ final class TutorialAction {
           if (param0 != 2113942113) {
             field_f = (AccountProtocolState) null;
           }
-          stackIn_5_0 = (LoadProgressDialog.a(param1, 85) != null);
+          stackIn_5_0 = (LoadProgressDialog.findIgnoredPlayer(param1, 85) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -33,7 +33,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         field_d = null;
         field_h = null;
         if (param0 != -1) {
-          TextFieldValidator.e((byte) -13);
+          TextFieldValidator.isServerSessionReady((byte) -13);
         }
     }
 
@@ -47,7 +47,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
     final static void setLoadingArtwork(String param0, Sprite param1, int param2) {
         try {
           if (param2 != 0) {
-            TextFieldValidator.e((byte) -29);
+            TextFieldValidator.isServerSessionReady((byte) -29);
           }
           TextLineLayout.field_e = param1;
           UrlPacketDownloader.field_j = param0;
@@ -68,7 +68,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         try {
           var3_int = 0;
           if (param1 > -1) {
-            TextFieldValidator.e((byte) 28);
+            TextFieldValidator.isServerSessionReady((byte) 28);
           }
           while (param2 > 0) {
             var3_int = param0 & 1 | var3_int << 1;
@@ -127,12 +127,12 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         return this.getTextValidationMessage(this.field_f.text, true);
     }
 
-    final static boolean e(byte param0) {
+    final static boolean isServerSessionReady(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 1) {
           return true;
         }
-        stackIn_6_0 = (null != IterableSecondaryNodeDeque.field_h) && (d.field_f == ad.field_b);
+        stackIn_6_0 = (null != IterableSecondaryNodeDeque.field_h) && (AccountProtocolContext.field_f == ReflectionCheckSupport.field_b);
         return stackIn_6_0;
     }
 

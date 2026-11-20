@@ -36,11 +36,11 @@ class WidgetStyleNode extends DualLinkNode {
     }
 
     final static void drawClientContent(boolean param0, boolean param1) {
-        CourseDefinition.a(param0, param1, -113);
+        CourseDefinition.drawAccountOverlay(param0, param1, -113);
     }
 
     final static void setFeatureFlags(int param0) {
-        ka.field_g = param0;
+        AccountUiUtilities.field_g = param0;
     }
 
     WidgetStyleNode() {

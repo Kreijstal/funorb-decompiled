@@ -14,7 +14,7 @@ class TextButton extends UiWidget {
     final void clearFocus(int param0) {
         if (!this.focused) {
           if (param0 < 15) {
-            TextButton.h(-3);
+            TextButton.showEmptyLoginForm(-3);
             return;
           }
           return;
@@ -23,7 +23,7 @@ class TextButton extends UiWidget {
         if (null != this.listener) {
           if (!(this.listener instanceof WidgetFocusListener)) {
             if (param0 < 15) {
-              TextButton.h(-3);
+              TextButton.showEmptyLoginForm(-3);
               return;
             }
             return;
@@ -33,7 +33,7 @@ class TextButton extends UiWidget {
         if (param0 >= 15) {
           return;
         }
-        TextButton.h(-3);
+        TextButton.showEmptyLoginForm(-3);
     }
 
     TextButton(String param0, WidgetRenderer param1, WidgetListener param2) {
@@ -151,17 +151,17 @@ class TextButton extends UiWidget {
         }
     }
 
-    final static void h(int param0) {
+    final static void showEmptyLoginForm(int param0) {
         String var2 = null;
         String var2Lifetime1;
         if (param0 == 84) {
           var2 = (String) null;
-          SocketJs5Transport.a((String) null, false, "");
+          SocketJs5Transport.replaceLoginForm((String) null, false, "");
           return;
         }
-        TextButton.h(-35);
+        TextButton.showEmptyLoginForm(-35);
         var2Lifetime1 = (String) null;
-        SocketJs5Transport.a((String) null, false, "");
+        SocketJs5Transport.replaceLoginForm((String) null, false, "");
     }
 
     void activate(int param0, int param1, boolean param2, int param3) {

@@ -66,7 +66,7 @@ abstract class RoadSegment extends TrackCurve {
         var3 = HoldTheLine.field_D;
         try {
           if (!param0) {
-            stackIn_4_0 = fk.field_b;
+            stackIn_4_0 = PopupMenuRenderer.field_b;
           } else {
             stackIn_4_0 = UrlPacketDownloader.field_k;
           }
@@ -74,11 +74,11 @@ abstract class RoadSegment extends TrackCurve {
           if (param1 != 97) {
             return;
           }
-          for (var2_int = 0; l.field_a.length > var2_int; var2_int++) {
+          for (var2_int = 0; CollisionGeometry.field_a.length > var2_int; var2_int++) {
             if (var2_int != 13) {
-              ((GameMenu) (l.field_a[var2_int])).rebuildItems(-127);
+              ((GameMenu) (CollisionGeometry.field_a[var2_int])).rebuildItems(-127);
             } else {
-              ((RaceSetupMenu) (l.field_a[var2_int])).refreshMenuOptions(true, 6267);
+              ((RaceSetupMenu) (CollisionGeometry.field_a[var2_int])).refreshMenuOptions(true, 6267);
             }
           }
           return;

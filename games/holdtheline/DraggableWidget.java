@@ -28,13 +28,13 @@ final class DraggableWidget extends SingleChildWidget {
         }
         Sprite[] var1 = new Sprite[NineSlicePanel.field_d];
         for (var2 = 0; NineSlicePanel.field_d > var2; var2++) {
-          var3 = EditableTextField.field_K[var2] * ad.field_d[var2];
+          var3 = EditableTextField.field_K[var2] * ReflectionCheckSupport.field_d[var2];
           var4 = IterableSecondaryNodeDeque.field_e[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = StraightRoadSegment.field_E[LoginChoicePanel.a(255, (int) var4[var6])];
+            var5[var6] = StraightRoadSegment.field_E[LoginChoicePanel.andInts(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var5);
+          var1[var2] = new Sprite(SpriteDecodeGlobals.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ReflectionCheckSupport.field_d[var2], var5);
         }
         VehicleEngineSounds.clearDecodedSpriteSheet(false);
         return var1;
@@ -61,7 +61,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void checkUsernameParameter(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -75,7 +75,7 @@ final class DraggableWidget extends SingleChildWidget {
           var3 = -99 % ((param1 - 45) / 47);
           if (var2 != null) {
             var4 = (CharSequence) ((Object) var2);
-            if (ko.encodeBase37(var4, -13820) != 0L) {
+            if (ClientScreenRenderer.encodeBase37(var4, -13820) != 0L) {
               return;
             }
           }
@@ -261,7 +261,7 @@ final class DraggableWidget extends SingleChildWidget {
         field_G = null;
     }
 
-    final static void j(int param0) {
+    final static void buildLogoGlow(int param0) {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;
@@ -269,10 +269,10 @@ final class DraggableWidget extends SingleChildWidget {
         try {
           var1 = new Sprite(540, 140);
           ProxySocketConnector.pushSpriteRaster(var1, -1);
-          TriangleRasterState.c();
+          TriangleRasterState.bindRasterClip();
           SoftwareRasterizer.clear();
           StrongCacheEntry.field_q = 0;
-          StereoMusicSample.a((byte) 121);
+          StereoMusicSample.drawLogoMeshes((byte) 121);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawMask(-2, -2, 16777215);
@@ -280,7 +280,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           Js5Transport.field_o.bindRaster();
           var1.drawHalfSize(0, param0);
-          dm.popRasterState((byte) -10);
+          RasterStateRestoration.popRasterState((byte) -10);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jd.NA(" + param0 + ')');
         }
@@ -325,7 +325,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(String param0, java.awt.Color param1, int param2, int param3, boolean param4) {
+    final static void drawLoadingBar(String param0, java.awt.Color param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -342,35 +342,35 @@ final class DraggableWidget extends SingleChildWidget {
         try {
           try {
             var9 = MouseInputHandler.field_b.getGraphics();
-            if (null == kc.field_e) {
-              kc.field_e = new java.awt.Font("Helvetica", 1, 13);
+            if (null == BitwiseIntegerOperations.field_e) {
+              BitwiseIntegerOperations.field_e = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, lj.field_f, LinearPointPath.field_i);
+              var9.fillRect(0, 0, RasterStateStack.field_f, LinearPointPath.field_i);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == i.field_i) {
-                i.field_i = MouseInputHandler.field_b.createImage(304, 34);
+              if (null == ShadedNineSlicePanel.field_i) {
+                ShadedNineSlicePanel.field_i = MouseInputHandler.field_b.createImage(304, 34);
               }
-              var10 = i.field_i.getGraphics();
+              var10 = ShadedNineSlicePanel.field_i.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, param2 * 3, 30);
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(2 + 3 * param2, 2, -(3 * param2) + param3, 30);
-              var10.setFont(kc.field_e);
+              var10.setFont(BitwiseIntegerOperations.field_e);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
-              var9.drawImage(i.field_i, lj.field_f / 2 - 152, -18 + LinearPointPath.field_i / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ShadedNineSlicePanel.field_i, RasterStateStack.field_f / 2 - 152, -18 + LinearPointPath.field_i / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = lj.field_f / 2 - 152;
+              var7 = RasterStateStack.field_f / 2 - 152;
               var8 = LinearPointPath.field_i / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
@@ -378,14 +378,14 @@ final class DraggableWidget extends SingleChildWidget {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, 1 + var8, 301, 31);
               var9.fillRect(var7 - (-2 - 3 * param2), var8 + 2, -(3 * param2) + 300, 30);
-              var9.setFont(kc.field_e);
+              var9.setFont(BitwiseIntegerOperations.field_e);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, (-(param0.length() * 6) + 304) / 2 + var7, 22 + var8);
             }
-            if (null != qh.field_d) {
-              var9.setFont(kc.field_e);
+            if (null != KeyboardEventQueue.field_d) {
+              var9.setFont(BitwiseIntegerOperations.field_e);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(qh.field_d, lj.field_f / 2 - 6 * qh.field_d.length() / 2, LinearPointPath.field_i / 2 - 26);
+              var9.drawString(KeyboardEventQueue.field_d, RasterStateStack.field_f / 2 - 6 * KeyboardEventQueue.field_d.length() / 2, LinearPointPath.field_i / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -16,7 +16,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
     static String field_m;
     static SpriteAsset field_b;
 
-    final static void a(String param0, int param1) {
+    final static void setRequestedDisplayName(String param0, int param1) {
         try {
           TutorialTransition.field_f = param0;
           if (param1 != 0) {
@@ -43,8 +43,8 @@ final class MarkerSliderRenderer implements WidgetRenderer {
         MidiPcmStream.field_F = MidiPcmStream.field_F - 1;
         SoftwareRasterizer.bindRaster(GrowableStringList.field_h[MidiPcmStream.field_F], TextFieldValidator.field_c[MidiPcmStream.field_F], ValidationHelpWidget.field_V[MidiPcmStream.field_F]);
         SoftwareRasterizer.clipLeft = OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F];
-        SoftwareRasterizer.clipRight = dm.field_b[MidiPcmStream.field_F];
-        SoftwareRasterizer.clipTop = m.field_c[MidiPcmStream.field_F];
+        SoftwareRasterizer.clipRight = RasterStateRestoration.field_b[MidiPcmStream.field_F];
+        SoftwareRasterizer.clipTop = RasterClipTopStack.field_c[MidiPcmStream.field_F];
         SoftwareRasterizer.clipBottom = NanoTickClock.field_n[MidiPcmStream.field_F];
         if (param0 != -1) {
           field_g = (IntrusiveDeque) null;
@@ -104,9 +104,9 @@ final class MarkerSliderRenderer implements WidgetRenderer {
           DirectByteStorage.field_j = new int[NineSlicePanel.field_d];
           IterableSecondaryNodeDeque.field_e = new byte[NineSlicePanel.field_d][];
           Vector2i.field_g = new int[NineSlicePanel.field_d];
-          ad.field_d = new int[NineSlicePanel.field_d];
+          ReflectionCheckSupport.field_d = new int[NineSlicePanel.field_d];
           var17.position = -7 + param1.length - 8 * NineSlicePanel.field_d;
-          bo.field_b = var17.readUnsignedShort(-85);
+          SpriteDecodeGlobals.field_b = var17.readUnsignedShort(-85);
           AchievementUnlockRequest.field_o = var17.readUnsignedShort(59);
           var3 = 1 + (var17.readUnsignedByte((byte) -64) & 255);
           for (var4 = 0; var4 < NineSlicePanel.field_d; var4++) {
@@ -119,7 +119,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
             EditableTextField.field_K[var4Lifetime2] = var17.readUnsignedShort(79);
           }
           for (var4Lifetime3 = 0; NineSlicePanel.field_d > var4Lifetime3; var4Lifetime3++) {
-            ad.field_d[var4Lifetime3] = var17.readUnsignedShort(101);
+            ReflectionCheckSupport.field_d[var4Lifetime3] = var17.readUnsignedShort(101);
           }
           var17.position = -((-1 + var3) * 3) - NineSlicePanel.field_d * 8 + (param1.length - 7);
           StraightRoadSegment.field_E = new int[var3];
@@ -132,7 +132,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < NineSlicePanel.field_d; var4Lifetime5++) {
             var5 = EditableTextField.field_K[var4Lifetime5];
-            var6 = ad.field_d[var4Lifetime5];
+            var6 = ReflectionCheckSupport.field_d[var4Lifetime5];
             var7 = var5 * var6;
             var20 = new byte[var7];
             var18 = var20;
@@ -256,7 +256,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(IsaacPacketBuffer param0, int param1, int param2, byte param3) {
+    final static void readCourseBestTimes(IsaacPacketBuffer param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -275,21 +275,21 @@ final class MarkerSliderRenderer implements WidgetRenderer {
           var4_int = MenuSelectionController.readOptionalBits(14, (byte) -96, param0);
           var5 = MenuSelectionController.readOptionalBits(13, (byte) -96, param0);
           var6 = param0.readBits(2, 7);
-          var7 = hk.field_c[param2][param1];
+          var7 = RoadControlPathBuilder.field_c[param2][param1];
           var8 = QuickChatPhraseDefinition.field_v[param2][param1];
           if (var7 != -1 && (var4_int > var7 ||
             -1 == var4_int)) {
-            ad.field_a = true;
+            ReflectionCheckSupport.field_a = true;
             decompiledFrameRemainder1 = false;
           }
           else {
-            hk.field_c[param2][param1] = var4_int;
+            RoadControlPathBuilder.field_c[param2][param1] = var4_int;
             BoundaryIntersection.field_j[param2][param1] = var6;
           }
           boolean decompiledFrameRemainder0 = true;
           if (var8 != -1 && (var8 < var5 ||
             var5 == -1)) {
-            ad.field_a = true;
+            ReflectionCheckSupport.field_a = true;
             decompiledFrameRemainder0 = false;
           }
           else {

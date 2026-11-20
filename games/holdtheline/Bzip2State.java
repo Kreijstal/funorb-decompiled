@@ -51,8 +51,8 @@ final class Bzip2State {
         field_q = null;
     }
 
-    final static void a(int param0, boolean param1) {
-        ka.field_b.draw(-81, param0, 0);
+    final static void drawAccountUi(int param0, boolean param1) {
+        AccountUiUtilities.field_b.draw(-81, param0, 0);
     }
 
     Bzip2State() {

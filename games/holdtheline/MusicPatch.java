@@ -32,7 +32,7 @@ final class MusicPatch extends IntrusiveNode {
               if (param1 < 8) {
                 MusicPatch.clearSharedReferences((byte) 36);
               }
-              param0.getAppletContext().showDocument(IntrusiveDeque.a(var2, param0, (byte) 69), "_top");
+              param0.getAppletContext().showDocument(IntrusiveDeque.adjustAppletUrl(var2, param0, (byte) 69), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -225,7 +225,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, boolean param1, int[] param2, byte param3, TriangleMesh param4, boolean param5, boolean param6) {
+    final static void transformAndProjectMesh(int[] param0, boolean param1, int[] param2, byte param3, TriangleMesh param4, boolean param5, boolean param6) {
         int stackIn_63_0 = 0;
         int stackIn_63_1 = 0;
         int stackIn_72_0 = 0;
@@ -307,8 +307,8 @@ final class MusicPatch extends IntrusiveNode {
           var21Lifetime1 = param2[0] - param0[0];
           var22Lifetime1 = param2[1] - param0[1];
           var23Lifetime1 = param2[2] - param0[2];
-          var9 = var23Lifetime1 * param0[5] + var22Lifetime1 * param0[4] + var21Lifetime1 * param0[3] >> -il.field_c + 16;
-          var10 = param0[8] * var23Lifetime1 + (var21Lifetime1 * param0[6] + param0[7] * var22Lifetime1) >> -il.field_c + 16;
+          var9 = var23Lifetime1 * param0[5] + var22Lifetime1 * param0[4] + var21Lifetime1 * param0[3] >> -LeaderboardRequests.field_c + 16;
+          var10 = param0[8] * var23Lifetime1 + (var21Lifetime1 * param0[6] + param0[7] * var22Lifetime1) >> -LeaderboardRequests.field_c + 16;
           var11 = param0[11] * var23Lifetime1 + var21Lifetime1 * param0[9] + param0[10] * var22Lifetime1 >> 16;
           var21Lifetime2 = TriangleRasterState.field_b;
           var22Lifetime2 = TriangleRasterState.field_c;
@@ -319,8 +319,8 @@ final class MusicPatch extends IntrusiveNode {
               var24Lifetime1 = param4.field_m[var23Lifetime2];
               var25Lifetime1 = param4.field_G[var23Lifetime2];
               var26Lifetime1 = param4.field_k[var23Lifetime2];
-              var27Lifetime1 = (var18 * var26Lifetime1 + var12 * var24Lifetime1 + var15 * var25Lifetime1 >> -il.field_c + 16) + var9;
-              var28Lifetime1 = (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16 - il.field_c) + var10;
+              var27Lifetime1 = (var18 * var26Lifetime1 + var12 * var24Lifetime1 + var15 * var25Lifetime1 >> -LeaderboardRequests.field_c + 16) + var9;
+              var28Lifetime1 = (var16 * var25Lifetime1 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16 - LeaderboardRequests.field_c) + var10;
               var29Lifetime1 = (var26Lifetime1 * var20 + var14 * var24Lifetime1 + var17 * var25Lifetime1 >> 16) + var11;
               stackIn_63_0 = var29Lifetime1;
               stackIn_63_1 = 50;
@@ -346,8 +346,8 @@ final class MusicPatch extends IntrusiveNode {
                   ArchiveProvider.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param6) {
-                  SpriteAsset.field_c[var23Lifetime2] = var27Lifetime1 >> il.field_c;
-                  PasswordFieldRenderer.field_z[var23Lifetime2] = var28Lifetime1 >> il.field_c;
+                  SpriteAsset.field_c[var23Lifetime2] = var27Lifetime1 >> LeaderboardRequests.field_c;
+                  PasswordFieldRenderer.field_z[var23Lifetime2] = var28Lifetime1 >> LeaderboardRequests.field_c;
                   LoginCredentials.field_b[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -369,9 +369,9 @@ final class MusicPatch extends IntrusiveNode {
                   var24Lifetime1Lifetime1 = param4.field_a[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_g[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_b[var23Lifetime2];
-                  ae.field_d[var23Lifetime2] = var9 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1 >> 16);
+                  AppletNavigation.field_d[var23Lifetime2] = var9 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1 >> 16);
                   Vector2i.field_e[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + (var13 * var24Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1) >> 16) + var10;
-                  ba.field_a[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var25Lifetime1Lifetime1 * var17 + var14 * var24Lifetime1Lifetime1) >> 16);
+                  AccountNameNormalizer.field_a[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var25Lifetime1Lifetime1 * var17 + var14 * var24Lifetime1Lifetime1) >> 16);
                   var24Lifetime1Lifetime1 = param4.field_M[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_R[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_v[var23Lifetime2];
@@ -382,7 +382,7 @@ final class MusicPatch extends IntrusiveNode {
                   var25Lifetime1Lifetime1 = param4.field_C[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_h[var23Lifetime2];
                   StandardContentTransitionDialog.field_ob[var23Lifetime2] = (var26Lifetime1Lifetime1 * var18 + (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12) >> 16) + var9;
-                  pe.field_a[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13 >> 16) + var10;
+                  ScreenOptionsMenu.field_a[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13 >> 16) + var10;
                   TutorialAction.field_j[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 + (var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -427,7 +427,7 @@ final class MusicPatch extends IntrusiveNode {
             stackIn_72_0 = var8;
             break;
           }
-          DropTargetWidget.a(stackIn_72_0, param4, param1, 3, var7_int);
+          DropTargetWidget.bucketVisibleMeshFaces(stackIn_72_0, param4, param1, 3, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -744,7 +744,7 @@ final class MusicPatch extends IntrusiveNode {
                 }
                 var22 = var2.readVarInt((byte) -17);
               }
-              this.keyPitches[var23] = (short)(this.keyPitches[var23] + LoginChoicePanel.a(-1 + var22 << 14, 32768));
+              this.keyPitches[var23] = (short)(this.keyPitches[var23] + LoginChoicePanel.andInts(-1 + var22 << 14, 32768));
               var20--;
               this.sampleIds[var23] = var22;
               var23++;
@@ -1289,11 +1289,11 @@ final class MusicPatch extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var1 = "";
-          if (null != lh.field_a) {
-            var1 = lh.field_a.getAccountName(false);
+          if (null != SocketConnectorFactory.field_a) {
+            var1 = SocketConnectorFactory.field_a.getAccountName(false);
           }
           if (0 == var1.length()) {
-            var1 = ResizableDialog.j(21);
+            var1 = ResizableDialog.getAccountDisplayName(21);
           }
           if (0 == var1.length()) {
             var1 = NameAvailabilityResult.field_k;

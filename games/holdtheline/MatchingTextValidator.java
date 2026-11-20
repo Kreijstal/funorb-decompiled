@@ -50,49 +50,49 @@ final class MatchingTextValidator extends TextFieldValidator {
                 if (PacketBuffer.intersectsSegments(-1, var15, var20)) {
                   var10 = RasterBuffer.field_d + (float)param4;
                   var11 = (float)param6 + IterableSecondaryNodeDeque.field_b;
-                  QuadraticPointPath.a(var11, param2, param7, (byte) 63, var10, param0);
+                  QuadraticPointPath.appendIntersectionPair(var11, param2, param7, (byte) 63, var10, param0);
                 }
               } else {
                 var19_ref = (ArcTrackBoundary) (param5);
-                var10_int = ba.intersectLineAndArc(var15, 0, var19_ref);
+                var10_int = AccountNameNormalizer.intersectLineAndArc(var15, 0, var19_ref);
                 if (var10_int >= 1) {
                   var11 = (float)param4 + RasterBuffer.field_d;
                   var12 = (float)param6 + var19_ref.parameterAtAngle(IterableSecondaryNodeDeque.field_b, param3 ^ 7518);
-                  QuadraticPointPath.a(var12, param2, param7, (byte) 113, var11, param0);
+                  QuadraticPointPath.appendIntersectionPair(var12, param2, param7, (byte) 113, var11, param0);
                 }
                 if (var10_int == 2) {
                   var11 = CachedArchiveProvider.field_g + (float)param4;
                   var12 = var19_ref.parameterAtAngle(TextHotspotWidget.field_G, -7517) + (float)param6;
-                  QuadraticPointPath.a(var12, param2, param7, (byte) 127, var11, param0);
+                  QuadraticPointPath.appendIntersectionPair(var12, param2, param7, (byte) 127, var11, param0);
                 }
               }
             } else {
               var18_ref = (ArcTrackBoundary) (param1);
               if (param5 instanceof TrackBoundary) {
                 var14 = (TrackBoundary) (param5);
-                var10_int = ba.intersectLineAndArc(var14, 0, var18_ref);
+                var10_int = AccountNameNormalizer.intersectLineAndArc(var14, 0, var18_ref);
                 if (var10_int >= 1) {
                   var11 = (float)param4 + var18_ref.parameterAtAngle(IterableSecondaryNodeDeque.field_b, -7517);
                   var12 = RasterBuffer.field_d + (float)param6;
-                  QuadraticPointPath.a(var12, param2, param7, (byte) 62, var11, param0);
+                  QuadraticPointPath.appendIntersectionPair(var12, param2, param7, (byte) 62, var11, param0);
                 }
                 if (var10_int == 2) {
                   var11 = var18_ref.parameterAtAngle(TextHotspotWidget.field_G, -7517) + (float)param4;
                   var12 = CachedArchiveProvider.field_g + (float)param6;
-                  QuadraticPointPath.a(var12, param2, param7, (byte) 78, var11, param0);
+                  QuadraticPointPath.appendIntersectionPair(var12, param2, param7, (byte) 78, var11, param0);
                 }
               } else {
                 var17_ref = (ArcTrackBoundary) (param5);
-                var10_int = i.a(var17_ref, var18_ref, -6218);
+                var10_int = ShadedNineSlicePanel.intersectArcs(var17_ref, var18_ref, -6218);
                 if (var10_int >= 1) {
                   var11 = var18_ref.parameterAtAngle(RasterBuffer.field_d, -7517) + (float)param4;
                   var12 = var17_ref.parameterAtAngle(IterableSecondaryNodeDeque.field_b, param3 ^ 7518) + (float)param6;
-                  QuadraticPointPath.a(var12, param2, param7, (byte) 110, var11, param0);
+                  QuadraticPointPath.appendIntersectionPair(var12, param2, param7, (byte) 110, var11, param0);
                 }
                 if (var10_int == 2) {
                   var11 = (float)param4 + var18_ref.parameterAtAngle(CachedArchiveProvider.field_g, param3 ^ 7518);
                   var12 = (float)param6 + var17_ref.parameterAtAngle(TextHotspotWidget.field_G, param3 ^ 7518);
-                  QuadraticPointPath.a(var12, param2, param7, (byte) 91, var11, param0);
+                  QuadraticPointPath.appendIntersectionPair(var12, param2, param7, (byte) 91, var11, param0);
                 }
               }
             }
@@ -149,37 +149,37 @@ final class MatchingTextValidator extends TextFieldValidator {
           return;
         }
         ByteStorage.field_b = param0;
-        if (ByteStorage.field_b == dg.field_c) {
+        if (ByteStorage.field_b == ClientMenuBootstrap.field_c) {
           return;
         }
-        TextLayout.field_a = dg.field_c;
+        TextLayout.field_a = ClientMenuBootstrap.field_c;
         if (param2 != 3865) {
           field_j = 35;
-          if (dg.field_c != 13) {
-            if (dg.field_c != -1) {
-              ((GameMenu) (l.field_a[dg.field_c])).beginExit(param2 ^ 3923);
+          if (ClientMenuBootstrap.field_c != 13) {
+            if (ClientMenuBootstrap.field_c != -1) {
+              ((GameMenu) (CollisionGeometry.field_a[ClientMenuBootstrap.field_c])).beginExit(param2 ^ 3923);
             }
             LoginForm.field_G = 1;
             ValidationIndicator.field_L = param1 ? true : false;
             return;
           }
-          ((RaceSetupMenu) (l.field_a[dg.field_c])).beginExit((byte) -126);
+          ((RaceSetupMenu) (CollisionGeometry.field_a[ClientMenuBootstrap.field_c])).beginExit((byte) -126);
           LoginForm.field_G = 1;
           ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
-        if (dg.field_c == 13) {
-          ((RaceSetupMenu) (l.field_a[dg.field_c])).beginExit((byte) -126);
+        if (ClientMenuBootstrap.field_c == 13) {
+          ((RaceSetupMenu) (CollisionGeometry.field_a[ClientMenuBootstrap.field_c])).beginExit((byte) -126);
           LoginForm.field_G = 1;
           ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
-        if (dg.field_c == -1) {
+        if (ClientMenuBootstrap.field_c == -1) {
           LoginForm.field_G = 1;
           ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
-        ((GameMenu) (l.field_a[dg.field_c])).beginExit(param2 ^ 3923);
+        ((GameMenu) (CollisionGeometry.field_a[ClientMenuBootstrap.field_c])).beginExit(param2 ^ 3923);
         LoginForm.field_G = 1;
         ValidationIndicator.field_L = param1 ? true : false;
     }
@@ -204,7 +204,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           for (var5 = 0; var5 < 256; var5++) {
             incrementValue$1 = var3_int;
             var3_int++;
-            var4[var5] = LoginChoicePanel.a((int) param2[incrementValue$1], 255);
+            var4[var5] = LoginChoicePanel.andInts((int) param2[incrementValue$1], 255);
           }
           var3_int += 256;
           var7 = param0;
@@ -340,17 +340,17 @@ final class MatchingTextValidator extends TextFieldValidator {
             }
             if (param1.rectangularCollision &&
               param2.rectangularCollision) {
-              stackIn_19_0 = MouseWheelInput.a(param1.direction, param1.position, param2.halfWidth, param1.halfLength, param2.direction, param2.halfLength, param1.halfWidth, param2.position, 7527);
+              stackIn_19_0 = MouseWheelInput.intersectOrientedRectangles(param1.direction, param1.position, param2.halfWidth, param1.halfLength, param2.direction, param2.halfLength, param1.halfWidth, param2.position, 7527);
               return stackIn_19_0;
             }
             if (param1.rectangularCollision) {
-              stackIn_27_0 = MidiNote.a(param2.collisionRadius, true, param1.halfWidth, param2.position, param1.position, param1.halfLength, param1.direction);
+              stackIn_27_0 = MidiNote.overlapsExpandedRectangle(param2.collisionRadius, true, param1.halfWidth, param2.position, param1.position, param1.halfLength, param1.direction);
               return stackIn_27_0;
             }
             if (!param2.rectangularCollision) {
               return true;
             }
-            stackIn_23_0 = ArchiveRequest.a(param1.position, param2.halfWidth, param2.position, param1.collisionRadius, param2.direction, param2.halfLength, 110);
+            stackIn_23_0 = ArchiveRequest.overlapsExpandedRectangle(param1.position, param2.halfWidth, param2.position, param1.collisionRadius, param2.direction, param2.halfLength, 110);
             return stackIn_23_0;
           }
           return false;

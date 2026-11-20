@@ -121,7 +121,7 @@ final class NanoTickClock extends TickClock {
           if (var11.field_d != 2) {
             return var7;
           }
-          RoadStripRenderer.a((byte) 102, param4, var7);
+          RoadStripRenderer.exitFullscreen((byte) 102, param4, var7);
           stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,7 +170,7 @@ final class NanoTickClock extends TickClock {
         this.field_m = 0L;
     }
 
-    final static void c(int param0) {
+    final static void drawScreenOptionsText(int param0) {
         int var3 = 0;
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
@@ -199,7 +199,7 @@ final class NanoTickClock extends TickClock {
           var1_int = BlobReadRequest.field_j;
           var2 = 0;
           if (WhirlpoolHasher.field_h == 2) {
-            var3_long = -TutorialAction.field_g + bb.monotonicTimeMillis(-1);
+            var3_long = -TutorialAction.field_g + BoundaryLoopTracer.monotonicTimeMillis(-1);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;
@@ -209,7 +209,7 @@ final class NanoTickClock extends TickClock {
             NanoTickClock.clearSharedReferences(false);
           }
           for (var3 = 0; var3 < ClientException.field_b.length; var3++) {
-            var4 = cd.field_f[var3];
+            var4 = EmailDomainValidator.field_f[var3];
             if (var4 < 0) {
               var5 = DialWidget.field_I;
             } else {
@@ -222,10 +222,10 @@ final class NanoTickClock extends TickClock {
             var6 = ClientException.field_b[var3];
             if (2 == WhirlpoolHasher.field_h &&
               var2 == 1) {
-              if (qg.field_b.length < dg.field_b.length) {
-                stackIn_19_0 = dg.field_b.length;
+              if (TexturedPolygonRenderer.field_b.length < ClientMenuBootstrap.field_b.length) {
+                stackIn_19_0 = ClientMenuBootstrap.field_b.length;
               } else {
-                stackIn_19_0 = qg.field_b.length;
+                stackIn_19_0 = TexturedPolygonRenderer.field_b.length;
               }
               var7 = stackIn_19_0;
               if (DelayedServerPacket.field_j.length < StraightRoadSlicer.field_a.length) {
@@ -236,10 +236,10 @@ final class NanoTickClock extends TickClock {
               var8 = stackIn_22_0;
               if (6 <= var3 &&
                 var3 < 6 + var7) {
-                if (-var7 + var3 + (-6 + qg.field_b.length) < 0) {
+                if (-var7 + var3 + (-6 + TexturedPolygonRenderer.field_b.length) < 0) {
                   stackIn_28_0 = "";
                 } else {
-                  stackIn_28_0 = qg.field_b[-var7 + qg.field_b.length + var3 - 6];
+                  stackIn_28_0 = TexturedPolygonRenderer.field_b[-var7 + TexturedPolygonRenderer.field_b.length + var3 - 6];
                 }
                 var6 = stackIn_28_0;
               }
@@ -275,7 +275,7 @@ final class NanoTickClock extends TickClock {
               var1_int = var1_int + ZombiePedestrian.field_w;
             }
             if (0 <= var4) {
-              q.field_a.draw(var6, var8Lifetime1, var1_int + ClientTextResources.field_b, var5, -1);
+              PlayerDataProtocol.field_a.draw(var6, var8Lifetime1, var1_int + ClientTextResources.field_b, var5, -1);
               var1_int = var1_int + (TickClock.field_b + ZombiePedestrian.field_w + ContentTransitionDialog.field_bb);
             } else {
               CheckboxWidget.field_G.draw(var6, var8Lifetime1, var1_int + ViewportSizingController.field_i, var5, -1);
@@ -369,7 +369,7 @@ final class NanoTickClock extends TickClock {
                   var10 = var8 & 65280;
                   var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.pixels[var6_int] = kc.a(kc.a(var10, var9 << 16), var11);
+                  SoftwareRasterizer.pixels[var6_int] = BitwiseIntegerOperations.orInts(BitwiseIntegerOperations.orInts(var10, var9 << 16), var11);
                 }
                 var6_int++;
               }
@@ -430,7 +430,7 @@ final class NanoTickClock extends TickClock {
         return var6 / (long)this.field_g;
     }
 
-    final static void a(int param0, String param1, int param2) {
+    final static void showAccountResponse(int param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -454,21 +454,21 @@ final class NanoTickClock extends TickClock {
                 param1 = RaceWorld.field_Z;
               }
               param0 = 2;
-              lh.field_a.setAccountName(param2 ^ 2795, RaceSetupMenu.field_v);
+              SocketConnectorFactory.field_a.setAccountName(param2 ^ 2795, RaceSetupMenu.field_v);
             }
             var3_int = 1;
             if (10 == param0) {
               var3_int = 0;
-              MidiKeyUsage.a(17902);
+              MidiKeyUsage.showDisplayNameForm(17902);
             }
             if (var3_int != 0) {
               if (SocialListEntry.field_nb) {
-                param1 = LoginCredentials.substituteIndexedTokens(fk.field_d, new String[]{param1}, true);
+                param1 = LoginCredentials.substituteIndexedTokens(PopupMenuRenderer.field_d, new String[]{param1}, true);
               }
               if (ResourceArchive.field_g) {
                 param1 = DelegatingCanvas.field_g;
               }
-              RoadControlPointSpec.field_c.a(true, param1, param0);
+              RoadControlPointSpec.field_c.showResponse(true, param1, param0);
             }
             if (param0 != 256) {
               if (10 == param0) {
@@ -477,7 +477,7 @@ final class NanoTickClock extends TickClock {
               if (ArchiveCatalog.field_o) {
                 return;
               }
-              lh.field_a.clearCredentials(param2 ^ -2692);
+              SocketConnectorFactory.field_a.clearCredentials(param2 ^ -2692);
             }
           }
           return;
@@ -520,7 +520,7 @@ final class NanoTickClock extends TickClock {
 
     final static void removeEntitySound(boolean param0, EntitySound param1) {
         if (null != param1.field_p) {
-          ai.stopSoundPlayback((byte) -123, param1.field_p);
+          MeshLighting.stopSoundPlayback((byte) -123, param1.field_p);
         }
         if (!param0) {
           return;

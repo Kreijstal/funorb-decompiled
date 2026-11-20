@@ -14,7 +14,7 @@ final class RotatedSpriteSheetAsset {
         int var1 = 80 % ((param0 - 73) / 32);
     }
 
-    final static int a(byte param0, CourseDefinition param1) {
+    final static int getCourseGraphicsLoadProgress(byte param0, CourseDefinition param1) {
         int var4 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -40,7 +40,7 @@ final class RotatedSpriteSheetAsset {
           }
           if (param0 < 6) {
             var6 = (CourseDefinition) null;
-            RotatedSpriteSheetAsset.a((byte) 14, (CourseDefinition) null);
+            RotatedSpriteSheetAsset.getCourseGraphicsLoadProgress((byte) 14, (CourseDefinition) null);
           }
           var2_int = 0;
           if (0 != param1.field_o) {
@@ -54,7 +54,7 @@ final class RotatedSpriteSheetAsset {
             } else {
               if (2 != param1.field_o) {
                 if (param1.field_o == 3) {
-                  if (kc.field_b.isLoaded((byte) 10)) {
+                  if (BitwiseIntegerOperations.field_b.isLoaded((byte) 10)) {
                     var2_int += 16;
                   }
                   if (MarkerSliderRenderer.field_b.isLoaded((byte) 10)) {
@@ -75,7 +75,7 @@ final class RotatedSpriteSheetAsset {
                       if (BoundaryIntersection.field_i.isLoaded((byte) 10)) {
                         var2_int += 16;
                       }
-                      if (kc.field_b.isLoaded((byte) 10)) {
+                      if (BitwiseIntegerOperations.field_b.isLoaded((byte) 10)) {
                         var2_int += 16;
                       }
                     }

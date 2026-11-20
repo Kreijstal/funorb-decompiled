@@ -19,12 +19,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static void a(String param0, byte param1, String param2) {
+    final static void beginLogin(String param0, byte param1, String param2) {
         try {
           if (param1 > -19) {
             field_d = 24;
           }
-          LabeledField.a(false, param0, -106, param2);
+          LabeledField.beginLogin(false, param0, -106, param2);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -8,15 +8,15 @@ final class NamedSoundEffect extends PcmSample {
     private String field_r;
     static String field_o;
 
-    final static boolean b(byte param0) {
+    final static boolean isReconnectRequired(byte param0) {
         if (param0 != 103) {
           return false;
         }
         if (DiskCacheRequest.field_w < 10) {
           return false;
         }
-        if (!mn.guestMode) {
-          return !TextFieldValidator.e((byte) 63) ? true : false;
+        if (!SessionCookieWriter.guestMode) {
+          return !TextFieldValidator.isServerSessionReady((byte) 63) ? true : false;
         }
         return false;
     }
@@ -45,7 +45,7 @@ final class NamedSoundEffect extends PcmSample {
           this.field_q = param2;
           this.field_r = param1;
           int var5 = -30 % ((-59 - param0) / 62);
-          var4 = jh.field_a.getSoundEffect(this.field_r, (byte) -125);
+          var4 = PackedClientOptions.field_a.getSoundEffect(this.field_r, (byte) -125);
           this.field_n = var4.field_n;
           this.field_l = var4.field_l;
           this.field_j = var4.field_j;
@@ -68,14 +68,14 @@ final class NamedSoundEffect extends PcmSample {
         field_p = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int moduloForPositiveDivisor(int param0, int param1, int param2) {
         int var3 = 0;
         int var3Lifetime1;
         if (param2 == -3248) {
           var3 = param1 >> 31 & -1 + param0;
           return (param1 + (param1 >>> 31)) % param0 + var3;
         }
-        NamedSoundEffect.a(117, -101, -101);
+        NamedSoundEffect.moduloForPositiveDivisor(117, -101, -101);
         var3Lifetime1 = param1 >> 31 & -1 + param0;
         return (param1 + (param1 >>> 31)) % param0 + var3Lifetime1;
     }
@@ -95,7 +95,7 @@ final class NamedSoundEffect extends PcmSample {
               if (!param0) {
                 return;
               }
-              param1.getAppletContext().showDocument(IntrusiveDeque.a(var2, param1, (byte) 45), "_top");
+              param1.getAppletContext().showDocument(IntrusiveDeque.adjustAppletUrl(var2, param1, (byte) 45), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

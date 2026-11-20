@@ -33,14 +33,14 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
           }
           return false;
         }
-        this.a((byte) 100, false, var2);
+        this.showNameCheckResult((byte) 100, false, var2);
         if (param0 == 39) {
           return super.updateAnimation((byte) 39);
         }
         return false;
     }
 
-    private final void a(byte param0, boolean param1, NameAvailabilityResult param2) {
+    private final void showNameCheckResult(byte param0, boolean param1, NameAvailabilityResult param2) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -145,13 +145,13 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
             TutorialAction.showLoginForm((byte) -93, true, false);
             return;
           }
-          hk.a(true);
+          RoadControlPathBuilder.beginStoredLogin(true);
           if (param2 != -4) {
             var7 = (NameAvailabilityResult) null;
-            this.a((byte) 98, true, (NameAvailabilityResult) null);
-            this.h((byte) -72);
+            this.showNameCheckResult((byte) 98, true, (NameAvailabilityResult) null);
+            this.closeProgressDialog((byte) -72);
           } else {
-            this.h((byte) -72);
+            this.closeProgressDialog((byte) -72);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,11 +168,11 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
         }
     }
 
-    final void q(int param0) {
+    final void completeIneligibleAccount(int param0) {
         if (param0 > -113) {
           return;
         }
-        this.a((byte) -39, true, ChatMessage.createNameAvailabilityResult(NineSlicePanel.field_e, 256, 248));
+        this.showNameCheckResult((byte) -39, true, ChatMessage.createNameAvailabilityResult(NineSlicePanel.field_e, 256, 248));
     }
 
     NameCheckProgressDialog(DialogLayer param0, AccountCreationForm param1) {

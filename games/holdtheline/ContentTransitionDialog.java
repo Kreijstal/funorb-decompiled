@@ -43,7 +43,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           if (null == this.transitionState) {
             return super.updateAnimation((byte) 39);
           }
-          if (this.transitionState == dg.field_a) {
+          if (this.transitionState == ClientMenuBootstrap.field_a) {
             fieldTemp$0 = this.transitionTicks + 1;
             this.transitionTicks = this.transitionTicks + 1;
             if (this.fadeOutDuration == fieldTemp$0) {
@@ -73,7 +73,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         if (null == this.transitionState) {
           return super.updateAnimation((byte) 39);
         }
-        if (this.transitionState == dg.field_a) {
+        if (this.transitionState == ClientMenuBootstrap.field_a) {
           fieldTemp$2 = this.transitionTicks + 1;
           this.transitionTicks = this.transitionTicks + 1;
           if (this.fadeOutDuration == fieldTemp$2) {
@@ -115,11 +115,11 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.transitionTicks = 0;
             return;
           }
-          if (this.transitionState == dg.field_a) {
+          if (this.transitionState == ClientMenuBootstrap.field_a) {
             return;
           }
           this.transitionTicks = 0;
-          this.transitionState = dg.field_a;
+          this.transitionState = ClientMenuBootstrap.field_a;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,12 +199,12 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final static int m(int param0) {
+    final static int getSoundBufferSize(int param0) {
         if (param0 != 29675) {
           ContentTransitionDialog.clearSharedReferences(false);
-          return ua.field_a;
+          return QuadraticPathSlicer.field_a;
         }
-        return ua.field_a;
+        return QuadraticPathSlicer.field_a;
     }
 
     final boolean finishAnimations(boolean param0) {
@@ -217,7 +217,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     }
 
     final void onResizeComplete(int param0) {
-        if (dg.field_a == this.transitionState) {
+        if (ClientMenuBootstrap.field_a == this.transitionState) {
           return;
         }
         this.transitionTicks = 0;

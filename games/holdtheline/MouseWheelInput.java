@@ -20,7 +20,7 @@ abstract class MouseWheelInput {
         }
     }
 
-    final static boolean a(Vector2f param0, Point2i param1, int param2, int param3, Vector2f param4, int param5, int param6, Point2i param7, int param8) {
+    final static boolean intersectOrientedRectangles(Vector2f param0, Point2i param1, int param2, int param3, Vector2f param4, int param5, int param6, Point2i param7, int param8) {
         int var20_int = 0;
         int var9_int = 0;
         int var10 = 0;

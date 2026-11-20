@@ -122,7 +122,7 @@ final class CachedTextLayout extends TextLayout {
               } else {
                 stackIn_40_1 = this.calculateJustificationSpacing(param5.measureText(var13), param0, var13, (byte) -115);
               }
-              oc.buildCaretPositions(stackIn_39_0, stackIn_40_1, param5, 120, var13);
+              SpriteLayoutUtilities.buildCaretPositions(stackIn_39_0, stackIn_40_1, param5, 120, var13);
             }
             this.lines[var12Lifetime1] = var14;
             var11 = var11 + param2;
@@ -157,7 +157,7 @@ final class CachedTextLayout extends TextLayout {
           field_j = null;
           return;
         }
-        CachedTextLayout.b(true);
+        CachedTextLayout.releaseMouseHandler(true);
         field_n = null;
         field_r = null;
         field_q = null;
@@ -227,7 +227,7 @@ final class CachedTextLayout extends TextLayout {
             field_j = (int[]) null;
           }
           var8.caretPositions[param0.length()] = param4.measureText(param0) + param3;
-          oc.buildCaretPositions(var8, 0, param4, 123, param0);
+          SpriteLayoutUtilities.buildCaretPositions(var8, 0, param4, 123, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -259,7 +259,7 @@ final class CachedTextLayout extends TextLayout {
           var9 = var8;
           var9.caretPositions[0] = param4 - param2.measureText(param0);
           var9.caretPositions[param0.length()] = param4;
-          oc.buildCaretPositions(var9, 0, param2, 113, param0);
+          SpriteLayoutUtilities.buildCaretPositions(var9, 0, param2, 113, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -287,7 +287,7 @@ final class CachedTextLayout extends TextLayout {
           var7 = param0.measureText(param3);
           var8.caretPositions[0] = param4 - (var7 >> 1);
           var8.caretPositions[param3.length()] = param4 + (var7 >> 1);
-          oc.buildCaretPositions(var8, 0, param0, param1 ^ -93, param3);
+          SpriteLayoutUtilities.buildCaretPositions(var8, 0, param0, param1 ^ -93, param3);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -329,12 +329,12 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void releaseMouseHandler(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (!param0) {
-          CachedTextLayout.b(true);
+          CachedTextLayout.releaseMouseHandler(true);
         }
         if (ArchiveLoadStage.field_d == null) {
           return;

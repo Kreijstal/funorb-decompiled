@@ -120,17 +120,17 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             field_S = (AccountProtocolState) null;
           }
           if (0 == param1) {
-            oc.showNavigationMenu(16711680, "terms.ws");
+            SpriteLayoutUtilities.showNavigationMenu(16711680, "terms.ws");
             return;
           }
           if (param1 == 1) {
-            oc.showNavigationMenu(param2 + 16711786, "privacy.ws");
+            SpriteLayoutUtilities.showNavigationMenu(param2 + 16711786, "privacy.ws");
             return;
           }
           if (2 != param1) {
             return;
           }
-          oc.showNavigationMenu(16711680, "conduct.ws");
+          SpriteLayoutUtilities.showNavigationMenu(16711680, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,20 +200,20 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         int var1 = 1;
         this.marketingConsent = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.field_Q = new TextButton(CheckboxRenderer.field_v, (WidgetListener) null);
-        this.field_N = new TextButton(um.field_c, (WidgetListener) null);
+        this.field_N = new TextButton(Cp1252CharacterRules.field_c, (WidgetListener) null);
         this.displayNameField.tooltip = PolarSortVector.field_f;
-        this.emailField.tooltip = d.field_a;
-        this.emailConfirmationField.tooltip = lj.field_e;
+        this.emailField.tooltip = AccountProtocolContext.field_a;
+        this.emailConfirmationField.tooltip = RasterStateStack.field_e;
         this.passwordField.tooltip = DiskCacheStore.field_c;
         this.passwordConfirmationField.tooltip = GameKeyHandler.field_d;
         this.ageField.tooltip = StandardContentTransitionDialog.field_mb;
         this.marketingConsent.tooltip = DropTargetWidget.field_I;
-        this.displayNameField.a((byte) 64, new DisplayNameValidator(this.displayNameField));
-        this.emailField.a((byte) 56, new EmailAddressValidator(this.emailField));
-        this.emailConfirmationField.a((byte) 58, new EmailConfirmationValidator(this.emailConfirmationField, this.emailField));
-        this.passwordField.a((byte) 65, new PasswordValidator(this.passwordField, this.displayNameField, this.emailField));
-        this.passwordConfirmationField.a((byte) 55, new MatchingTextValidator(this.passwordConfirmationField, this.passwordField));
-        this.ageField.a((byte) 45, new AgeValidator(this.ageField));
+        this.displayNameField.setValidator((byte) 64, new DisplayNameValidator(this.displayNameField));
+        this.emailField.setValidator((byte) 56, new EmailAddressValidator(this.emailField));
+        this.emailConfirmationField.setValidator((byte) 58, new EmailConfirmationValidator(this.emailConfirmationField, this.emailField));
+        this.passwordField.setValidator((byte) 65, new PasswordValidator(this.passwordField, this.displayNameField, this.emailField));
+        this.passwordConfirmationField.setValidator((byte) 55, new MatchingTextValidator(this.passwordConfirmationField, this.passwordField));
+        this.ageField.setValidator((byte) 45, new AgeValidator(this.ageField));
         this.field_Q.field_D = false;
         this.field_Q.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
         this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
@@ -228,7 +228,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.passwordField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = LoginCredentials.substituteIndexedTokens(DropTargetWidget.field_F, new String[]{this.getLinkMarkupStart(false), this.getLinkMarkupEnd((byte) 105)}, true);
         int var3 = 20;
-        var3 = var3 + this.addLabeledField(170, this.emailField, 25, var3, cm.field_c);
+        var3 = var3 + this.addLabeledField(170, this.emailField, 25, var3, MenuHitTesting.field_c);
         var3 = var3 + (5 + this.addFieldWithHelp("", false, 170, this.emailConfirmationField, ByteStorage.field_e, var3, 20));
         var3 = var3 + this.addLabeledField(170, this.passwordField, 25, var3, EmailValidationResult.field_f);
         var3 = var3 + (this.addFieldWithHelp(170, 21411, this.passwordConfirmationField, TextHotspotRange.field_o, SocialListEntry.field_ib, var3) + 5);
@@ -240,8 +240,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         TextWidgetStyle var5 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
         this.field_O = new TextHotspotWidget(var2, var5);
         this.field_O.tooltip = "";
-        this.field_O.setHotspotTooltip(0, m.field_d, true);
-        this.field_O.setHotspotTooltip(1, m.field_d, true);
+        this.field_O.setHotspotTooltip(0, RasterClipTopStack.field_d, true);
+        this.field_O.setHotspotTooltip(1, RasterClipTopStack.field_d, true);
         this.field_O.listener = (WidgetListener) (this);
         this.field_O.setBoundsToPreferredHeight(-90 + this.width, (byte) 111, var3, 46);
         var3 = var3 + (15 + this.field_O.height);
@@ -288,7 +288,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           var2 = Integer.parseInt(this.ageField.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return IntrusiveNode.a(this.passwordField.text, -23000, this.marketingConsent.field_B, this.displayNameField.text, this, this.emailField.text, var2);
+        return IntrusiveNode.beginNameCheck(this.passwordField.text, -23000, this.marketingConsent.field_B, this.displayNameField.text, this, this.emailField.text, var2);
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -318,7 +318,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           if (var4 == LinearPointPath.field_k) {
             return false;
           }
-          if (var4 == hh.field_d) {
+          if (var4 == HoverTargetState.field_d) {
             return false;
           }
           if (SpriteState.field_q == var4) {

@@ -9,7 +9,7 @@ final class ClientException extends RuntimeException {
     static int[] field_d;
     static String[] field_b;
 
-    final static boolean a(byte param0) {
+    final static boolean hasActiveDialog(byte param0) {
         if (param0 >= -112) {
           field_b = (String[]) null;
           if (null == ServerConnectionState.field_a) {
@@ -29,7 +29,7 @@ final class ClientException extends RuntimeException {
         return false;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiDigit(int param0, char param1) {
         if (param0 != 48) {
           field_e = (int[]) null;
           if (48 > param1) {

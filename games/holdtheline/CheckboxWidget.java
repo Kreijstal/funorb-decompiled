@@ -23,18 +23,18 @@ final class CheckboxWidget extends TextButton {
         super.activate(param0, param1, param2, param3);
     }
 
-    final static void a(boolean param0, String param1, float param2, int param3) {
+    final static void drawLoadProgress(boolean param0, String param1, float param2, int param3) {
         try {
           if (null == MidiKeyUsage.field_l) {
-            MidiKeyUsage.field_l = new LoadProgressDialog(ka.field_b, FullscreenDisplayMode.field_c);
-            ka.field_b.showDialog(MidiKeyUsage.field_l, false);
+            MidiKeyUsage.field_l = new LoadProgressDialog(AccountUiUtilities.field_b, FullscreenDisplayMode.field_c);
+            AccountUiUtilities.field_b.showDialog(MidiKeyUsage.field_l, false);
           }
           MidiKeyUsage.field_l.setProgress(param2, -84, param0, param1);
           SoftwareRasterizer.clear();
           if (param3 > -88) {
             field_K = (NamedSoundEffect) null;
           }
-          Bzip2State.a(0, true);
+          Bzip2State.drawAccountUi(0, true);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -164,7 +164,7 @@ final class CheckboxWidget extends TextButton {
         return (byte) var2;
     }
 
-    final static GrowableStringList a(int param0, int param1) {
+    final static GrowableStringList createAdditiveStringList(int param0, int param1) {
         if (param1 != 19923) {
           field_J = (String) null;
         }

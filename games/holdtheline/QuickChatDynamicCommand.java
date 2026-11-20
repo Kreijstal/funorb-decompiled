@@ -44,9 +44,9 @@ final class QuickChatDynamicCommand {
         RuntimeException decompiledCaughtException = null;
         var6 = HoldTheLine.field_D;
         try {
-          var7 = ta.a((byte) 72);
+          var7 = HuffmanTextCodec.createStringList((byte) 72);
           var4 = param1;
-          var5 = fk.a(25, '[') + param2 + ']';
+          var5 = PopupMenuRenderer.characterToString(25, '[') + param2 + ']';
           while (var4 < args.length) {
             if (!args[var4].trim().equalsIgnoreCase(var5)) {
               var4++;

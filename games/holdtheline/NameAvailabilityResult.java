@@ -40,7 +40,7 @@ final class NameAvailabilityResult {
             return true;
           }
           if (param0.length == param2.length) {
-            stackIn_7_0 = MouseInputHandler.a(1643, param2, 0, param0, 0, param2.length);
+            stackIn_7_0 = MouseInputHandler.equalByteRanges(1643, param2, 0, param0, 0, param2.length);
             return stackIn_7_0;
           }
           return false;

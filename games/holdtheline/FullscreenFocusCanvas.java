@@ -36,18 +36,18 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void update(java.awt.Graphics param0) {
     }
 
-    final static String c(int param0) {
+    final static String getPendingPassword(int param0) {
         if (param0 != 4) {
           FullscreenFocusCanvas.clearSharedReferences(12);
-          if (bb.field_a == ImageProducerRasterBuffer.field_n) {
+          if (BoundaryLoopTracer.field_a == ImageProducerRasterBuffer.field_n) {
             return TexturedRoadFillRenderer.field_k;
           }
-          return o.field_d;
+          return BackgroundSprites.field_d;
         }
-        if (bb.field_a == ImageProducerRasterBuffer.field_n) {
+        if (BoundaryLoopTracer.field_a == ImageProducerRasterBuffer.field_n) {
           return TexturedRoadFillRenderer.field_k;
         }
-        return o.field_d;
+        return BackgroundSprites.field_d;
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
@@ -76,15 +76,15 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final void exitFullscreen(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != 50) {
-            FullscreenFocusCanvas.c(62);
+            FullscreenFocusCanvas.getPendingPassword(62);
           }
-          RoadStripRenderer.a((byte) 118, param0, this.field_f);
+          RoadStripRenderer.exitFullscreen((byte) 118, param0, this.field_f);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ef.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static float a(float param0, RoadSegment param1, int param2, float param3) {
+    final static float roadSlopeShade(float param0, RoadSegment param1, int param2, float param3) {
         RuntimeException var4 = null;
         Point2i var5 = null;
         float var6 = 0.0f;
@@ -143,11 +143,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     final static void showGuestLogin(int param0) {
-        if (!mn.guestMode) {
+        if (!SessionCookieWriter.guestMode) {
           throw new IllegalStateException();
         }
         AlternateUsernameLoginCredentials.field_j = true;
-        SecondaryNodeDeque.a(true, (byte) -90);
+        SecondaryNodeDeque.showLoginForm(true, (byte) -90);
         if (param0 > 106) {
           DiskCacheRequest.field_w = 0;
           return;

@@ -15,10 +15,10 @@ final class TutorialCondition {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void readDisplayNameUpdate(byte param0) {
         QuickChatPhraseCache.field_e = RoadStripRenderer.field_e.readCp1252String(-1231);
         CharSequence var2 = (CharSequence) ((Object) QuickChatPhraseCache.field_e);
-        co.field_e = MidiPcmStream.normalizeAccountName(var2, (byte) 124);
+        ClientLifecycleUtilities.field_e = MidiPcmStream.normalizeAccountName(var2, (byte) 124);
         int var1 = -35 / ((param0 + 63) / 35);
     }
 

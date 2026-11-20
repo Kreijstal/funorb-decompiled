@@ -9,7 +9,7 @@ final class IntArrayReadRequest extends IntrusiveNode {
     int[] values;
     static SpriteAsset field_i;
 
-    final static boolean a(int param0, String param1) {
+    final static boolean containsNonAlphanumeric(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -23,7 +23,7 @@ final class IntArrayReadRequest extends IntrusiveNode {
           for (var2_int = param0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!QuadraticPointPath.isAsciiLetter((char) var3, -125) &&
-              !ClientException.a(48, (char) var3)) {
+              !ClientException.isAsciiDigit(48, (char) var3)) {
               return true;
             }
           }
@@ -42,7 +42,7 @@ final class IntArrayReadRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void onCountryListResponse(String param0, byte param1) {
         try {
           if (param1 >= -21) {
             IntArrayReadRequest.clearSharedReferences(10);
@@ -52,7 +52,7 @@ final class IntArrayReadRequest extends IntrusiveNode {
         }
     }
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
+    final static boolean pollGameGraphicsLoaded(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         RuntimeException stackIn_88_0 = null;
         StringBuilder stackIn_88_1 = null;
         String stackIn_89_2 = null;

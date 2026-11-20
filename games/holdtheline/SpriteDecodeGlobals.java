@@ -1,0 +1,24 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SpriteDecodeGlobals {
+    static int field_b;
+    static SpriteAsset field_d;
+    static boolean field_c;
+    static String field_a;
+    static int field_e;
+    private static String field_z;
+
+    public static void clearSharedReferences(boolean param0) {
+        field_a = null;
+        field_d = null;
+        if (param0) {
+          SpriteDecodeGlobals.clearSharedReferences(true);
+        }
+    }
+
+    static {
+        field_z = "bo.A(";
+        field_a = "Single Race";
+    }
+}

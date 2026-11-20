@@ -12,13 +12,13 @@ final class DelayedServerPacket extends IntrusiveNode {
     static boolean field_k;
     byte[] payload;
 
-    final static int a(boolean param0, int param1, int param2, int param3) {
+    final static int processAccountUi(boolean param0, int param1, int param2, int param3) {
         if (param2 != 1) {
           ResourceArchive var5 = (ResourceArchive) null;
           DelayedServerPacket.loadLogoFinalFrame(-70, (ResourceArchive) null);
-          return AgeValidator.a(true);
+          return AgeValidator.processAccountUi(true);
         }
-        return AgeValidator.a(true);
+        return AgeValidator.processAccountUi(true);
     }
 
     final static boolean hasRepeatedCharacter(String param0, int param1) {
@@ -86,7 +86,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           var2 = new Sprite(param1.getNamedFile("", false, "final_frame.jpg"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
           var3 = var2.width;
           var4 = var2.height;
-          lj.pushRasterState((byte) -120);
+          RasterStateStack.pushRasterState((byte) -120);
           TickClock.field_c = new Sprite(var3, var4 * 3 / 4);
           TickClock.field_c.bindRaster();
           var2.drawUnkeyed(0, 0);
@@ -94,7 +94,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           EmailConfirmationValidator.field_l.bindRaster();
           var2.drawUnkeyed(0, -TickClock.field_c.height);
           EmailConfirmationValidator.field_l.offsetY = TickClock.field_c.height;
-          dm.popRasterState((byte) -10);
+          RasterStateRestoration.popRasterState((byte) -10);
           if (param0 == -18916) {
             return;
           }

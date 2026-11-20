@@ -69,9 +69,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             UiWidget.field_w.tryLoadNamedGroup("benefits", -114)) {
             NamedSoundEffect.field_s = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "headline");
             IterableNodeHashTable.field_k = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "blurbpane");
-            eg.field_c = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "button");
+            ClientBackgroundRenderer.field_c = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "button");
             IntrusiveNode.field_d = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "signup_text");
-            mn.field_c = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "menu_text");
+            SessionCookieWriter.field_c = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "menu_text");
             NodeHashTableIterator.field_h = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "button_frame");
             FullscreenDisplayMode.field_i = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "arrow");
             VehicleEngineSounds.field_a = (BitmapFont) ((Object) MusicPatch.loadMonochromeFontByName("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "large_font"));
@@ -83,7 +83,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var11 = new Sprite(FullscreenDisplayMode.field_i.width + 4, 4 + FullscreenDisplayMode.field_i.height);
             var11.bindRaster();
             FullscreenDisplayMode.field_i.drawTinted(2, 2, IntArrayReadRequest.field_n);
-            EmailLoginCredentials.a(2, var11.height, var11.width, var11, 0, 0, 1, -24983);
+            EmailLoginCredentials.outlineSpriteRegion(2, var11.height, var11.width, var11, 0, 0, 1, -24983);
             FullscreenDisplayMode.field_i = var11;
             NetworkGameClient.field_m = FullscreenDisplayMode.field_i.flippedHorizontally();
             var12 = new Sprite(195, 221);
@@ -95,25 +95,25 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(SpriteSheetAsset.field_b, new String[]{Particle.field_r}, true), var6, 130, 16777215, -1);
             VehicleEngineSounds.field_a.drawCentered(LeaderboardRequest.field_q, var6, 180, 16777215, -1);
             GzipDecompressor.field_e.drawCentered(SocialListEntry.field_jb, var6, 200, 16777215, -1);
-            EmailLoginCredentials.a(3, var12.height, var12.width, var12, 0, 0, 1, -24983);
+            EmailLoginCredentials.outlineSpriteRegion(3, var12.height, var12.width, var12, 0, 0, 1, -24983);
             IterableNodeHashTable.field_k.bindRaster();
             var12.draw(-IterableNodeHashTable.field_k.offsetX + 18, 241 - IterableNodeHashTable.field_k.offsetY);
-            for (var7 = 0; qh.field_b.length > var7; var7++) {
+            for (var7 = 0; KeyboardEventQueue.field_b.length > var7; var7++) {
               TextLineLayout.field_a[var7].bindRaster();
-              GzipDecompressor.field_e.drawParagraph(qh.field_b[var7], 3, 3, TextLineLayout.field_a[var7].width - 6, -6 + TextLineLayout.field_a[var7].height, IntArrayReadRequest.field_n, -1, 1, 1, GzipDecompressor.field_e.descent + GzipDecompressor.field_e.ascent);
-              EmailLoginCredentials.a(3, TextLineLayout.field_a[var7].height, TextLineLayout.field_a[var7].width, TextLineLayout.field_a[var7], 0, 0, 1, -24983);
+              GzipDecompressor.field_e.drawParagraph(KeyboardEventQueue.field_b[var7], 3, 3, TextLineLayout.field_a[var7].width - 6, -6 + TextLineLayout.field_a[var7].height, IntArrayReadRequest.field_n, -1, 1, 1, GzipDecompressor.field_e.descent + GzipDecompressor.field_e.ascent);
+              EmailLoginCredentials.outlineSpriteRegion(3, TextLineLayout.field_a[var7].height, TextLineLayout.field_a[var7].width, TextLineLayout.field_a[var7], 0, 0, 1, -24983);
             }
-            qh.field_b = null;
+            KeyboardEventQueue.field_b = null;
             CheckboxRenderer.field_m = IntrusiveNode.field_d.copy();
             CheckboxRenderer.field_m.bindRaster();
             NanoTickClock.recolorGreenPixels(255, SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 0, 0, 64);
             SoftwareRasterizer.bindRaster(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
-            Point2i.field_b = (eg.field_c.width - NodeHashTableIterator.field_h.width) / 2 + 231;
-            LoginChoicePanel.field_L = 390 + (eg.field_c.height - NodeHashTableIterator.field_h.height) / 2;
-            LoginForm.field_J = 434 + (-NodeHashTableIterator.field_h.width + eg.field_c.width) / 2;
+            Point2i.field_b = (ClientBackgroundRenderer.field_c.width - NodeHashTableIterator.field_h.width) / 2 + 231;
+            LoginChoicePanel.field_L = 390 + (ClientBackgroundRenderer.field_c.height - NodeHashTableIterator.field_h.height) / 2;
+            LoginForm.field_J = 434 + (-NodeHashTableIterator.field_h.width + ClientBackgroundRenderer.field_c.width) / 2;
             MidiKeyUsage.field_i = null;
-            ShadedRoadStripRenderer.field_t = (eg.field_c.height - NodeHashTableIterator.field_h.height) / 2 + 390;
+            ShadedRoadStripRenderer.field_t = (ClientBackgroundRenderer.field_c.height - NodeHashTableIterator.field_h.height) / 2 + 390;
           }
           if (TextLineLayout.field_e == null) {
             return;
@@ -125,10 +125,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
             var14 = LoginCredentials.substituteIndexedTokens(CheckboxRenderer.field_d, new String[]{TextLineLayout.field_i[ShadedRoadStripRenderer.field_r]}, true);
-            var5 = VehicleEngineSounds.field_a.getParagraphWidth(var14, vb.field_d);
-            var6Lifetime1 = VehicleEngineSounds.field_a.getParagraphHeight(var14, vb.field_d, VehicleEngineSounds.field_a.ascent + VehicleEngineSounds.field_a.descent);
-            var7Lifetime1 = AchievementUnlockRequest.field_m + (vb.field_d - var5) / 2;
-            var8 = cd.field_b + (-var6Lifetime1 + mj.field_a) / 2;
+            var5 = VehicleEngineSounds.field_a.getParagraphWidth(var14, JagexLogoRenderer.field_d);
+            var6Lifetime1 = VehicleEngineSounds.field_a.getParagraphHeight(var14, JagexLogoRenderer.field_d, VehicleEngineSounds.field_a.ascent + VehicleEngineSounds.field_a.descent);
+            var7Lifetime1 = AchievementUnlockRequest.field_m + (JagexLogoRenderer.field_d - var5) / 2;
+            var8 = EmailDomainValidator.field_b + (-var6Lifetime1 + RasterDesaturation.field_a) / 2;
             var7Lifetime1 -= 3;
             var5 += 6;
             var6Lifetime1 += 6;
@@ -158,12 +158,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               IsaacRandom.field_a.offsetY = IsaacRandom.field_a.offsetY + var9_intLifetime2;
               IsaacRandom.field_a.canvasHeight = IsaacRandom.field_a.canvasHeight + 2 * var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
-              cd.field_b = cd.field_b + var9_intLifetime2;
+              EmailDomainValidator.field_b = EmailDomainValidator.field_b + var9_intLifetime2;
             }
             if (IsaacRandom.field_a.canvasHeight < var8 + var6Lifetime1) {
               var9_intLifetime3 = var8 + var6Lifetime1 - IsaacRandom.field_a.canvasHeight;
               AccountTermsPanel.field_G = AccountTermsPanel.field_G - var9_intLifetime3;
-              cd.field_b = cd.field_b + var9_intLifetime3;
+              EmailDomainValidator.field_b = EmailDomainValidator.field_b + var9_intLifetime3;
               IsaacRandom.field_a.canvasHeight = IsaacRandom.field_a.canvasHeight + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
               IsaacRandom.field_a.offsetY = IsaacRandom.field_a.offsetY + var9_intLifetime3;
@@ -172,8 +172,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             IsaacRandom.field_a.expandToCanvas();
             var9 = new Sprite(IsaacRandom.field_a.canvasWidth, IsaacRandom.field_a.canvasHeight);
             var9.bindRaster();
-            VehicleEngineSounds.field_a.drawParagraph(var14, AchievementUnlockRequest.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, VehicleEngineSounds.field_a.descent + VehicleEngineSounds.field_a.ascent);
-            EmailLoginCredentials.a(3, var9.canvasHeight, var9.canvasWidth, var9, 0, 0, 1, -24983);
+            VehicleEngineSounds.field_a.drawParagraph(var14, AchievementUnlockRequest.field_m, EmailDomainValidator.field_b, JagexLogoRenderer.field_d, RasterDesaturation.field_a, 16777215, -1, 1, 1, VehicleEngineSounds.field_a.descent + VehicleEngineSounds.field_a.ascent);
+            EmailLoginCredentials.outlineSpriteRegion(3, var9.canvasHeight, var9.canvasWidth, var9, 0, 0, 1, -24983);
             IsaacRandom.field_a.bindRaster();
             var9.draw(0, 0);
             PointLight.field_t = new Sprite(640, 480);
@@ -195,7 +195,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             UrlPacketDownloader.field_j = null;
             var16.bindRaster();
             GzipDecompressor.field_e.drawParagraph(var17, 3, 3, var16.width - 6, -6 + var16.height, 16777215, -1, 0, 1, GzipDecompressor.field_e.ascent + GzipDecompressor.field_e.descent);
-            EmailLoginCredentials.a(3, var16.height, var16.width, var16, 0, 0, 1, -24983);
+            EmailLoginCredentials.outlineSpriteRegion(3, var16.height, var16.width, var16, 0, 0, 1, -24983);
             TextLineLayout.field_e.bindRaster();
             var16.draw(199 - TextLineLayout.field_e.offsetX, 83 - TextLineLayout.field_e.offsetY);
             SoftwareRasterizer.bindRaster(var30, var2Lifetime2, var3Lifetime2);
@@ -213,7 +213,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var7Lifetime2 = var6Lifetime2 + (IconToggleRenderer.field_b.canvasWidth + 20);
             TextLineLayout.field_e.bindRaster();
             GzipDecompressor.field_e.draw(ValidatedTextField.field_S, -TextLineLayout.field_e.offsetX + var7Lifetime2, GzipDecompressor.field_e.descent + (GzipDecompressor.field_e.ascent + 155 - TextLineLayout.field_e.offsetY), 16777215, -1);
-            EmailLoginCredentials.a(3, 50, var4, TextLineLayout.field_e, 155 - TextLineLayout.field_e.offsetY, -TextLineLayout.field_e.offsetX + (var7Lifetime2 - 4), 1, -24983);
+            EmailLoginCredentials.outlineSpriteRegion(3, 50, var4, TextLineLayout.field_e, 155 - TextLineLayout.field_e.offsetY, -TextLineLayout.field_e.offsetX + (var7Lifetime2 - 4), 1, -24983);
             var8Lifetime1 = -((-3 + IconToggleRenderer.field_b.canvasHeight + (-GzipDecompressor.field_e.ascent - GzipDecompressor.field_e.descent)) / 2) - TextLineLayout.field_e.offsetY + 155;
             IconToggleRenderer.field_b.draw(-TextLineLayout.field_e.offsetX + var6Lifetime2, var8Lifetime1);
             SoftwareRasterizer.bindRaster(var31, var2Lifetime3, var3Lifetime3);
@@ -236,9 +236,9 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null != PointLight.field_t) {
             PointLight.field_t.draw(0, 0);
           }
-          if (null != eg.field_c &&
+          if (null != ClientBackgroundRenderer.field_c &&
             NodeHashTableIterator.field_h != null) {
-            eg.field_c.draw(231, 390);
+            ClientBackgroundRenderer.field_c.draw(231, 390);
             var1 = IntrusiveNode.field_d;
             if (DualLinkNode.field_k.selectedIndex == 0) {
               var1 = CheckboxRenderer.field_m;
@@ -250,12 +250,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               stackIn_55_1 = 3;
             }
-            var2Lifetime4 = (QuadraticPointPath.a(stackIn_54_0 << stackIn_55_1, 2) * 40 >> 16) + 40;
+            var2Lifetime4 = (QuadraticPointPath.sinFixed2048(stackIn_54_0 << stackIn_55_1, 2) * 40 >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              eg.field_c.drawAdditive(230, 389, var2Lifetime4);
-              eg.field_c.drawAdditive(232, 389, var2Lifetime4);
-              eg.field_c.drawAdditive(232, 391, var2Lifetime4);
-              eg.field_c.drawAdditive(230, 391, var2Lifetime4);
+              ClientBackgroundRenderer.field_c.drawAdditive(230, 389, var2Lifetime4);
+              ClientBackgroundRenderer.field_c.drawAdditive(232, 389, var2Lifetime4);
+              ClientBackgroundRenderer.field_c.drawAdditive(232, 391, var2Lifetime4);
+              ClientBackgroundRenderer.field_c.drawAdditive(230, 391, var2Lifetime4);
               var1.drawAdditive(1, 1, var2Lifetime4);
               var1.drawAdditive(-1, 1, var2Lifetime4);
               var1.drawAdditive(1, -1, var2Lifetime4);
@@ -265,20 +265,20 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_60_1 = Point2i.field_b;
             stackIn_60_2 = LoginChoicePanel.field_L;
             stackIn_61_3 = (DualLinkNode.field_k.selectedIndex == 0);
-            b.drawAnimatedButtonFrame(stackIn_60_0, stackIn_60_1, stackIn_60_2, stackIn_61_3);
+            SocialListProtocol.drawAnimatedButtonFrame(stackIn_60_0, stackIn_60_1, stackIn_60_2, stackIn_61_3);
           }
-          if (eg.field_c != null &&
+          if (ClientBackgroundRenderer.field_c != null &&
             null != NodeHashTableIterator.field_h) {
-            eg.field_c.draw(434, 390);
-            mn.field_c.draw(0, 0);
+            ClientBackgroundRenderer.field_c.draw(434, 390);
+            SessionCookieWriter.field_c.draw(0, 0);
             if (1 == DualLinkNode.field_k.selectedIndex) {
-              NanoTickClock.recolorGreenPixels(255, eg.field_c.width - 4, 7 * eg.field_c.height / 12, 392, 436, 64);
+              NanoTickClock.recolorGreenPixels(255, ClientBackgroundRenderer.field_c.width - 4, 7 * ClientBackgroundRenderer.field_c.height / 12, 392, 436, 64);
             }
             stackIn_69_0 = 80;
             stackIn_69_1 = LoginForm.field_J;
             stackIn_69_2 = ShadedRoadStripRenderer.field_t;
             stackIn_70_3 = (DualLinkNode.field_k.selectedIndex == 1);
-            b.drawAnimatedButtonFrame(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_70_3);
+            SocialListProtocol.drawAnimatedButtonFrame(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_70_3);
           }
           if (FullscreenDisplayMode.field_i != null) {
             var1_int = 357 - FullscreenDisplayMode.field_i.canvasHeight / 2;
@@ -286,7 +286,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             NetworkGameClient.field_m.draw(586, var1_int);
             if (FullscreenErrorDialog.field_X > var1_int &&
               FullscreenDisplayMode.field_i.height + var1_int > FullscreenErrorDialog.field_X) {
-              var2Lifetime5 = (QuadraticPointPath.a(AccountFormText.field_b << 4, 2) * 40 >> 16) + 40;
+              var2Lifetime5 = (QuadraticPointPath.sinFixed2048(AccountFormText.field_b << 4, 2) * 40 >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (NodeHashTableIterator.field_g > 269 - FullscreenDisplayMode.field_i.width &&
                   NodeHashTableIterator.field_g < 269) {
@@ -352,12 +352,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (MusicCrossfadeStream.field_n != null) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
-              um.a(0, (char) var2_int)) {
-              var3 = 1 + lj.field_b & 127;
+              Cp1252CharacterRules.isCp1252Character(0, (char) var2_int)) {
+              var3 = 1 + RasterStateStack.field_b & 127;
               if (var3 != BoundaryCurve.field_l) {
-                IndexedSpriteState.field_a[lj.field_b] = -1;
-                d.field_b[lj.field_b] = (char)var2_int;
-                lj.field_b = var3;
+                IndexedSpriteState.field_a[RasterStateStack.field_b] = -1;
+                AccountProtocolContext.field_b[RasterStateStack.field_b] = (char)var2_int;
+                RasterStateStack.field_b = var3;
               }
             }
           }
@@ -367,7 +367,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String getLoginNameError(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -378,7 +378,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (param0 != 12260) {
             field_e = (SpriteAsset) null;
           }
-          stackIn_3_0 = StrongCacheEntry.a(param1, (byte) -28, false);
+          stackIn_3_0 = StrongCacheEntry.getLoginNameError(param1, (byte) -28, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -437,11 +437,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
             }
             if (0 <= var2_int) {
-              var3 = 127 & 1 + lj.field_b;
+              var3 = 127 & 1 + RasterStateStack.field_b;
               if (var3 != BoundaryCurve.field_l) {
-                IndexedSpriteState.field_a[lj.field_b] = var2_int;
-                d.field_b[lj.field_b] = (char)0;
-                lj.field_b = var3;
+                IndexedSpriteState.field_a[RasterStateStack.field_b] = var2_int;
+                AccountProtocolContext.field_b[RasterStateStack.field_b] = (char)0;
+                RasterStateStack.field_b = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -521,8 +521,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     }
 
     final static java.applet.Applet getApplet(int param0) {
-        if (null != ne.field_b) {
-          return ne.field_b;
+        if (null != TextSyntax.field_b) {
+          return TextSyntax.field_b;
         }
         if (param0 < 72) {
           field_e = (SpriteAsset) null;
@@ -544,7 +544,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             field_c = (String) null;
           }
           for (var3_int = 1; var3_int < param2; var3_int++) {
-            b.insertSortedPrefix(param1, (byte) 96, var3_int);
+            SocialListProtocol.insertSortedPrefix(param1, (byte) 96, var3_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

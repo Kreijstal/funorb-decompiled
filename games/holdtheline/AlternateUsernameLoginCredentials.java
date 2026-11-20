@@ -21,14 +21,14 @@ final class AlternateUsernameLoginCredentials extends UsernameLoginCredentials {
 
     final LoginCredentialType getType(boolean param0) {
         if (!param0) {
-          AlternateUsernameLoginCredentials.requestDisplayMode(107, 64);
-          return ba.field_b;
+          AlternateUsernameLoginCredentials.requestBackground(107, 64);
+          return AccountNameNormalizer.field_b;
         }
-        return ba.field_b;
+        return AccountNameNormalizer.field_b;
     }
 
-    final static void requestDisplayMode(int param0, int param1) {
-        DropTargetWidget.setRequestedDisplayMode(param0, (byte) 92, false);
+    final static void requestBackground(int param0, int param1) {
+        DropTargetWidget.setBackground(param0, (byte) 92, false);
         if (param1 > -106) {
           field_k = -61L;
         }

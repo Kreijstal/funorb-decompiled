@@ -18,11 +18,11 @@ final class AchievementUnlockRequest extends IntrusiveNode {
     int field_q;
     static long field_i;
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setMenuTextColors(int param0, int param1, int param2, int param3) {
         DialWidget.field_I = param3;
         LoginCredentials.field_c = param2;
         if (param0 != 14893) {
-          AchievementUnlockRequest.a(-62, -61, 42, 74);
+          AchievementUnlockRequest.setMenuTextColors(-62, -61, 42, 74);
         }
         ContentTransitionState.field_b = param1;
     }
@@ -141,7 +141,7 @@ final class AchievementUnlockRequest extends IntrusiveNode {
         }
     }
 
-    final static String a(int param0, int param1) {
+    final static String formatFivePointRating(int param0, int param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         int var3 = 0;

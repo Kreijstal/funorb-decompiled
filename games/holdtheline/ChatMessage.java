@@ -93,7 +93,7 @@ final class ChatMessage {
           TrackBoundary.field_t[0] = dupTemp$0;
           var24 = dupTemp$0;
           var10 = var24;
-          vb.a(-98, var24);
+          JagexLogoRenderer.pushSpriteRaster(-98, var24);
           SoftwareRasterizer.setClip(10, 10, var4_int + param1 - (-var5 + 10), -10 + (var7 + var6 + param3));
           for (var13Lifetime2 = 0; var4_int + (param1 + var5) > var13Lifetime2; var13Lifetime2 = var13Lifetime2 + param2[4].width) {
             for (var14Lifetime1 = 0; var7 + (var6 + param3) > var14Lifetime1; var14Lifetime1 = var14Lifetime1 + param2[4].height) {
@@ -144,13 +144,13 @@ final class ChatMessage {
           return;
         }
         TrackObjectDefinition.detachInputListeners(-46342, NetworkArchiveRequest.field_w);
-        NetworkArchiveRequest.field_w.exitFullscreen(wi.field_b, 50);
+        NetworkArchiveRequest.field_w.exitFullscreen(LoginCredentialsFactory.field_b, 50);
         NetworkArchiveRequest.field_w = null;
         if (param0 != 4) {
           ChatMessage.exitFullscreen(-47);
         }
-        if (hh.field_c != null) {
-          hh.field_c.restoreSize(125);
+        if (HoverTargetState.field_c != null) {
+          HoverTargetState.field_c.restoreSize(125);
         }
         MouseInputHandler.field_b.requestFocus();
     }
@@ -197,7 +197,7 @@ final class ChatMessage {
           if (this.senderId == LoadProgressDialog.field_bb) {
             return 1;
           }
-          if (eg.field_b != 2) {
+          if (ClientBackgroundRenderer.field_b != 2) {
             return 0;
           }
           if (TutorialAction.isIgnoredPlayer(2113942113, this.senderName)) {
@@ -212,7 +212,7 @@ final class ChatMessage {
         if (7 != DelegatingCanvas.field_d) {
           throw new RuntimeException();
         }
-        int var2 = PolarSortVector.a((byte) 65, ArchiveIndex.b((byte) -49).field_p);
+        int var2 = PolarSortVector.getChampionshipAccessStatus((byte) 65, ArchiveIndex.getSelectedCourse((byte) -49).field_p);
         if (var2 == 2) {
           TrackObject.switchMenu(param0, false, 12);
         }
@@ -220,9 +220,9 @@ final class ChatMessage {
           return;
         }
         TexturedRoadFillRenderer.selectMusicTrack(20830, 3 + StrongCacheEntry.field_w);
-        nm.field_b = ArchiveIndex.b((byte) -49);
-        if (UsernameLoginCredentials.a(nm.field_b, true)) {
-          MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 0, false, false, IntArrayReadRequest.field_l, -1);
+        ResourceArchiveFactory.field_b = ArchiveIndex.getSelectedCourse((byte) -49);
+        if (UsernameLoginCredentials.pollRaceGraphicsLoaded(ResourceArchiveFactory.field_b, true)) {
+          MusicPatchPcmStream.field_r = new RaceWorld(ResourceArchiveFactory.field_b, 0, false, false, IntArrayReadRequest.field_l, -1);
         } else {
           ArchiveRequest.field_r = 0;
           QuickChatPhraseDefinition.field_r = IntArrayReadRequest.field_l;
@@ -233,7 +233,7 @@ final class ChatMessage {
         }
         EntitySound.field_j = true;
         TrackObject.switchMenu(param0, false, 10);
-        ((GameMenu) (l.field_a[10])).targetCarouselOffset = 480;
+        ((GameMenu) (CollisionGeometry.field_a[10])).targetCarouselOffset = 480;
         if (param1 >= -72) {
           field_k = (String) null;
         }
@@ -250,7 +250,7 @@ final class ChatMessage {
 
     ChatMessage(boolean param0) {
         this.messageIdHigh = MidiPcmStream.field_H;
-        this.senderId = fc.field_c;
+        this.senderId = BoundaryIntervalBuilder.field_c;
         this.type = MusicPatch.field_m;
         this.senderName = TextFieldRenderer.field_u;
         this.messageIdLow = NineSlicePanel.field_f;

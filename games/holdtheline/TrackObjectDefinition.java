@@ -117,8 +117,8 @@ final class TrackObjectDefinition {
           LoadProgressDialog.field_ab = -1;
           MusicPatchEnvelope.field_i = param2;
           DialogLayer.field_I = -1;
-          mc.field_b = param0;
-          mn.field_b = -1;
+          IntegerTextParser.field_b = param0;
+          SessionCookieWriter.field_b = -1;
           MessagePanel.resetHoverTarget(0);
           if (param1 <= 10) {
             ResourceArchive var4 = (ResourceArchive) null;
@@ -167,7 +167,7 @@ final class TrackObjectDefinition {
           }
           var5_int = param4.getGroupId(param0, 3);
           var6 = param4.getFileId(var5_int, param2, false);
-          stackIn_4_0 = ta.a(var5_int, var6, param4, param1, -105);
+          stackIn_4_0 = HuffmanTextCodec.loadPaletteFont(var5_int, var6, param4, param1, -105);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -286,7 +286,7 @@ final class TrackObjectDefinition {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          lh.a((java.awt.Component) ((Object) param1), false);
+          SocketConnectorFactory.detachKeyboardInput((java.awt.Component) ((Object) param1), false);
           ArchiveLoadStage.detachMouseInput(23147, (java.awt.Component) ((Object) param1));
           if (TrackBoundary.field_u != null) {
             TrackBoundary.field_u.detach((java.awt.Component) ((Object) param1), -1);

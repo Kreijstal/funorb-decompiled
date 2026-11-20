@@ -106,7 +106,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             var13 = var13 / var14;
             var12 = var12 / var14;
             var15 = (var12 - var13 + 4.0f) * 0.25f;
-            var16 = IterableSecondaryNodeDeque.a(var15, -1, var7);
+            var16 = IterableSecondaryNodeDeque.scaleRgb(var15, -1, var7);
             SoftwareRasterizer.drawLine(var8, var9, var10, var11, var16);
             var9 = var11;
             var8 = var10;
@@ -122,7 +122,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             var12Lifetime1 = var12Lifetime1 / var14Lifetime1;
             var13Lifetime1 = var13Lifetime1 / var14Lifetime1;
             var15Lifetime1 = (4.0f - var12Lifetime1 + var13Lifetime1) * 0.25f;
-            var16Lifetime1 = IterableSecondaryNodeDeque.a(var15Lifetime1, -1, var7);
+            var16Lifetime1 = IterableSecondaryNodeDeque.scaleRgb(var15Lifetime1, -1, var7);
             SoftwareRasterizer.drawLine(var8Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var16Lifetime1);
             var8Lifetime1 = var10Lifetime1;
             var9Lifetime1 = var11Lifetime1;
@@ -174,7 +174,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
         }
     }
 
-    final static boolean a(boolean param0, byte param1) {
+    final static boolean pollAccountConnection(boolean param0, byte param1) {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
@@ -186,16 +186,16 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             return true;
           }
           if (null == ValidationIndicator.field_N) {
-            ValidationIndicator.field_N = PointLight.field_s.openSocket(0, bo.field_e, MeshMaterial.field_f);
+            ValidationIndicator.field_N = PointLight.field_s.openSocket(0, SpriteDecodeGlobals.field_e, MeshMaterial.field_f);
           }
           if (ValidationIndicator.field_N.field_d == 0) {
             return false;
           }
-          dupTemp$1 = bb.monotonicTimeMillis(-1);
+          dupTemp$1 = BoundaryLoopTracer.monotonicTimeMillis(-1);
           MatchingTextValidator.field_l = dupTemp$1;
-          cm.field_b = dupTemp$1;
+          MenuHitTesting.field_b = dupTemp$1;
           if (ValidationIndicator.field_N.field_d != 1) {
-            d.field_f = DialWidgetRenderer.field_a;
+            AccountProtocolContext.field_f = DialWidgetRenderer.field_a;
           } else {
             try {
               IterableSecondaryNodeDeque.field_h = new BufferedSocket((java.net.Socket) (ValidationIndicator.field_N.field_b), PointLight.field_s);
@@ -203,17 +203,17 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
               var5 = var4;
               IsaacPacketBuffer.field_p.position = 0;
               var5.position = 0;
-              d.field_f = AccountCreationForm.field_S;
+              AccountProtocolContext.field_f = AccountCreationForm.field_S;
               stackIn_12_0 = (!param0) ? -1 : -2;
               AccountProgressDialog.field_pb = stackIn_12_0;
-              hc.field_e = stackIn_12_0;
+              FixedAngleMath.field_e = stackIn_12_0;
               RoadStripRenderer.field_l = stackIn_12_0;
-              SoundPlayback.a(DisplayNameForm.field_L, (byte) -95, IsaacPacketBuffer.field_p, ArchiveCatalog.field_n, OutlinedRoadStripRenderer.field_m);
+              SoundPlayback.writeClientHandshake(DisplayNameForm.field_L, (byte) -95, IsaacPacketBuffer.field_p, ArchiveCatalog.field_n, OutlinedRoadStripRenderer.field_m);
               PlayerStatsRequest.flushServerPackets(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              d.field_f = DialWidgetRenderer.field_a;
+              AccountProtocolContext.field_f = DialWidgetRenderer.field_a;
               ValidationIndicator.field_N = null;
               return true;
             }

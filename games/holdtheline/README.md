@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable.
 
-Resolved declarations: 298/357 classes and 2165/2503 methods have readable names; 286 constructors follow their class names.
-Remaining: 59 opaque classes and 338 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 357/357 classes and 2503/2503 methods have readable names; 286 constructors follow their class names.
+Remaining: 0 opaque classes and 0 opaque methods. All class and method declarations have readable names.
 
 Start at `HoldTheLine`, a `NetworkGameClient` and `GameAppletShell`. Its `initializeGame`, `loadGameResources`, `updateGameTick`, `renderGameFrame` and `shutdownGame` methods expose the client lifecycle.
 
@@ -30,6 +30,8 @@ Road geometry distinguishes the left/right visible-road edges from the left/righ
 `ChatMessage`, `LeaderboardRequest`, `LeaderboardPlayer`, `ScoreSubmission` and `AchievementStatusRequest` identify protocol data and results. Leaderboard entry identifiers are separate from the integer score payload. `JavaScriptBridge` names applet-window calls and script evaluation.
 
 `VehicleEngineSounds` pairs acceleration and deceleration audio. `VorbisFloor` names floor decoding, neighboring points and spectrum application. `TriangleMesh` exposes translation, scaling and cached bounds; `MeshMaterial` supplies face colors, while `RoadShadowRenderer` fills offset road shadows.
+
+`MeshLighting.drawLitMesh` shades projected mesh faces. The triangle rasterizers expose flat blended and Gouraud fills; `BoundaryLoopClipper` and `BoundaryLoopTracer` assemble clipped boundary loops, while `LeaderboardRequest.drawBoundaryStrip` samples their joined strip edges. Static helpers retain their original owners.
 
 `InheritedWidgetStyle` and its `WidgetStyleNode` base retain the original style inheritance used by `SocialListEntry`. `PlayerProgressEncoder` and `ByteArrayPool` expose packed saves and reusable byte buffers. `RoadShadowRenderer.isGuestMode` names the guest-session flag: authenticated sessions write progress to blob storage, while guest progress remains pending for later login.
 

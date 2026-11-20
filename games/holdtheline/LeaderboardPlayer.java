@@ -22,8 +22,8 @@ final class LeaderboardPlayer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = ua.replaceCharacter((byte) 60, (char)param2, param1, "");
-          var3 = hc.reverseString(param0, (byte) -92);
+          param1 = QuadraticPathSlicer.replaceCharacter((byte) 60, (char)param2, param1, "");
+          var3 = FixedAngleMath.reverseString(param0, (byte) -92);
           stackIn_5_0 = (-1 != param1.indexOf(param0)) || (param1.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ final class LeaderboardPlayer {
           if (param0 != -1) {
             LeaderboardPlayer.clearSharedReferences((byte) 44);
           }
-          if (qg.decodeArchivedSpriteSheet(param3, param1, (byte) -27, param2)) {
+          if (TexturedPolygonRenderer.decodeArchivedSpriteSheet(param3, param1, (byte) -27, param2)) {
             return GrowableObjectList.buildDecodedSprites(61);
           }
           return null;

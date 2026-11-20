@@ -17,7 +17,7 @@ final class MusicPatchEnvelope {
     static String field_k;
     int field_h;
 
-    final static String[] a(byte[] param0, int param1) {
+    final static String[] decodeTextLines(byte[] param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -30,7 +30,7 @@ final class MusicPatchEnvelope {
         RuntimeException decompiledCaughtException = null;
         var5 = HoldTheLine.field_D;
         try {
-          var6 = ta.a((byte) 72);
+          var6 = HuffmanTextCodec.createStringList((byte) 72);
           var3 = 0;
           var4 = param1;
           while (true) {
@@ -46,7 +46,7 @@ final class MusicPatchEnvelope {
               }
               break;
             }
-            var6.add((byte) 112, sm.decodeCp1252(-var3 + var4, var3, -129, param0));
+            var6.add((byte) 112, Cp1252Decoder.decodeCp1252(-var3 + var4, var3, -129, param0));
             while (param0.length > var4) {
               if (param0[var4] == 13 ||
                 param0[var4] == 10) {
@@ -71,7 +71,7 @@ final class MusicPatchEnvelope {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean isDecimalInteger(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -82,7 +82,7 @@ final class MusicPatchEnvelope {
           if (!param1) {
             field_f = false;
           }
-          stackIn_3_0 = ne.isIntegerInRadix(10, param0, true, 106);
+          stackIn_3_0 = TextSyntax.isIntegerInRadix(10, param0, true, 106);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class MusicPatchEnvelope {
         }
     }
 
-    final static BoundaryCurve a(int param0, BoundaryCurve param1, float param2) {
+    final static BoundaryCurve tailOfBoundary(int param0, BoundaryCurve param1, float param2) {
         RuntimeException var3 = null;
         BoundaryCurve var4 = null;
         ArcTrackBoundary var5 = null;
@@ -112,7 +112,7 @@ final class MusicPatchEnvelope {
         try {
           if (param0 <= 63) {
             var4 = (BoundaryCurve) null;
-            MusicPatchEnvelope.a(-87, (BoundaryCurve) null, -0.22468635439872742f);
+            MusicPatchEnvelope.tailOfBoundary(-87, (BoundaryCurve) null, -0.22468635439872742f);
           }
           if (param1 instanceof TrackBoundary) {
             var6 = (TrackBoundary) (param1);

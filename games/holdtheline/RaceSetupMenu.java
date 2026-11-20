@@ -185,10 +185,10 @@ final class RaceSetupMenu extends MenuList {
             if (DelayedServerPacket.field_n == 1 &&
               IterableSecondaryNodeDeque.field_g[82] &&
               RotatedSpriteCache.field_c) {
-              l.field_b = true;
-              hk.field_d = -1 + MenuList.field_l[3];
-              ao.field_b = 3;
-              FullscreenErrorReason.b((byte) -78);
+              CollisionGeometry.field_b = true;
+              RoadControlPathBuilder.field_d = -1 + MenuList.field_l[3];
+              BoundaryLoopClipper.field_b = 3;
+              FullscreenErrorReason.populateCourseMenu((byte) -78);
               this.truncateAfterRow((byte) -77, 0);
               return;
             }
@@ -280,7 +280,7 @@ final class RaceSetupMenu extends MenuList {
               if (this.hoveredItem != -1 &&
                 this.itemCount - 1 == this.hoveredRow) {
                 this.selectItem(this.hoveredItem, this.hoveredRow, 16777215);
-                ArchiveCatalog.a(1, (byte) 125, 13, this.hoveredItem);
+                ArchiveCatalog.updateTooltipTarget(1, (byte) 125, 13, this.hoveredItem);
               }
             }
           }
@@ -411,7 +411,7 @@ final class RaceSetupMenu extends MenuList {
           SoftwareRasterizer.drawRectangle(0, var5, 20 + var4, 28, 16777215);
           HoldTheLine.field_F.draw(var3, 10, 18 + var5, 4, -1);
         }
-        oi.a(1, 13);
+        HoverTooltipController.drawHoverTooltip(1, 13);
         return;
     }
 
@@ -502,10 +502,10 @@ final class RaceSetupMenu extends MenuList {
             TrackObjectDefinition.sendBlobWriteRequest(27391, var4, param0);
             var4 = (BlobWriteRequest) (UsernameLoginCredentials.field_e.next((byte) -89));
           }
-          var2 = oc.field_d.first((byte) 121);
+          var2 = SpriteLayoutUtilities.field_d.first((byte) 121);
           while (var2 != null) {
-            q.sendBlobReadRequest(param0, 60);
-            var2 = oc.field_d.next((byte) 124);
+            PlayerDataProtocol.sendBlobReadRequest(param0, 60);
+            var2 = SpriteLayoutUtilities.field_d.next((byte) 124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -551,8 +551,8 @@ final class RaceSetupMenu extends MenuList {
         }
         if (this.transitionState == 0) {
           if (this.transitionTicks == 0) {
-            ValidationHelpWidget.a(17405, 64, 0, HuffmanDecoder.field_c.field_f);
-            ValidationHelpWidget.a(param0 + 17514, 64, 256, HuffmanDecoder.field_c.field_h);
+            ValidationHelpWidget.playSample(17405, 64, 0, HuffmanDecoder.field_c.field_f);
+            ValidationHelpWidget.playSample(param0 + 17514, 64, 256, HuffmanDecoder.field_c.field_h);
           }
           fieldTemp$0 = this.transitionTicks + 1;
           this.transitionTicks = this.transitionTicks + 1;
@@ -598,11 +598,11 @@ final class RaceSetupMenu extends MenuList {
             -1 != NodeHashTableIterator.field_g) {
             this.handleChoiceMouse(86);
           }
-          while (qh.pollKeyEvent(-85)) {
+          while (KeyboardEventQueue.pollKeyEvent(-85)) {
             this.handleKey(true);
           }
         }
-        PacketBuffer.b(true);
+        PacketBuffer.refreshCourseMenuSprites(true);
         return;
     }
 
@@ -618,7 +618,7 @@ final class RaceSetupMenu extends MenuList {
           if (3 == this.transitionState) {
             return;
           }
-          AlternateUsernameLoginCredentials.requestDisplayMode(1, -107);
+          AlternateUsernameLoginCredentials.requestBackground(1, -107);
           this.transitionState = 2;
           if (param0 >= -104) {
             return;
@@ -737,7 +737,7 @@ final class RaceSetupMenu extends MenuList {
           return;
         }
         if (var9 < 256) {
-          hh.field_e.drawAlpha(0, var7, var9);
+          HoverTargetState.field_e.drawAlpha(0, var7, var9);
           for (var10 = 0; var10 < var14.length; var10++) {
             if (var10 == this.selectedIndices[param1] &&
               this.hoveredControl == -1) {
@@ -754,14 +754,14 @@ final class RaceSetupMenu extends MenuList {
               var4[var10].drawAlpha(var6, var8, var9);
             } else {
               var4[var10].drawAlpha(var6, var8, var9);
-              o.a(128, 84, var8, 128, 111, param0 - 4488, var6);
+              BackgroundSprites.adjustRectangleSaturationAndBrightness(128, 84, var8, 128, 111, param0 - 4488, var6);
             }
-            Vector2i.a(20, var5[var10], 4, 2, 111, var8, var6, 74, param0 ^ -48, 1, HoldTheLine.field_F);
+            Vector2i.drawParagraphWithHighlight(20, var5[var10], 4, 2, 111, var8, var6, 74, param0 ^ -48, 1, HoldTheLine.field_F);
             var6 += 160;
           }
           return;
         }
-        hh.field_e.drawUnkeyed(0, var7);
+        HoverTargetState.field_e.drawUnkeyed(0, var7);
         var12 = 0;
         var10Lifetime1 = var12;
         while (var12 < var14.length) {
@@ -780,9 +780,9 @@ final class RaceSetupMenu extends MenuList {
             }
           } else {
             var4[var12].drawUnkeyed(var6, var8);
-            o.a(128, 84, var8, 128, 111, -4441, var6);
+            BackgroundSprites.adjustRectangleSaturationAndBrightness(128, 84, var8, 128, 111, -4441, var6);
           }
-          Vector2i.a(20, var5[var12], 4, 2, 111, var8, var6, 74, -1, 1, HoldTheLine.field_F);
+          Vector2i.drawParagraphWithHighlight(20, var5[var12], 4, 2, 111, var8, var6, 74, -1, 1, HoldTheLine.field_F);
           var6 += 160;
           var12++;
         }
@@ -870,7 +870,7 @@ final class RaceSetupMenu extends MenuList {
               } else {
                 stackIn_37_1 = FullscreenErrorReason.field_e;
               }
-              var7 = ((StringBuilder) (Object) stackIn_36_0).append(stackIn_37_1).append(" ").append(bo.field_a).toString();
+              var7 = ((StringBuilder) (Object) stackIn_36_0).append(stackIn_37_1).append(" ").append(SpriteDecodeGlobals.field_a).toString();
             } else {
               if (DelegatingCanvas.field_d == 1) {
                 var7 = TextHotspotWidget.field_M;
@@ -917,7 +917,7 @@ final class RaceSetupMenu extends MenuList {
           } else {
             stackIn_47_3 = -1;
           }
-          fk.a(stackIn_46_0, stackIn_46_1, stackIn_46_2, stackIn_47_3, param0, -1, var6);
+          PopupMenuRenderer.drawTextColumns(stackIn_46_0, stackIn_46_1, stackIn_46_2, stackIn_47_3, param0, -1, var6);
         } else {
           if (param1 == 23) {
             if (this.itemCount > 1) {
@@ -945,7 +945,7 @@ final class RaceSetupMenu extends MenuList {
             } else {
               stackIn_22_3 = this.field_Z;
             }
-            fk.a(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, param0, -1, var6);
+            PopupMenuRenderer.drawTextColumns(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, param0, -1, var6);
           }
         }
         return;
@@ -1039,7 +1039,7 @@ final class RaceSetupMenu extends MenuList {
               } else {
                 if (this.field_Z == 2 &&
                   RoadShadowRenderer.isGuestMode((byte) 113)) {
-                  i.a((byte) 60, true);
+                  ShadedNineSlicePanel.beginMenuExit((byte) 60, true);
                 }
               }
             }
@@ -1140,7 +1140,7 @@ final class RaceSetupMenu extends MenuList {
             }
             if (var7 != 0 ||
               var8 != 0) {
-              FullscreenErrorReason.b((byte) 125);
+              FullscreenErrorReason.populateCourseMenu((byte) 125);
               this.field_O[param0] = NetworkArchiveRequest.field_C[DelegatingCanvas.field_d];
               this.refreshMenuOptions(false, 6267);
               this.initializeRowLayout(0, (byte) -124);
@@ -1200,11 +1200,11 @@ final class RaceSetupMenu extends MenuList {
         } else {
           this.field_ab = WidgetStyleNode.hitTestColumn(this.field_K, (byte) -119, param2);
           if (this.field_ab == 0) {
-            ArchiveCatalog.a(0, (byte) 67, 13, 0);
+            ArchiveCatalog.updateTooltipTarget(0, (byte) 67, 13, 0);
           } else {
             if (this.field_ab == 2 &&
               this.field_t) {
-              ArchiveCatalog.a(0, (byte) 100, 13, 1);
+              ArchiveCatalog.updateTooltipTarget(0, (byte) 100, 13, 1);
             }
           }
         }
@@ -1220,7 +1220,7 @@ final class RaceSetupMenu extends MenuList {
         }
         this.field_t = this.field_t | (DelegatingCanvas.field_d == 1 ? true : false);
         this.field_t = this.field_t & (DelegatingCanvas.field_d != 7 ? true : false);
-        this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], cd.field_c};
+        this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], EmailDomainValidator.field_c};
     }
 
     private final void activateRowSelection(int param0, boolean param1, byte param2, boolean param3) {
@@ -1273,13 +1273,13 @@ final class RaceSetupMenu extends MenuList {
             if (param3) {
               return;
             }
-            var7 = PolarSortVector.a((byte) 60, var6);
+            var7 = PolarSortVector.getChampionshipAccessStatus((byte) 60, var6);
             if (var7 != 0) {
               return;
             }
             StrongCacheEntry.field_w = var6;
             LoginForm.field_P = 0;
-            AlternateUsernameLoginCredentials.requestDisplayMode(var6 + 4, -107);
+            AlternateUsernameLoginCredentials.requestBackground(var6 + 4, -107);
             stackIn_70_0 = -21383;
             stackIn_71_1 = !(param1);
             AchievementStatusRequest.startSelectedRace(stackIn_70_0, stackIn_71_1);
@@ -1290,10 +1290,10 @@ final class RaceSetupMenu extends MenuList {
             if (param0 == 0) {
               LoginForm.field_P = var6;
               StrongCacheEntry.field_w = var6;
-              var7 = PolarSortVector.a((byte) 92, StrongCacheEntry.field_w);
+              var7 = PolarSortVector.getChampionshipAccessStatus((byte) 92, StrongCacheEntry.field_w);
               if (0 == var7) {
                 var8 = StrongCacheEntry.field_w;
-                var13 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][1], param2 ^ 115, 111)};
+                var13 = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][0], 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][1], param2 ^ 115, 111)};
                 if (!Vector2i.field_c) {
                   stackIn_34_0 = SoundPlayback.field_m;
                 } else {
@@ -1302,7 +1302,7 @@ final class RaceSetupMenu extends MenuList {
                 var10 = stackIn_34_0;
                 this.addChoiceRow(var10, 16711680, RotatedSpriteAsset.field_g[var8], var13, param1, WidgetContainer.field_A[var8], RaceWorld.field_gb[var8], 312);
               }
-              AlternateUsernameLoginCredentials.requestDisplayMode(4 + StrongCacheEntry.field_w, param2 ^ -16);
+              AlternateUsernameLoginCredentials.requestBackground(4 + StrongCacheEntry.field_w, param2 ^ -16);
               return;
             }
             if (1 != param0) {
@@ -1321,7 +1321,7 @@ final class RaceSetupMenu extends MenuList {
             IntArrayReadRequest.field_l = var6;
             if (Vector2i.field_c) {
               var7 = StrongCacheEntry.field_w;
-              var12 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][1], 9, 111)};
+              var12 = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0] + 8, 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][1], 9, 111)};
               this.addChoiceRow(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var12, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
               return;
             }
@@ -1334,19 +1334,19 @@ final class RaceSetupMenu extends MenuList {
             return;
           }
           if (0 == param0) {
-            var7 = PolarSortVector.a((byte) 65, var6);
+            var7 = PolarSortVector.getChampionshipAccessStatus((byte) 65, var6);
             if (var7 == 0) {
               StrongCacheEntry.field_w = var6;
-              AlternateUsernameLoginCredentials.requestDisplayMode(4 + var6, -112);
-              FullscreenErrorReason.b((byte) 101);
+              AlternateUsernameLoginCredentials.requestBackground(4 + var6, -112);
+              FullscreenErrorReason.populateCourseMenu((byte) 101);
               this.addChoiceRow(NodeHashTableIterator.field_a, Point2i.field_i[var5], this.rowItemIds[1], this.rowSprites[1], param1, this.rowDescriptions[1], this.rowLabels[1], 312);
             }
           }
           if (param0 == 1) {
             LoginForm.field_P = var6;
-            var7 = ArchiveIndex.b((byte) -49).field_p;
-            if (ArcTrackBoundary.a(LoginForm.field_P, -70, StrongCacheEntry.field_w) == 0) {
-              var14 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1], 9, 111)};
+            var7 = ArchiveIndex.getSelectedCourse((byte) -49).field_p;
+            if (ArcTrackBoundary.getCourseAccessStatus(LoginForm.field_P, -70, StrongCacheEntry.field_w) == 0) {
+              var14 = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0], 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1], 9, 111)};
               if (Vector2i.field_c) {
                 stackIn_47_0 = SoundPlayback.field_m + " " + ArchiveLoadProgress.field_g;
               } else {
@@ -1358,9 +1358,9 @@ final class RaceSetupMenu extends MenuList {
           }
           if (param0 == 2) {
             IntArrayReadRequest.field_l = var6;
-            var7 = ArchiveIndex.b((byte) -49).field_p;
+            var7 = ArchiveIndex.getSelectedCourse((byte) -49).field_p;
             if (Vector2i.field_c) {
-              var15 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1] + 8, 9, 111)};
+              var15 = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][0], 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1] + 8, 9, 111)};
               this.addChoiceRow(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var15, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
             } else {
               if (!param3) {
@@ -1426,9 +1426,9 @@ final class RaceSetupMenu extends MenuList {
           this.rowLabels[0] = param3;
           this.rowDescriptions[0] = param4;
           if (RoadShadowRenderer.isGuestMode((byte) 93)) {
-            this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], null, cd.field_c};
+            this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], null, EmailDomainValidator.field_c};
           } else {
-            this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], cd.field_c};
+            this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], EmailDomainValidator.field_c};
           }
           this.rowTitles[0] = param5;
           this.rowColors[0] = param6;

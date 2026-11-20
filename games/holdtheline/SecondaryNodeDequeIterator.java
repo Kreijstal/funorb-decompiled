@@ -48,7 +48,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return this.field_e.field_i != this.field_b;
     }
 
-    final static void a(int param0) {
+    final static void drawRaceOrLoadingScreen(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -66,11 +66,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
           SoftwareRasterizer.clear();
           LoadProgressDialog.field_hb.drawScaled(224, 112, 192, 256);
           for (var1_int = 0; 32 > var1_int; var1_int++) {
-            var2 = OutlinedRoadStripRenderer.a(-14646, nm.field_b);
+            var2 = OutlinedRoadStripRenderer.getRaceGraphicsLoadProgress(-14646, ResourceArchiveFactory.field_b);
             SoftwareRasterizer.drawHorizontalLine(var1_int / 2 + 184, 398 - var1_int, var2, 12517567);
             SoftwareRasterizer.drawHorizontalLine(var2 + (var1_int / 2 + 184), 398 - var1_int, -var2 + 256, 7274607);
           }
-          nm.field_c.drawCentered(CheckboxRenderer.field_q, 320, 392, 0, -1);
+          ResourceArchiveFactory.field_c.drawCentered(CheckboxRenderer.field_q, 320, 392, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

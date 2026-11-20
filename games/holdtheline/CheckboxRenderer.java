@@ -102,7 +102,7 @@ final class CheckboxRenderer implements WidgetRenderer {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5) {
+    final static void drawScaledWhiteRecoloredSprite(int param0, int param1, Sprite param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;

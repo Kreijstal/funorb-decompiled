@@ -12,22 +12,22 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
     private boolean field_kb;
     private BitmapFont field_nb;
 
-    final void h(byte param0) {
+    final void closeProgressDialog(byte param0) {
         if (!this.visible) {
           return;
         }
         this.visible = false;
         if (this.field_kb) {
-          OutlinedRoadFillRenderer.a((byte) -41);
+          OutlinedRoadFillRenderer.restoreForcedLoginForm((byte) -41);
         } else {
           if (this.field_ob) {
-            HuffmanDecoder.b(58);
+            HuffmanDecoder.restoreEmailLoginForm(58);
           }
         }
         if (param0 <= -47) {
           return;
         }
-        this.o(87);
+        this.showConnectionRestored(87);
     }
 
     public void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -44,8 +44,8 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
             InputValidationError.openAppletPage((byte) -116, GameKeyHandler.getApplet(param2 ^ -75), "tochangedisplayname.ws");
             return;
           }
-          RotatedSpriteAsset.setAccountScreen(param2 + 4, 3);
-          this.h((byte) -89);
+          RotatedSpriteAsset.requestAccountAction(param2 + 4, 3);
+          this.closeProgressDialog((byte) -89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,7 +61,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         }
     }
 
-    final void o(int param0) {
+    final void showConnectionRestored(int param0) {
         this.field_rb.setColors(2121792, 4210752, false);
         MessagePanel var2 = new MessagePanel(this, this.field_nb, DiskCacheStore.field_b);
         if (param0 <= -12) {
@@ -87,15 +87,15 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         }
     }
 
-    final static boolean n(int param0) {
+    final static boolean isNameRequestPending(int param0) {
         if (param0 >= 103) {
-          return ak.field_b == ImageProducerRasterBuffer.field_n ? true : false;
+          return NineSliceSpriteFactory.field_b == ImageProducerRasterBuffer.field_n ? true : false;
         }
         field_pb = 24;
-        return ak.field_b == ImageProducerRasterBuffer.field_n ? true : false;
+        return NineSliceSpriteFactory.field_b == ImageProducerRasterBuffer.field_n ? true : false;
     }
 
-    final static java.net.URL a(String param0, String param1, java.net.URL param2, byte param3, int param4) {
+    final static java.net.URL rewriteContextUrl(String param0, String param1, java.net.URL param2, byte param3, int param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -244,7 +244,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 13) {
-            this.h((byte) -102);
+            this.closeProgressDialog((byte) -102);
             return true;
           }
           if (param2 != -78) {
@@ -267,16 +267,16 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void selectLocalizedLoadingText(int param0, byte param1) {
         PlayerProgressEncoder.field_d = GrowableObjectList.field_f[param0];
-        DualNodeHashTable.field_f = lj.field_c[param0];
+        DualNodeHashTable.field_f = RasterStateStack.field_c[param0];
         StraightRoadSlicer.field_d = TextFieldRenderer.field_r[param0];
         if (param1 <= 76) {
-          AccountProgressDialog.n(-60);
+          AccountProgressDialog.isNameRequestPending(-60);
         }
     }
 
-    final void a(boolean param0, String param1, int param2) {
+    final void showResponse(boolean param0, String param1, int param2) {
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
         MessagePanel stackIn_15_0 = null;

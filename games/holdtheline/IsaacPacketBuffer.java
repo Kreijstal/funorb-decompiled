@@ -131,15 +131,15 @@ final class IsaacPacketBuffer extends PacketBuffer {
         this.writeBitsRemaining = 8;
     }
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void showAccountProgress(boolean param0, String param1, int param2) {
         ResourceArchive.field_g = param0;
         DelayedServerPacket.field_k = true;
         if (param2 != 22676) {
           return;
         }
         try {
-          RoadControlPointSpec.field_c = new AccountProgressDialog(ka.field_b, DisplayNameForm.field_I, param1, ArchiveCatalog.field_o, ResourceArchive.field_g);
-          ka.field_b.showDialog(RoadControlPointSpec.field_c, false);
+          RoadControlPointSpec.field_c = new AccountProgressDialog(AccountUiUtilities.field_b, DisplayNameForm.field_I, param1, ArchiveCatalog.field_o, ResourceArchive.field_g);
+          AccountUiUtilities.field_b.showDialog(RoadControlPointSpec.field_c, false);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "da.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

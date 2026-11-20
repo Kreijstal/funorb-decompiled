@@ -47,9 +47,9 @@ final class DiskCacheStore {
                 return null;
               }
               this.indexFile.seek(25971, (long)(param1 * 6));
-              this.indexFile.readFully(-1, 0, 6, oi.field_d);
-              var4_int = (16711680 & oi.field_d[0] << 16) + ((oi.field_d[1] & 255) << 8) + (oi.field_d[2] & 255);
-              var5 = ((255 & oi.field_d[3]) << 16) + ((oi.field_d[4] & 255) << 8) + (255 & oi.field_d[5]);
+              this.indexFile.readFully(-1, 0, 6, HoverTooltipController.field_d);
+              var4_int = (16711680 & HoverTooltipController.field_d[0] << 16) + ((HoverTooltipController.field_d[1] & 255) << 8) + (HoverTooltipController.field_d[2] & 255);
+              var5 = ((255 & HoverTooltipController.field_d[3]) << 16) + ((HoverTooltipController.field_d[4] & 255) << 8) + (255 & HoverTooltipController.field_d[5]);
               if (var4_int < 0) {
                 return null;
               }
@@ -84,21 +84,21 @@ final class DiskCacheStore {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.dataFile.readFully(-1, 0, var14 + var9, oi.field_d);
-                  var11 = (65280 & oi.field_d[4] << 8) + (oi.field_d[5] & 255);
-                  var13 = 255 & oi.field_d[9];
-                  var12 = (255 & oi.field_d[8]) + (65280 & oi.field_d[7] << 8) + ((oi.field_d[6] & 255) << 16);
-                  var10 = (oi.field_d[0] << 24 & -16777216) + ((oi.field_d[1] & 255) << 16) - (-(65280 & oi.field_d[2] << 8) - (255 & oi.field_d[3]));
+                  this.dataFile.readFully(-1, 0, var14 + var9, HoverTooltipController.field_d);
+                  var11 = (65280 & HoverTooltipController.field_d[4] << 8) + (HoverTooltipController.field_d[5] & 255);
+                  var13 = 255 & HoverTooltipController.field_d[9];
+                  var12 = (255 & HoverTooltipController.field_d[8]) + (65280 & HoverTooltipController.field_d[7] << 8) + ((HoverTooltipController.field_d[6] & 255) << 16);
+                  var10 = (HoverTooltipController.field_d[0] << 24 & -16777216) + ((HoverTooltipController.field_d[1] & 255) << 16) - (-(65280 & HoverTooltipController.field_d[2] << 8) - (255 & HoverTooltipController.field_d[3]));
                 } else {
                   if (var9 > 512) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.dataFile.readFully(-1, 0, var9 + var14, oi.field_d);
-                  var13 = 255 & oi.field_d[7];
-                  var12 = (oi.field_d[6] & 255) + (oi.field_d[4] << 16 & 16711680) + (oi.field_d[5] << 8 & 65280);
-                  var11 = ((255 & oi.field_d[2]) << 8) + (255 & oi.field_d[3]);
-                  var10 = ((255 & oi.field_d[0]) << 8) + (oi.field_d[1] & 255);
+                  this.dataFile.readFully(-1, 0, var9 + var14, HoverTooltipController.field_d);
+                  var13 = 255 & HoverTooltipController.field_d[7];
+                  var12 = (HoverTooltipController.field_d[6] & 255) + (HoverTooltipController.field_d[4] << 16 & 16711680) + (HoverTooltipController.field_d[5] << 8 & 65280);
+                  var11 = ((255 & HoverTooltipController.field_d[2]) << 8) + (255 & HoverTooltipController.field_d[3]);
+                  var10 = ((255 & HoverTooltipController.field_d[0]) << 8) + (HoverTooltipController.field_d[1] & 255);
                 }
                 if (var10 != param1) {
                   return null;
@@ -120,7 +120,7 @@ final class DiskCacheStore {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$0 = var7;
                   var7++;
-                  var6[incrementValue$0] = oi.field_d[var16];
+                  var6[incrementValue$0] = HoverTooltipController.field_d[var16];
                 }
                 var5 = var12;
                 var8++;
@@ -151,7 +151,7 @@ final class DiskCacheStore {
         field_a = null;
     }
 
-    final static int a(byte param0) {
+    final static int processScreenOptionsInput(byte param0) {
         int stackIn_28_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -165,7 +165,7 @@ final class DiskCacheStore {
         try {
           var1_int = 0;
           var2 = 0;
-          while (qh.pollKeyEvent(-105)) {
+          while (KeyboardEventQueue.pollKeyEvent(-105)) {
             TextFieldRenderer.field_q.handleVerticalKeys(-1);
             if (TextFieldRenderer.field_q.hasActivationInput(-1)) {
               var1_int = 1;
@@ -175,7 +175,7 @@ final class DiskCacheStore {
             }
             var2 = 1;
           }
-          TextFieldRenderer.field_q.updateMouseSelection(cm.a((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), cm.a((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
+          TextFieldRenderer.field_q.updateMouseSelection(MenuHitTesting.hitTestMenuEntry((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), MenuHitTesting.hitTestMenuEntry((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
           if (TextFieldRenderer.field_q.hasActivationInput(-1)) {
             var1_int = 1;
           }
@@ -188,20 +188,20 @@ final class DiskCacheStore {
             var3 = ClientException.field_e[TextFieldRenderer.field_q.selectedIndex];
             if (2 == var3 ||
               5 == var3) {
-              IntrusiveDeque.b(false);
+              IntrusiveDeque.resetScreenOptions(false);
             }
           } else {
             if (var2 != 0 &&
               2 != WhirlpoolHasher.field_h) {
-              IntrusiveDeque.b(false);
+              IntrusiveDeque.resetScreenOptions(false);
             }
           }
           if (0 == var3 &&
             WhirlpoolHasher.field_h == 2) {
-            var4 = bb.monotonicTimeMillis(param0 ^ -19) - TutorialAction.field_g;
+            var4 = BoundaryLoopTracer.monotonicTimeMillis(param0 ^ -19) - TutorialAction.field_g;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
-              pe.a(5, true, (byte) -121);
+              ScreenOptionsMenu.showScreenOptions(5, true, (byte) -121);
               var3 = 2;
             }
           }
@@ -244,8 +244,8 @@ final class DiskCacheStore {
                     return false;
                   }
                   this.indexFile.seek(25971, (long)(6 * param0));
-                  this.indexFile.readFully(-1, 0, 6, oi.field_d);
-                  var7_int = (255 & oi.field_d[5]) + ((oi.field_d[3] & 255) << 16) + (65280 & oi.field_d[4] << 8);
+                  this.indexFile.readFully(-1, 0, 6, HoverTooltipController.field_d);
+                  var7_int = (255 & HoverTooltipController.field_d[5]) + ((HoverTooltipController.field_d[3] & 255) << 16) + (65280 & HoverTooltipController.field_d[4] << 8);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.dataFile.length(-32261) / 520L)) {
                     return false;
@@ -256,14 +256,14 @@ final class DiskCacheStore {
                     var7_int = 1;
                   }
                 }
-                oi.field_d[2] = (byte)param1;
-                oi.field_d[5] = (byte)var7_int;
-                oi.field_d[4] = (byte)(var7_int >> 8);
-                oi.field_d[3] = (byte)(var7_int >> 16);
-                oi.field_d[0] = (byte)(param1 >> 16);
-                oi.field_d[1] = (byte)(param1 >> 8);
+                HoverTooltipController.field_d[2] = (byte)param1;
+                HoverTooltipController.field_d[5] = (byte)var7_int;
+                HoverTooltipController.field_d[4] = (byte)(var7_int >> 8);
+                HoverTooltipController.field_d[3] = (byte)(var7_int >> 16);
+                HoverTooltipController.field_d[0] = (byte)(param1 >> 16);
+                HoverTooltipController.field_d[1] = (byte)(param1 >> 8);
                 this.indexFile.seek(25971, (long)(param0 * 6));
-                this.indexFile.write((byte) 125, 6, 0, oi.field_d);
+                this.indexFile.write((byte) 125, 6, 0, HoverTooltipController.field_d);
                 if (param2 <= 73) {
                   field_c = (String) null;
                 }
@@ -277,7 +277,7 @@ final class DiskCacheStore {
                       this.dataFile.seek(25971, (long)(520 * var7_int));
                       if (param0 > 65535) {
                         try {
-                          this.dataFile.readFully(-1, 0, 10, oi.field_d);
+                          this.dataFile.readFully(-1, 0, 10, HoverTooltipController.field_d);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -287,13 +287,13 @@ final class DiskCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (oi.field_d[3] & 255) + ((oi.field_d[0] & 255) << 24) + (((oi.field_d[1] & 255) << 16) + ((oi.field_d[2] & 255) << 8));
-                        var12 = (oi.field_d[5] & 255) + ((255 & oi.field_d[4]) << 8);
-                        var13 = oi.field_d[9] & 255;
-                        var10 = (255 & oi.field_d[8]) + (16711680 & oi.field_d[6] << 16) + (65280 & oi.field_d[7] << 8);
+                        var11 = (HoverTooltipController.field_d[3] & 255) + ((HoverTooltipController.field_d[0] & 255) << 24) + (((HoverTooltipController.field_d[1] & 255) << 16) + ((HoverTooltipController.field_d[2] & 255) << 8));
+                        var12 = (HoverTooltipController.field_d[5] & 255) + ((255 & HoverTooltipController.field_d[4]) << 8);
+                        var13 = HoverTooltipController.field_d[9] & 255;
+                        var10 = (255 & HoverTooltipController.field_d[8]) + (16711680 & HoverTooltipController.field_d[6] << 16) + (65280 & HoverTooltipController.field_d[7] << 8);
                       } else {
                         try {
-                          this.dataFile.readFully(-1, 0, 8, oi.field_d);
+                          this.dataFile.readFully(-1, 0, 8, HoverTooltipController.field_d);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -303,10 +303,10 @@ final class DiskCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var13 = 255 & oi.field_d[7];
-                        var12 = (oi.field_d[3] & 255) + (65280 & oi.field_d[2] << 8);
-                        var10 = (255 & oi.field_d[6]) + ((oi.field_d[4] & 255) << 16) + (65280 & oi.field_d[5] << 8);
-                        var11 = (255 & oi.field_d[1]) + ((oi.field_d[0] & 255) << 8);
+                        var13 = 255 & HoverTooltipController.field_d[7];
+                        var12 = (HoverTooltipController.field_d[3] & 255) + (65280 & HoverTooltipController.field_d[2] << 8);
+                        var10 = (255 & HoverTooltipController.field_d[6]) + ((HoverTooltipController.field_d[4] & 255) << 16) + (65280 & HoverTooltipController.field_d[5] << 8);
+                        var11 = (255 & HoverTooltipController.field_d[1]) + ((HoverTooltipController.field_d[0] & 255) << 8);
                       }
                       if ((var11 == param0 &&
                         var12 == var9 &&
@@ -333,16 +333,16 @@ final class DiskCacheStore {
                       var10 = 0;
                     }
                     if (65535 >= param0) {
-                      oi.field_d[6] = (byte)var10;
-                      oi.field_d[0] = (byte)(param0 >> 8);
-                      oi.field_d[3] = (byte)var9;
-                      oi.field_d[2] = (byte)(var9 >> 8);
-                      oi.field_d[1] = (byte)param0;
-                      oi.field_d[5] = (byte)(var10 >> 8);
-                      oi.field_d[7] = (byte)this.archiveId;
-                      oi.field_d[4] = (byte)(var10 >> 16);
+                      HoverTooltipController.field_d[6] = (byte)var10;
+                      HoverTooltipController.field_d[0] = (byte)(param0 >> 8);
+                      HoverTooltipController.field_d[3] = (byte)var9;
+                      HoverTooltipController.field_d[2] = (byte)(var9 >> 8);
+                      HoverTooltipController.field_d[1] = (byte)param0;
+                      HoverTooltipController.field_d[5] = (byte)(var10 >> 8);
+                      HoverTooltipController.field_d[7] = (byte)this.archiveId;
+                      HoverTooltipController.field_d[4] = (byte)(var10 >> 16);
                       this.dataFile.seek(25971, (long)(520 * var7_int));
-                      this.dataFile.write((byte) 126, 8, 0, oi.field_d);
+                      this.dataFile.write((byte) 126, 8, 0, HoverTooltipController.field_d);
                       var11 = param1 - var8;
                       if (var11 > 512) {
                         var11 = 512;
@@ -350,18 +350,18 @@ final class DiskCacheStore {
                       this.dataFile.write((byte) 126, var11, var8, param4);
                       var8 = var8 + var11;
                     } else {
-                      oi.field_d[3] = (byte)param0;
-                      oi.field_d[0] = (byte)(param0 >> 24);
-                      oi.field_d[2] = (byte)(param0 >> 8);
-                      oi.field_d[1] = (byte)(param0 >> 16);
-                      oi.field_d[8] = (byte)var10;
-                      oi.field_d[4] = (byte)(var9 >> 8);
-                      oi.field_d[5] = (byte)var9;
-                      oi.field_d[6] = (byte)(var10 >> 16);
-                      oi.field_d[9] = (byte)this.archiveId;
-                      oi.field_d[7] = (byte)(var10 >> 8);
+                      HoverTooltipController.field_d[3] = (byte)param0;
+                      HoverTooltipController.field_d[0] = (byte)(param0 >> 24);
+                      HoverTooltipController.field_d[2] = (byte)(param0 >> 8);
+                      HoverTooltipController.field_d[1] = (byte)(param0 >> 16);
+                      HoverTooltipController.field_d[8] = (byte)var10;
+                      HoverTooltipController.field_d[4] = (byte)(var9 >> 8);
+                      HoverTooltipController.field_d[5] = (byte)var9;
+                      HoverTooltipController.field_d[6] = (byte)(var10 >> 16);
+                      HoverTooltipController.field_d[9] = (byte)this.archiveId;
+                      HoverTooltipController.field_d[7] = (byte)(var10 >> 8);
                       this.dataFile.seek(25971, (long)(var7_int * 520));
-                      this.dataFile.write((byte) 126, 10, 0, oi.field_d);
+                      this.dataFile.write((byte) 126, 10, 0, HoverTooltipController.field_d);
                       var11 = -var8 + param1;
                       if (var11 > 510) {
                         var11 = 510;

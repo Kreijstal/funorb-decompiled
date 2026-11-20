@@ -47,7 +47,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final static void a(int param0, String param1, java.applet.Applet param2) {
+    final static void writeSettingsCookie(int param0, String param1, java.applet.Applet param2) {
         try {
           String var6 = null;
           String var5 = null;
@@ -63,7 +63,7 @@ final class IntrusiveDequeCursor {
             if (param0 != -32312) {
               IntrusiveDequeCursor.clearSharedReferences((byte) 13);
             }
-            il.field_a = param1;
+            LeaderboardRequests.field_a = param1;
             try {
               var6 = param2.getParameter("cookieprefix");
               var5 = var6;
@@ -77,12 +77,12 @@ final class IntrusiveDequeCursor {
               if (param1.length() == 0) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + cd.formatCookieDate(param0 + 32381, bb.monotonicTimeMillis(-1) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + EmailDomainValidator.formatCookieDate(param0 + 32381, BoundaryLoopTracer.monotonicTimeMillis(-1) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               JavaScriptBridge.evaluateJavaScript(param2, -31645, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
-            bb.updateNavigationLinks(param2, (byte) 49);
+            BoundaryLoopTracer.updateNavigationLinks(param2, (byte) 49);
           } catch (RuntimeException runtimeException) {
             throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "tm.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
@@ -106,7 +106,7 @@ final class IntrusiveDequeCursor {
         return null;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isEmailValidationPending(boolean param0) {
         if (param0) {
           return false;
         }
@@ -158,7 +158,7 @@ final class IntrusiveDequeCursor {
         field_b = null;
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode previous(boolean param0) {
         IntrusiveNode var2 = this.field_a;
         if (var2 == this.field_d.sentinel) {
           this.field_a = null;
@@ -202,7 +202,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode first(byte param0) {
         int var3 = -72 % ((param0 + 65) / 49);
         IntrusiveNode var2 = this.field_d.sentinel.next;
         if (var2 != this.field_d.sentinel) {

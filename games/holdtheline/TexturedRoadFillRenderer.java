@@ -57,12 +57,12 @@ final class TexturedRoadFillRenderer extends RoadFillRenderer {
             var10++;
           }
           if (param0 != 0.0f) {
-            ad.fillBlendedShadedTexturePolygon(var12, this.textureScale, (byte) 101, param0, this.texture);
+            ReflectionCheckSupport.fillBlendedShadedTexturePolygon(var12, this.textureScale, (byte) 101, param0, this.texture);
           } else {
             if (this.textureScale != 1.0f) {
-              jh.a(this.texture, (byte) 51, this.textureScale, var12);
+              PackedClientOptions.blendTexturedPolygon(this.texture, (byte) 51, this.textureScale, var12);
             } else {
-              qg.fillTexturedPolygon(this.texture, (byte) 126, var12);
+              TexturedPolygonRenderer.fillTexturedPolygon(this.texture, (byte) 126, var12);
             }
           }
           return;
@@ -97,9 +97,9 @@ final class TexturedRoadFillRenderer extends RoadFillRenderer {
 
     final static void selectMusicTrack(int param0, int param1) {
         if (null != ValidationHelpWidget.field_Q &&
-          i.field_k[param1] != null) {
+          ShadedNineSlicePanel.field_k[param1] != null) {
           EmailValidationResult.field_d = null;
-          ResourceArchive.playMusicTrack(true, i.field_k[param1], (byte) 69, 30);
+          ResourceArchive.playMusicTrack(true, ShadedNineSlicePanel.field_k[param1], (byte) 69, 30);
         } else {
           WeightedLruCache.field_e = 0;
           AccountProgressDialog.field_jb = param1;
@@ -114,7 +114,7 @@ final class TexturedRoadFillRenderer extends RoadFillRenderer {
         int var2 = HoldTheLine.field_D;
         int var1_intLifetime1;
         try {
-          oi.field_e.reset((byte) 45);
+          HoverTooltipController.field_e.reset((byte) 45);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             AudioServiceThread.field_b[var1_int] = 0L;
           }

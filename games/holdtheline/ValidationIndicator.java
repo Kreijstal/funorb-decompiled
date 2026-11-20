@@ -39,7 +39,7 @@ final class ValidationIndicator extends TextButton {
         var5 = (this.width >> 1) + (param2 + this.x);
         var6 = param1 + this.y + (this.height >> 1);
         var8 = this.field_I.getValidationState(-7447);
-        if (hh.field_d == var8) {
+        if (HoverTargetState.field_d == var8) {
           var16 = FullscreenFocusCanvas.field_i[0];
           var9 = var16.canvasWidth << 1;
           var10 = var16.canvasHeight << 1;
@@ -61,10 +61,10 @@ final class ValidationIndicator extends TextButton {
             }
           }
           var16.drawRotatedBilinear(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.field_K << 10, 4096);
-          dm.popRasterState((byte) -10);
+          RasterStateRestoration.popRasterState((byte) -10);
           ShadedRoadStripRenderer.field_m.drawAdditive(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
         } else {
-          if (var8 != um.field_a) {
+          if (var8 != Cp1252CharacterRules.field_a) {
             if (LinearPointPath.field_k == var8) {
               var13 = FullscreenFocusCanvas.field_i[2];
               var13.drawAdditive(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
@@ -96,7 +96,7 @@ final class ValidationIndicator extends TextButton {
               }
             }
             var15.drawRotatedBilinear(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.field_K << 10, 4096);
-            dm.popRasterState((byte) -10);
+            RasterStateRestoration.popRasterState((byte) -10);
             ShadedRoadStripRenderer.field_m.drawAdditive(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
           }
         }

@@ -101,7 +101,7 @@ final class Vector2i {
         }
     }
 
-    final static Vector2f a(BoundaryCurve param0, BoundaryCurve param1, int param2) {
+    final static Vector2f boundaryJoinOffset(BoundaryCurve param0, BoundaryCurve param1, int param2) {
         Vector2f var3 = null;
         RuntimeException var3_ref = null;
         Vector2f var4 = null;
@@ -124,7 +124,7 @@ final class Vector2i {
           var6.subtract(var3, param2 ^ 2095);
           if (param2 != 3251) {
             var8 = (BoundaryCurve) null;
-            Vector2i.a((BoundaryCurve) null, (BoundaryCurve) null, -127);
+            Vector2i.boundaryJoinOffset((BoundaryCurve) null, (BoundaryCurve) null, -127);
           }
           if (!(0.0010000000474974513f > Math.abs(var5.dot(var6, (byte) -10)))) {
             var6.normalize(-1);
@@ -155,7 +155,7 @@ final class Vector2i {
         }
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PaletteBitmapFont param10) {
+    final static void drawParagraphWithHighlight(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PaletteBitmapFont param10) {
         try {
           param10.drawParagraph(param1, 1 + param6, 1 + param5, param4, param7, 8, -1, 114, param9, param3, param0);
           param10.drawParagraph(param1, param6, param5, param4, param7, param2, param8, param9, param3, param0);

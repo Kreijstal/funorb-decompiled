@@ -37,7 +37,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         }
     }
 
-    final void a(byte param0, Validator param1) {
+    final void setValidator(byte param0, Validator param1) {
         try {
           this.field_W = param1;
           if (param0 <= 35) {
@@ -56,13 +56,13 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         return this.field_W;
     }
 
-    final static void a(String param0, int param1) {
+    final static void submitDisplayName(String param0, int param1) {
         try {
-          MarkerSliderRenderer.a(param0, 0);
-          IsaacPacketBuffer.a(false, TexturedRoadFillRenderer.field_g, 22676);
+          MarkerSliderRenderer.setRequestedDisplayName(param0, 0);
+          IsaacPacketBuffer.showAccountProgress(false, TexturedRoadFillRenderer.field_g, 22676);
           if (param1 >= -46) {
             RoadFillRenderer var3 = (RoadFillRenderer) null;
-            ValidatedTextField.a((RoadSegment[]) null, -122, false, 107, (RoadFillRenderer) null, 44);
+            ValidatedTextField.drawCollisionRoadRange((RoadSegment[]) null, -122, false, 107, (RoadFillRenderer) null, 44);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -78,13 +78,13 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
           return null;
         }
         if (null != this.tooltip) {
-          GrowableIntList.a(FullscreenErrorDialog.field_X, param0, this.width - this.field_V + NodeHashTableIterator.field_g);
+          GrowableIntList.setTooltipAnchor(FullscreenErrorDialog.field_X, param0, this.width - this.field_V + NodeHashTableIterator.field_g);
           return this.tooltip;
         }
         return null;
     }
 
-    final static void a(RoadSegment[] param0, int param1, boolean param2, int param3, RoadFillRenderer param4, int param5) {
+    final static void drawCollisionRoadRange(RoadSegment[] param0, int param1, boolean param2, int param3, RoadFillRenderer param4, int param5) {
         int var12 = 0;
         float var17 = 0.0f;
         RuntimeException stackIn_20_0 = null;
@@ -118,12 +118,12 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         var18 = HoldTheLine.field_D;
         try {
           if (param5 < param1) {
-            ValidatedTextField.a(param0, param1, param2, 116, param4, param0.length);
-            ValidatedTextField.a(param0, 0, param2, 107, param4, param5);
+            ValidatedTextField.drawCollisionRoadRange(param0, param1, param2, 116, param4, param0.length);
+            ValidatedTextField.drawCollisionRoadRange(param0, 0, param2, 107, param4, param5);
           }
-          var19 = o.a((byte) 37);
+          var19 = BackgroundSprites.createGeometryIntList((byte) 37);
           var6 = var19;
-          var21 = o.a((byte) 18);
+          var21 = BackgroundSprites.createGeometryIntList((byte) 18);
           var7 = var21;
           var8 = param0[param1];
           var20 = var8.getLeftCollisionStart(255);
@@ -143,9 +143,9 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
             if (var13.layer != var11 &&
               param2) {
               param4.drawRoadFill(0.0f, var7.toArray(-92), var11, var6.toArray(-81), (byte) 49);
-              var23 = o.a((byte) 29);
+              var23 = BackgroundSprites.createGeometryIntList((byte) 29);
               var6 = var23;
-              var24 = o.a((byte) 105);
+              var24 = BackgroundSprites.createGeometryIntList((byte) 105);
               var7 = var24;
               var23.add(var9.x, (byte) 101);
               var23.add(var9.y, (byte) 104);

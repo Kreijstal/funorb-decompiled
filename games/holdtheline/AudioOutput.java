@@ -147,7 +147,7 @@ class AudioOutput {
         if (this.stream != null) {
           this.stream.mix(param0, 0, param1);
         }
-        this.streamTimeMillis = bb.monotonicTimeMillis(-1);
+        this.streamTimeMillis = BoundaryLoopTracer.monotonicTimeMillis(-1);
     }
 
     final synchronized void shutdown() {
@@ -300,7 +300,7 @@ class AudioOutput {
           if (this.closed) {
             return;
           }
-          var1 = bb.monotonicTimeMillis(-1);
+          var1 = BoundaryLoopTracer.monotonicTimeMillis(-1);
           try {
             if (var1 > this.streamTimeMillis + 6000L) {
               this.streamTimeMillis = var1 - 6000L;
@@ -308,7 +308,7 @@ class AudioOutput {
             while (var1 > this.streamTimeMillis + 5000L) {
               this.skipSamples(256);
               this.streamTimeMillis = this.streamTimeMillis + (long)(256000 / sampleRate);
-              var1 = bb.monotonicTimeMillis(-1);
+              var1 = BoundaryLoopTracer.monotonicTimeMillis(-1);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.closed = false;
         this.activityBudget = 32;
-        this.streamTimeMillis = bb.monotonicTimeMillis(-1);
+        this.streamTimeMillis = BoundaryLoopTracer.monotonicTimeMillis(-1);
         this.priorityTails = new PcmStream[8];
         this.field_d = 0;
         this.field_u = 0;

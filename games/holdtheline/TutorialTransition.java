@@ -16,7 +16,7 @@ final class TutorialTransition {
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String normalizeDisplayName(CharSequence param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_2_0 = null;
@@ -30,7 +30,7 @@ final class TutorialTransition {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2 = EntitySound.a(true, ko.encodeBase37(param0, -13820));
+          var2 = EntitySound.decodeBase37DisplayName(true, ClientScreenRenderer.encodeBase37(param0, -13820));
           if (var2 == null) {
             var2 = "";
           }
@@ -83,11 +83,11 @@ final class TutorialTransition {
         this.field_c = 0;
     }
 
-    final static void a(int param0) {
+    final static void pushRasterTarget(int param0) {
         GrowableStringList.field_h[MidiPcmStream.field_F] = SoftwareRasterizer.pixels;
         OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F] = SoftwareRasterizer.clipLeft;
-        dm.field_b[MidiPcmStream.field_F] = SoftwareRasterizer.clipRight;
-        m.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.clipTop;
+        RasterStateRestoration.field_b[MidiPcmStream.field_F] = SoftwareRasterizer.clipRight;
+        RasterClipTopStack.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.clipTop;
         NanoTickClock.field_n[MidiPcmStream.field_F] = SoftwareRasterizer.clipBottom;
         TextFieldValidator.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.width;
         ValidationHelpWidget.field_V[MidiPcmStream.field_F] = SoftwareRasterizer.height;
@@ -97,25 +97,25 @@ final class TutorialTransition {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean readPacketPayload(byte param0) {
         if (param0 != 55) {
-          TutorialTransition.a((byte) 60);
+          TutorialTransition.readPacketPayload((byte) 60);
         }
-        if (ad.field_c == -1) {
+        if (ReflectionCheckSupport.field_c == -1) {
           if (!InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
             return false;
           }
-          ad.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -72);
+          ReflectionCheckSupport.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -72);
           RoadStripRenderer.field_e.position = 0;
         }
-        if (ad.field_c == -2) {
+        if (ReflectionCheckSupport.field_c == -2) {
           if (!InheritedWidgetStyle.readServerBytes(2, (byte) 40)) {
             return false;
           }
-          ad.field_c = RoadStripRenderer.field_e.readUnsignedShort(62);
+          ReflectionCheckSupport.field_c = RoadStripRenderer.field_e.readUnsignedShort(62);
           RoadStripRenderer.field_e.position = 0;
         }
-        return InheritedWidgetStyle.readServerBytes(ad.field_c, (byte) 40);
+        return InheritedWidgetStyle.readServerBytes(ReflectionCheckSupport.field_c, (byte) 40);
     }
 
     static {

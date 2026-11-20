@@ -54,13 +54,13 @@ abstract class LoginCredentials {
             var6_int = param0.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var3_int > var5; var5++) {
-                if (ClientException.a(48, param0.charAt(var5))) {
+                if (ClientException.isAsciiDigit(48, param0.charAt(var5))) {
                   continue;
                 }
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!MusicPatchEnvelope.a((CharSequence) ((Object) var7_ref_String), true)) {
+              if (!MusicPatchEnvelope.isDecimalInteger((CharSequence) ((Object) var7_ref_String), true)) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -87,13 +87,13 @@ abstract class LoginCredentials {
               return stackIn_26_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (ClientException.a(48, param0.charAt(var5Lifetime1))) {
+              if (ClientException.isAsciiDigit(48, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!MusicPatchEnvelope.a((CharSequence) ((Object) var9), true)) {
+            if (!MusicPatchEnvelope.isDecimalInteger((CharSequence) ((Object) var9), true)) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -128,7 +128,7 @@ abstract class LoginCredentials {
         }
     }
 
-    final static int a(byte param0, AccountFormText param1, AccountFormText param2) {
+    final static int checkAccountAvailability(byte param0, AccountFormText param1, AccountFormText param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -142,7 +142,7 @@ abstract class LoginCredentials {
         try {
           var3_int = -29 / ((-76 - param0) / 48);
           var4 = (String) null;
-          stackIn_1_0 = NetworkArchiveRequest.a(65500, 0, 0, param2, false, (String) null, param1);
+          stackIn_1_0 = NetworkArchiveRequest.processAccountRequest(65500, 0, 0, param2, false, (String) null, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ abstract class LoginCredentials {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isDisplayNameCharacter(char param0, byte param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -181,7 +181,7 @@ abstract class LoginCredentials {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (dg.isAsciiAlphanumeric((byte) 78, param0)) {
+          if (ClientMenuBootstrap.isAsciiAlphanumeric((byte) 78, param0)) {
             return true;
           }
           var6 = DualNodeHashTable.field_h;

@@ -15,7 +15,7 @@ abstract class ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 8192) {
-            stackIn_4_0 = ne.a(param0, 0, false);
+            stackIn_4_0 = TextSyntax.hasValidAccountCharacters(param0, 0, false);
             return stackIn_4_0;
           }
           return false;

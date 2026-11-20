@@ -25,7 +25,7 @@ final class QuadraticPointPath extends PointPath {
         return new Point2i(var3Lifetime1, var4Lifetime1);
     }
 
-    final static void b(byte param0) {
+    final static void showFullscreenOptions(byte param0) {
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_23_0 = 0;
@@ -34,40 +34,40 @@ final class QuadraticPointPath extends PointPath {
         GrowableObjectList var2;
         var1 = 0;
         if (param0 > 101) {
-          if (SecondaryNodeDeque.d(0)) {
+          if (SecondaryNodeDeque.isFreeAccount(0)) {
             var1 = 1;
           } else {
-            if (of.a(-969)) {
-              if (!ProxySocketConnector.isFullscreenSupported(wi.field_b, 0)) {
+            if (SubscriberAccessChecks.hasSubscriberAccess(-969)) {
+              if (!ProxySocketConnector.isFullscreenSupported(LoginCredentialsFactory.field_b, 0)) {
                 stackIn_23_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
                 var1 = stackIn_23_0;
               } else {
-                AgeValidator.a(-29486, true);
+                AgeValidator.setFullscreenEnabled(-29486, true);
                 stackIn_27_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
                 var1 = stackIn_27_0;
               }
             }
           }
-          pe.a(var1, true, (byte) -107);
+          ScreenOptionsMenu.showScreenOptions(var1, true, (byte) -107);
           return;
         }
         var2 = (GrowableObjectList) null;
-        QuadraticPointPath.a(-1.8653900623321533f, -111, (GrowableObjectList) null, (byte) 86, 0.6255527138710022f, (GrowableObjectList) null);
-        if (SecondaryNodeDeque.d(0)) {
+        QuadraticPointPath.appendIntersectionPair(-1.8653900623321533f, -111, (GrowableObjectList) null, (byte) 86, 0.6255527138710022f, (GrowableObjectList) null);
+        if (SecondaryNodeDeque.isFreeAccount(0)) {
           var1 = 1;
         } else {
-          if (of.a(-969)) {
-            if (!ProxySocketConnector.isFullscreenSupported(wi.field_b, 0)) {
+          if (SubscriberAccessChecks.hasSubscriberAccess(-969)) {
+            if (!ProxySocketConnector.isFullscreenSupported(LoginCredentialsFactory.field_b, 0)) {
               stackIn_13_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
               var1 = stackIn_13_0;
             } else {
-              AgeValidator.a(-29486, true);
+              AgeValidator.setFullscreenEnabled(-29486, true);
               stackIn_9_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
               var1 = stackIn_9_0;
             }
           }
         }
-        pe.a(var1, true, (byte) -107);
+        ScreenOptionsMenu.showScreenOptions(var1, true, (byte) -107);
         return;
     }
 
@@ -96,7 +96,7 @@ final class QuadraticPointPath extends PointPath {
         return true;
     }
 
-    final static int a(int param0, int param1) {
+    final static int sinFixed2048(int param0, int param1) {
         if (param1 != 2) {
           field_j = (ResourceArchive) null;
           return TriangleRasterState.field_e[param0 & 2047];
@@ -104,7 +104,7 @@ final class QuadraticPointPath extends PointPath {
         return TriangleRasterState.field_e[param0 & 2047];
     }
 
-    final static void a(float param0, int param1, GrowableObjectList param2, byte param3, float param4, GrowableObjectList param5) {
+    final static void appendIntersectionPair(float param0, int param1, GrowableObjectList param2, byte param3, float param4, GrowableObjectList param5) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

@@ -33,8 +33,8 @@ final class InputValidationError {
           try {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param2);
-              var3 = IntrusiveDeque.a(var3, param1, (byte) 73);
-              ba.openExternalUrl(-7235, var3.toString(), true, param1);
+              var3 = IntrusiveDeque.adjustAppletUrl(var3, param1, (byte) 73);
+              AccountNameNormalizer.openExternalUrl(-7235, var3.toString(), true, param1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref2 = (Exception) (Object) decompiledCaughtException;

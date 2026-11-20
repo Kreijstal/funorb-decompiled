@@ -21,9 +21,9 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         TextWidgetStyle var1 = new TextWidgetStyle(SpriteButtonRenderer.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(LoadProgressDialog.field_ib, var1, (WidgetListener) null);
         this.field_M = new TextButton(FullscreenErrorReason.field_d, (WidgetListener) null);
-        this.field_N = new TextButton(hh.field_b, (WidgetListener) null);
+        this.field_N = new TextButton(HoverTargetState.field_b, (WidgetListener) null);
         this.displayNameField.tooltip = PolarSortVector.field_f;
-        this.displayNameField.a((byte) 42, new DisplayNameValidator(this.displayNameField));
+        this.displayNameField.setValidator((byte) 42, new DisplayNameValidator(this.displayNameField));
         this.field_M.field_D = false;
         this.field_M.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
         this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
@@ -98,19 +98,19 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         DelayedServerPacket.field_k = false;
         FullscreenDisplayMode.field_c = null;
         if (ArchiveCatalog.field_o) {
-          RoadControlPointSpec.field_c.o(-41);
+          RoadControlPointSpec.field_c.showConnectionRestored(-41);
         } else {
-          var2 = q.field_c;
+          var2 = PlayerDataProtocol.field_c;
           if (var2 > 0) {
             if (var2 == 1) {
               FullscreenDisplayMode.field_c = LeaderboardPlayer.field_c;
             } else {
               FullscreenDisplayMode.field_c = LoginCredentials.substituteIndexedTokens(FullscreenErrorReason.field_c, new String[]{Integer.toString(var2)}, true);
             }
-            FullscreenDisplayMode.field_c = CacheEntry.a((byte) -54, new CharSequence[]{(CharSequence) ((Object) FullscreenDisplayMode.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedRandomAccessFile.field_q)});
+            FullscreenDisplayMode.field_c = CacheEntry.joinText((byte) -54, new CharSequence[]{(CharSequence) ((Object) FullscreenDisplayMode.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedRandomAccessFile.field_q)});
           }
-          RoadControlPointSpec.field_c.h((byte) -57);
-          TutorialPage.a((byte) -124);
+          RoadControlPointSpec.field_c.closeProgressDialog((byte) -57);
+          TutorialPage.showLoadProgressDialog((byte) -124);
         }
     }
 
@@ -209,11 +209,11 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
           return;
         }
         if (param0 == 200) {
-          ValidatedTextField.a(this.displayNameField.text, -115);
+          ValidatedTextField.submitDisplayName(this.displayNameField.text, -115);
           return;
         }
         field_L = 46;
-        ValidatedTextField.a(this.displayNameField.text, -115);
+        ValidatedTextField.submitDisplayName(this.displayNameField.text, -115);
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -227,7 +227,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             DisplayNameForm.clearSharedReferences(-28);
           }
           if (this.field_N == param1) {
-            TextButton.h(84);
+            TextButton.showEmptyLoginForm(84);
             return;
           }
           if (this.field_M != param1) {
@@ -290,12 +290,12 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qg.decodeArchivedSpriteSheet(param0, param1, (byte) -27, param2)) {
+          if (!TexturedPolygonRenderer.decodeArchivedSpriteSheet(param0, param1, (byte) -27, param2)) {
             stackIn_2_0 = null;
             return (IndexedSprite) (stackIn_2_0);
           }
           if (param3 == 25) {
-            stackIn_7_0 = fc.buildDecodedIndexedSprite(true);
+            stackIn_7_0 = BoundaryIntervalBuilder.buildDecodedIndexedSprite(true);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite) null;

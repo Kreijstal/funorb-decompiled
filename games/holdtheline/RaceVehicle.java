@@ -404,7 +404,7 @@ final class RaceVehicle extends MovingEntity {
               }
             }
             if ((decompiledFrameRemainder4) && (null == this.lastProjectile ||
-              SolidRoadStripRenderer.b(2, 250) == 0)) {
+              SolidRoadStripRenderer.nextRandomInt(2, 250) == 0)) {
               var12 = 1;
               var14_ref_wm = (TrackObject) (MusicPatchPcmStream.field_r.dynamicObjects.first((byte) 115));
               scanLoop6: while (true) {
@@ -447,7 +447,7 @@ final class RaceVehicle extends MovingEntity {
           this.field_jb = true;
           if (this.specialPowerup != param0 &&
             this.lifeState == 0) {
-            param1 = (int)((float)param1 * this.getDefenseMultiplier((byte) 105, il.field_d));
+            param1 = (int)((float)param1 * this.getDefenseMultiplier((byte) 105, LeaderboardRequests.field_d));
             if (HoldTheLine.field_D != 0) {
               this.field_jb = false;
             }
@@ -528,11 +528,11 @@ final class RaceVehicle extends MovingEntity {
           this.dropPowerups(3, -1065046232);
           this.deaths = this.deaths + 1;
           this.specialPowerup = -1;
-          ValidationHelpWidget.a((byte) 4, (MovingEntity) (this), PolarSortVector.field_g, PolarSortVector.field_g.field_q);
+          ValidationHelpWidget.playEntitySound((byte) 4, (MovingEntity) (this), PolarSortVector.field_g, PolarSortVector.field_g.field_q);
           this.stopSounds((byte) 116);
-          ArchiveIndex.a(0, this.position.y, 0, 128, 1, -1, this.position.x, 3, MusicPatchPcmStream.field_r.lightParticles, 16777215, 0, 32, 400);
-          ArchiveIndex.a(0, this.position.y, 0, 128, 1, -4, this.position.x, 3, MusicPatchPcmStream.field_r.lightParticles, 16777215, 0, 128, 60);
-          ArchiveIndex.a(0, this.position.y, 0, 128, 1, -8, this.position.x, 3, MusicPatchPcmStream.field_r.lightParticles, 16777215, 0, 255, 20);
+          ArchiveIndex.createParticle(0, this.position.y, 0, 128, 1, -1, this.position.x, 3, MusicPatchPcmStream.field_r.lightParticles, 16777215, 0, 32, 400);
+          ArchiveIndex.createParticle(0, this.position.y, 0, 128, 1, -4, this.position.x, 3, MusicPatchPcmStream.field_r.lightParticles, 16777215, 0, 128, 60);
+          ArchiveIndex.createParticle(0, this.position.y, 0, 128, 1, -8, this.position.x, 3, MusicPatchPcmStream.field_r.lightParticles, 16777215, 0, 255, 20);
           if (this.lifeState != 0) {
             this.lifeState = 2;
             decompiledFrameRemainder0 = (var4 != 0);
@@ -914,7 +914,7 @@ final class RaceVehicle extends MovingEntity {
               if (this.idleEngineSound != null) {
                 NanoTickClock.removeEntitySound(true, this.idleEngineSound);
               }
-              this.idleEngineSound = ValidationHelpWidget.a((byte) 3, (MovingEntity) (this), this.definition.field_L, this.definition.field_L.field_q);
+              this.idleEngineSound = ValidationHelpWidget.playEntitySound((byte) 3, (MovingEntity) (this), this.definition.field_L, this.definition.field_L.field_q);
               this.idleEngineSound.field_o.setSamplePosition(var2_int);
               this.idleEngineSound.field_o.setLoopCount(-1);
               this.field_I = false;
@@ -942,8 +942,8 @@ final class RaceVehicle extends MovingEntity {
             if (this.field_I) {
               if (this.engineSound.field_o.getSamplePosition() > this.definition.field_u.field_m &&
                 0.0f != this.forwardSpeed &&
-                SolidRoadStripRenderer.b(2, 50) == 0) {
-                this.engineSound.field_o.setSamplePosition((this.definition.field_u.field_m + SolidRoadStripRenderer.b(2, this.definition.field_u.field_m)) / 2);
+                SolidRoadStripRenderer.nextRandomInt(2, 50) == 0) {
+                this.engineSound.field_o.setSamplePosition((this.definition.field_u.field_m + SolidRoadStripRenderer.nextRandomInt(2, this.definition.field_u.field_m)) / 2);
               }
               if (this.field_Vb < 8) {
                 this.field_Vb = this.field_Vb + 1;
@@ -981,7 +981,7 @@ final class RaceVehicle extends MovingEntity {
               if (this.engineSound != null) {
                 NanoTickClock.removeEntitySound(true, this.engineSound);
               }
-              this.engineSound = ValidationHelpWidget.a((byte) 114, (MovingEntity) (this), this.definition.field_u, this.definition.field_u.field_q);
+              this.engineSound = ValidationHelpWidget.playEntitySound((byte) 114, (MovingEntity) (this), this.definition.field_u, this.definition.field_u.field_q);
               this.engineSound.field_o.setSamplePosition(var2_intLifetime1);
               this.engineSound.field_o.setLoopCount(-1);
               this.field_I = true;
@@ -993,7 +993,7 @@ final class RaceVehicle extends MovingEntity {
                 this.field_Kb = this.field_Kb + 1;
               }
               if (this.field_Z == null) {
-                this.field_Z = ValidationHelpWidget.a((byte) 5, (MovingEntity) (this), Point2i.field_c, this.field_Kb * Point2i.field_c.field_q >> 4);
+                this.field_Z = ValidationHelpWidget.playEntitySound((byte) 5, (MovingEntity) (this), Point2i.field_c, this.field_Kb * Point2i.field_c.field_q >> 4);
                 this.field_Z.field_o.setLoopCount(-1);
                 if (var3 != 0) {
                   this.field_Z.field_n = this.field_Kb * Point2i.field_c.field_q >> 4;
@@ -1039,7 +1039,7 @@ final class RaceVehicle extends MovingEntity {
               if (null != this.field_ub) {
                 this.field_ub.field_n = this.field_dc * var2.field_q >> 4;
                 if (var3 != 0) {
-                  this.field_ub = ValidationHelpWidget.a((byte) 38, (MovingEntity) (this), var2, this.field_dc * var2.field_q >> 4);
+                  this.field_ub = ValidationHelpWidget.playEntitySound((byte) 38, (MovingEntity) (this), var2, this.field_dc * var2.field_q >> 4);
                   this.field_ub.field_o.setLoopCount(-1);
                   if (this.field_dc > 0) {
                     this.field_dc = this.field_dc - 1;
@@ -1049,7 +1049,7 @@ final class RaceVehicle extends MovingEntity {
                   }
                 }
               } else {
-                this.field_ub = ValidationHelpWidget.a((byte) 38, (MovingEntity) (this), var2, this.field_dc * var2.field_q >> 4);
+                this.field_ub = ValidationHelpWidget.playEntitySound((byte) 38, (MovingEntity) (this), var2, this.field_dc * var2.field_q >> 4);
                 this.field_ub.field_o.setLoopCount(-1);
                 if (var3 != 0) {
                   if (this.field_dc > 0) {
@@ -1079,7 +1079,7 @@ final class RaceVehicle extends MovingEntity {
               this.field_gc = this.field_gc + 1;
             }
             if (null == this.field_fb) {
-              this.field_fb = ValidationHelpWidget.a((byte) 109, (MovingEntity) (this), StrongCacheEntry.field_s, this.field_gc * StrongCacheEntry.field_s.field_q >> 4);
+              this.field_fb = ValidationHelpWidget.playEntitySound((byte) 109, (MovingEntity) (this), StrongCacheEntry.field_s, this.field_gc * StrongCacheEntry.field_s.field_q >> 4);
               this.field_fb.field_o.setLoopCount(-1);
               if (var3 == 0) {
                 return;
@@ -1174,11 +1174,11 @@ final class RaceVehicle extends MovingEntity {
           var12 = param2 / var10;
           if (var12 + var8 < 1.0f) {
             this.plannedEndSegment = var7;
-            var6.add(hk.a(ao.a(var8, true, var9, var12 + var8), 1, false), (byte) 6);
+            var6.add(RoadControlPathBuilder.buildControlPath(BoundaryLoopClipper.sliceRoadSegment(var8, true, var9, var12 + var8), 1, false), (byte) 6);
             decompiledFrameRemainder0 = (var17 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var6.add(hk.a(NameRequestState.tailOfRoadSegment(var9, var8, (byte) -97), 1, false), (byte) 6);
+            var6.add(RoadControlPathBuilder.buildControlPath(NameRequestState.tailOfRoadSegment(var9, var8, (byte) -97), 1, false), (byte) 6);
             param2 = param2 - var10 * (-var8 + 1.0f);
             if (0.0f < param2) {
               var13 = (var7 + 1) % var5.length;
@@ -1187,7 +1187,7 @@ final class RaceVehicle extends MovingEntity {
               while (true) {
                 if (var15 <= param2) {
                   param2 = param2 - var15;
-                  var6.add(hk.a(var14, 1, false), (byte) 6);
+                  var6.add(RoadControlPathBuilder.buildControlPath(var14, 1, false), (byte) 6);
                   var13++;
                   if (var17 == 0) {
                     if (~var13 == ~var5.length) {
@@ -1203,7 +1203,7 @@ final class RaceVehicle extends MovingEntity {
                 break;
               }
               var16 = param2 / var15;
-              var6.add(hk.a(WidgetStyleNode.prefixOfRoadSegment(false, var16, var14), 1, false), (byte) 6);
+              var6.add(RoadControlPathBuilder.buildControlPath(WidgetStyleNode.prefixOfRoadSegment(false, var16, var14), 1, false), (byte) 6);
             }
           }
           stackIn_38_0 = var6;
@@ -1393,7 +1393,7 @@ final class RaceVehicle extends MovingEntity {
                   this.powerupLevels[1] != 3 &&
                   3 != this.powerupLevels[2]) &&
                   (decompiledFrameRemainder1 = !(this.field_fc >= (-30 + MusicPatchPcmStream.field_r.raceTicks)))) {
-                  ad.playSample(255, 64, DualNodeHashTable.field_b);
+                  ReflectionCheckSupport.playSample(255, 64, DualNodeHashTable.field_b);
                   this.field_fc = MusicPatchPcmStream.field_r.raceTicks;
                   decompiledFrameRemainder1 = (var9 != 0);
                 }
@@ -1407,7 +1407,7 @@ final class RaceVehicle extends MovingEntity {
                     }
                     this.field_lb = new TrackObject(this.position, 11, this.layer, this.heading, this.direction.x * 55.0f + this.velocityX, this.velocityY + 55.0f * this.direction.y);
                     this.field_lb.flags = this.field_lb.flags | this.playerIndex;
-                    ValidationHelpWidget.a((byte) 117, this.field_lb, ValidatedTextField.field_T, ValidatedTextField.field_T.field_q);
+                    ValidationHelpWidget.playEntitySound((byte) 117, this.field_lb, ValidatedTextField.field_T, ValidatedTextField.field_T.field_q);
                     MusicPatchPcmStream.field_r.resultObjects.addLast((byte) -112, this.field_lb);
                     this.weaponCooldown = 0;
                     decompiledFrameRemainder0 = (var9 != 0);
@@ -1420,13 +1420,13 @@ final class RaceVehicle extends MovingEntity {
                         if (var9 != 0) {
                           this.specialPowerupTicks = 250;
                           this.specialPowerup = 1;
-                          ValidationHelpWidget.a((byte) 84, (MovingEntity) (this), pe.field_b, pe.field_b.field_q);
+                          ValidationHelpWidget.playEntitySound((byte) 84, (MovingEntity) (this), ScreenOptionsMenu.field_b, ScreenOptionsMenu.field_b.field_q);
                         }
                       }
                     } else {
                       this.specialPowerupTicks = 250;
                       this.specialPowerup = 1;
-                      ValidationHelpWidget.a((byte) 84, (MovingEntity) (this), pe.field_b, pe.field_b.field_q);
+                      ValidationHelpWidget.playEntitySound((byte) 84, (MovingEntity) (this), ScreenOptionsMenu.field_b, ScreenOptionsMenu.field_b.field_q);
                     }
                   }
                   var3_int = 0;
@@ -1440,8 +1440,8 @@ final class RaceVehicle extends MovingEntity {
                     }
                     var6 = stackIn_164_0;
                     do {
-                      var4_int = SolidRoadStripRenderer.b(2, 640);
-                      var5 = SolidRoadStripRenderer.b(2, 480);
+                      var4_int = SolidRoadStripRenderer.nextRandomInt(2, 640);
+                      var5 = SolidRoadStripRenderer.nextRandomInt(2, 480);
                       var6 = MusicPatchPcmStream.field_r.getRoadLayerMask(var5, var4_int, param0 ^ 1217);
                       stackIn_125_0 = -1;
                     } while (stackIn_125_0 == ~var6);
@@ -1502,7 +1502,7 @@ final class RaceVehicle extends MovingEntity {
                   this.lastProjectile = new TrackObject(this.position, 9, this.layer, this.heading, this.velocityX - this.direction.x * 50.0f, -(this.direction.y * 50.0f) + this.velocityY);
                   this.lastProjectile.flags = this.lastProjectile.flags | this.playerIndex;
                   this.lastProjectile.setAnimation(SoundPlayback.field_i, 90);
-                  ValidationHelpWidget.a((byte) 91, this.lastProjectile, ArchiveLoadStage.field_i, ArchiveLoadStage.field_i.field_q);
+                  ValidationHelpWidget.playEntitySound((byte) 91, this.lastProjectile, ArchiveLoadStage.field_i, ArchiveLoadStage.field_i.field_q);
                   MusicPatchPcmStream.field_r.resultObjects.addLast((byte) -94, this.lastProjectile);
                   this.weaponCooldown = 0;
                 }
@@ -1519,7 +1519,7 @@ final class RaceVehicle extends MovingEntity {
                 this.lastProjectile = new TrackObject(this.position, 9, this.layer, this.heading, this.velocityX - this.direction.x * 50.0f, -(this.direction.y * 50.0f) + this.velocityY);
                 this.lastProjectile.flags = this.lastProjectile.flags | this.playerIndex;
                 this.lastProjectile.setAnimation(SoundPlayback.field_i, 90);
-                ValidationHelpWidget.a((byte) 91, this.lastProjectile, ArchiveLoadStage.field_i, ArchiveLoadStage.field_i.field_q);
+                ValidationHelpWidget.playEntitySound((byte) 91, this.lastProjectile, ArchiveLoadStage.field_i, ArchiveLoadStage.field_i.field_q);
                 MusicPatchPcmStream.field_r.resultObjects.addLast((byte) -94, this.lastProjectile);
                 this.weaponCooldown = 0;
               }
@@ -1534,13 +1534,13 @@ final class RaceVehicle extends MovingEntity {
               this.field_vc = null;
               if ((var9 != 0) &&
                 (null == this.field_vc)) {
-                this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), RoadFillRenderer.field_b, RoadFillRenderer.field_b.field_q);
+                this.field_vc = ValidationHelpWidget.playEntitySound((byte) 13, (MovingEntity) (this), RoadFillRenderer.field_b, RoadFillRenderer.field_b.field_q);
                 this.field_vc.field_o.setLoopCount(-1);
               }
             }
           } else {
             if (null == this.field_vc) {
-              this.field_vc = ValidationHelpWidget.a((byte) 13, (MovingEntity) (this), RoadFillRenderer.field_b, RoadFillRenderer.field_b.field_q);
+              this.field_vc = ValidationHelpWidget.playEntitySound((byte) 13, (MovingEntity) (this), RoadFillRenderer.field_b, RoadFillRenderer.field_b.field_q);
               this.field_vc.field_o.setLoopCount(-1);
             }
           }
@@ -1820,7 +1820,7 @@ final class RaceVehicle extends MovingEntity {
             var10 = var10 * 3.0f;
           }
           var12 = this.definition.field_w;
-          var12 = var12 * this.getDefenseMultiplier((byte) 115, oi.field_c);
+          var12 = var12 * this.getDefenseMultiplier((byte) 115, HoverTooltipController.field_c);
           var13 = var4 * (this.definition.field_I * this.brake) * DualLinkNode.signumFloat(-29407, this.forwardSpeed);
           var14 = 0.0f;
           var15 = 0.0f;
@@ -1864,8 +1864,8 @@ final class RaceVehicle extends MovingEntity {
                     var16Lifetime1 = var16Lifetime1 * DisplayNameForm.field_J[var18];
                     var17 = var17 * DisplayNameForm.field_J[var19];
                     if (var32 != 0) {
-                      var17 = var17 * qg.field_c[var19];
-                      var16Lifetime1 = var16Lifetime1 * qg.field_c[var18];
+                      var17 = var17 * TexturedPolygonRenderer.field_c[var19];
+                      var16Lifetime1 = var16Lifetime1 * TexturedPolygonRenderer.field_c[var18];
                     }
                   }
                 }
@@ -1873,13 +1873,13 @@ final class RaceVehicle extends MovingEntity {
                 var16Lifetime1 = var16Lifetime1 * DisplayNameForm.field_J[var18];
                 var17 = var17 * DisplayNameForm.field_J[var19];
                 if (var32 != 0) {
-                  var17 = var17 * qg.field_c[var19];
-                  var16Lifetime1 = var16Lifetime1 * qg.field_c[var18];
+                  var17 = var17 * TexturedPolygonRenderer.field_c[var19];
+                  var16Lifetime1 = var16Lifetime1 * TexturedPolygonRenderer.field_c[var18];
                 }
               }
             } else {
-              var17 = var17 * qg.field_c[var19];
-              var16Lifetime1 = var16Lifetime1 * qg.field_c[var18];
+              var17 = var17 * TexturedPolygonRenderer.field_c[var19];
+              var16Lifetime1 = var16Lifetime1 * TexturedPolygonRenderer.field_c[var18];
             }
           }
           this.field_ec = Math.abs(var7) / var16Lifetime1;
@@ -2259,7 +2259,7 @@ final class RaceVehicle extends MovingEntity {
           var8 = (int)(param1.y * param0) + param4;
           stackIn_5_0 = (var6_int != 0) ? 100 : 50;
           var9 = stackIn_5_0;
-          qg.a(3, this.layer, var7, 255, 16777215, MusicPatchPcmStream.field_r.trailParticles, 5, -204, var8, 0, (byte) 124);
+          TexturedPolygonRenderer.spawnParticle(3, this.layer, var7, 255, 16777215, MusicPatchPcmStream.field_r.trailParticles, 5, -204, var8, 0, (byte) 124);
           var10 = (int)(param0 / (float)var9);
           var11 = (int)(256.0f * param1.x);
           var12 = -120 % ((-44 - param3) / 57);
@@ -2275,14 +2275,14 @@ final class RaceVehicle extends MovingEntity {
               return;
             }
             if (var6_int == 0) {
-              qg.a(0, this.layer, var19, 255, 16776960, MusicPatchPcmStream.field_r.trailParticles, 5, -204, var20, 0, (byte) -127);
+              TexturedPolygonRenderer.spawnParticle(0, this.layer, var19, 255, 16776960, MusicPatchPcmStream.field_r.trailParticles, 5, -204, var20, 0, (byte) -127);
             } else {
-              var21 = SolidRoadStripRenderer.b(2, 128);
+              var21 = SolidRoadStripRenderer.nextRandomInt(2, 128);
               var22 = (-var21 + 256) * (16711935 & this.field_Eb) & -16711936 | 16711680 & (-var21 + 256) * (this.field_Eb & 65280);
               var22 = var22 + (16711680 & 65280 * var21 | -16711936 & var21 * 16711935);
-              var23 = var11 + dg.randomIntInclusive(-var14, -1, var14);
-              var24 = dg.randomIntInclusive(-var15, -1, var15) + var13;
-              ArchiveIndex.a(var23, var20, -512, 16, 1, -4, var19, this.layer, MusicPatchPcmStream.field_r.sparkParticles, var22 >>> 8, var24, 255, 4);
+              var23 = var11 + ClientMenuBootstrap.randomIntInclusive(-var14, -1, var14);
+              var24 = ClientMenuBootstrap.randomIntInclusive(-var15, -1, var15) + var13;
+              ArchiveIndex.createParticle(var23, var20, -512, 16, 1, -4, var19, this.layer, MusicPatchPcmStream.field_r.sparkParticles, var22 >>> 8, var24, 255, 4);
             }
             var16++;
           }
@@ -2551,14 +2551,14 @@ final class RaceVehicle extends MovingEntity {
                 return;
               }
               if (MusicPatchPcmStream.field_r.courseTheme == 0) {
-                var9 = 256 * (SolidRoadStripRenderer.b(2, 192) + 64);
+                var9 = 256 * (SolidRoadStripRenderer.nextRandomInt(2, 192) + 64);
               } else if (MusicPatchPcmStream.field_r.courseTheme != 1) {
-                var9 = (128 | SolidRoadStripRenderer.b(2, 128)) * 65793;
+                var9 = (128 | SolidRoadStripRenderer.nextRandomInt(2, 128)) * 65793;
               } else {
                 var9 = 12888928;
-                var9 = var9 + 65792 * SolidRoadStripRenderer.b(2, 32);
+                var9 = var9 + 65792 * SolidRoadStripRenderer.nextRandomInt(2, 32);
               }
-              ArchiveIndex.a(var5, param1, 0, 16, 1, -16, param2, this.layer, MusicPatchPcmStream.field_r.trailParticles, var9, var6, 128, 0);
+              ArchiveIndex.createParticle(var5, param1, 0, 16, 1, -16, param2, this.layer, MusicPatchPcmStream.field_r.trailParticles, var9, var6, 128, 0);
               var4_int++;
             }
           }
@@ -2778,14 +2778,14 @@ final class RaceVehicle extends MovingEntity {
           boolean decompiledSharedTail0 = !(!(0.0f < var8 - var12));
           if (!decompiledSharedTail0) {
             param2 = param2 - var10 * var8;
-            var6.add(hk.a(ao.a(var8, true, var9, 0.0f), 1, false), (byte) 6);
+            var6.add(RoadControlPathBuilder.buildControlPath(BoundaryLoopClipper.sliceRoadSegment(var8, true, var9, 0.0f), 1, false), (byte) 6);
             var13 = (-1 + (var7 + var5.length)) % var5.length;
             var14 = var5[var13];
             var15 = var14.length(50);
             while (true) {
               if (var15 <= param2) {
                 param2 = param2 - var15;
-                var6.add(hk.a(var14, 1, false), (byte) 6);
+                var6.add(RoadControlPathBuilder.buildControlPath(var14, 1, false), (byte) 6);
                 if (var17 == 0) {
                   var13--;
                   if (var13 < 0) {
@@ -2801,12 +2801,12 @@ final class RaceVehicle extends MovingEntity {
               break;
             }
             var16 = 1.0f - param2 / var15;
-            var6.add(hk.a(ao.a(1.0f, true, var14, var16), 1, false), (byte) 6);
+            var6.add(RoadControlPathBuilder.buildControlPath(BoundaryLoopClipper.sliceRoadSegment(1.0f, true, var14, var16), 1, false), (byte) 6);
             decompiledSharedTail0 = (var17 != 0);
           }
           if (decompiledSharedTail0) {
             this.plannedEndSegment = var7;
-            var6.add(hk.a(ao.a(var8, true, var9, -var12 + var8), 1, false), (byte) 6);
+            var6.add(RoadControlPathBuilder.buildControlPath(BoundaryLoopClipper.sliceRoadSegment(var8, true, var9, -var12 + var8), 1, false), (byte) 6);
           }
           stackIn_33_0 = var6;
           return stackIn_33_0;
@@ -3009,8 +3009,8 @@ final class RaceVehicle extends MovingEntity {
           if (this.field_Cb) {
             var14 = var14 * 3.0f;
           }
-          var15 = this.definition.field_e * this.getDefenseMultiplier((byte) 125, oi.field_c);
-          var16 = this.definition.field_w * this.getDefenseMultiplier((byte) 101, oi.field_c);
+          var15 = this.definition.field_e * this.getDefenseMultiplier((byte) 125, HoverTooltipController.field_c);
+          var16 = this.definition.field_w * this.getDefenseMultiplier((byte) 101, HoverTooltipController.field_c);
           var17 = var8 * (this.brake * this.definition.field_I) * DualLinkNode.signumFloat(-29407, this.forwardSpeed);
           var18 = 0.0f;
           var19 = 0.0f;
@@ -3041,18 +3041,18 @@ final class RaceVehicle extends MovingEntity {
                 if (var34 != 0) {
                   var20Lifetime1 = var20Lifetime1 * DisplayNameForm.field_J[var22];
                   if (var34 != 0) {
-                    var20Lifetime1 = var20Lifetime1 * qg.field_c[var22];
+                    var20Lifetime1 = var20Lifetime1 * TexturedPolygonRenderer.field_c[var22];
                   }
                 }
               }
             } else {
               var20Lifetime1 = var20Lifetime1 * DisplayNameForm.field_J[var22];
               if (var34 != 0) {
-                var20Lifetime1 = var20Lifetime1 * qg.field_c[var22];
+                var20Lifetime1 = var20Lifetime1 * TexturedPolygonRenderer.field_c[var22];
               }
             }
           } else {
-            var20Lifetime1 = var20Lifetime1 * qg.field_c[var22];
+            var20Lifetime1 = var20Lifetime1 * TexturedPolygonRenderer.field_c[var22];
           }
           this.field_ec = Math.abs(var11) / var20Lifetime1;
           if (1.0f < this.field_ec) {
@@ -4230,29 +4230,29 @@ final class RaceVehicle extends MovingEntity {
               MusicPatchPcmStream.field_r.raceTicks % 2 == 0) {
               var3 = this.position.x - (int)((float)this.definition.halfLength * this.direction.x);
               var4 = this.position.y - (int)(this.direction.y * (float)this.definition.halfLength);
-              ArchiveIndex.a((int)(-this.direction.x * 1024.0f), var4, 1, 32, 1, -16, var3, this.layer, MusicPatchPcmStream.field_r.trailParticles, 0, (int)(-this.direction.y * 1024.0f), 128, 2);
+              ArchiveIndex.createParticle((int)(-this.direction.x * 1024.0f), var4, 1, 32, 1, -16, var3, this.layer, MusicPatchPcmStream.field_r.trailParticles, 0, (int)(-this.direction.y * 1024.0f), 128, 2);
             }
             if (this.powerupLevels[1] >= 2 &&
               this.specialPowerup != 1) {
               var3Lifetime3 = -(int)(this.direction.x * (float)this.definition.halfLength) + this.position.x;
               var4Lifetime4 = -(int)(this.direction.y * (float)this.definition.halfLength) + this.position.y;
               if (MusicPatchPcmStream.field_r.raceTicks % 2 == 0) {
-                ArchiveIndex.a((int)(-this.direction.x * 2048.0f), var4Lifetime4, 1, 32, 1, -8, var3Lifetime3, this.layer, MusicPatchPcmStream.field_r.trailParticles, 12632256, (int)(2048.0f * -this.direction.y), 64, 4);
+                ArchiveIndex.createParticle((int)(-this.direction.x * 2048.0f), var4Lifetime4, 1, 32, 1, -8, var3Lifetime3, this.layer, MusicPatchPcmStream.field_r.trailParticles, 12632256, (int)(2048.0f * -this.direction.y), 64, 4);
               }
-              ArchiveIndex.a((int)(-this.direction.x * 1024.0f), var4Lifetime4, 0, 16, 1, -16, var3Lifetime3, this.layer, MusicPatchPcmStream.field_r.trailParticles, 8388352, (int)(-this.direction.y * 1024.0f), 128, 2);
+              ArchiveIndex.createParticle((int)(-this.direction.x * 1024.0f), var4Lifetime4, 0, 16, 1, -16, var3Lifetime3, this.layer, MusicPatchPcmStream.field_r.trailParticles, 8388352, (int)(-this.direction.y * 1024.0f), 128, 2);
             }
             if (this.specialPowerup == 1) {
               var3Lifetime4 = -(int)(this.direction.x * (float)this.definition.halfLength) + this.position.x;
               var4Lifetime5 = this.position.y - (int)(this.direction.y * (float)this.definition.halfLength);
               if (MusicPatchPcmStream.field_r.raceTicks % 2 == 0) {
-                ArchiveIndex.a((int)(-this.direction.x * 2048.0f), var4Lifetime5, 1, 64, 1, -2, var3Lifetime4, this.layer, MusicPatchPcmStream.field_r.trailParticles, 12632256, (int)(2048.0f * -this.direction.y), 32, 8);
+                ArchiveIndex.createParticle((int)(-this.direction.x * 2048.0f), var4Lifetime5, 1, 64, 1, -2, var3Lifetime4, this.layer, MusicPatchPcmStream.field_r.trailParticles, 12632256, (int)(2048.0f * -this.direction.y), 32, 8);
               }
               var5 = (int)(-this.direction.x * 1024.0f);
               var6 = (int)(1024.0f * -this.direction.y);
-              var5 = var5 + (-256 + SolidRoadStripRenderer.b(2, 512));
-              var6 = var6 + (-256 + SolidRoadStripRenderer.b(2, 512));
-              var7 = (369164160 | SolidRoadStripRenderer.b(2, 128)) << 8;
-              ArchiveIndex.a(var5, var4Lifetime5, 0, 16, 1, -16, var3Lifetime4, this.layer, MusicPatchPcmStream.field_r.trailParticles, var7, var6, 128, 2);
+              var5 = var5 + (-256 + SolidRoadStripRenderer.nextRandomInt(2, 512));
+              var6 = var6 + (-256 + SolidRoadStripRenderer.nextRandomInt(2, 512));
+              var7 = (369164160 | SolidRoadStripRenderer.nextRandomInt(2, 128)) << 8;
+              ArchiveIndex.createParticle(var5, var4Lifetime5, 0, 16, 1, -16, var3Lifetime4, this.layer, MusicPatchPcmStream.field_r.trailParticles, var7, var6, 128, 2);
             }
           }
           stackIn_33_0 = (this.specialPowerup != 1) ? 0 : 1;
@@ -4289,8 +4289,8 @@ final class RaceVehicle extends MovingEntity {
               stackIn_56_2 = this.direction.x;
             }
             var6Lifetime1Lifetime1 = stackIn_55_0 + (int)(stackIn_55_1 * stackIn_56_2);
-            var7 = 16744448 | SolidRoadStripRenderer.b(2, 128) << 8;
-            ArchiveIndex.a(var5Lifetime1Lifetime1, var4Lifetime1, 0, 16, 1, -16, var3Lifetime1, this.layer, MusicPatchPcmStream.field_r.trailParticles, var7, var6Lifetime1Lifetime1, 128, 2);
+            var7 = 16744448 | SolidRoadStripRenderer.nextRandomInt(2, 128) << 8;
+            ArchiveIndex.createParticle(var5Lifetime1Lifetime1, var4Lifetime1, 0, 16, 1, -16, var3Lifetime1, this.layer, MusicPatchPcmStream.field_r.trailParticles, var7, var6Lifetime1Lifetime1, 128, 2);
           }
           if (this.specialPowerup == 2) {
             var3_float = 2.0f * (float)(Math.random() * 3.141592653589793);
@@ -4298,8 +4298,8 @@ final class RaceVehicle extends MovingEntity {
             var5Lifetime2 = this.position.y - (int)(Math.sin((double)var3_float) * (double)this.definition.field_d * 1.2999999523162842);
             var6Lifetime2 = (int)(0.75f * (this.velocityX * 0.019999999552965164f * 3.5f) * 1024.0f);
             var7 = (int)(0.75f * (0.019999999552965164f * this.velocityY * 3.5f) * 1024.0f);
-            var8 = 255 | SolidRoadStripRenderer.b(2, 255) * 1052672;
-            ArchiveIndex.a(var6Lifetime2, var5Lifetime2, 0, 25, 1, -40, var4Lifetime2, this.layer, MusicPatchPcmStream.field_r.sparkParticles, var8, var7, 255, 2);
+            var8 = 255 | SolidRoadStripRenderer.nextRandomInt(2, 255) * 1052672;
+            ArchiveIndex.createParticle(var6Lifetime2, var5Lifetime2, 0, 25, 1, -40, var4Lifetime2, this.layer, MusicPatchPcmStream.field_r.sparkParticles, var8, var7, 255, 2);
           }
           boolean decompiledFrameCompleted1 = true;
           var3Lifetime2 = -(int)((float)this.definition.halfWidth * this.direction.y + (float)this.definition.halfLength * this.direction.x) + this.position.x;
@@ -4313,7 +4313,7 @@ final class RaceVehicle extends MovingEntity {
               stackIn_70_0 = (2 != var2_int) ? 1073873410 : 537002498;
             }
             var7 = stackIn_70_0;
-            vb.a(-68, MusicPatchPcmStream.field_r.courseImage);
+            JagexLogoRenderer.pushSpriteRaster(-68, MusicPatchPcmStream.field_r.courseImage);
             SoftwareRasterizer.drawLineAlpha(this.field_nb, this.field_Tb, var3Lifetime2, var4Lifetime3, var7, var7 >>> 24);
             SoftwareRasterizer.drawLineAlpha(this.field_Xb, this.field_Ob, var5Lifetime3, var6Lifetime3, var7, var7 >>> 24);
             var8_ref_wm = (TrackObject) (MusicPatchPcmStream.field_r.dynamicObjects.first((byte) 105));
@@ -4344,7 +4344,7 @@ final class RaceVehicle extends MovingEntity {
             stackIn_85_1 = ~this.steeringRecoveryTicks;
           }
           if (stackIn_85_0 > stackIn_85_1) {
-            vb.a(-100, MusicPatchPcmStream.field_r.courseImage);
+            JagexLogoRenderer.pushSpriteRaster(-100, MusicPatchPcmStream.field_r.courseImage);
             var7 = (this.steeringRecoveryTicks << 8) / 50;
             SoftwareRasterizer.drawLineAlpha(this.field_nb, this.field_Tb, var3Lifetime2, var4Lifetime3, 0, var7);
             SoftwareRasterizer.drawLineAlpha(this.field_Xb, this.field_Ob, var5Lifetime3, var6Lifetime3, 0, var7);
@@ -4393,7 +4393,7 @@ final class RaceVehicle extends MovingEntity {
                   var15 = var16.pixels[640 * var10Lifetime2 + var9Lifetime1];
                 }
               }
-              ArchiveIndex.a(var11Lifetime1, var10Lifetime2, 512, 64, 1, 0, var9Lifetime1, this.layer, MusicPatchPcmStream.field_r.trailParticles, var15, var12, 24, 20);
+              ArchiveIndex.createParticle(var11Lifetime1, var10Lifetime2, 512, 64, 1, 0, var9Lifetime1, this.layer, MusicPatchPcmStream.field_r.trailParticles, var15, var12, 24, 20);
             }
           }
           if (decompiledFrameCompleted0) {
@@ -4401,41 +4401,41 @@ final class RaceVehicle extends MovingEntity {
               MusicPatchPcmStream.field_r.raceTicks % 5 == 0) {
               var7 = -(int)((float)this.definition.halfLength * this.direction.x) + this.position.x;
               var8Lifetime2 = -(int)(this.direction.y * (float)this.definition.halfLength) + this.position.y;
-              ArchiveIndex.a((int)(-this.direction.x * 1024.0f), var8Lifetime2, 1, 32, 1, -16, var7, this.layer, MusicPatchPcmStream.field_r.trailParticles, 0, (int)(1024.0f * -this.direction.y), 128, 2);
+              ArchiveIndex.createParticle((int)(-this.direction.x * 1024.0f), var8Lifetime2, 1, 32, 1, -16, var7, this.layer, MusicPatchPcmStream.field_r.trailParticles, 0, (int)(1024.0f * -this.direction.y), 128, 2);
             }
             stackIn_117_0 = ~this.lifeState;
             stackIn_117_1 = -3;
           }
           if (stackIn_117_0 != stackIn_117_1) {
-            var8Lifetime3 = (-(int)this.health + this.definition.maxHealth) * 3 - SolidRoadStripRenderer.b(2, this.definition.maxHealth);
+            var8Lifetime3 = (-(int)this.health + this.definition.maxHealth) * 3 - SolidRoadStripRenderer.nextRandomInt(2, this.definition.maxHealth);
             var7 = var8Lifetime3 / this.definition.maxHealth;
           }
           if (stackIn_117_0 == stackIn_117_1 ||
             var17 != 0) {
-            stackIn_125_0 = (SolidRoadStripRenderer.b(2, 18000) <= this.respawnTicks) ? 0 : 2;
+            stackIn_125_0 = (SolidRoadStripRenderer.nextRandomInt(2, 18000) <= this.respawnTicks) ? 0 : 2;
             var7 = stackIn_125_0;
           }
           if (2 == var7) {
             var8Lifetime4 = (int)(3.5f * this.velocityX * 0.019999999552965164f * 1024.0f);
             var9Lifetime2 = (int)(1024.0f * (0.019999999552965164f * (this.velocityY * 3.5f)));
-            var8Lifetime4 = var8Lifetime4 + (SolidRoadStripRenderer.b(2, 512) - 256);
-            var9Lifetime2 = var9Lifetime2 + (-1024 + SolidRoadStripRenderer.b(2, 512));
-            var10Lifetime3 = 16711680 | SolidRoadStripRenderer.b(2, 256) << 8;
+            var8Lifetime4 = var8Lifetime4 + (SolidRoadStripRenderer.nextRandomInt(2, 512) - 256);
+            var9Lifetime2 = var9Lifetime2 + (-1024 + SolidRoadStripRenderer.nextRandomInt(2, 512));
+            var10Lifetime3 = 16711680 | SolidRoadStripRenderer.nextRandomInt(2, 256) << 8;
             var11Lifetime2 = this.position.x;
             var12Lifetime1 = this.position.y;
             var13Lifetime1 = this.definition.field_c + ((float)Math.random() * 4.0f - 2.0f);
             var14Lifetime1 = this.definition.field_H + ((float)Math.random() * 4.0f - 2.0f);
             var11Lifetime2 = var11Lifetime2 + (int)(this.direction.y * var14Lifetime1 + var13Lifetime1 * this.direction.x);
             var12Lifetime1 = var12Lifetime1 + (int)(this.direction.y * var13Lifetime1 - var14Lifetime1 * this.direction.x);
-            ArchiveIndex.a(var8Lifetime4, var12Lifetime1, -1, 64, 1, -8, var11Lifetime2, this.layer, MusicPatchPcmStream.field_r.sparkParticles, var10Lifetime3, var9Lifetime2, 128, 1);
+            ArchiveIndex.createParticle(var8Lifetime4, var12Lifetime1, -1, 64, 1, -8, var11Lifetime2, this.layer, MusicPatchPcmStream.field_r.sparkParticles, var10Lifetime3, var9Lifetime2, 128, 1);
           }
           if ((2 != var7 ||
             var17 != 0) &&
             1 == var7) {
             var8Lifetime5 = (int)(3.5f * this.velocityX * 0.019999999552965164f * 1024.0f);
             var9Lifetime3 = (int)(1024.0f * (0.019999999552965164f * (3.5f * this.velocityY)));
-            var8Lifetime5 = var8Lifetime5 + (SolidRoadStripRenderer.b(2, 512) - 256);
-            var9Lifetime3 = var9Lifetime3 + (SolidRoadStripRenderer.b(2, 512) - 1024);
+            var8Lifetime5 = var8Lifetime5 + (SolidRoadStripRenderer.nextRandomInt(2, 512) - 256);
+            var9Lifetime3 = var9Lifetime3 + (SolidRoadStripRenderer.nextRandomInt(2, 512) - 1024);
             var10Lifetime4 = 0;
             var11Lifetime3 = this.position.x;
             var12Lifetime2 = this.position.y;
@@ -4443,7 +4443,7 @@ final class RaceVehicle extends MovingEntity {
             var14Lifetime2 = this.definition.field_H + ((float)Math.random() * 4.0f - 2.0f);
             var12Lifetime2 = var12Lifetime2 + (int)(this.direction.y * var13Lifetime2 - var14Lifetime2 * this.direction.x);
             var11Lifetime3 = var11Lifetime3 + (int)(this.direction.y * var14Lifetime2 + var13Lifetime2 * this.direction.x);
-            ArchiveIndex.a(var8Lifetime5, var12Lifetime2, 1, 64, 1, -8, var11Lifetime3, this.layer, MusicPatchPcmStream.field_r.trailParticles, var10Lifetime4, var9Lifetime3, 128, 2);
+            ArchiveIndex.createParticle(var8Lifetime5, var12Lifetime2, 1, 64, 1, -8, var11Lifetime3, this.layer, MusicPatchPcmStream.field_r.trailParticles, var10Lifetime4, var9Lifetime3, 128, 2);
           }
           if (param0 < 43) {
             this.updateCarPhysics(false);
@@ -4480,7 +4480,7 @@ final class RaceVehicle extends MovingEntity {
             }
             var3 = stackIn_21_0;
             if (var3 != null) {
-              ValidationHelpWidget.a((byte) 20, (MovingEntity) (this), var3, var3.field_q);
+              ValidationHelpWidget.playEntitySound((byte) 20, (MovingEntity) (this), var3, var3.field_q);
             }
             var4 = this.powerupLevels[0];
             if (this.heldPowerups[2] != -1) {
@@ -4606,7 +4606,7 @@ final class RaceVehicle extends MovingEntity {
             var4 = var4 * 3.0f;
           }
           var6 = this.definition.field_w;
-          var6 = var6 * this.getDefenseMultiplier((byte) 127, oi.field_c);
+          var6 = var6 * this.getDefenseMultiplier((byte) 127, HoverTooltipController.field_c);
           var7 = var2_float * (this.brake * this.definition.field_I) * DualLinkNode.signumFloat(-29407, this.forwardSpeed);
           var8 = 0.0f;
           var9 = 0.0f;
@@ -4640,9 +4640,9 @@ final class RaceVehicle extends MovingEntity {
           }
           boolean decompiledFrameRemainder3 = true;
           if (MusicPatchPcmStream.field_r.courseTheme == 0) {
-            var11 = var11 * qg.field_c[var14];
+            var11 = var11 * TexturedPolygonRenderer.field_c[var14];
             var12 = var12 * LayeredButtonRenderer.field_u[var14 + var13];
-            var10Lifetime1 = var10Lifetime1 * qg.field_c[var13];
+            var10Lifetime1 = var10Lifetime1 * TexturedPolygonRenderer.field_c[var13];
             decompiledFrameRemainder3 = (var36 != 0);
           }
           if (decompiledFrameRemainder3) {
@@ -4943,7 +4943,7 @@ final class RaceVehicle extends MovingEntity {
               return;
             }
             if (this.heldPowerups[var3_int] != -1) {
-              ValidationHelpWidget.a((byte) 76, (MovingEntity) (this), TutorialPage.field_i, TutorialPage.field_i.field_q);
+              ValidationHelpWidget.playEntitySound((byte) 76, (MovingEntity) (this), TutorialPage.field_i, TutorialPage.field_i.field_q);
               dupTemp$0 = this.heldPowerups[var3_int];
               this.powerupLevels[dupTemp$0] = this.powerupLevels[dupTemp$0] - 1;
               var4 = new Vector2f(this.direction);
@@ -5146,7 +5146,7 @@ final class RaceVehicle extends MovingEntity {
                 var11Lifetime1 == null) {
                 var12 = (int)(var5.x * 500.0f + this.worldX);
                 var13 = (int)(500.0f * var5.y + this.worldY);
-                if (Point2i.a(this.layer, MusicPatchPcmStream.field_r.collisionBoundaryLoops, -20484, this.position, new Point2i(var12, var13))) {
+                if (Point2i.intersectsBoundarySegment(this.layer, MusicPatchPcmStream.field_r.collisionBoundaryLoops, -20484, this.position, new Point2i(var12, var13))) {
                   this.emitWeaponTrail(500.0f * RasterBuffer.field_d, var5, (int)this.worldX, 40, (int)this.worldY);
                 }
                 if (var17 == 0) {
@@ -5157,7 +5157,7 @@ final class RaceVehicle extends MovingEntity {
             }
             var12Lifetime1 = stackIn_68_0;
             var13Lifetime1 = (int)(var6 * var5.y + this.worldY);
-            if (!Point2i.a(this.layer, MusicPatchPcmStream.field_r.collisionBoundaryLoops, -20484, this.position, new Point2i(var12Lifetime1, var13Lifetime1))) {
+            if (!Point2i.intersectsBoundarySegment(this.layer, MusicPatchPcmStream.field_r.collisionBoundaryLoops, -20484, this.position, new Point2i(var12Lifetime1, var13Lifetime1))) {
               this.emitWeaponTrail(var6, var5, (int)this.worldX, 35, (int)this.worldY);
               if (null == var11Lifetime1) {
                 if (var9 != null) {

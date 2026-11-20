@@ -38,7 +38,7 @@ final class AudioServiceThread implements Runnable {
                 }
               }
               SocketConnector.sleepMillis(10L, (byte) 45);
-              NineSlicePanel.a(0, (Object) null, this.field_c);
+              NineSlicePanel.serviceEventQueue(0, (Object) null, this.field_c);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -34,8 +34,8 @@ final class ByteArrayPool {
           Vector2f.field_a > 0) {
           fieldTemp$4 = Vector2f.field_a - 1;
           Vector2f.field_a = Vector2f.field_a - 1;
-          var2_ref_byte__Lifetime1 = cd.field_e[fieldTemp$4];
-          cd.field_e[Vector2f.field_a] = null;
+          var2_ref_byte__Lifetime1 = EmailDomainValidator.field_e[fieldTemp$4];
+          EmailDomainValidator.field_e[Vector2f.field_a] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (30000 == param0 &&

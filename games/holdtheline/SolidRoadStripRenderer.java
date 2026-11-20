@@ -11,7 +11,7 @@ final class SolidRoadStripRenderer extends RoadStripRenderer {
     static Sprite field_p;
     static String field_n;
 
-    final static int b(int param0, int param1) {
+    final static int nextRandomInt(int param0, int param1) {
         if (param0 != 2) {
           field_o = (String) null;
         }

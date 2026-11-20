@@ -43,7 +43,7 @@ final class WhirlpoolHasher {
         Sprite var9 = null;
         var8 = HoldTheLine.field_D;
         try {
-          this.blockBuffer[this.bufferByteCount] = (byte)kc.a((int) this.blockBuffer[this.bufferByteCount], 128 >>> LoginChoicePanel.a(7, this.bufferBitCount));
+          this.blockBuffer[this.bufferByteCount] = (byte)BitwiseIntegerOperations.orInts((int) this.blockBuffer[this.bufferByteCount], 128 >>> LoginChoicePanel.andInts(7, this.bufferBitCount));
           this.bufferByteCount = this.bufferByteCount + 1;
           if (this.bufferByteCount > 32) {
             while (this.bufferByteCount < 64) {
@@ -113,7 +113,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setPopupAnchor(int param0, int param1, int param2) {
         Vector2f.field_i = param1;
         if (param0 > -32) {
           field_h = 30;
@@ -121,15 +121,15 @@ final class WhirlpoolHasher {
         NanoTickClock.field_i = param2;
     }
 
-    final static void a(BitmapFont param0, BitmapFont param1, byte param2, int param3) {
+    final static void configureMenuFonts(BitmapFont param0, BitmapFont param1, byte param2, int param3) {
         CheckboxWidget.field_G = param1;
-        q.field_a = param0;
+        PlayerDataProtocol.field_a = param0;
         if (param2 > -39) {
           return;
         }
         try {
           IndexedSpriteState.field_j = param3;
-          WhirlpoolHasher.a(-90, SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2);
+          WhirlpoolHasher.setPopupAnchor(-90, SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2);
           StraightRoadSegment.setUiFontMetrics(param1.capitalHeight, param0.capitalHeight, param0.capitalHeight + param0.descent, param1.descent + param1.capitalHeight, (byte) -108);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "pa.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -201,7 +201,7 @@ final class WhirlpoolHasher {
                   var14 = var14 + (var17 - (var17 * var14 >> 8) - 1);
                   var16 = var16 + (-(var16 * var19 >> 8) + (var19 - 1));
                   var15 = var15 + (-1 - (var15 * var18 >> 8) + var18);
-                  SoftwareRasterizer.pixels[var9] = kc.a(kc.a(var14 << 16, var15 << 8), var16);
+                  SoftwareRasterizer.pixels[var9] = BitwiseIntegerOperations.orInts(BitwiseIntegerOperations.orInts(var14 << 16, var15 << 8), var16);
                 } else {
                   SoftwareRasterizer.pixels[var9] = var10;
                 }
@@ -270,7 +270,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.roundScratch[var3Lifetime1] = GameKeyHandler.xorLongs(this.roundScratch[var3Lifetime1], WhirlpoolTables.roundTables[var4][LoginChoicePanel.a((int)(this.roundKey[LoginChoicePanel.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.roundScratch[var3Lifetime1] = GameKeyHandler.xorLongs(this.roundScratch[var3Lifetime1], WhirlpoolTables.roundTables[var4][LoginChoicePanel.andInts((int)(this.roundKey[LoginChoicePanel.andInts(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -285,7 +285,7 @@ final class WhirlpoolHasher {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.roundScratch[var3Lifetime1Lifetime2] = GameKeyHandler.xorLongs(this.roundScratch[var3Lifetime1Lifetime2], WhirlpoolTables.roundTables[var7][LoginChoicePanel.a((int)(this.cipherState[LoginChoicePanel.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.roundScratch[var3Lifetime1Lifetime2] = GameKeyHandler.xorLongs(this.roundScratch[var3Lifetime1Lifetime2], WhirlpoolTables.roundTables[var7][LoginChoicePanel.andInts((int)(this.cipherState[LoginChoicePanel.andInts(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -345,7 +345,7 @@ final class WhirlpoolHasher {
             var9 = 255 & param0[var5_int] << var7 | (255 & param0[1 + var5_int]) >>> -var7 + 8;
             if (var9 >= 0 &&
               var9 < 256) {
-              this.blockBuffer[this.bufferByteCount] = (byte)kc.a((int) this.blockBuffer[this.bufferByteCount], var9 >>> var8);
+              this.blockBuffer[this.bufferByteCount] = (byte)BitwiseIntegerOperations.orInts((int) this.blockBuffer[this.bufferByteCount], var9 >>> var8);
               this.bufferByteCount = this.bufferByteCount + 1;
               this.bufferBitCount = this.bufferBitCount + (-var8 + 8);
               if (this.bufferBitCount == 512) {
@@ -353,7 +353,7 @@ final class WhirlpoolHasher {
                 this.bufferByteCount = 0;
                 this.bufferBitCount = 0;
               }
-              this.blockBuffer[this.bufferByteCount] = (byte)LoginChoicePanel.a(var9 << -var8 + 8, 255);
+              this.blockBuffer[this.bufferByteCount] = (byte)LoginChoicePanel.andInts(var9 << -var8 + 8, 255);
               param2 = param2 - 8L;
               var5_int++;
               this.bufferBitCount = this.bufferBitCount + var8;
@@ -365,7 +365,7 @@ final class WhirlpoolHasher {
             stackIn_15_0 = 255;
             stackIn_15_1 = param0[var5_int] << var7;
             var9Lifetime1 = stackIn_15_0 & stackIn_15_1;
-            this.blockBuffer[this.bufferByteCount] = (byte)kc.a((int) this.blockBuffer[this.bufferByteCount], var9Lifetime1 >>> var8);
+            this.blockBuffer[this.bufferByteCount] = (byte)BitwiseIntegerOperations.orInts((int) this.blockBuffer[this.bufferByteCount], var9Lifetime1 >>> var8);
           } else {
             var9Lifetime1 = 0;
           }
@@ -380,7 +380,7 @@ final class WhirlpoolHasher {
               this.bufferByteCount = 0;
               this.bufferBitCount = 0;
             }
-            this.blockBuffer[this.bufferByteCount] = (byte)LoginChoicePanel.a(var9Lifetime1 << 8 - var8, 255);
+            this.blockBuffer[this.bufferByteCount] = (byte)LoginChoicePanel.andInts(var9Lifetime1 << 8 - var8, 255);
             this.bufferBitCount = this.bufferBitCount + (int)param2;
           }
           return;

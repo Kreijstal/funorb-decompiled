@@ -59,7 +59,7 @@ final class IterableSecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static int a(float param0, int param1, int param2) {
+    final static int scaleRgb(float param0, int param1, int param2) {
         int var3 = param2 >> 16 & 255;
         int var4 = (param2 & 65280) >> 8;
         var3 = (int)((float)var3 * param0);
@@ -91,7 +91,7 @@ final class IterableSecondaryNodeDeque implements Iterable {
         throw new Error();
     }
 
-    final static float a(float[] param0, int param1, int param2, int param3, float param4) {
+    final static float evaluateBezier(float[] param0, int param1, int param2, int param3, float param4) {
         RuntimeException var5 = null;
         float stackIn_4_0 = 0.0f;
         float stackIn_6_0 = 0.0f;
@@ -104,7 +104,7 @@ final class IterableSecondaryNodeDeque implements Iterable {
             field_d = (DiskCacheWorker) null;
           }
           if (param2 != 0) {
-            stackIn_6_0 = (1.0f - param4) * IterableSecondaryNodeDeque.a(param0, param1, -1 + param2, -1, param4) + param4 * IterableSecondaryNodeDeque.a(param0, 1 + param1, param2 - 1, -1, param4);
+            stackIn_6_0 = (1.0f - param4) * IterableSecondaryNodeDeque.evaluateBezier(param0, param1, -1 + param2, -1, param4) + param4 * IterableSecondaryNodeDeque.evaluateBezier(param0, 1 + param1, param2 - 1, -1, param4);
             return stackIn_6_0;
           }
           stackIn_4_0 = param0[param1];

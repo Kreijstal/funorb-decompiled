@@ -10,7 +10,7 @@ final class GzipDecompressor {
     private java.util.zip.Inflater field_b;
     static java.security.SecureRandom field_a;
 
-    final static boolean a(byte param0, String param1, String param2) {
+    final static boolean containsNameWithoutUnderscores(byte param0, String param1, String param2) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -21,11 +21,11 @@ final class GzipDecompressor {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = ua.replaceCharacter((byte) 110, '_', param2, "");
+          param2 = QuadraticPathSlicer.replaceCharacter((byte) 110, '_', param2, "");
           if (param0 != -127) {
             field_e = (BitmapFont) null;
           }
-          var3 = hc.reverseString(param2, (byte) -93);
+          var3 = FixedAngleMath.reverseString(param2, (byte) -93);
           stackIn_7_0 = (param1.indexOf(param2) != -1) || (-1 != param1.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

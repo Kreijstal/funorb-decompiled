@@ -33,7 +33,7 @@ final class DualNodeHashTable {
         }
     }
 
-    final static void b(int param0) {
+    final static void shutdownAudioOutputs(int param0) {
         int var1 = 72 / ((param0 - 1) / 34);
         if (LoginChoicePanel.field_G != null) {
           LoginChoicePanel.field_G.shutdown();

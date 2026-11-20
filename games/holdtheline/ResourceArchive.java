@@ -26,7 +26,7 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          stackIn_2_0 = ai.field_a;
+          stackIn_2_0 = MeshLighting.field_a;
           stackIn_2_1 = param3;
           stackIn_2_2 = 1000000;
           stackIn_2_3 = (MusicTrack) (param1);
@@ -227,7 +227,7 @@ final class ResourceArchive {
             0 != param0[1] ||
             param0[2] != 0 ||
             param0[3] != 0)) {
-            var35 = ne.unwrapByteStorage(90, this.field_c[param3], true);
+            var35 = TextSyntax.unwrapByteStorage(90, this.field_c[param3], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -235,10 +235,10 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = ne.unwrapByteStorage(90, this.field_c[param3], false);
+            var9 = TextSyntax.unwrapByteStorage(90, this.field_c[param3], false);
           }
           try {
-            var36 = ph.a((byte) -1, var9);
+            var36 = ArchiveCompression.decompressContainer((byte) -1, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -900,7 +900,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_b[param2][param1]) {
-            var7 = ne.unwrapByteStorage(90, this.field_b[param2][param1], false);
+            var7 = TextSyntax.unwrapByteStorage(90, this.field_b[param2][param1], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

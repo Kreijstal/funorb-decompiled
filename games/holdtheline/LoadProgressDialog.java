@@ -22,7 +22,7 @@ final class LoadProgressDialog extends ResizableDialog {
         int var2 = -107 % ((param0 + 20) / 43);
     }
 
-    final static void m(int param0) {
+    final static void updateCurrentRace(int param0) {
         if (MusicPatchPcmStream.field_r != null) {
           MusicPatchPcmStream.field_r.update(-38);
           if (param0 < 95) {
@@ -157,7 +157,7 @@ final class LoadProgressDialog extends ResizableDialog {
           }
           if (param1 >= -43) {
             var6 = (String) null;
-            LoadProgressDialog.a((String) null, 66);
+            LoadProgressDialog.findIgnoredPlayer((String) null, 66);
           }
           this.field_jb.progress = (int)(param0 / 100.0f * 65536.0f);
           this.field_eb = param3;
@@ -207,10 +207,10 @@ final class LoadProgressDialog extends ResizableDialog {
         try {
           if (param1) {
             var3 = (String) null;
-            LoadProgressDialog.a((String) null, -94);
+            LoadProgressDialog.findIgnoredPlayer((String) null, -94);
           }
           var4 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = co.field_e.equals(MidiPcmStream.normalizeAccountName(var4, (byte) -102));
+          stackIn_3_0 = ClientLifecycleUtilities.field_e.equals(MidiPcmStream.normalizeAccountName(var4, (byte) -102));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,7 +226,7 @@ final class LoadProgressDialog extends ResizableDialog {
         }
     }
 
-    final static SocialListEntry a(String param0, int param1) {
+    final static SocialListEntry findIgnoredPlayer(String param0, int param1) {
         String var2 = null;
         SocialListEntry var3 = null;
         int var4 = 0;

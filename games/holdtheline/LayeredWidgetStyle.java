@@ -56,7 +56,7 @@ final class LayeredWidgetStyle {
         RuntimeException var4_ref = null;
         var5 = HoldTheLine.field_D;
         try {
-          ak.field_b = ValidationState.field_c;
+          NineSliceSpriteFactory.field_b = ValidationState.field_c;
           if (255 != param1) {
             if (100 > param1) {
               RaceVehicle.field_U = ChatMessage.createNameAvailabilityResult(param3, 256, param1);
@@ -71,7 +71,7 @@ final class LayeredWidgetStyle {
             }
           } else {
             stackIn_5_0 = !(ResizableDialog.field_V >= 13);
-            RaceVehicle.field_U = TextFieldRenderer.a(stackIn_5_0, 0);
+            RaceVehicle.field_U = TextFieldRenderer.createRestrictedNameResult(stackIn_5_0, 0);
             var6 = (String[]) null;
             WhirlpoolTables.setNameSuggestions((byte) 71, (String[]) null);
           }

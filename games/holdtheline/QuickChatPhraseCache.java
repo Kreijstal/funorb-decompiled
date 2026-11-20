@@ -41,10 +41,10 @@ final class QuickChatPhraseCache {
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void readAccountStatusAcknowledgement(int param0) {
         ArchiveCatalog.field_h = false;
         if (param0 >= -2) {
-          QuickChatPhraseCache.a(-88);
+          QuickChatPhraseCache.readAccountStatusAcknowledgement(-88);
           RoadStripRenderer.field_e.readUnsignedByte((byte) -55);
           return;
         }

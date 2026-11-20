@@ -5,7 +5,7 @@ abstract class CacheEntry extends DualLinkNode {
     static QuickChatDynamicCommand field_p;
     int field_o;
 
-    final static void a(int param0, String param1, float param2) {
+    final static void setAccountStatus(int param0, String param1, float param2) {
         DelayedServerPacket.field_m = param1;
         if (param0 < 79) {
           return;
@@ -22,7 +22,7 @@ abstract class CacheEntry extends DualLinkNode {
         int var1 = -28 / ((44 - param0) / 47);
     }
 
-    final static String a(byte param0, CharSequence[] param1) {
+    final static String joinText(byte param0, CharSequence[] param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -33,7 +33,7 @@ abstract class CacheEntry extends DualLinkNode {
           if (param0 > -53) {
             field_p = (QuickChatDynamicCommand) null;
           }
-          stackIn_3_0 = ae.a(param1, (byte) -44, param1.length, 0);
+          stackIn_3_0 = AppletNavigation.joinTextRange(param1, (byte) -44, param1.length, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ abstract class CacheEntry extends DualLinkNode {
         }
     }
 
-    final static LoginMethodPreference a(java.applet.Applet param0, byte param1) {
+    final static LoginMethodPreference readLastLoginMethod(java.applet.Applet param0, byte param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -65,7 +65,7 @@ abstract class CacheEntry extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         var6 = HoldTheLine.field_D;
         try {
-          var2 = ph.a("jagex-last-login-method", (byte) 30, param0);
+          var2 = ArchiveCompression.readCookie("jagex-last-login-method", (byte) 30, param0);
           if (var2 == null) {
             stackIn_4_0 = EmailAddressValidator.field_n;
             return stackIn_4_0;
@@ -73,7 +73,7 @@ abstract class CacheEntry extends DualLinkNode {
           if (param1 != 124) {
             field_p = (QuickChatDynamicCommand) null;
           }
-          var3 = ko.getLoginMethodPreferences(84);
+          var3 = ClientScreenRenderer.getLoginMethodPreferences(84);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5.matchesLoginMethod(param1 ^ 37, var2)) {

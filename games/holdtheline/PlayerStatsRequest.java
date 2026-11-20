@@ -16,15 +16,15 @@ final class PlayerStatsRequest extends IntrusiveNode {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (IterableSecondaryNodeDeque.field_h != null && (param0 < 0 ||
-            d.field_f == ad.field_b)) {
+            AccountProtocolContext.field_f == ReflectionCheckSupport.field_b)) {
             if (param1 == IsaacPacketBuffer.field_p.position &&
-              bb.monotonicTimeMillis(-1) > (10000L + MatchingTextValidator.field_l)) {
+              BoundaryLoopTracer.monotonicTimeMillis(-1) > (10000L + MatchingTextValidator.field_l)) {
               IsaacPacketBuffer.field_p.writeCipheredOpcode((byte) 33, param0);
             }
             if (IsaacPacketBuffer.field_p.position > 0) {
               try {
                 IterableSecondaryNodeDeque.field_h.write(IsaacPacketBuffer.field_p.position, IsaacPacketBuffer.field_p.payload, 0, 1);
-                MatchingTextValidator.field_l = bb.monotonicTimeMillis(-1);
+                MatchingTextValidator.field_l = BoundaryLoopTracer.monotonicTimeMillis(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -84,7 +84,7 @@ final class PlayerStatsRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void processRaceResult(int param0, boolean param1, boolean param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -134,18 +134,18 @@ final class PlayerStatsRequest extends IntrusiveNode {
                       stackIn_31_0 = var12.furthestCourseProgress;
                     }
                     var5 = stackIn_31_0;
-                    var6 = cd.normalizedCourseProgress(MusicPatchPcmStream.field_r.roadSegments, 1, var5);
+                    var6 = EmailDomainValidator.normalizedCourseProgress(MusicPatchPcmStream.field_r.roadSegments, 1, var5);
                     var7 = (-1.0f + ((float)var12.lapsCompleted + var6)) / (float)MusicPatchPcmStream.field_r.lapLimit;
                     if (0.0f == var7) {
-                      pe.field_g[var3_int] = -1;
+                      ScreenOptionsMenu.field_g[var3_int] = -1;
                     } else {
-                      pe.field_g[var3_int] = (int)((float)MusicPatchPcmStream.field_r.field_ob / var7);
-                      if (pe.field_g[var3_int] > MusicPatchPcmStream.field_r.field_ob + 1000) {
-                        pe.field_g[var3_int] = -1;
+                      ScreenOptionsMenu.field_g[var3_int] = (int)((float)MusicPatchPcmStream.field_r.field_ob / var7);
+                      if (ScreenOptionsMenu.field_g[var3_int] > MusicPatchPcmStream.field_r.field_ob + 1000) {
+                        ScreenOptionsMenu.field_g[var3_int] = -1;
                       }
                     }
                   } else {
-                    pe.field_g[var3_int] = var10.field_Pb;
+                    ScreenOptionsMenu.field_g[var3_int] = var10.field_Pb;
                   }
                 }
                 NetworkArchiveRequest.recordBestCourseTime(MusicPatchPcmStream.field_r.vehicles[0].racePosition, StrongCacheEntry.field_w, LoginForm.field_P, MusicPatchPcmStream.field_r.field_ob, -126);
@@ -160,7 +160,7 @@ final class PlayerStatsRequest extends IntrusiveNode {
             }
             if (RoadShadowRenderer.isGuestMode((byte) 121)) {
               if (0 == ClientException.field_c &&
-                !ad.field_a) {
+                !ReflectionCheckSupport.field_a) {
                 TrackObject.switchMenu(param1, false, 0);
                 return;
               }
@@ -174,7 +174,7 @@ final class PlayerStatsRequest extends IntrusiveNode {
             }
             return;
           }
-          ((GameMenu) (l.field_a[3])).initializeChampionshipCarousel(0, StrongCacheEntry.field_w);
+          ((GameMenu) (CollisionGeometry.field_a[3])).initializeChampionshipCarousel(0, StrongCacheEntry.field_w);
           if (MusicPatchPcmStream.field_r.raceFinished &&
             !param2) {
             NetworkArchiveRequest.recordBestCourseTime(MusicPatchPcmStream.field_r.vehicles[0].racePosition, StrongCacheEntry.field_w, LoginForm.field_P, MusicPatchPcmStream.field_r.field_ob, -122);
@@ -183,7 +183,7 @@ final class PlayerStatsRequest extends IntrusiveNode {
               var13 = var11;
               IntArrayReadRequest.field_j[var3_intLifetime1] = IntArrayReadRequest.field_j[var3_intLifetime1] + SingleChildWidget.field_C[var11.racePosition];
               if (var13.lapsCompleted > MusicPatchPcmStream.field_r.lapLimit) {
-                pe.field_g[var3_intLifetime1] = var11.field_Pb;
+                ScreenOptionsMenu.field_g[var3_intLifetime1] = var11.field_Pb;
               } else {
                 if (!(var13.furthestCourseProgress > var13.courseProgress)) {
                   stackIn_59_0 = var13.furthestCourseProgress;
@@ -191,20 +191,20 @@ final class PlayerStatsRequest extends IntrusiveNode {
                   stackIn_59_0 = var13.courseProgress;
                 }
                 var5Lifetime1 = stackIn_59_0;
-                var6Lifetime1 = cd.normalizedCourseProgress(MusicPatchPcmStream.field_r.roadSegments, param0 ^ 6, var5Lifetime1);
+                var6Lifetime1 = EmailDomainValidator.normalizedCourseProgress(MusicPatchPcmStream.field_r.roadSegments, param0 ^ 6, var5Lifetime1);
                 var7Lifetime1 = (var6Lifetime1 + (float)var13.lapsCompleted - 1.0f) / (float)MusicPatchPcmStream.field_r.lapLimit;
                 if (0.0f == var7Lifetime1) {
-                  pe.field_g[var3_intLifetime1] = -1;
+                  ScreenOptionsMenu.field_g[var3_intLifetime1] = -1;
                 } else {
-                  pe.field_g[var3_intLifetime1] = (int)((float)MusicPatchPcmStream.field_r.field_ob / var7Lifetime1);
-                  if (MusicPatchPcmStream.field_r.field_ob + 1000 < pe.field_g[var3_intLifetime1]) {
-                    pe.field_g[var3_intLifetime1] = -1;
+                  ScreenOptionsMenu.field_g[var3_intLifetime1] = (int)((float)MusicPatchPcmStream.field_r.field_ob / var7Lifetime1);
+                  if (MusicPatchPcmStream.field_r.field_ob + 1000 < ScreenOptionsMenu.field_g[var3_intLifetime1]) {
+                    ScreenOptionsMenu.field_g[var3_intLifetime1] = -1;
                   }
                 }
               }
             }
             if (MusicPatchPcmStream.field_r.vehicles[0].racePosition >= 2) {
-              DropTargetWidget.setRequestedDisplayMode(3, (byte) 102, true);
+              DropTargetWidget.setBackground(3, (byte) 102, true);
               fieldTemp$0 = EntitySound.field_l - 1;
               EntitySound.field_l = EntitySound.field_l - 1;
               if (1 > fieldTemp$0) {
@@ -217,45 +217,45 @@ final class PlayerStatsRequest extends IntrusiveNode {
               }
               return;
             }
-            DropTargetWidget.setRequestedDisplayMode(2, (byte) 116, true);
+            DropTargetWidget.setBackground(2, (byte) 116, true);
             if (param0 != 7) {
               var9 = (String) null;
               PlayerStatsRequest.createEmailValidationRequest((String) null, -40);
             }
-            if (StrongCacheEntry.field_w == ao.field_b &&
-              hk.field_d == LoginForm.field_P) {
-              fieldTemp$1 = hk.field_d + 1;
-              hk.field_d = hk.field_d + 1;
-              if (fieldTemp$1 == MenuList.field_l[ao.field_b]) {
-                hk.field_d = hk.field_d - 1;
+            if (StrongCacheEntry.field_w == BoundaryLoopClipper.field_b &&
+              RoadControlPathBuilder.field_d == LoginForm.field_P) {
+              fieldTemp$1 = RoadControlPathBuilder.field_d + 1;
+              RoadControlPathBuilder.field_d = RoadControlPathBuilder.field_d + 1;
+              if (fieldTemp$1 == MenuList.field_l[BoundaryLoopClipper.field_b]) {
+                RoadControlPathBuilder.field_d = RoadControlPathBuilder.field_d - 1;
               }
               GrowableStringList.savePlayerProgress(0);
-              FullscreenErrorReason.b((byte) 121);
+              FullscreenErrorReason.populateCourseMenu((byte) 121);
             }
             var3_intLifetime1Lifetime1 = MusicPatchPcmStream.field_r.field_ob;
             EntitySound.field_m[LoginForm.field_P] = var3_intLifetime1Lifetime1;
             LayeredWidgetStyle.field_d = MusicPatchPcmStream.field_r.field_t;
             CurvedRoadSegment.field_y = CurvedRoadSegment.field_y + var3_intLifetime1Lifetime1;
-            ni.field_b = MusicPatchPcmStream.field_r.field_hb;
-            cm.field_a = MusicPatchPcmStream.field_r.field_y;
+            InterfaceLoadingStatus.field_b = MusicPatchPcmStream.field_r.field_hb;
+            MenuHitTesting.field_a = MusicPatchPcmStream.field_r.field_y;
             GrowableStringList.field_c = MusicPatchPcmStream.field_r.field_g;
-            ni.field_b = ni.field_b - 1;
+            InterfaceLoadingStatus.field_b = InterfaceLoadingStatus.field_b - 1;
             GrowableStringList.field_c = GrowableStringList.field_c + 1;
-            cm.field_a = cm.field_a - (GrowableStringList.field_c + CurvedRoadSegment.field_y);
-            LayeredWidgetStyle.field_d = LayeredWidgetStyle.field_d + ni.field_b;
+            MenuHitTesting.field_a = MenuHitTesting.field_a - (GrowableStringList.field_c + CurvedRoadSegment.field_y);
+            LayeredWidgetStyle.field_d = LayeredWidgetStyle.field_d + InterfaceLoadingStatus.field_b;
             fieldTemp$2 = LoginForm.field_P + 1;
             LoginForm.field_P = LoginForm.field_P + 1;
             if (fieldTemp$2 == MenuList.field_l[StrongCacheEntry.field_w]) {
-              if (eg.field_a == 0) {
+              if (ClientBackgroundRenderer.field_a == 0) {
                 NetworkArchiveRequest.submitChampionshipScores(EntitySound.field_m, (byte) -89, StrongCacheEntry.field_w);
-                if (StrongCacheEntry.field_w == ao.field_b &&
-                  3 > ao.field_b) {
-                  hk.field_d = 0;
-                  fieldTemp$3 = ao.field_b + 1;
-                  ao.field_b = ao.field_b + 1;
+                if (StrongCacheEntry.field_w == BoundaryLoopClipper.field_b &&
+                  3 > BoundaryLoopClipper.field_b) {
+                  RoadControlPathBuilder.field_d = 0;
+                  fieldTemp$3 = BoundaryLoopClipper.field_b + 1;
+                  BoundaryLoopClipper.field_b = BoundaryLoopClipper.field_b + 1;
                   OutlinedRoadStripRenderer.field_r = fieldTemp$3;
                   GrowableStringList.savePlayerProgress(0);
-                  FullscreenErrorReason.b((byte) -125);
+                  FullscreenErrorReason.populateCourseMenu((byte) -125);
                 }
               }
               LoginForm.field_P = 0;
@@ -272,10 +272,10 @@ final class PlayerStatsRequest extends IntrusiveNode {
             TrackObject.switchMenu(param1, false, 10);
             return;
           }
-          AlternateUsernameLoginCredentials.requestDisplayMode(1, param0 - 121);
+          AlternateUsernameLoginCredentials.requestBackground(1, param0 - 121);
           if (RoadShadowRenderer.isGuestMode((byte) 102)) {
             if (0 == ClientException.field_c &&
-              !ad.field_a) {
+              !ReflectionCheckSupport.field_a) {
               TrackObject.switchMenu(param1, false, 12);
               return;
             }

@@ -5,7 +5,7 @@ final class AchievementStatusRequest extends IntrusiveNode {
     int[] values;
     static SpriteAsset field_l;
     boolean completed;
-    static int field_k;
+    static int requestedBackground;
     int unlockedMask;
 
     public static void clearSharedReferences(byte param0) {
@@ -15,7 +15,7 @@ final class AchievementStatusRequest extends IntrusiveNode {
         field_l = null;
     }
 
-    final static void readChampionshipProgress(boolean param0, IsaacPacketBuffer param1, int param2) {
+    final static void readBestChampionshipTime(boolean param0, IsaacPacketBuffer param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         IsaacPacketBuffer var5 = null;
@@ -27,16 +27,16 @@ final class AchievementStatusRequest extends IntrusiveNode {
         try {
           if (param0) {
             var5 = (IsaacPacketBuffer) null;
-            AchievementStatusRequest.readChampionshipProgress(true, (IsaacPacketBuffer) null, -15);
+            AchievementStatusRequest.readBestChampionshipTime(true, (IsaacPacketBuffer) null, -15);
           }
           var3_int = MenuSelectionController.readOptionalBits(16, (byte) -96, param1);
-          var4 = d.field_c[param2];
+          var4 = AccountProtocolContext.field_c[param2];
           if (var4 != -1 && (var4 < var3_int ||
             var3_int == -1)) {
-            ad.field_a = true;
+            ReflectionCheckSupport.field_a = true;
             return;
           }
-          d.field_c[param2] = var3_int;
+          AccountProtocolContext.field_c[param2] = var3_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,11 +91,11 @@ final class AchievementStatusRequest extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasStatusButtonCookie(int param0) {
         if (param0 != 0) {
           return true;
         }
-        return ao.a(GameKeyHandler.getApplet(97), false);
+        return BoundaryLoopClipper.hasStatusButtonCookie(GameKeyHandler.getApplet(97), false);
     }
 
     final static void startSelectedRace(int param0, boolean param1) {
@@ -104,23 +104,23 @@ final class AchievementStatusRequest extends IntrusiveNode {
         if (param0 != -21383) {
           AchievementStatusRequest.clearSharedReferences((byte) 26);
         }
-        if (PolarSortVector.a((byte) 20, ArchiveIndex.b((byte) -49).field_p) != 0) {
+        if (PolarSortVector.getChampionshipAccessStatus((byte) 20, ArchiveIndex.getSelectedCourse((byte) -49).field_p) != 0) {
           return;
         }
         PathWaypoint.field_o = null;
         ClientException.field_c = 0;
         TexturedRoadFillRenderer.selectMusicTrack(20830, 3 + StrongCacheEntry.field_w);
         CheckboxRenderer.field_x = 3;
-        pe.field_g = new int[4];
+        ScreenOptionsMenu.field_g = new int[4];
         if (7 != DelegatingCanvas.field_d) {
           if (1 != DelegatingCanvas.field_d &&
             !Vector2i.field_c) {
             AgeValidator.field_o = false;
           }
-          AlternateUsernameLoginCredentials.requestDisplayMode(1, param0 ^ 21498);
-          nm.field_b = ArchiveIndex.b((byte) -49);
-          if (UsernameLoginCredentials.a(nm.field_b, true)) {
-            MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, DelegatingCanvas.field_d, Vector2i.field_c, AgeValidator.field_o, IntArrayReadRequest.field_l, IntrusiveDeque.field_b);
+          AlternateUsernameLoginCredentials.requestBackground(1, param0 ^ 21498);
+          ResourceArchiveFactory.field_b = ArchiveIndex.getSelectedCourse((byte) -49);
+          if (UsernameLoginCredentials.pollRaceGraphicsLoaded(ResourceArchiveFactory.field_b, true)) {
+            MusicPatchPcmStream.field_r = new RaceWorld(ResourceArchiveFactory.field_b, DelegatingCanvas.field_d, Vector2i.field_c, AgeValidator.field_o, IntArrayReadRequest.field_l, IntrusiveDeque.field_b);
           } else {
             DiskCacheStore.field_i = IntrusiveDeque.field_b;
             ArchiveRequest.field_r = DelegatingCanvas.field_d;
@@ -138,16 +138,16 @@ final class AchievementStatusRequest extends IntrusiveNode {
           AgeValidator.field_o = false;
           IntrusiveDeque.field_b = -1;
           TextWidgetStyle.field_g = 3;
-          eg.field_a = LoginForm.field_P;
+          ClientBackgroundRenderer.field_a = LoginForm.field_P;
           EntitySound.field_m = new int[MenuList.field_l[StrongCacheEntry.field_w]];
-          ni.field_b = 859978912;
+          InterfaceLoadingStatus.field_b = 859978912;
           CurvedRoadSegment.field_y = 0;
           LayeredWidgetStyle.field_d = 1913842707 + ((1 & StrongCacheEntry.field_w) << 1) + ((2 & StrongCacheEntry.field_w) >> 1);
           GrowableStringList.field_c = -1134004831;
-          cm.field_a = -1329759026;
-          IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
+          MenuHitTesting.field_a = -1329759026;
+          IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.getSelectedCourse((byte) -49).field_p][0];
           ChatMessage.startChampionshipCourse(param1, -79);
-          ((GameMenu) (l.field_a[10])).carouselOffset = 480.0f;
+          ((GameMenu) (CollisionGeometry.field_a[10])).carouselOffset = 480.0f;
         }
     }
 
@@ -156,6 +156,6 @@ final class AchievementStatusRequest extends IntrusiveNode {
     }
 
     static {
-        field_k = 1;
+        requestedBackground = 1;
     }
 }

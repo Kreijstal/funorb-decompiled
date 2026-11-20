@@ -6,19 +6,19 @@ final class OutlinedRoadFillRenderer extends RoadFillRenderer {
     private int alpha;
     private int outlineColor;
 
-    final static void a(byte param0) {
+    final static void restoreForcedLoginForm(byte param0) {
         if (!ArchiveCatalog.field_o) {
           throw new IllegalStateException();
         }
         int var1 = 102 / ((24 - param0) / 33);
         if (null != RoadControlPointSpec.field_c) {
-          RoadControlPointSpec.field_c.h((byte) -93);
+          RoadControlPointSpec.field_c.closeProgressDialog((byte) -93);
         }
         String var2 = MusicPatch.getAccountName(false);
-        lh.field_a = new LoginForm(var2, (String) null, true, false, false);
-        ka.field_b.showDialog(sm.field_c, false);
-        sm.field_c.setContent((UiWidget) (lh.field_a), (byte) 13);
-        sm.field_c.finishResize(false);
+        SocketConnectorFactory.field_a = new LoginForm(var2, (String) null, true, false, false);
+        AccountUiUtilities.field_b.showDialog(Cp1252Decoder.field_c, false);
+        Cp1252Decoder.field_c.setContent((UiWidget) (SocketConnectorFactory.field_a), (byte) 13);
+        Cp1252Decoder.field_c.finishResize(false);
     }
 
     final void drawRoadFill(float param0, int[] param1, int param2, int[] param3, byte param4) {

@@ -36,17 +36,17 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
             this.field_F = (TextHotspotWidget) null;
           }
           if (param1 == 0) {
-            oc.showNavigationMenu(param2 + 16711786, "terms.ws");
+            SpriteLayoutUtilities.showNavigationMenu(param2 + 16711786, "terms.ws");
             return;
           }
           if (param1 == 1) {
-            oc.showNavigationMenu(16711680, "privacy.ws");
+            SpriteLayoutUtilities.showNavigationMenu(16711680, "privacy.ws");
             return;
           }
           if (2 != param1) {
             return;
           }
-          oc.showNavigationMenu(16711680, "conduct.ws");
+          SpriteLayoutUtilities.showNavigationMenu(16711680, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
         }
     }
 
-    private final String a(byte param0) {
+    private final String getLinkMarkupEnd(byte param0) {
         int var2 = 35 / ((-66 - param0) / 52);
         return "</col></u>";
     }
@@ -76,13 +76,13 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -4) {
-            discarded$1 = this.g((byte) 9);
+            discarded$1 = this.getLinkMarkupStart((byte) 9);
           }
           if (this.field_M != param1) {
             return;
           }
-          hk.a(true);
-          this.field_K.h((byte) -103);
+          RoadControlPathBuilder.beginStoredLogin(true);
+          this.field_K.closeProgressDialog((byte) -103);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
         }
     }
 
-    private final String g(byte param0) {
+    private final String getLinkMarkupStart(byte param0) {
         if (param0 >= -84) {
           this.field_M = (TextButton) null;
           return "<u=2164A2><col=2164A2>";
@@ -117,13 +117,13 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
           this.field_K = param0;
           this.field_M = new TextButton(ImageProducerRasterBuffer.field_j, (WidgetListener) null);
           this.field_M.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
-          var7 = LoginCredentials.substituteIndexedTokens(ta.field_b, new String[]{this.g((byte) -120), this.a((byte) -119)}, true);
+          var7 = LoginCredentials.substituteIndexedTokens(HuffmanTextCodec.field_b, new String[]{this.getLinkMarkupStart((byte) -120), this.getLinkMarkupEnd((byte) -119)}, true);
           var3 = 20;
           var4 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
           this.field_F = new TextHotspotWidget(var7, var4);
           this.field_F.tooltip = "";
-          this.field_F.setHotspotTooltip(0, m.field_d, true);
-          this.field_F.setHotspotTooltip(1, m.field_d, true);
+          this.field_F.setHotspotTooltip(0, RasterClipTopStack.field_d, true);
+          this.field_F.setHotspotTooltip(1, RasterClipTopStack.field_d, true);
           this.field_F.listener = (WidgetListener) (this);
           this.field_F.width = -40 + this.width;
           this.field_F.setBoundsToPreferredHeight(-40 + this.width, (byte) -64, var3, 26);

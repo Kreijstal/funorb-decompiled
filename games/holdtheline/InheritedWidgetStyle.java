@@ -64,7 +64,7 @@ class InheritedWidgetStyle extends WidgetStyleNode {
           var4--;
           var3Lifetime1.pixels[var4] = 1;
         }
-        vb.a(-74, var3Lifetime1);
+        JagexLogoRenderer.pushSpriteRaster(-74, var3Lifetime1);
         if (param1 > -37) {
           return (Sprite) null;
         }
@@ -91,7 +91,7 @@ class InheritedWidgetStyle extends WidgetStyleNode {
         }
         try {
           var4 = param0.getGraphics();
-          b.field_c.draw(param1, param3, var4, 34);
+          SocialListProtocol.field_c.draw(param1, param3, var4, 34);
           var4.dispose();
         } catch (Exception exception) {
           param0.repaint();
@@ -271,8 +271,8 @@ class InheritedWidgetStyle extends WidgetStyleNode {
         BlobReadRequest var2 = null;
         if (param1 < -51) {
           var2 = new BlobReadRequest();
-          oc.field_d.addLast((byte) -104, var2);
-          q.sendBlobReadRequest(param0, 51);
+          SpriteLayoutUtilities.field_d.addLast((byte) -104, var2);
+          PlayerDataProtocol.sendBlobReadRequest(param0, 51);
           return var2;
         }
         return (BlobReadRequest) null;
@@ -566,7 +566,7 @@ class InheritedWidgetStyle extends WidgetStyleNode {
                 var2_int = -RoadStripRenderer.field_e.position + param0;
               }
               IterableSecondaryNodeDeque.field_h.readFully(RoadStripRenderer.field_e.payload, var2_int, RoadStripRenderer.field_e.position, 125);
-              cm.field_b = bb.monotonicTimeMillis(-1);
+              MenuHitTesting.field_b = BoundaryLoopTracer.monotonicTimeMillis(-1);
               RoadStripRenderer.field_e.position = RoadStripRenderer.field_e.position + var2_int;
               if (param0 > RoadStripRenderer.field_e.position) {
                 return false;

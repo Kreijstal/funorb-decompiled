@@ -23,7 +23,7 @@ abstract class ByteStorage {
         field_a = null;
     }
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
+    final static boolean pollCommonUiLoaded(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -78,7 +78,7 @@ abstract class ByteStorage {
         }
     }
 
-    final static String a(String param0, String param1, String param2, boolean param3, ResourceArchive param4) {
+    final static String formatGroupLoadingStatus(String param0, String param1, String param2, boolean param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;

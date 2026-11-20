@@ -12,7 +12,7 @@ final class EntitySound extends IntrusiveNode {
     MovingEntity field_q;
     SoundPlayback field_p;
 
-    final static String a(boolean param0, long param1) {
+    final static String decodeBase37DisplayName(boolean param0, long param1) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
@@ -40,7 +40,7 @@ final class EntitySound extends IntrusiveNode {
         while (param1 != 0L) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = ne.field_a[(int)(-(param1 * 37L) + var7)];
+          var9 = TextSyntax.field_a[(int)(-(param1 * 37L) + var7)];
           if (95 == var9) {
             var10 = var6.length() - 1;
             var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
@@ -69,7 +69,7 @@ final class EntitySound extends IntrusiveNode {
           this.field_n = param2;
           this.field_q = param0;
           if (param1 >= -69) {
-            EntitySound.a(false, -7L);
+            EntitySound.decodeBase37DisplayName(false, -7L);
           }
           this.field_p = null;
         } catch (RuntimeException runtimeException) {
@@ -96,12 +96,12 @@ final class EntitySound extends IntrusiveNode {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createPanelBorderSprites(int param0, int param1, int param2, int param3, int param4) {
         if (param3 < -69) {
-          return ak.a(param1, param0, 1, param4, param2, 1, 0, 3, 1);
+          return NineSliceSpriteFactory.createNineSliceSprites(param1, param0, 1, param4, param2, 1, 0, 3, 1);
         }
         field_k = -0.09486949443817139f;
-        return ak.a(param1, param0, 1, param4, param2, 1, 0, 3, 1);
+        return NineSliceSpriteFactory.createNineSliceSprites(param1, param0, 1, param4, param2, 1, 0, 3, 1);
     }
 
     static {

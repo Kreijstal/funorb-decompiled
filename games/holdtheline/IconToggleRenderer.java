@@ -40,7 +40,7 @@ final class IconToggleRenderer implements WidgetRenderer {
           if (!param3.isFocused((byte) -20)) {
             return;
           }
-          GrowableObjectList.a(param3.height - 4, param3.width - 4, 2 + var6_int, var7 + 2, (byte) 19);
+          GrowableObjectList.drawDottedRectangle(param3.height - 4, param3.width - 4, 2 + var6_int, var7 + 2, (byte) 19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

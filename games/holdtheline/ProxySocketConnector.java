@@ -108,11 +108,11 @@ final class ProxySocketConnector extends SocketConnector {
     final static void startMenuBackgroundRace(int param0) {
         TexturedRoadFillRenderer.selectMusicTrack(20830, param0);
         StrongCacheEntry.field_w = 0;
-        nm.field_b = VehicleEngineSounds.field_c[4][0];
+        ResourceArchiveFactory.field_b = VehicleEngineSounds.field_c[4][0];
         LoginForm.field_P = 0;
         PathWaypoint.field_o = null;
-        if (UsernameLoginCredentials.a(nm.field_b, true)) {
-          MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 3, false, false, -1, -1);
+        if (UsernameLoginCredentials.pollRaceGraphicsLoaded(ResourceArchiveFactory.field_b, true)) {
+          MusicPatchPcmStream.field_r = new RaceWorld(ResourceArchiveFactory.field_b, 3, false, false, -1, -1);
           EntitySound.field_j = true;
           TrackObject.switchMenu(false, false, -1);
           return;
@@ -324,7 +324,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param1 != -1) {
             field_j = (IntrusiveDeque) null;
           }
-          lj.pushRasterState((byte) -111);
+          RasterStateStack.pushRasterState((byte) -111);
           SoftwareRasterizer.bindRaster(param0.pixels, param0.canvasWidth, param0.canvasHeight);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "hf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

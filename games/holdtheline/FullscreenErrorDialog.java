@@ -100,14 +100,14 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
           if (LoginChoicePanel.field_N != param1) {
             if (DiskCacheStore.field_a != param1) {
               if (StandardContentTransitionDialog.field_nb == param1) {
-                var3 = hc.field_c;
+                var3 = FixedAngleMath.field_c;
                 this.height = this.height + 30;
               }
             } else {
               var3 = TextWidgetStyle.field_m;
               this.height = this.height + 10;
               if (LoginForm.isAdaptiveViewportAvailable(true)) {
-                var3 = dm.field_c;
+                var3 = RasterStateRestoration.field_c;
                 this.height = this.height + 20;
               }
             }
@@ -186,7 +186,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_10_0 = NamedSoundEffect.a(param0, var4, param2 - 3247);
+          stackIn_10_0 = NamedSoundEffect.moduloForPositiveDivisor(param0, var4, param2 - 3247);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

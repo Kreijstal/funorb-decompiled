@@ -73,9 +73,9 @@ final class WhirlpoolTables {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            roundTables[0][var0] = ba.orLongs(var12, ba.orLongs(var4 << 8, ba.orLongs(ba.orLongs(ba.orLongs(var2 << 32, ba.orLongs(ba.orLongs(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16)));
+            roundTables[0][var0] = AccountNameNormalizer.orLongs(var12, AccountNameNormalizer.orLongs(var4 << 8, AccountNameNormalizer.orLongs(AccountNameNormalizer.orLongs(AccountNameNormalizer.orLongs(var2 << 32, AccountNameNormalizer.orLongs(AccountNameNormalizer.orLongs(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16)));
             for (var14 = 1; var14 < 8; var14++) {
-                roundTables[var14][var0] = ba.orLongs(roundTables[-1 + var14][var0] << 56, roundTables[-1 + var14][var0] >>> 8);
+                roundTables[var14][var0] = AccountNameNormalizer.orLongs(roundTables[-1 + var14][var0] << 56, roundTables[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

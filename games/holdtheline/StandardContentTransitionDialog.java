@@ -102,14 +102,14 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         RuntimeException decompiledCaughtException = null;
         var5 = HoldTheLine.field_D;
         try {
-          bb.field_a = ValidationState.field_c;
+          BoundaryLoopTracer.field_a = ValidationState.field_c;
           if (param2 > -53) {
             var6 = (String) null;
             StandardContentTransitionDialog.getNamedArchiveFile(-106, (String) null);
           }
           if (param3 == 255) {
             stackIn_13_0 = !(13 <= ResizableDialog.field_V);
-            BoundedRandomAccessFile.field_d = TextFieldRenderer.a(stackIn_13_0, 0);
+            BoundedRandomAccessFile.field_d = TextFieldRenderer.createRestrictedNameResult(stackIn_13_0, 0);
             return;
           }
           if (param3 < 100) {

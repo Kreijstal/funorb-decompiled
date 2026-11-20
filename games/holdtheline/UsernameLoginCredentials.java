@@ -13,10 +13,10 @@ class UsernameLoginCredentials extends LoginCredentials {
         if (!param0) {
           return (LoginCredentialType) null;
         }
-        return jh.field_d;
+        return PackedClientOptions.field_d;
     }
 
-    final static int a(byte param0, boolean param1) {
+    final static int updateMembershipSlides(byte param0, boolean param1) {
         int stackIn_63_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_73_0 = 0;
@@ -40,7 +40,7 @@ class UsernameLoginCredentials extends LoginCredentials {
           var2_int = -1;
           if (param0 != -86) {
             var6 = (Sprite) null;
-            UsernameLoginCredentials.a((Sprite) null, 75, -15, -53, 82, 25);
+            UsernameLoginCredentials.drawScaledWhiteRecoloredSprite((Sprite) null, 75, -15, -53, 82, 25);
           }
           if (TriangleMesh.field_y != null) {
             var2_int = TriangleMesh.field_y.length;
@@ -51,23 +51,23 @@ class UsernameLoginCredentials extends LoginCredentials {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (BoundedRandomAccessFile.field_f > hk.field_e) {
-              hk.field_e = hk.field_e + 1;
-              if (hk.field_e > BoundedRandomAccessFile.field_g && (null == TriangleMesh.field_y ||
+            if (BoundedRandomAccessFile.field_f > RoadControlPathBuilder.field_e) {
+              RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e + 1;
+              if (RoadControlPathBuilder.field_e > BoundedRandomAccessFile.field_g && (null == TriangleMesh.field_y ||
                 null == TriangleMesh.field_y[SpriteSheetAsset.field_e])) {
-                hk.field_e = hk.field_e - 1;
+                RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (BoundedRandomAccessFile.field_f <= hk.field_e &&
+                if (BoundedRandomAccessFile.field_f <= RoadControlPathBuilder.field_e &&
                   TriangleMesh.field_y[(1 + SpriteSheetAsset.field_e) % var2_int] == null) {
-                  hk.field_e = hk.field_e - 1;
+                  RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e - 1;
                 }
               }
             }
-            if (hk.field_e >= BoundedRandomAccessFile.field_f) {
+            if (RoadControlPathBuilder.field_e >= BoundedRandomAccessFile.field_f) {
               ProxySocketConnector.field_i = SpriteSheetAsset.field_e;
-              hk.field_e = hk.field_e - BoundedRandomAccessFile.field_f;
+              RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e - BoundedRandomAccessFile.field_f;
               if (!DualNodeHashTable.field_e) {
                 SpriteSheetAsset.field_e = SpriteSheetAsset.field_e - 1;
                 if (SpriteSheetAsset.field_e < 0) {
@@ -80,7 +80,7 @@ class UsernameLoginCredentials extends LoginCredentials {
                 }
               }
             }
-            if (BoundedRandomAccessFile.field_g < hk.field_e) {
+            if (BoundedRandomAccessFile.field_g < RoadControlPathBuilder.field_e) {
               DualNodeHashTable.field_e = true;
             }
           }
@@ -93,34 +93,34 @@ class UsernameLoginCredentials extends LoginCredentials {
               if (-FullscreenDisplayMode.field_i.width + 269 < TrackBoundary.field_x &&
                 TrackBoundary.field_x < 269) {
                 var4 = 1;
-                hk.field_e = BoundedRandomAccessFile.field_f;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = false;
               }
               if (TrackBoundary.field_x > 586 &&
                 TrackBoundary.field_x < FullscreenDisplayMode.field_i.width + 586) {
-                hk.field_e = BoundedRandomAccessFile.field_f;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = true;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              hk.field_e > BoundedRandomAccessFile.field_g &&
+              RoadControlPathBuilder.field_e > BoundedRandomAccessFile.field_g &&
               FullscreenErrorDialog.field_X > var3 &&
               FullscreenErrorDialog.field_X < var3 + FullscreenDisplayMode.field_i.height) {
               if (-FullscreenDisplayMode.field_i.width + 269 < NodeHashTableIterator.field_g &&
                 NodeHashTableIterator.field_g < 269) {
-                hk.field_e = BoundedRandomAccessFile.field_g;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_g;
               }
               if (NodeHashTableIterator.field_g > 586 &&
                 FullscreenDisplayMode.field_i.width + 586 > NodeHashTableIterator.field_g) {
-                hk.field_e = BoundedRandomAccessFile.field_g;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_g;
               }
             }
           }
           if (!param1) {
             return 0;
           }
-          DualLinkNode.field_k.updateMouseSelection(PasswordValidator.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.a(param0 + 203, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
+          DualLinkNode.field_k.updateMouseSelection(PasswordValidator.hitTestBenefitsButton(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.hitTestBenefitsButton(param0 + 203, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
           if (DualLinkNode.field_k.hasActivationInput(-1)) {
             if (0 == DualLinkNode.field_k.selectedIndex) {
               stackIn_63_0 = 3;
@@ -132,7 +132,7 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
           }
           while (true) {
-            if (!qh.pollKeyEvent(-121)) {
+            if (!KeyboardEventQueue.pollKeyEvent(-121)) {
               stackIn_83_0 = 0;
               return stackIn_83_0;
             }
@@ -161,17 +161,17 @@ class UsernameLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static Boolean b(byte param0) {
+    final static Boolean pollEmailValidationReply(byte param0) {
         if (param0 != -29) {
           CourseDefinition var2 = (CourseDefinition) null;
-          UsernameLoginCredentials.a((CourseDefinition) null, true);
+          UsernameLoginCredentials.pollRaceGraphicsLoaded((CourseDefinition) null, true);
         }
         Boolean var1 = RoadSegment.field_u;
         RoadSegment.field_u = null;
         return var1;
     }
 
-    final static boolean a(CourseDefinition param0, boolean param1) {
+    final static boolean pollRaceGraphicsLoaded(CourseDefinition param0, boolean param1) {
         int var3_int = 0;
         int var5_int = 0;
         int var6_int = 0;
@@ -207,14 +207,14 @@ class UsernameLoginCredentials extends LoginCredentials {
           if (!param1) {
             field_e = (IntrusiveDeque) null;
           }
-          if (!mc.field_a[9].pollGraphicsLoaded((byte) 116)) {
+          if (!IntegerTextParser.field_a[9].pollGraphicsLoaded((byte) 116)) {
             return false;
           }
-          if (!mc.field_a[11].pollGraphicsLoaded((byte) 124)) {
+          if (!IntegerTextParser.field_a[11].pollGraphicsLoaded((byte) 124)) {
             return false;
           }
           if (LoginCredentialType.isFeatureEnabled(16616, 0)) {
-            var3 = wi.field_a.getRotatedSprites(16);
+            var3 = LoginCredentialsFactory.field_a.getRotatedSprites(16);
             if (var3 == null) {
               return false;
             }
@@ -236,7 +236,7 @@ class UsernameLoginCredentials extends LoginCredentials {
               var8.expandToCanvas();
             }
           }
-          if (BufferedSocket.a(-74)) {
+          if (BufferedSocket.pollHudAssetsLoaded(-74)) {
             return true;
           }
           return false;
@@ -273,7 +273,7 @@ class UsernameLoginCredentials extends LoginCredentials {
         field_h = null;
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawScaledWhiteRecoloredSprite(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var13 = 0;
         RuntimeException stackIn_29_0 = null;
@@ -391,7 +391,7 @@ class UsernameLoginCredentials extends LoginCredentials {
           var2_int = -1;
           if (param0 != -86) {
             var6 = (Sprite) null;
-            UsernameLoginCredentials.a((Sprite) null, 75, -15, -53, 82, 25);
+            UsernameLoginCredentials.drawScaledWhiteRecoloredSprite((Sprite) null, 75, -15, -53, 82, 25);
           }
           if (TriangleMesh.field_y != null) {
             var2_int = TriangleMesh.field_y.length;
@@ -402,23 +402,23 @@ class UsernameLoginCredentials extends LoginCredentials {
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (BoundedRandomAccessFile.field_f > hk.field_e) {
-              hk.field_e = hk.field_e + 1;
-              if (hk.field_e > BoundedRandomAccessFile.field_g && (null == TriangleMesh.field_y ||
+            if (BoundedRandomAccessFile.field_f > RoadControlPathBuilder.field_e) {
+              RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e + 1;
+              if (RoadControlPathBuilder.field_e > BoundedRandomAccessFile.field_g && (null == TriangleMesh.field_y ||
                 null == TriangleMesh.field_y[SpriteSheetAsset.field_e])) {
-                hk.field_e = hk.field_e - 1;
+                RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (BoundedRandomAccessFile.field_f <= hk.field_e &&
+                if (BoundedRandomAccessFile.field_f <= RoadControlPathBuilder.field_e &&
                   TriangleMesh.field_y[(1 + SpriteSheetAsset.field_e) % var2_int] == null) {
-                  hk.field_e = hk.field_e - 1;
+                  RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e - 1;
                 }
               }
             }
-            if (hk.field_e >= BoundedRandomAccessFile.field_f) {
+            if (RoadControlPathBuilder.field_e >= BoundedRandomAccessFile.field_f) {
               ProxySocketConnector.field_i = SpriteSheetAsset.field_e;
-              hk.field_e = hk.field_e - BoundedRandomAccessFile.field_f;
+              RoadControlPathBuilder.field_e = RoadControlPathBuilder.field_e - BoundedRandomAccessFile.field_f;
               if (!DualNodeHashTable.field_e) {
                 SpriteSheetAsset.field_e = SpriteSheetAsset.field_e - 1;
                 if (SpriteSheetAsset.field_e < 0) {
@@ -431,7 +431,7 @@ class UsernameLoginCredentials extends LoginCredentials {
                 }
               }
             }
-            if (BoundedRandomAccessFile.field_g < hk.field_e) {
+            if (BoundedRandomAccessFile.field_g < RoadControlPathBuilder.field_e) {
               DualNodeHashTable.field_e = true;
             }
           }
@@ -444,34 +444,34 @@ class UsernameLoginCredentials extends LoginCredentials {
               if (-FullscreenDisplayMode.field_i.width + 269 < TrackBoundary.field_x &&
                 TrackBoundary.field_x < 269) {
                 var4 = 1;
-                hk.field_e = BoundedRandomAccessFile.field_f;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = false;
               }
               if (TrackBoundary.field_x > 586 &&
                 TrackBoundary.field_x < FullscreenDisplayMode.field_i.width + 586) {
-                hk.field_e = BoundedRandomAccessFile.field_f;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = true;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              hk.field_e > BoundedRandomAccessFile.field_g &&
+              RoadControlPathBuilder.field_e > BoundedRandomAccessFile.field_g &&
               FullscreenErrorDialog.field_X > var3 &&
               FullscreenErrorDialog.field_X < var3 + FullscreenDisplayMode.field_i.height) {
               if (-FullscreenDisplayMode.field_i.width + 269 < NodeHashTableIterator.field_g &&
                 NodeHashTableIterator.field_g < 269) {
-                hk.field_e = BoundedRandomAccessFile.field_g;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_g;
               }
               if (NodeHashTableIterator.field_g > 586 &&
                 FullscreenDisplayMode.field_i.width + 586 > NodeHashTableIterator.field_g) {
-                hk.field_e = BoundedRandomAccessFile.field_g;
+                RoadControlPathBuilder.field_e = BoundedRandomAccessFile.field_g;
               }
             }
           }
           if (!param1) {
             return 0;
           }
-          DualLinkNode.field_k.updateMouseSelection(PasswordValidator.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.a(param0 + 203, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
+          DualLinkNode.field_k.updateMouseSelection(PasswordValidator.hitTestBenefitsButton(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.hitTestBenefitsButton(param0 + 203, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
           if (DualLinkNode.field_k.hasActivationInput(-1)) {
             if (0 == DualLinkNode.field_k.selectedIndex) {
               stackIn_63_0 = 3;
@@ -483,7 +483,7 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
           }
           while (true) {
-            if (!qh.pollKeyEvent(-121)) {
+            if (!KeyboardEventQueue.pollKeyEvent(-121)) {
               stackIn_83_0 = 0;
               return stackIn_83_0;
             }

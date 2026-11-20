@@ -10,7 +10,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
     private BitmapFont field_a;
     static String field_c;
 
-    final static void a(int param0, String param1, boolean param2, PaletteBitmapFont param3, int param4, int param5) {
+    final static void drawRightAlignedTextWithHighlight(int param0, String param1, boolean param2, PaletteBitmapFont param3, int param4, int param5) {
         try {
           if (!param2) {
             field_f = (String) null;
@@ -22,7 +22,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void attachInputListeners(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         PaletteBitmapFont var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -32,7 +32,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
         try {
           if (param1 != 114) {
             var3 = (PaletteBitmapFont) null;
-            LinkWidgetRenderer.a(-98, (String) null, true, (PaletteBitmapFont) null, 48, -52);
+            LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-98, (String) null, true, (PaletteBitmapFont) null, 48, -52);
           }
           RoadFillRenderer.attachKeyboard((java.awt.Component) ((Object) param0), -116);
           MouseInputRegistration.attachMouseInput((java.awt.Component) ((Object) param0), param1 ^ 109);
@@ -100,7 +100,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
                 var10 = var10 + (param3.height - var8 >> 1);
               }
             }
-            GrowableObjectList.a(var8, 4 + var7, -2 + var9, var10 + 2, (byte) 19);
+            GrowableObjectList.drawDottedRectangle(var8, 4 + var7, -2 + var9, var10 + 2, (byte) 19);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,14 +123,14 @@ final class LinkWidgetRenderer implements WidgetRenderer {
         this.field_a = IntrusiveNode.field_g;
     }
 
-    final static void a(int param0, byte param1, ScoreSubmission param2) {
+    final static void queueScoreSubmission(int param0, byte param1, ScoreSubmission param2) {
         try {
           AccountTermsPanel.field_O.addLast((byte) -103, param2);
           if (param1 >= -27) {
             ScoreSubmission var4 = (ScoreSubmission) null;
-            LinkWidgetRenderer.a(-120, (byte) -6, (ScoreSubmission) null);
+            LinkWidgetRenderer.queueScoreSubmission(-120, (byte) -6, (ScoreSubmission) null);
           }
-          VehicleDefinition.a(param2, param0, 118);
+          VehicleDefinition.sendScoreSubmission(param2, param0, 118);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "am.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -114,9 +114,9 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
               stackIn_5_3 = var9.bottom;
             }
             var13 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            StereoMusicSample.a(param1.x + (param0 + param1.width), param1.x + param0, param1.y + param4 + param1.height, true, param1.y + param4);
+            StereoMusicSample.pushRasterClip(param1.x + (param0 + param1.width), param1.x + param0, param1.y + param4 + param1.height, true, param1.y + param4);
             MenuList.field_b.drawLine(this.field_a, var12, (byte) -53, var13, var11, var11);
-            dm.popRasterState((byte) -10);
+            RasterStateRestoration.popRasterState((byte) -10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,7 +269,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
             TextWidgetStyle.clearSharedReferences(true);
           }
           boolean decompiledFrameRemainder0 = true;
-          StereoMusicSample.a(param6.x + (param1 + param6.width), param6.x + param1, param6.y + (param4 + param6.height), true, param6.y + param4);
+          StereoMusicSample.pushRasterClip(param6.x + (param1 + param6.width), param6.x + param1, param6.y + (param4 + param6.height), true, param6.y + param4);
           var9_int = this.getContentWidth(21, param6);
           var10 = this.getContentHeight((byte) -63, param6);
           if (!this.field_o) {
@@ -304,7 +304,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
           } else {
             this.field_f.drawParagraph(this.getDisplayText(param6, (byte) -12), this.textXToScreen((byte) 101, param0, param1, param6), this.textYToScreen(param7, (byte) -114, param6, param4), var9_int, var10, param5, param2, this.field_i, this.field_d, this.field_h);
           }
-          dm.popRasterState((byte) -10);
+          RasterStateRestoration.popRasterState((byte) -10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -530,7 +530,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
             }
             var10 = var18.getLineForCharacter(var8, -22539);
             var11 = var18.getLineForCharacter(var9, -22539);
-            StereoMusicSample.a(param5.width + param2 + param5.x, param2 + param5.x, param1 + param5.y + param5.height, true, param5.y + param1);
+            StereoMusicSample.pushRasterClip(param5.width + param2 + param5.x, param2 + param5.x, param1 + param5.y + param5.height, true, param5.y + param1);
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.lines[var12];
               if (var12 == var10) {
@@ -551,7 +551,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
               var15 = stackIn_21_0;
               MenuList.field_b.fillRectangleAlpha(this.field_b >>> 24, 13421772, this.field_p + param5.y + (param1 + param5.field_y + var13.top), var13.bottom, this.textXToScreen((byte) -54, var14, param2, param5), this.field_b, -var14 + var15);
             }
-            dm.popRasterState((byte) -10);
+            RasterStateRestoration.popRasterState((byte) -10);
           }
           if (param0 >= -23) {
             this.field_o = false;
@@ -674,13 +674,13 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    final static AccountFormText a(int param0) {
+    final static AccountFormText getDisplayNameFormText(int param0) {
         String var1 = GrowableStringList.getPendingDisplayName(param0 ^ param0);
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new AccountFormText(GrowableStringList.getPendingDisplayName(0), AccountProgressDialog.n(112));
+        return new AccountFormText(GrowableStringList.getPendingDisplayName(0), AccountProgressDialog.isNameRequestPending(112));
     }
 
     TextWidgetStyle(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {

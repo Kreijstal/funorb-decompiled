@@ -144,14 +144,14 @@ final class GrowableIntList {
         return 1 + this.lastIndex;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setTooltipAnchor(int param0, int param1, int param2) {
         if (param1 != 0) {
           GrowableIntList.clearSharedReferences((byte) -39);
-          ak.field_c = param2;
+          NineSliceSpriteFactory.field_c = param2;
           MouseWheelInput.field_b = param0;
           return;
         }
-        ak.field_c = param2;
+        NineSliceSpriteFactory.field_c = param2;
         MouseWheelInput.field_b = param0;
     }
 

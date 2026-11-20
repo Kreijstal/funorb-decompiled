@@ -126,8 +126,8 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static void a(int param0, byte param1) {
-        AgeValidator.a(true);
+    final static void processAccountUiFrame(int param0, byte param1) {
+        AgeValidator.processAccountUi(true);
         if (param1 > -63) {
           field_i = 124;
         }
@@ -231,17 +231,17 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final static String a(int param0) {
+    final static String getVisibleTooltipText(int param0) {
         if (param0 != 100) {
           return (String) null;
         }
         if (DiskCacheStore.field_h) {
           return null;
         }
-        if (LinearPointPath.field_h > dm.field_a) {
+        if (LinearPointPath.field_h > RasterStateRestoration.field_a) {
           return null;
         }
-        if (SavedRasterState.field_l + LinearPointPath.field_h > dm.field_a) {
+        if (SavedRasterState.field_l + LinearPointPath.field_h > RasterStateRestoration.field_a) {
           return UiWidget.field_s;
         }
         return null;
@@ -282,7 +282,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 == -27429) {
             return;
           }
-          DiskCacheWorker.a(-68, (byte) 57);
+          DiskCacheWorker.processAccountUiFrame(-68, (byte) 57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

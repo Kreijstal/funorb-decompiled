@@ -25,11 +25,11 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (sm.field_b.isEmpty(0)) {
+          if (Cp1252Decoder.field_b.isEmpty(0)) {
             stackIn_2_0 = new EntitySound(param3, param2, param0);
             return stackIn_2_0;
           }
-          var4 = (EntitySound) (sm.field_b.removeLast((byte) 74));
+          var4 = (EntitySound) (Cp1252Decoder.field_b.removeLast((byte) 74));
           var4.initializeEmitter(param2, (byte) -79, param0, param3);
           if (param1 == 2931) {
             stackIn_7_0 = var4;
@@ -144,7 +144,7 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
           var7 = stackIn_13_0;
           stackIn_16_0 = (param0) ? 16777215 : 7105644;
           var8 = stackIn_16_0;
-          oj.a(this.field_t, var7, param3.x + param1, param4 + param3.y + (param3.height - this.field_t[0].canvasHeight >> 1), -102, param3.width);
+          PendingMusicLoader.drawTintedHorizontalFrame(this.field_t, var7, param3.x + param1, param4 + param3.y + (param3.height - this.field_t[0].canvasHeight >> 1), -102, param3.width);
           if (param2 >= -48) {
             var9 = (CharSequence) null;
             SpriteButtonRenderer.parseInt((CharSequence) null, (byte) -73);

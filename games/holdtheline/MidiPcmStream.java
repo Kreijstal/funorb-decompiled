@@ -109,67 +109,67 @@ final class MidiPcmStream extends PcmStream {
           var5Lifetime1 = (32552 & param1) >> 8;
           var6Lifetime1 = 127 & param1 >> 16;
           if (var5Lifetime1 == 0) {
-            this.channelBanks[var4Lifetime1] = LoginChoicePanel.a(-2080769, this.channelBanks[var4Lifetime1]) + (var6Lifetime1 << 14);
+            this.channelBanks[var4Lifetime1] = LoginChoicePanel.andInts(-2080769, this.channelBanks[var4Lifetime1]) + (var6Lifetime1 << 14);
           }
           if (32 == var5Lifetime1) {
-            this.channelBanks[var4Lifetime1] = (var6Lifetime1 << 7) + LoginChoicePanel.a(this.channelBanks[var4Lifetime1], -16257);
+            this.channelBanks[var4Lifetime1] = (var6Lifetime1 << 7) + LoginChoicePanel.andInts(this.channelBanks[var4Lifetime1], -16257);
           }
           if (1 == var5Lifetime1) {
-            this.channelModulations[var4Lifetime1] = LoginChoicePanel.a(-16257, this.channelModulations[var4Lifetime1]) + (var6Lifetime1 << 7);
+            this.channelModulations[var4Lifetime1] = LoginChoicePanel.andInts(-16257, this.channelModulations[var4Lifetime1]) + (var6Lifetime1 << 7);
           }
           if (33 == var5Lifetime1) {
-            this.channelModulations[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.a(-128, this.channelModulations[var4Lifetime1]);
+            this.channelModulations[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.andInts(-128, this.channelModulations[var4Lifetime1]);
           }
           if (var5Lifetime1 == 5) {
-            this.portamentoTimes[var4Lifetime1] = LoginChoicePanel.a(this.portamentoTimes[var4Lifetime1], -16257) + (var6Lifetime1 << 7);
+            this.portamentoTimes[var4Lifetime1] = LoginChoicePanel.andInts(this.portamentoTimes[var4Lifetime1], -16257) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 37) {
-            this.portamentoTimes[var4Lifetime1] = LoginChoicePanel.a(-128, this.portamentoTimes[var4Lifetime1]) + var6Lifetime1;
+            this.portamentoTimes[var4Lifetime1] = LoginChoicePanel.andInts(-128, this.portamentoTimes[var4Lifetime1]) + var6Lifetime1;
           }
           if (7 == var5Lifetime1) {
-            this.channelVolumes[var4Lifetime1] = LoginChoicePanel.a(this.channelVolumes[var4Lifetime1], -16257) + (var6Lifetime1 << 7);
+            this.channelVolumes[var4Lifetime1] = LoginChoicePanel.andInts(this.channelVolumes[var4Lifetime1], -16257) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 39) {
-            this.channelVolumes[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.a(-128, this.channelVolumes[var4Lifetime1]);
+            this.channelVolumes[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.andInts(-128, this.channelVolumes[var4Lifetime1]);
           }
           if (var5Lifetime1 == 10) {
-            this.channelPans[var4Lifetime1] = (var6Lifetime1 << 7) + LoginChoicePanel.a(-16257, this.channelPans[var4Lifetime1]);
+            this.channelPans[var4Lifetime1] = (var6Lifetime1 << 7) + LoginChoicePanel.andInts(-16257, this.channelPans[var4Lifetime1]);
           }
           if (42 == var5Lifetime1) {
-            this.channelPans[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.a(this.channelPans[var4Lifetime1], -128);
+            this.channelPans[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.andInts(this.channelPans[var4Lifetime1], -128);
           }
           if (var5Lifetime1 == 11) {
-            this.channelExpressions[var4Lifetime1] = LoginChoicePanel.a(-16257, this.channelExpressions[var4Lifetime1]) + (var6Lifetime1 << 7);
+            this.channelExpressions[var4Lifetime1] = LoginChoicePanel.andInts(-16257, this.channelExpressions[var4Lifetime1]) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 43) {
-            this.channelExpressions[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.a(-128, this.channelExpressions[var4Lifetime1]);
+            this.channelExpressions[var4Lifetime1] = var6Lifetime1 + LoginChoicePanel.andInts(-128, this.channelExpressions[var4Lifetime1]);
           }
           if (var5Lifetime1 == 64) {
             if (var6Lifetime1 < 64) {
-              this.channelFlags[var4Lifetime1] = LoginChoicePanel.a(this.channelFlags[var4Lifetime1], -2);
+              this.channelFlags[var4Lifetime1] = LoginChoicePanel.andInts(this.channelFlags[var4Lifetime1], -2);
             } else {
-              this.channelFlags[var4Lifetime1] = kc.a(this.channelFlags[var4Lifetime1], 1);
+              this.channelFlags[var4Lifetime1] = BitwiseIntegerOperations.orInts(this.channelFlags[var4Lifetime1], 1);
             }
           }
           if (var5Lifetime1 == 65) {
             if (var6Lifetime1 >= 64) {
-              this.channelFlags[var4Lifetime1] = kc.a(this.channelFlags[var4Lifetime1], 2);
+              this.channelFlags[var4Lifetime1] = BitwiseIntegerOperations.orInts(this.channelFlags[var4Lifetime1], 2);
             } else {
               this.releasePortamentoNotes(var4Lifetime1, 2097152);
-              this.channelFlags[var4Lifetime1] = LoginChoicePanel.a(this.channelFlags[var4Lifetime1], -3);
+              this.channelFlags[var4Lifetime1] = LoginChoicePanel.andInts(this.channelFlags[var4Lifetime1], -3);
             }
           }
           if (var5Lifetime1 == 99) {
-            this.parameterSelectors[var4Lifetime1] = (var6Lifetime1 << 7) + LoginChoicePanel.a(127, this.parameterSelectors[var4Lifetime1]);
+            this.parameterSelectors[var4Lifetime1] = (var6Lifetime1 << 7) + LoginChoicePanel.andInts(127, this.parameterSelectors[var4Lifetime1]);
           }
           if (var5Lifetime1 == 98) {
-            this.parameterSelectors[var4Lifetime1] = LoginChoicePanel.a(this.parameterSelectors[var4Lifetime1], 16256) + var6Lifetime1;
+            this.parameterSelectors[var4Lifetime1] = LoginChoicePanel.andInts(this.parameterSelectors[var4Lifetime1], 16256) + var6Lifetime1;
           }
           if (var5Lifetime1 == 101) {
-            this.parameterSelectors[var4Lifetime1] = 16384 + LoginChoicePanel.a(127, this.parameterSelectors[var4Lifetime1]) + (var6Lifetime1 << 7);
+            this.parameterSelectors[var4Lifetime1] = 16384 + LoginChoicePanel.andInts(127, this.parameterSelectors[var4Lifetime1]) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 100) {
-            this.parameterSelectors[var4Lifetime1] = 16384 + (LoginChoicePanel.a(16256, this.parameterSelectors[var4Lifetime1]) + var6Lifetime1);
+            this.parameterSelectors[var4Lifetime1] = 16384 + (LoginChoicePanel.andInts(16256, this.parameterSelectors[var4Lifetime1]) + var6Lifetime1);
           }
           if (var5Lifetime1 == 120) {
             this.allSoundsOff(var4Lifetime1, (byte) -120);
@@ -183,27 +183,27 @@ final class MidiPcmStream extends PcmStream {
           if (var5Lifetime1 == 6) {
             var7 = this.parameterSelectors[var4Lifetime1];
             if (var7 == 16384) {
-              this.pitchBendRanges[var4Lifetime1] = LoginChoicePanel.a(this.pitchBendRanges[var4Lifetime1], -16257) + (var6Lifetime1 << 7);
+              this.pitchBendRanges[var4Lifetime1] = LoginChoicePanel.andInts(this.pitchBendRanges[var4Lifetime1], -16257) + (var6Lifetime1 << 7);
             }
           }
           if (38 == var5Lifetime1) {
             var7Lifetime1 = this.parameterSelectors[var4Lifetime1];
             if (var7Lifetime1 == 16384) {
-              this.pitchBendRanges[var4Lifetime1] = LoginChoicePanel.a(this.pitchBendRanges[var4Lifetime1], -128) + var6Lifetime1;
+              this.pitchBendRanges[var4Lifetime1] = LoginChoicePanel.andInts(this.pitchBendRanges[var4Lifetime1], -128) + var6Lifetime1;
             }
           }
           if (var5Lifetime1 == 16) {
-            this.sampleOffsets[var4Lifetime1] = LoginChoicePanel.a(-16257, this.sampleOffsets[var4Lifetime1]) + (var6Lifetime1 << 7);
+            this.sampleOffsets[var4Lifetime1] = LoginChoicePanel.andInts(-16257, this.sampleOffsets[var4Lifetime1]) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 48) {
-            this.sampleOffsets[var4Lifetime1] = LoginChoicePanel.a(this.sampleOffsets[var4Lifetime1], -128) + var6Lifetime1;
+            this.sampleOffsets[var4Lifetime1] = LoginChoicePanel.andInts(this.sampleOffsets[var4Lifetime1], -128) + var6Lifetime1;
           }
           if (81 == var5Lifetime1) {
             if (64 > var6Lifetime1) {
               this.resetRetriggerPhases((byte) 91, var4Lifetime1);
-              this.channelFlags[var4Lifetime1] = LoginChoicePanel.a(this.channelFlags[var4Lifetime1], -5);
+              this.channelFlags[var4Lifetime1] = LoginChoicePanel.andInts(this.channelFlags[var4Lifetime1], -5);
             } else {
-              this.channelFlags[var4Lifetime1] = kc.a(this.channelFlags[var4Lifetime1], 4);
+              this.channelFlags[var4Lifetime1] = BitwiseIntegerOperations.orInts(this.channelFlags[var4Lifetime1], 4);
             }
           }
           if (var5Lifetime1 == 17) {
@@ -461,7 +461,7 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         this.defaultPrograms[param1] = param0;
-        this.channelBanks[param1] = LoginChoicePanel.a(param0, -128);
+        this.channelBanks[param1] = LoginChoicePanel.andInts(param0, -128);
         this.programChange(param2 ^ -177, param0, param1);
     }
 
@@ -689,7 +689,7 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < 16) {
-          this.channelBanks[var5] = LoginChoicePanel.a(this.defaultPrograms[var5], -128);
+          this.channelBanks[var5] = LoginChoicePanel.andInts(this.defaultPrograms[var5], -128);
           var5++;
         }
     }
@@ -1086,8 +1086,8 @@ final class MidiPcmStream extends PcmStream {
           var6 = new StringBuilder(var5);
           for (var7 = var2_int; var3 > var7; var7++) {
             var8 = param0.charAt(var7);
-            if (LoginCredentials.a((char) var8, (byte) -116)) {
-              var9 = ba.normalizeAccountCharacter(true, (char) var8);
+            if (LoginCredentials.isDisplayNameCharacter((char) var8, (byte) -116)) {
+              var9 = AccountNameNormalizer.normalizeAccountCharacter(true, (char) var8);
               if (0 != var9) {
                 discarded$0 = var6.append((char) var9);
               }

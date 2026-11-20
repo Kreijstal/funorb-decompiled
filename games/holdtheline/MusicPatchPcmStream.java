@@ -110,7 +110,7 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var3 = var3 + param2;
             }
-            cd.logClientError(12, var3);
+            EmailDomainValidator.logClientError(12, var3);
             var7 = NineSlicePanel.replaceAllLiteral("%3a", ":", -104, var3);
             var8 = NineSlicePanel.replaceAllLiteral("%40", "@", -102, var7);
             var9 = NineSlicePanel.replaceAllLiteral("%26", "&", -102, var8);
@@ -118,7 +118,7 @@ final class MusicPatchPcmStream extends PcmStream {
             if (null == RoadStripRenderer.field_d) {
               return;
             }
-            stackIn_13_0 = te.field_d;
+            stackIn_13_0 = EncryptedPacketWriter.field_d;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = RoadStripRenderer.field_d.getCodeBase();

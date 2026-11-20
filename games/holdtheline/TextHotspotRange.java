@@ -23,7 +23,7 @@ final class TextHotspotRange extends IntrusiveNode {
           field_r = null;
           return;
         }
-        TextHotspotRange.a(true);
+        TextHotspotRange.createTickClock(true);
         field_q = null;
         field_o = null;
         field_i = null;
@@ -31,7 +31,7 @@ final class TextHotspotRange extends IntrusiveNode {
         field_r = null;
     }
 
-    final static TickClock a(boolean param0) {
+    final static TickClock createTickClock(boolean param0) {
         if (param0) {
           TextHotspotRange.clearSharedReferences(-87);
           return (TickClock) ((Object) new NanoTickClock());

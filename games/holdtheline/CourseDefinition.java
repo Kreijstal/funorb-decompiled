@@ -29,7 +29,7 @@ final class CourseDefinition {
 
     final Sprite getPreview(int param0, int param1, int param2) {
         if (param0 != 9392) {
-          CourseDefinition.a(true, true, -63);
+          CourseDefinition.drawAccountOverlay(true, true, -63);
         }
         if (this.field_g == null) {
           this.field_g = LoginForm.createCoursePreview(param2, param1, this, -12392);
@@ -58,10 +58,10 @@ final class CourseDefinition {
         return this.field_g;
     }
 
-    final static void a(boolean param0) {
+    final static void finishUiAnimations(boolean param0) {
         if (param0) {
-          if (ka.field_b != null) {
-            ka.field_b.finishAnimations((byte) -84);
+          if (AccountUiUtilities.field_b != null) {
+            AccountUiUtilities.field_b.finishAnimations((byte) -84);
           }
           if (null != MidiKeyUsage.field_l) {
             MidiKeyUsage.field_l.stopProgressAnimation((byte) 33);
@@ -70,8 +70,8 @@ final class CourseDefinition {
           return;
         }
         field_d = (int[]) null;
-        if (ka.field_b != null) {
-          ka.field_b.finishAnimations((byte) -84);
+        if (AccountUiUtilities.field_b != null) {
+          AccountUiUtilities.field_b.finishAnimations((byte) -84);
         }
         if (null != MidiKeyUsage.field_l) {
           MidiKeyUsage.field_l.stopProgressAnimation((byte) 33);
@@ -86,7 +86,7 @@ final class CourseDefinition {
             return true;
           }
           if (!RasterBuffer.pollCourseGraphicsLoaded(this, -65)) {
-            this.field_l = RotatedSpriteSheetAsset.a((byte) 47, this);
+            this.field_l = RotatedSpriteSheetAsset.getCourseGraphicsLoadProgress((byte) 47, this);
             return false;
           }
           this.field_l = -1;
@@ -96,7 +96,7 @@ final class CourseDefinition {
           return true;
         }
         if (!RasterBuffer.pollCourseGraphicsLoaded(this, -65)) {
-          this.field_l = RotatedSpriteSheetAsset.a((byte) 47, this);
+          this.field_l = RotatedSpriteSheetAsset.getCourseGraphicsLoadProgress((byte) 47, this);
           return false;
         }
         this.field_l = -1;
@@ -112,15 +112,15 @@ final class CourseDefinition {
         field_q = null;
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void drawAccountOverlay(boolean param0, boolean param1, int param2) {
         int var3 = 77 / ((-38 - param2) / 56);
         if (param1) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
-          Bzip2State.a(0, param1);
+          Bzip2State.drawAccountUi(0, param1);
           return;
         }
         SoftwareRasterizer.clear();
-        Bzip2State.a(0, param1);
+        Bzip2State.drawAccountUi(0, param1);
     }
 
     CourseDefinition(byte[] param0) {

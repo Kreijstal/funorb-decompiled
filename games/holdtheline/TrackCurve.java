@@ -127,11 +127,11 @@ abstract class TrackCurve extends IntrusiveNode {
           LoginChoicePanel.field_G = AudioOutput.create(param1, param2, 0, param3);
           DraggableWidget.field_G = AudioOutput.create(param1, param2, 1, param4);
           LoginChoicePanel.field_H = new PcmStreamMixer();
-          ua.field_a = param4;
+          QuadraticPathSlicer.field_a = param4;
           DraggableWidget.field_G.setStream(LoginChoicePanel.field_H);
-          ai.field_a = param7;
-          ai.field_a.setMasterVolume(NanoTickClock.field_e, -32284);
-          LoginChoicePanel.field_G.setStream(ai.field_a);
+          MeshLighting.field_a = param7;
+          MeshLighting.field_a.setMasterVolume(NanoTickClock.field_e, -32284);
+          LoginChoicePanel.field_G.setStream(MeshLighting.field_a);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wc.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }

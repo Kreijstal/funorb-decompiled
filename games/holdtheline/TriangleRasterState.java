@@ -12,11 +12,11 @@ final class TriangleRasterState {
     static int field_b;
     private static int[] field_f;
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setViewport(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_i = param2 - param0;
         field_d = param3 - param1;
-        TriangleRasterState.b();
+        TriangleRasterState.updateViewportCenter();
         if (field_a.length < field_d) {
           field_a = new int[SpriteButtonRenderer.nextPowerOfTwo((byte) 7, field_d)];
         }
@@ -27,8 +27,8 @@ final class TriangleRasterState {
         }
     }
 
-    final static void c() {
-        TriangleRasterState.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
+    final static void bindRasterClip() {
+        TriangleRasterState.setViewport(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     public static void clearSharedReferences() {
@@ -39,7 +39,7 @@ final class TriangleRasterState {
         field_g = null;
     }
 
-    private final static void b() {
+    private final static void updateViewportCenter() {
         field_b = field_i / 2;
         field_c = field_d / 2;
     }

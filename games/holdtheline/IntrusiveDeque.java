@@ -8,7 +8,7 @@ final class IntrusiveDeque {
     static ResourceArchive field_d;
     private IntrusiveNode cursor;
 
-    final static int a(BoundaryCurve param0, byte param1, int param2, int param3) {
+    final static int lineRayCrossing(BoundaryCurve param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -83,11 +83,11 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final static void b(boolean param0) {
-        oi.field_f = param0 ? true : false;
+    final static void resetScreenOptions(boolean param0) {
+        HoverTooltipController.field_f = param0 ? true : false;
         DelayedServerPacket.field_j = null;
-        dg.field_b = null;
-        qg.field_b = null;
+        ClientMenuBootstrap.field_b = null;
+        TexturedPolygonRenderer.field_b = null;
         StraightRoadSlicer.field_a = null;
     }
 
@@ -185,7 +185,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final static java.net.URL a(java.net.URL param0, java.applet.Applet param1, byte param2) {
+    final static java.net.URL adjustAppletUrl(java.net.URL param0, java.applet.Applet param1, byte param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_8_0 = null;
@@ -199,9 +199,9 @@ final class IntrusiveDeque {
         try {
           var3 = null;
           var4 = null;
-          if (il.field_a != null &&
-            !il.field_a.equals(param1.getParameter("settings"))) {
-            var3 = il.field_a;
+          if (LeaderboardRequests.field_a != null &&
+            !LeaderboardRequests.field_a.equals(param1.getParameter("settings"))) {
+            var3 = LeaderboardRequests.field_a;
             var4 = var3;
             var4 = var3;
           }
@@ -210,7 +210,7 @@ final class IntrusiveDeque {
             var4 = DialWidget.field_M;
           }
           if (param2 > 6) {
-            stackIn_10_0 = AccountProgressDialog.a((String) (var3), (String) (var4), param0, (byte) -118, -1);
+            stackIn_10_0 = AccountProgressDialog.rewriteContextUrl((String) (var3), (String) (var4), param0, (byte) -118, -1);
             return stackIn_10_0;
           }
           stackIn_8_0 = (java.net.URL) null;

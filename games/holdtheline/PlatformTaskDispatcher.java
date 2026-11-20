@@ -214,7 +214,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_a;
                 switch (var2_int) {
                   case 4:
-                    if (bb.monotonicTimeMillis(-1) < field_w) {
+                    if (BoundaryLoopTracer.monotonicTimeMillis(-1) < field_w) {
                       throw new IOException();
                     }
                     var8.field_b = new DataInputStream(((java.net.URL) (var8.field_c)).openStream());
@@ -252,7 +252,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     switch (var2_int) {
                       case 5:
                         if (this.field_l) {
-                          var8.field_b = this.field_x.a(-16);
+                          var8.field_b = this.field_x.getDisplayModes(-16);
                         } else {
                           var8.field_b = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_e, new Object[]{});
                         }
@@ -262,7 +262,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_b = var14;
                         var14.setResizable(false);
                         if (this.field_l) {
-                          this.field_x.a(var8.field_f >> 16, 11468, var8.field_g >>> 16, var14, 65535 & var8.field_f, 65535 & var8.field_g);
+                          this.field_x.enterFullscreen(var8.field_f >> 16, 11468, var8.field_g >>> 16, var14, 65535 & var8.field_f, 65535 & var8.field_g);
                         } else {
                           Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var14, new Integer(var8.field_g >>> 16), new Integer(var8.field_g & 65535), new Integer(var8.field_f >> 16), new Integer(65535 & var8.field_f)});
                         }
@@ -271,7 +271,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_l) {
                           Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_e, new Object[]{});
                         } else {
-                          this.field_x.a(8, (java.awt.Frame) (var8.field_c));
+                          this.field_x.exitFullscreen(8, (java.awt.Frame) (var8.field_c));
                         }
                         break;
                       case 16:
@@ -281,7 +281,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3 = var8.field_g;
                           var4_int = var8.field_f;
                           if (this.field_l) {
-                            this.field_m.a(var4_int, true, var3);
+                            this.field_m.setCursorPosition(var4_int, true, var3);
                           } else {
                             Class.forName("AwtCursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_d, new Object[]{new Integer(var3), new Integer(var4_int)});
                           }
@@ -293,7 +293,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3 = stackIn_84_0;
                           var13 = (java.awt.Component) (var8.field_c);
                           if (this.field_l) {
-                            this.field_m.a(var3 != 0, var13, 54);
+                            this.field_m.setCursorVisible(var3 != 0, var13, 54);
                           } else {
                             Class.forName("AwtCursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_d, new Object[]{var13, new Boolean(var3 != 0)});
                           }
@@ -341,13 +341,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_b = var3_ref_bg;
                         break;
                       case 21:
-                        if (field_w > bb.monotonicTimeMillis(-1)) {
+                        if (field_w > BoundaryLoopTracer.monotonicTimeMillis(-1)) {
                           throw new IOException();
                         }
                         var8.field_b = java.net.InetAddress.getByName((String) (var8.field_c)).getAddress();
                         break;
                       case 3:
-                        if (field_w > bb.monotonicTimeMillis(-1)) {
+                        if (field_w > BoundaryLoopTracer.monotonicTimeMillis(-1)) {
                           throw new IOException();
                         }
                         var10 = (var8.field_g >> 24 & 255) + "." + (255 & var8.field_g >> 16) + "." + ((var8.field_g & 65493) >> 8) + "." + (var8.field_g & 255);
@@ -363,12 +363,12 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_b = var9;
                     break;
                   case 22:
-                    if (bb.monotonicTimeMillis(-1) < field_w) {
+                    if (BoundaryLoopTracer.monotonicTimeMillis(-1) < field_w) {
                       throw new IOException();
                     }
                     try {
                       if (false) throw (ProxyAuthenticationException) null;
-                      var8.field_b = lh.a(var8.field_g, (String) (var8.field_c), -1).connect(-64);
+                      var8.field_b = SocketConnectorFactory.createSocketConnector(var8.field_g, (String) (var8.field_c), -1).connect(-64);
                     } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_uk = (ProxyAuthenticationException) (Object) decompiledCaughtException;
@@ -377,7 +377,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 1:
-                    if (field_w > bb.monotonicTimeMillis(-1)) {
+                    if (field_w > BoundaryLoopTracer.monotonicTimeMillis(-1)) {
                       throw new IOException();
                     }
                     var8.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_c)), var8.field_g);

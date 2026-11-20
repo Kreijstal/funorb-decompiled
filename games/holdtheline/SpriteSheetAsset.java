@@ -17,11 +17,11 @@ final class SpriteSheetAsset {
     final static AchievementStatusRequest requestAchievementStatus(byte param0, int param1) {
         if (param0 >= -96) {
           IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
-          SpriteSheetAsset.a(81, (IsaacPacketBuffer) null);
+          SpriteSheetAsset.decodeMeshMaterials(81, (IsaacPacketBuffer) null);
         }
         AchievementStatusRequest var2 = new AchievementStatusRequest();
         RaceWorld.field_v.addLast((byte) -126, var2);
-        hh.sendAchievementStatusRequest(param1, (byte) -23);
+        HoverTargetState.sendAchievementStatusRequest(param1, (byte) -23);
         return var2;
     }
 
@@ -67,7 +67,7 @@ final class SpriteSheetAsset {
         field_d = (RotatedSpriteCache[][]) null;
     }
 
-    final static MeshMaterial[] a(int param0, IsaacPacketBuffer param1) {
+    final static MeshMaterial[] decodeMeshMaterials(int param0, IsaacPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -109,7 +109,7 @@ final class SpriteSheetAsset {
               param1.readBits(12, 7);
               var4[var5] = var6;
             } else {
-              var6_int = param1.readBits(SoundCache.a((byte) -68, var5 - 1), 7);
+              var6_int = param1.readBits(SoundCache.getSignedEncodingWidth((byte) -68, var5 - 1), 7);
               var4[var5] = var4[var6_int];
             }
             var5++;

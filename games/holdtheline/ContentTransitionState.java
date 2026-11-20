@@ -11,7 +11,7 @@ final class ContentTransitionState {
         throw new IllegalStateException();
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isLogoAnimationComplete(boolean param0) {
         if (param0) {
           return 250 < StrongCacheEntry.field_q ? true : false;
         }

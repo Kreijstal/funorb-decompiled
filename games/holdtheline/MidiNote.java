@@ -24,7 +24,7 @@ final class MidiNote extends IntrusiveNode {
     int key;
     int retriggerPhase;
 
-    final static boolean a(int param0, boolean param1, int param2, Point2i param3, Point2i param4, int param5, Vector2f param6) {
+    final static boolean overlapsExpandedRectangle(int param0, boolean param1, int param2, Point2i param3, Point2i param4, int param5, Vector2f param6) {
         RuntimeException var7 = null;
         float var8 = 0.0f;
         float var9 = 0.0f;
@@ -49,7 +49,7 @@ final class MidiNote extends IntrusiveNode {
           }
           if (!param1) {
             var10 = (java.awt.Canvas) null;
-            MidiNote.a((byte) 85, (java.awt.Canvas) null);
+            MidiNote.drawAccountScreen((byte) 85, (java.awt.Canvas) null);
           }
           var9 = param6.cross(var11, param1);
           if (var9 < (float)(-(param0 + param2))) {
@@ -87,7 +87,7 @@ final class MidiNote extends IntrusiveNode {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isMarketingConsentSelected(byte param0) {
         int var1 = -52 % ((29 - param0) / 54);
         return ArchiveProvider.field_b;
     }
@@ -100,15 +100,15 @@ final class MidiNote extends IntrusiveNode {
         int var2 = -104 % ((24 - param0) / 52);
     }
 
-    final static void a(byte param0, java.awt.Canvas param1) {
+    final static void drawAccountScreen(byte param0, java.awt.Canvas param1) {
         try {
           if (param0 != -97) {
-            MidiNote.a((byte) 32);
+            MidiNote.isMarketingConsentSelected((byte) 32);
           }
           if (DiskCacheRequest.field_w == 11) {
-            BufferedSocket.a(false);
+            BufferedSocket.onAccountScreenComplete(false);
           }
-          CheckboxWidget.a(DisplayNameForm.field_K, DelayedServerPacket.field_m, LayeredWidgetStyle.field_e, -115);
+          CheckboxWidget.drawLoadProgress(DisplayNameForm.field_K, DelayedServerPacket.field_m, LayeredWidgetStyle.field_e, -115);
           InheritedWidgetStyle.paintRasterBuffer(param1, 0, true, 0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ck.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

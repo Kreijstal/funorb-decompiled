@@ -11,14 +11,14 @@ final class SocialListEntry extends InheritedWidgetStyle {
     String displayName;
     static String field_ib;
 
-    final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
+    final static void initializeLogoResources(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
-          TextLineLayout.field_l = param0 * NodeHashTableIterator.a(855) / 1000;
+          TextLineLayout.field_l = param0 * NodeHashTableIterator.getTickRate(855) / 1000;
           LoginMethodPreference.preloadLogoAudio(param1, 0);
           Particle.loadLogoModels(param1, -64);
           DelayedServerPacket.loadLogoFinalFrame(-18916, param1);
-          dm.a(255);
-          DraggableWidget.j(param2 ^ 0);
+          RasterStateRestoration.initializeLogoGamma(255);
+          DraggableWidget.buildLogoGlow(param2 ^ 0);
           StrongCacheEntry.field_q = param2 - TextLineLayout.field_l;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "fi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -47,7 +47,7 @@ final class SocialListEntry extends InheritedWidgetStyle {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qg.decodeArchivedSpriteSheet(param4, param3, (byte) -27, param2)) {
+          if (!TexturedPolygonRenderer.decodeArchivedSpriteSheet(param4, param3, (byte) -27, param2)) {
             stackIn_2_0 = null;
             return (MonochromeBitmapFont) (stackIn_2_0);
           }

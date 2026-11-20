@@ -7,8 +7,8 @@ final class RoadControlPointSpec {
     static RoadSegment[] field_a;
     float parameter;
 
-    final static void a(byte param0) {
-        DualNodeHashTable.b(95);
+    final static void shutdownAudioOutputs(byte param0) {
+        DualNodeHashTable.shutdownAudioOutputs(95);
         int var1 = -29 % ((17 - param0) / 45);
     }
 

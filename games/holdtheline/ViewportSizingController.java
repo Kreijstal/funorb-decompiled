@@ -38,7 +38,7 @@ final class ViewportSizingController {
         if (NetworkArchiveRequest.field_w != null) {
           return;
         }
-        if (fc.field_a > 0) {
+        if (BoundaryIntervalBuilder.field_a > 0) {
           if (this.field_h) {
             fieldTemp$1 = this.field_g - 1;
             this.field_g = this.field_g - 1;
@@ -46,7 +46,7 @@ final class ViewportSizingController {
               return;
             }
             this.field_g = this.field_p;
-            if (this.field_s > d.field_g) {
+            if (this.field_s > AccountProtocolContext.field_g) {
               this.field_h = false;
             } else {
               if (param0 != -9) {
@@ -56,14 +56,14 @@ final class ViewportSizingController {
             }
             return;
           }
-          if (lj.field_f < this.field_j) {
-            NameCheckProgressDialog.field_Bb = (this.field_j - lj.field_f) / 2;
+          if (RasterStateStack.field_f < this.field_j) {
+            NameCheckProgressDialog.field_Bb = (this.field_j - RasterStateStack.field_f) / 2;
           } else {
             if (this.field_j > 0) {
               NameCheckProgressDialog.field_Bb = 0;
             }
           }
-          if (lj.field_f != this.field_b) {
+          if (RasterStateStack.field_f != this.field_b) {
             this.field_r.resizeViewport(param0 ^ -96, this.field_c, this.field_b);
           } else {
             if (LinearPointPath.field_i != this.field_c) {
@@ -80,7 +80,7 @@ final class ViewportSizingController {
             return;
           }
           this.field_g = this.field_p;
-          if (this.field_s > d.field_g) {
+          if (this.field_s > AccountProtocolContext.field_g) {
             this.field_h = false;
           } else {
             if (param0 != -9) {
@@ -90,11 +90,11 @@ final class ViewportSizingController {
           }
           return;
         }
-        if (lj.field_f < this.field_j) {
-          NameCheckProgressDialog.field_Bb = (this.field_j - lj.field_f) / 2;
+        if (RasterStateStack.field_f < this.field_j) {
+          NameCheckProgressDialog.field_Bb = (this.field_j - RasterStateStack.field_f) / 2;
         } else {
           if (this.field_j <= 0) {
-            if (lj.field_f != this.field_b) {
+            if (RasterStateStack.field_f != this.field_b) {
               this.field_r.resizeViewport(param0 ^ -96, this.field_c, this.field_b);
             } else {
               if (LinearPointPath.field_i != this.field_c) {
@@ -105,7 +105,7 @@ final class ViewportSizingController {
           }
           NameCheckProgressDialog.field_Bb = 0;
         }
-        if (lj.field_f == this.field_b &&
+        if (RasterStateStack.field_f == this.field_b &&
           LinearPointPath.field_i == this.field_c) {
           return;
         }
@@ -128,7 +128,7 @@ final class ViewportSizingController {
           if (param2 != 0) {
             field_a = (RotatedSpriteAsset) null;
           }
-          param0.drawTinted(param1 - param0.canvasWidth / 2, param5 - param0.canvasHeight / 2, IterableSecondaryNodeDeque.a(param4, -1, param3));
+          param0.drawTinted(param1 - param0.canvasWidth / 2, param5 - param0.canvasHeight / 2, IterableSecondaryNodeDeque.scaleRgb(param4, -1, param3));
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -147,10 +147,10 @@ final class ViewportSizingController {
         if (!param0) {
           return true;
         }
-        if (d.field_g < this.field_s) {
+        if (AccountProtocolContext.field_g < this.field_s) {
           return false;
         }
-        if (fc.field_a > 0) {
+        if (BoundaryIntervalBuilder.field_a > 0) {
           return true;
         }
         return false;
@@ -193,7 +193,7 @@ final class ViewportSizingController {
                   var3 = (int)((float)var2 / this.field_e);
                 }
               }
-              if (var2 != lj.field_f) {
+              if (var2 != RasterStateStack.field_f) {
                 this.field_r.resizeViewport(79, var3, var2);
               } else {
                 if (var3 != LinearPointPath.field_i) {
@@ -212,7 +212,7 @@ final class ViewportSizingController {
                     var3 = (int)((float)var2 / this.field_e);
                   }
                 }
-                if (var2 != lj.field_f) {
+                if (var2 != RasterStateStack.field_f) {
                   this.field_r.resizeViewport(79, var3, var2);
                 } else {
                   if (var3 != LinearPointPath.field_i) {
@@ -225,7 +225,7 @@ final class ViewportSizingController {
                   var4 = (int)(0.5f + (float)var3 * this.field_e);
                   if (var4 > var2) {
                     var3 = (int)((float)var2 / this.field_e);
-                    if (var2 != lj.field_f) {
+                    if (var2 != RasterStateStack.field_f) {
                       this.field_r.resizeViewport(79, var3, var2);
                     } else {
                       if (var3 != LinearPointPath.field_i) {
@@ -233,7 +233,7 @@ final class ViewportSizingController {
                       }
                     }
                     if (0 < this.field_j) {
-                      NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
+                      NameCheckProgressDialog.field_Bb = (-RasterStateStack.field_f + this.field_j) / 2;
                     }
                     return;
                   }
@@ -241,19 +241,19 @@ final class ViewportSizingController {
                     var2 = var4;
                   }
                 }
-                if (var2 == lj.field_f &&
+                if (var2 == RasterStateStack.field_f &&
                   var3 == LinearPointPath.field_i) {
                   if (0 >= this.field_j) {
                     return;
                   }
-                  NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
+                  NameCheckProgressDialog.field_Bb = (-RasterStateStack.field_f + this.field_j) / 2;
                   return;
                 }
                 this.field_r.resizeViewport(79, var3, var2);
               }
             }
             if (0 < this.field_j) {
-              NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
+              NameCheckProgressDialog.field_Bb = (-RasterStateStack.field_f + this.field_j) / 2;
             }
             return;
           }
@@ -271,7 +271,7 @@ final class ViewportSizingController {
               var3 = (int)((float)var2 / this.field_e);
             }
           }
-          if (var2 != lj.field_f) {
+          if (var2 != RasterStateStack.field_f) {
             this.field_r.resizeViewport(79, var3, var2);
           } else {
             if (var3 != LinearPointPath.field_i) {
@@ -279,7 +279,7 @@ final class ViewportSizingController {
             }
           }
           if (0 < this.field_j) {
-            NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
+            NameCheckProgressDialog.field_Bb = (-RasterStateStack.field_f + this.field_j) / 2;
           }
           return;
         }
@@ -301,10 +301,10 @@ final class ViewportSizingController {
             var4Lifetime2 = (int)(0.5f + (float)var3 * this.field_e);
             if (var4Lifetime2 > var2) {
               var3 = (int)((float)var2 / this.field_e);
-              if (var2 != lj.field_f) {
+              if (var2 != RasterStateStack.field_f) {
                 this.field_r.resizeViewport(79, var3, var2);
                 if (0 < this.field_j) {
-                  NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
+                  NameCheckProgressDialog.field_Bb = (-RasterStateStack.field_f + this.field_j) / 2;
                 }
                 return;
               }
@@ -321,7 +321,7 @@ final class ViewportSizingController {
           }
         }
         if (decompiledFrameRemainder0) {
-          if (var2 != lj.field_f) {
+          if (var2 != RasterStateStack.field_f) {
             this.field_r.resizeViewport(79, var3, var2);
           } else {
             if (var3 != LinearPointPath.field_i) {
@@ -332,7 +332,7 @@ final class ViewportSizingController {
         if (0 >= this.field_j) {
           return;
         }
-        NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
+        NameCheckProgressDialog.field_Bb = (-RasterStateStack.field_f + this.field_j) / 2;
         return;
     }
 

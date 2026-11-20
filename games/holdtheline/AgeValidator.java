@@ -10,12 +10,12 @@ final class AgeValidator extends TextFieldValidator {
     static int[][] field_i;
     private static int[][] field_n;
 
-    final static void a(int param0, boolean param1) {
+    final static void setFullscreenEnabled(int param0, boolean param1) {
         if (!param1) {
           if (MidiPcmStream.field_U != null) {
             TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
             MouseInputHandler.field_b.requestFocus();
-            MidiPcmStream.field_U.exitFullscreen(wi.field_b, param0 ^ -29472);
+            MidiPcmStream.field_U.exitFullscreen(LoginCredentialsFactory.field_b, param0 ^ -29472);
             MidiPcmStream.field_U = null;
           }
         } else {
@@ -24,30 +24,30 @@ final class AgeValidator extends TextFieldValidator {
               MidiPcmStream.field_U != null) {
               TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
               MouseInputHandler.field_b.requestFocus();
-              MidiPcmStream.field_U.exitFullscreen(wi.field_b, param0 ^ -29472);
+              MidiPcmStream.field_U.exitFullscreen(LoginCredentialsFactory.field_b, param0 ^ -29472);
               MidiPcmStream.field_U = null;
             }
           } else {
-            if (!of.a(-969)) {
+            if (!SubscriberAccessChecks.hasSubscriberAccess(-969)) {
               if (!param1 &&
                 MidiPcmStream.field_U != null) {
                 TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
                 MouseInputHandler.field_b.requestFocus();
-                MidiPcmStream.field_U.exitFullscreen(wi.field_b, param0 ^ -29472);
+                MidiPcmStream.field_U.exitFullscreen(LoginCredentialsFactory.field_b, param0 ^ -29472);
                 MidiPcmStream.field_U = null;
               }
             } else {
-              if (ProxySocketConnector.isFullscreenSupported(wi.field_b, 0)) {
-                MidiPcmStream.field_U = oc.createFullscreenCanvas(0, 0, 480, -123, wi.field_b, 640);
+              if (ProxySocketConnector.isFullscreenSupported(LoginCredentialsFactory.field_b, 0)) {
+                MidiPcmStream.field_U = SpriteLayoutUtilities.createFullscreenCanvas(0, 0, 480, -123, LoginCredentialsFactory.field_b, 640);
                 if (null != MidiPcmStream.field_U) {
-                  LinkWidgetRenderer.a(MidiPcmStream.field_U, 114);
+                  LinkWidgetRenderer.attachInputListeners(MidiPcmStream.field_U, 114);
                 }
               } else {
                 if (!param1 &&
                   MidiPcmStream.field_U != null) {
                   TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
                   MouseInputHandler.field_b.requestFocus();
-                  MidiPcmStream.field_U.exitFullscreen(wi.field_b, param0 ^ -29472);
+                  MidiPcmStream.field_U.exitFullscreen(LoginCredentialsFactory.field_b, param0 ^ -29472);
                   MidiPcmStream.field_U = null;
                 }
               }
@@ -57,7 +57,7 @@ final class AgeValidator extends TextFieldValidator {
         if (param0 == -29486) {
           return;
         }
-        AgeValidator.b(true);
+        AgeValidator.describeServerPacket(true);
     }
 
     final ValidationState validateText(String param0, byte param1) {
@@ -75,7 +75,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!MusicPatchEnvelope.a(var5, true)) {
+          if (!MusicPatchEnvelope.isDecimalInteger(var5, true)) {
             stackIn_3_0 = LinearPointPath.field_k;
             return stackIn_3_0;
           }
@@ -106,7 +106,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static String b(boolean param0) {
+    final static String describeServerPacket(boolean param0) {
         String var1;
         int var2;
         int var3;
@@ -126,13 +126,13 @@ final class AgeValidator extends TextFieldValidator {
         String var1Lifetime3;
         var5 = HoldTheLine.field_D;
         if (!param0) {
-          var18 = "(" + AccountProgressDialog.field_pb + " " + hc.field_e + " " + RoadStripRenderer.field_l + ") " + NineSlicePanel.field_c;
+          var18 = "(" + AccountProgressDialog.field_pb + " " + FixedAngleMath.field_e + " " + RoadStripRenderer.field_l + ") " + NineSlicePanel.field_c;
           var1 = var18;
-          if (ad.field_c <= 0) {
+          if (ReflectionCheckSupport.field_c <= 0) {
             return var1;
           }
           var1Lifetime3 = var18 + ":";
-          for (var2 = 0; ad.field_c > var2; var2++) {
+          for (var2 = 0; ReflectionCheckSupport.field_c > var2; var2++) {
             var19 = var1Lifetime3 + ' ';
             var3 = RoadStripRenderer.field_e.payload[var2] & 255;
             var4 = var3 >> 4;
@@ -153,13 +153,13 @@ final class AgeValidator extends TextFieldValidator {
           return var1Lifetime3;
         }
         field_o = true;
-        var12 = "(" + AccountProgressDialog.field_pb + " " + hc.field_e + " " + RoadStripRenderer.field_l + ") " + NineSlicePanel.field_c;
+        var12 = "(" + AccountProgressDialog.field_pb + " " + FixedAngleMath.field_e + " " + RoadStripRenderer.field_l + ") " + NineSlicePanel.field_c;
         var1Lifetime1 = var12;
-        if (ad.field_c <= 0) {
+        if (ReflectionCheckSupport.field_c <= 0) {
           return var1Lifetime1;
         }
         var1Lifetime2 = var12 + ":";
-        for (var2Lifetime1 = 0; ad.field_c > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = 0; ReflectionCheckSupport.field_c > var2Lifetime1; var2Lifetime1++) {
           var16 = var1Lifetime2 + ' ';
           var3Lifetime1 = RoadStripRenderer.field_e.payload[var2Lifetime1] & 255;
           var4Lifetime1 = var3Lifetime1 >> 4;
@@ -188,7 +188,7 @@ final class AgeValidator extends TextFieldValidator {
         field_i = (int[][]) null;
     }
 
-    final static int a(boolean param0) {
+    final static int processAccountUi(boolean param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -200,14 +200,14 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         var2 = HoldTheLine.field_D;
         try {
-          ka.field_b.processInput(RotatedSpriteAsset.field_e, lh.field_b, param0, false);
-          ka.field_b.updateAnimations((byte) -59);
-          while (qh.pollKeyEvent(-99)) {
-            ka.field_b.dispatchKey(DelayedServerPacket.field_n, LoginChoicePanel.field_M, (byte) 108);
+          AccountUiUtilities.field_b.processInput(RotatedSpriteAsset.field_e, SocketConnectorFactory.field_b, param0, false);
+          AccountUiUtilities.field_b.updateAnimations((byte) -59);
+          while (KeyboardEventQueue.pollKeyEvent(-99)) {
+            AccountUiUtilities.field_b.dispatchKey(DelayedServerPacket.field_n, LoginChoicePanel.field_M, (byte) 108);
           }
           if (-1 != WidgetContainer.field_B) {
             var1_int = WidgetContainer.field_B;
-            RotatedSpriteAsset.setAccountScreen(0, -1);
+            RotatedSpriteAsset.requestAccountAction(0, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
@@ -215,7 +215,7 @@ final class AgeValidator extends TextFieldValidator {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (ak.field_b == ImageProducerRasterBuffer.field_n) {
+          if (NineSliceSpriteFactory.field_b == ImageProducerRasterBuffer.field_n) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
@@ -223,7 +223,7 @@ final class AgeValidator extends TextFieldValidator {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (bb.field_a != ImageProducerRasterBuffer.field_n) {
+          if (BoundaryLoopTracer.field_a != ImageProducerRasterBuffer.field_n) {
             return -1;
           }
           stackIn_23_0 = 2;

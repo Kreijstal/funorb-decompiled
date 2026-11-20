@@ -68,7 +68,7 @@ final class PathWaypoint extends Point2i {
         }
     }
 
-    final static void b(int param0) {
+    final static void sendReflectionReplies(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         IsaacPacketBuffer var1 = null;
@@ -79,7 +79,7 @@ final class PathWaypoint extends Point2i {
         var3 = HoldTheLine.field_D;
         try {
           var1 = IsaacPacketBuffer.field_p;
-          while (ad.isReflectionCheckReady(100)) {
+          while (ReflectionCheckSupport.isReflectionCheckReady(100)) {
             var1.writeCipheredOpcode((byte) 33, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
@@ -120,7 +120,7 @@ final class PathWaypoint extends Point2i {
         field_p = null;
     }
 
-    final static void a(boolean param0, IntrusiveDeque[] param1) {
+    final static void recycleParticleLayers(boolean param0, IntrusiveDeque[] param1) {
         int var3 = 0;
         IntrusiveDeque[] var2 = null;
         IntrusiveDeque var4 = null;
@@ -140,7 +140,7 @@ final class PathWaypoint extends Point2i {
           }
           for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];
-            SecondaryNodeDeque.a(256, var4);
+            SecondaryNodeDeque.recycleParticles(256, var4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

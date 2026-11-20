@@ -8,7 +8,7 @@ final class TrackBoundary extends BoundaryCurve {
     static MouseWheelInput field_u;
     Point2i start;
     static Sprite[] field_t;
-    static int field_v;
+    static int menuHeight;
 
     final BoundaryCurve reversed(boolean param0) {
         if (!param0) {
@@ -98,7 +98,7 @@ final class TrackBoundary extends BoundaryCurve {
         field_u = null;
     }
 
-    final static RotatedSpriteAsset[] b(String param0, byte param1) {
+    final static RotatedSpriteAsset[] createDestroyableSpriteAssets(String param0, byte param1) {
         RotatedSpriteAsset[] var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;

@@ -102,7 +102,7 @@ abstract class RasterBuffer {
                         if (null == BoundaryIntersection.field_i.getSprite(8192)) {
                           return false;
                         }
-                        if (null == kc.field_b.getSprite(8192)) {
+                        if (null == BitwiseIntegerOperations.field_b.getSprite(8192)) {
                           return false;
                         }
                       } else {
@@ -132,7 +132,7 @@ abstract class RasterBuffer {
                     stackIn_95_0 = (CourseDefinition) (param0);
                     break regionExit1;
                   }
-                  if (null == kc.field_b.getSprite(8192)) {
+                  if (null == BitwiseIntegerOperations.field_b.getSprite(8192)) {
                     return false;
                   }
                   if (null == MarkerSliderRenderer.field_b.getSprite(8192)) {

@@ -22,7 +22,7 @@ final class StereoMusicSample {
         field_b = null;
     }
 
-    final static boolean a(byte param0, ResourceArchive param1) {
+    final static boolean pollAllArchiveGroups(byte param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -87,22 +87,22 @@ final class StereoMusicSample {
 
     StereoMusicSample(String param0) {
         try {
-          this.field_f = jh.field_a.getMusicSample(-32660, param0 + "_left");
-          this.field_h = jh.field_a.getMusicSample(-32660, param0 + "_right");
+          this.field_f = PackedClientOptions.field_a.getMusicSample(-32660, param0 + "_left");
+          this.field_h = PackedClientOptions.field_a.getMusicSample(-32660, param0 + "_right");
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4) {
+    final static void pushRasterClip(int param0, int param1, int param2, boolean param3, int param4) {
         if (!param3) {
           return;
         }
-        lj.pushRasterState((byte) -107);
+        RasterStateStack.pushRasterState((byte) -107);
         SoftwareRasterizer.intersectClip(param1, param4, param0, param2);
     }
 
-    final static void a(int param0, int param1) {
+    final static void setBenefitsTimingScale(int param0, int param1) {
         BoundedRandomAccessFile.field_f = 400 * param0 / 150;
         BoundedRandomAccessFile.field_g = 100 * param0 / 150;
         if (param1 != 14195) {
@@ -111,7 +111,7 @@ final class StereoMusicSample {
         BoundedRandomAccessFile.field_c = (param0 << 16) / 150;
     }
 
-    final static void a(byte param0) {
+    final static void drawLogoMeshes(byte param0) {
         int var16 = 0;
         int var18_int = 0;
         int var19 = 0;
@@ -158,16 +158,16 @@ final class StereoMusicSample {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_qk = ByteStorage.field_c[var3];
             var4_ref_qk.calculateBounds(0);
-            LabeledField.b(var3, 28433);
+            LabeledField.setLogoMeshTransform(var3, 28433);
             var5 = var4_ref_qk.field_F + var4_ref_qk.field_L >> 1;
             var6 = var4_ref_qk.field_d + var4_ref_qk.field_H >> 1;
             var7 = var4_ref_qk.field_p + var4_ref_qk.field_n >> 1;
             var8 = HoldTheLine.field_E[9] >> 2;
             var9 = HoldTheLine.field_E[10] >> 2;
             var10 = HoldTheLine.field_E[11] >> 2;
-            var11_int = var9 * fe.field_b[4] + fe.field_b[3] * var8 + var10 * fe.field_b[5] >> 14;
-            var12 = var10 * fe.field_b[8] + (fe.field_b[7] * var9 + var8 * fe.field_b[6]) >> 14;
-            var13 = var10 * fe.field_b[11] + (fe.field_b[9] * var8 + fe.field_b[10] * var9) >> 14;
+            var11_int = var9 * GouraudTriangleRasterizer.field_b[4] + GouraudTriangleRasterizer.field_b[3] * var8 + var10 * GouraudTriangleRasterizer.field_b[5] >> 14;
+            var12 = var10 * GouraudTriangleRasterizer.field_b[8] + (GouraudTriangleRasterizer.field_b[7] * var9 + var8 * GouraudTriangleRasterizer.field_b[6]) >> 14;
+            var13 = var10 * GouraudTriangleRasterizer.field_b[11] + (GouraudTriangleRasterizer.field_b[9] * var8 + GouraudTriangleRasterizer.field_b[10] * var9) >> 14;
             var2[var3] = var5 * var11_int + var6 * var12 + var13 * var7 >> 16;
           }
           var3Lifetime1 = HoldTheLine.field_E[9] >> 8;
@@ -176,7 +176,7 @@ final class StereoMusicSample {
           var6Lifetime1 = StrongCacheEntry.field_q << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = GrowableStringList.sinFixed(var6Lifetime1, 5255) >> 8;
-          var9Lifetime1 = hc.a(0, var6Lifetime1) >> 8;
+          var9Lifetime1 = FixedAngleMath.cosFixed(0, var6Lifetime1) >> 8;
           var10Lifetime1 = 68 / ((param0 - 5) / 52);
           if (-1 != NodeHashTableIterator.field_g &&
             FullscreenErrorDialog.field_X != -1) {
@@ -204,12 +204,12 @@ final class StereoMusicSample {
             }
             var2[var17] = -2147483648;
             var18 = ByteStorage.field_c[var17];
-            LabeledField.b(var17, 28433);
+            LabeledField.setLogoMeshTransform(var17, 28433);
             for (var19 = 0; 3 > var19; var19++) {
-              fe.field_b[var19] = fe.field_b[var19] + TextFieldValidator.field_e[var16][var19];
+              GouraudTriangleRasterizer.field_b[var19] = GouraudTriangleRasterizer.field_b[var19] + TextFieldValidator.field_e[var16][var19];
             }
-            MusicPatch.a(HoldTheLine.field_E, false, fe.field_b, (byte) 96, var18, true, false);
-            ai.a(-4006, var8Lifetime1, var9Lifetime1, var14, var18, var13Lifetime1, var7Lifetime1, var15);
+            MusicPatch.transformAndProjectMesh(HoldTheLine.field_E, false, GouraudTriangleRasterizer.field_b, (byte) 96, var18, true, false);
+            MeshLighting.drawLitMesh(-4006, var8Lifetime1, var9Lifetime1, var14, var18, var13Lifetime1, var7Lifetime1, var15);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

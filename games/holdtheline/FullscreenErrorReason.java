@@ -9,7 +9,7 @@ final class FullscreenErrorReason {
     static String field_d;
     static RotatedSpriteAsset field_b;
 
-    final static int a(String param0, byte param1, boolean param2) {
+    final static int measureMenuTextWidth(String param0, byte param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -24,7 +24,7 @@ final class FullscreenErrorReason {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = q.field_a.measureText(param0);
+            stackIn_7_0 = PlayerDataProtocol.field_a.measureText(param0);
             return stackIn_7_0;
           }
           stackIn_5_0 = CheckboxWidget.field_G.measureText(param0);
@@ -60,7 +60,7 @@ final class FullscreenErrorReason {
         field_b = null;
     }
 
-    final static void b(byte param0) {
+    final static void populateCourseMenu(byte param0) {
         StringBuilder discarded$24 = null;
         StringBuilder discarded$25 = null;
         StringBuilder discarded$26 = null;
@@ -143,21 +143,21 @@ final class FullscreenErrorReason {
         var13 = HoldTheLine.field_D;
         try {
           var2 = -127 % ((45 - param0) / 55);
-          var16_ref = (RaceSetupMenu) (l.field_a[13]);
+          var16_ref = (RaceSetupMenu) (CollisionGeometry.field_a[13]);
           if (DelegatingCanvas.field_d == 7) {
             for (var3 = 0; var3 < 4; var3++) {
               var15 = new StringBuilder(20);
               discarded$24 = var15.append("<col=1>");
               discarded$25 = var15.append(ViewportSizingController.field_t[var3]);
               discarded$26 = var15.append("</col><br><br>");
-              var5_int = PolarSortVector.a((byte) 105, var3);
+              var5_int = PolarSortVector.getChampionshipAccessStatus((byte) 105, var3);
               if (2 != var5_int) {
                 if (var5_int == 1) {
                   discarded$27 = var15.append(ArchiveLoadProgress.field_a[var3]);
                 } else {
                   discarded$28 = var15.append(NameRequestState.field_d[var3]);
                   discarded$29 = var15.append("<br><br>");
-                  var6_int = d.field_c[var3];
+                  var6_int = AccountProtocolContext.field_c[var3];
                   if (var6_int == -1) {
                     discarded$30 = var15.append(NameCheckProgressDialog.field_tb);
                   } else {
@@ -170,7 +170,7 @@ final class FullscreenErrorReason {
               }
               var16_ref.rowLabels[0][var3] = ViewportSizingController.field_t[var3];
               var16_ref.rowDescriptions[0][var3] = var15.toString();
-              var16_ref.rowSprites[0][var3] = IndexedSpriteState.a(PolarSortVector.a((byte) 30, var3), (byte) -37, var3);
+              var16_ref.rowSprites[0][var3] = IndexedSpriteState.getWorldPreview(PolarSortVector.getChampionshipAccessStatus((byte) 30, var3), (byte) -37, var3);
             }
             var16_ref.rowTitles[0] = TutorialCondition.field_a;
             return;
@@ -190,7 +190,7 @@ final class FullscreenErrorReason {
             while (var3Lifetime1 > var14) {
               var37[var14] = var14;
               var26 = VehicleEngineSounds.field_c[5][var14];
-              var10 = PolarSortVector.a((byte) 55, var14);
+              var10 = PolarSortVector.getChampionshipAccessStatus((byte) 55, var14);
               if (var10 == 0 &&
                 !var26.field_r) {
                 var5[var14] = var26.field_b;
@@ -214,7 +214,7 @@ final class FullscreenErrorReason {
                 stackIn_49_0[stackIn_49_1] = stackIn_50_2;
                 var28 = var26.getPreview(9392, 2, 111).copy();
                 Point2i.scaleSpriteIntensity(var28, 64, -1);
-                vb.a(-109, var28);
+                JagexLogoRenderer.pushSpriteRaster(-109, var28);
                 FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + var28.width >> 1, var28.height - FullscreenErrorDialog.field_ab.height >> 1);
                 MarkerSliderRenderer.restoreRasterTarget(-1);
                 var7[var14] = var28;
@@ -233,7 +233,7 @@ final class FullscreenErrorReason {
             discarded$18 = var17.append("<col=1>");
             discarded$19 = var17.append(ViewportSizingController.field_t[var3Lifetime2]);
             discarded$20 = var17.append("</col><br><br>");
-            var5_intLifetime1 = PolarSortVector.a((byte) 2, var3Lifetime2);
+            var5_intLifetime1 = PolarSortVector.getChampionshipAccessStatus((byte) 2, var3Lifetime2);
             if (var5_intLifetime1 != 2) {
               if (var5_intLifetime1 != 1) {
                 discarded$21 = var17.append(NameRequestState.field_d[var3Lifetime2]);
@@ -245,7 +245,7 @@ final class FullscreenErrorReason {
             }
             var16_ref.rowLabels[0][var3Lifetime2] = ViewportSizingController.field_t[var3Lifetime2];
             var16_ref.rowDescriptions[0][var3Lifetime2] = var17.toString();
-            var16_ref.rowSprites[0][var3Lifetime2] = IndexedSpriteState.a(PolarSortVector.a((byte) 41, var3Lifetime2), (byte) -109, var3Lifetime2);
+            var16_ref.rowSprites[0][var3Lifetime2] = IndexedSpriteState.getWorldPreview(PolarSortVector.getChampionshipAccessStatus((byte) 41, var3Lifetime2), (byte) -109, var3Lifetime2);
           }
           var3Lifetime3 = MenuList.field_l[StrongCacheEntry.field_w];
           var36 = new int[var3Lifetime3];
@@ -258,16 +258,16 @@ final class FullscreenErrorReason {
           for (var8Lifetime1 = 0; var8Lifetime1 < var3Lifetime3; var8Lifetime1++) {
             var36[var8Lifetime1] = var8Lifetime1;
             var19 = VehicleEngineSounds.field_c[StrongCacheEntry.field_w][var8Lifetime1];
-            if (0 == ArcTrackBoundary.a(var8Lifetime1, -10, StrongCacheEntry.field_w) &&
+            if (0 == ArcTrackBoundary.getCourseAccessStatus(var8Lifetime1, -10, StrongCacheEntry.field_w) &&
               !var19.field_r) {
               var5Lifetime1[var8Lifetime1] = var19.field_b;
               var22 = new StringBuilder(20);
               discarded$5 = var22.append("<col=1>");
               discarded$6 = var22.append(var19.field_b);
               discarded$7 = var22.append("</col><br><br>");
-              var11 = hk.field_c[StrongCacheEntry.field_w][var8Lifetime1];
+              var11 = RoadControlPathBuilder.field_c[StrongCacheEntry.field_w][var8Lifetime1];
               if (var11 == -1) {
-                discarded$8 = var22.append(sm.field_d);
+                discarded$8 = var22.append(Cp1252Decoder.field_d);
               } else {
                 discarded$9 = var22.append(AccountTermsPanel.field_I);
                 discarded$10 = var22.append(DisplayNameValidator.formatPreciseRaceTime(53, var11));
@@ -293,7 +293,7 @@ final class FullscreenErrorReason {
               var6Lifetime1[var8Lifetime1] = HoldTheLine.field_G[StrongCacheEntry.field_w];
               var21 = var19.getPreview(9392, DelegatingCanvas.field_d, 111).copy();
               Point2i.scaleSpriteIntensity(var21, 64, -1);
-              vb.a(-97, var21);
+              JagexLogoRenderer.pushSpriteRaster(-97, var21);
               FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + var21.width >> 1, var21.height - FullscreenErrorDialog.field_ab.height >> 1);
               MarkerSliderRenderer.restoreRasterTarget(-1);
               var7Lifetime1[var8Lifetime1] = var21;
@@ -303,7 +303,7 @@ final class FullscreenErrorReason {
           var16_ref.rowLabels[1] = var20;
           var16_ref.rowDescriptions[1] = var23;
           var16_ref.rowSprites[1] = var24;
-          var16_ref.rowTitles[0] = vb.field_c;
+          var16_ref.rowTitles[0] = JagexLogoRenderer.field_c;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -336,7 +336,7 @@ final class FullscreenErrorReason {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = q.field_a.measureText(param0);
+            stackIn_7_0 = PlayerDataProtocol.field_a.measureText(param0);
             return stackIn_7_0;
           }
           stackIn_5_0 = CheckboxWidget.field_G.measureText(param0);

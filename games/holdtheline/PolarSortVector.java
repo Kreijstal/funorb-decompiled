@@ -10,50 +10,50 @@ final class PolarSortVector implements SortableValue {
     static String field_f;
     int x;
 
-    final static void a(boolean param0) {
+    final static void shutdownClientResources(boolean param0) {
         ChatMessage.exitFullscreen(4);
         if (null != MouseInputHandler.field_b) {
           TrackObjectDefinition.detachInputListeners(-46342, MouseInputHandler.field_b);
         }
-        co.releaseKeyHandler(param0);
-        CachedTextLayout.b(true);
+        ClientLifecycleUtilities.releaseKeyHandler(param0);
+        CachedTextLayout.releaseMouseHandler(true);
         Particle.closeCacheResources(27370);
-        if (cm.a(-2043140287)) {
+        if (MenuHitTesting.hasActiveServerConnection(-2043140287)) {
           IsaacPacketBuffer.field_p.writeCipheredOpcode((byte) 33, 1);
           PlayerStatsRequest.flushServerPackets(0, 0);
         }
         ServerConnectionState.closeServerConnection(-28036);
     }
 
-    final static Sprite a(byte param0) {
+    final static Sprite getOrbCoinSprite(byte param0) {
         if (param0 >= -117) {
           field_c = (int[]) null;
-          return ai.field_c;
+          return MeshLighting.field_c;
         }
-        return ai.field_c;
+        return MeshLighting.field_c;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int getChampionshipAccessStatus(byte param0, int param1) {
         if (param1 == 0) {
-          if (!(param1 <= ao.field_b)) {
+          if (!(param1 <= BoundaryLoopClipper.field_b)) {
             return 1;
           }
           if (param0 > 0) {
             return 0;
           }
-          PolarSortVector.a((byte) -18);
+          PolarSortVector.getOrbCoinSprite((byte) -18);
           return 0;
         }
-        if (!of.a(-969)) {
+        if (!SubscriberAccessChecks.hasSubscriberAccess(-969)) {
           return 2;
         }
-        if (!(param1 <= ao.field_b)) {
+        if (!(param1 <= BoundaryLoopClipper.field_b)) {
           return 1;
         }
         if (param0 > 0) {
           return 0;
         }
-        PolarSortVector.a((byte) -18);
+        PolarSortVector.getOrbCoinSprite((byte) -18);
         return 0;
     }
 
@@ -70,7 +70,7 @@ final class PolarSortVector implements SortableValue {
           var3 = (PolarSortVector) (param1);
           var4 = -(var3.y * this.x) + this.y * var3.x;
           if (param0 != -101) {
-            PolarSortVector.a((byte) 83, 126);
+            PolarSortVector.getChampionshipAccessStatus((byte) 83, 126);
           }
           if (var4 == 0) {
             var4 = var3.x * var3.x + (-(this.x * this.x) + var3.y * var3.y) - this.y * this.y;

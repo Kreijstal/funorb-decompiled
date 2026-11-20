@@ -307,7 +307,7 @@ class UiWidget extends IntrusiveNode {
             if (param0 != -81) {
               return;
             }
-            var5 = DiskCacheWorker.a(100);
+            var5 = DiskCacheWorker.getVisibleTooltipText(100);
             if (var5 == null) {
               return;
             }
@@ -317,7 +317,7 @@ class UiWidget extends IntrusiveNode {
           this.drawLayer(-9532, param1, param2, var5_int);
           var5_int++;
           if (var6 != 0) {
-            var5Lifetime1 = DiskCacheWorker.a(100);
+            var5Lifetime1 = DiskCacheWorker.getVisibleTooltipText(100);
             if (var5Lifetime1 == null) {
               return;
             }
@@ -415,7 +415,7 @@ class UiWidget extends IntrusiveNode {
                   this.dispatchKey(19, 'ￚ', (byte) -73);
                 }
                 DialogLayer.field_L = RoadStripRenderer.field_f;
-                ba.a(this.getTooltip(0), 0);
+                AccountNameNormalizer.updateTooltipText(this.getTooltip(0), 0);
                 return param2;
               }
               this.clearFocus(47);
@@ -439,7 +439,7 @@ class UiWidget extends IntrusiveNode {
                 this.dispatchKey(19, 'ￚ', (byte) -73);
               }
               DialogLayer.field_L = RoadStripRenderer.field_f;
-              ba.a(this.getTooltip(0), 0);
+              AccountNameNormalizer.updateTooltipText(this.getTooltip(0), 0);
               return param2;
             }
           }
@@ -482,7 +482,7 @@ class UiWidget extends IntrusiveNode {
                     this.dispatchKey(19, 'ￚ', (byte) -73);
                   }
                   DialogLayer.field_L = RoadStripRenderer.field_f;
-                  ba.a(this.getTooltip(0), 0);
+                  AccountNameNormalizer.updateTooltipText(this.getTooltip(0), 0);
                   return param2;
                 }
               }
@@ -493,7 +493,7 @@ class UiWidget extends IntrusiveNode {
           this.dispatchKey(19, 'ￚ', (byte) -73);
         }
         DialogLayer.field_L = RoadStripRenderer.field_f;
-        ba.a(this.getTooltip(0), 0);
+        AccountNameNormalizer.updateTooltipText(this.getTooltip(0), 0);
         return param2;
     }
 

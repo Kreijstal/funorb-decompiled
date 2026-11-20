@@ -20,7 +20,7 @@ final class BufferedRandomAccessFile {
     static String field_j;
     private long readBufferStart;
     private long writeBufferStart;
-    static int field_d;
+    static int currentBackground;
 
     private final void refillReadBuffer(int param0) throws IOException {
         int var2 = 0;
@@ -76,7 +76,7 @@ final class BufferedRandomAccessFile {
             var5 = var10;
             var6 = param1;
             var7 = param2;
-            var10[var6] = var7 + LoginChoicePanel.a(8355711, var10[var6] >> 1);
+            var10[var6] = var7 + LoginChoicePanel.andInts(8355711, var10[var6] >> 1);
             param1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -456,6 +456,6 @@ final class BufferedRandomAccessFile {
         field_q = "Visit the Account Management section on the main site to view.";
         field_n = false;
         field_j = "That name is not available";
-        field_d = 1;
+        currentBackground = 1;
     }
 }

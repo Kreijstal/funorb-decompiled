@@ -65,7 +65,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             this.field_k = (String) null;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = GameKeyHandler.a(12260, var5);
+          var3 = GameKeyHandler.getLoginNameError(12260, var5);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -129,7 +129,7 @@ final class DisplayNameValidator extends TextFieldValidator {
               this.field_k = param0;
               this.field_m = var3.field_f;
             } else {
-              stackIn_12_0 = um.field_a;
+              stackIn_12_0 = Cp1252CharacterRules.field_a;
               return stackIn_12_0;
             }
           }

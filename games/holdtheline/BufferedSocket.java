@@ -51,7 +51,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void b(byte param0) {
+    final static void readPlayerStatsReply(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -100,14 +100,14 @@ final class BufferedSocket implements Runnable {
             }
             NetworkArchiveRequest.ensurePlayerStatsCapacity(var4, false, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              IterableNodeHashTable.a(76, var14);
+              IterableNodeHashTable.readPackedPlayerStats(76, var14);
               if (var6_intLifetime1 == 0) {
-                FadingDialog.a(TextWidgetStyle.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 106, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
+                FadingDialog.appendPlayerStats(TextWidgetStyle.field_l, FullscreenFocusCanvas.field_b, AppletNavigation.field_a, (byte) 106, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
               } else {
-                FadingDialog.a(TextWidgetStyle.field_l, FullscreenFocusCanvas.field_b, ae.field_a, (byte) 108, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
+                FadingDialog.appendPlayerStats(TextWidgetStyle.field_l, FullscreenFocusCanvas.field_b, AppletNavigation.field_a, (byte) 108, var6_intLifetime1, StandardContentTransitionDialog.field_jb);
               }
             }
-            SpriteAsset.a(0, var5);
+            SpriteAsset.sortPlayerStatViews(0, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
             var8 = Vector2f.field_h;
@@ -118,10 +118,10 @@ final class BufferedSocket implements Runnable {
               var6[0][var10] = RoadSegment.field_v[var11];
               var18[0][var10 * 4] = SpriteSheetAsset.field_j[var11];
               var18[0][1 + var10 * 4] = IsaacPacketBuffer.field_u[var11];
-              var18[0][2 + var10 * 4] = ua.field_c[var11];
+              var18[0][2 + var10 * 4] = QuadraticPathSlicer.field_c[var11];
               var18[0][4 * var10 + 3] = WidgetStyleNode.field_q[var11];
               if (LoadProgressDialog.isLocalPlayerName(RoadSegment.field_v[var11], false) &&
-                WidgetStyleNode.field_q[var11] + (IsaacPacketBuffer.field_u[var11] + ua.field_c[var11]) == 0) {
+                WidgetStyleNode.field_q[var11] + (IsaacPacketBuffer.field_u[var11] + QuadraticPathSlicer.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -136,10 +136,10 @@ final class BufferedSocket implements Runnable {
               var6[1][var13] = RoadSegment.field_v[var11Lifetime1];
               var18[1][4 * var13] = SpriteSheetAsset.field_j[var11Lifetime1];
               var18[1][var13 * 4 + 1] = IsaacPacketBuffer.field_u[var11Lifetime1];
-              var18[1][4 * var13 + 2] = ua.field_c[var11Lifetime1];
+              var18[1][4 * var13 + 2] = QuadraticPathSlicer.field_c[var11Lifetime1];
               var18[1][var13 * 4 + 3] = WidgetStyleNode.field_q[var11Lifetime1];
               if (LoadProgressDialog.isLocalPlayerName(RoadSegment.field_v[var11Lifetime1], false) &&
-                WidgetStyleNode.field_q[var11Lifetime1] + IsaacPacketBuffer.field_u[var11Lifetime1] + ua.field_c[var11Lifetime1] == 0) {
+                WidgetStyleNode.field_q[var11Lifetime1] + IsaacPacketBuffer.field_u[var11Lifetime1] + QuadraticPathSlicer.field_c[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -263,9 +263,9 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void onAccountScreenComplete(boolean param0) {
         if (param0) {
-          BufferedSocket.a(false);
+          BufferedSocket.onAccountScreenComplete(false);
         }
     }
 
@@ -381,15 +381,15 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isClientUiLoading(byte param0) {
         boolean stackIn_9_0 = false;
         if (param0 >= -126) {
-          BufferedSocket.a(-24);
+          BufferedSocket.pollHudAssetsLoaded(-24);
         }
         boolean decompiledFrameRemainder0 = true;
         if (PolarSortVector.field_d >= 20 &&
-          MenuSelectionController.isAccountUiReady((byte) -30) && (!(q.field_c > 0) ||
-          ai.a(-118))) {
+          MenuSelectionController.isAccountUiReady((byte) -30) && (!(PlayerDataProtocol.field_c > 0) ||
+          MeshLighting.allowsAccountContinuation(-118))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -417,8 +417,8 @@ final class BufferedSocket implements Runnable {
         return this.field_i.available();
     }
 
-    final static boolean a(int param0) {
-        if (hk.field_a != null &&
+    final static boolean pollHudAssetsLoaded(int param0) {
+        if (RoadControlPathBuilder.field_a != null &&
           null != EmailAddressValidator.field_j) {
           return true;
         }
@@ -431,7 +431,7 @@ final class BufferedSocket implements Runnable {
         if (!ScoreSubmission.field_i.tryLoadNamedGroup("overlayfont", -118)) {
           return false;
         }
-        hk.field_a = ko.loadHudSprites(false);
+        RoadControlPathBuilder.field_a = ClientScreenRenderer.loadHudSprites(false);
         EmailAddressValidator.field_j = TrackObjectDefinition.loadNamedFont("font24", FullscreenFocusCanvas.field_c, "", 8192, ScoreSubmission.field_i);
         return true;
     }

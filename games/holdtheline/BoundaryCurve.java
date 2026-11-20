@@ -21,20 +21,20 @@ abstract class BoundaryCurve extends TrackCurve {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ak.field_b == ImageProducerRasterBuffer.field_n) {
+          if (NineSliceSpriteFactory.field_b == ImageProducerRasterBuffer.field_n) {
             stackIn_2_0 = null;
             return (NameAvailabilityResult) (stackIn_2_0);
           }
           if (param0 != 0) {
             field_o = (String) null;
           }
-          if (ValidationState.field_c == ak.field_b &&
+          if (ValidationState.field_c == NineSliceSpriteFactory.field_b &&
             param1.equals(RoadStripRenderer.field_j)) {
-            ak.field_b = ValidationIndicator.field_M;
+            NineSliceSpriteFactory.field_b = ValidationIndicator.field_M;
             stackIn_8_0 = RaceVehicle.field_U;
             return stackIn_8_0;
           }
-          ak.field_b = ImageProducerRasterBuffer.field_n;
+          NineSliceSpriteFactory.field_b = ImageProducerRasterBuffer.field_n;
           RaceVehicle.field_U = null;
           RoadStripRenderer.field_j = param1;
           stackIn_10_0 = null;

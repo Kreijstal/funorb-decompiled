@@ -263,12 +263,12 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[-1 + this.position - param1] = (byte)param1;
     }
 
-    final static void e(int param0, int param1) {
+    final static void drawBackgroundAlpha(int param0, int param1) {
         if (SavedRasterState.field_o == null) {
           SavedRasterState.field_o = new Sprite(640, 480);
         }
-        vb.a(-124, SavedRasterState.field_o);
-        eg.a(false);
+        JagexLogoRenderer.pushSpriteRaster(-124, SavedRasterState.field_o);
+        ClientBackgroundRenderer.drawBackground(false);
         MarkerSliderRenderer.restoreRasterTarget(-1);
         int var2 = -99 / ((25 - param0) / 63);
         SavedRasterState.field_o.drawAlpha(0, 0, param1);
@@ -290,7 +290,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$0] != 0);
         var3 = -1 + (this.position - var2);
         if (var3 != 0) {
-          return sm.decodeCp1252(var3, var2, -129, this.payload);
+          return Cp1252Decoder.decodeCp1252(var3, var2, -129, this.payload);
         }
         return "";
     }
@@ -305,16 +305,16 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static NameAvailabilityResult pollNameAvailabilityResult(byte param0) {
-        if (bb.field_a == ValidationIndicator.field_M) {
+        if (BoundaryLoopTracer.field_a == ValidationIndicator.field_M) {
           throw new IllegalStateException();
         }
         if (param0 >= -41) {
           field_j = -78;
         }
-        if (bb.field_a != ValidationState.field_c) {
+        if (BoundaryLoopTracer.field_a != ValidationState.field_c) {
           return null;
         }
-        bb.field_a = ValidationIndicator.field_M;
+        BoundaryLoopTracer.field_a = ValidationIndicator.field_M;
         return BoundedRandomAccessFile.field_d;
     }
 
@@ -530,7 +530,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void refreshCourseMenuSprites(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
@@ -554,13 +554,13 @@ class PacketBuffer extends IntrusiveNode {
         int var4Lifetime1;
         var8 = HoldTheLine.field_D;
         try {
-          var10 = (RaceSetupMenu) (l.field_a[13]);
+          var10 = (RaceSetupMenu) (CollisionGeometry.field_a[13]);
           if (!param0) {
             field_m = (ResourceArchive) null;
           }
           if (7 == DelegatingCanvas.field_d) {
             for (var2_int = 0; var2_int < 4; var2_int++) {
-              var10.rowSprites[0][var2_int] = IndexedSpriteState.a(PolarSortVector.a((byte) 82, var2_int), (byte) -110, var2_int);
+              var10.rowSprites[0][var2_int] = IndexedSpriteState.getWorldPreview(PolarSortVector.getChampionshipAccessStatus((byte) 82, var2_int), (byte) -110, var2_int);
             }
           } else {
             if (DelegatingCanvas.field_d != 1 &&
@@ -571,17 +571,17 @@ class PacketBuffer extends IntrusiveNode {
               for (var4 = 0; var4 < var2_int; var4++) {
                 var11 = VehicleEngineSounds.field_c[5][var4];
                 var11.pollLoaded(3);
-                var6_int = PolarSortVector.a((byte) 88, var4);
+                var6_int = PolarSortVector.getChampionshipAccessStatus((byte) 88, var4);
                 if (var6_int != 0) {
                   if (2 != var6_int) {
-                    if (of.a(-969)) {
+                    if (SubscriberAccessChecks.hasSubscriberAccess(-969)) {
                       var13 = var11.getPreview(9392, 2, 111).copy();
                       var7 = var13;
                       Point2i.scaleSpriteIntensity(var13, 64, -1);
                     } else {
                       var7 = new Sprite(111, 84);
                     }
-                    vb.a(-93, var7);
+                    JagexLogoRenderer.pushSpriteRaster(-93, var7);
                     FullscreenErrorDialog.field_ab.draw(var7.width - FullscreenErrorDialog.field_ab.width >> 1, var7.height - FullscreenErrorDialog.field_ab.height >> 1);
                     MarkerSliderRenderer.restoreRasterTarget(-1);
                   } else {
@@ -596,17 +596,17 @@ class PacketBuffer extends IntrusiveNode {
               }
               var10.rowSprites[0] = var14;
               if (var10.selectedItem >= 1) {
-                var4_ref_int__ = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p];
-                var10.rowSprites[1] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[1], 9, 111)};
+                var4_ref_int__ = RotatedSpriteAsset.field_g[ArchiveIndex.getSelectedCourse((byte) -49).field_p];
+                var10.rowSprites[1] = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0], 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[1], 9, 111)};
                 if (2 <= var10.selectedItem) {
-                  var10.rowSprites[2] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, 8 + var4_ref_int__[1], 9, 111)};
+                  var10.rowSprites[2] = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0] + 8, 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, 8 + var4_ref_int__[1], 9, 111)};
                   return;
                 }
               }
               return;
             }
             for (var2_int = 0; var2_int < 4; var2_int++) {
-              var10.rowSprites[0][var2_int] = IndexedSpriteState.a(PolarSortVector.a((byte) 94, var2_int), (byte) -127, var2_int);
+              var10.rowSprites[0][var2_int] = IndexedSpriteState.getWorldPreview(PolarSortVector.getChampionshipAccessStatus((byte) 94, var2_int), (byte) -127, var2_int);
             }
             if (1 <= var10.selectedItem) {
               var2_int = MenuList.field_l[StrongCacheEntry.field_w];
@@ -617,10 +617,10 @@ class PacketBuffer extends IntrusiveNode {
               while (var2_int > var9) {
                 var15 = VehicleEngineSounds.field_c[StrongCacheEntry.field_w][var9];
                 var15.pollLoaded(3);
-                if (ArcTrackBoundary.a(var9, -117, StrongCacheEntry.field_w) != 0) {
+                if (ArcTrackBoundary.getCourseAccessStatus(var9, -117, StrongCacheEntry.field_w) != 0) {
                   var6 = var15.getPreview(9392, DelegatingCanvas.field_d, 111).copy();
                   Point2i.scaleSpriteIntensity(var6, 64, -1);
-                  vb.a(-108, var6);
+                  JagexLogoRenderer.pushSpriteRaster(-108, var6);
                   FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + var6.width >> 1, -FullscreenErrorDialog.field_ab.height + var6.height >> 1);
                   MarkerSliderRenderer.restoreRasterTarget(-1);
                   var3Lifetime1[var9] = var6;
@@ -634,12 +634,12 @@ class PacketBuffer extends IntrusiveNode {
             if (var10.selectedItem < 2) {
               return;
             }
-            var2 = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p];
-            var10.rowSprites[2] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var2[0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var2[1], 9, 111)};
+            var2 = RotatedSpriteAsset.field_g[ArchiveIndex.getSelectedCourse((byte) -49).field_p];
+            var10.rowSprites[2] = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, var2[0], 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, var2[1], 9, 111)};
             if (3 > var10.selectedItem) {
               return;
             }
-            var10.rowSprites[3] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var2[0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var2[1] + 8, 9, 111)};
+            var10.rowSprites[3] = new Sprite[]{QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, var2[0] + 8, 9, 111), QuadraticPathSlicer.field_b.getSpriteOrPlaceholder(84, var2[1] + 8, 9, 111)};
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -863,7 +863,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return sm.decodeCp1252(var4, var3, -129, this.payload);
+        return Cp1252Decoder.decodeCp1252(var4, var3, -129, this.payload);
     }
 
     PacketBuffer(byte[] param0) {

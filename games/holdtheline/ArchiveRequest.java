@@ -67,9 +67,9 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    final static void h(int param0) {
+    final static void serviceMusicAndAudio(int param0) {
         if (null != RaceSetupMenu.field_D && (EmailValidationResult.field_d == null ||
-          !ai.field_a.containsTrack(-54, EmailValidationResult.field_d))) {
+          !MeshLighting.field_a.containsTrack(-54, EmailValidationResult.field_d))) {
           ResourceArchive.playMusicTrack(true, RaceSetupMenu.field_D, (byte) 69, 30);
           RaceSetupMenu.field_D = null;
           EmailValidationResult.field_d = null;
@@ -92,7 +92,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract byte[] getData(int param0);
 
-    final static boolean a(Point2i param0, int param1, Point2i param2, int param3, Vector2f param4, int param5, int param6) {
+    final static boolean overlapsExpandedRectangle(Point2i param0, int param1, Point2i param2, int param3, Vector2f param4, int param5, int param6) {
         RuntimeException var7 = null;
         float var8 = 0.0f;
         float var9 = 0.0f;
@@ -118,7 +118,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var9 = param4.cross(var11, true);
           if (param6 < 61) {
             var10 = (Vector2f) null;
-            ArchiveRequest.a((Point2i) null, -92, (Point2i) null, -119, (Vector2f) null, 62, -87);
+            ArchiveRequest.overlapsExpandedRectangle((Point2i) null, -92, (Point2i) null, -119, (Vector2f) null, 62, -87);
           }
           if (var9 < (float)(-(param3 + param1))) {
             return false;

@@ -56,7 +56,7 @@ final class VehicleEngineSounds {
               if (var8 < 0) {
                 break;
               }
-              param3.pixels[var7] = (byte)kc.a((int) param3.pixels[var7], (int) param2);
+              param3.pixels[var7] = (byte)BitwiseIntegerOperations.orInts((int) param3.pixels[var7], (int) param2);
               var7++;
             }
           }
@@ -86,7 +86,7 @@ final class VehicleEngineSounds {
           return;
         }
         EditableTextField.field_K = null;
-        ad.field_d = null;
+        ReflectionCheckSupport.field_d = null;
         Vector2i.field_g = null;
         DirectByteStorage.field_j = null;
         StraightRoadSegment.field_E = null;

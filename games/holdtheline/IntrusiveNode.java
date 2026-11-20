@@ -11,7 +11,7 @@ class IntrusiveNode {
     IntrusiveNode previous;
     static boolean field_b;
 
-    final static boolean a(boolean param0, int param1, TrackCurve param2, Point2i param3) {
+    final static boolean containsRoadPoint(boolean param0, int param1, TrackCurve param2, Point2i param3) {
         boolean stackIn_17_0 = false;
         boolean stackIn_27_0 = false;
         RuntimeException stackIn_30_0 = null;
@@ -104,7 +104,7 @@ class IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        IntrusiveNode.a((String) null, 26, true, (String) null, (AccountCreationForm) null, (String) null, 76);
+        IntrusiveNode.beginNameCheck((String) null, 26, true, (String) null, (AccountCreationForm) null, (String) null, 76);
         field_e = null;
         field_g = null;
         field_c = null;
@@ -142,7 +142,7 @@ class IntrusiveNode {
         return true;
     }
 
-    final static boolean a(String param0, int param1, boolean param2, String param3, AccountCreationForm param4, String param5, int param6) {
+    final static boolean beginNameCheck(String param0, int param1, boolean param2, String param3, AccountCreationForm param4, String param5, int param6) {
         RuntimeException var7 = null;
         String var8 = null;
         NameCheckProgressDialog var9 = null;
@@ -159,21 +159,21 @@ class IntrusiveNode {
         try {
           if (param1 != -23000) {
             var8 = (String) null;
-            IntrusiveNode.a((String) null, 49, true, (String) null, (AccountCreationForm) null, (String) null, 51);
+            IntrusiveNode.beginNameCheck((String) null, 49, true, (String) null, (AccountCreationForm) null, (String) null, 51);
           }
-          if (ValidationIndicator.field_M != bb.field_a) {
+          if (ValidationIndicator.field_M != BoundaryLoopTracer.field_a) {
             return false;
           }
-          var9 = new NameCheckProgressDialog(ka.field_b, param4);
-          ka.field_b.showDialog(var9, false);
-          if (AchievementStatusRequest.a(0)) {
-            var9.q(-124);
+          var9 = new NameCheckProgressDialog(AccountUiUtilities.field_b, param4);
+          AccountUiUtilities.field_b.showDialog(var9, false);
+          if (AchievementStatusRequest.hasStatusButtonCookie(0)) {
+            var9.completeIneligibleAccount(-124);
             return true;
           }
           ChatMessage.field_k = param5;
           TexturedRoadFillRenderer.field_k = param0;
           ArchiveProvider.field_b = param2;
-          bb.field_a = ImageProducerRasterBuffer.field_n;
+          BoundaryLoopTracer.field_a = ImageProducerRasterBuffer.field_n;
           SecondaryNodeDeque.field_a = param3;
           ResizableDialog.field_V = param6;
           BoundedRandomAccessFile.field_d = null;

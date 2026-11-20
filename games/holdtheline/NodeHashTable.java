@@ -58,7 +58,7 @@ final class NodeHashTable {
         if (param0 != 44) {
           return;
         }
-        sm.field_c.setContent((UiWidget) (new LoginChoicePanel()), (byte) 87);
+        Cp1252Decoder.field_c.setContent((UiWidget) (new LoginChoicePanel()), (byte) 87);
     }
 
     final IntrusiveNode first(int param0) {

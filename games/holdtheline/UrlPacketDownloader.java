@@ -115,7 +115,7 @@ final class UrlPacketDownloader implements Runnable {
         try {
           var4_int = param0.getGroupId(param1, 3);
           var5 = param0.getFileId(var4_int, param3, param2);
-          stackIn_1_0 = AccountProtocolState.a(-1, var5, var4_int, param0);
+          stackIn_1_0 = AccountProtocolState.loadSprite(-1, var5, var4_int, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

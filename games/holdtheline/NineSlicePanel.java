@@ -20,7 +20,7 @@ class NineSlicePanel {
         InheritedWidgetStyle.drawNineSlice(this.field_g, param1, true, param3, param4, param0);
     }
 
-    final static void a(int param0, Object param1, PlatformTaskDispatcher param2) {
+    final static void serviceEventQueue(int param0, Object param1, PlatformTaskDispatcher param2) {
         java.awt.EventQueue stackIn_7_0 = null;
         java.awt.EventQueue stackIn_13_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -262,7 +262,7 @@ class NineSlicePanel {
         field_a = null;
         field_b = null;
         if (param0 != -1) {
-          NineSlicePanel.a(30, (Object) null, (PlatformTaskDispatcher) null);
+          NineSlicePanel.serviceEventQueue(30, (Object) null, (PlatformTaskDispatcher) null);
           return;
         }
     }

@@ -10,7 +10,7 @@ final class RoadShadowRenderer extends RoadStripRenderer {
         if (param0 <= 78) {
           RoadShadowRenderer.isGuestMode((byte) -61);
         }
-        return mn.guestMode;
+        return SessionCookieWriter.guestMode;
     }
 
     final void drawStrip(int[] param0, int param1, byte param2, int[] param3) {
@@ -48,7 +48,7 @@ final class RoadShadowRenderer extends RoadStripRenderer {
             var5[1 + param0.length + 2 * var9] = param3[-1 + (param3.length - 2 * var9)];
             var9++;
           }
-          lj.fillPolygonAlpha(0, 128, 5, var11, (byte) -32, 5);
+          RasterStateStack.fillPolygonAlpha(0, 128, 5, var11, (byte) -32, 5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class RoadShadowRenderer extends RoadStripRenderer {
     }
 
     final static void resetTooltipState(byte param0) {
-        dm.field_a = 0;
+        RasterStateRestoration.field_a = 0;
         if (param0 > -21) {
           TrackCurve[] var2 = (TrackCurve[]) null;
           RoadShadowRenderer.measureCurveInterval((TrackCurve[]) null, (byte) -53, 0.8636131286621094f, -0.5086926817893982f);

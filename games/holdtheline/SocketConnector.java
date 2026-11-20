@@ -19,7 +19,7 @@ abstract class SocketConnector {
         return new java.net.Socket(this.field_c, this.field_d);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, boolean param5, int param6, int param7, int param8) {
+    final static void fillBlendedTriangleRows(int param0, int param1, int param2, int param3, int[] param4, boolean param5, int param6, int param7, int param8) {
         RuntimeException stackIn_99_0 = null;
         StringBuilder stackIn_99_1 = null;
         String stackIn_100_2 = null;
@@ -336,7 +336,7 @@ abstract class SocketConnector {
         try {
           var4_int = -1;
           for (var5 = param0; var5 < param1; var5++) {
-            var4_int = var4_int >>> 8 ^ mc.field_d[255 & (var4_int ^ param3[var5])];
+            var4_int = var4_int >>> 8 ^ IntegerTextParser.field_d[255 & (var4_int ^ param3[var5])];
           }
           if (param2 != 0) {
             field_f = (boolean[]) null;

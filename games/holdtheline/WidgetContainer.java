@@ -42,7 +42,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             return;
           }
           var5 = new IntrusiveDequeCursor(this.children);
-          var6 = (UiWidget) (var5.c((byte) -114));
+          var6 = (UiWidget) (var5.first((byte) -114));
           while (var6 != null) {
             discarded$3 = param3.append('\n');
             for (var7 = 0; param2 >= var7; var7++) {
@@ -75,7 +75,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     final static void drawHeader(byte param0, String param1, int param2, int param3, int param4) {
         try {
           LayeredWidgetStyle.field_i.draw(param3, param4);
-          nm.field_c.draw(param1, 15 + param3, -2 + (param4 + (nm.field_c.ascent + 30) / 2), param2, -1);
+          ResourceArchiveFactory.field_c.draw(param1, 15 + param3, -2 + (param4 + (ResourceArchiveFactory.field_c.ascent + 30) / 2), param2, -1);
           int var5_int = 72 / ((param0 + 43) / 61);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "v.PB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -114,44 +114,44 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           var9 = HoldTheLine.field_D;
           try {
             if (null == IterableSecondaryNodeDeque.field_h &&
-              !ShadedRoadStripRenderer.a(param4, (byte) 105)) {
+              !ShadedRoadStripRenderer.pollAccountConnection(param4, (byte) 105)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (AccountCreationForm.field_S == d.field_f) {
+            if (AccountCreationForm.field_S == AccountProtocolContext.field_f) {
               if (param4) {
                 var10 = (String) null;
                 TriangleMesh.field_j = PathWaypoint.createLoginCredentials((String) null, RoadFillRenderer.field_a, false, param3, true);
               } else {
-                TriangleMesh.field_j = wi.createLoginCredentials((byte) 126, false, param2, param3);
+                TriangleMesh.field_j = LoginCredentialsFactory.createLoginCredentials((byte) 126, false, param2, param3);
               }
               IsaacPacketBuffer.field_p.position = 0;
               IsaacPacketBuffer.field_p.writeByte(param1 ^ 110, 14);
               IsaacPacketBuffer.field_p.writeByte(param1 + 110, TriangleMesh.field_j.getType(true).protocolId);
               PlayerStatsRequest.flushServerPackets(-1, param1 ^ 1);
-              d.field_f = um.field_d;
+              AccountProtocolContext.field_f = Cp1252CharacterRules.field_d;
             }
-            if (um.field_d == d.field_f &&
+            if (Cp1252CharacterRules.field_d == AccountProtocolContext.field_f &&
               InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
               var6_int = RoadStripRenderer.field_e.readUnsignedByte((byte) -102);
               RoadStripRenderer.field_e.position = 0;
               if (var6_int == 0) {
-                d.field_f = StraightRoadSlicer.field_c;
+                AccountProtocolContext.field_f = StraightRoadSlicer.field_c;
               } else {
                 NineSlicePanel.field_c = var6_int;
-                d.field_f = MeshMaterial.field_d;
-                ad.field_c = -1;
+                AccountProtocolContext.field_f = MeshMaterial.field_d;
+                ReflectionCheckSupport.field_c = -1;
               }
             }
-            if (StraightRoadSlicer.field_c == d.field_f &&
+            if (StraightRoadSlicer.field_c == AccountProtocolContext.field_f &&
               InheritedWidgetStyle.readServerBytes(8, (byte) 40)) {
               DialogLayer.field_H = RoadStripRenderer.field_e.readLong(true);
               RoadStripRenderer.field_e.position = 0;
               StraightRoadSegment.writeLoginPacket(param1 ^ 1, param5, param0, TriangleMesh.field_j, param4);
-              d.field_f = SoundPlayback.field_l;
+              AccountProtocolContext.field_f = SoundPlayback.field_l;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (d.field_f == SoundPlayback.field_l &&
+            if (AccountProtocolContext.field_f == SoundPlayback.field_l &&
               InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
               var6_intLifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -128);
               NineSlicePanel.field_c = var6_intLifetime1;
@@ -160,8 +160,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  d.field_f = MeshMaterial.field_d;
-                  ad.field_c = -1;
+                  AccountProtocolContext.field_f = MeshMaterial.field_d;
+                  ReflectionCheckSupport.field_c = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -172,16 +172,16 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ad.field_c = -1;
-                d.field_f = ScoreSubmission.field_s;
+                ReflectionCheckSupport.field_c = -1;
+                AccountProtocolContext.field_f = ScoreSubmission.field_s;
               }
             }
-            if (ScoreSubmission.field_s == d.field_f &&
-              TutorialTransition.a((byte) 55)) {
+            if (ScoreSubmission.field_s == AccountProtocolContext.field_f &&
+              TutorialTransition.readPacketPayload((byte) 55)) {
               RoadFillRenderer.field_a = RoadStripRenderer.field_e.readLong(true);
               CachedArchiveProvider.field_x = RoadStripRenderer.field_e.readUnsignedByte((byte) -33);
               RoadStripRenderer.field_e.readUnsignedByte((byte) -43);
-              fc.field_a = RoadStripRenderer.field_e.readUnsignedShort(-119);
+              BoundaryIntervalBuilder.field_a = RoadStripRenderer.field_e.readUnsignedShort(-119);
               var6 = RoadStripRenderer.field_e.readNullableCp1252String(-1);
               var7 = RoadStripRenderer.field_e.readUnsignedByte((byte) -57);
               if (0 != (var7 & 1)) {
@@ -207,21 +207,21 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               }
               QuickChatPhraseCache.field_e = RoadStripRenderer.field_e.readCp1252String(-1231);
               var11 = (CharSequence) ((Object) QuickChatPhraseCache.field_e);
-              co.field_e = MidiPcmStream.normalizeAccountName(var11, (byte) -12);
-              q.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -95);
-              d.field_f = ad.field_b;
+              ClientLifecycleUtilities.field_e = MidiPcmStream.normalizeAccountName(var11, (byte) -12);
+              PlayerDataProtocol.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -95);
+              AccountProtocolContext.field_f = ReflectionCheckSupport.field_b;
               if (TriangleMesh.field_j.getType(true) == RoadControlPointSpec.field_d) {
                 RaceVehicle.field_Wb.writeLastLoginMethodCookie(GameKeyHandler.getApplet(87), 127);
               } else {
-                if (TriangleMesh.field_j.getType(true) == jh.field_d) {
+                if (TriangleMesh.field_j.getType(true) == PackedClientOptions.field_d) {
                   ArcTrackBoundary.field_s.writeLastLoginMethodCookie(GameKeyHandler.getApplet(97), 125);
                 }
               }
               ProxyAuthenticationException.field_e = false;
               if (var6 != null) {
-                IntrusiveDequeCursor.a(-32312, var6, GameKeyHandler.getApplet(73));
+                IntrusiveDequeCursor.writeSettingsCookie(-32312, var6, GameKeyHandler.getApplet(73));
               }
-              if (fc.field_a <= 0 &&
+              if (BoundaryIntervalBuilder.field_a <= 0 &&
                 !MeshMaterial.field_c) {
                 try {
                   JavaScriptBridge.callJavaScript(21896, "unzap", GameKeyHandler.getApplet(92));
@@ -231,14 +231,14 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callJavaScript(GameKeyHandler.getApplet(param1 ^ 79), new Object[]{EntitySound.a(true, RoadFillRenderer.field_a)}, false, "zap");
+                  JavaScriptBridge.callJavaScript(GameKeyHandler.getApplet(param1 ^ 79), new Object[]{EntitySound.decodeBase37DisplayName(true, RoadFillRenderer.field_a)}, false, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (fc.field_a > 0) {
-                hc.field_b = true;
+              if (BoundaryIntervalBuilder.field_a > 0) {
+                FixedAngleMath.field_b = true;
               }
               IsaacPacketBuffer.field_p.seedCipher(Bzip2State.field_x, false);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
@@ -248,8 +248,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               stackIn_71_0 = NineSlicePanel.field_c;
               return stackIn_71_0;
             }
-            if (d.field_f == MeshMaterial.field_d &&
-              TutorialTransition.a((byte) 55)) {
+            if (AccountProtocolContext.field_f == MeshMaterial.field_d &&
+              TutorialTransition.readPacketPayload((byte) 55)) {
               ServerConnectionState.closeServerConnection(-28036);
               if (NineSlicePanel.field_c == 7 &&
                 !ProxyAuthenticationException.field_e) {
@@ -260,7 +260,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               if (NineSlicePanel.field_c == 7) {
                 NineSlicePanel.field_c = 3;
               }
-              um.field_b = RoadStripRenderer.field_e.readCp1252String(param1 - 1232);
+              Cp1252CharacterRules.field_b = RoadStripRenderer.field_e.readCp1252String(param1 - 1232);
               ProxyAuthenticationException.field_e = false;
               stackIn_82_0 = NineSlicePanel.field_c;
               return stackIn_82_0;
@@ -268,16 +268,16 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             if (null == IterableSecondaryNodeDeque.field_h) {
               if (ProxyAuthenticationException.field_e) {
                 if (30000L < ImageProducerRasterBuffer.millisSinceServerActivity(126)) {
-                  um.field_b = SpriteButtonRenderer.field_y;
+                  Cp1252CharacterRules.field_b = SpriteButtonRenderer.field_y;
                 } else {
-                  um.field_b = ContentTransitionDialog.field_hb;
+                  Cp1252CharacterRules.field_b = ContentTransitionDialog.field_hb;
                 }
                 ProxyAuthenticationException.field_e = false;
                 stackIn_91_0 = 3;
                 return stackIn_91_0;
               }
-              var6_intLifetime2 = bo.field_e;
-              bo.field_e = ArchiveCatalog.field_b;
+              var6_intLifetime2 = SpriteDecodeGlobals.field_e;
+              SpriteDecodeGlobals.field_e = ArchiveCatalog.field_b;
               ArchiveCatalog.field_b = var6_intLifetime2;
               ProxyAuthenticationException.field_e = true;
             }
@@ -326,7 +326,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (param4 != -9) {
             return;
           }
-          var8 = (UiWidget) (var7.c((byte) -128));
+          var8 = (UiWidget) (var7.first((byte) -128));
           while (var8 != null) {
             if (var8.isLinked(111)) {
               var8.handleMouseRelease(param0, param1, param2 + this.y, this.x + param3, (byte) -9, param5);
@@ -379,7 +379,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         var7 = HoldTheLine.field_D;
         try {
           var9 = new IntrusiveDequeCursor(this.children);
-          var8 = (UiWidget) (var9.c((byte) -120));
+          var8 = (UiWidget) (var9.first((byte) -120));
           while (var8 != null) {
             if (var8.isLinked(68)) {
               if (var8.isFocused((byte) -20) &&
@@ -431,7 +431,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         var10 = HoldTheLine.field_D;
         try {
           var8 = new IntrusiveDequeCursor(this.children);
-          var9 = (UiWidget) (var8.c((byte) -114));
+          var9 = (UiWidget) (var8.first((byte) -114));
           if (param4 != -108) {
             return false;
           }
@@ -468,7 +468,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         if (param0 >= -66) {
           field_A = (String[][]) null;
         }
-        UiWidget var4 = (UiWidget) (var3.c((byte) 119));
+        UiWidget var4 = (UiWidget) (var3.first((byte) 119));
         while (var4 != null) {
           var5 = var4.getMaxLayer((byte) -123);
           if (var5 > var2) {
@@ -492,7 +492,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         try {
           super.updateHover(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.children);
-          var6 = (UiWidget) (var5.c((byte) -115));
+          var6 = (UiWidget) (var5.first((byte) -115));
           while (var6 != null) {
             if (var6.isLinked(55)) {
               var6.updateHover(this.x + param0, param1, param2 + this.y, (byte) -3);
@@ -529,7 +529,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         UiWidget var6 = (UiWidget) (var5.last(8115));
         while (var6 != null) {
           var6.drawLayer(-9532, param1 + this.y, param2 + this.x, param3);
-          var6 = (UiWidget) (var5.a(false));
+          var6 = (UiWidget) (var5.previous(false));
         }
     }
 
@@ -582,7 +582,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             DisplayNameForm.field_L = param11;
             ArchiveCatalog.field_n = param13;
             PointLight.field_s = param6;
-            hc.field_b = param1;
+            FixedAngleMath.field_b = param1;
             OutlinedRoadStripRenderer.field_m = param10;
             ArchiveCatalog.field_b = param4;
             if (!param12) {
@@ -590,12 +590,12 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             }
             MeshMaterial.field_f = param9;
             AchievementUnlockRequest.field_i = param8;
-            bo.field_e = param5;
-            oi.field_b = param0;
+            SpriteDecodeGlobals.field_e = param5;
+            HoverTooltipController.field_b = param0;
             DelegatingCanvas.field_f = param7;
             if (null != PointLight.field_s.field_a) {
               try {
-                ao.field_c = new BufferedRandomAccessFile(PointLight.field_s.field_a, 64, 0);
+                BoundaryLoopClipper.field_c = new BufferedRandomAccessFile(PointLight.field_s.field_a, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -648,7 +648,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (param1 != -25823) {
             return true;
           }
-          var4 = (UiWidget) (var3.c((byte) -2));
+          var4 = (UiWidget) (var3.first((byte) -2));
           while (true) {
             if (var4 == null) {
               return false;
@@ -689,7 +689,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(IntrusiveDeque.a(var2, param0, (byte) 54), "_top");
+              param0.getAppletContext().showDocument(IntrusiveDeque.adjustAppletUrl(var2, param0, (byte) 54), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -719,7 +719,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         String var4 = null;
         int var5 = HoldTheLine.field_D;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
-        UiWidget var3 = (UiWidget) (var2.c((byte) -118));
+        UiWidget var3 = (UiWidget) (var2.first((byte) -118));
         while (var3 != null) {
           var4 = var3.getTooltip(param0 + 0);
           if (var4 != null) {
@@ -755,7 +755,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.children);
-          var4 = (UiWidget) (var8.c((byte) -119));
+          var4 = (UiWidget) (var8.first((byte) -119));
           while (var4 != null) {
             if (var4.isFocused((byte) -20)) {
               var5 = new IntrusiveDequeCursor(this.children);
@@ -793,7 +793,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           UiWidget var5 = (UiWidget) null;
           this.requestFocus((UiWidget) null, 83);
         }
-        UiWidget var3 = (UiWidget) (var2.c((byte) -114));
+        UiWidget var3 = (UiWidget) (var2.first((byte) -114));
         while (var3 != null) {
           var3.refreshLayout(92);
           var3 = (UiWidget) (var2.next((byte) -104));
@@ -853,7 +853,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (param6 != -24898) {
             return true;
           }
-          var9 = (UiWidget) (var8.c((byte) 61));
+          var9 = (UiWidget) (var8.first((byte) 61));
           while (var9 != null) {
             if (var9.isLinked(72)) {
               if (var9.isFocused((byte) -20) &&
@@ -883,7 +883,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
     final void clearFocus(int param0) {
         int var4 = HoldTheLine.field_D;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
-        UiWidget var3 = (UiWidget) (var2.c((byte) -122));
+        UiWidget var3 = (UiWidget) (var2.first((byte) -122));
         if (param0 < 15) {
           return;
         }
@@ -918,15 +918,15 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             if (var4.isFocused((byte) -20)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.lastOrFrom(-10279, var4);
-              var6 = (UiWidget) (var5.a(false));
+              var6 = (UiWidget) (var5.previous(false));
               while (var6 != null) {
                 if (var6.requestFocus(param0, param1 - 25822)) {
                   return true;
                 }
-                var6 = (UiWidget) (var5.a(false));
+                var6 = (UiWidget) (var5.previous(false));
               }
             }
-            var4 = (UiWidget) (var8.a(false));
+            var4 = (UiWidget) (var8.previous(false));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -949,7 +949,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
         int var4;
         var4 = HoldTheLine.field_D;
         var2 = new IntrusiveDequeCursor(this.children);
-        var3 = (UiWidget) (var2.c((byte) -122));
+        var3 = (UiWidget) (var2.first((byte) -122));
         if (param0 <= 73) {
           field_E = 118;
         }

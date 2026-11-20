@@ -43,7 +43,7 @@ class TextFieldRenderer extends TextWidgetStyle {
         }
     }
 
-    final static NameAvailabilityResult a(boolean param0, int param1) {
+    final static NameAvailabilityResult createRestrictedNameResult(boolean param0, int param1) {
         NameAvailabilityResult var2 = new NameAvailabilityResult(true);
         if (param1 == 0) {
           var2.field_i = param0 ? true : false;

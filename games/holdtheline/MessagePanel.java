@@ -39,9 +39,9 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
             }
             var7 = this.field_J[var6_int];
             if (-1 == var7) {
-              this.field_F.h((byte) -115);
+              this.field_F.closeProgressDialog((byte) -115);
             } else {
-              RotatedSpriteAsset.setAccountScreen(0, this.field_J[var6_int]);
+              RotatedSpriteAsset.requestAccountAction(0, this.field_J[var6_int]);
             }
             break;
           }

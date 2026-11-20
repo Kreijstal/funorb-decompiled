@@ -31,7 +31,7 @@ class DualLinkNode extends IntrusiveNode {
         if (param1 >= -50) {
           field_k = (MenuSelectionController) null;
         }
-        var5 = ClientTextResources.a(4);
+        var5 = ClientTextResources.getQuickChatDynamicCommands(4);
         var2 = var5;
         for (var3 = 0; var3 < var5.length; var3++) {
           if (param0 == var5[var3].protocolId) {
@@ -50,7 +50,7 @@ class DualLinkNode extends IntrusiveNode {
         field_j = null;
     }
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] getGameArchiveFile(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -90,7 +90,7 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryPrevious = null;
     }
 
-    final static void a(int param0) {
+    final static void processServerDialogs(int param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -99,10 +99,10 @@ class DualLinkNode extends IntrusiveNode {
           if (param0 < 92) {
             DualLinkNode.signumFloat(11, -0.14343492686748505f);
           }
-          if (ClientException.a((byte) -118)) {
+          if (ClientException.hasActiveDialog((byte) -118)) {
             ServerConnectionState.field_a.processInput(AccountProgressDialog.field_lb, SpriteState.field_r, true, false);
             ServerConnectionState.field_a.updateAnimations((byte) -59);
-            while (qh.pollKeyEvent(-44)) {
+            while (KeyboardEventQueue.pollKeyEvent(-44)) {
               ServerConnectionState.field_a.dispatchKey(DelayedServerPacket.field_n, LoginChoicePanel.field_M, (byte) 117);
             }
             return;

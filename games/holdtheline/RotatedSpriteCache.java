@@ -14,18 +14,18 @@ final class RotatedSpriteCache {
     private int field_a;
     private Sprite field_b;
 
-    final static void a(int param0) {
+    final static void startMenuDemoRace(int param0) {
         int var1 = StrongCacheEntry.field_w == -1 ? 0 : StrongCacheEntry.field_w;
-        ArchiveRequest.field_r = ~SolidRoadStripRenderer.b(2, 10) == param0 ? 6 : 5;
-        nm.field_b = ArchiveRequest.field_r == 6 ? VehicleEngineSounds.field_c[5][var1] : VehicleEngineSounds.field_c[var1][0];
-        if (!UsernameLoginCredentials.a(nm.field_b, true)) {
+        ArchiveRequest.field_r = ~SolidRoadStripRenderer.nextRandomInt(2, 10) == param0 ? 6 : 5;
+        ResourceArchiveFactory.field_b = ArchiveRequest.field_r == 6 ? VehicleEngineSounds.field_c[5][var1] : VehicleEngineSounds.field_c[var1][0];
+        if (!UsernameLoginCredentials.pollRaceGraphicsLoaded(ResourceArchiveFactory.field_b, true)) {
           PlayerStatsRequest.field_k = false;
           BlobWriteRequest.field_j = false;
           QuickChatPhraseDefinition.field_r = -1;
           MusicPatchPcmStream.field_r = null;
           DiskCacheStore.field_i = -1;
         } else {
-          MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, ArchiveRequest.field_r, false, false, -1, -1);
+          MusicPatchPcmStream.field_r = new RaceWorld(ResourceArchiveFactory.field_b, ArchiveRequest.field_r, false, false, -1, -1);
           ArchiveRequest.field_r = -1;
         }
         EntitySound.field_j = false;
@@ -57,7 +57,7 @@ final class RotatedSpriteCache {
           if (var8 != 0 &&
             (65535 & var8) == var8 >> 8) {
             var8 = var8 & 255;
-            var4[var7] = 1 + (LoginChoicePanel.a(16711680, var6 * var8) + LoginChoicePanel.a(var5 * var8, -16712192) >>> 8);
+            var4[var7] = 1 + (LoginChoicePanel.andInts(16711680, var6 * var8) + LoginChoicePanel.andInts(var5 * var8, -16712192) >>> 8);
           }
           var7++;
         }
@@ -87,7 +87,7 @@ final class RotatedSpriteCache {
         return this.getByOrientation(var3, (byte) 120);
     }
 
-    final static int a(BitmapFont param0, String param1, String[] param2, byte param3, int param4) {
+    final static int wrapBalancedText(BitmapFont param0, String param1, String[] param2, byte param3, int param4) {
         int var10 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -257,7 +257,7 @@ final class RotatedSpriteCache {
           var5 = this.field_b.canvasWidth + this.field_b.canvasHeight;
           var4 = this.field_b.canvasWidth + this.field_b.canvasHeight;
           var6 = new Sprite(var4, var5);
-          vb.a(-128, var6);
+          JagexLogoRenderer.pushSpriteRaster(-128, var6);
           if (this.field_d) {
             this.field_b.drawRotatedCenteredNearest(15, 16384 + param0 * 1024, this.field_a, var4 >> 1, var5 >> 1);
           } else {

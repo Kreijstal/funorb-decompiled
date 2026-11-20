@@ -96,31 +96,31 @@ final class ArcTrackBoundary extends BoundaryCurve {
         return new Vector2f(var3Lifetime1);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int getCourseAccessStatus(int param0, int param1, int param2) {
         int var3 = 0;
         int var3Lifetime1;
         if (param1 >= -5) {
           field_s = (LoginMethodPreference) null;
-          var3 = PolarSortVector.a((byte) 35, param2);
+          var3 = PolarSortVector.getChampionshipAccessStatus((byte) 35, param2);
           if (var3 != 0) {
             return var3;
           }
-          if (param2 != ao.field_b) {
+          if (param2 != BoundaryLoopClipper.field_b) {
             return 0;
           }
-          if (hk.field_d < param0) {
+          if (RoadControlPathBuilder.field_d < param0) {
             return 1;
           }
           return 0;
         }
-        var3Lifetime1 = PolarSortVector.a((byte) 35, param2);
+        var3Lifetime1 = PolarSortVector.getChampionshipAccessStatus((byte) 35, param2);
         if (var3Lifetime1 != 0) {
           return var3Lifetime1;
         }
-        if (param2 != ao.field_b) {
+        if (param2 != BoundaryLoopClipper.field_b) {
           return 0;
         }
-        if (hk.field_d < param0) {
+        if (RoadControlPathBuilder.field_d < param0) {
           return 1;
         }
         return 0;

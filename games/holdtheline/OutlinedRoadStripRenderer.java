@@ -128,8 +128,8 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
               SoftwareRasterizer.drawLine(var7Lifetime1, var8Lifetime1, var9Lifetime3, var10Lifetime3, 4144959);
               var7Lifetime2 = var9Lifetime3;
               var8Lifetime2 = var10Lifetime3;
-              this.field_p = o.a((byte) 103);
-              this.field_o = o.a((byte) -115);
+              this.field_p = BackgroundSprites.createGeometryIntList((byte) 103);
+              this.field_o = BackgroundSprites.createGeometryIntList((byte) -115);
             }
             this.field_s = param1;
           }
@@ -154,7 +154,7 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
         }
     }
 
-    final static PaletteBitmapFont a(int param0, byte[] param1, IndexedSprite[] param2, int param3, int param4, int param5) {
+    final static PaletteBitmapFont createOutlinedFont(int param0, byte[] param1, IndexedSprite[] param2, int param3, int param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int var26 = 0;
@@ -358,7 +358,7 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
         }
     }
 
-    final static int a(int param0, CourseDefinition param1) {
+    final static int getRaceGraphicsLoadProgress(int param0, CourseDefinition param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -376,7 +376,7 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
             stackIn_3_0 = -59;
             return stackIn_3_0;
           }
-          var2_int = RotatedSpriteSheetAsset.a((byte) 26, param1);
+          var2_int = RotatedSpriteSheetAsset.getCourseGraphicsLoadProgress((byte) 26, param1);
           var3 = RotatedSpriteAsset.field_g[param1.field_p];
           for (var4 = 0; var3.length > var4; var4++) {
             if (ContentTransitionState.field_c[var3[var4]].spriteAsset.isLoaded((byte) 58)) {
@@ -386,13 +386,13 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
               var2_int += 8;
             }
           }
-          if (mc.field_a[9].field_c) {
+          if (IntegerTextParser.field_a[9].field_c) {
             var2_int += 8;
           }
-          if (mc.field_a[11].field_c) {
+          if (IntegerTextParser.field_a[11].field_c) {
             var2_int += 8;
           }
-          if (!BufferedSocket.a(-64)) {
+          if (!BufferedSocket.pollHudAssetsLoaded(-64)) {
             var2_int += 88;
           }
           stackIn_22_0 = 2 * var2_int / 3;
@@ -416,8 +416,8 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
         this.field_i = 1;
         this.field_h = param0;
         this.field_k = param1;
-        this.field_p = o.a((byte) 50);
-        this.field_o = o.a((byte) 96);
+        this.field_p = BackgroundSprites.createGeometryIntList((byte) 50);
+        this.field_o = BackgroundSprites.createGeometryIntList((byte) 96);
         this.field_s = 0;
     }
 

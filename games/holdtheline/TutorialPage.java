@@ -70,12 +70,12 @@ final class TutorialPage {
         }
     }
 
-    final static void a(byte param0) {
-        ka.field_b.closeAllDialogs(false);
+    final static void showLoadProgressDialog(byte param0) {
+        AccountUiUtilities.field_b.closeAllDialogs(false);
         if (MidiKeyUsage.field_l == null) {
-          MidiKeyUsage.field_l = new LoadProgressDialog(ka.field_b, FullscreenDisplayMode.field_c);
+          MidiKeyUsage.field_l = new LoadProgressDialog(AccountUiUtilities.field_b, FullscreenDisplayMode.field_c);
         }
-        ka.field_b.showDialog(MidiKeyUsage.field_l, false);
+        AccountUiUtilities.field_b.showDialog(MidiKeyUsage.field_l, false);
         if (param0 > -80) {
           field_i = (NamedSoundEffect) null;
         }

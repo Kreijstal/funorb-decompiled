@@ -47,41 +47,41 @@ final class HuffmanDecoder {
           var5 = stackIn_14_0;
           if (var3 == 0 &&
             NameAvailabilityResult.field_e) {
-            ad.field_a = true;
+            ReflectionCheckSupport.field_a = true;
           }
           if (var4 == 0 &&
             ChatMessage.field_l) {
-            ad.field_a = true;
+            ReflectionCheckSupport.field_a = true;
           }
           if (var5 == 0 &&
             QuickChatPhraseDefinition.field_s) {
-            ad.field_a = true;
+            ReflectionCheckSupport.field_a = true;
           }
           NameAvailabilityResult.field_e = NameAvailabilityResult.field_e & var3 != 0;
           ChatMessage.field_l = ChatMessage.field_l & var4 != 0;
           QuickChatPhraseDefinition.field_s = QuickChatPhraseDefinition.field_s & var5 != 0;
           var6 = var11.readBits(4, 7);
-          var7 = 4 * ao.field_b + hk.field_d;
+          var7 = 4 * BoundaryLoopClipper.field_b + RoadControlPathBuilder.field_d;
           if (var6 >= var7) {
-            hk.field_d = 3 & var6;
-            ao.field_b = var6 >> 2;
+            RoadControlPathBuilder.field_d = 3 & var6;
+            BoundaryLoopClipper.field_b = var6 >> 2;
           } else {
-            ad.field_a = true;
+            ReflectionCheckSupport.field_a = true;
           }
           for (var8 = 1; var8 < 4; var8++) {
-            MarkerSliderRenderer.a(var11, var8, 0, (byte) 102);
+            MarkerSliderRenderer.readCourseBestTimes(var11, var8, 0, (byte) 102);
           }
           for (var8Lifetime1 = 1; 4 > var8Lifetime1; var8Lifetime1++) {
             for (var9 = 0; 4 > var9; var9++) {
-              MarkerSliderRenderer.a(var11, var9, var8Lifetime1, (byte) 100);
+              MarkerSliderRenderer.readCourseBestTimes(var11, var9, var8Lifetime1, (byte) 100);
             }
           }
           var9Lifetime1 = 117 % ((20 - param0) / 61);
           for (var8Lifetime2 = 0; 4 > var8Lifetime2; var8Lifetime2++) {
-            AchievementStatusRequest.readChampionshipProgress(false, var11, var8Lifetime2);
+            AchievementStatusRequest.readBestChampionshipTime(false, var11, var8Lifetime2);
           }
           var11.endBitReading(-34);
-          FullscreenErrorReason.b((byte) -115);
+          FullscreenErrorReason.populateCourseMenu((byte) -115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class HuffmanDecoder {
         RoadStripRenderer.field_g = param0;
         AccountCreationForm.field_H = param6;
         RoadSegment.field_r = param2;
-        pe.field_c = param5;
+        ScreenOptionsMenu.field_c = param5;
         CachedTextLayout.field_e = param4;
         OutlinedRoadStripRenderer.field_n = (Js5Transport) ((Object) new SocketJs5Transport());
         IterableSecondaryNodeDeque.field_d = new DiskCacheWorker(param3);
@@ -118,7 +118,7 @@ final class HuffmanDecoder {
         }
     }
 
-    final static Sprite a(byte param0, int param1, int param2, int param3) {
+    final static Sprite createTaperedGlowSprite(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var9 = 0;
         int var4;
@@ -133,7 +133,7 @@ final class HuffmanDecoder {
         var4 = 1 + 2 * param3;
         var5 = param3 + param1;
         if (param0 < 40) {
-          HuffmanDecoder.a((byte) 50, -35, -90, -15);
+          HuffmanDecoder.createTaperedGlowSprite((byte) 50, -35, -90, -15);
         }
         var6 = new Sprite(var4, var5);
         for (var7 = 5; var5 > var7; var7++) {
@@ -147,7 +147,7 @@ final class HuffmanDecoder {
             var11 = 1.0f - Math.abs(var10);
             if (!(0.0f >= var11)) {
               var12 = var11;
-              var6.pixels[var9 + (var7 * var4 + param3)] = IterableSecondaryNodeDeque.a(var12, -1, param2);
+              var6.pixels[var9 + (var7 * var4 + param3)] = IterableSecondaryNodeDeque.scaleRgb(var12, -1, param2);
             }
           }
         }
@@ -212,12 +212,12 @@ final class HuffmanDecoder {
         field_a = (byte[][]) null;
     }
 
-    final static void b(int param0) {
+    final static void restoreEmailLoginForm(int param0) {
         if (param0 <= 32) {
           return;
         }
         String var2 = (String) null;
-        SocketJs5Transport.a((String) null, false, ChatMessage.field_k);
+        SocketJs5Transport.replaceLoginForm((String) null, false, ChatMessage.field_k);
     }
 
     final int decode(int param0, boolean param1, int param2, byte[] param3, byte[] param4, int param5) {
@@ -435,10 +435,10 @@ final class HuffmanDecoder {
     final static void persistRandomSeed(byte param0) {
         try {
           int var1 = 89 % ((param0 + 70) / 52);
-          if (null != ao.field_c) {
+          if (null != BoundaryLoopClipper.field_c) {
             try {
-              ao.field_c.seek(25971, 0L);
-              ao.field_c.write((byte) 125, 24, RoadStripRenderer.field_e.position, RoadStripRenderer.field_e.payload);
+              BoundaryLoopClipper.field_c.seek(25971, 0L);
+              BoundaryLoopClipper.field_c.write((byte) 125, 24, RoadStripRenderer.field_e.position, RoadStripRenderer.field_e.payload);
             } catch (Exception exception) {
             }
           }

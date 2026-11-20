@@ -26,7 +26,7 @@ final class ArchiveIndex {
     private byte[] field_d;
     static int[] field_b;
 
-    final static Particle a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, IntrusiveDeque[] param8, int param9, int param10, int param11, int param12) {
+    final static Particle createParticle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, IntrusiveDeque[] param8, int param9, int param10, int param11, int param12) {
         Particle var13 = null;
         RuntimeException var13_ref = null;
         Particle var14 = null;
@@ -70,7 +70,7 @@ final class ArchiveIndex {
         field_r = null;
     }
 
-    private final void a(boolean param0, byte[] param1) {
+    private final void decodeIndex(boolean param0, byte[] param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -117,7 +117,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = HoldTheLine.field_D;
         try {
-          var17 = new PacketBuffer(ph.a((byte) -1, param1));
+          var17 = new PacketBuffer(ArchiveCompression.decompressContainer((byte) -1, param1));
           var4 = var17.readUnsignedByte((byte) -125);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -286,7 +286,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static CourseDefinition b(byte param0) {
+    final static CourseDefinition getSelectedCourse(byte param0) {
         if (param0 != -49) {
           ArchiveIndex.clearSharedReferences((byte) -96);
         }
@@ -317,7 +317,7 @@ final class ArchiveIndex {
               }
             }
           }
-          this.a(true, param0);
+          this.decodeIndex(true, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "kn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

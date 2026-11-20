@@ -268,7 +268,7 @@ abstract class TextLayout {
           var58 = var72;
           var12 = var58;
           for (var13 = 0; var7 > var13; var13++) {
-            var12[var13] = (char)kc.a(var3.readUnsignedByte((byte) -102) << 8, var3.readUnsignedByte((byte) -95));
+            var12[var13] = (char)BitwiseIntegerOperations.orInts(var3.readUnsignedByte((byte) -102) << 8, var3.readUnsignedByte((byte) -95));
           }
           var57.field_b = new String(var72);
           var18 = new GrowableObjectList();
@@ -609,8 +609,8 @@ abstract class TextLayout {
           var69 = NanoTickClock.removeShortBoundaryEdges(var65, (byte) -127);
           var66 = NanoTickClock.removeShortBoundaryEdges(var62, (byte) -127);
           var68 = NanoTickClock.removeShortBoundaryEdges(var63, (byte) -127);
-          var57.field_c = ao.a(var66, (byte) 21, false, var67);
-          var57.field_t = ao.a(var68, (byte) 21, false, var69);
+          var57.field_c = BoundaryLoopClipper.clipBoundaryLoops(var66, (byte) 21, false, var67);
+          var57.field_t = BoundaryLoopClipper.clipBoundaryLoops(var68, (byte) 21, false, var69);
           if (var6 != 0) {
             var44_int = var10 * 8 + var9 * 3;
             var3.readBytes(var44_int, 0, (byte) 84, new byte[var44_int]);

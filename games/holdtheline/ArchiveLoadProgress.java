@@ -60,13 +60,13 @@ final class ArchiveLoadProgress {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, IsaacPacketBuffer param3) {
+    final static void writeCourseBestTimes(int param0, int param1, int param2, IsaacPacketBuffer param3) {
         try {
-          eg.a(hk.field_c[param2][param1], 14, true, param3);
-          eg.a(QuickChatPhraseDefinition.field_v[param2][param1], 13, true, param3);
+          ClientBackgroundRenderer.writeOptionalBits(RoadControlPathBuilder.field_c[param2][param1], 14, true, param3);
+          ClientBackgroundRenderer.writeOptionalBits(QuickChatPhraseDefinition.field_v[param2][param1], 13, true, param3);
           if (param0 >= -87) {
             IsaacPacketBuffer var5 = (IsaacPacketBuffer) null;
-            ArchiveLoadProgress.a(61, 25, -81, (IsaacPacketBuffer) null);
+            ArchiveLoadProgress.writeCourseBestTimes(61, 25, -81, (IsaacPacketBuffer) null);
           }
           param3.writeBits(91, 2, BoundaryIntersection.field_j[param2][param1]);
         } catch (RuntimeException runtimeException) {
@@ -106,10 +106,10 @@ final class ArchiveLoadProgress {
           if (param1.length != 4) {
             throw new IllegalArgumentException();
           }
-          var4_int = ka.a((byte) -127, param1[0]);
-          var5 = ka.a((byte) -116, param1[param2]);
-          var6 = ka.a((byte) 39, param1[2]);
-          var7 = ka.a((byte) -120, param1[3]);
+          var4_int = AccountUiUtilities.parseIntOrAuto((byte) -127, param1[0]);
+          var5 = AccountUiUtilities.parseIntOrAuto((byte) -116, param1[param2]);
+          var6 = AccountUiUtilities.parseIntOrAuto((byte) 39, param1[2]);
+          var7 = AccountUiUtilities.parseIntOrAuto((byte) -120, param1[3]);
           param0.field_g = param0.field_j;
           param0.field_j = new TutorialCalloutAnchor(param3, var4_int, var5, var6, var7);
         } catch (RuntimeException runtimeException) {

@@ -31,7 +31,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_4_0 = LinearPointPath.field_k;
             return stackIn_4_0;
           }
-          if (!AccountProtocolState.a(-103, var3, var4)) {
+          if (!AccountProtocolState.isPasswordAllowed(-103, var3, var4)) {
             stackIn_8_0 = LinearPointPath.field_k;
             return stackIn_8_0;
           }
@@ -73,7 +73,7 @@ final class PasswordValidator extends TextFieldValidator {
         LeaderboardPlayer.field_f = stackIn_3_0;
         MusicPatch.field_m = 127 & var3;
         RoadShadowRenderer.field_o = var8.readUnsignedByte((byte) -104);
-        fc.field_c = var8.readLong(true);
+        BoundaryIntervalBuilder.field_c = var8.readLong(true);
         if (MusicPatch.field_m != 2) {
           MidiPcmStream.field_H = 0;
           NineSlicePanel.field_f = 0;
@@ -102,7 +102,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
         }
         if (!param0) {
-          SocialListEntry.field_kb = ta.a(80, var8, param1);
+          SocialListEntry.field_kb = HuffmanTextCodec.readHuffmanString(80, var8, param1);
           TextLayout.field_d = null;
           return new ChatMessage(param0);
         }
@@ -127,7 +127,7 @@ final class PasswordValidator extends TextFieldValidator {
         return new ChatMessage(param0);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int hitTestBenefitsButton(int param0, int param1, int param2) {
         if (NodeHashTableIterator.field_h == null) {
           return -1;
         }
@@ -217,12 +217,12 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = LoginMethodPreference.field_b;
             return stackIn_8_0;
           }
-          if (IntArrayReadRequest.a(0, var5)) {
+          if (IntArrayReadRequest.containsNonAlphanumeric(0, var5)) {
             stackIn_11_0 = GameAppletShell.field_c;
             return stackIn_11_0;
           }
           if (DelayedServerPacket.hasRepeatedCharacter(var5, 1)) {
-            stackIn_15_0 = ak.field_a;
+            stackIn_15_0 = NineSliceSpriteFactory.field_a;
             return stackIn_15_0;
           }
           if (this.containsEmailPart(param0, (byte) -57)) {
@@ -233,15 +233,15 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_22_0 = BoundaryCurve.field_m;
             return stackIn_22_0;
           }
-          if (ka.a(var5, (byte) 126, var6)) {
+          if (AccountUiUtilities.containsForwardOrReversed(var5, (byte) 126, var6)) {
             stackIn_25_0 = ShadedRoadStripRenderer.field_p;
             return stackIn_25_0;
           }
           if (LeaderboardPlayer.containsForwardOrReversed(var5, var6, 95)) {
-            stackIn_29_0 = mc.field_c;
+            stackIn_29_0 = IntegerTextParser.field_c;
             return stackIn_29_0;
           }
-          if (!GzipDecompressor.a((byte) -127, var5, var6)) {
+          if (!GzipDecompressor.containsNameWithoutUnderscores((byte) -127, var5, var6)) {
             stackIn_34_0 = LoginMethodPreference.field_b;
             return stackIn_34_0;
           }
@@ -261,7 +261,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createSolidBeveledPanel(int param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
         Sprite dupTemp$0 = NanoTickClock.createSolidSquareSprite(param2, 124, param0);

@@ -100,20 +100,20 @@ abstract class RoadStripRenderer {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, String param5) {
+    final static void drawMenuSelectionRow(int param0, int param1, byte param2, int param3, int param4, String param5) {
         try {
           if (param2 != -83) {
             RoadStripRenderer.bitCount(54, -109);
           }
           QuickChatPhraseDefinition.field_t.draw(param0 - 381, param4);
           LayeredWidgetStyle.field_i.draw(param0, param4);
-          nm.field_c.draw(param5, param3, (nm.field_c.ascent + 30) / 2 + (param4 - 2), param1, -1);
+          ResourceArchiveFactory.field_c.draw(param5, param3, (ResourceArchiveFactory.field_c.ascent + 30) / 2 + (param4 - 2), param1, -1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "rd.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
+    final static void exitFullscreen(byte param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
         PlatformTask var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -128,7 +128,7 @@ abstract class RoadStripRenderer {
         try {
           if (param0 <= 101) {
             var5 = (String) null;
-            RoadStripRenderer.a(113, -110, (byte) 115, 12, -60, (String) null);
+            RoadStripRenderer.drawMenuSelectionRow(113, -110, (byte) 115, 12, -60, (String) null);
           }
           while (true) {
             var3 = param1.exitFullscreen(param2, (byte) -95);
@@ -175,13 +175,13 @@ abstract class RoadStripRenderer {
           param1 = param1 + (param1 >>> 16);
           return param1 & 255;
         }
-        RoadStripRenderer.b(27);
+        RoadStripRenderer.isForcedLogin(27);
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
         return param1 & 255;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isForcedLogin(int param0) {
         if (param0 >= -46) {
           field_e = (IsaacPacketBuffer) null;
           return ArchiveCatalog.field_o;
@@ -189,7 +189,7 @@ abstract class RoadStripRenderer {
         return ArchiveCatalog.field_o;
     }
 
-    final static RasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static RasterBuffer createRasterBuffer(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;

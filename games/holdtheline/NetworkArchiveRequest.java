@@ -11,7 +11,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static FullscreenFocusCanvas field_w;
     static String field_A;
 
-    final static int a(int param0, int param1, int param2, AccountFormText param3, boolean param4, String param5, AccountFormText param6) {
+    final static int processAccountRequest(int param0, int param1, int param2, AccountFormText param3, boolean param4, String param5, AccountFormText param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_18_0 = null;
@@ -55,11 +55,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             NetworkArchiveRequest.recordBestCourseTime(-108, 25, 4, -53, -46);
           }
           if (null == IterableSecondaryNodeDeque.field_h &&
-            !ShadedRoadStripRenderer.a(false, (byte) 105)) {
+            !ShadedRoadStripRenderer.pollAccountConnection(false, (byte) 105)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (AccountCreationForm.field_S == d.field_f) {
+          if (AccountCreationForm.field_S == AccountProtocolContext.field_f) {
             RoadSegment.field_u = null;
             IsaacPacketBuffer.field_p.position = 0;
             if (param5 == null) {
@@ -85,7 +85,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               IsaacPacketBuffer.field_p.writeByte(111, 16);
               IsaacPacketBuffer.field_p.position = IsaacPacketBuffer.field_p.position + 1;
               var9 = IsaacPacketBuffer.field_p.position;
-              dg.writeEncryptedPacket(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
+              ClientMenuBootstrap.writeEncryptedPacket(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
               IsaacPacketBuffer.field_p.backpatchByteLength(-268435456, IsaacPacketBuffer.field_p.position - var9);
             } else {
               var9 = 0;
@@ -98,53 +98,53 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               SecondaryNodeDequeIterator.field_a.writePrefixedCp1252String(29336, var14);
               SecondaryNodeDequeIterator.field_a.writePrefixedCp1252String(param0 - 36164, var8);
               var15 = (CharSequence) ((Object) param5);
-              SecondaryNodeDequeIterator.field_a.writePrefixedCp1252String(29336, d.a(90, var15));
+              SecondaryNodeDequeIterator.field_a.writePrefixedCp1252String(29336, AccountProtocolContext.normalizePassword(90, var15));
               SecondaryNodeDequeIterator.field_a.writeShort(-652561784, param2);
               SecondaryNodeDequeIterator.field_a.writeByte(111, param1);
               SecondaryNodeDequeIterator.field_a.writeByte(111, var9);
               IsaacPacketBuffer.field_p.writeByte(111, 18);
               IsaacPacketBuffer.field_p.position = IsaacPacketBuffer.field_p.position + 2;
               var10 = IsaacPacketBuffer.field_p.position;
-              var11_ref_String = ph.a((byte) -88, GameKeyHandler.getApplet(114));
+              var11_ref_String = ArchiveCompression.readSettingsCookie((byte) -88, GameKeyHandler.getApplet(114));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               IsaacPacketBuffer.field_p.writeCp1252String(-124, var11_ref_String);
-              dg.writeEncryptedPacket(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
+              ClientMenuBootstrap.writeEncryptedPacket(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
               IsaacPacketBuffer.field_p.backpatchShortLength(-29190, -var10 + IsaacPacketBuffer.field_p.position);
             }
             PlayerStatsRequest.flushServerPackets(-1, 0);
-            d.field_f = TrackObject.field_U;
+            AccountProtocolContext.field_f = TrackObject.field_U;
           }
-          if (TrackObject.field_U == d.field_f &&
+          if (TrackObject.field_U == AccountProtocolContext.field_f &&
             InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
             var9Lifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -56);
             RoadStripRenderer.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               IsaacRandom.field_h = new String[var9Lifetime1 - 100];
-              d.field_f = TutorialAction.field_f;
+              AccountProtocolContext.field_f = TutorialAction.field_f;
             } else {
               if (248 == var9Lifetime1) {
                 RaceVehicle.writeLegacySessionCookie(-1848651292, GameKeyHandler.getApplet(106));
-                um.field_b = LabeledField.field_N;
+                Cp1252CharacterRules.field_b = LabeledField.field_N;
                 ServerConnectionState.closeServerConnection(-28036);
                 ProxyAuthenticationException.field_e = false;
                 stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
-                InheritedWidgetStyle.readServerBytes(GrowableStringList.a((byte) 115), (byte) 40);
+                InheritedWidgetStyle.readServerBytes(GrowableStringList.getAccountResponseHeaderSize((byte) 115), (byte) 40);
                 RoadSegment.field_u = new Boolean(WidgetContainer.readBoolean(RoadStripRenderer.field_e, (byte) 87));
                 RoadStripRenderer.field_e.position = 0;
               } else {
                 NineSlicePanel.field_c = var9Lifetime1;
-                ad.field_c = -1;
-                d.field_f = GameMenu.field_x;
+                ReflectionCheckSupport.field_c = -1;
+                AccountProtocolContext.field_f = GameMenu.field_x;
               }
             }
           }
-          if (TutorialAction.field_f == d.field_f) {
+          if (TutorialAction.field_f == AccountProtocolContext.field_f) {
             var9Lifetime2 = 2;
             if (InheritedWidgetStyle.readServerBytes(var9Lifetime2, (byte) 40)) {
               var10Lifetime1 = RoadStripRenderer.field_e.readUnsignedShort(115);
@@ -161,14 +161,14 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               }
             }
           }
-          if (d.field_f == GameMenu.field_x &&
-            TutorialTransition.a((byte) 55)) {
+          if (AccountProtocolContext.field_f == GameMenu.field_x &&
+            TutorialTransition.readPacketPayload((byte) 55)) {
             if (255 != NineSlicePanel.field_c) {
-              um.field_b = RoadStripRenderer.field_e.readCp1252String(param0 ^ -64275);
+              Cp1252CharacterRules.field_b = RoadStripRenderer.field_e.readCp1252String(param0 ^ -64275);
             } else {
               var9_ref_String = RoadStripRenderer.field_e.readNullableCp1252String(-1);
               if (var9_ref_String != null) {
-                IntrusiveDequeCursor.a(param0 - 97812, var9_ref_String, GameKeyHandler.getApplet(116));
+                IntrusiveDequeCursor.writeSettingsCookie(param0 - 97812, var9_ref_String, GameKeyHandler.getApplet(116));
               }
             }
             ServerConnectionState.closeServerConnection(param0 ^ -37472);
@@ -179,16 +179,16 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           if (IterableSecondaryNodeDeque.field_h == null) {
             if (ProxyAuthenticationException.field_e) {
               if (ImageProducerRasterBuffer.millisSinceServerActivity(123) > 30000L) {
-                um.field_b = SpriteButtonRenderer.field_y;
+                Cp1252CharacterRules.field_b = SpriteButtonRenderer.field_y;
               } else {
-                um.field_b = ContentTransitionDialog.field_hb;
+                Cp1252CharacterRules.field_b = ContentTransitionDialog.field_hb;
               }
               ProxyAuthenticationException.field_e = false;
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
-            var9Lifetime3 = bo.field_e;
-            bo.field_e = ArchiveCatalog.field_b;
+            var9Lifetime3 = SpriteDecodeGlobals.field_e;
+            SpriteDecodeGlobals.field_e = ArchiveCatalog.field_b;
             ArchiveCatalog.field_b = var9Lifetime3;
             ProxyAuthenticationException.field_e = true;
           }
@@ -289,10 +289,10 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             var4Lifetime1 = 32;
             var5 = 65503;
           }
-          PathWaypoint.field_o = new ScoreSubmission(var4Lifetime1, var5, LayeredWidgetStyle.field_d, ni.field_b, cm.field_a, GrowableStringList.field_c, var14);
-          if (!l.field_b &&
+          PathWaypoint.field_o = new ScoreSubmission(var4Lifetime1, var5, LayeredWidgetStyle.field_d, InterfaceLoadingStatus.field_b, MenuHitTesting.field_a, GrowableStringList.field_c, var14);
+          if (!CollisionGeometry.field_b &&
             !RoadShadowRenderer.isGuestMode((byte) 109)) {
-            LinkWidgetRenderer.a(3, (byte) -37, PathWaypoint.field_o);
+            LinkWidgetRenderer.queueScoreSubmission(3, (byte) -37, PathWaypoint.field_o);
             return;
           }
           return;
@@ -323,9 +323,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           !(IsaacPacketBuffer.field_u.length >= param0)) {
           IsaacPacketBuffer.field_u = new int[2 * param0];
         }
-        if (null == ua.field_c ||
-          !(ua.field_c.length >= param0)) {
-          ua.field_c = new int[2 * param0];
+        if (null == QuadraticPathSlicer.field_c ||
+          !(QuadraticPathSlicer.field_c.length >= param0)) {
+          QuadraticPathSlicer.field_c = new int[2 * param0];
         }
         if (WidgetStyleNode.field_q == null ||
           !(WidgetStyleNode.field_q.length >= param0)) {
@@ -363,9 +363,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     }
 
     final static void recordBestCourseTime(int param0, int param1, int param2, int param3, int param4) {
-        if (hk.field_c[param1][param2] == -1 ||
-          hk.field_c[param1][param2] > param3) {
-          hk.field_c[param1][param2] = param3;
+        if (RoadControlPathBuilder.field_c[param1][param2] == -1 ||
+          RoadControlPathBuilder.field_c[param1][param2] > param3) {
+          RoadControlPathBuilder.field_c[param1][param2] = param3;
           BoundaryIntersection.field_j[param1][param2] = param0;
           GrowableStringList.savePlayerProgress(0);
         }

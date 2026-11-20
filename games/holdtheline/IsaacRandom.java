@@ -195,10 +195,10 @@ final class IsaacRandom {
             }
           }
           this.field_j = this.field_j + this.field_d[128 + var2 & 255];
-          dupTemp$1 = this.field_c + (this.field_d[LoginChoicePanel.a(var3, 1020) >> 2] + this.field_j);
+          dupTemp$1 = this.field_c + (this.field_d[LoginChoicePanel.andInts(var3, 1020) >> 2] + this.field_j);
           var4 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_d[LoginChoicePanel.a(261345, var4) >> 8 >> 2];
+          dupTemp$2 = var3 + this.field_d[LoginChoicePanel.andInts(261345, var4) >> 8 >> 2];
           this.field_c = dupTemp$2;
           this.field_b[var2] = dupTemp$2;
         }

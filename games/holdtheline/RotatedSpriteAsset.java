@@ -20,7 +20,7 @@ final class RotatedSpriteAsset {
     final static boolean isPlayerProgressLoaded(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 < 61) {
-          RotatedSpriteAsset.setAccountScreen(91, -85);
+          RotatedSpriteAsset.requestAccountAction(91, -85);
         }
         boolean decompiledFrameRemainder0 = true;
         if (!RoadShadowRenderer.isGuestMode((byte) 114) && (!AccountProtocolState.field_a ||
@@ -41,7 +41,7 @@ final class RotatedSpriteAsset {
         return this.field_f != null ? true : false;
     }
 
-    final static void clearDepthBuffer(int param0) {
+    final static void clearMaterialCursors(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -76,7 +76,7 @@ final class RotatedSpriteAsset {
         }
     }
 
-    final static void setAccountScreen(int param0, int param1) {
+    final static void requestAccountAction(int param0, int param1) {
         if (param0 != 0) {
           field_n = false;
         }
@@ -108,7 +108,7 @@ final class RotatedSpriteAsset {
           if (var6 == null) {
             ShadedRoadStripRenderer.field_r = 2;
           } else {
-            if (!MusicPatchEnvelope.a((CharSequence) ((Object) var6), true)) {
+            if (!MusicPatchEnvelope.isDecimalInteger((CharSequence) ((Object) var6), true)) {
               ShadedRoadStripRenderer.field_r = 2;
             } else {
               ShadedRoadStripRenderer.field_r = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var6), (byte) -116);
@@ -121,7 +121,7 @@ final class RotatedSpriteAsset {
           for (var7 = param5; var7 < param2.length; var7++) {
             TextLineLayout.field_a[var7] = new Sprite(317, 34);
           }
-          qh.field_b = param2;
+          KeyboardEventQueue.field_b = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

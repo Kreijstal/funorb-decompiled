@@ -21,7 +21,7 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 < 120) {
           field_L = 15;
         }
-        var3 = (FadingDialog) (var2.c((byte) -120));
+        var3 = (FadingDialog) (var2.first((byte) -120));
         while (var3 != null) {
           if (var3.visible) {
             return var3.getFocusedChild((byte) 119);
@@ -37,7 +37,7 @@ final class DialogLayer extends SingleChildWidget {
         int var4;
         var4 = HoldTheLine.field_D;
         var2 = new IntrusiveDequeCursor(this.dialogs);
-        var3 = (FadingDialog) (var2.c((byte) 89));
+        var3 = (FadingDialog) (var2.first((byte) 89));
         if (param0 >= -74) {
           this.dialogs = (IntrusiveDeque) null;
         }
@@ -54,7 +54,7 @@ final class DialogLayer extends SingleChildWidget {
         int var5 = HoldTheLine.field_D;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.dialogs);
         int var4 = -22 % ((90 - param0) / 36);
-        FadingDialog var3 = (FadingDialog) (var2.c((byte) 30));
+        FadingDialog var3 = (FadingDialog) (var2.first((byte) 30));
         while (var3 != null) {
           if (var3.finishAnimations(true)) {
             var3.unlink(0);
@@ -64,20 +64,20 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     public DialogLayer() {
-        super(0, 0, EmailAddressValidator.field_i, pe.field_e, (WidgetRenderer) null, (WidgetListener) null);
+        super(0, 0, EmailAddressValidator.field_i, ScreenOptionsMenu.field_e, (WidgetRenderer) null, (WidgetListener) null);
         this.dialogs = new IntrusiveDeque();
     }
 
     final static void showAccountCreationForm(byte param0) {
         TutorialAction.field_b = new AccountCreationForm();
-        sm.field_c.setContent((UiWidget) (TutorialAction.field_b), (byte) -99);
+        Cp1252Decoder.field_c.setContent((UiWidget) (TutorialAction.field_b), (byte) -99);
         int var1 = 95 / ((param0 + 54) / 53);
     }
 
     final void closeAllDialogs(boolean param0) {
         int var4 = HoldTheLine.field_D;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.dialogs);
-        FadingDialog var3 = (FadingDialog) (var2.c((byte) -2));
+        FadingDialog var3 = (FadingDialog) (var2.first((byte) -2));
         while (var3 != null) {
           var3.visible = false;
           var3 = (FadingDialog) (var2.next((byte) -104));
@@ -100,7 +100,7 @@ final class DialogLayer extends SingleChildWidget {
         UiWidget var6 = (UiWidget) (var5.last(8115));
         while (var6 != null) {
           var6.drawLayer(param0 + 0, this.y + param1, param2 + this.x, param3);
-          var6 = (UiWidget) (var5.a(false));
+          var6 = (UiWidget) (var5.previous(false));
         }
     }
 
@@ -132,7 +132,7 @@ final class DialogLayer extends SingleChildWidget {
 
     final static void initialize(int param0) {
         MenuList.field_b = StandardContentTransitionDialog.getDefaultTheme(-49);
-        ka.field_b = new DialogLayer();
+        AccountUiUtilities.field_b = new DialogLayer();
         TutorialAction.showLoginForm((byte) -109, true, true);
         if (param0 != -1) {
           DialogLayer.clearSharedReferences(true);
@@ -146,7 +146,7 @@ final class DialogLayer extends SingleChildWidget {
           UiWidget var5 = (UiWidget) null;
           this.showDialog((UiWidget) null, false);
         }
-        FadingDialog var3 = (FadingDialog) (var2.c((byte) 63));
+        FadingDialog var3 = (FadingDialog) (var2.first((byte) 63));
         while (var3 != null) {
           if (var3.updateAnimation((byte) 39)) {
             var3.unlink(0);

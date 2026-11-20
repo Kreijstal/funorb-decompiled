@@ -1,0 +1,225 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NineSliceSpriteFactory {
+    static String[] field_d;
+    static String field_a;
+    static NameRequestState field_b;
+    static int field_c;
+
+    final static Sprite getAchievementSprite(int param0, boolean param1, int param2) {
+        Sprite stackIn_10_0 = null;
+        Sprite stackIn_15_0 = null;
+        Sprite stackIn_21_0 = null;
+        Sprite stackIn_31_0 = null;
+        int var3 = 0;
+        int var4 = 0;
+        var4 = HoldTheLine.field_D;
+        if (param0 > -24) {
+          NineSliceSpriteFactory.clearSharedReferences(124);
+        }
+        if (param2 == -1) {
+          if (null == NameCheckProgressDialog.field_vb) {
+            NameCheckProgressDialog.field_vb = UrlPacketDownloader.loadSpriteByName(Js5Transport.field_n, "basic", false, "unachieved");
+            InheritedWidgetStyle.field_N = new Sprite(32, 32);
+            JagexLogoRenderer.pushSpriteRaster(-79, InheritedWidgetStyle.field_N);
+            NameCheckProgressDialog.field_vb.drawDownscaledThreshold(0, 0, 32, 32);
+            MarkerSliderRenderer.restoreRasterTarget(-1);
+          }
+          if (!param1) {
+            stackIn_10_0 = NameCheckProgressDialog.field_vb;
+          } else {
+            stackIn_10_0 = InheritedWidgetStyle.field_N;
+          }
+          return stackIn_10_0;
+        }
+        if (null != EmailDomainValidator.field_a) {
+          if (param1) {
+            stackIn_15_0 = FullscreenDisplayMode.field_h[param2];
+          } else {
+            stackIn_15_0 = EmailDomainValidator.field_a[param2];
+          }
+          return stackIn_15_0;
+        }
+        if (!ScoreSubmission.field_i.tryLoadNamedGroup("achievements_128", 89)) {
+          if (param1) {
+            stackIn_21_0 = InheritedWidgetStyle.getPlaceholderSprite(32, (byte) -106, 32);
+          } else {
+            stackIn_21_0 = LoadProgressDialog.field_hb;
+          }
+          return stackIn_21_0;
+        }
+        EmailDomainValidator.field_a = StandardContentTransitionDialog.loadSpritesByName(ScoreSubmission.field_i, 33, "achievements_128", "");
+        FullscreenDisplayMode.field_h = new Sprite[EmailDomainValidator.field_a.length];
+        TutorialTransition.pushRasterTarget(32381);
+        var3 = 0;
+        do {
+          if (!(var3 < EmailDomainValidator.field_a.length)) {
+            MarkerSliderRenderer.restoreRasterTarget(-1);
+            break;
+          }
+          FullscreenDisplayMode.field_h[var3] = new Sprite(32, 32);
+          FullscreenDisplayMode.field_h[var3].bindRaster();
+          EmailDomainValidator.field_a[var3].drawDownscaledThreshold(0, 0, 32, 32);
+          var3++;
+        } while (var4 == 0);
+        if (param1) {
+          stackIn_31_0 = FullscreenDisplayMode.field_h[param2];
+        } else {
+          stackIn_31_0 = EmailDomainValidator.field_a[param2];
+        }
+        return stackIn_31_0;
+    }
+
+    public static void clearSharedReferences(int param0) {
+        field_a = null;
+        field_b = null;
+        if (param0 != 0) {
+          return;
+        }
+        field_d = null;
+    }
+
+    final static Sprite[] createNineSliceSprites(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int stackIn_11_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_24_1 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_46_0 = 0;
+        int var9 = 0;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_hj__ = null;
+        int var11 = 0;
+        int var12 = 0;
+        Sprite var13 = null;
+        int var14 = 0;
+        int var15 = 0;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var12Lifetime2Lifetime1;
+        int var12Lifetime2Lifetime2;
+        var15 = HoldTheLine.field_D;
+        var9 = param8 + (param5 + param2);
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9), new Sprite(var9, param7), new Sprite(64, 64), new Sprite(var9, param7), new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9)};
+        var11_ref_hj__ = var10;
+        var12 = 0;
+        scanLoop1: while (true) {
+          if (var12 < var11_ref_hj__.length) {
+            var13 = var11_ref_hj__[var12];
+            stackIn_11_0 = 0;
+            if (var15 != 0) {
+              break scanLoop1;
+            }
+            var14 = stackIn_11_0;
+            while (var14 < var13.pixels.length) {
+              var13.pixels[var14] = param0;
+              var14++;
+            }
+            var12++;
+            continue scanLoop1;
+          }
+          stackIn_11_0 = 0;
+          break;
+        }
+        var11 = stackIn_11_0;
+        scanLoop2: while (true) {
+          if (param5 > var11) {
+            stackIn_22_0 = 0;
+            if (var15 != 0) {
+              break scanLoop2;
+            }
+            var12Lifetime1 = stackIn_22_0;
+            while (var9 > var12Lifetime1) {
+              var10[6].pixels[var9 * (-var11 + var9 - 1) + var12Lifetime1] = param1;
+              var10[8].pixels[var12Lifetime1 + var9 * (-1 + (-var11 + var9))] = param1;
+              var10[2].pixels[-var11 - (-var9 + (1 - var12Lifetime1 * var9))] = param1;
+              var10[8].pixels[var9 * var12Lifetime1 + (-1 + var9) - var11] = param1;
+              var12Lifetime1++;
+            }
+            var11++;
+            continue scanLoop2;
+          }
+          stackIn_22_0 = 0;
+          break;
+        }
+        var11Lifetime1 = stackIn_22_0;
+        while (true) {
+          stackIn_24_0 = param5;
+          stackIn_24_1 = var11Lifetime1;
+          if (stackIn_24_0 > stackIn_24_1) {
+            stackIn_35_0 = 0;
+            if (var15 == 0) {
+              var12Lifetime2 = stackIn_35_0;
+              while (var9 > var12Lifetime2) {
+                var10[0].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
+                var10[0].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param3;
+                stackIn_24_0 = -var11Lifetime1 + var9;
+                stackIn_24_1 = var12Lifetime2;
+                if (stackIn_24_0 > stackIn_24_1) {
+                  var10[2].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
+                  var10[6].pixels[var12Lifetime2 * var9 + var11Lifetime1] = param3;
+                }
+                var12Lifetime2++;
+              }
+              var11Lifetime1++;
+              continue;
+            }
+          } else {
+            stackIn_35_0 = param6;
+          }
+          var11Lifetime1 = stackIn_35_0;
+          scanLoop3: while (true) {
+            if (var11Lifetime1 < param7) {
+              stackIn_46_0 = 0;
+              if (var15 != 0) {
+                break scanLoop3;
+              }
+              var12Lifetime2Lifetime1 = stackIn_46_0;
+              while (param5 > var12Lifetime2Lifetime1) {
+                var10[7].pixels[var11Lifetime1 + (var9 + (-var12Lifetime2Lifetime1 - 1)) * param7] = param1;
+                var10[5].pixels[var9 * var11Lifetime1 - (1 - var9 + var12Lifetime2Lifetime1)] = param1;
+                var10[1].pixels[var11Lifetime1 + var12Lifetime2Lifetime1 * param7] = param3;
+                var10[3].pixels[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param3;
+                var12Lifetime2Lifetime1++;
+              }
+              var11Lifetime1++;
+              continue scanLoop3;
+            }
+            stackIn_46_0 = 0;
+            break;
+          }
+          var11Lifetime1 = stackIn_46_0;
+          scanLoop4: while (var11Lifetime1 < param7 >> 1) {
+            var12Lifetime2Lifetime2 = 0;
+            while (true) {
+              if (var12Lifetime2Lifetime2 < param8) {
+                var10[1].pixels[var11Lifetime1 + (var9 - (var12Lifetime2Lifetime2 + 1)) * param7] = param4;
+                var10[3].pixels[var11Lifetime1 * var9 + var9 - 1 - var12Lifetime2Lifetime2] = param4;
+                var10[7].pixels[param7 * var12Lifetime2Lifetime2 + var11Lifetime1] = param4;
+                var10[5].pixels[var12Lifetime2Lifetime2 + var11Lifetime1 * var9] = param4;
+                var12Lifetime2Lifetime2++;
+                if (var15 == 0) {
+                  continue;
+                }
+              } else {
+                var11Lifetime1++;
+              }
+              break;
+            }
+            if (var15 == 0) {
+              continue scanLoop4;
+            }
+            break;
+          }
+          return var10;
+        }
+    }
+
+    static {
+        field_d = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
+        field_a = "This password contains repeated characters, and would be easy to guess";
+        field_c = -1;
+    }
+}

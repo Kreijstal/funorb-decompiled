@@ -90,7 +90,7 @@ final class MusicCrossfadeStream extends PcmStream {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!qg.decodeArchivedSpriteSheet(param2, param0, (byte) -27, param1)) {
+          if (!TexturedPolygonRenderer.decodeArchivedSpriteSheet(param2, param0, (byte) -27, param1)) {
             stackIn_2_0 = null;
             return (Sprite[]) (stackIn_2_0);
           }

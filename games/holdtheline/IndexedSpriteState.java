@@ -23,14 +23,14 @@ abstract class IndexedSpriteState {
         field_f = null;
         field_b = null;
         if (!param0) {
-          IndexedSpriteState.a(-114);
+          IndexedSpriteState.clearRasterBuckets(-114);
         }
         field_g = null;
         field_a = null;
         field_h = null;
     }
 
-    final static Sprite a(int param0, byte param1, int param2) {
+    final static Sprite getWorldPreview(int param0, byte param1, int param2) {
         int var3;
         Sprite var4;
         int var5;
@@ -42,7 +42,7 @@ abstract class IndexedSpriteState {
             return InheritedWidgetStyle.getPlaceholderSprite(111, (byte) -112, 84);
           }
           LoadProgressDialog.field_X = StandardContentTransitionDialog.loadSpritesByName(ScoreSubmission.field_i, 33, "world_images", "");
-          TutorialTransition.a(32381);
+          TutorialTransition.pushRasterTarget(32381);
           DelegatingCanvas.field_c = new Sprite[4];
           for (var3 = 0; var3 < 4; var3++) {
             DelegatingCanvas.field_c[var3] = LoadProgressDialog.field_X[var3].copy();
@@ -77,7 +77,7 @@ abstract class IndexedSpriteState {
         return AchievementUnlockRequest.field_t[param2];
     }
 
-    final static void a(int param0) {
+    final static void clearRasterBuckets(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -87,7 +87,7 @@ abstract class IndexedSpriteState {
         RuntimeException var1_ref = null;
         var4 = HoldTheLine.field_D;
         try {
-          var5 = qg.field_d;
+          var5 = TexturedPolygonRenderer.field_d;
           var1 = var5;
           var2 = 0;
           if (param0 < 76) {
@@ -112,8 +112,8 @@ abstract class IndexedSpriteState {
         }
     }
 
-    final static void a(byte param0, int param1, int param2) {
-        Sprite var3 = GrowableStringList.field_b.field_i[SolidRoadStripRenderer.b(2, 6)];
+    final static void drawRandomBloodDecal(byte param0, int param1, int param2) {
+        Sprite var3 = GrowableStringList.field_b.field_i[SolidRoadStripRenderer.nextRandomInt(2, 6)];
         if (param0 != -61) {
           return;
         }

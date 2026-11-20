@@ -112,14 +112,14 @@ final class ArchiveCatalog {
         field_k = null;
     }
 
-    final static TrackObjectDefinition a(int param0, byte param1) {
+    final static TrackObjectDefinition getTrackObjectDefinition(int param0, byte param1) {
         if (param1 != 17) {
           field_k = (SpriteAsset) null;
         }
-        return mc.field_a[param0];
+        return IntegerTextParser.field_a[param0];
     }
 
-    final static void a(int param0, byte param1, int param2, int param3) {
+    final static void updateTooltipTarget(int param0, byte param1, int param2, int param3) {
         if (param1 <= 49) {
           ArchiveCatalog.readAchievementReply((byte) 95);
         }
@@ -204,7 +204,7 @@ final class ArchiveCatalog {
               var13.completed = true;
               var13.unlink(0);
             } else {
-              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -52, "A1: " + AgeValidator.b(false));
+              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -52, "A1: " + AgeValidator.describeServerPacket(false));
               ServerConnectionState.closeServerConnection(-28036);
             }
           }

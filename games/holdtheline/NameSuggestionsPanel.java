@@ -77,8 +77,8 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final static void a(byte param0) {
-        CourseDefinition.a(true);
+    final static void finishAccountAnimations(byte param0) {
+        CourseDefinition.finishUiAnimations(true);
         if (param0 <= 9) {
           field_J = (RotatedSpriteAsset) null;
         }
@@ -88,7 +88,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         if (param0 >= -77) {
           NameSuggestionsPanel.getAccountFormText(-10);
         }
-        return new AccountFormText(TimedValidator.d((byte) 41), IntrusiveDequeCursor.b(false));
+        return new AccountFormText(TimedValidator.getPendingEmail((byte) 41), IntrusiveDequeCursor.isEmailValidationPending(false));
     }
 
     final void setSuggestions(String[] param0, byte param1) {
@@ -110,7 +110,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             var3_int = param0.length;
             this.field_F = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_F[var4_int] = TutorialTransition.a((CharSequence) ((Object) param0[var4_int]), -6126).replace(' ', ' ');
+              this.field_F[var4_int] = TutorialTransition.normalizeDisplayName((CharSequence) ((Object) param0[var4_int]), -6126).replace(' ', ' ');
             }
             var4 = new LinkWidgetRenderer(IntrusiveNode.field_g, 0, 1);
             this.field_I = new TextButton[var3_int + 1];

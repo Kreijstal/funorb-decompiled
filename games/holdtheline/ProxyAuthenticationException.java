@@ -45,10 +45,10 @@ final class ProxyAuthenticationException extends IOException {
           if (param0 != 3979) {
             return;
           }
-          if (hk.field_e < BoundedRandomAccessFile.field_g) {
+          if (RoadControlPathBuilder.field_e < BoundedRandomAccessFile.field_g) {
             var7 = TriangleMesh.field_y[ProxySocketConnector.field_i];
             if (var7 != null) {
-              var2_int = hk.field_e * (60 + var7.canvasWidth) / BoundedRandomAccessFile.field_g;
+              var2_int = RoadControlPathBuilder.field_e * (60 + var7.canvasWidth) / BoundedRandomAccessFile.field_g;
               var3 = var2_int - 30;
               if (DualNodeHashTable.field_e) {
                 LeaderboardRequest.drawSpriteHorizontalAlphaGradient(199, 256 * (-var3 + var7.canvasWidth) / 30, var7, true, 245, var3 * -256 / 30);
@@ -93,9 +93,9 @@ final class ProxyAuthenticationException extends IOException {
           field_g = (QuickChatDynamicCommand) null;
         }
         DelayedServerPacket.field_k = false;
-        RotatedSpriteAsset.setAccountScreen(0, -1);
-        ak.field_b = ValidationIndicator.field_M;
-        bb.field_a = ValidationIndicator.field_M;
+        RotatedSpriteAsset.requestAccountAction(0, -1);
+        NineSliceSpriteFactory.field_b = ValidationIndicator.field_M;
+        BoundaryLoopTracer.field_a = ValidationIndicator.field_M;
     }
 
     ProxyAuthenticationException(String param0) {

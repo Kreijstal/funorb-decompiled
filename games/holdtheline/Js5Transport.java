@@ -181,7 +181,7 @@ abstract class Js5Transport {
             var7_ref_fb.unlink(0);
             return;
           }
-          MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -120, "HS1: " + AgeValidator.b(false));
+          MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -120, "HS1: " + AgeValidator.describeServerPacket(false));
           ServerConnectionState.closeServerConnection(-28036);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -239,17 +239,17 @@ abstract class Js5Transport {
         return var8;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, Sprite param7, int param8) {
+    final static void configureBenefitsLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6, Sprite param7, int param8) {
         try {
-          cd.field_b = param3;
+          EmailDomainValidator.field_b = param3;
           IsaacRandom.field_a = param7;
-          vb.field_d = param2;
+          JagexLogoRenderer.field_d = param2;
           EmailLoginCredentials.field_e = param5;
           if (param1 != 19189) {
             Js5Transport.clearSharedReferences(37);
           }
           ValidationHelpWidget.field_W = param6;
-          mj.field_a = param8;
+          RasterDesaturation.field_a = param8;
           AccountTermsPanel.field_G = param0;
           AchievementUnlockRequest.field_m = param4;
         } catch (RuntimeException runtimeException) {

@@ -36,7 +36,7 @@ final class StrongCacheEntry extends CacheEntry {
         }
     }
 
-    final static String a(CharSequence param0, byte param1, boolean param2) {
+    final static String getLoginNameError(CharSequence param0, byte param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -50,7 +50,7 @@ final class StrongCacheEntry extends CacheEntry {
         RuntimeException decompiledCaughtException = null;
         var5 = HoldTheLine.field_D;
         try {
-          var3 = SoundCache.a(false, param2, param0);
+          var3 = SoundCache.getDisplayNameError(false, param2, param0);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -65,7 +65,7 @@ final class StrongCacheEntry extends CacheEntry {
               stackIn_14_0 = null;
               return (String) (stackIn_14_0);
             }
-            if (vb.a(332243496, param0.charAt(var4))) {
+            if (JagexLogoRenderer.isLoginNameCharacter(332243496, param0.charAt(var4))) {
               var4++;
               continue;
             }
@@ -87,9 +87,9 @@ final class StrongCacheEntry extends CacheEntry {
         }
     }
 
-    final static void h(int param0) {
+    final static void requestQuitToWebsite(int param0) {
         int var1 = -126 / ((10 - param0) / 43);
-        RotatedSpriteAsset.setAccountScreen(0, 17);
+        RotatedSpriteAsset.requestAccountAction(0, 17);
     }
 
     StrongCacheEntry(Object param0, int param1) {

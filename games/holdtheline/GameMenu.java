@@ -230,7 +230,7 @@ final class GameMenu extends MenuList {
           ProxyAuthenticationException.field_a.drawAlpha(207, -15 + var4, 128);
           IterableNodeHashTable.field_b.draw(202, -20 + var4);
         }
-        oi.a(param0 ^ -56, this.menuId);
+        HoverTooltipController.drawHoverTooltip(param0 ^ -56, this.menuId);
         return;
     }
 
@@ -251,7 +251,7 @@ final class GameMenu extends MenuList {
             regionExit3: {
               regionExit4: {
                 var4 = 132;
-                q.drawCenteredTextWithHighlight(TextHotspotRange.field_i[param0], HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
+                PlayerDataProtocol.drawCenteredTextWithHighlight(TextHotspotRange.field_i[param0], HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                 var4 += 40;
                 var5 = ImageProducerRasterBuffer.field_m % 180 / 5;
                 var6 = param0;
@@ -262,49 +262,49 @@ final class GameMenu extends MenuList {
                   || var6 == 6
                   ) ? var6 : -1) {
                   case 0:
-                    Vector2i.a(20, DiskCacheStore.field_f, 0, 0, 560, var4 - 20, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                    Vector2i.drawParagraphWithHighlight(20, DiskCacheStore.field_f, 0, 0, 560, var4 - 20, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                     var4 += 120;
-                    q.drawCenteredTextWithHighlight(LinkWidgetRenderer.field_c, HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
+                    PlayerDataProtocol.drawCenteredTextWithHighlight(LinkWidgetRenderer.field_c, HoldTheLine.field_F, 2, -param2 + 320, (byte) -127, var4);
                     var4 += 30;
-                    LinkWidgetRenderer.a(310 - param2, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.drawRightAlignedTextWithHighlight(310 - param2, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    LinkWidgetRenderer.a(-param2 + 310, LoadProgressDialog.field_fb, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-param2 + 310, LoadProgressDialog.field_fb, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    LinkWidgetRenderer.a(310 - param2, fk.field_a, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.drawRightAlignedTextWithHighlight(310 - param2, PopupMenuRenderer.field_a, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    LinkWidgetRenderer.a(310 - param2, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.drawRightAlignedTextWithHighlight(310 - param2, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
                     var4 += 20;
-                    LinkWidgetRenderer.a(-param2 + 310, NameCheckProgressDialog.field_xb, true, HoldTheLine.field_F, var4, 1);
+                    LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-param2 + 310, NameCheckProgressDialog.field_xb, true, HoldTheLine.field_F, var4, 1);
                     var4 -= 80;
-                    GrowableObjectList.a(-param2 + 320, 1, b.field_a, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.drawTextWithHighlight(-param2 + 320, 1, SocialListProtocol.field_a, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    GrowableObjectList.a(-param2 + 320, param1 ^ 1, WhirlpoolHasher.field_i, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.drawTextWithHighlight(-param2 + 320, param1 ^ 1, WhirlpoolHasher.field_i, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    GrowableObjectList.a(320 - param2, 1, NameSuggestionsPanel.field_H, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.drawTextWithHighlight(320 - param2, 1, NameSuggestionsPanel.field_H, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    GrowableObjectList.a(320 - param2, 1, StrongCacheEntry.field_t, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.drawTextWithHighlight(320 - param2, 1, StrongCacheEntry.field_t, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
-                    GrowableObjectList.a(320 - param2, param1 + 1, kc.field_c, 0, var4, HoldTheLine.field_F);
+                    GrowableObjectList.drawTextWithHighlight(320 - param2, param1 + 1, BitwiseIntegerOperations.field_c, 0, var4, HoldTheLine.field_F);
                     var4 += 20;
                     if (var8 == 0) {
                       break regionExit1;
                     }
                   case 1:
-                    Vector2i.a(20, LoginForm.field_L, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                    Vector2i.drawParagraphWithHighlight(20, LoginForm.field_L, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                     if (var8 == 0) {
                       break regionExit2;
                     }
                   case 2:
-                    Vector2i.a(20, ImageProducerRasterBuffer.field_k, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                    Vector2i.drawParagraphWithHighlight(20, ImageProducerRasterBuffer.field_k, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                     var4 += 185;
                     var6 = 0;
                     {
                       while (true) {
                         if (var6 < 3) {
-                          oi.field_a.drawUnkeyed(-(20 * var6) + 168 - param2, -20 + var4 + 5);
-                          oi.field_a.drawUnkeyed(-(var6 * 20) + 408 - param2, -20 + (var4 + 5));
-                          oi.field_a.drawUnkeyed(-param2 + (168 - var6 * 20), 10 + (var4 + 5));
-                          oi.field_a.drawUnkeyed(408 - (param2 + 20 * var6), var4 + 10 + 5);
+                          HoverTooltipController.field_a.drawUnkeyed(-(20 * var6) + 168 - param2, -20 + var4 + 5);
+                          HoverTooltipController.field_a.drawUnkeyed(-(var6 * 20) + 408 - param2, -20 + (var4 + 5));
+                          HoverTooltipController.field_a.drawUnkeyed(-param2 + (168 - var6 * 20), 10 + (var4 + 5));
+                          HoverTooltipController.field_a.drawUnkeyed(408 - (param2 + 20 * var6), var4 + 10 + 5);
                           BoundaryIntersection.field_k.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-(var6 * 20) + (-param2 + 170), -20 + (var4 + 7));
                           LoginChoicePanel.field_O.getSpriteOrPlaceholder(16, var5, param1 ^ 9, 16).draw(-param2 + 410 - var6 * 20, 7 + var4 - 20);
                           PointLight.field_q.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-(var6 * 20) - param2 + 170, 10 + (var4 + 7));
@@ -314,11 +314,11 @@ final class GameMenu extends MenuList {
                             continue;
                           }
                         } else {
-                          GrowableObjectList.a(200 - param2, param1 + 1, IsaacRandom.field_k, 0, var4, HoldTheLine.field_F);
-                          GrowableObjectList.a(-param2 + 440, 1, ResourceArchive.field_h, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.drawTextWithHighlight(200 - param2, param1 + 1, IsaacRandom.field_k, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.drawTextWithHighlight(-param2 + 440, 1, ResourceArchive.field_h, 0, var4, HoldTheLine.field_F);
                           var4 += 30;
-                          GrowableObjectList.a(200 - param2, 1, AudioServiceThread.field_a, 0, var4, HoldTheLine.field_F);
-                          GrowableObjectList.a(440 - param2, 1, HoldTheLine.field_B, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.drawTextWithHighlight(200 - param2, 1, AudioServiceThread.field_a, 0, var4, HoldTheLine.field_F);
+                          GrowableObjectList.drawTextWithHighlight(440 - param2, 1, HoldTheLine.field_B, 0, var4, HoldTheLine.field_F);
                           var4 += 30;
                         }
                         break;
@@ -328,7 +328,7 @@ final class GameMenu extends MenuList {
                       }
                     }
                   case 3:
-                    Vector2i.a(20, MusicPatchEnvelope.field_k, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                    Vector2i.drawParagraphWithHighlight(20, MusicPatchEnvelope.field_k, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, -1, 1, HoldTheLine.field_F);
                     var4 += 25;
                     var6 = 1;
                     {
@@ -340,9 +340,9 @@ final class GameMenu extends MenuList {
                           }
                           var7 = stackIn_37_0;
                           while (var6 > var7) {
-                            oi.field_a.drawUnkeyed(-param2 + 93 - var7 * 20, var4 + (-20 - (-5 - 20 * var6)));
-                            oi.field_a.drawUnkeyed(-param2 + (383 - var7 * 20), -20 + var4 - (-5 - 20 * var6));
-                            oi.field_a.drawUnkeyed(288 - param2 - var7 * 20, 20 * var6 + (60 + var4 + 5));
+                            HoverTooltipController.field_a.drawUnkeyed(-param2 + 93 - var7 * 20, var4 + (-20 - (-5 - 20 * var6)));
+                            HoverTooltipController.field_a.drawUnkeyed(-param2 + (383 - var7 * 20), -20 + var4 - (-5 - 20 * var6));
+                            HoverTooltipController.field_a.drawUnkeyed(288 - param2 - var7 * 20, 20 * var6 + (60 + var4 + 5));
                             BoundaryIntersection.field_k.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-(20 * var7) + (95 - param2), 20 * var6 + (var4 - 20 + 7));
                             LoginChoicePanel.field_O.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-param2 + (385 - 20 * var7), 7 + (-20 + var4) + 20 * var6);
                             PointLight.field_q.getSpriteOrPlaceholder(16, var5, param1 ^ 9, 16).draw(290 - param2 - 20 * var7, var6 * 20 + var4 + 60 + 7);
@@ -352,25 +352,25 @@ final class GameMenu extends MenuList {
                           continue scanLoop6;
                         }
                         var4 += 20;
-                        GrowableObjectList.a(125 - param2, 1, AccountTermsPanel.field_J, 0, var4, HoldTheLine.field_F);
-                        GrowableObjectList.a(-param2 + 415, 1, ProxyAuthenticationException.field_f, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(125 - param2, 1, AccountTermsPanel.field_J, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(-param2 + 415, 1, ProxyAuthenticationException.field_f, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        GrowableObjectList.a(-param2 + 125, 1, LoginForm.field_K, 0, var4, HoldTheLine.field_F);
-                        GrowableObjectList.a(-param2 + 415, param1 + 1, UiTheme.field_h, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(-param2 + 125, 1, LoginForm.field_K, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(-param2 + 415, param1 + 1, UiTheme.field_h, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        GrowableObjectList.a(-param2 + 125, 1, NamedSoundEffect.field_o, 0, var4, HoldTheLine.field_F);
-                        GrowableObjectList.a(-param2 + 415, 1, RaceWorld.field_K, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(-param2 + 125, 1, NamedSoundEffect.field_o, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(-param2 + 415, 1, RaceWorld.field_K, 0, var4, HoldTheLine.field_F);
                         var4 += 40;
-                        GrowableObjectList.a(320 - param2, 1, wl.field_e, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(320 - param2, 1, ClassDescriptorResolver.field_e, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        GrowableObjectList.a(-param2 + 320, 1, LoginCredentialType.field_d, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(-param2 + 320, 1, LoginCredentialType.field_d, 0, var4, HoldTheLine.field_F);
                         var4 += 20;
-                        GrowableObjectList.a(320 - param2, 1, ArcTrackBoundary.field_v, 0, var4, HoldTheLine.field_F);
+                        GrowableObjectList.drawTextWithHighlight(320 - param2, 1, ArcTrackBoundary.field_v, 0, var4, HoldTheLine.field_F);
                         var4 += 40;
                         stackIn_37_0 = 20;
                         break;
                       }
-                      Vector2i.a(stackIn_37_0, NanoTickClock.field_o, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
+                      Vector2i.drawParagraphWithHighlight(stackIn_37_0, NanoTickClock.field_o, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
                       if (var8 == 0) {
                         break regionExit2;
                       }
@@ -385,62 +385,62 @@ final class GameMenu extends MenuList {
                   case 6:
                     break regionExit3;
                 }
-                Vector2i.a(20, DelayedServerPacket.field_p, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
+                Vector2i.drawParagraphWithHighlight(20, DelayedServerPacket.field_p, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 40;
-                Vector2i.a(20, IntrusiveNode.field_e, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
+                Vector2i.drawParagraphWithHighlight(20, IntrusiveNode.field_e, 0, 0, 560, -20 + var4, -param2 + 40, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 80;
-                Vector2i.a(20, Vector2i.field_b, 0, 0, 560, var4 - 20, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
+                Vector2i.drawParagraphWithHighlight(20, Vector2i.field_b, 0, 0, 560, var4 - 20, 40 - param2, -var4 + 414, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
-                Vector2i.a(20, SingleChildWidget.field_D, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
+                Vector2i.drawParagraphWithHighlight(20, SingleChildWidget.field_D, 0, 0, 560, -20 + var4, 40 - param2, 414 - var4, -1, 1, HoldTheLine.field_F);
                 var4 += 60;
                 if (var8 == 0) {
                   break regionExit2;
                 }
               }
-              Vector2i.a(20, TutorialPage.field_n, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, ~param1, 1, HoldTheLine.field_F);
+              Vector2i.drawParagraphWithHighlight(20, TutorialPage.field_n, 0, 0, 560, var4 - 20, -param2 + 40, -var4 + 414, ~param1, 1, HoldTheLine.field_F);
               var4 += 80;
-              q.drawCenteredTextWithHighlight(hc.field_a, HoldTheLine.field_F, 2, 160 - param2, (byte) -127, var4);
-              q.drawCenteredTextWithHighlight(o.field_a, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(FixedAngleMath.field_a, HoldTheLine.field_F, 2, 160 - param2, (byte) -127, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(BackgroundSprites.field_a, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
               var4 += 20;
-              q.drawCenteredTextWithHighlight(IconToggleRenderer.field_a, HoldTheLine.field_F, 2, -param2 + 160, (byte) -128, var4);
-              q.drawCenteredTextWithHighlight(IterableNodeHashTable.field_f, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
-              q.drawCenteredTextWithHighlight(m.field_b, HoldTheLine.field_F, 1, -param2 + 320, (byte) -127, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(IconToggleRenderer.field_a, HoldTheLine.field_F, 2, -param2 + 160, (byte) -128, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(IterableNodeHashTable.field_f, HoldTheLine.field_F, 2, 480 - param2, (byte) -128, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(RasterClipTopStack.field_b, HoldTheLine.field_F, 1, -param2 + 320, (byte) -127, var4);
               var4 += 40;
-              LinkWidgetRenderer.a(-param2 + 200, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-param2 + 200, Point2i.field_a, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              LinkWidgetRenderer.a(-param2 + 200, LoadProgressDialog.field_fb, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-param2 + 200, LoadProgressDialog.field_fb, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              LinkWidgetRenderer.a(-param2 + 200, fk.field_a, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-param2 + 200, PopupMenuRenderer.field_a, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              LinkWidgetRenderer.a(-param2 + 200, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-param2 + 200, GameKeyHandler.field_c, true, HoldTheLine.field_F, var4, 1);
               var4 += 20;
-              LinkWidgetRenderer.a(200 - param2, NetworkArchiveRequest.field_A, true, HoldTheLine.field_F, var4, 1);
+              LinkWidgetRenderer.drawRightAlignedTextWithHighlight(200 - param2, NetworkArchiveRequest.field_A, true, HoldTheLine.field_F, var4, 1);
               var4 -= 80;
-              GrowableObjectList.a(440 - param2, 1, LabeledField.field_H, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.drawTextWithHighlight(440 - param2, 1, LabeledField.field_H, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              GrowableObjectList.a(-param2 + 440, param1 ^ 1, IndexedSpriteState.field_f, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.drawTextWithHighlight(-param2 + 440, param1 ^ 1, IndexedSpriteState.field_f, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              GrowableObjectList.a(-param2 + 440, 1, RoadFillRenderer.field_e, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.drawTextWithHighlight(-param2 + 440, 1, RoadFillRenderer.field_e, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              GrowableObjectList.a(-param2 + 440, 1, ka.field_a, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.drawTextWithHighlight(-param2 + 440, 1, AccountUiUtilities.field_a, 1, var4, HoldTheLine.field_F);
               var4 += 20;
-              GrowableObjectList.a(-param2 + 440, param1 ^ 1, jh.field_b, 1, var4, HoldTheLine.field_F);
+              GrowableObjectList.drawTextWithHighlight(-param2 + 440, param1 ^ 1, PackedClientOptions.field_b, 1, var4, HoldTheLine.field_F);
               var4 -= 80;
-              q.drawCenteredTextWithHighlight(b.field_a, HoldTheLine.field_F, 0, -param2 + 320, (byte) -128, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(SocialListProtocol.field_a, HoldTheLine.field_F, 0, -param2 + 320, (byte) -128, var4);
               var4 += 20;
-              q.drawCenteredTextWithHighlight(WhirlpoolHasher.field_i, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(WhirlpoolHasher.field_i, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.drawCenteredTextWithHighlight(NameSuggestionsPanel.field_H, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(NameSuggestionsPanel.field_H, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.drawCenteredTextWithHighlight(StrongCacheEntry.field_t, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(StrongCacheEntry.field_t, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
-              q.drawCenteredTextWithHighlight(kc.field_c, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(BitwiseIntegerOperations.field_c, HoldTheLine.field_F, 0, 320 - param2, (byte) -127, var4);
               var4 += 20;
               if (var8 == 0) {
                 break regionExit2;
               }
             }
-            Vector2i.a(20, AccountFormText.field_f, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
+            Vector2i.drawParagraphWithHighlight(20, AccountFormText.field_f, 0, 0, 560, -20 + var4, 40 - param2, -var4 + 414, param1 - 1, 1, HoldTheLine.field_F);
           }
         }
     }
@@ -475,12 +475,12 @@ final class GameMenu extends MenuList {
         if ((decompiledFrameRemainder1) &&
           (decompiledFrameRemainder0)) {
           if (DelayedServerPacket.field_n == 102) {
-            AccountProtocolState.a(-118, 0);
+            AccountProtocolState.setMusicVolume(-118, 0);
             decompiledFrameRemainder1 = (var4 != 0);
           }
           if (decompiledFrameRemainder1) {
             if (DelayedServerPacket.field_n == 103) {
-              AccountProtocolState.a(param1 + 24365, 160);
+              AccountProtocolState.setMusicVolume(param1 + 24365, 160);
               decompiledFrameRemainder1 = (var4 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -519,9 +519,9 @@ final class GameMenu extends MenuList {
         }
         TutorialAction.drawShadedPanel(-var2 + 40, 140, 560, (byte) 41, 200);
         int var3 = 170;
-        nm.field_c.drawCentered(NodeHashTableIterator.field_b, 320 - var2, var3, 2, -1);
+        ResourceArchiveFactory.field_c.drawCentered(NodeHashTableIterator.field_b, 320 - var2, var3, 2, -1);
         var3 += 40;
-        Vector2i.a(20, ko.field_a, 0, 0, 560, -20 + var3, 40 - var2, -var3 + 414, -1, 1, HoldTheLine.field_F);
+        Vector2i.drawParagraphWithHighlight(20, ClientScreenRenderer.field_a, 0, 0, 560, -20 + var3, 40 - var2, -var3 + 414, -1, 1, HoldTheLine.field_F);
         if (param0 != 29280) {
           this.carouselOffset = 0.7895873785018921f;
         }
@@ -544,7 +544,7 @@ final class GameMenu extends MenuList {
         }
         GrowableStringList.field_a = this.hitTestChampionshipIcon(FullscreenErrorDialog.field_X, (byte) -128, NodeHashTableIterator.field_g, var3);
         if (GrowableStringList.field_a != -1) {
-          ArchiveCatalog.a(0, (byte) 118, this.menuId, GrowableStringList.field_a);
+          ArchiveCatalog.updateTooltipTarget(0, (byte) 118, this.menuId, GrowableStringList.field_a);
         }
         ArchiveCatalog.field_j = this.hitTestCoursePreview(FullscreenErrorDialog.field_X, param0 + 5465, NodeHashTableIterator.field_g, var3);
         if (ValidationIndicator.field_J == 1) {
@@ -595,12 +595,12 @@ final class GameMenu extends MenuList {
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][1];
+                    IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.getSelectedCourse((byte) -49).field_p][1];
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
+                  IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.getSelectedCourse((byte) -49).field_p][0];
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
@@ -854,10 +854,10 @@ final class GameMenu extends MenuList {
         var5Lifetime1 = stackIn_13_0;
         if (-1 != var5Lifetime1) {
           this.drawAchievementIcon(false, var5Lifetime1, 128, 291, param0 + 30, 320);
-          LinkWidgetRenderer.a(200, PolarSortVector.field_b, true, HoldTheLine.field_F, 252, 0);
-          GrowableObjectList.a(440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
-          q.drawCenteredTextWithHighlight(Integer.toString(ShadedRoadStripRenderer.field_o[var5Lifetime1][0]), HoldTheLine.field_F, 0, 140, (byte) -128, 282);
-          var6 = PolarSortVector.a((byte) -123);
+          LinkWidgetRenderer.drawRightAlignedTextWithHighlight(200, PolarSortVector.field_b, true, HoldTheLine.field_F, 252, 0);
+          GrowableObjectList.drawTextWithHighlight(440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
+          PlayerDataProtocol.drawCenteredTextWithHighlight(Integer.toString(ShadedRoadStripRenderer.field_o[var5Lifetime1][0]), HoldTheLine.field_F, 0, 140, (byte) -128, 282);
+          var6 = PolarSortVector.getOrbCoinSprite((byte) -123);
           var7 = ShadedRoadStripRenderer.field_o[var5Lifetime1][1];
           var8 = ImageProducerRasterBuffer.field_m / 15 % (var7 + 2);
           var9 = ImageProducerRasterBuffer.field_m / 5 % 3;
@@ -879,12 +879,12 @@ final class GameMenu extends MenuList {
                 continue;
               }
             } else {
-              nm.field_c.drawCentered(ae.field_c[var5Lifetime1], 320, 217, 0, -1);
+              ResourceArchiveFactory.field_c.drawCentered(AppletNavigation.field_c[var5Lifetime1], 320, 217, 0, -1);
               stackIn_25_0 = 20;
             }
             break;
           }
-          Vector2i.a(stackIn_25_0, TextLineLayout.field_j[var5Lifetime1], 0, 0, 400, 362, 120, 80, param0 + 17, 1, HoldTheLine.field_F);
+          Vector2i.drawParagraphWithHighlight(stackIn_25_0, TextLineLayout.field_j[var5Lifetime1], 0, 0, 400, 362, 120, 80, param0 + 17, 1, HoldTheLine.field_F);
         }
         BlobWriteRequest.drawTitleBar(IndexedSpriteState.field_b, 0, 0, -1753, 448);
         return;
@@ -994,10 +994,10 @@ final class GameMenu extends MenuList {
         var6Lifetime1 = stackIn_18_0;
         if (var6Lifetime1 != -1) {
           this.drawAchievementIcon(false, var6Lifetime1, 128, 276, 12, -param1 + 320);
-          LinkWidgetRenderer.a(200 - param1, PolarSortVector.field_b, true, HoldTheLine.field_F, 252, 0);
-          GrowableObjectList.a(-param1 + 440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
-          q.drawCenteredTextWithHighlight(Integer.toString(ShadedRoadStripRenderer.field_o[var6Lifetime1][0]), HoldTheLine.field_F, 0, -param1 + 160, (byte) -127, 282);
-          var7 = PolarSortVector.a((byte) -123);
+          LinkWidgetRenderer.drawRightAlignedTextWithHighlight(200 - param1, PolarSortVector.field_b, true, HoldTheLine.field_F, 252, 0);
+          GrowableObjectList.drawTextWithHighlight(-param1 + 440, 1, BoundaryCurve.field_o, 0, 252, HoldTheLine.field_F);
+          PlayerDataProtocol.drawCenteredTextWithHighlight(Integer.toString(ShadedRoadStripRenderer.field_o[var6Lifetime1][0]), HoldTheLine.field_F, 0, -param1 + 160, (byte) -127, 282);
+          var7 = PolarSortVector.getOrbCoinSprite((byte) -123);
           var8 = ShadedRoadStripRenderer.field_o[var6Lifetime1][1];
           var9 = ImageProducerRasterBuffer.field_m / 15 % (2 + var8);
           var10 = ImageProducerRasterBuffer.field_m / 5 % 3;
@@ -1026,21 +1026,21 @@ final class GameMenu extends MenuList {
             break;
           }
           if (stackIn_29_0 != stackIn_29_1) {
-            q.drawCenteredTextWithHighlight(DualLinkNode.field_j, HoldTheLine.field_F, 1, 320 - param1, (byte) -127, 357);
+            PlayerDataProtocol.drawCenteredTextWithHighlight(DualLinkNode.field_j, HoldTheLine.field_F, 1, 320 - param1, (byte) -127, 357);
           }
           if ((stackIn_29_0 == stackIn_29_1 ||
             var13 != 0) &&
             ImageProducerRasterBuffer.field_m % 80 < 40) {
-            q.drawCenteredTextWithHighlight(fc.field_b, HoldTheLine.field_F, 2, 320 - param1, (byte) -127, 352);
+            PlayerDataProtocol.drawCenteredTextWithHighlight(BoundaryIntervalBuilder.field_b, HoldTheLine.field_F, 2, 320 - param1, (byte) -127, 352);
           }
-          nm.field_c.drawCentered(ae.field_c[var6Lifetime1], 320 - param1, 207, 0, -1);
-          Vector2i.a(20, TextLineLayout.field_j[var6Lifetime1], 0, 0, 400, 357, 120 - param1, 80, -1, 1, HoldTheLine.field_F);
+          ResourceArchiveFactory.field_c.drawCentered(AppletNavigation.field_c[var6Lifetime1], 320 - param1, 207, 0, -1);
+          Vector2i.drawParagraphWithHighlight(20, TextLineLayout.field_j[var6Lifetime1], 0, 0, 400, 357, 120 - param1, 80, -1, 1, HoldTheLine.field_F);
         }
         if ((var6Lifetime1 == -1 ||
           var13 != 0) &&
           RoadShadowRenderer.isGuestMode((byte) 104)) {
-          q.drawCenteredTextWithHighlight(EditableTextField.field_M, HoldTheLine.field_F, 0, 320 - param1, (byte) -127, 270);
-          q.drawCenteredTextWithHighlight(ue.field_b, HoldTheLine.field_F, 0, 320 - param1, (byte) -128, 290);
+          PlayerDataProtocol.drawCenteredTextWithHighlight(EditableTextField.field_M, HoldTheLine.field_F, 0, 320 - param1, (byte) -127, 270);
+          PlayerDataProtocol.drawCenteredTextWithHighlight(CourseObjectSlot.field_b, HoldTheLine.field_F, 0, 320 - param1, (byte) -128, 290);
         }
         BlobWriteRequest.drawTitleBar(IndexedSpriteState.field_b, param1, 0, -1753, 448);
         return;
@@ -1081,17 +1081,17 @@ final class GameMenu extends MenuList {
           decompiledFrameRemainder0 = (var4 != 0);
         }
         if (decompiledFrameRemainder0) {
-          kc.field_a.getSprites(180);
+          BitwiseIntegerOperations.field_a.getSprites(180);
           TextButton.field_A.getSprite(param0 + 8192);
           MouseWheelInput.field_a.getSprite(8192);
-          bo.field_d.getSprite(8192);
-          if (kc.field_a.isLoaded((byte) 127) &&
+          SpriteDecodeGlobals.field_d.getSprite(8192);
+          if (BitwiseIntegerOperations.field_a.isLoaded((byte) 127) &&
             TextButton.field_A.isLoaded((byte) 10) &&
-            MouseWheelInput.field_a.isLoaded((byte) 10) && bo.field_d.isLoaded((byte) 10)) {
+            MouseWheelInput.field_a.isLoaded((byte) 10) && SpriteDecodeGlobals.field_d.isLoaded((byte) 10)) {
             TextFieldValidator.setLoadingArtwork(SpriteState.field_w, TextButton.field_A.field_b, 0);
-            Js5Transport.a(0, 19189, 80, 20, 50, 0, -1500, MouseWheelInput.field_a.field_b, 80);
-            te.a(param0 - 4, kc.field_a.field_i);
-            nm.a(bo.field_d.field_b, 22210);
+            Js5Transport.configureBenefitsLayout(0, 19189, 80, 20, 50, 0, -1500, MouseWheelInput.field_a.field_b, 80);
+            EncryptedPacketWriter.setBenefitsScreenshots(param0 - 4, BitwiseIntegerOperations.field_a.field_i);
+            ResourceArchiveFactory.setCursorSprite(SpriteDecodeGlobals.field_d.field_b, 22210);
             NetworkGameClient.initializeAccountScreenSelection(true, true);
             CurvedRoadSegment.field_T = true;
           }
@@ -1118,19 +1118,19 @@ final class GameMenu extends MenuList {
         regionExit1: {
           var9 = stackIn_9_0;
           if (var7 != 0) {
-            var10 = ak.a(param4 - 48, var9 != 0, param1);
+            var10 = NineSliceSpriteFactory.getAchievementSprite(param4 - 48, var9 != 0, param1);
             if (var11 == 0) {
               break regionExit1;
             }
           }
           if (var8 != 0 ||
-            of.a(param4 - 981)) {
-            var10 = ak.a(param4 ^ -108, var9 != 0, -1);
+            SubscriberAccessChecks.hasSubscriberAccess(param4 - 981)) {
+            var10 = NineSliceSpriteFactory.getAchievementSprite(param4 ^ -108, var9 != 0, -1);
             if (var11 != 0) {
               if (var9 == 0) {
                 stackIn_18_0 = SolidRoadStripRenderer.field_q;
               } else {
-                stackIn_18_0 = ka.field_f;
+                stackIn_18_0 = AccountUiUtilities.field_f;
               }
               var10 = stackIn_18_0;
             }
@@ -1138,7 +1138,7 @@ final class GameMenu extends MenuList {
             if (var9 == 0) {
               stackIn_18_0 = SolidRoadStripRenderer.field_q;
             } else {
-              stackIn_18_0 = ka.field_f;
+              stackIn_18_0 = AccountUiUtilities.field_f;
             }
             var10 = stackIn_18_0;
           }
@@ -1161,11 +1161,11 @@ final class GameMenu extends MenuList {
         }
         if (param4 == param1 &&
           var7 != 0) {
-          pe.a(param2, 4209, param5, param3);
+          ScreenOptionsMenu.drawMenuWedge(param2, 4209, param5, param3);
         }
         if (param0) {
-          dm.field_e[SocketConnector.field_a] = param5;
-          co.field_d[SocketConnector.field_a] = param3;
+          RasterStateRestoration.field_e[SocketConnector.field_a] = param5;
+          ClientLifecycleUtilities.field_d[SocketConnector.field_a] = param3;
           ArchiveIndex.field_b[SocketConnector.field_a] = param2;
           EditableTextField.field_J[SocketConnector.field_a] = param1;
           SocketConnector.field_a = SocketConnector.field_a + 1;
@@ -1398,12 +1398,12 @@ final class GameMenu extends MenuList {
             }
           case 19:
             if (NanoTickClock.field_e < 140) {
-              AccountProtocolState.a(-108, 20 * (8 * NanoTickClock.field_e / 160) + 20);
+              AccountProtocolState.setMusicVolume(-108, 20 * (8 * NanoTickClock.field_e / 160) + 20);
               if (var4 == 0) {
                 break;
               }
             }
-            AccountProtocolState.a(-125, 160);
+            AccountProtocolState.setMusicVolume(-125, 160);
             if (var4 == 0) {
               break;
             }
@@ -1563,17 +1563,17 @@ final class GameMenu extends MenuList {
                                             }
                                           }
                                           if (null == MidiPcmStream.field_U) {
-                                            QuadraticPointPath.b((byte) 108);
+                                            QuadraticPointPath.showFullscreenOptions((byte) 108);
                                             if (var7 == 0) {
                                               break regionExit2;
                                             }
                                           }
-                                          AgeValidator.a(-29486, false);
+                                          AgeValidator.setFullscreenEnabled(-29486, false);
                                           if (var7 == 0) {
                                             break regionExit2;
                                           }
                                         }
-                                        if (of.a(-969) ||
+                                        if (SubscriberAccessChecks.hasSubscriberAccess(-969) ||
                                           this.menuId != 9 &&
                                           7 != this.menuId &&
                                           8 != this.menuId &&
@@ -1594,7 +1594,7 @@ final class GameMenu extends MenuList {
                                       }
                                     }
                                     MusicPatchPcmStream.field_r.tutorialPage = -1;
-                                    PlayerStatsRequest.a(7, param1, true);
+                                    PlayerStatsRequest.processRaceResult(7, param1, true);
                                     if (var7 == 0) {
                                       break regionExit2;
                                     }
@@ -1629,7 +1629,7 @@ final class GameMenu extends MenuList {
                             }
                             if (this.menuId == 2 ||
                               this.menuId == 6) {
-                              i.a((byte) 71, true);
+                              ShadedNineSlicePanel.beginMenuExit((byte) 71, true);
                               if (var7 == 0) {
                                 break regionExit2;
                               }
@@ -1759,7 +1759,7 @@ final class GameMenu extends MenuList {
                   }
                   if (RoadShadowRenderer.isGuestMode((byte) 108)) {
                     if (0 != ClientException.field_c ||
-                      ad.field_a) {
+                      ReflectionCheckSupport.field_a) {
                       TrackObject.switchMenu(param1, false, 9);
                       if (var7 == 0) {
                         break regionExit2;
@@ -1773,7 +1773,7 @@ final class GameMenu extends MenuList {
                   if (ClientException.field_c == 0) {
                     stackIn_160_0 = param1;
                     stackIn_160_1 = false;
-                    if (of.a(-969)) {
+                    if (SubscriberAccessChecks.hasSubscriberAccess(-969)) {
                       stackIn_161_2 = 0;
                     } else {
                       stackIn_161_2 = 12;
@@ -1810,91 +1810,91 @@ final class GameMenu extends MenuList {
                 break regionExit2;
               }
             }
-            te.a(true);
+            EncryptedPacketWriter.quitToWebsite(true);
           }
         }
     }
 
     final static void initializeTrackObjectDefinitions(boolean param0) {
-        if (null != mc.field_a) {
+        if (null != IntegerTextParser.field_a) {
           return;
         }
-        mc.field_a = new TrackObjectDefinition[73];
-        mc.field_a[1] = new TrackObjectDefinition(5, 543, StrongCacheEntry.field_u, i.field_j, -1);
-        mc.field_a[2] = new TrackObjectDefinition(5, 540, BoundaryIntersection.field_k, i.field_j, -1);
-        mc.field_a[3] = new TrackObjectDefinition(5, 541, LoginChoicePanel.field_O, i.field_j, -1);
-        mc.field_a[4] = new TrackObjectDefinition(5, 542, PointLight.field_q, i.field_j, -1);
-        mc.field_a[5] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[6] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[7] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[8] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[9] = new TrackObjectDefinition(4, 1180, IsaacRandom.field_f, EmailLoginCredentials.field_d, -1);
-        mc.field_a[10] = null;
-        mc.field_a[11] = new TrackObjectDefinition(4, 8300, Vector2i.field_d, ao.field_d, -1);
-        mc.field_a[12] = new TrackObjectDefinition(10, 0, DiskCacheWorker.field_b, 2);
-        mc.field_a[13] = new TrackObjectDefinition(15, 0, IntArrayReadRequest.field_i, 2);
-        mc.field_a[14] = new TrackObjectDefinition(20, 0, cd.field_d, 2);
-        mc.field_a[15] = new TrackObjectDefinition(25, 0, ArchiveCatalog.field_k, 2);
-        mc.field_a[16] = new TrackObjectDefinition(40, 0, BufferedRandomAccessFile.field_o, 2);
-        mc.field_a[17] = new TrackObjectDefinition(25, 50, 524320, SingleChildWidget.field_A, 0);
-        mc.field_a[18] = new TrackObjectDefinition(25, 50, 524320, PlayerProgressEncoder.field_c, 0);
-        mc.field_a[19] = new TrackObjectDefinition(25, 50, 524320, MouseWheelInput.field_c, 0);
-        mc.field_a[20] = new TrackObjectDefinition(15, 30, 32, BlobReadRequest.field_k, 0);
-        mc.field_a[21] = new TrackObjectDefinition(15, 30, 32, CheckboxWidget.field_I, 0);
-        mc.field_a[22] = new TrackObjectDefinition(15, 30, 32, MusicPatch.field_u, 0);
-        mc.field_a[23] = new TrackObjectDefinition(10, 10, 16384, MusicPatchPcmStream.field_s, 0);
-        mc.field_a[24] = new TrackObjectDefinition(5, 0, DialWidgetRenderer.field_i, 0);
-        mc.field_a[25] = new TrackObjectDefinition(5, 0, ae.field_b, 0);
-        mc.field_a[26] = new TrackObjectDefinition(5, 0, AchievementStatusRequest.field_l, 0);
-        mc.field_a[27] = new TrackObjectDefinition(80, 40, 1081376, FullscreenErrorReason.field_b, 0);
-        mc.field_a[28] = new TrackObjectDefinition(80, 4, 32, UsernameLoginCredentials.field_h, 1);
-        mc.field_a[29] = new TrackObjectDefinition(10, 0, PlayerProgressEncoder.field_a, -1);
-        mc.field_a[30] = new TrackObjectDefinition(15, 25, 16416, ViewportSizingController.field_a, 0);
-        mc.field_a[31] = new TrackObjectDefinition(15, 25, 16416, SocketJs5Transport.field_r, 0);
-        mc.field_a[32] = new TrackObjectDefinition(10, 0, 16384, TickClock.field_a, 2);
-        mc.field_a[33] = new TrackObjectDefinition(15, 0, 16384, UiWidget.field_r, 2);
-        mc.field_a[34] = new TrackObjectDefinition(20, 0, 16384, MusicCrossfadeStream.field_o, 2);
-        mc.field_a[35] = new TrackObjectDefinition(15, 0, 16384, DelayedServerPacket.field_q, 2);
-        mc.field_a[36] = new TrackObjectDefinition(20, 0, 16384, kc.field_d, 2);
-        mc.field_a[37] = new TrackObjectDefinition(25, 0, 16384, NameAvailabilityResult.field_c, 2);
-        mc.field_a[38] = new TrackObjectDefinition(50, 50, 16416, LayeredButtonRenderer.field_t, ko.field_c, 0);
-        mc.field_a[39] = new TrackObjectDefinition(5, 0, UiWidget.field_j, 0);
-        mc.field_a[40] = new TrackObjectDefinition(5, 0, SpriteButtonRenderer.field_r, 0);
-        mc.field_a[41] = new TrackObjectDefinition(10, 10, 65568, NameSuggestionsPanel.field_J, 0);
-        mc.field_a[42] = new TrackObjectDefinition(10, 10, 65568, MouseInputRegistration.field_b, 0);
-        mc.field_a[43] = new TrackObjectDefinition(10, 10, 16384, TrackObjectDefinition.field_i, 0);
+        IntegerTextParser.field_a = new TrackObjectDefinition[73];
+        IntegerTextParser.field_a[1] = new TrackObjectDefinition(5, 543, StrongCacheEntry.field_u, ShadedNineSlicePanel.field_j, -1);
+        IntegerTextParser.field_a[2] = new TrackObjectDefinition(5, 540, BoundaryIntersection.field_k, ShadedNineSlicePanel.field_j, -1);
+        IntegerTextParser.field_a[3] = new TrackObjectDefinition(5, 541, LoginChoicePanel.field_O, ShadedNineSlicePanel.field_j, -1);
+        IntegerTextParser.field_a[4] = new TrackObjectDefinition(5, 542, PointLight.field_q, ShadedNineSlicePanel.field_j, -1);
+        IntegerTextParser.field_a[5] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[6] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[7] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[8] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[9] = new TrackObjectDefinition(4, 1180, IsaacRandom.field_f, EmailLoginCredentials.field_d, -1);
+        IntegerTextParser.field_a[10] = null;
+        IntegerTextParser.field_a[11] = new TrackObjectDefinition(4, 8300, Vector2i.field_d, BoundaryLoopClipper.field_d, -1);
+        IntegerTextParser.field_a[12] = new TrackObjectDefinition(10, 0, DiskCacheWorker.field_b, 2);
+        IntegerTextParser.field_a[13] = new TrackObjectDefinition(15, 0, IntArrayReadRequest.field_i, 2);
+        IntegerTextParser.field_a[14] = new TrackObjectDefinition(20, 0, EmailDomainValidator.field_d, 2);
+        IntegerTextParser.field_a[15] = new TrackObjectDefinition(25, 0, ArchiveCatalog.field_k, 2);
+        IntegerTextParser.field_a[16] = new TrackObjectDefinition(40, 0, BufferedRandomAccessFile.field_o, 2);
+        IntegerTextParser.field_a[17] = new TrackObjectDefinition(25, 50, 524320, SingleChildWidget.field_A, 0);
+        IntegerTextParser.field_a[18] = new TrackObjectDefinition(25, 50, 524320, PlayerProgressEncoder.field_c, 0);
+        IntegerTextParser.field_a[19] = new TrackObjectDefinition(25, 50, 524320, MouseWheelInput.field_c, 0);
+        IntegerTextParser.field_a[20] = new TrackObjectDefinition(15, 30, 32, BlobReadRequest.field_k, 0);
+        IntegerTextParser.field_a[21] = new TrackObjectDefinition(15, 30, 32, CheckboxWidget.field_I, 0);
+        IntegerTextParser.field_a[22] = new TrackObjectDefinition(15, 30, 32, MusicPatch.field_u, 0);
+        IntegerTextParser.field_a[23] = new TrackObjectDefinition(10, 10, 16384, MusicPatchPcmStream.field_s, 0);
+        IntegerTextParser.field_a[24] = new TrackObjectDefinition(5, 0, DialWidgetRenderer.field_i, 0);
+        IntegerTextParser.field_a[25] = new TrackObjectDefinition(5, 0, AppletNavigation.field_b, 0);
+        IntegerTextParser.field_a[26] = new TrackObjectDefinition(5, 0, AchievementStatusRequest.field_l, 0);
+        IntegerTextParser.field_a[27] = new TrackObjectDefinition(80, 40, 1081376, FullscreenErrorReason.field_b, 0);
+        IntegerTextParser.field_a[28] = new TrackObjectDefinition(80, 4, 32, UsernameLoginCredentials.field_h, 1);
+        IntegerTextParser.field_a[29] = new TrackObjectDefinition(10, 0, PlayerProgressEncoder.field_a, -1);
+        IntegerTextParser.field_a[30] = new TrackObjectDefinition(15, 25, 16416, ViewportSizingController.field_a, 0);
+        IntegerTextParser.field_a[31] = new TrackObjectDefinition(15, 25, 16416, SocketJs5Transport.field_r, 0);
+        IntegerTextParser.field_a[32] = new TrackObjectDefinition(10, 0, 16384, TickClock.field_a, 2);
+        IntegerTextParser.field_a[33] = new TrackObjectDefinition(15, 0, 16384, UiWidget.field_r, 2);
+        IntegerTextParser.field_a[34] = new TrackObjectDefinition(20, 0, 16384, MusicCrossfadeStream.field_o, 2);
+        IntegerTextParser.field_a[35] = new TrackObjectDefinition(15, 0, 16384, DelayedServerPacket.field_q, 2);
+        IntegerTextParser.field_a[36] = new TrackObjectDefinition(20, 0, 16384, BitwiseIntegerOperations.field_d, 2);
+        IntegerTextParser.field_a[37] = new TrackObjectDefinition(25, 0, 16384, NameAvailabilityResult.field_c, 2);
+        IntegerTextParser.field_a[38] = new TrackObjectDefinition(50, 50, 16416, LayeredButtonRenderer.field_t, ClientScreenRenderer.field_c, 0);
+        IntegerTextParser.field_a[39] = new TrackObjectDefinition(5, 0, UiWidget.field_j, 0);
+        IntegerTextParser.field_a[40] = new TrackObjectDefinition(5, 0, SpriteButtonRenderer.field_r, 0);
+        IntegerTextParser.field_a[41] = new TrackObjectDefinition(10, 10, 65568, NameSuggestionsPanel.field_J, 0);
+        IntegerTextParser.field_a[42] = new TrackObjectDefinition(10, 10, 65568, MouseInputRegistration.field_b, 0);
+        IntegerTextParser.field_a[43] = new TrackObjectDefinition(10, 10, 16384, TrackObjectDefinition.field_i, 0);
         if (param0) {
           return;
         }
-        mc.field_a[44] = new TrackObjectDefinition(15, 15, 16384, GameKeyHandler.field_e, 0);
-        mc.field_a[45] = new TrackObjectDefinition(20, 20, 16384, q.field_d, 0);
-        mc.field_a[46] = new TrackObjectDefinition(10, 16384, co.field_b, 2);
-        mc.field_a[47] = new TrackObjectDefinition(15, 16384, MusicCrossfadeStream.field_A, 2);
-        mc.field_a[48] = new TrackObjectDefinition(20, 16384, ProxyAuthenticationException.field_b, 2);
-        mc.field_a[49] = new TrackObjectDefinition(25, 16384, ArchiveLoadProgress.field_c, 2);
-        mc.field_a[50] = new TrackObjectDefinition(40, 16384, WhirlpoolTables.field_a, 2);
-        mc.field_a[51] = new TrackObjectDefinition(15, 32, ArchiveCatalog.field_l, 0);
-        mc.field_a[52] = new TrackObjectDefinition(10, 32, WidgetStyleNode.field_s, 0);
-        mc.field_a[53] = new TrackObjectDefinition(5, 25, 32, ResourceArchive.field_f, 3);
-        mc.field_a[54] = new TrackObjectDefinition(3, 40, ai.field_b, 3);
-        mc.field_a[55] = new TrackObjectDefinition(80, 40, 32, um.field_e, 0);
-        mc.field_a[56] = new TrackObjectDefinition(8, 4, 1146912, SavedRasterState.field_p, 0);
-        mc.field_a[57] = new TrackObjectDefinition(15, 7, 32, EmailValidationResult.field_c, 0);
-        mc.field_a[58] = new TrackObjectDefinition(10, 16384, IgnoreListIndex.field_a, 2);
-        mc.field_a[59] = new TrackObjectDefinition(15, 16384, hm.field_b, 2);
-        mc.field_a[60] = new TrackObjectDefinition(20, 16384, Vector2f.field_b, 2);
-        mc.field_a[61] = new TrackObjectDefinition(25, 16384, BlobReadRequest.field_i, 2);
-        mc.field_a[62] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[63] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[64] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[65] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[66] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[67] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[68] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[69] = new TrackObjectDefinition(12, 6, 352, 0);
-        mc.field_a[70] = new TrackObjectDefinition(10, 10, 360488, DropTargetWidget.field_K, fk.field_c, -1);
-        mc.field_a[71] = new TrackObjectDefinition(10, 10, 360489, Particle.field_p, fk.field_c, -1);
-        mc.field_a[72] = new TrackObjectDefinition(12, 360490, DirectByteStorage.field_g, -1);
+        IntegerTextParser.field_a[44] = new TrackObjectDefinition(15, 15, 16384, GameKeyHandler.field_e, 0);
+        IntegerTextParser.field_a[45] = new TrackObjectDefinition(20, 20, 16384, PlayerDataProtocol.field_d, 0);
+        IntegerTextParser.field_a[46] = new TrackObjectDefinition(10, 16384, ClientLifecycleUtilities.field_b, 2);
+        IntegerTextParser.field_a[47] = new TrackObjectDefinition(15, 16384, MusicCrossfadeStream.field_A, 2);
+        IntegerTextParser.field_a[48] = new TrackObjectDefinition(20, 16384, ProxyAuthenticationException.field_b, 2);
+        IntegerTextParser.field_a[49] = new TrackObjectDefinition(25, 16384, ArchiveLoadProgress.field_c, 2);
+        IntegerTextParser.field_a[50] = new TrackObjectDefinition(40, 16384, WhirlpoolTables.field_a, 2);
+        IntegerTextParser.field_a[51] = new TrackObjectDefinition(15, 32, ArchiveCatalog.field_l, 0);
+        IntegerTextParser.field_a[52] = new TrackObjectDefinition(10, 32, WidgetStyleNode.field_s, 0);
+        IntegerTextParser.field_a[53] = new TrackObjectDefinition(5, 25, 32, ResourceArchive.field_f, 3);
+        IntegerTextParser.field_a[54] = new TrackObjectDefinition(3, 40, MeshLighting.field_b, 3);
+        IntegerTextParser.field_a[55] = new TrackObjectDefinition(80, 40, 32, Cp1252CharacterRules.field_e, 0);
+        IntegerTextParser.field_a[56] = new TrackObjectDefinition(8, 4, 1146912, SavedRasterState.field_p, 0);
+        IntegerTextParser.field_a[57] = new TrackObjectDefinition(15, 7, 32, EmailValidationResult.field_c, 0);
+        IntegerTextParser.field_a[58] = new TrackObjectDefinition(10, 16384, IgnoreListIndex.field_a, 2);
+        IntegerTextParser.field_a[59] = new TrackObjectDefinition(15, 16384, HoverTargetTracker.field_b, 2);
+        IntegerTextParser.field_a[60] = new TrackObjectDefinition(20, 16384, Vector2f.field_b, 2);
+        IntegerTextParser.field_a[61] = new TrackObjectDefinition(25, 16384, BlobReadRequest.field_i, 2);
+        IntegerTextParser.field_a[62] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[63] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[64] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[65] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[66] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[67] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[68] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[69] = new TrackObjectDefinition(12, 6, 352, 0);
+        IntegerTextParser.field_a[70] = new TrackObjectDefinition(10, 10, 360488, DropTargetWidget.field_K, PopupMenuRenderer.field_c, -1);
+        IntegerTextParser.field_a[71] = new TrackObjectDefinition(10, 10, 360489, Particle.field_p, PopupMenuRenderer.field_c, -1);
+        IntegerTextParser.field_a[72] = new TrackObjectDefinition(12, 360490, DirectByteStorage.field_g, -1);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -1934,17 +1934,17 @@ final class GameMenu extends MenuList {
               } else {
                 stackIn_11_3 = CourseDefinition.field_q[var3];
               }
-              this.drawFramedSprite(stackIn_8_1, stackIn_10_2, stackIn_11_3, 2, var3 * 128 + 128 - param1, 110, 80, IndexedSpriteState.a(0, (byte) -83, var3), 60);
+              this.drawFramedSprite(stackIn_8_1, stackIn_10_2, stackIn_11_3, 2, var3 * 128 + 128 - param1, 110, 80, IndexedSpriteState.getWorldPreview(0, (byte) -83, var3), 60);
               var3++;
               continue;
             }
           } else {
-            AlternateUsernameLoginCredentials.requestDisplayMode(BoundaryIntersection.field_p + 4, -107);
+            AlternateUsernameLoginCredentials.requestBackground(BoundaryIntersection.field_p + 4, -107);
             if (RoadShadowRenderer.isGuestMode((byte) 118)) {
               TutorialAction.drawShadedPanel(30 - param1, 170, 580, (byte) 41, 260);
               var3 = 280;
-              q.drawCenteredTextWithHighlight(EditableTextField.field_M, nm.field_c, 0, -param1 + 320, (byte) -128, var3 - nm.field_c.ascent);
-              q.drawCenteredTextWithHighlight(ue.field_b, nm.field_c, 0, -param1 + 320, (byte) -127, var3);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(EditableTextField.field_M, ResourceArchiveFactory.field_c, 0, -param1 + 320, (byte) -128, var3 - ResourceArchiveFactory.field_c.ascent);
+              PlayerDataProtocol.drawCenteredTextWithHighlight(CourseObjectSlot.field_b, ResourceArchiveFactory.field_c, 0, -param1 + 320, (byte) -127, var3);
               if (var4 == 0) {
                 break scanLoop1;
               }
@@ -1962,13 +1962,13 @@ final class GameMenu extends MenuList {
           this.drawChampionshipRecords(stackIn_18_1, stackIn_18_2, BoundaryIntersection.field_p, (byte) 83);
           break;
         }
-        ni.field_a.drawCentered(QuickChatDynamicCommand.field_b, 320 + param1, 474, 0, -1);
+        InterfaceLoadingStatus.field_a.drawCentered(QuickChatDynamicCommand.field_b, 320 + param1, 474, 0, -1);
         return;
     }
 
     private final void enterMenuTransition(int param0, boolean param1) {
-        AlternateUsernameLoginCredentials.requestDisplayMode(7, -119);
-        b.field_c.bindRaster(param1);
+        AlternateUsernameLoginCredentials.requestBackground(7, -119);
+        SocialListProtocol.field_c.bindRaster(param1);
         if (CurvedRoadSegment.field_T) {
           GameKeyHandler.loadBenefitsUiResources((byte) 49);
         }
@@ -2076,7 +2076,7 @@ final class GameMenu extends MenuList {
         boolean decompiledFrameCompleted0 = true;
         if (this.menuId != 12 &&
           this.transitionState <= 1) {
-          while (qh.pollKeyEvent(-47)) {
+          while (KeyboardEventQueue.pollKeyEvent(-47)) {
             stackIn_107_0 = DelayedServerPacket.field_n;
             stackIn_107_1 = 13;
             if (var5 != 0) {
@@ -2105,9 +2105,9 @@ final class GameMenu extends MenuList {
               DelayedServerPacket.field_n == 1 &&
               RotatedSpriteCache.field_c &&
               IterableSecondaryNodeDeque.field_g[82]) {
-              ao.field_b = 3;
-              l.field_b = true;
-              hk.field_d = -1 + MenuList.field_l[3];
+              BoundaryLoopClipper.field_b = 3;
+              CollisionGeometry.field_b = true;
+              RoadControlPathBuilder.field_d = -1 + MenuList.field_l[3];
             }
             if (2 != this.menuId &&
               3 != this.menuId) {
@@ -2177,8 +2177,8 @@ final class GameMenu extends MenuList {
             } else {
               if (this.transitionState == 0) {
                 if (this.enterTicks == 0) {
-                  ValidationHelpWidget.a(17405, 64, 0, HuffmanDecoder.field_c.field_f);
-                  ValidationHelpWidget.a(17405, 64, 256, HuffmanDecoder.field_c.field_h);
+                  ValidationHelpWidget.playSample(17405, 64, 0, HuffmanDecoder.field_c.field_f);
+                  ValidationHelpWidget.playSample(17405, 64, 256, HuffmanDecoder.field_c.field_h);
                 }
                 this.enterTicks = this.enterTicks + 1;
                 if (~(this.itemCount * 5 + 25) != ~this.enterTicks) {
@@ -2379,16 +2379,16 @@ final class GameMenu extends MenuList {
               var12 != 0) && var12 == 0 || var12 != 0) {
               param4 = param4 - (-7 + (172 + var9));
               if (param4 <= 0) {
-                AccountProtocolState.a(-111, 0);
+                AccountProtocolState.setMusicVolume(-111, 0);
               }
               if (!(param4 <= 0) ||
                 var12 != 0) {
                 if (param4 >= 128) {
-                  AccountProtocolState.a(93, 160);
+                  AccountProtocolState.setMusicVolume(93, 160);
                 }
                 if (!(param4 >= 128) ||
                   var12 != 0) {
-                  AccountProtocolState.a(-128, param4 * 160 / 128);
+                  AccountProtocolState.setMusicVolume(-128, param4 * 160 / 128);
                   decompiledFrameRemainder0 = (var12 == 0);
                 }}}
             decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
@@ -2518,7 +2518,7 @@ final class GameMenu extends MenuList {
         TutorialAction.drawShadedPanel(30 - param1, 170, 580, (byte) 41, 260);
         if (null == RotatedSpriteCache.field_g[param2] &&
           -1 != var5) {
-          RotatedSpriteCache.field_g[param2] = il.requestLeaderboard(5, 3, var5, 10, (byte) -66);
+          RotatedSpriteCache.field_g[param2] = LeaderboardRequests.requestLeaderboard(5, 3, var5, 10, (byte) -66);
         }
         var7 = RotatedSpriteCache.field_g[param2].playerNames;
         var8 = 0;
@@ -2555,7 +2555,7 @@ final class GameMenu extends MenuList {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          q.drawCenteredTextWithHighlight(IntHashTable.field_a, HoldTheLine.field_F, 0, 280 - param1, (byte) -127, 204);
+          PlayerDataProtocol.drawCenteredTextWithHighlight(IntHashTable.field_a, HoldTheLine.field_F, 0, 280 - param1, (byte) -127, 204);
           var8 = 0;
         }
         boolean decompiledFrameCompleted1 = true;
@@ -2613,7 +2613,7 @@ final class GameMenu extends MenuList {
             var15++;
           }
           if (decompiledFrameCompleted1) {
-            var15 = 220 + nm.field_c.ascent - 6;
+            var15 = 220 + ResourceArchiveFactory.field_c.ascent - 6;
             var16_int = 0;
             while (10 > var16_int) {
               stackIn_102_0 = var21[var16_int];
@@ -2629,15 +2629,15 @@ final class GameMenu extends MenuList {
                 }
                 var17 = stackIn_68_0;
                 var18 = var21[var16_int];
-                LinkWidgetRenderer.a(-param1 + 54, 1 + var16_int + ". ", true, HoldTheLine.field_F, var15, var17);
-                GrowableObjectList.a(54 - param1, 1, var18, var17, var15, HoldTheLine.field_F);
+                LinkWidgetRenderer.drawRightAlignedTextWithHighlight(-param1 + 54, 1 + var16_int + ". ", true, HoldTheLine.field_F, var15, var17);
+                GrowableObjectList.drawTextWithHighlight(54 - param1, 1, var18, var17, var15, HoldTheLine.field_F);
                 if (var12 != var16_int) {
                   stackIn_73_0 = (var13 != var16_int) ? 1 : 2;
                 } else {
                   stackIn_73_0 = 5;
                 }
                 var17 = stackIn_73_0;
-                GrowableObjectList.a(-param1 + 235, 1, DisplayNameValidator.formatPreciseRaceTime(42, -var11[5 * var16_int]), var17, var15, HoldTheLine.field_F);
+                GrowableObjectList.drawTextWithHighlight(-param1 + 235, 1, DisplayNameValidator.formatPreciseRaceTime(42, -var11[5 * var16_int]), var17, var15, HoldTheLine.field_F);
                 if (~var16_int != ~var13) {
                   stackIn_78_0 = (var12 != var16_int) ? 0 : 5;
                 } else {
@@ -2646,7 +2646,7 @@ final class GameMenu extends MenuList {
                 var17 = stackIn_78_0;
                 var19 = 0;
                 while (var19 < 4) {
-                  q.drawCenteredTextWithHighlight(AccountFormText.formatRaceTime(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + TextHotspotWidget.field_K[var19] - param1, (byte) -127, var15);
+                  PlayerDataProtocol.drawCenteredTextWithHighlight(AccountFormText.formatRaceTime(var11[5 * var16_int - (-1 - var19)], (byte) -61), HoldTheLine.field_F, var17, 32 + TextHotspotWidget.field_K[var19] - param1, (byte) -127, var15);
                   var19++;
                 }
                 var8 = 1;
@@ -2658,11 +2658,11 @@ final class GameMenu extends MenuList {
               PathWaypoint.field_o != null &&
               var5 == PathWaypoint.field_o.field_j)) {
               var16 = QuickChatPhraseCache.field_e;
-              GrowableObjectList.a(-param1 + 54, 1, var16, 5, var15, HoldTheLine.field_F);
-              GrowableObjectList.a(240 - param1, 1, DisplayNameValidator.formatPreciseRaceTime(48, -PathWaypoint.field_o.values[0]), 5, var15, HoldTheLine.field_F);
+              GrowableObjectList.drawTextWithHighlight(-param1 + 54, 1, var16, 5, var15, HoldTheLine.field_F);
+              GrowableObjectList.drawTextWithHighlight(240 - param1, 1, DisplayNameValidator.formatPreciseRaceTime(48, -PathWaypoint.field_o.values[0]), 5, var15, HoldTheLine.field_F);
               var17 = 0;
               while (var17 < 4) {
-                q.drawCenteredTextWithHighlight(AccountFormText.formatRaceTime(PathWaypoint.field_o.values[1 + var17], (byte) -61), HoldTheLine.field_F, 5, TextHotspotWidget.field_K[var17] + (32 - param1), (byte) -127, var15);
+                PlayerDataProtocol.drawCenteredTextWithHighlight(AccountFormText.formatRaceTime(PathWaypoint.field_o.values[1 + var17], (byte) -61), HoldTheLine.field_F, 5, TextHotspotWidget.field_K[var17] + (32 - param1), (byte) -127, var15);
                 var17++;
                 if (var20 != 0) {
                   return;
@@ -2691,8 +2691,8 @@ final class GameMenu extends MenuList {
         }
         var24 = stackIn_102_0;
         var9_ref = var24;
-        var10 = 90 + (220 + nm.field_c.ascent);
-        nm.field_c.drawCentered(var24, 337 - param1, var10, 0, -1);
+        var10 = 90 + (220 + ResourceArchiveFactory.field_c.ascent);
+        ResourceArchiveFactory.field_c.drawCentered(var24, 337 - param1, var10, 0, -1);
         return;
     }
 
@@ -2833,12 +2833,12 @@ final class GameMenu extends MenuList {
             }
           case 19:
             if (NanoTickClock.field_e > 20) {
-              AccountProtocolState.a(param0 ^ -123, (-1 + (-1 + (8 * NanoTickClock.field_e + 160)) / 160) * 20);
+              AccountProtocolState.setMusicVolume(param0 ^ -123, (-1 + (-1 + (8 * NanoTickClock.field_e + 160)) / 160) * 20);
               if (var4 == 0) {
                 break;
               }
             }
-            AccountProtocolState.a(49, 0);
+            AccountProtocolState.setMusicVolume(49, 0);
             break;
           default:
             break;
@@ -2851,9 +2851,9 @@ final class GameMenu extends MenuList {
         this.itemAnimationTimers = new int[AgeValidator.field_i[param0].length];
         EditableTextField.field_J = new int[16];
         SecondaryNodeDequeIterator.field_h = new int[16];
-        dm.field_e = new int[16];
+        RasterStateRestoration.field_e = new int[16];
         ArchiveIndex.field_b = new int[16];
-        co.field_d = new int[16];
+        ClientLifecycleUtilities.field_d = new int[16];
         this.reset(false, -116);
     }
 
@@ -2964,7 +2964,7 @@ final class GameMenu extends MenuList {
         }
         if (var5 == 6) {
           if (CheckboxRenderer.field_x != 1) {
-            stackIn_35_0 = hk.field_b;
+            stackIn_35_0 = RoadControlPathBuilder.field_b;
           } else {
             stackIn_35_0 = DialogLayer.field_J;
           }
@@ -2985,10 +2985,10 @@ final class GameMenu extends MenuList {
             CheckboxRenderer.field_x == 3) {
             var8 = IntrusiveNode.field_c.toUpperCase();
             if (var14 != 0) {
-              var8 = ka.field_e.toUpperCase();
+              var8 = AccountUiUtilities.field_e.toUpperCase();
             }
           } else {
-            var8 = ka.field_e.toUpperCase();
+            var8 = AccountUiUtilities.field_e.toUpperCase();
           }
         }
         if (var8 == null) {
@@ -3024,7 +3024,7 @@ final class GameMenu extends MenuList {
                 } else {
                   stackIn_74_3 = -1;
                 }
-                fk.a(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_74_3, param0, -1, var7);
+                PopupMenuRenderer.drawTextColumns(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_74_3, param0, -1, var7);
                 decompiledFrameRemainder0 = (var14 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -3038,7 +3038,7 @@ final class GameMenu extends MenuList {
                   } else {
                     stackIn_80_3 = -1;
                   }
-                  fk.a(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3, param0, -1, var7);
+                  PopupMenuRenderer.drawTextColumns(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3, param0, -1, var7);
                   decompiledFrameRemainder0 = (var14 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -3052,7 +3052,7 @@ final class GameMenu extends MenuList {
                     } else {
                       stackIn_87_3 = -1;
                     }
-                    fk.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_87_3, param0, -1, var7);
+                    PopupMenuRenderer.drawTextColumns(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_87_3, param0, -1, var7);
                     decompiledFrameRemainder0 = (var14 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -3061,9 +3061,9 @@ final class GameMenu extends MenuList {
                       var10 = (-this.closeDelayTicks + 80) * this.closeDelayTicks;
                       var10 = (-var10 + 3200) * var10;
                       var11 = var10 * 381 / 2560000;
-                      var12 = (-nm.field_c.measureText(var8) + 640) / 2;
+                      var12 = (-ResourceArchiveFactory.field_c.measureText(var8) + 640) / 2;
                       var13 = 15 + var10 * (-15 + var12) / 2560000;
-                      RoadStripRenderer.a(var11, var9, (byte) -83, var13, param0, var8);
+                      RoadStripRenderer.drawMenuSelectionRow(var11, var9, (byte) -83, var13, param0, var8);
                       decompiledFrameRemainder0 = (var14 != 0);
                     }
                     if (decompiledFrameRemainder0) {
@@ -3117,7 +3117,7 @@ final class GameMenu extends MenuList {
             } else {
               stackIn_111_3 = -1;
             }
-            fk.a(stackIn_109_0, stackIn_109_1, stackIn_109_2, stackIn_111_3, param0, -1, var7);
+            PopupMenuRenderer.drawTextColumns(stackIn_109_0, stackIn_109_1, stackIn_109_2, stackIn_111_3, param0, -1, var7);
             if (var14 != 0) {
               stackIn_115_0 = DiskCacheWorker.field_a;
               stackIn_115_1 = DropTargetWidget.field_L;
@@ -3128,7 +3128,7 @@ final class GameMenu extends MenuList {
               } else {
                 stackIn_117_3 = -1;
               }
-              fk.a(stackIn_115_0, stackIn_115_1, stackIn_115_2, stackIn_117_3, param0, 1 + RoadShadowRenderer.field_m, var7);
+              PopupMenuRenderer.drawTextColumns(stackIn_115_0, stackIn_115_1, stackIn_115_2, stackIn_117_3, param0, 1 + RoadShadowRenderer.field_m, var7);
             }
           }
         } else {
@@ -3141,7 +3141,7 @@ final class GameMenu extends MenuList {
           } else {
             stackIn_117_3 = -1;
           }
-          fk.a(stackIn_115_0, stackIn_115_1, stackIn_115_2, stackIn_117_3, param0, 1 + RoadShadowRenderer.field_m, var7);
+          PopupMenuRenderer.drawTextColumns(stackIn_115_0, stackIn_115_1, stackIn_115_2, stackIn_117_3, param0, 1 + RoadShadowRenderer.field_m, var7);
         }
         if (18 == var5 ||
           var5 == 19) {
@@ -3266,14 +3266,14 @@ final class GameMenu extends MenuList {
             }
           }
         }
-        var8 = ArchiveIndex.b((byte) -49);
-        nm.field_c.drawCentered(ue.field_c + var8.field_b, var3Lifetime1 + 320, var2, 0, -1);
+        var8 = ArchiveIndex.getSelectedCourse((byte) -49);
+        ResourceArchiveFactory.field_c.drawCentered(CourseObjectSlot.field_c + var8.field_b, var3Lifetime1 + 320, var2, 0, -1);
         var2 += 15;
         if (SavedRasterState.field_o == null) {
           SavedRasterState.field_o = new Sprite(640, 480);
         }
-        vb.a(-72, SavedRasterState.field_o);
-        SecondaryNodeDequeIterator.a(0);
+        JagexLogoRenderer.pushSpriteRaster(-72, SavedRasterState.field_o);
+        SecondaryNodeDequeIterator.drawRaceOrLoadingScreen(0);
         MarkerSliderRenderer.restoreRasterTarget(param0 + 10966);
         SoftwareRasterizer.fillRectangleAlpha(var6 - 5, var7 - 5, 10 + var4Lifetime1, var5 + 10, 0, 128);
         if (MusicPatchPcmStream.field_r != null &&
@@ -3282,7 +3282,7 @@ final class GameMenu extends MenuList {
         }
         SavedRasterState.field_o.drawScaled(var6, var7, var4Lifetime1, var5);
         var2 += 247;
-        nm.field_c.drawCentered(LeaderboardPlayer.field_a, -var3Lifetime1 + 320, var2, 0, -1);
+        ResourceArchiveFactory.field_c.drawCentered(LeaderboardPlayer.field_a, -var3Lifetime1 + 320, var2, 0, -1);
         var2 += 8;
         var9 = RotatedSpriteAsset.field_g[var8.field_p];
         stackIn_31_0 = 166 - var3Lifetime1;
@@ -3334,7 +3334,7 @@ final class GameMenu extends MenuList {
             }
           } else {
             var2 = 640 - (int)this.carouselOffset;
-            nm.field_c.drawCentered(qh.field_e, 160 - var3Lifetime1, var2, 0, -1);
+            ResourceArchiveFactory.field_c.drawCentered(KeyboardEventQueue.field_e, 160 - var3Lifetime1, var2, 0, -1);
             var2 += 40;
             stackIn_51_0 = 0;
           }
@@ -3362,8 +3362,8 @@ final class GameMenu extends MenuList {
                     stackIn_65_0 = DirectByteStorage.field_h;
                   }
                   var14 = stackIn_65_0;
-                  nm.field_c.draw(var14, -var3Lifetime1 + 170, var2, var11Lifetime1Lifetime1 + 6, -1);
-                  nm.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var10Lifetime1], 150 - var3Lifetime1, var2, var11Lifetime1Lifetime1 + 6, -1);
+                  ResourceArchiveFactory.field_c.draw(var14, -var3Lifetime1 + 170, var2, var11Lifetime1Lifetime1 + 6, -1);
+                  ResourceArchiveFactory.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var10Lifetime1], 150 - var3Lifetime1, var2, var11Lifetime1Lifetime1 + 6, -1);
                   var12++;
                   var2 += 30;
                 }
@@ -3383,9 +3383,9 @@ final class GameMenu extends MenuList {
         if (param2 >= -42) {
           return (int[]) null;
         }
-        int var4 = hc.a(0, param1);
+        int var4 = FixedAngleMath.cosFixed(0, param1);
         int var5 = GrowableStringList.sinFixed(param0, 5255);
-        int var6 = hc.a(0, param0);
+        int var6 = FixedAngleMath.cosFixed(0, param0);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var5 * (long)var4 >> 16);
@@ -3553,9 +3553,9 @@ final class GameMenu extends MenuList {
             var7Lifetime1 = 0;
           }
           var8Lifetime1 = 320 + (int)((double)(var6 * 500.0f) * (Math.exp((double)((float)var7Lifetime1 * var5)) - 1.0));
-          nm.field_c.drawCentered("-", var8Lifetime1 + 2, var2, 0, -1);
-          nm.field_c.drawRightAligned(ZombiePedestrian.field_u, -8 + var8Lifetime1, var2, 0, -1);
-          nm.field_c.draw(MusicPatchPcmStream.field_o, 12 + var8Lifetime1, var2, 0, -1);
+          ResourceArchiveFactory.field_c.drawCentered("-", var8Lifetime1 + 2, var2, 0, -1);
+          ResourceArchiveFactory.field_c.drawRightAligned(ZombiePedestrian.field_u, -8 + var8Lifetime1, var2, 0, -1);
+          ResourceArchiveFactory.field_c.draw(MusicPatchPcmStream.field_o, 12 + var8Lifetime1, var2, 0, -1);
           var2 += 30;
         }
         var9_intLifetime1 = 0;
@@ -3595,27 +3595,27 @@ final class GameMenu extends MenuList {
                         stackIn_58_0 = var11 + ChatMessage.field_a;
                       }
                       var12 = stackIn_58_0;
-                      nm.field_c.draw(var12, -55 + var8Lifetime2, var2, var10 + 6, -1);
-                      nm.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], -80 + var8Lifetime2, var2, 6 + var10, -1);
-                      if (pe.field_g[var10] == -1) {
-                        nm.field_c.draw(DualLinkNode.field_m, 40 + var8Lifetime2, var2, var10 + 6, -1);
+                      ResourceArchiveFactory.field_c.draw(var12, -55 + var8Lifetime2, var2, var10 + 6, -1);
+                      ResourceArchiveFactory.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], -80 + var8Lifetime2, var2, 6 + var10, -1);
+                      if (ScreenOptionsMenu.field_g[var10] == -1) {
+                        ResourceArchiveFactory.field_c.draw(DualLinkNode.field_m, 40 + var8Lifetime2, var2, var10 + 6, -1);
                       } else {
-                        nm.field_c.draw(DisplayNameValidator.formatPreciseRaceTime(48, pe.field_g[var10]), 40 + var8Lifetime2, var2, var10 + 6, -1);
+                        ResourceArchiveFactory.field_c.draw(DisplayNameValidator.formatPreciseRaceTime(48, ScreenOptionsMenu.field_g[var10]), 40 + var8Lifetime2, var2, var10 + 6, -1);
                       }
                     } else {
-                      nm.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], var8Lifetime2 - 15, var2, var10 + 6, -1);
+                      ResourceArchiveFactory.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], var8Lifetime2 - 15, var2, var10 + 6, -1);
                       stackIn_66_0 = (LoginCredentialType.isFeatureEnabled(param0 + 16604, 0)) ? 3 : 1;
                       var11 = stackIn_66_0;
-                      nm.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].kills), 15 + var8Lifetime2, var2, 6 + var10, -1);
-                      nm.field_c.draw("-", 16 + var8Lifetime2 + 14 * var11, var2, 6 + var10, -1);
-                      nm.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].deaths), 31 + var8Lifetime2 + var11 * 14, var2, var10 + 6, -1);
+                      ResourceArchiveFactory.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].kills), 15 + var8Lifetime2, var2, 6 + var10, -1);
+                      ResourceArchiveFactory.field_c.draw("-", 16 + var8Lifetime2 + 14 * var11, var2, 6 + var10, -1);
+                      ResourceArchiveFactory.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].deaths), 31 + var8Lifetime2 + var11 * 14, var2, var10 + 6, -1);
                     }
                   } else {
-                    nm.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], -15 + var8Lifetime2, var2, var10 + 6, -1);
-                    if (-1 != pe.field_g[var10]) {
-                      nm.field_c.draw(DisplayNameValidator.formatPreciseRaceTime(47, pe.field_g[var10]), 15 + var8Lifetime2, var2, var10 + 6, -1);
+                    ResourceArchiveFactory.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], -15 + var8Lifetime2, var2, var10 + 6, -1);
+                    if (-1 != ScreenOptionsMenu.field_g[var10]) {
+                      ResourceArchiveFactory.field_c.draw(DisplayNameValidator.formatPreciseRaceTime(47, ScreenOptionsMenu.field_g[var10]), 15 + var8Lifetime2, var2, var10 + 6, -1);
                     } else {
-                      nm.field_c.draw(DualLinkNode.field_m, var8Lifetime2 + 15, var2, 6 + var10, -1);
+                      ResourceArchiveFactory.field_c.draw(DualLinkNode.field_m, var8Lifetime2 + 15, var2, 6 + var10, -1);
                     }
                   }
                   var3++;
@@ -3636,10 +3636,10 @@ final class GameMenu extends MenuList {
             if (CheckboxRenderer.field_x == 2 &&
               -1 != OutlinedRoadStripRenderer.field_r) {
               var9 = LoginCredentials.substituteIndexedTokens(SolidRoadStripRenderer.field_n, new String[]{ViewportSizingController.field_t[OutlinedRoadStripRenderer.field_r]}, true);
-              if (!of.a(param0 - 981)) {
+              if (!SubscriberAccessChecks.hasSubscriberAccess(param0 - 981)) {
                 var9 = SingleChildWidget.field_E;
               }
-              nm.field_c.drawCentered(var9, 320, var2, 1, -1);
+              ResourceArchiveFactory.field_c.drawCentered(var9, 320, var2, 1, -1);
             } else {
               if (CheckboxRenderer.field_x == 1) {
                 if (EntitySound.field_l != 1) {
@@ -3649,11 +3649,11 @@ final class GameMenu extends MenuList {
                 }
                 var18 = stackIn_90_0;
                 var9 = var18;
-                nm.field_c.drawCentered(var18, 320, var2, 1, -1);
+                ResourceArchiveFactory.field_c.drawCentered(var18, 320, var2, 1, -1);
               } else {
                 if (6 == CheckboxRenderer.field_x) {
                   var17 = FullscreenErrorReason.field_a;
-                  nm.field_c.drawCentered(var17, 320, var2, 1, -1);
+                  ResourceArchiveFactory.field_c.drawCentered(var17, 320, var2, 1, -1);
                 }
               }
             }
@@ -3662,9 +3662,9 @@ final class GameMenu extends MenuList {
             var9Lifetime1 = DialogLayer.field_J;
           } else {
             if (CheckboxRenderer.field_x == 6) {
-              var9Lifetime1 = ka.field_e;
+              var9Lifetime1 = AccountUiUtilities.field_e;
             } else {
-              var9Lifetime1 = hk.field_b;
+              var9Lifetime1 = RoadControlPathBuilder.field_b;
             }
           }
           stackIn_98_0 = 240;
@@ -3673,7 +3673,7 @@ final class GameMenu extends MenuList {
           stackIn_98_3 = 430 - (int)this.carouselOffset;
           stackIn_98_4 = var9Lifetime1;
           stackIn_99_5 = (this.selectedItem == 1);
-          te.a(stackIn_98_0, stackIn_98_1, stackIn_98_2, stackIn_98_3, stackIn_98_4, stackIn_99_5);
+          EncryptedPacketWriter.drawCenteredTextPopup(stackIn_98_0, stackIn_98_1, stackIn_98_2, stackIn_98_3, stackIn_98_4, stackIn_99_5);
           return;
         }
     }
@@ -3745,8 +3745,8 @@ final class GameMenu extends MenuList {
               var3 + 69 > NodeHashTableIterator.field_g &&
               (float)FullscreenErrorDialog.field_X >= 845.0f - this.carouselOffset &&
               (float)FullscreenErrorDialog.field_X < 949.0f - this.carouselOffset) {
-              IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][var2];
-              ArchiveCatalog.a(0, (byte) 120, this.menuId, var2);
+              IntArrayReadRequest.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.getSelectedCourse((byte) -49).field_p][var2];
+              ArchiveCatalog.updateTooltipTarget(0, (byte) 120, this.menuId, var2);
               this.selectedItem = 1;
               if (((ValidationIndicator.field_J == 1)) &&
                 ((null != MusicPatchPcmStream.field_r))) {
@@ -3795,8 +3795,8 @@ final class GameMenu extends MenuList {
         var4 = 0;
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!(SocketConnector.field_a > var4)))) {
-          var5 = -param1 + dm.field_e[var4];
-          var6 = -param2 + co.field_d[var4];
+          var5 = -param1 + RasterStateRestoration.field_e[var4];
+          var6 = -param2 + ClientLifecycleUtilities.field_d[var4];
           var7 = ArchiveIndex.field_b[var4] >> 1;
           stackIn_10_0 = -var7;
           stackIn_10_1 = var5;

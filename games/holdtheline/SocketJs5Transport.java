@@ -169,7 +169,7 @@ final class SocketJs5Transport extends Js5Transport {
               }
             }
             this.field_h = 0;
-            this.field_j = bb.monotonicTimeMillis(-1);
+            this.field_j = BoundaryLoopTracer.monotonicTimeMillis(-1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -190,13 +190,13 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final static void a(String param0, boolean param1, String param2) {
+    final static void replaceLoginForm(String param0, boolean param1, String param2) {
         try {
           if (RoadControlPointSpec.field_c != null) {
-            RoadControlPointSpec.field_c.h((byte) -98);
+            RoadControlPointSpec.field_c.closeProgressDialog((byte) -98);
           }
-          lh.field_a = new LoginForm(param2, param0, param1, true, true);
-          sm.field_c.setContent((UiWidget) (lh.field_a), (byte) -99);
+          SocketConnectorFactory.field_a = new LoginForm(param2, param0, param1, true, true);
+          Cp1252Decoder.field_c.setContent((UiWidget) (SocketConnectorFactory.field_a), (byte) -99);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ag.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -232,7 +232,7 @@ final class SocketJs5Transport extends Js5Transport {
           NetworkArchiveRequest var3Lifetime1;
           var17 = HoldTheLine.field_D;
           if (this.field_q != null) {
-            var2_long = bb.monotonicTimeMillis(-1);
+            var2_long = BoundaryLoopTracer.monotonicTimeMillis(-1);
             var4 = (int)(-this.field_j + var2_long);
             this.field_j = var2_long;
             if (var4 > 200) {

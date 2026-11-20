@@ -6,7 +6,7 @@ final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesC
     private com.ms.directX.DirectDraw field_b;
     private static int field_a;
 
-    final int[] a(int param0) {
+    final int[] getDisplayModes(int param0) {
         int[] var3 = null;
         this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_a];
@@ -22,7 +22,7 @@ final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesC
         return (int[]) null;
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
+    final void enterFullscreen(int param0, int param1, int param2, java.awt.Frame param3, int param4, int param5) {
         com.ms.awt.WComponentPeer var7 = null;
         int var8 = 0;
         com.ms.awt.WComponentPeer var7Lifetime1;
@@ -52,7 +52,7 @@ final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesC
         param3.requestFocus();
     }
 
-    final void a(int param0, java.awt.Frame param1) {
+    final void exitFullscreen(int param0, java.awt.Frame param1) {
         this.field_b.restoreDisplayMode();
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param1), param0);
     }

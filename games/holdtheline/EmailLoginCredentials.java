@@ -33,7 +33,7 @@ final class EmailLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7) {
+    final static void outlineSpriteRegion(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -145,6 +145,6 @@ final class EmailLoginCredentials extends LoginCredentials {
     }
 
     static {
-        field_d = fc.createHorizontalPointPairs(-29, 25, 2);
+        field_d = BoundaryIntervalBuilder.createHorizontalPointPairs(-29, 25, 2);
     }
 }

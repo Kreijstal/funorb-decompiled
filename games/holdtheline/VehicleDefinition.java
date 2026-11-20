@@ -43,7 +43,7 @@ final class VehicleDefinition {
     float mass;
     float field_c;
 
-    final static void a(ScoreSubmission param0, int param1, int param2) {
+    final static void sendScoreSubmission(ScoreSubmission param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = HoldTheLine.field_D;
@@ -176,10 +176,10 @@ final class VehicleDefinition {
               this.field_m = 0.5f;
               this.field_A = 10.0f;
               this.field_s = 6000.0f;
-              this.field_u = te.field_c.accelerateLoop;
+              this.field_u = EncryptedPacketWriter.field_c.accelerateLoop;
               this.field_J = 5.0f;
               this.field_I = 4.0f;
-              this.field_L = te.field_c.decelerate;
+              this.field_L = EncryptedPacketWriter.field_c.decelerate;
               this.field_w = 10.0f;
               this.field_p = 3.0f;
               this.field_B = 40.0f;
@@ -202,7 +202,7 @@ final class VehicleDefinition {
                 this.maxSlipAngle = 0.30000001192092896f;
                 this.field_E = 0.5f;
                 this.field_p = 3.0f;
-                this.field_u = hm.field_a.accelerateLoop;
+                this.field_u = HoverTargetTracker.field_a.accelerateLoop;
                 this.field_q = 0.5f;
                 this.field_f = 0.30000001192092896f;
                 this.field_A = 5.0f;
@@ -221,7 +221,7 @@ final class VehicleDefinition {
                 this.field_I = 4.0f;
                 this.corneringStiffness = 12.0f / this.maxSlipAngle;
                 this.momentOfInertia = (this.wheelbase * this.wheelbase + this.field_N * this.field_N) * this.mass / 12.0f;
-                this.field_L = hm.field_a.decelerate;
+                this.field_L = HoverTargetTracker.field_a.decelerate;
                 this.field_x = 0.6000000238418579f;
                 this.field_J = 3.0f;
                 this.field_r = 0.4000000059604645f;

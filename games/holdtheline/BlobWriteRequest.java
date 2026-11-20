@@ -27,7 +27,7 @@ final class BlobWriteRequest extends IntrusiveNode {
         var9 = HoldTheLine.field_D;
         try {
           var11 = (CharSequence) ((Object) param0);
-          var3_int = of.a(0, var11, param2);
+          var3_int = SubscriberAccessChecks.countCharacter(0, var11, param2);
           var4 = new String[1 + var3_int];
           var5 = 0;
           var6 = 0;
@@ -72,7 +72,7 @@ final class BlobWriteRequest extends IntrusiveNode {
         try {
           QuickChatPhraseDefinition.field_t.draw(param1, param4);
           LayeredWidgetStyle.field_i.draw(381 + param1, param4);
-          nm.field_c.drawCentered(param0, param1 + 320, -2 + ((30 + nm.field_c.ascent) / 2 + param4), param2, -1);
+          ResourceArchiveFactory.field_c.drawCentered(param0, param1 + 320, -2 + ((30 + ResourceArchiveFactory.field_c.ascent) / 2 + param4), param2, -1);
           if (param3 != -1753) {
             field_i = (IntrusiveDeque) null;
           }

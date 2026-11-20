@@ -28,18 +28,18 @@ final class PlayerProgressEncoder {
         if (param0 >= -31) {
           field_b = 14L;
         }
-        int var2 = hk.field_d + ao.field_b * 4;
+        int var2 = RoadControlPathBuilder.field_d + BoundaryLoopClipper.field_b * 4;
         var6.writeBits(93, 4, var2);
         for (var3 = 1; 4 > var3; var3++) {
-          ArchiveLoadProgress.a(-110, var3, 0, var6);
+          ArchiveLoadProgress.writeCourseBestTimes(-110, var3, 0, var6);
         }
         for (var3Lifetime1 = 1; var3Lifetime1 < 4; var3Lifetime1++) {
           for (var4 = 0; 4 > var4; var4++) {
-            ArchiveLoadProgress.a(-98, var4, var3Lifetime1, var6);
+            ArchiveLoadProgress.writeCourseBestTimes(-98, var4, var3Lifetime1, var6);
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < 4; var3Lifetime2++) {
-          dm.a(var6, var3Lifetime2, 255);
+          RasterStateRestoration.writeBestChampionshipTime(var6, var3Lifetime2, 255);
         }
         var6.endBitWriting((byte) 0);
         return var6.payload;

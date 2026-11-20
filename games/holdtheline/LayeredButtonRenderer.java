@@ -61,7 +61,7 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
             stackIn_3_0 = (UiWidget) (param3);
           }
           var10 = (TextButton) (stackIn_3_0);
-          StereoMusicSample.a(param3.width + (param3.x + param1), param1 + param3.x, param3.height + param3.y + param4, true, param3.y + param4);
+          StereoMusicSample.pushRasterClip(param3.width + (param3.x + param1), param1 + param3.x, param3.height + param3.y + param4, true, param3.y + param4);
           if (var10 != null) {
             param0 = param0 & var10.field_D;
           }
@@ -104,7 +104,7 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
           if (param2 > -48) {
             field_u = (float[]) null;
           }
-          dm.popRasterState((byte) -10);
+          RasterStateRestoration.popRasterState((byte) -10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

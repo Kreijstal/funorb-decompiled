@@ -119,13 +119,13 @@ class TextHotspotWidget extends TextButton {
         try {
           WidgetStyleNode.field_o = PlayerStatsRequest.createEmailValidationRequest("", -7079);
           WidgetStyleNode.field_o.complete(false, 107);
-          i.a(true, param0, param1, param2);
+          ShadedNineSlicePanel.loadCommonUiResources(true, param0, param1, param2);
           DialogLayer.initialize(-1);
-          ak.field_b = ValidationIndicator.field_M;
+          NineSliceSpriteFactory.field_b = ValidationIndicator.field_M;
           if (param3 < 98) {
             field_M = (String) null;
           }
-          bb.field_a = ValidationIndicator.field_M;
+          BoundaryLoopTracer.field_a = ValidationIndicator.field_M;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "cj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -203,7 +203,7 @@ class TextHotspotWidget extends TextButton {
           var7 = var5.getTextOriginX((UiWidget) (this), param2, 13112);
           var8 = var5.getTextOriginY(param0 ^ 1337393829, (UiWidget) (this), param1);
           do {
-            GrowableObjectList.a(var6.height + 2, var6.width + 2, var7 + (var6.x - 2), -2 + var8 + var6.y, (byte) 19);
+            GrowableObjectList.drawDottedRectangle(var6.height + 2, var6.width + 2, var7 + (var6.x - 2), -2 + var8 + var6.y, (byte) 19);
             var6 = var6.nextLine;
           } while (var6 != null);
         }

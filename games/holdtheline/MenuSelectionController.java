@@ -33,7 +33,7 @@ final class MenuSelectionController {
         return true;
     }
 
-    final static void a(int param0, NineSlicePanel param1, int param2, int param3) {
+    final static void configurePopupFrame(int param0, NineSlicePanel param1, int param2, int param3) {
         if (param3 != 0) {
           return;
         }
@@ -98,7 +98,7 @@ final class MenuSelectionController {
         }
         if (ValidationIndicator.field_J != 0) {
           this.heldMouseButton = ValidationIndicator.field_J;
-          this.repeatCountdown = fc.field_d;
+          this.repeatCountdown = BoundaryIntervalBuilder.field_d;
           this.mouseSelection = true;
           this.activationButton = ValidationIndicator.field_J;
           this.selectedIndex = param0;
@@ -260,13 +260,13 @@ final class MenuSelectionController {
           ViewportSizingController.field_n = new MusicTrack[7];
           UsernameLoginCredentials.field_f = param2;
           AgeValidator.field_m = new String[7];
-          i.field_k = new MusicTrack[7];
+          ShadedNineSlicePanel.field_k = new MusicTrack[7];
           ValidationHelpWidget.field_Q = param0;
           AgeValidator.field_m[0] = "holdtheline_title";
           AgeValidator.field_m[5] = "holdtheline_alpine";
           AgeValidator.field_m[1] = "holdtheline_victory_jingle";
           AccountProgressDialog.field_jb = -1;
-          oc.field_a = 7;
+          SpriteLayoutUtilities.field_a = 7;
           AgeValidator.field_m[4] = "holdtheline_desert";
           WeightedLruCache.field_e = 0;
           AgeValidator.field_m[6] = "holdtheline_urban";

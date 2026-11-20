@@ -9,7 +9,7 @@ final class DirectByteStorage extends ByteStorage {
     static QuickChatDynamicCommand field_k;
     static int[] field_j;
 
-    final static void a(int param0, int param1) {
+    final static void resendHighscoreRequests(int param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
         ScoreSubmission var4 = null;
@@ -19,7 +19,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           var4 = (ScoreSubmission) (AccountTermsPanel.field_O.first((byte) 89));
           while (var4 != null) {
-            VehicleDefinition.a(var4, param0, 111);
+            VehicleDefinition.sendScoreSubmission(var4, param0, 111);
             var4 = (ScoreSubmission) (AccountTermsPanel.field_O.next((byte) 87));
           }
           var5 = (LeaderboardRequest) (MenuList.field_e.first((byte) 86));
@@ -30,7 +30,7 @@ final class DirectByteStorage extends ByteStorage {
           if (param1 == 0) {
             return;
           }
-          DirectByteStorage.a(41, -85);
+          DirectByteStorage.resendHighscoreRequests(41, -85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

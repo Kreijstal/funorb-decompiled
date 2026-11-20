@@ -37,7 +37,7 @@ final class SoundPlayback extends IntrusiveNode {
         this.field_j.setPan(param0);
         if (param1 >= -59) {
           PacketBuffer var4 = (PacketBuffer) null;
-          SoundPlayback.a(65, (byte) -18, (PacketBuffer) null, 106, -96);
+          SoundPlayback.writeClientHandshake(65, (byte) -18, (PacketBuffer) null, 106, -96);
         }
     }
 
@@ -52,7 +52,7 @@ final class SoundPlayback extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, byte param1, PacketBuffer param2, int param3, int param4) {
+    final static void writeClientHandshake(int param0, byte param1, PacketBuffer param2, int param3, int param4) {
         param2.writeByte(111, 12);
         param2.writeShort(param1 - 652561689, 17);
         param2.writeShort(-652561784, param0);
@@ -79,6 +79,6 @@ final class SoundPlayback extends IntrusiveNode {
     static {
         field_l = new AccountProtocolState();
         field_m = "Select Vehicle";
-        field_i = fc.createHorizontalPointPairs(-109, 15, 4);
+        field_i = BoundaryIntervalBuilder.createHorizontalPointPairs(-109, 15, 4);
     }
 }

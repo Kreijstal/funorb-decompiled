@@ -45,7 +45,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static boolean a(int param0, byte[] param1, int param2, byte[] param3, int param4, int param5) {
+    final static boolean equalByteRanges(int param0, byte[] param1, int param2, byte[] param3, int param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -96,16 +96,16 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void b(byte param0) {
+    final static void showGuestLogin(byte param0) {
         if (param0 != -54) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          MouseInputHandler.a((java.applet.Applet) null, true);
+          MouseInputHandler.openQuitPage((java.applet.Applet) null, true);
         }
-        if (!mn.guestMode) {
+        if (!SessionCookieWriter.guestMode) {
           throw new IllegalStateException();
         }
         AlternateUsernameLoginCredentials.field_j = true;
-        SecondaryNodeDeque.a(false, (byte) 71);
+        SecondaryNodeDeque.showLoginForm(false, (byte) 71);
         DiskCacheRequest.field_w = 0;
     }
 
@@ -150,7 +150,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void openQuitPage(java.applet.Applet param0, boolean param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;
@@ -165,7 +165,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 field_c = -65;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-              param0.getAppletContext().showDocument(IntrusiveDeque.a(var2, param0, (byte) 92), "_top");
+              param0.getAppletContext().showDocument(IntrusiveDeque.adjustAppletUrl(var2, param0, (byte) 92), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -203,7 +203,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             SpriteAsset.field_a = 0;
             IterableNodeHashTable.field_e = param0.getX();
             FullscreenDisplayMode.field_f = param0.getY();
-            bb.monotonicTimeMillis(-1);
+            BoundaryLoopTracer.monotonicTimeMillis(-1);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DelegatingCanvas.field_a = 2;
               ResizableDialog.field_R = 2;

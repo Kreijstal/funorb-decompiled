@@ -10,17 +10,17 @@ abstract class PointPath {
     static int[] field_a;
     static String field_f;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void recordBestChampionshipTime(int param0, int param1, int param2) {
         if (param1 != 5) {
           return;
         }
-        if (d.field_c[param0] == -1) {
-          d.field_c[param0] = param2;
+        if (AccountProtocolContext.field_c[param0] == -1) {
+          AccountProtocolContext.field_c[param0] = param2;
           GrowableStringList.savePlayerProgress(0);
           return;
         }
-        if (d.field_c[param0] > param2) {
-          d.field_c[param0] = param2;
+        if (AccountProtocolContext.field_c[param0] > param2) {
+          AccountProtocolContext.field_c[param0] = param2;
           GrowableStringList.savePlayerProgress(0);
           return;
         }

@@ -1,0 +1,477 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountNameNormalizer {
+    static LoginCredentialType field_b;
+    static int[] field_a;
+
+    final static void updateTooltipText(String param0, int param1) {
+        int stackIn_16_0 = 0;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_41_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        var3 = HoldTheLine.field_D;
+        try {
+          if (param1 == ~NineSliceSpriteFactory.field_c &&
+            MouseWheelInput.field_b == -1) {
+            MouseWheelInput.field_b = FullscreenErrorDialog.field_X;
+            NineSliceSpriteFactory.field_c = NodeHashTableIterator.field_g;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          RasterStateRestoration.field_a = RasterStateRestoration.field_a + 1;
+          if (param0 == null) {
+            decompiledFrameRemainder0 = (null == UiWidget.field_s);
+          } else {
+            decompiledFrameRemainder0 = !(param0.equals(UiWidget.field_s));
+          }
+          if (decompiledFrameRemainder0) {
+            if (!DiskCacheStore.field_h) {
+              if (RasterStateRestoration.field_a >= LinearPointPath.field_h) {
+                stackIn_16_0 = (SavedRasterState.field_l + LinearPointPath.field_h > RasterStateRestoration.field_a) ? 1 : 0;
+              } else {
+                stackIn_16_0 = 0;
+              }
+            } else {
+              stackIn_16_0 = 0;
+            }
+            var2_int = stackIn_16_0;
+            if (param0 == null) {
+              RasterStateRestoration.field_a = 0;
+            } else {
+              if (DiskCacheStore.field_h) {
+                RasterStateRestoration.field_a = LinearPointPath.field_h;
+              } else {
+                if (var2_int == 0) {
+                  RasterStateRestoration.field_a = 0;
+                } else {
+                  RasterStateRestoration.field_a = LinearPointPath.field_h;
+                }
+              }
+            }
+            ArchiveLoadProgress.field_e = NineSliceSpriteFactory.field_c;
+            if (param0 == null) {
+              if (var2_int != 0) {
+                DiskCacheStore.field_h = true;
+              }
+            } else {
+              DiskCacheStore.field_h = false;
+            }
+            AgeValidator.field_l = MouseWheelInput.field_b;
+          }
+          if (!DiskCacheStore.field_h &&
+            LinearPointPath.field_h > RasterStateRestoration.field_a &&
+            PointLight.field_k) {
+            ArchiveLoadProgress.field_e = NineSliceSpriteFactory.field_c;
+            RasterStateRestoration.field_a = 0;
+            AgeValidator.field_l = MouseWheelInput.field_b;
+          }
+          UiWidget.field_s = param0;
+          MouseWheelInput.field_b = -1;
+          NineSliceSpriteFactory.field_c = -1;
+          if (DiskCacheStore.field_h) {
+            if (CachedArchiveProvider.field_m != RasterStateRestoration.field_a) {
+              return;
+            }
+            RasterStateRestoration.field_a = 0;
+            DiskCacheStore.field_h = false;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_40_0 = var2;
+          stackIn_40_1 = new StringBuilder().append("ba.D(");
+          if (param0 == null) {
+            stackIn_41_2 = "null";
+          } else {
+            stackIn_41_2 = "{...}";
+          }
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static int intersectLineAndArc(TrackBoundary param0, int param1, ArcTrackBoundary param2) {
+        int stackIn_2_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        Vector2i var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        float var8 = 0.0f;
+        int var9 = 0;
+        float var10 = 0.0f;
+        Vector2i var11 = null;
+        try {
+          var11 = new Vector2i(param0.start, param0.end);
+          var4 = new Vector2i(param0.start, param2.center);
+          var5 = var11.dot(-105, var4);
+          var6 = var11.cross(false, var4);
+          var7 = var11.lengthSquared(51);
+          var8 = (float)param2.radius * (float)var7 * (float)param2.radius - (float)var6 * (float)var6;
+          if (var8 < (float)param1) {
+            stackIn_2_0 = 0;
+            return stackIn_2_0;
+          }
+          var9 = 0;
+          var10 = (float)Math.sqrt((double)var8);
+          RasterBuffer.field_d = ((float)var5 + var10) / (float)var7;
+          if (RasterBuffer.field_d >= 0.0f &&
+            1.0f >= RasterBuffer.field_d) {
+            IterableSecondaryNodeDeque.field_b = BoundaryIntersection.angleBetweenPoints(param2.center, param0.pointAt(false, RasterBuffer.field_d), false);
+            if (param2.containsAngle(IterableSecondaryNodeDeque.field_b, 13012)) {
+              var9++;
+            }
+          }
+          if (var10 > 0.0f) {
+            CachedArchiveProvider.field_g = ((float)var5 - var10) / (float)var7;
+            if (CachedArchiveProvider.field_g >= 0.0f &&
+              CachedArchiveProvider.field_g <= 1.0f) {
+              TextHotspotWidget.field_G = BoundaryIntersection.angleBetweenPoints(param2.center, param0.pointAt(false, CachedArchiveProvider.field_g), false);
+              if (param2.containsAngle(TextHotspotWidget.field_G, 13012)) {
+                var9++;
+              }
+              if (var9 == 1) {
+                IterableSecondaryNodeDeque.field_b = TextHotspotWidget.field_G;
+                RasterBuffer.field_d = CachedArchiveProvider.field_g;
+              }
+            }
+          }
+          stackIn_18_0 = var9;
+          return stackIn_18_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_21_0 = var3;
+          stackIn_21_1 = new StringBuilder().append("ba.B(");
+          if (param0 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+        }
+    }
+
+    static long orLongs(long param0, long param1) {
+        return param0 | param1;
+    }
+
+    public static void clearSharedReferences(int param0) {
+        field_a = null;
+        field_b = null;
+        if (param0 != 12031) {
+          field_b = (LoginCredentialType) null;
+        }
+    }
+
+    final static char normalizeAccountCharacter(boolean param0, char param1) {
+        int var2;
+        int var3;
+        int var2Lifetime1;
+        var3 = HoldTheLine.field_D;
+        if (param0) {
+          var2 = param1;
+          if (32 == var2) {
+            return '_';
+          }
+          if (var2 == 160) {
+            return '_';
+          }
+          if (var2 == 95) {
+            return '_';
+          }
+          if (var2 == 45) {
+            return '_';
+          }
+          if (var2 == 91) {
+            return param1;
+          }
+          if (93 != var2 &&
+            var2 != 35) {
+            if (var2 != 224 &&
+              var2 != 225 &&
+              var2 != 226 &&
+              228 != var2 &&
+              var2 != 227 &&
+              var2 != 192 &&
+              var2 != 193 &&
+              var2 != 194 &&
+              var2 != 196 &&
+              var2 != 195) {
+              if (232 != var2 &&
+                233 != var2 &&
+                var2 != 234 &&
+                var2 != 235 &&
+                200 != var2 &&
+                var2 != 201 &&
+                202 != var2 &&
+                var2 != 203) {
+                if (var2 != 237 &&
+                  238 != var2 &&
+                  239 != var2 &&
+                  var2 != 205 &&
+                  206 != var2 &&
+                  var2 != 207) {
+                  if (242 != var2 &&
+                    var2 != 243 &&
+                    var2 != 244 &&
+                    var2 != 246 &&
+                    var2 != 245 &&
+                    var2 != 210 &&
+                    var2 != 211 &&
+                    212 != var2 &&
+                    var2 != 214 &&
+                    var2 != 213) {
+                    if (var2 != 249) {
+                      if (var2 == 250) {
+                        return 'u';
+                      }
+                      if (var2 != 251) {
+                        if (var2 == 252) {
+                          return 'u';
+                        }
+                        if (var2 == 217) {
+                          return 'u';
+                        }
+                        if (var2 == 218) {
+                          return 'u';
+                        }
+                        if (var2 != 219) {
+                          if (var2 == 220) {
+                            return 'u';
+                          }
+                          if (var2 != 231 &&
+                            var2 != 199) {
+                            if (255 != var2 &&
+                              var2 != 376) {
+                              if (var2 == 241) {
+                                return 'n';
+                              }
+                              if (var2 == 209) {
+                                return 'n';
+                              }
+                              if (var2 != 223) {
+                                return Character.toLowerCase(param1);
+                              }
+                              return 'b';
+                            }
+                            return 'y';
+                          }
+                          return 'c';
+                        }
+                      }
+                    }
+                    return 'u';
+                  }
+                  return 'o';
+                }
+                return 'i';
+              }
+              return 'e';
+            }
+            return 'a';
+          }
+          return param1;
+        }
+        field_b = (LoginCredentialType) null;
+        var2Lifetime1 = param1;
+        if (32 == var2Lifetime1) {
+          return '_';
+        }
+        if (var2Lifetime1 != 160 &&
+          var2Lifetime1 != 95 &&
+          var2Lifetime1 != 45) {
+          if (var2Lifetime1 != 91 &&
+            93 != var2Lifetime1 &&
+            var2Lifetime1 != 35) {
+            if (var2Lifetime1 != 224 &&
+              var2Lifetime1 != 225 &&
+              var2Lifetime1 != 226 &&
+              228 != var2Lifetime1 &&
+              var2Lifetime1 != 227 &&
+              var2Lifetime1 != 192 &&
+              var2Lifetime1 != 193 &&
+              var2Lifetime1 != 194 &&
+              var2Lifetime1 != 196 &&
+              var2Lifetime1 != 195) {
+              if (232 != var2Lifetime1) {
+                if (233 == var2Lifetime1) {
+                  return 'e';
+                }
+                if (var2Lifetime1 != 234 &&
+                  var2Lifetime1 != 235 &&
+                  200 != var2Lifetime1) {
+                  if (var2Lifetime1 == 201) {
+                    return 'e';
+                  }
+                  if (202 != var2Lifetime1) {
+                    if (var2Lifetime1 == 203) {
+                      return 'e';
+                    }
+                    if (var2Lifetime1 != 237) {
+                      if (238 == var2Lifetime1) {
+                        return 'i';
+                      }
+                      if (239 == var2Lifetime1) {
+                        return 'i';
+                      }
+                      if (var2Lifetime1 != 205) {
+                        if (206 == var2Lifetime1) {
+                          return 'i';
+                        }
+                        if (var2Lifetime1 == 207) {
+                          return 'i';
+                        }
+                        if (242 != var2Lifetime1) {
+                          if (var2Lifetime1 == 243) {
+                            return 'o';
+                          }
+                          if (var2Lifetime1 == 244) {
+                            return 'o';
+                          }
+                          if (var2Lifetime1 != 246 &&
+                            var2Lifetime1 != 245) {
+                            if (var2Lifetime1 == 210) {
+                              return 'o';
+                            }
+                            if (var2Lifetime1 != 211) {
+                              if (212 == var2Lifetime1) {
+                                return 'o';
+                              }
+                              if (var2Lifetime1 == 214) {
+                                return 'o';
+                              }
+                              if (var2Lifetime1 != 213) {
+                                if (var2Lifetime1 != 249) {
+                                  if (var2Lifetime1 == 250) {
+                                    return 'u';
+                                  }
+                                  if (var2Lifetime1 != 251) {
+                                    if (var2Lifetime1 == 252) {
+                                      return 'u';
+                                    }
+                                    if (var2Lifetime1 == 217) {
+                                      return 'u';
+                                    }
+                                    if (var2Lifetime1 == 218) {
+                                      return 'u';
+                                    }
+                                    if (var2Lifetime1 != 219) {
+                                      if (var2Lifetime1 == 220) {
+                                        return 'u';
+                                      }
+                                      if (var2Lifetime1 != 231 &&
+                                        var2Lifetime1 != 199) {
+                                        if (255 != var2Lifetime1 &&
+                                          var2Lifetime1 != 376) {
+                                          if (var2Lifetime1 == 241) {
+                                            return 'n';
+                                          }
+                                          if (var2Lifetime1 == 209) {
+                                            return 'n';
+                                          }
+                                          if (var2Lifetime1 != 223) {
+                                            return Character.toLowerCase(param1);
+                                          }
+                                          return 'b';
+                                        }
+                                        return 'y';
+                                      }
+                                      return 'c';
+                                    }
+                                  }
+                                }
+                                return 'u';
+                              }
+                            }
+                          }
+                        }
+                        return 'o';
+                      }
+                    }
+                    return 'i';
+                  }
+                }
+              }
+              return 'e';
+            }
+            return 'a';
+          }
+          return param1;
+        }
+        return '_';
+    }
+
+    final static void openExternalUrl(int param0, String param1, boolean param2, java.applet.Applet param3) {
+        try {
+          RuntimeException stackIn_11_0 = null;
+          StringBuilder stackIn_11_1 = null;
+          String stackIn_12_2 = null;
+          StringBuilder stackIn_14_1 = null;
+          String stackIn_15_2 = null;
+          Throwable decompiledCaughtException = null;
+          java.net.MalformedURLException var4 = null;
+          RuntimeException var4_ref = null;
+          try {
+            if (PlatformTaskDispatcher.field_s.startsWith("win") &&
+              CurvedRoadSegment.openUrlOnWindows(false, param1)) {
+              return;
+            }
+            try {
+              param3.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
+              if (param0 != -7235) {
+                field_a = (int[]) null;
+              }
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+              MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 79, "MGR1: " + param1);
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_11_0 = var4_ref;
+            stackIn_11_1 = new StringBuilder().append("ba.C(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_12_2 = "null";
+            } else {
+              stackIn_12_2 = "{...}";
+            }
+            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',');
+            if (param3 == null) {
+              stackIn_15_2 = "null";
+            } else {
+              stackIn_15_2 = "{...}";
+            }
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    static {
+        field_b = new LoginCredentialType(0);
+        field_a = new int[8192];
+    }
+}

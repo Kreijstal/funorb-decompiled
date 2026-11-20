@@ -29,7 +29,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    final static int a(int param0) {
+    final static int getTickRate(int param0) {
         if (param0 != 855) {
           return -27;
         }

@@ -1,0 +1,34 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class BitwiseIntegerOperations {
+    static java.awt.Font field_e;
+    static String field_c;
+    static SpriteAsset field_d;
+    static SpriteAsset field_b;
+    static SpriteSheetAsset field_a;
+
+    public static void clearSharedReferences(boolean param0) {
+        field_a = null;
+        if (param0) {
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          field_e = null;
+          return;
+        }
+        BitwiseIntegerOperations.clearSharedReferences(true);
+        field_c = null;
+        field_d = null;
+        field_b = null;
+        field_e = null;
+    }
+
+    static int orInts(int param0, int param1) {
+        return param0 | param1;
+    }
+
+    static {
+        field_c = "Activate powerup";
+    }
+}

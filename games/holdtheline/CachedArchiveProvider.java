@@ -105,9 +105,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
           try {
             if (var5 != null &&
               2 < var18.length) {
-              te.field_a.reset();
-              te.field_a.update(var5, 0, -2 + var18.length);
-              var6_int = (int)te.field_a.getValue();
+              EncryptedPacketWriter.field_a.reset();
+              EncryptedPacketWriter.field_a.update(var5, 0, -2 + var18.length);
+              var6_int = (int)EncryptedPacketWriter.field_a.getValue();
               if (this.field_v.field_e[param2] != var6_int) {
                 throw new RuntimeException();
               }
@@ -155,9 +155,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
         try {
           if (var5 != null &&
             var18.length > 2) {
-            te.field_a.reset();
-            te.field_a.update(var5, 0, -2 + var18.length);
-            var6_int = (int)te.field_a.getValue();
+            EncryptedPacketWriter.field_a.reset();
+            EncryptedPacketWriter.field_a.update(var5, 0, -2 + var18.length);
+            var6_int = (int)EncryptedPacketWriter.field_a.getValue();
             if (this.field_v.field_e[param2] != var6_int) {
               throw new RuntimeException();
             }
@@ -471,7 +471,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
         }
         if (this.field_u &&
-          this.field_i <= bb.monotonicTimeMillis(-1)) {
+          this.field_i <= BoundaryLoopTracer.monotonicTimeMillis(-1)) {
           var2 = (ArchiveRequest) (this.field_w.first(0));
           while (var2 != null) {
             if (!var2.field_u) {
@@ -486,7 +486,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
             var2 = (ArchiveRequest) (this.field_w.next(-1));
           }
-          this.field_i = 1000L + bb.monotonicTimeMillis(-1);
+          this.field_i = 1000L + BoundaryLoopTracer.monotonicTimeMillis(-1);
         }
         if (param0 != 2) {
           this.field_y = (DiskCacheStore) null;

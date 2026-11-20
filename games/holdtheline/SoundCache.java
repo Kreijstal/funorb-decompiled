@@ -56,7 +56,7 @@ final class SoundCache {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int getSignedEncodingWidth(byte param0, int param1) {
         int var2;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -264,7 +264,7 @@ final class SoundCache {
           }
           if (param2 != 115) {
             var5 = (CharSequence) null;
-            SoundCache.a(false, true, (CharSequence) null);
+            SoundCache.getDisplayNameError(false, true, (CharSequence) null);
           }
           if (1 != this.field_g.getFileCapacity((byte) 120, param1)) {
             throw new RuntimeException();
@@ -500,7 +500,7 @@ final class SoundCache {
         }
     }
 
-    final static String a(boolean param0, boolean param1, CharSequence param2) {
+    final static String getDisplayNameError(boolean param0, boolean param1, CharSequence param2) {
         int var6 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
@@ -521,7 +521,7 @@ final class SoundCache {
         var8 = HoldTheLine.field_D;
         try {
           if (param2 == null) {
-            stackIn_4_0 = ao.field_e;
+            stackIn_4_0 = BoundaryLoopClipper.field_e;
             return stackIn_4_0;
           }
           var3_int = param2.length();
@@ -552,16 +552,16 @@ final class SoundCache {
                 if (0 >= var5) {
                   return null;
                 }
-                stackIn_36_0 = mj.field_b;
+                stackIn_36_0 = RasterDesaturation.field_b;
                 return stackIn_36_0;
               }
-              stackIn_21_0 = mj.field_b;
+              stackIn_21_0 = RasterDesaturation.field_b;
               return stackIn_21_0;
             }
-            stackIn_16_0 = ao.field_e;
+            stackIn_16_0 = BoundaryLoopClipper.field_e;
             return stackIn_16_0;
           }
-          stackIn_9_0 = ao.field_e;
+          stackIn_9_0 = BoundaryLoopClipper.field_e;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

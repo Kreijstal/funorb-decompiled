@@ -35,10 +35,10 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
     }
 
     private final void submit(byte param0) {
-        if (RoadStripRenderer.b(-106) ||
+        if (RoadStripRenderer.isForcedLogin(-106) ||
           !(0 >= this.accountField.text.length()) &&
           !(0 >= this.passwordField.text.length())) {
-          DelegatingCanvas.a(this.passwordField.text, (byte) -60, this.accountField.text);
+          DelegatingCanvas.beginLogin(this.passwordField.text, (byte) -60, this.accountField.text);
         }
         if (param0 != -23) {
           this.getAccountName(true);
@@ -183,13 +183,13 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           this.accountField = (EditableTextField) ((Object) new ValidatedTextField(param0, (WidgetListener) (this), 100));
           this.passwordField = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetListener) (this), 20));
           if (!this.field_I) {
-            this.field_F = new TextButton(qh.field_c, (WidgetListener) null);
+            this.field_F = new TextButton(KeyboardEventQueue.field_c, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_S) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ue.field_a;
+              stackIn_19_3 = CourseObjectSlot.field_a;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -216,7 +216,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             this.field_N.renderer = (WidgetRenderer) ((Object) var6);
           }
           if (null != this.field_N) {
-            this.field_N.tooltip = ml.field_b;
+            this.field_N.tooltip = MenuLayoutState.field_b;
           }
           if (this.field_I) {
             this.field_Q.tooltip = ValidationState.field_b;
@@ -234,12 +234,12 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             this.y = this.y + (var7.getParagraphHeight(this.field_R, this.width - 40, var7.ascent) + 5);
           }
           var8 = FullscreenErrorDialog.field_bb;
-          var9 = CacheEntry.a(GameKeyHandler.getApplet(110), (byte) 124);
+          var9 = CacheEntry.readLastLoginMethod(GameKeyHandler.getApplet(110), (byte) 124);
           if (var9 == RaceVehicle.field_Wb) {
             var8 = TutorialScriptState.field_d;
           } else {
             if (var9 == ArcTrackBoundary.field_s) {
-              var8 = co.field_c;
+              var8 = ClientLifecycleUtilities.field_c;
             }
           }
           dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.accountField, false, 80, 3, var7, 16777215, var8);
@@ -344,7 +344,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           if (param2.field_l != -1) {
             var16 = new Sprite(var4_int, var5);
             var6 = var16;
-            vb.a(-55, var16);
+            JagexLogoRenderer.pushSpriteRaster(-55, var16);
             var7_int = var5 * 3 / 4;
             var8 = var7_int * 3 / 4;
             if (!param2.field_r) {
@@ -370,9 +370,9 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             return stackIn_10_0;
           }
           var7 = new Sprite(640, 480);
-          vb.a(param3 ^ 12341, var7);
-          LabeledField.a(param1, param2, false);
-          l.a(param3 ^ -17640, param2);
+          JagexLogoRenderer.pushSpriteRaster(param3 ^ 12341, var7);
+          LabeledField.drawCourseBaseLayer(param1, param2, false);
+          CollisionGeometry.drawCourseEdgeStrips(param3 ^ -17640, param2);
           if (param3 != -12392) {
             LoginForm.updatePositionalSounds(0);
           }
@@ -426,7 +426,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         if (!param0) {
           field_L = (String) null;
         }
-        stackIn_6_0 = (null != hh.field_c) && (hh.field_c.canUseAdaptiveSize(true));
+        stackIn_6_0 = (null != HoverTargetState.field_c) && (HoverTargetState.field_c.canUseAdaptiveSize(true));
         return stackIn_6_0;
     }
 
@@ -491,12 +491,12 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             if (param1 != this.field_N) {
               if (param1 == this.field_Q) {
                 if (this.field_I) {
-                  StrongCacheEntry.h(-110);
+                  StrongCacheEntry.requestQuitToWebsite(-110);
                 } else {
                   if (this.field_S) {
                     NodeHashTable.showLoginChoice((byte) 44);
                   } else {
-                    hk.a(-30500);
+                    RoadControlPathBuilder.requestGuestPlay(-30500);
                   }
                 }
               }

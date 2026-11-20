@@ -19,11 +19,11 @@ final class LabeledField extends SingleChildWidget {
         return var3;
     }
 
-    final static void a(boolean param0, String param1, int param2, String param3) {
+    final static void beginLogin(boolean param0, String param1, int param2, String param3) {
         try {
-          o.field_d = param1;
+          BackgroundSprites.field_d = param1;
           RaceSetupMenu.field_v = param3;
-          IsaacPacketBuffer.a(param0, TexturedRoadFillRenderer.field_g, 22676);
+          IsaacPacketBuffer.showAccountProgress(param0, TexturedRoadFillRenderer.field_g, 22676);
           if (param2 >= -5) {
             LabeledField.clearSharedReferences(108);
           }
@@ -100,13 +100,13 @@ final class LabeledField extends SingleChildWidget {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 18701) {
-          LabeledField.b(-116, -1);
+          LabeledField.setLogoMeshTransform(-116, -1);
         }
         field_H = null;
         field_N = null;
     }
 
-    final static void a(int param0, CourseDefinition param1, boolean param2) {
+    final static void drawCourseBaseLayer(int param0, CourseDefinition param1, boolean param2) {
         int var15 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_31_0 = null;
@@ -134,15 +134,15 @@ final class LabeledField extends SingleChildWidget {
             if (param1.field_o != 1) {
               if (param1.field_o == 2) {
                 AccountCreationForm.field_F.field_b.drawUnkeyed(0, 0);
-                mn.a(param1.roadSegments, new TexturedRoadFillRenderer(IterableSecondaryNodeDeque.field_a.field_b), (byte) -40);
+                SessionCookieWriter.drawVisibleRoadFill(param1.roadSegments, new TexturedRoadFillRenderer(IterableSecondaryNodeDeque.field_a.field_b), (byte) -40);
               } else {
                 if (param1.field_o == 3) {
-                  kc.field_b.field_b.drawUnkeyed(0, 0);
-                  mn.a(param1.roadSegments, new TexturedRoadFillRenderer(MarkerSliderRenderer.field_b.field_b, 0.5f), (byte) -102);
+                  BitwiseIntegerOperations.field_b.field_b.drawUnkeyed(0, 0);
+                  SessionCookieWriter.drawVisibleRoadFill(param1.roadSegments, new TexturedRoadFillRenderer(MarkerSliderRenderer.field_b.field_b, 0.5f), (byte) -102);
                 } else {
                   if (4 == param1.field_o) {
                     MarkerSliderRenderer.field_b.field_b.drawUnkeyed(0, 0);
-                    mn.a(param1.roadSegments, new TexturedRoadFillRenderer(BoundaryIntersection.field_i.field_b, 0.5f), (byte) -30);
+                    SessionCookieWriter.drawVisibleRoadFill(param1.roadSegments, new TexturedRoadFillRenderer(BoundaryIntersection.field_i.field_b, 0.5f), (byte) -30);
                   } else {
                     if (param1.field_o != 5) {
                       if (param1.field_o == 6) {
@@ -151,18 +151,18 @@ final class LabeledField extends SingleChildWidget {
                       }
                     } else {
                       BoundaryIntersection.field_i.field_b.drawUnkeyed(0, 0);
-                      mn.a(param1.roadSegments, new TexturedRoadFillRenderer(kc.field_b.field_b, 0.5f), (byte) -125);
+                      SessionCookieWriter.drawVisibleRoadFill(param1.roadSegments, new TexturedRoadFillRenderer(BitwiseIntegerOperations.field_b.field_b, 0.5f), (byte) -125);
                     }
                   }
                 }
               }
             } else {
               AccountCreationForm.field_F.field_b.drawUnkeyed(0, 0);
-              mn.a(param1.roadSegments, new TexturedRoadFillRenderer(ProxySocketConnector.field_h.field_b), (byte) -15);
+              SessionCookieWriter.drawVisibleRoadFill(param1.roadSegments, new TexturedRoadFillRenderer(ProxySocketConnector.field_h.field_b), (byte) -15);
             }
           } else {
             SecondaryNodeDeque.field_h.field_b.drawUnkeyed(0, 0);
-            mn.a(param1.roadSegments, new TexturedRoadFillRenderer(ValidationState.field_e.field_b), (byte) -23);
+            SessionCookieWriter.drawVisibleRoadFill(param1.roadSegments, new TexturedRoadFillRenderer(ValidationState.field_e.field_b), (byte) -23);
           }
           if (param0 != 2 &&
             param0 != 6) {
@@ -228,7 +228,7 @@ final class LabeledField extends SingleChildWidget {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void setLogoMeshTransform(int param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -296,7 +296,7 @@ final class LabeledField extends SingleChildWidget {
           var4 = 1;
           var5 = 1;
         }
-        fe.field_b = GameMenu.createRotationMatrix(var2 * var5, var4 * var2, (byte) -90);
+        GouraudTriangleRasterizer.field_b = GameMenu.createRotationMatrix(var2 * var5, var4 * var2, (byte) -90);
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {

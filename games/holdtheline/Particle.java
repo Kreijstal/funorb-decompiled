@@ -53,11 +53,11 @@ final class Particle extends IntrusiveNode {
                 var1 = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (vb.field_a != null) {
-              for (var1_int = 0; vb.field_a.length > var1_int; var1_int++) {
-                if (null != vb.field_a[var1_int]) {
+            if (JagexLogoRenderer.field_a != null) {
+              for (var1_int = 0; JagexLogoRenderer.field_a.length > var1_int; var1_int++) {
+                if (null != JagexLogoRenderer.field_a[var1_int]) {
                   try {
-                    vb.field_a[var1_int].close(-1);
+                    JagexLogoRenderer.field_a[var1_int].close(-1);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -125,13 +125,13 @@ final class Particle extends IntrusiveNode {
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -16);
           var10.beginBitReading(true);
-          TextFieldRenderer.field_s = SpriteSheetAsset.a(11658, var10);
+          TextFieldRenderer.field_s = SpriteSheetAsset.decodeMeshMaterials(11658, var10);
           ByteStorage.field_c = new TriangleMesh[var3];
           TextFieldValidator.field_e = new int[var3][];
           var4 = 0;
           var5_int = -65 / ((58 - param1) / 41);
           while (var3 > var4) {
-            ByteStorage.field_c[var4] = ClientTextResources.a(6, var8);
+            ByteStorage.field_c[var4] = ClientTextResources.decodeTriangleMesh(6, var8);
             var4++;
           }
           var10.endBitReading(-71);

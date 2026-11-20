@@ -105,7 +105,7 @@ final class LeaderboardRequest extends IntrusiveNode {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.pixels[var8];
                       var19 = 16711935 & var16 * (16711935 & var18) + (var17 & 16711935) * var15 >> 8;
-                      SoftwareRasterizer.pixels[var8] = var19 + LoginChoicePanel.a(65280, LoginChoicePanel.a(var18, 65280) * var16 + LoginChoicePanel.a(65280, var17) * var15 >> 8);
+                      SoftwareRasterizer.pixels[var8] = var19 + LoginChoicePanel.andInts(65280, LoginChoicePanel.andInts(var18, 65280) * var16 + LoginChoicePanel.andInts(65280, var17) * var15 >> 8);
                     } else {
                       SoftwareRasterizer.pixels[var8] = var17;
                     }
@@ -133,7 +133,7 @@ final class LeaderboardRequest extends IntrusiveNode {
         }
     }
 
-    final static void a(RoadStripRenderer param0, GrowableObjectList param1, byte param2) {
+    final static void drawBoundaryStrip(RoadStripRenderer param0, GrowableObjectList param1, byte param2) {
         int var20 = 0;
         int var27 = 0;
         Point2i var3 = null;
@@ -210,14 +210,14 @@ final class LeaderboardRequest extends IntrusiveNode {
         var46 = null;
         var28 = HoldTheLine.field_D;
         try {
-          var34 = o.a((byte) -115);
+          var34 = BackgroundSprites.createGeometryIntList((byte) -115);
           var6 = var34;
-          var35 = o.a((byte) -113);
+          var35 = BackgroundSprites.createGeometryIntList((byte) -113);
           var7 = var35;
           var8 = (BoundaryCurve) (param1.elements[-1 + param1.size]);
           var9 = (BoundaryCurve) (param1.elements[0]);
           var31 = var8.getEndPoint(0);
-          var29 = Vector2i.a(var8, var9, 3251);
+          var29 = Vector2i.boundaryJoinOffset(var8, var9, 3251);
           var30 = new Vector2f(var29);
           var29.scale((float)param0.field_c, -1);
           var30.scale((float)param0.field_h, -1);
@@ -270,9 +270,9 @@ final class LeaderboardRequest extends IntrusiveNode {
                   param0.drawStrip(var6.toArray(-77), var19, (byte) -65, var7.toArray(-60));
                 }
                 var19++;
-                var52 = o.a((byte) -112);
+                var52 = BackgroundSprites.createGeometryIntList((byte) -112);
                 var6 = var52;
-                var53 = o.a((byte) -125);
+                var53 = BackgroundSprites.createGeometryIntList((byte) -125);
                 var7 = var53;
                 var52.add(var50.x, (byte) 97);
                 var52.add(var50.y, (byte) 82);
@@ -283,7 +283,7 @@ final class LeaderboardRequest extends IntrusiveNode {
                 var15 = var14;
               }
               var56 = var46_ref.end;
-              var54 = Vector2i.a(var46_ref, var61, 3251);
+              var54 = Vector2i.boundaryJoinOffset(var46_ref, var61, 3251);
               var55 = new Vector2f(var54);
               var54.scale((float)param0.field_c, -1);
               var55.scale((float)param0.field_h, -1);
@@ -323,11 +323,11 @@ final class LeaderboardRequest extends IntrusiveNode {
                   if (var37_ref.field_p) {
                     param0.drawStrip(var6.toArray(-97), var19, (byte) -79, var7.toArray(-90));
                   }
-                  var38 = o.a((byte) 78);
+                  var38 = BackgroundSprites.createGeometryIntList((byte) 78);
                   var6 = var38;
                   var15 = var15 + var14;
                   var19++;
-                  var39 = o.a((byte) 55);
+                  var39 = BackgroundSprites.createGeometryIntList((byte) 55);
                   var7 = var39;
                   var38.add(var3Lifetime1.x, (byte) 71);
                   var38.add(var3Lifetime1.y, (byte) 69);
@@ -336,7 +336,7 @@ final class LeaderboardRequest extends IntrusiveNode {
                 }
               }
               var43 = var37_ref.getEndPoint(0);
-              var41 = Vector2i.a(var37_ref, var61, 3251);
+              var41 = Vector2i.boundaryJoinOffset(var37_ref, var61, 3251);
               var42 = new Vector2f(var41);
               var41.scale((float)param0.field_c, -1);
               var42.scale((float)param0.field_h, -1);
@@ -354,8 +354,8 @@ final class LeaderboardRequest extends IntrusiveNode {
             if (var36.field_p) {
               param0.drawStrip(var6.toArray(-88), var19, (byte) -127, var7.toArray(-57));
             }
-            var59 = o.a((byte) 68);
-            var60 = o.a((byte) -109);
+            var59 = BackgroundSprites.createGeometryIntList((byte) 68);
+            var60 = BackgroundSprites.createGeometryIntList((byte) -109);
             var59.add(var3Lifetime1.x, (byte) 68);
             var59.add(var3Lifetime1.y, (byte) 75);
             var60.add(var4Lifetime1.x, (byte) 82);

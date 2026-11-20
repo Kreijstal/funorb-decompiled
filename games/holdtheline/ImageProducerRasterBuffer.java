@@ -46,18 +46,18 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         this.consumer.imageComplete(2);
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createSolidBeveledPanel(int param0, int param1, int param2, int param3) {
         if (param3 != 14) {
           return (Sprite[]) null;
         }
-        return PasswordValidator.a(1, 1, param1, param2, param0);
+        return PasswordValidator.createSolidBeveledPanel(1, 1, param1, param2, param0);
     }
 
     final static long millisSinceServerActivity(int param0) {
         if (param0 <= 67) {
           return 77L;
         }
-        return -cm.field_b + bb.monotonicTimeMillis(-1);
+        return -MenuHitTesting.field_b + BoundaryLoopTracer.monotonicTimeMillis(-1);
     }
 
     final void draw(int param0, int param1, java.awt.Graphics param2, int param3) {
@@ -127,7 +127,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var9 = param0 * param0 - (var7 * var7 + var8 * var8);
             if (var9 > 0) {
               var10 = (float)Math.sqrt((double)var9) / (float)param0;
-              var6.pixels[var3 * (var8 + param0) + (param0 + var7)] = IterableSecondaryNodeDeque.a(var10, -1, param2);
+              var6.pixels[var3 * (var8 + param0) + (param0 + var7)] = IterableSecondaryNodeDeque.scaleRgb(var10, -1, param2);
             }
           }
         }
@@ -191,8 +191,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               }
             }
           }
-          if (i.field_m != null &&
-            i.field_m.isReady((byte) 85)) {
+          if (ShadedNineSlicePanel.field_m != null &&
+            ShadedNineSlicePanel.field_m.isReady((byte) 85)) {
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.J(" + param0 + ')');

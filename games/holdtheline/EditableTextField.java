@@ -108,7 +108,7 @@ class EditableTextField extends TextButton {
             stackIn_7_2 = 0;
           }
           this.moveCaret(stackIn_6_1, stackIn_7_2);
-          var8_long = bb.monotonicTimeMillis(-1);
+          var8_long = BoundaryLoopTracer.monotonicTimeMillis(-1);
           stackIn_10_1 = !(-this.lastClickMillis + var8_long >= 250L);
           this.selectingWord = stackIn_10_1;
           if (this.selectingWord) {
@@ -155,7 +155,7 @@ class EditableTextField extends TextButton {
                 this.caret = var6;
               }
             }
-            this.caretBlinkEpochMillis = bb.monotonicTimeMillis(-1);
+            this.caretBlinkEpochMillis = BoundaryLoopTracer.monotonicTimeMillis(-1);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "nk.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -185,7 +185,7 @@ class EditableTextField extends TextButton {
           if (this.caret != this.selectionAnchor) {
             var8.drawSelection(-108, param1, param2, this.caret, this.selectionAnchor, (UiWidget) (this));
           }
-          var6 = bb.monotonicTimeMillis(-1);
+          var6 = BoundaryLoopTracer.monotonicTimeMillis(-1);
           if ((var6 - this.caretBlinkEpochMillis) % 1000L >= 500L) {
             if (param0 == -9532) {
               return;
@@ -238,7 +238,7 @@ class EditableTextField extends TextButton {
           this.renderer = MenuList.field_b.field_s;
           this.setText(true, param0, 1471);
           this.scrollingEnabled = true;
-          this.caretBlinkEpochMillis = bb.monotonicTimeMillis(-1);
+          this.caretBlinkEpochMillis = BoundaryLoopTracer.monotonicTimeMillis(-1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -395,7 +395,7 @@ class EditableTextField extends TextButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.caretBlinkEpochMillis = bb.monotonicTimeMillis(-1);
+          this.caretBlinkEpochMillis = BoundaryLoopTracer.monotonicTimeMillis(-1);
           if (param2 != -78) {
             return false;
           }

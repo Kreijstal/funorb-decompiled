@@ -13,13 +13,13 @@ final class ReflectionCheck extends IntrusiveNode {
     byte[][][] serializedArguments;
     PlatformTask[] methodTasks;
 
-    final static boolean a(boolean param0) {
+    final static boolean beginReconnectWait(boolean param0) {
         RotatedSpriteAsset.field_n = true;
-        AlternateUsernameLoginCredentials.field_k = 15000L + bb.monotonicTimeMillis(-1);
+        AlternateUsernameLoginCredentials.field_k = 15000L + BoundaryLoopTracer.monotonicTimeMillis(-1);
         if (!param0) {
           return DiskCacheRequest.field_w == 11 ? true : false;
         }
-        ReflectionCheck.a(false);
+        ReflectionCheck.beginReconnectWait(false);
         return DiskCacheRequest.field_w == 11 ? true : false;
     }
 

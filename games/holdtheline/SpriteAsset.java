@@ -37,13 +37,13 @@ final class SpriteAsset {
           return dupTemp$0;
         }
         String var3 = (String) null;
-        SpriteAsset.a(-37, (String) null, (byte) 101, true, 47, (String) null, (String) null);
+        SpriteAsset.createAccount(-37, (String) null, (byte) 101, true, 47, (String) null, (String) null);
         Sprite dupTemp$1 = RoadSegment.loadSpriteByName(this.field_e, (byte) -63);
         this.field_b = dupTemp$1;
         return dupTemp$1;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sortPlayerStatViews(int param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -76,7 +76,7 @@ final class SpriteAsset {
         }
     }
 
-    final static int a(int param0, String param1, byte param2, boolean param3, int param4, String param5, String param6) {
+    final static int createAccount(int param0, String param1, byte param2, boolean param3, int param4, String param5, String param6) {
         AccountFormText var7 = null;
         RuntimeException var7_ref = null;
         AccountFormText var8 = null;
@@ -94,7 +94,7 @@ final class SpriteAsset {
           var9 = -6 / ((0 - param2) / 52);
           var7 = new AccountFormText(param5);
           var8 = new AccountFormText(param1);
-          stackIn_1_0 = NetworkArchiveRequest.a(65500, param0, param4, var7, param3, param6, var8);
+          stackIn_1_0 = NetworkArchiveRequest.processAccountRequest(65500, param0, param4, var7, param3, param6, var8);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

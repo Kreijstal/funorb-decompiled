@@ -27,26 +27,26 @@ final class TrackObject extends MovingEntity {
           field_U = (AccountProtocolState) null;
         }
         TextLayout.field_a = ByteStorage.field_b;
-        if (param2 == dg.field_c) {
+        if (param2 == ClientMenuBootstrap.field_c) {
           if (ByteStorage.field_b == 1) {
-            dg.field_c = 1;
-            ((GameMenu) (l.field_a[1])).beginExitFromCurrentPosition(0);
+            ClientMenuBootstrap.field_c = 1;
+            ((GameMenu) (CollisionGeometry.field_a[1])).beginExitFromCurrentPosition(0);
           }
           ByteStorage.field_b = param2;
         } else {
           ByteStorage.field_b = param2;
-          if (13 == dg.field_c) {
-            ((RaceSetupMenu) (l.field_a[dg.field_c])).beginExit((byte) -116);
+          if (13 == ClientMenuBootstrap.field_c) {
+            ((RaceSetupMenu) (CollisionGeometry.field_a[ClientMenuBootstrap.field_c])).beginExit((byte) -116);
           } else {
-            if (dg.field_c != -1) {
-              ((GameMenu) (l.field_a[dg.field_c])).beginExit(123);
+            if (ClientMenuBootstrap.field_c != -1) {
+              ((GameMenu) (CollisionGeometry.field_a[ClientMenuBootstrap.field_c])).beginExit(123);
             }
           }
           if (ByteStorage.field_b == 13) {
-            ((RaceSetupMenu) (l.field_a[ByteStorage.field_b])).reset((byte) 69, param0);
+            ((RaceSetupMenu) (CollisionGeometry.field_a[ByteStorage.field_b])).reset((byte) 69, param0);
           } else {
             if (ByteStorage.field_b != -1) {
-              ((GameMenu) (l.field_a[ByteStorage.field_b])).reset(param0, -110);
+              ((GameMenu) (CollisionGeometry.field_a[ByteStorage.field_b])).reset(param0, -110);
             }
           }
         }
@@ -119,8 +119,8 @@ final class TrackObject extends MovingEntity {
         if ((4 & this.flags) != param0) {
           this.advanceMotion(0);
           if ((this.flags & 16) != 0) {
-            this.velocityY = this.velocityY * o.field_c;
-            this.velocityX = this.velocityX * o.field_c;
+            this.velocityY = this.velocityY * BackgroundSprites.field_c;
+            this.velocityX = this.velocityX * BackgroundSprites.field_c;
             if (this.velocityX * this.velocityX + this.velocityY * this.velocityY < 0.25f) {
               this.flags = this.flags & -5;
               if ((this.flags & 1024) != 0) {
@@ -254,7 +254,7 @@ final class TrackObject extends MovingEntity {
           var7 = (int)(-this.direction.x * 1024.0f);
           var8 = (int)(-this.direction.y * 1024.0f);
           for (var9 = 0; var9 < 4; var9++) {
-            var11 = SolidRoadStripRenderer.b(2, 256);
+            var11 = SolidRoadStripRenderer.nextRandomInt(2, 256);
             if (var11 < 128) {
               var10 = -16711936 & (-var11 + 256) * (16711935 & var6) | 16711680 & (var6 & 65280) * (256 - var11);
               var10 = var10 + (-16711936 & var11 * 16711935 | 16711680 & 65280 * var11);
@@ -262,22 +262,22 @@ final class TrackObject extends MovingEntity {
             } else {
               var10 = 16744448 | var11 - 128 << 8;
             }
-            var12 = var4 + dg.randomIntInclusive(-2, -1, 2);
-            var13 = dg.randomIntInclusive(-2, -1, 2) + var5;
-            var14 = var7 + dg.randomIntInclusive(-512, -1, 512);
-            var15 = dg.randomIntInclusive(-512, -1, 512) + var8;
-            ArchiveIndex.a(var14, var13, 0, 16, 1, -16, var12, this.layer, MusicPatchPcmStream.field_r.trailParticles, var10, var15, 128, 2);
+            var12 = var4 + ClientMenuBootstrap.randomIntInclusive(-2, -1, 2);
+            var13 = ClientMenuBootstrap.randomIntInclusive(-2, -1, 2) + var5;
+            var14 = var7 + ClientMenuBootstrap.randomIntInclusive(-512, -1, 512);
+            var15 = ClientMenuBootstrap.randomIntInclusive(-512, -1, 512) + var8;
+            ArchiveIndex.createParticle(var14, var13, 0, 16, 1, -16, var12, this.layer, MusicPatchPcmStream.field_r.trailParticles, var10, var15, 128, 2);
           }
         } else {
           if (MusicPatchPcmStream.field_r.raceTicks % 2 == 0) {
-            ArchiveIndex.a((int)(-this.direction.x * 2048.0f), var5, 1, 64, 1, -2, var4, this.layer, MusicPatchPcmStream.field_r.trailParticles, 12632256, (int)(-this.direction.y * 2048.0f), 32, 4);
+            ArchiveIndex.createParticle((int)(-this.direction.x * 2048.0f), var5, 1, 64, 1, -2, var4, this.layer, MusicPatchPcmStream.field_r.trailParticles, 12632256, (int)(-this.direction.y * 2048.0f), 32, 4);
           }
           var6 = (int)(1024.0f * -this.direction.x);
           var7 = (int)(-this.direction.y * 1024.0f);
-          var6 = var6 + (-256 + SolidRoadStripRenderer.b(2, 512));
-          var7 = var7 + (SolidRoadStripRenderer.b(2, 512) - 256);
-          var8 = (SolidRoadStripRenderer.b(2, 128) | 520159104) << 8;
-          ArchiveIndex.a(var6, var5, 0, 16, 1, -16, var4, this.layer, MusicPatchPcmStream.field_r.trailParticles, var8, var7, 128, 1);
+          var6 = var6 + (-256 + SolidRoadStripRenderer.nextRandomInt(2, 512));
+          var7 = var7 + (SolidRoadStripRenderer.nextRandomInt(2, 512) - 256);
+          var8 = (SolidRoadStripRenderer.nextRandomInt(2, 128) | 520159104) << 8;
+          ArchiveIndex.createParticle(var6, var5, 0, 16, 1, -16, var4, this.layer, MusicPatchPcmStream.field_r.trailParticles, var8, var7, 128, 1);
         }
     }
 
@@ -324,7 +324,7 @@ final class TrackObject extends MovingEntity {
     }
 
     private final void setDefinitionAndVelocity(int param0, int param1, float param2, float param3) {
-        this.definition = ArchiveCatalog.a(param1, (byte) 17);
+        this.definition = ArchiveCatalog.getTrackObjectDefinition(param1, (byte) 17);
         if (param0 >= -35) {
           this.flags = 78;
         }

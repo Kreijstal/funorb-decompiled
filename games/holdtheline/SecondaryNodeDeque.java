@@ -27,7 +27,7 @@ final class SecondaryNodeDeque {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void showLoginForm(boolean param0, byte param1) {
         TutorialAction.showLoginForm((byte) -119, false, param0);
         int var2 = 99 % ((param1 + 21) / 62);
     }
@@ -67,7 +67,7 @@ final class SecondaryNodeDeque {
         return null;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean pollMasterIndex(byte param0) {
         if (param0 != 38) {
           field_i = (SpriteAsset) null;
           return LoadProgressDialog.field_Z.loadMasterIndex(-42);
@@ -109,7 +109,7 @@ final class SecondaryNodeDeque {
         return var2Lifetime1;
     }
 
-    final static void a(int param0, IntrusiveDeque param1) {
+    final static void recycleParticles(int param0, IntrusiveDeque param1) {
         try {
           param1.moveAllTo(-30510, RasterBuffer.field_e);
           if (param0 != 256) {
@@ -120,13 +120,13 @@ final class SecondaryNodeDeque {
         }
     }
 
-    final static boolean d(int param0) {
+    final static boolean isFreeAccount(int param0) {
         if (param0 != 0) {
           field_f = 110;
           if (RoadShadowRenderer.isGuestMode((byte) 87)) {
             return false;
           }
-          if (0 >= fc.field_a) {
+          if (0 >= BoundaryIntervalBuilder.field_a) {
             return true;
           }
           return false;
@@ -134,7 +134,7 @@ final class SecondaryNodeDeque {
         if (RoadShadowRenderer.isGuestMode((byte) 87)) {
           return false;
         }
-        if (0 >= fc.field_a) {
+        if (0 >= BoundaryIntervalBuilder.field_a) {
           return true;
         }
         return false;

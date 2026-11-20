@@ -10,13 +10,13 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     static Sprite field_l;
     private MatchingTextValidator field_m;
 
-    final static void b(boolean param0) {
+    final static void handleConnectionLost(boolean param0) {
         if (DiskCacheRequest.field_w == 10) {
-          ka.a(-1);
+          AccountUiUtilities.showReconnecting(-1);
           DiskCacheRequest.field_w = 11;
         } else {
-          if (!ai.a(-91)) {
-            ka.a(-1);
+          if (!MeshLighting.allowsAccountContinuation(-91)) {
+            AccountUiUtilities.showReconnecting(-1);
             DiskCacheRequest.field_w = 11;
           }
         }
@@ -58,14 +58,14 @@ final class EmailConfirmationValidator extends TextFieldValidator {
               return stackIn_4_0;
             }
             if (null != StereoMusicSample.field_g) {
-              if (vb.field_a == null) {
-                vb.field_a = new BufferedRandomAccessFile[TextFieldRenderer.field_v.field_g.length];
+              if (JagexLogoRenderer.field_a == null) {
+                JagexLogoRenderer.field_a = new BufferedRandomAccessFile[TextFieldRenderer.field_v.field_g.length];
               }
-              if (vb.field_a[param0] == null) {
-                vb.field_a[param0] = new BufferedRandomAccessFile(TextFieldRenderer.field_v.field_g[param0], 12000, 0);
+              if (JagexLogoRenderer.field_a[param0] == null) {
+                JagexLogoRenderer.field_a[param0] = new BufferedRandomAccessFile(TextFieldRenderer.field_v.field_g[param0], 12000, 0);
                 TextFieldRenderer.field_v.field_g[param0] = null;
               }
-              var7 = new DiskCacheStore(param0, StereoMusicSample.field_g, vb.field_a[param0], 2097152);
+              var7 = new DiskCacheStore(param0, StereoMusicSample.field_g, JagexLogoRenderer.field_a[param0], 2097152);
             }
             var8 = LoadProgressDialog.field_Z.getArchiveProvider(param0, param3, 113, (DiskCacheStore) (var6), (DiskCacheStore) (var7));
             if (param1) {
@@ -88,7 +88,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     public static void clearSharedReferences(int param0) {
         field_l = null;
         if (param0 != 0) {
-          EmailConfirmationValidator.b(true);
+          EmailConfirmationValidator.handleConnectionLost(true);
           field_i = null;
           return;
         }
@@ -151,7 +151,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                d.field_g = 1 + (int)(var3.longValue() / 1048576L);
+                AccountProtocolContext.field_g = 1 + (int)(var3.longValue() / 1048576L);
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -192,7 +192,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           if (!param0.equals(this.field_k)) {
             var3 = SavedRasterState.getEmailValidationResult((byte) -85, param0);
             if (!var3.isComplete(250)) {
-              stackIn_9_0 = um.field_a;
+              stackIn_9_0 = Cp1252CharacterRules.field_a;
               return stackIn_9_0;
             }
             this.field_k = param0;

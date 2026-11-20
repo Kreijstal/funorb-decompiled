@@ -35,26 +35,26 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
         int var7 = 0;
         var7 = HoldTheLine.field_D;
         try {
-          if (d.field_f != ad.field_b) {
+          if (AccountProtocolContext.field_f != ReflectionCheckSupport.field_b) {
             return false;
           }
           if (param1 != 31881) {
             PasswordFieldRenderer.clearSharedReferences(false);
           }
-          var2_long = bb.monotonicTimeMillis(-1);
-          if (wl.field_c != 0 &&
+          var2_long = BoundaryLoopTracer.monotonicTimeMillis(-1);
+          if (ClassDescriptorResolver.field_c != 0 &&
             TutorialPage.field_o < 0) {
             var4_ref_aa = (DelayedServerPacket) (ByteStorage.field_a.first((byte) 111));
             if (var4_ref_aa != null &&
               var2_long > var4_ref_aa.releaseTime) {
               var4_ref_aa.unlink(0);
-              ad.field_c = var4_ref_aa.payload.length;
+              ReflectionCheckSupport.field_c = var4_ref_aa.payload.length;
               RoadStripRenderer.field_e.position = 0;
-              for (var5_int = 0; var5_int < ad.field_c; var5_int++) {
+              for (var5_int = 0; var5_int < ReflectionCheckSupport.field_c; var5_int++) {
                 RoadStripRenderer.field_e.payload[var5_int] = var4_ref_aa.payload[var5_int];
               }
-              AccountProgressDialog.field_pb = hc.field_e;
-              hc.field_e = RoadStripRenderer.field_l;
+              AccountProgressDialog.field_pb = FixedAngleMath.field_e;
+              FixedAngleMath.field_e = RoadStripRenderer.field_l;
               RoadStripRenderer.field_l = NineSlicePanel.field_c;
               NineSlicePanel.field_c = var4_ref_aa.opcode;
               return true;
@@ -68,28 +68,28 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
               }
               TutorialPage.field_o = RoadStripRenderer.field_e.readCipheredOpcode((byte) 73);
               RoadStripRenderer.field_e.position = 0;
-              ad.field_c = param0[TutorialPage.field_o];
+              ReflectionCheckSupport.field_c = param0[TutorialPage.field_o];
             }
-            if (!TutorialTransition.a((byte) 55)) {
+            if (!TutorialTransition.readPacketPayload((byte) 55)) {
               return false;
             }
-            if (0 == wl.field_c) {
-              AccountProgressDialog.field_pb = hc.field_e;
-              hc.field_e = RoadStripRenderer.field_l;
+            if (0 == ClassDescriptorResolver.field_c) {
+              AccountProgressDialog.field_pb = FixedAngleMath.field_e;
+              FixedAngleMath.field_e = RoadStripRenderer.field_l;
               RoadStripRenderer.field_l = NineSlicePanel.field_c;
               NineSlicePanel.field_c = TutorialPage.field_o;
               TutorialPage.field_o = -1;
               return true;
             }
-            var4 = wl.field_c;
+            var4 = ClassDescriptorResolver.field_c;
             if (TutorialPage.field_d != 0.0) {
               var4 = (int)((double)var4 + BoundaryIntersection.field_n.nextGaussian() * TutorialPage.field_d);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
-            var5 = new DelayedServerPacket((long)var4 + var2_long, TutorialPage.field_o, new byte[ad.field_c]);
-            for (var6 = 0; var6 < ad.field_c; var6++) {
+            var5 = new DelayedServerPacket((long)var4 + var2_long, TutorialPage.field_o, new byte[ReflectionCheckSupport.field_c]);
+            for (var6 = 0; var6 < ReflectionCheckSupport.field_c; var6++) {
               var5.payload[var6] = RoadStripRenderer.field_e.payload[var6];
             }
             ByteStorage.field_a.addLast((byte) -70, var5);
@@ -165,7 +165,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                       if (2 < var7.length) {
                         throw new IllegalArgumentException();
                       }
-                      if (!MusicPatchEnvelope.a((CharSequence) ((Object) var7[1]), true)) {
+                      if (!MusicPatchEnvelope.isDecimalInteger((CharSequence) ((Object) var7[1]), true)) {
                         if (!var7[1].equalsIgnoreCase("off") &&
                           !var7[1].equalsIgnoreCase("none")) {
                           if (var7[1].equalsIgnoreCase("fade")) {
@@ -392,7 +392,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -110 / ((param1 - 73) / 49);
-          stackIn_1_0 = ni.repeatCharacter('*', (byte) -125, param0.text.length());
+          stackIn_1_0 = InterfaceLoadingStatus.repeatCharacter('*', (byte) -125, param0.text.length());
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

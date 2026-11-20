@@ -49,15 +49,15 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         }
     }
 
-    static int a(int param0, int param1) {
+    static int andInts(int param0, int param1) {
         return param0 & param1;
     }
 
     public LoginChoicePanel() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_K = new TextButton(ArchiveKeyRequest.field_m, (WidgetListener) null);
-        this.field_P = new TextButton(um.field_c, (WidgetListener) null);
-        this.field_F = new TextButton(ue.field_a, (WidgetListener) null);
+        this.field_P = new TextButton(Cp1252CharacterRules.field_c, (WidgetListener) null);
+        this.field_F = new TextButton(CourseObjectSlot.field_a, (WidgetListener) null);
         SpriteButtonRenderer var1 = new SpriteButtonRenderer();
         this.field_K.renderer = (WidgetRenderer) ((Object) var1);
         this.field_P.renderer = (WidgetRenderer) ((Object) var1);
@@ -70,7 +70,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         this.field_K.setBounds(this.width - var3 >> 1, (byte) 122, -(2 * var2) - 78 + this.height, 30, var3);
         this.field_P.listener = (WidgetListener) (this);
         this.field_K.listener = (WidgetListener) (this);
-        this.field_K.tooltip = ml.field_b;
+        this.field_K.tooltip = MenuLayoutState.field_b;
         this.field_F.listener = (WidgetListener) (this);
         this.field_F.tooltip = TrackCurve.field_j;
         this.addChild(true, this.field_P);
@@ -97,7 +97,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         field_I = null;
     }
 
-    final static InputValidationError a(byte param0, String param1) {
+    final static InputValidationError validateEmailDomainLabel(byte param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -169,7 +169,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
             return;
           }
           if (param1 == this.field_P) {
-            TextButton.h(param2 + 88);
+            TextButton.showEmptyLoginForm(param2 + 88);
             return;
           }
           if (param1 == this.field_K) {
@@ -179,7 +179,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
           if (param1 != this.field_F) {
             return;
           }
-          FadingDialog.h(0);
+          FadingDialog.continueAsGuest(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

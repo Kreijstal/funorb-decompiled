@@ -6,15 +6,15 @@ final class ClientTextResources {
     static int[] field_a;
     static int field_b;
 
-    final static QuickChatDynamicCommand[] a(int param0) {
+    final static QuickChatDynamicCommand[] getQuickChatDynamicCommands(int param0) {
         RuntimeException var1 = null;
         QuickChatDynamicCommand[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4) {
-            ClientTextResources.a(15, (IsaacPacketBuffer) null);
+            ClientTextResources.decodeTriangleMesh(15, (IsaacPacketBuffer) null);
           }
-          stackIn_4_0 = new QuickChatDynamicCommand[]{ProxyAuthenticationException.field_g, ArchiveKeyRequest.field_n, CacheEntry.field_p, TextLineLayout.field_b, ShadedRoadStripRenderer.field_u, QuickChatDynamicCommand.field_a, IndexedSpriteState.field_h, RotatedSpriteSheetAsset.field_a, hh.field_a, InputValidationError.field_b, ContentTransitionDialog.field_ib, CachedTextLayout.field_n, FullscreenFocusCanvas.field_j, DirectByteStorage.field_k};
+          stackIn_4_0 = new QuickChatDynamicCommand[]{ProxyAuthenticationException.field_g, ArchiveKeyRequest.field_n, CacheEntry.field_p, TextLineLayout.field_b, ShadedRoadStripRenderer.field_u, QuickChatDynamicCommand.field_a, IndexedSpriteState.field_h, RotatedSpriteSheetAsset.field_a, HoverTargetState.field_a, InputValidationError.field_b, ContentTransitionDialog.field_ib, CachedTextLayout.field_n, FullscreenFocusCanvas.field_j, DirectByteStorage.field_k};
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1033,7 +1033,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "cancel");
                 if (null != var2) {
-                  hh.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -116, var2);
+                  HoverTargetState.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -116, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "pleaselogintoplay");
                 if (null != var2) {
@@ -1087,7 +1087,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "justplay");
                 if (null != var2) {
-                  ue.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 116, var2);
+                  CourseObjectSlot.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 116, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "justplay_excl");
                 if (var2 != null) {
@@ -1095,11 +1095,11 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "login");
                 if (null != var2) {
-                  qh.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 119, var2);
+                  KeyboardEventQueue.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 119, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "goback");
                 if (var2 != null) {
-                  um.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -77, var2);
+                  Cp1252CharacterRules.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -77, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "otheroptions");
                 if (var2 != null) {
@@ -1143,7 +1143,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "connectionlost_withreason");
                 if (null != var2) {
-                  fk.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 94, var2);
+                  PopupMenuRenderer.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 94, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "passwordverificationrequired");
                 if (null != var2) {
@@ -1315,7 +1315,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "openinpopupwindow");
                 if (var2 != null) {
-                  m.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 87, var2);
+                  RasterClipTopStack.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 87, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create");
                 if (var2 != null) {
@@ -1439,7 +1439,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_email");
                 if (null != var2) {
-                  cm.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 45, var2);
+                  MenuHitTesting.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 45, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_email_confirm");
                 if (null != var2) {
@@ -1495,7 +1495,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_u13terms");
                 if (var2 != null) {
-                  ta.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -33, var2);
+                  HuffmanTextCodec.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -33, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "login_username_email");
                 if (var2 != null) {
@@ -1503,7 +1503,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "login_username");
                 if (null != var2) {
-                  co.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 80, var2);
+                  ClientLifecycleUtilities.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 80, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "login_email");
                 if (null != var2) {
@@ -1523,7 +1523,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "login_create_tooltip");
                 if (var2 != null) {
-                  ml.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -78, var2);
+                  MenuLayoutState.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -78, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "login_justplay_tooltip");
                 if (null != var2) {
@@ -1567,11 +1567,11 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "create_email_tooltip");
                 if (var2 != null) {
-                  d.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 121, var2);
+                  AccountProtocolContext.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 121, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  lj.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) 97, var2);
+                  RasterStateStack.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) 97, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_age_tooltip");
                 if (null != var2) {
@@ -1579,7 +1579,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_optin_news_tooltip");
                 if (param0 != 1) {
-                  ClientTextResources.a(-120);
+                  ClientTextResources.getQuickChatDynamicCommands(-120);
                 }
                 if (var2 != null) {
                   DropTargetWidget.field_I = RoadLayerMaskRenderer.decodeCp1252((byte) -89, var2);
@@ -1618,7 +1618,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "create_alert_namelength");
                 if (var2 != null) {
-                  ao.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) 81, var2);
+                  BoundaryLoopClipper.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) 81, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "create_alert_namechars");
                 if (null != var2) {
@@ -1626,7 +1626,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_alert_nameleadingspace");
                 if (var2 != null) {
-                  mj.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -97, var2);
+                  RasterDesaturation.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -97, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_alert_doublespace");
                 if (null != var2) {
@@ -1638,7 +1638,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_alert_passrepeated");
                 if (var2 != null) {
-                  ak.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 71, var2);
+                  NineSliceSpriteFactory.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 71, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "create_alert_passlength");
                 if (var2 != null) {
@@ -1654,7 +1654,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  mc.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 75, var2);
+                  IntegerTextParser.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 75, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "create_alert_checkname");
                 if (var2 != null) {
@@ -1842,11 +1842,11 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "loading_fonts");
                 if (null != var2) {
-                  wl.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -100, var2);
+                  ClassDescriptorResolver.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -100, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "loading_soundeffects");
                 if (null != var2) {
-                  um.field_f = RoadLayerMaskRenderer.decodeCp1252((byte) -68, var2);
+                  Cp1252CharacterRules.field_f = RoadLayerMaskRenderer.decodeCp1252((byte) -68, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "loading_music");
                 if (var2 != null) {
@@ -1890,7 +1890,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "unpacking_music");
                 if (null != var2) {
-                  oc.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) 99, var2);
+                  SpriteLayoutUtilities.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) 99, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "unpacking_levels");
                 if (var2 != null) {
@@ -1926,7 +1926,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "music_colon");
                 if (var2 != null) {
-                  nm.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -126, var2);
+                  ResourceArchiveFactory.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -126, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "fullscreen");
                 if (null != var2) {
@@ -2048,7 +2048,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "endgame");
                 if (null != var2) {
-                  ka.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) 67, var2);
+                  AccountUiUtilities.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) 67, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "endtutorial");
                 if (var2 != null) {
@@ -2292,7 +2292,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "notyetachieved");
                 if (null != var2) {
-                  fc.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -116, var2);
+                  BoundaryIntervalBuilder.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -116, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "achieved");
                 if (var2 != null) {
@@ -2504,27 +2504,27 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  wl.field_a[0] = RoadLayerMaskRenderer.decodeCp1252((byte) 63, var2);
+                  ClassDescriptorResolver.field_a[0] = RoadLayerMaskRenderer.decodeCp1252((byte) 63, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "quickchat_shortcut_help,1");
                 if (var2 != null) {
-                  wl.field_a[1] = RoadLayerMaskRenderer.decodeCp1252((byte) 110, var2);
+                  ClassDescriptorResolver.field_a[1] = RoadLayerMaskRenderer.decodeCp1252((byte) 110, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "quickchat_shortcut_help,2");
                 if (null != var2) {
-                  wl.field_a[2] = RoadLayerMaskRenderer.decodeCp1252((byte) -67, var2);
+                  ClassDescriptorResolver.field_a[2] = RoadLayerMaskRenderer.decodeCp1252((byte) -67, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "quickchat_shortcut_help,3");
                 if (null != var2) {
-                  wl.field_a[3] = RoadLayerMaskRenderer.decodeCp1252((byte) -80, var2);
+                  ClassDescriptorResolver.field_a[3] = RoadLayerMaskRenderer.decodeCp1252((byte) -80, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "quickchat_shortcut_help,4");
                 if (null != var2) {
-                  wl.field_a[4] = RoadLayerMaskRenderer.decodeCp1252((byte) 126, var2);
+                  ClassDescriptorResolver.field_a[4] = RoadLayerMaskRenderer.decodeCp1252((byte) 126, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "quickchat_shortcut_help,5");
                 if (var2 != null) {
-                  wl.field_a[5] = RoadLayerMaskRenderer.decodeCp1252((byte) -113, var2);
+                  ClassDescriptorResolver.field_a[5] = RoadLayerMaskRenderer.decodeCp1252((byte) -113, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
@@ -2688,19 +2688,19 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "fs_button_cancel");
                 if (var2 != null) {
-                  d.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 99, var2);
+                  AccountProtocolContext.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 99, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "fs_accept_aftercancel");
                 if (null != var2) {
-                  wl.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 49, var2);
+                  ClassDescriptorResolver.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) 49, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "fs_accept_countdown_sing");
                 if (var2 != null) {
-                  qg.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -39, var2);
+                  TexturedPolygonRenderer.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -39, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "fs_accept_countdown_pl");
                 if (null != var2) {
-                  b.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -34, var2);
+                  SocialListProtocol.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -34, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "fs_nonmember");
                 if (var2 != null) {
@@ -2728,11 +2728,11 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "fs_focus_or_resolution");
                 if (null != var2) {
-                  dm.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 122, var2);
+                  RasterStateRestoration.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) 122, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 ^ 7, "fs_timeout");
                 if (null != var2) {
-                  hc.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -28, var2);
+                  FixedAngleMath.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -28, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "fs_button_tryagain");
                 if (var2 != null) {
@@ -2936,33 +2936,33 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "mustlogin4,1");
                 if (null != var2) {
-                  ak.field_d[1] = RoadLayerMaskRenderer.decodeCp1252((byte) 76, var2);
+                  NineSliceSpriteFactory.field_d[1] = RoadLayerMaskRenderer.decodeCp1252((byte) 76, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "mustlogin4,2");
                 if (null != var2) {
-                  ak.field_d[2] = RoadLayerMaskRenderer.decodeCp1252((byte) 84, var2);
+                  NineSliceSpriteFactory.field_d[2] = RoadLayerMaskRenderer.decodeCp1252((byte) 84, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "mustlogin4,3");
                 if (var2 != null) {
-                  ak.field_d[3] = RoadLayerMaskRenderer.decodeCp1252((byte) 110, var2);
+                  NineSliceSpriteFactory.field_d[3] = RoadLayerMaskRenderer.decodeCp1252((byte) 110, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "mustlogin4,4");
                 if (null != var2) {
-                  ak.field_d[4] = RoadLayerMaskRenderer.decodeCp1252((byte) 64, var2);
+                  NineSliceSpriteFactory.field_d[4] = RoadLayerMaskRenderer.decodeCp1252((byte) 64, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(param0 + 5, "mustlogin4,5");
                 if (null != var2) {
-                  ak.field_d[5] = RoadLayerMaskRenderer.decodeCp1252((byte) 80, var2);
+                  NineSliceSpriteFactory.field_d[5] = RoadLayerMaskRenderer.decodeCp1252((byte) 80, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "mustlogin4,6");
                 if (var2 != null) {
-                  ak.field_d[6] = RoadLayerMaskRenderer.decodeCp1252((byte) 103, var2);
+                  NineSliceSpriteFactory.field_d[6] = RoadLayerMaskRenderer.decodeCp1252((byte) 103, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "mustlogin4,7");
             }
             void loadLoginAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  ak.field_d[7] = RoadLayerMaskRenderer.decodeCp1252((byte) -40, var2);
+                  NineSliceSpriteFactory.field_d[7] = RoadLayerMaskRenderer.decodeCp1252((byte) -40, var2);
                 }
                 var2 = StandardContentTransitionDialog.getNamedArchiveFile(6, "mustlogin_notloggedin");
                 if (null != var2) {
@@ -3087,7 +3087,7 @@ final class ClientTextResources {
         decompiledBody.loadAllText();
     }
 
-    final static TriangleMesh a(int param0, IsaacPacketBuffer param1) {
+    final static TriangleMesh decodeTriangleMesh(int param0, IsaacPacketBuffer param1) {
         TriangleMesh stackIn_6_0 = null;
         int stackIn_30_0 = 0;
         int stackIn_30_1 = 0;

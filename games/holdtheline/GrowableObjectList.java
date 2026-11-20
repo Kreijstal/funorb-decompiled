@@ -41,15 +41,15 @@ final class GrowableObjectList {
         }
         var1 = new Sprite[NineSlicePanel.field_d];
         for (var2 = 0; NineSlicePanel.field_d > var2; var2++) {
-          var3 = EditableTextField.field_K[var2] * ad.field_d[var2];
+          var3 = EditableTextField.field_K[var2] * ReflectionCheckSupport.field_d[var2];
           var21 = IterableSecondaryNodeDeque.field_e[var2];
           if (!SocketConnector.field_f[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {
-              var10[var6] = StraightRoadSegment.field_E[LoginChoicePanel.a((int) var21[var6], 255)];
+              var10[var6] = StraightRoadSegment.field_E[LoginChoicePanel.andInts((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var22);
+            var1[var2] = new Sprite(SpriteDecodeGlobals.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ReflectionCheckSupport.field_d[var2], var22);
           } else {
             var15 = TrackCurve.field_i[var2];
             var11 = var15;
@@ -59,9 +59,9 @@ final class GrowableObjectList {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = kc.a(LoginChoicePanel.a(-16777216, var15[var7] << 24), StraightRoadSegment.field_E[LoginChoicePanel.a((int) var21[var7], 255)]);
+              var6_ref_int__[var7] = BitwiseIntegerOperations.orInts(LoginChoicePanel.andInts(-16777216, var15[var7] << 24), StraightRoadSegment.field_E[LoginChoicePanel.andInts((int) var21[var7], 255)]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(SpriteDecodeGlobals.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ReflectionCheckSupport.field_d[var2], var17));
           }
         }
         VehicleEngineSounds.clearDecodedSpriteSheet(false);
@@ -76,7 +76,7 @@ final class GrowableObjectList {
           }
           if (param1 != 6) {
             PaletteBitmapFont var4 = (PaletteBitmapFont) null;
-            GrowableObjectList.a(((int[]) (this.elements[5]))[6], -83, (String) null, 82, -33, (PaletteBitmapFont) null);
+            GrowableObjectList.drawTextWithHighlight(((int[]) (this.elements[5]))[6], -83, (String) null, 82, -33, (PaletteBitmapFont) null);
           }
           fieldTemp$0 = this.size;
           this.size = this.size + 1;
@@ -86,7 +86,7 @@ final class GrowableObjectList {
         }
     }
 
-    final static void a(int param0, int param1, String param2, int param3, int param4, PaletteBitmapFont param5) {
+    final static void drawTextWithHighlight(int param0, int param1, String param2, int param3, int param4, PaletteBitmapFont param5) {
         try {
           param5.drawAlpha(param2, 1 + param0, param4 + param1, 8, -1, 114);
           param5.draw(param2, param0, param4, param3, -1);
@@ -95,7 +95,7 @@ final class GrowableObjectList {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, byte param4) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
