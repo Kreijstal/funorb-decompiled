@@ -44,7 +44,7 @@ final class v extends UiFocusableComponent {
               var10 = new int[var3];
               var26 = var10;
               for (var6 = 0; var3 > var6; var6++) {
-                var10[var6] = rlb.field_d[dla.a((int) var25[var6], 255)];
+                var10[var6] = LegacyOpenGlTextureCache.field_d[dla.andBits((int) var25[var6], 255)];
               }
               var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var26);
             } else {
@@ -56,7 +56,7 @@ final class v extends UiFocusableComponent {
               var13 = var17;
               var6_ref_int__ = var13;
               for (var7 = 0; var3 > var7; var7++) {
-                var6_ref_int__[var7] = SetAngularForceDownshift.a(dla.a(var15[var7] << 24, -16777216), rlb.field_d[dla.a((int) var25[var7], 255)]);
+                var6_ref_int__[var7] = SetAngularForceDownshift.orBits(dla.andBits(var15[var7] << 24, -16777216), LegacyOpenGlTextureCache.field_d[dla.andBits((int) var25[var7], 255)]);
               }
               var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
             }
@@ -70,7 +70,7 @@ final class v extends UiFocusableComponent {
               var10 = new int[var3];
               var24 = var10;
               for (var6 = 0; var3 > var6; var6++) {
-                var10[var6] = rlb.field_d[dla.a((int) var23[var6], 255)];
+                var10[var6] = LegacyOpenGlTextureCache.field_d[dla.andBits((int) var23[var6], 255)];
               }
               var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var24);
             } else {
@@ -82,7 +82,7 @@ final class v extends UiFocusableComponent {
               var13 = var17;
               var6_ref_int__ = var13;
               for (var7 = 0; var3 > var7; var7++) {
-                var6_ref_int__[var7] = SetAngularForceDownshift.a(dla.a(var15[var7] << 24, -16777216), rlb.field_d[dla.a((int) var23[var7], 255)]);
+                var6_ref_int__[var7] = SetAngularForceDownshift.orBits(dla.andBits(var15[var7] << 24, -16777216), LegacyOpenGlTextureCache.field_d[dla.andBits((int) var23[var7], 255)]);
               }
               var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
             }

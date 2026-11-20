@@ -433,7 +433,7 @@ final class ThrusterBehaviour implements DiffableState {
         if (param0 > -53) {
           return false;
         }
-        return ho.field_a.loadMasterIndex(true);
+        return ArchiveIndexLoaderState.loader.loadMasterIndex(true);
     }
 
     public ThrusterBehaviour() {

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ilb {
+final class LoadingAnimationControl {
     private static String field_z;
 
-    final static void a(byte param0) {
-        GetAllowShipSaving.a(4410);
+    final static void finishAnimations(byte param0) {
+        GetAllowShipSaving.finishLoadingAnimations(4410);
         if (param0 != -114) {
           return;
         }

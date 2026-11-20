@@ -29,7 +29,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
 
     final static void e(int param0) {
         SetFightersPerPlayerMaximum.field_p = true;
-        ow.field_b = 0;
+        NetworkMessageState.chatChannel = 0;
         if (param0 != 1) {
           field_o = -76;
         }

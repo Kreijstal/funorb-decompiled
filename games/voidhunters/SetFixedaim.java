@@ -19,7 +19,7 @@ final class SetFixedaim extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    static int a(int param0, int param1) {
+    static int xorBits(int param0, int param1) {
         return param0 ^ param1;
     }
 

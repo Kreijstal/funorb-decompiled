@@ -35,7 +35,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
               }
               var7 = new ArchiveDisk(param4, GpuNativeHeap.field_e, btb.field_d[param4], 2097152);
             }
-            var8 = ho.field_a.getArchiveProvider(param4, 5, (ArchiveDisk) (var6), (ArchiveDisk) (var7), param3);
+            var8 = ArchiveIndexLoaderState.loader.getArchiveProvider(param4, 5, (ArchiveDisk) (var6), (ArchiveDisk) (var7), param3);
             if (param1) {
               var8.prefetchAllGroups((byte) -82);
             }

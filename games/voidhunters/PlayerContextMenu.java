@@ -356,7 +356,7 @@ final class PlayerContextMenu {
                       fia.a(this.actionData, this.channelType, (byte) 105, this.targetPlayerKey, this.targetName);
                       return true;
                     }
-                    or.a(0);
+                    ChatChannelControl.setChatChannel(0);
                   } else {
                     NetworkArchiveRequest.e(1);
                   }

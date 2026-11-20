@@ -104,7 +104,7 @@ final class SetVariableLabelActionFactory implements GameStateFactory {
                 var22 = var22 + (var19 & 255);
                 incrementValue$9 = var15;
                 var15++;
-                var13[incrementValue$9] = SetAngularForceDownshift.a(dla.a(var22 >> 2, 255), SetAngularForceDownshift.a(dla.a(var21, 1020) << 6, SetAngularForceDownshift.a(dla.a(16711680, var20 << 14), dla.a(-16777216, var23 << 22))));
+                var13[incrementValue$9] = SetAngularForceDownshift.orBits(dla.andBits(var22 >> 2, 255), SetAngularForceDownshift.orBits(dla.andBits(var21, 1020) << 6, SetAngularForceDownshift.orBits(dla.andBits(16711680, var20 << 14), dla.andBits(-16777216, var23 << 22))));
               }
               var24 = var24 + param7;
               var25 = var25 + param7;

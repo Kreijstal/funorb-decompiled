@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cib {
-    static String field_a;
+final class BaseObjectiveLabel {
+    static String text;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
-        field_a = null;
+        text = null;
         if (param0 != -18013) {
-          cib.clearSharedReferences(124);
+          BaseObjectiveLabel.clearSharedReferences(124);
         }
     }
 
     static {
         field_z = "cib.A(";
-        field_a = "base";
+        text = "base";
     }
 }

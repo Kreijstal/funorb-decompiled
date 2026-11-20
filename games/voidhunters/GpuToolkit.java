@@ -2317,7 +2317,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 for (var8 = 0; param0.width > var8; var8++) {
                   incrementValue$0 = var6;
                   var6++;
-                  var4[incrementValue$0] = SetAngularForceDownshift.a(param0.palette[dla.a(255, (int) param0.pixels[var5])], param0.alpha[var5] << 24);
+                  var4[incrementValue$0] = SetAngularForceDownshift.orBits(param0.palette[dla.andBits(255, (int) param0.pixels[var5])], param0.alpha[var5] << 24);
                   var5++;
                 }
               }
@@ -2332,7 +2332,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                   stackIn_12_0 = var4;
                   stackIn_12_1 = incrementValue$2;
                   if (var9 != 0) {
-                    stackIn_13_2 = SetAngularForceDownshift.a(-16777216, var9);
+                    stackIn_13_2 = SetAngularForceDownshift.orBits(-16777216, var9);
                   } else {
                     stackIn_13_2 = 0;
                   }

@@ -292,10 +292,10 @@ public final class VoidHunters extends NetworkGameClient {
             if (param0 == 63) {
               var4 = qga.field_b.readUnsignedByte((byte) -107);
               if (var3 != null) {
-                ((GameSession) (var3)).state.field_f = var4;
+                ((GameSession) (var3)).state.drawOfferMask = var4;
                 decompiledFrameRemainder0 = (null != MatchingFieldValidator.field_g);
                 if (decompiledFrameRemainder0) {
-                  PolarDisplacementTextureOperation.d(-19057);
+                  PolarDisplacementTextureOperation.updateDrawMenuLabel(-19057);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -307,11 +307,11 @@ public final class VoidHunters extends NetworkGameClient {
                 if (param0 == 65) {
                   var4Lifetime1 = qga.field_b.readUnsignedByte((byte) -110);
                   if (var3 != null) {
-                    ((GameSession) (var3)).state.field_k = var4Lifetime1;
+                    ((GameSession) (var3)).state.rematchRequestMask = var4Lifetime1;
                     if (null == MatchingFieldValidator.field_g) {
                       return;
                     }
-                    VariableCondition.b(param1 ^ -86);
+                    VariableCondition.updateRematchMenuLabel(param1 ^ -86);
                   }
                   return;
                 }
@@ -322,7 +322,7 @@ public final class VoidHunters extends NetworkGameClient {
                     if (null == MatchingFieldValidator.field_g) {
                       return;
                     }
-                    VariableCondition.b(-106);
+                    VariableCondition.updateRematchMenuLabel(-106);
                   }
                   return;
                 }
@@ -369,8 +369,8 @@ public final class VoidHunters extends NetworkGameClient {
               if (param0 == 57) {
                 MatchingFieldValidator.field_g = (GameSession) (var3Lifetime1);
                 GetThrusterSmallForce.field_o = true;
-                PolarDisplacementTextureOperation.d(-19057);
-                VariableCondition.b(-126);
+                PolarDisplacementTextureOperation.updateDrawMenuLabel(-19057);
+                VariableCondition.updateRematchMenuLabel(-126);
                 SetDebrisSurvives.e((byte) -76);
               } else {
                 SetMissionTerrainDebrisProbability.field_p = true;
@@ -486,7 +486,7 @@ public final class VoidHunters extends NetworkGameClient {
           }
         }
         while (GetSelfDestructTimer.a(0, ta.serverPacketLengths)) {
-          var3Lifetime1 = ow.field_a;
+          var3Lifetime1 = NetworkMessageState.incomingOpcode;
           this.handleServerPacket(var3Lifetime1, 12);
         }
         SetReverbWidth.a(0, -29008);
@@ -527,7 +527,7 @@ public final class VoidHunters extends NetworkGameClient {
             GetSalvoDamageMultiplier.a(50, 4);
             GetReverbGain.resendClientDataRequests(6, (byte) -52);
             RasterShapesTextureOperation.resendIntegerRecordRequests(5, 0);
-            GetReverbDry.a(-115);
+            GetReverbDry.resetReflectionCheckQueue(-115);
             if (1 == var4) {
               if (MatchingFieldValidator.field_g == null ||
                 MatchingFieldValidator.field_g.networked) {
@@ -929,7 +929,7 @@ public final class VoidHunters extends NetworkGameClient {
         SpecialOrderSubmessage.clearSharedReferences(-120);
         ToolkitPolygonRasterizer.clearSharedReferences();
         ncb.clearSharedReferences(500);
-        cib.clearSharedReferences(-18013);
+        BaseObjectiveLabel.clearSharedReferences(-18013);
         Widget.clearSharedReferences(-2147483648);
         TutorialController.clearSharedReferences(39);
         hw.clearSharedReferences(-1);
@@ -1042,7 +1042,7 @@ public final class VoidHunters extends NetworkGameClient {
         QuickChatMenuWidget.clearSharedReferences(85);
         QuickChatCategoryLoader.clearSharedReferences((byte) -33);
         SystemNanoClock.clearSharedReferences((byte) -58);
-        eua.clearSharedReferences(-128);
+        UnratedRematchText.clearSharedReferences(-128);
         ToolkitRasterStateCache.clearSharedReferences((byte) 122);
         alb.clearSharedReferences(6947);
         UiToggleButtonRenderer.clearSharedReferences(22089);
@@ -1120,7 +1120,7 @@ public final class VoidHunters extends NetworkGameClient {
         gm.clearSharedReferences(-2459);
         UiToggleButton.clearSharedReferences(-125);
         TextFieldValidator.clearSharedReferences(-27183);
-        reb.clearSharedReferences(false);
+        LogoFinalFrameBottom.clearSharedReferences(false);
         Under13AccountNoticePanel.clearSharedReferences((byte) 77);
         ut.clearSharedReferences(-72);
         MidiEnvelope.clearSharedReferences(-17719);
@@ -1132,7 +1132,7 @@ public final class VoidHunters extends NetworkGameClient {
         IntrusiveNodeHashTable.clearSharedReferences((byte) -126);
         SecondaryNodeDeque.clearSharedReferences(!param0 ? true : false);
         SoftwareFramebuffer.clearSharedReferences(true);
-        rlb.clearSharedReferences(-120);
+        LegacyOpenGlTextureCache.clearSharedReferences(-120);
         LegacyOpenGlMaterialEffectManager.clearSharedReferences(param0);
         OpenGlPostProcessor.clearSharedReferences(1);
         OpenGlBloomEffect.clearSharedReferences(0);
@@ -1245,7 +1245,7 @@ public final class VoidHunters extends NetworkGameClient {
         kt.clearSharedReferences((byte) -19);
         gna.clearSharedReferences(false);
         vjb.clearSharedReferences((byte) 53);
-        ho.clearSharedReferences(13032);
+        ArchiveIndexLoaderState.clearSharedReferences(13032);
         OpenGlGpuTexture2D.clearSharedReferences((byte) 42);
         OpenGlGpuRectangleTexture.clearSharedReferences(106);
         OpenGlGpuCubeTexture.clearSharedReferences(6);
@@ -1823,7 +1823,7 @@ public final class VoidHunters extends NetworkGameClient {
           return false;
         }
         ComponentCollision.a("Initing menus", (byte) -62);
-        csa.b((byte) -111);
+        csa.checkObfuscationGuard((byte) -111);
         for (var2 = 0; var2 < 10; var2++) {
           lo.field_a[var2] = new GameMenuScreen(var2);
         }

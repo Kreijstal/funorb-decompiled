@@ -14,7 +14,7 @@ final class ai {
         SetUseCircleFill.field_o.addChild(param1 ^ -561, ProjectileHit.field_d);
         SetUseCircleFill.field_o.addChild(param1 ^ -561, SetUseModels.field_o);
         SetUseModels.field_o.addChild(-561, DualLinkNode.field_f);
-        SetUseModels.field_o.addChild(-561, rlb.field_a);
+        SetUseModels.field_o.addChild(-561, LegacyOpenGlTextureCache.field_a);
         ShipBodyFactory.a((byte) 100, param0);
     }
 

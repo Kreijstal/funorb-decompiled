@@ -111,7 +111,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         if (this.soundEffectArchive != null &&
           this.vorbisArchive != null) {
           ComponentCollision.a("Unpacking sounds", (byte) -104);
-          GetAllowShipSaving.a(4410);
+          GetAllowShipSaving.finishLoadingAnimations(4410);
           IncrementVariableAction.a(OpenGlVertexDeclaration.field_e, param0 ^ -69, 82.0f);
           mab.field_a.renderGameFrame(param0 - 187);
           this.soundCache = new SoundCache(this.soundEffectArchive, this.vorbisArchive);

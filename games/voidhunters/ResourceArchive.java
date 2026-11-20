@@ -321,7 +321,7 @@ final class ResourceArchive {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            GetPlayerRepairTime.field_o[var7 / 8] = (byte)SetAngularForceDownshift.a((int) GetPlayerRepairTime.field_o[var7 / 8], 1 << var7 % 8);
+            GetPlayerRepairTime.field_o[var7 / 8] = (byte)SetAngularForceDownshift.orBits((int) GetPlayerRepairTime.field_o[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_64_0 = (!param2) ? 0 : -1;
@@ -347,7 +347,7 @@ final class ResourceArchive {
                         GetPlayerRepairTime.field_o[var9] = (byte) 0;
                       }
                     } else {
-                      GetPlayerRepairTime.field_o[var7 / 8] = (byte)SetFixedaim.a((int) GetPlayerRepairTime.field_o[var7 / 8], 1 << dla.a(7, var7));
+                      GetPlayerRepairTime.field_o[var7 / 8] = (byte)SetFixedaim.xorBits((int) GetPlayerRepairTime.field_o[var7 / 8], 1 << dla.andBits(7, var7));
                     }
                   }
                 }
@@ -570,16 +570,16 @@ final class ResourceArchive {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime3; var6Lifetime3 - (-var31.length + 1) > var18; var18++) {
-                      GetDebrisThrowable.field_p[var18 / 8] = (byte)dla.a((int) GetDebrisThrowable.field_p[var18 / 8], ~(1 << dla.a(7, var18)));
+                      GetDebrisThrowable.field_p[var18 / 8] = (byte)dla.andBits((int) GetDebrisThrowable.field_p[var18 / 8], ~(1 << dla.andBits(7, var18)));
                     }
                   } else {
-                    GetDebrisThrowable.field_p[(var9 + var6Lifetime3) / 8] = (byte)SetFixedaim.a((int) GetDebrisThrowable.field_p[(var9 + var6Lifetime3) / 8], 1 << dla.a(var6Lifetime3 + var9, 7));
+                    GetDebrisThrowable.field_p[(var9 + var6Lifetime3) / 8] = (byte)SetFixedaim.xorBits((int) GetDebrisThrowable.field_p[(var9 + var6Lifetime3) / 8], 1 << dla.andBits(var6Lifetime3 + var9, 7));
                   }
                 }
               }
               if (param2 &&
                 var16Lifetime1 != 0) {
-                GetDebrisThrowable.field_p[(var6Lifetime3 + var9) / 8] = (byte)dla.a((int) GetDebrisThrowable.field_p[(var6Lifetime3 + var9) / 8], ~(1 << dla.a(var9 + var6Lifetime3, 7)));
+                GetDebrisThrowable.field_p[(var6Lifetime3 + var9) / 8] = (byte)dla.andBits((int) GetDebrisThrowable.field_p[(var6Lifetime3 + var9) / 8], ~(1 << dla.andBits(var9 + var6Lifetime3, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_Q) {

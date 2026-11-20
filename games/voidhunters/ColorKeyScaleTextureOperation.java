@@ -30,9 +30,9 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
                 } else {
                   if (var5 == 4) {
                     var4_int = param2.readUnsignedMedium((byte) -57);
-                    this.targetColor[1] = dla.a(var4_int >> 4, 4080);
-                    this.targetColor[2] = dla.a(255, var4_int) >> 12;
-                    this.targetColor[0] = dla.a(var4_int, 16711680) << 4;
+                    this.targetColor[1] = dla.andBits(var4_int >> 4, 4080);
+                    this.targetColor[2] = dla.andBits(255, var4_int) >> 12;
+                    this.targetColor[0] = dla.andBits(var4_int, 16711680) << 4;
                   }
                 }
               } else {

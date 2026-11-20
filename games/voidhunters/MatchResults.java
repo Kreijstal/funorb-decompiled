@@ -169,7 +169,7 @@ final class MatchResults implements DiffableState {
           return;
         }
         LegacyOpenGlScrollingNoiseEffect.field_e = null;
-        rlb.field_d = null;
+        LegacyOpenGlTextureCache.field_d = null;
         SetMissionTerrainDebrisProbability.field_o = null;
         sh.field_a = (byte[][]) null;
         SettingsChange.field_f = null;

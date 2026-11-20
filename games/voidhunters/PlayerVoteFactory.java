@@ -102,7 +102,7 @@ final class PlayerVoteFactory implements GameStateFactory {
         try {
           waa.field_x = param0;
           int var4_int = -104 / ((-6 - param2) / 42);
-          ow.field_b = 2;
+          NetworkMessageState.chatChannel = 2;
           var5 = (CharSequence) ((Object) param0);
           GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var5);
           lsa.field_f = param1;

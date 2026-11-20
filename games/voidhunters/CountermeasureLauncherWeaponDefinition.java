@@ -17,7 +17,7 @@ final class CountermeasureLauncherWeaponDefinition extends WeaponDefinition {
 
     final int getAimArc(int param0) {
         int var2 = 63 % ((7 - param0) / 47);
-        return rlb.field_e;
+        return LegacyOpenGlTextureCache.field_e;
     }
 
     final boolean hasRecoil(byte param0) {

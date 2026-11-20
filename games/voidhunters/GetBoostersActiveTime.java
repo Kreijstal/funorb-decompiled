@@ -177,7 +177,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               if (99 != var9Lifetime1) {
                 tc.field_c = OpenGlGpuCubeTexture.field_k;
                 PartitioningManagerFactory.field_a = -1;
-                ow.field_a = var9Lifetime1;
+                NetworkMessageState.incomingOpcode = var9Lifetime1;
               } else {
                 ShipBlueprint.a(SetWorldWidthUpshift.a(param4 + 24655), 30000);
                 ehb.field_f = new Boolean(SetSpecialOrderBarYOffset.a(param4 - 2, qga.field_b));
@@ -207,7 +207,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           }
           if (tc.field_c == OpenGlGpuCubeTexture.field_k &&
             PlayerJoinFactory.b((byte) 46)) {
-            if (ow.field_a == 255) {
+            if (NetworkMessageState.incomingOpcode == 255) {
               var9_ref_String = qga.field_b.readNullableString(0);
               if (var9_ref_String != null) {
                 SetNebulaProximityFadeDownshift.a(MissionList.b((byte) -123), var9_ref_String, -1);
@@ -217,7 +217,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             }
             FighterBayWeaponDefinition.l(-122);
             SetShowTutorial.field_o = false;
-            stackIn_55_0 = ow.field_a;
+            stackIn_55_0 = NetworkMessageState.incomingOpcode;
             return stackIn_55_0;
           }
           if (SetShipSpawnInvulnerabilityTime.field_o == null) {

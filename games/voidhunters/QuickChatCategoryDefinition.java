@@ -17,14 +17,14 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         int var2Lifetime1;
         if (this.phraseIds != null) {
           for (var2 = 0; this.phraseIds.length > var2; var2++) {
-            this.phraseIds[var2] = SetAngularForceDownshift.a(this.phraseIds[var2], 32768);
+            this.phraseIds[var2] = SetAngularForceDownshift.orBits(this.phraseIds[var2], 32768);
           }
         }
         if (this.categoryIds != null) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.categoryIds.length > var4) {
-            this.categoryIds[var4] = SetAngularForceDownshift.a(this.categoryIds[var4], 32768);
+            this.categoryIds[var4] = SetAngularForceDownshift.orBits(this.categoryIds[var4], 32768);
             var4++;
           }
         }
@@ -91,7 +91,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
               this.categoryShortcuts = new char[var4_int];
               this.categoryIds = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.categoryIds[var5] = param2.readUnsignedShort(SetFixedaim.a((int) param1, 1886));
+                this.categoryIds[var5] = param2.readUnsignedShort(SetFixedaim.xorBits((int) param1, 1886));
                 var6 = param2.readByte((byte) -114);
                 stackIn_8_0 = this.categoryShortcuts;
                 stackIn_8_1 = var5;

@@ -223,33 +223,33 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final static void b(int param0) {
+    final static void updateRematchMenuLabel(int param0) {
         int var2 = VoidHunters.field_G;
-        if ((1 << MatchingFieldValidator.field_g.localPlayerIndex & MatchingFieldValidator.field_g.state.field_k) != 0) {
-          HighscoreValueRequest.field_g[10] = !MatchingFieldValidator.field_g.field_h ? GetMachineGunAimarc.field_o : csa.field_b;
+        if ((1 << MatchingFieldValidator.field_g.localPlayerIndex & MatchingFieldValidator.field_g.state.rematchRequestMask) != 0) {
+          HighscoreValueRequest.menuActionLabels[10] = !MatchingFieldValidator.field_g.field_h ? GetMachineGunAimarc.field_o : csa.field_b;
           if (param0 > -76) {
             field_e = false;
             return;
           }
           return;
         }
-        if (MatchingFieldValidator.field_g.state.field_k == 0) {
+        if (MatchingFieldValidator.field_g.state.rematchRequestMask == 0) {
           if ((MatchingFieldValidator.field_g.field_B | 1 << MatchingFieldValidator.field_g.localPlayerIndex) != -1 + (1 << MatchingFieldValidator.field_g.state.field_a)) {
-            HighscoreValueRequest.field_g[10] = !MatchingFieldValidator.field_g.field_h ? ffb.field_d : eua.field_a;
+            HighscoreValueRequest.menuActionLabels[10] = !MatchingFieldValidator.field_g.field_h ? ffb.field_d : UnratedRematchText.text;
             if (param0 > -76) {
               field_e = false;
               return;
             }
             return;
           }
-          HighscoreValueRequest.field_g[10] = MatchingFieldValidator.field_g.field_h ? SpawnEnemyShipOrderDefinition.field_e : SettingsChangeFactory.field_d;
+          HighscoreValueRequest.menuActionLabels[10] = MatchingFieldValidator.field_g.field_h ? SpawnEnemyShipOrderDefinition.field_e : SettingsChangeFactory.field_d;
           if (param0 <= -76) {
             return;
           }
           field_e = false;
           return;
         }
-        HighscoreValueRequest.field_g[10] = !MatchingFieldValidator.field_g.field_h ? SetBlueprintSaveTime.field_o : BufferedFile.field_d;
+        HighscoreValueRequest.menuActionLabels[10] = !MatchingFieldValidator.field_g.field_h ? SetBlueprintSaveTime.field_o : BufferedFile.field_d;
         if (param0 <= -76) {
           return;
         }

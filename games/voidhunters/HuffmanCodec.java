@@ -53,7 +53,7 @@ final class HuffmanCodec {
             var14 = var12 + (var11 + (var13 - 1) >> 3);
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = SetAngularForceDownshift.a(var7_int, var10 >>> var13);
+            dupTemp$0 = SetAngularForceDownshift.orBits(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param2[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -189,7 +189,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = SetAngularForceDownshift.a(var11, var12);
+                  var3[var10] = SetAngularForceDownshift.orBits(var11, var12);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

@@ -42,7 +42,7 @@ class bia extends tb {
         GetPlayerRepairTime.rasterStatePool.addLast(-10258, var1_refLifetime1);
     }
 
-    final static PcmStreamMixer a(boolean param0) {
+    final static PcmStreamMixer getPcmStreamMixer(boolean param0) {
         if (!param0) {
           return (PcmStreamMixer) null;
         }

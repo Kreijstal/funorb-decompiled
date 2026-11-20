@@ -34,9 +34,9 @@ final class ColorGradientTextureOperation extends TextureOperation {
               var4 = 256;
             }
             var4 = this.lookup[var4];
-            var6[var9] = dla.a(4080, var4 >> 12);
-            var7[var9] = dla.a(4080, var4 >> 4);
-            var8[var9] = dla.a(var4 << 4, 4080);
+            var6[var9] = dla.andBits(4080, var4 >> 12);
+            var7[var9] = dla.andBits(4080, var4 >> 4);
+            var8[var9] = dla.andBits(var4 << 4, 4080);
           }
         }
         return var11;
@@ -124,7 +124,7 @@ final class ColorGradientTextureOperation extends TextureOperation {
                 var4 = 255;
               }
             }
-            this.lookup[var6] = SetAngularForceDownshift.a(var4, SetAngularForceDownshift.a(var3 << 8, var2 << 16));
+            this.lookup[var6] = SetAngularForceDownshift.orBits(var4, SetAngularForceDownshift.orBits(var3 << 8, var2 << 16));
           }
         }
         if (param0 < 93) {

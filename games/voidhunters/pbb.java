@@ -33,10 +33,10 @@ final class pbb implements UiRenderer {
             if (SoftwareRasterizer2D.clipTop <= var9 &&
               var9 < SoftwareRasterizer2D.clipBottom) {
               if (var7Lifetime1 > SoftwareRasterizer2D.clipLeft) {
-                SoftwareRasterizer2D.pixels[-1 + (var9 * SoftwareRasterizer2D.width + var7Lifetime1)] = dla.a(8355711, SoftwareRasterizer2D.pixels[-1 + var9 * SoftwareRasterizer2D.width + var7Lifetime1] >> 1);
+                SoftwareRasterizer2D.pixels[-1 + (var9 * SoftwareRasterizer2D.width + var7Lifetime1)] = dla.andBits(8355711, SoftwareRasterizer2D.pixels[-1 + var9 * SoftwareRasterizer2D.width + var7Lifetime1] >> 1);
               }
               if (SoftwareRasterizer2D.clipRight > var7Lifetime1 + var8Lifetime1) {
-                SoftwareRasterizer2D.pixels[SoftwareRasterizer2D.width * var9 - (-var7Lifetime1 - var8Lifetime1)] = dla.a(SoftwareRasterizer2D.pixels[var8Lifetime1 + var7Lifetime1 + SoftwareRasterizer2D.width * var9] >> 1, 8355711);
+                SoftwareRasterizer2D.pixels[SoftwareRasterizer2D.width * var9 - (-var7Lifetime1 - var8Lifetime1)] = dla.andBits(SoftwareRasterizer2D.pixels[var8Lifetime1 + var7Lifetime1 + SoftwareRasterizer2D.width * var9] >> 1, 8355711);
               }
             }
             SoftwareRasterizer2D.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);

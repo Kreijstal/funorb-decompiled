@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class reb {
-    static Sprite field_a;
+final class LogoFinalFrameBottom {
+    static Sprite sprite;
     private static String field_z;
 
     public static void clearSharedReferences(boolean param0) {
-        field_a = null;
+        sprite = null;
         if (param0) {
-          field_a = (Sprite) null;
+          sprite = (Sprite) null;
         }
     }
 

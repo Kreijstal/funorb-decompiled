@@ -10,7 +10,7 @@ final class GetUseExtraBackground extends ConsoleCommand {
         LegacyOpenGlTurbulenceEffect.field_d = false;
         if (null != MidiNote.field_m) {
           MidiNote.field_m.closeSubmenu(16384);
-          if (~ow.field_b != param0) {
+          if (~NetworkMessageState.chatChannel != param0) {
             dr.a(26718);
             GetLaserAimspeed.field_p = 0;
             return;
@@ -18,7 +18,7 @@ final class GetUseExtraBackground extends ConsoleCommand {
           GetLaserAimspeed.field_p = 0;
           return;
         }
-        if (~ow.field_b == param0) {
+        if (~NetworkMessageState.chatChannel == param0) {
           GetLaserAimspeed.field_p = 0;
           return;
         }

@@ -149,7 +149,7 @@ abstract class NetworkGameClient extends GameApplet {
             FighterBayWeaponDefinition.l(-123);
             NetworkArchiveRequest.f((byte) -119);
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
-            GetSniperCannonFiringLeeway.a(-10560);
+            GetSniperCannonFiringLeeway.applyObfuscationGuard(-10560);
             GetSpinningBladeAimarc.field_o = true;
             StrongCacheReference.field_p = 15000L + MonotonicMillisClock.currentTimeMillis(false);
           }
@@ -280,7 +280,7 @@ abstract class NetworkGameClient extends GameApplet {
             SecondaryNodeHashTable.continueAsGuest(param1 + 17487);
           }
           if (null == SetReverbFeedback.field_p) {
-            SetReverbFeedback.field_p = bia.a(true);
+            SetReverbFeedback.field_p = bia.getPcmStreamMixer(true);
             EscapePod.field_j = lwa.e((byte) 73);
           }
           GetSpinningBladeSpindamageMultiplier.a((byte) 55, BufferedFile.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
@@ -529,7 +529,7 @@ abstract class NetworkGameClient extends GameApplet {
         GrappleLauncherBehaviour.field_f = param2;
         GetThrusterBindingMoveAndTurnHasOppositeMove.field_p = param1;
         this.initializeCommonPacketLengths(-92);
-        GameKeyHandler.a((byte) 101);
+        GameKeyHandler.checkObfuscationGuard((byte) 101);
     }
 
     final void initializeNetworkClient(boolean param0, int param1, int param2) {
@@ -551,7 +551,7 @@ abstract class NetworkGameClient extends GameApplet {
         ChatMessage var3;
         int var4;
         var4 = VoidHunters.field_G;
-        var2 = ow.field_a;
+        var2 = NetworkMessageState.incomingOpcode;
         if (64 > var2 &&
           SetBombletSprayProjectileLife.allowedCommonPackets[var2]) {
           if (var2 == 0) {

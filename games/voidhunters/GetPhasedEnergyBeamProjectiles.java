@@ -131,7 +131,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetBombletSprayProjectileDamage.field_p = param1[73];
           GetSpinningBladeAimspeed.field_p = param1[6];
           SetTorpedoFireForce.field_o = param1[121];
-          rlb.field_e = param1[142];
+          LegacyOpenGlTextureCache.field_e = param1[142];
           WorldFactory.field_a = param1[100];
           dr.field_a = param1[125];
           GetDebrisFoundInPairs.field_o = param1[64];

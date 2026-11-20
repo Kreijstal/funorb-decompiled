@@ -93,7 +93,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
     final static void a(byte param0, long param1, String param2) {
         CharSequence var5 = null;
         try {
-          ow.field_b = 2;
+          NetworkMessageState.chatChannel = 2;
           waa.field_x = param2;
           var5 = (CharSequence) ((Object) param2);
           GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var5);

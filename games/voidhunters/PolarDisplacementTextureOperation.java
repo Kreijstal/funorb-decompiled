@@ -20,7 +20,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
         int[][] var32 = null;
         int var17 = VoidHunters.field_G;
         if (param0 != 255) {
-          PolarDisplacementTextureOperation.d(-89);
+          PolarDisplacementTextureOperation.updateDrawMenuLabel(-89);
         }
         int[][] var23 = this.field_d.getRow(param1, (byte) -127);
         int[][] var19 = var23;
@@ -149,19 +149,19 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
         }
     }
 
-    final static void d(int param0) {
+    final static void updateDrawMenuLabel(int param0) {
         int var2 = VoidHunters.field_G;
-        if ((1 << MatchingFieldValidator.field_g.localPlayerIndex & MatchingFieldValidator.field_g.state.field_f) != 0) {
-          HighscoreValueRequest.field_g[8] = ut.field_a;
+        if ((1 << MatchingFieldValidator.field_g.localPlayerIndex & MatchingFieldValidator.field_g.state.drawOfferMask) != 0) {
+          HighscoreValueRequest.menuActionLabels[8] = ut.field_a;
         } else {
-          if (MatchingFieldValidator.field_g.state.field_f != 0) {
-            HighscoreValueRequest.field_g[8] = SetShipDirectionArrow.field_q;
+          if (MatchingFieldValidator.field_g.state.drawOfferMask != 0) {
+            HighscoreValueRequest.menuActionLabels[8] = SetShipDirectionArrow.field_q;
           } else {
-            HighscoreValueRequest.field_g[8] = PacketBuffer.field_f;
+            HighscoreValueRequest.menuActionLabels[8] = PacketBuffer.field_f;
           }
         }
         if (param0 != -19057) {
-          PolarDisplacementTextureOperation.d(80);
+          PolarDisplacementTextureOperation.updateDrawMenuLabel(80);
         }
     }
 

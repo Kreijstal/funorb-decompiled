@@ -7,7 +7,7 @@ final class dr {
 
     final static void a(int param0) {
         SetShipAimLines.field_p.setLength(0);
-        ow.field_b = 0;
+        NetworkMessageState.chatChannel = 0;
         if (param0 != 26718) {
           field_a = 106;
         }

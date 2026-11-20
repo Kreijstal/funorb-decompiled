@@ -84,7 +84,7 @@ final class QuickChatMenuWidget extends Widget {
           } else {
             if (this.phraseIds[param0] != -1) {
               var5 = 32768 | this.phraseIds[param0];
-              var6 = ow.field_b;
+              var6 = NetworkMessageState.chatChannel;
               if (var6 == 0 &&
                 null != SetSpinningBladeSpindamageMultiplier.field_o) {
                 var6 = 1;
@@ -93,8 +93,8 @@ final class QuickChatMenuWidget extends Widget {
                 OpenGlPostEffect.a(1, (byte) -119, param2, var6);
               }
               var8 = (String) null;
-              SetBurstFireReload.a((String) null, -25719, var5, param3, ow.field_b, waa.field_x);
-              stackIn_15_0 = ow.field_b;
+              SetBurstFireReload.a((String) null, -25719, var5, param3, NetworkMessageState.chatChannel, waa.field_x);
+              stackIn_15_0 = NetworkMessageState.chatChannel;
               stackIn_15_1 = var5;
               stackIn_15_2 = lsa.field_f;
               stackIn_16_3 = (param1) ? false : true;

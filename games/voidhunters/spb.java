@@ -36,7 +36,7 @@ final class spb {
         if (!SetFightersPerPlayerMaximum.field_p) {
           return false;
         }
-        if (ow.field_b == 0) {
+        if (NetworkMessageState.chatChannel == 0) {
           return true;
         }
         return false;

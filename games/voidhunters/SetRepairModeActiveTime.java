@@ -237,7 +237,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
             GetLaserAimarc.field_o[var17_intLifetime3 + 4] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, ClientException.field_c[var17_intLifetime3]);
-            array$2 = new IconTextWidget[dla.a(255, (int) gm.field_M[var17_intLifetime3]) + 1];
+            array$2 = new IconTextWidget[dla.andBits(255, (int) gm.field_M[var17_intLifetime3]) + 1];
             SetReloadBarHeight.field_q[var17_intLifetime3 + 4] = array$2;
             SetReloadBarHeight.field_q[var17_intLifetime3 + 4][0] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
             for (var18 = 0; var18 < (gm.field_M[var17_intLifetime3] & 255); var18++) {
@@ -302,7 +302,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           vva.field_r.addChild(-561, ObjectiveMarker.field_b);
           vva.field_r.addChild(-561, SetAutozoomSpeedDivide.field_p);
           ProjectileHit.field_d = new Widget(0L, lo.field_b, ko.field_d.toUpperCase());
-          rlb.field_a = new Widget(0L, DisplayModeDialog.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
+          LegacyOpenGlTextureCache.field_a = new Widget(0L, DisplayModeDialog.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

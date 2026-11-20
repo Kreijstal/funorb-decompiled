@@ -68,11 +68,11 @@ final class SetUseSprites extends ConsoleCommand {
             hla.field_a[var4Lifetime3] = var17.readUnsignedShort(1869);
           }
           var17.position = -7 + param1.length - 8 * GpuProjectionMode.field_a - (-1 + var3) * 3;
-          rlb.field_d = new int[var3];
+          LegacyOpenGlTextureCache.field_d = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            rlb.field_d[var4Lifetime4] = var17.readUnsignedMedium((byte) -87);
-            if (0 == rlb.field_d[var4Lifetime4]) {
-              rlb.field_d[var4Lifetime4] = 1;
+            LegacyOpenGlTextureCache.field_d[var4Lifetime4] = var17.readUnsignedMedium((byte) -87);
+            if (0 == LegacyOpenGlTextureCache.field_d[var4Lifetime4]) {
+              LegacyOpenGlTextureCache.field_d[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

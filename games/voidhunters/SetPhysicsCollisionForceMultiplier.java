@@ -19,7 +19,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             if (var3 != 0) {
               return false;
             }
-            or.a(0);
+            ChatChannelControl.setChatChannel(0);
             return true;
           }
           if (SetBombletSprayProjectileDamage.field_o == 11) {
@@ -79,7 +79,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             if (var3 != 0) {
               return false;
             }
-            or.a(0);
+            ChatChannelControl.setChatChannel(0);
             return true;
           }
           if (SetBombletSprayProjectileDamage.field_o == 11) {

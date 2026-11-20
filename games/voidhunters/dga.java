@@ -2333,7 +2333,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_offerrematch_unrated", 23100);
                 if (null != var2) {
-                  eua.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  UnratedRematchText.text = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_acceptrematch", 23100);
                 if (var2 != null) {

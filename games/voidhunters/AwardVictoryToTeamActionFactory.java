@@ -13,7 +13,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
         }
         ComponentCollision.a("Initing text...", (byte) -82);
         vjb.field_a = true;
-        if (null != HighscoreValueRequest.field_g) {
+        if (null != HighscoreValueRequest.menuActionLabels) {
           return;
         }
         try {
@@ -30,33 +30,33 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
               PasswordValidator.field_m[var1_int] = PasswordValidator.field_m[var1_int].toUpperCase();
             }
           }
-          HighscoreValueRequest.field_g = new String[25];
-          HighscoreValueRequest.field_g[9] = PhasedEnergyBeamWeaponDefinition.field_b;
-          HighscoreValueRequest.field_g[18] = DateOfBirthTextFields.field_D;
-          HighscoreValueRequest.field_g[22] = GetSalvoaim.field_p;
-          HighscoreValueRequest.field_g[20] = veb.field_c;
-          HighscoreValueRequest.field_g[6] = null;
-          HighscoreValueRequest.field_g[21] = SetCountermeasureLauncherFireForce.field_q;
-          HighscoreValueRequest.field_g[3] = SetMissilesExplosionPower.field_o;
-          HighscoreValueRequest.field_g[24] = MissionEvent.field_f + ":";
-          HighscoreValueRequest.field_g[11] = tua.field_b;
-          HighscoreValueRequest.field_g[14] = SaveShipDesignOrderDefinition.field_d;
-          HighscoreValueRequest.field_g[2] = DialogMessagePanel.field_D;
-          HighscoreValueRequest.field_g[15] = GetFightersPerPlayerMaximum.field_q;
-          HighscoreValueRequest.field_g[13] = ArchiveLoadRequest.field_d;
-          HighscoreValueRequest.field_g[19] = Widget.field_V + ":";
-          HighscoreValueRequest.field_g[5] = ffb.field_b;
-          HighscoreValueRequest.field_g[7] = bw.field_a;
-          HighscoreValueRequest.field_g[4] = DebugRequest.field_j;
-          HighscoreValueRequest.field_g[12] = SetBombletSprayRandomness.field_o;
-          HighscoreValueRequest.field_g[1] = GetAiFiringRangeUpshift.field_p;
-          HighscoreValueRequest.field_g[17] = SetUseLines.field_o;
-          HighscoreValueRequest.field_g[16] = GetSniperCannonProjectileOndamageParticles.field_p;
-          HighscoreValueRequest.field_g[0] = SetPhasedEnergyBeamPulsetime.field_p;
-          HighscoreValueRequest.field_g[23] = SpawnChoiceFactory.field_b;
-          for (var1_int = 0; HighscoreValueRequest.field_g.length > var1_int; var1_int++) {
-            if (null != HighscoreValueRequest.field_g[var1_int]) {
-              HighscoreValueRequest.field_g[var1_int] = SetFogOfWarSensorRange.a(-1, HighscoreValueRequest.field_g[var1_int]);
+          HighscoreValueRequest.menuActionLabels = new String[25];
+          HighscoreValueRequest.menuActionLabels[9] = PhasedEnergyBeamWeaponDefinition.field_b;
+          HighscoreValueRequest.menuActionLabels[18] = DateOfBirthTextFields.field_D;
+          HighscoreValueRequest.menuActionLabels[22] = GetSalvoaim.field_p;
+          HighscoreValueRequest.menuActionLabels[20] = veb.field_c;
+          HighscoreValueRequest.menuActionLabels[6] = null;
+          HighscoreValueRequest.menuActionLabels[21] = SetCountermeasureLauncherFireForce.field_q;
+          HighscoreValueRequest.menuActionLabels[3] = SetMissilesExplosionPower.field_o;
+          HighscoreValueRequest.menuActionLabels[24] = MissionEvent.field_f + ":";
+          HighscoreValueRequest.menuActionLabels[11] = tua.field_b;
+          HighscoreValueRequest.menuActionLabels[14] = SaveShipDesignOrderDefinition.field_d;
+          HighscoreValueRequest.menuActionLabels[2] = DialogMessagePanel.field_D;
+          HighscoreValueRequest.menuActionLabels[15] = GetFightersPerPlayerMaximum.field_q;
+          HighscoreValueRequest.menuActionLabels[13] = ArchiveLoadRequest.field_d;
+          HighscoreValueRequest.menuActionLabels[19] = Widget.field_V + ":";
+          HighscoreValueRequest.menuActionLabels[5] = ffb.field_b;
+          HighscoreValueRequest.menuActionLabels[7] = bw.field_a;
+          HighscoreValueRequest.menuActionLabels[4] = DebugRequest.field_j;
+          HighscoreValueRequest.menuActionLabels[12] = SetBombletSprayRandomness.field_o;
+          HighscoreValueRequest.menuActionLabels[1] = GetAiFiringRangeUpshift.field_p;
+          HighscoreValueRequest.menuActionLabels[17] = SetUseLines.field_o;
+          HighscoreValueRequest.menuActionLabels[16] = GetSniperCannonProjectileOndamageParticles.field_p;
+          HighscoreValueRequest.menuActionLabels[0] = SetPhasedEnergyBeamPulsetime.field_p;
+          HighscoreValueRequest.menuActionLabels[23] = SpawnChoiceFactory.field_b;
+          for (var1_int = 0; HighscoreValueRequest.menuActionLabels.length > var1_int; var1_int++) {
+            if (null != HighscoreValueRequest.menuActionLabels[var1_int]) {
+              HighscoreValueRequest.menuActionLabels[var1_int] = SetFogOfWarSensorRange.a(-1, HighscoreValueRequest.menuActionLabels[var1_int]);
             }
           }
           SetSpinningBladeSpinupSpeed.field_o = new String[56];
@@ -302,7 +302,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new AwardVictoryToTeamAction[param1]);
     }
 
-    static long a(long param0, long param1) {
+    static long orBits(long param0, long param1) {
         return param0 | param1;
     }
 

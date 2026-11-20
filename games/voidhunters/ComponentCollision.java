@@ -360,7 +360,7 @@ final class ComponentCollision extends IntrusiveNode {
             if (ObjectiveMarker.field_b.field_o != 0) {
               GetExplosionProjectileDamage.field_o = true;
             }
-            if (rlb.field_a.field_o != 0) {
+            if (LegacyOpenGlTextureCache.field_a.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = false;
             }
             ResourceArchive.a(param0, SetSpinningBladeSpindamageMultiplier.field_o, false, (byte) -67);

@@ -97,7 +97,7 @@ final class qs {
           if (!SetFightersPerPlayerMaximum.field_p) {
             return false;
           }
-          if (ow.field_b == 2 &&
+          if (NetworkMessageState.chatChannel == 2 &&
             GetDebrisThrowable.field_o != null) {
             var3 = (CharSequence) ((Object) param1);
             if (!GetDebrisThrowable.field_o.equals(ConstantColorTextureOperation.normalizeName(false, var3))) {

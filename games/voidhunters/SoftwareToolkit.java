@@ -1498,8 +1498,8 @@ final class SoftwareToolkit extends GraphicsToolkit {
         var18 = param5 * var16 + 1 >> 17;
         var19 = param5 * var15 >> 17;
         var20 = param5 * var15 + 1 >> 17;
-        param0 = param0 - var9.a();
-        param1 = param1 - var9.b();
+        param0 = param0 - var9.getOriginX();
+        param1 = param1 - var9.getOriginY();
         var21 = param0 + var17;
         var22 = param0 - var18;
         var23 = param0 + var10 - var18;

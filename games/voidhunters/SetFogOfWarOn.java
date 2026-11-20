@@ -256,7 +256,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_grappling_hook_aimarc(" + dla.field_c + ")");
         System.out.println("set_missile_launcher_aimarc(" + khb.field_c + ")");
         System.out.println("set_point_defence_laser_aimarc(" + GetMaxShipSize.field_o + ")");
-        System.out.println("set_countermeasure_launcher_aimarc(" + rlb.field_e + ")");
+        System.out.println("set_countermeasure_launcher_aimarc(" + LegacyOpenGlTextureCache.field_e + ")");
         System.out.println("set_mass_driver_projectile_damage(" + GetMissionTerrainNebulaProbability.field_p + ")");
         System.out.println("set_torpedo_projectile_damage(" + QuickChatPhraseLoader.field_b + ")");
         System.out.println("set_laser_beam_projectile_damage(" + TickClock.field_a + ")");

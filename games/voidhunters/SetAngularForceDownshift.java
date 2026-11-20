@@ -48,7 +48,7 @@ final class SetAngularForceDownshift extends ConsoleCommand {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int orBits(int param0, int param1) {
         return param0 | param1;
     }
 

@@ -61,7 +61,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          reb.field_a.drawAlpha(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
+          LogoFinalFrameBottom.sprite.drawAlpha(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

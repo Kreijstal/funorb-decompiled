@@ -105,7 +105,7 @@ final class SocketNetworkArchiveClient extends NetworkArchiveClient {
                   this.connection.readFully(-122, this.responseHeader.position, var5, this.responseHeader.payload);
                   if (0 != this.responseXorKey) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.responseHeader.payload[this.responseHeader.position + var6] = (byte)SetFixedaim.a((int) this.responseHeader.payload[this.responseHeader.position + var6], (int) this.responseXorKey);
+                      this.responseHeader.payload[this.responseHeader.position + var6] = (byte)SetFixedaim.xorBits((int) this.responseHeader.payload[this.responseHeader.position + var6], (int) this.responseXorKey);
                     }
                   }
                   this.responseHeader.position = this.responseHeader.position + var5;
@@ -179,7 +179,7 @@ final class SocketNetworkArchiveClient extends NetworkArchiveClient {
                   this.connection.readFully(param0 ^ -126, this.currentRequest.buffer.position, var6, this.currentRequest.buffer.payload);
                   if (this.responseXorKey != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.currentRequest.buffer.payload[var7 + this.currentRequest.buffer.position] = (byte)SetFixedaim.a((int) this.currentRequest.buffer.payload[var7 + this.currentRequest.buffer.position], (int) this.responseXorKey);
+                      this.currentRequest.buffer.payload[var7 + this.currentRequest.buffer.position] = (byte)SetFixedaim.xorBits((int) this.currentRequest.buffer.payload[var7 + this.currentRequest.buffer.position], (int) this.responseXorKey);
                     }
                   }
                   this.currentRequest.blockPosition = this.currentRequest.blockPosition + var6;

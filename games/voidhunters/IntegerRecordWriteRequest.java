@@ -169,7 +169,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[175] = GetMissileLauncherEnergyUsed.field_q;
         var2[16] = GetGrapplingHookAimspeed.field_p;
         var2[198] = GetMissionTerrainNebulaProbability.field_r;
-        var2[142] = rlb.field_e;
+        var2[142] = LegacyOpenGlTextureCache.field_e;
         var2[180] = tua.field_a;
         var2[91] = SetGrapplingHookRopeChangeRate.field_o;
         var2[123] = dfa.field_a;

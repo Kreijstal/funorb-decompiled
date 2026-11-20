@@ -6,7 +6,7 @@ final class GetAllowShipSaving extends ConsoleCommand {
     static String field_p;
     static long lastClockSampleMillis;
 
-    final static void a(int param0) {
+    final static void finishLoadingAnimations(int param0) {
         if (null != GetLagStandardDeviationIn.field_r) {
           GetLagStandardDeviationIn.field_r.finishPanelAnimations(param0 - 4299);
           if (param0 == 4410) {

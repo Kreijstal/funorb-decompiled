@@ -14,7 +14,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     static int field_Ib;
     private int field_rb;
     jaggl.OpenGL field_c;
-    private rlb field_r;
+    private LegacyOpenGlTextureCache field_r;
     private OpenGlPostProcessor field_fc;
     int field_X;
     int field_Kc;
@@ -189,7 +189,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           stackIn_9_0 = (!this.field_kb) ? 0 : 3;
           var9 = stackIn_9_0;
           if (param3 >= 0) {
-            var5 = this.field_r.a((byte) -125, param3);
+            var5 = this.field_r.getTexture((byte) -125, param3);
             var10 = this.field_a.getTextureMetadata(-20292, param3);
             if (0 == var10.field_p &&
               var10.field_d == 0) {
@@ -236,12 +236,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void setTextureEnvironmentColor(boolean param0, int param1) {
         GetSpinningBladeTopSpeed.field_o[3] = (float)(param1 >>> 24) / 255.0f;
-        GetSpinningBladeTopSpeed.field_o[2] = (float)dla.a(param1, 255) / 255.0f;
+        GetSpinningBladeTopSpeed.field_o[2] = (float)dla.andBits(param1, 255) / 255.0f;
         if (!param0) {
           this.field_U = true;
         }
-        GetSpinningBladeTopSpeed.field_o[0] = (float)dla.a(16711680, param1) / 16711680.0f;
-        GetSpinningBladeTopSpeed.field_o[1] = (float)dla.a(param1, 65280) / 65280.0f;
+        GetSpinningBladeTopSpeed.field_o[0] = (float)dla.andBits(16711680, param1) / 16711680.0f;
+        GetSpinningBladeTopSpeed.field_o[1] = (float)dla.andBits(param1, 65280) / 65280.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, GetSpinningBladeTopSpeed.field_o, 0);
     }
 
@@ -282,7 +282,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               for (var7 = 0; param0.width > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = SetAngularForceDownshift.a(param0.palette[dla.a(255, (int) param0.pixels[var4])], param0.alpha[var4] << 24);
+                var3[incrementValue$0] = SetAngularForceDownshift.orBits(param0.palette[dla.andBits(255, (int) param0.pixels[var4])], param0.alpha[var4] << 24);
                 var4++;
               }
             }
@@ -299,7 +299,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 if (var8 == 0) {
                   stackIn_9_2 = 0;
                 } else {
-                  stackIn_9_2 = SetAngularForceDownshift.a(var8, -16777216);
+                  stackIn_9_2 = SetAngularForceDownshift.orBits(var8, -16777216);
                 }
                 stackIn_8_0[stackIn_8_1] = stackIn_9_2;
               }
@@ -428,7 +428,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_ab = param2;
         this.field_C = param3;
         jaggl.OpenGL.glEnable(3089);
-        this.o(124);
+        this.applyClipResetGuard(124);
         this.applyScissor(10);
     }
 
@@ -572,7 +572,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_ab = this.field_Sb;
         jaggl.OpenGL.glDisable(3089);
         int var2 = -12 % ((45 - param0) / 61);
-        this.o(107);
+        this.applyClipResetGuard(107);
     }
 
     final void setRenderTarget(ToolkitSprite param0, boolean param1) {
@@ -891,9 +891,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(param0, this.field_wb);
         jaggl.OpenGL.glFogf(2916, this.field_w);
-        GetSpinningBladeTopSpeed.field_o[1] = (float)dla.a(this.field_J, 65280) / 65280.0f;
-        GetSpinningBladeTopSpeed.field_o[2] = (float)dla.a(this.field_J, 255) / 255.0f;
-        GetSpinningBladeTopSpeed.field_o[0] = (float)dla.a(this.field_J, 16711680) / 16711680.0f;
+        GetSpinningBladeTopSpeed.field_o[1] = (float)dla.andBits(this.field_J, 65280) / 65280.0f;
+        GetSpinningBladeTopSpeed.field_o[2] = (float)dla.andBits(this.field_J, 255) / 255.0f;
+        GetSpinningBladeTopSpeed.field_o[0] = (float)dla.andBits(this.field_J, 16711680) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, GetSpinningBladeTopSpeed.field_o, 0);
     }
 
@@ -1027,7 +1027,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void o(int param0) {
+    private final void applyClipResetGuard(int param0) {
         if (param0 <= 98) {
           this.resetClipRectangle(-19);
         }
@@ -1242,7 +1242,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (!this.field_fc.addEffect(2998, this.field_A)) {
               return false;
             }
-            this.field_r.b(-58);
+            this.field_r.clearCache(-58);
           }
           return true;
         }
@@ -1573,7 +1573,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_gc = param1;
         this.field_lb = param0;
         this.buildPerspectiveProjection(-2);
-        this.o(100);
+        this.applyClipResetGuard(100);
         if (this.field_Jb == 3) {
           this.applyOrthographicProjection(-108);
         } else {
@@ -1909,7 +1909,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             PasswordValidator.a(false, (byte) 33, true);
             this.field_m = true;
-            this.field_r = new rlb(this, this.field_a);
+            this.field_r = new LegacyOpenGlTextureCache(this, this.field_a);
             this.initializeDefaultResources((byte) -92);
             this.field_yb = new LegacyOpenGlNormalMapGenerator(this);
             this.field_fc = new OpenGlPostProcessor(this);
@@ -2042,7 +2042,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_oc = param0;
         }
         jaggl.OpenGL.glEnable(3089);
-        this.o(111);
+        this.applyClipResetGuard(111);
         this.applyScissor(10);
     }
 
@@ -2190,9 +2190,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glLightfv(var4, 4611, SetSniperCannonProjectileDamage.field_o, 0);
           var5 = var3.getColor(-62);
           var6 = var3.getIntensity(-392138175) / 255.0f;
-          SetSniperCannonProjectileDamage.field_o[2] = var6 * (float)dla.a(255, var5);
-          SetSniperCannonProjectileDamage.field_o[0] = var6 * (float)dla.a(var5 >> 16, 255);
-          SetSniperCannonProjectileDamage.field_o[1] = (float)dla.a(var5 >> 8, 255) * var6;
+          SetSniperCannonProjectileDamage.field_o[2] = var6 * (float)dla.andBits(255, var5);
+          SetSniperCannonProjectileDamage.field_o[0] = var6 * (float)dla.andBits(var5 >> 16, 255);
+          SetSniperCannonProjectileDamage.field_o[1] = (float)dla.andBits(var5 >> 8, 255) * var6;
           jaggl.OpenGL.glLightfv(var4, 4609, SetSniperCannonProjectileDamage.field_o, 0);
           jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.getRadius(16777215) * var3.getRadius(16777215)));
           jaggl.OpenGL.glEnable(var4);
@@ -2741,7 +2741,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var12 = (IntegerNode) (this.field_v.removeFirst(true));
           jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
         }
-        this.field_r.a(true);
+        this.field_r.ageCache(true);
         if (!(this.getAllocatedMemory(97) <= 100663296) &&
           !(60000L + this.field_vc >= MonotonicMillisClock.currentTimeMillis(false))) {
           System.gc();
@@ -2923,7 +2923,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private final void detachContext(byte param0) {
         this.field_c.detachFromCurrentThread();
         if (param0 != -46) {
-          this.o(46);
+          this.applyClipResetGuard(46);
         }
     }
 

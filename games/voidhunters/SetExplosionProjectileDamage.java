@@ -114,7 +114,7 @@ final class SetExplosionProjectileDamage extends ConsoleCommand {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long andBits(long param0, long param1) {
         return param0 & param1;
     }
 

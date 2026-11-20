@@ -3,7 +3,7 @@
  */
 final class CommonGameState implements DiffableState, PlayerNameRegistry {
     private int field_d;
-    int field_k;
+    int rematchRequestMask;
     boolean field_e;
     int field_g;
     int field_a;
@@ -11,7 +11,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
     CarouselCommongameInfo carouselInfo;
     int disconnectedPlayerMask;
     static String field_c;
-    int field_f;
+    int drawOfferMask;
     String[] field_h;
     static float field_i;
 

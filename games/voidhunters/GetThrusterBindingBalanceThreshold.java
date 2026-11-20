@@ -27,11 +27,11 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           }
           var1 = null;
           var2 = null;
-          if (ow.field_b == 0 &&
+          if (NetworkMessageState.chatChannel == 0 &&
             null != SetThrusterParticleSpeedDownshift.field_o) {
             var2 = GetRepairModePower.field_p;
           }
-          if (ow.field_b == 2 &&
+          if (NetworkMessageState.chatChannel == 2 &&
             !SetAutozoomAmountMultiply.a(0)) {
             if (GetTorqueDownshift.a(GetDebrisThrowable.field_o, (byte) -47)) {
               var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{waa.field_x}, 78);
@@ -58,7 +58,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var3 = EscapePodFactory.a(1, var3);
             var4 = "";
             var5 = "|";
-            var6 = ow.field_b;
+            var6 = NetworkMessageState.chatChannel;
             var7 = 0;
             if (var6 == 2) {
               var4 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{waa.field_x}, 91);
@@ -121,7 +121,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                 if (UiComboBoxRenderer.field_c.field_o != 0 &&
                   var9 > UiComboBoxRenderer.field_c.field_r &&
                   !GetBloomThresholdPercentage.field_p) {
-                  or.a(param0 + 8037);
+                  ChatChannelControl.setChatChannel(param0 + 8037);
                 }
               }
             }

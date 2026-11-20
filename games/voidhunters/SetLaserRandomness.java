@@ -76,7 +76,7 @@ final class SetLaserRandomness extends ConsoleCommand {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         String var7 = null;
         int var8 = 105 / ((27 - param1) / 52);
-        if (ow.field_b == 2) {
+        if (NetworkMessageState.chatChannel == 2) {
           var7 = GetReadyRoomTeamTime.field_o;
         } else {
           var7 = kia.field_b;

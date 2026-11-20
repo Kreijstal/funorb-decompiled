@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ho {
-    static ArchiveIndexLoader field_a;
+final class ArchiveIndexLoaderState {
+    static ArchiveIndexLoader loader;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
-        field_a = null;
+        loader = null;
         if (param0 != 13032) {
-          ho.clearSharedReferences(102);
+          ArchiveIndexLoaderState.clearSharedReferences(102);
         }
     }
 

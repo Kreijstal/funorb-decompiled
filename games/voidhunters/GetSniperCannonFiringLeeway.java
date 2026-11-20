@@ -9,7 +9,7 @@ final class GetSniperCannonFiringLeeway extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void applyObfuscationGuard(int param0) {
         if (param0 != -10560) {
           field_o = 18;
         }

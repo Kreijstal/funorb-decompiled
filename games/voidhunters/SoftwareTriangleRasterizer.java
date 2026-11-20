@@ -950,7 +950,7 @@ final class SoftwareTriangleRasterizer {
         }
     }
 
-    final int a() {
+    final int getOriginX() {
         return this.field_k[0] % this.field_m;
     }
 
@@ -2514,7 +2514,7 @@ final class SoftwareTriangleRasterizer {
 
     }
 
-    final int b() {
+    final int getOriginY() {
         return this.field_k[0] / this.field_m;
     }
 

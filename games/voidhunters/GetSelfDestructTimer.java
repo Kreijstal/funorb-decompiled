@@ -48,8 +48,8 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               }
               iq.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
-              SetSalvoRepairTimeMultiplier.field_r = ow.field_a;
-              ow.field_a = var4_ref_c.field_d;
+              SetSalvoRepairTimeMultiplier.field_r = NetworkMessageState.incomingOpcode;
+              NetworkMessageState.incomingOpcode = var4_ref_c.field_d;
               return true;
             }
           }
@@ -69,8 +69,8 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             if (cd.field_c == 0) {
               iq.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
-              SetSalvoRepairTimeMultiplier.field_r = ow.field_a;
-              ow.field_a = SetAutoDetail.field_p;
+              SetSalvoRepairTimeMultiplier.field_r = NetworkMessageState.incomingOpcode;
+              NetworkMessageState.incomingOpcode = SetAutoDetail.field_p;
               SetAutoDetail.field_p = -1;
               return true;
             }

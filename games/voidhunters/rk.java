@@ -106,7 +106,7 @@ final class rk {
               decompiledCaughtException = decompiledCaughtParameter3;
               var8_ref = decompiledCaughtException;
             }
-            throw rk.<RuntimeException>$cfr$sneakyThrow(var7);
+            throw rk.<RuntimeException>throwUnchecked(var7);
           }
           if (var4 != 0) {
             try {
@@ -145,14 +145,14 @@ final class rk {
             return;
           }
         }
-        throw rk.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw rk.<RuntimeException>throwUnchecked(new Exception());
     }
 
     static {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

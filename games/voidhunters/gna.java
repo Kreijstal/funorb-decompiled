@@ -92,7 +92,7 @@ class gna extends elb {
     void a(int param0, int param1, byte param2) {
         int fieldTemp$0 = this.field_l;
         this.field_l = this.field_l + 1;
-        this.field_i[fieldTemp$0] = (byte)((dla.a((int) param2, 255) >> 1) + 127);
+        this.field_i[fieldTemp$0] = (byte)((dla.andBits((int) param2, 255) >> 1) + 127);
         if (param0 != 1111320769) {
           this.a(-23, -5, 87);
         }

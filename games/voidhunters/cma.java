@@ -11,7 +11,7 @@ final class cma {
         return SetDebrisCarryOverPercentage.a(param0, (byte) 119, param1) & SetHealthBarWidth.a(param0, false, param1);
     }
 
-    final static String a(String param0, String param1, String param2, byte param3) {
+    final static String formatTeamObjective(String param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

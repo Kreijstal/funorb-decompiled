@@ -7,15 +7,15 @@ final class HighscoreValueRequest extends IntrusiveNode {
     static String field_h;
     int id;
     private static char[] field_f;
-    static String[] field_g;
+    static String[] menuActionLabels;
 
     public static void clearSharedReferences(int param0) {
         field_h = null;
         field_f = null;
         field_e = null;
-        field_g = null;
+        menuActionLabels = null;
         if (param0 <= 20) {
-          field_g = (String[]) null;
+          menuActionLabels = (String[]) null;
         }
     }
 

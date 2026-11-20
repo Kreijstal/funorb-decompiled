@@ -42,7 +42,7 @@ final class SetHealthBarWidth extends ConsoleCommand {
             var13 = param0;
             var14 = param6;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = dla.a(65280, var13 >> 9) + (dla.a(var12 >> 1, 16711680) + dla.a(255, var14 >> 17) + var15);
+            var10[var11] = dla.andBits(65280, var13 >> 9) + (dla.andBits(var12 >> 1, 16711680) + dla.andBits(255, var14 >> 17) + var15);
             param6 = param6 + param5;
             param2 = param2 + param8;
             param0 = param0 + param1;

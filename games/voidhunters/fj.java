@@ -38,7 +38,7 @@ final class fj {
         int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
-          this.field_f[this.field_g] = (byte)SetAngularForceDownshift.a((int) this.field_f[this.field_g], 128 >>> dla.a(this.field_e, 7));
+          this.field_f[this.field_g] = (byte)SetAngularForceDownshift.orBits((int) this.field_f[this.field_g], 128 >>> dla.andBits(this.field_e, 7));
           this.field_g = this.field_g + 1;
           if (param2 <= 37) {
             fj.b(-1);
@@ -129,7 +129,7 @@ final class fj {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_j[var2] = SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[6 + var3]) << 8, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[5 + var3]) << 16, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[4 + var3]) << 24, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(255L, (long)this.field_f[3 + var3]) << 32, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(280375465082880L, (long)this.field_f[var3 + 2] << 40), SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)))))), SetExplosionProjectileDamage.a((long)this.field_f[var3 + 7], 255L));
+          this.field_j[var2] = SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(255L, (long)this.field_f[6 + var3]) << 8, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(255L, (long)this.field_f[5 + var3]) << 16, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(255L, (long)this.field_f[4 + var3]) << 24, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(255L, (long)this.field_f[3 + var3]) << 32, SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(280375465082880L, (long)this.field_f[var3 + 2] << 40), SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits((long)this.field_f[1 + var3], 255L) << 48, (long)this.field_f[var3] << 56)))))), SetExplosionProjectileDamage.andBits((long)this.field_f[var3 + 7], 255L));
           var2++;
           var3 += 8;
         }
@@ -148,7 +148,7 @@ final class fj {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = SpecialOrderStatus.xorLong(this.field_h[var3Lifetime1], GetShieldsDirectionalArcParticleLife.field_r[var4][dla.a(255, (int)(this.field_i[dla.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_h[var3Lifetime1] = SpecialOrderStatus.xorLong(this.field_h[var3Lifetime1], GetShieldsDirectionalArcParticleLife.field_r[var4][dla.andBits(255, (int)(this.field_i[dla.andBits(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -163,7 +163,7 @@ final class fj {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_h[var3Lifetime1Lifetime2] = SpecialOrderStatus.xorLong(this.field_h[var3Lifetime1Lifetime2], GetShieldsDirectionalArcParticleLife.field_r[var7][dla.a(255, (int)(this.field_d[dla.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_h[var3Lifetime1Lifetime2] = SpecialOrderStatus.xorLong(this.field_h[var3Lifetime1Lifetime2], GetShieldsDirectionalArcParticleLife.field_r[var7][dla.andBits(255, (int)(this.field_d[dla.andBits(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -224,7 +224,7 @@ final class fj {
             var8 = 255 & param0[var5_int] << var6 | (255 & param0[1 + var5_int]) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_f[this.field_g] = (byte)SetAngularForceDownshift.a((int) this.field_f[this.field_g], var8 >>> var7);
+              this.field_f[this.field_g] = (byte)SetAngularForceDownshift.orBits((int) this.field_f[this.field_g], var8 >>> var7);
               this.field_g = this.field_g + 1;
               this.field_e = this.field_e + (8 - var7);
               if (this.field_e == 512) {
@@ -232,7 +232,7 @@ final class fj {
                 this.field_e = 0;
                 this.field_g = 0;
               }
-              this.field_f[this.field_g] = (byte)dla.a(var8 << -var7 + 8, 255);
+              this.field_f[this.field_g] = (byte)dla.andBits(var8 << -var7 + 8, 255);
               this.field_e = this.field_e + var7;
               var5_int++;
               param2 = param2 - 8L;
@@ -244,7 +244,7 @@ final class fj {
             stackIn_18_0 = param0[var5_int] << var6;
             stackIn_18_1 = 255;
             var8Lifetime1 = stackIn_18_0 & stackIn_18_1;
-            this.field_f[this.field_g] = (byte)SetAngularForceDownshift.a((int) this.field_f[this.field_g], var8Lifetime1 >>> var7);
+            this.field_f[this.field_g] = (byte)SetAngularForceDownshift.orBits((int) this.field_f[this.field_g], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -257,7 +257,7 @@ final class fj {
               this.field_g = 0;
               this.field_e = 0;
             }
-            this.field_f[this.field_g] = (byte)dla.a(255, var8Lifetime1 << 8 - var7);
+            this.field_f[this.field_g] = (byte)dla.andBits(255, var8Lifetime1 << 8 - var7);
             this.field_e = this.field_e + (int)param2;
           } else {
             this.field_e = (int)((long)this.field_e + param2);

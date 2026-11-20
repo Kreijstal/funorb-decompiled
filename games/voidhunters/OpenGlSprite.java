@@ -372,7 +372,7 @@ final class OpenGlSprite extends ToolkitSprite {
           var15 = var11;
           if (var11 != null) {
             for (var9 = 0; var9 < var14.length; var9++) {
-              var11[var9] = SetAngularForceDownshift.a(var14[var9], -16777216);
+              var11[var9] = SetAngularForceDownshift.orBits(var14[var9], -16777216);
             }
             this.writePixels(param0, param2, param1, param6, var15, 0, param1);
           }

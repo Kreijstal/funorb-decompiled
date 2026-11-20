@@ -5,7 +5,7 @@ final class csa {
     static String field_a;
     static String field_b;
 
-    final static void b(byte param0) {
+    final static void checkObfuscationGuard(byte param0) {
         int var1 = -44 % ((param0 + 41) / 58);
     }
 

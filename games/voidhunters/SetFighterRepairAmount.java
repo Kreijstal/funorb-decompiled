@@ -99,17 +99,17 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           OneShotSound.field_l == null) {
           var3 = 0;
         }
-        if (0 == ow.field_b &&
+        if (0 == NetworkMessageState.chatChannel &&
           SetThrusterParticleSpeedDownshift.field_o != null) {
           var3 = 0;
         }
-        if (2 == ow.field_b &&
+        if (2 == NetworkMessageState.chatChannel &&
           !SetAutozoomAmountMultiply.a(param2 + 85)) {
           var3 = 0;
         }
         if (param2 == ~SetBombletSprayProjectileDamage.field_o) {
           if (var3 == 0) {
-            if (ow.field_b == 0) {
+            if (NetworkMessageState.chatChannel == 0) {
               return true;
             }
             dr.a(26718);
@@ -121,7 +121,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           }
           var4_ref_String = SetShipAimLines.field_p.toString();
           if (!DisplayModeDialog.containsPassword((byte) -92, var4_ref_String)) {
-            var5 = ow.field_b;
+            var5 = NetworkMessageState.chatChannel;
             if (var5 == 0 &&
               SetSpinningBladeSpindamageMultiplier.field_o != null) {
               var5 = 1;
@@ -129,7 +129,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (2 == SetReverbDry.a(var5, (byte) 19)) {
               OpenGlPostEffect.a(1, (byte) -76, param1, var5);
             }
-            SetBurstFireReload.a(var4_ref_String, param2 - 25634, -1, param0, ow.field_b, waa.field_x);
+            SetBurstFireReload.a(var4_ref_String, param2 - 25634, -1, param0, NetworkMessageState.chatChannel, waa.field_x);
           } else {
             var13 = (String) null;
             var12 = (String) null;
@@ -163,9 +163,9 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         var17 = IntIndexTable.field_a;
         var16 = EscapePodFactory.a(1, var17);
         var19 = var16;
-        if (ow.field_b != 2) {
+        if (NetworkMessageState.chatChannel != 2) {
           var7 = "";
-          if (0 != ow.field_b) {
+          if (0 != NetworkMessageState.chatChannel) {
             var35 = var7 + var19 + ": ";
             var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var35);
             if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {

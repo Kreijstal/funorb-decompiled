@@ -85,16 +85,16 @@ final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
             var10 = var10 ^ 285L;
           }
           var12 = var10 ^ var2;
-          field_r[0][var0] = AwardVictoryToTeamActionFactory.a(AwardVictoryToTeamActionFactory.a(AwardVictoryToTeamActionFactory.a(var8 << 16, AwardVictoryToTeamActionFactory.a(var10 << 24, AwardVictoryToTeamActionFactory.a(var2 << 32, AwardVictoryToTeamActionFactory.a(AwardVictoryToTeamActionFactory.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
+          field_r[0][var0] = AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(var8 << 16, AwardVictoryToTeamActionFactory.orBits(var10 << 24, AwardVictoryToTeamActionFactory.orBits(var2 << 32, AwardVictoryToTeamActionFactory.orBits(AwardVictoryToTeamActionFactory.orBits(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
           for (var14 = 1; var14 < 8; var14++) {
-            field_r[var14][var0] = AwardVictoryToTeamActionFactory.a(field_r[var14 - 1][var0] << 56, field_r[var14 - 1][var0] >>> 8);
+            field_r[var14][var0] = AwardVictoryToTeamActionFactory.orBits(field_r[var14 - 1][var0] << 56, field_r[var14 - 1][var0] >>> 8);
           }
           var0++;
         }
         field_o[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = -8 + var0 * 8;
-          field_o[var0] = SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(16711680L, field_r[5][var1 + 5]), SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(280375465082880L, field_r[2][var1 + 2]), SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.a(field_r[1][1 + var1], 71776119061217280L), SetExplosionProjectileDamage.a(-72057594037927936L, field_r[0][var1]))), SetExplosionProjectileDamage.a(field_r[3][3 + var1], 1095216660480L)), SetExplosionProjectileDamage.a(field_r[4][4 + var1], 4278190080L))), SetExplosionProjectileDamage.a(65280L, field_r[6][var1 + 6])), SetExplosionProjectileDamage.a(255L, field_r[7][var1 + 7]));
+          field_o[var0] = SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(16711680L, field_r[5][var1 + 5]), SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(280375465082880L, field_r[2][var1 + 2]), SpecialOrderStatus.xorLong(SetExplosionProjectileDamage.andBits(field_r[1][1 + var1], 71776119061217280L), SetExplosionProjectileDamage.andBits(-72057594037927936L, field_r[0][var1]))), SetExplosionProjectileDamage.andBits(field_r[3][3 + var1], 1095216660480L)), SetExplosionProjectileDamage.andBits(field_r[4][4 + var1], 4278190080L))), SetExplosionProjectileDamage.andBits(65280L, field_r[6][var1 + 6])), SetExplosionProjectileDamage.andBits(255L, field_r[7][var1 + 7]));
         }
     }
 }

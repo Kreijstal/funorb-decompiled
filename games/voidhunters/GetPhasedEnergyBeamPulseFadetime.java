@@ -100,7 +100,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (var6_int != 0) {
                 PartitioningManagerFactory.field_a = -1;
                 tc.field_c = TextInputWidget.field_xb;
-                ow.field_a = var6_int;
+                NetworkMessageState.incomingOpcode = var6_int;
               } else {
                 tc.field_c = ModalStack.field_w;
               }
@@ -117,7 +117,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             if (tc.field_c == LegacyOpenGlShaderProgram.field_a &&
               ShipBlueprint.a(1, 30000)) {
               var6_intLifetime1 = qga.field_b.readUnsignedByte((byte) -110);
-              ow.field_a = var6_intLifetime1;
+              NetworkMessageState.incomingOpcode = var6_intLifetime1;
               qga.field_b.position = 0;
               GetFighterBayAimspeed.field_o = null;
               if (var6_intLifetime1 != 0 &&
@@ -214,24 +214,24 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 FireGrapplesOrderDefinition.field_e[var8Lifetime1] = FireGrapplesOrderDefinition.field_e[var8Lifetime1] + 50;
               }
               qga.field_b.initializeCipher(18794, FireGrapplesOrderDefinition.field_e);
-              stackIn_77_0 = ow.field_a;
+              stackIn_77_0 = NetworkMessageState.incomingOpcode;
               return stackIn_77_0;
             }
             if (tc.field_c == TextInputWidget.field_xb &&
               PlayerJoinFactory.b((byte) 113)) {
               FighterBayWeaponDefinition.l(-117);
-              if (ow.field_a == 7 &&
+              if (NetworkMessageState.incomingOpcode == 7 &&
                 !SetShowTutorial.field_o) {
                 SetShowTutorial.field_o = true;
                 stackIn_89_0 = -1;
                 return stackIn_89_0;
               }
-              if (ow.field_a == 7) {
-                ow.field_a = 3;
+              if (NetworkMessageState.incomingOpcode == 7) {
+                NetworkMessageState.incomingOpcode = 3;
               }
               dgb.field_b = qga.field_b.readString(-1);
               SetShowTutorial.field_o = false;
-              stackIn_87_0 = ow.field_a;
+              stackIn_87_0 = NetworkMessageState.incomingOpcode;
               return stackIn_87_0;
             }
             if (param3 != 13) {

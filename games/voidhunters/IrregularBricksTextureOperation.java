@@ -487,17 +487,17 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                 if (this.bevelMode == 0) {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
-                    dupTemp$0 = dla.a(SetMassDriverEnergyUsed.field_q, param1 + param3 - var20 - 1);
+                    dupTemp$0 = dla.andBits(SetMassDriverEnergyUsed.field_q, param1 + param3 - var20 - 1);
                     var18[dupTemp$0] = var21 * var19 >> 12;
-                    var18[dla.a(param3 + var20, SetMassDriverEnergyUsed.field_q)] = var21 * var19 >> 12;
+                    var18[dla.andBits(param3 + var20, SetMassDriverEnergyUsed.field_q)] = var21 * var19 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
                     stackIn_41_0 = var18;
-                    stackIn_41_1 = dla.a(SetMassDriverEnergyUsed.field_q, var20 + param3);
+                    stackIn_41_1 = dla.andBits(SetMassDriverEnergyUsed.field_q, var20 + param3);
                     stackIn_41_2 = var18;
-                    stackIn_41_3 = dla.a(param1 + (param3 - (var20 + 1)), SetMassDriverEnergyUsed.field_q);
+                    stackIn_41_3 = dla.andBits(param1 + (param3 - (var20 + 1)), SetMassDriverEnergyUsed.field_q);
                     if (var19 <= var21) {
                       stackIn_42_4 = var19;
                     } else {
@@ -518,9 +518,9 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                 var19 = -var17 + (param4 - 1);
                 if (var19 >= var14) {
                   for (var20 = 0; var20 < var13; var20++) {
-                    dupTemp$2 = dla.a(-1 + param1 + param3 - var20, SetMassDriverEnergyUsed.field_q);
+                    dupTemp$2 = dla.andBits(-1 + param1 + param3 - var20, SetMassDriverEnergyUsed.field_q);
                     var18[dupTemp$2] = var8_int * var20 / var13;
-                    var18[dla.a(var20 + param3, SetMassDriverEnergyUsed.field_q)] = var8_int * var20 / var13;
+                    var18[dla.andBits(var20 + param3, SetMassDriverEnergyUsed.field_q)] = var8_int * var20 / var13;
                   }
                   if (TextHotspotRegion.textureWidth >= var15 + var16) {
                     ArrayOperations.fill(var18, var15, var16, var8_int);
@@ -536,17 +536,17 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                   if (0 == this.bevelMode) {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var8_int * var21 / var13;
-                      dupTemp$1 = dla.a(-var21 + (param1 + (param3 - 1)), SetMassDriverEnergyUsed.field_q);
+                      dupTemp$1 = dla.andBits(-var21 + (param1 + (param3 - 1)), SetMassDriverEnergyUsed.field_q);
                       var18[dupTemp$1] = var20 * var22 >> 12;
-                      var18[dla.a(SetMassDriverEnergyUsed.field_q, param3 + var21)] = var20 * var22 >> 12;
+                      var18[dla.andBits(SetMassDriverEnergyUsed.field_q, param3 + var21)] = var20 * var22 >> 12;
                     }
                   } else {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var21 * var8_int / var13;
                       stackIn_53_0 = var18;
-                      stackIn_53_1 = dla.a(SetMassDriverEnergyUsed.field_q, param3 + var21);
+                      stackIn_53_1 = dla.andBits(SetMassDriverEnergyUsed.field_q, param3 + var21);
                       stackIn_53_2 = var18;
-                      stackIn_53_3 = dla.a(SetMassDriverEnergyUsed.field_q, -var21 + (param3 + param1) - 1);
+                      stackIn_53_3 = dla.andBits(SetMassDriverEnergyUsed.field_q, -var21 + (param3 + param1) - 1);
                       if (var22 >= var20) {
                         stackIn_54_4 = var20;
                       } else {

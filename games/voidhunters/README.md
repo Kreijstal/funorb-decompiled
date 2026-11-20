@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1363/1572 classes and 6873/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 209 opaque classes and 1342 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1371/1572 classes and 6901/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 201 opaque classes and 1314 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -74,6 +74,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `ToolkitFontMetrics` names glyph advances, kerning, wrapping, ellipsis and paragraph dimensions; `ToolkitFont` names styled line/paragraph drawing and markup state. `UiTheme` names default styles, tooltips and software clip helpers. `DisplayModeDialog` exposes Classic, Resizable and Full screen selection, resolution choices and the original Apply flow. Its unrelated `containsPassword` helper retains the original chat warning check. `SoftwareFlatTriangleRasterizer` names clip-relative scanlines and constant-color triangle fills, including the original special destination-weight behavior. Rendering, text parsing and display transitions remain unchanged.
 
 `GameResourceLoader` requests archives and stages sound, music, patches, graphics, Huffman and toolkit initialization; `ArchiveRequestQueue` polls `ArchiveLoadRequest` entries and reports progress. `DateOfBirthInput`, `DateOfBirthTextFields` and `DateOfBirthValidator` name the existing day/month/year form and calendar checks. `Particle` names drawing, initialization, lifetime and pool replacement priority; `World` exposes particle spawning, debris queries, body destruction and nebula removal. `FeatheredLineRasterizer` retains its toolkit gradient and flat software fallback. The legacy Microsoft JVM path resolves `LegacyDirectSoundBuffers` through the existing checked class-name literal policy.
+
+`NetworkMessageState` names the shared incoming opcode and selected chat channel; `ChatChannelControl` changes the channel. `GameSession.sendDrawAction` and `sendRematchAction` preserve the existing state-dependent offer, accept and cancel packets. `LegacyOpenGlTextureCache` names texture lookup, generation, caching and ageing. `ArchiveIndexLoaderState`, `LoadingAnimationControl`, `BaseObjectiveLabel`, `UnratedRematchText` and `LogoFinalFrameBottom` identify small shared state and text owners. Generic `throwUnchecked` helpers preserve original exception identity and control flow.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

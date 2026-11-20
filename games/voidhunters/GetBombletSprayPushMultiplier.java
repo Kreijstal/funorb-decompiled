@@ -33,7 +33,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
               stackIn_6_0 = var6.pixels;
               stackIn_6_1 = var4;
               if (0 != param2.pixels[var4]) {
-                stackIn_7_2 = SetAngularForceDownshift.a(-16777216, param2.pixels[var4]);
+                stackIn_7_2 = SetAngularForceDownshift.orBits(-16777216, param2.pixels[var4]);
               } else {
                 stackIn_7_2 = 0;
               }

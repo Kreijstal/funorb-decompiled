@@ -97,7 +97,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
         if (null != this.linkedPhraseIds) {
           for (var2 = 0; this.linkedPhraseIds.length > var2; var2++) {
-            this.linkedPhraseIds[var2] = SetAngularForceDownshift.a(this.linkedPhraseIds[var2], 32768);
+            this.linkedPhraseIds[var2] = SetAngularForceDownshift.orBits(this.linkedPhraseIds[var2], 32768);
           }
         }
     }

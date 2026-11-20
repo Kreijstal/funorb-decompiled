@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eua {
-    static String field_a;
+final class UnratedRematchText {
+    static String text;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
-        field_a = null;
+        text = null;
         if (param0 > -123) {
-          field_a = (String) null;
+          text = (String) null;
         }
     }
 
     static {
         field_z = "eua.A(";
-        field_a = "Offer unrated rematch";
+        text = "Offer unrated rematch";
     }
 }

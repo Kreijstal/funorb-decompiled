@@ -38,7 +38,7 @@ final class SetTorpedoRandomness extends ConsoleCommand {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, String param7, int param8) {
         hp.field_b.text = param7;
-        if (ow.field_b != 2) {
+        if (NetworkMessageState.chatChannel != 2) {
           dp.field_a.text = SetReverbWet.field_o;
         } else {
           dp.field_a.text = ChatMessage.field_l;

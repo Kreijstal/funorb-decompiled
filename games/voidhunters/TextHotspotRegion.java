@@ -70,10 +70,10 @@ final class TextHotspotRegion extends IntrusiveNode {
           GetToggledScoreboard.field_o = new Sprite(var3, 3 * var4 / 4);
           GetToggledScoreboard.field_o.setRasterTarget();
           var2.drawOpaque(0, 0);
-          reb.field_a = new Sprite(var3, var4 - GetToggledScoreboard.field_o.height);
-          reb.field_a.setRasterTarget();
+          LogoFinalFrameBottom.sprite = new Sprite(var3, var4 - GetToggledScoreboard.field_o.height);
+          LogoFinalFrameBottom.sprite.setRasterTarget();
           var2.drawOpaque(0, -GetToggledScoreboard.field_o.height);
-          reb.field_a.yOffset = GetToggledScoreboard.field_o.height;
+          LogoFinalFrameBottom.sprite.yOffset = GetToggledScoreboard.field_o.height;
           bia.popRasterState((byte) 124);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hob.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

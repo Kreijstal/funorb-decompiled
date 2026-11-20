@@ -195,7 +195,7 @@ final class GameMenuScreen {
         var5 = 2;
         var6 = SetReloadBarWidth.menuActions[this.menuId][param0];
         var7 = SetReloadBarWidth.menuActions[this.menuId].length;
-        var8 = HighscoreValueRequest.field_g[var6];
+        var8 = HighscoreValueRequest.menuActionLabels[var6];
         if (var6 == 6) {
           if (SetCountermeasureLauncherProjectileLife.field_o != 0 &&
             AgeValidator.field_f != 0 &&
@@ -217,7 +217,7 @@ final class GameMenuScreen {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var8 = HighscoreValueRequest.field_g[5];
+            var8 = HighscoreValueRequest.menuActionLabels[5];
             var9_ref_String = var8;
             var9_ref_StringLifetime3 = var8;
           }
@@ -596,7 +596,7 @@ final class GameMenuScreen {
                                         } else {
                                           if (var10_int == 10) {
                                             if (this.inputState.isActivationRequested((byte) -96)) {
-                                              MatchingFieldValidator.field_g.b(true);
+                                              MatchingFieldValidator.field_g.sendRematchAction(true);
                                               var10_int = param1 ? 1 : 0;
                                               stackIn_166_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                                               GetNebulaFadesOutWhenClose.a(stackIn_166_0, var10_int != 0, (byte) -85, -1);
@@ -716,7 +716,7 @@ final class GameMenuScreen {
                                         }
                                       } else {
                                         if (this.inputState.isActivationRequested((byte) -89)) {
-                                          MatchingFieldValidator.field_g.e(true);
+                                          MatchingFieldValidator.field_g.sendDrawAction(true);
                                           var10_int = param1 ? 1 : 0;
                                           stackIn_156_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                                           GetNebulaFadesOutWhenClose.a(stackIn_156_0, var10_int != 0, (byte) -85, -1);

@@ -1669,20 +1669,20 @@ final class GameSession {
         for (var17Lifetime1 = 0; var3 > var17Lifetime1; var17Lifetime1++) {
           if ((1 << var17Lifetime1 & this.state.disconnectedPlayerMask) != 0 &&
             SetMissionResnetResourceTickTime.field_p == 0) {
-            var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], OpenGlGpuToolkit.field_Oc);
+            var11[1 + var17Lifetime1] = SetAngularForceDownshift.orBits(var11[1 + var17Lifetime1], OpenGlGpuToolkit.field_Oc);
           } else {
             if (var17Lifetime1 == this.localPlayerIndex) {
-              var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], GetBoostersActiveTime.field_o);
+              var11[1 + var17Lifetime1] = SetAngularForceDownshift.orBits(var11[1 + var17Lifetime1], GetBoostersActiveTime.field_o);
             }
             var35 = var7.getPlayer(var17Lifetime1, (byte) 59);
             if (!var35.connected &&
               this.state.field_h[var17Lifetime1] == null &&
               SetMissionResnetResourceTickTime.field_p == 0) {
-              var11[var17Lifetime1 + 1] = SetAngularForceDownshift.a(var11[var17Lifetime1 + 1], OpenGlGpuToolkit.field_Oc);
+              var11[var17Lifetime1 + 1] = SetAngularForceDownshift.orBits(var11[var17Lifetime1 + 1], OpenGlGpuToolkit.field_Oc);
             } else {
               if (!var7.missionState.isPreGamePhase((byte) -126) &&
                 null == var7.world.findShipByOwner(var17Lifetime1, 92)) {
-                var11[var17Lifetime1 + 1] = SetAngularForceDownshift.a(var11[var17Lifetime1 + 1], bsb.field_a);
+                var11[var17Lifetime1 + 1] = SetAngularForceDownshift.orBits(var11[var17Lifetime1 + 1], bsb.field_a);
               }
               var19_int = var35.selectedTeam;
               var12[1 + var17Lifetime1] = AlphaContainer.getTeamColor(false, var19_int, 13894143);
@@ -3672,7 +3672,7 @@ final class GameSession {
         }
     }
 
-    final void e(boolean param0) {
+    final void sendDrawAction(boolean param0) {
         int discarded$0 = 0;
         if (!this.networked) {
           throw new IllegalStateException();
@@ -5679,7 +5679,7 @@ final class GameSession {
         return var8;
     }
 
-    final void b(boolean param0) {
+    final void sendRematchAction(boolean param0) {
         boolean discarded$0 = false;
         if (!this.networked) {
           throw new IllegalStateException();

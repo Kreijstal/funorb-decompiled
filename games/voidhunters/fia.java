@@ -77,7 +77,7 @@ final class fia {
             param1 = 0;
           }
           waa.field_x = param4;
-          ow.field_b = param1;
+          NetworkMessageState.chatChannel = param1;
           var8 = (CharSequence) ((Object) param4);
           GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var8);
           lsa.field_f = param3;

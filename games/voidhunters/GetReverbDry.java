@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetReverbDry extends ConsoleCommand {
-    final static void a(int param0) {
+    final static void resetReflectionCheckQueue(int param0) {
         if (param0 > -108) {
           return;
         }
@@ -18,7 +18,7 @@ final class GetReverbDry extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetReverbDry.a(-97);
+            GetReverbDry.resetReflectionCheckQueue(-97);
           }
           stackIn_3_0 = new ConsoleValue(GetMissileLauncherProjectiles.field_o);
           return stackIn_3_0;
@@ -42,7 +42,7 @@ final class GetReverbDry extends ConsoleCommand {
 
     final static boolean e(byte param0) {
         if (param0 != 105) {
-          GetReverbDry.a(22);
+          GetReverbDry.resetReflectionCheckQueue(22);
           if (null != GetLagStandardDeviationOut.field_o) {
             return true;
           }

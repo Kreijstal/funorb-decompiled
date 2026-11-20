@@ -634,7 +634,7 @@ final class PlatformService implements Runnable {
         }
         lfb.a(buildId, -109, gameName);
         if (this.privilegedAccess) {
-          this.randomFile = new BoundedRandomAccessFile(lfb.a("random.dat", -1, (String) null, buildId), "rw", 25L);
+          this.randomFile = new BoundedRandomAccessFile(lfb.resolveCacheFile("random.dat", -1, (String) null, buildId), "rw", 25L);
           this.cacheDataFile = new BoundedRandomAccessFile(lfb.a("main_file_cache.dat2", (byte) 34), "rw", 314572800L);
           this.masterIndexFile = new BoundedRandomAccessFile(lfb.a("main_file_cache.idx255", (byte) 34), "rw", 1048576L);
           this.cacheIndexFiles = new BoundedRandomAccessFile[param2];

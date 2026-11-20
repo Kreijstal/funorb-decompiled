@@ -106,7 +106,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$0 = var15;
                       var15++;
-                      var35[0][incrementValue$0] = var27.readInt(SetFixedaim.a(param0, 75));
+                      var35[0][incrementValue$0] = var27.readInt(SetFixedaim.xorBits(param0, 75));
                     }
                     var12++;
                   }

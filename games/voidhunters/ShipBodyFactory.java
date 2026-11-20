@@ -165,7 +165,7 @@ final class ShipBodyFactory implements GameStateFactory {
           SetUseModels.field_o.setBounds(0, 124, SetUseCircleFill.field_o.width, 24, -24 + SetUseCircleFill.field_o.height);
           SetUseModels.field_o.field_gb = uwa.a(11579568, SetUseModels.field_o.height, 1, 8421504, 92, 3);
           DualLinkNode.field_f.setBounds(5, 124, SetUseModels.field_o.width - 10, 5, -2 + (-24 + SetUseModels.field_o.height) - 10);
-          rlb.field_a.setBounds((SetUseModels.field_o.width - 80) / 2, 24, 80, -29 + SetUseModels.field_o.height, 24);
+          LegacyOpenGlTextureCache.field_a.setBounds((SetUseModels.field_o.width - 80) / 2, 24, 80, -29 + SetUseModels.field_o.height, 24);
           GetThrusterForce.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,7 +5,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static int field_a;
     static Widget field_b;
 
-    final static void a(byte param0) {
+    final static void checkObfuscationGuard(byte param0) {
         int var1 = 56 / ((0 - param0) / 50);
     }
 

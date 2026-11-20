@@ -60,19 +60,19 @@ final class GetSniperCannonAimarc extends ConsoleCommand {
               if (var5 != 2 &&
                 var5 != 6) {
                 if (var5 == 3) {
-                  stackIn_18_0 = cma.a(var4, SetTeamSelectionSpeedup.field_o, cib.field_a, (byte) -126);
+                  stackIn_18_0 = cma.formatTeamObjective(var4, SetTeamSelectionSpeedup.field_o, BaseObjectiveLabel.text, (byte) -126);
                   return stackIn_18_0;
                 }
-                stackIn_20_0 = cma.a(var4, SetTeamSelectionSpeedup.field_o, GetReadyRoomMissionTime.field_o, (byte) -74);
+                stackIn_20_0 = cma.formatTeamObjective(var4, SetTeamSelectionSpeedup.field_o, GetReadyRoomMissionTime.field_o, (byte) -74);
                 return stackIn_20_0;
               }
-              stackIn_16_0 = cma.a(var4, SetTeamSelectionSpeedup.field_o, GetLaserBeamProjectileDamage.field_t, (byte) -91);
+              stackIn_16_0 = cma.formatTeamObjective(var4, SetTeamSelectionSpeedup.field_o, GetLaserBeamProjectileDamage.field_t, (byte) -91);
               return stackIn_16_0;
             }
-            stackIn_14_0 = cma.a(var4, SetTeamSelectionSpeedup.field_o, SetDebrisCarryOverPercentage.field_o, (byte) -96);
+            stackIn_14_0 = cma.formatTeamObjective(var4, SetTeamSelectionSpeedup.field_o, SetDebrisCarryOverPercentage.field_o, (byte) -96);
             return stackIn_14_0;
           }
-          stackIn_12_0 = cma.a(var4, SetTeamSelectionSpeedup.field_o, cib.field_a, (byte) -64);
+          stackIn_12_0 = cma.formatTeamObjective(var4, SetTeamSelectionSpeedup.field_o, BaseObjectiveLabel.text, (byte) -64);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
