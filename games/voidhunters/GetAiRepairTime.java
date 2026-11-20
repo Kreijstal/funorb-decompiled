@@ -31,7 +31,7 @@ final class GetAiRepairTime extends ConsoleCommand {
         }
     }
 
-    final static void e(int param0) {
+    final static void drawNonzeroSoftwareRasterRegions(int param0) {
         int var9 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -50,7 +50,7 @@ final class GetAiRepairTime extends ConsoleCommand {
           var1_int = 0;
           var2 = -1;
           if (param0 > -19) {
-            GetAiRepairTime.e(-126);
+            GetAiRepairTime.drawNonzeroSoftwareRasterRegions(-126);
           }
           var3 = -1;
           var4 = -1;

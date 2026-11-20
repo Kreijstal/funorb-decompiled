@@ -8,7 +8,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 3575) {
-          GetTeamSelectionSpeedup.a(-8);
+          GetTeamSelectionSpeedup.readLobbyUpdatePacket(-8);
         }
     }
 
@@ -43,7 +43,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void readLobbyUpdatePacket(int param0) {
         int stackIn_12_0 = 0;
         LobbyPlayerEntry stackIn_18_0 = null;
         boolean stackIn_19_1 = false;

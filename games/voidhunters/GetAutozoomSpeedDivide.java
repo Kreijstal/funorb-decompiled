@@ -8,7 +8,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, String param2, byte param3, int param4, int param5, ToolkitFont param6, GraphicsToolkit param7, ToolkitFontMetrics param8, int param9, int param10) {
+    final static void drawToolkitTooltipBox(int param0, int param1, String param2, byte param3, int param4, int param5, ToolkitFont param6, GraphicsToolkit param7, ToolkitFontMetrics param8, int param9, int param10) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

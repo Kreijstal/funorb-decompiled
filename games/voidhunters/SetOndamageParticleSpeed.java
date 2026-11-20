@@ -26,7 +26,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
         try {
           UiAngleDialRenderer.field_a = arguments[0].intValue(50);
           if (obfuscationGuard > -119) {
-            SetOndamageParticleSpeed.a(15, 1, 90, -10, -70, -82, 78, -25);
+            SetOndamageParticleSpeed.fillBorderedEllipseClipped(15, 1, 90, -10, -70, -82, 78, -25);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -44,7 +44,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillBorderedEllipseClipped(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;

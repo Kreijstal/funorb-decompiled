@@ -37,7 +37,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void drawCubicBezier(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         if (param7 >= 59) {
           if (param2 < OpenGlTexture3D.rasterClipMinX) {
             TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);

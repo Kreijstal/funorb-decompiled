@@ -48,7 +48,7 @@ final class ScrollPaneWidget extends Widget {
         return this.layoutAndUpdateScrolling(param3, param4, this.viewport.height, param2, param1, param5, -120);
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3) {
+    final static void updateLobbyGameControls(boolean param0, int param1, boolean param2, int param3) {
         int stackIn_11_0 = 0;
         String stackIn_25_0 = null;
         Widget stackIn_36_0 = null;
@@ -143,7 +143,7 @@ final class ScrollPaneWidget extends Widget {
               } else {
                 stackIn_40_1 = LobbyGameContextMenuBuilder.field_a;
               }
-              stackIn_39_0.text = SetReverbGain.a(stackIn_40_1, new String[]{ObjectiveMarker.field_b.text}, 76);
+              stackIn_39_0.text = SetReverbGain.substituteIndexedPlaceholders(stackIn_40_1, new String[]{ObjectiveMarker.field_b.text}, 76);
               TickClock.field_b = true;
               GetShipToShipRamDamage.field_q.enabled = true;
               SetAutozoomSpeedDivide.field_p.text = UiComboBox.field_D;
@@ -244,7 +244,7 @@ final class ScrollPaneWidget extends Widget {
                 GpuSprite.sendLobbyOptions((byte) 108, param3);
               }
             }
-            ResourceArchive.a(param3, SetThrusterParticleSpeedDownshift.field_o, true, (byte) -67);
+            ResourceArchive.updateLobbyGameOptions(param3, SetThrusterParticleSpeedDownshift.field_o, true, (byte) -67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

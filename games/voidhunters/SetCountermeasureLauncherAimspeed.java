@@ -7,7 +7,7 @@ final class SetCountermeasureLauncherAimspeed extends ConsoleCommand {
     static AccountRequestPhase field_r;
     static int field_q;
 
-    final static boolean a(SerializableGameState[] param0, boolean param1, int param2, SerializableGameState[] param3, int param4) {
+    final static boolean stateArraysDiffer(SerializableGameState[] param0, boolean param1, int param2, SerializableGameState[] param3, int param4) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;

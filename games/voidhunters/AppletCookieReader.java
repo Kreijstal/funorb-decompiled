@@ -32,7 +32,7 @@ final class AppletCookieReader {
                 AppletCookieReader.readCookie((String) null, 114, (java.applet.Applet) null);
               }
               var9 = (String) (AppletJavaScriptBridge.call(param2, "getcookies", 12348));
-              var4 = SetFighterBayAimspeed.a((byte) -67, ';', var9);
+              var4 = SetFighterBayAimspeed.splitString((byte) -67, ';', var9);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

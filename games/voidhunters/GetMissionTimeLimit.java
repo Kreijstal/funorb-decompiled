@@ -39,7 +39,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void updateLobbyPanelAnimation(boolean param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -115,7 +115,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
           if (param1) {
             return;
           }
-          GetMissionTimeLimit.a(true, false);
+          GetMissionTimeLimit.updateLobbyPanelAnimation(true, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

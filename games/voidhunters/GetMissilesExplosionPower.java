@@ -5,7 +5,7 @@ final class GetMissilesExplosionPower extends ConsoleCommand {
     static int field_p;
     static String field_o;
 
-    final static void a(ShipComponent param0, int param1) {
+    final static void attachPresetComponents(ShipComponent param0, int param1) {
         ShipComponent var4 = null;
         ShipComponent var3 = null;
         try {
@@ -40,7 +40,7 @@ final class GetMissilesExplosionPower extends ConsoleCommand {
         field_o = null;
         if (param0 != 3) {
           ShipComponent var2 = (ShipComponent) null;
-          GetMissilesExplosionPower.a((ShipComponent) null, 113);
+          GetMissilesExplosionPower.attachPresetComponents((ShipComponent) null, 113);
         }
     }
 

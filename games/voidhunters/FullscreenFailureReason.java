@@ -45,7 +45,7 @@ final class FullscreenFailureReason {
               var3Lifetime1 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
             }
             if (param1.channelType == 1) {
-              var3Lifetime1 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{param1.field_o}, 107) + "] ";
+              var3Lifetime1 = "[" + SetReverbGain.substituteIndexedPlaceholders(MonotonicMillisClock.field_b, new String[]{param1.field_o}, 107) + "] ";
             }
             if (param1.channelType == 4 &&
               null != LoginForm.teamChatName) {
@@ -61,9 +61,9 @@ final class FullscreenFailureReason {
             if (!param1.unfiltered) {
               if (0 == param1.field_f &&
                 param1.field_h == 0) {
-                var3Lifetime1 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{(String) (var2)}, 119);
+                var3Lifetime1 = SetReverbGain.substituteIndexedPlaceholders(UiComboBoxList.field_G, new String[]{(String) (var2)}, 119);
               } else {
-                var3Lifetime1 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{(String) (var2)}, 123);
+                var3Lifetime1 = SetReverbGain.substituteIndexedPlaceholders(GetLaserAimspeed.field_o, new String[]{(String) (var2)}, 123);
               }
             }
           }

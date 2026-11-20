@@ -39,7 +39,7 @@ final class GetAiRepairAmount extends ConsoleCommand {
 
     final static void printLoadSettingsCommand(byte param0) {
         System.out.println("load_settings(\"");
-        SetFogOfWarOn.e((byte) 106);
+        SetFogOfWarOn.printSettingsScript((byte) 106);
         System.out.println("\")");
         if (param0 < 102) {
           GetAiRepairAmount.readQuickChatPolicy(-54);

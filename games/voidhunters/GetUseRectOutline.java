@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseRectOutline extends ConsoleCommand {
-    final static void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
+    final static void updateSocialAndLobbyPanels(boolean param0, int param1, int param2, int param3, boolean param4, int param5, int param6, boolean param7, boolean param8, boolean param9) {
         int var11;
         var11 = VoidHunters.field_G;
         if (param7) {
           SetUseDetailLines.field_o = GetVelocitySustain.field_p;
-          GetMissionTimeLimit.a(param7, true);
+          GetMissionTimeLimit.updateLobbyPanelAnimation(param7, true);
           if (SoftwareTransform3D.field_b > 0) {
             FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
           }
           SetAutozoomSpeedDivide.field_p.field_F = 1;
           SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
           if (CarouselPlayerEventFactory.field_a > 0) {
-            ScrollPaneWidget.a(param0, -99, param7, param5);
+            ScrollPaneWidget.updateLobbyGameControls(param0, -99, param7, param5);
           }
           if (~SetExplosionPushMultiplier.field_p < param1) {
-            ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
+            ComponentCollision.updateCurrentLobbyControls(param5, (byte) 105, param8, param0, param7);
           }
           if (GetTorpedoProjectileDamage.field_o &&
             SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
@@ -27,7 +27,7 @@ final class GetUseRectOutline extends ConsoleCommand {
           } else {
             CarouselSlot.field_a.viewport.text = null;
             DualLinkNode.field_f.enabled = true;
-            SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
+            SetTorpedoProjectiles.updateLobbyPlayerList(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
           }
         } else {
           if (GetShieldsDirectionalArcParticleLife.field_p != SoftwareRasterizer2D.width) {
@@ -35,7 +35,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               SetClientSideDragging.field_q.width == SoftwareRasterizer2D.width) {
               if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
-                  SetGrapplingHookMinLength.a(5);
+                  SetGrapplingHookMinLength.layoutSocialAndLobbyPanels(5);
                 } else {
                   ShipBodyFactory.layoutGameInterface((byte) 100, true);
                 }
@@ -45,17 +45,17 @@ final class GetUseRectOutline extends ConsoleCommand {
             }
             if (!param7) {
               SetUseDetailLines.field_o = (GetShieldsDirectionalArcParticleLife.field_p - 640) / 2;
-              GetMissionTimeLimit.a(param7, true);
+              GetMissionTimeLimit.updateLobbyPanelAnimation(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
                 FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
               if (CarouselPlayerEventFactory.field_a > 0) {
-                ScrollPaneWidget.a(param0, -99, param7, param5);
+                ScrollPaneWidget.updateLobbyGameControls(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.updateCurrentLobbyControls(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
@@ -65,21 +65,21 @@ final class GetUseRectOutline extends ConsoleCommand {
               } else {
                 CarouselSlot.field_a.viewport.text = null;
                 DualLinkNode.field_f.enabled = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
+                SetTorpedoProjectiles.updateLobbyPlayerList(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             } else {
               SetUseDetailLines.field_o = GetVelocitySustain.field_p;
-              GetMissionTimeLimit.a(param7, true);
+              GetMissionTimeLimit.updateLobbyPanelAnimation(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
                 FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
               if (CarouselPlayerEventFactory.field_a > 0) {
-                ScrollPaneWidget.a(param0, -99, param7, param5);
+                ScrollPaneWidget.updateLobbyGameControls(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.updateCurrentLobbyControls(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
@@ -89,7 +89,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               } else {
                 CarouselSlot.field_a.viewport.text = null;
                 DualLinkNode.field_f.enabled = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
+                SetTorpedoProjectiles.updateLobbyPlayerList(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             }
           } else {
@@ -98,7 +98,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               SetClientSideDragging.field_q.width == SoftwareRasterizer2D.width) {
               if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
-                  SetGrapplingHookMinLength.a(5);
+                  SetGrapplingHookMinLength.layoutSocialAndLobbyPanels(5);
                 } else {
                   ShipBodyFactory.layoutGameInterface((byte) 100, true);
                 }
@@ -108,17 +108,17 @@ final class GetUseRectOutline extends ConsoleCommand {
             }
             if (!param7) {
               SetUseDetailLines.field_o = (GetShieldsDirectionalArcParticleLife.field_p - 640) / 2;
-              GetMissionTimeLimit.a(param7, true);
+              GetMissionTimeLimit.updateLobbyPanelAnimation(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
                 FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
               if (CarouselPlayerEventFactory.field_a > 0) {
-                ScrollPaneWidget.a(param0, -99, param7, param5);
+                ScrollPaneWidget.updateLobbyGameControls(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.updateCurrentLobbyControls(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
@@ -128,31 +128,31 @@ final class GetUseRectOutline extends ConsoleCommand {
               } else {
                 CarouselSlot.field_a.viewport.text = null;
                 DualLinkNode.field_f.enabled = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
+                SetTorpedoProjectiles.updateLobbyPlayerList(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             } else {
               SetUseDetailLines.field_o = GetVelocitySustain.field_p;
-              GetMissionTimeLimit.a(param7, true);
+              GetMissionTimeLimit.updateLobbyPanelAnimation(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
                 FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
               if (CarouselPlayerEventFactory.field_a > 0) {
-                ScrollPaneWidget.a(param0, -99, param7, param5);
+                ScrollPaneWidget.updateLobbyGameControls(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
-                ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
+                ComponentCollision.updateCurrentLobbyControls(param5, (byte) 105, param8, param0, param7);
               }
               if (!GetTorpedoProjectileDamage.field_o) {
                 CarouselSlot.field_a.viewport.text = null;
                 DualLinkNode.field_f.enabled = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
+                SetTorpedoProjectiles.updateLobbyPlayerList(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               } else {
                 if (SetSpinningBladeSpindamageMultiplier.field_o.playerCount < SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
                   CarouselSlot.field_a.viewport.text = null;
                   DualLinkNode.field_f.enabled = true;
-                  SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
+                  SetTorpedoProjectiles.updateLobbyPlayerList(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
                 } else {
                   DualLinkNode.field_f.enabled = false;
                   CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
@@ -162,8 +162,8 @@ final class GetUseRectOutline extends ConsoleCommand {
             }
           }
         }
-        TiledSpriteTextureOperation.a(param2, param6, param4, param9, param5, param3, (byte) 119);
-        SetTorpedoProjectiles.a(param6, (byte) 1, WaterTextures.field_f, param4, param5);
+        TiledSpriteTextureOperation.updateLobbyGameList(param2, param6, param4, param9, param5, param3, (byte) 119);
+        SetTorpedoProjectiles.updateLobbyPlayerList(param6, (byte) 1, WaterTextures.field_f, param4, param5);
         GetMissionTerrainNebulaProbability.field_o = GetMissionTerrainNebulaProbability.field_o + 1;
     }
 
@@ -200,7 +200,7 @@ final class GetUseRectOutline extends ConsoleCommand {
 
     final static void updatePlayerGameDataLoading(boolean param0) {
         if (param0) {
-          GetUseRectOutline.a(true, 69, -111, -75, true, 23, 116, false, false, true);
+          GetUseRectOutline.updateSocialAndLobbyPanels(true, 69, -111, -75, true, 23, 116, false, false, true);
         }
         if (TextLayout.playerGameDataLoaded) {
           return;

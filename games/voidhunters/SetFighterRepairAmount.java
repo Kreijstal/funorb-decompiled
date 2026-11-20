@@ -30,7 +30,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetFighterRepairAmount.b(125, -116, 41);
+            SetFighterRepairAmount.handleTextChatKeyEvent(125, -116, 41);
           }
           SetMachineGunEnergyUsed.submitSettingsChange(231, 62, arguments[0].intValue(21));
           stackIn_3_0 = new ConsoleValue("void");
@@ -52,14 +52,14 @@ final class SetFighterRepairAmount extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != -15) {
-          SetFighterRepairAmount.b(-46, 57, -52);
+          SetFighterRepairAmount.handleTextChatKeyEvent(-46, 57, -52);
           field_q = null;
           return;
         }
         field_q = null;
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean handleTextChatKeyEvent(int param0, int param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         String var4_ref_String;
@@ -178,7 +178,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (!VariableCondition.field_e) {
               if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
                 if (!OpenGlRenderbuffer.field_n) {
-                  var38 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+                  var38 = "[" + SetReverbGain.substituteIndexedPlaceholders(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var39 = var38 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var39);
                   if (var5Lifetime1 < DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
@@ -187,7 +187,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
                   return true;
                 }
                 if (null == LoginForm.teamChatName) {
-                  var36 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+                  var36 = "[" + SetReverbGain.substituteIndexedPlaceholders(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var37 = var36 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var37);
                   if (var5Lifetime1 < DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
@@ -209,7 +209,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           }
           if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
             if (!OpenGlRenderbuffer.field_n) {
-              var43 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+              var43 = "[" + SetReverbGain.substituteIndexedPlaceholders(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var44 = var43 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var44);
               if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
@@ -219,7 +219,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               return true;
             }
             if (null == LoginForm.teamChatName) {
-              var41 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
+              var41 = "[" + SetReverbGain.substituteIndexedPlaceholders(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var42 = var41 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var42);
               if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
@@ -234,8 +234,8 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var45);
         } else {
           var47 = (CharSequence) ((Object) ChoosePlayerNameForm.privateChatTargetDisplayName);
-          var18 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{SegmentIntersections.canonicalizeBase37Name(var47, false)}, 108);
-          var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var16}, param2 ^ -30);
+          var18 = SetReverbGain.substituteIndexedPlaceholders(UiComboBoxList.field_G, new String[]{SegmentIntersections.canonicalizeBase37Name(var47, false)}, 108);
+          var8 = SetReverbGain.substituteIndexedPlaceholders(GetLaserAimspeed.field_o, new String[]{var16}, param2 ^ -30);
           var9 = DebrisFactory.field_c.getStringWidth(var18);
           var10 = DebrisFactory.field_c.getStringWidth(var8);
           if (var10 >= var9) {

@@ -8,7 +8,7 @@ final class RoundResult implements DiffableState {
     static boolean field_e;
     static String field_a;
 
-    final static int a(int param0, String param1, int param2, byte param3, String param4, boolean param5, String param6) {
+    final static int sendAndPollAccountCreation(int param0, String param1, int param2, byte param3, String param4, boolean param5, String param6) {
         AccountRequestText var7 = null;
         RuntimeException var7_ref = null;
         AccountRequestText var8 = null;

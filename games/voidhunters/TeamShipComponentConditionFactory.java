@@ -84,7 +84,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
           if (var1 == 1) {
             EnvironmentReflectionGpuMaterialEffect.field_j = ArmSelfDestructOrderDefinition.field_d;
           } else {
-            EnvironmentReflectionGpuMaterialEffect.field_j = SetReverbGain.a(OpenGlVertexDeclaration.field_g, new String[]{Integer.toString(var1)}, 119);
+            EnvironmentReflectionGpuMaterialEffect.field_j = SetReverbGain.substituteIndexedPlaceholders(OpenGlVertexDeclaration.field_g, new String[]{Integer.toString(var1)}, 119);
           }
           EnvironmentReflectionGpuMaterialEffect.field_j = SetShieldsDirectionalArc.concatenate(0, new CharSequence[]{(CharSequence) ((Object) EnvironmentReflectionGpuMaterialEffect.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GetMassDriverProjectileDamage.field_o)});
         }

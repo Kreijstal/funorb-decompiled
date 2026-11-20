@@ -16,7 +16,7 @@ final class SettingsInstance implements DiffableState {
         try {
           var3 = (SettingsInstance) (other);
           var4 = 0;
-          if (GetCountermeasuresCooldown.a(this.values, var3.values, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.values, var3.values, false)) {
             var4 = 1;
             System.out.println("int[] values has changed. ");
           }
@@ -151,7 +151,7 @@ final class SettingsInstance implements DiffableState {
         if (SetFighterRepairTime.field_p != null) {
           var2 = SetFighterRepairTime.field_p;
           String var1 = var2;
-          MessageDialogPresenter.showMessage(SetReverbGain.a(ToolkitRasterState.field_d, new String[]{var2}, 125), param0 ^ 6923);
+          MessageDialogPresenter.showMessage(SetReverbGain.substituteIndexedPlaceholders(ToolkitRasterState.field_d, new String[]{var2}, 125), param0 ^ 6923);
           SetFighterRepairTime.field_p = null;
         }
         if (param0 == 6939) {

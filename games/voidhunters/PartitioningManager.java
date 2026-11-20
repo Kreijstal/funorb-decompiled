@@ -134,7 +134,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
         try {
           var3 = (PartitioningManager) (param1);
           var4 = 43 / ((param0 - 22) / 59);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var3.zonelists, false, 1, this.zonelists, 122);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.zonelists, false, 1, this.zonelists, 122);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -346,7 +346,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
           var3 = (PartitioningManager) (other);
           CarouselSlot.reportStateArrayDifferences(var3.zonelists, 1, this.zonelists, false, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.zonelists, false, 1, this.zonelists, -99)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.zonelists, false, 1, this.zonelists, -99)) {
             var4 = 1;
             System.out.println("PartitionZoneList[] zonelists has changed. ");
           }

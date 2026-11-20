@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetClientSideDragging extends ConsoleCommand {
-    final static byte[] a(boolean param0, int param1, IsaacPacketBuffer param2, byte[] param3) {
+    final static byte[] readPackedByteArray(boolean param0, int param1, IsaacPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

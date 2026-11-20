@@ -4,7 +4,7 @@
 final class SetDebrisGroupColour extends ConsoleCommand {
     static Sprite[] field_o;
 
-    final static float[] a(float param0, int param1, int param2, int param3, float param4, int param5, int param6, float param7) {
+    final static float[] buildTextureMappingMatrix(float param0, int param1, int param2, int param3, float param4, int param5, int param6, float param7) {
         float[] var21 = new float[9];
         float[] var19 = var21;
         float[] var17 = var19;

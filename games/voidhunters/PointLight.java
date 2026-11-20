@@ -119,7 +119,7 @@ abstract class PointLight extends IntrusiveNode {
                 if (6409 != param0 &&
                   param0 != 34846) {
                   if (param1) {
-                    PointLight.a((Camera2D) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
+                    PointLight.drawWorldTrail((Camera2D) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
                   }
                   if (6410 != param0 &&
                     param0 != 34847) {
@@ -150,7 +150,7 @@ abstract class PointLight extends IntrusiveNode {
         }
     }
 
-    final static void a(Camera2D param0, int[] param1, int param2, int param3, int[] param4, int[] param5, int param6, int[] param7, int param8) {
+    final static void drawWorldTrail(Camera2D param0, int[] param1, int param2, int param3, int[] param4, int[] param5, int param6, int[] param7, int param8) {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;

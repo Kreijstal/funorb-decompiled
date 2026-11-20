@@ -71,7 +71,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         var6 = VoidHunters.field_G;
         try {
           if (param0 == 0) {
-            stackIn_9_0 = TimedSpecialOrderBehaviour.a(!param2);
+            stackIn_9_0 = TimedSpecialOrderBehaviour.createFourThrusterShip(!param2);
             return stackIn_9_0;
           }
           var7 = new Ship();
@@ -129,7 +129,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                     }
                   }
                 } else {
-                  GetMissilesExplosionPower.a(var4, -77);
+                  GetMissilesExplosionPower.attachPresetComponents(var4, -77);
                 }
               }
             } else {

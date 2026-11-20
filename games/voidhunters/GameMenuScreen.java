@@ -55,7 +55,7 @@ final class GameMenuScreen {
           if (param1 <= 34) {
             this.resetSelection(true, 114, 76);
           }
-          stackIn_3_0 = SetLagVariant.a(param2, param0, 0, "<col=ffaa00>" + SetTorpedoProjectileDamage.field_q[param3] + "</col>");
+          stackIn_3_0 = SetLagVariant.replaceLiteral(param2, param0, 0, "<col=ffaa00>" + SetTorpedoProjectileDamage.field_q[param3] + "</col>");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -507,7 +507,7 @@ final class GameMenuScreen {
           if (var10_int == 1) {
             if (this.inputState.isActivationRequested((byte) -126)) {
               if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 85)) {
-                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, IntrusiveDequeIterator.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, MidiCrossfadeStream.buttonFrameSprites, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
+                GetAutoDetail.openStyledMessageBox(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, IntrusiveDequeIterator.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, MidiCrossfadeStream.buttonFrameSprites, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
               } else {
                 var10_int = param1 ? 1 : 0;
                 GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, -4);
@@ -689,7 +689,7 @@ final class GameMenuScreen {
                                                                 }
                                                               }
                                                             }
-                                                            var20 = "http://" + var13Lifetime7 + "/g=voidhunters/autochoose.ws?dest=" + GetDebrisMax.a((CharSequence) ((Object) var12), 32);
+                                                            var20 = "http://" + var13Lifetime7 + "/g=voidhunters/autochoose.ws?dest=" + GetDebrisMax.urlEncodeCp1252((CharSequence) ((Object) var12), 32);
                                                             var13_ref = new java.awt.datatransfer.StringSelection(var20);
                                                             SetTorpedoProjectiles.field_o.writeClipboard((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
                                                             SocketNetworkArchiveClient.field_n = 100;

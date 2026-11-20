@@ -120,9 +120,9 @@ final class OpenGlEnvironmentMappedWaterEffect extends GpuMaterialEffect {
             this.field_e = false;
             return;
           }
-          var6 = GetMomentOfInertiaPerpointCalcDownshift.a(param1.fetchNamedFile("environment_mapped_water_v", true, "gl"), 35633, (byte) -15, param0);
+          var6 = GetMomentOfInertiaPerpointCalcDownshift.compileOpenGlShader(param1.fetchNamedFile("environment_mapped_water_v", true, "gl"), 35633, (byte) -15, param0);
           var4 = var6;
-          var5 = GetMomentOfInertiaPerpointCalcDownshift.a(param1.fetchNamedFile("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
+          var5 = GetMomentOfInertiaPerpointCalcDownshift.compileOpenGlShader(param1.fetchNamedFile("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
           this.field_f = NodeHashTable.linkShaderProgram(0, new OpenGlShader[]{var6, var5}, param0);
           stackIn_8_1 = (this.field_f != null) && (this.field_g.ensureNormalMap((byte) 63));
           this.field_e = stackIn_8_1;

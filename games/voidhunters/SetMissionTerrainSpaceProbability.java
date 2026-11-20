@@ -36,7 +36,7 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int findSegmentRectangleIntersectionFraction(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10;
         int var11;
         int var12;

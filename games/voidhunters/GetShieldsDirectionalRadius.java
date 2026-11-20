@@ -22,7 +22,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
         GetBoostersCooldown.savedHintCompletion = GetBots.copyBooleanArray(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void updateLobbyAndSocialUi(byte param0, boolean param1) {
         boolean stackIn_9_0 = false;
         int stackIn_12_1;
         int stackIn_12_2;

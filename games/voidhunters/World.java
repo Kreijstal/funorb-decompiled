@@ -327,7 +327,7 @@ final class World implements DiffableState, CompactGameState {
               }
               if (0 == var10_ref_uwa.kind &&
                 param0.getFiredTeam(512) != var11) {
-                var13_int = SetShieldsDamageEnergyConversion.a(var10_ref_uwa.radius, param2, param5, var10_ref_uwa.x, param1, 8, param4, var10_ref_uwa.y, 72);
+                var13_int = SetShieldsDamageEnergyConversion.findSegmentCircleIntersectionFraction(var10_ref_uwa.radius, param2, param5, var10_ref_uwa.x, param1, 8, param4, var10_ref_uwa.y, 72);
                 if ((-1 == var13_int ||
                   var13_int == 257) && (var10_ref_uwa.deltaX != 0 ||
                   var10_ref_uwa.deltaY != 0)) {
@@ -373,7 +373,7 @@ final class World implements DiffableState, CompactGameState {
                     if (Math.abs(var20) < var10_ref_uwa.arcHalfAngle) {
                       var14_intLifetime2 = 1;
                     } else {
-                      var21 = SetShieldsDamageEnergyConversion.a(var10_ref_uwa.radius, param5, param2, var10_ref_uwa.x, param4, 8, param1, var10_ref_uwa.y, 96);
+                      var21 = SetShieldsDamageEnergyConversion.findSegmentCircleIntersectionFraction(var10_ref_uwa.radius, param5, param2, var10_ref_uwa.x, param4, 8, param1, var10_ref_uwa.y, 96);
                       if (var21 != -1 &&
                         var21 != 257) {
                         var13_int = 256 - var21;
@@ -938,15 +938,15 @@ final class World implements DiffableState, CompactGameState {
             this.missionBuilder.reportDifferences(var5.missionBuilder, -25);
           }
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var5.ships, false, 1, this.ships, 124)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.ships, false, 1, this.ships, 124)) {
             var4 = 1;
             System.out.println("Ship[] ships has changed. ");
           }
-          if (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.projectiles, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952), 123)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(TextHotspotRegion.dequeToStateArray(var5.projectiles, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952), 123)) {
             System.out.println("linklist projectiles has changed. ");
             var4 = 1;
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.debris, false, 1, this.debris, 1)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.debris, false, 1, this.debris, 1)) {
             System.out.println("Debris[] debris has changed. ");
             var4 = 1;
           }
@@ -963,15 +963,15 @@ final class World implements DiffableState, CompactGameState {
             null != this.asteroidField &&
             !this.asteroidField.differsFrom((byte) -90, var5.asteroidField)) {
           }
-          if (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.spawnPoints, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952), 118)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(TextHotspotRegion.dequeToStateArray(var5.spawnPoints, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952), 118)) {
             var4 = 1;
             System.out.println("linklist spawn_points has changed. ");
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.grapplingHooks, false, 1, this.grapplingHooks, -57)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.grapplingHooks, false, 1, this.grapplingHooks, -57)) {
             var4 = 1;
             System.out.println("GrapplingHook[] grappling_hooks has changed. ");
           }
-          if (GetCountermeasuresCooldown.a(this.respawntimers, var5.respawntimers, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.respawntimers, var5.respawntimers, false)) {
             System.out.println("int[] respawntimers has changed. ");
             var4 = 1;
           }
@@ -1009,11 +1009,11 @@ final class World implements DiffableState, CompactGameState {
             var4 = 1;
             System.out.println("MissionControl mission_control has changed. before=" + var5.missionControl + ", now=" + this.missionControl);
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.mapZones, false, 1, this.mapZones, 126)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.mapZones, false, 1, this.mapZones, 126)) {
             System.out.println("MapZone[] map_zones has changed. ");
             var4 = 1;
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.resNodes, false, 1, this.resNodes, 123)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.resNodes, false, 1, this.resNodes, 123)) {
             System.out.println("ResourceNode[] res_nodes has changed. ");
             var4 = 1;
           }
@@ -1049,7 +1049,7 @@ final class World implements DiffableState, CompactGameState {
             this.partitioningManager != null &&
             !this.partitioningManager.differsFrom((byte) 109, var5.partitioningManager)) {
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.escapePods, false, 1, this.escapePods, 117)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.escapePods, false, 1, this.escapePods, 117)) {
             System.out.println("EscapePod[] escape_pods has changed. ");
             var4 = 1;
           }
@@ -2851,7 +2851,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                     case 58:
                                                                                       var71 = new Random((long)(var7 * var8));
                                                                                       var68 = "AAQPKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEg";
-                                                                                      var83 = GetResourceNodeCaptureTime.a(var68, true, true);
+                                                                                      var83 = GetResourceNodeCaptureTime.decodeShipCode(var68, true, true);
                                                                                       var70 = MenuInputState.createShipFromComponentWords(var83, (byte) 126);
                                                                                       var70.setAi(new ShipAI(), 4);
                                                                                       var70.setTeam(17704, ToolkitRasterState.field_c);
@@ -3811,9 +3811,9 @@ final class World implements DiffableState, CompactGameState {
           boolean decompiledFrameRemainder0 = true;
           var4 = 33 % ((22 - param0) / 59);
           var5 = (World) (param1);
-          if (!SetCountermeasureLauncherAimspeed.a(var5.ships, false, 1, this.ships, 126) &&
-            !SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.projectiles, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952), -79) &&
-            !SetCountermeasureLauncherAimspeed.a(var5.debris, false, 1, this.debris, 117)) {
+          if (!SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.ships, false, 1, this.ships, 126) &&
+            !SetCountermeasureLauncherAimspeed.stateArraysDiffer(TextHotspotRegion.dequeToStateArray(var5.projectiles, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952), -79) &&
+            !SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.debris, false, 1, this.debris, 117)) {
             stackIn_7_0 = (this.asteroidField != null) ? 0 : 1;
             stackIn_10_0 = stackIn_7_0;
             if (var5.asteroidField != null) {
@@ -3824,8 +3824,8 @@ final class World implements DiffableState, CompactGameState {
               stackIn_11_1 = 1;
             }
             if ((stackIn_11_0 ^ stackIn_11_1) == 0 && (null == this.asteroidField ||
-              !this.asteroidField.differsFrom((byte) -65, var5.asteroidField)) && (!SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.spawnPoints, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952), -93) &&
-              !SetCountermeasureLauncherAimspeed.a(var5.grapplingHooks, false, 1, this.grapplingHooks, 122) &&
+              !this.asteroidField.differsFrom((byte) -65, var5.asteroidField)) && (!SetCountermeasureLauncherAimspeed.stateArraysDiffer(TextHotspotRegion.dequeToStateArray(var5.spawnPoints, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952), -93) &&
+              !SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.grapplingHooks, false, 1, this.grapplingHooks, 122) &&
               !SetBlueprintSaveTime.intArraysDiffer(var5.respawntimers, this.respawntimers, (byte) 28))) {
               stackIn_22_0 = (var5.debug) ? 0 : 1;
               if (stackIn_22_0 != (this.debug ? 1 : 0) &&
@@ -3841,11 +3841,11 @@ final class World implements DiffableState, CompactGameState {
                   stackIn_33_1 = 1;
                 }
                 if ((stackIn_33_0 ^ stackIn_33_1) == 0 && (null == this.missionControl ||
-                  !this.missionControl.differsFrom((byte) 123, var5.missionControl)) && (!SetCountermeasureLauncherAimspeed.a(var5.mapZones, false, 1, this.mapZones, -71) &&
-                  !SetCountermeasureLauncherAimspeed.a(var5.resNodes, false, 1, this.resNodes, -5) &&
+                  !this.missionControl.differsFrom((byte) 123, var5.missionControl)) && (!SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.mapZones, false, 1, this.mapZones, -71) &&
+                  !SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.resNodes, false, 1, this.resNodes, -5) &&
                   var5.width == this.width &&
                   var5.height == this.height &&
-                  !SetCountermeasureLauncherAimspeed.a(var5.escapePods, false, 1, this.escapePods, -20))) {
+                  !SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.escapePods, false, 1, this.escapePods, -20))) {
                   stackIn_46_0 = (null != this.missionBuilder) ? 0 : 1;
                   stackIn_49_0 = stackIn_46_0;
                   if (null != var5.missionBuilder) {
@@ -8118,7 +8118,7 @@ final class World implements DiffableState, CompactGameState {
             if (0.0f >= var8) {
               return;
             }
-            var9 = SetMissionTerrainSpaceProbability.a(0, (int)param1.worldCenterY, (int)param1.worldCenterX, param1.worldBounds[2], param0.y, 16, param1.worldBounds[1], param1.worldBounds[0], param1.worldBounds[3], param0.x);
+            var9 = SetMissionTerrainSpaceProbability.findSegmentRectangleIntersectionFraction(0, (int)param1.worldCenterY, (int)param1.worldCenterX, param1.worldBounds[2], param0.y, 16, param1.worldBounds[1], param1.worldBounds[0], param1.worldBounds[3], param0.x);
             if (var9 >= 0) {
               var10 = (int)(1.0f * (float)var5_int * (float)var9 / 65536.0f + param1.worldCenterX);
               var11 = (int)(param1.worldCenterY + (float)var6 * 1.0f * (float)var9 / 65536.0f);
@@ -8871,7 +8871,7 @@ final class World implements DiffableState, CompactGameState {
             var14Lifetime2 = var9.getY((byte) -16) - var9.getCenterOfMassOffsetY((byte) 5);
             var15Lifetime1 = var10.getDefaultConnectionX(127) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 99) - var10.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(var9.getAngle(0), 124) >> 16;
             var16Lifetime2 = var10.getDefaultConnectionX(-25) * TextureLineShape.sinAngle(var9.getAngle(0), 62) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 64) >> 16;
-            CarouselPlayerInfoFactory.a(param3.chassis.finaly, 1, var14Lifetime2 + var16Lifetime2, var13Lifetime3 + var15Lifetime1, param7, param3.chassis.finalx);
+            CarouselPlayerInfoFactory.drawWavyWorldLink(param3.chassis.finaly, 1, var14Lifetime2 + var16Lifetime2, var13Lifetime3 + var15Lifetime1, param7, param3.chassis.finalx);
             var17 = TiledSpriteTextureOperation.getComponentDisplayName(var10, (byte) -84);
             GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var17, 16777215, param7.worldToScreenY(true, -10000 + var9.getY((byte) -109)), param7.worldToScreenX(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(94, var17) >> 1), 4266);
             if (null != param3.getAttachmentPreviewOutline(56)) {

@@ -50,7 +50,7 @@ final class ArchiveLoadRequest {
             var7 = param1[1 + var5_int];
             var8 = param1[(2 + var5_int) % param1.length];
             var9 = param1[(var5_int + 3) % param1.length];
-            var10 = SetShieldsDamageEnergyConversion.a(param4, var7, var9, param2, var6, 8, var8, param3, param0 + 100);
+            var10 = SetShieldsDamageEnergyConversion.findSegmentCircleIntersectionFraction(param4, var7, var9, param2, var6, 8, var8, param3, param0 + 100);
             if (var10 == -1) {
               var5_int += 2;
               continue;

@@ -23,7 +23,7 @@ final class GetDebrisMax extends ConsoleCommand {
         field_o = null;
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String urlEncodeCp1252(CharSequence param0, int param1) {
         int var4 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -56,7 +56,7 @@ final class GetDebrisMax extends ConsoleCommand {
         try {
           if (param1 != 32) {
             var9 = (CharSequence) null;
-            GetDebrisMax.a((CharSequence) null, -104);
+            GetDebrisMax.urlEncodeCp1252((CharSequence) null, -104);
           }
           var2_int = param0.length();
           var3 = new StringBuilder(var2_int);

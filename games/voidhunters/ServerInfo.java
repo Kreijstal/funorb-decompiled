@@ -92,11 +92,11 @@ final class ServerInfo implements DiffableState {
             return;
           }
           var4 = 0;
-          if (GetCountermeasuresCooldown.a(this.voteoptionStates, var5.voteoptionStates, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.voteoptionStates, var5.voteoptionStates, false)) {
             var4 = 1;
             System.out.println("int[] voteoption_states has changed. ");
           }
-          if (GetCountermeasuresCooldown.a(this.componentoptionStates, var5.componentoptionStates, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.componentoptionStates, var5.componentoptionStates, false)) {
             var4 = 1;
             System.out.println("int[] componentoption_states has changed. ");
           }

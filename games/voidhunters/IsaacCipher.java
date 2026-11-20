@@ -9,7 +9,7 @@ final class IsaacCipher {
     private int lastResult;
     private int[] results;
 
-    final static void a(byte param0, int param1, boolean param2) {
+    final static void updateIgnoreListUi(byte param0, int param1, boolean param2) {
         ScrollPaneWidget stackIn_5_0;
         int stackIn_5_1;
         int stackIn_5_2;

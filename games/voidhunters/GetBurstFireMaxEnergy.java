@@ -125,7 +125,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
               var10 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
             }
           }
-          SetOndamageParticleLife.a(param5, var9, -1, var10, var11, var8);
+          SetOndamageParticleLife.drawLineUnclipped(param5, var9, -1, var10, var11, var8);
           return;
         }
         if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param3) {
@@ -161,7 +161,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
               var10Lifetime1 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
             }
           }
-          SetOndamageParticleLife.a(param5, var9Lifetime1, -1, var10Lifetime1, var11Lifetime1, var8Lifetime1);
+          SetOndamageParticleLife.drawLineUnclipped(param5, var9Lifetime1, -1, var10Lifetime1, var11Lifetime1, var8Lifetime1);
           return;
         }
         var8Lifetime2 = param3;
@@ -187,7 +187,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
               var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
             }
           }
-          SetOndamageParticleLife.a(param5, var9Lifetime2, -1, var10Lifetime2, var11Lifetime2, var8Lifetime2);
+          SetOndamageParticleLife.drawLineUnclipped(param5, var9Lifetime2, -1, var10Lifetime2, var11Lifetime2, var8Lifetime2);
           return;
         }
         if (GetCountermeasureLauncherProjectiles.rasterClipMaxX < param1) {
@@ -215,7 +215,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
             var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY;
           }
         }
-        SetOndamageParticleLife.a(param5, var9Lifetime3, -1, var10Lifetime2, var11Lifetime3, var8Lifetime2);
+        SetOndamageParticleLife.drawLineUnclipped(param5, var9Lifetime3, -1, var10Lifetime2, var11Lifetime3, var8Lifetime2);
         return;
     }
 

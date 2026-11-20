@@ -355,7 +355,7 @@ final class PlayerGameData implements DiffableState {
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           this.version = param0.readBits(0, 8);
-          this.tipsDone = GetAutoaim.a(8, param0, 76, this.tipsDone);
+          this.tipsDone = GetAutoaim.readBooleanArray(8, param0, 76, this.tipsDone);
           if (!LegacyOpenGlSpecularEffect.readBoolean(param1, param0)) {
             this.blueprint = null;
           } else {

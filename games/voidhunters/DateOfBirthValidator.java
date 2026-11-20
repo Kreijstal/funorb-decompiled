@@ -70,7 +70,7 @@ final class DateOfBirthValidator extends DebouncedInputValidator implements UiTe
               return null;
             }
           } else {
-            stackIn_7_0 = SetReverbGain.a(ComponentBehaviourFactory.field_d, new String[]{"1890", Integer.toString(var5 - 3)}, 79);
+            stackIn_7_0 = SetReverbGain.substituteIndexedPlaceholders(ComponentBehaviourFactory.field_d, new String[]{"1890", Integer.toString(var5 - 3)}, 79);
             return stackIn_7_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

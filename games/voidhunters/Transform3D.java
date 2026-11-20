@@ -109,7 +109,7 @@ abstract class Transform3D {
             for (var18 = 0; var18 < 3; var18++) {
               GetMissileLauncherAimspeed.field_p[var18] = GetMissileLauncherAimspeed.field_p[var18] + SetMachineGunFireForce.logoMeshCenters[var15][var18];
             }
-            SetCountermeasuresPulseRadius.a(var17Lifetime1, GetMissileLauncherAimspeed.field_p, false, true, false, SetBloomThresholdPercentage.field_p, false);
+            SetCountermeasuresPulseRadius.projectLogoModelAndBucketFaces(var17Lifetime1, GetMissileLauncherAimspeed.field_p, false, true, false, SetBloomThresholdPercentage.field_p, false);
             RidgedNoiseVolumeGenerator.drawLitMesh(var17Lifetime1, var13Lifetime1, var12Lifetime1, -119, var14, var8Lifetime1, var9Lifetime1, var7Lifetime1);
           }
           return;

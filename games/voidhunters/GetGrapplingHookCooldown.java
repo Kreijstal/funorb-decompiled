@@ -125,7 +125,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
         emptyEmailError = null;
     }
 
-    final static int[] a(byte param0, int[] param1) {
+    final static int[] mirrorPolygonAcrossXAxis(byte param0, int[] param1) {
         int var3_int = 0;
         int var5 = 0;
         int[] stackIn_12_0 = null;

@@ -176,7 +176,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (!param0) {
             return 0;
           }
-          DialogMessagePanel.field_z.updatePointerSelection(GetGrapplingHookAimspeed.a(-1, AppletCookieWriter.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, OpenGlFaceAttachment.field_b, PlayerGameData.field_b));
+          DialogMessagePanel.field_z.updatePointerSelection(GetGrapplingHookAimspeed.hitTestCarouselControl(-1, AppletCookieWriter.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.hitTestCarouselControl(-1, OpenGlFaceAttachment.field_b, PlayerGameData.field_b));
           if (DialogMessagePanel.field_z.isActivationRequested((byte) -120)) {
             if (DialogMessagePanel.field_z.selectedIndex == 0) {
               stackIn_61_0 = 3;

@@ -32,7 +32,7 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
           }
           CarouselSlot.reportStateArrayDifferences(var3.nebulae, 1, this.nebulae, false, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.nebulae, false, 1, this.nebulae, 124)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.nebulae, false, 1, this.nebulae, 124)) {
             var4 = 1;
             System.out.println("Nebula[] nebulae has changed. ");
           }
@@ -135,7 +135,7 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
         try {
           var4 = 75 % ((param0 - 22) / 59);
           var3 = (NebulaField) (param1);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var3.nebulae, false, 1, this.nebulae, -78);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.nebulae, false, 1, this.nebulae, -78);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

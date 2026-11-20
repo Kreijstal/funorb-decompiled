@@ -42,7 +42,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
         }
     }
 
-    final static int a(boolean param0, int param1, String param2, byte param3, boolean param4, String param5) {
+    final static int sendAndPollLogin(boolean param0, int param1, String param2, byte param3, boolean param4, String param5) {
         try {
           int stackIn_4_0 = 0;
           int stackIn_28_0 = 0;
@@ -110,7 +110,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               ShipBlueprint.pollReplyBytes(8, param3 ^ 30013)) {
               SetMissileLauncherRandomness.field_p = AccountNameAvailabilityReplies.field_b.readLong(255);
               AccountNameAvailabilityReplies.field_b.position = 0;
-              UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.loginCredentials, param1);
+              UiContainer.sendLoginPacket(-87, param0, param4, OpenGlGpuCubeTexture.loginCredentials, param1);
               TextureCombineMappings.loginStage = LegacyOpenGlShaderProgram.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -236,7 +236,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (param3 != 13) {
               var10 = (String) null;
-              GetPhasedEnergyBeamPulseFadetime.a(true, 44, (String) null, (byte) 29, true, (String) null);
+              GetPhasedEnergyBeamPulseFadetime.sendAndPollLogin(true, 44, (String) null, (byte) 29, true, (String) null);
             }
             if (null == SetShipSpawnInvulnerabilityTime.field_o) {
               if (SetShowTutorial.field_o) {

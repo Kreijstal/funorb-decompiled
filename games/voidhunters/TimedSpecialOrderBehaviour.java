@@ -97,7 +97,7 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
         }
     }
 
-    final static Ship a(boolean param0) {
+    final static Ship createFourThrusterShip(boolean param0) {
         Ship var9 = new Ship();
         ShipComponent var2 = new ShipComponent(0);
         ShipComponent var4 = new ShipComponent(14);

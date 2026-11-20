@@ -58,7 +58,7 @@ final class GetBombletSprayAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static String a(byte param0, String param1, int param2) {
+    final static String getLobbyGameStatusText(byte param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_7_0 = null;
@@ -107,7 +107,7 @@ final class GetBombletSprayAimspeed extends ConsoleCommand {
           if (param2 != 14) {
             return null;
           }
-          stackIn_29_0 = SetReverbGain.a(GetMissionTerrainDebrisProbability.field_p, new String[]{param1}, 119);
+          stackIn_29_0 = SetReverbGain.substituteIndexedPlaceholders(GetMissionTerrainDebrisProbability.field_p, new String[]{param1}, 119);
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

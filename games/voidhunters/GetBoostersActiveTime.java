@@ -146,7 +146,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.writeByte(param4 + 0, 18);
               RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 2;
               var10 = RequestNewestBlackboxRecording.field_p.position;
-              var11_ref_StringLifetime4 = GetMassDriverRandomness.a(-6465, MissionList.getApplet((byte) -114));
+              var11_ref_StringLifetime4 = GetMassDriverRandomness.readSettingsCookie(-6465, MissionList.getApplet((byte) -114));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }

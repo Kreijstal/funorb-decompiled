@@ -26,8 +26,8 @@ final class TeamObjectiveFormatter {
           if (param3 >= -57) {
             field_a = 104;
           }
-          param1 = SetLagVariant.a(param1, "<teamname>", 0, param0);
-          param1 = SetLagVariant.a(param1, "<objective>", 0, param2);
+          param1 = SetLagVariant.replaceLiteral(param1, "<teamname>", 0, param0);
+          param1 = SetLagVariant.replaceLiteral(param1, "<objective>", 0, param2);
           stackIn_3_0 = (String) (param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

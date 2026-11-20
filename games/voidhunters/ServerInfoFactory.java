@@ -18,7 +18,7 @@ final class ServerInfoFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new ServerInfo());
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void renderGameSessionsAndOverlays(int param0, boolean param1) {
         int stackIn_20_0 = 0;
         boolean stackIn_25_0 = false;
         String stackIn_38_0 = null;
@@ -151,11 +151,11 @@ final class ServerInfoFactory implements GameStateFactory {
               if (!LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
                 if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
                   var4_int = SoftwareRasterizer2D.height;
-                  GetAiRepairTime.e(-22);
+                  GetAiRepairTime.drawNonzeroSoftwareRasterRegions(-22);
                 }
               } else {
                 var4_int = SoftwareRasterizer2D.height;
-                GetAiRepairTime.e(-97);
+                GetAiRepairTime.drawNonzeroSoftwareRasterRegions(-97);
               }
               if (SoftwareRasterizer2D.height > var4_int) {
                 var5 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
@@ -222,11 +222,11 @@ final class ServerInfoFactory implements GameStateFactory {
                   if (!LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
                     if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
                       var4_intLifetime1 = SoftwareRasterizer2D.height;
-                      GetAiRepairTime.e(-22);
+                      GetAiRepairTime.drawNonzeroSoftwareRasterRegions(-22);
                     }
                   } else {
                     var4_intLifetime1 = SoftwareRasterizer2D.height;
-                    GetAiRepairTime.e(-97);
+                    GetAiRepairTime.drawNonzeroSoftwareRasterRegions(-97);
                   }
                   if (SoftwareRasterizer2D.height > var4_intLifetime1) {
                     var5Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
@@ -277,7 +277,7 @@ final class ServerInfoFactory implements GameStateFactory {
             var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.screenY;
             if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
               var4_intLifetime1Lifetime1 = SoftwareRasterizer2D.height;
-              GetAiRepairTime.e(-97);
+              GetAiRepairTime.drawNonzeroSoftwareRasterRegions(-97);
               if (SoftwareRasterizer2D.height > var4_intLifetime1Lifetime1) {
                 var5Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
                 var6Lifetime1Lifetime1 = -SoftwareRasterizer2D.height + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;
@@ -361,7 +361,7 @@ final class ServerInfoFactory implements GameStateFactory {
               return;
             }
             var4_intLifetime1Lifetime1Lifetime1 = SoftwareRasterizer2D.height;
-            GetAiRepairTime.e(-22);
+            GetAiRepairTime.drawNonzeroSoftwareRasterRegions(-22);
             if (SoftwareRasterizer2D.height <= var4_intLifetime1Lifetime1Lifetime1) {
               if (var2Lifetime1Lifetime1 != 0) {
                 if (GpuSprite.field_e) {

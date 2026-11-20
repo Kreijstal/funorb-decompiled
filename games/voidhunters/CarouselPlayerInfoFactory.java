@@ -18,7 +18,7 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, Camera2D param4, int param5) {
+    final static void drawWavyWorldLink(int param0, int param1, int param2, int param3, Camera2D param4, int param5) {
         int var16 = 0;
         int var6_int = 0;
         int var7 = 0;

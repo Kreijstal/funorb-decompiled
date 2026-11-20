@@ -18,7 +18,7 @@ final class SocialListUpdater {
         int var5Lifetime1;
         int var6Lifetime1;
         if (param0 == 0) {
-          var3 = ArchiveIndex.a(param2, param0 ^ 2, param1);
+          var3 = ArchiveIndex.updateFriendsListAndGetClickedEntry(param2, param0 ^ 2, param1);
           if (var3 != null) {
             GetLagStandardDeviationOut.field_o.addLobbyOwnerOptions(false, 115);
             var4 = GetLagStandardDeviationOut.field_o;
@@ -29,11 +29,11 @@ final class SocialListUpdater {
             var6 = AppletCookieWriter.field_a;
             var4Lifetime2.menu.layoutPopup(var5, -29060, var6, 0, 0);
           }
-          IsaacCipher.a((byte) 44, param1, param2);
+          IsaacCipher.updateIgnoreListUi((byte) 44, param1, param2);
           return;
         }
         field_a = 126;
-        var3Lifetime1 = ArchiveIndex.a(param2, param0 ^ 2, param1);
+        var3Lifetime1 = ArchiveIndex.updateFriendsListAndGetClickedEntry(param2, param0 ^ 2, param1);
         if (var3Lifetime1 != null) {
           GetLagStandardDeviationOut.field_o.addLobbyOwnerOptions(false, 115);
           var4Lifetime1 = GetLagStandardDeviationOut.field_o;
@@ -44,7 +44,7 @@ final class SocialListUpdater {
           var6Lifetime1 = AppletCookieWriter.field_a;
           var4Lifetime1Lifetime1.menu.layoutPopup(var5Lifetime1, -29060, var6Lifetime1, 0, 0);
         }
-        IsaacCipher.a((byte) 44, param1, param2);
+        IsaacCipher.updateIgnoreListUi((byte) 44, param1, param2);
     }
 
     final static void resetObjectiveMarkers(int param0) {

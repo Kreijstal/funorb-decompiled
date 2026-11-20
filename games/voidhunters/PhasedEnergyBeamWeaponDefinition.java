@@ -81,7 +81,7 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
           SocialPanelState.socialPanelRoot = new Widget(0L, (Widget) null);
           SocialPanelState.socialPanelRoot.addChild(param0 ^ -9108, GameReleaseStatistics.field_b.tabs);
           SocialPanelState.socialPanelRoot.addChild(-561, SpawnChoiceFactory.field_c);
-          SetGrapplingHookMinLength.a(5);
+          SetGrapplingHookMinLength.layoutSocialAndLobbyPanels(5);
           if (param0 != 8611) {
             PhasedEnergyBeamWeaponDefinition.clearSharedReferences((byte) -29);
             return;
@@ -93,7 +93,7 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
         SocialPanelState.socialPanelRoot = new Widget(0L, (Widget) null);
         SocialPanelState.socialPanelRoot.addChild(param0 ^ -9108, GameReleaseStatistics.field_b.tabs);
         SocialPanelState.socialPanelRoot.addChild(-561, SpawnChoiceFactory.field_c);
-        SetGrapplingHookMinLength.a(5);
+        SetGrapplingHookMinLength.layoutSocialAndLobbyPanels(5);
         if (param0 == 8611) {
           return;
         }

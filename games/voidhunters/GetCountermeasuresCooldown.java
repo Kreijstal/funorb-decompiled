@@ -31,7 +31,7 @@ final class GetCountermeasuresCooldown extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int[] param0, int[] param1, boolean param2) {
+    final static boolean reportIntArrayDifferences(int[] param0, int[] param1, boolean param2) {
         try {
           StringBuilder discarded$0 = null;
           int var5 = 0;
@@ -130,7 +130,7 @@ final class GetCountermeasuresCooldown extends ConsoleCommand {
         field_o = null;
         if (param0 != 221) {
           int[] var2 = (int[]) null;
-          GetCountermeasuresCooldown.a((int[]) null, (int[]) null, false);
+          GetCountermeasuresCooldown.reportIntArrayDifferences((int[]) null, (int[]) null, false);
         }
     }
 

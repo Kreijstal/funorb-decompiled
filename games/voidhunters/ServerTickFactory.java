@@ -50,7 +50,7 @@ final class ServerTickFactory implements GameStateFactory {
         }
     }
 
-    final static String a(byte param0, String param1, int param2) {
+    final static String requestRemoveFriend(byte param0, String param1, int param2) {
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_12_0 = null;
@@ -77,9 +77,9 @@ final class ServerTickFactory implements GameStateFactory {
             stackIn_8_0 = UiAngleDialRenderer.field_e;
             return stackIn_8_0;
           }
-          var8 = FlipTextureOperation.a(param1, param0 - 90);
+          var8 = FlipTextureOperation.findFriendEntry(param1, param0 - 90);
           if (var8 == null) {
-            stackIn_12_0 = SetReverbGain.a(SetSniperCannonAimarc.field_q, new String[]{param1}, 118);
+            stackIn_12_0 = SetReverbGain.substituteIndexedPlaceholders(SetSniperCannonAimarc.field_q, new String[]{param1}, 118);
             return stackIn_12_0;
           }
           DisplayModeErrorDialog.field_M.startAt(3, var8);
@@ -137,7 +137,7 @@ final class ServerTickFactory implements GameStateFactory {
           param2.setLength(param0);
           if (param1) {
             var7 = (String) null;
-            ServerTickFactory.a((byte) -60, (String) null, -96);
+            ServerTickFactory.requestRemoveFriend((byte) -60, (String) null, -96);
           }
           for (var5 = var4_int; param0 > var5; var5++) {
             param2.setCharAt(var5, param3);

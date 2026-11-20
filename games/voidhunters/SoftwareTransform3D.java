@@ -40,7 +40,7 @@ final class SoftwareTransform3D extends Transform3D {
             param8 == param2 &&
             param4 == param7 &&
             param6 == param1) {
-            SetOndamageParticleLife.a(param5, param7, -1, param8, param6, param3);
+            SetOndamageParticleLife.drawLineUnclipped(param5, param7, -1, param8, param6, param3);
           } else {
             var10_int = param3;
             var11 = param8;
@@ -67,7 +67,7 @@ final class SoftwareTransform3D extends Transform3D {
               var32 = var23 * var24;
               var33 = (var29 + (var27 + var31) >> 12) + param3;
               var34 = (var32 + var28 + var30 >> 12) + param8;
-              SetOndamageParticleLife.a(param5, var33, param9 ^ 56, var11, var34, var10_int);
+              SetOndamageParticleLife.drawLineUnclipped(param5, var33, param9 ^ 56, var11, var34, var10_int);
               var11 = var34;
               var10_int = var33;
             }

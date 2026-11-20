@@ -35,9 +35,9 @@ final class ConsoleSettingsScript {
           param0 = OpenGlModel.replaceCharacter('\n', (byte) 99, ";", param0);
           var2 = ConsoleCommandRegistry.createConsoleCommands(16);
           System.out.println("String s=" + param0);
-          var3 = SetFighterBayAimspeed.a((byte) -67, ';', param0);
+          var3 = SetFighterBayAimspeed.splitString((byte) -67, ';', param0);
           for (var4 = 0; var4 < var3.length; var4++) {
-            var5 = SetFighterBayAimspeed.a((byte) -67, '(', var3[var4]);
+            var5 = SetFighterBayAimspeed.splitString((byte) -67, '(', var3[var4]);
             if (var5 != null &&
               var5.length == 2) {
               var5[1] = OpenGlModel.replaceCharacter(')', (byte) 111, "", var5[1]);

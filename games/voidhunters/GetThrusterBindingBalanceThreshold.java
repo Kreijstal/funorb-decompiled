@@ -5,7 +5,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
     static String field_o;
     static Widget field_p;
 
-    final static String a(int param0) {
+    final static String updateChatInputLabelAndGetTooltip(int param0) {
         String stackIn_56_0 = null;
         Object stackIn_94_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -34,12 +34,12 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           if (NetworkMessageState.chatChannel == 2 &&
             !SetAutozoomAmountMultiply.isPrivateChatTargetAvailable(0)) {
             if (GetTorqueDownshift.isFriend(GetDebrisThrowable.privateChatTarget, (byte) -47)) {
-              var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 78);
+              var2 = SetReverbGain.substituteIndexedPlaceholders(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 78);
               if (var10 != 0) {
-                var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);
+                var2 = SetReverbGain.substituteIndexedPlaceholders(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);
               }
             } else {
-              var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);
+              var2 = SetReverbGain.substituteIndexedPlaceholders(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);
             }
             if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
               ChatMessages.appendMessage((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
@@ -61,8 +61,8 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var6 = NetworkMessageState.chatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 91);
-              var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var3}, 79);
+              var4 = SetReverbGain.substituteIndexedPlaceholders(UiComboBoxList.field_G, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 91);
+              var8 = SetReverbGain.substituteIndexedPlaceholders(GetLaserAimspeed.field_o, new String[]{var3}, 79);
               var7 = WidgetNode.field_l.width + (UiComboBoxRenderer.field_c.width - 485 + DebrisFactory.field_c.getStringWidth(var8)) - DebrisFactory.field_c.getStringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
@@ -84,7 +84,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                     decompiledSharedTail0 = (var10 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var4 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, param0 + 8147) + "] ";
+                    var4 = "[" + SetReverbGain.substituteIndexedPlaceholders(MonotonicMillisClock.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, param0 + 8147) + "] ";
                   }
                 }
               }
@@ -130,7 +130,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               WidgetNode.field_l.field_O = false;
             }
             if (WidgetNode.field_l.field_O) {
-              var1 = SetReverbGain.a(MissionGenerationDataFactory.field_a, new String[]{var3, ChoosePlayerNameForm.privateChatTargetDisplayName}, 100);
+              var1 = SetReverbGain.substituteIndexedPlaceholders(MissionGenerationDataFactory.field_a, new String[]{var3, ChoosePlayerNameForm.privateChatTargetDisplayName}, 100);
             }
           }
           stackIn_94_0 = var1;

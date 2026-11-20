@@ -8,12 +8,12 @@ final class MissionListFactory implements GameStateFactory {
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
           CharSequence var4 = (CharSequence) null;
-          MissionListFactory.a((CharSequence) null, 67);
+          MissionListFactory.encodeCp1252((CharSequence) null, 67);
         }
         return (SerializableGameState[]) ((Object) new MissionList[param1]);
     }
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] encodeCp1252(CharSequence param0, int param1) {
         byte[] stackIn_68_0 = null;
         RuntimeException stackIn_71_0 = null;
         StringBuilder stackIn_71_1 = null;

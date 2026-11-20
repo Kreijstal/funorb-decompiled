@@ -114,7 +114,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
         if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
           param1 = false;
         }
-        SetPhasedEnergyBeamAimspeed.a(-128, param1);
+        SetPhasedEnergyBeamAimspeed.drawSlidingLobbyPanels(-128, param1);
         if (!NativeLibraryLoader.field_b) {
           SetMissionDebrisVotingChancestep.drawMenuAndDateOfBirthPanel(param1, 4095);
           return;

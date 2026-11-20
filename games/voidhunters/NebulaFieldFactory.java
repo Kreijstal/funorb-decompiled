@@ -127,9 +127,9 @@ final class NebulaFieldFactory implements GameStateFactory {
           }
           var4_ref_StringLifetime1 = var1.readString(-1);
           var5Lifetime1 = var1.readString(-1);
-          var6Lifetime1 = FlipTextureOperation.a(var4_ref_StringLifetime1, 0);
+          var6Lifetime1 = FlipTextureOperation.findFriendEntry(var4_ref_StringLifetime1, 0);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = FlipTextureOperation.a(var5Lifetime1, 0);
+            var6Lifetime1 = FlipTextureOperation.findFriendEntry(var5Lifetime1, 0);
             if (null != var6Lifetime1) {
               MenuInputState.field_f.put(var6Lifetime1, (byte) -31, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }

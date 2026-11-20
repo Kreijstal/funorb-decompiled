@@ -39,7 +39,7 @@ class FractalNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = GetMachineGunProjectileDamage.a(true, param0);
+              var3 = GetMachineGunProjectileDamage.formatThrowableForReport(true, param0);
             }
             if (param1 != null) {
               if (param0 != null) {

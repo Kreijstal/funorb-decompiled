@@ -87,7 +87,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
         return var11;
     }
 
-    final static void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5, byte param6) {
+    final static void updateLobbyGameList(int param0, int param1, boolean param2, boolean param3, int param4, int param5, byte param6) {
         int var18_int = 0;
         int var22_int = 0;
         Widget dupTemp$0 = null;
@@ -540,17 +540,17 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var31 = var31 + DialogMessagePanel.field_w * var39Lifetime1;
               }
               if (var12.field_ac) {
-                var12.field_Tb.text = SetReverbGain.a(GetDebrisGroupColour.field_o, new String[]{var32}, 104);
+                var12.field_Tb.text = SetReverbGain.substituteIndexedPlaceholders(GetDebrisGroupColour.field_o, new String[]{var32}, 104);
                 var12.field_Tb.setBounds(AppletCookieWriter.field_c, 122, var12.width - AppletCookieWriter.field_c * 2, var31, DialogMessagePanel.field_w);
                 var31 = var31 + DialogMessagePanel.field_w;
               }
               if (var12.field_Qb) {
-                var12.field_vb.text = SetReverbGain.a(SoftCacheReference.field_m, new String[]{var32}, 79);
+                var12.field_vb.text = SetReverbGain.substituteIndexedPlaceholders(SoftCacheReference.field_m, new String[]{var32}, 79);
                 var12.field_vb.setBounds(AppletCookieWriter.field_c, 0, var12.width - 2 * AppletCookieWriter.field_c, var31, DialogMessagePanel.field_w);
                 var31 = var31 + DialogMessagePanel.field_w;
               }
             }
-            var33 = GetBombletSprayAimspeed.a((byte) -126, var32, var12.field_ec);
+            var33 = GetBombletSprayAimspeed.getLobbyGameStatusText((byte) -126, var32, var12.field_ec);
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {

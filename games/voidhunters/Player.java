@@ -224,7 +224,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             System.out.println("int selected_team has changed. before=" + var5.selectedTeam + ", now=" + this.selectedTeam);
             var4 = 1;
           }
-          if (GetCountermeasuresCooldown.a(this.votes, var5.votes, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.votes, var5.votes, false)) {
             System.out.println("int[] votes has changed. ");
             var4 = 1;
           }
@@ -240,7 +240,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             var4 = 1;
             System.out.println("Ship saved_ship has changed. before=" + var5.savedShip + ", now=" + this.savedShip);
           }
-          if (GetCountermeasuresCooldown.a(this.carriedOverComponents, var5.carriedOverComponents, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.carriedOverComponents, var5.carriedOverComponents, false)) {
             var4 = 1;
             System.out.println("int[] carried_over_components has changed. ");
           }

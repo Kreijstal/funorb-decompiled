@@ -31,7 +31,7 @@ final class GetAutoDetail extends ConsoleCommand {
         }
     }
 
-    final static void a(BitmapFont param0, int param1, byte param2, int param3, Sprite[] param4, boolean param5, String param6, int param7, int param8, boolean param9, int param10, Sprite[] param11, int param12, int param13, int param14) {
+    final static void openStyledMessageBox(BitmapFont param0, int param1, byte param2, int param3, Sprite[] param4, boolean param5, String param6, int param7, int param8, boolean param9, int param10, Sprite[] param11, int param12, int param13, int param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -49,7 +49,7 @@ final class GetAutoDetail extends ConsoleCommand {
           GetMessageMaxage.openMessageBox(param7, param9, param6, param5, (byte) 25);
           if (param2 != -115) {
             var16 = (Sprite[]) null;
-            GetAutoDetail.a((BitmapFont) null, 4, (byte) 70, -69, (Sprite[]) null, true, (String) null, -82, -63, false, -29, (Sprite[]) null, -73, 82, -95);
+            GetAutoDetail.openStyledMessageBox((BitmapFont) null, 4, (byte) 70, -69, (Sprite[]) null, true, (String) null, -82, -63, false, -29, (Sprite[]) null, -73, 82, -95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

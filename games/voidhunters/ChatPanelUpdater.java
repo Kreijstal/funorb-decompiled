@@ -49,11 +49,11 @@ final class ChatPanelUpdater {
           if (SetBombletSprayAimarc.field_o.field_o != 0) {
             Asteroid.activeReportDialog = new ReportAbuseDialog(SetBombletSprayAimarc.field_o.screenX, SetBombletSprayAimarc.field_o.screenY, SetBombletSprayAimarc.field_o.width, SetBombletSprayAimarc.field_o.height, param2, DualLinkNode.field_g, WorldSpriteTiler.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, (String) null, 0L);
           }
-          var9 = SetMissionDebrisDefaultProbability.b(DialogMessagePanel.field_w, AppletCookieWriter.field_c, param1, -123);
+          var9 = SetMissionDebrisDefaultProbability.updateChatMessagesAndGetClickedMessage(DialogMessagePanel.field_w, AppletCookieWriter.field_c, param1, -123);
           if (var9 != null) {
             GetSniperCannonProjectiles.showChatMessageContextMenu(var9, 22859);
           }
-          var8 = GetThrusterBindingBalanceThreshold.a(-8037);
+          var8 = GetThrusterBindingBalanceThreshold.updateChatInputLabelAndGetTooltip(-8037);
           var6Lifetime1 = 101 / ((param3 + 32) / 58);
           if (var8 != null) {
             NebulaFieldFactory.field_a = var8;

@@ -36,7 +36,7 @@ final class SetPhasedEnergyBeamFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(boolean param0, String param1, String param2) {
+    final static boolean areNormalizedNamesEqual(boolean param0, String param1, String param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -63,7 +63,7 @@ final class SetPhasedEnergyBeamFireForce extends ConsoleCommand {
           }
           if (!param0) {
             var5 = (String) null;
-            SetPhasedEnergyBeamFireForce.a(false, (String) null, (String) null);
+            SetPhasedEnergyBeamFireForce.areNormalizedNamesEqual(false, (String) null, (String) null);
           }
           if (var3 == null) {
             return false;

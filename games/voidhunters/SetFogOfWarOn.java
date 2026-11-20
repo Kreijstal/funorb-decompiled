@@ -10,7 +10,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != -104) {
-          SetFogOfWarOn.e((byte) -21);
+          SetFogOfWarOn.printSettingsScript((byte) -21);
           field_o = null;
           return;
         }
@@ -45,7 +45,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void printSettingsScript(byte param0) {
         System.out.println("set_loading_missions(" + SetMissionTerrainAsteroidProbability.field_o + ")");
         System.out.println("set_trap_mouse(" + SetNebulaProximityFadeDownshift.field_o + ")");
         System.out.println("set_tab_for_scores(" + TiledSpriteTextureOperation.field_r + ")");

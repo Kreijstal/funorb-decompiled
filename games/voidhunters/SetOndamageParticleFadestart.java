@@ -38,7 +38,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
+    final static void loadCommonUiResources(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         Sprite var17 = null;
         SoftwareIndexedSprite2D[] var5 = null;
         SoftwareIndexedSprite2D[][] var6 = null;

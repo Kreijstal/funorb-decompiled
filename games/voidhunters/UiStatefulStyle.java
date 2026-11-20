@@ -191,14 +191,14 @@ final class UiStatefulStyle extends UiTextStyle {
         }
         var4 = 0;
         if (-1 == param3) {
-          ServerInfoFactory.a(-30428, param2);
+          ServerInfoFactory.renderGameSessionsAndOverlays(-30428, param2);
         } else {
           if (param3 == -2) {
             SoftwareRasterizer2D.clear();
             RoundResult.field_e = true;
           } else {
             if (param1) {
-              ServerInfoFactory.a(-30428, false);
+              ServerInfoFactory.renderGameSessionsAndOverlays(-30428, false);
             } else {
               if (null == SniperCannonWeaponDefinition.menuBackgroundBattle) {
                 SniperCannonWeaponDefinition.menuBackgroundBattle = new MenuBackgroundBattle();

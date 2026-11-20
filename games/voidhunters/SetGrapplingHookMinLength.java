@@ -6,7 +6,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillBorderedCircleClipped(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int stackIn_42_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
@@ -209,7 +209,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void layoutSocialAndLobbyPanels(int param0) {
         SetGrapplingHookRopeBreakLength.field_p = SoftwareRasterizer2D.height;
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
         StripesTextureOperation.layoutSlidingSocialAndGamePanels(true);

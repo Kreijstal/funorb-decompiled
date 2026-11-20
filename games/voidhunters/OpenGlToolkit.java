@@ -1826,7 +1826,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var5_int = 0;
               var6 = 0;
               var7 = 0;
-              var8 = SetFighterBayAimspeed.a((byte) -67, ' ', this.field_Nb.replace('/', ' '));
+              var8 = SetFighterBayAimspeed.splitString((byte) -67, ' ', this.field_Nb.replace('/', ' '));
               for (var9 = 0; var9 < var8.length; var9++) {
                 var13 = var8[var9];
                 var10 = var13;
@@ -2241,7 +2241,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var2 = var2 | 1;
         }
         var3 = jaggl.OpenGL.glGetString(7938);
-        var4 = SetFighterBayAimspeed.a((byte) -67, ' ', var3.replace('.', ' '));
+        var4 = SetFighterBayAimspeed.splitString((byte) -67, ' ', var3.replace('.', ' '));
         if (var4.length >= 2) {
           try {
             var5_int = NebulaFieldFactory.parseDecimalInt(107, (CharSequence) ((Object) var4[0]));

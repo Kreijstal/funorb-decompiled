@@ -8,7 +8,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatShortcutKey(int param0, int param1, int param2) {
         String var4 = null;
         int var3 = SetThrusterParticleSpeedDownshift.field_o != null ? 1 : 0;
         String var4Lifetime1;
@@ -202,7 +202,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             SoftwareRasterizer2D.getClip(GpuFractalNoiseVolume.field_o);
             SoftwareRasterizer2D.intersectClip(var6_int + param4, param2, param3 + (param4 - var7), param2 + param0[1].paddedHeight);
             if (!param5) {
-              SetPhysicsCollisionForceMultiplier.a(27, -59, -55);
+              SetPhysicsCollisionForceMultiplier.handleChatShortcutKey(27, -59, -55);
             }
             var9 = var6_int + param4;
             var10 = -var7 + (param4 + param3);

@@ -96,7 +96,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = FlipTextureOperation.a(param1, 0);
+          var4 = FlipTextureOperation.findFriendEntry(param1, 0);
           if (param2 != 41) {
             var5 = (String) null;
             PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(1L, (String) null, 31);

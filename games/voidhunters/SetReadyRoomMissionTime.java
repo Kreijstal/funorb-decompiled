@@ -36,7 +36,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3) {
+    final static void updateCapturedMousePosition(boolean param0, boolean param1, int param2, int param3) {
         Object stackIn_15_0 = null;
         Object stackIn_28_0 = null;
         Object stackIn_41_0 = null;
@@ -108,7 +108,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
             }
           }
         } else {
-          SetReadyRoomMissionTime.a(false, true, -60, -60);
+          SetReadyRoomMissionTime.updateCapturedMousePosition(false, true, -60, -60);
           GetComponentBreakingExplosionForceMultiplier.field_p = param3 >> 1;
           if (!SetMachineGunPulsetime.hasPrivilegedAccess(0)) {
             if (!ShipComponentFactory.field_a) {

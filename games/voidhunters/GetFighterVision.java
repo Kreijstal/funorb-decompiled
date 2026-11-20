@@ -79,7 +79,7 @@ final class GetFighterVision extends ConsoleCommand {
         }
     }
 
-    final static Sprite[] a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] createGradientPanelSlices(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
         Object var10 = null;
         Object var11 = null;
         Sprite var13 = null;

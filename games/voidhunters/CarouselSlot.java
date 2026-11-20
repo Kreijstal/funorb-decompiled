@@ -196,7 +196,7 @@ class CarouselSlot implements DiffableState {
           var3 = (CarouselSlot) (other);
           var4 = 0;
           CarouselSlot.reportStateArrayDifferences(var3.players, 1, this.players, false, 5547);
-          if (SetCountermeasureLauncherAimspeed.a(var3.players, false, 1, this.players, 126)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.players, false, 1, this.players, 126)) {
             var4 = 1;
             GetSniperCannonAimarc.printDebugMessage(-6940, "CarouselPlayerInfo[] players has changed. ");
           }
@@ -230,7 +230,7 @@ class CarouselSlot implements DiffableState {
         try {
           var3_int = -83 % ((22 - param0) / 59);
           var4 = (CarouselSlot) (param1);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var4.players, false, 1, this.players, -93);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var4.players, false, 1, this.players, -93);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

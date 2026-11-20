@@ -19,7 +19,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
         try {
           var3_int = -26 % ((param0 - 22) / 59);
           var4 = (AsteroidField) (param1);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var4.asteroids, false, 1, this.asteroids, -69);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var4.asteroids, false, 1, this.asteroids, -69);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           var3 = (AsteroidField) (other);
           CarouselSlot.reportStateArrayDifferences(var3.asteroids, 1, this.asteroids, false, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.asteroids, false, 1, this.asteroids, 127)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.asteroids, false, 1, this.asteroids, 127)) {
             System.out.println("Asteroid[] asteroids has changed. ");
             var4 = 1;
           }

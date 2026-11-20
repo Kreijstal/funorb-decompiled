@@ -13,7 +13,7 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static String a(boolean param0, Throwable param1) throws IOException {
+    final static String formatThrowableForReport(boolean param0, Throwable param1) throws IOException {
         ClientException var14 = null;
         StringWriter var21 = null;
         PrintWriter var20 = null;

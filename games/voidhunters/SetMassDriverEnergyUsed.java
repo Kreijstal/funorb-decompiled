@@ -65,7 +65,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           if (!ChatPermissions.isFreeChatAllowed(-115)) {
             return false;
           }
-          stackIn_46_0 = (!SetFighterRepairAmount.b(param2, param0, -85)) ? 0 : 1;
+          stackIn_46_0 = (!SetFighterRepairAmount.handleTextChatKeyEvent(param2, param0, -85)) ? 0 : 1;
           var4 = stackIn_46_0;
           if (SetBombletSprayProjectileDamage.field_o == 80 ||
             84 == SetBombletSprayProjectileDamage.field_o) {
@@ -100,7 +100,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           if (!ChatPermissions.isFreeChatAllowed(-115)) {
             return false;
           }
-          stackIn_11_0 = (!SetFighterRepairAmount.b(param2, param0, -85)) ? 0 : 1;
+          stackIn_11_0 = (!SetFighterRepairAmount.handleTextChatKeyEvent(param2, param0, -85)) ? 0 : 1;
           var4 = stackIn_11_0;
           if (SetBombletSprayProjectileDamage.field_o == 80) {
             var4 = 1;

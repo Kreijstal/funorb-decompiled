@@ -69,7 +69,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(LogoMesh param0, int[] param1, boolean param2, boolean param3, boolean param4, int[] param5, boolean param6) {
+    final static void projectLogoModelAndBucketFaces(LogoMesh param0, int[] param1, boolean param2, boolean param3, boolean param4, int[] param5, boolean param6) {
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
         RuntimeException stackIn_70_0 = null;

@@ -138,7 +138,7 @@ final class ResourceArchive {
         return this.provider.getGroupLoadPercent(param0, false);
     }
 
-    final static void a(int param0, LobbyGameEntry param1, boolean param2, byte param3) {
+    final static void updateLobbyGameOptions(int param0, LobbyGameEntry param1, boolean param2, byte param3) {
         IconTextWidget dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
@@ -299,7 +299,7 @@ final class ResourceArchive {
               if (SmoothedNanoTickClock.isLocalLobbyOwner(97)) {
                 NebulaFieldFactory.field_a = SetAutoAfkTimeout.field_r;
               } else {
-                NebulaFieldFactory.field_a = SetReverbGain.a(SetMissionVotes.field_p, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 124);
+                NebulaFieldFactory.field_a = SetReverbGain.substituteIndexedPlaceholders(SetMissionVotes.field_p, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 124);
               }
             }
             decompiledFrameRemainder1 = !(SetMutatorVotes.field_o.length < 2);
@@ -420,7 +420,7 @@ final class ResourceArchive {
           }
           if (param3 != -67) {
             var27 = (LobbyGameEntry) null;
-            ResourceArchive.a(-90, (LobbyGameEntry) null, true, (byte) -109);
+            ResourceArchive.updateLobbyGameOptions(-90, (LobbyGameEntry) null, true, (byte) -109);
           }
           if (param2 &&
             GetDebrisThrowable.field_r > 1) {
@@ -627,11 +627,11 @@ final class ResourceArchive {
                         var32Lifetime1 = var21;
                         var21 = var32Lifetime1;
                       } else {
-                        var21 = SetReverbGain.a(AwardVictoryToTeamActionFactory.field_a, new String[]{Integer.toString(var22_int)}, 105);
+                        var21 = SetReverbGain.substituteIndexedPlaceholders(AwardVictoryToTeamActionFactory.field_a, new String[]{Integer.toString(var22_int)}, 105);
                       }
                     }
                     if (var12 != 0) {
-                      var32_ref = SetReverbGain.a(SetPlayerRepairTime.field_p, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q), Integer.toString(Asteroid.field_w[var7][var9])}, 110);
+                      var32_ref = SetReverbGain.substituteIndexedPlaceholders(SetPlayerRepairTime.field_p, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q), Integer.toString(Asteroid.field_w[var7][var9])}, 110);
                       var21 = var32_ref;
                       var21 = var32_ref;
                       if (var21 == null) {
@@ -685,14 +685,14 @@ final class ResourceArchive {
                     }
                   }
                   if (var23 == 0) {
-                    var21 = SetReverbGain.a(PolygonContainment.field_c, new String[]{(String) (var22)}, 78);
+                    var21 = SetReverbGain.substituteIndexedPlaceholders(PolygonContainment.field_c, new String[]{(String) (var22)}, 78);
                   } else {
                     var21 = DialogMessagePanel.field_F + (String) (var22);
                   }
                 }
                 if (var21 != null) {
                   var21 = "<col=A00000>" + (String) (var21);
-                  var33 = SetLagVariant.a((String) (var21), "<br>", 0, "<br><col=A00000>");
+                  var33 = SetLagVariant.replaceLiteral((String) (var21), "<br>", 0, "<br><col=A00000>");
                   if (var20 != null) {
                     var20 = (String) (var20) + "<br>" + var33;
                   } else {

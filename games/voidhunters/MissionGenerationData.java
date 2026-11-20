@@ -144,7 +144,7 @@ final class MissionGenerationData implements DiffableState {
           return;
         }
         param4 = GetPedrosRepairModeSwitchtime.processSocialDialogInput(33, param11, param1, param12, param3, param0, param4);
-        GetUseRectOutline.a(param4, -1, param2, param10, param7, param11, param5, param6, param13, param9);
+        GetUseRectOutline.updateSocialAndLobbyPanels(param4, -1, param2, param10, param7, param11, param5, param6, param13, param9);
         SocialListUpdater.updateSocialLists(0, param5, param7);
         ChatPanelUpdater.updateChatPanel(param4, param5, param12, 97);
     }
@@ -169,7 +169,7 @@ final class MissionGenerationData implements DiffableState {
             System.out.println("int mission_generation_seed has changed. before=" + var6.missionGenerationSeed + ", now=" + this.missionGenerationSeed);
             var4 = 1;
           }
-          if (GetCountermeasuresCooldown.a(this.optionTotals, var6.optionTotals, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.optionTotals, var6.optionTotals, false)) {
             var4 = 1;
             System.out.println("int[] option_totals has changed. ");
           }

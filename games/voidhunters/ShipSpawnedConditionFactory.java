@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ShipSpawnedConditionFactory implements GameStateFactory {
-    final static void a(int param0) {
+    final static void buildComponentModels(int param0) {
         int var1_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -22,7 +22,7 @@ final class ShipSpawnedConditionFactory implements GameStateFactory {
           }
           GetHealthBarWidth.field_p = new Model3D[MessageLogFactory.field_a.length];
           if (param0 != 100) {
-            ShipSpawnedConditionFactory.a(-114);
+            ShipSpawnedConditionFactory.buildComponentModels(-114);
           }
           for (var1_int = 0; var1_int < GetHealthBarWidth.field_p.length; var1_int++) {
             if (MessageLogFactory.field_a[var1_int] != null) {

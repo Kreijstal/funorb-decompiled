@@ -16,7 +16,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
           SetMachineGunEnergyUsed.submitSettingsChange(85, 62, arguments[0].intValue(90));
           if (obfuscationGuard >= -119) {
             var4 = (ScrollPaneWidget) null;
-            SetTorpedoProjectiles.a(13, (byte) -15, (ScrollPaneWidget) null, true, 117);
+            SetTorpedoProjectiles.updateLobbyPlayerList(13, (byte) -15, (ScrollPaneWidget) null, true, 117);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -38,7 +38,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, byte param1, ScrollPaneWidget param2, boolean param3, int param4) {
+    final static void updateLobbyPlayerList(int param0, byte param1, ScrollPaneWidget param2, boolean param3, int param4) {
         int var27_int = 0;
         ScrollPaneWidget stackIn_43_0;
         int stackIn_43_1;
@@ -251,11 +251,11 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 }
               } else {
                 if (var12.field_Eb) {
-                  var12.field_Ib.text = SetReverbGain.a(GameInvitationText.invitingPlayerText, new String[]{var20}, 74);
+                  var12.field_Ib.text = SetReverbGain.substituteIndexedPlaceholders(GameInvitationText.invitingPlayerText, new String[]{var20}, 74);
                   var12.field_Nb.text = SetMissileLauncherProjectiles.field_p;
                 } else {
                   if (var12.field_Fb) {
-                    var12.field_Ib.text = SetReverbGain.a(TeamShipComponentConditionFactory.field_a, new String[]{var20}, 100);
+                    var12.field_Ib.text = SetReverbGain.substituteIndexedPlaceholders(TeamShipComponentConditionFactory.field_a, new String[]{var20}, 100);
                     var12.field_wb.text = SetAngularForceDownshift.field_q;
                     var12.field_Nb.text = GetHealthBarWidth.field_o;
                   } else {
@@ -310,7 +310,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               }
               var19 = var19 + DialogMessagePanel.field_w;
             }
-            var23 = SetServerinfoVotestate.a(var12.field_Db, var20, param1 ^ -3224);
+            var23 = SetServerinfoVotestate.getLobbyPlayerStatusText(var12.field_Db, var20, param1 ^ -3224);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -346,7 +346,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               if (~var12.field_zb != ~BodyInZoneConditionFactory.field_a) {
                 if (var5_int != 0 &&
                   !var12.field_Lb) {
-                  var24Lifetime2 = SetReverbGain.a(UiToggleButton.field_B, new String[]{var20}, 120);
+                  var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(UiToggleButton.field_B, new String[]{var20}, 120);
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -356,23 +356,23 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   if (var7 > var12.field_Bb) {
                     var25_int = -var12.field_Bb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = SetReverbGain.a(GetAllowShipSaving.field_p, new String[]{var20}, 124);
+                      var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(GetAllowShipSaving.field_p, new String[]{var20}, 124);
                     }
-                    var24Lifetime2 = SetReverbGain.a(PendingRequestResender.field_c, new String[]{var20, Integer.toString(var25_int)}, 124);
+                    var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(PendingRequestResender.field_c, new String[]{var20, Integer.toString(var25_int)}, 124);
                   } else {
                     if (var6 <= var12.field_Gb) {
                       if ((var8 & ~var12.field_Ab) != 0) {
                         var25_int = ArchiveRequestQueue.highestOneBit(var8 & ~var12.field_Ab, 1302374146);
-                        var24Lifetime2 = SetReverbGain.a(GetKeepTeamColours.field_q, new String[]{var20}, param1 ^ 124);
+                        var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(GetKeepTeamColours.field_q, new String[]{var20}, param1 ^ 124);
                         if (var25_int > 0 &&
                           null != MissionFactory.field_a &&
                           MissionFactory.field_a.length >= var25_int &&
                           null != MissionFactory.field_a[-1 + var25_int]) {
-                          var24Lifetime2 = SetReverbGain.a(MissionFactory.field_a[var25_int - 1][2], new String[]{var20}, 82);
+                          var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(MissionFactory.field_a[var25_int - 1][2], new String[]{var20}, 82);
                         }
                       }
                     } else {
-                      var24Lifetime2 = SetReverbGain.a(TextureBezierShape.field_j, new String[]{var20, Integer.toString(var6)}, param1 + 92);
+                      var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(TextureBezierShape.field_j, new String[]{var20, Integer.toString(var6)}, param1 + 92);
                     }
                   }
                 }
@@ -383,7 +383,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 } else {
                   if (var12.field_Bb >= var7) {
                     if (var6 > var12.field_Gb) {
-                      var24Lifetime2 = SetReverbGain.a(GetMassDriverFireForce.field_q, new String[]{null, Integer.toString(var6)}, 92);
+                      var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(GetMassDriverFireForce.field_q, new String[]{null, Integer.toString(var6)}, 92);
                     } else {
                       if ((var8 & ~var12.field_Ab) != 0) {
                         var25_int = ArchiveRequestQueue.highestOneBit(~var12.field_Ab & var8, 1302374146);
@@ -401,7 +401,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                     if (var25_int == 1) {
                       var24Lifetime2 = VariableCondition.field_f;
                     }
-                    var24Lifetime2 = SetReverbGain.a(SetBots.field_o, new String[]{null, Integer.toString(var25_int)}, 124);
+                    var24Lifetime2 = SetReverbGain.substituteIndexedPlaceholders(SetBots.field_o, new String[]{null, Integer.toString(var25_int)}, 124);
                   }
                 }
               }
@@ -472,19 +472,19 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + SetMissilesHitSourceTeam.field_r + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + SetReverbGain.a(SetTorpedoProjectileLife.field_p, new String[]{(String) (var25)}, 89);
+                    var24Lifetime2 = var34 + "<br>" + SetReverbGain.substituteIndexedPlaceholders(SetTorpedoProjectileLife.field_p, new String[]{(String) (var25)}, 89);
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + ComponentBehaviour.field_a + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + SetReverbGain.a(GetCountermeasureLauncherRandomness.field_o, new String[]{(String) (var25)}, 122);
+                    var24Lifetime2 = var34 + "<br>" + SetReverbGain.substituteIndexedPlaceholders(GetCountermeasureLauncherRandomness.field_o, new String[]{(String) (var25)}, 122);
                   }
                 }
                 if (param2 == WaterTextures.field_f &&
                   !SmoothedNanoTickClock.isLocalLobbyOwner(90)) {
                   var27 = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + SetReverbGain.a(SetMassDriverProjectileLife.field_o, new String[]{var27}, 125);
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + SetReverbGain.substituteIndexedPlaceholders(SetMassDriverProjectileLife.field_o, new String[]{var27}, 125);
                 }
                 NebulaFieldFactory.field_a = (String) (var24Lifetime2);
               }

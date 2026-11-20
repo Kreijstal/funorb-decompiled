@@ -70,7 +70,7 @@ final class UrlJaggrabRequest implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.url.getFile() + "\n\n"));
-              var3.write(MissionListFactory.a(var5, 126));
+              var3.write(MissionListFactory.encodeCp1252(var5, 126));
               this.input = new DataInputStream(var4.getInputStream());
             }
             this.responseBuffer.position = 0;

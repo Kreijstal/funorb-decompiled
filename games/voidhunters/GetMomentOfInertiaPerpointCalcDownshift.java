@@ -21,12 +21,12 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
           return var4 * var2 >> 12;
         }
         OpenGlGpuToolkit var5 = (OpenGlGpuToolkit) null;
-        GetMomentOfInertiaPerpointCalcDownshift.a((byte[]) null, 119, (byte) -84, (OpenGlGpuToolkit) null);
+        GetMomentOfInertiaPerpointCalcDownshift.compileOpenGlShader((byte[]) null, 119, (byte) -84, (OpenGlGpuToolkit) null);
         var4Lifetime1 = (param1 * var3 >> 12) + 40960;
         return var4Lifetime1 * var2 >> 12;
     }
 
-    final static OpenGlShader a(byte[] param0, int param1, byte param2, OpenGlGpuToolkit param3) {
+    final static OpenGlShader compileOpenGlShader(byte[] param0, int param1, byte param2, OpenGlGpuToolkit param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         byte[] var10 = null;

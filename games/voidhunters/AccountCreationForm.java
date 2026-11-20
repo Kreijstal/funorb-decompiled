@@ -277,7 +277,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         MaskedPasswordTextStyle dupTemp$1 = new MaskedPasswordTextStyle(10000536);
         this.passwordConfirmationField.renderer = (UiRenderer) ((Object) dupTemp$1);
         this.passwordField.renderer = (UiRenderer) ((Object) dupTemp$1);
-        String var2 = SetReverbGain.a(GetLaserProjectiles.field_o, new String[]{this.getLinkMarkupStart((byte) 50), this.getLinkMarkupEnd((byte) -121)}, 109);
+        String var2 = SetReverbGain.substituteIndexedPlaceholders(GetLaserProjectiles.field_o, new String[]{this.getLinkMarkupStart((byte) 50), this.getLinkMarkupEnd((byte) -121)}, 109);
         int var3 = 20;
         var3 = var3 + this.addFieldRow(this.emailField, var3, MissionState.field_h, 170, (byte) -42);
         var3 = var3 + (5 + this.addFieldWithHelp(this.emailConfirmationField, var3, 170, AppletCookieWriter.confirmEmailText, false, 20, ""));

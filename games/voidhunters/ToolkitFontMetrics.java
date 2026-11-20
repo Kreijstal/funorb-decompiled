@@ -833,7 +833,7 @@ final class ToolkitFontMetrics {
                     stackIn_49_1 = var10Lifetime2;
                     if (stackIn_49_0 != stackIn_49_1 && (var10Lifetime2 != 160 ||
                       var12 != 0)) {
-                      this.kerning[var9Lifetime2][var10Lifetime2] = (byte)TeamNodeCondition.a(this.advances, var10Lifetime2, var9Lifetime2, var7, false, var8, var5, var6);
+                      this.kerning[var9Lifetime2][var10Lifetime2] = (byte)TeamNodeCondition.computeGlyphKerning(this.advances, var10Lifetime2, var9Lifetime2, var7, false, var8, var5, var6);
                     }
                     var10Lifetime2++;
                   }

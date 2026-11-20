@@ -407,7 +407,7 @@ final class WeaponBehaviour implements DiffableState {
               param0.countAiShipsByType(var23, (byte) -99) >= FeatheredLineRasterizer.fightersPerPlayerMaximum) {
               return;
             }
-            var25 = TimedSpecialOrderBehaviour.a(false);
+            var25 = TimedSpecialOrderBehaviour.createFourThrusterShip(false);
             var25.setPosition(var20Lifetime1, var21Lifetime1, (byte) 118);
             var25.setAngle(param8, -122);
             var25.setTeam(17704, var22);

@@ -617,13 +617,13 @@ final class GpuModel extends Model3D {
                       var56 = (var86[5] * (float)var51_int + ((float)var50_int * var86[4] + (float)var49_int * var86[3])) / var53;
                       var57 = (var86[7] * (float)var50_int + (float)var49_int * var86[6] + (float)var51_int * var86[8]) / var54;
                       var30Lifetime1 = GetSniperCannonRandomness.selectCubeMapFace(-74, var56, var55, var57);
-                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var32_int], var41, (byte) 47, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.computeBoxTextureCoordinates(var42, param1.vertexZ[var32_int], var41, (byte) 47, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
                       var23 = GetAutozoomSpeedDivide.field_o[1];
                       var22_float = GetAutozoomSpeedDivide.field_o[0];
-                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var33_int], var41, (byte) 81, param1.vertexX[var33_int], var37, param1.vertexY[var33_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.computeBoxTextureCoordinates(var42, param1.vertexZ[var33_int], var41, (byte) 81, param1.vertexX[var33_int], var37, param1.vertexY[var33_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
                       var24 = GetAutozoomSpeedDivide.field_o[0];
                       var25 = GetAutozoomSpeedDivide.field_o[1];
-                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var34], var41, (byte) 39, param1.vertexX[var34], var37, param1.vertexY[var34], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.computeBoxTextureCoordinates(var42, param1.vertexZ[var34], var41, (byte) 39, param1.vertexX[var34], var37, param1.vertexY[var34], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
                       var26 = GetAutozoomSpeedDivide.field_o[0];
                       var27 = GetAutozoomSpeedDivide.field_o[1];
                     } else {

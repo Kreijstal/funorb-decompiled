@@ -227,7 +227,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         return null;
     }
 
-    final static void a(int param0, boolean param1, boolean param2, LoginCredentials param3, int param4) {
+    final static void sendLoginPacket(int param0, boolean param1, boolean param2, LoginCredentials param3, int param4) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -273,7 +273,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             var6 = var6 | 16;
           }
           RequestNewestBlackboxRecording.field_p.writeByte(0, var6);
-          var7 = GetMassDriverRandomness.a(-6465, MissionList.getApplet((byte) -121));
+          var7 = GetMassDriverRandomness.readSettingsCookie(-6465, MissionList.getApplet((byte) -121));
           if (var7 == null) {
             var7 = "";
           }

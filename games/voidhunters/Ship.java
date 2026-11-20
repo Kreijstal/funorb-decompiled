@@ -1347,7 +1347,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             var4 = 1;
             System.out.println("int shields_toggle_cooldown has changed. before=" + var5.shieldsToggleCooldown + ", now=" + this.shieldsToggleCooldown);
           }
-          if (GetCountermeasuresCooldown.a(this.lastAttackers, var5.lastAttackers, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.lastAttackers, var5.lastAttackers, false)) {
             var4 = 1;
             System.out.println("int[] last_attackers has changed. ");
           }

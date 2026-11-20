@@ -35,18 +35,18 @@ final class LobbyGameContextMenuBuilder {
           if (param1.field_fc && (param1.field_Bb == 2 ||
             !(SetAngularVelocitySustain.field_p < 2))) {
             var7 = GetLagStandardDeviationOut.field_o;
-            var8 = SetReverbGain.a(GetMassDriverProjectileLife.field_o, new String[]{param2}, 113);
+            var8 = SetReverbGain.substituteIndexedPlaceholders(GetMassDriverProjectileLife.field_o, new String[]{param2}, 113);
             var7.menu.addItem(var8, (byte) -53, 10);
           }
           GetLagStandardDeviationOut.field_o.addGameJoinOptions(true);
           if (param3) {
             if (GetLagStandardDeviationOut.field_o.targetGameId != GetMachineGunPulsetime.field_q) {
               var11 = GetLagStandardDeviationOut.field_o;
-              var12 = SetReverbGain.a(IntrusiveNodeHashTable.field_a, new String[]{param2}, param0 ^ 57);
+              var12 = SetReverbGain.substituteIndexedPlaceholders(IntrusiveNodeHashTable.field_a, new String[]{param2}, param0 ^ 57);
               var11.menu.addItem(var12, (byte) -53, 15);
             } else {
               var9 = GetLagStandardDeviationOut.field_o;
-              var10 = SetReverbGain.a(LoginFormNavigation.field_c, new String[]{param2}, 120);
+              var10 = SetReverbGain.substituteIndexedPlaceholders(LoginFormNavigation.field_c, new String[]{param2}, 120);
               var9.menu.addItem(var10, (byte) -53, 16);
             }
           }

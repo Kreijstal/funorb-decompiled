@@ -159,7 +159,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
         return var3;
     }
 
-    final static void d(int param0) {
+    final static void completeMenuTransition(int param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -185,7 +185,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
           SetShipTeamAction.field_f = GetMessageFadetime.field_o;
           GetArmageddonTimerStart.field_o = AgeValidator.field_f;
           if (param0 != 991426348) {
-            ColorKeyScaleTextureOperation.d(25);
+            ColorKeyScaleTextureOperation.completeMenuTransition(25);
           }
           SetVariableAction.field_b = 0;
           if (IntegerRecordWritePackets.field_a) {

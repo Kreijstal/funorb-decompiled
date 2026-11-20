@@ -924,13 +924,13 @@ final class OpenGlModel extends Model3D {
                       var56 = ((float)var50 * var86[4] + (float)var49 * var86[3] + var86[5] * (float)var51) / var53;
                       var57 = (var86[7] * (float)var50 + var86[6] * (float)var49 + var86[8] * (float)var51) / var54;
                       var30Lifetime1 = GetSniperCannonRandomness.selectCubeMapFace(-93, var56, var55, var57);
-                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var32_int], var41, (byte) 39, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.computeBoxTextureCoordinates(var42, param1.vertexZ[var32_int], var41, (byte) 39, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
                       var23 = MissionBuilder.field_f[1];
                       var22 = MissionBuilder.field_f[0];
-                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var33_int], var41, (byte) 67, param1.vertexX[var33_int], var37, param1.vertexY[var33_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.computeBoxTextureCoordinates(var42, param1.vertexZ[var33_int], var41, (byte) 67, param1.vertexX[var33_int], var37, param1.vertexY[var33_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
                       var24 = MissionBuilder.field_f[0];
                       var25 = MissionBuilder.field_f[1];
-                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var34], var41, (byte) 26, param1.vertexX[var34], var37, param1.vertexY[var34], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.computeBoxTextureCoordinates(var42, param1.vertexZ[var34], var41, (byte) 26, param1.vertexX[var34], var37, param1.vertexY[var34], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
                       var27 = MissionBuilder.field_f[1];
                       var26 = MissionBuilder.field_f[0];
                     } else {

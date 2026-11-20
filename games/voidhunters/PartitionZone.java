@@ -160,7 +160,7 @@ final class PartitionZone implements DiffableState, SpatialStateMarker, Sortable
           }
           var5 = (PartitionZone) (other);
           var4 = 0;
-          if (GetCountermeasuresCooldown.a(this.ids, var5.ids, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.ids, var5.ids, false)) {
             var4 = 1;
             System.out.println("int[] ids has changed. ");
           }

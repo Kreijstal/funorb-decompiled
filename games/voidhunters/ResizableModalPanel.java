@@ -112,11 +112,11 @@ abstract class ResizableModalPanel extends ModalPanel {
           var7Lifetime1++;
         }
         GameMenuScreen.field_a.draw(-90 + this.width + param2, 10 + param0);
-        GetMissionResnetResourceTickTime.a(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.width - 10);
+        GetMissionResnetResourceTickTime.drawThreeSliceBar(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.width - 10);
         if (param1 != 1630174241) {
           this.updateAndCheckClosed(59);
         }
-        GetMissionResnetResourceTickTime.a(1, this.height + param0 - 22, SetPedrosRepairMode.field_q, param2, this.width);
+        GetMissionResnetResourceTickTime.drawThreeSliceBar(1, this.height + param0 - 22, SetPedrosRepairMode.field_q, param2, this.width);
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var4Lifetime2 = -79 + this.height;
@@ -222,7 +222,7 @@ abstract class ResizableModalPanel extends ModalPanel {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               SetAudioRangeCutoff.field_o[var6_int] = var14.readString(param0 + 37);
             }
-            GetUseCircleFill.a(var5, var4, 0);
+            GetUseCircleFill.prepareScoreRowBuffers(var5, var4, 0);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               GetShieldsToggleCooldown.readPackedScoreRow(var14, true);
               if (var6_intLifetime1 != 0) {

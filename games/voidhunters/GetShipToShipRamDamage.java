@@ -15,22 +15,22 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           return;
         }
         if (OpenGlTexture3D.rasterClipMinX > -param5 + param6) {
-          SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
+          SetOndamageParticleSpeed.fillBorderedEllipseClipped(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }
         if (param6 + param5 > GetCountermeasureLauncherProjectiles.rasterClipMaxX) {
-          SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
+          SetOndamageParticleSpeed.fillBorderedEllipseClipped(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }
         if (-param1 + param7 < NebulaField.rasterClipMinY) {
-          SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
+          SetOndamageParticleSpeed.fillBorderedEllipseClipped(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }
         if (EnvironmentReflectionGpuMaterialEffect.rasterClipMaxY >= param1 + param7) {
           GetBots.fillBorderedEllipseUnclipped(param2, param1, param5, param7, param6, param3, param4, 21601);
           return;
         }
-        SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
+        SetOndamageParticleSpeed.fillBorderedEllipseClipped(2051507073, param4, param7, param3, param2, param5, param6, param1);
     }
 
     GetShipToShipRamDamage(String param0, Class[] param1, String param2) {

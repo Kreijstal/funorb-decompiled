@@ -1270,7 +1270,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               this.field_Bc.indexOf("brian paul") == -1 &&
               this.field_Bc.indexOf("mesa") == -1) {
               var20 = jaggl.OpenGL.glGetString(7938);
-              var9 = SetFighterBayAimspeed.a((byte) -67, ' ', var20.replace('.', ' '));
+              var9 = SetFighterBayAimspeed.splitString((byte) -67, ' ', var20.replace('.', ' '));
               if (var9.length < 2) {
                 throw new RuntimeException("");
               }
@@ -1320,7 +1320,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
                 var11_int = 0;
                 var12 = 0;
                 var13 = 0;
-                var14 = SetFighterBayAimspeed.a((byte) -67, ' ', this.field_ad.replace('/', ' '));
+                var14 = SetFighterBayAimspeed.splitString((byte) -67, ' ', this.field_ad.replace('/', ' '));
                 for (var15 = 0; var14.length > var15; var15++) {
                   var21 = var14[var15];
                   var16 = var21;

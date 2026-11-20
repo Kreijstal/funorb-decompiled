@@ -31,7 +31,7 @@ final class GetResourceNodeCaptureTime extends ConsoleCommand {
         }
     }
 
-    final static int[] a(String param0, boolean param1, boolean param2) {
+    final static int[] decodeShipCode(String param0, boolean param1, boolean param2) {
         int var5 = 0;
         int var6 = 0;
         Object stackIn_10_0 = null;
@@ -64,7 +64,7 @@ final class GetResourceNodeCaptureTime extends ConsoleCommand {
           }
           if (!param2) {
             var8 = (String) null;
-            GetResourceNodeCaptureTime.a((String) null, false, false);
+            GetResourceNodeCaptureTime.decodeShipCode((String) null, false, false);
           }
           if (!param1) {
             var4 = new int[var12.length];

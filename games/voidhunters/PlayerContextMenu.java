@@ -23,13 +23,13 @@ final class PlayerContextMenu {
         var4 = null;
         if (param1 != 4) {
           if (param1 == 5) {
-            var4_ref = ServerTickFactory.a((byte) 90, this.targetName, param0);
+            var4_ref = ServerTickFactory.requestRemoveFriend((byte) 90, this.targetName, param0);
           } else {
             if (6 != param1) {
               if (7 != param1) {
                 return false;
               }
-              var4_ref = GameCanvasResizeListener.a(param0, this.targetDisplayName, this.targetName, (byte) -76);
+              var4_ref = GameCanvasResizeListener.requestRemoveIgnore(param0, this.targetDisplayName, this.targetName, (byte) -76);
             } else {
               var4_ref = SetExplosionPushMultiplier.requestAddIgnore(2, this.targetName, param0);
             }
@@ -184,35 +184,35 @@ final class PlayerContextMenu {
             param1 == 2) && PendingRequestResender.field_b == 2) {
             var8 = this.getTargetDisplayName((byte) -63);
             var4 = var8;
-            var5 = FlipTextureOperation.a(this.targetName, 0);
+            var5 = FlipTextureOperation.findFriendEntry(this.targetName, 0);
             var6 = SetUseLines.isIgnoredPlayer((byte) -94, this.targetName) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.menu.addItem(SetReverbGain.a(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);
-              this.menu.addItem(SetReverbGain.a(GpuMaterialEffect.field_c, new String[]{var8}, 104), (byte) -53, 6);
+              this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);
+              this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(GpuMaterialEffect.field_c, new String[]{var8}, 104), (byte) -53, 6);
               if (param2 != null &&
                 param1 != 2 &&
                 !GetBloomThresholdPercentage.field_p) {
                 this.actionData = param2;
-                this.menu.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 87), (byte) -53, 19);
+                this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(SetMachineGunFireForce.field_q, new String[]{var8}, 87), (byte) -53, 19);
               }
             }
             if (var5 != null) {
               if (!AppletCookieWriter.isActivePrivateChatTarget(0, this.targetName) &&
                 !GetBloomThresholdPercentage.field_p) {
                 if (!ConsoleSettingsScript.quickChatOnly) {
-                  this.menu.addItem(SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
+                  this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
                 }
-                this.menu.addItem(SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);
+                this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);
                 if (param2 != null) {
                   this.actionData = param2;
-                  this.menu.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 73), (byte) -53, 19);
+                  this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(SetMachineGunFireForce.field_q, new String[]{var8}, 73), (byte) -53, 19);
                 }
               }
-              this.menu.addItem(SetReverbGain.a(GetAllowShipSaving.field_o, new String[]{var8}, 114), (byte) -53, 5);
+              this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(GetAllowShipSaving.field_o, new String[]{var8}, 114), (byte) -53, 5);
             }
             if (var6 != 0) {
-              this.menu.addItem(SetReverbGain.a(HardpointMatch.field_c, new String[]{var8}, 80), (byte) -53, 7);
+              this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(HardpointMatch.field_c, new String[]{var8}, 80), (byte) -53, 7);
             }
           }
           if (param0 >= -13) {
@@ -393,19 +393,19 @@ final class PlayerContextMenu {
               if (!var7.field_Eb) {
                 if (param0 &&
                   var7.field_Fb) {
-                  this.menu.addItem(SetReverbGain.a(SetWaitForPlayers.field_p, new String[]{var5}, 121), (byte) -53, 0);
-                  this.menu.addItem(SetReverbGain.a(AsteroidField.field_b, new String[]{var5}, 75), (byte) -53, 1);
+                  this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(SetWaitForPlayers.field_p, new String[]{var5}, 121), (byte) -53, 0);
+                  this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(AsteroidField.field_b, new String[]{var5}, 75), (byte) -53, 1);
                 } else {
-                  this.menu.addItem(SetReverbGain.a(GetSalvoHoldable.field_o, new String[]{var5}, 94), (byte) -53, 0);
+                  this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(GetSalvoHoldable.field_o, new String[]{var5}, 94), (byte) -53, 0);
                 }
               } else {
-                this.menu.addItem(SetReverbGain.a(LegacyOpenGlShader.field_a, new String[]{var5}, 115), (byte) -53, 1);
+                this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(LegacyOpenGlShader.field_a, new String[]{var5}, 115), (byte) -53, 1);
               }
             }
           } else {
             if (!SetSpinningBladeSpindamageMultiplier.field_o.field_fc ||
               !(SetSpinningBladeSpindamageMultiplier.field_o.field_Ub < 0)) {
-              this.menu.addItem(SetReverbGain.a(GetRepairModeRadius.field_o, new String[]{var5}, 106), (byte) -53, 1);
+              this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(GetRepairModeRadius.field_o, new String[]{var5}, 106), (byte) -53, 1);
             }
           }
         }
@@ -471,20 +471,20 @@ final class PlayerContextMenu {
             var3 = var5.field_Vb;
             if (!var5.field_ac) {
               if (var5.field_cc) {
-                this.menu.addItem(SetReverbGain.a(LegacyOpenGlEnvironmentMappedWaterEffect.field_g, new String[]{var3}, 101), (byte) -53, 2);
+                this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(LegacyOpenGlEnvironmentMappedWaterEffect.field_g, new String[]{var3}, 101), (byte) -53, 2);
               } else {
                 if (!var5.field_Qb &&
                   var5.field_Gb && (!var5.field_fc ||
                   var5.field_cc)) {
-                  this.menu.addItem(SetReverbGain.a(OpenGlShader.field_c, new String[]{var3}, 107), (byte) -53, 2);
+                  this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(OpenGlShader.field_c, new String[]{var3}, 107), (byte) -53, 2);
                 }
               }
               if (var5.field_Qb) {
-                this.menu.addItem(SetReverbGain.a(ToolkitViewState.field_e, new String[]{var3}, 126), (byte) -53, 3);
+                this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(ToolkitViewState.field_e, new String[]{var3}, 126), (byte) -53, 3);
               }
             } else {
-              this.menu.addItem(SetReverbGain.a(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);
-              this.menu.addItem(SetReverbGain.a(NullUiRenderer.field_a, new String[]{var3}, 127), (byte) -53, 3);
+              this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);
+              this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(NullUiRenderer.field_a, new String[]{var3}, 127), (byte) -53, 3);
             }
           }
         }
@@ -520,7 +520,7 @@ final class PlayerContextMenu {
           BodyInZoneConditionFactory.field_a != this.targetPlayerKey) {
           var3 = this.getTargetDisplayName((byte) -110);
           String var2 = var3;
-          this.menu.addItem(SetReverbGain.a(NetworkArchiveClient.field_l, new String[]{var3}, 83), (byte) -53, 17);
+          this.menu.addItem(SetReverbGain.substituteIndexedPlaceholders(NetworkArchiveClient.field_l, new String[]{var3}, 83), (byte) -53, 17);
         }
         if (param0 != -9923) {
           this.drawMenu(-125, false);

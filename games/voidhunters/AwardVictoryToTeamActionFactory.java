@@ -56,7 +56,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           HighscoreValueRequest.menuActionLabels[23] = SpawnChoiceFactory.field_b;
           for (var1_int = 0; HighscoreValueRequest.menuActionLabels.length > var1_int; var1_int++) {
             if (null != HighscoreValueRequest.menuActionLabels[var1_int]) {
-              HighscoreValueRequest.menuActionLabels[var1_int] = SetFogOfWarSensorRange.a(-1, HighscoreValueRequest.menuActionLabels[var1_int]);
+              HighscoreValueRequest.menuActionLabels[var1_int] = SetFogOfWarSensorRange.uppercaseOutsideMarkup(-1, HighscoreValueRequest.menuActionLabels[var1_int]);
             }
           }
           SetSpinningBladeSpinupSpeed.field_o = new String[56];
@@ -221,7 +221,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[6] = DeveloperAccess.field_b;
           GetGrapplingHookSpringConstant.specialOrderLabels[11] = ShipBlueprint.field_b;
           for (var1_int = 0; var1_int < SetSpinningBladeSpinupSpeed.field_o.length; var1_int++) {
-            GetGrapplingHookSpringConstant.specialOrderLabels[var1_int + 72] = SetReverbGain.a(SetMachineGunFireForce.field_o, new String[]{SetSpinningBladeSpinupSpeed.field_o[var1_int]}, 126);
+            GetGrapplingHookSpringConstant.specialOrderLabels[var1_int + 72] = SetReverbGain.substituteIndexedPlaceholders(SetMachineGunFireForce.field_o, new String[]{SetSpinningBladeSpinupSpeed.field_o[var1_int]}, 126);
           }
           ShipTeamCondition.field_f = new String[31];
           ShipTeamCondition.field_f[2] = AssassinationObjectiveText.assassinationText;

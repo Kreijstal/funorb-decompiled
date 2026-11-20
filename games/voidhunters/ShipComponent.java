@@ -1298,11 +1298,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
             System.out.println("ComponentBehaviour behaviour has changed. before=" + var5.behaviour + ", now=" + this.behaviour);
             var4 = 1;
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.subcomponents, false, 1, this.subcomponents, -9)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.subcomponents, false, 1, this.subcomponents, -9)) {
             System.out.println("Component[] subcomponents has changed. ");
             var4 = 1;
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.hardpoints, false, 1, this.hardpoints, 118)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.hardpoints, false, 1, this.hardpoints, 118)) {
             System.out.println("Hardpoint[] hardpoints has changed. ");
             var4 = 1;
           }
@@ -1330,7 +1330,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             System.out.println("int finalangle has changed. before=" + var5.finalangle + ", now=" + this.finalangle);
             var4 = 1;
           }
-          if (GetCountermeasuresCooldown.a(this.finaloutline, var5.finaloutline, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.finaloutline, var5.finaloutline, false)) {
             System.out.println("int[] finaloutline has changed. ");
             var4 = 1;
           }
@@ -2504,8 +2504,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   }
                   if ((stackIn_34_0 ^ stackIn_37_1) == 0 && (this.behaviour == null ||
                     this.behaviour.getClass() == var5.behaviour.getClass()) && (null == this.behaviour ||
-                    !this.behaviour.differsFrom((byte) -80, var5.behaviour)) && (!SetCountermeasureLauncherAimspeed.a(var5.subcomponents, false, 1, this.subcomponents, 125) &&
-                    !SetCountermeasureLauncherAimspeed.a(var5.hardpoints, false, 1, this.hardpoints, 125))) {
+                    !this.behaviour.differsFrom((byte) -80, var5.behaviour)) && (!SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.subcomponents, false, 1, this.subcomponents, 125) &&
+                    !SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.hardpoints, false, 1, this.hardpoints, 125))) {
                     stackIn_49_0 = false;
                     decompiledFrameRemainder0 = false;
                   }

@@ -348,7 +348,7 @@ abstract class DeveloperConsole implements DeveloperConsoleMarker {
         var11 = VoidHunters.field_G;
         try {
           var4_int = this.outputPane.width - 25;
-          var5 = SetFighterBayAimspeed.a((byte) -67, '\n', param0);
+          var5 = SetFighterBayAimspeed.splitString((byte) -67, '\n', param0);
           var6 = var5;
           if (param1) {
             return;

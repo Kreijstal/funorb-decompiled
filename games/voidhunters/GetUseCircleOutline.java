@@ -10,7 +10,7 @@ final class GetUseCircleOutline extends ConsoleCommand {
         try {
           GetBombletSprayPushMultiplier.emailAvailabilityCheck = EmailAvailabilityCheckFactory.create("", (byte) 110);
           GetBombletSprayPushMultiplier.emailAvailabilityCheck.complete(7861, param4);
-          SetOndamageParticleFadestart.a(param3, param2, param1, 0);
+          SetOndamageParticleFadestart.loadCommonUiResources(param3, param2, param1, 0);
           SetMutatorVotes.initializeLoginUi(121);
           SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.idleAccountRequest;
           SetShipTeamAction.field_b = ToolkitRasterStateStack.idleAccountRequest;

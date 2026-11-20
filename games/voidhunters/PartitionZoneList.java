@@ -20,7 +20,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
             this.zones = (PartitionZone[]) null;
           }
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.zones, false, 1, this.zones, -57)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.zones, false, 1, this.zones, -57)) {
             var4 = 1;
             System.out.println("PartitionZone[] zones has changed. ");
           }
@@ -186,7 +186,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
         try {
           var4 = 107 / ((22 - param0) / 59);
           var3 = (PartitionZoneList) (param1);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var3.zones, false, 1, this.zones, 3);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.zones, false, 1, this.zones, 3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

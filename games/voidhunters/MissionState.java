@@ -67,7 +67,7 @@ final class MissionState implements DiffableState {
             var4 = 1;
             System.out.println("int winner has changed. before=" + var5.winner + ", now=" + this.winner);
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.customVariables, false, 1, this.customVariables, -77)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.customVariables, false, 1, this.customVariables, -77)) {
             System.out.println("MissionVariable[] custom_variables has changed. ");
             var4 = 1;
           }
@@ -86,7 +86,7 @@ final class MissionState implements DiffableState {
             System.out.println("MissionGenerationData nextround has changed. before=" + var5.nextround + ", now=" + this.nextround);
             var4 = 1;
           }
-          if (GetCountermeasuresCooldown.a(this.teamscores, var5.teamscores, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.teamscores, var5.teamscores, false)) {
             System.out.println("int[] teamscores has changed. ");
             var4 = 1;
           }
@@ -463,7 +463,7 @@ final class MissionState implements DiffableState {
             this.phaseChangeCountdown == var5.phaseChangeCountdown &&
             this.phaseTimer == var5.phaseTimer &&
             this.winner == var5.winner &&
-            !SetCountermeasureLauncherAimspeed.a(var5.customVariables, false, 1, this.customVariables, -22)) {
+            !SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.customVariables, false, 1, this.customVariables, -22)) {
             stackIn_8_0 = (var5.nextround != null) ? 0 : 1;
             if (this.nextround != null) {
               stackIn_11_1 = 0;

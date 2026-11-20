@@ -4,7 +4,7 @@
 final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
     static String field_o;
 
-    final static void a(int param0) {
+    final static void adoptGraphicsContext(int param0) {
         String var12 = null;
         String var13 = null;
         String var14 = null;

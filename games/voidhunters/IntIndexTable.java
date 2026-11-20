@@ -5,7 +5,7 @@ final class IntIndexTable {
     static String field_a;
     private int[] entries;
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
+    final static int drawParagraph(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
         RuntimeException var13 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -55,7 +55,7 @@ final class IntIndexTable {
         var6 = VoidHunters.field_G;
         if (param0 != -123454015) {
           var7 = (String) null;
-          IntIndexTable.a(114, -24, -99, -33, 59, -105, (String) null, 97, -95, -68, -115, (byte) 21, -117);
+          IntIndexTable.drawParagraph(114, -24, -99, -33, 59, -105, (String) null, 97, -95, -68, -115, (byte) 21, -117);
         }
         var3 = (this.entries.length >> 1) - 1;
         var4 = var3 & param1;

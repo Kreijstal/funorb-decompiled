@@ -4,7 +4,7 @@
 final class SetFogOfWarSensorRange extends ConsoleCommand {
     static int[][] field_o;
 
-    final static String a(int param0, String param1) {
+    final static String uppercaseOutsideMarkup(int param0, String param1) {
         int var5 = 0;
         int var2_int = 0;
         char[] var3 = null;

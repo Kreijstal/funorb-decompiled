@@ -41,7 +41,7 @@ final class SetFighterBayAimspeed extends ConsoleCommand {
         }
     }
 
-    final static String[] a(byte param0, char param1, String param2) {
+    final static String[] splitString(byte param0, char param1, String param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;

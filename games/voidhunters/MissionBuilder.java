@@ -1644,7 +1644,7 @@ final class MissionBuilder implements DiffableState {
             var14 = param2[1 + var12];
             var15 = param2[(2 + var12) % param2.length];
             var16 = param2[(3 + var12) % param2.length];
-            var17 = SetShieldsDamageEnergyConversion.a(var11, var14, var16, param1, var13, 8, var15, param3, 87);
+            var17 = SetShieldsDamageEnergyConversion.findSegmentCircleIntersectionFraction(var11, var14, var16, param1, var13, 8, var15, param3, 87);
             if (var17 == -1) {
               stackIn_11_0 = (257 == var17) ? 1 : 0;
             } else {
@@ -1756,7 +1756,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var3 = (MissionBuilder) (param1);
           var4 = 3 / ((22 - param0) / 59);
-          stackIn_6_0 = (var3.seed != this.seed) || (SetBlueprintSaveTime.intArraysDiffer(var3.optionTotals, this.optionTotals, (byte) 28)) || (SetCountermeasureLauncherAimspeed.a(var3.clearanceAreas, true, 1, this.clearanceAreas, 126));
+          stackIn_6_0 = (var3.seed != this.seed) || (SetBlueprintSaveTime.intArraysDiffer(var3.optionTotals, this.optionTotals, (byte) 28)) || (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.clearanceAreas, true, 1, this.clearanceAreas, 126));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3442,11 +3442,11 @@ final class MissionBuilder implements DiffableState {
           if (obfuscationGuard >= -19) {
             field_a = (String[]) null;
           }
-          if (GetCountermeasuresCooldown.a(this.optionTotals, var5.optionTotals, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.optionTotals, var5.optionTotals, false)) {
             var4 = 1;
             System.out.println("int[] option_totals has changed. ");
           }
-          if (SetCountermeasureLauncherAimspeed.a(var5.clearanceAreas, true, 1, this.clearanceAreas, -12)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.clearanceAreas, true, 1, this.clearanceAreas, -12)) {
             var4 = 1;
             System.out.println("MapClearanceArea[] clearance_areas has changed. ");
           }
@@ -3629,7 +3629,7 @@ final class MissionBuilder implements DiffableState {
           try {
             var7_int = TextHotspotRegion.randomBoundedInt(param4, field_a.length, 127);
             var8 = field_a[var7_int];
-            var13 = GetResourceNodeCaptureTime.a(var8, true, true);
+            var13 = GetResourceNodeCaptureTime.decodeShipCode(var8, true, true);
             var10 = MenuInputState.createShipFromComponentWords(var13, (byte) 65);
             var10.setPosition(0, 0, (byte) 30);
             var10.setAi(new ShipAI(), param5 - 2097148);

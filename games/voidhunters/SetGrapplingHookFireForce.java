@@ -36,7 +36,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillEllipseClipped(byte param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;

@@ -1174,7 +1174,7 @@ final class GameSession {
                 } else {
                   var9 = SetArmageddonTimerStart.field_o;
                   var6 = (100 * this.blueprintSizeBytes + 96) / 192;
-                  var5Lifetime3 = var9 + "<br>" + SetReverbGain.a(GetMassDriverEnergyUsed.field_o, new String[]{Integer.toString(var6)}, 105);
+                  var5Lifetime3 = var9 + "<br>" + SetReverbGain.substituteIndexedPlaceholders(GetMassDriverEnergyUsed.field_o, new String[]{Integer.toString(var6)}, 105);
                 }
               } else {
                 var8Lifetime1 = GetMissionTimeLimit.field_q;
@@ -1207,7 +1207,7 @@ final class GameSession {
               return;
             }
             var4 = (100 * this.blueprintSizeBytes + 96) / 192;
-            var5Lifetime1 = SetReverbGain.a(GetMassDriverEnergyUsed.field_o, new String[]{Integer.toString(var4)}, 77);
+            var5Lifetime1 = SetReverbGain.substituteIndexedPlaceholders(GetMassDriverEnergyUsed.field_o, new String[]{Integer.toString(var4)}, 77);
             GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var5Lifetime1, 16777215, 20, 11, 4266);
           }
           if (!param0) {
@@ -2437,7 +2437,7 @@ final class GameSession {
               var31 = var31 + (36 - GetPointDefenceLaserProjectiles.getFontAscent(false, 2));
               var32 = ThrusterBehaviour.field_a[this.hoveredVoteOptionId];
               if (var32 != null) {
-                IntIndexTable.a(var31, var28_int, var30_int, GetPointDefenceLaserProjectiles.getFontAscent(false, 4), this.field_U, 0, var32, 4, 56035, -var15 - var30_int + var12 + var26, 0, (byte) -74, -1);
+                IntIndexTable.drawParagraph(var31, var28_int, var30_int, GetPointDefenceLaserProjectiles.getFontAscent(false, 4), this.field_U, 0, var32, 4, 56035, -var15 - var30_int + var12 + var26, 0, (byte) -74, -1);
               }
               var33 = null;
               if (!ArchiveIndexLoader.field_g.isVoteOptionNew(this.hoveredVoteOptionId, (byte) -118)) {
@@ -2492,7 +2492,7 @@ final class GameSession {
               var19 = var45;
               var20 = GetTorqueDownshift.getObjectiveRoundCount(var18Lifetime1, -58);
               if (var20 > 1) {
-                var19 = var45 + " (" + SetReverbGain.a(GameInterfaceText.roundTemplate, new String[]{Integer.toString(var20 - (var40.getRoundsLeft((byte) 28) - 1))}, 107) + ")";
+                var19 = var45 + " (" + SetReverbGain.substituteIndexedPlaceholders(GameInterfaceText.roundTemplate, new String[]{Integer.toString(var20 - (var40.getRoundsLeft((byte) 28) - 1))}, 107) + ")";
               }
               SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - (GameTextMetrics.getStringWidth(4, var19, 13879) >> 1), 1, GetPointDefenceLaserProjectiles.getFontAscent(false, var16) * 7 / 4 + var14 + var15 - GetPointDefenceLaserProjectiles.getFontAscent(false, 4), var19, 4, 16777215, (byte) -85);
               var21Lifetime1 = -1;
@@ -2737,7 +2737,7 @@ final class GameSession {
                     var10_ref_Random = new Random();
                     var11 = TextHotspotRegion.randomBoundedInt(var10_ref_Random, PendingScoreboardRequest.presetBlueprints.length, 122);
                     var12_ref_String = PendingScoreboardRequest.presetBlueprints[var11];
-                    var13_ref_int__ = GetResourceNodeCaptureTime.a(var12_ref_String, false, true);
+                    var13_ref_int__ = GetResourceNodeCaptureTime.decodeShipCode(var12_ref_String, false, true);
                     var9_ref_hna.specialOrderSubmessage.blueprint = new ShipBlueprint();
                     var9_ref_hna.specialOrderSubmessage.blueprint.description = var13_ref_int__;
                   } else {
@@ -3280,7 +3280,7 @@ final class GameSession {
             var5_ref = GetLaserReload.field_o;
           } else {
             if (var3_int == 0) {
-              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.teamNames[0]}, param1 + 74);
+              var5_ref = SetReverbGain.substituteIndexedPlaceholders(Widget.field_H, new String[]{GpuVertexBufferOwner.teamNames[0]}, param1 + 74);
               var6 = AlphaContainer.getTeamColor(false, 0, 13894143);
             } else {
               if (var4 != 0) {
@@ -3291,7 +3291,7 @@ final class GameSession {
                 }
                 return;
               }
-              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.teamNames[1]}, 99);
+              var5_ref = SetReverbGain.substituteIndexedPlaceholders(Widget.field_H, new String[]{GpuVertexBufferOwner.teamNames[1]}, 99);
               var6 = AlphaContainer.getTeamColor(false, 1, 13894143);
             }
           }
@@ -3656,7 +3656,7 @@ final class GameSession {
             !var9.world.isTeamRespawnAllowed(this.getLocalTeam((byte) 107), var9.missionState, -14368)) {
             return;
           }
-          var13 = SetReverbGain.a(OpenGlVertexNormal.field_b, new String[]{Integer.toString(Particle.field_E / (Particle.field_l * 60))}, 95);
+          var13 = SetReverbGain.substituteIndexedPlaceholders(OpenGlVertexNormal.field_b, new String[]{Integer.toString(Particle.field_E / (Particle.field_l * 60))}, 95);
           var19 = (String) null;
           var18 = (String) null;
           ChatMessages.appendMessage((byte) -123, 0, (String) null, (String) null, var13, 2);
@@ -4213,7 +4213,7 @@ final class GameSession {
           GetLagStandardDeviationOut.drawTextWithDefaultFont(1, "y=" + var4Lifetime3, 16777215, 12 + GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
           var26 = this.state.carouselInfo.getDebugDifferences((byte) -75);
           if (var26 != null) {
-            var17 = SetFighterBayAimspeed.a((byte) -67, '\n', var26);
+            var17 = SetFighterBayAimspeed.splitString((byte) -67, '\n', var26);
             var7Lifetime1 = 5;
             var8Lifetime1 = OpenGlTexture.getCurrentFontAscent((byte) 118);
             var9Lifetime1 = MissionVariableFactory.field_a - var8Lifetime1 * (-1 + var17.length);
@@ -4771,7 +4771,7 @@ final class GameSession {
             if (var6 < var4_int &&
               var5 >= var4_int) {
               var7 = (-var4_int + var5) / Particle.field_l;
-              var8 = SetReverbGain.a(OpenGlDisplayLists.field_b, new String[]{Integer.toString(var7)}, 118).toUpperCase();
+              var8 = SetReverbGain.substituteIndexedPlaceholders(OpenGlDisplayLists.field_b, new String[]{Integer.toString(var7)}, 118).toUpperCase();
               var9 = 128 + (TextureLineShape.sinAngle(SetMinimapWidth.field_o * 128 % 8192, 44) * 127 >> 16);
               var10 = var9 << 8 | 16711680 | var9;
               SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(1, var8, 13879) / 2, 1, GetLaserAimarc.field_q / 2, var8, 1, var10, (byte) -92);
@@ -5460,7 +5460,7 @@ final class GameSession {
         for (var7 = this.field_u; var7 < NullUiRenderer.chatMessages.length; var7++) {
           var8 = NullUiRenderer.chatMessages[var7];
           if (var8 != null &&
-            SetPhasedEnergyBeamFireForce.a(true, var8.field_e, this.state.getPlayerName(1, param2))) {
+            SetPhasedEnergyBeamFireForce.areNormalizedNamesEqual(true, var8.field_e, this.state.getPlayerName(1, param2))) {
             if (var5 >= this.playerChatOffsets[param2]) {
               if (var6 > 0) {
                 var4 = var4 + "\n";
@@ -5485,7 +5485,7 @@ final class GameSession {
           this.playerChatTimers[param2] = 250;
         }
         if (var4.length() > 0) {
-          return SetFighterBayAimspeed.a((byte) -67, '\n', var4);
+          return SetFighterBayAimspeed.splitString((byte) -67, '\n', var4);
         }
         return null;
     }
@@ -5815,7 +5815,7 @@ final class GameSession {
               if (var15 == 0) {
                 GetMassDriverReload.setTooltipText(PartitioningManager.field_c, -46);
               } else {
-                GetMassDriverReload.setTooltipText(SetReverbGain.a(ShipBodyFactory.field_a, new String[]{var17}, 93), -35);
+                GetMassDriverReload.setTooltipText(SetReverbGain.substituteIndexedPlaceholders(ShipBodyFactory.field_a, new String[]{var17}, 93), -35);
               }
             } else {
               GetMassDriverReload.setTooltipText(GetDebrisCollisionDamage.field_o, -64);
@@ -7201,10 +7201,10 @@ final class GameSession {
                   var19 = 1000 * var18_int / Particle.field_l;
                   var20 = SetPointDefenceLaserAimspeed.formatDurationMillis((byte) 10, var19);
                   var18 = var20;
-                  var10 = SetReverbGain.a(CommonArchiveId.field_b.toUpperCase(), new String[]{var23, var20}, param1 ^ 177);
+                  var10 = SetReverbGain.substituteIndexedPlaceholders(CommonArchiveId.field_b.toUpperCase(), new String[]{var23, var20}, param1 ^ 177);
                 } else {
                   if (var14 != 1) {
-                    var10 = SetReverbGain.a(ChatMessages.wonMatchText.toUpperCase(), new String[]{var23}, 92);
+                    var10 = SetReverbGain.substituteIndexedPlaceholders(ChatMessages.wonMatchText.toUpperCase(), new String[]{var23}, 92);
                   } else {
                     var16 = var12.countResultsForWinner(-54, var13Lifetime1);
                     if (var16 != 1) {
@@ -7213,7 +7213,7 @@ final class GameSession {
                       stackIn_49_0 = SetMachineGunProjectileDamage.field_o;
                     }
                     var17_ref_String = stackIn_49_0;
-                    var10 = SetReverbGain.a(SetWaitForPlayers.field_o, new String[]{var23, Integer.toString(var16), var17_ref_String}, param1 ^ 191).toUpperCase();
+                    var10 = SetReverbGain.substituteIndexedPlaceholders(SetWaitForPlayers.field_o, new String[]{var23, Integer.toString(var16), var17_ref_String}, param1 ^ 191).toUpperCase();
                   }
                 }
               }
@@ -7232,7 +7232,7 @@ final class GameSession {
                 } else {
                   var13_ref_String = this.getPlayerName(var9Lifetime1, (byte) -92);
                 }
-                var10 = SetReverbGain.a(OpenGlByteTextureFactory.field_a, new String[]{var13_ref_String}, param1 ^ 147).toUpperCase();
+                var10 = SetReverbGain.substituteIndexedPlaceholders(OpenGlByteTextureFactory.field_a, new String[]{var13_ref_String}, param1 ^ 147).toUpperCase();
               }
               var11Lifetime1Lifetime1 = AlphaContainer.getTeamColor(false, var9Lifetime1, 13894143);
             }
@@ -7250,7 +7250,7 @@ final class GameSession {
             if (1 == var25.length()) {
               var18 = "0" + var25;
             }
-            var26 = SetReverbGain.a(GetMaxShipSize.field_p.toUpperCase(), new String[]{"<col=fc6701>" + var18 + "</col>"}, 77);
+            var26 = SetReverbGain.substituteIndexedPlaceholders(GetMaxShipSize.field_p.toUpperCase(), new String[]{"<col=fc6701>" + var18 + "</col>"}, 77);
             SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var3_int, var26, 13879) / 2, -1, 8 + var14Lifetime1 / 2 + (GetLaserAimarc.field_q + GetPointDefenceLaserProjectiles.getFontAscent(false, var3_int)), var26, var3_int, 16777215, (byte) -88);
           }
           return;
@@ -7849,7 +7849,7 @@ final class GameSession {
           if (!MissionAction.rectanglesIntersect(param1, ShipTeamConditionFactory.field_a.worldBounds, 122)) {
             var11 = -(int)ShipTeamConditionFactory.field_a.worldCenterX + var6_int;
             var12 = var7 - (int)ShipTeamConditionFactory.field_a.worldCenterY;
-            var13 = SetMissionTerrainSpaceProbability.a(0, (int)ShipTeamConditionFactory.field_a.worldCenterY, (int)ShipTeamConditionFactory.field_a.worldCenterX, ShipTeamConditionFactory.field_a.worldBounds[2], var7, 16, ShipTeamConditionFactory.field_a.worldBounds[1], ShipTeamConditionFactory.field_a.worldBounds[0], ShipTeamConditionFactory.field_a.worldBounds[3], var6_int);
+            var13 = SetMissionTerrainSpaceProbability.findSegmentRectangleIntersectionFraction(0, (int)ShipTeamConditionFactory.field_a.worldCenterY, (int)ShipTeamConditionFactory.field_a.worldCenterX, ShipTeamConditionFactory.field_a.worldBounds[2], var7, 16, ShipTeamConditionFactory.field_a.worldBounds[1], ShipTeamConditionFactory.field_a.worldBounds[0], ShipTeamConditionFactory.field_a.worldBounds[3], var6_int);
             if (0 <= var13) {
               var14 = (int)((float)var11 * 1.0f * (float)var13 / 65536.0f + ShipTeamConditionFactory.field_a.worldCenterX);
               var15 = (int)(ShipTeamConditionFactory.field_a.worldCenterY + (float)var13 * ((float)var12 * 1.0f) / 65536.0f);
@@ -7970,7 +7970,7 @@ final class GameSession {
             }
             GetMessageFadetime.field_o = false;
             IntegerRecordWritePackets.field_a = true;
-            ColorKeyScaleTextureOperation.d(991426348);
+            ColorKeyScaleTextureOperation.completeMenuTransition(991426348);
             AgeValidator.field_f = -2;
             GetSniperCannonProjectiles.chatVisible = true;
             HardpointDefinition.closeChatInputDialog(true);
@@ -8017,7 +8017,7 @@ final class GameSession {
             var15 <= GetTorpedoReload.field_q &&
             var17 >= GetTorpedoReload.field_q) {
             var18 = 16711680;
-            GetMassDriverReload.setTooltipText(SetReverbGain.a(NullUiRenderer.field_a, new String[]{param3.field_dc.text}, 78), -61);
+            GetMassDriverReload.setTooltipText(SetReverbGain.substituteIndexedPlaceholders(NullUiRenderer.field_a, new String[]{param3.field_dc.text}, 78), -61);
             if (ArchiveLoadRequest.field_c == 1) {
               LiteralStrings.sendLobbyGameRequest(param3.getGameId((byte) -13), -1, 11);
             }
@@ -8289,10 +8289,10 @@ final class GameSession {
               var4 = param1.getRepairModeReload(108);
               if (param1.getRepairModeOn(32)) {
                 var5_int = (-var4 + Particle.field_I) / (Particle.field_l / 10) + 1;
-                var3 = SetReverbGain.a(SetMessageFadetime.field_o, new String[]{Integer.toString(var5_int)}, 125);
+                var3 = SetReverbGain.substituteIndexedPlaceholders(SetMessageFadetime.field_o, new String[]{Integer.toString(var5_int)}, 125);
               } else {
                 var5_int = var4 / (Particle.field_l / 10) + 1;
-                var3 = SetReverbGain.a(SetRepairModePower.field_o, new String[]{Integer.toString(var5_int)}, 81);
+                var3 = SetReverbGain.substituteIndexedPlaceholders(SetRepairModePower.field_o, new String[]{Integer.toString(var5_int)}, 81);
               }
             }
             var11 = var3.toUpperCase();
@@ -8567,7 +8567,7 @@ final class GameSession {
             param0.getMissionPhase(8) != 5) {
             return;
           }
-          LoadSettings.a(param3, param4, ShipTeamConditionFactory.field_a, (byte) -84, param0);
+          LoadSettings.drawMissionObjectiveMarkers(param3, param4, ShipTeamConditionFactory.field_a, (byte) -84, param0);
           for (var6_int = 0; GetDebrisCarryOver.objectiveMarkerCount > var6_int; var6_int++) {
             var7 = SetKeepTeamColours.objectiveMarkers[var6_int];
             var8 = var7.target;
@@ -8705,7 +8705,7 @@ final class GameSession {
               var12 = var17;
               var13 = this.state.getPlayerName(1, var9.aId);
               var14 = this.state.getPlayerName(1, var9.bId);
-              var12Lifetime1 = SetReverbGain.a(var17, new String[]{var13, var14}, 85);
+              var12Lifetime1 = SetReverbGain.substituteIndexedPlaceholders(var17, new String[]{var13, var14}, 85);
               SetThrusterForce.drawRightAlignedTextWithDefaultFont(16777215, var11, PartitionZoneFactory.field_a - 5, 180, var12Lifetime1, (var7 >> 8) + 140, -1);
               var7 = var7 + OpenGlTexture.getCurrentFontAscent((byte) 118) * var11;
             }

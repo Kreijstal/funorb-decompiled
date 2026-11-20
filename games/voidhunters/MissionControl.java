@@ -275,7 +275,7 @@ final class MissionControl implements DiffableState {
         try {
           var4 = 26 % ((22 - param0) / 59);
           var3 = (MissionControl) (param1);
-          stackIn_7_0 = (SetCountermeasureLauncherAimspeed.a(var3.events, false, 1, this.events, 119)) || (var3.selectedEvent != this.selectedEvent) || (this.selectedConditionOrAction != var3.selectedConditionOrAction) || (SetBlueprintSaveTime.intArraysDiffer(var3.reservedIds, this.reservedIds, (byte) 28));
+          stackIn_7_0 = (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.events, false, 1, this.events, 119)) || (var3.selectedEvent != this.selectedEvent) || (this.selectedConditionOrAction != var3.selectedConditionOrAction) || (SetBlueprintSaveTime.intArraysDiffer(var3.reservedIds, this.reservedIds, (byte) 28));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -367,7 +367,7 @@ final class MissionControl implements DiffableState {
           var5 = (MissionControl) (other);
           CarouselSlot.reportStateArrayDifferences(var5.events, 1, this.events, false, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var5.events, false, 1, this.events, 115)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var5.events, false, 1, this.events, 115)) {
             var4 = 1;
             System.out.println("MissionEvent[] events has changed. ");
           }
@@ -379,7 +379,7 @@ final class MissionControl implements DiffableState {
             System.out.println("int selected_condition_or_action has changed. before=" + var5.selectedConditionOrAction + ", now=" + this.selectedConditionOrAction);
             var4 = 1;
           }
-          if (GetCountermeasuresCooldown.a(this.reservedIds, var5.reservedIds, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.reservedIds, var5.reservedIds, false)) {
             var4 = 1;
             System.out.println("int[] reserved_ids has changed. ");
           }

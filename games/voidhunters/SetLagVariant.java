@@ -15,7 +15,7 @@ final class SetLagVariant extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static String a(String param0, String param1, int param2, String param3) {
+    final static String replaceLiteral(String param0, String param1, int param2, String param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

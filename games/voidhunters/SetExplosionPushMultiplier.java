@@ -52,7 +52,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             return stackIn_10_0;
           }
           if (SetUseLines.isIgnoredPlayer((byte) -94, param1)) {
-            stackIn_14_0 = SetReverbGain.a(FloatNoiseSliceGenerator.field_c, new String[]{param1}, 100);
+            stackIn_14_0 = SetReverbGain.substituteIndexedPlaceholders(FloatNoiseSliceGenerator.field_c, new String[]{param1}, 100);
             return stackIn_14_0;
           }
           if (OpenGlIndexBuffer.field_k >= 100) {
@@ -60,7 +60,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             return stackIn_17_0;
           }
           if (GetTorqueDownshift.isFriend(param1, (byte) -93)) {
-            stackIn_21_0 = SetReverbGain.a(GetLaserAimarc.field_r, new String[]{param1}, 76);
+            stackIn_21_0 = SetReverbGain.substituteIndexedPlaceholders(GetLaserAimarc.field_r, new String[]{param1}, 76);
             return stackIn_21_0;
           }
           var5 = RequestNewestBlackboxRecording.field_p;

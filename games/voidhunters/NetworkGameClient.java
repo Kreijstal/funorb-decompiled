@@ -38,7 +38,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (GetSpinningBladeAimarc.field_o) {
           return -1;
         }
-        var2 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.getCurrentLoginName(125), (byte) 13, true, MassDriverWeaponDefinition.getCurrentLoginPassword(true));
+        var2 = GetPhasedEnergyBeamPulseFadetime.sendAndPollLogin(this.officialHost, this.affiliateId, LoadBlackboxRecording.getCurrentLoginName(125), (byte) 13, true, MassDriverWeaponDefinition.getCurrentLoginPassword(true));
         if (var2 == -1) {
           return -1;
         }
@@ -57,7 +57,7 @@ abstract class NetworkGameClient extends GameApplet {
             this.showGameError("reconnect", 0);
           }
           NetworkArchiveRequest.prepareReconnectUi((byte) -119);
-          SetMessageFadetime.a(GameJoinNotificationText.field_b, (byte) 72, var2);
+          SetMessageFadetime.handleLoginUiReply(GameJoinNotificationText.field_b, (byte) 72, var2);
           GetSpinningBladeAimarc.field_o = true;
           StrongCacheReference.connectionRetryDeadlineMillis = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
         } else {
@@ -148,7 +148,7 @@ abstract class NetworkGameClient extends GameApplet {
             this.field_s = false;
             FighterBayWeaponDefinition.closeGameConnection(-123);
             NetworkArchiveRequest.prepareReconnectUi((byte) -119);
-            SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
+            SetMessageFadetime.handleLoginUiReply(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.applyObfuscationGuard(-10560);
             GetSpinningBladeAimarc.field_o = true;
             StrongCacheReference.connectionRetryDeadlineMillis = 15000L + MonotonicMillisClock.currentTimeMillis(false);
@@ -176,20 +176,20 @@ abstract class NetworkGameClient extends GameApplet {
             if (10 <= GetSpinningBladeAimspeed.field_q) {
               NetworkArchiveRequest.prepareReconnectUi((byte) -119);
               if (MapClearanceArea.field_a == 3) {
-                SetMessageFadetime.a(GetUseFilledPolygons.field_o, (byte) 84, 256);
+                SetMessageFadetime.handleLoginUiReply(GetUseFilledPolygons.field_o, (byte) 84, 256);
               } else {
                 if (MapClearanceArea.field_a != 4) {
                   if (MapClearanceArea.field_a != 2) {
                     if (5 != MapClearanceArea.field_a) {
-                      SetMessageFadetime.a(SetDebugLineLife.field_o, (byte) 82, 256);
+                      SetMessageFadetime.handleLoginUiReply(SetDebugLineLife.field_o, (byte) 82, 256);
                     } else {
-                      SetMessageFadetime.a(RoundResult.field_a, (byte) 121, 5);
+                      SetMessageFadetime.handleLoginUiReply(RoundResult.field_a, (byte) 121, 5);
                     }
                   } else {
-                    SetMessageFadetime.a(MissionControl.field_f, (byte) 110, 256);
+                    SetMessageFadetime.handleLoginUiReply(MissionControl.field_f, (byte) 110, 256);
                   }
                 } else {
-                  SetMessageFadetime.a(IconTextWidget.field_wb, (byte) 17, 256);
+                  SetMessageFadetime.handleLoginUiReply(IconTextWidget.field_wb, (byte) 17, 256);
                 }
               }
               GetSpinningBladeAimarc.field_o = true;
@@ -689,7 +689,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);
           if (var4 == 2) {
-            var6_int = RoundResult.a(SetVariableAction.getAccountCreationAge(119), GetPointDefenceLaserRandomness.getCurrentAccountEmail(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.getCurrentLoginName(88), ThrusterBehaviourFactory.isAccountEmailUpdatesEnabled(31065), MassDriverWeaponDefinition.getCurrentLoginPassword(true));
+            var6_int = RoundResult.sendAndPollAccountCreation(SetVariableAction.getAccountCreationAge(119), GetPointDefenceLaserRandomness.getCurrentAccountEmail(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.getCurrentLoginName(88), ThrusterBehaviourFactory.isAccountEmailUpdatesEnabled(31065), MassDriverWeaponDefinition.getCurrentLoginPassword(true));
             if (-1 != var6_int) {
               MonotonicMillisClock.handleAccountCreationReply(var6_int, -19342, GameInvitationText.field_a, GameJoinNotificationText.field_b);
               GameInvitationText.field_a = null;
@@ -705,10 +705,10 @@ abstract class NetworkGameClient extends GameApplet {
             if (param1) {
               GetSpinningBladeAimarc.field_o = false;
             } else {
-              var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.getCurrentLoginName(83), (byte) 13, false, MassDriverWeaponDefinition.getCurrentLoginPassword(true));
+              var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.sendAndPollLogin(this.officialHost, this.affiliateId, LoadBlackboxRecording.getCurrentLoginName(83), (byte) 13, false, MassDriverWeaponDefinition.getCurrentLoginPassword(true));
               if (var6_intLifetime1 != -1) {
                 if (var6_intLifetime1 != 0) {
-                  SetMessageFadetime.a(GameJoinNotificationText.field_b, (byte) 110, var6_intLifetime1);
+                  SetMessageFadetime.handleLoginUiReply(GameJoinNotificationText.field_b, (byte) 110, var6_intLifetime1);
                   GameJoinNotificationText.field_b = null;
                 } else {
                   UiComboBoxList.field_C = SetTorpedoAimarc.field_p;

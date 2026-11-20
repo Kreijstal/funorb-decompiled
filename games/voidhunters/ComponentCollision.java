@@ -9,14 +9,14 @@ final class ComponentCollision extends IntrusiveNode {
     final static void traceLoadingStatus(String param0, byte param1) {
         try {
           if (param1 > -51) {
-            ComponentCollision.a(96, (byte) 89, false, true, true);
+            ComponentCollision.updateCurrentLobbyControls(96, (byte) 89, false, true, true);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "fka.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, byte param1, boolean param2, boolean param3, boolean param4) {
+    final static void updateCurrentLobbyControls(int param0, byte param1, boolean param2, boolean param3, boolean param4) {
         Widget stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_38_0 = 0;
@@ -98,7 +98,7 @@ final class ComponentCollision extends IntrusiveNode {
               LobbyInviteControls.inviteButton.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_gb;
               if (0 < SetLaserRandomness.field_p) {
                 if (SetLaserRandomness.field_p != 1) {
-                  var10_ref_String = SetReverbGain.a(SetUseCircleOutline.field_p, new String[]{Integer.toString(SetLaserRandomness.field_p)}, 99);
+                  var10_ref_String = SetReverbGain.substituteIndexedPlaceholders(SetUseCircleOutline.field_p, new String[]{Integer.toString(SetLaserRandomness.field_p)}, 99);
                 } else {
                   var10_ref_String = GetBombletSprayFireForce.field_o;
                 }
@@ -279,7 +279,7 @@ final class ComponentCollision extends IntrusiveNode {
                       if (0 == GetReverbWidth.field_o.tabs.selectedTabIndex) {
                         NebulaFieldFactory.field_a = ClientDataReadRequest.field_e;
                       } else {
-                        NebulaFieldFactory.field_a = SetReverbGain.a(SetInnateThrusters.field_p, new String[]{LobbyThemeBuilder.field_a}, 121);
+                        NebulaFieldFactory.field_a = SetReverbGain.substituteIndexedPlaceholders(SetInnateThrusters.field_p, new String[]{LobbyThemeBuilder.field_a}, 121);
                       }
                     }
                   }
@@ -305,7 +305,7 @@ final class ComponentCollision extends IntrusiveNode {
                   if (var10 != 0) {
                     var13_ref_String = UiDraggableContainer.field_A;
                     if (var12Lifetime2 == 0) {
-                      var14_ref_String = SetReverbGain.a(PrimitiveType.field_b, new String[]{(String) (var11_ref)}, 92);
+                      var14_ref_String = SetReverbGain.substituteIndexedPlaceholders(PrimitiveType.field_b, new String[]{(String) (var11_ref)}, 92);
                     } else {
                       var14_ref_String = LobbyInviteSuggestionText.inviteMorePlayersText + (String) (var11_ref);
                     }
@@ -314,7 +314,7 @@ final class ComponentCollision extends IntrusiveNode {
                     if (var12Lifetime2 != 0) {
                       var14_ref_String = SetSalvoaim.field_o + (String) (var11_ref);
                     } else {
-                      var14_ref_String = SetReverbGain.a(TextureBezierShape.field_g, new String[]{(String) (var11_ref)}, 126);
+                      var14_ref_String = SetReverbGain.substituteIndexedPlaceholders(TextureBezierShape.field_g, new String[]{(String) (var11_ref)}, 126);
                     }
                   }
                   NebulaFieldFactory.field_a = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
@@ -322,9 +322,9 @@ final class ComponentCollision extends IntrusiveNode {
               }
             } else {
               var9_ref_String = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
-              GetWeaponParticleSpeedDownshift.field_q.text = SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
+              GetWeaponParticleSpeedDownshift.field_q.text = SetReverbGain.substituteIndexedPlaceholders(MonotonicMillisClock.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
               SetAutozoomSpeedDivide.field_p.setBounds(0, -127, ThreeSliceButtonStyle.field_r.width, -40 + ThreeSliceButtonStyle.field_r.height, 40);
-              SetAutozoomSpeedDivide.field_p.text = SetReverbGain.a(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
+              SetAutozoomSpeedDivide.field_p.text = SetReverbGain.substituteIndexedPlaceholders(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
               var8 = SetAutozoomSpeedDivide.field_p;
             }
             if (AccountNameAvailabilityReplies.field_a != 0L) {
@@ -333,12 +333,12 @@ final class ComponentCollision extends IntrusiveNode {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.text = SetReverbGain.a(SetPhasedEnergyBeamEnergyUsed.field_o, new String[]{Integer.toString(var9)}, 79);
+              var8.text = SetReverbGain.substituteIndexedPlaceholders(SetPhasedEnergyBeamEnergyUsed.field_o, new String[]{Integer.toString(var9)}, 79);
             }
-            SetPhasedEnergyBeamPulsetime.field_o.text = SetReverbGain.a(GetArmageddonLength.field_o, new String[]{Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.playerCount), Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers)}, 124);
+            SetPhasedEnergyBeamPulsetime.field_o.text = SetReverbGain.substituteIndexedPlaceholders(GetArmageddonLength.field_o, new String[]{Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.playerCount), Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers)}, 124);
           }
           if (param1 < 8) {
-            ComponentCollision.a(-44, (byte) 40, true, false, true);
+            ComponentCollision.updateCurrentLobbyControls(-44, (byte) 40, true, false, true);
           }
           stackIn_165_0 = WaterTextures.field_g;
           stackIn_166_1 = (param3) && (!param4) && (!GetTorpedoProjectileDamage.field_o);
@@ -363,7 +363,7 @@ final class ComponentCollision extends IntrusiveNode {
             if (LegacyOpenGlTextureCache.field_a.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = false;
             }
-            ResourceArchive.a(param0, SetSpinningBladeSpindamageMultiplier.field_o, false, (byte) -67);
+            ResourceArchive.updateLobbyGameOptions(param0, SetSpinningBladeSpindamageMultiplier.field_o, false, (byte) -67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

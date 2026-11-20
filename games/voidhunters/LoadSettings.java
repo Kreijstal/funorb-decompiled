@@ -38,7 +38,7 @@ final class LoadSettings extends ConsoleCommand {
         }
     }
 
-    final static void a(GameSnapshot param0, int param1, Camera2D param2, byte param3, MissionState param4) {
+    final static void drawMissionObjectiveMarkers(GameSnapshot param0, int param1, Camera2D param2, byte param3, MissionState param4) {
         int var7 = 0;
         MissionEvent[] var6 = null;
         MissionEvent var8 = null;

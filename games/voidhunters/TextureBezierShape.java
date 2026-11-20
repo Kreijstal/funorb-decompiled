@@ -38,7 +38,7 @@ final class TextureBezierShape extends TextureRasterShape {
         int var12 = -88 / ((param0 + 48) / 40);
         int var10 = param2 * this.endX >> 12;
         int var11 = this.endY * param1 >> 12;
-        GetPointDefenceLaserProjectiles.a(var9, var5, var4, this.outlineColor, var6, var7, var8, 88, var11, var10);
+        GetPointDefenceLaserProjectiles.drawCubicBezier(var9, var5, var4, this.outlineColor, var6, var7, var8, 88, var11, var10);
     }
 
     final void drawFilledAndOutline(int param0, byte param1, int param2) {

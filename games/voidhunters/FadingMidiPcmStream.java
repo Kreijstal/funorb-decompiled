@@ -62,7 +62,7 @@ final class FadingMidiPcmStream extends MidiPcmStream {
         if (0 > SetShieldsDirectionalArcParticleSpeedDownshift.field_q) {
           DialogMessagePanel.field_v.text = null;
         } else {
-          DialogMessagePanel.field_v.text = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
+          DialogMessagePanel.field_v.text = SetReverbGain.substituteIndexedPlaceholders(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
         }
         stackIn_9_0 = SocialPanelState.socialPanelRoot;
         stackIn_10_1 = (param0) && (!param1) && (!TutorialController.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);

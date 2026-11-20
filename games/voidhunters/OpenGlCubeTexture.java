@@ -15,13 +15,13 @@ final class OpenGlCubeTexture extends OpenGlTexture {
           if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
             return GetDetachmentMode.handleQuickChatKeyEvent(param3, -9307, param2);
           }
-          if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
+          if (SetPhysicsCollisionForceMultiplier.handleChatShortcutKey(param3, 2, param2)) {
             return true;
           }
           if (ConsoleSettingsScript.quickChatOnly) {
             return false;
           }
-          return SetFighterRepairAmount.b(param0, param3, -85);
+          return SetFighterRepairAmount.handleTextChatKeyEvent(param0, param3, -85);
         }
         if (GetBloomThresholdPercentage.field_p) {
           return PartitionZoneListFactory.field_b.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
@@ -29,13 +29,13 @@ final class OpenGlCubeTexture extends OpenGlTexture {
         if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
           return GetDetachmentMode.handleQuickChatKeyEvent(param3, -9307, param2);
         }
-        if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
+        if (SetPhysicsCollisionForceMultiplier.handleChatShortcutKey(param3, 2, param2)) {
           return true;
         }
         if (ConsoleSettingsScript.quickChatOnly) {
           return false;
         }
-        return SetFighterRepairAmount.b(param0, param3, -85);
+        return SetFighterRepairAmount.handleTextChatKeyEvent(param0, param3, -85);
     }
 
     public static void clearSharedReferences(byte param0) {

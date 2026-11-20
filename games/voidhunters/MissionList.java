@@ -147,7 +147,7 @@ final class MissionList implements DiffableState {
           var3 = (MissionList) (other);
           CarouselSlot.reportStateArrayDifferences(var3.missions, 1, this.missions, false, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.missions, false, 1, this.missions, -5)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.missions, false, 1, this.missions, -5)) {
             var4 = 1;
             System.out.println("Mission[] missions has changed. ");
           }
@@ -197,7 +197,7 @@ final class MissionList implements DiffableState {
         try {
           var3 = (MissionList) (param1);
           var4 = -51 / ((22 - param0) / 59);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var3.missions, false, 1, this.missions, 0);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.missions, false, 1, this.missions, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

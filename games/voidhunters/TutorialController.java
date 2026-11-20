@@ -739,7 +739,7 @@ final class TutorialController {
                   OpenGlVertexDeclaration.field_d = true;
                 }
                 if (this.isHintVisible(0, -116)) {
-                  var20 = SetReverbGain.a(EmailAvailabilityCheck.field_b, new String[]{this.formatShortcutLabel(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.formatShortcutLabel(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.formatShortcutLabel(-6448, UnsupportedGpuMaterialEffect.field_f, WeaponDefinition.field_a), this.formatShortcutLabel(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
+                  var20 = SetReverbGain.substituteIndexedPlaceholders(EmailAvailabilityCheck.field_b, new String[]{this.formatShortcutLabel(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.formatShortcutLabel(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.formatShortcutLabel(-6448, UnsupportedGpuMaterialEffect.field_f, WeaponDefinition.field_a), this.formatShortcutLabel(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
                   this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[0], 255), var16, var19, var20, 1619);
                 }
                 if (this.isHintCompleteAndHidden((byte) 11, 0) &&
@@ -961,7 +961,7 @@ final class TutorialController {
                     if (this.isHintVisible(10, -61)) {
                       var21_ref_int__Lifetime1Lifetime1 = this.findOrderButtonBounds(11, param9, 30, param4, param3, param6, param5, param1);
                       if (null != var21_ref_int__Lifetime1Lifetime1) {
-                        var22_ref_String = SetReverbGain.a(SetCountermeasureLauncherAimarc.field_o, new String[]{SetTorpedoProjectileDamage.field_q[SetDetachmentMode.field_p]}, 110);
+                        var22_ref_String = SetReverbGain.substituteIndexedPlaceholders(SetCountermeasureLauncherAimarc.field_o, new String[]{SetTorpedoProjectileDamage.field_q[SetDetachmentMode.field_p]}, 110);
                         this.drawHintCallout(var21_ref_int__Lifetime1Lifetime1, param3, true, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[10], 255), param0, true, var22_ref_String, var16, (byte) -50);
                       }
                     }

@@ -162,7 +162,7 @@ final class AsteroidFactory implements GameStateFactory {
               CountermeasureLauncherWeaponDefinition.field_c[1] = 5;
             }
           } else {
-            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(LogoMesh.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.substituteIndexedPlaceholders(LogoMesh.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(OpenGlTexture3D.field_l[var5])) {
@@ -178,7 +178,7 @@ final class AsteroidFactory implements GameStateFactory {
             ArrayOperations.copy(OpenGlTexture3D.field_l, 0, Projectile.field_k, 0, var4);
             GetFogOfWarSensorRange.field_p = new String[-var4 + (var3_int - 1)];
             ArrayOperations.copy(OpenGlTexture3D.field_l, var4 + 1, GetFogOfWarSensorRange.field_p, 0, -1 - var4 + var3_int);
-            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(SetPhasedEnergyBeamAimspeed.field_o, new String[]{"<br><%0><br>"}, 88), ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.substituteIndexedPlaceholders(SetPhasedEnergyBeamAimspeed.field_o, new String[]{"<br><%0><br>"}, 88), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(OpenGlTexture3D.field_l[var5])) {

@@ -233,7 +233,7 @@ final class ArchiveIndex {
             do {
               if (this.groupCount <= var10) {
                 if (param0 < 0) {
-                  ArchiveIndex.a(false, 91, -58);
+                  ArchiveIndex.updateFriendsListAndGetClickedEntry(false, 91, -58);
                 }
                 break;
               }
@@ -392,7 +392,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static SocialListEntry a(boolean param0, int param1, int param2) {
+    final static SocialListEntry updateFriendsListAndGetClickedEntry(boolean param0, int param1, int param2) {
         ScrollPaneWidget stackIn_4_0;
         int stackIn_4_1;
         int stackIn_4_2;
@@ -441,7 +441,7 @@ final class ArchiveIndex {
           var5 = null;
           if (PendingRequestResender.field_b == 2) {
             PlayerJoinFactory.field_c.enabled = true;
-            OpenGlCubeTexture.field_h.text = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{HslAdjustTextureOperation.field_q}, param1 + 89);
+            OpenGlCubeTexture.field_h.text = SetReverbGain.substituteIndexedPlaceholders(SetVelocitySustain.field_o, new String[]{HslAdjustTextureOperation.field_q}, param1 + 89);
             BitmapTextLayout.field_n.scrollPane.viewport.text = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first(0));
@@ -535,11 +535,11 @@ final class ArchiveIndex {
                       !GetBloomThresholdPercentage.field_p) {
                       if (!ConsoleSettingsScript.quickChatOnly) {
                         var17 = GetLagStandardDeviationOut.field_o;
-                        var18 = SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var16}, param1 + 122);
+                        var18 = SetReverbGain.substituteIndexedPlaceholders(SetSniperCannonProjectileLife.field_o, new String[]{var16}, param1 + 122);
                         var17.menu.addItem(var18, (byte) -53, 8);
                       }
                       var17Lifetime1 = GetLagStandardDeviationOut.field_o;
-                      var18Lifetime1 = SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var16}, 115);
+                      var18Lifetime1 = SetReverbGain.substituteIndexedPlaceholders(SetMissileLauncherFireForce.field_p, new String[]{var16}, 115);
                       var17Lifetime1.menu.addItem(var18Lifetime1, (byte) -53, 18);
                     }
                     var5 = var7;

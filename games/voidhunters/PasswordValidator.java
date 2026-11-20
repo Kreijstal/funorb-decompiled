@@ -137,7 +137,7 @@ final class PasswordValidator extends TextFieldValidator {
     }
 
     final static void rebuildGraphicsResources(int param0) {
-        ShipSpawnedConditionFactory.a(100);
+        ShipSpawnedConditionFactory.buildComponentModels(100);
         if (param0 != -10150) {
           PasswordValidator.createBorderedWidgetTemplate(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }

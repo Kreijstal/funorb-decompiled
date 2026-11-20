@@ -96,7 +96,7 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
             stackIn_7_0 = OneShotSound.emailTooLongError;
             return stackIn_7_0;
           }
-          var3 = SetFighterBayAimspeed.a((byte) -67, '.', param1);
+          var3 = SetFighterBayAimspeed.splitString((byte) -67, '.', param1);
           if (2 > var3.length) {
             stackIn_10_0 = IntegerArrayReadRequest.incompleteEmailError;
             return stackIn_10_0;

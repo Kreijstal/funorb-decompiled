@@ -32,7 +32,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String getLobbyPlayerStatusText(int param0, String param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -53,54 +53,54 @@ final class SetServerinfoVotestate extends ConsoleCommand {
         String var4 = null;
         try {
           if (param0 == 1) {
-            stackIn_3_0 = SetReverbGain.a(DebugSendable.field_g, new String[]{param1}, 90);
+            stackIn_3_0 = SetReverbGain.substituteIndexedPlaceholders(DebugSendable.field_g, new String[]{param1}, 90);
             return stackIn_3_0;
           }
           if (param0 == 2) {
-            stackIn_6_0 = SetReverbGain.a(GameJoinNotificationText.playerJoinedGameText, new String[]{param1}, 104);
+            stackIn_6_0 = SetReverbGain.substituteIndexedPlaceholders(GameJoinNotificationText.playerJoinedGameText, new String[]{param1}, 104);
             return stackIn_6_0;
           }
           if (param0 == 3) {
-            stackIn_10_0 = SetReverbGain.a(WaterNoiseGpuMaterialEffect.field_e, new String[]{param1}, param2 ^ -3290);
+            stackIn_10_0 = SetReverbGain.substituteIndexedPlaceholders(WaterNoiseGpuMaterialEffect.field_e, new String[]{param1}, param2 ^ -3290);
             return stackIn_10_0;
           }
           if (param0 == 4) {
-            stackIn_14_0 = SetReverbGain.a(GetDebrisGroupColour.field_s, new String[]{param1}, 108);
+            stackIn_14_0 = SetReverbGain.substituteIndexedPlaceholders(GetDebrisGroupColour.field_s, new String[]{param1}, 108);
             return stackIn_14_0;
           }
           if (param0 == 5) {
-            stackIn_17_0 = SetReverbGain.a(GetMassDriverProjectiles.field_o, new String[]{param1}, 120);
+            stackIn_17_0 = SetReverbGain.substituteIndexedPlaceholders(GetMassDriverProjectiles.field_o, new String[]{param1}, 120);
             return stackIn_17_0;
           }
           if (param0 == 6) {
-            stackIn_21_0 = SetReverbGain.a(MassDriverWeaponDefinition.field_b, new String[]{param1}, 111);
+            stackIn_21_0 = SetReverbGain.substituteIndexedPlaceholders(MassDriverWeaponDefinition.field_b, new String[]{param1}, 111);
             return stackIn_21_0;
           }
           if (param0 == 7) {
-            stackIn_25_0 = SetReverbGain.a(CommonUiArchiveResources.gameAlreadyStartedText, new String[]{param1}, param2 ^ -3268);
+            stackIn_25_0 = SetReverbGain.substituteIndexedPlaceholders(CommonUiArchiveResources.gameAlreadyStartedText, new String[]{param1}, param2 ^ -3268);
             return stackIn_25_0;
           }
           if (8 == param0) {
-            stackIn_28_0 = SetReverbGain.a(SetMissilesHitSourceTeam.field_o, new String[]{param1}, 90);
+            stackIn_28_0 = SetReverbGain.substituteIndexedPlaceholders(SetMissilesHitSourceTeam.field_o, new String[]{param1}, 90);
             return stackIn_28_0;
           }
           if (param0 == 11) {
-            stackIn_32_0 = SetReverbGain.a(TextLayout.field_a, new String[]{param1}, 72);
+            stackIn_32_0 = SetReverbGain.substituteIndexedPlaceholders(TextLayout.field_a, new String[]{param1}, 72);
             return stackIn_32_0;
           }
           if (param0 == 12) {
-            stackIn_36_0 = SetReverbGain.a(GetMinimapHeight.field_o, new String[]{param1}, 123);
+            stackIn_36_0 = SetReverbGain.substituteIndexedPlaceholders(GetMinimapHeight.field_o, new String[]{param1}, 123);
             return stackIn_36_0;
           }
           if (13 == param0) {
-            stackIn_40_0 = SetReverbGain.a(GpuIndexBufferOwner.field_b, new String[]{param1}, 110);
+            stackIn_40_0 = SetReverbGain.substituteIndexedPlaceholders(GpuIndexBufferOwner.field_b, new String[]{param1}, 110);
             return stackIn_40_0;
           }
           if (param2 == -3223) {
             return null;
           }
           var4 = (String) null;
-          SetServerinfoVotestate.a(42, (String) null, -110);
+          SetServerinfoVotestate.getLobbyPlayerStatusText(42, (String) null, -110);
           stackIn_44_0 = null;
           return (String) (stackIn_44_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

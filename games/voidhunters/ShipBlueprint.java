@@ -112,7 +112,7 @@ final class ShipBlueprint implements DiffableState {
           if (obfuscationGuard >= -19) {
             field_a = (BitmapFont) null;
           }
-          if (GetCountermeasuresCooldown.a(this.description, var3.description, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.description, var3.description, false)) {
             var4 = 1;
             System.out.println("int[] description has changed. ");
           }

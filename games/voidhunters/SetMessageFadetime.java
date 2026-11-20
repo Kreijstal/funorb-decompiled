@@ -45,7 +45,7 @@ final class SetMessageFadetime extends ConsoleCommand {
         }
     }
 
-    final static void a(String param0, byte param1, int param2) {
+    final static void handleLoginUiReply(String param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_27_0 = null;
@@ -73,7 +73,7 @@ final class SetMessageFadetime extends ConsoleCommand {
             }
             if (var3_int != 0) {
               if (SocialListEntry.field_xb) {
-                param0 = SetReverbGain.a(SetPointDefenceLaserFireForce.field_o, new String[]{param0}, 107);
+                param0 = SetReverbGain.substituteIndexedPlaceholders(SetPointDefenceLaserFireForce.field_o, new String[]{param0}, 107);
               }
               if (CarouselConstantRequests.field_c) {
                 param0 = SpritePadding.field_a;

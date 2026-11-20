@@ -5,7 +5,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
     static int[] importedShipComponentWords;
     static EmailAvailabilityCheck emailAvailabilityCheck;
 
-    final static ToolkitSprite a(byte param0, GraphicsToolkit param1, Sprite param2) {
+    final static ToolkitSprite createArgbToolkitSprite(byte param0, GraphicsToolkit param1, Sprite param2) {
         int var4 = 0;
         ToolkitSprite var3 = null;
         RuntimeException var3_ref = null;

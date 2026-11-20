@@ -38,7 +38,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new ShieldBehaviour[param1]);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawAndHandleShipImportPreview(int param0, boolean param1) {
         int var2;
         String var3;
         int var4;
@@ -77,7 +77,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           if (param0 == 0) {
             return;
           }
-          ShieldBehaviourFactory.a(45, false);
+          ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
           return;
         }
         var2 = 1;
@@ -129,7 +129,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               if (param1) {
               }
               if (param0 != 0) {
-                ShieldBehaviourFactory.a(45, false);
+                ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
               }
               return;
             }
@@ -144,7 +144,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                 if (param0 == 0) {
                   return;
                 }
-                ShieldBehaviourFactory.a(45, false);
+                ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
                 return;
               }
               if (var4 != 0) {
@@ -156,7 +156,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               if (param1) {
               }
               if (param0 != 0) {
-                ShieldBehaviourFactory.a(45, false);
+                ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
               }
               return;
             }
@@ -165,7 +165,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               if (param1) {
               }
               if (param0 != 0) {
-                ShieldBehaviourFactory.a(45, false);
+                ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
               }
               return;
             }
@@ -174,7 +174,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             if (param1) {
             }
             if (param0 != 0) {
-              ShieldBehaviourFactory.a(45, false);
+              ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
             }
             return;
           }
@@ -216,7 +216,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             if (param1) {
             }
             if (param0 != 0) {
-              ShieldBehaviourFactory.a(45, false);
+              ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
             }
             return;
           }
@@ -251,7 +251,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               if (param1) {
               }
               if (param0 != 0) {
-                ShieldBehaviourFactory.a(45, false);
+                ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
               }
               return;
             }
@@ -276,7 +276,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                 if (param1) {
                 }
                 if (param0 != 0) {
-                  ShieldBehaviourFactory.a(45, false);
+                  ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
                 }
                 return;
               }
@@ -329,7 +329,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                         if (param1) {
                         }
                         if (param0 != 0) {
-                          ShieldBehaviourFactory.a(45, false);
+                          ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
                         }
                         return;
                       }
@@ -347,7 +347,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         if (param0 == 0) {
           return;
         }
-        ShieldBehaviourFactory.a(45, false);
+        ShieldBehaviourFactory.drawAndHandleShipImportPreview(45, false);
         return;
     }
 

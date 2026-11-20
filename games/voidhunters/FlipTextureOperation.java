@@ -170,7 +170,7 @@ final class FlipTextureOperation extends TextureOperation {
         return var3;
     }
 
-    final static SocialListEntry a(String param0, int param1) {
+    final static SocialListEntry findFriendEntry(String param0, int param1) {
         String var2 = null;
         SocialListEntry var3 = null;
         String var4 = null;

@@ -32,7 +32,7 @@ final class SetReverbGain extends ConsoleCommand {
         }
     }
 
-    final static String a(String param0, String[] param1, int param2) {
+    final static String substituteIndexedPlaceholders(String param0, String[] param1, int param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

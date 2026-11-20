@@ -5,7 +5,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
     static UiTheme loginUiTheme;
     static int field_o;
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4) {
+    final static void drawThreeSliceBar(int param0, int param1, Sprite[] param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;

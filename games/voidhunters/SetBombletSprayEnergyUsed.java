@@ -30,7 +30,7 @@ final class SetBombletSprayEnergyUsed extends ConsoleCommand {
           var8 = 20;
           var9 = param0 + GetBombletSprayEnergyUsed.field_p.height / 2 - var7 / 2;
           BlackBoxRecording.drawPanelBackground((byte) -115, param4, 2 * var8 + var7, -(var6 / 2) + (GetBombletSprayEnergyUsed.field_p.width / 2 - var8), -var8 + var9, var6 + 2 * var8);
-          IntIndexTable.a(var9, var7, -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.width / 2, 0, param4, 1, param3, param2, 16777215, var6, 0, (byte) -99, 1);
+          IntIndexTable.drawParagraph(var9, var7, -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.width / 2, 0, param4, 1, param3, param2, 16777215, var6, 0, (byte) -99, 1);
           stackIn_3_0 = var8 * 2 + var7;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

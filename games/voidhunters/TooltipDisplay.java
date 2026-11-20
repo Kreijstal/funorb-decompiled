@@ -41,7 +41,7 @@ final class TooltipDisplay {
                 UiWeightedGridContainer.drawTextBox(param3, param9, SpriteTextureOperation.tooltipText, param7, 1, param0, param5);
               } else {
                 if (param4 != null) {
-                  GetAutozoomSpeedDivide.a(param0, param1, SpriteTextureOperation.tooltipText, (byte) 100, param3, param10, param4, param6, param2, param5, param7);
+                  GetAutozoomSpeedDivide.drawToolkitTooltipBox(param0, param1, SpriteTextureOperation.tooltipText, (byte) 100, param3, param10, param4, param6, param2, param5, param7);
                 }
               }
             }

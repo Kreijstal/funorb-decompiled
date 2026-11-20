@@ -100,7 +100,7 @@ final class MatchResults implements DiffableState {
         try {
           var4 = -100 / ((22 - param0) / 59);
           var3 = (MatchResults) (param1);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var3.results, false, 1, this.results, -39);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.results, false, 1, this.results, -39);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,7 +290,7 @@ final class MatchResults implements DiffableState {
           var3 = (MatchResults) (other);
           CarouselSlot.reportStateArrayDifferences(var3.results, 1, this.results, false, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.results, false, 1, this.results, -12)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.results, false, 1, this.results, -12)) {
             System.out.println("RoundResult[] results has changed. ");
             var4 = 1;
           }

@@ -14,7 +14,7 @@ final class HslAdjustTextureOperation extends TextureOperation {
     private int red;
     private int blue;
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
+    final static void loadRawFontResources(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

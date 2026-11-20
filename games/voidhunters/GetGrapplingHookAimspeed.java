@@ -9,13 +9,13 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int hitTestCarouselControl(int param0, int param1, int param2) {
         if (GetRadialMenuRadius.field_o == null) {
           return -1;
         }
         if (GetUseNiceTrails.field_r > param2) {
           if (param0 != -1) {
-            GetGrapplingHookAimspeed.a(109, -32, 51);
+            GetGrapplingHookAimspeed.hitTestCarouselControl(109, -32, 51);
             if (SpecularGpuMaterialEffect.field_g > param2) {
               return -1;
             }
@@ -40,7 +40,7 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
         }
         if (GetRadialMenuRadius.field_o.width + GetUseNiceTrails.field_r <= param2) {
           if (param0 != -1) {
-            GetGrapplingHookAimspeed.a(109, -32, 51);
+            GetGrapplingHookAimspeed.hitTestCarouselControl(109, -32, 51);
             if (SpecularGpuMaterialEffect.field_g <= param2 &&
               param2 < SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width &&
               SetShipPersistence.field_q <= param1 &&
@@ -62,7 +62,7 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
           return 0;
         }
         if (param0 != -1) {
-          GetGrapplingHookAimspeed.a(109, -32, 51);
+          GetGrapplingHookAimspeed.hitTestCarouselControl(109, -32, 51);
           if (SpecularGpuMaterialEffect.field_g <= param2 &&
             param2 < SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width &&
             SetShipPersistence.field_q <= param1 &&
@@ -138,7 +138,7 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -1) {
-          GetGrapplingHookAimspeed.a(89, -110, -100);
+          GetGrapplingHookAimspeed.hitTestCarouselControl(89, -110, -100);
           field_o = null;
           return;
         }

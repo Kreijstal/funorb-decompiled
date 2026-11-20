@@ -166,7 +166,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         return "Any node on team " + this.teamId;
     }
 
-    final static int a(byte[] param0, int param1, int param2, byte[][] param3, boolean param4, byte[][] param5, int[] param6, int[] param7) {
+    final static int computeGlyphKerning(byte[] param0, int param1, int param2, byte[][] param3, boolean param4, byte[][] param5, int[] param6, int[] param7) {
         int var19 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -207,7 +207,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
           var12 = var8_int;
           if (param4) {
             var22 = (int[]) null;
-            TeamNodeCondition.a((byte[]) null, -54, -70, (byte[][]) null, true, (byte[][]) null, (int[]) null, (int[]) null);
+            TeamNodeCondition.computeGlyphKerning((byte[]) null, -54, -70, (byte[][]) null, true, (byte[][]) null, (int[]) null, (int[]) null);
           }
           if (var10 > var8_int) {
             var12 = var10;

@@ -21,7 +21,7 @@ final class MissionEvent implements DiffableState {
         try {
           var3 = (MissionEvent) (param1);
           var4 = -88 / ((22 - param0) / 59);
-          stackIn_5_0 = (SetCountermeasureLauncherAimspeed.a(var3.conditions, true, 1, this.conditions, -4)) || (SetCountermeasureLauncherAimspeed.a(var3.actions, true, 1, this.actions, -73));
+          stackIn_5_0 = (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.conditions, true, 1, this.conditions, -4)) || (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.actions, true, 1, this.actions, -73));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,14 +148,14 @@ final class MissionEvent implements DiffableState {
           CarouselSlot.reportStateArrayDifferences(var3.conditions, 1, this.conditions, true, 5547);
           CarouselSlot.reportStateArrayDifferences(var3.actions, 1, this.actions, true, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.conditions, true, 1, this.conditions, -64)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.conditions, true, 1, this.conditions, -64)) {
             System.out.println("MissionCondition[] conditions has changed. ");
             var4 = 1;
           }
           if (obfuscationGuard >= -19) {
             return;
           }
-          if (SetCountermeasureLauncherAimspeed.a(var3.actions, true, 1, this.actions, -13)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.actions, true, 1, this.actions, -13)) {
             System.out.println("MissionAction[] actions has changed. ");
             var4 = 1;
           }

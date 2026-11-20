@@ -38,7 +38,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             return stackIn_11_0;
           }
           if (GetTorqueDownshift.isFriend(param0, (byte) -23)) {
-            stackIn_15_0 = SetReverbGain.a(AccountRequestPhase.field_b, new String[]{param0}, 73);
+            stackIn_15_0 = SetReverbGain.substituteIndexedPlaceholders(AccountRequestPhase.field_b, new String[]{param0}, 73);
             return stackIn_15_0;
           }
           if (GetBoostersCooldown.field_p >= 100 &&
@@ -51,7 +51,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             return stackIn_24_0;
           }
           if (SetUseLines.isIgnoredPlayer((byte) -94, param0)) {
-            stackIn_28_0 = SetReverbGain.a(ChatPanelUpdater.removeFromIgnoreListFirstText, new String[]{param0}, 111);
+            stackIn_28_0 = SetReverbGain.substituteIndexedPlaceholders(ChatPanelUpdater.removeFromIgnoreListFirstText, new String[]{param0}, 111);
             return stackIn_28_0;
           }
           var5 = RequestNewestBlackboxRecording.field_p;

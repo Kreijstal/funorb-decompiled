@@ -216,7 +216,7 @@ final class MessageLog implements DiffableState {
           var3 = (MessageLog) (other);
           CarouselSlot.reportStateArrayDifferences(var3.messages, 1, this.messages, false, 5547);
           var4 = 0;
-          if (SetCountermeasureLauncherAimspeed.a(var3.messages, false, 1, this.messages, 121)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.messages, false, 1, this.messages, 121)) {
             System.out.println("Message[] messages has changed. ");
             var4 = 1;
           }
@@ -254,7 +254,7 @@ final class MessageLog implements DiffableState {
         try {
           var3 = (MessageLog) (param1);
           var4 = 22 % ((param0 - 22) / 59);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var3.messages, false, 1, this.messages, 116);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.stateArraysDiffer(var3.messages, false, 1, this.messages, 116);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

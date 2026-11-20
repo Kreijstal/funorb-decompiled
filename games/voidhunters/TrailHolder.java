@@ -115,7 +115,7 @@ final class TrailHolder implements DiffableState {
           if (param1 != 1325107016) {
             this.field_f = (int[]) null;
           }
-          PointLight.a(param0, this.field_f, 6407, this.sampleTicks, this.field_b, this.field_e, this.sampleHead, this.sampleIntensities, param2);
+          PointLight.drawWorldTrail(param0, this.field_f, 6407, this.sampleTicks, this.field_b, this.field_e, this.sampleHead, this.sampleIntensities, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tbb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

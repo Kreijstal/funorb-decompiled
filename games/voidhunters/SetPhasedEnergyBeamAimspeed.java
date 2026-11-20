@@ -9,7 +9,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         loadingBarImage = null;
         if (param0 != 0) {
-          SetPhasedEnergyBeamAimspeed.a(48, false);
+          SetPhasedEnergyBeamAimspeed.drawSlidingLobbyPanels(48, false);
           field_o = null;
           return;
         }
@@ -48,7 +48,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSlidingLobbyPanels(int param0, boolean param1) {
         Widget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         Widget stackIn_13_0 = null;

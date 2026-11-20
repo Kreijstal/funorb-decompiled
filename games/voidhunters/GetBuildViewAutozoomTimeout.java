@@ -56,7 +56,7 @@ final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
             var5.field_K = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_K);
           }
           if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
-            var5.field_E = GetClientSideDragging.a(false, 16, param0, var5.field_E);
+            var5.field_E = GetClientSideDragging.readPackedByteArray(false, 16, param0, var5.field_E);
             var7 = 0;
             for (var8 = 0; var5.field_E.length > var8; var8++) {
               if (var7 < (255 & var5.field_E[var8])) {

@@ -4,7 +4,7 @@
 final class SetPointDefenceLaserRandomness extends ConsoleCommand {
     static String field_o;
 
-    final static void a(float param0, int param1, float param2, byte param3, int param4, int param5, int param6, int param7, float[] param8, int param9, int param10, float[] param11, int param12, float param13) {
+    final static void computeBoxTextureCoordinates(float param0, int param1, float param2, byte param3, int param4, int param5, int param6, int param7, float[] param8, int param9, int param10, float[] param11, int param12, float param13) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

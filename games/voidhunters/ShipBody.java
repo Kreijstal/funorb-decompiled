@@ -69,7 +69,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             System.out.println("int momentofinertia has changed. before=" + var5.momentofinertia + ", now=" + this.momentofinertia);
             var4 = 1;
           }
-          if (GetCountermeasuresCooldown.a(this.boundingbox, var5.boundingbox, false)) {
+          if (GetCountermeasuresCooldown.reportIntArrayDifferences(this.boundingbox, var5.boundingbox, false)) {
             var4 = 1;
             System.out.println("int[] boundingbox has changed. ");
           }

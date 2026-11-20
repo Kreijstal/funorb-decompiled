@@ -51,7 +51,7 @@ final class MandelbrotTextureOperation extends TextureOperation {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final static void fillBorderedCircleUnclipped(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -107,7 +107,7 @@ final class MandelbrotTextureOperation extends TextureOperation {
           var17 = param4 + var8;
           GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var17, var33, (byte) 75, var16);
           if (param2 > 0) {
-            MandelbrotTextureOperation.a(-21, -8, (byte) 1, -122, 112, 81, 20);
+            MandelbrotTextureOperation.fillBorderedCircleUnclipped(-21, -8, (byte) 1, -122, 112, 81, 20);
           }
           GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param3 + param4, var33, (byte) 75, var17);
           while (var9 > var7_int) {

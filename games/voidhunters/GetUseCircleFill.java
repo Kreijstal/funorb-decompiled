@@ -36,7 +36,7 @@ final class GetUseCircleFill extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void prepareScoreRowBuffers(int param0, int param1, int param2) {
         if (null == ConsoleSettingsScript.field_d ||
           !(ConsoleSettingsScript.field_d.length >= param1)) {
           ConsoleSettingsScript.field_d = new int[2 * param1];

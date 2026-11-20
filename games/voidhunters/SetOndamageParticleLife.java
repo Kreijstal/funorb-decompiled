@@ -93,7 +93,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineUnclipped(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_15_0 = 0;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;

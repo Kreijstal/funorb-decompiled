@@ -44,7 +44,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         }
     }
 
-    final static ChatMessage b(int param0, int param1, int param2, int param3) {
+    final static ChatMessage updateChatMessagesAndGetClickedMessage(int param0, int param1, int param2, int param3) {
         Object var4;
         int var5;
         int var6;

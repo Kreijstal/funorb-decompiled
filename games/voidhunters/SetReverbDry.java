@@ -4,7 +4,7 @@
 final class SetReverbDry extends ConsoleCommand {
     static int field_o;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutChatPanelWidgets(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;

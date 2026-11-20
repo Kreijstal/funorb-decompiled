@@ -10,7 +10,7 @@ final class GetAutoaim extends ConsoleCommand {
         field_p = null;
     }
 
-    final static boolean[] a(int param0, IsaacPacketBuffer param1, int param2, boolean[] param3) {
+    final static boolean[] readBooleanArray(int param0, IsaacPacketBuffer param1, int param2, boolean[] param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -38,7 +38,7 @@ final class GetAutoaim extends ConsoleCommand {
           }
           if (param2 <= 19) {
             var7 = (boolean[]) null;
-            GetAutoaim.a(-37, (IsaacPacketBuffer) null, -23, (boolean[]) null);
+            GetAutoaim.readBooleanArray(-37, (IsaacPacketBuffer) null, -23, (boolean[]) null);
           }
           stackIn_14_0 = (boolean[]) (param3);
           return stackIn_14_0;

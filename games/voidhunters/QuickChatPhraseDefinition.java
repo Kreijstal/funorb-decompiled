@@ -26,7 +26,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             QuickChatPhraseDefinition.drawModalUiBackground((byte) 3, false, false);
           }
           if (param1 == 1) {
-            this.textSegments = SetFighterBayAimspeed.a((byte) -67, '<', param0.readString(-1));
+            this.textSegments = SetFighterBayAimspeed.splitString((byte) -67, '<', param0.readString(-1));
           } else {
             if (param1 == 2) {
               var4_int = param0.readUnsignedByte((byte) -113);

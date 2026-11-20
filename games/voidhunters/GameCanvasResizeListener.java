@@ -18,7 +18,7 @@ final class GameCanvasResizeListener implements CanvasResizeListener {
         CachedByteArray.setGameCanvasSize(param2, param1, (byte) -95);
     }
 
-    final static String a(int param0, String param1, String param2, byte param3) {
+    final static String requestRemoveIgnore(int param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
         IsaacPacketBuffer var5 = null;
         int var6 = 0;
@@ -46,7 +46,7 @@ final class GameCanvasResizeListener implements CanvasResizeListener {
           }
           var7 = CarouselPlayerEventFactory.findIgnoreEntry(param1, false);
           if (var7 == null) {
-            stackIn_10_0 = SetReverbGain.a(DisplayModeErrorDialog.field_L, new String[]{param1}, 122);
+            stackIn_10_0 = SetReverbGain.substituteIndexedPlaceholders(DisplayModeErrorDialog.field_L, new String[]{param1}, 122);
             return stackIn_10_0;
           }
           var7.unlink(param3 ^ 3918);

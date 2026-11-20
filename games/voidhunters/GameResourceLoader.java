@@ -281,7 +281,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           AppletRasterBuffer.field_a.renderGameFrame(-112);
           GrapplingHookFactory.field_a = (BitmapFont) ((Object) GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(var12, "", 0, var11, "arialish12"));
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "basic", this.graphicsArchive, this.fontMetricsArchive, "antigrav_18_graphics1");
-          HslAdjustTextureOperation.a(var12, this.fontMetricsArchive, this.graphicsArchive, (byte) 88, var11);
+          HslAdjustTextureOperation.loadRawFontResources(var12, this.fontMetricsArchive, this.graphicsArchive, (byte) 88, var11);
           ModelData.loadGameSprites(this.jpegArchive, param0 ^ 57, this.graphicsArchive);
           FloatGradientNoiseSliceGenerator.field_e = WorldPoint.loadNineSliceSprites("frame", -124, "basic", this.graphicsArchive);
           ScreenSizeController.field_d = WorldPoint.loadNineSliceSprites("frame_filled", 52, "basic", this.graphicsArchive);
@@ -317,7 +317,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           ShieldInfoPool.field_c = SetSniperCannonProjectiles.loadNamedSprite(this.graphicsArchive, "lobby_game_logo", "basic", true);
           EdgeMagnitudeTextureOperation.initializeChatMessages(200, -100);
           SetMissilesExplosionPower.acceptUiArchives(var11, param0 - 68, var12);
-          SetMomentOfInertiaPredivideDownshift.a(AppletRasterBuffer.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);
+          SetMomentOfInertiaPredivideDownshift.initializeAccountOverlayResources(AppletRasterBuffer.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);
           var3 = null;
           this.fontMetricsArchive = null;
           MidiNote.resetFrameTiming(param0 ^ 2164);

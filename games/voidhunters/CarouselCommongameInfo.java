@@ -387,7 +387,7 @@ final class CarouselCommongameInfo implements DiffableState {
           }
           CarouselSlot.reportStateArrayDifferences(var6.history, 1, this.history, false, 5547);
           SetUseFilledPolygons.reportDequeDifferences(1, this.events, 13, false, var6.events);
-          if (SetCountermeasureLauncherAimspeed.a(var6.history, false, 1, this.history, -66)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(var6.history, false, 1, this.history, -66)) {
             var4 = 1;
             GetSniperCannonAimarc.printDebugMessage(-6940, "CarouselSlot[] carousel has changed. ");
           }
@@ -395,7 +395,7 @@ final class CarouselCommongameInfo implements DiffableState {
             var5 = (IsaacPacketBuffer) null;
             this.writeCurrentState(87, (IsaacPacketBuffer) null);
           }
-          if (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var6.events, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.events, 210377952), 121)) {
+          if (SetCountermeasureLauncherAimspeed.stateArraysDiffer(TextHotspotRegion.dequeToStateArray(var6.events, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.events, 210377952), 121)) {
             var4 = 1;
             GetSniperCannonAimarc.printDebugMessage(-6940, "linklist eventqueue has changed. ");
           }
@@ -507,7 +507,7 @@ final class CarouselCommongameInfo implements DiffableState {
         try {
           var4 = 1 / ((param0 - 22) / 59);
           var3 = (CarouselCommongameInfo) (param1);
-          stackIn_5_0 = (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var3.events, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.events, 210377952), 122)) || (var3.tick != this.tick);
+          stackIn_5_0 = (SetCountermeasureLauncherAimspeed.stateArraysDiffer(TextHotspotRegion.dequeToStateArray(var3.events, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.events, 210377952), 122)) || (var3.tick != this.tick);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
