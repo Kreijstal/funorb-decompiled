@@ -20,7 +20,7 @@ final class gib {
     final static void a(byte param0) {
         GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
         if (null == MatchingFieldValidator.field_i) {
-          MatchingFieldValidator.field_i = new goa(GetLagStandardDeviationIn.field_r, EnvironmentReflectionGpuMaterialEffect.field_j);
+          MatchingFieldValidator.field_i = new ProgressDialog(GetLagStandardDeviationIn.field_r, EnvironmentReflectionGpuMaterialEffect.field_j);
         }
         GetLagStandardDeviationIn.field_r.pushPanel(false, MatchingFieldValidator.field_i);
         if (param0 < -32) {

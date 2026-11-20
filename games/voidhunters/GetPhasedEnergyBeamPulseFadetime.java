@@ -111,10 +111,10 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               SetMissileLauncherRandomness.field_p = qga.field_b.readLong(255);
               qga.field_b.position = 0;
               UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.field_j, param1);
-              tc.field_c = of.field_a;
+              tc.field_c = LegacyOpenGlShaderProgram.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (tc.field_c == of.field_a &&
+            if (tc.field_c == LegacyOpenGlShaderProgram.field_a &&
               ShipBlueprint.a(1, 30000)) {
               var6_intLifetime1 = qga.field_b.readUnsignedByte((byte) -110);
               ow.field_a = var6_intLifetime1;
@@ -144,7 +144,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               SetTorpedoAimarc.field_p = qga.field_b.readLong(255);
               SetLagVariant.field_p = param5;
               SetAngularVelocitySustain.field_p = qga.field_b.readUnsignedByte((byte) -94);
-              nfa.field_d = qga.field_b.readUnsignedByte((byte) -106);
+              FireGrapplesOrderDefinition.field_d = qga.field_b.readUnsignedByte((byte) -106);
               GetDebrisCarryOver.field_o = qga.field_b.readUnsignedShort(param3 + 1856);
               var12 = qga.field_b.readNullableString(0);
               var7 = qga.field_b.readUnsignedByte((byte) -106);
@@ -209,11 +209,11 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (GetDebrisCarryOver.field_o > 0) {
                 GetRespawnTime.field_o = true;
               }
-              RequestNewestBlackboxRecording.field_p.initializeCipher(18794, nfa.field_e);
+              RequestNewestBlackboxRecording.field_p.initializeCipher(18794, FireGrapplesOrderDefinition.field_e);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
-                nfa.field_e[var8Lifetime1] = nfa.field_e[var8Lifetime1] + 50;
+                FireGrapplesOrderDefinition.field_e[var8Lifetime1] = FireGrapplesOrderDefinition.field_e[var8Lifetime1] + 50;
               }
-              qga.field_b.initializeCipher(18794, nfa.field_e);
+              qga.field_b.initializeCipher(18794, FireGrapplesOrderDefinition.field_e);
               stackIn_77_0 = ow.field_a;
               return stackIn_77_0;
             }

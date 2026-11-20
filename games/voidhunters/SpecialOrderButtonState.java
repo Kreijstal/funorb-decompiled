@@ -99,7 +99,7 @@ final class SpecialOrderButtonState extends IntrusiveNode {
 
     SpecialOrderButtonState(int param0) {
         this.specialOrderId = param0;
-        if (CarouselPlayerEvent.field_i[this.specialOrderId].c((byte) -115)) {
+        if (CarouselPlayerEvent.specialOrderDefinitions[this.specialOrderId].hidesReadyCount((byte) -115)) {
           this.field_d = 50;
         }
     }

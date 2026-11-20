@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uj {
+class SpecialOrderDefinition {
     static boolean[] field_a;
     static String field_b;
     static String field_c;
 
-    boolean c(byte param0) {
+    boolean hidesReadyCount(byte param0) {
         if (param0 >= -104) {
           field_c = (String) null;
           return false;
@@ -19,26 +19,26 @@ class uj {
         field_a = null;
         field_b = null;
         if (param0 != -95) {
-          uj.clearSharedReferences((byte) 83);
+          SpecialOrderDefinition.clearSharedReferences((byte) 83);
         }
     }
 
-    boolean c(int param0) {
+    boolean allowsActivationWithoutReadyComponents(int param0) {
         if (param0 <= 63) {
           return false;
         }
         return false;
     }
 
-    int d(byte param0) {
+    int getCooldown(byte param0) {
         if (param0 != 64) {
-          this.d((byte) -115);
+          this.getCooldown((byte) -115);
           return 10 * Particle.field_l;
         }
         return 10 * Particle.field_l;
     }
 
-    int b(int param0) {
+    int getActiveDuration(int param0) {
         if (param0 != -25131) {
           field_b = (String) null;
           return 0;
@@ -46,7 +46,7 @@ class uj {
         return 0;
     }
 
-    boolean a(boolean param0) {
+    boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           field_c = (String) null;
           return true;
@@ -54,14 +54,14 @@ class uj {
         return true;
     }
 
-    int b(byte param0) {
+    int getIconId(byte param0) {
         if (param0 < 79) {
           return -77;
         }
         return 0;
     }
 
-    int a(int param0) {
+    int getShortcutKey(int param0) {
         if (param0 != -1) {
           field_b = (String) null;
           return -1;

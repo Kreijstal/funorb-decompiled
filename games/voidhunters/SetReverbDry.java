@@ -98,7 +98,7 @@ final class SetReverbDry extends ConsoleCommand {
     final static int a(int param0, byte param1) {
         int var2 = 0;
         if (param0 == 0) {
-          var2 = kib.field_d;
+          var2 = ActivateSelfDestructOrderDefinition.field_d;
         }
         if (param0 == 1) {
           var2 = GetThrusterSmallForce.field_p;

@@ -47,7 +47,7 @@ final class QuickChatMenuWidget extends Widget {
         }
         var5 = SetClientSideDragging.field_r;
         if (var5 > 0) {
-          if (ttb.field_B == var5) {
+          if (StripedProgressBar.field_B == var5) {
             var5 = 63;
           }
           for (var6 = 0; var6 < this.shortcutKeys.length; var6++) {

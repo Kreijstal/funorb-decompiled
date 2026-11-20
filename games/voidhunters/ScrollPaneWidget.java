@@ -235,7 +235,7 @@ final class ScrollPaneWidget extends Widget {
           GetReverbWidth.field_o.field_a.i(10000);
           if (SetThrusterParticleSpeedDownshift.field_o != null) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
-              ts.a(false, param3);
+              LegacyOpenGlShader.a(false, param3);
             }
             if (ObjectiveMarker.field_b.field_o != 0) {
               if (ArchiveTextureProvider.field_h) {

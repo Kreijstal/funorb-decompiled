@@ -474,7 +474,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_l = false;
         try {
           this.toolkit = param0;
-          this.texture = uw.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
+          this.texture = FireBoostersOrderDefinition.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

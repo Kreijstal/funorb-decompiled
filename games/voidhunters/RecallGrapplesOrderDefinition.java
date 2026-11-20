@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rea extends uj {
+final class RecallGrapplesOrderDefinition extends SpecialOrderDefinition {
     static String[] field_e;
     static String field_d;
 
@@ -16,15 +16,15 @@ final class rea extends uj {
         field_e = null;
     }
 
-    final boolean c(int param0) {
+    final boolean allowsActivationWithoutReadyComponents(int param0) {
         if (param0 <= 63) {
-          rea.clearSharedReferences(-112);
+          RecallGrapplesOrderDefinition.clearSharedReferences(-112);
           return true;
         }
         return true;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           field_d = (String) null;
           return Particle.field_t;
@@ -32,10 +32,10 @@ final class rea extends uj {
         return Particle.field_t;
     }
 
-    rea() {
+    RecallGrapplesOrderDefinition() {
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           field_d = (String) null;
           return false;
@@ -43,7 +43,7 @@ final class rea extends uj {
         return false;
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 < 79) {
           field_d = (String) null;
           return 103;

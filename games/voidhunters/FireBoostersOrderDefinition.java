@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uw extends uj {
+final class FireBoostersOrderDefinition extends SpecialOrderDefinition {
     static String field_d;
 
-    final int b(int param0) {
+    final int getActiveDuration(int param0) {
         if (param0 != -25131) {
           field_d = (String) null;
           return Particle.field_p;
@@ -12,12 +12,12 @@ final class uw extends uj {
         return Particle.field_p;
     }
 
-    uw() {
+    FireBoostersOrderDefinition() {
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 <= 79) {
-          uw.clearSharedReferences(-2);
+          FireBoostersOrderDefinition.clearSharedReferences(-2);
           return 106;
         }
         return 106;
@@ -36,23 +36,23 @@ final class uw extends uj {
         }
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           return 2;
         }
         return GetUseDetailLines.field_p;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           return -9;
         }
         return Particle.field_g;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
-          this.b(-80);
+          this.getActiveDuration(-80);
           return false;
         }
         return false;

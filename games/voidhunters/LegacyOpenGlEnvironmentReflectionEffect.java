@@ -126,10 +126,10 @@ final class LegacyOpenGlEnvironmentReflectionEffect extends LegacyOpenGlMaterial
 
     final static void updateProgressDialog(boolean param0, byte param1, String param2, float param3) {
         if (null == MatchingFieldValidator.field_i) {
-          MatchingFieldValidator.field_i = new goa(GetLagStandardDeviationIn.field_r, EnvironmentReflectionGpuMaterialEffect.field_j);
+          MatchingFieldValidator.field_i = new ProgressDialog(GetLagStandardDeviationIn.field_r, EnvironmentReflectionGpuMaterialEffect.field_j);
           GetLagStandardDeviationIn.field_r.pushPanel(false, MatchingFieldValidator.field_i);
         }
-        MatchingFieldValidator.field_i.a(param0, param2, param3, (byte) -89);
+        MatchingFieldValidator.field_i.updateProgress(param0, param2, param3, (byte) -89);
         SoftwareRasterizer2D.clear();
         if (param1 < 26) {
           return;

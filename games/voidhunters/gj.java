@@ -17,7 +17,7 @@ final class gj {
         if (param0 != 98) {
           return true;
         }
-        if (of.field_a == this) {
+        if (LegacyOpenGlShaderProgram.field_a == this) {
           return true;
         }
         if (UiFocusableComponent.field_A == this) {

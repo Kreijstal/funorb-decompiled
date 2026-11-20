@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of {
+final class LegacyOpenGlShaderProgram {
     static gj field_a;
-    long field_c;
-    private OpenGlToolkit field_b;
+    long handle;
+    private OpenGlToolkit toolkit;
 
     protected final void finalize() throws Throwable {
-        this.field_b.enqueueShaderObjectDisposal((byte) 18, this.field_c);
+        this.toolkit.enqueueShaderObjectDisposal((byte) 18, this.handle);
         super.finalize();
     }
 
@@ -18,10 +18,10 @@ final class of {
         }
     }
 
-    of(OpenGlToolkit param0, long param1, ts[] param2) {
+    LegacyOpenGlShaderProgram(OpenGlToolkit param0, long param1, LegacyOpenGlShader[] param2) {
         try {
-          this.field_c = param1;
-          this.field_b = param0;
+          this.handle = param1;
+          this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

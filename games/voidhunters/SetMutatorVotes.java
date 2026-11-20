@@ -55,7 +55,7 @@ final class SetMutatorVotes extends ConsoleCommand {
                 stackIn_18_0 = vhb.field_d;
               }
               var9 = stackIn_18_0;
-              var2 = var2 + pva.field_g;
+              var2 = var2 + SpawnEnemyShipOrderDefinition.field_g;
               if (var9 != null) {
                 var9.draw((byte) 54, var8 - ShipTeamCondition.field_e, (ShipTeamCondition.field_e << 1) + var7, var2, SetExplosionPushMultiplier.field_o + (SetPointDefenceLaserAimarc.field_q << 1));
               }
@@ -63,7 +63,7 @@ final class SetMutatorVotes extends ConsoleCommand {
             }
             if (var4 >= 0) {
               ModalPanel.field_x.draw(var6, var8, var2 + SetDebrisDetachmentForceMultiplier.field_p, var5, -1);
-              var2 = var2 + (pva.field_g + (SetPointDefenceLaserAimarc.field_q + SetExplosionPushMultiplier.field_o));
+              var2 = var2 + (SpawnEnemyShipOrderDefinition.field_g + (SetPointDefenceLaserAimarc.field_q + SetExplosionPushMultiplier.field_o));
             } else {
               GetUsePolygonFill.field_p.draw(var6, var8, var2 + mab.field_f, var5, -1);
               var2 = var2 + DebugMessage.field_a;

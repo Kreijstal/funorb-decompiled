@@ -117,7 +117,7 @@ final class pgb {
 
     pgb(boolean param0) {
         this.field_f = SetSalvoUsesAllEnergy.field_o;
-        this.field_o = pva.field_f;
+        this.field_o = SpawnEnemyShipOrderDefinition.field_f;
         this.field_i = SetSniperCannonFiringLeeway.field_q;
         if (!param0) {
           this.field_m = null;

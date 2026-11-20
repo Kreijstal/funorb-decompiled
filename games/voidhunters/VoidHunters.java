@@ -462,7 +462,7 @@ public final class VoidHunters extends NetworkGameClient {
                 }
               } else {
                 if (wp.field_b == wp.field_a) {
-                  var3 = vdb.d(-31515);
+                  var3 = LaunchFightersOrderDefinition.d(-31515);
                   if (var3 == 1) {
                     kua.field_e = true;
                     ta.a((byte) -121, 0);
@@ -903,7 +903,7 @@ public final class VoidHunters extends NetworkGameClient {
         WeaponBehaviour.clearSharedReferences(!param0 ? true : false);
         fra.clearSharedReferences(2147483647);
         jb.clearSharedReferences(12472);
-        uj.clearSharedReferences((byte) -95);
+        SpecialOrderDefinition.clearSharedReferences((byte) -95);
         eqb.clearSharedReferences(65);
         es.clearSharedReferences(param0);
         pd.clearSharedReferences((byte) 26);
@@ -1115,7 +1115,7 @@ public final class VoidHunters extends NetworkGameClient {
         SoundInstrument.clearSharedReferences();
         ValidatedTextField.clearSharedReferences(88);
         UiTextField.clearSharedReferences((byte) -128);
-        ttb.clearSharedReferences(16711935);
+        StripedProgressBar.clearSharedReferences(16711935);
         HotspotTextWidget.clearSharedReferences(-30);
         gm.clearSharedReferences(-2459);
         UiToggleButton.clearSharedReferences(-125);
@@ -1209,7 +1209,7 @@ public final class VoidHunters extends NetworkGameClient {
         RenderResourceNode.clearSharedReferences((byte) -123);
         ct.clearSharedReferences((byte) -96);
         mb.clearSharedReferences((byte) -122);
-        of.clearSharedReferences(8345);
+        LegacyOpenGlShaderProgram.clearSharedReferences(8345);
         OpenGlTexture3D.clearSharedReferences((byte) 42);
         OpenGlRenderbuffer.clearSharedReferences(33);
         OpenGlPostEffect.clearSharedReferences(-95);
@@ -1232,7 +1232,7 @@ public final class VoidHunters extends NetworkGameClient {
         LegacyOpenGlEnvironmentReflectionEffect.clearSharedReferences(3168);
         LegacyOpenGlEnvironmentMappedWaterEffect.clearSharedReferences(true);
         LegacyOpenGlWaveWaterEffect.clearSharedReferences(13776);
-        ts.clearSharedReferences((byte) 90);
+        LegacyOpenGlShader.clearSharedReferences((byte) 90);
         TextureFilterMode.clearSharedReferences((byte) 88);
         GpuNativeHeap.clearSharedReferences(!param0 ? true : false);
         gib.clearSharedReferences(15);
@@ -1287,15 +1287,15 @@ public final class VoidHunters extends NetworkGameClient {
         GrappleLauncherBehaviourFactory.clearSharedReferences((byte) 120);
         ThrusterBehaviourFactory.clearSharedReferences((byte) 43);
         WeaponBehaviourFactory.clearSharedReferences(-30938);
-        nfa.clearSharedReferences(-3408);
-        rea.clearSharedReferences(102);
-        qsb.clearSharedReferences(104);
-        uw.clearSharedReferences(34037);
-        lg.clearSharedReferences(108);
-        nnb.clearSharedReferences(false);
-        pva.clearSharedReferences(109);
-        fpa.clearSharedReferences(110);
-        hka.clearSharedReferences(0);
+        FireGrapplesOrderDefinition.clearSharedReferences(-3408);
+        RecallGrapplesOrderDefinition.clearSharedReferences(102);
+        ToggleShieldsOrderDefinition.clearSharedReferences(104);
+        FireBoostersOrderDefinition.clearSharedReferences(34037);
+        ScramblerPulseOrderDefinition.clearSharedReferences(108);
+        ArmSelfDestructOrderDefinition.clearSharedReferences(false);
+        SpawnEnemyShipOrderDefinition.clearSharedReferences(109);
+        SaveShipDesignOrderDefinition.clearSharedReferences(110);
+        BuildBlueprintOrderDefinition.clearSharedReferences(0);
         MessageFactory.clearSharedReferences(105);
         GameSnapshotFactory.clearSharedReferences(95);
         MatchResultsFactory.clearSharedReferences(-13);
@@ -2288,7 +2288,7 @@ public final class VoidHunters extends NetworkGameClient {
             }
           }
           if (GetUseTriFill.a(77)) {
-            hka.a(111, var10, SetMassDriverProjectileLife.a(0));
+            BuildBlueprintOrderDefinition.a(111, var10, SetMassDriverProjectileLife.a(0));
             return;
           }
           if (!LegacyOpenGlEnvironmentReflectionEffect.field_e) {

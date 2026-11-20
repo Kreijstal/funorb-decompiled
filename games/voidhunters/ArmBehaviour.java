@@ -27,7 +27,7 @@ final class ArmBehaviour extends ComponentBehaviour implements DiffableState {
     final static void a(String param0, boolean param1, int param2, String param3) {
         try {
           MusicPatchPcmStream.field_h = param0;
-          qsb.field_d = param3;
+          ToggleShieldsOrderDefinition.field_d = param3;
           fa.a(SetMissionDebrisVotingChancestep.field_p, -127, param1);
           if (param2 != -17833) {
             field_d = (String) null;

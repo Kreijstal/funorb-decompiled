@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nnb extends uj {
+final class ArmSelfDestructOrderDefinition extends SpecialOrderDefinition {
     static int field_e;
     static String field_f;
     static String field_d;
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          nnb.clearSharedReferences(false);
+          ArmSelfDestructOrderDefinition.clearSharedReferences(false);
           field_d = null;
           field_f = null;
           return;
@@ -17,23 +17,23 @@ final class nnb extends uj {
         field_f = null;
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
-          nnb.clearSharedReferences(true);
+          ArmSelfDestructOrderDefinition.clearSharedReferences(true);
           return GetPointDefenceLaserRandomness.field_p;
         }
         return GetPointDefenceLaserRandomness.field_p;
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 < 79) {
-          this.d((byte) 75);
+          this.getCooldown((byte) 75);
           return 112;
         }
         return 112;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           field_e = -50;
           return Particle.field_o;
@@ -41,19 +41,19 @@ final class nnb extends uj {
         return Particle.field_o;
     }
 
-    nnb() {
+    ArmSelfDestructOrderDefinition() {
     }
 
-    final boolean c(byte param0) {
+    final boolean hidesReadyCount(byte param0) {
         if (param0 > -104) {
           return true;
         }
         return true;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
-          this.a(true);
+          this.requiresPrimaryPress(true);
           return false;
         }
         return false;

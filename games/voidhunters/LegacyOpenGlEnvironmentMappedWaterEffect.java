@@ -7,7 +7,7 @@ final class LegacyOpenGlEnvironmentMappedWaterEffect extends LegacyOpenGlMateria
     private boolean programAvailable;
     static String field_g;
     private boolean active;
-    private of program;
+    private LegacyOpenGlShaderProgram program;
     static Object field_c;
     static String field_i;
     static String field_h;
@@ -82,8 +82,8 @@ final class LegacyOpenGlEnvironmentMappedWaterEffect extends LegacyOpenGlMateria
 
     LegacyOpenGlEnvironmentMappedWaterEffect(OpenGlToolkit param0, LegacyOpenGlWaterTextures param1) {
         super(param0);
-        ts var5 = null;
-        ts var4 = null;
+        LegacyOpenGlShader var5 = null;
+        LegacyOpenGlShader var4 = null;
         this.active = false;
         this.programAvailable = false;
         try {
@@ -93,10 +93,10 @@ final class LegacyOpenGlEnvironmentMappedWaterEffect extends LegacyOpenGlMateria
             if (!this.toolkit.field_B) {
               return;
             }
-            var5 = ShipFactory.a(35633, this.toolkit, 18753, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
-            ts var3 = var5;
-            var4 = ShipFactory.a(35632, this.toolkit, 18753, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 2.0);\nvec4 surfaceColour = vec4(envColour, fresnel*shoreFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n");
-            this.program = GetTorpedoAcceleration.a(new ts[]{var5, var4}, (byte) 107, this.toolkit);
+            var5 = ShipFactory.compileLegacyOpenGlShader(35633, this.toolkit, 18753, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
+            LegacyOpenGlShader var3 = var5;
+            var4 = ShipFactory.compileLegacyOpenGlShader(35632, this.toolkit, 18753, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 2.0);\nvec4 surfaceColour = vec4(envColour, fresnel*shoreFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n");
+            this.program = GetTorpedoAcceleration.linkLegacyOpenGlProgram(new LegacyOpenGlShader[]{var5, var4}, (byte) 107, this.toolkit);
             this.programAvailable = null != this.program ? true : false;
           }
         } catch (RuntimeException runtimeException) {
@@ -115,7 +115,7 @@ final class LegacyOpenGlEnvironmentMappedWaterEffect extends LegacyOpenGlMateria
           var5 = (float)(1 << ((param0 & 60) >> 3)) / 32.0f;
           var6 = param2 & 65535;
           var7 = (float)(3 & param2 >> 16) / 8.0f;
-          var8 = this.program.field_c;
+          var8 = this.program.handle;
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(this.toolkit.field_Mc * var4 % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
@@ -154,7 +154,7 @@ final class LegacyOpenGlEnvironmentMappedWaterEffect extends LegacyOpenGlMateria
           this.toolkit.bindTexture(106, var3);
           this.toolkit.setActiveTextureUnit(33984, 0);
           this.toolkit.bindTexture(106, this.waterTextures.normalVolume);
-          var4 = this.program.field_c;
+          var4 = this.program.handle;
           jaggl.OpenGL.glUseProgramObjectARB(var4);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "envMapSampler"), 1);

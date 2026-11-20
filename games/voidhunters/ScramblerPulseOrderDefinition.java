@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg extends uj {
+final class ScramblerPulseOrderDefinition extends SpecialOrderDefinition {
     static String field_d;
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 < 79) {
           return -43;
         }
         return 108;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
-          this.a(-39);
+          this.getShortcutKey(-39);
           return false;
         }
         return false;
     }
 
-    lg() {
+    ScramblerPulseOrderDefinition() {
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           field_d = (String) null;
           return Particle.field_a;
@@ -30,7 +30,7 @@ final class lg extends uj {
         return Particle.field_a;
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           return 56;
         }

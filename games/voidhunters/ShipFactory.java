@@ -11,7 +11,7 @@ final class ShipFactory implements GameStateFactory {
           return (SerializableGameState[]) ((Object) new Ship[param1]);
         }
         String var4 = (String) null;
-        ShipFactory.a(117, (OpenGlToolkit) null, 46, (String) null);
+        ShipFactory.compileLegacyOpenGlShader(117, (OpenGlToolkit) null, 46, (String) null);
         return (SerializableGameState[]) ((Object) new Ship[param1]);
     }
 
@@ -58,9 +58,9 @@ final class ShipFactory implements GameStateFactory {
         }
     }
 
-    final static ts a(int param0, OpenGlToolkit param1, int param2, String param3) {
+    final static LegacyOpenGlShader compileLegacyOpenGlShader(int param0, OpenGlToolkit param1, int param2, String param3) {
         Object stackIn_12_0 = null;
-        ts stackIn_14_0 = null;
+        LegacyOpenGlShader stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -75,7 +75,7 @@ final class ShipFactory implements GameStateFactory {
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param0);
           if (param2 != 18753) {
             var7 = (String) null;
-            ShipFactory.a(-110, (OpenGlToolkit) null, 41, (String) null);
+            ShipFactory.compileLegacyOpenGlShader(-110, (OpenGlToolkit) null, 41, (String) null);
           }
           jaggl.OpenGL.glShaderSourceARB(var4_long, param3);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
@@ -93,10 +93,10 @@ final class ShipFactory implements GameStateFactory {
             if (0 == AwardVictoryToTeamAction.field_c[0]) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_12_0 = null;
-              return (ts) (stackIn_12_0);
+              return (LegacyOpenGlShader) (stackIn_12_0);
             }
           }
-          stackIn_14_0 = new ts(param1, var4_long, param0);
+          stackIn_14_0 = new LegacyOpenGlShader(param1, var4_long, param0);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

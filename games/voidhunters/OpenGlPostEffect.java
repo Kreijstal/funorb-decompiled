@@ -93,7 +93,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
 
     final static void a(int param0, byte param1, int param2, int param3) {
         if (param3 == 0) {
-          if (param0 == kib.field_d) {
+          if (param0 == ActivateSelfDestructOrderDefinition.field_d) {
             if (param1 > -69) {
               field_e = (IntrusiveDeque) null;
             }
@@ -114,7 +114,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
             LaserWeaponDefinition.a(40, param2);
             return;
           }
-          kib.field_d = param0;
+          ActivateSelfDestructOrderDefinition.field_d = param0;
           ebb.field_b = true;
           LaserWeaponDefinition.a(40, param2);
         }

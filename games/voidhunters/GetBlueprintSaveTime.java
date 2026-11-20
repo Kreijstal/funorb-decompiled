@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBlueprintSaveTime extends ConsoleCommand {
-    static String[] field_o;
+    static String[] specialOrderShortLabels;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -40,10 +40,10 @@ final class GetBlueprintSaveTime extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         if (param0 != -21447) {
           GetBlueprintSaveTime.clearSharedReferences(-91);
-          field_o = null;
+          specialOrderShortLabels = null;
           return;
         }
-        field_o = null;
+        specialOrderShortLabels = null;
     }
 
     static {

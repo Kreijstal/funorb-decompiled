@@ -487,7 +487,7 @@ final class GameSession {
               param2.getSelfDestructPrepared((byte) -91)) {
               GetMassDriverReload.a(SecondaryNodeDequeIterator.field_c, param3 - 208);
             } else {
-              GetMassDriverReload.a(GetGrapplingHookSpringConstant.field_o[param0.specialOrderId], -51);
+              GetMassDriverReload.a(GetGrapplingHookSpringConstant.specialOrderLabels[param0.specialOrderId], -51);
             }
           }
           if (param3 != 80) {
@@ -1289,7 +1289,7 @@ final class GameSession {
                   var11 = SetFogOfWarSensorRange.field_o[var4_int][SetFogOfWarSensorRange.field_o[var4_int].length - 1];
                   var12 = 0;
                   for (var13 = var10; var13 <= var11; var13++) {
-                    var14 = GetGrapplingHookSpringConstant.field_o[var13];
+                    var14 = GetGrapplingHookSpringConstant.specialOrderLabels[var13];
                     var15 = GetPhasedEnergyBeamProjectiles.a(123, var14);
                     var16 = OpenGlTexture.b((byte) 118);
                     var17 = -var15 + (-10 + var8);
@@ -3053,15 +3053,15 @@ final class GameSession {
     }
 
     private final void drawSpecialOrderTooltip(int param0) {
-        uj var2 = null;
+        SpecialOrderDefinition var2 = null;
         int var3 = 0;
         String var4 = null;
         if (this.field_p >= 0 &&
           this.field_p < 13) {
-          var2 = CarouselPlayerEvent.field_i[this.field_p];
-          var3 = var2.b((byte) 85);
+          var2 = CarouselPlayerEvent.specialOrderDefinitions[this.field_p];
+          var3 = var2.getIconId((byte) 85);
           PlayerActionFactory.a(var3, 20 + GetUseDetailLines.field_o, (byte) 84, GetTorpedoReload.field_q);
-          var4 = GetGrapplingHookSpringConstant.field_o[this.field_p].toUpperCase();
+          var4 = GetGrapplingHookSpringConstant.specialOrderLabels[this.field_p].toUpperCase();
           SetSelfDestructPrepareToggleCooldown.a(50 + GetUseDetailLines.field_o, 1, GetTorpedoReload.field_q + 20, var4, 2, 16777215, (byte) -92);
         }
         if (param0 != 15097) {
@@ -4158,7 +4158,7 @@ final class GameSession {
               if (var7 != 0) {
                 var11_int = 0;
                 for (var12 = var4Lifetime2; var12 <= var5; var12++) {
-                  var13 = GetGrapplingHookSpringConstant.field_o[var12];
+                  var13 = GetGrapplingHookSpringConstant.specialOrderLabels[var12];
                   var8Lifetime2 = 11184810;
                   stackIn_48_0 = (~this.field_p != ~var12) ? 0 : 1;
                   var14 = stackIn_48_0;
@@ -5045,7 +5045,7 @@ final class GameSession {
             var7 = var7 + var11;
             var6 = var6 - var9;
             CachedArchiveProvider.a(200, false, var6 + var9, var11 + var7, -var11 + var12, var10 - var9, 0);
-            fpa.a(var7 + var11, var12 + var7, true, var6 + var10, var9 + var6);
+            SaveShipDesignOrderDefinition.a(var7 + var11, var12 + var7, true, var6 + var10, var9 + var6);
             var23 = param2;
             for (var14_int = 0; var23.length > var14_int; var14_int++) {
               var24 = var23[var14_int];
@@ -5389,8 +5389,8 @@ final class GameSession {
           if (SetDebrisPartitioned.field_o != 1 ||
             PacketBuffer.field_g != 1 ||
             param0) {
-            if (!(this.field_p >= CarouselPlayerEvent.field_i.length) &&
-              !CarouselPlayerEvent.field_i[this.field_p].a(false)) {
+            if (!(this.field_p >= CarouselPlayerEvent.specialOrderDefinitions.length) &&
+              !CarouselPlayerEvent.specialOrderDefinitions[this.field_p].requiresPrimaryPress(false)) {
               this.field_H = this.field_p;
               if (this.field_H <= 8 ||
                 !SetMachineGunEnergyUsed.field_o[81]) {
@@ -6405,7 +6405,7 @@ final class GameSession {
         int var38 = 0;
         int var39 = 0;
         int var40 = 0;
-        uj var41 = null;
+        SpecialOrderDefinition var41 = null;
         String var42 = null;
         int var6Lifetime1;
         int var7Lifetime1;
@@ -6614,12 +6614,12 @@ final class GameSession {
               }
               var15.y = var19;
               var15.x = var18;
-              var41 = CarouselPlayerEvent.field_i[var15.specialOrderId];
+              var41 = CarouselPlayerEvent.specialOrderDefinitions[var15.specialOrderId];
               if (0 >= var15.nonPositiveStateCount) {
-                if (var41.c(83)) {
-                  if (!var41.c((byte) -117)) {
+                if (var41.allowsActivationWithoutReadyComponents(83)) {
+                  if (!var41.hidesReadyCount((byte) -117)) {
                     if (0 != var15.field_j) {
-                      stackIn_143_0 = (var15.field_j == var41.d((byte) 64)) ? 1 : 0;
+                      stackIn_143_0 = (var15.field_j == var41.getCooldown((byte) 64)) ? 1 : 0;
                     } else {
                       stackIn_143_0 = 1;
                     }
@@ -6651,7 +6651,7 @@ final class GameSession {
                 var4_int = 1;
                 var25 = 1;
               }
-              var27 = var41.a(-1);
+              var27 = var41.getShortcutKey(-1);
               if (!param1) {
                 this.a(var15, (byte) -80, var27, var24Lifetime1 != 0);
               }
@@ -6669,17 +6669,17 @@ final class GameSession {
                     GetMissilesHitSourceTeam.a(-(var31 >> 1) + var18 + (var16 >> 1), (var17 >> 1) + var19 - (var32 >> 1), (byte) -128, var32, var33, 11184810, var31);
                   }
                 }
-                var29Lifetime1 = var41.d((byte) 64);
+                var29Lifetime1 = var41.getCooldown((byte) 64);
                 if (this.field_p != var15.specialOrderId &&
                   var15.nonPositiveStateCount > 0) {
                 }
                 var30Lifetime1 = (-var15.field_j + var29Lifetime1 << 8) / var29Lifetime1;
                 var31Lifetime1 = 0;
                 if (var30Lifetime1 < 0 &&
-                  var41.b(-25131) > 0) {
+                  var41.getActiveDuration(-25131) > 0) {
                   var32Lifetime1 = var15.field_j - var29Lifetime1;
                   var31Lifetime1 = 1;
-                  var30Lifetime1 = (var32Lifetime1 << 8) / var41.b(-25131);
+                  var30Lifetime1 = (var32Lifetime1 << 8) / var41.getActiveDuration(-25131);
                 }
                 var32Lifetime2 = 11;
                 if (var21Lifetime1 == 0) {
@@ -6701,7 +6701,7 @@ final class GameSession {
                       if (var25 != 0) {
                         this.fillRadialSegment(var10, var33Lifetime1, var8, -62, this.radialMenuAlpha >> 1, var20);
                       }
-                      var34_ref_String = GetBlueprintSaveTime.field_o[var15.specialOrderId];
+                      var34_ref_String = GetBlueprintSaveTime.specialOrderShortLabels[var15.specialOrderId];
                       OpenGlShaderProgram.a(16777215, this.radialMenuAlpha, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - tea.a(3, var34_ref_String, 13879) / 2));
                     } else {
                       OpenGlVertexNormal.field_d[101].draw(var18, var19, 0, var33Lifetime1, 1);
@@ -6719,7 +6719,7 @@ final class GameSession {
                     this.a(var33Lifetime1Lifetime1, param2, var19, false, var5);
                   }
                 }
-                var33Lifetime2 = CarouselPlayerEvent.field_i[var15.specialOrderId].b((byte) 87);
+                var33Lifetime2 = CarouselPlayerEvent.specialOrderDefinitions[var15.specialOrderId].getIconId((byte) 87);
                 if (8 == var15.specialOrderId &&
                   var5.getSelfDestructPrepared((byte) -90)) {
                   var33Lifetime2 = 114;
@@ -6730,7 +6730,7 @@ final class GameSession {
                   IncrementVariableAction.a(var33Lifetime2, 100, var19 + var35, 0, var18 + var34);
                 }
                 var36 = var17 * var30Lifetime1 >> 8;
-                fpa.a(var17 + (var19 - var36), var17 + var19, true, var18 + var16, var18);
+                SaveShipDesignOrderDefinition.a(var17 + (var19 - var36), var17 + var19, true, var18 + var16, var18);
                 PlayerActionFactory.a(var33Lifetime2, var34 + var18, (byte) 92, var35 + var19);
                 GetMissionTerrainSpaceProbability.a(84);
                 if (var30Lifetime1 < 255 &&
@@ -6738,7 +6738,7 @@ final class GameSession {
                   var37_int = var16 * var30Lifetime1 >> 8;
                   GetMachineGunPulsetime.a(2059520, -68, var37_int, var17 + (var19 + 4), 4, var18);
                 }
-                if (!var41.c((byte) -119)) {
+                if (!var41.hidesReadyCount((byte) -119)) {
                   var42 = Integer.toString(var15.nonPositiveStateCount);
                   var38 = 0;
                   SetSelfDestructPrepareToggleCooldown.a(-2 + (-tea.a(var38, var42, 13879) + var16) + var18, -1, var19 + (var17 - 2), var42, var38, 16776960, (byte) -88);
@@ -7208,7 +7208,7 @@ final class GameSession {
                   } else {
                     var16 = var12.a(-54, var13Lifetime1);
                     if (var16 != 1) {
-                      stackIn_49_0 = uj.field_b;
+                      stackIn_49_0 = SpecialOrderDefinition.field_b;
                     } else {
                       stackIn_49_0 = SetMachineGunProjectileDamage.field_o;
                     }
@@ -7541,7 +7541,7 @@ final class GameSession {
           if (GetLagStandardDeviationOut.field_p != var3Lifetime1) {
             GetLagStandardDeviationOut.field_p = var3Lifetime1;
             var4Lifetime1 = AlphaContainer.getTeamColor(false, var3Lifetime1, 13894143);
-            mcb.a(var4Lifetime1, 124);
+            FireMissilesOrderDefinition.a(var4Lifetime1, 124);
             var9 = VoidHunters.b(var3Lifetime1, -1);
             GetBurstFireMaxEnergy.a(1043, var9);
           }
@@ -8308,10 +8308,10 @@ final class GameSession {
             var4Lifetime1 += 13;
           }
           if (-1 != var4Lifetime1 &&
-            var4Lifetime1 < GetGrapplingHookSpringConstant.field_o.length && (this.state.a((byte) 90).getDebug((byte) 6) ||
+            var4Lifetime1 < GetGrapplingHookSpringConstant.specialOrderLabels.length && (this.state.a((byte) 90).getDebug((byte) 6) ||
             var4Lifetime1 == 13 &&
             ssa.b(2))) {
-            var12 = GetGrapplingHookSpringConstant.field_o[var4Lifetime1];
+            var12 = GetGrapplingHookSpringConstant.specialOrderLabels[var4Lifetime1];
             var3Lifetime1 = var12;
             var3Lifetime1Lifetime1 = var12;
             GetLagStandardDeviationOut.a(-1, var12, 16777215, 120, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-80, var12) / 2, 4266);
@@ -8328,7 +8328,7 @@ final class GameSession {
                 var7 = GrappleLauncherBehaviour.field_b;
               }
               var8 = SetTorpedoProjectileDamage.field_q[var7].toUpperCase();
-              var5_array = new String[]{ct.field_b, uw.field_d, var8};
+              var5_array = new String[]{ct.field_b, FireBoostersOrderDefinition.field_d, var8};
               var3Lifetime2Lifetime2 = ProxyAuthenticationException.field_b + "<br>" + DirectByteStorage.field_b + "<br>" + var13;
               var6 = var6 + GetPointDefenceLaserProjectiles.a(false, 0);
               var9 = SpawnLocation.field_a;

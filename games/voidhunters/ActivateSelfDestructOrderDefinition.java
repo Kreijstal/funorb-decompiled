@@ -1,50 +1,50 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kib extends uj {
+final class ActivateSelfDestructOrderDefinition extends SpecialOrderDefinition {
     static int field_d;
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 <= 79) {
-          this.a(56);
+          this.getShortcutKey(56);
           return 113;
         }
         return 113;
     }
 
-    final int b(int param0) {
+    final int getActiveDuration(int param0) {
         if (param0 != -25131) {
           return 46;
         }
         return Particle.field_y;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           return 5;
         }
         return Particle.field_e;
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
-          this.b((byte) -66);
+          this.getIconId((byte) -66);
           return GameKeyHandler.field_a;
         }
         return GameKeyHandler.field_a;
     }
 
-    final boolean c(byte param0) {
+    final boolean hidesReadyCount(byte param0) {
         if (param0 > -104) {
           return false;
         }
         return true;
     }
 
-    kib() {
+    ActivateSelfDestructOrderDefinition() {
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           return true;
         }

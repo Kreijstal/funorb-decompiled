@@ -163,14 +163,14 @@ final class TrailHolder implements DiffableState {
         }
         if (wja.field_a == 1) {
           psb.field_a = var8.readUnsignedShort(1869);
-          pva.field_f = var8.readString(-1);
+          SpawnEnemyShipOrderDefinition.field_f = var8.readString(-1);
         } else {
           if (wja.field_a != 4) {
             psb.field_a = 0;
-            pva.field_f = null;
+            SpawnEnemyShipOrderDefinition.field_f = null;
           } else {
             psb.field_a = var8.readUnsignedShort(1869);
-            pva.field_f = var8.readString(-1);
+            SpawnEnemyShipOrderDefinition.field_f = var8.readString(-1);
           }
         }
         if (!param1) {

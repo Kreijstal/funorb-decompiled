@@ -370,7 +370,7 @@ final class ThrusterBehaviour implements DiffableState {
     }
 
     final void limitDetachedBoosterCooldown(int param0, ShipBody param1, int param2) {
-        uj var4 = null;
+        SpecialOrderDefinition var4 = null;
         RuntimeException var4_ref = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -379,9 +379,9 @@ final class ThrusterBehaviour implements DiffableState {
         try {
           if (46 == param0 &&
             !(param1 instanceof Ship)) {
-            var4 = CarouselPlayerEvent.field_i[5];
-            if (this.timer.cooldown > var4.d((byte) 64)) {
-              this.timer.cooldown = var4.d((byte) 64);
+            var4 = CarouselPlayerEvent.specialOrderDefinitions[5];
+            if (this.timer.cooldown > var4.getCooldown((byte) 64)) {
+              this.timer.cooldown = var4.getCooldown((byte) 64);
               param1.onStateChanged((byte) -55);
             }
           }
@@ -458,7 +458,7 @@ final class ThrusterBehaviour implements DiffableState {
             this.trail.a(param5[3], param5[2], (byte) -125, param5[4], param5[2] + param5[4] >> 1, param5[5], param5[3] + param5[5] >> 1);
           }
           if (param4 == 46) {
-            var10_int = CarouselPlayerEvent.field_i[5].d((byte) 64);
+            var10_int = CarouselPlayerEvent.specialOrderDefinitions[5].getCooldown((byte) 64);
             if (param0) {
               if (this.timer.cooldown > var10_int) {
                 this.timer.cooldown = var10_int;
@@ -518,12 +518,12 @@ final class ThrusterBehaviour implements DiffableState {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        uj var16 = null;
+        SpecialOrderDefinition var16 = null;
         try {
           if (param13 == 46) {
             if (this.timer.cooldown <= 0) {
-              var16 = CarouselPlayerEvent.field_i[5];
-              this.timer.cooldown = var16.d((byte) 64) + var16.b(-25131);
+              var16 = CarouselPlayerEvent.specialOrderDefinitions[5];
+              this.timer.cooldown = var16.getCooldown((byte) 64) + var16.getActiveDuration(-25131);
               param5.onStateChanged((byte) -57);
             }
           } else {

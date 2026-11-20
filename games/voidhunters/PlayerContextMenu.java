@@ -399,7 +399,7 @@ final class PlayerContextMenu {
                   this.menu.addItem(SetReverbGain.a(GetSalvoHoldable.field_o, new String[]{var5}, 94), (byte) -53, 0);
                 }
               } else {
-                this.menu.addItem(SetReverbGain.a(ts.field_a, new String[]{var5}, 115), (byte) -53, 1);
+                this.menu.addItem(SetReverbGain.a(LegacyOpenGlShader.field_a, new String[]{var5}, 115), (byte) -53, 1);
               }
             }
           } else {
@@ -422,7 +422,7 @@ final class PlayerContextMenu {
         try {
           this.channelType = param0.field_a;
           if (param0.field_a == 0) {
-            if (kib.field_d == 0) {
+            if (ActivateSelfDestructOrderDefinition.field_d == 0) {
               this.menu.addItem(UiVisualStyle.field_a, (byte) -53, 12);
             }
             this.menu.addItem(tda.field_M, (byte) -53, 13);

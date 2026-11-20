@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ts {
-    private OpenGlToolkit field_b;
-    long field_c;
+final class LegacyOpenGlShader {
+    private OpenGlToolkit toolkit;
+    long handle;
     static String field_a;
 
-    final static void a(int param0) {
+    final static void snapshotMouseState(int param0) {
         Object var1 = null;
         Throwable decompiledCaughtException = null;
         Object var1_ref = null;
@@ -35,20 +35,20 @@ final class ts {
         var2.writeByte(0, 1);
         var2.writeByte(0, 1);
         if (param0) {
-          ts.a(-12);
+          LegacyOpenGlShader.snapshotMouseState(-12);
         }
     }
 
-    ts(OpenGlToolkit param0, long param1, int param2) {
+    LegacyOpenGlShader(OpenGlToolkit param0, long param1, int param2) {
         try {
-          this.field_b = param0;
-          this.field_c = param1;
+          this.toolkit = param0;
+          this.handle = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseListeners(java.awt.Component param0, int param1) {
         if (param1 != 1) {
           return;
         }
@@ -61,7 +61,7 @@ final class ts {
         }
     }
 
-    final static void a(byte param0, PlatformService param1, Object param2) {
+    final static void pumpEventQueue(byte param0, PlatformService param1, Object param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -126,7 +126,7 @@ final class ts {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_b.enqueueShaderObjectDisposal((byte) 18, this.field_c);
+        this.toolkit.enqueueShaderObjectDisposal((byte) 18, this.handle);
         super.finalize();
     }
 

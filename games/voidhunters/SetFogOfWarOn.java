@@ -159,7 +159,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_fighters_per_player_maximum(" + wk.field_a + ")");
         System.out.println("set_burst_fire_max_energy(" + PartitionZone.field_e + ")");
         System.out.println("set_burst_fire_regeneration_rate(" + sja.field_b + ")");
-        System.out.println("set_burst_fire_reload(" + vdb.field_d + ")");
+        System.out.println("set_burst_fire_reload(" + LaunchFightersOrderDefinition.field_d + ")");
         System.out.println("set_ship_spawn_invulnerability_time(" + Particle.field_A + ")");
         System.out.println("set_fog_of_war_sensor_range(" + GetUseNiceTrails.field_p + ")");
         System.out.println("set_thruster_binding_balance_threshold(" + us.field_f + ")");
@@ -236,7 +236,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_laser_aimspeed(" + GpuMaterialEffect.field_b + ")");
         System.out.println("set_fighter_bay_aimspeed(" + SetThrusterBindingMoveAndTurnHasOppositeMove.field_p + ")");
         System.out.println("set_spinning_blade_aimspeed(" + SetTorpedoFireForce.field_o + ")");
-        System.out.println("set_sniper_cannon_aimspeed(" + nnb.field_e + ")");
+        System.out.println("set_sniper_cannon_aimspeed(" + ArmSelfDestructOrderDefinition.field_e + ")");
         System.out.println("set_bomblet_spray_aimspeed(" + dfa.field_a + ")");
         System.out.println("set_phased_energy_beam_aimspeed(" + PlayerActionFactory.field_a + ")");
         System.out.println("set_machine_gun_aimspeed(" + dr.field_a + ")");

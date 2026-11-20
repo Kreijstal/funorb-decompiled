@@ -260,7 +260,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetLaserAimarc.field_o = param1[160];
           SetPointDefenceLaserReload.field_q = param1[132];
           dla.field_c = param1[139];
-          nnb.field_e = param1[122];
+          ArmSelfDestructOrderDefinition.field_e = param1[122];
           GetUseNiceTrails.field_p = param1[47];
           GetMissileLauncherEnergyUsed.field_p = param1[52];
           GetPhysicsCollisionPhantomForceMultiplier.field_o = param1[213];
@@ -270,7 +270,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetAutoAfkTimeout.field_o = param1[97];
           QuickChatPhraseLoader.field_d = param1[11];
           GetRadialMenuRadius.field_p = param1[79];
-          vdb.field_d = param1[45];
+          LaunchFightersOrderDefinition.field_d = param1[45];
           GetAngularForceDownshift.field_q = param1[150];
           SetFps.field_p = param1[183];
           SetUseLines.field_p = param1[66];

@@ -125,7 +125,7 @@ final class OpenGlFont extends ToolkitFont {
               }
             }
           }
-          this.field_e = uw.a(param0, 0, 0, var6Lifetime1, var33, var6Lifetime1, false, (byte) 60);
+          this.field_e = FireBoostersOrderDefinition.a(param0, 0, 0, var6Lifetime1, var33, var6Lifetime1, false, (byte) 60);
           this.field_c = false;
         } else {
           var30 = new byte[var6Lifetime1 * var6Lifetime1];

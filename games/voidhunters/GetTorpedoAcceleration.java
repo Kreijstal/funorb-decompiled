@@ -43,10 +43,10 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
         field_o = null;
     }
 
-    final static of a(ts[] param0, byte param1, OpenGlToolkit param2) {
+    final static LegacyOpenGlShaderProgram linkLegacyOpenGlProgram(LegacyOpenGlShader[] param0, byte param1, OpenGlToolkit param2) {
         int var3_int = 0;
         Object stackIn_25_0 = null;
-        of stackIn_27_0 = null;
+        LegacyOpenGlShaderProgram stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -66,7 +66,7 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
             if (null == param0[var3_int]) {
               return null;
             }
-            if (param0[var3_int].field_c <= 0L) {
+            if (param0[var3_int].handle <= 0L) {
               return null;
             }
           }
@@ -75,7 +75,7 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
           }
           var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
           for (var5 = 0; var5 < param0.length; var5++) {
-            jaggl.OpenGL.glAttachObjectARB(var3_long, param0[var5].field_c);
+            jaggl.OpenGL.glAttachObjectARB(var3_long, param0[var5].handle);
           }
           jaggl.OpenGL.glLinkProgramARB(var3_long);
           jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, BoxBlurTextureOperation.field_j, 0);
@@ -93,15 +93,15 @@ final class GetTorpedoAcceleration extends ConsoleCommand {
               var7 = 0;
               var5Lifetime1 = var7;
               while (var7 < param0.length) {
-                jaggl.OpenGL.glDetachObjectARB(var3_long, param0[var7].field_c);
+                jaggl.OpenGL.glDetachObjectARB(var3_long, param0[var7].handle);
                 var7++;
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);
               stackIn_25_0 = null;
-              return (of) (stackIn_25_0);
+              return (LegacyOpenGlShaderProgram) (stackIn_25_0);
             }
           }
-          stackIn_27_0 = new of(param2, var3_long, param0);
+          stackIn_27_0 = new LegacyOpenGlShaderProgram(param2, var3_long, param0);
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

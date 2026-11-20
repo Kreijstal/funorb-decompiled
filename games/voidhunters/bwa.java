@@ -179,7 +179,7 @@ final class bwa extends Widget {
             this.field_Eb.field_Y = 16764006;
             this.field_Ab.addChild(-561, this.field_Eb);
             this.field_Eb.field_s = "|";
-            if (!(nfa.field_d < 5) ||
+            if (!(FireGrapplesOrderDefinition.field_d < 5) ||
               !(SetAngularVelocitySustain.field_p < 2)) {
               regionExit1: {
                 stackIn_8_0 = this;
@@ -187,7 +187,7 @@ final class bwa extends Widget {
                 stackIn_8_2 = null;
                 stackIn_8_3 = 0L;
                 stackIn_8_4 = (SelectableIconLabelWidget) (param9);
-                if (nfa.field_d < 7) {
+                if (FireGrapplesOrderDefinition.field_d < 7) {
                   stackIn_8_0Lifetime1 = this;
                   stackIn_8_1Lifetime1 = null;
                   stackIn_8_2Lifetime1 = null;

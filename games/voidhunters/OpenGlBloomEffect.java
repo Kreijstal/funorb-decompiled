@@ -12,10 +12,10 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
     private OpenGlFramebuffer bloomFramebuffer;
     static String field_k;
     private OpenGlTexture2D blurTexture;
-    private of rectangleThresholdProgram;
-    private of compositeProgram;
-    private of blurProgram;
-    private of thresholdProgram;
+    private LegacyOpenGlShaderProgram rectangleThresholdProgram;
+    private LegacyOpenGlShaderProgram compositeProgram;
+    private LegacyOpenGlShaderProgram blurProgram;
+    private LegacyOpenGlShaderProgram thresholdProgram;
     private OpenGlTexture2D bloomTexture;
     private OpenGlTexture2D[] downsampleTextures;
 
@@ -240,7 +240,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
                 this.toolkit.pushFramebuffer((byte) -124, (OpenGlFramebufferBinding) (this.bloomFramebuffer));
                 this.bloomFramebuffer.setDrawBuffer(0, 0);
                 jaggl.OpenGL.glViewport(0, 0, 256, 256);
-                var8 = this.thresholdProgram.field_c;
+                var8 = this.thresholdProgram.handle;
                 jaggl.OpenGL.glUseProgramObjectARB(var8);
                 jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "sceneTex"), 0);
                 jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "params"), SetShipPersistence.field_o, 0.0f, 0.0f);
@@ -263,7 +263,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
             this.toolkit.pushFramebuffer((byte) -109, (OpenGlFramebufferBinding) (this.bloomFramebuffer));
             this.bloomFramebuffer.setDrawBuffer(0, 0);
             jaggl.OpenGL.glViewport(0, 0, 256, 256);
-            var5_long = this.rectangleThresholdProgram.field_c;
+            var5_long = this.rectangleThresholdProgram.handle;
             jaggl.OpenGL.glUseProgramObjectARB(var5_long);
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "sceneTex"), 0);
             jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_long, "params"), SetShipPersistence.field_o, 0.0f, 0.0f);
@@ -280,7 +280,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           }
           this.bloomFramebuffer.setDrawBuffer(0, 1);
           this.toolkit.bindTexture(param1 + 3097, this.bloomTexture);
-          var5_longLifetime1 = this.blurProgram.field_c;
+          var5_longLifetime1 = this.blurProgram.handle;
           jaggl.OpenGL.glUseProgramObjectARB(var5_longLifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "baseTex"), 0);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "step"), 0.00390625f, 0.0f, 0.0f);
@@ -311,7 +311,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           jaggl.OpenGL.glPopMatrix();
           jaggl.OpenGL.glMatrixMode(5888);
           this.toolkit.popFramebuffer(this.bloomFramebuffer, 2896);
-          var7 = this.compositeProgram.field_c;
+          var7 = this.compositeProgram.handle;
           if (param1 != -3009) {
             return;
           }
@@ -450,10 +450,10 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
             return false;
           }
           this.toolkit.popFramebuffer(this.bloomFramebuffer, 2896);
-          this.rectangleThresholdProgram = GetTorpedoAcceleration.a(new ts[]{ShipFactory.a(35632, this.toolkit, 18753, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")}, (byte) 107, this.toolkit);
-          this.thresholdProgram = GetTorpedoAcceleration.a(new ts[]{ShipFactory.a(35632, this.toolkit, 18753, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")}, (byte) 107, this.toolkit);
-          this.compositeProgram = GetTorpedoAcceleration.a(new ts[]{ShipFactory.a(35632, this.toolkit, 18753, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")}, (byte) 107, this.toolkit);
-          this.blurProgram = GetTorpedoAcceleration.a(new ts[]{ShipFactory.a(35632, this.toolkit, 18753, "uniform vec3 step;\nuniform sampler2D baseTex;\nvoid main() {\n\tvec4 fragCol = texture2D(baseTex, gl_TexCoord[0].xy)*0.091396265;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-8.0*step.xy))*0.012369139;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 8.0*step.xy))*0.012369139;\n\tgl_FragColor = fragCol;\n}\n")}, (byte) 107, this.toolkit);
+          this.rectangleThresholdProgram = GetTorpedoAcceleration.linkLegacyOpenGlProgram(new LegacyOpenGlShader[]{ShipFactory.compileLegacyOpenGlShader(35632, this.toolkit, 18753, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")}, (byte) 107, this.toolkit);
+          this.thresholdProgram = GetTorpedoAcceleration.linkLegacyOpenGlProgram(new LegacyOpenGlShader[]{ShipFactory.compileLegacyOpenGlShader(35632, this.toolkit, 18753, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")}, (byte) 107, this.toolkit);
+          this.compositeProgram = GetTorpedoAcceleration.linkLegacyOpenGlProgram(new LegacyOpenGlShader[]{ShipFactory.compileLegacyOpenGlShader(35632, this.toolkit, 18753, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")}, (byte) 107, this.toolkit);
+          this.blurProgram = GetTorpedoAcceleration.linkLegacyOpenGlProgram(new LegacyOpenGlShader[]{ShipFactory.compileLegacyOpenGlShader(35632, this.toolkit, 18753, "uniform vec3 step;\nuniform sampler2D baseTex;\nvoid main() {\n\tvec4 fragCol = texture2D(baseTex, gl_TexCoord[0].xy)*0.091396265;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 1.0*step.xy))*0.088584304;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 2.0*step.xy))*0.08065692;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 3.0*step.xy))*0.068989515;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 4.0*step.xy))*0.055434637;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 5.0*step.xy))*0.04184426;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 6.0*step.xy))*0.029672023;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 7.0*step.xy))*0.019765828;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+(-8.0*step.xy))*0.012369139;\n\tfragCol += texture2D(baseTex, gl_TexCoord[0].xy+( 8.0*step.xy))*0.012369139;\n\tgl_FragColor = fragCol;\n}\n")}, (byte) 107, this.toolkit);
           stackIn_12_0 = (null != this.thresholdProgram) && (null != this.rectangleThresholdProgram) && (this.compositeProgram != null) && (null != this.blurProgram);
           return stackIn_12_0;
         }

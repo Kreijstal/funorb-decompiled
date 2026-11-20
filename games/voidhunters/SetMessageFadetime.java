@@ -65,7 +65,7 @@ final class SetMessageFadetime extends ConsoleCommand {
                 param0 = GetTorqueDownshift.field_p;
               }
               param2 = 2;
-              SetAiFiringRangeUpshift.field_o.a((byte) 9, qsb.field_d);
+              SetAiFiringRangeUpshift.field_o.a((byte) 9, ToggleShieldsOrderDefinition.field_d);
             }
             if (param2 == 10) {
               Nebula.a(92);

@@ -82,7 +82,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         var1 = SetClientSideDragging.field_p;
         if (var1 > 0) {
           if (var1 == 1) {
-            EnvironmentReflectionGpuMaterialEffect.field_j = nnb.field_d;
+            EnvironmentReflectionGpuMaterialEffect.field_j = ArmSelfDestructOrderDefinition.field_d;
           } else {
             EnvironmentReflectionGpuMaterialEffect.field_j = SetReverbGain.a(OpenGlVertexDeclaration.field_g, new String[]{Integer.toString(var1)}, 119);
           }

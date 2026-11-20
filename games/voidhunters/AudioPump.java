@@ -79,7 +79,7 @@ final class AudioPump implements Runnable {
               }
               BufferedFile.sleep(-106, 10L);
               var5 = (Object) null;
-              ts.a((byte) 97, this.platform, (Object) null);
+              LegacyOpenGlShader.pumpEventQueue((byte) 97, this.platform, (Object) null);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

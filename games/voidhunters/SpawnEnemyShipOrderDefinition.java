@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pva extends uj {
+final class SpawnEnemyShipOrderDefinition extends SpecialOrderDefinition {
     static Widget field_d;
     static String field_e;
     static String field_f;
     static int field_g;
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           return -73;
         }
         return GetMomentOfInertiaPredivideDownshift.field_r;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           field_g = 34;
           return true;
@@ -22,7 +22,7 @@ final class pva extends uj {
         return true;
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 <= 79) {
           field_d = (Widget) null;
           return 109;
@@ -30,7 +30,7 @@ final class pva extends uj {
         return 109;
     }
 
-    final boolean c(byte param0) {
+    final boolean hidesReadyCount(byte param0) {
         if (param0 > -104) {
           field_g = -68;
           return true;
@@ -50,15 +50,15 @@ final class pva extends uj {
         field_d = null;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
-          this.c((byte) -72);
+          this.hidesReadyCount((byte) -72);
           return Particle.field_t;
         }
         return Particle.field_t;
     }
 
-    pva() {
+    SpawnEnemyShipOrderDefinition() {
     }
 
     static {

@@ -58,12 +58,12 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
           if (dw.field_c == SetShipTeamAction.field_b) {
             return GetBombletSprayPushMultiplier.field_p.b(4);
           }
-          return qsb.field_d;
+          return ToggleShieldsOrderDefinition.field_d;
         }
         if (dw.field_c == SetShipTeamAction.field_b) {
           return GetBombletSprayPushMultiplier.field_p.b(4);
         }
-        return qsb.field_d;
+        return ToggleShieldsOrderDefinition.field_d;
     }
 
     static {

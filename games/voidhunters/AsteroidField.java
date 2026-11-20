@@ -885,7 +885,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime87 = HuffmanCodec.fetchLocalizedResource((byte) -106, "mouse_wheel_shortname");
           if (var2Lifetime87 != null) {
-            uw.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime87);
+            FireBoostersOrderDefinition.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime87);
           }
           var2Lifetime88 = HuffmanCodec.fetchLocalizedResource((byte) -105, "options");
           if (var2Lifetime88 != null) {
@@ -1641,7 +1641,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime276 = HuffmanCodec.fetchLocalizedResource((byte) -39, "win_plural");
           if (var2Lifetime276 != null) {
-            uj.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime276);
+            SpecialOrderDefinition.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime276);
           }
           var2Lifetime277 = HuffmanCodec.fetchLocalizedResource((byte) -71, "draw_round_message");
           if (var2Lifetime277 != null) {

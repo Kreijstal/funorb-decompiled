@@ -76,12 +76,12 @@ final class LoadBlackboxRecording extends ConsoleCommand {
           if (!GetBombletSprayPushMultiplier.field_p.a(4)) {
             return SetCountermeasureLauncherAimarc.field_q;
           }
-          return qsb.field_d;
+          return ToggleShieldsOrderDefinition.field_d;
         }
         if (!GetBombletSprayPushMultiplier.field_p.a(4)) {
           return SetCountermeasureLauncherAimarc.field_q;
         }
-        return qsb.field_d;
+        return ToggleShieldsOrderDefinition.field_d;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

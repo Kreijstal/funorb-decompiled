@@ -688,7 +688,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(var3 < SetCountermeasureLauncherAimspeed.field_p)) {
                       this.renderFrame((byte) -5);
-                      ts.a((byte) 61, SetTorpedoProjectiles.field_o, igb.field_a);
+                      LegacyOpenGlShader.pumpEventQueue((byte) 61, SetTorpedoProjectiles.field_o, igb.field_a);
                       break;
                     }
                     this.runGameTick((byte) -83);

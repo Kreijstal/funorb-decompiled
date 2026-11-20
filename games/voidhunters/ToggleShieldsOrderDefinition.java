@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qsb extends uj {
+final class ToggleShieldsOrderDefinition extends SpecialOrderDefinition {
     static String field_d;
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           field_d = (String) null;
           return false;
@@ -12,9 +12,9 @@ final class qsb extends uj {
         return false;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
-          qsb.clearSharedReferences(87);
+          ToggleShieldsOrderDefinition.clearSharedReferences(87);
           return Particle.field_w;
         }
         return Particle.field_w;
@@ -22,24 +22,24 @@ final class qsb extends uj {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 104) {
-          qsb.clearSharedReferences(122);
+          ToggleShieldsOrderDefinition.clearSharedReferences(122);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    qsb() {
+    ToggleShieldsOrderDefinition() {
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 < 79) {
           return -118;
         }
         return 104;
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           field_d = (String) null;
           return GetSpinningBladeAimarc.field_r;

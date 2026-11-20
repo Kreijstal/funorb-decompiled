@@ -237,15 +237,15 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var6 = 0;
         String var7 = null;
         try {
-          nfa.field_e[0] = CountermeasureLauncherWeaponDefinition.field_b.nextInt();
-          nfa.field_e[1] = CountermeasureLauncherWeaponDefinition.field_b.nextInt();
-          nfa.field_e[2] = (int)(SetMissileLauncherRandomness.field_p >> 32);
+          FireGrapplesOrderDefinition.field_e[0] = CountermeasureLauncherWeaponDefinition.field_b.nextInt();
+          FireGrapplesOrderDefinition.field_e[1] = CountermeasureLauncherWeaponDefinition.field_b.nextInt();
+          FireGrapplesOrderDefinition.field_e[2] = (int)(SetMissileLauncherRandomness.field_p >> 32);
           SetTorpedoAcceleration.field_p.position = 0;
-          nfa.field_e[3] = (int)SetMissileLauncherRandomness.field_p;
-          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[0], 332614536);
-          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[1], 332614536);
-          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[2], 332614536);
-          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[3], 332614536);
+          FireGrapplesOrderDefinition.field_e[3] = (int)SetMissileLauncherRandomness.field_p;
+          SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[0], 332614536);
+          SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[1], 332614536);
+          SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[2], 332614536);
+          SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[3], 332614536);
           GetMissilesTopSpeed.a((byte) -91, SetTorpedoAcceleration.field_p);
           SetTorpedoAcceleration.field_p.writeShort(param4, true);
           param3.a(SetTorpedoAcceleration.field_p, -26216);

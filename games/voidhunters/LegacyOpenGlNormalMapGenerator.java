@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk {
-    private of field_a;
-    private OpenGlToolkit field_b;
+final class LegacyOpenGlNormalMapGenerator {
+    private LegacyOpenGlShaderProgram program;
+    private OpenGlToolkit toolkit;
 
-    final boolean a(int param0) {
+    final boolean ensureProgram(int param0) {
         int var2 = 69 / ((38 - param0) / 41);
-        if (!this.field_b.field_U) {
-          return null != this.field_a ? true : false;
+        if (!this.toolkit.field_U) {
+          return null != this.program ? true : false;
         }
-        if (!this.field_b.field_B) {
-          return null != this.field_a ? true : false;
+        if (!this.toolkit.field_B) {
+          return null != this.program ? true : false;
         }
-        if (this.field_a != null) {
-          return null != this.field_a ? true : false;
+        if (this.program != null) {
+          return null != this.program ? true : false;
         }
-        ts var3 = ShipFactory.a(35632, this.field_b, 18753, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
+        LegacyOpenGlShader var3 = ShipFactory.compileLegacyOpenGlShader(35632, this.toolkit, 18753, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n");
         if (var3 == null) {
-          return null != this.field_a ? true : false;
+          return null != this.program ? true : false;
         }
-        this.field_a = GetTorpedoAcceleration.a(new ts[]{var3}, (byte) 107, this.field_b);
-        return null != this.field_a ? true : false;
+        this.program = GetTorpedoAcceleration.linkLegacyOpenGlProgram(new LegacyOpenGlShader[]{var3}, (byte) 107, this.toolkit);
+        return null != this.program ? true : false;
     }
 
-    final boolean a(float param0, int param1, OpenGlTexture3D param2, OpenGlTexture3D param3) {
+    final boolean generateNormalMap(float param0, int param1, OpenGlTexture3D param2, OpenGlTexture3D param3) {
         int var8 = 0;
         RuntimeException var5 = null;
         OpenGlRenderbuffer var6 = null;
@@ -42,12 +42,12 @@ final class nk {
         RuntimeException decompiledCaughtException = null;
         var10 = VoidHunters.field_G;
         try {
-          if (!this.a(param1 ^ -28207)) {
+          if (!this.ensureProgram(param1 ^ -28207)) {
             return false;
           }
-          var12 = this.field_b.field_pb;
-          var6 = new OpenGlRenderbuffer(this.field_b, 6408, param3.width, param3.height);
-          this.field_b.pushFramebuffer((byte) -121, (OpenGlFramebufferBinding) (var12));
+          var12 = this.toolkit.field_pb;
+          var6 = new OpenGlRenderbuffer(this.toolkit, 6408, param3.width, param3.height);
+          this.toolkit.pushFramebuffer((byte) -121, (OpenGlFramebufferBinding) (var12));
           var7 = 0;
           var12.attachRenderbuffer(0, var6, (byte) -20);
           if (var12.isComplete(120)) {
@@ -59,13 +59,13 @@ final class nk {
             jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
             jaggl.OpenGL.glPushAttrib(2048);
             jaggl.OpenGL.glViewport(0, 0, param3.width, param3.height);
-            jaggl.OpenGL.glUseProgramObjectARB(this.field_a.field_c);
-            jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_a.field_c, "heightMap"), 0);
-            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_a.field_c, "rcpRelief"), 1.0f / param0);
-            jaggl.OpenGL.glUniform2fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_a.field_c, "sampleSize"), 1.0f / (float)param2.width, 1.0f / (float)param2.height);
+            jaggl.OpenGL.glUseProgramObjectARB(this.program.handle);
+            jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(this.program.handle, "heightMap"), 0);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(this.program.handle, "rcpRelief"), 1.0f / param0);
+            jaggl.OpenGL.glUniform2fARB(jaggl.OpenGL.glGetUniformLocationARB(this.program.handle, "sampleSize"), 1.0f / (float)param2.width, 1.0f / (float)param2.height);
             for (var8 = 0; param3.depth > var8; var8++) {
               var9 = (float)var8 / (float)param3.depth;
-              this.field_b.bindTexture(param1 ^ -28269, param2);
+              this.toolkit.bindTexture(param1 ^ -28269, param2);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord3f(0.0f, 0.0f, var9);
               jaggl.OpenGL.glVertex2f(0.0f, 0.0f);
@@ -88,9 +88,9 @@ final class nk {
           var12.detachAttachment(0, (byte) -84);
           if (param1 != -28279) {
             var11 = (OpenGlTexture3D) null;
-            this.a(1.2867883443832397f, -18, (OpenGlTexture3D) null, (OpenGlTexture3D) null);
+            this.generateNormalMap(1.2867883443832397f, -18, (OpenGlTexture3D) null, (OpenGlTexture3D) null);
           }
-          this.field_b.popFramebuffer(var12, 2896);
+          this.toolkit.popFramebuffer(var12, 2896);
           stackIn_13_0 = var7;
           return stackIn_13_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,9 +113,9 @@ final class nk {
         }
     }
 
-    nk(OpenGlToolkit param0) {
+    LegacyOpenGlNormalMapGenerator(OpenGlToolkit param0) {
         try {
-          this.field_b = param0;
+          this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -1,57 +1,57 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends uj {
-    final int a(int param0) {
+final class ToggleRepairModeOrderDefinition extends SpecialOrderDefinition {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           return -91;
         }
         return SetSelfDestructActivateCooldown.field_o;
     }
 
-    final boolean c(byte param0) {
+    final boolean hidesReadyCount(byte param0) {
         if (param0 >= -104) {
           return false;
         }
         return true;
     }
 
-    final int b(int param0) {
+    final int getActiveDuration(int param0) {
         if (param0 != -25131) {
-          this.b(-64);
+          this.getActiveDuration(-64);
           return 256;
         }
         return 256;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           return false;
         }
         return false;
     }
 
-    final boolean c(int param0) {
+    final boolean allowsActivationWithoutReadyComponents(int param0) {
         if (param0 <= 63) {
-          this.d((byte) 110);
+          this.getCooldown((byte) 110);
           return true;
         }
         return true;
     }
 
-    gb() {
+    ToggleRepairModeOrderDefinition() {
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 <= 79) {
           return 89;
         }
         return 102;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
-          this.c(42);
+          this.allowsActivationWithoutReadyComponents(42);
           return 1;
         }
         return 1;

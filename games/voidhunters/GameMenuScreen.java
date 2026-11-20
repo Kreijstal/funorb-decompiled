@@ -350,7 +350,7 @@ final class GameMenuScreen {
           }
           var26 = stackIn_91_0;
           if (var21 == 1) {
-            fpa.a(var25, ct.a(19143, 131) + var25, true, var17 + var26, var17);
+            SaveShipDesignOrderDefinition.a(var25, ct.a(19143, 131) + var25, true, var17 + var26, var17);
             PlayerActionFactory.a(132, var17, (byte) 122, var25);
             GetMissionTerrainSpaceProbability.a(126);
           }

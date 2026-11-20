@@ -86,7 +86,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
         RuntimeException var2 = null;
         rjb var7 = null;
         krb var9 = null;
-        nk var11 = null;
+        LegacyOpenGlNormalMapGenerator var11 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -106,7 +106,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
             ScrollBarWidget.field_vb = EscapePodFactory.storeBytes(false, var20, -12445);
           }
           var11 = param0.field_yb;
-          if (var11.a(param1 + 77) &&
+          if (var11.ensureProgram(param1 + 77) &&
             null == SetPhasedEnergyBeamProjectileOndamageParticles.field_o) {
             var21 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 80, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
             SetPhasedEnergyBeamProjectileOndamageParticles.field_o = EscapePodFactory.storeBytes(false, var21, param1 - 12461);

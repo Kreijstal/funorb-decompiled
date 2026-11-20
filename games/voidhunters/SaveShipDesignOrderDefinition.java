@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fpa extends uj {
+final class SaveShipDesignOrderDefinition extends SpecialOrderDefinition {
     static String field_d;
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           return -25;
         }
         return Particle.field_t;
     }
 
-    final boolean c(byte param0) {
+    final boolean hidesReadyCount(byte param0) {
         if (param0 >= -104) {
-          this.c((byte) -63);
+          this.hidesReadyCount((byte) -63);
           return true;
         }
         return true;
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 < 79) {
           field_d = (String) null;
           return 110;
@@ -27,41 +27,41 @@ final class fpa extends uj {
         return 110;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
-          fpa.a(68, 42, true, -12, 65);
+          SaveShipDesignOrderDefinition.a(68, 42, true, -12, 65);
           return false;
         }
         return false;
     }
 
-    final int b(int param0) {
+    final int getActiveDuration(int param0) {
         if (param0 != -25131) {
           return 46;
         }
         return 256;
     }
 
-    fpa() {
+    SaveShipDesignOrderDefinition() {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         if (OpenGlTexture1D.field_i) {
           feb.a(GetDebrisGroupColour.field_r, true).a(param4, param3, param0, param1, (byte) -45);
           if (!param2) {
-            fpa.a(117, -125, true, -70, 61);
+            SaveShipDesignOrderDefinition.a(117, -125, true, -70, 61);
             return;
           }
           return;
         }
         SelectableIconLabelWidget.pushClip(param3, param1, param4, true, param0);
         if (!param2) {
-          fpa.a(117, -125, true, -70, 61);
+          SaveShipDesignOrderDefinition.a(117, -125, true, -70, 61);
           return;
         }
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           return 67;
         }
@@ -70,7 +70,7 @@ final class fpa extends uj {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 110) {
-          fpa.clearSharedReferences(-110);
+          SaveShipDesignOrderDefinition.clearSharedReferences(-110);
           field_d = null;
           return;
         }

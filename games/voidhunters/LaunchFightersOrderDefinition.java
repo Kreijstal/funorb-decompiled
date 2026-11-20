@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vdb extends uj {
+final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
     static int field_d;
 
-    vdb() {
+    LaunchFightersOrderDefinition() {
     }
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
@@ -14,15 +14,15 @@ final class vdb extends uj {
         return ul.a(param0, param1, 1, param3, true);
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 <= 79) {
-          this.d((byte) -127);
+          this.getCooldown((byte) -127);
           return 107;
         }
         return 107;
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           field_d = 30;
           return SetPedrosRepairMode.field_p;
@@ -30,7 +30,7 @@ final class vdb extends uj {
         return SetPedrosRepairMode.field_p;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           field_d = -94;
           return MapClearanceRectangleFactory.field_b;
@@ -38,7 +38,7 @@ final class vdb extends uj {
         return MapClearanceRectangleFactory.field_b;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           field_d = -16;
           return false;

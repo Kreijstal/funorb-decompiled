@@ -3,7 +3,7 @@
  */
 class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
     int field_k;
-    static uj[] field_i;
+    static SpecialOrderDefinition[] specialOrderDefinitions;
     static String field_l;
     static int field_j;
     static int field_m;
@@ -188,7 +188,7 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
 
     public static void clearSharedReferences(int param0) {
         field_l = null;
-        field_i = null;
+        specialOrderDefinitions = null;
         int var1 = -58 % ((-48 - param0) / 44);
     }
 

@@ -50,9 +50,9 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
         if (param1 != 71) {
           return;
         }
-        kib.field_d = 3 & param0 >> 4;
-        if (kib.field_d > 2) {
-          kib.field_d = 2;
+        ActivateSelfDestructOrderDefinition.field_d = 3 & param0 >> 4;
+        if (ActivateSelfDestructOrderDefinition.field_d > 2) {
+          ActivateSelfDestructOrderDefinition.field_d = 2;
           GetThrusterSmallForce.field_p = (13 & param0) >> 2;
           lla.field_h = param0 & 3;
           if (GetThrusterSmallForce.field_p <= 2) {

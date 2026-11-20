@@ -115,7 +115,7 @@ final class GetMessageMaxage extends ConsoleCommand {
           }
           var6 = stackIn_4_0;
           if (ft.field_t == 0) {
-            var7 = MatchResultsFactory.a(480, rea.field_e, 0, var11, GetUsePolygonFill.field_p);
+            var7 = MatchResultsFactory.a(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);
             var8 = 3 + var7;
             GetSniperCannonProjectiles.field_o = new int[var8];
             GetWorldWidthUpshift.field_o = new String[var8];
@@ -124,7 +124,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             }
             PlayerGameData.field_e = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              GetWorldWidthUpshift.field_o[var9] = rea.field_e[var9];
+              GetWorldWidthUpshift.field_o[var9] = RecallGrapplesOrderDefinition.field_e[var9];
             }
             GetWorldWidthUpshift.field_o[-3 + var8] = "";
             GetWorldWidthUpshift.field_o[var8 - 2] = var6;
@@ -137,7 +137,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             if (ft.field_t != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = MatchResultsFactory.a(480, rea.field_e, 0, var11, GetUsePolygonFill.field_p);
+            var7 = MatchResultsFactory.a(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);
             var8 = var7 + 2;
             GetSniperCannonProjectiles.field_o = new int[var8];
             GetWorldWidthUpshift.field_o = new String[var8];
@@ -146,7 +146,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             }
             PlayerGameData.field_e = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
-              GetWorldWidthUpshift.field_o[var9] = rea.field_e[var9];
+              GetWorldWidthUpshift.field_o[var9] = RecallGrapplesOrderDefinition.field_e[var9];
             }
             GetWorldWidthUpshift.field_o[-2 + var8] = "";
             GetWorldWidthUpshift.field_o[-1 + var8] = MissionCondition.field_b;
@@ -172,7 +172,7 @@ final class GetMessageMaxage extends ConsoleCommand {
           }
           GetMissionTerrainAsteroidProbability.field_p = -(var7Lifetime1 >> 1) + var7Lifetime1 + alb.field_b;
           ShieldBehaviour.field_d = alb.field_b - (var7Lifetime1 >> 1);
-          ot.field_b = (SetPointDefenceLaserAimarc.field_q + pva.field_g << 1) * ei.field_c.itemCount;
+          ot.field_b = (SetPointDefenceLaserAimarc.field_q + SpawnEnemyShipOrderDefinition.field_g << 1) * ei.field_c.itemCount;
           for (var8Lifetime2 = 0; GetWorldWidthUpshift.field_o.length > var8Lifetime2; var8Lifetime2++) {
             stackIn_40_0 = ot.field_b;
             if (GetSniperCannonProjectiles.field_o[var8Lifetime2] >= 0) {

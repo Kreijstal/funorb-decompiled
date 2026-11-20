@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mcb extends uj {
-    final boolean a(boolean param0) {
+final class FireMissilesOrderDefinition extends SpecialOrderDefinition {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           return true;
         }
         return true;
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
-          mcb.a(-124, -42);
+          FireMissilesOrderDefinition.a(-124, -42);
           return Particle.field_m;
         }
         return Particle.field_m;
     }
 
-    mcb() {
+    FireMissilesOrderDefinition() {
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 < 79) {
-          this.a(false);
+          this.requiresPrimaryPress(false);
           return 105;
         }
         return 105;
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           return -6;
         }

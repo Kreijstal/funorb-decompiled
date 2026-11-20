@@ -197,7 +197,7 @@ final class bd {
           jba.field_h = new Widget(0L, GetShieldsDirectionalArc.field_o);
           GrappleLauncherBehaviourFactory.field_a = new Widget(0L, GetShieldsDirectionalArc.field_o);
           SetPlayerRepairAmount.field_q = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
-          pva.field_d = new Widget(0L, GetShieldsDirectionalArc.field_o);
+          SpawnEnemyShipOrderDefinition.field_d = new Widget(0L, GetShieldsDirectionalArc.field_o);
           TargetLockFactory.field_a = new Widget(0L, GetShieldsDirectionalArc.field_o);
           UiComboBoxList.field_M = new Widget(0L, GetShieldsDirectionalArc.field_o);
           GetShieldsDirectionalArc.field_o.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "smallbutton"), (byte) 36);
@@ -229,11 +229,11 @@ final class bd {
           UiComboBoxList.field_M.field_nb = dupTemp$1;
           UiComboBoxList.field_M.field_A = dupTemp$1;
           UiComboBoxList.field_M.field_ub = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "gameoptionbutton_disabled"), (byte) -85);
-          pva.field_d.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatbutton"), (byte) 54);
-          pva.field_d.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatbutton_mouseover"), (byte) -54);
+          SpawnEnemyShipOrderDefinition.field_d.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatbutton"), (byte) 54);
+          SpawnEnemyShipOrderDefinition.field_d.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatbutton_mouseover"), (byte) -54);
           dupTemp$2 = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatbutton_active"), (byte) -66);
-          pva.field_d.field_nb = dupTemp$2;
-          pva.field_d.field_A = dupTemp$2;
+          SpawnEnemyShipOrderDefinition.field_d.field_nb = dupTemp$2;
+          SpawnEnemyShipOrderDefinition.field_d.field_A = dupTemp$2;
           TargetLockFactory.field_a.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton"), (byte) 123);
           TargetLockFactory.field_a.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton_mouseover"), (byte) 21);
           dupTemp$3 = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton_active"), (byte) 45);

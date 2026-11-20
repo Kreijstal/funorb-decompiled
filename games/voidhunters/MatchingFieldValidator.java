@@ -3,7 +3,7 @@
  */
 final class MatchingFieldValidator extends TextFieldValidator {
     static int field_k;
-    static goa field_i;
+    static ProgressDialog field_i;
     static String field_f;
     static GameSession field_g;
     static String field_j;

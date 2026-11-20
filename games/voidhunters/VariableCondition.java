@@ -242,7 +242,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
             }
             return;
           }
-          HighscoreValueRequest.field_g[10] = MatchingFieldValidator.field_g.field_h ? pva.field_e : SettingsChangeFactory.field_d;
+          HighscoreValueRequest.field_g[10] = MatchingFieldValidator.field_g.field_h ? SpawnEnemyShipOrderDefinition.field_e : SettingsChangeFactory.field_d;
           if (param0 <= -76) {
             return;
           }

@@ -39,7 +39,7 @@ final class LegacyOpenGlWaterTextures {
         int var2_int = 0;
         RuntimeException var2 = null;
         OpenGlTexture3D var4 = null;
-        nk var10 = null;
+        LegacyOpenGlNormalMapGenerator var10 = null;
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
@@ -72,11 +72,11 @@ final class LegacyOpenGlWaterTextures {
           var21 = ffb.extractBytes(false, ScrollBarWidget.field_vb, true);
           this.scrollingNoiseVolume = new OpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_yb;
-          if (var10.a(92)) {
+          if (var10.ensureProgram(92)) {
             var22 = ffb.extractBytes(false, SetPhasedEnergyBeamProjectileOndamageParticles.field_o, true);
             this.normalVolume = new OpenGlTexture3D(param0, 6408, 128, 128, 16);
             var4 = new OpenGlTexture3D(param0, 6409, 128, 128, 16, var22, 6409);
-            if (var10.a(2.0f, -28279, var4, this.normalVolume)) {
+            if (var10.generateNormalMap(2.0f, -28279, var4, this.normalVolume)) {
               this.normalVolume.generateMipmaps(9729);
               var4.dispose(0);
               return;

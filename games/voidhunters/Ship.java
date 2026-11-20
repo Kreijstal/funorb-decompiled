@@ -200,7 +200,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         if (this.shieldsToggleCooldown > 0) {
         } else {
           this.shieldsOn = !this.shieldsOn ? true : false;
-          this.shieldsToggleCooldown = CarouselPlayerEvent.field_i[3].d((byte) 64);
+          this.shieldsToggleCooldown = CarouselPlayerEvent.specialOrderDefinitions[3].getCooldown((byte) 64);
           this.onStateChanged((byte) 39);
           if (!this.shieldsOn) {
             BlendTextureOperation.a(20382, this.getX(false), 25, this.getY((byte) -3), 50);
@@ -640,7 +640,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           if (this.field_D) {
             this.field_D = false;
           }
-          if (vdb.field_d <= this.reloadtimer) {
+          if (LaunchFightersOrderDefinition.field_d <= this.reloadtimer) {
             this.reloadtimer = 0;
             this.energy = this.getMaxEnergy(true);
           }
@@ -873,7 +873,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           return this.selfDestructActivated;
         }
         if (GetFightersPerPlayerMaximum.field_p != 1) {
-          stackIn_7_0 = !(this.repairModeReload <= CarouselPlayerEvent.field_i[4].d((byte) 64));
+          stackIn_7_0 = !(this.repairModeReload <= CarouselPlayerEvent.specialOrderDefinitions[4].getCooldown((byte) 64));
           return stackIn_7_0;
         }
         stackIn_13_0 = (this.repairModeOn) || !(this.repairModeReload <= 0);
@@ -1034,7 +1034,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         if (param0 != -64) {
           return 120;
         }
-        return this.reloadtimer * 255 / Math.max(vdb.field_d, 1);
+        return this.reloadtimer * 255 / Math.max(LaunchFightersOrderDefinition.field_d, 1);
     }
 
     final int getEnergyProgress(int param0) {
@@ -1141,19 +1141,19 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        uj var7 = null;
-        uj var8 = null;
-        uj var8Lifetime1;
-        uj var8Lifetime2;
+        SpecialOrderDefinition var7 = null;
+        SpecialOrderDefinition var8 = null;
+        SpecialOrderDefinition var8Lifetime1;
+        SpecialOrderDefinition var8Lifetime2;
         try {
           super.activateSpecialOrder(-53, param1, param2, param3, param4);
           if (param1 == 4) {
             if (GetFightersPerPlayerMaximum.field_p != 1) {
               if (this.repairModeReload <= 0) {
-                var7 = CarouselPlayerEvent.field_i[4];
+                var7 = CarouselPlayerEvent.specialOrderDefinitions[4];
                 var8 = var7;
                 var8Lifetime2 = var7;
-                this.repairModeReload = var7.d((byte) 64) + var7.b(-25131);
+                this.repairModeReload = var7.getCooldown((byte) 64) + var7.getActiveDuration(-25131);
               }
             } else {
               stackIn_6_1 = !(this.repairModeOn);
@@ -1170,8 +1170,8 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             this.selfDestructPrepared &&
             !this.selfDestructActivated) {
             this.selfDestructActivated = true;
-            var8Lifetime1 = CarouselPlayerEvent.field_i[9];
-            this.selfDestructCountdown = var8Lifetime1.d((byte) 64) + var8Lifetime1.b(-25131);
+            var8Lifetime1 = CarouselPlayerEvent.specialOrderDefinitions[9];
+            this.selfDestructCountdown = var8Lifetime1.getCooldown((byte) 64) + var8Lifetime1.getActiveDuration(-25131);
           }
           if (param0 > -36) {
             this.repairModeReload = -108;

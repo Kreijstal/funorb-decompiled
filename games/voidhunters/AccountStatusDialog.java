@@ -3,7 +3,7 @@
  */
 class AccountStatusDialog extends ContentTransitionDialog implements UiActionListener {
     private boolean field_V;
-    private ttb field_R;
+    private StripedProgressBar field_R;
     private BitmapFont field_T;
     private boolean field_S;
     private boolean field_W;
@@ -44,8 +44,8 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
           this.field_U = param4 ? true : false;
           this.field_T = param1;
           this.field_V = false;
-          this.field_R = new ttb(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_R.field_x = true;
+          this.field_R = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_R.animateStripes = true;
           this.addChild(-18756, this.field_R);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "os.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -54,7 +54,7 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
 
     final void showConnectionRestored(int param0) {
         int var2 = 102 % ((param0 - 24) / 59);
-        this.field_R.b(2121792, -21202, 4210752);
+        this.field_R.setColors(2121792, -21202, 4210752);
         DialogMessagePanel var3 = new DialogMessagePanel(this, this.field_T, GetPointDefenceLaserAimarc.field_o);
         var3.addButton(-123, DialogMessagePanel.field_D, 15);
         this.transitionToContent(var3, -53);
@@ -148,7 +148,7 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
           this.field_V = stackIn_7_1;
           stackIn_10_1 = (param0);
           this.field_S = stackIn_10_1;
-          this.field_R.b(8405024, -21202, 4210752);
+          this.field_R.setColors(8405024, -21202, 4210752);
           var6 = new DialogMessagePanel(this, this.field_T, param1);
           var4 = var6;
           if (param2 == 5) {

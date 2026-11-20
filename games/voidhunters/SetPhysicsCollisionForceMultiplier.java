@@ -74,7 +74,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
           }
           return false;
         }
-        if (!CountermeasureLauncherWeaponDefinition.a(NanosecondClock.field_a, GetSniperCannonAimspeed.field_p, SetPhasedEnergyBeamPulseFadetime.field_p, rea.field_d, (byte) -93)) {
+        if (!CountermeasureLauncherWeaponDefinition.a(NanosecondClock.field_a, GetSniperCannonAimspeed.field_p, SetPhasedEnergyBeamPulseFadetime.field_p, RecallGrapplesOrderDefinition.field_d, (byte) -93)) {
           if (SetBombletSprayProjectileDamage.field_o == 10) {
             if (var3 != 0) {
               return false;
@@ -138,7 +138,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
           var3 != 0) {
           return false;
         }
-        return fia.a(GetSniperCannonAimspeed.field_p, NanosecondClock.field_a, (byte) 123, SetPhasedEnergyBeamPulseFadetime.field_p, rea.field_d);
+        return fia.a(GetSniperCannonAimspeed.field_p, NanosecondClock.field_a, (byte) 123, SetPhasedEnergyBeamPulseFadetime.field_p, RecallGrapplesOrderDefinition.field_d);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

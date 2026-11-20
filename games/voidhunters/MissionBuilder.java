@@ -3107,7 +3107,7 @@ final class MissionBuilder implements DiffableState {
                 for (var19 = 0; var18.length > var19; var19++) {
                   stackIn_24_0 = var18;
                   stackIn_24_1 = var19;
-                  if (LegacyOpenGlMaterialEffectManager.b(var19, 15923)) {
+                  if (LegacyOpenGlMaterialEffectManager.isDebrisEligibleComponentType(var19, 15923)) {
                     stackIn_25_2 = MatchResults.field_b;
                   } else {
                     stackIn_25_2 = 0;

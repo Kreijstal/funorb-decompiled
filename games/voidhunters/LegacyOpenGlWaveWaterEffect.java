@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
-    private of program;
+    private LegacyOpenGlShaderProgram program;
     private LegacyOpenGlWaterTextures waterTextures;
     private boolean active;
     static int field_e;
@@ -53,8 +53,8 @@ final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
 
     LegacyOpenGlWaveWaterEffect(OpenGlToolkit param0, LegacyOpenGlWaterTextures param1) {
         super(param0);
-        ts var5 = null;
-        ts var4 = null;
+        LegacyOpenGlShader var5 = null;
+        LegacyOpenGlShader var4 = null;
         this.active = false;
         this.supported = false;
         try {
@@ -62,10 +62,10 @@ final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
           if (this.waterTextures.normalVolume != null &&
             this.toolkit.field_bc &&
             this.toolkit.field_B) {
-            var5 = ShipFactory.a(35633, this.toolkit, 18753, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
-            ts var3 = var5;
-            var4 = ShipFactory.a(35632, this.toolkit, 18753, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform vec2 waveIntensity;\nuniform float waveExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat waveFactor = pow(1.0-shoreFactor, waveExponent)-0.5;\nwaveFactor = -4.0*waveFactor*waveFactor+1.0;\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 1.0);\nvec4 surfaceColour = mix(vec4(envColour, fresnel*shoreFactor), (waveIntensity.x*wnNormal.wwww)+waveIntensity.y, waveFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n");
-            this.program = GetTorpedoAcceleration.a(new ts[]{var5, var4}, (byte) 107, this.toolkit);
+            var5 = ShipFactory.compileLegacyOpenGlShader(35633, this.toolkit, 18753, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
+            LegacyOpenGlShader var3 = var5;
+            var4 = ShipFactory.compileLegacyOpenGlShader(35632, this.toolkit, 18753, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform vec2 waveIntensity;\nuniform float waveExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat waveFactor = pow(1.0-shoreFactor, waveExponent)-0.5;\nwaveFactor = -4.0*waveFactor*waveFactor+1.0;\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 1.0);\nvec4 surfaceColour = mix(vec4(envColour, fresnel*shoreFactor), (waveIntensity.x*wnNormal.wwww)+waveIntensity.y, waveFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n");
+            this.program = GetTorpedoAcceleration.linkLegacyOpenGlProgram(new LegacyOpenGlShader[]{var5, var4}, (byte) 107, this.toolkit);
             this.supported = null != this.program ? true : false;
           }
         } catch (RuntimeException runtimeException) {
@@ -120,7 +120,7 @@ final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
           var8 = (float)((8159859 & param2) >> 19) / 16.0f;
           var9 = (float)(param2 >> 23 & 15) / 16.0f;
           var10 = (2025808678 & param2) >> 27;
-          var11 = this.program.field_c;
+          var11 = this.program.handle;
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "time"), (float)(var4 * this.toolkit.field_Mc % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "breakWaterDepth"), (float)var6);
@@ -149,7 +149,7 @@ final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
               this.toolkit.bindTexture(54, var3);
               this.toolkit.setActiveTextureUnit(33984, 0);
               this.toolkit.bindTexture(113, this.waterTextures.normalVolume);
-              var5 = this.program.field_c;
+              var5 = this.program.handle;
               jaggl.OpenGL.glUseProgramObjectARB(var5);
               jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
               jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "envMapSampler"), 1);
@@ -171,7 +171,7 @@ final class LegacyOpenGlWaveWaterEffect extends LegacyOpenGlMaterialEffect {
           this.toolkit.bindTexture(54, var3);
           this.toolkit.setActiveTextureUnit(33984, 0);
           this.toolkit.bindTexture(113, this.waterTextures.normalVolume);
-          var5Lifetime1 = this.program.field_c;
+          var5Lifetime1 = this.program.handle;
           jaggl.OpenGL.glUseProgramObjectARB(var5Lifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5Lifetime1, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5Lifetime1, "envMapSampler"), 1);

@@ -2872,7 +2872,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                           var67.setPosition(var7, var8, (byte) 42);
                                                                                           this.addShip(var67, (byte) 83);
                                                                                         } else {
-                                                                                          if (LegacyOpenGlMaterialEffectManager.b(var10_int, 15923)) {
+                                                                                          if (LegacyOpenGlMaterialEffectManager.isDebrisEligibleComponentType(var10_int, 15923)) {
                                                                                             var63 = new ShipComponent(var10_int);
                                                                                             var65 = new Debris(var63, false);
                                                                                             var64 = new Random((long)var7);

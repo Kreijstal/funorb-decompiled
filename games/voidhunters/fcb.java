@@ -65,7 +65,7 @@ final class fcb implements oob {
         ComponentCollision.a("requesting vorbis sounds", (byte) -53);
         OpenGlGpuTexture3D.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_k);
         ComponentCollision.a("requesting patches", (byte) -112);
-        OpenGlGpuTexture3D.field_m.a(ttb.field_z, param0 ^ -2, GetMissilesCooldown.field_p, this.field_j);
+        OpenGlGpuTexture3D.field_m.a(StripedProgressBar.field_z, param0 ^ -2, GetMissilesCooldown.field_p, this.field_j);
         ComponentCollision.a("requesting midis", (byte) -113);
         OpenGlGpuTexture3D.field_m.a(GetBombletSprayProjectiles.field_o, -1, CarouselSlotFactory.field_a, this.field_h);
         ComponentCollision.a("requesting basic graphics", (byte) -108);

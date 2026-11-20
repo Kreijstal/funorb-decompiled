@@ -282,7 +282,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         var3 = var3 + this.addFieldRow(this.emailField, var3, MissionState.field_h, 170, (byte) -42);
         var3 = var3 + (5 + this.addFieldWithHelp(this.emailConfirmationField, var3, 170, qs.field_b, false, 20, ""));
         var3 = var3 + this.addFieldRow(this.passwordField, var3, RequestNewestBlackboxRecording.field_q, 170, (byte) -36);
-        var3 = var3 + (this.addFieldWithHelp(-41, OpenGlVertexNormal.field_e, 170, lg.field_d, var3, this.passwordConfirmationField) + 5);
+        var3 = var3 + (this.addFieldWithHelp(-41, OpenGlVertexNormal.field_e, 170, ScramblerPulseOrderDefinition.field_d, var3, this.passwordConfirmationField) + 5);
         var3 = var3 + (5 + this.addFieldWithHelp(-103, Projectile.field_r, 170, ffb.field_c, var3, this.usernameField));
         var3 = var3 + this.addFieldWithStatusIcon(170, this.ageField, (byte) 104, CarouselSystemEventFactory.field_a, var3);
         sca var4 = new sca(46, var3, -90 + this.width, 25, this.emailUpdatesToggle, true, this.width - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, UiComponent.field_m);

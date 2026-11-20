@@ -187,7 +187,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var22.addDirectionalForce(var16, param4, var15, joa.field_a, 1948934248);
             param10.addDirectionalForce(var16, GameKeyHandler.a(22433, param4 + 4096), var15, joa.field_a, 1948934248);
             this.hookId = var22.id;
-            this.reload = CarouselPlayerEvent.field_i[0].d((byte) 64);
+            this.reload = CarouselPlayerEvent.specialOrderDefinitions[0].getCooldown((byte) 64);
             this.targetRopeLength = this.ropeLength;
             return;
           }

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetGrapplingHookSpringConstant extends ConsoleCommand {
-    static String[] field_o;
+    static String[] specialOrderLabels;
 
     GetGrapplingHookSpringConstant(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_o = null;
+        specialOrderLabels = null;
         if (!param0) {
           GetGrapplingHookSpringConstant.clearSharedReferences(false);
         }
@@ -24,7 +24,7 @@ final class GetGrapplingHookSpringConstant extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (String[]) null;
+            specialOrderLabels = (String[]) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(200, 118));
           return stackIn_3_0;

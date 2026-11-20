@@ -78,7 +78,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
         try {
           this.resultShown = true;
           if (param2.success) {
-            var4 = uj.field_c;
+            var4 = SpecialOrderDefinition.field_c;
           } else {
             if (null == param2.suggestedNames) {
               var4 = param2.message;

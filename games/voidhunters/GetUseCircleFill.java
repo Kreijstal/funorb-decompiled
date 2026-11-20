@@ -61,9 +61,9 @@ final class GetUseCircleFill extends ConsoleCommand {
               !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
               UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
             }
-            if (uj.field_a == null ||
-              !(param1 <= uj.field_a.length)) {
-              uj.field_a = new boolean[param1 * 2];
+            if (SpecialOrderDefinition.field_a == null ||
+              !(param1 <= SpecialOrderDefinition.field_a.length)) {
+              SpecialOrderDefinition.field_a = new boolean[param1 * 2];
             }
           } else {
             if (param1 > GetMissionVariablesHudY.field_o.length) {
@@ -76,9 +76,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                 !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                 UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
               }
-              if (uj.field_a == null ||
-                !(param1 <= uj.field_a.length)) {
-                uj.field_a = new boolean[param1 * 2];
+              if (SpecialOrderDefinition.field_a == null ||
+                !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                SpecialOrderDefinition.field_a = new boolean[param1 * 2];
               }
             } else {
               if (SetRespawnTime.field_o == null) {
@@ -87,9 +87,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                   !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                   UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                 }
-                if (uj.field_a == null ||
-                  !(param1 <= uj.field_a.length)) {
-                  uj.field_a = new boolean[param1 * 2];
+                if (SpecialOrderDefinition.field_a == null ||
+                  !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                  SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                 }
               } else {
                 if (param1 > SetRespawnTime.field_o.length) {
@@ -98,28 +98,28 @@ final class GetUseCircleFill extends ConsoleCommand {
                     !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                     UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                   }
-                  if (uj.field_a == null ||
-                    !(param1 <= uj.field_a.length)) {
-                    uj.field_a = new boolean[param1 * 2];
+                  if (SpecialOrderDefinition.field_a == null ||
+                    !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                    SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                   }
                 } else {
                   if (null == UnlitGpuMaterialEffect.field_f) {
                     UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                    if (uj.field_a == null ||
-                      !(param1 <= uj.field_a.length)) {
-                      uj.field_a = new boolean[param1 * 2];
+                    if (SpecialOrderDefinition.field_a == null ||
+                      !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                      SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                     }
                   } else {
                     if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
-                      if (uj.field_a == null ||
-                        !(param1 <= uj.field_a.length)) {
-                        uj.field_a = new boolean[param1 * 2];
+                      if (SpecialOrderDefinition.field_a == null ||
+                        !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                        SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                       }
                     } else {
                       UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                      if (uj.field_a == null ||
-                        !(param1 <= uj.field_a.length)) {
-                        uj.field_a = new boolean[param1 * 2];
+                      if (SpecialOrderDefinition.field_a == null ||
+                        !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                        SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                       }
                     }
                   }
@@ -147,9 +147,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                 !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                 UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
               }
-              if (uj.field_a == null ||
-                !(param1 <= uj.field_a.length)) {
-                uj.field_a = new boolean[param1 * 2];
+              if (SpecialOrderDefinition.field_a == null ||
+                !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                SpecialOrderDefinition.field_a = new boolean[param1 * 2];
               }
             } else {
               if (param1 > GetMissionVariablesHudY.field_o.length) {
@@ -162,9 +162,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                   !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                   UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                 }
-                if (uj.field_a == null ||
-                  !(param1 <= uj.field_a.length)) {
-                  uj.field_a = new boolean[param1 * 2];
+                if (SpecialOrderDefinition.field_a == null ||
+                  !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                  SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                 }
               } else {
                 if (SetRespawnTime.field_o == null) {
@@ -173,9 +173,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                     !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                     UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                   }
-                  if (uj.field_a == null ||
-                    !(param1 <= uj.field_a.length)) {
-                    uj.field_a = new boolean[param1 * 2];
+                  if (SpecialOrderDefinition.field_a == null ||
+                    !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                    SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                   }
                 } else {
                   if (param1 > SetRespawnTime.field_o.length) {
@@ -184,28 +184,28 @@ final class GetUseCircleFill extends ConsoleCommand {
                       !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                       UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                     }
-                    if (uj.field_a == null ||
-                      !(param1 <= uj.field_a.length)) {
-                      uj.field_a = new boolean[param1 * 2];
+                    if (SpecialOrderDefinition.field_a == null ||
+                      !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                      SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                     }
                   } else {
                     if (null == UnlitGpuMaterialEffect.field_f) {
                       UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                      if (uj.field_a == null ||
-                        !(param1 <= uj.field_a.length)) {
-                        uj.field_a = new boolean[param1 * 2];
+                      if (SpecialOrderDefinition.field_a == null ||
+                        !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                        SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                       }
                     } else {
                       if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
-                        if (uj.field_a == null ||
-                          !(param1 <= uj.field_a.length)) {
-                          uj.field_a = new boolean[param1 * 2];
+                        if (SpecialOrderDefinition.field_a == null ||
+                          !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                          SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                         }
                       } else {
                         UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                        if (uj.field_a == null ||
-                          !(param1 <= uj.field_a.length)) {
-                          uj.field_a = new boolean[param1 * 2];
+                        if (SpecialOrderDefinition.field_a == null ||
+                          !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                          SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                         }
                       }
                     }
@@ -231,21 +231,21 @@ final class GetUseCircleFill extends ConsoleCommand {
               }
               if (null == UnlitGpuMaterialEffect.field_f) {
                 UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                if (uj.field_a == null ||
-                  !(param1 <= uj.field_a.length)) {
-                  uj.field_a = new boolean[param1 * 2];
+                if (SpecialOrderDefinition.field_a == null ||
+                  !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                  SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                 }
               } else {
                 if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
-                  if (uj.field_a == null ||
-                    !(param1 <= uj.field_a.length)) {
-                    uj.field_a = new boolean[param1 * 2];
+                  if (SpecialOrderDefinition.field_a == null ||
+                    !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                    SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                   }
                 } else {
                   UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                  if (uj.field_a == null ||
-                    !(param1 <= uj.field_a.length)) {
-                    uj.field_a = new boolean[param1 * 2];
+                  if (SpecialOrderDefinition.field_a == null ||
+                    !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                    SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                   }
                 }
               }
@@ -260,30 +260,30 @@ final class GetUseCircleFill extends ConsoleCommand {
                   !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
                   UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                 }
-                if (uj.field_a == null ||
-                  !(param1 <= uj.field_a.length)) {
-                  uj.field_a = new boolean[param1 * 2];
+                if (SpecialOrderDefinition.field_a == null ||
+                  !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                  SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                 }
               } else {
                 if (SetRespawnTime.field_o == null) {
                   SetRespawnTime.field_o = new int[2 * param1];
                   if (null == UnlitGpuMaterialEffect.field_f) {
                     UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                    if (uj.field_a == null ||
-                      !(param1 <= uj.field_a.length)) {
-                      uj.field_a = new boolean[param1 * 2];
+                    if (SpecialOrderDefinition.field_a == null ||
+                      !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                      SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                     }
                   } else {
                     if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
-                      if (uj.field_a == null ||
-                        !(param1 <= uj.field_a.length)) {
-                        uj.field_a = new boolean[param1 * 2];
+                      if (SpecialOrderDefinition.field_a == null ||
+                        !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                        SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                       }
                     } else {
                       UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                      if (uj.field_a == null ||
-                        !(param1 <= uj.field_a.length)) {
-                        uj.field_a = new boolean[param1 * 2];
+                      if (SpecialOrderDefinition.field_a == null ||
+                        !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                        SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                       }
                     }
                   }
@@ -291,21 +291,21 @@ final class GetUseCircleFill extends ConsoleCommand {
                   if (param1 <= SetRespawnTime.field_o.length) {
                     if (null == UnlitGpuMaterialEffect.field_f) {
                       UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                      if (uj.field_a == null ||
-                        !(param1 <= uj.field_a.length)) {
-                        uj.field_a = new boolean[param1 * 2];
+                      if (SpecialOrderDefinition.field_a == null ||
+                        !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                        SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                       }
                     } else {
                       if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
-                        if (uj.field_a == null ||
-                          !(param1 <= uj.field_a.length)) {
-                          uj.field_a = new boolean[param1 * 2];
+                        if (SpecialOrderDefinition.field_a == null ||
+                          !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                          SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                         }
                       } else {
                         UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                        if (uj.field_a == null ||
-                          !(param1 <= uj.field_a.length)) {
-                          uj.field_a = new boolean[param1 * 2];
+                        if (SpecialOrderDefinition.field_a == null ||
+                          !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                          SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                         }
                       }
                     }
@@ -313,21 +313,21 @@ final class GetUseCircleFill extends ConsoleCommand {
                     SetRespawnTime.field_o = new int[2 * param1];
                     if (null == UnlitGpuMaterialEffect.field_f) {
                       UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                      if (uj.field_a == null ||
-                        !(param1 <= uj.field_a.length)) {
-                        uj.field_a = new boolean[param1 * 2];
+                      if (SpecialOrderDefinition.field_a == null ||
+                        !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                        SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                       }
                     } else {
                       if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
-                        if (uj.field_a == null ||
-                          !(param1 <= uj.field_a.length)) {
-                          uj.field_a = new boolean[param1 * 2];
+                        if (SpecialOrderDefinition.field_a == null ||
+                          !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                          SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                         }
                       } else {
                         UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
-                        if (uj.field_a == null ||
-                          !(param1 <= uj.field_a.length)) {
-                          uj.field_a = new boolean[param1 * 2];
+                        if (SpecialOrderDefinition.field_a == null ||
+                          !(param1 <= SpecialOrderDefinition.field_a.length)) {
+                          SpecialOrderDefinition.field_a = new boolean[param1 * 2];
                         }
                       }
                     }

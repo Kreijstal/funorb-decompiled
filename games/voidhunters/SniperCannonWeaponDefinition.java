@@ -57,9 +57,9 @@ final class SniperCannonWeaponDefinition extends WeaponDefinition {
     final int getAimSpeed(int param0) {
         if (param0 != 0) {
           field_b = (dla) null;
-          return nnb.field_e;
+          return ArmSelfDestructOrderDefinition.field_e;
         }
-        return nnb.field_e;
+        return ArmSelfDestructOrderDefinition.field_e;
     }
 
     final int getProjectileVelocityRandomness(byte param0) {

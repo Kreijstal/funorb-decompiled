@@ -98,7 +98,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("ticketing_oneunread", 23100);
                 if (var2 != null) {
-                  nnb.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  ArmSelfDestructOrderDefinition.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("ticketing_xunread", 23100);
                 if (var2 != null) {
@@ -382,7 +382,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gameopt_withdraw_invite_to_x", 23100);
                 if (var2 != null) {
-                  ts.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  LegacyOpenGlShader.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gameopt_accept_x_into_game", 23100);
                 if (var2 != null) {
@@ -1400,7 +1400,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_password_confirm", 23100);
                 if (null != var2) {
-                  lg.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  ScramblerPulseOrderDefinition.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_email", 23100);
                 if (null != var2) {
@@ -1656,7 +1656,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_account_success", 23100);
                 if (var2 != null) {
-                  uj.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  SpecialOrderDefinition.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("invalid_name", 23100);
                 if (null != var2) {
@@ -1818,7 +1818,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("loading_instruments", 23100);
                 if (var2 != null) {
-                  ttb.field_z = Cp1252Strings.decode((byte) -125, var2);
+                  StripedProgressBar.field_z = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("loading_levels", 23100);
                 if (var2 != null) {
@@ -1890,7 +1890,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("music_colon", 23100);
                 if (var2 != null) {
-                  fpa.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  SaveShipDesignOrderDefinition.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fullscreen", 23100);
                 if (null != var2) {
@@ -2357,7 +2357,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_rematchnewgame_unrated", 23100);
                 if (var2 != null) {
-                  pva.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  SpawnEnemyShipOrderDefinition.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_x_wantstodraw", 23100);
                 if (null != var2) {
@@ -2517,7 +2517,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("keychar_the_character_under_questionmark", 23100);
                 if (var2 != null) {
-                  ttb.field_B = GetMassDriverEnergyUsed.a(var2[0], 76);
+                  StripedProgressBar.field_B = GetMassDriverEnergyUsed.a(var2[0], 76);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rating_noratings", 23100);
                 if (var2 != null) {
@@ -2755,15 +2755,15 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("hs_mode_name,0", 23100);
                 if (null != var2) {
-                  hka.field_d[0] = Cp1252Strings.decode((byte) -125, var2);
+                  BuildBlueprintOrderDefinition.field_d[0] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("hs_mode_name,1", 23100);
                 if (var2 != null) {
-                  hka.field_d[1] = Cp1252Strings.decode((byte) -125, var2);
+                  BuildBlueprintOrderDefinition.field_d[1] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("hs_mode_name,2", 23100);
                 if (null != var2) {
-                  hka.field_d[2] = Cp1252Strings.decode((byte) -125, var2);
+                  BuildBlueprintOrderDefinition.field_d[2] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rating_mode_name,0", 23100);
                 if (var2 != null) {

@@ -68,35 +68,35 @@ final class GetFighterRepairAmount extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
-        CarouselPlayerEvent.field_i = new uj[13];
-        CarouselPlayerEvent.field_i[0] = (uj) ((Object) new nfa());
-        CarouselPlayerEvent.field_i[1] = (uj) ((Object) new rea());
-        CarouselPlayerEvent.field_i[2] = (uj) ((Object) new mcb());
+    final static void initializeSpecialOrders(int param0) {
+        CarouselPlayerEvent.specialOrderDefinitions = new SpecialOrderDefinition[13];
+        CarouselPlayerEvent.specialOrderDefinitions[0] = (SpecialOrderDefinition) ((Object) new FireGrapplesOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[1] = (SpecialOrderDefinition) ((Object) new RecallGrapplesOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[2] = (SpecialOrderDefinition) ((Object) new FireMissilesOrderDefinition());
         if (param0 == 11) {
-          CarouselPlayerEvent.field_i[3] = (uj) ((Object) new qsb());
-          CarouselPlayerEvent.field_i[4] = (uj) ((Object) new gb());
-          CarouselPlayerEvent.field_i[5] = (uj) ((Object) new uw());
-          CarouselPlayerEvent.field_i[6] = (uj) ((Object) new vdb());
-          CarouselPlayerEvent.field_i[7] = (uj) ((Object) new lg());
-          CarouselPlayerEvent.field_i[8] = (uj) ((Object) new nnb());
-          CarouselPlayerEvent.field_i[9] = (uj) ((Object) new kib());
-          CarouselPlayerEvent.field_i[10] = (uj) ((Object) new pva());
-          CarouselPlayerEvent.field_i[11] = (uj) ((Object) new fpa());
-          CarouselPlayerEvent.field_i[12] = (uj) ((Object) new hka());
+          CarouselPlayerEvent.specialOrderDefinitions[3] = (SpecialOrderDefinition) ((Object) new ToggleShieldsOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[4] = (SpecialOrderDefinition) ((Object) new ToggleRepairModeOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[5] = (SpecialOrderDefinition) ((Object) new FireBoostersOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[6] = (SpecialOrderDefinition) ((Object) new LaunchFightersOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[7] = (SpecialOrderDefinition) ((Object) new ScramblerPulseOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[8] = (SpecialOrderDefinition) ((Object) new ArmSelfDestructOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[9] = (SpecialOrderDefinition) ((Object) new ActivateSelfDestructOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[10] = (SpecialOrderDefinition) ((Object) new SpawnEnemyShipOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[11] = (SpecialOrderDefinition) ((Object) new SaveShipDesignOrderDefinition());
+          CarouselPlayerEvent.specialOrderDefinitions[12] = (SpecialOrderDefinition) ((Object) new BuildBlueprintOrderDefinition());
           return;
         }
-        GetFighterRepairAmount.a(-61);
-        CarouselPlayerEvent.field_i[3] = (uj) ((Object) new qsb());
-        CarouselPlayerEvent.field_i[4] = (uj) ((Object) new gb());
-        CarouselPlayerEvent.field_i[5] = (uj) ((Object) new uw());
-        CarouselPlayerEvent.field_i[6] = (uj) ((Object) new vdb());
-        CarouselPlayerEvent.field_i[7] = (uj) ((Object) new lg());
-        CarouselPlayerEvent.field_i[8] = (uj) ((Object) new nnb());
-        CarouselPlayerEvent.field_i[9] = (uj) ((Object) new kib());
-        CarouselPlayerEvent.field_i[10] = (uj) ((Object) new pva());
-        CarouselPlayerEvent.field_i[11] = (uj) ((Object) new fpa());
-        CarouselPlayerEvent.field_i[12] = (uj) ((Object) new hka());
+        GetFighterRepairAmount.initializeSpecialOrders(-61);
+        CarouselPlayerEvent.specialOrderDefinitions[3] = (SpecialOrderDefinition) ((Object) new ToggleShieldsOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[4] = (SpecialOrderDefinition) ((Object) new ToggleRepairModeOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[5] = (SpecialOrderDefinition) ((Object) new FireBoostersOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[6] = (SpecialOrderDefinition) ((Object) new LaunchFightersOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[7] = (SpecialOrderDefinition) ((Object) new ScramblerPulseOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[8] = (SpecialOrderDefinition) ((Object) new ArmSelfDestructOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[9] = (SpecialOrderDefinition) ((Object) new ActivateSelfDestructOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[10] = (SpecialOrderDefinition) ((Object) new SpawnEnemyShipOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[11] = (SpecialOrderDefinition) ((Object) new SaveShipDesignOrderDefinition());
+        CarouselPlayerEvent.specialOrderDefinitions[12] = (SpecialOrderDefinition) ((Object) new BuildBlueprintOrderDefinition());
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

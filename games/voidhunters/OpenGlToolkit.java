@@ -22,7 +22,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private OpenGlInterleavedVertexBuffer field_Ec;
     private LegacyOpenGlMaterialEffectManager field_d;
     private IntrusiveDeque field_D;
-    nk field_yb;
+    LegacyOpenGlNormalMapGenerator field_yb;
     private boolean field_m;
     jaclib.memory.heap.NativeHeap field_Kb;
     int field_Mc;
@@ -218,7 +218,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_o = param3;
         }
         if (param2 != 0) {
-          this.field_yb = (nk) null;
+          this.field_yb = (LegacyOpenGlNormalMapGenerator) null;
         }
         this.field_x = this.field_x & -8;
     }
@@ -1911,7 +1911,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_m = true;
             this.field_r = new rlb(this, this.field_a);
             this.initializeDefaultResources((byte) -92);
-            this.field_yb = new nk(this);
+            this.field_yb = new LegacyOpenGlNormalMapGenerator(this);
             this.field_fc = new OpenGlPostProcessor(this);
             if (this.field_fc.isAvailable(-128)) {
               this.field_A = new OpenGlBloomEffect(this);

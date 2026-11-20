@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hka extends uj {
+final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
     static String[] field_d;
 
-    hka() {
+    BuildBlueprintOrderDefinition() {
     }
 
-    final boolean c(byte param0) {
+    final boolean hidesReadyCount(byte param0) {
         if (param0 > -104) {
           field_d = (String[]) null;
           return true;
@@ -15,7 +15,7 @@ final class hka extends uj {
         return true;
     }
 
-    final int a(int param0) {
+    final int getShortcutKey(int param0) {
         if (param0 != -1) {
           field_d = (String[]) null;
           return WaveformTextureOperation.field_j;
@@ -23,14 +23,14 @@ final class hka extends uj {
         return WaveformTextureOperation.field_j;
     }
 
-    final boolean c(int param0) {
+    final boolean allowsActivationWithoutReadyComponents(int param0) {
         if (param0 < 63) {
           return true;
         }
         return false;
     }
 
-    final int b(byte param0) {
+    final int getIconId(byte param0) {
         if (param0 <= 79) {
           field_d = (String[]) null;
           return 111;
@@ -81,9 +81,9 @@ final class hka extends uj {
         }
     }
 
-    final int b(int param0) {
+    final int getActiveDuration(int param0) {
         if (param0 != -25131) {
-          this.c(-85);
+          this.allowsActivationWithoutReadyComponents(-85);
           return 256;
         }
         return 256;
@@ -139,7 +139,7 @@ final class hka extends uj {
         }
     }
 
-    final int d(byte param0) {
+    final int getCooldown(byte param0) {
         if (param0 != 64) {
           field_d = (String[]) null;
           return Particle.field_t;
@@ -147,7 +147,7 @@ final class hka extends uj {
         return Particle.field_t;
     }
 
-    final boolean a(boolean param0) {
+    final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
           field_d = (String[]) null;
           return false;

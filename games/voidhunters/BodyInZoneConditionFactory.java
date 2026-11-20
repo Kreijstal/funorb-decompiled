@@ -27,7 +27,7 @@ final class BodyInZoneConditionFactory implements GameStateFactory {
 
     final static void a(int param0, NineSliceSprite param1, int param2, int param3, NineSliceSprite param4, int param5) {
         ShipTeamCondition.field_e = param5;
-        pva.field_g = param0;
+        SpawnEnemyShipOrderDefinition.field_g = param0;
         if (param2 <= 112) {
           return;
         }

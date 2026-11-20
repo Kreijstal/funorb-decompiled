@@ -87,7 +87,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[71] = Particle.field_v;
         var2[140] = khb.field_c;
         var2[174] = SetMissilesCooldown.field_o;
-        var2[122] = nnb.field_e;
+        var2[122] = ArmSelfDestructOrderDefinition.field_e;
         var2[1] = veb.field_b;
         var2[18] = WeaponBehaviour.field_d;
         var2[181] = GameMenuScreen.field_e;
@@ -226,7 +226,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[19] = rla.field_x;
         var2[125] = dr.field_a;
         var2[46] = Particle.field_A;
-        var2[45] = vdb.field_d;
+        var2[45] = LaunchFightersOrderDefinition.field_d;
         var2[42] = wk.field_a;
         var2[187] = ea.field_j;
         var2[77] = SetPhasedEnergyBeamPulseFadetime.field_o;

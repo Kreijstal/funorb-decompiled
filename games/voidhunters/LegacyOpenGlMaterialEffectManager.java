@@ -13,7 +13,7 @@ final class LegacyOpenGlMaterialEffectManager {
     private OpenGlToolkit toolkit;
     static int[] field_j;
 
-    final static boolean b(int param0, int param1) {
+    final static boolean isDebrisEligibleComponentType(int param0, int param1) {
         if (param1 != 15923) {
           return false;
         }
@@ -30,7 +30,7 @@ final class LegacyOpenGlMaterialEffectManager {
         field_f = null;
         field_j = null;
         if (param0) {
-          LegacyOpenGlMaterialEffectManager.b(-82, 83);
+          LegacyOpenGlMaterialEffectManager.isDebrisEligibleComponentType(-82, 83);
         }
     }
 

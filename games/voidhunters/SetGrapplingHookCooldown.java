@@ -42,7 +42,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
     final static void a(byte param0, java.awt.Canvas param1) {
         try {
           ReflectionCheck.installKeyboardListeners(10009, (java.awt.Component) ((Object) param1));
-          ts.a((java.awt.Component) ((Object) param1), 1);
+          LegacyOpenGlShader.attachMouseListeners((java.awt.Component) ((Object) param1), 1);
           if (GetWaitForPlayers.field_o != null) {
             GetWaitForPlayers.field_o.attach(-16, (java.awt.Component) ((Object) param1));
           }

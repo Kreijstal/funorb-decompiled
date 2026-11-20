@@ -129,7 +129,7 @@ abstract class NetworkGameClient extends GameApplet {
           MissionConditionFactory.field_b.update(param1 + 3899);
         }
         GetMassDriverFireForce.e((byte) -101);
-        ts.a(1001);
+        LegacyOpenGlShader.snapshotMouseState(1001);
         if (param1 != 9) {
           this.serverNumber = 76;
         }

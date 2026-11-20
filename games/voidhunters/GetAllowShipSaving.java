@@ -14,13 +14,13 @@ final class GetAllowShipSaving extends ConsoleCommand {
               GetDebugLineLife.e(95);
               return;
             }
-            MatchingFieldValidator.field_i.g(25880);
+            MatchingFieldValidator.field_i.stopProgressAnimation(25880);
             GetDebugLineLife.e(95);
             return;
           }
           field_o = (String) null;
           if (null != MatchingFieldValidator.field_i) {
-            MatchingFieldValidator.field_i.g(25880);
+            MatchingFieldValidator.field_i.stopProgressAnimation(25880);
             GetDebugLineLife.e(95);
             return;
           }
@@ -33,7 +33,7 @@ final class GetAllowShipSaving extends ConsoleCommand {
             GetDebugLineLife.e(95);
             return;
           }
-          MatchingFieldValidator.field_i.g(25880);
+          MatchingFieldValidator.field_i.stopProgressAnimation(25880);
           GetDebugLineLife.e(95);
           return;
         }
@@ -41,7 +41,7 @@ final class GetAllowShipSaving extends ConsoleCommand {
           GetDebugLineLife.e(95);
           return;
         }
-        MatchingFieldValidator.field_i.g(25880);
+        MatchingFieldValidator.field_i.stopProgressAnimation(25880);
         GetDebugLineLife.e(95);
     }
 
