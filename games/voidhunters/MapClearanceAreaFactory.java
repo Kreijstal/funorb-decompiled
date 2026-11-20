@@ -146,9 +146,9 @@ final class MapClearanceAreaFactory implements GameStateFactory {
         }
     }
 
-    final static void b(byte param0) {
+    final static void writeSessionMarkerCookie(byte param0) {
         if (param0 != -75) {
-          MapClearanceAreaFactory.b((byte) 0);
+          MapClearanceAreaFactory.writeSessionMarkerCookie((byte) 0);
         }
         ShieldInfoPool.writeSessionMarkerCookie(MissionList.getApplet((byte) -119), 0);
     }

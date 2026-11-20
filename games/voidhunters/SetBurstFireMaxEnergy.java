@@ -49,7 +49,7 @@ final class SetBurstFireMaxEnergy extends ConsoleCommand {
             field_o = (boolean[]) null;
           }
           PhasedEnergyBeamWeaponDefinition.l(8611);
-          SetThrusterAutobalancing.e(116);
+          SetThrusterAutobalancing.updateChatPanelLayout(116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ final class SetBurstFireMaxEnergy extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(43, 62, arguments[0].intValue(92));
+          SetMachineGunEnergyUsed.submitSettingsChange(43, 62, arguments[0].intValue(92));
           if (obfuscationGuard >= -119) {
             field_o = (boolean[]) null;
           }

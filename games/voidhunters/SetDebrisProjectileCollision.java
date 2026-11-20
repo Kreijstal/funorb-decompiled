@@ -15,7 +15,7 @@ final class SetDebrisProjectileCollision extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = true;
           }
-          SetMachineGunEnergyUsed.a(11, 62, arguments[0].intValue(120));
+          SetMachineGunEnergyUsed.submitSettingsChange(11, 62, arguments[0].intValue(120));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -36,7 +36,7 @@ final class SetDebrisProjectileCollision extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean isPointInRectangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param0 != 5220) {
           return false;
         }

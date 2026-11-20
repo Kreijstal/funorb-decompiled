@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetTabForScores extends ConsoleCommand {
-    static String field_p;
+    static String accountRelativeUrl;
     static String field_o;
 
     final static boolean a(String param0, String param1, boolean param2) {
@@ -45,7 +45,7 @@ final class SetTabForScores extends ConsoleCommand {
 
     public static void clearSharedReferences(boolean param0) {
         field_o = null;
-        field_p = null;
+        accountRelativeUrl = null;
         if (param0) {
           String var2 = (String) null;
           SetTabForScores.a((String) null, (String) null, true);
@@ -85,7 +85,7 @@ final class SetTabForScores extends ConsoleCommand {
     }
 
     static {
-        field_p = null;
+        accountRelativeUrl = null;
         field_o = "Public";
     }
 }

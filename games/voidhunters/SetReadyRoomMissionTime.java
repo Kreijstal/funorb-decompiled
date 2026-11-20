@@ -15,7 +15,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(232, 62, arguments[0].intValue(79));
+          SetMachineGunEnergyUsed.submitSettingsChange(232, 62, arguments[0].intValue(79));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

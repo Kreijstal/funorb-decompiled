@@ -26,7 +26,7 @@ final class SetTorpedoAimarc extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(131, 62, arguments[0].intValue(120));
+          SetMachineGunEnergyUsed.submitSettingsChange(131, 62, arguments[0].intValue(120));
           if (obfuscationGuard >= -119) {
             SetTorpedoAimarc.clearSharedReferences(75);
           }

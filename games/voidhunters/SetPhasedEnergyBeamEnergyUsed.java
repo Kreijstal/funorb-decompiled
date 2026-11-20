@@ -28,7 +28,7 @@ final class SetPhasedEnergyBeamEnergyUsed extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
-          SetMachineGunEnergyUsed.a(163, 62, arguments[0].intValue(51));
+          SetMachineGunEnergyUsed.submitSettingsChange(163, 62, arguments[0].intValue(51));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

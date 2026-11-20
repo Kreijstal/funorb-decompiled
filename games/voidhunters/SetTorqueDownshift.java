@@ -11,7 +11,7 @@ final class SetTorqueDownshift extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(180, 62, arguments[0].intValue(54));
+          SetMachineGunEnergyUsed.submitSettingsChange(180, 62, arguments[0].intValue(54));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

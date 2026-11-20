@@ -68,8 +68,8 @@ final class TimingGraph {
         if (param1 < 88) {
           this.addSample(13L, (byte) 97);
         }
-        GetLagStandardDeviationOut.a(-1, "Currentval=" + this.samplesNanos[(-1 + (this.samplesNanos.length + this.writeIndex)) % this.samplesNanos.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
-        GetLagStandardDeviationOut.a(-1, "Maxval=" + var7 / 1000L, var11, 20 - param0 / 2 + param3, param2 + param4, 4266);
+        GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, "Currentval=" + this.samplesNanos[(-1 + (this.samplesNanos.length + this.writeIndex)) % this.samplesNanos.length] / 1000L, var11, -(param0 / 2) + param3, param2 + param4, 4266);
+        GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, "Maxval=" + var7 / 1000L, var11, 20 - param0 / 2 + param3, param2 + param4, 4266);
     }
 
     TimingGraph() {

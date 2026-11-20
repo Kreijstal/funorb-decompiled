@@ -6,7 +6,7 @@ final class GetExplosionProjectileOndamageParticles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int e(byte param0) {
+    final static int getCachedFrameTopPanelX(byte param0) {
         if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -113)) {
           return -1;
         }

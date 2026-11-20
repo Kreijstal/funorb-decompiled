@@ -108,7 +108,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = -103;
           }
-          SetMachineGunEnergyUsed.a(61, 62, arguments[0].intValue(38));
+          SetMachineGunEnergyUsed.submitSettingsChange(61, 62, arguments[0].intValue(38));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

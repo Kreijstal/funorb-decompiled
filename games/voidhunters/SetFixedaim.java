@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetFixedaim extends ConsoleCommand {
-    static boolean field_o;
+    static boolean shipImportResolved;
     static int field_q;
     static int[] field_p;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != -49) {
-          field_o = false;
+          shipImportResolved = false;
           field_p = null;
           return;
         }
@@ -32,7 +32,7 @@ final class SetFixedaim extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(27, 62, arguments[0].intValue(15));
+          SetMachineGunEnergyUsed.submitSettingsChange(27, 62, arguments[0].intValue(15));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

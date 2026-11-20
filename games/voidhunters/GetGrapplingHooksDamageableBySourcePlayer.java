@@ -94,7 +94,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         var5 = VoidHunters.field_G;
         try {
           SetSpecialOrderBoxWidth.field_o = SetSpecialOrderBoxWidth.field_o + 65536;
-          while (GetMissilesCooldown.a(SetMachineGunEnergyUsed.field_r, SetSpecialOrderBoxWidth.field_o, (byte) 74) >= 65536) {
+          while (GetMissilesCooldown.multiplyFixed16(SetMachineGunEnergyUsed.field_r, SetSpecialOrderBoxWidth.field_o, (byte) 74) >= 65536) {
             SetSpecialOrderBoxWidth.field_o = SetSpecialOrderBoxWidth.field_o - SetMachineGunEnergyUsed.field_r;
           }
           var2_int = -1;

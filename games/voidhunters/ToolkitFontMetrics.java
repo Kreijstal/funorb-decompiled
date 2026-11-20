@@ -542,7 +542,7 @@ final class ToolkitFontMetrics {
           var18 = var11 * (-3 + (var7 << 1));
           var19 = (1 + var6_int) * var16;
           var20 = var15 * (-1 + var7);
-          GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param3 + param5, ResourceNode.field_b[param1], (byte) 75, -param5 + param3);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param3 + param5, ResourceNode.rasterTargetRows[param1], (byte) 75, -param5 + param3);
           while (var7 > 0) {
             if (var25 != 0) {
               return;
@@ -572,8 +572,8 @@ final class ToolkitFontMetrics {
             var22 = param1 + var7;
             var23 = var6_int + param3;
             var24 = param3 - var6_int;
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var23, ResourceNode.field_b[var21], (byte) 75, var24);
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var23, ResourceNode.field_b[var22], (byte) 75, var24);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var23, ResourceNode.rasterTargetRows[var21], (byte) 75, var24);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var23, ResourceNode.rasterTargetRows[var22], (byte) 75, var24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

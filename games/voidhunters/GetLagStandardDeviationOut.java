@@ -9,7 +9,7 @@ final class GetLagStandardDeviationOut extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, int param5) {
+    final static void drawTextWithDefaultFont(int param0, String param1, int param2, int param3, int param4, int param5) {
         if (param5 != 4266) {
           return;
         }
@@ -24,7 +24,7 @@ final class GetLagStandardDeviationOut extends ConsoleCommand {
         field_o = null;
         if (param0 != -2) {
           String var2 = (String) null;
-          GetLagStandardDeviationOut.a(127, (String) null, 30, -1, -91, -95);
+          GetLagStandardDeviationOut.drawTextWithDefaultFont(127, (String) null, 30, -1, -91, -95);
         }
     }
 

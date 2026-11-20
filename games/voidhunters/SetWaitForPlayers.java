@@ -5,7 +5,7 @@ final class SetWaitForPlayers extends ConsoleCommand {
     static String field_p;
     static String field_o;
 
-    final static int a(int param0) {
+    final static int getPresetSpawnChoiceCount(int param0) {
         if (param0 != 9) {
           field_o = (String) null;
           return 9;
@@ -26,7 +26,7 @@ final class SetWaitForPlayers extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(6, 62, arguments[0].intValue(52));
+          SetMachineGunEnergyUsed.submitSettingsChange(6, 62, arguments[0].intValue(52));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

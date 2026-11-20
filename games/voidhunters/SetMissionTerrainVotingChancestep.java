@@ -13,7 +13,7 @@ final class SetMissionTerrainVotingChancestep extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(67, 62, arguments[0].intValue(51));
+          SetMachineGunEnergyUsed.submitSettingsChange(67, 62, arguments[0].intValue(51));
           if (obfuscationGuard > -119) {
             var4 = (CharSequence) null;
             SetMissionTerrainVotingChancestep.parseInt(false, (CharSequence) null, true, -5);

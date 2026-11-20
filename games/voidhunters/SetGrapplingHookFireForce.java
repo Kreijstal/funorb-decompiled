@@ -12,7 +12,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(199, 62, arguments[0].intValue(45));
+          SetMachineGunEnergyUsed.submitSettingsChange(199, 62, arguments[0].intValue(45));
           if (obfuscationGuard >= -119) {
             field_o = (TextureFormat) null;
           }
@@ -81,7 +81,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
             EnvironmentReflectionGpuMaterialEffect.field_i >= param1) {
             var21 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param3 + param5);
             var22 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -param3 + param5);
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param2, var21, ResourceNode.field_b[param1], (byte) 75, var22);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param2, var21, ResourceNode.rasterTargetRows[param1], (byte) 75, var22);
           }
           var20 = (var7 - 1) * var15;
           if (param0 > -112) {
@@ -123,12 +123,12 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
             var23 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param5 + var6_int);
             var24 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var6_int + param5);
             if (NebulaField.field_c <= var21Lifetime1) {
-              GetSalvoRepairTimeMultiplier.fillArraySpan(param2, var23, ResourceNode.field_b[var21Lifetime1], (byte) 75, var24);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param2, var23, ResourceNode.rasterTargetRows[var21Lifetime1], (byte) 75, var24);
             }
             if (EnvironmentReflectionGpuMaterialEffect.field_i < var22Lifetime1) {
               continue;
             }
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param2, var23, ResourceNode.field_b[var22Lifetime1], (byte) 75, var24);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param2, var23, ResourceNode.rasterTargetRows[var22Lifetime1], (byte) 75, var24);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

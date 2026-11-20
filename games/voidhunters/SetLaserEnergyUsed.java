@@ -26,7 +26,7 @@ final class SetLaserEnergyUsed extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(161, 62, arguments[0].intValue(43));
+          SetMachineGunEnergyUsed.submitSettingsChange(161, 62, arguments[0].intValue(43));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

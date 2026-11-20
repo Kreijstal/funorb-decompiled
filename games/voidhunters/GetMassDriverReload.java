@@ -13,12 +13,12 @@ final class GetMassDriverReload extends ConsoleCommand {
         field_o = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void setTooltipText(String param0, int param1) {
         if (param1 > -12) {
           return;
         }
         try {
-          SpriteTextureOperation.field_o = param0;
+          SpriteTextureOperation.tooltipText = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "kwa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

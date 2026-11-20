@@ -18,7 +18,7 @@ final class SetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(40, 62, arguments[0].intValue(13));
+          SetMachineGunEnergyUsed.submitSettingsChange(40, 62, arguments[0].intValue(13));
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 93);

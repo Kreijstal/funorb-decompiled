@@ -18,7 +18,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(77, 62, arguments[0].intValue(40));
+          SetMachineGunEnergyUsed.submitSettingsChange(77, 62, arguments[0].intValue(40));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,7 +60,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
           var13 = AccountNameAvailabilityReplies.field_b;
           var2 = var13.readUnsignedByte((byte) -89);
           if (var2 == param0) {
-            var10 = SetSniperCannonEnergyUsed.f((byte) -85);
+            var10 = SetSniperCannonEnergyUsed.createEightIntBuffer((byte) -85);
             var3 = var10;
             var9 = var10;
             var4 = var9;
@@ -87,7 +87,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
                 FighterBayWeaponDefinition.closeGameConnection(-119);
                 return;
               }
-              SetSniperCannonEnergyUsed.f((byte) -80);
+              SetSniperCannonEnergyUsed.createEightIntBuffer((byte) -80);
               var12.unlink(-3846);
             }
           } else {

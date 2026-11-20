@@ -111,7 +111,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_p = -35;
           }
-          SetMachineGunEnergyUsed.a(191, 62, arguments[0].intValue(85));
+          SetMachineGunEnergyUsed.submitSettingsChange(191, 62, arguments[0].intValue(85));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

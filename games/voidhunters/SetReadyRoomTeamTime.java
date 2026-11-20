@@ -15,7 +15,7 @@ final class SetReadyRoomTeamTime extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(234, 62, arguments[0].intValue(29));
+          SetMachineGunEnergyUsed.submitSettingsChange(234, 62, arguments[0].intValue(29));
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -78);

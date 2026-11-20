@@ -30,7 +30,7 @@ final class SetPhysicsCollisionGrapplingHookForceMultiplier extends ConsoleComma
           if (obfuscationGuard >= -119) {
             field_q = true;
           }
-          SetMachineGunEnergyUsed.a(51, 62, arguments[0].intValue(33));
+          SetMachineGunEnergyUsed.submitSettingsChange(51, 62, arguments[0].intValue(33));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

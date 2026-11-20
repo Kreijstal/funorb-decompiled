@@ -27,7 +27,7 @@ final class SetMissionDebrisVotingChancestep extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(69, 62, arguments[0].intValue(116));
+          SetMachineGunEnergyUsed.submitSettingsChange(69, 62, arguments[0].intValue(116));
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
@@ -47,7 +47,7 @@ final class SetMissionDebrisVotingChancestep extends ConsoleCommand {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawMenuAndDateOfBirthPanel(boolean param0, int param1) {
         SetToggledScoreboard.field_o.draw(param0, param1 ^ 3970);
         DateOfBirthEntryPanel var2 = PartitionZoneListFactory.field_b;
         if (param1 == 4095) {
@@ -56,7 +56,7 @@ final class SetMissionDebrisVotingChancestep extends ConsoleCommand {
           }
           return;
         }
-        SetMissionDebrisVotingChancestep.a(true, 28);
+        SetMissionDebrisVotingChancestep.drawMenuAndDateOfBirthPanel(true, 28);
         if (var2 != null) {
           var2.draw(0, SetToggledScoreboard.field_o.screenY, SetToggledScoreboard.field_o.screenX);
         }

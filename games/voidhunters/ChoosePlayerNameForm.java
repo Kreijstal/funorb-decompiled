@@ -345,7 +345,7 @@ final class ChoosePlayerNameForm extends UiContainer implements NameSuggestionTa
     private final void submitName(int param0) {
         int var2 = 71 / ((78 - param0) / 41);
         if (this.canSubmit(-31927)) {
-          GetMachineGunAimspeed.a(this.nameField.text, -127);
+          GetMachineGunAimspeed.requestPlayerName(this.nameField.text, -127);
           return;
         }
     }

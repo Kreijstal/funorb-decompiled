@@ -15,7 +15,7 @@ final class GetReverbWidth extends ConsoleCommand {
         try {
           if (obfuscationGuard >= -119) {
             var4 = (Camera2D) null;
-            GetReverbWidth.a((Camera2D) null, 62);
+            GetReverbWidth.setSoundCamera((Camera2D) null, 62);
           }
           stackIn_3_0 = new ConsoleValue(CommonGameState.field_i);
           return stackIn_3_0;
@@ -37,12 +37,12 @@ final class GetReverbWidth extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(Camera2D param0, int param1) {
+    final static void setSoundCamera(Camera2D param0, int param1) {
         if (param1 != -8077) {
           return;
         }
         try {
-          TextureTransformMode.field_a = param0;
+          TextureTransformMode.soundCamera = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "hra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

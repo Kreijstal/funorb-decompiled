@@ -57,7 +57,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(92, 62, arguments[0].intValue(112));
+          SetMachineGunEnergyUsed.submitSettingsChange(92, 62, arguments[0].intValue(112));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

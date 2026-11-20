@@ -83,7 +83,7 @@ final class GetBots extends ConsoleCommand {
           var36 = var27 * (-1 + param1);
           var37 = var30;
           var38 = (var12 - 1) * var29;
-          var49 = ResourceNode.field_b[param3];
+          var49 = ResourceNode.rasterTargetRows[param3];
           var48 = var49;
           var39 = var48;
           GetSalvoRepairTimeMultiplier.fillArraySpan(param6, -var11 + param4, var39, (byte) 75, param4 - param2);
@@ -147,18 +147,18 @@ final class GetBots extends ConsoleCommand {
             var43 = param4 + var8_int;
             var44 = param4 - var8_int;
             if (var40 == 0) {
-              GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.field_b[var41], (byte) 75, var44);
-              GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.field_b[var42], (byte) 75, var44);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.rasterTargetRows[var41], (byte) 75, var44);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.rasterTargetRows[var42], (byte) 75, var44);
               continue;
             }
             var45 = var10 + param4;
             var46 = -var10 + param4;
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var46, ResourceNode.field_b[var41], (byte) 75, var44);
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var45, ResourceNode.field_b[var41], (byte) 75, var46);
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.field_b[var41], (byte) 75, var45);
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var46, ResourceNode.field_b[var42], (byte) 75, var44);
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var45, ResourceNode.field_b[var42], (byte) 75, var46);
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.field_b[var42], (byte) 75, var45);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var46, ResourceNode.rasterTargetRows[var41], (byte) 75, var44);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var45, ResourceNode.rasterTargetRows[var41], (byte) 75, var46);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.rasterTargetRows[var41], (byte) 75, var45);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var46, ResourceNode.rasterTargetRows[var42], (byte) 75, var44);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var45, ResourceNode.rasterTargetRows[var42], (byte) 75, var46);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param6, var43, ResourceNode.rasterTargetRows[var42], (byte) 75, var45);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

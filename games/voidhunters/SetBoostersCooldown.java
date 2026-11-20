@@ -38,7 +38,7 @@ final class SetBoostersCooldown extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(218, 62, arguments[0].intValue(109));
+          SetMachineGunEnergyUsed.submitSettingsChange(218, 62, arguments[0].intValue(109));
           if (obfuscationGuard > -119) {
             var4 = (ToolkitFont) null;
             SetBoostersCooldown.drawToolkitTooltip((GraphicsToolkit) null, (ToolkitFontMetrics) null, (ToolkitFont) null, 34, 113, 21, -90, -26, 89, -84);

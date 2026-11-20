@@ -16,7 +16,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetMissionDebrisDefaultProbability.clearSharedReferences(80);
           }
-          SetMachineGunEnergyUsed.a(68, 62, arguments[0].intValue(91));
+          SetMachineGunEnergyUsed.submitSettingsChange(68, 62, arguments[0].intValue(91));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

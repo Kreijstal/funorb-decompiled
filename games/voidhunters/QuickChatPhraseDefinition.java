@@ -40,7 +40,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               this.dynamicCommandArguments = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param0.readUnsignedShort(param2 ^ 1869);
-                var7 = SetPhasedEnergyBeamPulseFadetime.a(0, var6);
+                var7 = SetPhasedEnergyBeamPulseFadetime.findQuickChatDynamicCommand(0, var6);
                 if (var7 != null) {
                   this.dynamicCommandIds[var5] = var6;
                   array$0 = new int[var7.parameterCount];

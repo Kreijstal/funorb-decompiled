@@ -23,7 +23,7 @@ final class SetLaserProjectiles extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(82, 62, arguments[0].intValue(8));
+          SetMachineGunEnergyUsed.submitSettingsChange(82, 62, arguments[0].intValue(8));
           if (obfuscationGuard >= -119) {
             SetLaserProjectiles.clearSharedReferences((byte) 124);
           }

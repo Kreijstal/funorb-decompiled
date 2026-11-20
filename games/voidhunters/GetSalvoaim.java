@@ -15,7 +15,7 @@ final class GetSalvoaim extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetSalvoaim.a(-119, (byte) -60);
+            GetSalvoaim.nextPowerOfTwo(-119, (byte) -60);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(26, 107));
           return stackIn_3_0;
@@ -48,7 +48,7 @@ final class GetSalvoaim extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, byte param1) {
+    final static int nextPowerOfTwo(int param0, byte param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -58,7 +58,7 @@ final class GetSalvoaim extends ConsoleCommand {
           param0 = param0 | param0 >>> 16;
           return param0 + 1;
         }
-        GetSalvoaim.a(126, (byte) 26);
+        GetSalvoaim.nextPowerOfTwo(126, (byte) 26);
         param0 = param0 | param0 >>> 8;
         param0 = param0 | param0 >>> 16;
         return param0 + 1;

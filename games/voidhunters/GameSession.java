@@ -309,7 +309,7 @@ final class GameSession {
             } else {
               stackIn_25_1 = "no";
             }
-            GetMassDriverReload.a(((StringBuilder) (Object) stackIn_24_0).append(stackIn_25_1).toString(), -101);
+            GetMassDriverReload.setTooltipText(((StringBuilder) (Object) stackIn_24_0).append(stackIn_25_1).toString(), -101);
           }
           var17_ref = (PlayerAction) (var16.next((byte) 127));
         }
@@ -485,9 +485,9 @@ final class GameSession {
           } else {
             if (param0.specialOrderId == 8 &&
               param2.getSelfDestructPrepared((byte) -91)) {
-              GetMassDriverReload.a(SecondaryNodeDequeIterator.field_c, param3 - 208);
+              GetMassDriverReload.setTooltipText(SecondaryNodeDequeIterator.field_c, param3 - 208);
             } else {
-              GetMassDriverReload.a(GetGrapplingHookSpringConstant.specialOrderLabels[param0.specialOrderId], -51);
+              GetMassDriverReload.setTooltipText(GetGrapplingHookSpringConstant.specialOrderLabels[param0.specialOrderId], -51);
             }
           }
           if (param3 != 80) {
@@ -816,7 +816,7 @@ final class GameSession {
                       var13Lifetime3 = var11Lifetime2 + var12Lifetime2 * 8192 / 100;
                       var14Lifetime3 = var8 + (GetNumStars.cosAngle(var13Lifetime3, (byte) 118) * var10 >> 16);
                       var15Lifetime4 = (var10 * TextureLineShape.sinAngle(var13Lifetime3, 48) >> 16) + var9;
-                      CachedArchiveProvider.a(128, false, var14Lifetime3, var15Lifetime4, 1, 1, 16777215);
+                      CachedArchiveProvider.fillRectangleAlpha(128, false, var14Lifetime3, var15Lifetime4, 1, 1, 16777215);
                     }
                   }
                   break regionExit1;
@@ -851,7 +851,7 @@ final class GameSession {
                     var13Lifetime1 = var11Lifetime1 + var12Lifetime1 * 8192 / 100;
                     var14Lifetime1 = var8Lifetime1 + (GetNumStars.cosAngle(var13Lifetime1, (byte) 118) * var10Lifetime1 >> 16);
                     var15Lifetime1 = (var10Lifetime1 * TextureLineShape.sinAngle(var13Lifetime1, 48) >> 16) + var9Lifetime1;
-                    CachedArchiveProvider.a(128, false, var14Lifetime1, var15Lifetime1, 1, 1, 16777215);
+                    CachedArchiveProvider.fillRectangleAlpha(128, false, var14Lifetime1, var15Lifetime1, 1, 1, 16777215);
                   }
                 }
               }
@@ -1208,7 +1208,7 @@ final class GameSession {
             }
             var4 = (100 * this.blueprintSizeBytes + 96) / 192;
             var5Lifetime1 = SetReverbGain.a(GetMassDriverEnergyUsed.field_o, new String[]{Integer.toString(var4)}, 77);
-            GetLagStandardDeviationOut.a(-1, var5Lifetime1, 16777215, 20, 11, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var5Lifetime1, 16777215, 20, 11, 4266);
           }
           if (!param0) {
             this.scoreboardVisible = false;
@@ -1271,7 +1271,7 @@ final class GameSession {
                   GetUseDetailLines.field_o < var6 + var8 &&
                   var9 < GetTorpedoReload.field_q &&
                   var7 + var9 > GetTorpedoReload.field_q) {
-                  GetMassDriverReload.a(var5, -23);
+                  GetMassDriverReload.setTooltipText(var5, -23);
                   param1 = true;
                   if (SetDebrisPartitioned.field_o == 1 &&
                     PacketBuffer.field_g == 1) {
@@ -1299,7 +1299,7 @@ final class GameSession {
                       GetTorpedoReload.field_q > var18 &&
                       GetTorpedoReload.field_q < var16 + var18) {
                       param1 = true;
-                      GetMassDriverReload.a(var14, -24);
+                      GetMassDriverReload.setTooltipText(var14, -24);
                       if (SetDebrisPartitioned.field_o == 1 &&
                         PacketBuffer.field_g == 1) {
                         this.pendingSpecialOrderId = var13;
@@ -1399,7 +1399,7 @@ final class GameSession {
               var10 != 0)) {
               stackIn_23_0 = (var4.getOwner((byte) -117) == this.localPlayerIndex);
               var12 = AlphaContainer.getTeamColor(stackIn_23_0, var4.getTeam((byte) 98), 13894143);
-              GetLagStandardDeviationOut.a(-1, var11_ref_String, var12, var8, var7 - (GetPhasedEnergyBeamProjectiles.a(95, var11_ref_String) >> 1), param0 + 170);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var11_ref_String, var12, var8, var7 - (GetPhasedEnergyBeamProjectiles.a(95, var11_ref_String) >> 1), param0 + 170);
             }
           }
           var11 = 16384;
@@ -1441,7 +1441,7 @@ final class GameSession {
               var16Lifetime1 = var14Lifetime1 - (var13Lifetime1 >> 1);
               var17Lifetime1 = var15Lifetime1 + -16 * (-var25 + var9.length - 1);
               DelayedPacket.drawLine(var27 + var19, var26 + var18, var7, -(OpenGlTexture.getCurrentFontAscent((byte) 118) * 2) + var8, -16777216, 16777215);
-              GetLagStandardDeviationOut.a(2, var32, 16777215, var17Lifetime1 + var19, var18 + var16Lifetime1, 4266);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(2, var32, 16777215, var17Lifetime1 + var19, var18 + var16Lifetime1, 4266);
             }
           }
         }
@@ -1829,7 +1829,7 @@ final class GameSession {
               var28[var29] = -var30 + 2147483647;
             }
             for (var29Lifetime1 = 0; var59.length > var29Lifetime1; var29Lifetime1++) {
-              SetTorpedoAcceleration.a(var53, (byte) 16, var59);
+              SetTorpedoAcceleration.sortIntKeysWithIntValues(var53, (byte) 16, var59);
             }
             GetMachineGunPulsetime.fillRectangle(0, -122, -var18Lifetime1 + var20Lifetime1 - var17Lifetime3, var24Lifetime1, var27Lifetime1 * var5, -var17Lifetime3 + var23Lifetime2);
             this.drawScoreboardColumns(var59, 18398, var24Lifetime1, var17Lifetime3, var18Lifetime1, var51, var54, var55, var5, var23Lifetime2, var6, var10);
@@ -1927,7 +1927,7 @@ final class GameSession {
             var3 = var28;
             if (var3 != null &&
               var28.length > 0) {
-              GetLagStandardDeviationOut.a(-1, "Vars:", 16711680, 120, 100, 4266);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, "Vars:", 16711680, 120, 100, 4266);
               for (var4_int = 0; var28.length > var4_int; var4_int++) {
                 var5_ref_et = var28[var4_int];
                 if (var5_ref_et != null) {
@@ -1936,7 +1936,7 @@ final class GameSession {
                     ParticleFactory.field_c.length > var5_ref_et.label) {
                     var6_ref_String = ParticleFactory.field_c[var5_ref_et.label];
                   }
-                  GetLagStandardDeviationOut.a(-1, var6_ref_String + " = " + var28[var4_int].value, 16711680, 120 + var4_int * 20, 140, 4266);
+                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var6_ref_String + " = " + var28[var4_int].value, 16711680, 120 + var4_int * 20, 140, 4266);
                 }
               }
             }
@@ -2365,7 +2365,7 @@ final class GameSession {
                   var40.getVotedOptions(true) != null) {
                   var21 += 24;
                 }
-                CachedArchiveProvider.a(200, false, var13, var14, var21, var7, 1);
+                CachedArchiveProvider.fillRectangleAlpha(200, false, var13, var14, var21, var7, 1);
                 SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(var16, var41, 13879) / 2) + var9, -1, GetPointDefenceLaserProjectiles.getFontAscent(false, var16) + var14, var41, var16, 16777215, (byte) -124);
               }
             }
@@ -2388,7 +2388,7 @@ final class GameSession {
             if (!param2) {
               this.ensureFallbackVote(var5, param1, -11, var20, var19_int);
             } else {
-              PlayerVote.a(var13, var8, 255, 115, var12, var14);
+              PlayerVote.drawSkinnedPanelBackground(var13, var8, 255, 115, var12, var14);
               var42 = var18_ref_String.toUpperCase();
               SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(var16, var42, 13879) / 2) + var9, -1, var14 + UsernameAvailabilityValidator.getFontAscent(true, var16) + 9, var42, var16, var21, (byte) -95);
             }
@@ -2430,7 +2430,7 @@ final class GameSession {
               if (var29_ref_aja != null) {
                 var29_ref_aja.draw(var26 + 13, var27 + 11, 0, 16777215 | this.field_U << 24, 1);
               }
-              SetBuildViewAutozoomTimeout.a(true, this.field_U, -36 + var26, var27 - 24, 30);
+              SetBuildViewAutozoomTimeout.drawToolkitSpriteAlpha(true, this.field_U, -36 + var26, var27 - 24, 30);
               var30_int = var26 + 160;
               var31 = 29 + var27;
               OpenGlShaderProgram.a(var21, this.field_U, -1, ShipTeamCondition.field_f[this.hoveredVoteOptionId].toUpperCase(), (byte) -106, 2, var31, var30_int);
@@ -2560,7 +2560,7 @@ final class GameSession {
                           var19Lifetime2 = var30Lifetime1Lifetime2;
                           var19Lifetime2 = var30Lifetime1Lifetime2;
                         }
-                        GetMassDriverReload.a(var30Lifetime1Lifetime2, -43);
+                        GetMassDriverReload.setTooltipText(var30Lifetime1Lifetime2, -43);
                       }
                     }
                     var25Lifetime1 = var25Lifetime1 + var24Lifetime1Lifetime1;
@@ -2763,7 +2763,7 @@ final class GameSession {
                   var10 == 9) {
                   var17 = 1.7999999523162842f;
                 }
-                var18 = SetWaitForPlayers.a(9);
+                var18 = SetWaitForPlayers.getPresetSpawnChoiceCount(9);
                 var19 = SetRepairModeCooldown.e((byte) -124);
                 var20 = var18;
                 if (var8 != 0) {
@@ -2778,7 +2778,7 @@ final class GameSession {
                 }
                 var22 = 0;
                 var23 = new Ship[var18];
-                for (var24_int = 0; SetWaitForPlayers.a(9) > var24_int; var24_int++) {
+                for (var24_int = 0; SetWaitForPlayers.getPresetSpawnChoiceCount(9) > var24_int; var24_int++) {
                   stackIn_47_0 = (!ArchiveIndexLoader.field_g.isComponentOptionVisible(var24_int + 3, (byte) 34)) ? 0 : 1;
                   var25_int = stackIn_47_0;
                   if (var25_int != 0) {
@@ -2875,13 +2875,13 @@ final class GameSession {
                     var41 = stackIn_98_0;
                     var42 = var9Lifetime1;
                     if (var34_int == var9Lifetime1) {
-                      CachedArchiveProvider.a(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
+                      CachedArchiveProvider.fillRectangleAlpha(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
                       UiToggleButtonRenderer.drawRectangle(125, var36, var30Lifetime1, var37, 56035, var30Lifetime1);
                       UiToggleButtonRenderer.drawRectangle(124, 1 + var36, var30Lifetime1 - 2, 1 + var37, 56035, -2 + var30Lifetime1);
                     } else {
                       if (var41 != 0) {
                         if (var38 != 0) {
-                          CachedArchiveProvider.a(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
+                          CachedArchiveProvider.fillRectangleAlpha(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
                           if (GetBots.field_o == 1 &&
                             !this.field_X) {
                             this.field_X = true;
@@ -2889,7 +2889,7 @@ final class GameSession {
                           }
                         } else {
                           if (var39 == 0) {
-                            GetMassDriverReload.a(QuickChatDynamicCommand.field_b, -20);
+                            GetMassDriverReload.setTooltipText(QuickChatDynamicCommand.field_b, -20);
                           } else {
                             var49 = GetDebrisCollisionDamage.field_o;
                             var43_ref_String = var49;
@@ -2898,7 +2898,7 @@ final class GameSession {
                             if (var40 != 0) {
                               var43_ref_StringLifetime2 = var49 + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
                             }
-                            GetMassDriverReload.a(var43_ref_StringLifetime2, -54);
+                            GetMassDriverReload.setTooltipText(var43_ref_StringLifetime2, -54);
                           }
                         }
                       }
@@ -3060,7 +3060,7 @@ final class GameSession {
           this.pendingSpecialOrderId < 13) {
           var2 = CarouselPlayerEvent.specialOrderDefinitions[this.pendingSpecialOrderId];
           var3 = var2.getIconId((byte) 85);
-          PlayerActionFactory.a(var3, 20 + GetUseDetailLines.field_o, (byte) 84, GetTorpedoReload.field_q);
+          PlayerActionFactory.drawToolkitSprite(var3, 20 + GetUseDetailLines.field_o, (byte) 84, GetTorpedoReload.field_q);
           var4 = GetGrapplingHookSpringConstant.specialOrderLabels[this.pendingSpecialOrderId].toUpperCase();
           SetSelfDestructPrepareToggleCooldown.drawText(50 + GetUseDetailLines.field_o, 1, GetTorpedoReload.field_q + 20, var4, 2, 16777215, (byte) -92);
         }
@@ -3421,7 +3421,7 @@ final class GameSession {
                 if (null != this.tutorialController &&
                   this.tutorialController.isHintVisible(1, -53)) {
                   var7 = TorpedoWeaponDefinition.field_d;
-                  GetLagStandardDeviationOut.a(-1, var7, 16777215, -10 + var6, var4_int / 2 + var5 - GetPhasedEnergyBeamProjectiles.a(-112, var7) / 2, 4266);
+                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var7, 16777215, -10 + var6, var4_int / 2 + var5 - GetPhasedEnergyBeamProjectiles.a(-112, var7) / 2, 4266);
                 }
               }
               discarded$0 = this.updateSpecialOrderMenu((byte) 61, true, param0);
@@ -3540,8 +3540,8 @@ final class GameSession {
           var24 = var9.world.findShipByOwner(this.localPlayerIndex, 54);
           var10 = var24;
           if (!this.networked &&
-            GetBuildViewAutozoomEndOnAction.a(61848)) {
-            var28 = VariableConditionFactory.a(99);
+            GetBuildViewAutozoomEndOnAction.hasConfirmedShipImport(61848)) {
+            var28 = VariableConditionFactory.takeConfirmedShipComponentWords(99);
             if (var24 != null) {
               var23 = MenuInputState.createShipFromComponentWords(var28, (byte) 27);
               var23.setTeam(17704, 1);
@@ -3628,7 +3628,7 @@ final class GameSession {
           return;
         }
         this.checkObfuscationGuard((byte) 110);
-        GetReverbWidth.a(ShipTeamConditionFactory.field_a, -8077);
+        GetReverbWidth.setSoundCamera(ShipTeamConditionFactory.field_a, -8077);
         if (this.networked) {
           stackIn_70_0 = (FlipTextureOperation.field_l.sendReadyIfNeeded((byte) 110, this.state.carouselInfo, this.localPlayerIndex, RequestNewestBlackboxRecording.field_p)) ? 1 : 0;
         } else {
@@ -3959,7 +3959,7 @@ final class GameSession {
             var20 = -(var15 / 2) + (var17 - var18);
             var21 = 2 * var18 + var14;
             var22 = var15 + 2 * var18;
-            CachedArchiveProvider.a(200, false, var19, var20, var22, var21, 1);
+            CachedArchiveProvider.fillRectangleAlpha(200, false, var19, var20, var22, var21, 1);
             UiToggleButtonRenderer.drawRectangle(113, var19, var22, var20, 11184810, var21);
             var7.worldCenterX = (float)((var37.getBoundingbox((byte) -98)[0] + var37.getBoundingbox((byte) -49)[1]) / 2);
             var7.worldCenterY = (float)((var37.getBoundingbox((byte) -101)[2] + var37.getBoundingbox((byte) -39)[3]) / 2);
@@ -4116,7 +4116,7 @@ final class GameSession {
           var19 = "Connected =" + var3;
           var3Lifetime4 = var19;
           var3Lifetime5 = var19;
-          GetLagStandardDeviationOut.a(-1, var19, 16711935, 80, SetMassDriverReload.field_p, 4266);
+          GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var19, 16711935, 80, SetMassDriverReload.field_p, 4266);
         }
         if (GetPointDefenceLaserProjectiles.a(1, 11284)) {
           this.drawCarouselDebug(-106);
@@ -4187,7 +4187,7 @@ final class GameSession {
             var35 = CarouselCommongameInfoFactory.field_a[var34.id] + " changed to " + var34.value + " by " + this.state.getPlayerName(1, var3_ref.playerId);
             incrementValue$0 = var2Lifetime1;
             var2Lifetime1++;
-            GetLagStandardDeviationOut.a(-1, var35, 16777215, 20 * incrementValue$0 + 300, SetMassDriverReload.field_p - (GetPhasedEnergyBeamProjectiles.a(-37, var35) >> 1), 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var35, 16777215, 20 * incrementValue$0 + 300, SetMassDriverReload.field_p - (GetPhasedEnergyBeamProjectiles.a(-37, var35) >> 1), 4266);
           }
           var3_ref = (PlayerAction) (this.state.carouselInfo.events.next((byte) 22));
         }
@@ -4198,19 +4198,19 @@ final class GameSession {
           if (SetMinimapWidth.field_o % 20 > 10) {
             var24 = "Replay";
             var3Lifetime2 = var24;
-            GetLagStandardDeviationOut.a(-1, var3Lifetime2, 16711680, 40, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-24, var24) / 2, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var3Lifetime2, 16711680, 40, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-24, var24) / 2, 4266);
           }
           if (this.state.carouselInfo.isShowingClientState(33)) {
             var25 = "Client state";
             var3Lifetime2Lifetime1 = var25;
-            GetLagStandardDeviationOut.a(-1, var3Lifetime2Lifetime1, 16777215, 80, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-71, var25) / 2, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var3Lifetime2Lifetime1, 16777215, 80, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-71, var25) / 2, 4266);
           }
           stackIn_72_0 = ShipTeamConditionFactory.field_a;
           stackIn_73_1 = !(param0);
           var3_intLifetime2 = ((Camera2D) (Object) stackIn_72_0).screenToWorldX(stackIn_73_1, GetUseDetailLines.field_o);
           var4Lifetime3 = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
-          GetLagStandardDeviationOut.a(1, "x=" + var3_intLifetime2, 16777215, GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
-          GetLagStandardDeviationOut.a(1, "y=" + var4Lifetime3, 16777215, 12 + GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
+          GetLagStandardDeviationOut.drawTextWithDefaultFont(1, "x=" + var3_intLifetime2, 16777215, GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
+          GetLagStandardDeviationOut.drawTextWithDefaultFont(1, "y=" + var4Lifetime3, 16777215, 12 + GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
           var26 = this.state.carouselInfo.getDebugDifferences((byte) -75);
           if (var26 != null) {
             var17 = SetFighterBayAimspeed.a((byte) -67, '\n', var26);
@@ -4221,8 +4221,8 @@ final class GameSession {
             var10Lifetime1 = var18;
             while (var18 < var17.length) {
               var11 = var17[var18];
-              CachedArchiveProvider.a(200, false, var7Lifetime1, var9Lifetime1 + (-var8Lifetime1 + 2), var8Lifetime1, GetPhasedEnergyBeamProjectiles.a(102, var11), 1118481);
-              GetLagStandardDeviationOut.a(-1, var11, 16777215, var9Lifetime1, var7Lifetime1, 4266);
+              CachedArchiveProvider.fillRectangleAlpha(200, false, var7Lifetime1, var9Lifetime1 + (-var8Lifetime1 + 2), var8Lifetime1, GetPhasedEnergyBeamProjectiles.a(102, var11), 1118481);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var11, 16777215, var9Lifetime1, var7Lifetime1, 4266);
               var9Lifetime1 = var9Lifetime1 + var8Lifetime1;
               var18++;
             }
@@ -4372,10 +4372,10 @@ final class GameSession {
                 var13 = 20 + (ShipTeamConditionFactory.field_a.worldToScreenY(true, 65536 * var7.gridy) + var8 * OpenGlTexture.getCurrentFontAscent((byte) 118));
                 if (var11 == null) {
                   var8++;
-                  GetLagStandardDeviationOut.a(-1, "Null body=" + var10, 16711680, var13, var12, 4266);
+                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, "Null body=" + var10, 16711680, var13, var12, 4266);
                 } else {
                   var11.draw(ShipTeamConditionFactory.field_a, 16777215, param1, 16);
-                  GetLagStandardDeviationOut.a(-1, "Body=" + var10, 65280, var13, var12, 4266);
+                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, "Body=" + var10, 65280, var13, var12, 4266);
                   var8++;
                 }
                 var15++;
@@ -4384,7 +4384,7 @@ final class GameSession {
             } else {
               var9 = ShipTeamConditionFactory.field_a.worldToScreenX(65536 * var7.gridx, (byte) 113);
               var10 = 20 + (ShipTeamConditionFactory.field_a.worldToScreenY(true, var7.gridy * 65536) + var8 * OpenGlTexture.getCurrentFontAscent((byte) 118));
-              GetLagStandardDeviationOut.a(-1, "Null id list!", 16711680, var10, var9, 4266);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, "Null id list!", 16711680, var10, var9, 4266);
             }
           }
           return;
@@ -4653,7 +4653,7 @@ final class GameSession {
                 var14 = var14 + param8;
                 if (var17 != null &&
                   0 < var17.length()) {
-                  GetLagStandardDeviationOut.a(-1, var17, param6[var16], -2 + (OpenGlTexture.getCurrentFontAscent((byte) 118) >> 1) + var18, param9 + param3, 4266);
+                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var17, param6[var16], -2 + (OpenGlTexture.getCurrentFontAscent((byte) 118) >> 1) + var18, param9 + param3, 4266);
                 }
                 if (var13_int == 0) {
                   if ((GetBoostersActiveTime.field_o & param7[var16]) != 0) {
@@ -5044,7 +5044,7 @@ final class GameSession {
             var12 = var8.worldToScreenY(true, param0.getHeight(1) / 2);
             var7 = var7 + var11;
             var6 = var6 - var9;
-            CachedArchiveProvider.a(200, false, var6 + var9, var11 + var7, -var11 + var12, var10 - var9, 0);
+            CachedArchiveProvider.fillRectangleAlpha(200, false, var6 + var9, var11 + var7, -var11 + var12, var10 - var9, 0);
             SaveShipDesignOrderDefinition.pushClip(var7 + var11, var12 + var7, true, var6 + var10, var9 + var6);
             var23 = param2;
             for (var14_int = 0; var23.length > var14_int; var14_int++) {
@@ -5055,7 +5055,7 @@ final class GameSession {
                 var17 = var8.worldToScreenY(true, var24.getY((byte) 124)) + var7;
                 stackIn_12_0 = (var24.getOwner((byte) -117) == this.localPlayerIndex);
                 var18 = AlphaContainer.getTeamColor(stackIn_12_0, var24.getTeam((byte) 95), param1 ^ 13894143);
-                MouseWheelInput.a(var18, var17, var16, -119);
+                MouseWheelInput.drawPixel(var18, var17, var16, -119);
               }
             }
             var25 = this.state.getVisibleWorld((byte) 33).getProjectiles(true);
@@ -5064,7 +5064,7 @@ final class GameSession {
               var15 = var8.worldToScreenX(var27.getX(116), (byte) 115) + var6;
               var16Lifetime1 = var7 + var8.worldToScreenY(true, var27.getY((byte) -107));
               var17Lifetime1 = 16776960;
-              MouseWheelInput.a(var17Lifetime1, var16Lifetime1, var15, -110);
+              MouseWheelInput.drawPixel(var17Lifetime1, var16Lifetime1, var15, -110);
               var27 = (Projectile) (var25.next((byte) 118));
             }
             var14 = this.state.getVisibleWorld((byte) 65).getAsteroids(true);
@@ -5075,7 +5075,7 @@ final class GameSession {
                 var18Lifetime1 = var6 + var8.worldToScreenX(var17_ref_crb.getX(false), (byte) 119);
                 var19 = var7 + var8.worldToScreenY(true, var17_ref_crb.getY((byte) -24));
                 var20 = 7829367;
-                MouseWheelInput.a(var20, var19, var18Lifetime1, 82);
+                MouseWheelInput.drawPixel(var20, var19, var18Lifetime1, 82);
               }
             }
             var15Lifetime1 = var8.worldToScreenX(ShipTeamConditionFactory.field_a.screenToWorldX(true, 0), (byte) 115);
@@ -5083,7 +5083,7 @@ final class GameSession {
             var17Lifetime2 = var8.worldToScreenY(true, ShipTeamConditionFactory.field_a.screenToWorldY(0, 0));
             var18Lifetime2 = var8.worldToScreenY(true, ShipTeamConditionFactory.field_a.screenToWorldY(param1 ^ 0, MissionVariableFactory.field_a));
             GetMissilesHitSourceTeam.a(var6 + var15Lifetime1, var17Lifetime2 + var7, (byte) -128, var18Lifetime2 - var17Lifetime2, 100, 16777215, var16Lifetime3 - var15Lifetime1);
-            GetMissionTerrainSpaceProbability.a(99);
+            GetMissionTerrainSpaceProbability.popRasterState(99);
             UiToggleButtonRenderer.drawRectangle(110, var9 + var6, var12 - var11, var7 + var11, 16777215, -var9 + var10);
             return;
           }
@@ -5551,7 +5551,7 @@ final class GameSession {
                 }
                 var9--;
                 if (0 <= var9 &&
-                  SetWaitForPlayers.a(9) > var9 &&
+                  SetWaitForPlayers.getPresetSpawnChoiceCount(9) > var9 &&
                   var8 != var9 &&
                   ArchiveIndexLoader.field_g.isComponentOptionAvailable(ArchiveLoadRequest.isLoggedInMember(-114), 3 + var9, (byte) -84)) {
                   var10 = new PlayerAction();
@@ -5709,7 +5709,7 @@ final class GameSession {
             this.activeSpecialOrderId = -98;
           }
           UiToggleButtonRenderer.drawRectangle(120, var4, -var6 + var8, var6, 16755455, -var4 + var7);
-          GetLagStandardDeviationOut.a(1, "Gridx=" + param1.gridx + ", gridy=" + param1.gridy, 16711935, var6, var4, 4266);
+          GetLagStandardDeviationOut.drawTextWithDefaultFont(1, "Gridx=" + param1.gridx + ", gridy=" + param1.gridy, 16711935, var6, var4, 4266);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uca.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -5813,12 +5813,12 @@ final class GameSession {
             this.hoveredVoteOptionId = param0;
             if (!ArchiveIndexLoader.field_g.isVoteOptionComingSoon(param0, 4)) {
               if (var15 == 0) {
-                GetMassDriverReload.a(PartitioningManager.field_c, -46);
+                GetMassDriverReload.setTooltipText(PartitioningManager.field_c, -46);
               } else {
-                GetMassDriverReload.a(SetReverbGain.a(ShipBodyFactory.field_a, new String[]{var17}, 93), -35);
+                GetMassDriverReload.setTooltipText(SetReverbGain.a(ShipBodyFactory.field_a, new String[]{var17}, 93), -35);
               }
             } else {
-              GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -64);
+              GetMassDriverReload.setTooltipText(GetDebrisCollisionDamage.field_o, -64);
             }
             if (ArchiveIndexLoader.field_g.isVoteOptionAvailable(param0, 11, ArchiveLoadRequest.isLoggedInMember(-113))) {
               this.voteHighlightAlphas[param0] = Math.min(255, 64 + this.voteHighlightAlphas[param0]);
@@ -6731,8 +6731,8 @@ final class GameSession {
                 }
                 var36 = var17 * var30Lifetime1 >> 8;
                 SaveShipDesignOrderDefinition.pushClip(var17 + (var19 - var36), var17 + var19, true, var18 + var16, var18);
-                PlayerActionFactory.a(var33Lifetime2, var34 + var18, (byte) 92, var35 + var19);
-                GetMissionTerrainSpaceProbability.a(84);
+                PlayerActionFactory.drawToolkitSprite(var33Lifetime2, var34 + var18, (byte) 92, var35 + var19);
+                GetMissionTerrainSpaceProbability.popRasterState(84);
                 if (var30Lifetime1 < 255 &&
                   var26 == 0) {
                   var37_int = var16 * var30Lifetime1 >> 8;
@@ -7241,7 +7241,7 @@ final class GameSession {
             var15 = 16;
             var16 = GameTextMetrics.getStringWidth(var13Lifetime1Lifetime1, var10, 13879) + 2 * var15;
             var17Lifetime1 = 2 * var14Lifetime1 + var15;
-            CachedArchiveProvider.a(200, false, -(var16 / 2) + SetMassDriverReload.field_p, -(var17Lifetime1 / 2) + GetLaserAimarc.field_q + (GetPointDefenceLaserProjectiles.getFontAscent(false, var3_int) + var14Lifetime1 / 2 + 8) / 2, var17Lifetime1, var16, 1);
+            CachedArchiveProvider.fillRectangleAlpha(200, false, -(var16 / 2) + SetMassDriverReload.field_p, -(var17Lifetime1 / 2) + GetLaserAimarc.field_q + (GetPointDefenceLaserProjectiles.getFontAscent(false, var3_int) + var14Lifetime1 / 2 + 8) / 2, var17Lifetime1, var16, 1);
             SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var13Lifetime1Lifetime1, var10, 13879) / 2, -1, var14Lifetime1 / 2 + GetLaserAimarc.field_q, var10, var13Lifetime1Lifetime1, var11Lifetime1Lifetime1, (byte) -102);
             var25 = Integer.toString(var24.getPhaseChangeCountdown((byte) -127) / Particle.field_l);
             var18 = var25;
@@ -7619,7 +7619,7 @@ final class GameSession {
             if (var7 > 0) {
               param2[var7] = " - " + param2[var7];
             }
-            GetLagStandardDeviationOut.a(1, param2[var7], 16777215, var9, var8, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(1, param2[var7], 16777215, var9, var8, 4266);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7798,7 +7798,7 @@ final class GameSession {
           this.toggleChatVisibility(false);
         }
         if (13 == SetBombletSprayProjectileDamage.field_o &&
-          !SetDebrisGroupColour.b(false)) {
+          !SetDebrisGroupColour.isShipImportPending(false)) {
           var2 = 0;
           if (this.networked) {
             if (this.localPlayerIndex >= 0) {
@@ -7843,7 +7843,7 @@ final class GameSession {
           if (param2 != -4298) {
             return;
           }
-          var8 = GetSniperCannonAimspeed.a(100, param3);
+          var8 = GetSniperCannonAimspeed.getSpriteWidthOrFallback(100, param3);
           var9 = var8 / 2;
           var10 = OpenGlVertexNormal.field_d[4];
           if (!MissionAction.rectanglesIntersect(param1, ShipTeamConditionFactory.field_a.worldBounds, 122)) {
@@ -7861,7 +7861,7 @@ final class GameSession {
                 var17 = var17 - (28 * TextureLineShape.sinAngle(var18, 97) >> 16);
                 var10.drawRotatedScaled((float)var16, (float)var17, 20.0f, 23.0f, 4096, -var18 << 3, 0, -1, 1);
               }
-              PlayerActionFactory.a(param3, -var9 + var16, (byte) 88, -var9 + var17);
+              PlayerActionFactory.drawToolkitSprite(param3, -var9 + var16, (byte) 88, -var9 + var17);
             }
           } else {
             var11 = var10.getPaddedHeight();
@@ -7874,7 +7874,7 @@ final class GameSession {
             if (OpenGlTexture1D.field_i) {
               var10.drawRotatedScaled((float)var12, (float)var13, 20.0f, 23.0f, 4096, -16384, 0, var14 << 24 | 16777215, 1);
             }
-            SetBuildViewAutozoomTimeout.a(true, var14, -var9 + var12, -var9 + var13, param3);
+            SetBuildViewAutozoomTimeout.drawToolkitSpriteAlpha(true, var14, -var9 + var12, -var9 + var13, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7995,7 +7995,7 @@ final class GameSession {
               var10 + var7.width >= PlayerGameData.field_b &&
               OpenGlFaceAttachment.field_b >= var11 &&
               var11 + var7.height >= OpenGlFaceAttachment.field_b) {
-              GetMassDriverReload.a(GetBombletSprayRandomness.field_q[0][var6], -53);
+              GetMassDriverReload.setTooltipText(GetBombletSprayRandomness.field_q[0][var6], -53);
             }
             var8 = Math.max(var8, var9);
           }
@@ -8017,7 +8017,7 @@ final class GameSession {
             var15 <= GetTorpedoReload.field_q &&
             var17 >= GetTorpedoReload.field_q) {
             var18 = 16711680;
-            GetMassDriverReload.a(SetReverbGain.a(NullUiRenderer.field_a, new String[]{param3.field_dc.text}, 78), -61);
+            GetMassDriverReload.setTooltipText(SetReverbGain.a(NullUiRenderer.field_a, new String[]{param3.field_dc.text}, 78), -61);
             if (ArchiveLoadRequest.field_c == 1) {
               LiteralStrings.a(param3.getGameId((byte) -13), -1, 11);
             }
@@ -8140,7 +8140,7 @@ final class GameSession {
                 if (var20 > var8) {
                   var8 = var20;
                 }
-                var5 = var5 + (UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121));
+                var5 = var5 + (UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.getFontMaxDescent(var9, (byte) -121));
               }
             }
           }
@@ -8155,7 +8155,7 @@ final class GameSession {
                 if (var8 < var18_intLifetime1) {
                   var8 = var18_intLifetime1;
                 }
-                var5 = var5 + (UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121));
+                var5 = var5 + (UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.getFontMaxDescent(var9, (byte) -121));
               }
             }
           }
@@ -8178,7 +8178,7 @@ final class GameSession {
                 }
                 var42 = var40 + ": " + var18_intLifetime2 + var41;
                 var20Lifetime1 = -GameTextMetrics.getStringWidth(var9, var42, 13879) + var6;
-                var21 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121);
+                var21 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.getFontMaxDescent(var9, (byte) -121);
                 var22 = var7 + var21 + var10;
                 var23_int = GetReloadBarWidth.field_o[var29.label];
                 var24 = AlphaContainer.getTeamColor(false, var23_int, 13894143);
@@ -8187,7 +8187,7 @@ final class GameSession {
                   var25 = TextureLineShape.sinAngle(128 * SetMinimapWidth.field_o, 96) >> 9;
                   var24 = TextureRectangleShape.blendColors((byte) 66, 16711680, var25, var24);
                 }
-                SetSelfDestructPrepareToggleCooldown.drawText(var20Lifetime1, -1, -MidiNote.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
+                SetSelfDestructPrepareToggleCooldown.drawText(var20Lifetime1, -1, -MidiNote.getFontMaxDescent(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
                 var10 = var10 + (var21 - 1);
               }
             }
@@ -8203,9 +8203,9 @@ final class GameSession {
                 var18 = GetSniperCannonAimarc.formatShipObjectiveLabel((byte) -38, param1, var45) + ":";
                 var19 = var45.getHealthProgress(0);
                 var20Lifetime2 = AlphaContainer.getTeamColor(false, var45.getTeam((byte) 66), 13894143);
-                var21Lifetime1 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121);
+                var21Lifetime1 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.getFontMaxDescent(var9, (byte) -121);
                 var22Lifetime1 = var7 - (-var21Lifetime1 - var10);
-                SoftwareDepthBuffer.a(var20Lifetime2, -MidiNote.a(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
+                SoftwareDepthBuffer.a(var20Lifetime2, -MidiNote.getFontMaxDescent(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
                 var10 = var10 + (var21Lifetime1 - 1);
                 SetMissionTerrainDebrisProbability.a(var20Lifetime2, var19, var22Lifetime1 - var21Lifetime1 / 2 - 2, 4, false, var12, -var12 + (var6 + 1), 2);
                 if (var13 != null &&
@@ -8314,7 +8314,7 @@ final class GameSession {
             var12 = GetGrapplingHookSpringConstant.specialOrderLabels[var4Lifetime1];
             var3Lifetime1 = var12;
             var3Lifetime1Lifetime1 = var12;
-            GetLagStandardDeviationOut.a(-1, var12, 16777215, 120, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-80, var12) / 2, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var12, 16777215, 120, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-80, var12) / 2, 4266);
           }
           if (this.networked) {
             var5 = null;
@@ -8813,8 +8813,8 @@ final class GameSession {
           this.field_W = new Ship();
           var8 = null;
           if (!this.networked &&
-            GetBuildViewAutozoomEndOnAction.a(61848)) {
-            var8 = MenuInputState.createShipFromComponentWords(VariableConditionFactory.a(108), (byte) 127);
+            GetBuildViewAutozoomEndOnAction.hasConfirmedShipImport(61848)) {
+            var8 = MenuInputState.createShipFromComponentWords(VariableConditionFactory.takeConfirmedShipComponentWords(108), (byte) 127);
           } else {
             if (this.field_x) {
               var8 = ToolkitViewState.createPresetShip(3, (byte) 65);

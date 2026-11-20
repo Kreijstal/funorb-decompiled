@@ -10,7 +10,7 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
         int var8 = VoidHunters.field_G;
         try {
           for (var6_int = param2; var6_int <= param5; var6_int++) {
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param1, ResourceNode.field_b[var6_int], (byte) 75, param0);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param4, param1, ResourceNode.rasterTargetRows[var6_int], (byte) 75, param0);
           }
           int var7 = -38 % ((-5 - param3) / 63);
         } catch (RuntimeException runtimeException) {

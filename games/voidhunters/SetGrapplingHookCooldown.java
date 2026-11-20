@@ -18,7 +18,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(202, 62, arguments[0].intValue(32));
+          SetMachineGunEnergyUsed.submitSettingsChange(202, 62, arguments[0].intValue(32));
           if (obfuscationGuard >= -119) {
             var4 = (java.awt.Canvas) null;
             SetGrapplingHookCooldown.attachInputListeners((byte) -17, (java.awt.Canvas) null);

@@ -84,7 +84,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
               var4 = param2.message;
               if (param2.responseCode == 248) {
                 if (!param0) {
-                  MapClearanceAreaFactory.b((byte) -75);
+                  MapClearanceAreaFactory.writeSessionMarkerCookie((byte) -75);
                 }
                 var4 = GetMissionTerrainAsteroidProbability.field_q;
                 this.ineligible = true;

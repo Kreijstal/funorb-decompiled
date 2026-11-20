@@ -269,7 +269,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (param1) {
             var6 = var6 | 8;
           }
-          if (GetFighterBayAimspeed.field_o != null) {
+          if (GetFighterBayAimspeed.requestedPlayerName != null) {
             var6 = var6 | 16;
           }
           RequestNewestBlackboxRecording.field_p.writeByte(0, var6);
@@ -281,8 +281,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             field_u = (String) null;
           }
           RequestNewestBlackboxRecording.field_p.writeString(true, var7);
-          if (GetFighterBayAimspeed.field_o != null) {
-            RequestNewestBlackboxRecording.field_p.writeCircumfixedString((byte) 0, GetFighterBayAimspeed.field_o);
+          if (GetFighterBayAimspeed.requestedPlayerName != null) {
+            RequestNewestBlackboxRecording.field_p.writeCircumfixedString((byte) 0, GetFighterBayAimspeed.requestedPlayerName);
           }
           GetOndamageParticleLife.writeEncryptedAccountPayload(RequestNewestBlackboxRecording.field_p, (byte) -126, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
           RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var5_int, -125);

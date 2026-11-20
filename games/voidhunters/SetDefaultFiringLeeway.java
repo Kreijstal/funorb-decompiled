@@ -17,7 +17,7 @@ final class SetDefaultFiringLeeway extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(96, 62, arguments[0].intValue(50));
+          SetMachineGunEnergyUsed.submitSettingsChange(96, 62, arguments[0].intValue(50));
           if (obfuscationGuard >= -119) {
             SetDefaultFiringLeeway.clearSharedReferences(false);
           }

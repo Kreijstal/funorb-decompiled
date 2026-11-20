@@ -14,7 +14,7 @@ final class SetInnateThrusters extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(21, 62, arguments[0].intValue(10));
+          SetMachineGunEnergyUsed.submitSettingsChange(21, 62, arguments[0].intValue(10));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 102);
@@ -45,15 +45,15 @@ final class SetInnateThrusters extends ConsoleCommand {
         field_p = null;
     }
 
-    final static void a(int param0, int[] param1) {
+    final static void requestShipImport(int param0, int[] param1) {
         SetSniperCannonProjectileLife.decodeComponentWords(param0 + 1, param1);
         if (param0 != 0) {
           int[] var3 = (int[]) null;
-          SetInnateThrusters.a(-95, (int[]) null);
+          SetInnateThrusters.requestShipImport(-95, (int[]) null);
         }
         try {
-          SetFixedaim.field_o = false;
-          GetBombletSprayPushMultiplier.field_o = param1;
+          SetFixedaim.shipImportResolved = false;
+          GetBombletSprayPushMultiplier.importedShipComponentWords = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "hja.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

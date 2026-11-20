@@ -23,7 +23,7 @@ final class SetAngleset extends ConsoleCommand {
               stackIn_13_0 = new OpenGlSpriteTexture(param3, 34037, param4, param1, param2);
               return stackIn_13_0;
             }
-            stackIn_11_0 = new OpenGlSpriteTexture(param3, param4, param1, param2, GetSalvoaim.a(param1, (byte) -106), GetSalvoaim.a(param2, (byte) -106));
+            stackIn_11_0 = new OpenGlSpriteTexture(param3, param4, param1, param2, GetSalvoaim.nextPowerOfTwo(param1, (byte) -106), GetSalvoaim.nextPowerOfTwo(param2, (byte) -106));
             return stackIn_11_0;
           }
           stackIn_8_0 = new OpenGlSpriteTexture(param3, 3553, param4, param1, param2);
@@ -59,7 +59,7 @@ final class SetAngleset extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(28, 62, arguments[0].intValue(115));
+          SetMachineGunEnergyUsed.submitSettingsChange(28, 62, arguments[0].intValue(115));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

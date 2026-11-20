@@ -21,7 +21,7 @@ final class GetBombletSprayReload extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetBombletSprayReload.a(-46, -76, -106);
+            GetBombletSprayReload.translateMouseCoordinates(-46, -76, -106);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(111, 80));
           return stackIn_3_0;
@@ -48,7 +48,7 @@ final class GetBombletSprayReload extends ConsoleCommand {
         field_p = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void translateMouseCoordinates(int param0, int param1, int param2) {
         int var3 = GetUseDetailLines.field_o - param2;
         int var4 = GetTorpedoReload.field_q - param1;
         PlayerGameData.field_b = var3;

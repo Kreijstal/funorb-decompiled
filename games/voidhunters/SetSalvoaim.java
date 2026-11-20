@@ -28,7 +28,7 @@ final class SetSalvoaim extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(26, 62, arguments[0].intValue(30));
+          SetMachineGunEnergyUsed.submitSettingsChange(26, 62, arguments[0].intValue(30));
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -61);

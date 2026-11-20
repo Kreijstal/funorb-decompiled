@@ -19,7 +19,7 @@ final class SetDebrisCarryOver extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (GameStateFactory) null;
           }
-          SetMachineGunEnergyUsed.a(34, 62, arguments[0].intValue(94));
+          SetMachineGunEnergyUsed.submitSettingsChange(34, 62, arguments[0].intValue(94));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

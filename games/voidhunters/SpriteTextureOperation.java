@@ -3,7 +3,7 @@
  */
 class SpriteTextureOperation extends TextureOperation {
     static TextureCombineSource field_l;
-    static String field_o;
+    static String tooltipText;
     int sourceHeight;
     int[] sourcePixels;
     static int[] field_n;
@@ -55,7 +55,7 @@ class SpriteTextureOperation extends TextureOperation {
 
     final int getSpriteId(int param0) {
         if (param0 != -1) {
-          field_o = (String) null;
+          tooltipText = (String) null;
           return this.spriteId;
         }
         return this.spriteId;
@@ -80,10 +80,10 @@ class SpriteTextureOperation extends TextureOperation {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var3 = (int)(-TextureTransformMode.field_a.worldCenterX + (float)param1);
-        int var4 = (int)((float)param2 - TextureTransformMode.field_a.worldCenterY);
+        int var3 = (int)(-TextureTransformMode.soundCamera.worldCenterX + (float)param1);
+        int var4 = (int)((float)param2 - TextureTransformMode.soundCamera.worldCenterY);
         if (param0 > 83) {
-          var5 = (int)(640.0 / (double)TextureTransformMode.field_a.scale);
+          var5 = (int)(640.0 / (double)TextureTransformMode.soundCamera.scale);
           var6 = ComponentAttachmentPlan.approximateVectorLength(var5, (byte) 119, var4, var3);
           var7 = 33554432 / var6;
           if (var7 > 128) {
@@ -95,7 +95,7 @@ class SpriteTextureOperation extends TextureOperation {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        tooltipText = null;
         if (param0 != -1) {
           return;
         }

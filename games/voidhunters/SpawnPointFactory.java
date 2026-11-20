@@ -57,7 +57,7 @@ final class SpawnPointFactory implements GameStateFactory {
               var3 = "Detail lines mode";
             }
           }
-          GetLagStandardDeviationOut.a(-1, var3, 16777215, 40, GetBombletSprayEnergyUsed.field_p.width / 2 - (GetPhasedEnergyBeamProjectiles.a(123, var3) >> 1), 4266);
+          GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var3, 16777215, 40, GetBombletSprayEnergyUsed.field_p.width / 2 - (GetPhasedEnergyBeamProjectiles.a(123, var3) >> 1), 4266);
           if (param2) {
             return;
           }
@@ -84,7 +84,7 @@ final class SpawnPointFactory implements GameStateFactory {
           stackIn_18_0 = 16711935;
           stackIn_18_1 = (Camera2D) (param0);
           stackIn_19_2 = !(param2);
-          MouseWheelInput.a(stackIn_18_0, ((Camera2D) (Object) stackIn_18_1).worldToScreenY(stackIn_19_2, 0), param0.worldToScreenX(0, (byte) 122), 80);
+          MouseWheelInput.drawPixel(stackIn_18_0, ((Camera2D) (Object) stackIn_18_1).worldToScreenY(stackIn_19_2, 0), param0.worldToScreenX(0, (byte) 122), 80);
           for (var5 = 0; var5 < var18.length; var5 += 2) {
             var6 = var18[var5];
             var7 = var14[var5 + 1];
@@ -97,9 +97,9 @@ final class SpawnPointFactory implements GameStateFactory {
             var7Lifetime1 = var4_array[var5Lifetime1 + 1];
             var8Lifetime1 = param0.worldToScreenX(var6Lifetime1, (byte) 120);
             var9Lifetime1 = param0.worldToScreenY(true, var7Lifetime1);
-            MouseWheelInput.a(16777215, var9Lifetime1, var8Lifetime1, 63);
+            MouseWheelInput.drawPixel(16777215, var9Lifetime1, var8Lifetime1, 63);
             if (BoundedRandomAccessFile.field_c != 2) {
-              GetLagStandardDeviationOut.a(1, "" + (var5Lifetime1 >> 1), 16777215, var9Lifetime1, var8Lifetime1, 4266);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(1, "" + (var5Lifetime1 >> 1), 16777215, var9Lifetime1, var8Lifetime1, 4266);
             }
           }
           if (BoundedRandomAccessFile.field_c == 0) {
@@ -116,7 +116,7 @@ final class SpawnPointFactory implements GameStateFactory {
                 var11 = 8 * GetNumStars.cosAngle(var5_ref_lsb__[var6Lifetime2].field_a, (byte) 61) >> 8;
                 var12 = TextureLineShape.sinAngle(var5_ref_lsb__[var6Lifetime2].field_a, 109) * 8 >> 8;
                 DelayedPacket.drawLine(param0.worldToScreenY(true, var12 + var8Lifetime2), param0.worldToScreenX(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);
-                GetLagStandardDeviationOut.a(-1, Integer.toString(var6Lifetime2), 16711935, var10, var9Lifetime2, 4266);
+                GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, Integer.toString(var6Lifetime2), 16711935, var10, var9Lifetime2, 4266);
               }
             }
           }

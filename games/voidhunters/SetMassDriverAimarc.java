@@ -18,7 +18,7 @@ final class SetMassDriverAimarc extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetMassDriverAimarc.formatGmtDate((byte) 59, 88L);
           }
-          SetMachineGunEnergyUsed.a(130, 62, arguments[0].intValue(73));
+          SetMachineGunEnergyUsed.submitSettingsChange(130, 62, arguments[0].intValue(73));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

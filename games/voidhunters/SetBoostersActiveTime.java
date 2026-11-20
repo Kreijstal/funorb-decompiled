@@ -15,7 +15,7 @@ final class SetBoostersActiveTime extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(219, 62, arguments[0].intValue(39));
+          SetMachineGunEnergyUsed.submitSettingsChange(219, 62, arguments[0].intValue(39));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 59);

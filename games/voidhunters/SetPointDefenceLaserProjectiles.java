@@ -24,7 +24,7 @@ final class SetPointDefenceLaserProjectiles extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(88, 62, arguments[0].intValue(102));
+          SetMachineGunEnergyUsed.submitSettingsChange(88, 62, arguments[0].intValue(102));
           if (obfuscationGuard >= -119) {
             field_o = -58;
           }

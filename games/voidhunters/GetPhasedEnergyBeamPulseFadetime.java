@@ -119,7 +119,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               var6_intLifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -110);
               NetworkMessageState.incomingOpcode = var6_intLifetime1;
               AccountNameAvailabilityReplies.field_b.position = 0;
-              GetFighterBayAimspeed.field_o = null;
+              GetFighterBayAimspeed.requestedPlayerName = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {

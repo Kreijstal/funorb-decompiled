@@ -23,7 +23,7 @@ final class SetPedrosRepairMode extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(31, 62, arguments[0].intValue(65));
+          SetMachineGunEnergyUsed.submitSettingsChange(31, 62, arguments[0].intValue(65));
           if (obfuscationGuard > -119) {
             hsvPaletteUsers = -106;
           }

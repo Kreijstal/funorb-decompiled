@@ -21,7 +21,7 @@ final class SetSniperCannonFireForce extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetSniperCannonFireForce.clearSharedReferences(16);
           }
-          SetMachineGunEnergyUsed.a(104, 62, arguments[0].intValue(19));
+          SetMachineGunEnergyUsed.submitSettingsChange(104, 62, arguments[0].intValue(19));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

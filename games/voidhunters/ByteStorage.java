@@ -28,9 +28,9 @@ abstract class ByteStorage {
           var3 = -4 & var2_int + 3;
           var4 = 3 * (var3 / 4);
           if (var2_int > var3 - 2 &&
-            SetThrusterParticleLife.a(param0.charAt(-2 + var3), -82) != -1) {
+            SetThrusterParticleLife.decodeBase64Character(param0.charAt(-2 + var3), -82) != -1) {
             if (var3 - 1 >= var2_int ||
-              SetThrusterParticleLife.a(param0.charAt(var3 - 1), -46) == -1) {
+              SetThrusterParticleLife.decodeBase64Character(param0.charAt(var3 - 1), -46) == -1) {
               var4--;
             }
           } else {

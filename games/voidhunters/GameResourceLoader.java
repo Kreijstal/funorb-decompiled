@@ -17,75 +17,75 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
     static String defendYourBaseText;
 
     final void requestResources(byte param0) {
-        ComponentCollision.a("Very start of requestdata", (byte) -56);
+        ComponentCollision.traceLoadingStatus("Very start of requestdata", (byte) -56);
         if (OpenGlVertexBuffer.field_j != null) {
           AsteroidField.loadLocalizedTextAndKeyBindings((byte) -100, OpenGlVertexBuffer.field_j);
           OpenGlVertexBuffer.field_j = null;
           MidiNote.resetFrameTiming(param0 + 2095);
         }
         AsteroidFieldFactory.field_b = true;
-        ComponentCollision.a("common wordpackj", (byte) -102);
+        ComponentCollision.traceLoadingStatus("common wordpackj", (byte) -102);
         this.wordpackArchive = MissionBuilder.createArchive(param0 + 0, OpenGlGpuRectangleTexture.field_k.id);
-        ComponentCollision.a("graphicsj", (byte) -103);
+        ComponentCollision.traceLoadingStatus("graphicsj", (byte) -103);
         this.graphicsArchive = MissionBuilder.createArchive(param0 + 0, 16);
-        ComponentCollision.a("fontmetricsj", (byte) -66);
+        ComponentCollision.traceLoadingStatus("fontmetricsj", (byte) -66);
         this.fontMetricsArchive = MissionBuilder.createArchive(1, 17);
-        ComponentCollision.a("jagfxj", (byte) -93);
+        ComponentCollision.traceLoadingStatus("jagfxj", (byte) -93);
         this.soundEffectArchive = MissionBuilder.createArchive(param0 + 0, 18);
-        ComponentCollision.a("vorbisj", (byte) -64);
+        ComponentCollision.traceLoadingStatus("vorbisj", (byte) -64);
         this.vorbisArchive = MissionBuilder.createArchive(1, 19);
-        ComponentCollision.a("patchesj", (byte) -106);
+        ComponentCollision.traceLoadingStatus("patchesj", (byte) -106);
         this.patchArchive = MissionBuilder.createArchive(param0 + 0, 20);
-        ComponentCollision.a("midij", (byte) -100);
+        ComponentCollision.traceLoadingStatus("midij", (byte) -100);
         this.musicArchive = MissionBuilder.createArchive(1, 21);
-        ComponentCollision.a("common quickchatj", (byte) -64);
+        ComponentCollision.traceLoadingStatus("common quickchatj", (byte) -64);
         this.quickChatArchive = MissionBuilder.createArchive(1, GetMachineGunProjectileDamage.field_o.id);
-        ComponentCollision.a("texturemetricsj", (byte) -108);
+        ComponentCollision.traceLoadingStatus("texturemetricsj", (byte) -108);
         this.textureMetricsArchive = MissionBuilder.createArchive(param0 ^ 0, 24);
-        ComponentCollision.a("texturesj", (byte) -91);
+        ComponentCollision.traceLoadingStatus("texturesj", (byte) -91);
         this.textureArchive = MissionBuilder.createArchive(1, 25);
-        ComponentCollision.a("jpegj", (byte) -52);
+        ComponentCollision.traceLoadingStatus("jpegj", (byte) -52);
         this.jpegArchive = MissionBuilder.createArchive(param0 ^ 0, 26);
         ResourceArchive var4 = GetMassDriverReload.field_o;
         ResourceArchive var3 = GetShieldsDirectionalArc.field_r;
-        ComponentCollision.a("creating request queue", (byte) -84);
+        ComponentCollision.traceLoadingStatus("creating request queue", (byte) -84);
         OpenGlGpuTexture3D.field_m = new ArchiveRequestQueue(82);
-        ComponentCollision.a("requesting basic common graphics group", (byte) -68);
+        ComponentCollision.traceLoadingStatus("requesting basic common graphics group", (byte) -68);
         OpenGlGpuTexture3D.field_m.enqueueRequest(var4, ConstantMonochromeTextureOperation.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
-        ComponentCollision.a("requesting common arialish12", (byte) -66);
+        ComponentCollision.traceLoadingStatus("requesting common arialish12", (byte) -66);
         OpenGlGpuTexture3D.field_m.enqueueRequest(var4, GetBombletSprayAimarc.field_p, false, "arialish12", TorpedoWeaponDefinition.field_b);
-        ComponentCollision.a("requesting common arialish12 fontmetric", (byte) -59);
+        ComponentCollision.traceLoadingStatus("requesting common arialish12 fontmetric", (byte) -59);
         OpenGlGpuTexture3D.field_m.enqueueRequest(var3, GetBombletSprayAimarc.field_p, false, "arialish12", TorpedoWeaponDefinition.field_b);
-        ComponentCollision.a("requesting common lobbyfont", (byte) -79);
+        ComponentCollision.traceLoadingStatus("requesting common lobbyfont", (byte) -79);
         OpenGlGpuTexture3D.field_m.enqueueRequest(var4, GetBombletSprayAimarc.field_p, false, "lobby", TorpedoWeaponDefinition.field_b);
-        ComponentCollision.a("requesting common lobbyfont metric", (byte) -72);
+        ComponentCollision.traceLoadingStatus("requesting common lobbyfont metric", (byte) -72);
         OpenGlGpuTexture3D.field_m.enqueueRequest(var3, GetBombletSprayAimarc.field_p, false, "lobby", TorpedoWeaponDefinition.field_b);
-        ComponentCollision.a("requesting jfx sounds", (byte) -66);
+        ComponentCollision.traceLoadingStatus("requesting jfx sounds", (byte) -66);
         OpenGlGpuTexture3D.field_m.enqueueRequest(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.soundEffectArchive);
-        ComponentCollision.a("requesting vorbis sounds", (byte) -53);
+        ComponentCollision.traceLoadingStatus("requesting vorbis sounds", (byte) -53);
         OpenGlGpuTexture3D.field_m.enqueueRequest(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.vorbisArchive);
-        ComponentCollision.a("requesting patches", (byte) -112);
+        ComponentCollision.traceLoadingStatus("requesting patches", (byte) -112);
         OpenGlGpuTexture3D.field_m.enqueueRequest(StripedProgressBar.field_z, param0 ^ -2, GetMissilesCooldown.field_p, this.patchArchive);
-        ComponentCollision.a("requesting midis", (byte) -113);
+        ComponentCollision.traceLoadingStatus("requesting midis", (byte) -113);
         OpenGlGpuTexture3D.field_m.enqueueRequest(GetBombletSprayProjectiles.field_o, -1, CarouselSlotFactory.field_a, this.musicArchive);
-        ComponentCollision.a("requesting basic graphics", (byte) -108);
+        ComponentCollision.traceLoadingStatus("requesting basic graphics", (byte) -108);
         if (param0 != 1) {
           this.textureArchive = (ResourceArchive) null;
         }
         OpenGlGpuTexture3D.field_m.enqueueRequest(this.graphicsArchive, ConstantMonochromeTextureOperation.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
-        ComponentCollision.a("requesting jpeg graphics", (byte) -87);
+        ComponentCollision.traceLoadingStatus("requesting jpeg graphics", (byte) -87);
         OpenGlGpuTexture3D.field_m.enqueueRequest(SetTorpedoProjectileOndamageParticles.field_o, -1, SetTorpedoProjectileOndamageParticles.field_o, this.jpegArchive);
-        ComponentCollision.a("requesting font graphics", (byte) -64);
+        ComponentCollision.traceLoadingStatus("requesting font graphics", (byte) -64);
         OpenGlGpuTexture3D.field_m.enqueueRequest(this.fontMetricsArchive, GetBombletSprayAimarc.field_p, false, "basic", TorpedoWeaponDefinition.field_b);
-        ComponentCollision.a("requesting textures", (byte) -107);
+        ComponentCollision.traceLoadingStatus("requesting textures", (byte) -107);
         OpenGlGpuTexture3D.field_m.enqueueRequest(GetThrusterParticleSpeedDownshift.field_p, -1, RangeTextureOperation.field_k, this.textureArchive);
-        ComponentCollision.a("requesting texturemetrics", (byte) -66);
+        ComponentCollision.traceLoadingStatus("requesting texturemetrics", (byte) -66);
         OpenGlGpuTexture3D.field_m.enqueueRequest(GetThrusterParticleSpeedDownshift.field_p, -1, RangeTextureOperation.field_k, this.textureMetricsArchive);
-        ComponentCollision.a("requesting extradata1", (byte) -94);
+        ComponentCollision.traceLoadingStatus("requesting extradata1", (byte) -94);
         OpenGlGpuTexture3D.field_m.enqueueRequest(QuickChatHelpWindow.loadingExtraDataText, -1, SetUseLines.field_q, this.wordpackArchive);
-        ComponentCollision.a("requesting extradata2", (byte) -77);
+        ComponentCollision.traceLoadingStatus("requesting extradata2", (byte) -77);
         OpenGlGpuTexture3D.field_m.enqueueRequest(QuickChatHelpWindow.loadingExtraDataText, -1, SetUseLines.field_q, this.quickChatArchive);
-        ComponentCollision.a("end of requestdata", (byte) -98);
+        ComponentCollision.traceLoadingStatus("end of requestdata", (byte) -98);
     }
 
     final boolean unpackResources(byte param0) {
@@ -104,13 +104,13 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         int[] var16;
         int[] var19;
         var8 = VoidHunters.field_G;
-        ComponentCollision.a("Inside unpack", (byte) -111);
+        ComponentCollision.traceLoadingStatus("Inside unpack", (byte) -111);
         AwardVictoryToTeamActionFactory.initializeTextTables((byte) -99);
         var11 = GetMassDriverReload.field_o;
         var12 = GetShieldsDirectionalArc.field_r;
         if (this.soundEffectArchive != null &&
           this.vorbisArchive != null) {
-          ComponentCollision.a("Unpacking sounds", (byte) -104);
+          ComponentCollision.traceLoadingStatus("Unpacking sounds", (byte) -104);
           GetAllowShipSaving.finishLoadingAnimations(4410);
           IncrementVariableAction.setProgressDialogStatus(OpenGlVertexDeclaration.field_e, param0 ^ -69, 82.0f);
           AppletRasterBuffer.field_a.renderGameFrame(param0 - 187);
@@ -244,7 +244,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           return false;
         }
         if (null != this.musicArchive) {
-          ComponentCollision.a("Unpacking music", (byte) -125);
+          ComponentCollision.traceLoadingStatus("Unpacking music", (byte) -125);
           IncrementVariableAction.setProgressDialogStatus(GetBloomCoefficientPercentage.field_p, -1, 88.0f);
           AppletRasterBuffer.field_a.renderGameFrame(-103);
           CachedByteArray.musicTracks = new MusicTrack[4];
@@ -257,7 +257,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           return false;
         }
         if (null != this.patchArchive) {
-          ComponentCollision.a("Unpacking patches", (byte) -123);
+          ComponentCollision.traceLoadingStatus("Unpacking patches", (byte) -123);
           for (var4_int = 0; var4_int < 4; var4_int++) {
             if (CachedByteArray.musicTracks[var4_int] != null &&
               !GetBurstFireMaxEnergy.musicStream.firstStream.loadMusicPatches(this.soundCache, -29476, this.patchArchive, 176400, CachedByteArray.musicTracks[var4_int])) {
@@ -276,7 +276,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         }
         if (null != this.fontMetricsArchive &&
           this.jpegArchive != null) {
-          ComponentCollision.a("Unpacking graphics", (byte) -113);
+          ComponentCollision.traceLoadingStatus("Unpacking graphics", (byte) -113);
           IncrementVariableAction.setProgressDialogStatus(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
           AppletRasterBuffer.field_a.renderGameFrame(-112);
           GrapplingHookFactory.field_a = (BitmapFont) ((Object) GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(var12, "", 0, var11, "arialish12"));
@@ -315,7 +315,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           }
           TeamObjectiveFormatter.initializeLobbyInterface(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.quickChatArchive, var15, UiComponent.field_o, DebugSendable.field_d);
           ShieldInfoPool.field_c = SetSniperCannonProjectiles.loadNamedSprite(this.graphicsArchive, "lobby_game_logo", "basic", true);
-          EdgeMagnitudeTextureOperation.b(200, -100);
+          EdgeMagnitudeTextureOperation.initializeChatMessages(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);
           SetMomentOfInertiaPredivideDownshift.a(AppletRasterBuffer.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);
           var3 = null;
@@ -328,19 +328,19 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           return false;
         }
         if (this.wordpackArchive != null) {
-          ComponentCollision.a("Loading huffman wordpack", (byte) -123);
+          ComponentCollision.traceLoadingStatus("Loading huffman wordpack", (byte) -123);
           FullscreenExit.setHuffmanCodec((byte) -22, new HuffmanCodec(this.wordpackArchive.fetchNamedFile("huffman", true, "")));
           this.wordpackArchive = null;
           MidiNote.resetFrameTiming(2096);
           return false;
         }
         if (null == DateOfBirthInput.field_x) {
-          ComponentCollision.a("Creating textureprovider", (byte) -119);
+          ComponentCollision.traceLoadingStatus("Creating textureprovider", (byte) -119);
           var4 = new ArchiveTextureProvider(this.textureMetricsArchive, this.textureArchive, this.graphicsArchive);
-          ComponentCollision.a("Creating tk manager", (byte) -80);
+          ComponentCollision.traceLoadingStatus("Creating tk manager", (byte) -80);
           var16 = new int[]{GetMassDriverProjectiles.field_q};
           DateOfBirthInput.field_x = new GraphicsToolkitSelector(var4, GetFighterRepairAmount.createBackendOptions(var16, param0 - 66));
-          ComponentCollision.a("Finished creating tk manager", (byte) -109);
+          ComponentCollision.traceLoadingStatus("Finished creating tk manager", (byte) -109);
         }
         if (DateOfBirthInput.field_x.context == null) {
           return false;

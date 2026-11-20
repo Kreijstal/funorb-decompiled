@@ -91,13 +91,13 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         try {
           if (param1 <= param3) {
             for (var5_int = param1; param3 > var5_int; var5_int++) {
-              ResourceNode.field_b[var5_int][param2] = param4;
+              ResourceNode.rasterTargetRows[var5_int][param2] = param4;
             }
           } else {
             var7 = param3;
             var5_int = var7;
             while (param1 > var7) {
-              ResourceNode.field_b[var7][param2] = param4;
+              ResourceNode.rasterTargetRows[var7][param2] = param4;
               var7++;
             }
           }

@@ -99,7 +99,7 @@ final class MandelbrotTextureOperation extends TextureOperation {
           var12 = -var8;
           var13 = -1;
           var14 = -1;
-          var33 = ResourceNode.field_b[param5];
+          var33 = ResourceNode.rasterTargetRows[param5];
           var26 = var33;
           var15 = var26;
           var16 = -var8 + param4;
@@ -126,8 +126,8 @@ final class MandelbrotTextureOperation extends TextureOperation {
               var9--;
               var10 = var10 - (var9 << 1);
               if (var9 < var8) {
-                var29 = ResourceNode.field_b[var9 + param5];
-                var30 = ResourceNode.field_b[param5 - var9];
+                var29 = ResourceNode.rasterTargetRows[var9 + param5];
+                var30 = ResourceNode.rasterTargetRows[param5 - var9];
                 var20 = ActiveIconBorderRenderer.field_a[var9];
                 var21 = param4 + var7_int;
                 var22 = -var7_int + param4;
@@ -140,16 +140,16 @@ final class MandelbrotTextureOperation extends TextureOperation {
                 GetSalvoRepairTimeMultiplier.fillArraySpan(param0, var23, var30, (byte) 75, var24);
                 GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var21, var30, (byte) 75, var23);
               } else {
-                var27 = ResourceNode.field_b[param5 + var9];
-                var28 = ResourceNode.field_b[param5 - var9];
+                var27 = ResourceNode.rasterTargetRows[param5 + var9];
+                var28 = ResourceNode.rasterTargetRows[param5 - var9];
                 var20 = param4 + var7_int;
                 var21 = -var7_int + param4;
                 GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20, var27, (byte) 75, var21);
                 GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var20, var28, (byte) 75, var21);
               }
             }
-            var31 = ResourceNode.field_b[var7_int + param5];
-            var32 = ResourceNode.field_b[-var7_int + param5];
+            var31 = ResourceNode.rasterTargetRows[var7_int + param5];
+            var32 = ResourceNode.rasterTargetRows[-var7_int + param5];
             var20Lifetime1 = var9 + param4;
             var21Lifetime1 = -var9 + param4;
             if (var8 <= var7_int) {

@@ -135,7 +135,7 @@ final class MenuBackgroundBattle {
                 var13 = var11_ref_ml.getFinalx(true);
                 var14 = var11_ref_ml.getFinaly((byte) 111);
                 var15 = this.camera.worldToScreenX(var13, (byte) 115);
-                GetLagStandardDeviationOut.a(1, var12_ref_String, 16777215, this.camera.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
+                GetLagStandardDeviationOut.drawTextWithDefaultFont(1, var12_ref_String, 16777215, this.camera.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
                 DelayedPacket.drawLine(this.camera.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.camera.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
                 return;
               }
@@ -153,7 +153,7 @@ final class MenuBackgroundBattle {
             var14Lifetime1 = TextLayout.approximateVectorLength(var11, (byte) 106, var13Lifetime1);
             if (var14Lifetime1 <= var8Lifetime1) {
               var15Lifetime1 = this.camera.worldToScreenX(var10, (byte) 116);
-              GetLagStandardDeviationOut.a(1, var9, 16777215, this.camera.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(1, var9, 16777215, this.camera.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
               DelayedPacket.drawLine(this.camera.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.camera.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
             }
           }
@@ -187,7 +187,7 @@ final class MenuBackgroundBattle {
         int var9Lifetime1;
         var12 = VoidHunters.field_G;
         var13 = (Camera2D) null;
-        GetReverbWidth.a((Camera2D) null, -8077);
+        GetReverbWidth.setSoundCamera((Camera2D) null, -8077);
         Model3D.setSoundTime(this.tick, -19266);
         var16 = new Player[]{};
         var3 = new MissionState();

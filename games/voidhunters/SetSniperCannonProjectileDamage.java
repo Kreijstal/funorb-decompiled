@@ -28,7 +28,7 @@ final class SetSniperCannonProjectileDamage extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -48);
           }
-          SetMachineGunEnergyUsed.a(147, 62, arguments[0].intValue(83));
+          SetMachineGunEnergyUsed.submitSettingsChange(147, 62, arguments[0].intValue(83));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -20,10 +20,10 @@ final class UiComboBoxRenderer implements UiRenderer {
           return;
         }
         if (param3 <= param4) {
-          GetSalvoRepairTimeMultiplier.fillArraySpan(param0, param4, ResourceNode.field_b[param1], (byte) 75, param3);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param0, param4, ResourceNode.rasterTargetRows[param1], (byte) 75, param3);
           return;
         }
-        GetSalvoRepairTimeMultiplier.fillArraySpan(param0, param3, ResourceNode.field_b[param1], (byte) 75, param4);
+        GetSalvoRepairTimeMultiplier.fillArraySpan(param0, param3, ResourceNode.rasterTargetRows[param1], (byte) 75, param4);
     }
 
     UiComboBoxRenderer(UiComboBox param0) {

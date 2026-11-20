@@ -15,7 +15,7 @@ final class SetShieldsToggleCooldown extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(209, 62, arguments[0].intValue(117));
+          SetMachineGunEnergyUsed.submitSettingsChange(209, 62, arguments[0].intValue(117));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

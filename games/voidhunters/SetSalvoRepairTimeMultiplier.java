@@ -18,11 +18,11 @@ final class SetSalvoRepairTimeMultiplier extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
-        GetUseModels.field_o = MonotonicMillisClock.currentTimeMillis(false);
-        GetDebrisThrowable.field_q = 0;
+    final static void resetQuickChatRateLimit(int param0) {
+        GetUseModels.lastChatSendTimeMillis = MonotonicMillisClock.currentTimeMillis(false);
+        GetDebrisThrowable.consecutiveChatSendCount = 0;
         if (param0 != 4907) {
-          SetSalvoRepairTimeMultiplier.a(-71);
+          SetSalvoRepairTimeMultiplier.resetQuickChatRateLimit(-71);
         }
     }
 
@@ -35,7 +35,7 @@ final class SetSalvoRepairTimeMultiplier extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(39, 62, arguments[0].intValue(104));
+          SetMachineGunEnergyUsed.submitSettingsChange(39, 62, arguments[0].intValue(104));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

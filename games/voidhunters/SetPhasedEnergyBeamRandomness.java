@@ -351,7 +351,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetPhasedEnergyBeamRandomness.clearSharedReferences(62);
           }
-          SetMachineGunEnergyUsed.a(76, 62, arguments[0].intValue(92));
+          SetMachineGunEnergyUsed.submitSettingsChange(76, 62, arguments[0].intValue(92));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

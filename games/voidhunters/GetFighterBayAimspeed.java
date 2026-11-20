@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetFighterBayAimspeed extends ConsoleCommand {
-    static String field_o;
+    static String requestedPlayerName;
     static String field_q;
     static String field_p;
 
@@ -46,7 +46,7 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            field_o = (String) null;
+            requestedPlayerName = (String) null;
           }
           var5_int = param2.getGroupId(param1, -127);
           var6 = param2.getFileId(true, var5_int, param4);
@@ -116,13 +116,13 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         if (param0 == 99) {
           field_p = null;
-          field_o = null;
+          requestedPlayerName = null;
           field_q = null;
           return;
         }
         field_q = (String) null;
         field_p = null;
-        field_o = null;
+        requestedPlayerName = null;
         field_q = null;
     }
 

@@ -78,7 +78,7 @@ final class FireBoostersOrderDefinition extends SpecialOrderDefinition {
           if (!param0.field_n && (!LobbyThemeBuilder.hasAtMostOneBitSet(param5, (byte) -95) ||
             !LobbyThemeBuilder.hasAtMostOneBitSet(param3, (byte) -95))) {
             if (!param0.field_g) {
-              stackIn_11_0 = new OpenGlSpriteTexture(param0, param5, param3, GetSalvoaim.a(param5, (byte) -110), GetSalvoaim.a(param3, (byte) -109), param4);
+              stackIn_11_0 = new OpenGlSpriteTexture(param0, param5, param3, GetSalvoaim.nextPowerOfTwo(param5, (byte) -110), GetSalvoaim.nextPowerOfTwo(param3, (byte) -109), param4);
               return stackIn_11_0;
             }
             stackIn_9_0 = new OpenGlSpriteTexture(param0, 34037, param5, param3, param6, param4, param2, param1);

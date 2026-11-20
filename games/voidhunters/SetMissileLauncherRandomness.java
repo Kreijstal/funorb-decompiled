@@ -20,7 +20,7 @@ final class SetMissileLauncherRandomness extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_p = 8L;
           }
-          SetMachineGunEnergyUsed.a(78, 62, arguments[0].intValue(56));
+          SetMachineGunEnergyUsed.submitSettingsChange(78, 62, arguments[0].intValue(56));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

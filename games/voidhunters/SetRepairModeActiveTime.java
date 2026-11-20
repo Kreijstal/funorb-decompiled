@@ -26,7 +26,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetRepairModeActiveTime.a(106);
           }
-          SetMachineGunEnergyUsed.a(215, 62, arguments[0].intValue(123));
+          SetMachineGunEnergyUsed.submitSettingsChange(215, 62, arguments[0].intValue(123));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

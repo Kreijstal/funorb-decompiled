@@ -4,7 +4,7 @@
 final class GetDebrisThrowable extends ConsoleCommand {
     static byte[] field_p;
     static int field_r;
-    static int field_q;
+    static int consecutiveChatSendCount;
     static String privateChatTarget;
 
     final static void completeEmailAvailabilityCheck(int param0, boolean param1) {
@@ -22,7 +22,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
         field_p = null;
         privateChatTarget = null;
         if (param0 > -67) {
-          field_q = -100;
+          consecutiveChatSendCount = -100;
         }
     }
 

@@ -11,12 +11,12 @@ final class SoftwareRasterState extends IntrusiveNode {
     int width;
     int clipBottom;
 
-    final static void a(byte param0, String param1) {
+    final static void setRequestedPlayerName(byte param0, String param1) {
         try {
-          GetFighterBayAimspeed.field_o = param1;
+          GetFighterBayAimspeed.requestedPlayerName = param1;
           if (param0 != -74) {
             String var3 = (String) null;
-            SoftwareRasterState.a((byte) 76, (String) null);
+            SoftwareRasterState.setRequestedPlayerName((byte) 76, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ajb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

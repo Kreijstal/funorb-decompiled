@@ -199,7 +199,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         RuntimeException var5 = null;
         try {
           if (param1) {
-            AdjustBodyComponentsAction.a((int[][]) null, -105);
+            AdjustBodyComponentsAction.setRasterTargetRows((int[][]) null, -105);
           }
           if (param2 != 0) {
             this.mode = (param3 + 4) % 4;
@@ -234,9 +234,9 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         }
     }
 
-    final static void a(int[][] param0, int param1) {
+    final static void setRasterTargetRows(int[][] param0, int param1) {
         try {
-          ResourceNode.field_b = param0;
+          ResourceNode.rasterTargetRows = param0;
           if (param1 > -88) {
             field_a = (String) null;
           }

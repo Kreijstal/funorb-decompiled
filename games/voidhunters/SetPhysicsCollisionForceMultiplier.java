@@ -34,14 +34,14 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
                 if (var3 != 0) {
                   return false;
                 }
-                if (!AdjustVariableAction.b(param1 + 5)) {
+                if (!AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                   return true;
                 }
                 var4 = (String) null;
                 SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
               }
-              if (!AdjustVariableAction.b(param1 + 5)) {
+              if (!AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                 return true;
               }
               var4 = (String) null;
@@ -51,7 +51,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             if (PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
               if (EmailAvailabilityCheckFactory.field_a != 2) {
                 if (var3 == 0) {
-                  if (AdjustVariableAction.b(param1 + 5)) {
+                  if (AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                     var4Lifetime2 = (String) null;
                     SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                     return true;
@@ -60,7 +60,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
                 }
                 return false;
               }
-              if (AdjustVariableAction.b(param1 + 5)) {
+              if (AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                 var4Lifetime2 = (String) null;
                 SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
@@ -92,7 +92,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             if (2 != EmailAvailabilityCheckFactory.field_a) {
               if (EmailAvailabilityCheckFactory.field_a != 2) {
                 if (var3 == 0) {
-                  if (AdjustVariableAction.b(param1 + 5)) {
+                  if (AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                     var4Lifetime1 = (String) null;
                     SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                     return true;
@@ -101,7 +101,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
                 }
                 return false;
               }
-              if (AdjustVariableAction.b(param1 + 5)) {
+              if (AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                 var4Lifetime1 = (String) null;
                 SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
@@ -111,7 +111,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             if (PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
               if (EmailAvailabilityCheckFactory.field_a != 2) {
                 if (var3 == 0) {
-                  if (AdjustVariableAction.b(param1 + 5)) {
+                  if (AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                     var4Lifetime1Lifetime1 = (String) null;
                     SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                     return true;
@@ -120,7 +120,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
                 }
                 return false;
               }
-              if (AdjustVariableAction.b(param1 + 5)) {
+              if (AdjustVariableAction.tryAcquireChatSendPermit(param1 + 5)) {
                 var4Lifetime1Lifetime1 = (String) null;
                 SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
                 return true;
@@ -154,7 +154,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             var4 = (Sprite[]) null;
             SetPhysicsCollisionForceMultiplier.drawTintedThreeSliceStrip((Sprite[]) null, 64, 92, -41, -29, false);
           }
-          SetMachineGunEnergyUsed.a(50, 62, arguments[0].intValue(48));
+          SetMachineGunEnergyUsed.submitSettingsChange(50, 62, arguments[0].intValue(48));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

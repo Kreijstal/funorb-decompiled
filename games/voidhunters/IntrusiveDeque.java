@@ -202,15 +202,15 @@ final class IntrusiveDeque {
           var4_int = param2;
           var5 = param3.length();
           for (var6 = 0; var6 < var5; var6 += 4) {
-            var7 = SetThrusterParticleLife.a(param3.charAt(var6), -89);
+            var7 = SetThrusterParticleLife.decodeBase64Character(param3.charAt(var6), -89);
             if (var5 > (var6 + 1)) {
-              stackIn_9_0 = SetThrusterParticleLife.a(param3.charAt(1 + var6), -23);
+              stackIn_9_0 = SetThrusterParticleLife.decodeBase64Character(param3.charAt(1 + var6), -23);
             } else {
               stackIn_9_0 = -1;
             }
             var8 = stackIn_9_0;
             if (var6 + 2 < var5) {
-              stackIn_12_0 = SetThrusterParticleLife.a(param3.charAt(2 + var6), -103);
+              stackIn_12_0 = SetThrusterParticleLife.decodeBase64Character(param3.charAt(2 + var6), -103);
             } else {
               stackIn_12_0 = -1;
             }
@@ -218,7 +218,7 @@ final class IntrusiveDeque {
             if (3 + var6 >= var5) {
               stackIn_15_0 = -1;
             } else {
-              stackIn_15_0 = SetThrusterParticleLife.a(param3.charAt(var6 + 3), -84);
+              stackIn_15_0 = SetThrusterParticleLife.decodeBase64Character(param3.charAt(var6 + 3), -84);
             }
             var10 = stackIn_15_0;
             incrementValue$0 = param2;

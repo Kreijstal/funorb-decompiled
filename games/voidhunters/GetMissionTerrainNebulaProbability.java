@@ -39,7 +39,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void handleCountryListReply(String param0, byte param1) {
         try {
           if (param1 < 120) {
             GetMissionTerrainNebulaProbability.buildLogoGlowSprite(94);

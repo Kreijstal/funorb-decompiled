@@ -33,15 +33,15 @@ final class TooltipDisplay {
         var12 = VoidHunters.field_G;
         try {
           var11_int = -47 / ((param8 + 59) / 50);
-          if (null != SpriteTextureOperation.field_o) {
+          if (null != SpriteTextureOperation.tooltipText) {
             PlayerLeave.field_c = 0;
             GetAngularVelocitySustain.field_o = GetAngularVelocitySustain.field_o + 1;
             if (ArmBehaviourFactory.field_a < GetAngularVelocitySustain.field_o) {
               if (param9 != null) {
-                UiWeightedGridContainer.drawTextBox(param3, param9, SpriteTextureOperation.field_o, param7, 1, param0, param5);
+                UiWeightedGridContainer.drawTextBox(param3, param9, SpriteTextureOperation.tooltipText, param7, 1, param0, param5);
               } else {
                 if (param4 != null) {
-                  GetAutozoomSpeedDivide.a(param0, param1, SpriteTextureOperation.field_o, (byte) 100, param3, param10, param4, param6, param2, param5, param7);
+                  GetAutozoomSpeedDivide.a(param0, param1, SpriteTextureOperation.tooltipText, (byte) 100, param3, param10, param4, param6, param2, param5, param7);
                 }
               }
             }
@@ -51,7 +51,7 @@ final class TooltipDisplay {
               GetAngularVelocitySustain.field_o = 0;
             }
           }
-          SpriteTextureOperation.field_o = null;
+          SpriteTextureOperation.tooltipText = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -15,7 +15,7 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         RuntimeException var4_ref2 = null;
         try {
           if (null != GetBurstFireMaxEnergy.musicStream) {
-            GetTorpedoProjectileDamage.a(1048576, param1, param2, true, param0);
+            GetTorpedoProjectileDamage.crossfadeMusicTrack(1048576, param1, param2, true, param0);
           }
           if (null != SetMassDriverRandomness.field_o) {
             var4_ref = SetSelfDestructTimer.musicOutput;

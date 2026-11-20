@@ -21,7 +21,7 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = 32;
           }
-          SetMachineGunEnergyUsed.a(86, 62, arguments[0].intValue(63));
+          SetMachineGunEnergyUsed.submitSettingsChange(86, 62, arguments[0].intValue(63));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

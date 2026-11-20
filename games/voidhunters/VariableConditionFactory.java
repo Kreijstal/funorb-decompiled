@@ -9,7 +9,7 @@ final class VariableConditionFactory implements GameStateFactory {
     public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 50) {
-          VariableConditionFactory.a(-69);
+          VariableConditionFactory.takeConfirmedShipComponentWords(-69);
         }
     }
 
@@ -21,24 +21,24 @@ final class VariableConditionFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new VariableCondition[param1]);
     }
 
-    final static int[] a(int param0) {
+    final static int[] takeConfirmedShipComponentWords(int param0) {
         int[] var2 = null;
         int[] var1 = null;
         int[] var2Lifetime1;
         int[] var1Lifetime1;
-        if (!SetFixedaim.field_o) {
+        if (!SetFixedaim.shipImportResolved) {
           return null;
         }
         if (param0 >= 97) {
-          var2 = GetBombletSprayPushMultiplier.field_o;
+          var2 = GetBombletSprayPushMultiplier.importedShipComponentWords;
           var1 = var2;
-          GetBombletSprayPushMultiplier.field_o = null;
+          GetBombletSprayPushMultiplier.importedShipComponentWords = null;
           return var2;
         }
-        VariableConditionFactory.a(-101);
-        var2Lifetime1 = GetBombletSprayPushMultiplier.field_o;
+        VariableConditionFactory.takeConfirmedShipComponentWords(-101);
+        var2Lifetime1 = GetBombletSprayPushMultiplier.importedShipComponentWords;
         var1Lifetime1 = var2Lifetime1;
-        GetBombletSprayPushMultiplier.field_o = null;
+        GetBombletSprayPushMultiplier.importedShipComponentWords = null;
         return var2Lifetime1;
     }
 

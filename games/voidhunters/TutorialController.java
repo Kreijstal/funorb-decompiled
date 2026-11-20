@@ -355,7 +355,7 @@ final class TutorialController {
             var30 != 0) {
             GetMissilesHitSourceTeam.a(-1 + var20, var21 - 1, (byte) -128, 2 + var23, param3, 1, 2 + var22);
           }
-          CachedArchiveProvider.a(param3, false, var20, var21, var23, var22, 236981);
+          CachedArchiveProvider.fillRectangleAlpha(param3, false, var20, var21, var23, var22, 236981);
           var24Lifetime1 = param1.screenToWorldY(0, 4 + var16 + var19);
           if (param5) {
             if (param0[3] < var24Lifetime1) {
@@ -1079,7 +1079,7 @@ final class TutorialController {
     }
 
     static {
-        field_a = SetSniperCannonEnergyUsed.f((byte) -49);
+        field_a = SetSniperCannonEnergyUsed.createEightIntBuffer((byte) -49);
         field_e = 2;
     }
 }

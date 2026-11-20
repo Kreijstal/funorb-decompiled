@@ -46,7 +46,7 @@ final class GetMutatorVotes extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void updateChatInputDialog(int param0, boolean param1, int param2, int param3) {
         if (param3 > 44) {
           SetLaserRandomness.updateChatInputDialog(DialogMessagePanel.field_w, -57, param1, param2, AppletCookieWriter.field_c, param0, LobbyPlayerEntry.field_Cb);
           return;

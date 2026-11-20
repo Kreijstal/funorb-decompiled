@@ -44,9 +44,9 @@ final class GetSniperCannonAimspeed extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int getSpriteWidthOrFallback(int param0, int param1) {
         if (param0 != 100) {
-          GetSniperCannonAimspeed.a(-120, -74);
+          GetSniperCannonAimspeed.getSpriteWidthOrFallback(-120, -74);
           if (OpenGlTexture1D.field_i) {
             return OpenGlVertexNormal.field_d[param1].getWidth();
           }

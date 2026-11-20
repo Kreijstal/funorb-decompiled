@@ -46,7 +46,7 @@ final class SetBurstFireReload extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(45, 62, arguments[0].intValue(50));
+          SetMachineGunEnergyUsed.submitSettingsChange(45, 62, arguments[0].intValue(50));
           if (obfuscationGuard > -119) {
             var4 = (String) null;
             SetBurstFireReload.a((String) null, 24, 98, -9, 52, (String) null);

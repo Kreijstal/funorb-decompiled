@@ -1210,7 +1210,7 @@ final class MissionState implements DiffableState {
                   }
                 }
                 if (SetMissionTerrainAsteroidProbability.field_o) {
-                  var16 = SetDebrisPartitioned.b(false).getMission(3, false);
+                  var16 = SetDebrisPartitioned.getMissionList(false).getMission(3, false);
                   var16.applyToSnapshot(true, param0, param2 ^ -112);
                 } else {
                   var15 = EnvironmentMapSource.createTeamSwitchingMission(0);

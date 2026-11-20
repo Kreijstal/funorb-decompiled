@@ -78,8 +78,8 @@ final class Direct3DTexture2D extends Direct3DTexture implements GpuTexture2D {
           this.width = param2;
           this.height = param3;
         } else {
-          this.width = GetSalvoaim.a(param2, (byte) -127);
-          this.height = GetSalvoaim.a(param3, (byte) -99);
+          this.width = GetSalvoaim.nextPowerOfTwo(param2, (byte) -127);
+          this.height = GetSalvoaim.nextPowerOfTwo(param3, (byte) -99);
         }
         if (!param4) {
           this.texture = this.toolkit.device.createTexture(this.width, this.height, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(this.format, GpuDataType.UNSIGNED_BYTE, -122), 1);
@@ -113,8 +113,8 @@ final class Direct3DTexture2D extends Direct3DTexture implements GpuTexture2D {
           this.height = param4;
           this.width = param3;
         } else {
-          this.width = GetSalvoaim.a(param3, (byte) -113);
-          this.height = GetSalvoaim.a(param4, (byte) -97);
+          this.width = GetSalvoaim.nextPowerOfTwo(param3, (byte) -113);
+          this.height = GetSalvoaim.nextPowerOfTwo(param4, (byte) -97);
         }
         this.texture = this.toolkit.device.createTexture(param3, param4, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(this.format, this.dataType, -122), 1);
     }
@@ -192,8 +192,8 @@ final class Direct3DTexture2D extends Direct3DTexture implements GpuTexture2D {
           stackIn_4_4Lifetime1 = 0;
         }
         if (!this.toolkit.field_Nc) {
-          this.width = GetSalvoaim.a(param1, (byte) -119);
-          this.height = GetSalvoaim.a(param2, (byte) -97);
+          this.width = GetSalvoaim.nextPowerOfTwo(param1, (byte) -119);
+          this.height = GetSalvoaim.nextPowerOfTwo(param2, (byte) -97);
         } else {
           this.width = param1;
           this.height = param2;

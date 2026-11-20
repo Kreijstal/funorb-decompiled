@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseModels extends ConsoleCommand {
-    static long field_o;
+    static long lastChatSendTimeMillis;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

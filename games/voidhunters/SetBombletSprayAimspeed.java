@@ -13,7 +13,7 @@ final class SetBombletSprayAimspeed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(123, 62, arguments[0].intValue(29));
+          SetMachineGunEnergyUsed.submitSettingsChange(123, 62, arguments[0].intValue(29));
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }

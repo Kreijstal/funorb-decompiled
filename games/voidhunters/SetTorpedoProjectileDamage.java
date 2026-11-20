@@ -14,7 +14,7 @@ final class SetTorpedoProjectileDamage extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(144, 62, arguments[0].intValue(55));
+          SetMachineGunEnergyUsed.submitSettingsChange(144, 62, arguments[0].intValue(55));
           if (obfuscationGuard >= -119) {
             field_p = (Sprite[][]) null;
           }

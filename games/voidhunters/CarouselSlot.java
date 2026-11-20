@@ -141,13 +141,13 @@ class CarouselSlot implements DiffableState {
               null != param2[var8] &&
               param0[var8] != null &&
               param2[var8].getClass() != param0[var8].getClass()) {
-              GetNebulaProximityFadeDownshift.a(param4 + 24239, param2[var8], param0[var8]);
+              GetNebulaProximityFadeDownshift.printValueChange(param4 + 24239, param2[var8], param0[var8]);
             } else {
               if (param2[var8] == null &&
                 param0[var8] != null ||
                 null != param2[var8] &&
                 param0[var8] == null) {
-                GetNebulaProximityFadeDownshift.a(29786, param2[var8], param0[var8]);
+                GetNebulaProximityFadeDownshift.printValueChange(29786, param2[var8], param0[var8]);
               }
               if (null != param2[var8] &&
                 null != param0[var8]) {

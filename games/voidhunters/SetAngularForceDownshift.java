@@ -31,7 +31,7 @@ final class SetAngularForceDownshift extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_r = (String) null;
           }
-          SetMachineGunEnergyUsed.a(178, 62, arguments[0].intValue(55));
+          SetMachineGunEnergyUsed.submitSettingsChange(178, 62, arguments[0].intValue(55));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

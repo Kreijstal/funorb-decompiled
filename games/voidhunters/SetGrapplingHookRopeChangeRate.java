@@ -67,7 +67,7 @@ final class SetGrapplingHookRopeChangeRate extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(203, 62, arguments[0].intValue(37));
+          SetMachineGunEnergyUsed.submitSettingsChange(203, 62, arguments[0].intValue(37));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

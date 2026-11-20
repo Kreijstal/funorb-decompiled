@@ -31,7 +31,7 @@ abstract class ArchiveProvider {
             ArchiveProvider.playSpatialSound(-3, 82, -123, true, 37, 119);
           }
           if (null != NetworkGameClient.activeOneShotSounds &&
-            null != TextureTransformMode.field_a) {
+            null != TextureTransformMode.soundCamera) {
             var6 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.first(0));
             while (var6 != null) {
               if (var6.sampleId == param4 &&

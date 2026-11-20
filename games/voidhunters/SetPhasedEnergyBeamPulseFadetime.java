@@ -13,9 +13,9 @@ final class SetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(187, 62, arguments[0].intValue(39));
+          SetMachineGunEnergyUsed.submitSettingsChange(187, 62, arguments[0].intValue(39));
           if (obfuscationGuard > -119) {
-            SetPhasedEnergyBeamPulseFadetime.a(-47, -122);
+            SetPhasedEnergyBeamPulseFadetime.findQuickChatDynamicCommand(-47, -122);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -33,7 +33,7 @@ final class SetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
         }
     }
 
-    final static QuickChatDynamicCommand a(int param0, int param1) {
+    final static QuickChatDynamicCommand findQuickChatDynamicCommand(int param0, int param1) {
         int var3 = 0;
         QuickChatDynamicCommand[] var2;
         int var4;

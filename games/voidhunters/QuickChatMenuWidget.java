@@ -100,7 +100,7 @@ final class QuickChatMenuWidget extends Widget {
               stackIn_16_3 = (param1) ? false : true;
               ArchiveRequest.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, ChoosePlayerNameForm.privateChatTargetDisplayName);
               GetUseExtraBackground.closeQuickChatMenu(-1);
-              SetSalvoRepairTimeMultiplier.a(4907);
+              SetSalvoRepairTimeMultiplier.resetQuickChatRateLimit(4907);
             } else {
               AsteroidFactory.createQuickChatHelpWindow(29012);
               GetUseExtraBackground.closeQuickChatMenu(-1);

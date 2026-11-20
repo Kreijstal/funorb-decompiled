@@ -15,7 +15,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
           if (!SetMissionTerrainAsteroidProbability.field_o) {
             return;
           }
-          var1 = SetDebrisPartitioned.b(false);
+          var1 = SetDebrisPartitioned.getMissionList(false);
           var2 = new IsaacPacketBuffer(1048576);
           var2.beginBitWrite(-122);
           var1.writeState(var2, -110);
@@ -27,7 +27,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
         if (!SetMissionTerrainAsteroidProbability.field_o) {
           return;
         }
-        var1Lifetime1 = SetDebrisPartitioned.b(false);
+        var1Lifetime1 = SetDebrisPartitioned.getMissionList(false);
         var2Lifetime1 = new IsaacPacketBuffer(1048576);
         var2Lifetime1.beginBitWrite(-122);
         var1Lifetime1.writeState(var2Lifetime1, -110);
@@ -59,7 +59,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetTorpedoProjectileLife.clearSharedReferences((byte) 42);
           }
-          SetMachineGunEnergyUsed.a(91, 62, arguments[0].intValue(107));
+          SetMachineGunEnergyUsed.submitSettingsChange(91, 62, arguments[0].intValue(107));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

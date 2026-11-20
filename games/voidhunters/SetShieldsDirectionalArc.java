@@ -17,7 +17,7 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(212, 62, arguments[0].intValue(110));
+          SetMachineGunEnergyUsed.submitSettingsChange(212, 62, arguments[0].intValue(110));
           if (obfuscationGuard > -119) {
             field_o = (Widget) null;
           }

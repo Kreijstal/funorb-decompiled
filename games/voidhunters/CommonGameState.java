@@ -413,7 +413,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
               var13 = EnvironmentMapSource.createTeamSwitchingMission(0);
               var13.applyToSnapshot(false, var12, -48);
             } else {
-              var11 = SetDebrisPartitioned.b(false).getMission(3, false);
+              var11 = SetDebrisPartitioned.getMissionList(false).getMission(3, false);
               var11.applyToSnapshot(false, var12, 126);
             }
           }

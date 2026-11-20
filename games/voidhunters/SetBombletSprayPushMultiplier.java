@@ -26,7 +26,7 @@ final class SetBombletSprayPushMultiplier extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(190, 62, arguments[0].intValue(85));
+          SetMachineGunEnergyUsed.submitSettingsChange(190, 62, arguments[0].intValue(85));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 43);

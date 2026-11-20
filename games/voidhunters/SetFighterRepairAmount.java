@@ -32,7 +32,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetFighterRepairAmount.b(125, -116, 41);
           }
-          SetMachineGunEnergyUsed.a(231, 62, arguments[0].intValue(21));
+          SetMachineGunEnergyUsed.submitSettingsChange(231, 62, arguments[0].intValue(21));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

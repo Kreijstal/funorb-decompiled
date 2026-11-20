@@ -9,7 +9,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new ShieldBehaviour());
     }
 
-    final static void b(byte param0) {
+    final static void decreaseSoundEffectVolume(byte param0) {
         int var1 = 0;
         if (32 < RidgedNoiseVolumeGenerator.soundEffectVolume) {
           var1 = RidgedNoiseVolumeGenerator.soundEffectVolume % 32;
@@ -71,7 +71,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         String var3Lifetime2;
         String var15Lifetime1;
         String var15Lifetime2;
-        if (!SetDebrisGroupColour.b(false)) {
+        if (!SetDebrisGroupColour.isShipImportPending(false)) {
           if (param1) {
           }
           if (param0 == 0) {
@@ -94,9 +94,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           if (GetArmageddonTimerStart.field_o != 0) {
             var15Lifetime2 = SetVariableLabelAction.field_a;
             var3Lifetime2 = var15Lifetime2;
-            CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
+            CachedArchiveProvider.fillRectangleAlpha(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5 = ArmBehaviour.drawCenteredMessagePanel(var2, 0, 200, var15Lifetime2);
-            var16 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
+            var16 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.importedShipComponentWords, (byte) 41);
             var18 = new Camera2D();
             var18.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1) >> 1));
             var18.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
@@ -120,10 +120,10 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                 SetMachineGunEnergyUsed.field_o[84] ||
                 SetMachineGunEnergyUsed.field_o[13]) {
                 if (var4 != 0) {
-                  SetFixedaim.field_o = true;
+                  SetFixedaim.shipImportResolved = true;
                 } else {
-                  GetBombletSprayPushMultiplier.field_o = null;
-                  SetFixedaim.field_o = true;
+                  GetBombletSprayPushMultiplier.importedShipComponentWords = null;
+                  SetFixedaim.shipImportResolved = true;
                 }
               }
               if (param1) {
@@ -148,10 +148,10 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                 return;
               }
               if (var4 != 0) {
-                SetFixedaim.field_o = true;
+                SetFixedaim.shipImportResolved = true;
               } else {
-                GetBombletSprayPushMultiplier.field_o = null;
-                SetFixedaim.field_o = true;
+                GetBombletSprayPushMultiplier.importedShipComponentWords = null;
+                SetFixedaim.shipImportResolved = true;
               }
               if (param1) {
               }
@@ -161,7 +161,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               return;
             }
             if (var4 != 0) {
-              SetFixedaim.field_o = true;
+              SetFixedaim.shipImportResolved = true;
               if (param1) {
               }
               if (param0 != 0) {
@@ -169,8 +169,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               }
               return;
             }
-            GetBombletSprayPushMultiplier.field_o = null;
-            SetFixedaim.field_o = true;
+            GetBombletSprayPushMultiplier.importedShipComponentWords = null;
+            SetFixedaim.shipImportResolved = true;
             if (param1) {
             }
             if (param0 != 0) {
@@ -180,9 +180,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           }
           if (0 == AgeValidator.field_f) {
             var4 = 1;
-            CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
+            CachedArchiveProvider.fillRectangleAlpha(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5Lifetime2 = ArmBehaviour.drawCenteredMessagePanel(var2, 0, 200, var3Lifetime2);
-            var19 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
+            var19 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.importedShipComponentWords, (byte) 41);
             var21 = new Camera2D();
             var21.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime2 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1) >> 1));
             var21.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
@@ -207,10 +207,10 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               SetMachineGunEnergyUsed.field_o[84] ||
               SetMachineGunEnergyUsed.field_o[13]) {
               if (var4 != 0) {
-                SetFixedaim.field_o = true;
+                SetFixedaim.shipImportResolved = true;
               } else {
-                GetBombletSprayPushMultiplier.field_o = null;
-                SetFixedaim.field_o = true;
+                GetBombletSprayPushMultiplier.importedShipComponentWords = null;
+                SetFixedaim.shipImportResolved = true;
               }
             }
             if (param1) {
@@ -222,9 +222,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           }
           var3Lifetime2 = SetVariableLabelAction.field_a;
         }
-        CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
+        CachedArchiveProvider.fillRectangleAlpha(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
         var5Lifetime1 = ArmBehaviour.drawCenteredMessagePanel(var2, 0, 200, var3Lifetime2);
-        var22 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
+        var22 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.importedShipComponentWords, (byte) 41);
         var24 = new Camera2D();
         var24.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime1 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1) >> 1));
         var24.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
@@ -245,9 +245,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             !SetMachineGunEnergyUsed.field_o[84]) {
             if (SetMachineGunEnergyUsed.field_o[13]) {
               if (var4 == 0) {
-                GetBombletSprayPushMultiplier.field_o = null;
+                GetBombletSprayPushMultiplier.importedShipComponentWords = null;
               }
-              SetFixedaim.field_o = true;
+              SetFixedaim.shipImportResolved = true;
               if (param1) {
               }
               if (param0 != 0) {
@@ -257,9 +257,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             }
           } else {
             if (var4 == 0) {
-              GetBombletSprayPushMultiplier.field_o = null;
+              GetBombletSprayPushMultiplier.importedShipComponentWords = null;
             }
-            SetFixedaim.field_o = true;
+            SetFixedaim.shipImportResolved = true;
           }
         } else {
           if (MatchingFieldValidator.field_g.networked) {
@@ -270,9 +270,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               !SetMachineGunEnergyUsed.field_o[84]) {
               if (SetMachineGunEnergyUsed.field_o[13]) {
                 if (var4 == 0) {
-                  GetBombletSprayPushMultiplier.field_o = null;
+                  GetBombletSprayPushMultiplier.importedShipComponentWords = null;
                 }
-                SetFixedaim.field_o = true;
+                SetFixedaim.shipImportResolved = true;
                 if (param1) {
                 }
                 if (param0 != 0) {
@@ -282,9 +282,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               }
             } else {
               if (var4 == 0) {
-                GetBombletSprayPushMultiplier.field_o = null;
+                GetBombletSprayPushMultiplier.importedShipComponentWords = null;
               }
-              SetFixedaim.field_o = true;
+              SetFixedaim.shipImportResolved = true;
             }
           } else {
             if (MatchingFieldValidator.field_g.state.getVisibleSnapshot(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
@@ -296,10 +296,10 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                 SetMachineGunEnergyUsed.field_o[84] ||
                 SetMachineGunEnergyUsed.field_o[13]) {
                 if (var4 != 0) {
-                  SetFixedaim.field_o = true;
+                  SetFixedaim.shipImportResolved = true;
                 } else {
-                  GetBombletSprayPushMultiplier.field_o = null;
-                  SetFixedaim.field_o = true;
+                  GetBombletSprayPushMultiplier.importedShipComponentWords = null;
+                  SetFixedaim.shipImportResolved = true;
                 }
               }
             } else {
@@ -307,25 +307,25 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               var22.draw(var24, 121, (World) null);
               if (0 != GetBots.field_o) {
                 if (var4 == 0) {
-                  GetBombletSprayPushMultiplier.field_o = null;
+                  GetBombletSprayPushMultiplier.importedShipComponentWords = null;
                 }
-                SetFixedaim.field_o = true;
+                SetFixedaim.shipImportResolved = true;
               } else {
                 if (SetMachineGunEnergyUsed.field_o[83]) {
                   if (var4 == 0) {
-                    GetBombletSprayPushMultiplier.field_o = null;
+                    GetBombletSprayPushMultiplier.importedShipComponentWords = null;
                   }
-                  SetFixedaim.field_o = true;
+                  SetFixedaim.shipImportResolved = true;
                 } else {
                   if (SetMachineGunEnergyUsed.field_o[84]) {
                     if (var4 == 0) {
-                      GetBombletSprayPushMultiplier.field_o = null;
+                      GetBombletSprayPushMultiplier.importedShipComponentWords = null;
                     }
-                    SetFixedaim.field_o = true;
+                    SetFixedaim.shipImportResolved = true;
                   } else {
                     if (SetMachineGunEnergyUsed.field_o[13]) {
                       if (var4 != 0) {
-                        SetFixedaim.field_o = true;
+                        SetFixedaim.shipImportResolved = true;
                         if (param1) {
                         }
                         if (param0 != 0) {
@@ -333,8 +333,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
                         }
                         return;
                       }
-                      GetBombletSprayPushMultiplier.field_o = null;
-                      SetFixedaim.field_o = true;
+                      GetBombletSprayPushMultiplier.importedShipComponentWords = null;
+                      SetFixedaim.shipImportResolved = true;
                     }
                   }
                 }

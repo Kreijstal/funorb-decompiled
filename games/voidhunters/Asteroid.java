@@ -116,12 +116,12 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
         }
         SetPhasedEnergyBeamAimspeed.a(-128, param1);
         if (!NativeLibraryLoader.field_b) {
-          SetMissionDebrisVotingChancestep.a(param1, 4095);
+          SetMissionDebrisVotingChancestep.drawMenuAndDateOfBirthPanel(param1, 4095);
           return;
         }
         SoftwareRasterizer2D.darkenRectangle(GetReverbWidth.field_o.tabs.x, GetReverbWidth.field_o.tabs.y, GetReverbWidth.field_o.tabs.width, GetReverbWidth.field_o.tabs.height);
         GetReverbWidth.field_o.tabs.draw(param1, 35);
-        SetMissionDebrisVotingChancestep.a(param1, 4095);
+        SetMissionDebrisVotingChancestep.drawMenuAndDateOfBirthPanel(param1, 4095);
     }
 
     public final void writeCompactState(IsaacPacketBuffer param0, byte param1) {

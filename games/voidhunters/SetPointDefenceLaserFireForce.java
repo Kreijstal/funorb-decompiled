@@ -17,7 +17,7 @@ final class SetPointDefenceLaserFireForce extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(106, 62, arguments[0].intValue(19));
+          SetMachineGunEnergyUsed.submitSettingsChange(106, 62, arguments[0].intValue(19));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

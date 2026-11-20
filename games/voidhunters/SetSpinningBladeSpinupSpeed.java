@@ -48,7 +48,7 @@ final class SetSpinningBladeSpinupSpeed extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(184, 62, arguments[0].intValue(73));
+          SetMachineGunEnergyUsed.submitSettingsChange(184, 62, arguments[0].intValue(73));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

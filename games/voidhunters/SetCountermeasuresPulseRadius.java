@@ -45,7 +45,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(222, 62, arguments[0].intValue(93));
+          SetMachineGunEnergyUsed.submitSettingsChange(222, 62, arguments[0].intValue(93));
           if (obfuscationGuard > -119) {
             field_q = 50;
           }

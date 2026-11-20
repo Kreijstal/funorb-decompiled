@@ -20,7 +20,7 @@ final class SetAutoaim extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = 76;
           }
-          SetMachineGunEnergyUsed.a(25, 62, arguments[0].intValue(44));
+          SetMachineGunEnergyUsed.submitSettingsChange(25, 62, arguments[0].intValue(44));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

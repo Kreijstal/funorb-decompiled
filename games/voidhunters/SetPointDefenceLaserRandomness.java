@@ -117,7 +117,7 @@ final class SetPointDefenceLaserRandomness extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(79, 62, arguments[0].intValue(106));
+          SetMachineGunEnergyUsed.submitSettingsChange(79, 62, arguments[0].intValue(106));
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }

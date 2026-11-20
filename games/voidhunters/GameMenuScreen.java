@@ -39,7 +39,7 @@ final class GameMenuScreen {
             var8 = 4 * SetRepairModeRadius.getMenuTransitionAlpha(param1 ^ -196);
           }
         }
-        CachedArchiveProvider.a(param0, false, var3 + var8, var4, -(2 * var4) + GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width - var3 * 2, 0);
+        CachedArchiveProvider.fillRectangleAlpha(param0, false, var3 + var8, var4, -(2 * var4) + GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width - var3 * 2, 0);
     }
 
     private final String formatShortcutHint(String param0, byte param1, String param2, int param3) {
@@ -272,7 +272,7 @@ final class GameMenuScreen {
           if (ArchiveIndexLoader.field_g.copyToClipboardHidden &&
             !DeveloperAccess.hasDeveloperAccess(2)) {
             if (param1) {
-              GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -33);
+              GetMassDriverReload.setTooltipText(GetDebrisCollisionDamage.field_o, -33);
             }
             var9 = 1;
           }
@@ -311,7 +311,7 @@ final class GameMenuScreen {
         }
         var16 = stackIn_64_0;
         if (var16 != 0) {
-          var10 = GetSniperCannonAimspeed.a(100, 132);
+          var10 = GetSniperCannonAimspeed.getSpriteWidthOrFallback(100, 132);
         }
         var17 = -var10 + var12 + var13 >> 1;
         var18 = this.getItemHeight(param0, (byte) 70);
@@ -338,11 +338,11 @@ final class GameMenuScreen {
         if (var21 == 1) {
           var22++;
         }
-        var23 = GetSniperCannonAimspeed.a(100, var22);
+        var23 = GetSniperCannonAimspeed.getSpriteWidthOrFallback(100, var22);
         var24 = ComponentWordEncoder.getSpriteHeightOrFallback(19143, var22);
         if (var16 != 0) {
           var25 = var15 + var18 / 2 - 1;
-          PlayerActionFactory.a(131, var17, (byte) 93, var25);
+          PlayerActionFactory.drawToolkitSprite(131, var17, (byte) 93, var25);
           if (var6 != 13) {
             stackIn_91_0 = var10 * GetMutatorVotes.field_p / 256;
           } else {
@@ -351,12 +351,12 @@ final class GameMenuScreen {
           var26 = stackIn_91_0;
           if (var21 == 1) {
             SaveShipDesignOrderDefinition.pushClip(var25, ComponentWordEncoder.getSpriteHeightOrFallback(19143, 131) + var25, true, var17 + var26, var17);
-            PlayerActionFactory.a(132, var17, (byte) 122, var25);
-            GetMissionTerrainSpaceProbability.a(126);
+            PlayerActionFactory.drawToolkitSprite(132, var17, (byte) 122, var25);
+            GetMissionTerrainSpaceProbability.popRasterState(126);
           }
-          PlayerActionFactory.a(var22, -1 + var17 - (-var26 + var23 / 2), (byte) 92, var25 + (ComponentWordEncoder.getSpriteHeightOrFallback(19143, 132) - var24) / 2);
+          PlayerActionFactory.drawToolkitSprite(var22, -1 + var17 - (-var26 + var23 / 2), (byte) 92, var25 + (ComponentWordEncoder.getSpriteHeightOrFallback(19143, 132) - var24) / 2);
         } else {
-          PlayerActionFactory.a(var22, var19 / 2 + (var12 - var23 / 2), (byte) 108, var15 + var20 / 2 - var24 / 2);
+          PlayerActionFactory.drawToolkitSprite(var22, var19 / 2 + (var12 - var23 / 2), (byte) 108, var15 + var20 / 2 - var24 / 2);
           IncrementVariableAction.drawToolkitSpriteWithAlpha(var22, 250, -(var24 / 2) + (var20 / 2 + var15), 0, -(var23 / 2) + var12 + var19 / 2);
           stackIn_85_0 = (param1) ? 15658751 : 13421772;
           var25 = stackIn_85_0;
@@ -443,7 +443,7 @@ final class GameMenuScreen {
         var11 = 50;
         var12 = var11 + (-55 - FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight) + (var6 + 160) - var8;
         var13 = 2 * var8 + 180 + FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight + (FloatGradientNoiseSliceGenerator.field_e[6].paddedHeight - 10);
-        CachedArchiveProvider.a(150, false, -var7 + var5 + 80 - (FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth - var9), var12, var13, -(var9 * 2) + FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth + 480 - (-FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth - 2 * var7), 1);
+        CachedArchiveProvider.fillRectangleAlpha(150, false, -var7 + var5 + 80 - (FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth - var9), var12, var13, -(var9 * 2) + FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth + 480 - (-FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth - 2 * var7), 1);
         var14 = 50;
         var15 = -var7 + (-FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth + (var5 + 80 + var9)) + var14;
         var16 = 2 * var7 + (FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth + 480 - var14 * 2) + (FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth - var9 * 2);
@@ -758,9 +758,9 @@ final class GameMenuScreen {
                                 BitmapTextLayout.setMusicVolume(256, (byte) -104);
                               }
                               if (this.inputState.isMouseButtonHeld((byte) 111)) {
-                                var10_int = this.getItemLeft(31488, param2) + (this.getItemRight((byte) -76, param2) - GetSniperCannonAimspeed.a(100, 131)) >> 1;
+                                var10_int = this.getItemLeft(31488, param2) + (this.getItemRight((byte) -76, param2) - GetSniperCannonAimspeed.getSpriteWidthOrFallback(100, 131)) >> 1;
                                 var11 = PlayerGameData.field_b - var10_int;
-                                var12_int = 256 * var11 / GetSniperCannonAimspeed.a(100, 131);
+                                var12_int = 256 * var11 / GetSniperCannonAimspeed.getSpriteWidthOrFallback(100, 131);
                                 if (var12_int > 0) {
                                   if (var12_int < 256) {
                                     BitmapTextLayout.setMusicVolume(var12_int, (byte) -111);
@@ -796,9 +796,9 @@ final class GameMenuScreen {
                               LoopingSound.setSoundEffectVolume(256, -13205);
                             }
                             if (this.inputState.isMouseButtonHeld((byte) 126)) {
-                              var10_int = this.getItemLeft(31488, param2) - (-this.getItemRight((byte) -79, param2) + GetSniperCannonAimspeed.a(100, 131)) >> 1;
+                              var10_int = this.getItemLeft(31488, param2) - (-this.getItemRight((byte) -79, param2) + GetSniperCannonAimspeed.getSpriteWidthOrFallback(100, 131)) >> 1;
                               var11 = PlayerGameData.field_b - var10_int;
-                              var12_int = 256 * var11 / GetSniperCannonAimspeed.a(param0 + 76, 131);
+                              var12_int = 256 * var11 / GetSniperCannonAimspeed.getSpriteWidthOrFallback(param0 + 76, 131);
                               var6 = 1;
                               if (var12_int <= 0) {
                                 LoopingSound.setSoundEffectVolume(0, -13205);
@@ -813,7 +813,7 @@ final class GameMenuScreen {
                             if (this.inputState.isLeftPressed((byte) -7) &&
                               RidgedNoiseVolumeGenerator.soundEffectVolume > 0) {
                               var6 = 1;
-                              ShieldBehaviourFactory.b((byte) 64);
+                              ShieldBehaviourFactory.decreaseSoundEffectVolume((byte) 64);
                             }
                             if (this.inputState.isRightPressed(-86) &&
                               RidgedNoiseVolumeGenerator.soundEffectVolume < 256) {
@@ -946,7 +946,7 @@ final class GameMenuScreen {
             SetSelfDestructPrepareToggleCooldown.drawText(GetBombletSprayEnergyUsed.field_p.width / 2 - (GameTextMetrics.getStringWidth(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
           }
         } else {
-          PlayerActionFactory.a(137, var3Lifetime1 + GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.a(param0 ^ 37, 137) / 2, (byte) 103, 20 + var4Lifetime1);
+          PlayerActionFactory.drawToolkitSprite(137, var3Lifetime1 + GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.getSpriteWidthOrFallback(param0 ^ 37, 137) / 2, (byte) 103, 20 + var4Lifetime1);
         }
         return;
     }
@@ -963,7 +963,7 @@ final class GameMenuScreen {
         }
         if (0 == this.menuId) {
           if (param1 < 2) {
-            var4 = -25 + (GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.a(100, 128));
+            var4 = -25 + (GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.getSpriteWidthOrFallback(100, 128));
             return var4;
           }
           return 25 + var3 + SetReloadBarWidth.menuLeftEdges[this.menuId];

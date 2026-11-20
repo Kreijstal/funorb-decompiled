@@ -18,7 +18,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(159, 62, arguments[0].intValue(106));
+          SetMachineGunEnergyUsed.submitSettingsChange(159, 62, arguments[0].intValue(106));
           if (obfuscationGuard > -119) {
             field_q = 105;
           }

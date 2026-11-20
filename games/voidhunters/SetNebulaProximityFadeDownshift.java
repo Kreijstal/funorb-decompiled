@@ -79,7 +79,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(0, 62, arguments[0].intValue(22));
+          SetMachineGunEnergyUsed.submitSettingsChange(0, 62, arguments[0].intValue(22));
           if (obfuscationGuard > -119) {
             SetNebulaProximityFadeDownshift.initializeCarouselProtocol(57, true, true);
           }

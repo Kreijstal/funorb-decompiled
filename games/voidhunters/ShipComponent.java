@@ -1020,7 +1020,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                     var21Lifetime2 = GetNumStars.cosAngle(this.finalangle + var47.hardpoints[var16Lifetime1Lifetime3].field_a, (byte) -93) * 8 >> 8;
                     var22Lifetime1Lifetime2 = TextureLineShape.sinAngle(var47.hardpoints[var16Lifetime1Lifetime3].field_a + this.finalangle, 99) * 8 >> 8;
                     DelayedPacket.drawLine(param3.worldToScreenY(true, var22Lifetime1Lifetime2 + var18Lifetime1Lifetime3), param3.worldToScreenX(var17Lifetime1Lifetime3 + var21Lifetime2, (byte) 119), var19Lifetime1Lifetime3, var20Lifetime3, -16777216, 16711680);
-                    GetLagStandardDeviationOut.a(-1, Integer.toString(var16Lifetime1Lifetime3), 16711935, var20Lifetime3, var19Lifetime1Lifetime3, param1 ^ 4350);
+                    GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, Integer.toString(var16Lifetime1Lifetime3), 16711935, var20Lifetime3, var19Lifetime1Lifetime3, param1 ^ 4350);
                   }
                 }
               }
@@ -3865,7 +3865,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var41 = 0;
             var28Lifetime1 = var41;
             while (var41 < this.hardpoints.length) {
-              this.hardpoints[var41].a(var16, this.finalx, this.finaly, var15, param2 ^ -665140432, var40.hardpoints[var41].field_b, var40.hardpoints[var41].field_c);
+              this.hardpoints[var41].transformToWorld(var16, this.finalx, this.finaly, var15, param2 ^ -665140432, var40.hardpoints[var41].field_b, var40.hardpoints[var41].field_c);
               var41++;
             }
             return;

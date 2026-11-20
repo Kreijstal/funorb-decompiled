@@ -15,12 +15,12 @@ final class GetToggledScoreboard extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0) {
+    final static String getAccountRelativeUrl(int param0) {
         if (param0 != 27158) {
           GetToggledScoreboard.clearSharedReferences(false);
-          return SetTabForScores.field_p;
+          return SetTabForScores.accountRelativeUrl;
         }
-        return SetTabForScores.field_p;
+        return SetTabForScores.accountRelativeUrl;
     }
 
     final static boolean isBlueprintOrSandboxObjective(byte param0, int param1) {

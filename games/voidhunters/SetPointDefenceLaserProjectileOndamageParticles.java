@@ -16,7 +16,7 @@ final class SetPointDefenceLaserProjectileOndamageParticles extends ConsoleComma
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(158, 62, arguments[0].intValue(87));
+          SetMachineGunEnergyUsed.submitSettingsChange(158, 62, arguments[0].intValue(87));
           if (obfuscationGuard > -119) {
             field_o = (IntrusiveDeque) null;
           }

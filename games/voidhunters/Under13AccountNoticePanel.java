@@ -29,17 +29,17 @@ final class Under13AccountNoticePanel extends UiContainer implements UiHotspotLi
             this.noticeText = (HotspotTextWidget) null;
           }
           if (0 == param2) {
-            SetReloadBarWidth.a(12, "terms.ws");
+            SetReloadBarWidth.requestAccountRelativeUrl(12, "terms.ws");
             return;
           }
           if (param2 == 1) {
-            SetReloadBarWidth.a(12, "privacy.ws");
+            SetReloadBarWidth.requestAccountRelativeUrl(12, "privacy.ws");
             return;
           }
           if (param2 != 2) {
             return;
           }
-          SetReloadBarWidth.a(param0 + 13, "conduct.ws");
+          SetReloadBarWidth.requestAccountRelativeUrl(param0 + 13, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

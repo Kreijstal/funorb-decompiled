@@ -14,7 +14,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(98, 62, arguments[0].intValue(78));
+          SetMachineGunEnergyUsed.submitSettingsChange(98, 62, arguments[0].intValue(78));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

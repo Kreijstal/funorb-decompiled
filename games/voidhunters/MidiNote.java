@@ -28,7 +28,7 @@ final class MidiNote extends IntrusiveNode {
     int velocityScale;
     int exclusiveGroup;
 
-    final static int a(int param0, byte param1) {
+    final static int getFontMaxDescent(int param0, byte param1) {
         if (param1 != -121) {
           field_z = (String) null;
           if (!OpenGlTexture1D.field_i) {

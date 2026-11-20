@@ -182,7 +182,7 @@ final class TileTextureOperation extends TextureOperation {
         this.horizontalRepeatCount = 4;
     }
 
-    final static boolean a(int param0, int param1, boolean param2) {
+    final static boolean needsFaceAttachmentGroups(int param0, int param1, boolean param2) {
         if (param2) {
           field_i = (QuickChatCategoryLoader) null;
         }

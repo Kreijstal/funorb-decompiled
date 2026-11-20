@@ -52,7 +52,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
         LoopingSound var5 = null;
         int var6 = 0;
         int var6Lifetime1;
-        if (null == TextureTransformMode.field_a) {
+        if (null == TextureTransformMode.soundCamera) {
           return;
         }
         LoopingSound var12 = SetThrusterParticleSpeedDownshift.findLoopingSound(param2, -112, param1);

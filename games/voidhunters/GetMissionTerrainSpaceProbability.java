@@ -5,9 +5,9 @@ final class GetMissionTerrainSpaceProbability extends ConsoleCommand {
     static int[][] field_o;
     static String field_p;
 
-    final static void a(int param0) {
+    final static void popRasterState(int param0) {
         if (param0 <= 48) {
-          GetMissionTerrainSpaceProbability.a(45);
+          GetMissionTerrainSpaceProbability.popRasterState(45);
           if (OpenGlTexture1D.field_i) {
             ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true).pop(true);
             return;

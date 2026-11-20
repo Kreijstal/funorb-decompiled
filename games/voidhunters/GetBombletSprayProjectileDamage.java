@@ -52,7 +52,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         LoopingSound var3Lifetime1;
         PcmSample var12Lifetime2;
         int var4Lifetime1;
-        if (TextureTransformMode.field_a == null) {
+        if (TextureTransformMode.soundCamera == null) {
           return;
         }
         LoopingSound var8 = SetThrusterParticleSpeedDownshift.findLoopingSound(param0, -26, param1);

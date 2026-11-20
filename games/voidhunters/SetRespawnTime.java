@@ -22,7 +22,7 @@ final class SetRespawnTime extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(196, 62, arguments[0].intValue(89));
+          SetMachineGunEnergyUsed.submitSettingsChange(196, 62, arguments[0].intValue(89));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

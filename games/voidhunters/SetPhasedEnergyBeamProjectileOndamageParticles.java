@@ -16,7 +16,7 @@ final class SetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(154, 62, arguments[0].intValue(74));
+          SetMachineGunEnergyUsed.submitSettingsChange(154, 62, arguments[0].intValue(74));
           if (obfuscationGuard > -119) {
             SetPhasedEnergyBeamProjectileOndamageParticles.clearSharedReferences(-109);
           }

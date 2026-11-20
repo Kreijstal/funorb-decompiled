@@ -163,7 +163,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
           }
           if (var8 != 0) {
             for (var14 = param5; param1 >= var14; var14++) {
-              ResourceNode.field_b[var14][var9Lifetime2] = param0;
+              ResourceNode.rasterTargetRows[var14][var9Lifetime2] = param0;
               var12 = var12 + var11;
               if (var12 > 0) {
                 var9Lifetime2 = var9Lifetime2 + var13;
@@ -176,7 +176,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
           var14Lifetime1 = var16;
           while (param1 >= var16) {
             var12 = var12 + var11;
-            ResourceNode.field_b[var9Lifetime2][var16] = param0;
+            ResourceNode.rasterTargetRows[var9Lifetime2][var16] = param0;
             if (var12 > 0) {
               var12 = var12 - var10Lifetime2;
               var9Lifetime2 = var9Lifetime2 + var13;

@@ -4919,7 +4919,7 @@ final class World implements DiffableState, CompactGameState {
             if (var21 != null) {
               if (GetMomentOfInertiaPredivideDownshift.field_q == 0 ||
                 !this.isDebrisBeingDragged(true, false, var21.id)) {
-                var21.draw(param0, GetShowTutorial.a(29554, var21.chassis.componentTypeId), this, 16);
+                var21.draw(param0, GetShowTutorial.getComponentCategoryColor(29554, var21.chassis.componentTypeId), this, 16);
               }
               this.drawBodyIdDebug((byte) -76, var21, param0);
             }
@@ -5155,7 +5155,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var4_int = Math.abs(param0.dx);
           var5 = Math.abs(param0.dy);
-          stackIn_4_0 = SetDebrisProjectileCollision.a(5220, param1.boundingbox[1] + var4_int, param0.getY((byte) -107), param1.boundingbox[3] + var5, param0.getX(101), -var4_int + param1.boundingbox[0], param1.boundingbox[2] - var5);
+          stackIn_4_0 = SetDebrisProjectileCollision.isPointInRectangle(5220, param1.boundingbox[1] + var4_int, param0.getY((byte) -107), param1.boundingbox[3] + var5, param0.getX(101), -var4_int + param1.boundingbox[0], param1.boundingbox[2] - var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8143,7 +8143,7 @@ final class World implements DiffableState, CompactGameState {
             }
             var6Lifetime1 = param1.worldToScreenX(param0.getX(false), (byte) 123);
             var7Lifetime1 = param1.worldToScreenY(true, param0.getY((byte) -54) - 16384);
-            GetLagStandardDeviationOut.a(-1, var5Lifetime2, 16711935, var7Lifetime1, var6Lifetime1 - (GetPhasedEnergyBeamProjectiles.a(115, var5Lifetime2) >> 1), 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var5Lifetime2, 16711935, var7Lifetime1, var6Lifetime1 - (GetPhasedEnergyBeamProjectiles.a(115, var5Lifetime2) >> 1), 4266);
           }
           if (GetPointDefenceLaserProjectiles.a(4096, 11284) &&
             param0.hasAi((byte) -10)) {
@@ -8241,7 +8241,7 @@ final class World implements DiffableState, CompactGameState {
                   var15 = "Dragging debris=" + Integer.toString(var12.getDragging(param4 - 116));
                   var16 = param3.worldToScreenX(var12.getX(false), (byte) 126);
                   var17Lifetime1 = param3.worldToScreenY(true, var12.getY((byte) 125) - 16384);
-                  GetLagStandardDeviationOut.a(-1, var15, 16711935, var17Lifetime1, var16 - (GetPhasedEnergyBeamProjectiles.a(-9, var15) >> 1), param4 + 4247);
+                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var15, 16711935, var17Lifetime1, var16 - (GetPhasedEnergyBeamProjectiles.a(-9, var15) >> 1), param4 + 4247);
                   break scanLoop1;
                 }
               }
@@ -8691,7 +8691,7 @@ final class World implements DiffableState, CompactGameState {
             var5 = param2.worldToScreenX(param1.getX(false), (byte) 127);
             var6 = param2.worldToScreenY(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.getCurrentFontAscent((byte) 118) / 2;
             var7 = Integer.toString(param1.id);
-            GetLagStandardDeviationOut.a(-1, var7, 16711935, var6, -(GetPhasedEnergyBeamProjectiles.a(-118, var7) >> 1) + var5, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var7, 16711935, var6, -(GetPhasedEnergyBeamProjectiles.a(-118, var7) >> 1) + var5, 4266);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8837,7 +8837,7 @@ final class World implements DiffableState, CompactGameState {
             }
             if (GetMomentOfInertiaPredivideDownshift.field_q == 1 &&
               param3.getTargetBlueprint((byte) 28) == null) {
-              var13Lifetime1 = GetShowTutorial.a(29554, var9.chassis.componentTypeId);
+              var13Lifetime1 = GetShowTutorial.getComponentCategoryColor(29554, var9.chassis.componentTypeId);
               if (null != var29) {
                 if (var11Lifetime1 == 0) {
                   var13Lifetime1 = 16711680;
@@ -8873,7 +8873,7 @@ final class World implements DiffableState, CompactGameState {
             var16Lifetime2 = var10.getDefaultConnectionX(-25) * TextureLineShape.sinAngle(var9.getAngle(0), 62) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 64) >> 16;
             CarouselPlayerInfoFactory.a(param3.chassis.finaly, 1, var14Lifetime2 + var16Lifetime2, var13Lifetime3 + var15Lifetime1, param7, param3.chassis.finalx);
             var17 = TiledSpriteTextureOperation.a(var10, (byte) -84);
-            GetLagStandardDeviationOut.a(-1, var17, 16777215, param7.worldToScreenY(true, -10000 + var9.getY((byte) -109)), param7.worldToScreenX(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.a(94, var17) >> 1), 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var17, 16777215, param7.worldToScreenY(true, -10000 + var9.getY((byte) -109)), param7.worldToScreenX(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.a(94, var17) >> 1), 4266);
             if (null != param3.getAttachmentPreviewOutline(56)) {
               var31 = param3.getAttachmentPreviewOutline(116);
               var30 = var31;

@@ -378,7 +378,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_9_0 = new OpenGlGpuRectangleTexture(this, param0, param3, param2, param6, param4);
               return (GpuTexture2D) ((Object) stackIn_9_0);
             }
-            var9 = new OpenGlGpuTexture2D(this, ComponentAttachmentPlan.field_d, GpuDataType.UNSIGNED_BYTE, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
+            var9 = new OpenGlGpuTexture2D(this, ComponentAttachmentPlan.field_d, GpuDataType.UNSIGNED_BYTE, GetSalvoaim.nextPowerOfTwo(param0, (byte) -100), GetSalvoaim.nextPowerOfTwo(param3, (byte) -121));
             var9.updatePixels(0, param3, param0, param6, param4, param2, 0, (byte) -104);
             stackIn_11_0 = var9;
             return (GpuTexture2D) ((Object) stackIn_11_0);
@@ -929,7 +929,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_12_0 = new OpenGlGpuRectangleTexture(this, param0, param7, param4, param1, param3, param5);
               return (GpuTexture2D) ((Object) stackIn_12_0);
             }
-            var11 = new OpenGlGpuTexture2D(this, param0, GpuDataType.FLOAT, GetSalvoaim.a(param7, (byte) -125), GetSalvoaim.a(param4, (byte) -101));
+            var11 = new OpenGlGpuTexture2D(this, param0, GpuDataType.FLOAT, GetSalvoaim.nextPowerOfTwo(param7, (byte) -125), GetSalvoaim.nextPowerOfTwo(param4, (byte) -101));
             var11.updateFloatPixels(param4, param0, (byte) -51, param5, param1, 0, 0, param7, param3);
             stackIn_10_0 = var11;
             return (GpuTexture2D) ((Object) stackIn_10_0);
@@ -1167,7 +1167,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_10_0 = new OpenGlGpuRectangleTexture(this, param2, param4, param5, param1, param0, param3);
               return (GpuTexture2D) ((Object) stackIn_10_0);
             }
-            var10 = new OpenGlGpuTexture2D(this, param2, GpuDataType.UNSIGNED_BYTE, GetSalvoaim.a(param4, (byte) -107), GetSalvoaim.a(param5, (byte) -127));
+            var10 = new OpenGlGpuTexture2D(this, param2, GpuDataType.UNSIGNED_BYTE, GetSalvoaim.nextPowerOfTwo(param4, (byte) -107), GetSalvoaim.nextPowerOfTwo(param5, (byte) -127));
             var10.updateBytePixels(param3, param1, param5, param4, param0, 0, 3314, 0, param2);
             stackIn_12_0 = var10;
             return (GpuTexture2D) ((Object) stackIn_12_0);
@@ -1518,7 +1518,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_11_0 = new OpenGlGpuRectangleTexture(this, param3, param4, param1, param2);
               return (GpuTexture2D) ((Object) stackIn_11_0);
             }
-            stackIn_9_0 = new OpenGlGpuTexture2D(this, param3, param4, GetSalvoaim.a(param1, (byte) -102), GetSalvoaim.a(param2, (byte) -127));
+            stackIn_9_0 = new OpenGlGpuTexture2D(this, param3, param4, GetSalvoaim.nextPowerOfTwo(param1, (byte) -102), GetSalvoaim.nextPowerOfTwo(param2, (byte) -127));
             return (GpuTexture2D) ((Object) stackIn_9_0);
           }
           stackIn_13_0 = new OpenGlGpuTexture2D(this, param3, param4, param1, param2);

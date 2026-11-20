@@ -17,7 +17,7 @@ final class SetGrappleDebris extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -58);
           }
-          SetMachineGunEnergyUsed.a(54, 62, arguments[0].intValue(91));
+          SetMachineGunEnergyUsed.submitSettingsChange(54, 62, arguments[0].intValue(91));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

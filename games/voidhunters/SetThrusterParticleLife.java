@@ -18,9 +18,9 @@ final class SetThrusterParticleLife extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetThrusterParticleLife.a('A', 38);
+            SetThrusterParticleLife.decodeBase64Character('A', 38);
           }
-          SetMachineGunEnergyUsed.a(177, 62, arguments[0].intValue(9));
+          SetMachineGunEnergyUsed.submitSettingsChange(177, 62, arguments[0].intValue(9));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -37,21 +37,21 @@ final class SetThrusterParticleLife extends ConsoleCommand {
         }
     }
 
-    final static int a(char param0, int param1) {
+    final static int decodeBase64Character(char param0, int param1) {
         if (0 > param0) {
           if (param1 <= -20) {
             return -1;
           }
-          SetThrusterParticleLife.a('\033', 79);
+          SetThrusterParticleLife.decodeBase64Character('\033', 79);
           return -1;
         }
-        if (param0 < SetMachineGunEnergyUsed.field_q.length) {
-          return SetMachineGunEnergyUsed.field_q[param0];
+        if (param0 < SetMachineGunEnergyUsed.base64CharacterValues.length) {
+          return SetMachineGunEnergyUsed.base64CharacterValues[param0];
         }
         if (param1 <= -20) {
           return -1;
         }
-        SetThrusterParticleLife.a('\033', 79);
+        SetThrusterParticleLife.decodeBase64Character('\033', 79);
         return -1;
     }
 

@@ -13,7 +13,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(85, 62, arguments[0].intValue(90));
+          SetMachineGunEnergyUsed.submitSettingsChange(85, 62, arguments[0].intValue(90));
           if (obfuscationGuard >= -119) {
             var4 = (ScrollPaneWidget) null;
             SetTorpedoProjectiles.a(13, (byte) -15, (ScrollPaneWidget) null, true, 117);

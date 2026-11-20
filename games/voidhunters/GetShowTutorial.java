@@ -4,7 +4,7 @@
 final class GetShowTutorial extends ConsoleCommand {
     static volatile boolean field_o;
 
-    final static int a(int param0, int param1) {
+    final static int getComponentCategoryColor(int param0, int param1) {
         if (param0 != 29554) {
           return -94;
         }

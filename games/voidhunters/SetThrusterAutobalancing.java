@@ -18,7 +18,7 @@ final class SetThrusterAutobalancing extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = (Widget) null;
           }
-          SetMachineGunEnergyUsed.a(22, 62, arguments[0].intValue(77));
+          SetMachineGunEnergyUsed.submitSettingsChange(22, 62, arguments[0].intValue(77));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -35,7 +35,7 @@ final class SetThrusterAutobalancing extends ConsoleCommand {
         }
     }
 
-    final static void e(int param0) {
+    final static void updateChatPanelLayout(int param0) {
         SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -29);
         SetReverbDry.a(GetGrapplingHookAimspeed.field_o[0].paddedWidth, DialogMessagePanel.field_w, 96, AppletCookieWriter.field_c, LobbyPlayerEntry.field_Cb, ResourceNode.field_a);
         int var1 = -31 / ((param0 - 58) / 51);

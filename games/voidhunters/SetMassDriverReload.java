@@ -25,7 +25,7 @@ final class SetMassDriverReload extends ConsoleCommand {
         java.awt.Canvas var1 = null;
         if (!ShipComponentFactory.field_a) {
           ShipComponentFactory.field_a = true;
-          var1 = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 106);
+          var1 = SetThrusterBindingMoveAndTurnHasOppositeMove.getActiveCanvas((byte) 106);
           GetUseDetailLines.field_o = PlayerGameData.field_b;
           GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
           SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) ((Object) var1), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -48,7 +48,7 @@ final class SetMassDriverReload extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(108, 62, arguments[0].intValue(57));
+          SetMachineGunEnergyUsed.submitSettingsChange(108, 62, arguments[0].intValue(57));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 3);

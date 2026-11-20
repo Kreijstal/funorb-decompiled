@@ -233,7 +233,7 @@ final class ModelData {
         IndexedSpriteData[] var6 = null;
         IndexedSpriteData[] var7 = null;
         try {
-          var8 = new ArgbSprite(param0.fetchNamedFile("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 75)));
+          var8 = new ArgbSprite(param0.fetchNamedFile("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.getActiveCanvas((byte) 75)));
           var8.trimTransparentBorders();
           OpenGlVertexBufferObject.field_j = (Sprite) ((Object) var8);
           SetPointDefenceLaserAimarc.field_r = new IndexedSpriteData[138];

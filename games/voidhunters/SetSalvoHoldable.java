@@ -77,7 +77,7 @@ final class SetSalvoHoldable extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(30, 62, arguments[0].intValue(23));
+          SetMachineGunEnergyUsed.submitSettingsChange(30, 62, arguments[0].intValue(23));
           if (obfuscationGuard > -119) {
             pendingIntegerRecordWrites = (IntrusiveDeque) null;
           }

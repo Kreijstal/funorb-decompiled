@@ -606,7 +606,7 @@ final class SoftwareFlatTriangleRasterizer {
         clipHeight = param3 - param1;
         SoftwareFlatTriangleRasterizer.updateCenter();
         if (rowOffsets.length < clipHeight) {
-          rowOffsets = new int[GetSalvoaim.a(clipHeight, (byte) -105)];
+          rowOffsets = new int[GetSalvoaim.nextPowerOfTwo(clipHeight, (byte) -105)];
         }
         int var4 = param1 * SoftwareRasterizer2D.width + param0;
         for (var5 = 0; var5 < clipHeight; var5++) {

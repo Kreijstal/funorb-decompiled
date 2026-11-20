@@ -454,17 +454,17 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         var6 = VoidHunters.field_G;
         try {
           if (param0 == ~param2) {
-            SetReloadBarWidth.a(12, "terms.ws");
+            SetReloadBarWidth.requestAccountRelativeUrl(12, "terms.ws");
             return;
           }
           if (param2 == 1) {
-            SetReloadBarWidth.a(12, "privacy.ws");
+            SetReloadBarWidth.requestAccountRelativeUrl(12, "privacy.ws");
             return;
           }
           if (param2 != 2) {
             return;
           }
-          SetReloadBarWidth.a(12, "conduct.ws");
+          SetReloadBarWidth.requestAccountRelativeUrl(12, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -250,7 +250,7 @@ final class UiTheme {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateStyle(4, -1).setDrawPreviousLayer(-123, true).setBackgroundSprites(true, var5);
-          var4.createStateStyle(5, -1).setBackgroundSprites(true, SetCountermeasureLauncherFireForce.a(0, (byte) 119, 0, 65793, 0)).setDrawPreviousLayer(param1 + 24638, true).setTextColor(-1, param1 - 2147458885);
+          var4.createStateStyle(5, -1).setBackgroundSprites(true, SetCountermeasureLauncherFireForce.createBeveledPanelSprites(0, (byte) 119, 0, 65793, 0)).setDrawPreviousLayer(param1 + 24638, true).setTextColor(-1, param1 - 2147458885);
           this.field_a = (UiRenderer) ((Object) var4);
           var6 = new UiStatefulStyle(var4, true);
           var6.horizontalAlignment = 0;

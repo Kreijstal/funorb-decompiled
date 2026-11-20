@@ -81,7 +81,7 @@ final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetSelfDestructPrepareToggleCooldown.initializeLogoRasterizer((byte) -101);
           }
-          SetMachineGunEnergyUsed.a(223, 62, arguments[0].intValue(65));
+          SetMachineGunEnergyUsed.submitSettingsChange(223, 62, arguments[0].intValue(65));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

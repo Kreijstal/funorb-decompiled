@@ -9,11 +9,11 @@ final class PlayerActionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new PlayerAction());
     }
 
-    final static void a(int param0, int param1, byte param2, int param3) {
+    final static void drawToolkitSprite(int param0, int param1, byte param2, int param3) {
         if (OpenGlTexture1D.field_i) {
           OpenGlVertexNormal.field_d[param0].draw(param1, param3);
           if (param2 <= 82) {
-            PlayerActionFactory.a(-67, -4, (byte) 25, 43);
+            PlayerActionFactory.drawToolkitSprite(-67, -4, (byte) 25, 43);
             return;
           }
           return;
@@ -21,7 +21,7 @@ final class PlayerActionFactory implements GameStateFactory {
         if (param2 > 82) {
           return;
         }
-        PlayerActionFactory.a(-67, -4, (byte) 25, 43);
+        PlayerActionFactory.drawToolkitSprite(-67, -4, (byte) 25, 43);
     }
 
     public final SerializableGameState[] createArray(int param0, int param1) {

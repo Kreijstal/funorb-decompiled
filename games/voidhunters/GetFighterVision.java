@@ -45,7 +45,7 @@ final class GetFighterVision extends ConsoleCommand {
         var6 = VoidHunters.field_G;
         try {
           if (NetworkGameClient.activeOneShotSounds != null &&
-            null != TextureTransformMode.field_a) {
+            null != TextureTransformMode.soundCamera) {
             var3 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.first(0));
             while (var3 != null) {
               if (param1 == var3.sampleId &&

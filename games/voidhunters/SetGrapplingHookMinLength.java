@@ -60,7 +60,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
           var13 = -1;
           if (param2 >= NebulaField.field_c &&
             EnvironmentReflectionGpuMaterialEffect.field_i >= param2) {
-            var39 = ResourceNode.field_b[param2];
+            var39 = ResourceNode.rasterTargetRows[param2];
             var16 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - param1);
             var17 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param0);
             var18 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var8 + param0);
@@ -99,13 +99,13 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
                   var20 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1 + param0);
                   var21 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var17Lifetime1 + param0);
                   if (var16Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
-                    var40 = ResourceNode.field_b[var16Lifetime1];
+                    var40 = ResourceNode.rasterTargetRows[var16Lifetime1];
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var21, var40, (byte) 75, var19Lifetime1);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var20, var40, (byte) 75, var21);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var18Lifetime1, var40, (byte) 75, var20);
                   }
                   if (NebulaField.field_c <= var15) {
-                    var41 = ResourceNode.field_b[var15];
+                    var41 = ResourceNode.rasterTargetRows[var15];
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var21, var41, (byte) 75, var19Lifetime1);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var20, var41, (byte) 75, var21);
                     GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var18Lifetime1, var41, (byte) 75, var20);
@@ -114,10 +114,10 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
                   var17Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
                   var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
                   if (EnvironmentReflectionGpuMaterialEffect.field_i >= var16Lifetime1) {
-                    GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1, ResourceNode.field_b[var16Lifetime1], (byte) 75, var18Lifetime1);
+                    GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1, ResourceNode.rasterTargetRows[var16Lifetime1], (byte) 75, var18Lifetime1);
                   }
                   if (var15 >= NebulaField.field_c) {
-                    GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1, ResourceNode.field_b[var15], (byte) 75, var18Lifetime1);
+                    GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1, ResourceNode.rasterTargetRows[var15], (byte) 75, var18Lifetime1);
                   }
                 }
               }
@@ -142,12 +142,12 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             var18Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
               if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
-                GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, ResourceNode.field_b[var16Lifetime1Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
+                GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, ResourceNode.rasterTargetRows[var16Lifetime1Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
               }
               if (var15Lifetime1 < NebulaField.field_c) {
                 continue;
               }
-              GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, ResourceNode.field_b[var15Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, ResourceNode.rasterTargetRows[var15Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
               continue;
             }
             if (var11 >= var7_int) {
@@ -159,7 +159,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             var20Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var19Lifetime1Lifetime1 + param0);
             var21Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var19Lifetime1Lifetime1 + param0);
             if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
-              var42 = ResourceNode.field_b[var16Lifetime1Lifetime1];
+              var42 = ResourceNode.rasterTargetRows[var16Lifetime1Lifetime1];
               GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var21Lifetime1, var42, (byte) 75, var18Lifetime1Lifetime1);
               GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var20Lifetime1, var42, (byte) 75, var21Lifetime1);
               GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, var42, (byte) 75, var20Lifetime1);
@@ -167,7 +167,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             if (var15Lifetime1 < NebulaField.field_c) {
               continue;
             }
-            var43 = ResourceNode.field_b[var15Lifetime1];
+            var43 = ResourceNode.rasterTargetRows[var15Lifetime1];
             GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var21Lifetime1, var43, (byte) 75, var18Lifetime1Lifetime1);
             GetSalvoRepairTimeMultiplier.fillArraySpan(param5, var20Lifetime1, var43, (byte) 75, var21Lifetime1);
             GetSalvoRepairTimeMultiplier.fillArraySpan(param4, var17Lifetime1Lifetime1, var43, (byte) 75, var20Lifetime1);
@@ -192,7 +192,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(198, 62, arguments[0].intValue(125));
+          SetMachineGunEnergyUsed.submitSettingsChange(198, 62, arguments[0].intValue(125));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

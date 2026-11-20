@@ -15,7 +15,7 @@ final class GetNebulaProximityFadeDownshift extends ConsoleCommand {
         try {
           if (obfuscationGuard > -119) {
             var4 = (Object) null;
-            GetNebulaProximityFadeDownshift.a(27, (Object) null, (Object) null);
+            GetNebulaProximityFadeDownshift.printValueChange(27, (Object) null, (Object) null);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(0, 86));
           return stackIn_3_0;
@@ -33,7 +33,7 @@ final class GetNebulaProximityFadeDownshift extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, Object param1, Object param2) {
+    final static void printValueChange(int param0, Object param1, Object param2) {
         try {
           if (param0 != 29786) {
             field_o = (GameStateFactory) null;

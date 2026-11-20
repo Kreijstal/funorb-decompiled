@@ -17,7 +17,7 @@ final class SetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(185, 62, arguments[0].intValue(66));
+          SetMachineGunEnergyUsed.submitSettingsChange(185, 62, arguments[0].intValue(66));
           if (obfuscationGuard >= -119) {
             SetSpinningBladeSpindamageMultiplier.clearSharedReferences((byte) 15);
           }

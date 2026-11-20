@@ -18,7 +18,7 @@ final class UiToggleButtonRenderer implements UiRenderer {
     private int textShadow;
 
     final static int computeSoundPan(int param0, int param1) {
-        int var2 = TextureTransformMode.field_a.worldToScreenX(param1, (byte) 121) - TextureTransformMode.field_a.screenOriginX;
+        int var2 = TextureTransformMode.soundCamera.worldToScreenX(param1, (byte) 121) - TextureTransformMode.soundCamera.screenOriginX;
         int var3 = param0 + var2 / 4;
         if (var3 > 250) {
           var3 = 250;

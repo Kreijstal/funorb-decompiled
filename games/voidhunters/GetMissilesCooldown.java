@@ -13,7 +13,7 @@ final class GetMissilesCooldown extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int multiplyFixed16(int param0, int param1, byte param2) {
         int var3 = param1 >> 16;
         int var4 = 65535 & param1;
         int var5 = param0 >> 16;

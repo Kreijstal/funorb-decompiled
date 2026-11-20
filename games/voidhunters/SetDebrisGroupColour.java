@@ -113,14 +113,14 @@ final class SetDebrisGroupColour extends ConsoleCommand {
         return var9;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isShipImportPending(boolean param0) {
         if (param0) {
           return true;
         }
-        if (null == GetBombletSprayPushMultiplier.field_o) {
+        if (null == GetBombletSprayPushMultiplier.importedShipComponentWords) {
           return false;
         }
-        if (SetFixedaim.field_o) {
+        if (SetFixedaim.shipImportResolved) {
           return false;
         }
         return true;

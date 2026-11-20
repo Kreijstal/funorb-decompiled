@@ -11,11 +11,11 @@ final class SetDebrisPartitioned extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static MissionList b(boolean param0) {
+    final static MissionList getMissionList(boolean param0) {
         if (null == GetGrapplingHookRopeChangeRate.field_o) {
           GetGrapplingHookRopeChangeRate.field_o = new MissionList();
           if (param0) {
-            SetDebrisPartitioned.b(false);
+            SetDebrisPartitioned.getMissionList(false);
             return GetGrapplingHookRopeChangeRate.field_o;
           }
           return GetGrapplingHookRopeChangeRate.field_o;
@@ -23,7 +23,7 @@ final class SetDebrisPartitioned extends ConsoleCommand {
         if (!param0) {
           return GetGrapplingHookRopeChangeRate.field_o;
         }
-        SetDebrisPartitioned.b(false);
+        SetDebrisPartitioned.getMissionList(false);
         return GetGrapplingHookRopeChangeRate.field_o;
     }
 
@@ -40,7 +40,7 @@ final class SetDebrisPartitioned extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(9, 62, arguments[0].intValue(95));
+          SetMachineGunEnergyUsed.submitSettingsChange(9, 62, arguments[0].intValue(95));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

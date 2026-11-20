@@ -28,7 +28,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(124, 62, arguments[0].intValue(93));
+          SetMachineGunEnergyUsed.submitSettingsChange(124, 62, arguments[0].intValue(93));
           if (obfuscationGuard > -119) {
             SetPhasedEnergyBeamAimspeed.clearSharedReferences(-23);
           }

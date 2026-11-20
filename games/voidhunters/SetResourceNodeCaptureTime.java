@@ -20,7 +20,7 @@ final class SetResourceNodeCaptureTime extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             delayedOutgoingPackets = (IntrusiveDeque) null;
           }
-          SetMachineGunEnergyUsed.a(70, 62, arguments[0].intValue(123));
+          SetMachineGunEnergyUsed.submitSettingsChange(70, 62, arguments[0].intValue(123));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -253,7 +253,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             if (decompiledSharedTail1) {
               incrementValue$0 = param4;
               param4++;
-              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param0, ResourceNode.field_b[incrementValue$0], (byte) 75, param2);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param0, ResourceNode.rasterTargetRows[incrementValue$0], (byte) 75, param2);
             }
             boolean decompiledSharedTail0 = !(param5 > EnvironmentReflectionGpuMaterialEffect.field_i);
             if (!decompiledSharedTail0) {
@@ -263,13 +263,13 @@ final class NebulaFieldFactory implements GameStateFactory {
             if (decompiledSharedTail0) {
               incrementValue$1 = param5;
               param5--;
-              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param0, ResourceNode.field_b[incrementValue$1], (byte) 75, param2);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param1, param0, ResourceNode.rasterTargetRows[incrementValue$1], (byte) 75, param2);
             }
             if (var6_int != 0 &&
               var7 != 0) {
               var8 = param4;
               while (param5 >= var8) {
-                var9 = ResourceNode.field_b[var8];
+                var9 = ResourceNode.rasterTargetRows[var8];
                 var9[param0] = param1;
                 var9[param2] = param1;
                 var8++;
@@ -284,7 +284,7 @@ final class NebulaFieldFactory implements GameStateFactory {
               if (var6_int != 0) {
                 var8Lifetime1 = param4;
                 while (param5 >= var8Lifetime1) {
-                  ResourceNode.field_b[var8Lifetime1][param2] = param1;
+                  ResourceNode.rasterTargetRows[var8Lifetime1][param2] = param1;
                   var8Lifetime1++;
                   if (var10 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -298,7 +298,7 @@ final class NebulaFieldFactory implements GameStateFactory {
                 (var7 != 0)) {
                 var8Lifetime1Lifetime1 = param4;
                 while (var8Lifetime1Lifetime1 <= param5) {
-                  ResourceNode.field_b[var8Lifetime1Lifetime1][param0] = param1;
+                  ResourceNode.rasterTargetRows[var8Lifetime1Lifetime1][param0] = param1;
                   var8Lifetime1Lifetime1++;
                   if (var10 != 0) {
                     return;

@@ -106,7 +106,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.lineCapacity = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (SetBombletSprayRandomness.countBits(param0, 1431655765) != 1) {
-            this.openDevice(GetSalvoaim.a(param0, (byte) -104));
+            this.openDevice(GetSalvoaim.nextPowerOfTwo(param0, (byte) -104));
             return;
           }
           this.line = null;

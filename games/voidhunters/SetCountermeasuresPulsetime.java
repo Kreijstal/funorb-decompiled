@@ -55,7 +55,7 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(220, 62, arguments[0].intValue(104));
+          SetMachineGunEnergyUsed.submitSettingsChange(220, 62, arguments[0].intValue(104));
           if (obfuscationGuard >= -119) {
             SetCountermeasuresPulsetime.clearSharedReferences(-107);
           }

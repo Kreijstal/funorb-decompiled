@@ -9,7 +9,7 @@ final class SetTorpedoAcceleration extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int[] param0, byte param1, int[] param2) {
+    final static void sortIntKeysWithIntValues(int[] param0, byte param1, int[] param2) {
         if (param1 != 16) {
           return;
         }
@@ -39,7 +39,7 @@ final class SetTorpedoAcceleration extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             SetTorpedoAcceleration.clearSharedReferences(58);
           }
-          SetMachineGunEnergyUsed.a(169, 62, arguments[0].intValue(42));
+          SetMachineGunEnergyUsed.submitSettingsChange(169, 62, arguments[0].intValue(42));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

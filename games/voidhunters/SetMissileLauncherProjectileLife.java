@@ -72,7 +72,7 @@ final class SetMissileLauncherProjectileLife extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(94, 62, arguments[0].intValue(12));
+          SetMachineGunEnergyUsed.submitSettingsChange(94, 62, arguments[0].intValue(12));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

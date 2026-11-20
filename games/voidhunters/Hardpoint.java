@@ -156,7 +156,7 @@ final class Hardpoint implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void transformToWorld(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.worldy = (param3 * param6 + param0 * param5 >> 16) + param2;
         if (param4 == -665140432) {
           this.worldx = param1 + (-(param6 * param0) + param3 * param5 >> 16);

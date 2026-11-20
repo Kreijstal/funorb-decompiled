@@ -155,13 +155,13 @@ public final class VoidHunters extends NetworkGameClient {
     }
 
     private final void applyShipCookie(boolean logGuard) {
-        if (null != GetBombletSprayPushMultiplier.field_o) {
+        if (null != GetBombletSprayPushMultiplier.importedShipComponentWords) {
           return;
         }
         String var2 = AppletCookieReader.readCookie("fog_voidhunters_ship", 74, MissionList.getApplet((byte) -125));
         GetDebrisThrowable.a(logGuard, "Ship cookie=" + var2);
         if (var2 != null) {
-          SetInnateThrusters.a(0, GetResourceNodeCaptureTime.a(var2, true, true));
+          SetInnateThrusters.requestShipImport(0, GetResourceNodeCaptureTime.a(var2, true, true));
         }
     }
 
@@ -191,7 +191,7 @@ public final class VoidHunters extends NetworkGameClient {
         boolean decompiledFrameRemainder0 = true;
         if (param0 == 14) {
           GetDebrisThrowable.a(false, "Entering lobby");
-          GetBombletSprayAimarc.initializeLobbyState(UiComponent.field_o, SetUseOffscreenRendering.getGamePlayerListContent(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.getLobbyGameListContent(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.getLobbyPlayerListContent(207));
+          GetBombletSprayAimarc.initializeLobbyState(UiComponent.field_o, SetUseOffscreenRendering.getGamePlayerListContent(0), GetSalvoaim.nextPowerOfTwo(8, (byte) -99), GetSalvoaim.nextPowerOfTwo(2000, (byte) -116), SetUseOffscreenRendering.getLobbyGameListContent(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.getLobbyPlayerListContent(207));
           GetPhasedEnergyBeamAimarc.initializeSocialLists(SetBombletSprayPushMultiplier.getIgnoreListContent(0), MissileLauncherWeaponDefinition.getFriendListContent((byte) -90), true);
           GraphicsPresentException.field_a = true;
           HardpointMatch.field_d = false;
@@ -418,16 +418,16 @@ public final class VoidHunters extends NetworkGameClient {
         var2 = -40 % ((23 - param0) / 61);
         SetMinimapWidth.field_o = SetMinimapWidth.field_o + 1;
         if (GetUseTriFill.a(51)) {
-          ComponentCollision.a("Servicing login...", (byte) -86);
+          ComponentCollision.traceLoadingStatus("Servicing login...", (byte) -86);
           this.updateLoginUi(0);
           if (GetUseTriFill.a(119)) {
             return;
           }
         }
         if (!LegacyOpenGlEnvironmentReflectionEffect.field_e) {
-          ComponentCollision.a("Servicing login_create_ui...", (byte) -85);
+          ComponentCollision.traceLoadingStatus("Servicing login_create_ui...", (byte) -85);
           GetLagOut.updateAccountUi(GetPointDefenceLaserPulsetime.field_o, 15877);
-          ComponentCollision.a("Finished servicing login_create_ui...", (byte) -72);
+          ComponentCollision.traceLoadingStatus("Finished servicing login_create_ui...", (byte) -72);
           if (this.finishResourceLoading((byte) 125)) {
             LegacyOpenGlEnvironmentReflectionEffect.field_e = true;
           }
@@ -455,7 +455,7 @@ public final class VoidHunters extends NetworkGameClient {
               this.updateClientStateAndInput(true, -121);
             } else {
               if (!SoftwareFaceAttachment.isMessageBoxOpen(false)) {
-                if (SetDebrisGroupColour.b(false)) {
+                if (SetDebrisGroupColour.isShipImportPending(false)) {
                   this.updateClientStateAndInput(true, -126);
                 } else {
                   this.updateClientStateAndInput(false, -124);
@@ -1822,7 +1822,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (!TextureLineShape.field_i.unpackResources((byte) 68)) {
           return false;
         }
-        ComponentCollision.a("Initing menus", (byte) -62);
+        ComponentCollision.traceLoadingStatus("Initing menus", (byte) -62);
         ConvoyObjectiveText.checkObfuscationGuard((byte) -111);
         for (var2 = 0; var2 < 10; var2++) {
           WorldSpriteTiler.field_a[var2] = new GameMenuScreen(var2);
@@ -1830,7 +1830,7 @@ public final class VoidHunters extends NetworkGameClient {
         AgeValidator.field_f = 0;
         GetArmageddonTimerStart.field_o = 0;
         GpuFaceAttachmentState.setTicksPerSecond(-106, 50);
-        ComponentCollision.a("Playing music", (byte) -101);
+        ComponentCollision.traceLoadingStatus("Playing music", (byte) -101);
         ConsoleSettingsScript.playLoopingMusicTrack(CachedByteArray.musicTracks[0], (byte) -114);
         if (param0 <= 124) {
           Object var4 = (Object) null;
@@ -1840,10 +1840,10 @@ public final class VoidHunters extends NetworkGameClient {
           GetThrusterParticleLife.field_o.setChannelGain(0, (byte) 18, var2Lifetime1);
         }
         AgeValidator.configureReverb(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, LoopingSound.field_n, CommonGameState.field_i);
-        ComponentCollision.a("Initing audiohandler", (byte) -64);
+        ComponentCollision.traceLoadingStatus("Initing audiohandler", (byte) -64);
         HighscoreTableRequest.initializeSoundQueues((byte) 89);
         MidiNote.resetFrameTiming(2096);
-        ComponentCollision.a("Finished loadloop", (byte) -128);
+        ComponentCollision.traceLoadingStatus("Finished loadloop", (byte) -128);
         if (this.isTutorialEnabled(0) &&
           GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 116)) {
           WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
@@ -1898,10 +1898,10 @@ public final class VoidHunters extends NetworkGameClient {
           AgeValidator.configureReverb(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, LoopingSound.field_n, CommonGameState.field_i);
           if (SetMachineGunEnergyUsed.field_o[81] &&
             SetMachineGunEnergyUsed.field_o[102]) {
-            SetInnateThrusters.a(0, new int[]{4});
+            SetInnateThrusters.requestShipImport(0, new int[]{4});
           }
         }
-        if (GetBuildViewAutozoomEndOnAction.a(61848) &&
+        if (GetBuildViewAutozoomEndOnAction.hasConfirmedShipImport(61848) &&
           GetArmageddonTimerStart.field_o == 0 &&
           0 == AgeValidator.field_f) {
           GetDebrisThrowable.a(false, "Cookie ship found, so starting game");
@@ -2050,9 +2050,9 @@ public final class VoidHunters extends NetworkGameClient {
               } else {
                 var7 = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
                 var8 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
-                GetBombletSprayReload.a(-119, var8, var7);
-                GetMutatorVotes.a(SetBombletSprayProjectileOndamageParticles.getOverlayClipCenterX((byte) 93), var4 != 0, SetThrusterForce.getOverlayClipCenterY(-99), 123);
-                BodyDestroyedCondition.b(-1);
+                GetBombletSprayReload.translateMouseCoordinates(-119, var8, var7);
+                GetMutatorVotes.updateChatInputDialog(SetBombletSprayProjectileOndamageParticles.getOverlayClipCenterX((byte) 93), var4 != 0, SetThrusterForce.getOverlayClipCenterY(-99), 123);
+                BodyDestroyedCondition.restoreMouseCoordinates(-1);
                 if (MatchingFieldValidator.field_g.networked) {
                   MatchingFieldValidator.field_g.updateSession((byte) 89, var4 != 0);
                 }
@@ -2273,9 +2273,9 @@ public final class VoidHunters extends NetworkGameClient {
           int var6Lifetime1Lifetime1;
           int var7Lifetime1Lifetime1;
           var9 = field_G;
-          GetBombletSprayEnergyUsed.field_p = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 102).getSize();
+          GetBombletSprayEnergyUsed.field_p = SetThrusterBindingMoveAndTurnHasOppositeMove.getActiveCanvas((byte) 102).getSize();
           RoundResult.field_e = false;
-          var10 = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 101);
+          var10 = SetThrusterBindingMoveAndTurnHasOppositeMove.getActiveCanvas((byte) 101);
           if (null != DateOfBirthInput.field_x) {
             if (DebugRequestFactory.field_b != var10) {
               GetDebrisThrowable.a(false, "Canvas=" + var10 + " hashcode=" + var10.hashCode());
@@ -2325,9 +2325,9 @@ public final class VoidHunters extends NetworkGameClient {
             !GetMessageFadetime.field_o) {
             var3_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var4_int = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
-            GetBombletSprayReload.a(-89, var4_int, var3_int);
+            GetBombletSprayReload.translateMouseCoordinates(-89, var4_int, var3_int);
             SpawnPointFactory.drawLobbyAndSocialOverlays(SetSalvoDamageMultiplier.e(83), true);
-            BodyDestroyedCondition.b(-1);
+            BodyDestroyedCondition.restoreMouseCoordinates(-1);
           }
           var3 = (IntegerNode) (PlayerVote.field_c.first(0));
           if (var3 != null) {
@@ -2414,7 +2414,7 @@ public final class VoidHunters extends NetworkGameClient {
             var7Lifetime1 = (-var5_intLifetime3 + GetBombletSprayEnergyUsed.field_p.height) / 2;
             if (SetReloadBarWidth.isCachedFrameAvailable((byte) -116) &&
               this.cachedFrame != null) {
-              var6Lifetime1 = GetExplosionProjectileOndamageParticles.e((byte) -24);
+              var6Lifetime1 = GetExplosionProjectileOndamageParticles.getCachedFrameTopPanelX((byte) -24);
               var7Lifetime1 = RemoveEventActionFactory.getCachedTopPanelY((byte) 102);
             }
             var8_ref_kla = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
@@ -2430,14 +2430,14 @@ public final class VoidHunters extends NetworkGameClient {
             var6Lifetime2 = 1;
             var7Lifetime2 = (GetBombletSprayEnergyUsed.field_p.width >> 1) - (GameTextMetrics.getStringWidth(var6Lifetime2, var5, 13879) >> 1);
             var8Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (GetPointDefenceLaserProjectiles.getFontAscent(false, var6Lifetime2) >> 1);
-            BlackBoxRecording.drawPanelBackground((byte) -115, 200, MidiNote.a(var6Lifetime2, (byte) -121) * 8, var7Lifetime2 - 16, var8Lifetime1 - 5 * MidiNote.a(var6Lifetime2, (byte) -121), 32 + GameTextMetrics.getStringWidth(var6Lifetime2, var5, 13879));
+            BlackBoxRecording.drawPanelBackground((byte) -115, 200, MidiNote.getFontMaxDescent(var6Lifetime2, (byte) -121) * 8, var7Lifetime2 - 16, var8Lifetime1 - 5 * MidiNote.getFontMaxDescent(var6Lifetime2, (byte) -121), 32 + GameTextMetrics.getStringWidth(var6Lifetime2, var5, 13879));
             SetSelfDestructPrepareToggleCooldown.drawText(var7Lifetime2, 1, var8Lifetime1, var5, var6Lifetime2, 16777215, (byte) -101);
           }
           stackIn_81_0 = 0;
           stackIn_82_1 = (GetUseDetailLines.field_o != -1) && (GetTorpedoReload.field_q != -1);
           ShieldBehaviourFactory.a(stackIn_81_0, stackIn_82_1);
           if (GetPointDefenceLaserProjectiles.a(1024, 11284)) {
-            GetLagStandardDeviationOut.a(1, "FPS: " + Integer.toString(SoftwareFaceAttachment.field_a), 16777215, 20, 160, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(1, "FPS: " + Integer.toString(SoftwareFaceAttachment.field_a), 16777215, 20, 160, 4266);
           }
           if (OpenGlTexture1D.field_i) {
             try {

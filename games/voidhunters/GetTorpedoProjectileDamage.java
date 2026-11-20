@@ -38,7 +38,7 @@ final class GetTorpedoProjectileDamage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, MusicTrack param4) {
+    final static void crossfadeMusicTrack(int param0, boolean param1, int param2, boolean param3, MusicTrack param4) {
         if (!param3) {
           return;
         }

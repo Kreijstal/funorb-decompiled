@@ -8,7 +8,7 @@ final class ResourceNode implements DiffableState {
     static byte[] field_g;
     int captureTimer;
     int team;
-    static int[][] field_b;
+    static int[][] rasterTargetRows;
     int x;
     int radius;
 
@@ -259,11 +259,11 @@ final class ResourceNode implements DiffableState {
         if (param0) {
           field_g = (byte[]) null;
           field_g = null;
-          field_b = (int[][]) null;
+          rasterTargetRows = (int[][]) null;
           return;
         }
         field_g = null;
-        field_b = (int[][]) null;
+        rasterTargetRows = (int[][]) null;
     }
 
     ResourceNode(int param0, int param1) {

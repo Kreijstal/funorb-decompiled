@@ -17,7 +17,7 @@ final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_q = (String) null;
           }
-          SetMachineGunEnergyUsed.a(107, 62, arguments[0].intValue(99));
+          SetMachineGunEnergyUsed.submitSettingsChange(107, 62, arguments[0].intValue(99));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -38,12 +38,12 @@ final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] createBeveledPanelSprites(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 >= 112) {
-          return MissionListFactory.a(-972, 1, param4, 3, param3, 1, 1, param2, param0);
+          return MissionListFactory.createBeveledPanelSprites(-972, 1, param4, 3, param3, 1, 1, param2, param0);
         }
-        SetCountermeasureLauncherFireForce.a(-19, (byte) -41, -16, 83, 121);
-        return MissionListFactory.a(-972, 1, param4, 3, param3, 1, 1, param2, param0);
+        SetCountermeasureLauncherFireForce.createBeveledPanelSprites(-19, (byte) -41, -16, 83, 121);
+        return MissionListFactory.createBeveledPanelSprites(-972, 1, param4, 3, param3, 1, 1, param2, param0);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -51,7 +51,7 @@ final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
         field_p = null;
         field_o = null;
         if (param0 != 107) {
-          SetCountermeasureLauncherFireForce.a(-92, (byte) 16, 92, 10, 28);
+          SetCountermeasureLauncherFireForce.createBeveledPanelSprites(-92, (byte) 16, 92, 10, 28);
         }
     }
 

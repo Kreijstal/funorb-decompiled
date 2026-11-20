@@ -95,7 +95,7 @@ final class ByteStorageAccess {
           var8 = -1;
           var9 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + param0);
           var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - param0);
-          GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var9, ResourceNode.field_b[param2], (byte) 75, var10);
+          GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var9, ResourceNode.rasterTargetRows[param2], (byte) 75, var10);
           while (var6 > var5_int) {
             var8 += 2;
             var7 = var7 + var8;
@@ -109,10 +109,10 @@ final class ByteStorageAccess {
                 var13 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var5_int + param4);
                 var14 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var5_int);
                 if (var12 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
-                  GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13, ResourceNode.field_b[var12], (byte) 75, var14);
+                  GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13, ResourceNode.rasterTargetRows[var12], (byte) 75, var14);
                 }
                 if (var11 >= NebulaField.field_c) {
-                  GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13, ResourceNode.field_b[var11], (byte) 75, var14);
+                  GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13, ResourceNode.rasterTargetRows[var11], (byte) 75, var14);
                 }
               }
             }
@@ -128,12 +128,12 @@ final class ByteStorageAccess {
             var13Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + var6);
             var14Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var6);
             if (EnvironmentReflectionGpuMaterialEffect.field_i >= var12Lifetime1) {
-              GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13Lifetime1, ResourceNode.field_b[var12Lifetime1], (byte) 75, var14Lifetime1);
+              GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13Lifetime1, ResourceNode.rasterTargetRows[var12Lifetime1], (byte) 75, var14Lifetime1);
             }
             if (NebulaField.field_c > var11Lifetime1) {
               continue;
             }
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13Lifetime1, ResourceNode.field_b[var11Lifetime1], (byte) 75, var14Lifetime1);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param3, var13Lifetime1, ResourceNode.rasterTargetRows[var11Lifetime1], (byte) 75, var14Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

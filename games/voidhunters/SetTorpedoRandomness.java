@@ -19,7 +19,7 @@ final class SetTorpedoRandomness extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(73, 62, arguments[0].intValue(96));
+          SetMachineGunEnergyUsed.submitSettingsChange(73, 62, arguments[0].intValue(96));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

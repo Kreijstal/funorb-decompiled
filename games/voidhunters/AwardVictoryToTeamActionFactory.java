@@ -11,7 +11,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
         if (FloatNoiseSliceGenerator.field_a) {
           return;
         }
-        ComponentCollision.a("Initing text...", (byte) -82);
+        ComponentCollision.traceLoadingStatus("Initing text...", (byte) -82);
         FloatNoiseSliceGenerator.field_a = true;
         if (null != HighscoreValueRequest.menuActionLabels) {
           return;

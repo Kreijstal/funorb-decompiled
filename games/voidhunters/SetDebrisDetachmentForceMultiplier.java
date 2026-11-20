@@ -16,7 +16,7 @@ final class SetDebrisDetachmentForceMultiplier extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = 8;
           }
-          SetMachineGunEnergyUsed.a(53, 62, arguments[0].intValue(75));
+          SetMachineGunEnergyUsed.submitSettingsChange(53, 62, arguments[0].intValue(75));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

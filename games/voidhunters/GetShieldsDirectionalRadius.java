@@ -77,7 +77,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
             !GetMessageFadetime.field_o) {
             var6 = (var4 - SoftwareRasterizer2D.height) / 2;
           }
-          GetBombletSprayReload.a(70, var6, var5);
+          GetBombletSprayReload.translateMouseCoordinates(70, var6, var5);
           stackIn_82_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
           stackIn_85_1 = 11;
           stackIn_85_2 = 14;
@@ -99,7 +99,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
               !GetMessageFadetime.field_o) {
               var6 = (var4 - SoftwareRasterizer2D.height) / 2;
             }
-            GetBombletSprayReload.a(70, var6, var5);
+            GetBombletSprayReload.translateMouseCoordinates(70, var6, var5);
             stackIn_9_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
             stackIn_12_1 = 11;
             stackIn_12_2 = 14;
@@ -120,7 +120,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
                 !GetMessageFadetime.field_o) {
                 var6 = (var4 - SoftwareRasterizer2D.height) / 2;
               }
-              GetBombletSprayReload.a(70, var6, var5);
+              GetBombletSprayReload.translateMouseCoordinates(70, var6, var5);
               stackIn_54_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
               stackIn_57_1 = 11;
               stackIn_57_2 = 14;
@@ -140,7 +140,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
                 !GetMessageFadetime.field_o) {
                 var6 = (var4 - SoftwareRasterizer2D.height) / 2;
               }
-              GetBombletSprayReload.a(70, var6, var5);
+              GetBombletSprayReload.translateMouseCoordinates(70, var6, var5);
               stackIn_32_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
               stackIn_35_1 = 11;
               stackIn_35_2 = 14;
@@ -153,7 +153,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
             }
           }
         }
-        BodyDestroyedCondition.b(-1);
+        BodyDestroyedCondition.restoreMouseCoordinates(-1);
         ShieldInfoPool.field_c.yOffset = 0;
         ShieldInfoPool.field_c.xOffset = 0;
         if (GetExplosionProjectileDamage.field_o) {

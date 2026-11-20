@@ -64,7 +64,7 @@ final class PolygonContainment {
           if (param2 != 2) {
             PolygonContainment.clearSharedReferences(25);
           }
-          if (!SetDebrisProjectileCollision.a(5220, var5, param1, var7, param3, var4_int, var6)) {
+          if (!SetDebrisProjectileCollision.isPointInRectangle(5220, var5, param1, var7, param3, var4_int, var6)) {
             return false;
           }
           var8Lifetime1 = param3;

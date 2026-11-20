@@ -38,7 +38,7 @@ final class SetLaserReload extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             SetLaserReload.drawNameEntryDialog(44, true);
           }
-          SetMachineGunEnergyUsed.a(110, 62, arguments[0].intValue(25));
+          SetMachineGunEnergyUsed.submitSettingsChange(110, 62, arguments[0].intValue(25));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

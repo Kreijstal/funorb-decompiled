@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBombletSprayPushMultiplier extends ConsoleCommand {
-    static int[] field_o;
+    static int[] importedShipComponentWords;
     static EmailAvailabilityCheck emailAvailabilityCheck;
 
     final static ToolkitSprite a(byte param0, GraphicsToolkit param1, Sprite param2) {
@@ -42,7 +42,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
             param2 = (Sprite) ((Object) var6);
           }
           if (param0 > -61) {
-            field_o = (int[]) null;
+            importedShipComponentWords = (int[]) null;
           }
           var3 = param1.createSprite(param2.paddedWidth, param2.paddedWidth, param2.pixels, 0, (byte) 64, param2.paddedHeight);
           stackIn_12_0 = var3;
@@ -98,10 +98,10 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
         emailAvailabilityCheck = null;
         if (param0 > -70) {
           emailAvailabilityCheck = (EmailAvailabilityCheck) null;
-          field_o = null;
+          importedShipComponentWords = null;
           return;
         }
-        field_o = null;
+        importedShipComponentWords = null;
     }
 
     GetBombletSprayPushMultiplier(String param0, Class[] param1, String param2) {

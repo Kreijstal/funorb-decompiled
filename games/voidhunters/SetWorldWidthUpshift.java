@@ -59,7 +59,7 @@ final class SetWorldWidthUpshift extends ConsoleCommand {
             var4 = (java.awt.Canvas) null;
             SetWorldWidthUpshift.createSoftwareToolkit((TextureProvider) null, -53, -128, (java.awt.Canvas) null, -4);
           }
-          SetMachineGunEnergyUsed.a(193, 62, arguments[0].intValue(88));
+          SetMachineGunEnergyUsed.submitSettingsChange(193, 62, arguments[0].intValue(88));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -21,7 +21,7 @@ final class MidiChannelLevels {
           var8 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param5);
           var9 = IntrusiveNode.clamp(param0 ^ -29743, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
           for (var10 = var6_int; var7 >= var10; var10++) {
-            GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var9, ResourceNode.field_b[var10], (byte) 75, var8);
+            GetSalvoRepairTimeMultiplier.fillArraySpan(param1, var9, ResourceNode.rasterTargetRows[var10], (byte) 75, var8);
           }
           if (param0 == -3518) {
             return;

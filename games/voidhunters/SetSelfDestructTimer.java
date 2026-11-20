@@ -17,7 +17,7 @@ final class SetSelfDestructTimer extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -97);
           }
-          SetMachineGunEnergyUsed.a(225, 62, arguments[0].intValue(77));
+          SetMachineGunEnergyUsed.submitSettingsChange(225, 62, arguments[0].intValue(77));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

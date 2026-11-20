@@ -8,7 +8,7 @@ final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand 
     public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 > -90) {
-          SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 1);
+          SetThrusterBindingMoveAndTurnHasOppositeMove.getActiveCanvas((byte) 1);
         }
     }
 
@@ -16,7 +16,7 @@ final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand 
         super(param0, param1, param2);
     }
 
-    final static java.awt.Canvas e(byte param0) {
+    final static java.awt.Canvas getActiveCanvas(byte param0) {
         if (param0 > 62) {
           return null == EmailAvailabilityChecks.fullscreenCanvas ? GammaCorrection.canvas : (java.awt.Canvas) ((Object) EmailAvailabilityChecks.fullscreenCanvas);
         }
@@ -32,7 +32,7 @@ final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand 
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(16, 62, arguments[0].intValue(29));
+          SetMachineGunEnergyUsed.submitSettingsChange(16, 62, arguments[0].intValue(29));
           if (obfuscationGuard > -119) {
             field_o = (TextureCombineOperation) null;
           }

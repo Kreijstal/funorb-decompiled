@@ -15,7 +15,7 @@ final class SetLaserBeamProjectileDamage extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 41);
           }
-          SetMachineGunEnergyUsed.a(145, 62, arguments[0].intValue(26));
+          SetMachineGunEnergyUsed.submitSettingsChange(145, 62, arguments[0].intValue(26));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

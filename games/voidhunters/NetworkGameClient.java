@@ -750,7 +750,7 @@ abstract class NetworkGameClient extends GameApplet {
             AppletReload.reloadGamePage(MissionList.getApplet((byte) -126), 5836);
           }
           if (var4 == 12) {
-            GameReleaseStatistics.openAppletRelativeUrl((byte) 86, MissionList.getApplet((byte) -126), GetToggledScoreboard.a(27158));
+            GameReleaseStatistics.openAppletRelativeUrl((byte) 86, MissionList.getApplet((byte) -126), GetToggledScoreboard.getAccountRelativeUrl(27158));
           }
           if (var4 == 13) {
             try {
@@ -761,10 +761,10 @@ abstract class NetworkGameClient extends GameApplet {
                 var7 = SetPhasedEnergyBeamReload.field_p.getResponseBuffer(43);
                 if (var7 != null) {
                   var8 = CarouselSlot.decodeCp1252(0, 0, var7.position, var7.payload);
-                  GetMissionTerrainNebulaProbability.a(var8, (byte) 122);
+                  GetMissionTerrainNebulaProbability.handleCountryListReply(var8, (byte) 122);
                 } else {
                   var10 = (String) null;
-                  GetMissionTerrainNebulaProbability.a((String) null, (byte) 125);
+                  GetMissionTerrainNebulaProbability.handleCountryListReply((String) null, (byte) 125);
                 }
                 SetPhasedEnergyBeamReload.field_p = null;
               }
@@ -773,7 +773,7 @@ abstract class NetworkGameClient extends GameApplet {
               var6 = (Exception) (Object) decompiledCaughtException;
               FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var6), "S1", 0);
               var11 = (String) null;
-              GetMissionTerrainNebulaProbability.a((String) null, (byte) 122);
+              GetMissionTerrainNebulaProbability.handleCountryListReply((String) null, (byte) 122);
               SetPhasedEnergyBeamReload.field_p = null;
             }
           }

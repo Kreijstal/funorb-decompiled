@@ -28,7 +28,7 @@ final class SetFighterRepairTime extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(230, 62, arguments[0].intValue(21));
+          SetMachineGunEnergyUsed.submitSettingsChange(230, 62, arguments[0].intValue(21));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

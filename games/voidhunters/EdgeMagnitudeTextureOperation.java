@@ -80,7 +80,7 @@ final class EdgeMagnitudeTextureOperation extends TextureOperation {
         return var17;
     }
 
-    final static void b(int param0, int param1) {
+    final static void initializeChatMessages(int param0, int param1) {
         NullUiRenderer.chatMessages = new ChatMessage[param0 * 15];
         if (param1 > -90) {
           field_i = (String) null;

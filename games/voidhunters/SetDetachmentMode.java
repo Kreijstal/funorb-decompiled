@@ -60,7 +60,7 @@ final class SetDetachmentMode extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(24, 62, arguments[0].intValue(76));
+          SetMachineGunEnergyUsed.submitSettingsChange(24, 62, arguments[0].intValue(76));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 90);

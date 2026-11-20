@@ -163,7 +163,7 @@ final class MapZone extends IntrusiveNode implements DiffableState {
           }
           var6 = param2.worldToScreenX(this.width + this.x, (byte) 125);
           var7 = param2.worldToScreenY(true, this.height + this.y);
-          CachedArchiveProvider.a(64, false, var4_int, var5, -var5 + var7, -var4_int + var6, param1);
+          CachedArchiveProvider.fillRectangleAlpha(64, false, var4_int, var5, -var5 + var7, -var4_int + var6, param1);
           UiToggleButtonRenderer.drawRectangle(112, var4_int, -var5 + var7, var5, param1, -var4_int + var6);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "cq.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

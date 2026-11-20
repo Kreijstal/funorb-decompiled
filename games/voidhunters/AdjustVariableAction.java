@@ -157,7 +157,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
     public static void clearSharedReferences(boolean param0) {
         field_c = null;
         if (!param0) {
-          AdjustVariableAction.b(127);
+          AdjustVariableAction.tryAcquireChatSendPermit(127);
         }
     }
 
@@ -209,7 +209,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean tryAcquireChatSendPermit(int param0) {
         long var1;
         long var3;
         int var5;
@@ -219,20 +219,20 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         if (param0 != 7) {
           return true;
         }
-        var3 = -GetUseModels.field_o + var1;
+        var3 = -GetUseModels.lastChatSendTimeMillis + var1;
         if (30000L < var3) {
-          GetUseModels.field_o = var1;
-          GetDebrisThrowable.field_q = 0;
+          GetUseModels.lastChatSendTimeMillis = var1;
+          GetDebrisThrowable.consecutiveChatSendCount = 0;
           return true;
         }
         var5 = 3000;
-        if (GetDebrisThrowable.field_q >= 7) {
+        if (GetDebrisThrowable.consecutiveChatSendCount >= 7) {
           var5 = 12000;
         } else {
-          if (GetDebrisThrowable.field_q >= 5) {
+          if (GetDebrisThrowable.consecutiveChatSendCount >= 5) {
             var5 = 9000;
           } else {
-            if (3 <= GetDebrisThrowable.field_q) {
+            if (3 <= GetDebrisThrowable.consecutiveChatSendCount) {
               var5 = 6000;
             }
           }
@@ -240,8 +240,8 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         if (var3 <= (long)var5) {
           return false;
         }
-        GetDebrisThrowable.field_q = GetDebrisThrowable.field_q + 1;
-        GetUseModels.field_o = var1;
+        GetDebrisThrowable.consecutiveChatSendCount = GetDebrisThrowable.consecutiveChatSendCount + 1;
+        GetUseModels.lastChatSendTimeMillis = var1;
         return true;
     }
 

@@ -6,7 +6,7 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
     static int field_p;
     static int field_r;
     static boolean[] field_o;
-    static int[] field_q;
+    static int[] base64CharacterValues;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -16,9 +16,9 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(164, 62, arguments[0].intValue(60));
+          SetMachineGunEnergyUsed.submitSettingsChange(164, 62, arguments[0].intValue(60));
           if (obfuscationGuard > -119) {
-            SetMachineGunEnergyUsed.a(100, -78, -48);
+            SetMachineGunEnergyUsed.submitSettingsChange(100, -78, -48);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -44,11 +44,11 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
         if (!param0) {
           field_s = 71;
         }
-        field_q = null;
+        base64CharacterValues = null;
         field_o = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void submitSettingsChange(int param0, int param1, int param2) {
         PlayerAction var3 = null;
         if (param1 != 62) {
           field_r = 110;
@@ -68,24 +68,24 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
         int var0_intLifetime3;
         SetLag.setMenuCarouselTickRate(105, 50);
         field_o = new boolean[112];
-        field_q = new int[128];
-        for (var0_int = 0; field_q.length > var0_int; var0_int++) {
-          field_q[var0_int] = -1;
+        base64CharacterValues = new int[128];
+        for (var0_int = 0; base64CharacterValues.length > var0_int; var0_int++) {
+          base64CharacterValues[var0_int] = -1;
         }
         for (var0_intLifetime1 = 65; var0_intLifetime1 <= 90; var0_intLifetime1++) {
-          field_q[var0_intLifetime1] = var0_intLifetime1 - 65;
+          base64CharacterValues[var0_intLifetime1] = var0_intLifetime1 - 65;
         }
         for (var0_intLifetime2 = 97; var0_intLifetime2 <= 122; var0_intLifetime2++) {
-          field_q[var0_intLifetime2] = 26 + (var0_intLifetime2 - 97);
+          base64CharacterValues[var0_intLifetime2] = 26 + (var0_intLifetime2 - 97);
         }
         for (var0_intLifetime3 = 48; var0_intLifetime3 <= 57; var0_intLifetime3++) {
-          field_q[var0_intLifetime3] = -48 + (var0_intLifetime3 + 52);
+          base64CharacterValues[var0_intLifetime3] = -48 + (var0_intLifetime3 + 52);
         }
-        int[] var0 = field_q;
-        field_q[43] = 62;
+        int[] var0 = base64CharacterValues;
+        base64CharacterValues[43] = 62;
         var0[42] = 62;
-        field_q[47] = 63;
-        int[] var1 = field_q;
+        base64CharacterValues[47] = 63;
+        int[] var1 = base64CharacterValues;
         var1[45] = 63;
     }
 }

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextureTransformMode {
-    static Camera2D field_a;
+    static Camera2D soundCamera;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 17121) {
-          field_a = (Camera2D) null;
-          field_a = null;
+          soundCamera = (Camera2D) null;
+          soundCamera = null;
           return;
         }
-        field_a = null;
+        soundCamera = null;
     }
 
     public final String toString() {

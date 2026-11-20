@@ -17,7 +17,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(195, 62, arguments[0].intValue(23));
+          SetMachineGunEnergyUsed.submitSettingsChange(195, 62, arguments[0].intValue(23));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;
@@ -166,7 +166,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
               }
             }
             var20 = SetSpinningBladeSpinupSpeed.field_o[SetMissileLauncherProjectileLife.field_p];
-            GetLagStandardDeviationOut.a(-1, var20, 16763904, 80, 320 - GetPhasedEnergyBeamProjectiles.a(120, var20) / 2, param0 + 4164);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var20, 16763904, 80, 320 - GetPhasedEnergyBeamProjectiles.a(120, var20) / 2, param0 + 4164);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

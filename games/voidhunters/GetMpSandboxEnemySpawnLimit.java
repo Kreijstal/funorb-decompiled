@@ -63,7 +63,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           if (var6 == null) {
             return true;
           }
-          SetInnateThrusters.a(0, var6.description);
+          SetInnateThrusters.requestShipImport(0, var6.description);
           return true;
         }
         GetMpSandboxEnemySpawnLimit.handleServerInfoOrBlueprintPacket(114, 1);
@@ -86,7 +86,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         if (var4 == null) {
           return true;
         }
-        SetInnateThrusters.a(0, var4.description);
+        SetInnateThrusters.requestShipImport(0, var4.description);
         return true;
     }
 

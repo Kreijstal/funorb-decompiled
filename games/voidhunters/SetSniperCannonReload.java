@@ -16,7 +16,7 @@ final class SetSniperCannonReload extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(114, 62, arguments[0].intValue(71));
+          SetMachineGunEnergyUsed.submitSettingsChange(114, 62, arguments[0].intValue(71));
           if (obfuscationGuard > -119) {
             field_o = 35;
           }

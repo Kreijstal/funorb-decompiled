@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1572/1572 classes and 7906/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 0 opaque classes and 309 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1572/1572 classes and 7957/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 0 opaque classes and 258 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -154,6 +154,8 @@ Menu fonts, backgrounds and metrics have named configuration helpers, along with
 Chat context/filter menus, game-session reception, lobby packet decoding, loading progress, font metrics and sprite loading have named entrypoints. Component editor rendering, texture mapping, integer mipmap uploads, clipped geometry, fullscreen restoration and social-list setup expose their existing contracts. Team-chat names are traced from team selection to message prefixes; original packet layouts, masks, buffer reuse and rendering quirks are retained.
 
 Account age and email-update preferences are traced from the account form through request state. Account modal polling, cached-frame input, console/name-entry key dispatch, social-list content/lookups and overlay clip dimensions have named helpers. The mouse idle counter is traced through actual event resets and snapshot increments; software depth-write state is named through its span consumers. Original guards, polling order, timeout behavior and rendering arithmetic remain intact.
+
+Tooltip text, positional-audio camera, account links and requested player names have traced state and entrypoints. Ship import preview/confirmation, chat throttling, Base64 lookup, sprite/bevel drawing, fixed-point multiplication, font metrics and raster target/restore helpers expose their existing behavior. Loading-status and country-list hooks retain their original no-op bodies and guard effects; naming adds no parsing or output.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

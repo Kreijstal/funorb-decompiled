@@ -4,14 +4,14 @@
 final class GetBuildViewAutozoomEndOnAction extends ConsoleCommand {
     static int[] sqrtLookupTable;
 
-    final static boolean a(int param0) {
+    final static boolean hasConfirmedShipImport(int param0) {
         if (param0 != 61848) {
           return true;
         }
-        if (!SetFixedaim.field_o) {
+        if (!SetFixedaim.shipImportResolved) {
           return false;
         }
-        if (null == GetBombletSprayPushMultiplier.field_o) {
+        if (null == GetBombletSprayPushMultiplier.importedShipComponentWords) {
           return false;
         }
         return true;
@@ -46,7 +46,7 @@ final class GetBuildViewAutozoomEndOnAction extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 53562) {
-          GetBuildViewAutozoomEndOnAction.a(-36);
+          GetBuildViewAutozoomEndOnAction.hasConfirmedShipImport(-36);
           sqrtLookupTable = null;
           return;
         }

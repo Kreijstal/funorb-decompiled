@@ -27,7 +27,7 @@ final class SetSniperCannonEnergyUsed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(165, 62, arguments[0].intValue(27));
+          SetMachineGunEnergyUsed.submitSettingsChange(165, 62, arguments[0].intValue(27));
           if (obfuscationGuard >= -119) {
             field_q = -0.13999182188760953;
           }
@@ -47,7 +47,7 @@ final class SetSniperCannonEnergyUsed extends ConsoleCommand {
         }
     }
 
-    final static int[] f(byte param0) {
+    final static int[] createEightIntBuffer(byte param0) {
         int var1 = 5 / ((18 - param0) / 54);
         return new int[8];
     }

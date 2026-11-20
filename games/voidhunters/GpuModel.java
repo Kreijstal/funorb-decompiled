@@ -843,7 +843,7 @@ final class GpuModel extends Model3D {
             param1.groupVertexIndices((byte) -37, false);
           }
           if (null != param1.faceAttachments &&
-            TileTextureOperation.a(param2, this.field_s, false)) {
+            TileTextureOperation.needsFaceAttachmentGroups(param2, this.field_s, false)) {
             param1.groupFaceAttachmentIndices(-126);
           }
           if (null != param1.faceLabels &&

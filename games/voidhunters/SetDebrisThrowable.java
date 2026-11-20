@@ -17,7 +17,7 @@ final class SetDebrisThrowable extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(12, 62, arguments[0].intValue(109));
+          SetMachineGunEnergyUsed.submitSettingsChange(12, 62, arguments[0].intValue(109));
           if (obfuscationGuard >= -119) {
             SetDebrisThrowable.requestsVertexBuffer((byte) 67, -35, -21);
           }

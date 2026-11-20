@@ -15,7 +15,7 @@ final class SetCountermeasuresCooldown extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetCountermeasuresCooldown.clearSharedReferences(20);
           }
-          SetMachineGunEnergyUsed.a(221, 62, arguments[0].intValue(12));
+          SetMachineGunEnergyUsed.submitSettingsChange(221, 62, arguments[0].intValue(12));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

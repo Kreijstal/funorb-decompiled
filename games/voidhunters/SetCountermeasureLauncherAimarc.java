@@ -23,7 +23,7 @@ final class SetCountermeasureLauncherAimarc extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
-          SetMachineGunEnergyUsed.a(142, 62, arguments[0].intValue(46));
+          SetMachineGunEnergyUsed.submitSettingsChange(142, 62, arguments[0].intValue(46));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

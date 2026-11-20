@@ -6,7 +6,7 @@ final class ComponentCollision extends IntrusiveNode {
     ShipComponent first;
     ShipComponent second;
 
-    final static void a(String param0, byte param1) {
+    final static void traceLoadingStatus(String param0, byte param1) {
         try {
           if (param1 > -51) {
             ComponentCollision.a(96, (byte) 89, false, true, true);
