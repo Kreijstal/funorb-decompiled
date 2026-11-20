@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nqa {
+final class DequeReferenceTracker {
     static boolean field_c;
     static boolean[][] field_b;
     static volatile boolean field_a;
 
-    final static Object a(IntrusiveDeque param0, int param1) {
+    final static Object findDuplicateReference(IntrusiveDeque param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         Object stackIn_6_0 = null;
@@ -18,7 +18,7 @@ final class nqa {
         RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
-          if (!GetMissionTerrainNebulaProbability.field_q) {
+          if (!GetMissionTerrainNebulaProbability.referenceTrackingEnabled) {
             return null;
           }
           if (param1 != 12642) {

@@ -780,7 +780,7 @@ final class MissionBuilder implements DiffableState {
                   var13.setAngle(GameKeyHandler.a(22433, var13.getAngle(0) + 4096), -93);
                   var13.setPosition(-var13.x, -var13.y, (byte) -112);
                   param0.world.addDebris(var13, (byte) 53);
-                  var5 = (ShipBody[]) (SoftwareSprite2D.a(var13, (Object[]) (var5), 0, ebb.field_a));
+                  var5 = (ShipBody[]) (SoftwareSprite2D.a(var13, (Object[]) (var5), 0, ShipBodyFactoryHolder.factory));
                 }
               } else {
                 var12 = new Ship();
@@ -798,7 +798,7 @@ final class MissionBuilder implements DiffableState {
                   }
                 }
                 param0.world.addShip(var12, (byte) 85);
-                var5 = (ShipBody[]) (SoftwareSprite2D.a(var12, (Object[]) (var5), 0, ebb.field_a));
+                var5 = (ShipBody[]) (SoftwareSprite2D.a(var12, (Object[]) (var5), 0, ShipBodyFactoryHolder.factory));
               }
             }
           }
@@ -902,7 +902,7 @@ final class MissionBuilder implements DiffableState {
             var21.setAi(new ShipAI(), 4);
             var21.setTeam(17704, 1);
             param2.addShip(var21, (byte) 81);
-            var19 = (ShipBody[]) (SoftwareSprite2D.a(var21, (Object[]) (var19), 0, ebb.field_a));
+            var19 = (ShipBody[]) (SoftwareSprite2D.a(var21, (Object[]) (var19), 0, ShipBodyFactoryHolder.factory));
           }
           stackIn_5_0 = var19;
           return (ShipBody[]) (stackIn_5_0);
@@ -1199,7 +1199,7 @@ final class MissionBuilder implements DiffableState {
             var19.setAi(new ShipAI(), 4);
             var19.setTeam(17704, 1);
             param2.addShip(var19, (byte) 92);
-            var17Lifetime2 = (ShipBody[]) (SoftwareSprite2D.a(var19, (Object[]) (var17Lifetime2), 0, ebb.field_a));
+            var17Lifetime2 = (ShipBody[]) (SoftwareSprite2D.a(var19, (Object[]) (var17Lifetime2), 0, ShipBodyFactoryHolder.factory));
           }
           stackIn_10_0 = var17Lifetime2;
           return (ShipBody[]) (stackIn_10_0);
@@ -1703,14 +1703,14 @@ final class MissionBuilder implements DiffableState {
                 var11 = (BodyDestroyedCondition) (var6);
                 var13 = param1.getBodyById((byte) -27, var11.getParameter((byte) -110, 0));
                 if (var13 != null) {
-                  param3 = (ShipBody[]) (GetFighterBayReload.a(param3, var13, true, ebb.field_a, -90));
+                  param3 = (ShipBody[]) (GetFighterBayReload.a(param3, var13, true, ShipBodyFactoryHolder.factory, -90));
                 }
               } else {
                 if (var6 instanceof BodyInZoneCondition) {
                   var10 = (BodyInZoneCondition) (var6);
                   var12 = param1.getBodyById((byte) -27, var10.getParameter((byte) -116, 0));
                   if (var12 != null) {
-                    param3 = (ShipBody[]) (GetFighterBayReload.a(param3, var12, true, ebb.field_a, -104));
+                    param3 = (ShipBody[]) (GetFighterBayReload.a(param3, var12, true, ShipBodyFactoryHolder.factory, -104));
                   }
                 }
               }
@@ -2541,7 +2541,7 @@ final class MissionBuilder implements DiffableState {
             var16 = TextHotspotRegion.randomBoundedInt(param1, 8192, 126);
             var19.setAngle(var16, -107);
             param4.addDebris(var19, (byte) 99);
-            var7 = (ShipBody[]) (SoftwareSprite2D.a(var19, (Object[]) (var7), param0 ^ 0, ebb.field_a));
+            var7 = (ShipBody[]) (SoftwareSprite2D.a(var19, (Object[]) (var7), param0 ^ 0, ShipBodyFactoryHolder.factory));
           }
           var9Lifetime1 = -param4.getWidth((byte) -122) / 2;
           var10Lifetime1 = param4.getWidth((byte) -122) / 2;

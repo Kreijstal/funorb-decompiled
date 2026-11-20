@@ -99,7 +99,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
             }
             if (param3 == 1 &&
               GetThrusterSmallForce.field_p != param0) {
-              ebb.field_b = true;
+              ShipBodyFactoryHolder.field_b = true;
               GetThrusterSmallForce.field_p = param0;
               LaserWeaponDefinition.a(40, param2);
             }
@@ -109,19 +109,19 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
             if (GzipCodec.field_h == param0) {
               return;
             }
-            ebb.field_b = true;
+            ShipBodyFactoryHolder.field_b = true;
             GzipCodec.field_h = param0;
             LaserWeaponDefinition.a(40, param2);
             return;
           }
           ActivateSelfDestructOrderDefinition.field_d = param0;
-          ebb.field_b = true;
+          ShipBodyFactoryHolder.field_b = true;
           LaserWeaponDefinition.a(40, param2);
         }
         if (param1 <= -69) {
           if (param3 == 1 &&
             GetThrusterSmallForce.field_p != param0) {
-            ebb.field_b = true;
+            ShipBodyFactoryHolder.field_b = true;
             GetThrusterSmallForce.field_p = param0;
             LaserWeaponDefinition.a(40, param2);
           }
@@ -135,12 +135,12 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
               if (GzipCodec.field_h == param0) {
                 return;
               }
-              ebb.field_b = true;
+              ShipBodyFactoryHolder.field_b = true;
               GzipCodec.field_h = param0;
               LaserWeaponDefinition.a(40, param2);
               return;
             }
-            ebb.field_b = true;
+            ShipBodyFactoryHolder.field_b = true;
             GetThrusterSmallForce.field_p = param0;
             LaserWeaponDefinition.a(40, param2);
           }
@@ -149,7 +149,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
           if (GzipCodec.field_h == param0) {
             return;
           }
-          ebb.field_b = true;
+          ShipBodyFactoryHolder.field_b = true;
           GzipCodec.field_h = param0;
           LaserWeaponDefinition.a(40, param2);
         }

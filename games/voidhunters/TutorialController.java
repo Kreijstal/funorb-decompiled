@@ -898,10 +898,10 @@ final class TutorialController {
                   if (!(GetPointDefenceLaserPulsetime.field_o <= 0) ||
                     SetMachineGunEnergyUsed.field_o[GetTorpedoProjectileLife.field_o] ||
                     SetMachineGunEnergyUsed.field_o[PlayerAction.field_n]) {
-                    nqa.field_c = true;
+                    DequeReferenceTracker.field_c = true;
                   }
                   if (GetPointDefenceLaserReload.field_p &&
-                    nqa.field_c) {
+                    DequeReferenceTracker.field_c) {
                     this.completeHint((byte) 83, 2);
                   }
                   if (this.isHintVisible(2, -104)) {

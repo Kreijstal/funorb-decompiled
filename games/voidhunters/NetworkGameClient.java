@@ -237,11 +237,11 @@ abstract class NetworkGameClient extends GameApplet {
           if (0 != SetGrapplingHookAimarc.field_p) {
             ppb.field_a = MissionBuilder.createArchive(1, GrappleLauncherBehaviour.field_f);
           }
-          btb.field_b = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
+          CommonUiArchiveResources.commonUiArchive = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
           GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
           BufferedFile.field_i = SetDebrisFoundInPairs.a(1, GetThrusterBindingMoveAndTurnHasOppositeMove.field_p, 81, true, false);
           UiDraggableContainer.field_z = 2;
-          GetMassDriverReload.field_o = btb.field_b;
+          GetMassDriverReload.field_o = CommonUiArchiveResources.commonUiArchive;
           GetShieldsDirectionalArc.field_r = GetSalvoUsesAllEnergy.field_o;
         }
         if (UiDraggableContainer.field_z == 2) {
@@ -262,13 +262,13 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (UiDraggableContainer.field_z == 3 &&
-          SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, btb.field_b) &&
+          SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, CommonUiArchiveResources.commonUiArchive) &&
           GetUseOffscreenRendering.a(-20230, BufferedFile.field_i)) {
           MissionFactory.b((byte) 123);
           GetPhasedEnergyBeamFireForce.b(false);
           OpenGlBufferObject.field_g = SetFighterRepairTime.field_o;
           CommandConsole.field_r = false;
-          GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, btb.field_b, BufferedFile.field_i, false);
+          GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, CommonUiArchiveResources.commonUiArchive, BufferedFile.field_i, false);
           if (BoosterOrderText.field_a ||
             PlayerReady.field_a != null) {
             stackIn_102_0 = !(BoosterOrderText.field_a);
@@ -286,7 +286,7 @@ abstract class NetworkGameClient extends GameApplet {
           GetSpinningBladeSpindamageMultiplier.a((byte) 55, BufferedFile.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
           GetSalvoUsesAllEnergy.field_o = null;
           BufferedFile.field_i = null;
-          btb.field_b = null;
+          CommonUiArchiveResources.commonUiArchive = null;
           TutorialProgressState.probeAppletUsername(0, (java.applet.Applet) (this));
           MidiNote.resetFrameTiming(2096);
           UiDraggableContainer.field_z = 10;

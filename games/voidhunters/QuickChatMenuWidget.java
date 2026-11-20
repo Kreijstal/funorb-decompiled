@@ -395,7 +395,7 @@ final class QuickChatMenuWidget extends Widget {
         RuntimeException var2 = null;
         var3 = VoidHunters.field_G;
         try {
-          if (!GetMissionTerrainNebulaProbability.field_q) {
+          if (!GetMissionTerrainNebulaProbability.referenceTrackingEnabled) {
             stackIn_3_0 = null;
             return stackIn_3_0;
           }

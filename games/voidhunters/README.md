@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1532/1572 classes and 7448/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 40 opaque classes and 767 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1538/1572 classes and 7454/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 34 opaque classes and 761 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -124,6 +124,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `ChatMessages` and its append/prefix helpers expose the original channel/priority history rules. `FullscreenFailureReason` identifies existing dialog tokens, while byte-storage access, social-list updates, packed integer arrays and objective-marker reset have named entrypoints. `LogoAnimationStatus` names the existing logo counter, completion, update and drawing routines; original geometry/assets, timing/fades, raster operations, clipping assumptions and guards remain unchanged.
 
 `FloatPacketBuffer` exposes both byte orders, including their original guard behavior. `CustomBase64Alphabet` keeps the original asterisk/hyphen symbols. `LobbyPlayerEntry` names sorting, name updates and secondary-list checks; chat panels, polygon hardpoints, beveled sprite tiles, bordered rectangles and screen transitions have named helpers. The original byte/int string-width overloads, clipping endpoints, sprite aliases, preset assembly and guard side effects remain unchanged.
+
+`PlayerNameEntryDialog` exposes key handling and result polling, while `AccountRequestPhase` identifies the original idle, pending and complete tokens. `DequeReferenceTracker` and `ReferenceTrackingControl` name duplicate-reference traversal and tracking shutdown. Social-name request dispatch, dialog dismissal and common-UI archive/cache references retain their original input quirks, aliases, iterator behavior and guard side effects.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

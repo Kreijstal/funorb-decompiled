@@ -8,7 +8,7 @@ final class GetShowTutorial extends ConsoleCommand {
         if (param0 != 29554) {
           return -94;
         }
-        if (!btb.field_a) {
+        if (!CommonUiArchiveResources.field_a) {
           return 16742263 + 2243266 * param1;
         }
         return EnvironmentReflectionGpuMaterialEffect.field_g[param1].getCategoryColor(14951);

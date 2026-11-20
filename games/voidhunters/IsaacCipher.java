@@ -123,13 +123,13 @@ final class IsaacCipher {
             var6 = (SocialListEntry) (var4.next((byte) 66));
           }
           if (0 != AttachmentInputState.field_b.firstButton.field_o) {
-            GpuFractalNoiseVolume.field_p = new qka(AttachmentInputState.field_b.firstButton.screenX, AttachmentInputState.field_b.firstButton.screenY, AttachmentInputState.field_b.firstButton.width, AttachmentInputState.field_b.firstButton.height, LegacyOpenGlWaveWaterEffect.field_d, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
+            GpuFractalNoiseVolume.activeNameEntryDialog = new PlayerNameEntryDialog(AttachmentInputState.field_b.firstButton.screenX, AttachmentInputState.field_b.firstButton.screenY, AttachmentInputState.field_b.firstButton.width, AttachmentInputState.field_b.firstButton.height, LegacyOpenGlWaveWaterEffect.field_d, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
             MissionGenerationDataFactory.field_b = 2;
           }
           if (0 == AttachmentInputState.field_b.secondButton.field_o) {
             return;
           }
-          GpuFractalNoiseVolume.field_p = new qka(AttachmentInputState.field_b.secondButton.screenX, AttachmentInputState.field_b.secondButton.screenY, AttachmentInputState.field_b.secondButton.width, AttachmentInputState.field_b.secondButton.height, GetUseNiceTrails.field_q, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
+          GpuFractalNoiseVolume.activeNameEntryDialog = new PlayerNameEntryDialog(AttachmentInputState.field_b.secondButton.screenX, AttachmentInputState.field_b.secondButton.screenY, AttachmentInputState.field_b.secondButton.width, AttachmentInputState.field_b.secondButton.height, GetUseNiceTrails.field_q, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
           MissionGenerationDataFactory.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

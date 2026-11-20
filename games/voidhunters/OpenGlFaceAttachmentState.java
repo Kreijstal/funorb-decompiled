@@ -174,7 +174,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_x_cannot_join_inprogress", 23100);
                 if (null != resourceBytes) {
-                  btb.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  CommonUiArchiveResources.gameAlreadyStartedText = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_x_declined_invite", 23100);
                 if (resourceBytes != null) {
@@ -1688,7 +1688,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("friendlistdupe", 23100);
                 if (resourceBytes != null) {
-                  dfa.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  AccountRequestPhase.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("friendnotfound", 23100);
                 if (null != resourceBytes) {

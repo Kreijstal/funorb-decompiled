@@ -12,8 +12,8 @@ final class GetUseCircleOutline extends ConsoleCommand {
           GetBombletSprayPushMultiplier.emailAvailabilityCheck.complete(7861, param4);
           SetOndamageParticleFadestart.a(param3, param2, param1, 0);
           SetMutatorVotes.e(121);
-          SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.field_d;
-          SetShipTeamAction.field_b = ToolkitRasterStateStack.field_d;
+          SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.idleAccountRequest;
+          SetShipTeamAction.field_b = ToolkitRasterStateStack.idleAccountRequest;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "baa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

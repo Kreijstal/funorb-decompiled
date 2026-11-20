@@ -116,7 +116,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var6 = this;
           synchronized (var6) {
-            SetReverbDamp.field_o = nqa.field_a;
+            SetReverbDamp.field_o = DequeReferenceTracker.field_a;
           }
           if (param0 != -83) {
             return;
@@ -227,7 +227,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          nqa.field_a = true;
+          DequeReferenceTracker.field_a = true;
           GetShowTutorial.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -251,7 +251,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          nqa.field_a = false;
+          DequeReferenceTracker.field_a = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -332,7 +332,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           igb.field_a.addFocusListener((java.awt.event.FocusListener) (this));
           igb.field_a.requestFocus();
           SetReverbDamp.field_o = true;
-          nqa.field_a = true;
+          DequeReferenceTracker.field_a = true;
           GetShowTutorial.field_o = true;
           GetDebrisSurvives.field_q = false;
           KaleidoscopeTextureOperation.field_k = MonotonicMillisClock.currentTimeMillis(false);

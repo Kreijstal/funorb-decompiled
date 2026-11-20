@@ -65,10 +65,10 @@ final class LoadBlackboxRecording extends ConsoleCommand {
     }
 
     final static String a(int param0) {
-        if (ActiveIconBorderRenderer.field_c == SetCountermeasureLauncherAimspeed.field_r) {
+        if (ActiveIconBorderRenderer.pendingAccountRequest == SetCountermeasureLauncherAimspeed.field_r) {
           return GetTabForScores.field_o;
         }
-        if (SetShipTeamAction.field_b == ActiveIconBorderRenderer.field_c) {
+        if (SetShipTeamAction.field_b == ActiveIconBorderRenderer.pendingAccountRequest) {
           return SetCountermeasureLauncherAimarc.field_q;
         }
         if (param0 < 54) {

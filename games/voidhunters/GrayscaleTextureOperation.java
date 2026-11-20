@@ -20,7 +20,7 @@ final class GrayscaleTextureOperation extends TextureOperation {
           if (param1 > -5) {
             GrayscaleTextureOperation.clearSharedReferences((byte) 81);
           }
-          nqa.field_c = !param0 ? true : false;
+          DequeReferenceTracker.field_c = !param0 ? true : false;
           WeaponDefinition.field_a = !param0 ? true : false;
           SetUseTrails.field_o = !param0 ? true : false;
           ComponentBehaviour.field_b = !param0 ? true : false;

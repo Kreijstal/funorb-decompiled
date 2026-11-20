@@ -4,11 +4,11 @@
 final class ActiveIconBorderRenderer implements UiRenderer {
     static int field_b;
     static int[] field_a;
-    static dfa field_c;
+    static AccountRequestPhase pendingAccountRequest;
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
-        field_c = null;
+        pendingAccountRequest = null;
         if (param0 < 113) {
           field_a = (int[]) null;
         }
@@ -54,6 +54,6 @@ final class ActiveIconBorderRenderer implements UiRenderer {
 
     static {
         field_b = 10;
-        field_c = new dfa();
+        pendingAccountRequest = new AccountRequestPhase();
     }
 }

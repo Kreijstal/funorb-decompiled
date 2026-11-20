@@ -172,7 +172,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[142] = LegacyOpenGlTextureCache.field_e;
         var2[180] = ReturnToLobbyText.field_a;
         var2[91] = SetGrapplingHookRopeChangeRate.field_o;
-        var2[123] = dfa.field_a;
+        var2[123] = AccountRequestPhase.field_a;
         var2[205] = Particle.field_m;
         var2[204] = CarouselSlotStateDump.field_i;
         var2[119] = GpuMaterialEffect.field_b;

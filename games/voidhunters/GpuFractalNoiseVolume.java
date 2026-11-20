@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GpuFractalNoiseVolume extends FractalNoiseVolumeGenerator {
-    static qka field_p;
+    static PlayerNameEntryDialog activeNameEntryDialog;
     private byte[] voxels;
     static int[] field_o;
     static String field_q;
@@ -50,10 +50,10 @@ final class GpuFractalNoiseVolume extends FractalNoiseVolumeGenerator {
         field_o = null;
         if (param0 != 2) {
           GpuFractalNoiseVolume.createIndexedSprites((byte) -116);
-          field_p = null;
+          activeNameEntryDialog = null;
           return;
         }
-        field_p = null;
+        activeNameEntryDialog = null;
     }
 
     GpuFractalNoiseVolume() {
@@ -66,7 +66,7 @@ final class GpuFractalNoiseVolume extends FractalNoiseVolumeGenerator {
           this.generate(param3, (byte) -10, param0, param1);
           return this.voxels;
         }
-        field_p = (qka) null;
+        activeNameEntryDialog = (PlayerNameEntryDialog) null;
         this.generate(param3, (byte) -10, param0, param1);
         return this.voxels;
     }

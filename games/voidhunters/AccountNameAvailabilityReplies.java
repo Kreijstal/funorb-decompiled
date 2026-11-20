@@ -22,7 +22,7 @@ final class AccountNameAvailabilityReplies {
           if (param2 <= 34) {
             field_a = -92L;
           }
-          SetShipTeamAction.field_b = SetSniperCannonFireForce.field_o;
+          SetShipTeamAction.field_b = SetSniperCannonFireForce.completedAccountRequest;
           if (param1 == 255) {
             stackIn_12_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
             PrimitiveType.field_a = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_12_0, 1);

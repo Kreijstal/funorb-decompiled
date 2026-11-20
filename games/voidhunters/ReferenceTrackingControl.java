@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mba {
+final class ReferenceTrackingControl {
     static MenuInputState field_a;
     static int field_b;
 
-    final static void a(int param0) {
+    final static void endReferenceTracking(int param0) {
         if (param0 > -107) {
           field_b = 31;
-          GetMissionTerrainNebulaProbability.field_q = false;
+          GetMissionTerrainNebulaProbability.referenceTrackingEnabled = false;
           return;
         }
-        GetMissionTerrainNebulaProbability.field_q = false;
+        GetMissionTerrainNebulaProbability.referenceTrackingEnabled = false;
     }
 
     public static void clearSharedReferences(byte param0) {

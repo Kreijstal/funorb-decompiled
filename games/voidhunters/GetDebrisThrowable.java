@@ -56,11 +56,11 @@ final class GetDebrisThrowable extends ConsoleCommand {
     }
 
     final static AccountRequestResult pollAccountCreationResult(int param0) {
-        if (SetCountermeasureLauncherAimspeed.field_r == ToolkitRasterStateStack.field_d) {
+        if (SetCountermeasureLauncherAimspeed.field_r == ToolkitRasterStateStack.idleAccountRequest) {
           throw new IllegalStateException();
         }
-        if (SetCountermeasureLauncherAimspeed.field_r == SetSniperCannonFireForce.field_o) {
-          SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.field_d;
+        if (SetCountermeasureLauncherAimspeed.field_r == SetSniperCannonFireForce.completedAccountRequest) {
+          SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.idleAccountRequest;
           return GuestPlayText.field_b;
         }
         if (param0 != 10589) {

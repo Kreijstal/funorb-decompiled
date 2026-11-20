@@ -280,20 +280,20 @@ final class ComponentAttachmentPlan {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ActiveIconBorderRenderer.field_c == SetShipTeamAction.field_b) {
+          if (ActiveIconBorderRenderer.pendingAccountRequest == SetShipTeamAction.field_b) {
             return null;
           }
           if (param0) {
             var3 = (CharSequence) null;
             ComponentAttachmentPlan.a((CharSequence) null, true);
           }
-          if (SetSniperCannonFireForce.field_o == SetShipTeamAction.field_b &&
+          if (SetSniperCannonFireForce.completedAccountRequest == SetShipTeamAction.field_b &&
             param1.equals(SetCountermeasureLauncherAimarc.field_q)) {
-            SetShipTeamAction.field_b = ToolkitRasterStateStack.field_d;
+            SetShipTeamAction.field_b = ToolkitRasterStateStack.idleAccountRequest;
             stackIn_11_0 = PrimitiveType.field_a;
             return stackIn_11_0;
           }
-          SetShipTeamAction.field_b = ActiveIconBorderRenderer.field_c;
+          SetShipTeamAction.field_b = ActiveIconBorderRenderer.pendingAccountRequest;
           PrimitiveType.field_a = null;
           SetCountermeasureLauncherAimarc.field_q = param1;
           stackIn_9_0 = null;

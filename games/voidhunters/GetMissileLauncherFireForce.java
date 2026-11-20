@@ -47,10 +47,10 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
               return 29;
             }
           }
-          if (!btb.field_b.loadIndex((byte) -47)) {
+          if (!CommonUiArchiveResources.commonUiArchive.loadIndex((byte) -47)) {
             return 43;
           }
-          if (!btb.field_b.isNamedGroupReady(32171, "commonui")) {
+          if (!CommonUiArchiveResources.commonUiArchive.isNamedGroupReady(32171, "commonui")) {
             return 57;
           }
           if (!GetSalvoUsesAllEnergy.field_o.loadIndex((byte) 124)) {
@@ -66,10 +66,10 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
             return 86;
           }
         } else {
-          if (!btb.field_b.loadIndex((byte) 94)) {
+          if (!CommonUiArchiveResources.commonUiArchive.loadIndex((byte) 94)) {
             return 20;
           }
-          if (!btb.field_b.isNamedGroupReady(32171, "commonui")) {
+          if (!CommonUiArchiveResources.commonUiArchive.isNamedGroupReady(32171, "commonui")) {
             return 40;
           }
           if (!GetSalvoUsesAllEnergy.field_o.loadIndex((byte) -97)) {

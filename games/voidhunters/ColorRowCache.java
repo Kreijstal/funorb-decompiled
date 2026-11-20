@@ -116,7 +116,7 @@ final class ColorRowCache {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (ActiveIconBorderRenderer.field_c == SetShipTeamAction.field_b) {
+          if (ActiveIconBorderRenderer.pendingAccountRequest == SetShipTeamAction.field_b) {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
@@ -128,7 +128,7 @@ final class ColorRowCache {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (ActiveIconBorderRenderer.field_c != SetCountermeasureLauncherAimspeed.field_r) {
+          if (ActiveIconBorderRenderer.pendingAccountRequest != SetCountermeasureLauncherAimspeed.field_r) {
             stackIn_26_0 = -1;
             return stackIn_26_0;
           }

@@ -50,10 +50,10 @@ final class GetMissileLauncherEnergyUsed extends ConsoleCommand {
         if (param0 != 114) {
           return false;
         }
-        if (null == GpuFractalNoiseVolume.field_p) {
+        if (null == GpuFractalNoiseVolume.activeNameEntryDialog) {
           return false;
         }
-        if (!GpuFractalNoiseVolume.field_p.a(false)) {
+        if (!GpuFractalNoiseVolume.activeNameEntryDialog.handleNameKeyEvent(false)) {
           return false;
         }
         return true;

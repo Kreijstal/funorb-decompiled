@@ -239,7 +239,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           EmailAvailabilityCheck.field_c = param1[178];
           Particle.field_x = param1[90];
           Particle.field_g = param1[218];
-          dfa.field_a = param1[123];
+          AccountRequestPhase.field_a = param1[123];
           SetMissilesTopSpeed.field_o = param1[25];
           MatchingFieldValidator.field_k = param1[2];
           SetThrusterAutobalancing.field_r = param1[15];

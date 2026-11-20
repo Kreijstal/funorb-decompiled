@@ -9,14 +9,14 @@ abstract class FloatNoiseSliceGenerator {
     final static void closeTransientMenusAndDialogs(byte param0) {
         if (param0 > 75) {
           TileTextureOperation.closePlayerContextMenu(0);
-          ebb.a((byte) -74);
+          ShipBodyFactoryHolder.closeNameEntryDialog((byte) -74);
           Asteroid.activeReportDialog = null;
           GetUseExtraBackground.closeQuickChatMenu(-1);
           return;
         }
         FloatNoiseSliceGenerator.closeTransientMenusAndDialogs((byte) 48);
         TileTextureOperation.closePlayerContextMenu(0);
-        ebb.a((byte) -74);
+        ShipBodyFactoryHolder.closeNameEntryDialog((byte) -74);
         Asteroid.activeReportDialog = null;
         GetUseExtraBackground.closeQuickChatMenu(-1);
     }

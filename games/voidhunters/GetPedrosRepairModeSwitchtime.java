@@ -50,7 +50,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
             TileTextureOperation.closePlayerContextMenu(0);
             param6 = false;
           }
-          PrimitiveType.a(param4, param6, 19717);
+          PrimitiveType.updateSocialNameDialog(param4, param6, 19717);
           GpuTransform3D.a((byte) -127, param6, param5);
           param6 = false;
         }
@@ -105,11 +105,11 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (null != btb.field_d) {
-              for (var1_int = 0; var1_int < btb.field_d.length; var1_int++) {
-                if (null != btb.field_d[var1_int]) {
+            if (null != CommonUiArchiveResources.cacheIndexFiles) {
+              for (var1_int = 0; var1_int < CommonUiArchiveResources.cacheIndexFiles.length; var1_int++) {
+                if (null != CommonUiArchiveResources.cacheIndexFiles[var1_int]) {
                   try {
-                    btb.field_d[var1_int].close(true);
+                    CommonUiArchiveResources.cacheIndexFiles[var1_int].close(true);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

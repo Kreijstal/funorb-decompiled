@@ -6,7 +6,7 @@ final class ToolkitRasterStateStack {
     private int[] clipBounds;
     private GraphicsToolkit toolkit;
     private ToolkitSprite target;
-    static dfa field_d;
+    static AccountRequestPhase idleAccountRequest;
     private ToolkitRasterState freeFrames;
     static String field_b;
 
@@ -18,7 +18,7 @@ final class ToolkitRasterStateStack {
           }
           this.toolkit.setRenderTarget(param0, param2);
           if (param1 != 4) {
-            field_d = (dfa) null;
+            idleAccountRequest = (AccountRequestPhase) null;
           }
           this.target = param0;
         } catch (RuntimeException runtimeException) {
@@ -140,13 +140,13 @@ final class ToolkitRasterStateStack {
 
     public static void clearSharedReferences(int param0) {
         if (param0 <= 37) {
-          field_d = (dfa) null;
+          idleAccountRequest = (AccountRequestPhase) null;
           field_b = null;
-          field_d = null;
+          idleAccountRequest = null;
           return;
         }
         field_b = null;
-        field_d = null;
+        idleAccountRequest = null;
     }
 
     ToolkitRasterStateStack(GraphicsToolkit param0) {
@@ -160,7 +160,7 @@ final class ToolkitRasterStateStack {
     }
 
     static {
-        field_d = new dfa();
+        idleAccountRequest = new AccountRequestPhase();
         field_b = "More missile defence";
     }
 }

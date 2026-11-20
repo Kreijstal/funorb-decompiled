@@ -58,11 +58,11 @@ final class SetMassDriverFireForce extends ConsoleCommand {
           }
           return WorldSpriteTiler.loadingTextMessage;
         }
-        if (!btb.field_b.loadIndex((byte) 115)) {
+        if (!CommonUiArchiveResources.commonUiArchive.loadIndex((byte) 115)) {
           return SetTorpedoProjectileOndamageParticles.field_o;
         }
-        if (!btb.field_b.isNamedGroupReady(32171, "commonui")) {
-          return ConstantMonochromeTextureOperation.field_k + " - " + btb.field_b.getNamedGroupLoadPercent("commonui", -2118) + "%";
+        if (!CommonUiArchiveResources.commonUiArchive.isNamedGroupReady(32171, "commonui")) {
+          return ConstantMonochromeTextureOperation.field_k + " - " + CommonUiArchiveResources.commonUiArchive.getNamedGroupLoadPercent("commonui", -2118) + "%";
         }
         if (!GetSalvoUsesAllEnergy.field_o.loadIndex((byte) 122)) {
           return TorpedoWeaponDefinition.field_b;

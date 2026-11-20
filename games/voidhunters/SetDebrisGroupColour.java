@@ -207,7 +207,7 @@ final class SetDebrisGroupColour extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          btb.field_a = arguments[0].booleanValue(false);
+          CommonUiArchiveResources.field_a = arguments[0].booleanValue(false);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

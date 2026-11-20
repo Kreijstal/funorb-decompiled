@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qka extends Widget {
-    private StringBuilder field_yb;
-    private Widget field_vb;
-    private int field_wb;
-    private Widget field_xb;
+final class PlayerNameEntryDialog extends Widget {
+    private StringBuilder inputBuffer;
+    private Widget inputWidget;
+    private int result;
+    private Widget promptWidget;
 
-    final boolean a(boolean param0) {
+    final boolean handleNameKeyEvent(boolean param0) {
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
         StringBuilder discarded$5 = null;
@@ -20,44 +20,44 @@ final class qka extends Widget {
         StringBuilder discarded$4 = null;
         int var2;
         int var2Lifetime1;
-        if (this.field_wb != 0) {
+        if (this.result != 0) {
           return false;
         }
         if (SetBombletSprayProjectileDamage.field_o != 85) {
-          if (this.field_yb.length() < 12) {
+          if (this.inputBuffer.length() < 12) {
             var2 = Character.toLowerCase(SetClientSideDragging.field_r);
             if (var2 == 32) {
               var2 = 95;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var2 == 95) {
-              if (0 >= this.field_yb.length()) {
+              if (0 >= this.inputBuffer.length()) {
                 if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2, 0)) {
-                  discarded$6 = this.field_yb.append((char) var2);
+                  discarded$6 = this.inputBuffer.append((char) var2);
                 } else {
                   if (GetRepairModeCooldown.a((char) var2, true)) {
-                    discarded$7 = this.field_yb.append((char) var2);
+                    discarded$7 = this.inputBuffer.append((char) var2);
                   }
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                discarded$5 = this.field_yb.append((char) var2);
+                discarded$5 = this.inputBuffer.append((char) var2);
               }
             }
             if (decompiledFrameRemainder0) {
               if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2, 0)) {
-                discarded$8 = this.field_yb.append((char) var2);
+                discarded$8 = this.inputBuffer.append((char) var2);
                 if (SetBombletSprayProjectileDamage.field_o == 84) {
-                  if (this.field_yb.length() <= 0) {
-                    this.field_wb = 1;
+                  if (this.inputBuffer.length() <= 0) {
+                    this.result = 1;
                   } else {
-                    this.text = this.field_yb.toString();
-                    this.field_wb = 2;
+                    this.text = this.inputBuffer.toString();
+                    this.result = 2;
                   }
                 }
                 if (SetBombletSprayProjectileDamage.field_o == 13) {
-                  this.field_wb = 1;
+                  this.result = 1;
                 }
                 if (param0) {
                   return false;
@@ -65,17 +65,17 @@ final class qka extends Widget {
                 return true;
               }
               if (GetRepairModeCooldown.a((char) var2, true)) {
-                discarded$9 = this.field_yb.append((char) var2);
+                discarded$9 = this.inputBuffer.append((char) var2);
                 if (SetBombletSprayProjectileDamage.field_o == 84) {
-                  if (this.field_yb.length() <= 0) {
-                    this.field_wb = 1;
+                  if (this.inputBuffer.length() <= 0) {
+                    this.result = 1;
                   } else {
-                    this.text = this.field_yb.toString();
-                    this.field_wb = 2;
+                    this.text = this.inputBuffer.toString();
+                    this.result = 2;
                   }
                 }
                 if (SetBombletSprayProjectileDamage.field_o == 13) {
-                  this.field_wb = 1;
+                  this.result = 1;
                 }
                 if (param0) {
                   return false;
@@ -85,35 +85,35 @@ final class qka extends Widget {
             }
           }
           if (SetBombletSprayProjectileDamage.field_o == 84) {
-            if (this.field_yb.length() <= 0) {
-              this.field_wb = 1;
+            if (this.inputBuffer.length() <= 0) {
+              this.result = 1;
             } else {
-              this.text = this.field_yb.toString();
-              this.field_wb = 2;
+              this.text = this.inputBuffer.toString();
+              this.result = 2;
             }
           }
           if (SetBombletSprayProjectileDamage.field_o == 13) {
-            this.field_wb = 1;
+            this.result = 1;
           }
           if (param0) {
             return false;
           }
           return true;
         }
-        if (this.field_yb.length() > 0) {
-          ServerTickFactory.resizeStringBuilder(this.field_yb.length() - 1, param0, this.field_yb, ' ');
+        if (this.inputBuffer.length() > 0) {
+          ServerTickFactory.resizeStringBuilder(this.inputBuffer.length() - 1, param0, this.inputBuffer, ' ');
         }
-        if (this.field_yb.length() >= 12) {
+        if (this.inputBuffer.length() >= 12) {
           if (SetBombletSprayProjectileDamage.field_o == 84) {
-            if (this.field_yb.length() <= 0) {
-              this.field_wb = 1;
+            if (this.inputBuffer.length() <= 0) {
+              this.result = 1;
             } else {
-              this.text = this.field_yb.toString();
-              this.field_wb = 2;
+              this.text = this.inputBuffer.toString();
+              this.result = 2;
             }
           }
           if (SetBombletSprayProjectileDamage.field_o == 13) {
-            this.field_wb = 1;
+            this.result = 1;
           }
           if (!param0) {
             return true;
@@ -125,44 +125,44 @@ final class qka extends Widget {
           var2Lifetime1 = 95;
         }
         if (var2Lifetime1 == 95) {
-          if (0 >= this.field_yb.length()) {
+          if (0 >= this.inputBuffer.length()) {
             if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2Lifetime1, 0)) {
-              discarded$1 = this.field_yb.append((char) var2Lifetime1);
+              discarded$1 = this.inputBuffer.append((char) var2Lifetime1);
             } else {
               if (GetRepairModeCooldown.a((char) var2Lifetime1, true)) {
-                discarded$2 = this.field_yb.append((char) var2Lifetime1);
+                discarded$2 = this.inputBuffer.append((char) var2Lifetime1);
               }
             }
             if (SetBombletSprayProjectileDamage.field_o == 84) {
-              if (this.field_yb.length() <= 0) {
-                this.field_wb = 1;
+              if (this.inputBuffer.length() <= 0) {
+                this.result = 1;
               } else {
-                this.text = this.field_yb.toString();
-                this.field_wb = 2;
+                this.text = this.inputBuffer.toString();
+                this.result = 2;
               }
             }
             if (SetBombletSprayProjectileDamage.field_o == 13) {
-              this.field_wb = 1;
+              this.result = 1;
             }
             if (param0) {
               return false;
             }
             return true;
           }
-          discarded$0 = this.field_yb.append((char) var2Lifetime1);
+          discarded$0 = this.inputBuffer.append((char) var2Lifetime1);
         }
         if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2Lifetime1, 0)) {
-          discarded$3 = this.field_yb.append((char) var2Lifetime1);
+          discarded$3 = this.inputBuffer.append((char) var2Lifetime1);
           if (SetBombletSprayProjectileDamage.field_o == 84) {
-            if (this.field_yb.length() <= 0) {
-              this.field_wb = 1;
+            if (this.inputBuffer.length() <= 0) {
+              this.result = 1;
             } else {
-              this.text = this.field_yb.toString();
-              this.field_wb = 2;
+              this.text = this.inputBuffer.toString();
+              this.result = 2;
             }
           }
           if (SetBombletSprayProjectileDamage.field_o == 13) {
-            this.field_wb = 1;
+            this.result = 1;
           }
           if (!param0) {
             return true;
@@ -171,32 +171,32 @@ final class qka extends Widget {
         }
         if (!GetRepairModeCooldown.a((char) var2Lifetime1, true)) {
           if (SetBombletSprayProjectileDamage.field_o == 84) {
-            if (this.field_yb.length() <= 0) {
-              this.field_wb = 1;
+            if (this.inputBuffer.length() <= 0) {
+              this.result = 1;
             } else {
-              this.text = this.field_yb.toString();
-              this.field_wb = 2;
+              this.text = this.inputBuffer.toString();
+              this.result = 2;
             }
           }
           if (SetBombletSprayProjectileDamage.field_o == 13) {
-            this.field_wb = 1;
+            this.result = 1;
           }
           if (!param0) {
             return true;
           }
           return false;
         }
-        discarded$4 = this.field_yb.append((char) var2Lifetime1);
+        discarded$4 = this.inputBuffer.append((char) var2Lifetime1);
         if (SetBombletSprayProjectileDamage.field_o == 84) {
-          if (this.field_yb.length() <= 0) {
-            this.field_wb = 1;
+          if (this.inputBuffer.length() <= 0) {
+            this.result = 1;
           } else {
-            this.text = this.field_yb.toString();
-            this.field_wb = 2;
+            this.text = this.inputBuffer.toString();
+            this.result = 2;
           }
         }
         if (SetBombletSprayProjectileDamage.field_o == 13) {
-          this.field_wb = 1;
+          this.result = 1;
         }
         if (!param0) {
           return true;
@@ -204,7 +204,7 @@ final class qka extends Widget {
         return false;
     }
 
-    final int a(int param0, boolean param1) {
+    final int updateAndGetResult(int param0, boolean param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -212,50 +212,50 @@ final class qka extends Widget {
         int var4;
         var4 = VoidHunters.field_G;
         if (param0 != 0) {
-          this.field_vb = (Widget) null;
+          this.inputWidget = (Widget) null;
         }
         this.updateInput(param1, 1332);
         if (!param1) {
-          this.field_vb.text = this.field_yb.toString();
+          this.inputWidget.text = this.inputBuffer.toString();
           if (param1 &&
             SetDebrisPartitioned.field_o != 0 &&
             this.field_o == 0) {
-            this.field_wb = 1;
+            this.result = 1;
           }
-          return this.field_wb;
+          return this.result;
         }
         while (true) {
           if (!UiAngleDial.pollKeyEvent(127)) {
-            this.field_vb.text = this.field_yb.toString();
+            this.inputWidget.text = this.inputBuffer.toString();
             if (!param1) {
-              return this.field_wb;
+              return this.result;
             }
             if (SetDebrisPartitioned.field_o == 0) {
-              return this.field_wb;
+              return this.result;
             }
             if (this.field_o != 0) {
-              return this.field_wb;
+              return this.result;
             }
-            this.field_wb = 1;
-            return this.field_wb;
+            this.result = 1;
+            return this.result;
           }
           if (SetBombletSprayProjectileDamage.field_o == 85 &&
-            this.field_yb.length() > 0) {
-            ServerTickFactory.resizeStringBuilder(-1 + this.field_yb.length(), false, this.field_yb, ' ');
+            this.inputBuffer.length() > 0) {
+            ServerTickFactory.resizeStringBuilder(-1 + this.inputBuffer.length(), false, this.inputBuffer, ' ');
           }
-          if (MissionBuilderFactory.a(SetClientSideDragging.field_r, 109, (CharSequence) ((Object) this.field_yb))) {
-            discarded$0 = this.field_yb.append(SetClientSideDragging.field_r);
+          if (MissionBuilderFactory.a(SetClientSideDragging.field_r, 109, (CharSequence) ((Object) this.inputBuffer))) {
+            discarded$0 = this.inputBuffer.append(SetClientSideDragging.field_r);
           } else {
-            if (this.field_yb.length() == 0 &&
+            if (this.inputBuffer.length() == 0 &&
               SetClientSideDragging.field_r == 91) {
-              discarded$1 = this.field_yb.append(SetClientSideDragging.field_r);
+              discarded$1 = this.inputBuffer.append(SetClientSideDragging.field_r);
             } else {
-              if (this.field_yb.length() == 1 &&
+              if (this.inputBuffer.length() == 1 &&
                 35 == SetClientSideDragging.field_r) {
-                discarded$2 = this.field_yb.append(SetClientSideDragging.field_r);
+                discarded$2 = this.inputBuffer.append(SetClientSideDragging.field_r);
               } else {
                 if (93 == SetClientSideDragging.field_r) {
-                  discarded$3 = this.field_yb.append(SetClientSideDragging.field_r);
+                  discarded$3 = this.inputBuffer.append(SetClientSideDragging.field_r);
                 }
               }
             }
@@ -268,14 +268,14 @@ final class qka extends Widget {
           }
           break;
         }
-        if (0 >= this.field_yb.length()) {
+        if (0 >= this.inputBuffer.length()) {
           return 1;
         }
-        this.text = this.field_yb.toString();
+        this.text = this.inputBuffer.toString();
         return 2;
     }
 
-    qka(int param0, int param1, int param2, int param3, String param4, Widget param5, Widget param6, Widget param7) {
+    PlayerNameEntryDialog(int param0, int param1, int param2, int param3, String param4, Widget param5, Widget param6, Widget param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -293,18 +293,18 @@ final class qka extends Widget {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        this.field_wb = 0;
+        this.result = 0;
         try {
-          this.field_xb = new Widget(0L, param6, param4);
-          this.addChild(-561, this.field_xb);
-          this.field_vb = new Widget(0L, param7);
-          this.field_vb.field_Y = 16764006;
-          this.addChild(-561, this.field_vb);
-          this.field_vb.field_s = "|";
-          this.field_yb = new StringBuilder(12);
-          var9_int = this.field_xb.getPreferredWidth(57);
-          this.field_xb.setBounds(5, 119, var9_int, 3, DialogMessagePanel.field_w);
-          this.field_vb.setBounds(5, 43, var9_int, 3 + DialogMessagePanel.field_w, DialogMessagePanel.field_w);
+          this.promptWidget = new Widget(0L, param6, param4);
+          this.addChild(-561, this.promptWidget);
+          this.inputWidget = new Widget(0L, param7);
+          this.inputWidget.field_Y = 16764006;
+          this.addChild(-561, this.inputWidget);
+          this.inputWidget.field_s = "|";
+          this.inputBuffer = new StringBuilder(12);
+          var9_int = this.promptWidget.getPreferredWidth(57);
+          this.promptWidget.setBounds(5, 119, var9_int, 3, DialogMessagePanel.field_w);
+          this.inputWidget.setBounds(5, 43, var9_int, 3 + DialogMessagePanel.field_w, DialogMessagePanel.field_w);
           var10 = 10 + var9_int;
           var11 = 3 + 2 * DialogMessagePanel.field_w + 3;
           var12 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var10);

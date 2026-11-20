@@ -90,7 +90,7 @@ final class ConsoleValue {
         if (null == SetFogOfWarOn.field_o) {
           SetFogOfWarOn.field_o = new Object[]{};
         }
-        GetMissionTerrainNebulaProbability.field_q = true;
+        GetMissionTerrainNebulaProbability.referenceTrackingEnabled = true;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {

@@ -5,7 +5,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
     static int field_p;
     static int field_o;
     static int field_r;
-    static boolean field_q;
+    static boolean referenceTrackingEnabled;
 
     GetMissionTerrainNebulaProbability(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -29,7 +29,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
             SoftwareRasterizer2D.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           if (param0 <= 54) {
-            field_q = false;
+            referenceTrackingEnabled = false;
           }
           GetWorldWidthUpshift.field_p.setRasterTarget();
           var1.drawHalfSize(0, 0);
@@ -79,6 +79,6 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
     static {
         field_p = 1280;
         field_r = 128;
-        field_q = false;
+        referenceTrackingEnabled = false;
     }
 }

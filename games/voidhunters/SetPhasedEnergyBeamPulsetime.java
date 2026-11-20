@@ -38,7 +38,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             return stackIn_11_0;
           }
           if (GetTorqueDownshift.a(param0, (byte) -23)) {
-            stackIn_15_0 = SetReverbGain.a(dfa.field_b, new String[]{param0}, 73);
+            stackIn_15_0 = SetReverbGain.a(AccountRequestPhase.field_b, new String[]{param0}, 73);
             return stackIn_15_0;
           }
           if (GetBoostersCooldown.field_p >= 100 &&

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSniperCannonFireForce extends ConsoleCommand {
-    static dfa field_o;
+    static AccountRequestPhase completedAccountRequest;
     static TextureFormat field_p;
     static int field_q;
 
@@ -42,14 +42,14 @@ final class SetSniperCannonFireForce extends ConsoleCommand {
         field_p = null;
         if (param0 > -103) {
           SetSniperCannonFireForce.clearSharedReferences(-5);
-          field_o = null;
+          completedAccountRequest = null;
           return;
         }
-        field_o = null;
+        completedAccountRequest = null;
     }
 
     static {
-        field_o = new dfa();
+        completedAccountRequest = new AccountRequestPhase();
         field_q = 256;
         field_p = new TextureFormat(1);
     }

@@ -376,7 +376,7 @@ final class GameMenuScreen {
           param2 = this.inputState.selectedIndex;
         }
         this.inputState.resetSelection(param0, -1, param2, this.hitTestItem(OpenGlFaceAttachment.field_b, PlayerGameData.field_b, param1 ^ 7060));
-        mba.field_b = SetMinimapWidth.field_o;
+        ReferenceTrackingControl.field_b = SetMinimapWidth.field_o;
     }
 
     final int hitTestItem(int param0, int param1, int param2) {
@@ -822,9 +822,9 @@ final class GameMenuScreen {
                             }
                             if (var6 != 0) {
                               if (!this.inputState.isMouseButtonHeld((byte) 119) ||
-                                !(mba.field_b >= SetMinimapWidth.field_o)) {
+                                !(ReferenceTrackingControl.field_b >= SetMinimapWidth.field_o)) {
                                 GetNebulaFadesOutWhenClose.a(-124, PendingScoreboardRequest.soundEffects[1]);
-                                mba.field_b = 20 + SetMinimapWidth.field_o;
+                                ReferenceTrackingControl.field_b = 20 + SetMinimapWidth.field_o;
                               }
                               if (UiDraggableContainer.field_E) {
                                 MissionBuilder.setIntegerPreference((byte) 3, "fx_volume", RidgedNoiseVolumeGenerator.soundEffectVolume);

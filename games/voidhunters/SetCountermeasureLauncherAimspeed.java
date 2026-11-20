@@ -4,7 +4,7 @@
 final class SetCountermeasureLauncherAimspeed extends ConsoleCommand {
     static float[] field_o;
     static int field_p;
-    static dfa field_r;
+    static AccountRequestPhase field_r;
     static int field_q;
 
     final static boolean a(SerializableGameState[] param0, boolean param1, int param2, SerializableGameState[] param3, int param4) {

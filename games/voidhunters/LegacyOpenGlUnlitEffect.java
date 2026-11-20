@@ -55,7 +55,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (SetCountermeasureLauncherAimspeed.field_r != ToolkitRasterStateStack.field_d) {
+          if (SetCountermeasureLauncherAimspeed.field_r != ToolkitRasterStateStack.idleAccountRequest) {
             return false;
           }
           var9 = new AccountCreationDialog(GetLagStandardDeviationIn.field_r, param2);
@@ -64,7 +64,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
           if (SetAutozoomAmountMultiply.f(0)) {
             var9.showAccountIneligible(false);
           } else {
-            SetCountermeasureLauncherAimspeed.field_r = ActiveIconBorderRenderer.field_c;
+            SetCountermeasureLauncherAimspeed.field_r = ActiveIconBorderRenderer.pendingAccountRequest;
             SetResourceNodeCaptureTime.field_p = param6;
             GrapplingHook.field_x = param0;
             SetDebrisCarryOverPercentage.field_p = param1;

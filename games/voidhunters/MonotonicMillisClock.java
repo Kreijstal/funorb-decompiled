@@ -37,7 +37,7 @@ final class MonotonicMillisClock {
         RuntimeException var4 = null;
         var5 = VoidHunters.field_G;
         try {
-          SetCountermeasureLauncherAimspeed.field_r = SetSniperCannonFireForce.field_o;
+          SetCountermeasureLauncherAimspeed.field_r = SetSniperCannonFireForce.completedAccountRequest;
           if (param0 == 255) {
             stackIn_11_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
             GuestPlayText.field_b = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_11_0, param1 ^ -19341);

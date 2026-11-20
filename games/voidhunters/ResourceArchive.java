@@ -490,9 +490,9 @@ final class ResourceArchive {
                   }
                 }
                 if (param2) {
-                  if (nqa.field_b != null) {
-                    if (nqa.field_b[var7] != null) {
-                      stackIn_202_0 = (nqa.field_b[var7][var9]) ? 1 : 0;
+                  if (DequeReferenceTracker.field_b != null) {
+                    if (DequeReferenceTracker.field_b[var7] != null) {
+                      stackIn_202_0 = (DequeReferenceTracker.field_b[var7][var9]) ? 1 : 0;
                     } else {
                       stackIn_202_0 = 0;
                     }

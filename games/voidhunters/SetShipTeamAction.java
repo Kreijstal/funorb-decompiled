@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetShipTeamAction extends MissionAction implements DiffableState, BodyIdReferences {
-    static dfa field_b;
+    static AccountRequestPhase field_b;
     static String field_a;
     private int targetBody;
     private int team;
@@ -167,7 +167,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, Bo
         try {
           super.writeState(param0, -119);
           if (param1 > -109) {
-            field_b = (dfa) null;
+            field_b = (AccountRequestPhase) null;
           }
           param0.writeBits(-632, this.targetBody, 32);
           param0.writeBits(-632, this.team, 32);

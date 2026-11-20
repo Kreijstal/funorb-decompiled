@@ -191,7 +191,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[16] = ModalPanel.field_y;
           GetGrapplingHookSpringConstant.specialOrderLabels[5] = BoosterOrderText.fireBoostersText;
           GetGrapplingHookSpringConstant.specialOrderLabels[24] = MissionState.field_c;
-          GetGrapplingHookSpringConstant.specialOrderLabels[1] = dfa.field_c;
+          GetGrapplingHookSpringConstant.specialOrderLabels[1] = AccountRequestPhase.field_c;
           GetGrapplingHookSpringConstant.specialOrderLabels[19] = HotspotTextWidget.field_G;
           GetGrapplingHookSpringConstant.specialOrderLabels[57] = ImageProducerRasterBuffer.field_i;
           GetGrapplingHookSpringConstant.specialOrderLabels[26] = SetShipPersistence.field_p;

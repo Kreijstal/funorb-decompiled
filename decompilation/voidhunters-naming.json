@@ -1500,6 +1500,14 @@
       "renamedSymbol": "C:GetSalvoDamageMultiplier"
     },
     {
+      "symbol": "C:btb",
+      "originalName": "btb",
+      "to": "CommonUiArchiveResources",
+      "evidence": "Full static class and archive/cache consumers reviewed:commonui resource archive plus lazily wrapped cache-index BufferedFiles and game-started refusal label. Preserve original aliases,close behavior and boolean flag;no allocations found.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:CommonUiArchiveResources"
+    },
+    {
       "symbol": "C:bu",
       "originalName": "bu",
       "to": "OpenGlEnvironmentMapSource",
@@ -2204,6 +2212,14 @@
       "renamedSymbol": "C:SetThrusterBindingMoveAndTurnHasOppositeMove"
     },
     {
+      "symbol": "C:dfa",
+      "originalName": "dfa",
+      "to": "AccountRequestPhase",
+      "evidence": "Full token class and all three identity allocations reviewed. Account creation/name availability setup,pending getters,reply handlers and result poll establish idle,pending,complete phases shared by both request flows. Preserve throwing toString and unrelated labels/scalar.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountRequestPhase"
+    },
+    {
       "symbol": "C:dfb",
       "originalName": "dfb",
       "to": "GetAllowShipSaving",
@@ -2634,6 +2650,14 @@
       "evidence": "Developer console command registered by name \"SetUseNiceTrails\" in ConsoleCommandRegistry.",
       "confidence": "reviewed",
       "renamedSymbol": "C:SetUseNiceTrails"
+    },
+    {
+      "symbol": "C:ebb",
+      "originalName": "ebb",
+      "to": "ShipBodyFactoryHolder",
+      "evidence": "Full static class reviewed:ShipBodyFactory singleton plus guarded name-entry-dialog dismissal and recursive cleanup. Full dialog/input consumers reviewed;no holder allocations found.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ShipBodyFactoryHolder"
     },
     {
       "symbol": "C:ec",
@@ -6804,6 +6828,14 @@
       "renamedSymbol": "C:FloatPacketBuffer"
     },
     {
+      "symbol": "C:mba",
+      "originalName": "mba",
+      "to": "ReferenceTrackingControl",
+      "evidence": "Full static class reviewed:helper ends tracking by clearing same flag set by ConsoleValue.beginReferenceTracking and checked by duplicate-reference helpers. Unrelated MenuInputState(1),counter and guards retained;no allocations found.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ReferenceTrackingControl"
+    },
+    {
       "symbol": "C:mbb",
       "originalName": "mbb",
       "to": "SetShipTeamActionFactory",
@@ -7666,6 +7698,14 @@
       "evidence": "Developer console command registered by name \"GetMissilesTopSpeed\" in ConsoleCommandRegistry.",
       "confidence": "reviewed",
       "renamedSymbol": "C:GetMissilesTopSpeed"
+    },
+    {
+      "symbol": "C:nqa",
+      "originalName": "nqa",
+      "to": "DequeReferenceTracker",
+      "evidence": "Full static class and reference-tracking flag consumers reviewed:scan IntrusiveDeque and return first node rejected by VoidHunters.checkDuplicateReference. Unrelated scalar/boolean matrix fields and cleanup guard retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DequeReferenceTracker"
     },
     {
       "symbol": "C:nr",
@@ -9074,6 +9114,14 @@
       "evidence": "Developer console command registered by name \"SetAngularVelocitySustainMax\" in ConsoleCommandRegistry.",
       "confidence": "reviewed",
       "renamedSymbol": "C:SetAngularVelocitySustainMax"
+    },
+    {
+      "symbol": "C:qka",
+      "originalName": "qka",
+      "to": "PlayerNameEntryDialog",
+      "evidence": "Complete class including constructor and both key/update bodies reviewed. Popup player-name input used by friend/ignore add/remove requests;supports original bracket special input and result0/1/2. Preserve duplicated key logic,raw text,cursor/layout and cancellation paths.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PlayerNameEntryDialog"
     },
     {
       "symbol": "C:qkb",
@@ -13940,6 +13988,30 @@
       "renamedSymbol": "F:GetSalvoDamageMultiplier.emailCredentialType:LLoginCredentialType;"
     },
     {
+      "symbol": "F:btb.field_b:Lasb;",
+      "originalName": "field_b",
+      "to": "commonUiArchive",
+      "evidence": "Original resource archive used to load commonui group;existing global aliases retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:CommonUiArchiveResources.commonUiArchive:LResourceArchive;"
+    },
+    {
+      "symbol": "F:btb.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "to": "gameAlreadyStartedText",
+      "evidence": "Original <%0> cannot join; the game has started refusal label.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:CommonUiArchiveResources.gameAlreadyStartedText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:btb.field_d:[Lgdb;",
+      "originalName": "field_d",
+      "to": "cacheIndexFiles",
+      "evidence": "Original lazily allocated BufferedFile wrappers around cache-index files.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:CommonUiArchiveResources.cacheIndexFiles:[LBufferedFile;"
+    },
+    {
       "symbol": "F:bv.field_c:I",
       "originalName": "field_c",
       "to": "completionFadeTime",
@@ -15852,6 +15924,14 @@
       "renamedSymbol": "F:PlayerVote.option:I"
     },
     {
+      "symbol": "F:dw.field_c:Ldfa;",
+      "originalName": "field_c",
+      "to": "pendingAccountRequest",
+      "evidence": "Original token selected when account creation starts;current-credential getters and result checks recognize it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ActiveIconBorderRenderer.pendingAccountRequest:LAccountRequestPhase;"
+    },
+    {
       "symbol": "F:dxVertexLayout.field_b:Ljagdx/IDirect3DVertexDeclaration;",
       "originalName": "field_b",
       "to": "declaration",
@@ -16066,6 +16146,14 @@
       "evidence": "Microsoft-JVM DirectDraw helper used for listing display modes and entering/exiting fullscreen.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlatformService.microsoftFullscreenHelper:LMicrosoftJvmFullscreenController;"
+    },
+    {
+      "symbol": "F:ebb.field_a:Ldja;",
+      "originalName": "field_a",
+      "to": "factory",
+      "evidence": "Original ShipBodyFactory singleton.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ShipBodyFactoryHolder.factory:LGameStateFactory;"
     },
     {
       "symbol": "F:eca.field_c:Luf;",
@@ -18274,6 +18362,14 @@
       "evidence": "Original six-language Waiting for text table.",
       "confidence": "reviewed",
       "renamedSymbol": "F:GpuFaceAttachmentState.waitingForTextMessages:[Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:gka.field_o:Ldfa;",
+      "originalName": "field_o",
+      "to": "completedAccountRequest",
+      "evidence": "Original token assigned by creation/name-availability reply handlers and consumed by result poll.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SetSniperCannonFireForce.completedAccountRequest:LAccountRequestPhase;"
     },
     {
       "symbol": "F:gl.field_a:I",
@@ -21052,6 +21148,14 @@
       "renamedSymbol": "F:ToolkitRasterStateStack.target:LToolkitSprite;"
     },
     {
+      "symbol": "F:kla.field_d:Ldfa;",
+      "originalName": "field_d",
+      "to": "idleAccountRequest",
+      "evidence": "Original token reset during account UI setup and after consumed completed result;starting a request requires this identity.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ToolkitRasterStateStack.idleAccountRequest:LAccountRequestPhase;"
+    },
+    {
       "symbol": "F:kla.field_e:Lsja;",
       "originalName": "field_e",
       "to": "frames",
@@ -22058,6 +22162,14 @@
       "evidence": "The state-diff method prints \"targetBody has changed\" for this field.",
       "confidence": "reviewed",
       "renamedSymbol": "F:SetShipTeamAction.targetBody:I"
+    },
+    {
+      "symbol": "F:ls.field_q:Z",
+      "originalName": "field_q",
+      "to": "referenceTrackingEnabled",
+      "evidence": "Original flag enabled by beginReferenceTracking and checked by duplicate-reference helpers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GetMissionTerrainNebulaProbability.referenceTrackingEnabled:Z"
     },
     {
       "symbol": "F:lsa.field_e:Lllb;",
@@ -24548,6 +24660,14 @@
       "renamedSymbol": "F:GpuFractalNoiseVolume.voxels:[B"
     },
     {
+      "symbol": "F:ola.field_p:Lqka;",
+      "originalName": "field_p",
+      "to": "activeNameEntryDialog",
+      "evidence": "Original active player-name popup consumed by social add/remove actions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GpuFractalNoiseVolume.activeNameEntryDialog:LPlayerNameEntryDialog;"
+    },
+    {
       "symbol": "F:olb.field_i:[I",
       "originalName": "field_i",
       "to": "targetColor",
@@ -26970,6 +27090,38 @@
       "evidence": "The state-diff method prints \"targetLock has changed\" for this field.",
       "confidence": "reviewed",
       "renamedSymbol": "F:WeaponBehaviour.targetLock:LTargetLock;"
+    },
+    {
+      "symbol": "F:qka.field_vb:Lllb;",
+      "originalName": "field_vb",
+      "to": "inputWidget",
+      "evidence": "Original editable text/cursor child widget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerNameEntryDialog.inputWidget:LWidget;"
+    },
+    {
+      "symbol": "F:qka.field_wb:I",
+      "originalName": "field_wb",
+      "to": "result",
+      "evidence": "Original stored result0editing,1cancelled,2accepted;some immediate returns intentionally do not update it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerNameEntryDialog.result:I"
+    },
+    {
+      "symbol": "F:qka.field_xb:Lllb;",
+      "originalName": "field_xb",
+      "to": "promptWidget",
+      "evidence": "Original prompt label child widget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerNameEntryDialog.promptWidget:LWidget;"
+    },
+    {
+      "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+      "originalName": "field_yb",
+      "to": "inputBuffer",
+      "evidence": "Original mutable player-name text buffer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerNameEntryDialog.inputBuffer:Ljava/lang/StringBuilder;"
     },
     {
       "symbol": "F:qkb.field_h:Lij;",
@@ -38081,7 +38233,7 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_b, field_c, field_d; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:btb.clearSharedReferences(B)V"
+      "renamedSymbol": "M:CommonUiArchiveResources.clearSharedReferences(B)V"
     },
     {
       "symbol": "M:bu.a(B)Lrtb;",
@@ -40705,7 +40857,7 @@
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_b, field_c. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:dfa.clearSharedReferences(B)V"
+      "renamedSymbol": "M:AccountRequestPhase.clearSharedReferences(B)V"
     },
     {
       "symbol": "M:dfb.a(I)V",
@@ -42780,12 +42932,20 @@
       "renamedSymbol": "M:SetUseNiceTrails.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:ebb.a(B)V",
+      "originalName": "a",
+      "to": "closeNameEntryDialog",
+      "evidence": "Full body plus FloatNoiseSliceGenerator.closeTransientMenusAndDialogs and PrimitiveType dialog consumer reviewed:clear original active player-name dialog reference;wrong guard also clears singleton factory.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ShipBodyFactoryHolder.closeNameEntryDialog(B)V"
+    },
+    {
       "symbol": "M:ebb.a(I)V",
       "originalName": "a",
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_a. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ebb.clearSharedReferences(I)V"
+      "renamedSymbol": "M:ShipBodyFactoryHolder.clearSharedReferences(I)V"
     },
     {
       "symbol": "M:ec.a([Lnc;I)Lnc;",
@@ -55172,6 +55332,14 @@
       "renamedSymbol": "M:PrimitiveType.clearSharedReferences(B)V"
     },
     {
+      "symbol": "M:jra.a(IZI)V",
+      "originalName": "a",
+      "to": "updateSocialNameDialog",
+      "evidence": "Full body reviewed:poll dialog result,normalize ordinary names but retain bracket forms,dispatch original friend/ignore request by mode,append errors to chat and close completed dialog. Preserve ignored temporaries,forwarded arguments and recursive badguard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PrimitiveType.updateSocialNameDialog(IZI)V"
+    },
+    {
       "symbol": "M:jrb.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -59729,7 +59897,15 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_a; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:mba.clearSharedReferences(B)V"
+      "renamedSymbol": "M:ReferenceTrackingControl.clearSharedReferences(B)V"
+    },
+    {
+      "symbol": "M:mba.a(I)V",
+      "originalName": "a",
+      "to": "endReferenceTracking",
+      "evidence": "Full body plus ConsoleValue.beginReferenceTracking and duplicate-reference checks reviewed:clear original tracking flag. Preserve wrong-guard counter assignment and early return.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReferenceTrackingControl.endReferenceTracking(I)V"
     },
     {
       "symbol": "M:mbb.a(B)Ltv;",
@@ -64849,7 +65025,15 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_b; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:nqa.clearSharedReferences(B)V"
+      "renamedSymbol": "M:DequeReferenceTracker.clearSharedReferences(B)V"
+    },
+    {
+      "symbol": "M:nqa.a(Lij;I)Ljava/lang/Object;",
+      "originalName": "a",
+      "to": "findDuplicateReference",
+      "evidence": "Full body reviewed:when tracking enabled scan original IntrusiveDeque,invoke checkDuplicateReference and return first duplicate node. Preserve iterator state,guard-null behavior and exception wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;"
     },
     {
       "symbol": "M:nr.a([Lnc;I)Lnc;",
@@ -74306,6 +74490,22 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetAngularVelocitySustainMax.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:qka.a(IZ)I",
+      "originalName": "a",
+      "to": "updateAndGetResult",
+      "evidence": "Full body reviewed:update widget/input,label and return original0/1/2 result. Preserve special bracket input,raw keycase,guard widget clearing and immediate return paths that do not update stored result.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerNameEntryDialog.updateAndGetResult(IZ)I"
+    },
+    {
+      "symbol": "M:qka.a(Z)Z",
+      "originalName": "a",
+      "to": "handleNameKeyEvent",
+      "evidence": "Full body reviewed:handle original backspace,letter/digit/underscore input,12-char cap and accept/cancel key states. Preserve duplicate branches,guard-dependent return,lowercasing and unusual backspace fallthrough.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z"
     },
     {
       "symbol": "M:qkb.a()Lf;",
@@ -102812,9 +103012,9 @@
     },
     {
       "symbol": "C:btb",
-      "renamedSymbol": "C:btb",
+      "renamedSymbol": "C:CommonUiArchiveResources",
       "originalName": "btb",
-      "renamedName": "btb",
+      "renamedName": "CommonUiArchiveResources",
       "declaration": {
         "file": "btb.java",
         "start": 50,
@@ -103802,9 +104002,9 @@
     },
     {
       "symbol": "C:dfa",
-      "renamedSymbol": "C:dfa",
+      "renamedSymbol": "C:AccountRequestPhase",
       "originalName": "dfa",
-      "renamedName": "dfa",
+      "renamedName": "AccountRequestPhase",
       "declaration": {
         "file": "dfa.java",
         "start": 50,
@@ -104418,9 +104618,9 @@
     },
     {
       "symbol": "C:ebb",
-      "renamedSymbol": "C:ebb",
+      "renamedSymbol": "C:ShipBodyFactoryHolder",
       "originalName": "ebb",
-      "renamedName": "ebb",
+      "renamedName": "ShipBodyFactoryHolder",
       "declaration": {
         "file": "ebb.java",
         "start": 50,
@@ -110688,9 +110888,9 @@
     },
     {
       "symbol": "C:mba",
-      "renamedSymbol": "C:mba",
+      "renamedSymbol": "C:ReferenceTrackingControl",
       "originalName": "mba",
-      "renamedName": "mba",
+      "renamedName": "ReferenceTrackingControl",
       "declaration": {
         "file": "mba.java",
         "start": 50,
@@ -111909,9 +112109,9 @@
     },
     {
       "symbol": "C:nqa",
-      "renamedSymbol": "C:nqa",
+      "renamedSymbol": "C:DequeReferenceTracker",
       "originalName": "nqa",
-      "renamedName": "nqa",
+      "renamedName": "DequeReferenceTracker",
       "declaration": {
         "file": "nqa.java",
         "start": 50,
@@ -113900,9 +114100,9 @@
     },
     {
       "symbol": "C:qka",
-      "renamedSymbol": "C:qka",
+      "renamedSymbol": "C:PlayerNameEntryDialog",
       "originalName": "qka",
-      "renamedName": "qka",
+      "renamedName": "PlayerNameEntryDialog",
       "declaration": {
         "file": "qka.java",
         "start": 50,
@@ -123096,7 +123296,7 @@
     },
     {
       "symbol": "F:btb.field_a:Z",
-      "renamedSymbol": "F:btb.field_a:Z",
+      "renamedSymbol": "F:CommonUiArchiveResources.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -123107,9 +123307,9 @@
     },
     {
       "symbol": "F:btb.field_b:Lasb;",
-      "renamedSymbol": "F:btb.field_b:LResourceArchive;",
+      "renamedSymbol": "F:CommonUiArchiveResources.commonUiArchive:LResourceArchive;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "commonUiArchive",
       "declaration": {
         "file": "btb.java",
         "start": 71,
@@ -123118,9 +123318,9 @@
     },
     {
       "symbol": "F:btb.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:btb.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:CommonUiArchiveResources.gameAlreadyStartedText:Ljava/lang/String;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "gameAlreadyStartedText",
       "declaration": {
         "file": "btb.java",
         "start": 124,
@@ -123129,9 +123329,9 @@
     },
     {
       "symbol": "F:btb.field_d:[Lgdb;",
-      "renamedSymbol": "F:btb.field_d:[LBufferedFile;",
+      "renamedSymbol": "F:CommonUiArchiveResources.cacheIndexFiles:[LBufferedFile;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "cacheIndexFiles",
       "declaration": {
         "file": "btb.java",
         "start": 97,
@@ -123140,7 +123340,7 @@
     },
     {
       "symbol": "F:btb.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:btb.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:CommonUiArchiveResources.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -126407,7 +126607,7 @@
     },
     {
       "symbol": "F:dfa.field_a:I",
-      "renamedSymbol": "F:dfa.field_a:I",
+      "renamedSymbol": "F:AccountRequestPhase.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -126418,7 +126618,7 @@
     },
     {
       "symbol": "F:dfa.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:dfa.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestPhase.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -126429,7 +126629,7 @@
     },
     {
       "symbol": "F:dfa.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:dfa.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountRequestPhase.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -127628,7 +127828,7 @@
     },
     {
       "symbol": "F:dn.field_r:Ldfa;",
-      "renamedSymbol": "F:SetCountermeasureLauncherAimspeed.field_r:Ldfa;",
+      "renamedSymbol": "F:SetCountermeasureLauncherAimspeed.field_r:LAccountRequestPhase;",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -128453,9 +128653,9 @@
     },
     {
       "symbol": "F:dw.field_c:Ldfa;",
-      "renamedSymbol": "F:ActiveIconBorderRenderer.field_c:Ldfa;",
+      "renamedSymbol": "F:ActiveIconBorderRenderer.pendingAccountRequest:LAccountRequestPhase;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "pendingAccountRequest",
       "declaration": {
         "file": "dw.java",
         "start": 135,
@@ -128882,9 +129082,9 @@
     },
     {
       "symbol": "F:ebb.field_a:Ldja;",
-      "renamedSymbol": "F:ebb.field_a:LGameStateFactory;",
+      "renamedSymbol": "F:ShipBodyFactoryHolder.factory:LGameStateFactory;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "factory",
       "declaration": {
         "file": "ebb.java",
         "start": 71,
@@ -128893,7 +129093,7 @@
     },
     {
       "symbol": "F:ebb.field_b:Z",
-      "renamedSymbol": "F:ebb.field_b:Z",
+      "renamedSymbol": "F:ShipBodyFactoryHolder.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -135097,9 +135297,9 @@
     },
     {
       "symbol": "F:gka.field_o:Ldfa;",
-      "renamedSymbol": "F:SetSniperCannonFireForce.field_o:Ldfa;",
+      "renamedSymbol": "F:SetSniperCannonFireForce.completedAccountRequest:LAccountRequestPhase;",
       "originalName": "field_o",
-      "renamedName": "field_o",
+      "renamedName": "completedAccountRequest",
       "declaration": {
         "file": "gka.java",
         "start": 83,
@@ -145415,9 +145615,9 @@
     },
     {
       "symbol": "F:kla.field_d:Ldfa;",
-      "renamedSymbol": "F:ToolkitRasterStateStack.field_d:Ldfa;",
+      "renamedSymbol": "F:ToolkitRasterStateStack.idleAccountRequest:LAccountRequestPhase;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "idleAccountRequest",
       "declaration": {
         "file": "kla.java",
         "start": 172,
@@ -148869,7 +149069,7 @@
     },
     {
       "symbol": "F:lrb.field_b:Ldfa;",
-      "renamedSymbol": "F:SetShipTeamAction.field_b:Ldfa;",
+      "renamedSymbol": "F:SetShipTeamAction.field_b:LAccountRequestPhase;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -148946,9 +149146,9 @@
     },
     {
       "symbol": "F:ls.field_q:Z",
-      "renamedSymbol": "F:GetMissionTerrainNebulaProbability.field_q:Z",
+      "renamedSymbol": "F:GetMissionTerrainNebulaProbability.referenceTrackingEnabled:Z",
       "originalName": "field_q",
-      "renamedName": "field_q",
+      "renamedName": "referenceTrackingEnabled",
       "declaration": {
         "file": "ls.java",
         "start": 158,
@@ -149606,7 +149806,7 @@
     },
     {
       "symbol": "F:mba.field_a:Lae;",
-      "renamedSymbol": "F:mba.field_a:LMenuInputState;",
+      "renamedSymbol": "F:ReferenceTrackingControl.field_a:LMenuInputState;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -149617,7 +149817,7 @@
     },
     {
       "symbol": "F:mba.field_b:I",
-      "renamedSymbol": "F:mba.field_b:I",
+      "renamedSymbol": "F:ReferenceTrackingControl.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -154853,7 +155053,7 @@
     },
     {
       "symbol": "F:nqa.field_a:Z",
-      "renamedSymbol": "F:nqa.field_a:Z",
+      "renamedSymbol": "F:DequeReferenceTracker.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -154864,7 +155064,7 @@
     },
     {
       "symbol": "F:nqa.field_b:[[Z",
-      "renamedSymbol": "F:nqa.field_b:[[Z",
+      "renamedSymbol": "F:DequeReferenceTracker.field_b:[[Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -154875,7 +155075,7 @@
     },
     {
       "symbol": "F:nqa.field_c:Z",
-      "renamedSymbol": "F:nqa.field_c:Z",
+      "renamedSymbol": "F:DequeReferenceTracker.field_c:Z",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -156855,9 +157055,9 @@
     },
     {
       "symbol": "F:ola.field_p:Lqka;",
-      "renamedSymbol": "F:GpuFractalNoiseVolume.field_p:Lqka;",
+      "renamedSymbol": "F:GpuFractalNoiseVolume.activeNameEntryDialog:LPlayerNameEntryDialog;",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "activeNameEntryDialog",
       "declaration": {
         "file": "ola.java",
         "start": 83,
@@ -165446,9 +165646,9 @@
     },
     {
       "symbol": "F:qka.field_vb:Lllb;",
-      "renamedSymbol": "F:qka.field_vb:LWidget;",
+      "renamedSymbol": "F:PlayerNameEntryDialog.inputWidget:LWidget;",
       "originalName": "field_vb",
-      "renamedName": "field_vb",
+      "renamedName": "inputWidget",
       "declaration": {
         "file": "qka.java",
         "start": 120,
@@ -165457,9 +165657,9 @@
     },
     {
       "symbol": "F:qka.field_wb:I",
-      "renamedSymbol": "F:qka.field_wb:I",
+      "renamedSymbol": "F:PlayerNameEntryDialog.result:I",
       "originalName": "field_wb",
-      "renamedName": "field_wb",
+      "renamedName": "result",
       "declaration": {
         "file": "qka.java",
         "start": 146,
@@ -165468,9 +165668,9 @@
     },
     {
       "symbol": "F:qka.field_xb:Lllb;",
-      "renamedSymbol": "F:qka.field_xb:LWidget;",
+      "renamedSymbol": "F:PlayerNameEntryDialog.promptWidget:LWidget;",
       "originalName": "field_xb",
-      "renamedName": "field_xb",
+      "renamedName": "promptWidget",
       "declaration": {
         "file": "qka.java",
         "start": 172,
@@ -165479,9 +165679,9 @@
     },
     {
       "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:PlayerNameEntryDialog.inputBuffer:Ljava/lang/StringBuilder;",
       "originalName": "field_yb",
-      "renamedName": "field_yb",
+      "renamedName": "inputBuffer",
       "declaration": {
         "file": "qka.java",
         "start": 94,
@@ -366240,7 +366440,7 @@
     },
     {
       "symbol": "L:jra.a(IZI)V#0",
-      "renamedSymbol": "L:PrimitiveType.a(IZI)V#0",
+      "renamedSymbol": "L:PrimitiveType.updateSocialNameDialog(IZI)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -366251,7 +366451,7 @@
     },
     {
       "symbol": "L:jra.a(IZI)V#1",
-      "renamedSymbol": "L:PrimitiveType.a(IZI)V#1",
+      "renamedSymbol": "L:PrimitiveType.updateSocialNameDialog(IZI)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -366262,7 +366462,7 @@
     },
     {
       "symbol": "L:jra.a(IZI)V#2",
-      "renamedSymbol": "L:PrimitiveType.a(IZI)V#2",
+      "renamedSymbol": "L:PrimitiveType.updateSocialNameDialog(IZI)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -366273,7 +366473,7 @@
     },
     {
       "symbol": "L:jra.a(IZI)V#3",
-      "renamedSymbol": "L:PrimitiveType.a(IZI)V#3",
+      "renamedSymbol": "L:PrimitiveType.updateSocialNameDialog(IZI)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -366284,7 +366484,7 @@
     },
     {
       "symbol": "L:jra.a(IZI)V#4",
-      "renamedSymbol": "L:PrimitiveType.a(IZI)V#4",
+      "renamedSymbol": "L:PrimitiveType.updateSocialNameDialog(IZI)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -366295,7 +366495,7 @@
     },
     {
       "symbol": "L:jra.a(IZI)V#5",
-      "renamedSymbol": "L:PrimitiveType.a(IZI)V#5",
+      "renamedSymbol": "L:PrimitiveType.updateSocialNameDialog(IZI)V#5",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -366306,7 +366506,7 @@
     },
     {
       "symbol": "L:jra.a(IZI)V#6",
-      "renamedSymbol": "L:PrimitiveType.a(IZI)V#6",
+      "renamedSymbol": "L:PrimitiveType.updateSocialNameDialog(IZI)V#6",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -442965,7 +443165,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#0",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#0",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -442976,7 +443176,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#1",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#1",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -442987,7 +443187,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#2",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#2",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -442998,7 +443198,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#3",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#3",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -443009,7 +443209,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#4",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#4",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#4",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -443020,7 +443220,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#5",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#5",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#5",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -443031,7 +443231,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#6",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#6",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#6",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -443042,7 +443242,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#7",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#7",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -443053,7 +443253,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#8",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#8",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#8",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -443064,7 +443264,7 @@
     },
     {
       "symbol": "L:nqa.a(Lij;I)Ljava/lang/Object;#9",
-      "renamedSymbol": "L:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#9",
+      "renamedSymbol": "L:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -514069,7 +514269,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#0",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#0",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -514080,7 +514280,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#1",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#1",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#1",
       "originalName": "stackIn_5_1",
       "renamedName": "stackIn_5_1",
       "declaration": {
@@ -514091,7 +514291,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#10",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#10",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#10",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -514102,7 +514302,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#11",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#11",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -514113,7 +514313,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#12",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#12",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -514124,7 +514324,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#13",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#13",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -514135,7 +514335,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#14",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#14",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -514146,7 +514346,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#15",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#15",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#15",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -514157,7 +514357,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#16",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#16",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -514168,7 +514368,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#2",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#2",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#2",
       "originalName": "stackIn_6_2",
       "renamedName": "stackIn_6_2",
       "declaration": {
@@ -514179,7 +514379,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#3",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#3",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#3",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -514190,7 +514390,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#4",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#4",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#4",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -514201,7 +514401,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#5",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#5",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#5",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -514212,7 +514412,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#6",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#6",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#6",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -514223,7 +514423,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#7",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#7",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#7",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -514234,7 +514434,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#8",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#8",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#8",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -514245,7 +514445,7 @@
     },
     {
       "symbol": "L:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#9",
-      "renamedSymbol": "L:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#9",
+      "renamedSymbol": "L:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -514256,7 +514456,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)I#0",
-      "renamedSymbol": "L:qka.a(IZ)I#0",
+      "renamedSymbol": "L:PlayerNameEntryDialog.updateAndGetResult(IZ)I#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -514267,7 +514467,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)I#1",
-      "renamedSymbol": "L:qka.a(IZ)I#1",
+      "renamedSymbol": "L:PlayerNameEntryDialog.updateAndGetResult(IZ)I#1",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -514278,7 +514478,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)I#2",
-      "renamedSymbol": "L:qka.a(IZ)I#2",
+      "renamedSymbol": "L:PlayerNameEntryDialog.updateAndGetResult(IZ)I#2",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -514289,7 +514489,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)I#3",
-      "renamedSymbol": "L:qka.a(IZ)I#3",
+      "renamedSymbol": "L:PlayerNameEntryDialog.updateAndGetResult(IZ)I#3",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -514300,7 +514500,7 @@
     },
     {
       "symbol": "L:qka.a(IZ)I#4",
-      "renamedSymbol": "L:qka.a(IZ)I#4",
+      "renamedSymbol": "L:PlayerNameEntryDialog.updateAndGetResult(IZ)I#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -514311,7 +514511,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#0",
-      "renamedSymbol": "L:qka.a(Z)Z#0",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#0",
       "originalName": "discarded$6",
       "renamedName": "discarded$6",
       "declaration": {
@@ -514322,7 +514522,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#1",
-      "renamedSymbol": "L:qka.a(Z)Z#1",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#1",
       "originalName": "discarded$7",
       "renamedName": "discarded$7",
       "declaration": {
@@ -514333,7 +514533,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#10",
-      "renamedSymbol": "L:qka.a(Z)Z#10",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#10",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -514344,7 +514544,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#11",
-      "renamedSymbol": "L:qka.a(Z)Z#11",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#11",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -514355,7 +514555,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#12",
-      "renamedSymbol": "L:qka.a(Z)Z#12",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -514366,7 +514566,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#2",
-      "renamedSymbol": "L:qka.a(Z)Z#2",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#2",
       "originalName": "discarded$5",
       "renamedName": "discarded$5",
       "declaration": {
@@ -514377,7 +514577,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#3",
-      "renamedSymbol": "L:qka.a(Z)Z#3",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#3",
       "originalName": "discarded$8",
       "renamedName": "discarded$8",
       "declaration": {
@@ -514388,7 +514588,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#4",
-      "renamedSymbol": "L:qka.a(Z)Z#4",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#4",
       "originalName": "discarded$9",
       "renamedName": "discarded$9",
       "declaration": {
@@ -514399,7 +514599,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#5",
-      "renamedSymbol": "L:qka.a(Z)Z#5",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#5",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -514410,7 +514610,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#6",
-      "renamedSymbol": "L:qka.a(Z)Z#6",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#6",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -514421,7 +514621,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#7",
-      "renamedSymbol": "L:qka.a(Z)Z#7",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#7",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -514432,7 +514632,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#8",
-      "renamedSymbol": "L:qka.a(Z)Z#8",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#8",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -514443,7 +514643,7 @@
     },
     {
       "symbol": "L:qka.a(Z)Z#9",
-      "renamedSymbol": "L:qka.a(Z)Z#9",
+      "renamedSymbol": "L:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#9",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -665924,7 +666124,7 @@
     },
     {
       "symbol": "M:btb.a(B)V",
-      "renamedSymbol": "M:btb.clearSharedReferences(B)V",
+      "renamedSymbol": "M:CommonUiArchiveResources.clearSharedReferences(B)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -670819,7 +671019,7 @@
     },
     {
       "symbol": "M:dfa.a(B)V",
-      "renamedSymbol": "M:dfa.clearSharedReferences(B)V",
+      "renamedSymbol": "M:AccountRequestPhase.clearSharedReferences(B)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -670830,7 +671030,7 @@
     },
     {
       "symbol": "M:dfa.toString()Ljava/lang/String;",
-      "renamedSymbol": "M:dfa.toString()Ljava/lang/String;",
+      "renamedSymbol": "M:AccountRequestPhase.toString()Ljava/lang/String;",
       "originalName": "toString",
       "renamedName": "toString",
       "declaration": {
@@ -674438,9 +674638,9 @@
     },
     {
       "symbol": "M:ebb.a(B)V",
-      "renamedSymbol": "M:ebb.a(B)V",
+      "renamedSymbol": "M:ShipBodyFactoryHolder.closeNameEntryDialog(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "closeNameEntryDialog",
       "declaration": {
         "file": "ebb.java",
         "start": 131,
@@ -674449,7 +674649,7 @@
     },
     {
       "symbol": "M:ebb.a(I)V",
-      "renamedSymbol": "M:ebb.clearSharedReferences(I)V",
+      "renamedSymbol": "M:ShipBodyFactoryHolder.clearSharedReferences(I)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -701157,9 +701357,9 @@
     },
     {
       "symbol": "M:jra.a(IZI)V",
-      "renamedSymbol": "M:PrimitiveType.a(IZI)V",
+      "renamedSymbol": "M:PrimitiveType.updateSocialNameDialog(IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateSocialNameDialog",
       "declaration": {
         "file": "jra.java",
         "start": 184,
@@ -709759,7 +709959,7 @@
     },
     {
       "symbol": "M:mba.a(B)V",
-      "renamedSymbol": "M:mba.clearSharedReferences(B)V",
+      "renamedSymbol": "M:ReferenceTrackingControl.clearSharedReferences(B)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -709770,9 +709970,9 @@
     },
     {
       "symbol": "M:mba.a(I)V",
-      "renamedSymbol": "M:mba.a(I)V",
+      "renamedSymbol": "M:ReferenceTrackingControl.endReferenceTracking(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "endReferenceTracking",
       "declaration": {
         "file": "mba.java",
         "start": 126,
@@ -718581,7 +718781,7 @@
     },
     {
       "symbol": "M:nqa.a(B)V",
-      "renamedSymbol": "M:nqa.clearSharedReferences(B)V",
+      "renamedSymbol": "M:DequeReferenceTracker.clearSharedReferences(B)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -718592,9 +718792,9 @@
     },
     {
       "symbol": "M:nqa.a(Lij;I)Ljava/lang/Object;",
-      "renamedSymbol": "M:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;",
+      "renamedSymbol": "M:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findDuplicateReference",
       "declaration": {
         "file": "nqa.java",
         "start": 178,
@@ -734432,9 +734632,9 @@
     },
     {
       "symbol": "M:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V",
-      "renamedSymbol": "M:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V",
+      "renamedSymbol": "M:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V",
       "originalName": "qka",
-      "renamedName": "qka",
+      "renamedName": "PlayerNameEntryDialog",
       "declaration": {
         "file": "qka.java",
         "start": 8642,
@@ -734443,9 +734643,9 @@
     },
     {
       "symbol": "M:qka.a(IZ)I",
-      "renamedSymbol": "M:qka.a(IZ)I",
+      "renamedSymbol": "M:PlayerNameEntryDialog.updateAndGetResult(IZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateAndGetResult",
       "declaration": {
         "file": "qka.java",
         "start": 6437,
@@ -734454,9 +734654,9 @@
     },
     {
       "symbol": "M:qka.a(Z)Z",
-      "renamedSymbol": "M:qka.a(Z)Z",
+      "renamedSymbol": "M:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleNameKeyEvent",
       "declaration": {
         "file": "qka.java",
         "start": 201,
@@ -783921,7 +784121,7 @@
     },
     {
       "symbol": "P:btb.a(B)V#0",
-      "renamedSymbol": "P:btb.clearSharedReferences(B)V#0",
+      "renamedSymbol": "P:CommonUiArchiveResources.clearSharedReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -796626,7 +796826,7 @@
     },
     {
       "symbol": "P:dfa.a(B)V#0",
-      "renamedSymbol": "P:dfa.clearSharedReferences(B)V#0",
+      "renamedSymbol": "P:AccountRequestPhase.clearSharedReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -805085,7 +805285,7 @@
     },
     {
       "symbol": "P:ebb.a(B)V#0",
-      "renamedSymbol": "P:ebb.a(B)V#0",
+      "renamedSymbol": "P:ShipBodyFactoryHolder.closeNameEntryDialog(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -805096,7 +805296,7 @@
     },
     {
       "symbol": "P:ebb.a(I)V#0",
-      "renamedSymbol": "P:ebb.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:ShipBodyFactoryHolder.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -868214,7 +868414,7 @@
     },
     {
       "symbol": "P:jra.a(IZI)V#0",
-      "renamedSymbol": "P:PrimitiveType.a(IZI)V#0",
+      "renamedSymbol": "P:PrimitiveType.updateSocialNameDialog(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -868225,7 +868425,7 @@
     },
     {
       "symbol": "P:jra.a(IZI)V#1",
-      "renamedSymbol": "P:PrimitiveType.a(IZI)V#1",
+      "renamedSymbol": "P:PrimitiveType.updateSocialNameDialog(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -868236,7 +868436,7 @@
     },
     {
       "symbol": "P:jra.a(IZI)V#2",
-      "renamedSymbol": "P:PrimitiveType.a(IZI)V#2",
+      "renamedSymbol": "P:PrimitiveType.updateSocialNameDialog(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -887673,7 +887873,7 @@
     },
     {
       "symbol": "P:mba.a(B)V#0",
-      "renamedSymbol": "P:mba.clearSharedReferences(B)V#0",
+      "renamedSymbol": "P:ReferenceTrackingControl.clearSharedReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -887684,7 +887884,7 @@
     },
     {
       "symbol": "P:mba.a(I)V#0",
-      "renamedSymbol": "P:mba.a(I)V#0",
+      "renamedSymbol": "P:ReferenceTrackingControl.endReferenceTracking(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -908078,7 +908278,7 @@
     },
     {
       "symbol": "P:nqa.a(B)V#0",
-      "renamedSymbol": "P:nqa.clearSharedReferences(B)V#0",
+      "renamedSymbol": "P:DequeReferenceTracker.clearSharedReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -908089,7 +908289,7 @@
     },
     {
       "symbol": "P:nqa.a(Lij;I)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -908100,7 +908300,7 @@
     },
     {
       "symbol": "P:nqa.a(Lij;I)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:nqa.a(LIntrusiveDeque;I)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:DequeReferenceTracker.findDuplicateReference(LIntrusiveDeque;I)Ljava/lang/Object;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -946127,7 +946327,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#0",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#0",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -946138,7 +946338,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#1",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#1",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -946149,7 +946349,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#2",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#2",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -946160,7 +946360,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#3",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#3",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -946171,7 +946371,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#4",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#4",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -946182,7 +946382,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#5",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#5",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -946193,7 +946393,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#6",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#6",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -946204,7 +946404,7 @@
     },
     {
       "symbol": "P:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V#7",
-      "renamedSymbol": "P:qka.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#7",
+      "renamedSymbol": "P:PlayerNameEntryDialog.<init>(IIIILjava/lang/String;LWidget;LWidget;LWidget;)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -946215,7 +946415,7 @@
     },
     {
       "symbol": "P:qka.a(IZ)I#0",
-      "renamedSymbol": "P:qka.a(IZ)I#0",
+      "renamedSymbol": "P:PlayerNameEntryDialog.updateAndGetResult(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -946226,7 +946426,7 @@
     },
     {
       "symbol": "P:qka.a(IZ)I#1",
-      "renamedSymbol": "P:qka.a(IZ)I#1",
+      "renamedSymbol": "P:PlayerNameEntryDialog.updateAndGetResult(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -946237,7 +946437,7 @@
     },
     {
       "symbol": "P:qka.a(Z)Z#0",
-      "renamedSymbol": "P:qka.a(Z)Z#0",
+      "renamedSymbol": "P:PlayerNameEntryDialog.handleNameKeyEvent(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1008963,7 +1009163,7 @@
       "original": "VoidHunters.java",
       "renamed": "VoidHunters.java",
       "inputSha256": "69cc4b9b8186f4765c6d34781d7b497712847d6d0020d8b54c038b1e406427f1",
-      "outputSha256": "3d680ce0b2985cb5b1c849836a791aa261c897ff2cc34daddf6cc21a622a8dae",
+      "outputSha256": "66c694f79a5e1baf5b252ff8b63326f7c2ca694a00b95d142e6f357ed3f2786a",
       "edits": [
         {
           "start": 77,
@@ -1009097,6 +1009297,13 @@
           "symbol": "C:ls",
           "original": "ls",
           "renamed": "GetMissionTerrainNebulaProbability"
+        },
+        {
+          "start": 2203,
+          "end": 2210,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         },
         {
           "start": 2300,
@@ -1013140,6 +1013347,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 28394,
+          "end": 28397,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
           "start": 28398,
           "end": 28399,
           "symbol": "M:btb.a(B)V",
@@ -1013467,6 +1013681,13 @@
           "symbol": "M:pgb.a(B)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 28942,
+          "end": 28945,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
         },
         {
           "start": 28946,
@@ -1014974,6 +1015195,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 31459,
+          "end": 31462,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
+        },
+        {
           "start": 31463,
           "end": 31464,
           "symbol": "M:mba.a(B)V",
@@ -1015518,6 +1015746,13 @@
           "symbol": "M:cd.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 32380,
+          "end": 32383,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 32384,
@@ -1019767,6 +1020002,13 @@
           "symbol": "M:lsa.c(B)V",
           "original": "c",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 39452,
+          "end": 39455,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 39456,
@@ -1041697,7 +1041939,7 @@
       "original": "aib.java",
       "renamed": "AsteroidField.java",
       "inputSha256": "af391265e3d1a3ba3cfe402208328b0b7f61cbd852cb21191b5b2d4dc85f76c7",
-      "outputSha256": "a564fd6a6919fd09fb80c26c9386664d9bc36183e120188f0dc477dbea66edab",
+      "outputSha256": "27b000dea15586f69081afd25263d3e4b76974b2a454e64b1f761112d3848d4c",
       "edits": [
         {
           "start": 50,
@@ -1048243,6 +1048485,13 @@
           "symbol": "M:dqb.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "fetchLocalizedResource"
+        },
+        {
+          "start": 52148,
+          "end": 52151,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 52162,
@@ -1067986,7 +1068235,7 @@
       "original": "aob.java",
       "renamed": "GetShowTutorial.java",
       "inputSha256": "4d511d9002538e3302d55fa2f4b2c01eeb9a25644d98dbc8a8754c55f334d60b",
-      "outputSha256": "cc93eebcf721896ed28aab1152ecdd4b0b1a523980ab13fcce937ae444246057",
+      "outputSha256": "cb5dd8baf82038f8dbd90399833d58bd9932548537a5582a8e11a556076bfcc5",
       "edits": [
         {
           "start": 50,
@@ -1068001,6 +1068250,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 231,
+          "end": 234,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
         },
         {
           "start": 317,
@@ -1068592,7 +1068848,7 @@
       "original": "aq.java",
       "renamed": "SetMissionDebrisDefaultProbability.java",
       "inputSha256": "29de3ca4caf75d83bae3a8a24baeb7d1075355bf7fe5322227b207fd658926bf",
-      "outputSha256": "45a9081df1bb1f12969bac4711396a7a2f1c7cbf0f880c96dad5e5d90cee57c5",
+      "outputSha256": "61856caf2195faad211a133bbea3e9e19f4ef935eac275b90c411237c2586254",
       "edits": [
         {
           "start": 50,
@@ -1068880,6 +1069136,13 @@
           "symbol": "F:pgb.field_j:Lllb;",
           "original": "field_j",
           "renamed": "widget"
+        },
+        {
+          "start": 2812,
+          "end": 2815,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 2866,
@@ -1069237,6 +1069500,27 @@
           "symbol": "F:llb.field_G:I",
           "original": "field_G",
           "renamed": "height"
+        },
+        {
+          "start": 4426,
+          "end": 4429,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 4455,
+          "end": 4458,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 4482,
+          "end": 4485,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 4515,
@@ -1069867,6 +1070151,20 @@
           "symbol": "F:llb.field_G:I",
           "original": "field_G",
           "renamed": "height"
+        },
+        {
+          "start": 6477,
+          "end": 6480,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 6504,
+          "end": 6507,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 6537,
@@ -1074606,7 +1074904,7 @@
       "original": "asb.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "369350dcdfc639e2d2761d8971e0bfd5949167ac42af1f41aebd4c6fb6d7da36",
-      "outputSha256": "a1874d1f2917ef901f96b3788985adfd5e0d5c4e8775f23529e924545d22d22b",
+      "outputSha256": "1a644475841bdcd8be0a99cf12841252500f99c539d79a96242b9b6ccc50d14c",
       "edits": [
         {
           "start": 69,
@@ -1075790,6 +1076088,27 @@
           "symbol": "C:hcb",
           "original": "hcb",
           "renamed": "GetDebrisCarryOver"
+        },
+        {
+          "start": 17534,
+          "end": 17537,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
+          "start": 17581,
+          "end": 17584,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
+          "start": 17649,
+          "end": 17652,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
         },
         {
           "start": 18000,
@@ -1082653,7 +1082972,7 @@
       "original": "baa.java",
       "renamed": "GetUseCircleOutline.java",
       "inputSha256": "f78b0f9c40842f419a7b8aabe64f18ff80e92bb5354e5b648b21bbca5f025366",
-      "outputSha256": "61d81faaf697c79f7c65e96e21c9437ebdbe1b14525d151ab50386f98e0e37a3",
+      "outputSha256": "51733fe2510da727de4fe61c51ec11ec414b4015102755f2d80a1acb246072ba",
       "edits": [
         {
           "start": 50,
@@ -1082775,6 +1083094,13 @@
           "renamed": "ToolkitRasterStateStack"
         },
         {
+          "start": 435,
+          "end": 442,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
           "start": 454,
           "end": 457,
           "symbol": "C:lrb",
@@ -1082787,6 +1083113,13 @@
           "symbol": "C:kla",
           "original": "kla",
           "renamed": "ToolkitRasterStateStack"
+        },
+        {
+          "start": 472,
+          "end": 479,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
         },
         {
           "start": 551,
@@ -1090484,7 +1090817,7 @@
       "original": "bea.java",
       "renamed": "MissionBuilder.java",
       "inputSha256": "4431b55955aac3f6bb7d4cb6229c79039c1fcdae7dc6d5d0b314ef6af8a08ac6",
-      "outputSha256": "125e0c5fec4ac6910df99f5b6292cdc5e226107914e3b7aba33c6d6f18a77400",
+      "outputSha256": "9c105d3033fc5dcd4da89c15539d8d4c86839fdcc21ad485f78d86a850246a1e",
       "edits": [
         {
           "start": 71,
@@ -1092559,6 +1092892,20 @@
           "renamed": "SoftwareSprite2D"
         },
         {
+          "start": 28424,
+          "end": 28427,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 28428,
+          "end": 28435,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
+        },
+        {
           "start": 28508,
           "end": 28510,
           "symbol": "C:sg",
@@ -1092718,6 +1093065,20 @@
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 29206,
+          "end": 29209,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 29210,
+          "end": 29217,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
         },
         {
           "start": 29368,
@@ -1093250,6 +1093611,20 @@
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 33078,
+          "end": 33081,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 33082,
+          "end": 33089,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
         },
         {
           "start": 33154,
@@ -1094645,6 +1095020,20 @@
           "renamed": "SoftwareSprite2D"
         },
         {
+          "start": 44592,
+          "end": 44595,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 44596,
+          "end": 44603,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
+        },
+        {
           "start": 44678,
           "end": 44681,
           "symbol": "C:anb",
@@ -1095982,6 +1096371,20 @@
           "renamed": "GetFighterBayReload"
         },
         {
+          "start": 64484,
+          "end": 64487,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 64488,
+          "end": 64495,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
+        },
+        {
           "start": 64581,
           "end": 64584,
           "symbol": "C:iia",
@@ -1096022,6 +1096425,20 @@
           "symbol": "C:kn",
           "original": "kn",
           "renamed": "GetFighterBayReload"
+        },
+        {
+          "start": 64804,
+          "end": 64807,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 64808,
+          "end": 64815,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
         },
         {
           "start": 64931,
@@ -1098044,6 +1098461,20 @@
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 95760,
+          "end": 95763,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 95764,
+          "end": 95771,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
         },
         {
           "start": 95821,
@@ -1106784,7 +1107215,7 @@
       "original": "bj.java",
       "renamed": "GetMissileLauncherFireForce.java",
       "inputSha256": "1599de2956157c536470f6cf1a0488e9581c56bed0dcd92616abf0b133e3b70a",
-      "outputSha256": "142f610c480db849436a91abe625d7a58f503219326d6e7274e3d65e32fc46a2",
+      "outputSha256": "df0a456c5fb4e5da505e1ae6b072b25c2b9301b5bf5af2fce63cc1fb1520e0c4",
       "edits": [
         {
           "start": 50,
@@ -1106934,11 +1107365,39 @@
           "renamed": "isNamedGroupReady"
         },
         {
+          "start": 1635,
+          "end": 1638,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 1639,
+          "end": 1646,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
+        },
+        {
           "start": 1647,
           "end": 1648,
           "symbol": "M:asb.b(B)Z",
           "original": "b",
           "renamed": "loadIndex"
+        },
+        {
+          "start": 1714,
+          "end": 1717,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 1718,
+          "end": 1725,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
         },
         {
           "start": 1726,
@@ -1107004,11 +1107463,39 @@
           "renamed": "loadAllGroups"
         },
         {
+          "start": 2132,
+          "end": 2135,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 2136,
+          "end": 2143,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
+        },
+        {
           "start": 2144,
           "end": 2145,
           "symbol": "M:asb.b(B)Z",
           "original": "b",
           "renamed": "loadIndex"
+        },
+        {
+          "start": 2210,
+          "end": 2213,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 2214,
+          "end": 2221,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
         },
         {
           "start": 2222,
@@ -1124265,16 +1124752,30 @@
     },
     {
       "original": "btb.java",
-      "renamed": "btb.java",
+      "renamed": "CommonUiArchiveResources.java",
       "inputSha256": "6d7e4281b80e247bc66a4ee9337746c7e7ba2d6840aa0b0cb52903892e1193c4",
-      "outputSha256": "40b0ce75e8d950f37d1771efa95757638a3122175ca0b89f6b422bf47d2e627a",
+      "outputSha256": "9859df4550aa14de8351231299ac800a40fcd05580b26b7a7058b2956dde69f9",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
         {
           "start": 67,
           "end": 70,
           "symbol": "C:asb",
           "original": "asb",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 71,
+          "end": 78,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
         },
         {
           "start": 91,
@@ -1124284,11 +1124785,60 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 97,
+          "end": 104,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 124,
+          "end": 131,
+          "symbol": "F:btb.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "gameAlreadyStartedText"
+        },
+        {
           "start": 220,
           "end": 221,
           "symbol": "M:btb.a(B)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 245,
+          "end": 252,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
+        },
+        {
+          "start": 269,
+          "end": 276,
+          "symbol": "F:btb.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "gameAlreadyStartedText"
+        },
+        {
+          "start": 293,
+          "end": 300,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 347,
+          "end": 354,
+          "symbol": "F:btb.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "gameAlreadyStartedText"
+        },
+        {
+          "start": 438,
+          "end": 445,
+          "symbol": "F:btb.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "gameAlreadyStartedText"
         }
       ]
     },
@@ -1124452,7 +1125002,7 @@
       "original": "bv.java",
       "renamed": "TutorialController.java",
       "inputSha256": "2e64806282be71ef324451cfaa6a0eb7c4669d79dac4aa63e285ba46a3ddc3d5",
-      "outputSha256": "5173b280873d233fc8e033e000bf90fe26d8578f41c9c5d5c57c870be621ba1f",
+      "outputSha256": "96d9669bf1c878eaa71ac870088378e7adb507adf173edf365a7c44eaa55eb91",
       "edits": [
         {
           "start": 50,
@@ -1127208,11 +1127758,25 @@
           "renamed": "PlayerAction"
         },
         {
+          "start": 36009,
+          "end": 36012,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
           "start": 36071,
           "end": 36073,
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "GetPointDefenceLaserReload"
+        },
+        {
+          "start": 36105,
+          "end": 36108,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
         },
         {
           "start": 36145,
@@ -1141662,7 +1142226,7 @@
       "original": "ck.java",
       "renamed": "SetDebrisGroupColour.java",
       "inputSha256": "6d6386307e38fb9bda1a439b6a556a5f26f749068e25c940cd75f6973ac619be",
-      "outputSha256": "8861bcb7a034bf75e5cb4754654b11a3cae7e66cd3042aceaa60949041b898bd",
+      "outputSha256": "824fde3d0907f6b45773c1a672545af7e66433a34678e251bc63bf101ba26c71",
       "edits": [
         {
           "start": 50,
@@ -1142013,6 +1142577,13 @@
           "symbol": "C:nc",
           "original": "nc",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 8044,
+          "end": 8047,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
         },
         {
           "start": 8058,
@@ -1170603,7 +1171174,7 @@
       "original": "dba.java",
       "renamed": "SetLaserReload.java",
       "inputSha256": "c585ce8eef3623a7fbc27b7111a5fe79a6a20dd2028d817525e22f5820895fbe",
-      "outputSha256": "d9a3dc27a00a916b0fef675b919183f468456e6db9849121f83f9cfa9d4678c9",
+      "outputSha256": "4758821fc9ab8fde379190d7efee362b73f96ae4ddccbe3317e66411190ee13d",
       "edits": [
         {
           "start": 50,
@@ -1170683,11 +1171254,25 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 626,
+          "end": 633,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
           "start": 647,
           "end": 650,
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 651,
+          "end": 658,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
         },
         {
           "start": 659,
@@ -1173210,16 +1173795,30 @@
     },
     {
       "original": "dfa.java",
-      "renamed": "dfa.java",
+      "renamed": "AccountRequestPhase.java",
       "inputSha256": "f92fc95891d43ce15bf45ac600eb76441041a377619752ae559f9b372b5b5050",
-      "outputSha256": "6823513b8639701f445db01b35835f6acc43dd9f318bd03bf54bfb89688d25a3",
+      "outputSha256": "3e5cd914ee1c2845f5948a1d91bcd274018d1a09934a687efa6061e7234f0711",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
+        },
         {
           "start": 245,
           "end": 246,
           "symbol": "M:dfa.a(B)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 348,
+          "end": 351,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 352,
@@ -1173635,7 +1174234,7 @@
       "original": "dga.java",
       "renamed": "OpenGlFaceAttachmentState.java",
       "inputSha256": "1fbb7d63cbe9b5f113d89da09c3e6753929ecc074941d2064c23490a7e3d7557",
-      "outputSha256": "cb813c887f546d809c9763ca6541af55e91c1830f7f9f7a39e152d867e7c64cf",
+      "outputSha256": "c43df4f9a027a27c9176e28e38426834e99fb8253d05d87c516ebc87a0062d2f",
       "edits": [
         {
           "start": 50,
@@ -1175701,6 +1176300,20 @@
           "symbol": "F:dga$1$CfrPartitionedBody.var2:[B",
           "original": "var2",
           "renamed": "resourceBytes"
+        },
+        {
+          "start": 6980,
+          "end": 6983,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 6984,
+          "end": 6991,
+          "symbol": "F:btb.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "gameAlreadyStartedText"
         },
         {
           "start": 6994,
@@ -1196358,6 +1196971,13 @@
           "symbol": "F:dga$1$CfrPartitionedBody.var2:[B",
           "original": "var2",
           "renamed": "resourceBytes"
+        },
+        {
+          "start": 70402,
+          "end": 70405,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 70416,
@@ -1224537,7 +1225157,7 @@
       "original": "dn.java",
       "renamed": "SetCountermeasureLauncherAimspeed.java",
       "inputSha256": "ba959c6059f646ee0de2b3d5e3efde14a9185d5d9d6824db9a70776c8913cc45",
-      "outputSha256": "675018850c04e643b7d6b33e3233deed5b5dc51e3623e52653801a64f37e8524",
+      "outputSha256": "fcbf3ce6bcf00932f6f47029b33d6e792dcf222fd31cbaa5fe674f5ddde4b181",
       "edits": [
         {
           "start": 50,
@@ -1224552,6 +1225172,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 130,
+          "end": 133,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 195,
@@ -1225552,7 +1226179,7 @@
       "original": "dq.java",
       "renamed": "IsaacCipher.java",
       "inputSha256": "5b1d7ae610c7830c2820e2d531ad919c6d3c05ee56340c6c4a06bd12d3f6cc96",
-      "outputSha256": "7674398879d72bc4952c01a401124f9a512aac66ec6bd69a8e658a3a3f511803",
+      "outputSha256": "d982980ac7ccfb6f53a9bfe25088563302eede99d712ba2f9250fa7f11d44196",
       "edits": [
         {
           "start": 50,
@@ -1226241,6 +1226868,20 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 4519,
+          "end": 4526,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 4533,
+          "end": 4536,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
+        },
+        {
           "start": 4537,
           "end": 4540,
           "symbol": "C:vra",
@@ -1226379,6 +1227020,20 @@
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 4845,
+          "end": 4852,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 4859,
+          "end": 4862,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
         },
         {
           "start": 4863,
@@ -1236269,7 +1236924,7 @@
       "original": "dua.java",
       "renamed": "SetMassDriverFireForce.java",
       "inputSha256": "97724485b1c412a98fcacd52decc5e793cc8d410912c7280549c6069e0cfbde7",
-      "outputSha256": "56a3d136bb0890facafbf53cd1132ac7a59dd926d14261347f9b9865a4d67a59",
+      "outputSha256": "84a8ba46f406d9d5a49de23e49ec28073c98f87f8301d0ab92f2033119cf4408",
       "edits": [
         {
           "start": 50,
@@ -1236482,6 +1237137,20 @@
           "renamed": "loadingTextMessage"
         },
         {
+          "start": 1847,
+          "end": 1850,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 1851,
+          "end": 1858,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
+        },
+        {
           "start": 1859,
           "end": 1860,
           "symbol": "M:asb.b(B)Z",
@@ -1236496,6 +1237165,20 @@
           "renamed": "SetTorpedoProjectileOndamageParticles"
         },
         {
+          "start": 1929,
+          "end": 1932,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 1933,
+          "end": 1940,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
+        },
+        {
           "start": 1941,
           "end": 1942,
           "symbol": "M:asb.a(ILjava/lang/String;)Z",
@@ -1236508,6 +1237191,20 @@
           "symbol": "C:drb",
           "original": "drb",
           "renamed": "ConstantMonochromeTextureOperation"
+        },
+        {
+          "start": 2004,
+          "end": 2007,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 2008,
+          "end": 2015,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
         },
         {
           "start": 2016,
@@ -1237518,7 +1238215,7 @@
       "original": "dw.java",
       "renamed": "ActiveIconBorderRenderer.java",
       "inputSha256": "96b1e7faa350732cb7404d424d33f7f3fb3eeff97ffc356a5d840480b351b787",
-      "outputSha256": "8d7d0b6011239b84e4dd9a25b81a97cf0a87772ef9bcee0ac6986ce974d18659",
+      "outputSha256": "76fbe737b267fed9c6bb8e5d8a38e26212ead69a6103196ca03c71fb716216f7",
       "edits": [
         {
           "start": 50,
@@ -1237535,11 +1238232,32 @@
           "renamed": "UiRenderer"
         },
         {
+          "start": 131,
+          "end": 134,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
+        },
+        {
+          "start": 135,
+          "end": 142,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
           "start": 168,
           "end": 169,
           "symbol": "M:dw.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 216,
+          "end": 223,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         },
         {
           "start": 333,
@@ -1237701,6 +1238419,20 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 2087,
+          "end": 2094,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
+          "start": 2101,
+          "end": 2104,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         }
       ]
     },
@@ -1240992,10 +1241724,17 @@
     },
     {
       "original": "ebb.java",
-      "renamed": "ebb.java",
+      "renamed": "ShipBodyFactoryHolder.java",
       "inputSha256": "6a21c599509d54119f54d2d0c59034896482eff419802bf6a590acba2a3a6c8f",
-      "outputSha256": "a06cc3ec20d7ef8b35dc58a5466dee13dfe650037b221bd6b817976f2eca7637",
+      "outputSha256": "7d284fe2ddbe38caa1550a6e39af73768ccf96263f6a16862f3216277b36287a",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
         {
           "start": 67,
           "end": 70,
@@ -1241004,11 +1241743,39 @@
           "renamed": "GameStateFactory"
         },
         {
+          "start": 71,
+          "end": 78,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
+        },
+        {
+          "start": 131,
+          "end": 132,
+          "symbol": "M:ebb.a(B)V",
+          "original": "a",
+          "renamed": "closeNameEntryDialog"
+        },
+        {
           "start": 156,
           "end": 159,
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 160,
+          "end": 167,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 215,
+          "end": 222,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
         },
         {
           "start": 226,
@@ -1241025,11 +1241792,39 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 334,
+          "end": 337,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
           "start": 338,
           "end": 339,
           "symbol": "M:ebb.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 355,
+          "end": 362,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
+        },
+        {
+          "start": 407,
+          "end": 414,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
+        },
+        {
+          "start": 451,
+          "end": 458,
+          "symbol": "F:ebb.field_a:Ldja;",
+          "original": "field_a",
+          "renamed": "factory"
         },
         {
           "start": 462,
@@ -1295636,7 +1296431,7 @@
       "original": "fpb.java",
       "renamed": "MassDriverWeaponDefinition.java",
       "inputSha256": "4e0c22f6b771c4cbb7a7ebc523052cba1a298f5846c7f766de96749f1367f226",
-      "outputSha256": "40441a055523182d3e02b3aea9a0a67e62cab12b4e61b370f50f6df8df15a209",
+      "outputSha256": "40b5ac402e0c32aa9ddb2f8e807f79d2bdfec68e0be1e42462fc174faab76ad4",
       "edits": [
         {
           "start": 50,
@@ -1296029,6 +1296824,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "ActiveIconBorderRenderer"
+        },
+        {
+          "start": 3448,
+          "end": 3455,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         },
         {
           "start": 3459,
@@ -1313695,7 +1314497,7 @@
       "original": "gka.java",
       "renamed": "SetSniperCannonFireForce.java",
       "inputSha256": "2d8ca65f874a5b1adc538450e103c1c11bb4566b679d339965b3019e1b5fb02c",
-      "outputSha256": "84b7a94c2aa47077d65c310332ec7da234aa8125b12d20a1891c07332f85bf3a",
+      "outputSha256": "19f175b7c3d834e857a4e30d9a3eb1b2b8f7aad39ad656dce96f3d9f8c424a86",
       "edits": [
         {
           "start": 50,
@@ -1313710,6 +1314512,20 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 79,
+          "end": 82,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
+        },
+        {
+          "start": 83,
+          "end": 90,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
         },
         {
           "start": 103,
@@ -1313857,6 +1314673,34 @@
           "symbol": "M:gka.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 1444,
+          "end": 1451,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
+        },
+        {
+          "start": 1496,
+          "end": 1503,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
+        },
+        {
+          "start": 1540,
+          "end": 1547,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
+        },
+        {
+          "start": 1554,
+          "end": 1557,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 1606,
@@ -1335977,7 +1336821,7 @@
       "original": "heb.java",
       "renamed": "SetServerinfoVotestate.java",
       "inputSha256": "9cfbe9a546d2cd2aa7ff757263e45d6c5563668c73e3e67572fd285276155aa4",
-      "outputSha256": "ecac720312bff6483fab0ef4cdf68a9f5ebc4a6c0c6e6500f3b2e258393b4b3d",
+      "outputSha256": "4177a390b25cdb24f0148bdf02e85bb95b1a7842cbccba59c03d64d7084b171d",
       "edits": [
         {
           "start": 50,
@@ -1336230,6 +1337074,20 @@
           "symbol": "C:isa",
           "original": "isa",
           "renamed": "SetReverbGain"
+        },
+        {
+          "start": 2950,
+          "end": 2953,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 2954,
+          "end": 2961,
+          "symbol": "F:btb.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "gameAlreadyStartedText"
         },
         {
           "start": 3103,
@@ -1375161,7 +1376019,7 @@
       "original": "ik.java",
       "renamed": "IntegerRecordWriteRequest.java",
       "inputSha256": "500040f0cd59f9dd02a838b261390e0ad21b05526d7c582b7fc4c3e7e36fc0db",
-      "outputSha256": "3daca28016c0f01d58e6b5d703121339705bd2d71c6aa3f8277936ab83d111cc",
+      "outputSha256": "d6382c8801c47ed6ec3d753653c4234eedb93253f924c49a39f686555406d236",
       "edits": [
         {
           "start": 50,
@@ -1376296,6 +1377154,13 @@
           "symbol": "C:wob",
           "original": "wob",
           "renamed": "SetGrapplingHookRopeChangeRate"
+        },
+        {
+          "start": 5421,
+          "end": 5424,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 5454,
@@ -1411655,7 +1412520,7 @@
       "original": "jra.java",
       "renamed": "PrimitiveType.java",
       "inputSha256": "d58f6007b514cbf64f88220066ea7c1c3f060b9735239027c47034f316b64728",
-      "outputSha256": "4fa1d705cc02c37c7c5c47bc0fdf2610e1469856167f92e7c24635e844ba1dd4",
+      "outputSha256": "be59a4de3f39d3db0ab6f6409699c4b2e30a8f5e7091eb342b48827b0b4b82f4",
       "edits": [
         {
           "start": 50,
@@ -1411672,11 +1412537,25 @@
           "renamed": "AccountRequestResult"
         },
         {
+          "start": 184,
+          "end": 185,
+          "symbol": "M:jra.a(IZI)V",
+          "original": "a",
+          "renamed": "updateSocialNameDialog"
+        },
+        {
           "start": 409,
           "end": 412,
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 413,
+          "end": 420,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
         },
         {
           "start": 449,
@@ -1411686,11 +1412565,32 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 453,
+          "end": 460,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 461,
+          "end": 462,
+          "symbol": "M:qka.a(IZ)I",
+          "original": "a",
+          "renamed": "updateAndGetResult"
+        },
+        {
           "start": 545,
           "end": 548,
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 549,
+          "end": 556,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
         },
         {
           "start": 557,
@@ -1411707,6 +1412607,13 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 595,
+          "end": 602,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
           "start": 603,
           "end": 610,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
@@ -1411719,6 +1412626,13 @@
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 653,
+          "end": 660,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
         },
         {
           "start": 661,
@@ -1411735,6 +1412649,13 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 709,
+          "end": 716,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
           "start": 717,
           "end": 724,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
@@ -1411747,6 +1412668,13 @@
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 869,
+          "end": 876,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
         },
         {
           "start": 877,
@@ -1411854,11 +1412782,25 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 1698,
+          "end": 1705,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
           "start": 1803,
           "end": 1806,
           "symbol": "C:jra",
           "original": "jra",
           "renamed": "PrimitiveType"
+        },
+        {
+          "start": 1807,
+          "end": 1808,
+          "symbol": "M:jra.a(IZI)V",
+          "original": "a",
+          "renamed": "updateSocialNameDialog"
         },
         {
           "start": 1943,
@@ -1427099,7 +1428041,7 @@
       "original": "kga.java",
       "renamed": "GetPhasedEnergyBeamProjectiles.java",
       "inputSha256": "e0f6ffcc06d3731ffd30fb145b901ad91633b75d7729131877d9e2409af41d67",
-      "outputSha256": "0c8771534a8855e8250ffe1251d75ba0de8277e84b1fdadf802c74a22cbab822",
+      "outputSha256": "3f8a2c46e88ec639f4f275b06ba07f84727bdbe8859ed0e08afdef32d5fd24df",
       "edits": [
         {
           "start": 50,
@@ -1428367,6 +1429309,13 @@
           "symbol": "C:oq",
           "original": "oq",
           "renamed": "Particle"
+        },
+        {
+          "start": 8512,
+          "end": 8515,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 8549,
@@ -1435507,7 +1436456,7 @@
       "original": "kla.java",
       "renamed": "ToolkitRasterStateStack.java",
       "inputSha256": "88ed42eeb7bfcb45d41434ab2208b45de72ea04808dbeb30081241f47db74444",
-      "outputSha256": "31ed04d7f3527bcb94cacf6be1590cb89721e2ad0058af4f305169f5b6d01b35",
+      "outputSha256": "471db0f471a29c6a3e539fcc4f42cc3778c95c159d10ac6a7cd19448131e133c",
       "edits": [
         {
           "start": 50,
@@ -1435564,6 +1436513,20 @@
           "symbol": "F:kla.field_c:Laja;",
           "original": "field_c",
           "renamed": "target"
+        },
+        {
+          "start": 168,
+          "end": 171,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
+        },
+        {
+          "start": 172,
+          "end": 179,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
         },
         {
           "start": 193,
@@ -1435634,6 +1436597,20 @@
           "symbol": "M:ha.a(Laja;Z)V",
           "original": "a",
           "renamed": "setRenderTarget"
+        },
+        {
+          "start": 502,
+          "end": 509,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
+          "start": 513,
+          "end": 516,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 551,
@@ -1436637,6 +1437614,34 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 4795,
+          "end": 4802,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
+          "start": 4806,
+          "end": 4809,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
+        },
+        {
+          "start": 4853,
+          "end": 4860,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
+          "start": 4929,
+          "end": 4936,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
           "start": 4956,
           "end": 4959,
           "symbol": "M:kla.<init>(Lha;)V",
@@ -1436677,6 +1437682,20 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 5299,
+          "end": 5306,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
+          "start": 5313,
+          "end": 5316,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         }
       ]
     },
@@ -1442524,7 +1443543,7 @@
       "original": "ku.java",
       "renamed": "LegacyOpenGlUnlitEffect.java",
       "inputSha256": "cc12737ff56251308bb9eefbe957298a312e957f00574925089d610247833463",
-      "outputSha256": "c18e572dff4d9cecefee812bdc10f7a5618b4fc9b59d97441deee771c71d4914",
+      "outputSha256": "9b7d69ad92aac62da052c9505e5723c9b4b6bdaf074b93740818b0fe93db471c",
       "edits": [
         {
           "start": 50,
@@ -1442737,6 +1443756,13 @@
           "renamed": "ToolkitRasterStateStack"
         },
         {
+          "start": 1809,
+          "end": 1816,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
           "start": 1879,
           "end": 1881,
           "symbol": "C:sn",
@@ -1442791,6 +1443817,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "ActiveIconBorderRenderer"
+        },
+        {
+          "start": 2064,
+          "end": 2071,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         },
         {
           "start": 2085,
@@ -1450179,7 +1451212,7 @@
       "original": "lba.java",
       "renamed": "GetUseFilledPolygons.java",
       "inputSha256": "1120a9fffc9718254091ae093b4e057fc2c49cb1d0364f966bb653e713cd9a17",
-      "outputSha256": "fa52ff45abb7ce5894e357b8e4ab01c88004a8b9efa2abb987604d81330c0971",
+      "outputSha256": "977d926e1bf3d66818c2879a6866a5531e24fa2770f1b7a7050922a1f12698fa",
       "edits": [
         {
           "start": 50,
@@ -1450343,6 +1451376,13 @@
           "renamed": "ToolkitRasterStateStack"
         },
         {
+          "start": 1546,
+          "end": 1553,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
           "start": 1563,
           "end": 1565,
           "symbol": "C:dn",
@@ -1450355,6 +1451395,13 @@
           "symbol": "C:kla",
           "original": "kla",
           "renamed": "ToolkitRasterStateStack"
+        },
+        {
+          "start": 1580,
+          "end": 1587,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
         }
       ]
     },
@@ -1472086,7 +1473133,7 @@
       "original": "lrb.java",
       "renamed": "SetShipTeamAction.java",
       "inputSha256": "77e6ea1b5774dc5b0f273a54ede11e29c2e25c59fe36a2ee3e9796365566ae9b",
-      "outputSha256": "9d073057dd6da05a54a093ff42c4e546850e72973c7e2fb7dcad7f0b2ac81b00",
+      "outputSha256": "af33b90a9088a3b2fc3d8e48e4b6f4fbaa76d7950ca6191286505b7115cdd936",
       "edits": [
         {
           "start": 50,
@@ -1472115,6 +1473162,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "BodyIdReferences"
+        },
+        {
+          "start": 98,
+          "end": 101,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 154,
@@ -1472605,6 +1473659,13 @@
           "symbol": "M:rna.b(Lfaa;I)V",
           "original": "b",
           "renamed": "writeState"
+        },
+        {
+          "start": 5857,
+          "end": 5860,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 5897,
@@ -1473207,7 +1474268,7 @@
       "original": "ls.java",
       "renamed": "GetMissionTerrainNebulaProbability.java",
       "inputSha256": "72e991d78da5248d3a5315f4b023c37bad23c0a0dda2b13eeb7d16600c9b6a03",
-      "outputSha256": "62cde952555b5d1674524e41740a59fa8fba85e6ea2aeb772b14b35f969e4909",
+      "outputSha256": "3bf4bff7f5a0f7b2e286f9c242d585bfa8c944e967404d7f1aab23ac692dcdea",
       "edits": [
         {
           "start": 50,
@@ -1473222,6 +1474283,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 158,
+          "end": 165,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         },
         {
           "start": 172,
@@ -1473348,6 +1474416,13 @@
           "symbol": "M:dma.a(IIIIII)V",
           "original": "a",
           "renamed": "blurRectangle"
+        },
+        {
+          "start": 792,
+          "end": 799,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         },
         {
           "start": 831,
@@ -1473488,6 +1474563,13 @@
           "symbol": "P:ls.a([Lnc;I)Lnc;#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2508,
+          "end": 2515,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         }
       ]
     },
@@ -1478689,16 +1479771,30 @@
     },
     {
       "original": "mba.java",
-      "renamed": "mba.java",
+      "renamed": "ReferenceTrackingControl.java",
       "inputSha256": "334bc8feda484fb2d63d747f7adc7d9457781d96f8c961f92c7dfc78054c5f5e",
-      "outputSha256": "3c763529cb8866c421466f98ffe4dd0f0f12ab2c1d3e83b3fcd2afc961dadca3",
+      "outputSha256": "2ec8453d1d650b5ef60a1edd0a04546cd4e51851e4a08f5801817d857ea9aa00",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
+        },
         {
           "start": 67,
           "end": 69,
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "MenuInputState"
+        },
+        {
+          "start": 126,
+          "end": 127,
+          "symbol": "M:mba.a(I)V",
+          "original": "a",
+          "renamed": "endReferenceTracking"
         },
         {
           "start": 205,
@@ -1478708,11 +1479804,25 @@
           "renamed": "GetMissionTerrainNebulaProbability"
         },
         {
+          "start": 208,
+          "end": 215,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
+        },
+        {
           "start": 261,
           "end": 263,
           "symbol": "C:ls",
           "original": "ls",
           "renamed": "GetMissionTerrainNebulaProbability"
+        },
+        {
+          "start": 264,
+          "end": 271,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         },
         {
           "start": 311,
@@ -1484041,7 +1485151,7 @@
       "original": "mea.java",
       "renamed": "OpenGlPostEffect.java",
       "inputSha256": "4014bfd0bb83f2363d8021112f2931845b6e31426c1bdf809799de9f06fbb9c3",
-      "outputSha256": "80e08aa62c9d5943a4a56db35d90b8e9284f23dac5022dbbd05ab3e3435bf662",
+      "outputSha256": "7c912ab2142ca360aea00a8034984cdc4df0a538a0fb5fe07926a8ff93f3ff46",
       "edits": [
         {
           "start": 53,
@@ -1484226,6 +1485336,13 @@
           "renamed": "GetThrusterSmallForce"
         },
         {
+          "start": 2714,
+          "end": 2717,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
           "start": 2748,
           "end": 2751,
           "symbol": "C:idb",
@@ -1484245,6 +1485362,13 @@
           "symbol": "C:lla",
           "original": "lla",
           "renamed": "GzipCodec"
+        },
+        {
+          "start": 2973,
+          "end": 2976,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 3005,
@@ -1484268,6 +1485392,13 @@
           "renamed": "ActivateSelfDestructOrderDefinition"
         },
         {
+          "start": 3132,
+          "end": 3135,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
           "start": 3162,
           "end": 3165,
           "symbol": "C:deb",
@@ -1484280,6 +1485411,13 @@
           "symbol": "C:idb",
           "original": "idb",
           "renamed": "GetThrusterSmallForce"
+        },
+        {
+          "start": 3298,
+          "end": 3301,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 3330,
@@ -1484317,6 +1485455,13 @@
           "renamed": "GzipCodec"
         },
         {
+          "start": 3683,
+          "end": 3686,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
           "start": 3717,
           "end": 3720,
           "symbol": "C:lla",
@@ -1484329,6 +1485474,13 @@
           "symbol": "C:deb",
           "original": "deb",
           "renamed": "LaserWeaponDefinition"
+        },
+        {
+          "start": 3820,
+          "end": 3823,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 3852,
@@ -1484350,6 +1485502,13 @@
           "symbol": "C:lla",
           "original": "lla",
           "renamed": "GzipCodec"
+        },
+        {
+          "start": 4035,
+          "end": 4038,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
         },
         {
           "start": 4065,
@@ -1488135,7 +1489294,7 @@
       "original": "mib.java",
       "renamed": "CarouselCommongameInfo.java",
       "inputSha256": "fdf0cb05033e8340a592e7c6e19f004fd6391d964d7eca9941607832dbf1f495",
-      "outputSha256": "4385f87bd5d7f26dd0b717f24970a1095d7cd11f912a26e5267f669981b9eda8",
+      "outputSha256": "1a5e0be08d87e9d9bd99dc9529ccce4e249ddaa892a4eff8415591c72dfdadfe",
       "edits": [
         {
           "start": 97,
@@ -1491477,6 +1492636,20 @@
           "symbol": "C:tga",
           "original": "tga",
           "renamed": "ValidatedTextField"
+        },
+        {
+          "start": 26259,
+          "end": 26262,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
+        },
+        {
+          "start": 26263,
+          "end": 26264,
+          "symbol": "M:mba.a(I)V",
+          "original": "a",
+          "renamed": "endReferenceTracking"
         },
         {
           "start": 26318,
@@ -1513065,7 +1514238,7 @@
       "original": "mla.java",
       "renamed": "SetAutoAfkTimeout.java",
       "inputSha256": "f665d9d8b6bceb4fe7c5131935860e5f04e711d3690d2d4a76aaaaa481acd23d",
-      "outputSha256": "7a747da3c30bc41d060cc3c7f014bdb85e7670e721b0972e4fd147c7fc2881c8",
+      "outputSha256": "25fb3613c493d931decdfe3ad73acc51c54ab21a97125e95bb8012baac804402",
       "edits": [
         {
           "start": 69,
@@ -1513208,6 +1514381,34 @@
           "renamed": "GpuNativeHeap"
         },
         {
+          "start": 917,
+          "end": 920,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 921,
+          "end": 928,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 948,
+          "end": 951,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 952,
+          "end": 959,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
           "start": 966,
           "end": 969,
           "symbol": "C:gdb",
@@ -1513226,6 +1514427,34 @@
           "end": 989,
           "symbol": "F:eab.field_l:[Lau;",
           "original": "field_l",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 1041,
+          "end": 1044,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 1045,
+          "end": 1052,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 1080,
+          "end": 1083,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 1084,
+          "end": 1091,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
           "renamed": "cacheIndexFiles"
         },
         {
@@ -1513276,6 +1514505,20 @@
           "symbol": "C:cba",
           "original": "cba",
           "renamed": "GpuNativeHeap"
+        },
+        {
+          "start": 1267,
+          "end": 1270,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 1271,
+          "end": 1278,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
         },
         {
           "start": 1331,
@@ -1514646,7 +1515889,7 @@
       "original": "mna.java",
       "renamed": "BombletSprayWeaponDefinition.java",
       "inputSha256": "bcef4ed8b2cc6045965c098e02de42d6e7a09ea495d8d7ef3ce79f94b8d4f297",
-      "outputSha256": "e41b7822d5562b5211b4026dfc5686b47dbe7724daf63cab6c0eccda7dd50bd7",
+      "outputSha256": "c678de09f9109512a26ed8b820d4cfc2c3fdc48c0f25681cdaed8e2e9da2f0be",
       "edits": [
         {
           "start": 50,
@@ -1514675,6 +1515918,13 @@
           "symbol": "M:mna.c(I)I",
           "original": "c",
           "renamed": "getAimSpeed"
+        },
+        {
+          "start": 339,
+          "end": 342,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 422,
@@ -1521822,7 +1523072,7 @@
       "original": "ms.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "d7f28737ad996a612a78ae8f91d55de6a86e0f27408afec83e88af55c38e0b74",
-      "outputSha256": "51de0e4be17515b4d77ffae7818ec6874d8cb859de91f2e1dbf44dcd9cd4cbac",
+      "outputSha256": "a5c4c78617c1015afd016ac1b6333e5f430e474f95b70095bd6cd4fc097d6b42",
       "edits": [
         {
           "start": 53,
@@ -1522931,6 +1524181,20 @@
           "renamed": "GrappleLauncherBehaviour"
         },
         {
+          "start": 6720,
+          "end": 6723,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 6724,
+          "end": 6731,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
+        },
+        {
           "start": 6734,
           "end": 6737,
           "symbol": "C:uhb",
@@ -1522999,6 +1524263,20 @@
           "symbol": "C:kwa",
           "original": "kwa",
           "renamed": "GetMassDriverReload"
+        },
+        {
+          "start": 6950,
+          "end": 6953,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 6954,
+          "end": 6961,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
         },
         {
           "start": 6973,
@@ -1523106,6 +1524384,20 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 7573,
+          "end": 7576,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 7577,
+          "end": 7584,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
+        },
+        {
           "start": 7599,
           "end": 7602,
           "symbol": "C:poa",
@@ -1523174,6 +1524466,20 @@
           "symbol": "C:dt",
           "original": "dt",
           "renamed": "GetSalvoUsesAllEnergy"
+        },
+        {
+          "start": 7791,
+          "end": 7794,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 7795,
+          "end": 7802,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
         },
         {
           "start": 7804,
@@ -1523328,6 +1524634,20 @@
           "symbol": "C:gdb",
           "original": "gdb",
           "renamed": "BufferedFile"
+        },
+        {
+          "start": 8441,
+          "end": 8444,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 8445,
+          "end": 8452,
+          "symbol": "F:btb.field_b:Lasb;",
+          "original": "field_b",
+          "renamed": "commonUiArchive"
         },
         {
           "start": 8471,
@@ -1531400,7 +1532720,7 @@
       "original": "nc.java",
       "renamed": "ConsoleValue.java",
       "inputSha256": "c3fd43487517ca18a6491f7a1f7700605d12ad12a2a950176dacb376c99d0a1b",
-      "outputSha256": "4acc506a2cd8ab362500399de6a6295a24f95df63c9219a06469dbd467025c0e",
+      "outputSha256": "1b0bb2b1497e8ea203c6734b7568d5b42f221ea832553cac77cdd00b3e6323e6",
       "edits": [
         {
           "start": 50,
@@ -1531786,6 +1533106,13 @@
           "symbol": "C:ls",
           "original": "ls",
           "renamed": "GetMissionTerrainNebulaProbability"
+        },
+        {
+          "start": 2455,
+          "end": 2462,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         },
         {
           "start": 2603,
@@ -1540708,7 +1542035,7 @@
       "original": "nkb.java",
       "renamed": "GetDebrisThrowable.java",
       "inputSha256": "08bbe0f1e582137b079e327227dc8d34c20670ebdb41fe8efa65d421e1bfcaea",
-      "outputSha256": "b1aa16ccf2dd5616bba9acd955d2c43353c5ea40aee5e8fa5be8bee16e7fcbaf",
+      "outputSha256": "7fb6e91e3924aaefa145abd2b23aec7ae2086e36e72676ffbdceb2546a69dce4",
       "edits": [
         {
           "start": 50,
@@ -1540921,6 +1542248,13 @@
           "renamed": "ToolkitRasterStateStack"
         },
         {
+          "start": 1770,
+          "end": 1777,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
           "start": 1848,
           "end": 1850,
           "symbol": "C:dn",
@@ -1540935,6 +1542269,13 @@
           "renamed": "SetSniperCannonFireForce"
         },
         {
+          "start": 1866,
+          "end": 1873,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
+        },
+        {
           "start": 1887,
           "end": 1889,
           "symbol": "C:dn",
@@ -1540947,6 +1542288,13 @@
           "symbol": "C:kla",
           "original": "kla",
           "renamed": "ToolkitRasterStateStack"
+        },
+        {
+          "start": 1904,
+          "end": 1911,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
         },
         {
           "start": 1930,
@@ -1551750,10 +1553098,24 @@
     },
     {
       "original": "nqa.java",
-      "renamed": "nqa.java",
+      "renamed": "DequeReferenceTracker.java",
       "inputSha256": "c39d4b79d6a0230dece252e1481671e5d52d0fd2de9c2e279d45c1bfaa22706b",
-      "outputSha256": "7b6e011ee6a797bd9d457d3dbcdf193bf75aba68469796f914f27af960f07b7f",
+      "outputSha256": "d62d77383f93611dd39a44db817e9d5931c314a9f48ad6bca9301d23a4c5c9c0",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
+          "start": 178,
+          "end": 179,
+          "symbol": "M:nqa.a(Lij;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "findDuplicateReference"
+        },
         {
           "start": 180,
           "end": 182,
@@ -1551781,6 +1553143,13 @@
           "symbol": "C:ls",
           "original": "ls",
           "renamed": "GetMissionTerrainNebulaProbability"
+        },
+        {
+          "start": 614,
+          "end": 621,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         },
         {
           "start": 873,
@@ -1552111,7 +1553480,7 @@
       "original": "nra.java",
       "renamed": "AwardVictoryToTeamActionFactory.java",
       "inputSha256": "9217383abf4eac5dac83b5c849002fa0540806a6608069ff51ac9c12ec8defda",
-      "outputSha256": "2a8f88b30eeb487847b0a8baf6e049a288dee6ee43ddc4d994621e223b29a6f0",
+      "outputSha256": "1e372eeb47b0a872b8d3cd2c8a36c5d20b45a9d5c4564e6fbc51265a0805efee",
       "edits": [
         {
           "start": 50,
@@ -1554942,6 +1556311,13 @@
           "renamed": "specialOrderLabels"
         },
         {
+          "start": 7466,
+          "end": 7469,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
+        },
+        {
           "start": 7489,
           "end": 7491,
           "symbol": "C:tq",
@@ -1557285,7 +1558661,7 @@
       "original": "nu.java",
       "renamed": "GetMissileLauncherEnergyUsed.java",
       "inputSha256": "21440e9d88339636c1f1d49985a6e22428601885dbcb8f5d7a82063854df6687",
-      "outputSha256": "240291c639ef1fea5c062bac8bc11318b9ff9ffa948f1f8da438da000ea3b3e4",
+      "outputSha256": "c1da9832207315355eca29ad5c5ade755a450dc7d2c3d17829fa74c91e0371c0",
       "edits": [
         {
           "start": 50,
@@ -1557421,11 +1558797,32 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 1642,
+          "end": 1649,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
           "start": 1700,
           "end": 1703,
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 1704,
+          "end": 1711,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 1712,
+          "end": 1713,
+          "symbol": "M:qka.a(Z)Z",
+          "original": "a",
+          "renamed": "handleNameKeyEvent"
         }
       ]
     },
@@ -1563593,7 +1564990,7 @@
       "original": "oaa.java",
       "renamed": "OpenGlVertexBufferObject.java",
       "inputSha256": "7ef74f18622447069101054f6ecf87e8b6ce1064ca0e534fb73cfc04980dae12",
-      "outputSha256": "d519fc0f034362a1ab837061dd513c2d693f15a1837a65124281e826e48e7779",
+      "outputSha256": "c5be86d63d6b4ff0936b1075d4c44dd55338aa609b9430fed2b908f7bf02055d",
       "edits": [
         {
           "start": 50,
@@ -1563720,6 +1565117,13 @@
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 827,
+          "end": 834,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
         },
         {
           "start": 946,
@@ -1568930,7 +1570334,7 @@
       "original": "og.java",
       "renamed": "GetDebrisGroupColour.java",
       "inputSha256": "de7ac5c933912c8d83cccb1210ca0c91ea09e3460844ebed99942103814f97e1",
-      "outputSha256": "4ef994b1e921aed888348803159592c3d37b48416ba85e43828535dadcb1974a",
+      "outputSha256": "72e9cc2585a4788f0cdd2e1a0a54b7478279018f49986e53d4a3e845f4b36da4",
       "edits": [
         {
           "start": 50,
@@ -1569010,6 +1570414,13 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 613,
+          "end": 616,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
           "start": 946,
           "end": 952,
           "symbol": "P:og.a([Lnc;I)Lnc;#0",
@@ -1569064,7 +1570475,7 @@
       "original": "oga.java",
       "renamed": "GetPedrosRepairModeSwitchtime.java",
       "inputSha256": "deb452dcf23ed5b076e4af64caf8af38bfffd054a2d7be3a84101d7a62f63f8e",
-      "outputSha256": "ebf300ab7a03415573111bf781b7a55ee6596ae66aaf8a26df6c1f07b933d42f",
+      "outputSha256": "0a8ef2ab93dbb55dbe1dfb87970420ca65c6b227b2a02d9caecc858b0979e6f9",
       "edits": [
         {
           "start": 69,
@@ -1569263,6 +1570674,13 @@
           "renamed": "PrimitiveType"
         },
         {
+          "start": 1795,
+          "end": 1796,
+          "symbol": "M:jra.a(IZI)V",
+          "original": "a",
+          "renamed": "updateSocialNameDialog"
+        },
+        {
           "start": 1831,
           "end": 1833,
           "symbol": "C:oj",
@@ -1569331,6 +1570749,62 @@
           "symbol": "M:gdb.a(Z)V",
           "original": "a",
           "renamed": "close"
+        },
+        {
+          "start": 3361,
+          "end": 3364,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 3365,
+          "end": 3372,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 3420,
+          "end": 3423,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 3424,
+          "end": 3431,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 3482,
+          "end": 3485,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 3486,
+          "end": 3493,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
+        },
+        {
+          "start": 3551,
+          "end": 3554,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
+        },
+        {
+          "start": 3555,
+          "end": 3562,
+          "symbol": "F:btb.field_d:[Lgdb;",
+          "original": "field_d",
+          "renamed": "cacheIndexFiles"
         },
         {
           "start": 3573,
@@ -1577745,7 +1579219,7 @@
       "original": "ola.java",
       "renamed": "GpuFractalNoiseVolume.java",
       "inputSha256": "54176d3ae34033d49e18542fe79132e004f58f7ffc2c945a01123c330bf50682",
-      "outputSha256": "9e947c33b2e2473937ba8620097f364c8a81a29c8dc3a2c7bf9903570abff52e",
+      "outputSha256": "fdf843ff21f80e184414715592bfaa93fb39fa93a319b679bfe810ed3854f0d9",
       "edits": [
         {
           "start": 50,
@@ -1577760,6 +1579234,20 @@
           "symbol": "C:gna",
           "original": "gna",
           "renamed": "FractalNoiseVolumeGenerator"
+        },
+        {
+          "start": 79,
+          "end": 82,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
+        },
+        {
+          "start": 83,
+          "end": 90,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
         },
         {
           "start": 111,
@@ -1578035,6 +1579523,20 @@
           "renamed": "createIndexedSprites"
         },
         {
+          "start": 1751,
+          "end": 1758,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 1803,
+          "end": 1810,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
           "start": 1830,
           "end": 1833,
           "symbol": "M:ola.<init>()V",
@@ -1578068,6 +1579570,20 @@
           "symbol": "F:ola.field_n:[B",
           "original": "field_n",
           "renamed": "voxels"
+        },
+        {
+          "start": 2166,
+          "end": 2173,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 2177,
+          "end": 2180,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
         },
         {
           "start": 2201,
@@ -1591454,7 +1592970,7 @@
       "original": "pe.java",
       "renamed": "World.java",
       "inputSha256": "0583ff6606280eda408377c71b228e41ba2d6f2eb2dc9d397a07e3401efb9164",
-      "outputSha256": "1f4c51d8e1040513c9a61fe74d655a2e89ccd09b0399cf3551e71072ee21e463",
+      "outputSha256": "d49ce1f28dcd7d874717b47a6f5b624968e7c457ad3cf9d34fb5ba9f9940739b",
       "edits": [
         {
           "start": 71,
@@ -1605079,6 +1606595,20 @@
           "renamed": "projectiles"
         },
         {
+          "start": 151444,
+          "end": 151447,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
+          "start": 151448,
+          "end": 151449,
+          "symbol": "M:nqa.a(Lij;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "findDuplicateReference"
+        },
+        {
           "start": 151455,
           "end": 151462,
           "symbol": "F:pe.field_x:Lij;",
@@ -1605245,6 +1606775,20 @@
           "symbol": "F:pe.field_n:Lij;",
           "original": "field_n",
           "renamed": "spawnPoints"
+        },
+        {
+          "start": 152613,
+          "end": 152616,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
+          "start": 152617,
+          "end": 152618,
+          "symbol": "M:nqa.a(Lij;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "findDuplicateReference"
         },
         {
           "start": 152624,
@@ -1676308,7 +1677852,7 @@
       "original": "qga.java",
       "renamed": "AccountNameAvailabilityReplies.java",
       "inputSha256": "623ccd31972c5724130edfa1f2842f570cf2a4041a88852c435223c5ce0912fc",
-      "outputSha256": "48b587eb7a35a8780955c43d55398311c7a59d115501680d64c1b1c40194a2e9",
+      "outputSha256": "0a7950ba883ac481ec7ce820d451fbc1cac494a055e143f77f14d68df5a1cebd",
       "edits": [
         {
           "start": 50,
@@ -1676344,6 +1677888,13 @@
           "symbol": "C:gka",
           "original": "gka",
           "renamed": "SetSniperCannonFireForce"
+        },
+        {
+          "start": 762,
+          "end": 769,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
         },
         {
           "start": 831,
@@ -1680945,16 +1682496,30 @@
     },
     {
       "original": "qka.java",
-      "renamed": "qka.java",
+      "renamed": "PlayerNameEntryDialog.java",
       "inputSha256": "8119e6888adafb2eb9590cf225655594f33e8b6d21096a33d6205d7228410289",
-      "outputSha256": "e102e1c8de8a075f71c28039ea9b9729a4b49494803a9ec347b6351b200c80fe",
+      "outputSha256": "64cfc72f245fdab6e5a60b840b0ba4f298120de50cc17a83acb22d538d16c2b1",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
+        },
         {
           "start": 62,
           "end": 65,
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 94,
+          "end": 102,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 116,
@@ -1680964,11 +1682529,46 @@
           "renamed": "Widget"
         },
         {
+          "start": 120,
+          "end": 128,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
+        },
+        {
+          "start": 146,
+          "end": 154,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 168,
           "end": 171,
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 172,
+          "end": 180,
+          "symbol": "F:qka.field_xb:Lllb;",
+          "original": "field_xb",
+          "renamed": "promptWidget"
+        },
+        {
+          "start": 201,
+          "end": 202,
+          "symbol": "M:qka.a(Z)Z",
+          "original": "a",
+          "renamed": "handleNameKeyEvent"
+        },
+        {
+          "start": 703,
+          "end": 711,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 766,
@@ -1680978,11 +1682578,25 @@
           "renamed": "SetBombletSprayProjectileDamage"
         },
         {
+          "start": 806,
+          "end": 814,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 873,
           "end": 875,
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "SetClientSideDragging"
+        },
+        {
+          "start": 1067,
+          "end": 1075,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 1108,
@@ -1680999,11 +1682613,32 @@
           "renamed": "isAsciiLetter"
         },
         {
+          "start": 1169,
+          "end": 1177,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 1246,
           "end": 1249,
           "symbol": "C:haa",
           "original": "haa",
           "renamed": "GetRepairModeCooldown"
+        },
+        {
+          "start": 1313,
+          "end": 1321,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 1504,
+          "end": 1512,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 1627,
@@ -1681020,11 +1682655,32 @@
           "renamed": "isAsciiLetter"
         },
         {
+          "start": 1686,
+          "end": 1694,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 1736,
           "end": 1739,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 1784,
+          "end": 1792,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 1835,
+          "end": 1843,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 1901,
@@ -1681034,11 +1682690,32 @@
           "renamed": "text"
         },
         {
+          "start": 1916,
+          "end": 1924,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 1962,
+          "end": 1970,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 2034,
           "end": 2037,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 2078,
+          "end": 2086,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 2253,
@@ -1681048,11 +1682725,32 @@
           "renamed": "GetRepairModeCooldown"
         },
         {
+          "start": 2316,
+          "end": 2324,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 2366,
           "end": 2369,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 2414,
+          "end": 2422,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 2465,
+          "end": 2473,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 2531,
@@ -1681062,11 +1682760,32 @@
           "renamed": "text"
         },
         {
+          "start": 2546,
+          "end": 2554,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 2592,
+          "end": 2600,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 2664,
           "end": 2667,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 2708,
+          "end": 2716,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 2905,
@@ -1681076,6 +1682795,20 @@
           "renamed": "SetBombletSprayProjectileDamage"
         },
         {
+          "start": 2947,
+          "end": 2955,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 2992,
+          "end": 3000,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 3046,
           "end": 3053,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
@@ -1681083,11 +1682816,39 @@
           "renamed": "text"
         },
         {
+          "start": 3061,
+          "end": 3069,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 3101,
+          "end": 3109,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 3155,
           "end": 3158,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 3193,
+          "end": 3201,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 3331,
+          "end": 3339,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 3366,
@@ -1681104,11 +1682865,46 @@
           "renamed": "resizeStringBuilder"
         },
         {
+          "start": 3377,
+          "end": 3385,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 3413,
+          "end": 3421,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 3456,
+          "end": 3464,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 3497,
           "end": 3500,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 3539,
+          "end": 3547,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 3584,
+          "end": 3592,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 3638,
@@ -1681118,6 +1682914,20 @@
           "renamed": "text"
         },
         {
+          "start": 3653,
+          "end": 3661,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 3693,
+          "end": 3701,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 3747,
           "end": 3750,
           "symbol": "C:pma",
@@ -1681125,11 +1682935,25 @@
           "renamed": "SetBombletSprayProjectileDamage"
         },
         {
+          "start": 3785,
+          "end": 3793,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 3953,
           "end": 3955,
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "SetClientSideDragging"
+        },
+        {
+          "start": 4100,
+          "end": 4108,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 4137,
@@ -1681146,11 +1682970,25 @@
           "renamed": "isAsciiLetter"
         },
         {
+          "start": 4203,
+          "end": 4211,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 4281,
           "end": 4284,
           "symbol": "C:haa",
           "original": "haa",
           "renamed": "GetRepairModeCooldown"
+        },
+        {
+          "start": 4353,
+          "end": 4361,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 4438,
@@ -1681160,6 +1682998,20 @@
           "renamed": "SetBombletSprayProjectileDamage"
         },
         {
+          "start": 4482,
+          "end": 4490,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 4529,
+          "end": 4537,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 4587,
           "end": 4594,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
@@ -1681167,11 +1683019,39 @@
           "renamed": "text"
         },
         {
+          "start": 4602,
+          "end": 4610,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 4644,
+          "end": 4652,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 4704,
           "end": 4707,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 4744,
+          "end": 4752,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 4906,
+          "end": 4914,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 4967,
@@ -1681188,11 +1683068,32 @@
           "renamed": "isAsciiLetter"
         },
         {
+          "start": 5029,
+          "end": 5037,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 5082,
           "end": 5085,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 5124,
+          "end": 5132,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 5169,
+          "end": 5177,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 5223,
@@ -1681202,11 +1683103,32 @@
           "renamed": "text"
         },
         {
+          "start": 5238,
+          "end": 5246,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 5278,
+          "end": 5286,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 5332,
           "end": 5335,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 5370,
+          "end": 5378,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 5505,
@@ -1681223,11 +1683145,39 @@
           "renamed": "SetBombletSprayProjectileDamage"
         },
         {
+          "start": 5598,
+          "end": 5606,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 5643,
+          "end": 5651,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 5697,
           "end": 5704,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
           "original": "field_R",
           "renamed": "text"
+        },
+        {
+          "start": 5712,
+          "end": 5720,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 5752,
+          "end": 5760,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 5806,
@@ -1681237,11 +1683187,39 @@
           "renamed": "SetBombletSprayProjectileDamage"
         },
         {
+          "start": 5844,
+          "end": 5852,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 5993,
+          "end": 6001,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 6044,
           "end": 6047,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 6084,
+          "end": 6092,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 6127,
+          "end": 6135,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 6177,
@@ -1681251,11 +1683229,46 @@
           "renamed": "text"
         },
         {
+          "start": 6192,
+          "end": 6200,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 6230,
+          "end": 6238,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 6278,
           "end": 6281,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 6314,
+          "end": 6322,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 6437,
+          "end": 6438,
+          "symbol": "M:qka.a(IZ)I",
+          "original": "a",
+          "renamed": "updateAndGetResult"
+        },
+        {
+          "start": 6733,
+          "end": 6741,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
         },
         {
           "start": 6745,
@@ -1681272,6 +1683285,13 @@
           "renamed": "updateInput"
         },
         {
+          "start": 6834,
+          "end": 6842,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
+        },
+        {
           "start": 6843,
           "end": 6850,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
@@ -1681279,11 +1683299,32 @@
           "renamed": "text"
         },
         {
+          "start": 6858,
+          "end": 6866,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 6915,
           "end": 6918,
           "symbol": "C:pba",
           "original": "pba",
           "renamed": "SetDebrisPartitioned"
+        },
+        {
+          "start": 6985,
+          "end": 6993,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 7033,
+          "end": 7041,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 7091,
@@ -1681300,11 +1683341,32 @@
           "renamed": "pollKeyEvent"
         },
         {
+          "start": 7122,
+          "end": 7130,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
+        },
+        {
           "start": 7131,
           "end": 7138,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
           "original": "field_R",
           "renamed": "text"
+        },
+        {
+          "start": 7146,
+          "end": 7154,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 7220,
+          "end": 7228,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
         },
         {
           "start": 7260,
@@ -1681314,11 +1683376,46 @@
           "renamed": "SetDebrisPartitioned"
         },
         {
+          "start": 7306,
+          "end": 7314,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 7393,
+          "end": 7401,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 7434,
+          "end": 7442,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 7472,
+          "end": 7480,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
           "start": 7508,
           "end": 7511,
           "symbol": "C:pma",
           "original": "pma",
           "renamed": "SetBombletSprayProjectileDamage"
+        },
+        {
+          "start": 7546,
+          "end": 7554,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 7583,
@@ -1681335,6 +1683432,20 @@
           "renamed": "resizeStringBuilder"
         },
         {
+          "start": 7599,
+          "end": 7607,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 7630,
+          "end": 7638,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 7672,
           "end": 7675,
           "symbol": "C:dtb",
@@ -1681349,11 +1683460,32 @@
           "renamed": "SetClientSideDragging"
         },
         {
+          "start": 7725,
+          "end": 7733,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 7770,
+          "end": 7778,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 7786,
           "end": 7788,
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "SetClientSideDragging"
+        },
+        {
+          "start": 7839,
+          "end": 7847,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 7879,
@@ -1681363,6 +1683495,13 @@
           "renamed": "SetClientSideDragging"
         },
         {
+          "start": 7932,
+          "end": 7940,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 7948,
           "end": 7950,
           "symbol": "C:jl",
@@ -1681370,11 +1683509,25 @@
           "renamed": "SetClientSideDragging"
         },
         {
+          "start": 8005,
+          "end": 8013,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 8053,
           "end": 8055,
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "SetClientSideDragging"
+        },
+        {
+          "start": 8102,
+          "end": 8110,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 8118,
@@ -1681389,6 +1683542,13 @@
           "symbol": "C:jl",
           "original": "jl",
           "renamed": "SetClientSideDragging"
+        },
+        {
+          "start": 8231,
+          "end": 8239,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
         },
         {
           "start": 8247,
@@ -1681412,11 +1683572,32 @@
           "renamed": "SetBombletSprayProjectileDamage"
         },
         {
+          "start": 8513,
+          "end": 8521,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
           "start": 8577,
           "end": 8584,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
           "original": "field_R",
           "renamed": "text"
+        },
+        {
+          "start": 8592,
+          "end": 8600,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 8642,
+          "end": 8645,
+          "symbol": "M:qka.<init>(IIIILjava/lang/String;Lllb;Lllb;Lllb;)V",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
         },
         {
           "start": 8709,
@@ -1681440,6 +1683621,20 @@
           "renamed": "Widget"
         },
         {
+          "start": 9359,
+          "end": 9367,
+          "symbol": "F:qka.field_wb:I",
+          "original": "field_wb",
+          "renamed": "result"
+        },
+        {
+          "start": 9402,
+          "end": 9410,
+          "symbol": "F:qka.field_xb:Lllb;",
+          "original": "field_xb",
+          "renamed": "promptWidget"
+        },
+        {
           "start": 9417,
           "end": 9420,
           "symbol": "C:llb",
@@ -1681454,11 +1683649,32 @@
           "renamed": "addChild"
         },
         {
+          "start": 9470,
+          "end": 9478,
+          "symbol": "F:qka.field_xb:Lllb;",
+          "original": "field_xb",
+          "renamed": "promptWidget"
+        },
+        {
+          "start": 9496,
+          "end": 9504,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
+        },
+        {
           "start": 9511,
           "end": 9514,
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 9543,
+          "end": 9551,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
         },
         {
           "start": 9587,
@@ -1681468,11 +1683684,46 @@
           "renamed": "addChild"
         },
         {
+          "start": 9600,
+          "end": 9608,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
+        },
+        {
+          "start": 9626,
+          "end": 9634,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
+        },
+        {
+          "start": 9665,
+          "end": 9673,
+          "symbol": "F:qka.field_yb:Ljava/lang/StringBuilder;",
+          "original": "field_yb",
+          "renamed": "inputBuffer"
+        },
+        {
+          "start": 9725,
+          "end": 9733,
+          "symbol": "F:qka.field_xb:Lllb;",
+          "original": "field_xb",
+          "renamed": "promptWidget"
+        },
+        {
           "start": 9734,
           "end": 9735,
           "symbol": "M:llb.e(I)I",
           "original": "e",
           "renamed": "getPreferredWidth"
+        },
+        {
+          "start": 9756,
+          "end": 9764,
+          "symbol": "F:qka.field_xb:Lllb;",
+          "original": "field_xb",
+          "renamed": "promptWidget"
         },
         {
           "start": 9765,
@@ -1681487,6 +1683738,13 @@
           "symbol": "C:nna",
           "original": "nna",
           "renamed": "DialogMessagePanel"
+        },
+        {
+          "start": 9817,
+          "end": 9825,
+          "symbol": "F:qka.field_vb:Lllb;",
+          "original": "field_vb",
+          "renamed": "inputWidget"
         },
         {
           "start": 9826,
@@ -1686163,7 +1688421,7 @@
       "original": "qp.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "5280efa63dc0a48edf8704414dd62d07ec56df8d447a4975f1ce9612a9dd3538",
-      "outputSha256": "ef1d6e916db6b012d2268a9fb28bdb76806e1eabc89c5a5d6eaf734b90f392bb",
+      "outputSha256": "1a9396c8e2dbf49c5a59f5b07f97711cc87732dcadaffd48b28c1a02ec298fc7",
       "edits": [
         {
           "start": 50,
@@ -1687797,6 +1690055,20 @@
           "renamed": "GpuFractalNoiseVolume"
         },
         {
+          "start": 20700,
+          "end": 20707,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 20714,
+          "end": 20717,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
+        },
+        {
           "start": 20718,
           "end": 20720,
           "symbol": "C:re",
@@ -1687942,6 +1690214,20 @@
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "GpuFractalNoiseVolume"
+        },
+        {
+          "start": 21070,
+          "end": 21077,
+          "symbol": "F:ola.field_p:Lqka;",
+          "original": "field_p",
+          "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 21084,
+          "end": 21087,
+          "symbol": "C:qka",
+          "original": "qka",
+          "renamed": "PlayerNameEntryDialog"
         },
         {
           "start": 21088,
@@ -1689821,7 +1692107,7 @@
       "original": "qqa.java",
       "renamed": "GrayscaleTextureOperation.java",
       "inputSha256": "aec3f2eaf919c4a0f9a1e26505995b9b27939afe585cf9ecd662a435565b37d9",
-      "outputSha256": "56db15557dc65a398c42899a353db3ee431782cf6a42d3320013bc96ba93c4b1",
+      "outputSha256": "2539878431ac160f3ed1c17b8314f352d9a6c99a7caa9de582ca682b3d4ba7ee",
       "edits": [
         {
           "start": 50,
@@ -1689899,6 +1692185,13 @@
           "symbol": "M:qqa.e(B)V",
           "original": "e",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 598,
+          "end": 601,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
         },
         {
           "start": 646,
@@ -1694896,7 +1697189,7 @@
       "original": "qua.java",
       "renamed": "ComponentAttachmentPlan.java",
       "inputSha256": "a6f01957ea5fc9385712b2534a5f8b2af031e926d39a64f26d4cea99ba04a9e0",
-      "outputSha256": "39d4167639d6cc74149aef81f372633d2ce8cb57f20c201efab26a34b3147e52",
+      "outputSha256": "818b6272e97344671e682d6e172294a2a554ec9f6b73e0910688dc1de6cd5639",
       "edits": [
         {
           "start": 50,
@@ -1695347,6 +1697640,13 @@
           "renamed": "ActiveIconBorderRenderer"
         },
         {
+          "start": 9503,
+          "end": 9510,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
           "start": 9514,
           "end": 9517,
           "symbol": "C:lrb",
@@ -1695366,6 +1697666,13 @@
           "symbol": "C:gka",
           "original": "gka",
           "renamed": "SetSniperCannonFireForce"
+        },
+        {
+          "start": 9706,
+          "end": 9713,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
         },
         {
           "start": 9717,
@@ -1695396,6 +1697703,13 @@
           "renamed": "ToolkitRasterStateStack"
         },
         {
+          "start": 9804,
+          "end": 9811,
+          "symbol": "F:kla.field_d:Ldfa;",
+          "original": "field_d",
+          "renamed": "idleAccountRequest"
+        },
+        {
           "start": 9840,
           "end": 9843,
           "symbol": "C:jra",
@@ -1695415,6 +1697729,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "ActiveIconBorderRenderer"
+        },
+        {
+          "start": 9925,
+          "end": 9932,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         },
         {
           "start": 9944,
@@ -1727734,7 +1730055,7 @@
       "original": "rt.java",
       "renamed": "ColorRowCache.java",
       "inputSha256": "56d8799ff1cd7f18e530e6705c8afaf35b29cc43520cc75ed6adbb7303e0feb9",
-      "outputSha256": "e6e25bfe6bf3ee73e84e9ee9b92f725d5a7f646d1ecc1c013c868dd5a21bb2cd",
+      "outputSha256": "f62d610c9b42c3a50a086c4f1ebb227922dce54519dd94b933860c7fe21e818d",
       "edits": [
         {
           "start": 50,
@@ -1728003,6 +1730324,13 @@
           "renamed": "ActiveIconBorderRenderer"
         },
         {
+          "start": 3522,
+          "end": 3529,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
           "start": 3533,
           "end": 3536,
           "symbol": "C:lrb",
@@ -1728036,6 +1730364,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "ActiveIconBorderRenderer"
+        },
+        {
+          "start": 3856,
+          "end": 3863,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         },
         {
           "start": 3867,
@@ -1728078,7 +1730413,7 @@
       "original": "rta.java",
       "renamed": "GetMissileLauncherRandomness.java",
       "inputSha256": "251c3fce189fd317d2d410ab2e1788308561b3e281836fc828db22f4c78d1c8c",
-      "outputSha256": "6711a9d22921547ff8dec05b9f220cf5d7726af8dd922ddf0c0b32d3a7ac8dde",
+      "outputSha256": "f5c08cf81bb240208d947e360a661f4de1e86b13301aceb6a5e96e2950a60235",
       "edits": [
         {
           "start": 50,
@@ -1728270,6 +1730605,13 @@
           "renamed": "ActiveIconBorderRenderer"
         },
         {
+          "start": 1947,
+          "end": 1954,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
           "start": 2025,
           "end": 2028,
           "symbol": "C:lrb",
@@ -1728282,6 +1730624,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "ActiveIconBorderRenderer"
+        },
+        {
+          "start": 2043,
+          "end": 2050,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         }
       ]
     },
@@ -1791552,7 +1793901,7 @@
       "original": "tjb.java",
       "renamed": "QuickChatMenuWidget.java",
       "inputSha256": "55fe2b4d2291ac8c495f9f9c950ed12c8a933807fcf5b0957625c489e4fad43d",
-      "outputSha256": "64cead6e7c7906574f9d7285818e1aa9ce4a9478338f5da46c3ac7390860c72d",
+      "outputSha256": "5b27b216152db08ab6e71f68553214003e91ccc641f544e3d2411c56962aff32",
       "edits": [
         {
           "start": 50,
@@ -1793128,6 +1795477,13 @@
           "symbol": "C:ls",
           "original": "ls",
           "renamed": "GetMissionTerrainNebulaProbability"
+        },
+        {
+          "start": 13032,
+          "end": 13039,
+          "symbol": "F:ls.field_q:Z",
+          "original": "field_q",
+          "renamed": "referenceTrackingEnabled"
         },
         {
           "start": 13508,
@@ -1847956,7 +1850312,7 @@
       "original": "ug.java",
       "renamed": "SetFogOfWarOn.java",
       "inputSha256": "4bf494d1caa130b0cf8ee14e0a4e5a826a1c7d159152f51b8f502d41dc05c948",
-      "outputSha256": "21b9886f131997ef79837bcfa23f6d8e46a1358111e713cee2814d453edbd256",
+      "outputSha256": "8b242d9563fa5b942d40d03c1803ab9fc57a5f810406d0c8402b67cd338e21bd",
       "edits": [
         {
           "start": 50,
@@ -1848118,6 +1850474,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "SetRepairModeCooldown"
+        },
+        {
+          "start": 1877,
+          "end": 1880,
+          "symbol": "C:btb",
+          "original": "btb",
+          "renamed": "CommonUiArchiveResources"
         },
         {
           "start": 1954,
@@ -1849455,6 +1851818,13 @@
           "symbol": "C:nnb",
           "original": "nnb",
           "renamed": "ArmSelfDestructOrderDefinition"
+        },
+        {
+          "start": 16506,
+          "end": 16509,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 16590,
@@ -1854942,7 +1857312,7 @@
       "original": "ukb.java",
       "renamed": "SetPhasedEnergyBeamPulsetime.java",
       "inputSha256": "d93431d567a4a08e3fc0fcc950a9ec757e86d1e9f817024f9f55dbb4448c45ef",
-      "outputSha256": "874ef45d79aee1470b4bee94899368ccb58177c32137ced227075bd2ede5b73e",
+      "outputSha256": "aa299325d6ce33e0467b9c11adb840c549b86ba096a3c731fea7dc5c3df60928",
       "edits": [
         {
           "start": 50,
@@ -1855027,6 +1857397,13 @@
           "symbol": "C:isa",
           "original": "isa",
           "renamed": "SetReverbGain"
+        },
+        {
+          "start": 1315,
+          "end": 1318,
+          "symbol": "C:dfa",
+          "original": "dfa",
+          "renamed": "AccountRequestPhase"
         },
         {
           "start": 1414,
@@ -1882326,7 +1884703,7 @@
       "original": "vjb.java",
       "renamed": "FloatNoiseSliceGenerator.java",
       "inputSha256": "3d10a27bc44baac3794c30394c4d451dacef84915d7ad3ae7977d30ac4a61d22",
-      "outputSha256": "d0bf879c4a7eac6d38a448131bdcc77cf95a041d2c68c79c3149103e1ba84fed",
+      "outputSha256": "a7a8ce8aaabf2d9dc0345dd58acb6f0053c0c813526ed532956843cc30b0ca78",
       "edits": [
         {
           "start": 53,
@@ -1882362,6 +1884739,20 @@
           "symbol": "M:lnb.d(I)V",
           "original": "d",
           "renamed": "closePlayerContextMenu"
+        },
+        {
+          "start": 235,
+          "end": 238,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 239,
+          "end": 240,
+          "symbol": "M:ebb.a(B)V",
+          "original": "a",
+          "renamed": "closeNameEntryDialog"
         },
         {
           "start": 264,
@@ -1882418,6 +1884809,20 @@
           "symbol": "M:lnb.d(I)V",
           "original": "d",
           "renamed": "closePlayerContextMenu"
+        },
+        {
+          "start": 385,
+          "end": 388,
+          "symbol": "C:ebb",
+          "original": "ebb",
+          "renamed": "ShipBodyFactoryHolder"
+        },
+        {
+          "start": 389,
+          "end": 390,
+          "symbol": "M:ebb.a(B)V",
+          "original": "a",
+          "renamed": "closeNameEntryDialog"
         },
         {
           "start": 412,
@@ -1906830,7 +1909235,7 @@
       "original": "wf.java",
       "renamed": "GameMenuScreen.java",
       "inputSha256": "92ff4912852c4a2de46e0f31b178890ac4a401dfee8c5fd3edd3699e55db0fad",
-      "outputSha256": "aa267717ff2506994654917d3c9db7373b7e5f416285822c0585ba68f165908e",
+      "outputSha256": "9e12821f3996cacfc56d58fefa3955f4b68da883c0dfebe05c5a9b7a71812f1b",
       "edits": [
         {
           "start": 50,
@@ -1908196,6 +1910601,13 @@
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "PlayerGameData"
+        },
+        {
+          "start": 12030,
+          "end": 12033,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
         },
         {
           "start": 12044,
@@ -1910599,6 +1913011,13 @@
           "renamed": "isMouseButtonHeld"
         },
         {
+          "start": 36005,
+          "end": 36008,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
+        },
+        {
           "start": 36020,
           "end": 36023,
           "symbol": "C:kdb",
@@ -1910625,6 +1913044,13 @@
           "symbol": "F:fa.field_d:[Lgd;",
           "original": "field_d",
           "renamed": "soundEffects"
+        },
+        {
+          "start": 36128,
+          "end": 36131,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
         },
         {
           "start": 36147,
@@ -1918156,7 +1920582,7 @@
       "original": "wha.java",
       "renamed": "AsteroidFactory.java",
       "inputSha256": "8ad6da0189e2732fffaae3a6f59fc33d8aa4292e00d3286f353ec02856a38843",
-      "outputSha256": "2d628e90920a95da926cb1548847d3f18801924f218b6ed6f4941f881bf7f352",
+      "outputSha256": "119ddbfbe405f7fea7dfd47b5d9a8913837fb93993c6fc1b95c5dbfc06aa404e",
       "edits": [
         {
           "start": 50,
@@ -1919881,6 +1922307,13 @@
           "renamed": "currentTimeMillis"
         },
         {
+          "start": 9560,
+          "end": 9563,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
+        },
+        {
           "start": 9572,
           "end": 9579,
           "symbol": "F:ae.field_c:I",
@@ -1920019,6 +1922452,13 @@
           "symbol": "C:ro",
           "original": "ro",
           "renamed": "AppletCookieReader"
+        },
+        {
+          "start": 11091,
+          "end": 11094,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
         },
         {
           "start": 11103,
@@ -1920301,6 +1922741,13 @@
           "renamed": "GetMassDriverAimspeed"
         },
         {
+          "start": 12661,
+          "end": 12664,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
+        },
+        {
           "start": 12673,
           "end": 12674,
           "symbol": "M:ae.a(ZIII)V",
@@ -1920334,6 +1922781,13 @@
           "symbol": "C:uia",
           "original": "uia",
           "renamed": "OpenGlFaceAttachment"
+        },
+        {
+          "start": 12760,
+          "end": 12763,
+          "symbol": "C:mba",
+          "original": "mba",
+          "renamed": "ReferenceTrackingControl"
         },
         {
           "start": 12772,
@@ -1920930,7 +1923384,7 @@
       "original": "wi.java",
       "renamed": "GameApplet.java",
       "inputSha256": "a77ef25bc18b0bd25f666da934aa8703437df28d64d4fb16d37d8d38ab1af27d",
-      "outputSha256": "4ffa564ed9b56dc23c685c614b7a98382d37d4e9ace3b5aff7af5496d27fec33",
+      "outputSha256": "59639ee07e2fc4887e0ffe43e96b8641c95995bfaf381617ba2eaefc2a811a12",
       "edits": [
         {
           "start": 60,
@@ -1921164,6 +1923618,13 @@
           "renamed": "SetReverbDamp"
         },
         {
+          "start": 4247,
+          "end": 4250,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
           "start": 4350,
           "end": 4351,
           "symbol": "M:wi.a(I)V",
@@ -1921304,6 +1923765,13 @@
           "renamed": "GetMissileLauncherRandomness"
         },
         {
+          "start": 8415,
+          "end": 8418,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
+        },
+        {
           "start": 8445,
           "end": 8448,
           "symbol": "C:aob",
@@ -1921316,6 +1923784,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 9406,
+          "end": 9409,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
         },
         {
           "start": 9900,
@@ -1921533,6 +1924008,13 @@
           "symbol": "C:bsa",
           "original": "bsa",
           "renamed": "SetReverbDamp"
+        },
+        {
+          "start": 12380,
+          "end": 12383,
+          "symbol": "C:nqa",
+          "original": "nqa",
+          "renamed": "DequeReferenceTracker"
         },
         {
           "start": 12410,
@@ -1930601,7 +1933083,7 @@
       "original": "wnb.java",
       "renamed": "LoadBlackboxRecording.java",
       "inputSha256": "603cf8ad3d19eddf23d639b870692de61174172fc28cc10386d4350edf633232",
-      "outputSha256": "ab42daa0da556be657fbf102f0682cd7e59eef8dfd76a65a4d8ba3f67c0199d5",
+      "outputSha256": "6d0566fb03766e1ea850e158bf059964ba740d83d03e2eeb93b78b8afa65f127",
       "edits": [
         {
           "start": 50,
@@ -1930765,6 +1933247,13 @@
           "renamed": "ActiveIconBorderRenderer"
         },
         {
+          "start": 2104,
+          "end": 2111,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
           "start": 2115,
           "end": 2117,
           "symbol": "C:dn",
@@ -1930791,6 +1933280,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "ActiveIconBorderRenderer"
+        },
+        {
+          "start": 2199,
+          "end": 2206,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         },
         {
           "start": 2227,
@@ -1931551,7 +1934047,7 @@
       "original": "wpa.java",
       "renamed": "GetPointDefenceLaserRandomness.java",
       "inputSha256": "62f34a3e1fa05c0bcde47a716f741c6604bbae8c5a1cf53cba34912b05033337",
-      "outputSha256": "5f973b67b28529eeda4e61dfc3986246fb44dcda99848d10242d18baabdc16ed",
+      "outputSha256": "336052a27e98036f7417d44bb337249cef2a7321766fdee392382016094babba",
       "edits": [
         {
           "start": 50,
@@ -1931680,6 +1934176,13 @@
           "renamed": "ActiveIconBorderRenderer"
         },
         {
+          "start": 1542,
+          "end": 1549,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
           "start": 1553,
           "end": 1555,
           "symbol": "C:dn",
@@ -1931757,6 +1934260,13 @@
           "renamed": "ActiveIconBorderRenderer"
         },
         {
+          "start": 1753,
+          "end": 1760,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
+        },
+        {
           "start": 1764,
           "end": 1767,
           "symbol": "C:lrb",
@@ -1931797,6 +1934307,13 @@
           "symbol": "C:dw",
           "original": "dw",
           "renamed": "ActiveIconBorderRenderer"
+        },
+        {
+          "start": 1883,
+          "end": 1890,
+          "symbol": "F:dw.field_c:Ldfa;",
+          "original": "field_c",
+          "renamed": "pendingAccountRequest"
         },
         {
           "start": 1894,
@@ -1934782,7 +1937299,7 @@
       "original": "wt.java",
       "renamed": "MonotonicMillisClock.java",
       "inputSha256": "6454a6ca3d05ccdf4ffc8a683a9582beaf2aa09334f7be56ce44365fdcd0be17",
-      "outputSha256": "7162c9ca7a8b38d7bf12c1615ca2bb567185283c621db7d85faa536a24f3983d",
+      "outputSha256": "0e5d2f6494c6680d5524a5ff612aae909412737861ada9754ffff869219a53c2",
       "edits": [
         {
           "start": 50,
@@ -1934958,6 +1937475,13 @@
           "symbol": "C:gka",
           "original": "gka",
           "renamed": "SetSniperCannonFireForce"
+        },
+        {
+          "start": 1223,
+          "end": 1230,
+          "symbol": "F:gka.field_o:Ldfa;",
+          "original": "field_o",
+          "renamed": "completedAccountRequest"
         },
         {
           "start": 1292,
@@ -1938676,10 +1941200,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/voidhunters"
     },
-    "rulesSha256": "0b35235ab69db63a8f222ed45b7660a912a8f63b95db1f6c98f02fdd1c812664",
+    "rulesSha256": "9909dfbf6394ac51dcd18f8c72dc319646be0c0b81106473d21188780c9e2d1a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
-    "outputTreeSha256": "b363690e3b1c159a8021794a97579db11afe1f02fa3e19a4b3e6cc288c37bf4a",
+    "outputTreeSha256": "3181d5998f741d3a6ca1e6044eb86569c936f2505ea02990272ff2c67fdc98d6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

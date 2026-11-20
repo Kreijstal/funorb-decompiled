@@ -3634,7 +3634,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.projectiles)) {
               System.err.println("linklist<voidhunters.common.worldstate.Projectile> projectiles the actual object has a duplicate reference");
             }
-            var9 = nqa.a(this.projectiles, 12642);
+            var9 = DequeReferenceTracker.findDuplicateReference(this.projectiles, 12642);
             if (var9 != null) {
               System.err.println("An element of linklist<voidhunters.common.worldstate.Projectile> projectiles has a duplicate reference - " + var9.toString());
             }
@@ -3659,7 +3659,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.spawnPoints)) {
               System.err.println("linklist<voidhunters.common.worldstate.SpawnPoint> spawn_points the actual object has a duplicate reference");
             }
-            var10 = nqa.a(this.spawnPoints, 12642);
+            var10 = DequeReferenceTracker.findDuplicateReference(this.spawnPoints, 12642);
             if (var10 != null) {
               System.err.println("An element of linklist<voidhunters.common.worldstate.SpawnPoint> spawn_points has a duplicate reference - " + var10.toString());
             }

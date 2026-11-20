@@ -60,7 +60,7 @@ public final class VoidHunters extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         var4 = field_G;
         try {
-          if (GetMissionTerrainNebulaProbability.field_q &&
+          if (GetMissionTerrainNebulaProbability.referenceTrackingEnabled &&
             param1 != null) {
             var2_int = 0;
             while (var2_int < SetVelocitySustainMax.field_o) {
@@ -856,7 +856,7 @@ public final class VoidHunters extends NetworkGameClient {
         SpriteArchiveDecoder.clearSharedReferences(2);
         FadingMidiPcmStream.clearSharedReferences(0);
         MidiCrossfadeStream.clearSharedReferences(98);
-        btb.clearSharedReferences((byte) 94);
+        CommonUiArchiveResources.clearSharedReferences((byte) 94);
         LawViolationReportText.clearSharedReferences(-12407);
         LiteralStrings.clearSharedReferences((byte) 89);
         LoginFormNavigation.clearSharedReferences(param0);
@@ -881,7 +881,7 @@ public final class VoidHunters extends NetworkGameClient {
         PartitionZoneFactoryHolder.clearSharedReferences(8);
         ChatPermissions.clearSharedReferences((byte) -53);
         ChatMessage.clearSharedReferences((byte) 75);
-        nqa.clearSharedReferences((byte) -30);
+        DequeReferenceTracker.clearSharedReferences((byte) -30);
         AppletRasterBuffer.clearSharedReferences(-23483);
         ArchiveRequestQueue.clearSharedReferences((byte) -108);
         FullscreenCanvas.clearSharedReferences(false);
@@ -991,7 +991,7 @@ public final class VoidHunters extends NetworkGameClient {
         AssassinationObjectiveText.clearSharedReferences((byte) 38);
         MenuInputState.clearSharedReferences(-1);
         LoopingSound.clearSharedReferences(2128263208);
-        mba.clearSharedReferences((byte) 26);
+        ReferenceTrackingControl.clearSharedReferences((byte) 26);
         WidgetNode.clearSharedReferences(8);
         IncrementVariableActionFactoryHolder.clearSharedReferences((byte) 74);
         MessageBoxState.clearSharedReferences(9911);
@@ -1032,7 +1032,7 @@ public final class VoidHunters extends NetworkGameClient {
         DateOfBirthEntryPanel.clearSharedReferences(-89);
         ToolkitCanvasContext.clearSharedReferences(true);
         PanelHeightQuery.clearSharedReferences(5);
-        ebb.clearSharedReferences(23357);
+        ShipBodyFactoryHolder.clearSharedReferences(23357);
         SpriteDimensions.clearSharedReferences(!param0 ? true : false);
         DisplayModeErrorDialog.clearSharedReferences((byte) -16);
         SoftwareSprite2D.clearSharedReferences(true);
@@ -1343,7 +1343,7 @@ public final class VoidHunters extends NetworkGameClient {
         NebulaFieldFactory.clearSharedReferences((byte) 102);
         HardpointFactory.clearSharedReferences(8192);
         lsa.clearSharedReferences((byte) -92);
-        dfa.clearSharedReferences((byte) 112);
+        AccountRequestPhase.clearSharedReferences((byte) 112);
         AccountRequestResult.clearSharedReferences(2);
         CarouselEventFactory.clearSharedReferences((byte) 43);
         DialogMessagePanel.clearSharedReferences(true);

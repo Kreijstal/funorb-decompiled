@@ -26,14 +26,14 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
             }
             var7 = null;
             if (null != GpuNativeHeap.field_e) {
-              if (null == btb.field_d) {
-                btb.field_d = new BufferedFile[NormalMapTextureOperation.field_k.cacheIndexFiles.length];
+              if (null == CommonUiArchiveResources.cacheIndexFiles) {
+                CommonUiArchiveResources.cacheIndexFiles = new BufferedFile[NormalMapTextureOperation.field_k.cacheIndexFiles.length];
               }
-              if (null == btb.field_d[param4]) {
-                btb.field_d[param4] = new BufferedFile(NormalMapTextureOperation.field_k.cacheIndexFiles[param4], 12000, 0);
+              if (null == CommonUiArchiveResources.cacheIndexFiles[param4]) {
+                CommonUiArchiveResources.cacheIndexFiles[param4] = new BufferedFile(NormalMapTextureOperation.field_k.cacheIndexFiles[param4], 12000, 0);
                 NormalMapTextureOperation.field_k.cacheIndexFiles[param4] = null;
               }
-              var7 = new ArchiveDisk(param4, GpuNativeHeap.field_e, btb.field_d[param4], 2097152);
+              var7 = new ArchiveDisk(param4, GpuNativeHeap.field_e, CommonUiArchiveResources.cacheIndexFiles[param4], 2097152);
             }
             var8 = ArchiveIndexLoaderState.loader.getArchiveProvider(param4, 5, (ArchiveDisk) (var6), (ArchiveDisk) (var7), param3);
             if (param1) {

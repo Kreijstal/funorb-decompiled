@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dfa {
+final class AccountRequestPhase {
     static int field_a;
     static String field_c;
     static String field_b;
@@ -14,7 +14,7 @@ final class dfa {
         field_c = null;
         field_b = null;
         if (param0 <= 65) {
-          dfa.clearSharedReferences((byte) -8);
+          AccountRequestPhase.clearSharedReferences((byte) -8);
         }
     }
 

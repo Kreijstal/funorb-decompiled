@@ -88,7 +88,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           }
           if (var9 != 0) {
             if (null == var8_ref_pgb.widget ||
-              ebb.field_b) {
+              ShipBodyFactoryHolder.field_b) {
               if (null != var8_ref_pgb.widget) {
               }
               var10 = FullscreenFailureReason.formatChatPrefix(true, var8_ref_pgb);
@@ -121,9 +121,9 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         var8Lifetime1 = -var7Lifetime1 - (-var6 - (GetUseLines.field_p.content.height + GetUseLines.field_p.content.field_E));
         GetUseLines.field_p.content.y = GetUseLines.field_p.content.y + var8Lifetime1;
         GetUseLines.field_p.content.height = GetUseLines.field_p.content.height - var8Lifetime1;
-        if (!ebb.field_b) {
-          if (ebb.field_b) {
-            ebb.field_b = false;
+        if (!ShipBodyFactoryHolder.field_b) {
+          if (ShipBodyFactoryHolder.field_b) {
+            ShipBodyFactoryHolder.field_b = false;
             GetUseLines.field_p.content.field_db = 0;
             GetReverbDamp.field_o = true;
             GetUseLines.field_p.content.y = GetUseLines.field_p.viewport.height - GetUseLines.field_p.content.height;
@@ -159,8 +159,8 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           }
         } else {
           GetUseLines.field_p.content.height = var7Lifetime1;
-          if (ebb.field_b) {
-            ebb.field_b = false;
+          if (ShipBodyFactoryHolder.field_b) {
+            ShipBodyFactoryHolder.field_b = false;
             GetUseLines.field_p.content.field_db = 0;
             GetReverbDamp.field_o = true;
             GetUseLines.field_p.content.y = GetUseLines.field_p.viewport.height - GetUseLines.field_p.content.height;

@@ -19,7 +19,7 @@ final class GetDebrisGroupColour extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_s = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(btb.field_a);
+          stackIn_3_0 = new ConsoleValue(CommonUiArchiveResources.field_a);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

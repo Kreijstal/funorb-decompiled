@@ -7,7 +7,7 @@ final class PrimitiveType {
     static String field_b;
     static AccountRequestResult field_a;
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void updateSocialNameDialog(int param0, boolean param1, int param2) {
         int var3;
         String var4;
         Object var5;
@@ -15,18 +15,18 @@ final class PrimitiveType {
         CharSequence var11;
         Object var5Lifetime1;
         Object var5Lifetime2;
-        if (GpuFractalNoiseVolume.field_p != null) {
-          var3 = GpuFractalNoiseVolume.field_p.a(0, param1);
+        if (GpuFractalNoiseVolume.activeNameEntryDialog != null) {
+          var3 = GpuFractalNoiseVolume.activeNameEntryDialog.updateAndGetResult(0, param1);
           if (0 != var3) {
             if (var3 == 2 &&
-              GpuFractalNoiseVolume.field_p.text != null &&
-              !GpuFractalNoiseVolume.field_p.text.equals("")) {
-              if (91 == GpuFractalNoiseVolume.field_p.text.charAt(0)) {
-                var4 = GpuFractalNoiseVolume.field_p.text;
+              GpuFractalNoiseVolume.activeNameEntryDialog.text != null &&
+              !GpuFractalNoiseVolume.activeNameEntryDialog.text.equals("")) {
+              if (91 == GpuFractalNoiseVolume.activeNameEntryDialog.text.charAt(0)) {
+                var4 = GpuFractalNoiseVolume.activeNameEntryDialog.text;
                 var5 = var4;
                 var5Lifetime2 = var4;
               } else {
-                var11 = (CharSequence) ((Object) GpuFractalNoiseVolume.field_p.text);
+                var11 = (CharSequence) ((Object) GpuFractalNoiseVolume.activeNameEntryDialog.text);
                 var4 = ConstantColorTextureOperation.normalizeName(false, var11);
               }
               var5Lifetime1 = null;
@@ -48,13 +48,13 @@ final class PrimitiveType {
               }
             }
             MissionGenerationDataFactory.field_b = -1;
-            GpuFractalNoiseVolume.field_p = null;
+            GpuFractalNoiseVolume.activeNameEntryDialog = null;
           }
         }
         if (param2 == 19717) {
           return;
         }
-        PrimitiveType.a(-70, false, 63);
+        PrimitiveType.updateSocialNameDialog(-70, false, 63);
     }
 
     public final String toString() {

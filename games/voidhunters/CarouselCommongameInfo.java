@@ -779,7 +779,7 @@ final class CarouselCommongameInfo implements DiffableState {
           this.history[var5].copyTo((byte) 77, this.history[var6]);
           this.swapSlotsForDebug(var5, var6, -121);
           if (ValidatedTextField.field_N) {
-            mba.a(-112);
+            ReferenceTrackingControl.endReferenceTracking(-112);
           }
           var7 = 0;
           if (GetUseOffscreenRendering.field_o) {

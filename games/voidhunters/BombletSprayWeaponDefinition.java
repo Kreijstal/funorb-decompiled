@@ -16,7 +16,7 @@ final class BombletSprayWeaponDefinition extends WeaponDefinition {
         if (param0 != 0) {
           return -34;
         }
-        return dfa.field_a;
+        return AccountRequestPhase.field_a;
     }
 
     final static void a(boolean param0, byte param1) {

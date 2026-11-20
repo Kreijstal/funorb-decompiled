@@ -50,7 +50,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_trap_mouse(" + SetNebulaProximityFadeDownshift.field_o + ")");
         System.out.println("set_tab_for_scores(" + TiledSpriteTextureOperation.field_r + ")");
         System.out.println("set_toggled_scoreboard(" + SetRepairModeCooldown.field_o + ")");
-        System.out.println("set_debris_group_colour(" + btb.field_a + ")");
+        System.out.println("set_debris_group_colour(" + CommonUiArchiveResources.field_a + ")");
         System.out.println("set_ship_direction_arrow(" + GetPointDefenceLaserProjectileInterceptDamage.field_o + ")");
         System.out.println("set_ship_aim_lines(" + AccountCreationDialog.field_Y + ")");
         System.out.println("set_allow_ship_saving(" + SetShipTeamActionFactory.field_b + ")");
@@ -237,7 +237,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_fighter_bay_aimspeed(" + SetThrusterBindingMoveAndTurnHasOppositeMove.field_p + ")");
         System.out.println("set_spinning_blade_aimspeed(" + SetTorpedoFireForce.field_o + ")");
         System.out.println("set_sniper_cannon_aimspeed(" + ArmSelfDestructOrderDefinition.field_e + ")");
-        System.out.println("set_bomblet_spray_aimspeed(" + dfa.field_a + ")");
+        System.out.println("set_bomblet_spray_aimspeed(" + AccountRequestPhase.field_a + ")");
         System.out.println("set_phased_energy_beam_aimspeed(" + PlayerActionFactory.field_a + ")");
         System.out.println("set_machine_gun_aimspeed(" + ChatInputResetter.field_a + ")");
         System.out.println("set_grappling_hook_aimspeed(" + GetRepairModePower.field_q + ")");
